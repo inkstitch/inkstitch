@@ -16,20 +16,30 @@ user-level:
 ---
 
 ## Licorne en point droit
-Au départ cette image , téléchargée en png 
+Au départ cette image , téléchargée en png  depuis https://freesvg.org/1539642047 :
 <a title="Public Domain" href="https://freesvg.org/1539642047"><img width="512" alt="Unicorn" src="https://freesvg.org/img/1539642047.png"></a>
 
-Une fois brodée
+Une fois brodée :
 
 ![Brodée](/assets/images/tutorials/tutorial-preview-images/autoroute_unicorn.jpg)
 
+Le tout avec un minimum d'éffort....
+
+Dans le svg, vous trouverez toutes les étapes:
+
+
 - Calque Image : image de départ
+
+
 - Calque Step 1 :Vectorisation de l'image avec `Chemin/ Vectoriser un objet matriciel` 
+
+
 Ici  on a appliqué ces  paramètres :
 
 ![Paramètres](/assets/images/tutorials/autoroute/autoroute_unicorn_parameters.jpg)
 
 Le plus important est de choisir **"traçage centerline"** comme **mode de détection**
+
 - Calque Step 2 : amélioration du chemin en vue de la broderie
   - `Chemin/ Séparer` 
   - puis  `Extensions > Ink/Stitch  > Résolution de problèmes > Nettoyer le document` pour supprimer les tous petits chemins (cette fois ci en réglant sur 20px)
