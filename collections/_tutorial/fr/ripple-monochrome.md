@@ -1,6 +1,6 @@
 ---
 permalink: /fr/tutorials/ripple-monochrome/
-title: "fleur monochrome en broderie ondulée et remplissage selon contour"
+title: "Fleur monochrome en broderie ondulée et remplissage selon contour"
 language: fr
 last_modified_at: 2022-06-05
 excerpt: "fichier exemple fleur monochrome"
