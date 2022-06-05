@@ -6,7 +6,7 @@
    width="300"
    height="300"
    viewBox="0 0 300 300"
-   inkscape:version="1.1.2 (b8e25be8, 2022-02-05)"
+   inkscape:version="1.2 (dc2aeda, 2022-05-15)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -26,25 +26,28 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:window-width="1440"
-     inkscape:window-height="802"
+     inkscape:window-height="800"
      id="namedview245"
      showgrid="true"
      inkscape:zoom="8.0759517"
-     inkscape:cx="-3.0336982"
-     inkscape:cy="118.74761"
+     inkscape:cx="16.406735"
+     inkscape:cy="204.80558"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g6871"
+     inkscape:current-layer="g449"
      inkscape:document-rotation="0"
      scale-x="1"
      inkscape:snap-global="false"
-     inkscape:pagecheckerboard="0">
+     inkscape:pagecheckerboard="0"
+     inkscape:showpageshadow="2"
+     inkscape:deskcolor="#d1d1d1">
     <sodipodi:guide
        id="guide249"
        inkscape:label="ascender"
        orientation="0,1"
-       position="-139.13837,228.34374" />
+       position="-139.13837,228.34374"
+       inkscape:locked="false" />
     <sodipodi:guide
        id="guide251"
        inkscape:label="caps"
@@ -63,7 +66,8 @@
        id="guide255"
        inkscape:label="decender"
        orientation="0,1"
-       position="-157.22636,13.374957" />
+       position="-157.22636,13.374957"
+       inkscape:locked="false" />
     <inkscape:grid
        type="xygrid"
        id="grid399" />
@@ -1506,7 +1510,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
     <path
        id="autosatin57"
        style="fill:none;stroke:#000000;stroke-opacity:1"
-       d="M 10.68967,180.76465 9.3802413,180.39425 8.000221,180.22754 5.7619398,180.49707 3.593971,181.25879 1.5666273,182.44238 -0.24977904,183.97754 -1.1849799,185.08408 M 10.689674,180.76465 12.007555,181.2922 13.213741,182.00288 14.2885,182.88088 15.212098,183.91039 15.964802,185.07562 16.52688,186.36076 16.878597,187.75 17.000221,189.22754 16.814674,192.1416 16.265846,194.91504 16.172956,195.19148 M 4.1636383,178.8666 19.461042,188.06479"
+       d="m 10.68967,180.76465 -1.3094287,-0.3704 -1.3800203,-0.16671 -2.2382812,0.26953 -2.1679688,0.76172 -2.0273437,1.18359 -1.81640634,1.53516 -0.93520086,1.10654 m 11.8746539,-4.31943 1.317881,0.52755 1.206186,0.71068 1.074759,0.878 0.923598,1.02951 0.752704,1.16523 0.562078,1.28514 0.351717,1.38924 0.121624,1.47754 -0.185547,2.91406 -0.548828,2.77344 -0.09289,0.27644 M 4.1636383,178.8666 19.461042,188.06479 M 0.74294649,180.65982 19.811907,192.42314 m -21.1739756,-9.90595 19.6880826,12.38244"
        inkstitch:satin_column="True"
        inkstitch:ties="True"
        inkstitch:force_lock_stitches="True"
