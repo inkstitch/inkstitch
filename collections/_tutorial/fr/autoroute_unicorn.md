@@ -77,4 +77,9 @@ qui peuvent être encore plus utiles que ce que leur nom suggère pour améliore
 Une simplification des chemins, peut aussi être une bonne idée.
 
 
+![SVG](/assets/images/tutorials/samples/autoroute_unicorn.svg)
+
+
+
+
 [Télécharger](/assets/images/tutorials/samples/autoroute_unicorn.svg){: download="autoroute_unicorn.svg" }
