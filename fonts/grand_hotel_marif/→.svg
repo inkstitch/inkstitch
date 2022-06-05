@@ -5,7 +5,7 @@
    sodipodi:docname="→.svg"
    width="45.772915mm"
    height="45.772915mm"
-   inkscape:version="1.1.2 (b8e25be8, 2022-02-05)"
+   inkscape:version="1.2 (dc2aeda, 2022-05-15)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -20,15 +20,15 @@
      inkscape:pageopacity="0"
      inkscape:pagecheckerboard="false"
      showgrid="false"
-     inkscape:zoom="3.564186"
-     inkscape:cx="44.610466"
-     inkscape:cy="31.984862"
+     inkscape:zoom="150.18099"
+     inkscape:cx="42.60193"
+     inkscape:cy="200.19844"
      inkscape:window-width="1383"
      inkscape:window-height="778"
      inkscape:window-x="57"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
-     inkscape:current-layer="layer19"
+     inkscape:current-layer="g6611"
      height="173px"
      inkscape:snap-global="false"
      inkscape:object-paths="true"
@@ -39,7 +39,9 @@
      inkscape:snap-bbox="true"
      showguides="true"
      units="mm"
-     inkscape:document-units="mm">
+     inkscape:document-units="mm"
+     inkscape:showpageshadow="2"
+     inkscape:deskcolor="#d1d1d1">
     <sodipodi:guide
        position="-2.9432313,-27.9607"
        orientation="0,1"
@@ -51,7 +53,8 @@
        position="22.267591,99.135182"
        orientation="0,1"
        inkscape:label="caps"
-       id="guide5749" />
+       id="guide5749"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="6.1566275,19.07053"
        orientation="0,1"
@@ -4536,7 +4539,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      id="layer19"
      inkscape:label="GlyphLayer-?"
-     style="display:none">
+     style="display:inline">
     <path
        d="M 40.956949,186.35463 C 40.683733,191.23674 40.651263,196.11378 40.6138,201"
        inkstitch:running_stitch_length_mm="2"
@@ -4601,7 +4604,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        id="autosatinrun214"
        inkscape:label="Points droits pour auto-remplissage satin 2"
        inkstitch:ties="3"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="m 18.354135,114.60584 c -1.425378,-0.08 -3.184182,-0.0452 -4.133818,-1.2944 -0.489446,-0.89139 -0.161108,-1.98182 -0.257279,-2.95858 -0.01178,-8.9813 0.02356,-17.964727 -0.01766,-26.944699 -0.02271,-0.165173 -0.0061,-0.338284 -0.07957,-0.492437 m 4.488337,31.690116 c 2.119516,-0.11977 4.460059,-0.47483 6.049699,-1.99929 0.879043,-0.99175 0.435165,-2.40464 0.543452,-3.60649 0,-8.86367 0,-17.727338 0,-26.591008 m -12.558059,4.86423 c 4.513234,-0.07108 9.026468,-0.142159 13.539703,-0.213238 M 12.815646,108.27866 c 4.300025,-0.10658 8.600049,-0.21316 12.900074,-0.31974 m -0.21529,-25.5172 c -4.05631,0.184599 -8.112619,0.369196 -12.168928,0.553794"
        id="autosatin235"
@@ -4632,7 +4635,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        id="autosatinrun217"
        inkscape:label="Points droits pour auto-remplissage satin 7"
        inkstitch:ties="3"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="m 37.97073,114.60584 c -1.425379,-0.08 -3.184182,-0.0452 -4.133819,-1.2944 -0.489446,-0.89139 -0.161107,-1.98182 -0.257279,-2.95858 0,-8.28813 0,-16.576271 0,-24.864405 m 4.391098,29.117385 c 2.119514,-0.11977 4.460059,-0.47483 6.049698,-1.99929 0.879042,-0.99175 0.435165,-2.40464 0.543451,-3.60649 0,-7.93855 0,-15.877118 0,-23.815677 M 32.00582,87.273282 c 4.513235,-0.07108 9.02647,-0.142159 13.539705,-0.213238 M 32.43224,108.27866 c 4.300025,-0.10658 8.60005,-0.21316 12.900075,-0.31974 M 45.113092,85.226996 c -4.027558,0.111495 -8.055114,0.22299 -12.082672,0.334485"
        id="autosatin237"
@@ -4656,7 +4659,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        id="path56809"
        inkstitch:ties="3"
        inkstitch:running_stitch_length_mm="2"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="m 19.165903,79.42336 c 3.017011,0 7.240827,0.604734 7.240827,3.023669 v 30.841421 c 0,2.05813 -3.688732,3.33798 -6.881485,3.39807 M 19.165903,79.42336 c -3.017011,0 -5.430619,1.209468 -5.430619,2.418935 0,1.209468 1.206804,0.604734 1.206804,2.418935 v 30.23669 c 0,1.57027 2.147223,2.23444 4.583157,2.1886 M 13.299422,88.099181 27.431293,87.876141 M 13.74452,110.06865 27.208744,109.73409"
        id="path3686"
@@ -4681,7 +4684,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        sodipodi:nodetypes="cc"
        inkscape:label="Points droits pour auto-remplissage satin"
        inkstitch:running_stitch_length_mm="2"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        id="path3247-3-8-3-2-5"
        d="m 19.451597,86.041248 c -5.794546,4.638697 -2.989908,10.144371 1.6476,12.966758 -0.256521,6.024194 -8.395041,5.092644 -4.123774,10.313934 m 3.651868,-24.376185 c 6.390146,-3.073279 12.083156,3.916186 10.890876,9.690014 -1.56319,7.570071 -9.870628,19.500081 -13.135477,16.092151"
@@ -4706,7 +4709,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        id="autosatinrun215"
        inkscape:label="Points droits pour auto-remplissage satin 1"
        inkstitch:ties="3"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="M 42.893089,66.530658 C 40.673315,65.500813 38.106337,63.762581 35.653253,64.458875 32.205764,67.24291 29.782159,71.272317 27.293196,74.974313 11.855759,99.883582 7.9029866,130.80917 10.71336,159.76065 M 42.893089,66.530658 c 1.795769,1.127134 5.022483,3.19805 3.358681,5.708397 -3.249296,1.510047 -4.940017,5.054159 -7.029442,7.887118 -13.368634,21.125047 -17.621325,47.123607 -16.213265,71.975277 0.152499,2.52864 0.367715,5.05234 0.647824,7.5693 M 12.618609,94.333094 c 8.108214,0.253013 16.216429,0.506026 24.324643,0.759041"
        id="autosatin238"
@@ -4725,7 +4728,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        id="autosatinrun216"
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="m 43.007817,219.05192 c -2.894558,1.90621 -7.452194,3.22649 -10.065323,0.14603 -6.895311,-6.95861 -10.932163,-16.28564 -14.471665,-25.387 -3.98652,-10.95446 -6.541581,-22.42303 -7.757469,-34.0503 m 32.294457,59.29127 c 2.460255,-1.52242 2.328652,-5.23405 -0.08591,-6.72509 -7.780142,-9.79952 -12.460182,-21.82684 -15.773278,-33.90728 -1.613861,-6.15306 -2.787388,-12.41593 -3.491748,-18.7488 M 8.5644886,176.69498 c 7.6168264,-0.12671 15.2336084,-0.25284 22.8503944,-0.37954"
        id="autosatin239"
@@ -4750,7 +4753,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        id="autosatinrun215-3"
        inkscape:label="Points droits pour auto-remplissage satin 1"
        inkstitch:ties="3"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="m 12.875503,66.530658 c 2.219774,-1.029845 4.786752,-2.768077 7.239836,-2.071783 3.447489,2.784035 5.871094,6.813442 8.360057,10.515438 15.437437,24.909269 19.39021,55.834857 16.579836,84.786337 M 12.875503,66.530658 c -1.795769,1.127134 -5.0224828,3.19805 -3.3586808,5.708397 3.2492958,1.510047 4.9400168,5.054159 7.0294418,7.887118 13.368634,21.125047 17.621325,47.123607 16.213265,71.975277 -0.152499,2.52864 -0.367715,5.05234 -0.647824,7.5693 M 43.149983,94.333094 C 35.041769,94.586107 26.933554,94.83912 18.82534,95.092135"
        id="autosatin238-0"
@@ -4769,7 +4772,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        id="autosatinrun216-6"
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="m 12.760775,219.05192 c 2.894558,1.90621 7.452194,3.22649 10.065323,0.14603 6.895311,-6.95861 10.932163,-16.28564 14.471665,-25.387 3.98652,-10.95446 6.541581,-22.42303 7.757469,-34.0503 m -32.294457,59.29127 c -2.460255,-1.52242 -2.328652,-5.23405 0.08591,-6.72509 7.780142,-9.79952 12.460182,-21.82684 15.773278,-33.90728 1.613861,-6.15306 2.787388,-12.41593 3.491748,-18.7488 m 15.092393,17.02423 c -7.616827,-0.12671 -15.233609,-0.25284 -22.850395,-0.37954"
        id="autosatin239-2"
@@ -4894,7 +4897,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3"
        sodipodi:nodetypes="ccc"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="m 19.669267,213.32885 c -1.001253,-0.99379 -2.150629,-2.34951 -1.847491,-3.84223 2.080843,-1.47184 4.02463,-3.12506 5.700978,-5.05506 0.787898,-0.84362 1.504017,-1.75123 2.261818,-2.62168 -4.581424,-0.82969 -8.00286,-5.99078 -6.419681,-10.47509 1.033808,-3.56751 4.578959,-6.1593 8.281878,-6.23233 m -7.977502,28.22639 c 1.601646,1.47549 4.213604,2.04398 6.007796,0.56896 3.463741,-2.41675 5.843117,-6.05832 7.901609,-9.66831 1.735699,-3.29556 3.256566,-6.98776 2.581863,-10.7829 -0.492163,-3.61311 -2.910107,-7.1741 -6.602813,-8.0767 m -14.66281,8.1922 c 8.577921,-0.30749 17.155841,-0.615 25.733762,-0.92249 m -20.549979,12.1805 c 3.764415,2.70693 7.52883,5.41386 11.293244,8.1208"
        id="autosatin247-0"
@@ -6929,11 +6932,11 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        id="autosatinrun67"
        inkscape:label="Points droits pour auto-remplissage satin 1"
        inkstitch:ties="3"
-       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
+       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
     <path
-       d="m 43,178 c 2.415122,0.19661 5.268307,-1.20793 5,-4 0,-6.17367 0,-12.34733 0,-18.521 M 43,178 c -3.456311,0.0405 -8.442578,-1.71517 -8,-5.9516 0,-5.0498 0,-10.0996 0,-15.1494 m 8.1095,21.091 -0.2193,0.004"
+       d="m 43,178 c 2.415122,0.19661 5.268307,-1.20793 5,-4 V 155.479 M 43,178 c -3.456311,0.0405 -8.442578,-1.71517 -8,-5.9516 V 156.899"
        id="autosatin73"
-       sodipodi:nodetypes="csccsccsssc"
+       sodipodi:nodetypes="csccsc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
@@ -6948,7 +6951,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        id="autosatinrun68"
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3"
-       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
+       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
     <path
        d="M 38,74 C 35.684739,73.792591 32.98531,75.95653 34.368328,78.378881 35.620799,82.94464 34.732082,87.785471 35,92.467559 35,110.02504 35,127.58252 35,145.14 M 38,74 c 4.277894,-0.11652 9.851626,2.037959 10,7 0,20.993 0,41.986 0,62.979 M 32.8708,108.023 c 5.626533,-0.148 11.253067,-0.296 16.8796,-0.444"
        id="autosatin74"
@@ -6967,7 +6970,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        id="autosatinrun69"
        inkscape:label="Points droits pour auto-remplissage satin 5"
        inkstitch:ties="3"
-       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
+       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
     <path
        d="m 25,128 c 0.105384,-4.20121 -5.213758,-4.706 -6.152832,-9.55225 -4.4827,-10.62848 -3.457875,-23.123706 0.917778,-33.620712 C 24.575857,73.298453 36.579777,66.235238 48.745918,65.322437 58.896461,63.884511 70.312286,66.319377 77,74.625 c 9.065207,10.544749 8.459659,26.25554 3.0625,38.34375 C 74.260536,125.62614 62.010138,136.08174 48,138 M 25,128 c 0.04562,5.22267 -5.558647,16.60308 -10.854095,9.004 C 1.4413587,122.19294 0.30798135,100.3242 6.9989419,82.614781 12.839539,66.719288 27.934058,55.301284 44.531252,52.84908 59.406558,50.205906 76.361998,53.285474 86.720917,65.044159 99.391816,79.304938 99.614592,101.21453 91.539411,117.79287 83.25387,134.82466 66.475409,147.24786 48,151 M 20.6553,117.573 c -4.6641,5.77467 -9.3282,11.54933 -13.9923,17.324 M 26.652,77.151 C 22.8763,73.0052 19.1006,68.8594 15.3249,64.7136 m 57.746,9.1061 c 4.738133,-4.293933 9.476267,-8.587867 14.2144,-12.8818 M 65.9637,128.234 c 2.591167,5.62667 5.182333,11.25333 7.7735,16.88"
        id="autosatin75"
@@ -11798,7 +11801,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        inkscape:label="Points droits pour auto-remplissage satin 1"
        sodipodi:nodetypes="ccccccc"
        inkstitch:ties="3"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="m 27.827,131.858 c -2.237657,4.27106 -8.347355,5.94666 -11.583714,1.78382 C 2.9444939,120.97073 0.18290979,100.38172 5.5885572,83.400836 10.247918,67.871199 24.412379,56.541804 40.05127,53.351318 45.355131,52.692875 51.649482,50.373656 56.508301,53.555176 60.280186,56.757913 58.637271,62.048647 59,66.352591 V 162 c 1.888656,4.85338 6.871434,-2.33153 9.025684,-4.33379 7.249929,-8.88839 13.924288,-19.26692 14.961251,-30.95734 L 83,126 m -57.356,-7.243 c -3.994033,4.74067 -7.988067,9.48133 -11.9821,14.222 M 27.4357,75.8676 16.3494,63.4376 m 25.98,12.8779 18.3651,-0.6719 M 61.9263,147.2 c -6.420333,2.20233 -12.840667,4.40467 -19.261,6.607 m 25.0841,1.12 10.105819,16.32197 M 27.827,131.858 C 29.970497,129.34283 31.766238,121.84863 26.442577,123 21.414628,121.26407 19.618647,114.99851 18.125,110.34375 15.154457,96.83039 17.862973,80.574982 29.109375,71.46875 33.635624,67.827631 39.260435,65.700539 45,65 c 0.01346,33.003544 -0.02694,66.00763 0.02023,99.01083 -0.22115,7.05823 5.290096,14.67262 12.914307,13.96012 C 68.723596,176.83225 75.8276,167.17699 81.323228,158.77206 81.897422,157.85739 82.455834,156.93284 83,156 v -12.46632"
        id="autosatin88-9"
@@ -11818,7 +11821,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        inkscape:label="Points droits pour auto-remplissage satin 3"
        sodipodi:nodetypes="ccc"
        inkstitch:ties="3"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="M 69.068833,23.993667 83.977867,42.17043"
        id="path2364-71"
@@ -11873,7 +11876,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        inkscape:label="Points droits pour auto-remplissage satin 5"
        sodipodi:nodetypes="cc"
        inkstitch:ties="3"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="m 90,178 c -3.870344,0.22563 -5.357006,-3.98756 -5.727869,-7.13533 C 83.504275,165.79942 83.210555,160.64155 83,155.527 M 90,178 c 3.090341,-0.21473 6.643089,-0.8073 8.7773,-3.254 0.101748,-1.52876 -1.332214,-3.1273 -1.030419,-4.96938 -0.579975,-4.82051 -0.621883,-9.70347 -0.645281,-14.55462 m -14.9065,9.112 16.9094,-0.336"
        id="autosatin90-6"
@@ -11900,7 +11903,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        inkscape:label="Points droits pour auto-remplissage satin 1"
        sodipodi:nodetypes="ccccccc"
        inkstitch:ties="3"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="m 27.827,131.858 c -2.237657,4.27106 -8.347355,5.94666 -11.583714,1.78382 C 2.9444939,120.97073 0.18290979,100.38172 5.5885572,83.400836 10.247918,67.871199 24.412379,56.541804 40.05127,53.351318 45.355131,52.692875 51.649482,50.373656 56.508301,53.555176 60.280186,56.757913 58.637271,62.048647 59,66.352591 V 162 c 1.888656,4.85338 6.871434,-2.33153 9.025684,-4.33379 7.249929,-8.88839 13.924288,-19.26692 14.961251,-30.95734 L 83,126 m -57.356,-7.243 c -3.994033,4.74067 -7.988067,9.48133 -11.9821,14.222 M 27.4357,75.8676 16.3494,63.4376 m 25.98,12.8779 18.3651,-0.6719 M 61.9263,147.2 c -6.420333,2.20233 -12.840667,4.40467 -19.261,6.607 m 25.0841,1.12 10.105819,16.32197 M 27.827,131.858 C 29.970497,129.34283 31.766238,121.84863 26.442577,123 21.414628,121.26407 19.618647,114.99851 18.125,110.34375 15.154457,96.83039 17.862973,80.574982 29.109375,71.46875 33.635624,67.827631 39.260435,65.700539 45,65 c 0.01346,33.003544 -0.02694,66.00763 0.02023,99.01083 -0.22115,7.05823 5.290096,14.67262 12.914307,13.96012 C 68.723596,176.83225 75.8276,167.17699 81.323228,158.77206 81.897422,157.85739 82.455834,156.93284 83,156 v -12.46632"
        id="autosatin88-7"
@@ -11920,7 +11923,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        inkscape:label="Points droits pour auto-remplissage satin 3"
        sodipodi:nodetypes="ccc"
        inkstitch:ties="3"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="m 81.864792,42.186673 c 0.449414,-5.288142 0.549055,-10.599266 0,-15.884626"
        inkstitch:running_stitch_length_mm="2"
@@ -11978,7 +11981,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        inkscape:label="Points droits pour auto-remplissage satin 5"
        sodipodi:nodetypes="cc"
        inkstitch:ties="3"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="m 90,178 c -3.870344,0.22563 -5.357006,-3.98756 -5.727869,-7.13533 C 83.504275,165.79942 83.210555,160.64155 83,155.527 M 90,178 c 3.090341,-0.21473 6.643089,-0.8073 8.7773,-3.254 0.101748,-1.52876 -1.332214,-3.1273 -1.030419,-4.96938 -0.579975,-4.82051 -0.621883,-9.70347 -0.645281,-14.55462 m -14.9065,9.112 16.9094,-0.336"
        id="autosatin90-0"
@@ -12004,7 +12007,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        id="autosatinrun91"
        inkscape:label="Points droits pour auto-remplissage satin 1"
        inkstitch:ties="3"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        id="autosatin222"
        d="m 10,223 c -3,0 -4,-2 -4,-5 V 82 c 0,-20 9,-30 20,-30 12,0 20,13 20,26 0,17 -7,23 -7,30 0,12 20,24 20,44 0,3 0,5 -1,8 m -48,63 c 3,0 9,-2 9,-8 V 82 c 0,-11 1,-18 6,-18 6,0 9,8 9,14 0,15 -5,22 -6,32 -1,12 19,31 19,43 0,4 -2,8 -4,10 m -2.1403,-17.289 19.6398,-8.127 M 23.4774,109.366 H 42.6657 M 30.2497,85.437 c -0.2257,0 19.4141,0.226 19.4141,0.226 M 26.8636,67.8291 27.5408,46.6091 M 22.5744,85.889 H 2.48319 M 21.6715,202.373 4.0634,201.018"
@@ -12023,14 +12026,14 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        id="autosatinrun99"
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="m 24.8674,162.982 0.2281,1.146 0.246,1.109 0.3663,1.101 0.0309,0.084 v 0 l 0.374,1.007 0.5003,1.026 0.5393,1.007 0.1076,0.163 v 0 l 0.5286,0.798 0.7203,0.902 0.8347,0.797 0.2263,0.178 v 0 l 0.6836,0.536 0.9776,0.613 1.0643,0.444 0.364,0.101 v 0 l 0.7418,0.207 1.1198,0.186 1.1509,0.076 0.4949,0.011 v 0 l 0.6569,0.013 1.1644,0.012 1.1644,0.013 0.5672,-0.021 v 0 l 0.571,-0.021 1.1681,-0.119 1.1274,-0.123 0.6644,-0.114 v 0 l 0.472,-0.08 1.1115,-0.292 1.0931,-0.35 0.7197,-0.295 v 0 l 0.3442,-0.142 1.0122,-0.516 0.9971,-0.613 0.7264,-0.487"
        inkstitch:running_stitch_length_mm="2"
        id="autosatinrun204"
        inkscape:label="Points droits pour auto-remplissage satin 4"
        inkstitch:ties="3"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="m 46.4534,171.677 -2.0288,0.495 -1.7736,0.289 -1.5728,0.105 -1.4266,-0.063 -2.6328,-0.551 -2.7023,-0.992 -2.7706,-1.351 -1.8911,-1.469 -1.6492,-1.856 -2.045,-2.514 M 53,171 l -1.2255,1.387 -1.4227,1.182 -1.6141,1.005 -1.7997,0.859 -4.1327,1.398 L 38,178 l -1.8077,0.273 -1.6936,0.008 -1.5775,-0.236 -1.4598,-0.46 -1.3403,-0.662 -1.219,-0.845 -1.0959,-1.005 -0.971,-1.146 -0.8444,-1.266 -0.7161,-1.365 -1.0397,-2.943 -0.5049,-3.089 0.0442,-3.07 m 14.2303,15.815 -3.6928,-7.058"
        id="autosatin223"
@@ -12061,7 +12064,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        id="autosatinrun205"
        inkscape:label="Points droits pour auto-remplissage satin 7"
        inkstitch:ties="3"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        id="autosatin225"
        d="M 79.4401,144.608 77.7113,143.451 76.8421,143.119 76,143 l -0.7051,0.092 -0.623,0.267 -0.5528,0.432 -0.4941,0.584 -0.8594,1.578 L 72,148 l -0.8063,2.148 -0.958,1.948 -1.1688,1.757 -1.4385,1.571 -1.767,1.393 -2.1544,1.222 -2.1144,0.861 m 17.8475,-14.292 1.3773,1.356 1.1325,1.479 0.7675,1.409 L 83,150 l -0.1797,1.297 -0.5078,1.578 -0.7891,1.766 -1.0234,1.859 -1.2109,1.859 -1.3516,1.766 -1.4453,1.578 L 75,163 l -4.1759,3.009 -2.417,1.445 -1.9814,1.01 m 0.3946,-19.593 14.8991,12.868"
@@ -12087,7 +12090,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        id="autosatinrun12-8"
        inkscape:label="Points droits pour auto-remplissage satin 1"
        inkstitch:ties="3"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="M 42.169115,92.811748 23.106364,70.860703"
        id="path3177-9"
@@ -12095,7 +12098,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        sodipodi:nodetypes="cc"
        inkscape:label="Points droits pour auto-remplissage satin"
        inkstitch:running_stitch_length_mm="2"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        id="path3247-3"
        d="m 23.684023,69.127725 c 6.266608,-3.691092 22.451734,20.257589 23.106364,25.128171 M 20.506898,71.727191 c -3.582136,7.405579 17.844618,26.014834 21.951046,24.550512"
@@ -12126,7 +12129,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        id="autosatinrun13-2"
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        id="autosatin15-4"
        d="m 40.740306,122.27236 c -5.913431,-1.29455 -6.024758,5.47604 -4.952516,9.31686 0.799824,13.44921 -1.982322,27.75654 3.469938,40.44232 7.533513,10.26531 23.870595,6.38748 29.819812,-3.64268 1.254516,-1.6416 2.306275,-3.45177 3.217055,-5.30363 M 40.740306,122.27236 c 6.776274,-0.10688 9.574267,7.09726 8.366794,12.88149 0.544833,9.42524 -1.160697,19.24542 1.090547,28.41138 3.34942,6.42768 11.508842,1.32474 12.807742,-4.0155 0.511388,-1.18779 1.134051,-2.32891 1.469007,-3.58538 m -10.011999,7.52152 c 0.114638,6.0192 0.229185,12.03838 0.343786,18.05758 M 32.7578,148.18809 c 6.775199,-0.19159 13.550413,-0.38316 20.325614,-0.57474 m -12.482411,-25.3538 0.278607,0.0282"
@@ -12147,7 +12150,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        inkscape:label="Points droits pour auto-remplissage satin 5"
        inkstitch:ties="3"
        sodipodi:nodetypes="cc"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        id="autosatin16-3"
        d="m 72.809636,143.28682 c -7.141455,-2.83803 -6.261103,8.95532 -8.33524,12.67753 m 8.33524,-12.67753 c 7.939655,4.5834 1.646907,13.76348 -0.515041,19.79841 m -8.645799,-13.74638 c 4.708222,2.22343 9.416444,4.44687 14.124666,6.67032"
@@ -12174,7 +12177,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        inkscape:label="Points droits pour auto-remplissage satin"
        inkstitch:ties="3"
        inkstitch:running_stitch_length_mm="2"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="M 28.75894,93.389407 47.821691,71.438362"
        id="path3177-9-7"
@@ -12182,7 +12185,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        sodipodi:nodetypes="cc"
        inkscape:label="Points droits pour auto-remplissage satin"
        inkstitch:running_stitch_length_mm="2"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        id="path3247-3-0"
        d="M 47.244032,69.705384 C 40.977424,66.014292 24.792298,89.962973 24.137668,94.833555 M 50.421157,72.30485 c 3.582136,7.405579 -17.844618,26.014834 -21.951046,24.550512"
@@ -12200,7 +12203,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        inkscape:label="Points droits pour auto-remplissage satin"
        inkstitch:ties="3"
        inkstitch:running_stitch_length_mm="2"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        id="autosatin14-5"
        d="m 51.746605,109.69721 c 2.820027,6.48353 -3.830465,7.34301 -8.566024,6.28687 -16.843253,1.29014 -27.259633,18.81655 -26.846706,34.5623 -0.896952,6.81743 2.116221,17.09225 10.726517,16.0052 5.569427,-1.76743 8.394309,-7.90444 10.773699,-12.76457 m 13.912514,-44.0898 c -3.451915,-7.41946 -13.381676,-4.36361 -19.565076,-2.78352 -23.601868,7.62774 -35.4007933,37.46492 -26.3119701,59.8875 5.0027291,12.17766 21.9716621,14.75433 31.3425731,6.12802 0.990847,-0.67649 1.798516,-1.5684 2.683403,-2.36982 M 32.7578,158.08027 c 0.0763,7.20792 0.152506,14.41583 0.228765,21.62375 M 21.388542,163.14026 c -1.301443,5.29128 -2.602902,10.58254 -3.904348,15.87381 m 0.343788,-32.7806 C 12.162944,145.9651 6.4979225,145.69672 0.83288661,145.42833 M 28.967196,123.91849 c -3.023793,-4.25573 -6.047587,-8.51141 -9.071378,-12.76714"
@@ -12220,7 +12223,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        id="autosatinrun13-22"
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        id="autosatin15-7"
        d="m 40.740306,122.27236 c -5.913431,-1.29455 -6.024758,5.47604 -4.952516,9.31686 0.799824,13.44921 -1.982322,27.75654 3.469938,40.44232 7.533513,10.26531 23.870595,6.38748 29.819812,-3.64268 1.254516,-1.6416 2.306275,-3.45177 3.217055,-5.30363 M 40.740306,122.27236 c 6.776274,-0.10688 9.574267,7.09726 8.366794,12.88149 0.544833,9.42524 -1.160697,19.24542 1.090547,28.41138 3.34942,6.42768 11.508842,1.32474 12.807742,-4.0155 0.511388,-1.18779 1.134051,-2.32891 1.469007,-3.58538 m -10.011999,7.52152 c 0.114638,6.0192 0.229185,12.03838 0.343786,18.05758 M 32.7578,148.18809 c 6.775199,-0.19159 13.550413,-0.38316 20.325614,-0.57474 m -12.482411,-25.3538 0.278607,0.0282"
@@ -12241,7 +12244,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        inkscape:label="Points droits pour auto-remplissage satin 5"
        inkstitch:ties="3"
        sodipodi:nodetypes="cc"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        id="autosatin16-7"
        d="m 72.809636,143.28682 c -7.141455,-2.83803 -6.261103,8.95532 -8.33524,12.67753 m 8.33524,-12.67753 c 7.939655,4.5834 1.646907,13.76348 -0.515041,19.79841 m -8.645799,-13.74638 c 4.708222,2.22343 9.416444,4.44687 14.124666,6.67032"
@@ -12267,7 +12270,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        id="autosatinrun12-902"
        inkstitch:ties="3"
        inkstitch:running_stitch_length_mm="2"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="M 35.853433,76.271767 50.762467,94.44853"
        id="path2364-0"
@@ -12308,7 +12311,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        id="path9127"
        inkstitch:ties="3"
        inkstitch:running_stitch_length_mm="2"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        id="autosatin14-3"
        d="m 51.746605,109.69721 c 2.820027,6.48353 -3.830465,7.34301 -8.566024,6.28687 -16.843253,1.29014 -27.259633,18.81655 -26.846706,34.5623 -0.896952,6.81743 2.116221,17.09225 10.726517,16.0052 5.569427,-1.76743 8.394309,-7.90444 10.773699,-12.76457 m 13.912514,-44.0898 c -3.451915,-7.41946 -13.381676,-4.36361 -19.565076,-2.78352 -23.601868,7.62774 -35.4007933,37.46492 -26.3119701,59.8875 5.0027291,12.17766 21.9716621,14.75433 31.3425731,6.12802 0.990847,-0.67649 1.798516,-1.5684 2.683403,-2.36982 M 32.7578,158.08027 c 0.0763,7.20792 0.152506,14.41583 0.228765,21.62375 M 21.388542,163.14026 c -1.301443,5.29128 -2.602902,10.58254 -3.904348,15.87381 m 0.343788,-32.7806 C 12.162944,145.9651 6.4979225,145.69672 0.83288661,145.42833 M 28.967196,123.91849 c -3.023793,-4.25573 -6.047587,-8.51141 -9.071378,-12.76714"
@@ -12328,7 +12331,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        id="autosatinrun13-9"
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        id="autosatin15-9"
        d="m 40.740306,122.27236 c -5.913431,-1.29455 -6.024758,5.47604 -4.952516,9.31686 0.799824,13.44921 -1.982322,27.75654 3.469938,40.44232 7.533513,10.26531 23.870595,6.38748 29.819812,-3.64268 1.254516,-1.6416 2.306275,-3.45177 3.217055,-5.30363 M 40.740306,122.27236 c 6.776274,-0.10688 9.574267,7.09726 8.366794,12.88149 0.544833,9.42524 -1.160697,19.24542 1.090547,28.41138 3.34942,6.42768 11.508842,1.32474 12.807742,-4.0155 0.511388,-1.18779 1.134051,-2.32891 1.469007,-3.58538 m -10.011999,7.52152 c 0.114638,6.0192 0.229185,12.03838 0.343786,18.05758 M 32.7578,148.18809 c 6.775199,-0.19159 13.550413,-0.38316 20.325614,-0.57474 m -12.482411,-25.3538 0.278607,0.0282"
@@ -12349,7 +12352,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        inkscape:label="Points droits pour auto-remplissage satin 5"
        inkstitch:ties="3"
        sodipodi:nodetypes="cc"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        id="autosatin16-0"
        d="m 72.809636,143.28682 c -7.141455,-2.83803 -6.261103,8.95532 -8.33524,12.67753 m 8.33524,-12.67753 c 7.939655,4.5834 1.646907,13.76348 -0.515041,19.79841 m -8.645799,-13.74638 c 4.708222,2.22343 9.416444,4.44687 14.124666,6.67032"
@@ -12376,13 +12379,13 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        id="autosatinrun12-3"
        inkscape:label="Points droits pour auto-remplissage satin 1"
        inkstitch:ties="3"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="M 45.723328,89.61848 28.197343,77.60629 18.942048,89.8154"
        id="path2759-8"
        inkstitch:ties="3"
        inkstitch:running_stitch_length_mm="2"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="m 20.364095,93.46971 c 2,0 4,-1 4,-3 1,-3 2,-6 5,-6 3,0 7,10 16,10 m -25,-1 c -3,0 -6,-2 -6,-4 0,-7 5,-16.000002 13,-16.000002 9,0 13,10.000002 18,10.000002"
        id="path3232-3"
@@ -12399,7 +12402,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        id="path2960-9"
        inkstitch:ties="3"
        inkstitch:running_stitch_length_mm="2"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="m 53.364095,74.469708 c -2,0 -5,0 -5,3.000002 0,3 -1,6 -3,6 m 8,-9.000002 c 3,0 6,1 6,3.000002 0,11 -8,17 -14,17"
        id="path2727-0"
@@ -12430,7 +12433,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        id="autosatinrun13-6"
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        id="autosatin15-5"
        d="m 40.740306,122.27236 c -5.913431,-1.29455 -6.024758,5.47604 -4.952516,9.31686 0.799824,13.44921 -1.982322,27.75654 3.469938,40.44232 7.533513,10.26531 23.870595,6.38748 29.819812,-3.64268 1.254516,-1.6416 2.306275,-3.45177 3.217055,-5.30363 M 40.740306,122.27236 c 6.776274,-0.10688 9.574267,7.09726 8.366794,12.88149 0.544833,9.42524 -1.160697,19.24542 1.090547,28.41138 3.34942,6.42768 11.508842,1.32474 12.807742,-4.0155 0.511388,-1.18779 1.134051,-2.32891 1.469007,-3.58538 m -10.011999,7.52152 c 0.114638,6.0192 0.229185,12.03838 0.343786,18.05758 M 32.7578,148.18809 c 6.775199,-0.19159 13.550413,-0.38316 20.325614,-0.57474 m -12.482411,-25.3538 0.278607,0.0282"
@@ -12451,7 +12454,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        inkscape:label="Points droits pour auto-remplissage satin 5"
        inkstitch:ties="3"
        sodipodi:nodetypes="cc"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        id="autosatin16-2"
        d="m 72.809636,143.28682 c -7.141455,-2.83803 -6.261103,8.95532 -8.33524,12.67753 m 8.33524,-12.67753 c 7.939655,4.5834 1.646907,13.76348 -0.515041,19.79841 m -8.645799,-13.74638 c 4.708222,2.22343 9.416444,4.44687 14.124666,6.67032"
@@ -12556,7 +12559,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        inkscape:label="Points droits pour auto-remplissage satin 1"
        sodipodi:nodetypes="ccccc"
        inkstitch:ties="3"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        id="autosatin111-0"
        d="m 43.3443,128.595 c -1.698472,0.81325 -4.754605,1.14078 -5.307649,-1.20768 -0.01395,-2.1718 -0.900371,-4.29041 -1.786922,-6.26978 -1.213359,-2.94227 -4.669051,-4.79292 -7.75005,-3.84063 -3.646516,1.36167 -5.524692,5.14263 -7.030556,8.47486 -2.438231,5.90068 -3.309881,12.31396 -3.441872,18.66205 -0.192541,6.72308 1.77533,14.16218 7.452089,18.30108 2.014638,1.47532 4.329777,2.43356 6.753263,2.91681 M 43.3443,128.595 c 2.857433,-1.3157 5.142217,-4.32779 4.576083,-7.595 -0.428892,-5.68774 -3.362434,-11.52798 -8.539847,-14.27251 -6.297946,-3.21274 -14.169119,-1.6171 -19.636375,2.54335 -7.056927,5.20388 -11.3845551,13.3367 -13.7681555,21.62432 -2.5597911,9.3864 -2.9648083,19.76965 0.9384912,28.84947 3.9138173,9.42433 12.9136713,16.60167 23.0771923,17.93589 M 31.5786,119.338 31.9861,103.345 m -29.8469,38.302 17.521,0.102 m 4.7878,17.928 c -3.633267,4.04067 -7.266533,8.08133 -10.8998,12.122"
@@ -12572,7 +12575,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        id="path59782"
        inkstitch:ties="3"
        inkstitch:running_stitch_length_mm="2"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="m 15,208 c 0,5 3,7 13,7 14,0 19,-10 19,-16 0,-5 -2,-13 -14,-15 l 2,-6 m -20,30 c 0,-2 0,-5 2,-4 2,1 6,1 9,1 6,0 11,-2 11,-7 0,-8 -15,-2 -15,-10 0,-2 4,-10 4,-11 m -3.550986,24.79027 -0.196921,16.7383 m 11.618349,-18.51059 14.375245,4.13534 m -17.329063,-8.86145 10.436822,-10.43682"
        id="path6853"
@@ -12601,7 +12604,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        inkscape:label="Points droits pour auto-remplissage satin 3"
        sodipodi:nodetypes="ccc"
        inkstitch:ties="3"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="m 63.8525,140.298 c -3.043632,-0.81706 -6.139225,1.44114 -6.760659,4.43246 -0.858906,3.88366 -1.922387,7.76498 -3.927957,11.23523 -0.128689,0.23534 -0.223007,0.49061 -0.387084,0.70531 m 11.0757,-16.373 c 2.723315,0.5393 4.793334,3.32658 4.097639,6.10016 -0.660626,5.90656 -2.67752,11.67077 -5.833739,16.70584 m -8.7383,-10.557 c 4.380233,1.79967 8.760467,3.59933 13.1407,5.399"
        id="autosatin112-2"
@@ -12626,7 +12629,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        id="autosatinrun7-4"
        inkstitch:ties="3"
        inkstitch:running_stitch_length_mm="2"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="M 35.82849,93.615151 16.765739,71.664106"
        id="path3177-9-7-2"
@@ -12634,7 +12637,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        sodipodi:nodetypes="cc"
        inkscape:label="Points droits pour auto-remplissage satin"
        inkstitch:running_stitch_length_mm="2"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        id="path3247-3-0-4"
        d="m 17.343398,69.931128 c 6.266608,-3.691092 22.451734,20.257589 23.106364,25.128171 M 14.166273,72.530594 c -3.582136,7.405579 17.844618,26.014834 21.951046,24.550512"
@@ -12651,7 +12654,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        id="path15490"
        inkstitch:ties="3"
        inkstitch:running_stitch_length_mm="2"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        id="autosatin8-83"
        d="m 19.880501,155.93718 c 16.896088,-4.69949 30.613709,-24.18359 24.460651,-41.66221 -3.978917,-11.13198 -19.433813,-11.52774 -26.922682,-3.87293 -14.6032289,13.64548 -18.30488767,38.81357 -6.728825,55.45702 10.276694,14.53236 32.88872,15.98738 45.859267,4.40124 M 17.62199,145.9984 c 10.638425,-3.35503 16.467619,-16.46018 14.245894,-27.08186 -3.722719,-5.47869 -9.653673,0.98441 -10.724205,5.31607 -4.004563,11.26283 -4.133265,24.53051 1.146036,35.32082 5.982488,9.08106 20.411324,9.18695 27.573852,1.56049 M 20.3759,142.84668 c 1.30878,4.56043 2.617574,9.12086 3.926354,13.68129 m 3.803139,-22.18584 c 4.458171,2.62942 8.916329,5.25882 13.3745,7.88824 M 30.437579,120.78333 c 6.707358,-0.78049 13.414729,-1.56097 20.122087,-2.34146 m -22.207844,0.37004 c 3.557981,-4.88922 7.115961,-9.77842 10.673941,-14.66764 m -13.619659,15.40644 c -0.65418,-5.79304 -1.308361,-11.58609 -1.962542,-17.37914 m -0.123214,20.9545 c -5.930395,-1.47931 -11.860777,-2.95863 -17.791172,-4.43793 m 13.864818,23.41846 c -6.094258,0.0412 -12.1885025,0.0826 -18.28276,0.12377 m 26.380627,20.33691 c -4.00807,4.10873 -8.016152,8.21746 -12.024221,12.32618 m 23.312964,-10.47725 c 0.204511,5.34134 0.409022,10.68269 0.613533,16.02403"
@@ -12670,7 +12673,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        id="autosatinrun8-9"
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        id="autosatin9-0"
        d="m 64.50324,140.64685 c -5.137363,-2.14155 -7.574002,3.43025 -7.866363,7.58027 -1.304449,4.71588 -3.331024,9.34332 -6.77331,12.8868 M 64.50324,140.64685 c 6.188548,3.22959 2.197437,11.79655 0.741167,16.87625 -1.866129,4.83266 -4.848901,9.27784 -8.695495,12.7372 m -2.308051,-19.27911 c 4.335795,1.89018 8.671602,3.78037 13.007397,5.67055"
@@ -12696,7 +12699,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        id="autosatinrun7-5"
        inkstitch:ties="3"
        inkstitch:running_stitch_length_mm="2"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="M 24.263837,93.037492 43.326588,71.086447"
        id="path3177-9-3"
@@ -12704,7 +12707,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        sodipodi:nodetypes="cc"
        inkscape:label="Points droits pour auto-remplissage satin"
        inkstitch:running_stitch_length_mm="2"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        id="path3247-3-8"
        d="M 42.748929,69.353469 C 36.482321,65.662377 20.297195,89.611058 19.642565,94.48164 M 45.926054,71.952935 C 49.50819,79.358514 28.081436,97.967769 23.975008,96.503447"
@@ -12722,7 +12725,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        sodipodi:nodetypes="cccc"
        inkstitch:ties="3"
        inkstitch:running_stitch_length_mm="2"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        id="autosatin8-2"
        d="m 19.880501,155.93718 c 16.896088,-4.69949 30.613709,-24.18359 24.460651,-41.66221 -3.978917,-11.13198 -19.433813,-11.52774 -26.922682,-3.87293 -14.6032289,13.64548 -18.30488767,38.81357 -6.728825,55.45702 10.276694,14.53236 32.88872,15.98738 45.859267,4.40124 M 17.62199,145.9984 c 10.638425,-3.35503 16.467619,-16.46018 14.245894,-27.08186 -3.722719,-5.47869 -9.653673,0.98441 -10.724205,5.31607 -4.004563,11.26283 -4.133265,24.53051 1.146036,35.32082 5.982488,9.08106 20.411324,9.18695 27.573852,1.56049 M 20.3759,142.84668 c 1.30878,4.56043 2.617574,9.12086 3.926354,13.68129 m 3.803139,-22.18584 c 4.458171,2.62942 8.916329,5.25882 13.3745,7.88824 M 30.437579,120.78333 c 6.707358,-0.78049 13.414729,-1.56097 20.122087,-2.34146 m -22.207844,0.37004 c 3.557981,-4.88922 7.115961,-9.77842 10.673941,-14.66764 m -13.619659,15.40644 c -0.65418,-5.79304 -1.308361,-11.58609 -1.962542,-17.37914 m -0.123214,20.9545 c -5.930395,-1.47931 -11.860777,-2.95863 -17.791172,-4.43793 m 13.864818,23.41846 c -6.094258,0.0412 -12.1885025,0.0826 -18.28276,0.12377 m 26.380627,20.33691 c -4.00807,4.10873 -8.016152,8.21746 -12.024221,12.32618 m 23.312964,-10.47725 c 0.204511,5.34134 0.409022,10.68269 0.613533,16.02403"
@@ -12741,7 +12744,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        id="autosatinrun8-2"
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        id="autosatin9-7"
        d="m 64.50324,140.64685 c -5.137363,-2.14155 -7.574002,3.43025 -7.866363,7.58027 -1.304449,4.71588 -3.331024,9.34332 -6.77331,12.8868 M 64.50324,140.64685 c 6.188548,3.22959 2.197437,11.79655 0.741167,16.87625 -1.866129,4.83266 -4.848901,9.27784 -8.695495,12.7372 m -2.308051,-19.27911 c 4.335795,1.89018 8.671602,3.78037 13.007397,5.67055"
@@ -12853,7 +12856,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        id="autosatinrun7-9"
        inkstitch:ties="3"
        inkstitch:running_stitch_length_mm="2"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="m 43.262492,94.333573 c 0.449414,-5.288142 0.549055,-10.599266 0,-15.884626"
        inkstitch:running_stitch_length_mm="2"
@@ -12897,7 +12900,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        id="path29961"
        inkstitch:ties="3"
        inkstitch:running_stitch_length_mm="2"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        id="autosatin8-97"
        d="m 19.880501,155.93718 c 16.896088,-4.69949 30.613709,-24.18359 24.460651,-41.66221 -3.978917,-11.13198 -19.433813,-11.52774 -26.922682,-3.87293 -14.6032289,13.64548 -18.30488767,38.81357 -6.728825,55.45702 10.276694,14.53236 32.88872,15.98738 45.859267,4.40124 M 17.62199,145.9984 c 10.638425,-3.35503 16.467619,-16.46018 14.245894,-27.08186 -3.722719,-5.47869 -9.653673,0.98441 -10.724205,5.31607 -4.004563,11.26283 -4.133265,24.53051 1.146036,35.32082 5.982488,9.08106 20.411324,9.18695 27.573852,1.56049 M 20.3759,142.84668 c 1.30878,4.56043 2.617574,9.12086 3.926354,13.68129 m 3.803139,-22.18584 c 4.458171,2.62942 8.916329,5.25882 13.3745,7.88824 M 30.437579,120.78333 c 6.707358,-0.78049 13.414729,-1.56097 20.122087,-2.34146 m -22.207844,0.37004 c 3.557981,-4.88922 7.115961,-9.77842 10.673941,-14.66764 m -13.619659,15.40644 c -0.65418,-5.79304 -1.308361,-11.58609 -1.962542,-17.37914 m -0.123214,20.9545 c -5.930395,-1.47931 -11.860777,-2.95863 -17.791172,-4.43793 m 13.864818,23.41846 c -6.094258,0.0412 -12.1885025,0.0826 -18.28276,0.12377 m 26.380627,20.33691 c -4.00807,4.10873 -8.016152,8.21746 -12.024221,12.32618 m 23.312964,-10.47725 c 0.204511,5.34134 0.409022,10.68269 0.613533,16.02403"
@@ -12916,7 +12919,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        id="autosatinrun8-03"
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        id="autosatin9-9"
        d="m 64.50324,140.64685 c -5.137363,-2.14155 -7.574002,3.43025 -7.866363,7.58027 -1.304449,4.71588 -3.331024,9.34332 -6.77331,12.8868 M 64.50324,140.64685 c 6.188548,3.22959 2.197437,11.79655 0.741167,16.87625 -1.866129,4.83266 -4.848901,9.27784 -8.695495,12.7372 m -2.308051,-19.27911 c 4.335795,1.89018 8.671602,3.78037 13.007397,5.67055"
@@ -12943,7 +12946,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        id="autosatinrun138-8"
        inkscape:label="Points droits pour auto-remplissage satin 1"
        inkstitch:ties="3"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="M 18.405958,92.91825 -0.65679339,70.967205"
        id="path3177-9-7-2-8"
@@ -12951,7 +12954,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        sodipodi:nodetypes="cc"
        inkscape:label="Points droits pour auto-remplissage satin"
        inkstitch:running_stitch_length_mm="2"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        id="path3247-3-0-4-3"
        d="M -0.07913439,69.234227 C 6.1874736,65.543135 22.3726,89.491816 23.02723,94.362398 M -3.2562594,71.833693 c -3.582136,7.405579 17.8446184,26.014834 21.9510464,24.550512"
@@ -12982,7 +12985,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        inkscape:label="Points droits pour auto-remplissage satin 5"
        sodipodi:nodetypes="cccccccccccccccc"
        inkstitch:ties="3"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        id="autosatin154-3"
        d="m 41.944,143.694 c -1.625868,-1.56921 -4.548329,-1.54637 -5.645187,0.62686 -1.681219,3.43542 -1.980529,7.3811 -3.224459,10.99009 -0.709082,2.47367 -1.672445,4.86731 -3.022754,7.06305 m 11.8924,-18.68 c 2.581666,2.25578 3.990648,6.08917 2.455806,9.335 -1.705981,5.70559 -3.867603,11.44175 -7.416006,16.276 m -7.7691,-9.183 c 3.910633,2.377 7.821267,4.754 11.7319,7.131"
@@ -13008,7 +13011,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        id="autosatinrun138-84"
        inkscape:label="Points droits pour auto-remplissage satin 1"
        inkstitch:ties="3"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="M 6.6090042,93.037492 25.671755,71.086447"
        id="path3177-9-3-2"
@@ -13016,7 +13019,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        sodipodi:nodetypes="cc"
        inkscape:label="Points droits pour auto-remplissage satin"
        inkstitch:running_stitch_length_mm="2"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        id="path3247-3-8-4"
        d="M 25.094096,69.353469 C 18.827488,65.662377 2.6423622,89.611058 1.9877322,94.48164 M 28.271221,71.952935 C 31.853357,79.358514 10.426603,97.967769 6.3201752,96.503447"
@@ -13047,7 +13050,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        inkscape:label="Points droits pour auto-remplissage satin 5"
        sodipodi:nodetypes="cccccccccccccccc"
        inkstitch:ties="3"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        id="autosatin154-0"
        d="m 41.944,143.694 c -1.625868,-1.56921 -4.548329,-1.54637 -5.645187,0.62686 -1.681219,3.43542 -1.980529,7.3811 -3.224459,10.99009 -0.709082,2.47367 -1.672445,4.86731 -3.022754,7.06305 m 11.8924,-18.68 c 2.581666,2.25578 3.990648,6.08917 2.455806,9.335 -1.705981,5.70559 -3.867603,11.44175 -7.416006,16.276 m -7.7691,-9.183 c 3.910633,2.377 7.821267,4.754 11.7319,7.131"
@@ -13073,7 +13076,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        id="autosatinrun138-1"
        inkscape:label="Points droits pour auto-remplissage satin 1"
        inkstitch:ties="3"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="M 12.458233,76.271767 27.367267,94.44853"
        id="path2364"
@@ -13128,7 +13131,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        inkscape:label="Points droits pour auto-remplissage satin 5"
        sodipodi:nodetypes="cccccccccccccccc"
        inkstitch:ties="3"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        id="autosatin154-8"
        d="m 41.944,143.694 c -1.625868,-1.56921 -4.548329,-1.54637 -5.645187,0.62686 -1.681219,3.43542 -1.980529,7.3811 -3.224459,10.99009 -0.709082,2.47367 -1.672445,4.86731 -3.022754,7.06305 m 11.8924,-18.68 c 2.581666,2.25578 3.990648,6.08917 2.455806,9.335 -1.705981,5.70559 -3.867603,11.44175 -7.416006,16.276 m -7.7691,-9.183 c 3.910633,2.377 7.821267,4.754 11.7319,7.131"
@@ -13154,7 +13157,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        id="autosatinrun138-3"
        inkscape:label="Points droits pour auto-remplissage satin 1"
        inkstitch:ties="3"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="m 24.787692,93.871703 c 0.449414,-5.288142 0.549055,-10.599266 0,-15.884626"
        inkstitch:running_stitch_length_mm="2"
@@ -13212,7 +13215,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        inkscape:label="Points droits pour auto-remplissage satin 5"
        sodipodi:nodetypes="cccccccccccccccc"
        inkstitch:ties="3"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        id="autosatin154-1"
        d="m 41.944,143.694 c -1.625868,-1.56921 -4.548329,-1.54637 -5.645187,0.62686 -1.681219,3.43542 -1.980529,7.3811 -3.224459,10.99009 -0.709082,2.47367 -1.672445,4.86731 -3.022754,7.06305 m 11.8924,-18.68 c 2.581666,2.25578 3.990648,6.08917 2.455806,9.335 -1.705981,5.70559 -3.867603,11.44175 -7.416006,16.276 m -7.7691,-9.183 c 3.910633,2.377 7.821267,4.754 11.7319,7.131"
@@ -13450,13 +13453,13 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        id="autosatinrun147-5"
        inkscape:label="Points droits pour auto-remplissage satin 1"
        inkstitch:ties="3"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="M 40.612718,89.38618 23.086733,77.37399 13.831438,89.5831"
        id="path2759-8-2"
        inkstitch:ties="3"
        inkstitch:running_stitch_length_mm="2"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="m 15.253485,93.23741 c 2,0 4,-1 4,-3 1,-3 2,-6 5,-6 3,0 7,10 16,10 m -25,-1 c -3,0 -5.9999995,-2 -5.9999995,-4 0,-7 4.9999995,-16.000002 12.9999995,-16.000002 9,0 13,10.000002 18,10.000002"
        id="path3232-3-3"
@@ -13473,7 +13476,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        id="path2960-9-9"
        inkstitch:ties="3"
        inkstitch:running_stitch_length_mm="2"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="m 48.253485,74.237408 c -2,0 -5,0 -5,3.000002 0,3 -1,6 -3,6 m 8,-9.000002 c 3,0 6,1 6,3.000002 0,11 -8,17 -14,17"
        id="path2727-0-9"
@@ -13502,7 +13505,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        id="autosatinrun148-1"
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="m 43,149 c -0.114568,-7.7345 0.295959,-15.50612 -0.539514,-23.20893 -0.440413,-2.04093 -0.638835,-4.97973 -2.966738,-5.71814 -2.197025,-0.42693 -2.920657,2.24805 -3.161285,3.91967 -1.107857,8.01439 1.01299,16.37498 5.342693,23.16988 2.700003,3.71689 5.620909,7.72972 10.141488,9.30114 2.73827,1.3695 5.908696,0.29852 8.786656,-0.0216 0.157667,-0.0487 0.315333,-0.0973 0.473,-0.146 M 53,157 c 3.343767,-10.83372 4.160012,-22.68586 1.001895,-33.66378 -1.642383,-5.2496 -4.263702,-10.89821 -9.415472,-13.4815 -3.779977,-1.68378 -8.493503,-0.75576 -11.689023,1.77328 -4.036847,3.53691 -4.847477,9.25487 -4.980124,14.33395 -0.02254,9.32719 1.784978,18.84587 6.430721,27.01849 2.572317,4.43647 6.270411,8.47363 11.233263,10.17796 4.320004,1.81165 8.761808,3.99424 13.58605,3.51324 1.507009,-0.0667 3.002238,-0.32887 4.43969,-0.78764 m -5.1891,-11.871 c 0.0991,5.5 0.1982,11 0.2973,16.5 M 38.3507,122.946 c 0.297267,-5.153 0.594533,-10.306 0.8918,-15.459 m 2.2297,24.675 c 5.8963,-0.44567 11.7926,-0.89133 17.6889,-1.337 m -21.5537,1.337 c -3.7657,0.59467 -7.5314,1.18933 -11.2971,1.784"
        id="autosatin162-4"
@@ -13522,7 +13525,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        inkscape:label="Points droits pour auto-remplissage satin 5"
        inkstitch:ties="3"
        sodipodi:nodetypes="cccc"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="m 75.3877,141.306 c -2.462982,-0.55964 -6.190081,0.38121 -6.442565,3.32954 -0.30147,3.60615 -0.61254,8.08319 -4.091875,10.11069 -1.147693,0.80189 -2.448725,1.16531 -3.77696,1.54977 m 14.3114,-14.99 c 3.144853,0.62278 4.361017,4.22233 3.697314,7.05489 -1.103421,5.24021 -4.167189,10.03126 -8.269099,13.44691 -2.09527,1.83668 -4.540181,3.25945 -7.208915,4.0762 m 1.3513,-17.222 c 4.9053,1.68467 9.8106,3.36933 14.7159,5.054"
        id="autosatin163-1"
@@ -13548,7 +13551,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        id="autosatinrun147-3"
        inkscape:label="Points droits pour auto-remplissage satin 1"
        inkstitch:ties="3"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="m 43.262492,94.333573 c 0.449414,-5.288142 0.549055,-10.599266 0,-15.884626"
        inkstitch:running_stitch_length_mm="2"
@@ -13604,7 +13607,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        id="autosatinrun148-8"
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="m 43,149 c -0.114568,-7.7345 0.295959,-15.50612 -0.539514,-23.20893 -0.440413,-2.04093 -0.638835,-4.97973 -2.966738,-5.71814 -2.197025,-0.42693 -2.920657,2.24805 -3.161285,3.91967 -1.107857,8.01439 1.01299,16.37498 5.342693,23.16988 2.700003,3.71689 5.620909,7.72972 10.141488,9.30114 2.73827,1.3695 5.908696,0.29852 8.786656,-0.0216 0.157667,-0.0487 0.315333,-0.0973 0.473,-0.146 M 53,157 c 3.343767,-10.83372 4.160012,-22.68586 1.001895,-33.66378 -1.642383,-5.2496 -4.263702,-10.89821 -9.415472,-13.4815 -3.779977,-1.68378 -8.493503,-0.75576 -11.689023,1.77328 -4.036847,3.53691 -4.847477,9.25487 -4.980124,14.33395 -0.02254,9.32719 1.784978,18.84587 6.430721,27.01849 2.572317,4.43647 6.270411,8.47363 11.233263,10.17796 4.320004,1.81165 8.761808,3.99424 13.58605,3.51324 1.507009,-0.0667 3.002238,-0.32887 4.43969,-0.78764 m -5.1891,-11.871 c 0.0991,5.5 0.1982,11 0.2973,16.5 M 38.3507,122.946 c 0.297267,-5.153 0.594533,-10.306 0.8918,-15.459 m 2.2297,24.675 c 5.8963,-0.44567 11.7926,-0.89133 17.6889,-1.337 m -21.5537,1.337 c -3.7657,0.59467 -7.5314,1.18933 -11.2971,1.784"
        id="autosatin162-0"
@@ -13624,7 +13627,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        inkscape:label="Points droits pour auto-remplissage satin 5"
        inkstitch:ties="3"
        sodipodi:nodetypes="cccc"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="m 75.3877,141.306 c -2.462982,-0.55964 -6.190081,0.38121 -6.442565,3.32954 -0.30147,3.60615 -0.61254,8.08319 -4.091875,10.11069 -1.147693,0.80189 -2.448725,1.16531 -3.77696,1.54977 m 14.3114,-14.99 c 3.144853,0.62278 4.361017,4.22233 3.697314,7.05489 -1.103421,5.24021 -4.167189,10.03126 -8.269099,13.44691 -2.09527,1.83668 -4.540181,3.25945 -7.208915,4.0762 m 1.3513,-17.222 c 4.9053,1.68467 9.8106,3.36933 14.7159,5.054"
        id="autosatin163-6"
@@ -13650,7 +13653,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        id="autosatinrun174-1"
        inkscape:label="Points droits pour auto-remplissage satin 1"
        inkstitch:ties="3"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="m 19,108 c 1.909637,-0.0469 4.872137,0.44997 4.822974,2.90694 3.74e-4,3.02738 -2.090976,5.59027 -2.40146,8.59251 -2.195048,9.22086 -4.213945,18.56007 -4.344589,28.0786 -0.129515,5.7688 -0.369798,12.15443 3.194575,17.04895 1.91399,2.44978 5.613648,3.09506 8.196731,1.32302 3.833505,-2.52788 5.781382,-6.97027 7.421283,-11.09223 C 37.342523,151.02478 38.261033,147.02474 39,143 M 4.24247,130.485 c 5.939477,-0.0943 11.878953,-0.18867 17.81843,-0.283 M 3.11115,160.748 c 5.42095,-0.75433 10.8419,-1.50867 16.26285,-2.263 m 3.3939,5.798 c -0.04713,5.421 -0.09427,10.842 -0.1414,16.263 M 19,108 c -2.804471,0.16995 -6.517999,-0.0525 -8.0859,2.783 -2.1701536,7.41187 -3.8042032,14.98893 -5.1085928,22.60161 -1.298349,8.53244 -2.3179148,17.22094 -1.4049837,25.84321 0.7945223,6.53212 3.4764589,13.59265 9.5700125,16.88158 6.209483,3.23336 14.480926,2.27421 19.468134,-2.76212 1.995943,-1.68504 3.708834,-3.62905 5.023823,-5.89084 0.571897,-0.8501 1.143795,-1.70021 1.715692,-2.55031 l -0.101511,-8.50605"
        id="autosatin192-7"
@@ -13669,7 +13672,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        id="autosatinrun175-55"
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="M 35.82849,93.615151 16.765739,71.664106"
        id="path3177-9-7-2-0-4"
@@ -13677,7 +13680,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        sodipodi:nodetypes="cc"
        inkscape:label="Points droits pour auto-remplissage satin"
        inkstitch:running_stitch_length_mm="2"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        id="path3247-3-0-4-2-8"
        d="m 17.343398,69.931128 c 6.266608,-3.691092 22.451734,20.257589 23.106364,25.128171 M 14.166273,72.530594 c -3.582136,7.405579 17.844618,26.014834 21.951046,24.550512"
@@ -13707,7 +13710,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        id="autosatinrun176-8"
        inkscape:label="Points droits pour auto-remplissage satin 5"
        inkstitch:ties="3"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="m 72,143 c -2.231522,-0.13212 -3.228185,2.14112 -3.677639,3.96041 -1.548053,5.20396 -2.331724,10.74692 -5.275161,15.42159 M 72,143 c 3.255453,0.3774 6.083549,3.14438 6.886938,6.26067 0.139851,1.01567 -1.377485,1.52655 -1.250804,2.9694 -2.13106,7.24588 -4.904623,14.70621 -10.307234,20.18593 M 64.627,152.545 c 4.0068,2.40433 8.0136,4.80867 12.0204,7.213"
        id="autosatin194-8"
@@ -13733,7 +13736,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        id="autosatinrun174-4"
        inkscape:label="Points droits pour auto-remplissage satin 1"
        inkstitch:ties="3"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="M 23.792565,93.389407 42.855316,71.438362"
        id="path3177-9-7-2-3"
@@ -13741,7 +13744,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        sodipodi:nodetypes="cc"
        inkscape:label="Points droits pour auto-remplissage satin"
        inkstitch:running_stitch_length_mm="2"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        id="path3247-3-0-4-8"
        d="M 42.277657,69.705384 C 36.011049,66.014292 19.825923,89.962973 19.171293,94.833555 M 45.454782,72.30485 c 3.582136,7.405579 -17.844618,26.014834 -21.951046,24.550512"
@@ -13771,7 +13774,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        id="autosatinrun175-5"
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="m 37,109 c 0.655524,1.26263 1.81623,2.37265 1.839569,3.93555 0.357011,5.58802 0.06601,11.21346 0.160431,16.81622 0.03317,12.1501 -0.06632,24.31583 0.0497,36.45617 0.741308,4.9416 4.413239,9.15671 9.106433,10.78464 6.452045,2.26281 14.057085,0.5334 18.887526,-4.32169 L 67.203076,172.52844 67.3289,172.416 M 43,107 c 3.731628,-0.0832 7.75476,2.05826 8.677027,5.88294 0.670463,3.28091 0.166107,6.69317 0.322973,10.02743 0.04455,11.90801 -0.08903,23.82531 0.06665,35.72754 0.229005,2.68481 1.048971,6.01598 3.779998,7.14044 2.874127,0.8229 5.691237,-1.04424 7.200548,-3.39635 M 37,109 c 0.986026,-1.40291 3.062646,-1.52536 4.644408,-1.8691 C 42.096272,107.08727 42.548136,107.04363 43,107 m -5.949,15 c 5.5152,0 11.0304,0 16.5456,0 m -16.9699,37.475 c 5.798033,-0.80133 11.596067,-1.60267 17.3941,-2.404 m 2.6869,7.071 c -0.3771,5.65633 -0.7542,11.31267 -1.1313,16.969"
        id="autosatin193-9"
@@ -13790,7 +13793,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        id="autosatinrun176-54"
        inkscape:label="Points droits pour auto-remplissage satin 5"
        inkstitch:ties="3"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="m 72,143 c -2.231522,-0.13212 -3.228185,2.14112 -3.677639,3.96041 -1.548053,5.20396 -2.331724,10.74692 -5.275161,15.42159 M 72,143 c 3.255453,0.3774 6.083549,3.14438 6.886938,6.26067 0.139851,1.01567 -1.377485,1.52655 -1.250804,2.9694 -2.13106,7.24588 -4.904623,14.70621 -10.307234,20.18593 M 64.627,152.545 c 4.0068,2.40433 8.0136,4.80867 12.0204,7.213"
        id="autosatin194-9"
@@ -13816,7 +13819,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        id="autosatinrun174-88"
        inkscape:label="Points droits pour auto-remplissage satin 1"
        inkstitch:ties="3"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="m 19,108 c 1.909637,-0.0469 4.872137,0.44997 4.822974,2.90694 3.74e-4,3.02738 -2.090976,5.59027 -2.40146,8.59251 -2.195048,9.22086 -4.213945,18.56007 -4.344589,28.0786 -0.129515,5.7688 -0.369798,12.15443 3.194575,17.04895 1.91399,2.44978 5.613648,3.09506 8.196731,1.32302 3.833505,-2.52788 5.781382,-6.97027 7.421283,-11.09223 C 37.342523,151.02478 38.261033,147.02474 39,143 M 4.24247,130.485 c 5.939477,-0.0943 11.878953,-0.18867 17.81843,-0.283 M 3.11115,160.748 c 5.42095,-0.75433 10.8419,-1.50867 16.26285,-2.263 m 3.3939,5.798 c -0.04713,5.421 -0.09427,10.842 -0.1414,16.263 M 19,108 c -2.804471,0.16995 -6.517999,-0.0525 -8.0859,2.783 -2.1701536,7.41187 -3.8042032,14.98893 -5.1085928,22.60161 -1.298349,8.53244 -2.3179148,17.22094 -1.4049837,25.84321 0.7945223,6.53212 3.4764589,13.59265 9.5700125,16.88158 6.209483,3.23336 14.480926,2.27421 19.468134,-2.76212 1.995943,-1.68504 3.708834,-3.62905 5.023823,-5.89084 0.571897,-0.8501 1.143795,-1.70021 1.715692,-2.55031 l -0.101511,-8.50605"
        id="autosatin192-3"
@@ -13835,7 +13838,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        id="autosatinrun175-8"
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="M 30.654533,76.849426 45.563567,95.026189"
        id="path2364-4"
@@ -13889,7 +13892,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        id="autosatinrun176-5"
        inkscape:label="Points droits pour auto-remplissage satin 5"
        inkstitch:ties="3"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="m 72,143 c -2.231522,-0.13212 -3.228185,2.14112 -3.677639,3.96041 -1.548053,5.20396 -2.331724,10.74692 -5.275161,15.42159 M 72,143 c 3.255453,0.3774 6.083549,3.14438 6.886938,6.26067 0.139851,1.01567 -1.377485,1.52655 -1.250804,2.9694 -2.13106,7.24588 -4.904623,14.70621 -10.307234,20.18593 M 64.627,152.545 c 4.0068,2.40433 8.0136,4.80867 12.0204,7.213"
        id="autosatin194-35"
@@ -13915,7 +13918,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        id="autosatinrun174-2"
        inkscape:label="Points droits pour auto-remplissage satin 1"
        inkstitch:ties="3"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="m 19,108 c 1.909637,-0.0469 4.872137,0.44997 4.822974,2.90694 3.74e-4,3.02738 -2.090976,5.59027 -2.40146,8.59251 -2.195048,9.22086 -4.213945,18.56007 -4.344589,28.0786 -0.129515,5.7688 -0.369798,12.15443 3.194575,17.04895 1.91399,2.44978 5.613648,3.09506 8.196731,1.32302 3.833505,-2.52788 5.781382,-6.97027 7.421283,-11.09223 C 37.342523,151.02478 38.261033,147.02474 39,143 M 4.24247,130.485 c 5.939477,-0.0943 11.878953,-0.18867 17.81843,-0.283 M 3.11115,160.748 c 5.42095,-0.75433 10.8419,-1.50867 16.26285,-2.263 m 3.3939,5.798 c -0.04713,5.421 -0.09427,10.842 -0.1414,16.263 M 19,108 c -2.804471,0.16995 -6.517999,-0.0525 -8.0859,2.783 -2.1701536,7.41187 -3.8042032,14.98893 -5.1085928,22.60161 -1.298349,8.53244 -2.3179148,17.22094 -1.4049837,25.84321 0.7945223,6.53212 3.4764589,13.59265 9.5700125,16.88158 6.209483,3.23336 14.480926,2.27421 19.468134,-2.76212 1.995943,-1.68504 3.708834,-3.62905 5.023823,-5.89084 0.571897,-0.8501 1.143795,-1.70021 1.715692,-2.55031 l -0.101511,-8.50605"
        id="autosatin192-6"
@@ -13934,7 +13937,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        id="autosatinrun175-9"
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="m 43.262492,94.333573 c 0.449414,-5.288142 0.549055,-10.599266 0,-15.884626"
        inkstitch:running_stitch_length_mm="2"
@@ -13991,7 +13994,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        id="autosatinrun176-1"
        inkscape:label="Points droits pour auto-remplissage satin 5"
        inkstitch:ties="3"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="m 72,143 c -2.231522,-0.13212 -3.228185,2.14112 -3.677639,3.96041 -1.548053,5.20396 -2.331724,10.74692 -5.275161,15.42159 M 72,143 c 3.255453,0.3774 6.083549,3.14438 6.886938,6.26067 0.139851,1.01567 -1.377485,1.52655 -1.250804,2.9694 -2.13106,7.24588 -4.904623,14.70621 -10.307234,20.18593 M 64.627,152.545 c 4.0068,2.40433 8.0136,4.80867 12.0204,7.213"
        id="autosatin194-37"
@@ -14016,13 +14019,13 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        id="autosatinrun42-72"
        inkstitch:ties="3"
        inkstitch:running_stitch_length_mm="2"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="M 57.076988,38.28664 39.551003,26.27445 30.295708,38.48356"
        id="path2759-8-8-3-7"
        inkstitch:ties="3"
        inkstitch:running_stitch_length_mm="2"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="m 31.717755,42.13787 c 2,0 4,-1 4,-3 1,-3 2,-6 5,-6 3,0 7,10 16,10 m -25,-1 c -3,0 -6,-2 -6,-4 0,-7 5,-16.000002 13,-16.000002 9,0 13,10.000002 18,10.000002"
        id="path3232-3-0-8-3"
@@ -14039,7 +14042,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        id="path2960-9-2-0-7"
        inkstitch:ties="3"
        inkstitch:running_stitch_length_mm="2"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="m 64.717755,23.137868 c -2,0 -5,0 -5,3.000002 0,3 -1,6 -3,6 m 8,-9.000002 c 3,0 6,1 6,3.000002 0,11 -8,17 -14,17"
        id="path2727-0-4-2-9"
@@ -14056,7 +14059,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        id="path12236"
        inkstitch:ties="3"
        inkstitch:running_stitch_length_mm="2"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="m 29,125 c 0.05306,-1.08829 -0.115206,-3.88871 -1.80956,-2.66128 -1.649172,1.72722 -3.493731,-0.90671 -4.516008,-2.11958 C 16.766755,112.03199 16.112058,101.21178 17.86064,91.551846 19.495053,81.43108 25.787425,71.756333 35.416296,67.66631 38.438121,66.258438 45,61.676213 45,65 v 94.22319 M 29,125 c -0.158972,4.53212 -2.441512,9.85229 -7.1719,11.109 -3.387163,0.34498 -5.769062,-2.738 -7.928071,-4.8845 C 5.4817252,121.47426 1.9407992,108.06713 3.254946,95.348593 4.1079996,83.50977 9.1879609,71.740884 18.387722,64.031507 27.736602,55.941434 40.285905,51.938846 52.562974,52.053104 56.641503,52.135896 59.521668,56.239045 59,60.130945 V 159.25817 M 23.6458,117.392 c -1.525533,7.18267 -3.051067,14.36533 -4.5766,21.548 M 19.2599,97.75 1.14415,96.225 M 25.362,54.6542 33.371,71.435 m 9.7253,2.2883 20.0227,-3.2417 M 43.0963,83.83 c 6.292833,0.06367 12.585667,0.127333 18.8785,0.191"
        id="autosatin44-36"
@@ -14094,13 +14097,13 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        id="autosatinrun138-37"
        inkscape:label="Points droits pour auto-remplissage satin 1"
        inkstitch:ties="3"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="M 21.535022,90.786538 4.009037,78.774348 -5.246258,90.983458"
        id="path2759-8-8-3-0"
        inkstitch:ties="3"
        inkstitch:running_stitch_length_mm="2"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="m -3.824211,94.637768 c 2,0 4.00000001,-1 4.00000001,-3 0.99999999,-3 1.99999999,-6 4.99999999,-6 3,0 7,10 16,10 m -25,-1 c -3,0 -5.9999998,-2 -5.9999998,-4 0,-7 4.9999998,-16.000002 12.9999998,-16.000002 9,0 13,10.000002 18,10.000002"
        id="path3232-3-0-8-2"
@@ -14117,7 +14120,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        id="path2960-9-2-0-3"
        inkstitch:ties="3"
        inkstitch:running_stitch_length_mm="2"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="m 29.175789,75.637766 c -2,0 -5,0 -5,3.000002 0,3 -1,6 -3,6 m 8,-9.000002 c 3,0 6,1 6,3.000002 0,11 -8,17 -14,17"
        id="path2727-0-4-2-99"
@@ -14148,7 +14151,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        inkscape:label="Points droits pour auto-remplissage satin 5"
        sodipodi:nodetypes="cccccccccccccccc"
        inkstitch:ties="3"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        id="autosatin154-35"
        d="m 41.944,143.694 c -1.625868,-1.56921 -4.548329,-1.54637 -5.645187,0.62686 -1.681219,3.43542 -1.980529,7.3811 -3.224459,10.99009 -0.709082,2.47367 -1.672445,4.86731 -3.022754,7.06305 m 11.8924,-18.68 c 2.581666,2.25578 3.990648,6.08917 2.455806,9.335 -1.705981,5.70559 -3.867603,11.44175 -7.416006,16.276 m -7.7691,-9.183 c 3.910633,2.377 7.821267,4.754 11.7319,7.131"
@@ -14345,7 +14348,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        id="autosatinrun63-4-6"
        inkscape:label="Points droits pour auto-remplissage satin 1"
        inkstitch:ties="3"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="M 46.5894,51.1603 C 45.5984,49.146211 42.571591,46.799505 40.5938,48.8438 26.120215,55.030451 15.303955,67.977312 9.6225925,82.454484 3.4627091,98.234678 2.0354623,115.58317 3.65039,132.35 c 1.6854044,13.32427 6.0405929,27.11787 15.961537,36.63401 9.228698,9.16165 24.407493,11.81948 35.976908,5.65457 C 63.585369,170.55194 69.428118,163.11546 73.1826,155.102 M 46.5894,51.1603 c 1.313045,2.844904 2.518039,7.174475 -0.2769,9.4959 -6.019263,2.107254 -11.028033,6.608972 -15.1929,11.3753 -10.145669,12.403315 -13.643978,28.81952 -14.010371,44.50437 -0.374783,12.94599 1.034238,26.65237 8.074347,37.8459 4.069935,6.46224 11.458851,11.76045 19.415524,10.39723 8.240414,-1.56697 13.738806,-8.90392 17.0326,-16.102 m -51.5206,16.49 c 5.650367,-4.461 11.300733,-8.922 16.9511,-13.383 m 24.3857,3.272 c 5.8486,4.85733 11.6972,9.71467 17.5458,14.572 M 17.5458,58.9998 c 4.659067,5.9477 9.318133,11.8954 13.9772,17.8431"
        id="autosatin69-3-5"
@@ -14364,14 +14367,14 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        id="autosatinrun64-6-7"
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="M 71.1028,96.564 C 64.315407,98.539162 56.458204,98.303496 50.615816,93.939703 44.66881,89.766083 43.06216,81.301237 46.125429,74.904608 47.71895,70.850944 52.544994,68.98265 56.5565,70.462797 64.857694,73.197198 68.527073,82.397653 71,90"
        inkstitch:running_stitch_length_mm="2"
        id="autosatinrun66-5-0"
        inkscape:label="Points droits pour auto-remplissage satin 6"
        inkstitch:ties="3"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="m 65,92 c -1.389307,-4.768875 -2.702332,-10.404863 -7.176105,-13.21617 -2.387687,-1.609128 -6.776443,-0.717984 -6.750483,2.68519 -0.507283,5.714594 4.925896,10.383512 10.399445,10.399924 3.641379,0.791347 9.568086,-2.065904 12.967075,-3.015921 M 41.49,96.828 54.1115,87.429 m 5.2366,-5.236 11.5474,-11.4133 m -1.57394,18.044154 -1.513127,16.576306 m 7.138685,-17.254106 0.92416,-5.112429 C 72.574959,73.853961 68.975478,69.194137 60.192875,64.161768 55.157252,61.343723 47.906841,60.667781 43.781746,65.43426 c -4.71221,5.31225 -6.380976,12.954617 -5.478642,19.887213 1.498275,9.88449 10.818531,16.745157 20.263416,18.205757 3.850651,0.56194 10.782632,0.13762 14.599456,-0.76943"
        id="autosatin71-4-399"
@@ -14403,14 +14406,14 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        inkscape:label="Points droits pour auto-remplissage satin 1"
        inkstitch:ties="3"
        sodipodi:nodetypes="cccc"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="m 108.3114,124.20017 c -3.09652,-2.71589 -7.34116,-1.36343 -11.011991,-2.23959 -2.736593,-0.22027 -5.351787,-1.13851 -7.28754,-3.15205 -7.205691,-5.89813 -10.423812,-15.60016 -9.409486,-24.71589 1.63764,-15.498367 12.004403,-29.912367 26.305117,-36.18827 7.47655,-3.010833 16.76929,-4.120262 23.81272,0.55876 5.92746,3.84067 7.57985,11.60896 6.23615,18.17333 -1.85846,10.88928 -9.68541,21.460451 -20.78395,24.06316 -3.92608,1.08888 -9.22947,0.40497 -10.88648,-3.87899 -0.5029,-1.296579 -0.94291,-2.707273 -0.85514,-4.10946"
        inkstitch:running_stitch_length_mm="2"
        id="autosatinrun23-7-8"
        inkscape:label="Points droits pour auto-remplissage satin 2"
        inkstitch:ties="3"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        id="autosatin24-2-4"
        d="m 104.4308,92.71117 c -2.28035,4.480871 -1.19299,11.95853 4.14013,14.12109 6.61018,2.36361 13.92472,-0.63478 19.48898,-4.29915 11.64826,-8.218145 18.94543,-23.608767 15.43485,-37.771891 -2.48847,-9.993326 -12.72489,-15.985082 -22.58453,-16.020966 -18.78406,-0.692728 -35.263235,13.128972 -42.874239,29.497925 -6.143266,12.792133 -7.025921,29.802002 2.743012,41.090792 2.875389,2.49527 5.774033,7.01625 10.053994,6.25134 5.453,-0.29705 10.906003,-0.59409 16.359003,-0.89114 m -2.7612,-31.978 c 6.88086,4.444604 16.19283,0.950845 20.625,-5.375 3.98294,-5.500301 6.82198,-13.021209 4.5,-19.71875 -3.14358,-6.704778 -11.81019,-6.804742 -17.89768,-4.66037 -14.665235,5.039945 -25.158839,20.646069 -24.113065,36.143768 0.87843,10.074762 9.038689,20.251642 19.588865,20.700192 1.65887,0.45872 2.30155,2.36146 2.29688,3.91016 m -32.103503,-3.057 c 5.381033,-3.90133 10.762067,-7.80267 16.1431,-11.704 m -6.8608,-48.8328 c 3.7667,4.8429 7.5334,9.6858 11.3001,14.5287 M 139.8816,52.85297 c -4.97744,4.977433 -9.95487,9.954867 -14.9323,14.9323 m 10.8966,33.0929 c -4.43937,-4.708333 -8.87874,-9.416667 -13.3181,-14.125 m -14.9323,22.197 c 1.21073,-6.45733 2.42146,-12.914667 3.6322,-19.372"
@@ -14441,7 +14444,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        id="autosatinrun24-65-7"
        inkscape:label="Points droits pour auto-remplissage satin 5"
        inkstitch:ties="3"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        id="autosatin26-5-1"
        d="m 137.7242,151.86617 c -1.73818,-1.92138 -5.02041,-3.09658 -6.97823,-0.81772 -2.04135,2.29485 -2.95025,5.46999 -5.39865,7.49246 -1.09706,1.22529 -2.47667,2.16537 -3.75782,3.18426 m 16.1347,-9.859 c 1.99255,2.05644 3.6864,5.41581 1.8628,8.095 -1.44884,3.62708 -4.5614,6.4128 -7.29342,9.15389 -0.69332,0.56962 -1.34574,1.19136 -2.07158,1.72011"
@@ -14653,7 +14656,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        id="autosatinrun174-8"
        inkscape:label="Points droits pour auto-remplissage satin 1"
        inkstitch:ties="3"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="m 19,108 c 1.909637,-0.0469 4.872137,0.44997 4.822974,2.90694 3.74e-4,3.02738 -2.090976,5.59027 -2.40146,8.59251 -2.195048,9.22086 -4.213945,18.56007 -4.344589,28.0786 -0.129515,5.7688 -0.369798,12.15443 3.194575,17.04895 1.91399,2.44978 5.613648,3.09506 8.196731,1.32302 3.833505,-2.52788 5.781382,-6.97027 7.421283,-11.09223 C 37.342523,151.02478 38.261033,147.02474 39,143 M 4.24247,130.485 c 5.939477,-0.0943 11.878953,-0.18867 17.81843,-0.283 M 3.11115,160.748 c 5.42095,-0.75433 10.8419,-1.50867 16.26285,-2.263 m 3.3939,5.798 c -0.04713,5.421 -0.09427,10.842 -0.1414,16.263 M 19,108 c -2.804471,0.16995 -6.517999,-0.0525 -8.0859,2.783 -2.1701536,7.41187 -3.8042032,14.98893 -5.1085928,22.60161 -1.298349,8.53244 -2.3179148,17.22094 -1.4049837,25.84321 0.7945223,6.53212 3.4764589,13.59265 9.5700125,16.88158 6.209483,3.23336 14.480926,2.27421 19.468134,-2.76212 1.995943,-1.68504 3.708834,-3.62905 5.023823,-5.89084 0.571897,-0.8501 1.143795,-1.70021 1.715692,-2.55031 l -0.101511,-8.50605"
        id="autosatin192-0"
@@ -14672,13 +14675,13 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        id="autosatinrun175-4"
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="M 40.756953,90.521458 23.230968,78.509266 13.975673,90.718379"
        id="path2759-4"
        inkstitch:ties="3"
        inkstitch:running_stitch_length_mm="2"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="m 15.39772,94.372684 c 2,0 4,-1 4,-3 1,-3 2,-6 5,-6 3,0 7,10 16,10 m -25,-1 c -3,0 -6.0000002,-2 -6.0000002,-4 0,-7 5.0000002,-16 13.0000002,-16 9,0 13,10 18,10"
        id="path3232-8"
@@ -14695,7 +14698,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        id="path2960-3"
        inkstitch:ties="3"
        inkstitch:running_stitch_length_mm="2"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="m 48.39772,75.372684 c -2,0 -5,0 -5,3 0,3 -1,6 -3,6 m 8,-9 c 3,0 6,1 6,3 0,11 -8,17 -14,17"
        id="path2727-9"
@@ -14725,7 +14728,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        id="autosatinrun176-0"
        inkscape:label="Points droits pour auto-remplissage satin 5"
        inkstitch:ties="3"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5" />
+       style="stroke-dasharray:0.5, 0.5;stroke-width:1" />
     <path
        d="m 72,143 c -2.231522,-0.13212 -3.228185,2.14112 -3.677639,3.96041 -1.548053,5.20396 -2.331724,10.74692 -5.275161,15.42159 M 72,143 c 3.255453,0.3774 6.083549,3.14438 6.886938,6.26067 0.139851,1.01567 -1.377485,1.52655 -1.250804,2.9694 -2.13106,7.24588 -4.904623,14.70621 -10.307234,20.18593 M 64.627,152.545 c 4.0068,2.40433 8.0136,4.80867 12.0204,7.213"
        id="autosatin194-3"
