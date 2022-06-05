@@ -23,7 +23,7 @@ Une fois brodée :
 
 ![Brodée](/assets/images/tutorials/tutorial-preview-images/autoroute_unicorn.jpg)
 
-Le tout avec un minimum d'éffort....
+Le tout avec un minimum d'effort....
 
 Dans le svg, vous trouverez toutes les étapes:
 
@@ -72,6 +72,8 @@ Remarque : Ici l'image de départ est de très bonne qualité, si elle est moins
 utiliser  ces extensions d'Ellen Wasbo (https://inkscape.org/cs/~EllenWasbo/resources/)
 - remove duplicate nodes
 - remove duplicate lines
+
+
 qui peuvent être encore plus utiles que ce que leur nom suggère pour améliorer l'image.
 
 Une simplification des chemins, peut aussi être une bonne idée.
