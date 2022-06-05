@@ -17,7 +17,6 @@ from ..stitches.ripple_stitch import ripple_stitch
 from ..svg import get_node_transform, parse_length_with_units
 from ..utils import Point, cache
 from .element import EmbroideryElement, param
-from .satin_column import SatinColumn
 from .validation import ValidationWarning
 
 warned_about_legacy_running_stitch = False
@@ -136,6 +135,11 @@ class Stroke(EmbroideryElement):
     @cache
     def line_count(self):
         return max(self.get_int_param("line_count", 10), 1)
+
+    def get_line_count(self):
+        if self.is_closed:
+            return self.line_count + 1
+        return self.line_count
 
     @property
     @param('skip_start',
@@ -268,6 +272,17 @@ class Stroke(EmbroideryElement):
     @cache
     def rotate_ripples(self):
         return self.get_boolean_param("rotate_ripples", True)
+
+    @property
+    @cache
+    def is_closed(self):
+        # returns true if the outline of a single line stroke is a closed shape
+        # (with a small tolerance)
+        lines = self.as_multi_line_string().geoms
+        if len(lines) == 1:
+            coords = lines[0].coords
+            return Point(*coords[0]).distance(Point(*coords[-1])) < 0.05
+        return False
 
     @property
     def paths(self):
