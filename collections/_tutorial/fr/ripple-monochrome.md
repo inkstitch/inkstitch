@@ -16,9 +16,19 @@ field-of-use:
 user-level:
 ---
 
-## Iris en broderie ondulée
+## Fleur monochrome
 
 ![Brodé](/assets/images/tutorials/tutorial-preview-images/ripple-monochorome.jpg)
+
+- Calque Step 1
+  - le coeur de la fleur est une étoile à neuf branches. C'est un remplissage , paramétré en remplissage selon contour, de l'intérieur vers l'extérieur
+  - dessin d'un pétale, avec application de l'effet sur chemin, "rotate" (9 copies, espacées régulièrement, centre positionné manuellement
+  
+ 
+  
+  
+
+Tous les points sont réglés sur 
 
 - Les pétales sont obtenus comme  des broderies ondulées, en point droit simple, appliquées sur des chemins composés de deux rails.
 - Les sépales sont obtenus comme  des broderies ondulées, en point triple, appliquées sur des chemins composés de deux rails.
