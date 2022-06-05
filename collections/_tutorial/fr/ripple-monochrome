@@ -1,0 +1,34 @@
+---
+permalink: /fr/tutorials/ripple-monochrome/
+title: "fleur monochrome en broderie ondulée et remplissage selon contour"
+language: fr
+last_modified_at: 2022-06-03
+excerpt: "fichier exemple fleur monochrome"
+image: "/assets/images/tutorials/tutorial-preview-images/ripple-monochrome.jpg"
+tutorial-type:
+  - Sample File
+stitch-type:
+  - "Ripple Stitch"
+  - "Contour Stitch"
+  
+techniques:
+field-of-use:
+user-level:
+---
+
+## Iris en broderie ondulée
+
+![Brodé](/assets/images/tutorials/tutorial-preview-images/ripple-monochorome.jpg)
+
+- Les pétales sont obtenus comme  des broderies ondulées, en point droit simple, appliquées sur des chemins composés de deux rails.
+- Les sépales sont obtenus comme  des broderies ondulées, en point triple, appliquées sur des chemins composés de deux rails.
+- Les contours des pétales sont en point triple.
+- La tige est une colonne satin partagée.
+- Le lettrage est composé  de broderies ondulées appliquées à des chemins composés de deux rails.
+
+
+![SVG](/assets/images/tutorials/samples/ripple-iris.svg)
+
+
+
+[Télécharger](/assets/images/tutorials/samples/ripple-iris.svg){: download="ripple-iris.svg" }
