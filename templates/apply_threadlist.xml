@@ -3,7 +3,7 @@
     <name>Apply Threadlist</name>
     <id>org.inkstitch.apply_threadlist</id>
     <param name="extension" type="string" gui-hidden="true">apply_threadlist</param>
-    <param name="filepath" type="path" gui-text="Choose file" mode="file" filetypes="txt"/>
+    <param name="filepath" type="path" gui-text="Choose file" mode="file" filetypes="txt,edr,col,inf"/>
     <param name="method" type="optiongroup" gui-text="Choose method">
        <option value="1">Apply Ink/Stitch threadlist</option>
        <option value="2">Apply other threadlist*</option>

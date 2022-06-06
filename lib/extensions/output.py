@@ -55,6 +55,10 @@ class Output(InkstitchExtension):
         patches = self.elements_to_stitch_groups(self.elements)
         stitch_plan = stitch_groups_to_stitch_plan(patches, collapse_len=collapse_len, disable_ties=self.settings.get('laser_mode', False))
 
+        if self.file_extension == "png":
+            self.settings['linewidth'] = 1
+            self.settings['background'] = 'white'
+
         temp_file = tempfile.NamedTemporaryFile(suffix=".%s" % self.file_extension, delete=False)
 
         # in windows, failure to close here will keep the file locked

@@ -8,6 +8,7 @@ import re
 import sys
 
 import inkex
+import pyembroidery
 
 from ..i18n import _
 from ..threads import ThreadCatalog
@@ -72,15 +73,20 @@ class ApplyThreadlist(InkstitchExtension):
 
     def parse_inkstitch_threadlist(self, path):
         colors = []
-        with open(path) as threadlist:
-            for line in threadlist:
-                if line[0].isdigit():
-                    m = re.search(r"\((#[0-9A-Fa-f]{6})\)", line)
-                    if m:
-                        colors.append(m.group(1))
-                    else:
-                        # Color not found
-                        colors.append(None)
+        if path.endswith('txt'):
+            with open(path) as threadlist:
+                for line in threadlist:
+                    if line[0].isdigit():
+                        m = re.search(r"\((#[0-9A-Fa-f]{6})\)", line)
+                        if m:
+                            colors.append(m.group(1))
+                        else:
+                            # Color not found
+                            colors.append(None)
+        else:
+            threads = pyembroidery.read(path).threadlist
+            for color in threads:
+                colors.append(color.hex_color())
         return colors
 
     def parse_threadlist_by_catalog_number(self, path):
