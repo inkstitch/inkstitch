@@ -28,7 +28,7 @@ class Zip(InkstitchExtension):
         # it's kind of obnoxious that I have to do this...
         self.formats = []
         for format in pyembroidery.supported_formats():
-            if 'writer' in format and format['category'] in ['embroidery', 'color', 'image']:
+            if 'writer' in format and format['category'] in ['embroidery', 'color', 'image', 'stitch']:
                 extension = format['extension']
                 self.arg_parser.add_argument('--format-%s' % extension, type=Boolean, dest=extension)
                 self.formats.append(extension)

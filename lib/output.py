@@ -92,6 +92,9 @@ def write_embroidery_file(file_path, stitch_plan, svg, settings={}):
         settings['max_stitch'] = float('inf')
         settings['max_jump'] = float('inf')
         settings['explicit_trim'] = False
+    elif file_path.endswith('.png'):
+        settings['linewidth'] = 1
+        settings['background'] = 'white'
 
     try:
         pyembroidery.write(pattern, file_path, settings)

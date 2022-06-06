@@ -16,6 +16,8 @@ def pyembroidery_output_formats():
                 description = "%s [COLOR]" % description
             elif format['category'] == "image":
                 description = "%s [IMAGE]" % description
+            elif format['category'] == "stitch":
+                description = "%s [STITCH]" % description
             elif format['category'] != "embroidery":
                 description = "%s [DEBUG]" % description
             yield format['extension'], description, format['mimetype'], format['category']

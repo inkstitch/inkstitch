@@ -10,12 +10,12 @@
         <dataloss>true</dataloss>
     </output>
     {%- for format, description, mimetype, category in formats %}
-    {%- if category == "embroidery" %}
+    {%- if category != "vector" and category != "debug" %}
     <param name="format-{{ format }}" type="boolean" _gui-text=".{{ format | upper }}: {{ description }}">false</param>
     {%- endif %}
     {%- endfor %}
+    <param name="format-threadlist" type="boolean" gui-text=".TXT: Threadlist [COLOR]">false</param>
     <param name="format-svg" type="boolean" gui-text=".SVG: Scalable Vector Graphic">false</param>
-    <param name="format-threadlist" type="boolean" gui-text=".TXT: Threadlist">false</param>
     <param name="extension" type="string" gui-hidden="true">zip</param>
     <script>
         {{ command_tag | safe }}
