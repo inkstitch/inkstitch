@@ -202,6 +202,12 @@ def path_to_elements(graph, path, trim):  # noqa: C901
         element = graph[start][end].get('element')
         start_coord = graph.nodes[start]['point']
         end_coord = graph.nodes[end]['point']
+        # create a new element if we hit an other original element to keep it's properties
+        if el and element and el != element and d and not direction == 'underpath':
+            element_list.append(create_element(d, position, path_direction, el))
+            original_parents.append(el.node.getparent())
+            d = ""
+            position += 1
         if element:
             el = element
 
@@ -248,8 +254,6 @@ def create_element(path, position, direction, element):
     if not path:
         return
 
-    style = inkex.Style(element.node.get("style"))
-    style = style + inkex.Style("stroke-dasharray:0.5,0.5;fill:none;")
     el_id = "%s_%s_" % (direction, position)
 
     index = position + 1
@@ -262,7 +266,7 @@ def create_element(path, position, direction, element):
     node.set("id", generate_unique_id(element.node, el_id))
     node.set(INKSCAPE_LABEL, label)
     node.set("d", path)
-    node.set("style", str(style))
+    node.set("style", element.node.style)
 
     # Set Ink/Stitch attributes
     stitch_length = element.node.get(INKSTITCH_ATTRIBS['running_stitch_length_mm'], '')
@@ -280,6 +284,7 @@ def create_element(path, position, direction, element):
     else:
         if stitch_length:
             node.set(INKSTITCH_ATTRIBS['running_stitch_length_mm'], stitch_length)
+        node.set("style", element.node.style + inkex.Style("stroke-dasharray:0.5,0.5;fill:none;"))
     return Stroke(node)
 
 
