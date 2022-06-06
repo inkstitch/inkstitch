@@ -258,24 +258,28 @@ def create_element(path, position, direction, element):
     else:
         label = _("AutoRun Underpath %d") % index
 
-    stitch_length = element.node.get(INKSTITCH_ATTRIBS['running_stitch_length_mm'], '')
-    bean = element.node.get(INKSTITCH_ATTRIBS['bean_stitch_repeats'], 0)
-    repeats = int(element.node.get(INKSTITCH_ATTRIBS['repeats'], 1))
-    if repeats % 2 == 0:
-        repeats -= 1
-
     node = inkex.PathElement()
     node.set("id", generate_unique_id(element.node, el_id))
     node.set(INKSCAPE_LABEL, label)
     node.set("d", path)
     node.set("style", str(style))
-    if stitch_length:
-        node.set(INKSTITCH_ATTRIBS['running_stitch_length_mm'], stitch_length)
-    if direction == "autorun":
-        node.set(INKSTITCH_ATTRIBS['repeats'], str(repeats))
-        if bean:
-            node.set(INKSTITCH_ATTRIBS['bean_stitch_repeats'], bean)
 
+    # Set Ink/Stitch attributes
+    stitch_length = element.node.get(INKSTITCH_ATTRIBS['running_stitch_length_mm'], '')
+    repeats = int(element.node.get(INKSTITCH_ATTRIBS['repeats'], 1))
+    if repeats % 2 == 0:
+        repeats -= 1
+
+    if direction == "autorun":
+        for attrib in element.node.attrib:
+            if attrib.startswith(inkex.NSS['inkstitch'], 1):
+                if attrib == INKSTITCH_ATTRIBS['repeats']:
+                    node.set(INKSTITCH_ATTRIBS['repeats'], str(repeats))
+                else:
+                    node.set(attrib, element.node.get(attrib))
+    else:
+        if stitch_length:
+            node.set(INKSTITCH_ATTRIBS['running_stitch_length_mm'], stitch_length)
     return Stroke(node)
 
 
