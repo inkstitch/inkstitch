@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2022-05-24 18:25+0000\n"
-"PO-Revision-Date: 2022-06-01 02:44\n"
+"PO-Revision-Date: 2022-06-06 02:33\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -39,7 +39,7 @@ msgstr "Brock Script"
 #. description of font in fonts/Brockscript
 #: inkstitch-fonts-metadata.py:4
 msgid "Brock Script is a decorative satin column manuscript font of size approximatively 40mm. It can be enlarged up to 250%. It contains 118 glyphs, covering most western european languages needs.More decorative options are hidden in the µ glyph"
-msgstr "Brock Script ist eine dekorative Manuscript-Schrift aus Satinkolumnen mit einer Größe von annähernd 40mm. Eine Vergrößerung ist bis zu 250% möglich. Sie umfasst 118 Zeichen und deckt damit die Bedürfnisse der meisten westeuropäischen Sprachen ab. Weitere dekorative Optionen sind in dem µ Zeichen versteckt."
+msgstr "Brock Script ist eine dekorative Manuscript-Schrift aus Satinsäulen mit einer Größe von annähernd 40 mm. Eine Vergrößerung ist bis zu 250 % möglich. Sie umfasst 118 Zeichen und deckt damit die Bedürfnisse der meisten westeuropäischen Sprachen ab. Weitere dekorative Optionen sind in dem µ Zeichen versteckt."
 
 #. name of font in fonts/abecedaire
 #: inkstitch-fonts-metadata.py:6
@@ -60,7 +60,7 @@ msgstr "Amitaclo"
 #: inkstitch-fonts-metadata.py:12
 #, python-format
 msgid "The capital M is 25.3 millimeter wide at 100% scale. Can be scaled down to 80% or up to 160%. Every satin has zigzag underlay"
-msgstr "Der Großbuchstabe M ist bei einer Skalierung von 100% 25,3 mm breit. Die Schrift kann von 80% bis zu 160% skaliert werden. Jede Satinkolumne hat eine Zick-Zack-Unterlage."
+msgstr "Der Großbuchstabe M ist bei einer Skalierung von 100 % 25,3 mm breit. Die Schrift kann von 80 % bis zu 160 % skaliert werden. Jede Satinsäule hat eine Zick-Zack-Unterlage."
 
 #. name of font in fonts/amitaclo_small
 #: inkstitch-fonts-metadata.py:14
@@ -101,7 +101,7 @@ msgstr "Baumans FI"
 #: inkstitch-fonts-metadata.py:28
 #, python-format
 msgid "The capital M is 22.3 millimeter wide at 100% scale. Can be scaled down to 80% or up to 150%. Every satin has zigzag underlay"
-msgstr "Der Großbuchstabe M ist, bei einer Skalierung von 100%, 22,3 mm breit. Die Schrift kann von 80% bis zu 150% skaliert werden. Jede Satinkolumne hat eine Zick-Zack-Unterlage"
+msgstr "Der Großbuchstabe M ist, bei einer Skalierung von 100 %, 22,3 mm breit. Die Schrift kann von 80 % bis zu 150 % skaliert werden. Jede Satinsäule hat eine Zick-Zack-Unterlage"
 
 #. name of font in fonts/cherryforinkstitch
 #: inkstitch-fonts-metadata.py:30
@@ -111,7 +111,7 @@ msgstr "Cherry for Ink/Stitch"
 #. description of font in fonts/cherryforinkstitch
 #: inkstitch-fonts-metadata.py:32
 msgid "Cherry for inkstitch is a decorative satin column font of size approximatively 40mm. It can be reduced down to 80% and enlarged up to 180%. It contains 74 glyphs."
-msgstr "Cherry for Ink/Stitch ist eine dekorative Schrift aus Satinkolumnen. Die Größe beträgt in etwa 40mm. Sie kann von 80% auf bis zu 180% skaliert werden und umfasst 74 Zeichen."
+msgstr "Cherry for Ink/Stitch ist eine dekorative Schrift aus Satinsäulen. Die Größe beträgt in etwa 40 mm. Sie kann von 80 % auf bis zu 180 % skaliert werden und umfasst 74 Zeichen."
 
 #. name of font in fonts/cherryforkaalleen
 #: inkstitch-fonts-metadata.py:34
@@ -132,7 +132,7 @@ msgstr "Chopin Script"
 #: inkstitch-fonts-metadata.py:40
 #, python-format
 msgid "The capital M is 38.3 millimeter wide at 100% scale. Can be scaled down to 80% or up to 120%. Every satin has zigzag underlay"
-msgstr "Das Großbuchstabe M ist, bei einer Skalierung von 100%, 38,3 mm breit. Die Schrift kann von 80% bis zu 120% skaliert werden. Jede Satinkolumne hat eine Zick-Zack-Unterlage"
+msgstr "Das Großbuchstabe M ist, bei einer Skalierung von 100 %, 38,3 mm breit. Die Schrift kann von 80 % bis zu 120 % skaliert werden. Jede Satinsäule hat eine Zick-Zack-Unterlage"
 
 #. name of font in fonts/coronaviral
 #: inkstitch-fonts-metadata.py:42
@@ -153,7 +153,7 @@ msgstr "Dejavu Serif"
 #: inkstitch-fonts-metadata.py:48
 #, python-format
 msgid "DejaVu Serif Condensed. The capital M is 19,8 millimeter wide at 100% scale.  Can be scaled down to 80% or up to 150%.  Every satin has center-walk underlay."
-msgstr "DejaVu Serif Condensed. Der Großbuchstabe M ist bei einer Skalierung von 100%, 19,8 mm breit. Die Schrift von 80% bis zu 150% skaliert werden. Jede Satinkolumne hat eine Mittellinien-Unterlage."
+msgstr "DejaVu Serif Condensed. Der Großbuchstabe M ist bei einer Skalierung von 100 %, 19,8 mm breit. Die Schrift von 80 % bis zu 150 % skaliert werden. Jede Satinsäule hat eine Mittellinien-Unterlage."
 
 #. name of font in fonts/digory_doodles_bean
 #: inkstitch-fonts-metadata.py:50
@@ -163,7 +163,7 @@ msgstr "Digory Doodles Bean"
 #. description of font in fonts/digory_doodles_bean
 #: inkstitch-fonts-metadata.py:52
 msgid "All letters have mixed satin and bean stitch. The capital M is 16mm tall. The small x is 7 mm."
-msgstr "Alle Buchstaben sind eine Mischung aus Satinkolumnen und Bean-Stich. Der Großbuchstabe M ist 16mm hoch. Der Kleinbuchstabe x 7 mm."
+msgstr "Alle Buchstaben sind eine Mischung aus Satinsäulen und Mehrfachgeradstichen. Der Großbuchstabe M ist 16 mm hoch. Der Kleinbuchstabe x 7 mm."
 
 #. name of font in fonts/emilio_20
 #: inkstitch-fonts-metadata.py:54
@@ -174,7 +174,7 @@ msgstr "Emilio 20"
 #: inkstitch-fonts-metadata.py:56
 #, python-format
 msgid "Emilio 20 is a font with capital only and numbers. M is 48.5 millimeter wide at 100% scale. Can be scaled down to 70% or up to 140%. Every satin has zigzag underlay"
-msgstr "Emilio 20 enthält nur Großbuchstaben und Zahlen. Das M ist, bei einer Skalierung von 100%, 48,5 mm breit. Eine Skalierung ist von 70% bis zu 140% möglich. Jede Satinkolumne hat eine Zick-Zack-Unterlage"
+msgstr "Emilio 20 enthält nur Großbuchstaben und Zahlen. Das M ist, bei einer Skalierung von 100 %, 48,5 mm breit. Eine Skalierung ist von 70 % bis zu 140 % möglich. Jede Satinsäule hat eine Zick-Zack-Unterlage"
 
 #. name of font in fonts/emilio_20_tricolore
 #: inkstitch-fonts-metadata.py:58
@@ -184,7 +184,7 @@ msgstr "EMILIO 20 TRICOLORE"
 #. description of font in fonts/emilio_20_tricolore
 #: inkstitch-fonts-metadata.py:60
 msgid "Emilio 20 tricolore is a large tricolor fill stitches and satin columns font of  size approximately 100mm. It contains 36 glyphs including the numbers and the 26 capitals  A-Z. It can be reduced down to 90% and enlarged up to 120%"
-msgstr "Emilio 20 tricolore ist eine große, dreifarbige Schrift, die aus Füllstichen und Satinkolumnen besteht. Die Größe beläuft sich auf annähernd 100mm. Sie umfasst 36 Zeichen, einschließlich Zahlen und 26 Großbuchstaben A-Z. Eine Skalierung ist von 90% bis zu 120% möglich."
+msgstr "Emilio 20 tricolore ist eine große, dreifarbige Schrift, die aus Füllstichen und Satinsäulen besteht. Die Größe beläuft sich auf annähernd 100 mm. Sie umfasst 36 Zeichen, einschließlich Zahlen und 26 Großbuchstaben A-Z. Eine Skalierung ist von 90 % bis zu 120 % möglich."
 
 #. name of font in fonts/espresso_KOR
 #: inkstitch-fonts-metadata.py:62
@@ -194,7 +194,7 @@ msgstr "Espresso KOR"
 #. description of font in fonts/espresso_KOR
 #: inkstitch-fonts-metadata.py:64
 msgid "The capital M is 16.2 mm high at 100 scale. Every satin has zigzag underlay. x is 11.5 mm high, q is 17.5 mm high, l is 17.2 mm high. The font may be scaled up to 200% and down to 80%"
-msgstr "Der Großbuchstabe M ist, bei einer Skalierung von 100%, 16,2 mm hoch. Jede Satinkolumne hat eine Zick-Zack-Unterlage. Das x ist 11,5 mm hoch, q 17,5 mm und l 17,2 mm. Die Schrift kann von 80% bis auf 200 % skaliert werden."
+msgstr "Der Großbuchstabe M ist, bei einer Skalierung von 100 %, 16,2 mm hoch. Jede Satinsäule hat eine Zick-Zack-Unterlage. Das x ist 11,5 mm hoch, q 17,5 mm und l 17,2 mm. Die Schrift kann von 80 % bis auf 200 % skaliert werden."
 
 #. name of font in fonts/espresso_tiny
 #: inkstitch-fonts-metadata.py:66
@@ -214,7 +214,7 @@ msgstr "Excalibur KOR"
 #. description of font in fonts/excalibur_KOR
 #: inkstitch-fonts-metadata.py:72
 msgid "Excalibur KOR is a small satin column manuscript font of size approximatively 20mm. It can be reduced down to 80% and enlarged up to 140%. It contains 144 glyphs, covering most western European languages needs."
-msgstr "Excalibur KOR ist eine kleine Manuscript-Schrift aus Satinkolumnen, mit einer Größe von ca. 20mm. Eine Skalierung ist von 80% bis zu 140% möglich. Die Schrift umfasst 144 Zeichen und deckt damit die Bedürfnisse der meisten westeuropäischen Sprachen ab."
+msgstr "Excalibur KOR ist eine kleine Manuscript-Schrift aus Satinsäulen, mit einer Größe von ca. 20 mm. Eine Skalierung ist von 80 % bis zu 140 % möglich. Die Schrift umfasst 144 Zeichen und deckt damit die Bedürfnisse der meisten westeuropäischen Sprachen ab."
 
 #. name of font in fonts/fold_inkstitch
 #: inkstitch-fonts-metadata.py:74
@@ -224,7 +224,7 @@ msgstr "Fold Ink/Stitch"
 #. description of font in fonts/fold_inkstitch
 #: inkstitch-fonts-metadata.py:76
 msgid "Fold Ink/Stitch is a large triple and quintuple running stitches capital font of size 100 mm. It contains 40 glyphs including all numbers and the 26 capitals  A-Z. It can be reduced down to 80% and enlarged up to 200%"
-msgstr "Fold Ink/Stitch ist eine Großbuchstaben-Schrift aus dreifachen und fünffachen Laufstichen, mit einer Größe von 100mm. Sie umfasst 40 Zeichen, einschließlich aller Zahlen und den Großbuchstaben A-Z. Eine Skalierung ist von 80% bis zu 200% möglich."
+msgstr "Fold Ink/Stitch ist eine Großbuchstaben-Schrift aus Dreifach und Fünffach Geradstichen, mit einer Größe von 100 mm. Sie umfasst 40 Zeichen, einschließlich aller Zahlen und den Großbuchstaben A-Z. Eine Skalierung ist von 80 % bis zu 200 % möglich."
 
 #. name of font in fonts/geneva_rounded
 #: inkstitch-fonts-metadata.py:78
@@ -295,7 +295,7 @@ msgstr "Kaushan Script MAM"
 #: inkstitch-fonts-metadata.py:104
 #, python-format
 msgid "The capital M is 29 millimeter wide at 100% scale.  Can be scaled down to 80% or up to 200%.  Every satin has zigzag underlay"
-msgstr "Der Großbuchstabe M ist, bei einer Skalierung von 100%, 29 mm breit. Eine Skalierung kann von 80% bis zu 200% vorgenommen werden. Jede Satinkolumne hat eine Zick-Zack-Unterlage"
+msgstr "Der Großbuchstabe M ist, bei einer Skalierung von 100 %, 29 mm breit. Eine Skalierung kann von 80 % bis zu 200 % vorgenommen werden. Jede Satinsäule hat eine Zick-Zack-Unterlage"
 
 #. name of font in fonts/learning_curve
 #: inkstitch-fonts-metadata.py:106
@@ -305,7 +305,7 @@ msgstr "Learning curve"
 #. description of font in fonts/learning_curve
 #: inkstitch-fonts-metadata.py:108
 msgid "Small running stitch script font of size approximatively 12 mm. It can be reduced down to 90% and enlarged up to 200%"
-msgstr "Eine kleine Schreibschrift-Schriftart aus Laufstichen, mit einer Größe von ca. 12 mm. Sie kann von 90% bis zu 200% skaliert werden."
+msgstr "Eine kleine Schreibschrift-Schriftart aus Geradstichen mit einer Größe von ca. 12 mm. Sie kann von 90 % bis zu 200 % skaliert werden."
 
 #. name of font in fonts/lobster_AGS
 #: inkstitch-fonts-metadata.py:110
@@ -316,7 +316,7 @@ msgstr "Lobster AGS"
 #: inkstitch-fonts-metadata.py:112
 #, python-format
 msgid " The capital M is 19.8 millimeter wide at 100% scale. Can be scaled down to 80% or up to 150%. Every satin has zigzag underlay"
-msgstr " Der Großbuchstabe M ist, bei einer Skalierung von 100%, 19.8 mm breit. Die Schrift kann von 80% bis zu 150% skaliert werden. Jede Satinkolumne hat eine Zick-Zack-Unterlage"
+msgstr " Der Großbuchstabe M ist, bei einer Skalierung von 100 %, 19,8 mm breit. Die Schrift kann von 80 % bis zu 150 % skaliert werden. Jede Satinsäule hat eine Zick-Zack-Unterlage."
 
 #. name of font in fonts/magnolia_ KOR
 #: inkstitch-fonts-metadata.py:114
@@ -337,7 +337,7 @@ msgstr "Manuskript Gothisch"
 #: inkstitch-fonts-metadata.py:120
 #, python-format
 msgid "The capital M is 35 millimeter wide at 100% scale.  Can be scaled down to 70% or up to 140%.  Every satin has zigzag underlay"
-msgstr "Der Großbuchstabe M ist, bei einer Skalierung von 100%, 35 mm breit. Die Schrift kann von 70% bis zu 140% skaliert werden. Jede Satinkolumne hat eine Zick-Zack-Unterlage"
+msgstr "Der Großbuchstabe M ist, bei einer Skalierung von 100 %, 35 mm breit. Die Schrift kann von 70 % bis zu 140 % skaliert werden. Jede Satinsäule hat eine Zick-Zack-Unterlage"
 
 #. name of font in fonts/marcelusSC_FI
 #: inkstitch-fonts-metadata.py:122
@@ -348,7 +348,7 @@ msgstr "MarcellusSC-FI"
 #: inkstitch-fonts-metadata.py:124
 #, python-format
 msgid "MarcellusSC-FI is a small capital font of size 36 mm. It contains 107 glyphs covering most Western European languages. It can be reduced down to 70% and enlarged up to 200% or 500% using satin split"
-msgstr "MarcellusSC-FI ist eine kleine Großbuchstaben-Schrift mit einer Größe von 36mm. Sie umfasst 107 Zeichen und deckt damit die meisten westeuropäischen Sprachen ab. Eine Skalierung ist von 70% auf bis zu 200% möglich. Durch die Verwendung von geteilten Satinkolumnen kann sogar bis auf 500% skaliert werden."
+msgstr "MarcellusSC-FI ist eine kleine Großbuchstaben-Schrift mit einer Größe von 36 mm. Sie umfasst 107 Zeichen und deckt damit die meisten westeuropäischen Sprachen ab. Eine Skalierung ist von 70 % auf bis zu 200 % möglich. Durch die Verwendung von geteilten Satinsäulen kann sogar bis auf 500 % skaliert werden."
 
 #. name of font in fonts/medium_font
 #: inkstitch-fonts-metadata.py:126
@@ -359,7 +359,7 @@ msgstr "Ink/Stitch Mittelgroße Schrift"
 #: inkstitch-fonts-metadata.py:128
 #, python-format
 msgid "A basic font suited for medium-sized characters.  The capital em is 0.6 inches wide at 100% scale.  Can be scaled down to 75% or up to 150%.  Every satin has contour underlay."
-msgstr "Für mittelgroße Schriftgrößen geeignet. Der Großbuchstabe \"M\" ist bei 100% Skalierung 15,24 mm breit. Die Schrift kann von 75% bis auf 150% skaliert werden. Alle Satinkolumnen haben eine Konturunterlage."
+msgstr "Für mittelgroße Schriftgrößen geeignet. Der Großbuchstabe \"M\" ist bei 100 % Skalierung 15,24 mm breit. Die Schrift kann von 75 % bis auf 150 % skaliert werden. Alle Satinsäulen haben eine Konturunterlage."
 
 #. name of font in fonts/monicha
 #: inkstitch-fonts-metadata.py:130
@@ -369,7 +369,7 @@ msgstr "MONICHA"
 #. description of font in fonts/monicha
 #: inkstitch-fonts-metadata.py:132
 msgid "Monicha is a script satin font of size approximatively 20mm. In addition to the glyphs covering most Western European languages it contains additional ornemental letters with swashes. These ornemental letters should be used with caution to avoid overlays. In particular do not use two ornemental letters in a row. Please consult the documentation for information on how to access the ornemental letters. The font can not be scaled down but can be scaled up to 150%. "
-msgstr "Monicha ist eine Schreibschrift-Satin-Schrift mit einer Größe von ca. 20 mm. Zusätzlich zu den Buchstaben, die die meisten westeuropäischen Sprachen abdecken, enthält sie zusätzliche Zierbuchstaben. Diese Zierbchstaben sollten vorsichtig eingesetzt werden um Überlagerungen zu vermeiden. Nutze am Besten nicht mehr als einen Zierbuchstaben pro Reihe. Auf unserer Webseite gibt es genaue Informationen, wie auf die Zierbuchstaben zugegriffen werden kann. Die Schrift kann von 100% bis zu 150% skaliert werden."
+msgstr "Monicha ist eine Schreibschrift-Satin-Schrift mit einer Größe von ca. 20 mm. Zusätzlich zu den Buchstaben, die die meisten westeuropäischen Sprachen abdecken, enthält sie zusätzliche Zierbuchstaben. Diese Zierbchstaben sollten vorsichtig eingesetzt werden um Überlagerungen zu vermeiden. Nutze am Besten nicht mehr als einen Zierbuchstaben pro Reihe. Auf unserer Webseite gibt es genaue Informationen, wie auf die Zierbuchstaben zugegriffen werden kann. Die Schrift kann von 100 % bis zu 150 % skaliert werden."
 
 #. name of font in fonts/namskout_AGS
 #: inkstitch-fonts-metadata.py:134
@@ -389,7 +389,7 @@ msgstr "Pacificlo"
 #. description of font in fonts/pacificlo
 #: inkstitch-fonts-metadata.py:140
 msgid "Pacificlo is a small satin column manuscript font of size approximatively 20mm. It can be reduced down to 80% and enlarged up to 140%. It contains 120 glyphs, covering most Western European Languages needs. "
-msgstr "Pacificlo ist eine kleine Manuscript-Schrift aus Satinkolumnen, mit einer Größe von ca. 20mm. Eine Skalierung ist von 80% bis zu 140% möglich. Die Schrift umfasst 120 Zeichen und deckt damit die Bedürfnisse der meisten westeuropäischen Sprachen ab. "
+msgstr "Pacificlo ist eine kleine Manuscript-Schrift aus Satinsäulen mit einer Größe von ca. 20 mm. Eine Skalierung ist von 80 % bis zu 140 % möglich. Die Schrift umfasst 120 Zeichen und deckt damit die Bedürfnisse der meisten westeuropäischen Sprachen ab. "
 
 #. name of font in fonts/pacificlo_tiny
 #: inkstitch-fonts-metadata.py:142
@@ -421,7 +421,7 @@ msgstr "Roman bicolor AGS"
 #: inkstitch-fonts-metadata.py:152
 #, python-format
 msgid "Based on Latin Modern Roman 10 Bold italic. A font with capital letters with 2 colors. Very easy to use with letters from Romanaugusa. The capital M is 42.5 millimeter wide at 100% scale. Can be scaled down to 70% or up to 130%. Every satin has zigzag underlay"
-msgstr "Basiert auf der Schrift Latin Modern Roman 10 fett kursiv. Eine Schrift mit zweifarbigen Großbuchstaben. Gut kombinierbar mit den Buchstaben von Romanaugusa. Das große M ist, bei einer Skalierung von 100%, 42,5 mm breit. Eine Skalierung ist von 70% bis zu 130% möglich. Jede Satinkolumne hat eine Zick-Zack-Unterlage"
+msgstr "Basiert auf der Schrift Latin Modern Roman 10 fett kursiv. Eine Schrift mit zweifarbigen Großbuchstaben. Gut kombinierbar mit den Buchstaben von Roman AGS. Das große M ist, bei einer Skalierung von 100 %, 42,5 mm breit. Eine Skalierung ist von 70 % bis zu 130 % möglich. Jede Satinkolumne hat eine Zick-Zack-Unterlage."
 
 #. name of font in fonts/sacramarif
 #: inkstitch-fonts-metadata.py:154
@@ -431,7 +431,7 @@ msgstr "Sacramarif"
 #. description of font in fonts/sacramarif
 #: inkstitch-fonts-metadata.py:156
 msgid "Based on Sacramento. Very small font with runstitch. It can be scaled from 80% to 150%"
-msgstr "Basiert auf der Schrift Sacramento. Eine sehr kleine Schrift mit Laufstichen. Skalierung von 80% bis 150% möglich"
+msgstr "Basiert auf der Schrift Sacramento. Eine sehr kleine Schrift mit Geradstichen. Skalierung von 80 % bis 150 % möglich"
 
 #. name of font in fonts/small_font
 #: inkstitch-fonts-metadata.py:158
@@ -452,7 +452,7 @@ msgstr "Sortefax XL Initials"
 #. description of font in fonts/sortefaxXL
 #: inkstitch-fonts-metadata.py:164
 msgid " Sortefax is a very large satin stitch Capital font of size 150mm.  It can be reduced down to 75% and enlarged up to 200%  It contains the 37 glyphs :ampersand, A-Z and 0-9. In addition the ten glyphs (){}[],;.: are used to store frames. Type any letter followed by any frame (e.g. A( or B; )  to obtain a framed Capital or Number. Warning: for a few large letters you will need to manually enlarge the frame"
-msgstr "Sortefax ist eine sehr große Satin-Schrift mit Großbuchstaben mit 150 mm Größe. Sie kann von 75% bis auf 200% skaliert werden. Sie umfasst 37 Zeichen: &, A-Z und 0-9. Zusätzlich werden die Zeichen (){}[],;.: genutzt um Rahmen zu erstellen. Z.B. ergibt A( ein umrahmtes A. Warnung: für einige Buchstaben muss der Rahmen manuell vergrößert werden."
+msgstr "Sortefax ist eine sehr große Satin-Schrift mit Großbuchstaben mit 150 mm Größe. Sie kann von 75 % bis auf 200 % skaliert werden. Sie umfasst 37 Zeichen: &, A-Z und 0-9. Zusätzlich werden die Zeichen (){}[],;.: genutzt um Rahmen zu erstellen. Z.B. ergibt A( ein umrahmtes A. Warnung: für einige Buchstaben muss der Rahmen manuell vergrößert werden."
 
 #. name of font in fonts/sortefax_medium
 #: inkstitch-fonts-metadata.py:166
@@ -462,7 +462,7 @@ msgstr "Sortefax Medium Initials"
 #. description of font in fonts/sortefax_medium
 #: inkstitch-fonts-metadata.py:168
 msgid "Sortefax  Medium Initials is a  satin stitch Capital font of size 90 mm.  It can be reduced down to 70% and enlarged up to 200%. It contains the 37 glyphs :ampersand, A-Z and 0-9. In addition the ten glyphs (){}[],;.: are used to store frames. Type any letter followed by any frame (e.g. A( or B; or 7, ) to obtain a framed Capital or Number. Some manual arranging of the frame around the letter may be required"
-msgstr "Sortefax ist eine sehr große Satin-Schrift mit Großbuchstaben mit 90 mm Größe. Sie kann von 70% bis auf 200% skaliert werden. Sie umfasst 37 Zeichen: &, A-Z und 0-9. Zusätzlich werden die Zeichen (){}[],;.: genutzt um Rahmen zu erstellen. Z.B. ergibt A) ein umrahmtes A. Warnung: für einige Zeichen muss der Rahmen manuell vergrößert werden."
+msgstr "Sortefax ist eine sehr große Satin-Schrift mit Großbuchstaben mit 90 mm Größe. Sie kann von 70 % bis auf 200 % skaliert werden. Sie umfasst 37 Zeichen: &, A-Z und 0-9. Zusätzlich werden die Zeichen (){}[],;.: genutzt um Rahmen zu erstellen. Z.B. ergibt A) ein umrahmtes A. Warnung: für einige Zeichen muss der Rahmen manuell vergrößert werden."
 
 #. name of font in fonts/tt_directors
 #: inkstitch-fonts-metadata.py:170
@@ -532,25 +532,25 @@ msgstr "Ripplestich Zielposition"
 #. command attached to an object
 #: lib/commands.py:33 inx/inkstitch_object_commands.inx:7
 msgid "Auto-route running stitch starting position"
-msgstr "Automatisch geführter Laufstich: Startposition"
+msgstr "Automatisch geführter Geradstich: Startposition"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
 #: lib/commands.py:36 inx/inkstitch_object_commands.inx:8
 msgid "Auto-route running stitch ending position"
-msgstr "Automatisch geführter Laufstich: Endposition"
+msgstr "Automatisch geführter Geradstich: Endposition"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
 #: lib/commands.py:39 inx/inkstitch_object_commands.inx:9
 msgid "Auto-route satin stitch starting position"
-msgstr "Startposition für automatisch geführte Satinkolumne"
+msgstr "Startposition für automatisch geführte Satinsäulen"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
 #: lib/commands.py:42 inx/inkstitch_object_commands.inx:10
 msgid "Auto-route satin stitch ending position"
-msgstr "Endposition für automatisch geführte Satinkolumne"
+msgstr "Endposition für automatisch geführte Satinsäulen"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
@@ -574,7 +574,7 @@ msgstr "Ignoriere dieses Objekt (nicht nähen)"
 #. command attached to an object
 #: lib/commands.py:54 inx/inkstitch_object_commands.inx:14
 msgid "Satin cut point (use with Cut Satin Column)"
-msgstr "Satin Schnittpunkt (mit \"Satinkolumne schneiden\" benutzen)"
+msgstr "Satin Schnittpunkt (mit \"Satinsäule schneiden\" benutzen)"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command that affects a layer
@@ -735,7 +735,7 @@ msgstr "Kleines Füllobjekt"
 
 #: lib/elements/fill_stitch.py:28
 msgid "This fill object is so small that it would probably look better as running stitch or satin column. For very small shapes, fill stitch is not possible, and Ink/Stitch will use running stitch around the outline instead."
-msgstr "Dieses Füllobjekt ist so klein, dass sich es sich besser für einen Laufstich oder eine Satinkolumne eignet. Bei sehr kleinen Objekten ist ein Füllstich nicht möglich und Ink/Stitch nutzt automatisch einen Laufstich um die Außenränder herum."
+msgstr "Dieses Füllobjekt ist so klein, dass es sich besser für einen Geradstich oder Satinstich eignet. Bei sehr kleinen Objekten ist ein Füllstich nicht möglich und Ink/Stitch nutzt automatisch einen Geradstich um die Außenränder herum."
 
 #: lib/elements/fill_stitch.py:34 lib/elements/fill_stitch.py:399
 msgid "Expand"
@@ -931,7 +931,7 @@ msgstr "Die Einstellung bestimmt, wie viele Reihen die Stiche voneinander entfer
 
 #: lib/elements/fill_stitch.py:315
 msgid "Running stitch length (traversal between sections)"
-msgstr "Laufstichlänge (Durchlauf zwischen Sektionen)"
+msgstr "Geradstichlänge (zwischen den Abschnitten)"
 
 #: lib/elements/fill_stitch.py:316
 msgid "Length of stitches around the outline of the fill region used when moving from section to section."
@@ -1064,11 +1064,11 @@ msgstr "Manueller Stich entlang des Pfades"
 
 #: lib/elements/satin_column.py:24
 msgid "Satin column has fill"
-msgstr "Satinkolumne hat eine Füllfarbe"
+msgstr "Satinsäule hat eine Füllfarbe"
 
 #: lib/elements/satin_column.py:25
 msgid "Satin column: Object has a fill (but should not)"
-msgstr "Satinkolumne: Das Objekt hat eine Füllfarbe (sollte es aber nicht)"
+msgstr "Satinsäule: Das Objekt hat eine Füllfarbe (sollte es aber nicht)"
 
 #: lib/elements/satin_column.py:28
 msgid "* Open the Fill and Stroke panel"
@@ -1084,7 +1084,7 @@ msgstr "* Deaktiviere die Füllung"
 
 #: lib/elements/satin_column.py:31
 msgid "* Alternative: open Params and switch this path to Stroke to disable Satin Column mode"
-msgstr "* Alternativ kann in den Parametereinstellungen ein Laufstich aktiviert werden"
+msgstr "* Alternativ kann in den Parametereinstellungen ein Geradstich aktiviert werden"
 
 #: lib/elements/satin_column.py:36
 msgid "Too few subpaths"
@@ -1092,7 +1092,7 @@ msgstr "Zu wenig Unterpfade"
 
 #: lib/elements/satin_column.py:37
 msgid "Satin column: Object has too few subpaths.  A satin column should have at least two subpaths (the rails)."
-msgstr "Satinkolumne: Das Objekt hat zu wenig Unterpfade.  Eine Satinkolumne muss mindestens zwei Pfade enthalten."
+msgstr "Satinsäule: Das Objekt hat zu wenig Unterpfade.  Eine Satinsäule muss mindestens zwei Pfade enthalten."
 
 #: lib/elements/satin_column.py:39
 msgid "* Add another subpath (select two rails and do Path > Combine)"
@@ -1108,7 +1108,7 @@ msgstr "Ungerade Anzahl von Punkten"
 
 #: lib/elements/satin_column.py:46
 msgid "Satin column: There are no rungs and rails have an an unequal number of points."
-msgstr "Satinkolumne: Es gibt keine Stichlagen und die Außenlinien haben eine ungleiche Anzahl an Knotenpunkten."
+msgstr "Satinsäule: Es gibt keine Stichlagen und die Außenlinien haben eine ungleiche Anzahl an Knotenpunkten."
 
 #: lib/elements/satin_column.py:48
 msgid "The easiest way to solve this issue is to add one or more rungs. "
@@ -1116,7 +1116,7 @@ msgstr "Der einfachste Weg dieses Problem zu lösen ist, eine oder mehrere Stich
 
 #: lib/elements/satin_column.py:49
 msgid "Rungs control the stitch direction in satin columns."
-msgstr "Stichlagen kontrollieren die Stichrichtung von Satinkolumnen."
+msgstr "Stichlagen kontrollieren die Stichrichtung von Satinstichen."
 
 #: lib/elements/satin_column.py:50
 msgid "* With the selected object press \"P\" to activate the pencil tool."
@@ -1128,19 +1128,19 @@ msgstr "* Halte die Shift-Taste gedrückt, während du die Stichlagen zeichnest.
 
 #: lib/elements/satin_column.py:56
 msgid "Not stitchable satin column"
-msgstr "Nicht stickbare Satinkolumne"
+msgstr "Nicht stickbare Satinsäule"
 
 #: lib/elements/satin_column.py:57
 msgid "A satin column consists out of two rails and one or more rungs. This satin column may have a different setup."
-msgstr "Eine Satinkolumne besteht aus zwei seitlichen Begrenzungslinien und einer beliebigen Anzahl an Richtungslinien. Die fehlerhafte Satinkolumne hat wahrscheinlich einen anderen Aufbau."
+msgstr "Eine Satinsäule besteht aus zwei seitlichen Begrenzungslinien und einer beliebigen Anzahl an Richtungslinien (Stichlagen). Die fehlerhafte Satinsäule hat wahrscheinlich einen anderen Aufbau."
 
 #: lib/elements/satin_column.py:59
 msgid "Make sure your satin column is not a combination of multiple satin columns."
-msgstr "Stelle sicher, dass die Satinkolumne keine Kombination aus mehreren Satinkolumnen ist."
+msgstr "Stelle sicher, dass die Satinsäule keine Kombination aus mehreren Satinsäulen ist."
 
 #: lib/elements/satin_column.py:60
 msgid "Go to our website and read how a satin column should look like https://inkstitch.org/docs/stitches/satin-column/"
-msgstr "Gehe auf unsere Webseite und informiere dich, wie Satinkolumnen aufgebaut sind: https://inkstitch.org/de/docs/stitches/satin-column/"
+msgstr "Gehe auf unsere Webseite und informiere dich, wie Satinsäulen aufgebaut sind: https://inkstitch.org/de/docs/stitches/satin-column/"
 
 #: lib/elements/satin_column.py:64
 msgid "Each rung should intersect both rails once."
@@ -1152,7 +1152,7 @@ msgstr "Stichlage kreuzt Außenlinie nicht"
 
 #: lib/elements/satin_column.py:69
 msgid "Satin column: A rung doesn't intersect both rails."
-msgstr "Satinkolumne: Eine Stichlage kreuzt nicht beide Außenlinien."
+msgstr "Satinsäule: Eine Stichlage kreuzt nicht beide Außenlinien."
 
 #: lib/elements/satin_column.py:73
 msgid "Rungs intersects too many times"
@@ -1160,15 +1160,15 @@ msgstr "Stichlagen kreuzen Außenlinie zu oft"
 
 #: lib/elements/satin_column.py:74
 msgid "Satin column: A rung intersects a rail more than once."
-msgstr "Satinkolumne: Eine Stichlage überschneidet eine Außenlinie mehrmals."
+msgstr "Satinsäule: Eine Stichlage überschneidet eine Außenlinie mehrmals."
 
 #: lib/elements/satin_column.py:78
 msgid "Satin Column"
-msgstr "Satinkolumne"
+msgstr "Satinsäule"
 
 #: lib/elements/satin_column.py:84
 msgid "Custom satin column"
-msgstr "Benutzerdefinierte Satinkolumne"
+msgstr "Benutzerdefinierte Satinsäule"
 
 #: lib/elements/satin_column.py:90
 msgid "\"E\" stitch"
@@ -1196,7 +1196,7 @@ msgstr "Zugausgleich"
 
 #: lib/elements/satin_column.py:121
 msgid "Satin stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape.  This setting expands each pair of needle penetrations outward from the center of the satin column."
-msgstr "Satinstiche ziehen den Stoff zusammen. Dadurch wird das Stickbild schmaler, als die in Inkscape gezeichnete Form. Diese Einstellung erweitert die Satinkolumne, um diesen Effekt auszugleichen."
+msgstr "Satinstiche ziehen den Stoff zusammen. Dadurch wird das Stickbild schmaler, als die in Inkscape gezeichnete Form. Diese Einstellung erweitert die Satinsäule, um diesen Effekt auszugleichen."
 
 #: lib/elements/satin_column.py:133
 msgid "Contour underlay"
@@ -1217,7 +1217,7 @@ msgstr "Einrückung"
 
 #: lib/elements/satin_column.py:147
 msgid "Shrink the outline, to prevent the underlay from showing around the outside of the satin column."
-msgstr "Umrandung verkleinern, um zu verhindern, dass die Unterlage an der Außenseite der Satinkolumne sichtbar wird."
+msgstr "Umrandung verkleinern, um zu verhindern, dass die Unterlage an der Außenseite der Satinsäule sichtbar wird."
 
 #: lib/elements/satin_column.py:157
 msgid "Center-walk underlay"
@@ -1278,7 +1278,7 @@ msgstr "Linie"
 
 #: lib/elements/stroke.py:38
 msgid "Running stitch along paths"
-msgstr "Laufstich am Pfad entlang"
+msgstr "Geradstich"
 
 #: lib/elements/stroke.py:52 inx/inkstitch_break_apart.inx:17
 msgid "Method"
@@ -1286,7 +1286,7 @@ msgstr "Methode"
 
 #: lib/elements/stroke.py:56
 msgid "Running Stitch"
-msgstr "Laufstich"
+msgstr "Geradstich"
 
 #: lib/elements/stroke.py:56
 msgid "Ripple"
@@ -1310,19 +1310,19 @@ msgstr "Definiert, wie oft am Pfad herunter und zurück gelaufen wird."
 
 #: lib/elements/stroke.py:85
 msgid "Bean stitch number of repeats"
-msgstr "Bean stitch Anzahl der Wiederholungen"
+msgstr "Mehrfach Geradstich Anzahl der Wiederholungen"
 
 #: lib/elements/stroke.py:86
 msgid "Backtrack each stitch this many times.  A value of 1 would triple each stitch (forward, back, forward).  A value of 2 would quintuple each stitch, etc.  Only applies to running stitch."
-msgstr "Jeden Stich vervielfachen. Ein Wert von 1 würde jeden Stich verdreifachen (vorwärts, rückwärts, vorwärts). Ein Wert von 2 würde jeden Stich fünffach ausführen. Gilt nur für den Laufstich."
+msgstr "Jeden Stich vervielfachen. Ein Wert von 1 würde jeden Stich verdreifachen (vorwärts, rückwärts, vorwärts). Ein Wert von 2 würde jeden Stich fünffach ausführen."
 
 #: lib/elements/stroke.py:97
 msgid "Running stitch length"
-msgstr "Laufstichlänge"
+msgstr "Stichlänge"
 
 #: lib/elements/stroke.py:98
 msgid "Length of stitches in running stitch mode."
-msgstr "Länge der Stiche im Laufstich-Modus."
+msgstr "Länge der Geradstiche."
 
 #: lib/elements/stroke.py:108
 msgid "Number of lines"
@@ -1380,7 +1380,7 @@ msgstr "Stichlänge im Zick-Zack Modus."
 msgid "Legacy running stitch setting detected!\n\n"
 "It looks like you're using a stroke smaller than 0.5 units to indicate a running stitch, which is deprecated.  Instead, please set your stroke to be dashed to indicate running stitch.  Any kind of dash will work."
 msgstr "Veraltete Laufstich-Einstellung erkannt!\n\n"
-"Es sieht so aus, als ob für einen Laufstich eine Linie verwendet wurde, die schmaler als 0.5 Einheiten ist. Diese Methode ist veraltet. Bitte eine gestrichelte Linie für diesen Zweck benutzen. Die genaue Linienart spielt dabei keine Rolle, Hauptsache es ist keine durchgehende Linie."
+"Es scheint so, als ob für einen Geradstich eine Linie verwendet wurde, die schmaler als 0.5 Einheiten ist. Diese Methode ist veraltet. Bitte eine gestrichelte Linie für diesen Zweck benutzen."
 
 #: lib/elements/text.py:13 lib/extensions/lettering.py:78
 msgid "Text"
@@ -1431,16 +1431,16 @@ msgstr "Bitte mindestens ein Element mit Kontur auswählen."
 
 #: lib/extensions/auto_satin.py:35
 msgid "Please ensure that at most one start and end command is attached to the selected satin columns."
-msgstr "Bitte sicherstellen, dass höchstens ein Start- und End-Befehl mit den ausgewählten Satinkolumnen verknüpft ist."
+msgstr "Bitte sicherstellen, dass höchstens ein Start- und End-Befehl mit den ausgewählten Satinsäule verknüpft ist."
 
 #. auto-route satin columns extension
 #: lib/extensions/auto_satin.py:49
 msgid "Please select one or more satin columns."
-msgstr "Bitte eine oder mehrere Satinkolumnen auswählen."
+msgstr "Bitte eine oder mehrere Satinsäulen auswählen."
 
 #: lib/extensions/auto_satin.py:54
 msgid "Please select at least one satin column."
-msgstr "Bitte mindestens eine Satinkolumne auswählen."
+msgstr "Bitte mindestens eine Satinsäule auswählen."
 
 #. This was previously: "No embroiderable paths selected."
 #: lib/extensions/base.py:127
@@ -1466,34 +1466,34 @@ msgstr "%s Elemente entfernt"
 
 #: lib/extensions/convert_to_satin.py:35
 msgid "Please select at least one line to convert to a satin column."
-msgstr "Bitte wähle mindestens eine Zeile aus, die in eine Satinkolumne konvertiert werden soll."
+msgstr "Bitte wähle mindestens eine Zeile aus, die in eine Satinsäule konvertiert werden soll."
 
 #. : Convert To Satin extension, user selected one or more objects that were
 #. not lines.
 #: lib/extensions/convert_to_satin.py:40
 msgid "Only simple lines may be converted to satin columns."
-msgstr "Nur einfache Linien können in Satinkolumnen konvertiert werden."
+msgstr "Nur einfache Linien können in Satinsäulen konvertiert werden."
 
 #: lib/extensions/convert_to_satin.py:137
 msgid "Ink/Stitch cannot convert your stroke into a satin column. Please break up your path and try again."
-msgstr "Ink/Stitch kann die Linie nicht in eine Satinkolumne umwandeln. Bitte diesen Pfad auftrennen und erneut versuchen."
+msgstr "Ink/Stitch kann die Linie nicht in eine Satinsäule umwandeln. Bitte diesen Pfad in Abschnitte zerlegen und erneut versuchen."
 
 #. : Convert To Satin extension, user selected one or more objects that were
 #. not lines.
 #: lib/extensions/convert_to_stroke.py:25
 #: lib/extensions/convert_to_stroke.py:30
 msgid "Please select at least one satin column to convert to a running stitch."
-msgstr "Bitte zur Laufstich-Konvertierung mindestens eine Satinkolumne wählen."
+msgstr "Für die Umwandlung in einen Geradstich bitte mindestens eine Satinsäule auswählen."
 
 #: lib/extensions/cut_satin.py:20
 msgid "Please select one or more satin columns to cut."
-msgstr "Bitte wähle eine oder mehrere Satinkolumnen zum schneiden aus."
+msgstr "Bitte wähle eine oder mehrere Satinsäulen zum Zerteilen aus."
 
 #. will have the satin's id prepended, like this:
 #. path12345: error: this satin column does not ...
 #: lib/extensions/cut_satin.py:30
 msgid "this satin column does not have a \"satin column cut point\" command attached to it. Please use the \"Attach commands\" extension and attach the \"Satin Column cut point\" command first."
-msgstr "Diese Satinkolumne hat keinen \"Satinkolumnen schneiden\" -Befehl. Bitte verwende die Erweiterung \"Befehle hinzufügen\" und füge zuerst den Befehl \"Satinkolumne schneiden\" hinzu."
+msgstr "Diese Satinsäule hat keinen \"Satinsäule schneiden\" -Befehl. Bitte verwende die Erweiterung \"Befehle zu Objekten hinzufügen\" und füge zuerst den Befehl \"Satinsäule schneiden\" hinzu."
 
 #: lib/extensions/cutwork_segmentation.py:158
 msgid "Cutwork Group"
@@ -1510,7 +1510,7 @@ msgstr "Diese Funktion kopiert Ink/Stitch Parameter von dem zuerst gewählten El
 
 #: lib/extensions/flip.py:28
 msgid "Please select one or more satin columns to flip."
-msgstr "Bitte wählen eine oder mehrere Satinkolumnen zum umkehren auswählen."
+msgstr "Bitte eine oder mehrere Satinsäulen zum umkehren auswählen."
 
 #: lib/extensions/generate_palette.py:31
 msgid "Please specify a name for your color palette."
@@ -1964,12 +1964,12 @@ msgstr "Auto-Führung"
 #: lib/stitches/auto_run.py:257
 #, python-format
 msgid "AutoRun %d"
-msgstr "Auto-Laufstich %d"
+msgstr "AutoGeradstich %d"
 
 #: lib/stitches/auto_run.py:259
 #, python-format
 msgid "AutoRun Underpath %d"
-msgstr "Auto-Laufstich Verbindungslinie %d"
+msgstr "AutoGeradstich Verbindung %d"
 
 #. Label for a satin column created by Auto-Route Satin Columns and Lettering
 #. extensions
@@ -1983,7 +1983,7 @@ msgstr "AutoSatin %d"
 #: lib/stitches/auto_satin.py:519
 #, python-format
 msgid "AutoSatin Running Stitch %d"
-msgstr "AutoSatin Laufstich %d"
+msgstr "AutoSatin Geradstich %d"
 
 #: lib/stitches/guided_fill.py:120
 msgid "Guide line (or offset copy) is self crossing!"
@@ -2805,7 +2805,7 @@ msgstr "Garnfarben Verwaltung"
 
 #: inx/inkstitch_auto_run.inx:3 inx/inkstitch_auto_run.inx:24
 msgid "Auto-Route Running Stitch"
-msgstr "Automatische Laufstich-Führung"
+msgstr "Automatische geführter Geradstich"
 
 #: inx/inkstitch_auto_run.inx:10
 msgid "Tools: Stroke"
@@ -2813,7 +2813,7 @@ msgstr "Werkzeuge: Linie"
 
 #: inx/inkstitch_auto_run.inx:15
 msgid "Auto-Route Running Stitch Options"
-msgstr "Optionen für automatisch geführte Laufstiche"
+msgstr "Optionen für automatisch geführte Geradstiche"
 
 #: inx/inkstitch_auto_run.inx:17
 msgid "Add nodes at intersections"
@@ -2821,7 +2821,7 @@ msgstr "Knoten an Überschneidungen hinzufügen"
 
 #: inx/inkstitch_auto_run.inx:19
 msgid "Preserve order of running stitches"
-msgstr "Reihenfolge der Laufstiche beibehalten"
+msgstr "Reihenfolge der Geradstiche beibehalten"
 
 #: inx/inkstitch_auto_run.inx:21 inx/inkstitch_auto_satin.inx:5
 msgid "Trim jump stitches"
@@ -2846,7 +2846,7 @@ msgstr "- Deaktiviert (manuell). Diese Option wählen, sollten bereits manuell K
 
 #: inx/inkstitch_auto_run.inx:32
 msgid "Use Start- end end commands to define where auto-routing for running stitch should start and end."
-msgstr "Start- und Endbefehle legen die Start- und Endpunkte der automatisch geführten Laufstiche fest."
+msgstr "Start- und Endbefehle legen die Start- und Endpunkte der automatisch geführten Geradstiche fest."
 
 #: inx/inkstitch_auto_run.inx:34
 msgid "More info on our website:"
@@ -2854,15 +2854,15 @@ msgstr "Weitere Informationen auf unserer Webseite:"
 
 #: inx/inkstitch_auto_run.inx:35
 msgid "https://inkstitch.org/docs/stroke-tools#auto-route-running-stitch"
-msgstr "https://inkstitch.org/docs/stroke-tools#automatisch-geführter-laufstich"
+msgstr "https://inkstitch.org/de/docs/stroke-tools#automatisch-geführter-geradstich"
 
 #: inx/inkstitch_auto_satin.inx:3
 msgid "Auto-Route Satin Columns"
-msgstr "Automatisch geführte Satinkolumnen"
+msgstr "Automatisch geführter Satinstich"
 
 #: inx/inkstitch_auto_satin.inx:6
 msgid "Preserve order of satin columns"
-msgstr "Behalte Reihenfolge der Satinkolumnen bei"
+msgstr "Behalte Reihenfolge der Satinsäulen bei"
 
 #: inx/inkstitch_auto_satin.inx:12 inx/inkstitch_convert_to_satin.inx:10
 #: inx/inkstitch_convert_to_stroke.inx:13 inx/inkstitch_cut_satin.inx:10
@@ -2932,23 +2932,23 @@ msgstr "Ansicht"
 
 #: inx/inkstitch_convert_to_satin.inx:3
 msgid "Convert Line to Satin"
-msgstr "Linie zu Satin"
+msgstr "Linie zu Satinsäule"
 
 #: inx/inkstitch_convert_to_stroke.inx:3
 msgid "Convert Satin to Stroke"
-msgstr "Satin zu Linie"
+msgstr "Satin zu Geradstich"
 
 #: inx/inkstitch_convert_to_stroke.inx:8
 msgid "Keep satin column"
-msgstr "Satinkolumnen erhalten"
+msgstr "Satinsäulen erhalten"
 
 #: inx/inkstitch_convert_to_stroke.inx:8
 msgid "Do not delete original satin column."
-msgstr "Originale Satinkolumnen nicht löschen."
+msgstr "Originale Satinsäulen nicht löschen."
 
 #: inx/inkstitch_cut_satin.inx:3
 msgid "Cut Satin Column"
-msgstr "Satinkolumne schneiden"
+msgstr "Satinsäule schneiden"
 
 #: inx/inkstitch_cutwork_segmentation.inx:3
 msgid "Cutwork segmentation"
@@ -3064,7 +3064,7 @@ msgstr "Sprungstiche, die kleiner sind, werden als normale Stiche behandelt."
 
 #: inx/inkstitch_flip.inx:3
 msgid "Flip Satin Column Rails"
-msgstr "Konturen der Satinkolumne umkehren"
+msgstr "Konturen der Satinsäulen umkehren"
 
 #: inx/inkstitch_generate_palette.inx:3
 msgid "Generate Color Palette"
@@ -3615,7 +3615,7 @@ msgstr "Name"
 
 #: inx/inkstitch_lettering_generate_json.inx:33
 msgid "Autoroute Satin"
-msgstr "Automatisch geführte Satinkolumne"
+msgstr "Automatisch geführte Satinsäulen"
 
 #: inx/inkstitch_lettering_generate_json.inx:33
 msgid "Disable if you defined manual routing in your font."
