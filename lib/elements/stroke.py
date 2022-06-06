@@ -93,7 +93,7 @@ class Stroke(EmbroideryElement):
         _('Bean stitch number of repeats'),
         tooltip=_('Backtrack each stitch this many times.  '
                   'A value of 1 would triple each stitch (forward, back, forward).  '
-                  'A value of 2 would quintuple each stitch, etc.  Only applies to running stitch.'),
+                  'A value of 2 would quintuple each stitch, etc.'),
         type='int',
         default=0,
         sort_index=3)

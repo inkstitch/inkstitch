@@ -41,7 +41,8 @@ def running_stitch(points, stitch_length):
         # consider sections of the original path, each one starting and ending
         # with an important point
         section = points[start:end + 1]
-        output.append(section[0])
+        if not output or output[-1] != section[0]:
+            output.append(section[0])
 
         # Now split each section up evenly into stitches, each with a length no
         # greater than the specified stitch_length.
@@ -70,7 +71,8 @@ def running_stitch(points, stitch_length):
                 distance -= segment_length
                 segment_start = segment_end
 
-    output.append(points[-1])
+    if points[-1] != output[-1]:
+        output.append(points[-1])
 
     return output
 
