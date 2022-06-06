@@ -10,7 +10,7 @@ from .utils import build_environment, write_inx_file
 
 def pyembroidery_input_formats():
     for format in pyembroidery.supported_formats():
-        if 'reader' in format and format['category'] == 'embroidery':
+        if 'reader' in format and format['category'] in ['embroidery', 'color']:
             yield format['extension'], format['description']
 
 
