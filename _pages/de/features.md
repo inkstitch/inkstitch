@@ -2,7 +2,7 @@
 title: "Besondere Ink/Stitch Features"
 permalink: /de/features/
 excerpt: "Ink/Stitch features"
-last_modified_at: 2022-05-16
+last_modified_at: 2022-06-07
 sidebar:
   nav: pages
 toc: true
@@ -16,10 +16,10 @@ Ink/Stitch: digitalisiere Designs für Maschinenstickerei mit Inkscape (SVG)
 
 ## Sticharten
 
-* [Sticharten](/de/docs/stitch-library/): Füllung, Satin, Linien
+* [Sticharten](/de/docs/stitch-library/): Füllstich, Satinstich, Geradstich
 * Nutzergenerierte [Muster](/de/docs/stitches/patterns/) können auf jeden Stichtyp angewandt werden.
 
-### Füllung
+### Füllstich
 
 * Automatische [Füllung](/de/docs/stitches/fill-stitch/) komplizierter Formen mit Füllstich
 * Stichlänge, Reihenabstand und Stickrichtung anpassen
@@ -27,24 +27,24 @@ Ink/Stitch: digitalisiere Designs für Maschinenstickerei mit Inkscape (SVG)
 * [Konturfüllung](/de/docs/stitches/contour-fill/)
 * [Kurvenfüllung](/de/docs/stitches/guided-fill/)
 
-### Satin
-* [Satinsäule](/de/docs/stitches/satin-column/) mit variabler Breite
-* 3 anpassbare und gleichzeitig nutzbare Unterlagen (Mittellinien-, Kontur- und Zick-Zack-Unterlage)
+### Satinstich
+* [Satinstich](/de/docs/stitches/satin-column/) mit variabler Breite
+* 3 anpassbare und zeitgleich nutzbare Unterlagen (Mittellinien-, Kontur- und Zick-Zack-Unterlage)
 * [E-stitch](/de/docs/stitches/e-stitch/)
 * Geteilte Satinstiche (durch nutzerdefinierte maximale Stichlänge)
-* [Automatisch geführte Satinkolumnen]](/de/docs/satin-tools/) zur Vermeidung von Sprungstichen (mit verstecktem Laufstich sofern notwendig)
+* [Automatisch geführte Satinstitche]](/de/docs/satin-tools/) zur Vermeidung von Sprungstichen (mit verstecktem Geradstich sofern notwendig)
 
-### Linienartige Stiche
+### Geradstiche
 
 * [Geradstich](/de/docs/stitches/running-stitch/)
 * [Mehrfach Geradstich](/de/docs/stitches/bean-stitch/)
-* [Manuelle Stichführung](/de/docs/stitches/manual-stitch/) (each stitch exactly where you want it)
+* [Manuelle Stichführung](/de/docs/stitches/manual-stitch/) (jeder Einstich ist genau da wo du ihn haben möchtest)
 * [Cutwork](/de/docs/cutwork/)
 * [Automatisch geführter Geradstich](/de/docs/stroke-tools/) zur Vermeidung von Sprungstichen
 
 ## Text
 
-* [Textmodul](/de/docs/lettering/) mit vielen einsatzbereiten [Schriften](/de/fonts/font-library/)
+* [Textmodul](/de/docs/lettering/) mit vielen einsatzbereiten vordigitalisierten [Schriften](/de/fonts/font-library/)
 
 ## Stichvorschau
 
@@ -56,17 +56,17 @@ Ink/Stitch: digitalisiere Designs für Maschinenstickerei mit Inkscape (SVG)
   * Layout für die Präsentation beim Kunden
   * Anpassbares Layout
 
-## Garnmanagement
+## Garnverwaltung
 
 Ink/Stitch hat eine Sektion "[Garnfarben Verwaltung](/de/docs/thread-color/)" mit verschiedenen Funktionen
 
-* Importiere über 60 geläufige Farbpaletten verschiedener Hersteller
+* Nutze über 60 Farbpaletten verschiedener Hersteller
   * Farbnamen und Katalognummern können über den PDF-Export ausgegeben werden
 * Werkzeuge zur einfachen Erstellung eigener Farbpaletten
 
 ## Importieren und Exportieren
 
-[Importieren and Speichern](/de/docs/import-export/) vieler beliebter Dateiformate für Stickmaschinen (einschließlich Batch-Export)
+[Importieren und Speichern](/de/docs/import-export/) vieler beliebter Dateiformate für Stickmaschinen (einschließlich Batch-Export)
 
 ### Schreiben
 CSV, **DST**, **EXP**, **JEF**, PEC, **PES**, SVG, TXT (G-CODE), U01, **VP3**
@@ -74,7 +74,7 @@ CSV, **DST**, **EXP**, **JEF**, PEC, **PES**, SVG, TXT (G-CODE), U01, **VP3**
 ### Lesen
 100, 10o, BRO, DAT, DSB, **DST**, DSZ, EMD, **EXP**, EXY, FXY, GT, INB, **JEF**, JPX, KSM, MAX, MIT, NEW, PCD, PCM, PCQ, PCS, PEC, **PES**, PHB, PHC, SEW, SHV, STC, STX, TAP, TBF, TXT (G-CODE), U01, **VP3**, XXX, ZXY
 
-### Machinenbefehle
+### Maschinenbefehle
 
 * [Fadenschnitt und Stopp](/de/docs/commands/)
 * Benutzerdefinierter [Nullpunkt](/de/docs/commands/) (0, 0)
