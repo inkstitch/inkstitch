@@ -5,7 +5,7 @@ excerpt: ""
 last_modified_at: 2022-05-22
 toc: true
 ---
-Das Text-Modul erzeugt mehrzeiligen Text. Die hinterlegten Schriftarten wurden von Community-Mitgliedern zur direkten Verwendung digitalisiert. Es gibt bisher Schriftarten die auf Satinsäulen beruhen, Applikationsschriften und Geradstichschriften. 
+Das Text-Modul erzeugt mehrzeiligen Text. Die hinterlegten Schriftarten wurden von Community-Mitgliedern zur direkten Verwendung digitalisiert. Es gibt bereits Schriftarten die auf Satinsäulen beruhen, Applikations-, Füllstichschriften und Geradstichschriften. 
 
 ![Lettrage Extensions](/assets/images/docs/lettering.jpg)
 
@@ -14,7 +14,7 @@ Das Text-Modul erzeugt mehrzeiligen Text. Die hinterlegten Schriftarten wurden v
 * Gehe zu `Erweiterungen > Ink/Stitch > Text`.
 * Gib deinen Text ein (mehrzeilig möglich).
 * Lege die Schriftart und die Skalierung fest.
-* Beachte die angegebenen Limitierungen auch bei späteren manuellen Skalierungen!
+* **⚠ Warnung**: Beachte die angegebenen Limitierungen auch bei späteren manuellen Skalierungen.
 * Klicke auf `Anwenden und schließen`.
 * Der eingegebene Text erscheint über der Seite.
 * Freie Positionierung ist nun möglich.
