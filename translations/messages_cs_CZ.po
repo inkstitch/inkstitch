@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-05-24 18:25+0000\n"
-"PO-Revision-Date: 2022-06-06 02:32\n"
+"POT-Creation-Date: 2022-06-07 02:15+0000\n"
+"PO-Revision-Date: 2022-06-07 02:16\n"
 "Last-Translator: \n"
 "Language-Team: Czech\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-24 18:25+0000\n"
+"POT-Creation-Date: 2022-06-07 02:15+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -263,7 +263,7 @@ msgstr ""
 
 #. description of font in fonts/grand_hotel_marif
 #: inkstitch-fonts-metadata.py:92
-msgid "Grand Hotel Marif a is a script satin font of size approximatively 35 mm. The glyphs cover most Western European languages. The font can be scaled down to 60% and up to 140%."
+msgid "Grand Hotel Marif is a script satin font of size approximatively 35 mm. The glyphs cover most Western European languages. The font can be scaled down to 60% and up to 140%."
 msgstr ""
 
 #. name of font in fonts/grandhotel_small

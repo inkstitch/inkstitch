@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-05-24 18:25+0000\n"
-"PO-Revision-Date: 2022-06-06 02:33\n"
+"POT-Creation-Date: 2022-06-07 02:15+0000\n"
+"PO-Revision-Date: 2022-06-07 02:17\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-24 18:25+0000\n"
+"POT-Creation-Date: 2022-06-07 02:15+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,7 +39,7 @@ msgstr "Brock Script"
 #. description of font in fonts/Brockscript
 #: inkstitch-fonts-metadata.py:4
 msgid "Brock Script is a decorative satin column manuscript font of size approximatively 40mm. It can be enlarged up to 250%. It contains 118 glyphs, covering most western european languages needs.More decorative options are hidden in the µ glyph"
-msgstr "Brock Script est une police manuscrite décorative enn colonne satin de taille approximative de 40 mm. Elle peut être agrandie jusqu'à 250%. Elle contient 118 glyphes, couvrant les besoins de la plupart des langues de l'Europe occidentale. Des options plus décoratives sont cachées dans le glyphe µ"
+msgstr "Brock Script est une police manuscrite décorative en colonne satin de taille approximative de 40 mm. Elle peut être agrandie jusqu'à 250%. Elle contient 118 glyphes, couvrant les besoins de la plupart des langues de l'Europe occidentale. Des options plus décoratives sont cachées dans le glyphe µ"
 
 #. name of font in fonts/abecedaire
 #: inkstitch-fonts-metadata.py:6
@@ -263,8 +263,8 @@ msgstr "Grand Hotel Marif"
 
 #. description of font in fonts/grand_hotel_marif
 #: inkstitch-fonts-metadata.py:92
-msgid "Grand Hotel Marif a is a script satin font of size approximatively 35 mm. The glyphs cover most Western European languages. The font can be scaled down to 60% and up to 140%."
-msgstr "Grand Hotel Marif est une police d'écriture en colonne satin d'environ 356 mm de haut. Les glyphes couvrent la plupart des langages de l'Europe de l'Ouest. La police peut être réduite jusqu'à 60% et agrandie jusqu'à 140%."
+msgid "Grand Hotel Marif is a script satin font of size approximatively 35 mm. The glyphs cover most Western European languages. The font can be scaled down to 60% and up to 140%."
+msgstr ""
 
 #. name of font in fonts/grandhotel_small
 #: inkstitch-fonts-metadata.py:94
