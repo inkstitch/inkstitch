@@ -23,6 +23,8 @@ class ApplyThreadlist(InkstitchExtension):
     '''
     def __init__(self, *args, **kwargs):
         InkstitchExtension.__init__(self, *args, **kwargs)
+        self.arg_parser.add_argument("-o", "--options", type=str, default=None, dest="page_1")
+        self.arg_parser.add_argument("-i", "--info", type=str, default=None, dest="page_2")
         self.arg_parser.add_argument("-f", "--filepath", type=str, default="", dest="filepath")
         self.arg_parser.add_argument("-m", "--method", type=int, default=1, dest="method")
         self.arg_parser.add_argument("-t", "--palette", type=str, default=None, dest="palette")
@@ -35,26 +37,18 @@ class ApplyThreadlist(InkstitchExtension):
             return
 
         path = self.options.filepath
-        if not os.path.exists(path):
-            inkex.errormsg(_("File not found."))
-            sys.exit(1)
-        if os.path.isdir(path):
-            inkex.errormsg(_("The filepath specified is not a file but a dictionary.\nPlease choose a threadlist file to import."))
-            sys.exit(1)
+        self.verify_path(path)
 
         method = self.options.method
-        if method == 1:
+
+        if path.endswith(('col', 'inf', 'edr')):
+            colors = self.parse_color_format(path)
+        elif method == 1:
             colors = self.parse_inkstitch_threadlist(path)
         else:
             colors = self.parse_threadlist_by_catalog_number(path)
 
-        if all(c is None for c in colors):
-            inkex.errormsg(_("Couldn't find any matching colors in the file."))
-            if method == 1:
-                inkex.errormsg(_('Please try to import as "other threadlist" and specify a color palette below.'))
-            else:
-                inkex.errormsg(_("Please chose an other color palette for your design."))
-            sys.exit(1)
+        self.verify_colors(colors, method)
 
         # Iterate through the color blocks to apply colors
         element_color = ""
@@ -71,22 +65,41 @@ class ApplyThreadlist(InkstitchExtension):
             style = element.node.get('style').replace("%s" % element_color, "%s" % colors[i])
             element.node.set('style', style)
 
+    def verify_path(self, path):
+        if not os.path.exists(path):
+            inkex.errormsg(_("File not found."))
+            sys.exit(1)
+        if os.path.isdir(path):
+            inkex.errormsg(_("The filepath specified is not a file but a dictionary.\nPlease choose a threadlist file to import."))
+            sys.exit(1)
+
+    def verify_colors(self, colors, method):
+        if all(c is None for c in colors):
+            inkex.errormsg(_("Couldn't find any matching colors in the file."))
+            if method == 1:
+                inkex.errormsg(_('Please try to import as "other threadlist" and specify a color palette below.'))
+            else:
+                inkex.errormsg(_("Please chose an other color palette for your design."))
+            sys.exit(1)
+
     def parse_inkstitch_threadlist(self, path):
         colors = []
-        if path.endswith('txt'):
-            with open(path) as threadlist:
-                for line in threadlist:
-                    if line[0].isdigit():
-                        m = re.search(r"\((#[0-9A-Fa-f]{6})\)", line)
-                        if m:
-                            colors.append(m.group(1))
-                        else:
-                            # Color not found
-                            colors.append(None)
-        else:
-            threads = pyembroidery.read(path).threadlist
-            for color in threads:
-                colors.append(color.hex_color())
+        with open(path) as threadlist:
+            for line in threadlist:
+                if line[0].isdigit():
+                    m = re.search(r"\((#[0-9A-Fa-f]{6})\)", line)
+                    if m:
+                        colors.append(m.group(1))
+                    else:
+                        # Color not found
+                        colors.append(None)
+        return colors
+
+    def parse_color_format(self, path):
+        colors = []
+        threads = pyembroidery.read(path).threadlist
+        for color in threads:
+            colors.append(color.hex_color())
         return colors
 
     def parse_threadlist_by_catalog_number(self, path):
