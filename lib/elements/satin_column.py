@@ -166,6 +166,11 @@ class SatinColumn(EmbroideryElement):
         return max(self.get_float_param("center_walk_underlay_stitch_length_mm", 1.5), 0.01)
 
     @property
+    @param('center_walk_underlay_repeats', _('Repeats'), group=_('Center-Walk Underlay'), type='int', default=2, sort_index=2)
+    def center_walk_underlay_repeats(self):
+        return max(self.get_int_param("center_walk_underlay_repeats", 2), 1)
+
+    @property
     @param('zigzag_underlay', _('Zig-zag underlay'), type='toggle', group=_('Zig-zag Underlay'))
     def zigzag_underlay(self):
         return self.get_boolean_param("zigzag_underlay")
@@ -431,6 +436,9 @@ class SatinColumn(EmbroideryElement):
 
         if not self.to_stitch_groups():
             yield NotStitchableError(self.shape.centroid)
+
+    def _center_walk_is_odd(self):
+        return self.center_walk_underlay_repeats % 2 == 1
 
     def reverse(self):
         """Return a new SatinColumn like this one but in the opposite direction.
@@ -736,24 +744,34 @@ class SatinColumn(EmbroideryElement):
     def do_contour_underlay(self):
         # "contour walk" underlay: do stitches up one side and down the
         # other.
-        forward, back = self.plot_points_on_rails(self.contour_underlay_stitch_length,
-                                                  -self.contour_underlay_inset)
+        forward, back = self.plot_points_on_rails(self.contour_underlay_stitch_length, -self.contour_underlay_inset)
+        stitches = (forward + list(reversed(back)))
+        if self._center_walk_is_odd():
+            stitches = (list(reversed(back)) + forward)
+
         return StitchGroup(
             color=self.color,
             tags=("satin_column", "satin_column_underlay", "satin_contour_underlay"),
-            stitches=(forward + list(reversed(back))))
+            stitches=stitches)
 
     def do_center_walk(self):
         # Center walk underlay is just a running stitch down and back on the
         # center line between the bezier curves.
 
         # Do it like contour underlay, but inset all the way to the center.
-        forward, back = self.plot_points_on_rails(self.center_walk_underlay_stitch_length,
-                                                  -100000)
+        forward, back = self.plot_points_on_rails(self.center_walk_underlay_stitch_length, -100000)
+
+        stitches = []
+        for i in range(self.center_walk_underlay_repeats):
+            if i % 2 == 0:
+                stitches += forward
+            else:
+                stitches += list(reversed(back))
+
         return StitchGroup(
             color=self.color,
             tags=("satin_column", "satin_column_underlay", "satin_center_walk"),
-            stitches=(forward + list(reversed(back))))
+            stitches=stitches)
 
     def do_zigzag_underlay(self):
         # zigzag underlay, usually done at a much lower density than the
@@ -770,6 +788,9 @@ class SatinColumn(EmbroideryElement):
 
         sides = self.plot_points_on_rails(self.zigzag_underlay_spacing / 2.0,
                                           -self.zigzag_underlay_inset)
+
+        if self._center_walk_is_odd():
+            sides = [list(reversed(sides[0])), list(reversed(sides[1]))]
 
         # This organizes the points in each side in the order that they'll be
         # visited.
@@ -811,6 +832,9 @@ class SatinColumn(EmbroideryElement):
         for point in chain.from_iterable(zip(*sides)):
             patch.add_stitch(point)
 
+        if self._center_walk_is_odd():
+            patch.stitches = list(reversed(patch.stitches))
+
         patch.add_tags(("satin_column", "satin_column_edge"))
         return patch
 
@@ -832,6 +856,9 @@ class SatinColumn(EmbroideryElement):
             patch.add_stitch(left)
             patch.add_stitch(right)
             patch.add_stitch(left)
+
+        if self._center_walk_is_odd():
+            patch.stitches = list(reversed(patch.stitches))
 
         patch.add_tags(("satin_column", "e_stitch"))
         return patch
@@ -857,6 +884,8 @@ class SatinColumn(EmbroideryElement):
                 for point in points:
                     patch.add_stitch(point)
                     patch.stitches[-1].add_tags(("satin_column", "satin_split_stitch"))
+        if self._center_walk_is_odd():
+            patch.stitches = list(reversed(patch.stitches))
         return patch
 
     def _get_split_points(self, left, right, max_stitch_length, count=None):
