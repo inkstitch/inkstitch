@@ -1,12 +1,17 @@
 from collections import defaultdict
+from math import atan2
 
+import numpy as np
+from shapely.affinity import rotate, scale, translate
 from shapely.geometry import LineString, Point
 
-from ..utils.geometry import line_string_to_point_list
 from .running_stitch import running_stitch
+from ..elements import SatinColumn
+from ..utils import Point as InkstitchPoint
+from ..utils.geometry import line_string_to_point_list
 
 
-def ripple_stitch(lines, target, line_count, points, max_stitch_length, repeats, flip, skip_start, skip_end, render_grid, exponent):
+def ripple_stitch(stroke):
     '''
     Ripple stitch is allowed to cross itself and doesn't care about an equal distance of lines
     It is meant to be used with light (not dense) stitching
@@ -16,151 +21,236 @@ def ripple_stitch(lines, target, line_count, points, max_stitch_length, repeats,
     If more sublines are present interpolation will take place between the first two.
     '''
 
-    # sort geoms by size
-    lines = sorted(lines.geoms, key=lambda linestring: linestring.length, reverse=True)
-    outline = lines[0]
+    is_linear, helper_lines = _get_helper_lines(stroke)
+    ripple_points = _do_ripple(stroke, helper_lines, is_linear)
 
-    # ignore skip_start and skip_end if both toghether are greater or equal to line_count
-    if skip_start + skip_end >= line_count:
-        skip_start = skip_end = 0
+    if stroke.reverse:
+        ripple_points.reverse()
 
-    if is_closed(outline):
-        rippled_line = do_circular_ripple(outline, target, line_count, repeats, flip, max_stitch_length, skip_start, skip_end, exponent)
+    if stroke.grid_size != 0:
+        ripple_points.extend(_do_grid(stroke, helper_lines))
+
+    stitches = running_stitch(ripple_points, stroke.running_stitch_length)
+
+    return _repeat_coords(stitches, stroke.repeats)
+
+
+def _do_ripple(stroke, helper_lines, is_linear):
+    points = []
+
+    for point_num in range(stroke.get_skip_start(), len(helper_lines[0]) - stroke.get_skip_end()):
+        row = []
+        for line_num in range(len(helper_lines)):
+            row.append(helper_lines[line_num][point_num])
+
+        if is_linear and point_num % 2 == 1:
+            # reverse every other row in linear ripple
+            row.reverse()
+
+        points.extend(row)
+
+    return points
+
+
+def _get_helper_lines(stroke):
+    lines = stroke.as_multi_line_string().geoms
+    if len(lines) > 1:
+        return True, _get_satin_ripple_helper_lines(stroke)
     else:
-        rippled_line = do_linear_ripple(lines, points, target, line_count - 1, repeats, flip, skip_start, skip_end, render_grid, exponent)
+        outline = LineString(running_stitch(line_string_to_point_list(lines[0]), stroke.grid_size or stroke.running_stitch_length))
 
-    return running_stitch(line_string_to_point_list(rippled_line), max_stitch_length)
-
-
-def do_circular_ripple(outline, target, line_count, repeats, flip, max_stitch_length, skip_start, skip_end, exponent):
-    # for each point generate a line going to the target point
-    lines = target_point_lines_normalized_distances(outline, target, flip, max_stitch_length)
-
-    # create a list of points for each line
-    points = get_interpolation_points(lines, line_count, exponent, "circular")
-
-    # connect the lines to a spiral towards the target
-    coords = []
-    for i in range(skip_start, line_count - skip_end):
-        for j in range(len(lines)):
-            coords.append(Point(points[j][i].x, points[j][i].y))
-
-    coords = repeat_coords(coords, repeats)
-
-    return LineString(coords)
-
-
-def do_linear_ripple(lines, points, target, line_count, repeats, flip, skip_start, skip_end, render_grid, exponent):
-    if len(lines) == 1:
-        helper_lines = target_point_lines(lines[0], target, flip)
-    else:
-        helper_lines = []
-        for start, end in zip(points[0], points[1]):
-            if flip:
-                helper_lines.append(LineString([end, start]))
-            else:
-                helper_lines.append(LineString([start, end]))
-
-    # get linear points along the lines
-    points = get_interpolation_points(helper_lines, line_count, exponent)
-
-    # go back and forth along the lines - flip direction of every second line
-    coords = []
-    for i in range(skip_start, len(points[0]) - skip_end):
-        for j in range(len(helper_lines)):
-            k = j
-            if i % 2 != 0:
-                k = len(helper_lines) - j - 1
-            coords.append(Point(points[k][i].x, points[k][i].y))
-
-    # add helper lines as a grid
-    # for now only add this to satin type ripples, otherwise it could become to dense at the target point
-    if len(lines) > 1 and render_grid:
-        coords.extend(do_grid(helper_lines, line_count - skip_end))
-
-    coords = repeat_coords(coords, repeats)
-
-    return LineString(coords)
-
-
-def do_grid(lines, num_lines):
-    coords = []
-    if num_lines % 2 == 0:
-        lines = reversed(lines)
-    for i, line in enumerate(lines):
-        line_coords = list(line.coords)
-        if (i % 2 == 0 and num_lines % 2 == 0) or (i % 2 != 0 and num_lines % 2 != 0):
-            coords.extend(reversed(line_coords))
+        if stroke.is_closed:
+            return False, _get_circular_ripple_helper_lines(stroke, outline)
         else:
-            coords.extend(line_coords)
-    return coords
+            return True, _get_linear_ripple_helper_lines(stroke, outline)
 
 
-def line_length(line):
-    return line.length
+def _get_satin_ripple_helper_lines(stroke):
+    # if grid_size has a number use this, otherwise use running_stitch_length
+    length = stroke.grid_size or stroke.running_stitch_length
+
+    # use satin column points for satin like build ripple stitches
+    rail_points = SatinColumn(stroke.node).plot_points_on_rails(length, 0)
+
+    steps = _get_steps(stroke.line_count, exponent=stroke.exponent, flip=stroke.flip_exponent)
+
+    helper_lines = []
+    for point0, point1 in zip(*rail_points):
+        helper_lines.append([])
+        helper_line = LineString((point0, point1))
+        for step in steps:
+            helper_lines[-1].append(InkstitchPoint.from_shapely_point(helper_line.interpolate(step, normalized=True)))
+
+    return helper_lines
 
 
-def is_closed(line):
-    coords = line.coords
-    return Point(*coords[0]).distance(Point(*coords[-1])) < 0.05
+def _get_circular_ripple_helper_lines(stroke, outline):
+    helper_lines = _get_linear_ripple_helper_lines(stroke, outline)
 
-
-def target_point_lines(outline, target, flip):
-    lines = []
-    for point in outline.coords:
-        if flip:
-            lines.append(LineString([point, target]))
-        else:
-            lines.append(LineString([target, point]))
-    return lines
-
-
-def target_point_lines_normalized_distances(outline, target, flip, max_stitch_length):
-    lines = []
-    outline = running_stitch(line_string_to_point_list(outline), max_stitch_length)
-    for point in outline:
-        if flip:
-            lines.append(LineString([target, point]))
-        else:
-            lines.append(LineString([point, target]))
-    return lines
-
-
-def get_interpolation_points(lines, line_count, exponent, method="linear"):
-    new_points = defaultdict(list)
-    count = len(lines) - 1
-    for i, line in enumerate(lines):
-        steps = get_steps(line, line_count, exponent)
-        distance = -1
+    # Now we want to adjust the helper lines to make a spiral.
+    num_lines = len(helper_lines)
+    steps = _get_steps(num_lines)
+    for i, line in enumerate(helper_lines):
         points = []
-        for j in range(line_count):
-            length = line.length * steps[j]
-            if method == "circular":
-                if distance == -1:
-                    # the first line makes sure, it is going to be a spiral
-                    distance = (line.length * steps[j+1]) * (i / count)
-                else:
-                    distance += length - (line.length * steps[j-1])
-            else:
-                distance = line.length * steps[j]
-            points.append(line.interpolate(distance))
-        if method == "linear":
-            points.append(Point(*line.coords[-1]))
-        new_points[i] = points
-    return new_points
+        for j in range(len(line) - 1):
+            points.append(line[j] * (1 - steps[i]) + line[j + 1] * steps[i])
+        helper_lines[i] = points
+
+    return helper_lines
 
 
-def get_steps(line, total_lines, exponent):
-    # get_steps is scribbled from the inkscape interpolate extension
-    # (https://gitlab.com/inkscape/extensions/-/blob/master/interp.py)
-    steps = [
-        ((i + 1) / (total_lines)) ** exponent
-        for i in range(total_lines - 1)
-    ]
-    return [0] + steps + [1]
+def _get_linear_ripple_helper_lines(stroke, outline):
+    guide_line = stroke.get_guide_line()
+    max_dist = stroke.grid_size or stroke.running_stitch_length
+
+    if guide_line:
+        return _get_guided_helper_lines(stroke, outline, max_dist)
+    else:
+        return _target_point_helper_lines(stroke, outline)
 
 
-def repeat_coords(coords, repeats):
+def _target_point_helper_lines(stroke, outline):
+    helper_lines = [[] for i in range(len(outline.coords))]
+    target = stroke.get_ripple_target()
+    steps = _get_steps(stroke.get_line_count(), exponent=stroke.exponent, flip=stroke.flip_exponent)
+    for i, point in enumerate(outline.coords):
+        line = LineString([point, target])
+
+        for step in steps:
+            helper_lines[i].append(InkstitchPoint.from_shapely_point(line.interpolate(step, normalized=True)))
+
+    return helper_lines
+
+
+def _do_grid(stroke, helper_lines):
+    for i, helper in enumerate(helper_lines):
+        start = stroke.get_skip_start()
+        end = len(helper) - stroke.get_skip_end()
+        points = helper[start:end]
+        if i % 2 == 0:
+            points.reverse()
+        yield from points
+
+
+def _get_guided_helper_lines(stroke, outline, max_distance):
+    # for each point generate a line going along and pointing to the guide line
+    guide_line = stroke.get_guide_line()
+    if isinstance(guide_line, SatinColumn):
+        # satin type guide line
+        return _generate_satin_guide_helper_lines(stroke, outline, guide_line)
+    else:
+        # simple guide line
+        return _generate_guided_helper_lines(stroke, outline, max_distance, guide_line.geoms[0])
+
+
+def _generate_guided_helper_lines(stroke, outline, max_distance, guide_line):
+    # helper lines are generated by making copies of the outline alog the guide line
+    line_point_dict = defaultdict(list)
+    outline = LineString(running_stitch(line_string_to_point_list(outline), max_distance))
+
+    center = outline.centroid
+    center = InkstitchPoint(center.x, center.y)
+
+    outline_steps = _get_steps(stroke.get_line_count(), exponent=stroke.exponent, flip=stroke.flip_exponent)
+    scale_steps = _get_steps(stroke.get_line_count(), start=stroke.scale_start / 100.0, end=stroke.scale_end / 100.0)
+
+    start_point = InkstitchPoint(*(guide_line.coords[0]))
+    start_rotation = _get_start_rotation(guide_line)
+
+    previous_guide_point = None
+    for i in range(stroke.get_line_count()):
+        guide_point = InkstitchPoint.from_shapely_point(guide_line.interpolate(outline_steps[i], normalized=True))
+        translation = guide_point - start_point
+        scaling = scale_steps[i]
+        if stroke.rotate_ripples and previous_guide_point:
+            rotation = atan2(guide_point.y - previous_guide_point.y, guide_point.x - previous_guide_point.x)
+            rotation = rotation - start_rotation
+        else:
+            rotation = 0
+        transformed_outline = _transform_outline(translation, rotation, scaling, outline, Point(guide_point), stroke.scale_axis)
+
+        for j, point in enumerate(transformed_outline.coords):
+            line_point_dict[j].append(InkstitchPoint(point[0], point[1]))
+
+        previous_guide_point = guide_point
+
+    return _point_dict_to_helper_lines(len(outline.coords), line_point_dict)
+
+
+def _get_start_rotation(line):
+    point0 = line.interpolate(0)
+    point1 = line.interpolate(0.1)
+
+    return atan2(point1.y - point0.y, point1.x - point0.x)
+
+
+def _generate_satin_guide_helper_lines(stroke, outline, guide_line):
+    spacing = guide_line.center_line.length / (stroke.get_line_count() - 1)
+    rail_points = guide_line.plot_points_on_rails(spacing, 0)
+
+    point0 = rail_points[0][0]
+    point1 = rail_points[1][0]
+    start_rotation = atan2(point1.y - point0.y, point1.x - point0.x)
+    start_scale = (point1 - point0).length()
+    outline_center = InkstitchPoint.from_shapely_point(outline.centroid)
+
+    line_point_dict = defaultdict(list)
+
+    # add scaled and rotated outlines along the satin column guide line
+    for i, (point0, point1) in enumerate(zip(*rail_points)):
+        guide_center = (point0 + point1) / 2
+        translation = guide_center - outline_center
+        if stroke.rotate_ripples:
+            rotation = atan2(point1.y - point0.y, point1.x - point0.x)
+            rotation = rotation - start_rotation
+        else:
+            rotation = 0
+        scaling = (point1 - point0).length() / start_scale
+
+        transformed_outline = _transform_outline(translation, rotation, scaling, outline, Point(guide_center), stroke.scale_axis)
+
+        # outline to helper line points
+        for j, point in enumerate(transformed_outline.coords):
+            line_point_dict[j].append(InkstitchPoint(point[0], point[1]))
+
+    return _point_dict_to_helper_lines(len(outline.coords), line_point_dict)
+
+
+def _transform_outline(translation, rotation, scaling, outline, origin, scale_axis):
+    # transform
+    transformed_outline = translate(outline, translation.x, translation.y)
+    # rotate
+    if rotation != 0:
+        transformed_outline = rotate(transformed_outline, rotation, use_radians=True, origin=origin)
+    # scale | scale_axis => 0: xy, 1: x, 2: y, 3: none
+    scale_x = scale_y = scaling
+    if scale_axis in [2, 3]:
+        scale_x = 1
+    if scale_axis in [1, 3]:
+        scale_y = 1
+    transformed_outline = scale(transformed_outline, scale_x, scale_y, origin=origin)
+    return transformed_outline
+
+
+def _point_dict_to_helper_lines(line_count, point_dict):
+    lines = []
+    for i in range(line_count):
+        points = point_dict[i]
+        lines.append(points)
+    return lines
+
+
+def _get_steps(num_steps, start=0.0, end=1.0, exponent=1, flip=False):
+    steps = np.linspace(start, end, num_steps)
+    steps = steps ** exponent
+
+    if flip:
+        steps = 1.0 - np.flip(steps)
+
+    return list(steps)
+
+
+def _repeat_coords(coords, repeats):
     final_coords = []
     for i in range(repeats):
         if i % 2 == 1:

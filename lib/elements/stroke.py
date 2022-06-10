@@ -10,13 +10,13 @@ import shapely.geometry
 from inkex import Transform
 
 from ..i18n import _
+from ..marker import get_marker_elements
 from ..stitch_plan import StitchGroup
 from ..stitches import bean_stitch, running_stitch
 from ..stitches.ripple_stitch import ripple_stitch
 from ..svg import get_node_transform, parse_length_with_units
 from ..utils import Point, cache
 from .element import EmbroideryElement, param
-from .satin_column import SatinColumn
 from .validation import ValidationWarning
 
 warned_about_legacy_running_stitch = False
@@ -26,8 +26,16 @@ class IgnoreSkipValues(ValidationWarning):
     name = _("Ignore skip")
     description = _("Skip values are ignored, because there was no line left to embroider.")
     steps_to_solve = [
-        _('* Reduce values of Skip first and last lines or'),
-        _('* Increase number of lines accordinly in the params dialog.'),
+        _('* Open the params dialog with this object selected'),
+        _('* Reduce Skip values or increase number of lines'),
+    ]
+
+
+class MultipleGuideLineWarning(ValidationWarning):
+    name = _("Multiple Guide Lines")
+    description = _("This object has multiple guide lines, but only the first one will be used.")
+    steps_to_solve = [
+        _("* Remove all guide lines, except for one.")
     ]
 
 
@@ -85,7 +93,7 @@ class Stroke(EmbroideryElement):
         _('Bean stitch number of repeats'),
         tooltip=_('Backtrack each stitch this many times.  '
                   'A value of 1 would triple each stitch (forward, back, forward).  '
-                  'A value of 2 would quintuple each stitch, etc.  Only applies to running stitch.'),
+                  'A value of 2 would quintuple each stitch, etc.'),
         type='int',
         default=0,
         sort_index=3)
@@ -104,6 +112,19 @@ class Stroke(EmbroideryElement):
         return max(self.get_float_param("running_stitch_length_mm", 1.5), 0.01)
 
     @property
+    @param('zigzag_spacing_mm',
+           _('Zig-zag spacing (peak-to-peak)'),
+           tooltip=_('Length of stitches in zig-zag mode.'),
+           unit='mm',
+           type='float',
+           default=0.4,
+           select_items=[('stroke_method', 0)],
+           sort_index=5)
+    @cache
+    def zigzag_spacing(self):
+        return max(self.get_float_param("zigzag_spacing_mm", 0.4), 0.01)
+
+    @property
     @param('line_count',
            _('Number of lines'),
            tooltip=_('Number of lines from start to finish'),
@@ -114,6 +135,11 @@ class Stroke(EmbroideryElement):
     @cache
     def line_count(self):
         return max(self.get_int_param("line_count", 10), 1)
+
+    def get_line_count(self):
+        if self.is_closed:
+            return self.line_count + 1
+        return self.line_count
 
     @property
     @param('skip_start',
@@ -139,54 +165,124 @@ class Stroke(EmbroideryElement):
     def skip_end(self):
         return abs(self.get_int_param("skip_end", 0))
 
-    @property
-    @param('flip',
-           _('Flip'),
-           tooltip=_('Flip outer to inner'),
-           type='boolean',
-           default=False,
-           select_items=[('stroke_method', 1)],
-           sort_index=8)
-    @cache
-    def flip(self):
-        return self.get_boolean_param("flip", False)
+    def _adjust_skip(self, skip):
+        if self.skip_start + self.skip_end >= self.line_count:
+            return 0
+        else:
+            return skip
 
-    @property
-    @param('render_grid',
-           _('Grid distance'),
-           tooltip=_('Render as grid. Works only with satin type ripple stitches.'),
-           type='float',
-           default=0,
-           select_items=[('stroke_method', 1)],
-           sort_index=8)
-    @cache
-    def render_grid(self):
-        return abs(self.get_float_param("render_grid", 0))
+    def get_skip_start(self):
+        return self._adjust_skip(self.skip_start)
+
+    def get_skip_end(self):
+        return self._adjust_skip(self.skip_end)
 
     @property
     @param('exponent',
            _('Line distance exponent'),
-           tooltip=_('Increse density towards one side.'),
+           tooltip=_('Increase density towards one side.'),
            type='float',
            default=1,
            select_items=[('stroke_method', 1)],
-           sort_index=9)
+           sort_index=8)
     @cache
     def exponent(self):
         return max(self.get_float_param("exponent", 1), 0.1)
 
     @property
-    @param('zigzag_spacing_mm',
-           _('Zig-zag spacing (peak-to-peak)'),
-           tooltip=_('Length of stitches in zig-zag mode.'),
-           unit='mm',
-           type='float',
-           default=0.4,
-           select_items=[('stroke_method', 0)],
-           sort_index=5)
+    @param('flip_exponent',
+           _('Flip exponent'),
+           tooltip=_('Reverse exponent effect.'),
+           type='boolean',
+           default=False,
+           select_items=[('stroke_method', 1)],
+           sort_index=9)
     @cache
-    def zigzag_spacing(self):
-        return max(self.get_float_param("zigzag_spacing_mm", 0.4), 0.01)
+    def flip_exponent(self):
+        return self.get_boolean_param("flip_exponent", False)
+
+    @property
+    @param('reverse',
+           _('Reverse'),
+           tooltip=_('Flip start and end point'),
+           type='boolean',
+           default=False,
+           select_items=[('stroke_method', 1)],
+           sort_index=10)
+    @cache
+    def reverse(self):
+        return self.get_boolean_param("reverse", False)
+
+    @property
+    @param('grid_size',
+           _('Grid size'),
+           tooltip=_('Render as grid. Use with care and watch your stitch density.'),
+           type='float',
+           default=0,
+           unit='mm',
+           select_items=[('stroke_method', 1)],
+           sort_index=11)
+    @cache
+    def grid_size(self):
+        return abs(self.get_float_param("grid_size", 0))
+
+    @property
+    @param('scale_axis',
+           _('Scale axis'),
+           tooltip=_('Scale axis for satin guided ripple stitches.'),
+           type='dropdown',
+           default=0,
+           # 0: xy, 1: x, 2: y, 3: none
+           options=[_("X Y"), _("X"), _("Y"), _("None")],
+           select_items=[('stroke_method', 1)],
+           sort_index=12)
+    def scale_axis(self):
+        return self.get_int_param('scale_axis', 0)
+
+    @property
+    @param('scale_start',
+           _('Starting scale'),
+           tooltip=_('How big the first copy of the line should be, in percent.') + " " + _('Used only for ripple stitch with a guide line.'),
+           type='float',
+           default=100,
+           select_items=[('stroke_method', 1)],
+           sort_index=13)
+    def scale_start(self):
+        return self.get_float_param('scale_start', 100.0)
+
+    @property
+    @param('scale_end',
+           _('Ending scale'),
+           tooltip=_('How big the last copy of the line should be, in percent.') + " " + _('Used only for ripple stitch with a guide line.'),
+           type='float',
+           default=0.0,
+           select_items=[('stroke_method', 1)],
+           sort_index=14)
+    def scale_end(self):
+        return self.get_float_param('scale_end', 0.0)
+
+    @property
+    @param('rotate_ripples',
+           _('Rotate'),
+           tooltip=_('Rotate satin guided ripple stitches'),
+           type='boolean',
+           default=True,
+           select_items=[('stroke_method', 1)],
+           sort_index=15)
+    @cache
+    def rotate_ripples(self):
+        return self.get_boolean_param("rotate_ripples", True)
+
+    @property
+    @cache
+    def is_closed(self):
+        # returns true if the outline of a single line stroke is a closed shape
+        # (with a small tolerance)
+        lines = self.as_multi_line_string().geoms
+        if len(lines) == 1:
+            coords = lines[0].coords
+            return Point(*coords[0]).distance(Point(*coords[-1])) < 0.05
+        return False
 
     @property
     def paths(self):
@@ -306,6 +402,12 @@ class Stroke(EmbroideryElement):
 
         return StitchGroup(self.color, stitches)
 
+    def ripple_stitch(self):
+        return StitchGroup(
+            color=self.color,
+            tags=["ripple_stitch"],
+            stitches=ripple_stitch(self))
+
     def do_bean_repeats(self, stitches):
         return bean_stitch(stitches, self.bean_stitch_repeats)
 
@@ -314,29 +416,7 @@ class Stroke(EmbroideryElement):
 
         # ripple stitch
         if self.stroke_method == 1:
-            lines = self.as_multi_line_string()
-            points = []
-            if len(lines.geoms) > 1:
-                # if render_grid has a number use this, otherwise use running_stitch_length
-                length = self.render_grid or self.running_stitch_length
-                # use satin column points for satin like build ripple stitches
-                points = SatinColumn(self.node).plot_points_on_rails(length, 0)
-            point_target = self.get_ripple_target()
-            patch = StitchGroup(
-                color=self.color,
-                tags=["ripple_stitch"],
-                stitches=ripple_stitch(
-                    self.as_multi_line_string(),
-                    point_target,
-                    self.line_count,
-                    points,
-                    self.running_stitch_length,
-                    self.repeats,
-                    self.flip,
-                    self.skip_start,
-                    self.skip_end,
-                    self.render_grid,
-                    self.exponent))
+            patch = self.ripple_stitch()
             if patch:
                 if self.bean_stitch_repeats > 0:
                     patch.stitches = self.do_bean_repeats(patch.stitches)
@@ -361,6 +441,26 @@ class Stroke(EmbroideryElement):
 
         return patches
 
+    @cache
+    def get_guide_line(self):
+        guide_lines = get_marker_elements(self.node, "guide-line", False, True, True)
+        # No or empty guide line
+        # if there is a satin guide line, it will also be in stroke, so no need to check for satin here
+        if not guide_lines or not guide_lines['stroke']:
+            return None
+
+        # use the satin guide line if there is one, else use stroke
+        # ignore multiple guide lines
+        if len(guide_lines['satin']) >= 1:
+            return guide_lines['satin'][0]
+        return guide_lines['stroke'][0]
+
     def validation_warnings(self):
         if self.stroke_method == 1 and self.skip_start + self.skip_end >= self.line_count:
             yield IgnoreSkipValues(self.shape.centroid)
+
+        # guided fill warnings
+        if self.stroke_method == 1:
+            guide_lines = get_marker_elements(self.node, "guide-line", False, True, True)
+            if sum(len(x) for x in guide_lines.values()) > 1:
+                yield MultipleGuideLineWarning(self.shape.centroid)

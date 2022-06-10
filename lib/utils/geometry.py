@@ -125,6 +125,10 @@ class Point:
         self.x = x
         self.y = y
 
+    @classmethod
+    def from_shapely_point(cls, point):
+        return cls(point.x, point.y)
+
     def __json__(self):
         return vars(self)
 
@@ -155,11 +159,14 @@ class Point:
         else:
             raise ValueError("cannot multiply %s by %s" % (type(self), type(other)))
 
-    def __div__(self, other):
+    def __truediv__(self, other):
         if isinstance(other, (int, float)):
             return self * (1.0 / other)
         else:
             raise ValueError("cannot divide %s by %s" % (type(self), type(other)))
+
+    def __eq__(self, other):
+        return self.x == other.x and self.y == other.y
 
     def __repr__(self):
         return "%s(%s,%s)" % (type(self), self.x, self.y)
