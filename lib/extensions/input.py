@@ -4,7 +4,9 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 from lxml import etree
+
 from inkex import errormsg
+
 from ..i18n import _
 from ..stitch_plan import generate_stitch_plan
 

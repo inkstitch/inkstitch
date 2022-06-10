@@ -9,10 +9,10 @@ import tempfile
 from copy import deepcopy
 from zipfile import ZipFile
 
-from inkex import Boolean
 from lxml import etree
 
 import pyembroidery
+from inkex import Boolean
 
 from ..i18n import _
 from ..output import write_embroidery_file

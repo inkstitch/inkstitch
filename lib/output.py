@@ -4,8 +4,8 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 import sys
-import inkex
 
+import inkex
 import pyembroidery
 
 from .commands import global_command
