@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-06-07 02:15+0000\n"
-"PO-Revision-Date: 2022-06-07 02:17\n"
+"POT-Creation-Date: 2022-06-11 02:18+0000\n"
+"PO-Revision-Date: 2022-06-11 02:19\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-07 02:15+0000\n"
+"POT-Creation-Date: 2022-06-11 02:18+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -781,15 +781,15 @@ msgstr "La ligne-guide de cet objet n'est pas dans les limites de l'objet. La li
 msgid "* Move the guide line into the element"
 msgstr "* Déplacer la ligne-guide à l'intérieur de l'élément"
 
-#: lib/elements/fill_stitch.py:64
+#: lib/elements/fill_stitch.py:64 lib/elements/stroke.py:35
 msgid "Multiple Guide Lines"
 msgstr "Multiples lignes-guide"
 
-#: lib/elements/fill_stitch.py:65
+#: lib/elements/fill_stitch.py:65 lib/elements/stroke.py:36
 msgid "This object has multiple guide lines, but only the first one will be used."
 msgstr "Cet objet possède plusieurs lignes-guide, mais seule la première sera utilisée."
 
-#: lib/elements/fill_stitch.py:67
+#: lib/elements/fill_stitch.py:67 lib/elements/stroke.py:38
 msgid "* Remove all guide lines, except for one."
 msgstr "* Supprimer toutes les lignes-guide, sauf une."
 
@@ -1174,7 +1174,7 @@ msgstr "Colonne de satin personnalisée"
 msgid "\"E\" stitch"
 msgstr "Point « E »"
 
-#: lib/elements/satin_column.py:96 lib/elements/satin_column.py:204
+#: lib/elements/satin_column.py:96 lib/elements/satin_column.py:209
 msgid "Maximum stitch length"
 msgstr "Longueur maximale du point"
 
@@ -1182,7 +1182,7 @@ msgstr "Longueur maximale du point"
 msgid "Maximum stitch length for split stitches."
 msgstr "Longueur maximale du point pour couper les points."
 
-#: lib/elements/satin_column.py:108 lib/elements/stroke.py:180
+#: lib/elements/satin_column.py:108 lib/elements/stroke.py:116
 msgid "Zig-zag spacing (peak-to-peak)"
 msgstr "Espacement Zig-Zag (crête à crête)"
 
@@ -1224,35 +1224,40 @@ msgid "Center-walk underlay"
 msgstr "Sous-couche centrale"
 
 #: lib/elements/satin_column.py:157 lib/elements/satin_column.py:164
+#: lib/elements/satin_column.py:169
 msgid "Center-Walk Underlay"
 msgstr "Sous-couche centrale"
 
-#: lib/elements/satin_column.py:169
+#: lib/elements/satin_column.py:169 lib/elements/stroke.py:82
+msgid "Repeats"
+msgstr "Répétitions"
+
+#: lib/elements/satin_column.py:174
 msgid "Zig-zag underlay"
 msgstr "Sous-couche Zig-Zag"
 
-#: lib/elements/satin_column.py:169 lib/elements/satin_column.py:178
-#: lib/elements/satin_column.py:189 lib/elements/satin_column.py:207
+#: lib/elements/satin_column.py:174 lib/elements/satin_column.py:183
+#: lib/elements/satin_column.py:194 lib/elements/satin_column.py:212
 msgid "Zig-zag Underlay"
 msgstr "Sous-couche Zig-Zag"
 
-#: lib/elements/satin_column.py:175
+#: lib/elements/satin_column.py:180
 msgid "Zig-Zag spacing (peak-to-peak)"
 msgstr "Espacement Zig-Zag (crête à crête)"
 
-#: lib/elements/satin_column.py:176
+#: lib/elements/satin_column.py:181
 msgid "Distance between peaks of the zig-zags."
 msgstr "Distance entre les crêtes des zig-zags."
 
-#: lib/elements/satin_column.py:186
+#: lib/elements/satin_column.py:191
 msgid "Inset amount"
 msgstr "Montant du décalage"
 
-#: lib/elements/satin_column.py:187
+#: lib/elements/satin_column.py:192
 msgid "default: half of contour underlay inset"
 msgstr "par défaut: la moitié du décalage du contour de la sous-couche"
 
-#: lib/elements/satin_column.py:205
+#: lib/elements/satin_column.py:210
 msgid "Split stitch if distance of maximum stitch length is exceeded"
 msgstr "Découper le point en plusieurs si sa longueur dépasse la longueur maximale définie"
 
@@ -1265,118 +1270,174 @@ msgid "Skip values are ignored, because there was no line left to embroider."
 msgstr "Le nombre de lignes à sauter est ignoré, car il ne restait plus de lignes à broder."
 
 #: lib/elements/stroke.py:29
-msgid "* Reduce values of Skip first and last lines or"
-msgstr "* Réduit les valeurs du nombre de premières ou dernières lignes sautées"
+msgid "* Open the params dialog with this object selected"
+msgstr ""
 
 #: lib/elements/stroke.py:30
-msgid "* Increase number of lines accordinly in the params dialog."
-msgstr "* Augmente le nombre de lignes en fonction, dans le dialogue de paramètres."
+msgid "* Reduce Skip values or increase number of lines"
+msgstr ""
 
-#: lib/elements/stroke.py:35
+#: lib/elements/stroke.py:43
 msgid "Stroke"
 msgstr "Trait"
 
-#: lib/elements/stroke.py:38
+#: lib/elements/stroke.py:46
 msgid "Running stitch along paths"
 msgstr "Points droits le long des chemins"
 
-#: lib/elements/stroke.py:52 inx/inkstitch_break_apart.inx:17
+#: lib/elements/stroke.py:60 inx/inkstitch_break_apart.inx:17
 msgid "Method"
 msgstr "Méthode"
 
-#: lib/elements/stroke.py:56
+#: lib/elements/stroke.py:64
 msgid "Running Stitch"
 msgstr "Point Droit"
 
-#: lib/elements/stroke.py:56
+#: lib/elements/stroke.py:64
 msgid "Ripple"
 msgstr "Broderie ondulée"
 
-#: lib/elements/stroke.py:63
+#: lib/elements/stroke.py:71
 msgid "Manual stitch placement"
 msgstr "Placement manuel de points"
 
-#: lib/elements/stroke.py:64
+#: lib/elements/stroke.py:72
 msgid "Stitch every node in the path.  All other options are ignored."
 msgstr "Pique chaque nœud du chemin. Toutes les autres options sont ignorées."
 
-#: lib/elements/stroke.py:74
-msgid "Repeats"
-msgstr "Répétitions"
-
-#: lib/elements/stroke.py:75
+#: lib/elements/stroke.py:83
 msgid "Defines how many times to run down and back along the path."
 msgstr "Définit combien de fois broder en avant et en arrière le long du chemin."
 
-#: lib/elements/stroke.py:85
+#: lib/elements/stroke.py:93
 msgid "Bean stitch number of repeats"
 msgstr "Nombre de répétitions pour le point triple (bean stitch)"
 
-#: lib/elements/stroke.py:86
-msgid "Backtrack each stitch this many times.  A value of 1 would triple each stitch (forward, back, forward).  A value of 2 would quintuple each stitch, etc.  Only applies to running stitch."
-msgstr "Répéter chaque point plusieurs fois.  Une valeur de 1 triplerait chaque point (avant, arrière, avant).  Une valeur de 2 quintuplerait chaque point, etc..  S’applique uniquement aux points droits."
+#: lib/elements/stroke.py:94
+msgid "Backtrack each stitch this many times.  A value of 1 would triple each stitch (forward, back, forward).  A value of 2 would quintuple each stitch, etc."
+msgstr ""
 
-#: lib/elements/stroke.py:97
+#: lib/elements/stroke.py:105
 msgid "Running stitch length"
 msgstr "Longueur de point droit"
 
-#: lib/elements/stroke.py:98
+#: lib/elements/stroke.py:106
 msgid "Length of stitches in running stitch mode."
 msgstr "Longueur de points en mode points droits."
 
-#: lib/elements/stroke.py:108
-msgid "Number of lines"
-msgstr "Nombre de lignes"
-
-#: lib/elements/stroke.py:109
-msgid "Number of lines from start to finish"
-msgstr "Nombre de lignes du début jusqu'à la fin"
-
-#: lib/elements/stroke.py:120
-msgid "Skip first lines"
-msgstr "Sauter les premières lignes"
-
-#: lib/elements/stroke.py:121
-msgid "Skip this number of lines at the beginning."
-msgstr "Sauter ce nombre de lignes au début."
-
-#: lib/elements/stroke.py:132
-msgid "Skip last lines"
-msgstr "Sauter les dernières lignes"
-
-#: lib/elements/stroke.py:133
-msgid "Skip this number of lines at the end"
-msgstr "Sauter ce nombre de lignes à la fin."
-
-#: lib/elements/stroke.py:144
-msgid "Flip"
-msgstr "Intervertir"
-
-#: lib/elements/stroke.py:145
-msgid "Flip outer to inner"
-msgstr "Échanger extérieur en intérieur"
-
-#: lib/elements/stroke.py:156
-msgid "Grid distance"
-msgstr "Distance grille"
-
-#: lib/elements/stroke.py:157
-msgid "Render as grid. Works only with satin type ripple stitches."
-msgstr "Rendu en grille. Ne fonctionne qu'avec des broderies ondulées de type satin."
-
-#: lib/elements/stroke.py:168
-msgid "Line distance exponent"
-msgstr "Exposant de la distance entre les lignes"
-
-#: lib/elements/stroke.py:169
-msgid "Increse density towards one side."
-msgstr "Accroît la densité d'un côté."
-
-#: lib/elements/stroke.py:181
+#: lib/elements/stroke.py:117
 msgid "Length of stitches in zig-zag mode."
 msgstr "Longueur de points en mode zig-zag."
 
-#: lib/elements/stroke.py:252
+#: lib/elements/stroke.py:129
+msgid "Number of lines"
+msgstr "Nombre de lignes"
+
+#: lib/elements/stroke.py:130
+msgid "Number of lines from start to finish"
+msgstr "Nombre de lignes du début jusqu'à la fin"
+
+#: lib/elements/stroke.py:146
+msgid "Skip first lines"
+msgstr "Sauter les premières lignes"
+
+#: lib/elements/stroke.py:147
+msgid "Skip this number of lines at the beginning."
+msgstr "Sauter ce nombre de lignes au début."
+
+#: lib/elements/stroke.py:158
+msgid "Skip last lines"
+msgstr "Sauter les dernières lignes"
+
+#: lib/elements/stroke.py:159
+msgid "Skip this number of lines at the end"
+msgstr "Sauter ce nombre de lignes à la fin."
+
+#: lib/elements/stroke.py:182
+msgid "Line distance exponent"
+msgstr "Exposant de la distance entre les lignes"
+
+#: lib/elements/stroke.py:183
+msgid "Increase density towards one side."
+msgstr ""
+
+#: lib/elements/stroke.py:194
+msgid "Flip exponent"
+msgstr ""
+
+#: lib/elements/stroke.py:195
+msgid "Reverse exponent effect."
+msgstr ""
+
+#: lib/elements/stroke.py:206
+msgid "Reverse"
+msgstr ""
+
+#: lib/elements/stroke.py:207
+msgid "Flip start and end point"
+msgstr ""
+
+#: lib/elements/stroke.py:218
+msgid "Grid size"
+msgstr ""
+
+#: lib/elements/stroke.py:219
+msgid "Render as grid. Use with care and watch your stitch density."
+msgstr ""
+
+#: lib/elements/stroke.py:231
+msgid "Scale axis"
+msgstr ""
+
+#: lib/elements/stroke.py:232
+msgid "Scale axis for satin guided ripple stitches."
+msgstr ""
+
+#: lib/elements/stroke.py:236
+msgid "X Y"
+msgstr ""
+
+#: lib/elements/stroke.py:236
+msgid "X"
+msgstr ""
+
+#: lib/elements/stroke.py:236
+msgid "Y"
+msgstr ""
+
+#: lib/elements/stroke.py:236 print/templates/ui.html:172
+msgid "None"
+msgstr "Aucune"
+
+#: lib/elements/stroke.py:244
+msgid "Starting scale"
+msgstr ""
+
+#: lib/elements/stroke.py:245
+msgid "How big the first copy of the line should be, in percent."
+msgstr ""
+
+#: lib/elements/stroke.py:245 lib/elements/stroke.py:256
+msgid "Used only for ripple stitch with a guide line."
+msgstr ""
+
+#: lib/elements/stroke.py:255
+msgid "Ending scale"
+msgstr ""
+
+#: lib/elements/stroke.py:256
+msgid "How big the last copy of the line should be, in percent."
+msgstr ""
+
+#: lib/elements/stroke.py:266
+msgid "Rotate"
+msgstr ""
+
+#: lib/elements/stroke.py:267
+msgid "Rotate satin guided ripple stitches"
+msgstr ""
+
+#: lib/elements/stroke.py:348
 msgid "Legacy running stitch setting detected!\n\n"
 "It looks like you're using a stroke smaller than 0.5 units to indicate a running stitch, which is deprecated.  Instead, please set your stroke to be dashed to indicate running stitch.  Any kind of dash will work."
 msgstr "Détection d'un paramétrage de point droit obsolète !\n\n"
@@ -1961,26 +2022,26 @@ msgstr "Aucun d'élément brodable est sélectionné. Veuillez exécuter Extensi
 msgid "Auto-Route"
 msgstr "Agencement automatique"
 
-#: lib/stitches/auto_run.py:257
+#: lib/stitches/auto_run.py:261
 #, python-format
 msgid "AutoRun %d"
 msgstr "Agencement automatique %d"
 
-#: lib/stitches/auto_run.py:259
+#: lib/stitches/auto_run.py:263
 #, python-format
 msgid "AutoRun Underpath %d"
 msgstr "Chemin de dessous %d"
 
 #. Label for a satin column created by Auto-Route Satin Columns and Lettering
 #. extensions
-#: lib/stitches/auto_satin.py:516
+#: lib/stitches/auto_satin.py:517
 #, python-format
 msgid "AutoSatin %d"
 msgstr "Auto-remplissage satin %d"
 
 #. Label for running stitch (underpathing) created by Auto-Route Satin Columns
 #. amd Lettering extensions
-#: lib/stitches/auto_satin.py:519
+#: lib/stitches/auto_satin.py:521
 #, python-format
 msgid "AutoSatin Running Stitch %d"
 msgstr "Points droits pour auto-remplissage satin %d"
@@ -2370,10 +2431,6 @@ msgstr "* longueur du chemin"
 #: print/templates/ui.html:169
 msgid "Thread Palette"
 msgstr "Palette de fil"
-
-#: print/templates/ui.html:172
-msgid "None"
-msgstr "Aucune"
 
 #: print/templates/ui.html:188
 msgid "Changing the thread palette will cause thread names and catalog numbers to be recalculated based on the new palette.  Any changes you have made to color or thread names will be lost.  Are you sure?"
