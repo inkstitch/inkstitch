@@ -17,41 +17,41 @@ preview_image:
 
 
 ## Schriftzeichen
-iese Schrift enthÑlt folgende 47 Schriftzeichen:
+iese Schrift enth√§lt folgende 47 Schriftzeichen:
 	
 ?.:;,([{)]}&ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789
 
 Anmerkung: Diese Schriftzeichen :;,.(){}[] werden genutzt um die Rahmen zu speichern.
 
-## Ma·e
+## Ma√°e
 ### Sortefax XL Initials
-Bei einer Skalierung auf 100 % ist diese Schrift ungefÑhr ~ 150 mm (6 Zoll) gro·.
+Bei einer Skalierung auf 100 % ist diese Schrift ungef√§hr ~ 150 mm (6 Zoll) gro√°.
 Sie kann bis auf 200% (~ 300 mm, 12 Zoll) hochskaliert und bis zu 70% (~ 100 mm, 4 Zoll) herunterskaliert werden.
 ### Sortefax Medium Initials
-Bei einer Skalierung auf 100 % ist diese Schrift ungefÑhr ~ 90 mm (3.5 Zoll) gro·.
+Bei einer Skalierung auf 100 % ist diese Schrift ungef√§hr ~ 90 mm (3.5 Zoll) gro√°.
 Sie kann bis auf 200% (~ 180 mm, 7 Zoll) hochskaliert und bis zu 70% (~ 60 mm, 2.5 Zoll) herunterskaliert werden.
 
 ## Beschreibung
 
 ### Sortefax XL Initials
-Sortefax XL Initials ist dafÅr gedacht, einen Buchstaben nach dem anderen zu verwenden.
+Sortefax XL Initials ist daf√ºr gedacht, einen Buchstaben nach dem anderen zu verwenden.
 Um einen gerahmten Buchstaben zu erhalten, gibst du einfach den Buchstaben und einen beliebigen "Rahmen"-Buchstaben in das Beschriftungsdialogfenster ein (gleiche Zeile, kein Leerzeichen).
 
-Achtung, nicht alle Rahmen kînnen direkt mit allen Buchstaben verwendet werden, insbesondere nicht mit gro·en Buchstaben wie M oder W oder hohen Buchstaben wie J.
+Achtung, nicht alle Rahmen k√∂nnen direkt mit allen Buchstaben verwendet werden, insbesondere nicht mit gro√°en Buchstaben wie M oder W oder hohen Buchstaben wie J.
 
-NatÅrlich kannst du mit Inkscape den Rahmen ganz einfach neu positionieren oder die Grî·e Ñndern oder sogar einen Kreisrahmen in eine Ellipse fÅr einen hohen Buchstaben umwandeln.
+Nat√ºrlich kannst du mit Inkscape den Rahmen ganz einfach neu positionieren oder die Gr√∂√üe √§ndern oder sogar einen Kreisrahmen in eine Ellipse f√ºr einen hohen Buchstaben umwandeln.
 
 ### Sortefax Medium Initials
 Sortefax Medium Initials ist kleiner, aber auch einfacher.
 
-Es ist immer noch mîglich, Rahmen zu verwenden, aber die automatische Anordnung des Rahmens und des Buchstabens ist nicht so gut wie bei der XL-Schrift.
-Mit dieser Schriftart kannst du aber ganze Wîrter mit korrektem Kerning schreiben und nicht nur einzelne Buchstaben.
+Es ist immer noch m√∂glich, Rahmen zu verwenden, aber die automatische Anordnung des Rahmens und des Buchstabens ist nicht so gut wie bei der XL-Schrift.
+Mit dieser Schriftart kannst du aber ganze W√∂rter mit korrektem Kerning schreiben und nicht nur einzelne Buchstaben.
 
 
 
 ## Um auf die Rahmen zuzugreifen, benutze die entsprechenden Schriftzeichen:
 
-öbersetzt mit www.DeepL.com/Translator (kostenlose Version)
+√úbersetzt mit www.DeepL.com/Translator (kostenlose Version)
 
 
 Frame|Key

@@ -17,16 +17,18 @@ Watch the installation process for <i class="fab fa-apple"></i> [macOS](https://
 
 Download the latest release for your macOS version.
 
-<p><a href="{{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx.pkg" class="btn btn--info btn--large"><i class="fa fa-download " ></i> Download Ink/Stitch {{ site.github.latest_release.tag_name }} for macOS<br /><span style="color:lightblue;">Mojave / Catalina / Big Sur / Monterey</span></a></p>
+<p><a href="{{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx.pkg" class="btn btn--info btn--large"><i class="fa fa-download " ></i> Download Ink/Stitch {{ site.github.latest_release.tag_name }} for macOS<br><span style="color:lightblue;">Mojave / Catalina / Big Sur / Monterey</span></a></p>
+
 <p><a href="{{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-sierra-osx.pkg" class="btn btn--info btn--large"><i class="fa fa-download " ></i> Download Ink/Stitch {{ site.github.latest_release.tag_name }} for macOS<br><span style="color:lightblue;">El Capitan / Sierra / High Sierra</span></a></p>
 
 **Latest release:** [Ink/Stitch {{ site.github.latest_release.tag_name }} ({{ site.github.latest_release.published_at | date: "%Y-%m-%d"  }})](https://github.com/inkstitch/inkstitch/releases/latest)
 
 ## Installation
 
-**Important:** Ink/Stitch is an Inkscape extension. Download and install [Inkscape](https://inkscape.org/release/) Version 1.0.2 or higher before you install Ink/Stitch.
-Make sure, that you have **installed and run Inkscape** before installing Ink/Stitch. Otherwise the installation will fail.
-{: .notice--warning}
+Ink/Stitch is an Inkscape extension. Download and install [Inkscape](https://inkscape.org/release/) Version 1.0.2 or higher before you install Ink/Stitch.
+**Make sure, that you have <span style="text-decoration:underline;">installed and run</span> Inkscape <span style="text-decoration:underline;">before</span> installing Ink/Stitch**. Otherwise the installation will fail.<br><br>
+Please note, that Inkscape 1.2 will not work on **El Capitan** and **Sierra**. If you use these macOS versions, please install [Inkscape 1.1.2](https://inkscape.org/release/1.1.2/platforms/).
+{: .notice--warning .bold--warning }
 
 **Mojave - Monterey:** Click on the downloaded file to run the installer.
 

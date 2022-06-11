@@ -25,14 +25,13 @@ El Capitan - High Sierra: Ctrl+Click on the downloaded file and click on Open.
 
 Click on Continue.
 
-
-
 **Dernière version:** [Ink/Stitch {{ site.github.latest_release.tag_name }} ({{ site.github.latest_release.published_at | date: "%Y-%m-%d" }})](https://github.com/inkstitch/inkstitch/releases/latest)
 
 ## Installation
 
-**Important:** Ink/Stitch est une extension pour Inkscape. Téléchargez et installez  [Inkscape](https://inkscape.org/release/) Version 1.0.2 ou supérieure avant d'installer Ink/Stitch. Vérifiez que vous avez bien **installé et la lancé Inkscape** avant d'installer Ink/Stitch. Sinon l'installation va échouer.
-{: .notice--warning}
+Ink/Stitch est une extension pour Inkscape. Téléchargez et installez  [Inkscape](https://inkscape.org/release/) Version 1.0.2 ou supérieure avant d'installer Ink/Stitch. Vérifiez que vous avez bien **installé et la lancé Inkscape** avant d'installer Ink/Stitch. Sinon l'installation va échouer.<br><br>
+Please note, that Inkscape 1.2 will not work on **El Capitan** and **Sierra**. If you use these macOS versions, please install [Inkscape 1.1.2](https://inkscape.org/release/1.1.2/platforms/).
+{: .notice--warning .bold--warning }
 
 **Mojave - Monterey:** Lancez l'installateur en cliquant sur le fichier que vous avez téléchargé.
 
