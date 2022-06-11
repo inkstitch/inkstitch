@@ -9,10 +9,10 @@ preview_image:
 ---
 ![glacial_tiny](/assets/images/fonts/glacial_tiny_60_AGS.jpg)
 
-This is part of an upcoming Ink/Stitch version and not available in Ink/Stitch v2.1.2
-## Glyphs
+Dies ist Teil einer kommenden Ink/Stitch-Version und nicht in Ink/Stitch v2.1.2 verfügbar.
+## Schriftzeichen
 
-This font contains 159 glyphs:
+Diese Schrift enthält folgende 159 Schriftzeichen:
 	
 !"»Øø#$€%@
 '’()*+,-./
@@ -31,31 +31,28 @@ z~ÀÁÂÃÄÅÆŒ
 òóôõöúùûüč
 ČřŘŠšŽžÐÞ
 
-## Remark 
-This font allows  multiline text to be embroidered alternatively from left to right and from right to left.
+## Anmerkung
 
+Diese Schrift kann mit der [Option](https://inkstitch.org/de/docs/lettering/#optionen) 'Sticke Textzeilen vor und zurück" verwendet werden: eine mehrzeilige Stickerei kann von links nach rechts oder von rechts nach links gestickt werden.
 
-## Warning
+## Maße
 
-This font is very very tiny.
+Bei einer Skalierung auf 100 % ist diese Schrift ungefähr ~ 7 mm (1/4 Zoll) hoch.
 
-Such a tinyness is only possible because it is meant to be used with both very thin needles (USA size 8, EUr size 60) and very thin thread (60wt).
-Do not use the regular 40wt embroidery thread.
-
-If you do not follow these recommendations, you will probably have lots of embroidering problems.
-
-## Dimensions
-
-At 100%, this font is approximatively 7 mm (1/4 inch) high.
-
-It can be scaled up to 140% (approx 11 mm, 0.4 inch) or scaled down to 60% (approx 4.5 mm, 1/6  inch).
+Sie kann bis auf 140% (~ 11 mm, 0.4 Zoll) hochskaliert und bis zu 60% (~ 4.5 mm, 1/6  Zoll) herunterskaliert werden.
 
 
 ![Dimensions Glacialtiny](/assets/images/fonts/Sizing/glacialsizing.jpg)
+Bitte nicht versuchen die Schrift kleiner zu Sticken, dass kann zu Nadelbrüchen, Fadennestern, hässlichem Stickbild und anderen Unannehmlichkeiten führen. 
+
+Espresso tiny (ist Teil einer kommenden Ink/Stitch-Version und in Ink/Stitch v2.1.2 nicht verfügbar) ist eine Variante dieser Schriftart mit unterschiedlichen Stickeinstellungen. Zugausgleich, Dichte und Unterlage sind unterschiedlich, um eine Skalierung zwischen 55% (12 mm, 0.4 Zoll) und 25% (5mm, 1/5 Zoll) zu ermöglichen.
+
+Deshalb müssen Sie im Dialogfenster des Text-Moduls für die Nutzung von Espresso tiny eine Skalierung zwischen 25 und 55% wählen.
+
+Im Gegensatz zu Espresso KOR **MUSS** diese verkleinerte Schrift mit einem dünneren Faden und einer dünneren Nadel als üblich gestickt werden. Es **MUSS** eine Nadel der Größe 8 (USA), 60(EUR) und ein Garn 60WT verwendet werden.
 
 
-
-## In real life
+## Gestickte Beispiele
 
 On a cushion, a T shirt and  in conjunction with Grand Hotel Marif on an apron 
 

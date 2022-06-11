@@ -8,20 +8,20 @@ preview_image:
     height: 31
 ---
 ![Magnolia](/assets/images/fonts/magnolia_KOR.jpg)
-## Glyphs
+## Schriftzeichen
 
-This font contains 109 glyphs:
+Diese Schrift enthält folgende 109 Schriftzeichen:
 
 !"%@'’()+,-./0123456789:;<=>?@\_{}°×àâäæçèéêëîïôöùûüÄÖÜßœabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
 
-## Dimensions
+## Maße
 
-At 100%, this font is approximatively 22 mm (0.9 inch) tall.
+Bei einer Skalierung auf 100 % ist diese Schrift ungefähr ~ 22 mm (0.9 Zoll) groß.
 
-It can be scaled up to 120% (approx. 33 mm, 1.1  inches) or scaled down to  80% (approx.  20 mm, 0.8 inch).
+Sie kann bis auf 120% (~33 mm, 1.1  Zoll) hochskaliert und bis zu  80% (~20 mm, 0.8 Zoll) herunterskaliert werden.
 
 
-## In real life
+## Gestickte Beispiele
 
 {% include folder-galleries path="fonts/magnolia_KOR/" %}
 

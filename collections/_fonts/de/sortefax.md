@@ -16,40 +16,42 @@ preview_image:
 {% include upcoming_release.html %}
 
 
-## Glyphes
-This fonts contains  47 glyphs:
+## Schriftzeichen
+iese Schrift enthÑlt folgende 47 Schriftzeichen:
 	
 ?.:;,([{)]}&ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789
 
-Remark: :;,.(){}[]  are used to store frames.
+Anmerkung: Diese Schriftzeichen :;,.(){}[] werden genutzt um die Rahmen zu speichern.
 
-## Dimensions
+## Ma·e
 ### Sortefax XL Initials
-At 100%, this font is approximatively 150 mm (6 inches) tall.
-It can been scaled up to 200% (approx 300 mm, 12 inches) or down to 70% (approx 100 mm, 4 inches).
+Bei einer Skalierung auf 100 % ist diese Schrift ungefÑhr ~ 150 mm (6 Zoll) gro·.
+Sie kann bis auf 200% (~ 300 mm, 12 Zoll) hochskaliert und bis zu 70% (~ 100 mm, 4 Zoll) herunterskaliert werden.
 ### Sortefax Medium Initials
-At 100%, this font is approximatively 90 mm (3.5 inches) tall.
-It can be scaled up to 200% (approx 180 mm, 7 inches) or down to 70% (approx 60 mm, 2.5 inches).
+Bei einer Skalierung auf 100 % ist diese Schrift ungefÑhr ~ 90 mm (3.5 Zoll) gro·.
+Sie kann bis auf 200% (~ 180 mm, 7 Zoll) hochskaliert und bis zu 70% (~ 60 mm, 2.5 Zoll) herunterskaliert werden.
 
-## Description
+## Beschreibung
 
 ### Sortefax XL Initials
-Sortefax XL Initials is meant to be used one letter at a time.
-To get a framed letter, simply type the letter and any "frame" letter in the lettering dialog window (same line, no space).
+Sortefax XL Initials ist dafÅr gedacht, einen Buchstaben nach dem anderen zu verwenden.
+Um einen gerahmten Buchstaben zu erhalten, gibst du einfach den Buchstaben und einen beliebigen "Rahmen"-Buchstaben in das Beschriftungsdialogfenster ein (gleiche Zeile, kein Leerzeichen).
 
-Beware, not all frames can directly be used with all letters, in particular large letters such as M or W, or tall letters such as J.
+Achtung, nicht alle Rahmen kînnen direkt mit allen Buchstaben verwendet werden, insbesondere nicht mit gro·en Buchstaben wie M oder W oder hohen Buchstaben wie J.
 
-Of course, using Inkscape,  you may easily reposition the frame or resize it or even transform a circle frame  into an ellipse for a tall letter.
+NatÅrlich kannst du mit Inkscape den Rahmen ganz einfach neu positionieren oder die Grî·e Ñndern oder sogar einen Kreisrahmen in eine Ellipse fÅr einen hohen Buchstaben umwandeln.
 
 ### Sortefax Medium Initials
-Sortefax M√©dium Initials is  smaller but  also simplier.
+Sortefax Medium Initials ist kleiner, aber auch einfacher.
 
-It is still possible to use frames, but the arranging of the frame and the letter is  not as good as for the XL font.
-But this font may be used to write whole words with a correct kerning and not only single letters.
+Es ist immer noch mîglich, Rahmen zu verwenden, aber die automatische Anordnung des Rahmens und des Buchstabens ist nicht so gut wie bei der XL-Schrift.
+Mit dieser Schriftart kannst du aber ganze Wîrter mit korrektem Kerning schreiben und nicht nur einzelne Buchstaben.
 
 
 
-## To access the frames, use the corresponding keys:
+## Um auf die Rahmen zuzugreifen, benutze die entsprechenden Schriftzeichen:
+
+öbersetzt mit www.DeepL.com/Translator (kostenlose Version)
 
 
 Frame|Key
@@ -65,7 +67,7 @@ Frame|Key
 ![DeuxPoints](/assets/images/fonts/sortefax/deuxpoints.png)|<key>:</key>
 ![PointVirgule](/assets/images/fonts/sortefax/pointvirgule.png)|<key>;</key>
 
-## In real life 
+## Gestickte Beispiele 
 
 {% include folder-galleries path="fonts/sortefax/" %}
 

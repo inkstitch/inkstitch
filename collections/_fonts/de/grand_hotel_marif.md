@@ -19,11 +19,11 @@ preview_image:
 {% include upcoming_release.html %}
 
 
-This is part of an upcoming Ink/Stitch version and not available in Ink/Stitch v2.1.2
+Dies ist Teil einer kommenden Ink/Stitch-Version und nicht in Ink/Stitch v2.1.2 verfügbar.
 
-## Glyphs
+## Schriftzeichen
 
-This font contains  132 Glyphs:
+Diese Schrift enthält folgende  132 Schriftzeichen:
 !?"''()+,-
 .012345678
 9:;=?ABCDE
@@ -38,26 +38,24 @@ tuvwxyz«»À
 ëìíîïñôõöù
 úûüĨĩĽľŒœŨ
 ũ’
-## Dimensions:
+## Maße:
 
-At 100%, this font is roughtly 35 mm high.
+Bei einer Skalierung auf 100 % ist diese Schrift ungefähr roughtly 35 mm high.
 
-It may be scaled up to 140% (48 mm)  or scaled down to  60% .
+It may be scaled up to 140% (48 mm)  hochskaliert und bis zu  60%  herunterskaliert werden.
 
 ![Dimensions Grand Hotel](/assets/images/fonts/Sizing/grandhotelsizing.jpg)
 
-Don't try to scale it further down. 
+Bitte nicht versuchen die Schrift kleiner zu Sticken, dass kann zu Nadelbrüchen, Fadennestern, hässlichem Stickbild und anderen Unannehmlichkeiten führen. 
 
-Grand Hotell small  is a variation of this font with different embroidery settings. Pull compensation, density and underlays are different to allow to scale down between 55% (18mm, 2/3 inch) and 25% (9mm ,1/3 inch). 
+Grand Hotel small  (ist Teil einer kommenden Ink/Stitch-Version und in Ink/Stitch v2.1.2 nicht verfügbar) ist eine Variante dieser Schriftart mit unterschiedlichen Stickeinstellungen. Zugausgleich, Dichte und Unterlage sind unterschiedlich, um eine Skalierung zwischen 55% (18 mm, 2/3 Zoll) und 25% (9mm, 1/3 Zoll) zu ermöglichen.
 
+Deshalb muss man im Dialogfenster des Text-Moduls für die Nutzung von Grand Hotel small eine Skalierung zwischen 25 und 55% wählen.
 
-That's why in the lettering dialog window, if using Grand Hotel small, you will have to pick up a scale between 25 and 55%. 
+Im Gegensatz zu Grand Hotel Marif, **MUSS** diese verkleinerte Schrift mit einem dünneren Faden und einer dünneren Nadel als üblich gestickt werden. Es **MUSS** eine Nadel der Größe 8 (USA), 60(EUR) und ein Garn 60WT verwendet werden.
 
-Contrarly to Grand Hotel Matif, Grand Hotel small font **MUST** be embroidered with thread and needle smaller than usual.
-A USA 8 (EUR 60) size needle, and 60WT thread **MUST** be used.
-
-## In real life
-From 25% on the T shirt to full size on the apron and the label
+## Gestickte Beispiele
+Von 25% auf dem T-Shirt zu voller Größe auf der Schürze und dem Label
 
 {% include folder-galleries path="fonts/grand_hotel_marif/" %}
 

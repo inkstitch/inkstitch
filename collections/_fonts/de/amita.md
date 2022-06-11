@@ -45,7 +45,7 @@ Die Schrift Amitaclo small (Diese Schrift wird in einer zukünftigen Version von
 
 Wenn Sie Amitaclo small wählen, werden Sie im Dialogfenster für die Beschriftung aufgefordert, eine Größenänderung zwischen 25 und 55 % der ursprünglichen Amitaclo-Größe anzugeben, also von Buchstaben mit einer Höhe von etwa 30 mm auf Buchstaben mit einer Höhe zwischen 7 und 16 mm.
 
-Im Gegensatz zu Amitaclo MUSS diese verkleinerte Schrift mit einem dünneren Faden und einer dünneren Nadel als üblich gestickt werden. Es MUSS eine Nadel der Größe 8 (USA), 60(EUR) und ein Garn 60WT verwendet werden.
+Im Gegensatz zu Amitaclo **MUSS** diese verkleinerte Schrift mit einem dünneren Faden und einer dünneren Nadel als üblich gestickt werden. Es **MUSS** eine Nadel der Größe 8 (USA), 60(EUR) und ein Garn 60WT verwendet werden.
 
 ## Gestickte Beispiele
 

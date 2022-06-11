@@ -9,7 +9,6 @@ preview_image:
 ---
 ![Baumans](/assets/images/fonts/baumans_fi.jpg)
 
-## Glyphs
 ## Schriftzeichen
 
 Diese Schrift enthält 102 Schriftzeichen:

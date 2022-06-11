@@ -9,25 +9,25 @@ preview_image:
 ---
 ![MarcellusSCFI](/assets/images/fonts/marcellus_sc_fi.jpg)
 
-# Glyphes
+# Schriftzeichen
 
-This font contains 109 glyphs:
+Diese Schrift enthält folgende 109 Schriftzeichen:
 	
 !@'’(),-./0123456789:;=?@ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz¡¿ÄÆÈÖÜàáâäæçèéêëìíîïñòóôöùúûüŒœ
 
-Note that  lower cases are actually small caps.
+Beachte, dass die Kleinbuchstaben eigentlich Kapitälchen sind.
 
-## Dimensions
+## Maße
 
-At 100%, this font is approximatively 30 mm (1 1/4 inch) high.
+Bei einer Skalierung auf 100 % ist diese Schrift ungefähr ~ 30 mm (1 1/4 Zoll) groß.
 
-It can be scaled up to 200% (approx. 40 mm, 2.5 inches) or scaled down to 70% (approx. 21 mm, 0.8 inch).
+Sie kann bis auf 200% (~40 mm, 2.5 Zoll) hochskaliert und bis zu 70% (~21 mm, 0.8 Zoll) herunterskaliert werden..
 
-The embroidering parameters allow you to scale up further, but then too long stitches are avoided by spliting the satin stitches you may or not like the effect.
+Durch die verwendeten Stickparameter kannst du die Schrift auch weiter hochskalieren, aber dann entstehen zu lange Satinstiche (>7mm). Das muss dann über die Option 'maximale Stichlänge' im Satinsäule Tab reguliert werden. Vielleicht gefällt dir der Effekt. 
 
 
 
-## In real life
+## Gestickte Beispiele
 
 
 {% include folder-galleries path="fonts/marcellus/" %}

@@ -16,19 +16,19 @@ preview_image:
 
 
 
-## Glyphs
+## Schriftzeichen
 
-Both fonts  contains  the 89 glyphs :
+Both fonts  contains  the 89 Schriftzeichen :
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@<>:,'"“”.+-=()_/�#ÄÖÜäößü
 
-## Dimensions
+## Maße
 
 ### Ink/Stitch Small
-At 100%, Ink/Stitch Small is about  6 mm (1/4 inch) high.
-It can be scaled up to 300%  (approx 18 mm, 3/4 inch) but should not be scaled down
+At 100%, Ink/Stitch Small is about  6 mm (1/4 Zoll) groß.
+Sie kann bis auf 300%  (~ 18 mm, 3/4 Zoll) but should not be scaled down
 ### Ink/Stitch Medium
-At 100%, Ink/Stitch Medium is about  19 mm (3/4 inch) high.
-It can be scaled up to 150%  (approx 29 mm, 1 1/8 inch) and downn to 75% (approx. 14 mm, 1/2 inch)
+At 100%, Ink/Stitch Medium is about  19 mm (3/4 Zoll) groß.
+Sie kann bis auf 150%  (~ 29 mm, 1 1/8 Zoll) and downn to 75% (~14 mm, 1/2 Zoll)
 
 ## Remark
 
@@ -36,7 +36,7 @@ Both fonts are reversible : a multi line embroidery  may be  embroidered in alte
 
 
 
-## In real life
+## Gestickte Beispiele
 
 {% include folder-galleries path="fonts/inkstitch/" %}
 

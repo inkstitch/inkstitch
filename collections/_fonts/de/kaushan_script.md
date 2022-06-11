@@ -10,9 +10,9 @@ preview_image:
 ![KaushanScript](/assets/images/fonts/kaushan_script_MAM.jpg)
 
 
-## Glyphs
+## Schriftzeichen
 
-This font contains 62 glyphs:
+Diese Schrift enthält folgende 62 Schriftzeichen:
 
 
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz
@@ -22,14 +22,14 @@ This font contains 62 glyphs:
 
 
 
-## Dimensions
+## Maße
 
-At 100%, this font is approximatively 30 mm (1.25 inch) high.
+Bei einer Skalierung auf 100 % ist diese Schrift ungefähr ~ 30 mm (1.25 Zoll) groß.
 
-It can be scaled up to 200% (approx. 60 mm, 2.5 inches) or scaled down to  80% (approx.  24 mm, 1 inch).
+Sie kann bis auf 200% (~60 mm, 2.5 Zoll) hochskaliert und bis zu  80% (~24 mm, 1 Zoll) herunterskaliert werden.
 
 
-## In real life
+## Gestickte Beispiele
 
 Here the date is embroidered with Kaushan Script, with  Cherry for Ink/Stitch and Cherry for Kaalleen as merry companions.
 

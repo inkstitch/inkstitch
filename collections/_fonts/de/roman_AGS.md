@@ -14,21 +14,21 @@ preview_image:
 ![Roman AGS](/assets/images/fonts/roman_AGS.jpg)
 ![Roman AGS_bicolor](/assets/images/fonts/roman_AGS_bicolor.jpg)
 
-## Glyphs
+## Schriftzeichen
 ### Roman AGS 
-This font contains 102 glyphs :	
+Diese Schrift enthält folgende 102 Schriftzeichen :	
 !"@'()+,-./0123456789:;?@ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzÄÆÖÜßàáâäæçèéêëîïôöùûüŒœ
 
 ### Roman AGS Bicolor
-This font contains 31 glyphs :		
+Diese Schrift enthält folgende 31 Schriftzeichen :		
 ABCDEFGHIJKLMNOPQRSTUVWXYZÄÆÖÜŒ
 
-## Dimensions
-At 100%, these fonts are approximatively  28 mm (1 inch) tall .
-They may be scaled up to 130% (approx. 37 mm, 1.5 inches) or down to 80% (approx.  22 mm, 0.8 inch).
+## Maße
+Bei einer Skalierung auf 100 % sind diese Schriften ungefähr 28 mm (1 Zoll) groß.
+Sie können bis auf 130% (~37 mm, 1.5 Zoll) hochskaliert und bis zu 80% (~22 mm, 0.8 Zoll) herunterskaliert werden.
 
 
-## In real life
+## Gestickte Beispiele
 {% include folder-galleries path="fonts/roman_AGS/" %}
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/roman_ags_bicolor/LICENSE)

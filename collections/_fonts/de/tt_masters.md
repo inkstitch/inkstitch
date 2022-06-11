@@ -9,25 +9,24 @@ preview_image:
 ---
 ![TT Masters](/assets/images/fonts/tt_masters.jpg)
 
-## Glyphes
+## Schriftzeichen
 
-This font contains 103 glyphs :
+Diese Schrift enthält folgende 103 Schriftzeichen :
 
 1234567890§!+"^*-:.;,|<>/}][{€$@=()@%'AaSsDdFfGgHhJjKkLlÖöÄäQqWwEeRrTtYyUuIiOoPpZzXxCcVvBbNnMm?_‰~©«»±°®´Üü
 
-## Dimensions
+## Maße
 
-At 100%, this font is approximatively 20 mm (approx 0.8 inch) tall.
+Bei einer Skalierung auf 100 % ist diese Schrift ungefähr ~ 20 mm (~ 0.8 Zoll) groß.
 
-It may be scaled up to  300% (approx 60 mm 2.5 inches ) but should not be scaled down.
+Sie kann bis auf 300% (~ 60 mm 2.5 Zoll ) hochskaliert  werden, aber nicht herunterskaliert.
 
-## Remark
-This font use Auto Route Satin.
-It is possible to stitch lines of text back and forth.
-It is possible to add trim commands
+## Anmerkung
+
+Diese Schrift kann mit der [Option](https://inkstitch.org/de/docs/lettering/#optionen) 'Sticke Textzeilen vor und zurück" verwendet werden: eine mehrzeilige Stickerei kann von links nach rechts, rechts nach links usw. gestickt werden. 
 
 
-## In real life 
+## Gestickte Beispiele 
 {% include folder-galleries path="fonts/TT_masters/" %}
 
 

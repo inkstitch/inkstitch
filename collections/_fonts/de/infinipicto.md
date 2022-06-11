@@ -9,29 +9,29 @@ preview_image:
 ---
 ![InfiniPicto](/assets/images/fonts/infinipicto.png)
 
-## Glyphs
+## Schriftzeichen
 
-This font contains the 26 glyphs: 
+Diese Schrift enthält folgende the 26 Schriftzeichen: 
 
 	ABCDEFGHIJKLMNOPQRSTUVWXYZ
 
 
 ## Description
-InfiniPicto is a fun font of size approximatively 70 mm containing only the 26 A-Z glyph. Each letter is a pictogram of an object whose name begins with that very letter..... in French
+InfiniPicto is a fun font of size ~ 70 mm containing only the 26 A-Z glyph. Each letter is a pictogram of an object whose name begins with that very letter..... in French
 Some will work in English :B is for Boat as well as for Bateau, C is for Crab, but some won't A is for "Arrosoir" but  not  for Watering ....
 
 ![Sample ](/assets/images/fonts/infinipicto3.jpg)
 
-## Dimensions
-At 100%, this font is approximatively  70 mm tall (2.5 inches).
+## Maße
+Bei einer Skalierung auf 100 % ist diese Schrift ungefähr ~ 70 mm tall (2.5 Zoll).
 
-it may be scaled up to 200% (env 140 mm, 6 inches) or scaled down to 70% (env 50 mm, 2 inches).
+it may be scaled up to 200% (env 140 mm, 6 Zoll) hochskaliert und bis zu 70% (env 50 mm, 2 Zoll) herunterskaliert werden.
 
 ## Color sorting
 
 Beware, from the diversity of the drawings, no guarantee that colors appear in the same order in all letters, be careful if you do sort.
 
-## In real life
+## Gestickte Beispiele
 
 InfiniPicto used on a T shirt :
 

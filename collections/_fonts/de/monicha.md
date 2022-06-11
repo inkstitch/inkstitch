@@ -13,8 +13,8 @@ preview_image:
 
 This font will be part of next Ink/Stitch version and is not yet available in Ink/Stitch v2.1.2.
 
-## Glyphs 
-Monicha contains 195 glyphs :
+## Schriftzeichen 
+Monicha contains 195 Schriftzeichen :
 	
 !#%@'(’)+,-
 ./01234567
@@ -38,11 +38,11 @@ z§«±»¿ÀÁÂÃ
 ⓛⓞⓣⓨ
 
 
-## Dimensions
+## Maße
 
-At 100%, this font is approximatively  28 mm (1 inch) high. 
+Bei einer Skalierung auf 100 % ist diese Schrift ungefähr ~ 28 mm (1 Zoll) groß. 
 
-It can be scaled up to  150% (approx 42 mm, 1.5 inch) but can not be scaled down
+Sie kann bis auf  150% (~ 42 mm, 1.5 Zoll) hochskaliert werden, aber nicht herunterskaliert.
 .
 ## Description
 
@@ -52,7 +52,7 @@ For instance, these are different ways to write the firstname Sasha.
 
 ![monicha7](/assets/images/fonts/monicha7.jpg)
 
-In addition to the "usual" european  character set, Monicha contains 50 alternative swash lower case letters hidden in the last glyphs of the list
+In addition to the "usual" european  character set, Monicha contains 50 alternative swash lower case letters hidden in the last Schriftzeichen of the list
 
 ### The parentheses
 
@@ -170,7 +170,7 @@ To access use this code:<br>
 
 </details>
 	
-## In real life
+## Gestickte Beispiele
 
 {% include folder-galleries path="fonts/monicha/" %}
 

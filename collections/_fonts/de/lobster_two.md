@@ -10,10 +10,10 @@ preview_image:
 ## Bold Italic
 
 ![Lobster AGS](/assets/images/fonts/lobster_AGS.jpg)
-## Glyphs
+## Schriftzeichen
 
 
-This font contains 97 glyphs:
+Diese Schrift enthält folgende 97 Schriftzeichen:
 
 
 0123456789
@@ -29,14 +29,14 @@ tuûüùvwxyz
 
 
 
-## Dimensions
+## Maße
 
-At 100%, this font is approximatively 22 mm (0.9 inch) high.
+Bei einer Skalierung auf 100 % ist diese Schrift ungefähr ~ 22 mm (0.9 Zoll) groß.
 
-It can be scaled up to 150% (approx. 33 mm, 1 1/4 inches) or scaled down to  80% (approx.  20 mm, 0.8 inch).
+Sie kann bis auf 150% (~33 mm, 1 1/4 Zoll) hochskaliert und bis zu  80% (~20 mm, 0.8 Zoll) herunterskaliert werden.
 
 
-## In real life
+## Gestickte Beispiele
 
 {% include folder-galleries path="fonts/lobster_ags/" %}
 

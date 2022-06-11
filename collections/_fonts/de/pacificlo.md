@@ -13,8 +13,8 @@ preview_image:
 
 ![Pacificlo tiny](/assets/images/fonts/pacificlo_tiny.jpg)
 
-## Glyphs
-Pacificlo contains 120 glyphs :
+## Schriftzeichen
+Pacificlo contains 120 Schriftzeichen :
 
 AÆBCDEÈFGH
 IJKLMNÑOÔÖ
@@ -29,26 +29,23 @@ klmnñoóôöò
 ·:,!¡.?¿"'
 ';/()-+=@&
 
-## Dimensions
+## Maße
 
-At 100%, this font is approximatively 20 mm (0.8 inch).
+Bei einer Skalierung auf 100 % ist diese Schrift ungefähr ~ 20 mm (0.8 Zoll).
 
-It can be scaled  up to 200% (approx 40 mm, 1.5 inch) or scaled down to 60% (approx  16mm, 0.6 inches).
+Sie kann bis auf 200% (~ 40 mm, 1.5 Zoll) hochskaliert und bis zu 60% (~  16mm, 0.6 Zoll) herunterskaliert werden.
 
 ![Dimensions Pacificlo](/assets/images/fonts/Sizing/pacificlosizing.jpg)
 
-Don't try to scale it further down.
+Bitte nicht versuchen die Schrift kleiner zu Sticken, dass kann zu Nadelbrüchen, Fadennestern, hässlichem Stickbild und anderen Unannehmlichkeiten führen. 
 
-Pacificlo tiny  (it is part of an upcoming Ink/Stitch version and not available in Ink/Stitch v2.1.2) is a variation of this font with different embroidery settings. Pull compensation, density and underlays are different to allow to scale down between 55% (11 mm, 0.4 inch) and 25% (5mm ,1/5 inch). 
+Pacificlo tiny (ist Teil einer kommenden Ink/Stitch-Version und in Ink/Stitch v2.1.2 nicht verfügbar) ist eine Variante dieser Schriftart mit unterschiedlichen Stickeinstellungen. Zugausgleich, Dichte und Unterlage sind unterschiedlich, um eine Skalierung zwischen 55% (11 mm, 0.4 Zoll) und 25% (5mm, 1/5 Zoll) zu ermöglichen.
 
-That's why in the lettering dialog window, if using Pacificlo tiny, you will have to pick up a scale between 25 and 55%. 
+Deshalb müssen Sie im Dialogfenster des Text-Moduls für die Nutzung von Pacificlo tiny eine Skalierung zwischen 25 und 55% wählen.
 
-Contrarily to Pacificlo, Pacificlo tiny font **MUST** be embroidered with thread and needle smaller than usual.
-A USA 8 (EUR 60) size needle, and 60WT thread **MUST** be used.
+Im Gegensatz zu Pacificlo KOR **MUSS** diese verkleinerte Schrift mit einem dünneren Faden und einer dünneren Nadel als üblich gestickt werden. Es **MUSS** eine Nadel der Größe 8 (USA), 60(EUR) und ein Garn 60WT verwendet werden.
 
-
-
-## In real life
+## Gestickte Beispiele
 
 {% include folder-galleries path="fonts/pacificlo/" %}
 

@@ -10,22 +10,21 @@ preview_image:
 ![TT Directors](/assets/images/fonts/tt_directors.jpg)
 
 
-## Glyphes
+## Schriftzeichen
 
-This fontcontains 103 glyphs :
+This fontcontains 103 Schriftzeichen :
 
 QqWwEeRrTtYyUuIiOoPpAaSsDdFfGgHhJjKkLlÖöÄäZzXxCcVvBbNnMmÜü|<>§!"#%@/()=?$€{[]}\,;.:-_1234567890+*`´'^@
 
-## Dimensions
+## Maße
 
-At 100%, this font is approximatively 20 mm (approx 0.8 inch) tall.
+Bei einer Skalierung auf 100 % ist diese Schrift ungefähr ~ 20 mm (~ 0.8 Zoll) groß.
 
-It may be scaled up to  500% (approx 100 mm 4 inch ) but should not be scaled down.
+Sie kann bis auf 500% (~ 100 mm 4 Zoll ) hochskaliert  werden, aber nicht herunterskaliert.
 
-## Remark
-This font use Auto Route Satin.
-It is possible to stitch lines of text back and forth.
-It is possible to add trim commands
+## Anmerkung
+
+Diese Schrift kann mit der [Option](https://inkstitch.org/de/docs/lettering/#optionen) 'Sticke Textzeilen vor und zurück" verwendet werden: eine mehrzeilige Stickerei kann von links nach rechts, rechts nach links usw. gestickt werden. 
 
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/tt_directors/LICENSE)

@@ -10,21 +10,21 @@ preview_image:
 ![FoldInkstitch](/assets/images/fonts/fold_inkstitch.jpg)
 
 
-## Glyphs
-This font contains 40 glyphs
+## Schriftzeichen
+Diese Schrift enthält folgende 40 Schriftzeichen
 
 !'01234567
 89?ABCDEFG
 HIJKLMNOPQ
 RSTUVWXYZ-
 
-## Dimensions
+## Maße
 
-At 100%, this font is approximatively  63 mm (2.5 inches).
+Bei einer Skalierung auf 100 % ist diese Schrift ungefähr ~ 63 mm (2.5 Zoll).
 
-It can be scaled up to 200% (approx 125 mm 5 inches) or scaled down  to 80% (appox 50 mm 2 inches).
+Sie kann bis auf 200% (~ 125 mm 5 Zoll) hochskaliert werden, und bis zu 80% (~50 mm 2 Zoll) herunterskaliert werden.
 
-## In real life
+## Gestickte Beispiele
 
 {% include folder-galleries path="fonts/fold_inkstitch/" %}
 

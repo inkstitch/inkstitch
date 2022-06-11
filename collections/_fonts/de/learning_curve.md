@@ -11,9 +11,9 @@ preview_image:
 
 
 
-## Glyphs
+## Schriftzeichen
 
-Learning curve contains 101 glyphs:
+Learning curve contains 101 Schriftzeichen:
 	
 üûùôïîëêéè
 çâàßÎÊÉÈÇÀ
@@ -26,11 +26,11 @@ DCBA@?>=<9
 876543210/
 .-,+)’('@%!
 
-## Dimensions
-Used at 100%, this font is approximatively  18mm  (0.7 in).
-It can be scaled up to 200% (approx 36 mm, 1.5 inches) or scaled down to  90% (approx 16 mm, 2/3 inch).
+## Maße
+Used Bei einer Skalierung auf 100 % ist diese Schrift ungefähr ~ 18mm  (0.7 in).
+Sie kann bis auf 200% (~ 36 mm, 1.5 Zoll) hochskaliert und bis zu  90% (~ 16 mm, 2/3 Zoll) herunterskaliert werden.
 
-## In real life 
+## Gestickte Beispiele 
 
 {% include folder-galleries path="fonts/learning_curve/" %}
 

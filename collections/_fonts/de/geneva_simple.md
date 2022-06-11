@@ -18,9 +18,9 @@ preview_image:
 
 
 
-### Glyphs
+### Schriftzeichen
 
-This font contains 102 glyphs:
+Diese Schrift enthält folgende 102 Schriftzeichen:
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#<>:;,'"“”.+@%$*~-=(){}][_/\|!?�ÄÖÜäöü
 
 ## Sans Rounded
@@ -28,19 +28,19 @@ ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#<>:;,'"“”.+@
 ![Geneva Simple Sans](/assets/images/fonts/geneva_simple_sans_rounded.jpg)
 
 
-### Glyphes
+### Schriftzeichen
 
-This font contains 107 glyphs:
+Diese Schrift enthält folgende 107 Schriftzeichen:
 AÄBCDEFGHIJKLMNOÖPQRSTUÜVWXYZaâäbcdeéèfghijklmnoöpqrstuüvwxyz0123456789@<>`^|\*~}{][$%@#!?:,'"“”.;+-=()_/�
 
 
-## Dimensions
+## Maße
 
-At 100%, these fonts are approximatively  14 mm (1/2 inch) tall.
+Bei einer Skalierung auf 100 % sind diese Schriften ungefähr 14 mm (1/2 Zoll) groß.
 
-They can be scaled up to  200% (approx 28 mm, 1 inch) or scaled down to 75% (approx 9 mm, 1/3 inch).
+Sie können bis auf 200% (~28mm, 1 Zoll) hochskaliert und bis zu 75% (~9mm, 1/3 Zoll) herunterskaliert werden.
 
-## In real life
+## Gestickte Beispiele
 
 {% include folder-galleries path="fonts/geneva/" %}
 

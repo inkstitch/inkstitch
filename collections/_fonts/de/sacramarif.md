@@ -12,9 +12,9 @@ preview_image:
 
 
 
-## Glyphs
+## Schriftzeichen
 
-Sacramarif contains 112 glyphs:
+Diese Schrift enthält folgende 112 Schriftzeichen:
 	
 ABCDEFGHIJ
 KLMNOPQRST
@@ -29,11 +29,11 @@ yzßÀàáâäæÇ
 )*§.,:;!?«
 »-
 
-## Dimensions
-At 100%, this font is approximatively 28 mm (1 inch) high.
-it can be scaled up to 150% (approx 42 mm, 1.5 inch) or down  to  80% (approx 22 mm, 3/4 inch).
+## Maße
+Bei einer Skalierung auf 100 % ist diese Schrift ~ 28 mm (1 Zoll) groß.
+Sie kann bis auf 150% (~ 42 mm, 1.5 Zoll) hochskaliert und bis zu 80% (~ 22 mm, 3/4 Zoll) herunterskaliert werden.
 
-## In real life
+## Gestickte Beispiele
 
 
 {% include folder-galleries path="fonts/sacramarif/" %}
