@@ -20,7 +20,7 @@ RSTUVWXYZ-
 
 ## Maße
 
-Bei einer Skalierung auf 100 % ist diese Schrift ungefähr ~ 63 mm (2.5 Zoll).
+Bei einer Skalierung auf 100 % ist diese Schrift ungefähr ~ 63 mm (2.5 Zoll) groß.
 
 Sie kann bis auf 200% (~ 125 mm 5 Zoll) hochskaliert werden, und bis zu 80% (~50 mm 2 Zoll) herunterskaliert werden.
 
