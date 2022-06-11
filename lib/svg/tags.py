@@ -112,6 +112,8 @@ inkstitch_attribs = [
     'e_stitch',
     'pull_compensation_mm',
     'stroke_first',
+    # stitch_plan
+    'invisible_layers',
     # Legacy
     'trim_after',
     'stop_after',

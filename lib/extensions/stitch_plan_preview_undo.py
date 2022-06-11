@@ -3,7 +3,7 @@
 # Copyright (c) 2022 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-from ..svg.tags import INKSCAPE_GROUPMODE, SVG_GROUP_TAG
+from ..svg.tags import INKSCAPE_GROUPMODE, INKSTITCH_ATTRIBS, SVG_GROUP_TAG
 from .base import InkstitchExtension
 
 
@@ -12,12 +12,17 @@ class StitchPlanPreviewUndo(InkstitchExtension):
         # delete old stitch plan
         svg = self.document.getroot()
         layer = svg.find(".//*[@id='__inkstitch_stitch_plan__']")
+        # get previously invisible layers (they still should be hidden afterwards)
+        invisible_layers = layer.get(INKSTITCH_ATTRIBS['invisible_layers'], '').split(",")
         if layer is not None:
             del layer[:]
 
-        # if there are layers with reduced opacity, remove opacity attribute
+        # if there are layers with reduced opacity, remove opacity attribute or unhide hidden layers
         for g in self.document.getroot().findall(SVG_GROUP_TAG):
             style = g.specified_style()
-            # check groupmode and check for the specific opacity value of 0.4 (as used by the stitch plan)
-            if (g.get(INKSCAPE_GROUPMODE) == "layer" and float(style.get('opacity', 1)) == 0.4 and not style.get('display', 'inline') == 'none'):
+            if (g.get(INKSCAPE_GROUPMODE) == "layer" and float(style.get('opacity', 1)) == 0.4 or style.get('display', 'inline') == 'none'):
+                if g.get_id() in invisible_layers:
+                    continue
+
                 g.style['opacity'] = 1
+                g.style['display'] = 'inline'

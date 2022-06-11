@@ -3,13 +3,14 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-from inkex import Boolean, Style
 from lxml import etree
+
+from inkex import Boolean, Style
 
 from ..stitch_plan import stitch_groups_to_stitch_plan
 from ..svg import render_stitch_plan
-from ..svg.tags import (INKSCAPE_GROUPMODE, SVG_DEFS_TAG, SVG_GROUP_TAG,
-                        SVG_PATH_TAG)
+from ..svg.tags import (INKSCAPE_GROUPMODE, INKSTITCH_ATTRIBS, SVG_DEFS_TAG,
+                        SVG_GROUP_TAG, SVG_PATH_TAG)
 from .base import InkstitchExtension
 
 
@@ -42,18 +43,19 @@ class StitchPlanPreview(InkstitchExtension):
         layer = svg.find(".//*[@id='__inkstitch_stitch_plan__']")
 
         # update layer visibility 0 = unchanged, 1 = hidden, 2 = lower opacity
+        groups = self.document.getroot().findall(SVG_GROUP_TAG)
         if self.options.layer_visibility == 1:
+            self.set_invisible_layers_attribute(groups, layer)
             self.hide_all_layers()
-            layer.set('style', None)
+            layer.style['display'] = "inline"
         elif self.options.layer_visibility == 2:
-            for g in self.document.getroot().findall(SVG_GROUP_TAG):
+            for g in groups:
                 style = g.specified_style()
                 # check groupmode and exclude stitch_plan layer
                 # exclude objects which are not displayed at all or already have opacity < 0.4
                 if (g.get(INKSCAPE_GROUPMODE) == "layer" and not g == layer and
                         float(style.get('opacity', 1)) > 0.4 and not style.get('display', 'inline') == 'none'):
-                    style += Style('opacity:0.4')
-                    g.set("style", style)
+                    g.style['opacity'] = 0.4
 
         # translate stitch plan to the right side of the canvas
         if self.options.move_to_side:
@@ -65,9 +67,16 @@ class StitchPlanPreview(InkstitchExtension):
         if self.options.needle_points:
             markers = 'marker-mid:url(#inkstitch-needle-point);marker-start:url(#inkstitch-needle-point);marker-end:url(#inkstitch-needle-point)'
             for element in layer.iterdescendants(SVG_PATH_TAG):
-                style = ';'.join([element.get('style'), markers])
+                style = element.style + Style(markers)
                 element.set('style', style)
             self.ensure_marker()
+
+    def set_invisible_layers_attribute(self, groups, layer):
+        invisible_layers = []
+        for g in groups:
+            if g.get(INKSCAPE_GROUPMODE) == "layer" and g.style['display'] == 'none':
+                invisible_layers.append(g.get_id())
+        layer.set(INKSTITCH_ATTRIBS['invisible_layers'], ",".join(invisible_layers))
 
     def ensure_marker(self):
         xpath = ".//svg:marker[@id='inkstitch-needle-point']"
