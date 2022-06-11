@@ -27,7 +27,7 @@ if [ "$BUILD" = "osx" ]; then
     # Build on GitHub will be handled differently from local builds.
     # Local builds will not be signed nor notarized. They are run to produce releases for legacy versions of macOS.
     # Notarization for development branches can be forced with this variable set to true
-    NOTARIZE_DEVELOPMENT_BUILDS=false
+    NOTARIZE_DEVELOPMENT_BUILDS=true
 
     if [[ ! -z "${GITHUB_REF}" ]]; then
         # This code signs and notarize the inkstitch.app
