@@ -50,6 +50,8 @@ Flip exponent |☑  or ▢| exchange role of first and last line in the computat
 Reverse |☑  or ▢|  Reverse the final embroidery path.  Has no effect on the other  parameters.
 Grid  max distance |<img src="/assets/images/docs/ripple_only_grid.svg" alt="Distance"/>| If the distance is strictly positive a grid effect is added. The distance controls how far apart the new  lines are. 
 Scale axes|XY or X or Y or None | for guided ripple only
+Starting scale| for guided ripple only|How big the first copy of the line should be, in percent. 
+Ending scale| for guided ripple only| How big the last copy of the line should be, in percent.
 Rotate| ☑  or ▢| for guided ripple only
 Enables lock stitches in only desired positions| ☑  ou ▢| Enables lock stitches in only desired positions
 Force lock stitches| ☑  or ▢|Sew lock stitches after sewing this element, even if the distance to the next object is shorter than defined by the collapse length value in the Ink/Stitch preferences.
