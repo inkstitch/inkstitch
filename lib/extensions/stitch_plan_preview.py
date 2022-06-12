@@ -12,6 +12,7 @@ from ..svg import render_stitch_plan
 from ..svg.tags import (INKSCAPE_GROUPMODE, INKSTITCH_ATTRIBS, SVG_DEFS_TAG,
                         SVG_GROUP_TAG, SVG_PATH_TAG)
 from .base import InkstitchExtension
+from .stitch_plan_preview_undo import reset_stitch_plan
 
 
 class StitchPlanPreview(InkstitchExtension):
@@ -24,9 +25,7 @@ class StitchPlanPreview(InkstitchExtension):
     def effect(self):
         # delete old stitch plan
         svg = self.document.getroot()
-        layer = svg.find(".//*[@id='__inkstitch_stitch_plan__']")
-        if layer is not None:
-            del layer[:]
+        reset_stitch_plan(svg)
 
         # create new stitch plan
         if not self.get_elements():
