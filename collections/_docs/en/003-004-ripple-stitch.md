@@ -31,6 +31,8 @@ Once the path has been created, it becomes possible to guide the way the ripples
 
 There are many ways to exploit all the possibilities:
 
+![Many ripples](/assets/images/docs/en/rippleways_en.svg)
+
 [Download](/assets/images/docs/en/rippleways_en.svg){: download="rippleways.svg" }
 
 ## Params
