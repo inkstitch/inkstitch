@@ -1,10 +1,13 @@
 ---
 title: "Python Modules"
 permalink: /fr/developers/inkstitch/python-modules/
-last_modified_at: 2018-07-21
+last_modified_at: 2018-08-21
 toc: false
 ---
-Ink/Stitch uses various Python modules. Follow the links to learn more about specific ones. Bold modules are not part of the standard python library and are also listed in the `requirement.txt` file. The ones being displayed in cursive style belong to the [Inkscape Python modules for extensions](http://wiki.inkscape.org/wiki/index.php/Python_modules_for_extensions).
+Ink/Stitch utilise de nombreux modules Python. 
+Suivez les liens pour en savoir plus sur udes modules spécifiques.
+Les modules en **gras** ne font pas partie de la bibliothèque standard python et son donc aussi listé dans le fichier `requirement.txt`. 
+Les modules en *italique* font partie des [modules Python pour les extensions Inkscape](http://wiki.inkscape.org/wiki/index.php/Python_modules_for_extensions).
 
 ---
 
