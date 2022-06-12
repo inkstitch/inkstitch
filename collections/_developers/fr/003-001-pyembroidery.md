@@ -2,24 +2,28 @@
 title: "Pyembroidery"
 permalink: /fr/developers/pyembroidery/
 excerpt: ""
-last_modified_at: 2018-10-11
+last_modified_at: 2018-11-11
 toc: false
 ---
 
-[Pyembroidery](https://github.com/inkstitch/pyembroidery) is a python library for the reading and writing of embroidery files.
+[Pyembroidery](https://github.com/inkstitch/pyembroidery) est une bibliothèque p ython pour lire et écrire des fichiers de broderie machine.
 
+Suivez le lien ci-dessus. Le fichier README contient beaucoup d'information sur comment l'utiliser et comment il fonctionne.
 Follow the link above. The README file has a lot of information how it can be used and how it is working.
 
-## Background
+## Arrière plan
 
-Ink/Stitch started out using [libembroidery](https://github.com/Embroidermodder/Embroidermodder/tree/master/libembroidery), developed by the Embroidermodder team.
+Ink/Stitch a commencé avec [libembroidery](https://github.com/Embroidermodder/Embroidermodder/tree/master/libembroidery), développé par l'équipe Embroidermodder.
 
-@tartarize then provided a conversion to python (pyembroidery) to make it even more useful for Ink/Stitch (or any other python based embroidery project).
+@tartarize a ensuite fourni une conversion en python (pyembroidery) pour le rendre encore plus utile pour Ink/Stitch (ou tout autre projet de broderie basé sur python).
 
-The pyembroidery version used by the Ink/Stitch organization is a fork of [his work](https://github.com/EmbroidePy/pyembroidery).
+La version pyembroidery utilisée par l'organisation Ink/Stitch est un fork de [son travail](https://github.com/EmbroidePy/pyembroidery).
 
-## Embroidery File Formats
+## Formats de fichiers de broderie
 
-The [EduTech wiki](http://edutechwiki.unige.ch/en/Machine_embroidery) is a good ressource for embroidery concepts.
+Le [wiki EduTech](http://edutechwiki.unige.ch/en/Machine_embroidery) est une bonne ressource pour les concepts de broderie.
 
-You can also find very detailed information about [embroidery file formats](http://edutechwiki.unige.ch/en/Embroidery_format).
+Vous pouvez également  y trouver des informations très détaillées sur les [formats de fichiers de broderie] (http://edutechwiki.unige.ch/fr/Embroidery_format).
+
+
+
