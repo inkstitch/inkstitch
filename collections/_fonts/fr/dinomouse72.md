@@ -3,8 +3,9 @@ title: "DinoMouse 72"
 permalink: /fr/fonts/dinomouse72/
 last_modified_at: 2022-05-07
 toc: false
-preview_image: /assets/images/fonts/dinomouse72.png
-
+preview_image:
+  - url: /assets/images/fonts/dinomouse72.png
+    height: 20
 ---
 
 ![DinoMouse 72](/assets/images/fonts/dinomouse72.png)
