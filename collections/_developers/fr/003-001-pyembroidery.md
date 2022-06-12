@@ -9,7 +9,6 @@ toc: false
 [Pyembroidery](https://github.com/inkstitch/pyembroidery) est une bibliothèque python pour lire et écrire des fichiers de broderie machine.
 
 Suivez le lien ci-dessus. Le fichier README contient beaucoup d'information sur comment l'utiliser et comment il fonctionne.
-Follow the link above. The README file has a lot of information how it can be used and how it is working.
 
 ## Arrière plan
 
