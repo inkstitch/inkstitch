@@ -2,7 +2,7 @@
 permalink: /fr/tutorials/autoroute_life_flower/
 title: "Fleur de vie "
 language: fr
-last_modified_at: 2022-06-28
+last_modified_at: 2022-06-12
 excerpt: "Agencement automatique de points droits"
 image: "/assets/images/tutorials/life_flower/flower-of-life-two-digitalisation.svg"
 tutorial-type:
