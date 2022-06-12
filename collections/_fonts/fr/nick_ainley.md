@@ -3,8 +3,9 @@ title: "Nick Ainley"
 permalink: /fr/fonts/nick_ainley/
 last_modified_at: 2022-05-07
 toc: false
-preview_image: /assets/images/fonts/nick_ainley.png
-
+ preview_image:
+  - url: /assets/images/fonts/nick_ainley.png
+    height: 7
 ---
 ![Nick Ainley](/assets/images/fonts/nick_ainley.png)
 
@@ -22,7 +23,9 @@ Utilisée à 100%, cette fonte fait environ 7 mm.
 Elle peut être agrandie jusqu'a 300% (env 21 mm) mais ne doit pas être réduite.
 
 ## Dans la vraie vie
-![Porte Clés](/assets/images/fonts/nick_hainley2.jpg)
+
+{% include folder-galleries path="fonts/nick_ainley/" %}
+
 
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/nick_ainley/LICENSE)
