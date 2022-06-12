@@ -3,7 +3,7 @@ title: "Nick Ainley"
 permalink: /fr/fonts/nick_ainley/
 last_modified_at: 2022-05-07
 toc: false
- preview_image:
+preview_image:
   - url: /assets/images/fonts/nick_ainley.png
     height: 7
 ---
