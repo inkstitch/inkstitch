@@ -2,7 +2,7 @@
 title: "Install Ink/Stitch"
 permalink: /fr/docs/install-windows/
 excerpt: "How to quickly install Ink/Stitch."
-last_modified_at: 2021-11-28
+last_modified_at: 2022-06-12
 toc: true
 ---
 {% comment %}
