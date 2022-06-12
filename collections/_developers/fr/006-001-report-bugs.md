@@ -2,13 +2,13 @@
 title: "Report Bugs "
 permalink: /fr/developers/report-bugs/
 excerpt: ""
-last_modified_at: 2018-06-04
+last_modified_at: 2018-06-14
 ---
 
-**Having Issues with Ink/Stitch?**
+**Vous avez des problèmes avec Ink/Stitch?**
 
-It would be very helpful, if you reported this back to us on github: <https://github.com/inkstitch/inkstitch/issues>
+Il nous serait très  utile que vous les signaliez sur github: <https://github.com/inkstitch/inkstitch/issues>
 
-Also have look at these existing issues:
-* [Reported Bugs](https://github.com/inkstitch/inkstitch/issues?q=is%3Aissue+is%3Aopen+label%3Abug)
-* [Feature Requests](https://github.com/inkstitch/inkstitch/issues?q=is%3Aissue+is%3Aopen+label%3A%22feature+request%22)
+Vous pouvez aussi jeter un coup d'oeil sur les problèmes déjà connus:
+* [Bugs Signalés(https://github.com/inkstitch/inkstitch/issues?q=is%3Aissue+is%3Aopen+label%3Abug)
+* [Demandes de nouvelles fonctionalités](https://github.com/inkstitch/inkstitch/issues?q=is%3Aissue+is%3Aopen+label%3A%22feature+request%22)
