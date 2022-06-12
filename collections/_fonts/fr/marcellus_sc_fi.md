@@ -1,7 +1,7 @@
 ---
 title: "Marcellus SC FI "
 permalink: /fr/fonts/marcellus_sc_fi/
-last_modified_at: 2022-01-27
+last_modified_at: 2022-06-12
 toc: false
 preview_image:
   - url: /assets/images/fonts/marcellus_sc_fi.jpg
