@@ -44,7 +44,7 @@ Ink/Stitch: digitaliser des broderies machines en utilisant Inkscape (SVG)
 
 ## Texte
 
-* [Module lettrage](/docs/lettering/)avec de nombreuses [polices](/fonts/font-library/) prête à l'usage.
+* [Module lettrage](/docs/lettering/) avec de nombreuses [polices](/fonts/font-library/) prête à l'usage.
 
 ## Prévisualisation de la broderie
 * Aperçu animé de la broderie (y compris aperçu en direct lorsque vous ajustez les paramètres tels que la sous-couche , l'espacement des lignes, etc.)
