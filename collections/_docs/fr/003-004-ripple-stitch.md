@@ -2,7 +2,7 @@
 title: "Broderie Ondulée"
 permalink: /fr/docs/stitches/ripple/
 excerpt: ""
-last_modified_at: 2022-05-21
+last_modified_at: 2022-06-12
 toc: true
 ---
 {% include upcoming_release.html %}
