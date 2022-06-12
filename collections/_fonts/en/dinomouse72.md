@@ -23,7 +23,7 @@ At 100%, this font is approximatively  20 mm tall (0.8 inch).
 It may be scaled  up to 300% (approx. 60 mm, 2.5 inches ) or down to  50% (approx. 10 mm, 1/2 inch)
 
 ## In real life
-![Sample](/assets/images/fonts/dinomouse72_2.jpeg)
+{% include folder-galleries path="fonts/dinomouse72/" %}
 
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/dinomouse72/LICENSE)
