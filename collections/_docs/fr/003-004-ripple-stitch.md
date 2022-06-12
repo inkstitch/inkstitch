@@ -50,8 +50,9 @@ Exposant de la distance entre les lignes|<img src="/assets/images/docs/ripple_on
 Inverser effet exposant |☑  ou ▢| Èchange le rôle de la  première et de la dernière réplication pour le calcul de la distance entre les réplications
 Changer le sens |☑  ou ▢|  Change le sens du  chemin final de broderie . N'a pas d'effet sur les autres paramètres
 Distance grille  maximum |<img src="/assets/images/docs/ripple_only_grid.svg" alt="Distance"/>| Si une distance positive est spécifiée, les ondulations de la broderie sont complétées  en une "grille", par un chemin "perpendiculaire" aux ondulations. Le paramètre contrôle l'écart de ces perpendiculaires. Intervertir  n'a pas  d'influence sur ce paramètre.
-Mettre les axes à l'echelle|XY or X or Y or None | for guided ripple only
-Tourner| ☑  or ▢| for guided ripple only
+Démarrer à| seulement pour des ondulations guidées|Taille de la première ondulation en pourcentage.
+Finir à| seulement pour des ondulations guidées |Taille de la dernière ondulation en pourcentage.
+Tourner| ☑  ou ▢| seulement pour des ondulations guidées
 Autoriser les points d'arrêts | ☑  ou ▢|Choix de l'ajout d' un point d'arrêt en début et en fin de broderie.
 Forcer les points d'arrêts | ☑ ou ▢| Force un point d'arrêt après l'objet indépendament de la valeur de "Saut de fil" dans les Préférences d'Ink/Stitch.
 {: .params-table }
@@ -62,7 +63,7 @@ Forcer les points d'arrêts | ☑ ou ▢| Force un point d'arrêt après l'objet
 
 
 ## Guidage additionnel
-Il existe trois méthodes pour guidage additionnel de déplacement des ondulations
+Il existe trois méthodes de guidage additionnel pour le déplacement des ondulations: 
 
 ### Pour toutes les broderies ondulées : Guidage selon un chemin
 Il  est possible d'ajouter une chemin de guidage à une broderie ondulée.
@@ -74,7 +75,7 @@ Pour cela
 
 La position des centres des réplications de l'ondulation initale est alors déterminée par le guide
 
-Le chemin guide peut avoir  deux sous-chemin, dans ce cas la distance entre les deux sous-chemins determinent la taille des réplications.
+Le chemin guide peut avoir  deux sous-chemins (guidagesatin) , dans ce cas la distance entre les deux sous-chemins determine la taille des réplications.
 
 
 ### Pour les  broderies ondulées définies à partir d'un chemin simple: Guidage par cible
