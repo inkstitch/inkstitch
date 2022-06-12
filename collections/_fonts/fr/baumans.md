@@ -1,7 +1,7 @@
 ---
 title: "Baumans FI"
 permalink: /fr/fonts/baumans/
-last_modified_at: 2022-05-07
+last_modified_at: 2022-06-12
 toc: false
 preview_image:
   - url: /assets/images/fonts/baumans_fi.jpg
