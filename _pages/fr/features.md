@@ -2,72 +2,72 @@
 title: "## Caractéristiques notables"
 permalink: /fr/features/
 excerpt: "Ink/Stitch features"
-last_modified_at: 2021-10-23
+last_modified_at: 2022-06-11
 sidebar:
   nav: pages
 toc: true
 ---
-Ink/Stitch: digitize machine embroidery designs using Inkscape (SVG)
+Ink/Stitch: digitaliser des broderies machines en utilisant Inkscape (SVG)
 
-## Accessability
+## Accessibilité
 
-* Cross Platform (Linux, Windows, macOS)
-* User interface translated to several languages ([translation help appreciated](https://translate.inkstitch.org))
+* Multiplateforme (Linux, Windows, macOS)
+* Interface utilisateur traduite en plusieurs langues ([aide à la traduction appréciée](https://translate.inkstitch.org))
 
-## Stitch Types
+## Types de points
 
-* Various [stitch types](/docs/stitch-library/): Fill stitch, satin stitch, stroke type stitches
-* Custom [Patterns](/docs/stitches/patterns/) can be applied to all available stitch types.
+* Divers [types de points](/docs/stitch-library/) : point de remplissage, colonne satin, points de type trait
+* Les [motifs](/docs/stitches/patterns/) personnalisés peuvent être appliqués à tous les types de points disponibles.
 
-### Fill Stitch
+### Point de remplissage
 
-* Automatically [fill](/docs/stitches/fill-stitch/) arbitrary shapes with stitches
-* Adjust stitch length, row spacing and row angle
-* Underlay
-* [Contour fill](/docs/stitches/contour-fill/)
-* [Guided fill](/docs/stitches/guided-fill/)
+* [remplir](/docs/stitches/fill-stitch/) automatiquement des formes arbitraires avec des points
+* Ajustez la longueur du point, l'espacement des rangées et l'angle des rangées
+* Sous-couche
+* [Remplissage contour](/docs/stitches/contour-fill/)
+* [Remplissage guidé](/docs/stitches/guided-fill/)
 
-### Satin Stitch
-* Design your [satin column](/docs/stitches/satin-column/) with varying width
-* Mix and match 3 kinds of underlay (center-walk underlay, contour underlay, zig-zag underlay)
-* [E-stitch](/docs/stitches/e-stitch/)
-* Split stitch (through maximum stitch length)
-* [Automatic routing](/docs/satin-tools/) (with underpathing running stitch if needed)
+### Colonne Satin
+* Concevez votre [colonne de satin](/docs/stitches/satin-column/) avec une largeur variable
+* Mélangez et assortissez 3 types de sous-couche (sous-couche centrale, sous-couche de contour, sous-couche en zig-zag)
+* [E-point](/docs/points/e-point/)
+* Split: découpe un point en plusieurs pour respecter une longueur de point maximale
+* [Routage automatique](/docs/satin-tools/) (avec  ajout de sous-chemin en point droit si nécessaire)
 
-### Stroke Type Stitches
+### Points de type trait
 
-* [Running stitch](/docs/stitches/running-stitch/)
-* [Bean stitch](/docs/stitches/bean-stitch/)
-* [Manual stitch](/docs/stitches/manual-stitch/) (each stitch exactly where you want it)
-* [Cutwork](/docs/cutwork/)
-* [Automatic routing](/docs/stroke-tools/) to avoid jump stitches
+* [Point droit](/docs/stitches/running-stitch/)
+* [Point triple](/docs/stitches/bean-stitch/)
+* [Point manuel](/docs/stitches/manual-stitch/) (chaque point exactement où vous le voulez)
+* [Richelieu](/docs/cutwork/)
+* [Routage automatique](/docs/stroke-tools/) pour éviter les sauts de points
 
-## Text
+## Texte
 
-* [Lettering module](/docs/lettering/) with many [fonts](/fonts/font-library/) ready to use
+* [Module lettrage](/docs/lettering/)avec de nombreuses [polices](/fonts/font-library/) prête à l'usage.
 
-## Stitch Preview
+## Prévisualisation de la broderie
+* Aperçu animé de la broderie (y compris aperçu en direct lorsque vous ajustez les paramètres tels que la sous-couche , l'espacement des lignes, etc.)
+* [Simulateur et aperçu du plan de broderie](/docs/visualize/)
+* [Imprimer au format PDF](/docs/print-pdf/)
+   * rendu réaliste ou  pas
+   * Mise en page pour l'opérateur de la machine à broder avec blocs de couleur, noms de fils, nombre de points et notes personnalisées
+   * mise en page orientée client conçue pour que vous puissiez l'envoyer à votre client
+   * hautement personnalisable
 
-* Animated stitch-out preview (including live-preview as you adjust settings like row spacing underlay, etc.)
-* [Simulator and in canvas stitch plan preview](/docs/visualize/)
-* [Print to PDF](/docs/print-pdf/)
-  * realistic rendering and line-drawing mode
-  * embroidery machine operator layout with color blocks, thread names, stitch counts, and custom notes
-  * client-oriented layout designed for you to send to your customer
-  * highly customizable
+## Gestion des fils
 
-## Thread management
+Ink/Stitch a une section [Gestion des fils](/docs/thread-color/) dans le menu.
 
-Ink/Stitch has a [thread management](/docs/thread-color/) section in the menu.
+* Palettes de fabricants de fils (plus de 60 fabricants inclus)
+   * installation automatisée des palettes Inkscape à utiliser dans vos conceptions
+   * noms de fils et numéros de catalogue inclus dans les impressions PDF
+* Outils pour créer facilement vos propres palettes de fils
 
-* Thread manufacturer palettes (over 60 manufacturers included)
-  * automated installation of Inkscape palettes for use in your designs
-  * thread names and catalog numbers included in PDF printouts
-* Tools to create your own thread palettes easily
 
-## Import and Export
+## Import et Export
 
-[Import and Export](/docs/import-export/) many popular machine embroidery formats (including batch export)
+[Import et Export](/docs/import-export/) beaucoup de format machine (inclant l'export en lot)
 
 ### Writing
 CSV, **DST**, **EXP**, **JEF**, PEC, **PES**, SVG, TXT (G-CODE), U01, **VP3**
@@ -75,7 +75,7 @@ CSV, **DST**, **EXP**, **JEF**, PEC, **PES**, SVG, TXT (G-CODE), U01, **VP3**
 ### Reading
 100, 10o, BRO, DAT, DSB, **DST**, DSZ, EMD, **EXP**, EXY, FXY, GT, INB, **JEF**, JPX, KSM, MAX, MIT, NEW, PCD, PCM, PCQ, PCS, PEC, **PES**, PHB, PHC, SEW, SHV, STC, STX, TAP, TBF, TXT (G-CODE), U01, **VP3**, XXX, ZXY
 
-### Machine Commands
+###  Commandes Machine
 
-* Add [Trims and Stops](/docs/commands/)
-* Set custom [origin point](/docs/commands/) as (0, 0) in the design file
+* Ajouter des commandes de [Coupe et Arrêt](/docs/commands/)
+* Définir un  [point origine personnalité](/docs/commands/) comme (0, 0) dans le fichier de broderie.
