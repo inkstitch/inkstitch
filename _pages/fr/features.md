@@ -2,7 +2,7 @@
 title: "## Caractéristiques notables"
 permalink: /fr/features/
 excerpt: "Ink/Stitch features"
-last_modified_at: 2022-06-11
+last_modified_at: 2022-06-12
 sidebar:
   nav: pages
 toc: true
