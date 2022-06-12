@@ -12,7 +12,7 @@ Suivez le lien ci-dessus. Le fichier README contient beaucoup d'information sur 
 
 ## Arrière plan
 
-Ink/Stitch a commencé avec [libembroidery](https://github.com/Embroidermodder/Embroidermodder/tree/master/libembroidery), développé par l'équipe Embroidermodder.
+Ink/Stitch a commencé avec [libembroidery](https://github.com/Embroidermodder/libembroidery), développé par l'équipe Embroidermodder.
 
 @tartarize a ensuite fourni une conversion en python (pyembroidery) pour le rendre encore plus utile pour Ink/Stitch (ou tout autre projet de broderie basé sur python).
 
