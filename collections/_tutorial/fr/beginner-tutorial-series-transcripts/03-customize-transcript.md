@@ -1,7 +1,7 @@
 ---
 title: Transcript - 03 Customize - Beginner Tutorial Series
 permalink: /fr/tutorials/resources/beginner-video-tutorials/03-customize-transcript
-last_modified_at: 2019-03-11
+last_modified_at: 2019-04-11
 language: fr
 image: '/assets/images/tutorials/video-preview-images/beginner-tutorial-series.png'
 
@@ -11,127 +11,132 @@ exclude-from-tutorial-list: true
 ---
 [← Back](/fr/tutorials/resources/beginner-video-tutorials/)
 
-## Welcome to the Ink/Stitch beginner tutorial series.
+##  Bienvenue dans la série de tutoriels pour débutants Ink/Stitch.
 
-**In this part we are going to customize Inkscape.**
+**Dans cette partie, nous allons personnaliser Inkscape.**
 
-The customizations are not mandatory, but they will make it more comfortable working with Ink/Stitch.
+Les personnalisations ne sont pas obligatoires, mais elles rendront plus confortable le travail avec Ink/Stitch.
 
-This tutorial will teach how to:
+Ce tutoriel vous apprendra à :
 
-*   Install Ink/Stitch Addons for Inkscape
-    The Ink/Stitch Add-ons installer will add manufacturer color palettes and Ink/Stitch specific symbols to your Inkscape installation
+* Installer les modules complémentaires Ink/Stitch pour Inkscape
+    Le programme d'installation des modules complémentaires Ink/Stitch ajoutera des palettes de couleurs du fabricant et des symboles spécifiques Ink/Stitch à votre installation Inkscape
 
-*   Define shortcut keys for fast and easy access to often used functions
+* Définir des touches de raccourci pour un accès rapide et facile aux fonctions souvent utilisées
 
-*   Display path outlines to make the stitch direction visible
+* Afficher les contours du chemin pour rendre visible la direction du point
 
-*   Use grids to align your pattern
+* Utilisez des grilles pour aligner votre motif
 
-*   Create and load templates as a basic page setup
+* Créer et charger des modèles en tant que configuration de page de base
 
-## Add-Ons
 
-Let's start with the Ink/Stitch Add-ons
 
-In fact these Add-ons are two files which need to be placed in specific folders of your Inkscape installation.
+## Modules complémentaires
 
-Run `Extensions > Ink/Stitch  > Install add-ons for Inkscape` and click install.
+Commençons par les modules complémentaires Ink/Stitch
 
-You will have to restart Inkscape for this to have any effect.
+En fait, ces modules complémentaires sont deux fichiers qui doivent être placés dans des dossiers spécifiques de votre installation d'Inkscape.
 
-### Color Palettes
+Lancez `Extensions > Ink/Stitch > Install add-ons for Inkscape` et cliquez sur installer.
 
-Open the color palettes panel and you will find a lot of new palettes. They all start with Ink/Stitch, so you can easily recognize them.
+Vous devrez redémarrer Inkscape pour que cela ait un effet.
 
-Now you can plan your design directly with your thread manufacturers color palettes. Thread names will also be displayed in the browser output so you can share it directly with your customer.
+Ouvrez le panneau des palettes de couleurs et vous trouverez de nombreuses nouvelles palettes. Elles commencent toutes par Ink/Stitch, vous pouvez donc facilement les reconnaître.
 
-### Visual Commands
+Vous pouvez maintenant planifier votre conception directement avec les palettes de couleurs de vos fabricants de fils. Les noms de fils seront également affichés dans la sortie du navigateur afin que vous puissiez les partager directement avec votre client.
 
-The second feature we will get to know better in the visual commands tutorial. It made symbols available, which will be used to give Ink/Stitch more information about the way your design should be stitched out.
+### Commandes visuelles
 
-Let's add e.g. an ignore symbol to one object. It indicates, that this particular object should not be stitched at all.
+La deuxième fonctionnalité que nous apprendrons à mieux connaître dans ce didacticiel sont les commandes visuelles. Des symboles sont utilisés pour donner à Ink/Stitch plus d'informations sur la façon dont votre dessin doit être brodé.
 
-Create two objects and run the simulator. Both objects are displayed.
+Ajoutons par example un symbole Ignorer à un objet. Cela indique que cet objet particulier ne doit pas être brodé du tout.
 
-With one object selected go to `Extensions > Ink/Stitch  > Commands > Attach command to selected Objects`.
+Créez deux objets et lancez le simulateur. Les deux objets sont affichés.
 
-Enable the ignore checkbox and click on Apply.
+Avec un objet sélectionné, allez dans `Extensions > Ink/Stitch > Commandes > Ajouter commande aux objets sélectionnés `.
 
-Now run the simulator again. Only one of the two objects is being shown.
+Cochez la case Ignorer et cliquez sur Appliquer.
 
-There are many more options in the visual commands section, but for now we have more customizations to do.
+Maintenant, lancez à nouveau le simulateur. Un seul des deux objets est représenté.
 
-## Shortcut Keys
+Il y a beaucoup plus d'options dans la section des commandes visuelles.
 
-In Ink/Stitch there are many functions which you will be frequently using. You do not really want to click through the menu all the time. This means you will be wanting to use keyboard shortcuts.
+## Raccourcis claviers
 
-We will not go through all possibilities here, but only show you how to setup shortcut keys, so you can add more later
-There is a list on <https://inkstitch.org> to give you further advice which key combinations you could use.
+Dans Ink/Stitch, il existe de nombreuses fonctions que vous utiliserez fréquemment. Pour eviter de cliquer sur le menu tout le temps, vous voudrez utiliser des raccourcis clavier.
 
-Open the Preferences through Edit > Preferences. Navigate to `Interface` and choose `Keyboard Shortcuts`.
+Nous ne passerons pas en revue toutes les possibilités ici, mais nous vous montrerons seulement comment configurer les touches de raccourci, afin que vous puissiez en ajouter d'autres plus tard
+Il y a une liste sur <https://inkstitch.org> pour vous donner des conseils supplémentaires sur les combinaisons de touches que vous pourriez utiliser.
 
-*   Search for "params". You will find it under `Extensions`. Click into the field below `Shortcut` and enter `Control + Shift + C`.
-*   Next search for "simulate" and enter `Control + Shift + L`
-*   Then add `Control + R` to "reverse the path direction"
-*   and finally `Page down` for "stack down" and `Page up` for "stack up"
+Ouvrez les Préférences via Edition > Préférences. Accédez à "Interface" et choisissez "Clavier".
 
-Let's have a closer look to the stack up and down functions.
+* Recherchez "Paramètres". Vous le trouverez sous `Effets`. Cliquez dans le champ sous `raccourci` et entrez `Control + Shift + C`.
+* Ensuite, recherchez "Simuler" et entrez `Control + Shift + L`
+* Ensuite, ajoutez `Control + R` pour "inverser la direction du chemin"
+* et enfin `Page down` pour "stack down" et `Page up` pour "stack up"
 
-Open the object panel. It displays a full list of all layers, groups and objects in the document in it's `stacking order`.
+Examinons de plus près les fonctions  "vers le haut  de pile" et "vers le bas de pile".
 
-Remove the ignore symbol that we previously added and move the objects so that they are overlapping each other.
+Ouvrez le panneau d'objets. Il affiche une liste complète de tous les calques, groupes et objets du document dans son "ordre d'empilement".
 
-If you use the raise and lower buttons on the first object, you will see, how their stacking order is changing positions.
+Supprimez le symbole d'ignorance que nous avons précédemment ajouté et déplacez les objets afin qu'ils se chevauchent.
 
-This doesn't work work if the objects are not overlapping each other.
+Si vous utilisez les boutons de montée et de descente sur le premier objet, vous verrez comment leur ordre d'empilement change de position.
 
-Now use your newly created shortcut keys and see, that the stacking order is changing again. The up and down buttons in the objects panel will do the same as your keyboard shortcuts.
+Cela ne fonctionne pas si les objets ne se chevauchent pas.
 
-The objects position will define the order from bottom to top how your pattern is being stitched out and this makes it to be a main feature while carefully planing your design.
+Utilisez maintenant vos touches de raccourci nouvellement créées et voyez que l'ordre d'empilement change à nouveau. Les boutons haut et bas du panneau des objets feront la même chose que vos raccourcis clavier.
 
-## Path Outlines
+La position des objets définira l'ordre de bas en haut de la façon dont votre motif est cousu, ce qui en fait une caractéristique principale tout en planifiant soigneusement votre conception.
 
-Path outlines will show you the direction of the path.
 
-The path direction is important for all stitch types except for fill stitches. It defines at which end of the stroke the stitching will begin.
 
-In `Preferences > Tools > Node` enable the following checkboxes `show patch directions on outlines` and `show temporary outline for selected paths`.
+## Contours 
 
-With objects selected press `N` to activate the node tool and enable `Show path outline`.
+Les contours du chemin vous montreront la direction du chemin.
 
-You will see a red path surrounding the objects. The spikes indicate the path direction.
+La direction du chemin est importante pour tous les types de points, à l'exception des points de remplissage. Il définit à quelle extrémité du trait la broderie commencera.
 
-## Grids
+Dans `Preferences > Outils > Noeud, cochez les cases suivantes `Afficher le sens des chemins sur le  contour` et `Affichez temporairement  le contour des chemins sélectionnés`.
 
-You can use grids to align patterns properly.
-To activate them open File > Document Properties and switch to the `Grids` tab.
-Click on New and change units to mm (this is the common unit used for stitch length etc.) and set the x- and y-spacing to 1.
-If you zoom out the major grid line will be displayed. It defaults to 5, change it to 10, then you have 1 cm to be displayed.
+Avec les objets sélectionnés, appuyez sur 'N' pour activer l'outil de nœud et activer 'Afficher le contour du chemin'.
 
-Your objects will will snap to the grid edges by default. You can change this by disabling snapping or disable `Snap to grids only`.
-If you want to temporarily hide the grid, hit # or change it through the menu: `View > Page Grid`.
+Vous verrez un chemin rouge entourant les objets. Les flêches indiquent la direction du chemin.
 
-Also have a look at the panel `align and distribute` which you can find under Objects in the menu. Here you can find a lot of useful aligning methods.
+## Grilles
 
-## Templates
+Vous pouvez utiliser des grilles pour aligner correctement les motifs.
+Pour les activer, ouvrez Fichier> Propriétés du document et passez à l'onglet "Grilles".
+Cliquez sur Nouveau et changez les unités en mm (il s'agit de l'unité commune utilisée pour la longueur de point, etc.) et réglez l'espacement x et y sur 1.
+Si vous effectuez un zoom arrière, la ligne principale de la grille s'affichera. Il est par défaut à 5, changez-le en 10, puis vous avez 1 cm à afficher.
 
-It seems to be no fun to set up the same document properties over and over again.
-You would rather like to open a new document and it has the size of your embroidery frame.
-Well, that is possible.
+Vos objets s'aligneront sur les bords de la grille par défaut. Vous pouvez changer cela en désactivant l'alignement ou en désactivant l'alignement sur les grilles uniquement.
+Si vous souhaitez masquer temporairement la grille, appuyez sur # ou modifiez-la via le menu : `Affichage > Grille de page`.
 
-Once you organized everything as desired, simply save your file in your templates folder.
-Select the template folder path for your operating system from the description below.
+Jetez également un coup d'œil au panneau "aligner et distribuer" que vous pouvez trouver sous Objets dans le menu. Vous trouverez ici de nombreuses méthodes d'alignement utiles.
 
-You can now access your template through `File > New from template`.
+## Modèles
 
-On <https://inkstitch.org> you can even download a predefined template with various hoop sizes.
+Ce  n'est pas très  amusant de configurer les mêmes propriétés de document encore et encore.
+Vous préférez ouvrir un nouveau document et qu'il ait la taille de votre cadre de broderie.
+Eh bien, c'est possible.
+
+Une fois que vous avez tout organisé comme vous le souhaitez, enregistrez simplement votre fichier dans votre dossier de modèles.
+Sélectionnez le chemin du dossier de modèles pour votre système d'exploitation dans la description ci-dessous.
+
+Vous pouvez maintenant accéder à votre modèle via `Fichier > Nouveau à partir du modèle`.
+
+Sur <https://inkstitch.org>, vous pouvez même télécharger un modèle prédéfini avec différentes tailles de cadre.
 
 ---
 
-We hope you enjoyed the tutorial. Now you are all set to start your creative work.
+Nous espérons que vous avez apprécié le tutoriel. Vous êtes maintenant prêt à commencer votre travail créatif.
 
-If you have any questions about Ink/Stitch, please contact us on GitHub.
+Si vous avez des questions sur Ink/Stitch, veuillez nous contacter sur GitHub.
+
+
+
 
 [← Back](/tutorials/resources/beginner-video-tutorials/)
 
