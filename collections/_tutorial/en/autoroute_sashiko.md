@@ -47,7 +47,7 @@ To change from design to triple stitch embroidery
     * Disable "Preserve order of running stitch"
    * Click Apply
 
-** and that's all !!!!**
+**and that's all !!!!**
 
 Instead of the paths created by the Sashiko extension you now have a group  "Auto-Route" that contains a mix of:
 * bean stitch paths called  "Auto-Route xyz"
