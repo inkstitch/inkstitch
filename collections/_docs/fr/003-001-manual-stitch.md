@@ -14,7 +14,7 @@ En mode point manuel Ink / Stitch utilisera chaque nœud d’un chemin comme poi
 
 1. Créez un chemin. Le style de trait ou la largeur ne sont pas pertinents.
 2. Ouvrez `Extensions > Ink/Stitch  > Paramètres`.
-3. Activez `Manual stitch placement`. Les autres réglages n'auront aucun effet en mode point manuel.
+3. Activez `Placement manuel de points`. Les autres réglages n'auront aucun effet en mode point manuel.
    ![Params Stroke](/assets/images/docs/en/params-manual-stitch.jpg)
 
 ## Astuce
