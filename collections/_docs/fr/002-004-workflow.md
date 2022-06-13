@@ -2,8 +2,7 @@
 title: "Organisation du travail"
 permalink: /fr/docs/workflow/
 excerpt: ""
-last_modified_at: 2022-01-14
-toc: true
+last_modified_at: 2022-06-12
 ---
 ![Ink/Stitch workflow](/assets/images/docs/en/workflow-chart.svg)
 
