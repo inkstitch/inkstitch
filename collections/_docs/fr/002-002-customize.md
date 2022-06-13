@@ -31,13 +31,13 @@ Raccourcis&nbsp;Clavier | Effet | Remplace
 <key>ctrl</key>+<key>shift</key>+<key>B</key> | Scinder colonne satin  (B est coupé en deux parties) | Chemin > Union (utiliser Ctrl++ à la place )
 <key>ctrl</key>+<key>shift</key>+<key>*</key> | Agencement automatique de colonnes satin (ordonne tout)
 
-Dans Ink/Stitch la [simulation](/fr/docs/visualize/) inclut ses propres raccourcis.
 
-![Raccourcis Simulation](/assets/images/docs/fr/raccourcis_simulateur.png)
 
-\* Monter et Descendre dans la pile d'objets permet de contrôler précisement l'ordre dans lequel les objets sont brodés. Très utile en combinaison avec le panneau Calque et Objets (`Objet > Calques et Objets`).  L'ordre de la pile défini l'ordre dans lequel les éléments sont brodés (le bas de la pile en premier, pour finir par le haut de la pile).<br><br>** Pour les colonnes satin et les points droits, ceci change la direction des points. A utiliser avec `Afficher le sens des chemins sur le contour` selectionné dans `Edition > Préférences > Outils > Noeuds`. Si vous selectionnez un seul sommet en utilisant l'éditeur de noeuds et que vous effectuez un `Ctrl+R`, Inkscape renverse seulement le chemin qui contient ce noeud dans l'objet. Vous pouvez de cette manière vous assurer que les deux rails d'une colonne satin sont orientés dans le même sens.
+\* Monter et Descendre dans la pile d'objets permet de contrôler précisement l'ordre dans lequel les objets sont brodés. Très utile en combinaison avec le panneau Calques et Objets (`Objet > Calques et Objets`).  L'ordre de la pile défini l'ordre dans lequel les éléments sont brodés (le bas de la pile en premier, pour finir par le haut de la pile).<br><br>** Pour les colonnes satin et les points droits, ceci change la direction des points. A utiliser avec `Afficher le sens des chemins sur le contour` selectionné dans `Edition > Préférences > Outils > Noeuds`. Si vous selectionnez un seul sommet en utilisant l'éditeur de noeuds et que vous effectuez un `Ctrl+R`, Inkscape ne renverse que le sous-chemin qui contient ce noeud. Vous pouvez de cette manière vous assurer que les deux rails d'une colonne satin sont orientés dans le même sens.
 {: .notice--info }
 {: style="font-size: 70%" }
+
+
 
 ### Télécharger et importer des raccourcis clavier
 
@@ -53,6 +53,10 @@ Si vous voulez définir vos propres raccourcis, entrez simplement la combinaison
 Utiliser la fonction de recherche pour trouver les extensions plus rapidement. [Plus d'informations](http://wiki.inkscape.org/wiki/index.php/Customizing_Inkscape)
 {: .notice--info }
 
+Dans Ink/Stitch la [simulation](/fr/docs/visualize/) inclut ses propres raccourcis.
+
+![Raccourcis Simulation](/assets/images/docs/fr/raccourcis_simulateur.png)
+
 ## Correction du facteur de zoom
 Pour broder il est essentiel d'avoir une bonne idée de la véritable taille du dessin. Inkscape a un réglage pour adapter le niveau de zoom à votre écran:
 
@@ -64,14 +68,14 @@ Pour broder il est essentiel d'avoir une bonne idée de la véritable taille du 
 ## Grilles
 Pour aligner correctement vos formes vectorielles, vous pouvez utiliser la fonctionnalité de grille d’Inkscape. Aller à  `Affichage` et activer  la `Grille`. N'oubliez pas d'activer le magnetisme (en haut à droite) et  vérifiez que `Aimanter aux grilles` est activé. Il est également possible de régler l'espacement et l'origine de vos grilles dans `Fichier> Propriétés du document> Grilles`.
 
-![Grids](https://user-images.githubusercontent.com/11083514/40359052-414d3554-5db9-11e8-8b49-3be75c5e9732.png)
+![Grids](/assets/images/docs/fr/grille.png)
 
 ## Activation de la direction des chemins
 
 Il est important de connaître les directions de chemin en travaillant avec Ink/Stitch. Par conséquent, nous vous recommandons d'activer les cases à cocher **Afficher la direction du chemin sur les contours** et **Afficher le contour temporaire pour les chemins sélectionnés** dans `Édition > Préférences > Outils > Noeuds`.
 
 Vérifier aussi que **Afficher le contour du chemin** est activé dans la  `Barre de contrôle de l'outil noeud` comme dans l'image ci-dessous
-[![Path outlines & directions](https://user-images.githubusercontent.com/11083514/40360721-f294ef0a-5dbe-11e8-9d4d-98f469ff1fba.png)](https://user-images.githubusercontent.com/11083514/40360721-f294ef0a-5dbe-11e8-9d4d-98f469ff1fba.png)
+[![Path outlines & directions](/assets/images/docs/fr/contour.png)
 
 ## Travailler avec des modèles
 
