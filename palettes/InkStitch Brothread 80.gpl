@@ -2,81 +2,81 @@ GIMP Palette
 Name: Ink/Stitch: New Brothread 80 Colors
 Columns: 4
 # RGB Value		                    Color Name Number
-244	244	244	                         White	001
-  0	  0	  0	                         Black	002
-197	166	 88	                          Gold	003
-202	 68	121	                          Pink	201
-191	 60	 40	                    Vermillion	202
-207	 97	 38	                        Orange	203
-225	223	 39	                        Yellow	204
- 53	 23	  8	                    Dark Brown	205
- 29	126	 79	                  Bright Green	206
- 19	 39	105	                          Blue	207
-140	 73	134	                        Purple	208
-158	125	179	                   Pale Violet	209
-214	212	140	                   Pale Yellow	210
-226	157	168	                     Pale Pink	211
-208	155	115	                         Peach	212
-154	143	104	                         Beige	213
-119	 76	 52	                         Brown	214
-100	 17	 37	                      Wine Red	215
-163	183	208	                      Pale Sky	216
- 82	185	192	                           Sky	217
- 64	183	 64	                  Yellow Green	218
- 42	 66	 40	                   Olive Green	219
-207	212	215	                   Silver Grey	220
- 90	102	102	                          Grey	221
- 44	 71	124	                    Ocean Blue	222
-176	148	134	                    Beige Gray	223
-188	150	 92	                        Bamboo	224
-199	 42	 29	                           Red	225
- 43	 85	 43	                         Green	226
-125	185	162	                     Pale Aqua	227
-155	198	206	                     Baby Blue	228
- 67	119	136	                   Powder Blue	229
- 80	114	146	                   Bright Blue	230
- 40	 76	 84	                    Slate Blue	231
-  8	 16	 62	                     Navy Blue	232
-210	143	137	                   Salmon Pink	233
-229	 96	 81	                         Coral	234
-185	 60	 42	                  Burnt Orange	235
-196	150	114	                      Cinnamon	236
-108	105	 68	                         Umber	237
-209	197	121	                         Blond	238
-217	181	 60	                     Sunflower	239
-178	138	172	                   Orchid Pink	240
-157	 30	109	                  Peony Purple	241
- 88	 25	 66	                      Burgundy	242
- 73	  9	 87	                  Royal Purple	243
-117	 21	 34	                  Cardinal Red	244
-132	175	130	                    Opal Green	245
- 92	104	 58	                    Moss Green	246
- 81	113	 37	                  Meadow Green	247
- 17	 52	 26	                    Dark Green	248
- 75	149	128	                    Aquamarine	249
- 25	136	116	                 Emerald Green	250
- 25	116	 93	                 Peacock Green	251
- 78	 81	 85	                     Dark Grey	252
-213	212	193	                   Ivory White	253
-145	 81	 37	                         Hazel	254
-157	109	 36	                         Toast	255
-133	 91	105	                        Salmon	256
- 98	 68	 34	                   Cocoa Brown	257
- 64	 48	 25	                        Sienna	258
- 47	 32	  9	                         Sepia	259
- 45	 14	 21	                    Dark Sepia	260
- 78	 39	130	                   Violet Blue	261
- 15	 27	107	                      Blue Ink	262
- 16	 94	160	                     Sola Blue	263
-135	201	 67	                    Green Dust	264
-182	 47	 97	                       Crimson	265
-175	 65	122	                   Floral Pink	266
-106	 50	 73	                          Wine	267
- 56	 51	 32	                    Olive Drab	268
- 55	 93	 44	                        Meadow	269
-179	183	 63	                       Mustard	270
-171	125	 48	                  Yellow Ocher	271
-152	121	 39	                      Old Gold	272
-206	130	 44	                      Honeydew	273
-213	160	 89	                     Tangerine	274
-198	179	 51	                 Canary Yellow	275
+244	244	244	                         White    001
+  0	  0	  0	                         Black    002
+197	166	 88	                          Gold    003
+202	 68	121	                          Pink    201
+191	 60	 40	                    Vermillion    202
+207	 97	 38	                        Orange    203
+225	223	 39	                        Yellow    204
+ 53	 23	  8	                    Dark Brown    205
+ 29	126	 79	                  Bright Green    206
+ 19	 39	105	                          Blue    207
+140	 73	134	                        Purple    208
+158	125	179	                   Pale Violet    209
+214	212	140	                   Pale Yellow    210
+226	157	168	                     Pale Pink    211
+208	155	115	                         Peach    212
+154	143	104	                         Beige    213
+119	 76	 52	                         Brown    214
+100	 17	 37	                      Wine Red    215
+163	183	208	                      Pale Sky    216
+ 82	185	192	                           Sky    217
+ 64	183	 64	                  Yellow Green    218
+ 42	 66	 40	                   Olive Green    219
+207	212	215	                   Silver Grey    220
+ 90	102	102	                          Grey    221
+ 44	 71	124	                    Ocean Blue    222
+176	148	134	                    Beige Gray    223
+188	150	 92	                        Bamboo    224
+199	 42	 29	                           Red    225
+ 43	 85	 43	                         Green    226
+125	185	162	                     Pale Aqua    227
+155	198	206	                     Baby Blue    228
+ 67	119	136	                   Powder Blue    229
+ 80	114	146	                   Bright Blue    230
+ 40	 76	 84	                    Slate Blue    231
+  8	 16	 62	                     Navy Blue    232
+210	143	137	                   Salmon Pink    233
+229	 96	 81	                         Coral    234
+185	 60	 42	                  Burnt Orange    235
+196	150	114	                      Cinnamon    236
+108	105	 68	                         Umber    237
+209	197	121	                         Blond    238
+217	181	 60	                     Sunflower    239
+178	138	172	                   Orchid Pink    240
+157	 30	109	                  Peony Purple    241
+ 88	 25	 66	                      Burgundy    242
+ 73	  9	 87	                  Royal Purple    243
+117	 21	 34	                  Cardinal Red    244
+132	175	130	                    Opal Green    245
+ 92	104	 58	                    Moss Green    246
+ 81	113	 37	                  Meadow Green    247
+ 17	 52	 26	                    Dark Green    248
+ 75	149	128	                    Aquamarine    249
+ 25	136	116	                 Emerald Green    250
+ 25	116	 93	                 Peacock Green    251
+ 78	 81	 85	                     Dark Grey    252
+213	212	193	                   Ivory White    253
+145	 81	 37	                         Hazel    254
+157	109	 36	                         Toast    255
+133	 91	105	                        Salmon    256
+ 98	 68	 34	                   Cocoa Brown    257
+ 64	 48	 25	                        Sienna    258
+ 47	 32	  9	                         Sepia    259
+ 45	 14	 21	                    Dark Sepia    260
+ 78	 39	130	                   Violet Blue    261
+ 15	 27	107	                      Blue Ink    262
+ 16	 94	160	                     Sola Blue    263
+135	201	 67	                    Green Dust    264
+182	 47	 97	                       Crimson    265
+175	 65	122	                   Floral Pink    266
+106	 50	 73	                          Wine    267
+ 56	 51	 32	                    Olive Drab    268
+ 55	 93	 44	                        Meadow    269
+179	183	 63	                       Mustard    270
+171	125	 48	                  Yellow Ocher    271
+152	121	 39	                      Old Gold    272
+206	130	 44	                      Honeydew    273
+213	160	 89	                     Tangerine    274
+198	179	 51	                 Canary Yellow    275
