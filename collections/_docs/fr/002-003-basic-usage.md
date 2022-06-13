@@ -49,7 +49,10 @@ Transformer **Tous les objets** que vous voulez broder en chemin:
 ## Organisation du travail
 
 Si tout a bien fonctionné nous vous conseillons de parcourir aussi la page suivante (organisation du travail). Là, vous aurez une vision plus approfondie d'Ink/Stitch et vous apprendrez à effectuer les fonctions essentielles pour les fichiers de broderie, par exemple ordonner les objets, etc.
-Si vous rencontrez des difficultés, contactez-nous sur [GitHub](https://github.com/inkstitch/inkstitch/issues/). Nous souhaitons vraiment être au courant de votre problème pour pouvoir améliorer la documentation ou le programme lui-même.   
+
+Si vous rencontrez des difficultés, contactez-nous sur [GitHub](https://github.com/inkstitch/inkstitch/issues/). 
+
+Nous souhaitons vraiment être au courant de votre problème pour pouvoir améliorer la documentation ou le programme lui-même.   
 
 
 
