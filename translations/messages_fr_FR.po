@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2022-06-11 02:18+0000\n"
-"PO-Revision-Date: 2022-06-11 02:19\n"
+"PO-Revision-Date: 2022-06-13 02:32\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -264,7 +264,7 @@ msgstr "Grand Hotel Marif"
 #. description of font in fonts/grand_hotel_marif
 #: inkstitch-fonts-metadata.py:92
 msgid "Grand Hotel Marif is a script satin font of size approximatively 35 mm. The glyphs cover most Western European languages. The font can be scaled down to 60% and up to 140%."
-msgstr ""
+msgstr "Grand Hotel Marif est une police d'écriture en colonne satin d'environ 35 mm de haut. Les glyphes couvrent la plupart des langages de l'Europe de l'Ouest. La police peut être réduite jusqu'à 60% et agrandie jusqu'à 140%."
 
 #. name of font in fonts/grandhotel_small
 #: inkstitch-fonts-metadata.py:94
@@ -544,13 +544,13 @@ msgstr "Position de fin pour l'agencement automatique de point droit"
 #. command attached to an object
 #: lib/commands.py:39 inx/inkstitch_object_commands.inx:9
 msgid "Auto-route satin stitch starting position"
-msgstr "Position de départ pour points satins auto-générés"
+msgstr "Position de départ pour l'arrangement automatique de colonnes Satin"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
 #: lib/commands.py:42 inx/inkstitch_object_commands.inx:10
 msgid "Auto-route satin stitch ending position"
-msgstr "Position de fin pour points satins auto-générés"
+msgstr "Position de fin pour l'arrangement automatique de colonnes Satin"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
@@ -1271,11 +1271,11 @@ msgstr "Le nombre de lignes à sauter est ignoré, car il ne restait plus de lig
 
 #: lib/elements/stroke.py:29
 msgid "* Open the params dialog with this object selected"
-msgstr ""
+msgstr "* Ouvrir la fenêtre de paramétrage avec cet objet sélectionné"
 
 #: lib/elements/stroke.py:30
 msgid "* Reduce Skip values or increase number of lines"
-msgstr ""
+msgstr "Diminuez le nombre de lignes sautées ou augmentez le nombre de lignes"
 
 #: lib/elements/stroke.py:43
 msgid "Stroke"
@@ -1315,7 +1315,7 @@ msgstr "Nombre de répétitions pour le point triple (bean stitch)"
 
 #: lib/elements/stroke.py:94
 msgid "Backtrack each stitch this many times.  A value of 1 would triple each stitch (forward, back, forward).  A value of 2 would quintuple each stitch, etc."
-msgstr ""
+msgstr "Répète chaque point plusieurs fois.  Une valeur de 1 triple chaque point (avant, arrière, avant).  Une valeur de 2 quintuple chaque point, etc."
 
 #: lib/elements/stroke.py:105
 msgid "Running stitch length"
@@ -1359,51 +1359,51 @@ msgstr "Exposant de la distance entre les lignes"
 
 #: lib/elements/stroke.py:183
 msgid "Increase density towards one side."
-msgstr ""
+msgstr "Accroît la densité d'un côté."
 
 #: lib/elements/stroke.py:194
 msgid "Flip exponent"
-msgstr ""
+msgstr "Inverser effet exposant"
 
 #: lib/elements/stroke.py:195
 msgid "Reverse exponent effect."
-msgstr ""
+msgstr "Intervertit l'effet d'espacement de l'exposant."
 
 #: lib/elements/stroke.py:206
 msgid "Reverse"
-msgstr ""
+msgstr "Changer le sens"
 
 #: lib/elements/stroke.py:207
 msgid "Flip start and end point"
-msgstr ""
+msgstr "Intervertit le début et la fin"
 
 #: lib/elements/stroke.py:218
 msgid "Grid size"
-msgstr ""
+msgstr "Taille de la grille"
 
 #: lib/elements/stroke.py:219
 msgid "Render as grid. Use with care and watch your stitch density."
-msgstr ""
+msgstr "Rendu en grille. Utilisez avec précaution et surveillez la densité de points."
 
 #: lib/elements/stroke.py:231
 msgid "Scale axis"
-msgstr ""
+msgstr "Mettre à l'échelle sur l'axe"
 
 #: lib/elements/stroke.py:232
 msgid "Scale axis for satin guided ripple stitches."
-msgstr ""
+msgstr "Axe de mise à l'échelle pour les ondulations guidées."
 
 #: lib/elements/stroke.py:236
 msgid "X Y"
-msgstr ""
+msgstr "X Y"
 
 #: lib/elements/stroke.py:236
 msgid "X"
-msgstr ""
+msgstr "X"
 
 #: lib/elements/stroke.py:236
 msgid "Y"
-msgstr ""
+msgstr "Y"
 
 #: lib/elements/stroke.py:236 print/templates/ui.html:172
 msgid "None"
@@ -1411,31 +1411,31 @@ msgstr "Aucune"
 
 #: lib/elements/stroke.py:244
 msgid "Starting scale"
-msgstr ""
+msgstr "Démarrer à"
 
 #: lib/elements/stroke.py:245
 msgid "How big the first copy of the line should be, in percent."
-msgstr ""
+msgstr "Taille de la première ondulation en pourcentage."
 
 #: lib/elements/stroke.py:245 lib/elements/stroke.py:256
 msgid "Used only for ripple stitch with a guide line."
-msgstr ""
+msgstr "Utilisé uniquement pour des ondulations guidées."
 
 #: lib/elements/stroke.py:255
 msgid "Ending scale"
-msgstr ""
+msgstr "Finir à"
 
 #: lib/elements/stroke.py:256
 msgid "How big the last copy of the line should be, in percent."
-msgstr ""
+msgstr "Taille de la dernière ondulation en pourcentage."
 
 #: lib/elements/stroke.py:266
 msgid "Rotate"
-msgstr ""
+msgstr "Tourner"
 
 #: lib/elements/stroke.py:267
 msgid "Rotate satin guided ripple stitches"
-msgstr ""
+msgstr "Tourne les ondulations guidées par un satin"
 
 #: lib/elements/stroke.py:348
 msgid "Legacy running stitch setting detected!\n\n"
