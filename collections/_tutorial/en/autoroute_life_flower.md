@@ -8,8 +8,8 @@ image: "/assets/images/tutorials/life_flower/flower-of-life-two-digitalisation.s
 tutorial-type:
   - 
 stitch-type:
-  - Bean Stitch
-  - Running Stitch
+  - "Bean Stitch"
+  - "Running Stitch"
 techniques:
 field-of-use:
 user-level: 
