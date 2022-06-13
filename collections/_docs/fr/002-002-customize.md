@@ -11,10 +11,10 @@ Vous pouvez accelerer votre travail sous Ink/Stitch en utilisant des raccourcis 
 
 La liste suivante décrit les raccourcis claviers qui sont définis dans le fichier à télécharger ci-dessous.
 
-Certains de ces raccourcis remplacent des raccourcis natifs d'Inkscape. Dans le tableau ci dessous vous pouvez voir quels sont ces raccourcis et  comment continuer à acceder à ces fonctions. {: .notice--warning }
+Certains de ces raccourcis remplacent des raccourcis natifs d'Inkscape. Dans le tableau ci dessous vous pouvez voir quels sont ces raccourcis et  comment continuer à acceder à ces fonctions.{: .notice--warning }
 
 Raccourcis&nbsp;Clavier | Effet | Remplace
--------- | --------
+-------- | --------| --------
 <key>Page Haut</key>                          | Monter dans la pile d'objets* | Objet > Monter (voir aussi les boutons de la barre d'outils)
 <key>Page Pas </key>                          | Descendre dans la pile d'objets* | Objet > Descendre (voir aussi les boutons de la barre d'outils)
 <key>ctrl</key>+<key>R</key>                  | Renverser la direction d'un chemin.**
@@ -29,20 +29,22 @@ Raccourcis&nbsp;Clavier | Effet | Remplace
 <key>ctrl</key>+<key>shift</key>+<key>U</key> | Convertir ligne en satin  (U ressemble à deux rails) | Objet > Grouper (utiliser Ctrl+G à la place)
 <key>ctrl</key>+<key>shift</key>+<key>J</key> | Intervertir les rails satin  (J ressemble à une flèche)
 <key>ctrl</key>+<key>shift</key>+<key>B</key> | Scinder colonne satin  (B est coupé en deux parties) | Chemin > Union (utiliser Ctrl++ à la place )
-<key>ctrl</key>+<key>shift</key>+<key>*</key> | Agendement automatique de colonnes satin (ordonne tout)
+<key>ctrl</key>+<key>shift</key>+<key>*</key> | Agencement automatique de colonnes satin (ordonne tout)
 
-Dans Ink/Stitch la [simulation](/fr/docs/visualize/) inclut déjà le raccourci.
+Dans Ink/Stitch la [simulation](/fr/docs/visualize/) inclut ses propres raccourcis.
 
-\* Monter et Descendre dans la pile d'objets permet de contrôler précisement l'ordre dans lequel les objets sont brodés. Très utile en combinaison avec le panneau Objet (`Objet > Objets ...`).  L'ordre de la pile défini l'ordre dans lequel les éléments sont brodés (le bas de la pile en premier, pour finir par le haut de la pile).<br><br>** Pour les colonnes satin et les points droits, ceci change la direction des points. A utiliser avec `Afficher le sens des chemins sur le contour` selectionné dans `Edition > Préférences > Outils > Noeuds`. Si vous selectionnez un seul sommet en utilisant l'éditeur de noeuds et que vous effectuez un `Ctrl+R`, Inkscape renverse seulement le chemin qui contient ce noeud dans l'objet. Vous pouvez de cette manière vous assurer que les deux rails d'une colonne satin sont orientés dans le même sens.
+![Raccourcis Simulation](/assets/images/docs/fr/raccourcis_simulateur.png)
+
+\* Monter et Descendre dans la pile d'objets permet de contrôler précisement l'ordre dans lequel les objets sont brodés. Très utile en combinaison avec le panneau Calque et Objets (`Objet > Calques et Objets`).  L'ordre de la pile défini l'ordre dans lequel les éléments sont brodés (le bas de la pile en premier, pour finir par le haut de la pile).<br><br>** Pour les colonnes satin et les points droits, ceci change la direction des points. A utiliser avec `Afficher le sens des chemins sur le contour` selectionné dans `Edition > Préférences > Outils > Noeuds`. Si vous selectionnez un seul sommet en utilisant l'éditeur de noeuds et que vous effectuez un `Ctrl+R`, Inkscape renverse seulement le chemin qui contient ce noeud dans l'objet. Vous pouvez de cette manière vous assurer que les deux rails d'une colonne satin sont orientés dans le même sens.
 {: .notice--info }
 {: style="font-size: 70%" }
 
 ### Télécharger et importer des raccourcis clavier
 
 * [Téléchargez le fichier de raccourcis clavier](/assets/files/inkstitch.xml)
-* Allez à  `Edition > Préférences > Interface > Raccourcis clavier`
+* Allez à  `Edition > Préférences > Interface > Clavier`
 * Cliquez sur  `Importer...`
-* Selectionnez votre fichier de raccourcis (inkstitch.xml)
+* Sélectionnez votre fichier de raccourcis (inkstitch.xml)
 * Cliquez sur ouvrir 
 
 Vous pouvez maintenant utiliser les raccourcis claviers décrits ci dessus.
@@ -60,7 +62,7 @@ Pour broder il est essentiel d'avoir une bonne idée de la véritable taille du 
 ![Correction de zoom](/assets/images/docs/fr/customize-zoom-correction.png)
 
 ## Grilles
-Pour aligner correctement vos formes vectorielles, vous pouvez utiliser la fonctionnalité de grille d’Inkscape. Aller à  `Affichage` et activer  la `Grille`. Dans la `Barre des magnétismes` vérifier que `Aimanter aux grilles` est activé. Il est également possible de régler l'espacement et l'origine de vos grilles dans `Fichier> Propriétés du document> Grilles`.
+Pour aligner correctement vos formes vectorielles, vous pouvez utiliser la fonctionnalité de grille d’Inkscape. Aller à  `Affichage` et activer  la `Grille`. N'oubliez pas d'activer le magnetisme (en haut à droite) et  vérifiez que `Aimanter aux grilles` est activé. Il est également possible de régler l'espacement et l'origine de vos grilles dans `Fichier> Propriétés du document> Grilles`.
 
 ![Grids](https://user-images.githubusercontent.com/11083514/40359052-414d3554-5db9-11e8-8b49-3be75c5e9732.png)
 
