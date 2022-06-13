@@ -22,6 +22,7 @@ Operating System|Location
 ----|----
 Windows|`C:\Users%USERNAME%\AppData\Roaming\inkscape\templates`
 Linux|`~/.config/inkscape/templates`
+MacOS|`/Users/%USERNAME%/Library/Application Support/org.inkscape.Inkscape/config/inkscape/templates`
 
 Go to `File -> New From Template` to start a new file based on the template.
 
