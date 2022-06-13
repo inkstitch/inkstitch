@@ -10,6 +10,7 @@ toc: true
 En mode point manuel Ink / Stitch utilisera chaque nœud d’un chemin comme point de pénétration de l’aiguille, exactement comme vous les avez placés.
 ![Detail de point manuel](/assets/images/docs/manual-stitch-detail.png)
 
+Si vous ouvrez un fichier de broderie machine, vous y trouverez des points manuels.  Lorsque vous concevrez un fichier de broderie en svg, vous utiliserez très rarement les points manuels.
 ## Comment le créer
 
 1. Créez un chemin. Le style de trait ou la largeur ne sont pas pertinents.
