@@ -22,7 +22,7 @@ Operating System|Location
 ----|----
 Windows|`C:\Users%USERNAME%\AppData\Roaming\inkscape\templates`
 Linux|`~/.config/inkscape/templates`
-
+MacOS|`/Users/%USERNAME%/Library/Application Support/org.inkscape.Inkscape/config/inkscape/templates`
 Aller à `Fichier -> Nouveau à partir d'un modèle` pour démarrer un nouveau fichier basé sur le modèle.
 
 Vous devez confirmer le dossier de l'utilisateur dans vos préférences d'Inkscape. Voir les [FAQ](/docs/faq/#i-have-downloaded-and-unzipped-the-latest-release-where-do-i-put-it)
