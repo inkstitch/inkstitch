@@ -95,7 +95,7 @@ Ink/Stitch offers various stitch types. Depending on which stitch type you are w
 Have a look at this table and follow the links to understand how to create a specific stitch type:
 
 Path Object | Stitch Type
----|---|---
+---|---
 (Dashed) stroke |[running stitch](/docs/stitches/running-stitch/), [manual stitch](/docs/stitches/manual-stitch/), [zig-zag stitch](/docs/stitches/zigzag-stitch/), [bean stitch](/docs/stitches/bean-stitch/)
 Two combined strokes (with optional rungs) | [satin column](/docs/stitches/satin-column), [e-stitch](/docs/stitches/e-stitch)
 Closed path with a fill color | [fill stitch](/docs/stitches/fill-stitch/)
