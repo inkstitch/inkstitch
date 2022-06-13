@@ -41,7 +41,8 @@ Raccourcis&nbsp;Clavier | Effet | Remplace
 
 ### Télécharger et importer des raccourcis clavier
 
-* [Téléchargez le fichier de raccourcis clavier](/assets/files/inkstitch.xml)
+
+* [Téléchargez le fichier de raccourcis clavier](/assets/files/inkstitch.xml){: download="inkstitch.xml" }
 * Allez à  `Edition > Préférences > Interface > Clavier`
 * Cliquez sur  `Importer...`
 * Sélectionnez votre fichier de raccourcis (inkstitch.xml)
