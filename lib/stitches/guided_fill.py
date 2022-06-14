@@ -1,19 +1,20 @@
+import numpy as np
 from shapely import geometry as shgeo
 from shapely.ops import linemerge, unary_union
 
 from .auto_fill import (build_fill_stitch_graph,
                         build_travel_graph, collapse_sequential_outline_edges, fallback,
                         find_stitch_path, graph_is_valid, travel)
-from .running_stitch import running_stitch
 from ..i18n import _
 from ..stitch_plan import Stitch
-from ..utils.geometry import Point as InkstitchPoint, reverse_line_string
+from ..utils.geometry import Point as InkstitchPoint, ensure_geometry_collection, ensure_multi_line_string, reverse_line_string
 
 
 def guided_fill(shape,
                 guideline,
                 angle,
                 row_spacing,
+                num_staggers,
                 max_stitch_length,
                 running_stitch_length,
                 skip_last,
@@ -21,7 +22,7 @@ def guided_fill(shape,
                 ending_point=None,
                 underpath=True):
     try:
-        segments = intersect_region_with_grating_guideline(shape, guideline, row_spacing)
+        segments = intersect_region_with_grating_guideline(shape, guideline, row_spacing, num_staggers, max_stitch_length)
         fill_stitch_graph = build_fill_stitch_graph(shape, segments, starting_point, ending_point)
     except ValueError:
         # Small shapes will cause the graph to fail - min() arg is an empty sequence through insert node
@@ -54,8 +55,7 @@ def path_to_stitches(path, travel_graph, fill_stitch_graph, stitch_length, runni
             if edge[0] != path_geometry.coords[0]:
                 path_geometry = reverse_line_string(path_geometry)
 
-            point_list = [Stitch(*point) for point in path_geometry.coords]
-            new_stitches = running_stitch(point_list, stitch_length)
+            new_stitches = [Stitch(*point) for point in path_geometry.coords]
 
             # need to tag stitches
 
@@ -71,7 +71,9 @@ def path_to_stitches(path, travel_graph, fill_stitch_graph, stitch_length, runni
     return stitches
 
 
-def extend_line(line, minx, maxx, miny, maxy):
+def extend_line(line, shape):
+    (minx, miny, maxx, maxy) = shape.bounds
+
     line = line.simplify(0.01, False)
 
     upper_left = InkstitchPoint(minx, miny)
@@ -91,19 +93,14 @@ def extend_line(line, minx, maxx, miny, maxy):
 
 
 def repair_multiple_parallel_offset_curves(multi_line):
-    lines = linemerge(multi_line)
-    lines = list(lines.geoms)
-    max_length = -1
-    max_length_idx = -1
-    for idx, subline in enumerate(lines):
-        if subline.length > max_length:
-            max_length = subline.length
-            max_length_idx = idx
+    lines = ensure_multi_line_string(linemerge(multi_line))
+    longest_line = max(lines.geoms, key=lambda line: line.length)
+
     # need simplify to avoid doubled points caused by linemerge
-    return lines[max_length_idx].simplify(0.01, False)
+    return longest_line.simplify(0.01, False)
 
 
-def repair_non_simple_lines(line):
+def repair_non_simple_line(line):
     repaired = unary_union(line)
     counter = 0
     # Do several iterations since we might have several concatenated selfcrossings
@@ -122,62 +119,61 @@ def repair_non_simple_lines(line):
         return repaired
 
 
-def intersect_region_with_grating_guideline(shape, line, row_spacing, flip=False):  # noqa: C901
+def take_only_line_strings(thing):
+    things = ensure_geometry_collection(thing)
+    line_strings = [line for line in things.geoms if isinstance(line, shgeo.LineString)]
 
-    row_spacing = abs(row_spacing)
-    (minx, miny, maxx, maxy) = shape.bounds
-    upper_left = InkstitchPoint(minx, miny)
-    rows = []
+    return shgeo.MultiLineString(line_strings)
 
+
+def apply_stitches(line, max_stitch_length, num_staggers, row_spacing, row_num):
+    threshold = row_spacing / 2.0
+    simplified_line = line.simplify(row_spacing / 2.0, False)
+    simplified_points = [shgeo.Point(x, y) for x, y in simplified_line.coords]
+    start = (float(row_num % num_staggers) / num_staggers) * max_stitch_length
+    distances = np.arange(start, line.length, max_stitch_length)
+    stitched_line = shgeo.LineString([line.interpolate(distance) for distance in distances])
+
+    # stitched_line may round corners, which will look terrible.  This finds them and adds
+    # them in.
+    extra_points = [line.project(point) for point in simplified_points if point.distance(stitched_line) > threshold]
+    distances = np.sort(np.concatenate([distances, extra_points]))
+
+    return shgeo.LineString([line.interpolate(distance) for distance in distances])
+
+
+def intersect_region_with_grating_guideline(shape, line, row_spacing, num_staggers, max_stitch_length):
     if line.geom_type != 'LineString' or not line.is_simple:
-        line = repair_non_simple_lines(line)
+        line = repair_non_simple_line(line)
+
     # extend the line towards the ends to increase probability that all offsetted curves cross the shape
-    line = extend_line(line, minx, maxx, miny, maxy)
+    line = extend_line(line, shape)
 
-    line_offsetted = line
-    res = line_offsetted.intersection(shape)
-    while isinstance(res, (shgeo.GeometryCollection, shgeo.MultiLineString)) or (not res.is_empty and len(res.coords) > 1):
-        if isinstance(res, (shgeo.GeometryCollection, shgeo.MultiLineString)):
-            runs = [line_string.coords for line_string in res.geoms if (
-                    not line_string.is_empty and len(line_string.coords) > 1)]
+    row = 0
+    direction = 1
+    while True:
+        offset_line = line.parallel_offset(row * row_spacing * direction, 'left', join_style=shgeo.JOIN_STYLE.bevel)
+        offset_line = take_only_line_strings(offset_line)
+
+        if isinstance(offset_line, shgeo.MultiLineString):
+            offset_line = repair_multiple_parallel_offset_curves(offset_line)
+
+        if not offset_line.is_simple:
+            offset_line = repair_non_simple_line(offset_line)
+
+        if direction == -1:
+            offset_line = reverse_line_string(offset_line)
+
+        stitched_line = apply_stitches(offset_line, max_stitch_length, num_staggers, row_spacing, row * direction)
+        intersection = shape.intersection(stitched_line)
+
+        if intersection.is_empty:
+            if direction == 1:
+                direction = -1
+                row = 1
+            else:
+                break
         else:
-            runs = [res.coords]
-
-        runs.sort(key=lambda seg: (
-                InkstitchPoint(*seg[0]) - upper_left).length())
-        if flip:
-            runs.reverse()
-            runs = [tuple(reversed(run)) for run in runs]
-
-        if row_spacing > 0:
-            rows.append(runs)
-        else:
-            rows.insert(0, runs)
-
-        line_offsetted = line_offsetted.parallel_offset(row_spacing, 'left', 5)
-        if line_offsetted.geom_type == 'MultiLineString':  # if we got multiple lines take the longest
-            line_offsetted = repair_multiple_parallel_offset_curves(line_offsetted)
-        if not line_offsetted.is_simple:
-            line_offsetted = repair_non_simple_lines(line_offsetted)
-
-        if row_spacing < 0:
-            line_offsetted = reverse_line_string(line_offsetted)
-        line_offsetted = line_offsetted.simplify(0.01, False)
-        res = line_offsetted.intersection(shape)
-        if row_spacing > 0 and not isinstance(res, (shgeo.GeometryCollection, shgeo.MultiLineString)):
-            if (res.is_empty or len(res.coords) == 1):
-                row_spacing = -row_spacing
-
-                line_offsetted = line.parallel_offset(row_spacing, 'left', 5)
-                if line_offsetted.geom_type == 'MultiLineString':  # if we got multiple lines take the longest
-                    line_offsetted = repair_multiple_parallel_offset_curves(
-                        line_offsetted)
-                if not line_offsetted.is_simple:
-                    line_offsetted = repair_non_simple_lines(line_offsetted)
-                # using negative row spacing leads as a side effect to reversed offsetted lines - here we undo this
-                line_offsetted = reverse_line_string(line_offsetted)
-                line_offsetted = line_offsetted.simplify(0.01, False)
-                res = line_offsetted.intersection(shape)
-
-    for row in rows:
-        yield from row
+            for segment in take_only_line_strings(intersection).geoms:
+                yield segment.coords[:]
+            row += 1

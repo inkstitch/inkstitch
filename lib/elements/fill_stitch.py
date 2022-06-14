@@ -210,7 +210,7 @@ class FillStitch(EmbroideryElement):
            tooltip=_('Setting this dictates how many rows apart the stitches will be before they fall in the same column position.'),
            type='int',
            sort_index=6,
-           select_items=[('fill_method', 0), ('fill_method', 3)],
+           select_items=[('fill_method', 0), ('fill_method', 2), ('fill_method', 3)],
            default=4)
     def staggers(self):
         return max(self.get_int_param("staggers", 4), 1)
@@ -658,6 +658,7 @@ class FillStitch(EmbroideryElement):
                 guide_line.geoms[0],
                 self.angle,
                 self.row_spacing,
+                self.staggers,
                 self.max_stitch_length,
                 self.running_stitch_length,
                 self.skip_last,
