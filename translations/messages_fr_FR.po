@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2022-06-11 02:18+0000\n"
-"PO-Revision-Date: 2022-06-13 02:32\n"
+"PO-Revision-Date: 2022-06-14 02:35\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -911,7 +911,7 @@ msgstr "Espacement entre les rangées"
 
 #: lib/elements/fill_stitch.py:173
 msgid "Distance between rows of stitches."
-msgstr "Distance entre les rangées de points."
+msgstr "Espacement entre les rangées de points."
 
 #: lib/elements/fill_stitch.py:187
 msgid "Maximum fill stitch length"
@@ -1355,7 +1355,7 @@ msgstr "Sauter ce nombre de lignes à la fin."
 
 #: lib/elements/stroke.py:182
 msgid "Line distance exponent"
-msgstr "Exposant de la distance entre les lignes"
+msgstr "Exposant de l'espacement entre les lignes"
 
 #: lib/elements/stroke.py:183
 msgid "Increase density towards one side."
