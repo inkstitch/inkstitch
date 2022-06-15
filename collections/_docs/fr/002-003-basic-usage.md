@@ -2,7 +2,7 @@
 title: "Premiers pas"
 permalink: /fr/docs/basic-usage/
 excerpt: ""
-last_modified_at: 2019-10-19
+last_modified_at: 2022-06-14
 toc: true
 ---
 Essayez les étapes suivantes pour tester l'extension et apprendre les fonctionnalités de base.
@@ -17,19 +17,18 @@ Créez un objet, par exemple un cercle et assurez-vous qu'il a un remplissage.
 
 ![Cercle avec couleur de remplissage](/assets/images/docs/en/basic-usage-circle-fill-color.png)
 
-## Etape 2 - Convertir en chemin
+## Etape 2 - Convertir en chemin (optionnel)
 
-Transformer **Tous les objets** que vous voulez broder en chemin:
+Ink/Stitch travaille mieux avec des chemins. Il est préférable de transformer tous  les objets que vous voulez broder en chemin:
 
 * Sélectionnez tous les objets (`Ctrl+A`)
-* ``Chemin > Objet en chemin` ou `Ctrl+Alt+C`.
+* `Chemin > Objet en chemin` ou `Ctrl+Alt+C`.
 
-**Info:** Les objets qui ne sont pas du type "chemin", sont ignorés par Ink/Stitch.
-{: .notice--warning }
+
 
 ## Etape 3 - Paramétrer les chemins SVG pour la broderie
 
-*  Sélectionner au moins un objet.
+* Sélectionner au moins un objet.
 * Ouvrir `Extensions > Ink/Stitch  > Paramètres`.
 * Essayer différentes valeurs. Le simulateur s'actualisera à chaque modification des paramètres.
 * Pour l'instant, fermer sans sauvegarder.
