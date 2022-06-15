@@ -21,7 +21,7 @@ Sélectionnez le trait et allez à `Objet > Fond et contour...` et choisissez l�
 
 Ouvrir [`Extensions > Ink/Stitch  > Paramètres`](/fr/docs/params/#stroke-params) pour modifier les paramètres selon vos besoins.
 
-Le sens de la broderie peut être influencé par la direction du chemin. Si vous souhaitez échanger le départ et l'arrivée de votre point droit, exécutez `Chemin > Inverser`.
+Le sens de la broderie est influencé par la direction du chemin. Si vous souhaitez échanger le départ et l'arrivée de votre point droit, exécutez `Chemin > Inverser`.
 
 **Info:** Afin d'éviter les angles arrondis, un point supplémentaire sera ajouté à la pointe des coins pointus.
 {: .notice--info style="clear: both;" }
