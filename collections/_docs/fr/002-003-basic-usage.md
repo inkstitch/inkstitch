@@ -12,7 +12,7 @@ Essayez les étapes suivantes pour tester l'extension et apprendre les fonctionn
 
 ## Etape 1 - Dessiner un objet
 
-Créez un objet, par exemple un cercle et assurez-vous qu'il a un remplissage.
+Créez un objet, par exemple un cercle et assurez-vous qu'il a un remplissage en ouvrant `Objet > Fond et Contour`
 
 
 ![Cercle avec couleur de remplissage](/assets/images/docs/en/basic-usage-circle-fill-color.png)
