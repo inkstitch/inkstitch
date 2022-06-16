@@ -48,7 +48,9 @@ def get_marker_elements(node, marker, get_fills=True, get_strokes=True, get_sati
     fills = []
     strokes = []
     satins = []
-    xpath = "./parent::svg:g/*[contains(@style, 'marker-start:url(#inkstitch-%s-marker)')]" % marker
+    # do not close marker-start:url(
+    # if the marker group has been copied and pasted in Inkscape it may have been duplicated with an updated id (e.g. -4)
+    xpath = "./parent::svg:g/*[contains(@style, 'marker-start:url(#inkstitch-%s-marker')]" % marker
     markers = node.xpath(xpath, namespaces=inkex.NSS)
     for marker in markers:
         if marker.tag not in EMBROIDERABLE_TAGS:
@@ -82,6 +84,6 @@ def has_marker(node, marker=list()):
         marker = MARKER
     for m in marker:
         style = node.get('style') or ''
-        if "marker-start:url(#inkstitch-%s-marker)" % m in style:
+        if "marker-start:url(#inkstitch-%s-marker" % m in style:
             return True
     return False
