@@ -343,7 +343,7 @@ class Font(object):
         for marker in MARKER:
             xpath = ".//*[contains(@style, 'marker-start:url(#inkstitch-%s-marker')]" % marker
             marked_elements = group.xpath(xpath, namespaces=inkex.NSS)
-            if group.xpath(xpath, namespaces=inkex.NSS):
+            if marked_elements:
                 ensure_marker(group.getroottree().getroot(), marker)
                 for element in marked_elements:
                     marker_style = element.style['marker-start']
