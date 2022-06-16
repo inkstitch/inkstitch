@@ -18,7 +18,7 @@ def reset_stitch_plan(svg):
     # get previously invisible layers (they still should be hidden afterwards)
     if layer is not None:
         invisible_layers = layer.get(INKSTITCH_ATTRIBS['invisible_layers'], '').split(",")
-        del layer[:]
+        layer.getparent().remove(layer)
 
         # if there are layers with reduced opacity, remove opacity attribute or unhide hidden layers
         for g in svg.findall(SVG_GROUP_TAG):
