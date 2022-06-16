@@ -61,7 +61,7 @@ def stitch_groups_to_stitch_plan(stitch_groups, collapse_len=None, min_stitch_le
         color_block.add_stitches(stitches=stitch_group.stitches, tie_modus=stitch_group.tie_modus,
                                  force_lock_stitches=stitch_group.force_lock_stitches, no_ties=stitch_group.stitch_as_is)
 
-        if min_stitch_len > 0:
+        if min_stitch_len and min_stitch_len > 0:
             min_len = min_stitch_len * PIXELS_PER_MM
             color_block.drop_short_stitches(min_len)
 
