@@ -73,7 +73,7 @@ class GeneratePalette(InkstitchExtension):
             else:
                 number = 0
                 name = ' '.join(color_name)
-            color = "\n%s\t%s\t%s\t%s   %s" % (str(color[0]).rjust(3), str(color[1]).rjust(3), str(color[2]).rjust(3), name.rjust(30), number)
+            color = "\n%s\t%s\t%s\t%s    %s" % (str(color[0]).rjust(3), str(color[1]).rjust(3), str(color[2]).rjust(3), name.rjust(30), number)
             colors.append(color)
 
         return colors

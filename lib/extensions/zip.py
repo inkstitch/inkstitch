@@ -43,8 +43,9 @@ class Zip(InkstitchExtension):
 
         self.metadata = self.get_inkstitch_metadata()
         collapse_len = self.metadata['collapse_len_mm']
+        min_stitch_len = self.metadata['min_stitch_len_mm']
         patches = self.elements_to_stitch_groups(self.elements)
-        stitch_plan = stitch_groups_to_stitch_plan(patches, collapse_len=collapse_len)
+        stitch_plan = stitch_groups_to_stitch_plan(patches, collapse_len=collapse_len, min_stitch_len=min_stitch_len)
 
         base_file_name = self.get_base_file_name()
         path = tempfile.mkdtemp()

@@ -142,6 +142,18 @@ class ColorBlock(object):
     def replace_stitches(self, stitches):
         self.stitches = stitches
 
+    def drop_short_stitches(self, min_stitch_len):
+        stitches = [self.stitches[0]]
+        dropped_length = 0
+        for stitch1, stitch2 in zip(self.stitches[:-1], self.stitches[1:]):
+            length = Point(stitch1.x, stitch1.y).distance(Point(stitch2.x, stitch2.y))
+            if length + dropped_length >= min_stitch_len:
+                stitches.append(stitch2)
+                dropped_length = 0
+            else:
+                dropped_length += length
+        self.replace_stitches(stitches)
+
     @property
     def bounding_box(self):
         minx = min(stitch.x for stitch in self)

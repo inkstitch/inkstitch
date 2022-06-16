@@ -15,6 +15,9 @@
     <param name="collapse_len_mm" type="float" precision="1" min="0" max="10"
            gui-text="Collapse length (mm)"
            gui-description="Jump stitches smaller than this will be treated as normal stitches.">3</param>
+    <param name="min_stitch_len_mm" type="float" precision="1" min="0" max="10"
+           gui-text="Minimal stitch length (mm)"
+           gui-description="Drop stitches smaller than this value.">0</param>
     <script>
         {{ command_tag | safe }}
     </script>

@@ -18,7 +18,8 @@ def get_stitch_plan():
 
     metadata = g.extension.get_inkstitch_metadata()
     collapse_len = metadata['collapse_len_mm']
+    min_stitch_len = metadata['min_stitch_len_mm']
     patches = g.extension.elements_to_stitch_groups(g.extension.elements)
-    stitch_plan = stitch_groups_to_stitch_plan(patches, collapse_len=collapse_len)
+    stitch_plan = stitch_groups_to_stitch_plan(patches, collapse_len=collapse_len, min_stitch_len=min_stitch_len)
 
     return jsonify(stitch_plan)

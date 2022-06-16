@@ -13,7 +13,7 @@ from .color_block import ColorBlock
 from .ties import add_ties
 
 
-def stitch_groups_to_stitch_plan(stitch_groups, collapse_len=None, disable_ties=False):  # noqa: C901
+def stitch_groups_to_stitch_plan(stitch_groups, collapse_len=None, min_stitch_len=0, disable_ties=False):  # noqa: C901
 
     """Convert a collection of StitchGroups to a StitchPlan.
 
@@ -30,6 +30,7 @@ def stitch_groups_to_stitch_plan(stitch_groups, collapse_len=None, disable_ties=
     if collapse_len is None:
         collapse_len = 3.0
     collapse_len = collapse_len * PIXELS_PER_MM
+
     stitch_plan = StitchPlan()
     color_block = stitch_plan.new_color_block(color=stitch_groups[0].color)
 
@@ -59,6 +60,10 @@ def stitch_groups_to_stitch_plan(stitch_groups, collapse_len=None, disable_ties=
 
         color_block.add_stitches(stitches=stitch_group.stitches, tie_modus=stitch_group.tie_modus,
                                  force_lock_stitches=stitch_group.force_lock_stitches, no_ties=stitch_group.stitch_as_is)
+
+        if min_stitch_len > 0:
+            min_len = min_stitch_len * PIXELS_PER_MM
+            color_block.drop_short_stitches(min_len)
 
         if stitch_group.trim_after:
             color_block.add_stitch(trim=True)
