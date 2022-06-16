@@ -346,9 +346,7 @@ class Font(object):
             if marked_elements:
                 ensure_marker(group.getroottree().getroot(), marker)
                 for element in marked_elements:
-                    marker_style = element.style['marker-start']
-                    if marker_style != marker:
-                        element.style['marker-start'] = "url(#inkstitch-%s-marker)" % marker
+                    element.style['marker-start'] = "url(#inkstitch-%s-marker)" % marker
 
     def _apply_auto_satin(self, group, trim):
         """Apply Auto-Satin to an SVG XML node tree with an svg:g at its root.
