@@ -106,7 +106,7 @@ class SatinColumn(EmbroideryElement):
            type='float', unit="%",
            default=10)
     def short_stitch_inset(self):
-        return (self.get_float_param("short_stitch_inset") or 10) / 100
+        return self.get_float_param("short_stitch_inset", 10) / 100
 
     @property
     @param('short_stitch_distance',
@@ -115,7 +115,7 @@ class SatinColumn(EmbroideryElement):
            type='float', unit="mm",
            default=0.25)
     def short_stitch_distance(self):
-        return (self.get_float_param("short_stitch_distance") or 0.25) * PIXELS_PER_MM
+        return self.get_float_param("short_stitch_distance", 0.25) * PIXELS_PER_MM
 
     @property
     def color(self):
@@ -921,7 +921,7 @@ class SatinColumn(EmbroideryElement):
             if left.distance(sides[0][i-1]) < self.short_stitch_distance:
                 split_point = self._get_split_point(left, right, self.short_stitch_inset)
                 sides[0][i] = Point(split_point.x, split_point.y)
-            elif right.distance(sides[1][i-1]) < self.short_stitch_distance:
+            if right.distance(sides[1][i-1]) < self.short_stitch_distance:
                 split_point = self._get_split_point(right, left, self.short_stitch_inset)
                 sides[1][i] = Point(split_point.x, split_point.y)
 
