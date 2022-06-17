@@ -499,7 +499,7 @@ class FillStitch(EmbroideryElement):
                     if self.fill_method == 0:
                         stitch_groups.extend(self.do_auto_fill(shape, last_patch, start, end))
                     if self.fill_method == 1:
-                        stitch_groups.extend(self.do_contour_fill(shape, last_patch, start))
+                        stitch_groups.extend(self.do_contour_fill(self.fill_shape(shape), last_patch, start))
                     elif self.fill_method == 2:
                         stitch_groups.extend(self.do_guided_fill(shape, last_patch, start, end))
                 except Exception:
@@ -558,42 +558,41 @@ class FillStitch(EmbroideryElement):
                 self.underpath))
         return [stitch_group]
 
-    def do_contour_fill(self, shape, last_patch, starting_point):
+    def do_contour_fill(self, polygon, last_patch, starting_point):
         if not starting_point:
             starting_point = (0, 0)
         starting_point = shgeo.Point(starting_point)
 
         stitch_groups = []
-        for polygon in self.fill_shape(shape).geoms:
-            tree = contour_fill.offset_polygon(polygon, self.row_spacing, self.join_style + 1, self.clockwise)
+        tree = contour_fill.offset_polygon(polygon, self.row_spacing, self.join_style + 1, self.clockwise)
 
-            stitches = []
-            if self.contour_strategy == 0:
-                stitches = contour_fill.inner_to_outer(
-                    tree,
-                    self.row_spacing,
-                    self.max_stitch_length,
-                    starting_point,
-                    self.avoid_self_crossing
-                )
-            elif self.contour_strategy == 1:
-                stitches = contour_fill.single_spiral(
-                    tree,
-                    self.max_stitch_length,
-                    starting_point
-                )
-            elif self.contour_strategy == 2:
-                stitches = contour_fill.double_spiral(
-                    tree,
-                    self.max_stitch_length,
-                    starting_point
-                )
+        stitches = []
+        if self.contour_strategy == 0:
+            stitches = contour_fill.inner_to_outer(
+                tree,
+                self.row_spacing,
+                self.max_stitch_length,
+                starting_point,
+                self.avoid_self_crossing
+            )
+        elif self.contour_strategy == 1:
+            stitches = contour_fill.single_spiral(
+                tree,
+                self.max_stitch_length,
+                starting_point
+            )
+        elif self.contour_strategy == 2:
+            stitches = contour_fill.double_spiral(
+                tree,
+                self.max_stitch_length,
+                starting_point
+            )
 
-            stitch_group = StitchGroup(
-                color=self.color,
-                tags=("auto_fill", "auto_fill_top"),
-                stitches=stitches)
-            stitch_groups.append(stitch_group)
+        stitch_group = StitchGroup(
+            color=self.color,
+            tags=("auto_fill", "auto_fill_top"),
+            stitches=stitches)
+        stitch_groups.append(stitch_group)
 
         return stitch_groups
 
