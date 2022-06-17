@@ -97,6 +97,8 @@ inkstitch_attribs = [
     'running_stitch_length_mm',
     # satin column
     'satin_column',
+    'short_stitch_distance',
+    'short_stitch_inset',
     'running_stitch_length_mm',
     'center_walk_underlay',
     'center_walk_underlay_stitch_length_mm',
