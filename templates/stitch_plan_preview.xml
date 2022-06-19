@@ -23,8 +23,8 @@
     <separator />
     <spacer />
     <label appearance="header">Density settings</label>
-    <param name="num-neighbors" gui-text="Mark red if there are more than this number of stitches" gui-description="0 = no density info" type="int" indent="1">0</param>
-    <param name="density-radius" gui-text="withing a radius (mm) of" type="float" indent="1">1</param>
+    <param name="num-neighbors" gui-text="Mark red if there are more than this number of stitches" gui-description="0 = no density info" type="int" indent="1" min="0" max="99">0</param>
+    <param name="density-radius" gui-text="withing a radius (mm) of" type="float" indent="1" min="0" max="50">1</param>
     <spacer />
     <param name="density-only" gui-text="Display only density points" type="boolean" indent="1">false</param>
     <script>
