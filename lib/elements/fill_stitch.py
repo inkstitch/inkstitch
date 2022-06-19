@@ -111,6 +111,15 @@ class FillStitch(EmbroideryElement):
         return self.get_int_param('fill_method', 0)
 
     @property
+    @param('guided_fill_strategy', _('Guided Fill Strategy'), type='dropdown', default=0,
+           options=[_("Copy"), _("Parallel Offset")], select_items=[('fill_method', 2)], sort_index=3,
+           tooltip=_('Copy (the default) will fill the shape with shifted copies of the line.' +
+                     'Parallel offset will ensure that each line is always a consistent distance from its neighbor.' +
+                     'Sharp corners may be introduced.'))
+    def guided_fill_strategy(self):
+        return self.get_int_param('guided_fill_strategy', 0)
+
+    @property
     @param('contour_strategy', _('Contour Fill Strategy'), type='dropdown', default=0,
            options=[_("Inner to Outer"), _("Single spiral"), _("Double spiral")], select_items=[('fill_method', 1)], sort_index=3)
     def contour_strategy(self):
@@ -664,7 +673,9 @@ class FillStitch(EmbroideryElement):
                 self.skip_last,
                 starting_point,
                 ending_point,
-                self.underpath))
+                self.underpath,
+                self.guided_fill_strategy,
+            ))
         return [stitch_group]
 
     @cache

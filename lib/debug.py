@@ -158,7 +158,7 @@ class Debug(object):
     @check_enabled
     def log_line_strings(self, line_strings, name=None, color=None):
         path = line_strings_to_path(line_strings)
-        path.set('style', str(inkex.Style({"stroke": color or "#000000", "stroke-width": "0.3"})))
+        path.set('style', str(inkex.Style({"stroke": color or "#000000", "stroke-width": "0.3", "fill": None})))
 
         if name is not None:
             path.set(INKSCAPE_LABEL, name)
@@ -169,7 +169,7 @@ class Debug(object):
     def log_line(self, start, end, name="line", color=None):
         self.log_svg_element(etree.Element("path", {
             "d": "M%s,%s %s,%s" % (start + end),
-            "style": str(inkex.Style({"stroke": color or "#000000", "stroke-width": "0.3"})),
+            "style": str(inkex.Style({"stroke": color or "#000000", "stroke-width": "0.3", "fill": None})),
             INKSCAPE_LABEL: name
         }))
 
@@ -182,7 +182,7 @@ class Debug(object):
 
         self.log_svg_element(etree.Element("path", {
             "d": d,
-            "style": str(inkex.Style({"stroke": color or "#000000", "stroke-width": "0.3"})),
+            "style": str(inkex.Style({"stroke": color or "#000000", "stroke-width": "0.3", "fill": None})),
             INKSCAPE_LABEL: name
         }))
 
