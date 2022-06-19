@@ -10,6 +10,7 @@ import sys
 import traceback
 
 from shapely import geometry as shgeo
+from shapely.errors import TopologicalError
 from shapely.validation import explain_validity, make_valid
 
 from ..i18n import _
@@ -231,8 +232,7 @@ class FillStitch(EmbroideryElement):
         # from the first. So let's at least make sure the "first" thing is the
         # biggest path.
         paths = self.paths
-        paths.sort(key=lambda point_list: shgeo.Polygon(
-            point_list).area, reverse=True)
+        paths.sort(key=lambda point_list: shgeo.Polygon(point_list).area, reverse=True)
         # Very small holes will cause a shape to be rendered as an outline only
         # they are too small to be rendered and only confuse the auto_fill algorithm.
         # So let's ignore them
@@ -244,15 +244,17 @@ class FillStitch(EmbroideryElement):
     @property
     @cache
     def shape(self):
-        if self.shape_is_valid(self.original_shape):
-            return self.original_shape
+        shape = self._get_clipped_path()
+
+        if self.shape_is_valid(shape):
+            return shape
 
         # Repair not valid shapes
         logger = logging.getLogger('shapely.geos')
         level = logger.level
         logger.setLevel(logging.CRITICAL)
 
-        valid_shape = make_valid(self.original_shape)
+        valid_shape = make_valid(shape)
 
         logger.setLevel(level)
         polygons = []
@@ -262,6 +264,32 @@ class FillStitch(EmbroideryElement):
             if isinstance(polygon, shgeo.MultiPolygon):
                 polygons.extend(polygon.geoms)
         return shgeo.MultiPolygon(polygons)
+
+    def _get_clipped_path(self):
+        if self.node.clip is None:
+            return self.original_shape
+
+        from .element import EmbroideryElement
+        clip_element = EmbroideryElement(self.node.clip)
+        clip_element.paths.sort(key=lambda point_list: shgeo.Polygon(point_list).area, reverse=True)
+        polygon = shgeo.MultiPolygon([(clip_element.paths[0], clip_element.paths[1:])])
+        try:
+            intersection = polygon.intersection(self.original_shape)
+        except TopologicalError:
+            return self.original_shape
+
+        if isinstance(intersection, shgeo.Polygon):
+            return shgeo.MultiPolygon([intersection])
+
+        if isinstance(intersection, shgeo.MultiPolygon):
+            return intersection
+
+        polygons = []
+        if isinstance(intersection, shgeo.GeometryCollection):
+            for geom in intersection.geoms:
+                if isinstance(geom, shgeo.Polygon):
+                    polygons.append(geom)
+        return shgeo.MultiPolygon([polygons])
 
     def shape_is_valid(self, shape):
         # Shapely will log to stdout to complain about the shape unless we make
