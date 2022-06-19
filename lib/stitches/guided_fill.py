@@ -127,19 +127,29 @@ def take_only_line_strings(thing):
 
 
 def apply_stitches(line, max_stitch_length, num_staggers, row_spacing, row_num):
+    start = (float(row_num % num_staggers) / num_staggers) * max_stitch_length
+    projections = np.arange(start, line.length, max_stitch_length)
+    points = np.array([line.interpolate(projection).coords[0] for projection in projections])
+    stitched_line = shgeo.LineString(points)
+
+    # stitched_line may round corners, which will look terrible.  This finds the
+    # corners.
     threshold = row_spacing / 2.0
     simplified_line = line.simplify(row_spacing / 2.0, False)
     simplified_points = [shgeo.Point(x, y) for x, y in simplified_line.coords]
-    start = (float(row_num % num_staggers) / num_staggers) * max_stitch_length
-    distances = np.arange(start, line.length, max_stitch_length)
-    stitched_line = shgeo.LineString([line.interpolate(distance) for distance in distances])
 
-    # stitched_line may round corners, which will look terrible.  This finds them and adds
-    # them in.
-    extra_points = [line.project(point) for point in simplified_points if point.distance(stitched_line) > threshold]
-    distances = np.sort(np.concatenate([distances, extra_points]))
+    extra_points = []
+    extra_point_projections = []
+    for point in simplified_points:
+        if point.distance(stitched_line) > threshold:
+            extra_points.append(point.coords[0])
+            extra_point_projections.append(line.project(point))
 
-    return shgeo.LineString([line.interpolate(distance) for distance in distances])
+    # Now we need to insert the new points into their correct spots in the line.
+    indices = np.searchsorted(projections, extra_point_projections)
+    points = np.insert(points, indices, extra_points, axis=0)
+
+    return shgeo.LineString(points)
 
 
 def intersect_region_with_grating_guideline(shape, line, row_spacing, num_staggers, max_stitch_length):
