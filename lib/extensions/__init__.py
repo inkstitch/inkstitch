@@ -15,6 +15,7 @@ from .convert_to_satin import ConvertToSatin
 from .convert_to_stroke import ConvertToStroke
 from .cut_satin import CutSatin
 from .cutwork_segmentation import CutworkSegmentation
+from .density_map import DensityMap
 from .duplicate_params import DuplicateParams
 from .embroider_settings import EmbroiderSettings
 from .flip import Flip
@@ -48,6 +49,7 @@ from .zip import Zip
 
 __all__ = extensions = [StitchPlanPreview,
                         StitchPlanPreviewUndo,
+                        DensityMap,
                         Install,
                         Params,
                         Print,

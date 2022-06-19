@@ -9,7 +9,7 @@ from math import pi
 import inkex
 
 from ..i18n import _
-from ..utils import Point, cache, get_stitch_density
+from ..utils import Point, cache
 from .tags import INKSCAPE_GROUPMODE, INKSCAPE_LABEL, INKSTITCH_ATTRIBS
 from .units import PIXELS_PER_MM, get_viewbox_transform
 
@@ -214,35 +214,7 @@ def color_block_to_paths(color_block, svg, destination, visual_commands):
             add_commands(Stroke(path), ["stop"])
 
 
-def color_block_to_density_markers(svg, destination, stitch_plan, density):
-    num_neighbors = density[0]
-    radius = density[1] * PIXELS_PER_MM
-    density = get_stitch_density(stitch_plan, radius)
-    group = inkex.Group(attrib={
-        'id': '__density_info_layer__',
-        INKSCAPE_LABEL: "Stitch Density"
-    })
-    destination.append(group)
-
-    colors = ['red', 'lightgreen']
-    first = True
-    for neighbors, coord in zip(density[0], density[1]):
-        color = colors[0] if neighbors > num_neighbors else colors[1]
-        density_marker = inkex.Circle(attrib={
-            'id': svg.get_unique_id("density_marker"),
-            'style': "fill: %s; stroke: white; stroke-width: 0.01%%;" % color,
-            'cx': "%s" % coord[0],
-            'cy': "%s" % coord[1],
-            'r': str(0.5),
-            'transform': get_correction_transform(svg)
-        })
-        group.append(density_marker)
-        if first:
-            # print(dir(density_marker), file=sys.stderr)
-            first = False
-
-
-def render_stitch_plan(svg, stitch_plan, realistic=False, visual_commands=True, density=None):
+def render_stitch_plan(svg, stitch_plan, realistic=False, visual_commands=True):
     layer = svg.find(".//*[@id='__inkstitch_stitch_plan__']")
     if layer is None:
         layer = inkex.Group(attrib={
@@ -259,21 +231,16 @@ def render_stitch_plan(svg, stitch_plan, realistic=False, visual_commands=True, 
 
     svg.append(layer)
 
-    # render stitch plan if there is no density_only setting
-    if density and not density[2]:
-        for i, color_block in enumerate(stitch_plan):
-            group = inkex.Group(attrib={
-                'id': '__color_block_%d__' % i,
-                INKSCAPE_LABEL: "color block %d" % (i + 1)
-            })
-            layer.append(group)
-            if realistic:
-                color_block_to_realistic_stitches(color_block, svg, group)
-            else:
-                color_block_to_paths(color_block, svg, group, visual_commands)
-
-    if density:
-        color_block_to_density_markers(svg, layer, stitch_plan, density)
+    for i, color_block in enumerate(stitch_plan):
+        group = inkex.Group(attrib={
+            'id': '__color_block_%d__' % i,
+            INKSCAPE_LABEL: "color block %d" % (i + 1)
+        })
+        layer.append(group)
+        if realistic:
+            color_block_to_realistic_stitches(color_block, svg, group)
+        else:
+            color_block_to_paths(color_block, svg, group, visual_commands)
 
     if realistic:
         filter_document = inkex.load_svg(realistic_filter)

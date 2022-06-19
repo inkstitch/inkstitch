@@ -21,9 +21,6 @@ class StitchPlanPreview(InkstitchExtension):
         self.arg_parser.add_argument("-s", "--move-to-side", type=Boolean, default=True, dest="move_to_side")
         self.arg_parser.add_argument("-v", "--layer-visibility", type=int, default=0, dest="layer_visibility")
         self.arg_parser.add_argument("-n", "--needle-points", type=Boolean, default=False, dest="needle_points")
-        self.arg_parser.add_argument("-l", "--num-neighbors", type=int, default=0, dest="num_neighbors")
-        self.arg_parser.add_argument("-r", "--density-radius", type=float, default=1.0, dest="radius")
-        self.arg_parser.add_argument("-d", "--density-only", type=Boolean, default=False, dest="density_only")
 
     def effect(self):
         # delete old stitch plan
@@ -35,16 +32,12 @@ class StitchPlanPreview(InkstitchExtension):
             return
 
         realistic = False
-        if self.options.num_neighbors > 0:
-            density = [self.options.num_neighbors, self.options.radius, self.options.density_only]
-        else:
-            density = None
         visual_commands = True
         self.metadata = self.get_inkstitch_metadata()
         collapse_len = self.metadata['collapse_len_mm']
         patches = self.elements_to_stitch_groups(self.elements)
         stitch_plan = stitch_groups_to_stitch_plan(patches, collapse_len=collapse_len)
-        render_stitch_plan(svg, stitch_plan, realistic, visual_commands, density)
+        render_stitch_plan(svg, stitch_plan, realistic, visual_commands)
 
         # apply options
         layer = svg.find(".//*[@id='__inkstitch_stitch_plan__']")
