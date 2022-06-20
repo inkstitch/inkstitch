@@ -53,6 +53,7 @@ def auto_fill(shape,
               end_row_spacing,
               max_stitch_length,
               running_stitch_length,
+              running_stitch_tolerance,
               staggers,
               skip_last,
               starting_point,
@@ -64,15 +65,16 @@ def auto_fill(shape,
         fill_stitch_graph = build_fill_stitch_graph(shape, segments, starting_point, ending_point)
     except ValueError:
         # Small shapes will cause the graph to fail - min() arg is an empty sequence through insert node
-        return fallback(shape, running_stitch_length)
+        return fallback(shape, running_stitch_length, running_stitch_tolerance)
 
     if not graph_is_valid(fill_stitch_graph, shape, max_stitch_length):
-        return fallback(shape, running_stitch_length)
+        return fallback(shape, running_stitch_length, running_stitch_tolerance)
 
     travel_graph = build_travel_graph(fill_stitch_graph, shape, angle, underpath)
     path = find_stitch_path(fill_stitch_graph, travel_graph, starting_point, ending_point)
     result = path_to_stitches(path, travel_graph, fill_stitch_graph, angle, row_spacing,
-                              max_stitch_length, running_stitch_length, staggers, skip_last)
+                              max_stitch_length, running_stitch_length, running_stitch_tolerance,
+                              staggers, skip_last)
 
     return result
 
@@ -251,7 +253,7 @@ def graph_is_valid(graph, shape, max_stitch_length):
     return not networkx.is_empty(graph) and networkx.is_eulerian(graph)
 
 
-def fallback(shape, running_stitch_length):
+def fallback(shape, running_stitch_length, running_stitch_tolerance):
     """Generate stitches when the auto-fill algorithm fails.
 
     If graph_is_valid() returns False, we're not going to be able to run the
@@ -263,7 +265,7 @@ def fallback(shape, running_stitch_length):
     boundary = ensure_multi_line_string(shape.boundary)
     outline = boundary.geoms[0]
 
-    return running_stitch(line_string_to_point_list(outline), running_stitch_length)
+    return running_stitch(line_string_to_point_list(outline), running_stitch_length, running_stitch_tolerance)
 
 
 @debug.time
@@ -583,12 +585,12 @@ def collapse_sequential_outline_edges(path):
     return new_path
 
 
-def travel(travel_graph, start, end, running_stitch_length, skip_last):
+def travel(travel_graph, start, end, running_stitch_length, running_stitch_tolerance, skip_last):
     """Create stitches to get from one point on an outline of the shape to another."""
 
     path = networkx.shortest_path(travel_graph, start, end, weight='weight')
     path = [Stitch(*p) for p in path]
-    stitches = running_stitch(path, running_stitch_length)
+    stitches = running_stitch(path, running_stitch_length, running_stitch_tolerance)
 
     for stitch in stitches:
         stitch.add_tag('auto_fill_travel')
@@ -610,7 +612,8 @@ def travel(travel_graph, start, end, running_stitch_length, skip_last):
 
 
 @debug.time
-def path_to_stitches(path, travel_graph, fill_stitch_graph, angle, row_spacing, max_stitch_length, running_stitch_length, staggers, skip_last):
+def path_to_stitches(path, travel_graph, fill_stitch_graph, angle, row_spacing, max_stitch_length, running_stitch_length, running_stitch_tolerance,
+                     staggers, skip_last):
     path = collapse_sequential_outline_edges(path)
 
     stitches = []
@@ -624,6 +627,6 @@ def path_to_stitches(path, travel_graph, fill_stitch_graph, angle, row_spacing, 
             stitch_row(stitches, edge[0], edge[1], angle, row_spacing, max_stitch_length, staggers, skip_last)
             travel_graph.remove_edges_from(fill_stitch_graph[edge[0]][edge[1]]['segment'].get('underpath_edges', []))
         else:
-            stitches.extend(travel(travel_graph, edge[0], edge[1], running_stitch_length, skip_last))
+            stitches.extend(travel(travel_graph, edge[0], edge[1], running_stitch_length, running_stitch_tolerance, skip_last))
 
     return stitches

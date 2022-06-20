@@ -112,6 +112,19 @@ class Stroke(EmbroideryElement):
         return max(self.get_float_param("running_stitch_length_mm", 1.5), 0.01)
 
     @property
+    @param('running_stitch_tolerance_mm',
+           _('Running stitch tolerance'),
+           tooltip=_('All stitches must be within this distance from the path.  ' +
+                     'A lower tolerance means stitches will be closer together.  ' +
+                     'A higher tolerance means sharp corners may be rounded.'),
+           unit='mm',
+           type='float',
+           default=0.2,
+           sort_index=4)
+    def running_stitch_tolerance(self):
+        return max(self.get_float_param("running_stitch_tolerance_mm", 0.2), 0.01)
+
+    @property
     @param('zigzag_spacing_mm',
            _('Zig-zag spacing (peak-to-peak)'),
            tooltip=_('Length of stitches in zig-zag mode.'),
@@ -360,7 +373,7 @@ class Stroke(EmbroideryElement):
         # `self.zigzag_spacing` is the length for a zig and a zag
         # together (a V shape).  Start with running stitch at half
         # that length:
-        patch = self.running_stitch(path, zigzag_spacing / 2.0)
+        patch = self.running_stitch(path, zigzag_spacing / 2.0, self.running_stitch_tolerance)
 
         # Now move the points left and right.  Consider each pair
         # of points in turn, and move perpendicular to them,
@@ -385,7 +398,7 @@ class Stroke(EmbroideryElement):
 
         return patch
 
-    def running_stitch(self, path, stitch_length):
+    def running_stitch(self, path, stitch_length, tolerance):
         repeated_path = []
 
         # go back and forth along the path as specified by self.repeats
@@ -398,7 +411,7 @@ class Stroke(EmbroideryElement):
 
             repeated_path.extend(this_path)
 
-        stitches = running_stitch(repeated_path, stitch_length)
+        stitches = running_stitch(repeated_path, stitch_length, tolerance)
 
         return StitchGroup(self.color, stitches)
 
@@ -429,7 +442,7 @@ class Stroke(EmbroideryElement):
                     patch = StitchGroup(color=self.color, stitches=path, stitch_as_is=True)
                 # running stitch
                 elif self.is_running_stitch():
-                    patch = self.running_stitch(path, self.running_stitch_length)
+                    patch = self.running_stitch(path, self.running_stitch_length, self.running_stitch_tolerance)
                     if self.bean_stitch_repeats > 0:
                         patch.stitches = self.do_bean_repeats(patch.stitches)
                 # simple satin
