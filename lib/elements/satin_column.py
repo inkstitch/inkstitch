@@ -14,7 +14,7 @@ from inkex import paths
 
 from ..i18n import _
 from ..stitch_plan import StitchGroup
-from ..svg import PIXELS_PER_MM, line_strings_to_csp, point_lists_to_csp
+from ..svg import line_strings_to_csp, point_lists_to_csp
 from ..utils import Point, cache, collapse_duplicate_point, cut
 from .element import EmbroideryElement, param
 from .validation import ValidationError, ValidationWarning
@@ -102,20 +102,20 @@ class SatinColumn(EmbroideryElement):
     @property
     @param('short_stitch_inset',
            _('Short stitch inset'),
-           tooltip=_('Maximum stitch length for split stitches.'),
+           tooltip=_('Stitches in areas with high density will be shortened by this amount.'),
            type='float', unit="%",
            default=10)
     def short_stitch_inset(self):
         return self.get_float_param("short_stitch_inset", 10) / 100
 
     @property
-    @param('short_stitch_distance',
+    @param('short_stitch_distance_mm',
            _('Short stitch distance'),
            tooltip=_('Do short stitches if the distance between stitches is smaller than this.'),
            type='float', unit="mm",
            default=0.25)
     def short_stitch_distance(self):
-        return self.get_float_param("short_stitch_distance", 0.25) * PIXELS_PER_MM
+        return self.get_float_param("short_stitch_distance_mm", 0.25)
 
     @property
     def color(self):
@@ -919,15 +919,14 @@ class SatinColumn(EmbroideryElement):
             if i % 2 == 0:
                 continue
             if left.distance(sides[0][i-1]) < self.short_stitch_distance:
-                split_point = self._get_split_point(left, right, self.short_stitch_inset)
+                split_point = self._get_inset_point(left, right, self.short_stitch_inset)
                 sides[0][i] = Point(split_point.x, split_point.y)
             if right.distance(sides[1][i-1]) < self.short_stitch_distance:
-                split_point = self._get_split_point(right, left, self.short_stitch_inset)
+                split_point = self._get_inset_point(right, left, self.short_stitch_inset)
                 sides[1][i] = Point(split_point.x, split_point.y)
 
-    def _get_split_point(self, point1, point2, distance_fraction):
-        line = shgeo.LineString([point1, point2])
-        return line.interpolate(distance_fraction, normalized=True)
+    def _get_inset_point(self, point1, point2, distance_fraction):
+        return point1 * (1 - distance_fraction) + point2 * distance_fraction
 
     def to_stitch_groups(self, last_patch=None):
         # Stitch a variable-width satin column, zig-zagging between two paths.
