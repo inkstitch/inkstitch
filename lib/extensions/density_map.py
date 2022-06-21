@@ -41,9 +41,10 @@ class DensityMap(InkstitchExtension):
         stitch_plan = stitch_groups_to_stitch_plan(patches, collapse_len=collapse_len)
 
         layer = svg.find(".//*[@id='__inkstitch_density_plan__']")
+        color_groups = create_color_groups(layer)
         density_options = [{'max_neighbors': self.options.num_neighbors_red, 'radius': self.options.radius_red},
                            {'max_neighbors': self.options.num_neighbors_yellow, 'radius': self.options.radius_yellow}]
-        color_block_to_density_markers(svg, layer, stitch_plan, density_options)
+        color_block_to_density_markers(svg, color_groups, stitch_plan, density_options)
 
         # update layer visibility 0 = unchanged, 1 = hidden, 2 = lower opacity
         groups = self.document.getroot().findall(SVG_GROUP_TAG)
@@ -77,28 +78,44 @@ def reset_density_plan(svg):
         layer.set('style', 'display:inline')
 
 
-def color_block_to_density_markers(svg, layer, stitch_plan, density_options):
+def create_color_groups(layer):
+    color_groups = []
+    colors = [_("Red"), _("Yellow"), _("Green")]
+    for color in colors:
+        color_group = inkex.Group(attrib={
+            'id': '__%s_density_layer__' % color.lower(),
+            INKSCAPE_LABEL: _('%s density') % color,
+        })
+        layer.append(color_group)
+        color_groups.append(color_group)
+    return color_groups
+
+
+def color_block_to_density_markers(svg, groups, stitch_plan, density_options):
     num_neighbors = []
     for option in density_options:
         radius = option['radius'] * PIXELS_PER_MM
         num_neighbors.append(get_stitch_density(stitch_plan, radius))
 
-    colors = ['red', 'yellow', 'lightgreen']
+    red_group, yellow_group, green_group = groups
     for red_neighbors, yellow_neighbors, coord in zip(num_neighbors[0][0], num_neighbors[1][0], num_neighbors[0][1]):
-        color = colors[2]
+        color = "green"  # green
+        group = green_group
         if density_options[0]['max_neighbors'] < red_neighbors:
-            color = colors[0]
+            color = "yellow"
+            group = yellow_group
         elif density_options[1]['max_neighbors'] < yellow_neighbors:
-            color = colors[1]
+            color = "red"
+            group = red_group
         density_marker = inkex.Circle(attrib={
             'id': svg.get_unique_id("density_marker"),
-            'style': "fill: %s; stroke: white; stroke-width: 0.01%%;" % color,
+            'style': "fill: %s; stroke: #7e7e7e; stroke-width: 0.02%%;" % color,
             'cx': "%s" % coord[0],
             'cy': "%s" % coord[1],
             'r': str(0.5),
             'transform': get_correction_transform(svg)
         })
-        layer.append(density_marker)
+        group.append(density_marker)
 
 
 def get_stitch_density(stitch_plan, radius):
