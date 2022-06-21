@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension translationdomain="inkstitch" xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <name>Density Map</name>
+    <id>org.inkstitch.density_map</id>
+    <param name="extension" type="string" gui-hidden="true">density_map</param>
+    <effect>
+        <object-type>all</object-type>
+        <effects-menu>
+            <submenu name="Ink/Stitch" translatable="no">
+                <submenu name="Visualise and Export" />
+            </submenu>
+        </effects-menu>
+    </effect>
+    <label appearance="header">Red markers</label>
+    <param name="num-neighbors-red" gui-text="Number of stitches" gui-description="0 = no density info" type="int" min="0" max="99" indents="1">6</param>
+    <param name="density-radius-red" gui-text="within a radius (mm) of" type="float" min="0" max="50" indents="1">0.5</param>
+    <spacer />
+    <label appearance="header">Yellow markers</label>
+    <param name="num-neighbors-yellow" gui-text="Number of stitches" gui-description="0 = no density info" type="int" min="0" max="99" indents="1">3</param>
+    <param name="density-radius-yellow" gui-text="within a radius (mm) of" type="float" min="0" max="50">0.5</param>
+    <spacer />
+    <param name="layer-visibility" type="optiongroup" appearance="combo" gui-text="Design layer visibility" indents="1">
+        <option value="0">Unchanged</option>
+        <option value="1">Hidden</option>
+        <option value="2">Lower opacity</option>
+    </param>
+    <script>
+        {{ command_tag | safe }}
+    </script>
+</inkscape-extension>

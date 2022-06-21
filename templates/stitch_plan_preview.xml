@@ -18,8 +18,7 @@
         <option value="2">Lower opacity</option>
     </param>
     <param name="needle-points" type="boolean" gui-text="Needle points">false</param>
-    <separator />
-    <label>Hit Ctrl+Z to undo this action after inspection.</label>
+    <spacer />
     <script>
         {{ command_tag | safe }}
     </script>

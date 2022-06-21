@@ -8,10 +8,10 @@ from math import pi
 
 import inkex
 
-from .tags import (INKSCAPE_GROUPMODE, INKSCAPE_LABEL, INKSTITCH_ATTRIBS)
-from .units import PIXELS_PER_MM, get_viewbox_transform
 from ..i18n import _
 from ..utils import Point, cache
+from .tags import INKSCAPE_GROUPMODE, INKSCAPE_LABEL, INKSTITCH_ATTRIBS
+from .units import PIXELS_PER_MM, get_viewbox_transform
 
 # The stitch vector path looks like this:
 #  _______

@@ -15,6 +15,7 @@ from .convert_to_satin import ConvertToSatin
 from .convert_to_stroke import ConvertToStroke
 from .cut_satin import CutSatin
 from .cutwork_segmentation import CutworkSegmentation
+from .density_map import DensityMap
 from .duplicate_params import DuplicateParams
 from .embroider_settings import EmbroiderSettings
 from .flip import Flip
@@ -39,13 +40,16 @@ from .params import Params
 from .print_pdf import Print
 from .remove_embroidery_settings import RemoveEmbroiderySettings
 from .reorder import Reorder
-from .selection_to_pattern import SelectionToPattern
 from .selection_to_guide_line import SelectionToGuideLine
+from .selection_to_pattern import SelectionToPattern
 from .simulator import Simulator
 from .stitch_plan_preview import StitchPlanPreview
+from .stitch_plan_preview_undo import StitchPlanPreviewUndo
 from .zip import Zip
 
 __all__ = extensions = [StitchPlanPreview,
+                        StitchPlanPreviewUndo,
+                        DensityMap,
                         Install,
                         Params,
                         Print,
