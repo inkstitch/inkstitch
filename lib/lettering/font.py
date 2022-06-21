@@ -341,9 +341,12 @@ class Font(object):
 
     def _ensure_marker_symbols(self, group):
         for marker in MARKER:
-            xpath = ".//*[contains(@style, 'marker-start:url(#inkstitch-%s-marker)')]" % marker
-            if group.xpath(xpath, namespaces=inkex.NSS):
+            xpath = ".//*[contains(@style, 'marker-start:url(#inkstitch-%s-marker')]" % marker
+            marked_elements = group.xpath(xpath, namespaces=inkex.NSS)
+            if marked_elements:
                 ensure_marker(group.getroottree().getroot(), marker)
+                for element in marked_elements:
+                    element.style['marker-start'] = "url(#inkstitch-%s-marker)" % marker
 
     def _apply_auto_satin(self, group, trim):
         """Apply Auto-Satin to an SVG XML node tree with an svg:g at its root.
