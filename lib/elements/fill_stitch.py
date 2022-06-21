@@ -532,6 +532,7 @@ class FillStitch(EmbroideryElement):
                         stitch_groups.extend(self.do_guided_fill(shape, last_patch, start, end))
                 except Exception:
                     self.fatal_fill_error()
+                last_patch = stitch_groups[-1]
 
             return stitch_groups
 
