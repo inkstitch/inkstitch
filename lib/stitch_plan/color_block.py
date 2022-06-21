@@ -98,19 +98,21 @@ class ColorBlock(object):
 
         return False
 
-    def filter_duplicate_stitches(self):
+    def filter_duplicate_stitches(self, min_stitch_len=0.1):
         if not self.stitches:
             return
 
-        stitches = [self.stitches[0]]
+        if min_stitch_len is None:
+            min_stitch_len = 0.1
 
+        stitches = [self.stitches[0]]
         for stitch in self.stitches[1:]:
             if stitches[-1].jump or stitch.stop or stitch.trim or stitch.color_change:
                 # Don't consider jumps, stops, color changes, or trims as candidates for filtering
                 pass
             else:
                 length = (stitch - stitches[-1]).length()
-                if length <= 0.1 * PIXELS_PER_MM:
+                if length <= min_stitch_len * PIXELS_PER_MM:
                     # duplicate stitch, skip this one
                     continue
 
@@ -141,18 +143,6 @@ class ColorBlock(object):
 
     def replace_stitches(self, stitches):
         self.stitches = stitches
-
-    def drop_short_stitches(self, min_stitch_len):
-        stitches = [self.stitches[0]]
-        dropped_length = 0
-        for stitch1, stitch2 in zip(self.stitches[:-1], self.stitches[1:]):
-            length = Point(stitch1.x, stitch1.y).distance(Point(stitch2.x, stitch2.y))
-            if length + dropped_length >= min_stitch_len:
-                stitches.append(stitch2)
-                dropped_length = 0
-            else:
-                dropped_length += length
-        self.replace_stitches(stitches)
 
     @property
     def bounding_box(self):
