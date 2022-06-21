@@ -10,12 +10,13 @@ import sys
 import traceback
 
 from shapely import geometry as shgeo
-from shapely.validation import explain_validity
+from shapely.errors import TopologicalError
+from shapely.validation import explain_validity, make_valid
 
 from ..i18n import _
 from ..marker import get_marker_elements
 from ..stitch_plan import StitchGroup
-from ..stitches import contour_fill, auto_fill, legacy_fill, guided_fill
+from ..stitches import auto_fill, contour_fill, guided_fill, legacy_fill
 from ..svg import PIXELS_PER_MM
 from ..svg.tags import INKSCAPE_LABEL
 from ..utils import cache, version
@@ -68,9 +69,9 @@ class MultipleGuideLineWarning(ValidationWarning):
     ]
 
 
-class UnconnectedError(ValidationError):
+class UnconnectedWarning(ValidationWarning):
     name = _("Unconnected")
-    description = _("Fill: This object is made up of unconnected shapes.  This is not allowed because "
+    description = _("Fill: This object is made up of unconnected shapes. "
                     "Ink/Stitch doesn't know what order to stitch them in.  Please break this "
                     "object up into separate shapes.")
     steps_to_solve = [
@@ -78,9 +79,18 @@ class UnconnectedError(ValidationError):
     ]
 
 
-class InvalidShapeError(ValidationError):
+class BorderCrossWarning(ValidationWarning):
     name = _("Border crosses itself")
-    description = _("Fill: Shape is not valid.  This can happen if the border crosses over itself.")
+    description = _("Fill: The border crosses over itself. This may lead into unconnected shapes. "
+                    "Please break this object into separate shapes to indicate in which order it should be stitched in.")
+    steps_to_solve = [
+        _('* Extensions > Ink/Stitch > Fill Tools > Break Apart Fill Objects')
+    ]
+
+
+class InvalidShapeError(ValidationError):
+    name = _("This shape is invalid")
+    description = _('Fill: This shape cannot be stitched out. Please try to repair it with the "Break Apart Fill Objects" extension.')
     steps_to_solve = [
         _('* Extensions > Ink/Stitch > Fill Tools > Break Apart Fill Objects')
     ]
@@ -217,39 +227,69 @@ class FillStitch(EmbroideryElement):
 
     @property
     @cache
-    def shape(self):
+    def original_shape(self):
         # shapely's idea of "holes" are to subtract everything in the second set
         # from the first. So let's at least make sure the "first" thing is the
         # biggest path.
         paths = self.paths
-        paths.sort(key=lambda point_list: shgeo.Polygon(
-            point_list).area, reverse=True)
+        paths.sort(key=lambda point_list: shgeo.Polygon(point_list).area, reverse=True)
         # Very small holes will cause a shape to be rendered as an outline only
         # they are too small to be rendered and only confuse the auto_fill algorithm.
         # So let's ignore them
         if shgeo.Polygon(paths[0]).area > 5 and shgeo.Polygon(paths[-1]).area < 5:
             paths = [path for path in paths if shgeo.Polygon(path).area > 3]
 
-        polygon = shgeo.MultiPolygon([(paths[0], paths[1:])])
+        return shgeo.MultiPolygon([(paths[0], paths[1:])])
 
-        # There is a great number of "crossing border" errors on fill shapes
-        # If the polygon fails, we can try to run buffer(0) on the polygon in the
-        # hope it will fix at least some of them
-        if not self.shape_is_valid(polygon):
-            why = explain_validity(polygon)
-            message = re.match(r".+?(?=\[)", why)
-            if message.group(0) == "Self-intersection":
-                buffered = polygon.buffer(0)
-                # if we receive a multipolygon, only use the first one of it
-                if type(buffered) == shgeo.MultiPolygon:
-                    buffered = buffered[0]
-                # we do not want to break apart into multiple objects (possibly in the future?!)
-                # best way to distinguish the resulting polygon is to compare the area size of the two
-                # and make sure users will not experience significantly altered shapes without a warning
-                if type(buffered) == shgeo.Polygon and math.isclose(polygon.area, buffered.area, abs_tol=0.5):
-                    polygon = shgeo.MultiPolygon([buffered])
+    @property
+    @cache
+    def shape(self):
+        shape = self._get_clipped_path()
 
-        return polygon
+        if self.shape_is_valid(shape):
+            return shape
+
+        # Repair not valid shapes
+        logger = logging.getLogger('shapely.geos')
+        level = logger.level
+        logger.setLevel(logging.CRITICAL)
+
+        valid_shape = make_valid(shape)
+
+        logger.setLevel(level)
+        polygons = []
+        for polygon in valid_shape.geoms:
+            if isinstance(polygon, shgeo.Polygon):
+                polygons.append(polygon)
+            if isinstance(polygon, shgeo.MultiPolygon):
+                polygons.extend(polygon.geoms)
+        return shgeo.MultiPolygon(polygons)
+
+    def _get_clipped_path(self):
+        if self.node.clip is None:
+            return self.original_shape
+
+        from .element import EmbroideryElement
+        clip_element = EmbroideryElement(self.node.clip)
+        clip_element.paths.sort(key=lambda point_list: shgeo.Polygon(point_list).area, reverse=True)
+        polygon = shgeo.MultiPolygon([(clip_element.paths[0], clip_element.paths[1:])])
+        try:
+            intersection = polygon.intersection(self.original_shape)
+        except TopologicalError:
+            return self.original_shape
+
+        if isinstance(intersection, shgeo.Polygon):
+            return shgeo.MultiPolygon([intersection])
+
+        if isinstance(intersection, shgeo.MultiPolygon):
+            return intersection
+
+        polygons = []
+        if isinstance(intersection, shgeo.GeometryCollection):
+            for geom in intersection.geoms:
+                if isinstance(geom, shgeo.Polygon):
+                    polygons.append(geom)
+        return shgeo.MultiPolygon([polygons])
 
     def shape_is_valid(self, shape):
         # Shapely will log to stdout to complain about the shape unless we make
@@ -268,23 +308,27 @@ class FillStitch(EmbroideryElement):
         if not self.shape_is_valid(self.shape):
             why = explain_validity(self.shape)
             message, x, y = re.findall(r".+?(?=\[)|-?\d+(?:\.\d+)?", why)
+            yield InvalidShapeError((x, y))
 
-            # I Wish this weren't so brittle...
+    def validation_warnings(self):  # noqa: C901
+        if not self.shape_is_valid(self.original_shape):
+            why = explain_validity(self.original_shape)
+            message, x, y = re.findall(r".+?(?=\[)|-?\d+(?:\.\d+)?", why)
             if "Hole lies outside shell" in message:
-                yield UnconnectedError((x, y))
+                yield UnconnectedWarning((x, y))
             else:
-                yield InvalidShapeError((x, y))
+                yield BorderCrossWarning((x, y))
 
-    def validation_warnings(self):
-        if self.shape.area < 20:
-            label = self.node.get(INKSCAPE_LABEL) or self.node.get("id")
-            yield SmallShapeWarning(self.shape.centroid, label)
+        for shape in self.shape.geoms:
+            if self.shape.area < 20:
+                label = self.node.get(INKSCAPE_LABEL) or self.node.get("id")
+                yield SmallShapeWarning(shape.centroid, label)
 
-        if self.shrink_or_grow_shape(self.expand, True).is_empty:
-            yield ExpandWarning(self.shape.centroid)
+            if self.shrink_or_grow_shape(shape, self.expand, True).is_empty:
+                yield ExpandWarning(shape.centroid)
 
-        if self.shrink_or_grow_shape(-self.fill_underlay_inset, True).is_empty:
-            yield UnderlayInsetWarning(self.shape.centroid)
+            if self.shrink_or_grow_shape(shape, -self.fill_underlay_inset, True).is_empty:
+                yield UnderlayInsetWarning(shape.centroid)
 
         # guided fill warnings
         if self.fill_method == 2:
@@ -432,26 +476,22 @@ class FillStitch(EmbroideryElement):
     def underlay_underpath(self):
         return self.get_boolean_param('underlay_underpath', True)
 
-    def shrink_or_grow_shape(self, amount, validate=False):
+    def shrink_or_grow_shape(self, shape, amount, validate=False):
         if amount:
-            shape = self.shape.buffer(amount)
+            shape = shape.buffer(amount)
             # changing the size can empty the shape
             # in this case we want to use the original shape rather than returning an error
             if shape.is_empty and not validate:
-                return self.shape
+                return shape
             if not isinstance(shape, shgeo.MultiPolygon):
                 shape = shgeo.MultiPolygon([shape])
-            return shape
-        else:
-            return self.shape
+        return shape
 
-    @property
-    def underlay_shape(self):
-        return self.shrink_or_grow_shape(-self.fill_underlay_inset)
+    def underlay_shape(self, shape):
+        return self.shrink_or_grow_shape(shape, -self.fill_underlay_inset)
 
-    @property
-    def fill_shape(self):
-        return self.shrink_or_grow_shape(self.expand)
+    def fill_shape(self, shape):
+        return self.shrink_or_grow_shape(shape, self.expand)
 
     def get_starting_point(self, last_patch):
         # If there is a "fill_start" Command, then use that; otherwise pick
@@ -479,18 +519,20 @@ class FillStitch(EmbroideryElement):
             start = self.get_starting_point(last_patch)
             end = self.get_ending_point()
 
-            try:
-                if self.fill_underlay:
-                    underlay_stitch_groups, start = self.do_underlay(start)
-                    stitch_groups.extend(underlay_stitch_groups)
-                if self.fill_method == 0:
-                    stitch_groups.extend(self.do_auto_fill(last_patch, start, end))
-                if self.fill_method == 1:
-                    stitch_groups.extend(self.do_contour_fill(last_patch, start))
-                elif self.fill_method == 2:
-                    stitch_groups.extend(self.do_guided_fill(last_patch, start, end))
-            except Exception:
-                self.fatal_fill_error()
+            for shape in self.shape.geoms:
+                try:
+                    if self.fill_underlay:
+                        underlay_stitch_groups, start = self.do_underlay(shape, start)
+                        stitch_groups.extend(underlay_stitch_groups)
+                    if self.fill_method == 0:
+                        stitch_groups.extend(self.do_auto_fill(shape, last_patch, start, end))
+                    if self.fill_method == 1:
+                        stitch_groups.extend(self.do_contour_fill(self.fill_shape(shape), last_patch, start))
+                    elif self.fill_method == 2:
+                        stitch_groups.extend(self.do_guided_fill(shape, last_patch, start, end))
+                except Exception:
+                    self.fatal_fill_error()
+                last_patch = stitch_groups[-1]
 
             return stitch_groups
 
@@ -505,14 +547,14 @@ class FillStitch(EmbroideryElement):
                                    self.skip_last)
         return [StitchGroup(stitches=stitch_list, color=self.color) for stitch_list in stitch_lists]
 
-    def do_underlay(self, starting_point):
+    def do_underlay(self, shape, starting_point):
         stitch_groups = []
         for i in range(len(self.fill_underlay_angle)):
             underlay = StitchGroup(
                 color=self.color,
                 tags=("auto_fill", "auto_fill_underlay"),
                 stitches=auto_fill(
-                    self.underlay_shape,
+                    self.underlay_shape(shape),
                     self.fill_underlay_angle[i],
                     self.fill_underlay_row_spacing,
                     self.fill_underlay_row_spacing,
@@ -527,12 +569,12 @@ class FillStitch(EmbroideryElement):
         starting_point = underlay.stitches[-1]
         return [stitch_groups, starting_point]
 
-    def do_auto_fill(self, last_patch, starting_point, ending_point):
+    def do_auto_fill(self, shape, last_patch, starting_point, ending_point):
         stitch_group = StitchGroup(
             color=self.color,
             tags=("auto_fill", "auto_fill_top"),
             stitches=auto_fill(
-                self.fill_shape,
+                self.fill_shape(shape),
                 self.angle,
                 self.row_spacing,
                 self.end_row_spacing,
@@ -545,46 +587,45 @@ class FillStitch(EmbroideryElement):
                 self.underpath))
         return [stitch_group]
 
-    def do_contour_fill(self, last_patch, starting_point):
+    def do_contour_fill(self, polygon, last_patch, starting_point):
         if not starting_point:
             starting_point = (0, 0)
         starting_point = shgeo.Point(starting_point)
 
         stitch_groups = []
-        for polygon in self.fill_shape.geoms:
-            tree = contour_fill.offset_polygon(polygon, self.row_spacing, self.join_style + 1, self.clockwise)
+        tree = contour_fill.offset_polygon(polygon, self.row_spacing, self.join_style + 1, self.clockwise)
 
-            stitches = []
-            if self.contour_strategy == 0:
-                stitches = contour_fill.inner_to_outer(
-                    tree,
-                    self.row_spacing,
-                    self.max_stitch_length,
-                    starting_point,
-                    self.avoid_self_crossing
-                )
-            elif self.contour_strategy == 1:
-                stitches = contour_fill.single_spiral(
-                    tree,
-                    self.max_stitch_length,
-                    starting_point
-                )
-            elif self.contour_strategy == 2:
-                stitches = contour_fill.double_spiral(
-                    tree,
-                    self.max_stitch_length,
-                    starting_point
-                )
+        stitches = []
+        if self.contour_strategy == 0:
+            stitches = contour_fill.inner_to_outer(
+                tree,
+                self.row_spacing,
+                self.max_stitch_length,
+                starting_point,
+                self.avoid_self_crossing
+            )
+        elif self.contour_strategy == 1:
+            stitches = contour_fill.single_spiral(
+                tree,
+                self.max_stitch_length,
+                starting_point
+            )
+        elif self.contour_strategy == 2:
+            stitches = contour_fill.double_spiral(
+                tree,
+                self.max_stitch_length,
+                starting_point
+            )
 
-            stitch_group = StitchGroup(
-                color=self.color,
-                tags=("auto_fill", "auto_fill_top"),
-                stitches=stitches)
-            stitch_groups.append(stitch_group)
+        stitch_group = StitchGroup(
+            color=self.color,
+            tags=("auto_fill", "auto_fill_top"),
+            stitches=stitches)
+        stitch_groups.append(stitch_group)
 
         return stitch_groups
 
-    def do_guided_fill(self, last_patch, starting_point, ending_point):
+    def do_guided_fill(self, shape, last_patch, starting_point, ending_point):
         guide_line = self._get_guide_lines()
 
         # No guide line: fallback to normal autofill
@@ -595,7 +636,7 @@ class FillStitch(EmbroideryElement):
             color=self.color,
             tags=("guided_fill", "auto_fill_top"),
             stitches=guided_fill(
-                self.fill_shape,
+                self.fill_shape(shape),
                 guide_line.geoms[0],
                 self.angle,
                 self.row_spacing,

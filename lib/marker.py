@@ -42,6 +42,7 @@ def set_marker(node, position, marker):
 
 def get_marker_elements(node, marker, get_fills=True, get_strokes=True, get_satins=False):
     from .elements import EmbroideryElement
+    from .elements.fill_stitch import FillStitch
     from .elements.satin_column import SatinColumn
     from .elements.stroke import Stroke
 
@@ -61,10 +62,8 @@ def get_marker_elements(node, marker, get_fills=True, get_strokes=True, get_sati
         stroke = element.get_style('stroke')
 
         if get_fills and fill is not None:
-            fill = Stroke(marker).paths
-            linear_rings = [shgeo.LinearRing(path) for path in fill]
-            for ring in linear_rings:
-                fills.append(shgeo.Polygon(ring))
+            fill = FillStitch(marker).shape
+            fills.append(fill)
 
         if get_strokes and stroke is not None:
             stroke = Stroke(marker).paths
