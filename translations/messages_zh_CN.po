@@ -2,21 +2,21 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-06-11 02:18+0000\n"
-"PO-Revision-Date: 2022-06-14 02:34\n"
+"POT-Creation-Date: 2022-06-22 02:34+0000\n"
+"PO-Revision-Date: 2022-06-22 02:35\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.10.1\n"
+"Generated-By: Babel 2.10.3\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: easygettext\n"
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-11 02:18+0000\n"
+"POT-Creation-Date: 2022-06-22 02:34+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -165,322 +165,342 @@ msgstr ""
 msgid "All letters have mixed satin and bean stitch. The capital M is 16mm tall. The small x is 7 mm."
 msgstr ""
 
-#. name of font in fonts/emilio_20
+#. name of font in fonts/dinomouse72
 #: inkstitch-fonts-metadata.py:54
+msgid "DinoMouse72"
+msgstr ""
+
+#. description of font in fonts/dinomouse72
+#: inkstitch-fonts-metadata.py:56
+msgid "A Font Grove jawn. Satin width is 2.5mm at 18mm capitals"
+msgstr ""
+
+#. name of font in fonts/emilio_20
+#: inkstitch-fonts-metadata.py:58
 msgid "Emilio 20"
 msgstr ""
 
 #. description of font in fonts/emilio_20
-#: inkstitch-fonts-metadata.py:56
+#: inkstitch-fonts-metadata.py:60
 #, python-format
 msgid "Emilio 20 is a font with capital only and numbers. M is 48.5 millimeter wide at 100% scale. Can be scaled down to 70% or up to 140%. Every satin has zigzag underlay"
 msgstr ""
 
 #. name of font in fonts/emilio_20_tricolore
-#: inkstitch-fonts-metadata.py:58
+#: inkstitch-fonts-metadata.py:62
 msgid "EMILIO 20 TRICOLORE"
 msgstr ""
 
 #. description of font in fonts/emilio_20_tricolore
-#: inkstitch-fonts-metadata.py:60
+#: inkstitch-fonts-metadata.py:64
 msgid "Emilio 20 tricolore is a large tricolor fill stitches and satin columns font of  size approximately 100mm. It contains 36 glyphs including the numbers and the 26 capitals  A-Z. It can be reduced down to 90% and enlarged up to 120%"
 msgstr ""
 
 #. name of font in fonts/espresso_KOR
-#: inkstitch-fonts-metadata.py:62
+#: inkstitch-fonts-metadata.py:66
 msgid "Espresso KOR"
 msgstr ""
 
 #. description of font in fonts/espresso_KOR
-#: inkstitch-fonts-metadata.py:64
+#: inkstitch-fonts-metadata.py:68
 msgid "The capital M is 16.2 mm high at 100 scale. Every satin has zigzag underlay. x is 11.5 mm high, q is 17.5 mm high, l is 17.2 mm high. The font may be scaled up to 200% and down to 80%"
 msgstr ""
 
 #. name of font in fonts/espresso_tiny
-#: inkstitch-fonts-metadata.py:66
+#: inkstitch-fonts-metadata.py:70
 msgid "Espresso tiny"
 msgstr ""
 
 #. description of font in fonts/espresso_tiny
-#: inkstitch-fonts-metadata.py:68
+#: inkstitch-fonts-metadata.py:72
 msgid "This font is an altered version  of Espresso KOR, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory. The altered embroidery parameters of this font allow to scale down the original Espresso font between 25% (for a 5mm font ) and 55 % (for a 11mm font)."
 msgstr ""
 
 #. name of font in fonts/excalibur_KOR
-#: inkstitch-fonts-metadata.py:70
+#: inkstitch-fonts-metadata.py:74
 msgid "Excalibur KOR"
 msgstr ""
 
 #. description of font in fonts/excalibur_KOR
-#: inkstitch-fonts-metadata.py:72
+#: inkstitch-fonts-metadata.py:76
 msgid "Excalibur KOR is a small satin column manuscript font of size approximatively 20mm. It can be reduced down to 80% and enlarged up to 140%. It contains 144 glyphs, covering most western European languages needs."
 msgstr ""
 
 #. name of font in fonts/fold_inkstitch
-#: inkstitch-fonts-metadata.py:74
+#: inkstitch-fonts-metadata.py:78
 msgid "Fold Ink/Stitch"
 msgstr ""
 
 #. description of font in fonts/fold_inkstitch
-#: inkstitch-fonts-metadata.py:76
+#: inkstitch-fonts-metadata.py:80
 msgid "Fold Ink/Stitch is a large triple and quintuple running stitches capital font of size 100 mm. It contains 40 glyphs including all numbers and the 26 capitals  A-Z. It can be reduced down to 80% and enlarged up to 200%"
 msgstr ""
 
 #. name of font in fonts/geneva_rounded
-#: inkstitch-fonts-metadata.py:78
+#: inkstitch-fonts-metadata.py:82
 msgid "Geneva Simple Sans Rounded"
 msgstr ""
 
 #. description of font in fonts/geneva_rounded
-#: inkstitch-fonts-metadata.py:80
+#: inkstitch-fonts-metadata.py:84
 msgid "Suitable for small fonts (8 to 20 mm)"
 msgstr ""
 
 #. name of font in fonts/geneva_simple
-#: inkstitch-fonts-metadata.py:82
+#: inkstitch-fonts-metadata.py:86
 msgid "Geneva Simple Sans"
 msgstr ""
 
 #. description of font in fonts/geneva_simple
-#: inkstitch-fonts-metadata.py:84
+#: inkstitch-fonts-metadata.py:88
 msgid "Suitable for small fonts (6 to 15mm)"
 msgstr ""
 
 #. name of font in fonts/glacial_tiny
-#: inkstitch-fonts-metadata.py:86
+#: inkstitch-fonts-metadata.py:90
 msgid "Glacial Tiny 60 AGS"
 msgstr ""
 
 #. description of font in fonts/glacial_tiny
-#: inkstitch-fonts-metadata.py:88
+#: inkstitch-fonts-metadata.py:92
 msgid "Glacial is a very tiny font: at 100%,  M stands at 5.6mm. Thin thread (60 wt ) and thin needle (8/60) are mandatory. The glyphs cover many European languages. It can be reduced down to 40% and enlarged up to 150% "
 msgstr ""
 
 #. name of font in fonts/grand_hotel_marif
-#: inkstitch-fonts-metadata.py:90
+#: inkstitch-fonts-metadata.py:94
 msgid "Grand Hotel Marif"
 msgstr ""
 
 #. description of font in fonts/grand_hotel_marif
-#: inkstitch-fonts-metadata.py:92
+#: inkstitch-fonts-metadata.py:96
 msgid "Grand Hotel Marif is a script satin font of size approximatively 35 mm. The glyphs cover most Western European languages. The font can be scaled down to 60% and up to 140%."
 msgstr ""
 
 #. name of font in fonts/grandhotel_small
-#: inkstitch-fonts-metadata.py:94
+#: inkstitch-fonts-metadata.py:98
 msgid "Grand Hotel small"
 msgstr ""
 
 #. description of font in fonts/grandhotel_small
-#: inkstitch-fonts-metadata.py:96
+#: inkstitch-fonts-metadata.py:100
 msgid "This font is an altered version  of Grand Hotel, to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) are mandatory. The altered embroidery parameters of this font allow to scale down the original Grand Hotel font between 25% (for a 9mm font ) and 55 % (for a  20 mm font)."
 msgstr ""
 
 #. name of font in fonts/infinipicto
-#: inkstitch-fonts-metadata.py:98
+#: inkstitch-fonts-metadata.py:102
 msgid "InfiniPicto"
 msgstr ""
 
 #. description of font in fonts/infinipicto
-#: inkstitch-fonts-metadata.py:100
+#: inkstitch-fonts-metadata.py:104
 msgid "InfiniPicto is a fun font of size approximatively 70 mm containing only the 26 A-Z glyph. Each letter is a pictogram of an object whose name begins with that very letter..... in French"
 msgstr ""
 
 #. name of font in fonts/kaushan_script_MAM
-#: inkstitch-fonts-metadata.py:102
+#: inkstitch-fonts-metadata.py:106
 msgid "Kaushan Script MAM"
 msgstr ""
 
 #. description of font in fonts/kaushan_script_MAM
-#: inkstitch-fonts-metadata.py:104
+#: inkstitch-fonts-metadata.py:108
 #, python-format
 msgid "The capital M is 29 millimeter wide at 100% scale.  Can be scaled down to 80% or up to 200%.  Every satin has zigzag underlay"
 msgstr ""
 
 #. name of font in fonts/learning_curve
-#: inkstitch-fonts-metadata.py:106
+#: inkstitch-fonts-metadata.py:110
 msgid "Learning curve"
 msgstr ""
 
 #. description of font in fonts/learning_curve
-#: inkstitch-fonts-metadata.py:108
+#: inkstitch-fonts-metadata.py:112
 msgid "Small running stitch script font of size approximatively 12 mm. It can be reduced down to 90% and enlarged up to 200%"
 msgstr ""
 
 #. name of font in fonts/lobster_AGS
-#: inkstitch-fonts-metadata.py:110
+#: inkstitch-fonts-metadata.py:114
 msgid "Lobster AGS"
 msgstr ""
 
 #. description of font in fonts/lobster_AGS
-#: inkstitch-fonts-metadata.py:112
+#: inkstitch-fonts-metadata.py:116
 #, python-format
 msgid " The capital M is 19.8 millimeter wide at 100% scale. Can be scaled down to 80% or up to 150%. Every satin has zigzag underlay"
 msgstr ""
 
 #. name of font in fonts/magnolia_ KOR
-#: inkstitch-fonts-metadata.py:114
+#: inkstitch-fonts-metadata.py:118
 msgid "Magnolia KOR"
 msgstr ""
 
 #. description of font in fonts/magnolia_ KOR
-#: inkstitch-fonts-metadata.py:116
+#: inkstitch-fonts-metadata.py:120
 msgid "Magnolia KOR is a script font of size approximatively 20mm. It can be scaled down to 80% and up to 120%"
 msgstr ""
 
 #. name of font in fonts/manuskript_gotisch
-#: inkstitch-fonts-metadata.py:118
+#: inkstitch-fonts-metadata.py:122
 msgid "Manuskript Gothisch"
 msgstr ""
 
 #. description of font in fonts/manuskript_gotisch
-#: inkstitch-fonts-metadata.py:120
+#: inkstitch-fonts-metadata.py:124
 #, python-format
 msgid "The capital M is 35 millimeter wide at 100% scale.  Can be scaled down to 70% or up to 140%.  Every satin has zigzag underlay"
 msgstr ""
 
 #. name of font in fonts/marcelusSC_FI
-#: inkstitch-fonts-metadata.py:122
+#: inkstitch-fonts-metadata.py:126
 msgid "MarcellusSC-FI"
 msgstr ""
 
 #. description of font in fonts/marcelusSC_FI
-#: inkstitch-fonts-metadata.py:124
+#: inkstitch-fonts-metadata.py:128
 #, python-format
 msgid "MarcellusSC-FI is a small capital font of size 36 mm. It contains 107 glyphs covering most Western European languages. It can be reduced down to 70% and enlarged up to 200% or 500% using satin split"
 msgstr ""
 
 #. name of font in fonts/medium_font
-#: inkstitch-fonts-metadata.py:126
+#: inkstitch-fonts-metadata.py:130
 msgid "Ink/Stitch Medium Font"
 msgstr ""
 
 #. description of font in fonts/medium_font
-#: inkstitch-fonts-metadata.py:128
+#: inkstitch-fonts-metadata.py:132
 #, python-format
 msgid "A basic font suited for medium-sized characters.  The capital em is 0.6 inches wide at 100% scale.  Can be scaled down to 75% or up to 150%.  Every satin has contour underlay."
 msgstr ""
 
 #. name of font in fonts/monicha
-#: inkstitch-fonts-metadata.py:130
+#: inkstitch-fonts-metadata.py:134
 msgid "MONICHA"
 msgstr ""
 
 #. description of font in fonts/monicha
-#: inkstitch-fonts-metadata.py:132
+#: inkstitch-fonts-metadata.py:136
 msgid "Monicha is a script satin font of size approximatively 20mm. In addition to the glyphs covering most Western European languages it contains additional ornemental letters with swashes. These ornemental letters should be used with caution to avoid overlays. In particular do not use two ornemental letters in a row. Please consult the documentation for information on how to access the ornemental letters. The font can not be scaled down but can be scaled up to 150%. "
 msgstr ""
 
 #. name of font in fonts/namskout_AGS
-#: inkstitch-fonts-metadata.py:134
+#: inkstitch-fonts-metadata.py:138
 msgid "Namskout"
 msgstr ""
 
 #. description of font in fonts/namskout_AGS
-#: inkstitch-fonts-metadata.py:136
+#: inkstitch-fonts-metadata.py:140
 msgid "Namskout  is a large applique font of size approximatively 90mm. It contains 43 glyphs including all numbers and the 26 capitals  A-Z.  It can be reduced down to 50% and enlarged up to 150%  "
 msgstr ""
 
+#. name of font in fonts/nick_ainley
+#: inkstitch-fonts-metadata.py:142
+msgid "NickAinley"
+msgstr ""
+
+#. description of font in fonts/nick_ainley
+#: inkstitch-fonts-metadata.py:144
+msgid "A tiny 1mm-bean alphabet based on a 24pt Seniors Studio jawn"
+msgstr ""
+
 #. name of font in fonts/pacificlo
-#: inkstitch-fonts-metadata.py:138
+#: inkstitch-fonts-metadata.py:146
 msgid "Pacificlo"
 msgstr ""
 
 #. description of font in fonts/pacificlo
-#: inkstitch-fonts-metadata.py:140
+#: inkstitch-fonts-metadata.py:148
 msgid "Pacificlo is a small satin column manuscript font of size approximatively 20mm. It can be reduced down to 80% and enlarged up to 140%. It contains 120 glyphs, covering most Western European Languages needs. "
 msgstr ""
 
 #. name of font in fonts/pacificlo_tiny
-#: inkstitch-fonts-metadata.py:142
+#: inkstitch-fonts-metadata.py:150
 msgid "Pacificlo tiny"
 msgstr ""
 
 #. description of font in fonts/pacificlo_tiny
-#: inkstitch-fonts-metadata.py:144
+#: inkstitch-fonts-metadata.py:152
 msgid "This font is an altered version  of Pacificlo, to allow a greater scaling down. Both thin thread (60) and thin needle (60) are mandatory. The altered embroidery parameters of this font allow to scale down the original Pacificlo font between 25% (for a 5mm font ) and 55 % (for a 11mm font)."
 msgstr ""
 
 #. name of font in fonts/roman_ags
-#: inkstitch-fonts-metadata.py:146
+#: inkstitch-fonts-metadata.py:154
 msgid "Roman AGS"
 msgstr ""
 
 #. description of font in fonts/roman_ags
-#: inkstitch-fonts-metadata.py:148
+#: inkstitch-fonts-metadata.py:156
 #, python-format
 msgid "Based on Latin Modern Roman 10 Bold italic. The capital M is 42.5 millimeter wide at 100% scale.  Can be scaled down to 80% or up to 130%.  Every satin has zigzag underlay"
 msgstr ""
 
 #. name of font in fonts/roman_ags_bicolor
-#: inkstitch-fonts-metadata.py:150
+#: inkstitch-fonts-metadata.py:158
 msgid "Roman bicolor AGS"
 msgstr ""
 
 #. description of font in fonts/roman_ags_bicolor
-#: inkstitch-fonts-metadata.py:152
+#: inkstitch-fonts-metadata.py:160
 #, python-format
 msgid "Based on Latin Modern Roman 10 Bold italic. A font with capital letters with 2 colors. Very easy to use with letters from Romanaugusa. The capital M is 42.5 millimeter wide at 100% scale. Can be scaled down to 70% or up to 130%. Every satin has zigzag underlay"
 msgstr ""
 
 #. name of font in fonts/sacramarif
-#: inkstitch-fonts-metadata.py:154
+#: inkstitch-fonts-metadata.py:162
 msgid "Sacramarif"
 msgstr ""
 
 #. description of font in fonts/sacramarif
-#: inkstitch-fonts-metadata.py:156
+#: inkstitch-fonts-metadata.py:164
 msgid "Based on Sacramento. Very small font with runstitch. It can be scaled from 80% to 150%"
 msgstr ""
 
 #. name of font in fonts/small_font
-#: inkstitch-fonts-metadata.py:158
+#: inkstitch-fonts-metadata.py:166
 msgid "Ink/Stitch Small Font"
 msgstr ""
 
 #. description of font in fonts/small_font
-#: inkstitch-fonts-metadata.py:160
+#: inkstitch-fonts-metadata.py:168
 #, python-format
 msgid "A font suited for small characters.  The capital em is 0.2 inches wide at 100% scale.  Can be scaled up to 300%."
 msgstr ""
 
 #. name of font in fonts/sortefaxXL
-#: inkstitch-fonts-metadata.py:162
+#: inkstitch-fonts-metadata.py:170
 msgid "Sortefax XL Initials"
 msgstr ""
 
 #. description of font in fonts/sortefaxXL
-#: inkstitch-fonts-metadata.py:164
+#: inkstitch-fonts-metadata.py:172
 msgid " Sortefax is a very large satin stitch Capital font of size 150mm.  It can be reduced down to 75% and enlarged up to 200%  It contains the 37 glyphs :ampersand, A-Z and 0-9. In addition the ten glyphs (){}[],;.: are used to store frames. Type any letter followed by any frame (e.g. A( or B; )  to obtain a framed Capital or Number. Warning: for a few large letters you will need to manually enlarge the frame"
 msgstr ""
 
 #. name of font in fonts/sortefax_medium
-#: inkstitch-fonts-metadata.py:166
+#: inkstitch-fonts-metadata.py:174
 msgid "Sortefax Medium Initials"
 msgstr ""
 
 #. description of font in fonts/sortefax_medium
-#: inkstitch-fonts-metadata.py:168
+#: inkstitch-fonts-metadata.py:176
 msgid "Sortefax  Medium Initials is a  satin stitch Capital font of size 90 mm.  It can be reduced down to 70% and enlarged up to 200%. It contains the 37 glyphs :ampersand, A-Z and 0-9. In addition the ten glyphs (){}[],;.: are used to store frames. Type any letter followed by any frame (e.g. A( or B; or 7, ) to obtain a framed Capital or Number. Some manual arranging of the frame around the letter may be required"
 msgstr ""
 
 #. name of font in fonts/tt_directors
-#: inkstitch-fonts-metadata.py:170
+#: inkstitch-fonts-metadata.py:178
 msgid "TT Directors"
 msgstr ""
 
 #. description of font in fonts/tt_directors
-#: inkstitch-fonts-metadata.py:172
+#: inkstitch-fonts-metadata.py:180
 msgid "A font suited for directing"
 msgstr ""
 
 #. name of font in fonts/tt_masters
-#: inkstitch-fonts-metadata.py:174
+#: inkstitch-fonts-metadata.py:182
 msgid "TT Masters"
 msgstr ""
 
 #. description of font in fonts/tt_masters
-#: inkstitch-fonts-metadata.py:176
+#: inkstitch-fonts-metadata.py:184
 msgid "A font suited for heavy typing :)"
 msgstr ""
 
@@ -726,272 +746,281 @@ msgstr ""
 msgid "* Run Extensions > Ink/Stitch > Troubleshoot > Cleanup Document..."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:27
+#: lib/elements/fill_stitch.py:28
 msgid "Small Fill"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:28
+#: lib/elements/fill_stitch.py:29
 msgid "This fill object is so small that it would probably look better as running stitch or satin column. For very small shapes, fill stitch is not possible, and Ink/Stitch will use running stitch around the outline instead."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:34 lib/elements/fill_stitch.py:399
+#: lib/elements/fill_stitch.py:35 lib/elements/fill_stitch.py:443
 msgid "Expand"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:35
+#: lib/elements/fill_stitch.py:36
 msgid "The expand parameter for this fill object cannot be applied. Ink/Stitch will ignore it and will use original size instead."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:40 lib/elements/fill_stitch.py:376
+#: lib/elements/fill_stitch.py:41 lib/elements/fill_stitch.py:420
 msgid "Inset"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:41
+#: lib/elements/fill_stitch.py:42
 msgid "The underlay inset parameter for this fill object cannot be applied. Ink/Stitch will ignore it and will use the original size instead."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:46
+#: lib/elements/fill_stitch.py:47
 msgid "Missing Guideline"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:47
+#: lib/elements/fill_stitch.py:48
 msgid "This object is set to \"Guided Fill\", but has no guide line."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:49
+#: lib/elements/fill_stitch.py:50
 msgid "* Create a stroke object"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:50
+#: lib/elements/fill_stitch.py:51
 msgid "* Select this object and run Extensions > Ink/Stitch > Edit > Selection to guide line"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:55
+#: lib/elements/fill_stitch.py:56
 msgid "Disjointed Guide Line"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:56
+#: lib/elements/fill_stitch.py:57
 msgid "The guide line of this object isn't within the object borders. The guide line works best, if it is within the target element."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:59
+#: lib/elements/fill_stitch.py:60
 msgid "* Move the guide line into the element"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:64 lib/elements/stroke.py:35
+#: lib/elements/fill_stitch.py:65 lib/elements/stroke.py:35
 msgid "Multiple Guide Lines"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:65 lib/elements/stroke.py:36
+#: lib/elements/fill_stitch.py:66 lib/elements/stroke.py:36
 msgid "This object has multiple guide lines, but only the first one will be used."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:67 lib/elements/stroke.py:38
+#: lib/elements/fill_stitch.py:68 lib/elements/stroke.py:38
 msgid "* Remove all guide lines, except for one."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:72
+#: lib/elements/fill_stitch.py:73
 msgid "Unconnected"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:73
-msgid "Fill: This object is made up of unconnected shapes.  This is not allowed because Ink/Stitch doesn't know what order to stitch them in.  Please break this object up into separate shapes."
+#: lib/elements/fill_stitch.py:74
+msgid "Fill: This object is made up of unconnected shapes. Ink/Stitch doesn't know what order to stitch them in.  Please break this object up into separate shapes."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:77 lib/elements/fill_stitch.py:85
+#: lib/elements/fill_stitch.py:78 lib/elements/fill_stitch.py:87
+#: lib/elements/fill_stitch.py:95
 msgid "* Extensions > Ink/Stitch > Fill Tools > Break Apart Fill Objects"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:82
+#: lib/elements/fill_stitch.py:83
 msgid "Border crosses itself"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:83
-msgid "Fill: Shape is not valid.  This can happen if the border crosses over itself."
+#: lib/elements/fill_stitch.py:84
+msgid "Fill: The border crosses over itself. This may lead into unconnected shapes. Please break this object into separate shapes to indicate in which order it should be stitched in."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:90
-msgid "FillStitch"
+#: lib/elements/fill_stitch.py:92
+msgid "This shape is invalid"
 msgstr ""
 
 #: lib/elements/fill_stitch.py:93
+msgid "Fill: This shape cannot be stitched out. Please try to repair it with the \"Break Apart Fill Objects\" extension."
+msgstr ""
+
+#: lib/elements/fill_stitch.py:100
+msgid "FillStitch"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:103
 msgid "Automatically routed fill stitching"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:98
+#: lib/elements/fill_stitch.py:108
 msgid "Fill method"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:99
+#: lib/elements/fill_stitch.py:109
 msgid "Auto Fill"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:99
+#: lib/elements/fill_stitch.py:109
 msgid "Contour Fill"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:99
+#: lib/elements/fill_stitch.py:109
 msgid "Guided Fill"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:99
+#: lib/elements/fill_stitch.py:109
 msgid "Legacy Fill"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:104
+#: lib/elements/fill_stitch.py:114
 msgid "Contour Fill Strategy"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:105
+#: lib/elements/fill_stitch.py:115
 msgid "Inner to Outer"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:105
+#: lib/elements/fill_stitch.py:115
 msgid "Single spiral"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:105
+#: lib/elements/fill_stitch.py:115
 msgid "Double spiral"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:110
+#: lib/elements/fill_stitch.py:120
 msgid "Join Style"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:111
+#: lib/elements/fill_stitch.py:121
 msgid "Round"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:111
+#: lib/elements/fill_stitch.py:121
 msgid "Mitered"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:111
+#: lib/elements/fill_stitch.py:121
 msgid "Beveled"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:116
+#: lib/elements/fill_stitch.py:126
 msgid "Avoid self-crossing"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:121
+#: lib/elements/fill_stitch.py:131
 msgid "Clockwise"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:127
+#: lib/elements/fill_stitch.py:137
 msgid "Angle of lines of stitches"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:128
+#: lib/elements/fill_stitch.py:138
 msgid "The angle increases in a counter-clockwise direction.  0 is horizontal.  Negative angles are allowed."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:146 lib/elements/fill_stitch.py:388
+#: lib/elements/fill_stitch.py:156 lib/elements/fill_stitch.py:432
 msgid "Skip last stitch in each row"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:147 lib/elements/fill_stitch.py:389
+#: lib/elements/fill_stitch.py:157 lib/elements/fill_stitch.py:433
 msgid "The last stitch in each row is quite close to the first stitch in the next row.  Skipping it decreases stitch count and density."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:160
+#: lib/elements/fill_stitch.py:170
 msgid "Flip fill (start right-to-left)"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:161
+#: lib/elements/fill_stitch.py:171
 msgid "The flip option can help you with routing your stitch path.  When you enable flip, stitching goes from right-to-left instead of left-to-right."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:172
+#: lib/elements/fill_stitch.py:182
 msgid "Spacing between rows"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:173
+#: lib/elements/fill_stitch.py:183
 msgid "Distance between rows of stitches."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:187
+#: lib/elements/fill_stitch.py:197
 msgid "Maximum fill stitch length"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:188
+#: lib/elements/fill_stitch.py:198
 msgid "The length of each stitch in a row.  Shorter stitch may be used at the start or end of a row."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:199
+#: lib/elements/fill_stitch.py:209
 msgid "Stagger rows this many times before repeating"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:200
+#: lib/elements/fill_stitch.py:210
 msgid "Setting this dictates how many rows apart the stitches will be before they fall in the same column position."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:315
+#: lib/elements/fill_stitch.py:359
 msgid "Running stitch length (traversal between sections)"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:316
+#: lib/elements/fill_stitch.py:360
 msgid "Length of stitches around the outline of the fill region used when moving from section to section."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:326
+#: lib/elements/fill_stitch.py:370
 msgid "Underlay"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:326 lib/elements/fill_stitch.py:335
-#: lib/elements/fill_stitch.py:358 lib/elements/fill_stitch.py:369
-#: lib/elements/fill_stitch.py:379 lib/elements/fill_stitch.py:391
-#: lib/elements/fill_stitch.py:429
+#: lib/elements/fill_stitch.py:370 lib/elements/fill_stitch.py:379
+#: lib/elements/fill_stitch.py:402 lib/elements/fill_stitch.py:413
+#: lib/elements/fill_stitch.py:423 lib/elements/fill_stitch.py:435
+#: lib/elements/fill_stitch.py:473
 msgid "Fill Underlay"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:332
+#: lib/elements/fill_stitch.py:376
 msgid "Fill angle"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:333
+#: lib/elements/fill_stitch.py:377
 msgid "Default: fill angle + 90 deg. Insert comma-seperated list for multiple layers."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:355
+#: lib/elements/fill_stitch.py:399
 msgid "Row spacing"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:356
+#: lib/elements/fill_stitch.py:400
 msgid "default: 3x fill row spacing"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:366
+#: lib/elements/fill_stitch.py:410
 msgid "Max stitch length"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:367
+#: lib/elements/fill_stitch.py:411
 msgid "default: equal to fill max stitch length"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:377
+#: lib/elements/fill_stitch.py:421
 msgid "Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:400
+#: lib/elements/fill_stitch.py:444
 msgid "Expand the shape before fill stitching, to compensate for gaps between shapes."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:411 lib/elements/fill_stitch.py:425
+#: lib/elements/fill_stitch.py:455 lib/elements/fill_stitch.py:469
 msgid "Underpath"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:412 lib/elements/fill_stitch.py:426
+#: lib/elements/fill_stitch.py:456 lib/elements/fill_stitch.py:470
 msgid "Travel inside the shape when moving from section to section.  Underpath stitches avoid traveling in the direction of the row angle so that they are not visible.  This gives them a jagged appearance."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:629
+#: lib/elements/fill_stitch.py:670
 msgid "Error during autofill!  This means that there is a problem with Ink/Stitch."
 msgstr ""
 
 #. this message is followed by a URL:
 #. https://github.com/inkstitch/inkstitch/issues/new
-#: lib/elements/fill_stitch.py:632
+#: lib/elements/fill_stitch.py:673
 msgid "If you'd like to help us make Ink/Stitch better, please paste this whole message into a new issue at: "
 msgstr ""
 
@@ -1558,6 +1587,27 @@ msgstr ""
 #: lib/extensions/cutwork_segmentation.py:166
 #, python-format
 msgid "Needle #%s"
+msgstr ""
+
+#: lib/extensions/density_map.py:69
+msgid "Density Plan"
+msgstr ""
+
+#: lib/extensions/density_map.py:83
+msgid "Red"
+msgstr ""
+
+#: lib/extensions/density_map.py:83
+msgid "Yellow"
+msgstr ""
+
+#: lib/extensions/density_map.py:83
+msgid "Green"
+msgstr ""
+
+#: lib/extensions/density_map.py:87
+#, python-format
+msgid "%s density"
 msgstr ""
 
 #: lib/extensions/duplicate_params.py:18
@@ -2845,7 +2895,7 @@ msgstr ""
 msgid "*Choose color palette"
 msgstr ""
 
-#: inx/inkstitch_apply_threadlist.inx:87 inx/inkstitch_generate_palette.inx:10
+#: inx/inkstitch_apply_threadlist.inx:88 inx/inkstitch_generate_palette.inx:10
 #: inx/inkstitch_install.inx:10 inx/inkstitch_install_custom_palette.inx:13
 #: inx/inkstitch_palette_split_text.inx:10 inx/inkstitch_palette_to_text.inx:9
 msgid "Thread Color Management"
@@ -3079,6 +3129,53 @@ msgstr ""
 msgid "https://inkstitch.org/docs/cutwork/"
 msgstr ""
 
+#: inx/inkstitch_density_map.inx:3
+msgid "Density Map"
+msgstr ""
+
+#: inx/inkstitch_density_map.inx:10 inx/inkstitch_embroider.inx:14
+#: inx/inkstitch_print.inx:10 inx/inkstitch_simulator.inx:10
+#: inx/inkstitch_stitch_plan_preview.inx:10
+#: inx/inkstitch_stitch_plan_preview_undo.inx:10
+msgid "Visualise and Export"
+msgstr ""
+
+#: inx/inkstitch_density_map.inx:14
+msgid "Red markers"
+msgstr ""
+
+#: inx/inkstitch_density_map.inx:15 inx/inkstitch_density_map.inx:19
+msgid "Number of stitches"
+msgstr ""
+
+#: inx/inkstitch_density_map.inx:15 inx/inkstitch_density_map.inx:19
+msgid "0 = no density info"
+msgstr ""
+
+#: inx/inkstitch_density_map.inx:16 inx/inkstitch_density_map.inx:20
+msgid "within a radius (mm) of"
+msgstr ""
+
+#: inx/inkstitch_density_map.inx:18
+msgid "Yellow markers"
+msgstr ""
+
+#: inx/inkstitch_density_map.inx:22 inx/inkstitch_stitch_plan_preview.inx:15
+msgid "Design layer visibility"
+msgstr ""
+
+#: inx/inkstitch_density_map.inx:23 inx/inkstitch_stitch_plan_preview.inx:16
+msgid "Unchanged"
+msgstr ""
+
+#: inx/inkstitch_density_map.inx:24 inx/inkstitch_stitch_plan_preview.inx:17
+msgid "Hidden"
+msgstr ""
+
+#: inx/inkstitch_density_map.inx:25 inx/inkstitch_stitch_plan_preview.inx:18
+msgid "Lower opacity"
+msgstr ""
+
 #: inx/inkstitch_duplicate_params.inx:3
 msgid "Duplicate Params"
 msgstr ""
@@ -3091,11 +3188,6 @@ msgstr ""
 
 #: inx/inkstitch_embroider.inx:3
 msgid "Embroider"
-msgstr ""
-
-#: inx/inkstitch_embroider.inx:14 inx/inkstitch_print.inx:10
-#: inx/inkstitch_simulator.inx:10 inx/inkstitch_stitch_plan_preview.inx:10
-msgid "Visualise and Export"
 msgstr ""
 
 #: inx/inkstitch_embroider_settings.inx:3
@@ -4066,28 +4158,12 @@ msgstr ""
 msgid "Move stitch plan beside the canvas"
 msgstr ""
 
-#: inx/inkstitch_stitch_plan_preview.inx:15
-msgid "Design layer visibility"
-msgstr ""
-
-#: inx/inkstitch_stitch_plan_preview.inx:16
-msgid "Unchanged"
-msgstr ""
-
-#: inx/inkstitch_stitch_plan_preview.inx:17
-msgid "Hidden"
-msgstr ""
-
-#: inx/inkstitch_stitch_plan_preview.inx:18
-msgid "Lower opacity"
-msgstr ""
-
 #: inx/inkstitch_stitch_plan_preview.inx:20
 msgid "Needle points"
 msgstr ""
 
-#: inx/inkstitch_stitch_plan_preview.inx:22
-msgid "Hit Ctrl+Z to undo this action after inspection."
+#: inx/inkstitch_stitch_plan_preview_undo.inx:3
+msgid "Undo Stitch Plan Preview"
 msgstr ""
 
 #: inx/inkstitch_troubleshoot.inx:3
