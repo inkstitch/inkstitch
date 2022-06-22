@@ -5,7 +5,7 @@
 
 import math
 
-from shapely.geometry import LineString, LinearRing, MultiLineString, Polygon, MultiPolygon, GeometryCollection
+from shapely.geometry import LineString, LinearRing, MultiLineString, Polygon, MultiPolygon, MultiPoint, GeometryCollection
 from shapely.geometry import Point as ShapelyPoint
 
 
@@ -78,7 +78,7 @@ def ensure_multi_line_string(thing):
 def ensure_geometry_collection(thing):
     """Given either some kind of geometry or a GeometryCollection, return a GeometryCollection"""
 
-    if isinstance(thing, (MultiLineString, MultiPolygon)):
+    if isinstance(thing, (MultiLineString, MultiPolygon, MultiPoint)):
         return GeometryCollection(thing.geoms)
     elif isinstance(thing, GeometryCollection):
         return thing

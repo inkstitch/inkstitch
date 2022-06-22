@@ -60,6 +60,7 @@ inkstitch_attribs = [
     'auto_fill',
     'fill_method',
     'contour_strategy',
+    'guided_fill_strategy',
     'join_style',
     'avoid_self_crossing',
     'clockwise',
