@@ -98,19 +98,21 @@ class ColorBlock(object):
 
         return False
 
-    def filter_duplicate_stitches(self):
+    def filter_duplicate_stitches(self, min_stitch_len=0.1):
         if not self.stitches:
             return
 
-        stitches = [self.stitches[0]]
+        if min_stitch_len is None:
+            min_stitch_len = 0.1
 
+        stitches = [self.stitches[0]]
         for stitch in self.stitches[1:]:
             if stitches[-1].jump or stitch.stop or stitch.trim or stitch.color_change:
                 # Don't consider jumps, stops, color changes, or trims as candidates for filtering
                 pass
             else:
                 length = (stitch - stitches[-1]).length()
-                if length <= 0.1 * PIXELS_PER_MM:
+                if length <= min_stitch_len * PIXELS_PER_MM:
                     # duplicate stitch, skip this one
                     continue
 
