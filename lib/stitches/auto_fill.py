@@ -59,13 +59,9 @@ def auto_fill(shape,
               starting_point,
               ending_point=None,
               underpath=True):
-    try:
-        rows = intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing)
-        segments = [segment for row in rows for segment in row]
-        fill_stitch_graph = build_fill_stitch_graph(shape, segments, starting_point, ending_point)
-    except ValueError:
-        # Small shapes will cause the graph to fail - min() arg is an empty sequence through insert node
-        return fallback(shape, running_stitch_length, running_stitch_tolerance)
+    rows = intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing)
+    segments = [segment for row in rows for segment in row]
+    fill_stitch_graph = build_fill_stitch_graph(shape, segments, starting_point, ending_point)
 
     if not graph_is_valid(fill_stitch_graph, shape, max_stitch_length):
         return fallback(shape, running_stitch_length, running_stitch_tolerance)
@@ -181,12 +177,15 @@ def insert_node(graph, shape, point):
         if key == "outline":
             edges.append(((start, end), data))
 
-    edge, data = min(edges, key=lambda edge_data: shgeo.LineString(edge_data[0]).distance(projected_point))
+    try:
+        edge, data = min(edges, key=lambda edge_data: shgeo.LineString(edge_data[0]).distance(projected_point))
 
-    graph.remove_edge(*edge, key="outline")
-    graph.add_edge(edge[0], node, key="outline", **data)
-    graph.add_edge(node, edge[1], key="outline", **data)
-    tag_nodes_with_outline_and_projection(graph, shape, nodes=[node])
+        graph.remove_edge(*edge, key="outline")
+        graph.add_edge(edge[0], node, key="outline", **data)
+        graph.add_edge(node, edge[1], key="outline", **data)
+        tag_nodes_with_outline_and_projection(graph, shape, nodes=[node])
+    except ValueError:
+        pass
 
 
 def tag_nodes_with_outline_and_projection(graph, shape, nodes):
