@@ -367,6 +367,19 @@ class FillStitch(EmbroideryElement):
         return max(self.get_float_param("running_stitch_length_mm", 1.5), 0.01)
 
     @property
+    @param('running_stitch_tolerance_mm',
+           _('Running stitch tolerance'),
+           tooltip=_('All stitches must be within this distance of the path.  ' +
+                     'A lower tolerance means stitches will be closer together.  ' +
+                     'A higher tolerance means sharp corners may be rounded.'),
+           unit='mm',
+           type='float',
+           default=0.2,
+           sort_index=6)
+    def running_stitch_tolerance(self):
+        return max(self.get_float_param("running_stitch_tolerance_mm", 0.2), 0.01)
+
+    @property
     @param('fill_underlay', _('Underlay'), type='toggle', group=_('Fill Underlay'), default=True)
     def fill_underlay(self):
         return self.get_boolean_param("fill_underlay", default=True)
@@ -560,6 +573,7 @@ class FillStitch(EmbroideryElement):
                     self.fill_underlay_row_spacing,
                     self.fill_underlay_max_stitch_length,
                     self.running_stitch_length,
+                    self.running_stitch_tolerance,
                     self.staggers,
                     self.fill_underlay_skip_last,
                     starting_point,
@@ -580,6 +594,7 @@ class FillStitch(EmbroideryElement):
                 self.end_row_spacing,
                 self.max_stitch_length,
                 self.running_stitch_length,
+                self.running_stitch_tolerance,
                 self.staggers,
                 self.skip_last,
                 starting_point,
@@ -601,6 +616,7 @@ class FillStitch(EmbroideryElement):
                 tree,
                 self.row_spacing,
                 self.max_stitch_length,
+                self.running_stitch_tolerance,
                 starting_point,
                 self.avoid_self_crossing
             )
@@ -608,12 +624,14 @@ class FillStitch(EmbroideryElement):
             stitches = contour_fill.single_spiral(
                 tree,
                 self.max_stitch_length,
+                self.running_stitch_tolerance,
                 starting_point
             )
         elif self.contour_strategy == 2:
             stitches = contour_fill.double_spiral(
                 tree,
                 self.max_stitch_length,
+                self.running_stitch_tolerance,
                 starting_point
             )
 

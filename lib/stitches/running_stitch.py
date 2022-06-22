@@ -3,16 +3,15 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-from ..debug import debug
 import math
 from copy import copy
+
 from shapely.geometry import LineString
 
 """ Utility functions to produce running stitches. """
 
 
-@debug.time
-def running_stitch(points, stitch_length):
+def running_stitch(points, stitch_length, tolerance):
     """Generate running stitch along a path.
 
     Given a path and a stitch length, walk along the path in increments of the
@@ -28,9 +27,9 @@ def running_stitch(points, stitch_length):
         return []
 
     # simplify will remove as many points as possible while ensuring that the
-    # resulting path stays within 0.75 pixels (0.2mm) of the original path.
+    # resulting path stays within the specified tolerance of the original path.
     path = LineString(points)
-    simplified = path.simplify(0.75, preserve_topology=False)
+    simplified = path.simplify(tolerance, preserve_topology=False)
 
     # save the points that simplify picked and make sure we stitch them
     important_points = set(simplified.coords)
@@ -50,7 +49,7 @@ def running_stitch(points, stitch_length):
         section_length = section_ls.length
         if section_length > stitch_length:
             # a fractional stitch needs to be rounded up, which will make all
-            # of the stitches shorter
+            # the stitches shorter
             num_stitches = math.ceil(section_length / stitch_length)
             actual_stitch_length = section_length / num_stitches
 

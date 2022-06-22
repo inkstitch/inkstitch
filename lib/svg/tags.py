@@ -95,6 +95,7 @@ inkstitch_attribs = [
     'bean_stitch_repeats',
     'repeats',
     'running_stitch_length_mm',
+    'running_stitch_tolerance_mm',
     # satin column
     'satin_column',
     'running_stitch_length_mm',
