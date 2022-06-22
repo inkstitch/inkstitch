@@ -19,6 +19,7 @@ def guided_fill(shape,
                 num_staggers,
                 max_stitch_length,
                 running_stitch_length,
+                running_stitch_tolerance,
                 skip_last,
                 starting_point,
                 ending_point,
@@ -33,12 +34,12 @@ def guided_fill(shape,
 
     travel_graph = build_travel_graph(fill_stitch_graph, shape, angle, underpath)
     path = find_stitch_path(fill_stitch_graph, travel_graph, starting_point, ending_point)
-    result = path_to_stitches(path, travel_graph, fill_stitch_graph, max_stitch_length, running_stitch_length, skip_last)
+    result = path_to_stitches(path, travel_graph, fill_stitch_graph, max_stitch_length, running_stitch_length, running_stitch_tolerance, skip_last)
 
     return result
 
 
-def path_to_stitches(path, travel_graph, fill_stitch_graph, stitch_length, running_stitch_length, skip_last):
+def path_to_stitches(path, travel_graph, fill_stitch_graph, stitch_length, running_stitch_length, running_stitch_tolerance, skip_last):
     path = collapse_sequential_outline_edges(path)
 
     stitches = []
@@ -66,7 +67,7 @@ def path_to_stitches(path, travel_graph, fill_stitch_graph, stitch_length, runni
 
             travel_graph.remove_edges_from(fill_stitch_graph[edge[0]][edge[1]]['segment'].get('underpath_edges', []))
         else:
-            stitches.extend(travel(travel_graph, edge[0], edge[1], running_stitch_length, skip_last))
+            stitches.extend(travel(travel_graph, edge[0], edge[1], running_stitch_length, running_stitch_tolerance, skip_last))
 
     return stitches
 
@@ -176,7 +177,7 @@ def clean_offset_line(offset_line):
 
 
 def intersect_region_with_grating_guideline(shape, line, row_spacing, num_staggers, max_stitch_length, strategy):
-    debug.log_line_string(shape.geoms[0].boundary, "guided fill shape")
+    debug.log_line_string(shape.exterior, "guided fill shape")
 
     if strategy == 0:
         translate_direction = InkstitchPoint(*line.coords[-1]) - InkstitchPoint(*line.coords[0])

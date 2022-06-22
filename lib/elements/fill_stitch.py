@@ -657,7 +657,7 @@ class FillStitch(EmbroideryElement):
 
         # No guide line: fallback to normal autofill
         if not guide_line:
-            return self.do_auto_fill(last_patch, starting_point, ending_point)
+            return self.do_auto_fill(shape, last_patch, starting_point, ending_point)
 
         stitch_group = StitchGroup(
             color=self.color,
@@ -670,6 +670,7 @@ class FillStitch(EmbroideryElement):
                 self.staggers,
                 self.max_stitch_length,
                 self.running_stitch_length,
+                self.running_stitch_tolerance,
                 self.skip_last,
                 starting_point,
                 ending_point,
