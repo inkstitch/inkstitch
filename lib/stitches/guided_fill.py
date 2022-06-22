@@ -113,9 +113,9 @@ def repair_non_simple_line(line):
 
         repaired = unary_union(linemerge(line_segments))
         counter += 1
+    # TODO: will this actually show the error message?!??
     if repaired.geom_type != 'LineString':
-        raise ValueError(
-            _("Guide line (or offset copy) is self crossing!"))
+        raise ValueError(_("Guide line (or offset copy) is self crossing!"))
     else:
         return repaired
 
@@ -176,6 +176,14 @@ def clean_offset_line(offset_line):
     return offset_line
 
 
+def _get_start_row(line, shape, row_spacing, strategy):
+    if line.intersects(shape):
+        return 0
+    if strategy == 1:
+        return np.ceil(line.distance(shape) / row_spacing)
+    return np.ceil(line.distance(shape.centroid) / row_spacing)
+
+
 def intersect_region_with_grating_guideline(shape, line, row_spacing, num_staggers, max_stitch_length, strategy):
     debug.log_line_string(shape.exterior, "guided fill shape")
 
@@ -185,15 +193,16 @@ def intersect_region_with_grating_guideline(shape, line, row_spacing, num_stagge
 
     line = prepare_guide_line(line, shape)
 
-    row = 0
+    start_row = _get_start_row(line, shape, row_spacing, strategy)
+    row = start_row
     direction = 1
     offset_line = None
     while True:
         if strategy == 0:
-            translate_amount = translate_direction * row * direction * row_spacing
+            translate_amount = translate_direction * row * row_spacing
             offset_line = translate(line, xoff=translate_amount.x, yoff=translate_amount.y)
         elif strategy == 1:
-            offset_line = line.parallel_offset(row * row_spacing * direction, 'left', join_style=shgeo.JOIN_STYLE.bevel)
+            offset_line = line.parallel_offset(row * row_spacing * direction, 'left', join_style=shgeo.JOIN_STYLE.round)
 
         offset_line = clean_offset_line(offset_line)
 
@@ -206,13 +215,13 @@ def intersect_region_with_grating_guideline(shape, line, row_spacing, num_stagge
         stitched_line = apply_stitches(offset_line, max_stitch_length, num_staggers, row_spacing, row * direction)
         intersection = shape.intersection(stitched_line)
 
-        if intersection.is_empty:
+        if shape.envelope.intersection(stitched_line).is_empty:
             if direction == 1:
                 direction = -1
-                row = 1
+                row = start_row - 1
             else:
                 break
         else:
             for segment in take_only_line_strings(intersection).geoms:
                 yield segment.coords[:]
-            row += 1
+            row += direction
