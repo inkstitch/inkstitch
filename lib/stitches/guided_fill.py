@@ -30,7 +30,7 @@ def guided_fill(shape,
     fill_stitch_graph = build_fill_stitch_graph(shape, segments, starting_point, ending_point)
 
     if not graph_is_valid(fill_stitch_graph, shape, max_stitch_length):
-        return fallback(shape, running_stitch_length)
+        return fallback(shape, running_stitch_length, running_stitch_tolerance)
 
     travel_graph = build_travel_graph(fill_stitch_graph, shape, angle, underpath)
     path = find_stitch_path(fill_stitch_graph, travel_graph, starting_point, ending_point)
