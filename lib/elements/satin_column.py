@@ -104,9 +104,9 @@ class SatinColumn(EmbroideryElement):
            _('Short stitch inset'),
            tooltip=_('Stitches in areas with high density will be shortened by this amount.'),
            type='float', unit="%",
-           default=10)
+           default=15)
     def short_stitch_inset(self):
-        return self.get_float_param("short_stitch_inset", 10) / 100
+        return self.get_float_param("short_stitch_inset", 15) / 100
 
     @property
     @param('short_stitch_distance_mm',
