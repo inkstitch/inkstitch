@@ -1,25 +1,23 @@
-from math import copysign
-import sys
+from math import atan2, copysign
 
-import inkex
 import numpy as np
+import shapely.prepared
 from shapely import geometry as shgeo
 from shapely.affinity import translate
-from shapely.ops import linemerge, unary_union, nearest_points
-import shapely.prepared
+from shapely.ops import linemerge, nearest_points, unary_union
 
-from .auto_fill import (build_fill_stitch_graph,
-                        build_travel_graph, collapse_sequential_outline_edges, fallback,
-                        find_stitch_path, graph_is_valid, travel)
 from ..debug import debug
-from ..i18n import _
 from ..stitch_plan import Stitch
-from ..utils.geometry import Point as InkstitchPoint, ensure_geometry_collection, ensure_multi_line_string, reverse_line_string
+from ..utils.geometry import Point as InkstitchPoint
+from ..utils.geometry import (ensure_geometry_collection,
+                              ensure_multi_line_string, reverse_line_string)
+from .auto_fill import (auto_fill, build_fill_stitch_graph, build_travel_graph,
+                        collapse_sequential_outline_edges, find_stitch_path,
+                        graph_is_valid, travel)
 
 
 def guided_fill(shape,
                 guideline,
-                angle,
                 row_spacing,
                 num_staggers,
                 max_stitch_length,
@@ -31,11 +29,22 @@ def guided_fill(shape,
                 underpath,
                 strategy
                 ):
+
+    guide_start, guide_end = [guideline.coords[0], guideline.coords[-1]]
+    angle = atan2(guide_end[1] - guide_start[1], guide_end[0] - guide_start[0]) * -1
+
     segments = intersect_region_with_grating_guideline(shape, guideline, row_spacing, num_staggers, max_stitch_length, strategy)
+    if segments is None:
+        return auto_fill(shape, angle, row_spacing, None, max_stitch_length, running_stitch_length, running_stitch_tolerance,
+                         num_staggers, skip_last, starting_point, ending_point, underpath)
+
     fill_stitch_graph = build_fill_stitch_graph(shape, segments, starting_point, ending_point)
 
     if not graph_is_valid(fill_stitch_graph, shape, max_stitch_length):
-        return fallback(shape, running_stitch_length, running_stitch_tolerance)
+        guide_start, guide_end = [guideline.coords[0], guideline.coords[-1]]
+        angle = atan2(guide_end[1] - guide_start[1], guide_end[0] - guide_start[0]) * -1
+        return auto_fill(shape, angle, row_spacing, None, max_stitch_length, running_stitch_length, running_stitch_tolerance,
+                         num_staggers, skip_last, starting_point, ending_point, underpath)
 
     travel_graph = build_travel_graph(fill_stitch_graph, shape, angle, underpath)
     path = find_stitch_path(fill_stitch_graph, travel_graph, starting_point, ending_point)
@@ -84,15 +93,14 @@ def extend_line(line, shape):
     lower_right = InkstitchPoint(maxx, maxy)
     length = (upper_left - lower_right).length()
 
-    # extend the end points away from each other to avoid crossing each other
+    point1 = InkstitchPoint(*line.coords[0])
+    point2 = InkstitchPoint(*line.coords[-1])
 
-    start_point = InkstitchPoint(*line.coords[0])
-    end_point = InkstitchPoint(*line.coords[-1])
+    new_starting_point = point1 - (point2 - point1).unit() * length
+    new_ending_point = point2 - (point1 - point2).unit() * length
 
-    new_start_point = start_point - (end_point - start_point).unit() * length
-    new_end_point = end_point - (start_point - end_point).unit() * length
-
-    return shgeo.LineString((new_start_point, *line.coords[:], new_end_point))
+    return shgeo.LineString([new_starting_point.as_tuple()] +
+                            line.coords[1:-1] + [new_ending_point.as_tuple()])
 
 
 def repair_multiple_parallel_offset_curves(multi_line):
@@ -115,11 +123,9 @@ def repair_non_simple_line(line):
 
         repaired = unary_union(linemerge(line_segments))
         counter += 1
-    if repaired.geom_type != 'LineString':
-        # They gave us a line with complicated self-intersections.  Use a fallback.
-        return shgeo.LineString((line.coords[0], line.coords[-1]))
-    else:
+    if repaired.geom_type == 'LineString':
         return repaired
+    return None
 
 
 def take_only_line_strings(thing):
@@ -157,15 +163,18 @@ def apply_stitches(line, max_stitch_length, num_staggers, row_spacing, row_num):
 
 
 def prepare_guide_line(line, shape):
+    if line.geom_type != 'LineString' or not line.is_simple:
+        line = repair_non_simple_line(line)
+
+    if line is None:
+        return None
+
     if line.is_ring:
         # If they pass us a ring, break it to avoid dividing by zero when
         # calculating a unit vector from start to end.
         line = shgeo.LineString(line.coords[:-2])
 
-    if line.geom_type != 'LineString' or not line.is_simple:
-        line = repair_non_simple_line(line)
-
-    # extend the line towards the ends to increase probability that all offsetted curves cross the shape
+    # extend the end points away from each other
     line = extend_line(line, shape)
 
     return line
@@ -197,28 +206,17 @@ def _get_start_row(line, shape, row_spacing, line_direction):
     return copysign(row, shape_direction * line_direction)
 
 
-def parallel_offset_line(line, offset):
-    try:
-        return line.parallel_offset(offset, 'left', join_style=shgeo.JOIN_STYLE.round)
-    except ValueError:
-        # we've hit a bug in libgeos: https://github.com/shapely/shapely/issues/820
-        inkex.errormsg(_("Ink/Stitch was unable to perform guided fill for your guide line in Parallel Offset mode.") + "\n\n" +
-                       _("Possible solutions") + "\n\n" +
-                       _("  * change Guided Fill Strategy to Copy") + "\n" +
-                       _("  * avoid sharp corners in the guide line") + "\n" +
-                       _("  * extend the ends of the guide line") + "\n\n")
-        sys.exit(0)
-
-
 def intersect_region_with_grating_guideline(shape, line, row_spacing, num_staggers, max_stitch_length, strategy):
-    debug.log_line_string(shape.exterior, "guided fill shape")
-
     line = prepare_guide_line(line, shape)
-    debug.log_line_string(line, "prepared guide line")
-    shape_envelope = shapely.prepared.prep(shape.convex_hull)
+    if line is None:
+        return None
+
+    debug.log_line_string(shape.exterior, "guided fill shape")
 
     translate_direction = InkstitchPoint(*line.coords[-1]) - InkstitchPoint(*line.coords[0])
     translate_direction = translate_direction.unit().rotate_left()
+
+    shape_envelope = shapely.prepared.prep(shape.convex_hull)
 
     start_row = _get_start_row(line, shape, row_spacing, translate_direction)
     row = start_row
@@ -229,17 +227,19 @@ def intersect_region_with_grating_guideline(shape, line, row_spacing, num_stagge
             translate_amount = translate_direction * row * row_spacing
             offset_line = translate(line, xoff=translate_amount.x, yoff=translate_amount.y)
         elif strategy == 1:
-            offset_line = parallel_offset_line(line, row * row_spacing)
+            offset_line = line.parallel_offset(row * row_spacing, 'left', join_style=shgeo.JOIN_STYLE.round)
 
         offset_line = clean_offset_line(offset_line)
+        if offset_line is None:
+            return None
 
-        if strategy == 1 and row < 0:
+        if strategy == 1 and direction == -1:
             # negative parallel offsets are reversed, so we need to compensate
             offset_line = reverse_line_string(offset_line)
 
         debug.log_line_string(offset_line, f"offset {row}")
 
-        stitched_line = apply_stitches(offset_line, max_stitch_length, num_staggers, row_spacing, row)
+        stitched_line = apply_stitches(offset_line, max_stitch_length, num_staggers, row_spacing, row * direction)
         intersection = shape.intersection(stitched_line)
 
         if shape_envelope.intersects(stitched_line):

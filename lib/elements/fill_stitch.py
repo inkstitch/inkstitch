@@ -665,7 +665,6 @@ class FillStitch(EmbroideryElement):
             stitches=guided_fill(
                 self.fill_shape(shape),
                 guide_line.geoms[0],
-                self.angle,
                 self.row_spacing,
                 self.staggers,
                 self.max_stitch_length,
