@@ -86,12 +86,11 @@ def extend_line(line, shape):
 
     # extend the end points away from each other to avoid crossing each other
 
-    start_point = InkstitchPoint.from_tuple(line.coords[0])
-    end_point = InkstitchPoint.from_tuple(line.coords[-1])
-    direction = (end_point - start_point).unit()
+    start_point = InkstitchPoint(*line.coords[0])
+    end_point = InkstitchPoint(*line.coords[-1])
 
-    new_start_point = end_point - direction * length
-    new_end_point = end_point + direction * length
+    new_start_point = start_point - (end_point - start_point).unit() * length
+    new_end_point = end_point - (start_point - end_point).unit() * length
 
     return shgeo.LineString((new_start_point, *line.coords[:], new_end_point))
 
@@ -208,7 +207,7 @@ def parallel_offset_line(line, offset):
                        _("  * change Guided Fill Strategy to Copy") + "\n" +
                        _("  * avoid sharp corners in the guide line") + "\n" +
                        _("  * extend the ends of the guide line") + "\n\n")
-        sys.exit(1)
+        sys.exit(0)
 
 
 def intersect_region_with_grating_guideline(shape, line, row_spacing, num_staggers, max_stitch_length, strategy):
