@@ -4,6 +4,7 @@ import numpy as np
 from shapely import geometry as shgeo
 from shapely.affinity import translate
 from shapely.ops import linemerge, unary_union, nearest_points
+import shapely.prepared
 
 from .auto_fill import (build_fill_stitch_graph,
                         build_travel_graph, collapse_sequential_outline_edges, fallback,
@@ -185,8 +186,10 @@ def _get_start_row(line, shape, row_spacing, line_direction):
     point1, point2 = nearest_points(line, shape.centroid)
     distance = point1.distance(point2)
     row = int(distance / row_spacing)
-    shape_direction = InkstitchPoint.from_shapely_point(point2) - InkstitchPoint.from_shapely_point(point1)
 
+    # This flips the sign of the starting row if the shape is on the other side
+    # of the guide line
+    shape_direction = InkstitchPoint.from_shapely_point(point2) - InkstitchPoint.from_shapely_point(point1)
     return copysign(row, shape_direction * line_direction)
 
 
@@ -197,6 +200,7 @@ def intersect_region_with_grating_guideline(shape, line, row_spacing, num_stagge
     translate_direction = translate_direction.unit().rotate_left()
 
     line = prepare_guide_line(line, shape)
+    shape_envelope = shapely.prepared.prep(shape.convex_hull)
 
     start_row = _get_start_row(line, shape, row_spacing, translate_direction)
     row = start_row
@@ -220,13 +224,13 @@ def intersect_region_with_grating_guideline(shape, line, row_spacing, num_stagge
         stitched_line = apply_stitches(offset_line, max_stitch_length, num_staggers, row_spacing, row * direction)
         intersection = shape.intersection(stitched_line)
 
-        if shape.envelope.intersection(stitched_line).is_empty:
+        if shape_envelope.intersects(stitched_line):
+            for segment in take_only_line_strings(intersection).geoms:
+                yield segment.coords[:]
+            row += direction
+        else:
             if direction == 1:
                 direction = -1
                 row = start_row - 1
             else:
                 break
-        else:
-            for segment in take_only_line_strings(intersection).geoms:
-                yield segment.coords[:]
-            row += direction
