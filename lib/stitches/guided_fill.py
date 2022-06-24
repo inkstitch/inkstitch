@@ -1,7 +1,9 @@
+from math import copysign
+
 import numpy as np
 from shapely import geometry as shgeo
 from shapely.affinity import translate
-from shapely.ops import linemerge, unary_union
+from shapely.ops import linemerge, unary_union, nearest_points
 
 from .auto_fill import (build_fill_stitch_graph,
                         build_travel_graph, collapse_sequential_outline_edges, fallback,
@@ -176,24 +178,27 @@ def clean_offset_line(offset_line):
     return offset_line
 
 
-def _get_start_row(line, shape, row_spacing, strategy):
+def _get_start_row(line, shape, row_spacing, line_direction):
     if line.intersects(shape):
         return 0
-    if strategy == 1:
-        return np.ceil(line.distance(shape) / row_spacing)
-    return np.ceil(line.distance(shape.centroid) / row_spacing)
+
+    point1, point2 = nearest_points(line, shape.centroid)
+    distance = point1.distance(point2)
+    row = int(distance / row_spacing)
+    shape_direction = InkstitchPoint.from_shapely_point(point2) - InkstitchPoint.from_shapely_point(point1)
+
+    return copysign(row, shape_direction * line_direction)
 
 
 def intersect_region_with_grating_guideline(shape, line, row_spacing, num_staggers, max_stitch_length, strategy):
     debug.log_line_string(shape.exterior, "guided fill shape")
 
-    if strategy == 0:
-        translate_direction = InkstitchPoint(*line.coords[-1]) - InkstitchPoint(*line.coords[0])
-        translate_direction = translate_direction.unit().rotate_left()
+    translate_direction = InkstitchPoint(*line.coords[-1]) - InkstitchPoint(*line.coords[0])
+    translate_direction = translate_direction.unit().rotate_left()
 
     line = prepare_guide_line(line, shape)
 
-    start_row = _get_start_row(line, shape, row_spacing, strategy)
+    start_row = _get_start_row(line, shape, row_spacing, translate_direction)
     row = start_row
     direction = 1
     offset_line = None
@@ -202,7 +207,7 @@ def intersect_region_with_grating_guideline(shape, line, row_spacing, num_stagge
             translate_amount = translate_direction * row * row_spacing
             offset_line = translate(line, xoff=translate_amount.x, yoff=translate_amount.y)
         elif strategy == 1:
-            offset_line = line.parallel_offset(row * row_spacing * direction, 'left', join_style=shgeo.JOIN_STYLE.round)
+            offset_line = line.parallel_offset(row * row_spacing, 'left', join_style=shgeo.JOIN_STYLE.round)
 
         offset_line = clean_offset_line(offset_line)
 
@@ -210,7 +215,7 @@ def intersect_region_with_grating_guideline(shape, line, row_spacing, num_stagge
             # negative parallel offsets are reversed, so we need to compensate
             offset_line = reverse_line_string(offset_line)
 
-        debug.log_line_string(offset_line, f"offset {row * direction}")
+        debug.log_line_string(offset_line, f"offset {row}")
 
         stitched_line = apply_stitches(offset_line, max_stitch_length, num_staggers, row_spacing, row * direction)
         intersection = shape.intersection(stitched_line)
