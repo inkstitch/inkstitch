@@ -78,22 +78,20 @@ def path_to_stitches(path, travel_graph, fill_stitch_graph, stitch_length, runni
 def extend_line(line, shape):
     (minx, miny, maxx, maxy) = shape.bounds
 
-    line = line.simplify(0.01, False)
-
     upper_left = InkstitchPoint(minx, miny)
     lower_right = InkstitchPoint(maxx, maxy)
     length = (upper_left - lower_right).length()
 
-    point1 = InkstitchPoint(*line.coords[0])
-    point2 = InkstitchPoint(*line.coords[1])
-    new_starting_point = point1 - (point2 - point1).unit() * length
+    # extend the end points away from each other to avoid crossing each other
 
-    point3 = InkstitchPoint(*line.coords[-2])
-    point4 = InkstitchPoint(*line.coords[-1])
-    new_ending_point = point4 + (point4 - point3).unit() * length
+    start_point = InkstitchPoint.from_tuple(line.coords[0])
+    end_point = InkstitchPoint.from_tuple(line.coords[-1])
+    direction = (end_point - start_point).unit()
 
-    return shgeo.LineString([new_starting_point.as_tuple()] +
-                            line.coords[1:-1] + [new_ending_point.as_tuple()])
+    new_start_point = end_point - direction * length
+    new_end_point = end_point + direction * length
+
+    return shgeo.LineString((new_start_point, *line.coords[:], new_end_point))
 
 
 def repair_multiple_parallel_offset_curves(multi_line):
@@ -116,9 +114,9 @@ def repair_non_simple_line(line):
 
         repaired = unary_union(linemerge(line_segments))
         counter += 1
-    # TODO: will this actually show the error message?!??
     if repaired.geom_type != 'LineString':
-        raise ValueError(_("Guide line (or offset copy) is self crossing!"))
+        # They gave us a line with complicated self-intersections.  Use a fallback.
+        return shgeo.LineString((line.coords[0], line.coords[-1]))
     else:
         return repaired
 
@@ -158,6 +156,11 @@ def apply_stitches(line, max_stitch_length, num_staggers, row_spacing, row_num):
 
 
 def prepare_guide_line(line, shape):
+    if line.is_ring:
+        # If they pass us a ring, break it to avoid dividing by zero when
+        # calculating a unit vector from start to end.
+        line = shgeo.LineString(line.coords[:-2])
+
     if line.geom_type != 'LineString' or not line.is_simple:
         line = repair_non_simple_line(line)
 
@@ -196,11 +199,12 @@ def _get_start_row(line, shape, row_spacing, line_direction):
 def intersect_region_with_grating_guideline(shape, line, row_spacing, num_staggers, max_stitch_length, strategy):
     debug.log_line_string(shape.exterior, "guided fill shape")
 
+    line = prepare_guide_line(line, shape)
+    debug.log_line_string(line, "prepared guide line")
+    shape_envelope = shapely.prepared.prep(shape.convex_hull)
+
     translate_direction = InkstitchPoint(*line.coords[-1]) - InkstitchPoint(*line.coords[0])
     translate_direction = translate_direction.unit().rotate_left()
-
-    line = prepare_guide_line(line, shape)
-    shape_envelope = shapely.prepared.prep(shape.convex_hull)
 
     start_row = _get_start_row(line, shape, row_spacing, translate_direction)
     row = start_row
@@ -215,13 +219,13 @@ def intersect_region_with_grating_guideline(shape, line, row_spacing, num_stagge
 
         offset_line = clean_offset_line(offset_line)
 
-        if strategy == 1 and direction == -1:
+        if strategy == 1 and row < 0:
             # negative parallel offsets are reversed, so we need to compensate
             offset_line = reverse_line_string(offset_line)
 
         debug.log_line_string(offset_line, f"offset {row}")
 
-        stitched_line = apply_stitches(offset_line, max_stitch_length, num_staggers, row_spacing, row * direction)
+        stitched_line = apply_stitches(offset_line, max_stitch_length, num_staggers, row_spacing, row)
         intersection = shape.intersection(stitched_line)
 
         if shape_envelope.intersects(stitched_line):
