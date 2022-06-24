@@ -1,5 +1,7 @@
 from math import copysign
+import sys
 
+import inkex
 import numpy as np
 from shapely import geometry as shgeo
 from shapely.affinity import translate
@@ -196,6 +198,19 @@ def _get_start_row(line, shape, row_spacing, line_direction):
     return copysign(row, shape_direction * line_direction)
 
 
+def parallel_offset_line(line, offset):
+    try:
+        return line.parallel_offset(offset, 'left', join_style=shgeo.JOIN_STYLE.round)
+    except ValueError:
+        # we've hit a bug in libgeos: https://github.com/shapely/shapely/issues/820
+        inkex.errormsg(_("Ink/Stitch was unable to perform guided fill for your guide line in Parallel Offset mode.") + "\n\n" +
+                       _("Possible solutions") + "\n\n" +
+                       _("  * change Guided Fill Strategy to Copy") + "\n" +
+                       _("  * avoid sharp corners in the guide line") + "\n" +
+                       _("  * extend the ends of the guide line") + "\n\n")
+        sys.exit(1)
+
+
 def intersect_region_with_grating_guideline(shape, line, row_spacing, num_staggers, max_stitch_length, strategy):
     debug.log_line_string(shape.exterior, "guided fill shape")
 
@@ -215,7 +230,7 @@ def intersect_region_with_grating_guideline(shape, line, row_spacing, num_stagge
             translate_amount = translate_direction * row * row_spacing
             offset_line = translate(line, xoff=translate_amount.x, yoff=translate_amount.y)
         elif strategy == 1:
-            offset_line = line.parallel_offset(row * row_spacing, 'left', join_style=shgeo.JOIN_STYLE.round)
+            offset_line = parallel_offset_line(line, row * row_spacing)
 
         offset_line = clean_offset_line(offset_line)
 
