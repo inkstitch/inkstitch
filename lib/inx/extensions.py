@@ -30,7 +30,7 @@ def object_commands():
 
 def pyembroidery_debug_formats():
     for format in pyembroidery.supported_formats():
-        if 'writer' in format and format['category'] != 'embroidery':
+        if 'writer' in format and format['category'] not in ['embroidery', 'image', 'color', 'stitch']:
             yield format['extension'], format['description']
 
 

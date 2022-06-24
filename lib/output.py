@@ -4,8 +4,8 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 import sys
-import inkex
 
+import inkex
 import pyembroidery
 
 from .commands import global_command
@@ -33,8 +33,8 @@ def _string_to_floats(string):
     return [float(num) for num in floats]
 
 
-def get_origin(svg, xxx_todo_changeme):
-    (minx, miny, maxx, maxy) = xxx_todo_changeme
+def get_origin(svg, bounding_box):
+    (minx, miny, maxx, maxy) = bounding_box
     origin_command = global_command(svg, "origin")
 
     if origin_command:
@@ -52,7 +52,12 @@ def jump_to_stop_point(pattern, svg):
 
 
 def write_embroidery_file(file_path, stitch_plan, svg, settings={}):
+    # convert from pixels to millimeters
+    # also multiply by 10 to get tenths of a millimeter as required by pyembroidery
+    scale = 10 / PIXELS_PER_MM
+
     origin = get_origin(svg, stitch_plan.bounding_box)
+    origin = origin * scale
 
     pattern = pyembroidery.EmbPattern()
     stitch = Stitch(0, 0)
@@ -67,10 +72,6 @@ def write_embroidery_file(file_path, stitch_plan, svg, settings={}):
             pattern.add_stitch_absolute(command, stitch.x, stitch.y)
 
     pattern.add_stitch_absolute(pyembroidery.END, stitch.x, stitch.y)
-
-    # convert from pixels to millimeters
-    # also multiply by 10 to get tenths of a millimeter as required by pyembroidery
-    scale = 10 / PIXELS_PER_MM
 
     settings.update({
         # correct for the origin
@@ -92,6 +93,9 @@ def write_embroidery_file(file_path, stitch_plan, svg, settings={}):
         settings['max_stitch'] = float('inf')
         settings['max_jump'] = float('inf')
         settings['explicit_trim'] = False
+    elif file_path.endswith('.png'):
+        settings['linewidth'] = 1
+        settings['background'] = 'white'
 
     try:
         pyembroidery.write(pattern, file_path, settings)

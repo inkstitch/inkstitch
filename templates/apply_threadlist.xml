@@ -3,15 +3,33 @@
     <name>Apply Threadlist</name>
     <id>org.inkstitch.apply_threadlist</id>
     <param name="extension" type="string" gui-hidden="true">apply_threadlist</param>
-    <param name="filepath" type="path" gui-text="Choose file" mode="file" filetypes="txt"/>
-    <param name="method" type="optiongroup" gui-text="Choose method">
-       <option value="1">Apply Ink/Stitch threadlist</option>
-       <option value="2">Apply other threadlist*</option>
-    </param>
-    <param name="palette" type="enum" gui-text="*Choose color palette">
-    {%- for item in threadcatalog %}
-       <item value="{{ item }}">{{ item }}</item>
-    {%- endfor %}
+    <param name="options" type="notebook">
+      <page name="options" gui-text="Options">
+        <param name="filepath" type="path" gui-text="Choose file" mode="file" filetypes="txt,edr,col,inf"/>
+        <param name="method" type="optiongroup" gui-text="Choose method">
+           <option value="1">Apply Ink/Stitch threadlist</option>
+           <option value="2">Apply other threadlist*</option>
+        </param>
+        <param name="palette" type="enum" gui-text="*Choose color palette">
+        {%- for item in threadcatalog %}
+           <item value="{{ item }}">{{ item }}</item>
+        {%- endfor %}
+        </param>
+      </page>
+      <page name="info" gui-text="Help">
+        <label appearance="header">This extension applies colors from a color file to the objects in this document.</label>
+        <label>COL, INF, EDR</label>
+        <label indent="2">Select the file and apply. The chosen method is not important for these file types.</label>
+        <spacer />
+        <label>TXT</label>
+        <label indent="2">Import an Ink/Stitch threadlist file (created through the zip export option).</label>
+        <spacer />
+        <label indent="2">Import any other Threadlist file in txt format. Ink/Stitch will try to match the colors to the selected thread palette.
+                          The objects in this document will be colored accordingly if color matching has been successful.</label>
+        <spacer />
+        <label>Get more information on our website</label>
+        <label appearance="url">https://inkstitch.org/docs/thread-color/#apply-threadlist</label>
+      </page>
     </param>
     <effect>
         <object-type>all</object-type>
