@@ -100,6 +100,24 @@ class SatinColumn(EmbroideryElement):
         return self.get_float_param("max_stitch_length_mm") or None
 
     @property
+    @param('short_stitch_inset',
+           _('Short stitch inset'),
+           tooltip=_('Stitches in areas with high density will be shortened by this amount.'),
+           type='float', unit="%",
+           default=15)
+    def short_stitch_inset(self):
+        return self.get_float_param("short_stitch_inset", 15) / 100
+
+    @property
+    @param('short_stitch_distance_mm',
+           _('Short stitch distance'),
+           tooltip=_('Do short stitches if the distance between stitches is smaller than this.'),
+           type='float', unit="mm",
+           default=0.25)
+    def short_stitch_distance(self):
+        return self.get_float_param("short_stitch_distance_mm", 0.25)
+
+    @property
     def color(self):
         return self.get_style("stroke")
 
@@ -697,8 +715,6 @@ class SatinColumn(EmbroideryElement):
                 # Each iteration of this outer loop is one stitch.  Keep going
                 # until we fall off the end of the section.
 
-                # TODO: is there an other way?
-                # old_center = (pos0 + pos1) / 2.0
                 old_center = shgeo.Point(x/2 for x in (pos0 + pos1))
 
                 while to_travel > 0 and index0 < last_index0 and index1 < last_index1:
@@ -726,8 +742,6 @@ class SatinColumn(EmbroideryElement):
                     pos0, index0 = self.walk(section0, pos0, index0, 0.05)
                     pos1, index1 = self.walk(section1, pos1, index1, 0.05 * ratio)
 
-                    # TODO: is there a better way?
-                    # new_center = (pos0 + pos1) / 2.0
                     new_center = shgeo.Point(x/2 for x in (pos0 + pos1))
                     to_travel -= new_center.distance(old_center)
                     old_center = new_center
@@ -821,12 +835,16 @@ class SatinColumn(EmbroideryElement):
 
         # print >> dbg, "satin", self.zigzag_spacing, self.pull_compensation
 
-        if self.max_stitch_length:
-            return self.do_split_stitch()
-
         patch = StitchGroup(color=self.color)
-
         sides = self.plot_points_on_rails(self.zigzag_spacing, self.pull_compensation)
+
+        if self.max_stitch_length:
+            return self.do_split_stitch(patch, sides)
+
+        # short stitches are not not included into the split stitch
+        # they would move the points in a maybe unwanted behaviour
+        if self.short_stitch_inset > 0:
+            self._do_short_stitches(sides)
 
         # Like in zigzag_underlay(): take a point from each side in turn.
         for point in chain.from_iterable(zip(*sides)):
@@ -863,10 +881,8 @@ class SatinColumn(EmbroideryElement):
         patch.add_tags(("satin_column", "e_stitch"))
         return patch
 
-    def do_split_stitch(self):
+    def do_split_stitch(self, patch, sides):
         # stitches exceeding the maximum stitch length will be divided into equal parts through additional stitches
-        patch = StitchGroup(color=self.color)
-        sides = self.plot_points_on_rails(self.zigzag_spacing, self.pull_compensation)
         for i, (left, right) in enumerate(zip(*sides)):
             patch.add_stitch(left)
             patch.stitches[-1].add_tags(("satin_column", "satin_column_edge"))
@@ -897,6 +913,20 @@ class SatinColumn(EmbroideryElement):
             split_point = line.interpolate((i+1)/split_count, normalized=True)
             points.append(Point(split_point.x, split_point.y))
         return [points, split_count]
+
+    def _do_short_stitches(self, sides):
+        for i, (left, right) in enumerate(zip(*sides)):
+            if i % 2 == 0:
+                continue
+            if left.distance(sides[0][i-1]) < self.short_stitch_distance:
+                split_point = self._get_inset_point(left, right, self.short_stitch_inset)
+                sides[0][i] = Point(split_point.x, split_point.y)
+            if right.distance(sides[1][i-1]) < self.short_stitch_distance:
+                split_point = self._get_inset_point(right, left, self.short_stitch_inset)
+                sides[1][i] = Point(split_point.x, split_point.y)
+
+    def _get_inset_point(self, point1, point2, distance_fraction):
+        return point1 * (1 - distance_fraction) + point2 * distance_fraction
 
     def to_stitch_groups(self, last_patch=None):
         # Stitch a variable-width satin column, zig-zagging between two paths.
