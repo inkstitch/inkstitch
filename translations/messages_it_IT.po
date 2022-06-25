@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-06-23 02:23+0000\n"
-"PO-Revision-Date: 2022-06-24 02:26\n"
+"POT-Creation-Date: 2022-06-25 02:44+0000\n"
+"PO-Revision-Date: 2022-06-25 02:46\n"
 "Last-Translator: \n"
 "Language-Team: Italian\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-23 02:23+0000\n"
+"POT-Creation-Date: 2022-06-25 02:44+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1224,7 +1224,7 @@ msgstr "Colonna in raso personalizzata"
 msgid "\"E\" stitch"
 msgstr "Punto \"E\""
 
-#: lib/elements/satin_column.py:96 lib/elements/satin_column.py:209
+#: lib/elements/satin_column.py:96 lib/elements/satin_column.py:227
 msgid "Maximum stitch length"
 msgstr ""
 
@@ -1232,82 +1232,98 @@ msgstr ""
 msgid "Maximum stitch length for split stitches."
 msgstr ""
 
-#: lib/elements/satin_column.py:108 lib/elements/stroke.py:129
+#: lib/elements/satin_column.py:104
+msgid "Short stitch inset"
+msgstr ""
+
+#: lib/elements/satin_column.py:105
+msgid "Stitches in areas with high density will be shortened by this amount."
+msgstr ""
+
+#: lib/elements/satin_column.py:113
+msgid "Short stitch distance"
+msgstr ""
+
+#: lib/elements/satin_column.py:114
+msgid "Do short stitches if the distance between stitches is smaller than this."
+msgstr ""
+
+#: lib/elements/satin_column.py:126 lib/elements/stroke.py:129
 msgid "Zig-zag spacing (peak-to-peak)"
 msgstr "Spaziatura a zig-zag (picco a picco)"
 
-#: lib/elements/satin_column.py:109
+#: lib/elements/satin_column.py:127
 msgid "Peak-to-peak distance between zig-zags."
 msgstr "La distanza tra i picchi del zig-zag."
 
-#: lib/elements/satin_column.py:120
+#: lib/elements/satin_column.py:138
 msgid "Pull compensation"
 msgstr "Compensazione tiraggio"
 
-#: lib/elements/satin_column.py:121
+#: lib/elements/satin_column.py:139
 msgid "Satin stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape.  This setting expands each pair of needle penetrations outward from the center of the satin column."
 msgstr "I punti raso avvicinano il tessuto, con il risultato che la colonna è più stretta di quella disegnata. Questa impostazione allarga ogni coppia di inserimenti dell'ago verso l'esterno rispetto al centro della colonna raso."
 
-#: lib/elements/satin_column.py:133
+#: lib/elements/satin_column.py:151
 msgid "Contour underlay"
 msgstr "Sottostrato del contorno"
 
-#: lib/elements/satin_column.py:133 lib/elements/satin_column.py:140
-#: lib/elements/satin_column.py:149
+#: lib/elements/satin_column.py:151 lib/elements/satin_column.py:158
+#: lib/elements/satin_column.py:167
 msgid "Contour Underlay"
 msgstr "Sottostrato del contorno"
 
-#: lib/elements/satin_column.py:140 lib/elements/satin_column.py:164
+#: lib/elements/satin_column.py:158 lib/elements/satin_column.py:182
 msgid "Stitch length"
 msgstr "Lunghezza del punto"
 
-#: lib/elements/satin_column.py:146
+#: lib/elements/satin_column.py:164
 msgid "Contour underlay inset amount"
 msgstr "Offset interno del sottostrato del contorno"
 
-#: lib/elements/satin_column.py:147
+#: lib/elements/satin_column.py:165
 msgid "Shrink the outline, to prevent the underlay from showing around the outside of the satin column."
 msgstr "Stringere i bordi per evitare che la base fuoriesca dai limiti della colonna raso."
 
-#: lib/elements/satin_column.py:157
+#: lib/elements/satin_column.py:175
 msgid "Center-walk underlay"
 msgstr "Base passaggio centrale"
 
-#: lib/elements/satin_column.py:157 lib/elements/satin_column.py:164
-#: lib/elements/satin_column.py:169
+#: lib/elements/satin_column.py:175 lib/elements/satin_column.py:182
+#: lib/elements/satin_column.py:187
 msgid "Center-Walk Underlay"
 msgstr "Base passaggio centrale"
 
-#: lib/elements/satin_column.py:169 lib/elements/stroke.py:82
+#: lib/elements/satin_column.py:187 lib/elements/stroke.py:82
 msgid "Repeats"
 msgstr "Ripetizioni"
 
-#: lib/elements/satin_column.py:174
+#: lib/elements/satin_column.py:192
 msgid "Zig-zag underlay"
 msgstr "Base zig-zag"
 
-#: lib/elements/satin_column.py:174 lib/elements/satin_column.py:183
-#: lib/elements/satin_column.py:194 lib/elements/satin_column.py:212
+#: lib/elements/satin_column.py:192 lib/elements/satin_column.py:201
+#: lib/elements/satin_column.py:212 lib/elements/satin_column.py:230
 msgid "Zig-zag Underlay"
 msgstr "Base zig-zag"
 
-#: lib/elements/satin_column.py:180
+#: lib/elements/satin_column.py:198
 msgid "Zig-Zag spacing (peak-to-peak)"
 msgstr "Spazio del zig-zag (da picco a picco)"
 
-#: lib/elements/satin_column.py:181
+#: lib/elements/satin_column.py:199
 msgid "Distance between peaks of the zig-zags."
 msgstr "Distanza dei picchi del zig-zag."
 
-#: lib/elements/satin_column.py:191
+#: lib/elements/satin_column.py:209
 msgid "Inset amount"
 msgstr "Quantità di inserimento"
 
-#: lib/elements/satin_column.py:192
+#: lib/elements/satin_column.py:210
 msgid "default: half of contour underlay inset"
 msgstr "default: metà dell'inserimento di sottostrato del contorno"
 
-#: lib/elements/satin_column.py:210
+#: lib/elements/satin_column.py:228
 msgid "Split stitch if distance of maximum stitch length is exceeded"
 msgstr ""
 
@@ -1513,24 +1529,24 @@ msgstr ""
 msgid "- Extensions > Ink/Stitch > Lettering"
 msgstr ""
 
-#: lib/extensions/apply_threadlist.py:38
+#: lib/extensions/apply_threadlist.py:70
 msgid "File not found."
 msgstr "File non trovato."
 
-#: lib/extensions/apply_threadlist.py:41
+#: lib/extensions/apply_threadlist.py:73
 msgid "The filepath specified is not a file but a dictionary.\n"
 "Please choose a threadlist file to import."
 msgstr ""
 
-#: lib/extensions/apply_threadlist.py:51
+#: lib/extensions/apply_threadlist.py:78
 msgid "Couldn't find any matching colors in the file."
 msgstr "Non è stato trovato nessun colore combaciante."
 
-#: lib/extensions/apply_threadlist.py:53
+#: lib/extensions/apply_threadlist.py:80
 msgid "Please try to import as \"other threadlist\" and specify a color palette below."
 msgstr "Si provi ad importare come \"altra lista di fili\" e specificare una palette di colori in basso."
 
-#: lib/extensions/apply_threadlist.py:55
+#: lib/extensions/apply_threadlist.py:82
 msgid "Please chose an other color palette for your design."
 msgstr "Si selezioni un'altra palette di colori per il tuo design."
 
@@ -1668,6 +1684,10 @@ msgstr ""
 msgid "We couldn't find any fill colors on your text elements. Please read the instructions on our website."
 msgstr ""
 
+#: lib/extensions/input.py:18
+msgid "Ink/Stitch cannot import color formats directly. But you can open the embroidery file and apply the color with Extensions > Ink/Stitch > Thread Color Management > Apply Threadlist"
+msgstr ""
+
 #: lib/extensions/install_custom_palette.py:24
 #: lib/extensions/palette_to_text.py:26
 msgid "File does not exist."
@@ -1693,7 +1713,8 @@ msgstr "Caratteri Ink/Stitch"
 msgid "Font"
 msgstr ""
 
-#: lib/extensions/lettering.py:66 inx/inkstitch_palette_to_text.inx:15
+#: lib/extensions/lettering.py:66 inx/inkstitch_apply_threadlist.inx:7
+#: inx/inkstitch_palette_to_text.inx:15
 msgid "Options"
 msgstr "Opzioni"
 
@@ -1971,7 +1992,7 @@ msgstr "La configurazione \"%s\" è già esistente. Utilizzare un nome diverso o
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command label at bottom of simulator window
 #: lib/gui/simulator.py:18 electron/src/renderer/assets/js/simulator.js:142
-#: inx/inkstitch_output_TXT.inx:29
+#: inx/inkstitch_output_GCODE.inx:29
 msgid "STITCH"
 msgstr "CUCIRE"
 
@@ -1984,12 +2005,12 @@ msgid "TRIM"
 msgstr "TAGLIARE"
 
 #: lib/gui/simulator.py:18 electron/src/renderer/assets/js/simulator.js:151
-#: inx/inkstitch_output_TXT.inx:33
+#: inx/inkstitch_output_GCODE.inx:33
 msgid "STOP"
 msgstr "FERMARE"
 
 #: lib/gui/simulator.py:18 electron/src/renderer/assets/js/simulator.js:154
-#: inx/inkstitch_output_TXT.inx:31
+#: inx/inkstitch_output_GCODE.inx:31
 msgid "COLOR CHANGE"
 msgstr "CAMBIO COLORE"
 
@@ -2075,7 +2096,7 @@ msgstr ""
 
 #. low-level file error.  %(error)s is (hopefully?) translated by
 #. the user's system automatically.
-#: lib/output.py:101
+#: lib/output.py:105
 #, python-format
 msgid "Error writing to %(path)s: %(error)s"
 msgstr "Errore scrivendo in %(path)s: %(error)s"
@@ -2536,15 +2557,15 @@ msgstr "Realistico"
 #. description for pyembroidery file format: phb
 #. description for pyembroidery file format: phc
 #: pyembroidery-format-descriptions.py:2 pyembroidery-format-descriptions.py:4
-#: pyembroidery-format-descriptions.py:56
 #: pyembroidery-format-descriptions.py:58
+#: pyembroidery-format-descriptions.py:60
 msgid "Brother Embroidery Format"
 msgstr "Formato di ricamo Brother"
 
 #. description for pyembroidery file format: exp
 #: pyembroidery-format-descriptions.py:6
-msgid "Melco Embroidery Format"
-msgstr "Formato di ricamo Melco"
+msgid "Melco Expanded Embroidery Format"
+msgstr ""
 
 #. description for pyembroidery file format: dst
 #. description for pyembroidery file format: tbf
@@ -2557,12 +2578,13 @@ msgstr "Formato di ricamo Tajima"
 #. description for pyembroidery file format: jpx
 #: pyembroidery-format-descriptions.py:10
 #: pyembroidery-format-descriptions.py:20
-#: pyembroidery-format-descriptions.py:74
+#: pyembroidery-format-descriptions.py:76
 msgid "Janome Embroidery Format"
 msgstr "Formato di ricamo Janome"
 
 #. description for pyembroidery file format: vp3
 #. description for pyembroidery file format: ksm
+#. description for pyembroidery file format: spx
 #. description for pyembroidery file format: max
 #. description for pyembroidery file format: pcd
 #. description for pyembroidery file format: pcq
@@ -2570,11 +2592,12 @@ msgstr "Formato di ricamo Janome"
 #. description for pyembroidery file format: pcs
 #: pyembroidery-format-descriptions.py:12
 #: pyembroidery-format-descriptions.py:50
-#: pyembroidery-format-descriptions.py:62
-#: pyembroidery-format-descriptions.py:66
+#: pyembroidery-format-descriptions.py:54
+#: pyembroidery-format-descriptions.py:64
 #: pyembroidery-format-descriptions.py:68
 #: pyembroidery-format-descriptions.py:70
 #: pyembroidery-format-descriptions.py:72
+#: pyembroidery-format-descriptions.py:74
 msgid "Pfaff Embroidery Format"
 msgstr "Formato di ricamo Pfaff"
 
@@ -2661,39 +2684,74 @@ msgid "Happy Embroidery Format"
 msgstr "Formato di ricamo Happy"
 
 #. description for pyembroidery file format: stx
-#: pyembroidery-format-descriptions.py:54
+#: pyembroidery-format-descriptions.py:56
 msgid "Data Stitch Embroidery Format"
 msgstr "Formato di ricamo Data Stitch"
 
 #. description for pyembroidery file format: new
-#: pyembroidery-format-descriptions.py:60
+#: pyembroidery-format-descriptions.py:62
 msgid "Ameco Embroidery Format"
 msgstr "Formato di ricamo Ameco"
 
 #. description for pyembroidery file format: mit
-#: pyembroidery-format-descriptions.py:64
+#: pyembroidery-format-descriptions.py:66
 msgid "Mitsubishi Embroidery Format"
 msgstr "Formato di ricamo Mitsubishi"
 
 #. description for pyembroidery file format: stc
-#: pyembroidery-format-descriptions.py:76
+#: pyembroidery-format-descriptions.py:78
 msgid "Gunold Embroidery Format"
 msgstr "Formato di ricamo Gunold"
 
+#. description for pyembroidery file format: zhs
+#: pyembroidery-format-descriptions.py:80
+msgid "Zeng Hsing Embroidery Format"
+msgstr ""
+
 #. description for pyembroidery file format: zxy
-#: pyembroidery-format-descriptions.py:78
+#: pyembroidery-format-descriptions.py:82
 msgid "ZSK TC Embroidery Format"
 msgstr "Formato di ricamo ZSK TC"
 
 #. description for pyembroidery file format: pmv
-#: pyembroidery-format-descriptions.py:80
+#: pyembroidery-format-descriptions.py:84
 msgid "Brother Stitch Format"
 msgstr "Formato di cucito Brother"
 
-#. description for pyembroidery file format: txt
-#: pyembroidery-format-descriptions.py:82
-msgid "G-code Format"
-msgstr "Formato G-code"
+#. description for pyembroidery file format: png
+#: pyembroidery-format-descriptions.py:86
+msgid "PNG Format, Portable Network Graphics"
+msgstr ""
+
+#. description for pyembroidery file format: gcode
+#: pyembroidery-format-descriptions.py:88
+msgid "gcode Format, Text File"
+msgstr ""
+
+#. description for pyembroidery file format: hus
+#: pyembroidery-format-descriptions.py:90
+msgid "Husqvarna Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: edr
+#: pyembroidery-format-descriptions.py:92
+msgid "Edr Color Format"
+msgstr ""
+
+#. description for pyembroidery file format: col
+#: pyembroidery-format-descriptions.py:94
+msgid "Col Color Format"
+msgstr ""
+
+#. description for pyembroidery file format: inf
+#: pyembroidery-format-descriptions.py:96
+msgid "Inf Color Format"
+msgstr ""
+
+#. description for pyembroidery file format: json
+#: pyembroidery-format-descriptions.py:98
+msgid "Json Export"
+msgstr ""
 
 #. name for left arrow keyboard key
 #: electron/src/renderer/components/Simulator.vue:52
@@ -2903,29 +2961,67 @@ msgstr ""
 msgid "Apply Threadlist"
 msgstr ""
 
-#: inx/inkstitch_apply_threadlist.inx:6
+#: inx/inkstitch_apply_threadlist.inx:8
 #: inx/inkstitch_install_custom_palette.inx:8
 #: inx/inkstitch_palette_to_text.inx:17
 msgid "Choose file"
 msgstr "Scegliere file"
 
-#: inx/inkstitch_apply_threadlist.inx:7
+#: inx/inkstitch_apply_threadlist.inx:9
 msgid "Choose method"
 msgstr ""
 
-#: inx/inkstitch_apply_threadlist.inx:8
+#: inx/inkstitch_apply_threadlist.inx:10
 msgid "Apply Ink/Stitch threadlist"
 msgstr ""
 
-#: inx/inkstitch_apply_threadlist.inx:9
+#: inx/inkstitch_apply_threadlist.inx:11
 msgid "Apply other threadlist*"
 msgstr ""
 
-#: inx/inkstitch_apply_threadlist.inx:11
+#: inx/inkstitch_apply_threadlist.inx:13
 msgid "*Choose color palette"
 msgstr ""
 
-#: inx/inkstitch_apply_threadlist.inx:88 inx/inkstitch_generate_palette.inx:10
+#: inx/inkstitch_apply_threadlist.inx:87 inx/inkstitch_auto_run.inx:23
+#: inx/inkstitch_cutwork_segmentation.inx:42
+#: inx/inkstitch_generate_palette.inx:24 inx/inkstitch_palette_to_text.inx:19
+msgid "Help"
+msgstr ""
+
+#: inx/inkstitch_apply_threadlist.inx:88
+msgid "This extension applies colors from a color file to the objects in this document."
+msgstr ""
+
+#: inx/inkstitch_apply_threadlist.inx:89
+msgid "COL, INF, EDR"
+msgstr ""
+
+#: inx/inkstitch_apply_threadlist.inx:90
+msgid "Select the file and apply. The chosen method is not important for these file types."
+msgstr ""
+
+#: inx/inkstitch_apply_threadlist.inx:92
+msgid "TXT"
+msgstr ""
+
+#: inx/inkstitch_apply_threadlist.inx:93
+msgid "Import an Ink/Stitch threadlist file (created through the zip export option)."
+msgstr ""
+
+#: inx/inkstitch_apply_threadlist.inx:95
+msgid "Import any other Threadlist file in txt format. Ink/Stitch will try to match the colors to the selected thread palette. The objects in this document will be colored accordingly if color matching has been successful."
+msgstr ""
+
+#: inx/inkstitch_apply_threadlist.inx:98
+msgid "Get more information on our website"
+msgstr ""
+
+#: inx/inkstitch_apply_threadlist.inx:99
+msgid "https://inkstitch.org/docs/thread-color/#apply-threadlist"
+msgstr ""
+
+#: inx/inkstitch_apply_threadlist.inx:106 inx/inkstitch_generate_palette.inx:10
 #: inx/inkstitch_install.inx:10 inx/inkstitch_install_custom_palette.inx:13
 #: inx/inkstitch_palette_split_text.inx:10 inx/inkstitch_palette_to_text.inx:9
 msgid "Thread Color Management"
@@ -2953,11 +3049,6 @@ msgstr ""
 
 #: inx/inkstitch_auto_run.inx:21 inx/inkstitch_auto_satin.inx:5
 msgid "Trim jump stitches"
-msgstr ""
-
-#: inx/inkstitch_auto_run.inx:23 inx/inkstitch_cutwork_segmentation.inx:42
-#: inx/inkstitch_generate_palette.inx:24 inx/inkstitch_palette_to_text.inx:19
-msgid "Help"
 msgstr ""
 
 #: inx/inkstitch_auto_run.inx:25
@@ -3325,6 +3416,18 @@ msgstr ""
 msgid "convert BRO file to Ink/Stitch manual-stitch paths"
 msgstr ""
 
+#: inx/inkstitch_input_COL.inx:3
+msgid "COL file input"
+msgstr ""
+
+#: inx/inkstitch_input_COL.inx:8
+msgid "Ink/Stitch: Col Color Format (.col)"
+msgstr ""
+
+#: inx/inkstitch_input_COL.inx:9
+msgid "convert COL file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
 #: inx/inkstitch_input_DAT.inx:3
 msgid "DAT file input"
 msgstr ""
@@ -3373,6 +3476,18 @@ msgstr ""
 msgid "convert DSZ file to Ink/Stitch manual-stitch paths"
 msgstr ""
 
+#: inx/inkstitch_input_EDR.inx:3
+msgid "EDR file input"
+msgstr ""
+
+#: inx/inkstitch_input_EDR.inx:8
+msgid "Ink/Stitch: Edr Color Format (.edr)"
+msgstr ""
+
+#: inx/inkstitch_input_EDR.inx:9
+msgid "convert EDR file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
 #: inx/inkstitch_input_EMD.inx:3
 msgid "EMD file input"
 msgstr ""
@@ -3390,7 +3505,7 @@ msgid "EXP file input"
 msgstr ""
 
 #: inx/inkstitch_input_EXP.inx:8 inx/inkstitch_output_EXP.inx:8
-msgid "Ink/Stitch: Melco Embroidery Format (.exp)"
+msgid "Ink/Stitch: Melco Expanded Embroidery Format (.exp)"
 msgstr ""
 
 #: inx/inkstitch_input_EXP.inx:9
@@ -3421,6 +3536,18 @@ msgstr ""
 msgid "convert FXY file to Ink/Stitch manual-stitch paths"
 msgstr ""
 
+#: inx/inkstitch_input_GCODE.inx:3
+msgid "GCODE file input"
+msgstr ""
+
+#: inx/inkstitch_input_GCODE.inx:8 inx/inkstitch_output_GCODE.inx:8
+msgid "Ink/Stitch: gcode Format, Text File (.gcode)"
+msgstr ""
+
+#: inx/inkstitch_input_GCODE.inx:9
+msgid "convert GCODE file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
 #: inx/inkstitch_input_GT.inx:3
 msgid "GT file input"
 msgstr ""
@@ -3433,6 +3560,18 @@ msgstr ""
 msgid "convert GT file to Ink/Stitch manual-stitch paths"
 msgstr ""
 
+#: inx/inkstitch_input_HUS.inx:3
+msgid "HUS file input"
+msgstr ""
+
+#: inx/inkstitch_input_HUS.inx:8
+msgid "Ink/Stitch: Husqvarna Embroidery Format (.hus)"
+msgstr ""
+
+#: inx/inkstitch_input_HUS.inx:9
+msgid "convert HUS file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
 #: inx/inkstitch_input_INB.inx:3
 msgid "INB file input"
 msgstr ""
@@ -3443,6 +3582,18 @@ msgstr ""
 
 #: inx/inkstitch_input_INB.inx:9
 msgid "convert INB file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_INF.inx:3
+msgid "INF file input"
+msgstr ""
+
+#: inx/inkstitch_input_INF.inx:8
+msgid "Ink/Stitch: Inf Color Format (.inf)"
+msgstr ""
+
+#: inx/inkstitch_input_INF.inx:9
+msgid "convert INF file to Ink/Stitch manual-stitch paths"
 msgstr ""
 
 #: inx/inkstitch_input_JEF.inx:3
@@ -3613,6 +3764,18 @@ msgstr ""
 msgid "convert PHC file to Ink/Stitch manual-stitch paths"
 msgstr ""
 
+#: inx/inkstitch_input_PMV.inx:3
+msgid "PMV file input"
+msgstr ""
+
+#: inx/inkstitch_input_PMV.inx:8
+msgid "Ink/Stitch: Brother Stitch Format (.pmv)"
+msgstr ""
+
+#: inx/inkstitch_input_PMV.inx:9
+msgid "convert PMV file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
 #: inx/inkstitch_input_SEW.inx:3
 msgid "SEW file input"
 msgstr ""
@@ -3635,6 +3798,18 @@ msgstr ""
 
 #: inx/inkstitch_input_SHV.inx:9
 msgid "convert SHV file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_SPX.inx:3
+msgid "SPX file input"
+msgstr ""
+
+#: inx/inkstitch_input_SPX.inx:8
+msgid "Ink/Stitch: Pfaff Embroidery Format (.spx)"
+msgstr ""
+
+#: inx/inkstitch_input_SPX.inx:9
+msgid "convert SPX file to Ink/Stitch manual-stitch paths"
 msgstr ""
 
 #: inx/inkstitch_input_STC.inx:3
@@ -3713,12 +3888,24 @@ msgstr ""
 msgid "XXX file input"
 msgstr ""
 
-#: inx/inkstitch_input_XXX.inx:8
+#: inx/inkstitch_input_XXX.inx:8 inx/inkstitch_output_XXX.inx:8
 msgid "Ink/Stitch: Singer Embroidery Format (.xxx)"
 msgstr ""
 
 #: inx/inkstitch_input_XXX.inx:9
 msgid "convert XXX file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_ZHS.inx:3
+msgid "ZHS file input"
+msgstr ""
+
+#: inx/inkstitch_input_ZHS.inx:8
+msgid "Ink/Stitch: Zeng Hsing Embroidery Format (.zhs)"
+msgstr ""
+
+#: inx/inkstitch_input_ZHS.inx:9
+msgid "convert ZHS file to Ink/Stitch manual-stitch paths"
 msgstr ""
 
 #: inx/inkstitch_input_ZXY.inx:3
@@ -3876,11 +4063,11 @@ msgstr ""
 msgid "File format"
 msgstr ""
 
-#: inx/inkstitch_letters_to_font.inx:47
+#: inx/inkstitch_letters_to_font.inx:59
 msgid "Font directory"
 msgstr ""
 
-#: inx/inkstitch_letters_to_font.inx:49
+#: inx/inkstitch_letters_to_font.inx:61
 msgid "Import commands"
 msgstr ""
 
@@ -3890,6 +4077,18 @@ msgstr "Collega i comandi agli oggetti selezionati"
 
 #: inx/inkstitch_object_commands_toggle_visibility.inx:3
 msgid "Display|Hide Object Commands"
+msgstr ""
+
+#: inx/inkstitch_output_COL.inx:3
+msgid "COL file output"
+msgstr ""
+
+#: inx/inkstitch_output_COL.inx:8
+msgid "Ink/Stitch: Col Color Format [COLOR] (.col)"
+msgstr ""
+
+#: inx/inkstitch_output_COL.inx:9
+msgid "Save design in COL format using Ink/Stitch"
 msgstr ""
 
 #: inx/inkstitch_output_CSV.inx:3
@@ -3912,6 +4111,18 @@ msgstr ""
 msgid "Save design in DST format using Ink/Stitch"
 msgstr ""
 
+#: inx/inkstitch_output_EDR.inx:3
+msgid "EDR file output"
+msgstr ""
+
+#: inx/inkstitch_output_EDR.inx:8
+msgid "Ink/Stitch: Edr Color Format [COLOR] (.edr)"
+msgstr ""
+
+#: inx/inkstitch_output_EDR.inx:9
+msgid "Save design in EDR format using Ink/Stitch"
+msgstr ""
+
 #: inx/inkstitch_output_EXP.inx:3
 msgid "EXP file output"
 msgstr ""
@@ -3920,12 +4131,160 @@ msgstr ""
 msgid "Save design in EXP format using Ink/Stitch"
 msgstr ""
 
+#: inx/inkstitch_output_GCODE.inx:3
+msgid "GCODE file output"
+msgstr ""
+
+#: inx/inkstitch_output_GCODE.inx:9
+msgid "Save design in GCODE format using Ink/Stitch"
+msgstr ""
+
+#: inx/inkstitch_output_GCODE.inx:17
+msgid "Coordinate Settings"
+msgstr ""
+
+#: inx/inkstitch_output_GCODE.inx:18
+msgid "negate X coordinate values"
+msgstr "negazione dei valori della coordinata X"
+
+#: inx/inkstitch_output_GCODE.inx:18
+msgid "Negate x coordinates"
+msgstr "Negazione delle coordinate x"
+
+#: inx/inkstitch_output_GCODE.inx:19
+msgid "negate Y coordinate values"
+msgstr "negazione dei valori della coordinata Y"
+
+#: inx/inkstitch_output_GCODE.inx:19
+msgid "Negate y coordinates"
+msgstr "Negazione delle coordinate y"
+
+#: inx/inkstitch_output_GCODE.inx:20
+msgid "Z coordinate value"
+msgstr "valore coordinata Z"
+
+#: inx/inkstitch_output_GCODE.inx:20
+msgid "Either alternate Z value between 0 and 1 or travel custom value."
+msgstr "Alterna il valore Z tra 0 e 1 o trasporta a valore personalizzato."
+
+#: inx/inkstitch_output_GCODE.inx:21
+msgid "alternate Z value"
+msgstr "valore Z alternativo"
+
+#: inx/inkstitch_output_GCODE.inx:22 inx/inkstitch_output_GCODE.inx:25
+msgid "Z travel per stitch"
+msgstr "trasporto Z per punto"
+
+#: inx/inkstitch_output_GCODE.inx:25
+msgid "increment z coordinate by this amount per stitch if \"Z travel per stitch\" is enabled"
+msgstr "incrementa la coordinata z di questa quantità se \"trasporto Z per punto\" è attivo"
+
+#: inx/inkstitch_output_GCODE.inx:27
+msgid "Custom Commands"
+msgstr ""
+
+#: inx/inkstitch_output_GCODE.inx:29
+msgid "Use '%X' for x-coordinate. Use '%Y' for y-coordinate and '%Z' for z-coordinate."
+msgstr ""
+
+#: inx/inkstitch_output_GCODE.inx:31 inx/inkstitch_output_GCODE.inx:33
+msgid "Leave empty to use default value. Use 'none' to remove."
+msgstr ""
+
+#: inx/inkstitch_output_GCODE.inx:34
+msgid "START"
+msgstr ""
+
+#: inx/inkstitch_output_GCODE.inx:35
+msgid "END"
+msgstr ""
+
+#: inx/inkstitch_output_GCODE.inx:37
+msgid "Laser Settings"
+msgstr ""
+
+#: inx/inkstitch_output_GCODE.inx:39
+msgid "laser mode"
+msgstr "modalità laser"
+
+#: inx/inkstitch_output_GCODE.inx:39
+msgid "Laser mode (generate g-code for grbl laser mode)"
+msgstr "Modalità laser (genera g-code per la modalità laser grbl)"
+
+#: inx/inkstitch_output_GCODE.inx:42
+msgid "dynamic laser power"
+msgstr "potenza laser dinamica"
+
+#: inx/inkstitch_output_GCODE.inx:42
+msgid "Use Grbl's M4 dynamic laser power mode. Ensures consistent laser cutting power regardless of motor speed. Only for PWM-capable lasers."
+msgstr ""
+
+#: inx/inkstitch_output_GCODE.inx:44
+msgid "laser warm-up time"
+msgstr "tempo di riscaldamento del laser"
+
+#: inx/inkstitch_output_GCODE.inx:44
+msgid "When turning on the laser, wait this many seconds for laser to warm up (G4 command)"
+msgstr "Tempo di attesa in secondi per il riscaldamento del laser dopo l'accensione (comando G4)"
+
+#: inx/inkstitch_output_GCODE.inx:46
+msgid "spindle speed"
+msgstr "velocità del mandrino"
+
+#: inx/inkstitch_output_GCODE.inx:46
+msgid "spindle speed (laser power for laser mode, set to -1 to omit)"
+msgstr "velocità del mandrino (potenza laser nella modalità laser, impostare a -1 per omettere)"
+
+#: inx/inkstitch_output_GCODE.inx:48
+msgid "min spindle speed"
+msgstr "velocità minima mandrino"
+
+#: inx/inkstitch_output_GCODE.inx:48
+msgid "minimum spindle speed value (grbl $31 setting)"
+msgstr "velocità minima mandrino (impostazione grbl $31)"
+
+#: inx/inkstitch_output_GCODE.inx:50
+msgid "max spindle speed"
+msgstr "velocità massima mandrino"
+
+#: inx/inkstitch_output_GCODE.inx:50
+msgid "minimum spindle speed value (grbl $30 setting)"
+msgstr "velocità minima mandrino (impostazione grbl $30)"
+
+#: inx/inkstitch_output_GCODE.inx:51
+msgid "feed rate (in mm/min, set to -1 to omit)"
+msgstr "velocità di alimentazione (in mm/min, impostare a -1 per omettere)"
+
+#: inx/inkstitch_output_INF.inx:3
+msgid "INF file output"
+msgstr ""
+
+#: inx/inkstitch_output_INF.inx:8
+msgid "Ink/Stitch: Inf Color Format [COLOR] (.inf)"
+msgstr ""
+
+#: inx/inkstitch_output_INF.inx:9
+msgid "Save design in INF format using Ink/Stitch"
+msgstr ""
+
 #: inx/inkstitch_output_JEF.inx:3
 msgid "JEF file output"
 msgstr ""
 
 #: inx/inkstitch_output_JEF.inx:9
 msgid "Save design in JEF format using Ink/Stitch"
+msgstr ""
+
+#: inx/inkstitch_output_JSON.inx:3
+msgid "JSON file output"
+msgstr ""
+
+#: inx/inkstitch_output_JSON.inx:8
+msgid "Ink/Stitch: Json Export [DEBUG] (.json)"
+msgstr ""
+
+#: inx/inkstitch_output_JSON.inx:9
+msgid "Save design in JSON format using Ink/Stitch"
 msgstr ""
 
 #: inx/inkstitch_output_PEC.inx:3
@@ -3949,11 +4308,23 @@ msgid "PMV file output"
 msgstr ""
 
 #: inx/inkstitch_output_PMV.inx:8
-msgid "Ink/Stitch: Brother Stitch Format [DEBUG] (.pmv)"
+msgid "Ink/Stitch: Brother Stitch Format [STITCH] (.pmv)"
 msgstr ""
 
 #: inx/inkstitch_output_PMV.inx:9
 msgid "Save design in PMV format using Ink/Stitch"
+msgstr ""
+
+#: inx/inkstitch_output_PNG.inx:3
+msgid "PNG file output"
+msgstr ""
+
+#: inx/inkstitch_output_PNG.inx:8
+msgid "Ink/Stitch: PNG Format, Portable Network Graphics [IMAGE] (.png)"
+msgstr ""
+
+#: inx/inkstitch_output_PNG.inx:9
+msgid "Save design in PNG format using Ink/Stitch"
 msgstr ""
 
 #: inx/inkstitch_output_SVG.inx:3
@@ -3967,134 +4338,6 @@ msgstr ""
 #: inx/inkstitch_output_SVG.inx:9
 msgid "Save design in SVG format using Ink/Stitch"
 msgstr ""
-
-#: inx/inkstitch_output_TXT.inx:3
-msgid "TXT file output"
-msgstr ""
-
-#: inx/inkstitch_output_TXT.inx:8
-msgid "Ink/Stitch: G-code Format (.txt)"
-msgstr ""
-
-#: inx/inkstitch_output_TXT.inx:9
-msgid "Save design in TXT format using Ink/Stitch"
-msgstr ""
-
-#: inx/inkstitch_output_TXT.inx:17
-msgid "Coordinate Settings"
-msgstr ""
-
-#: inx/inkstitch_output_TXT.inx:18
-msgid "negate X coordinate values"
-msgstr "negazione dei valori della coordinata X"
-
-#: inx/inkstitch_output_TXT.inx:18
-msgid "Negate x coordinates"
-msgstr "Negazione delle coordinate x"
-
-#: inx/inkstitch_output_TXT.inx:19
-msgid "negate Y coordinate values"
-msgstr "negazione dei valori della coordinata Y"
-
-#: inx/inkstitch_output_TXT.inx:19
-msgid "Negate y coordinates"
-msgstr "Negazione delle coordinate y"
-
-#: inx/inkstitch_output_TXT.inx:20
-msgid "Z coordinate value"
-msgstr "valore coordinata Z"
-
-#: inx/inkstitch_output_TXT.inx:20
-msgid "Either alternate Z value between 0 and 1 or travel custom value."
-msgstr "Alterna il valore Z tra 0 e 1 o trasporta a valore personalizzato."
-
-#: inx/inkstitch_output_TXT.inx:21
-msgid "alternate Z value"
-msgstr "valore Z alternativo"
-
-#: inx/inkstitch_output_TXT.inx:22 inx/inkstitch_output_TXT.inx:25
-msgid "Z travel per stitch"
-msgstr "trasporto Z per punto"
-
-#: inx/inkstitch_output_TXT.inx:25
-msgid "increment z coordinate by this amount per stitch if \"Z travel per stitch\" is enabled"
-msgstr "incrementa la coordinata z di questa quantità se \"trasporto Z per punto\" è attivo"
-
-#: inx/inkstitch_output_TXT.inx:27
-msgid "Custom Commands"
-msgstr ""
-
-#: inx/inkstitch_output_TXT.inx:29
-msgid "Use '%X' for x-coordinate. Use '%Y' for y-coordinate and '%Z' for z-coordinate."
-msgstr ""
-
-#: inx/inkstitch_output_TXT.inx:31 inx/inkstitch_output_TXT.inx:33
-msgid "Leave empty to use default value. Use 'none' to remove."
-msgstr ""
-
-#: inx/inkstitch_output_TXT.inx:34
-msgid "START"
-msgstr ""
-
-#: inx/inkstitch_output_TXT.inx:35
-msgid "END"
-msgstr ""
-
-#: inx/inkstitch_output_TXT.inx:37
-msgid "Laser Settings"
-msgstr ""
-
-#: inx/inkstitch_output_TXT.inx:39
-msgid "laser mode"
-msgstr "modalità laser"
-
-#: inx/inkstitch_output_TXT.inx:39
-msgid "Laser mode (generate g-code for grbl laser mode)"
-msgstr "Modalità laser (genera g-code per la modalità laser grbl)"
-
-#: inx/inkstitch_output_TXT.inx:42
-msgid "dynamic laser power"
-msgstr "potenza laser dinamica"
-
-#: inx/inkstitch_output_TXT.inx:42
-msgid "Use Grbl's M4 dynamic laser power mode. Ensures consistent laser cutting power regardless of motor speed. Only for PWM-capable lasers."
-msgstr ""
-
-#: inx/inkstitch_output_TXT.inx:44
-msgid "laser warm-up time"
-msgstr "tempo di riscaldamento del laser"
-
-#: inx/inkstitch_output_TXT.inx:44
-msgid "When turning on the laser, wait this many seconds for laser to warm up (G4 command)"
-msgstr "Tempo di attesa in secondi per il riscaldamento del laser dopo l'accensione (comando G4)"
-
-#: inx/inkstitch_output_TXT.inx:46
-msgid "spindle speed"
-msgstr "velocità del mandrino"
-
-#: inx/inkstitch_output_TXT.inx:46
-msgid "spindle speed (laser power for laser mode, set to -1 to omit)"
-msgstr "velocità del mandrino (potenza laser nella modalità laser, impostare a -1 per omettere)"
-
-#: inx/inkstitch_output_TXT.inx:48
-msgid "min spindle speed"
-msgstr "velocità minima mandrino"
-
-#: inx/inkstitch_output_TXT.inx:48
-msgid "minimum spindle speed value (grbl $31 setting)"
-msgstr "velocità minima mandrino (impostazione grbl $31)"
-
-#: inx/inkstitch_output_TXT.inx:50
-msgid "max spindle speed"
-msgstr "velocità massima mandrino"
-
-#: inx/inkstitch_output_TXT.inx:50
-msgid "minimum spindle speed value (grbl $30 setting)"
-msgstr "velocità minima mandrino (impostazione grbl $30)"
-
-#: inx/inkstitch_output_TXT.inx:51
-msgid "feed rate (in mm/min, set to -1 to omit)"
-msgstr "velocità di alimentazione (in mm/min, impostare a -1 per omettere)"
 
 #: inx/inkstitch_output_U01.inx:3
 msgid "U01 file output"
@@ -4110,6 +4353,14 @@ msgstr ""
 
 #: inx/inkstitch_output_VP3.inx:9
 msgid "Save design in VP3 format using Ink/Stitch"
+msgstr ""
+
+#: inx/inkstitch_output_XXX.inx:3
+msgid "XXX file output"
+msgstr ""
+
+#: inx/inkstitch_output_XXX.inx:9
+msgid "Save design in XXX format using Ink/Stitch"
 msgstr ""
 
 #: inx/inkstitch_palette_split_text.inx:3
@@ -4220,11 +4471,11 @@ msgstr "Ink/Stitch: esportazione ZIP formati multipli (.zip)"
 msgid "Create a ZIP with multiple embroidery file formats using Ink/Stitch"
 msgstr "Creare un file ZIP con formati di ricamo multipli usando Ink/Stitch"
 
-#: inx/inkstitch_zip.inx:20
-msgid ".SVG: Scalable Vector Graphic"
+#: inx/inkstitch_zip.inx:26
+msgid ".TXT: Threadlist [COLOR]"
 msgstr ""
 
-#: inx/inkstitch_zip.inx:21
-msgid ".TXT: Threadlist"
+#: inx/inkstitch_zip.inx:27
+msgid ".SVG: Scalable Vector Graphic"
 msgstr ""
 
