@@ -60,10 +60,10 @@ Le choix s'appliquera également aux noms de fil à afficher dans l'aperçu avan
 
 Inkscape permet de générer des fichiers `.gpl`  de palette de couleurs. Mais il ne permet pas d'ordonner correctement les échantillons de couleur.
 
-Cette extension exportera les couleur d'éléments textuels tout en utilisant le texte pour le noms et numéros des couleurs.
+Cette extension exportera les couleurs d'éléments textuels tout en utilisant le texte pour les noms et numéros des couleurs.
 
-1. Importez une image avec les couleurs de fils que vous voulez utilisez pour la palette de couleurs. 
-2. Activezl'outil texte et copier/collet les noms de couleurs (si vous les avez) ou saisissez les.
+1. Importez une image avec les couleurs de fils que vous voulez utiliser pour la palette de couleurs. 
+2. Activez l'outil texte et copier/coller les noms de couleurs (si vous les avez) ou saisissez les.
    Utilisez une ligne par couleur.
    Si un nom de couleur se termine par un nombre, ce nombre sera utilisé pour cette couleur dans le catalogue.
 3. Utilisez `Extensions > Ink/Stitch > Gestion des couleurs de fil > Generer  palette  > Séparer le texte` pour séparer un bloc de texte avec plusieurs lignes en plusieurs éléments textuels séparés. 
