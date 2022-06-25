@@ -5,7 +5,7 @@ excerpt: ""
 last_modified_at: 2022-05-24
 toc: true
 ---
-## Importer une liste de fils
+## Appliquer une liste de fils
 
 Ink/Stitch peut appliquer des listes de fil personnalisées à une broderie. Ceci est particulièrement utile si vous souhaitez utiliser un fichier de broderie qui ne comporte pas d'information de couleur (par exemple DST).
 
