@@ -538,10 +538,10 @@ class FillStitch(EmbroideryElement):
             return self.do_legacy_fill()
         else:
             stitch_groups = []
-            start = self.get_starting_point(last_patch)
             end = self.get_ending_point()
 
             for shape in self.shape.geoms:
+                start = self.get_starting_point(last_patch)
                 try:
                     if self.fill_underlay:
                         underlay_stitch_groups, start = self.do_underlay(shape, start)
