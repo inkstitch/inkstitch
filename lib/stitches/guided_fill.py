@@ -1,4 +1,5 @@
 from math import atan2, copysign
+from random import random
 
 import numpy as np
 import shapely.prepared
@@ -93,14 +94,19 @@ def extend_line(line, shape):
     lower_right = InkstitchPoint(maxx, maxy)
     length = (upper_left - lower_right).length()
 
-    point1 = InkstitchPoint(*line.coords[0])
-    point2 = InkstitchPoint(*line.coords[-1])
+    start_point = InkstitchPoint.from_tuple(line.coords[0])
+    end_point = InkstitchPoint.from_tuple(line.coords[-1])
+    direction = (end_point - start_point).unit()
 
-    new_starting_point = point1 - (point2 - point1).unit() * length
-    new_ending_point = point2 - (point1 - point2).unit() * length
+    new_start_point = start_point - direction * length
+    new_end_point = end_point + direction * length
 
-    return shgeo.LineString([new_starting_point.as_tuple()] +
-                            line.coords[1:-1] + [new_ending_point.as_tuple()])
+    # without this, we seem especially likely to run into this libgeos bug:
+    #   https://github.com/shapely/shapely/issues/820
+    new_start_point += InkstitchPoint(random() * 0.01, random() * 0.01)
+    new_end_point += InkstitchPoint(random() * 0.01, random() * 0.01)
+
+    return shgeo.LineString((new_start_point, *line.coords, new_end_point))
 
 
 def repair_multiple_parallel_offset_curves(multi_line):
