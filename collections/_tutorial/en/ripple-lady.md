@@ -1,5 +1,5 @@
 ---
-permalink: /en/tutorials/ripple-lady/
+permalink: /tutorials/ripple-lady/
 title: "Ripple Tinkerbell Woman"
 language: en
 last_modified_at: 2022-05-26

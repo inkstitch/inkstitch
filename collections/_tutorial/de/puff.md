@@ -7,13 +7,13 @@ excerpt: Puff example file
 image: /assets/images/tutorials/samples/PuffRegular.svg
 
 
-tutorial-type:
-  - Sample File
-stitch-type: Satin Stitch
-techniques:
+tutorial-typ:
+  - Beispieldatei
+stichart: Satinstich
+techniken:
   - Puff
 field-of-use:
-user-level: 
+schwierigkeitsgrad: 
 ---
 
 ## Puff Regular (by Evan West)

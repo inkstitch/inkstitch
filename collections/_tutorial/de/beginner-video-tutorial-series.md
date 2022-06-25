@@ -6,11 +6,11 @@ language: de
 excerpt: "Beginner Tutorial Serie auf unserem YouTube-Kanal"
 image: "/assets/images/tutorials/video-preview-images/beginner-tutorial-series.png"
 
-tutorial-type: Video
-stitch-type: 
-techniques:
+tutorial-typ: Video
+stichart: 
+techniken:
 field-of-use:
-user-level: Beginner
+schwierigkeitsgrad: leicht
 
 toc: true
 ---

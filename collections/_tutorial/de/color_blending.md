@@ -6,13 +6,13 @@ language: de
 excerpt: "Farbübergänge"
 image: "/assets/images/tutorials/samples/True_Blend.svg"
 
-tutorial-type:
-  - Sample File
-stitch-type: 
-  - Fill Stitch
-techniques:
+tutorial-typ:
+  - Beispieldatei
+stichart: 
+  - Füllstich
+techniken:
 field-of-use:
-user-level:
+schwierigkeitsgrad:
 ---
 ## Falscher Farbübgergang (Faux Fill Blend)
 

@@ -6,12 +6,12 @@ language: de
 excerpt: Das ist ein Screencast wie man die Ink/Stitch nutzen kann, um ein Stickdesign zu erstellen.
 image: https://media.inkscape.org/media/resources/file/Inkscape_Logo_Standard_square.svg
 
-tutorial-type:
+tutorial-typ:
   - Video
-stitch-type: 
-techniques:
+stichart: 
+techniken:
 field-of-use: 
-user-level: Beginner
+schwierigkeitsgrad: leicht
 ---
 
 {% include video id="qXntE1X1RIw" provider="youtube" %}

@@ -70,4 +70,4 @@ Empfehlenswert ist auch [dieser Artikel (englisch)](https://www.mrxstitch.com/un
 Für Satinsäulen stellt Ink/Stitch einige hilfreiche [Werkzeuge](/de/docs/satin-tools/) bereit, die dir das Arbeiten mit Satinsäulen erheblich erleichtern können.
 
 ## Beispieldateien, die Satinsäulen enthalten
-{% include tutorials/tutorial_list key="stitch-type" value="Satin Stitch" %}
+{% include tutorials/tutorial_list key="stichart" value="Satinstich" %}

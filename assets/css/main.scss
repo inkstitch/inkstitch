@@ -137,6 +137,10 @@ $text-color: #000;
   font-size: 0.8rem;
 }
 
+p.notice--info, p.notice--warning {
+    font-size: 0.7rem !important;
+}
+
 .highlighter-rouge, figure.highlight {
   background: #efefef;
   padding: 0 5px;

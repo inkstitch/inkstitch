@@ -1,6 +1,6 @@
 ---
 title: Contour Fill
-permalink: /en/tutorials/contour-fill/
+permalink: /tutorials/contour-fill/
 last_modified_at: 2022-05-22
 language: en
 excerpt: "Sample file for contour fill"

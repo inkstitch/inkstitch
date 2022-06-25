@@ -5,7 +5,7 @@ excerpt: ""
 last_modified_at: 2021-10-23
 toc: true
 ---
-## Garnliste importieren
+## Garnfarben-Liste anwenden
 
 Ink/Stitch kann Garnlisten auf ein Design anwenden. Das ist besonders dann nützlich, wenn du mit bestehenden Stickdateien arbeitest, die keine Farbinformationen speichern (z.B. DST).
 

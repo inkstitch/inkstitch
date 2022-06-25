@@ -1,6 +1,6 @@
 ---
 title: "Ripple stitch"
-permalink: /en/docs/stitches/ripple/
+permalink: /docs/stitches/ripple/
 excerpt: ""
 last_modified_at: 2022-06-11
 toc: true
@@ -12,7 +12,9 @@ toc: true
 [![Ripple butterfly](/assets/images/docs/ripplefly.jpg){: width="200x"}](/assets/images/docs/ripplefly.svg){: title="Download SVG File" .align-left download="ripplefly.svg" }
 Ripple stitch is part running stitch and part filling: it behaves like a running stitch (it can be done in triple stitch for example), it is defined from a stroke, but the embroidery result stretches over a surface. Used loosely, the result looks like ripples, hence the name.
 
-Have a look at this teasing video: {% include video id="cyvby3KJM10" provider="youtube" %}
+<p style="clear: both;">&nbsp;</p>
+
+{% include video id="e1426a71-486a-4e62-a4c7-3b2f25dd1fc0" provider="diode" %}
 
 ## How to Create
 

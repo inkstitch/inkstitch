@@ -1,5 +1,5 @@
 ---
-permalink: /en/tutorials/ripple-monochrome/
+permalink: /tutorials/ripple-monochrome/
 title: "Monochrome flower, using ripple stitch and contour stitch"
 language: en
 last_modified_at: 2022-06-04

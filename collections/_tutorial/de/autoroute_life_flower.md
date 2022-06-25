@@ -5,14 +5,14 @@ language: de
 last_modified_at: 2022-06-10
 excerpt: "Auto route running stitches"
 image: "/assets/images/tutorials/life_flower/flower-of-life-two-digitalisation.svg"
-tutorial-type:
+tutorial-typ:
   - 
-stitch-type:
-  - Bean Stitch
-  - Running Stitch
-techniques:
+stichart:
+  - Mehrfachgeradstich
+  - Geradstich
+techniken:
 field-of-use:
-user-level: 
+schwierigkeitsgrad: 
 ---
 
 With Auto-Route Running Stitch it is pretty easy to create  some redwork like embroidery from images.

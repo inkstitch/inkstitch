@@ -6,13 +6,13 @@ language: de
 excerpt: "Beispieldatei für Satin-Ecken"
 image: "/assets/images/tutorials/tutorial-preview-images/satin-edges.png"
 
-tutorial-type:
-  - Sample File
-stitch-type: 
-  - Satin Stitch
-techniques:
+tutorial-typ:
+  - Beispieldatei
+stichart: 
+  - Satinstich
+techniken:
 field-of-use:
-user-level: 
+schwierigkeitsgrad: 
 ---
 Wenn du Stickdesigns erstellst, wirst du irgendwann das Problem haben, eine Satinkolumne um eine scharfe Ecke legen zu müssen. Eine einfache, zusammenhängende Satinkolumne wird dann nicht mehr gut aussehen.
 

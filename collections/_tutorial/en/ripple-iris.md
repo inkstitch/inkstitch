@@ -1,5 +1,5 @@
 ---
-permalink: /en/tutorials/ripple-iris/
+permalink: /tutorials/ripple-iris/
 title: "Ripple Iris"
 language: en
 last_modified_at: 2022-06-02

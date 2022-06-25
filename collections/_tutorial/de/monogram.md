@@ -6,13 +6,13 @@ language: de
 excerpt: "Monogram Frame Example"
 image: "/assets/images/tutorials/samples/Monogram Frame Example.svg"
 
-tutorial-type:
-  - Sample File
-stitch-type: 
-  - Running Stitch
-  - Satin Stitch
-techniques:
-user-level:
+tutorial-typ:
+  - Beispieldatei
+stichart: 
+  - Geradstich
+  - Satinstich
+techniken:
+schwierigkeitsgrad:
 ---
 ## Instructions
 

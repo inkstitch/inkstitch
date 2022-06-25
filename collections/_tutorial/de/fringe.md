@@ -6,17 +6,17 @@ language: de
 excerpt: "Fringe example file"
 image: "/assets/images/tutorials/samples/Fringe Example.svg"
 
-tutorial-type:
-  - Sample File
-stitch-type:
-  - Satin Stitch
-  - Running Stitch
-  - Manual Stitch
-  - Fill Stitch
-techniques:
+tutorial-typ:
+  - Beispieldatei
+stichart:
+  - Satinstich
+  - Geradstich
+  - Manueller Stich
+  - Füllstich
+techniken:
   - Fringe
 field-of-use:
-user-level: 
+schwierigkeitsgrad: 
 ---
 ## Fringe Example (by Evan West)
 

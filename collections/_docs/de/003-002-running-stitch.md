@@ -30,4 +30,4 @@ Die Stickrichtung wird durch die Pfadrichtung bestimmt. Wenn du die Richtung än
 
 ## Beispieldateien, die Geradstich enthalten
 
-{% include tutorials/tutorial_list key="stitch-type" value="Running Stitch" %}
+{% include tutorials/tutorial_list key="stichart" value="Geradstich" %}

@@ -5,13 +5,13 @@ language: de
 last_modified_at: 2022-05-29
 excerpt: "Automatische Anordnung von Geradstichen und Sashiko-Erweiterung"
 image: "/assets/images/tutorials/sashiko/sashiko.jpg"
-tutorial-type:
+tutorial-typ:
   - Beispieldatei
-stitch-type:
-  - "Dreifach-Geradstich"
-techniques:
+stichart:
+  - Mehrfachgeradstich
+techniken:
 field-of-use:
-user-level: 
+schwierigkeitsgrad: 
 ---
 
 

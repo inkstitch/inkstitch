@@ -35,5 +35,5 @@ Für eine genaue Planung macht es deshalb Sinn, schon beim Zeichnen Kurven direk
 
 ## Beispieldateien die den manuellen Stichmodus beinhalten
 {: style="clear: both;" }
-{% include tutorials/tutorial_list key="stitch-type" value="Manual Stitch" %}
+{% include tutorials/tutorial_list key="stichart" value="Manueller Stich" %}
 

@@ -6,16 +6,15 @@ excerpt: "Applique example file"
 language: de
 image: "/assets/images/tutorials/samples/Applique Color Change.svg"
 
-tutorial-type:
-  - Sample File
-stitch-type: 
-  - Running Stitch
-  - Fill Stitch
-  - Satin Stitch
-techniques:
+tutorial-typ:
+  - Beispieldatei
+stichart: 
+  - Geradstich
+  - Füllstich
+  - Satinstich
+techniken:
   - Applique
-field-of-use:
-user-level: Beginner
+schwierigkeitsgrad: leicht
 ---
 ## Steps
 

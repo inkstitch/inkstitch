@@ -22,5 +22,5 @@ Bereite deinen Pfad genauso vor, wie du es für [Satinsäulen](/de/docs/stitches
 {: .notice--info }
 
 ## Beispieldateien die E-Stich enthalten
-{% include tutorials/tutorial_list key="stitch-type" value="E-Stitch" %}
+{% include tutorials/tutorial_list key="stichart" value="E-Stich" %}
 

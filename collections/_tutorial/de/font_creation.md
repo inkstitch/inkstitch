@@ -8,12 +8,12 @@ toc: true
 excerpt: Erstelle neue Schriftarten für Ink/Stitch
 image: /assets/images/fonts/augusa_tutorial/augusa_dejavu.png
 
-tutorial-type:
+tutorial-typ:
   - Text
-stitch-type: 
-techniques:
+stichart: 
+techniken:
 field-of-use: Text
-user-level: Advanced
+schwierigkeitsgrad: fortgeschritten
 ---
 @Augusa hat einen tollen Artikel in ihrem Blog zur Erstellung neuer Schriftarten veröffentlicht: [Inkstitch : Créer une police de caractères brodés](https://lyogau.over-blog.com/2020/12/inkstitch-creer-une-police-de-caracteres-brodes.html)
 

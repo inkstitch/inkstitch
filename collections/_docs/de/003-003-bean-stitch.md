@@ -25,4 +25,4 @@ Mehrfachgeradstich oder "Bean stitch" beschreibt eine Wiederholung von Geradstic
 
 ## Beispieldateien mit Mehrfachgeradstich
 
-{% include tutorials/tutorial_list key="stitch-type" value="Bean Stitch" %}
+{% include tutorials/tutorial_list key="stichart" value="Mehrfachgeradstich" %}

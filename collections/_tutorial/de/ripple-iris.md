@@ -5,15 +5,15 @@ language: de
 last_modified_at: 2022-06-02
 excerpt: "Sample file: Ripple Iris"
 image: "/assets/images/tutorials/tutorial-preview-images/ripple-iris.jpg"
-tutorial-type:
-  - Sample File
-stitch-type:
-  - "Ripple Stitch"
-  - "Satin Column"
-  - "Bean Stitch"
-techniques:
+tutorial-typ:
+  - Beispieldatei
+stichart:
+  - Ripple Stich
+  - Satinstich
+  - Mehrfachgeradstich
+techniken:
 field-of-use:
-user-level:
+schwierigkeitsgrad:
 ---
 
 ## Ripple Iris

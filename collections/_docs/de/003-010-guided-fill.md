@@ -40,4 +40,4 @@ Read detailed information in the [Guided Fill Params](/de/docs/params/#kurvvenf√
 Underlay in Guided Fill doesn't follow the guide line, but uses the fill angle which can be defined in the underlay [params](/docs/params/#fill-underlay).
 
 ## Samples Files Including Guided Fill Stitches
-{% include tutorials/tutorial_list key="stitch-type" value="Guided Fill" %}
+{% include tutorials/tutorial_list key="stichart" value="Kurvenf√ºllung" %}

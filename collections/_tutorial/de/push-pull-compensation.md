@@ -6,11 +6,11 @@ language: de
 excerpt: Push/Pull Compensation
 image: /assets/images/tutorials/embroidery/push-pull-effect.svg
 
-tutorial-type:
+tutorial-typ:
   - Text
-stitch-type: 
-techniques:
-user-level:
+stichart: 
+techniken:
+schwierigkeitsgrad:
 
 classes: wide
 ---

@@ -32,4 +32,4 @@ Lese detaillierte Informationen über die [Parameter für Konturfüllung](/de/do
 Die Unterlage einer Konturfüllung folgt nicht der Kontur, aber nutzt den Stickwinkel, der in den [Parametern der Unterlage](/de/docs/params/#füllung-unterlage) eingestellt werden kann.
 
 ### Beispieldateien für Konturfüllung
-{% include tutorials/tutorial_list key="stitch-type" value="Contour Fill" %}
+{% include tutorials/tutorial_list key="stichart" value="Konturfülllung" %}

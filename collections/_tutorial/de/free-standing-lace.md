@@ -6,15 +6,15 @@ language: de
 excerpt: Free Standing Lace - Schmetterling
 image: "/assets/images/tutorials/samples/Bfly FSL.svg"
 
-tutorial-type:
-  - Sample File
-stitch-type: 
-  - Running Stitch
-  - Satin Stitch
-  - Fill Stitch
-techniques:
+tutorial-typ:
+  - Beispieldatei
+stichart: 
+  - Geradstich
+  - Satinstich
+  - Füllstich
+techniken:
   - Free Standing Lace
-user-level:
+schwierigkeitsgrad:
 ---
 ## Instructions
 
