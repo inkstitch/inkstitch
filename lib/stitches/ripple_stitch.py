@@ -32,7 +32,7 @@ def ripple_stitch(stroke):
         if stroke.reverse:
             helper_lines = [helper_line[::-1] for helper_line in helper_lines]
             num_lines = stroke.skip_start
-        if num_lines % 2 != 0:
+        if (num_lines % 2 != 0 and not stroke.is_closed) or (stroke.is_closed and not stroke.reverse):
             helper_lines.reverse()
         ripple_points.extend(_do_grid(stroke, helper_lines))
 
