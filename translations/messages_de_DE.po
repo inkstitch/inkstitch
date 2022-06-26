@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2022-06-25 02:44+0000\n"
-"PO-Revision-Date: 2022-06-25 02:46\n"
+"PO-Revision-Date: 2022-06-26 02:39\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -168,7 +168,7 @@ msgstr "Alle Buchstaben sind eine Mischung aus Satinsäulen und Mehrfachgeradsti
 #. name of font in fonts/dinomouse72
 #: inkstitch-fonts-metadata.py:54
 msgid "DinoMouse72"
-msgstr ""
+msgstr "DinoMouse72"
 
 #. description of font in fonts/dinomouse72
 #: inkstitch-fonts-metadata.py:56
@@ -274,7 +274,7 @@ msgstr "Grand Hotel Marif"
 #. description of font in fonts/grand_hotel_marif
 #: inkstitch-fonts-metadata.py:96
 msgid "Grand Hotel Marif is a script satin font of size approximatively 35 mm. The glyphs cover most Western European languages. The font can be scaled down to 60% and up to 140%."
-msgstr ""
+msgstr "Grand Hotel Marif ist eine Schreibschrift-Satin-Schriftart mit einer Größe von ca. 35 mm. Die Buchstaben decken die meisten West-Eruopäischen Sprachen ab. Die Schrift kann von 60 % bis zu 140 % skaliert werden."
 
 #. name of font in fonts/grandhotel_small
 #: inkstitch-fonts-metadata.py:98
@@ -394,7 +394,7 @@ msgstr "Namskout ist eine große Applikationsschrift mit einer Größe von ca. 9
 #. name of font in fonts/nick_ainley
 #: inkstitch-fonts-metadata.py:142
 msgid "NickAinley"
-msgstr ""
+msgstr "NickAinley"
 
 #. description of font in fonts/nick_ainley
 #: inkstitch-fonts-metadata.py:144
@@ -819,7 +819,7 @@ msgstr "Nicht verbunden"
 
 #: lib/elements/fill_stitch.py:74
 msgid "Fill: This object is made up of unconnected shapes. Ink/Stitch doesn't know what order to stitch them in.  Please break this object up into separate shapes."
-msgstr ""
+msgstr "Füllstich: Dieses Objekt besteht aus unzusammenhängenden Formen. Ink/Stitch weiß nicht, in welcher Reihenfolge diese Objekte gestickt werden sollen. Bitte zerlege den Pfad in separate Teile."
 
 #: lib/elements/fill_stitch.py:78 lib/elements/fill_stitch.py:87
 #: lib/elements/fill_stitch.py:95
@@ -832,15 +832,15 @@ msgstr "Außenlinien überkreuzen sich selbst"
 
 #: lib/elements/fill_stitch.py:84
 msgid "Fill: The border crosses over itself. This may lead into unconnected shapes. Please break this object into separate shapes to indicate in which order it should be stitched in."
-msgstr ""
+msgstr "Füllstich: Der Pfad dieses Objektes überschneidet sich selbst. Das kann zu unzusammenhängenden Objekten führen. Bitte den Pfad zerlegen, um die Stickreihenfolge der Einzelelemente zu definieren (Erweiterungen > Ink/Stitch > Werkzeuge: Füllung > Füllobjekte aufspalten)."
 
 #: lib/elements/fill_stitch.py:92
 msgid "This shape is invalid"
-msgstr ""
+msgstr "Diese Form ist ungültig"
 
 #: lib/elements/fill_stitch.py:93
 msgid "Fill: This shape cannot be stitched out. Please try to repair it with the \"Break Apart Fill Objects\" extension."
-msgstr ""
+msgstr "Füllstich: Diese Form kann nicht gestickt werden. Versuche sie mit der Option \"Füllstiche aufspalten\" (Erweiterungen > Ink/Stitch > Werkzeuge: Füllung > Füllobjekte aufspalten) zu reparieren."
 
 #: lib/elements/fill_stitch.py:100
 msgid "FillStitch"
@@ -872,19 +872,19 @@ msgstr "Veraltete Füllung"
 
 #: lib/elements/fill_stitch.py:114
 msgid "Guided Fill Strategy"
-msgstr ""
+msgstr "Strategie"
 
 #: lib/elements/fill_stitch.py:115
 msgid "Copy"
-msgstr ""
+msgstr "Kopieren"
 
 #: lib/elements/fill_stitch.py:115
 msgid "Parallel Offset"
-msgstr ""
+msgstr "Parallelverschiebung"
 
 #: lib/elements/fill_stitch.py:116
 msgid "Copy (the default) will fill the shape with shifted copies of the line.Parallel offset will ensure that each line is always a consistent distance from its neighbor.Sharp corners may be introduced."
-msgstr ""
+msgstr "Kopieren (Voreinstellung) füllt die Form mit verschobenen Kopien der Führungslinie. Parallelversatz stellt einen konstanten Abstand der Reihen sicher. Es kann dabei zur Bildung von scharfe Ecken kommen."
 
 #: lib/elements/fill_stitch.py:123
 msgid "Contour Fill Strategy"
@@ -984,11 +984,11 @@ msgstr "Stichlänge um den Umriss des Füllbereichs, der beim Übergang von Absc
 
 #: lib/elements/fill_stitch.py:380 lib/elements/stroke.py:116
 msgid "Running stitch tolerance"
-msgstr ""
+msgstr "Geradstich-Toleranz"
 
 #: lib/elements/fill_stitch.py:381
 msgid "All stitches must be within this distance of the path.  A lower tolerance means stitches will be closer together.  A higher tolerance means sharp corners may be rounded."
-msgstr ""
+msgstr "Alle Stiche müssen innerhalb dieser Toleranzgrenze zum Pfad liegen. Eine niedrigere Toleranz bedeutet, dass sich die Stichlänge mehr reduziert. Eine größere Toleranz lann zur Abrundung scharfer Ecken führen."
 
 #: lib/elements/fill_stitch.py:392
 msgid "Underlay"
@@ -1237,19 +1237,19 @@ msgstr "Maximale Stichlänge für Zwischenstiche."
 
 #: lib/elements/satin_column.py:104
 msgid "Short stitch inset"
-msgstr ""
+msgstr "Kurzstich-Einzug"
 
 #: lib/elements/satin_column.py:105
 msgid "Stitches in areas with high density will be shortened by this amount."
-msgstr ""
+msgstr "Stiche in Bereichen mit hoher Dichte werden um diesen Wert verkürzt."
 
 #: lib/elements/satin_column.py:113
 msgid "Short stitch distance"
-msgstr ""
+msgstr "Kurzstitch-Dichte"
 
 #: lib/elements/satin_column.py:114
 msgid "Do short stitches if the distance between stitches is smaller than this."
-msgstr ""
+msgstr "Füge Kurzstiche ein, wenn der Abstand zwischen den Stichen schmaler ist als dieser Wert."
 
 #: lib/elements/satin_column.py:126 lib/elements/stroke.py:129
 msgid "Zig-zag spacing (peak-to-peak)"
@@ -1340,11 +1340,11 @@ msgstr "Überspringen-Werte wurden ignoriert, da sie größer als die Gesamtzahl
 
 #: lib/elements/stroke.py:29
 msgid "* Open the params dialog with this object selected"
-msgstr ""
+msgstr "* Objekt auswählen und die Parameter-Einstellungen öffnen"
 
 #: lib/elements/stroke.py:30
 msgid "* Reduce Skip values or increase number of lines"
-msgstr ""
+msgstr "* Werte für \"Überspringen\" reduzieren oder die Linienanzahl erhöhen"
 
 #: lib/elements/stroke.py:43
 msgid "Stroke"
@@ -1384,7 +1384,7 @@ msgstr "Mehrfach Geradstich Anzahl der Wiederholungen"
 
 #: lib/elements/stroke.py:94
 msgid "Backtrack each stitch this many times.  A value of 1 would triple each stitch (forward, back, forward).  A value of 2 would quintuple each stitch, etc."
-msgstr ""
+msgstr "Jeden Stich vervielfachen. Ein Wert von 1 würde jeden Stich verdreifachen (vorwärts, rückwärts, vorwärts). Ein Wert von 2 würde jeden Stich fünffach ausführen."
 
 #: lib/elements/stroke.py:105
 msgid "Running stitch length"
@@ -1396,7 +1396,7 @@ msgstr "Länge der Geradstiche."
 
 #: lib/elements/stroke.py:117
 msgid "All stitches must be within this distance from the path.  A lower tolerance means stitches will be closer together.  A higher tolerance means sharp corners may be rounded."
-msgstr ""
+msgstr "Alle Stiche müssen innerhalb dieser Toleranzgrenze zum Pfad liegen. Eine niedrigere Toleranz bedeutet, dass sich die Stichlänge mehr reduziert. Eine größere Toleranz kann zur Abrundung scharfer Ecken führen."
 
 #: lib/elements/stroke.py:130
 msgid "Length of stitches in zig-zag mode."
@@ -1432,51 +1432,51 @@ msgstr "Linienabstand Exponent"
 
 #: lib/elements/stroke.py:196
 msgid "Increase density towards one side."
-msgstr ""
+msgstr "Dichte zu einer Seite hin erhöhen."
 
 #: lib/elements/stroke.py:207
 msgid "Flip exponent"
-msgstr ""
+msgstr "Exponent umkehren"
 
 #: lib/elements/stroke.py:208
 msgid "Reverse exponent effect."
-msgstr ""
+msgstr "Effekt des Exponenten umkehren."
 
 #: lib/elements/stroke.py:219
 msgid "Reverse"
-msgstr ""
+msgstr "Umkehren"
 
 #: lib/elements/stroke.py:220
 msgid "Flip start and end point"
-msgstr ""
+msgstr "Start- und Endpunkt vertauschen"
 
 #: lib/elements/stroke.py:231
 msgid "Grid size"
-msgstr ""
+msgstr "Größe des Gitters"
 
 #: lib/elements/stroke.py:232
 msgid "Render as grid. Use with care and watch your stitch density."
-msgstr ""
+msgstr "Als Gitter rendern. Dabei bitte unbedingt auf die Stichdichte achten."
 
 #: lib/elements/stroke.py:244
 msgid "Scale axis"
-msgstr ""
+msgstr "Skalieren"
 
 #: lib/elements/stroke.py:245
 msgid "Scale axis for satin guided ripple stitches."
-msgstr ""
+msgstr "Achse für Satin-geführte Ripplestiche."
 
 #: lib/elements/stroke.py:249
 msgid "X Y"
-msgstr ""
+msgstr "X Y"
 
 #: lib/elements/stroke.py:249
 msgid "X"
-msgstr ""
+msgstr "X"
 
 #: lib/elements/stroke.py:249
 msgid "Y"
-msgstr ""
+msgstr "Y"
 
 #: lib/elements/stroke.py:249 print/templates/ui.html:172
 msgid "None"
@@ -1484,31 +1484,31 @@ msgstr "Keine"
 
 #: lib/elements/stroke.py:257
 msgid "Starting scale"
-msgstr ""
+msgstr "Start-Skalierung"
 
 #: lib/elements/stroke.py:258
 msgid "How big the first copy of the line should be, in percent."
-msgstr ""
+msgstr "Größe der ersten Kopie der Ursprungsform in Prozent."
 
 #: lib/elements/stroke.py:258 lib/elements/stroke.py:269
 msgid "Used only for ripple stitch with a guide line."
-msgstr ""
+msgstr "Kann nur auf Ripplestiche mit einer Führungslinie angewandt werden."
 
 #: lib/elements/stroke.py:268
 msgid "Ending scale"
-msgstr ""
+msgstr "End-Skalierung"
 
 #: lib/elements/stroke.py:269
 msgid "How big the last copy of the line should be, in percent."
-msgstr ""
+msgstr "Größe der letzten Kopie der Ursprungsform in Prozent."
 
 #: lib/elements/stroke.py:279
 msgid "Rotate"
-msgstr ""
+msgstr "Rotieren"
 
 #: lib/elements/stroke.py:280
 msgid "Rotate satin guided ripple stitches"
-msgstr ""
+msgstr "Satin-geführte Ripplestiche rotieren"
 
 #: lib/elements/stroke.py:361
 msgid "Legacy running stitch setting detected!\n\n"
@@ -1640,24 +1640,24 @@ msgstr "Nadel #%s"
 
 #: lib/extensions/density_map.py:69
 msgid "Density Plan"
-msgstr ""
+msgstr "Dichte-Indikator"
 
 #: lib/extensions/density_map.py:83
 msgid "Red"
-msgstr ""
+msgstr "Rot"
 
 #: lib/extensions/density_map.py:83
 msgid "Yellow"
-msgstr ""
+msgstr "Gelb"
 
 #: lib/extensions/density_map.py:83
 msgid "Green"
-msgstr ""
+msgstr "Grün"
 
 #: lib/extensions/density_map.py:87
 #, python-format
 msgid "%s density"
-msgstr ""
+msgstr "%s Dichte"
 
 #: lib/extensions/duplicate_params.py:18
 msgid "This function copies Ink/Stitch parameters from the first selected element to the rest of the selection. Please select at least two elements."
@@ -1691,7 +1691,7 @@ msgstr "Keine Textelemente mit Füllfarben gefunden. Anwendungshinweise sind auf
 
 #: lib/extensions/input.py:18
 msgid "Ink/Stitch cannot import color formats directly. But you can open the embroidery file and apply the color with Extensions > Ink/Stitch > Thread Color Management > Apply Threadlist"
-msgstr ""
+msgstr "Ink/Stitch kann Farbformate nicht direkt importieren. Aber du kannst eine Stickdatei öffnen und die Farben darauf anwenden (Erweiterungen > Ink/Stitch > Garn Farbenverwaltung > Garnfarben-Liste anwenden)"
 
 #: lib/extensions/install_custom_palette.py:24
 #: lib/extensions/palette_to_text.py:26
@@ -2572,7 +2572,7 @@ msgstr "Brother Stickformat"
 #. description for pyembroidery file format: exp
 #: pyembroidery-format-descriptions.py:6
 msgid "Melco Expanded Embroidery Format"
-msgstr ""
+msgstr "Melco Erweitertes Stickformat"
 
 #. description for pyembroidery file format: dst
 #. description for pyembroidery file format: tbf
@@ -2713,7 +2713,7 @@ msgstr "Gunold Stickformat"
 #. description for pyembroidery file format: zhs
 #: pyembroidery-format-descriptions.py:80
 msgid "Zeng Hsing Embroidery Format"
-msgstr ""
+msgstr "Zeng Hsing Stickformat"
 
 #. description for pyembroidery file format: zxy
 #: pyembroidery-format-descriptions.py:82
@@ -2728,37 +2728,37 @@ msgstr "Brother Stichformat"
 #. description for pyembroidery file format: png
 #: pyembroidery-format-descriptions.py:86
 msgid "PNG Format, Portable Network Graphics"
-msgstr ""
+msgstr "PNG Format, Portable Network Graphics"
 
 #. description for pyembroidery file format: gcode
 #: pyembroidery-format-descriptions.py:88
 msgid "gcode Format, Text File"
-msgstr ""
+msgstr "gcode Format, Textdatei"
 
 #. description for pyembroidery file format: hus
 #: pyembroidery-format-descriptions.py:90
 msgid "Husqvarna Embroidery Format"
-msgstr ""
+msgstr "Husqvarna Stickformat"
 
 #. description for pyembroidery file format: edr
 #: pyembroidery-format-descriptions.py:92
 msgid "Edr Color Format"
-msgstr ""
+msgstr "Edr Farbformat"
 
 #. description for pyembroidery file format: col
 #: pyembroidery-format-descriptions.py:94
 msgid "Col Color Format"
-msgstr ""
+msgstr "Col Farbformat"
 
 #. description for pyembroidery file format: inf
 #: pyembroidery-format-descriptions.py:96
 msgid "Inf Color Format"
-msgstr ""
+msgstr "Inf Farbformat"
 
 #. description for pyembroidery file format: json
 #: pyembroidery-format-descriptions.py:98
 msgid "Json Export"
-msgstr ""
+msgstr "Json-Export"
 
 #. name for left arrow keyboard key
 #: electron/src/renderer/components/Simulator.vue:52
@@ -2966,7 +2966,7 @@ msgstr "Lizenz"
 
 #: inx/inkstitch_apply_threadlist.inx:3
 msgid "Apply Threadlist"
-msgstr "Garnliste anwenden"
+msgstr "Garnfarben-Liste anwenden"
 
 #: inx/inkstitch_apply_threadlist.inx:8
 #: inx/inkstitch_install_custom_palette.inx:8
@@ -2980,11 +2980,11 @@ msgstr "Methode wählen"
 
 #: inx/inkstitch_apply_threadlist.inx:10
 msgid "Apply Ink/Stitch threadlist"
-msgstr "Ink/Stitch Garnliste anwenden"
+msgstr "Ink/Stitch Garnfarben-Liste anwenden"
 
 #: inx/inkstitch_apply_threadlist.inx:11
 msgid "Apply other threadlist*"
-msgstr "Andere Garnliste andwenden*"
+msgstr "Andere Garnfarben-Liste andwenden*"
 
 #: inx/inkstitch_apply_threadlist.inx:13
 msgid "*Choose color palette"
@@ -2998,35 +2998,35 @@ msgstr "Hilfe"
 
 #: inx/inkstitch_apply_threadlist.inx:88
 msgid "This extension applies colors from a color file to the objects in this document."
-msgstr ""
+msgstr "Diese Erweiterung wendet die Farben aus einer Garnfarben-Datei auf die Objekte in diesem Dokument an."
 
 #: inx/inkstitch_apply_threadlist.inx:89
 msgid "COL, INF, EDR"
-msgstr ""
+msgstr "COL, INF, EDR"
 
 #: inx/inkstitch_apply_threadlist.inx:90
 msgid "Select the file and apply. The chosen method is not important for these file types."
-msgstr ""
+msgstr "Farbdatei auswählen und auf \"Anwenden\" klicken. Die gewählte Methode ist für diese Dateitypen nicht relevant."
 
 #: inx/inkstitch_apply_threadlist.inx:92
 msgid "TXT"
-msgstr ""
+msgstr "TXT"
 
 #: inx/inkstitch_apply_threadlist.inx:93
 msgid "Import an Ink/Stitch threadlist file (created through the zip export option)."
-msgstr ""
+msgstr "Eine Ink/Stitch Garnfarben-Liste importieren (kann über den Zip-Export erstellt werden)."
 
 #: inx/inkstitch_apply_threadlist.inx:95
 msgid "Import any other Threadlist file in txt format. Ink/Stitch will try to match the colors to the selected thread palette. The objects in this document will be colored accordingly if color matching has been successful."
-msgstr ""
+msgstr "Eine andere Garnfarben-Liste im txt-Dateiformat importieren. Ink/Stitch wird versuchen die Farben aus der ausgewählten Farbpalette zu erkennen. Bei erfolgreicher Farberkennung werden die Farben auf die Objekte in diesem Dokument angewendet."
 
 #: inx/inkstitch_apply_threadlist.inx:98
 msgid "Get more information on our website"
-msgstr ""
+msgstr "Weitere Informationen auf unserer Webseite"
 
 #: inx/inkstitch_apply_threadlist.inx:99
 msgid "https://inkstitch.org/docs/thread-color/#apply-threadlist"
-msgstr ""
+msgstr "https://inkstitch.org/de/docs/thread-color/#garnfarben-liste-anwenden"
 
 #: inx/inkstitch_apply_threadlist.inx:106 inx/inkstitch_generate_palette.inx:10
 #: inx/inkstitch_install.inx:10 inx/inkstitch_install_custom_palette.inx:13
@@ -3098,7 +3098,7 @@ msgstr "Werkzeuge: Satin"
 
 #: inx/inkstitch_break_apart.inx:3
 msgid "Break Apart Fill Objects"
-msgstr "Aufteilen von Füllobjekten"
+msgstr "Füllobjekte aufspalten"
 
 #: inx/inkstitch_break_apart.inx:10
 msgid "Tools: Fill"
@@ -3259,7 +3259,7 @@ msgstr "https://inkstitch.org/de/docs/cutwork/"
 
 #: inx/inkstitch_density_map.inx:3
 msgid "Density Map"
-msgstr ""
+msgstr "Dichte-Indikator"
 
 #: inx/inkstitch_density_map.inx:10 inx/inkstitch_embroider.inx:14
 #: inx/inkstitch_print.inx:10 inx/inkstitch_simulator.inx:10
@@ -3270,23 +3270,23 @@ msgstr "Visualisieren und exportieren"
 
 #: inx/inkstitch_density_map.inx:14
 msgid "Red markers"
-msgstr ""
+msgstr "Rote Markierungen"
 
 #: inx/inkstitch_density_map.inx:15 inx/inkstitch_density_map.inx:19
 msgid "Number of stitches"
-msgstr ""
+msgstr "Anzahl der Stiche"
 
 #: inx/inkstitch_density_map.inx:15 inx/inkstitch_density_map.inx:19
 msgid "0 = no density info"
-msgstr ""
+msgstr "0 = keine Angabe zur Dichte"
 
 #: inx/inkstitch_density_map.inx:16 inx/inkstitch_density_map.inx:20
 msgid "within a radius (mm) of"
-msgstr ""
+msgstr "innerhalb eines Radius von (mm)"
 
 #: inx/inkstitch_density_map.inx:18
 msgid "Yellow markers"
-msgstr ""
+msgstr "Gelbe Markierungen"
 
 #: inx/inkstitch_density_map.inx:22 inx/inkstitch_stitch_plan_preview.inx:15
 msgid "Design layer visibility"
@@ -3332,11 +3332,11 @@ msgstr "Sprungstiche, die kleiner sind, werden als normale Stiche behandelt."
 
 #: inx/inkstitch_embroider_settings.inx:20
 msgid "Minimal stitch length (mm)"
-msgstr ""
+msgstr "Minimale Stichlänge (mm)"
 
 #: inx/inkstitch_embroider_settings.inx:20
 msgid "Drop stitches smaller than this value."
-msgstr ""
+msgstr "Stitche die kleiner sind als dieser Wert, werden gelöscht und nicht exportiert (Ausnahme: Stiche zum Vernähen)."
 
 #: inx/inkstitch_flip.inx:3
 msgid "Flip Satin Column Rails"
@@ -3425,15 +3425,15 @@ msgstr "BRO Datei mit Ink/Stitch in manuelle Stickpfade konvertieren"
 
 #: inx/inkstitch_input_COL.inx:3
 msgid "COL file input"
-msgstr ""
+msgstr "COL Datei importieren"
 
 #: inx/inkstitch_input_COL.inx:8
 msgid "Ink/Stitch: Col Color Format (.col)"
-msgstr ""
+msgstr "Ink/Stitch: Col Farbformat (.col)"
 
 #: inx/inkstitch_input_COL.inx:9
 msgid "convert COL file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "COL Datei mit Ink/Stitch in manuelle Stickpfade konvertieren"
 
 #: inx/inkstitch_input_DAT.inx:3
 msgid "DAT file input"
@@ -3485,15 +3485,15 @@ msgstr "DSZ Datei mit Ink/Stitch in manuelle Stickpfade konvertieren"
 
 #: inx/inkstitch_input_EDR.inx:3
 msgid "EDR file input"
-msgstr ""
+msgstr "EDR Datei importieren"
 
 #: inx/inkstitch_input_EDR.inx:8
 msgid "Ink/Stitch: Edr Color Format (.edr)"
-msgstr ""
+msgstr "Ink/Stitch: Edr Farbformat (.edr)"
 
 #: inx/inkstitch_input_EDR.inx:9
 msgid "convert EDR file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "EDR Datei mit Ink/Stitch in manuelle Stickpfade konvertieren"
 
 #: inx/inkstitch_input_EMD.inx:3
 msgid "EMD file input"
@@ -3513,7 +3513,7 @@ msgstr "EXP Datei importieren"
 
 #: inx/inkstitch_input_EXP.inx:8 inx/inkstitch_output_EXP.inx:8
 msgid "Ink/Stitch: Melco Expanded Embroidery Format (.exp)"
-msgstr ""
+msgstr "Ink/Stitch: Melco Erweitertes Stickformat (.exp)"
 
 #: inx/inkstitch_input_EXP.inx:9
 msgid "convert EXP file to Ink/Stitch manual-stitch paths"
@@ -3545,15 +3545,15 @@ msgstr "FXY Datei mit Ink/Stitch in manuelle Stickpfade konvertieren"
 
 #: inx/inkstitch_input_GCODE.inx:3
 msgid "GCODE file input"
-msgstr ""
+msgstr "GCODE Datei importieren"
 
 #: inx/inkstitch_input_GCODE.inx:8 inx/inkstitch_output_GCODE.inx:8
 msgid "Ink/Stitch: gcode Format, Text File (.gcode)"
-msgstr ""
+msgstr "Ink/Stitch: gcode Format, Textdatei (.gcode)"
 
 #: inx/inkstitch_input_GCODE.inx:9
 msgid "convert GCODE file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "GCODE Datei mit Ink/Stitch in manuelle Stickpfade konvertieren"
 
 #: inx/inkstitch_input_GT.inx:3
 msgid "GT file input"
@@ -3569,15 +3569,15 @@ msgstr "GT Datei mit Ink/Stitch in manuelle Stickpfade konvertieren"
 
 #: inx/inkstitch_input_HUS.inx:3
 msgid "HUS file input"
-msgstr ""
+msgstr "HUS Datei importieren"
 
 #: inx/inkstitch_input_HUS.inx:8
 msgid "Ink/Stitch: Husqvarna Embroidery Format (.hus)"
-msgstr ""
+msgstr "Ink/Stitch: Husqvarna Stickformat (.hus)"
 
 #: inx/inkstitch_input_HUS.inx:9
 msgid "convert HUS file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "HUS Datei mit Ink/Stitch in manuelle Stickpfade konvertieren"
 
 #: inx/inkstitch_input_INB.inx:3
 msgid "INB file input"
@@ -3593,15 +3593,15 @@ msgstr "INB Datei mit Ink/Stitch in manuelle Stickpfade konvertieren"
 
 #: inx/inkstitch_input_INF.inx:3
 msgid "INF file input"
-msgstr ""
+msgstr "INF Datei importieren"
 
 #: inx/inkstitch_input_INF.inx:8
 msgid "Ink/Stitch: Inf Color Format (.inf)"
-msgstr ""
+msgstr "Ink/Stitch: Inf Farbformat (.inf)"
 
 #: inx/inkstitch_input_INF.inx:9
 msgid "convert INF file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "INF Datei mit Ink/Stitch in manuelle Stickpfade konvertieren"
 
 #: inx/inkstitch_input_JEF.inx:3
 msgid "JEF file input"
@@ -3773,15 +3773,15 @@ msgstr "PHC Datei mit Ink/Stitch in manuelle Stickpfade konvertieren"
 
 #: inx/inkstitch_input_PMV.inx:3
 msgid "PMV file input"
-msgstr ""
+msgstr "PMV Datei importieren"
 
 #: inx/inkstitch_input_PMV.inx:8
 msgid "Ink/Stitch: Brother Stitch Format (.pmv)"
-msgstr ""
+msgstr "Ink/Stitch: Brother Stichformat (.pmv)"
 
 #: inx/inkstitch_input_PMV.inx:9
 msgid "convert PMV file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "PMV Datei mit Ink/Stitch in manuelle Stickpfade konvertieren"
 
 #: inx/inkstitch_input_SEW.inx:3
 msgid "SEW file input"
@@ -3809,15 +3809,15 @@ msgstr "SHV Datei mit Ink/Stitch in manuelle Stickpfade konvertieren"
 
 #: inx/inkstitch_input_SPX.inx:3
 msgid "SPX file input"
-msgstr ""
+msgstr "SPX Datei importieren"
 
 #: inx/inkstitch_input_SPX.inx:8
 msgid "Ink/Stitch: Pfaff Embroidery Format (.spx)"
-msgstr ""
+msgstr "Ink/Stitch: Pfaff Stickformat (.spx)"
 
 #: inx/inkstitch_input_SPX.inx:9
 msgid "convert SPX file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "SPX Datei mit Ink/Stitch in manuelle Stickpfade konvertieren"
 
 #: inx/inkstitch_input_STC.inx:3
 msgid "STC file input"
@@ -3905,15 +3905,15 @@ msgstr "XXX Datei mit Ink/Stitch in manuelle Stickpfade konvertieren"
 
 #: inx/inkstitch_input_ZHS.inx:3
 msgid "ZHS file input"
-msgstr ""
+msgstr "ZHS Datei importieren"
 
 #: inx/inkstitch_input_ZHS.inx:8
 msgid "Ink/Stitch: Zeng Hsing Embroidery Format (.zhs)"
-msgstr ""
+msgstr "Ink/Stitch: Zeng Hsing Stickformat (.zhs)"
 
 #: inx/inkstitch_input_ZHS.inx:9
 msgid "convert ZHS file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "ZHS Datei mit Ink/Stitch in manuelle Stickpfade konvertieren"
 
 #: inx/inkstitch_input_ZXY.inx:3
 msgid "ZXY file input"
@@ -4088,15 +4088,15 @@ msgstr "Objektbefehle anzeigen|verbergen"
 
 #: inx/inkstitch_output_COL.inx:3
 msgid "COL file output"
-msgstr ""
+msgstr "COL Datei exportieren"
 
 #: inx/inkstitch_output_COL.inx:8
 msgid "Ink/Stitch: Col Color Format [COLOR] (.col)"
-msgstr ""
+msgstr "Ink/Stitch: Col Farbformat [FARBE] (.col)"
 
 #: inx/inkstitch_output_COL.inx:9
 msgid "Save design in COL format using Ink/Stitch"
-msgstr ""
+msgstr "Design mit Ink/Stitch im COL-Format speichern"
 
 #: inx/inkstitch_output_CSV.inx:3
 msgid "CSV file output"
@@ -4120,15 +4120,15 @@ msgstr "Design mit Ink/Stitch im DST-Format speichern"
 
 #: inx/inkstitch_output_EDR.inx:3
 msgid "EDR file output"
-msgstr ""
+msgstr "EDR Datei exportieren"
 
 #: inx/inkstitch_output_EDR.inx:8
 msgid "Ink/Stitch: Edr Color Format [COLOR] (.edr)"
-msgstr ""
+msgstr "Ink/Stitch: Edr Farbformat [FARBE] (.edr)"
 
 #: inx/inkstitch_output_EDR.inx:9
 msgid "Save design in EDR format using Ink/Stitch"
-msgstr ""
+msgstr "Design mit Ink/Stitch im EDR-Format speichern"
 
 #: inx/inkstitch_output_EXP.inx:3
 msgid "EXP file output"
@@ -4140,11 +4140,11 @@ msgstr "Design mit Ink/Stitch im EXP-Format speichern"
 
 #: inx/inkstitch_output_GCODE.inx:3
 msgid "GCODE file output"
-msgstr ""
+msgstr "GCODE Datei exportieren"
 
 #: inx/inkstitch_output_GCODE.inx:9
 msgid "Save design in GCODE format using Ink/Stitch"
-msgstr ""
+msgstr "Design mit Ink/Stitch im GCODE-Format speichern"
 
 #: inx/inkstitch_output_GCODE.inx:17
 msgid "Coordinate Settings"
@@ -4264,15 +4264,15 @@ msgstr "Vorschubsrate (in mm/min, setzte auf -1 um es auszulassen)"
 
 #: inx/inkstitch_output_INF.inx:3
 msgid "INF file output"
-msgstr ""
+msgstr "INF Datei exportieren"
 
 #: inx/inkstitch_output_INF.inx:8
 msgid "Ink/Stitch: Inf Color Format [COLOR] (.inf)"
-msgstr ""
+msgstr "Ink/Stitch: Inf Farbformat [FARBE] (.inf)"
 
 #: inx/inkstitch_output_INF.inx:9
 msgid "Save design in INF format using Ink/Stitch"
-msgstr ""
+msgstr "Design mit Ink/Stitch im INF-Format speichern"
 
 #: inx/inkstitch_output_JEF.inx:3
 msgid "JEF file output"
@@ -4284,15 +4284,15 @@ msgstr "Design mit Ink/Stitch im JEF-Format speichern"
 
 #: inx/inkstitch_output_JSON.inx:3
 msgid "JSON file output"
-msgstr ""
+msgstr "JSON Datei exportieren"
 
 #: inx/inkstitch_output_JSON.inx:8
 msgid "Ink/Stitch: Json Export [DEBUG] (.json)"
-msgstr ""
+msgstr "Ink/Stitch: Json-Export [DEBUG] (.json)"
 
 #: inx/inkstitch_output_JSON.inx:9
 msgid "Save design in JSON format using Ink/Stitch"
-msgstr ""
+msgstr "Design mit Ink/Stitch im JSON-Format speichern"
 
 #: inx/inkstitch_output_PEC.inx:3
 msgid "PEC file output"
@@ -4316,7 +4316,7 @@ msgstr "PMV Datei exportieren"
 
 #: inx/inkstitch_output_PMV.inx:8
 msgid "Ink/Stitch: Brother Stitch Format [STITCH] (.pmv)"
-msgstr ""
+msgstr "Ink/Stitch: Brother Stickformat [STICH] (.pmv)"
 
 #: inx/inkstitch_output_PMV.inx:9
 msgid "Save design in PMV format using Ink/Stitch"
@@ -4324,15 +4324,15 @@ msgstr "Design mit Ink/Stitch im PMV-Format speichern"
 
 #: inx/inkstitch_output_PNG.inx:3
 msgid "PNG file output"
-msgstr ""
+msgstr "PNF Datei exportieren"
 
 #: inx/inkstitch_output_PNG.inx:8
 msgid "Ink/Stitch: PNG Format, Portable Network Graphics [IMAGE] (.png)"
-msgstr ""
+msgstr "Ink/Stitch: PNG-Format, Portable Network Graphics [BILD] (.png)"
 
 #: inx/inkstitch_output_PNG.inx:9
 msgid "Save design in PNG format using Ink/Stitch"
-msgstr ""
+msgstr "Design mit Ink/Stitch im PNG-Format speichern"
 
 #: inx/inkstitch_output_SVG.inx:3
 msgid "SVG file output"
@@ -4364,11 +4364,11 @@ msgstr "Design mit Ink/Stitch im VP3-Format speichern"
 
 #: inx/inkstitch_output_XXX.inx:3
 msgid "XXX file output"
-msgstr ""
+msgstr "XXX Datei exportieren"
 
 #: inx/inkstitch_output_XXX.inx:9
 msgid "Save design in XXX format using Ink/Stitch"
-msgstr ""
+msgstr "Design mit Ink/Stitch im XXX-Format speichern"
 
 #: inx/inkstitch_palette_split_text.inx:3
 msgid "Split text"
@@ -4460,7 +4460,7 @@ msgstr "Nadeleinstichstellen"
 
 #: inx/inkstitch_stitch_plan_preview_undo.inx:3
 msgid "Undo Stitch Plan Preview"
-msgstr ""
+msgstr "Stich-Plan Vorschau aufheben"
 
 #: inx/inkstitch_troubleshoot.inx:3
 msgid "Troubleshoot Objects"
@@ -4480,7 +4480,7 @@ msgstr "Erstellen einer ZIP-Datei mit mehreren Stickformaten die Ink/Stitch unte
 
 #: inx/inkstitch_zip.inx:26
 msgid ".TXT: Threadlist [COLOR]"
-msgstr ""
+msgstr ".TXT: Garnfarben-Liste [FARBE]"
 
 #: inx/inkstitch_zip.inx:27
 msgid ".SVG: Scalable Vector Graphic"

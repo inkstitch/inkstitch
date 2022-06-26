@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2022-06-25 02:44+0000\n"
-"PO-Revision-Date: 2022-06-25 02:46\n"
+"PO-Revision-Date: 2022-06-26 02:39\n"
 "Last-Translator: \n"
 "Language-Team: Dutch\n"
 "MIME-Version: 1.0\n"
@@ -34,207 +34,207 @@ msgstr ""
 #. name of font in fonts/Brockscript
 #: inkstitch-fonts-metadata.py:2
 msgid "Brock Script"
-msgstr ""
+msgstr "Brock Script"
 
 #. description of font in fonts/Brockscript
 #: inkstitch-fonts-metadata.py:4
 msgid "Brock Script is a decorative satin column manuscript font of size approximatively 40mm. It can be enlarged up to 250%. It contains 118 glyphs, covering most western european languages needs.More decorative options are hidden in the µ glyph"
-msgstr ""
+msgstr "Brock Script is een decoratief satijnkolom handschriftlettertype met een grootte van ongeveer 40mm. Het kan tot 250% worden vergroot. Het bevat 118 glyphs, die de meeste West-Europese talen behoeften. Meer decoratieve opties zijn verborgen in de µ glyph"
 
 #. name of font in fonts/abecedaire
 #: inkstitch-fonts-metadata.py:6
 msgid "Abécédaire AGS"
-msgstr ""
+msgstr "Abécédaire AGS"
 
 #. description of font in fonts/abecedaire
 #: inkstitch-fonts-metadata.py:8
 msgid "Abécédaire AGS is a crossstitch font of size 14mm. The font can be scaled down to 75% and up to 200%"
-msgstr ""
+msgstr "Abécédaire AGS is een kruissteeklettertype van 14mm groot. Het lettertype kan worden verkleind tot 75% en tot 200%"
 
 #. name of font in fonts/amitaclo
 #: inkstitch-fonts-metadata.py:10
 msgid "Amitaclo"
-msgstr ""
+msgstr "Amitaclo"
 
 #. description of font in fonts/amitaclo
 #: inkstitch-fonts-metadata.py:12
 #, python-format
 msgid "The capital M is 25.3 millimeter wide at 100% scale. Can be scaled down to 80% or up to 160%. Every satin has zigzag underlay"
-msgstr ""
+msgstr "De hoofdletter M is 25,3 millimeter breed op schaal 100%. Kan worden teruggeschaald tot 80% of tot 160%. Elk satijn heeft zigzag onderlaag"
 
 #. name of font in fonts/amitaclo_small
 #: inkstitch-fonts-metadata.py:14
 msgid "Amitaclo small"
-msgstr ""
+msgstr "Amitaclo small"
 
 #. description of font in fonts/amitaclo_small
 #: inkstitch-fonts-metadata.py:16
 msgid "This font is an altered version  of Amitaclo, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory. The altered embroidery parameters of this font allow to scale down the original Amitaclo font between 25% (for a 7 mm font ) and 55 % (for a 16mm font)."
-msgstr ""
+msgstr "Dit lettertype is een gewijzigde versie van Amitaclo, om een grotere schaalverkleining mogelijk te maken. Het gebruik van zowel dun garen (60) als dunne naald (60) is verplicht. De gewijzigde borduurparameters van dit lettertype maken het mogelijk het oorspronkelijke lettertype Amitaclo te verkleinen tussen 25% (voor een lettertype van 7 mm) en 55% (voor een lettertype van 16 mm)."
 
 #. name of font in fonts/apex_lake
 #: inkstitch-fonts-metadata.py:18
 msgid "Apex Lake"
-msgstr ""
+msgstr "Apex Lake"
 
 #. description of font in fonts/apex_lake
 #: inkstitch-fonts-metadata.py:20
 msgid "Apex Lake is a large ornate capital letters font of size approximatively 60mm. It contains 38 glyphs : A-Z,0-9,! and ?. It can be reduced down to 80% and enlarged up to 130%"
-msgstr ""
+msgstr "Apex Lake is een groot sierlijk lettertype met hoofdletters van ongeveer 60mm groot. Het bevat 38 glyphs: A-Z, 0-9,! en ?. Het kan worden verkleind tot 80% en vergroot tot 130%"
 
 #. name of font in fonts/aventurina
 #: inkstitch-fonts-metadata.py:22
 msgid "Aventurina"
-msgstr ""
+msgstr "Aventurina"
 
 #. description of font in fonts/aventurina
 #: inkstitch-fonts-metadata.py:24
 msgid "Aventurina is a script satin font of size approximatively 20mm. The glyphs cover most Western European languages. The font can be scaled down to 60% and up to 150% "
-msgstr ""
+msgstr "Aventurina is een schrift-satijn lettertype met een grootte van ongeveer 20mm. De glyphs dekken de meeste West-Europese talen. Het lettertype kan worden geschaald tot 60% en tot 150% "
 
 #. name of font in fonts/baumans_FI
 #: inkstitch-fonts-metadata.py:26
 msgid "Baumans FI"
-msgstr ""
+msgstr "Baumans FI"
 
 #. description of font in fonts/baumans_FI
 #: inkstitch-fonts-metadata.py:28
 #, python-format
 msgid "The capital M is 22.3 millimeter wide at 100% scale. Can be scaled down to 80% or up to 150%. Every satin has zigzag underlay"
-msgstr ""
+msgstr "De hoofdletter M is 22,3 millimeter breed op 100% schaal. Kan worden teruggeschaald tot 80% of tot 150%. Elk satijn heeft zigzag onderlaag"
 
 #. name of font in fonts/cherryforinkstitch
 #: inkstitch-fonts-metadata.py:30
 msgid "Cherry for inkstitch"
-msgstr ""
+msgstr "Cherry voor inkstitch"
 
 #. description of font in fonts/cherryforinkstitch
 #: inkstitch-fonts-metadata.py:32
 msgid "Cherry for inkstitch is a decorative satin column font of size approximatively 40mm. It can be reduced down to 80% and enlarged up to 180%. It contains 74 glyphs."
-msgstr ""
+msgstr "Cherry for inkstitch is een decoratief satijnen kolomlettertype met een grootte van ongeveer 40mm. Het kan worden verkleind tot 80% en vergroot tot 180%. Het bevat 74 glyphs."
 
 #. name of font in fonts/cherryforkaalleen
 #: inkstitch-fonts-metadata.py:34
 msgid "Cherry for Kaalleen"
-msgstr ""
+msgstr "Cherry voor Kaalleen"
 
 #. description of font in fonts/cherryforkaalleen
 #: inkstitch-fonts-metadata.py:36
 msgid "Cherry for Kaalleen is a large decorative font of size approximatively 75mm. It contains 36 glyphs including the numbers and the 26 capitals  A-Z. It can be reduced down to 80% and enlarged up to 130%"
-msgstr ""
+msgstr "Kersen voor Kaalleen is een groot decoratief lettertype met een grootte van ongeveer 75mm. Het bevat 36 glyphs inclusief de cijfers en de 26 hoofdletters A-Z. Het kan worden verkleind tot 80% en vergroot tot 130%"
 
 #. name of font in fonts/chopin
 #: inkstitch-fonts-metadata.py:38
 msgid "Chopin Script"
-msgstr ""
+msgstr "Chopin Script"
 
 #. description of font in fonts/chopin
 #: inkstitch-fonts-metadata.py:40
 #, python-format
 msgid "The capital M is 38.3 millimeter wide at 100% scale. Can be scaled down to 80% or up to 120%. Every satin has zigzag underlay"
-msgstr ""
+msgstr "De hoofdletter M is 38,3 millimeter breed op schaal 100%. Kan worden teruggeschaald tot 80% of tot 120%. Elk satijn heeft zigzag onderlaag"
 
 #. name of font in fonts/coronaviral
 #: inkstitch-fonts-metadata.py:42
 msgid "Coronaviral"
-msgstr ""
+msgstr "Coronaviral"
 
 #. description of font in fonts/coronaviral
 #: inkstitch-fonts-metadata.py:44
 msgid "A font created with manual sitch. Do not change the size or very little. The capital em is 22mm wide at 100%"
-msgstr ""
+msgstr "Een lettertype gemaakt met de hand. Verander de grootte niet of heel weinig. De hoofdletter em is 22mm breed op 100%"
 
 #. name of font in fonts/dejavufont
 #: inkstitch-fonts-metadata.py:46
 msgid "Dejavu Serif"
-msgstr ""
+msgstr "Dejavu Serif"
 
 #. description of font in fonts/dejavufont
 #: inkstitch-fonts-metadata.py:48
 #, python-format
 msgid "DejaVu Serif Condensed. The capital M is 19,8 millimeter wide at 100% scale.  Can be scaled down to 80% or up to 150%.  Every satin has center-walk underlay."
-msgstr ""
+msgstr "DejaVu Serif Condensed. De hoofdletter M is 19,8 millimeter breed op 100% schaal.  Kan worden teruggeschaald tot 80% of tot 150%.  Elke satijn heeft center-walk onderlaag."
 
 #. name of font in fonts/digory_doodles_bean
 #: inkstitch-fonts-metadata.py:50
 msgid "Digory Doodles Bean"
-msgstr ""
+msgstr "Digory Doodles Bean"
 
 #. description of font in fonts/digory_doodles_bean
 #: inkstitch-fonts-metadata.py:52
 msgid "All letters have mixed satin and bean stitch. The capital M is 16mm tall. The small x is 7 mm."
-msgstr ""
+msgstr "Alle letters hebben een gemengde satijn- en bonensteek. De hoofdletter M is 16 mm hoog. De kleine x is 7 mm."
 
 #. name of font in fonts/dinomouse72
 #: inkstitch-fonts-metadata.py:54
 msgid "DinoMouse72"
-msgstr ""
+msgstr "DinoMouse72"
 
 #. description of font in fonts/dinomouse72
 #: inkstitch-fonts-metadata.py:56
 msgid "A Font Grove jawn. Satin width is 2.5mm at 18mm capitals"
-msgstr ""
+msgstr "Een Font Grove juweel. Satijn breedte is 2.5mm bij 18mm kapitalen"
 
 #. name of font in fonts/emilio_20
 #: inkstitch-fonts-metadata.py:58
 msgid "Emilio 20"
-msgstr ""
+msgstr "Emilio 20"
 
 #. description of font in fonts/emilio_20
 #: inkstitch-fonts-metadata.py:60
 #, python-format
 msgid "Emilio 20 is a font with capital only and numbers. M is 48.5 millimeter wide at 100% scale. Can be scaled down to 70% or up to 140%. Every satin has zigzag underlay"
-msgstr ""
+msgstr "Emilio 20 is een lettertype met alleen hoofdletters en cijfers. M is 48,5 millimeter breed op 100% schaal. Kan worden teruggeschaald tot 70% of tot 140%. Elk satijn heeft zigzag onderlaag"
 
 #. name of font in fonts/emilio_20_tricolore
 #: inkstitch-fonts-metadata.py:62
 msgid "EMILIO 20 TRICOLORE"
-msgstr ""
+msgstr "Emilio 20 Tricolore"
 
 #. description of font in fonts/emilio_20_tricolore
 #: inkstitch-fonts-metadata.py:64
 msgid "Emilio 20 tricolore is a large tricolor fill stitches and satin columns font of  size approximately 100mm. It contains 36 glyphs including the numbers and the 26 capitals  A-Z. It can be reduced down to 90% and enlarged up to 120%"
-msgstr ""
+msgstr "Emilio 20 tricolore is een groot driekleurig vulsteken en satijnkolommen lettertype met een grootte van ongeveer 100mm. Het bevat 36 glyphs inclusief de nummers en de 26 hoofdletters A-Z. Het kan worden verkleind tot 90% en vergroot tot 120%"
 
 #. name of font in fonts/espresso_KOR
 #: inkstitch-fonts-metadata.py:66
 msgid "Espresso KOR"
-msgstr ""
+msgstr "Espresso KOR"
 
 #. description of font in fonts/espresso_KOR
 #: inkstitch-fonts-metadata.py:68
 msgid "The capital M is 16.2 mm high at 100 scale. Every satin has zigzag underlay. x is 11.5 mm high, q is 17.5 mm high, l is 17.2 mm high. The font may be scaled up to 200% and down to 80%"
-msgstr ""
+msgstr "De hoofdletter M is 16,2 mm hoog op schaal 100. Elk satijn heeft een zigzag onderlaag. x is 11,5 mm hoog, q is 17,5 mm hoog, l is 17,2 mm hoog. Het lettertype kan worden geschaald tot 200% en omlaag tot 80%"
 
 #. name of font in fonts/espresso_tiny
 #: inkstitch-fonts-metadata.py:70
 msgid "Espresso tiny"
-msgstr ""
+msgstr "Espresso tiny"
 
 #. description of font in fonts/espresso_tiny
 #: inkstitch-fonts-metadata.py:72
 msgid "This font is an altered version  of Espresso KOR, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory. The altered embroidery parameters of this font allow to scale down the original Espresso font between 25% (for a 5mm font ) and 55 % (for a 11mm font)."
-msgstr ""
+msgstr "Dit lettertype is een gewijzigde versie van Espresso KOR, om een grotere schaalverkleining mogelijk te maken. Het gebruik van zowel dun garen (60) als dunne naald (60) is verplicht. De gewijzigde borduurparameters van dit lettertype maken het mogelijk het oorspronkelijke lettertype Espresso te verkleinen tussen 25% (voor een lettertype van 5 mm) en 55% (voor een lettertype van 11 mm)."
 
 #. name of font in fonts/excalibur_KOR
 #: inkstitch-fonts-metadata.py:74
 msgid "Excalibur KOR"
-msgstr ""
+msgstr "Excalibur KOR"
 
 #. description of font in fonts/excalibur_KOR
 #: inkstitch-fonts-metadata.py:76
 msgid "Excalibur KOR is a small satin column manuscript font of size approximatively 20mm. It can be reduced down to 80% and enlarged up to 140%. It contains 144 glyphs, covering most western European languages needs."
-msgstr ""
+msgstr "Excalibur KOR is een klein satijnkolom handschriftlettertype met een grootte van ongeveer 20mm. Het kan worden verkleind tot 80% en vergroot tot 140%. Het bevat 144 glyphs, die de meeste West-Europese talen behoeften te dekken."
 
 #. name of font in fonts/fold_inkstitch
 #: inkstitch-fonts-metadata.py:78
 msgid "Fold Ink/Stitch"
-msgstr ""
+msgstr "Fold Ink/Stitch"
 
 #. description of font in fonts/fold_inkstitch
 #: inkstitch-fonts-metadata.py:80
 msgid "Fold Ink/Stitch is a large triple and quintuple running stitches capital font of size 100 mm. It contains 40 glyphs including all numbers and the 26 capitals  A-Z. It can be reduced down to 80% and enlarged up to 200%"
-msgstr ""
+msgstr "Fold Ink/Stitch is een groot drievoudig en vijfvoudig lopende steken kapitaallettertype van 100 mm groot. Het bevat 40 glyphs inclusief alle nummers en de 26 hoofdletters A-Z. Het kan worden verkleind tot 80% en vergroot tot 200%"
 
 #. name of font in fonts/geneva_rounded
 #: inkstitch-fonts-metadata.py:82
@@ -259,106 +259,106 @@ msgstr "Geschikt voor kleine letters (6 tot 15mm)"
 #. name of font in fonts/glacial_tiny
 #: inkstitch-fonts-metadata.py:90
 msgid "Glacial Tiny 60 AGS"
-msgstr ""
+msgstr "Glacial Tiny 60 AGS"
 
 #. description of font in fonts/glacial_tiny
 #: inkstitch-fonts-metadata.py:92
 msgid "Glacial is a very tiny font: at 100%,  M stands at 5.6mm. Thin thread (60 wt ) and thin needle (8/60) are mandatory. The glyphs cover many European languages. It can be reduced down to 40% and enlarged up to 150% "
-msgstr ""
+msgstr "Glacial is een zeer klein lettertype: op 100%, M is 5.6mm. Dun garen (60 wt ) en dunne naald (8/60) zijn verplicht. De glyphs bestrijken vele Europese talen. Het kan worden verkleind tot 40% en vergroot tot 150% "
 
 #. name of font in fonts/grand_hotel_marif
 #: inkstitch-fonts-metadata.py:94
 msgid "Grand Hotel Marif"
-msgstr ""
+msgstr "Grand Hotel Marif"
 
 #. description of font in fonts/grand_hotel_marif
 #: inkstitch-fonts-metadata.py:96
 msgid "Grand Hotel Marif is a script satin font of size approximatively 35 mm. The glyphs cover most Western European languages. The font can be scaled down to 60% and up to 140%."
-msgstr ""
+msgstr "Grand Hotel Marif is een schriftsatijn lettertype met een grootte van ongeveer 35 mm. De glyphs dekken de meeste West-Europese talen. Het lettertype kan worden geschaald tot 60% en tot 140%."
 
 #. name of font in fonts/grandhotel_small
 #: inkstitch-fonts-metadata.py:98
 msgid "Grand Hotel small"
-msgstr ""
+msgstr "Grand Hotel small"
 
 #. description of font in fonts/grandhotel_small
 #: inkstitch-fonts-metadata.py:100
 msgid "This font is an altered version  of Grand Hotel, to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) are mandatory. The altered embroidery parameters of this font allow to scale down the original Grand Hotel font between 25% (for a 9mm font ) and 55 % (for a  20 mm font)."
-msgstr ""
+msgstr "Dit lettertype is een gewijzigde versie van Grand Hotel, om een grotere schaalverkleining mogelijk te maken. Het gebruik van zowel dun garen (60) als dunne naald (60) is verplicht. De gewijzigde borduurparameters van dit lettertype maken het mogelijk het oorspronkelijke Grand Hotel font te verkleinen tussen 25% (voor een 9 mm font ) en 55% (voor een 20 mm font)."
 
 #. name of font in fonts/infinipicto
 #: inkstitch-fonts-metadata.py:102
 msgid "InfiniPicto"
-msgstr ""
+msgstr "InfiniPicto"
 
 #. description of font in fonts/infinipicto
 #: inkstitch-fonts-metadata.py:104
 msgid "InfiniPicto is a fun font of size approximatively 70 mm containing only the 26 A-Z glyph. Each letter is a pictogram of an object whose name begins with that very letter..... in French"
-msgstr ""
+msgstr "InfiniPicto is een leuk lettertype van ongeveer 70 mm groot dat alleen de 26 A-Z glyph bevat. Elke letter is een pictogram van een voorwerp waarvan de naam met diezelfde letter begint..... in het Frans"
 
 #. name of font in fonts/kaushan_script_MAM
 #: inkstitch-fonts-metadata.py:106
 msgid "Kaushan Script MAM"
-msgstr ""
+msgstr "Kaushan Script MAM"
 
 #. description of font in fonts/kaushan_script_MAM
 #: inkstitch-fonts-metadata.py:108
 #, python-format
 msgid "The capital M is 29 millimeter wide at 100% scale.  Can be scaled down to 80% or up to 200%.  Every satin has zigzag underlay"
-msgstr ""
+msgstr "De hoofdletter M is 29 millimeter breed op 100% schaal.  Kan worden teruggeschaald tot 80% of tot 200%.  Elk satijn heeft zigzag onderlaag"
 
 #. name of font in fonts/learning_curve
 #: inkstitch-fonts-metadata.py:110
 msgid "Learning curve"
-msgstr ""
+msgstr "Leercurve"
 
 #. description of font in fonts/learning_curve
 #: inkstitch-fonts-metadata.py:112
 msgid "Small running stitch script font of size approximatively 12 mm. It can be reduced down to 90% and enlarged up to 200%"
-msgstr ""
+msgstr "Klein lettertype met lopende steken, ongeveer 12 mm groot. Het kan worden verkleind tot 90% en vergroot tot 200%"
 
 #. name of font in fonts/lobster_AGS
 #: inkstitch-fonts-metadata.py:114
 msgid "Lobster AGS"
-msgstr ""
+msgstr "Lobster AGS"
 
 #. description of font in fonts/lobster_AGS
 #: inkstitch-fonts-metadata.py:116
 #, python-format
 msgid " The capital M is 19.8 millimeter wide at 100% scale. Can be scaled down to 80% or up to 150%. Every satin has zigzag underlay"
-msgstr ""
+msgstr " De hoofdletter M is 19,8 millimeter breed op 100% schaal. Kan worden teruggeschaald tot 80% of tot 150%. Elk satijn heeft een zigzag onderlaag"
 
 #. name of font in fonts/magnolia_ KOR
 #: inkstitch-fonts-metadata.py:118
 msgid "Magnolia KOR"
-msgstr ""
+msgstr "Magnolia KOR"
 
 #. description of font in fonts/magnolia_ KOR
 #: inkstitch-fonts-metadata.py:120
 msgid "Magnolia KOR is a script font of size approximatively 20mm. It can be scaled down to 80% and up to 120%"
-msgstr ""
+msgstr "Magnolia KOR is een schriftlettertype met een grootte van ongeveer 20mm. Het kan worden verkleind tot 80% en tot 120%"
 
 #. name of font in fonts/manuskript_gotisch
 #: inkstitch-fonts-metadata.py:122
 msgid "Manuskript Gothisch"
-msgstr ""
+msgstr "Manuskript Gothisch"
 
 #. description of font in fonts/manuskript_gotisch
 #: inkstitch-fonts-metadata.py:124
 #, python-format
 msgid "The capital M is 35 millimeter wide at 100% scale.  Can be scaled down to 70% or up to 140%.  Every satin has zigzag underlay"
-msgstr ""
+msgstr "De hoofdletter M is 35 millimeter breed op 100% schaal.  Kan worden teruggeschaald tot 70% of tot 140%.  Elk satijn heeft zigzag onderlaag"
 
 #. name of font in fonts/marcelusSC_FI
 #: inkstitch-fonts-metadata.py:126
 msgid "MarcellusSC-FI"
-msgstr ""
+msgstr "MarcellusSC-FI"
 
 #. description of font in fonts/marcelusSC_FI
 #: inkstitch-fonts-metadata.py:128
 #, python-format
 msgid "MarcellusSC-FI is a small capital font of size 36 mm. It contains 107 glyphs covering most Western European languages. It can be reduced down to 70% and enlarged up to 200% or 500% using satin split"
-msgstr ""
+msgstr "MarcellusSC-FI is een klein hoofdlettertype met een grootte van 36 mm. Het bevat 107 glyphs voor de meeste West-Europese talen. Het kan worden verkleind tot 70% en vergroot tot 200% of 500% met behulp van satijn split"
 
 #. name of font in fonts/medium_font
 #: inkstitch-fonts-metadata.py:130
@@ -374,115 +374,115 @@ msgstr "Een basislettertype geschikt voor tekens van gemiddelde grootte. De hoof
 #. name of font in fonts/monicha
 #: inkstitch-fonts-metadata.py:134
 msgid "MONICHA"
-msgstr ""
+msgstr "Monicha"
 
 #. description of font in fonts/monicha
 #: inkstitch-fonts-metadata.py:136
 msgid "Monicha is a script satin font of size approximatively 20mm. In addition to the glyphs covering most Western European languages it contains additional ornemental letters with swashes. These ornemental letters should be used with caution to avoid overlays. In particular do not use two ornemental letters in a row. Please consult the documentation for information on how to access the ornemental letters. The font can not be scaled down but can be scaled up to 150%. "
-msgstr ""
+msgstr "Monicha is een schriftsatijnlettertype met een grootte van ongeveer 20 mm. Naast de glyphs die de meeste West-Europese talen dekken bevat het nog extra ornementele letters met swashes. Deze versierde letters moeten met de nodige voorzichtigheid worden gebruikt om overlappingen te voorkomen. Gebruik met name geen twee versierde letters op een rij. Raadpleeg de documentatie voor informatie over de toegang tot de ornementele letters. Het lettertype kan niet worden verkleind, maar kan wel tot 150% worden vergroot. "
 
 #. name of font in fonts/namskout_AGS
 #: inkstitch-fonts-metadata.py:138
 msgid "Namskout"
-msgstr ""
+msgstr "Namskout"
 
 #. description of font in fonts/namskout_AGS
 #: inkstitch-fonts-metadata.py:140
 msgid "Namskout  is a large applique font of size approximatively 90mm. It contains 43 glyphs including all numbers and the 26 capitals  A-Z.  It can be reduced down to 50% and enlarged up to 150%  "
-msgstr ""
+msgstr "Namskout is een groot applique lettertype met een grootte van ongeveer 90mm. Het bevat 43 glyphs inclusief alle cijfers en de 26 hoofdletters A-Z.  Het kan worden verkleind tot 50% en vergroot tot 150%  "
 
 #. name of font in fonts/nick_ainley
 #: inkstitch-fonts-metadata.py:142
 msgid "NickAinley"
-msgstr ""
+msgstr "NickAinley"
 
 #. description of font in fonts/nick_ainley
 #: inkstitch-fonts-metadata.py:144
 msgid "A tiny 1mm-bean alphabet based on a 24pt Seniors Studio jawn"
-msgstr ""
+msgstr "Een klein 1mm-boon alfabet gebaseerd op een 24pt Seniors Studio kauwgom"
 
 #. name of font in fonts/pacificlo
 #: inkstitch-fonts-metadata.py:146
 msgid "Pacificlo"
-msgstr ""
+msgstr "Pacificlo"
 
 #. description of font in fonts/pacificlo
 #: inkstitch-fonts-metadata.py:148
 msgid "Pacificlo is a small satin column manuscript font of size approximatively 20mm. It can be reduced down to 80% and enlarged up to 140%. It contains 120 glyphs, covering most Western European Languages needs. "
-msgstr ""
+msgstr "Pacificlo is een klein satijnkolom handschriftlettertype met een grootte van ongeveer 20mm. Het kan worden verkleind tot 80% en vergroot tot 140%. Het bevat 120 glyphs, die de meeste West-Europese talen behoeften te dekken. "
 
 #. name of font in fonts/pacificlo_tiny
 #: inkstitch-fonts-metadata.py:150
 msgid "Pacificlo tiny"
-msgstr ""
+msgstr "Pacificlo tiny"
 
 #. description of font in fonts/pacificlo_tiny
 #: inkstitch-fonts-metadata.py:152
 msgid "This font is an altered version  of Pacificlo, to allow a greater scaling down. Both thin thread (60) and thin needle (60) are mandatory. The altered embroidery parameters of this font allow to scale down the original Pacificlo font between 25% (for a 5mm font ) and 55 % (for a 11mm font)."
-msgstr ""
+msgstr "Dit lettertype is een gewijzigde versie van Pacificlo, om een grotere schaalverkleining mogelijk te maken. Zowel dun garen (60) als dunne naald (60) zijn verplicht. De gewijzigde borduurparameters van dit lettertype maken het mogelijk het oorspronkelijke Pacificlo lettertype te verkleinen tussen 25% (voor een lettertype van 5 mm) en 55% (voor een lettertype van 11 mm)."
 
 #. name of font in fonts/roman_ags
 #: inkstitch-fonts-metadata.py:154
 msgid "Roman AGS"
-msgstr ""
+msgstr "Roman AGS"
 
 #. description of font in fonts/roman_ags
 #: inkstitch-fonts-metadata.py:156
 #, python-format
 msgid "Based on Latin Modern Roman 10 Bold italic. The capital M is 42.5 millimeter wide at 100% scale.  Can be scaled down to 80% or up to 130%.  Every satin has zigzag underlay"
-msgstr ""
+msgstr "Gebaseerd op Latijn Modern Roman 10 Bold cursief. De hoofdletter M is 42,5 millimeter breed op 100% schaal.  Kan worden teruggeschaald tot 80% of tot 130%.  Elk satijn heeft zigzag onderlaag"
 
 #. name of font in fonts/roman_ags_bicolor
 #: inkstitch-fonts-metadata.py:158
 msgid "Roman bicolor AGS"
-msgstr ""
+msgstr "Roman bicolor AGS"
 
 #. description of font in fonts/roman_ags_bicolor
 #: inkstitch-fonts-metadata.py:160
 #, python-format
 msgid "Based on Latin Modern Roman 10 Bold italic. A font with capital letters with 2 colors. Very easy to use with letters from Romanaugusa. The capital M is 42.5 millimeter wide at 100% scale. Can be scaled down to 70% or up to 130%. Every satin has zigzag underlay"
-msgstr ""
+msgstr "Gebaseerd op Latijn Modern Roman 10 Bold cursief. Een lettertype met hoofdletters met 2 kleuren. Zeer eenvoudig te gebruiken met letters van Romanaugusa. De hoofdletter M is 42,5 millimeter breed op 100% schaal. Kan worden teruggeschaald tot 70% of tot 130%. Elk satijn heeft zigzag onderlaag"
 
 #. name of font in fonts/sacramarif
 #: inkstitch-fonts-metadata.py:162
 msgid "Sacramarif"
-msgstr ""
+msgstr "Sacramarif"
 
 #. description of font in fonts/sacramarif
 #: inkstitch-fonts-metadata.py:164
 msgid "Based on Sacramento. Very small font with runstitch. It can be scaled from 80% to 150%"
-msgstr ""
+msgstr "Gebaseerd op Sacramento. Zeer klein lettertype met runstitch. Het kan geschaald worden van 80% tot 150%"
 
 #. name of font in fonts/small_font
 #: inkstitch-fonts-metadata.py:166
 msgid "Ink/Stitch Small Font"
-msgstr ""
+msgstr "Ink/Stitch Small Font"
 
 #. description of font in fonts/small_font
 #: inkstitch-fonts-metadata.py:168
 #, python-format
 msgid "A font suited for small characters.  The capital em is 0.2 inches wide at 100% scale.  Can be scaled up to 300%."
-msgstr ""
+msgstr "Een lettertype geschikt voor kleine letters.  De hoofdletter em is 0,2 inch breed op 100% schaal.  Kan worden geschaald tot 300%."
 
 #. name of font in fonts/sortefaxXL
 #: inkstitch-fonts-metadata.py:170
 msgid "Sortefax XL Initials"
-msgstr ""
+msgstr "Sortefax XL Initials"
 
 #. description of font in fonts/sortefaxXL
 #: inkstitch-fonts-metadata.py:172
 msgid " Sortefax is a very large satin stitch Capital font of size 150mm.  It can be reduced down to 75% and enlarged up to 200%  It contains the 37 glyphs :ampersand, A-Z and 0-9. In addition the ten glyphs (){}[],;.: are used to store frames. Type any letter followed by any frame (e.g. A( or B; )  to obtain a framed Capital or Number. Warning: for a few large letters you will need to manually enlarge the frame"
-msgstr ""
+msgstr "Sortefax is een zeer groot satijnsteek hoofdlettertype met een grootte van 150mm.  Het kan worden verkleind tot 75% en vergroot tot 200% Het bevat de 37 glyphs :ampersand, A-Z en 0-9. Bovendien worden de tien lettertekens (){}[],;.: gebruikt om kaders op te slaan. Type een willekeurige letter gevolgd door een kader (b.v. A( of B; ) om een omkaderde Hoofdletter of Nummer te krijgen. Waarschuwing: voor een paar grote letters moet u het kader handmatig vergroten"
 
 #. name of font in fonts/sortefax_medium
 #: inkstitch-fonts-metadata.py:174
 msgid "Sortefax Medium Initials"
-msgstr ""
+msgstr "Sortefax Medium Initials"
 
 #. description of font in fonts/sortefax_medium
 #: inkstitch-fonts-metadata.py:176
 msgid "Sortefax  Medium Initials is a  satin stitch Capital font of size 90 mm.  It can be reduced down to 70% and enlarged up to 200%. It contains the 37 glyphs :ampersand, A-Z and 0-9. In addition the ten glyphs (){}[],;.: are used to store frames. Type any letter followed by any frame (e.g. A( or B; or 7, ) to obtain a framed Capital or Number. Some manual arranging of the frame around the letter may be required"
-msgstr ""
+msgstr "Sortefax Medium Initials is een satijnsteeklettertype met een grootte van 90 mm.  Het kan worden verkleind tot 70% en vergroot tot 200%. Het bevat de 37 lettertekens :ampersand, A-Z en 0-9. Bovendien worden de tien lettertekens (){}[],;.: gebruikt om kaders op te slaan. Type een willekeurige letter gevolgd door een kader (b.v. A( of B; of 7, ) om een omkaderde Hoofdletter of Nummer te verkrijgen. Enige handmatige plaatsing van het kader rond de letter kan nodig zijn"
 
 #. name of font in fonts/tt_directors
 #: inkstitch-fonts-metadata.py:178
@@ -497,7 +497,7 @@ msgstr "Een lettertype geschikt voor richtinggeven"
 #. name of font in fonts/tt_masters
 #: inkstitch-fonts-metadata.py:182
 msgid "TT Masters"
-msgstr ""
+msgstr "TT Masters"
 
 #. description of font in fonts/tt_masters
 #: inkstitch-fonts-metadata.py:184
@@ -506,26 +506,29 @@ msgstr "Een lettertype geschikt voor het zware typewerk :)"
 
 #: inkstitch.py:71
 msgid "Ink/Stitch cannot read your SVG file. This is often the case when you use a file which has been created with Adobe Illustrator."
-msgstr ""
+msgstr "Ink/Stitch kan uw SVG-bestand niet lezen. Dit is vaak het geval wanneer u een bestand gebruikt dat met Adobe Illustrator is gemaakt."
 
 #: inkstitch.py:74
 msgid "Try to import the file into Inkscape through 'File > Import...' (Ctrl+I)"
-msgstr ""
+msgstr "Probeer het bestand te importeren in Inkscape via 'Bestand > Importeren...' (Ctrl+I)"
 
 #: inkstitch.py:85
 msgid "Ink/Stitch experienced an unexpected error. This means it is a bug in Ink/Stitch."
-msgstr ""
+msgstr "Ink/Stitch heeft een onverwachte fout ondervonden. Dit betekent dat het een bug in Ink/Stitch is."
 
 #: inkstitch.py:86
 msgid "If you'd like to help please\n"
 "- copy the entire error message below\n"
 "- save your SVG file and\n"
 "- create a new issue at https://github.com/inkstitch/inkstitch/issues"
-msgstr ""
+msgstr "Als u wilt helpen, alstublieft\n"
+"- kopieer de volledige foutmelding hieronder\n"
+"- sla uw SVG-bestand op en\n"
+"- maak een nieuw probleem aan op https://github.com/inkstitch/inkstitch/issues"
 
 #: inkstitch.py:90
 msgid "Include the error description and also (if possible) the svg file."
-msgstr ""
+msgstr "Voeg de foutbeschrijving bij en ook (indien mogelijk) het svg-bestand."
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
@@ -543,19 +546,19 @@ msgstr "Opvulsteek eindpositie"
 #. command attached to an object
 #: lib/commands.py:30 inx/inkstitch_object_commands.inx:6
 msgid "Ripple stitch target position"
-msgstr ""
+msgstr "Rimpeling steek doelpositie"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
 #: lib/commands.py:33 inx/inkstitch_object_commands.inx:7
 msgid "Auto-route running stitch starting position"
-msgstr ""
+msgstr "Auto-route lopende steek startpositie"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
 #: lib/commands.py:36 inx/inkstitch_object_commands.inx:8
 msgid "Auto-route running stitch ending position"
-msgstr ""
+msgstr "Auto-route lopende steek eindpositie"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
@@ -690,37 +693,37 @@ msgstr "Deze instelling zet een aangepaste opvulhoek voor de kloon."
 
 #: lib/elements/element.py:202
 msgid "Allow lock stitches"
-msgstr ""
+msgstr "Sta locksteken toe"
 
 #: lib/elements/element.py:203
 msgid "Tie thread at the beginning and/or end of this object. Manual stitch will not add lock stitches."
-msgstr ""
+msgstr "Knoop draad aan het begin en/of einde van dit voorwerp. Handmatige steek zal geen locksteken toevoegen."
 
 #. options to allow lock stitch before and after objects
 #: lib/elements/element.py:207
 msgid "Both"
-msgstr ""
+msgstr "Beide"
 
 #: lib/elements/element.py:207
 msgid "Before"
-msgstr ""
+msgstr "Voor"
 
 #: lib/elements/element.py:207
 msgid "After"
-msgstr ""
+msgstr "Na"
 
 #: lib/elements/element.py:207
 msgid "Neither"
-msgstr ""
+msgstr "Geen"
 
 #: lib/elements/element.py:216
 #: inx/inkstitch_lettering_force_lock_stitches.inx:3
 msgid "Force lock stitches"
-msgstr ""
+msgstr "Force locksteken"
 
 #: lib/elements/element.py:217
 msgid "Sew lock stitches after sewing this element, even if the distance to the next object is shorter than defined by the collapse length value in the Ink/Stitch preferences."
-msgstr ""
+msgstr "Naai locksteken na het naaien van dit element, zelfs als de afstand tot het volgende object korter is dan de waarde voor de collaps length in de Inkt/Stik voorkeuren."
 
 #: lib/elements/element.py:261
 #, python-format
@@ -760,7 +763,7 @@ msgstr "Uitbreiden"
 
 #: lib/elements/fill_stitch.py:36
 msgid "The expand parameter for this fill object cannot be applied. Ink/Stitch will ignore it and will use original size instead."
-msgstr ""
+msgstr "De parameter Uitbreiden voor dit opvulobject kan niet worden toegepast. Ink/Stitch zal deze negeren en in plaats daarvan de oorspronkelijke grootte gebruiken."
 
 #: lib/elements/fill_stitch.py:41 lib/elements/fill_stitch.py:442
 msgid "Inset"
@@ -768,47 +771,47 @@ msgstr "Inzet"
 
 #: lib/elements/fill_stitch.py:42
 msgid "The underlay inset parameter for this fill object cannot be applied. Ink/Stitch will ignore it and will use the original size instead."
-msgstr ""
+msgstr "De parameter voor de onderlaaginzet voor dit opvulobject kan niet worden toegepast. Ink/Stitch zal deze negeren en in plaats daarvan de oorspronkelijke grootte gebruiken."
 
 #: lib/elements/fill_stitch.py:47
 msgid "Missing Guideline"
-msgstr ""
+msgstr "Ontbrekende hulplijn"
 
 #: lib/elements/fill_stitch.py:48
 msgid "This object is set to \"Guided Fill\", but has no guide line."
-msgstr ""
+msgstr "Dit object is ingesteld op \"Geleide vulling\", maar heeft geen hulplijn."
 
 #: lib/elements/fill_stitch.py:50
 msgid "* Create a stroke object"
-msgstr ""
+msgstr "* Maak een lijnobject"
 
 #: lib/elements/fill_stitch.py:51
 msgid "* Select this object and run Extensions > Ink/Stitch > Edit > Selection to guide line"
-msgstr ""
+msgstr "* Selecteer dit object en druk op Extensies > Inkt/Stitch > Bewerken > Selectie naar hulplijn"
 
 #: lib/elements/fill_stitch.py:56
 msgid "Disjointed Guide Line"
-msgstr ""
+msgstr "Onsamenhangende hulplijn"
 
 #: lib/elements/fill_stitch.py:57
 msgid "The guide line of this object isn't within the object borders. The guide line works best, if it is within the target element."
-msgstr ""
+msgstr "De hulplijn van dit object ligt niet binnen de objectgrenzen. De hulplijn werkt het best, als hij binnen het doelelement ligt."
 
 #: lib/elements/fill_stitch.py:60
 msgid "* Move the guide line into the element"
-msgstr ""
+msgstr "* Verplaats de hulplijn in het element"
 
 #: lib/elements/fill_stitch.py:65 lib/elements/stroke.py:35
 msgid "Multiple Guide Lines"
-msgstr ""
+msgstr "Meerdere hulplijnen"
 
 #: lib/elements/fill_stitch.py:66 lib/elements/stroke.py:36
 msgid "This object has multiple guide lines, but only the first one will be used."
-msgstr ""
+msgstr "Dit object heeft meerdere hulplijnen, maar alleen de eerste zal worden gebruikt."
 
 #: lib/elements/fill_stitch.py:68 lib/elements/stroke.py:38
 msgid "* Remove all guide lines, except for one."
-msgstr ""
+msgstr "* Verwijder alle hulplijnen, behalve één."
 
 #: lib/elements/fill_stitch.py:73
 msgid "Unconnected"
@@ -816,7 +819,7 @@ msgstr "Losstaand"
 
 #: lib/elements/fill_stitch.py:74
 msgid "Fill: This object is made up of unconnected shapes. Ink/Stitch doesn't know what order to stitch them in.  Please break this object up into separate shapes."
-msgstr ""
+msgstr "Opvulling: Dit object bestaat uit vormen die geen verband met elkaar houden. Ink/Stitch weet niet in welke volgorde ze moeten worden genaaid.  Breek dit object alstublieft op in afzonderlijke vormen."
 
 #: lib/elements/fill_stitch.py:78 lib/elements/fill_stitch.py:87
 #: lib/elements/fill_stitch.py:95
@@ -829,19 +832,19 @@ msgstr "Rand kruist zichzelf"
 
 #: lib/elements/fill_stitch.py:84
 msgid "Fill: The border crosses over itself. This may lead into unconnected shapes. Please break this object into separate shapes to indicate in which order it should be stitched in."
-msgstr ""
+msgstr "Opvulling: De rand kruist zichzelf. Dit kan leiden tot niet aaneengesloten vormen. Breek dit object in aparte vormen om aan te geven in welke volgorde het gestikt moet worden."
 
 #: lib/elements/fill_stitch.py:92
 msgid "This shape is invalid"
-msgstr ""
+msgstr "Deze vorm is ongeldig"
 
 #: lib/elements/fill_stitch.py:93
 msgid "Fill: This shape cannot be stitched out. Please try to repair it with the \"Break Apart Fill Objects\" extension."
-msgstr ""
+msgstr "Opvulling: Deze vorm kan niet worden gestikt. Probeer het te repareren met de \"Break Apart Fill Objects\" extensie."
 
 #: lib/elements/fill_stitch.py:100
 msgid "FillStitch"
-msgstr ""
+msgstr "Vulsteek"
 
 #: lib/elements/fill_stitch.py:103
 msgid "Automatically routed fill stitching"
@@ -849,79 +852,79 @@ msgstr "Automatisch gerouteerde opvulsteken"
 
 #: lib/elements/fill_stitch.py:108
 msgid "Fill method"
-msgstr ""
+msgstr "Vulmethode"
 
 #: lib/elements/fill_stitch.py:109
 msgid "Auto Fill"
-msgstr ""
+msgstr "Automatische vulling"
 
 #: lib/elements/fill_stitch.py:109
 msgid "Contour Fill"
-msgstr ""
+msgstr "Contourvulling"
 
 #: lib/elements/fill_stitch.py:109
 msgid "Guided Fill"
-msgstr ""
+msgstr "Begeleide vulling"
 
 #: lib/elements/fill_stitch.py:109
 msgid "Legacy Fill"
-msgstr ""
+msgstr "Legacy vulling"
 
 #: lib/elements/fill_stitch.py:114
 msgid "Guided Fill Strategy"
-msgstr ""
+msgstr "Begeleide vulstrategie"
 
 #: lib/elements/fill_stitch.py:115
 msgid "Copy"
-msgstr ""
+msgstr "Kopiëren"
 
 #: lib/elements/fill_stitch.py:115
 msgid "Parallel Offset"
-msgstr ""
+msgstr "Parallelle verschuiving"
 
 #: lib/elements/fill_stitch.py:116
 msgid "Copy (the default) will fill the shape with shifted copies of the line.Parallel offset will ensure that each line is always a consistent distance from its neighbor.Sharp corners may be introduced."
-msgstr ""
+msgstr "Kopiëren (de standaardinstelling) vult de vorm met verschoven kopieën van de lijn. Parallelle verschuiving zorgt ervoor dat elke lijn altijd op een consistente afstand van zijn buurlijn staat. Scherpe hoeken kunnen worden geïntroduceerd."
 
 #: lib/elements/fill_stitch.py:123
 msgid "Contour Fill Strategy"
-msgstr ""
+msgstr "Contour vulstrategie"
 
 #: lib/elements/fill_stitch.py:124
 msgid "Inner to Outer"
-msgstr ""
+msgstr "Binnen naar buiten"
 
 #: lib/elements/fill_stitch.py:124
 msgid "Single spiral"
-msgstr ""
+msgstr "Enkele spiraal"
 
 #: lib/elements/fill_stitch.py:124
 msgid "Double spiral"
-msgstr ""
+msgstr "Dubbele spiraal"
 
 #: lib/elements/fill_stitch.py:129
 msgid "Join Style"
-msgstr ""
+msgstr "Combineer stijl"
 
 #: lib/elements/fill_stitch.py:130
 msgid "Round"
-msgstr ""
+msgstr "Rond"
 
 #: lib/elements/fill_stitch.py:130
 msgid "Mitered"
-msgstr ""
+msgstr "Verstek"
 
 #: lib/elements/fill_stitch.py:130
 msgid "Beveled"
-msgstr ""
+msgstr "Afgeschuind"
 
 #: lib/elements/fill_stitch.py:135
 msgid "Avoid self-crossing"
-msgstr ""
+msgstr "Vermijd zelfkruising"
 
 #: lib/elements/fill_stitch.py:140
 msgid "Clockwise"
-msgstr ""
+msgstr "Met de klok mee"
 
 #: lib/elements/fill_stitch.py:146
 msgid "Angle of lines of stitches"
@@ -981,11 +984,11 @@ msgstr "Lengte van steken rondom de rand van het opvulgebied dat wordt gebruikt 
 
 #: lib/elements/fill_stitch.py:380 lib/elements/stroke.py:116
 msgid "Running stitch tolerance"
-msgstr ""
+msgstr "Tolerantie lopende steek"
 
 #: lib/elements/fill_stitch.py:381
 msgid "All stitches must be within this distance of the path.  A lower tolerance means stitches will be closer together.  A higher tolerance means sharp corners may be rounded."
-msgstr ""
+msgstr "Alle steken moeten binnen deze afstand van het pad liggen.  Een lagere tolerantie betekent dat de steken dichter bij elkaar komen te liggen.  Een hogere tolerantie betekent dat scherpe hoeken mogen worden afgerond."
 
 #: lib/elements/fill_stitch.py:392
 msgid "Underlay"
@@ -996,7 +999,7 @@ msgstr "Versteviging"
 #: lib/elements/fill_stitch.py:445 lib/elements/fill_stitch.py:457
 #: lib/elements/fill_stitch.py:495
 msgid "Fill Underlay"
-msgstr ""
+msgstr "Vulling onderlaag"
 
 #: lib/elements/fill_stitch.py:398
 msgid "Fill angle"
@@ -1066,27 +1069,27 @@ msgstr "* Je kunt de afbeelding ook overtrekken met de pen (P) of het bezier ger
 
 #: lib/elements/marker.py:14
 msgid "Marker Element"
-msgstr ""
+msgstr "Markeringselement"
 
 #: lib/elements/marker.py:15
 msgid "This element will not be embroidered. It will be applied to objects in the same group. Objects in sub-groups will be ignored."
-msgstr ""
+msgstr "Dit element zal niet geborduurd worden. Het zal worden toegepast op objecten in dezelfde groep. Objecten in subgroepen zullen worden genegeerd."
 
 #: lib/elements/marker.py:18
 msgid "Turn back to normal embroidery element mode, remove the marker:"
-msgstr ""
+msgstr "Keer terug naar de normale borduurelementmodus, verwijder de markering:"
 
 #: lib/elements/marker.py:19
 msgid "* Open the Fill and Stroke panel (Objects > Fill and Stroke)"
-msgstr ""
+msgstr "* Open het paneel Opvulling en lijn (Objecten > Opvulling en lijn)"
 
 #: lib/elements/marker.py:20
 msgid "* Go to the Stroke style tab"
-msgstr ""
+msgstr "* Ga naar de Lijnstijl tab"
 
 #: lib/elements/marker.py:21
 msgid "* Under \"Markers\" choose the first (empty) option in the first dropdown list."
-msgstr ""
+msgstr "* Kies onder \"Markers\" de eerste (lege) optie in de eerste dropdown lijst."
 
 #: lib/elements/polyline.py:18
 msgid "Polyline Object"
@@ -1178,19 +1181,19 @@ msgstr "* Houdt \"Shift\" ingedrukt tijdens het tekenen van de sport."
 
 #: lib/elements/satin_column.py:56
 msgid "Not stitchable satin column"
-msgstr ""
+msgstr "Niet te stikken satijnen kolom"
 
 #: lib/elements/satin_column.py:57
 msgid "A satin column consists out of two rails and one or more rungs. This satin column may have a different setup."
-msgstr ""
+msgstr "Een satijnzuil bestaat uit twee rails en één of meer sporten. Deze satijnkolom kan een andere opstelling hebben."
 
 #: lib/elements/satin_column.py:59
 msgid "Make sure your satin column is not a combination of multiple satin columns."
-msgstr ""
+msgstr "Zorg ervoor dat uw satijnen kolom niet een combinatie is van meerdere satijnen kolommen."
 
 #: lib/elements/satin_column.py:60
 msgid "Go to our website and read how a satin column should look like https://inkstitch.org/docs/stitches/satin-column/"
-msgstr ""
+msgstr "Ga naar onze website en lees hoe een satijnen kolom eruit moet zien https://inkstitch.org/docs/stitches/satin-column/"
 
 #: lib/elements/satin_column.py:64
 msgid "Each rung should intersect both rails once."
@@ -1206,7 +1209,7 @@ msgstr "Satijnbaan: een sport doorkruist niet beide rails."
 
 #: lib/elements/satin_column.py:73
 msgid "Rungs intersects too many times"
-msgstr ""
+msgstr "Sporten kruisen elkaar te vaak"
 
 #: lib/elements/satin_column.py:74
 msgid "Satin column: A rung intersects a rail more than once."
@@ -1226,27 +1229,27 @@ msgstr "\"E\" steek"
 
 #: lib/elements/satin_column.py:96 lib/elements/satin_column.py:227
 msgid "Maximum stitch length"
-msgstr ""
+msgstr "Maximale steeklengte"
 
 #: lib/elements/satin_column.py:97
 msgid "Maximum stitch length for split stitches."
-msgstr ""
+msgstr "Maximale steeklengte voor gesplitste steken."
 
 #: lib/elements/satin_column.py:104
 msgid "Short stitch inset"
-msgstr ""
+msgstr "Korte steek inzet"
 
 #: lib/elements/satin_column.py:105
 msgid "Stitches in areas with high density will be shortened by this amount."
-msgstr ""
+msgstr "Steken in gebieden met een hoge dichtheid zullen met deze hoeveelheid worden ingekort."
 
 #: lib/elements/satin_column.py:113
 msgid "Short stitch distance"
-msgstr ""
+msgstr "Korte steekafstand"
 
 #: lib/elements/satin_column.py:114
 msgid "Do short stitches if the distance between stitches is smaller than this."
-msgstr ""
+msgstr "Maak korte steken als de afstand tussen de steken kleiner is dan dit."
 
 #: lib/elements/satin_column.py:126 lib/elements/stroke.py:129
 msgid "Zig-zag spacing (peak-to-peak)"
@@ -1325,23 +1328,23 @@ msgstr "standaard: de helft van de versteviging randafstand"
 
 #: lib/elements/satin_column.py:228
 msgid "Split stitch if distance of maximum stitch length is exceeded"
-msgstr ""
+msgstr "Splitsen van steek als afstand van maximale steeklengte wordt overschreden"
 
 #: lib/elements/stroke.py:26
 msgid "Ignore skip"
-msgstr ""
+msgstr "Negeer overslaan"
 
 #: lib/elements/stroke.py:27
 msgid "Skip values are ignored, because there was no line left to embroider."
-msgstr ""
+msgstr "Overgeslagen waarden worden genegeerd, omdat er geen lijn meer was om te borduren."
 
 #: lib/elements/stroke.py:29
 msgid "* Open the params dialog with this object selected"
-msgstr ""
+msgstr "* Open het parameter-dialoogvenster met dit object geselecteerd"
 
 #: lib/elements/stroke.py:30
 msgid "* Reduce Skip values or increase number of lines"
-msgstr ""
+msgstr "* Verminder overslagwaarden of verhoog het aantal lijnen"
 
 #: lib/elements/stroke.py:43
 msgid "Stroke"
@@ -1349,19 +1352,19 @@ msgstr "Lijn"
 
 #: lib/elements/stroke.py:46
 msgid "Running stitch along paths"
-msgstr ""
+msgstr "Lopende steek langs paden"
 
 #: lib/elements/stroke.py:60 inx/inkstitch_break_apart.inx:17
 msgid "Method"
-msgstr ""
+msgstr "Methode"
 
 #: lib/elements/stroke.py:64
 msgid "Running Stitch"
-msgstr ""
+msgstr "Lopende steek"
 
 #: lib/elements/stroke.py:64
 msgid "Ripple"
-msgstr ""
+msgstr "Ribbel"
 
 #: lib/elements/stroke.py:71
 msgid "Manual stitch placement"
@@ -1369,7 +1372,7 @@ msgstr "Handmatige steek plaatsing"
 
 #: lib/elements/stroke.py:72
 msgid "Stitch every node in the path.  All other options are ignored."
-msgstr ""
+msgstr "Naai elk knooppunt in het pad.  Alle andere opties worden genegeerd."
 
 #: lib/elements/stroke.py:83
 msgid "Defines how many times to run down and back along the path."
@@ -1381,7 +1384,7 @@ msgstr "Bonensteek aantal herhalingen"
 
 #: lib/elements/stroke.py:94
 msgid "Backtrack each stitch this many times.  A value of 1 would triple each stitch (forward, back, forward).  A value of 2 would quintuple each stitch, etc."
-msgstr ""
+msgstr "Ga elke steek zoveel keer terug.  Een waarde van 1 verdrievoudigt elke steek (vooruit, terug, vooruit).  Een waarde van 2 zou elke steek vervijfvoudigen, enz."
 
 #: lib/elements/stroke.py:105
 msgid "Running stitch length"
@@ -1393,7 +1396,7 @@ msgstr "Lengte van steken in doorlopende steek modus."
 
 #: lib/elements/stroke.py:117
 msgid "All stitches must be within this distance from the path.  A lower tolerance means stitches will be closer together.  A higher tolerance means sharp corners may be rounded."
-msgstr ""
+msgstr "Alle steken moeten binnen deze afstand van het pad liggen. Een lagere tolerantie betekent dat de steken dichter bij elkaar komen te liggen.  Een hogere tolerantie betekent dat scherpe hoeken mogen worden afgerond."
 
 #: lib/elements/stroke.py:130
 msgid "Length of stitches in zig-zag mode."
@@ -1401,79 +1404,79 @@ msgstr "Lengte van steken in zig-zag modus."
 
 #: lib/elements/stroke.py:142
 msgid "Number of lines"
-msgstr ""
+msgstr "Aantal regels"
 
 #: lib/elements/stroke.py:143
 msgid "Number of lines from start to finish"
-msgstr ""
+msgstr "Aantal regels van begin tot eind"
 
 #: lib/elements/stroke.py:159
 msgid "Skip first lines"
-msgstr ""
+msgstr "Eerste regels overslaan"
 
 #: lib/elements/stroke.py:160
 msgid "Skip this number of lines at the beginning."
-msgstr ""
+msgstr "Sla dit aantal regels aan het begin over."
 
 #: lib/elements/stroke.py:171
 msgid "Skip last lines"
-msgstr ""
+msgstr "Laatste regels overslaan"
 
 #: lib/elements/stroke.py:172
 msgid "Skip this number of lines at the end"
-msgstr ""
+msgstr "Sla dit aantal regels aan het eind over"
 
 #: lib/elements/stroke.py:195
 msgid "Line distance exponent"
-msgstr ""
+msgstr "Regelafstand exponent"
 
 #: lib/elements/stroke.py:196
 msgid "Increase density towards one side."
-msgstr ""
+msgstr "Verhoog de dichtheid naar één kant."
 
 #: lib/elements/stroke.py:207
 msgid "Flip exponent"
-msgstr ""
+msgstr "Spiegelen exponent"
 
 #: lib/elements/stroke.py:208
 msgid "Reverse exponent effect."
-msgstr ""
+msgstr "Omgekeerd exponent effect."
 
 #: lib/elements/stroke.py:219
 msgid "Reverse"
-msgstr ""
+msgstr "Omgekeerd"
 
 #: lib/elements/stroke.py:220
 msgid "Flip start and end point"
-msgstr ""
+msgstr "Begin- en eindpunt spiegelen"
 
 #: lib/elements/stroke.py:231
 msgid "Grid size"
-msgstr ""
+msgstr "Rastergrootte"
 
 #: lib/elements/stroke.py:232
 msgid "Render as grid. Use with care and watch your stitch density."
-msgstr ""
+msgstr "Weergeven als raster. Wees voorzichtig en let op de steekdichtheid."
 
 #: lib/elements/stroke.py:244
 msgid "Scale axis"
-msgstr ""
+msgstr "Schaal as"
 
 #: lib/elements/stroke.py:245
 msgid "Scale axis for satin guided ripple stitches."
-msgstr ""
+msgstr "Schaal as voor satijngeleide ribbelsteken."
 
 #: lib/elements/stroke.py:249
 msgid "X Y"
-msgstr ""
+msgstr "X Y"
 
 #: lib/elements/stroke.py:249
 msgid "X"
-msgstr ""
+msgstr "X"
 
 #: lib/elements/stroke.py:249
 msgid "Y"
-msgstr ""
+msgstr "Y"
 
 #: lib/elements/stroke.py:249 print/templates/ui.html:172
 msgid "None"
@@ -1481,31 +1484,31 @@ msgstr "Geen"
 
 #: lib/elements/stroke.py:257
 msgid "Starting scale"
-msgstr ""
+msgstr "Beginschaal"
 
 #: lib/elements/stroke.py:258
 msgid "How big the first copy of the line should be, in percent."
-msgstr ""
+msgstr "Hoe groot het eerste exemplaar van de regel moet zijn, in procenten."
 
 #: lib/elements/stroke.py:258 lib/elements/stroke.py:269
 msgid "Used only for ripple stitch with a guide line."
-msgstr ""
+msgstr "Alleen gebruikt voor ribbelsteek met een hulplijn."
 
 #: lib/elements/stroke.py:268
 msgid "Ending scale"
-msgstr ""
+msgstr "Eindschaal"
 
 #: lib/elements/stroke.py:269
 msgid "How big the last copy of the line should be, in percent."
-msgstr ""
+msgstr "Hoe groot het laatste exemplaar van de regel moet zijn, in procenten."
 
 #: lib/elements/stroke.py:279
 msgid "Rotate"
-msgstr ""
+msgstr "Draaien"
 
 #: lib/elements/stroke.py:280
 msgid "Rotate satin guided ripple stitches"
-msgstr ""
+msgstr "Roteer satijnhulp ribbelsteken"
 
 #: lib/elements/stroke.py:361
 msgid "Legacy running stitch setting detected!\n\n"
@@ -1536,7 +1539,8 @@ msgstr "Bestand niet gevonden."
 #: lib/extensions/apply_threadlist.py:73
 msgid "The filepath specified is not a file but a dictionary.\n"
 "Please choose a threadlist file to import."
-msgstr ""
+msgstr "Het opgegeven bestandspad is geen bestand maar een woordenboek.\n"
+"Kies aub een threadlist bestand om te importeren."
 
 #: lib/extensions/apply_threadlist.py:78
 msgid "Couldn't find any matching colors in the file."
@@ -1553,11 +1557,11 @@ msgstr "Kies een ander kleurpalet voor je ontwerp."
 #. auto-route running stitch columns extension
 #: lib/extensions/auto_run.py:57 lib/extensions/cutwork_segmentation.py:47
 msgid "Please select one or more stroke elements."
-msgstr ""
+msgstr "Selecteer een of meer lijnelementen."
 
 #: lib/extensions/auto_run.py:62
 msgid "Please select at least one stroke element."
-msgstr ""
+msgstr "Selecteer ten minste één lijnelement."
 
 #: lib/extensions/auto_satin.py:35
 msgid "Please ensure that at most one start and end command is attached to the selected satin columns."
@@ -1583,7 +1587,7 @@ msgstr "In het gehele document zit geen enkel object waar Ink/Stitch mee kan omg
 
 #: lib/extensions/base.py:131
 msgid "Tip: Run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot Objects"
-msgstr ""
+msgstr "Tip: Start Extensies > Inkt/Stitch > Problemen oplossen > Objecten oplossen"
 
 #: lib/extensions/break_apart.py:31
 msgid "Please select one or more fill areas to break apart."
@@ -1606,14 +1610,14 @@ msgstr "Alleen eenvoudige lijnen kunnen worden omgezet naar satijnbanen."
 
 #: lib/extensions/convert_to_satin.py:137
 msgid "Ink/Stitch cannot convert your stroke into a satin column. Please break up your path and try again."
-msgstr ""
+msgstr "Ink/Stitch kan uw lijn niet omzetten in een satijnen kolom. Breek uw pad op en probeer het opnieuw."
 
 #. : Convert To Satin extension, user selected one or more objects that were
 #. not lines.
 #: lib/extensions/convert_to_stroke.py:25
 #: lib/extensions/convert_to_stroke.py:30
 msgid "Please select at least one satin column to convert to a running stitch."
-msgstr ""
+msgstr "Kies ten minste één satijnen kolom om om te zetten in een lopende steek."
 
 #: lib/extensions/cut_satin.py:20
 msgid "Please select one or more satin columns to cut."
@@ -1627,37 +1631,37 @@ msgstr "deze satijnbaan heeft geen \"satijnbaan snijpunt\" commando gekoppeld. G
 
 #: lib/extensions/cutwork_segmentation.py:158
 msgid "Cutwork Group"
-msgstr ""
+msgstr "Snijwerk groep"
 
 #: lib/extensions/cutwork_segmentation.py:166
 #, python-format
 msgid "Needle #%s"
-msgstr ""
+msgstr "Naald #%s"
 
 #: lib/extensions/density_map.py:69
 msgid "Density Plan"
-msgstr ""
+msgstr "Dichtheidsplan"
 
 #: lib/extensions/density_map.py:83
 msgid "Red"
-msgstr ""
+msgstr "Rood"
 
 #: lib/extensions/density_map.py:83
 msgid "Yellow"
-msgstr ""
+msgstr "Geel"
 
 #: lib/extensions/density_map.py:83
 msgid "Green"
-msgstr ""
+msgstr "Groen"
 
 #: lib/extensions/density_map.py:87
 #, python-format
 msgid "%s density"
-msgstr ""
+msgstr "%s dichtheid"
 
 #: lib/extensions/duplicate_params.py:18
 msgid "This function copies Ink/Stitch parameters from the first selected element to the rest of the selection. Please select at least two elements."
-msgstr ""
+msgstr "Deze functie kopieert inkt-/steekparameters van het eerste geselecteerde element naar de rest van de selectie. Selecteer ten minste twee elementen."
 
 #: lib/extensions/flip.py:28
 msgid "Please select one or more satin columns to flip."
@@ -1665,41 +1669,42 @@ msgstr "Selecteer een of meer satijnbanen om om te draaien."
 
 #: lib/extensions/generate_palette.py:31
 msgid "Please specify a name for your color palette."
-msgstr ""
+msgstr "Geef uw kleurenpalet een naam."
 
 #: lib/extensions/generate_palette.py:36
 msgid "Unkown directory path."
-msgstr ""
+msgstr "Onbekend map pad."
 
 #: lib/extensions/generate_palette.py:41
 msgid "Ink/Stitch cannot find your palette folder automatically. Please enter the path manually."
-msgstr ""
+msgstr "Ink/Stitch kan uw paletmap niet automatisch vinden. Voer het pad handmatig in."
 
 #: lib/extensions/generate_palette.py:47
 msgid "No element selected.\n\n"
 "Please select at least one text element with a fill color."
-msgstr ""
+msgstr "Geen element geselecteerd.\n\n"
+"Selecteer ten minste één tekstelement met een vulkleur."
 
 #: lib/extensions/generate_palette.py:53
 msgid "We couldn't find any fill colors on your text elements. Please read the instructions on our website."
-msgstr ""
+msgstr "We konden geen vulkleuren vinden op uw tekst elementen. Lees de instructies op onze website."
 
 #: lib/extensions/input.py:18
 msgid "Ink/Stitch cannot import color formats directly. But you can open the embroidery file and apply the color with Extensions > Ink/Stitch > Thread Color Management > Apply Threadlist"
-msgstr ""
+msgstr "Ink/Stitch kan kleurformaten niet rechtstreeks importeren. Maar u kunt het borduurbestand openen en de kleur toepassen met Extensies > Ink/Stitch > Garenkleurenbeheer > Garenlijst toepassen"
 
 #: lib/extensions/install_custom_palette.py:24
 #: lib/extensions/palette_to_text.py:26
 msgid "File does not exist."
-msgstr ""
+msgstr "Bestand bestaat niet."
 
 #: lib/extensions/install_custom_palette.py:28
 msgid "Wrong file type. Ink/Stitch only accepts gpl color palettes."
-msgstr ""
+msgstr "Verkeerd bestandstype. Ink/Stitch accepteert alleen gpl-kleurenpaletten."
 
 #: lib/extensions/install_custom_palette.py:36
 msgid "Ink/Stitch cannot find your palette folder automatically. Please install your palette manually."
-msgstr ""
+msgstr "Ink/Stitch kan uw paletmap niet automatisch vinden. Installeer uw palet handmatig."
 
 #: lib/extensions/layer_commands.py:20
 msgid "Please choose one or more commands to add."
@@ -1711,7 +1716,7 @@ msgstr "Ink/Stitch Belettering"
 
 #: lib/extensions/lettering.py:54
 msgid "Font"
-msgstr ""
+msgstr "Lettertype"
 
 #: lib/extensions/lettering.py:66 inx/inkstitch_apply_threadlist.inx:7
 #: inx/inkstitch_palette_to_text.inx:15
@@ -1745,7 +1750,7 @@ msgstr "Geen lettertypen gevonden! Probeer Ink/Stitch opnieuw te installeren."
 
 #: lib/extensions/lettering.py:225
 msgid "This font has no available font variant. Please update or remove the font."
-msgstr ""
+msgstr "Dit lettertype heeft geen beschikbare lettertypevariant. Gelieve het lettertype bij te werken of te verwijderen."
 
 #. The user has chosen to scale the text by some percentage
 #. (50%, 200%, etc).  If you need to use the percentage symbol,
@@ -1759,7 +1764,8 @@ msgstr "Tekst schaling %s%%"
 #, python-format
 msgid "Error: Text cannot be applied to the document.\n"
 "%s"
-msgstr ""
+msgstr "Fout: Tekst kan niet op het document worden toegepast.\n"
+"%s"
 
 #: lib/extensions/lettering.py:414
 msgid "Please select only one block of text."
@@ -1771,19 +1777,19 @@ msgstr "Er zijn objecten geselecteerd die niet met de Belettering uitbreiding zi
 
 #: lib/extensions/lettering_custom_font_dir.py:27
 msgid "Please specify the directory of your custom fonts."
-msgstr ""
+msgstr "Geef de map van uw aangepaste lettertypes op."
 
 #: lib/extensions/lettering_force_lock_stitches.py:29
 msgid "The maximum value is smaller than the minimum value."
-msgstr ""
+msgstr "De maximumwaarde is kleiner dan de minimumwaarde."
 
 #: lib/extensions/lettering_generate_json.py:41
 msgid "Please specify a font file."
-msgstr ""
+msgstr "Geef een lettertype-bestand op."
 
 #: lib/extensions/letters_to_font.py:35
 msgid "Font directory not found. Please specify an existing directory."
-msgstr ""
+msgstr "Lettertype map niet gevonden. Gelieve een bestaande map op te geven."
 
 #: lib/extensions/object_commands.py:21
 msgid "Please select one or more objects to which to attach commands."
@@ -1795,7 +1801,7 @@ msgstr "Selecteer een of meer commando's om te koppelen."
 
 #: lib/extensions/palette_split_text.py:20
 msgid "Please select one or more text elements to split lines."
-msgstr ""
+msgstr "Selecteer een of meer tekstelementen om regels te splitsen."
 
 #: lib/extensions/params.py:228
 msgid "These settings will be applied to 1 object."
@@ -1846,15 +1852,15 @@ msgstr "Gebruik Vorige Instellingen"
 
 #: lib/extensions/reorder.py:20
 msgid "Please select at least two elements to reorder."
-msgstr ""
+msgstr "Selecteer ten minste twee elementen om te hergroeperen."
 
 #: lib/extensions/selection_to_guide_line.py:21
 msgid "Please select at least one object to be marked as a guide line."
-msgstr ""
+msgstr "Kies ten minste één voorwerp dat als hulplijn moet dienen."
 
 #: lib/extensions/selection_to_pattern.py:21
 msgid "Please select at least one object to be marked as a pattern."
-msgstr ""
+msgstr "Kies ten minste één voorwerp dat als patroon moet worden gemarkeerd."
 
 #: lib/extensions/troubleshoot.py:45
 msgid "All selected shapes are valid! "
@@ -1905,11 +1911,11 @@ msgstr "Object Type Waarschuwingen"
 
 #: lib/extensions/troubleshoot.py:165
 msgid "These objects may not work properly with Ink/Stitch. Follow the instructions to correct unwanted behaviour."
-msgstr ""
+msgstr "Deze objecten werken mogelijk niet goed met Ink/Stitch. Volg de instructies om ongewenst gedrag te corrigeren."
 
 #: lib/extensions/troubleshoot.py:178
 msgid "Possible solutions"
-msgstr ""
+msgstr "Mogelijke oplossingen"
 
 #: lib/extensions/troubleshoot.py:183
 msgid "It is possible, that one object contains more than one error, yet there will be only one pointer per object.  Run this function again, when further errors occur.  Remove pointers by deleting the layer named \"Troubleshoot\" through the objects panel (Object -> Objects...)."
@@ -2087,12 +2093,13 @@ msgstr "Borduursimulatie"
 #: lib/gui/warnings.py:21
 msgid "Cannot load simulator.\n"
 "Close Params to get full error message."
-msgstr ""
+msgstr "Kan simulator niet laden.\n"
+"Sluit Parameter om de volledige foutmelding te krijgen."
 
 #: lib/lettering/font.py:162
 #, python-format
 msgid "The font '%s' has no variants."
-msgstr ""
+msgstr "Het lettertype '%s' heeft geen varianten."
 
 #. low-level file error.  %(error)s is (hopefully?) translated by
 #. the user's system automatically.
@@ -2104,25 +2111,25 @@ msgstr "Fout bij schrijven naar %(path)s: %(error)s"
 #: lib/stitch_plan/generate_stitch_plan.py:73
 #, python-format
 msgid "File does not exist and cannot be opened. Please correct the file path and try again.\\r%s"
-msgstr ""
+msgstr "Bestand bestaat niet en kan niet worden geopend. Corrigeer het bestandspad en probeer het opnieuw.\\r%s"
 
 #: lib/stitch_plan/stitch_plan.py:26
 msgid "There is no selected stitchable element. Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects in case you have expected a stitchout."
-msgstr ""
+msgstr "Er is geen geselecteerd stitchable element. Voer Extensies > Inkt/Stik > Probleemoplossing > Objecten oplossen uit voor het geval u een stitchout verwachtte."
 
 #: lib/stitches/auto_run.py:135 lib/stitches/auto_satin.py:345
 msgid "Auto-Route"
-msgstr ""
+msgstr "Auto route"
 
 #: lib/stitches/auto_run.py:261
 #, python-format
 msgid "AutoRun %d"
-msgstr ""
+msgstr "AutoRun %d"
 
 #: lib/stitches/auto_run.py:263
 #, python-format
 msgid "AutoRun Underpath %d"
-msgstr ""
+msgstr "AutoRun Onderpad %d"
 
 #. Label for a satin column created by Auto-Route Satin Columns and Lettering
 #. extensions
@@ -2140,7 +2147,7 @@ msgstr "AutoSatijn Doorlopende Steek %d"
 
 #: lib/stitches/guided_fill.py:118
 msgid "Guide line (or offset copy) is self crossing!"
-msgstr ""
+msgstr "Hulplijn (of verschuivingskopie) is zelf overschrijdend!"
 
 #: lib/svg/rendering.py:222
 msgid "Stitch Plan"
@@ -2154,11 +2161,11 @@ msgstr "parseLengthWithUnits: onbekende eenheid %s"
 #: lib/utils/version.py:22
 #, python-format
 msgid "Ink/Stitch Version: %s"
-msgstr ""
+msgstr "Ink/Stitch versie: %s"
 
 #: lib/utils/version.py:24
 msgid "Ink/Stitch Version: unknown"
-msgstr ""
+msgstr "Ink/Stitch versie: onbekend"
 
 #: print/templates/color_swatch.html:8 print/templates/color_swatch.html:40
 #: print/templates/operator_detailedview.html:9
@@ -2399,7 +2406,7 @@ msgstr "Geschatte Tijd"
 
 #: print/templates/ui.html:22 print/templates/ui.html:147
 msgid "Estimated Thread"
-msgstr ""
+msgstr "Geschatte garen"
 
 #: print/templates/ui.html:23 print/templates/ui.html:168
 msgid "Design"
@@ -2500,24 +2507,25 @@ msgstr "Inclusief pagina instelling, geschatte tijd en ook de branding."
 
 #: print/templates/ui.html:149
 msgid "Factors"
-msgstr ""
+msgstr "Factoren"
 
 #: print/templates/ui.html:150
 msgid "The thread length calculation depends on a lot of factors in embroidery designs. We will only get a very inacurate approximation.\n"
 "             Ink/Stitch simply calculates the path length, so the factor of 1 will always be much, much less than the real thread consumption."
-msgstr ""
+msgstr "De berekening van de garenlengte hangt af van een heleboel factoren in borduurmotieven. We zullen slechts een zeer onnauwkeurige benadering krijgen.\n"
+"             Ink/Stitch berekent gewoon de padlengte, dus de factor 1 zal altijd veel en veel minder zijn dan het werkelijke garenverbruik."
 
 #: print/templates/ui.html:152
 msgid "Set a factor to multiply the path length with, depending on your standard setup or adapt it to your current design (tension, thread, fabric, stitch count, etc.)."
-msgstr ""
+msgstr "Stel een factor in om de padlengte mee te vermenigvuldigen, afhankelijk van uw standaardinstelling of pas deze aan uw huidige ontwerp aan (spanning, garen, stof, aantal steken, enz.)."
 
 #: print/templates/ui.html:156 print/templates/ui.html:161
 msgid "Factor to multiply with thread length"
-msgstr ""
+msgstr "Factor om te vermenigvuldigen met draadlengte"
 
 #: print/templates/ui.html:156 print/templates/ui.html:161
 msgid "* path length"
-msgstr ""
+msgstr "* padlengte"
 
 #: print/templates/ui.html:169
 msgid "Thread Palette"
@@ -2565,7 +2573,7 @@ msgstr "Brother Borduurformaat"
 #. description for pyembroidery file format: exp
 #: pyembroidery-format-descriptions.py:6
 msgid "Melco Expanded Embroidery Format"
-msgstr ""
+msgstr "Melco Borduurformaat"
 
 #. description for pyembroidery file format: dst
 #. description for pyembroidery file format: tbf
@@ -2706,7 +2714,7 @@ msgstr "Gunold Borduurformaat"
 #. description for pyembroidery file format: zhs
 #: pyembroidery-format-descriptions.py:80
 msgid "Zeng Hsing Embroidery Format"
-msgstr ""
+msgstr "Zeng Hsing Boorduurformaat"
 
 #. description for pyembroidery file format: zxy
 #: pyembroidery-format-descriptions.py:82
@@ -2721,37 +2729,37 @@ msgstr "Brother Stitch Formaat"
 #. description for pyembroidery file format: png
 #: pyembroidery-format-descriptions.py:86
 msgid "PNG Format, Portable Network Graphics"
-msgstr ""
+msgstr "PNG formaat, Portable Network Graphics"
 
 #. description for pyembroidery file format: gcode
 #: pyembroidery-format-descriptions.py:88
 msgid "gcode Format, Text File"
-msgstr ""
+msgstr "Gcode formaat, tekstbestand"
 
 #. description for pyembroidery file format: hus
 #: pyembroidery-format-descriptions.py:90
 msgid "Husqvarna Embroidery Format"
-msgstr ""
+msgstr "Husqvarna Borduurformaat"
 
 #. description for pyembroidery file format: edr
 #: pyembroidery-format-descriptions.py:92
 msgid "Edr Color Format"
-msgstr ""
+msgstr "Edr Kleurformaat"
 
 #. description for pyembroidery file format: col
 #: pyembroidery-format-descriptions.py:94
 msgid "Col Color Format"
-msgstr ""
+msgstr "Col Kleurformaat"
 
 #. description for pyembroidery file format: inf
 #: pyembroidery-format-descriptions.py:96
 msgid "Inf Color Format"
-msgstr ""
+msgstr "Inf Kleurformaat"
 
 #. description for pyembroidery file format: json
 #: pyembroidery-format-descriptions.py:98
 msgid "Json Export"
-msgstr ""
+msgstr "Json uitvoer"
 
 #. name for left arrow keyboard key
 #: electron/src/renderer/components/Simulator.vue:52
@@ -2804,7 +2812,7 @@ msgstr "Functie"
 
 #: electron/src/renderer/components/InstallPalettes.vue:16
 msgid "If you are not sure which file path to choose, click on install directly. In most cases Ink/Stitch will guess the correct path."
-msgstr ""
+msgstr "Als u niet zeker weet welk bestandspad u moet kiezen, klik dan op direct installeren. In de meeste gevallen zal Ink/Stitch het juiste pad raden."
 
 #: electron/src/renderer/components/InstallPalettes.vue:9
 msgid "Ink/Stitch can install palettes for Inkscape matching the thread colors from popular machine embroidery thread manufacturers."
@@ -2853,7 +2861,7 @@ msgstr "Minus"
 
 #: electron/src/renderer/components/Simulator.vue:215
 msgid "needle points"
-msgstr ""
+msgstr "naaldpunten"
 
 #. description of keyboard shortcut that moves one stitch backward in simulator
 #: electron/src/renderer/components/Simulator.vue:71
@@ -2893,7 +2901,7 @@ msgstr "realistisch"
 
 #: electron/src/renderer/components/Simulator.vue:219
 msgid "render jumps"
-msgstr ""
+msgstr "sprongen weergeven"
 
 #: electron/src/renderer/components/Simulator.vue:263
 msgid "Rendering stitch-plan..."
@@ -2905,7 +2913,7 @@ msgstr "Sneltoets"
 
 #: electron/src/renderer/components/Simulator.vue:192
 msgid "Show"
-msgstr ""
+msgstr "Toon"
 
 #: electron/src/renderer/components/Simulator.vue:10
 msgid "Simulator Shortcut Keys"
@@ -2939,27 +2947,27 @@ msgstr "Probeer nogmaals"
 
 #: inx/inkstitch_about.inx:3 inx/inkstitch_about.inx:6
 msgid "About"
-msgstr ""
+msgstr "Over"
 
 #: inx/inkstitch_about.inx:8
 msgid "Ink/Stitch - Manual Install"
-msgstr ""
+msgstr "Inkt/Stik - Handmatig installeren"
 
 #: inx/inkstitch_about.inx:10
 msgid "An open-source machine embroidery design platform based on Inkscape."
-msgstr ""
+msgstr "Een open-source machine borduurontwerp platform gebaseerd op Inkscape."
 
 #: inx/inkstitch_about.inx:13
 msgid "https://inkstitch.org"
-msgstr ""
+msgstr "https://inkstitch.org"
 
 #: inx/inkstitch_about.inx:15
 msgid "License"
-msgstr ""
+msgstr "Licentie"
 
 #: inx/inkstitch_apply_threadlist.inx:3
 msgid "Apply Threadlist"
-msgstr ""
+msgstr "Garenlijst toepassen"
 
 #: inx/inkstitch_apply_threadlist.inx:8
 #: inx/inkstitch_install_custom_palette.inx:8
@@ -2969,111 +2977,111 @@ msgstr "Kies bestand"
 
 #: inx/inkstitch_apply_threadlist.inx:9
 msgid "Choose method"
-msgstr ""
+msgstr "Kies methode"
 
 #: inx/inkstitch_apply_threadlist.inx:10
 msgid "Apply Ink/Stitch threadlist"
-msgstr ""
+msgstr "Inkt/Stik garenlijst toepassen"
 
 #: inx/inkstitch_apply_threadlist.inx:11
 msgid "Apply other threadlist*"
-msgstr ""
+msgstr "Andere garenlijst toepassen*"
 
 #: inx/inkstitch_apply_threadlist.inx:13
 msgid "*Choose color palette"
-msgstr ""
+msgstr "*Kies kleurpalet"
 
 #: inx/inkstitch_apply_threadlist.inx:87 inx/inkstitch_auto_run.inx:23
 #: inx/inkstitch_cutwork_segmentation.inx:42
 #: inx/inkstitch_generate_palette.inx:24 inx/inkstitch_palette_to_text.inx:19
 msgid "Help"
-msgstr ""
+msgstr "Help"
 
 #: inx/inkstitch_apply_threadlist.inx:88
 msgid "This extension applies colors from a color file to the objects in this document."
-msgstr ""
+msgstr "Deze uitbreiding past kleuren uit een kleurenbestand toe op de objecten in dit document."
 
 #: inx/inkstitch_apply_threadlist.inx:89
 msgid "COL, INF, EDR"
-msgstr ""
+msgstr "COL, INF, EDR"
 
 #: inx/inkstitch_apply_threadlist.inx:90
 msgid "Select the file and apply. The chosen method is not important for these file types."
-msgstr ""
+msgstr "Selecteer het bestand en pas toe. De gekozen methode is niet belangrijk voor deze bestandstypes."
 
 #: inx/inkstitch_apply_threadlist.inx:92
 msgid "TXT"
-msgstr ""
+msgstr "TXT"
 
 #: inx/inkstitch_apply_threadlist.inx:93
 msgid "Import an Ink/Stitch threadlist file (created through the zip export option)."
-msgstr ""
+msgstr "Importeer een Ink/Stitch garenlijstbestand (gemaakt met de zip-exportoptie)."
 
 #: inx/inkstitch_apply_threadlist.inx:95
 msgid "Import any other Threadlist file in txt format. Ink/Stitch will try to match the colors to the selected thread palette. The objects in this document will be colored accordingly if color matching has been successful."
-msgstr ""
+msgstr "Importeer elk ander Threadlist-bestand in txt-formaat. Ink/Stitch zal proberen de kleuren overeen te laten komen met het geselecteerde garenpalet. De objecten in dit document zullen dienovereenkomstig worden gekleurd als de kleuraanpassing is geslaagd."
 
 #: inx/inkstitch_apply_threadlist.inx:98
 msgid "Get more information on our website"
-msgstr ""
+msgstr "Meer informatie vindt u op onze website"
 
 #: inx/inkstitch_apply_threadlist.inx:99
 msgid "https://inkstitch.org/docs/thread-color/#apply-threadlist"
-msgstr ""
+msgstr "https://inkstitch.org/docs/thread-color/#apply-threadlist"
 
 #: inx/inkstitch_apply_threadlist.inx:106 inx/inkstitch_generate_palette.inx:10
 #: inx/inkstitch_install.inx:10 inx/inkstitch_install_custom_palette.inx:13
 #: inx/inkstitch_palette_split_text.inx:10 inx/inkstitch_palette_to_text.inx:9
 msgid "Thread Color Management"
-msgstr ""
+msgstr "Garen kleurbeheer"
 
 #: inx/inkstitch_auto_run.inx:3 inx/inkstitch_auto_run.inx:24
 msgid "Auto-Route Running Stitch"
-msgstr ""
+msgstr "Auto-route lopende steek"
 
 #: inx/inkstitch_auto_run.inx:10
 msgid "Tools: Stroke"
-msgstr ""
+msgstr "Gereedschap: Lijn"
 
 #: inx/inkstitch_auto_run.inx:15
 msgid "Auto-Route Running Stitch Options"
-msgstr ""
+msgstr "Autoroute lopende steken opties"
 
 #: inx/inkstitch_auto_run.inx:17
 msgid "Add nodes at intersections"
-msgstr ""
+msgstr "Knooppunten toevoegen op kruispunten"
 
 #: inx/inkstitch_auto_run.inx:19
 msgid "Preserve order of running stitches"
-msgstr ""
+msgstr "Bewaar de volgorde van de lopende steken"
 
 #: inx/inkstitch_auto_run.inx:21 inx/inkstitch_auto_satin.inx:5
 msgid "Trim jump stitches"
-msgstr ""
+msgstr "Sprongsteken afknippen"
 
 #: inx/inkstitch_auto_run.inx:25
 msgid "Add nodes at intersections:"
-msgstr ""
+msgstr "Knooppunten toevoegen op kruispunten:"
 
 #: inx/inkstitch_auto_run.inx:27
 msgid "- Enabled (automatic). Ink/Stitch will add some nodes for better routing. This is the default setting."
-msgstr ""
+msgstr "- Ingeschakeld (automatisch). Ink/Stitch zal een aantal knooppunten toevoegen voor een betere routing. Dit is de standaardinstelling."
 
 #: inx/inkstitch_auto_run.inx:29
 msgid "- Disabled (manual). Choose this option if you have manually set nodes at crucial spots."
-msgstr ""
+msgstr "- Uitgeschakeld (handmatig). Kies deze optie als u handmatig knooppunten hebt ingesteld op cruciale plaatsen."
 
 #: inx/inkstitch_auto_run.inx:32
 msgid "Use Start- end end commands to define where auto-routing for running stitch should start and end."
-msgstr ""
+msgstr "Gebruik start- en eindcommando's om te definiëren waar auto-routing voor lopende steken moet beginnen en eindigen."
 
 #: inx/inkstitch_auto_run.inx:34
 msgid "More info on our website:"
-msgstr ""
+msgstr "Meer info op onze website:"
 
 #: inx/inkstitch_auto_run.inx:35
 msgid "https://inkstitch.org/docs/stroke-tools#auto-route-running-stitch"
-msgstr ""
+msgstr "https://inkstitch.org/docs/stroke-tools#auto-route-running-stitch"
 
 #: inx/inkstitch_auto_satin.inx:3
 msgid "Auto-Route Satin Columns"
@@ -3081,13 +3089,13 @@ msgstr "Auto-Routeer Satijnbanen"
 
 #: inx/inkstitch_auto_satin.inx:6
 msgid "Preserve order of satin columns"
-msgstr ""
+msgstr "Behoudt volgorde van satijnbanen"
 
 #: inx/inkstitch_auto_satin.inx:12 inx/inkstitch_convert_to_satin.inx:10
 #: inx/inkstitch_convert_to_stroke.inx:13 inx/inkstitch_cut_satin.inx:10
 #: inx/inkstitch_flip.inx:10
 msgid "Tools: Satin"
-msgstr ""
+msgstr "Gereedschap: Satijn"
 
 #: inx/inkstitch_break_apart.inx:3
 msgid "Break Apart Fill Objects"
@@ -3095,15 +3103,15 @@ msgstr "Opbreken Opvulobjecten"
 
 #: inx/inkstitch_break_apart.inx:10
 msgid "Tools: Fill"
-msgstr ""
+msgstr "Gereedschap: Vullen"
 
 #: inx/inkstitch_break_apart.inx:18
 msgid "Simple"
-msgstr ""
+msgstr "Eenvoudig"
 
 #: inx/inkstitch_break_apart.inx:19
 msgid "Complex"
-msgstr ""
+msgstr "Complex"
 
 #: inx/inkstitch_cleanup.inx:3
 msgid "Cleanup Document"
@@ -3111,31 +3119,31 @@ msgstr "Document Opschonen"
 
 #: inx/inkstitch_cleanup.inx:7
 msgid "Remove Small Fill Areas"
-msgstr ""
+msgstr "Kleine opgevulde gebieden verwijderen"
 
 #: inx/inkstitch_cleanup.inx:7
 msgid "Removes areas smaller than dedined by threshold."
-msgstr ""
+msgstr "Verwijdert gebieden kleiner dan de grenswaarde."
 
 #: inx/inkstitch_cleanup.inx:8
 msgid "Fill area threshold (px²)"
-msgstr ""
+msgstr "Opvulgebied grenswaarde (px²)"
 
 #: inx/inkstitch_cleanup.inx:10
 msgid "Remove Small strokes"
-msgstr ""
+msgstr "Kleine lijnen verwijderen"
 
 #: inx/inkstitch_cleanup.inx:10
 msgid "Removes small strokes shorter than defined by threshold."
-msgstr ""
+msgstr "Verwijdert kleine lijnen korter dan de grenswaarde."
 
 #: inx/inkstitch_cleanup.inx:11
 msgid "Stroke threshold (px)"
-msgstr ""
+msgstr "Lijn grenswaarde (px)"
 
 #: inx/inkstitch_commands_scale_symbols.inx:3
 msgid "Scale Command Symbols"
-msgstr ""
+msgstr "Symbolen voor schaalcommando's"
 
 #: inx/inkstitch_commands_scale_symbols.inx:11
 #: inx/inkstitch_global_commands.inx:17 inx/inkstitch_layer_commands.inx:14
@@ -3147,7 +3155,7 @@ msgstr "Commando's"
 #: inx/inkstitch_commands_scale_symbols.inx:12
 #: inx/inkstitch_object_commands_toggle_visibility.inx:11
 msgid "View"
-msgstr ""
+msgstr "Bekijk"
 
 #: inx/inkstitch_convert_to_satin.inx:3
 msgid "Convert Line to Satin"
@@ -3155,15 +3163,15 @@ msgstr "Omzetten Lijn naar Satijn"
 
 #: inx/inkstitch_convert_to_stroke.inx:3
 msgid "Convert Satin to Stroke"
-msgstr ""
+msgstr "Satijn omzetten in lijn"
 
 #: inx/inkstitch_convert_to_stroke.inx:8
 msgid "Keep satin column"
-msgstr ""
+msgstr "Behoud satijnkolom"
 
 #: inx/inkstitch_convert_to_stroke.inx:8
 msgid "Do not delete original satin column."
-msgstr ""
+msgstr "Verwijder de originele satijnkolom niet."
 
 #: inx/inkstitch_cut_satin.inx:3
 msgid "Cut Satin Column"
@@ -3171,88 +3179,88 @@ msgstr "Snij Satijnbaan"
 
 #: inx/inkstitch_cutwork_segmentation.inx:3
 msgid "Cutwork segmentation"
-msgstr ""
+msgstr "Snijwerk segmentatie"
 
 #: inx/inkstitch_cutwork_segmentation.inx:13
 msgid "Cutwork Options"
-msgstr ""
+msgstr "Snijwerk Opties"
 
 #: inx/inkstitch_cutwork_segmentation.inx:15
 msgid "#1"
-msgstr ""
+msgstr "#1"
 
 #: inx/inkstitch_cutwork_segmentation.inx:16
 #: inx/inkstitch_cutwork_segmentation.inx:22
 #: inx/inkstitch_cutwork_segmentation.inx:28
 #: inx/inkstitch_cutwork_segmentation.inx:34
 msgid "start"
-msgstr ""
+msgstr "begin"
 
 #: inx/inkstitch_cutwork_segmentation.inx:17
 #: inx/inkstitch_cutwork_segmentation.inx:23
 #: inx/inkstitch_cutwork_segmentation.inx:29
 #: inx/inkstitch_cutwork_segmentation.inx:35
 msgid "end"
-msgstr ""
+msgstr "einde"
 
 #: inx/inkstitch_cutwork_segmentation.inx:18
 #: inx/inkstitch_cutwork_segmentation.inx:24
 #: inx/inkstitch_cutwork_segmentation.inx:30
 #: inx/inkstitch_cutwork_segmentation.inx:36
 msgid "color"
-msgstr ""
+msgstr "kleur"
 
 #: inx/inkstitch_cutwork_segmentation.inx:21
 msgid "#2"
-msgstr ""
+msgstr "#2"
 
 #: inx/inkstitch_cutwork_segmentation.inx:27
 msgid "#3"
-msgstr ""
+msgstr "#3"
 
 #: inx/inkstitch_cutwork_segmentation.inx:33
 msgid "#4"
-msgstr ""
+msgstr "#4"
 
 #: inx/inkstitch_cutwork_segmentation.inx:39
 msgid "Sort elements by color"
-msgstr ""
+msgstr "Sorteer elementen op kleur"
 
 #: inx/inkstitch_cutwork_segmentation.inx:40
 msgid "Keep original"
-msgstr ""
+msgstr "Behoud origineel"
 
 #: inx/inkstitch_cutwork_segmentation.inx:43
 msgid "This extension separates a path depending on the angle."
-msgstr ""
+msgstr "Deze uitbreiding scheidt een pad afhankelijk van de hoek."
 
 #: inx/inkstitch_cutwork_segmentation.inx:44
 msgid "* If you don't want to use 4 needles, set both angle values to 0 for the rest of the rows."
-msgstr ""
+msgstr "* Als u geen 4 naalden wilt gebruiken, zet u beide hoekwaarden op 0 voor de rest van de rijen."
 
 #: inx/inkstitch_cutwork_segmentation.inx:45
 msgid "* A horizontal line has an angle of 0 degrees."
-msgstr ""
+msgstr "* Een horizontale lijn heeft een hoek van 0 graden."
 
 #: inx/inkstitch_cutwork_segmentation.inx:46
 msgid "* After the conversion through this extension, don't rotate your design again."
-msgstr ""
+msgstr "* Na de conversie door deze extensie, moet u uw ontwerp niet opnieuw draaien."
 
 #: inx/inkstitch_cutwork_segmentation.inx:48
 msgid "Please adjust angle and color options to your specific needle kit."
-msgstr ""
+msgstr "Pas de hoek en de kleur aan uw specifieke naaldenset aan."
 
 #: inx/inkstitch_cutwork_segmentation.inx:49
 msgid "On our website we have collected some common setups."
-msgstr ""
+msgstr "Op onze website hebben wij een aantal veel voorkomende opstellingen verzameld."
 
 #: inx/inkstitch_cutwork_segmentation.inx:50
 msgid "https://inkstitch.org/docs/cutwork/"
-msgstr ""
+msgstr "https://inkstitch.org/docs/cutwork/"
 
 #: inx/inkstitch_density_map.inx:3
 msgid "Density Map"
-msgstr ""
+msgstr "Dichtheidsplan"
 
 #: inx/inkstitch_density_map.inx:10 inx/inkstitch_embroider.inx:14
 #: inx/inkstitch_print.inx:10 inx/inkstitch_simulator.inx:10
@@ -3263,49 +3271,49 @@ msgstr "Visualiseren en Exporteren"
 
 #: inx/inkstitch_density_map.inx:14
 msgid "Red markers"
-msgstr ""
+msgstr "Rode markeringen"
 
 #: inx/inkstitch_density_map.inx:15 inx/inkstitch_density_map.inx:19
 msgid "Number of stitches"
-msgstr ""
+msgstr "Aantal steken"
 
 #: inx/inkstitch_density_map.inx:15 inx/inkstitch_density_map.inx:19
 msgid "0 = no density info"
-msgstr ""
+msgstr "0 = geen dichtheidsinformatie"
 
 #: inx/inkstitch_density_map.inx:16 inx/inkstitch_density_map.inx:20
 msgid "within a radius (mm) of"
-msgstr ""
+msgstr "binnen een straal (mm) van"
 
 #: inx/inkstitch_density_map.inx:18
 msgid "Yellow markers"
-msgstr ""
+msgstr "Gele markeringen"
 
 #: inx/inkstitch_density_map.inx:22 inx/inkstitch_stitch_plan_preview.inx:15
 msgid "Design layer visibility"
-msgstr ""
+msgstr "Zichtbaarheid ontwerplaag"
 
 #: inx/inkstitch_density_map.inx:23 inx/inkstitch_stitch_plan_preview.inx:16
 msgid "Unchanged"
-msgstr ""
+msgstr "Ongewijzigd"
 
 #: inx/inkstitch_density_map.inx:24 inx/inkstitch_stitch_plan_preview.inx:17
 msgid "Hidden"
-msgstr ""
+msgstr "Verborgen"
 
 #: inx/inkstitch_density_map.inx:25 inx/inkstitch_stitch_plan_preview.inx:18
 msgid "Lower opacity"
-msgstr ""
+msgstr "Lagere ondoorzichtigheid"
 
 #: inx/inkstitch_duplicate_params.inx:3
 msgid "Duplicate Params"
-msgstr ""
+msgstr "Dubbele parameters"
 
 #: inx/inkstitch_duplicate_params.inx:10 inx/inkstitch_reorder.inx:10
 #: inx/inkstitch_selection_to_guide_line.inx:10
 #: inx/inkstitch_selection_to_pattern.inx:10
 msgid "Edit"
-msgstr ""
+msgstr "Bewerken"
 
 #: inx/inkstitch_embroider.inx:3
 msgid "Embroider"
@@ -3313,23 +3321,23 @@ msgstr "Borduur"
 
 #: inx/inkstitch_embroider_settings.inx:3
 msgid "Preferences"
-msgstr ""
+msgstr "Voorkeuren"
 
 #: inx/inkstitch_embroider_settings.inx:17
 msgid "Collapse length (mm)"
-msgstr ""
+msgstr "Samenvoeg lengte (mm)"
 
 #: inx/inkstitch_embroider_settings.inx:17
 msgid "Jump stitches smaller than this will be treated as normal stitches."
-msgstr ""
+msgstr "Sprongsteken kleiner dan dit zullen als normale steken worden behandeld."
 
 #: inx/inkstitch_embroider_settings.inx:20
 msgid "Minimal stitch length (mm)"
-msgstr ""
+msgstr "Minimale steeklengte (mm)"
 
 #: inx/inkstitch_embroider_settings.inx:20
 msgid "Drop stitches smaller than this value."
-msgstr ""
+msgstr "Laat steken vallen die kleiner zijn dan deze waarde."
 
 #: inx/inkstitch_flip.inx:3
 msgid "Flip Satin Column Rails"
@@ -3337,44 +3345,44 @@ msgstr "Wissel Satijnbaan Rails om"
 
 #: inx/inkstitch_generate_palette.inx:3
 msgid "Generate Color Palette"
-msgstr ""
+msgstr "Genereer kleurenpalet"
 
 #: inx/inkstitch_generate_palette.inx:11
 #: inx/inkstitch_palette_split_text.inx:11
 msgid "Generate Palette"
-msgstr ""
+msgstr "Genereer palet"
 
 #: inx/inkstitch_generate_palette.inx:17
 msgid "Generate Palette Options"
-msgstr ""
+msgstr "Genereer palet opties"
 
 #: inx/inkstitch_generate_palette.inx:18
 msgid "Palette name"
-msgstr ""
+msgstr "Paletnaam"
 
 #: inx/inkstitch_generate_palette.inx:20
 msgid "Folder (optional):"
-msgstr ""
+msgstr "Map (optioneel):"
 
 #: inx/inkstitch_generate_palette.inx:22
 msgid "⚠ Restart Inkscape to use your color palette."
-msgstr ""
+msgstr "⚠ Herstart Inkscape om je kleurenpalet te gebruiken."
 
 #: inx/inkstitch_generate_palette.inx:25
 msgid "Generate a custom color palette for Ink/Stitch"
-msgstr ""
+msgstr "Genereer een aangepast kleurenpalet voor Ink/Stitch"
 
 #: inx/inkstitch_generate_palette.inx:26
 msgid "Sadly we can not sort color swatches in Inkscape. With this extension you can export colors from text elements in their stacking order. The text will be used as the color name and number."
-msgstr ""
+msgstr "Jammer genoeg kunnen we kleurstalen niet sorteren in Inkscape. Met deze uitbreiding kan je kleuren exporteren van tekstelementen in hun stapelvolgorde. De tekst zal gebruikt worden als kleurnaam en nummer."
 
 #: inx/inkstitch_generate_palette.inx:30
 msgid "On our website we describe all necessary steps to generate a color palette for Ink/Stitch."
-msgstr ""
+msgstr "Op onze website beschrijven wij alle stappen die nodig zijn om een kleurenpalet voor Ink/Stitch te genereren."
 
 #: inx/inkstitch_generate_palette.inx:31
 msgid "https://inkstitch.org/docs/thread-color#generate-color-palette"
-msgstr ""
+msgstr "https://inkstitch.org/docs/thread-color#generate-color-palette"
 
 #: inx/inkstitch_global_commands.inx:3
 msgid "Add Commands"
@@ -3382,543 +3390,548 @@ msgstr "Voeg Commando's Toe"
 
 #: inx/inkstitch_input_100.inx:3
 msgid "100 file input"
-msgstr ""
+msgstr "100 bestandsinvoer"
 
 #: inx/inkstitch_input_100.inx:8
 msgid "Ink/Stitch: Toyota Embroidery Format (.100)"
-msgstr ""
+msgstr "Ink/Stitch: Toyota Borduurformaat (.100)"
 
 #: inx/inkstitch_input_100.inx:9
 msgid "convert 100 file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "100-bestand converteren naar Ink/Stitch handmatige steekpaden"
 
 #: inx/inkstitch_input_10O.inx:3
 msgid "10O file input"
-msgstr ""
+msgstr "100 bestandsinvoer"
 
 #: inx/inkstitch_input_10O.inx:8
 msgid "Ink/Stitch: Toyota Embroidery Format (.10o)"
-msgstr ""
+msgstr "Ink/Stitch: Toyota Borduurformaat (.100)"
 
 #: inx/inkstitch_input_10O.inx:9
 msgid "convert 10O file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "100-bestand converteren naar Ink/Stitch handmatige steekpaden"
 
 #: inx/inkstitch_input_BRO.inx:3
 msgid "BRO file input"
-msgstr ""
+msgstr "BRO bestandsinvoer"
 
 #: inx/inkstitch_input_BRO.inx:8
 msgid "Ink/Stitch: Bits & Volts Embroidery Format (.bro)"
-msgstr ""
+msgstr "Inkt/Stitch: Bits & Volts Borduurmotief (.bro)"
 
 #: inx/inkstitch_input_BRO.inx:9
 msgid "convert BRO file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "BRO-bestand converteren naar Ink/Stitch handmatige steekpaden"
 
 #: inx/inkstitch_input_COL.inx:3
 msgid "COL file input"
-msgstr ""
+msgstr "COL bestandsinvoer"
 
 #: inx/inkstitch_input_COL.inx:8
 msgid "Ink/Stitch: Col Color Format (.col)"
-msgstr ""
+msgstr "Ink/Stitch: Col Kleurformaat (.col)"
 
 #: inx/inkstitch_input_COL.inx:9
 msgid "convert COL file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "COL-bestand converteren naar Ink/Stitch handmatige steekpaden"
 
 #: inx/inkstitch_input_DAT.inx:3
 msgid "DAT file input"
-msgstr ""
+msgstr "DAT bestandsinvoer"
 
 #: inx/inkstitch_input_DAT.inx:8
 msgid "Ink/Stitch: Sunstar or Barudan Embroidery Format (.dat)"
-msgstr ""
+msgstr "Ink/Stitch: Sunstar or Barudan Borduurformaat (.dat)"
 
 #: inx/inkstitch_input_DAT.inx:9
 msgid "convert DAT file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "DAT-bestand converteren naar Ink/Stitch handmatige steekpaden"
 
 #: inx/inkstitch_input_DSB.inx:3
 msgid "DSB file input"
-msgstr ""
+msgstr "DSB bestandsinvoer"
 
 #: inx/inkstitch_input_DSB.inx:8
 msgid "Ink/Stitch: Tajima(Barudan) Embroidery Format (.dsb)"
-msgstr ""
+msgstr "Ink/Stitch: Tajima(Barudan) Borduurformaat (.dsb)"
 
 #: inx/inkstitch_input_DSB.inx:9
 msgid "convert DSB file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "DSB-bestand converteren naar Ink/Stitch handmatige steekpaden"
 
 #: inx/inkstitch_input_DST.inx:3
 msgid "DST file input"
-msgstr ""
+msgstr "DST bestandsinvoer"
 
 #: inx/inkstitch_input_DST.inx:8 inx/inkstitch_output_DST.inx:8
 msgid "Ink/Stitch: Tajima Embroidery Format (.dst)"
-msgstr ""
+msgstr "Ink/Stitch: Tajima Borduurformaat (.dst)"
 
 #: inx/inkstitch_input_DST.inx:9
 msgid "convert DST file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "DST-bestand converteren naar Ink/Stitch handmatige steekpaden"
 
 #: inx/inkstitch_input_DSZ.inx:3
 msgid "DSZ file input"
-msgstr ""
+msgstr "DSZ bestandsinvoer"
 
 #: inx/inkstitch_input_DSZ.inx:8
 msgid "Ink/Stitch: ZSK USA Embroidery Format (.dsz)"
-msgstr ""
+msgstr "Ink/Stitch: ZSK USA Borduurformaat (.dsz)"
 
 #: inx/inkstitch_input_DSZ.inx:9
 msgid "convert DSZ file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "DSZ-bestand converteren naar Ink/Stitch handmatige steekpaden"
 
 #: inx/inkstitch_input_EDR.inx:3
 msgid "EDR file input"
-msgstr ""
+msgstr "\n"
+"EDR bestandsinvoer"
 
 #: inx/inkstitch_input_EDR.inx:8
 msgid "Ink/Stitch: Edr Color Format (.edr)"
-msgstr ""
+msgstr "Ink/Stitch: Edr Kleurformaat (.edr)"
 
 #: inx/inkstitch_input_EDR.inx:9
 msgid "convert EDR file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "EDR-bestand converteren naar Ink/Stitch handmatige steekpaden"
 
 #: inx/inkstitch_input_EMD.inx:3
 msgid "EMD file input"
-msgstr ""
+msgstr "\n"
+"EMD bestandsinvoer"
 
 #: inx/inkstitch_input_EMD.inx:8
 msgid "Ink/Stitch: Elna Embroidery Format (.emd)"
-msgstr ""
+msgstr "Ink/Stitch: Elna Borduurformaat (.emd)"
 
 #: inx/inkstitch_input_EMD.inx:9
 msgid "convert EMD file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "EMD-bestand converteren naar Ink/Stitch handmatige steekpaden"
 
 #: inx/inkstitch_input_EXP.inx:3
 msgid "EXP file input"
-msgstr ""
+msgstr "\n"
+"EXP bestandsinvoer"
 
 #: inx/inkstitch_input_EXP.inx:8 inx/inkstitch_output_EXP.inx:8
 msgid "Ink/Stitch: Melco Expanded Embroidery Format (.exp)"
-msgstr ""
+msgstr "Ink/Stitch: EXP Borduurformaat (.exp)"
 
 #: inx/inkstitch_input_EXP.inx:9
 msgid "convert EXP file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "EXP-bestand converteren naar Ink/Stitch handmatige steekpaden"
 
 #: inx/inkstitch_input_EXY.inx:3
 msgid "EXY file input"
-msgstr ""
+msgstr "\n"
+"EXY bestandsinvoer"
 
 #: inx/inkstitch_input_EXY.inx:8
 msgid "Ink/Stitch: Eltac Embroidery Format (.exy)"
-msgstr ""
+msgstr "Ink/Stitch: Eltac Borduurformaat (.exy)"
 
 #: inx/inkstitch_input_EXY.inx:9
 msgid "convert EXY file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "EXY-bestand converteren naar Ink/Stitch handmatige steekpaden"
 
 #: inx/inkstitch_input_FXY.inx:3
 msgid "FXY file input"
-msgstr ""
+msgstr "FXY bestandsinvoer"
 
 #: inx/inkstitch_input_FXY.inx:8
 msgid "Ink/Stitch: Fortron Embroidery Format (.fxy)"
-msgstr ""
+msgstr "Ink/Stitch: Fortron Borduurformaat (.fxy)"
 
 #: inx/inkstitch_input_FXY.inx:9
 msgid "convert FXY file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "FXY-bestand converteren naar Ink/Stitch handmatige steekpaden"
 
 #: inx/inkstitch_input_GCODE.inx:3
 msgid "GCODE file input"
-msgstr ""
+msgstr "GCODE bestandsinvoer"
 
 #: inx/inkstitch_input_GCODE.inx:8 inx/inkstitch_output_GCODE.inx:8
 msgid "Ink/Stitch: gcode Format, Text File (.gcode)"
-msgstr ""
+msgstr "Ink/Stitch: gcode formaat, Tekstbestand (.gcode)"
 
 #: inx/inkstitch_input_GCODE.inx:9
 msgid "convert GCODE file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "GCODE-bestand converteren naar Ink/Stitch handmatige steekpaden"
 
 #: inx/inkstitch_input_GT.inx:3
 msgid "GT file input"
-msgstr ""
+msgstr "GT bestandsinvoer"
 
 #: inx/inkstitch_input_GT.inx:8
 msgid "Ink/Stitch: Gold Thread Embroidery Format (.gt)"
-msgstr ""
+msgstr "Ink/Stitch: Gold Thread Borduurformaat (.gt)"
 
 #: inx/inkstitch_input_GT.inx:9
 msgid "convert GT file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "GT-bestand converteren naar Ink/Stitch handmatige steekpaden"
 
 #: inx/inkstitch_input_HUS.inx:3
 msgid "HUS file input"
-msgstr ""
+msgstr "HUS bestandsinvoer"
 
 #: inx/inkstitch_input_HUS.inx:8
 msgid "Ink/Stitch: Husqvarna Embroidery Format (.hus)"
-msgstr ""
+msgstr "Ink/Stitch: Husqvarna Borduurformaat (.hus)"
 
 #: inx/inkstitch_input_HUS.inx:9
 msgid "convert HUS file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "HUS-bestand converteren naar Ink/Stitch handmatige steekpaden"
 
 #: inx/inkstitch_input_INB.inx:3
 msgid "INB file input"
-msgstr ""
+msgstr "INB bestandsinvoer"
 
 #: inx/inkstitch_input_INB.inx:8
 msgid "Ink/Stitch: Inbro Embroidery Format (.inb)"
-msgstr ""
+msgstr "Ink/Stitch: Inbro Borduurformaat (.inb)"
 
 #: inx/inkstitch_input_INB.inx:9
 msgid "convert INB file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "INB-bestand converteren naar Ink/Stitch handmatige steekpaden"
 
 #: inx/inkstitch_input_INF.inx:3
 msgid "INF file input"
-msgstr ""
+msgstr "INF bestandsinvoer"
 
 #: inx/inkstitch_input_INF.inx:8
 msgid "Ink/Stitch: Inf Color Format (.inf)"
-msgstr ""
+msgstr "Ink/Stitch: Inf Kleurformaat (.inf)"
 
 #: inx/inkstitch_input_INF.inx:9
 msgid "convert INF file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "INF-bestand converteren naar Ink/Stitch handmatige steekpaden"
 
 #: inx/inkstitch_input_JEF.inx:3
 msgid "JEF file input"
-msgstr ""
+msgstr "JEF bestandsinvoer"
 
 #: inx/inkstitch_input_JEF.inx:8 inx/inkstitch_output_JEF.inx:8
 msgid "Ink/Stitch: Janome Embroidery Format (.jef)"
-msgstr ""
+msgstr "Ink/Stitch: Janome Borduurformaat (.jef)"
 
 #: inx/inkstitch_input_JEF.inx:9
 msgid "convert JEF file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "JEF-bestand converteren naar Ink/Stitch handmatige steekpaden"
 
 #: inx/inkstitch_input_JPX.inx:3
 msgid "JPX file input"
-msgstr ""
+msgstr "JPX bestandsinvoer"
 
 #: inx/inkstitch_input_JPX.inx:8
 msgid "Ink/Stitch: Janome Embroidery Format (.jpx)"
-msgstr ""
+msgstr "Ink/Stitch: Janome Borduurformaat (.jpx)"
 
 #: inx/inkstitch_input_JPX.inx:9
 msgid "convert JPX file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "JPX-bestand converteren naar Ink/Stitch handmatige steekpaden"
 
 #: inx/inkstitch_input_KSM.inx:3
 msgid "KSM file input"
-msgstr ""
+msgstr "KSM bestandsinvoer"
 
 #: inx/inkstitch_input_KSM.inx:8
 msgid "Ink/Stitch: Pfaff Embroidery Format (.ksm)"
-msgstr ""
+msgstr "Ink/Stitch: Pfaff Borduurformaat (.ksm)"
 
 #: inx/inkstitch_input_KSM.inx:9
 msgid "convert KSM file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "KSM-bestand converteren naar Ink/Stitch handmatige steekpaden"
 
 #: inx/inkstitch_input_MAX.inx:3
 msgid "MAX file input"
-msgstr ""
+msgstr "MAX bestandsinvoer"
 
 #: inx/inkstitch_input_MAX.inx:8
 msgid "Ink/Stitch: Pfaff Embroidery Format (.max)"
-msgstr ""
+msgstr "Ink/Stitch: Pfaff Borduurformaat (.max)"
 
 #: inx/inkstitch_input_MAX.inx:9
 msgid "convert MAX file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "MAX-bestand converteren naar Ink/Stitch handmatige steekpaden"
 
 #: inx/inkstitch_input_MIT.inx:3
 msgid "MIT file input"
-msgstr ""
+msgstr "MIT bestandsinvoer"
 
 #: inx/inkstitch_input_MIT.inx:8
 msgid "Ink/Stitch: Mitsubishi Embroidery Format (.mit)"
-msgstr ""
+msgstr "Ink/Stitch: Mitsubishi Borduurformaat (.mit)"
 
 #: inx/inkstitch_input_MIT.inx:9
 msgid "convert MIT file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "MIT-bestand converteren naar Ink/Stitch handmatige steekpaden"
 
 #: inx/inkstitch_input_NEW.inx:3
 msgid "NEW file input"
-msgstr ""
+msgstr "NEW bestandsinvoer"
 
 #: inx/inkstitch_input_NEW.inx:8
 msgid "Ink/Stitch: Ameco Embroidery Format (.new)"
-msgstr ""
+msgstr "Ink/Stitch: Ameco Borduurformaat (.new)"
 
 #: inx/inkstitch_input_NEW.inx:9
 msgid "convert NEW file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "NEW-bestand converteren naar Ink/Stitch handmatige steekpaden"
 
 #: inx/inkstitch_input_PCD.inx:3
 msgid "PCD file input"
-msgstr ""
+msgstr "PCD bestandsinvoer"
 
 #: inx/inkstitch_input_PCD.inx:8
 msgid "Ink/Stitch: Pfaff Embroidery Format (.pcd)"
-msgstr ""
+msgstr "Ink/Stitch: Pfaff Borduurformaat (.pcd)"
 
 #: inx/inkstitch_input_PCD.inx:9
 msgid "convert PCD file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "PCD-bestand converteren naar Ink/Stitch handmatige steekpaden"
 
 #: inx/inkstitch_input_PCM.inx:3
 msgid "PCM file input"
-msgstr ""
+msgstr "PCM bestandsinvoer"
 
 #: inx/inkstitch_input_PCM.inx:8
 msgid "Ink/Stitch: Pfaff Embroidery Format (.pcm)"
-msgstr ""
+msgstr "Ink/Stitch: Pfaff Borduurformaat (.pcm)"
 
 #: inx/inkstitch_input_PCM.inx:9
 msgid "convert PCM file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "PCM-bestand converteren naar Ink/Stitch handmatige steekpaden"
 
 #: inx/inkstitch_input_PCQ.inx:3
 msgid "PCQ file input"
-msgstr ""
+msgstr "PCQ bestandsinvoer"
 
 #: inx/inkstitch_input_PCQ.inx:8
 msgid "Ink/Stitch: Pfaff Embroidery Format (.pcq)"
-msgstr ""
+msgstr "Ink/Stitch: Pfaff Borduurformaat (.pcq)"
 
 #: inx/inkstitch_input_PCQ.inx:9
 msgid "convert PCQ file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "PCQ-bestand converteren naar Ink/Stitch handmatige steekpaden"
 
 #: inx/inkstitch_input_PCS.inx:3
 msgid "PCS file input"
-msgstr ""
+msgstr "PCS bestandsinvoer"
 
 #: inx/inkstitch_input_PCS.inx:8
 msgid "Ink/Stitch: Pfaff Embroidery Format (.pcs)"
-msgstr ""
+msgstr "Ink/Stitch: Pfaff Borduurformaat (.pcs)"
 
 #: inx/inkstitch_input_PCS.inx:9
 msgid "convert PCS file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "PCS-bestand converteren naar Ink/Stitch handmatige steekpaden"
 
 #: inx/inkstitch_input_PEC.inx:3
 msgid "PEC file input"
-msgstr ""
+msgstr "PEC bestandsinvoer"
 
 #: inx/inkstitch_input_PEC.inx:8 inx/inkstitch_output_PEC.inx:8
 msgid "Ink/Stitch: Brother Embroidery Format (.pec)"
-msgstr ""
+msgstr "Ink/Stitch: Brother Borduurformaat (.pec)"
 
 #: inx/inkstitch_input_PEC.inx:9
 msgid "convert PEC file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "PEC-bestand converteren naar Ink/Stitch handmatige steekpaden"
 
 #: inx/inkstitch_input_PES.inx:3
 msgid "PES file input"
-msgstr ""
+msgstr "PES bestandsinvoer"
 
 #: inx/inkstitch_input_PES.inx:8 inx/inkstitch_output_PES.inx:8
 msgid "Ink/Stitch: Brother Embroidery Format (.pes)"
-msgstr ""
+msgstr "Ink/Stitch: Brother Borduurformaat (.pes)"
 
 #: inx/inkstitch_input_PES.inx:9
 msgid "convert PES file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "PES-bestand converteren naar Ink/Stitch handmatige steekpaden"
 
 #: inx/inkstitch_input_PHB.inx:3
 msgid "PHB file input"
-msgstr ""
+msgstr "PHB bestandsinvoer"
 
 #: inx/inkstitch_input_PHB.inx:8
 msgid "Ink/Stitch: Brother Embroidery Format (.phb)"
-msgstr ""
+msgstr "Ink/Stitch: Brother Borduurformaat (.phb)"
 
 #: inx/inkstitch_input_PHB.inx:9
 msgid "convert PHB file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "PHB-bestand converteren naar Ink/Stitch handmatige steekpaden"
 
 #: inx/inkstitch_input_PHC.inx:3
 msgid "PHC file input"
-msgstr ""
+msgstr "PHC bestandsinvoer"
 
 #: inx/inkstitch_input_PHC.inx:8
 msgid "Ink/Stitch: Brother Embroidery Format (.phc)"
-msgstr ""
+msgstr "Ink/Stitch: Brother Borduurformaat (.phc)"
 
 #: inx/inkstitch_input_PHC.inx:9
 msgid "convert PHC file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "PHC-bestand converteren naar Ink/Stitch handmatige steekpaden"
 
 #: inx/inkstitch_input_PMV.inx:3
 msgid "PMV file input"
-msgstr ""
+msgstr "PMV bestandsinvoer"
 
 #: inx/inkstitch_input_PMV.inx:8
 msgid "Ink/Stitch: Brother Stitch Format (.pmv)"
-msgstr ""
+msgstr "Ink/Stitch: Brother Borduurformaat (.pmv)"
 
 #: inx/inkstitch_input_PMV.inx:9
 msgid "convert PMV file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "PMV-bestand converteren naar Ink/Stitch handmatige steekpaden"
 
 #: inx/inkstitch_input_SEW.inx:3
 msgid "SEW file input"
-msgstr ""
+msgstr "SEW bestandsinvoer"
 
 #: inx/inkstitch_input_SEW.inx:8
 msgid "Ink/Stitch: Janome Embroidery Format (.sew)"
-msgstr ""
+msgstr "Ink/Stitch: Janome Borduurformaat (.sew)"
 
 #: inx/inkstitch_input_SEW.inx:9
 msgid "convert SEW file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "SEW-bestand converteren naar Ink/Stitch handmatige steekpaden"
 
 #: inx/inkstitch_input_SHV.inx:3
 msgid "SHV file input"
-msgstr ""
+msgstr "SHV bestandsinvoer"
 
 #: inx/inkstitch_input_SHV.inx:8
 msgid "Ink/Stitch: Husqvarna Viking Embroidery Format (.shv)"
-msgstr ""
+msgstr "Ink/Stitch: Husqvarna Viking Borduurformaat (.shv)"
 
 #: inx/inkstitch_input_SHV.inx:9
 msgid "convert SHV file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "SHV-bestand converteren naar Ink/Stitch handmatige steekpaden"
 
 #: inx/inkstitch_input_SPX.inx:3
 msgid "SPX file input"
-msgstr ""
+msgstr "SPX bestandsinvoer"
 
 #: inx/inkstitch_input_SPX.inx:8
 msgid "Ink/Stitch: Pfaff Embroidery Format (.spx)"
-msgstr ""
+msgstr "Ink/Stitch: Pfaff Borduurformaat (.spx)"
 
 #: inx/inkstitch_input_SPX.inx:9
 msgid "convert SPX file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "SPX-bestand converteren naar Ink/Stitch handmatige steekpaden"
 
 #: inx/inkstitch_input_STC.inx:3
 msgid "STC file input"
-msgstr ""
+msgstr "STC bestandsinvoer"
 
 #: inx/inkstitch_input_STC.inx:8
 msgid "Ink/Stitch: Gunold Embroidery Format (.stc)"
-msgstr ""
+msgstr "Ink/Stitch: Gunold Borduurformaat (.stc)"
 
 #: inx/inkstitch_input_STC.inx:9
 msgid "convert STC file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "STC-bestand converteren naar Ink/Stitch handmatige steekpaden"
 
 #: inx/inkstitch_input_STX.inx:3
 msgid "STX file input"
-msgstr ""
+msgstr "STX bestandsinvoer"
 
 #: inx/inkstitch_input_STX.inx:8
 msgid "Ink/Stitch: Data Stitch Embroidery Format (.stx)"
-msgstr ""
+msgstr "Ink/Stitch: Data Stitch Borduurformaat (.stx)"
 
 #: inx/inkstitch_input_STX.inx:9
 msgid "convert STX file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "STX-bestand converteren naar Ink/Stitch handmatige steekpaden"
 
 #: inx/inkstitch_input_TAP.inx:3
 msgid "TAP file input"
-msgstr ""
+msgstr "TAP bestandsinvoer"
 
 #: inx/inkstitch_input_TAP.inx:8
 msgid "Ink/Stitch: Happy Embroidery Format (.tap)"
-msgstr ""
+msgstr "Ink/Stitch: Happy Borduurformaat (.tap)"
 
 #: inx/inkstitch_input_TAP.inx:9
 msgid "convert TAP file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "TAP-bestand converteren naar Ink/Stitch handmatige steekpaden"
 
 #: inx/inkstitch_input_TBF.inx:3
 msgid "TBF file input"
-msgstr ""
+msgstr "TBF bestandsinvoer"
 
 #: inx/inkstitch_input_TBF.inx:8
 msgid "Ink/Stitch: Tajima Embroidery Format (.tbf)"
-msgstr ""
+msgstr "Ink/Stitch: Tajima Borduurformaat (.tbf)"
 
 #: inx/inkstitch_input_TBF.inx:9
 msgid "convert TBF file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "TBF-bestand converteren naar Ink/Stitch handmatige steekpaden"
 
 #: inx/inkstitch_input_U01.inx:3
 msgid "U01 file input"
-msgstr ""
+msgstr "U01 bestandsinvoer"
 
 #: inx/inkstitch_input_U01.inx:8 inx/inkstitch_output_U01.inx:8
 msgid "Ink/Stitch: Barudan Embroidery Format (.u01)"
-msgstr ""
+msgstr "Ink/Stitch: Barudan Borduurformaat (.u01)"
 
 #: inx/inkstitch_input_U01.inx:9
 msgid "convert U01 file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "U01-bestand converteren naar Ink/Stitch handmatige steekpaden"
 
 #: inx/inkstitch_input_VP3.inx:3
 msgid "VP3 file input"
-msgstr ""
+msgstr "VP3 bestandsinvoer"
 
 #: inx/inkstitch_input_VP3.inx:8 inx/inkstitch_output_VP3.inx:8
 msgid "Ink/Stitch: Pfaff Embroidery Format (.vp3)"
-msgstr ""
+msgstr "Ink/Stitch: Pfaff Borduurformaat (.vp3)"
 
 #: inx/inkstitch_input_VP3.inx:9
 msgid "convert VP3 file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "VP3-bestand converteren naar Ink/Stitch handmatige steekpaden"
 
 #: inx/inkstitch_input_XXX.inx:3
 msgid "XXX file input"
-msgstr ""
+msgstr "XXX bestandsinvoer"
 
 #: inx/inkstitch_input_XXX.inx:8 inx/inkstitch_output_XXX.inx:8
 msgid "Ink/Stitch: Singer Embroidery Format (.xxx)"
-msgstr ""
+msgstr "Ink/Stitch: Singer Borduurformaat (.xxx)"
 
 #: inx/inkstitch_input_XXX.inx:9
 msgid "convert XXX file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "XXX-bestand converteren naar Ink/Stitch handmatige steekpaden"
 
 #: inx/inkstitch_input_ZHS.inx:3
 msgid "ZHS file input"
-msgstr ""
+msgstr "ZHS bestandsinvoer"
 
 #: inx/inkstitch_input_ZHS.inx:8
 msgid "Ink/Stitch: Zeng Hsing Embroidery Format (.zhs)"
-msgstr ""
+msgstr "Ink/Stitch: Zeng Hsing Borduurformaat (.zhs)"
 
 #: inx/inkstitch_input_ZHS.inx:9
 msgid "convert ZHS file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "ZHS-bestand converteren naar Ink/Stitch handmatige steekpaden"
 
 #: inx/inkstitch_input_ZXY.inx:3
 msgid "ZXY file input"
-msgstr ""
+msgstr "\n"
+"ZXY bestandsinvoer"
 
 #: inx/inkstitch_input_ZXY.inx:8
 msgid "Ink/Stitch: ZSK TC Embroidery Format (.zxy)"
-msgstr ""
+msgstr "Ink/Stitch: ZSK TC Borduurformaat (.zxy)"
 
 #: inx/inkstitch_input_ZXY.inx:9
 msgid "convert ZXY file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "ZXY-bestand converteren naar Ink/Stitch handmatige steekpaden"
 
 #: inx/inkstitch_install.inx:3
 msgid "Install thread color palettes for Inkscape"
@@ -3926,15 +3939,15 @@ msgstr "Installeer draadkleurpaletten voor Inkscape"
 
 #: inx/inkstitch_install_custom_palette.inx:3
 msgid "Install custom palette"
-msgstr ""
+msgstr "Installeer aangepast palet"
 
 #: inx/inkstitch_install_custom_palette.inx:6
 msgid "Choose a .gpl color palette file to install into Inkscape."
-msgstr ""
+msgstr "Kies een .gpl kleurenpalet bestand om te installeren in Inkscape."
 
 #: inx/inkstitch_install_custom_palette.inx:7
 msgid "Restart Inkscape to use."
-msgstr ""
+msgstr "Herstart Inkscape om te gebruiken."
 
 #: inx/inkstitch_layer_commands.inx:3
 msgid "Add Layer Commands"
@@ -3947,7 +3960,7 @@ msgstr "Belettering"
 #: inx/inkstitch_lettering_custom_font_dir.inx:3
 #: inx/inkstitch_lettering_custom_font_dir.inx:18
 msgid "Custom font directory"
-msgstr ""
+msgstr "Aangepaste lettertypenmap"
 
 #: inx/inkstitch_lettering_custom_font_dir.inx:10
 #: inx/inkstitch_lettering_force_lock_stitches.inx:10
@@ -3955,121 +3968,121 @@ msgstr ""
 #: inx/inkstitch_lettering_remove_kerning.inx:10
 #: inx/inkstitch_letters_to_font.inx:10
 msgid "Font Management"
-msgstr ""
+msgstr "Lettertype beheer"
 
 #: inx/inkstitch_lettering_force_lock_stitches.inx:23
 #: inx/inkstitch_lettering_force_lock_stitches.inx:24
 msgid "Minimum distance (mm)"
-msgstr ""
+msgstr "Minimumafstand (mm)"
 
 #: inx/inkstitch_lettering_force_lock_stitches.inx:26
 msgid "Add force lock stitches attribute to the last element of each glyph"
-msgstr ""
+msgstr "Voeg geforceerde locksteken attribuut toe aan het laatste element van elke glyph"
 
 #: inx/inkstitch_lettering_generate_json.inx:3
 msgid "Generate JSON"
-msgstr ""
+msgstr "Genereer JSON"
 
 #: inx/inkstitch_lettering_generate_json.inx:21
 msgid "SVG Font File"
-msgstr ""
+msgstr "SVG lettertypebestand"
 
 #: inx/inkstitch_lettering_generate_json.inx:25
 msgid "Name"
-msgstr ""
+msgstr "Naam"
 
 #: inx/inkstitch_lettering_generate_json.inx:33
 msgid "Autoroute Satin"
-msgstr ""
+msgstr "Autoroute satijnsteek"
 
 #: inx/inkstitch_lettering_generate_json.inx:33
 msgid "Disable if you defined manual routing in your font."
-msgstr ""
+msgstr "Uitschakelen als u handmatige routering in uw lettertype hebt gedefinieerd."
 
 #: inx/inkstitch_lettering_generate_json.inx:35
 msgid "Reversible"
-msgstr ""
+msgstr "Omkeerbaar"
 
 #: inx/inkstitch_lettering_generate_json.inx:35
 msgid "If disabled back and forth stitching will not be possile for this font."
-msgstr ""
+msgstr "Indien uitgeschakeld zal heen en weer naaien niet mogelijk zijn voor dit lettertype."
 
 #: inx/inkstitch_lettering_generate_json.inx:36
 msgid "Force letter case"
-msgstr ""
+msgstr "Hoofdletters forceren"
 
 #: inx/inkstitch_lettering_generate_json.inx:38
 msgid "Upper"
-msgstr ""
+msgstr "Bovenste"
 
 #: inx/inkstitch_lettering_generate_json.inx:39
 msgid "Lower"
-msgstr ""
+msgstr "Onderste"
 
 #: inx/inkstitch_lettering_generate_json.inx:43
 msgid "Min Scale"
-msgstr ""
+msgstr "Min Schaal"
 
 #: inx/inkstitch_lettering_generate_json.inx:44
 msgid "Max Scale"
-msgstr ""
+msgstr "Max Schaal"
 
 #: inx/inkstitch_lettering_generate_json.inx:48
 msgid "Default Glyph"
-msgstr ""
+msgstr "Standaard Glyph"
 
 #: inx/inkstitch_lettering_generate_json.inx:60
 #: inx/inkstitch_lettering_generate_json.inx:67
 msgid "Force"
-msgstr ""
+msgstr "Forceren"
 
 #: inx/inkstitch_lettering_generate_json.inx:60
 msgid "Overwrite leading information from font file."
-msgstr ""
+msgstr "Voorloopinformatie uit lettertypebestand overschrijven."
 
 #: inx/inkstitch_lettering_generate_json.inx:62
 msgid "Leading (px)"
-msgstr ""
+msgstr "Voorloop (px)"
 
 #: inx/inkstitch_lettering_generate_json.inx:62
 msgid "Line height (default: 100)"
-msgstr ""
+msgstr "Lijnhoogte (standaard: 100)"
 
 #: inx/inkstitch_lettering_generate_json.inx:67
 msgid "Overwrite word spacing information from font file."
-msgstr ""
+msgstr "Informatie over woordafstand overschrijven uit lettertypebestand."
 
 #: inx/inkstitch_lettering_generate_json.inx:69
 msgid "Word spacing (px)"
-msgstr ""
+msgstr "Woordafstand (px)"
 
 #: inx/inkstitch_lettering_generate_json.inx:69
 msgid "Space character width (default: 20)"
-msgstr ""
+msgstr "Spatie tekenbreedte (standaard: 20)"
 
 #: inx/inkstitch_lettering_remove_kerning.inx:3
 msgid "Remove Kerning"
-msgstr ""
+msgstr "Uitlijning verwijderen"
 
 #: inx/inkstitch_lettering_remove_kerning.inx:23
 msgid "Select Font Files"
-msgstr ""
+msgstr "Selecteer lettertype bestanden"
 
 #: inx/inkstitch_letters_to_font.inx:3
 msgid "Letters to font"
-msgstr ""
+msgstr "Letters naar lettertype"
 
 #: inx/inkstitch_letters_to_font.inx:22
 msgid "File format"
-msgstr ""
+msgstr "Bestandsformaat"
 
 #: inx/inkstitch_letters_to_font.inx:59
 msgid "Font directory"
-msgstr ""
+msgstr "Lettertype map"
 
 #: inx/inkstitch_letters_to_font.inx:61
 msgid "Import commands"
-msgstr ""
+msgstr "Commando's importeren"
 
 #: inx/inkstitch_object_commands.inx:3
 msgid "Attach Commands to Selected Objects"
@@ -4077,71 +4090,71 @@ msgstr "Koppel Commando's aan Geselecteerde Objecten"
 
 #: inx/inkstitch_object_commands_toggle_visibility.inx:3
 msgid "Display|Hide Object Commands"
-msgstr ""
+msgstr "Tonen|verbergen object commando's"
 
 #: inx/inkstitch_output_COL.inx:3
 msgid "COL file output"
-msgstr ""
+msgstr "COL bestandsuitvoer"
 
 #: inx/inkstitch_output_COL.inx:8
 msgid "Ink/Stitch: Col Color Format [COLOR] (.col)"
-msgstr ""
+msgstr "Ink/Stitch: Col Kleurformaat [COLOR] (.col)"
 
 #: inx/inkstitch_output_COL.inx:9
 msgid "Save design in COL format using Ink/Stitch"
-msgstr ""
+msgstr "Sla ontwerp op in COL formaat met Ink/Stitch"
 
 #: inx/inkstitch_output_CSV.inx:3
 msgid "CSV file output"
-msgstr ""
+msgstr "CSV bestandsuitvoer"
 
 #: inx/inkstitch_output_CSV.inx:8
 msgid "Ink/Stitch: Comma-separated values [DEBUG] (.csv)"
-msgstr ""
+msgstr "Ink/Stitch: Komma-gescheiden waarden [DEBUG] (.csv)"
 
 #: inx/inkstitch_output_CSV.inx:9
 msgid "Save design in CSV format using Ink/Stitch"
-msgstr ""
+msgstr "Sla ontwerp op in CSV formaat met Ink/Stitch"
 
 #: inx/inkstitch_output_DST.inx:3
 msgid "DST file output"
-msgstr ""
+msgstr "DST bestandsuitvoer"
 
 #: inx/inkstitch_output_DST.inx:9
 msgid "Save design in DST format using Ink/Stitch"
-msgstr ""
+msgstr "Sla ontwerp op in DST formaat met Ink/Stitch"
 
 #: inx/inkstitch_output_EDR.inx:3
 msgid "EDR file output"
-msgstr ""
+msgstr "EDR bestandsuitvoer"
 
 #: inx/inkstitch_output_EDR.inx:8
 msgid "Ink/Stitch: Edr Color Format [COLOR] (.edr)"
-msgstr ""
+msgstr "Ink/Stitch: Edr Kleurformaat [COLOR] (.edr)"
 
 #: inx/inkstitch_output_EDR.inx:9
 msgid "Save design in EDR format using Ink/Stitch"
-msgstr ""
+msgstr "Sla ontwerp op in EDR formaat met Ink/Stitch"
 
 #: inx/inkstitch_output_EXP.inx:3
 msgid "EXP file output"
-msgstr ""
+msgstr "EXP bestandsuitvoer"
 
 #: inx/inkstitch_output_EXP.inx:9
 msgid "Save design in EXP format using Ink/Stitch"
-msgstr ""
+msgstr "Sla ontwerp op in EXP formaat met Ink/Stitch"
 
 #: inx/inkstitch_output_GCODE.inx:3
 msgid "GCODE file output"
-msgstr ""
+msgstr "GCODE bestandsuitvoer"
 
 #: inx/inkstitch_output_GCODE.inx:9
 msgid "Save design in GCODE format using Ink/Stitch"
-msgstr ""
+msgstr "Sla ontwerp op in GCODE formaat met Ink/Stitch"
 
 #: inx/inkstitch_output_GCODE.inx:17
 msgid "Coordinate Settings"
-msgstr ""
+msgstr "Coördinaatinstellingen"
 
 #: inx/inkstitch_output_GCODE.inx:18
 msgid "negate X coordinate values"
@@ -4181,15 +4194,15 @@ msgstr "verhoog z coördinaat met deze hoeveelheid per steek als \"Z verplaatsin
 
 #: inx/inkstitch_output_GCODE.inx:27
 msgid "Custom Commands"
-msgstr ""
+msgstr "Aangepaste commando's"
 
 #: inx/inkstitch_output_GCODE.inx:29
 msgid "Use '%X' for x-coordinate. Use '%Y' for y-coordinate and '%Z' for z-coordinate."
-msgstr ""
+msgstr "Gebruik '%X' voor x-coördinaat, gebruik '%Y' voor de y-coördinaat en '%Z' voor de z-coördinaat."
 
 #: inx/inkstitch_output_GCODE.inx:31 inx/inkstitch_output_GCODE.inx:33
 msgid "Leave empty to use default value. Use 'none' to remove."
-msgstr ""
+msgstr "Leeg laten om de standaardwaarde te gebruiken. Gebruik 'geen' om te verwijderen."
 
 #: inx/inkstitch_output_GCODE.inx:34
 msgid "START"
@@ -4201,7 +4214,7 @@ msgstr "EINDE"
 
 #: inx/inkstitch_output_GCODE.inx:37
 msgid "Laser Settings"
-msgstr ""
+msgstr "Laserinstellingen"
 
 #: inx/inkstitch_output_GCODE.inx:39
 msgid "laser mode"
@@ -4217,7 +4230,7 @@ msgstr "dynamische laser energie"
 
 #: inx/inkstitch_output_GCODE.inx:42
 msgid "Use Grbl's M4 dynamic laser power mode. Ensures consistent laser cutting power regardless of motor speed. Only for PWM-capable lasers."
-msgstr ""
+msgstr "Gebruik Grbl's M4 dynamische laservermogensmodus. Garandeert een constant lasersnijvermogen, ongeacht de snelheid van de motor. Enkel voor PWM-geschikte lasers."
 
 #: inx/inkstitch_output_GCODE.inx:44
 msgid "laser warm-up time"
@@ -4257,139 +4270,139 @@ msgstr "voedingssnelheid (in mm/min, gebruik -1 om weg te laten)"
 
 #: inx/inkstitch_output_INF.inx:3
 msgid "INF file output"
-msgstr ""
+msgstr "INF bestandsuitvoer"
 
 #: inx/inkstitch_output_INF.inx:8
 msgid "Ink/Stitch: Inf Color Format [COLOR] (.inf)"
-msgstr ""
+msgstr "Ink/Stitch: Inf Kleurformaat [COLOR] (.inf)"
 
 #: inx/inkstitch_output_INF.inx:9
 msgid "Save design in INF format using Ink/Stitch"
-msgstr ""
+msgstr "Sla ontwerp op in INF formaat met Ink/Stitch"
 
 #: inx/inkstitch_output_JEF.inx:3
 msgid "JEF file output"
-msgstr ""
+msgstr "JEF bestandsuitvoer"
 
 #: inx/inkstitch_output_JEF.inx:9
 msgid "Save design in JEF format using Ink/Stitch"
-msgstr ""
+msgstr "Sla ontwerp op in JEF formaat met Ink/Stitch"
 
 #: inx/inkstitch_output_JSON.inx:3
 msgid "JSON file output"
-msgstr ""
+msgstr "JSON bestandsuitvoer"
 
 #: inx/inkstitch_output_JSON.inx:8
 msgid "Ink/Stitch: Json Export [DEBUG] (.json)"
-msgstr ""
+msgstr "Ink/Stitch: Json uitvoer [DEBUG] (.json)"
 
 #: inx/inkstitch_output_JSON.inx:9
 msgid "Save design in JSON format using Ink/Stitch"
-msgstr ""
+msgstr "Sla ontwerp op in JSON formaat met Ink/Stitch"
 
 #: inx/inkstitch_output_PEC.inx:3
 msgid "PEC file output"
-msgstr ""
+msgstr "PEC bestandsuitvoer"
 
 #: inx/inkstitch_output_PEC.inx:9
 msgid "Save design in PEC format using Ink/Stitch"
-msgstr ""
+msgstr "Sla ontwerp op in PEC formaat met Ink/Stitch"
 
 #: inx/inkstitch_output_PES.inx:3
 msgid "PES file output"
-msgstr ""
+msgstr "PES bestandsuitvoer"
 
 #: inx/inkstitch_output_PES.inx:9
 msgid "Save design in PES format using Ink/Stitch"
-msgstr ""
+msgstr "Sla ontwerp op in PES formaat met Ink/Stitch"
 
 #: inx/inkstitch_output_PMV.inx:3
 msgid "PMV file output"
-msgstr ""
+msgstr "PMV bestandsuitvoer"
 
 #: inx/inkstitch_output_PMV.inx:8
 msgid "Ink/Stitch: Brother Stitch Format [STITCH] (.pmv)"
-msgstr ""
+msgstr "Ink/Stitch: Brother Borduurformaat [STITCH] (.pmv)"
 
 #: inx/inkstitch_output_PMV.inx:9
 msgid "Save design in PMV format using Ink/Stitch"
-msgstr ""
+msgstr "Sla ontwerp op in PMV formaat met Ink/Stitch"
 
 #: inx/inkstitch_output_PNG.inx:3
 msgid "PNG file output"
-msgstr ""
+msgstr "PNG bestandsuitvoer"
 
 #: inx/inkstitch_output_PNG.inx:8
 msgid "Ink/Stitch: PNG Format, Portable Network Graphics [IMAGE] (.png)"
-msgstr ""
+msgstr "Ink/Stitch: PNG formaat, Portable Network Graphics [IMAGE] (.png)"
 
 #: inx/inkstitch_output_PNG.inx:9
 msgid "Save design in PNG format using Ink/Stitch"
-msgstr ""
+msgstr "Sla ontwerp op in PNG formaat met Ink/Stitch"
 
 #: inx/inkstitch_output_SVG.inx:3
 msgid "SVG file output"
-msgstr ""
+msgstr "SVG bestandsuitvoer"
 
 #: inx/inkstitch_output_SVG.inx:8
 msgid "Ink/Stitch: Scalable Vector Graphics [DEBUG] (.svg)"
-msgstr ""
+msgstr "Ink/Stitch: Scalable Vector Graphics [DEBUG] (.svg)"
 
 #: inx/inkstitch_output_SVG.inx:9
 msgid "Save design in SVG format using Ink/Stitch"
-msgstr ""
+msgstr "Sla ontwerp op in SVG formaat met Ink/Stitch"
 
 #: inx/inkstitch_output_U01.inx:3
 msgid "U01 file output"
-msgstr ""
+msgstr "U01 bestandsuitvoer"
 
 #: inx/inkstitch_output_U01.inx:9
 msgid "Save design in U01 format using Ink/Stitch"
-msgstr ""
+msgstr "Sla ontwerp op in U01 formaat met Ink/Stitch"
 
 #: inx/inkstitch_output_VP3.inx:3
 msgid "VP3 file output"
-msgstr ""
+msgstr "VP3 bestandsuitvoer"
 
 #: inx/inkstitch_output_VP3.inx:9
 msgid "Save design in VP3 format using Ink/Stitch"
-msgstr ""
+msgstr "Sla ontwerp op in VP3 formaat met Ink/Stitch"
 
 #: inx/inkstitch_output_XXX.inx:3
 msgid "XXX file output"
-msgstr ""
+msgstr "XXX bestandsuitvoer"
 
 #: inx/inkstitch_output_XXX.inx:9
 msgid "Save design in XXX format using Ink/Stitch"
-msgstr ""
+msgstr "Sla ontwerp op in XXX formaat met Ink/Stitch"
 
 #: inx/inkstitch_palette_split_text.inx:3
 msgid "Split text"
-msgstr ""
+msgstr "Tekst splitsen"
 
 #: inx/inkstitch_palette_split_text.inx:16
 msgid "Line Height"
-msgstr ""
+msgstr "Lijnhoogte"
 
 #: inx/inkstitch_palette_to_text.inx:3 inx/inkstitch_palette_to_text.inx:20
 msgid "Palette to text"
-msgstr ""
+msgstr "Palet naar tekst"
 
 #: inx/inkstitch_palette_to_text.inx:16
 msgid "Choose a .gpl color palette file to import colors as text elements."
-msgstr ""
+msgstr "Kies een .gpl kleurenpalet bestand om kleuren te importeren als tekst elementen."
 
 #: inx/inkstitch_palette_to_text.inx:21
 msgid "Import a .gpl palette into Inkscape as text elements to edit color entries."
-msgstr ""
+msgstr "Importeer een .gpl palet in Inkscape als tekstelementen om kleurinvoer te bewerken."
 
 #: inx/inkstitch_palette_to_text.inx:23
 msgid "Read more on our webiste:"
-msgstr ""
+msgstr "Lees verder op onze website:"
 
 #: inx/inkstitch_palette_to_text.inx:24
 msgid "https://inkstitch.org/docs/thread-color#palette-to-text"
-msgstr ""
+msgstr "https://inkstitch.org/docs/thread-color#palette-to-text"
 
 #: inx/inkstitch_params.inx:3
 msgid "Params"
@@ -4405,35 +4418,35 @@ msgstr "Verwijder Borduurinstellingen"
 
 #: inx/inkstitch_remove_embroidery_settings.inx:7
 msgid "Remove Params"
-msgstr ""
+msgstr "Parameters verwijderen"
 
 #: inx/inkstitch_remove_embroidery_settings.inx:7
 msgid "Removes params from selected objects or all objects if nothing is selected."
-msgstr ""
+msgstr "Verwijdert parameters van geselecteerde objecten of van alle objecten indien niets is geselecteerd."
 
 #: inx/inkstitch_remove_embroidery_settings.inx:9
 msgid "Remove Commands"
-msgstr ""
+msgstr "Commando's verwijderen"
 
 #: inx/inkstitch_remove_embroidery_settings.inx:9
 msgid "Removes visual commands from selected objects or all objects if nothing is selected."
-msgstr ""
+msgstr "Verwijdert visuele commando's van geselecteerde objecten of van alle objecten als niets is geselecteerd."
 
 #: inx/inkstitch_remove_embroidery_settings.inx:10
 msgid "Remove Print Settings from SVG metadata"
-msgstr ""
+msgstr "Verwijder Print Instellingen uit SVG metadata"
 
 #: inx/inkstitch_reorder.inx:3
 msgid "Re-stack objects in order of selection"
-msgstr ""
+msgstr "Stapel objecten opnieuw in volgorde van selectie"
 
 #: inx/inkstitch_selection_to_guide_line.inx:3
 msgid "Selection to guide line"
-msgstr ""
+msgstr "Selectie tot hulplijn"
 
 #: inx/inkstitch_selection_to_pattern.inx:3
 msgid "Selection to pattern"
-msgstr ""
+msgstr "Selectie tot patroon"
 
 #: inx/inkstitch_simulator.inx:3
 msgid "Simulator / Realistic Preview"
@@ -4445,15 +4458,15 @@ msgstr "Stekenplan Voorbeeld"
 
 #: inx/inkstitch_stitch_plan_preview.inx:14
 msgid "Move stitch plan beside the canvas"
-msgstr ""
+msgstr "Verplaats steekplan naast het canvas"
 
 #: inx/inkstitch_stitch_plan_preview.inx:20
 msgid "Needle points"
-msgstr ""
+msgstr "Naaldpunten"
 
 #: inx/inkstitch_stitch_plan_preview_undo.inx:3
 msgid "Undo Stitch Plan Preview"
-msgstr ""
+msgstr "Stekenplan voorbeeld terugdraaien"
 
 #: inx/inkstitch_troubleshoot.inx:3
 msgid "Troubleshoot Objects"
@@ -4461,7 +4474,7 @@ msgstr "Probleemdiagnose Objecten"
 
 #: inx/inkstitch_zip.inx:3
 msgid "embroidery ZIP file output"
-msgstr ""
+msgstr "borduur ZIP-bestandsuitvoer"
 
 #: inx/inkstitch_zip.inx:8
 msgid "Ink/Stitch: ZIP export multiple formats (.zip)"
@@ -4473,9 +4486,9 @@ msgstr "Maak een ZIP met meerdere borduurbestandsformaten met behulp van Ink/Sti
 
 #: inx/inkstitch_zip.inx:26
 msgid ".TXT: Threadlist [COLOR]"
-msgstr ""
+msgstr ".TXT: Garenlijst [COLOR]"
 
 #: inx/inkstitch_zip.inx:27
 msgid ".SVG: Scalable Vector Graphic"
-msgstr ""
+msgstr ".SVG: Scalable Vector Graphic"
 

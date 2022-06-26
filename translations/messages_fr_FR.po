@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2022-06-25 02:44+0000\n"
-"PO-Revision-Date: 2022-06-25 02:46\n"
+"PO-Revision-Date: 2022-06-26 02:39\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -173,7 +173,7 @@ msgstr "DinoMouse 72"
 #. description of font in fonts/dinomouse72
 #: inkstitch-fonts-metadata.py:56
 msgid "A Font Grove jawn. Satin width is 2.5mm at 18mm capitals"
-msgstr ""
+msgstr "Le satin mesure 2,5 mm de large sur les majuscules de 18 mm"
 
 #. name of font in fonts/emilio_20
 #: inkstitch-fonts-metadata.py:58
@@ -1237,19 +1237,19 @@ msgstr "Longueur maximale du point pour couper les points."
 
 #: lib/elements/satin_column.py:104
 msgid "Short stitch inset"
-msgstr ""
+msgstr "Décalage des points courts"
 
 #: lib/elements/satin_column.py:105
 msgid "Stitches in areas with high density will be shortened by this amount."
-msgstr ""
+msgstr "Les points dans les zones à forte densité seront raccourcis de cette quantité."
 
 #: lib/elements/satin_column.py:113
 msgid "Short stitch distance"
-msgstr ""
+msgstr "Distance des points courts"
 
 #: lib/elements/satin_column.py:114
 msgid "Do short stitches if the distance between stitches is smaller than this."
-msgstr ""
+msgstr "Faites des points courts si la distance entre les crêtes est inférieure à cette valeur."
 
 #: lib/elements/satin_column.py:126 lib/elements/stroke.py:129
 msgid "Zig-zag spacing (peak-to-peak)"
@@ -1691,7 +1691,7 @@ msgstr "Nous n'avons pas trouvé de couleurs de remplissage sur vos éléments d
 
 #: lib/extensions/input.py:18
 msgid "Ink/Stitch cannot import color formats directly. But you can open the embroidery file and apply the color with Extensions > Ink/Stitch > Thread Color Management > Apply Threadlist"
-msgstr ""
+msgstr "Ink/Stitch ne peut pas importer directement les formats de couleur. Mais vous pouvez ouvrir le fichier de broderie et appliquer la couleur avec Extensions > Ink/Stitch > Gestion des couleurs de fil > Appliquer la liste de fils."
 
 #: lib/extensions/install_custom_palette.py:24
 #: lib/extensions/palette_to_text.py:26
@@ -2573,7 +2573,7 @@ msgstr "Format de broderie Brother"
 #. description for pyembroidery file format: exp
 #: pyembroidery-format-descriptions.py:6
 msgid "Melco Expanded Embroidery Format"
-msgstr ""
+msgstr "Format de broderie élargi Melco"
 
 #. description for pyembroidery file format: dst
 #. description for pyembroidery file format: tbf
@@ -2714,7 +2714,7 @@ msgstr "Format de broderie Gunold"
 #. description for pyembroidery file format: zhs
 #: pyembroidery-format-descriptions.py:80
 msgid "Zeng Hsing Embroidery Format"
-msgstr ""
+msgstr "Format de broderie Zeng Hsing"
 
 #. description for pyembroidery file format: zxy
 #: pyembroidery-format-descriptions.py:82
@@ -2729,37 +2729,37 @@ msgstr "Format de broderie Brother"
 #. description for pyembroidery file format: png
 #: pyembroidery-format-descriptions.py:86
 msgid "PNG Format, Portable Network Graphics"
-msgstr ""
+msgstr "Format PNG, Portable Network Graphics"
 
 #. description for pyembroidery file format: gcode
 #: pyembroidery-format-descriptions.py:88
 msgid "gcode Format, Text File"
-msgstr ""
+msgstr "Format gcode, fichier texte"
 
 #. description for pyembroidery file format: hus
 #: pyembroidery-format-descriptions.py:90
 msgid "Husqvarna Embroidery Format"
-msgstr ""
+msgstr "Format de broderie Husqvarna"
 
 #. description for pyembroidery file format: edr
 #: pyembroidery-format-descriptions.py:92
 msgid "Edr Color Format"
-msgstr ""
+msgstr "Format de couleur Edr"
 
 #. description for pyembroidery file format: col
 #: pyembroidery-format-descriptions.py:94
 msgid "Col Color Format"
-msgstr ""
+msgstr "Format de couleur Col"
 
 #. description for pyembroidery file format: inf
 #: pyembroidery-format-descriptions.py:96
 msgid "Inf Color Format"
-msgstr ""
+msgstr "Format de couleur Inf"
 
 #. description for pyembroidery file format: json
 #: pyembroidery-format-descriptions.py:98
 msgid "Json Export"
-msgstr ""
+msgstr "Export Json"
 
 #. name for left arrow keyboard key
 #: electron/src/renderer/components/Simulator.vue:52
@@ -2999,35 +2999,35 @@ msgstr "Aide"
 
 #: inx/inkstitch_apply_threadlist.inx:88
 msgid "This extension applies colors from a color file to the objects in this document."
-msgstr ""
+msgstr "Cette extension applique les couleurs d'un fichier de couleurs aux objets de ce document."
 
 #: inx/inkstitch_apply_threadlist.inx:89
 msgid "COL, INF, EDR"
-msgstr ""
+msgstr "COL, INF, EDR"
 
 #: inx/inkstitch_apply_threadlist.inx:90
 msgid "Select the file and apply. The chosen method is not important for these file types."
-msgstr ""
+msgstr "Sélectionnez le fichier et appliquez. La méthode choisie n'est pas importante pour ces types de fichiers."
 
 #: inx/inkstitch_apply_threadlist.inx:92
 msgid "TXT"
-msgstr ""
+msgstr "TXT"
 
 #: inx/inkstitch_apply_threadlist.inx:93
 msgid "Import an Ink/Stitch threadlist file (created through the zip export option)."
-msgstr ""
+msgstr "Importez une palette de fils Ink/Stitch (créé par l'option d'exportation zip)."
 
 #: inx/inkstitch_apply_threadlist.inx:95
 msgid "Import any other Threadlist file in txt format. Ink/Stitch will try to match the colors to the selected thread palette. The objects in this document will be colored accordingly if color matching has been successful."
-msgstr ""
+msgstr "Importez tout autre fichier de liste de fils au format txt. Ink/Stitch va essayer de faire correspondre les couleurs à la palette de fils sélectionnée. Les objets de ce document seront colorés en conséquence si la correspondance des couleurs a réussi."
 
 #: inx/inkstitch_apply_threadlist.inx:98
 msgid "Get more information on our website"
-msgstr ""
+msgstr "Plus d'informations sur notre site web"
 
 #: inx/inkstitch_apply_threadlist.inx:99
 msgid "https://inkstitch.org/docs/thread-color/#apply-threadlist"
-msgstr ""
+msgstr "https://inkstitch.org/fr/docs/thread-color/#appliquer-une-liste-de-fils"
 
 #: inx/inkstitch_apply_threadlist.inx:106 inx/inkstitch_generate_palette.inx:10
 #: inx/inkstitch_install.inx:10 inx/inkstitch_install_custom_palette.inx:13
@@ -3426,15 +3426,15 @@ msgstr "convertir le fichier BRO en chemins de points manuels Ink/Stitch"
 
 #: inx/inkstitch_input_COL.inx:3
 msgid "COL file input"
-msgstr ""
+msgstr "Importation d'un fichier COL"
 
 #: inx/inkstitch_input_COL.inx:8
 msgid "Ink/Stitch: Col Color Format (.col)"
-msgstr ""
+msgstr "Ink/Stitch: Format de couleur Col (.col)"
 
 #: inx/inkstitch_input_COL.inx:9
 msgid "convert COL file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "convertir un fichier COL en chemins de points manuels Ink/Stitch"
 
 #: inx/inkstitch_input_DAT.inx:3
 msgid "DAT file input"
@@ -3486,15 +3486,15 @@ msgstr "convertir un fichier DSZ en chemins de points manuels Ink/Stitch"
 
 #: inx/inkstitch_input_EDR.inx:3
 msgid "EDR file input"
-msgstr ""
+msgstr "Importation d'un fichier EDR"
 
 #: inx/inkstitch_input_EDR.inx:8
 msgid "Ink/Stitch: Edr Color Format (.edr)"
-msgstr ""
+msgstr "Ink/Stitch: Format couleur edr(.edr)"
 
 #: inx/inkstitch_input_EDR.inx:9
 msgid "convert EDR file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "convertir un fichier EDR en chemins de points manuels Ink/Stitch"
 
 #: inx/inkstitch_input_EMD.inx:3
 msgid "EMD file input"
@@ -3514,7 +3514,7 @@ msgstr "Importer un fichier EXP"
 
 #: inx/inkstitch_input_EXP.inx:8 inx/inkstitch_output_EXP.inx:8
 msgid "Ink/Stitch: Melco Expanded Embroidery Format (.exp)"
-msgstr ""
+msgstr "Ink/Stitch: Format de broderie élargi Melco (.exp)"
 
 #: inx/inkstitch_input_EXP.inx:9
 msgid "convert EXP file to Ink/Stitch manual-stitch paths"
@@ -3546,15 +3546,15 @@ msgstr "convertir un fichier FXY en chemins de points manuels Ink/Stitch"
 
 #: inx/inkstitch_input_GCODE.inx:3
 msgid "GCODE file input"
-msgstr ""
+msgstr "Importation d'un fichier GCODE"
 
 #: inx/inkstitch_input_GCODE.inx:8 inx/inkstitch_output_GCODE.inx:8
 msgid "Ink/Stitch: gcode Format, Text File (.gcode)"
-msgstr ""
+msgstr "Ink/Stitch: format gcode, fichier texte (.gcode)"
 
 #: inx/inkstitch_input_GCODE.inx:9
 msgid "convert GCODE file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "convertir un fichier GCODE en chemins de points manuels Ink/Stitch"
 
 #: inx/inkstitch_input_GT.inx:3
 msgid "GT file input"
@@ -3570,15 +3570,15 @@ msgstr "convertir un fichier GT en chemins de points manuels Ink/Stitch"
 
 #: inx/inkstitch_input_HUS.inx:3
 msgid "HUS file input"
-msgstr ""
+msgstr "Importation d'un fichier HUS"
 
 #: inx/inkstitch_input_HUS.inx:8
 msgid "Ink/Stitch: Husqvarna Embroidery Format (.hus)"
-msgstr ""
+msgstr "Ink/Stitch : Format de broderie Husqvarna (.hus)"
 
 #: inx/inkstitch_input_HUS.inx:9
 msgid "convert HUS file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "convertir un fichier HUS en chemins de points manuels Ink/Stitch"
 
 #: inx/inkstitch_input_INB.inx:3
 msgid "INB file input"
@@ -3594,15 +3594,15 @@ msgstr "convertir un fichier INB en chemins de points manuels Ink/Stitch"
 
 #: inx/inkstitch_input_INF.inx:3
 msgid "INF file input"
-msgstr ""
+msgstr "Importation d'un fichier INF"
 
 #: inx/inkstitch_input_INF.inx:8
 msgid "Ink/Stitch: Inf Color Format (.inf)"
-msgstr ""
+msgstr "Ink/Stitch: Format de couleur Inf (.inf)"
 
 #: inx/inkstitch_input_INF.inx:9
 msgid "convert INF file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "convertir un fichier INF en chemins de points manuels Ink/Stitch"
 
 #: inx/inkstitch_input_JEF.inx:3
 msgid "JEF file input"
@@ -3774,15 +3774,15 @@ msgstr "convertir un fichier PHC en chemins de points manuels Ink/Stitch"
 
 #: inx/inkstitch_input_PMV.inx:3
 msgid "PMV file input"
-msgstr ""
+msgstr "Importation d'un fichier PMV"
 
 #: inx/inkstitch_input_PMV.inx:8
 msgid "Ink/Stitch: Brother Stitch Format (.pmv)"
-msgstr ""
+msgstr "Ink/Stitch: Format de broderie Brother (.pmv)"
 
 #: inx/inkstitch_input_PMV.inx:9
 msgid "convert PMV file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "convertir un fichier PMV en chemins de points manuels Ink/Stitch"
 
 #: inx/inkstitch_input_SEW.inx:3
 msgid "SEW file input"
@@ -3810,15 +3810,15 @@ msgstr "convertir un fichier SHW en chemins de points manuels Ink/Stitch"
 
 #: inx/inkstitch_input_SPX.inx:3
 msgid "SPX file input"
-msgstr ""
+msgstr "Importation d'un fichier SPX"
 
 #: inx/inkstitch_input_SPX.inx:8
 msgid "Ink/Stitch: Pfaff Embroidery Format (.spx)"
-msgstr ""
+msgstr "Ink/Stitch : Format de broderie Pfaff (.spx)"
 
 #: inx/inkstitch_input_SPX.inx:9
 msgid "convert SPX file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "convertir un fichier SPX en chemins de points manuels Ink/Stitch"
 
 #: inx/inkstitch_input_STC.inx:3
 msgid "STC file input"
@@ -3906,15 +3906,15 @@ msgstr "convertir un fichier XXX en chemins de points manuels Ink/Stitch"
 
 #: inx/inkstitch_input_ZHS.inx:3
 msgid "ZHS file input"
-msgstr ""
+msgstr "Importation d'un fichier ZHS"
 
 #: inx/inkstitch_input_ZHS.inx:8
 msgid "Ink/Stitch: Zeng Hsing Embroidery Format (.zhs)"
-msgstr ""
+msgstr "Ink/Stitch : Format de broderie Zeng Hsing (.zhs)"
 
 #: inx/inkstitch_input_ZHS.inx:9
 msgid "convert ZHS file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "convertir un fichier ZHS en chemins de points manuels Ink/Stitch"
 
 #: inx/inkstitch_input_ZXY.inx:3
 msgid "ZXY file input"
@@ -4089,15 +4089,15 @@ msgstr "Afficher / masquer les commandes des objets"
 
 #: inx/inkstitch_output_COL.inx:3
 msgid "COL file output"
-msgstr ""
+msgstr "Sortie en fichier COL"
 
 #: inx/inkstitch_output_COL.inx:8
 msgid "Ink/Stitch: Col Color Format [COLOR] (.col)"
-msgstr ""
+msgstr "Ink/Stitch: Format de couleur Col [COLOR] (.col)"
 
 #: inx/inkstitch_output_COL.inx:9
 msgid "Save design in COL format using Ink/Stitch"
-msgstr ""
+msgstr "Enregistrez le dessin au format COL à l'aide d'Ink/Stitch"
 
 #: inx/inkstitch_output_CSV.inx:3
 msgid "CSV file output"
@@ -4121,15 +4121,15 @@ msgstr "Enregistrez le dessin au format DST en utilisant Ink/Stitch"
 
 #: inx/inkstitch_output_EDR.inx:3
 msgid "EDR file output"
-msgstr ""
+msgstr "Sortie en fichier EDR"
 
 #: inx/inkstitch_output_EDR.inx:8
 msgid "Ink/Stitch: Edr Color Format [COLOR] (.edr)"
-msgstr ""
+msgstr "Ink/Stitch: Format couleur Edr [COLOR] (.edr)"
 
 #: inx/inkstitch_output_EDR.inx:9
 msgid "Save design in EDR format using Ink/Stitch"
-msgstr ""
+msgstr "Enregistrez le dessin au format EDR à l'aide d'Ink/Stitch"
 
 #: inx/inkstitch_output_EXP.inx:3
 msgid "EXP file output"
@@ -4141,11 +4141,11 @@ msgstr "Enregistrez le dessin au format EXP en utilisant Ink/Stitch"
 
 #: inx/inkstitch_output_GCODE.inx:3
 msgid "GCODE file output"
-msgstr ""
+msgstr "Sortie en fichier GCODE"
 
 #: inx/inkstitch_output_GCODE.inx:9
 msgid "Save design in GCODE format using Ink/Stitch"
-msgstr ""
+msgstr "Enregistrez le dessin au format GCODE à l'aide d'Ink/Stitch"
 
 #: inx/inkstitch_output_GCODE.inx:17
 msgid "Coordinate Settings"
@@ -4265,15 +4265,15 @@ msgstr "vitesse de déplacement (en mm/min, mettre à -1 pour omettre)"
 
 #: inx/inkstitch_output_INF.inx:3
 msgid "INF file output"
-msgstr ""
+msgstr "Sortie en fichier INF"
 
 #: inx/inkstitch_output_INF.inx:8
 msgid "Ink/Stitch: Inf Color Format [COLOR] (.inf)"
-msgstr ""
+msgstr "Ink/Stitch: Format de couleur Inf [COLOR] (.inf)"
 
 #: inx/inkstitch_output_INF.inx:9
 msgid "Save design in INF format using Ink/Stitch"
-msgstr ""
+msgstr "Enregistrez le dessin au format INF à l'aide d'Ink/Stitch"
 
 #: inx/inkstitch_output_JEF.inx:3
 msgid "JEF file output"
@@ -4285,15 +4285,15 @@ msgstr "Enregistrez le dessin au format JEF à l'aide d'Ink/Stitch"
 
 #: inx/inkstitch_output_JSON.inx:3
 msgid "JSON file output"
-msgstr ""
+msgstr "Sortie en fichier JSON"
 
 #: inx/inkstitch_output_JSON.inx:8
 msgid "Ink/Stitch: Json Export [DEBUG] (.json)"
-msgstr ""
+msgstr "Ink/Stitch: Json Export [DEBUG] (.json)"
 
 #: inx/inkstitch_output_JSON.inx:9
 msgid "Save design in JSON format using Ink/Stitch"
-msgstr ""
+msgstr "Enregistrez le dessin au format JSON à l'aide d'Ink/Stitch"
 
 #: inx/inkstitch_output_PEC.inx:3
 msgid "PEC file output"
@@ -4317,7 +4317,7 @@ msgstr "Sortie en fichier PMV"
 
 #: inx/inkstitch_output_PMV.inx:8
 msgid "Ink/Stitch: Brother Stitch Format [STITCH] (.pmv)"
-msgstr ""
+msgstr "Ink/Stitch: Format de broderie Brother [STITCH] (.pmv)"
 
 #: inx/inkstitch_output_PMV.inx:9
 msgid "Save design in PMV format using Ink/Stitch"
@@ -4325,15 +4325,15 @@ msgstr "Enregistrez le dessin au format PMV à l'aide d'Ink/Stitch"
 
 #: inx/inkstitch_output_PNG.inx:3
 msgid "PNG file output"
-msgstr ""
+msgstr "Sortie en fichier PNG"
 
 #: inx/inkstitch_output_PNG.inx:8
 msgid "Ink/Stitch: PNG Format, Portable Network Graphics [IMAGE] (.png)"
-msgstr ""
+msgstr "Ink/Stitch: Format PNG, Portable Network Graphics [IMAGE] (.png)"
 
 #: inx/inkstitch_output_PNG.inx:9
 msgid "Save design in PNG format using Ink/Stitch"
-msgstr ""
+msgstr "Enregistrez le dessin au format PNG à l'aide d'Ink/Stitch"
 
 #: inx/inkstitch_output_SVG.inx:3
 msgid "SVG file output"
@@ -4365,11 +4365,11 @@ msgstr "Enregistrez le dessin au format VP3 à l'aide d'Ink/Stitch"
 
 #: inx/inkstitch_output_XXX.inx:3
 msgid "XXX file output"
-msgstr ""
+msgstr "Sortie en fichier XXX"
 
 #: inx/inkstitch_output_XXX.inx:9
 msgid "Save design in XXX format using Ink/Stitch"
-msgstr ""
+msgstr "Enregistrez le dessin au format XXX à l'aide d'Ink/Stitch"
 
 #: inx/inkstitch_palette_split_text.inx:3
 msgid "Split text"
@@ -4481,7 +4481,7 @@ msgstr "Créer un ZIP avec des formats multiples de fichiers de broderie à l’
 
 #: inx/inkstitch_zip.inx:26
 msgid ".TXT: Threadlist [COLOR]"
-msgstr ""
+msgstr ".TXT : Palette de fils [COLOR]"
 
 #: inx/inkstitch_zip.inx:27
 msgid ".SVG: Scalable Vector Graphic"
