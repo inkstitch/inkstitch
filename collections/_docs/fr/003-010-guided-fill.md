@@ -48,7 +48,7 @@ Lisez les informations détaillées dans la section  [paramètres du remplissage
 
 ## Sous couche
 
-La sous-couche du remplissage guidé  n'utilise pas la ligne-guide, mais tout comme pour le remplissage standard, il utilise l'angle de remplissage qui peut être défini dans les 
+La sous-couche du remplissage guidé  n'utilise pas la ligne-guide, mais tout comme pour le remplissage standard, elle utilise l'angle de remplissage qui peut être défini dans les 
 [paramètres](/docs/params/#fill-underlay) de la sous-couche.
 ##  Exemple de fichiers qui utilisent le remplissage guidé
 {% include tutorials/tutorial_list key="stitch-type" value="Guided Fill" %}
