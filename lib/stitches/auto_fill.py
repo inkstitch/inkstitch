@@ -59,13 +59,13 @@ def auto_fill(shape,
               starting_point,
               ending_point=None,
               underpath=True):
-    try:
-        rows = intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing)
-        segments = [segment for row in rows for segment in row]
-        fill_stitch_graph = build_fill_stitch_graph(shape, segments, starting_point, ending_point)
-    except ValueError:
-        # Small shapes will cause the graph to fail - min() arg is an empty sequence through insert node
+    rows = intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing)
+    if not rows:
+        # Small shapes may not intersect with the grating at all.
         return fallback(shape, running_stitch_length, running_stitch_tolerance)
+
+    segments = [segment for row in rows for segment in row]
+    fill_stitch_graph = build_fill_stitch_graph(shape, segments, starting_point, ending_point)
 
     if not graph_is_valid(fill_stitch_graph, shape, max_stitch_length):
         return fallback(shape, running_stitch_length, running_stitch_tolerance)
