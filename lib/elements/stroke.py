@@ -150,7 +150,7 @@ class Stroke(EmbroideryElement):
         return max(self.get_int_param("line_count", 10), 1)
 
     def get_line_count(self):
-        if self.is_closed:
+        if self.is_closed or self.join_style == 1:
             return self.line_count + 1
         return self.line_count
 

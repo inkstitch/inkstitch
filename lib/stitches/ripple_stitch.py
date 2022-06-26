@@ -28,9 +28,11 @@ def ripple_stitch(stroke):
         ripple_points.reverse()
 
     if stroke.grid_size != 0:
+        num_lines = stroke.line_count - stroke.skip_end
         if stroke.reverse:
             helper_lines = [helper_line[::-1] for helper_line in helper_lines]
-        else:
+            num_lines = stroke.skip_start
+        if num_lines % 2 != 0:
             helper_lines.reverse()
         ripple_points.extend(_do_grid(stroke, helper_lines))
 
@@ -80,7 +82,7 @@ def _get_satin_ripple_helper_lines(stroke):
     # use satin column points for satin like build ripple stitches
     rail_points = SatinColumn(stroke.node).plot_points_on_rails(length, 0)
 
-    steps = _get_steps(stroke.line_count, exponent=stroke.exponent, flip=stroke.flip_exponent)
+    steps = _get_steps(stroke.get_line_count(), exponent=stroke.exponent, flip=stroke.flip_exponent)
 
     helper_lines = []
     for point0, point1 in zip(*rail_points):
