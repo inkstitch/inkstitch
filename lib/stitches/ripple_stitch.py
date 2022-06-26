@@ -28,12 +28,6 @@ def ripple_stitch(stroke):
         ripple_points.reverse()
 
     if stroke.grid_size != 0:
-        num_lines = stroke.line_count - stroke.skip_end
-        if stroke.reverse:
-            helper_lines = [helper_line[::-1] for helper_line in helper_lines]
-            num_lines = stroke.skip_start
-        if (num_lines % 2 != 0 and not stroke.is_closed) or (stroke.is_closed and not stroke.reverse):
-            helper_lines.reverse()
         ripple_points.extend(_do_grid(stroke, helper_lines))
 
     stitches = running_stitch(ripple_points, stroke.running_stitch_length, stroke.running_stitch_tolerance)
@@ -147,7 +141,19 @@ def _target_point_helper_lines(stroke, outline):
     return helper_lines
 
 
+def _adjust_helper_lines_for_grid(stroke, helper_lines):
+    num_lines = stroke.line_count - stroke.skip_end
+    if stroke.reverse:
+        helper_lines = [helper_line[::-1] for helper_line in helper_lines]
+        num_lines = stroke.skip_start
+    if (num_lines % 2 != 0 and not stroke.is_closed) or (stroke.is_closed and not stroke.reverse):
+        helper_lines.reverse()
+
+    return helper_lines
+
+
 def _do_grid(stroke, helper_lines):
+    helper_lines = _adjust_helper_lines_for_grid(stroke, helper_lines)
     start = stroke.get_skip_start()
     skip_end = stroke.get_skip_end()
     if stroke.reverse:
