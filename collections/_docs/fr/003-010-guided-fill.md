@@ -2,7 +2,7 @@
 title: "Remplissage guidé"
 permalink: /fr/docs/stitches/guided-fill/
 excerpt: ""
-last_modified_at: 2022-05-25
+last_modified_at: 2022-06-27
 toc: true
 ---
 {% include upcoming_release.html %}
@@ -41,11 +41,11 @@ L'utilisation de ligne guide très sinueuse ne donne pas toujours le résultat a
 Deux stratégies sont possible pour le remplissage guidé.
 
 ### Copier
-La stratégie "Copier", remplit la forme avec des copies non déformées de l'intersection de la ligne-guide et de la forme. Cela ne permettra pas toujours un remplissage complet de la forme.
+La stratégie "Copier", remplit la forme avec des copies non déformées de l'intersection de la ligne-guide et de la forme. Parfois, en particulier si la ligne guide a des angles aigus, le remplissage est très irrégulier.
 
 ### Décalage parallèle
 
-La stratégie "Décalage parallèle", remplit la forme avec des copies déformées de l'intersection de la ligne guide et de la forme, en s'assurant que chaque copie reste à distance constante de sa voisine. Cette stratégie peut introduire des angles.
+La stratégie "Décalage parallèle", remplit la forme avec des copies déformées de l'intersection de la ligne guide et de la forme, en s'assurant que chaque copie reste à distance constante de sa voisine. Cette stratégie peut introduire des angles même si la ligne guide n'en  contient pas.
 
 ## Définir le point de départ et d'arrivée
 Définir le point de départ et d'arrivée pour les remplissages avec les [commandes visuelles](/fr/docs/commands/).
