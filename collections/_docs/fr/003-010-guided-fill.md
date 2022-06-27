@@ -30,8 +30,12 @@ Il est possible d'avoir dans un même groupe plusieurs formes de remplissage et 
 
 ![Guided fill group](/assets/images/docs/guided-fill-group.svg)
 
-Si un groupe comporte plusieurs lignes-guides, une seule d'entre elle est effective, les autres sont ignorées.
+Si un groupe comporte plusieurs lignes-guides, une seule d'entre elle est effective, les autres sont ignorées. De même si la ligne-guide est un chemin composite, un seul des sous chemin est effectif. 
+Toutefois, il est possible d'utiliser une ligne guide qui traverse plusieurs fois la frontière de la forme pour simuler l'effet de plusieurs lignes-guides:
 
+![Guided fill group](/assets/images/docs/guided-fill-complex.svg)
+
+L'utilisation de ligne guide très sinueuse ne donne pas toujours le résultat auquel on s'attend, il convient de tester les deux stratégies de remplissage et des modifications de la ligne guide jusqu'a obtenir l'effet souhaité.
 
 ## Stratégies de remplissage
 Deux stratégies sont possible pour le remplissage guidé.
