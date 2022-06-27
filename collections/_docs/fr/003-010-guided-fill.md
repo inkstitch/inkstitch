@@ -12,7 +12,7 @@ toc: true
 
 
 ![Fill stitch detail](/assets/images/docs/guided-fill-detail.jpg)
-Tout comme le remplissage usuel, le remplissage guidé est composé de rangées décalées parallèles, mais au lieu de suivre des lignes droites,  les rangées peuvent être courbées par une ligne-guide.
+Tout comme le remplissage usuel, le remplissage guidé est composé de rangées décalées plus ou moins parallèles, mais au lieu de suivre des lignes droites,  les rangées peuvent être courbées par une ligne-guide. La ligne guide peut déborder de la forme, mais seule la partie qui intersecte la forme a de l'importance.
 
 ## Comment le créer
 
@@ -22,20 +22,26 @@ Tout comme le remplissage usuel, le remplissage guidé est composé de rangées 
     * Selectionnez ce trait
     * Lancez `Extensions > Ink/Stitch > Edition > Selection vers ligne-guide`
 * Sélectionnez les deux et groupez les ensemble (`Ctrl + G`).
-* Ouvrez le dialogue de paramètrage (`Extensions > Ink/Stitch > Paramètres`) et sélectionnez `Remplissage guidé` comme méthode de remplissage.
+* Ouvrez le dialogue de paramètrage (`Extensions > Ink/Stitch > Paramètres`) et sélectionnez `Remplissage guidé` comme méthode de remplissage
 
-Chaque groupe peut contenir plusieurs objets de remplissage, mais une seule ligne-guide qui est utilisée par toutes les formes pleines du groupe, 
-chaque forme utilisant la portion de la ligne-guide qui l'intersecte. Dans ce cas, une forme pleine qui n'intersecte pas la ligne guide ne sera pas réellement remplie. Le groupe peut aussi contenir des traits qui n'ont pas été transformés en ligne-guide et qui seront brodés normalement
 
-Si plusieurs lignes-guide sont présentes, une seule d'entre elles est prise en compte. Sur le canevas, un marqueur permet de distinguer les lignes-guide des éléments de broderie standard.
 
-### Plusieurs formes de remplissage dans un même groupe
+Il est possible d'avoir dans un même groupe plusieurs formes de remplissage et une seule ligne guide. Chaque forme de remplissage est guidée par la portion de la ligne guide qui l'intersecte. Si la ligne-guide n'intersecte pas une des formes du groupe, cette forme est remplie en remplissage normal.
 
-![Guided Fill Group](/assets/images/docs/guided-fill-group.png)
+![Guided fill group](/assets/images/docs/guided-fill-group.svg)
 
-### Une seule forme de remplissage dans le groupe
+Si un groupe comporte plusieurs lignes-guides, une seule d'entre elle est effective, les autres sont ignorées.
 
-![Guided Fill One in a Group](/assets/images/docs/fr/guided-fill-single-fr.png)
+
+## Stratégies de remplissage
+Deux stratégies sont possible pour le remplissage guidé.
+
+### Copier
+La stratégie "Copier", remplit la forme avec des copies non déformée d l'intersection de la ligne guide et de la forme. Cela ne permettra pas toujours un remplissage complet de la forme
+
+### Décalage parallèle
+
+La stratégie "Décalage parallèle", remplit la forme avec des copiesdéformée de l'intersection de la ligne guide et de la forme, en s'assurant que chaque copie reste à distance constante de sa voisine. Cette stratégie peut introduire des angles aigus.
 
 ## Définir le point de départ et d'arrivée
 Définir le point de départ et d'arrivée pour les remplissages automatiques avec les [commandes visuelles](/fr/docs/commands/).
