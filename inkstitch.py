@@ -2,7 +2,8 @@
 #
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
-
+import cProfile
+import pstats
 import logging
 import os
 import sys
@@ -50,6 +51,11 @@ my_args, remaining_args = parser.parse_known_args()
 if os.path.exists(os.path.join(os.path.dirname(os.path.realpath(__file__)), "DEBUG")):
     debug.enable()
 
+profiler = None
+if os.path.exists(os.path.join(os.path.dirname(os.path.realpath(__file__)), "PROFILE")):
+    profiler = cProfile.Profile()
+    profiler.enable()
+
 extension_name = my_args.extension
 
 # example: foo_bar_baz -> FooBarBaz
@@ -58,8 +64,19 @@ extension_class_name = extension_name.title().replace("_", "")
 extension_class = getattr(extensions, extension_class_name)
 extension = extension_class()
 
-if hasattr(sys, 'gettrace') and sys.gettrace():
+if (hasattr(sys, 'gettrace') and sys.gettrace()) or profiler is not None:
     extension.run(args=remaining_args)
+    if profiler:
+        path = os.path.join(os.path.dirname(os.path.realpath(__file__)), "profile_stats")
+        profiler.disable()
+        profiler.dump_stats(path + ".prof")
+
+        with open(path, 'w') as stats_file:
+            stats = pstats.Stats(profiler, stream=stats_file)
+            stats.sort_stats(pstats.SortKey.CUMULATIVE)
+            stats.print_stats()
+
+        print(f"profiling stats written to {path} and {path}.prof", file=sys.stderr)
 else:
     save_stderr()
     exception = None
