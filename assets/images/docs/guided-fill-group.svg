@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="210mm"
-   height="297mm"
-   viewBox="0 0 210 297"
+   width="193.90829mm"
+   height="101.40815mm"
+   viewBox="0 0 193.90829 101.40815"
    version="1.1"
    id="svg10223"
    sodipodi:docname="guided-fill-group.svg"
@@ -31,14 +31,14 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="0.4204826"
-     inkscape:cx="361.48939"
-     inkscape:cy="460.18551"
+     inkscape:cx="328.19431"
+     inkscape:cy="400.73001"
      inkscape:window-width="1440"
      inkscape:window-height="725"
      inkscape:window-x="1"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
-     inkscape:current-layer="__inkstitch_stitch_plan__" />
+     inkscape:current-layer="layer1" />
   <defs
      id="defs10220">
     <marker
@@ -127,10 +127,11 @@
      inkscape:label="Calque 1"
      inkscape:groupmode="layer"
      id="layer1"
-     style="opacity:0.4;display:inline">
+     style="display:inline;opacity:0.4"
+     transform="translate(-8.7083599,-15.481844)">
     <g
        id="g3351-4"
-       style="display:inline;opacity:0.4"
+       style="display:inline;opacity:1"
        transform="matrix(0.419514,0,0,0.419514,12.283388,9.4824118)">
       <ellipse
          style="fill:#ed171f;stroke:none;stroke-width:4;stroke-linecap:square;stroke-dasharray:0.79375, 0.79375"
@@ -207,7 +208,7 @@
          inkscape:label="guide" />
     </g>
     <path
-       style="display:inline;opacity:0.4;fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker18903)"
+       style="display:none;opacity:0.4;fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker18903)"
        d="M 98.623257,67.181259 121.7393,66.926419"
        id="path21930"
        sodipodi:nodetypes="cc" />
@@ -216,7 +217,7 @@
      id="__inkstitch_stitch_plan__"
      inkscape:label="Plan de broderie"
      inkscape:groupmode="layer"
-     transform="translate(135.91525,6.2923729)">
+     transform="translate(127.20689,-9.1894713)">
     <g
        id="__color_block_6__"
        inkscape:label="color block 7"
