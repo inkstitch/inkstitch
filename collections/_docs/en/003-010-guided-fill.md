@@ -43,7 +43,7 @@ Two filling strategies are allowed for guided fill:
 Copy (the default) will fill the shape with shifted copies of the line. Sometimes, in particular is the guide line has sharp angles, it may result in a very irregular covering.
 
 
-### Décalage parallèle
+### Parallel offset
 
 Parallel offset will ensure that each line is always a consistent distance from its neighbor. Sharp corners may be introduced.
 
