@@ -27,7 +27,7 @@ Définir le point de départ et d'arrivée pour les remplissages automatiques av
 
 Lancez `Extensions > Ink/Stitch  > Paramètres`. Choisir "Remplissage selon le contour" dans la méthode de remplissage et ajustez les réglages selon vos besoins
 
-Lisez les informations détaillées dans la section  [Paramètres de remplissage selon le contour](/fr/docs/params/#param%C3%A8tres-de-remplissage-selon-le-contour).
+Lisez les informations détaillées dans la section  [Paramètres de remplissage selon le contour](/fr/docs/params/#paramètres-de-remplissage-selon-le-contour).
 
 ## Sous-couche
 
