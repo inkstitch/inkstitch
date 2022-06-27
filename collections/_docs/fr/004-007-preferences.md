@@ -2,7 +2,7 @@
 title: "Préférences"
 permalink: /fr/docs/preferences/
 excerpt: ""
-last_modified_at: 2022-01-15
+last_modified_at: 2022-06-27
 toc: false
 ---
 ## Réglages de sortie
