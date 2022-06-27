@@ -37,20 +37,20 @@ Si un groupe comporte plusieurs lignes-guides, une seule d'entre elle est effect
 Deux stratégies sont possible pour le remplissage guidé.
 
 ### Copier
-La stratégie "Copier", remplit la forme avec des copies non déformée d l'intersection de la ligne guide et de la forme. Cela ne permettra pas toujours un remplissage complet de la forme
+La stratégie "Copier", remplit la forme avec des copies non déformées de l'intersection de la ligne-guide et de la forme. Cela ne permettra pas toujours un remplissage complet de la forme.
 
 ### Décalage parallèle
 
-La stratégie "Décalage parallèle", remplit la forme avec des copiesdéformée de l'intersection de la ligne guide et de la forme, en s'assurant que chaque copie reste à distance constante de sa voisine. Cette stratégie peut introduire des angles aigus.
+La stratégie "Décalage parallèle", remplit la forme avec des copies déformées de l'intersection de la ligne guide et de la forme, en s'assurant que chaque copie reste à distance constante de sa voisine. Cette stratégie peut introduire des angles.
 
 ## Définir le point de départ et d'arrivée
-Définir le point de départ et d'arrivée pour les remplissages automatiques avec les [commandes visuelles](/fr/docs/commands/).
+Définir le point de départ et d'arrivée pour les remplissages avec les [commandes visuelles](/fr/docs/commands/).
 
 ## Paramètres
 
 Lancez `Extensions > Ink/Stitch  > Paramètres`. Choisir "Remplissage guidé" dans la méthode de remplissage et ajustez les réglages selon vos besoins
 
-Lisez les informations détaillées dans la section  [paramètres du remplissage guidé](/fr/docs/params/).
+Lisez les informations détaillées dans la section  [paramètres du remplissage guidé](/fr/docs/params#paramètres-de-remplissage-guidé/).
 
 ## Sous couche
 
