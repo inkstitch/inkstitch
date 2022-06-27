@@ -2,7 +2,7 @@
 title: "Guided Fill"
 permalink: /docs/stitches/guided-fill/
 excerpt: ""
-last_modified_at: 2022-05-24
+last_modified_at: 2022-06-26
 toc: true
 ---
 {% include upcoming_release.html %}
@@ -23,16 +23,29 @@ Generate curved fill with guide lines.
 * Select both and group them together (`Ctrl + G`).
 * Open the params dialog (`Extensions > Ink/Stitch > Params`) and select `Guided fill` as the fill method.
 
-Each group is allowed to contain more than one fill object, but only one guide line is effective and will be used to guide all the shapes of the group, guiding each shape with the intersection of the shape and the guide line. In that case, a shape that does not intersect the guide line will not be filled. The group is also allowed to contain regular stroke objects. On the canvas, a   marker allows to distinguish a guide line from a regular stroke.
+Each group is allowed to contain more than one fill object, but only one guide line is effective and will be used to guide all the shapes of the group, guiding each shape with the intersection of the shape and the guide line. In that case, a shape that does not intersect the guide line will be filled with a regular auto fill. The group is also allowed to contain regular stroke objects. On the canvas, a  marker allows to distinguish a guide line from a regular stroke.
 
-Additional guide lines will be ignored.
-  
 
-### Several fill shapes in a group 
-![Guided Fill Group](/assets/images/docs/guided-fill-group.png)
+![Guided Fill Group](/assets/images/docs/guided-fill-group.svg)
 
-### A single fill shape  in a group
-![Guided Fill One in a Group](/assets/images/docs/en/guided-fill-single-en.png)
+If the group contains several guide lines, only one is effective. If the guide line is a composite path, only one  subpath is used as a guide line. However it is possible to use sinuous guide line , that may even cross the shape border many times.
+
+
+
+![Guided fill group](/assets/images/docs/guided-fill-complex.svg)
+
+
+
+## Filling Strategies
+Two filling strategies are allowed for guided fill:
+
+### Copy
+Copy (the default) will fill the shape with shifted copies of the line. Sometimes, in particular is the guide line has sharp angles, it may result in a very irregular covering.
+
+
+### Décalage parallèle
+
+Parallel offset will ensure that each line is always a consistent distance from its neighbor. Sharp corners may be introduced.
 
 ## Set Start and End Point
 
