@@ -8,7 +8,6 @@ image: "/assets/images/tutorials/samples/paon.svg"
 tutorial-type:
   - Sample File
 stitch-type:
-  - "Guided Fill"
   - "Ripple Stitch"
 techniques:
 field-of-use:
@@ -16,7 +15,7 @@ user-level:
 ---
 ## Exemple de broderie ondulée et de  remplissage guidé
 
-Le corps de l'oiseau est en remplissage guidé, les plumes en broderie ondulée
+Le corps de l'oiseau est en remplissage, les plumes en broderie ondulée
 
 ![Exemple brodé](/assets/images/tutorials/tutorial-preview-images/paons.jpg)
 
