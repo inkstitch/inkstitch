@@ -32,14 +32,14 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="0.81537165"
-     inkscape:cx="233.02257"
-     inkscape:cy="337.88273"
+     inkscape:cx="220.14501"
+     inkscape:cy="411.46881"
      inkscape:window-width="1438"
      inkscape:window-height="787"
      inkscape:window-x="2"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
-     inkscape:current-layer="__inkstitch_stitch_plan__" />
+     inkscape:current-layer="g14185" />
   <defs
      id="defs3541">
     <marker
@@ -480,7 +480,8 @@
         <g
            id="command_group22"
            inkscape:label="Commande Ink/Stitch: Trim thread after sewing this object"
-           transform="matrix(0.463162 0 0 0.463162 -22.9196 -165.125)">
+           transform="matrix(0.463162,0,0,0.463162,-22.9196,-165.125)"
+           style="display:none">
           <path
              id="command_connector22"
              d="m 92.159166,484.33498 7.686061,62.30191"
@@ -495,8 +496,8 @@
              xlink:href="#inkstitch_trim"
              height="100%"
              width="100%"
-             x="92.15658437556455"
-             y="484.29914216576077"
+             x="92.156586"
+             y="484.29913"
              inkscape:label="marqueur de commande" />
         </g>
         <path
@@ -1348,7 +1349,8 @@
      transform="translate(30.000379)">
     <g
        id="__color_block_0__"
-       inkscape:label="color block 1">
+       inkscape:label="color block 1"
+       style="display:none">
       <path
          id="object9749"
          style="fill:none;stroke:#ed161e;stroke-width:0.4;marker-start:url(#inkstitch-needle-point);marker-mid:url(#inkstitch-needle-point);marker-end:url(#inkstitch-needle-point)"
@@ -1358,7 +1360,8 @@
       <g
          id="command_group4"
          inkscape:label="Ink/Stitch Command: Trim thread after sewing this object"
-         transform="scale(0.264583)">
+         transform="scale(0.264583)"
+         style="display:none">
         <path
            id="command_connector4"
            d="m 111.87447,15.924152 3.87227,62.28793"
@@ -1386,7 +1389,8 @@
       <g
          id="command_group6"
          inkscape:label="Ink/Stitch Command: Trim thread after sewing this object"
-         transform="scale(0.264583)">
+         transform="scale(0.264583)"
+         style="display:none">
         <path
            id="command_connector6"
            d="m 134.18041,102.31997 7.40938,34.57802"
@@ -1424,7 +1428,8 @@
       <g
          id="command_group7"
          inkscape:label="Ink/Stitch Command: Trim thread after sewing this object"
-         transform="scale(0.264583)">
+         transform="scale(0.264583)"
+         style="display:none">
         <path
            id="command_connector7"
            d="m 127.73591,336.4583 14.95062,54.93368"
@@ -1452,7 +1457,8 @@
       <g
          id="command_group8"
          inkscape:label="Ink/Stitch Command: Trim thread after sewing this object"
-         transform="scale(0.264583)">
+         transform="scale(0.264583)"
+         style="display:none">
         <path
            id="command_connector8"
            d="m 122.09734,256.09148 13.77246,37.19015"
@@ -1480,7 +1486,8 @@
       <g
          id="command_group9"
          inkscape:label="Ink/Stitch Command: Trim thread after sewing this object"
-         transform="scale(0.264583)">
+         transform="scale(0.264583)"
+         style="display:none">
         <path
            id="command_connector9"
            d="m 131.97342,416.64678 6.32893,31.01258"
@@ -1518,7 +1525,8 @@
       <g
          id="command_group17"
          inkscape:label="Ink/Stitch Command: Trim thread after sewing this object"
-         transform="scale(0.264583)">
+         transform="scale(0.264583)"
+         style="display:none">
         <path
            id="command_connector17"
            d="m 142.40404,461.22561 6.12555,41.60928"
@@ -1546,7 +1554,8 @@
       <g
          id="command_group18"
          inkscape:label="Ink/Stitch Command: Trim thread after sewing this object"
-         transform="scale(0.264583)">
+         transform="scale(0.264583)"
+         style="display:none">
         <path
            id="command_connector18"
            d="m 457.23677,28.082401 7.7074,29.676358"
@@ -1574,7 +1583,8 @@
       <g
          id="command_group19"
          inkscape:label="Ink/Stitch Command: Trim thread after sewing this object"
-         transform="scale(0.264583)">
+         transform="scale(0.264583)"
+         style="display:none">
         <path
            id="command_connector19"
            d="m 479.5266,103.69954 14.37583,33.60206"
@@ -1602,7 +1612,8 @@
       <g
          id="command_group20"
          inkscape:label="Ink/Stitch Command: Trim thread after sewing this object"
-         transform="scale(0.264583)">
+         transform="scale(0.264583)"
+         style="display:none">
         <path
            id="command_connector20"
            d="M 449.10903,170.53545 451.33,201.95268"
@@ -1630,7 +1641,8 @@
       <g
          id="command_group21"
          inkscape:label="Ink/Stitch Command: Trim thread after sewing this object"
-         transform="scale(0.264583)">
+         transform="scale(0.264583)"
+         style="display:none">
         <path
            id="command_connector21"
            d="m 446.58788,251.05956 7.07372,37.308"
@@ -1658,7 +1670,8 @@
       <g
          id="command_group23"
          inkscape:label="Ink/Stitch Command: Trim thread after sewing this object"
-         transform="scale(0.264583)">
+         transform="scale(0.264583)"
+         style="display:none">
         <path
            id="command_connector23"
            d="m 456.16991,329.81701 8.04358,34.28006"
