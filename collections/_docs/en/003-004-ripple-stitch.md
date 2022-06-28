@@ -1,5 +1,5 @@
 ---
-title: "Ripple stitch"
+title: "Ripple Stitch"
 permalink: /docs/stitches/ripple/
 excerpt: ""
 last_modified_at: 2022-06-11
