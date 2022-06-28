@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2022-06-25 02:44+0000\n"
-"PO-Revision-Date: 2022-06-26 02:40\n"
+"PO-Revision-Date: 2022-06-28 02:32\n"
 "Last-Translator: \n"
 "Language-Team: Swedish\n"
 "MIME-Version: 1.0\n"
@@ -34,7 +34,7 @@ msgstr ""
 #. name of font in fonts/Brockscript
 #: inkstitch-fonts-metadata.py:2
 msgid "Brock Script"
-msgstr ""
+msgstr "Brock Script"
 
 #. description of font in fonts/Brockscript
 #: inkstitch-fonts-metadata.py:4
@@ -44,7 +44,7 @@ msgstr ""
 #. name of font in fonts/abecedaire
 #: inkstitch-fonts-metadata.py:6
 msgid "Abécédaire AGS"
-msgstr ""
+msgstr "Abécédaire AGS"
 
 #. description of font in fonts/abecedaire
 #: inkstitch-fonts-metadata.py:8
@@ -54,7 +54,7 @@ msgstr ""
 #. name of font in fonts/amitaclo
 #: inkstitch-fonts-metadata.py:10
 msgid "Amitaclo"
-msgstr ""
+msgstr "Amitaclo"
 
 #. description of font in fonts/amitaclo
 #: inkstitch-fonts-metadata.py:12
@@ -65,7 +65,7 @@ msgstr ""
 #. name of font in fonts/amitaclo_small
 #: inkstitch-fonts-metadata.py:14
 msgid "Amitaclo small"
-msgstr ""
+msgstr "Amitaclo small"
 
 #. description of font in fonts/amitaclo_small
 #: inkstitch-fonts-metadata.py:16
@@ -75,7 +75,7 @@ msgstr ""
 #. name of font in fonts/apex_lake
 #: inkstitch-fonts-metadata.py:18
 msgid "Apex Lake"
-msgstr ""
+msgstr "Apex Lake"
 
 #. description of font in fonts/apex_lake
 #: inkstitch-fonts-metadata.py:20
@@ -85,7 +85,7 @@ msgstr ""
 #. name of font in fonts/aventurina
 #: inkstitch-fonts-metadata.py:22
 msgid "Aventurina"
-msgstr ""
+msgstr "Aventurina"
 
 #. description of font in fonts/aventurina
 #: inkstitch-fonts-metadata.py:24
@@ -95,7 +95,7 @@ msgstr ""
 #. name of font in fonts/baumans_FI
 #: inkstitch-fonts-metadata.py:26
 msgid "Baumans FI"
-msgstr ""
+msgstr "Baumans FI"
 
 #. description of font in fonts/baumans_FI
 #: inkstitch-fonts-metadata.py:28
@@ -106,7 +106,7 @@ msgstr ""
 #. name of font in fonts/cherryforinkstitch
 #: inkstitch-fonts-metadata.py:30
 msgid "Cherry for inkstitch"
-msgstr ""
+msgstr "Cherry for inkstitch"
 
 #. description of font in fonts/cherryforinkstitch
 #: inkstitch-fonts-metadata.py:32
@@ -116,7 +116,7 @@ msgstr ""
 #. name of font in fonts/cherryforkaalleen
 #: inkstitch-fonts-metadata.py:34
 msgid "Cherry for Kaalleen"
-msgstr ""
+msgstr "Cherry for Kaalleen"
 
 #. description of font in fonts/cherryforkaalleen
 #: inkstitch-fonts-metadata.py:36
@@ -126,7 +126,7 @@ msgstr ""
 #. name of font in fonts/chopin
 #: inkstitch-fonts-metadata.py:38
 msgid "Chopin Script"
-msgstr ""
+msgstr "Chopin Script"
 
 #. description of font in fonts/chopin
 #: inkstitch-fonts-metadata.py:40
@@ -137,7 +137,7 @@ msgstr ""
 #. name of font in fonts/coronaviral
 #: inkstitch-fonts-metadata.py:42
 msgid "Coronaviral"
-msgstr ""
+msgstr "Coronaviral"
 
 #. description of font in fonts/coronaviral
 #: inkstitch-fonts-metadata.py:44
@@ -147,7 +147,7 @@ msgstr ""
 #. name of font in fonts/dejavufont
 #: inkstitch-fonts-metadata.py:46
 msgid "Dejavu Serif"
-msgstr ""
+msgstr "Dejavu Serif"
 
 #. description of font in fonts/dejavufont
 #: inkstitch-fonts-metadata.py:48
@@ -158,7 +158,7 @@ msgstr ""
 #. name of font in fonts/digory_doodles_bean
 #: inkstitch-fonts-metadata.py:50
 msgid "Digory Doodles Bean"
-msgstr ""
+msgstr "Digory Doodles Bean"
 
 #. description of font in fonts/digory_doodles_bean
 #: inkstitch-fonts-metadata.py:52
@@ -168,7 +168,7 @@ msgstr ""
 #. name of font in fonts/dinomouse72
 #: inkstitch-fonts-metadata.py:54
 msgid "DinoMouse72"
-msgstr ""
+msgstr "DinoMouse72"
 
 #. description of font in fonts/dinomouse72
 #: inkstitch-fonts-metadata.py:56
@@ -178,7 +178,7 @@ msgstr ""
 #. name of font in fonts/emilio_20
 #: inkstitch-fonts-metadata.py:58
 msgid "Emilio 20"
-msgstr ""
+msgstr "Emilio 20"
 
 #. description of font in fonts/emilio_20
 #: inkstitch-fonts-metadata.py:60
@@ -189,7 +189,7 @@ msgstr ""
 #. name of font in fonts/emilio_20_tricolore
 #: inkstitch-fonts-metadata.py:62
 msgid "EMILIO 20 TRICOLORE"
-msgstr ""
+msgstr "Emilio 20 Tricolore"
 
 #. description of font in fonts/emilio_20_tricolore
 #: inkstitch-fonts-metadata.py:64
@@ -199,7 +199,7 @@ msgstr ""
 #. name of font in fonts/espresso_KOR
 #: inkstitch-fonts-metadata.py:66
 msgid "Espresso KOR"
-msgstr ""
+msgstr "Espresso KOR"
 
 #. description of font in fonts/espresso_KOR
 #: inkstitch-fonts-metadata.py:68
@@ -209,7 +209,7 @@ msgstr ""
 #. name of font in fonts/espresso_tiny
 #: inkstitch-fonts-metadata.py:70
 msgid "Espresso tiny"
-msgstr ""
+msgstr "Espresso tiny"
 
 #. description of font in fonts/espresso_tiny
 #: inkstitch-fonts-metadata.py:72
@@ -219,7 +219,7 @@ msgstr ""
 #. name of font in fonts/excalibur_KOR
 #: inkstitch-fonts-metadata.py:74
 msgid "Excalibur KOR"
-msgstr ""
+msgstr "Excalibur KOR"
 
 #. description of font in fonts/excalibur_KOR
 #: inkstitch-fonts-metadata.py:76
@@ -229,7 +229,7 @@ msgstr ""
 #. name of font in fonts/fold_inkstitch
 #: inkstitch-fonts-metadata.py:78
 msgid "Fold Ink/Stitch"
-msgstr ""
+msgstr "Fold Ink/Stitch"
 
 #. description of font in fonts/fold_inkstitch
 #: inkstitch-fonts-metadata.py:80
@@ -239,7 +239,7 @@ msgstr ""
 #. name of font in fonts/geneva_rounded
 #: inkstitch-fonts-metadata.py:82
 msgid "Geneva Simple Sans Rounded"
-msgstr ""
+msgstr "Geneva Simple Sans Rounded"
 
 #. description of font in fonts/geneva_rounded
 #: inkstitch-fonts-metadata.py:84
@@ -249,7 +249,7 @@ msgstr ""
 #. name of font in fonts/geneva_simple
 #: inkstitch-fonts-metadata.py:86
 msgid "Geneva Simple Sans"
-msgstr ""
+msgstr "Geneva Simple Sans"
 
 #. description of font in fonts/geneva_simple
 #: inkstitch-fonts-metadata.py:88
@@ -259,7 +259,7 @@ msgstr "Passar små fonter (6 till 15 mm)"
 #. name of font in fonts/glacial_tiny
 #: inkstitch-fonts-metadata.py:90
 msgid "Glacial Tiny 60 AGS"
-msgstr ""
+msgstr "Glacial Tiny 60 AGS"
 
 #. description of font in fonts/glacial_tiny
 #: inkstitch-fonts-metadata.py:92
@@ -269,7 +269,7 @@ msgstr ""
 #. name of font in fonts/grand_hotel_marif
 #: inkstitch-fonts-metadata.py:94
 msgid "Grand Hotel Marif"
-msgstr ""
+msgstr "Grand Hotel Marif"
 
 #. description of font in fonts/grand_hotel_marif
 #: inkstitch-fonts-metadata.py:96
@@ -279,7 +279,7 @@ msgstr ""
 #. name of font in fonts/grandhotel_small
 #: inkstitch-fonts-metadata.py:98
 msgid "Grand Hotel small"
-msgstr ""
+msgstr "Grand Hotel small"
 
 #. description of font in fonts/grandhotel_small
 #: inkstitch-fonts-metadata.py:100
@@ -289,7 +289,7 @@ msgstr ""
 #. name of font in fonts/infinipicto
 #: inkstitch-fonts-metadata.py:102
 msgid "InfiniPicto"
-msgstr ""
+msgstr "InfiniPicto"
 
 #. description of font in fonts/infinipicto
 #: inkstitch-fonts-metadata.py:104
@@ -299,7 +299,7 @@ msgstr ""
 #. name of font in fonts/kaushan_script_MAM
 #: inkstitch-fonts-metadata.py:106
 msgid "Kaushan Script MAM"
-msgstr ""
+msgstr "Kaushan Script MAM"
 
 #. description of font in fonts/kaushan_script_MAM
 #: inkstitch-fonts-metadata.py:108
@@ -310,7 +310,7 @@ msgstr ""
 #. name of font in fonts/learning_curve
 #: inkstitch-fonts-metadata.py:110
 msgid "Learning curve"
-msgstr ""
+msgstr "Learning curve"
 
 #. description of font in fonts/learning_curve
 #: inkstitch-fonts-metadata.py:112
@@ -320,7 +320,7 @@ msgstr ""
 #. name of font in fonts/lobster_AGS
 #: inkstitch-fonts-metadata.py:114
 msgid "Lobster AGS"
-msgstr ""
+msgstr "Lobster AGS"
 
 #. description of font in fonts/lobster_AGS
 #: inkstitch-fonts-metadata.py:116
@@ -331,7 +331,7 @@ msgstr ""
 #. name of font in fonts/magnolia_ KOR
 #: inkstitch-fonts-metadata.py:118
 msgid "Magnolia KOR"
-msgstr ""
+msgstr "Magnolia KOR"
 
 #. description of font in fonts/magnolia_ KOR
 #: inkstitch-fonts-metadata.py:120
@@ -341,7 +341,7 @@ msgstr ""
 #. name of font in fonts/manuskript_gotisch
 #: inkstitch-fonts-metadata.py:122
 msgid "Manuskript Gothisch"
-msgstr ""
+msgstr "Manuskript Gothisch"
 
 #. description of font in fonts/manuskript_gotisch
 #: inkstitch-fonts-metadata.py:124
@@ -352,7 +352,7 @@ msgstr ""
 #. name of font in fonts/marcelusSC_FI
 #: inkstitch-fonts-metadata.py:126
 msgid "MarcellusSC-FI"
-msgstr ""
+msgstr "MarcellusSC-FI"
 
 #. description of font in fonts/marcelusSC_FI
 #: inkstitch-fonts-metadata.py:128
@@ -363,7 +363,7 @@ msgstr ""
 #. name of font in fonts/medium_font
 #: inkstitch-fonts-metadata.py:130
 msgid "Ink/Stitch Medium Font"
-msgstr ""
+msgstr "Ink/Stitch Medium Font"
 
 #. description of font in fonts/medium_font
 #: inkstitch-fonts-metadata.py:132
@@ -374,7 +374,7 @@ msgstr ""
 #. name of font in fonts/monicha
 #: inkstitch-fonts-metadata.py:134
 msgid "MONICHA"
-msgstr ""
+msgstr "Monicha"
 
 #. description of font in fonts/monicha
 #: inkstitch-fonts-metadata.py:136
@@ -384,7 +384,7 @@ msgstr ""
 #. name of font in fonts/namskout_AGS
 #: inkstitch-fonts-metadata.py:138
 msgid "Namskout"
-msgstr ""
+msgstr "Namskout"
 
 #. description of font in fonts/namskout_AGS
 #: inkstitch-fonts-metadata.py:140
@@ -394,7 +394,7 @@ msgstr ""
 #. name of font in fonts/nick_ainley
 #: inkstitch-fonts-metadata.py:142
 msgid "NickAinley"
-msgstr ""
+msgstr "NickAinley"
 
 #. description of font in fonts/nick_ainley
 #: inkstitch-fonts-metadata.py:144
@@ -404,7 +404,7 @@ msgstr ""
 #. name of font in fonts/pacificlo
 #: inkstitch-fonts-metadata.py:146
 msgid "Pacificlo"
-msgstr ""
+msgstr "Pacificlo"
 
 #. description of font in fonts/pacificlo
 #: inkstitch-fonts-metadata.py:148
@@ -414,7 +414,7 @@ msgstr ""
 #. name of font in fonts/pacificlo_tiny
 #: inkstitch-fonts-metadata.py:150
 msgid "Pacificlo tiny"
-msgstr ""
+msgstr "Pacificlo tiny"
 
 #. description of font in fonts/pacificlo_tiny
 #: inkstitch-fonts-metadata.py:152
@@ -424,7 +424,7 @@ msgstr ""
 #. name of font in fonts/roman_ags
 #: inkstitch-fonts-metadata.py:154
 msgid "Roman AGS"
-msgstr ""
+msgstr "Roman AGS"
 
 #. description of font in fonts/roman_ags
 #: inkstitch-fonts-metadata.py:156
@@ -435,7 +435,7 @@ msgstr ""
 #. name of font in fonts/roman_ags_bicolor
 #: inkstitch-fonts-metadata.py:158
 msgid "Roman bicolor AGS"
-msgstr ""
+msgstr "Roman bicolor AGS"
 
 #. description of font in fonts/roman_ags_bicolor
 #: inkstitch-fonts-metadata.py:160
@@ -446,7 +446,7 @@ msgstr ""
 #. name of font in fonts/sacramarif
 #: inkstitch-fonts-metadata.py:162
 msgid "Sacramarif"
-msgstr ""
+msgstr "Sacramarif"
 
 #. description of font in fonts/sacramarif
 #: inkstitch-fonts-metadata.py:164
@@ -456,7 +456,7 @@ msgstr ""
 #. name of font in fonts/small_font
 #: inkstitch-fonts-metadata.py:166
 msgid "Ink/Stitch Small Font"
-msgstr ""
+msgstr "Ink/Stitch Small Font"
 
 #. description of font in fonts/small_font
 #: inkstitch-fonts-metadata.py:168
@@ -467,7 +467,7 @@ msgstr "En font som passar för små bokstäver. Versaler är en halv cm breda i
 #. name of font in fonts/sortefaxXL
 #: inkstitch-fonts-metadata.py:170
 msgid "Sortefax XL Initials"
-msgstr ""
+msgstr "Sortefax XL Initials"
 
 #. description of font in fonts/sortefaxXL
 #: inkstitch-fonts-metadata.py:172
@@ -477,7 +477,7 @@ msgstr ""
 #. name of font in fonts/sortefax_medium
 #: inkstitch-fonts-metadata.py:174
 msgid "Sortefax Medium Initials"
-msgstr ""
+msgstr "Sortefax Medium Initials"
 
 #. description of font in fonts/sortefax_medium
 #: inkstitch-fonts-metadata.py:176
@@ -487,7 +487,7 @@ msgstr ""
 #. name of font in fonts/tt_directors
 #: inkstitch-fonts-metadata.py:178
 msgid "TT Directors"
-msgstr ""
+msgstr "TT Directors"
 
 #. description of font in fonts/tt_directors
 #: inkstitch-fonts-metadata.py:180
@@ -497,7 +497,7 @@ msgstr ""
 #. name of font in fonts/tt_masters
 #: inkstitch-fonts-metadata.py:182
 msgid "TT Masters"
-msgstr ""
+msgstr "TT Masters"
 
 #. description of font in fonts/tt_masters
 #: inkstitch-fonts-metadata.py:184

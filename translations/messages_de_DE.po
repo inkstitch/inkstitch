@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2022-06-25 02:44+0000\n"
-"PO-Revision-Date: 2022-06-26 02:39\n"
+"PO-Revision-Date: 2022-06-28 02:31\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -173,7 +173,7 @@ msgstr "DinoMouse72"
 #. description of font in fonts/dinomouse72
 #: inkstitch-fonts-metadata.py:56
 msgid "A Font Grove jawn. Satin width is 2.5mm at 18mm capitals"
-msgstr ""
+msgstr "Die Satinbreite beträgt bei 18 mm Großbuchstaben 2,5 mm"
 
 #. name of font in fonts/emilio_20
 #: inkstitch-fonts-metadata.py:58
@@ -399,7 +399,7 @@ msgstr "NickAinley"
 #. description of font in fonts/nick_ainley
 #: inkstitch-fonts-metadata.py:144
 msgid "A tiny 1mm-bean alphabet based on a 24pt Seniors Studio jawn"
-msgstr ""
+msgstr "Ein 1 mm Mehrfachgeradstich-Alphabet auf der Grundlage einer 24 pt Schrift von Seniors Studio."
 
 #. name of font in fonts/pacificlo
 #: inkstitch-fonts-metadata.py:146
@@ -430,7 +430,7 @@ msgstr "Roman AGS"
 #: inkstitch-fonts-metadata.py:156
 #, python-format
 msgid "Based on Latin Modern Roman 10 Bold italic. The capital M is 42.5 millimeter wide at 100% scale.  Can be scaled down to 80% or up to 130%.  Every satin has zigzag underlay"
-msgstr "Basiert auf der Schrift Latin Modern Roman 10 fett kursiv. Der Großbuchstabe M ist, bei einer Skalierung von 100% 42,5 mm breit. Eine Skalierung ist von 80% bis zu 130% möglich. Jede Satinkolumne hat eine Zick-Zack-Unterlage."
+msgstr "Basiert auf der Schrift Latin Modern Roman 10 fett kursiv. Der Großbuchstabe M ist, bei einer Skalierung von 100 % 42,5 mm breit. Eine Skalierung ist von 80 % bis zu 130 % möglich. Jede Satinsäule hat eine Zickzack-Unterlage."
 
 #. name of font in fonts/roman_ags_bicolor
 #: inkstitch-fonts-metadata.py:158
@@ -441,7 +441,7 @@ msgstr "Roman bicolor AGS"
 #: inkstitch-fonts-metadata.py:160
 #, python-format
 msgid "Based on Latin Modern Roman 10 Bold italic. A font with capital letters with 2 colors. Very easy to use with letters from Romanaugusa. The capital M is 42.5 millimeter wide at 100% scale. Can be scaled down to 70% or up to 130%. Every satin has zigzag underlay"
-msgstr "Basiert auf der Schrift Latin Modern Roman 10 fett kursiv. Eine Schrift mit zweifarbigen Großbuchstaben. Gut kombinierbar mit den Buchstaben von Roman AGS. Das große M ist, bei einer Skalierung von 100 %, 42,5 mm breit. Eine Skalierung ist von 70 % bis zu 130 % möglich. Jede Satinkolumne hat eine Zick-Zack-Unterlage."
+msgstr "Basiert auf der Schrift Latin Modern Roman 10 fett kursiv. Eine Schrift mit zweifarbigen Großbuchstaben. Gut kombinierbar mit den Buchstaben von Roman AGS. Das große M ist, bei einer Skalierung von 100 %, 42,5 mm breit. Eine Skalierung ist von 70 % bis zu 130 % möglich. Jede Satinsäule hat eine Zick-Zack-Unterlage."
 
 #. name of font in fonts/sacramarif
 #: inkstitch-fonts-metadata.py:162
@@ -972,7 +972,7 @@ msgstr "Reihenanzahl bis sich das Muster wiederholt"
 
 #: lib/elements/fill_stitch.py:219
 msgid "Setting this dictates how many rows apart the stitches will be before they fall in the same column position."
-msgstr "Die Einstellung bestimmt, wie viele Reihen die Stiche voneinander entfernt sind, bevor sie in die gleiche Kolumneposition münden."
+msgstr "Die Einstellung bestimmt, wie viele Reihen die Stiche voneinander entfernt sind, bevor sie in die gleiche Position erhalten."
 
 #: lib/elements/fill_stitch.py:368
 msgid "Running stitch length (traversal between sections)"
