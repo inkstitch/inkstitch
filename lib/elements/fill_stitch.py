@@ -503,15 +503,18 @@ class FillStitch(EmbroideryElement):
         return self.get_boolean_param('underlay_underpath', True)
 
     def shrink_or_grow_shape(self, shape, amount, validate=False):
+        new_shape = shape
         if amount:
-            shape = shape.buffer(amount)
+            new_shape = shape.buffer(amount)
             # changing the size can empty the shape
             # in this case we want to use the original shape rather than returning an error
-            if shape.is_empty and not validate:
-                return shape
-            if not isinstance(shape, shgeo.MultiPolygon):
-                shape = shgeo.MultiPolygon([shape])
-        return shape
+            if (new_shape.is_empty and not validate):
+                new_shape = shape
+
+        if not isinstance(new_shape, shgeo.MultiPolygon):
+            new_shape = shgeo.MultiPolygon([new_shape])
+
+        return new_shape
 
     def underlay_shape(self, shape):
         return self.shrink_or_grow_shape(shape, -self.fill_underlay_inset)
@@ -536,7 +539,7 @@ class FillStitch(EmbroideryElement):
         else:
             return None
 
-    def to_stitch_groups(self, last_patch):
+    def to_stitch_groups(self, last_patch):  # noqa: C901
         # backwards compatibility: legacy_fill used to be inkstitch:auto_fill == False
         if not self.auto_fill or self.fill_method == 3:
             return self.do_legacy_fill()
@@ -548,14 +551,19 @@ class FillStitch(EmbroideryElement):
                 start = self.get_starting_point(last_patch)
                 try:
                     if self.fill_underlay:
-                        underlay_stitch_groups, start = self.do_underlay(shape, start)
-                        stitch_groups.extend(underlay_stitch_groups)
-                    if self.fill_method == 0:
-                        stitch_groups.extend(self.do_auto_fill(shape, last_patch, start, end))
-                    if self.fill_method == 1:
-                        stitch_groups.extend(self.do_contour_fill(self.fill_shape(shape), last_patch, start))
-                    elif self.fill_method == 2:
-                        stitch_groups.extend(self.do_guided_fill(shape, last_patch, start, end))
+                        underlay_shapes = self.underlay_shape(shape)
+                        for underlay_shape in underlay_shapes.geoms:
+                            underlay_stitch_groups, start = self.do_underlay(underlay_shape, start)
+                            stitch_groups.extend(underlay_stitch_groups)
+
+                    fill_shapes = self.fill_shape(shape)
+                    for fill_shape in fill_shapes.geoms:
+                        if self.fill_method == 0:
+                            stitch_groups.extend(self.do_auto_fill(fill_shape, last_patch, start, end))
+                        if self.fill_method == 1:
+                            stitch_groups.extend(self.do_contour_fill(fill_shape, last_patch, start))
+                        elif self.fill_method == 2:
+                            stitch_groups.extend(self.do_guided_fill(fill_shape, last_patch, start, end))
                 except Exception:
                     self.fatal_fill_error()
                 last_patch = stitch_groups[-1]
@@ -580,7 +588,7 @@ class FillStitch(EmbroideryElement):
                 color=self.color,
                 tags=("auto_fill", "auto_fill_underlay"),
                 stitches=auto_fill(
-                    self.underlay_shape(shape),
+                    shape,
                     self.fill_underlay_angle[i],
                     self.fill_underlay_row_spacing,
                     self.fill_underlay_row_spacing,
@@ -601,7 +609,7 @@ class FillStitch(EmbroideryElement):
             color=self.color,
             tags=("auto_fill", "auto_fill_top"),
             stitches=auto_fill(
-                self.fill_shape(shape),
+                shape,
                 self.angle,
                 self.row_spacing,
                 self.end_row_spacing,
@@ -667,7 +675,7 @@ class FillStitch(EmbroideryElement):
             color=self.color,
             tags=("guided_fill", "auto_fill_top"),
             stitches=guided_fill(
-                self.fill_shape(shape),
+                shape,
                 guide_line.geoms[0],
                 self.angle,
                 self.row_spacing,
