@@ -14,7 +14,7 @@ field-of-use:
 user-level:
 ---
 ## Sample of guided fill and ripple stitches 
-Bird's body is guided fill while all the "feathers" are ripple stitches.
+Bird's body is fill while all the "feathers" are ripple stitches.
 
 Some sort of color gradient is achieved using copies of the same ripple with different  colors and exponents on top of each other.
 
