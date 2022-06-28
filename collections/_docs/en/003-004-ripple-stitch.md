@@ -1,6 +1,6 @@
 ---
 title: "Ripple Stitch"
-permalink: /docs/stitches/ripple/
+permalink: /docs/stitches/ripples/
 excerpt: ""
 last_modified_at: 2022-06-11
 toc: true
