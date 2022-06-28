@@ -44,6 +44,7 @@ Méthode      || Choisir Broderie Ondulée
 Répéter                      || Définir combien de fois le chemin final de broderie est exécuté en va et vient le long du parcours <br />◦ par défaut: 1 (aller une fois du début à la fin du chemin)<br />◦ Nombre impair: les points se termineront à la fin du chemin<br />◦ Nombre pair: la couture va revenir au début du chemin
 Nombre de répétitions du point triple || Activer [Mode point triple](/fr/docs/stitches/bean-stitch/)<br />◦ Repasse sur chaque point le nombre de fois indiqué.<br />◦ Une valeur de 1 triplera chaque point (avant, arrière, avant).<br />◦ Une valeur de 2 permettra de quintupler chaque point, etc..<br />
 Longueur du point droit||Longueur des points dans le [Mode Point Droit](/fr/docs/stitches/running-stitch/)
+All stitches must be within this distance of the path. A lower tolerance means stitches will be closer together. A higher tolerance means sharp corners may be rounded.
 Nombre de lignes|<img src="/assets/images/docs/ripple_only_lines.svg" alt="Nombre de lignes"/>|Choisir le nombre de réplications de l'ondulation dans la broderie. La valeur par défaut est 10.
 ◦Sauter les premières lignes <br /> ◦Sauter les dernières lignes  |<img src="/assets/images/docs/ripple_only_skip.svg" alt="Sauter"/>| Permet de sauter (ne pas broder)  ce nombre de réplications au début et/ou à la fin
 Exposant de la distance entre les lignes|<img src="/assets/images/docs/ripple_only_exponent.svg" alt="Exposant"/>| ◦ La valeur par défaut de 1 espace les réplications de manière constante<br />◦ Avec une valeur supérieure à  1 l'espace  entre deux réplications consécutives augmente au fur et à mesure qu'on s'éloigne du chemin qui définit l'ondulation  <br />◦ Avec une valeur inférieure à  1 l'espace  entre deux réplications consécutives diminue au fur et à mesure qu'on s'éloigne du chemin qui définit l'ondulation
@@ -53,6 +54,7 @@ Distance grille  maximum |<img src="/assets/images/docs/ripple_only_grid.svg" al
 Démarrer à| seulement pour des ondulations guidées|Taille de la première ondulation en pourcentage.
 Finir à| seulement pour des ondulations guidées |Taille de la dernière ondulation en pourcentage.
 Tourner| ☑  ou ▢| seulement pour des ondulations guidées
+Style de Jointure|<img src="/assets/images/docs/flat_or_point.svg" alt="Join Stile"/> |pour des ondulations ouvertes,les réplications peuvent être jointes par un segment (en haut) ou en un seul point (en bas)
 Autoriser les points d'arrêts | ☑  ou ▢|Choix de l'ajout d' un point d'arrêt en début et en fin de broderie.
 Forcer les points d'arrêts | ☑ ou ▢| Force un point d'arrêt après l'objet indépendament de la valeur de "Saut de fil" dans les Préférences d'Ink/Stitch.
 {: .params-table }
@@ -68,21 +70,21 @@ Il existe trois méthodes de guidage additionnel pour le déplacement des ondula
 ### Pour toutes les broderies ondulées : Guidage selon un chemin
 Il  est possible d'ajouter une chemin de guidage à une broderie ondulée.
 Pour cela
-- Creer une broderie ondulée
-- Creer un trait. 
+- Créer une broderie ondulée
+- Créer un trait. 
 - Transformer ce trait en guide en effectuant: `Extensions > Ink/Stitch  > Edition > Selection en Guide`
 - Grouper la broderie ondulée et le guide dans un même groupe
 
 La position des centres des réplications de l'ondulation initale est alors déterminée par le guide
 
-Le chemin guide peut avoir  deux sous-chemins (guidagesatin) , dans ce cas la distance entre les deux sous-chemins determine la taille des réplications.
+Le chemin guide peut avoir  deux sous-chemins (guidage satin) , dans ce cas la distance entre les deux sous-chemins determine la taille des réplications.
 
 
 ### Pour les  broderies ondulées définies à partir d'un chemin simple: Guidage par cible
-Il est possible de définir le point cible de l'ondulation grace aux [commandes visuelles](/fr/docs/commands/). En l'absence de  toute information de guidage,c'est le centre de l'ondulation première qui  tient lieu de point cible
+Il est possible de définir le point cible de l'ondulation grace aux [commandes visuelles](/fr/docs/commands/). En l'absence de  toute information de guidage,c'est le centre de l'ondulation première qui  tient lieu de point cible.
 
 ### [Pour les  broderies ondulées définies à partir d'un chemin simple composée de deux rails : Guidage par traverses](#traverses)
-Fonctionne de manière analogue aux traverses des colonnes satin
+Fonctionne de manière analogue aux traverses des colonnes satin.
 
 
 ##  Exemples de fichiers qui utilisent la broderie ondulée 
