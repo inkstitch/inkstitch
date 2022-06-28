@@ -52,7 +52,7 @@ Number of lines|<img src="/assets/images/docs/ripple_only_lines.svg" alt="Nombre
 Line distance exponent|<img src="/assets/images/docs/ripple_only_exponent.svg" alt="Exposant"/>| ◦ With default value of 1 space between replications is constant<br />◦ With a value greater than 1, the space between two consecutive replications increases as one moves away from the original ripple   <br />◦ With a value smaller than 1, the space between two consecutive replications decreases as one moves away from the original ripple.
 Flip exponent |☑  or ▢| exchange role of first and last line in the computation of  line distance
 Reverse |☑  or ▢|  Reverse the final embroidery path.  Has no effect on the other  parameters.
-Grid  size |<img src="/assets/images/docs/ripple_only_grid.svg" alt="Distance"/>| If the distance is strictly positive a grid effect is added. The distance controls how far apart the new  lines are. 
+Grid  size |<img src="/assets/images/docs/ripple_only_grid.svg" alt="Distance"/>| If the size is strictly positive a grid effect is added. The grid size controls how far apart the new  lines are. 
 Scale axes|XY or X or Y or None | for guided ripple only
 Starting scale| for guided ripple only|How big the first copy of the line should be, in percent. 
 Ending scale| for guided ripple only| How big the last copy of the line should be, in percent.
