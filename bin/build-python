@@ -75,7 +75,7 @@ elif [ "$BUILD" = "linux" ]; then
     # error:
     #
     #   ELF load command address/offset not properly aligned
-    find dist/inkstitch -type f | grep -E '.so($|\.)' | grep -v _fblas | xargs strip
+    find dist/inkstitch -type f | grep -E '\.so($|\.)' | grep -v _fblas | grep -v _flapack | xargs strip
 else
     LD_LIBRARY_PATH="${site_packages}/wx" python -m PyInstaller $pyinstaller_args --strip inkstitch.py;
 fi

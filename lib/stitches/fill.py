@@ -132,7 +132,7 @@ def intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing=Non
     start -= (start + normal * center) % row_spacing
 
     current_row_y = start
-
+    rows = []
     while current_row_y < end:
         p0 = center + normal * current_row_y + direction * half_length
         p1 = center + normal * current_row_y - direction * half_length
@@ -157,12 +157,14 @@ def intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing=Non
                 runs.reverse()
                 runs = [tuple(reversed(run)) for run in runs]
 
-            yield runs
+            rows.append(runs)
 
         if end_row_spacing:
             current_row_y += row_spacing + (end_row_spacing - row_spacing) * ((current_row_y - start) / height)
         else:
             current_row_y += row_spacing
+
+    return rows
 
 
 def section_to_stitches(group_of_segments, angle, row_spacing, max_stitch_length, staggers, skip_last):

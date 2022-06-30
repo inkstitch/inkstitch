@@ -129,6 +129,10 @@ class Point:
     def from_shapely_point(cls, point):
         return cls(point.x, point.y)
 
+    @classmethod
+    def from_tuple(cls, point):
+        return cls(point[0], point[1])
+
     def __json__(self):
         return vars(self)
 

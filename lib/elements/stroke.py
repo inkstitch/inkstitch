@@ -150,7 +150,7 @@ class Stroke(EmbroideryElement):
         return max(self.get_int_param("line_count", 10), 1)
 
     def get_line_count(self):
-        if self.is_closed:
+        if self.is_closed or self.join_style == 1:
             return self.line_count + 1
         return self.line_count
 
@@ -246,7 +246,7 @@ class Stroke(EmbroideryElement):
            type='dropdown',
            default=0,
            # 0: xy, 1: x, 2: y, 3: none
-           options=[_("X Y"), _("X"), _("Y"), _("None")],
+           options=["X Y", "X", "Y", _("None")],
            select_items=[('stroke_method', 1)],
            sort_index=12)
     def scale_axis(self):
@@ -285,6 +285,19 @@ class Stroke(EmbroideryElement):
     @cache
     def rotate_ripples(self):
         return self.get_boolean_param("rotate_ripples", True)
+
+    @property
+    @param('join_style',
+           _('Join style'),
+           tooltip=_('Join style for non circular ripples.'),
+           type='dropdown',
+           default=0,
+           options=(_("flat"), _("point")),
+           select_items=[('stroke_method', 1)],
+           sort_index=16)
+    @cache
+    def join_style(self):
+        return self.get_int_param('join_style', 0)
 
     @property
     @cache

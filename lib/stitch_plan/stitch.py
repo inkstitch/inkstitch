@@ -4,7 +4,6 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 from ..utils.geometry import Point
-from copy import deepcopy
 
 
 class Stitch(Point):
@@ -12,10 +11,14 @@ class Stitch(Point):
 
     def __init__(self, x, y=None, color=None, jump=False, stop=False, trim=False, color_change=False,
                  tie_modus=0, force_lock_stitches=False, no_ties=False, tags=None):
+
+        base_stitch = None
         if isinstance(x, Stitch):
             # Allow creating a Stitch from another Stitch.  Attributes passed as
             # arguments will override any existing attributes.
-            vars(self).update(deepcopy(vars(x)))
+            base_stitch = x
+            self.x = base_stitch.x
+            self.y = base_stitch.y
         elif isinstance(x, Point):
             # Allow creating a Stitch from a Point
             point = x
@@ -24,17 +27,19 @@ class Stitch(Point):
         else:
             Point.__init__(self, x, y)
 
-        self.color = color
-        self.jump = jump
-        self.trim = trim
-        self.stop = stop
-        self.color_change = color_change
-        self.force_lock_stitches = force_lock_stitches
-        self.tie_modus = tie_modus
-        self.no_ties = no_ties
-        self.tags = set()
+        self._set('color', color, base_stitch)
+        self._set('jump', jump, base_stitch)
+        self._set('trim', trim, base_stitch)
+        self._set('stop', stop, base_stitch)
+        self._set('color_change', color_change, base_stitch)
+        self._set('force_lock_stitches', force_lock_stitches, base_stitch)
+        self._set('tie_modus', tie_modus, base_stitch)
+        self._set('no_ties', no_ties, base_stitch)
 
+        self.tags = set()
         self.add_tags(tags or [])
+        if base_stitch is not None:
+            self.add_tags(base_stitch.tags)
 
     def __repr__(self):
         return "Stitch(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)" % (self.x,
@@ -47,6 +52,14 @@ class Stitch(Point):
                                                                    "FORCE LOCK STITCHES" if self.force_lock_stitches else " ",
                                                                    "NO TIES" if self.no_ties else " ",
                                                                    "COLOR CHANGE" if self.color_change else " ")
+
+    def _set(self, attribute, value, base_stitch):
+        # Set an attribute.  If the caller passed a Stitch object, use its value, unless
+        # they overrode it with arguments.
+        if base_stitch is not None:
+            setattr(self, attribute, getattr(base_stitch, attribute))
+        if value or base_stitch is None:
+            setattr(self, attribute, value)
 
     def add_tags(self, tags):
         for tag in tags:
