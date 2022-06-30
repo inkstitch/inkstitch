@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-06-25 02:44+0000\n"
-"PO-Revision-Date: 2022-06-28 02:32\n"
+"POT-Creation-Date: 2022-06-30 18:02+0000\n"
+"PO-Revision-Date: 2022-06-30 18:04\n"
 "Last-Translator: \n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-25 02:44+0000\n"
+"POT-Creation-Date: 2022-06-30 18:02+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -504,26 +504,26 @@ msgstr "TT Masters"
 msgid "A font suited for heavy typing :)"
 msgstr "ヘビータイピングに適したフォント:)"
 
-#: inkstitch.py:71
+#: inkstitch.py:88
 msgid "Ink/Stitch cannot read your SVG file. This is often the case when you use a file which has been created with Adobe Illustrator."
 msgstr "インク/ステッチはこのSVGファイルを読み取りできません。これは、AdobeIllustratorで作成されたファイルを使用する場合によくあります。"
 
-#: inkstitch.py:74
+#: inkstitch.py:91
 msgid "Try to import the file into Inkscape through 'File > Import...' (Ctrl+I)"
 msgstr "「ファイル>インポート...」（Ctrl + I）を使用してファイルをInkscapeにインポートして下さい"
 
-#: inkstitch.py:85
+#: inkstitch.py:102
 msgid "Ink/Stitch experienced an unexpected error. This means it is a bug in Ink/Stitch."
 msgstr ""
 
-#: inkstitch.py:86
+#: inkstitch.py:103
 msgid "If you'd like to help please\n"
 "- copy the entire error message below\n"
 "- save your SVG file and\n"
 "- create a new issue at https://github.com/inkstitch/inkstitch/issues"
 msgstr ""
 
-#: inkstitch.py:90
+#: inkstitch.py:107
 msgid "Include the error description and also (if possible) the svg file."
 msgstr ""
 
@@ -754,7 +754,7 @@ msgstr "スモールフィル"
 msgid "This fill object is so small that it would probably look better as running stitch or satin column. For very small shapes, fill stitch is not possible, and Ink/Stitch will use running stitch around the outline instead."
 msgstr "この塗りつぶしオブジェクトは非常に小さいので、ランニングステッチやサテンステッチのラインとした方が見栄えがよくなります。非常に小さい形状の場合、塗りつぶしステッチは不可能であり、インク/ステッチは代わりにアウトラインの周りにランニングステッチを使用します。"
 
-#: lib/elements/fill_stitch.py:35 lib/elements/fill_stitch.py:465
+#: lib/elements/fill_stitch.py:35 lib/elements/fill_stitch.py:469
 msgid "Expand"
 msgstr "展開"
 
@@ -763,7 +763,7 @@ msgid "The expand parameter for this fill object cannot be applied. Ink/Stitch w
 msgstr "この塗りつぶしオブジェクトの展開パラメータは適用できません。\n"
 "インク/ステッチはそれを無視し、代わりに元のサイズを使用します。"
 
-#: lib/elements/fill_stitch.py:41 lib/elements/fill_stitch.py:442
+#: lib/elements/fill_stitch.py:41 lib/elements/fill_stitch.py:446
 msgid "Inset"
 msgstr "挿入する"
 
@@ -933,11 +933,11 @@ msgstr "ステッチの線の角度"
 msgid "The angle increases in a counter-clockwise direction.  0 is horizontal.  Negative angles are allowed."
 msgstr "角度は反時計回りに回転します。 0は水平です。負の角度も設定可能です。"
 
-#: lib/elements/fill_stitch.py:165 lib/elements/fill_stitch.py:454
+#: lib/elements/fill_stitch.py:165 lib/elements/fill_stitch.py:458
 msgid "Skip last stitch in each row"
 msgstr "各行の最後のステッチをスキップします"
 
-#: lib/elements/fill_stitch.py:166 lib/elements/fill_stitch.py:455
+#: lib/elements/fill_stitch.py:166 lib/elements/fill_stitch.py:459
 msgid "The last stitch in each row is quite close to the first stitch in the next row.  Skipping it decreases stitch count and density."
 msgstr "各行の最後のステッチは、次の行の最初のステッチに非常に近いです。スキップすると、ステッチ数と密度が減少します。"
 
@@ -973,80 +973,80 @@ msgstr "繰り返す前に、行をずらしていきます"
 msgid "Setting this dictates how many rows apart the stitches will be before they fall in the same column position."
 msgstr "これを設定すると、同じ列位置に入る前にステッチが何行離れているかが決まります。"
 
-#: lib/elements/fill_stitch.py:368
+#: lib/elements/fill_stitch.py:372
 msgid "Running stitch length (traversal between sections)"
 msgstr "ランニングステッチの長さ（セクション間の間隔）"
 
-#: lib/elements/fill_stitch.py:369
+#: lib/elements/fill_stitch.py:373
 msgid "Length of stitches around the outline of the fill region used when moving from section to section."
 msgstr "セクション間を移動するときに使用される塗りつぶし領域の輪郭の周りのステッチの長さ。"
 
-#: lib/elements/fill_stitch.py:380 lib/elements/stroke.py:116
+#: lib/elements/fill_stitch.py:384 lib/elements/stroke.py:116
 msgid "Running stitch tolerance"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:381
+#: lib/elements/fill_stitch.py:385
 msgid "All stitches must be within this distance of the path.  A lower tolerance means stitches will be closer together.  A higher tolerance means sharp corners may be rounded."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:392
+#: lib/elements/fill_stitch.py:396
 msgid "Underlay"
 msgstr "アンダーレイ"
 
-#: lib/elements/fill_stitch.py:392 lib/elements/fill_stitch.py:401
-#: lib/elements/fill_stitch.py:424 lib/elements/fill_stitch.py:435
-#: lib/elements/fill_stitch.py:445 lib/elements/fill_stitch.py:457
-#: lib/elements/fill_stitch.py:495
+#: lib/elements/fill_stitch.py:396 lib/elements/fill_stitch.py:405
+#: lib/elements/fill_stitch.py:428 lib/elements/fill_stitch.py:439
+#: lib/elements/fill_stitch.py:449 lib/elements/fill_stitch.py:461
+#: lib/elements/fill_stitch.py:499
 msgid "Fill Underlay"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:398
+#: lib/elements/fill_stitch.py:402
 msgid "Fill angle"
 msgstr "塗りつぶし角度"
 
-#: lib/elements/fill_stitch.py:399
+#: lib/elements/fill_stitch.py:403
 msgid "Default: fill angle + 90 deg. Insert comma-seperated list for multiple layers."
 msgstr "デフォルト：塗りつぶし角度+90度。複数のレイヤーにコンマ区切りのリストを挿入します。"
 
-#: lib/elements/fill_stitch.py:421
+#: lib/elements/fill_stitch.py:425
 msgid "Row spacing"
 msgstr "行間隔"
 
-#: lib/elements/fill_stitch.py:422
+#: lib/elements/fill_stitch.py:426
 msgid "default: 3x fill row spacing"
 msgstr "デフォルト：3x塗りつぶし行間隔"
 
-#: lib/elements/fill_stitch.py:432
+#: lib/elements/fill_stitch.py:436
 msgid "Max stitch length"
 msgstr "最大ステッチ長さ"
 
-#: lib/elements/fill_stitch.py:433
+#: lib/elements/fill_stitch.py:437
 msgid "default: equal to fill max stitch length"
 msgstr "デフォルト：最大フィルステッチ長"
 
-#: lib/elements/fill_stitch.py:443
+#: lib/elements/fill_stitch.py:447
 msgid "Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill."
 msgstr "アンダーレイを行う前に形状を縮小して、アンダーレイが塗りつぶしの外側に表示されないようにします。"
 
-#: lib/elements/fill_stitch.py:466
+#: lib/elements/fill_stitch.py:470
 msgid "Expand the shape before fill stitching, to compensate for gaps between shapes."
 msgstr "形状間のギャップを補正するために、塗りつぶしステッチの前に形状を拡張します。"
 
-#: lib/elements/fill_stitch.py:477 lib/elements/fill_stitch.py:491
+#: lib/elements/fill_stitch.py:481 lib/elements/fill_stitch.py:495
 msgid "Underpath"
 msgstr "アンダーパス"
 
-#: lib/elements/fill_stitch.py:478 lib/elements/fill_stitch.py:492
+#: lib/elements/fill_stitch.py:482 lib/elements/fill_stitch.py:496
 msgid "Travel inside the shape when moving from section to section.  Underpath stitches avoid traveling in the direction of the row angle so that they are not visible.  This gives them a jagged appearance."
 msgstr "セクション間を移動するときは、シェイプ内を移動します。アンダーパスステッチは、列の角度の方向に移動しないようにして、非表示にします。ギザギザの外観を与えます。"
 
-#: lib/elements/fill_stitch.py:701
+#: lib/elements/fill_stitch.py:713
 msgid "Error during autofill!  This means that there is a problem with Ink/Stitch."
 msgstr "自動入力中にエラーが発生しました！インク/ステッチに問題があります。"
 
 #. this message is followed by a URL:
 #. https://github.com/inkstitch/inkstitch/issues/new
-#: lib/elements/fill_stitch.py:704
+#: lib/elements/fill_stitch.py:716
 msgid "If you'd like to help us make Ink/Stitch better, please paste this whole message into a new issue at: "
 msgstr "インク/ステッチの改善にご協力いただける場合は、このメッセージ全体を新しい Issue に貼り付けてください。 "
 
@@ -1465,18 +1465,6 @@ msgstr ""
 msgid "Scale axis for satin guided ripple stitches."
 msgstr ""
 
-#: lib/elements/stroke.py:249
-msgid "X Y"
-msgstr ""
-
-#: lib/elements/stroke.py:249
-msgid "X"
-msgstr ""
-
-#: lib/elements/stroke.py:249
-msgid "Y"
-msgstr ""
-
 #: lib/elements/stroke.py:249 print/templates/ui.html:172
 msgid "None"
 msgstr "なし"
@@ -1509,7 +1497,23 @@ msgstr ""
 msgid "Rotate satin guided ripple stitches"
 msgstr ""
 
-#: lib/elements/stroke.py:361
+#: lib/elements/stroke.py:291
+msgid "Join style"
+msgstr ""
+
+#: lib/elements/stroke.py:292
+msgid "Join style for non circular ripples."
+msgstr ""
+
+#: lib/elements/stroke.py:295
+msgid "flat"
+msgstr ""
+
+#: lib/elements/stroke.py:295
+msgid "point"
+msgstr ""
+
+#: lib/elements/stroke.py:374
 msgid "Legacy running stitch setting detected!\n\n"
 "It looks like you're using a stroke smaller than 0.5 units to indicate a running stitch, which is deprecated.  Instead, please set your stroke to be dashed to indicate running stitch.  Any kind of dash will work."
 msgstr "レガシーランニングステッチの設定が検出されました！\n\n"
@@ -2140,10 +2144,6 @@ msgstr "自動サテン %d"
 #, python-format
 msgid "AutoSatin Running Stitch %d"
 msgstr "自動サテンランニングステッチ %d"
-
-#: lib/stitches/guided_fill.py:118
-msgid "Guide line (or offset copy) is self crossing!"
-msgstr ""
 
 #: lib/svg/rendering.py:222
 msgid "Stitch Plan"
