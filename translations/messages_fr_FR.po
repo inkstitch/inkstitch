@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2022-06-30 18:02+0000\n"
-"PO-Revision-Date: 2022-06-30 18:04\n"
+"PO-Revision-Date: 2022-07-01 02:41\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -1500,19 +1500,19 @@ msgstr "Tourne les ondulations guidées par un satin"
 
 #: lib/elements/stroke.py:291
 msgid "Join style"
-msgstr ""
+msgstr "Style de jointure"
 
 #: lib/elements/stroke.py:292
 msgid "Join style for non circular ripples."
-msgstr ""
+msgstr "Style de jointure pour les ondulations ouvertes."
 
 #: lib/elements/stroke.py:295
 msgid "flat"
-msgstr ""
+msgstr "segment"
 
 #: lib/elements/stroke.py:295
 msgid "point"
-msgstr ""
+msgstr "point"
 
 #: lib/elements/stroke.py:374
 msgid "Legacy running stitch setting detected!\n\n"
