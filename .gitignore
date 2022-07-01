@@ -19,3 +19,6 @@ locales/
 /src/
 .DS_STORE
 .DS_Store
+/PROFILE
+/profile_stats
+/profile_stats.prof
