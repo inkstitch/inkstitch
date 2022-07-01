@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2022-06-30 18:02+0000\n"
-"PO-Revision-Date: 2022-07-01 02:41\n"
+"PO-Revision-Date: 2022-07-01 13:06\n"
 "Last-Translator: \n"
 "Language-Team: Dutch\n"
 "MIME-Version: 1.0\n"
@@ -1500,19 +1500,19 @@ msgstr "Roteer satijnhulp ribbelsteken"
 
 #: lib/elements/stroke.py:291
 msgid "Join style"
-msgstr ""
+msgstr "Knooppunt stijl"
 
 #: lib/elements/stroke.py:292
 msgid "Join style for non circular ripples."
-msgstr ""
+msgstr "Knooppunt stijl voor niet circulaire golven."
 
 #: lib/elements/stroke.py:295
 msgid "flat"
-msgstr ""
+msgstr "plat"
 
 #: lib/elements/stroke.py:295
 msgid "point"
-msgstr ""
+msgstr "punt"
 
 #: lib/elements/stroke.py:374
 msgid "Legacy running stitch setting detected!\n\n"
@@ -3486,8 +3486,7 @@ msgstr "DSZ-bestand converteren naar Ink/Stitch handmatige steekpaden"
 
 #: inx/inkstitch_input_EDR.inx:3
 msgid "EDR file input"
-msgstr "\n"
-"EDR bestandsinvoer"
+msgstr "EDR bestandsinvoer"
 
 #: inx/inkstitch_input_EDR.inx:8
 msgid "Ink/Stitch: Edr Color Format (.edr)"
@@ -3499,8 +3498,7 @@ msgstr "EDR-bestand converteren naar Ink/Stitch handmatige steekpaden"
 
 #: inx/inkstitch_input_EMD.inx:3
 msgid "EMD file input"
-msgstr "\n"
-"EMD bestandsinvoer"
+msgstr "EMD bestandsinvoer"
 
 #: inx/inkstitch_input_EMD.inx:8
 msgid "Ink/Stitch: Elna Embroidery Format (.emd)"
@@ -3512,8 +3510,7 @@ msgstr "EMD-bestand converteren naar Ink/Stitch handmatige steekpaden"
 
 #: inx/inkstitch_input_EXP.inx:3
 msgid "EXP file input"
-msgstr "\n"
-"EXP bestandsinvoer"
+msgstr "EXP bestandsinvoer"
 
 #: inx/inkstitch_input_EXP.inx:8 inx/inkstitch_output_EXP.inx:8
 msgid "Ink/Stitch: Melco Expanded Embroidery Format (.exp)"
@@ -3525,8 +3522,7 @@ msgstr "EXP-bestand converteren naar Ink/Stitch handmatige steekpaden"
 
 #: inx/inkstitch_input_EXY.inx:3
 msgid "EXY file input"
-msgstr "\n"
-"EXY bestandsinvoer"
+msgstr "EXY bestandsinvoer"
 
 #: inx/inkstitch_input_EXY.inx:8
 msgid "Ink/Stitch: Eltac Embroidery Format (.exy)"
@@ -3922,8 +3918,7 @@ msgstr "ZHS-bestand converteren naar Ink/Stitch handmatige steekpaden"
 
 #: inx/inkstitch_input_ZXY.inx:3
 msgid "ZXY file input"
-msgstr "\n"
-"ZXY bestandsinvoer"
+msgstr "ZXY bestandsinvoer"
 
 #: inx/inkstitch_input_ZXY.inx:8
 msgid "Ink/Stitch: ZSK TC Embroidery Format (.zxy)"

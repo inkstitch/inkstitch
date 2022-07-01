@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2022-06-30 18:02+0000\n"
-"PO-Revision-Date: 2022-07-01 02:41\n"
+"PO-Revision-Date: 2022-07-01 13:07\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -1500,19 +1500,19 @@ msgstr "Satin-geführte Ripplestiche rotieren"
 
 #: lib/elements/stroke.py:291
 msgid "Join style"
-msgstr ""
+msgstr "Kantenstil"
 
 #: lib/elements/stroke.py:292
 msgid "Join style for non circular ripples."
-msgstr ""
+msgstr "Kantenstil für nicht kreisförmigen Ripplestich."
 
 #: lib/elements/stroke.py:295
 msgid "flat"
-msgstr ""
+msgstr "flach"
 
 #: lib/elements/stroke.py:295
 msgid "point"
-msgstr ""
+msgstr "spitz"
 
 #: lib/elements/stroke.py:374
 msgid "Legacy running stitch setting detected!\n\n"
