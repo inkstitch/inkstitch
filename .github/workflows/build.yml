@@ -77,7 +77,8 @@ jobs:
 
           # scipy gives us a ELF error when stripped
           sudo apt-get install gcc g++ gfortran python3-dev libopenblas-dev liblapack-dev
-          python -m pip install -U scipy --no-binary scipy
+          python -m pip uninstall --yes scipy
+          python -m pip install scipy --no-binary scipy
 
           echo "${{ env.pythonLocation }}\bin" >> $GITHUB_PATH
       - shell: bash
