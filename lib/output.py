@@ -86,6 +86,9 @@ def write_embroidery_file(file_path, stitch_plan, svg, settings={}):
         "full_jump": True,
     })
 
+    if not file_path.endswith(('.col', '.edr', '.inf')):
+        settings['encode'] = True
+
     if file_path.endswith('.csv'):
         # Special treatment for CSV: instruct pyembroidery not to do any post-
         # processing.  This will allow the user to match up stitch numbers seen
