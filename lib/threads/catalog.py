@@ -42,6 +42,9 @@ class _ThreadCatalog(Sequence):
             for palette_file in glob(os.path.join(path, 'InkStitch*.gpl')):
                 palette_basename = os.path.basename(palette_file)
                 if palette_basename not in palettes:
+                    palette = ThreadPalette(palette_file)
+                    if not palette.is_gimp_palette:
+                        continue
                     self.palettes.append(ThreadPalette(palette_file))
                     palettes.append(palette_basename)
 

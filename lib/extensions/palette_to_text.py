@@ -27,6 +27,9 @@ class PaletteToText(InkstitchExtension):
             return
 
         thread_palette = ThreadPalette(palette_file)
+        if not thread_palette.is_gimp_palette:
+            inkex.errormsg(_("Cannot read palette: invalid GIMP palette header"))
+
         current_layer = self.svg.get_current_layer()
 
         x = 0
