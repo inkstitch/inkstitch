@@ -57,7 +57,7 @@ def write_embroidery_file(file_path, stitch_plan, svg, settings={}):
     scale = 10 / PIXELS_PER_MM
 
     origin = get_origin(svg, stitch_plan.bounding_box)
-    origin = origin * scale
+    # origin = origin * scale
 
     pattern = pyembroidery.EmbPattern()
     stitch = Stitch(0, 0)
