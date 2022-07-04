@@ -40,8 +40,11 @@ class ThreadPalette(Set):
 
         with open(palette_file, encoding='utf8') as palette:
             line = palette.readline().strip()
+
+            self.is_gimp_palette = True
             if line.lower() != "gimp palette":
-                raise ValueError("Invalid gimp palette header")
+                self.is_gimp_palette = False
+                return
 
             self.name = palette.readline().strip()
             if self.name.lower().startswith('name: ink/stitch: '):
