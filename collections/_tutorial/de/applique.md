@@ -1,8 +1,8 @@
----
+﻿---
 permalink: /de/tutorials/applique/
 title: Applikation
-last_modified_at: 2018-05-11
-excerpt: "Applique example file"
+last_modified_at: 2022-07-08
+excerpt: "Beispieldatei Applikation"
 language: de
 image: "/assets/images/tutorials/samples/Applique Color Change.svg"
 
@@ -16,25 +16,27 @@ techniken:
   - Applique
 schwierigkeitsgrad: leicht
 ---
-## Steps
+## Schritte
 
-1. Digitize placement and tackdown stitches as different colors, in order to force a stop on your machine.
-2. May or may not have to digitize the zig zag tackdown stitch as a different color, depends on the design.
-3. Complete the rest of the design as normal.
-4. Start sewing like normal, after machine does Placement Stitch, stop machine.
-5. Place material over Placement stitch, totally covering the stitch.  Use a light adhesive spray to hold material.
-6. Start sewing 1st Tackdown stitch.  Stop Machine after.
-7. Completely cut away excess material from the tack down stitch.  Best to use applique scissors if available.
-8. Start machine again and let it finish stitching the rest of the design.  Applique portion is finished at this point.
+1. Digitalisiere die Platzierungs- und Heftstiche in unterschiedlichen Farben, um einen Stopp an deiner Maschine zu erzwingen.
+2. Je nach Form musst du den Zickzack-Heftstich in einer anderen Farbe digitalisieren.
+3. Bearbeite den Rest der Form wie gewohnt.
+4. Beginne wie gewohnt zu nähen und halte die Maschine an, nachdem du den Platzierungsstich ausgeführt hast.
+5. Lege den Stoff so über den Platzierungsstich, dass er den Stich vollständig bedeckt.  Verwende ein leichtes Klebespray, um den Stoff zu fixieren.
+6. Beginne mit dem Nähen des ersten Heftstichs.  Halte die Maschine danach an.
+7. Schneide das überschüssige Material des Heftstichs vollständig ab.  Verwende am besten eine Applizierschere, falls vorhanden.
+8. Starte die Maschine wieder und lass sie den Rest des Musters fertig nähen. Der applizierte Teil ist jetzt fertig.
 
-## Applique Color Change (by Evan West)
+
+## Applikation: Beispieldatei mit Farbwechseln (by Evan West)
 
 ![Applique Color Change](/assets/images/tutorials/samples/Applique Color Change.svg)
 
 [Download](/assets/images/tutorials/samples/Applique Color Change.svg){: download="Applique-Color-Change.svg" }
 
-## Applique Stop (by Evan West)
+## Applikation: Beispieldatei mit Stop Befehlen (by Evan West)
 
+Stop Befehle gehen nicht mit allen Dateiformaten, besonders `*.vp3` sind da anfällig. In diesem Fall das andere File mit den Farbwechseln verwenden.
 ![Applique Stop](/assets/images/tutorials/samples/Applique Stop.svg)
 
 [Download](/assets/images/tutorials/samples/Applique Stop.svg){: download="Applique-Stop.svg" }
