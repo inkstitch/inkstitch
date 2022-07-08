@@ -1,6 +1,6 @@
 ---
 title: "Broderie Ondulée"
-permalink: /fr/docs/stitches/ripple/
+permalink: /fr/docs/stitches/ripple-stitch/
 excerpt: ""
 last_modified_at: 2022-06-12
 toc: true

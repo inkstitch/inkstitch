@@ -74,6 +74,8 @@ docs:
         url: /ru/docs/stitches/running-stitch/
       - title: "Многопроходная строчка"
         url: /ru/docs/stitches/bean-stitch/
+      - title: "Ripple Stitch"
+        url: /docs/stitches/ripple-stitch/
       - title: "Зигзаг (Простой сатин)"
         url: /ru/docs/stitches/zigzag-stitch/
       - title: "Сатин"
