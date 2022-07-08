@@ -57,7 +57,7 @@ def write_embroidery_file(file_path, stitch_plan, svg, settings={}):
     scale = 10 / PIXELS_PER_MM
 
     origin = get_origin(svg, stitch_plan.bounding_box)
-    origin = origin * scale
+    # origin = origin * scale
 
     pattern = pyembroidery.EmbPattern()
     stitch = Stitch(0, 0)
@@ -85,6 +85,9 @@ def write_embroidery_file(file_path, stitch_plan, svg, settings={}):
         # even if we're close enough not to need one.
         "full_jump": True,
     })
+
+    if not file_path.endswith(('.col', '.edr', '.inf')):
+        settings['encode'] = True
 
     if file_path.endswith('.csv'):
         # Special treatment for CSV: instruct pyembroidery not to do any post-

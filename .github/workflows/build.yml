@@ -74,7 +74,12 @@ jobs:
 
           python -m pip install -r requirements.txt
           python -m pip install pyinstaller
-          
+
+          # scipy gives us a ELF error when stripped
+          sudo apt-get install gcc g++ gfortran python3-dev libopenblas-dev liblapack-dev
+          python -m pip uninstall --yes scipy
+          python -m pip install scipy --no-binary scipy
+
           echo "${{ env.pythonLocation }}\bin" >> $GITHUB_PATH
       - shell: bash
         run: |
