@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-06-30 18:02+0000\n"
-"PO-Revision-Date: 2022-07-01 13:06\n"
+"POT-Creation-Date: 2022-07-08 15:02+0000\n"
+"PO-Revision-Date: 2022-07-08 15:03\n"
 "Last-Translator: \n"
 "Language-Team: Czech\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-30 18:02+0000\n"
+"POT-Creation-Date: 2022-07-08 15:02+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -34,7 +34,7 @@ msgstr ""
 #. name of font in fonts/Brockscript
 #: inkstitch-fonts-metadata.py:2
 msgid "Brock Script"
-msgstr ""
+msgstr "Brock Script"
 
 #. description of font in fonts/Brockscript
 #: inkstitch-fonts-metadata.py:4
@@ -44,7 +44,7 @@ msgstr ""
 #. name of font in fonts/abecedaire
 #: inkstitch-fonts-metadata.py:6
 msgid "Abécédaire AGS"
-msgstr ""
+msgstr "Abécédaire AGS"
 
 #. description of font in fonts/abecedaire
 #: inkstitch-fonts-metadata.py:8
@@ -54,7 +54,7 @@ msgstr ""
 #. name of font in fonts/amitaclo
 #: inkstitch-fonts-metadata.py:10
 msgid "Amitaclo"
-msgstr ""
+msgstr "Amitaclo"
 
 #. description of font in fonts/amitaclo
 #: inkstitch-fonts-metadata.py:12
@@ -65,7 +65,7 @@ msgstr ""
 #. name of font in fonts/amitaclo_small
 #: inkstitch-fonts-metadata.py:14
 msgid "Amitaclo small"
-msgstr ""
+msgstr "Amitaclo small"
 
 #. description of font in fonts/amitaclo_small
 #: inkstitch-fonts-metadata.py:16
@@ -85,7 +85,7 @@ msgstr ""
 #. name of font in fonts/aventurina
 #: inkstitch-fonts-metadata.py:22
 msgid "Aventurina"
-msgstr ""
+msgstr "Aventurina"
 
 #. description of font in fonts/aventurina
 #: inkstitch-fonts-metadata.py:24
@@ -95,7 +95,7 @@ msgstr ""
 #. name of font in fonts/baumans_FI
 #: inkstitch-fonts-metadata.py:26
 msgid "Baumans FI"
-msgstr ""
+msgstr "Baumans FI"
 
 #. description of font in fonts/baumans_FI
 #: inkstitch-fonts-metadata.py:28
@@ -106,7 +106,7 @@ msgstr ""
 #. name of font in fonts/cherryforinkstitch
 #: inkstitch-fonts-metadata.py:30
 msgid "Cherry for inkstitch"
-msgstr ""
+msgstr "Cherry for inkstitch"
 
 #. description of font in fonts/cherryforinkstitch
 #: inkstitch-fonts-metadata.py:32
@@ -116,7 +116,7 @@ msgstr ""
 #. name of font in fonts/cherryforkaalleen
 #: inkstitch-fonts-metadata.py:34
 msgid "Cherry for Kaalleen"
-msgstr ""
+msgstr "Cherry for Kaalleen"
 
 #. description of font in fonts/cherryforkaalleen
 #: inkstitch-fonts-metadata.py:36
@@ -168,7 +168,7 @@ msgstr ""
 #. name of font in fonts/dinomouse72
 #: inkstitch-fonts-metadata.py:54
 msgid "DinoMouse72"
-msgstr ""
+msgstr "DinoMouse72"
 
 #. description of font in fonts/dinomouse72
 #: inkstitch-fonts-metadata.py:56
@@ -189,7 +189,7 @@ msgstr ""
 #. name of font in fonts/emilio_20_tricolore
 #: inkstitch-fonts-metadata.py:62
 msgid "EMILIO 20 TRICOLORE"
-msgstr ""
+msgstr "Emilio 20 Tricolore"
 
 #. description of font in fonts/emilio_20_tricolore
 #: inkstitch-fonts-metadata.py:64
@@ -199,7 +199,7 @@ msgstr ""
 #. name of font in fonts/espresso_KOR
 #: inkstitch-fonts-metadata.py:66
 msgid "Espresso KOR"
-msgstr ""
+msgstr "Espresso KOR"
 
 #. description of font in fonts/espresso_KOR
 #: inkstitch-fonts-metadata.py:68
@@ -209,7 +209,7 @@ msgstr ""
 #. name of font in fonts/espresso_tiny
 #: inkstitch-fonts-metadata.py:70
 msgid "Espresso tiny"
-msgstr ""
+msgstr "Espresso tiny"
 
 #. description of font in fonts/espresso_tiny
 #: inkstitch-fonts-metadata.py:72
@@ -219,7 +219,7 @@ msgstr ""
 #. name of font in fonts/excalibur_KOR
 #: inkstitch-fonts-metadata.py:74
 msgid "Excalibur KOR"
-msgstr ""
+msgstr "Excalibur KOR"
 
 #. description of font in fonts/excalibur_KOR
 #: inkstitch-fonts-metadata.py:76
@@ -229,7 +229,7 @@ msgstr ""
 #. name of font in fonts/fold_inkstitch
 #: inkstitch-fonts-metadata.py:78
 msgid "Fold Ink/Stitch"
-msgstr ""
+msgstr "Fold Ink/Stitch"
 
 #. description of font in fonts/fold_inkstitch
 #: inkstitch-fonts-metadata.py:80
@@ -239,7 +239,7 @@ msgstr ""
 #. name of font in fonts/geneva_rounded
 #: inkstitch-fonts-metadata.py:82
 msgid "Geneva Simple Sans Rounded"
-msgstr ""
+msgstr "Geneva Simple Sans Rounded"
 
 #. description of font in fonts/geneva_rounded
 #: inkstitch-fonts-metadata.py:84
@@ -259,7 +259,7 @@ msgstr "Použitelné pro malá písma (od 6 do 15 mm)"
 #. name of font in fonts/glacial_tiny
 #: inkstitch-fonts-metadata.py:90
 msgid "Glacial Tiny 60 AGS"
-msgstr ""
+msgstr "Glacial Tiny 60 AGS"
 
 #. description of font in fonts/glacial_tiny
 #: inkstitch-fonts-metadata.py:92
@@ -269,7 +269,7 @@ msgstr ""
 #. name of font in fonts/grand_hotel_marif
 #: inkstitch-fonts-metadata.py:94
 msgid "Grand Hotel Marif"
-msgstr ""
+msgstr "Grand Hotel Marif"
 
 #. description of font in fonts/grand_hotel_marif
 #: inkstitch-fonts-metadata.py:96
@@ -279,7 +279,7 @@ msgstr ""
 #. name of font in fonts/grandhotel_small
 #: inkstitch-fonts-metadata.py:98
 msgid "Grand Hotel small"
-msgstr ""
+msgstr "Grand Hotel small"
 
 #. description of font in fonts/grandhotel_small
 #: inkstitch-fonts-metadata.py:100
@@ -289,7 +289,7 @@ msgstr ""
 #. name of font in fonts/infinipicto
 #: inkstitch-fonts-metadata.py:102
 msgid "InfiniPicto"
-msgstr ""
+msgstr "InfiniPicto"
 
 #. description of font in fonts/infinipicto
 #: inkstitch-fonts-metadata.py:104
@@ -299,7 +299,7 @@ msgstr ""
 #. name of font in fonts/kaushan_script_MAM
 #: inkstitch-fonts-metadata.py:106
 msgid "Kaushan Script MAM"
-msgstr ""
+msgstr "Kaushan Script MAM"
 
 #. description of font in fonts/kaushan_script_MAM
 #: inkstitch-fonts-metadata.py:108
@@ -320,7 +320,7 @@ msgstr ""
 #. name of font in fonts/lobster_AGS
 #: inkstitch-fonts-metadata.py:114
 msgid "Lobster AGS"
-msgstr ""
+msgstr "Lobster AGS"
 
 #. description of font in fonts/lobster_AGS
 #: inkstitch-fonts-metadata.py:116
@@ -331,7 +331,7 @@ msgstr ""
 #. name of font in fonts/magnolia_ KOR
 #: inkstitch-fonts-metadata.py:118
 msgid "Magnolia KOR"
-msgstr ""
+msgstr "Magnolia KOR"
 
 #. description of font in fonts/magnolia_ KOR
 #: inkstitch-fonts-metadata.py:120
@@ -477,7 +477,7 @@ msgstr ""
 #. name of font in fonts/sortefax_medium
 #: inkstitch-fonts-metadata.py:174
 msgid "Sortefax Medium Initials"
-msgstr ""
+msgstr "Sortefax Medium Initials"
 
 #. description of font in fonts/sortefax_medium
 #: inkstitch-fonts-metadata.py:176
@@ -1800,6 +1800,10 @@ msgstr ""
 msgid "Please select one or more text elements to split lines."
 msgstr ""
 
+#: lib/extensions/palette_to_text.py:31
+msgid "Cannot read palette: invalid GIMP palette header"
+msgstr ""
+
 #: lib/extensions/params.py:228
 msgid "These settings will be applied to 1 object."
 msgstr ""
@@ -2100,7 +2104,7 @@ msgstr ""
 
 #. low-level file error.  %(error)s is (hopefully?) translated by
 #. the user's system automatically.
-#: lib/output.py:105
+#: lib/output.py:108
 #, python-format
 msgid "Error writing to %(path)s: %(error)s"
 msgstr ""
@@ -2723,33 +2727,38 @@ msgstr "Brother formát pro šití"
 msgid "PNG Format, Portable Network Graphics"
 msgstr ""
 
-#. description for pyembroidery file format: gcode
+#. description for pyembroidery file format: txt
 #: pyembroidery-format-descriptions.py:88
+msgid "txt Format, Text File"
+msgstr ""
+
+#. description for pyembroidery file format: gcode
+#: pyembroidery-format-descriptions.py:90
 msgid "gcode Format, Text File"
 msgstr ""
 
 #. description for pyembroidery file format: hus
-#: pyembroidery-format-descriptions.py:90
+#: pyembroidery-format-descriptions.py:92
 msgid "Husqvarna Embroidery Format"
 msgstr ""
 
 #. description for pyembroidery file format: edr
-#: pyembroidery-format-descriptions.py:92
+#: pyembroidery-format-descriptions.py:94
 msgid "Edr Color Format"
 msgstr ""
 
 #. description for pyembroidery file format: col
-#: pyembroidery-format-descriptions.py:94
+#: pyembroidery-format-descriptions.py:96
 msgid "Col Color Format"
 msgstr ""
 
 #. description for pyembroidery file format: inf
-#: pyembroidery-format-descriptions.py:96
+#: pyembroidery-format-descriptions.py:98
 msgid "Inf Color Format"
 msgstr ""
 
 #. description for pyembroidery file format: json
-#: pyembroidery-format-descriptions.py:98
+#: pyembroidery-format-descriptions.py:100
 msgid "Json Export"
 msgstr ""
 
@@ -3430,6 +3439,18 @@ msgstr ""
 msgid "convert COL file to Ink/Stitch manual-stitch paths"
 msgstr ""
 
+#: inx/inkstitch_input_CSV.inx:3
+msgid "CSV file input"
+msgstr ""
+
+#: inx/inkstitch_input_CSV.inx:8
+msgid "Ink/Stitch: Comma-separated values (.csv)"
+msgstr ""
+
+#: inx/inkstitch_input_CSV.inx:9
+msgid "convert CSV file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
 #: inx/inkstitch_input_DAT.inx:3
 msgid "DAT file input"
 msgstr ""
@@ -3620,6 +3641,18 @@ msgstr ""
 
 #: inx/inkstitch_input_JPX.inx:9
 msgid "convert JPX file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_JSON.inx:3
+msgid "JSON file input"
+msgstr ""
+
+#: inx/inkstitch_input_JSON.inx:8
+msgid "Ink/Stitch: Json Export (.json)"
+msgstr ""
+
+#: inx/inkstitch_input_JSON.inx:9
+msgid "convert JSON file to Ink/Stitch manual-stitch paths"
 msgstr ""
 
 #: inx/inkstitch_input_KSM.inx:3
@@ -4065,11 +4098,11 @@ msgstr ""
 msgid "File format"
 msgstr ""
 
-#: inx/inkstitch_letters_to_font.inx:59
+#: inx/inkstitch_letters_to_font.inx:61
 msgid "Font directory"
 msgstr ""
 
-#: inx/inkstitch_letters_to_font.inx:61
+#: inx/inkstitch_letters_to_font.inx:63
 msgid "Import commands"
 msgstr ""
 
@@ -4339,6 +4372,18 @@ msgstr ""
 
 #: inx/inkstitch_output_SVG.inx:9
 msgid "Save design in SVG format using Ink/Stitch"
+msgstr ""
+
+#: inx/inkstitch_output_TXT.inx:3
+msgid "TXT file output"
+msgstr ""
+
+#: inx/inkstitch_output_TXT.inx:8
+msgid "Ink/Stitch: txt Format, Text File [DEBUG] (.txt)"
+msgstr ""
+
+#: inx/inkstitch_output_TXT.inx:9
+msgid "Save design in TXT format using Ink/Stitch"
 msgstr ""
 
 #: inx/inkstitch_output_U01.inx:3
