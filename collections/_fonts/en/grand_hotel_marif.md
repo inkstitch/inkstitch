@@ -10,13 +10,9 @@ preview_image:
     height: 53
 
 ---
-
-
 ![grand_hotel_marif](/assets/images/fonts/grand_hotel_marif.jpg)
 
 ![grand_hotel_marif](/assets/images/fonts/grand_hotel_small.jpg)
-
-
 
 ## Glyphs
 
@@ -44,7 +40,6 @@ It may be scaled up to 140% (48 mm)  or scaled down to  60% .
 ![Dimensions Grand Hotel](/assets/images/fonts/Sizing/grandhotelsizing.jpg)
 
 Don't try to scale it further down. 
-{% include upcoming_release.html %}
 
 Grand Hotel small  is a variation of this font with different embroidery settings. Pull compensation, density and underlays are different to allow to scale down between 55% (18mm, 2/3 inch) and 25% (9mm ,1/3 inch). 
 

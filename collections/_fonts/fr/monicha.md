@@ -9,8 +9,6 @@ preview_image:
 ---
 ![monicha](/assets/images/fonts/monicha.jpg)
 
-{% include upcoming_release.html %}
-
 ## Glyphes 
 Monicha contient les 195 glyphes :
 	
@@ -34,7 +32,6 @@ z§«±»¿ÀÁÂÃ
 ⒶⒹⒼⒽⒾⒿⓀⓁⓂⓃ
 ⓇⓉⓊⓎⓑⓓⓖⓗⓙⓚ
 ⓛⓞⓣⓨ
-
 
 ## Dimensions
 

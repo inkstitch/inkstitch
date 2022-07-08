@@ -40,7 +40,7 @@ It can be scaled up to 200% (approx 60 mm, 2.4 inches ) or scaled down to 80% (a
 ![Dimensions Amitaclo](/assets/images/fonts/Sizing/amitaclosizing.jpg)
 
 Don't try to scale it further down. 
-{% include upcoming_release.html %}
+
 Amitaclo small  is a variation of this font with different embroidery settings. Pull compensation, density and underlays are different to allow to scale down between 55% (16mm,2/3 inch) and 25% (7mm ,1/4 inch). 
 
 

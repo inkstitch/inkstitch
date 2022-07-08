@@ -9,9 +9,6 @@ preview_image:
 ---
 ![glacial_tiny](/assets/images/fonts/glacial_tiny_60_AGS.jpg)
 
-
-{% include upcoming_release.html %}
-
 ## Glyphs
 
 This font contains 159 glyphs:

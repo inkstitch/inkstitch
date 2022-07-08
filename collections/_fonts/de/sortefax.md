@@ -13,9 +13,6 @@ preview_image:
 
 ![Sortefax_medium](/assets/images/fonts/sortefax_medium.jpg)
 
-{% include upcoming_release.html %}
-
-
 ## Schriftzeichen
 iese Schrift enthält folgende 47 Schriftzeichen:
 	

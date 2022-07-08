@@ -7,16 +7,12 @@ preview_image:
   - url: /assets/images/fonts/abecedaire.jpg
     height: 14
 ---
-
 ![Abecedaire](/assets/images/fonts/abecedaire.jpg)
-
-This is part of an upcoming Ink/Stitch version and not available in Ink/Stitch v2.1.2
 
 ## Glyphs
 
 This font contains  154 glyphs:
 
-	
 !"@'(),012
 3456789:;=
 ?@ABCDEFGH

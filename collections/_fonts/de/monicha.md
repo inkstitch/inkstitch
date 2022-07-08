@@ -9,8 +9,6 @@ preview_image:
 ---
 ![monicha](/assets/images/fonts/monicha.jpg)
 
-{% include upcoming_release.html %}
-
 This font will be part of next Ink/Stitch version and is not yet available in Ink/Stitch v2.1.2.
 
 ## Schriftzeichen 
@@ -36,7 +34,6 @@ z§«±»¿ÀÁÂÃ
 ⒶⒹⒼⒽⒾⒿⓀⓁⓂⓃ
 ⓇⓉⓊⓎⓑⓓⓖⓗⓙⓚ
 ⓛⓞⓣⓨ
-
 
 ## Maße
 

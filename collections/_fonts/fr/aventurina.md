@@ -9,12 +9,9 @@ preview_image:
 ---
 ![Aventurina](/assets/images/fonts/aventurina.jpg)
 
-{% include upcoming_release.html %}
-
 ## Glyphes 
 Aventurina contient les 142 glyphes : 
 
-	
 !"#@'()+,-
 ./01234567
 89:;=?@ABC
@@ -30,7 +27,6 @@ rstuvwxyz~
 èéêëìíîïñò
 óôõöùúûüýÿ
 Œœ
-
 
 ## Dimensions
 

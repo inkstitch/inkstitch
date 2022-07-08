@@ -8,9 +8,6 @@ preview_image:
 ---
 ![glacial_tiny](/assets/images/fonts/glacial_tiny_60_AGS.jpg)
 
-
-{% include upcoming_release.html %}
-
 ## Glyphes
 
 Cette fonte contient les 159 glyphes :
@@ -31,7 +28,6 @@ z~ÀÁÂÃÄÅÆŒ
 çèéêëìíîïñ
 òóôõöúùûüč
 ČřŘŠšŽžÐÞ
-
 
 ## Remarque 
 Cette fonte permet de broder des textes multilignes alternativement de la gauche vers  la droite et de la droite vers la gauche.

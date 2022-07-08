@@ -10,14 +10,9 @@ preview_image:
     height: 53
 
 ---
-
-
 ![grand_hotel_marif](/assets/images/fonts/grand_hotel_marif.jpg)
 
 ![grand_hotel_marif](/assets/images/fonts/grand_hotel_small.jpg)
-
-{% include upcoming_release.html %}
-
 
 Dies ist Teil einer kommenden Ink/Stitch-Version und nicht in Ink/Stitch v2.1.2 verfügbar.
 
@@ -38,6 +33,7 @@ tuvwxyz«»À
 ëìíîïñôõöù
 úûüĨĩĽľŒœŨ
 ũ’
+
 ## Maße:
 
 Bei einer Skalierung auf 100 % ist diese Schrift ungefähr roughtly 35 mm high.
@@ -58,6 +54,5 @@ Im Gegensatz zu Grand Hotel Marif, **MUSS** diese verkleinerte Schrift mit einem
 Von 25% auf dem T-Shirt zu voller Größe auf der Schürze und dem Label
 
 {% include folder-galleries path="fonts/grand_hotel_marif/" %}
-
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/grand_hotel_marif/LICENSE)

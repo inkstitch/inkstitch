@@ -9,8 +9,6 @@ preview_image:
 ---
 ![monicha](/assets/images/fonts/monicha.jpg)
 
-{% include upcoming_release.html %}
-
 ## Glyphs 
 Monicha contains 195 glyphs :
 	

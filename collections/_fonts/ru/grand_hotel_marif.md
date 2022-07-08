@@ -10,14 +10,9 @@ preview_image:
     height: 53
 
 ---
-
-
 ![grand_hotel_marif](/assets/images/fonts/grand_hotel_marif.jpg)
 
 ![grand_hotel_marif](/assets/images/fonts/grand_hotel_small.jpg)
-
-{% include upcoming_release.html %}
-
 
 ## Glyphs
 

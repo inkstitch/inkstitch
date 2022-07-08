@@ -9,8 +9,6 @@ preview_image:
 ---
 ![Aventurina](/assets/images/fonts/aventurina.jpg)
 
-{% include upcoming_release.html %}
-
 ## Glyphs
 
 Aventurina contains 142 glyphs :
@@ -22,14 +20,10 @@ At 100%, Aventurina is approximatively  20 mm tall (3/4 inches)
 
 It may be scaled up to 150% (aprox. 30mm , 1.25 in) or scaled down to 60% (approx 12mm, 0.5 in)
 
-
 ## In real life:
 
 Bookmark, Hand towel.....
 
 {% include folder-galleries path="fonts/aventurina/" %}
-
-
-
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/aventurina/LICENSE)

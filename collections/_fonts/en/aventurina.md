@@ -9,9 +9,6 @@ preview_image:
 ---
 ![Aventurina](/assets/images/fonts/aventurina.jpg)
 
-
-{% include upcoming_release.html %}
-
 ## Glyphs
 
 Aventurina contains 142 glyphs :

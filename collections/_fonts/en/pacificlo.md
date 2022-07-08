@@ -39,7 +39,7 @@ It can be scaled  up to 200% (approx 40 mm, 1.5 inch) or scaled down to 60% (app
 
 Don't try to scale it further down.
 
-Pacificlo tiny  (it is part of an upcoming Ink/Stitch version and not available in Ink/Stitch v2.1.2) is a variation of this font with different embroidery settings. Pull compensation, density and underlays are different to allow to scale down between 55% (11 mm, 0.4 inch) and 25% (5mm ,1/5 inch). 
+Pacificlo tiny is a variation of this font with different embroidery settings. Pull compensation, density and underlays are different to allow to scale down between 55% (11 mm, 0.4 inch) and 25% (5mm ,1/5 inch). 
 
 That's why in the lettering dialog window, if using Pacificlo tiny, you will have to pick up a scale between 25 and 55%. 
 
