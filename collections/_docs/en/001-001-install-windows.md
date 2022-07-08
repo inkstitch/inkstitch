@@ -25,8 +25,6 @@ Download the latest release.
 
 ## Installation
 
-If you have Ink/Stitch previously installed, [remove the old installation](#uninstall-inkstitch) first.
-
 Double click to execute the downloaded file.
 
 Until our windows certificate gained enough trust, you will need to allow the installer script to run.

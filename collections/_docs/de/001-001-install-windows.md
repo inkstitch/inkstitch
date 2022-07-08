@@ -25,8 +25,6 @@ Lade die neueste Ink/Stitch Version herunter.
 
 ## Installation
 
-Wenn sich Ink/Stitch bereits auf deinem Computer befindet, [entferne zunächst die alte Installation](#inkstitch-deinstallieren).
-
 Öffne das Ink/Stitch Installationsprogramm mit einem Doppelklick.
 
 Bis unser Windows Zertifikat genügend Vertrauen erhalten hat, musst du der Ausführung des Installations-Skripts explizit zustimmen.

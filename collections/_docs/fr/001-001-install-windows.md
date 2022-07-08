@@ -27,8 +27,6 @@ Téléchargez la dernière version disponible pour windows.
 
 ## Installation
 
-Si Ink/Stitch est déjà installé,  [supprimez la version précédente](#désinstaller-inkstitch) d'abord.
-
 Double cliquez  pour exécuter le fichier que vous avez téléchargé.
 
 Jusqu'à ce que notre certificat windows gagne assez de confiance, vous devez autorisez l'éxecution du fichier.
