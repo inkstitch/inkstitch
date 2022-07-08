@@ -5,8 +5,6 @@ excerpt: ""
 last_modified_at: 2022-05-19
 toc: true
 ---
-{% include upcoming_release.html %}
-
 ## Beschreibung
 
 Kurvige Füllflächen  mit Hilfe von Führungslinien.

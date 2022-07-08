@@ -16,8 +16,8 @@ toc: true
 
 Download the latest release for your macOS version.
 
-<p><a href="{{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx.pkg" class="btn btn--info btn--large"><i class="fa fa-download " ></i> Download Ink/Stitch {{ site.github.latest_release.tag_name }} for macOS<br /><span style="color:lightblue;">Mojave / Catalina / Big Sur / Monterey</span></a></p>
-<p><a href="{{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-sierra-osx.pkg" class="btn btn--info btn--large"><i class="fa fa-download " ></i> Download Ink/Stitch {{ site.github.latest_release.tag_name }} for macOS<br><span style="color:lightblue;">El Capitan / Sierra / High Sierra</span></a></p>
+<p><a href="{{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx.pkg" class="btn btn--info btn--large"><i class="fa fa-download " ></i> Download Ink/Stitch {{ site.github.latest_release.tag_name }} for macOS<br /><span style="color:lightblue;">Big Sur / Monterey</span></a></p>
+<p><a href="{{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-sierra-capitan-catalina-osx.pkg" class="btn btn--info btn--large"><i class="fa fa-download " ></i> Download Ink/Stitch {{ site.github.latest_release.tag_name }} for macOS<br><span style="color:lightblue;">El Capitan / Sierra / High Sierra / Mojave / Catalina</span></a></p>
 
 **Последняя версия:**  [Ink/Stitch {{ site.github.latest_release.tag_name }} ({{ site.github.latest_release.published_at | date: "%Y-%m-%d"  }})](https://github.com/inkstitch/inkstitch/releases/latest)
 
@@ -28,9 +28,9 @@ Ink/Stitch is an Inkscape extension. Download and install [Inkscape](https://ink
 Please note, that Inkscape 1.2 will not work on **El Capitan** and **Sierra**. If you use these macOS versions, please install [Inkscape 1.1.2](https://inkscape.org/release/1.1.2/platforms/).
 {: .notice--warning .bold--warning }
 
-**Mojave - Monterey:** Click on the downloaded file to run the installer.
+**Big Sur - Monterey:** Click on the downloaded file to run the installer.
 
-**El Capitan - High Sierra:** `Ctrl+Click` on the downloaded file and click on `Open`.
+**El Capitan - Catalina:** `Ctrl+Click` on the downloaded file and click on `Open`.
 
 Click on `Continue`.
 
@@ -78,6 +78,20 @@ Installs older than 2.1.0 need to be removed manually. Go to the extensions fold
 
 ## Решение проблем
 
+### Приложение 'xxxx' нельзя открыть, так как не удалось проверить разработчика
+
+This can happen, if you run a development build release.
+
+`Ctrl+Click` on the downloaded file and click on `Open`.
+
+### Installation fails
+
+We also provide a zip download file which can be extraced in the the user extensions folder (see below: confirm installation path).
+
+For Big Sur and Monterey [dowload ZIP]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx.zip)
+
+For older macOS versions [download ZIP]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-capitan-cataline-osx.zip)
+
 ### Ink/Stitch не отображается / не доступен
 
 **Проверьте путь установки**
@@ -88,12 +102,6 @@ Installs older than 2.1.0 need to be removed manually. Go to the extensions fold
 **Проверьте версию Ink/Stitch**
 
 Убедитесь, что вы скачали Ink/Stitch версию для macOS ([Скачать](#/ru/download))
-
-### Приложение 'xxxx' нельзя открыть, так как не удалось проверить разработчика
-
-This can happen, if you run a development build release.
-
-`Ctrl+Click` on the downloaded file and click on `Open`.
 
 ### Я скачал Ink/Stitch на своем родном языке, но диалоговые окна отображаются на английском
 

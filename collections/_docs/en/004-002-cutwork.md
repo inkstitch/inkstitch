@@ -5,8 +5,6 @@ excerpt: ""
 last_modified_at: 2022-02-18
 toc: true
 ---
-{% include upcoming_release.html %}
-
 Cutwork in machine embroidery describes a technique, where specific needles are used to cut holes into the fabric. These needles come mostly in a set of four. Each needle is capable to cut in a specific angle range. Therefore it is necessary to split an element into the angle sections of your needles.
 
 ## Usage

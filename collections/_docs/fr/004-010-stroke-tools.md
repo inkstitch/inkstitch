@@ -5,9 +5,6 @@ excerpt: ""
 last_modified_at: 2022-05-23
 toc: true
 ---
-
-
-{% include upcoming_release.html %}
 ## Agencement automatique de points droits
 
 

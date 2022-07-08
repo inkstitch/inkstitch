@@ -55,7 +55,6 @@ Définit  (1) le point de départ  (2) le point d'arrivée d'un remplissage.
 Défini la position cible d'une broderie ondulée
 
 ####  ![auto-route-runing-starting-position-symbol](/assets/images/docs/visual-commands-auto-route-satin-stitch-start.jpg) ![auto route  ending position symbol](/assets/images/docs/visual-commands-auto-route-satin-stitch-end.jpg)  [Position de départ/de fin pour l'agencement automatique de points droits](#auto-route-runing-starting-position-symbol)
-{% include upcoming_release.html %}
 
 Définit le point de départ (1) ou le point final (2) de l'agencement automatique. Exécutez ensuite "[Outils: Trait /Agencement automatique de points droits. ...](/fr/docs/strole-tools)"  
 N'utiliser qu'un point de départ et qu'un point d'arrivée par agencement automatique.
@@ -86,19 +85,14 @@ Les objets auxquels cette commande est associée seront exclus du plan de broder
 
 Fractionner une colonne satin au point spécifié par cette commande. Après le placement de la commande, exécutez la commande "[Scinder une colonne satin](/fr/docs/satin-tools/#scinder-une-colonne-satin)".
 
-
-
-
 ### Affichage
 
 #### Afficher Masquer les commandes des objets 
-{% include upcoming_release.html %}
 
 Bascule la visibilité des commandes. Les commandes restent fonctionnelles même si elles sont masquées.
 `Extensions > Ink/Stitch > Commandes > Affichage > Afficher/Masquer les commandes  des objets`
 
 #### Mise à l'echelle des symboles de commande
-{% include upcoming_release.html %}
 
 Défini la taille des symboles de commande dans le document tout entier : `Extensions > Ink/Stitch > Commandes > Affichage> Mise à l'echelle des symboles de commande.`
 

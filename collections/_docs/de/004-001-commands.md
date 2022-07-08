@@ -71,15 +71,11 @@ Nutze immer nur einen Anfangs- und einen Endpunkt für jede Auto-Route Operation
 
 ## Objektbefehle anzeigen/verbergen
 
-{% include upcoming_release.html %}
-
 Schalte die Sichtbarkeit von Objekt-Befehlen an und aus. Befehle funktionieren auch, wenn sie nicht angezeigt werden.
 
 `Erweiterungen > Ink/Stitch > Befehle > Ansicht > Objektbefehle anzeigen|vergergen`
 
 ## Befehlsymbole skalieren
-
-{% include upcoming_release.html %}
 
 Anpassen der Größe der Befehlsymbole im gesamten Dokument: `Erweiterungen > Ink/Stitch > Befehle > Ansicht > Befehlsymbole skalieren...`
 

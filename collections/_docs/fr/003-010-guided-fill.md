@@ -5,8 +5,6 @@ excerpt: ""
 last_modified_at: 2022-06-27
 toc: true
 ---
-{% include upcoming_release.html %}
-
 ## De quoi s'agit-il ?
 
 

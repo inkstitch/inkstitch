@@ -7,8 +7,6 @@ toc: true
 ---
 ## Autoroute Running Stitch
 
-{% include upcoming_release.html %}
-
 Auto-Route Running Stitch..
 
 This tool will **replace** your set of running stitches  with a new set of running stitches in logical stitching order avoiding as many jumps as possible . Under-pathing  will be added as necessary  . The resulting running stitches will retain all of the parameters you had set on the original stitches including stitch length, number of repeats, bean stitch number of repeats, etc. Underpaths will only retain the stitch length, but will be set to only one  repeat and no bean stitch number of repeats.

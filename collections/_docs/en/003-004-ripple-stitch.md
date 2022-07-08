@@ -5,8 +5,6 @@ excerpt: ""
 last_modified_at: 2022-06-11
 toc: true
 ---
-{% include upcoming_release.html %}
-
 ## What it is
 
 [![Ripple butterfly](/assets/images/docs/ripplefly.jpg){: width="200x"}](/assets/images/docs/ripplefly.svg){: title="Download SVG File" .align-left download="ripplefly.svg" }

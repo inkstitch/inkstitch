@@ -5,8 +5,6 @@ excerpt: ""
 last_modified_at: 2022-06-26
 toc: true
 ---
-{% include upcoming_release.html %}
-
 ## What it is
 
 Generate curved fill with guide lines.

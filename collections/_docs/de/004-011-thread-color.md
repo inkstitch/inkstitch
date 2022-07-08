@@ -51,7 +51,6 @@ Die Auswahl wirkt sich auch auf die in der Druckvorschau angezeigten Garnnamen a
 
 ## Farbpalette erstellen
 
-{% include upcoming_release.html %}
 Inkscape kann `.gpl` Farbpaletten erstellen. Aber es ist nicht möglich, die Farben zu sortieren.
 
 Diese Erweiterung exportiert die Farben von Textelementen, während der Text selbst als Farbname und Nummer abgespeichert wird.
@@ -70,8 +69,6 @@ Diese Erweiterung exportiert die Farben von Textelementen, während der Text sel
 {% include video id="4bcRVoKvzAw" provider="youtube" %}
 
 ## Farbpalette zu Text
-
-{% include upcoming_release.html %}
 
 Bereits bestehende Farbpaletten können mit Ink/Stitch als Text bearbeitet werden.
 

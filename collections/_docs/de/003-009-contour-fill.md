@@ -5,8 +5,6 @@ excerpt: ""
 last_modified_at: 2022-05-16
 toc: true
 ---
-{% include upcoming_release.html %}
-
 ## Beschreibung
 
 ![Konturfüllung Detail](/assets/images/docs/contour-fill-detail.jpg)

@@ -55,8 +55,6 @@ The choice will also take effect on the thread names to appear in the print prev
 
 ## Generate Color Palette
 
-{% include upcoming_release.html %}
-
 Inkscape allows to generate `.gpl` color palette files. But it doesn't allow us to order color swatches properly.
 
 This extension will export colors of text elements while using the text as color names and numbers.
@@ -74,8 +72,6 @@ This extension will export colors of text elements while using the text as color
 {% include video id="4bcRVoKvzAw" provider="youtube" %}
 
 ## Palette to Text
-
-{% include upcoming_release.html %}
 
 Existing palettes can be edited with Ink/Stitch as text.
 

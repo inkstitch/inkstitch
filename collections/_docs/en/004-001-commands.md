@@ -50,13 +50,10 @@ These commands will be attached to the currently selected objects.
 Defines the (1) starting or (2) ending point of an fill stitch area.
 
 #### ![ripple stitch target symbol](/assets/images/docs/visual-commands-ripple-target.png) Ripple stitch target position
-{% include upcoming_release.html %}
 
 Defines the target point of a ripple stitch area.
 
 ####  ![auto route starting position symbol](/assets/images/docs/visual-commands-auto-route-satin-stitch-start.jpg) ![auto route  ending position symbol](/assets/images/docs/visual-commands-auto-route-satin-stitch-end.jpg) Starting/Ending Position for Auto Route of running stitch 
-
-{% include upcoming_release.html %}
 
 Defines the (1) starting or (2) ending point for the auto route. Run  "[Tools: Stroke/ Auto-route running stitch](https://inkstitch.org/docs/stroke-tools/)" afterwards.
 Use only one starting and one ending point per auto-route operation.
@@ -88,15 +85,11 @@ Split a Satin Column at the point specified by this command. After attaching run
 
 #### Display Hide Object Commands
 
-{% include upcoming_release.html %}
-
 Toggle visibility of object commands. Commands will still be functional when hidden.
 
 `Extensions > Ink/Stitch > Commands > View > Display|Hide Object Commands`
 
 #### Scale Command Symbols
-
-{% include upcoming_release.html %}
 
 Set the size of command symbols in the entire document: `Extensions > Ink/Stitch > Commands > View > Scale Command Symbols...`
 
