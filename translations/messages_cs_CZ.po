@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2022-07-08 15:02+0000\n"
-"PO-Revision-Date: 2022-07-08 15:03\n"
+"PO-Revision-Date: 2022-07-08 18:59\n"
 "Last-Translator: \n"
 "Language-Team: Czech\n"
 "MIME-Version: 1.0\n"
@@ -352,7 +352,7 @@ msgstr ""
 #. name of font in fonts/marcelusSC_FI
 #: inkstitch-fonts-metadata.py:126
 msgid "MarcellusSC-FI"
-msgstr ""
+msgstr "MarcellusSC-FI"
 
 #. description of font in fonts/marcelusSC_FI
 #: inkstitch-fonts-metadata.py:128
@@ -374,7 +374,7 @@ msgstr ""
 #. name of font in fonts/monicha
 #: inkstitch-fonts-metadata.py:134
 msgid "MONICHA"
-msgstr ""
+msgstr "Monicha"
 
 #. description of font in fonts/monicha
 #: inkstitch-fonts-metadata.py:136
@@ -384,7 +384,7 @@ msgstr ""
 #. name of font in fonts/namskout_AGS
 #: inkstitch-fonts-metadata.py:138
 msgid "Namskout"
-msgstr ""
+msgstr "Namskout"
 
 #. description of font in fonts/namskout_AGS
 #: inkstitch-fonts-metadata.py:140
@@ -394,7 +394,7 @@ msgstr ""
 #. name of font in fonts/nick_ainley
 #: inkstitch-fonts-metadata.py:142
 msgid "NickAinley"
-msgstr ""
+msgstr "NickAinley"
 
 #. description of font in fonts/nick_ainley
 #: inkstitch-fonts-metadata.py:144
@@ -404,7 +404,7 @@ msgstr ""
 #. name of font in fonts/pacificlo
 #: inkstitch-fonts-metadata.py:146
 msgid "Pacificlo"
-msgstr ""
+msgstr "Pacificlo"
 
 #. description of font in fonts/pacificlo
 #: inkstitch-fonts-metadata.py:148
@@ -414,7 +414,7 @@ msgstr ""
 #. name of font in fonts/pacificlo_tiny
 #: inkstitch-fonts-metadata.py:150
 msgid "Pacificlo tiny"
-msgstr ""
+msgstr "Pacificlo tiny"
 
 #. description of font in fonts/pacificlo_tiny
 #: inkstitch-fonts-metadata.py:152
@@ -424,7 +424,7 @@ msgstr ""
 #. name of font in fonts/roman_ags
 #: inkstitch-fonts-metadata.py:154
 msgid "Roman AGS"
-msgstr ""
+msgstr "Roman AGS"
 
 #. description of font in fonts/roman_ags
 #: inkstitch-fonts-metadata.py:156
@@ -435,7 +435,7 @@ msgstr ""
 #. name of font in fonts/roman_ags_bicolor
 #: inkstitch-fonts-metadata.py:158
 msgid "Roman bicolor AGS"
-msgstr ""
+msgstr "Roman bicolor AGS"
 
 #. description of font in fonts/roman_ags_bicolor
 #: inkstitch-fonts-metadata.py:160
@@ -467,7 +467,7 @@ msgstr ""
 #. name of font in fonts/sortefaxXL
 #: inkstitch-fonts-metadata.py:170
 msgid "Sortefax XL Initials"
-msgstr ""
+msgstr "Sortefax XL Initials"
 
 #. description of font in fonts/sortefaxXL
 #: inkstitch-fonts-metadata.py:172

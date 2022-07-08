@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2022-07-08 15:02+0000\n"
-"PO-Revision-Date: 2022-07-08 15:03\n"
+"PO-Revision-Date: 2022-07-08 18:59\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -2737,7 +2737,7 @@ msgstr "PNG Format, Portable Network Graphics"
 #. description for pyembroidery file format: txt
 #: pyembroidery-format-descriptions.py:88
 msgid "txt Format, Text File"
-msgstr ""
+msgstr "txt Format, Textdatei"
 
 #. description for pyembroidery file format: gcode
 #: pyembroidery-format-descriptions.py:90
@@ -3045,7 +3045,7 @@ msgstr "Garnfarben Verwaltung"
 
 #: inx/inkstitch_auto_run.inx:3 inx/inkstitch_auto_run.inx:24
 msgid "Auto-Route Running Stitch"
-msgstr "Automatische geführter Geradstich"
+msgstr "Automatisch geführter Geradstich"
 
 #: inx/inkstitch_auto_run.inx:10
 msgid "Tools: Stroke"
@@ -3446,15 +3446,15 @@ msgstr "COL Datei mit Ink/Stitch in manuelle Stickpfade konvertieren"
 
 #: inx/inkstitch_input_CSV.inx:3
 msgid "CSV file input"
-msgstr ""
+msgstr "CSV Datei importieren"
 
 #: inx/inkstitch_input_CSV.inx:8
 msgid "Ink/Stitch: Comma-separated values (.csv)"
-msgstr ""
+msgstr "Ink/Stitch: Komma-separierte Werte (.csv)"
 
 #: inx/inkstitch_input_CSV.inx:9
 msgid "convert CSV file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "CSV Datei mit Ink/Stitch in manuelle Stickpfade konvertieren"
 
 #: inx/inkstitch_input_DAT.inx:3
 msgid "DAT file input"
@@ -3650,15 +3650,15 @@ msgstr "JPX Datei mit Ink/Stitch in manuelle Stickpfade konvertieren"
 
 #: inx/inkstitch_input_JSON.inx:3
 msgid "JSON file input"
-msgstr ""
+msgstr "JSON Datei importieren"
 
 #: inx/inkstitch_input_JSON.inx:8
 msgid "Ink/Stitch: Json Export (.json)"
-msgstr ""
+msgstr "Ink/Stitch: Json-Export (.json)"
 
 #: inx/inkstitch_input_JSON.inx:9
 msgid "convert JSON file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "JSON Datei mit Ink/Stitch in manuelle Stickpfade konvertieren"
 
 #: inx/inkstitch_input_KSM.inx:3
 msgid "KSM file input"
@@ -4381,15 +4381,15 @@ msgstr "Design mit Ink/Stitch im SVG-Format speichern"
 
 #: inx/inkstitch_output_TXT.inx:3
 msgid "TXT file output"
-msgstr ""
+msgstr "TXT Datei exportieren"
 
 #: inx/inkstitch_output_TXT.inx:8
 msgid "Ink/Stitch: txt Format, Text File [DEBUG] (.txt)"
-msgstr ""
+msgstr "Ink/Stitch: txt Format, Textdatei [DEBUG] (.txt)"
 
 #: inx/inkstitch_output_TXT.inx:9
 msgid "Save design in TXT format using Ink/Stitch"
-msgstr ""
+msgstr "Design mit Ink/Stitch im TXT-Format speichern"
 
 #: inx/inkstitch_output_U01.inx:3
 msgid "U01 file output"

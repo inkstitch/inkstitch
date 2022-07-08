@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2022-07-08 15:02+0000\n"
-"PO-Revision-Date: 2022-07-08 15:03\n"
+"PO-Revision-Date: 2022-07-08 18:59\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -2738,7 +2738,7 @@ msgstr "Format PNG, Portable Network Graphics"
 #. description for pyembroidery file format: txt
 #: pyembroidery-format-descriptions.py:88
 msgid "txt Format, Text File"
-msgstr ""
+msgstr "Format txt, fichier texte"
 
 #. description for pyembroidery file format: gcode
 #: pyembroidery-format-descriptions.py:90
@@ -3447,15 +3447,15 @@ msgstr "convertir un fichier COL en chemins de points manuels Ink/Stitch"
 
 #: inx/inkstitch_input_CSV.inx:3
 msgid "CSV file input"
-msgstr ""
+msgstr "Importer un ficher CSV"
 
 #: inx/inkstitch_input_CSV.inx:8
 msgid "Ink/Stitch: Comma-separated values (.csv)"
-msgstr ""
+msgstr "Ink/Stitch: Valeurs séparées par des virgules (.csv)"
 
 #: inx/inkstitch_input_CSV.inx:9
 msgid "convert CSV file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "convertir un fichier CSV en chemins de points manuels Ink/Stitch"
 
 #: inx/inkstitch_input_DAT.inx:3
 msgid "DAT file input"
@@ -3651,15 +3651,15 @@ msgstr "convertir un fichier JPX en chemins de points manuels Ink/Stitch"
 
 #: inx/inkstitch_input_JSON.inx:3
 msgid "JSON file input"
-msgstr ""
+msgstr "Importer un fichier JSON"
 
 #: inx/inkstitch_input_JSON.inx:8
 msgid "Ink/Stitch: Json Export (.json)"
-msgstr ""
+msgstr "Ink/Stitch: export Json (.json)"
 
 #: inx/inkstitch_input_JSON.inx:9
 msgid "convert JSON file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "convertir un fichier json en chemins de points manuels Ink/Stitch"
 
 #: inx/inkstitch_input_KSM.inx:3
 msgid "KSM file input"
@@ -4382,15 +4382,15 @@ msgstr "Enregistrez le dessin au format SVG à l'aide d'Ink/Stitch"
 
 #: inx/inkstitch_output_TXT.inx:3
 msgid "TXT file output"
-msgstr ""
+msgstr "Sortie en fichier TXT"
 
 #: inx/inkstitch_output_TXT.inx:8
 msgid "Ink/Stitch: txt Format, Text File [DEBUG] (.txt)"
-msgstr ""
+msgstr "Ink/Stitch: Format txt, fichier texte [DEBUG] (.txt)"
 
 #: inx/inkstitch_output_TXT.inx:9
 msgid "Save design in TXT format using Ink/Stitch"
-msgstr ""
+msgstr "Enregistrer le dessin au format TXT en utilisant Ink/Stitch"
 
 #: inx/inkstitch_output_U01.inx:3
 msgid "U01 file output"
