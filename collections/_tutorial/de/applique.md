@@ -1,14 +1,14 @@
 ﻿---
-permalink: /de/tutorials/applique/
 title: Applikation
+permalink: /de/tutorials/applique/
 last_modified_at: 2022-07-08
-excerpt: "Beispieldatei Applikation"
 language: de
+excerpt: "Beispieldatei Applikation"
 image: "/assets/images/tutorials/samples/Applique Color Change.svg"
 
 tutorial-typ:
   - Beispieldatei
-stichart: 
+stichart:
   - Geradstich
   - Füllstich
   - Satinstich
@@ -16,6 +16,7 @@ techniken:
   - Applikation
 schwierigkeitsgrad: leicht
 ---
+
 ## Schritte
 
 1. Digitalisiere die Platzierungs- und Heftstiche in unterschiedlichen Farben, um einen Stopp an deiner Maschine zu erzwingen.
@@ -36,6 +37,6 @@ schwierigkeitsgrad: leicht
 ## Applikation: Beispieldatei mit Stop Befehlen 
 
 Stop Befehle gehen nicht mit allen Dateiformaten, besonders `*.vp3` sind da anfällig. In diesem Fall die andere Datei mit den Farbwechseln verwenden.
-![Applique Stop](/assets/images/tutorials/samples/Applique Stop.svg) (by Evan West)
+![Applique Stop](/assets/images/tutorials/samples/Applique Stop.svg) (von Evan West)
 
 [Download](/assets/images/tutorials/samples/Applique Stop.svg){: download="Applique-Stop.svg" }
