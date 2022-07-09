@@ -1,7 +1,7 @@
 ---
 permalink: /de/tutorials/resources/inkstitch-logo/
 title: "Ink/Stitch Logo & Branding Guide"
-last_modified_at: 2022-07-09
+last_modified_at: 2022-07-08
 language: de
 excerpt: "Ink/Stitch logo als SVG Datei, digitalisierte Version und Branding-Leitfaden."
 toc: true

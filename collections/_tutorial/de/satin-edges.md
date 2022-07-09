@@ -1,7 +1,7 @@
 ---
 title: Satin Ecken
 permalink: /de/tutorials/satin-edges/
-last_modified_at: 2020-10-04
+last_modified_at: 2022-07-08
 language: de
 excerpt: "Beispieldatei für Satin-Ecken"
 image: "/assets/images/tutorials/tutorial-preview-images/satin-edges.png"

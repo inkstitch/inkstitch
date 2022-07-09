@@ -1,7 +1,7 @@
 ---
 title: Zugausgleich
 permalink: /de/tutorials/push-pull-compensation/
-last_modified_at: 2018-05-20
+last_modified_at: 2022-07-08
 language: de
 excerpt: Zugausgleich bei Füllstichen
 image: /assets/images/tutorials/embroidery/push-pull-effect.svg
