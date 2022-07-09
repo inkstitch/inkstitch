@@ -1,4 +1,4 @@
-﻿---
+---
 permalink: /de/tutorials/autoroute_life_flower/
 title: "Life Flower "
 language: de
