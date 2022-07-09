@@ -9,6 +9,7 @@ tutorial-typ:
   - Beispieldatei
 stichart: 
   - Geradstich
+  - Mehrfach-Geradstich
 techniken:
 schwierigkeitsgrad: 
   - leicht
@@ -25,18 +26,15 @@ Und alles mit geringem Aufwand....
 
 in dem svg [Download](/assets/images/tutorials/samples/autoroute_unicorn.svg){: download="autoroute_unicorn.svg" } findest du alle Arbeitsschritte:
 
-
 - Image (Bild) : Bild mit dem man startet
-
 
 - Step 1 (Schritt 1): Vektorisierung des Startbildes mittels `Pfad > Bitmap nachzeichnen` 
 
-
 Hier stellt man die Parameter ein :
 
-![Paramètres](/assets/images/tutorials/autoroute/autoroute_unicorn_parameters.jpg)
+![Parameter](/assets/images/tutorials/autoroute/autoroute_unicorn_parameters.jpg)
 
-Das allerwichtigste ist bei der Auswahl des **Erkennungsmodus** die Option **Strichzeichnung vektorisieren(autotrace)** 
+Das allerwichtigste ist bei der Auswahl des `Erkennungsmodus` die Wahl der Option `Strichzeichnung vektorisieren(autotrace)` 
 
 - Step 2 (Schritt 2): Optimierung der Pfade für die Stickerei
   - `Pfad > Zerlegen` 
@@ -48,12 +46,9 @@ Das allerwichtigste ist bei der Auswahl des **Erkennungsmodus** die Option **Str
   - Festlegen der Stickparameter mittels `Erweiterungen > Ink/Stitch  > Parameter`. 
   - Dies ist der Zeitpunkt, um die Länge des Stichs zu wählen und ob man einen Mehrfachgeradstich wünscht oder nicht
 
-
-
 Nun sieht man in der Simulation sehr viele Sprungstiche.
 
 ![Sauts de fil](/assets/images/tutorials/autoroute/autoroute_unicorn_embroidery_params.jpg)
-
 
 - Step 4 (Schritt 4)
    Ausführung der automatischen Anordnung von Geradstichen nach Auswahl aller Pfade
@@ -75,10 +70,6 @@ die noch nützlicher sein können, als ihr Name vermuten lässt, um das Bild zu 
 
 Eine Vereinfachung der Pfade, kann auch eine gute Idee sein.
 
-
 ![SVG](/assets/images/tutorials/samples/autoroute_unicorn.svg)
-
-
-
 
 [Download](/assets/images/tutorials/samples/autoroute_unicorn.svg){: download="autoroute_unicorn.svg" }
