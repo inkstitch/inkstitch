@@ -16,7 +16,7 @@ techniken:
   - Free Standing Lace
 schwierigkeitsgrad:
 ---
-## Instructions
+## Anleitung
 
 1. Bei Free Standing Lace (FSL) werden die Bereiche, die traditionell verfüllt werden, in 2 Schichten mit entgegengesetzten Winkeln verfüllt.  Zum Beispiel hätte eine Füllung den Winkel von 0 Grad und die zweite Füllung einen Winkel von 90 Grad.
 2. Experimentiere mit verschiedenen Dichtegraden und Stichwinkeln, um verschiedene Looks und Effekte zu erzielen.
@@ -26,7 +26,7 @@ schwierigkeitsgrad:
 6. Viel Spaß mit deinem neuen FSL-Ornament.
 
 ## Free Standing Lace (FSL) - Butterfly 
-(by Evan West)
+(von Evan West)
 ![FSL Schmetterling](/assets/images/tutorials/samples/Bfly FSL.svg)
 
 [Download](/assets/images/tutorials/samples/Bfly FSL.svg){: download="Bfly-FSL.svg" }

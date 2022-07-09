@@ -10,7 +10,7 @@ tutorial-typ:
 stichart:
   - Ripple Stich
   - Satinstich
-  - Mehrfachgeradstich
+  - Mehrfach-Geradstich
 techniken:
 field-of-use:
 schwierigkeitsgrad:
@@ -21,8 +21,8 @@ schwierigkeitsgrad:
 ![Gestickt](/assets/images/tutorials/tutorial-preview-images/ripple-iris.jpg)
 
 - Blütenblätter sind einfache Rippelstiche, die auf Pfade mit zwei Unterpfaden angewendet wurden.
-- Kelchblätter sind Bohnenstich-Rippel, die auf Pfade mit zwei Unterpfaden angewendet wurden.
-- Die Umrisse der Blütenblätter sind mit Bohnenstich gestickt.
+- Kelchblätter sind Dreifach-Geradstich-Rippel, die auf Pfade mit zwei Unterpfaden angewendet wurden.
+- Die Umrisse der Blütenblätter sind mit Dreifach-Geradstich gestickt.
 - Der Stiel ist eine geteilte Satinsäule.
 - Der Schriftzug ist ein einfacher Rippel-Stich, der auf Pfade mit zwei Unterpfaden angewendet wurde.
 
