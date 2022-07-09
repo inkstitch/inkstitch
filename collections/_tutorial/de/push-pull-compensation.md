@@ -1,4 +1,4 @@
-﻿---
+---
 title: Zugausgleich
 permalink: /de/tutorials/push-pull-compensation/
 last_modified_at: 2018-05-20
