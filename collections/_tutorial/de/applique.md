@@ -27,15 +27,15 @@ schwierigkeitsgrad: leicht
 8. Starte die Maschine wieder und lass sie den Rest des Musters fertig nähen. Der applizierte Teil ist jetzt fertig.
 
 
-## Applikation: Beispieldatei mit Farbwechseln (by Evan West)
+## Applikation: Beispieldatei mit Farbwechseln
 
-![Applique Color Change](/assets/images/tutorials/samples/Applique Color Change.svg)
+![Applique Color Change](/assets/images/tutorials/samples/Applique Color Change.svg) (by Evan West)
 
 [Download](/assets/images/tutorials/samples/Applique Color Change.svg){: download="Applique-Color-Change.svg" }
 
-## Applikation: Beispieldatei mit Stop Befehlen (by Evan West)
+## Applikation: Beispieldatei mit Stop Befehlen 
 
 Stop Befehle gehen nicht mit allen Dateiformaten, besonders `*.vp3` sind da anfällig. In diesem Fall die andere Datei mit den Farbwechseln verwenden.
-![Applique Stop](/assets/images/tutorials/samples/Applique Stop.svg)
+![Applique Stop](/assets/images/tutorials/samples/Applique Stop.svg) (by Evan West)
 
 [Download](/assets/images/tutorials/samples/Applique Stop.svg){: download="Applique-Stop.svg" }
