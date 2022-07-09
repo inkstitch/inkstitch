@@ -18,7 +18,7 @@ techniken:
 field-of-use:
 schwierigkeitsgrad: 
 ---
-## Fransen Example
+## Fransen Beispieldatei
  (von Evan West)
 ![Fringe Example](/assets/images/tutorials/samples/Fringe Example.svg)
 
