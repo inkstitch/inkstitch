@@ -85,7 +85,7 @@ Die Glyphenebenendatei aus der heruntergeladenen Schriftartdatei erstellen
 
     Setze mindestens den Em-Wert auf die richtige Größe
 
-  7. Über `Erweiterungen > Typhografie > Konvertiere SVG-Schrift zu Glyph-Ebenen...` lassen sich die gewünschten Glyphenebenen erstellen
+  7. Über `Erweiterungen > Typografie > Konvertiere SVG-Schrift zu Glyph-Ebenen...` lassen sich die gewünschten Glyphenebenen erstellen
 
      ![Convert](/assets/images/fonts/augusa_tutorial/de_convert.png)
 

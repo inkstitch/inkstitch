@@ -1,4 +1,4 @@
----
+﻿---
 title: Free Standing Lace - Schmetterling
 permalink: /de/tutorials/fsl/
 last_modified_at: 2018-08-05
@@ -18,15 +18,15 @@ schwierigkeitsgrad:
 ---
 ## Instructions
 
-1. For free standing lace, the areas that would be for traditional fills are going to be for 2 layers of loose fill with opposing angles.  For instance, one loose fill would have 0 degree angle and the second layer would have 90 degree angle.
-2. Experiment with different density levels and stitch angles to attach different looks and affects.
-3. For detail work and outline work, use a decent size satin stitch.  Satin stitch outlines are required as that helps "seal" the edges and keep the design together after the solvy stabilizer is removed.
-4. For the actual embroidery, use solvy and I prefer heavy weight solvy, usually with two layers of stabilizer. Depending on the brand, may still have to use more even with it being heavy weight. Just have to experiement to find out what is needed.
-5. Following the instructions on the stabilizer for removal.  I tend to like to have a little of the stabilizer left and to try not to remove all of it.  This allows for some stiffness to remain in the finished product.
-6. Enjoy your new FSL ornament.
+1. Bei Free Standing Lace (FSL) werden die Bereiche, die traditionell verfüllt werden, in 2 Schichten mit entgegengesetzten Winkeln verfüllt.  Zum Beispiel hätte eine Füllung den Winkel von 0 Grad und die zweite Füllung einen Winkel von 90 Grad.
+2. Experimentiere mit verschiedenen Dichtegraden und Stichwinkeln, um verschiedene Looks und Effekte zu erzielen.
+3. Verwende für Detail- und Konturenarbeiten einen Satinstich in angemessener Größe.  Satinstiche sind wichtig, da sie die Kanten "versiegeln" und das Design zusammenhalten, wenn das Vlies entfernt wird.
+4. Für die eigentliche Stickerei verwendest du wasserlösliches Vlies, dickes Vlies ist zu bevorzugen. Besonders einfach geht es mit textilähnlichem Vlies, normalerweise reichen zwei Lagen. Je nach Marke kann es sein, dass du noch mehr verwenden musst, auch wenn es teuer ist. Du musst einfach experimentieren, um herauszufinden, was nötig ist.
+5. Befolge die Anweisungen des Herstellers zum Entfernen. Man kann einen kleinen Teil des Vlies übrig zu lassen und es nicht ganz entfernen. So bleibt eine gewisse Steifigkeit im fertigen Produkt erhalten.
+6. Viel Spaß mit deinem neuen FSL-Ornament.
 
-## Free Standing Lace (FSL) - Butterfly (by Evan West)
-
-![Applique Color Change](/assets/images/tutorials/samples/Bfly FSL.svg)
+## Free Standing Lace (FSL) - Butterfly 
+(by Evan West)
+![FSL Schmetterling](/assets/images/tutorials/samples/Bfly FSL.svg)
 
 [Download](/assets/images/tutorials/samples/Bfly FSL.svg){: download="Bfly-FSL.svg" }

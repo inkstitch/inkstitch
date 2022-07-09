@@ -1,9 +1,9 @@
----
+﻿---
 title: Monogram
 permalink: /de/tutorials/monogram/
-last_modified_at: 2018-08-01
+last_modified_at: 2022-07-09
 language: de
-excerpt: "Monogram Frame Example"
+excerpt: "Monogram Rahmen Beispieldatei"
 image: "/assets/images/tutorials/samples/Monogram Frame Example.svg"
 
 tutorial-typ:
@@ -14,13 +14,13 @@ stichart:
 techniken:
 schwierigkeitsgrad:
 ---
-## Instructions
+## Anweisungen
 
-1.  Frame intended to have monogram letters to be sandwiched between both frames. The monogram can be longer then the frames if desired.
-2.  Can use both frames, or delete either one and just use it as a top or bottom frame.
+1.  Der Rahmen soll mit Monogrammbuchstaben versehen werden, die zwischen den beiden Rahmen positioniert werden. Schicke Buchstaben dazu kannst du in der [Schrift-Bibiothek](https://inkstitch.org/de/fonts/font-library/) finden. Das Monogramm kann länger sein als die Rahmen, falls gewünscht.
+2.  Du kannst beide Rahmen verwenden oder einen der beiden Rahmen löschen und nur den oberen oder unteren Rahmen verwenden.
 
-## Monogram Frame Example (by Evan West)
-
-![Applique Color Change](/assets/images/tutorials/samples/Monogram Frame Example.svg)
+## Monogramm-Rahmen Beispieldatei 
+(von Evan West)
+![Monogram Frame Example](/assets/images/tutorials/samples/Monogram Frame Example.svg)
 
 [Download](/assets/images/tutorials/samples/Monogram Frame Example.svg){: download="Monogram-Frame-Example.svg" }

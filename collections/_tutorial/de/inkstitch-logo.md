@@ -1,9 +1,9 @@
----
+﻿---
 permalink: /de/tutorials/resources/inkstitch-logo/
 title: "Ink/Stitch Logo & Branding Guide"
-last_modified_at: 2018-06-20
+last_modified_at: 2022-07-09
 language: de
-excerpt: "Ink/Stitch logo as SVG file, digitized version and branding guide."
+excerpt: "Ink/Stitch logo als SVG Datei, digitalisierte Version und Branding-Leitfaden."
 toc: true
 image: /assets/images/tutorials/logo/InkStitch_Multi_Color.svg
 
@@ -24,62 +24,62 @@ schwierigkeitsgrad:
 <div class="feature__wrapper">
   <div class="feature__item">
     <div class="archive__item-teaser">
-      <img src="/assets/images/tutorials/logo/inkstitch_colour_logo.svg" alt="Ink/Stitch official colour logo">
+      <img src="/assets/images/tutorials/logo/inkstitch_colour_logo.svg" alt="Ink/Stitch offizielles Farblogo">
     </div>
     <div class="archive__item-body">
       <div class="archive__item-excerpt">
-        <p><a href="/assets/images/tutorials/logo/inkstitch_colour_logo.svg">Ink/Stitch official colour logo</a></p>
+        <p><a href="/assets/images/tutorials/logo/inkstitch_colour_logo.svg">Ink/Stitch offizielles Farblogo</a></p>
       </div>
     </div>
   </div>
   <div class="feature__item">
     <div class="archive__item-teaser">
-      <img src="/assets/images/tutorials/logo/inkstitch_official_logo.svg" alt="Ink/Stitch official monochrome logo">
+      <img src="/assets/images/tutorials/logo/inkstitch_official_logo.svg" alt="Ink/Stitch offizielles monochomes Logo">
     </div>
     <div class="archive__item-body">
       <div class="archive__item-excerpt">
-        <p><a href="/assets/images/tutorials/logo/inkstitch_official_logo.svg">Ink/Stitch official monochrome logo</a></p>
+        <p><a href="/assets/images/tutorials/logo/inkstitch_official_logo.svg">Ink/Stitch offizielles monochomes Logo</a></p>
       </div>
     </div>
   </div>
 </div>
 
-## Digitized Ink/Stitch Logo
+## Digititalisiertes Ink/Stitch Logo
 
 <div class="feature__wrapper">
   <div class="feature__item">
     <div class="archive__item-teaser">
-      <img src="/assets/images/tutorials/logo/InkStitch_Multi_Color.svg" alt="Ink/Stitch multi color">
+      <img src="/assets/images/tutorials/logo/InkStitch_Multi_Color.svg" alt="Ink/Stitch Mehrfarbig">
     </div>
     <div class="archive__item-body">
       <div class="archive__item-excerpt">
-        <p><a href="/assets/images/tutorials/logo/InkStitch_Multi_Color.svg">Ink/Stitch multi color</a></p>
+        <p><a href="/assets/images/tutorials/logo/InkStitch_Multi_Color.svg">Ink/Stitch Mehrfarbig</a></p>
       </div>
     </div>
   </div>
   <div class="feature__item">
     <div class="archive__item-teaser">
-      <img src="/assets/images/tutorials/logo/InkStitch_1_Color.svg" alt="Ink/Stitch 1 color">
+      <img src="/assets/images/tutorials/logo/InkStitch_1_Color.svg" alt="Ink/Stitch Einfarbig">
     </div>
     <div class="archive__item-body">
       <div class="archive__item-excerpt">
-        <p><a href="/assets/images/tutorials/logo/InkStitch_1_Color.svg">Ink/Stitch 1 color</a></p>
+        <p><a href="/assets/images/tutorials/logo/InkStitch_1_Color.svg">Ink/Stitch Einfarbig</a></p>
       </div>
     </div>
   </div>
   <div class="feature__item">
     <div class="archive__item-teaser">
-      <img src="/assets/images/tutorials/logo/InkStitch_1_Color_Top_Left_Origin.svg" alt="Ink/Stitch 1 color top left origin">
+      <img src="/assets/images/tutorials/logo/InkStitch_1_Color_Top_Left_Origin.svg" alt="Ink/Stitch Einfarbig top left origin">
     </div>
     <div class="archive__item-body">
       <div class="archive__item-excerpt">
-        <p><a href="/assets/images/tutorials/logo/InkStitch_1_Color_Top_Left_Origin.svg">Ink/Stitch 1 color top left origin</a></p>
+        <p><a href="/assets/images/tutorials/logo/InkStitch_1_Color_Top_Left_Origin.svg">Ink/Stitch Einfarbig top left origin</a></p>
       </div>
     </div>
   </div>
 </div>
 
-## Ink/Stitch Branding Quickguide
+## Ink/Stitch Branding-Leitfaden Kurzanleitung
 
 ![1 Color](/assets/images/tutorials/logo/inkstitch_branding_quickguide.svg)
 

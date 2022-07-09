@@ -1,9 +1,9 @@
----
+﻿---
 title: Fransen
 permalink: /de/tutorials/fringe/
-last_modified_at: 2018-05-10
+last_modified_at: 2022-07-09
 language: de
-excerpt: "Fringe example file"
+excerpt: "Beispieldatei für Fransen"
 image: "/assets/images/tutorials/samples/Fringe Example.svg"
 
 tutorial-typ:
@@ -14,12 +14,12 @@ stichart:
   - Manueller Stich
   - Füllstich
 techniken:
-  - Fringe
+  - Fransen
 field-of-use:
 schwierigkeitsgrad: 
 ---
-## Fringe Example (by Evan West)
-
+## Fransen Example
+ (von Evan West)
 ![Fringe Example](/assets/images/tutorials/samples/Fringe Example.svg)
 
 [Download](/assets/images/tutorials/samples/Fringe Example.svg){: download="Fringe-Example.svg" }

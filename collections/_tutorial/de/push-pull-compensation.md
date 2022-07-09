@@ -1,9 +1,9 @@
----
+﻿---
 title: Zugausgleich
 permalink: /de/tutorials/push-pull-compensation/
 last_modified_at: 2018-05-20
 language: de
-excerpt: Push/Pull Compensation
+excerpt: Zugausgleich bei Füllstichen
 image: /assets/images/tutorials/embroidery/push-pull-effect.svg
 
 tutorial-typ:
@@ -14,26 +14,27 @@ schwierigkeitsgrad:
 
 classes: wide
 ---
-## Push/Pull Effect
+## Push/Pull-Effekt 
 
-You have carefuly planned and digitized your design. But when you finally send your project to your machine to see the result, there might be a dissappointment. You notice gaps between the color blocks and everything seems to be distorted. This happens, because each stitch will distort the fabric. There will be some shrinking (pulling) and expansion (pushing) going on. The pulling will occur on the sides with needle penetrations, while the pushing will be on the opposite sites.
+Du hast deinen Entwurf sorgfältig geplant und digitalisiert. Aber wenn du dein Projekt schließlich an deine Maschine schickst, um das Ergebnis zu sehen, könnte es eine Enttäuschung geben. Du bemerkst Lücken zwischen den Farbblöcken und alles scheint verzerrt zu sein. Das passiert, weil jeder Stich den Stoff verzerrt. Er schrumpft (zieht/pull) und dehnt sich aus (drückt/push). Das Ziehen tritt an den Seiten auf, in die die Nadel eindringt, während das Drücken an den gegenüberliegenden Seiten auftritt.
 
 ![Push/Pull Effect](/assets/images/tutorials/embroidery/push-pull-effect.svg)
 
-## Push/Pull Compensation
+## Zugausgleich
 
-Plan the sizes accordingly to the distortion. If you want to create the rectangle on the left side, you have to leave a gap on both sides where the fabric gets pushed and overlap on the other sides to compensate the pull effect.
+Plane die Größen entsprechend der zu erwartenden Verzerrung. Wenn du das Rechteck auf der linken Seite erstellen willst, musst du auf beiden Seiten eine Lücke lassen, wo der Stoff gedrückt wird, und auf den anderen Seiten überlappen, um den Zug-Effekt auszugleichen.
 
 ![Push/Pull Compensation](/assets/images/tutorials/embroidery/push-pull-compensation.svg)
 
-For the actual amount of compensation, there is a lot of things to consider:
+Für die tatsächliche mm-Zahl des Zugausgleichs gibt es eine Reihe von Faktoren zu berücksichtigen:
 
-* fabric
-* stabilizer
-* design size
-* stitch type/length
-* underlay stitches
-* hoop(-ing)
-* machine speed
+* Stoff
+* Vlies
+* Größe der Form
+* Stichart/-länge
+* Unterlegstiche
+* Stickrahmen
+* Einspannen ind den Stickrahmen
+* Maschinengeschwindigkeit
 
-It might need a lot of testing to get the right compensation. Best way is to test sew with same conditions as you planned your finished design and finetune your shapes after you've seen the result.
+Um das richtige Gleichgewicht zu finden, musst du möglicherweise viele Versuche unternehmen. Versuche am besten, unter denselben Bedingungen zu nähen, unter denen dein fertiges Design gestickt werden wird, und passe die Formen an, nachdem du das Ergebnis in einem Probestick begutachtet hast.
