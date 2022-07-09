@@ -1,4 +1,4 @@
-﻿---
+---
 title: Satin Ecken
 permalink: /de/tutorials/satin-edges/
 last_modified_at: 2020-10-04
