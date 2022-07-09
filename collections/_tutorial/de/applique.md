@@ -5,7 +5,6 @@ last_modified_at: 2022-07-08
 language: de
 excerpt: "Beispieldatei Applikation"
 image: "/assets/images/tutorials/samples/Applique Color Change.svg"
-
 tutorial-typ:
   - Beispieldatei
 stichart:
