@@ -45,3 +45,25 @@ You have the following display options:
 * **Needle points** displays needle points if enabled
 
 {% include folder-galleries path="stitch-plan/" captions="1:Stitch plan beside canvas;2:Layer visibility set to hidden;3:Layer visibility set to lower opacity;4:Needle points enabled | disabled" caption="<i>Example image from [OpenClipart](https://openclipart.org/detail/334596)</i>" %}
+
+## Undo Stitch Plan
+
+Using a stitch plan overlay with hidden or lower density elements helps to get a visual idea of how the design will look in the end.
+Sometimes it can be helpful to keep the stitch plan as a visual help while working on new elements.
+But for the export or for changes at existing elements during the workflow you will need the original elements back.
+Delete the stitch plan, unhide original elements or reset the opacity to normal isn't a lot of fun.
+This extension is meant to help with this workflow.
+
+Run `Extensions > Ink/Stitch > Visualize and Export > Undo Stitch Plan Preview`
+
+## Density Map
+
+* Select objects if you want the density map only for some objects, otherwise run without any selection
+* Run `Extensions > Ink/Stitch > Visualize and Export > Density Map`
+* Set color ranges and apply
+* Inspect (zoom in)
+* Undo with `Ctrl + Z`
+
+This will display red, yellow and green dots on top of your elements so you can identify areas of high density easily.
+
+
