@@ -12,7 +12,7 @@ stichart:
   - Füllstich
   - Satinstich
 techniken:
-  - Applique
+  - Applikation
 schwierigkeitsgrad: leicht
 ---
 ## Schritte
@@ -35,7 +35,7 @@ schwierigkeitsgrad: leicht
 
 ## Applikation: Beispieldatei mit Stop Befehlen (by Evan West)
 
-Stop Befehle gehen nicht mit allen Dateiformaten, besonders `*.vp3` sind da anfällig. In diesem Fall das andere File mit den Farbwechseln verwenden.
+Stop Befehle gehen nicht mit allen Dateiformaten, besonders `*.vp3` sind da anfällig. In diesem Fall die andere Datei mit den Farbwechseln verwenden.
 ![Applique Stop](/assets/images/tutorials/samples/Applique Stop.svg)
 
 [Download](/assets/images/tutorials/samples/Applique Stop.svg){: download="Applique-Stop.svg" }

@@ -1,7 +1,7 @@
 ---
 title: "Schrift-Bibliothek"
 permalink: /de/fonts/font-library/
-last_modified_at: 2022-05-24
+last_modified_at: 2022-07-09
 toc: false
 ---
 {% include font_list %}
