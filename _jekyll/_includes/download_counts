@@ -6,7 +6,7 @@
 {%- assign linuxtarxz = 0 -%}
 {%- assign windows = 0 -%}
 {%- assign osx = 0 -%}
-{%- assign sierra = 0 -%}
+{%- assign catalina = 0 -%}
 
 {% for asset in assets %}
 
@@ -27,12 +27,12 @@
 {%- assign osx = osx | plus: asset.download_count %}
 {%- endif -%}
 
-{%- if asset.name contains "windows" -%}
-{%- assign windows = windows | plus: asset.download_count %}
+{%- if asset.name contains "catalina" -%}
+{%- assign catalina = catalina | plus: asset.download_count %}
 {%- endif -%}
 
-{%- if asset.name contains "sierra" -%}
-{%- assign sierra = sierra | plus: asset.download_count %}
+{%- if asset.name contains "windows" -%}
+{%- assign windows = windows | plus: asset.download_count %}
 {%- endif -%}
 
 {% endfor %}
@@ -47,7 +47,7 @@
   <th>Linux</th>
   <th style="color: grey; font-style: italic;">(DEB&nbsp;|&nbsp;RPM&nbsp;|&nbsp;SH&nbsp;|&nbsp;TAR.XZ)</th>
   <th>macOS</th>
-  <th style="color: grey; font-style: italic;">(Monterey +&nbsp;|&nbsp;High Sierra +)</th>
+  <th style="color: grey; font-style: italic;">(Monterey +&nbsp;|&nbsp;Catalina +)</th>
   <th>Windows</th>
 </tr>
 <thead>
@@ -56,7 +56,7 @@
     <td>{{ linux }}</td>
     <td style="color: grey; font-style: italic;">({{ linuxdeb }} | {{ linuxrpm }} | {{ linuxsh }} | {{ linuxtarxz }})</td>
     <td>{{ osx }}</td>
-    <td style="color: grey; font-style: italic;">({{ osx | minus: sierra }} | {{ sierra }})</td>
+    <td style="color: grey; font-style: italic;">({{ osx | minus: catalina }} | {{ catalina }})</td>
     <td>{{ windows }}</td>
   </tr>
 
