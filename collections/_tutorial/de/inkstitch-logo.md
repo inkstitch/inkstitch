@@ -1,4 +1,4 @@
-﻿---
+---
 permalink: /de/tutorials/resources/inkstitch-logo/
 title: "Ink/Stitch Logo & Branding Guide"
 last_modified_at: 2022-07-09
