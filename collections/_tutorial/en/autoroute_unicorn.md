@@ -14,14 +14,8 @@ techniques:
 field-of-use:
 user-level:
 ---
-
-
-
-
-
-
-
 ## Running stitch Unicorn
+
 We start with this image , downloaded as a png from https://freesvg.org/1539642047 :
 <a title="Public Domain" href="https://freesvg.org/1539642047"><img width="512" alt="Unicorn" src="https://freesvg.org/img/1539642047.png"></a>
 
@@ -33,14 +27,9 @@ with very few effort....
 
 The svg file contains all the steps
 
-
-
-
 - Image Layer: starting image
 
-
 - Step 1 Layer :Vectorize with `Path/ Trace bitmap` 
-
 
 These parameters were applied
 
@@ -52,20 +41,15 @@ Very important: chose **"centerline tracing"** as **detection mode**
   - `Path/ Split Path` 
   -   `Extensions > Ink/Stitch  > Troubleshoot > Cleanup document` to remove the very short paths ( 20px was chosen)
 
- 
 - Step 3 Layer: Embroidery parameters
   - Select all paths,and set stroke style to any dashed
   -  `Extensions > Ink/Stitch  > Params`. 
 
 Chose running stitch length, and bean stitch number of  repeats.
 
-
-
-
 You will see a lot of thread jumps.
 
 ![Jumps](/assets/images/tutorials/autoroute/autoroute_unicorn_embroidery_params_en.jpg)
-
 
 - Step 4 Layer
   
@@ -77,7 +61,6 @@ You will see a lot of thread jumps.
    
    ![No Jump](/assets/images/tutorials/autoroute/autoroute_unicorn_embroidery_preview.jpg)
  
-
 Remark: The starting image is very high quality. When it is not as good, before using the Auto-Route extension, you may wish to use these  Ellenn Wasbo's 
 extensions  (https://inkscape.org/cs/~EllenWasbo/resources/)
 - remove duplicate nodes
@@ -89,8 +72,5 @@ You may also benefit from simpliflying the paths.
 
 
 ![SVG](/assets/images/tutorials/samples/autoroute_unicorn.svg)
-
-
-
 
 [Télécharger](/assets/images/tutorials/samples/autoroute_unicorn.svg){: download="autoroute_unicorn.svg" }

@@ -11,7 +11,6 @@ stichart:
   - Ripple Stich
   - Kurvenfüllung
 techniken:
-field-of-use:
 schwierigkeitsgrad: 
   - mittel
 ---

@@ -13,6 +13,7 @@ stichart:
 techniken:
 schwierigkeitsgrad: 
   - leicht
+---
 
 ## Einhorn mittels Geradstich
 Starte mit diesem Bild, lade es als `.png` herunter [Einhorn](https://freesvg.org/1539642047)

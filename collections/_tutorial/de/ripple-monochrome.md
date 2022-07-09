@@ -1,7 +1,7 @@
-﻿---
+---
 permalink: /de/tutorials/ripple-monochrome/
 title: "Einfarbige Blume mit Konturfüllung und Ripple Stich"
-language: fr
+language: de
 last_modified_at: 2022-07-09
 excerpt: "Beispieldatei Einfarbige Blume"
 image: "/assets/images/tutorials/tutorial-preview-images/ripple_monochrome.jpg"
@@ -11,7 +11,6 @@ stichart:
   - Ripple-Stich
   - Konturfüllung
 techniken:
-field-of-use:
 schwierigkeitsgrad: 
 ---
 
@@ -27,15 +26,12 @@ schwierigkeitsgrad:
 - Step 3 (Schritt 3)
    - `Pfad >Zerlegen` wurde auf das Blütenblatt angewendet, dann wurden die Pfade paarweise neu kombiniert, um die 9 Blütenblätter zu erhalten, dann einzeln wieder zusammengeführt.
 - Step 4 (Schritt 4)
-  - Alle Blütenblätter werden auf einfachen Ripple-Stich eingestellt. 
-   
-   
+  - Alle Blütenblätter werden auf einfachen Ripple-Stich eingestellt.
+
 Alle Stiche sind auf 3 mm eingestellt.  Das Stickgarn ist ein perlgrauer Rayon.
 
 Hinweis: Die Zwischenebenen dienen nur zu Demonstrationszwecken.
 
 ![SVG](/assets/images/tutorials/samples/ripple_monochrome.svg)
-
-
 
 [Download](/assets/images/tutorials/samples/ripple_monochrome.svg){: download="ripple_monochrome.svg" }

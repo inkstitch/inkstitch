@@ -1,4 +1,4 @@
-﻿---
+---
 permalink: /de/tutorials/ripple-lady/
 title: "Frau Tinkerbell als Ripple-Stickerei"
 language: de
@@ -12,7 +12,6 @@ stichart:
   - Muster-Stich
   - Mehrfach-Geradstich
 techniken:
-field-of-use:
 schwierigkeitsgrad: 
 ---
 
