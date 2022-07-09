@@ -1,4 +1,4 @@
-﻿---
+---
 title: Applikation
 permalink: /de/tutorials/applique/
 last_modified_at: 2022-07-08
