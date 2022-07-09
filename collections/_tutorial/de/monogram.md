@@ -1,4 +1,4 @@
-﻿---
+---
 title: Monogram
 permalink: /de/tutorials/monogram/
 last_modified_at: 2022-07-09
