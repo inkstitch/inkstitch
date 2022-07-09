@@ -37,6 +37,3 @@ Dies ist das Ergebnis der Stickerei:
 Der Modus `Helligkeitsschwellenwert` wurde mit einem einfachen Laufstich gestickt, während der Modus `Stichzeichnung vektorisieren (autotrace)` mit einem Mehrfach-Geradstich gestickt wurde.
 
 Die Option `Stichzeichnung vektorisieren (autotrace)` vermeidet alle doppelten Pfade und ergibt ein viel klareres Stickbild.
-
-
-  
