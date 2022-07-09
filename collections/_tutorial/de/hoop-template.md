@@ -1,4 +1,4 @@
-﻿---
+---
 title: Stickrahmen Vorlage
 permalink: /de/tutorials/resources/hoop-template/
 last_modified_at: 2018-05-20
