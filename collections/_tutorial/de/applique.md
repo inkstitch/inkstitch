@@ -5,6 +5,7 @@ last_modified_at: 2022-07-08
 excerpt: "Beispieldatei Applikation"
 language: de
 image: "/assets/images/tutorials/samples/Applique Color Change.svg"
+
 tutorial-typ:
   - Beispieldatei
 stichart: 
@@ -25,7 +26,6 @@ schwierigkeitsgrad: leicht
 6. Beginne mit dem Nähen des ersten Heftstichs.  Halte die Maschine danach an.
 7. Schneide das überschüssige Material des Heftstichs vollständig ab.  Verwende am besten eine Applizierschere, falls vorhanden.
 8. Starte die Maschine wieder und lass sie den Rest des Musters fertig nähen. Der applizierte Teil ist jetzt fertig.
-
 
 ## Applikation: Beispieldatei mit Farbwechseln
 
