@@ -80,7 +80,9 @@ app.on('activate', () => {
 
 ipcMain.on('save-pdf', function (event, pageSize) {
     mainWindow.webContents.printToPDF({"pageSize": pageSize}, function(error, data) {
-        dialog.showSaveDialog(mainWindow, {"defaultPath": "inkstitch.pdf"}, function(filename, bookmark) {
+        dialog.showSaveDialog(mainWindow, {"defaultPath": "inkstitch.pdf",
+                                           "filters": [{ name: 'PDF', extensions: ['pdf'] }]
+                                          }, function(filename, bookmark) {
             if (typeof filename !== 'undefined')
                 fs.writeFileSync(filename, data, 'utf-8');
         })
