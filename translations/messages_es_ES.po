@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2022-07-08 15:02+0000\n"
-"PO-Revision-Date: 2022-07-09 02:22\n"
+"PO-Revision-Date: 2022-07-10 02:53\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -44,7 +44,7 @@ msgstr "Brock Script es una fuente manuscrita de columna satinada decorativa de 
 #. name of font in fonts/abecedaire
 #: inkstitch-fonts-metadata.py:6
 msgid "Abécédaire AGS"
-msgstr "Abécédaire AGS"
+msgstr ""
 
 #. description of font in fonts/abecedaire
 #: inkstitch-fonts-metadata.py:8
@@ -65,7 +65,7 @@ msgstr "La \"M\" mayúscula mide 25,3 milímetros de ancho a escala 100%. Se pue
 #. name of font in fonts/amitaclo_small
 #: inkstitch-fonts-metadata.py:14
 msgid "Amitaclo small"
-msgstr "Amitaclo small"
+msgstr ""
 
 #. description of font in fonts/amitaclo_small
 #: inkstitch-fonts-metadata.py:16
@@ -85,7 +85,7 @@ msgstr "Apex Lake es una fuente grande de letras mayúsculas adornadas de un tam
 #. name of font in fonts/aventurina
 #: inkstitch-fonts-metadata.py:22
 msgid "Aventurina"
-msgstr "Aventurina"
+msgstr ""
 
 #. description of font in fonts/aventurina
 #: inkstitch-fonts-metadata.py:24
@@ -168,7 +168,7 @@ msgstr ""
 #. name of font in fonts/dinomouse72
 #: inkstitch-fonts-metadata.py:54
 msgid "DinoMouse72"
-msgstr "DinoMouse72"
+msgstr ""
 
 #. description of font in fonts/dinomouse72
 #: inkstitch-fonts-metadata.py:56
@@ -209,7 +209,7 @@ msgstr ""
 #. name of font in fonts/espresso_tiny
 #: inkstitch-fonts-metadata.py:70
 msgid "Espresso tiny"
-msgstr "Espresso tiny"
+msgstr ""
 
 #. description of font in fonts/espresso_tiny
 #: inkstitch-fonts-metadata.py:72
@@ -259,7 +259,7 @@ msgstr "Adecuada para fuentes pequeñas ( de 6 a 15mm)"
 #. name of font in fonts/glacial_tiny
 #: inkstitch-fonts-metadata.py:90
 msgid "Glacial Tiny 60 AGS"
-msgstr "Glacial Tiny 60 AGS"
+msgstr ""
 
 #. description of font in fonts/glacial_tiny
 #: inkstitch-fonts-metadata.py:92
@@ -269,7 +269,7 @@ msgstr ""
 #. name of font in fonts/grand_hotel_marif
 #: inkstitch-fonts-metadata.py:94
 msgid "Grand Hotel Marif"
-msgstr "Grand Hotel Marif"
+msgstr ""
 
 #. description of font in fonts/grand_hotel_marif
 #: inkstitch-fonts-metadata.py:96
@@ -279,7 +279,7 @@ msgstr ""
 #. name of font in fonts/grandhotel_small
 #: inkstitch-fonts-metadata.py:98
 msgid "Grand Hotel small"
-msgstr "Grand Hotel small"
+msgstr ""
 
 #. description of font in fonts/grandhotel_small
 #: inkstitch-fonts-metadata.py:100
@@ -374,7 +374,7 @@ msgstr "Una fuente básica adecuada para caracteres de tamaño medio. La \"M\", 
 #. name of font in fonts/monicha
 #: inkstitch-fonts-metadata.py:134
 msgid "MONICHA"
-msgstr "Monicha"
+msgstr ""
 
 #. description of font in fonts/monicha
 #: inkstitch-fonts-metadata.py:136
@@ -394,7 +394,7 @@ msgstr "Namskout es una fuente de aplicación grande de un tamaño aproximado de
 #. name of font in fonts/nick_ainley
 #: inkstitch-fonts-metadata.py:142
 msgid "NickAinley"
-msgstr "NickAinley"
+msgstr ""
 
 #. description of font in fonts/nick_ainley
 #: inkstitch-fonts-metadata.py:144
@@ -414,7 +414,7 @@ msgstr "Pacificlo es una pequeña fuente manuscrita de columna satinada de un ta
 #. name of font in fonts/pacificlo_tiny
 #: inkstitch-fonts-metadata.py:150
 msgid "Pacificlo tiny"
-msgstr "Pacificlo tiny"
+msgstr ""
 
 #. description of font in fonts/pacificlo_tiny
 #: inkstitch-fonts-metadata.py:152
@@ -424,7 +424,7 @@ msgstr ""
 #. name of font in fonts/roman_ags
 #: inkstitch-fonts-metadata.py:154
 msgid "Roman AGS"
-msgstr "Roman AGS"
+msgstr ""
 
 #. description of font in fonts/roman_ags
 #: inkstitch-fonts-metadata.py:156
@@ -435,7 +435,7 @@ msgstr ""
 #. name of font in fonts/roman_ags_bicolor
 #: inkstitch-fonts-metadata.py:158
 msgid "Roman bicolor AGS"
-msgstr "Roman bicolor AGS"
+msgstr ""
 
 #. description of font in fonts/roman_ags_bicolor
 #: inkstitch-fonts-metadata.py:160
@@ -467,7 +467,7 @@ msgstr "Fuente adecuada para caracteres pequeños. La \"M\", eme mayúscula, tie
 #. name of font in fonts/sortefaxXL
 #: inkstitch-fonts-metadata.py:170
 msgid "Sortefax XL Initials"
-msgstr "Sortefax XL Initials"
+msgstr ""
 
 #. description of font in fonts/sortefaxXL
 #: inkstitch-fonts-metadata.py:172
@@ -477,7 +477,7 @@ msgstr ""
 #. name of font in fonts/sortefax_medium
 #: inkstitch-fonts-metadata.py:174
 msgid "Sortefax Medium Initials"
-msgstr "Sortefax Medium Initials"
+msgstr ""
 
 #. description of font in fonts/sortefax_medium
 #: inkstitch-fonts-metadata.py:176
@@ -1645,15 +1645,15 @@ msgstr ""
 
 #: lib/extensions/density_map.py:83
 msgid "Red"
-msgstr "Rojo"
+msgstr ""
 
 #: lib/extensions/density_map.py:83
 msgid "Yellow"
-msgstr "Amarillo"
+msgstr ""
 
 #: lib/extensions/density_map.py:83
 msgid "Green"
-msgstr "Verde"
+msgstr ""
 
 #: lib/extensions/density_map.py:87
 #, python-format
@@ -3006,7 +3006,7 @@ msgstr ""
 
 #: inx/inkstitch_apply_threadlist.inx:89
 msgid "COL, INF, EDR"
-msgstr "COL, INF, EDR"
+msgstr ""
 
 #: inx/inkstitch_apply_threadlist.inx:90
 msgid "Select the file and apply. The chosen method is not important for these file types."
@@ -3014,7 +3014,7 @@ msgstr ""
 
 #: inx/inkstitch_apply_threadlist.inx:92
 msgid "TXT"
-msgstr "TXT"
+msgstr ""
 
 #: inx/inkstitch_apply_threadlist.inx:93
 msgid "Import an Ink/Stitch threadlist file (created through the zip export option)."
@@ -3429,7 +3429,7 @@ msgstr "convertir fichero BRO a trayectos Ink/Stitch manuales"
 
 #: inx/inkstitch_input_COL.inx:3
 msgid "COL file input"
-msgstr "Entrada de archivo COL"
+msgstr ""
 
 #: inx/inkstitch_input_COL.inx:8
 msgid "Ink/Stitch: Col Color Format (.col)"
@@ -3501,7 +3501,7 @@ msgstr "convertir fichero DZS a trayectos Ink/Stitch manuales"
 
 #: inx/inkstitch_input_EDR.inx:3
 msgid "EDR file input"
-msgstr "Entrada de archivo EDR"
+msgstr ""
 
 #: inx/inkstitch_input_EDR.inx:8
 msgid "Ink/Stitch: Edr Color Format (.edr)"
@@ -3561,7 +3561,7 @@ msgstr "convertir fichero FXY a trayectos Ink/Stitch manuales"
 
 #: inx/inkstitch_input_GCODE.inx:3
 msgid "GCODE file input"
-msgstr "Entrada de archivo GCODE"
+msgstr ""
 
 #: inx/inkstitch_input_GCODE.inx:8 inx/inkstitch_output_GCODE.inx:8
 msgid "Ink/Stitch: gcode Format, Text File (.gcode)"
@@ -3585,7 +3585,7 @@ msgstr "convertir fichero GT a trayectos Ink/Stitch manuales"
 
 #: inx/inkstitch_input_HUS.inx:3
 msgid "HUS file input"
-msgstr "Entrada de archivo HUS"
+msgstr ""
 
 #: inx/inkstitch_input_HUS.inx:8
 msgid "Ink/Stitch: Husqvarna Embroidery Format (.hus)"
@@ -3609,7 +3609,7 @@ msgstr "convertir fichero INB a trayectos Ink/Stitch manuales"
 
 #: inx/inkstitch_input_INF.inx:3
 msgid "INF file input"
-msgstr "Entrada de archivo INF"
+msgstr ""
 
 #: inx/inkstitch_input_INF.inx:8
 msgid "Ink/Stitch: Inf Color Format (.inf)"
@@ -3801,7 +3801,7 @@ msgstr "convertir fichero PHC a trayectos manuales Ink/Stitch"
 
 #: inx/inkstitch_input_PMV.inx:3
 msgid "PMV file input"
-msgstr "Entrada de archivo PMV"
+msgstr ""
 
 #: inx/inkstitch_input_PMV.inx:8
 msgid "Ink/Stitch: Brother Stitch Format (.pmv)"
@@ -3837,7 +3837,7 @@ msgstr "convertir fichero SHV a trayectos manuales Ink/Stitch"
 
 #: inx/inkstitch_input_SPX.inx:3
 msgid "SPX file input"
-msgstr "Entrada de archivo SPX"
+msgstr ""
 
 #: inx/inkstitch_input_SPX.inx:8
 msgid "Ink/Stitch: Pfaff Embroidery Format (.spx)"
@@ -3933,7 +3933,7 @@ msgstr "convertir fichero XXX a trayectos manuales Ink/Stitch"
 
 #: inx/inkstitch_input_ZHS.inx:3
 msgid "ZHS file input"
-msgstr "Entrada de archivo ZHS"
+msgstr ""
 
 #: inx/inkstitch_input_ZHS.inx:8
 msgid "Ink/Stitch: Zeng Hsing Embroidery Format (.zhs)"
