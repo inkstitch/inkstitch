@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2022-07-08 15:02+0000\n"
-"PO-Revision-Date: 2022-07-10 02:52\n"
+"PO-Revision-Date: 2022-07-11 02:39\n"
 "Last-Translator: \n"
 "Language-Team: Norwegian\n"
 "MIME-Version: 1.0\n"
@@ -34,7 +34,7 @@ msgstr ""
 #. name of font in fonts/Brockscript
 #: inkstitch-fonts-metadata.py:2
 msgid "Brock Script"
-msgstr ""
+msgstr "Brock Script"
 
 #. description of font in fonts/Brockscript
 #: inkstitch-fonts-metadata.py:4
@@ -44,17 +44,17 @@ msgstr ""
 #. name of font in fonts/abecedaire
 #: inkstitch-fonts-metadata.py:6
 msgid "Abécédaire AGS"
-msgstr ""
+msgstr "Abécédaire AGS"
 
 #. description of font in fonts/abecedaire
 #: inkstitch-fonts-metadata.py:8
 msgid "Abécédaire AGS is a crossstitch font of size 14mm. The font can be scaled down to 75% and up to 200%"
-msgstr ""
+msgstr "Abécédaire AGS Er en korssting-skrifttype med en størrelse på 14 mm. Skrifttypen kan bli skalert ned til 75 % og opp til 200 %"
 
 #. name of font in fonts/amitaclo
 #: inkstitch-fonts-metadata.py:10
 msgid "Amitaclo"
-msgstr ""
+msgstr "Amitaclo"
 
 #. description of font in fonts/amitaclo
 #: inkstitch-fonts-metadata.py:12
@@ -65,17 +65,17 @@ msgstr ""
 #. name of font in fonts/amitaclo_small
 #: inkstitch-fonts-metadata.py:14
 msgid "Amitaclo small"
-msgstr ""
+msgstr "Amitaclo small"
 
 #. description of font in fonts/amitaclo_small
 #: inkstitch-fonts-metadata.py:16
 msgid "This font is an altered version  of Amitaclo, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory. The altered embroidery parameters of this font allow to scale down the original Amitaclo font between 25% (for a 7 mm font ) and 55 % (for a 16mm font)."
-msgstr ""
+msgstr "Denne skrifttypen er en endret versjon av Amitaclo, for å tillate muligheten for å skalere ned. Bruken av både tynn tråd (60) og tynn nål (60) er et krav. De endret broderi-parametre til denne skrifttypen tillater nedskalering av den opprinnelige Amitaclo mellom 25% (for en 7 mm skrifttype) og 55% (for en 16 mm skrifttype)."
 
 #. name of font in fonts/apex_lake
 #: inkstitch-fonts-metadata.py:18
 msgid "Apex Lake"
-msgstr ""
+msgstr "Apex Lake"
 
 #. description of font in fonts/apex_lake
 #: inkstitch-fonts-metadata.py:20
@@ -85,7 +85,7 @@ msgstr ""
 #. name of font in fonts/aventurina
 #: inkstitch-fonts-metadata.py:22
 msgid "Aventurina"
-msgstr ""
+msgstr "Aveturina"
 
 #. description of font in fonts/aventurina
 #: inkstitch-fonts-metadata.py:24
@@ -95,7 +95,7 @@ msgstr ""
 #. name of font in fonts/baumans_FI
 #: inkstitch-fonts-metadata.py:26
 msgid "Baumans FI"
-msgstr ""
+msgstr "Baumans FI"
 
 #. description of font in fonts/baumans_FI
 #: inkstitch-fonts-metadata.py:28
@@ -106,7 +106,7 @@ msgstr ""
 #. name of font in fonts/cherryforinkstitch
 #: inkstitch-fonts-metadata.py:30
 msgid "Cherry for inkstitch"
-msgstr ""
+msgstr "Cherry for Ink/Stitch"
 
 #. description of font in fonts/cherryforinkstitch
 #: inkstitch-fonts-metadata.py:32
@@ -116,7 +116,7 @@ msgstr ""
 #. name of font in fonts/cherryforkaalleen
 #: inkstitch-fonts-metadata.py:34
 msgid "Cherry for Kaalleen"
-msgstr ""
+msgstr "Cherry for Kaalleen"
 
 #. description of font in fonts/cherryforkaalleen
 #: inkstitch-fonts-metadata.py:36
@@ -126,7 +126,7 @@ msgstr ""
 #. name of font in fonts/chopin
 #: inkstitch-fonts-metadata.py:38
 msgid "Chopin Script"
-msgstr ""
+msgstr "Chopin Script"
 
 #. description of font in fonts/chopin
 #: inkstitch-fonts-metadata.py:40
@@ -137,17 +137,17 @@ msgstr ""
 #. name of font in fonts/coronaviral
 #: inkstitch-fonts-metadata.py:42
 msgid "Coronaviral"
-msgstr ""
+msgstr "Coronaviral"
 
 #. description of font in fonts/coronaviral
 #: inkstitch-fonts-metadata.py:44
 msgid "A font created with manual sitch. Do not change the size or very little. The capital em is 22mm wide at 100%"
-msgstr ""
+msgstr "En skrifttype med manuelle sting. Ikke endre størrelsen eller kun veldig lite. Det store M er 22 mm bredt ved 100%"
 
 #. name of font in fonts/dejavufont
 #: inkstitch-fonts-metadata.py:46
 msgid "Dejavu Serif"
-msgstr ""
+msgstr "Dejavu Serif"
 
 #. description of font in fonts/dejavufont
 #: inkstitch-fonts-metadata.py:48
@@ -168,7 +168,7 @@ msgstr ""
 #. name of font in fonts/dinomouse72
 #: inkstitch-fonts-metadata.py:54
 msgid "DinoMouse72"
-msgstr ""
+msgstr "DinoMouse72"
 
 #. description of font in fonts/dinomouse72
 #: inkstitch-fonts-metadata.py:56
@@ -178,7 +178,7 @@ msgstr ""
 #. name of font in fonts/emilio_20
 #: inkstitch-fonts-metadata.py:58
 msgid "Emilio 20"
-msgstr ""
+msgstr "Emilio 20"
 
 #. description of font in fonts/emilio_20
 #: inkstitch-fonts-metadata.py:60
@@ -209,17 +209,17 @@ msgstr ""
 #. name of font in fonts/espresso_tiny
 #: inkstitch-fonts-metadata.py:70
 msgid "Espresso tiny"
-msgstr ""
+msgstr "Espresso tiny"
 
 #. description of font in fonts/espresso_tiny
 #: inkstitch-fonts-metadata.py:72
 msgid "This font is an altered version  of Espresso KOR, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory. The altered embroidery parameters of this font allow to scale down the original Espresso font between 25% (for a 5mm font ) and 55 % (for a 11mm font)."
-msgstr ""
+msgstr "Denne skrifttypen er en endret versjon av Amitaclo, for å tillate muligheten for å skalere ned. Bruken av både tynn tråd (60) og tynn nål (60) er et krav. De endret broderi-parametre til denne skrifttypen tillater nedskalering av den opprinnelige Amitaclo mellom 25% (for en 7 mm skrifttype) og 55% (for en 16 mm skrifttype)."
 
 #. name of font in fonts/excalibur_KOR
 #: inkstitch-fonts-metadata.py:74
 msgid "Excalibur KOR"
-msgstr ""
+msgstr "Excalibur KOR"
 
 #. description of font in fonts/excalibur_KOR
 #: inkstitch-fonts-metadata.py:76
@@ -229,7 +229,7 @@ msgstr ""
 #. name of font in fonts/fold_inkstitch
 #: inkstitch-fonts-metadata.py:78
 msgid "Fold Ink/Stitch"
-msgstr ""
+msgstr "Fold Ink/Stitch"
 
 #. description of font in fonts/fold_inkstitch
 #: inkstitch-fonts-metadata.py:80
@@ -249,7 +249,7 @@ msgstr ""
 #. name of font in fonts/geneva_simple
 #: inkstitch-fonts-metadata.py:86
 msgid "Geneva Simple Sans"
-msgstr ""
+msgstr "Geneva Simple Sans"
 
 #. description of font in fonts/geneva_simple
 #: inkstitch-fonts-metadata.py:88
@@ -259,7 +259,7 @@ msgstr ""
 #. name of font in fonts/glacial_tiny
 #: inkstitch-fonts-metadata.py:90
 msgid "Glacial Tiny 60 AGS"
-msgstr ""
+msgstr "Glacial Tiny 60 AGS"
 
 #. description of font in fonts/glacial_tiny
 #: inkstitch-fonts-metadata.py:92
@@ -289,7 +289,7 @@ msgstr ""
 #. name of font in fonts/infinipicto
 #: inkstitch-fonts-metadata.py:102
 msgid "InfiniPicto"
-msgstr ""
+msgstr "InfiniPicto"
 
 #. description of font in fonts/infinipicto
 #: inkstitch-fonts-metadata.py:104
@@ -299,7 +299,7 @@ msgstr ""
 #. name of font in fonts/kaushan_script_MAM
 #: inkstitch-fonts-metadata.py:106
 msgid "Kaushan Script MAM"
-msgstr ""
+msgstr "Kaushan Script MAM"
 
 #. description of font in fonts/kaushan_script_MAM
 #: inkstitch-fonts-metadata.py:108
@@ -310,7 +310,7 @@ msgstr ""
 #. name of font in fonts/learning_curve
 #: inkstitch-fonts-metadata.py:110
 msgid "Learning curve"
-msgstr ""
+msgstr "Læringskurve"
 
 #. description of font in fonts/learning_curve
 #: inkstitch-fonts-metadata.py:112
@@ -320,7 +320,7 @@ msgstr ""
 #. name of font in fonts/lobster_AGS
 #: inkstitch-fonts-metadata.py:114
 msgid "Lobster AGS"
-msgstr ""
+msgstr "Lobster AGS"
 
 #. description of font in fonts/lobster_AGS
 #: inkstitch-fonts-metadata.py:116
@@ -331,7 +331,7 @@ msgstr ""
 #. name of font in fonts/magnolia_ KOR
 #: inkstitch-fonts-metadata.py:118
 msgid "Magnolia KOR"
-msgstr ""
+msgstr "Magnolia KOR"
 
 #. description of font in fonts/magnolia_ KOR
 #: inkstitch-fonts-metadata.py:120
@@ -363,7 +363,7 @@ msgstr ""
 #. name of font in fonts/medium_font
 #: inkstitch-fonts-metadata.py:130
 msgid "Ink/Stitch Medium Font"
-msgstr ""
+msgstr "Ink/Stitch Medium skrifttype"
 
 #. description of font in fonts/medium_font
 #: inkstitch-fonts-metadata.py:132
@@ -384,7 +384,7 @@ msgstr ""
 #. name of font in fonts/namskout_AGS
 #: inkstitch-fonts-metadata.py:138
 msgid "Namskout"
-msgstr ""
+msgstr "Namskout"
 
 #. description of font in fonts/namskout_AGS
 #: inkstitch-fonts-metadata.py:140
@@ -404,7 +404,7 @@ msgstr ""
 #. name of font in fonts/pacificlo
 #: inkstitch-fonts-metadata.py:146
 msgid "Pacificlo"
-msgstr ""
+msgstr "Pacificlo"
 
 #. description of font in fonts/pacificlo
 #: inkstitch-fonts-metadata.py:148
@@ -414,7 +414,7 @@ msgstr ""
 #. name of font in fonts/pacificlo_tiny
 #: inkstitch-fonts-metadata.py:150
 msgid "Pacificlo tiny"
-msgstr ""
+msgstr "Pacificlo tiny"
 
 #. description of font in fonts/pacificlo_tiny
 #: inkstitch-fonts-metadata.py:152
@@ -424,7 +424,7 @@ msgstr ""
 #. name of font in fonts/roman_ags
 #: inkstitch-fonts-metadata.py:154
 msgid "Roman AGS"
-msgstr ""
+msgstr "Roman AGS"
 
 #. description of font in fonts/roman_ags
 #: inkstitch-fonts-metadata.py:156
@@ -446,7 +446,7 @@ msgstr ""
 #. name of font in fonts/sacramarif
 #: inkstitch-fonts-metadata.py:162
 msgid "Sacramarif"
-msgstr ""
+msgstr "Sacramarif"
 
 #. description of font in fonts/sacramarif
 #: inkstitch-fonts-metadata.py:164
@@ -456,7 +456,7 @@ msgstr ""
 #. name of font in fonts/small_font
 #: inkstitch-fonts-metadata.py:166
 msgid "Ink/Stitch Small Font"
-msgstr ""
+msgstr "Ink/Stitch liten skrifttype"
 
 #. description of font in fonts/small_font
 #: inkstitch-fonts-metadata.py:168
@@ -497,7 +497,7 @@ msgstr ""
 #. name of font in fonts/tt_masters
 #: inkstitch-fonts-metadata.py:182
 msgid "TT Masters"
-msgstr ""
+msgstr "TT Masters"
 
 #. description of font in fonts/tt_masters
 #: inkstitch-fonts-metadata.py:184
@@ -521,7 +521,10 @@ msgid "If you'd like to help please\n"
 "- copy the entire error message below\n"
 "- save your SVG file and\n"
 "- create a new issue at https://github.com/inkstitch/inkstitch/issues"
-msgstr ""
+msgstr "Hvis du vil hjelpe, så vennligst:\n"
+"- kopier hele feilmeldingen under\n"
+"- lagre din svg-fil og\n"
+"- opprett et nytt problem på: https://github.com/inkstitch/inkstitch/issues"
 
 #: inkstitch.py:107
 msgid "Include the error description and also (if possible) the svg file."
@@ -633,16 +636,16 @@ msgstr ""
 #. : the name of the line that connects a command to the object it applies to
 #: lib/commands.py:320
 msgid "connector"
-msgstr ""
+msgstr "forbindelse"
 
 #. : the name of a command symbol (example: scissors icon for trim command)
 #: lib/commands.py:339
 msgid "command marker"
-msgstr ""
+msgstr "kommando-symbol"
 
 #: lib/elements/clone.py:20
 msgid "Clone Object"
-msgstr ""
+msgstr "Klon-objekt"
 
 #: lib/elements/clone.py:21
 msgid "There are one or more clone objects in this document.  Ink/Stitch can work with single clones, but you are limited to set a very few parameters. "
@@ -654,7 +657,7 @@ msgstr ""
 
 #: lib/elements/clone.py:25
 msgid "* Select the clone"
-msgstr ""
+msgstr "* Velg klonen"
 
 #: lib/elements/clone.py:26 lib/elements/clone.py:37
 msgid "* Run: Edit > Clone > Unlink Clone (Alt+Shift+D)"
@@ -662,7 +665,7 @@ msgstr ""
 
 #: lib/elements/clone.py:31
 msgid "Clone is not embroiderable"
-msgstr ""
+msgstr "Klonen kan ikke bli broderet"
 
 #: lib/elements/clone.py:32
 msgid "There are one ore more clone objects in this document. A clone must be a direct child of an embroiderable element. Ink/Stitch cannot embroider clones of groups or other not embroiderable elements (text or image)."
@@ -678,7 +681,7 @@ msgstr ""
 
 #: lib/elements/clone.py:51
 msgid "Clone"
-msgstr ""
+msgstr "Klon"
 
 #: lib/elements/clone.py:57
 msgid "Custom fill angle"
@@ -690,24 +693,24 @@ msgstr ""
 
 #: lib/elements/element.py:202
 msgid "Allow lock stitches"
-msgstr ""
+msgstr "Tillat hefte-sting"
 
 #: lib/elements/element.py:203
 msgid "Tie thread at the beginning and/or end of this object. Manual stitch will not add lock stitches."
-msgstr ""
+msgstr "Heft tråden i begynnelsen og/eller på slutten av dette elementet. Manuelle sting vil ikke tilføye hefte-sting."
 
 #. options to allow lock stitch before and after objects
 #: lib/elements/element.py:207
 msgid "Both"
-msgstr ""
+msgstr "Begge"
 
 #: lib/elements/element.py:207
 msgid "Before"
-msgstr ""
+msgstr "Før"
 
 #: lib/elements/element.py:207
 msgid "After"
-msgstr ""
+msgstr "Etter"
 
 #: lib/elements/element.py:207
 msgid "Neither"
@@ -720,7 +723,7 @@ msgstr ""
 
 #: lib/elements/element.py:217
 msgid "Sew lock stitches after sewing this element, even if the distance to the next object is shorter than defined by the collapse length value in the Ink/Stitch preferences."
-msgstr ""
+msgstr "Sy heftesting etter å ha bridert dette elementet, selvom avstanden til det neste element er kortere enn definert ved den \"collapse\" lengde-verdi i Ink/Stich sin preferanser."
 
 #: lib/elements/element.py:261
 #, python-format
@@ -732,7 +735,7 @@ msgstr ""
 #. intersect both rails."
 #: lib/elements/element.py:354
 msgid "error:"
-msgstr ""
+msgstr "feil:"
 
 #: lib/elements/empty_d_object.py:13
 msgid "Empty D-Attribute"
@@ -748,7 +751,7 @@ msgstr ""
 
 #: lib/elements/fill_stitch.py:28
 msgid "Small Fill"
-msgstr ""
+msgstr "Smått fyll"
 
 #: lib/elements/fill_stitch.py:29
 msgid "This fill object is so small that it would probably look better as running stitch or satin column. For very small shapes, fill stitch is not possible, and Ink/Stitch will use running stitch around the outline instead."
@@ -756,7 +759,7 @@ msgstr ""
 
 #: lib/elements/fill_stitch.py:35 lib/elements/fill_stitch.py:469
 msgid "Expand"
-msgstr ""
+msgstr "Utvidelse"
 
 #: lib/elements/fill_stitch.py:36
 msgid "The expand parameter for this fill object cannot be applied. Ink/Stitch will ignore it and will use original size instead."
@@ -764,7 +767,7 @@ msgstr ""
 
 #: lib/elements/fill_stitch.py:41 lib/elements/fill_stitch.py:446
 msgid "Inset"
-msgstr ""
+msgstr "Innsett"
 
 #: lib/elements/fill_stitch.py:42
 msgid "The underlay inset parameter for this fill object cannot be applied. Ink/Stitch will ignore it and will use the original size instead."
@@ -772,7 +775,7 @@ msgstr ""
 
 #: lib/elements/fill_stitch.py:47
 msgid "Missing Guideline"
-msgstr ""
+msgstr "Manglende hjelpelinjer"
 
 #: lib/elements/fill_stitch.py:48
 msgid "This object is set to \"Guided Fill\", but has no guide line."
@@ -780,7 +783,7 @@ msgstr ""
 
 #: lib/elements/fill_stitch.py:50
 msgid "* Create a stroke object"
-msgstr ""
+msgstr "* Danner et linje-objekt"
 
 #: lib/elements/fill_stitch.py:51
 msgid "* Select this object and run Extensions > Ink/Stitch > Edit > Selection to guide line"
@@ -800,7 +803,7 @@ msgstr ""
 
 #: lib/elements/fill_stitch.py:65 lib/elements/stroke.py:35
 msgid "Multiple Guide Lines"
-msgstr ""
+msgstr "Mange hjelpelinjer"
 
 #: lib/elements/fill_stitch.py:66 lib/elements/stroke.py:36
 msgid "This object has multiple guide lines, but only the first one will be used."
@@ -812,7 +815,7 @@ msgstr ""
 
 #: lib/elements/fill_stitch.py:73
 msgid "Unconnected"
-msgstr ""
+msgstr "Uten forbinnelse"
 
 #: lib/elements/fill_stitch.py:74
 msgid "Fill: This object is made up of unconnected shapes. Ink/Stitch doesn't know what order to stitch them in.  Please break this object up into separate shapes."
@@ -825,7 +828,7 @@ msgstr ""
 
 #: lib/elements/fill_stitch.py:83
 msgid "Border crosses itself"
-msgstr ""
+msgstr "Kanter krysser seg selv"
 
 #: lib/elements/fill_stitch.py:84
 msgid "Fill: The border crosses over itself. This may lead into unconnected shapes. Please break this object into separate shapes to indicate in which order it should be stitched in."
@@ -833,7 +836,7 @@ msgstr ""
 
 #: lib/elements/fill_stitch.py:92
 msgid "This shape is invalid"
-msgstr ""
+msgstr "Formen er ugyldig"
 
 #: lib/elements/fill_stitch.py:93
 msgid "Fill: This shape cannot be stitched out. Please try to repair it with the \"Break Apart Fill Objects\" extension."
@@ -841,7 +844,7 @@ msgstr ""
 
 #: lib/elements/fill_stitch.py:100
 msgid "FillStitch"
-msgstr ""
+msgstr "FyllSting"
 
 #: lib/elements/fill_stitch.py:103
 msgid "Automatically routed fill stitching"
@@ -853,11 +856,11 @@ msgstr ""
 
 #: lib/elements/fill_stitch.py:109
 msgid "Auto Fill"
-msgstr ""
+msgstr "Auto-fyll"
 
 #: lib/elements/fill_stitch.py:109
 msgid "Contour Fill"
-msgstr ""
+msgstr "Kontur-fyll"
 
 #: lib/elements/fill_stitch.py:109
 msgid "Guided Fill"
@@ -873,7 +876,7 @@ msgstr ""
 
 #: lib/elements/fill_stitch.py:115
 msgid "Copy"
-msgstr ""
+msgstr "Kopier"
 
 #: lib/elements/fill_stitch.py:115
 msgid "Parallel Offset"
@@ -889,15 +892,15 @@ msgstr ""
 
 #: lib/elements/fill_stitch.py:124
 msgid "Inner to Outer"
-msgstr ""
+msgstr "Indre til ytre"
 
 #: lib/elements/fill_stitch.py:124
 msgid "Single spiral"
-msgstr ""
+msgstr "Enkel-spiral"
 
 #: lib/elements/fill_stitch.py:124
 msgid "Double spiral"
-msgstr ""
+msgstr "Dobbelt-spiral"
 
 #: lib/elements/fill_stitch.py:129
 msgid "Join Style"
@@ -905,7 +908,7 @@ msgstr ""
 
 #: lib/elements/fill_stitch.py:130
 msgid "Round"
-msgstr ""
+msgstr "Rund"
 
 #: lib/elements/fill_stitch.py:130
 msgid "Mitered"
@@ -913,15 +916,15 @@ msgstr ""
 
 #: lib/elements/fill_stitch.py:130
 msgid "Beveled"
-msgstr ""
+msgstr "Avrunnet"
 
 #: lib/elements/fill_stitch.py:135
 msgid "Avoid self-crossing"
-msgstr ""
+msgstr "Unngå selv-kryssing"
 
 #: lib/elements/fill_stitch.py:140
 msgid "Clockwise"
-msgstr ""
+msgstr "Med klokken"
 
 #: lib/elements/fill_stitch.py:146
 msgid "Angle of lines of stitches"
@@ -933,7 +936,7 @@ msgstr ""
 
 #: lib/elements/fill_stitch.py:165 lib/elements/fill_stitch.py:458
 msgid "Skip last stitch in each row"
-msgstr ""
+msgstr "Spring over det siste sting i hver rekke"
 
 #: lib/elements/fill_stitch.py:166 lib/elements/fill_stitch.py:459
 msgid "The last stitch in each row is quite close to the first stitch in the next row.  Skipping it decreases stitch count and density."
@@ -949,7 +952,7 @@ msgstr ""
 
 #: lib/elements/fill_stitch.py:191
 msgid "Spacing between rows"
-msgstr ""
+msgstr "Avstand mellom rekkene"
 
 #: lib/elements/fill_stitch.py:192
 msgid "Distance between rows of stitches."
@@ -957,7 +960,7 @@ msgstr ""
 
 #: lib/elements/fill_stitch.py:206
 msgid "Maximum fill stitch length"
-msgstr ""
+msgstr "Maksimum fyll stinglengde"
 
 #: lib/elements/fill_stitch.py:207
 msgid "The length of each stitch in a row.  Shorter stitch may be used at the start or end of a row."
@@ -977,30 +980,30 @@ msgstr ""
 
 #: lib/elements/fill_stitch.py:373
 msgid "Length of stitches around the outline of the fill region used when moving from section to section."
-msgstr ""
+msgstr "Lengde av de stingene på linjen rundt om fyll-området, som blir brukt når det flyttes fra seksjon til seksjon."
 
 #: lib/elements/fill_stitch.py:384 lib/elements/stroke.py:116
 msgid "Running stitch tolerance"
-msgstr ""
+msgstr "Toleranse til rettsting"
 
 #: lib/elements/fill_stitch.py:385
 msgid "All stitches must be within this distance of the path.  A lower tolerance means stitches will be closer together.  A higher tolerance means sharp corners may be rounded."
-msgstr ""
+msgstr "Alle sting må være innenfor denne avstand fra stien. En lavere toleranse vil gi sting, som er tettere på hverandre. En høyere toleranse betyr skarpe hjørner vil bli avrundet."
 
 #: lib/elements/fill_stitch.py:396
 msgid "Underlay"
-msgstr ""
+msgstr "Underlag"
 
 #: lib/elements/fill_stitch.py:396 lib/elements/fill_stitch.py:405
 #: lib/elements/fill_stitch.py:428 lib/elements/fill_stitch.py:439
 #: lib/elements/fill_stitch.py:449 lib/elements/fill_stitch.py:461
 #: lib/elements/fill_stitch.py:499
 msgid "Fill Underlay"
-msgstr ""
+msgstr "Fyll-underlag"
 
 #: lib/elements/fill_stitch.py:402
 msgid "Fill angle"
-msgstr ""
+msgstr "Vinkel på underlag"
 
 #: lib/elements/fill_stitch.py:403
 msgid "Default: fill angle + 90 deg. Insert comma-seperated list for multiple layers."
@@ -1008,7 +1011,7 @@ msgstr ""
 
 #: lib/elements/fill_stitch.py:425
 msgid "Row spacing"
-msgstr ""
+msgstr "Avstand mellem rekker"
 
 #: lib/elements/fill_stitch.py:426
 msgid "default: 3x fill row spacing"
@@ -1016,7 +1019,7 @@ msgstr ""
 
 #: lib/elements/fill_stitch.py:436
 msgid "Max stitch length"
-msgstr ""
+msgstr "Maks stinglengde"
 
 #: lib/elements/fill_stitch.py:437
 msgid "default: equal to fill max stitch length"
@@ -1028,7 +1031,7 @@ msgstr ""
 
 #: lib/elements/fill_stitch.py:470
 msgid "Expand the shape before fill stitching, to compensate for gaps between shapes."
-msgstr ""
+msgstr "Utvid formen før fyllet blir brodert, for å kompensere for gap mellom formene."
 
 #: lib/elements/fill_stitch.py:481 lib/elements/fill_stitch.py:495
 msgid "Underpath"
@@ -1050,15 +1053,15 @@ msgstr ""
 
 #: lib/elements/image.py:13
 msgid "Image"
-msgstr ""
+msgstr "Bilde"
 
 #: lib/elements/image.py:14
 msgid "Ink/Stitch can't work with objects like images."
-msgstr ""
+msgstr "Ink/Stitch kan ikke arbeide med objekter som bilder."
 
 #: lib/elements/image.py:16
 msgid "* Convert your image into a path: Path > Trace Bitmap... (Shift+Alt+B) (further steps might be required)"
-msgstr ""
+msgstr "* Konverter ditt bilde til en sti: Sti - tegn av Bitmap... (Shift+Alt+B) (Flere trinn kan evt. trenges)"
 
 #: lib/elements/image.py:18
 msgid "* Alternatively redraw the image with the pen (P) or bezier (B) tool"
@@ -1066,7 +1069,7 @@ msgstr ""
 
 #: lib/elements/marker.py:14
 msgid "Marker Element"
-msgstr ""
+msgstr "Markerings-element"
 
 #: lib/elements/marker.py:15
 msgid "This element will not be embroidered. It will be applied to objects in the same group. Objects in sub-groups will be ignored."
@@ -1074,11 +1077,11 @@ msgstr ""
 
 #: lib/elements/marker.py:18
 msgid "Turn back to normal embroidery element mode, remove the marker:"
-msgstr ""
+msgstr "Vend tilbake til normal element mode, fjerne merket:"
 
 #: lib/elements/marker.py:19
 msgid "* Open the Fill and Stroke panel (Objects > Fill and Stroke)"
-msgstr ""
+msgstr "* Åpne Fyll og strek panelet (Objekter > Fyll og strek)"
 
 #: lib/elements/marker.py:20
 msgid "* Go to the Stroke style tab"
@@ -1090,7 +1093,7 @@ msgstr ""
 
 #: lib/elements/polyline.py:18
 msgid "Polyline Object"
-msgstr ""
+msgstr "Polylinje objekt - et objekt med mange linjer"
 
 #: lib/elements/polyline.py:19
 msgid "This object is an SVG PolyLine.  Ink/Stitch can work with this shape, but you can't edit it in Inkscape.  Convert it to a manual stitch path to allow editing."
@@ -1098,7 +1101,7 @@ msgstr ""
 
 #: lib/elements/polyline.py:23 lib/elements/satin_column.py:27
 msgid "* Select this object."
-msgstr ""
+msgstr "* Velg dette objektet."
 
 #: lib/elements/polyline.py:24
 msgid "* Do Path > Object to Path."
@@ -1110,11 +1113,11 @@ msgstr ""
 
 #: lib/elements/polyline.py:45
 msgid "Manual stitch along path"
-msgstr ""
+msgstr "Manuelle sting langs med stien"
 
 #: lib/elements/satin_column.py:24
 msgid "Satin column has fill"
-msgstr ""
+msgstr "Satengsømmen har fyll"
 
 #: lib/elements/satin_column.py:25
 msgid "Satin column: Object has a fill (but should not)"
@@ -1122,15 +1125,15 @@ msgstr ""
 
 #: lib/elements/satin_column.py:28
 msgid "* Open the Fill and Stroke panel"
-msgstr ""
+msgstr "* Åpne Fyll og strek-panelet"
 
 #: lib/elements/satin_column.py:29
 msgid "* Open the Fill tab"
-msgstr ""
+msgstr "Åpne Fyll-knappen"
 
 #: lib/elements/satin_column.py:30
 msgid "* Disable the Fill"
-msgstr ""
+msgstr "Deaktiver fyllet"
 
 #: lib/elements/satin_column.py:31
 msgid "* Alternative: open Params and switch this path to Stroke to disable Satin Column mode"
@@ -1138,7 +1141,7 @@ msgstr ""
 
 #: lib/elements/satin_column.py:36
 msgid "Too few subpaths"
-msgstr ""
+msgstr "For få under-stier"
 
 #: lib/elements/satin_column.py:37
 msgid "Satin column: Object has too few subpaths.  A satin column should have at least two subpaths (the rails)."
@@ -1214,7 +1217,7 @@ msgstr ""
 
 #: lib/elements/satin_column.py:78
 msgid "Satin Column"
-msgstr ""
+msgstr "Sateng sting"
 
 #: lib/elements/satin_column.py:84
 msgid "Custom satin column"
@@ -1222,11 +1225,11 @@ msgstr ""
 
 #: lib/elements/satin_column.py:90
 msgid "\"E\" stitch"
-msgstr ""
+msgstr "E-sting"
 
 #: lib/elements/satin_column.py:96 lib/elements/satin_column.py:227
 msgid "Maximum stitch length"
-msgstr ""
+msgstr "Maksimun stinglengde"
 
 #: lib/elements/satin_column.py:97
 msgid "Maximum stitch length for split stitches."
@@ -1242,15 +1245,15 @@ msgstr ""
 
 #: lib/elements/satin_column.py:113
 msgid "Short stitch distance"
-msgstr ""
+msgstr "Avstanden til korte sting"
 
 #: lib/elements/satin_column.py:114
 msgid "Do short stitches if the distance between stitches is smaller than this."
-msgstr ""
+msgstr "Lager korte sting hvis avstanden mellom stingene er kortere enn dette."
 
 #: lib/elements/satin_column.py:126 lib/elements/stroke.py:129
 msgid "Zig-zag spacing (peak-to-peak)"
-msgstr ""
+msgstr "Zig-zag avstand (topp til topp)"
 
 #: lib/elements/satin_column.py:127
 msgid "Peak-to-peak distance between zig-zags."
@@ -1266,7 +1269,7 @@ msgstr ""
 
 #: lib/elements/satin_column.py:151
 msgid "Contour underlay"
-msgstr ""
+msgstr "Kontur-underlag"
 
 #: lib/elements/satin_column.py:151 lib/elements/satin_column.py:158
 #: lib/elements/satin_column.py:167
@@ -1275,7 +1278,7 @@ msgstr ""
 
 #: lib/elements/satin_column.py:158 lib/elements/satin_column.py:182
 msgid "Stitch length"
-msgstr ""
+msgstr "Sting-lengde"
 
 #: lib/elements/satin_column.py:164
 msgid "Contour underlay inset amount"
@@ -1296,24 +1299,24 @@ msgstr ""
 
 #: lib/elements/satin_column.py:187 lib/elements/stroke.py:82
 msgid "Repeats"
-msgstr ""
+msgstr "Gjentakelser"
 
 #: lib/elements/satin_column.py:192
 msgid "Zig-zag underlay"
-msgstr ""
+msgstr "Zigzag-underlag"
 
 #: lib/elements/satin_column.py:192 lib/elements/satin_column.py:201
 #: lib/elements/satin_column.py:212 lib/elements/satin_column.py:230
 msgid "Zig-zag Underlay"
-msgstr ""
+msgstr "Zig-zag underlag"
 
 #: lib/elements/satin_column.py:198
 msgid "Zig-Zag spacing (peak-to-peak)"
-msgstr ""
+msgstr "Zig-zag avstand (topp til topp)"
 
 #: lib/elements/satin_column.py:199
 msgid "Distance between peaks of the zig-zags."
-msgstr ""
+msgstr "Avstanden mellom toppene i zigzag-sting."
 
 #: lib/elements/satin_column.py:209
 msgid "Inset amount"
@@ -1345,7 +1348,7 @@ msgstr ""
 
 #: lib/elements/stroke.py:43
 msgid "Stroke"
-msgstr ""
+msgstr "Linje"
 
 #: lib/elements/stroke.py:46
 msgid "Running stitch along paths"
@@ -1353,11 +1356,11 @@ msgstr ""
 
 #: lib/elements/stroke.py:60 inx/inkstitch_break_apart.inx:17
 msgid "Method"
-msgstr ""
+msgstr "Metode"
 
 #: lib/elements/stroke.py:64
 msgid "Running Stitch"
-msgstr ""
+msgstr "Rettsøm"
 
 #: lib/elements/stroke.py:64
 msgid "Ripple"
@@ -1365,7 +1368,7 @@ msgstr ""
 
 #: lib/elements/stroke.py:71
 msgid "Manual stitch placement"
-msgstr ""
+msgstr "Manuell plassering av sting"
 
 #: lib/elements/stroke.py:72
 msgid "Stitch every node in the path.  All other options are ignored."
@@ -1373,7 +1376,7 @@ msgstr ""
 
 #: lib/elements/stroke.py:83
 msgid "Defines how many times to run down and back along the path."
-msgstr ""
+msgstr "Definerer hvor mange ganger det skal broderes frem og tilbake langs med stien."
 
 #: lib/elements/stroke.py:93
 msgid "Bean stitch number of repeats"
@@ -1385,7 +1388,7 @@ msgstr ""
 
 #: lib/elements/stroke.py:105
 msgid "Running stitch length"
-msgstr ""
+msgstr "Lengden av rettsøm"
 
 #: lib/elements/stroke.py:106
 msgid "Length of stitches in running stitch mode."
@@ -1401,7 +1404,7 @@ msgstr ""
 
 #: lib/elements/stroke.py:142
 msgid "Number of lines"
-msgstr ""
+msgstr "Antall linjer"
 
 #: lib/elements/stroke.py:143
 msgid "Number of lines from start to finish"
@@ -1409,7 +1412,7 @@ msgstr ""
 
 #: lib/elements/stroke.py:159
 msgid "Skip first lines"
-msgstr ""
+msgstr "Spring over de første linjer"
 
 #: lib/elements/stroke.py:160
 msgid "Skip this number of lines at the beginning."
@@ -1441,15 +1444,15 @@ msgstr ""
 
 #: lib/elements/stroke.py:219
 msgid "Reverse"
-msgstr ""
+msgstr "Revers"
 
 #: lib/elements/stroke.py:220
 msgid "Flip start and end point"
-msgstr ""
+msgstr "Bytt om på start- og ende-punktet"
 
 #: lib/elements/stroke.py:231
 msgid "Grid size"
-msgstr ""
+msgstr "Rutenettets størrelse"
 
 #: lib/elements/stroke.py:232
 msgid "Render as grid. Use with care and watch your stitch density."
@@ -1457,7 +1460,7 @@ msgstr ""
 
 #: lib/elements/stroke.py:244
 msgid "Scale axis"
-msgstr ""
+msgstr "Skalerings-akser"
 
 #: lib/elements/stroke.py:245
 msgid "Scale axis for satin guided ripple stitches."
@@ -1465,15 +1468,15 @@ msgstr ""
 
 #: lib/elements/stroke.py:249 print/templates/ui.html:172
 msgid "None"
-msgstr ""
+msgstr "Ingen"
 
 #: lib/elements/stroke.py:257
 msgid "Starting scale"
-msgstr ""
+msgstr "Start skalering"
 
 #: lib/elements/stroke.py:258
 msgid "How big the first copy of the line should be, in percent."
-msgstr ""
+msgstr "Hvor stor den første kopien av linjen skal bli, i prosent."
 
 #: lib/elements/stroke.py:258 lib/elements/stroke.py:269
 msgid "Used only for ripple stitch with a guide line."
@@ -1481,7 +1484,7 @@ msgstr ""
 
 #: lib/elements/stroke.py:268
 msgid "Ending scale"
-msgstr ""
+msgstr "Stopp skalering"
 
 #: lib/elements/stroke.py:269
 msgid "How big the last copy of the line should be, in percent."
@@ -1489,7 +1492,7 @@ msgstr ""
 
 #: lib/elements/stroke.py:279
 msgid "Rotate"
-msgstr ""
+msgstr "Rotasjon"
 
 #: lib/elements/stroke.py:280
 msgid "Rotate satin guided ripple stitches"
@@ -1505,11 +1508,11 @@ msgstr ""
 
 #: lib/elements/stroke.py:295
 msgid "flat"
-msgstr ""
+msgstr "flat"
 
 #: lib/elements/stroke.py:295
 msgid "point"
-msgstr ""
+msgstr "punkt"
 
 #: lib/elements/stroke.py:374
 msgid "Legacy running stitch setting detected!\n\n"
@@ -1518,7 +1521,7 @@ msgstr ""
 
 #: lib/elements/text.py:13 lib/extensions/lettering.py:78
 msgid "Text"
-msgstr ""
+msgstr "Tekst"
 
 #: lib/elements/text.py:14
 msgid "Ink/Stitch cannot work with objects like text."
@@ -1534,7 +1537,7 @@ msgstr ""
 
 #: lib/extensions/apply_threadlist.py:70
 msgid "File not found."
-msgstr ""
+msgstr "Filen er ikke funnet."
 
 #: lib/extensions/apply_threadlist.py:73
 msgid "The filepath specified is not a file but a dictionary.\n"
@@ -1556,7 +1559,7 @@ msgstr ""
 #. auto-route running stitch columns extension
 #: lib/extensions/auto_run.py:57 lib/extensions/cutwork_segmentation.py:47
 msgid "Please select one or more stroke elements."
-msgstr ""
+msgstr "Vennligst velg et eller flere linje-elementer."
 
 #: lib/extensions/auto_run.py:62
 msgid "Please select at least one stroke element."
@@ -1578,11 +1581,11 @@ msgstr ""
 #. This was previously: "No embroiderable paths selected."
 #: lib/extensions/base.py:127
 msgid "Ink/Stitch doesn't know how to work with any of the objects you've selected."
-msgstr ""
+msgstr "Ink/Stitch vet ikke hvordan det skal kunne jobbe med noen av de objektene som du har valgt."
 
 #: lib/extensions/base.py:129
 msgid "There are no objects in the entire document that Ink/Stitch knows how to work with."
-msgstr ""
+msgstr "Det er ingen objekter i hele dokumentet som Ink/Stitch finner ut av å jobbe med."
 
 #: lib/extensions/base.py:131
 msgid "Tip: Run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot Objects"
@@ -1590,12 +1593,12 @@ msgstr ""
 
 #: lib/extensions/break_apart.py:31
 msgid "Please select one or more fill areas to break apart."
-msgstr ""
+msgstr "Vennligst velg en eller flere områder med fyll for å bryte opp."
 
 #: lib/extensions/cleanup.py:37 lib/extensions/cleanup.py:49
 #, python-format
 msgid "%s elements removed"
-msgstr ""
+msgstr "%s av elementene er blitt fjernet"
 
 #: lib/extensions/convert_to_satin.py:35
 msgid "Please select at least one line to convert to a satin column."
@@ -1609,7 +1612,7 @@ msgstr ""
 
 #: lib/extensions/convert_to_satin.py:137
 msgid "Ink/Stitch cannot convert your stroke into a satin column. Please break up your path and try again."
-msgstr ""
+msgstr "Ink/Stitch kan ikke konvertere din strek til en satengsøm. Vennligst splitt opp din sti og prøv igjen."
 
 #. : Convert To Satin extension, user selected one or more objects that were
 #. not lines.
@@ -1620,7 +1623,7 @@ msgstr ""
 
 #: lib/extensions/cut_satin.py:20
 msgid "Please select one or more satin columns to cut."
-msgstr ""
+msgstr "Vennligst velg en eller flere satengsøm for å kutte."
 
 #. will have the satin's id prepended, like this:
 #. path12345: error: this satin column does not ...
@@ -1639,28 +1642,28 @@ msgstr ""
 
 #: lib/extensions/density_map.py:69
 msgid "Density Plan"
-msgstr ""
+msgstr "Tetthets-plan"
 
 #: lib/extensions/density_map.py:83
 msgid "Red"
-msgstr ""
+msgstr "Rød"
 
 #: lib/extensions/density_map.py:83
 msgid "Yellow"
-msgstr ""
+msgstr "Gul"
 
 #: lib/extensions/density_map.py:83
 msgid "Green"
-msgstr ""
+msgstr "Grønn"
 
 #: lib/extensions/density_map.py:87
 #, python-format
 msgid "%s density"
-msgstr ""
+msgstr "%s tetthet"
 
 #: lib/extensions/duplicate_params.py:18
 msgid "This function copies Ink/Stitch parameters from the first selected element to the rest of the selection. Please select at least two elements."
-msgstr ""
+msgstr "Denne funksjon kopiere Ink/Stitch parameterne fra det første valgte elementet til resten av det valgte. Vennligst velg minst to elementer."
 
 #: lib/extensions/flip.py:28
 msgid "Please select one or more satin columns to flip."
@@ -1668,7 +1671,7 @@ msgstr ""
 
 #: lib/extensions/generate_palette.py:31
 msgid "Please specify a name for your color palette."
-msgstr ""
+msgstr "Vennligst velg et navn til din farge-palette."
 
 #: lib/extensions/generate_palette.py:36
 msgid "Unkown directory path."
@@ -1676,16 +1679,17 @@ msgstr ""
 
 #: lib/extensions/generate_palette.py:41
 msgid "Ink/Stitch cannot find your palette folder automatically. Please enter the path manually."
-msgstr ""
+msgstr "Ink/Stitch can ikke finne din palette-mappe automatisk. Vennligst skriv inn stien manuelt."
 
 #: lib/extensions/generate_palette.py:47
 msgid "No element selected.\n\n"
 "Please select at least one text element with a fill color."
-msgstr ""
+msgstr "Ingen elementer er valgt.\n"
+"Vennligst velg i det minste et tekst-element med en fyllfarge."
 
 #: lib/extensions/generate_palette.py:53
 msgid "We couldn't find any fill colors on your text elements. Please read the instructions on our website."
-msgstr ""
+msgstr "Vi kunne ikke finne fyll farger på dine tekst-elementer. Vennligst les instruksjonene på vår nettside."
 
 #: lib/extensions/input.py:18
 msgid "Ink/Stitch cannot import color formats directly. But you can open the embroidery file and apply the color with Extensions > Ink/Stitch > Thread Color Management > Apply Threadlist"
@@ -1694,7 +1698,7 @@ msgstr ""
 #: lib/extensions/install_custom_palette.py:24
 #: lib/extensions/palette_to_text.py:26
 msgid "File does not exist."
-msgstr ""
+msgstr "Filen eksisterer ikke."
 
 #: lib/extensions/install_custom_palette.py:28
 msgid "Wrong file type. Ink/Stitch only accepts gpl color palettes."
@@ -1714,7 +1718,7 @@ msgstr ""
 
 #: lib/extensions/lettering.py:54
 msgid "Font"
-msgstr ""
+msgstr "Skrifttype"
 
 #: lib/extensions/lettering.py:66 inx/inkstitch_apply_threadlist.inx:7
 #: inx/inkstitch_palette_to_text.inx:15
@@ -1736,11 +1740,11 @@ msgstr ""
 #: electron/src/renderer/components/InstallPalettes.vue:25
 #: electron/src/renderer/components/InstallPalettes.vue:63
 msgid "Cancel"
-msgstr ""
+msgstr "Avbryt"
 
 #: lib/extensions/lettering.py:87 lib/extensions/params.py:450
 msgid "Apply and Quit"
-msgstr ""
+msgstr "Fullfør og Avslutt"
 
 #: lib/extensions/lettering.py:154
 msgid "Unable to find any fonts!  Please try reinstalling Ink/Stitch."
@@ -1782,7 +1786,7 @@ msgstr ""
 
 #: lib/extensions/lettering_generate_json.py:41
 msgid "Please specify a font file."
-msgstr ""
+msgstr "Vennligst presiser hvilken skrifttype."
 
 #: lib/extensions/letters_to_font.py:35
 msgid "Font directory not found. Please specify an existing directory."
@@ -1798,7 +1802,7 @@ msgstr ""
 
 #: lib/extensions/palette_split_text.py:20
 msgid "Please select one or more text elements to split lines."
-msgstr ""
+msgstr "Vennligst velg en eller flere tekst-elementer for å splitte linjene."
 
 #: lib/extensions/palette_to_text.py:31
 msgid "Cannot read palette: invalid GIMP palette header"
@@ -1815,7 +1819,7 @@ msgstr ""
 
 #: lib/extensions/params.py:235
 msgid "Some settings had different values across objects.  Select a value from the dropdown or enter a new one."
-msgstr ""
+msgstr "Noen innstillinger har forskjellige verdier på tvers av objekter. Velg en verdi fra rullemenyen eller skriv inn en ny."
 
 #: lib/extensions/params.py:240
 #, python-format
@@ -1833,7 +1837,7 @@ msgstr ""
 
 #: lib/extensions/params.py:302
 msgid "Inkscape objects"
-msgstr ""
+msgstr "Inkscape objekter"
 
 #: lib/extensions/params.py:391
 msgid "Click to force this parameter to be saved when you click \"Apply and Quit\""
@@ -1878,25 +1882,25 @@ msgstr ""
 #: lib/extensions/troubleshoot.py:77
 #: inx/inkstitch_lettering_generate_json.inx:26
 msgid "Description"
-msgstr ""
+msgstr "Beskrivelse"
 
 #: lib/extensions/troubleshoot.py:98 lib/extensions/troubleshoot.py:147
 #: inx/inkstitch_cleanup.inx:17 inx/inkstitch_remove_embroidery_settings.inx:16
 #: inx/inkstitch_troubleshoot.inx:10
 msgid "Troubleshoot"
-msgstr ""
+msgstr "Problemløsning"
 
 #: lib/extensions/troubleshoot.py:110 lib/extensions/troubleshoot.py:154
 msgid "Errors"
-msgstr ""
+msgstr "Feil"
 
 #: lib/extensions/troubleshoot.py:116 lib/extensions/troubleshoot.py:158
 msgid "Warnings"
-msgstr ""
+msgstr "Advarsler"
 
 #: lib/extensions/troubleshoot.py:122
 msgid "Type Warnings"
-msgstr ""
+msgstr "Type advarsler"
 
 #: lib/extensions/troubleshoot.py:155
 msgid "Problems that will prevent the shape from being embroidered."
@@ -1916,7 +1920,7 @@ msgstr ""
 
 #: lib/extensions/troubleshoot.py:178
 msgid "Possible solutions"
-msgstr ""
+msgstr "Mulige løsninger"
 
 #: lib/extensions/troubleshoot.py:183
 msgid "It is possible, that one object contains more than one error, yet there will be only one pointer per object.  Run this function again, when further errors occur.  Remove pointers by deleting the layer named \"Troubleshoot\" through the objects panel (Object -> Objects...)."
@@ -1924,7 +1928,7 @@ msgstr ""
 
 #: lib/extensions/zip.py:63
 msgid "threadlist"
-msgstr ""
+msgstr "liste over broderisytråd"
 
 #: lib/extensions/zip.py:72
 msgid "No embroidery file formats selected."
@@ -1932,27 +1936,27 @@ msgstr ""
 
 #: lib/extensions/zip.py:100
 msgid "Design Details"
-msgstr ""
+msgstr "Design detaljer"
 
 #: lib/extensions/zip.py:103
 msgid "Title"
-msgstr ""
+msgstr "Tittel"
 
 #: lib/extensions/zip.py:104 inx/inkstitch_commands_scale_symbols.inx:6
 msgid "Size"
-msgstr ""
+msgstr "Størrelse"
 
 #: lib/extensions/zip.py:105
 msgid "Stitches"
-msgstr ""
+msgstr "Sting"
 
 #: lib/extensions/zip.py:106
 msgid "Colors"
-msgstr ""
+msgstr "Farger"
 
 #: lib/extensions/zip.py:108
 msgid "Thread Order"
-msgstr ""
+msgstr "Rekkefølgen på sytråden"
 
 #: lib/extensions/zip.py:121
 msgid "Thread Used"
@@ -1968,15 +1972,15 @@ msgstr ""
 
 #: lib/gui/presets.py:61
 msgid "Add"
-msgstr ""
+msgstr "Tilføy"
 
 #: lib/gui/presets.py:64
 msgid "Overwrite"
-msgstr ""
+msgstr "Overskrive"
 
 #: lib/gui/presets.py:67
 msgid "Delete"
-msgstr ""
+msgstr "Slett"
 
 #: lib/gui/presets.py:126
 msgid "Please enter or select a preset name first."
@@ -2001,11 +2005,11 @@ msgstr ""
 #: lib/gui/simulator.py:18 electron/src/renderer/assets/js/simulator.js:142
 #: inx/inkstitch_output_GCODE.inx:29
 msgid "STITCH"
-msgstr ""
+msgstr "STING"
 
 #: lib/gui/simulator.py:18 electron/src/renderer/assets/js/simulator.js:145
 msgid "JUMP"
-msgstr ""
+msgstr "HOPP"
 
 #: lib/gui/simulator.py:18 electron/src/renderer/assets/js/simulator.js:148
 msgid "TRIM"
@@ -2014,7 +2018,7 @@ msgstr ""
 #: lib/gui/simulator.py:18 electron/src/renderer/assets/js/simulator.js:151
 #: inx/inkstitch_output_GCODE.inx:33
 msgid "STOP"
-msgstr ""
+msgstr "STOPP"
 
 #: lib/gui/simulator.py:18 electron/src/renderer/assets/js/simulator.js:154
 #: inx/inkstitch_output_GCODE.inx:31
@@ -2023,11 +2027,11 @@ msgstr ""
 
 #: lib/gui/simulator.py:50
 msgid "Slow down (arrow down)"
-msgstr ""
+msgstr "Langsommere (pil ned)"
 
 #: lib/gui/simulator.py:53
 msgid "Speed up (arrow up)"
-msgstr ""
+msgstr "Raskere (pil opp)"
 
 #: lib/gui/simulator.py:56
 msgid "Go on step backward (-)"
@@ -2044,19 +2048,19 @@ msgstr ""
 #: lib/gui/simulator.py:63 lib/gui/simulator.py:239 lib/gui/simulator.py:246
 #: electron/src/renderer/components/Simulator.vue:29
 msgid "Pause"
-msgstr ""
+msgstr "Pause"
 
 #: lib/gui/simulator.py:65
 msgid "Pause (P)"
-msgstr ""
+msgstr "Pause (P)"
 
 #: lib/gui/simulator.py:66
 msgid "Restart"
-msgstr ""
+msgstr "Genstart"
 
 #: lib/gui/simulator.py:68
 msgid "Restart (R)"
-msgstr ""
+msgstr "Genstart (R)"
 
 #: lib/gui/simulator.py:69
 msgid "O"
@@ -2081,7 +2085,7 @@ msgstr ""
 
 #: lib/gui/simulator.py:242 lib/gui/simulator.py:270
 msgid "Start"
-msgstr ""
+msgstr "Start"
 
 #: lib/gui/simulator.py:816 lib/gui/simulator.py:826
 msgid "Preview"
@@ -2089,7 +2093,7 @@ msgstr ""
 
 #: lib/gui/simulator.py:857
 msgid "Embroidery Simulation"
-msgstr ""
+msgstr "Broderi-simulering"
 
 #: lib/gui/warnings.py:21
 msgid "Cannot load simulator.\n"
@@ -2124,7 +2128,7 @@ msgstr ""
 #: lib/stitches/auto_run.py:261
 #, python-format
 msgid "AutoRun %d"
-msgstr ""
+msgstr "AutoRun %d"
 
 #: lib/stitches/auto_run.py:263
 #, python-format
@@ -2166,7 +2170,7 @@ msgstr ""
 #: print/templates/color_swatch.html:8 print/templates/color_swatch.html:40
 #: print/templates/operator_detailedview.html:9
 msgid "Color"
-msgstr ""
+msgstr "Farge"
 
 #: print/templates/color_swatch.html:11 print/templates/color_swatch.html:41
 msgid "rgb"
@@ -2174,7 +2178,7 @@ msgstr ""
 
 #: print/templates/color_swatch.html:15 print/templates/color_swatch.html:42
 msgid "thread"
-msgstr ""
+msgstr "sytråd"
 
 #: print/templates/color_swatch.html:19 print/templates/color_swatch.html:43
 #: print/templates/operator_detailedview.html:63
@@ -2193,12 +2197,12 @@ msgstr ""
 #: print/templates/color_swatch.html:24 print/templates/color_swatch.html:45
 #: print/templates/operator_detailedview.html:68
 msgid "yes"
-msgstr ""
+msgstr "ja"
 
 #: print/templates/color_swatch.html:24 print/templates/color_swatch.html:45
 #: print/templates/operator_detailedview.html:68
 msgid "no"
-msgstr ""
+msgstr "nei"
 
 #: print/templates/color_swatch.html:40
 #: print/templates/operator_detailedview.html:57
@@ -2208,17 +2212,17 @@ msgstr ""
 
 #: print/templates/custom-page.html:22 print/templates/ui.html:92
 msgid "Enter URL"
-msgstr ""
+msgstr "Innsett URL"
 
 #: print/templates/custom-page.html:23 print/templates/custom-page.html:27
 #: print/templates/custom-page.html:33 print/templates/ui.html:93
 #: print/templates/ui.html:97 print/templates/ui.html:103
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 #: print/templates/custom-page.html:26 print/templates/ui.html:96
 msgid "Enter E-Mail"
-msgstr ""
+msgstr "Innsett e-post"
 
 #: print/templates/custom-page.html:29 print/templates/custom-page.html:36
 msgid "Custom Information Sheet"
@@ -2234,7 +2238,7 @@ msgstr ""
 
 #: print/templates/footer.html:2
 msgid "Page"
-msgstr ""
+msgstr "Side"
 
 #: print/templates/footer.html:3 print/templates/ui.html:99
 #: print/templates/ui.html:106
@@ -2276,41 +2280,41 @@ msgstr ""
 
 #: print/templates/operator_detailedview.html:11
 msgid "Stops and Trims"
-msgstr ""
+msgstr "Stopper og hefter ender"
 
 #: print/templates/operator_detailedview.html:12
 msgid "Notes"
-msgstr ""
+msgstr "Notater"
 
 #: print/templates/operator_detailedview.html:24
 #: print/templates/operator_overview.html:6
 #: print/templates/print_overview.html:6
 msgid "Unique Colors"
-msgstr ""
+msgstr "Unike farger"
 
 #: print/templates/operator_detailedview.html:25
 #: print/templates/operator_overview.html:7
 #: print/templates/print_overview.html:7
 msgid "Color Blocks"
-msgstr ""
+msgstr "Fargeblokker"
 
 #: print/templates/operator_detailedview.html:28
 #: print/templates/operator_overview.html:14
 #: print/templates/print_overview.html:14
 msgid "Design box size"
-msgstr ""
+msgstr "Design boksens størrelse"
 
 #: print/templates/operator_detailedview.html:29
 #: print/templates/operator_overview.html:16
 #: print/templates/print_overview.html:16
 msgid "Total thread used"
-msgstr ""
+msgstr "Total lengde med broderisytråd som er blitt brukt"
 
 #: print/templates/operator_detailedview.html:30
 #: print/templates/operator_overview.html:15
 #: print/templates/print_overview.html:15
 msgid "Total stitch count"
-msgstr ""
+msgstr "Totalt antall sting"
 
 #: print/templates/operator_detailedview.html:31
 #: print/templates/print_detail.html:11
@@ -2321,7 +2325,7 @@ msgstr ""
 #: print/templates/operator_overview.html:8
 #: print/templates/print_overview.html:8
 msgid "Total stops"
-msgstr ""
+msgstr "Total antall stopp"
 
 #: print/templates/operator_detailedview.html:35
 #: print/templates/operator_overview.html:9
@@ -2358,11 +2362,11 @@ msgstr ""
 
 #: print/templates/print_detail.html:6
 msgid "COLOR"
-msgstr ""
+msgstr "FARGE"
 
 #: print/templates/print_overview.html:42
 msgid "Client Signature"
-msgstr ""
+msgstr "Klientens underskrift"
 
 #: print/templates/ui.html:2
 msgid "Ink/Stitch Print Preview"
@@ -2370,19 +2374,19 @@ msgstr ""
 
 #: print/templates/ui.html:4
 msgid "Print"
-msgstr ""
+msgstr "Skriv ut"
 
 #: print/templates/ui.html:5
 msgid "Save PDF"
-msgstr ""
+msgstr "Lagre PDF"
 
 #: print/templates/ui.html:6 print/templates/ui.html:16
 msgid "Settings"
-msgstr ""
+msgstr "Innstillinger"
 
 #: print/templates/ui.html:7
 msgid "Close"
-msgstr ""
+msgstr "Lukk ned"
 
 #: print/templates/ui.html:10
 msgid "⚠ lost connection to Ink/Stitch"
@@ -2398,19 +2402,19 @@ msgstr ""
 
 #: print/templates/ui.html:21 print/templates/ui.html:113
 msgid "Estimated Time"
-msgstr ""
+msgstr "Estimert tid"
 
 #: print/templates/ui.html:22 print/templates/ui.html:147
 msgid "Estimated Thread"
-msgstr ""
+msgstr "Estimert trådlengde"
 
 #: print/templates/ui.html:23 print/templates/ui.html:168
 msgid "Design"
-msgstr ""
+msgstr "Design"
 
 #: print/templates/ui.html:32
 msgid "Printing Size"
-msgstr ""
+msgstr "Størrelse av utskriften"
 
 #: print/templates/ui.html:40
 msgid "Print Layouts"
@@ -2418,7 +2422,7 @@ msgstr ""
 
 #: print/templates/ui.html:43 print/templates/ui.html:137
 msgid "Client Overview"
-msgstr ""
+msgstr "Klientens oversikt"
 
 #: print/templates/ui.html:47 print/templates/ui.html:138
 msgid "Client Detailed View"
@@ -2451,7 +2455,7 @@ msgstr ""
 
 #: print/templates/ui.html:71
 msgid "Logo"
-msgstr ""
+msgstr "Logo"
 
 #: print/templates/ui.html:81
 msgid "Footer: Operator contact information"
@@ -2459,15 +2463,15 @@ msgstr ""
 
 #: print/templates/ui.html:115
 msgid "Machine Settings"
-msgstr ""
+msgstr "Maskin-innstillinger"
 
 #: print/templates/ui.html:117
 msgid "Average Machine Speed"
-msgstr ""
+msgstr "Gjennomsnitts-hastigheten til symaskinen"
 
 #: print/templates/ui.html:118
 msgid "stitches per minute "
-msgstr ""
+msgstr "sting pr. minutt "
 
 #: print/templates/ui.html:122
 msgid "Time Factors"
@@ -2503,7 +2507,7 @@ msgstr ""
 
 #: print/templates/ui.html:149
 msgid "Factors"
-msgstr ""
+msgstr "Faktorer"
 
 #: print/templates/ui.html:150
 msgid "The thread length calculation depends on a lot of factors in embroidery designs. We will only get a very inacurate approximation.\n"
@@ -2524,7 +2528,7 @@ msgstr ""
 
 #: print/templates/ui.html:169
 msgid "Thread Palette"
-msgstr ""
+msgstr "Sytråds-palette"
 
 #: print/templates/ui.html:188
 msgid "Changing the thread palette will cause thread names and catalog numbers to be recalculated based on the new palette.  Any changes you have made to color or thread names will be lost.  Are you sure?"
@@ -2532,11 +2536,11 @@ msgstr ""
 
 #: print/templates/ui.html:191
 msgid "Yes"
-msgstr ""
+msgstr "Ja"
 
 #: print/templates/ui.html:192 inx/inkstitch_lettering_generate_json.inx:37
 msgid "No"
-msgstr ""
+msgstr "Nei"
 
 #: print/templates/ui_svg_action_buttons.html:1
 msgid "Scale"
@@ -2544,7 +2548,7 @@ msgstr ""
 
 #: print/templates/ui_svg_action_buttons.html:3
 msgid "Fit"
-msgstr ""
+msgstr "Tilpass"
 
 #: print/templates/ui_svg_action_buttons.html:5
 msgid "Apply to all"
@@ -2553,7 +2557,7 @@ msgstr ""
 #: print/templates/ui_svg_action_buttons.html:9
 #: print/templates/ui_svg_action_buttons.html:12
 msgid "Realistic"
-msgstr ""
+msgstr "Realistisk"
 
 #. description for pyembroidery file format: pec
 #. description for pyembroidery file format: pes
@@ -2574,7 +2578,7 @@ msgstr ""
 #. description for pyembroidery file format: tbf
 #: pyembroidery-format-descriptions.py:8 pyembroidery-format-descriptions.py:48
 msgid "Tajima Embroidery Format"
-msgstr ""
+msgstr "Tajima broderi-format"
 
 #. description for pyembroidery file format: jef
 #. description for pyembroidery file format: sew
@@ -2583,7 +2587,7 @@ msgstr ""
 #: pyembroidery-format-descriptions.py:20
 #: pyembroidery-format-descriptions.py:76
 msgid "Janome Embroidery Format"
-msgstr ""
+msgstr "Janome broderi-format"
 
 #. description for pyembroidery file format: vp3
 #. description for pyembroidery file format: ksm
@@ -2602,7 +2606,7 @@ msgstr ""
 #: pyembroidery-format-descriptions.py:72
 #: pyembroidery-format-descriptions.py:74
 msgid "Pfaff Embroidery Format"
-msgstr ""
+msgstr "Pfaff broderi-format"
 
 #. description for pyembroidery file format: svg
 #: pyembroidery-format-descriptions.py:14
@@ -2617,7 +2621,7 @@ msgstr ""
 #. description for pyembroidery file format: xxx
 #: pyembroidery-format-descriptions.py:18
 msgid "Singer Embroidery Format"
-msgstr ""
+msgstr "Singer broderi-format"
 
 #. description for pyembroidery file format: u01
 #: pyembroidery-format-descriptions.py:22
@@ -2659,7 +2663,7 @@ msgstr ""
 #. description for pyembroidery file format: emd
 #: pyembroidery-format-descriptions.py:38
 msgid "Elna Embroidery Format"
-msgstr ""
+msgstr "Elna broderi-format"
 
 #. description for pyembroidery file format: exy
 #: pyembroidery-format-descriptions.py:40
@@ -2739,7 +2743,7 @@ msgstr ""
 #. description for pyembroidery file format: hus
 #: pyembroidery-format-descriptions.py:92
 msgid "Husqvarna Embroidery Format"
-msgstr ""
+msgstr "Husqvarna broderi-format"
 
 #. description for pyembroidery file format: edr
 #: pyembroidery-format-descriptions.py:94
@@ -2788,7 +2792,7 @@ msgstr ""
 
 #: electron/src/renderer/components/Simulator.vue:15
 msgid "Button"
-msgstr ""
+msgstr "Knapp"
 
 #: electron/src/renderer/components/Simulator.vue:203
 msgid "color changes"
@@ -2808,7 +2812,7 @@ msgstr ""
 
 #: electron/src/renderer/components/Simulator.vue:18
 msgid "Function"
-msgstr ""
+msgstr "Funksjon"
 
 #: electron/src/renderer/components/InstallPalettes.vue:16
 msgid "If you are not sure which file path to choose, click on install directly. In most cases Ink/Stitch will guess the correct path."
@@ -2836,7 +2840,7 @@ msgstr ""
 
 #: electron/src/renderer/components/InstallPalettes.vue:31
 msgid "Installation Completed"
-msgstr ""
+msgstr "Installeringen er ferdig"
 
 #: electron/src/renderer/components/InstallPalettes.vue:48
 msgid "Installation Failed"
@@ -2857,7 +2861,7 @@ msgstr ""
 #. name for this keyboard key: -
 #: electron/src/renderer/components/Simulator.vue:76
 msgid "Minus"
-msgstr ""
+msgstr "Minus"
 
 #: electron/src/renderer/components/Simulator.vue:215
 msgid "needle points"
@@ -2866,12 +2870,12 @@ msgstr ""
 #. description of keyboard shortcut that moves one stitch backward in simulator
 #: electron/src/renderer/components/Simulator.vue:71
 msgid "One step backward"
-msgstr ""
+msgstr "Et trinn tilbake"
 
 #. description of keyboard shortcut that moves one stitch forward in simulator
 #: electron/src/renderer/components/Simulator.vue:84
 msgid "One step forward"
-msgstr ""
+msgstr "Et trinn frem"
 
 #. name for page down keyboard key
 #: electron/src/renderer/components/Simulator.vue:99
@@ -2913,7 +2917,7 @@ msgstr ""
 
 #: electron/src/renderer/components/Simulator.vue:192
 msgid "Show"
-msgstr ""
+msgstr "Vis"
 
 #: electron/src/renderer/components/Simulator.vue:10
 msgid "Simulator Shortcut Keys"
@@ -2943,19 +2947,19 @@ msgstr ""
 
 #: electron/src/renderer/components/InstallPalettes.vue:60
 msgid "Try again"
-msgstr ""
+msgstr "Prøv igjen"
 
 #: inx/inkstitch_about.inx:3 inx/inkstitch_about.inx:6
 msgid "About"
-msgstr ""
+msgstr "Om"
 
 #: inx/inkstitch_about.inx:8
 msgid "Ink/Stitch - Manual Install"
-msgstr ""
+msgstr "Ink/Stitch - Manuell installering"
 
 #: inx/inkstitch_about.inx:10
 msgid "An open-source machine embroidery design platform based on Inkscape."
-msgstr ""
+msgstr "En open-source maskin broderi design-plattform basert på Inkscape."
 
 #: inx/inkstitch_about.inx:13
 msgid "https://inkstitch.org"
@@ -2963,7 +2967,7 @@ msgstr ""
 
 #: inx/inkstitch_about.inx:15
 msgid "License"
-msgstr ""
+msgstr "Lisens"
 
 #: inx/inkstitch_apply_threadlist.inx:3
 msgid "Apply Threadlist"
@@ -2973,11 +2977,11 @@ msgstr ""
 #: inx/inkstitch_install_custom_palette.inx:8
 #: inx/inkstitch_palette_to_text.inx:17
 msgid "Choose file"
-msgstr ""
+msgstr "Velg filen"
 
 #: inx/inkstitch_apply_threadlist.inx:9
 msgid "Choose method"
-msgstr ""
+msgstr "Velg metode"
 
 #: inx/inkstitch_apply_threadlist.inx:10
 msgid "Apply Ink/Stitch threadlist"
@@ -2995,7 +2999,7 @@ msgstr ""
 #: inx/inkstitch_cutwork_segmentation.inx:42
 #: inx/inkstitch_generate_palette.inx:24 inx/inkstitch_palette_to_text.inx:19
 msgid "Help"
-msgstr ""
+msgstr "Hjelp"
 
 #: inx/inkstitch_apply_threadlist.inx:88
 msgid "This extension applies colors from a color file to the objects in this document."
@@ -3041,7 +3045,7 @@ msgstr ""
 
 #: inx/inkstitch_auto_run.inx:10
 msgid "Tools: Stroke"
-msgstr ""
+msgstr "Verktøy: Strek"
 
 #: inx/inkstitch_auto_run.inx:15
 msgid "Auto-Route Running Stitch Options"
@@ -3077,7 +3081,7 @@ msgstr ""
 
 #: inx/inkstitch_auto_run.inx:34
 msgid "More info on our website:"
-msgstr ""
+msgstr "Mer informasjon på nettsiden vår:"
 
 #: inx/inkstitch_auto_run.inx:35
 msgid "https://inkstitch.org/docs/stroke-tools#auto-route-running-stitch"
@@ -3150,7 +3154,7 @@ msgstr ""
 #: inx/inkstitch_object_commands.inx:21
 #: inx/inkstitch_object_commands_toggle_visibility.inx:10
 msgid "Commands"
-msgstr ""
+msgstr "Kommandoer"
 
 #: inx/inkstitch_commands_scale_symbols.inx:12
 #: inx/inkstitch_object_commands_toggle_visibility.inx:11
@@ -3187,40 +3191,40 @@ msgstr ""
 
 #: inx/inkstitch_cutwork_segmentation.inx:15
 msgid "#1"
-msgstr ""
+msgstr "#1"
 
 #: inx/inkstitch_cutwork_segmentation.inx:16
 #: inx/inkstitch_cutwork_segmentation.inx:22
 #: inx/inkstitch_cutwork_segmentation.inx:28
 #: inx/inkstitch_cutwork_segmentation.inx:34
 msgid "start"
-msgstr ""
+msgstr "start"
 
 #: inx/inkstitch_cutwork_segmentation.inx:17
 #: inx/inkstitch_cutwork_segmentation.inx:23
 #: inx/inkstitch_cutwork_segmentation.inx:29
 #: inx/inkstitch_cutwork_segmentation.inx:35
 msgid "end"
-msgstr ""
+msgstr "slutt"
 
 #: inx/inkstitch_cutwork_segmentation.inx:18
 #: inx/inkstitch_cutwork_segmentation.inx:24
 #: inx/inkstitch_cutwork_segmentation.inx:30
 #: inx/inkstitch_cutwork_segmentation.inx:36
 msgid "color"
-msgstr ""
+msgstr "farge"
 
 #: inx/inkstitch_cutwork_segmentation.inx:21
 msgid "#2"
-msgstr ""
+msgstr "#2"
 
 #: inx/inkstitch_cutwork_segmentation.inx:27
 msgid "#3"
-msgstr ""
+msgstr "#3"
 
 #: inx/inkstitch_cutwork_segmentation.inx:33
 msgid "#4"
-msgstr ""
+msgstr "#4"
 
 #: inx/inkstitch_cutwork_segmentation.inx:39
 msgid "Sort elements by color"
@@ -3228,7 +3232,7 @@ msgstr ""
 
 #: inx/inkstitch_cutwork_segmentation.inx:40
 msgid "Keep original"
-msgstr ""
+msgstr "Behold originalen"
 
 #: inx/inkstitch_cutwork_segmentation.inx:43
 msgid "This extension separates a path depending on the angle."
@@ -3260,22 +3264,22 @@ msgstr ""
 
 #: inx/inkstitch_density_map.inx:3
 msgid "Density Map"
-msgstr ""
+msgstr "Kart over tettheten"
 
 #: inx/inkstitch_density_map.inx:10 inx/inkstitch_embroider.inx:14
 #: inx/inkstitch_print.inx:10 inx/inkstitch_simulator.inx:10
 #: inx/inkstitch_stitch_plan_preview.inx:10
 #: inx/inkstitch_stitch_plan_preview_undo.inx:10
 msgid "Visualise and Export"
-msgstr ""
+msgstr "Visualisere og eksportere"
 
 #: inx/inkstitch_density_map.inx:14
 msgid "Red markers"
-msgstr ""
+msgstr "Røde merker"
 
 #: inx/inkstitch_density_map.inx:15 inx/inkstitch_density_map.inx:19
 msgid "Number of stitches"
-msgstr ""
+msgstr "Antallet av sting"
 
 #: inx/inkstitch_density_map.inx:15 inx/inkstitch_density_map.inx:19
 msgid "0 = no density info"
@@ -3287,7 +3291,7 @@ msgstr ""
 
 #: inx/inkstitch_density_map.inx:18
 msgid "Yellow markers"
-msgstr ""
+msgstr "Gule merker"
 
 #: inx/inkstitch_density_map.inx:22 inx/inkstitch_stitch_plan_preview.inx:15
 msgid "Design layer visibility"
@@ -3299,7 +3303,7 @@ msgstr ""
 
 #: inx/inkstitch_density_map.inx:24 inx/inkstitch_stitch_plan_preview.inx:17
 msgid "Hidden"
-msgstr ""
+msgstr "Skjult"
 
 #: inx/inkstitch_density_map.inx:25 inx/inkstitch_stitch_plan_preview.inx:18
 msgid "Lower opacity"
@@ -3317,7 +3321,7 @@ msgstr ""
 
 #: inx/inkstitch_embroider.inx:3
 msgid "Embroider"
-msgstr ""
+msgstr "Broder"
 
 #: inx/inkstitch_embroider_settings.inx:3
 msgid "Preferences"
@@ -3333,7 +3337,7 @@ msgstr ""
 
 #: inx/inkstitch_embroider_settings.inx:20
 msgid "Minimal stitch length (mm)"
-msgstr ""
+msgstr "Minimal sting-lengde (mm)"
 
 #: inx/inkstitch_embroider_settings.inx:20
 msgid "Drop stitches smaller than this value."
@@ -3366,7 +3370,7 @@ msgstr ""
 
 #: inx/inkstitch_generate_palette.inx:22
 msgid "⚠ Restart Inkscape to use your color palette."
-msgstr ""
+msgstr "⚠ Genstart Inkscape for å bruke din fargepalette."
 
 #: inx/inkstitch_generate_palette.inx:25
 msgid "Generate a custom color palette for Ink/Stitch"
@@ -3386,7 +3390,7 @@ msgstr ""
 
 #: inx/inkstitch_global_commands.inx:3
 msgid "Add Commands"
-msgstr ""
+msgstr "Legg til kommentarer"
 
 #: inx/inkstitch_input_100.inx:3
 msgid "100 file input"
@@ -4040,11 +4044,11 @@ msgstr ""
 
 #: inx/inkstitch_lettering_generate_json.inx:43
 msgid "Min Scale"
-msgstr ""
+msgstr "Minimum skala"
 
 #: inx/inkstitch_lettering_generate_json.inx:44
 msgid "Max Scale"
-msgstr ""
+msgstr "Meksimun skala"
 
 #: inx/inkstitch_lettering_generate_json.inx:48
 msgid "Default Glyph"
@@ -4053,7 +4057,7 @@ msgstr ""
 #: inx/inkstitch_lettering_generate_json.inx:60
 #: inx/inkstitch_lettering_generate_json.inx:67
 msgid "Force"
-msgstr ""
+msgstr "Kraft"
 
 #: inx/inkstitch_lettering_generate_json.inx:60
 msgid "Overwrite leading information from font file."
@@ -4073,7 +4077,7 @@ msgstr ""
 
 #: inx/inkstitch_lettering_generate_json.inx:69
 msgid "Word spacing (px)"
-msgstr ""
+msgstr "Avstanden mellom ord (px)"
 
 #: inx/inkstitch_lettering_generate_json.inx:69
 msgid "Space character width (default: 20)"
@@ -4085,7 +4089,7 @@ msgstr ""
 
 #: inx/inkstitch_lettering_remove_kerning.inx:23
 msgid "Select Font Files"
-msgstr ""
+msgstr "Velg skifttype-filer"
 
 #: inx/inkstitch_letters_to_font.inx:3
 msgid "Letters to font"
@@ -4093,7 +4097,7 @@ msgstr ""
 
 #: inx/inkstitch_letters_to_font.inx:22
 msgid "File format"
-msgstr ""
+msgstr "Filformat"
 
 #: inx/inkstitch_letters_to_font.inx:61
 msgid "Font directory"
@@ -4225,11 +4229,11 @@ msgstr ""
 
 #: inx/inkstitch_output_GCODE.inx:34
 msgid "START"
-msgstr ""
+msgstr "START"
 
 #: inx/inkstitch_output_GCODE.inx:35
 msgid "END"
-msgstr ""
+msgstr "SLUTT"
 
 #: inx/inkstitch_output_GCODE.inx:37
 msgid "Laser Settings"
@@ -4381,7 +4385,7 @@ msgstr ""
 
 #: inx/inkstitch_output_TXT.inx:9
 msgid "Save design in TXT format using Ink/Stitch"
-msgstr ""
+msgstr "Lagre design i TXT format ved å bruke Ink/Stitch"
 
 #: inx/inkstitch_output_U01.inx:3
 msgid "U01 file output"
@@ -4405,19 +4409,19 @@ msgstr ""
 
 #: inx/inkstitch_output_XXX.inx:9
 msgid "Save design in XXX format using Ink/Stitch"
-msgstr ""
+msgstr "Lagre design i XXX-formatet ved å bruke Ink/Stitch"
 
 #: inx/inkstitch_palette_split_text.inx:3
 msgid "Split text"
-msgstr ""
+msgstr "Ta teksten fra hverandre"
 
 #: inx/inkstitch_palette_split_text.inx:16
 msgid "Line Height"
-msgstr ""
+msgstr "Linje høyde"
 
 #: inx/inkstitch_palette_to_text.inx:3 inx/inkstitch_palette_to_text.inx:20
 msgid "Palette to text"
-msgstr ""
+msgstr "Palette til tekst"
 
 #: inx/inkstitch_palette_to_text.inx:16
 msgid "Choose a .gpl color palette file to import colors as text elements."
