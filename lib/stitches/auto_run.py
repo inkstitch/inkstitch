@@ -270,6 +270,7 @@ def create_element(path, position, direction, element):
 
     # Set Ink/Stitch attributes
     stitch_length = element.node.get(INKSTITCH_ATTRIBS['running_stitch_length_mm'], '')
+    tolerance = element.node.get(INKSTITCH_ATTRIBS['running_stitch_tolerance_mm'], '')
     repeats = int(element.node.get(INKSTITCH_ATTRIBS['repeats'], 1))
     if repeats % 2 == 0:
         repeats -= 1
@@ -284,6 +285,8 @@ def create_element(path, position, direction, element):
     else:
         if stitch_length:
             node.set(INKSTITCH_ATTRIBS['running_stitch_length_mm'], stitch_length)
+        if tolerance:
+            node.set(INKSTITCH_ATTRIBS['running_stitch_tolerance_mm'], tolerance)
         node.set("style", element.node.style + inkex.Style("stroke-dasharray:0.5,0.5;fill:none;"))
     return Stroke(node)
 

@@ -269,6 +269,8 @@ class FillStitch(EmbroideryElement):
 
         if isinstance(valid_shape, shgeo.Polygon):
             return shgeo.MultiPolygon([valid_shape])
+        if isinstance(valid_shape, shgeo.LineString):
+            return shgeo.MultiPolygon([])
 
         polygons = []
         for polygon in valid_shape.geoms:

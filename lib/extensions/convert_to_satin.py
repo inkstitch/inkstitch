@@ -35,12 +35,15 @@ class ConvertToSatin(InkstitchExtension):
             inkex.errormsg(_("Please select at least one line to convert to a satin column."))
             return
 
-        if not all(isinstance(item, Stroke) for item in self.elements):
+        if not any(isinstance(item, Stroke) for item in self.elements):
             # L10N: Convert To Satin extension, user selected one or more objects that were not lines.
             inkex.errormsg(_("Only simple lines may be converted to satin columns."))
             return
 
         for element in self.elements:
+            if not isinstance(element, Stroke):
+                continue
+
             parent = element.node.getparent()
             index = parent.index(element.node)
             correction_transform = get_correction_transform(element.node)
