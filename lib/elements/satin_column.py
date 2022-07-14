@@ -21,18 +21,6 @@ from .element import EmbroideryElement, param, PIXELS_PER_MM
 from .validation import ValidationError, ValidationWarning
 
 
-class SatinHasFillError(ValidationError):
-    name = _("Satin column has fill")
-    description = _("Satin column: Object has a fill (but should not)")
-    steps_to_solve = [
-        _("* Select this object."),
-        _("* Open the Fill and Stroke panel"),
-        _("* Open the Fill tab"),
-        _("* Disable the Fill"),
-        _("* Alternative: open Params and switch this path to Stroke to disable Satin Column mode")
-    ]
-
-
 class TooFewPathsError(ValidationError):
     name = _("Too few subpaths")
     description = _("Satin column: Object has too few subpaths.  A satin column should have at least two subpaths (the rails).")
@@ -509,12 +497,8 @@ class SatinColumn(EmbroideryElement):
                     yield DanglingRungWarning(rung.interpolate(0.5, normalized=True))
 
     def validation_errors(self):
-        # The node should have exactly two paths with no fill.  Each
-        # path should have the same number of points, meaning that they
-        # will both be made up of the same number of bezier curves.
-
-        if self.get_style("fill") is not None:
-            yield SatinHasFillError(self.shape.centroid)
+        # The node should have exactly two paths with the same number of points - or it should
+        # have two rails and at least one rung
 
         if len(self.rails) < 2:
             yield TooFewPathsError(self.shape.centroid)

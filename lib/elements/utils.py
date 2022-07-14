@@ -36,18 +36,17 @@ def node_to_elements(node, clone_to_element=False):  # noqa: C901
     elif node.tag in EMBROIDERABLE_TAGS or is_clone(node):
         element = EmbroideryElement(node)
 
-        if element.get_boolean_param("satin_column") and element.get_style("stroke"):
-            return [SatinColumn(node)]
-        else:
-            elements = []
-            if element.get_style("fill", "black") and not element.get_style('fill-opacity', 1) == "0":
-                elements.append(FillStitch(node))
-            if element.get_style("stroke"):
-                if not is_command(element.node):
-                    elements.append(Stroke(node))
-            if element.get_boolean_param("stroke_first", False):
-                elements.reverse()
-            return elements
+        elements = []
+        if element.get_style("fill", "black") and not element.get_style('fill-opacity', 1) == "0":
+            elements.append(FillStitch(node))
+        if element.get_style("stroke"):
+            if element.get_boolean_param("satin_column"):
+                elements.append(SatinColumn(node))
+            elif not is_command(element.node):
+                elements.append(Stroke(node))
+        if element.get_boolean_param("stroke_first", False):
+            elements.reverse()
+        return elements
 
     elif node.tag == SVG_IMAGE_TAG:
         return [ImageObject(node)]
