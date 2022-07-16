@@ -19,6 +19,11 @@ class StitchGroup:
 
     def __init__(self, color=None, stitches=None, trim_after=False, stop_after=False,
                  tie_modus=0, force_lock_stitches=False, stitch_as_is=False, tags=None):
+        # DANGER: if you add new attributes, you MUST also set their default
+        # values in __new__() below.  Otherwise, cached stitch plans can be
+        # loaded and create objects without those properties defined, because
+        # unpickling does not call __init__()!
+
         self.color = color
         self.trim_after = trim_after
         self.stop_after = stop_after
@@ -32,6 +37,14 @@ class StitchGroup:
 
         if tags:
             self.add_tags(tags)
+
+    def __new__(cls, *args, **kwargs):
+        instance = super().__new__(cls)
+
+        # Set default values for any new attributes here (see note in __init__() above)
+        # instance.foo = None
+
+        return instance
 
     def __add__(self, other):
         if isinstance(other, StitchGroup):

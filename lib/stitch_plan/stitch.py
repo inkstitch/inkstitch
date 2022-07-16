@@ -12,6 +12,10 @@ class Stitch(Point):
 
     def __init__(self, x, y=None, color=None, jump=False, stop=False, trim=False, color_change=False,
                  tie_modus=0, force_lock_stitches=False, no_ties=False, tags=None):
+        # DANGER: if you add new attributes, you MUST also set their default
+        # values in __new__() below.  Otherwise, cached stitch plans can be
+        # loaded and create objects without those properties defined, because
+        # unpickling does not call __init__()!
 
         base_stitch = None
         if isinstance(x, Stitch):
@@ -41,6 +45,14 @@ class Stitch(Point):
         self.add_tags(tags or [])
         if base_stitch is not None:
             self.add_tags(base_stitch.tags)
+
+    def __new__(cls, *args, **kwargs):
+        instance = super().__new__(cls)
+
+        # Set default values for any new attributes here (see note in __init__() above)
+        # instance.foo = None
+
+        return instance
 
     def __repr__(self):
         return "Stitch(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)" % (self.x,
