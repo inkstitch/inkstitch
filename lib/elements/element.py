@@ -2,15 +2,19 @@
 #
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
-
+import atexit
+import os
 import sys
 from copy import deepcopy
 import numpy as np
 
+import appdirs
+import diskcache
 import inkex
 from inkex import bezier
 
 from ..commands import find_commands
+from ..debug import debug
 from ..i18n import _
 from ..patterns import apply_patterns
 from ..svg import (PIXELS_PER_MM, apply_transforms, convert_length,
@@ -392,21 +396,47 @@ class EmbroideryElement(object):
     def to_stitch_groups(self, last_patch):
         raise NotImplementedError("%s must implement to_stitch_groups()" % self.__class__.__name__)
 
-    def embroider(self, last_patch):
-        self.validate()
+    @classmethod
+    def _get_stitch_plan_cache(cls):
+        # one cache, shared by all elements, opened once and closed at program exit
+        try:
+            return cls._stitch_plan_cache
+        except AttributeError:
+            cache_dir = os.path.join(appdirs.user_config_dir('inkstitch'), 'cache', 'stitch_plan')
+            cls._stitch_plan_cache = diskcache.Cache(cache_dir, size=1024 * 1024 * 100)
+            atexit.register(cls._stitch_plan_cache.close)
+            return cls._stitch_plan_cache
 
-        patches = self.to_stitch_groups(last_patch)
-        apply_patterns(patches, self.node)
+    @debug.time
+    def _load_cached_stitch_groups(self):
+        stitch_plan_cache = self._get_stitch_plan_cache()
+        return stitch_plan_cache.get(self.node.get('id'))
 
-        for patch in patches:
-            patch.tie_modus = self.ties
-            patch.force_lock_stitches = self.force_lock_stitches
+    @debug.time
+    def _save_cached_stitch_groups(self, stitch_groups):
+        stitch_plan_cache = self._get_stitch_plan_cache()
+        stitch_plan_cache[self.node.get('id')] = stitch_groups
 
-        if patches:
-            patches[-1].trim_after = self.has_command("trim") or self.trim_after
-            patches[-1].stop_after = self.has_command("stop") or self.stop_after
+    def embroider(self, last_stitch_group):
+        stitch_groups = self._load_cached_stitch_groups()
 
-        return patches
+        if not stitch_groups:
+            self.validate()
+
+            stitch_groups = self.to_stitch_groups(last_stitch_group)
+            apply_patterns(stitch_groups, self.node)
+
+            for stitch_group in stitch_groups:
+                stitch_group.tie_modus = self.ties
+                stitch_group.force_lock_stitches = self.force_lock_stitches
+
+            if stitch_groups:
+                stitch_groups[-1].trim_after = self.has_command("trim") or self.trim_after
+                stitch_groups[-1].stop_after = self.has_command("stop") or self.stop_after
+
+            self._save_cached_stitch_groups(stitch_groups)
+
+        return stitch_groups
 
     def fatal(self, message, point_to_troubleshoot=False):
         label = self.node.get(INKSCAPE_LABEL)
