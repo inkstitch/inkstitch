@@ -19,7 +19,7 @@ Closed shapes will be filled with a spiral (circular ripples). Open shapes will 
 ## Circular Ripples
 
 * Create one closed path with a stroke color (no combined paths, such has holes)
-* Create [target point or guides](#guiding-the-ripples) (optional)
+* Create [target point or guides](#guiding-ripples) (optional)
 * Open params dialog (`Extensions > Ink/Stitch > Params`) and set the `method` to `Ripple`.
 * Set [params](#params) to your liking and apply
 
@@ -32,7 +32,7 @@ Closed shapes will be filled with a spiral (circular ripples). Open shapes will 
 Linear ripples can be created in various ways. It can be a simple curve or it can be constructed like a satin column.
 
 * Create a open shape (simple stroke, two combined strokes or even a satin column)
-* Create [target point or guides](#guiding-the-ripples) (optional)
+* Create [target point or guides](#guiding-ripples) (optional)
 * Open params dialog (`Extensions > Ink/Stitch > Params`) and set the `method` to `Ripple`.
 * Set [params](#params) to your liking and apply
 
