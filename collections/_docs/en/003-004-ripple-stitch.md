@@ -56,7 +56,7 @@ Ripples with only **one subpath** (closed shape or a simple bezier curve) can be
 
 Define a ripple target position with [visual command] (/docs/commands/):
 
-* Open `Extensions > Ink/Stitch > Commands > Visual commands > Attach Commands to selected objects ...`
+* Open `Extensions > Ink/Stitch > Commands  > Attach Commands to selected objects ...`
 * Select `Ripple stitch target position` and apply
 * Select the symbol and move it to the desired position
 
@@ -65,7 +65,7 @@ If no guiding information is provided, the center of the path is used as the tar
 ### Guide line
 
 * In the very same group (no subgroup) of the ripple stitch object create a stroke curve with the bezier tool, starting close to the ripple curve, leading away from it.
-* Select that cruve and run `Extensions > Ink/Stitch > Edit > Selection to guide line`.
+* Select that curve and run `Extensions > Ink/Stitch > Edit > Selection to guide line`.
 * Select the ripple curve and run params. Adapt the parameters to your liking.
 
 ### Satin guide
