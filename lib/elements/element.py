@@ -17,7 +17,7 @@ from ..svg import (PIXELS_PER_MM, apply_transforms, convert_length,
                    get_node_transform)
 from ..svg.tags import INKSCAPE_LABEL, INKSTITCH_ATTRIBS
 from ..utils import Point, cache
-from ..utils.cache import get_stitch_plan_cache
+from ..utils.cache import get_stitch_plan_cache, CacheKeyGenerator
 
 
 class Param(object):
@@ -392,12 +392,29 @@ class EmbroideryElement(object):
 
     @debug.time
     def _load_cached_stitch_groups(self):
-        return get_stitch_plan_cache().get(self.node.get('id'))
+        return get_stitch_plan_cache().get(self._get_cache_key())
 
     @debug.time
     def _save_cached_stitch_groups(self, stitch_groups):
         stitch_plan_cache = get_stitch_plan_cache()
-        stitch_plan_cache[self.node.get('id')] = stitch_groups
+        stitch_plan_cache[self._get_cache_key()] = stitch_groups
+
+    def get_params_and_values(self):
+        params = {}
+        for param in self.get_params():
+            params[param.name] = self.get_param(param.name, param.default)
+
+        return params
+
+    @cache
+    def _get_cache_key(self):
+        cache_key_generator = CacheKeyGenerator()
+        cache_key_generator.update(self.__class__.__name__)
+        cache_key_generator.update(self.get_params_and_values())
+        cache_key_generator.update(self.parse_path())
+        cache_key_generator.update(list(self._get_specified_style().items()))
+        # TODO: include commands and patterns that apply to this element
+        return cache_key_generator.get_cache_key()
 
     def embroider(self, last_stitch_group):
         stitch_groups = self._load_cached_stitch_groups()
