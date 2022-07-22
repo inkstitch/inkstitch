@@ -190,9 +190,6 @@ class EmbroideryElement(object):
             style = None
         return style
 
-    def has_style(self, style_name):
-        return self._get_style_raw(style_name) is not None
-
     @property
     @cache
     def stroke_scale(self):
