@@ -130,10 +130,11 @@ class ConvertToSatin(InkstitchExtension):
             raise SelfIntersectionError()
 
         path = shgeo.LineString(path)
+        distance = stroke_width / 2.0
 
         try:
-            left_rail = path.parallel_offset(stroke_width / 2.0, 'left', **style_args)
-            right_rail = path.parallel_offset(stroke_width / 2.0, 'right', **style_args)
+            left_rail = path.parallel_offset(distance, 'left', **style_args)
+            right_rail = path.parallel_offset(distance, 'right', **style_args)
         except ValueError:
             # TODO: fix this error automatically
             # Error reference: https://github.com/inkstitch/inkstitch/issues/964
@@ -149,9 +150,13 @@ class ConvertToSatin(InkstitchExtension):
             #   https://shapely.readthedocs.io/en/latest/manual.html#object.parallel_offset
             raise SelfIntersectionError()
 
-        # for whatever reason, shapely returns a right-side offset's coordinates in reverse
         left_rail = list(left_rail.coords)
-        right_rail = list(reversed(right_rail.coords))
+        # for whatever reason, shapely returns a right-side offset's coordinates in reverse
+        # on macbooks the right hand path doesn't seem to be reversed, let's check if the distance is ok before reversing it
+        if not math.isclose(shgeo.Point(path.coords[0]).distance(shgeo.Point(right_rail.coords[0])), distance):
+            right_rail = list(reversed(right_rail.coords))
+        else:
+            right_rail = list(right_rail.coords)
 
         rungs = self.generate_rungs(path, stroke_width)
 
