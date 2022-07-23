@@ -7,6 +7,7 @@ import math
 from itertools import chain
 
 import networkx as nx
+from shapely import affinity as shaffinity
 from shapely import geometry as shgeo
 from shapely.geometry import Point as ShapelyPoint
 
@@ -80,6 +81,9 @@ class SatinSegment(object):
             satin = satin.reverse()
 
         satin = satin.apply_transform()
+
+        _ensure_even_repeats(satin)
+        _ensure_rungs(satin)
 
         return satin
 
@@ -507,7 +511,6 @@ def name_elements(new_elements, preserve_order):
     for element in new_elements:
         if isinstance(element, SatinColumn):
             element.node.set("id", generate_unique_id(element.node, "autosatin"))
-            _ensure_even_repeats(element)
         else:
             element.node.set("id", generate_unique_id(element.node, "autosatinrun"))
 
@@ -515,12 +518,29 @@ def name_elements(new_elements, preserve_order):
             if isinstance(element, SatinColumn):
                 # L10N Label for a satin column created by Auto-Route Satin Columns and Lettering extensions
                 element.node.set(INKSCAPE_LABEL, _("AutoSatin %d") % index)
-                _ensure_even_repeats(element)
             else:
                 # L10N Label for running stitch (underpathing) created by Auto-Route Satin Columns amd Lettering extensions
                 element.node.set(INKSCAPE_LABEL, _("AutoSatin Running Stitch %d") % index)
 
             index += 1
+
+
+def _ensure_rungs(element):
+    if len(element.paths) == 2 and len(element.paths[0]) != len(element.paths[1]):
+        rails = [shgeo.LineString(element.flatten_subpath(rail)) for rail in element.rails]
+        # Add the rung just after the start of the satin.
+        rung_start = rails[0].interpolate(0.1)
+        rung_end = rails[1].interpolate(0.1)
+        rung = shgeo.LineString((rung_start, rung_end))
+
+        # make it a bit bigger so that it definitely intersects
+        rung = shaffinity.scale(rung, 1.1, 1.1)
+
+        # insert rung into the satin path
+        d = element.node.get('d')
+        d += ' M '
+        d += ', '.join(' '.join(str(c) for c in coord) for coord in rung.coords)
+        element.node.set('d', d)
 
 
 def _ensure_even_repeats(element):
