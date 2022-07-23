@@ -12,7 +12,7 @@ from inkex import bezier
 from ..commands import find_commands
 from ..debug import debug
 from ..i18n import _
-from ..patterns import apply_patterns
+from ..patterns import apply_patterns, get_patterns_cache_key_data
 from ..svg import (PIXELS_PER_MM, apply_transforms, convert_length,
                    get_node_transform)
 from ..svg.tags import INKSCAPE_LABEL, INKSTITCH_ATTRIBS
@@ -422,6 +422,10 @@ class EmbroideryElement(object):
 
         return params
 
+    @cache
+    def _get_patterns_cache_key_data(self):
+        return get_patterns_cache_key_data(self.node)
+
     def _get_cache_key(self, previous_stitch):
         cache_key_generator = CacheKeyGenerator()
         cache_key_generator.update(self.__class__.__name__)
@@ -430,6 +434,7 @@ class EmbroideryElement(object):
         cache_key_generator.update(list(self._get_specified_style().items()))
         cache_key_generator.update(previous_stitch)
         cache_key_generator.update([(c.command, c.target_point) for c in self.commands])
+        cache_key_generator.update(self._get_patterns_cache_key_data())
 
         # TODO: include commands and patterns that apply to this element
 

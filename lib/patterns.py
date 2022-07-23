@@ -10,6 +10,15 @@ from .stitch_plan import Stitch
 from .utils import Point
 
 
+def get_patterns_cache_key_data(node):
+    patterns = get_marker_elements(node, "pattern")
+    data = []
+    data.extend([fill.wkt for fill in patterns['fill']])
+    data.extend([stroke.wkt for stroke in patterns['stroke']])
+
+    return data
+
+
 def apply_patterns(stitch_groups, node):
     patterns = get_marker_elements(node, "pattern")
     _apply_fill_patterns(patterns['fill'], stitch_groups)
