@@ -429,6 +429,7 @@ class EmbroideryElement(object):
         cache_key_generator.update(self.parse_path())
         cache_key_generator.update(list(self._get_specified_style().items()))
         cache_key_generator.update(previous_stitch)
+        cache_key_generator.update([(c.command, c.target_point) for c in self.commands])
 
         # TODO: include commands and patterns that apply to this element
 
