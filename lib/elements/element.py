@@ -391,13 +391,29 @@ class EmbroideryElement(object):
         raise NotImplementedError("%s must implement to_stitch_groups()" % self.__class__.__name__)
 
     @debug.time
-    def _load_cached_stitch_groups(self):
-        return get_stitch_plan_cache().get(self._get_cache_key())
+    def _load_cached_stitch_groups(self, previous_stitch):
+        if not self.uses_previous_stitch():
+            # we don't care about the previous stitch
+            previous_stitch = None
+
+        return get_stitch_plan_cache().get(self._get_cache_key(previous_stitch))
+
+    def uses_previous_stitch(self):
+        """Returns True if the previous stitch can affect this Element's stitches.
+
+        This function may be overridden in a subclass.
+        """
+        return False
 
     @debug.time
-    def _save_cached_stitch_groups(self, stitch_groups):
+    def _save_cached_stitch_groups(self, stitch_groups, previous_stitch):
         stitch_plan_cache = get_stitch_plan_cache()
-        stitch_plan_cache[self._get_cache_key()] = stitch_groups
+        stitch_plan_cache[self._get_cache_key(previous_stitch)] = stitch_groups
+
+        if previous_stitch is not None:
+            # Also store it with None as the previous stitch, so that it can be used next time
+            # if we don't care about the previous stitch
+            stitch_plan_cache[self._get_cache_key(None)] = stitch_groups
 
     def get_params_and_values(self):
         params = {}
@@ -406,18 +422,24 @@ class EmbroideryElement(object):
 
         return params
 
-    @cache
-    def _get_cache_key(self):
+    def _get_cache_key(self, previous_stitch):
         cache_key_generator = CacheKeyGenerator()
         cache_key_generator.update(self.__class__.__name__)
         cache_key_generator.update(self.get_params_and_values())
         cache_key_generator.update(self.parse_path())
         cache_key_generator.update(list(self._get_specified_style().items()))
+        cache_key_generator.update(previous_stitch)
+
         # TODO: include commands and patterns that apply to this element
+
         return cache_key_generator.get_cache_key()
 
     def embroider(self, last_stitch_group):
-        stitch_groups = self._load_cached_stitch_groups()
+        if last_stitch_group:
+            previous_stitch = last_stitch_group.stitches[-1]
+        else:
+            previous_stitch = None
+        stitch_groups = self._load_cached_stitch_groups(previous_stitch)
 
         if not stitch_groups:
             self.validate()
@@ -433,7 +455,7 @@ class EmbroideryElement(object):
                 stitch_groups[-1].trim_after = self.has_command("trim") or self.trim_after
                 stitch_groups[-1].stop_after = self.has_command("stop") or self.stop_after
 
-            self._save_cached_stitch_groups(stitch_groups)
+            self._save_cached_stitch_groups(stitch_groups, previous_stitch)
 
         return stitch_groups
 
