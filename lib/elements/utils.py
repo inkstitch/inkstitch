@@ -7,14 +7,14 @@ from ..commands import is_command
 from ..marker import has_marker
 from ..svg.tags import (EMBROIDERABLE_TAGS, SVG_IMAGE_TAG, SVG_PATH_TAG,
                         SVG_POLYLINE_TAG, SVG_TEXT_TAG)
-from .fill_stitch import FillStitch
 from .clone import Clone, is_clone
 from .element import EmbroideryElement
 from .empty_d_object import EmptyDObject
+from .fill_stitch import FillStitch
 from .image import ImageObject
 from .marker import MarkerObject
 from .polyline import Polyline
-from .satin_column import SatinColumn
+from .satin_column import SatinColumn, is_power_stroke
 from .stroke import Stroke
 from .text import TextObject
 
@@ -36,7 +36,7 @@ def node_to_elements(node, clone_to_element=False):  # noqa: C901
     elif node.tag in EMBROIDERABLE_TAGS or is_clone(node):
         element = EmbroideryElement(node)
 
-        if element.get_boolean_param("satin_column") and element.get_style("stroke"):
+        if (element.get_boolean_param("satin_column") and element.get_style("stroke")) or is_power_stroke(node):
             return [SatinColumn(node)]
         else:
             elements = []

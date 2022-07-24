@@ -14,22 +14,11 @@ from inkex import paths
 
 from ..i18n import _
 from ..stitch_plan import StitchGroup
-from ..svg import line_strings_to_csp, point_lists_to_csp
+from ..svg import find_elements, line_strings_to_csp, point_lists_to_csp
+from ..svg.tags import INKSCAPE_LPE, INKSCAPE_ORIGINAL_D
 from ..utils import Point, cache, collapse_duplicate_point, cut
 from .element import EmbroideryElement, param
 from .validation import ValidationError, ValidationWarning
-
-
-class SatinHasFillError(ValidationError):
-    name = _("Satin column has fill")
-    description = _("Satin column: Object has a fill (but should not)")
-    steps_to_solve = [
-        _("* Select this object."),
-        _("* Open the Fill and Stroke panel"),
-        _("* Open the Fill tab"),
-        _("* Disable the Fill"),
-        _("* Alternative: open Params and switch this path to Stroke to disable Satin Column mode")
-    ]
 
 
 class TooFewPathsError(ValidationError):
@@ -119,6 +108,8 @@ class SatinColumn(EmbroideryElement):
 
     @property
     def color(self):
+        if self.is_power_stroke:
+            return self.get_style("fill")
         return self.get_style("stroke")
 
     @property
@@ -232,6 +223,31 @@ class SatinColumn(EmbroideryElement):
            default="")
     def zigzag_underlay_max_stitch_length(self):
         return self.get_float_param("zigzag_underlay_max_stitch_length_mm") or None
+
+    @cache
+    def is_power_stroke(self, node):
+        return is_power_stroke(self.node)
+
+    @property
+    @cache
+    def path(self):
+        if self.is_power_stroke(self.node):
+            # a power stroke is a closed path
+            # for a satin column we need to open the path at the beginning and
+            # split it at the center
+            d = paths.Path(self.node.get_path()[0:-1]).to_absolute()
+            path_length = int(len(d) / 2)
+            rail1 = str(paths.Path(d[:path_length+1]))
+            rail2 = str(paths.Path(d[path_length:]).reverse())
+            # add rungs from original path (if existent)
+            rungs = ""
+            original_d = self.node.get(INKSCAPE_ORIGINAL_D)
+            if original_d.lower().count('m') > 1:
+                rungs = original_d[original_d.lower().find("m", 1):].rstrip()
+            d = paths.Path(rail1 + str(d[0]) + rail2 + rungs).to_superpath()
+        else:
+            d = self.node.get_path()
+        return paths.Path(d).to_superpath()
 
     @property
     @cache
@@ -436,9 +452,6 @@ class SatinColumn(EmbroideryElement):
         # The node should have exactly two paths with no fill.  Each
         # path should have the same number of points, meaning that they
         # will both be made up of the same number of bezier curves.
-
-        if self.get_style("fill") is not None:
-            yield SatinHasFillError(self.shape.centroid)
 
         if len(self.rails) < 2:
             yield TooFewPathsError(self.shape.centroid)
@@ -957,3 +970,12 @@ class SatinColumn(EmbroideryElement):
             return []
 
         return [patch]
+
+
+def is_power_stroke(node):
+    lpe = node.get(INKSCAPE_LPE, None)
+    if lpe is not None:
+        lpe_source = find_elements(node, ".//*[@id='%s']" % lpe[1:])[0]
+        if lpe_source.get('effect') == 'powerstroke':
+            return True
+    return False

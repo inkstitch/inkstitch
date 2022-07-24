@@ -15,9 +15,10 @@ import wx
 from wx.lib.scrolledpanel import ScrolledPanel
 
 from ..commands import is_command, is_command_symbol
-from ..elements import (FillStitch, Clone, EmbroideryElement, Polyline,
+from ..elements import (Clone, EmbroideryElement, FillStitch, Polyline,
                         SatinColumn, Stroke)
 from ..elements.clone import is_clone
+from ..elements.satin_column import is_power_stroke
 from ..gui import PresetsPanel, SimulatorPreview, WarningPanel
 from ..i18n import _
 from ..svg.tags import SVG_POLYLINE_TAG
@@ -602,12 +603,13 @@ class Params(InkstitchExtension):
             elif is_clone(node):
                 classes.append(Clone)
             else:
-                if element.get_style("fill", 'black') and not element.get_style("fill-opacity", 1) == "0":
-                    classes.append(FillStitch)
-                if element.get_style("stroke") is not None:
-                    classes.append(Stroke)
-                    if element.get_style("stroke-dasharray") is None:
+                if element.get_style("stroke") is not None or is_power_stroke(node):
+                    if not is_power_stroke(node):
+                        classes.append(Stroke)
+                    if element.get_style("stroke-dasharray") is None or is_power_stroke(node):
                         classes.append(SatinColumn)
+                if element.get_style("fill", 'black') and not (element.get_style("fill-opacity", 1) == "0" or is_power_stroke(node)):
+                    classes.append(FillStitch)
         return classes
 
     def get_nodes_by_class(self):
