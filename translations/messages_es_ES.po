@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-07-08 15:02+0000\n"
-"PO-Revision-Date: 2022-07-11 02:39\n"
+"POT-Creation-Date: 2022-07-15 02:57+0000\n"
+"PO-Revision-Date: 2022-07-25 02:42\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-08 15:02+0000\n"
+"POT-Creation-Date: 2022-07-15 02:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -754,7 +754,7 @@ msgstr "Relleno Pequeño"
 msgid "This fill object is so small that it would probably look better as running stitch or satin column. For very small shapes, fill stitch is not possible, and Ink/Stitch will use running stitch around the outline instead."
 msgstr "Este objeto para relleno es tan pequeño que probablemente sería mejor en puntada recta o columna de satín. Para formas muy pequeñas, no es posible usar la puntada de relleno, e Ink/Stitch usará puntada recta a lo largo de contorno."
 
-#: lib/elements/fill_stitch.py:35 lib/elements/fill_stitch.py:469
+#: lib/elements/fill_stitch.py:35 lib/elements/fill_stitch.py:471
 msgid "Expand"
 msgstr "Expandir"
 
@@ -762,7 +762,7 @@ msgstr "Expandir"
 msgid "The expand parameter for this fill object cannot be applied. Ink/Stitch will ignore it and will use original size instead."
 msgstr "No se puede aplicar el parámetro de expansión para este objeto de relleno. Ink/Stitch lo ignorará y utilizará el tamaño original en su lugar."
 
-#: lib/elements/fill_stitch.py:41 lib/elements/fill_stitch.py:446
+#: lib/elements/fill_stitch.py:41 lib/elements/fill_stitch.py:448
 msgid "Inset"
 msgstr "Recuadro"
 
@@ -931,11 +931,11 @@ msgstr "Ángulo de líneas de puntadas"
 msgid "The angle increases in a counter-clockwise direction.  0 is horizontal.  Negative angles are allowed."
 msgstr "El ángulo aumenta en sentido antihorario. 0 es horizontal. Se permiten ángulos negativos."
 
-#: lib/elements/fill_stitch.py:165 lib/elements/fill_stitch.py:458
+#: lib/elements/fill_stitch.py:165 lib/elements/fill_stitch.py:460
 msgid "Skip last stitch in each row"
 msgstr "Saltar última puntada de cada fila"
 
-#: lib/elements/fill_stitch.py:166 lib/elements/fill_stitch.py:459
+#: lib/elements/fill_stitch.py:166 lib/elements/fill_stitch.py:461
 msgid "The last stitch in each row is quite close to the first stitch in the next row.  Skipping it decreases stitch count and density."
 msgstr "La última puntada de cada fila está bastante cerca de la primera puntada de la siguiente fila. Omitirlo reduce el número de puntadas y la densidad."
 
@@ -971,80 +971,80 @@ msgstr "Alterne las filas esto muchas veces antes de repetir"
 msgid "Setting this dictates how many rows apart the stitches will be before they fall in the same column position."
 msgstr "Establecer esto dicta cuántas filas de puntadas estarán separadas antes de que caigan en la misma posición de la columna."
 
-#: lib/elements/fill_stitch.py:372
+#: lib/elements/fill_stitch.py:374
 msgid "Running stitch length (traversal between sections)"
 msgstr "Ejecución de la longitud de puntada (traversal entre secciones)"
 
-#: lib/elements/fill_stitch.py:373
+#: lib/elements/fill_stitch.py:375
 msgid "Length of stitches around the outline of the fill region used when moving from section to section."
 msgstr "Longitud de las puntadas alrededor del contorno de la región de relleno utilizada al pasar de una sección a otra."
 
-#: lib/elements/fill_stitch.py:384 lib/elements/stroke.py:116
+#: lib/elements/fill_stitch.py:386 lib/elements/stroke.py:116
 msgid "Running stitch tolerance"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:385
+#: lib/elements/fill_stitch.py:387
 msgid "All stitches must be within this distance of the path.  A lower tolerance means stitches will be closer together.  A higher tolerance means sharp corners may be rounded."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:396
+#: lib/elements/fill_stitch.py:398
 msgid "Underlay"
 msgstr "Capa base"
 
-#: lib/elements/fill_stitch.py:396 lib/elements/fill_stitch.py:405
-#: lib/elements/fill_stitch.py:428 lib/elements/fill_stitch.py:439
-#: lib/elements/fill_stitch.py:449 lib/elements/fill_stitch.py:461
-#: lib/elements/fill_stitch.py:499
+#: lib/elements/fill_stitch.py:398 lib/elements/fill_stitch.py:407
+#: lib/elements/fill_stitch.py:430 lib/elements/fill_stitch.py:441
+#: lib/elements/fill_stitch.py:451 lib/elements/fill_stitch.py:463
+#: lib/elements/fill_stitch.py:501
 msgid "Fill Underlay"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:402
+#: lib/elements/fill_stitch.py:404
 msgid "Fill angle"
 msgstr "Ángulo de relleno"
 
-#: lib/elements/fill_stitch.py:403
+#: lib/elements/fill_stitch.py:405
 msgid "Default: fill angle + 90 deg. Insert comma-seperated list for multiple layers."
 msgstr "Por defecto: rellenar el ángulo + 90 grados. Insertar lista de elementos separados por coma para capas múltiples."
 
-#: lib/elements/fill_stitch.py:425
+#: lib/elements/fill_stitch.py:427
 msgid "Row spacing"
 msgstr "Espaciado de la fila"
 
-#: lib/elements/fill_stitch.py:426
+#: lib/elements/fill_stitch.py:428
 msgid "default: 3x fill row spacing"
 msgstr "por defecto: rellenar el espaciado de línea x3"
 
-#: lib/elements/fill_stitch.py:436
+#: lib/elements/fill_stitch.py:438
 msgid "Max stitch length"
 msgstr "Longitud de puntada máxima"
 
-#: lib/elements/fill_stitch.py:437
+#: lib/elements/fill_stitch.py:439
 msgid "default: equal to fill max stitch length"
 msgstr "por defecto: igual a rellenar la longitud máxima de puntada"
 
-#: lib/elements/fill_stitch.py:447
+#: lib/elements/fill_stitch.py:449
 msgid "Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill."
 msgstr "Reduzca la forma antes de aplicar la capa base, para evitar que la capa base se vea alrededor del exterior del relleno."
 
-#: lib/elements/fill_stitch.py:470
+#: lib/elements/fill_stitch.py:472
 msgid "Expand the shape before fill stitching, to compensate for gaps between shapes."
 msgstr "Expandir la forma antes de rellenar el bordado, para compensar los espacios entre figuras."
 
-#: lib/elements/fill_stitch.py:481 lib/elements/fill_stitch.py:495
+#: lib/elements/fill_stitch.py:483 lib/elements/fill_stitch.py:497
 msgid "Underpath"
 msgstr "Capa base"
 
-#: lib/elements/fill_stitch.py:482 lib/elements/fill_stitch.py:496
+#: lib/elements/fill_stitch.py:484 lib/elements/fill_stitch.py:498
 msgid "Travel inside the shape when moving from section to section.  Underpath stitches avoid traveling in the direction of the row angle so that they are not visible.  This gives them a jagged appearance."
 msgstr "Viaja dentro de la forma al pasar de una sección a otra. Las puntadas subterráneas evitan viajar en la dirección del ángulo de la fila para que no sean visibles. Esto les da una apariencia irregular."
 
-#: lib/elements/fill_stitch.py:713
+#: lib/elements/fill_stitch.py:715
 msgid "Error during autofill!  This means that there is a problem with Ink/Stitch."
 msgstr "Error durante Auto-Relleno! Esto significa que hubo un problema con Ink/Stitch."
 
 #. this message is followed by a URL:
 #. https://github.com/inkstitch/inkstitch/issues/new
-#: lib/elements/fill_stitch.py:716
+#: lib/elements/fill_stitch.py:718
 msgid "If you'd like to help us make Ink/Stitch better, please paste this whole message into a new issue at: "
 msgstr "Si quieres ayudarnos a mejorar Ink/Stitch, por favor pega este mensaje completo a un nuevo tema en: "
 
@@ -1609,7 +1609,7 @@ msgstr "Seleccione al menos una línea para convertirla en una columna satinada.
 msgid "Only simple lines may be converted to satin columns."
 msgstr "Sólo las líneas simples se pueden convertir en columnas satinadas."
 
-#: lib/extensions/convert_to_satin.py:137
+#: lib/extensions/convert_to_satin.py:140
 msgid "Ink/Stitch cannot convert your stroke into a satin column. Please break up your path and try again."
 msgstr "Ink/Stitch no puede convertir su trazo en una columna satinada. Interrumpa su ruta e inténtelo de nuevo."
 
