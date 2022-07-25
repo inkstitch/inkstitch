@@ -14,7 +14,8 @@ from .fill_stitch import FillStitch
 from .image import ImageObject
 from .marker import MarkerObject
 from .polyline import Polyline
-from .satin_column import SatinColumn, is_power_stroke
+from .power_stroke import is_power_stroke
+from .satin_column import SatinColumn
 from .stroke import Stroke
 from .text import TextObject
 

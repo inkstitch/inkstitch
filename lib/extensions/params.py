@@ -18,7 +18,7 @@ from ..commands import is_command, is_command_symbol
 from ..elements import (Clone, EmbroideryElement, FillStitch, Polyline,
                         SatinColumn, Stroke)
 from ..elements.clone import is_clone
-from ..elements.satin_column import is_power_stroke
+from ..elements.power_stroke import is_power_stroke
 from ..gui import PresetsPanel, SimulatorPreview, WarningPanel
 from ..i18n import _
 from ..svg.tags import SVG_POLYLINE_TAG

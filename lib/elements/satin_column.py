@@ -14,10 +14,10 @@ from inkex import paths
 
 from ..i18n import _
 from ..stitch_plan import StitchGroup
-from ..svg import find_elements, line_strings_to_csp, point_lists_to_csp
-from ..svg.tags import INKSCAPE_LPE, INKSCAPE_ORIGINAL_D
+from ..svg import line_strings_to_csp, point_lists_to_csp
 from ..utils import Point, cache, collapse_duplicate_point, cut
 from .element import EmbroideryElement, param
+from .power_stroke import get_power_stroke_path, is_power_stroke
 from .validation import ValidationError, ValidationWarning
 
 
@@ -72,7 +72,7 @@ class SatinColumn(EmbroideryElement):
     @property
     @param('satin_column', _('Custom satin column'), type='toggle')
     def satin_column(self):
-        return self.get_boolean_param("satin_column")
+        return self.get_boolean_param("satin_column") or is_power_stroke(self.node)
 
     # I18N: "E" stitch is so named because it looks like the letter E.
     @property
@@ -232,19 +232,7 @@ class SatinColumn(EmbroideryElement):
     @cache
     def path(self):
         if self.is_power_stroke(self.node):
-            # a power stroke is a closed path
-            # for a satin column we need to open the path at the beginning and
-            # split it at the center
-            d = paths.Path(self.node.get_path()[0:-1]).to_absolute()
-            path_length = int(len(d) / 2)
-            rail1 = str(paths.Path(d[:path_length+1]))
-            rail2 = str(paths.Path(d[path_length:]).reverse())
-            # add rungs from original path (if existent)
-            rungs = ""
-            original_d = self.node.get(INKSCAPE_ORIGINAL_D)
-            if original_d.lower().count('m') > 1:
-                rungs = original_d[original_d.lower().find("m", 1):].rstrip()
-            d = paths.Path(rail1 + str(d[0]) + rail2 + rungs).to_superpath()
+            d = get_power_stroke_path(self.node)
         else:
             d = self.node.get_path()
         return paths.Path(d).to_superpath()
@@ -970,12 +958,3 @@ class SatinColumn(EmbroideryElement):
             return []
 
         return [patch]
-
-
-def is_power_stroke(node):
-    lpe = node.get(INKSCAPE_LPE, None)
-    if lpe is not None:
-        lpe_source = find_elements(node, ".//*[@id='%s']" % lpe[1:])[0]
-        if lpe_source.get('effect') == 'powerstroke':
-            return True
-    return False
