@@ -49,8 +49,8 @@ def get_power_stroke_rails(path, start_cap, end_cap):
         rail1 = CubicSuperPath([path[0][:rail_length + 1]]).to_path()
         rail2 = CubicSuperPath([path[0][rail_length:]]).to_path().reverse()
     elif end_cap in ['square', 'butt']:
-        rail1 = CubicSuperPath([path[0][:rail_length]]).to_path()
-        rail2 = CubicSuperPath([path[0][rail_length:]]).to_path().reverse()
+        rail1 = CubicSuperPath([path[0][:rail_length - 1]]).to_path()
+        rail2 = CubicSuperPath([path[0][rail_length - 1:]]).to_path().reverse()
 
     # combine rails into one path
     path = str(rail1) + str(rail2)
