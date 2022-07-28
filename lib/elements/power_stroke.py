@@ -14,7 +14,7 @@ def get_power_stroke_path(node):
 
     if original_d[0][0] == original_d[0][-1]:
         # closed path source
-        d = _get_closed_path_rails(path)
+        rail1, rail2 = _get_closed_path_rails(path)
     else:
         # path with start and end
         # get start and end cap style
@@ -24,14 +24,21 @@ def get_power_stroke_path(node):
         end_cap = lpe.get('end_linecap_type')
 
         # make it an open path
-        d = _get_power_stroke_rails(path, start_cap, end_cap)
+        rail1, rail2 = _get_power_stroke_rails(path, start_cap, end_cap)
 
     # add rungs from original path (if existent)
     rungs = ""
     if len(original_d) > 1:
         rungs = CubicSuperPath(original_d[1:]).to_path()
+    else:
+        # check path length (in rare cases it happens, that Inkscape adds in an extra node)
+        rail_difference = len(rail1) - len(rail2)
+        if rail_difference > 0:
+            rail1 = CubicSuperPath(rail1[:-rail_difference]).to_path()
+        elif rail_difference < 0:
+            rail2 = CubicSuperPath(rail2[:rail_difference]).to_path()
 
-    d = Path(d + rungs).to_superpath()
+    d = Path(rail1 + rail2 + rungs).to_superpath()
     return d
 
 
@@ -60,14 +67,14 @@ def _get_power_stroke_rails(path, start_cap, end_cap):
         rail2 = CubicSuperPath([path[0][rail_length:]]).to_path().reverse()
 
     # combine rails into one path
-    return rail1 + rail2
+    return [rail1, rail2]
 
 
 def _get_closed_path_rails(path):
     path = path.to_superpath()
     rail1 = CubicSuperPath(path[0][:-1]).to_path()
     rail2 = CubicSuperPath(path[1][:-1]).to_path().reverse()
-    return rail1 + rail2
+    return [rail1, rail2]
 
 
 def is_power_stroke(node):
