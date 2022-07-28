@@ -72,7 +72,7 @@ class SatinColumn(EmbroideryElement):
     @property
     @param('satin_column', _('Custom satin column'), type='toggle')
     def satin_column(self):
-        return self.get_boolean_param("satin_column") or is_power_stroke(self.node)
+        return self.get_boolean_param("satin_column") or self.is_power_stroke
 
     # I18N: "E" stitch is so named because it looks like the letter E.
     @property
@@ -109,7 +109,7 @@ class SatinColumn(EmbroideryElement):
     @property
     def color(self):
         if self.is_power_stroke:
-            return self.get_style("fill")
+            return self.get_style("stroke") or self.get_style("fill", '#000000')
         return self.get_style("stroke")
 
     @property
@@ -224,14 +224,15 @@ class SatinColumn(EmbroideryElement):
     def zigzag_underlay_max_stitch_length(self):
         return self.get_float_param("zigzag_underlay_max_stitch_length_mm") or None
 
+    @property
     @cache
-    def is_power_stroke(self, node):
+    def is_power_stroke(self):
         return is_power_stroke(self.node)
 
     @property
     @cache
     def path(self):
-        if self.is_power_stroke(self.node):
+        if self.is_power_stroke:
             d = get_power_stroke_path(self.node)
         else:
             d = self.node.get_path()

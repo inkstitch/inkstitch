@@ -20,9 +20,9 @@ def get_power_stroke_path(node):
 
     # add rungs from original path (if existent)
     rungs = ""
-    original_d = node.get(INKSCAPE_ORIGINAL_D)
-    if original_d.lower().count('m') > 1:
-        rungs = original_d[original_d.lower().find("m", 1):].rstrip()
+    original_d = Path(node.get(INKSCAPE_ORIGINAL_D)).to_superpath()
+    if len(original_d) > 1:
+        rungs = CubicSuperPath(original_d[1:]).to_path()
 
     d = Path(d + rungs).to_superpath()
     return d
@@ -48,12 +48,12 @@ def get_power_stroke_rails(path, start_cap, end_cap):
     if end_cap in ['zerowidth', 'peak', 'round']:
         rail1 = CubicSuperPath([path[0][:rail_length + 1]]).to_path()
         rail2 = CubicSuperPath([path[0][rail_length:]]).to_path().reverse()
-    elif end_cap in ['square', 'butt']:
-        rail1 = CubicSuperPath([path[0][:rail_length - 1]]).to_path()
-        rail2 = CubicSuperPath([path[0][rail_length - 1:]]).to_path().reverse()
+    elif end_cap in ['butt', 'square']:
+        rail1 = CubicSuperPath([path[0][:rail_length]]).to_path()
+        rail2 = CubicSuperPath([path[0][rail_length:]]).to_path().reverse()
 
     # combine rails into one path
-    path = str(rail1) + str(rail2)
+    path = rail1 + rail2
     return path
 
 
