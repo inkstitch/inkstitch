@@ -17,7 +17,7 @@ class PowerStrokeToSatin(InkstitchExtension):
 
     def __init__(self, *args, **kwargs):
         InkstitchExtension.__init__(self, *args, **kwargs)
-        self.arg_parser.add_argument("-k", "--keep_satin", type=inkex.Boolean, default=False, dest="keep_satin")
+        self.arg_parser.add_argument("-k", "--keep_original", type=inkex.Boolean, default=False, dest="keep_original")
 
     def effect(self):
 
@@ -44,7 +44,7 @@ class PowerStrokeToSatin(InkstitchExtension):
             })
             parent.insert(index, satin)
 
-            if not self.options.keep_satin:
+            if not self.options.keep_original:
                 parent.remove(element.node)
             else:
                 element.node.style['display'] = 'none'

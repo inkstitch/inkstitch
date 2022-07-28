@@ -7,20 +7,27 @@ from ..svg.tags import INKSCAPE_LPE, INKSCAPE_ORIGINAL_D
 def get_power_stroke_path(node):
     # a power stroke is a closed path
     # for a satin column we need to open the path at the beginning and
-    # split it at the center
+    # split it at the center and reverse one side of the path
 
-    # get start and end cap style
-    # possible values: zerowidth (default), square, round, peak, butt
-    lpe = get_lpe_source(node)
-    start_cap = lpe.get('start_linecap_type')
-    end_cap = lpe.get('end_linecap_type')
+    original_d = Path(node.get(INKSCAPE_ORIGINAL_D)).to_superpath()
+    path = node.get_path()
 
-    # make it an open path
-    d = get_power_stroke_rails(node.get_path(), start_cap, end_cap)
+    if original_d[0][0] == original_d[0][-1]:
+        # closed path source
+        d = _get_closed_path_rails(path)
+    else:
+        # path with start and end
+        # get start and end cap style
+        # possible values: zerowidth (default), square, round, peak, butt
+        lpe = _get_lpe_source(node)
+        start_cap = lpe.get('start_linecap_type')
+        end_cap = lpe.get('end_linecap_type')
+
+        # make it an open path
+        d = _get_power_stroke_rails(path, start_cap, end_cap)
 
     # add rungs from original path (if existent)
     rungs = ""
-    original_d = Path(node.get(INKSCAPE_ORIGINAL_D)).to_superpath()
     if len(original_d) > 1:
         rungs = CubicSuperPath(original_d[1:]).to_path()
 
@@ -28,7 +35,7 @@ def get_power_stroke_path(node):
     return d
 
 
-def get_power_stroke_rails(path, start_cap, end_cap):
+def _get_power_stroke_rails(path, start_cap, end_cap):
     # make it an open path
     path = Path(path[0:-1]).to_superpath()
 
@@ -53,18 +60,24 @@ def get_power_stroke_rails(path, start_cap, end_cap):
         rail2 = CubicSuperPath([path[0][rail_length:]]).to_path().reverse()
 
     # combine rails into one path
-    path = rail1 + rail2
-    return path
+    return rail1 + rail2
+
+
+def _get_closed_path_rails(path):
+    path = path.to_superpath()
+    rail1 = CubicSuperPath(path[0][:-1]).to_path()
+    rail2 = CubicSuperPath(path[1][:-1]).to_path().reverse()
+    return rail1 + rail2
 
 
 def is_power_stroke(node):
-    lpe_source = get_lpe_source(node)
+    lpe_source = _get_lpe_source(node)
     if lpe_source is not None and lpe_source.get('effect') == 'powerstroke':
         return True
     return False
 
 
-def get_lpe_source(node):
+def _get_lpe_source(node):
     lpe = node.get(INKSCAPE_LPE, None)
     if lpe is not None:
         return find_elements(node, ".//*[@id='%s']" % lpe[1:])[0]

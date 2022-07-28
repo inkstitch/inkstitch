@@ -3,7 +3,7 @@
     <name>Power Stroke to Satin</name>
     <id>org.inkstitch.power_stroke_to_satin</id>
     <param name="extension" type="string" gui-hidden="true">power_stroke_to_satin</param>
-    <param name="keep_satin" type="boolean" gui-text="Keep satin column"
+    <param name="keep_original" type="boolean" gui-text="Keep original"
        gui-description="Do not delete but hide original power stroke.">false</param>
     <effect>
         <object-type>all</object-type>
