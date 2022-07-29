@@ -24,6 +24,11 @@ export default new Router({
       component: require('@/components/InstallPalettes').default
     },
     {
+      path: '/preferences',
+      name: 'preferences',
+      component: require('@/components/Preferences').default
+    },
+    {
       path: '*',
       redirect: '/'
     }

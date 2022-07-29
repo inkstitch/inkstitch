@@ -10,6 +10,8 @@ import pickle
 import appdirs
 import diskcache
 
+from lib.utils.settings import global_settings
+
 try:
     from functools import lru_cache
 except ImportError:
@@ -29,7 +31,9 @@ def get_stitch_plan_cache():
 
     if __stitch_plan_cache is None:
         cache_dir = os.path.join(appdirs.user_config_dir('inkstitch'), 'cache', 'stitch_plan')
-        __stitch_plan_cache = diskcache.Cache(cache_dir, size=1024 * 1024 * 100)
+        size_limit = global_settings['cache_size'] * 1024 * 1024
+        __stitch_plan_cache = diskcache.Cache(cache_dir, size=size_limit)
+        __stitch_plan_cache.size_limit = size_limit
         atexit.register(__stitch_plan_cache.close)
 
     return __stitch_plan_cache
