@@ -8,6 +8,8 @@ toc: false
 **Info**: This is not a general standard setting, it will only apply to the document on which you have run this function.
 {: .notice--info }
 
+The preferences are found in `Extensions > Ink/Stitch > Preferences`.
+
 ## Output Settings
 
 * Collapse lenght (mm): Jump stitches smaller than this will be treated as normal stitches (without lock stitches).
