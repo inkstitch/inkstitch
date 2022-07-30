@@ -4,7 +4,7 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 from copy import deepcopy
-from itertools import chain
+from itertools import chain, combinations
 import numpy as np
 
 from shapely import affinity as shaffinity
@@ -339,6 +339,12 @@ class SatinColumn(EmbroideryElement):
                 rungs.append(rung)
             else:
                 rungs.append(rung)
+
+        if rungs:
+            # filter (almost) duplicate rungs
+            duplicate_rungs = [rung1 for (rung1, rung2) in combinations(rungs, 2) if rung1.equals_exact(rung2, 6)]
+            rungs = [rung for rung in rungs if rung not in duplicate_rungs]
+
         return tuple(rungs)
 
     @property
