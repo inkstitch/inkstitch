@@ -573,6 +573,11 @@ body {
     overflow: hidden;
   }
 
+  figure.pattern-only {
+      border: none !important;
+      height: 100% !important;
+  }
+
   .client-overview-main figure.inksimulation {
     height: 155mm;
   }
