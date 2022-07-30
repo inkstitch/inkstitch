@@ -339,3 +339,164 @@ class Print(InkstitchExtension):
         browser_window.wait()
         print_server.stop()
         print_server.join()
+
+class PrintPatternOnly(InkstitchExtension):
+    def build_environment(self):
+        if getattr(sys, 'frozen', False):
+            if sys.platform == "darwin":
+                print_dir = os.path.join(sys._MEIPASS, "..", 'Resources', "print")
+            else:
+                print_dir = os.path.join(sys._MEIPASS, "print")
+        else:
+            print_dir = os.path.realpath(os.path.join(os.path.dirname(__file__), "..", "..", "print"))
+
+        template_dir = os.path.join(print_dir, "templates")
+
+        env = Environment(
+            loader=FileSystemLoader(template_dir),
+            autoescape=select_autoescape(['html', 'xml']),
+            extensions=['jinja2.ext.i18n']
+        )
+
+        env.filters['datetimeformat'] = datetimeformat
+        env.install_gettext_translations(inkstitch_translation)
+
+        languages_with_style = []
+        languages = get_languages()
+        for lang in languages:
+            css_file = "%s.css" % lang
+            if os.path.isfile(os.path.join(print_dir, "resources", css_file)):
+                languages_with_style.append(lang)
+        env.languages = languages_with_style
+
+        return env
+
+    def strip_namespaces(self, svg):
+        # namespace prefixes seem to trip up HTML, so get rid of them
+        for element in svg.iter():
+            if type(element.tag) == str and element.tag[0] == '{':
+                element.tag = element.tag[element.tag.index('}', 1) + 1:]
+
+    def write_realistic_svg(self, stitch_plan):
+        overview_svg, color_block_svgs = self.render_svgs(stitch_plan, realistic=True)
+        with open("/Users/colevick/Desktop/test.svg", "w+") as f:
+            f.write(overview_svg)
+
+    def render_svgs(self, stitch_plan, realistic=False):
+        svg = deepcopy(self.document).getroot()
+        render_stitch_plan(svg, stitch_plan, realistic, visual_commands=False)
+
+        self.strip_namespaces(svg)
+
+        # Now the stitch plan layer will contain a set of groups, each
+        # corresponding to a color block.  We'll create a set of SVG files
+        # corresponding to each individual color block and a final one
+        # for all color blocks together.
+
+        layers = svg.findall("./g[@%s='layer']" % INKSCAPE_GROUPMODE)
+        stitch_plan_layer = svg.find(".//*[@id='__inkstitch_stitch_plan__']")
+
+        # Make sure there is no leftover translation from stitch plan preview
+        stitch_plan_layer.pop('transform')
+
+        # objects outside of the viewbox are invisible
+        # TODO: if we want them to be seen, we need to redefine document size to fit the design
+        #       this is just a quick fix and doesn't work on realistic view
+        svg.set('style', 'overflow:visible;')
+
+        # First, delete all of the other layers.  We don't need them and they'll
+        # just bulk up the SVG.
+        for layer in layers:
+            if layer is not stitch_plan_layer:
+                svg.remove(layer)
+
+        overview_svg = etree.tostring(svg).decode('utf-8')
+        color_block_groups = stitch_plan_layer.getchildren()
+        color_block_svgs = []
+
+        for i, group in enumerate(color_block_groups):
+            # clear the stitch plan layer
+            del stitch_plan_layer[:]
+
+            # add in just this group
+            stitch_plan_layer.append(group)
+
+            # save an SVG preview
+            color_block_svgs.append(etree.tostring(svg).decode('utf-8'))
+
+        return overview_svg, color_block_svgs
+
+    def render_html(self, stitch_plan, overview_svg, selected_palette):
+        env = self.build_environment()
+        template = env.get_template('pattern_only.html')
+
+        return template.render(
+            view={
+            'client_overview': False,
+            'client_detailedview': False,
+            'operator_overview': True,
+            'operator_detailedview': True,
+            'custom_page': False
+            },
+            logo={'src': '', 'title': 'LOGO'},
+            date=date.today(),
+            client="",
+            job={
+                'title': '',
+                'num_colors': stitch_plan.num_colors,
+                'num_color_blocks': len(stitch_plan),
+                'num_stops': stitch_plan.num_stops,
+                'num_trims': stitch_plan.num_trims,
+                'dimensions': stitch_plan.dimensions_mm,
+                'num_stitches': stitch_plan.num_stitches,
+                'estimated_thread': stitch_plan.estimated_thread
+            },
+            svg_overview=overview_svg,
+            color_blocks=stitch_plan.color_blocks,
+            palettes=ThreadCatalog().palette_names(),
+            selected_palette=selected_palette,
+            languages=env.languages
+        )
+
+    def effect(self):
+        # It doesn't really make sense to print just a couple of selected
+        # objects.  It's almost certain they meant to print the whole design.
+        # If they really wanted to print just a few objects, they could set
+        # the rest invisible temporarily.
+        self.svg.selection.clear()
+
+        if not self.get_elements():
+            return
+
+        self.metadata = self.get_inkstitch_metadata()
+        collapse_len = self.metadata['collapse_len_mm']
+        min_stitch_len = self.metadata['min_stitch_len_mm']
+        patches = self.elements_to_stitch_groups(self.elements)
+        stitch_plan = stitch_groups_to_stitch_plan(patches, collapse_len=collapse_len, min_stitch_len=min_stitch_len)
+        palette = ThreadCatalog().match_and_apply_palette(stitch_plan, self.get_inkstitch_metadata()['thread-palette'])
+
+        overview_svg, color_block_svgs = self.render_svgs(stitch_plan, realistic=False)
+        realistic_overview_svg, realistic_color_block_svgs = self.render_svgs(stitch_plan, realistic=True)
+        for i, svg in enumerate(color_block_svgs):
+            stitch_plan.color_blocks[i].svg_preview = svg
+
+        html = self.render_html(stitch_plan, overview_svg, palette)
+
+        print_server = PrintPreviewServer(
+            html=html,
+            metadata=self.get_inkstitch_metadata(),
+            stitch_plan=stitch_plan,
+            realistic_overview_svg=realistic_overview_svg,
+            realistic_color_block_svgs=realistic_color_block_svgs
+        )
+        print_server.start()
+
+        # Wait for print_server.host and print_server.port to be populated.
+        # Hacky, but Flask doesn't have an option for a callback to be run
+        # after startup.
+        time.sleep(0.5)
+
+        browser_window = open_url("http://%s:%s/" % (print_server.host, print_server.port))
+        browser_window.wait()
+        print_server.stop()
+        print_server.join()

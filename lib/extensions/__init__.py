@@ -37,7 +37,7 @@ from .output import Output
 from .palette_split_text import PaletteSplitText
 from .palette_to_text import PaletteToText
 from .params import Params
-from .print_pdf import Print
+from .print_pdf import Print, PrintPatternOnly
 from .remove_embroidery_settings import RemoveEmbroiderySettings
 from .reorder import Reorder
 from .selection_to_guide_line import SelectionToGuideLine
@@ -53,6 +53,7 @@ __all__ = extensions = [StitchPlanPreview,
                         Install,
                         Params,
                         Print,
+                        PrintPatternOnly,
                         Input,
                         Output,
                         Zip,
