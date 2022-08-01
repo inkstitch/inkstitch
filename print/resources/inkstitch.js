@@ -204,6 +204,16 @@ function setSVGTransform(figure, transform) {
   }, 250);
 }
 
+// handle hide/show of pattern-only view
+
+
+
+$('#pattern-onlyview').on('click', function () {
+    v = $('#pattern-onlyview').is(':checked') ? 'block' :'none';
+   $('#pattern-display').css("display", v);
+});
+
+
 $(function() {
   /* SCALING AND MOVING SVG  */
 
