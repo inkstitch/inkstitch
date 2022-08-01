@@ -31,6 +31,9 @@
 {# operator detailed view #}
     {% include 'operator_detailedview.html' %}
 
+{# pattern only view #}
+    {% include 'pattern_only.html' %}
+
 {# custom pages #}
     <div class="page custom-page" style="display: {{ 'block' if view.custom_page else 'none' }}">{% include 'custom-page.html' %}</div>
 </body>

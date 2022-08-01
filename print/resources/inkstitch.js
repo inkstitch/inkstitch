@@ -735,6 +735,7 @@ $(function() {
     settings["operator-overview"] = $("[data-field-name='operator-overview']").is(':checked');
     settings["operator-detailedview"] = $("[data-field-name='operator-detailedview']").is(':checked');
     settings["operator-detailedview-thumbnail-size"] = $("[data-field-name='operator-detailedview-thumbnail-size']").val();
+    settings["pattern-onlyview"] = $("[data-field-name='pattern-onlyview']").val();
     settings["custom-page"] = $("[data-field-name='custom-page']").is(':checked');
     settings["paper-size"] = $('select#printing-size').find(':selected').val();
 
@@ -746,7 +747,7 @@ $(function() {
 
     settings["machine-speed"] = $("[data-field-name='machine-speed']").val();
     settings["time-additional"] = $("[data-field-name='time-additional']").val();
-    settings["time-color-change"] = $("[data-field-name='time-color-change']").val(); 
+    settings["time-color-change"] = $("[data-field-name='time-color-change']").val();
     settings["time-trims"] = $("[data-field-name='time-trims']").val();
 
     settings["time-clo"] = $("[data-field-name='time-clo']").val();
