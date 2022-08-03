@@ -32,7 +32,10 @@
     {% include 'operator_detailedview.html' %}
 
 {# pattern only view #}
-    {% include 'pattern_only.html' %}
+    <div class="page pattern-onlyview" style="display: {{'block' if view.pattern_onlyview else 'none' }}">
+      {% include 'pattern_only.html' %}
+    </div>
+
 
 {# custom pages #}
     <div class="page custom-page" style="display: {{ 'block' if view.custom_page else 'none' }}">{% include 'custom-page.html' %}</div>

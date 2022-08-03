@@ -735,7 +735,7 @@ $(function() {
     settings["operator-overview"] = $("[data-field-name='operator-overview']").is(':checked');
     settings["operator-detailedview"] = $("[data-field-name='operator-detailedview']").is(':checked');
     settings["operator-detailedview-thumbnail-size"] = $("[data-field-name='operator-detailedview-thumbnail-size']").val();
-    settings["pattern-onlyview"] = $("[data-field-name='pattern-onlyview']").val();
+    settings["pattern-onlyview"] = $("[data-field-name='pattern-onlyview']").is(':checked');
     settings["custom-page"] = $("[data-field-name='custom-page']").is(':checked');
     settings["paper-size"] = $('select#printing-size').find(':selected').val();
 

@@ -492,10 +492,6 @@ body {
     padding-top: 2mm;
   }
 
-  .pattern-onlyview figure.inksimulation {
-      height: 100%;
-  }
-
   div.job-details > div {
     flex-grow: 1;
   }
@@ -578,8 +574,8 @@ body {
   }
 
   figure.pattern-only {
-      border: none !important;
-      height: 100% !important;
+      border: none;
+      height: 265mm;
   }
 
   .client-overview-main figure.inksimulation {

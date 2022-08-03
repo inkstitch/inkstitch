@@ -1,11 +1,11 @@
-    <main class="page pattern-onlyview" id="pattern-display">
+    <main>
       <figure class="inksimulation pattern-only operator"
-              data-field-name="pattern-onlyview"
+              data-field-name="pattern-onlyview-transform"
               title="{{ _('Ctrl + Scroll to Zoom') }}"
               style="cursor: auto;">
                 {{ svg_overview|replace("<li>", "")|replace("</li>", "")|safe }}
                 {% with %}
-                {% set realistic_id='realistic-operator-overview' %}
+                {% set realistic_id='realistic-pattern-overview' %}
                 {% endwith %}
                 <div>
                   <button class="svg-fit">{{ _('Fit') }}</button>
