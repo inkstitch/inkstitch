@@ -1172,6 +1172,10 @@ body {
       display: none !important;
     }
 
+    div.pattern-onlyview figcaption {
+        display: none;
+    }
+
     .header-field:not(:empty)::before {
         content: attr(data-label);
         padding-right: 0.5em;
