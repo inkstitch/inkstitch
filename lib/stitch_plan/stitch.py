@@ -55,16 +55,17 @@ class Stitch(Point):
         return instance
 
     def __repr__(self):
-        return "Stitch(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)" % (self.x,
-                                                                   self.y,
-                                                                   self.color,
-                                                                   "JUMP" if self.jump else " ",
-                                                                   "TRIM" if self.trim else " ",
-                                                                   "STOP" if self.stop else " ",
-                                                                   "TIE MODUS" if self.tie_modus else " ",
-                                                                   "FORCE LOCK STITCHES" if self.force_lock_stitches else " ",
-                                                                   "NO TIES" if self.no_ties else " ",
-                                                                   "COLOR CHANGE" if self.color_change else " ")
+        return "Stitch(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)" % (self.x,
+                                                                       self.y,
+                                                                       self.color,
+                                                                       self.tags,
+                                                                       "JUMP" if self.jump else " ",
+                                                                       "TRIM" if self.trim else " ",
+                                                                       "STOP" if self.stop else " ",
+                                                                       self.tie_modus,
+                                                                       "FORCE LOCK STITCHES" if self.force_lock_stitches else " ",
+                                                                       "NO TIES" if self.no_ties else " ",
+                                                                       "COLOR CHANGE" if self.color_change else " ")
 
     def _set(self, attribute, value, base_stitch):
         # Set an attribute.  If the caller passed a Stitch object, use its value, unless
@@ -104,3 +105,12 @@ class Stitch(Point):
         attributes = dict(vars(self))
         attributes['tags'] = list(attributes['tags'])
         return attributes
+
+    def __getstate__(self):
+        # This is used by pickle.  We want to sort the tag list so that the
+        # pickled representation is stable, since it's used to generate cache
+        # keys.
+        state = self.__json__()
+        state['tags'].sort()
+
+        return state

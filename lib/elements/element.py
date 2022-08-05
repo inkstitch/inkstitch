@@ -396,7 +396,15 @@ class EmbroideryElement(object):
             # we don't care about the previous stitch
             previous_stitch = None
 
-        return get_stitch_plan_cache().get(self._get_cache_key(previous_stitch))
+        cache_key = self._get_cache_key(previous_stitch)
+        stitch_groups = get_stitch_plan_cache().get(cache_key)
+
+        if stitch_groups:
+            debug.log(f"used cache for {self.node.get('id')} {self.node.get(INKSCAPE_LABEL)}")
+        else:
+            debug.log(f"did not use cache for {self.node.get('id')} {self.node.get(INKSCAPE_LABEL)}, key={cache_key}")
+
+        return stitch_groups
 
     def uses_previous_stitch(self):
         """Returns True if the previous stitch can affect this Element's stitches.
@@ -408,12 +416,16 @@ class EmbroideryElement(object):
     @debug.time
     def _save_cached_stitch_groups(self, stitch_groups, previous_stitch):
         stitch_plan_cache = get_stitch_plan_cache()
-        stitch_plan_cache[self._get_cache_key(previous_stitch)] = stitch_groups
+        cache_key = self._get_cache_key(previous_stitch)
+        if cache_key not in stitch_plan_cache:
+            stitch_plan_cache[cache_key] = stitch_groups
 
         if previous_stitch is not None:
             # Also store it with None as the previous stitch, so that it can be used next time
             # if we don't care about the previous stitch
-            stitch_plan_cache[self._get_cache_key(None)] = stitch_groups
+            cache_key = self._get_cache_key(None)
+            if cache_key not in stitch_plan_cache:
+                stitch_plan_cache[cache_key] = stitch_groups
 
     def get_params_and_values(self):
         params = {}
@@ -436,11 +448,13 @@ class EmbroideryElement(object):
         cache_key_generator.update([(c.command, c.target_point) for c in self.commands])
         cache_key_generator.update(self._get_patterns_cache_key_data())
 
-        # TODO: include commands and patterns that apply to this element
+        cache_key = cache_key_generator.get_cache_key()
+        debug.log(f"cache key for {self.node.get('id')} {self.node.get(INKSCAPE_LABEL)} {previous_stitch}: {cache_key}")
 
-        return cache_key_generator.get_cache_key()
+        return cache_key
 
     def embroider(self, last_stitch_group):
+        debug.log(f"starting {self.node.get('id')} {self.node.get(INKSCAPE_LABEL)}")
         if last_stitch_group:
             previous_stitch = last_stitch_group.stitches[-1]
         else:
@@ -463,6 +477,7 @@ class EmbroideryElement(object):
 
             self._save_cached_stitch_groups(stitch_groups, previous_stitch)
 
+        debug.log(f"ending {self.node.get('id')} {self.node.get(INKSCAPE_LABEL)}")
         return stitch_groups
 
     def fatal(self, message, point_to_troubleshoot=False):
