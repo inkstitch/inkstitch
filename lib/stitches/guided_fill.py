@@ -247,7 +247,7 @@ def intersect_region_with_grating_guideline(shape, line, row_spacing, num_stagge
 
         debug.log_line_string(offset_line, f"offset {row}")
 
-        stitched_line = apply_stitches(offset_line, max_stitch_length, num_staggers, row_spacing, row * direction)
+        stitched_line = apply_stitches(offset_line, max_stitch_length, num_staggers, row_spacing, row)
         intersection = shape.intersection(stitched_line)
 
         if shape_envelope.intersects(stitched_line):
