@@ -341,5 +341,3 @@ class Print(InkstitchExtension):
         browser_window.wait()
         print_server.stop()
         print_server.join()
-
-
