@@ -16,7 +16,7 @@ from inkex import paths
 from ..i18n import _
 from ..stitch_plan import StitchGroup
 from ..svg import line_strings_to_csp, point_lists_to_csp
-from ..utils import Point, cache, collapse_duplicate_point, cut
+from ..utils import Point, cache, cut, cut_multiple
 from .element import EmbroideryElement, param, PIXELS_PER_MM
 from .validation import ValidationError, ValidationWarning
 
@@ -326,24 +326,6 @@ class SatinColumn(EmbroideryElement):
     @cache
     def flattened_rungs(self):
         """The rungs, as LineStrings."""
-        rungs = []
-        for rung in self._raw_rungs:
-            # make sure each rung intersects both rails
-            if not rung.intersects(self.flattened_rails[0]) or not rung.intersects(self.flattened_rails[1]):
-                # the rung does not intersect both rails
-                # get nearest points on rungs
-                start = nearest_points(rung, self.flattened_rails[0])[1]
-                end = nearest_points(rung, self.flattened_rails[1])[1]
-                # extend from the nearest points just a little bit to make sure that we get an intersection
-                rung = shaffinity.scale(shgeo.LineString([start, end]), 1.01, 1.01)
-                rungs.append(rung)
-            else:
-                rungs.append(rung)
-        return tuple(rungs)
-
-    @property
-    @cache
-    def _raw_rungs(self):
         return tuple(shgeo.LineString(self.flatten_subpath(rung)) for rung in self.rungs)
 
     @property
@@ -374,14 +356,6 @@ class SatinColumn(EmbroideryElement):
 
         rungs = []
         for start, end in zip(*rung_endpoints):
-            # Expand the points just a bit to ensure that shapely thinks they
-            # intersect with the rails even with floating point inaccuracy.
-            start = Point(*start)
-            end = Point(*end)
-            start, end = self.offset_points(start, end, (0.01, 0.01), (0, 0))
-            start = list(start)
-            end = list(end)
-
             rungs.append([[start, start, start], [end, end, end]])
 
         return rungs
@@ -434,39 +408,22 @@ class SatinColumn(EmbroideryElement):
             indices_by_length = sorted(list(range(num_paths)), key=lambda index: paths[index].length, reverse=True)
             return indices_by_length[:2]
 
-    def _cut_rail(self, rail, rung):
-        for segment_index, rail_segment in enumerate(rail[:]):
-            if rail_segment is None:
-                continue
-
-            intersection = rail_segment.intersection(rung)
-
-            # If there are duplicate points in a rung-less satin, then
-            # intersection will be a GeometryCollection of multiple copies
-            # of the same point.  This reduces it that to a single point.
-            intersection = collapse_duplicate_point(intersection)
-
-            if not intersection.is_empty:
-                cut_result = cut(rail_segment, rail_segment.project(intersection))
-                rail[segment_index:segment_index + 1] = cut_result
-
-                if cut_result[1] is None:
-                    # if we were exactly at the end of one of the existing rail segments,
-                    # stop here or we'll get a spurious second intersection on the next
-                    # segment
-                    break
-
     @property
     @cache
     def flattened_sections(self):
         """Flatten the rails, cut with the rungs, and return the sections in pairs."""
 
-        rails = [[rail] for rail in self.flattened_rails]
+        rails = list(self.flattened_rails)
         rungs = self.flattened_rungs
 
-        for rung in rungs:
-            for rail in rails:
-                self._cut_rail(rail, rung)
+        for i, rail in enumerate(rails):
+            cut_points = []
+
+            for rung in rungs:
+                point_on_rung, point_on_rail = nearest_points(rung, rail)
+                cut_points.append(rail.project(point_on_rail))
+
+            rails[i] = cut_multiple(rail, cut_points)
 
         for rail in rails:
             for i in range(len(rail)):
@@ -490,7 +447,7 @@ class SatinColumn(EmbroideryElement):
         return sections
 
     def validation_warnings(self):
-        for rung in self._raw_rungs:
+        for rung in self.flattened_rungs:
             for rail in self.flattened_rails:
                 intersection = rung.intersection(rail)
                 if intersection.is_empty:
@@ -506,7 +463,7 @@ class SatinColumn(EmbroideryElement):
             if len(self.rails[0]) != len(self.rails[1]):
                 yield UnequalPointsError(self.flattened_rails[0].interpolate(0.5, normalized=True))
         else:
-            for rung in self._raw_rungs:
+            for rung in self.flattened_rungs:
                 for rail in self.flattened_rails:
                     intersection = rung.intersection(rail)
                     if not intersection.is_empty and not isinstance(intersection, shgeo.Point):
@@ -652,10 +609,6 @@ class SatinColumn(EmbroideryElement):
                 rung_start = path_list[0].interpolate(0.1)
                 rung_end = path_list[1].interpolate(0.1)
                 rung = shgeo.LineString((rung_start, rung_end))
-
-                # make it a bit bigger so that it definitely intersects
-                rung = shaffinity.scale(rung, 1.1, 1.1)
-
                 path_list.append(rung)
 
     def _path_list_to_satins(self, path_list):

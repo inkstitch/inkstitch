@@ -7,7 +7,6 @@ import math
 from itertools import chain
 
 import networkx as nx
-from shapely import affinity as shaffinity
 from shapely import geometry as shgeo
 from shapely.geometry import Point as ShapelyPoint
 
@@ -532,9 +531,6 @@ def _ensure_rungs(element):
         rung_start = rails[0].interpolate(0.1)
         rung_end = rails[1].interpolate(0.1)
         rung = shgeo.LineString((rung_start, rung_end))
-
-        # make it a bit bigger so that it definitely intersects
-        rung = shaffinity.scale(rung, 1.1, 1.1)
 
         # insert rung into the satin path
         d = element.node.get('d')
