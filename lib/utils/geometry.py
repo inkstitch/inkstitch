@@ -7,6 +7,8 @@ import math
 
 from shapely.geometry import LineString, LinearRing, MultiLineString, Polygon, MultiPolygon, MultiPoint, GeometryCollection
 from shapely.geometry import Point as ShapelyPoint
+from scipy.interpolate import splprep, splev
+import numpy as np
 
 
 def cut(line, distance, normalized=False):
@@ -145,6 +147,60 @@ def cut_path(points, length):
     subpath, rest = cut(path, length)
 
     return [Point(*point) for point in subpath.coords]
+
+
+def _remove_duplicate_coordinates(coords_array):
+    """Remove consecutive duplicate points from an array.
+
+    Arguments:
+        coords_array -- numpy.array
+
+    Returns:
+        a numpy.array of coordinates, minus consecutive duplicates
+    """
+
+    differences = np.diff(coords_array, axis=0)
+    zero_differences = np.isclose(differences, 0)
+    keepers = np.r_[True, np.any(zero_differences == False, axis=1)]  # noqa: E712
+
+    return coords_array[keepers]
+
+
+def smooth_path(path, smoothness=100.0):
+    """Smooth a path of coordinates.
+
+    Arguments:
+        path -- an iterable of coordinate tuples or Points
+        smoothness -- float, how much smoothing to apply.  Bigger numbers
+            smooth more.
+
+    Returns:
+        A list of Points.
+    """
+
+    # splprep blows up on duplicated consecutive points with "Invalid inputs"
+    coords = _remove_duplicate_coordinates(np.array(path))
+    num_points = len(coords)
+
+    # splprep's s parameter seems to depend on the number of points you pass
+    # as per the docs, so let's normalize it.
+    s = round(smoothness / 100 * num_points)
+
+    # .T transposes the array (for some reason splprep expects
+    # [[x1, x2, ...], [y1, y2, ...]]
+    tck, fp, ier, msg = splprep(coords.T, s=s, nest=-1, full_output=1)
+    if ier > 0:
+        from ..debug import debug
+        debug.log(f"error {ier} smoothing path: {msg}")
+        return path
+
+    # Evaluate the spline curve at many points along its length to produce the
+    # smoothed point list.  2 * num_points seems to be a good number, but it
+    # does produce a lot of points.
+    smoothed_x_values, smoothed_y_values = splev(np.linspace(0, 1, num_points * 2), tck[0])
+    coords = np.array([smoothed_x_values, smoothed_y_values]).T
+
+    return [Point(x, y) for x, y in coords]
 
 
 class Point:
