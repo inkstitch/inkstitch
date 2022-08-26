@@ -182,13 +182,17 @@ def smooth_path(path, smoothness=100.0):
     coords = _remove_duplicate_coordinates(np.array(path))
     num_points = len(coords)
 
-    # splprep's s parameter seems to depend on the number of points you pass
-    # as per the docs, so let's normalize it.
-    s = round(smoothness / 100 * num_points)
+    # s is explained in this issue: https://github.com/scipy/scipy/issues/11916
+    # the smoothness parameter limits how much the smoothed path can deviate
+    # from the original path.  The standard deviation of the distance between
+    # the smoothed path and the original path is equal to the smoothness.
+    # In practical terms, if smoothness is 1mm, then the smoothed path can be
+    # up to 1mm away from the original path.
+    s = num_points * smoothness ** 2
 
     # .T transposes the array (for some reason splprep expects
     # [[x1, x2, ...], [y1, y2, ...]]
-    tck, fp, ier, msg = splprep(coords.T, s=s, nest=-1, full_output=1)
+    tck, fp, ier, msg = splprep(coords.T, s=s, k=3, nest=-1, full_output=1)
     if ier > 0:
         from ..debug import debug
         debug.log(f"error {ier} smoothing path: {msg}")

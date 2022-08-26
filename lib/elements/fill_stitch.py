@@ -138,6 +138,20 @@ class FillStitch(EmbroideryElement):
         return self.get_boolean_param('avoid_self_crossing', False)
 
     @property
+    @param('smoothness_mm', _('Smoothness'),
+           tooltip=_(
+               'Smooth the stitch path.  Smoothness limits how far the smoothed stitch path ' +
+               'is allowed to deviate from the original path.  Hint: a lower stitchc tolerance may be needed too.'
+           ),
+           type='integer',
+           unit='mm',
+           default=0,
+           select_items=[('fill_method', 1)],
+           sort_index=5)
+    def smoothness(self):
+        return self.get_float_param('smoothness_mm', 0)
+
+    @property
     @param('clockwise', _('Clockwise'), type='boolean', default=True, select_items=[('fill_method', 1)], sort_index=5)
     def clockwise(self):
         return self.get_boolean_param('clockwise', True)
@@ -651,9 +665,11 @@ class FillStitch(EmbroideryElement):
         if self.contour_strategy == 0:
             stitches = contour_fill.inner_to_outer(
                 tree,
+                polygon,
                 self.row_spacing,
                 self.max_stitch_length,
                 self.running_stitch_tolerance,
+                self.smoothness,
                 starting_point,
                 self.avoid_self_crossing
             )
