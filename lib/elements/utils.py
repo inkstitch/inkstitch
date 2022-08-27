@@ -6,11 +6,11 @@
 from ..commands import is_command
 from ..marker import has_marker
 from ..svg.tags import (EMBROIDERABLE_TAGS, SVG_IMAGE_TAG, SVG_PATH_TAG,
-                        SVG_POLYLINE_TAG, SVG_TEXT_TAG)
-from .fill_stitch import FillStitch
+                        SVG_POLYGON_TAG, SVG_POLYLINE_TAG, SVG_TEXT_TAG)
 from .clone import Clone, is_clone
 from .element import EmbroideryElement
 from .empty_d_object import EmptyDObject
+from .fill_stitch import FillStitch
 from .image import ImageObject
 from .marker import MarkerObject
 from .polyline import Polyline
@@ -27,7 +27,8 @@ def node_to_elements(node, clone_to_element=False):  # noqa: C901
         # clone_to_element: get an actual embroiderable element once a clone has been defined as a clone
         return [Clone(node)]
 
-    elif node.tag == SVG_PATH_TAG and not node.get('d', ''):
+    elif ((node.tag == SVG_PATH_TAG and not node.get('d', None)) or
+         (node.tag in [SVG_POLYLINE_TAG, SVG_POLYGON_TAG] and not node.get('points', None))):
         return [EmptyDObject(node)]
 
     elif has_marker(node):
