@@ -1,6 +1,6 @@
 ---
 title: "Amitaclo"
-permalink: /fonts/ru/amita/
+permalink: /ru/fonts/amita/
 last_modified_at: 2022-05-27
 toc: false
 preview_image:
