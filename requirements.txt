@@ -6,7 +6,7 @@
 -e git+https://gitlab.com/inkscape/extensions.git@e44fdcbe6bcc917ef3a2164eb0c130f7276fb83f#egg=inkex
 
 backports.functools_lru_cache
-wxPython
+wxPython==4.1.1
 networkx
 shapely==1.8.2
 lxml
