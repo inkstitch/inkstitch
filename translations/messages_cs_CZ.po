@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2022-07-15 02:57+0000\n"
-"PO-Revision-Date: 2022-07-25 02:41\n"
+"PO-Revision-Date: 2022-09-13 02:49\n"
 "Last-Translator: \n"
 "Language-Team: Czech\n"
 "MIME-Version: 1.0\n"
@@ -39,7 +39,7 @@ msgstr "Brock Script"
 #. description of font in fonts/Brockscript
 #: inkstitch-fonts-metadata.py:4
 msgid "Brock Script is a decorative satin column manuscript font of size approximatively 40mm. It can be enlarged up to 250%. It contains 118 glyphs, covering most western european languages needs.More decorative options are hidden in the µ glyph"
-msgstr ""
+msgstr "Brock Script je ozdobné saténové sloupcové rukopisné písmo o velikosti přibližně 40 mm. Lze jej zvětšit až na 250 %. Obsahuje 118 glyfů, které pokrývají potřeby většiny západoevropských jazyků. další dekorativní možnosti se skrývají v µ glyfů"
 
 #. name of font in fonts/abecedaire
 #: inkstitch-fonts-metadata.py:6
@@ -80,7 +80,7 @@ msgstr "Apex Lake"
 #. description of font in fonts/apex_lake
 #: inkstitch-fonts-metadata.py:20
 msgid "Apex Lake is a large ornate capital letters font of size approximatively 60mm. It contains 38 glyphs : A-Z,0-9,! and ?. It can be reduced down to 80% and enlarged up to 130%"
-msgstr ""
+msgstr "Apex Lake je velké zdobené písmo s velkými písmeny o velikosti přibližně 60 mm. Obsahuje 38 glyfů: A-Z, 0-9,! a ?. Lze jej zmenšit na 80 % a zvětšit až na 130 %"
 
 #. name of font in fonts/aventurina
 #: inkstitch-fonts-metadata.py:22
@@ -90,7 +90,7 @@ msgstr "Aventurina"
 #. description of font in fonts/aventurina
 #: inkstitch-fonts-metadata.py:24
 msgid "Aventurina is a script satin font of size approximatively 20mm. The glyphs cover most Western European languages. The font can be scaled down to 60% and up to 150% "
-msgstr ""
+msgstr "Aventurina je saténové písmo o velikosti přibližně 20 mm. Glyfy pokrývají většinu západoevropských jazyků. Písmo lze zmenšit na 60 % a až na 150 %"
 
 #. name of font in fonts/baumans_FI
 #: inkstitch-fonts-metadata.py:26
@@ -101,7 +101,7 @@ msgstr "Baumans FI"
 #: inkstitch-fonts-metadata.py:28
 #, python-format
 msgid "The capital M is 22.3 millimeter wide at 100% scale. Can be scaled down to 80% or up to 150%. Every satin has zigzag underlay"
-msgstr ""
+msgstr "Velké písmeno M je ve 100% měřítku široké 22,3 milimetru. Lze zmenšit na 80 % nebo až na 150 %. Každý satén má klikatý podklad"
 
 #. name of font in fonts/cherryforinkstitch
 #: inkstitch-fonts-metadata.py:30
@@ -111,7 +111,7 @@ msgstr "Cherry for inkstitch"
 #. description of font in fonts/cherryforinkstitch
 #: inkstitch-fonts-metadata.py:32
 msgid "Cherry for inkstitch is a decorative satin column font of size approximatively 40mm. It can be reduced down to 80% and enlarged up to 180%. It contains 74 glyphs."
-msgstr ""
+msgstr "Cherry for inkstitch je ozdobné saténové sloupcové písmo o velikosti přibližně 40 mm. Lze jej zmenšit na 80 % a zvětšit až na 180 %. Obsahuje 74 glyfů."
 
 #. name of font in fonts/cherryforkaalleen
 #: inkstitch-fonts-metadata.py:34
@@ -121,7 +121,7 @@ msgstr "Cherry for Kaalleen"
 #. description of font in fonts/cherryforkaalleen
 #: inkstitch-fonts-metadata.py:36
 msgid "Cherry for Kaalleen is a large decorative font of size approximatively 75mm. It contains 36 glyphs including the numbers and the 26 capitals  A-Z. It can be reduced down to 80% and enlarged up to 130%"
-msgstr ""
+msgstr "Cherry for Kaalleen je velké ozdobné písmo o velikosti přibližně 75 mm. Obsahuje 36 glyfů včetně číslic a 26 velkých písmen A-Z. Lze jej zmenšit na 80 % a zvětšit až na 130 %"
 
 #. name of font in fonts/chopin
 #: inkstitch-fonts-metadata.py:38
@@ -132,7 +132,7 @@ msgstr "Chopin Script"
 #: inkstitch-fonts-metadata.py:40
 #, python-format
 msgid "The capital M is 38.3 millimeter wide at 100% scale. Can be scaled down to 80% or up to 120%. Every satin has zigzag underlay"
-msgstr ""
+msgstr "Velké písmeno M je ve 100% měřítku široké 38,3 milimetru. Lze zmenšit na 80 % nebo zvětšit až na 120 %. Každý satén má klikatý podklad"
 
 #. name of font in fonts/coronaviral
 #: inkstitch-fonts-metadata.py:42
@@ -142,7 +142,7 @@ msgstr "Coronaviral"
 #. description of font in fonts/coronaviral
 #: inkstitch-fonts-metadata.py:44
 msgid "A font created with manual sitch. Do not change the size or very little. The capital em is 22mm wide at 100%"
-msgstr ""
+msgstr "Písmo vytvořené pomocí ručního sezení. Neměňte velikost nebo jen velmi málo. Šířka velkého písmene em je 22 mm při 100 %"
 
 #. name of font in fonts/dejavufont
 #: inkstitch-fonts-metadata.py:46
@@ -153,7 +153,7 @@ msgstr "Dejavu Serif"
 #: inkstitch-fonts-metadata.py:48
 #, python-format
 msgid "DejaVu Serif Condensed. The capital M is 19,8 millimeter wide at 100% scale.  Can be scaled down to 80% or up to 150%.  Every satin has center-walk underlay."
-msgstr ""
+msgstr "DejaVu Serif Condensed. Velké M je široké 19,8 milimetru ve 100% měřítku. Lze zmenšit na 80 % nebo až na 150 %. Každý satin má středový chodbičkový podklad."
 
 #. name of font in fonts/digory_doodles_bean
 #: inkstitch-fonts-metadata.py:50
@@ -163,7 +163,7 @@ msgstr "Digory Doodles Bean"
 #. description of font in fonts/digory_doodles_bean
 #: inkstitch-fonts-metadata.py:52
 msgid "All letters have mixed satin and bean stitch. The capital M is 16mm tall. The small x is 7 mm."
-msgstr ""
+msgstr "Všechna písmena mají smíšený saténový a fazolový steh. Velké M je vysoké 16 mm. Malé x má 7 mm."
 
 #. name of font in fonts/dinomouse72
 #: inkstitch-fonts-metadata.py:54
@@ -173,7 +173,7 @@ msgstr "DinoMouse72"
 #. description of font in fonts/dinomouse72
 #: inkstitch-fonts-metadata.py:56
 msgid "A Font Grove jawn. Satin width is 2.5mm at 18mm capitals"
-msgstr ""
+msgstr "Font Grove jawn. Šířka saténu je 2,5 mm při 18mm velkých písmenech"
 
 #. name of font in fonts/emilio_20
 #: inkstitch-fonts-metadata.py:58
@@ -189,32 +189,32 @@ msgstr "Emilio 20 je písmo s velkými písmeny a číslicemi. Šířka písmene
 #. name of font in fonts/emilio_20_tricolore
 #: inkstitch-fonts-metadata.py:62
 msgid "EMILIO 20 TRICOLORE"
-msgstr ""
+msgstr "Emilio 20 Tricolore"
 
 #. description of font in fonts/emilio_20_tricolore
 #: inkstitch-fonts-metadata.py:64
 msgid "Emilio 20 tricolore is a large tricolor fill stitches and satin columns font of  size approximately 100mm. It contains 36 glyphs including the numbers and the 26 capitals  A-Z. It can be reduced down to 90% and enlarged up to 120%"
-msgstr ""
+msgstr "Emilio 20 tricolore je velké tříbarevné písmo s výplňovými stehy a saténovými sloupci o velikosti přibližně 100 mm. Obsahuje 36 glyfů včetně číslic a 26 velkých písmen A-Z. Lze jej zmenšit na 90 % a zvětšit až na 120 %"
 
 #. name of font in fonts/espresso_KOR
 #: inkstitch-fonts-metadata.py:66
 msgid "Espresso KOR"
-msgstr ""
+msgstr "Espresso KOR"
 
 #. description of font in fonts/espresso_KOR
 #: inkstitch-fonts-metadata.py:68
 msgid "The capital M is 16.2 mm high at 100 scale. Every satin has zigzag underlay. x is 11.5 mm high, q is 17.5 mm high, l is 17.2 mm high. The font may be scaled up to 200% and down to 80%"
-msgstr ""
+msgstr "Velké písmeno M je vysoké 16,2 mm v měřítku 100. Každý satén má klikatý podklad. x je vysoké 11,5 mm, q je vysoké 17,5 mm, l je vysoké 17,2 mm. Písmo lze měnit až na 200 % a na 80 %"
 
 #. name of font in fonts/espresso_tiny
 #: inkstitch-fonts-metadata.py:70
 msgid "Espresso tiny"
-msgstr ""
+msgstr "Espresso tiny"
 
 #. description of font in fonts/espresso_tiny
 #: inkstitch-fonts-metadata.py:72
 msgid "This font is an altered version  of Espresso KOR, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory. The altered embroidery parameters of this font allow to scale down the original Espresso font between 25% (for a 5mm font ) and 55 % (for a 11mm font)."
-msgstr ""
+msgstr "Toto písmo je upravenou verzí písma Espresso KOR, která umožňuje větší zmenšení. Použití tenké nitě (60) i tenké jehly (60) je povinné. Změněné parametry vyšívání tohoto písma umožňují zmenšit původní písmo Espresso o 25 % (pro písmo 5 mm ) až 55 % (pro písmo 11 mm)."
 
 #. name of font in fonts/excalibur_KOR
 #: inkstitch-fonts-metadata.py:74
@@ -224,22 +224,22 @@ msgstr "Excalibur KOR"
 #. description of font in fonts/excalibur_KOR
 #: inkstitch-fonts-metadata.py:76
 msgid "Excalibur KOR is a small satin column manuscript font of size approximatively 20mm. It can be reduced down to 80% and enlarged up to 140%. It contains 144 glyphs, covering most western European languages needs."
-msgstr ""
+msgstr "Excalibur KOR je malé saténové sloupcové rukopisné písmo o velikosti přibližně 20 mm. Lze jej zmenšit na 80 % a zvětšit až na 140 %. Obsahuje 144 glyfů, které pokrývají potřeby většiny západoevropských jazyků."
 
 #. name of font in fonts/fold_inkstitch
 #: inkstitch-fonts-metadata.py:78
 msgid "Fold Ink/Stitch"
-msgstr ""
+msgstr "Fold Ink/Stitch"
 
 #. description of font in fonts/fold_inkstitch
 #: inkstitch-fonts-metadata.py:80
 msgid "Fold Ink/Stitch is a large triple and quintuple running stitches capital font of size 100 mm. It contains 40 glyphs including all numbers and the 26 capitals  A-Z. It can be reduced down to 80% and enlarged up to 200%"
-msgstr ""
+msgstr "Fold Ink/Stitch je velké písmo s trojitými a pětinásobnými běžícími stehy o velikosti 100 mm. Obsahuje 40 glyfů včetně všech číslic a 26 velkých písmen A-Z. Lze jej zmenšit na 80 % a zvětšit až na 200 %"
 
 #. name of font in fonts/geneva_rounded
 #: inkstitch-fonts-metadata.py:82
 msgid "Geneva Simple Sans Rounded"
-msgstr ""
+msgstr "Geneva Simple Sans Rounded"
 
 #. description of font in fonts/geneva_rounded
 #: inkstitch-fonts-metadata.py:84
@@ -259,12 +259,12 @@ msgstr "Použitelné pro malá písma (od 6 do 15 mm)"
 #. name of font in fonts/glacial_tiny
 #: inkstitch-fonts-metadata.py:90
 msgid "Glacial Tiny 60 AGS"
-msgstr ""
+msgstr "Glacial Tiny 60 AGS"
 
 #. description of font in fonts/glacial_tiny
 #: inkstitch-fonts-metadata.py:92
 msgid "Glacial is a very tiny font: at 100%,  M stands at 5.6mm. Thin thread (60 wt ) and thin needle (8/60) are mandatory. The glyphs cover many European languages. It can be reduced down to 40% and enlarged up to 150% "
-msgstr ""
+msgstr "Glacial je velmi drobné písmo: při 100 % velikosti je velikost písmene M 5,6 mm. Tenká nit (60 wt ) a tenká jehla (8/60) jsou povinné. Glyfy pokrývají mnoho evropských jazyků. Lze jej zmenšit na 40 % a zvětšit až na 150 %"
 
 #. name of font in fonts/grand_hotel_marif
 #: inkstitch-fonts-metadata.py:94
@@ -274,7 +274,7 @@ msgstr "Grand Hotel Marif"
 #. description of font in fonts/grand_hotel_marif
 #: inkstitch-fonts-metadata.py:96
 msgid "Grand Hotel Marif is a script satin font of size approximatively 35 mm. The glyphs cover most Western European languages. The font can be scaled down to 60% and up to 140%."
-msgstr ""
+msgstr "Grand Hotel Marif je saténové písmo o velikosti přibližně 35 mm. Glyfy pokrývají většinu západoevropských jazyků. Písmo lze zmenšit na 60 % a až na 140 %."
 
 #. name of font in fonts/grandhotel_small
 #: inkstitch-fonts-metadata.py:98
@@ -284,7 +284,7 @@ msgstr "Grand Hotel small"
 #. description of font in fonts/grandhotel_small
 #: inkstitch-fonts-metadata.py:100
 msgid "This font is an altered version  of Grand Hotel, to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) are mandatory. The altered embroidery parameters of this font allow to scale down the original Grand Hotel font between 25% (for a 9mm font ) and 55 % (for a  20 mm font)."
-msgstr ""
+msgstr "Toto písmo je upravenou verzí písma Grand Hotel, která umožňuje větší zmenšení. Použití tenké nitě (60) i tenké jehly (60) je povinné. Změněné parametry vyšívání tohoto písma umožňují zmenšit původní písmo Grand Hotel o 25 % (pro písmo 9 mm ) až 55 % (pro písmo 20 mm)."
 
 #. name of font in fonts/infinipicto
 #: inkstitch-fonts-metadata.py:102
@@ -294,7 +294,7 @@ msgstr "InfiniPicto"
 #. description of font in fonts/infinipicto
 #: inkstitch-fonts-metadata.py:104
 msgid "InfiniPicto is a fun font of size approximatively 70 mm containing only the 26 A-Z glyph. Each letter is a pictogram of an object whose name begins with that very letter..... in French"
-msgstr ""
+msgstr "InfiniPicto je zábavné písmo o velikosti přibližně 70 mm, které obsahuje pouze 26 znaků A-Z. Každé písmeno je piktogramem předmětu, jehož název začíná právě tímto písmenem..... ve francouzštině"
 
 #. name of font in fonts/kaushan_script_MAM
 #: inkstitch-fonts-metadata.py:106
@@ -305,7 +305,7 @@ msgstr "Kaushan Script MAM"
 #: inkstitch-fonts-metadata.py:108
 #, python-format
 msgid "The capital M is 29 millimeter wide at 100% scale.  Can be scaled down to 80% or up to 200%.  Every satin has zigzag underlay"
-msgstr ""
+msgstr "Velké písmeno M je ve 100% měřítku široké 29 milimetrů. Lze zmenšit na 80 % nebo až na 200 %. Každý satén má klikatý podklad"
 
 #. name of font in fonts/learning_curve
 #: inkstitch-fonts-metadata.py:110
@@ -315,7 +315,7 @@ msgstr "Learning curve"
 #. description of font in fonts/learning_curve
 #: inkstitch-fonts-metadata.py:112
 msgid "Small running stitch script font of size approximatively 12 mm. It can be reduced down to 90% and enlarged up to 200%"
-msgstr ""
+msgstr "Malé písmo s běžícím stehem o velikosti přibližně 12 mm. Lze jej zmenšit na 90 % a zvětšit až na 200 %"
 
 #. name of font in fonts/lobster_AGS
 #: inkstitch-fonts-metadata.py:114
@@ -326,7 +326,7 @@ msgstr "Lobster AGS"
 #: inkstitch-fonts-metadata.py:116
 #, python-format
 msgid " The capital M is 19.8 millimeter wide at 100% scale. Can be scaled down to 80% or up to 150%. Every satin has zigzag underlay"
-msgstr ""
+msgstr "Velké písmeno M je ve 100% měřítku široké 19,8 milimetru. Lze zmenšit na 80 % nebo až na 150 %. Každý satén má klikatý podklad"
 
 #. name of font in fonts/magnolia_ KOR
 #: inkstitch-fonts-metadata.py:118
@@ -336,7 +336,7 @@ msgstr "Magnolia KOR"
 #. description of font in fonts/magnolia_ KOR
 #: inkstitch-fonts-metadata.py:120
 msgid "Magnolia KOR is a script font of size approximatively 20mm. It can be scaled down to 80% and up to 120%"
-msgstr ""
+msgstr "Magnolia KOR je skriptové písmo o velikosti přibližně 20 mm. Může být zmenšeno na 80 % a až na 120 %"
 
 #. name of font in fonts/manuskript_gotisch
 #: inkstitch-fonts-metadata.py:122
@@ -347,18 +347,18 @@ msgstr "Manuskript Gothisch"
 #: inkstitch-fonts-metadata.py:124
 #, python-format
 msgid "The capital M is 35 millimeter wide at 100% scale.  Can be scaled down to 70% or up to 140%.  Every satin has zigzag underlay"
-msgstr ""
+msgstr "Velké písmeno M je ve 100% měřítku široké 35 milimetrů. Lze zmenšit na 70 % nebo až na 140 %. Každý satén má klikatý podklad"
 
 #. name of font in fonts/marcelusSC_FI
 #: inkstitch-fonts-metadata.py:126
 msgid "MarcellusSC-FI"
-msgstr ""
+msgstr "MarcellusSC-FI"
 
 #. description of font in fonts/marcelusSC_FI
 #: inkstitch-fonts-metadata.py:128
 #, python-format
 msgid "MarcellusSC-FI is a small capital font of size 36 mm. It contains 107 glyphs covering most Western European languages. It can be reduced down to 70% and enlarged up to 200% or 500% using satin split"
-msgstr ""
+msgstr "MarcellusSC-FI je malé velké písmo o velikosti 36 mm. Obsahuje 107 glyfů pokrývajících většinu západoevropských jazyků. Lze jej zmenšit na 70 % a zvětšit až na 200 % nebo 500 % pomocí satinového dělení"
 
 #. name of font in fonts/medium_font
 #: inkstitch-fonts-metadata.py:130
@@ -369,79 +369,79 @@ msgstr "Ink/Stitch střední písmo"
 #: inkstitch-fonts-metadata.py:132
 #, python-format
 msgid "A basic font suited for medium-sized characters.  The capital em is 0.6 inches wide at 100% scale.  Can be scaled down to 75% or up to 150%.  Every satin has contour underlay."
-msgstr ""
+msgstr "Základní písmo vhodné pro středně velké znaky. Velké písmeno em je široké 0,6 palce při 100% měřítku. Může být zmenšeno na 75 % nebo až na 150 %. Každý satin má obrysové podložení."
 
 #. name of font in fonts/monicha
 #: inkstitch-fonts-metadata.py:134
 msgid "MONICHA"
-msgstr ""
+msgstr "Monicha"
 
 #. description of font in fonts/monicha
 #: inkstitch-fonts-metadata.py:136
 msgid "Monicha is a script satin font of size approximatively 20mm. In addition to the glyphs covering most Western European languages it contains additional ornemental letters with swashes. These ornemental letters should be used with caution to avoid overlays. In particular do not use two ornemental letters in a row. Please consult the documentation for information on how to access the ornemental letters. The font can not be scaled down but can be scaled up to 150%. "
-msgstr ""
+msgstr "Monicha je saténové písmo o velikosti přibližně 20 mm. Kromě glyfů pokrývajících většinu západoevropských jazyků obsahuje další ornamentální písmena s lomítky. Tato ornamentální písmena by měla být používána s opatrností, aby nedocházelo k jejich překrývání. Zejména nepoužívejte dvě ornamentální písmena za sebou. Informace o přístupu k ornamentálním písmenům naleznete v dokumentaci. Písmo nelze zmenšit, ale lze jej zvětšit až na 150 %."
 
 #. name of font in fonts/namskout_AGS
 #: inkstitch-fonts-metadata.py:138
 msgid "Namskout"
-msgstr ""
+msgstr "Namskout"
 
 #. description of font in fonts/namskout_AGS
 #: inkstitch-fonts-metadata.py:140
 msgid "Namskout  is a large applique font of size approximatively 90mm. It contains 43 glyphs including all numbers and the 26 capitals  A-Z.  It can be reduced down to 50% and enlarged up to 150%  "
-msgstr ""
+msgstr "Namskout je velké aplikační písmo o velikosti přibližně 90 mm. Obsahuje 43 glyfů včetně všech číslic a 26 velkých písmen A-Z. Lze jej zmenšit na 50 % a zvětšit až na 150 %"
 
 #. name of font in fonts/nick_ainley
 #: inkstitch-fonts-metadata.py:142
 msgid "NickAinley"
-msgstr ""
+msgstr "NickAinley"
 
 #. description of font in fonts/nick_ainley
 #: inkstitch-fonts-metadata.py:144
 msgid "A tiny 1mm-bean alphabet based on a 24pt Seniors Studio jawn"
-msgstr ""
+msgstr "Malá abeceda o velikosti 1 mm založená na 24pt Seniors Studio jawn"
 
 #. name of font in fonts/pacificlo
 #: inkstitch-fonts-metadata.py:146
 msgid "Pacificlo"
-msgstr ""
+msgstr "Pacificlo"
 
 #. description of font in fonts/pacificlo
 #: inkstitch-fonts-metadata.py:148
 msgid "Pacificlo is a small satin column manuscript font of size approximatively 20mm. It can be reduced down to 80% and enlarged up to 140%. It contains 120 glyphs, covering most Western European Languages needs. "
-msgstr ""
+msgstr "Pacificlo je malé saténové sloupcové rukopisné písmo o velikosti přibližně 20 mm. Lze jej zmenšit na 80 % a zvětšit až na 140 %. Obsahuje 120 glyfů, které pokrývají většinu potřeb západoevropských jazyků."
 
 #. name of font in fonts/pacificlo_tiny
 #: inkstitch-fonts-metadata.py:150
 msgid "Pacificlo tiny"
-msgstr ""
+msgstr "Pacificlo tiny"
 
 #. description of font in fonts/pacificlo_tiny
 #: inkstitch-fonts-metadata.py:152
 msgid "This font is an altered version  of Pacificlo, to allow a greater scaling down. Both thin thread (60) and thin needle (60) are mandatory. The altered embroidery parameters of this font allow to scale down the original Pacificlo font between 25% (for a 5mm font ) and 55 % (for a 11mm font)."
-msgstr ""
+msgstr "Toto písmo je upravenou verzí písma Pacificlo, která umožňuje větší zmenšení. Tenká nit (60) i tenká jehla (60) jsou povinné. Změněné parametry vyšívání tohoto písma umožňují zmenšit původní písmo Pacificlo o 25 % (pro písmo 5 mm ) až 55 % (pro písmo 11 mm)."
 
 #. name of font in fonts/roman_ags
 #: inkstitch-fonts-metadata.py:154
 msgid "Roman AGS"
-msgstr ""
+msgstr "Roman AGS"
 
 #. description of font in fonts/roman_ags
 #: inkstitch-fonts-metadata.py:156
 #, python-format
 msgid "Based on Latin Modern Roman 10 Bold italic. The capital M is 42.5 millimeter wide at 100% scale.  Can be scaled down to 80% or up to 130%.  Every satin has zigzag underlay"
-msgstr ""
+msgstr "Založeno na latince Modern Roman 10 Bold italic. Velké M je široké 42,5 milimetru při 100% měřítku. Lze zmenšit na 80 % nebo až na 130 %. Každý satén má klikatý podklad"
 
 #. name of font in fonts/roman_ags_bicolor
 #: inkstitch-fonts-metadata.py:158
 msgid "Roman bicolor AGS"
-msgstr ""
+msgstr "Roman bicolor AGS"
 
 #. description of font in fonts/roman_ags_bicolor
 #: inkstitch-fonts-metadata.py:160
 #, python-format
 msgid "Based on Latin Modern Roman 10 Bold italic. A font with capital letters with 2 colors. Very easy to use with letters from Romanaugusa. The capital M is 42.5 millimeter wide at 100% scale. Can be scaled down to 70% or up to 130%. Every satin has zigzag underlay"
-msgstr ""
+msgstr "Založeno na latince Modern Roman 10 Bold italic. Písmo s velkými písmeny se 2 barvami. Velmi snadné použití s písmeny z Romanaugusa. Velké M je široké 42,5 milimetru při 100% měřítku. Lze zmenšit na 70 % nebo až na 130 %. Každý satén má klikatý podklad"
 
 #. name of font in fonts/sacramarif
 #: inkstitch-fonts-metadata.py:162
@@ -451,7 +451,7 @@ msgstr "Sacramarif"
 #. description of font in fonts/sacramarif
 #: inkstitch-fonts-metadata.py:164
 msgid "Based on Sacramento. Very small font with runstitch. It can be scaled from 80% to 150%"
-msgstr ""
+msgstr "Založeno v Sacramentu. Velmi malé písmo s běžícím stehem. Lze jej měnit v měřítku od 80 % do 150 %"
 
 #. name of font in fonts/small_font
 #: inkstitch-fonts-metadata.py:166
@@ -462,27 +462,27 @@ msgstr "Ink/Stitch malé písmo"
 #: inkstitch-fonts-metadata.py:168
 #, python-format
 msgid "A font suited for small characters.  The capital em is 0.2 inches wide at 100% scale.  Can be scaled up to 300%."
-msgstr ""
+msgstr "Písmo vhodné pro malé znaky. Velké písmeno em je široké 0,2 palce při 100% měřítku. Lze měnit až na 300 %."
 
 #. name of font in fonts/sortefaxXL
 #: inkstitch-fonts-metadata.py:170
 msgid "Sortefax XL Initials"
-msgstr ""
+msgstr "Sortefax XL Initials"
 
 #. description of font in fonts/sortefaxXL
 #: inkstitch-fonts-metadata.py:172
 msgid " Sortefax is a very large satin stitch Capital font of size 150mm.  It can be reduced down to 75% and enlarged up to 200%  It contains the 37 glyphs :ampersand, A-Z and 0-9. In addition the ten glyphs (){}[],;.: are used to store frames. Type any letter followed by any frame (e.g. A( or B; )  to obtain a framed Capital or Number. Warning: for a few large letters you will need to manually enlarge the frame"
-msgstr ""
+msgstr "Sortefax je velmi velké saténový steh Capital o velikosti 150 mm. Lze jej zmenšit na 75 % a zvětšit až na 200 % Obsahuje 37 glyfů :ampersand, A-Z a 0-9. Kromě toho se deset glyfů (){}[],;.: používá k ukládání rámečků. Zadáním libovolného písmene následovaného libovolným rámečkem (např. A( nebo B; ) získáte orámované velké písmeno nebo číslo. Upozornění: u několika velkých písmen bude nutné rámeček ručně zvětšit"
 
 #. name of font in fonts/sortefax_medium
 #: inkstitch-fonts-metadata.py:174
 msgid "Sortefax Medium Initials"
-msgstr ""
+msgstr "Sortefax Medium Initials"
 
 #. description of font in fonts/sortefax_medium
 #: inkstitch-fonts-metadata.py:176
 msgid "Sortefax  Medium Initials is a  satin stitch Capital font of size 90 mm.  It can be reduced down to 70% and enlarged up to 200%. It contains the 37 glyphs :ampersand, A-Z and 0-9. In addition the ten glyphs (){}[],;.: are used to store frames. Type any letter followed by any frame (e.g. A( or B; or 7, ) to obtain a framed Capital or Number. Some manual arranging of the frame around the letter may be required"
-msgstr ""
+msgstr "Sortefax Medium Initials je saténovým stehem psané písmo velikosti 90 mm. Lze jej zmenšit na 70 % a zvětšit až na 200 %. Obsahuje 37 glyfů :ampersand, A-Z a 0-9. Kromě toho je deset glyfů (){}[],;.: použito pro uložení rámečků. Zadáním libovolného písmene následovaného libovolným rámečkem (např. A( nebo B; nebo 7, ) získáte orámované velké písmeno nebo číslo. Může být nutné ruční uspořádání rámečku kolem písmene"
 
 #. name of font in fonts/tt_directors
 #: inkstitch-fonts-metadata.py:178
@@ -2569,7 +2569,7 @@ msgstr "Brother výšivky"
 #. description for pyembroidery file format: exp
 #: pyembroidery-format-descriptions.py:6
 msgid "Melco Expanded Embroidery Format"
-msgstr ""
+msgstr "Melco Expanded Vyšívací Formát"
 
 #. description for pyembroidery file format: dst
 #. description for pyembroidery file format: tbf
@@ -2710,7 +2710,7 @@ msgstr "Gunold výšivky"
 #. description for pyembroidery file format: zhs
 #: pyembroidery-format-descriptions.py:80
 msgid "Zeng Hsing Embroidery Format"
-msgstr ""
+msgstr "Zeng Hsing Vyšívací Formát"
 
 #. description for pyembroidery file format: zxy
 #: pyembroidery-format-descriptions.py:82
@@ -2735,12 +2735,12 @@ msgstr ""
 #. description for pyembroidery file format: gcode
 #: pyembroidery-format-descriptions.py:90
 msgid "gcode Format, Text File"
-msgstr ""
+msgstr "Formát gcode, textový soubor"
 
 #. description for pyembroidery file format: hus
 #: pyembroidery-format-descriptions.py:92
 msgid "Husqvarna Embroidery Format"
-msgstr ""
+msgstr "Husqvarna Vyšívací Formát"
 
 #. description for pyembroidery file format: edr
 #: pyembroidery-format-descriptions.py:94
@@ -2750,7 +2750,7 @@ msgstr "Barevný formát Edr"
 #. description for pyembroidery file format: col
 #: pyembroidery-format-descriptions.py:96
 msgid "Col Color Format"
-msgstr ""
+msgstr "Barevný formát Col"
 
 #. description for pyembroidery file format: inf
 #: pyembroidery-format-descriptions.py:98
@@ -3409,7 +3409,7 @@ msgstr ""
 
 #: inx/inkstitch_input_10O.inx:8
 msgid "Ink/Stitch: Toyota Embroidery Format (.10o)"
-msgstr ""
+msgstr "Ink/Stitch: Toyota Vyšívací Formát (.10o)"
 
 #: inx/inkstitch_input_10O.inx:9
 msgid "convert 10O file to Ink/Stitch manual-stitch paths"
@@ -3421,7 +3421,7 @@ msgstr "BRO vstupních souborů"
 
 #: inx/inkstitch_input_BRO.inx:8
 msgid "Ink/Stitch: Bits & Volts Embroidery Format (.bro)"
-msgstr ""
+msgstr "Ink/Stitch: Bits & Volts Vyšívací Formát (.bro)"
 
 #: inx/inkstitch_input_BRO.inx:9
 msgid "convert BRO file to Ink/Stitch manual-stitch paths"
@@ -3429,15 +3429,15 @@ msgstr "převést BRO souborů do Ink/Stitch s ručním stehem"
 
 #: inx/inkstitch_input_COL.inx:3
 msgid "COL file input"
-msgstr ""
+msgstr "COL vstupních souborů"
 
 #: inx/inkstitch_input_COL.inx:8
 msgid "Ink/Stitch: Col Color Format (.col)"
-msgstr ""
+msgstr "Ink/Stitch: Barevný formát Col (.col)"
 
 #: inx/inkstitch_input_COL.inx:9
 msgid "convert COL file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "převést COL souborů do Ink/Stitch s ručním stehem"
 
 #: inx/inkstitch_input_CSV.inx:3
 msgid "CSV file input"
@@ -3453,71 +3453,71 @@ msgstr ""
 
 #: inx/inkstitch_input_DAT.inx:3
 msgid "DAT file input"
-msgstr ""
+msgstr "DAT vstupních souborů"
 
 #: inx/inkstitch_input_DAT.inx:8
 msgid "Ink/Stitch: Sunstar or Barudan Embroidery Format (.dat)"
-msgstr ""
+msgstr "Ink/Stitch: Sunstar nebo Barudan Vyšívací Formát (.dat)"
 
 #: inx/inkstitch_input_DAT.inx:9
 msgid "convert DAT file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "převést DAT souborů do Ink/Stitch s ručním stehem"
 
 #: inx/inkstitch_input_DSB.inx:3
 msgid "DSB file input"
-msgstr ""
+msgstr "DSB vstupních souborů"
 
 #: inx/inkstitch_input_DSB.inx:8
 msgid "Ink/Stitch: Tajima(Barudan) Embroidery Format (.dsb)"
-msgstr ""
+msgstr "Ink/Stitch: Tajima(Barudan) Vyšívací Formát (.dsb)"
 
 #: inx/inkstitch_input_DSB.inx:9
 msgid "convert DSB file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "převést DSB souborů do Ink/Stitch s ručním stehem"
 
 #: inx/inkstitch_input_DST.inx:3
 msgid "DST file input"
-msgstr ""
+msgstr "DST vstupních souborů"
 
 #: inx/inkstitch_input_DST.inx:8 inx/inkstitch_output_DST.inx:8
 msgid "Ink/Stitch: Tajima Embroidery Format (.dst)"
-msgstr ""
+msgstr "Ink/Stitch: Tajima Vyšívací Formát (.dst)"
 
 #: inx/inkstitch_input_DST.inx:9
 msgid "convert DST file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "převést DST souborů do Ink/Stitch s ručním stehem"
 
 #: inx/inkstitch_input_DSZ.inx:3
 msgid "DSZ file input"
-msgstr ""
+msgstr "DSZ vstupních souborů"
 
 #: inx/inkstitch_input_DSZ.inx:8
 msgid "Ink/Stitch: ZSK USA Embroidery Format (.dsz)"
-msgstr ""
+msgstr "Ink/Stitch: ZSK USA Vyšívací Formát (.dsz)\t"
 
 #: inx/inkstitch_input_DSZ.inx:9
 msgid "convert DSZ file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "převést DSZ souborů do Ink/Stitch s ručním stehem"
 
 #: inx/inkstitch_input_EDR.inx:3
 msgid "EDR file input"
-msgstr ""
+msgstr "EDR vstupních souborů"
 
 #: inx/inkstitch_input_EDR.inx:8
 msgid "Ink/Stitch: Edr Color Format (.edr)"
-msgstr ""
+msgstr "Ink/Stitch: Barevný formát Edr (.edr)"
 
 #: inx/inkstitch_input_EDR.inx:9
 msgid "convert EDR file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "převést EDR souborů do Ink/Stitch s ručním stehem"
 
 #: inx/inkstitch_input_EMD.inx:3
 msgid "EMD file input"
-msgstr ""
+msgstr "EMD vstupních souborů"
 
 #: inx/inkstitch_input_EMD.inx:8
 msgid "Ink/Stitch: Elna Embroidery Format (.emd)"
-msgstr ""
+msgstr "Ink/Stitch: Elna Vyšívací Formát (.emd)"
 
 #: inx/inkstitch_input_EMD.inx:9
 msgid "convert EMD file to Ink/Stitch manual-stitch paths"
@@ -3529,7 +3529,7 @@ msgstr "EXP vstupních souborů"
 
 #: inx/inkstitch_input_EXP.inx:8 inx/inkstitch_output_EXP.inx:8
 msgid "Ink/Stitch: Melco Expanded Embroidery Format (.exp)"
-msgstr ""
+msgstr "Ink/Stitch: Melco Expanded Vyšívací Formát (.exp)"
 
 #: inx/inkstitch_input_EXP.inx:9
 msgid "convert EXP file to Ink/Stitch manual-stitch paths"
@@ -3541,7 +3541,7 @@ msgstr "EXY vstupních souborů"
 
 #: inx/inkstitch_input_EXY.inx:8
 msgid "Ink/Stitch: Eltac Embroidery Format (.exy)"
-msgstr ""
+msgstr "Ink/Stitch: Eltac Vyšívací Formát (.exy)"
 
 #: inx/inkstitch_input_EXY.inx:9
 msgid "convert EXY file to Ink/Stitch manual-stitch paths"
@@ -3549,19 +3549,19 @@ msgstr "převést EXY souborů do Ink/Stitch s ručním stehem"
 
 #: inx/inkstitch_input_FXY.inx:3
 msgid "FXY file input"
-msgstr ""
+msgstr "FXY vstupních souborů"
 
 #: inx/inkstitch_input_FXY.inx:8
 msgid "Ink/Stitch: Fortron Embroidery Format (.fxy)"
-msgstr ""
+msgstr "Ink/Stitch: Fortron Vyšívací Formát (.fxy)"
 
 #: inx/inkstitch_input_FXY.inx:9
 msgid "convert FXY file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "převést FXY souborů do Ink/Stitch s ručním stehem"
 
 #: inx/inkstitch_input_GCODE.inx:3
 msgid "GCODE file input"
-msgstr ""
+msgstr "GCODE vstupních souborů"
 
 #: inx/inkstitch_input_GCODE.inx:8 inx/inkstitch_output_GCODE.inx:8
 msgid "Ink/Stitch: gcode Format, Text File (.gcode)"
@@ -3569,79 +3569,79 @@ msgstr ""
 
 #: inx/inkstitch_input_GCODE.inx:9
 msgid "convert GCODE file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "převést GCODE souborů do Ink/Stitch s ručním stehem"
 
 #: inx/inkstitch_input_GT.inx:3
 msgid "GT file input"
-msgstr ""
+msgstr "GT vstupních souborů"
 
 #: inx/inkstitch_input_GT.inx:8
 msgid "Ink/Stitch: Gold Thread Embroidery Format (.gt)"
-msgstr ""
+msgstr "Ink/Stitch: Gold Thread Vyšívací Formát (.gt)"
 
 #: inx/inkstitch_input_GT.inx:9
 msgid "convert GT file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "převést GT souborů do Ink/Stitch s ručním stehem"
 
 #: inx/inkstitch_input_HUS.inx:3
 msgid "HUS file input"
-msgstr ""
+msgstr "HUS vstupních souborů"
 
 #: inx/inkstitch_input_HUS.inx:8
 msgid "Ink/Stitch: Husqvarna Embroidery Format (.hus)"
-msgstr ""
+msgstr "Ink/Stitch: Husqvarna Vyšívací Formát (.hus)"
 
 #: inx/inkstitch_input_HUS.inx:9
 msgid "convert HUS file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "převést HUS souborů do Ink/Stitch s ručním stehem"
 
 #: inx/inkstitch_input_INB.inx:3
 msgid "INB file input"
-msgstr ""
+msgstr "INB vstupních souborů"
 
 #: inx/inkstitch_input_INB.inx:8
 msgid "Ink/Stitch: Inbro Embroidery Format (.inb)"
-msgstr ""
+msgstr "Ink/Stitch: Inbro Vyšívací Formát (.inb)"
 
 #: inx/inkstitch_input_INB.inx:9
 msgid "convert INB file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "převést INB souborů do Ink/Stitch s ručním stehem"
 
 #: inx/inkstitch_input_INF.inx:3
 msgid "INF file input"
-msgstr ""
+msgstr "INF vstupních souborů"
 
 #: inx/inkstitch_input_INF.inx:8
 msgid "Ink/Stitch: Inf Color Format (.inf)"
-msgstr ""
+msgstr "Ink/Stitch: Barevný formát Inf (.inf)"
 
 #: inx/inkstitch_input_INF.inx:9
 msgid "convert INF file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "převést INF souborů do Ink/Stitch s ručním stehem"
 
 #: inx/inkstitch_input_JEF.inx:3
 msgid "JEF file input"
-msgstr ""
+msgstr "JEF vstupních souborů"
 
 #: inx/inkstitch_input_JEF.inx:8 inx/inkstitch_output_JEF.inx:8
 msgid "Ink/Stitch: Janome Embroidery Format (.jef)"
-msgstr ""
+msgstr "Ink/Stitch: Janome Vyšívací Formát (.jef)"
 
 #: inx/inkstitch_input_JEF.inx:9
 msgid "convert JEF file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "převést JEF souborů do Ink/Stitch s ručním stehem"
 
 #: inx/inkstitch_input_JPX.inx:3
 msgid "JPX file input"
-msgstr ""
+msgstr "JPX vstupních souborů\t"
 
 #: inx/inkstitch_input_JPX.inx:8
 msgid "Ink/Stitch: Janome Embroidery Format (.jpx)"
-msgstr ""
+msgstr "Ink/Stitch: Janome Vyšívací Formát (.jpx)"
 
 #: inx/inkstitch_input_JPX.inx:9
 msgid "convert JPX file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "převést JPX souborů do Ink/Stitch s ručním stehem"
 
 #: inx/inkstitch_input_JSON.inx:3
 msgid "JSON file input"
@@ -3657,151 +3657,151 @@ msgstr ""
 
 #: inx/inkstitch_input_KSM.inx:3
 msgid "KSM file input"
-msgstr ""
+msgstr "KSM vstupních souborů"
 
 #: inx/inkstitch_input_KSM.inx:8
 msgid "Ink/Stitch: Pfaff Embroidery Format (.ksm)"
-msgstr ""
+msgstr "Ink/Stitch: Pfaff Vyšívací Formát (.ksm)"
 
 #: inx/inkstitch_input_KSM.inx:9
 msgid "convert KSM file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "převést KSM souborů do Ink/Stitch s ručním stehem"
 
 #: inx/inkstitch_input_MAX.inx:3
 msgid "MAX file input"
-msgstr ""
+msgstr "MAX vstupních souborů"
 
 #: inx/inkstitch_input_MAX.inx:8
 msgid "Ink/Stitch: Pfaff Embroidery Format (.max)"
-msgstr ""
+msgstr "Ink/Stitch: Pfaff Vyšívací Formát (.max)"
 
 #: inx/inkstitch_input_MAX.inx:9
 msgid "convert MAX file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "převést MAX souborů do Ink/Stitch s ručním stehem"
 
 #: inx/inkstitch_input_MIT.inx:3
 msgid "MIT file input"
-msgstr ""
+msgstr "MIT vstupních souborů"
 
 #: inx/inkstitch_input_MIT.inx:8
 msgid "Ink/Stitch: Mitsubishi Embroidery Format (.mit)"
-msgstr ""
+msgstr "Ink/Stitch: Mitsubishi Vyšívací Formát (.mit)"
 
 #: inx/inkstitch_input_MIT.inx:9
 msgid "convert MIT file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "převést MIT souborů do Ink/Stitch s ručním stehem"
 
 #: inx/inkstitch_input_NEW.inx:3
 msgid "NEW file input"
-msgstr ""
+msgstr "NEW vstupních souborů"
 
 #: inx/inkstitch_input_NEW.inx:8
 msgid "Ink/Stitch: Ameco Embroidery Format (.new)"
-msgstr ""
+msgstr "Ink/Stitch: Ameco Vyšívací Formát (.new)"
 
 #: inx/inkstitch_input_NEW.inx:9
 msgid "convert NEW file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "převést NEW souborů do Ink/Stitch s ručním stehem"
 
 #: inx/inkstitch_input_PCD.inx:3
 msgid "PCD file input"
-msgstr ""
+msgstr "PCD vstupních souborů"
 
 #: inx/inkstitch_input_PCD.inx:8
 msgid "Ink/Stitch: Pfaff Embroidery Format (.pcd)"
-msgstr ""
+msgstr "Ink/Stitch: Pfaff Vyšívací Formát (.pcd)"
 
 #: inx/inkstitch_input_PCD.inx:9
 msgid "convert PCD file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "převést PCD souborů do Ink/Stitch s ručním stehem"
 
 #: inx/inkstitch_input_PCM.inx:3
 msgid "PCM file input"
-msgstr ""
+msgstr "PCM vstupních souborů"
 
 #: inx/inkstitch_input_PCM.inx:8
 msgid "Ink/Stitch: Pfaff Embroidery Format (.pcm)"
-msgstr ""
+msgstr "Ink/Stitch: Pfaff Vyšívací Formát (.pcm)"
 
 #: inx/inkstitch_input_PCM.inx:9
 msgid "convert PCM file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "převést PCM souborů do Ink/Stitch s ručním stehem\t"
 
 #: inx/inkstitch_input_PCQ.inx:3
 msgid "PCQ file input"
-msgstr ""
+msgstr "PCQ vstupních souborů"
 
 #: inx/inkstitch_input_PCQ.inx:8
 msgid "Ink/Stitch: Pfaff Embroidery Format (.pcq)"
-msgstr ""
+msgstr "Ink/Stitch: Pfaff Vyšívací Formát (.pcq)"
 
 #: inx/inkstitch_input_PCQ.inx:9
 msgid "convert PCQ file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "převést PCQ souborů do Ink/Stitch s ručním stehem"
 
 #: inx/inkstitch_input_PCS.inx:3
 msgid "PCS file input"
-msgstr ""
+msgstr "PCS vstupních souborů"
 
 #: inx/inkstitch_input_PCS.inx:8
 msgid "Ink/Stitch: Pfaff Embroidery Format (.pcs)"
-msgstr ""
+msgstr "Ink/Stitch: Pfaff Vyšívací Formát (.pcs)"
 
 #: inx/inkstitch_input_PCS.inx:9
 msgid "convert PCS file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "převést PCS souborů do Ink/Stitch s ručním stehem"
 
 #: inx/inkstitch_input_PEC.inx:3
 msgid "PEC file input"
-msgstr ""
+msgstr "PEC vstupních souborů"
 
 #: inx/inkstitch_input_PEC.inx:8 inx/inkstitch_output_PEC.inx:8
 msgid "Ink/Stitch: Brother Embroidery Format (.pec)"
-msgstr ""
+msgstr "Ink/Stitch: Brother Vyšívací Formát (.pec)"
 
 #: inx/inkstitch_input_PEC.inx:9
 msgid "convert PEC file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "převést PEC souborů do Ink/Stitch s ručním stehem"
 
 #: inx/inkstitch_input_PES.inx:3
 msgid "PES file input"
-msgstr ""
+msgstr "PES vstupních souborů"
 
 #: inx/inkstitch_input_PES.inx:8 inx/inkstitch_output_PES.inx:8
 msgid "Ink/Stitch: Brother Embroidery Format (.pes)"
-msgstr ""
+msgstr "Ink/Stitch: Brother Vyšívací Formát (.pes)"
 
 #: inx/inkstitch_input_PES.inx:9
 msgid "convert PES file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "převést PES souborů do Ink/Stitch s ručním stehem"
 
 #: inx/inkstitch_input_PHB.inx:3
 msgid "PHB file input"
-msgstr ""
+msgstr "PHB vstupních souborů"
 
 #: inx/inkstitch_input_PHB.inx:8
 msgid "Ink/Stitch: Brother Embroidery Format (.phb)"
-msgstr ""
+msgstr "Ink/Stitch: Brother Vyšívací Formát (.phb)"
 
 #: inx/inkstitch_input_PHB.inx:9
 msgid "convert PHB file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "převést PHB souborů do Ink/Stitch s ručním stehem"
 
 #: inx/inkstitch_input_PHC.inx:3
 msgid "PHC file input"
-msgstr ""
+msgstr "PHC vstupních souborů"
 
 #: inx/inkstitch_input_PHC.inx:8
 msgid "Ink/Stitch: Brother Embroidery Format (.phc)"
-msgstr ""
+msgstr "Ink/Stitch: Brother Vyšívací Formát (.phc)"
 
 #: inx/inkstitch_input_PHC.inx:9
 msgid "convert PHC file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "převést PHC souborů do Ink/Stitch s ručním stehem"
 
 #: inx/inkstitch_input_PMV.inx:3
 msgid "PMV file input"
-msgstr ""
+msgstr "PMV vstupních souborů"
 
 #: inx/inkstitch_input_PMV.inx:8
 msgid "Ink/Stitch: Brother Stitch Format (.pmv)"
@@ -3809,27 +3809,27 @@ msgstr ""
 
 #: inx/inkstitch_input_PMV.inx:9
 msgid "convert PMV file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "převést PMV souborů do Ink/Stitch s ručním stehem\t"
 
 #: inx/inkstitch_input_SEW.inx:3
 msgid "SEW file input"
-msgstr ""
+msgstr "SEW vstupních souborů"
 
 #: inx/inkstitch_input_SEW.inx:8
 msgid "Ink/Stitch: Janome Embroidery Format (.sew)"
-msgstr ""
+msgstr "Ink/Stitch: Janome Vyšívací Formát (.sew)"
 
 #: inx/inkstitch_input_SEW.inx:9
 msgid "convert SEW file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "převést SEW souborů do Ink/Stitch s ručním stehem"
 
 #: inx/inkstitch_input_SHV.inx:3
 msgid "SHV file input"
-msgstr ""
+msgstr "SHV vstupních souborů"
 
 #: inx/inkstitch_input_SHV.inx:8
 msgid "Ink/Stitch: Husqvarna Viking Embroidery Format (.shv)"
-msgstr ""
+msgstr "Ink/Stitch: Husqvarna Viking Vyšívací Formát (.shv)"
 
 #: inx/inkstitch_input_SHV.inx:9
 msgid "convert SHV file to Ink/Stitch manual-stitch paths"
@@ -3841,7 +3841,7 @@ msgstr "SPX vstupních souborů"
 
 #: inx/inkstitch_input_SPX.inx:8
 msgid "Ink/Stitch: Pfaff Embroidery Format (.spx)"
-msgstr ""
+msgstr "Ink/Stitch: Pfaff Vyšívací Formát (.spx)"
 
 #: inx/inkstitch_input_SPX.inx:9
 msgid "convert SPX file to Ink/Stitch manual-stitch paths"
@@ -3853,7 +3853,7 @@ msgstr "STC vstupních souborů"
 
 #: inx/inkstitch_input_STC.inx:8
 msgid "Ink/Stitch: Gunold Embroidery Format (.stc)"
-msgstr ""
+msgstr "Ink/Stitch: Gunold Vyšívací Formát (.stc)"
 
 #: inx/inkstitch_input_STC.inx:9
 msgid "convert STC file to Ink/Stitch manual-stitch paths"
@@ -3861,11 +3861,11 @@ msgstr "převést STC souborů do Ink/Stitch s ručním stehem"
 
 #: inx/inkstitch_input_STX.inx:3
 msgid "STX file input"
-msgstr ""
+msgstr "STX vstupních souborů"
 
 #: inx/inkstitch_input_STX.inx:8
 msgid "Ink/Stitch: Data Stitch Embroidery Format (.stx)"
-msgstr ""
+msgstr "Ink/Stitch: Data Stitch Vyšívací Formát (.stx)"
 
 #: inx/inkstitch_input_STX.inx:9
 msgid "convert STX file to Ink/Stitch manual-stitch paths"
@@ -3873,11 +3873,11 @@ msgstr ""
 
 #: inx/inkstitch_input_TAP.inx:3
 msgid "TAP file input"
-msgstr ""
+msgstr "TAP vstupních souborů"
 
 #: inx/inkstitch_input_TAP.inx:8
 msgid "Ink/Stitch: Happy Embroidery Format (.tap)"
-msgstr ""
+msgstr "Ink/Stitch: Happy Vyšívací Formát (.tap)"
 
 #: inx/inkstitch_input_TAP.inx:9
 msgid "convert TAP file to Ink/Stitch manual-stitch paths"
@@ -3889,7 +3889,7 @@ msgstr "TBF vstupních souborů"
 
 #: inx/inkstitch_input_TBF.inx:8
 msgid "Ink/Stitch: Tajima Embroidery Format (.tbf)"
-msgstr ""
+msgstr "Ink/Stitch: Tajima Vyšívací Formát (.tbf)"
 
 #: inx/inkstitch_input_TBF.inx:9
 msgid "convert TBF file to Ink/Stitch manual-stitch paths"
@@ -3901,7 +3901,7 @@ msgstr "U01 vstupních souborů"
 
 #: inx/inkstitch_input_U01.inx:8 inx/inkstitch_output_U01.inx:8
 msgid "Ink/Stitch: Barudan Embroidery Format (.u01)"
-msgstr ""
+msgstr "Ink/Stitch: Barudan Vyšívací Formát (.u01)"
 
 #: inx/inkstitch_input_U01.inx:9
 msgid "convert U01 file to Ink/Stitch manual-stitch paths"
@@ -4140,11 +4140,11 @@ msgstr "Uložení návrhu ve formátu CSV pomocí funkce Ink/Stitch"
 
 #: inx/inkstitch_output_DST.inx:3
 msgid "DST file output"
-msgstr ""
+msgstr "DST výstupních souborů"
 
 #: inx/inkstitch_output_DST.inx:9
 msgid "Save design in DST format using Ink/Stitch"
-msgstr ""
+msgstr "Uložení návrhu ve formátu DST pomocí funkce Ink/Stitch"
 
 #: inx/inkstitch_output_EDR.inx:3
 msgid "EDR file output"
@@ -4172,7 +4172,7 @@ msgstr "GCODE výstupních souborů"
 
 #: inx/inkstitch_output_GCODE.inx:9
 msgid "Save design in GCODE format using Ink/Stitch"
-msgstr ""
+msgstr "Uložení návrhu ve formátu GCODE pomocí funkce Ink/Stitch"
 
 #: inx/inkstitch_output_GCODE.inx:17
 msgid "Coordinate Settings"
@@ -4292,7 +4292,7 @@ msgstr ""
 
 #: inx/inkstitch_output_INF.inx:3
 msgid "INF file output"
-msgstr ""
+msgstr "INF výstupních souborů"
 
 #: inx/inkstitch_output_INF.inx:8
 msgid "Ink/Stitch: Inf Color Format [COLOR] (.inf)"
@@ -4308,71 +4308,71 @@ msgstr "JEF výstupních souborů"
 
 #: inx/inkstitch_output_JEF.inx:9
 msgid "Save design in JEF format using Ink/Stitch"
-msgstr ""
+msgstr "Uložení návrhu ve formátu JEF pomocí funkce Ink/Stitch"
 
 #: inx/inkstitch_output_JSON.inx:3
 msgid "JSON file output"
-msgstr ""
+msgstr "JSON výstupních souborů"
 
 #: inx/inkstitch_output_JSON.inx:8
 msgid "Ink/Stitch: Json Export [DEBUG] (.json)"
-msgstr ""
+msgstr "Ink/Stitch: Export Json [DEBUG] (.json)"
 
 #: inx/inkstitch_output_JSON.inx:9
 msgid "Save design in JSON format using Ink/Stitch"
-msgstr ""
+msgstr "Uložení návrhu ve formátu JSON pomocí funkce Ink/Stitch"
 
 #: inx/inkstitch_output_PEC.inx:3
 msgid "PEC file output"
-msgstr ""
+msgstr "PEC výstupních souborů"
 
 #: inx/inkstitch_output_PEC.inx:9
 msgid "Save design in PEC format using Ink/Stitch"
-msgstr ""
+msgstr "Uložení návrhu ve formátu PEC pomocí funkce Ink/Stitch"
 
 #: inx/inkstitch_output_PES.inx:3
 msgid "PES file output"
-msgstr ""
+msgstr "PES výstupních souborů"
 
 #: inx/inkstitch_output_PES.inx:9
 msgid "Save design in PES format using Ink/Stitch"
-msgstr ""
+msgstr "Uložení návrhu ve formátu PES pomocí funkce Ink/Stitch"
 
 #: inx/inkstitch_output_PMV.inx:3
 msgid "PMV file output"
-msgstr ""
+msgstr "PMV výstupních souborů"
 
 #: inx/inkstitch_output_PMV.inx:8
 msgid "Ink/Stitch: Brother Stitch Format [STITCH] (.pmv)"
-msgstr ""
+msgstr "Ink/Stitch: Formát stehu Brother [STITCH] (.pmv)"
 
 #: inx/inkstitch_output_PMV.inx:9
 msgid "Save design in PMV format using Ink/Stitch"
-msgstr ""
+msgstr "Uložení návrhu ve formátu PMV pomocí funkce Ink/Stitch"
 
 #: inx/inkstitch_output_PNG.inx:3
 msgid "PNG file output"
-msgstr ""
+msgstr "PNG výstupních souborů"
 
 #: inx/inkstitch_output_PNG.inx:8
 msgid "Ink/Stitch: PNG Format, Portable Network Graphics [IMAGE] (.png)"
-msgstr ""
+msgstr "Ink/Stitch: Formát PNG, Přenosná síťová grafika [IMAGE] (.png)"
 
 #: inx/inkstitch_output_PNG.inx:9
 msgid "Save design in PNG format using Ink/Stitch"
-msgstr ""
+msgstr "Uložení návrhu ve formátu PNG pomocí funkce Ink/Stitch\t"
 
 #: inx/inkstitch_output_SVG.inx:3
 msgid "SVG file output"
-msgstr ""
+msgstr "SVG výstupních souborů"
 
 #: inx/inkstitch_output_SVG.inx:8
 msgid "Ink/Stitch: Scalable Vector Graphics [DEBUG] (.svg)"
-msgstr ""
+msgstr "Ink/Stitch: Škálovatelná vektorová grafika [DEBUG] (.svg)"
 
 #: inx/inkstitch_output_SVG.inx:9
 msgid "Save design in SVG format using Ink/Stitch"
-msgstr ""
+msgstr "Uložení návrhu ve formátu SVG pomocí funkce Ink/Stitch"
 
 #: inx/inkstitch_output_TXT.inx:3
 msgid "TXT file output"
@@ -4388,27 +4388,27 @@ msgstr ""
 
 #: inx/inkstitch_output_U01.inx:3
 msgid "U01 file output"
-msgstr ""
+msgstr "U01 výstupních souborů"
 
 #: inx/inkstitch_output_U01.inx:9
 msgid "Save design in U01 format using Ink/Stitch"
-msgstr ""
+msgstr "Uložení návrhu ve formátu U01 pomocí funkce Ink/Stitch"
 
 #: inx/inkstitch_output_VP3.inx:3
 msgid "VP3 file output"
-msgstr ""
+msgstr "VP3 výstupních souborů"
 
 #: inx/inkstitch_output_VP3.inx:9
 msgid "Save design in VP3 format using Ink/Stitch"
-msgstr ""
+msgstr "Uložení návrhu ve formátu VP3 pomocí funkce Ink/Stitch"
 
 #: inx/inkstitch_output_XXX.inx:3
 msgid "XXX file output"
-msgstr ""
+msgstr "XXX výstupních souborů"
 
 #: inx/inkstitch_output_XXX.inx:9
 msgid "Save design in XXX format using Ink/Stitch"
-msgstr ""
+msgstr "Uložení návrhu ve formátu XXX pomocí funkce Ink/Stitch"
 
 #: inx/inkstitch_palette_split_text.inx:3
 msgid "Split text"
@@ -4520,9 +4520,9 @@ msgstr ""
 
 #: inx/inkstitch_zip.inx:26
 msgid ".TXT: Threadlist [COLOR]"
-msgstr ""
+msgstr ".TXT: Seznam příze [COLOR]"
 
 #: inx/inkstitch_zip.inx:27
 msgid ".SVG: Scalable Vector Graphic"
-msgstr ""
+msgstr ".SVG: Škálovatelná vektorová grafika"
 

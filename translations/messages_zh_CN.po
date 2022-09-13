@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2022-07-15 02:57+0000\n"
-"PO-Revision-Date: 2022-07-25 02:41\n"
+"PO-Revision-Date: 2022-09-13 02:49\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -60,7 +60,7 @@ msgstr ""
 #: inkstitch-fonts-metadata.py:12
 #, python-format
 msgid "The capital M is 25.3 millimeter wide at 100% scale. Can be scaled down to 80% or up to 160%. Every satin has zigzag underlay"
-msgstr ""
+msgstr "大写字母 M 在 100% 比例下为 25.3 毫米宽。 可以缩小到 80% 或高达 160%。 每块缎子都有锯齿形的衬垫"
 
 #. name of font in fonts/amitaclo_small
 #: inkstitch-fonts-metadata.py:14
@@ -70,7 +70,7 @@ msgstr ""
 #. description of font in fonts/amitaclo_small
 #: inkstitch-fonts-metadata.py:16
 msgid "This font is an altered version  of Amitaclo, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory. The altered embroidery parameters of this font allow to scale down the original Amitaclo font between 25% (for a 7 mm font ) and 55 % (for a 16mm font)."
-msgstr ""
+msgstr "此字体是 Amitaclo 的修改版本，以允许更大的比例缩小。 必须使用细线 (60) 和细针 (60)。 此字体更改的刺绣参数允许将原始 Amitaclo 字体按比例缩小 25%（对于 7 mm 字体）和 55%（对于 16mm 字体）。"
 
 #. name of font in fonts/apex_lake
 #: inkstitch-fonts-metadata.py:18
@@ -90,7 +90,7 @@ msgstr ""
 #. description of font in fonts/aventurina
 #: inkstitch-fonts-metadata.py:24
 msgid "Aventurina is a script satin font of size approximatively 20mm. The glyphs cover most Western European languages. The font can be scaled down to 60% and up to 150% "
-msgstr ""
+msgstr "Aventurina 是一种脚本缎面字体，大小约为 20 毫米。 这些字形涵盖了大多数西欧语言。 字体可以缩小到 60% 到 150% "
 
 #. name of font in fonts/baumans_FI
 #: inkstitch-fonts-metadata.py:26
@@ -101,7 +101,7 @@ msgstr ""
 #: inkstitch-fonts-metadata.py:28
 #, python-format
 msgid "The capital M is 22.3 millimeter wide at 100% scale. Can be scaled down to 80% or up to 150%. Every satin has zigzag underlay"
-msgstr ""
+msgstr "大写字母 M 在 100% 比例下为 22.3 毫米宽。 可以缩小到 80% 或高达 150%。 每块缎子都有锯齿形的衬垫"
 
 #. name of font in fonts/cherryforinkstitch
 #: inkstitch-fonts-metadata.py:30
@@ -224,7 +224,7 @@ msgstr ""
 #. description of font in fonts/excalibur_KOR
 #: inkstitch-fonts-metadata.py:76
 msgid "Excalibur KOR is a small satin column manuscript font of size approximatively 20mm. It can be reduced down to 80% and enlarged up to 140%. It contains 144 glyphs, covering most western European languages needs."
-msgstr ""
+msgstr "Excalibur KOR 是一款大小约为 20 毫米的小型缎面柱手稿字体。 它可以缩小到 80%，放大到 140%。 它包含 144 个字形，涵盖了大多数西欧语言的需求。"
 
 #. name of font in fonts/fold_inkstitch
 #: inkstitch-fonts-metadata.py:78
@@ -234,7 +234,7 @@ msgstr ""
 #. description of font in fonts/fold_inkstitch
 #: inkstitch-fonts-metadata.py:80
 msgid "Fold Ink/Stitch is a large triple and quintuple running stitches capital font of size 100 mm. It contains 40 glyphs including all numbers and the 26 capitals  A-Z. It can be reduced down to 80% and enlarged up to 200%"
-msgstr ""
+msgstr "Fold Ink/Stitch 是一种大型的三重和五重连续针迹大写字体，大小为 100 毫米。 它包含 40 个字形，包括所有数字和 26 个大写字母 A-Z。 它可以缩小到 80%，放大到 200%"
 
 #. name of font in fonts/geneva_rounded
 #: inkstitch-fonts-metadata.py:82
@@ -254,7 +254,7 @@ msgstr ""
 #. description of font in fonts/geneva_simple
 #: inkstitch-fonts-metadata.py:88
 msgid "Suitable for small fonts (6 to 15mm)"
-msgstr ""
+msgstr "适用于小字体（6到15mm）"
 
 #. name of font in fonts/glacial_tiny
 #: inkstitch-fonts-metadata.py:90
@@ -264,7 +264,7 @@ msgstr ""
 #. description of font in fonts/glacial_tiny
 #: inkstitch-fonts-metadata.py:92
 msgid "Glacial is a very tiny font: at 100%,  M stands at 5.6mm. Thin thread (60 wt ) and thin needle (8/60) are mandatory. The glyphs cover many European languages. It can be reduced down to 40% and enlarged up to 150% "
-msgstr ""
+msgstr "Glacial 是一种非常小的字体：在 100% 时，M 为 5.6 毫米。 细线 (60 wt ) 和细针 (8/60) 是强制性的。 这些字形涵盖了许多欧洲语言。 它可以缩小到 40%，放大到 150%"
 
 #. name of font in fonts/grand_hotel_marif
 #: inkstitch-fonts-metadata.py:94
@@ -274,7 +274,7 @@ msgstr ""
 #. description of font in fonts/grand_hotel_marif
 #: inkstitch-fonts-metadata.py:96
 msgid "Grand Hotel Marif is a script satin font of size approximatively 35 mm. The glyphs cover most Western European languages. The font can be scaled down to 60% and up to 140%."
-msgstr ""
+msgstr "Grand Hotel Marif 是一种字体，大小约为 35 毫米。 这些字形涵盖了大多数西欧语言。 字体可以缩小到 60% 和最大 140%。"
 
 #. name of font in fonts/grandhotel_small
 #: inkstitch-fonts-metadata.py:98
@@ -284,7 +284,7 @@ msgstr ""
 #. description of font in fonts/grandhotel_small
 #: inkstitch-fonts-metadata.py:100
 msgid "This font is an altered version  of Grand Hotel, to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) are mandatory. The altered embroidery parameters of this font allow to scale down the original Grand Hotel font between 25% (for a 9mm font ) and 55 % (for a  20 mm font)."
-msgstr ""
+msgstr "这种字体是 Grand Hotel 的修改版本，允许更大的比例缩小。 必须使用细线 (60) 和细针 (60)。 此字体更改的刺绣参数允许在 25%（对于 9 毫米字体）和 55%（对于 20 毫米字体）之间缩小原始 Grand Hotel 字体。"
 
 #. name of font in fonts/infinipicto
 #: inkstitch-fonts-metadata.py:102
@@ -294,7 +294,7 @@ msgstr ""
 #. description of font in fonts/infinipicto
 #: inkstitch-fonts-metadata.py:104
 msgid "InfiniPicto is a fun font of size approximatively 70 mm containing only the 26 A-Z glyph. Each letter is a pictogram of an object whose name begins with that very letter..... in French"
-msgstr ""
+msgstr "InfiniPicto 是一种有趣的字体，大小约为 70 毫米，仅包含 26 个 A-Z 字形。 每个字母都是一个对象的象形图，其名称以那个字母开头.....用法语"
 
 #. name of font in fonts/kaushan_script_MAM
 #: inkstitch-fonts-metadata.py:106
@@ -305,17 +305,17 @@ msgstr ""
 #: inkstitch-fonts-metadata.py:108
 #, python-format
 msgid "The capital M is 29 millimeter wide at 100% scale.  Can be scaled down to 80% or up to 200%.  Every satin has zigzag underlay"
-msgstr ""
+msgstr "大写字母 M 在 100% 比例下为 29 毫米宽。 可以缩小到 80% 或高达 200%。 每块缎子都有锯齿形的衬垫"
 
 #. name of font in fonts/learning_curve
 #: inkstitch-fonts-metadata.py:110
 msgid "Learning curve"
-msgstr ""
+msgstr "学习曲线"
 
 #. description of font in fonts/learning_curve
 #: inkstitch-fonts-metadata.py:112
 msgid "Small running stitch script font of size approximatively 12 mm. It can be reduced down to 90% and enlarged up to 200%"
-msgstr ""
+msgstr "大小约为 12 毫米的小型运行针迹脚本字体。 它可以缩小到 90%，放大到 200%"
 
 #. name of font in fonts/lobster_AGS
 #: inkstitch-fonts-metadata.py:114
@@ -326,7 +326,7 @@ msgstr ""
 #: inkstitch-fonts-metadata.py:116
 #, python-format
 msgid " The capital M is 19.8 millimeter wide at 100% scale. Can be scaled down to 80% or up to 150%. Every satin has zigzag underlay"
-msgstr ""
+msgstr "大写字母 M 在 100% 比例下为 19.8 毫米宽。 可以缩小到 80% 或高达 150%。 每块缎子都有锯齿形的衬垫"
 
 #. name of font in fonts/magnolia_ KOR
 #: inkstitch-fonts-metadata.py:118
@@ -336,7 +336,7 @@ msgstr ""
 #. description of font in fonts/magnolia_ KOR
 #: inkstitch-fonts-metadata.py:120
 msgid "Magnolia KOR is a script font of size approximatively 20mm. It can be scaled down to 80% and up to 120%"
-msgstr ""
+msgstr "Magnolia KOR 是一种大小约为 20 毫米的脚本字体。 它可以缩小到 80% 和高达 120%"
 
 #. name of font in fonts/manuskript_gotisch
 #: inkstitch-fonts-metadata.py:122
@@ -573,7 +573,7 @@ msgstr ""
 #. command attached to an object
 #: lib/commands.py:45 inx/inkstitch_object_commands.inx:11
 msgid "Stop (pause machine) after sewing this object"
-msgstr ""
+msgstr "缝制此物件后停止（暂停机器）"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
@@ -591,7 +591,7 @@ msgstr ""
 #. command attached to an object
 #: lib/commands.py:54 inx/inkstitch_object_commands.inx:14
 msgid "Satin cut point (use with Cut Satin Column)"
-msgstr ""
+msgstr "缎面切割点（与切割缎面柱一起使用）"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command that affects a layer
@@ -804,7 +804,7 @@ msgstr ""
 
 #: lib/elements/fill_stitch.py:66 lib/elements/stroke.py:36
 msgid "This object has multiple guide lines, but only the first one will be used."
-msgstr ""
+msgstr "该对象有多个参考线，但只会使用第一个。"
 
 #: lib/elements/fill_stitch.py:68 lib/elements/stroke.py:38
 msgid "* Remove all guide lines, except for one."
@@ -821,7 +821,7 @@ msgstr ""
 #: lib/elements/fill_stitch.py:78 lib/elements/fill_stitch.py:87
 #: lib/elements/fill_stitch.py:95
 msgid "* Extensions > Ink/Stitch > Fill Tools > Break Apart Fill Objects"
-msgstr ""
+msgstr "* 扩展 > Ink/Stitch > 填充工具 > 拆分填充对象"
 
 #: lib/elements/fill_stitch.py:83
 msgid "Border crosses itself"
@@ -1012,7 +1012,7 @@ msgstr ""
 
 #: lib/elements/fill_stitch.py:428
 msgid "default: 3x fill row spacing"
-msgstr ""
+msgstr "默认值：3x 填充行间距"
 
 #: lib/elements/fill_stitch.py:438
 msgid "Max stitch length"
@@ -1032,7 +1032,7 @@ msgstr ""
 
 #: lib/elements/fill_stitch.py:483 lib/elements/fill_stitch.py:497
 msgid "Underpath"
-msgstr ""
+msgstr "下缝"
 
 #: lib/elements/fill_stitch.py:484 lib/elements/fill_stitch.py:498
 msgid "Travel inside the shape when moving from section to section.  Underpath stitches avoid traveling in the direction of the row angle so that they are not visible.  This gives them a jagged appearance."
@@ -1218,7 +1218,7 @@ msgstr ""
 
 #: lib/elements/satin_column.py:84
 msgid "Custom satin column"
-msgstr ""
+msgstr "定制缎面柱"
 
 #: lib/elements/satin_column.py:90
 msgid "\"E\" stitch"
@@ -1242,7 +1242,7 @@ msgstr ""
 
 #: lib/elements/satin_column.py:113
 msgid "Short stitch distance"
-msgstr ""
+msgstr "短针距"
 
 #: lib/elements/satin_column.py:114
 msgid "Do short stitches if the distance between stitches is smaller than this."
@@ -1425,7 +1425,7 @@ msgstr ""
 
 #: lib/elements/stroke.py:195
 msgid "Line distance exponent"
-msgstr ""
+msgstr "线距指数"
 
 #: lib/elements/stroke.py:196
 msgid "Increase density towards one side."
@@ -1453,7 +1453,7 @@ msgstr ""
 
 #: lib/elements/stroke.py:232
 msgid "Render as grid. Use with care and watch your stitch density."
-msgstr ""
+msgstr "渲染为网格。 小心使用并注意您的针迹密度。"
 
 #: lib/elements/stroke.py:244
 msgid "Scale axis"
@@ -1497,15 +1497,15 @@ msgstr ""
 
 #: lib/elements/stroke.py:291
 msgid "Join style"
-msgstr ""
+msgstr "加入样式"
 
 #: lib/elements/stroke.py:292
 msgid "Join style for non circular ripples."
-msgstr ""
+msgstr "加入非圆形波纹的样式。"
 
 #: lib/elements/stroke.py:295
 msgid "flat"
-msgstr ""
+msgstr "平面"
 
 #: lib/elements/stroke.py:295
 msgid "point"
@@ -1514,119 +1514,121 @@ msgstr ""
 #: lib/elements/stroke.py:374
 msgid "Legacy running stitch setting detected!\n\n"
 "It looks like you're using a stroke smaller than 0.5 units to indicate a running stitch, which is deprecated.  Instead, please set your stroke to be dashed to indicate running stitch.  Any kind of dash will work."
-msgstr ""
+msgstr "检测到旧版运行针迹设置！\n\n"
+"看起来您正在使用小于 0.5 个单位的笔画来表示正在运行的针迹，这已被弃用。 相反，请将您的笔划设置为虚线以表示正在运行的针迹。 任何类型的破折号都可以。"
 
 #: lib/elements/text.py:13 lib/extensions/lettering.py:78
 msgid "Text"
-msgstr ""
+msgstr "文本"
 
 #: lib/elements/text.py:14
 msgid "Ink/Stitch cannot work with objects like text."
-msgstr ""
+msgstr "Ink/Stitch 无法处理文本等对象。"
 
 #: lib/elements/text.py:16
 msgid "* Text: Create your own letters or try the lettering tool:"
-msgstr ""
+msgstr "*文本：创建自己的字母或尝试刻字工具："
 
 #: lib/elements/text.py:17
 msgid "- Extensions > Ink/Stitch > Lettering"
-msgstr ""
+msgstr "- 扩展 > Ink/Stitch > 刻字"
 
 #: lib/extensions/apply_threadlist.py:70
 msgid "File not found."
-msgstr ""
+msgstr "文件未找到。"
 
 #: lib/extensions/apply_threadlist.py:73
 msgid "The filepath specified is not a file but a dictionary.\n"
 "Please choose a threadlist file to import."
-msgstr ""
+msgstr "指定的文件路径不是文件而是字典。\n"
+"请选择要导入的线程列表文件。"
 
 #: lib/extensions/apply_threadlist.py:78
 msgid "Couldn't find any matching colors in the file."
-msgstr ""
+msgstr "在文件中找不到任何匹配的颜色。"
 
 #: lib/extensions/apply_threadlist.py:80
 msgid "Please try to import as \"other threadlist\" and specify a color palette below."
-msgstr ""
+msgstr "请尝试导入为“其他线程列表”并在下面指定调色板。"
 
 #: lib/extensions/apply_threadlist.py:82
 msgid "Please chose an other color palette for your design."
-msgstr ""
+msgstr "请为您的设计选择另一个调色板。"
 
 #. auto-route running stitch columns extension
 #: lib/extensions/auto_run.py:57 lib/extensions/cutwork_segmentation.py:47
 msgid "Please select one or more stroke elements."
-msgstr ""
+msgstr "请选择一个或多个笔画元素。"
 
 #: lib/extensions/auto_run.py:62
 msgid "Please select at least one stroke element."
-msgstr ""
+msgstr "请至少选择一个笔画元素。"
 
 #: lib/extensions/auto_satin.py:35
 msgid "Please ensure that at most one start and end command is attached to the selected satin columns."
-msgstr ""
+msgstr "请确保最多有一个开始和结束命令附加到选定的缎面柱。"
 
 #. auto-route satin columns extension
 #: lib/extensions/auto_satin.py:49
 msgid "Please select one or more satin columns."
-msgstr ""
+msgstr "请选择一段或多段缎面柱。"
 
 #: lib/extensions/auto_satin.py:54
 msgid "Please select at least one satin column."
-msgstr ""
+msgstr "请至少选择一段缎面柱。"
 
 #. This was previously: "No embroiderable paths selected."
 #: lib/extensions/base.py:127
 msgid "Ink/Stitch doesn't know how to work with any of the objects you've selected."
-msgstr ""
+msgstr "Ink/Stitch 不知道如何处理您选择的任何对象。"
 
 #: lib/extensions/base.py:129
 msgid "There are no objects in the entire document that Ink/Stitch knows how to work with."
-msgstr ""
+msgstr "整个文档中没有 Ink/Stitch 知道如何使用的对象。"
 
 #: lib/extensions/base.py:131
 msgid "Tip: Run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot Objects"
-msgstr ""
+msgstr "提示：运行扩展 > Ink/Stitch > 疑难解答 > 对象疑难解答"
 
 #: lib/extensions/break_apart.py:31
 msgid "Please select one or more fill areas to break apart."
-msgstr ""
+msgstr "请选择一个或多个填充区域进行拆分。"
 
 #: lib/extensions/cleanup.py:37 lib/extensions/cleanup.py:49
 #, python-format
 msgid "%s elements removed"
-msgstr ""
+msgstr "已删除 %s 个元素"
 
 #: lib/extensions/convert_to_satin.py:35
 msgid "Please select at least one line to convert to a satin column."
-msgstr ""
+msgstr "请至少选择一行以转换为缎面柱。"
 
 #. : Convert To Satin extension, user selected one or more objects that were
 #. not lines.
 #: lib/extensions/convert_to_satin.py:40
 msgid "Only simple lines may be converted to satin columns."
-msgstr ""
+msgstr "只有简单的线条可以转换为缎面柱。"
 
 #: lib/extensions/convert_to_satin.py:140
 msgid "Ink/Stitch cannot convert your stroke into a satin column. Please break up your path and try again."
-msgstr ""
+msgstr "Ink/Stitch 无法将您的笔画转换为缎纹柱。 请断开您的路径，然后重试。"
 
 #. : Convert To Satin extension, user selected one or more objects that were
 #. not lines.
 #: lib/extensions/convert_to_stroke.py:25
 #: lib/extensions/convert_to_stroke.py:30
 msgid "Please select at least one satin column to convert to a running stitch."
-msgstr ""
+msgstr "请选择至少一个缎纹柱以转换为连续针迹。"
 
 #: lib/extensions/cut_satin.py:20
 msgid "Please select one or more satin columns to cut."
-msgstr ""
+msgstr "请选择一根或多根缎面柱进行切割。"
 
 #. will have the satin's id prepended, like this:
 #. path12345: error: this satin column does not ...
 #: lib/extensions/cut_satin.py:30
 msgid "this satin column does not have a \"satin column cut point\" command attached to it. Please use the \"Attach commands\" extension and attach the \"Satin Column cut point\" command first."
-msgstr ""
+msgstr "此缎面柱没有附加“缎面柱切割点”命令。 请先使用“附加命令”扩展并附加“缎柱切割点”命令。"
 
 #: lib/extensions/cutwork_segmentation.py:158
 msgid "Cutwork Group"
@@ -1635,7 +1637,7 @@ msgstr ""
 #: lib/extensions/cutwork_segmentation.py:166
 #, python-format
 msgid "Needle #%s"
-msgstr ""
+msgstr "针 #%s"
 
 #: lib/extensions/density_map.py:69
 msgid "Density Plan"
@@ -1643,83 +1645,84 @@ msgstr ""
 
 #: lib/extensions/density_map.py:83
 msgid "Red"
-msgstr ""
+msgstr "红色"
 
 #: lib/extensions/density_map.py:83
 msgid "Yellow"
-msgstr ""
+msgstr "黄色"
 
 #: lib/extensions/density_map.py:83
 msgid "Green"
-msgstr ""
+msgstr "绿色"
 
 #: lib/extensions/density_map.py:87
 #, python-format
 msgid "%s density"
-msgstr ""
+msgstr "%s 密度"
 
 #: lib/extensions/duplicate_params.py:18
 msgid "This function copies Ink/Stitch parameters from the first selected element to the rest of the selection. Please select at least two elements."
-msgstr ""
+msgstr "此功能将 Ink/Stitch 参数从第一个选定元素复制到选择的其余部分。 请至少选择两个元素。"
 
 #: lib/extensions/flip.py:28
 msgid "Please select one or more satin columns to flip."
-msgstr ""
+msgstr "请选择一个或多个缎面柱来翻转。"
 
 #: lib/extensions/generate_palette.py:31
 msgid "Please specify a name for your color palette."
-msgstr ""
+msgstr "请为您的调色板指定一个名称。"
 
 #: lib/extensions/generate_palette.py:36
 msgid "Unkown directory path."
-msgstr ""
+msgstr "未知的目录路径。"
 
 #: lib/extensions/generate_palette.py:41
 msgid "Ink/Stitch cannot find your palette folder automatically. Please enter the path manually."
-msgstr ""
+msgstr "Ink/Stitch 无法自动找到您的调色板文件夹。 请手动输入路径。"
 
 #: lib/extensions/generate_palette.py:47
 msgid "No element selected.\n\n"
 "Please select at least one text element with a fill color."
-msgstr ""
+msgstr "未选择任何元素。\n\n"
+"请选择至少一个带有填充颜色的文本元素。"
 
 #: lib/extensions/generate_palette.py:53
 msgid "We couldn't find any fill colors on your text elements. Please read the instructions on our website."
-msgstr ""
+msgstr "我们在您的文本元素上找不到任何填充颜色。 请阅读我们网站上的说明。"
 
 #: lib/extensions/input.py:18
 msgid "Ink/Stitch cannot import color formats directly. But you can open the embroidery file and apply the color with Extensions > Ink/Stitch > Thread Color Management > Apply Threadlist"
-msgstr ""
+msgstr "Ink/Stitch 无法直接导入颜色格式。 但是您可以打开刺绣文件并使用扩展 > 墨水/针迹 > 线色管理 > 应用线列表应用颜色"
 
 #: lib/extensions/install_custom_palette.py:24
 #: lib/extensions/palette_to_text.py:26
 msgid "File does not exist."
-msgstr ""
+msgstr "文件不存在。"
 
 #: lib/extensions/install_custom_palette.py:28
 msgid "Wrong file type. Ink/Stitch only accepts gpl color palettes."
-msgstr ""
+msgstr "文件类型错误。 Ink/Stitch 仅接受 gpl 调色板。"
 
 #: lib/extensions/install_custom_palette.py:36
 msgid "Ink/Stitch cannot find your palette folder automatically. Please install your palette manually."
-msgstr ""
+msgstr "Ink/Stitch 无法自动找到您的调色板文件夹。 请手动安装调色板。"
 
 #: lib/extensions/layer_commands.py:20
 msgid "Please choose one or more commands to add."
-msgstr ""
+msgstr "请选择一个或多个命令来添加。"
 
 #: lib/extensions/lettering.py:44 lib/extensions/lettering.py:424
 msgid "Ink/Stitch Lettering"
-msgstr ""
+msgstr "Ink/Stitch 刻字"
 
 #: lib/extensions/lettering.py:54
 msgid "Font"
-msgstr ""
+msgstr "字体"
 
 #: lib/extensions/lettering.py:66 inx/inkstitch_apply_threadlist.inx:7
 #: inx/inkstitch_palette_to_text.inx:15
 msgid "Options"
-msgstr ""
+msgstr "选项"
 
 #: lib/extensions/lettering.py:71
 msgid "Stitch lines of text back and forth"
@@ -1865,7 +1868,7 @@ msgstr ""
 
 #: lib/extensions/troubleshoot.py:45
 msgid "All selected shapes are valid! "
-msgstr ""
+msgstr "所有选定的形状都有效！"
 
 #: lib/extensions/troubleshoot.py:47
 msgid "If you are still having trouble with a shape not being embroidered, check if it is in a layer with an ignore command."
@@ -1904,7 +1907,7 @@ msgstr ""
 
 #: lib/extensions/troubleshoot.py:159
 msgid "These are problems that won't prevent the shape from being embroidered. You should consider to fix the warning, but if you don't, Ink/Stitch will do its best to process the object."
-msgstr ""
+msgstr "这些问题不会阻止形状被刺绣。 您应该考虑修复警告，但如果您不这样做，Ink/Stitch 将尽最大努力处理该对象。"
 
 #: lib/extensions/troubleshoot.py:164
 msgid "Object Type Warnings"
@@ -1936,218 +1939,219 @@ msgstr ""
 
 #: lib/extensions/zip.py:103
 msgid "Title"
-msgstr ""
+msgstr "标题"
 
 #: lib/extensions/zip.py:104 inx/inkstitch_commands_scale_symbols.inx:6
 msgid "Size"
-msgstr ""
+msgstr "尺寸"
 
 #: lib/extensions/zip.py:105
 msgid "Stitches"
-msgstr ""
+msgstr "针迹"
 
 #: lib/extensions/zip.py:106
 msgid "Colors"
-msgstr ""
+msgstr "颜色"
 
 #: lib/extensions/zip.py:108
 msgid "Thread Order"
-msgstr ""
+msgstr "绣线顺序"
 
 #: lib/extensions/zip.py:121
 msgid "Thread Used"
-msgstr ""
+msgstr "使用的绣线"
 
 #: lib/gui/presets.py:52
 msgid "Presets"
-msgstr ""
+msgstr "预设"
 
 #: lib/gui/presets.py:58
 msgid "Load"
-msgstr ""
+msgstr "加载"
 
 #: lib/gui/presets.py:61
 msgid "Add"
-msgstr ""
+msgstr "添加"
 
 #: lib/gui/presets.py:64
 msgid "Overwrite"
-msgstr ""
+msgstr "覆盖"
 
 #: lib/gui/presets.py:67
 msgid "Delete"
-msgstr ""
+msgstr "删除"
 
 #: lib/gui/presets.py:126
 msgid "Please enter or select a preset name first."
-msgstr ""
+msgstr "请先输入或选择一个预设名称。"
 
 #: lib/gui/presets.py:126 lib/gui/presets.py:132 lib/gui/presets.py:148
 msgid "Preset"
-msgstr ""
+msgstr "预设"
 
 #: lib/gui/presets.py:132
 #, python-format
 msgid "Preset \"%s\" not found."
-msgstr ""
+msgstr "未找到预设“%s”。"
 
 #: lib/gui/presets.py:148
 #, python-format
 msgid "Preset \"%s\" already exists.  Please use another name or press \"Overwrite\""
-msgstr ""
+msgstr "预设“%s”已存在。 请使用其他名称或按“覆盖”"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command label at bottom of simulator window
 #: lib/gui/simulator.py:18 electron/src/renderer/assets/js/simulator.js:142
 #: inx/inkstitch_output_GCODE.inx:29
 msgid "STITCH"
-msgstr ""
+msgstr "针迹"
 
 #: lib/gui/simulator.py:18 electron/src/renderer/assets/js/simulator.js:145
 msgid "JUMP"
-msgstr ""
+msgstr "跳跃"
 
 #: lib/gui/simulator.py:18 electron/src/renderer/assets/js/simulator.js:148
 msgid "TRIM"
-msgstr ""
+msgstr "剪线"
 
 #: lib/gui/simulator.py:18 electron/src/renderer/assets/js/simulator.js:151
 #: inx/inkstitch_output_GCODE.inx:33
 msgid "STOP"
-msgstr ""
+msgstr "停止"
 
 #: lib/gui/simulator.py:18 electron/src/renderer/assets/js/simulator.js:154
 #: inx/inkstitch_output_GCODE.inx:31
 msgid "COLOR CHANGE"
-msgstr ""
+msgstr "颜色变化"
 
 #: lib/gui/simulator.py:50
 msgid "Slow down (arrow down)"
-msgstr ""
+msgstr "减速（向下箭头）"
 
 #: lib/gui/simulator.py:53
 msgid "Speed up (arrow up)"
-msgstr ""
+msgstr "加速（向上箭头）"
 
 #: lib/gui/simulator.py:56
 msgid "Go on step backward (-)"
-msgstr ""
+msgstr "往后退一步（-）"
 
 #: lib/gui/simulator.py:59
 msgid "Go on step forward (+)"
-msgstr ""
+msgstr "继续前进 (+)"
 
 #: lib/gui/simulator.py:62
 msgid "Switch direction (arrow left | arrow right)"
-msgstr ""
+msgstr "切换方向（左箭头|右箭头）"
 
 #: lib/gui/simulator.py:63 lib/gui/simulator.py:239 lib/gui/simulator.py:246
 #: electron/src/renderer/components/Simulator.vue:29
 msgid "Pause"
-msgstr ""
+msgstr "暂停"
 
 #: lib/gui/simulator.py:65
 msgid "Pause (P)"
-msgstr ""
+msgstr "暂停 (P)"
 
 #: lib/gui/simulator.py:66
 msgid "Restart"
-msgstr ""
+msgstr "重新开始"
 
 #: lib/gui/simulator.py:68
 msgid "Restart (R)"
-msgstr ""
+msgstr "重新开始 (R)"
 
 #: lib/gui/simulator.py:69
 msgid "O"
-msgstr ""
+msgstr "O"
 
 #: lib/gui/simulator.py:71
 msgid "Display needle penetration point (O)"
-msgstr ""
+msgstr "显示进针点（O）"
 
 #: lib/gui/simulator.py:72
 msgid "Quit"
-msgstr ""
+msgstr "退出"
 
 #: lib/gui/simulator.py:74
 msgid "Quit (Q)"
-msgstr ""
+msgstr "退出 (Q)"
 
 #: lib/gui/simulator.py:186
 #, python-format
 msgid "Speed: %d stitches/sec"
-msgstr ""
+msgstr "速度：%d 针/秒"
 
 #: lib/gui/simulator.py:242 lib/gui/simulator.py:270
 msgid "Start"
-msgstr ""
+msgstr "开始"
 
 #: lib/gui/simulator.py:816 lib/gui/simulator.py:826
 msgid "Preview"
-msgstr ""
+msgstr "预览"
 
 #: lib/gui/simulator.py:857
 msgid "Embroidery Simulation"
-msgstr ""
+msgstr "刺绣模拟"
 
 #: lib/gui/warnings.py:21
 msgid "Cannot load simulator.\n"
 "Close Params to get full error message."
-msgstr ""
+msgstr "无法加载模拟器。\n"
+"关闭参数以获取完整的错误消息。"
 
 #: lib/lettering/font.py:162
 #, python-format
 msgid "The font '%s' has no variants."
-msgstr ""
+msgstr "字体“%s”没有变体。"
 
 #. low-level file error.  %(error)s is (hopefully?) translated by
 #. the user's system automatically.
 #: lib/output.py:108
 #, python-format
 msgid "Error writing to %(path)s: %(error)s"
-msgstr ""
+msgstr "写入错误 %(path)s%(error)s"
 
 #: lib/stitch_plan/generate_stitch_plan.py:73
 #, python-format
 msgid "File does not exist and cannot be opened. Please correct the file path and try again.\\r%s"
-msgstr ""
+msgstr "文件不存在，无法打开。 请更正文件路径并重试。\\r%s"
 
 #: lib/stitch_plan/stitch_plan.py:26
 msgid "There is no selected stitchable element. Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects in case you have expected a stitchout."
-msgstr ""
+msgstr "没有选择可缝合的元素。请运行扩展 > Ink/Stitch >疑难解答>疑难解答对象，以防您期望一个缝线。"
 
 #: lib/stitches/auto_run.py:135 lib/stitches/auto_satin.py:345
 msgid "Auto-Route"
-msgstr ""
+msgstr "自动路线"
 
 #: lib/stitches/auto_run.py:261
 #, python-format
 msgid "AutoRun %d"
-msgstr ""
+msgstr "自动运行 %d"
 
 #: lib/stitches/auto_run.py:263
 #, python-format
 msgid "AutoRun Underpath %d"
-msgstr ""
+msgstr "自动下缝 %d"
 
 #. Label for a satin column created by Auto-Route Satin Columns and Lettering
 #. extensions
 #: lib/stitches/auto_satin.py:517
 #, python-format
 msgid "AutoSatin %d"
-msgstr ""
+msgstr "自动平包针 %d"
 
 #. Label for running stitch (underpathing) created by Auto-Route Satin Columns
 #. amd Lettering extensions
 #: lib/stitches/auto_satin.py:521
 #, python-format
 msgid "AutoSatin Running Stitch %d"
-msgstr ""
+msgstr "自动平包针运行针迹 %d"
 
 #: lib/svg/rendering.py:222
 msgid "Stitch Plan"
-msgstr ""
+msgstr "针迹预设"
 
 #: lib/svg/units.py:18
 #, python-format
@@ -2157,16 +2161,16 @@ msgstr ""
 #: lib/utils/version.py:22
 #, python-format
 msgid "Ink/Stitch Version: %s"
-msgstr ""
+msgstr "Ink/Stitch 版本: %s"
 
 #: lib/utils/version.py:24
 msgid "Ink/Stitch Version: unknown"
-msgstr ""
+msgstr "Ink/Stitch 版本：未知"
 
 #: print/templates/color_swatch.html:8 print/templates/color_swatch.html:40
 #: print/templates/operator_detailedview.html:9
 msgid "Color"
-msgstr ""
+msgstr "颜色"
 
 #: print/templates/color_swatch.html:11 print/templates/color_swatch.html:41
 msgid "rgb"
@@ -2327,7 +2331,7 @@ msgstr ""
 #: print/templates/operator_overview.html:9
 #: print/templates/print_overview.html:9
 msgid "Total trims"
-msgstr ""
+msgstr "合计剪线"
 
 #: print/templates/operator_detailedview.html:62
 msgid "thread used"
@@ -2374,7 +2378,7 @@ msgstr ""
 
 #: print/templates/ui.html:5
 msgid "Save PDF"
-msgstr ""
+msgstr "保存为PDF"
 
 #: print/templates/ui.html:6 print/templates/ui.html:16
 msgid "Settings"
@@ -2382,72 +2386,72 @@ msgstr ""
 
 #: print/templates/ui.html:7
 msgid "Close"
-msgstr ""
+msgstr "关闭"
 
 #: print/templates/ui.html:10
 msgid "⚠ lost connection to Ink/Stitch"
-msgstr ""
+msgstr "⚠ 失去与 Ink/Stitch 的连接"
 
 #: print/templates/ui.html:19 print/templates/ui.html:30
 msgid "Page Setup"
-msgstr ""
+msgstr "页面设置"
 
 #: print/templates/ui.html:20
 msgid "Branding"
-msgstr ""
+msgstr "品牌推广"
 
 #: print/templates/ui.html:21 print/templates/ui.html:113
 msgid "Estimated Time"
-msgstr ""
+msgstr "预计时间"
 
 #: print/templates/ui.html:22 print/templates/ui.html:147
 msgid "Estimated Thread"
-msgstr ""
+msgstr "预计线程"
 
 #: print/templates/ui.html:23 print/templates/ui.html:168
 msgid "Design"
-msgstr ""
+msgstr "设计"
 
 #: print/templates/ui.html:32
 msgid "Printing Size"
-msgstr ""
+msgstr "打印尺寸"
 
 #: print/templates/ui.html:40
 msgid "Print Layouts"
-msgstr ""
+msgstr "打印布局"
 
 #: print/templates/ui.html:43 print/templates/ui.html:137
 msgid "Client Overview"
-msgstr ""
+msgstr "客户概览"
 
 #: print/templates/ui.html:47 print/templates/ui.html:138
 msgid "Client Detailed View"
-msgstr ""
+msgstr "客户详细视图"
 
 #: print/templates/ui.html:51 print/templates/ui.html:139
 msgid "Operator Overview"
-msgstr ""
+msgstr "运营商概述"
 
 #: print/templates/ui.html:55 print/templates/ui.html:140
 msgid "Operator Detailed View"
-msgstr ""
+msgstr "操作员详细视图"
 
 #: print/templates/ui.html:57
 msgid "Thumbnail size"
-msgstr ""
+msgstr "缩略图大小"
 
 #: print/templates/ui.html:63
 msgid "Custom information sheet"
-msgstr ""
+msgstr "自定义信息表"
 
 #: print/templates/ui.html:66 print/templates/ui.html:109
 msgid "Includes these Page Setup, estimated time settings and also the icon."
-msgstr ""
+msgstr "包括这些页面设置、预计时间设置以及图标。"
 
 #: print/templates/ui.html:66 print/templates/ui.html:109
 #: print/templates/ui.html:143 print/templates/ui.html:164
 msgid "Save as defaults"
-msgstr ""
+msgstr "保存为模板"
 
 #: print/templates/ui.html:71
 msgid "Logo"
@@ -2455,105 +2459,106 @@ msgstr ""
 
 #: print/templates/ui.html:81
 msgid "Footer: Operator contact information"
-msgstr ""
+msgstr "页脚：作者信息"
 
 #: print/templates/ui.html:115
 msgid "Machine Settings"
-msgstr ""
+msgstr "机器设置"
 
 #: print/templates/ui.html:117
 msgid "Average Machine Speed"
-msgstr ""
+msgstr "平均机器速度"
 
 #: print/templates/ui.html:118
 msgid "stitches per minute "
-msgstr ""
+msgstr "每分钟转速"
 
 #: print/templates/ui.html:122
 msgid "Time Factors"
-msgstr ""
+msgstr "时间因素"
 
 #: print/templates/ui.html:125
 msgid "Includes average time for preparing the machine, thread breaks and/or bobbin changes, etc."
-msgstr ""
+msgstr "包括准备机器、断线和/或更换梭芯等的平均时间。"
 
 #: print/templates/ui.html:125
 msgid "seconds to add to total time*"
-msgstr ""
+msgstr "添加到总时间的秒数*"
 
 #: print/templates/ui.html:129
 msgid "This will be added to the total time."
-msgstr ""
+msgstr "这将被添加到总时间中。"
 
 #: print/templates/ui.html:129
 msgid "seconds needed for a color change*"
-msgstr ""
+msgstr "颜色变化所需的秒数*"
 
 #: print/templates/ui.html:132
 msgid "seconds needed for trim"
-msgstr ""
+msgstr "剪线所需的秒数"
 
 #: print/templates/ui.html:135
 msgid "Display Time On"
-msgstr ""
+msgstr "显示时间开启"
 
 #: print/templates/ui.html:143 print/templates/ui.html:164
 msgid "Includes page setup, estimated time and also the branding."
-msgstr ""
+msgstr "包括页面设置、预计时间以及品牌。"
 
 #: print/templates/ui.html:149
 msgid "Factors"
-msgstr ""
+msgstr "因素"
 
 #: print/templates/ui.html:150
 msgid "The thread length calculation depends on a lot of factors in embroidery designs. We will only get a very inacurate approximation.\n"
 "             Ink/Stitch simply calculates the path length, so the factor of 1 will always be much, much less than the real thread consumption."
-msgstr ""
+msgstr "线长计算取决于刺绣设计中的许多因素。 我们只会得到一个非常不准确的近似值。\n"
+"             Ink/Stitch 只是简单地计算路径长度，因此因子 1 将永远比实际线程消耗要少得多。"
 
 #: print/templates/ui.html:152
 msgid "Set a factor to multiply the path length with, depending on your standard setup or adapt it to your current design (tension, thread, fabric, stitch count, etc.)."
-msgstr ""
+msgstr "根据您的标准设置或将其调整为您当前的设计（张力、线、织物、针数等），设置一个因子来乘以路径长度。"
 
 #: print/templates/ui.html:156 print/templates/ui.html:161
 msgid "Factor to multiply with thread length"
-msgstr ""
+msgstr "与螺纹长度相乘的系数"
 
 #: print/templates/ui.html:156 print/templates/ui.html:161
 msgid "* path length"
-msgstr ""
+msgstr "* 路径长度"
 
 #: print/templates/ui.html:169
 msgid "Thread Palette"
-msgstr ""
+msgstr "绣线调色板"
 
 #: print/templates/ui.html:188
 msgid "Changing the thread palette will cause thread names and catalog numbers to be recalculated based on the new palette.  Any changes you have made to color or thread names will be lost.  Are you sure?"
-msgstr ""
+msgstr "更改螺纹调色板将导致螺纹名称和目录编号基于新的调色板重新计算。 您对颜色或线程名称所做的任何更改都将丢失。 你确定吗？"
 
 #: print/templates/ui.html:191
 msgid "Yes"
-msgstr ""
+msgstr "是"
 
 #: print/templates/ui.html:192 inx/inkstitch_lettering_generate_json.inx:37
 msgid "No"
-msgstr ""
+msgstr "不"
 
 #: print/templates/ui_svg_action_buttons.html:1
 msgid "Scale"
-msgstr ""
+msgstr "比例"
 
 #: print/templates/ui_svg_action_buttons.html:3
 msgid "Fit"
-msgstr ""
+msgstr "适合"
 
 #: print/templates/ui_svg_action_buttons.html:5
 msgid "Apply to all"
-msgstr ""
+msgstr "全部应用"
 
 #: print/templates/ui_svg_action_buttons.html:9
 #: print/templates/ui_svg_action_buttons.html:12
 msgid "Realistic"
-msgstr ""
+msgstr "实际"
 
 #. description for pyembroidery file format: pec
 #. description for pyembroidery file format: pes
@@ -2563,18 +2568,18 @@ msgstr ""
 #: pyembroidery-format-descriptions.py:58
 #: pyembroidery-format-descriptions.py:60
 msgid "Brother Embroidery Format"
-msgstr ""
+msgstr "Brother 刺绣格式"
 
 #. description for pyembroidery file format: exp
 #: pyembroidery-format-descriptions.py:6
 msgid "Melco Expanded Embroidery Format"
-msgstr ""
+msgstr "Melco 扩展刺绣格式"
 
 #. description for pyembroidery file format: dst
 #. description for pyembroidery file format: tbf
 #: pyembroidery-format-descriptions.py:8 pyembroidery-format-descriptions.py:48
 msgid "Tajima Embroidery Format"
-msgstr ""
+msgstr "Tajima 刺绣格式"
 
 #. description for pyembroidery file format: jef
 #. description for pyembroidery file format: sew
@@ -2583,7 +2588,7 @@ msgstr ""
 #: pyembroidery-format-descriptions.py:20
 #: pyembroidery-format-descriptions.py:76
 msgid "Janome Embroidery Format"
-msgstr ""
+msgstr "Janome 刺绣格式"
 
 #. description for pyembroidery file format: vp3
 #. description for pyembroidery file format: ksm
@@ -2602,22 +2607,22 @@ msgstr ""
 #: pyembroidery-format-descriptions.py:72
 #: pyembroidery-format-descriptions.py:74
 msgid "Pfaff Embroidery Format"
-msgstr ""
+msgstr "Pfaff 刺绣格式"
 
 #. description for pyembroidery file format: svg
 #: pyembroidery-format-descriptions.py:14
 msgid "Scalable Vector Graphics"
-msgstr ""
+msgstr "可缩放矢量图形"
 
 #. description for pyembroidery file format: csv
 #: pyembroidery-format-descriptions.py:16
 msgid "Comma-separated values"
-msgstr ""
+msgstr "逗号分隔值"
 
 #. description for pyembroidery file format: xxx
 #: pyembroidery-format-descriptions.py:18
 msgid "Singer Embroidery Format"
-msgstr ""
+msgstr "Singer 刺绣格式"
 
 #. description for pyembroidery file format: u01
 #: pyembroidery-format-descriptions.py:22
@@ -2644,365 +2649,366 @@ msgstr ""
 #. description for pyembroidery file format: dat
 #: pyembroidery-format-descriptions.py:32
 msgid "Sunstar or Barudan Embroidery Format"
-msgstr ""
+msgstr "Sunstar 或 Barudan 刺绣格式"
 
 #. description for pyembroidery file format: dsb
 #: pyembroidery-format-descriptions.py:34
 msgid "Tajima(Barudan) Embroidery Format"
-msgstr ""
+msgstr "田岛（Barudan）刺绣格式"
 
 #. description for pyembroidery file format: dsz
 #: pyembroidery-format-descriptions.py:36
 msgid "ZSK USA Embroidery Format"
-msgstr ""
+msgstr "ZSK USA  刺绣格式"
 
 #. description for pyembroidery file format: emd
 #: pyembroidery-format-descriptions.py:38
 msgid "Elna Embroidery Format"
-msgstr ""
+msgstr "Elna 刺绣格式"
 
 #. description for pyembroidery file format: exy
 #: pyembroidery-format-descriptions.py:40
 msgid "Eltac Embroidery Format"
-msgstr ""
+msgstr "Eltac 刺绣格式"
 
 #. description for pyembroidery file format: fxy
 #: pyembroidery-format-descriptions.py:42
 msgid "Fortron Embroidery Format"
-msgstr ""
+msgstr " Fortron 刺绣格式"
 
 #. description for pyembroidery file format: gt
 #: pyembroidery-format-descriptions.py:44
 msgid "Gold Thread Embroidery Format"
-msgstr ""
+msgstr "Gold Thread 刺绣格式"
 
 #. description for pyembroidery file format: inb
 #: pyembroidery-format-descriptions.py:46
 msgid "Inbro Embroidery Format"
-msgstr ""
+msgstr "Inbro 刺绣格式"
 
 #. description for pyembroidery file format: tap
 #: pyembroidery-format-descriptions.py:52
 msgid "Happy Embroidery Format"
-msgstr ""
+msgstr "Happy 刺绣格式"
 
 #. description for pyembroidery file format: stx
 #: pyembroidery-format-descriptions.py:56
 msgid "Data Stitch Embroidery Format"
-msgstr ""
+msgstr "Data Stitch 刺绣格式"
 
 #. description for pyembroidery file format: new
 #: pyembroidery-format-descriptions.py:62
 msgid "Ameco Embroidery Format"
-msgstr ""
+msgstr "Ameco 刺绣格式"
 
 #. description for pyembroidery file format: mit
 #: pyembroidery-format-descriptions.py:66
 msgid "Mitsubishi Embroidery Format"
-msgstr ""
+msgstr "Mitsubishi 刺绣格式"
 
 #. description for pyembroidery file format: stc
 #: pyembroidery-format-descriptions.py:78
 msgid "Gunold Embroidery Format"
-msgstr ""
+msgstr "Gunold 刺绣格式"
 
 #. description for pyembroidery file format: zhs
 #: pyembroidery-format-descriptions.py:80
 msgid "Zeng Hsing Embroidery Format"
-msgstr ""
+msgstr "Zeng Hsing 刺绣格式"
 
 #. description for pyembroidery file format: zxy
 #: pyembroidery-format-descriptions.py:82
 msgid "ZSK TC Embroidery Format"
-msgstr ""
+msgstr "ZSK TC 刺绣格式"
 
 #. description for pyembroidery file format: pmv
 #: pyembroidery-format-descriptions.py:84
 msgid "Brother Stitch Format"
-msgstr ""
+msgstr "兄弟针迹格式"
 
 #. description for pyembroidery file format: png
 #: pyembroidery-format-descriptions.py:86
 msgid "PNG Format, Portable Network Graphics"
-msgstr ""
+msgstr "PNG 格式，便携式网络图形"
 
 #. description for pyembroidery file format: txt
 #: pyembroidery-format-descriptions.py:88
 msgid "txt Format, Text File"
-msgstr ""
+msgstr "txt 格式，文本文件"
 
 #. description for pyembroidery file format: gcode
 #: pyembroidery-format-descriptions.py:90
 msgid "gcode Format, Text File"
-msgstr ""
+msgstr "gcode 格式，文本文件"
 
 #. description for pyembroidery file format: hus
 #: pyembroidery-format-descriptions.py:92
 msgid "Husqvarna Embroidery Format"
-msgstr ""
+msgstr "Husqvarna 刺绣格式"
 
 #. description for pyembroidery file format: edr
 #: pyembroidery-format-descriptions.py:94
 msgid "Edr Color Format"
-msgstr ""
+msgstr "Edr 颜色格式"
 
 #. description for pyembroidery file format: col
 #: pyembroidery-format-descriptions.py:96
 msgid "Col Color Format"
-msgstr ""
+msgstr "Col 颜色格式"
 
 #. description for pyembroidery file format: inf
 #: pyembroidery-format-descriptions.py:98
 msgid "Inf Color Format"
-msgstr ""
+msgstr "Inf 颜色格式"
 
 #. description for pyembroidery file format: json
 #: pyembroidery-format-descriptions.py:100
 msgid "Json Export"
-msgstr ""
+msgstr "Json 导出"
 
 #. name for left arrow keyboard key
 #: electron/src/renderer/components/Simulator.vue:52
 msgid "← Arrow left"
-msgstr ""
+msgstr "← 左箭头"
 
 #. name for right arrow keyboard key
 #: electron/src/renderer/components/Simulator.vue:63
 msgid "→ Arrow right"
-msgstr ""
+msgstr "→ 右箭头"
 
 #. name for up arrow keyboard key
 #: electron/src/renderer/components/Simulator.vue:129
 msgid "↑ Arrow up"
-msgstr ""
+msgstr "↑ 上箭头"
 
 #. name for down arrow keyboard key
 #: electron/src/renderer/components/Simulator.vue:118
 msgid "↓ Arrow down"
-msgstr ""
+msgstr "↓ 下箭头"
 
 #. name for this keyboard key: +
 #: electron/src/renderer/components/Simulator.vue:89
 msgid "+ Plus"
-msgstr ""
+msgstr "+ 加"
 
 #: electron/src/renderer/components/Simulator.vue:15
 msgid "Button"
-msgstr ""
+msgstr "按钮"
 
 #: electron/src/renderer/components/Simulator.vue:203
 msgid "color changes"
-msgstr ""
+msgstr "颜色变化"
 
 #: electron/src/renderer/components/Simulator.vue:186
 msgid "Command"
-msgstr ""
+msgstr "命令"
 
 #: electron/src/renderer/components/Simulator.vue:145
 msgid "Controls"
-msgstr ""
+msgstr "控件"
 
 #: electron/src/renderer/components/Simulator.vue:226
 msgid "cursor"
-msgstr ""
+msgstr "光标"
 
 #: electron/src/renderer/components/Simulator.vue:18
 msgid "Function"
-msgstr ""
+msgstr "功能"
 
 #: electron/src/renderer/components/InstallPalettes.vue:16
 msgid "If you are not sure which file path to choose, click on install directly. In most cases Ink/Stitch will guess the correct path."
-msgstr ""
+msgstr "如果您不确定选择哪个文件路径，请直接单击安装。 在大多数情况下，Ink/Stitch 会猜测正确的路径。"
 
 #: electron/src/renderer/components/InstallPalettes.vue:9
 msgid "Ink/Stitch can install palettes for Inkscape matching the thread colors from popular machine embroidery thread manufacturers."
-msgstr ""
+msgstr "Ink/Stitch 可以为 Inkscape 安装调色板，与流行的机器绣花线制造商的线色相匹配。"
 
 #: electron/src/renderer/components/InstallPalettes.vue:53
 msgid "Inkscape add-on installation failed"
-msgstr ""
+msgstr "Inkscape 插件安装失败"
 
 #: electron/src/renderer/components/InstallPalettes.vue:36
 msgid "Inkscape palettes have been installed. Please restart Inkscape to load the new palettes."
-msgstr ""
+msgstr "已安装 Inkscape 调色板。 请重新启动 Inkscape 以加载新的调色板。"
 
 #: electron/src/renderer/components/InstallPalettes.vue:22
 msgid "Install"
-msgstr ""
+msgstr "安装"
 
 #: electron/src/renderer/components/InstallPalettes.vue:4
 msgid "Install Palettes"
-msgstr ""
+msgstr "安装调色板"
 
 #: electron/src/renderer/components/InstallPalettes.vue:31
 msgid "Installation Completed"
-msgstr ""
+msgstr "安装完成"
 
 #: electron/src/renderer/components/InstallPalettes.vue:48
 msgid "Installation Failed"
-msgstr ""
+msgstr "安装失败"
 
 #: electron/src/renderer/components/Simulator.vue:106
 msgid "Jump to next command"
-msgstr ""
+msgstr "跳转到下一个命令"
 
 #: electron/src/renderer/components/Simulator.vue:97
 msgid "Jump to previous command"
-msgstr ""
+msgstr "跳转到上一个命令"
 
 #: electron/src/renderer/components/Simulator.vue:199
 msgid "jumps"
-msgstr ""
+msgstr "跳跃"
 
 #. name for this keyboard key: -
 #: electron/src/renderer/components/Simulator.vue:76
 msgid "Minus"
-msgstr ""
+msgstr "减去"
 
 #: electron/src/renderer/components/Simulator.vue:215
 msgid "needle points"
-msgstr ""
+msgstr "针点"
 
 #. description of keyboard shortcut that moves one stitch backward in simulator
 #: electron/src/renderer/components/Simulator.vue:71
 msgid "One step backward"
-msgstr ""
+msgstr "后退一步"
 
 #. description of keyboard shortcut that moves one stitch forward in simulator
 #: electron/src/renderer/components/Simulator.vue:84
 msgid "One step forward"
-msgstr ""
+msgstr "向前一步"
 
 #. name for page down keyboard key
 #: electron/src/renderer/components/Simulator.vue:99
 msgid "Page down (PgDn)"
-msgstr ""
+msgstr "向下翻页 (PgDn)"
 
 #. name for page up keyboard key
 #: electron/src/renderer/components/Simulator.vue:108
 msgid "Page up (PgUp)"
-msgstr ""
+msgstr "向上翻页 (PgUp)"
 
 #: electron/src/renderer/components/Simulator.vue:40
 msgid "Play"
-msgstr ""
+msgstr "播放"
 
 #: electron/src/renderer/components/Simulator.vue:49
 msgid "Play backward"
-msgstr ""
+msgstr "向后"
 
 #: electron/src/renderer/components/Simulator.vue:60
 msgid "Play forward"
-msgstr ""
+msgstr "向前"
 
 #: electron/src/renderer/components/Simulator.vue:223
 msgid "realistic"
-msgstr ""
+msgstr "实际的"
 
 #: electron/src/renderer/components/Simulator.vue:219
 msgid "render jumps"
-msgstr ""
+msgstr "显示跳跃"
 
 #: electron/src/renderer/components/Simulator.vue:263
 msgid "Rendering stitch-plan..."
-msgstr ""
+msgstr "渲染缝合计划..."
 
 #: electron/src/renderer/components/Simulator.vue:21
 msgid "Shortcut Key"
-msgstr ""
+msgstr "快捷键"
 
 #: electron/src/renderer/components/Simulator.vue:192
 msgid "Show"
-msgstr ""
+msgstr "显示"
 
 #: electron/src/renderer/components/Simulator.vue:10
 msgid "Simulator Shortcut Keys"
-msgstr ""
+msgstr "模拟器快捷键"
 
 #: electron/src/renderer/components/Simulator.vue:115
 msgid "Slow down"
-msgstr ""
+msgstr "减速"
 
 #: electron/src/renderer/components/Simulator.vue:32
 msgid "Space"
-msgstr ""
+msgstr "空间"
 
 #: electron/src/renderer/components/Simulator.vue:126
 msgid "Speed up"
-msgstr ""
+msgstr "加速"
 
 #: electron/src/renderer/components/Simulator.vue:174
 msgid "Speed: %{speed} stitch/sec"
 msgid_plural "Speed: %{speed} stitches/sec"
-msgstr[0] ""
+msgstr[0] "速度：%{speed} 针/秒\n"
+"速度：%{speed} 针/秒"
 
 #: electron/src/renderer/components/Simulator.vue:206
 msgid "stops"
-msgstr ""
+msgstr "停止"
 
 #: electron/src/renderer/components/InstallPalettes.vue:60
 msgid "Try again"
-msgstr ""
+msgstr "再试一次"
 
 #: inx/inkstitch_about.inx:3 inx/inkstitch_about.inx:6
 msgid "About"
-msgstr ""
+msgstr "关于"
 
 #: inx/inkstitch_about.inx:8
 msgid "Ink/Stitch - Manual Install"
-msgstr ""
+msgstr "Ink/Stitch - 手动安装"
 
 #: inx/inkstitch_about.inx:10
 msgid "An open-source machine embroidery design platform based on Inkscape."
-msgstr ""
+msgstr "基于 Inkscape 的开源刺绣数字化设计平台。"
 
 #: inx/inkstitch_about.inx:13
 msgid "https://inkstitch.org"
-msgstr ""
+msgstr "https://inkstitch.org"
 
 #: inx/inkstitch_about.inx:15
 msgid "License"
-msgstr ""
+msgstr "许可"
 
 #: inx/inkstitch_apply_threadlist.inx:3
 msgid "Apply Threadlist"
-msgstr ""
+msgstr "应用主题列表"
 
 #: inx/inkstitch_apply_threadlist.inx:8
 #: inx/inkstitch_install_custom_palette.inx:8
 #: inx/inkstitch_palette_to_text.inx:17
 msgid "Choose file"
-msgstr ""
+msgstr "选择文件"
 
 #: inx/inkstitch_apply_threadlist.inx:9
 msgid "Choose method"
-msgstr ""
+msgstr "选择方法"
 
 #: inx/inkstitch_apply_threadlist.inx:10
 msgid "Apply Ink/Stitch threadlist"
-msgstr ""
+msgstr "应用 Ink/Stitch 绣线列表"
 
 #: inx/inkstitch_apply_threadlist.inx:11
 msgid "Apply other threadlist*"
-msgstr ""
+msgstr "应用其他绣线列表*"
 
 #: inx/inkstitch_apply_threadlist.inx:13
 msgid "*Choose color palette"
-msgstr ""
+msgstr "*选择调色板"
 
 #: inx/inkstitch_apply_threadlist.inx:87 inx/inkstitch_auto_run.inx:23
 #: inx/inkstitch_cutwork_segmentation.inx:42
 #: inx/inkstitch_generate_palette.inx:24 inx/inkstitch_palette_to_text.inx:19
 msgid "Help"
-msgstr ""
+msgstr "帮助"
 
 #: inx/inkstitch_apply_threadlist.inx:88
 msgid "This extension applies colors from a color file to the objects in this document."
-msgstr ""
+msgstr "此扩展将颜色文件中的颜色应用于本文档中的对象。"
 
 #: inx/inkstitch_apply_threadlist.inx:89
 msgid "COL, INF, EDR"
-msgstr ""
+msgstr "COL, INF, EDR"
 
 #: inx/inkstitch_apply_threadlist.inx:90
 msgid "Select the file and apply. The chosen method is not important for these file types."
@@ -3022,7 +3028,7 @@ msgstr ""
 
 #: inx/inkstitch_apply_threadlist.inx:98
 msgid "Get more information on our website"
-msgstr ""
+msgstr "在我们的网站上获取更多信息"
 
 #: inx/inkstitch_apply_threadlist.inx:99
 msgid "https://inkstitch.org/docs/thread-color/#apply-threadlist"
@@ -3227,213 +3233,213 @@ msgstr ""
 
 #: inx/inkstitch_cutwork_segmentation.inx:40
 msgid "Keep original"
-msgstr ""
+msgstr "保持原创"
 
 #: inx/inkstitch_cutwork_segmentation.inx:43
 msgid "This extension separates a path depending on the angle."
-msgstr ""
+msgstr "此扩展根据角度分隔路径。"
 
 #: inx/inkstitch_cutwork_segmentation.inx:44
 msgid "* If you don't want to use 4 needles, set both angle values to 0 for the rest of the rows."
-msgstr ""
+msgstr "* 如果您不想使用 4 根针，请将其余行的两个角度值都设置为 0。"
 
 #: inx/inkstitch_cutwork_segmentation.inx:45
 msgid "* A horizontal line has an angle of 0 degrees."
-msgstr ""
+msgstr "* 水平线的角度为 0 度。"
 
 #: inx/inkstitch_cutwork_segmentation.inx:46
 msgid "* After the conversion through this extension, don't rotate your design again."
-msgstr ""
+msgstr "* 通过此扩展转换后，请勿再次旋转您的设计。"
 
 #: inx/inkstitch_cutwork_segmentation.inx:48
 msgid "Please adjust angle and color options to your specific needle kit."
-msgstr ""
+msgstr "请根据您的特定针头套件调整角度和颜色选项。"
 
 #: inx/inkstitch_cutwork_segmentation.inx:49
 msgid "On our website we have collected some common setups."
-msgstr ""
+msgstr "在我们的网站上，我们收集了一些常见的设置。"
 
 #: inx/inkstitch_cutwork_segmentation.inx:50
 msgid "https://inkstitch.org/docs/cutwork/"
-msgstr ""
+msgstr "https://inkstitch.org/docs/cutwork/"
 
 #: inx/inkstitch_density_map.inx:3
 msgid "Density Map"
-msgstr ""
+msgstr "密度图"
 
 #: inx/inkstitch_density_map.inx:10 inx/inkstitch_embroider.inx:14
 #: inx/inkstitch_print.inx:10 inx/inkstitch_simulator.inx:10
 #: inx/inkstitch_stitch_plan_preview.inx:10
 #: inx/inkstitch_stitch_plan_preview_undo.inx:10
 msgid "Visualise and Export"
-msgstr ""
+msgstr "可视化和导出"
 
 #: inx/inkstitch_density_map.inx:14
 msgid "Red markers"
-msgstr ""
+msgstr "红色标记"
 
 #: inx/inkstitch_density_map.inx:15 inx/inkstitch_density_map.inx:19
 msgid "Number of stitches"
-msgstr ""
+msgstr "针数"
 
 #: inx/inkstitch_density_map.inx:15 inx/inkstitch_density_map.inx:19
 msgid "0 = no density info"
-msgstr ""
+msgstr "0 = 没有密度信息"
 
 #: inx/inkstitch_density_map.inx:16 inx/inkstitch_density_map.inx:20
 msgid "within a radius (mm) of"
-msgstr ""
+msgstr "在半径（毫米）内"
 
 #: inx/inkstitch_density_map.inx:18
 msgid "Yellow markers"
-msgstr ""
+msgstr "黄色标记"
 
 #: inx/inkstitch_density_map.inx:22 inx/inkstitch_stitch_plan_preview.inx:15
 msgid "Design layer visibility"
-msgstr ""
+msgstr "设计层可见性"
 
 #: inx/inkstitch_density_map.inx:23 inx/inkstitch_stitch_plan_preview.inx:16
 msgid "Unchanged"
-msgstr ""
+msgstr "不变"
 
 #: inx/inkstitch_density_map.inx:24 inx/inkstitch_stitch_plan_preview.inx:17
 msgid "Hidden"
-msgstr ""
+msgstr "隐藏"
 
 #: inx/inkstitch_density_map.inx:25 inx/inkstitch_stitch_plan_preview.inx:18
 msgid "Lower opacity"
-msgstr ""
+msgstr "降低不透明度"
 
 #: inx/inkstitch_duplicate_params.inx:3
 msgid "Duplicate Params"
-msgstr ""
+msgstr "重复参数"
 
 #: inx/inkstitch_duplicate_params.inx:10 inx/inkstitch_reorder.inx:10
 #: inx/inkstitch_selection_to_guide_line.inx:10
 #: inx/inkstitch_selection_to_pattern.inx:10
 msgid "Edit"
-msgstr ""
+msgstr "编辑"
 
 #: inx/inkstitch_embroider.inx:3
 msgid "Embroider"
-msgstr ""
+msgstr "刺绣"
 
 #: inx/inkstitch_embroider_settings.inx:3
 msgid "Preferences"
-msgstr ""
+msgstr "喜好"
 
 #: inx/inkstitch_embroider_settings.inx:17
 msgid "Collapse length (mm)"
-msgstr ""
+msgstr "折叠长度 (mm)"
 
 #: inx/inkstitch_embroider_settings.inx:17
 msgid "Jump stitches smaller than this will be treated as normal stitches."
-msgstr ""
+msgstr "小于此值的跳针将被视为普通针迹。"
 
 #: inx/inkstitch_embroider_settings.inx:20
 msgid "Minimal stitch length (mm)"
-msgstr ""
+msgstr "最小线迹长度 (mm)"
 
 #: inx/inkstitch_embroider_settings.inx:20
 msgid "Drop stitches smaller than this value."
-msgstr ""
+msgstr "小于此值的落针。"
 
 #: inx/inkstitch_flip.inx:3
 msgid "Flip Satin Column Rails"
-msgstr ""
+msgstr "翻转缎面立柱导轨"
 
 #: inx/inkstitch_generate_palette.inx:3
 msgid "Generate Color Palette"
-msgstr ""
+msgstr "生成调色板"
 
 #: inx/inkstitch_generate_palette.inx:11
 #: inx/inkstitch_palette_split_text.inx:11
 msgid "Generate Palette"
-msgstr ""
+msgstr "生成调色板"
 
 #: inx/inkstitch_generate_palette.inx:17
 msgid "Generate Palette Options"
-msgstr ""
+msgstr "生成调色板选项"
 
 #: inx/inkstitch_generate_palette.inx:18
 msgid "Palette name"
-msgstr ""
+msgstr "调色板名称"
 
 #: inx/inkstitch_generate_palette.inx:20
 msgid "Folder (optional):"
-msgstr ""
+msgstr "文件夹（可选）："
 
 #: inx/inkstitch_generate_palette.inx:22
 msgid "⚠ Restart Inkscape to use your color palette."
-msgstr ""
+msgstr "⚠ 重新启动 Inkscape 以使用您的调色板。"
 
 #: inx/inkstitch_generate_palette.inx:25
 msgid "Generate a custom color palette for Ink/Stitch"
-msgstr ""
+msgstr "为 Ink/Stitch 生成自定义调色板"
 
 #: inx/inkstitch_generate_palette.inx:26
 msgid "Sadly we can not sort color swatches in Inkscape. With this extension you can export colors from text elements in their stacking order. The text will be used as the color name and number."
-msgstr ""
+msgstr "遗憾的是，我们无法在 Inkscape 中对颜色样本进行排序。 使用此扩展程序，您可以按堆叠顺序从文本元素中导出颜色。 文本将用作颜色名称和编号。"
 
 #: inx/inkstitch_generate_palette.inx:30
 msgid "On our website we describe all necessary steps to generate a color palette for Ink/Stitch."
-msgstr ""
+msgstr "在我们的网站上，我们描述了为 Ink/Stitch 生成调色板的所有必要步骤。"
 
 #: inx/inkstitch_generate_palette.inx:31
 msgid "https://inkstitch.org/docs/thread-color#generate-color-palette"
-msgstr ""
+msgstr "https://inkstitch.org/docs/thread-color#generate-color-palette"
 
 #: inx/inkstitch_global_commands.inx:3
 msgid "Add Commands"
-msgstr ""
+msgstr "添加命令"
 
 #: inx/inkstitch_input_100.inx:3
 msgid "100 file input"
-msgstr ""
+msgstr ".100文件输入"
 
 #: inx/inkstitch_input_100.inx:8
 msgid "Ink/Stitch: Toyota Embroidery Format (.100)"
-msgstr ""
+msgstr "Ink/Stitch: 丰田刺绣格式 (.100)"
 
 #: inx/inkstitch_input_100.inx:9
 msgid "convert 100 file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "将.100 格式文件转换为 Ink/Stitch 手动缝合路径"
 
 #: inx/inkstitch_input_10O.inx:3
 msgid "10O file input"
-msgstr ""
+msgstr ".100文件输入"
 
 #: inx/inkstitch_input_10O.inx:8
 msgid "Ink/Stitch: Toyota Embroidery Format (.10o)"
-msgstr ""
+msgstr "Ink/Stitch: 丰田刺绣格式 (.100)"
 
 #: inx/inkstitch_input_10O.inx:9
 msgid "convert 10O file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "将 .100 文件转换为 Ink/Stitch 手动缝合路径"
 
 #: inx/inkstitch_input_BRO.inx:3
 msgid "BRO file input"
-msgstr ""
+msgstr "BRO 文件输入"
 
 #: inx/inkstitch_input_BRO.inx:8
 msgid "Ink/Stitch: Bits & Volts Embroidery Format (.bro)"
-msgstr ""
+msgstr "Ink/Stitch: Bits & Volts 刺绣格式 (.bro)"
 
 #: inx/inkstitch_input_BRO.inx:9
 msgid "convert BRO file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "将 BRO 文件转换为 Ink/Stitch 手动缝合路径"
 
 #: inx/inkstitch_input_COL.inx:3
 msgid "COL file input"
-msgstr ""
+msgstr "COL 文件输入"
 
 #: inx/inkstitch_input_COL.inx:8
 msgid "Ink/Stitch: Col Color Format (.col)"
-msgstr ""
+msgstr "Ink/Stitch: Col 颜色格式 (.col)"
 
 #: inx/inkstitch_input_COL.inx:9
 msgid "convert COL file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "将 COL 文件转换为 Ink/Stitch 手动缝合路径"
 
 #: inx/inkstitch_input_CSV.inx:3
 msgid "CSV file input"
@@ -3453,7 +3459,7 @@ msgstr ""
 
 #: inx/inkstitch_input_DAT.inx:8
 msgid "Ink/Stitch: Sunstar or Barudan Embroidery Format (.dat)"
-msgstr ""
+msgstr "Ink/Stitch：Sunstar 或 Barudan 刺绣格式 (.dat)"
 
 #: inx/inkstitch_input_DAT.inx:9
 msgid "convert DAT file to Ink/Stitch manual-stitch paths"
@@ -3657,7 +3663,7 @@ msgstr ""
 
 #: inx/inkstitch_input_KSM.inx:8
 msgid "Ink/Stitch: Pfaff Embroidery Format (.ksm)"
-msgstr ""
+msgstr "Ink/Stitch：Pfaff 刺绣格式 (.ksm)"
 
 #: inx/inkstitch_input_KSM.inx:9
 msgid "convert KSM file to Ink/Stitch manual-stitch paths"
@@ -3861,7 +3867,7 @@ msgstr ""
 
 #: inx/inkstitch_input_STX.inx:8
 msgid "Ink/Stitch: Data Stitch Embroidery Format (.stx)"
-msgstr ""
+msgstr "nk/Stitch：数据针迹刺绣格式 (.stx)"
 
 #: inx/inkstitch_input_STX.inx:9
 msgid "convert STX file to Ink/Stitch manual-stitch paths"
@@ -4072,7 +4078,7 @@ msgstr ""
 
 #: inx/inkstitch_lettering_generate_json.inx:69
 msgid "Word spacing (px)"
-msgstr ""
+msgstr "字间距 (px)"
 
 #: inx/inkstitch_lettering_generate_json.inx:69
 msgid "Space character width (default: 20)"
@@ -4276,7 +4282,7 @@ msgstr ""
 
 #: inx/inkstitch_output_GCODE.inx:50
 msgid "max spindle speed"
-msgstr ""
+msgstr "最大主轴转速"
 
 #: inx/inkstitch_output_GCODE.inx:50
 msgid "minimum spindle speed value (grbl $30 setting)"
@@ -4480,7 +4486,7 @@ msgstr ""
 
 #: inx/inkstitch_simulator.inx:3
 msgid "Simulator / Realistic Preview"
-msgstr ""
+msgstr "模拟器/现实预览"
 
 #: inx/inkstitch_stitch_plan_preview.inx:3
 msgid "Stitch Plan Preview"
@@ -4488,31 +4494,31 @@ msgstr ""
 
 #: inx/inkstitch_stitch_plan_preview.inx:14
 msgid "Move stitch plan beside the canvas"
-msgstr ""
+msgstr "在画布旁边移动缝合计划"
 
 #: inx/inkstitch_stitch_plan_preview.inx:20
 msgid "Needle points"
-msgstr ""
+msgstr "针点"
 
 #: inx/inkstitch_stitch_plan_preview_undo.inx:3
 msgid "Undo Stitch Plan Preview"
-msgstr ""
+msgstr "撤消针迹计划预览"
 
 #: inx/inkstitch_troubleshoot.inx:3
 msgid "Troubleshoot Objects"
-msgstr ""
+msgstr "对象疑难解答"
 
 #: inx/inkstitch_zip.inx:3
 msgid "embroidery ZIP file output"
-msgstr ""
+msgstr "刺绣 ZIP 文件输出"
 
 #: inx/inkstitch_zip.inx:8
 msgid "Ink/Stitch: ZIP export multiple formats (.zip)"
-msgstr ""
+msgstr "Ink/Stitch：ZIP 导出多种格式 (.zip)"
 
 #: inx/inkstitch_zip.inx:9
 msgid "Create a ZIP with multiple embroidery file formats using Ink/Stitch"
-msgstr ""
+msgstr "使用 Ink/Stitch 创建具有多种刺绣文件格式的 ZIP"
 
 #: inx/inkstitch_zip.inx:26
 msgid ".TXT: Threadlist [COLOR]"
@@ -4520,5 +4526,5 @@ msgstr ""
 
 #: inx/inkstitch_zip.inx:27
 msgid ".SVG: Scalable Vector Graphic"
-msgstr ""
+msgstr ".SVG：可缩放矢量图形"
 
