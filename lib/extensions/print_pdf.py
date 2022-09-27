@@ -275,7 +275,6 @@ class Print(InkstitchExtension):
                 'operator_overview': True,
                 'operator_detailedview': True,
                 'pattern_onlyview': False,
-                'pattern_onlyview': False,
                 'custom_page': False
             },
             logo={'src': '', 'title': 'LOGO'},
