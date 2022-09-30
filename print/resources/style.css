@@ -573,6 +573,15 @@ body {
     overflow: hidden;
   }
 
+  figure.full-page-pattern {
+      border: none;
+      height: 265mm;
+  }
+
+  div.full-page-patternview figcaption {
+        display: none;
+    }
+
   .client-overview-main figure.inksimulation {
     height: 155mm;
   }

@@ -1,0 +1,12 @@
+<main>
+      <figure class="inksimulation full-page-pattern operator"
+              data-field-name="full-page-patternview-transform"
+              title="{{ _('Ctrl + Scroll to Zoom') }}"
+              style="cursor: auto;">
+                {{ svg_overview|replace("<li>", "")|replace("</li>", "")|safe }}
+                {% with %}
+                {% set realistic_id='realistic-pattern-overview' %}
+                {% include 'ui_svg_action_buttons.html' with context %}
+                {% endwith %}
+      </figure>
+    </main>

@@ -736,6 +736,7 @@ $(function() {
     settings["operator-detailedview"] = $("[data-field-name='operator-detailedview']").is(':checked');
     settings["operator-detailedview-thumbnail-size"] = $("[data-field-name='operator-detailedview-thumbnail-size']").val();
     settings["custom-page"] = $("[data-field-name='custom-page']").is(':checked');
+      settings["full_page_patternview"] = $("[data-filed-name='full_page_patternview']").is(':checked');
     settings["paper-size"] = $('select#printing-size').find(':selected').val();
 
     var logo = $("figure.brandlogo img").attr('src');

@@ -31,6 +31,10 @@
 {# operator detailed view #}
     {% include 'operator_detailedview.html' %}
 
+ {# full page pattern view #}
+    <div class="page full-page-patternview" style="display: {{'block' if view.full_page_patternview else 'none' }}">
+      {% include 'full_page_pattern.html' %}
+    </div>
 {# custom pages #}
     <div class="page custom-page" style="display: {{ 'block' if view.custom_page else 'none' }}">{% include 'custom-page.html' %}</div>
 </body>
