@@ -28,7 +28,7 @@ def node_to_elements(node, clone_to_element=False):  # noqa: C901
         return [Clone(node)]
 
     elif ((node.tag == SVG_PATH_TAG and not node.get('d', None)) or
-         (node.tag in [SVG_POLYLINE_TAG, SVG_POLYGON_TAG] and not node.get('points', None))):
+          (node.tag in [SVG_POLYLINE_TAG, SVG_POLYGON_TAG] and not node.get('points', None))):
         return [EmptyDObject(node)]
 
     elif has_marker(node):

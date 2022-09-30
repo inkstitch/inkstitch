@@ -7,8 +7,9 @@ import colorsys
 import re
 
 import tinycss2.color3
-from inkex import Color
 from pyembroidery.EmbThread import EmbThread
+
+from inkex import Color
 
 
 class ThreadColor(object):
