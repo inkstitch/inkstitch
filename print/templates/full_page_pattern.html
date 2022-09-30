@@ -10,3 +10,8 @@
                 {% endwith %}
       </figure>
     </main>
+
+<div class="show-footer" style="display: {{ 'block' if view.show_footer else 'none' }}">
+  {% include 'footer.html' %}
+</div>
+
