@@ -66,7 +66,7 @@ class ThreadColor(object):
         return hash(self.rgb)
 
     def __ne__(self, other):
-        return not(self == other)
+        return not (self == other)
 
     def __repr__(self):
         return "ThreadColor" + repr(self.rgb)
