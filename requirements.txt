@@ -6,7 +6,7 @@
 -e git+https://gitlab.com/inkscape/extensions.git@e44fdcbe6bcc917ef3a2164eb0c130f7276fb83f#egg=inkex
 
 backports.functools_lru_cache
--U -f https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-20.04/wxPython-4.1.1-cp38-cp38-linux_x86_64.whl ; sys_platform == 'linux'
+https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-20.04/wxPython-4.1.1-cp38-cp38-linux_x86_64.whl ; sys_platform == 'linux'
 wxPython==4.1.1 ; sys_platform == 'darwin'
 wxPython==4.1.1 ; sys_platform == 'win32'
 networkx
