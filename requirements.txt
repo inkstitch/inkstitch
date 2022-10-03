@@ -1,6 +1,7 @@
 ./pyembroidery
 
-inkex>=1.2.0
+# inkex is not currently uploaded to pypi, the version there is extremely out of date
+inkex @ git+https://gitlab.com/inkscape/extensions.git@EXTENSIONS_AT_INKSCAPE_1.2.1
 backports.functools_lru_cache
 wxPython==4.1.1
 networkx
@@ -13,7 +14,7 @@ requests
 
 # colormath - last official release: 3.0.0
 # we need already submitted fixes - so let's grab them from the github repository
--e git+https://github.com/gtaylor/python-colormath.git@4a076831fd5136f685aa7143db81eba27b2cd19a#egg=colormath
+colormath @ git+https://github.com/gtaylor/python-colormath.git@4a076831fd5136f685aa7143db81eba27b2cd19a
 
 stringcase
 tinycss2
