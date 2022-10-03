@@ -1,14 +1,13 @@
 ./pyembroidery
 
-# This installs inkex, the Inkscape python extension library.
-# We need the new style handling that was added after the inkex version bundled
-# with Inkscape 1.1.  That's why we're installing from Git.
--e git+https://gitlab.com/inkscape/extensions.git@e44fdcbe6bcc917ef3a2164eb0c130f7276fb83f#egg=inkex
+# inkex is not currently uploaded to pypi, the version there is extremely out of date
+inkex @ git+https://gitlab.com/inkscape/extensions.git@EXTENSIONS_AT_INKSCAPE_1.2.1
+
+# lower bound to allow for the use of system packages on Debian and distros that have updated to 4.2
+# CI adds an == 4.1.1 constraint for prebuilt packages
+wxPython>=4.1.1
 
 backports.functools_lru_cache
-https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-20.04/wxPython-4.1.1-cp38-cp38-linux_x86_64.whl ; sys_platform == 'linux'
-wxPython==4.1.1 ; sys_platform == 'darwin'
-wxPython==4.1.1 ; sys_platform == 'win32'
 networkx
 shapely
 lxml
@@ -16,12 +15,16 @@ appdirs
 numpy
 jinja2>2.9
 requests
-colormath
+
+# colormath - last official release: 3.0.0
+# we need already submitted fixes - so let's grab them from the github repository
+colormath @ git+https://github.com/gtaylor/python-colormath.git@4a076831fd5136f685aa7143db81eba27b2cd19a
+
 stringcase
 tinycss2
 flask
 fonttools
-trimesh
+trimesh>=3.15.2
 scipy
 
 pywinutils ; sys_platform == 'win32'
