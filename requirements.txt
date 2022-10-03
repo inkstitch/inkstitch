@@ -3,7 +3,7 @@
 # inkex is not currently uploaded to pypi, the version there is extremely out of date
 inkex @ git+https://gitlab.com/inkscape/extensions.git@EXTENSIONS_AT_INKSCAPE_1.2.1
 backports.functools_lru_cache
-wxPython==4.1.1
+wxPython>=4.1.1
 networkx
 shapely
 lxml

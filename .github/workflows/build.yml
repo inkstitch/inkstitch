@@ -68,9 +68,7 @@ jobs:
           python -m pip install pycairo
           python -m pip install PyGObject
 
-          # colormath - last official release: 3.0.0
-          # we need already submitted fixes - so let's grab them from the github repository
-          python -m pip install git+https://github.com/gtaylor/python-colormath
+          python -m pip install https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-22.04/wxPython-4.2.0-cp310-cp310-linux_x86_64.whl
 
           python -m pip install -r requirements.txt
           python -m pip install pyinstaller
