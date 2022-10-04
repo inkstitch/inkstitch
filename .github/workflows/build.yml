@@ -15,7 +15,7 @@ jobs:
           submodules: recursive
       - uses: actions/setup-python@v2
         with:
-          python-version: '3.10.x'
+          python-version: '3.8.x'
       - uses: actions/setup-node@v1
         with:
           node-version: '16.x'
@@ -68,7 +68,7 @@ jobs:
           python -m pip install pycairo
           python -m pip install PyGObject
 
-          python -m pip install https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-22.04/wxPython-4.2.0-cp310-cp310-linux_x86_64.whl
+          python -m pip install https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-20.04/wxPython-4.1.1-cp38-cp38-linux_x86_64.whl
 
           python -m pip install -r requirements.txt
           python -m pip install pyinstaller
@@ -100,7 +100,7 @@ jobs:
           node-version: '16.x'
       - uses: actions/setup-python@v2
         with:
-          python-version: '3.10.x'
+          python-version: '3.8.x'
           architecture: 'x86'
       - uses: microsoft/setup-msbuild@v1.0.2
       - name: install dependencies
@@ -108,6 +108,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           python -m pip install wheel
+          python -m pip install wxpython==4.1.1
           python -m pip install -r requirements.txt
           python -m pip install pyinstaller
 
@@ -143,7 +144,7 @@ jobs:
           submodules: recursive
       - uses: actions/setup-python@v2
         with:
-          python-version: '3.10.x'
+          python-version: '3.8.x'
       - uses: actions/setup-node@v1
         with:
           node-version: '16.x'
@@ -166,6 +167,7 @@ jobs:
           pip --version
           pip install wheel
           pip install PyGObject
+          pip install wxpython==4.1.1
           pip install -r requirements.txt
           # with --no-binary argument may fix notary issues as well shapely speedups error issue
           pip install -U lxml --no-binary lxml
