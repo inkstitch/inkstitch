@@ -9,10 +9,10 @@ import sys
 from base64 import b64decode
 
 import appdirs
+import inkex
 import wx
 import wx.adv
-
-import inkex
+import wx.lib.agw.floatspin as fs
 
 from ..elements import nodes_to_elements
 from ..gui import PresetsPanel, SimulatorPreview, info_dialog
@@ -52,11 +52,18 @@ class LetteringFrame(wx.Frame):
 
         # font
         self.font_selector_box = wx.StaticBox(self, wx.ID_ANY, label=_("Font"))
-        self.update_font_list()
 
         self.font_chooser = wx.adv.BitmapComboBox(self, wx.ID_ANY, style=wx.CB_READONLY | wx.CB_SORT)
-        self.set_font_list()
         self.font_chooser.Bind(wx.EVT_COMBOBOX, self.on_font_changed)
+
+        self.font_filter = fs.FloatSpin(self, min_val=0, max_val=None, increment=1, value="0")
+        self.font_filter.SetFormat("%f")
+        self.font_filter.SetDigits(2)
+        self.font_filter.Bind(fs.EVT_FLOATSPIN, self.on_filter_changed)
+        self.font_filter.SetToolTip(_("Font size filter (mm)"))
+
+        self.update_font_list()
+        self.set_font_list()
 
         # font details
         self.font_description = wx.StaticText(self, wx.ID_ANY)
@@ -126,16 +133,16 @@ class LetteringFrame(wx.Frame):
         """Save the settings into the SVG group element."""
         self.group.set(INKSTITCH_LETTERING, json.dumps(self.settings))
 
-    def update_font_list(self):
+    @property
+    @cache
+    def font_list(self):
+        fonts = []
         font_paths = {
             get_bundled_dir("fonts"),
             os.path.expanduser("~/.inkstitch/fonts"),
             os.path.join(appdirs.user_config_dir('inkstitch'), 'fonts'),
             get_custom_font_dir()
         }
-
-        self.fonts = {}
-        self.fonts_by_id = {}
 
         for font_path in font_paths:
             try:
@@ -147,14 +154,22 @@ class LetteringFrame(wx.Frame):
                 font = Font(os.path.join(font_path, font_dir))
                 if font.marked_custom_font_name == "" or font.marked_custom_font_id == "":
                     continue
-                self.fonts[font.marked_custom_font_name] = font
-                self.fonts_by_id[font.marked_custom_font_id] = font
+                fonts.append(font)
+        return fonts
 
-        if len(self.fonts) == 0:
-            info_dialog(self, _("Unable to find any fonts!  Please try reinstalling Ink/Stitch."))
-            self.cancel()
+    def update_font_list(self):
+        self.fonts = {}
+        self.fonts_by_id = {}
+
+        filter_size = self.font_filter.GetValue()
+        for font in self.font_list:
+            if filter_size != 0 and (filter_size < font.size * font.min_scale or filter_size > font.size * font.max_scale):
+                continue
+            self.fonts[font.marked_custom_font_name] = font
+            self.fonts_by_id[font.marked_custom_font_id] = font
 
     def set_font_list(self):
+        self.font_chooser.Clear()
         for font in self.fonts.values():
             image = font.preview_image
 
@@ -195,7 +210,6 @@ class LetteringFrame(wx.Frame):
         self.on_font_changed()
 
     @property
-    @cache
     def default_font(self):
         try:
             return self.fonts_by_id[self.DEFAULT_FONT]
@@ -209,7 +223,9 @@ class LetteringFrame(wx.Frame):
     def on_font_changed(self, event=None):
         font = self.fonts.get(self.font_chooser.GetValue(), self.default_font)
         self.settings.font = font.marked_custom_font_id
+
         self.scale_spinner.SetRange(int(font.min_scale * 100), int(font.max_scale * 100))
+        self.settings['scale'] = self.scale_spinner.GetValue()
 
         font_variants = []
         try:
@@ -245,6 +261,24 @@ class LetteringFrame(wx.Frame):
         self.update_preview()
         self.Layout()
 
+    def on_filter_changed(self, event=None):
+        self.update_font_list()
+
+        if not self.fonts:
+            # No fonts for filtered size
+            self.font_chooser.Clear()
+            self.filter_label.SetForegroundColour("red")
+            return
+        else:
+            self.filter_label.SetForegroundColour("black")
+
+        previous_font = self.font_chooser.GetValue()
+        self.set_font_list()
+        font = self.fonts.get(previous_font, self.default_font)
+        self.font_chooser.SetValue(font.name)
+        if font.name != previous_font:
+            self.on_font_changed()
+
     def resize(self, event=None):
         description = self.font_description.GetLabel().replace("\n", " ")
         self.font_description.SetLabel(description)
@@ -255,6 +289,10 @@ class LetteringFrame(wx.Frame):
         self.preview.update()
 
     def update_lettering(self, raise_error=False):
+        # return if there is no font in the font list (possibly due to a font size filter)
+        if not self.font_chooser.GetValue():
+            return
+
         del self.group[:]
 
         if self.settings.scale == 100:
@@ -344,7 +382,12 @@ class LetteringFrame(wx.Frame):
 
         # font selection
         font_selector_sizer = wx.StaticBoxSizer(self.font_selector_box, wx.VERTICAL)
-        font_selector_sizer.Add(self.font_chooser, 0, wx.EXPAND | wx.ALL, 10)
+        font_selector_box = wx.BoxSizer(wx.HORIZONTAL)
+        font_selector_box.Add(self.font_chooser, 4, wx.EXPAND | wx.TOP | wx.BOTTOM | wx.RIGHT, 10)
+        self.filter_label = wx.StaticText(self, wx.ID_ANY, "Filter")
+        font_selector_box.Add(self.filter_label, 0, wx.LEFT | wx.ALIGN_CENTRE_VERTICAL, 0)
+        font_selector_box.Add(self.font_filter, 1, wx.LEFT | wx.ALIGN_CENTRE_VERTICAL, 5)
+        font_selector_sizer.Add(font_selector_box, 0, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT, 10)
         font_selector_sizer.Add(self.font_description, 1, wx.EXPAND | wx.ALL, 10)
         outer_sizer.Add(font_selector_sizer, 0, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT, 10)
 
