@@ -225,6 +225,72 @@ class FillStitch(EmbroideryElement):
         return max(self.get_int_param("staggers", 4), 1)
 
     @property
+    @param('feathering_in',
+           _('randomly shrinks  the rows with at most that percentage'),
+           tooltip=_('setting this will cause a feathering effect, rows could be up to that percent shrinked'),
+           type='int',
+           sort_index=7,
+           select_items=[('fill_method', 0)],
+           default=0)
+    def feathering_in(self):
+        return min(max(self.get_int_param("feathering_in", 0), 0),100)
+
+    @property
+    @param('feathering_out',
+           _('randomly extends  the rows with at most that percentage'),
+           tooltip=_('setting this will cause a feathering effect, rows could be up to that percent extended'),
+           type='int',
+           sort_index=8,
+           select_items=[('fill_method', 0)],
+           default=0)
+    def feathering_out(self):
+        return max(self.get_int_param("feathering_out", 0), 0)
+
+    @property
+    @param('length_increase',
+           _('maximum percentage of stitch length increase '),
+           tooltip=_('setting this will cause the stitch length to be random around max_stitch_length'),
+           type='int',
+           sort_index=9,
+           select_items=[('fill_method', 0),  ('fill_method', 1),('fill_method', 2)],
+           default=0)
+    def length_increase(self):
+        return max(self.get_int_param("length_increase", 0), 0)
+
+    @property
+    @param('length_decrease',
+           _('maximum percentage of stitch length decrease'),
+           tooltip=_('setting this will cause the stitch length to be random around max_stitch_length'),
+           type='int',
+           sort_index=10,
+           select_items=[('fill_method', 0),  ('fill_method', 1),('fill_method', 2)],
+           default=0)
+    def length_decrease(self):
+        return min(max(self.get_int_param("length_decrease", 0), 0),100)
+
+    @property
+    @param('row_spacing_randomness',
+           _('percentage of row_spacing randomness'),
+           tooltip=_('setting this  cause that percent of randomness variation of row spacing'),
+           type='int',
+           sort_index=10,
+           select_items=[('fill_method', 0),  ('fill_method', 1),('fill_method', 2)],
+           default=0)
+    def row_spacing_randomness(self):
+        return min(max(self.get_int_param("row_spacing_randomness", 0), 0),100)
+
+    @property
+    @param('angle_variation',
+           _('maximum percentage of angle_variation'),
+           tooltip=_('setting this will cause the stitch angle to be random around the set angle'),
+           type='int',
+           sort_index=11,
+           select_items=[('fill_method', 0), ('fill_method', 2)],
+           default=0)
+    def angle_variation(self):
+        return min(max(self.get_int_param("angle_variation", 0), 0),100)
+
+    @property
     @cache
     def paths(self):
         paths = self.flatten(self.parse_path())
@@ -467,6 +533,26 @@ class FillStitch(EmbroideryElement):
         return self.get_boolean_param("fill_underlay_skip_last", False)
 
     @property
+    @param('underlay_feathering_in',
+           _('randomly shrinks  the underlay rows with at most that percentage'),
+           tooltip=_('setting this will cause a feathering effect on the underlay, rows could be up to that percent shrinked'),
+           type='int',
+            group=_('Fill Underlay'),
+           default=0)
+    def underlay_feathering_in(self):
+        return min(max(self.get_int_param("underlay_feathering_in", 0), 0),100)
+
+    @property
+    @param('underlay_feathering_out',
+           _('randomly grows  the underlay rows with at most that percentage'),
+           tooltip=_('setting this will cause a feathering effect on the underlay, rows could be up to that percent extended'),
+           type='int',
+            group=_('Fill Underlay'),
+           default=0)
+    def underlay_feathering_out(self):
+        return max(self.get_int_param("underlay_feathering_out", 0), 0)
+
+    @property
     @param('expand_mm',
            _('Expand'),
            tooltip=_('Expand the shape before fill stitching, to compensate for gaps between shapes.'),
@@ -600,6 +686,8 @@ class FillStitch(EmbroideryElement):
                     self.staggers,
                     self.fill_underlay_skip_last,
                     starting_point,
+                    self.underlay_feathering_in,
+                    self.underlay_feathering_out,
                     underpath=self.underlay_underpath))
             stitch_groups.append(underlay)
 
@@ -621,8 +709,14 @@ class FillStitch(EmbroideryElement):
                 self.staggers,
                 self.skip_last,
                 starting_point,
+                self.feathering_in,
+                self.feathering_out,
+                self.length_decrease,
+                self.length_increase,
+                self.angle_variation,
                 ending_point,
-                self.underpath))
+                self.underpath,
+                self.row_spacing_randomness))
         return [stitch_group]
 
     def do_contour_fill(self, polygon, last_patch, starting_point):
@@ -631,7 +725,7 @@ class FillStitch(EmbroideryElement):
         starting_point = shgeo.Point(starting_point)
 
         stitch_groups = []
-        tree = contour_fill.offset_polygon(polygon, self.row_spacing, self.join_style + 1, self.clockwise)
+        tree = contour_fill.offset_polygon(polygon, self.row_spacing, self.join_style + 1, self.clockwise,row_spacing_randomness=self.row_spacing_randomness)
 
         stitches = []
         if self.contour_strategy == 0:
@@ -641,21 +735,27 @@ class FillStitch(EmbroideryElement):
                 self.max_stitch_length,
                 self.running_stitch_tolerance,
                 starting_point,
-                self.avoid_self_crossing
+                self.avoid_self_crossing,
+                self.length_decrease,
+                self.length_increase,
             )
         elif self.contour_strategy == 1:
             stitches = contour_fill.single_spiral(
                 tree,
                 self.max_stitch_length,
                 self.running_stitch_tolerance,
-                starting_point
+                starting_point,
+                self.length_decrease,
+                self.length_increase,
             )
         elif self.contour_strategy == 2:
             stitches = contour_fill.double_spiral(
                 tree,
                 self.max_stitch_length,
                 self.running_stitch_tolerance,
-                starting_point
+                starting_point,
+                self.length_decrease,
+                self.length_increase,
             )
 
         stitch_group = StitchGroup(
@@ -690,6 +790,10 @@ class FillStitch(EmbroideryElement):
                 ending_point,
                 self.underpath,
                 self.guided_fill_strategy,
+                self.length_decrease,
+                self.length_increase,
+                self.angle_variation,
+                self.row_spacing_randomness
             ))
         return [stitch_group]
 

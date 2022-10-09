@@ -4,6 +4,7 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 import math
+import random
 from copy import copy
 
 from shapely.geometry import LineString
@@ -11,7 +12,7 @@ from shapely.geometry import LineString
 """ Utility functions to produce running stitches. """
 
 
-def running_stitch(points, stitch_length, tolerance):
+def running_stitch(points, stitch_length, tolerance,length_decrease=0,length_increase=0):
     """Generate running stitch along a path.
 
     Given a path and a stitch length, walk along the path in increments of the
@@ -25,55 +26,110 @@ def running_stitch(points, stitch_length, tolerance):
 
     if len(points) < 2:
         return []
+    
+    ## no stitch_length randomness required
+    if not length_decrease and not length_increase:
+        # simplify will remove as many points as possible while ensuring that the
+        # resulting path stays within the specified tolerance of the original path.
+        path = LineString(points)
+        simplified = path.simplify(tolerance, preserve_topology=False)
 
-    # simplify will remove as many points as possible while ensuring that the
-    # resulting path stays within the specified tolerance of the original path.
-    path = LineString(points)
-    simplified = path.simplify(tolerance, preserve_topology=False)
+        # save the points that simplify picked and make sure we stitch them
+        important_points = set(simplified.coords)
+        important_point_indices = [i for i, point in enumerate(points) if point.as_tuple() in important_points]
 
-    # save the points that simplify picked and make sure we stitch them
-    important_points = set(simplified.coords)
-    important_point_indices = [i for i, point in enumerate(points) if point.as_tuple() in important_points]
+        output = []
+        for start, end in zip(important_point_indices[:-1], important_point_indices[1:]):
+            # consider sections of the original path, each one starting and ending
+            # with an important point
+            section = points[start:end + 1]
+            if not output or output[-1] != section[0]:
+                output.append(section[0])
 
-    output = []
-    for start, end in zip(important_point_indices[:-1], important_point_indices[1:]):
-        # consider sections of the original path, each one starting and ending
-        # with an important point
-        section = points[start:end + 1]
-        if not output or output[-1] != section[0]:
-            output.append(section[0])
+            # Now split each section up evenly into stitches, each with a length no
+            # greater than the specified stitch_length.
+            section_ls = LineString(section)
+            section_length = section_ls.length
+            if section_length > stitch_length:
+                # a fractional stitch needs to be rounded up, which will make all
+                # the stitches shorter
+                num_stitches = math.ceil(section_length / stitch_length)
+                actual_stitch_length = section_length / num_stitches
 
-        # Now split each section up evenly into stitches, each with a length no
-        # greater than the specified stitch_length.
-        section_ls = LineString(section)
-        section_length = section_ls.length
-        if section_length > stitch_length:
-            # a fractional stitch needs to be rounded up, which will make all
-            # the stitches shorter
-            num_stitches = math.ceil(section_length / stitch_length)
-            actual_stitch_length = section_length / num_stitches
+                distance = actual_stitch_length
+                
+                segment_start = section[0]
+                for segment_end in section[1:]:
+                    segment = segment_end - segment_start
+                    segment_length = segment.length()
 
-            distance = actual_stitch_length
+                    if distance < segment_length:
+                        segment_direction = segment.unit()
 
-            segment_start = section[0]
-            for segment_end in section[1:]:
-                segment = segment_end - segment_start
-                segment_length = segment.length()
+                        while distance < segment_length:
+                            output.append(segment_start + distance * segment_direction)
+                            distance += actual_stitch_length
 
-                if distance < segment_length:
-                    segment_direction = segment.unit()
+                    distance -= segment_length
+                    segment_start = segment_end
 
-                    while distance < segment_length:
-                        output.append(segment_start + distance * segment_direction)
-                        distance += actual_stitch_length
+        if points[-1] != output[-1]:
+            output.append(points[-1])
 
-                distance -= segment_length
-                segment_start = segment_end
+        return output
+    else: # add randomness to the stitch length
+        path = LineString(points)
+        simplified = path.simplify(tolerance, preserve_topology=False)
 
-    if points[-1] != output[-1]:
-        output.append(points[-1])
+        # save the points that simplify picked and make sure we stitch them
+        important_points = set(simplified.coords)
+        important_point_indices = [i for i, point in enumerate(points) if point.as_tuple() in important_points]
 
-    return output
+        output = []
+        for start, end in zip(important_point_indices[:-1], important_point_indices[1:]):
+            # consider sections of the original path, each one starting and ending
+            # with an important point
+            section = points[start:end + 1]
+            if not output or output[-1] != section[0]:
+                if (section[1]-section[0]).length()>0.5:
+                    length_perturbation=random.uniform(-length_decrease/100,length_increase/100)
+                    segment_direction=(section[1]-section[0]).unit()
+                    output.append(section[0]+stitch_length*(length_perturbation)*segment_direction)
+                else:
+                    output.append(section[0])
+
+            # Now split each section up evenly into stitches, each with a length no
+            # greater than the specified stitch_length.
+            section_ls = LineString(section)
+            section_length = section_ls.length
+            if section_length > stitch_length:
+                distance = stitch_length
+                
+                segment_start = section[0]
+                
+                length_perturbation=random.uniform(-length_decrease/100,length_increase/100)
+                segment_direction=(section[1]-section[0]).unit()
+                segment_start+=stitch_length*(length_perturbation)*segment_direction
+                for segment_end in section[1:]:
+                    segment = segment_end - output[-1]
+                    segment_length = segment.length()
+
+                    if distance < segment_length:
+                        segment_direction = segment.unit()
+                        while distance < segment_length:
+                            output.append(segment_start + distance * segment_direction)
+                            length_perturbation=random.uniform(-length_decrease/100,length_increase/100)
+                            distance += stitch_length*(1+length_perturbation)
+
+                    #distance = stitch_length
+                    distance -= segment_length
+                    
+                    segment_start = output[-1]
+                   
+        if points[-1] != output[-1]:
+            output.append(points[-1])
+
+        return output
 
 
 def bean_stitch(stitches, repeats):

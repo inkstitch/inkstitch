@@ -57,9 +57,15 @@ def auto_fill(shape,
               staggers,
               skip_last,
               starting_point,
+              feathering_in=0,
+              feathering_out=0,
+              length_decrease=0,
+              length_increase=0,
+              angle_variation=0,
               ending_point=None,
-              underpath=True):
-    rows = intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing)
+              underpath=True,
+              row_spacing_randomness=0):
+    rows = intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing,row_spacing_randomness=row_spacing_randomness)
     if not rows:
         # Small shapes may not intersect with the grating at all.
         return fallback(shape, running_stitch_length, running_stitch_tolerance)
@@ -74,7 +80,7 @@ def auto_fill(shape,
     path = find_stitch_path(fill_stitch_graph, travel_graph, starting_point, ending_point)
     result = path_to_stitches(path, travel_graph, fill_stitch_graph, angle, row_spacing,
                               max_stitch_length, running_stitch_length, running_stitch_tolerance,
-                              staggers, skip_last)
+                              staggers, skip_last,feathering_in, feathering_out,length_decrease, length_increase, angle_variation)
 
     return result
 
@@ -613,7 +619,7 @@ def travel(travel_graph, start, end, running_stitch_length, running_stitch_toler
 
 @debug.time
 def path_to_stitches(path, travel_graph, fill_stitch_graph, angle, row_spacing, max_stitch_length, running_stitch_length, running_stitch_tolerance,
-                     staggers, skip_last):
+                     staggers, skip_last,feathering_in=0,feathering_out=0,length_decrease=0,length_increase=0,angle_variation=0):
     path = collapse_sequential_outline_edges(path)
 
     stitches = []
@@ -624,9 +630,15 @@ def path_to_stitches(path, travel_graph, fill_stitch_graph, angle, row_spacing, 
 
     for edge in path:
         if edge.is_segment():
-            stitch_row(stitches, edge[0], edge[1], angle, row_spacing, max_stitch_length, staggers, skip_last)
+            stitch_row(stitches, edge[0], edge[1], angle, row_spacing, max_stitch_length, staggers, skip_last,feathering_in, feathering_out, length_decrease, length_increase, angle_variation)
             travel_graph.remove_edges_from(fill_stitch_graph[edge[0]][edge[1]]['segment'].get('underpath_edges', []))
         else:
-            stitches.extend(travel(travel_graph, edge[0], edge[1], running_stitch_length, running_stitch_tolerance, skip_last))
+            traveling_to_do=travel(travel_graph, edge[0], edge[1], running_stitch_length, running_stitch_tolerance, skip_last)
+            if (not feathering_in and not feathering_out) or len(traveling_to_do)>=2:
+                stitches.extend(traveling_to_do)
+            #if feathering, you don't want to join two rows using two points on the boundary, just jump from one row to the other one
+            
+            
 
     return stitches
+
