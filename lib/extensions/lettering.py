@@ -31,7 +31,7 @@ class LetteringFrame(wx.Frame):
 
     def __init__(self, *args, **kwargs):
         # This is necessary because of https://github.com/inkstitch/inkstitch/issues/1186
-        if sys.platform.startswith('win32'):
+        if sys.platform.startswith('win'):
             import locale
             locale.setlocale(locale.LC_ALL, "C")
             lc = wx.Locale()
