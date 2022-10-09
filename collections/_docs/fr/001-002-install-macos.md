@@ -98,7 +98,11 @@ For older macOS versions [download ZIP]({{ site.github.releases_url }}/latest/do
 
 ### Ink/Stitch ne fonctionne pas!
 
-**Vérifier le chemin d'installation**<br>
+**M1 processors (Apple Silicon Mac)**
+
+Most common issue is a missing Rosetta installation. To fix the issue run this command in your terminal: `softwareupdate --install-rosetta --agree-to-license`
+
+**Vérifier le chemin d'installation**
 
 Vérifiez que vous avez bien extrait Ink/Stitch dans le bon répertoire. Si votre repertoire "Extensions utilisateur" ne fonctionne pas correctement, vous pouvez aussi essayer d'utiliser le repertoire des extensions d'Inkscape.
 Vous pouvez trouver leur localisation sous `Inkscape > Preferences > Systeme`.

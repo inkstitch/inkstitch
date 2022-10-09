@@ -189,8 +189,8 @@ developers:
     children:
     - title: Manualle Installation
       url: /de/developers/inkstitch/manual-setup/
-    - title: Python Module
-      url: /de/developers/inkstitch/python-modules/
+    - title: Debugging und Profiling
+      url: /de/developers/inkstitch/debug/
     - title: Namespace
       url: /de/developers/inkstitch/namespace/
   - title: Pyembroidery

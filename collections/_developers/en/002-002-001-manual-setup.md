@@ -23,7 +23,7 @@ git clone https://github.com/inkstitch/pyembroidery.git
 pip install -e pyembroidery/
 ```
 
-We recommend to use `pyenv` to avoid the need of root privileges for `pip`.
+We recommend to use `pyenv` with python 3.8.
 
 ### 3. Python Dependencies
 

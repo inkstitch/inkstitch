@@ -93,6 +93,10 @@ For older macOS versions [download ZIP]({{ site.github.releases_url }}/latest/do
 
 ### Ink/Stitch startet nicht / Menüpunkte sind grau
 
+**M1-Prozessoren (Apple Silicon Mac)**
+
+Dieser Fehler tritt meistens dann auf, wenn Rosetta nicht installiert ist. Um das Problem zu beheben, öffne das Terminal und führe folgenden Befehl aus: `softwareupdate --install-rosetta --agree-to-license` 
+
 **Installationspfad überprüfen**
 
 Überprüfe noch einmal, ob du den richtigen Installationspfad gewählt hast. Sollte Ink/Stitch unter `Benutzererweiterungen` nicht funktionieren, kannst du auch versuchen, es unter `Inkscape Erweiterungen` zu platzieren.

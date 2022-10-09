@@ -94,6 +94,10 @@ For older macOS versions [download ZIP]({{ site.github.releases_url }}/latest/do
 
 ### Ink/Stitch doesn't run / is greyed out
 
+**M1 processors (Apple Silicon Mac)**
+
+Most common issue is a missing Rosetta installation. To fix the issue run this command in your terminal: `softwareupdate --install-rosetta --agree-to-license` 
+
 **Confirm installation path**
 
 Check if you extracted Ink/Stitch into the correct folder. If the `User extensions folder` doesn't work out correctly, you can also try to install into the `Inkscape extensions folder`.

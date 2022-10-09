@@ -195,8 +195,8 @@ developers:
       url: /fr/developers/inkstitch/manual-setup/
     - title: Installation Manuelle (Windows)
       url: /fr/developers/inkstitch/windows-manual-setup/
-    - title: Modules Python
-      url: /fr/developers/inkstitch/python-modules/
+    - title: Debugging and Profiling
+      url: /fr/developers/inkstitch/debug/
     - title: Espace de nommage
       url: /fr/developers/inkstitch/namespace/
   - title: Pyembroidery

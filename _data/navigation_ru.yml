@@ -195,8 +195,8 @@ developers:
       url: /ru/developers/inkstitch/manual-setup/
     - title: Ручная установка (Windows)
       url: /ru/developers/inkstitch/windows-manual-setup/
-    - title: Модули Python
-      url: /ru/developers/inkstitch/python-modules/
+    - title: Debugging and Profiling
+      url: /ru/developers/inkstitch/debug/
     - title: Namespace
       url: /ru/developers/inkstitch/namespace/
   - title: Pyembroidery

@@ -199,8 +199,8 @@ developers:
       url: /developers/inkstitch/windows-manual-setup/
     - title: Manual Build (Windows)
       url: /developers/inkstitch/windows-manual-build
-    - title: Python Modules
-      url: /developers/inkstitch/python-modules/
+    - title: Debugging and Profiling
+      url: /developers/inkstitch/debug/
     - title: Namespace
       url: /developers/inkstitch/namespace/
   - title: Pyembroidery

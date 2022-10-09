@@ -94,6 +94,10 @@ For older macOS versions [download ZIP]({{ site.github.releases_url }}/latest/do
 
 ### Ink/Stitch не отображается / не доступен
 
+**M1 processors (Apple Silicon Mac)**
+
+Most common issue is a missing Rosetta installation. To fix the issue run this command in your terminal: `softwareupdate --install-rosetta --agree-to-license` 
+
 **Проверьте путь установки**
 
 Проверьте что вы распаковали архив с Ink/Stitch в правильную папку. Если с папкой `Пользовательские расширения` не удается добиться работы расширения, попробуйте распаковать архив в папку `Inkscape extensions`.
