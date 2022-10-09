@@ -116,7 +116,13 @@ inkstitch_attribs = [
     'zigzag_underlay_max_stitch_length_mm',
     'e_stitch',
     'pull_compensation_mm',
+    'pull_compensation_unit',
     'stroke_first',
+    'random_split_factor',
+    'random_first_rail_factor_in',
+    'random_first_rail_factor_out',
+    'random_second_rail_factor_in',
+   'random_second_rail_factor_out',
     # stitch_plan
     'invisible_layers',
     # Legacy
