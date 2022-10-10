@@ -30,13 +30,6 @@ class LetteringFrame(wx.Frame):
     DEFAULT_FONT = "small_font"
 
     def __init__(self, *args, **kwargs):
-        # This is necessary because of https://github.com/inkstitch/inkstitch/issues/1186
-        if sys.platform.startswith('win'):
-            import locale
-            locale.setlocale(locale.LC_ALL, "C")
-            lc = wx.Locale()
-            lc.Init(wx.LANGUAGE_DEFAULT)
-
         # begin wxGlade: MyFrame.__init__
         self.group = kwargs.pop('group')
         self.cancel_hook = kwargs.pop('on_cancel', None)
@@ -98,6 +91,12 @@ class LetteringFrame(wx.Frame):
 
         self.load_settings()
         self.apply_settings()
+
+    def InitLocale(self):
+        # This is necessary because of https://github.com/inkstitch/inkstitch/issues/1186
+        if sys.platform.startswith('win'):
+            import locale
+            locale.setlocale(locale.LC_ALL, "C")
 
     def load_settings(self):
         """Load the settings saved into the SVG group element"""
@@ -174,7 +173,7 @@ class LetteringFrame(wx.Frame):
             image = font.preview_image
 
             if image is not None:
-                image = wx.Image(font.preview_image)
+                image = wx.Image(image)
                 """
                 # I would like to do this but Windows requires all images to be the exact same size
                 # It might work with an updated wxpython version - so let's keep it here
