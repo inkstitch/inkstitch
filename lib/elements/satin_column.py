@@ -175,6 +175,17 @@ class SatinColumn(EmbroideryElement):
         return max(self.get_float_param("zigzag_spacing_mm", 0.4), 0.01)
 
     @property
+    @param('random_zigzag_spacing',
+           _('Zig-zag spacing randomness(peak-to-peak)'),
+           tooltip=_('percentage  of randomness  of Peak-to-peak distance between zig-zags.'),
+          type='int', unit="%")
+    def random_zigzag_spacing(self):
+        # peak-to-peak distance between zigzags
+         return max(self.get_int_param("random_zigzag_spacing", 0), 0)
+
+
+
+    @property
     @param(
         'pull_compensation_unit',
         _('Pull compensation_unit'),
@@ -186,6 +197,8 @@ class SatinColumn(EmbroideryElement):
     def pull_compensation_unit(self):
         # chose if pull compensation is  mm or percentage
         return self.get_int_param("pull_compensation_unit", 0)
+
+    
 
     @property
     @param(
@@ -843,7 +856,10 @@ class SatinColumn(EmbroideryElement):
                         decalage1= random.uniform(-decrease/100,increase/100)
                         randomizepos1 = pos1 + (pos1 - pos0)*decalage1  
                     add_pair(randomizepos0, randomizepos1)
-                    to_travel = spacing
+                    if self.random_zigzag_spacing:
+                        to_travel=spacing*(1+random.uniform(self.random_zigzag_spacing/100,self.random_zigzag_spacing/100))
+                    else:
+                        to_travel = spacing
 
         if to_travel > 0:
             add_pair(pos0, pos1)
