@@ -857,7 +857,7 @@ class SatinColumn(EmbroideryElement):
                         randomizepos1 = pos1 + (pos1 - pos0)*decalage1  
                     add_pair(randomizepos0, randomizepos1)
                     if self.random_zigzag_spacing:
-                        to_travel=spacing*(random.uniform(0,1+self.random_zigzag_spacing/100))
+                        to_travel=spacing*(random.uniform(1,1+self.random_zigzag_spacing/100))
                     else:
                         to_travel = spacing
 
