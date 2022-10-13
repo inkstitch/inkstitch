@@ -170,7 +170,7 @@ def intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing=Non
 
             rows.append(runs)
 
-        if end_row_spacing:
+        if end_row_spacing and height>0.5:
             current_row_y += row_spacing + (end_row_spacing - row_spacing) * ((current_row_y - start) / height)
         else:
             current_row_y += row_spacing 

@@ -268,11 +268,12 @@ def intersect_region_with_grating_guideline(shape, line, row_spacing, num_stagge
     while True:
         if row_spacing_randomness:
             row_spacing_factor=uniform(-row_spacing_randomness/100, row_spacing_randomness/100)
-        translate_amount = translate_direction * row_spacing*(row_spacing_factor + row)
+        
         if strategy == 0:
+            translate_amount = translate_direction * row_spacing*(row_spacing_factor + row)
             offset_line = translate(line, xoff=translate_amount.x, yoff=translate_amount.y)
         elif strategy == 1:
-            offset_line = line.parallel_offset(translate_amount, 'left', join_style=shgeo.JOIN_STYLE.round)
+            offset_line = line.parallel_offset((row_spacing_factor + row)*row_spacing, 'left', join_style=shgeo.JOIN_STYLE.round)
 
         offset_line = clean_offset_line(offset_line)
 

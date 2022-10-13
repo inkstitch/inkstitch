@@ -10,7 +10,7 @@ from shapely import affinity as shaffinity
 from shapely import geometry as shgeo
 from shapely.ops import nearest_points
 
-from inkex import paths
+from inkex import paths, errormsg
 
 from ..i18n import _
 from ..stitch_plan import StitchGroup
@@ -857,7 +857,7 @@ class SatinColumn(EmbroideryElement):
                         randomizepos1 = pos1 + (pos1 - pos0)*decalage1  
                     add_pair(randomizepos0, randomizepos1)
                     if self.random_zigzag_spacing:
-                        to_travel=spacing*(1+random.uniform(self.random_zigzag_spacing/100,self.random_zigzag_spacing/100))
+                        to_travel=spacing*(random.uniform(0,1+self.random_zigzag_spacing/100))
                     else:
                         to_travel = spacing
 

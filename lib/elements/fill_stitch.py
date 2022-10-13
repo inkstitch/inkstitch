@@ -688,11 +688,21 @@ class FillStitch(EmbroideryElement):
                     starting_point,
                     self.underlay_feathering_in,
                     self.underlay_feathering_out,
-                    underpath=self.underlay_underpath))
+                    length_decrease=0,
+                    length_increase=0,
+                    angle_variation=0,
+                    ending_point=None,
+                    underpath=self.underlay_underpath,
+                    row_spacing_randomness=0))
             stitch_groups.append(underlay)
 
         starting_point = underlay.stitches[-1]
         return [stitch_groups, starting_point]
+
+
+
+
+    
 
     def do_auto_fill(self, shape, last_patch, starting_point, ending_point):
         stitch_group = StitchGroup(
