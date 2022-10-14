@@ -14,7 +14,7 @@ from inkex import paths, errormsg
 
 from ..i18n import _
 from ..stitch_plan import StitchGroup
-from ..svg import line_strings_to_csp, point_lists_to_csp
+from ..svg import line_strings_to_csp, point_lists_to_csp,PIXELS_PER_MM
 from ..utils import Point, cache, collapse_duplicate_point, cut
 from .element import EmbroideryElement, param
 from .validation import ValidationError, ValidationWarning
@@ -187,18 +187,17 @@ class SatinColumn(EmbroideryElement):
 
     @property
     @param(
-        'pull_compensation_unit',
-        _('Pull compensation_unit'),
-        tooltip=_('can be either mm or percentage'),
-        type='dropdown',
-        default=0,
-        # 0: mm, 1: %
-        options=[_("mm"), _("%")])
-    def pull_compensation_unit(self):
-        # chose if pull compensation is  mm or percentage
-        return self.get_int_param("pull_compensation_unit", 0)
-
+        'pull_compensation_percent',
+        _('Pull compensation percentage'),
+        tooltip=_('pull compensation in percentage'),
+        unit='%',
+        type='int',
+        default=0)
     
+    def pull_compensation_percent(self):
+        # pull compensation as a percentage of the width
+        return max(self.get_int_param("pull_compensation_percent", 0), 0)
+
 
     @property
     @param(
@@ -209,7 +208,7 @@ class SatinColumn(EmbroideryElement):
         unit='mm',
         type='float',
         default=0)
-    def pull_compensation(self):
+    def pull_compensation_mm(self):
         # In satin stitch, the stitches have a tendency to pull together and
         # narrow the entire column.  We can compensate for this by stitching
         # wider than we desire the column to end up.
@@ -704,13 +703,16 @@ class SatinColumn(EmbroideryElement):
         center_walk, _ = self.plot_points_on_rails(self.zigzag_spacing, -100000)
         return shgeo.LineString(center_walk)
 
-    def offset_points(self, pos1, pos2, offset_px,offset_unit=0):
+    def offset_points(self, pos1, pos2, offset_mm,offset_percent=0):
         # Expand or contract two points about their midpoint.  This is
         # useful for pull compensation and insetting underlay.
 
         distance = (pos1 - pos2).length()
-        if offset_unit ==1:
-                offset_px=(offset_px /100) * (distance/PIXELS_PER_MM)
+        offset_px=0
+        if offset_mm:
+            offset_px+=offset_mm*PIXELS_PER_MM
+        if offset_percent:
+           offset_px+=(offset_percent /100 * distance)
 
         if distance < 0.0001:
             # if they're the same point, we don't know which direction
@@ -759,13 +761,13 @@ class SatinColumn(EmbroideryElement):
                 distance_remaining -= segment_length
                 pos = segment_end
 
-    def plot_points_on_rails(self, spacing, offset, unit=0):
+    def plot_points_on_rails(self, spacing, offset_mm, offset_percent=0):
         # Take a section from each rail in turn, and plot out an equal number
         # of points on both rails.  Return the points plotted. The points will
         # be contracted or expanded by offset using self.offset_points().
 
         def add_pair(pos0, pos1):
-            pos0, pos1 = self.offset_points(pos0, pos1, offset,unit)
+            pos0, pos1 = self.offset_points(pos0, pos1, offset_mm,offset_percent)
             points[0].append(pos0)
             points[1].append(pos1)
 
@@ -947,7 +949,7 @@ class SatinColumn(EmbroideryElement):
         # print >> dbg, "satin", self.zigzag_spacing, self.pull_compensation
 
         patch = StitchGroup(color=self.color)
-        sides = self.plot_points_on_rails(self.zigzag_spacing, self.pull_compensation)
+        sides = self.plot_points_on_rails(self.zigzag_spacing, self.pull_compensation_mm, self.pull_compensation_percent)
 
         if self.max_stitch_length:
             return self.do_split_stitch(patch, sides)
@@ -977,7 +979,7 @@ class SatinColumn(EmbroideryElement):
 
         patch = StitchGroup(color=self.color)
 
-        sides = self.plot_points_on_rails(self.zigzag_spacing, self.pull_compensation)
+        sides = self.plot_points_on_rails(self.zigzag_spacing, self.pull_compensation, self.pull_compensation_percent)
 
         # "left" and "right" here are kind of arbitrary designations meaning
         # a point from the first and second rail respectively

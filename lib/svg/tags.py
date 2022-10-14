@@ -124,7 +124,7 @@ inkstitch_attribs = [
     'zigzag_underlay_max_stitch_length_mm',
     'e_stitch',
     'pull_compensation_mm',
-    'pull_compensation_unit',
+    'pull_compensation_percent',
     'stroke_first',
     'random_split_factor',
     'random_first_rail_factor_in',
