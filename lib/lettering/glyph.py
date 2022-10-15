@@ -7,13 +7,11 @@ from copy import copy
 
 from inkex import paths, transforms, units
 
-from ..svg import get_correction_transform, get_guides
-from ..svg.tags import (CONNECTION_END, SVG_GROUP_TAG, SVG_PATH_TAG,
-                        SVG_USE_TAG, XLINK_HREF,EMBROIDERABLE_TAGS)
-
-from ..elements import Stroke, FillStitch
-
 from ..commands import add_commands
+from ..elements import FillStitch, Stroke
+from ..svg import get_correction_transform, get_guides
+from ..svg.tags import (CONNECTION_END, EMBROIDERABLE_TAGS, SVG_GROUP_TAG,
+                        SVG_PATH_TAG, SVG_USE_TAG, XLINK_HREF)
 
 
 class Glyph(object):
@@ -28,7 +26,7 @@ class Glyph(object):
       node  -- svg:g XML node containing the component satins in this character
     """
 
-    def __init__(self, group,trim=False):
+    def __init__(self, group, trim=False):
         """Create a Glyph.
 
         The nodes will be copied out of their parent SVG document (with nested
@@ -51,15 +49,13 @@ class Glyph(object):
     def _process_trim(self, trim):
         if trim:
             for path_child in self.node.iterdescendants(EMBROIDERABLE_TAGS):
-                    path=path_child
-            
-            if "fill" in path.get('style') :
-                element=FillStitch(path)
+                path = path_child
+            if "fill" in path.get('style'):
+                element = FillStitch(path)
             else:
-                element=Stroke(path) 
+                element = Stroke(path)
 
-            add_commands(element,['trim'], False)
-    
+            add_commands(element, ['trim'], False)
 
     def _process_group(self, group):
         new_group = copy(group)

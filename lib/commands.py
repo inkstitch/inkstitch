@@ -6,7 +6,7 @@
 import os
 import sys
 from copy import deepcopy
-from random import random
+from random import random, randint
 
 import inkex
 from shapely import geometry as shgeo
@@ -326,14 +326,13 @@ def add_connector(document, symbol, command, element):
     symbol.getparent().insert(0, path)
 
 
-def add_symbol(document, group, command, pos,ensuring=True):
+def add_symbol(document, group, command, pos, ensuring=True):
     if ensuring:
         identifier = document.get_unique_id("command_use")
     else:
-        identifier= "command_use"
+        identifier = "command_use" + str(randint(0, 9999))
     symbol = inkex.Use(attrib={
-        "id":identifier,
-     #  "id": document.get_unique_id("command_use"),
+        "id": identifier,
         XLINK_HREF: "#inkstitch_%s" % command,
         "height": "100%",
         "width": "100%",
@@ -396,12 +395,12 @@ def add_commands(element, commands, ensuring=True):
 
     for i, command in enumerate(commands):
         if ensuring:
-            ensure_symbol(svg, command) 
+            ensure_symbol(svg, command)
         remove_legacy_param(element, command)
 
         group = add_group(svg, element.node, command)
         pos = get_command_pos(element, i, len(commands))
-        symbol = add_symbol(svg, group, command, pos,ensuring) 
+        symbol = add_symbol(svg, group, command, pos, ensuring)
         add_connector(svg, symbol, command, element)
 
 

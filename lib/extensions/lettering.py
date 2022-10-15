@@ -266,8 +266,6 @@ class LetteringFrame(wx.Frame):
             self.trim_after_line_checkbox.Enable()
             self.trim_after_line_checkbox.SetValue(bool(self.settings.trim_after_line))
 
-        
-
         self.update_preview()
         self.Layout()
 
@@ -297,7 +295,7 @@ class LetteringFrame(wx.Frame):
         font = self.fonts.get(self.font_chooser.GetValue(), self.default_font)
         try:
             font.render_text(self.settings.text, destination_group, back_and_forth=self.settings.back_and_forth, trim=self.settings.trim,
-                             trim_after_letter=self.settings.trim_after_letter,trim_after_word=self.settings.trim_after_word,
+                             trim_after_letter=self.settings.trim_after_letter, trim_after_word=self.settings.trim_after_word,
                              trim_after_line=self.settings.trim_after_line)
         except FontError as e:
             if raise_error:

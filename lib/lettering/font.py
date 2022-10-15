@@ -9,17 +9,16 @@ from copy import deepcopy
 from random import randint
 
 import inkex
-from shapely import geometry as shgeo
 
-from ..commands import add_group, ensure_symbol
+from ..commands import ensure_symbol
 from ..elements import nodes_to_elements
 from ..exceptions import InkstitchException
 from ..extensions.lettering_custom_font_dir import get_custom_font_dir
 from ..i18n import _, get_languages
 from ..marker import MARKER, ensure_marker
 from ..stitches.auto_satin import auto_satin
-from ..svg.tags import (CONNECTION_END, CONNECTION_START, EMBROIDERABLE_TAGS,
-                        INKSCAPE_LABEL, SVG_PATH_TAG, SVG_USE_TAG, XLINK_HREF)
+from ..svg.tags import (CONNECTION_END, CONNECTION_START, INKSCAPE_LABEL,
+                        SVG_PATH_TAG, SVG_USE_TAG, XLINK_HREF)
 from ..utils import Point
 from .font_variant import FontVariant
 from .glyph import Glyph
@@ -180,7 +179,7 @@ class Font(object):
     def is_custom_font(self):
         return get_custom_font_dir() in self.path
 
-    def render_text(self, text, destination_group, variant=None, back_and_forth=True, trim=False,trim_after_letter=False,
+    def render_text(self, text, destination_group, variant=None, back_and_forth=True, trim=False, trim_after_letter=False,
                     trim_after_word=False,
                     trim_after_line=False):
         """Render text into an SVG group element."""
@@ -197,7 +196,8 @@ class Font(object):
         for i, line in enumerate(text.splitlines()):
             glyph_set = glyph_sets[i % 2]
             line = line.strip()
-            letter_group = self._render_line(line, position, glyph_set,trim_after_letter,trim_after_word,trim_after_line)
+            letter_group = self._render_line(line, position, glyph_set,
+                                             trim_after_letter, trim_after_word, trim_after_line)
             if back_and_forth and self.reversible and i % 2 == 1:
                 letter_group[:] = reversed(letter_group)
             destination_group.append(letter_group)
@@ -229,7 +229,7 @@ class Font(object):
     def get_variant(self, variant):
         return self.variants.get(variant, self.variants[self.default_variant])
 
-    def _render_line(self, line, position, glyph_set,trim_after_letter=False,trim_after_word=False,trim_after_line=False):
+    def _render_line(self, line, position, glyph_set, trim_after_letter=False, trim_after_word=False, trim_after_line=False):
         """Render a line of text.
 
         An SVG XML node tree will be returned, with an svg:g at its root.  If
@@ -244,33 +244,29 @@ class Font(object):
         Returns:
             An svg:g element containing the rendered text.
         """
-       
+
         group = inkex.Group(attrib={
             INKSCAPE_LABEL: line
         })
 
         last_character = None
-        
+
         for i, character in enumerate(line):
-            
             if self.letter_case == "upper":
                 character = character.upper()
             elif self.letter_case == "lower":
                 character = character.lower()
 
             glyph = glyph_set[character]
-
             end_of_word = (i == len(line)-1 or line[i+1] == " ")
-
             if character == " " or (glyph is None and self.default_glyph == " "):
                 position.x += self.word_spacing
                 last_character = None
             else:
                 if glyph is None:
                     glyph = glyph_set[self.default_glyph]
-
-                if glyph is not None :
-                    if i == len(line)-1: #last glyph of line
+                if glyph is not None:
+                    if i == len(line)-1:      # last glyph of line
                         trim = trim_after_letter or trim_after_word or trim_after_line
                     else:
                         trim = trim_after_letter or (trim_after_word and end_of_word)
