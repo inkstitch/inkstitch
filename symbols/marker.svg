@@ -20,7 +20,10 @@
        refX="10"
        refY="5"
        orient="auto"
-       id="inkstitch-pattern-marker">
+       id="inkstitch-pattern-marker"
+       markerUnits="userSpaceOnUse"
+       markerWidth="0.5"
+       viewBox="0 0 1 1">
       <g
          id="inkstitch-pattern-group">
         <path
@@ -37,7 +40,10 @@
       refX="10"
       refY="5"
       orient="auto"
-      id="inkstitch-guide-line-marker">
+      id="inkstitch-guide-line-marker"
+      markerUnits="userSpaceOnUse"
+      markerWidth="0.5"
+      viewBox="0 0 1 1">
      <g
         id="inkstitch-guide-line-group">
        <path

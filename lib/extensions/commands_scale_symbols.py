@@ -21,3 +21,8 @@ class CommandsScaleSymbols(InkstitchExtension):
         for symbol in command_symbols:
             transform = Transform(symbol.get('transform')).add_scale(size)
             symbol.set('transform', str(transform))
+
+        markers = svg.xpath(".//svg:marker[starts-with(@id, 'inkstitch')]", namespaces=NSS)
+        for marker in markers:
+            marker_size = float(marker.get('markerWidth', 0.5)) * size
+            marker.set('markerWidth', marker_size)
