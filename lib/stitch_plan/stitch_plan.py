@@ -39,10 +39,10 @@ def stitch_groups_to_stitch_plan(stitch_groups, collapse_len=None, min_stitch_le
 
         if color_block.color != stitch_group.color:
             if len(color_block) == 0:
+                # We just processed a stop, which created a new color block.
                 # end the previous block with a color change
                 stitch_plan.color_blocks[-2].add_stitch(color_change=True)
 
-                # We just processed a stop, which created a new color block.
                 # We'll just claim this new block as ours:
                 color_block.color = stitch_group.color
             else:
