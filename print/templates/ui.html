@@ -54,17 +54,18 @@
             <input type="checkbox" class="view" id="operator-detailedview" data-field-name="operator-detailedview" CHECKED />
             <label for="operator-detailedview">{{ _('Operator Detailed View') }}</label>
           </p>
+          <p style="text-indent: 1.5em;">
+            <label for="operator-detailedview-thumbnail-size">{{ _('Thumbnail size') }}</label>
+            <input type="range" min="15" max="110" value="15" step="5" id="operator-detailedview-thumbnail-size" data-field-name="operator-detailedview-thumbnail-size" style="vertical-align: middle;" />
+            <span id="display-thumbnail-size">15mm</span>
+          </p>
           <p>
             <input type="checkbox" class="view" id="full-page-patternview" data-field-name="full-page-patternview"  />
             <label for="full-page-patternview">{{ _('Full Page Pattern View') }}</label>
           </p>
-          <p>
+          <p style="text-indent: 1.5em;">
             <input type="checkbox" class="view" id="show-footer" data-field-name="show-footer"  />
             <label for="show-footer">{{ _('Show Footer') }}</label>
-          </p>
-          <p style="text-indent: 1.5em;">{{ _('Thumbnail size') }}:
-            <input type="range" min="15" max="110" value="15" step="5" id="operator-detailedview-thumbnail-size" data-field-name="operator-detailedview-thumbnail-size" style="vertical-align: middle;" />
-            <span id="display-thumbnail-size">15mm</span>
           </p>
           <p>
             <input type="checkbox" class="view" id="custom-page" data-field-name="custom-page" />
