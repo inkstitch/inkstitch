@@ -326,9 +326,14 @@ def add_connector(document, symbol, command, element):
     symbol.getparent().insert(0, path)
 
 
-def add_symbol(document, group, command, pos):
+def add_symbol(document, group, command, pos,ensuring=True):
+    if ensuring:
+        identifier = document.get_unique_id("command_use")
+    else:
+        identifier= "command_use"
     symbol = inkex.Use(attrib={
-        "id": document.get_unique_id("command_use"),
+        "id":identifier,
+     #  "id": document.get_unique_id("command_use"),
         XLINK_HREF: "#inkstitch_%s" % command,
         "height": "100%",
         "width": "100%",
@@ -386,16 +391,17 @@ def remove_legacy_param(element, command):
             del element.node.attrib[attribute]
 
 
-def add_commands(element, commands):
+def add_commands(element, commands, ensuring=True):
     svg = get_document(element.node)
 
     for i, command in enumerate(commands):
-        ensure_symbol(svg, command)
+        if ensuring:
+            ensure_symbol(svg, command) 
         remove_legacy_param(element, command)
 
         group = add_group(svg, element.node, command)
         pos = get_command_pos(element, i, len(commands))
-        symbol = add_symbol(svg, group, command, pos)
+        symbol = add_symbol(svg, group, command, pos,ensuring) 
         add_connector(svg, symbol, command, element)
 
 

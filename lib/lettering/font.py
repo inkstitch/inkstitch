@@ -11,18 +11,18 @@ from random import randint
 import inkex
 from shapely import geometry as shgeo
 
-from ..commands import ensure_symbol,add_group, add_symbol,add_connector, get_command_pos
+from ..commands import add_group, ensure_symbol
 from ..elements import nodes_to_elements
 from ..exceptions import InkstitchException
 from ..extensions.lettering_custom_font_dir import get_custom_font_dir
 from ..i18n import _, get_languages
 from ..marker import MARKER, ensure_marker
 from ..stitches.auto_satin import auto_satin
-from ..svg.tags import (CONNECTION_END, CONNECTION_START, INKSCAPE_LABEL,
-                        SVG_PATH_TAG, SVG_USE_TAG, XLINK_HREF)
-from ..svg import generate_unique_id
+from ..svg.tags import (CONNECTION_END, CONNECTION_START, EMBROIDERABLE_TAGS,
+                        INKSCAPE_LABEL, SVG_PATH_TAG, SVG_USE_TAG, XLINK_HREF)
 from ..utils import Point
 from .font_variant import FontVariant
+from .glyph import Glyph
 
 
 class FontError(InkstitchException):
@@ -83,7 +83,6 @@ class Font(object):
         self.metadata = {}
         self.license = None
         self.variants = {}
-
         self._load_metadata()
         self._load_license()
 
@@ -181,7 +180,9 @@ class Font(object):
     def is_custom_font(self):
         return get_custom_font_dir() in self.path
 
-    def render_text(self, text, destination_group, variant=None, back_and_forth=True, trim=False,trim_after_letter=False):
+    def render_text(self, text, destination_group, variant=None, back_and_forth=True, trim=False,trim_after_letter=False,
+                    trim_after_word=False,
+                    trim_after_line=False):
         """Render text into an SVG group element."""
         self._load_variants()
         if variant is None:
@@ -196,8 +197,7 @@ class Font(object):
         for i, line in enumerate(text.splitlines()):
             glyph_set = glyph_sets[i % 2]
             line = line.strip()
-
-            letter_group = self._render_line(line, position, glyph_set,trim_after_letter)
+            letter_group = self._render_line(line, position, glyph_set,trim_after_letter,trim_after_word,trim_after_line)
             if back_and_forth and self.reversible and i % 2 == 1:
                 letter_group[:] = reversed(letter_group)
             destination_group.append(letter_group)
@@ -229,7 +229,7 @@ class Font(object):
     def get_variant(self, variant):
         return self.variants.get(variant, self.variants[self.default_variant])
 
-    def _render_line(self, line, position, glyph_set,trim_after_letter=False):
+    def _render_line(self, line, position, glyph_set,trim_after_letter=False,trim_after_word=False,trim_after_line=False):
         """Render a line of text.
 
         An SVG XML node tree will be returned, with an svg:g at its root.  If
@@ -250,13 +250,17 @@ class Font(object):
         })
 
         last_character = None
-        for character in line:
+        
+        for i, character in enumerate(line):
+            
             if self.letter_case == "upper":
                 character = character.upper()
             elif self.letter_case == "lower":
                 character = character.lower()
 
             glyph = glyph_set[character]
+
+            end_of_word = (i == len(line)-1 or line[i+1] == " ")
 
             if character == " " or (glyph is None and self.default_glyph == " "):
                 position.x += self.word_spacing
@@ -265,71 +269,20 @@ class Font(object):
                 if glyph is None:
                     glyph = glyph_set[self.default_glyph]
 
-                if glyph is not None:
-                    node = self._render_glyph(glyph, position, character, last_character,trim_after_letter)
-            
+                if glyph is not None :
+                    if i == len(line)-1: #last glyph of line
+                        trim = trim_after_letter or trim_after_word or trim_after_line
+                    else:
+                        trim = trim_after_letter or (trim_after_word and end_of_word)
+                    glyph = Glyph(glyph.node, trim)
+                    node = self._render_glyph(glyph, position, character, last_character)
                     group.append(node)
 
                 last_character = character
 
         return group
-    
-    def add_trim_to_last_path(self,node):
-        test=True
-        for path_child in node.iterdescendants(SVG_PATH_TAG):
-            if not path_child.get(CONNECTION_END, None):
-                # should also check it is nor marker not texture
-                path=path_child
-                path_id=path_child.get('id')
-        parent=path.getparent()
-       
 
-        group=add_group(parent,path,'trim')
-     #   bbox = inkex.paths.Path(.get("d")).bounding_box()
-        bbox = inkex.paths.Path(path.get("d")).bounding_box()
-        pos=shgeo.Point((bbox.right+bbox.left)/2,bbox.top-30)
-    #    left, right = min([box.left for box in bbox]), max([box.right for box in bbox])
-        
-        #      bbox = [paths.Path(.get("d")).bounding_box() for node in self.node.iterdescendants(SVG_PATH_TAG) if not node.get(CONNECTION_END, None)]
-       
-     #   outline=path.buffer(30).exterior
- #       pos=get_command_pos(path,1,1)
-     #   symbol=add_symbol(parent,group,'trim',pos)
-        symbol_id= "command_use"+path_id
-        symbol = inkex.Use(attrib={
-        "id": symbol_id,#parent.get_unique_id("command_use"),
-        XLINK_HREF: "#inkstitch_%s" % "trim",
-        "height": "100%",
-        "width": "100%",
-        "x": str(pos.x),
-        "y": str(pos.y),
-
-        # l10n: the name of a command symbol (example: scissors icon for trim command)
-        INKSCAPE_LABEL: _("command marker"),
-    })
-        group.append(symbol)
-        connector_path = inkex.PathElement(attrib={
-        "id": "34",#generate_unique_id(document, "command_connector"),
-        "d": "M %s,%s %s,%s" % ( str(pos.x), str(pos.y), (bbox.right+bbox.left)/2, (bbox.top+bbox.bottom)/2),
-        "style": "stroke:#000000;stroke-width:1px;stroke-opacity:0.5;fill:none;",
-        CONNECTION_START: "#%s" % symbol_id,
-        CONNECTION_END: "#%s" % path_id,
-
-        # l10n: the name of the line that connects a command to the object it applies to
-        INKSCAPE_LABEL: _("connector")
-    })
-
-    
-
-        symbol.getparent().insert(0, connector_path)
-
- #       add_connector(parent,symbol,'trim',path)
-##
-
-           
-  #          add_commands(path_child,['trim'])
-
-    def _render_glyph(self, glyph, position, character, last_character,trim_after_letter=False):
+    def _render_glyph(self, glyph, position, character, last_character):
         """Render a single glyph.
 
         An SVG XML node tree will be returned, with an svg:g at its root.
@@ -363,12 +316,8 @@ class Font(object):
 
         position.x += self.horiz_adv_x.get(character, horiz_adv_x_default) - glyph.min_x
         self._update_commands(node, glyph)
-        if trim_after_letter:
-            self.add_trim_to_last_path(node)
+
         return node
-    
-    
-        
 
     def _update_commands(self, node, glyph):
         for element, connectors in glyph.commands.items():
