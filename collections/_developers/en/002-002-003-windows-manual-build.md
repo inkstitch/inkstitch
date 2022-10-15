@@ -129,7 +129,7 @@ The bash environment needs some paths for the installed software. So let's set i
   export VERSION=my-dev-build
   ```
 
-* Open the bin folder and edit the file `build-distrobution-archives`
+* Open the bin folder and edit the file `build-distribution-archives`
 
   Comment out VERSION
 
