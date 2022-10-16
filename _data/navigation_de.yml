@@ -191,6 +191,8 @@ developers:
       url: /de/developers/inkstitch/manual-setup/
     - title: Debugging und Profiling
       url: /de/developers/inkstitch/debug/
+    - title: Coding Style
+      url: /de/developers/inkstitch/coding-style/
     - title: Namespace
       url: /de/developers/inkstitch/namespace/
   - title: Pyembroidery

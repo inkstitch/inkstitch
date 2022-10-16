@@ -197,6 +197,8 @@ developers:
       url: /ru/developers/inkstitch/windows-manual-setup/
     - title: Debugging and Profiling
       url: /ru/developers/inkstitch/debug/
+    - title: Coding Style
+      url: /ru/developers/inkstitch/coding-style/
     - title: Namespace
       url: /ru/developers/inkstitch/namespace/
   - title: Pyembroidery
