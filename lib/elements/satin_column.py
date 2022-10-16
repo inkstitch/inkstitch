@@ -6,15 +6,14 @@ import random
 from copy import deepcopy
 from itertools import chain
 
+from inkex import paths
 from shapely import affinity as shaffinity
 from shapely import geometry as shgeo
 from shapely.ops import nearest_points
 
-from inkex import paths, errormsg
-
 from ..i18n import _
 from ..stitch_plan import StitchGroup
-from ..svg import line_strings_to_csp, point_lists_to_csp,PIXELS_PER_MM
+from ..svg import PIXELS_PER_MM, line_strings_to_csp, point_lists_to_csp
 from ..utils import Point, cache, collapse_duplicate_point, cut
 from .element import EmbroideryElement, param
 from .validation import ValidationError, ValidationWarning
@@ -105,16 +104,16 @@ class SatinColumn(EmbroideryElement):
            tooltip=_('randomize position for split stitches.'),
            type='int', unit="%")
     def random_split_factor(self):
-        return min(max(self.get_int_param("random_split_factor", 0), 0),100)
-    
+        return min(max(self.get_int_param("random_split_factor", 0), 0), 100)
+
     @property
     @param('random_first_rail_factor_in',
            _('First Rail Random  Factor inside'),
            tooltip=_('shorten stitch around  first rail at most this percent.'),
            type='int', unit="%")
     def random_first_rail_factor_in(self):
-        return min(max(self.get_int_param("random_first_rail_factor_in", 0), 0),100)
-     
+        return min(max(self.get_int_param("random_first_rail_factor_in", 0), 0), 100)
+
     @property
     @param('random_first_rail_factor_out',
            _('First Rail Random  Factor outside'),
@@ -123,15 +122,14 @@ class SatinColumn(EmbroideryElement):
     def random_first_rail_factor_out(self):
         return max(self.get_int_param("random_first_rail_factor_out", 0), 0)
 
-
     @property
     @param('random_second_rail_factor_in',
            _('Second Rail Random  Factor inside'),
            tooltip=_('shorten stitch  around second rail at most this percent.'),
            type='int', unit="%")
     def random_second_rail_factor_in(self):
-        return min(max(self.get_int_param("random_second_rail_factor_in", 0), 0),100)
-    
+        return min(max(self.get_int_param("random_second_rail_factor_in", 0), 0), 100)
+
     @property
     @param('random_second_rail_factor_out',
            _('Second Rail Random  Factor outside'),
@@ -139,7 +137,6 @@ class SatinColumn(EmbroideryElement):
            type='int', unit="%")
     def random_second_rail_factor_out(self):
         return max(self.get_int_param("random_second_rail_factor_out", 0), 0)
-
 
     @property
     @param('short_stitch_inset',
@@ -178,12 +175,10 @@ class SatinColumn(EmbroideryElement):
     @param('random_zigzag_spacing',
            _('Zig-zag spacing randomness(peak-to-peak)'),
            tooltip=_('percentage  of randomness  of Peak-to-peak distance between zig-zags.'),
-          type='int', unit="%")
+           type='int', unit="%")
     def random_zigzag_spacing(self):
         # peak-to-peak distance between zigzags
-         return max(self.get_int_param("random_zigzag_spacing", 0), 0)
-
-
+        return max(self.get_int_param("random_zigzag_spacing", 0), 0)
 
     @property
     @param(
@@ -193,11 +188,9 @@ class SatinColumn(EmbroideryElement):
         unit='%',
         type='int',
         default=0)
-    
     def pull_compensation_percent(self):
         # pull compensation as a percentage of the width
         return max(self.get_int_param("pull_compensation_percent", 0), 0)
-
 
     @property
     @param(
@@ -525,7 +518,6 @@ class SatinColumn(EmbroideryElement):
     def _center_walk_is_odd(self):
         return self.center_walk_underlay_repeats % 2 == 1
 
-
     def reverse(self):
         """Return a new SatinColumn like this one but in the opposite direction.
 
@@ -550,7 +542,7 @@ class SatinColumn(EmbroideryElement):
         if not self.rungs:
             rails = [shgeo.LineString(reversed(self.flatten_subpath(rail))) for rail in self.rails]
             rails.reverse()
-            path_list=rails
+            path_list = rails
 
             rung_start = path_list[0].interpolate(0.1)
             rung_end = path_list[1].interpolate(0.1)
@@ -703,16 +695,16 @@ class SatinColumn(EmbroideryElement):
         center_walk, _ = self.plot_points_on_rails(self.zigzag_spacing, -100000)
         return shgeo.LineString(center_walk)
 
-    def offset_points(self, pos1, pos2, offset_mm,offset_percent=0):
+    def offset_points(self, pos1, pos2, offset_mm, offset_percent=0):
         # Expand or contract two points about their midpoint.  This is
         # useful for pull compensation and insetting underlay.
 
         distance = (pos1 - pos2).length()
-        offset_px=0
+        offset_px = 0
         if offset_mm:
-            offset_px+=offset_mm*PIXELS_PER_MM
+            offset_px += offset_mm * PIXELS_PER_MM
         if offset_percent:
-           offset_px+=(offset_percent /100 * distance)
+            offset_px += (offset_percent / 100 * distance)
 
         if distance < 0.0001:
             # if they're the same point, we don't know which direction
@@ -767,7 +759,7 @@ class SatinColumn(EmbroideryElement):
         # be contracted or expanded by offset using self.offset_points().
 
         def add_pair(pos0, pos1):
-            pos0, pos1 = self.offset_points(pos0, pos1, offset_mm,offset_percent)
+            pos0, pos1 = self.offset_points(pos0, pos1, offset_mm, offset_percent)
             points[0].append(pos0)
             points[1].append(pos1)
 
@@ -836,30 +828,30 @@ class SatinColumn(EmbroideryElement):
                     old_center = new_center
 
                 if to_travel <= 0:
-                    ## add some randomness to the positions, but use unrandomned position to compute next ones
-                    randomizepos0=pos0
-                    randomizepos1=pos1
-                    decrease=0
-                    increase=0
+                    # add some randomness to the positions, but use unrandomned position to compute next ones
+                    randomizepos0 = pos0
+                    randomizepos1 = pos1
+                    decrease = 0
+                    increase = 0
                     if self.random_first_rail_factor_in:
-                        decrease=self.random_first_rail_factor_in
+                        decrease = self.random_first_rail_factor_in
                     if self.random_first_rail_factor_out:
-                        increase=self.random_first_rail_factor_out
+                        increase = self.random_first_rail_factor_out
                     if self.random_first_rail_factor_in or self.random_first_rail_factor_out:
-                        decalage0= random.uniform(-decrease/100,increase/100)
-                        randomizepos0 = pos0 + (pos0 - pos1)*decalage0
-                    decrease=0
-                    increase=0
+                        decalage0 = random.uniform(-decrease/100, increase/100)
+                        randomizepos0 = pos0 + (pos0 - pos1) * decalage0
+                    decrease = 0
+                    increase = 0
                     if self.random_second_rail_factor_in:
-                        decrease=self.random_second_rail_factor_in
+                        decrease = self.random_second_rail_factor_in
                     if self.random_second_rail_factor_out:
-                        increase=self.random_second_rail_factor_out
+                        increase = self.random_second_rail_factor_out
                     if self.random_second_rail_factor_in or self.random_second_rail_factor_out:
-                        decalage1= random.uniform(-decrease/100,increase/100)
-                        randomizepos1 = pos1 + (pos1 - pos0)*decalage1  
+                        decalage1 = random.uniform(-decrease / 100, increase / 100)
+                        randomizepos1 = pos1 + (pos1 - pos0)*decalage1
                     add_pair(randomizepos0, randomizepos1)
                     if self.random_zigzag_spacing:
-                        to_travel=spacing*(random.uniform(1,1+self.random_zigzag_spacing/100))
+                        to_travel = spacing * (random.uniform(1, 1+self.random_zigzag_spacing/100))
                     else:
                         to_travel = spacing
 
@@ -1023,10 +1015,10 @@ class SatinColumn(EmbroideryElement):
         split_count = count or int(-(-distance // max_stitch_length))
         for i in range(split_count):
             line = shgeo.LineString((left, right))
-            decalage=0
-            if self.random_split_factor is not None and self.random_split_factor!=0:
-                random_value=self.random_split_factor/100
-                decalage=random.uniform(1-random_value,1+random_value)
+            decalage = 0
+            if self.random_split_factor is not None and self.random_split_factor != 0:
+                random_value = self.random_split_factor/100
+                decalage = random.uniform(1-random_value, 1+random_value)
             split_point = line.interpolate((i+decalage)/split_count, normalized=True)
             points.append(Point(split_point.x, split_point.y))
         return [points, split_count]

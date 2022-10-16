@@ -12,7 +12,7 @@ from shapely.geometry import LineString
 """ Utility functions to produce running stitches. """
 
 
-def running_stitch(points, stitch_length, tolerance,length_decrease=0,length_increase=0):
+def running_stitch(points, stitch_length, tolerance, length_decrease=0, length_increase=0):
     """Generate running stitch along a path.
 
     Given a path and a stitch length, walk along the path in increments of the
@@ -26,9 +26,8 @@ def running_stitch(points, stitch_length, tolerance,length_decrease=0,length_inc
 
     if len(points) < 2:
         return []
-    
-    ## no stitch_length randomness required
-    if not length_decrease and not length_increase:
+
+    if not length_decrease and not length_increase:   # no stitch_length randomness required
         # simplify will remove as many points as possible while ensuring that the
         # resulting path stays within the specified tolerance of the original path.
         path = LineString(points)
@@ -55,9 +54,7 @@ def running_stitch(points, stitch_length, tolerance,length_decrease=0,length_inc
                 # the stitches shorter
                 num_stitches = math.ceil(section_length / stitch_length)
                 actual_stitch_length = section_length / num_stitches
-
                 distance = actual_stitch_length
-                
                 segment_start = section[0]
                 for segment_end in section[1:]:
                     segment = segment_end - segment_start
@@ -77,7 +74,7 @@ def running_stitch(points, stitch_length, tolerance,length_decrease=0,length_inc
             output.append(points[-1])
 
         return output
-    else: # add randomness to the stitch length
+    else:    # add randomness to the stitch length
         path = LineString(points)
         simplified = path.simplify(tolerance, preserve_topology=False)
 
@@ -91,9 +88,9 @@ def running_stitch(points, stitch_length, tolerance,length_decrease=0,length_inc
             # with an important point
             section = points[start:end + 1]
             if not output or output[-1] != section[0]:
-                if (section[1]-section[0]).length()>0.5:
-                    length_perturbation=random.uniform(-length_decrease/100,length_increase/100)
-                    segment_direction=(section[1]-section[0]).unit()
+                if (section[1]-section[0]).length() > 0.5:
+                    length_perturbation = random.uniform(-length_decrease / 100, length_increase / 100)
+                    segment_direction = (section[1]-section[0]).unit()
                     output.append(section[0]+stitch_length*(length_perturbation)*segment_direction)
                 else:
                     output.append(section[0])
@@ -104,12 +101,10 @@ def running_stitch(points, stitch_length, tolerance,length_decrease=0,length_inc
             section_length = section_ls.length
             if section_length > stitch_length:
                 distance = stitch_length
-                
                 segment_start = section[0]
-                
-                length_perturbation=random.uniform(-length_decrease/100,length_increase/100)
-                segment_direction=(section[1]-section[0]).unit()
-                segment_start+=stitch_length*(length_perturbation)*segment_direction
+                length_perturbation = random.uniform(-length_decrease / 100, length_increase / 100)
+                segment_direction = (section[1]-section[0]).unit()
+                segment_start += stitch_length * length_perturbation * segment_direction
                 for segment_end in section[1:]:
                     segment = segment_end - output[-1]
                     segment_length = segment.length()
@@ -118,14 +113,12 @@ def running_stitch(points, stitch_length, tolerance,length_decrease=0,length_inc
                         segment_direction = segment.unit()
                         while distance < segment_length:
                             output.append(segment_start + distance * segment_direction)
-                            length_perturbation=random.uniform(-length_decrease/100,length_increase/100)
-                            distance += stitch_length*(1+length_perturbation)
+                            length_perturbation = random.uniform(-length_decrease / 100, length_increase / 100)
+                            distance += stitch_length * (1 + length_perturbation)
 
-                    #distance = stitch_length
                     distance -= segment_length
-                    
+
                     segment_start = output[-1]
-                   
         if points[-1] != output[-1]:
             output.append(points[-1])
 

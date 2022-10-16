@@ -5,6 +5,7 @@
 
 import math
 import random
+
 import shapely
 
 from ..stitch_plan import Stitch
@@ -45,7 +46,8 @@ def adjust_stagger(stitch, angle, row_spacing, max_stitch_length, staggers):
     return stitch - offset * east(angle)
 
 
-def stitch_row(stitches, beg, end, angle, row_spacing, max_stitch_length, staggers, skip_last=False,feathering_in=0,feathering_out=0,length_decrease=0,length_increase=0, angle_variation=0):
+def stitch_row(stitches, beg, end, angle, row_spacing, max_stitch_length, staggers, skip_last=False,
+               feathering_in=0, feathering_out=0, length_decrease=0, length_increase=0, angle_variation=0):
     # We want our stitches to look like this:
     #
     # ---*-----------*-----------
@@ -70,12 +72,12 @@ def stitch_row(stitches, beg, end, angle, row_spacing, max_stitch_length, stagge
     end = Stitch(*end, tags=('fill_row_end',))
 
     row_direction = (end - beg).unit()
-    normal=row_direction.rotate(math.pi/2)
+    normal = row_direction.rotate(math.pi/2)
     segment_length = (end - beg).length()
-    feathering=random.uniform(-feathering_in/100, feathering_out/100)
-    beg-=(feathering/2)*segment_length*row_direction
-    end+=(feathering/2)*segment_length*row_direction
-    segment_length*=(1+feathering)
+    feathering = random.uniform(-feathering_in / 100, feathering_out / 100)
+    beg -= (feathering / 2) * segment_length * row_direction
+    end += (feathering / 2) * segment_length * row_direction
+    segment_length *= (1 + feathering)
     stitches.append(beg)
 
     first_stitch = adjust_stagger(beg, angle, row_spacing, max_stitch_length, staggers)
@@ -85,19 +87,20 @@ def stitch_row(stitches, beg, end, angle, row_spacing, max_stitch_length, stagge
         first_stitch += row_direction * max_stitch_length
 
     offset = (first_stitch - beg).length()
-    angle_perturbation=random.uniform(-angle_variation/100,angle_variation/100)
+    angle_perturbation = random.uniform(-angle_variation / 100, angle_variation / 100)
 
     while offset < segment_length:
-        stitches.append(Stitch((beg+offset*row_direction+angle_perturbation*normal* row_spacing), tags=('fill_row')))
-        length_perturbation=random.uniform(-length_decrease/100,length_increase/100)
-        angle_perturbation=random.uniform(-angle_variation/100,angle_variation/100)
-        offset += max_stitch_length*(1+length_perturbation)
+        stitches.append(Stitch((beg + offset * row_direction + angle_perturbation * normal * row_spacing), tags=('fill_row')))
+        length_perturbation = random.uniform(-length_decrease / 100, length_increase / 100)
+        angle_perturbation = random.uniform(-angle_variation / 100, angle_variation / 100)
+        offset += max_stitch_length * (1 + length_perturbation)
 
     if (end - stitches[-1]).length() > 0.1 * PIXELS_PER_MM and not skip_last and not feathering:
         stitches.append(end)
 
 
-def intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing=None, flip=False,row_spacing_randomness=0):
+def intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing=None, flip=False,
+                                  row_spacing_randomness=0):
     # the max line length I'll need to intersect the whole shape is the diagonal
     (minx, miny, maxx, maxy) = shape.bounds
     upper_left = InkstitchPoint(minx, miny)
@@ -139,12 +142,12 @@ def intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing=Non
     start -= (start + normal * center) % row_spacing
 
     current_row_y = start
-    spacing_variation=0
+    spacing_variation = 0
     rows = []
     while current_row_y < end:
-    
+
         if row_spacing_randomness:
-            spacing_variation= random.uniform(-row_spacing_randomness/100, row_spacing_randomness/100)
+            spacing_variation = random.uniform(-row_spacing_randomness / 100, row_spacing_randomness / 100)
         p0 = center + normal * (current_row_y+spacing_variation) + direction * half_length
         p1 = center + normal * (current_row_y+spacing_variation) - direction * half_length
         endpoints = [p0.as_tuple(), p1.as_tuple()]
@@ -170,10 +173,10 @@ def intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing=Non
 
             rows.append(runs)
 
-        if end_row_spacing and height>0.5:
+        if end_row_spacing and height > 0.5:
             current_row_y += row_spacing + (end_row_spacing - row_spacing) * ((current_row_y - start) / height)
         else:
-            current_row_y += row_spacing 
+            current_row_y += row_spacing
 
     return rows
 

@@ -6,11 +6,10 @@
 import math
 from itertools import chain
 
+import inkex
 import networkx as nx
 from shapely import geometry as shgeo
 from shapely.geometry import Point as ShapelyPoint
-
-import inkex
 
 from ..commands import add_commands
 from ..elements import SatinColumn, Stroke

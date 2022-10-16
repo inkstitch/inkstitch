@@ -5,10 +5,10 @@ import numpy as np
 from shapely.affinity import rotate, scale, translate
 from shapely.geometry import LineString, Point
 
-from .running_stitch import running_stitch
 from ..elements import SatinColumn
 from ..utils import Point as InkstitchPoint
 from ..utils.geometry import line_string_to_point_list
+from .running_stitch import running_stitch
 
 
 def ripple_stitch(stroke):
