@@ -971,7 +971,7 @@ class SatinColumn(EmbroideryElement):
 
         patch = StitchGroup(color=self.color)
 
-        sides = self.plot_points_on_rails(self.zigzag_spacing, self.pull_compensation, self.pull_compensation_percent)
+        sides = self.plot_points_on_rails(self.zigzag_spacing, self.pull_compensation_mm, self.pull_compensation_percent)
 
         # "left" and "right" here are kind of arbitrary designations meaning
         # a point from the first and second rail respectively
