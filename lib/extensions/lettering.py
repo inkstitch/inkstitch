@@ -53,7 +53,7 @@ class LetteringFrame(wx.Frame):
         self.font_filter.SetFormat("%f")
         self.font_filter.SetDigits(2)
         self.font_filter.Bind(fs.EVT_FLOATSPIN, self.on_filter_changed)
-        self.font_filter.SetToolTip(_("Font size filter (mm)"))
+        self.font_filter.SetToolTip(_("Font size filter (mm). 0 for all sizes."))
 
         self.update_font_list()
         self.set_font_list()
