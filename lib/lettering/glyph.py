@@ -10,7 +10,7 @@ from inkex import paths, transforms, units
 from ..commands import add_commands
 from ..elements import FillStitch, Stroke
 from ..svg import get_correction_transform, get_guides
-from ..svg.tags import (CONNECTION_END, EMBROIDERABLE_TAGS, SVG_GROUP_TAG,
+from ..svg.tags import (CONNECTION_END, SVG_GROUP_TAG,
                         SVG_PATH_TAG, SVG_USE_TAG, XLINK_HREF)
 
 
@@ -48,14 +48,15 @@ class Glyph(object):
 
     def _process_trim(self, trim):
         if trim:
-            for path_child in self.node.iterdescendants(EMBROIDERABLE_TAGS):
+            for path_child in self.node.iterdescendants(SVG_PATH_TAG):
                 path = path_child
-            if "fill" in path.get('style'):
+            if path.get('style') and "fill" in path.get('style'):
                 element = FillStitch(path)
             else:
                 element = Stroke(path)
 
-            add_commands(element, ['trim'], False)
+            if element.shape:
+                add_commands(element, ['trim'], False)
 
     def _process_group(self, group):
         new_group = copy(group)
@@ -140,3 +141,8 @@ class Glyph(object):
             x, y = transform.apply_to_point((oldx, oldy))
             node.set('x', x)
             node.set('y', y)
+
+    def finish_with_trim(self):
+        for element in self.node.iterdescendants(SVG_USE_TAG):
+            xlink = element.get(XLINK_HREF, ' ')
+            return xlink == '#inkstitch_trim'

@@ -270,7 +270,8 @@ class Font(object):
                         trim = trim_after_letter or trim_after_word or trim_after_line
                     else:
                         trim = trim_after_letter or (trim_after_word and end_of_word)
-                    glyph = Glyph(glyph.node, trim)
+                    if trim and not glyph.finish_with_trim():
+                        glyph = Glyph(glyph.node, trim)
                     node = self._render_glyph(glyph, position, character, last_character)
                     group.append(node)
 

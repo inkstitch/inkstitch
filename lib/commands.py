@@ -6,7 +6,7 @@
 import os
 import sys
 from copy import deepcopy
-from random import random, randint
+from random import randint, random
 
 import inkex
 from shapely import geometry as shgeo
@@ -351,7 +351,13 @@ def get_command_pos(element, index, total):
     # Put command symbols 30 pixels out from the shape, spaced evenly around it.
 
     # get a line running 30 pixels out from the shape
-    outline = element.shape.buffer(30).exterior
+
+    if not isinstance(element.shape.buffer(30), shgeo.MultiPolygon):
+        outline = element.shape.buffer(30).exterior
+    else:
+        polygones = element.shape.buffer(30).geoms
+        polygone = polygones[len(polygones)-1]
+        outline = polygone.exterior
 
     # find the top center point on the outline and start there
     top_center = shgeo.Point(outline.centroid.x, outline.bounds[1])
@@ -397,7 +403,6 @@ def add_commands(element, commands, ensuring=True):
         if ensuring:
             ensure_symbol(svg, command)
         remove_legacy_param(element, command)
-
         group = add_group(svg, element.node, command)
         pos = get_command_pos(element, i, len(commands))
         symbol = add_symbol(svg, group, command, pos, ensuring)
