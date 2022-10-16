@@ -1016,10 +1016,10 @@ class SatinColumn(EmbroideryElement):
         for i in range(split_count):
             line = shgeo.LineString((left, right))
             decalage = 0
-            if self.random_split_factor is not None and self.random_split_factor != 0:
-                random_value = self.random_split_factor/100
-                decalage = random.uniform(1-random_value, 1+random_value)
-            split_point = line.interpolate((i+decalage)/split_count, normalized=True)
+            if self.random_split_factor and i != 0:
+                random_value = self.random_split_factor / 100
+                decalage = random.uniform(-random_value, random_value)
+            split_point = line.interpolate((i + decalage) / split_count, normalized=True)
             points.append(Point(split_point.x, split_point.y))
         return [points, split_count]
 
