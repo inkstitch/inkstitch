@@ -9,6 +9,7 @@ from .apply_threadlist import ApplyThreadlist
 from .auto_run import AutoRun
 from .auto_satin import AutoSatin
 from .break_apart import BreakApart
+from .gradient_blocks import GradientBlocks
 from .cleanup import Cleanup
 from .commands_scale_symbols import CommandsScaleSymbols
 from .convert_to_satin import ConvertToSatin
@@ -79,6 +80,7 @@ __all__ = extensions = [StitchPlanPreview,
                         RemoveEmbroiderySettings,
                         Cleanup,
                         BreakApart,
+                        GradientBlocks,
                         ApplyThreadlist,
                         InstallCustomPalette,
                         GeneratePalette,

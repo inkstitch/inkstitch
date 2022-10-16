@@ -8,24 +8,20 @@ import math
 import re
 import sys
 import traceback
-from math import pi
 
 from shapely import geometry as shgeo
-from shapely.affinity import affine_transform, rotate
 from shapely.errors import TopologicalError
-from shapely.ops import split
 from shapely.validation import explain_validity, make_valid
-
-from inkex import DirectedLineSegment, Transform
 
 from ..i18n import _
 from ..marker import get_marker_elements
 from ..stitch_plan import StitchGroup
 from ..stitches import auto_fill, contour_fill, guided_fill, legacy_fill
-from ..svg import PIXELS_PER_MM, get_correction_transform
+from ..svg import PIXELS_PER_MM
 from ..svg.tags import INKSCAPE_LABEL
 from ..utils import cache, version
 from .element import EmbroideryElement, param
+from .gradient_fill import gradient_shapes_and_attributes
 from .validation import ValidationError, ValidationWarning
 
 
@@ -164,7 +160,8 @@ class FillStitch(EmbroideryElement):
         # SVG spec says the default fill is black
         return self.get_style("fill", "#000000")
 
-    def _has_gradient_color(self):
+    @property
+    def has_gradient_color(self):
         return self.color.startswith('url') and "linearGradient" in self.color
 
     @property
@@ -258,74 +255,6 @@ class FillStitch(EmbroideryElement):
             paths = [path for path in paths if shgeo.Polygon(path).area > 3]
 
         return shgeo.MultiPolygon([(paths[0], paths[1:])])
-
-    def gradient_shapes_and_attributes(self, shape):
-        # e.g. url(#linearGradient872) -> linearGradient872
-        color = self.color[5:-1]
-        xpath = f'.//svg:defs/svg:linearGradient[@id="{color}"]'
-        gradient = self.node.getroottree().getroot().findone(xpath)
-        gradient.apply_transform()
-        point1 = (float(gradient.get('x1')), float(gradient.get('y1')))
-        point2 = (float(gradient.get('x2')), float(gradient.get('y2')))
-        # get 90° angle to calculate the splitting angle
-        line = DirectedLineSegment(point1, point2)
-        angle = line.angle - (pi / 2)
-        # Ink/Stitch somehow turns the stitch angle
-        stitch_angle = angle * -1
-        # create bbox polygon to calculate the length necessary to make sure that
-        # the gradient splitter lines will cut the entire design
-        bbox = self.node.bounding_box()
-        bbox_polygon = shgeo.Polygon([(bbox.left, bbox.top), (bbox.right, bbox.top),
-                                      (bbox.right, bbox.bottom), (bbox.left, bbox.bottom)])
-        # gradient stops
-        offsets = gradient.stop_offsets
-        stop_styles = gradient.stop_styles
-        # now split the shape according to the gradient stops
-        polygons = []
-        colors = []
-        attributes = []
-        previous_color = None
-        end_row_spacing = None
-        for i, offset in enumerate(offsets):
-            shape_rest = []
-            split_point = shgeo.Point(line.point_at_ratio(float(offset)))
-            length = split_point.hausdorff_distance(bbox_polygon)
-            split_line = shgeo.LineString([(split_point.x - length - 2, split_point.y),
-                                           (split_point.x + length + 2, split_point.y)])
-            split_line = rotate(split_line, angle, origin=split_point, use_radians=True)
-            transform = -Transform(get_correction_transform(self.node))
-            transform = list(transform.to_hexad())
-            split_line = affine_transform(split_line, transform)
-            offset_line = split_line.parallel_offset(1, 'right')
-            polygon = split(shape, split_line)
-            color = stop_styles[i]['stop-color']
-            # does this gradient line split the shape
-            offset_outside_shape = len(polygon.geoms) == 1
-            for poly in polygon.geoms:
-                if isinstance(poly, shgeo.Polygon) and self.shape_is_valid(poly):
-                    if poly.intersects(offset_line):
-                        if previous_color:
-                            polygons.append(poly)
-                            colors.append(previous_color)
-                            attributes.append({'angle': stitch_angle, 'end_row_spacing': end_row_spacing, 'color': previous_color})
-                        polygons.append(poly)
-                        attributes.append({'angle': stitch_angle + pi, 'end_row_spacing': end_row_spacing, 'color': color})
-                    else:
-                        shape_rest.append(poly)
-            shape = shgeo.MultiPolygon(shape_rest)
-            previous_color = color
-            end_row_spacing = self.row_spacing * 2
-        # add left over shape(s)
-        if shape:
-            if offset_outside_shape:
-                polygons.append(shape)
-                attributes.append({'color': stop_styles[-2]['stop-color'], 'angle': stitch_angle, 'end_row_spacing': end_row_spacing})
-                stitch_angle += pi
-            else:
-                end_row_spacing = None
-            polygons.append(shape)
-            attributes.append({'color': stop_styles[-1]['stop-color'], 'angle': stitch_angle, 'end_row_spacing': end_row_spacing})
-        return polygons, attributes
 
     @property
     @cache
@@ -632,10 +561,11 @@ class FillStitch(EmbroideryElement):
                 try:
                     # get fill shapes
                     fill_shapes = self.fill_shape(shape)
-                    if self._has_gradient_color():
-                        fill_shapes, attributes = self.gradient_shapes_and_attributes(fill_shapes)
+                    if self.has_gradient_color:
+                        fill_shapes, attributes = gradient_shapes_and_attributes(self, fill_shapes)
                     else:
                         fill_shapes = fill_shapes.geoms
+                        attributes = None
                         color = None
 
                     # do underlay
@@ -650,7 +580,7 @@ class FillStitch(EmbroideryElement):
                     # do top layer fill stitching
                     for i, fill_shape in enumerate(fill_shapes):
                         if self.fill_method == 0:
-                            if self._has_gradient_color():
+                            if self.has_gradient_color:
                                 stitch_groups.extend(self.do_auto_fill(fill_shape, last_patch, start, end, attributes[i]))
                             else:
                                 stitch_groups.extend(self.do_auto_fill(fill_shape, last_patch, start, end))
