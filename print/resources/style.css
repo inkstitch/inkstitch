@@ -573,6 +573,15 @@ body {
     overflow: hidden;
   }
 
+  figure.full-page-pattern {
+      border: none;
+      height: 265mm;
+  }
+
+  div.full-page-patternview figcaption {
+        display: none;
+    }
+
   .client-overview-main figure.inksimulation {
     height: 155mm;
   }
@@ -956,7 +965,7 @@ body {
     height: 30mm;
   }
 
-  .custom-page main {
+  .custom-page main, .custom-page main fieldset {
     height: 230mm
   }
   #custom-page-tool-bar {
@@ -969,6 +978,11 @@ body {
     text-align: left;
   }
 
+  @media print {
+      #custom-page-content {
+          border: none;
+      }
+  }
 /* Color Swatch Logic */
 /* reference : http://jsfiddle.net/jrulle/btg63ezy/3/ */
 
@@ -1162,7 +1176,6 @@ body {
     #errors,
     span.logo-instructions,
     #custom-page-tool-bar,
-    #custom-page-content,
     .notice--warning {
       display: none !important;
     }
