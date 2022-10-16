@@ -223,7 +223,10 @@ class LetteringFrame(wx.Frame):
         font = self.fonts.get(self.font_chooser.GetValue(), self.default_font)
         self.settings.font = font.marked_custom_font_id
 
+        filter_size = self.font_filter.GetValue()
         self.scale_spinner.SetRange(int(font.min_scale * 100), int(font.max_scale * 100))
+        if filter_size != 0:
+            self.scale_spinner.SetValue(int(filter_size / font.size * 100))
         self.settings['scale'] = self.scale_spinner.GetValue()
 
         font_variants = []
@@ -271,12 +274,16 @@ class LetteringFrame(wx.Frame):
         else:
             self.filter_label.SetForegroundColour("black")
 
+        filter_size = self.font_filter.GetValue()
         previous_font = self.font_chooser.GetValue()
         self.set_font_list()
         font = self.fonts.get(previous_font, self.default_font)
         self.font_chooser.SetValue(font.name)
         if font.name != previous_font:
             self.on_font_changed()
+        elif filter_size != 0:
+            self.scale_spinner.SetValue(int(filter_size / font.size * 100))
+            self.settings['scale'] = self.scale_spinner.GetValue()
 
     def resize(self, event=None):
         description = self.font_description.GetLabel().replace("\n", " ")
