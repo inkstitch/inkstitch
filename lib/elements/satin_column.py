@@ -208,6 +208,18 @@ class SatinColumn(EmbroideryElement):
         return self.get_float_param("pull_compensation_mm", 0)
 
     @property
+    @param(
+        'pull_compensation_rails',
+        _('Apply pull compensation to '),
+        tooltip=_('decide wether the pull compensations should be applied to both side  or only to a given one'),
+        type='dropdown',
+        options=[_("Both rails"), _("First rail only"), _("Second rail only")],
+        default=0)
+    def pull_compensation_rails(self):
+        # 0=Both  | 1 = First Rail | 2 = Second Rail
+        return self.get_int_param("pull_compensation_rails", 0)
+
+    @property
     @param('contour_underlay', _('Contour underlay'), type='toggle', group=_('Contour Underlay'))
     def contour_underlay(self):
         # "Contour underlay" is stitching just inside the rectangular shape
@@ -695,7 +707,7 @@ class SatinColumn(EmbroideryElement):
         center_walk, _ = self.plot_points_on_rails(self.zigzag_spacing, -100000)
         return shgeo.LineString(center_walk)
 
-    def offset_points(self, pos1, pos2, offset_mm, offset_percent=0):
+    def offset_points(self, pos1, pos2, offset_mm, offset_percent=0, offset_rails=0):
         # Expand or contract two points about their midpoint.  This is
         # useful for pull compensation and insetting underlay.
 
@@ -715,8 +727,21 @@ class SatinColumn(EmbroideryElement):
         if offset_px < -distance / 2.0:
             offset_px = -distance / 2.0
 
-        pos1 = pos1 + (pos1 - pos2).unit() * offset_px
-        pos2 = pos2 + (pos2 - pos1).unit() * offset_px
+        # chose how to apply on the rails
+
+        coeff1 = 1
+        coeff2 = 1
+
+        if offset_rails == 1:
+            coeff1 = 2
+            coeff2 = 0
+
+        if offset_rails == 2:
+            coeff1 = 0
+            coeff2 = 2   
+
+        pos1 = pos1 + (pos1 - pos2).unit() * offset_px * coeff1
+        pos2 = pos2 + (pos2 - pos1).unit() * offset_px * coeff2
 
         return pos1, pos2
 
@@ -753,13 +778,13 @@ class SatinColumn(EmbroideryElement):
                 distance_remaining -= segment_length
                 pos = segment_end
 
-    def plot_points_on_rails(self, spacing, offset_mm, offset_percent=0):
+    def plot_points_on_rails(self, spacing, offset_mm, offset_percent=0, offset_rails=0):
         # Take a section from each rail in turn, and plot out an equal number
         # of points on both rails.  Return the points plotted. The points will
         # be contracted or expanded by offset using self.offset_points().
 
         def add_pair(pos0, pos1):
-            pos0, pos1 = self.offset_points(pos0, pos1, offset_mm, offset_percent)
+            pos0, pos1 = self.offset_points(pos0, pos1, offset_mm, offset_percent, offset_rails)
             points[0].append(pos0)
             points[1].append(pos1)
 
@@ -941,7 +966,8 @@ class SatinColumn(EmbroideryElement):
         # print >> dbg, "satin", self.zigzag_spacing, self.pull_compensation
 
         patch = StitchGroup(color=self.color)
-        sides = self.plot_points_on_rails(self.zigzag_spacing, self.pull_compensation_mm, self.pull_compensation_percent)
+        sides = self.plot_points_on_rails(self.zigzag_spacing, self.pull_compensation_mm, self.pull_compensation_percent,
+                                          self.pull_compensation_rails)
 
         if self.max_stitch_length:
             return self.do_split_stitch(patch, sides)
@@ -971,7 +997,7 @@ class SatinColumn(EmbroideryElement):
 
         patch = StitchGroup(color=self.color)
 
-        sides = self.plot_points_on_rails(self.zigzag_spacing, self.pull_compensation_mm, self.pull_compensation_percent)
+        sides = self.plot_points_on_rails(self.zigzag_spacing, self.pull_compensation_mm, self.pull_compensation_percent, self.pull_compensation_rails)
 
         # "left" and "right" here are kind of arbitrary designations meaning
         # a point from the first and second rail respectively

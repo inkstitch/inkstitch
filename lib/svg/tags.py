@@ -125,6 +125,7 @@ inkstitch_attribs = [
     'e_stitch',
     'pull_compensation_mm',
     'pull_compensation_percent',
+    'pull_compensation_rails',
     'stroke_first',
     'random_split_factor',
     'random_first_rail_factor_in',
