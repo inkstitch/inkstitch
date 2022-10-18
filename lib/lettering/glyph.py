@@ -11,7 +11,8 @@ from ..commands import add_commands
 from ..elements import FillStitch, Stroke
 from ..svg import get_correction_transform, get_guides
 from ..svg.tags import (CONNECTION_END, SVG_GROUP_TAG,
-                        SVG_PATH_TAG, SVG_USE_TAG, XLINK_HREF)
+                        SVG_PATH_TAG, EMBROIDERABLE_TAGS, SVG_USE_TAG, XLINK_HREF)
+from ..marker import has_marker
 
 
 class Glyph(object):
@@ -47,9 +48,11 @@ class Glyph(object):
         self._process_commands()
 
     def _process_trim(self, trim):
+        # find the last path that does not carry a marker and add a trim there
         if trim:
-            for path_child in self.node.iterdescendants(SVG_PATH_TAG):
-                path = path_child
+            for path_child in self.node.iterdescendants(EMBROIDERABLE_TAGS):
+                if not has_marker(path_child):
+                    path = path_child
             if path.get('style') and "fill" in path.get('style'):
                 element = FillStitch(path)
             else:

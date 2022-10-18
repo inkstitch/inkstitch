@@ -74,14 +74,9 @@ class LetteringFrame(wx.Frame):
         self.trim_checkbox = wx.CheckBox(self, label=_("Add trims"))
         self.trim_checkbox.Bind(wx.EVT_CHECKBOX, lambda event: self.on_change("trim", event))
 
-        self.trim_after_letter_checkbox = wx.CheckBox(self, label=_("Add trim after each letter"))
-        self.trim_after_letter_checkbox.Bind(wx.EVT_CHECKBOX, lambda event: self.on_change("trim_after_letter", event))
-
-        self.trim_after_word_checkbox = wx.CheckBox(self, label=_("Add trim after each word"))
-        self.trim_after_word_checkbox.Bind(wx.EVT_CHECKBOX, lambda event: self.on_change("trim_after_word", event))
-
-        self.trim_after_line_checkbox = wx.CheckBox(self, label=_("Add trim after each line"))
-        self.trim_after_line_checkbox.Bind(wx.EVT_CHECKBOX, lambda event: self.on_change("trim_after_line", event))
+        self.trim_option_choice = wx.Choice(self, choices=["Never", "after each line", "after each word", "after each letter"],
+                                            name=_("Add trim after"))
+        self.trim_option_choice.Bind(wx.EVT_CHOICE, lambda event: self.on_trim_option_change(event))
 
         # text editor
         self.text_input_box = wx.StaticBox(self, wx.ID_ANY, label=_("Text"))
@@ -108,7 +103,8 @@ class LetteringFrame(wx.Frame):
             "text": "",
             "back_and_forth": False,
             "font": None,
-            "scale": 100
+            "scale": 100,
+            "trim_option": 0
         })
 
         if INKSTITCH_LETTERING in self.group.attrib:
@@ -127,9 +123,7 @@ class LetteringFrame(wx.Frame):
         """Make the settings in self.settings visible in the UI."""
         self.back_and_forth_checkbox.SetValue(bool(self.settings.back_and_forth))
         self.trim_checkbox.SetValue(bool(self.settings.trim))
-        self.trim_after_letter_checkbox.SetValue(bool(self.settings.trim_after_letter))
-        self.trim_after_word_checkbox.SetValue(bool(self.settings.trim_after_word))
-        self.trim_after_line_checkbox.SetValue(bool(self.settings.trim_after_line))
+        self.trim_option_choice.SetSelection(self.settings.trim_option)
         self.set_initial_font(self.settings.font)
         self.text_editor.SetValue(self.settings.text)
         self.scale_spinner.SetValue(self.settings.scale)
@@ -218,6 +212,10 @@ class LetteringFrame(wx.Frame):
         self.settings[attribute] = event.GetEventObject().GetValue()
         self.preview.update()
 
+    def on_trim_option_change(self, event=None):
+        self.settings.trim_option = self.trim_option_choice.GetCurrentSelection()
+        self.preview.update()
+
     def on_font_changed(self, event=None):
         font = self.fonts.get(self.font_chooser.GetValue(), self.default_font)
         self.settings.font = font.marked_custom_font_id
@@ -250,21 +248,14 @@ class LetteringFrame(wx.Frame):
         if font.auto_satin:
             self.trim_checkbox.Enable()
             self.trim_checkbox.SetValue(bool(self.settings.trim))
-            self.trim_after_letter_checkbox.Disable()
-            self.trim_after_letter_checkbox.SetValue(False)
-            self.trim_after_word_checkbox.Disable()
-            self.trim_after_word_checkbox.SetValue(False)
-            self.trim_after_line_checkbox.Disable()
-            self.trim_after_line_checkbox.SetValue(False)
+            self.trim_option_choice.Disable()
+            self.trim_option_choice.SetSelection(0)
+
         else:
             self.trim_checkbox.Disable()
             self.trim_checkbox.SetValue(False)
-            self.trim_after_letter_checkbox.Enable()
-            self.trim_after_letter_checkbox.SetValue(bool(self.settings.trim_after_letter))
-            self.trim_after_word_checkbox.Enable()
-            self.trim_after_word_checkbox.SetValue(bool(self.settings.trim_after_word))
-            self.trim_after_line_checkbox.Enable()
-            self.trim_after_line_checkbox.SetValue(bool(self.settings.trim_after_line))
+            self.trim_option_choice.Enable()
+            self.trim_option_choice.SetSelection(int(self.settings.trim_option))
 
         self.update_preview()
         self.Layout()
@@ -295,8 +286,8 @@ class LetteringFrame(wx.Frame):
         font = self.fonts.get(self.font_chooser.GetValue(), self.default_font)
         try:
             font.render_text(self.settings.text, destination_group, back_and_forth=self.settings.back_and_forth, trim=self.settings.trim,
-                             trim_after_letter=self.settings.trim_after_letter, trim_after_word=self.settings.trim_after_word,
-                             trim_after_line=self.settings.trim_after_line)
+                             trim_option=self.settings.trim_option)
+
         except FontError as e:
             if raise_error:
                 inkex.errormsg(_("Error: Text cannot be applied to the document.\n%s") % e)
@@ -378,9 +369,8 @@ class LetteringFrame(wx.Frame):
         left_option_sizer = wx.BoxSizer(wx.VERTICAL)
         left_option_sizer.Add(self.back_and_forth_checkbox, 1, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT, 5)
         left_option_sizer.Add(self.trim_checkbox, 1, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT | wx.BOTTOM, 5)
-        left_option_sizer.Add(self.trim_after_letter_checkbox, 1, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT | wx.BOTTOM, 5)
-        left_option_sizer.Add(self.trim_after_word_checkbox, 1, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT | wx.BOTTOM, 5)
-        left_option_sizer.Add(self.trim_after_line_checkbox, 1, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT | wx.BOTTOM, 5)
+        left_option_sizer.Add(wx.StaticText(self, wx.ID_ANY, "Add trims"), 1, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT | wx.BOTTOM, 5)
+        left_option_sizer.Add(self.trim_option_choice, 1, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT | wx.BOTTOM, 5)
 
         font_scale_sizer = wx.BoxSizer(wx.HORIZONTAL)
         font_scale_sizer.Add(wx.StaticText(self, wx.ID_ANY, "Scale"), 0, wx.LEFT | wx.ALIGN_CENTRE_VERTICAL, 0)

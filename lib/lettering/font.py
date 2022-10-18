@@ -179,9 +179,8 @@ class Font(object):
     def is_custom_font(self):
         return get_custom_font_dir() in self.path
 
-    def render_text(self, text, destination_group, variant=None, back_and_forth=True, trim=False, trim_after_letter=False,
-                    trim_after_word=False,
-                    trim_after_line=False):
+    def render_text(self, text, destination_group, variant=None, back_and_forth=True, trim=False, trim_option=0):
+
         """Render text into an SVG group element."""
         self._load_variants()
         if variant is None:
@@ -197,7 +196,7 @@ class Font(object):
             glyph_set = glyph_sets[i % 2]
             line = line.strip()
             letter_group = self._render_line(line, position, glyph_set,
-                                             trim_after_letter, trim_after_word, trim_after_line)
+                                             trim_option)
             if back_and_forth and self.reversible and i % 2 == 1:
                 letter_group[:] = reversed(letter_group)
             destination_group.append(letter_group)
@@ -229,8 +228,12 @@ class Font(object):
     def get_variant(self, variant):
         return self.variants.get(variant, self.variants[self.default_variant])
 
-    def _render_line(self, line, position, glyph_set, trim_after_letter=False, trim_after_word=False, trim_after_line=False):
+    def _render_line(self, line, position, glyph_set, trim_option=0):
         """Render a line of text.
+        trim_option == 0 --> no added trims
+        trim_option == 1  --> add a trim at the end of each line
+        trim_option == 2  --> add a trim after  each word
+        trim_option == 3  --> add a trim after each lettr
 
         An SVG XML node tree will be returned, with an svg:g at its root.  If
         the font metadata requests it, Auto-Satin will be applied.
@@ -267,9 +270,9 @@ class Font(object):
                     glyph = glyph_set[self.default_glyph]
                 if glyph is not None:
                     if i == len(line)-1:      # last glyph of line
-                        trim = trim_after_letter or trim_after_word or trim_after_line
+                        trim = trim_option > 0
                     else:
-                        trim = trim_after_letter or (trim_after_word and end_of_word)
+                        trim = trim_option == 3 or (trim_option == 2 and end_of_word)
                     if trim and not glyph.finish_with_trim():
                         glyph = Glyph(glyph.node, trim)
                     node = self._render_glyph(glyph, position, character, last_character)
