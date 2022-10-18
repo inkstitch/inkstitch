@@ -863,7 +863,7 @@ class SatinColumn(EmbroideryElement):
                     if self.random_first_rail_factor_out:
                         increase = self.random_first_rail_factor_out
                     if self.random_first_rail_factor_in or self.random_first_rail_factor_out:
-                        decalage0 = random.uniform(-decrease/100, increase/100)
+                        decalage0 = random.uniform(-decrease / 100, increase / 100)
                         randomizepos0 = pos0 + (pos0 - pos1) * decalage0
                     decrease = 0
                     increase = 0
@@ -873,10 +873,10 @@ class SatinColumn(EmbroideryElement):
                         increase = self.random_second_rail_factor_out
                     if self.random_second_rail_factor_in or self.random_second_rail_factor_out:
                         decalage1 = random.uniform(-decrease / 100, increase / 100)
-                        randomizepos1 = pos1 + (pos1 - pos0)*decalage1
+                        randomizepos1 = pos1 + (pos1 - pos0) * decalage1
                     add_pair(randomizepos0, randomizepos1)
                     if self.random_zigzag_spacing:
-                        to_travel = spacing * (random.uniform(1, 1+self.random_zigzag_spacing/100))
+                        to_travel = spacing * (random.uniform(1, 1 + self.random_zigzag_spacing/100))
                     else:
                         to_travel = spacing
 
