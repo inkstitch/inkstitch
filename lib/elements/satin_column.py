@@ -853,8 +853,8 @@ class SatinColumn(EmbroideryElement):
                     old_center = new_center
 
                 if to_travel <= 0:
-                    decalage0 = random.uniform(-self.random_first_rail_factor_in / 100, self.random_first_rail_factor_out / 100)
-                    decalage1 = random.uniform(-self.random_second_rail_factor_in / 100, self.random_second_rail_factor_out / 100)
+                    decalage0 = random.uniform(-self.random_first_rail_factor_in , self.random_first_rail_factor_out ) / 100
+                    decalage1 = random.uniform(-self.random_second_rail_factor_in , self.random_second_rail_factor_out ) / 100
 
                     pos0 = pos0 + (pos0 - pos1) * decalage0
                     pos1 = pos1 + (pos1 - pos0) * decalage1
