@@ -6,7 +6,7 @@ import random
 from copy import deepcopy
 from itertools import chain
 
-from inkex import paths, errormsg
+from inkex import paths
 from shapely import affinity as shaffinity
 from shapely import geometry as shgeo
 from shapely.ops import nearest_points
@@ -853,13 +853,11 @@ class SatinColumn(EmbroideryElement):
                     old_center = new_center
 
                 if to_travel <= 0:
-                    decalage0 = random.uniform(-self.random_first_rail_factor_in , self.random_first_rail_factor_out ) / 100
-                    decalage1 = random.uniform(-self.random_second_rail_factor_in , self.random_second_rail_factor_out ) / 100
 
-                    pos0 = pos0 + (pos0 - pos1) * decalage0
-                    pos1 = pos1 + (pos1 - pos0) * decalage1
+                    decalage0 = random.uniform(-self.random_first_rail_factor_in, self.random_first_rail_factor_out) / 100
+                    decalage1 = random.uniform(-self.random_second_rail_factor_in, self.random_second_rail_factor_out) / 100
 
-                    add_pair(pos0,pos1)
+                    add_pair(pos0 + (pos0 - pos1) * decalage0, pos1 + (pos1 - pos0) * decalage1)
 
                     to_travel = spacing * (random.uniform(1, 1 + self.random_zigzag_spacing/100))
 
@@ -913,9 +911,8 @@ class SatinColumn(EmbroideryElement):
 
         patch = StitchGroup(color=self.color)
 
-        sides = self.plot_points_on_rails(self.zigzag_underlay_spacing / 2.0,-self.zigzag_underlay_inset)
-     
-       
+        sides = self.plot_points_on_rails(self.zigzag_underlay_spacing / 2.0, -self.zigzag_underlay_inset)
+
         if self._center_walk_is_odd():
             sides = [list(reversed(sides[0])), list(reversed(sides[1]))]
 
@@ -937,9 +934,8 @@ class SatinColumn(EmbroideryElement):
             patch.add_stitch(point)
 
         patch.add_tags(("satin_column", "satin_column_underlay", "satin_zigzag_underlay"))
-        
+
         return patch
-  
 
     def do_satin(self):
         # satin: do a zigzag pattern, alternating between the paths.  The
@@ -1026,11 +1022,11 @@ class SatinColumn(EmbroideryElement):
         split_count = count or int(-(-distance // max_stitch_length))
         for i in range(split_count):
             line = shgeo.LineString((left, right))
-            
-            random_move= 0
-            if self.random_split_factor and  i != split_count-1:
+
+            random_move = 0
+            if self.random_split_factor and i != split_count-1:
                 random_move = random.uniform(-self.random_split_factor / 100, self.random_split_factor / 100)
-                
+
             split_point = line.interpolate((i + 1 + random_move) / split_count, normalized=True)
             points.append(Point(split_point.x, split_point.y))
         return [points, split_count]
