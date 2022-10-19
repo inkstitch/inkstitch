@@ -13,7 +13,7 @@ from shapely.ops import nearest_points
 
 from ..i18n import _
 from ..stitch_plan import StitchGroup
-from ..svg import PIXELS_PER_MM, line_strings_to_csp, point_lists_to_csp
+from ..svg import line_strings_to_csp, point_lists_to_csp
 from ..utils import Point, cache, collapse_duplicate_point, cut
 from .element import EmbroideryElement, param
 from .validation import ValidationError, ValidationWarning
@@ -714,7 +714,7 @@ class SatinColumn(EmbroideryElement):
         distance = (pos1 - pos2).length()
         offset_px = 0
         if offset_mm:
-            offset_px += offset_mm # * PIXELS_PER_MM
+            offset_px += offset_mm
         if offset_percent:
             offset_px += (offset_percent / 100 * distance)
 
@@ -738,7 +738,7 @@ class SatinColumn(EmbroideryElement):
 
         if offset_rails == 2:
             coeff1 = 0
-            coeff2 = 2   
+            coeff2 = 2
 
         pos1 = pos1 + (pos1 - pos2).unit() * offset_px * coeff1
         pos2 = pos2 + (pos2 - pos1).unit() * offset_px * coeff2
