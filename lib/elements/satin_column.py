@@ -6,7 +6,7 @@ import random
 from copy import deepcopy
 from itertools import chain
 
-from inkex import paths
+from inkex import paths, errormsg
 from shapely import affinity as shaffinity
 from shapely import geometry as shgeo
 from shapely.ops import nearest_points
@@ -707,16 +707,16 @@ class SatinColumn(EmbroideryElement):
         center_walk, _ = self.plot_points_on_rails(self.zigzag_spacing, -100000)
         return shgeo.LineString(center_walk)
 
-    def offset_points(self, pos1, pos2, offset_mm, offset_percent=0, offset_rails=0):
+    def offset_points(self, pos1, pos2, offset, offset_percent=0, offset_rails=0):
         # Expand or contract two points about their midpoint.  This is
         # useful for pull compensation and insetting underlay.
 
         distance = (pos1 - pos2).length()
         offset_px = 0
-        if offset_mm:
-            offset_px += offset_mm
+        if offset:
+            offset_px += offset
         if offset_percent:
-            offset_px += (offset_percent / 100 * distance)
+            offset_px += ((offset_percent / 100) * distance)
 
         if distance < 0.0001:
             # if they're the same point, we don't know which direction
@@ -778,13 +778,13 @@ class SatinColumn(EmbroideryElement):
                 distance_remaining -= segment_length
                 pos = segment_end
 
-    def plot_points_on_rails(self, spacing, offset_mm, offset_percent=0, offset_rails=0):
+    def plot_points_on_rails(self, spacing, offset, offset_percent=0, offset_rails=0):
         # Take a section from each rail in turn, and plot out an equal number
         # of points on both rails.  Return the points plotted. The points will
         # be contracted or expanded by offset using self.offset_points().
 
         def add_pair(pos0, pos1):
-            pos0, pos1 = self.offset_points(pos0, pos1, offset_mm, offset_percent, offset_rails)
+            pos0, pos1 = self.offset_points(pos0, pos1, offset, offset_percent, offset_rails)
             points[0].append(pos0)
             points[1].append(pos1)
 
@@ -853,32 +853,15 @@ class SatinColumn(EmbroideryElement):
                     old_center = new_center
 
                 if to_travel <= 0:
-                    # add some randomness to the positions, but use unrandomned position to compute next ones
-                    randomizepos0 = pos0
-                    randomizepos1 = pos1
-                    decrease = 0
-                    increase = 0
-                    if self.random_first_rail_factor_in:
-                        decrease = self.random_first_rail_factor_in
-                    if self.random_first_rail_factor_out:
-                        increase = self.random_first_rail_factor_out
-                    if self.random_first_rail_factor_in or self.random_first_rail_factor_out:
-                        decalage0 = random.uniform(-decrease / 100, increase / 100)
-                        randomizepos0 = pos0 + (pos0 - pos1) * decalage0
-                    decrease = 0
-                    increase = 0
-                    if self.random_second_rail_factor_in:
-                        decrease = self.random_second_rail_factor_in
-                    if self.random_second_rail_factor_out:
-                        increase = self.random_second_rail_factor_out
-                    if self.random_second_rail_factor_in or self.random_second_rail_factor_out:
-                        decalage1 = random.uniform(-decrease / 100, increase / 100)
-                        randomizepos1 = pos1 + (pos1 - pos0) * decalage1
-                    add_pair(randomizepos0, randomizepos1)
-                    if self.random_zigzag_spacing:
-                        to_travel = spacing * (random.uniform(1, 1 + self.random_zigzag_spacing/100))
-                    else:
-                        to_travel = spacing
+                    decalage0 = random.uniform(-self.random_first_rail_factor_in / 100, self.random_first_rail_factor_out / 100)
+                    decalage1 = random.uniform(-self.random_second_rail_factor_in / 100, self.random_second_rail_factor_out / 100)
+
+                    pos0 = pos0 + (pos0 - pos1) * decalage0
+                    pos1 = pos1 + (pos1 - pos0) * decalage1
+
+                    add_pair(pos0,pos1)
+
+                    to_travel = spacing * (random.uniform(1, 1 + self.random_zigzag_spacing/100))
 
         if to_travel > 0:
             add_pair(pos0, pos1)
@@ -930,9 +913,9 @@ class SatinColumn(EmbroideryElement):
 
         patch = StitchGroup(color=self.color)
 
-        sides = self.plot_points_on_rails(self.zigzag_underlay_spacing / 2.0,
-                                          -self.zigzag_underlay_inset)
-
+        sides = self.plot_points_on_rails(self.zigzag_underlay_spacing / 2.0,-self.zigzag_underlay_inset)
+     
+       
         if self._center_walk_is_odd():
             sides = [list(reversed(sides[0])), list(reversed(sides[1]))]
 
@@ -954,7 +937,9 @@ class SatinColumn(EmbroideryElement):
             patch.add_stitch(point)
 
         patch.add_tags(("satin_column", "satin_column_underlay", "satin_zigzag_underlay"))
+        
         return patch
+  
 
     def do_satin(self):
         # satin: do a zigzag pattern, alternating between the paths.  The
@@ -1041,11 +1026,12 @@ class SatinColumn(EmbroideryElement):
         split_count = count or int(-(-distance // max_stitch_length))
         for i in range(split_count):
             line = shgeo.LineString((left, right))
-            decalage = 0
-            if self.random_split_factor and i != 0:
-                random_value = self.random_split_factor / 100
-                decalage = random.uniform(-random_value, random_value)
-            split_point = line.interpolate((i + decalage) / split_count, normalized=True)
+            
+            random_move= 0
+            if self.random_split_factor and  i != split_count-1:
+                random_move = random.uniform(-self.random_split_factor / 100, self.random_split_factor / 100)
+                
+            split_point = line.interpolate((i + 1 + random_move) / split_count, normalized=True)
             points.append(Point(split_point.x, split_point.y))
         return [points, split_count]
 
