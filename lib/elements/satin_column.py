@@ -201,7 +201,7 @@ class SatinColumn(EmbroideryElement):
         unit='mm',
         type='float',
         default=0)
-    def pull_compensation_mm(self):
+    def pull_compensation(self):
         # In satin stitch, the stitches have a tendency to pull together and
         # narrow the entire column.  We can compensate for this by stitching
         # wider than we desire the column to end up.
@@ -714,7 +714,7 @@ class SatinColumn(EmbroideryElement):
         distance = (pos1 - pos2).length()
         offset_px = 0
         if offset_mm:
-            offset_px += offset_mm * PIXELS_PER_MM
+            offset_px += offset_mm # * PIXELS_PER_MM
         if offset_percent:
             offset_px += (offset_percent / 100 * distance)
 
@@ -966,7 +966,7 @@ class SatinColumn(EmbroideryElement):
         # print >> dbg, "satin", self.zigzag_spacing, self.pull_compensation
 
         patch = StitchGroup(color=self.color)
-        sides = self.plot_points_on_rails(self.zigzag_spacing, self.pull_compensation_mm, self.pull_compensation_percent,
+        sides = self.plot_points_on_rails(self.zigzag_spacing, self.pull_compensation, self.pull_compensation_percent,
                                           self.pull_compensation_rails)
 
         if self.max_stitch_length:
@@ -997,7 +997,7 @@ class SatinColumn(EmbroideryElement):
 
         patch = StitchGroup(color=self.color)
 
-        sides = self.plot_points_on_rails(self.zigzag_spacing, self.pull_compensation_mm, self.pull_compensation_percent, self.pull_compensation_rails)
+        sides = self.plot_points_on_rails(self.zigzag_spacing, self.pull_compensation, self.pull_compensation_percent, self.pull_compensation_rails)
 
         # "left" and "right" here are kind of arbitrary designations meaning
         # a point from the first and second rail respectively
