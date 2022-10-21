@@ -102,7 +102,7 @@ class SatinColumn(EmbroideryElement):
     @param('random_split_factor',
            _('Random Split Factor'),
            tooltip=_('randomize position for split stitches.'),
-           type='int', unit="%")
+           type='int', unit="%", sort_index=70)
     def random_split_factor(self):
         return min(max(self.get_int_param("random_split_factor", 0), 0), 100)
 
@@ -110,7 +110,7 @@ class SatinColumn(EmbroideryElement):
     @param('random_first_rail_factor_in',
            _('First Rail Random  Factor inside'),
            tooltip=_('shorten stitch around  first rail at most this percent.'),
-           type='int', unit="%")
+           type='int', unit="%", sort_index=60)
     def random_first_rail_factor_in(self):
         return min(max(self.get_int_param("random_first_rail_factor_in", 0), 0), 100)
 
@@ -118,7 +118,7 @@ class SatinColumn(EmbroideryElement):
     @param('random_first_rail_factor_out',
            _('First Rail Random  Factor outside'),
            tooltip=_('lengthen stitch around  first rail at most this percent.'),
-           type='int', unit="%")
+           type='int', unit="%", sort_index=61)
     def random_first_rail_factor_out(self):
         return max(self.get_int_param("random_first_rail_factor_out", 0), 0)
 
@@ -126,7 +126,7 @@ class SatinColumn(EmbroideryElement):
     @param('random_second_rail_factor_in',
            _('Second Rail Random  Factor inside'),
            tooltip=_('shorten stitch  around second rail at most this percent.'),
-           type='int', unit="%")
+           type='int', unit="%", sort_index=62)
     def random_second_rail_factor_in(self):
         return min(max(self.get_int_param("random_second_rail_factor_in", 0), 0), 100)
 
@@ -134,7 +134,7 @@ class SatinColumn(EmbroideryElement):
     @param('random_second_rail_factor_out',
            _('Second Rail Random  Factor outside'),
            tooltip=_('lengthen stitch  around second rail at most this percent.'),
-           type='int', unit="%")
+           type='int', unit="%", sort_index=63)
     def random_second_rail_factor_out(self):
         return max(self.get_int_param("random_second_rail_factor_out", 0), 0)
 
@@ -175,7 +175,7 @@ class SatinColumn(EmbroideryElement):
     @param('random_zigzag_spacing',
            _('Zig-zag spacing randomness(peak-to-peak)'),
            tooltip=_('percentage  of randomness  of Peak-to-peak distance between zig-zags.'),
-           type='int', unit="%")
+           type='int', unit="%", sort_index=64)
     def random_zigzag_spacing(self):
         # peak-to-peak distance between zigzags
         return max(self.get_int_param("random_zigzag_spacing", 0), 0)
@@ -304,6 +304,10 @@ class SatinColumn(EmbroideryElement):
            default="")
     def zigzag_underlay_max_stitch_length(self):
         return self.get_float_param("zigzag_underlay_max_stitch_length_mm") or None
+
+    @property
+    def use_seed(self):
+        return self.get_int_param("use_seed", 0)
 
     @property
     @cache
@@ -1051,6 +1055,16 @@ class SatinColumn(EmbroideryElement):
         # The algorithm will draw zigzags between each consecutive pair of
         # beziers.  The boundary points between beziers serve as "checkpoints",
         # allowing the user to control how the zigzags flow around corners.
+
+        # If no seed is defined, compute one randomly using time to seed,  otherwise, use stored seed
+
+        if self.use_seed == 0:
+            random.seed()
+            x = random.randint(1, 10000)
+            random.seed(x)
+            self.set_param("use_seed", x)
+        else:
+            random.seed(self.use_seed)
 
         patch = StitchGroup(color=self.color)
 

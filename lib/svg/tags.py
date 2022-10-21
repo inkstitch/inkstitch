@@ -133,6 +133,7 @@ inkstitch_attribs = [
     'random_second_rail_factor_in',
     'random_second_rail_factor_out',
     'random_zigzag_spacing',
+    'use_seed',
     # stitch_plan
     'invisible_layers',
     # Legacy
