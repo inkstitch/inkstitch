@@ -100,7 +100,7 @@ def stitch_row(stitches, beg, end, angle, row_spacing, max_stitch_length, stagge
 
 
 def intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing=None, flip=False,
-                                  row_spacing_randomness=0):
+                                  random_row_spacing=0):
     # the max line length I'll need to intersect the whole shape is the diagonal
     (minx, miny, maxx, maxy) = shape.bounds
     upper_left = InkstitchPoint(minx, miny)
@@ -146,8 +146,8 @@ def intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing=Non
     rows = []
     while current_row_y < end:
 
-        if row_spacing_randomness:
-            spacing_variation = random.uniform(-row_spacing_randomness / 100, row_spacing_randomness / 100)
+        if random_row_spacing:
+            spacing_variation = random.uniform(-random_row_spacing / 100, random_row_spacing / 100)
         p0 = center + normal * (current_row_y+spacing_variation) + direction * half_length
         p1 = center + normal * (current_row_y+spacing_variation) - direction * half_length
         endpoints = [p0.as_tuple(), p1.as_tuple()]

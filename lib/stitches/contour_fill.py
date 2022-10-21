@@ -94,7 +94,7 @@ def _orient_tree(tree, clockwise=True):
         node.val = _orient_linear_ring(node.val, clockwise)
 
 
-def offset_polygon(polygon, offset, join_style, clockwise, row_spacing_randomness=0):
+def offset_polygon(polygon, offset, join_style, clockwise, random_row_spacing=0):
     """
     Convert a polygon to a tree of isocontours.
 
@@ -136,7 +136,7 @@ def offset_polygon(polygon, offset, join_style, clockwise, row_spacing_randomnes
         current_holes = active_holes.pop()
 
         outer, inners = _offset_polygon_and_holes(tree, current_poly, current_holes, offset, join_style,
-                                                  row_spacing_randomness=row_spacing_randomness)
+                                                  random_row_spacing=random_row_spacing)
         polygons = _match_polygons_and_holes(outer, inners)
 
         for polygon in polygons.geoms:
@@ -159,10 +159,10 @@ def offset_polygon(polygon, offset, join_style, clockwise, row_spacing_randomnes
     return tree
 
 
-def _offset_polygon_and_holes(tree, poly, holes, offset, join_style, row_spacing_randomness=0):
+def _offset_polygon_and_holes(tree, poly, holes, offset, join_style, random_row_spacing=0):
     random_offset = offset
-    if row_spacing_randomness:
-        random_offset = offset*(1 + random.uniform(-row_spacing_randomness / 100, row_spacing_randomness / 100))
+    if random_row_spacing:
+        random_offset = offset*(1 + random.uniform(-random_row_spacing / 100, random_row_spacing / 100))
 
     outer = _offset_linear_ring(
         tree.nodes[poly].val,

@@ -59,15 +59,15 @@ def auto_fill(shape,
               staggers,
               skip_last,
               starting_point,
-              feathering_in=0,
-              feathering_out=0,
-              length_decrease=0,
-              length_increase=0,
-              angle_variation=0,
+              random_feathering_in=0,
+              random_feathering_out=0,
+              random_stitch_length_decrease=0,
+              random_stitch_length_increase=0,
+              random_angle=0,
               ending_point=None,
               underpath=True,
-              row_spacing_randomness=0):
-    rows = intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing, row_spacing_randomness=row_spacing_randomness)
+              random_row_spacing=0):
+    rows = intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing, random_row_spacing=random_row_spacing)
     if not rows:
         # Small shapes may not intersect with the grating at all.
         return fallback(shape, running_stitch_length, running_stitch_tolerance)
@@ -82,8 +82,8 @@ def auto_fill(shape,
     path = find_stitch_path(fill_stitch_graph, travel_graph, starting_point, ending_point)
     result = path_to_stitches(path, travel_graph, fill_stitch_graph, angle, row_spacing,
                               max_stitch_length, running_stitch_length, running_stitch_tolerance,
-                              staggers, skip_last, feathering_in, feathering_out, length_decrease,
-                              length_increase, angle_variation)
+                              staggers, skip_last, random_feathering_in, random_feathering_out, random_stitch_length_decrease,
+                              random_stitch_length_increase, random_angle)
 
     return result
 
