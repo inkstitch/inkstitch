@@ -110,6 +110,10 @@ The bash environment needs some paths for the installed software. So let's set i
   python -m pip install -r requirements.txt
   python -m pip install pyinstaller
   ```
+* For debugging with pydevd also run:
+  ```
+  python -m pip install pydevd
+  ```
 
 ## Setup yarn
 
