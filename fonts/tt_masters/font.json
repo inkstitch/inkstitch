@@ -7,6 +7,7 @@
     "default_glyph": "?",
     "min_scale": 1.0,
     "max_scale": 3.0,
+    "size": 18.5,
     "horiz_adv_x_default": 63,
     "horiz_adv_x_space": 22,
     "units_per_em": 100,

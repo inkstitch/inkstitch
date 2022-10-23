@@ -26,6 +26,7 @@ class LetteringGenerateJson(InkstitchExtension):
         self.arg_parser.add_argument("-r", "--reversible", type=Boolean, default="true", dest="reversible")
         self.arg_parser.add_argument("-u", "--letter-case", type=str, default="", dest="letter_case")
         self.arg_parser.add_argument("-g", "--default-glyph", type=str, default="", dest="default_glyph")
+        self.arg_parser.add_argument("-z", "--size", type=float, default=15, dest="size")
         self.arg_parser.add_argument("-i", "--min-scale", type=float, default=1.0, dest="min_scale")
         self.arg_parser.add_argument("-a", "--max-scale", type=float, default=1.0, dest="max_scale")
         self.arg_parser.add_argument("-c", "--use-custom-leading", type=Boolean, default="false", dest="use_custom_leading")
@@ -71,6 +72,7 @@ class LetteringGenerateJson(InkstitchExtension):
                 'reversible': self.options.reversible,
                 'letter_case': self.options.letter_case,
                 'default_glyph': self.options.default_glyph,
+                'size': self.options.size,
                 'min_scale': round(self.options.min_scale, 1),
                 'max_scale': round(self.options.max_scale, 1),
                 'horiz_adv_x_default': letter_spacing,
