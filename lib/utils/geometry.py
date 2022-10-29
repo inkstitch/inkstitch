@@ -133,6 +133,13 @@ class Point:
     def from_tuple(cls, point):
         return cls(point[0], point[1])
 
+    @classmethod
+    def from_iterable(cls, point):
+        tuple_ = (x for x in point)
+        if len(tuple_) != 2:
+            raise ValueError(f"Expected iterable of length 2, got {tuple_}")
+        return cls.from_tuple(tuple_)
+
     def __json__(self):
         return vars(self)
 
@@ -201,6 +208,10 @@ class Point:
 
     def __len__(self):
         return 2
+
+    def isclose(self, other: "Point", rel_tol: float) -> bool:
+        return (math.isclose(self.x, other.x, rel_tol=rel_tol)
+                and math.isclose(self.y, other.y, rel_tol=rel_tol))
 
 
 def line_string_to_point_list(line_string):
