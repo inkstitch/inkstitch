@@ -6,7 +6,7 @@
 try:
     from functools import lru_cache
 except ImportError:
-    from backports.functools_lru_cache import lru_cache
+    from backports.functools_lru_cache import lru_cache  # type: ignore[no-redef]
 
 # simplify use of lru_cache decorator
 

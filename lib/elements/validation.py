@@ -2,6 +2,7 @@
 #
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
+from typing import List, Any
 
 from shapely.geometry import Point as ShapelyPoint
 
@@ -23,7 +24,7 @@ class ValidationMessage(object):
     # Subclasses will fill these in.
     name = None
     description = None
-    steps_to_solve = []
+    steps_to_solve: List[Any] = []
 
     def __init__(self, position=None, label=""):
         if isinstance(position, ShapelyPoint):

@@ -22,3 +22,6 @@ locales/
 /PROFILE
 /profile_stats
 /profile_stats.prof
+
+# installed as a submodule
+pyembroidery/
