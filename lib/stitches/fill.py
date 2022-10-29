@@ -3,10 +3,12 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
+from typing import List
 import math
 
 import shapely
 
+from lib.types import Shape, GratingSegments
 from ..stitch_plan import Stitch
 from ..svg import PIXELS_PER_MM
 from ..utils import Point as InkstitchPoint
@@ -92,7 +94,20 @@ def stitch_row(stitches, beg, end, angle, row_spacing, max_stitch_length, stagge
         stitches.append(end)
 
 
-def intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing=None, flip=False):
+def intersect_region_with_grating(shape: Shape,
+                                  angle: float,
+                                  row_spacing: int,
+                                  end_row_spacing: int = None,
+                                  flip=False) -> List[GratingSegments]:
+    """Intersects the given region with a grating.
+
+    :param shape: The shape to intersect (a multipolygon)
+    :param angle: The angle of the grating
+    :param row_spacing: The spacing of the rows
+    :param end_row_spacing: ???  FIXME: interpret
+    :param flip: Whether to the reverse the orientation of each returned segment.
+    :returns: A list of grating segments, one for each polygon in the input multipolygon.
+    """
     # the max line length I'll need to intersect the whole shape is the diagonal
     (minx, miny, maxx, maxy) = shape.bounds
     upper_left = InkstitchPoint(minx, miny)
