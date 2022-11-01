@@ -79,6 +79,10 @@ jobs:
           python -m pip install scipy==1.9.0 --no-binary scipy
 
           echo "${{ env.pythonLocation }}\bin" >> $GITHUB_PATH
+      - name: run pytest
+        shell: bash
+        run: |
+          python -m pytest
       - shell: bash
         run: |
           make dist
@@ -116,6 +120,10 @@ jobs:
           python -m pip install pyinstaller
 
           echo "${{ env.pythonLocation }}\bin" >> $GITHUB_PATH
+      - name: run pytest
+        shell: bash
+        run: |
+          python -m pytest
       - shell: bash
         run: |
           make dist
@@ -179,6 +187,10 @@ jobs:
           pip install pyinstaller
 
           echo "${{ env.pythonLocation }}/bin" >> $GITHUB_PATH
+      - name: run pytest
+        shell: bash
+        run: |
+          python -m pytest
       - shell: bash
         run: |
           make dist
