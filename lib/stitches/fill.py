@@ -8,7 +8,7 @@ import math
 
 import shapely
 
-from lib.types import Shape, GratingSegments
+from lib.types import Shape, RowSegments
 from ..stitch_plan import Stitch
 from ..svg import PIXELS_PER_MM
 from ..utils import Point as InkstitchPoint
@@ -98,15 +98,21 @@ def intersect_region_with_grating(shape: Shape,
                                   angle: float,
                                   row_spacing: int,
                                   end_row_spacing: int = None,
-                                  flip=False) -> List[GratingSegments]:
+                                  flip=False) -> List[RowSegments]:
     """Intersects the given region with a grating.
 
-    :param shape: The shape to intersect (a multipolygon)
+    :param shape: The shape to intersect (a single polygon).
     :param angle: The angle of the grating
     :param row_spacing: The spacing of the rows
     :param end_row_spacing: ???  FIXME: interpret
     :param flip: Whether to the reverse the orientation of each returned segment.
-    :returns: A list of grating segments, one for each polygon in the input multipolygon.
+        ??? FIXME: what is the purpose of this parameter?
+    :returns: A list of row segments. Each RowSegments object in the list
+        corresponds to one row of the grating, and each segment in a RowSegments
+        corresponds to the (possibly disconnected) intesection of `shape` with
+        that row of the grating. An example is a horizontal grating intersected
+        with an `H` shape. At the top of the H, a single row of the grating
+        intersects the H in two disconnected segments.
     """
     # the max line length I'll need to intersect the whole shape is the diagonal
     (minx, miny, maxx, maxy) = shape.bounds
