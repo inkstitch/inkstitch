@@ -32,9 +32,9 @@ jobs:
 
       - name: Get yarn cache directory path
         id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(yarn cache dir)"
+        run: echo "dir=$(yarn cache dir)" >> $GITHUB_OUTPUT
 
-      - uses: actions/cache@v2
+      - uses: actions/cache@v3
         id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
         with:
           path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
@@ -52,7 +52,7 @@ jobs:
           sudo apt-get install gettext
 
           # for wxPython
-          sudo apt install glib-networking libsdl1.2-dev libsdl2-2.0-0
+          sudo apt install glib-networking libsdl2-dev libsdl2-2.0-0
 
           # for PyGObject
           sudo apt install libgirepository1.0-dev libcairo2-dev

@@ -29,7 +29,7 @@ jobs:
           sudo apt-get update
           sudo apt install gettext
           # for wxPython
-          sudo apt install glib-networking libsdl1.2-dev
+          sudo apt install glib-networking libsdl2-dev libsdl2-2.0-0
           # for PyGObject
           sudo apt install libgirepository1.0-dev libcairo2-dev
           # for shapely
