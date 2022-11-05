@@ -149,7 +149,7 @@ def take_only_line_strings(thing):
 
 def apply_stitches(line, max_stitch_length, num_staggers, row_spacing, row_num):
     if num_staggers == 0:
-        num_staggers = 1 # sanity check to avoid division by zero.
+        num_staggers = 1  # sanity check to avoid division by zero.
     start = ((row_num / num_staggers) % 1) * max_stitch_length
     projections = np.arange(start, line.length, max_stitch_length)
     points = np.array([line.interpolate(projection).coords[0] for projection in projections])

@@ -216,7 +216,8 @@ class FillStitch(EmbroideryElement):
     @property
     @param('staggers',
            _('Stagger rows this many times before repeating'),
-           tooltip=_('Length of the cycle by which successive stitch rows are staggered. Fractional values are allowed and can have less visible diagonals than integer values.'),
+           tooltip=_('Length of the cycle by which successive stitch rows are staggered.'
+                     'Fractional values are allowed and can have less visible diagonals than integer values.'),
            type='int',
            sort_index=6,
            select_items=[('fill_method', 0), ('fill_method', 2), ('fill_method', 3)],
