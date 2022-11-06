@@ -104,9 +104,12 @@ def intersect_region_with_grating(shape: Shape,
     :param shape: The shape to intersect (a single polygon).
     :param angle: The angle of the grating
     :param row_spacing: The spacing of the rows
-    :param end_row_spacing: ???  FIXME: interpret
+    :param end_row_spacing: The row spacing at the end of the grating. Used
+        to produce gradient blending. See
+        https://inkstitch.org/docs/features/#color-blending
     :param flip: Whether to the reverse the orientation of each returned segment.
-        ??? FIXME: what is the purpose of this parameter?
+        Used for the legacy (manual) fill stitch. See
+        https://inkstitch.org/docs/params/#legacy-fill-params
     :returns: A list of row segments. Each RowSegments object in the list
         corresponds to one row of the grating, and each segment in a RowSegments
         corresponds to the (possibly disconnected) intesection of `shape` with
