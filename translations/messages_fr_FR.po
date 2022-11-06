@@ -2,21 +2,21 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-07-15 02:57+0000\n"
-"PO-Revision-Date: 2022-09-13 02:49\n"
+"POT-Creation-Date: 2022-11-06 01:52+0000\n"
+"PO-Revision-Date: 2022-11-06 01:54\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.10.3\n"
+"Generated-By: Babel 2.11.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: easygettext\n"
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-15 02:57+0000\n"
+"POT-Creation-Date: 2022-11-06 01:52+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -419,7 +419,7 @@ msgstr "Pacificlo tiny"
 #. description of font in fonts/pacificlo_tiny
 #: inkstitch-fonts-metadata.py:152
 msgid "This font is an altered version  of Pacificlo, to allow a greater scaling down. Both thin thread (60) and thin needle (60) are mandatory. The altered embroidery parameters of this font allow to scale down the original Pacificlo font between 25% (for a 5mm font ) and 55 % (for a 11mm font)."
-msgstr "Cette police est une version modifiée de Pacificlo pour permettre une réduction plus forte de la taille. L'usage de fil fin (60) et d'une aiguille fine (60) est obligatoire. Le paramétrage modifié de cette  police permet de réduire la police Amitaclo originelle entre 25% (pour une police de 7mm) et 55% (pour une police de 16mm)."
+msgstr "Cette police est une version modifiée de Pacificlo pour permettre une réduction plus forte de la taille. L'usage de fil fin (60) et d'une aiguille fine (60) est obligatoire. Le paramétrage modifié de cette  police permet de réduire la police Pacificlo originelle entre 25% (pour une police de 7mm) et 55% (pour une police de 16mm)."
 
 #. name of font in fonts/roman_ags
 #: inkstitch-fonts-metadata.py:154
@@ -971,8 +971,8 @@ msgid "Stagger rows this many times before repeating"
 msgstr "Décaler les rangées autant de fois avant de répéter"
 
 #: lib/elements/fill_stitch.py:219
-msgid "Setting this dictates how many rows apart the stitches will be before they fall in the same column position."
-msgstr "Ce paramétrage définit le nombre de rangées nécessaires pour que les points retrouvent une même position de colonne."
+msgid "Length of the cycle by which successive stitch rows are staggered. Fractional values are allowed and can have less visible diagonals than integer values."
+msgstr ""
 
 #: lib/elements/fill_stitch.py:374
 msgid "Running stitch length (traversal between sections)"
@@ -1466,7 +1466,7 @@ msgstr "Mettre à l'échelle sur l'axe"
 msgid "Scale axis for satin guided ripple stitches."
 msgstr "Axe de mise à l'échelle pour les ondulations guidées."
 
-#: lib/elements/stroke.py:249 print/templates/ui.html:172
+#: lib/elements/stroke.py:249 print/templates/ui.html:181
 msgid "None"
 msgstr "Aucune"
 
@@ -1714,13 +1714,17 @@ msgstr "Ink/Stitch ne peut pas automatiquement trouver votre dossier de palette 
 msgid "Please choose one or more commands to add."
 msgstr "Veuillez choisir une ou plusieurs commandes à ajouter."
 
-#: lib/extensions/lettering.py:44 lib/extensions/lettering.py:424
+#: lib/extensions/lettering.py:37 lib/extensions/lettering.py:473
 msgid "Ink/Stitch Lettering"
 msgstr "Lettrage Ink/Stitch"
 
-#: lib/extensions/lettering.py:54
+#: lib/extensions/lettering.py:47
 msgid "Font"
 msgstr "Police"
+
+#: lib/extensions/lettering.py:56
+msgid "Font size filter (mm). 0 for all sizes."
+msgstr ""
 
 #: lib/extensions/lettering.py:66 inx/inkstitch_apply_threadlist.inx:7
 #: inx/inkstitch_palette_to_text.inx:15
@@ -1737,8 +1741,8 @@ msgstr "Ajouter des coupures de fil"
 
 #: lib/extensions/lettering.py:83 lib/extensions/params.py:442
 #: print/templates/custom-page.html:23 print/templates/custom-page.html:27
-#: print/templates/custom-page.html:33 print/templates/ui.html:93
-#: print/templates/ui.html:97 print/templates/ui.html:103
+#: print/templates/custom-page.html:33 print/templates/ui.html:102
+#: print/templates/ui.html:106 print/templates/ui.html:112
 #: electron/src/renderer/components/InstallPalettes.vue:25
 #: electron/src/renderer/components/InstallPalettes.vue:63
 msgid "Cancel"
@@ -1748,34 +1752,30 @@ msgstr "Annuler"
 msgid "Apply and Quit"
 msgstr "Appliquer et Quitter"
 
-#: lib/extensions/lettering.py:154
-msgid "Unable to find any fonts!  Please try reinstalling Ink/Stitch."
-msgstr "Impossible de trouver une police! S'il vous plait essayez de réinstaller Ink/Stitch."
-
-#: lib/extensions/lettering.py:225
+#: lib/extensions/lettering.py:243
 msgid "This font has no available font variant. Please update or remove the font."
 msgstr "Cette police n'a pas de variante de police disponible. Veuillez mettre à jour ou supprimer la police."
 
 #. The user has chosen to scale the text by some percentage
 #. (50%, 200%, etc).  If you need to use the percentage symbol,
 #. make sure to double it (%%).
-#: lib/extensions/lettering.py:267
+#: lib/extensions/lettering.py:311
 #, python-format
 msgid "Text scale %s%%"
 msgstr "Échelle du texte %s%%"
 
-#: lib/extensions/lettering.py:276
+#: lib/extensions/lettering.py:320
 #, python-format
 msgid "Error: Text cannot be applied to the document.\n"
 "%s"
 msgstr "Erreur : Le texte ne peut pas être appliqué au document.\n"
 "%s"
 
-#: lib/extensions/lettering.py:414
+#: lib/extensions/lettering.py:463
 msgid "Please select only one block of text."
 msgstr "Veuillez ne sélectionner qu’un seul bloc de texte."
 
-#: lib/extensions/lettering.py:417
+#: lib/extensions/lettering.py:466
 msgid "You've selected objects that were not created by the Lettering extension.  Please clear your selection or select different objects before running Lettering again."
 msgstr "Vous avez sélectionné des objets qui ne sont pas créées par l’extension de lettrage.  SVP, effacez votre sélection ou sélectionnez des objets différents avant d’exécuter le lettrage à nouveau."
 
@@ -1787,7 +1787,7 @@ msgstr "Spécifiez le répertoire de vos polices personnalisées."
 msgid "The maximum value is smaller than the minimum value."
 msgstr "La valeur maximale est inférieure à la valeur minimale."
 
-#: lib/extensions/lettering_generate_json.py:41
+#: lib/extensions/lettering_generate_json.py:42
 msgid "Please specify a font file."
 msgstr "Spécifiez un fichier de police."
 
@@ -1946,6 +1946,7 @@ msgid "Title"
 msgstr "Titre"
 
 #: lib/extensions/zip.py:104 inx/inkstitch_commands_scale_symbols.inx:6
+#: inx/inkstitch_lettering_generate_json.inx:43
 msgid "Size"
 msgstr "Taille"
 
@@ -2104,7 +2105,7 @@ msgid "Cannot load simulator.\n"
 msgstr "Impossible de charger le simulateur.\n"
 "Fermez la fenêtre des Paramètres pour obtenir le message d'erreur complet."
 
-#: lib/lettering/font.py:162
+#: lib/lettering/font.py:163
 #, python-format
 msgid "The font '%s' has no variants."
 msgstr "Aucun fichier variant trouvé pour la police '%s'."
@@ -2214,17 +2215,17 @@ msgstr "non"
 msgid "Enter thread name..."
 msgstr "Entrez le nom du fil..."
 
-#: print/templates/custom-page.html:22 print/templates/ui.html:92
+#: print/templates/custom-page.html:22 print/templates/ui.html:101
 msgid "Enter URL"
 msgstr "Entrez l’URL"
 
 #: print/templates/custom-page.html:23 print/templates/custom-page.html:27
-#: print/templates/custom-page.html:33 print/templates/ui.html:93
-#: print/templates/ui.html:97 print/templates/ui.html:103
+#: print/templates/custom-page.html:33 print/templates/ui.html:102
+#: print/templates/ui.html:106 print/templates/ui.html:112
 msgid "OK"
 msgstr "OK"
 
-#: print/templates/custom-page.html:26 print/templates/ui.html:96
+#: print/templates/custom-page.html:26 print/templates/ui.html:105
 msgid "Enter E-Mail"
 msgstr "Entrez votre adresse E-Mail"
 
@@ -2232,11 +2233,11 @@ msgstr "Entrez votre adresse E-Mail"
 msgid "Custom Information Sheet"
 msgstr "Fiche d'information personnalisée"
 
-#: print/templates/custom-page.html:31 print/templates/ui.html:101
+#: print/templates/custom-page.html:31 print/templates/ui.html:110
 msgid "This will reset your custom text to the default."
 msgstr "Cela réinitialisera votre texte personnalisé à la valeur par défaut."
 
-#: print/templates/custom-page.html:32 print/templates/ui.html:102
+#: print/templates/custom-page.html:32 print/templates/ui.html:111
 msgid "All changes will be lost."
 msgstr "Toutes les modifications seront perdues."
 
@@ -2244,10 +2245,16 @@ msgstr "Toutes les modifications seront perdues."
 msgid "Page"
 msgstr "Page"
 
-#: print/templates/footer.html:3 print/templates/ui.html:99
-#: print/templates/ui.html:106
+#: print/templates/footer.html:3 print/templates/ui.html:108
+#: print/templates/ui.html:115
 msgid "Proudly generated with"
 msgstr "Fièrement généré avec"
+
+#: print/templates/full_page_pattern.html:4
+#: print/templates/operator_overview.html:29
+#: print/templates/print_detail.html:18 print/templates/print_overview.html:28
+msgid "Ctrl + Scroll to Zoom"
+msgstr "Ctrl + Scroll (molette) pour zoomer"
 
 #: print/templates/headline.html:5
 msgid "Click to choose another logo"
@@ -2359,11 +2366,6 @@ msgstr "Entrez des notes d'utilisation..."
 msgid "Job estimated time"
 msgstr "Durée estimée du travail"
 
-#: print/templates/operator_overview.html:29
-#: print/templates/print_detail.html:18 print/templates/print_overview.html:28
-msgid "Ctrl + Scroll to Zoom"
-msgstr "Ctrl + Scroll (molette) pour zoomer"
-
 #: print/templates/print_detail.html:6
 msgid "COLOR"
 msgstr "Couleur"
@@ -2404,15 +2406,15 @@ msgstr "Mise en page"
 msgid "Branding"
 msgstr "Image de marque"
 
-#: print/templates/ui.html:21 print/templates/ui.html:113
+#: print/templates/ui.html:21 print/templates/ui.html:122
 msgid "Estimated Time"
 msgstr "Durée estimée"
 
-#: print/templates/ui.html:22 print/templates/ui.html:147
+#: print/templates/ui.html:22 print/templates/ui.html:156
 msgid "Estimated Thread"
 msgstr "Fil estimé"
 
-#: print/templates/ui.html:23 print/templates/ui.html:168
+#: print/templates/ui.html:23 print/templates/ui.html:177
 msgid "Design"
 msgstr "Conception"
 
@@ -2424,126 +2426,134 @@ msgstr "Taille d’impression"
 msgid "Print Layouts"
 msgstr "Mises en page d’impression"
 
-#: print/templates/ui.html:43 print/templates/ui.html:137
+#: print/templates/ui.html:43 print/templates/ui.html:146
 msgid "Client Overview"
 msgstr "Vue d’ensemble du client"
 
-#: print/templates/ui.html:47 print/templates/ui.html:138
+#: print/templates/ui.html:47 print/templates/ui.html:147
 msgid "Client Detailed View"
 msgstr "Vue détaillée de client"
 
-#: print/templates/ui.html:51 print/templates/ui.html:139
+#: print/templates/ui.html:51 print/templates/ui.html:148
 msgid "Operator Overview"
 msgstr "Vue d’ensemble de l’exécution"
 
-#: print/templates/ui.html:55 print/templates/ui.html:140
+#: print/templates/ui.html:55 print/templates/ui.html:149
 msgid "Operator Detailed View"
 msgstr "Vue détaillée de l'exécution"
 
-#: print/templates/ui.html:57
+#: print/templates/ui.html:58
 msgid "Thumbnail size"
 msgstr "Taille de la miniature"
 
-#: print/templates/ui.html:63
+#: print/templates/ui.html:64
+msgid "Full Page Pattern View"
+msgstr ""
+
+#: print/templates/ui.html:68
+msgid "Show Footer"
+msgstr ""
+
+#: print/templates/ui.html:72
 msgid "Custom information sheet"
 msgstr "Fiche d'information personnalisée"
 
-#: print/templates/ui.html:66 print/templates/ui.html:109
+#: print/templates/ui.html:75 print/templates/ui.html:118
 msgid "Includes these Page Setup, estimated time settings and also the icon."
 msgstr "Comprend ces paramètres de mise en page, le réglage de l'heure et l’icône."
 
-#: print/templates/ui.html:66 print/templates/ui.html:109
-#: print/templates/ui.html:143 print/templates/ui.html:164
+#: print/templates/ui.html:75 print/templates/ui.html:118
+#: print/templates/ui.html:152 print/templates/ui.html:173
 msgid "Save as defaults"
 msgstr "Enregistrer comme valeurs par défaut"
 
-#: print/templates/ui.html:71
+#: print/templates/ui.html:80
 msgid "Logo"
 msgstr "Logo"
 
-#: print/templates/ui.html:81
+#: print/templates/ui.html:90
 msgid "Footer: Operator contact information"
 msgstr "Pied de page : Coordonnées de l'opérateur"
 
-#: print/templates/ui.html:115
+#: print/templates/ui.html:124
 msgid "Machine Settings"
 msgstr "Réglages de la machine"
 
-#: print/templates/ui.html:117
+#: print/templates/ui.html:126
 msgid "Average Machine Speed"
 msgstr "Vitesse moyenne de la machine"
 
-#: print/templates/ui.html:118
+#: print/templates/ui.html:127
 msgid "stitches per minute "
 msgstr "Points par minute "
 
-#: print/templates/ui.html:122
+#: print/templates/ui.html:131
 msgid "Time Factors"
 msgstr "Facteurs de temps"
 
-#: print/templates/ui.html:125
+#: print/templates/ui.html:134
 msgid "Includes average time for preparing the machine, thread breaks and/or bobbin changes, etc."
 msgstr "Comprend le temps moyen de préparation de la machine, coupures de fils et/ou changement de canette, etc."
 
-#: print/templates/ui.html:125
+#: print/templates/ui.html:134
 msgid "seconds to add to total time*"
 msgstr "secondes à ajouter à la durée totale *"
 
-#: print/templates/ui.html:129
+#: print/templates/ui.html:138
 msgid "This will be added to the total time."
 msgstr "Cela s’ajoutera à la durée totale."
 
-#: print/templates/ui.html:129
+#: print/templates/ui.html:138
 msgid "seconds needed for a color change*"
 msgstr "secondes nécessaires pour un changement de couleur *"
 
-#: print/templates/ui.html:132
+#: print/templates/ui.html:141
 msgid "seconds needed for trim"
 msgstr "secondes nécessaires pour une coupure de fil"
 
-#: print/templates/ui.html:135
+#: print/templates/ui.html:144
 msgid "Display Time On"
 msgstr "Affichage de l’heure sur"
 
-#: print/templates/ui.html:143 print/templates/ui.html:164
+#: print/templates/ui.html:152 print/templates/ui.html:173
 msgid "Includes page setup, estimated time and also the branding."
 msgstr "Comprend la mise en page, temps estimé et aussi l’image de marque."
 
-#: print/templates/ui.html:149
+#: print/templates/ui.html:158
 msgid "Factors"
 msgstr "Facteurs"
 
-#: print/templates/ui.html:150
+#: print/templates/ui.html:159
 msgid "The thread length calculation depends on a lot of factors in embroidery designs. We will only get a very inacurate approximation.\n"
 "             Ink/Stitch simply calculates the path length, so the factor of 1 will always be much, much less than the real thread consumption."
 msgstr "Le calcul de la longueur du fil dépend d'un grand nombre de facteurs dans les motifs de broderie. Nous n'obtiendrons qu'une approximation très imprécise.\n"
 "             Ink/Stitch calcule simplement la longueur du chemin, donc le facteur de 1 sera toujours beaucoup, beaucoup moins que la consommation réelle de fil."
 
-#: print/templates/ui.html:152
+#: print/templates/ui.html:161
 msgid "Set a factor to multiply the path length with, depending on your standard setup or adapt it to your current design (tension, thread, fabric, stitch count, etc.)."
 msgstr "Définissez un facteur pour multiplier la longueur de la trajectoire, en fonction de votre configuration standard ou adaptez-le à votre conception actuelle (tension, fil, tissu, nombre de points, etc.)."
 
-#: print/templates/ui.html:156 print/templates/ui.html:161
+#: print/templates/ui.html:165 print/templates/ui.html:170
 msgid "Factor to multiply with thread length"
 msgstr "Facteur à multiplier avec la longueur du fil"
 
-#: print/templates/ui.html:156 print/templates/ui.html:161
+#: print/templates/ui.html:165 print/templates/ui.html:170
 msgid "* path length"
 msgstr "* longueur du chemin"
 
-#: print/templates/ui.html:169
+#: print/templates/ui.html:178
 msgid "Thread Palette"
 msgstr "Palette de fil"
 
-#: print/templates/ui.html:188
+#: print/templates/ui.html:197
 msgid "Changing the thread palette will cause thread names and catalog numbers to be recalculated based on the new palette.  Any changes you have made to color or thread names will be lost.  Are you sure?"
 msgstr "Changer la palette de fil recalculera les noms de fils et les numéros de catalogue, basé sur la nouvelle palette.  Toutes les modifications apportées aux couleurs ou noms de fils seront perdues.  Êtes-vous sûr/e ?"
 
-#: print/templates/ui.html:191
+#: print/templates/ui.html:200
 msgid "Yes"
 msgstr "Oui"
 
-#: print/templates/ui.html:192 inx/inkstitch_lettering_generate_json.inx:37
+#: print/templates/ui.html:201 inx/inkstitch_lettering_generate_json.inx:37
 msgid "No"
 msgstr "Non"
 
@@ -3144,7 +3154,7 @@ msgstr "Supprimer les traits courts"
 
 #: inx/inkstitch_cleanup.inx:10
 msgid "Removes small strokes shorter than defined by threshold."
-msgstr ""
+msgstr "Supprimer les petits traits plus courts que le seuil défini."
 
 #: inx/inkstitch_cleanup.inx:11
 msgid "Stroke threshold (px)"
@@ -4047,44 +4057,44 @@ msgstr "Majuscule"
 msgid "Lower"
 msgstr "Minuscule"
 
-#: inx/inkstitch_lettering_generate_json.inx:43
+#: inx/inkstitch_lettering_generate_json.inx:44
 msgid "Min Scale"
 msgstr "Échelle minimum"
 
-#: inx/inkstitch_lettering_generate_json.inx:44
+#: inx/inkstitch_lettering_generate_json.inx:45
 msgid "Max Scale"
 msgstr "Échelle maximum"
 
-#: inx/inkstitch_lettering_generate_json.inx:48
+#: inx/inkstitch_lettering_generate_json.inx:49
 msgid "Default Glyph"
 msgstr "Glyphe par défaut"
 
-#: inx/inkstitch_lettering_generate_json.inx:60
-#: inx/inkstitch_lettering_generate_json.inx:67
+#: inx/inkstitch_lettering_generate_json.inx:61
+#: inx/inkstitch_lettering_generate_json.inx:68
 msgid "Force"
 msgstr "Forcer"
 
-#: inx/inkstitch_lettering_generate_json.inx:60
+#: inx/inkstitch_lettering_generate_json.inx:61
 msgid "Overwrite leading information from font file."
 msgstr "Surcharger la valeur d'interligne du fichier."
 
-#: inx/inkstitch_lettering_generate_json.inx:62
+#: inx/inkstitch_lettering_generate_json.inx:63
 msgid "Leading (px)"
 msgstr "Hauteur de ligne (px)"
 
-#: inx/inkstitch_lettering_generate_json.inx:62
+#: inx/inkstitch_lettering_generate_json.inx:63
 msgid "Line height (default: 100)"
 msgstr "Hauteur de ligne (par défaut : 100)"
 
-#: inx/inkstitch_lettering_generate_json.inx:67
+#: inx/inkstitch_lettering_generate_json.inx:68
 msgid "Overwrite word spacing information from font file."
 msgstr "Surcharger la valeur d’espacement des mots du fichier."
 
-#: inx/inkstitch_lettering_generate_json.inx:69
+#: inx/inkstitch_lettering_generate_json.inx:70
 msgid "Word spacing (px)"
 msgstr "Espacement des mots (px)"
 
-#: inx/inkstitch_lettering_generate_json.inx:69
+#: inx/inkstitch_lettering_generate_json.inx:70
 msgid "Space character width (default: 20)"
 msgstr "Largeur du caractère espace (par défaut : 20)"
 
