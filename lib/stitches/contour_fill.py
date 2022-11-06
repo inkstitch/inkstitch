@@ -1,19 +1,21 @@
+import random
 from collections import namedtuple
 from itertools import chain
 
 import networkx as nx
 import numpy as np
 import trimesh
-from shapely.geometry import GeometryCollection, MultiPolygon, Polygon, LineString, Point
+from shapely.geometry import (GeometryCollection, LineString, MultiPolygon,
+                              Point, Polygon)
 from shapely.geometry.polygon import orient
-from shapely.ops import nearest_points
-from shapely.ops import polygonize
+from shapely.ops import nearest_points, polygonize
 
-from .running_stitch import running_stitch
 from ..stitch_plan import Stitch
 from ..utils import DotDict
-from ..utils.geometry import cut, reverse_line_string, roll_linear_ring
-from ..utils.geometry import ensure_geometry_collection, ensure_multi_polygon
+from ..utils.geometry import (cut, ensure_geometry_collection,
+                              ensure_multi_polygon, reverse_line_string,
+                              roll_linear_ring)
+from .running_stitch import running_stitch
 
 
 class Tree(nx.DiGraph):
@@ -92,7 +94,7 @@ def _orient_tree(tree, clockwise=True):
         node.val = _orient_linear_ring(node.val, clockwise)
 
 
-def offset_polygon(polygon, offset, join_style, clockwise):
+def offset_polygon(polygon, offset, join_style, clockwise, random_row_spacing=0):
     """
     Convert a polygon to a tree of isocontours.
 
@@ -133,7 +135,8 @@ def offset_polygon(polygon, offset, join_style, clockwise):
         current_poly = active_polygons.pop()
         current_holes = active_holes.pop()
 
-        outer, inners = _offset_polygon_and_holes(tree, current_poly, current_holes, offset, join_style)
+        outer, inners = _offset_polygon_and_holes(tree, current_poly, current_holes, offset, join_style,
+                                                  random_row_spacing=random_row_spacing)
         polygons = _match_polygons_and_holes(outer, inners)
 
         for polygon in polygons.geoms:
@@ -156,10 +159,14 @@ def offset_polygon(polygon, offset, join_style, clockwise):
     return tree
 
 
-def _offset_polygon_and_holes(tree, poly, holes, offset, join_style):
+def _offset_polygon_and_holes(tree, poly, holes, offset, join_style, random_row_spacing=0):
+    random_offset = offset
+    if random_row_spacing:
+        random_offset = offset*(1 + random.uniform(-random_row_spacing / 100, random_row_spacing / 100))
+
     outer = _offset_linear_ring(
         tree.nodes[poly].val,
-        offset,
+        random_offset,
         resolution=5,
         join_style=join_style,
         mitre_limit=10,
@@ -169,7 +176,7 @@ def _offset_polygon_and_holes(tree, poly, holes, offset, join_style):
     for hole in holes:
         inner = _offset_linear_ring(
             tree.nodes[hole].val,
-            -offset,  # take negative offset for holes
+            -random_offset,  # take negative offset for holes
             resolution=5,
             join_style=join_style,
             mitre_limit=10,
@@ -391,12 +398,13 @@ def _find_path_inner_to_outer(tree, node, offset, starting_point, avoid_self_cro
     return LineString(result_coords)
 
 
-def inner_to_outer(tree, offset, stitch_length, tolerance, starting_point, avoid_self_crossing):
+def inner_to_outer(tree, offset, stitch_length, tolerance, starting_point, avoid_self_crossing,
+                   length_decrease, length_increase):
     """Fill a shape with spirals, from innermost to outermost."""
 
     stitch_path = _find_path_inner_to_outer(tree, 'root', offset, starting_point, avoid_self_crossing)
     points = [Stitch(*point) for point in stitch_path.coords]
-    stitches = running_stitch(points, stitch_length, tolerance)
+    stitches = running_stitch(points, stitch_length, tolerance, length_decrease, length_increase)
 
     return stitches
 
@@ -490,24 +498,24 @@ def _check_and_prepare_tree_for_valid_spiral(tree):
     return process_node('root')
 
 
-def single_spiral(tree, stitch_length, tolerance, starting_point):
+def single_spiral(tree, stitch_length, tolerance, starting_point, length_decrease=0, length_increase=0):
     """Fill a shape with a single spiral going from outside to center."""
-    return _spiral_fill(tree, stitch_length, tolerance, starting_point, _make_spiral)
+    return _spiral_fill(tree, stitch_length, tolerance, starting_point, _make_spiral, length_decrease, length_increase)
 
 
-def double_spiral(tree, stitch_length, tolerance, starting_point):
+def double_spiral(tree, stitch_length, tolerance, starting_point, length_decrease=0, length_increase=0):
     """Fill a shape with a double spiral going from outside to center and back to outside. """
-    return _spiral_fill(tree, stitch_length, tolerance, starting_point, _make_fermat_spiral)
+    return _spiral_fill(tree, stitch_length, tolerance, starting_point, _make_fermat_spiral, length_decrease, length_increase)
 
 
-def _spiral_fill(tree, stitch_length, tolerance, close_point, spiral_maker):
+def _spiral_fill(tree, stitch_length, tolerance, close_point, spiral_maker, length_decrease=0, length_increase=0):
     starting_point = close_point.coords[0]
 
     rings = _get_spiral_rings(tree)
     path = spiral_maker(rings, stitch_length, starting_point)
     path = [Stitch(*stitch) for stitch in path]
 
-    return running_stitch(path, stitch_length, tolerance)
+    return running_stitch(path, stitch_length, tolerance, length_decrease, length_increase)
 
 
 def _get_spiral_rings(tree):

@@ -819,7 +819,10 @@ class FillStitch(EmbroideryElement):
         starting_point = shgeo.Point(starting_point)
 
         stitch_groups = []
-        tree = contour_fill.offset_polygon(polygon, self.row_spacing, self.join_style + 1, self.clockwise)
+        tree = contour_fill.offset_polygon(polygon, self.row_spacing,
+                                           self.join_style + 1,
+                                           self.clockwise,
+                                           random_row_spacing=self.random_row_spacing)
 
         stitches = []
         if self.contour_strategy == 0:
@@ -829,21 +832,27 @@ class FillStitch(EmbroideryElement):
                 self.max_stitch_length,
                 self.running_stitch_tolerance,
                 starting_point,
-                self.avoid_self_crossing
+                self.avoid_self_crossing,
+                self.random_stitch_length_decrease,
+                self.random_stitch_length_increase,
             )
         elif self.contour_strategy == 1:
             stitches = contour_fill.single_spiral(
                 tree,
                 self.max_stitch_length,
                 self.running_stitch_tolerance,
-                starting_point
+                starting_point,
+                self.random_stitch_length_decrease,
+                self.random_stitch_length_increase,
             )
         elif self.contour_strategy == 2:
             stitches = contour_fill.double_spiral(
                 tree,
                 self.max_stitch_length,
                 self.running_stitch_tolerance,
-                starting_point
+                starting_point,
+                self.random_stitch_length_decrease,
+                self.random_stitch_length_increase,
             )
 
         stitch_group = StitchGroup(
