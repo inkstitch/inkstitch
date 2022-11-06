@@ -2,15 +2,14 @@
 #
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
-
+import random
 from copy import deepcopy
 from itertools import chain
 
+from inkex import paths
 from shapely import affinity as shaffinity
 from shapely import geometry as shgeo
 from shapely.ops import nearest_points
-
-from inkex import paths
 
 from ..i18n import _
 from ..stitch_plan import StitchGroup
@@ -100,6 +99,46 @@ class SatinColumn(EmbroideryElement):
         return self.get_float_param("max_stitch_length_mm") or None
 
     @property
+    @param('random_split_factor',
+           _('Random Split Factor'),
+           tooltip=_('randomize position for split stitches.'),
+           type='int', unit="%", sort_index=70)
+    def random_split_factor(self):
+        return min(max(self.get_int_param("random_split_factor", 0), 0), 100)
+
+    @property
+    @param('random_first_rail_factor_in',
+           _('First Rail Random  Factor inside'),
+           tooltip=_('shorten stitch around  first rail at most this percent.'),
+           type='int', unit="%", sort_index=60)
+    def random_first_rail_factor_in(self):
+        return min(max(self.get_int_param("random_first_rail_factor_in", 0), 0), 100)
+
+    @property
+    @param('random_first_rail_factor_out',
+           _('First Rail Random  Factor outside'),
+           tooltip=_('lengthen stitch around  first rail at most this percent.'),
+           type='int', unit="%", sort_index=61)
+    def random_first_rail_factor_out(self):
+        return max(self.get_int_param("random_first_rail_factor_out", 0), 0)
+
+    @property
+    @param('random_second_rail_factor_in',
+           _('Second Rail Random  Factor inside'),
+           tooltip=_('shorten stitch  around second rail at most this percent.'),
+           type='int', unit="%", sort_index=62)
+    def random_second_rail_factor_in(self):
+        return min(max(self.get_int_param("random_second_rail_factor_in", 0), 0), 100)
+
+    @property
+    @param('random_second_rail_factor_out',
+           _('Second Rail Random  Factor outside'),
+           tooltip=_('lengthen stitch  around second rail at most this percent.'),
+           type='int', unit="%", sort_index=63)
+    def random_second_rail_factor_out(self):
+        return max(self.get_int_param("random_second_rail_factor_out", 0), 0)
+
+    @property
     @param('short_stitch_inset',
            _('Short stitch inset'),
            tooltip=_('Stitches in areas with high density will be shortened by this amount.'),
@@ -131,6 +170,15 @@ class SatinColumn(EmbroideryElement):
     def zigzag_spacing(self):
         # peak-to-peak distance between zigzags
         return max(self.get_float_param("zigzag_spacing_mm", 0.4), 0.01)
+
+    @property
+    @param('random_zigzag_spacing',
+           _('Zig-zag spacing randomness(peak-to-peak)'),
+           tooltip=_('percentage  of randomness  of Peak-to-peak distance between zig-zags.'),
+           type='int', unit="%", sort_index=64)
+    def random_zigzag_spacing(self):
+        # peak-to-peak distance between zigzags
+        return max(self.get_int_param("random_zigzag_spacing", 0), 0)
 
     @property
     @param(
@@ -256,6 +304,10 @@ class SatinColumn(EmbroideryElement):
            default="")
     def zigzag_underlay_max_stitch_length(self):
         return self.get_float_param("zigzag_underlay_max_stitch_length_mm") or None
+
+    @property
+    def use_seed(self):
+        return self.get_int_param("use_seed", 0)
 
     @property
     @cache
@@ -499,6 +551,22 @@ class SatinColumn(EmbroideryElement):
 
         for rung in self.rungs:
             point_lists.append(self.flatten_subpath(rung))
+
+        # If originally there were only two subpaths (no rungs) with same number of rails, we may the rails may now
+        # have two rails with different number of points, and still no rungs, let's add one.
+
+        if not self.rungs:
+            rails = [shgeo.LineString(reversed(self.flatten_subpath(rail))) for rail in self.rails]
+            rails.reverse()
+            path_list = rails
+
+            rung_start = path_list[0].interpolate(0.1)
+            rung_end = path_list[1].interpolate(0.1)
+            rung = shgeo.LineString((rung_start, rung_end))
+            # make it a bit bigger so that it definitely intersects
+            rung = shaffinity.scale(rung, 1.1, 1.1)
+            path_list.append(rung)
+            return (self._path_list_to_satins(path_list))
 
         return self._csp_to_satin(point_lists_to_csp(point_lists))
 
@@ -789,8 +857,13 @@ class SatinColumn(EmbroideryElement):
                     old_center = new_center
 
                 if to_travel <= 0:
-                    add_pair(pos0, pos1)
-                    to_travel = spacing
+
+                    decalage0 = random.uniform(-self.random_first_rail_factor_in, self.random_first_rail_factor_out) / 100
+                    decalage1 = random.uniform(-self.random_second_rail_factor_in, self.random_second_rail_factor_out) / 100
+
+                    add_pair(pos0 + (pos0 - pos1) * decalage0, pos1 + (pos1 - pos0) * decalage1)
+
+                    to_travel = spacing * (random.uniform(1, 1 + self.random_zigzag_spacing/100))
 
         if to_travel > 0:
             add_pair(pos0, pos1)
@@ -842,8 +915,7 @@ class SatinColumn(EmbroideryElement):
 
         patch = StitchGroup(color=self.color)
 
-        sides = self.plot_points_on_rails(self.zigzag_underlay_spacing / 2.0,
-                                          -self.zigzag_underlay_inset)
+        sides = self.plot_points_on_rails(self.zigzag_underlay_spacing / 2.0, -self.zigzag_underlay_inset)
 
         if self._center_walk_is_odd():
             sides = [list(reversed(sides[0])), list(reversed(sides[1]))]
@@ -953,7 +1025,12 @@ class SatinColumn(EmbroideryElement):
         split_count = count or int(-(-distance // max_stitch_length))
         for i in range(split_count):
             line = shgeo.LineString((left, right))
-            split_point = line.interpolate((i+1)/split_count, normalized=True)
+
+            random_move = 0
+            if self.random_split_factor and i != split_count-1:
+                random_move = random.uniform(-self.random_split_factor / 100, self.random_split_factor / 100)
+
+            split_point = line.interpolate((i + 1 + random_move) / split_count, normalized=True)
             points.append(Point(split_point.x, split_point.y))
         return [points, split_count]
 
@@ -977,6 +1054,16 @@ class SatinColumn(EmbroideryElement):
         # The algorithm will draw zigzags between each consecutive pair of
         # beziers.  The boundary points between beziers serve as "checkpoints",
         # allowing the user to control how the zigzags flow around corners.
+
+        # If no seed is defined, compute one randomly using time to seed,  otherwise, use stored seed
+
+        if self.use_seed == 0:
+            random.seed()
+            x = random.randint(1, 10000)
+            random.seed(x)
+            self.set_param("use_seed", x)
+        else:
+            random.seed(self.use_seed)
 
         patch = StitchGroup(color=self.color)
 
