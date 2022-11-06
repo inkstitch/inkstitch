@@ -887,6 +887,10 @@ class FillStitch(EmbroideryElement):
                 ending_point,
                 self.underpath,
                 self.guided_fill_strategy,
+                self.random_stitch_length_decrease,
+                self.random_stitch_length_increase,
+                self.random_angle,
+                self.random_row_spacing
             ))
         return [stitch_group]
 

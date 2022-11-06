@@ -1,5 +1,5 @@
-from math import atan2, copysign
-from random import random
+from math import atan2, copysign, pi
+from random import random, uniform
 
 import numpy as np
 import shapely.prepared
@@ -29,9 +29,15 @@ def guided_fill(shape,
                 starting_point,
                 ending_point,
                 underpath,
-                strategy
+                strategy,
+                random_stitch_length_decrease=0,
+                random_stitch_length_increase=0,
+                random_angle=0,
+                random_row_spacing=0
                 ):
-    segments = intersect_region_with_grating_guideline(shape, guideline, row_spacing, num_staggers, max_stitch_length, strategy)
+    segments = intersect_region_with_grating_guideline(shape, guideline, row_spacing, num_staggers,
+                                                       max_stitch_length, strategy, random_stitch_length_decrease,
+                                                       random_stitch_length_increase, random_angle, random_row_spacing)
     if not segments:
         return fallback(shape, guideline, row_spacing, max_stitch_length, running_stitch_length, running_stitch_tolerance,
                         num_staggers, skip_last, starting_point, ending_point, underpath)
@@ -44,7 +50,8 @@ def guided_fill(shape,
 
     travel_graph = build_travel_graph(fill_stitch_graph, shape, angle, underpath)
     path = find_stitch_path(fill_stitch_graph, travel_graph, starting_point, ending_point)
-    result = path_to_stitches(path, travel_graph, fill_stitch_graph, max_stitch_length, running_stitch_length, running_stitch_tolerance, skip_last)
+    result = path_to_stitches(path, travel_graph, fill_stitch_graph, max_stitch_length,
+                              running_stitch_length, running_stitch_tolerance, skip_last)
 
     return result
 
@@ -147,12 +154,35 @@ def take_only_line_strings(thing):
     return shgeo.MultiLineString(line_strings)
 
 
-def apply_stitches(line, max_stitch_length, num_staggers, row_spacing, row_num):
+def apply_stitches(line, max_stitch_length, num_staggers, row_spacing, row_num, random_stitch_length_decrease=0,
+                   random_stitch_length_increase=0, random_angle=0, random_row_spacing=0):
     if num_staggers == 0:
         num_staggers = 1 # sanity check to avoid division by zero.
     start = ((row_num / num_staggers) % 1) * max_stitch_length
-    projections = np.arange(start, line.length, max_stitch_length)
+
+    if random_stitch_length_decrease or random_stitch_length_increase:
+        projections = [start]
+        position = start
+        while position < line.length - max_stitch_length:
+            length_perturbation = uniform(-random_stitch_length_decrease / 100, random_stitch_length_increase / 100)
+            position += max_stitch_length * (1 + length_perturbation)
+            projections += [position]
+
+        projections += [line.length]
+    else:
+        projections = np.arange(start, line.length, max_stitch_length)
+
     points = np.array([line.interpolate(projection).coords[0] for projection in projections])
+
+    if random_angle:
+        for i, (point1, point0) in enumerate(zip(points[1:], points[0:])):
+            beg = Stitch(*point1)
+            end = Stitch(*point0)
+            line_direction = (end - beg)
+            normal = line_direction.rotate(pi/2)
+            angle_perturbation = uniform(-random_angle / 100, random_angle / 100)
+            points[i] += angle_perturbation * normal
+
     stitched_line = shgeo.LineString(points)
 
     # stitched_line may round corners, which will look terrible.  This finds the
@@ -217,7 +247,9 @@ def _get_start_row(line, shape, row_spacing, line_direction):
     return copysign(row, shape_direction * line_direction)
 
 
-def intersect_region_with_grating_guideline(shape, line, row_spacing, num_staggers, max_stitch_length, strategy):
+def intersect_region_with_grating_guideline(shape, line, row_spacing, num_staggers, max_stitch_length,
+                                            strategy, random_stitch_length_decrease, random_stitch_length_increase,
+                                            random_angle, random_row_spacing):
     line = prepare_guide_line(line, shape)
 
     debug.log_line_string(shape.exterior, "guided fill shape")
@@ -231,13 +263,19 @@ def intersect_region_with_grating_guideline(shape, line, row_spacing, num_stagge
     row = start_row
     direction = 1
     offset_line = None
+    row_spacing_factor = 1
+
     rows = []
+
     while True:
+        if random_row_spacing:
+            row_spacing_factor = uniform(-random_row_spacing / 100, random_row_spacing / 100)
+
         if strategy == 0:
-            translate_amount = translate_direction * row * row_spacing
+            translate_amount = translate_direction * row_spacing*(row_spacing_factor + row)
             offset_line = translate(line, xoff=translate_amount.x, yoff=translate_amount.y)
         elif strategy == 1:
-            offset_line = line.parallel_offset(row * row_spacing, 'left', join_style=shgeo.JOIN_STYLE.round)
+            offset_line = line.parallel_offset((row_spacing_factor + row)*row_spacing, 'left', join_style=shgeo.JOIN_STYLE.round)
 
         offset_line = clean_offset_line(offset_line)
 
@@ -247,7 +285,9 @@ def intersect_region_with_grating_guideline(shape, line, row_spacing, num_stagge
 
         debug.log_line_string(offset_line, f"offset {row}")
 
-        stitched_line = apply_stitches(offset_line, max_stitch_length, num_staggers, row_spacing, row * direction)
+        stitched_line = apply_stitches(offset_line, max_stitch_length, num_staggers, row_spacing,
+                                       row * direction, random_stitch_length_decrease, random_stitch_length_increase, random_angle,
+                                       random_row_spacing)
         intersection = shape.intersection(stitched_line)
 
         if shape_envelope.intersects(stitched_line):
