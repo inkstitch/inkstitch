@@ -7,6 +7,7 @@ import math
 import random
 
 import shapely
+import shapely.geometry as shgeo
 
 from ..stitch_plan import Stitch
 from ..svg import PIXELS_PER_MM
@@ -47,7 +48,7 @@ def adjust_stagger(stitch, angle, row_spacing, max_stitch_length, staggers):
 
 
 def stitch_row(stitches, beg, end, angle, row_spacing, max_stitch_length, staggers, skip_last=False,
-               feathering_in=0, feathering_out=0, length_decrease=0, length_increase=0, angle_variation=0):
+               length_decrease=0, length_increase=0, angle_variation=0):
     # We want our stitches to look like this:
     #
     # ---*-----------*-----------
@@ -68,34 +69,56 @@ def stitch_row(stitches, beg, end, angle, row_spacing, max_stitch_length, stagge
     # tile with each other.  That's important because we often get
     # abutting fill regions from pull_runs().
 
+    # To apply randomness, first compute a random length of stitch
+    # and then  search for a random direction  around the row direction
+    # that will not allow  the stitch  to be too far from the non random row
+
+    # offset computes how far we go along the row_direction
+
     beg = Stitch(*beg, tags=('fill_row_start',))
     end = Stitch(*end, tags=('fill_row_end',))
 
+    row = shgeo.LineString([beg, end])
     row_direction = (end - beg).unit()
     normal = row_direction.rotate(math.pi/2)
     segment_length = (end - beg).length()
-    feathering = random.uniform(-feathering_in / 100, feathering_out / 100)
-    beg -= (feathering / 2) * segment_length * row_direction
-    end += (feathering / 2) * segment_length * row_direction
-    segment_length *= (1 + feathering)
+
     stitches.append(beg)
 
     first_stitch = adjust_stagger(beg, angle, row_spacing, max_stitch_length, staggers)
 
     # we might have chosen our first stitch just outside this row, so move back in
+
     if (first_stitch - beg) * row_direction < 0:
         first_stitch += row_direction * max_stitch_length
 
+    angle_stitch_deviation = math.asin(random.uniform(-angle_variation / 100, angle_variation / 100))
     offset = (first_stitch - beg).length()
-    angle_perturbation = random.uniform(-angle_variation / 100, angle_variation / 100)
+    # for the first_stitch, once  the angle is given, there is no freedom for the length_stitch
+    length_stitch = offset / math.cos(angle_stitch_deviation)
+    first_stitch += math.sin(angle_stitch_deviation) * normal * length_stitch
 
-    while offset < segment_length:
-        stitches.append(Stitch((beg + offset * row_direction + angle_perturbation * normal * row_spacing), tags=('fill_row')))
-        length_perturbation = random.uniform(-length_decrease / 100, length_increase / 100)
-        angle_perturbation = random.uniform(-angle_variation / 100, angle_variation / 100)
-        offset += max_stitch_length * (1 + length_perturbation)
+    if offset < segment_length:
+        stitches.append(Stitch(first_stitch, tags=('fill_row')))
+        prev = first_stitch
 
-    if (end - stitches[-1]).length() > 0.1 * PIXELS_PER_MM and not skip_last and not feathering:
+    length_stitch = (1+random.uniform(-length_decrease / 100, length_increase / 100))*max_stitch_length
+
+    while offset + length_stitch < segment_length:
+        angle_stitch_deviation = math.asin(random.uniform(-angle_variation / 100, angle_variation / 100))
+        move = (math.cos(angle_stitch_deviation) * row_direction + math.sin(angle_stitch_deviation) * normal) * length_stitch
+        new_point = prev + move
+        # if the new_point is too far from the row, try with another angle
+        while row.distance(shgeo.Point(new_point.x, new_point.y)) > max_stitch_length:
+            angle_stitch_deviation = math.asin(random.uniform(-angle_variation / 100, angle_variation / 100))
+            move = (math.cos(angle_stitch_deviation) * row_direction + math.sin(angle_stitch_deviation) * normal) * length_stitch
+            new_point = prev + move
+        stitches.append(Stitch(new_point, tags=('fill_row')))
+        prev = new_point
+        offset += length_stitch * math.cos(angle_stitch_deviation)
+        length_stitch = (1+random.uniform(-length_decrease / 100, length_increase / 100))*max_stitch_length
+
+    if (end - stitches[-1]).length() > 0.1 * PIXELS_PER_MM and not skip_last:
         stitches.append(end)
 
 
