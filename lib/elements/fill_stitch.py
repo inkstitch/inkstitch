@@ -5,6 +5,8 @@
 
 import logging
 import math
+import numpy as np
+import random
 import re
 import sys
 import traceback
@@ -223,6 +225,77 @@ class FillStitch(EmbroideryElement):
            default=4)
     def staggers(self):
         return self.get_float_param("staggers", 4)
+
+    @property
+    @param('random_feathering_mm',
+           _('randomly grows or shrinks the rows with at most that length'),
+           tooltip=_('setting this will cause a feathering effect, rows could be shorten or lengthen up to this value '),
+           type='float',
+           unit='mm',
+           sort_index=60,
+           select_items=[('fill_method', 0)],
+           default=0)
+    def random_feathering(self):
+        return self.get_float_param("random_feathering_mm", 0)
+
+    @property
+    @param('random_feathering_roughness',
+           _('Feathering roughness'),
+           tooltip=_('this control how rough the feathering is'),
+           type='int',
+           sort_index=61,
+           select_items=[('fill_method', 0)],
+           default=0)
+    def random_feathering_roughness(self):
+        return min(max(self.get_int_param("random_feathering_roughness", 0), 0), 100)
+
+    @property
+    @param('random_stitch_length_increase',
+           _('maximum percentage of stitch length increase '),
+           tooltip=_('setting this will cause the stitch length to be random around max_stitch_length'),
+           type='int',
+           sort_index=62,
+           select_items=[('fill_method', 0),  ('fill_method', 1), ('fill_method', 2)],
+           default=0)
+    def random_stitch_length_increase(self):
+        return max(self.get_int_param("random_stitch_length_increase", 0), 0)
+
+    @property
+    @param('random_stitch_length_decrease',
+           _('maximum percentage of stitch length decrease'),
+           tooltip=_('setting this will cause the stitch length to be random around max_stitch_length'),
+           type='int',
+           sort_index=63,
+           select_items=[('fill_method', 0),  ('fill_method', 1), ('fill_method', 2)],
+           default=0)
+    def random_stitch_length_decrease(self):
+        return min(max(self.get_int_param("random_stitch_length_decrease", 0), 0), 100)
+
+    @property
+    @param('random_row_spacing',
+           _('percentage of row_spacing randomness'),
+           tooltip=_('setting this  cause that percent of randomness variation of row spacing'),
+           type='int',
+           sort_index=64,
+           select_items=[('fill_method', 0), ('fill_method', 1), ('fill_method', 2)],
+           default=0)
+    def random_row_spacing(self):
+        return min(max(self.get_int_param("random_row_spacing", 0), 0), 100)
+
+    @property
+    @param('random_angle',
+           _('maximum percentage of angle variation'),
+           tooltip=_('setting this will cause the stitch angle to be random around the set angle'),
+           type='int',
+           sort_index=65,
+           select_items=[('fill_method', 0), ('fill_method', 2)],
+           default=0)
+    def random_angle(self):
+        return min(max(self.get_int_param("random_angle", 0), 0), 100)
+
+    @property
+    def use_seed(self):
+        return self.get_int_param("use_seed", 0)
 
     @property
     @cache
@@ -456,6 +529,17 @@ class FillStitch(EmbroideryElement):
 
     @property
     @param(
+        'fill_underlay_randomize',
+        _('Also apply fill random parameters to the underlay'),
+        tooltip=_('If checked, all random parameters of the fill will also be applied to the underlay.'),
+        group=_('Fill Underlay'),
+        type='boolean',
+        default=False)
+    def fill_underlay_randomize(self):
+        return self.get_boolean_param("fill_underlay_randomize", False)
+
+    @property
+    @param(
         'fill_underlay_skip_last',
         _('Skip last stitch in each row'),
         tooltip=_('The last stitch in each row is quite close to the first stitch in the next row.  '
@@ -474,7 +558,7 @@ class FillStitch(EmbroideryElement):
            type='float',
            default=0,
            sort_index=5,
-           select_items=[('fill_method', 0), ('fill_method', 2)])
+           select_items=[('fill_method', 0), ('fill_method', 1), ('fill_method', 2)])
     def expand(self):
         return self.get_float_param('expand_mm', 0)
 
@@ -518,6 +602,77 @@ class FillStitch(EmbroideryElement):
 
         return new_shape
 
+    def add_points_linear_ring(self, linear_ring, roughness):
+        # with roughness == 0 , we want a density of one, to keep enough point to
+        # feather each stitch row
+
+        density = (roughness+3) / 3
+        points = [shgeo.Point(linear_ring.coords[0])]
+        for p0, p1 in zip(linear_ring.coords[:-1], linear_ring.coords[1:]):
+            line = shgeo.LineString([p0, p1])
+            n = max(round(line.length / density), 3)
+            distances = np.linspace(0, line.length, n)
+            line_points = [line.interpolate(distance) for distance in distances]
+            points.extend(line_points[1:])
+        return shgeo.LinearRing([[p.x, p.y] for p in points])
+
+    def add_points_polygon(self, shape, roughness=0):
+
+        new_exterior = self.add_points_linear_ring(shape.exterior, roughness)
+        new_holes = [self.add_points_linear_ring(shgeo.LinearRing(hole), roughness) for hole in shape.interiors]
+        return shgeo.Polygon(new_exterior, new_holes)
+
+    def feather(self, shape, feathering, roughness, angle):
+        # first we add a lot of points on the boundaries
+        # then on each boundary, we try to move every point,
+        # move follow the stitch direction, it may yield a larger or a smaller shape.
+        # If  the move does not yield a valid shape, we try again,
+        # aafter 10 miss, we just don't move the  point.
+        def move_point(shape, index, i, feathering, angle):
+
+            # try to move a point while keeping a valid shape
+            # if it  fails 10 times, don't move this point
+            # if index == len(shape.interiors) we are on the exterior, othervise, on the index_th interior
+            for j in range(10):
+                if index == len(shape.interiors):
+                    linear_ring = shape.exterior
+                    holes = shape.interiors
+                else:
+                    linear_ring = shape.interiors[index]
+
+                feathering_length = random.uniform(-feathering, feathering)
+                move = shgeo.Point(feathering_length*math.cos(-angle), feathering_length*math.sin(-angle))
+                point = shgeo.Point(linear_ring.coords[i])
+                new_point = shgeo.Point(point.x+move.x, point.y+move.y)
+
+                points = [[c[0], c[1]] for c in list(linear_ring.coords)]
+                points[i] = [new_point.x, new_point.y]
+                if i == 0:
+                    points[-1] = [new_point.x, new_point.y]
+                new_linear_ring = shgeo.LinearRing([[p[0], p[1]] for p in points])
+                if index == len(shape.interiors):
+                    new_shape = shgeo.Polygon(new_linear_ring, holes)
+                else:
+                    holes = [hole for i, hole in enumerate(shape.interiors) if i < index]
+                    holes.append(new_linear_ring)
+                    holes.extend([hole for i, hole in enumerate(shape.interiors) if i > index])
+                    new_shape = shgeo.Polygon(shape.exterior, holes)
+                if self.shape_is_valid(new_shape):
+                    return new_shape
+            return shape
+
+        new_shape = self.add_points_polygon(shape, roughness)
+
+        index_exterior = len(new_shape.interiors)
+        for i in range(len(new_shape.exterior.coords)-1):
+            new_shape = move_point(new_shape, index_exterior, i, feathering, angle)
+        # then each of the interior
+        for index in range(len(new_shape.interiors)):
+            for i in range(len(new_shape.interiors[index].coords)-1):
+                new_shape = move_point(new_shape, index, i, feathering, angle)
+
+        return new_shape
+
     def underlay_shape(self, shape):
         return self.shrink_or_grow_shape(shape, -self.fill_underlay_inset)
 
@@ -546,6 +701,14 @@ class FillStitch(EmbroideryElement):
         if not self.auto_fill or self.fill_method == 3:
             return self.do_legacy_fill()
         else:
+            if self.use_seed == 0:
+                random.seed()
+                x = random.randint(1, 10000)
+                random.seed(x)
+                self.set_param("use_seed", x)
+            else:
+                random.seed(self.use_seed)
+
             stitch_groups = []
             end = self.get_ending_point()
 
@@ -555,12 +718,17 @@ class FillStitch(EmbroideryElement):
                     if self.fill_underlay:
                         underlay_shapes = self.underlay_shape(shape)
                         for underlay_shape in underlay_shapes.geoms:
-                            underlay_stitch_groups, start = self.do_underlay(underlay_shape, start)
+                            if self.fill_underlay_randomize:
+                                underlay_stitch_groups, start = self.do_underlay(underlay_shape, start)
+                            else:
+                                underlay_stitch_groups, start = self.do_underlay(underlay_shape, start)
                             stitch_groups.extend(underlay_stitch_groups)
 
                     fill_shapes = self.fill_shape(shape)
                     for fill_shape in fill_shapes.geoms:
                         if self.fill_method == 0:
+                            if self.random_feathering:
+                                fill_shape = self.feather(fill_shape, self.random_feathering, self.random_feathering_roughness, self.angle)
                             stitch_groups.extend(self.do_auto_fill(fill_shape, last_patch, start, end))
                         if self.fill_method == 1:
                             stitch_groups.extend(self.do_contour_fill(fill_shape, last_patch, start))
@@ -585,6 +753,17 @@ class FillStitch(EmbroideryElement):
 
     def do_underlay(self, shape, starting_point):
         stitch_groups = []
+        if self.fill_underlay_randomize:
+            random_stitch_length_decrease = self.random_stitch_length_decrease
+            random_stitch_length_increase = self.random_stitch_length_increase
+            random_angle = self.random_angle
+            random_row_spacing = self.random_row_spacing
+        else:
+            random_stitch_length_decrease = 0
+            random_stitch_length_increase = 0
+            random_angle = 0
+            random_row_spacing = 0
+
         for i in range(len(self.fill_underlay_angle)):
             underlay = StitchGroup(
                 color=self.color,
@@ -600,6 +779,11 @@ class FillStitch(EmbroideryElement):
                     self.staggers,
                     self.fill_underlay_skip_last,
                     starting_point,
+                    random_stitch_length_decrease,
+                    random_stitch_length_increase,
+                    random_angle,
+                    random_row_spacing,
+                    ending_point=None,
                     underpath=self.underlay_underpath))
             stitch_groups.append(underlay)
 
@@ -621,6 +805,10 @@ class FillStitch(EmbroideryElement):
                 self.staggers,
                 self.skip_last,
                 starting_point,
+                self.random_stitch_length_decrease,
+                self.random_stitch_length_increase,
+                self.random_angle,
+                self.random_row_spacing,
                 ending_point,
                 self.underpath))
         return [stitch_group]

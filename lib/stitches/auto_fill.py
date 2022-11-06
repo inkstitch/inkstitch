@@ -16,7 +16,9 @@ from shapely.strtree import STRtree
 from ..debug import debug
 from ..stitch_plan import Stitch
 from ..svg import PIXELS_PER_MM
-from ..utils.geometry import Point as InkstitchPoint, line_string_to_point_list, ensure_multi_line_string
+from ..utils.geometry import Point as InkstitchPoint
+from ..utils.geometry import (ensure_multi_line_string,
+                              line_string_to_point_list)
 from .fill import intersect_region_with_grating, stitch_row
 from .running_stitch import running_stitch
 
@@ -57,9 +59,13 @@ def auto_fill(shape,
               staggers,
               skip_last,
               starting_point,
+              random_stitch_length_decrease=0,
+              random_stitch_length_increase=0,
+              random_angle=0,
+              random_row_spacing=0,
               ending_point=None,
               underpath=True):
-    rows = intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing)
+    rows = intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing, random_row_spacing=random_row_spacing)
     if not rows:
         # Small shapes may not intersect with the grating at all.
         return fallback(shape, running_stitch_length, running_stitch_tolerance)
@@ -74,7 +80,8 @@ def auto_fill(shape,
     path = find_stitch_path(fill_stitch_graph, travel_graph, starting_point, ending_point)
     result = path_to_stitches(path, travel_graph, fill_stitch_graph, angle, row_spacing,
                               max_stitch_length, running_stitch_length, running_stitch_tolerance,
-                              staggers, skip_last)
+                              staggers, skip_last, random_stitch_length_decrease,
+                              random_stitch_length_increase, random_angle)
 
     return result
 
@@ -396,34 +403,34 @@ def travel_grating(shape, angle, row_spacing):
 
 
 def build_travel_edges(shape, fill_angle):
-    r"""Given a graph, compute the interior travel edges.
+    # Given a graph, compute the interior travel edges.
 
-    We want to fill the shape with a grid of line segments that can be used for
-    travel stitch routing.  Our goals:
+    # We want to fill the shape with a grid of line segments that can be used for
+    # travel stitch routing.  Our goals:
 
-      * not too many edges so that the shortest path algorithm is speedy
-      * don't travel in the direction of the fill stitch rows so that the
-        travel stitch doesn't visually disrupt the fill stitch pattern
+    #   * not too many edges so that the shortest path algorithm is speedy
+    #   * don't travel in the direction of the fill stitch rows so that the
+    #     travel stitch doesn't visually disrupt the fill stitch pattern
 
-    To do this, we'll fill the shape with three gratings: one at +45 degrees
-    from the fill stitch angle, one at -45 degrees, and one at +90 degrees.
-    The pattern looks like this:
+    # To do this, we'll fill the shape with three gratings: one at +45 degrees
+    # from the fill stitch angle, one at -45 degrees, and one at +90 degrees.
+    # The pattern looks like this:
 
-    /|\|/|\|/|\
-    \|/|\|/|\|/
-    /|\|/|\|/|\
-    \|/|\|/|\|/
+    # /|\|/|\|/|\
+    # \|/|\|/|\|/
+    # /|\|/|\|/|\
+    # \|/|\|/|\|/
 
-    Returns: (endpoints, edges)
-        endpoints - the points on travel edges that intersect with the boundary
-                    of the shape
-        edges     - the line segments we can travel on, as individual LineString
-                    instances
-    """
-
+    # Returns: (endpoints, edges)
+    #     endpoints - the points on travel edges that intersect with the boundary
+    #                 of the shape
+    #     edges     - the line segments we can travel on, as individual LineString
+    #                 instances
+    #
     # If the shape is smaller, we'll have less room to maneuver and it's more likely
     # we'll travel around the outside border of the shape.  Counteract that by making
     # the grid denser.
+
     if shape.area < 10000:
         scale = 0.5
     else:
@@ -459,7 +466,7 @@ def nearest_node(nodes, point, attr=None):
 
 @debug.time
 def find_stitch_path(graph, travel_graph, starting_point=None, ending_point=None):
-    """find a path that visits every grating segment exactly once
+    """ find a path that visits every grating segment exactly once
 
     Theoretically, we just need to find an Eulerian Path in the graph.
     However, we don't actually care whether every single edge is visited.
@@ -477,8 +484,7 @@ def find_stitch_path(graph, travel_graph, starting_point=None, ending_point=None
     mowing a lawn.
 
     To do this, we'll use a simple heuristic: try to start from nodes in
-    the order of most-recently-visited first.
-    """
+    the order of most-recently-visited first. """
 
     graph = graph.copy()
 
@@ -613,7 +619,7 @@ def travel(travel_graph, start, end, running_stitch_length, running_stitch_toler
 
 @debug.time
 def path_to_stitches(path, travel_graph, fill_stitch_graph, angle, row_spacing, max_stitch_length, running_stitch_length, running_stitch_tolerance,
-                     staggers, skip_last):
+                     staggers, skip_last, length_decrease=0, length_increase=0, angle_variation=0):
     path = collapse_sequential_outline_edges(path)
 
     stitches = []
@@ -624,7 +630,8 @@ def path_to_stitches(path, travel_graph, fill_stitch_graph, angle, row_spacing, 
 
     for edge in path:
         if edge.is_segment():
-            stitch_row(stitches, edge[0], edge[1], angle, row_spacing, max_stitch_length, staggers, skip_last)
+            stitch_row(stitches, edge[0], edge[1], angle, row_spacing, max_stitch_length, staggers, skip_last,
+                       length_decrease, length_increase, angle_variation)
             travel_graph.remove_edges_from(fill_stitch_graph[edge[0]][edge[1]]['segment'].get('underpath_edges', []))
         else:
             stitches.extend(travel(travel_graph, edge[0], edge[1], running_stitch_length, running_stitch_tolerance, skip_last))
