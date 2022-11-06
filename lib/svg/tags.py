@@ -116,6 +116,8 @@ inkstitch_attribs = [
     'zigzag_underlay_max_stitch_length_mm',
     'e_stitch',
     'pull_compensation_mm',
+    'pull_compensation_percent',
+    'pull_compensation_rails',
     'stroke_first',
     # stitch_plan
     'invisible_layers',
