@@ -79,6 +79,8 @@ inkstitch_attribs = [
     'staggers',
     'random_feathering_mm',
     'random_feathering_roughness',
+    'random_stitch_length_increase',
+    'random_stitch_length_decrease',
     'random_angle',
     'fill_underlay_randomize',
     'underlay_underpath',
