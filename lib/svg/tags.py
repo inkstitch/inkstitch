@@ -117,7 +117,7 @@ inkstitch_attribs = [
     'e_stitch',
     'pull_compensation_mm',
     'pull_compensation_percent',
-    'pull_compensation_rails',
+    'pull_compensation_balance',
     'stroke_first',
     # stitch_plan
     'invisible_layers',
