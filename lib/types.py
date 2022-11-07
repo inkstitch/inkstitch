@@ -1,4 +1,4 @@
-from typing import List
+from typing import List, Iterable
 
 try:
     from typing import TypeAlias  # type: ignore
@@ -17,3 +17,6 @@ Segment: TypeAlias = shapely.coords.CoordinateSequence
 
 """A list of possibly disconnected segments on the same row."""
 RowSegments = List[Segment]
+
+"""A type that is like a point."""
+PointLike = Iterable[int]
