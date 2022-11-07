@@ -1,24 +1,8 @@
-from typing import List, Tuple
-
 from shapely import geometry as shgeo
 
 from lib.stitches import fill
 from lib.stitches.utils import testing
 from lib.utils.geometry import Point
-
-
-TOL = 1e-08
-
-
-def assert_close(
-    expected: List[List[Tuple[Point, Point]]], actual: List[List[Tuple[Point, Point]]]
-) -> None:
-    for (expected_row, actual_row) in zip(expected, actual):
-        for (expected_seg, actual_seg) in zip(expected_row, actual_row):
-            expected_start, expected_end = expected_seg
-            actual_start, actual_end = actual_seg
-            assert expected_start.isclose(actual_start, rel_tol=TOL)
-            assert expected_end.isclose(actual_end, rel_tol=TOL)
 
 
 def test_intersect_region_with_grating_convex():
@@ -51,7 +35,7 @@ def test_intersect_region_with_grating_convex():
     ]
 
     assert len(actual) == len(expected)
-    assert_close(expected, actual)
+    testing.assert_close(expected, actual)
 
 
 def test_intersect_region_with_grating_H_shape():
@@ -86,4 +70,4 @@ def test_intersect_region_with_grating_H_shape():
     ]
 
     assert len(actual) == len(expected)
-    assert_close(expected, actual)
+    testing.assert_close(expected, actual)

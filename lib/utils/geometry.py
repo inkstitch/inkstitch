@@ -236,7 +236,7 @@ class Point:
     def __len__(self):
         return 2
 
-    def isclose(self, other: "Point", rel_tol: float) -> bool:
+    def isclose(self, other: "Point", rel_tol: float = 1e-08) -> bool:
         return (math.isclose(self.x, other.x, rel_tol=rel_tol)
                 and math.isclose(self.y, other.y, rel_tol=rel_tol))
 
