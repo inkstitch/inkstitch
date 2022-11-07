@@ -148,7 +148,7 @@ class SatinColumn(EmbroideryElement):
         'pull_compensation_mm',
         _('Pull compensation'),
         tooltip=_('Satin stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape.  '
-                  'This setting expands each pair of needle penetrations outward from the center of the satin column.'),
+                  'This setting expands each pair of needle penetrations outward from the center of the satin column by a fixed length.'),
         unit='mm',
         type='float',
         default=0)
@@ -162,7 +162,7 @@ class SatinColumn(EmbroideryElement):
     @param(
         'pull_compensation_balance',
         _('Pull compensation balance'),
-        tooltip=_('Percentage of pull compensation which gets applied to second rail (50% is centered).'),
+        tooltip=_('Percentage of pull compensation which applies to second rail (50% is centered).'),
         unit='%',
         type='float',
         default=50)
@@ -183,15 +183,36 @@ class SatinColumn(EmbroideryElement):
 
     @property
     @param('contour_underlay_inset_mm',
-           _('Contour underlay inset amount'),
-           tooltip=_('Shrink the outline, to prevent the underlay from showing around the outside of the satin column.'),
-           unit='mm',
+           _('Inset distance'),
+           tooltip=_('Shrink the outlineby a fixed length, to prevent the underlay from showing around the outside of the satin column.'),
            group=_('Contour Underlay'),
-           type='float',
-           default=0.4)
+           unit='mm', type='float', default=0.4,
+           sort_index=2)
     def contour_underlay_inset(self):
         # how far inside the edge of the column to stitch the underlay
         return self.get_float_param("contour_underlay_inset_mm", 0.4)
+
+    @property
+    @param('contour_underlay_inset_percent',
+           _('Inset distance'),
+           tooltip=_('Shrink the outlineby a proportion of the width, to prevent the underlay from showing around the outside of the satin column.'),
+           group=_('Contour Underlay'),
+           unit='%', type='float', default=0,
+           sort_index=3)
+    def contour_underlay_inset_percent(self):
+        # how far inside the edge of the column to stitch the underlay
+        return min(100, max(0, self.get_float_param("contour_underlay_inset_percent", 0)))
+    
+    @property
+    @param('contour_underlay_inset_balance',
+           _('Inset distance'),
+           tooltip=_('Proportion of the inset which applies to second rail (50% is centered). This can be useful for asymmetric designs.'),
+           group=_('Contour Underlay'),
+           unit='%', type='float', default=50,
+           sort_index=4)
+    def contour_underlay_inset_balance(self):
+        # how far inside the edge of the column to stitch the underlay
+        return min(100, max(0, self.get_float_param("contour_underlay_inset_balance", 50)))
 
     @property
     @param('center_walk_underlay', _('Center-walk underlay'), type='toggle', group=_('Center-Walk Underlay'))
@@ -206,9 +227,24 @@ class SatinColumn(EmbroideryElement):
         return max(self.get_float_param("center_walk_underlay_stitch_length_mm", 1.5), 0.01)
 
     @property
-    @param('center_walk_underlay_repeats', _('Repeats'), group=_('Center-Walk Underlay'), type='int', default=2, sort_index=2)
+    @param('center_walk_underlay_repeats',
+        _('Repeats'),
+        tooltip=_('for an odd number of repeats, this will reverse the direction the satin column is stitched, causing stitching to both begin and end at the start point.'),
+        group=_('Center-Walk Underlay'),
+        type='int', default=2,
+        sort_index=2)
     def center_walk_underlay_repeats(self):
         return max(self.get_int_param("center_walk_underlay_repeats", 2), 1)
+
+    @property
+    @param('center_walk_underlay_position',
+        _('Position'),
+        tooltip=_('Position of underlay from between the rails (50% is centered), consistent with the Balance parameter for contour underlay.'),
+        group=_('Center-Walk Underlay'),
+        type='float', unit='%', default=50,
+        sort_index=3)
+    def center_walk_underlay_position(self):
+        return min(100, max(0, self.get_float_param("center_walk_underlay_position", 50)))
 
     @property
     @param('zigzag_underlay', _('Zig-zag underlay'), type='toggle', group=_('Zig-zag Underlay'))
@@ -788,7 +824,10 @@ class SatinColumn(EmbroideryElement):
     def do_contour_underlay(self):
         # "contour walk" underlay: do stitches up one side and down the
         # other.
-        forward, back = self.plot_points_on_rails(self.contour_underlay_stitch_length, -self.contour_underlay_inset)
+        forward, back = self.plot_points_on_rails(
+            self.contour_underlay_stitch_length,
+            -self.contour_underlay_inset, -self.contour_underlay_inset_percent/100,
+            self.contour_underlay_inset_balance/100)
         stitches = (forward + list(reversed(back)))
         if self._center_walk_is_odd():
             stitches = (list(reversed(back)) + forward)
@@ -803,7 +842,9 @@ class SatinColumn(EmbroideryElement):
         # center line between the bezier curves.
 
         # Do it like contour underlay, but inset all the way to the center.
-        forward, back = self.plot_points_on_rails(self.center_walk_underlay_stitch_length, -100000)
+        forward, back = self.plot_points_on_rails(
+            self.center_walk_underlay_stitch_length,
+            0, -1, self.center_walk_underlay_position/100)
 
         stitches = []
         for i in range(self.center_walk_underlay_repeats):
