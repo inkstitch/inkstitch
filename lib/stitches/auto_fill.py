@@ -7,6 +7,7 @@
 
 import math
 from itertools import chain, groupby
+from typing import List
 
 import networkx
 from shapely import geometry as shgeo
@@ -59,7 +60,7 @@ def auto_fill(shape: Shape,
               skip_last: bool,
               starting_point: PointLike,
               ending_point: PointLike = None,
-              underpath: bool = True) -> ...:
+              underpath: bool = True) -> List[Stitch]:
     """Outputs a stitch pattern that fills a given polygon.
 
     :param shape: The shape to fill.
