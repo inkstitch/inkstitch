@@ -106,7 +106,7 @@ inkstitch_attribs = [
     'center_walk_underlay',
     'center_walk_underlay_stitch_length_mm',
     'center_walk_underlay_repeats',
-    'center_walk_underlay_position',
+    'center_walk_underlay_balance',
     'contour_underlay',
     'contour_underlay_stitch_length_mm',
     'contour_underlay_inset_mm',
