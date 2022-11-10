@@ -47,6 +47,9 @@ class PathEdge(object):
     def is_segment(self):
         return self.key == self.SEGMENT_KEY
 
+    def __repr__(self):
+        return "PathEdge(%s)" % ("->".join([repr(n) for n in self.nodes]),)
+
 
 @debug.time
 def auto_fill(shape: Shape,
