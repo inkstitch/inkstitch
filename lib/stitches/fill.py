@@ -3,7 +3,7 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-from typing import List
+from typing import List, Optional
 import math
 
 import shapely
@@ -103,8 +103,8 @@ def stitch_row(stitches, beg, end, angle, row_spacing, max_stitch_length, stagge
 
 def intersect_region_with_grating(shape: Shape,
                                   angle: float,
-                                  row_spacing: int,
-                                  end_row_spacing: int = None,
+                                  row_spacing: float,
+                                  end_row_spacing: Optional[float] = None,
                                   flip=False) -> List[RowSegments]:
     """Intersects the given region with a grating.
 
