@@ -7,7 +7,7 @@
 
 import math
 from itertools import chain, groupby
-from typing import List
+from typing import List, Optional
 
 import networkx
 from shapely import geometry as shgeo
@@ -54,15 +54,15 @@ class PathEdge(object):
 @debug.time
 def auto_fill(shape: Shape,
               angle: float,
-              row_spacing: int,
-              end_row_spacing: int,
+              row_spacing: float,
+              end_row_spacing: float,
               max_stitch_length: float,
               running_stitch_length: float,
               running_stitch_tolerance: float,
               staggers: int,
               skip_last: bool,
               starting_point: PointLike,
-              ending_point: PointLike = None,
+              ending_point: Optional[PointLike] = None,
               underpath: bool = True) -> List[Stitch]:
     """Outputs a stitch pattern that fills a given polygon.
 
