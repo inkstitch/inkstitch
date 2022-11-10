@@ -76,7 +76,8 @@ def stitch_row(stitches, beg, end, angle, row_spacing, max_stitch_length, stagge
     row_direction = (end - beg).unit()
     segment_length = (end - beg).length()
 
-    stitches.append(beg)
+    if not beg.isclose(stitches[-1]):
+        stitches.append(beg)
 
     first_stitch = adjust_stagger(beg, angle, row_spacing, max_stitch_length, staggers)
 
@@ -87,7 +88,13 @@ def stitch_row(stitches, beg, end, angle, row_spacing, max_stitch_length, stagge
     offset = (first_stitch - beg).length()
 
     while offset < segment_length:
-        stitches.append(Stitch(beg + offset * row_direction, tags=('fill_row')))
+        next_stitch = Stitch(beg + offset * row_direction, tags=('fill_row'))
+        # When concatenating multiple calls to stitch_row together, and for
+        # some choices of argments to adjust_stagger, the first stitch
+        # processed by this loop duplicates the last stitch in the input list.
+        # In this case, we can skip the stitch.
+        if not next_stitch.isclose(stitches[-1]):
+            stitches.append(next_stitch)
         offset += max_stitch_length
 
     if (end - stitches[-1]).length() > 0.1 * PIXELS_PER_MM and not skip_last:
