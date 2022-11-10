@@ -92,7 +92,3 @@ class Stitch(Point):
         attributes = dict(vars(self))
         attributes['tags'] = list(attributes['tags'])
         return attributes
-
-    def as_point(self) -> Point:
-        """Convert the stitch coordinates to a Point."""
-        return Point(self.x, self.y)
