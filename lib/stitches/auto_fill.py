@@ -59,7 +59,7 @@ def auto_fill(shape: Shape,
               max_stitch_length: float,
               running_stitch_length: float,
               running_stitch_tolerance: float,
-              staggers: int,
+              staggers: float,
               skip_last: bool,
               starting_point: PointLike,
               ending_point: Optional[PointLike] = None,
@@ -76,10 +76,12 @@ def auto_fill(shape: Shape,
     :param running_stitch_length:
     :param running_stitch_tolerance:
     :param staggers: How many times a stitch stagger occurs before the stagger
-        pattern repeats. See py:function::stitch_row in
-        :py:mod:`lib.stitches.fill`.
-    :param skip_last: Whether to skip the last stitch in each row. FIXME: why
-        is this useful?
+        pattern repeats. May be fractional. See py:function::stitch_row in
+        :py:mod:`lib.stitches.fill` and
+        https://github.com/inkstitch/inkstitch/pull/1874
+    :param skip_last: Whether to skip the last stitch in each row. This can
+        sometimes help avoid redundant stitches and thread shredding when the
+        rows are very close together.
     :param starting_point: The starting point of the stitch path that should
         fill the shape.
     :param ending_point: The optional ending point of the stitch path that
