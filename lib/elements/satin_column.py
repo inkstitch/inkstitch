@@ -703,10 +703,10 @@ class SatinColumn(EmbroideryElement):
         if offset2 < -distance * offset_balance:
             offset2 = -distance * offset_balance
 
-        pos1 = pos1 + (pos1 - pos2).unit() * offset1
-        pos2 = pos2 + (pos2 - pos1).unit() * offset2
+        out1 = pos1 + (pos1 - pos2).unit() * offset1
+        out2 = pos2 + (pos2 - pos1).unit() * offset2
 
-        return pos1, pos2
+        return out1, out2
 
     def walk(self, path, start_pos, start_index, distance):
         # Move <distance> pixels along <path>, which is a sequence of line
