@@ -143,6 +143,7 @@ class SatinColumn(EmbroideryElement):
     def pull_compensation_percent(self):
         # pull compensation as a percentage of the width
         return self.get_float_param("pull_compensation_percent", 0)
+
     @property
     @param(
         'pull_compensation_mm',
@@ -195,14 +196,15 @@ class SatinColumn(EmbroideryElement):
     @property
     @param('contour_underlay_inset_percent',
            _('Inset distance (proportional)'),
-           tooltip=_('Shrink the outline by a proportion of the column width, to prevent the underlay from showing around the outside of the satin column.'),
+           tooltip=_('Shrink the outline by a proportion of the column width, '
+                     'to prevent the underlay from showing around the outside of the satin column.'),
            group=_('Contour Underlay'),
            unit='%', type='float', default=0,
            sort_index=3)
     def contour_underlay_inset_percent(self):
         # how far inside the edge of the column to stitch the underlay
         return min(100, max(0, self.get_float_param("contour_underlay_inset_percent", 0)))
-    
+
     @property
     @param('contour_underlay_inset_balance',
            _('Inset balance'),
@@ -228,21 +230,22 @@ class SatinColumn(EmbroideryElement):
 
     @property
     @param('center_walk_underlay_repeats',
-        _('Repeats'),
-        tooltip=_('For an odd number of repeats, this will reverse the direction the satin column is stitched, causing stitching to both begin and end at the start point.'),
-        group=_('Center-Walk Underlay'),
-        type='int', default=2,
-        sort_index=2)
+           _('Repeats'),
+           tooltip=_('For an odd number of repeats, this will reverse the direction the satin column is stitched, '
+                     'causing stitching to both begin and end at the start point.'),
+           group=_('Center-Walk Underlay'),
+           type='int', default=2,
+           sort_index=2)
     def center_walk_underlay_repeats(self):
         return max(self.get_int_param("center_walk_underlay_repeats", 2), 1)
 
     @property
     @param('center_walk_underlay_balance',
-        _('Balance'),
-        tooltip=_('Position of underlay from between the rails (50% is centered), consistent with the Balance parameter for contour underlay.'),
-        group=_('Center-Walk Underlay'),
-        type='float', unit='%', default=50,
-        sort_index=3)
+           _('Balance'),
+           tooltip=_('Position of underlay from between the rails (50% is centered), consistent with the Balance parameter for contour underlay.'),
+           group=_('Center-Walk Underlay'),
+           type='float', unit='%', default=50,
+           sort_index=3)
     def center_walk_underlay_balance(self):
         return min(100, max(0, self.get_float_param("center_walk_underlay_balance", 50)))
 
@@ -909,8 +912,12 @@ class SatinColumn(EmbroideryElement):
         patch = StitchGroup(color=self.color)
 
         # pull compensation is automatically converted from mm to pixels by get_float_param
-        sides = self.plot_points_on_rails(self.zigzag_spacing, self.pull_compensation, self.pull_compensation_percent/100,
-                                          self.pull_compensation_balance/100)
+        sides = self.plot_points_on_rails(
+            self.zigzag_spacing,
+            self.pull_compensation,
+            self.pull_compensation_percent/100,
+            self.pull_compensation_balance/100
+        )
 
         if self.max_stitch_length:
             return self.do_split_stitch(patch, sides)
@@ -940,7 +947,12 @@ class SatinColumn(EmbroideryElement):
 
         patch = StitchGroup(color=self.color)
 
-        sides = self.plot_points_on_rails(self.zigzag_spacing, self.pull_compensation, self.pull_compensation_percent/100, self.pull_compensation_balance/100)
+        sides = self.plot_points_on_rails(
+            self.zigzag_spacing,
+            self.pull_compensation,
+            self.pull_compensation_percent/100,
+            self.pull_compensation_balance/100
+        )
 
         # "left" and "right" here are kind of arbitrary designations meaning
         # a point from the first and second rail respectively
