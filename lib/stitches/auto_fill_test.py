@@ -26,7 +26,6 @@ def test_auto_fill_box():
     # The start and ending points should be the same
     assert actual[0].isclose(actual[-1])
 
-    # The exact stitches output by the algorithm now
     expected = [
         (10.0, 10.0),
         (11.0, 10.0),
@@ -225,12 +224,13 @@ def test_auto_fill_underpath_travels_inside():
         (19 + 1 / 3, 19 + 1 / 3),
         (20.0, 20.0),
     ]
-    actual_starting_stitches = [
-        (stitch.x, stitch.y) for stitch in actual[: len(expected_starting_stitches)]
-    ]
+    travel_prefix = actual[: len(expected_starting_stitches)]
 
     assert not DeepDiff(
         expected_starting_stitches,
-        actual_starting_stitches,
+        [(stitch.x, stitch.y) for stitch in travel_prefix],
         significant_digits=5,
+    )
+    assert set([tag for st in travel_prefix for tag in st.tags]) == set(
+        ["auto_fill_travel"]
     )
