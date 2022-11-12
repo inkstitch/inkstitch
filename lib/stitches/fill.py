@@ -76,7 +76,7 @@ def stitch_row(stitches, beg, end, angle, row_spacing, max_stitch_length, stagge
     row_direction = (end - beg).unit()
     segment_length = (end - beg).length()
 
-    if not beg.isclose(stitches[-1]):
+    if not stitches or not beg.isclose(stitches[-1]):
         stitches.append(beg)
 
     first_stitch = adjust_stagger(beg, angle, row_spacing, max_stitch_length, staggers)
