@@ -205,7 +205,7 @@ def test_auto_fill_underpath_travels_inside():
     # The start and ending points should be the same.
     assert actual[0].isclose(actual[-1])
 
-    # The initial travel stitch is a straight-lint path through the interior to
+    # The initial travel stitch is a straight-line path through the interior to
     # the opposite corner.
     expected_starting_stitches = [
         (10.0, 10.0),
