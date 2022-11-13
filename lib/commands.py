@@ -355,9 +355,9 @@ def get_command_pos(element, index, total):
     if not isinstance(element.shape.buffer(30), shgeo.MultiPolygon):
         outline = element.shape.buffer(30).exterior
     else:
-        polygones = element.shape.buffer(30).geoms
-        polygone = polygones[len(polygones)-1]
-        outline = polygone.exterior
+        polygons = element.shape.buffer(30).geoms
+        polygon = polygons[len(polygones)-1]
+        outline = polygon.exterior
 
     # find the top center point on the outline and start there
     top_center = shgeo.Point(outline.centroid.x, outline.bounds[1])
