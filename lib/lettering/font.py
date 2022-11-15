@@ -221,7 +221,7 @@ class Font(object):
                         style += inkex.Style("stroke-width:0.5px")
                 element.set('style', '%s' % style.to_str())
 
-        # apply trim option
+        # add trims
         self._add_trims(destination_group, text, trim_option, back_and_forth)
         # make sure necessary marker and command symbols are in the defs section
         self._ensure_command_symbols(destination_group)
@@ -338,21 +338,18 @@ class Font(object):
 
     def _add_trims(self, destination_group, text, trim_option, back_and_forth):
         """
-        trim_option == 0  --> no added trims
-        trim_option == 1  --> add a trim at the end of each line
-        trim_option == 2  --> add a trim after  each word
-        trim_option == 3  --> add a trim after each letter
+        trim_option == 0  --> no trims
+        trim_option == 1  --> trim at the end of each line
+        trim_option == 2  --> trim after each word
+        trim_option == 3  --> trim after each letter
         """
-        # reverse every second line of text if back and forth is true
-        if back_and_forth:
-            back_and_forth_text = ""
-            for i, line in enumerate(text.splitlines()):
-                if i % 2 != 0:
-                    back_and_forth_text += line[::-1]
-                else:
-                    back_and_forth_text += line
-                back_and_forth_text += "\n"
-            text = back_and_forth_text
+        if trim_option == 0:
+            return
+
+        # reverse every second line of text if back and forth is true and strip spaces
+        text = text.splitlines()
+        text = [t[::-1].strip() if i % 2 != 0 and back_and_forth else t.strip() for i, t in enumerate(text)]
+        text = "\n".join(text)
 
         i = -1
         space_indices = [i for i, t in enumerate(text) if t == " "]
@@ -363,7 +360,7 @@ class Font(object):
                 continue
 
             i += 1
-            if i in space_indices + line_break_indices:
+            while i in space_indices + line_break_indices:
                 i += 1
 
             # letter
