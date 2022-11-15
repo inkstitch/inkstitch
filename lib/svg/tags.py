@@ -73,6 +73,8 @@ inkstitch_attribs = [
     'fill_underlay_row_spacing_mm',
     'fill_underlay_skip_last',
     'max_stitch_length_mm',
+    'pull_compensation_left_mm',
+    'pull_compensation_right_mm',
     'row_spacing_mm',
     'end_row_spacing_mm',
     'skip_last',
