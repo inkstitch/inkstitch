@@ -9,10 +9,9 @@ import sys
 from base64 import b64decode
 
 import appdirs
+import inkex
 import wx
 import wx.adv
-
-import inkex
 
 from ..elements import nodes_to_elements
 from ..gui import PresetsPanel, SimulatorPreview, info_dialog
@@ -71,9 +70,6 @@ class LetteringFrame(wx.Frame):
         self.back_and_forth_checkbox = wx.CheckBox(self, label=_("Stitch lines of text back and forth"))
         self.back_and_forth_checkbox.Bind(wx.EVT_CHECKBOX, lambda event: self.on_change("back_and_forth", event))
 
-        self.trim_checkbox = wx.CheckBox(self, label=_("Add trims"))
-        self.trim_checkbox.Bind(wx.EVT_CHECKBOX, lambda event: self.on_change("trim", event))
-
         self.trim_option_choice = wx.Choice(self, choices=["Never", "after each line", "after each word", "after each letter"],
                                             name=_("Add trim after"))
         self.trim_option_choice.Bind(wx.EVT_CHOICE, lambda event: self.on_trim_option_change(event))
@@ -122,7 +118,6 @@ class LetteringFrame(wx.Frame):
     def apply_settings(self):
         """Make the settings in self.settings visible in the UI."""
         self.back_and_forth_checkbox.SetValue(bool(self.settings.back_and_forth))
-        self.trim_checkbox.SetValue(bool(self.settings.trim))
         self.trim_option_choice.SetSelection(self.settings.trim_option)
         self.set_initial_font(self.settings.font)
         self.text_editor.SetValue(self.settings.text)
@@ -245,18 +240,6 @@ class LetteringFrame(wx.Frame):
             self.back_and_forth_checkbox.Disable()
             self.back_and_forth_checkbox.SetValue(False)
 
-        if font.auto_satin:
-            self.trim_checkbox.Enable()
-            self.trim_checkbox.SetValue(bool(self.settings.trim))
-            self.trim_option_choice.Disable()
-            self.trim_option_choice.SetSelection(0)
-
-        else:
-            self.trim_checkbox.Disable()
-            self.trim_checkbox.SetValue(False)
-            self.trim_option_choice.Enable()
-            self.trim_option_choice.SetSelection(int(self.settings.trim_option))
-
         self.update_preview()
         self.Layout()
 
@@ -285,7 +268,7 @@ class LetteringFrame(wx.Frame):
 
         font = self.fonts.get(self.font_chooser.GetValue(), self.default_font)
         try:
-            font.render_text(self.settings.text, destination_group, back_and_forth=self.settings.back_and_forth, trim=self.settings.trim,
+            font.render_text(self.settings.text, destination_group, back_and_forth=self.settings.back_and_forth,
                              trim_option=self.settings.trim_option)
 
         except FontError as e:
@@ -368,9 +351,11 @@ class LetteringFrame(wx.Frame):
         # options
         left_option_sizer = wx.BoxSizer(wx.VERTICAL)
         left_option_sizer.Add(self.back_and_forth_checkbox, 1, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT, 5)
-        left_option_sizer.Add(self.trim_checkbox, 1, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT | wx.BOTTOM, 5)
-        left_option_sizer.Add(wx.StaticText(self, wx.ID_ANY, "Add trims"), 1, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT | wx.BOTTOM, 5)
-        left_option_sizer.Add(self.trim_option_choice, 1, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT | wx.BOTTOM, 5)
+
+        trim_option_sizer = wx.BoxSizer(wx.HORIZONTAL)
+        trim_option_sizer.Add(wx.StaticText(self, wx.ID_ANY, "Add trims"), 0, wx.LEFT | wx.ALIGN_CENTRE_VERTICAL, 5)
+        trim_option_sizer.Add(self.trim_option_choice, 1, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT | wx.BOTTOM, 5)
+        left_option_sizer.Add(trim_option_sizer, 0, wx.ALIGN_LEFT, 5)
 
         font_scale_sizer = wx.BoxSizer(wx.HORIZONTAL)
         font_scale_sizer.Add(wx.StaticText(self, wx.ID_ANY, "Scale"), 0, wx.LEFT | wx.ALIGN_CENTRE_VERTICAL, 0)

@@ -7,12 +7,9 @@ from copy import copy
 
 from inkex import paths, transforms, units
 
-from ..commands import add_commands
-from ..elements import FillStitch, Stroke
 from ..svg import get_correction_transform, get_guides
-from ..svg.tags import (CONNECTION_END, SVG_GROUP_TAG,
-                        SVG_PATH_TAG, EMBROIDERABLE_TAGS, SVG_USE_TAG, XLINK_HREF)
-from ..marker import has_marker
+from ..svg.tags import (CONNECTION_END, SVG_GROUP_TAG, SVG_PATH_TAG,
+                        SVG_USE_TAG, XLINK_HREF)
 
 
 class Glyph(object):
@@ -27,7 +24,7 @@ class Glyph(object):
       node  -- svg:g XML node containing the component satins in this character
     """
 
-    def __init__(self, group, trim=False):
+    def __init__(self, group):
         """Create a Glyph.
 
         The nodes will be copied out of their parent SVG document (with nested
@@ -36,30 +33,13 @@ class Glyph(object):
         Arguments:
           group -- an svg:g XML node containing all the paths that make up
             this Glyph.  Nested groups are allowed.
-
-        If trim, a trim command will be added at the end of the glyph
         """
 
         self._process_baseline(group.getroottree().getroot())
         self.node = self._process_group(group)
-        self._process_trim(trim)
         self._process_bbox()
         self._move_to_origin()
         self._process_commands()
-
-    def _process_trim(self, trim):
-        # find the last path that does not carry a marker and add a trim there
-        if trim:
-            for path_child in self.node.iterdescendants(EMBROIDERABLE_TAGS):
-                if not has_marker(path_child):
-                    path = path_child
-            if path.get('style') and "fill" in path.get('style'):
-                element = FillStitch(path)
-            else:
-                element = Stroke(path)
-
-            if element.shape:
-                add_commands(element, ['trim'], False)
 
     def _process_group(self, group):
         new_group = copy(group)
@@ -144,8 +124,3 @@ class Glyph(object):
             x, y = transform.apply_to_point((oldx, oldy))
             node.set('x', x)
             node.set('y', y)
-
-    def finish_with_trim(self):
-        for element in self.node.iterdescendants(SVG_USE_TAG):
-            xlink = element.get(XLINK_HREF, ' ')
-            return xlink == '#inkstitch_trim'

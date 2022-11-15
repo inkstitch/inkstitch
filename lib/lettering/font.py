@@ -10,18 +10,18 @@ from random import randint
 
 import inkex
 
-from ..commands import ensure_symbol
-from ..elements import nodes_to_elements
+from ..commands import add_commands, ensure_symbol
+from ..elements import FillStitch, Stroke, nodes_to_elements
 from ..exceptions import InkstitchException
 from ..extensions.lettering_custom_font_dir import get_custom_font_dir
 from ..i18n import _, get_languages
-from ..marker import MARKER, ensure_marker
+from ..marker import MARKER, ensure_marker, has_marker
 from ..stitches.auto_satin import auto_satin
-from ..svg.tags import (CONNECTION_END, CONNECTION_START, INKSCAPE_LABEL,
-                        SVG_PATH_TAG, SVG_USE_TAG, XLINK_HREF)
+from ..svg.tags import (CONNECTION_END, CONNECTION_START, EMBROIDERABLE_TAGS,
+                        INKSCAPE_LABEL, SVG_GROUP_TAG, SVG_PATH_TAG,
+                        SVG_USE_TAG, XLINK_HREF)
 from ..utils import Point
 from .font_variant import FontVariant
-from .glyph import Glyph
 
 
 class FontError(InkstitchException):
@@ -82,6 +82,7 @@ class Font(object):
         self.metadata = {}
         self.license = None
         self.variants = {}
+
         self._load_metadata()
         self._load_license()
 
@@ -179,10 +180,11 @@ class Font(object):
     def is_custom_font(self):
         return get_custom_font_dir() in self.path
 
-    def render_text(self, text, destination_group, variant=None, back_and_forth=True, trim=False, trim_option=0):
+    def render_text(self, text, destination_group, variant=None, back_and_forth=True, trim_option=0):
 
         """Render text into an SVG group element."""
         self._load_variants()
+
         if variant is None:
             variant = self.default_variant
 
@@ -195,8 +197,8 @@ class Font(object):
         for i, line in enumerate(text.splitlines()):
             glyph_set = glyph_sets[i % 2]
             line = line.strip()
-            letter_group = self._render_line(line, position, glyph_set,
-                                             trim_option)
+
+            letter_group = self._render_line(line, position, glyph_set)
             if back_and_forth and self.reversible and i % 2 == 1:
                 letter_group[:] = reversed(letter_group)
             destination_group.append(letter_group)
@@ -205,7 +207,7 @@ class Font(object):
             position.y += self.leading
 
         if self.auto_satin and len(destination_group) > 0:
-            self._apply_auto_satin(destination_group, trim)
+            self._apply_auto_satin(destination_group)
 
         # make sure font stroke styles have always a similar look
         for element in destination_group.iterdescendants(SVG_PATH_TAG):
@@ -219,6 +221,8 @@ class Font(object):
                         style += inkex.Style("stroke-width:0.5px")
                 element.set('style', '%s' % style.to_str())
 
+        # apply trim option
+        self._add_trims(destination_group, text, trim_option, back_and_forth)
         # make sure necessary marker and command symbols are in the defs section
         self._ensure_command_symbols(destination_group)
         self._ensure_marker_symbols(destination_group)
@@ -228,12 +232,8 @@ class Font(object):
     def get_variant(self, variant):
         return self.variants.get(variant, self.variants[self.default_variant])
 
-    def _render_line(self, line, position, glyph_set, trim_option=0):
+    def _render_line(self, line, position, glyph_set):
         """Render a line of text.
-        trim_option == 0 --> no added trims
-        trim_option == 1  --> add a trim at the end of each line
-        trim_option == 2  --> add a trim after  each word
-        trim_option == 3  --> add a trim after each lettr
 
         An SVG XML node tree will be returned, with an svg:g at its root.  If
         the font metadata requests it, Auto-Satin will be applied.
@@ -253,28 +253,22 @@ class Font(object):
         })
 
         last_character = None
-
-        for i, character in enumerate(line):
+        for character in line:
             if self.letter_case == "upper":
                 character = character.upper()
             elif self.letter_case == "lower":
                 character = character.lower()
 
             glyph = glyph_set[character]
-            end_of_word = (i == len(line)-1 or line[i+1] == " ")
+
             if character == " " or (glyph is None and self.default_glyph == " "):
                 position.x += self.word_spacing
                 last_character = None
             else:
                 if glyph is None:
                     glyph = glyph_set[self.default_glyph]
+
                 if glyph is not None:
-                    if i == len(line)-1:      # last glyph of line
-                        trim = trim_option > 0
-                    else:
-                        trim = trim_option == 3 or (trim_option == 2 and end_of_word)
-                    if trim and not glyph.finish_with_trim():
-                        glyph = Glyph(glyph.node, trim)
                     node = self._render_glyph(glyph, position, character, last_character)
                     group.append(node)
 
@@ -315,7 +309,12 @@ class Font(object):
             horiz_adv_x_default = glyph.width + glyph.min_x
 
         position.x += self.horiz_adv_x.get(character, horiz_adv_x_default) - glyph.min_x
+
         self._update_commands(node, glyph)
+
+        # this is used to recognize a glyph layer later in the process
+        # because this is not unique it will be overwritten by inkscape when inserted into the document
+        node.set("id", "glyph")
 
         return node
 
@@ -337,6 +336,61 @@ class Font(object):
                 c.set(CONNECTION_END, "#%s" % new_element_id)
                 c.set(CONNECTION_START, "#%s" % new_symbol_id)
 
+    def _add_trims(self, destination_group, text, trim_option, back_and_forth):
+        """
+        trim_option == 0  --> no added trims
+        trim_option == 1  --> add a trim at the end of each line
+        trim_option == 2  --> add a trim after  each word
+        trim_option == 3  --> add a trim after each letter
+        """
+        # reverse every second line of text if back and forth is true
+        if back_and_forth:
+            back_and_forth_text = ""
+            for i, line in enumerate(text.splitlines()):
+                if i % 2 != 0:
+                    back_and_forth_text += line[::-1]
+                else:
+                    back_and_forth_text += line
+                back_and_forth_text += "\n"
+            text = back_and_forth_text
+
+        i = -1
+        space_indices = [i for i, t in enumerate(text) if t == " "]
+        line_break_indices = [i for i, t in enumerate(text) if t == "\n"]
+        for group in destination_group.iterdescendants(SVG_GROUP_TAG):
+            # make sure we are only looking at glyph groups
+            if group.get("id") != "glyph":
+                continue
+
+            i += 1
+            if i in space_indices + line_break_indices:
+                i += 1
+
+            # letter
+            if trim_option == 3:
+                self._process_trim(group)
+            # word
+            elif trim_option == 2 and i+1 in space_indices + line_break_indices:
+                self._process_trim(group)
+            # line
+            elif trim_option == 1 and i+1 in line_break_indices:
+                self._process_trim(group)
+
+    def _process_trim(self, group):
+        # find the last path that does not carry a marker and add a trim there
+        for path_child in group.iterdescendants(EMBROIDERABLE_TAGS):
+            if not has_marker(path_child):
+                path = path_child
+        if path.get('style') and "fill" in path.get('style'):
+            element = FillStitch(path)
+        else:
+            element = Stroke(path)
+
+        if element.shape:
+            element_id = "%s_%s" % (element.node.get('id'), randint(0, 9999))
+            element.node.set("id", element_id)
+            add_commands(element, ['trim'])
+
     def _ensure_command_symbols(self, group):
         # collect commands
         commands = set()
@@ -357,16 +411,14 @@ class Font(object):
                 for element in marked_elements:
                     element.style['marker-start'] = "url(#inkstitch-%s-marker)" % marker
 
-    def _apply_auto_satin(self, group, trim):
+    def _apply_auto_satin(self, group):
         """Apply Auto-Satin to an SVG XML node tree with an svg:g at its root.
 
         The group's contents will be replaced with the results of the auto-
         satin operation.  Any nested svg:g elements will be removed.
         """
 
-        # TODO: trim option for non-auto-route
-
         elements = nodes_to_elements(group.iterdescendants(SVG_PATH_TAG))
 
         if elements:
-            auto_satin(elements, preserve_order=True, trim=trim)
+            auto_satin(elements, preserve_order=True, trim=False)

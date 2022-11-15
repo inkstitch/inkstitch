@@ -6,7 +6,7 @@
 import os
 import sys
 from copy import deepcopy
-from random import randint, random
+from random import random
 
 import inkex
 from shapely import geometry as shgeo
@@ -326,13 +326,9 @@ def add_connector(document, symbol, command, element):
     symbol.getparent().insert(0, path)
 
 
-def add_symbol(document, group, command, pos, ensuring=True):
-    if ensuring:
-        identifier = document.get_unique_id("command_use")
-    else:
-        identifier = "command_use" + str(randint(0, 9999))
+def add_symbol(document, group, command, pos):
     symbol = inkex.Use(attrib={
-        "id": identifier,
+        "id": document.get_unique_id("command_use"),
         XLINK_HREF: "#inkstitch_%s" % command,
         "height": "100%",
         "width": "100%",
@@ -356,7 +352,7 @@ def get_command_pos(element, index, total):
         outline = element.shape.buffer(30).exterior
     else:
         polygons = element.shape.buffer(30).geoms
-        polygon = polygons[len(polygones)-1]
+        polygon = polygons[len(polygons)-1]
         outline = polygon.exterior
 
     # find the top center point on the outline and start there
@@ -396,16 +392,16 @@ def remove_legacy_param(element, command):
             del element.node.attrib[attribute]
 
 
-def add_commands(element, commands, ensuring=True):
+def add_commands(element, commands):
     svg = get_document(element.node)
 
     for i, command in enumerate(commands):
-        if ensuring:
-            ensure_symbol(svg, command)
+        ensure_symbol(svg, command)
         remove_legacy_param(element, command)
+
         group = add_group(svg, element.node, command)
         pos = get_command_pos(element, i, len(commands))
-        symbol = add_symbol(svg, group, command, pos, ensuring)
+        symbol = add_symbol(svg, group, command, pos)
         add_connector(svg, symbol, command, element)
 
 
