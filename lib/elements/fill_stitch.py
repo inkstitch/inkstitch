@@ -226,16 +226,52 @@ class FillStitch(EmbroideryElement):
         return max(self.get_int_param("staggers", 4), 1)
 
     @property
-    @param('random_feathering_mm',
-           _('randomly grows or shrinks the rows with at most that length'),
-           tooltip=_('setting this will cause a feathering effect, rows could be shorten or lengthen up to this value '),
+    @param('random_feathering_left_out_mm',
+           _('randomly grows  the left side of rows  with at most that length'),
+           tooltip=_('setting this will cause a feathering effect, left side of rows will be lengthen up to this value '),
            type='float',
            unit='mm',
            sort_index=60,
            select_items=[('fill_method', 0)],
            default=0)
-    def random_feathering(self):
-        return self.get_float_param("random_feathering_mm", 0)
+    def random_feathering_left_out(self):
+        return self.get_float_param("random_feathering_left_out_mm", 0)
+
+    @property
+    @param('random_feathering_left_in_mm',
+           _('randomly shrinks the left side of rows with at most that length'),
+           tooltip=_('setting this will cause a feathering effect, left side of rows will be shorten up to this value '),
+           type='float',
+           unit='mm',
+           sort_index=60,
+           select_items=[('fill_method', 0)],
+           default=0)
+    def random_feathering_left_in(self):
+        return self.get_float_param("random_feathering_left_in_mm", 0)
+
+    @property
+    @param('random_feathering_right_out_mm',
+           _('randomly grows the right side of rows with at most that length'),
+           tooltip=_('setting this will cause a feathering effect, right side of rows could be lengthen up to this value '),
+           type='float',
+           unit='mm',
+           sort_index=60,
+           select_items=[('fill_method', 0)],
+           default=0)
+    def random_feathering_right_out(self):
+        return self.get_float_param("random_feathering_right_out_mm", 0)
+
+    @property
+    @param('random_feathering_right_in_mm',
+           _('randomly shrinks the right side of rows with at most that length'),
+           tooltip=_('setting this will cause a feathering effect, right side of rows could be shorten up to this value '),
+           type='float',
+           unit='mm',
+           sort_index=60,
+           select_items=[('fill_method', 0)],
+           default=0)
+    def random_feathering_right_in(self):
+        return self.get_float_param("random_feathering_right_in_mm", 0)
 
     @property
     @param('random_feathering_roughness',
@@ -561,10 +597,9 @@ class FillStitch(EmbroideryElement):
     def expand(self):
         return self.get_float_param('expand_mm', 0)
 
-
     @property
     @param('pull_compensation_left_mm',
-           _('Pull compensation on left side of row'),
+           _('Pull compensation on left side of rows'),
            tooltip=_('Expand the rows to the left before fill stitching, to compensate for gaps between shapes.'),
            unit='mm',
            type='float',
@@ -573,7 +608,6 @@ class FillStitch(EmbroideryElement):
            select_items=[('fill_method', 0), ('fill_method', 1), ('fill_method', 2)])
     def pull_compensation_left(self):
         return self.get_float_param('pull_compensation_left_mm', 0)
-
 
     @property
     @param('pull_compensation_right_mm',
@@ -647,7 +681,7 @@ class FillStitch(EmbroideryElement):
         new_holes = [self.add_points_linear_ring(shgeo.LinearRing(hole), roughness) for hole in shape.interiors]
         return shgeo.Polygon(new_exterior, new_holes)
 
-    def point_is_to_the_left (self,shape, index, i ,angle):
+    def point_is_to_the_left(self, shape, index, i, angle):
         if index == len(shape.interiors):
             linear_ring = shape.exterior
             outside_border = True
@@ -658,93 +692,100 @@ class FillStitch(EmbroideryElement):
         point = shgeo.Point(linear_ring.coords[i])
         new_point = shgeo.Point(point.x+move.x, point.y+move.y)
         if outside_border:
-            return  shape.contains(new_point)
+            return shape.contains(new_point)
         else:
             return not shape.contains(new_point)
 
-
-    def move_point(self,shape, index, i, distance, angle, randomness = False):
-            # when called by feathering
-            # try to move a point while keeping a valid shape
-            # if it  fails 10 times, don't move this point
-            # if index == len(shape.interiors) we are on the exterior, othervise, on the index_th interior
-            if randomness:
-                loops = 10
+    def move_point(self, shape, index, i, distance, angle, randomness=False):
+        # when called by feathering
+        # try to move a point while keeping a valid shape
+        # if it  fails 10 times, don't move this point
+        # if index == len(shape.interiors) we are on the exterior, othervise, on the index_th interior
+        # if it fails while called by compensate, we try to move to a shorter distance
+        if randomness:
+            loops = 10
+        else:
+            loops = 1
+        for j in range(loops):
+            if index == len(shape.interiors):
+                linear_ring = shape.exterior
+                holes = shape.interiors
             else:
-                loops = 1
-            for j in range(loops):
-                if index == len(shape.interiors):
-                    linear_ring = shape.exterior
-                    holes = shape.interiors
-                else:
-                    linear_ring = shape.interiors[index]
-                if randomness:
-                    distance = random.uniform(-distance, distance)
-                move = shgeo.Point(distance*math.cos(-angle), distance*math.sin(-angle))
-                point = shgeo.Point(linear_ring.coords[i])
-                new_point = shgeo.Point(point.x+move.x, point.y+move.y)
+                linear_ring = shape.interiors[index]
+            move = shgeo.Point(distance*math.cos(-angle), distance*math.sin(-angle))
+            point = shgeo.Point(linear_ring.coords[i])
+            new_point = shgeo.Point(point.x+move.x, point.y+move.y)
 
-                points = [[c[0], c[1]] for c in list(linear_ring.coords)]
-                points[i] = [new_point.x, new_point.y]
-                if i == 0:
-                    points[-1] = [new_point.x, new_point.y]
-                new_linear_ring = shgeo.LinearRing([[p[0], p[1]] for p in points])
-                if index == len(shape.interiors):
-                    new_shape = shgeo.Polygon(new_linear_ring, holes)
+            points = [[c[0], c[1]] for c in list(linear_ring.coords)]
+            points[i] = [new_point.x, new_point.y]
+            if i == 0:
+                points[-1] = [new_point.x, new_point.y]
+            new_linear_ring = shgeo.LinearRing([[p[0], p[1]] for p in points])
+            if index == len(shape.interiors):
+                new_shape = shgeo.Polygon(new_linear_ring, holes)
+            else:
+                holes = [hole for i, hole in enumerate(shape.interiors) if i < index]
+                holes.append(new_linear_ring)
+                holes.extend([hole for i, hole in enumerate(shape.interiors) if i > index])
+                new_shape = shgeo.Polygon(shape.exterior, holes)
+            if self.shape_is_valid(new_shape):
+                return new_shape
+            elif not randomness:
+                if distance > 0:
+                    return self.move_point(shape, index, i, max(0, distance - 1), angle, False)
                 else:
-                    holes = [hole for i, hole in enumerate(shape.interiors) if i < index]
-                    holes.append(new_linear_ring)
-                    holes.extend([hole for i, hole in enumerate(shape.interiors) if i > index])
-                    new_shape = shgeo.Polygon(shape.exterior, holes)
-                if self.shape_is_valid(new_shape):
-                    return new_shape
-                elif not randomness:
-                    if distance >0:
-                        return self.move_point(shape,index,i, max(0, distance - 1), angle, False)
-                    else:
-                        return  self.move_point(shape, index, i , min(distance+1,0), angle, False )
-            return shape
+                    return self.move_point(shape, index, i, min(distance + 1, 0), angle, False)
+        return shape
 
-    def feather(self, shape, feathering, roughness, angle):
+    def feather(self, shape, feathering_left_in, feathering_left_out, feathering_right_in,
+                feathering_right_out, roughness, angle):
         # first we add a lot of points on the boundaries
-        # then on each boundary, we try to move every point,
-        # move follow the stitch direction, it may yield a larger or a smaller shape.
-        # If  the move does not yield a valid shape, we try again,
-        # aafter 10 miss, we just don't move the  point.
-       
+        # then on each boundary, we try to move every point keeping a valid shape
+
+        def random_distance(min=0, max=0):
+            return random.uniform(-min, max)
 
         new_shape = self.add_points_polygon(shape, roughness)
 
         index_exterior = len(new_shape.interiors)
         for i in range(len(new_shape.exterior.coords)-1):
-            new_shape = self.move_point(new_shape, index_exterior, i, feathering, angle,True)
+            if self.point_is_to_the_left(new_shape, index_exterior, i, angle):
+                new_shape = self.move_point(new_shape, index_exterior, i,
+                                            random_distance(feathering_left_in, feathering_left_out), angle, True)
+            else:
+                new_shape = self.move_point(new_shape, index_exterior, i,
+                                            -random_distance(feathering_right_in, feathering_right_out), angle, True)
         # then each of the interior
         for index in range(len(new_shape.interiors)):
             for i in range(len(new_shape.interiors[index].coords)-1):
-                new_shape = self.move_point(new_shape, index, i, feathering, angle,True)
+                if self.point_is_to_the_left(new_shape, index, i, angle):
+                    new_shape = self.move_point(new_shape, index, i,
+                                                -random_distance(feathering_left_in, feathering_left_out), angle, True)
+                else:
+                    new_shape = self.move_point(new_shape, index, i,
+                                                random_distance(feathering_right_in, feathering_right_out), angle, True)
 
         return new_shape
 
     def compensate(self, shape, left, right, angle):
-        
-       
-        
+
         new_shape = shape
-        if not self.random_feathering:
+        if not (self.random_feathering_left_in or self.random_feathering_left_out
+                or self.random_feathering_right_in or self.random_feathering_right_out):
             new_shape = self.add_points_polygon(shape)
 
         index_exterior = len(new_shape.interiors)
         for i in range(len(new_shape.exterior.coords)-1):
-            if left and self.point_is_to_the_left (new_shape, index_exterior, i ,angle):            
-                new_shape = self.move_point(new_shape, index_exterior, i, -left, angle,False)
+            if left and self.point_is_to_the_left(new_shape, index_exterior, i, angle):
+                new_shape = self.move_point(new_shape, index_exterior, i, -left, angle, False)
             elif right and not self.point_is_to_the_left(new_shape, index_exterior, i, angle):
-                new_shape = self.move_point(new_shape, index_exterior, i, right, angle,False )
+                new_shape = self.move_point(new_shape, index_exterior, i, right, angle, False)
         # then each of the interior
         for index in range(len(new_shape.interiors)):
             for i in range(len(new_shape.interiors[index].coords)-1):
                 if left and self.point_is_to_the_left(new_shape, index, i, angle):
                     new_shape = self.move_point(new_shape, index, i, left, angle, False)
-                elif right and not self.point_is_to_the_left(new_shape, index,i, angle):
+                elif right and not self.point_is_to_the_left(new_shape, index, i, angle):
                     new_shape = self.move_point(new_shape, index, i, -right, angle, False)
 
         return new_shape
@@ -803,8 +844,11 @@ class FillStitch(EmbroideryElement):
                     fill_shapes = self.fill_shape(shape)
                     for fill_shape in fill_shapes.geoms:
                         if self.fill_method == 0:
-                            if self.random_feathering:
-                                fill_shape = self.feather(fill_shape, self.random_feathering, self.random_feathering_roughness, self.angle)
+                            if (self.random_feathering_left_in or self.random_feathering_left_out
+                               or self.random_feathering_right_in or self.random_feathering_right_out):
+                                fill_shape = self.feather(fill_shape, self.random_feathering_left_out, self.random_feathering_left_in,
+                                                          self.random_feathering_right_out, self.random_feathering_right_in,
+                                                          self.random_feathering_roughness, self.angle)
                             if self.pull_compensation_left or self.pull_compensation_right:
                                 fill_shape = self.compensate(fill_shape, self.pull_compensation_left, self.pull_compensation_right, self.angle)
                             stitch_groups.extend(self.do_auto_fill(fill_shape, last_patch, start, end))
