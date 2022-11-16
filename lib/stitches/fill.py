@@ -39,9 +39,11 @@ def row_num(point, angle, row_spacing):
 
 
 def adjust_stagger(stitch, angle, row_spacing, max_stitch_length, staggers):
+    if staggers == 0:
+        staggers = 1  # sanity check to avoid division by zero.
     this_row_num = row_num(stitch, angle, row_spacing)
-    row_stagger = this_row_num % staggers
-    stagger_offset = (float(row_stagger) / staggers) * max_stitch_length
+    stagger_phase = (this_row_num / staggers) % 1
+    stagger_offset = stagger_phase * max_stitch_length
     offset = ((stitch * east(angle)) - stagger_offset) % max_stitch_length
 
     return stitch - offset * east(angle)

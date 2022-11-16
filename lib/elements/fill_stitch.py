@@ -217,13 +217,14 @@ class FillStitch(EmbroideryElement):
     @property
     @param('staggers',
            _('Stagger rows this many times before repeating'),
-           tooltip=_('Setting this dictates how many rows apart the stitches will be before they fall in the same column position.'),
+           tooltip=_('Length of the cycle by which successive stitch rows are staggered.'
+                     'Fractional values are allowed and can have less visible diagonals than integer values.'),
            type='int',
            sort_index=6,
            select_items=[('fill_method', 0), ('fill_method', 2), ('fill_method', 3)],
            default=4)
     def staggers(self):
-        return max(self.get_int_param("staggers", 4), 1)
+        return self.get_float_param("staggers", 4)
 
     @property
     @param('random_feathering_left_out_mm',

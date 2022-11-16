@@ -5,6 +5,7 @@
     "reversible": false,
     "letter_case": "",
     "default_glyph": " ",
+    "size": 14,
     "min_scale": 0.75,
     "max_scale": 2.0,
     "horiz_adv_x_default": 43,

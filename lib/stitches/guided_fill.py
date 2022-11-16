@@ -154,6 +154,7 @@ def take_only_line_strings(thing):
     return shgeo.MultiLineString(line_strings)
 
 
+
 def apply_stitches(line, max_stitch_length, num_staggers, row_spacing, row_num, random_stitch_length_decrease=0,
                    random_stitch_length_increase=0, random_angle=0, random_row_spacing=0):
 
@@ -162,9 +163,6 @@ def apply_stitches(line, max_stitch_length, num_staggers, row_spacing, row_num, 
     start = ((row_num / num_staggers) % 1) * max_stitch_length
     projections = np.arange(start, line.length, max_stitch_length)
 
-
-
-   # start = (float(row_num % num_staggers) / num_staggers) * max_stitch_length
 
     if random_stitch_length_decrease or random_stitch_length_increase:
         projections = [start]
