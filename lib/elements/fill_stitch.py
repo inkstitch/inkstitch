@@ -789,7 +789,7 @@ class FillStitch(EmbroideryElement):
                 elif right and not self.point_is_to_the_left(new_shape, index, i, angle):
                     new_shape = self.move_point(new_shape, index, i, -right, angle, False)
 
-        return new_shape
+        return new_shape.buffer(0.5)
 
     def underlay_shape(self, shape):
         return self.shrink_or_grow_shape(shape, -self.fill_underlay_inset)
