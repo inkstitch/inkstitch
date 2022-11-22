@@ -9,7 +9,6 @@ from .apply_threadlist import ApplyThreadlist
 from .auto_run import AutoRun
 from .auto_satin import AutoSatin
 from .break_apart import BreakApart
-from .gradient_blocks import GradientBlocks
 from .cleanup import Cleanup
 from .commands_scale_symbols import CommandsScaleSymbols
 from .convert_to_satin import ConvertToSatin
@@ -22,6 +21,7 @@ from .embroider_settings import EmbroiderSettings
 from .flip import Flip
 from .generate_palette import GeneratePalette
 from .global_commands import GlobalCommands
+from .gradient_blocks import GradientBlocks
 from .input import Input
 from .install import Install
 from .install_custom_palette import InstallCustomPalette
