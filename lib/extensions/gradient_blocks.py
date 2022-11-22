@@ -28,7 +28,7 @@ class GradientBlocks(InkstitchExtension):
         if not self.get_elements():
             return
 
-        elements = [element for element in self.elements if (isinstance(element, FillStitch) and self.has_gradient_color(element))]
+        elements = [element for element in self.elements if (isinstance(element, FillStitch) and element.has_gradient_color())]
         if not elements:
             errormsg(_("Please select at least one object with a gradient fill."))
             return
@@ -59,9 +59,6 @@ class GradientBlocks(InkstitchExtension):
                     block.set('inkstitch:underpath', False)
                 parent.insert(index, block)
             parent.remove(element.node)
-
-    def has_gradient_color(self, element):
-        return element.color.startswith('url') and "linearGradient" in element.color
 
 
 if __name__ == '__main__':

@@ -21,6 +21,7 @@ from ..svg import PIXELS_PER_MM
 from ..svg.tags import INKSCAPE_LABEL
 from ..utils import cache, version
 from .element import EmbroideryElement, param
+from .gradient_fill import gradient_shapes_and_attributes
 from .validation import ValidationError, ValidationWarning
 
 
@@ -160,6 +161,10 @@ class FillStitch(EmbroideryElement):
         return self.get_style("fill", "#000000")
 
     @property
+    def has_gradient_color(self):
+        return self.color.startswith('url') and "linearGradient" in self.color
+
+    @property
     @param(
         'skip_last',
         _('Skip last stitch in each row'),
@@ -216,8 +221,7 @@ class FillStitch(EmbroideryElement):
     @property
     @param('staggers',
            _('Stagger rows this many times before repeating'),
-           tooltip=_('Length of the cycle by which successive stitch rows are staggered.'
-                     'Fractional values are allowed and can have less visible diagonals than integer values.'),
+           tooltip=_('Setting this dictates how many rows apart the stitches will be before they fall in the same column position.'),
            type='int',
            sort_index=6,
            select_items=[('fill_method', 0), ('fill_method', 2), ('fill_method', 3)],
@@ -553,16 +557,31 @@ class FillStitch(EmbroideryElement):
             for shape in self.shape.geoms:
                 start = self.get_starting_point(last_patch)
                 try:
+                    # get fill shapes
+                    fill_shapes = self.fill_shape(shape)
+                    if self.has_gradient_color:
+                        fill_shapes, attributes = gradient_shapes_and_attributes(self, fill_shapes)
+                    else:
+                        fill_shapes = fill_shapes.geoms
+                        attributes = None
+                        color = None
+
+                    # do underlay
                     if self.fill_underlay:
+                        if attributes:
+                            color = attributes[0]['color']
                         underlay_shapes = self.underlay_shape(shape)
                         for underlay_shape in underlay_shapes.geoms:
-                            underlay_stitch_groups, start = self.do_underlay(underlay_shape, start)
+                            underlay_stitch_groups, start = self.do_underlay(underlay_shape, start, color)
                             stitch_groups.extend(underlay_stitch_groups)
 
-                    fill_shapes = self.fill_shape(shape)
-                    for fill_shape in fill_shapes.geoms:
+                    # do top layer fill stitching
+                    for i, fill_shape in enumerate(fill_shapes):
                         if self.fill_method == 0:
-                            stitch_groups.extend(self.do_auto_fill(fill_shape, last_patch, start, end))
+                            if self.has_gradient_color:
+                                stitch_groups.extend(self.do_auto_fill(fill_shape, last_patch, start, end, attributes[i]))
+                            else:
+                                stitch_groups.extend(self.do_auto_fill(fill_shape, last_patch, start, end))
                         if self.fill_method == 1:
                             stitch_groups.extend(self.do_contour_fill(fill_shape, last_patch, start))
                         elif self.fill_method == 2:
@@ -570,7 +589,6 @@ class FillStitch(EmbroideryElement):
                 except Exception:
                     self.fatal_fill_error()
                 last_patch = stitch_groups[-1]
-
             return stitch_groups
 
     def do_legacy_fill(self):
@@ -584,11 +602,12 @@ class FillStitch(EmbroideryElement):
                                    self.skip_last)
         return [StitchGroup(stitches=stitch_list, color=self.color) for stitch_list in stitch_lists]
 
-    def do_underlay(self, shape, starting_point):
+    def do_underlay(self, shape, starting_point, color=None):
+        color = color or self.color
         stitch_groups = []
         for i in range(len(self.fill_underlay_angle)):
             underlay = StitchGroup(
-                color=self.color,
+                color=color,
                 tags=("auto_fill", "auto_fill_underlay"),
                 stitches=auto_fill(
                     shape,
@@ -607,15 +626,22 @@ class FillStitch(EmbroideryElement):
         starting_point = underlay.stitches[-1]
         return [stitch_groups, starting_point]
 
-    def do_auto_fill(self, shape, last_patch, starting_point, ending_point):
+    def do_auto_fill(self, shape, last_patch, starting_point, ending_point, attributes=None):
+        color = self.color
+        end_row_spacing = self.end_row_spacing
+        angle = self.angle
+        if attributes is not None:
+            color = attributes['color']
+            end_row_spacing = attributes['end_row_spacing']
+            angle = attributes['angle']
         stitch_group = StitchGroup(
-            color=self.color,
+            color=color,
             tags=("auto_fill", "auto_fill_top"),
             stitches=auto_fill(
                 shape,
-                self.angle,
+                angle,
                 self.row_spacing,
-                self.end_row_spacing,
+                end_row_spacing,
                 self.max_stitch_length,
                 self.running_stitch_length,
                 self.running_stitch_tolerance,
