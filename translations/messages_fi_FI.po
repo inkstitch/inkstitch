@@ -2,21 +2,21 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-07-15 02:57+0000\n"
-"PO-Revision-Date: 2022-09-13 02:49\n"
+"POT-Creation-Date: 2022-11-06 01:52+0000\n"
+"PO-Revision-Date: 2022-11-06 01:54\n"
 "Last-Translator: \n"
 "Language-Team: Finnish\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.10.3\n"
+"Generated-By: Babel 2.11.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: easygettext\n"
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-15 02:57+0000\n"
+"POT-Creation-Date: 2022-11-06 01:52+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -968,8 +968,8 @@ msgid "Stagger rows this many times before repeating"
 msgstr "Erota rivit näin monta kertaa ennenkuin toistetaan"
 
 #: lib/elements/fill_stitch.py:219
-msgid "Setting this dictates how many rows apart the stitches will be before they fall in the same column position."
-msgstr "Tämä määritys määrittää kuinka monta riviä eroa tikeissä on ennenkuin palataan samaan polun asentoon."
+msgid "Length of the cycle by which successive stitch rows are staggered. Fractional values are allowed and can have less visible diagonals than integer values."
+msgstr ""
 
 #: lib/elements/fill_stitch.py:374
 msgid "Running stitch length (traversal between sections)"
@@ -1463,7 +1463,7 @@ msgstr ""
 msgid "Scale axis for satin guided ripple stitches."
 msgstr ""
 
-#: lib/elements/stroke.py:249 print/templates/ui.html:172
+#: lib/elements/stroke.py:249 print/templates/ui.html:181
 msgid "None"
 msgstr "-"
 
@@ -1708,12 +1708,16 @@ msgstr ""
 msgid "Please choose one or more commands to add."
 msgstr "Valitse lisättäväksi yksi tai useampi komento."
 
-#: lib/extensions/lettering.py:44 lib/extensions/lettering.py:424
+#: lib/extensions/lettering.py:37 lib/extensions/lettering.py:473
 msgid "Ink/Stitch Lettering"
 msgstr "Ink/Stitch Kirjaimet"
 
-#: lib/extensions/lettering.py:54
+#: lib/extensions/lettering.py:47
 msgid "Font"
+msgstr ""
+
+#: lib/extensions/lettering.py:56
+msgid "Font size filter (mm). 0 for all sizes."
 msgstr ""
 
 #: lib/extensions/lettering.py:66 inx/inkstitch_apply_threadlist.inx:7
@@ -1731,8 +1735,8 @@ msgstr "Lisää trimmaus"
 
 #: lib/extensions/lettering.py:83 lib/extensions/params.py:442
 #: print/templates/custom-page.html:23 print/templates/custom-page.html:27
-#: print/templates/custom-page.html:33 print/templates/ui.html:93
-#: print/templates/ui.html:97 print/templates/ui.html:103
+#: print/templates/custom-page.html:33 print/templates/ui.html:102
+#: print/templates/ui.html:106 print/templates/ui.html:112
 #: electron/src/renderer/components/InstallPalettes.vue:25
 #: electron/src/renderer/components/InstallPalettes.vue:63
 msgid "Cancel"
@@ -1742,33 +1746,29 @@ msgstr "Peru"
 msgid "Apply and Quit"
 msgstr "Hyväksy ja lopeta"
 
-#: lib/extensions/lettering.py:154
-msgid "Unable to find any fonts!  Please try reinstalling Ink/Stitch."
-msgstr "Yhtään fonttia ei löydy! Asenna Ink/Stitch uudelleen."
-
-#: lib/extensions/lettering.py:225
+#: lib/extensions/lettering.py:243
 msgid "This font has no available font variant. Please update or remove the font."
 msgstr ""
 
 #. The user has chosen to scale the text by some percentage
 #. (50%, 200%, etc).  If you need to use the percentage symbol,
 #. make sure to double it (%%).
-#: lib/extensions/lettering.py:267
+#: lib/extensions/lettering.py:311
 #, python-format
 msgid "Text scale %s%%"
 msgstr "Skaalaa teksti %s%%"
 
-#: lib/extensions/lettering.py:276
+#: lib/extensions/lettering.py:320
 #, python-format
 msgid "Error: Text cannot be applied to the document.\n"
 "%s"
 msgstr ""
 
-#: lib/extensions/lettering.py:414
+#: lib/extensions/lettering.py:463
 msgid "Please select only one block of text."
 msgstr "Valitse vain yksi teksti."
 
-#: lib/extensions/lettering.py:417
+#: lib/extensions/lettering.py:466
 msgid "You've selected objects that were not created by the Lettering extension.  Please clear your selection or select different objects before running Lettering again."
 msgstr ""
 
@@ -1780,7 +1780,7 @@ msgstr ""
 msgid "The maximum value is smaller than the minimum value."
 msgstr ""
 
-#: lib/extensions/lettering_generate_json.py:41
+#: lib/extensions/lettering_generate_json.py:42
 msgid "Please specify a font file."
 msgstr ""
 
@@ -1939,6 +1939,7 @@ msgid "Title"
 msgstr ""
 
 #: lib/extensions/zip.py:104 inx/inkstitch_commands_scale_symbols.inx:6
+#: inx/inkstitch_lettering_generate_json.inx:43
 msgid "Size"
 msgstr ""
 
@@ -2096,7 +2097,7 @@ msgid "Cannot load simulator.\n"
 "Close Params to get full error message."
 msgstr ""
 
-#: lib/lettering/font.py:162
+#: lib/lettering/font.py:163
 #, python-format
 msgid "The font '%s' has no variants."
 msgstr ""
@@ -2206,17 +2207,17 @@ msgstr "ei"
 msgid "Enter thread name..."
 msgstr "Anna langan nimi..."
 
-#: print/templates/custom-page.html:22 print/templates/ui.html:92
+#: print/templates/custom-page.html:22 print/templates/ui.html:101
 msgid "Enter URL"
 msgstr "WWW osoite"
 
 #: print/templates/custom-page.html:23 print/templates/custom-page.html:27
-#: print/templates/custom-page.html:33 print/templates/ui.html:93
-#: print/templates/ui.html:97 print/templates/ui.html:103
+#: print/templates/custom-page.html:33 print/templates/ui.html:102
+#: print/templates/ui.html:106 print/templates/ui.html:112
 msgid "OK"
 msgstr "OK"
 
-#: print/templates/custom-page.html:26 print/templates/ui.html:96
+#: print/templates/custom-page.html:26 print/templates/ui.html:105
 msgid "Enter E-Mail"
 msgstr "Sähköposti"
 
@@ -2224,11 +2225,11 @@ msgstr "Sähköposti"
 msgid "Custom Information Sheet"
 msgstr "Lisäinformaatio sivu"
 
-#: print/templates/custom-page.html:31 print/templates/ui.html:101
+#: print/templates/custom-page.html:31 print/templates/ui.html:110
 msgid "This will reset your custom text to the default."
 msgstr "Tämä nollaa erikoistekstin vakioksi."
 
-#: print/templates/custom-page.html:32 print/templates/ui.html:102
+#: print/templates/custom-page.html:32 print/templates/ui.html:111
 msgid "All changes will be lost."
 msgstr "Kaikki muutokset menetetään."
 
@@ -2236,10 +2237,16 @@ msgstr "Kaikki muutokset menetetään."
 msgid "Page"
 msgstr "Sivu"
 
-#: print/templates/footer.html:3 print/templates/ui.html:99
-#: print/templates/ui.html:106
+#: print/templates/footer.html:3 print/templates/ui.html:108
+#: print/templates/ui.html:115
 msgid "Proudly generated with"
 msgstr "Ylpeästi generoitu"
+
+#: print/templates/full_page_pattern.html:4
+#: print/templates/operator_overview.html:29
+#: print/templates/print_detail.html:18 print/templates/print_overview.html:28
+msgid "Ctrl + Scroll to Zoom"
+msgstr ""
 
 #: print/templates/headline.html:5
 msgid "Click to choose another logo"
@@ -2351,11 +2358,6 @@ msgstr "Lisää operaattorin muistiinpanoja..."
 msgid "Job estimated time"
 msgstr "Arvioitu työn kesto"
 
-#: print/templates/operator_overview.html:29
-#: print/templates/print_detail.html:18 print/templates/print_overview.html:28
-msgid "Ctrl + Scroll to Zoom"
-msgstr ""
-
 #: print/templates/print_detail.html:6
 msgid "COLOR"
 msgstr "VÄRI"
@@ -2396,15 +2398,15 @@ msgstr "Sivun asetukset"
 msgid "Branding"
 msgstr "Brändäys"
 
-#: print/templates/ui.html:21 print/templates/ui.html:113
+#: print/templates/ui.html:21 print/templates/ui.html:122
 msgid "Estimated Time"
 msgstr "Arvioitu aika"
 
-#: print/templates/ui.html:22 print/templates/ui.html:147
+#: print/templates/ui.html:22 print/templates/ui.html:156
 msgid "Estimated Thread"
 msgstr ""
 
-#: print/templates/ui.html:23 print/templates/ui.html:168
+#: print/templates/ui.html:23 print/templates/ui.html:177
 msgid "Design"
 msgstr "Malli"
 
@@ -2416,125 +2418,133 @@ msgstr "Tulostus koko"
 msgid "Print Layouts"
 msgstr "Tulostuksen ulkoasu"
 
-#: print/templates/ui.html:43 print/templates/ui.html:137
+#: print/templates/ui.html:43 print/templates/ui.html:146
 msgid "Client Overview"
 msgstr "Esikatselu asiakkaalle"
 
-#: print/templates/ui.html:47 print/templates/ui.html:138
+#: print/templates/ui.html:47 print/templates/ui.html:147
 msgid "Client Detailed View"
 msgstr "Asiakkaan tarkempikatselu"
 
-#: print/templates/ui.html:51 print/templates/ui.html:139
+#: print/templates/ui.html:51 print/templates/ui.html:148
 msgid "Operator Overview"
 msgstr "Käyttäjän esikatselu"
 
-#: print/templates/ui.html:55 print/templates/ui.html:140
+#: print/templates/ui.html:55 print/templates/ui.html:149
 msgid "Operator Detailed View"
 msgstr "Operaattorin tarkempikatselu"
 
-#: print/templates/ui.html:57
+#: print/templates/ui.html:58
 msgid "Thumbnail size"
 msgstr "Minikuvan koko"
 
-#: print/templates/ui.html:63
+#: print/templates/ui.html:64
+msgid "Full Page Pattern View"
+msgstr ""
+
+#: print/templates/ui.html:68
+msgid "Show Footer"
+msgstr ""
+
+#: print/templates/ui.html:72
 msgid "Custom information sheet"
 msgstr "Lisäinformaatio sivu"
 
-#: print/templates/ui.html:66 print/templates/ui.html:109
+#: print/templates/ui.html:75 print/templates/ui.html:118
 msgid "Includes these Page Setup, estimated time settings and also the icon."
 msgstr ""
 
-#: print/templates/ui.html:66 print/templates/ui.html:109
-#: print/templates/ui.html:143 print/templates/ui.html:164
+#: print/templates/ui.html:75 print/templates/ui.html:118
+#: print/templates/ui.html:152 print/templates/ui.html:173
 msgid "Save as defaults"
 msgstr "Tallenna vakioksi"
 
-#: print/templates/ui.html:71
+#: print/templates/ui.html:80
 msgid "Logo"
 msgstr "Logo"
 
-#: print/templates/ui.html:81
+#: print/templates/ui.html:90
 msgid "Footer: Operator contact information"
 msgstr ""
 
-#: print/templates/ui.html:115
+#: print/templates/ui.html:124
 msgid "Machine Settings"
 msgstr "Koneen asetukset"
 
-#: print/templates/ui.html:117
+#: print/templates/ui.html:126
 msgid "Average Machine Speed"
 msgstr "Koneen keskiarvo nopeus"
 
-#: print/templates/ui.html:118
+#: print/templates/ui.html:127
 msgid "stitches per minute "
 msgstr "tikkiä minuutissa "
 
-#: print/templates/ui.html:122
+#: print/templates/ui.html:131
 msgid "Time Factors"
 msgstr "Ajan kertoimet"
 
-#: print/templates/ui.html:125
+#: print/templates/ui.html:134
 msgid "Includes average time for preparing the machine, thread breaks and/or bobbin changes, etc."
 msgstr ""
 
-#: print/templates/ui.html:125
+#: print/templates/ui.html:134
 msgid "seconds to add to total time*"
 msgstr "sekunnit lisättäväksi kokonaisaikaan*"
 
-#: print/templates/ui.html:129
+#: print/templates/ui.html:138
 msgid "This will be added to the total time."
 msgstr "Tämä lisätään kokonaisaikaan."
 
-#: print/templates/ui.html:129
+#: print/templates/ui.html:138
 msgid "seconds needed for a color change*"
 msgstr "värinvaihtoon tarvittava aika*"
 
-#: print/templates/ui.html:132
+#: print/templates/ui.html:141
 msgid "seconds needed for trim"
 msgstr "trimmaukseen tarvittava aika"
 
-#: print/templates/ui.html:135
+#: print/templates/ui.html:144
 msgid "Display Time On"
 msgstr "Näytön aika päällä"
 
-#: print/templates/ui.html:143 print/templates/ui.html:164
+#: print/templates/ui.html:152 print/templates/ui.html:173
 msgid "Includes page setup, estimated time and also the branding."
 msgstr ""
 
-#: print/templates/ui.html:149
+#: print/templates/ui.html:158
 msgid "Factors"
 msgstr ""
 
-#: print/templates/ui.html:150
+#: print/templates/ui.html:159
 msgid "The thread length calculation depends on a lot of factors in embroidery designs. We will only get a very inacurate approximation.\n"
 "             Ink/Stitch simply calculates the path length, so the factor of 1 will always be much, much less than the real thread consumption."
 msgstr ""
 
-#: print/templates/ui.html:152
+#: print/templates/ui.html:161
 msgid "Set a factor to multiply the path length with, depending on your standard setup or adapt it to your current design (tension, thread, fabric, stitch count, etc.)."
 msgstr ""
 
-#: print/templates/ui.html:156 print/templates/ui.html:161
+#: print/templates/ui.html:165 print/templates/ui.html:170
 msgid "Factor to multiply with thread length"
 msgstr ""
 
-#: print/templates/ui.html:156 print/templates/ui.html:161
+#: print/templates/ui.html:165 print/templates/ui.html:170
 msgid "* path length"
 msgstr ""
 
-#: print/templates/ui.html:169
+#: print/templates/ui.html:178
 msgid "Thread Palette"
 msgstr "Lankapaletti"
 
-#: print/templates/ui.html:188
+#: print/templates/ui.html:197
 msgid "Changing the thread palette will cause thread names and catalog numbers to be recalculated based on the new palette.  Any changes you have made to color or thread names will be lost.  Are you sure?"
 msgstr ""
 
-#: print/templates/ui.html:191
+#: print/templates/ui.html:200
 msgid "Yes"
 msgstr "Kyllä"
 
-#: print/templates/ui.html:192 inx/inkstitch_lettering_generate_json.inx:37
+#: print/templates/ui.html:201 inx/inkstitch_lettering_generate_json.inx:37
 msgid "No"
 msgstr "Ei"
 
@@ -4038,44 +4048,44 @@ msgstr ""
 msgid "Lower"
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:43
+#: inx/inkstitch_lettering_generate_json.inx:44
 msgid "Min Scale"
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:44
+#: inx/inkstitch_lettering_generate_json.inx:45
 msgid "Max Scale"
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:48
+#: inx/inkstitch_lettering_generate_json.inx:49
 msgid "Default Glyph"
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:60
-#: inx/inkstitch_lettering_generate_json.inx:67
+#: inx/inkstitch_lettering_generate_json.inx:61
+#: inx/inkstitch_lettering_generate_json.inx:68
 msgid "Force"
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:60
+#: inx/inkstitch_lettering_generate_json.inx:61
 msgid "Overwrite leading information from font file."
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:62
+#: inx/inkstitch_lettering_generate_json.inx:63
 msgid "Leading (px)"
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:62
+#: inx/inkstitch_lettering_generate_json.inx:63
 msgid "Line height (default: 100)"
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:67
+#: inx/inkstitch_lettering_generate_json.inx:68
 msgid "Overwrite word spacing information from font file."
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:69
+#: inx/inkstitch_lettering_generate_json.inx:70
 msgid "Word spacing (px)"
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:69
+#: inx/inkstitch_lettering_generate_json.inx:70
 msgid "Space character width (default: 20)"
 msgstr ""
 
