@@ -39,6 +39,14 @@ class MultipleGuideLineWarning(ValidationWarning):
     ]
 
 
+class SmallZigZagWarning(ValidationWarning):
+    name = _("Small ZigZag")
+    description = _("This zig zag stitch has a stroke width smaller than 0.5 units.")
+    steps_to_solve = [
+        _("Set your stroke to be dashed to indicate running stitch.  Any kind of dash will work.")
+    ]
+
+
 class Stroke(EmbroideryElement):
     element_name = _("Stroke")
 
@@ -481,6 +489,15 @@ class Stroke(EmbroideryElement):
             return guide_lines['satin'][0]
         return guide_lines['stroke'][0]
 
+    def _representative_point(self):
+        # if we just take the center of a line string we could end up on some point far away from the actual line
+        try:
+            coords = list(self.shape.coords)
+        except NotImplementedError:
+            # linear rings to not have a coordinate sequence
+            coords = list(self.shape.exterior.coords)
+        return coords[int(len(coords)/2)]
+
     def validation_warnings(self):
         if self.stroke_method == 1 and self.skip_start + self.skip_end >= self.line_count:
             yield IgnoreSkipValues(self.shape.centroid)
@@ -489,4 +506,8 @@ class Stroke(EmbroideryElement):
         if self.stroke_method == 1:
             guide_lines = get_marker_elements(self.node, "guide-line", False, True, True)
             if sum(len(x) for x in guide_lines.values()) > 1:
-                yield MultipleGuideLineWarning(self.shape.centroid)
+                yield MultipleGuideLineWarning(self._representative_point())
+
+        stroke_width, units = parse_length_with_units(self.get_style("stroke-width", "1"))
+        if not self.dashed and stroke_width <= 0.5:
+            yield SmallZigZagWarning(self._representative_point())
