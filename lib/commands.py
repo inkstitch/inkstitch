@@ -347,7 +347,13 @@ def get_command_pos(element, index, total):
     # Put command symbols 30 pixels out from the shape, spaced evenly around it.
 
     # get a line running 30 pixels out from the shape
-    outline = element.shape.buffer(30).exterior
+
+    if not isinstance(element.shape.buffer(30), shgeo.MultiPolygon):
+        outline = element.shape.buffer(30).exterior
+    else:
+        polygons = element.shape.buffer(30).geoms
+        polygon = polygons[len(polygons)-1]
+        outline = polygon.exterior
 
     # find the top center point on the outline and start there
     top_center = shgeo.Point(outline.centroid.x, outline.bounds[1])
