@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-11-06 01:52+0000\n"
-"PO-Revision-Date: 2022-11-06 01:54\n"
+"POT-Creation-Date: 2022-11-23 01:27+0000\n"
+"PO-Revision-Date: 2022-11-23 01:29\n"
 "Last-Translator: \n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-06 01:52+0000\n"
+"POT-Creation-Date: 2022-11-23 01:27+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -626,7 +626,7 @@ msgstr "エラー：ドキュメントに複数の%(command)sコマンドがあ�
 msgid "%(command)s: %(description)s"
 msgstr "%(command)s: %(description)s"
 
-#: lib/commands.py:295 lib/commands.py:410
+#: lib/commands.py:295 lib/commands.py:416
 msgid "Ink/Stitch Command"
 msgstr "インク/ステッチコマンド"
 
@@ -640,53 +640,61 @@ msgstr "コネクタ"
 msgid "command marker"
 msgstr "コマンドマーカー"
 
-#: lib/elements/clone.py:20
+#: lib/elements/clone.py:21
 msgid "Clone Object"
 msgstr "オブジェクトのクローン"
 
-#: lib/elements/clone.py:21
+#: lib/elements/clone.py:22
 msgid "There are one or more clone objects in this document.  Ink/Stitch can work with single clones, but you are limited to set a very few parameters. "
 msgstr "このドキュメントには1つ以上のクローンオブジェクトがあります。インク/ステッチは単一のクローンで機能しますが、設定できるパラメータはごくわずかです。 "
 
-#: lib/elements/clone.py:24
+#: lib/elements/clone.py:25
 msgid "If you want to convert the clone into a real element, follow these steps:"
 msgstr "クローンを実際の要素に変換する場合は、次の手順に従います。"
 
-#: lib/elements/clone.py:25
+#: lib/elements/clone.py:26
 msgid "* Select the clone"
 msgstr "*クローンを選択します"
 
-#: lib/elements/clone.py:26 lib/elements/clone.py:37
+#: lib/elements/clone.py:27 lib/elements/clone.py:38
 msgid "* Run: Edit > Clone > Unlink Clone (Alt+Shift+D)"
 msgstr "*実行：[編集]> [クローン]> [クローンのリンク解除]（Alt + Shift + D）"
 
-#: lib/elements/clone.py:31
+#: lib/elements/clone.py:32
 msgid "Clone is not embroiderable"
 msgstr "クローンは刺繍できません"
 
-#: lib/elements/clone.py:32
+#: lib/elements/clone.py:33
 msgid "There are one ore more clone objects in this document. A clone must be a direct child of an embroiderable element. Ink/Stitch cannot embroider clones of groups or other not embroiderable elements (text or image)."
 msgstr "このドキュメントには、1つ以上のクローンオブジェクトがあります。クローンは、刺繍可能な要素の直接の子である必要があります。インク/ステッチは、グループのクローンやその他の刺繍できない要素（テキストまたは画像）を刺繍することができません。"
 
-#: lib/elements/clone.py:35
+#: lib/elements/clone.py:36
 msgid "Convert the clone into a real element:"
 msgstr "クローンを解除します。"
 
-#: lib/elements/clone.py:36
+#: lib/elements/clone.py:37
 msgid "* Select the clone."
 msgstr "*クローンを選択します。"
 
-#: lib/elements/clone.py:51
+#: lib/elements/clone.py:52
 msgid "Clone"
 msgstr "クローン"
 
-#: lib/elements/clone.py:57
+#: lib/elements/clone.py:58
 msgid "Custom fill angle"
 msgstr "カスタムフィル刺繍角度"
 
-#: lib/elements/clone.py:58
+#: lib/elements/clone.py:59
 msgid "This setting will apply a custom fill angle for the clone."
 msgstr "この設定は、クローンにカスタムの塗りつぶし角度を適用します。"
+
+#: lib/elements/clone.py:68
+msgid "Flip angle"
+msgstr ""
+
+#: lib/elements/clone.py:69
+msgid "Flip automatically calucalted angle if it appears to be wrong."
+msgstr ""
 
 #: lib/elements/element.py:202
 msgid "Allow lock stitches"
@@ -754,7 +762,7 @@ msgstr "スモールフィル"
 msgid "This fill object is so small that it would probably look better as running stitch or satin column. For very small shapes, fill stitch is not possible, and Ink/Stitch will use running stitch around the outline instead."
 msgstr "この塗りつぶしオブジェクトは非常に小さいので、ランニングステッチやサテンステッチのラインとした方が見栄えがよくなります。非常に小さい形状の場合、塗りつぶしステッチは不可能であり、インク/ステッチは代わりにアウトラインの周りにランニングステッチを使用します。"
 
-#: lib/elements/fill_stitch.py:35 lib/elements/fill_stitch.py:471
+#: lib/elements/fill_stitch.py:35 lib/elements/fill_stitch.py:472
 msgid "Expand"
 msgstr "展開"
 
@@ -763,7 +771,7 @@ msgid "The expand parameter for this fill object cannot be applied. Ink/Stitch w
 msgstr "この塗りつぶしオブジェクトの展開パラメータは適用できません。\n"
 "インク/ステッチはそれを無視し、代わりに元のサイズを使用します。"
 
-#: lib/elements/fill_stitch.py:41 lib/elements/fill_stitch.py:448
+#: lib/elements/fill_stitch.py:41 lib/elements/fill_stitch.py:449
 msgid "Inset"
 msgstr "挿入する"
 
@@ -933,11 +941,11 @@ msgstr "ステッチの線の角度"
 msgid "The angle increases in a counter-clockwise direction.  0 is horizontal.  Negative angles are allowed."
 msgstr "角度は反時計回りに回転します。 0は水平です。負の角度も設定可能です。"
 
-#: lib/elements/fill_stitch.py:165 lib/elements/fill_stitch.py:460
+#: lib/elements/fill_stitch.py:165 lib/elements/fill_stitch.py:461
 msgid "Skip last stitch in each row"
 msgstr "各行の最後のステッチをスキップします"
 
-#: lib/elements/fill_stitch.py:166 lib/elements/fill_stitch.py:461
+#: lib/elements/fill_stitch.py:166 lib/elements/fill_stitch.py:462
 msgid "The last stitch in each row is quite close to the first stitch in the next row.  Skipping it decreases stitch count and density."
 msgstr "各行の最後のステッチは、次の行の最初のステッチに非常に近いです。スキップすると、ステッチ数と密度が減少します。"
 
@@ -970,83 +978,83 @@ msgid "Stagger rows this many times before repeating"
 msgstr "繰り返す前に、行をずらしていきます"
 
 #: lib/elements/fill_stitch.py:219
-msgid "Length of the cycle by which successive stitch rows are staggered. Fractional values are allowed and can have less visible diagonals than integer values."
+msgid "Length of the cycle by which successive stitch rows are staggered.Fractional values are allowed and can have less visible diagonals than integer values."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:374
+#: lib/elements/fill_stitch.py:375
 msgid "Running stitch length (traversal between sections)"
 msgstr "ランニングステッチの長さ（セクション間の間隔）"
 
-#: lib/elements/fill_stitch.py:375
+#: lib/elements/fill_stitch.py:376
 msgid "Length of stitches around the outline of the fill region used when moving from section to section."
 msgstr "セクション間を移動するときに使用される塗りつぶし領域の輪郭の周りのステッチの長さ。"
 
-#: lib/elements/fill_stitch.py:386 lib/elements/stroke.py:116
+#: lib/elements/fill_stitch.py:387 lib/elements/stroke.py:124
 msgid "Running stitch tolerance"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:387
+#: lib/elements/fill_stitch.py:388
 msgid "All stitches must be within this distance of the path.  A lower tolerance means stitches will be closer together.  A higher tolerance means sharp corners may be rounded."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:398
+#: lib/elements/fill_stitch.py:399
 msgid "Underlay"
 msgstr "アンダーレイ"
 
-#: lib/elements/fill_stitch.py:398 lib/elements/fill_stitch.py:407
-#: lib/elements/fill_stitch.py:430 lib/elements/fill_stitch.py:441
-#: lib/elements/fill_stitch.py:451 lib/elements/fill_stitch.py:463
-#: lib/elements/fill_stitch.py:501
+#: lib/elements/fill_stitch.py:399 lib/elements/fill_stitch.py:408
+#: lib/elements/fill_stitch.py:431 lib/elements/fill_stitch.py:442
+#: lib/elements/fill_stitch.py:452 lib/elements/fill_stitch.py:464
+#: lib/elements/fill_stitch.py:502
 msgid "Fill Underlay"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:404
+#: lib/elements/fill_stitch.py:405
 msgid "Fill angle"
 msgstr "塗りつぶし角度"
 
-#: lib/elements/fill_stitch.py:405
+#: lib/elements/fill_stitch.py:406
 msgid "Default: fill angle + 90 deg. Insert comma-seperated list for multiple layers."
 msgstr "デフォルト：塗りつぶし角度+90度。複数のレイヤーにコンマ区切りのリストを挿入します。"
 
-#: lib/elements/fill_stitch.py:427
+#: lib/elements/fill_stitch.py:428
 msgid "Row spacing"
 msgstr "行間隔"
 
-#: lib/elements/fill_stitch.py:428
+#: lib/elements/fill_stitch.py:429
 msgid "default: 3x fill row spacing"
 msgstr "デフォルト：3x塗りつぶし行間隔"
 
-#: lib/elements/fill_stitch.py:438
+#: lib/elements/fill_stitch.py:439
 msgid "Max stitch length"
 msgstr "最大ステッチ長さ"
 
-#: lib/elements/fill_stitch.py:439
+#: lib/elements/fill_stitch.py:440
 msgid "default: equal to fill max stitch length"
 msgstr "デフォルト：最大フィルステッチ長"
 
-#: lib/elements/fill_stitch.py:449
+#: lib/elements/fill_stitch.py:450
 msgid "Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill."
 msgstr "アンダーレイを行う前に形状を縮小して、アンダーレイが塗りつぶしの外側に表示されないようにします。"
 
-#: lib/elements/fill_stitch.py:472
+#: lib/elements/fill_stitch.py:473
 msgid "Expand the shape before fill stitching, to compensate for gaps between shapes."
 msgstr "形状間のギャップを補正するために、塗りつぶしステッチの前に形状を拡張します。"
 
-#: lib/elements/fill_stitch.py:483 lib/elements/fill_stitch.py:497
+#: lib/elements/fill_stitch.py:484 lib/elements/fill_stitch.py:498
 msgid "Underpath"
 msgstr "アンダーパス"
 
-#: lib/elements/fill_stitch.py:484 lib/elements/fill_stitch.py:498
+#: lib/elements/fill_stitch.py:485 lib/elements/fill_stitch.py:499
 msgid "Travel inside the shape when moving from section to section.  Underpath stitches avoid traveling in the direction of the row angle so that they are not visible.  This gives them a jagged appearance."
 msgstr "セクション間を移動するときは、シェイプ内を移動します。アンダーパスステッチは、列の角度の方向に移動しないようにして、非表示にします。ギザギザの外観を与えます。"
 
-#: lib/elements/fill_stitch.py:715
+#: lib/elements/fill_stitch.py:716
 msgid "Error during autofill!  This means that there is a problem with Ink/Stitch."
 msgstr "自動入力中にエラーが発生しました！インク/ステッチに問題があります。"
 
 #. this message is followed by a URL:
 #. https://github.com/inkstitch/inkstitch/issues/new
-#: lib/elements/fill_stitch.py:718
+#: lib/elements/fill_stitch.py:719
 msgid "If you'd like to help us make Ink/Stitch better, please paste this whole message into a new issue at: "
 msgstr "インク/ステッチの改善にご協力いただける場合は、このメッセージ全体を新しい Issue に貼り付けてください。 "
 
@@ -1250,7 +1258,7 @@ msgstr ""
 msgid "Do short stitches if the distance between stitches is smaller than this."
 msgstr ""
 
-#: lib/elements/satin_column.py:126 lib/elements/stroke.py:129
+#: lib/elements/satin_column.py:126 lib/elements/stroke.py:137
 msgid "Zig-zag spacing (peak-to-peak)"
 msgstr "ジグザグ間隔（ピークツーピーク）"
 
@@ -1296,7 +1304,7 @@ msgstr "センターウォークアンダーレイ"
 msgid "Center-Walk Underlay"
 msgstr "センターウォークアンダーレイ"
 
-#: lib/elements/satin_column.py:187 lib/elements/stroke.py:82
+#: lib/elements/satin_column.py:187 lib/elements/stroke.py:90
 msgid "Repeats"
 msgstr "繰り返し"
 
@@ -1346,180 +1354,192 @@ msgid "* Reduce Skip values or increase number of lines"
 msgstr ""
 
 #: lib/elements/stroke.py:43
+msgid "Small ZigZag"
+msgstr ""
+
+#: lib/elements/stroke.py:44
+msgid "This zig zag stitch has a stroke width smaller than 0.5 units."
+msgstr ""
+
+#: lib/elements/stroke.py:46
+msgid "Set your stroke to be dashed to indicate running stitch.  Any kind of dash will work."
+msgstr ""
+
+#: lib/elements/stroke.py:51
 msgid "Stroke"
 msgstr "ストローク"
 
-#: lib/elements/stroke.py:46
+#: lib/elements/stroke.py:54
 msgid "Running stitch along paths"
 msgstr "パスに沿ってステッチを走らせる"
 
-#: lib/elements/stroke.py:60 inx/inkstitch_break_apart.inx:17
+#: lib/elements/stroke.py:68 inx/inkstitch_break_apart.inx:17
 msgid "Method"
 msgstr ""
 
-#: lib/elements/stroke.py:64
+#: lib/elements/stroke.py:72
 msgid "Running Stitch"
 msgstr ""
 
-#: lib/elements/stroke.py:64
+#: lib/elements/stroke.py:72
 msgid "Ripple"
 msgstr ""
 
-#: lib/elements/stroke.py:71
+#: lib/elements/stroke.py:79
 msgid "Manual stitch placement"
 msgstr "手動ステッチ配置"
 
-#: lib/elements/stroke.py:72
+#: lib/elements/stroke.py:80
 msgid "Stitch every node in the path.  All other options are ignored."
 msgstr ""
 
-#: lib/elements/stroke.py:83
+#: lib/elements/stroke.py:91
 msgid "Defines how many times to run down and back along the path."
 msgstr "パスに沿って縫ったり戻ったりする回数を定義します。"
 
-#: lib/elements/stroke.py:93
+#: lib/elements/stroke.py:101
 msgid "Bean stitch number of repeats"
 msgstr "繰り返すビーンステッチ数"
 
-#: lib/elements/stroke.py:94
+#: lib/elements/stroke.py:102
 msgid "Backtrack each stitch this many times.  A value of 1 would triple each stitch (forward, back, forward).  A value of 2 would quintuple each stitch, etc."
 msgstr ""
 
-#: lib/elements/stroke.py:105
+#: lib/elements/stroke.py:113
 msgid "Running stitch length"
 msgstr "ランニングステッチの長さ"
 
-#: lib/elements/stroke.py:106
+#: lib/elements/stroke.py:114
 msgid "Length of stitches in running stitch mode."
 msgstr "ランニングステッチモードでのステッチの長さ"
 
-#: lib/elements/stroke.py:117
+#: lib/elements/stroke.py:125
 msgid "All stitches must be within this distance from the path.  A lower tolerance means stitches will be closer together.  A higher tolerance means sharp corners may be rounded."
 msgstr ""
 
-#: lib/elements/stroke.py:130
+#: lib/elements/stroke.py:138
 msgid "Length of stitches in zig-zag mode."
 msgstr "ジグザグモードでのステッチ長さ"
 
-#: lib/elements/stroke.py:142
+#: lib/elements/stroke.py:150
 msgid "Number of lines"
 msgstr ""
 
-#: lib/elements/stroke.py:143
+#: lib/elements/stroke.py:151
 msgid "Number of lines from start to finish"
 msgstr ""
 
-#: lib/elements/stroke.py:159
+#: lib/elements/stroke.py:167
 msgid "Skip first lines"
 msgstr ""
 
-#: lib/elements/stroke.py:160
+#: lib/elements/stroke.py:168
 msgid "Skip this number of lines at the beginning."
 msgstr ""
 
-#: lib/elements/stroke.py:171
+#: lib/elements/stroke.py:179
 msgid "Skip last lines"
 msgstr ""
 
-#: lib/elements/stroke.py:172
+#: lib/elements/stroke.py:180
 msgid "Skip this number of lines at the end"
 msgstr ""
 
-#: lib/elements/stroke.py:195
+#: lib/elements/stroke.py:203
 msgid "Line distance exponent"
 msgstr ""
 
-#: lib/elements/stroke.py:196
+#: lib/elements/stroke.py:204
 msgid "Increase density towards one side."
 msgstr ""
 
-#: lib/elements/stroke.py:207
+#: lib/elements/stroke.py:215
 msgid "Flip exponent"
 msgstr ""
 
-#: lib/elements/stroke.py:208
+#: lib/elements/stroke.py:216
 msgid "Reverse exponent effect."
 msgstr ""
 
-#: lib/elements/stroke.py:219
+#: lib/elements/stroke.py:227
 msgid "Reverse"
 msgstr ""
 
-#: lib/elements/stroke.py:220
+#: lib/elements/stroke.py:228
 msgid "Flip start and end point"
 msgstr ""
 
-#: lib/elements/stroke.py:231
+#: lib/elements/stroke.py:239
 msgid "Grid size"
 msgstr ""
 
-#: lib/elements/stroke.py:232
+#: lib/elements/stroke.py:240
 msgid "Render as grid. Use with care and watch your stitch density."
 msgstr ""
 
-#: lib/elements/stroke.py:244
+#: lib/elements/stroke.py:252
 msgid "Scale axis"
 msgstr ""
 
-#: lib/elements/stroke.py:245
+#: lib/elements/stroke.py:253
 msgid "Scale axis for satin guided ripple stitches."
 msgstr ""
 
-#: lib/elements/stroke.py:249 print/templates/ui.html:181
+#: lib/elements/stroke.py:257 print/templates/ui.html:181
 msgid "None"
 msgstr "なし"
 
-#: lib/elements/stroke.py:257
+#: lib/elements/stroke.py:265
 msgid "Starting scale"
 msgstr ""
 
-#: lib/elements/stroke.py:258
+#: lib/elements/stroke.py:266
 msgid "How big the first copy of the line should be, in percent."
 msgstr ""
 
-#: lib/elements/stroke.py:258 lib/elements/stroke.py:269
+#: lib/elements/stroke.py:266 lib/elements/stroke.py:277
 msgid "Used only for ripple stitch with a guide line."
 msgstr ""
 
-#: lib/elements/stroke.py:268
+#: lib/elements/stroke.py:276
 msgid "Ending scale"
 msgstr ""
 
-#: lib/elements/stroke.py:269
+#: lib/elements/stroke.py:277
 msgid "How big the last copy of the line should be, in percent."
 msgstr ""
 
-#: lib/elements/stroke.py:279
+#: lib/elements/stroke.py:287
 msgid "Rotate"
 msgstr ""
 
-#: lib/elements/stroke.py:280
+#: lib/elements/stroke.py:288
 msgid "Rotate satin guided ripple stitches"
 msgstr ""
 
-#: lib/elements/stroke.py:291
+#: lib/elements/stroke.py:299
 msgid "Join style"
 msgstr ""
 
-#: lib/elements/stroke.py:292
+#: lib/elements/stroke.py:300
 msgid "Join style for non circular ripples."
 msgstr ""
 
-#: lib/elements/stroke.py:295
+#: lib/elements/stroke.py:303
 msgid "flat"
 msgstr ""
 
-#: lib/elements/stroke.py:295
+#: lib/elements/stroke.py:303
 msgid "point"
 msgstr ""
 
-#: lib/elements/stroke.py:374
+#: lib/elements/stroke.py:382
 msgid "Legacy running stitch setting detected!\n\n"
 "It looks like you're using a stroke smaller than 0.5 units to indicate a running stitch, which is deprecated.  Instead, please set your stroke to be dashed to indicate running stitch.  Any kind of dash will work."
 msgstr "レガシーランニングステッチの設定が検出されました！\n\n"
 "ランニングステッチを示すために0.5単位未満のストロークを使用しているようですが、これは非推奨です。代わりに、ランニングステッチを示すために、ストロークを破線に設定してください。どんな種類のダッシュでも機能します。"
 
-#: lib/elements/text.py:13 lib/extensions/lettering.py:78
+#: lib/elements/text.py:13 lib/extensions/lettering.py:79
 msgid "Text"
 msgstr "文字"
 
@@ -1691,6 +1711,10 @@ msgstr ""
 msgid "We couldn't find any fill colors on your text elements. Please read the instructions on our website."
 msgstr ""
 
+#: lib/extensions/gradient_blocks.py:25 lib/extensions/gradient_blocks.py:33
+msgid "Please select at least one object with a gradient fill."
+msgstr ""
+
 #: lib/extensions/input.py:18
 msgid "Ink/Stitch cannot import color formats directly. But you can open the embroidery file and apply the color with Extensions > Ink/Stitch > Thread Color Management > Apply Threadlist"
 msgstr ""
@@ -1712,7 +1736,7 @@ msgstr "インクステッチはパレットフォルダを自動で見つける
 msgid "Please choose one or more commands to add."
 msgstr "追加するコマンドを1つ以上選択してください。"
 
-#: lib/extensions/lettering.py:37 lib/extensions/lettering.py:473
+#: lib/extensions/lettering.py:37 lib/extensions/lettering.py:478
 msgid "Ink/Stitch Lettering"
 msgstr "インク/ステッチの文字配置"
 
@@ -1733,11 +1757,11 @@ msgstr "オプション"
 msgid "Stitch lines of text back and forth"
 msgstr "テキストの行を前後にステッチします。"
 
-#: lib/extensions/lettering.py:74
-msgid "Add trims"
-msgstr "トリムを追加"
+#: lib/extensions/lettering.py:75
+msgid "Add trim after"
+msgstr ""
 
-#: lib/extensions/lettering.py:83 lib/extensions/params.py:442
+#: lib/extensions/lettering.py:84 lib/extensions/params.py:442
 #: print/templates/custom-page.html:23 print/templates/custom-page.html:27
 #: print/templates/custom-page.html:33 print/templates/ui.html:102
 #: print/templates/ui.html:106 print/templates/ui.html:112
@@ -1746,33 +1770,33 @@ msgstr "トリムを追加"
 msgid "Cancel"
 msgstr "キャンセル"
 
-#: lib/extensions/lettering.py:87 lib/extensions/params.py:450
+#: lib/extensions/lettering.py:88 lib/extensions/params.py:450
 msgid "Apply and Quit"
 msgstr "適用して終了"
 
-#: lib/extensions/lettering.py:243
+#: lib/extensions/lettering.py:249
 msgid "This font has no available font variant. Please update or remove the font."
 msgstr "このフォントには、使用可能なフォントバリアントがありません。フォントを更新または削除してください。"
 
 #. The user has chosen to scale the text by some percentage
 #. (50%, 200%, etc).  If you need to use the percentage symbol,
 #. make sure to double it (%%).
-#: lib/extensions/lettering.py:311
+#: lib/extensions/lettering.py:310
 #, python-format
 msgid "Text scale %s%%"
 msgstr "文字の大きさ %s%%"
 
-#: lib/extensions/lettering.py:320
+#: lib/extensions/lettering.py:321
 #, python-format
 msgid "Error: Text cannot be applied to the document.\n"
 "%s"
 msgstr ""
 
-#: lib/extensions/lettering.py:463
+#: lib/extensions/lettering.py:468
 msgid "Please select only one block of text."
 msgstr "1ブロックのみ選択してください。"
 
-#: lib/extensions/lettering.py:466
+#: lib/extensions/lettering.py:471
 msgid "You've selected objects that were not created by the Lettering extension.  Please clear your selection or select different objects before running Lettering again."
 msgstr "レタリングエクステンションで作成されていないオブジェクトが選択されています。 選択を解除するか、別のオブジェクトを選択してから再度レタリングを実行してください。"
 
@@ -2101,7 +2125,7 @@ msgid "Cannot load simulator.\n"
 "Close Params to get full error message."
 msgstr "完全なエラーメッセージを表示するには、Paramsを閉じます。"
 
-#: lib/lettering/font.py:163
+#: lib/lettering/font.py:164
 #, python-format
 msgid "The font '%s' has no variants."
 msgstr "フォント '％s'にはバリアントがありません。"
@@ -3114,7 +3138,7 @@ msgstr ""
 msgid "Break Apart Fill Objects"
 msgstr "塗りつぶしオブジェクトの分割"
 
-#: inx/inkstitch_break_apart.inx:10
+#: inx/inkstitch_break_apart.inx:10 inx/inkstitch_gradient_blocks.inx:10
 msgid "Tools: Fill"
 msgstr ""
 
@@ -3400,6 +3424,10 @@ msgstr ""
 #: inx/inkstitch_global_commands.inx:3
 msgid "Add Commands"
 msgstr "追加コマンド"
+
+#: inx/inkstitch_gradient_blocks.inx:3
+msgid "Convert to gradient blocks"
+msgstr ""
 
 #: inx/inkstitch_input_100.inx:3
 msgid "100 file input"
