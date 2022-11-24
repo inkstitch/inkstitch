@@ -142,6 +142,7 @@ class SatinColumn(EmbroideryElement):
         unit='% (each side)',
         type='float',
         default=0)
+    @cache
     def pull_compensation_percent(self):
         # pull compensation as a percentage of the width
         return self.get_split_float_param("pull_compensation_percent", (0, 0))
@@ -156,11 +157,23 @@ class SatinColumn(EmbroideryElement):
         unit='mm (each side)',
         type='float',
         default=0)
+    @cache
     def pull_compensation_px(self):
         # In satin stitch, the stitches have a tendency to pull together and
         # narrow the entire column.  We can compensate for this by stitching
         # wider than we desire the column to end up.
         return self.get_split_mm_param_as_px("pull_compensation_mm", (0, 0))
+
+    @property
+    @param(
+        'swap_satin_rails',
+        _('Swap rails'),
+        tooltip=_('Swaps the first and second rails of the satin column, '
+                  'effecting which side the thread finished on as well as any sided properties'),
+        type='boolean',
+        default='false')
+    def swap_rails(self):
+        return self.get_boolean_param('swap_satin_rails', False)
 
     @property
     @param('contour_underlay', _('Contour underlay'), type='toggle', group=_('Contour Underlay'))
@@ -181,6 +194,7 @@ class SatinColumn(EmbroideryElement):
            group=_('Contour Underlay'),
            unit='mm (each side)', type='float', default=0.4,
            sort_index=2)
+    @cache
     def contour_underlay_inset_px(self):
         # how far inside the edge of the column to stitch the underlay
         return self.get_split_mm_param_as_px("contour_underlay_inset_mm", (0.4, 0.4))
@@ -193,6 +207,7 @@ class SatinColumn(EmbroideryElement):
            group=_('Contour Underlay'),
            unit='% (each side)', type='float', default=0,
            sort_index=3)
+    @cache
     def contour_underlay_inset_percent(self):
         # how far inside the edge of the column to stitch the underlay
         return self.get_split_float_param("contour_underlay_inset_percent", (0, 0))
@@ -274,6 +289,7 @@ class SatinColumn(EmbroideryElement):
            group=_('Zig-zag Underlay'),
            type='float',
            default="")
+    @cache
     def zigzag_underlay_inset_percent(self):
         default = self.contour_underlay_inset_percent * 0.5
         return self.get_split_float_param("zigzag_underlay_inset_percent", default)
@@ -306,7 +322,11 @@ class SatinColumn(EmbroideryElement):
     @cache
     def rails(self):
         """The rails in order, as point lists"""
-        return [subpath for i, subpath in enumerate(self.csp) if i in self.rail_indices]
+        rails = [subpath for i, subpath in enumerate(self.csp) if i in self.rail_indices]
+        if len(rails) == 2 and self.swap_rails:
+            return [rails[1], rails[0]]
+        else:
+            return rails
 
     @property
     @cache

@@ -104,6 +104,7 @@ inkstitch_attribs = [
     'short_stitch_distance_mm',
     'short_stitch_inset',
     'running_stitch_length_mm',
+    'swap_satin_rails',
     'center_walk_underlay',
     'center_walk_underlay_stitch_length_mm',
     'center_walk_underlay_repeats',
