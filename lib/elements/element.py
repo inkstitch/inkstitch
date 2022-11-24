@@ -140,7 +140,7 @@ class EmbroideryElement(object):
     # if a single number is given in the param, it will apply to both returned values.
     # Not cached the cache will crash if the default is a numpy array.
     # The ppoperty calling this will need to cache itself and can safely do so since it has no parameters
-    def get_lr_float_param(self, param, default=(0, 0)):
+    def get_split_float_param(self, param, default=(0, 0)):
         default = np.array(default)  # type coersion in case the default is a tuple
 
         raw = self.get_param(param, "")
@@ -159,8 +159,8 @@ class EmbroideryElement(object):
             return default
 
     # not cached
-    def get_lr_mm_param_as_px(self, param, default):
-        return self.get_lr_float_param(param, default) * PIXELS_PER_MM
+    def get_split_mm_param_as_px(self, param, default):
+        return self.get_split_float_param(param, default) * PIXELS_PER_MM
 
     def set_param(self, name, value):
         param = INKSTITCH_ATTRIBS[name]

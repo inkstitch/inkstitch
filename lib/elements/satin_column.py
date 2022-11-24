@@ -125,7 +125,7 @@ class SatinColumn(EmbroideryElement):
     @property
     @param('zigzag_spacing_mm',
            _('Zig-zag spacing (peak-to-peak)'),
-           tooltip=_('Peak-to-peak distance between zig-zags. This is double the mm/stitch measurement used by most mechanichal machines.'),
+           tooltip=_('Peak-to-peak distance between zig-zags. This is double the mm/stitch measurement used by most mechanical machines.'),
            unit='mm/cycle',
            type='float',
            default=0.4)
@@ -144,7 +144,7 @@ class SatinColumn(EmbroideryElement):
         default=0)
     def pull_compensation_percent(self):
         # pull compensation as a percentage of the width
-        return self.get_lr_float_param("pull_compensation_percent", (0, 0))
+        return self.get_split_float_param("pull_compensation_percent", (0, 0))
 
     @property
     @param(
@@ -160,7 +160,7 @@ class SatinColumn(EmbroideryElement):
         # In satin stitch, the stitches have a tendency to pull together and
         # narrow the entire column.  We can compensate for this by stitching
         # wider than we desire the column to end up.
-        return self.get_lr_mm_param_as_px("pull_compensation_mm", (0, 0))
+        return self.get_split_mm_param_as_px("pull_compensation_mm", (0, 0))
 
     @property
     @param('contour_underlay', _('Contour underlay'), type='toggle', group=_('Contour Underlay'))
@@ -183,7 +183,7 @@ class SatinColumn(EmbroideryElement):
            sort_index=2)
     def contour_underlay_inset_px(self):
         # how far inside the edge of the column to stitch the underlay
-        return self.get_lr_mm_param_as_px("contour_underlay_inset_mm", (0.4, 0.4))
+        return self.get_split_mm_param_as_px("contour_underlay_inset_mm", (0.4, 0.4))
 
     @property
     @param('contour_underlay_inset_percent',
@@ -195,7 +195,7 @@ class SatinColumn(EmbroideryElement):
            sort_index=3)
     def contour_underlay_inset_percent(self):
         # how far inside the edge of the column to stitch the underlay
-        return self.get_lr_float_param("contour_underlay_inset_percent", (0, 0))
+        return self.get_split_float_param("contour_underlay_inset_percent", (0, 0))
 
     @property
     @param('center_walk_underlay', _('Center-walk underlay'), type='toggle', group=_('Center-Walk Underlay'))
@@ -263,7 +263,7 @@ class SatinColumn(EmbroideryElement):
         # points of the zigzag fall outside the contour underlay but inside
         # the edges of the satin column.
         default = self.contour_underlay_inset_px * 0.5 / PIXELS_PER_MM
-        x = self.get_lr_mm_param_as_px("zigzag_underlay_inset_mm", default)
+        x = self.get_split_mm_param_as_px("zigzag_underlay_inset_mm", default)
         return x
 
     @property
@@ -276,7 +276,7 @@ class SatinColumn(EmbroideryElement):
            default="")
     def zigzag_underlay_inset_percent(self):
         default = self.contour_underlay_inset_percent * 0.5
-        return self.get_lr_float_param("zigzag_underlay_inset_percent", default)
+        return self.get_split_float_param("zigzag_underlay_inset_percent", default)
 
     @property
     @param('zigzag_underlay_max_stitch_length_mm',
