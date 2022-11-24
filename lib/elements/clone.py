@@ -3,12 +3,13 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-from math import atan, degrees
+from math import atan2, degrees, radians
+
+from inkex import CubicSuperPath, Path, Transform
 
 from ..commands import is_command_symbol
 from ..i18n import _
 from ..svg.path import get_node_transform
-from ..svg.svg import find_elements
 from ..svg.tags import (EMBROIDERABLE_TAGS, INKSTITCH_ATTRIBS, SVG_USE_TAG,
                         XLINK_HREF)
 from ..utils import cache
@@ -60,7 +61,16 @@ class Clone(EmbroideryElement):
            type='float')
     @cache
     def clone_fill_angle(self):
-        return self.get_float_param('angle', 0)
+        return self.get_float_param('angle') or None
+
+    @property
+    @param('flip_angle',
+           _('Flip angle'),
+           tooltip=_("Flip automatically calucalted angle if it appears to be wrong."),
+           type='boolean')
+    @cache
+    def flip_angle(self):
+        return self.get_boolean_param('flip_angle')
 
     def clone_to_element(self, node):
         from .utils import node_to_elements
@@ -73,32 +83,50 @@ class Clone(EmbroideryElement):
         if source_node.tag not in EMBROIDERABLE_TAGS:
             return []
 
-        self.node.style = source_node.specified_style()
+        old_transform = source_node.get('transform', '')
+        source_transform = source_node.composed_transform()
+        source_path = Path(source_node.get_path()).transform(source_transform)
+        transform = Transform(source_node.get('transform', '')) @ -source_transform
+        transform @= self.node.composed_transform() @ Transform(source_node.get('transform', ''))
+        source_node.set('transform', transform)
 
-        # a. a custom set fill angle
-        # b. calculated rotation for the cloned fill element to look exactly as it's source
-        param = INKSTITCH_ATTRIBS['angle']
-        if self.clone_fill_angle is not None:
-            angle = self.clone_fill_angle
+        old_angle = float(source_node.get(INKSTITCH_ATTRIBS['angle'], 0))
+        if self.clone_fill_angle is None:
+            rot = transform.add_rotate(-old_angle)
+            angle = self._get_rotation(rot, source_node, source_path)
+            if angle is not None:
+                source_node.set(INKSTITCH_ATTRIBS['angle'], angle)
         else:
-            # clone angle
-            clone_mat = self.node.composed_transform()
-            clone_angle = degrees(atan(-clone_mat[1][0]/clone_mat[1][1]))
-            # source node angle
-            source_mat = source_node.composed_transform()
-            source_angle = degrees(atan(-source_mat[1][0]/source_mat[1][1]))
-            # source node fill angle
-            source_fill_angle = source_node.get(param, 0)
+            source_node.set(INKSTITCH_ATTRIBS['angle'], self.clone_fill_angle)
 
-            angle = clone_angle + float(source_fill_angle) - source_angle
-        self.node.set(param, str(angle))
-
-        elements = self.clone_to_element(self.node)
-
+        elements = self.clone_to_element(source_node)
         for element in elements:
-            patches.extend(element.to_stitch_groups(last_patch))
+            stitch_groups = element.to_stitch_groups(last_patch)
+            patches.extend(stitch_groups)
 
+        source_node.set('transform', old_transform)
+        source_node.set(INKSTITCH_ATTRIBS['angle'], old_angle)
         return patches
+
+    def _get_rotation(self, transform, source_node, source_path):
+        try:
+            rotation = transform.rotation_degrees()
+        except ValueError:
+            source_path = CubicSuperPath(source_path)[0]
+            clone_path = Path(source_node.get_path()).transform(source_node.composed_transform())
+            clone_path = CubicSuperPath(clone_path)[0]
+
+            angle_source = atan2(source_path[1][1][1] - source_path[0][1][1], source_path[1][1][0] - source_path[0][1][0])
+            angle_clone = atan2(clone_path[1][1][1] - clone_path[0][1][1], clone_path[1][1][0] - clone_path[0][1][0])
+            angle_embroidery = radians(-float(source_node.get(INKSTITCH_ATTRIBS['angle'], 0)))
+
+            diff = angle_source - angle_embroidery
+            rotation = degrees(diff + angle_clone)
+
+            if self.flip_angle:
+                rotation = -degrees(diff - angle_clone)
+
+        return -rotation
 
     def get_clone_style(self, style_name, node, default=None):
         style = node.style[style_name] or default
@@ -132,7 +160,4 @@ def is_embroiderable_clone(node):
 
 
 def get_clone_source(node):
-    source_id = node.get(XLINK_HREF)[1:]
-    xpath = ".//*[@id='%s']" % (source_id)
-    source_node = find_elements(node, xpath)[0]
-    return source_node
+    return node.href

@@ -53,6 +53,7 @@ inkstitch_attribs = [
     'force_lock_stitches',
     # clone
     'clone',
+    'flip_angle',
     # polyline
     'polyline',
     # fill

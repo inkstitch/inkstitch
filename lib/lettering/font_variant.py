@@ -69,7 +69,10 @@ class FontVariant(object):
             self._clean_group(layer)
             layer.attrib[INKSCAPE_LABEL] = layer.attrib[INKSCAPE_LABEL].replace("GlyphLayer-", "", 1)
             glyph_name = layer.attrib[INKSCAPE_LABEL]
-            self.glyphs[glyph_name] = Glyph(layer)
+            try:
+                self.glyphs[glyph_name] = Glyph(layer)
+            except AttributeError:
+                pass
 
     def _clean_group(self, group):
         # We'll repurpose the layer as a container group labelled with the

@@ -71,8 +71,9 @@ class LetteringFrame(wx.Frame):
         self.back_and_forth_checkbox = wx.CheckBox(self, label=_("Stitch lines of text back and forth"))
         self.back_and_forth_checkbox.Bind(wx.EVT_CHECKBOX, lambda event: self.on_change("back_and_forth", event))
 
-        self.trim_checkbox = wx.CheckBox(self, label=_("Add trims"))
-        self.trim_checkbox.Bind(wx.EVT_CHECKBOX, lambda event: self.on_change("trim", event))
+        self.trim_option_choice = wx.Choice(self, choices=["Never", "after each line", "after each word", "after each letter"],
+                                            name=_("Add trim after"))
+        self.trim_option_choice.Bind(wx.EVT_CHOICE, lambda event: self.on_trim_option_change(event))
 
         # text editor
         self.text_input_box = wx.StaticBox(self, wx.ID_ANY, label=_("Text"))
@@ -105,7 +106,8 @@ class LetteringFrame(wx.Frame):
             "text": "",
             "back_and_forth": False,
             "font": None,
-            "scale": 100
+            "scale": 100,
+            "trim_option": 0
         })
 
         if INKSTITCH_LETTERING in self.group.attrib:
@@ -123,7 +125,7 @@ class LetteringFrame(wx.Frame):
     def apply_settings(self):
         """Make the settings in self.settings visible in the UI."""
         self.back_and_forth_checkbox.SetValue(bool(self.settings.back_and_forth))
-        self.trim_checkbox.SetValue(bool(self.settings.trim))
+        self.trim_option_choice.SetSelection(self.settings.trim_option)
         self.set_initial_font(self.settings.font)
         self.text_editor.SetValue(self.settings.text)
         self.scale_spinner.SetValue(self.settings.scale)
@@ -219,6 +221,10 @@ class LetteringFrame(wx.Frame):
         self.settings[attribute] = event.GetEventObject().GetValue()
         self.preview.update()
 
+    def on_trim_option_change(self, event=None):
+        self.settings.trim_option = self.trim_option_choice.GetCurrentSelection()
+        self.preview.update()
+
     def on_font_changed(self, event=None):
         font = self.fonts.get(self.font_chooser.GetValue(), self.default_font)
         self.settings.font = font.marked_custom_font_id
@@ -252,13 +258,6 @@ class LetteringFrame(wx.Frame):
             # The creator of the font banned the possibility of writing in reverse with json file: "reversible": false
             self.back_and_forth_checkbox.Disable()
             self.back_and_forth_checkbox.SetValue(False)
-
-        if font.auto_satin:
-            self.trim_checkbox.Enable()
-            self.trim_checkbox.SetValue(bool(self.settings.trim))
-        else:
-            self.trim_checkbox.Disable()
-            self.trim_checkbox.SetValue(False)
 
         self.update_preview()
         self.Layout()
@@ -314,7 +313,9 @@ class LetteringFrame(wx.Frame):
 
         font = self.fonts.get(self.font_chooser.GetValue(), self.default_font)
         try:
-            font.render_text(self.settings.text, destination_group, back_and_forth=self.settings.back_and_forth, trim=self.settings.trim)
+            font.render_text(self.settings.text, destination_group, back_and_forth=self.settings.back_and_forth,
+                             trim_option=self.settings.trim_option)
+
         except FontError as e:
             if raise_error:
                 inkex.errormsg(_("Error: Text cannot be applied to the document.\n%s") % e)
@@ -400,7 +401,11 @@ class LetteringFrame(wx.Frame):
         # options
         left_option_sizer = wx.BoxSizer(wx.VERTICAL)
         left_option_sizer.Add(self.back_and_forth_checkbox, 1, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT, 5)
-        left_option_sizer.Add(self.trim_checkbox, 1, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT | wx.BOTTOM, 5)
+
+        trim_option_sizer = wx.BoxSizer(wx.HORIZONTAL)
+        trim_option_sizer.Add(wx.StaticText(self, wx.ID_ANY, "Add trims"), 0, wx.LEFT | wx.ALIGN_CENTRE_VERTICAL, 5)
+        trim_option_sizer.Add(self.trim_option_choice, 1, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT | wx.BOTTOM, 5)
+        left_option_sizer.Add(trim_option_sizer, 0, wx.ALIGN_LEFT, 5)
 
         font_scale_sizer = wx.BoxSizer(wx.HORIZONTAL)
         font_scale_sizer.Add(wx.StaticText(self, wx.ID_ANY, "Scale"), 0, wx.LEFT | wx.ALIGN_CENTRE_VERTICAL, 0)
