@@ -5,6 +5,7 @@
 
 from copy import deepcopy
 from itertools import chain
+import numpy as np
 
 from shapely import affinity as shaffinity
 from shapely import geometry as shgeo
@@ -16,7 +17,7 @@ from ..i18n import _
 from ..stitch_plan import StitchGroup
 from ..svg import line_strings_to_csp, point_lists_to_csp
 from ..utils import Point, cache, collapse_duplicate_point, cut
-from .element import EmbroideryElement, param
+from .element import EmbroideryElement, param, PIXELS_PER_MM
 from .validation import ValidationError, ValidationWarning
 
 
@@ -124,8 +125,8 @@ class SatinColumn(EmbroideryElement):
     @property
     @param('zigzag_spacing_mm',
            _('Zig-zag spacing (peak-to-peak)'),
-           tooltip=_('Peak-to-peak distance between zig-zags.'),
-           unit='mm',
+           tooltip=_('Peak-to-peak distance between zig-zags. This is double the mm/stitch measurement used by most mechanical machines.'),
+           unit='mm/cycle',
            type='float',
            default=0.4)
     def zigzag_spacing(self):
@@ -134,18 +135,45 @@ class SatinColumn(EmbroideryElement):
 
     @property
     @param(
-        'pull_compensation_mm',
-        _('Pull compensation'),
-        tooltip=_('Satin stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape.  '
-                  'This setting expands each pair of needle penetrations outward from the center of the satin column.'),
-        unit='mm',
+        'pull_compensation_percent',
+        _('Pull compensation percentage'),
+        tooltip=_('Additional pull compensation which varries as a percentage of stitch width. '
+                  'Two values separated by a space may be used for an aysmmetric effect.'),
+        unit='% (each side)',
         type='float',
         default=0)
-    def pull_compensation(self):
+    @cache
+    def pull_compensation_percent(self):
+        # pull compensation as a percentage of the width
+        return self.get_split_float_param("pull_compensation_percent", (0, 0))
+
+    @property
+    @param(
+        'pull_compensation_mm',
+        _('Pull compensation'),
+        tooltip=_('Satin stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape. '
+                  'This setting expands each pair of needle penetrations outward from the center of the satin column by a fixed length. '
+                  'Two values separated by a space may be used for an aysmmetric effect.'),
+        unit='mm (each side)',
+        type='float',
+        default=0)
+    @cache
+    def pull_compensation_px(self):
         # In satin stitch, the stitches have a tendency to pull together and
         # narrow the entire column.  We can compensate for this by stitching
         # wider than we desire the column to end up.
-        return self.get_float_param("pull_compensation_mm", 0)
+        return self.get_split_mm_param_as_px("pull_compensation_mm", (0, 0))
+
+    @property
+    @param(
+        'swap_satin_rails',
+        _('Swap rails'),
+        tooltip=_('Swaps the first and second rails of the satin column, '
+                  'affecting which side the thread finished on as well as any sided properties'),
+        type='boolean',
+        default='false')
+    def swap_rails(self):
+        return self.get_boolean_param('swap_satin_rails', False)
 
     @property
     @param('contour_underlay', _('Contour underlay'), type='toggle', group=_('Contour Underlay'))
@@ -161,15 +189,28 @@ class SatinColumn(EmbroideryElement):
 
     @property
     @param('contour_underlay_inset_mm',
-           _('Contour underlay inset amount'),
-           tooltip=_('Shrink the outline, to prevent the underlay from showing around the outside of the satin column.'),
-           unit='mm',
+           _('Inset distance (fixed)'),
+           tooltip=_('Shrink the outline by a fixed length, to prevent the underlay from showing around the outside of the satin column.'),
            group=_('Contour Underlay'),
-           type='float',
-           default=0.4)
-    def contour_underlay_inset(self):
+           unit='mm (each side)', type='float', default=0.4,
+           sort_index=2)
+    @cache
+    def contour_underlay_inset_px(self):
         # how far inside the edge of the column to stitch the underlay
-        return self.get_float_param("contour_underlay_inset_mm", 0.4)
+        return self.get_split_mm_param_as_px("contour_underlay_inset_mm", (0.4, 0.4))
+
+    @property
+    @param('contour_underlay_inset_percent',
+           _('Inset distance (proportional)'),
+           tooltip=_('Shrink the outline by a proportion of the column width, '
+                     'to prevent the underlay from showing around the outside of the satin column.'),
+           group=_('Contour Underlay'),
+           unit='% (each side)', type='float', default=0,
+           sort_index=3)
+    @cache
+    def contour_underlay_inset_percent(self):
+        # how far inside the edge of the column to stitch the underlay
+        return self.get_split_float_param("contour_underlay_inset_percent", (0, 0))
 
     @property
     @param('center_walk_underlay', _('Center-walk underlay'), type='toggle', group=_('Center-Walk Underlay'))
@@ -184,9 +225,25 @@ class SatinColumn(EmbroideryElement):
         return max(self.get_float_param("center_walk_underlay_stitch_length_mm", 1.5), 0.01)
 
     @property
-    @param('center_walk_underlay_repeats', _('Repeats'), group=_('Center-Walk Underlay'), type='int', default=2, sort_index=2)
+    @param('center_walk_underlay_repeats',
+           _('Repeats'),
+           tooltip=_('For an odd number of repeats, this will reverse the direction the satin column is stitched, '
+                     'causing stitching to both begin and end at the start point.'),
+           group=_('Center-Walk Underlay'),
+           type='int', default=2,
+           sort_index=2)
     def center_walk_underlay_repeats(self):
         return max(self.get_int_param("center_walk_underlay_repeats", 2), 1)
+
+    @property
+    @param('center_walk_underlay_position',
+           _('Position'),
+           tooltip=_('Position of underlay from between the rails. 0% is along the first rail, 50% is centered, 100% is along the second rail.'),
+           group=_('Center-Walk Underlay'),
+           type='float', unit='%', default=50,
+           sort_index=3)
+    def center_walk_underlay_position(self):
+        return min(100, max(0, self.get_float_param("center_walk_underlay_position", 50)))
 
     @property
     @param('zigzag_underlay', _('Zig-zag underlay'), type='toggle', group=_('Zig-zag Underlay'))
@@ -206,13 +263,13 @@ class SatinColumn(EmbroideryElement):
 
     @property
     @param('zigzag_underlay_inset_mm',
-           _('Inset amount'),
+           _('Inset amount (fixed)'),
            tooltip=_('default: half of contour underlay inset'),
-           unit='mm',
+           unit='mm (each side)',
            group=_('Zig-zag Underlay'),
            type='float',
            default="")
-    def zigzag_underlay_inset(self):
+    def zigzag_underlay_inset_px(self):
         # how far in from the edge of the satin the points in the zigzags
         # should be
 
@@ -220,7 +277,22 @@ class SatinColumn(EmbroideryElement):
         # doing both contour underlay and zigzag underlay, make sure the
         # points of the zigzag fall outside the contour underlay but inside
         # the edges of the satin column.
-        return self.get_float_param("zigzag_underlay_inset_mm") or self.contour_underlay_inset / 2.0
+        default = self.contour_underlay_inset_px * 0.5 / PIXELS_PER_MM
+        x = self.get_split_mm_param_as_px("zigzag_underlay_inset_mm", default)
+        return x
+
+    @property
+    @param('zigzag_underlay_inset_percent',
+           _('Inset amount (proportional)'),
+           tooltip=_('default: half of contour underlay inset'),
+           unit='% (each side)',
+           group=_('Zig-zag Underlay'),
+           type='float',
+           default="")
+    @cache
+    def zigzag_underlay_inset_percent(self):
+        default = self.contour_underlay_inset_percent * 0.5
+        return self.get_split_float_param("zigzag_underlay_inset_percent", default)
 
     @property
     @param('zigzag_underlay_max_stitch_length_mm',
@@ -250,7 +322,11 @@ class SatinColumn(EmbroideryElement):
     @cache
     def rails(self):
         """The rails in order, as point lists"""
-        return [subpath for i, subpath in enumerate(self.csp) if i in self.rail_indices]
+        rails = [subpath for i, subpath in enumerate(self.csp) if i in self.rail_indices]
+        if len(rails) == 2 and self.swap_rails:
+            return [rails[1], rails[0]]
+        else:
+            return rails
 
     @property
     @cache
@@ -314,7 +390,7 @@ class SatinColumn(EmbroideryElement):
             # intersect with the rails even with floating point inaccuracy.
             start = Point(*start)
             end = Point(*end)
-            start, end = self.offset_points(start, end, 0.01)
+            start, end = self.offset_points(start, end, (0.01, 0.01), (0, 0))
             start = list(start)
             end = list(end)
 
@@ -524,7 +600,7 @@ class SatinColumn(EmbroideryElement):
         """
 
         # like in do_satin()
-        points = list(chain.from_iterable(zip(*self.plot_points_on_rails(self.zigzag_spacing, 0))))
+        points = list(chain.from_iterable(zip(*self.plot_points_on_rails(self.zigzag_spacing))))
 
         if isinstance(split_point, float):
             index_of_closest_stitch = int(round(len(points) * split_point))
@@ -616,10 +692,10 @@ class SatinColumn(EmbroideryElement):
     @cache
     def center_line(self):
         # similar technique to do_center_walk()
-        center_walk, _ = self.plot_points_on_rails(self.zigzag_spacing, -100000)
+        center_walk, _ = self.plot_points_on_rails(self.zigzag_spacing, (0, 0), (-0.5, -0.5))
         return shgeo.LineString(center_walk)
 
-    def offset_points(self, pos1, pos2, offset_px):
+    def offset_points(self, pos1, pos2, offset_px, offset_proportional):
         # Expand or contract two points about their midpoint.  This is
         # useful for pull compensation and insetting underlay.
 
@@ -630,14 +706,21 @@ class SatinColumn(EmbroideryElement):
             # to offset in, so we have to just return the points
             return pos1, pos2
 
+        # calculate the offset for each side
+        offset_a = offset_px[0] + (distance * offset_proportional[0])
+        offset_b = offset_px[1] + (distance * offset_proportional[1])
+        offset_total = offset_a + offset_b
+
         # don't contract beyond the midpoint, or we'll start expanding
-        if offset_px < -distance / 2.0:
-            offset_px = -distance / 2.0
+        if offset_total < -distance:
+            scale = distance / offset_total
+            offset_a = offset_a * scale
+            offset_b = offset_b * scale
 
-        pos1 = pos1 + (pos1 - pos2).unit() * offset_px
-        pos2 = pos2 + (pos2 - pos1).unit() * offset_px
+        out1 = pos1 + (pos1 - pos2).unit() * offset_a
+        out2 = pos2 + (pos2 - pos1).unit() * offset_b
 
-        return pos1, pos2
+        return out1, out2
 
     def walk(self, path, start_pos, start_index, distance):
         # Move <distance> pixels along <path>, which is a sequence of line
@@ -672,13 +755,13 @@ class SatinColumn(EmbroideryElement):
                 distance_remaining -= segment_length
                 pos = segment_end
 
-    def plot_points_on_rails(self, spacing, offset):
+    def plot_points_on_rails(self, spacing, offset_px=(0, 0), offset_proportional=(0, 0)):
         # Take a section from each rail in turn, and plot out an equal number
         # of points on both rails.  Return the points plotted. The points will
         # be contracted or expanded by offset using self.offset_points().
 
         def add_pair(pos0, pos1):
-            pos0, pos1 = self.offset_points(pos0, pos1, offset)
+            pos0, pos1 = self.offset_points(pos0, pos1, offset_px, offset_proportional)
             points[0].append(pos0)
             points[1].append(pos1)
 
@@ -758,7 +841,9 @@ class SatinColumn(EmbroideryElement):
     def do_contour_underlay(self):
         # "contour walk" underlay: do stitches up one side and down the
         # other.
-        forward, back = self.plot_points_on_rails(self.contour_underlay_stitch_length, -self.contour_underlay_inset)
+        forward, back = self.plot_points_on_rails(
+            self.contour_underlay_stitch_length,
+            -self.contour_underlay_inset_px, -self.contour_underlay_inset_percent/100)
         stitches = (forward + list(reversed(back)))
         if self._center_walk_is_odd():
             stitches = (list(reversed(back)) + forward)
@@ -772,8 +857,11 @@ class SatinColumn(EmbroideryElement):
         # Center walk underlay is just a running stitch down and back on the
         # center line between the bezier curves.
 
+        inset_prop = -np.array([self.center_walk_underlay_position, 100-self.center_walk_underlay_position]) / 100
         # Do it like contour underlay, but inset all the way to the center.
-        forward, back = self.plot_points_on_rails(self.center_walk_underlay_stitch_length, -100000)
+        forward, back = self.plot_points_on_rails(
+            self.center_walk_underlay_stitch_length,
+            (0, 0), inset_prop)
 
         stitches = []
         for i in range(self.center_walk_underlay_repeats):
@@ -801,7 +889,8 @@ class SatinColumn(EmbroideryElement):
         patch = StitchGroup(color=self.color)
 
         sides = self.plot_points_on_rails(self.zigzag_underlay_spacing / 2.0,
-                                          -self.zigzag_underlay_inset)
+                                          -self.zigzag_underlay_inset_px,
+                                          -self.zigzag_underlay_inset_percent/100)
 
         if self._center_walk_is_odd():
             sides = [list(reversed(sides[0])), list(reversed(sides[1]))]
@@ -836,7 +925,13 @@ class SatinColumn(EmbroideryElement):
         # print >> dbg, "satin", self.zigzag_spacing, self.pull_compensation
 
         patch = StitchGroup(color=self.color)
-        sides = self.plot_points_on_rails(self.zigzag_spacing, self.pull_compensation)
+
+        # pull compensation is automatically converted from mm to pixels by get_float_param
+        sides = self.plot_points_on_rails(
+            self.zigzag_spacing,
+            self.pull_compensation_px,
+            self.pull_compensation_percent/100
+        )
 
         if self.max_stitch_length:
             return self.do_split_stitch(patch, sides)
@@ -866,7 +961,11 @@ class SatinColumn(EmbroideryElement):
 
         patch = StitchGroup(color=self.color)
 
-        sides = self.plot_points_on_rails(self.zigzag_spacing, self.pull_compensation)
+        sides = self.plot_points_on_rails(
+            self.zigzag_spacing,
+            self.pull_compensation_px,
+            self.pull_compensation_percent/100
+        )
 
         # "left" and "right" here are kind of arbitrary designations meaning
         # a point from the first and second rail respectively

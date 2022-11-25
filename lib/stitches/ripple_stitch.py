@@ -74,7 +74,7 @@ def _get_satin_ripple_helper_lines(stroke):
     length = stroke.grid_size or stroke.running_stitch_length
 
     # use satin column points for satin like build ripple stitches
-    rail_points = SatinColumn(stroke.node).plot_points_on_rails(length, 0)
+    rail_points = SatinColumn(stroke.node).plot_points_on_rails(length)
 
     steps = _get_steps(stroke.get_line_count(), exponent=stroke.exponent, flip=stroke.flip_exponent)
 
