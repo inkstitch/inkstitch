@@ -348,11 +348,12 @@ class SatinColumn(EmbroideryElement):
         for rail in self.rails:
             points = self.strip_control_points(rail)
 
-            # ignore the start and end
-            # if there is only start and end: ignore only end
-            if not len(points) == 2:
+            if len(points) > 2:
+                # Don't bother putting rungs at the start and end.
                 points = points[1:-1]
             else:
+                # But do include one at the start if we wouldn't add one otherwise.
+                # This avoids confusing other parts of the code.
                 points = points[:-1]
 
             rung_endpoints.append(points)
@@ -608,9 +609,9 @@ class SatinColumn(EmbroideryElement):
 
         for path_list in path_lists:
             if len(path_list) in (2, 4):
-                # Add the rung just after the start of the satin.
-                rung_start = path_list[0].interpolate(0.1)
-                rung_end = path_list[1].interpolate(0.1)
+                # Add the rung at the start of the satin.
+                rung_start = path_list[0].coords[0]
+                rung_end = path_list[1].coords[0]
                 rung = shgeo.LineString((rung_start, rung_end))
                 path_list.append(rung)
 
