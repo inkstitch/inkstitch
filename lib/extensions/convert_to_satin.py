@@ -153,7 +153,7 @@ class ConvertToSatin(InkstitchExtension):
         left_rail = list(left_rail.coords)
         # for whatever reason, shapely returns a right-side offset's coordinates in reverse
         # on macbooks the right hand path doesn't seem to be reversed, let's check if the distance is ok before reversing it
-        if not math.isclose(shgeo.Point(path.coords[0]).distance(shgeo.Point(right_rail.coords[0])), distance):
+        if not sys.platform == "darwin":
             right_rail = list(reversed(right_rail.coords))
         else:
             right_rail = list(right_rail.coords)

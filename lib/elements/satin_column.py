@@ -349,7 +349,11 @@ class SatinColumn(EmbroideryElement):
             points = self.strip_control_points(rail)
 
             # ignore the start and end
-            points = points[1:-1]
+            # if there is only start and end: ignore only end
+            if not len(points) == 2:
+                points = points[1:-1]
+            else:
+                points = points[:-1]
 
             rung_endpoints.append(points)
 

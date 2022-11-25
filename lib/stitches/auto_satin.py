@@ -82,7 +82,6 @@ class SatinSegment(object):
         satin = satin.apply_transform()
 
         _ensure_even_repeats(satin)
-        _ensure_rungs(satin)
 
         return satin
 
@@ -522,21 +521,6 @@ def name_elements(new_elements, preserve_order):
                 element.node.set(INKSCAPE_LABEL, _("AutoSatin Running Stitch %d") % index)
 
             index += 1
-
-
-def _ensure_rungs(element):
-    if len(element.paths) == 2 and len(element.paths[0]) != len(element.paths[1]):
-        rails = [shgeo.LineString(element.flatten_subpath(rail)) for rail in element.rails]
-        # Add the rung just after the start of the satin.
-        rung_start = rails[0].interpolate(0.1)
-        rung_end = rails[1].interpolate(0.1)
-        rung = shgeo.LineString((rung_start, rung_end))
-
-        # insert rung into the satin path
-        d = element.node.get('d')
-        d += ' M '
-        d += ', '.join(' '.join(str(c) for c in coord) for coord in rung.coords)
-        element.node.set('d', d)
 
 
 def _ensure_even_repeats(element):
