@@ -169,7 +169,7 @@ class SatinColumn(EmbroideryElement):
         'swap_satin_rails',
         _('Swap rails'),
         tooltip=_('Swaps the first and second rails of the satin column, '
-                  'effecting which side the thread finished on as well as any sided properties'),
+                  'affecting which side the thread finished on as well as any sided properties'),
         type='boolean',
         default='false')
     def swap_rails(self):
@@ -695,7 +695,7 @@ class SatinColumn(EmbroideryElement):
         center_walk, _ = self.plot_points_on_rails(self.zigzag_spacing, (0, 0), (-0.5, -0.5))
         return shgeo.LineString(center_walk)
 
-    def offset_points(self, pos1, pos2, offset_px, offset_prop):
+    def offset_points(self, pos1, pos2, offset_px, offset_proportional):
         # Expand or contract two points about their midpoint.  This is
         # useful for pull compensation and insetting underlay.
 
@@ -707,8 +707,8 @@ class SatinColumn(EmbroideryElement):
             return pos1, pos2
 
         # calculate the offset for each side
-        offset_a = offset_px[0] + (distance * offset_prop[0])
-        offset_b = offset_px[1] + (distance * offset_prop[1])
+        offset_a = offset_px[0] + (distance * offset_proportional[0])
+        offset_b = offset_px[1] + (distance * offset_proportional[1])
         offset_total = offset_a + offset_b
 
         # don't contract beyond the midpoint, or we'll start expanding
@@ -755,13 +755,13 @@ class SatinColumn(EmbroideryElement):
                 distance_remaining -= segment_length
                 pos = segment_end
 
-    def plot_points_on_rails(self, spacing, offset_px=(0, 0), offset_prop=(0, 0)):
+    def plot_points_on_rails(self, spacing, offset_px=(0, 0), offset_proportional=(0, 0)):
         # Take a section from each rail in turn, and plot out an equal number
         # of points on both rails.  Return the points plotted. The points will
         # be contracted or expanded by offset using self.offset_points().
 
         def add_pair(pos0, pos1):
-            pos0, pos1 = self.offset_points(pos0, pos1, offset_px, offset_prop)
+            pos0, pos1 = self.offset_points(pos0, pos1, offset_px, offset_proportional)
             points[0].append(pos0)
             points[1].append(pos1)
 
