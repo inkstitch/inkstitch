@@ -6,6 +6,7 @@
 # -*- coding: UTF-8 -*-
 
 import os
+import random
 import sys
 from collections import defaultdict
 from copy import copy
@@ -77,6 +78,9 @@ class ParamsTab(ScrolledPanel):
 
         self.pencil_icon = wx.Image(os.path.join(get_resource_dir(
             "icons"), "pencil_20x20.png")).ConvertToBitmap()
+
+        self.randomize_icon = wx.Image(os.path.join(get_resource_dir(
+            "icons"), "randomize_20x20.png")).ConvertToBitmap()
 
         self.__set_properties()
         self.__do_layout()
@@ -186,6 +190,16 @@ class ParamsTab(ScrolledPanel):
                     values[name] = input.GetSelection()
 
         return values
+
+    def on_change_seed(self, event):
+
+        for node in self.nodes:
+            random.seed()
+            new_seed = random.randint(1, 10000)
+            node.set_param("use_seed", new_seed)
+        if self.on_change_hook:
+            self.on_change_hook(self)
+        event.Skip()
 
     def apply(self):
         values = self.get_values()
@@ -379,6 +393,17 @@ class ParamsTab(ScrolledPanel):
         self.inputs_to_params = {v: k for k, v in self.param_inputs.items()}
 
         box.Add(self.settings_grid, proportion=1, flag=wx.ALL, border=10)
+
+        add_seed_button = False
+        for param in self.params:
+            if param.name[:6] == "random":
+                add_seed_button = True
+        if add_seed_button:
+            self.change_seed_button = wx.Button(self, wx.ID_ANY, _("Change Seed"))
+            self.change_seed_button.Bind(wx.EVT_BUTTON, self.on_change_seed)
+            self.change_seed_button.SetBitmap(self.randomize_icon)
+            box.Add(self.change_seed_button, proportion=0, flag=wx.ALIGN_CENTER_HORIZONTAL, border=10)
+
         self.SetSizer(box)
         self.update_choice_widgets()
 

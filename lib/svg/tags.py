@@ -123,6 +123,13 @@ inkstitch_attribs = [
     'pull_compensation_mm',
     'pull_compensation_percent',
     'stroke_first',
+    'random_split_factor',
+    'random_first_rail_factor_in',
+    'random_first_rail_factor_out',
+    'random_second_rail_factor_in',
+    'random_second_rail_factor_out',
+    'random_zigzag_spacing',
+    'use_seed',
     # stitch_plan
     'invisible_layers',
     # Legacy
