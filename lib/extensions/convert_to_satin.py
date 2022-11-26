@@ -129,12 +129,16 @@ class ConvertToSatin(InkstitchExtension):
         if Point(*path[0]).distance(Point(*path[-1])) < 1:
             raise SelfIntersectionError()
 
+        # Shapely is supposed to return right sided offsets in reversed direction, which it does, except for macOS.
+        # To avoid direction checking, we are going to rely on left side offsets only.
+        # Therefore we need to reverse the original path.
+        reversed_path = shgeo.LineString(reversed(path))
         path = shgeo.LineString(path)
         distance = stroke_width / 2.0
 
         try:
             left_rail = path.parallel_offset(distance, 'left', **style_args)
-            right_rail = path.parallel_offset(distance, 'right', **style_args)
+            right_rail = reversed_path.parallel_offset(distance, 'left', **style_args)
         except ValueError:
             # TODO: fix this error automatically
             # Error reference: https://github.com/inkstitch/inkstitch/issues/964
@@ -151,12 +155,7 @@ class ConvertToSatin(InkstitchExtension):
             raise SelfIntersectionError()
 
         left_rail = list(left_rail.coords)
-        # for whatever reason, shapely returns a right-side offset's coordinates in reverse
-        # on macbooks the right hand path doesn't seem to be reversed, let's check if the distance is ok before reversing it
-        if not sys.platform == "darwin":
-            right_rail = list(reversed(right_rail.coords))
-        else:
-            right_rail = list(right_rail.coords)
+        right_rail = list(reversed(right_rail.coords))
 
         rungs = self.generate_rungs(path, stroke_width)
 
