@@ -272,6 +272,8 @@ class FillStitch(EmbroideryElement):
             return shgeo.MultiPolygon([valid_shape])
         if isinstance(valid_shape, shgeo.LineString):
             return shgeo.MultiPolygon([])
+        if shape.area == 0:
+            return shgeo.MultiPolygon([])
 
         polygons = []
         for polygon in valid_shape.geoms:
@@ -713,12 +715,17 @@ class FillStitch(EmbroideryElement):
 
         # for an uncaught exception, give a little more info so that they can create a bug report
         message = ""
-        message += _("Error during autofill!  This means that there is a problem with Ink/Stitch.")
+        message += _("Error during autofill! This means it is a bug in Ink/Stitch.")
         message += "\n\n"
         # L10N this message is followed by a URL: https://github.com/inkstitch/inkstitch/issues/new
-        message += _("If you'd like to help us make Ink/Stitch better, please paste this whole message into a new issue at: ")
-        message += "https://github.com/inkstitch/inkstitch/issues/new\n\n"
-        message += version.get_inkstitch_version() + "\n\n"
+        message += _("If you'd like to help please\n"
+                     "- copy the entire error message below\n"
+                     "- save your SVG file and\n"
+                     "- create a new issue at")
+        message += " https://github.com/inkstitch/inkstitch/issues/new\n\n"
+        message += _("Include the error description and also (if possible) the svg file.")
+        message += '\n\n\n'
+        message += version.get_inkstitch_version() + '\n'
         message += traceback.format_exc()
 
         self.fatal(message)

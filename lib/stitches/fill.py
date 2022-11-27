@@ -125,6 +125,9 @@ def intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing=Non
     end -= center.y
 
     height = abs(end - start)
+    if height == 0:
+        # return early to avoid divide-by-zero later
+        return []
 
     # print >> dbg, "grating:", start, end, height, row_spacing, end_row_spacing
 

@@ -39,6 +39,40 @@ def cut(line, distance, normalized=False):
                 LineString([(cp.x, cp.y)] + coords[i:])]
 
 
+def cut_multiple(line, distances, normalized=False):
+    """Cut a LineString at multiple distances along that line.
+
+    Always returns a list of N + 1 members, where N is the number of distances
+    provided.  Some members of the list may be None, indicating an empty
+    segment.  This can happen if one of the distances is at the start or end
+    of the line, or if duplicate distances are provided.
+
+    Returns:
+        a list of LineStrings or None values"""
+
+    distances = list(sorted(distances))
+
+    segments = [line]
+    distance_so_far = 0
+    nones = []
+
+    for distance in distances:
+        segment = segments.pop()
+        before, after = cut(segment, distance - distance_so_far, normalized)
+
+        segments.append(before)
+
+        if after is None:
+            nones.append(after)
+        else:
+            if before is not None:
+                distance_so_far += before.length
+            segments.append(after)
+
+    segments.extend(nones)
+    return segments
+
+
 def roll_linear_ring(ring, distance, normalized=False):
     """Make a linear ring start at a different point.
 
@@ -111,13 +145,6 @@ def cut_path(points, length):
     subpath, rest = cut(path, length)
 
     return [Point(*point) for point in subpath.coords]
-
-
-def collapse_duplicate_point(geometry):
-    if geometry.area < 0.01:
-        return geometry.representative_point()
-
-    return geometry
 
 
 class Point:
