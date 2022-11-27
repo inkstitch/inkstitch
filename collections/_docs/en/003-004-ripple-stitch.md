@@ -70,7 +70,7 @@ If no guiding information is provided, the center of the path is used as the tar
 
 ### Satin guide
 
-With satin guides you will have the ability to lead the ripples precisely using the satin rung method. The width of the satin guide will also have an effect on the ripple width.
+With satin guides you will have the ability to lead the ripples precisely using the satin rung method. The width of the satin guide will also have an effect on the ripple width. The positioning of the original ripple shape will be ignored and it will start where the satin begins.
 
 * In the very same group of the ripple stitch object create a [satin column](/docs/stitches/satin-column/) like object with rails and rungs.
 * Select the newly created object and run `Extensions > Ink/Stitch > Edit > Selection to guide line`.
@@ -81,7 +81,7 @@ With satin guides you will have the ability to lead the ripples precisely using 
 Params||Description
 ---|---|---
 Running stitch along paths      |  ☑ |Must be enabled for these settings to take effect.
-Methode     || Chose Ripple stitch 
+Method     || Chose Ripple stitch 
 Repeats                        ||◦ Defines how many times to run down and back along the final embroidery path<br />◦ Default: 1 (traveling once from the start to the end of the path)<br />◦ Odd number: stitches will end at the end of the path<br />◦ Even number: stitching will return to the start of the path
 Bean stitch number of repeats ||◦ Enable [Bean Stitch Mode](/docs/stitches/bean-stitch/)<br />◦ Backtrack each stitch this many times.<br />◦ A value of 1 would triple each stitch (forward, back, forward).<br />◦ A value of 2 would quintuple each stitch, etc.<br />◦ Only applies to running stitch.
 Running stitch length||Length of stitches in [Running Stitch Mode](/docs/stitches/running-stitch/)

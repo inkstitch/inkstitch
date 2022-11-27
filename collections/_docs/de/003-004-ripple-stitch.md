@@ -1,87 +1,113 @@
 ---
-title: "Ripple stitch"
+title: "Ripple Stich"
 permalink: /de/docs/stitches/ripple-stitch/
 excerpt: ""
-last_modified_at: 2022-06-10
+last_modified_at: 2022-11-27
 toc: true
 ---
-## What it is
+## Beschreibung
 
-[![Ripple butterfly](/assets/images/docs/ripplefly.jpg){: width="200x"}](/assets/images/docs/ripplefly.svg){: title="Download SVG File" .align-left download="ripplefly.svg" }
-Ripple stitch is part running stitch and part filling: it behaves like a running stitch (it can be done in triple stitch for example), it is defined from a stroke, but the embroidery result stretches over a surface. Used loosely, the result looks like ripples, hence the name.
+[![Ripple butterfly](/assets/images/docs/ripplefly.jpg){: width="200x"}](/assets/images/docs/ripplefly.svg){: title="Download SVG" .align-left download="ripplefly.svg" }
+Ripple stich ist zum Teil Geradstich und zum Teil Füllstich: es verhält sich wie ein Geradstich (es kann beispielsweise als Dreifach-Geradstich genutzt werden) und definiert sich über eine Linie, aber das Stickergebnis erstreckt sich über eine Oberfläche. Ripples werden für lose Stickereien verwendet und sehen ein bisschen wie Wellen aus, daher auch der Name.
 
 <p style="clear: both;">&nbsp;</p>
 
 {% include video id="e1426a71-486a-4e62-a4c7-3b2f25dd1fc0" provider="diode" %}
 
-## How to Create
+Geschlossene Formen werden mit einer Spirale gefüllt (z.B. Kreis). Bei offenen Formen (Linie mit Anfang und Ende) wird hin und her gestickt. Schauen wir uns beide Formen genauer an.
 
-From a **stroke (stroke color is set and no fill color)** that may be either a simple path (decomposition applied to it has no effect) or a composed path with exactly two subpaths, just like the rails of a satin column.
+## Geschlossene Formen
 
-Le stroke may be dashed or not, here it does not matter.
-{: .notice--warning }
+* Erstelle einen einfachen geschlossenen Pfad mit einer Linienfarbe (keine kombinierten Pfade aus mehreren Teilen)
+* (Optional) Erstelle eine [Zielposition oder Führungslinien](#ripple-stiche-führen)
+* Öffne die Parametereinstellungen (`Erweiterungen > Ink/Stitch > Parameter`) und setze die `Methode` auf `Ripple`.
+* Stelle die übrigen [Parameter](#parameter) nach deinen Wünschen ein und klicke auf Anwenden
 
-* Create a **stroke (stroke color is set and no fill color)** that may be either a simple path (decomposition applied to it has no effect) or a composed path with exactly two subpaths.
-* Select this stroke
-* Open params dialog (`Extensions > Ink/Stitch > Params`) and select `Ripple stitch` as method.
+![Circular ripple examples](/assets/images/docs/en/circular-ripple.svg)
 
-If the stroke is closed, any hole  will be ignored and the shape  will be filled with a spiral. Open shapes will be stitched back and forth.
+[Beispieldatei herunterladen](/assets/images/docs/en/circular-ripple.svg)
 
-Once the path has been created, it becomes possible to guide the way the ripples replicate to fill a shape.
+## Offene Formen
 
-There are many ways to exploit all the possibilities:
+Lineare Ripples können auf verschiedene Weise erstellt werden. Sie können aus einer einfachen Kurve bestehen oder sogar wie eine Satinsäule konstruiert werden.
+
+* Erstelle eine offene Form (einfache Linie, kombinierte Linien oder Satinsäule)
+* (Optional) Erstelle eine [Zielposition oder Führungslinien](#ripple-stiche-führen)
+* Öffne die Parametereinstellungen (`Erweiterungen > Ink/Stitch > Parameter`) und setze die `Methode` auf `Ripple`.
+* Stelle die übrigen [Parameter](#parameter) nach deinen Wünschen ein und klicke auf Anwenden
+
+![Linear ripple examples](/assets/images/docs/en/linear-ripple.svg)
+
+[Beispieldatei herunterladen](/assets/images/docs/en/linear-ripple.svg)
+
+## Schleifen
+
+Schleifen (also sich selbst kreuzende Pfade) sind bei Ripple-Stichen erlaubt und willkommen. Nutze Schleifen um besondere, interessante Effekte zu erzielen.
+
+![Looping ripple stitches](/assets/images/docs/en/ripple-loops.svg)
+
+[Beispieldatei herunterladen](/assets/images/docs/en/ripple-loops.svg)
+
+##  Ripple-Stiche führen
+
+Ripples mit nur **einem Unterpfad** (geschlossene Formen oder einfache Bézier-Kurven) können mit jeder der folgenden Methoden geführt werden.
+
+### Zielposition
+
+Definiere eine Zielposition mit einem [visuellen Befehl](/de/docs/commmands/):
+
+* Öffne `Erweiterungen > Ink/Stitch > Befehle > Befehle mit gewählten Objekten verknüpfen...`
+* Wähle `Ripplestich Zielposition` und clicke auf Anwenden
+* `Strg + Klick` auf das Symbol des Befehls um es auszuwählen, dann bewege es zur gewünschten Position
+
+Wenn keine Zielposition definiert wurde, läuft der Pfad auf die Mitte des Objektes zu.
+
+### Führungslinie
+
+* Erstelle mit dem Bézier-Werkzeug eine Linie die in der Nähe der Ripple-Form startet und von ihr wegführt. Die neue Linie muss sich genau in der gleichen Gruppen (auch keine Untergruppe) befinden, wie die Ripple-Form.
+* Wähle die Linie aus und wandel sie mit `Erweiterungen > Ink/Stitch > Bearbeiten > Auswahl zu Führungslinie` in eine Führungslinie um.
+* Wähle die Ripple-Form aus und öffne die Parametereinstellungen. Ändere die Parameter bis das Ergebnis den Wünschen entspricht.
+
+### Satin-Führung
+
+Die Satin-Führung eröffnet die Möglichkeit die Ripplestiche genauer zu führen. Sowohl die Satin-Querstreben, als auch die Breite der Satinkolumne selber wirken sich auf die Ripplestiche aus. Ausschlaggebend für die spätere Positionierung ist nicht die Ripple-Form selbst, sondern die Position der Führungslinie. Zur Vereinfachung der Steuerung der finalen Breite ist es ratsam (aber nicht notwendig) die Satin-Führung so anzulegen, dass sie zu Beginn ungefähr der Breite der Ripple-Form entspricht.
+
+* Erstelle eine [Satinsäule](/de/docs/stitches/satin-column/) mit Richtungslinien. Die Satinsäule muss sich genau in der gleichen Gruppen (auch keine Untergruppe) befinden, wie die Ripple-Form.
+* Wähle die Satinsäule aus und wandel sie mit `Erweiterungen > Ink/Stitch > Bearbeiten > Auswahl zu Führungslinie` in eine Führungslinie um.
+* Wähle die Ripple-Form aus und öffne die Parametereinstellungen. Ändere die Parameter bis das Ergebnis den Wünschen entspricht.
+
+## Parameter
+
+Parameter||Beschreibung
+---|---|---
+Geradstich                     | ☑ | Muss aktiviert sein, damit diese Einstellungen wirksam werden.
+Methode                        || Bitte `Ripple` wählen
+Wiederholungen                 || ◦ Legt fest, wie oft der Pfad durchlaufen werden soll<br/>◦ Standard: 1 (einmal vom Anfang bis zum Ende des Pfades)<br/>◦ Ungerade Zahl: Stiche enden am Ende des Pfades<br/>◦ Gerade Zahl: Die Naht kehrt zum Anfang des Pfades zurück
+Mehrfach Geradstich Anzahl der Wiederholungen || ◦ Aktiviert den [Mehrfachgeradstich Modus](/de/docs/stitches/bean-stitch/)<br />◦ Jeden Stich vervielfachen.<br />Ein Wert von 1 verdreifacht jeden Stich (vorwärts, rückwärts, vorwärts).<br/>◦ Ein Wert von 2 verfünffacht jeden Stich, usw.
+Geradstichlänge                || Länge der Stiche im [Geradstich-Modus](/de/docs/stitches/running-stitch/)
+Geradstich Toleranz            || Alle Stiche müssen innerhalb dieser Distanz zum Pfad liegen. Eine niedrigere Toleranz verkürzt die Stiche. Eine höhere Toleranz kann scharfe Ecken abrunden.
+Anzahl der Linien|<img src="/assets/images/docs/ripple_only_lines.svg" alt="Nombre de lignes"/>| Anzahl der Wiederholungen der Ripple-Form. Voreinstellung: 10.
+◦ Erste Linien überspringen <br /> ◦ Letzte Linien überspringen |<img src="/assets/images/docs/ripple_only_skip.svg" alt="Sauter"/>| Die ersten / letzten Ripple-Wiederholungen werden übersprungen und die Gesamtanzahl der Wiederholungen verringert sich.
+Linienabstand Exponent|<img src="/assets/images/docs/ripple_only_exponent.svg" alt="Exponant"/>| ◦ Mit der Voreinstellung von 1 ist der Abstand zwischen den Linien konstant<br />◦ Mit einem Wert größer als 1 erhöht sich der Abstand zwischen den Linien sukzessiv<br />◦ Mit einem Wert kleiner als 1 verringert sich der Abstand zwischen den Linien.
+Exponent umkehren              |☑  or ▢| Kehrt den Effekt des Exponent-Wertes um.
+Umkehren                       |☑  or ▢| Kehrt den gesamten Pfad um (Start = Ende). Andere Parameter bleiben von dieser Einstellung unberührt.
+Größe des Gitters              |<img src="/assets/images/docs/ripple_only_grid.svg" alt="Distance"/>| Fügt quer verlaufende Linien hinzu, die zu einem Gittereffekt führen. Die Größe des Gitters kann auch Auswirkungen auf die Genauigkeit des Linienverlaufs haben.
+Skalieren                      | XY, X, Y oder Keine | Nur für geführte Ripples
+Start-Skalierung               | Prozentwert | Definiert die Skalierung der ersten Linie. Nur für geführte Ripples.
+End-Skalierung                 | Prozentwert | Definiert die Skalierung der letzten Linie. Nur für geführte Ripples.
+Rotieren                       | ☑  or ▢| Nur für geführte Ripples
+Kantenstil                     |<img src="/assets/images/docs/flat_or_point.svg" alt="Join Stile"/> | Verbindungen zwischen den Linien: flach (oben) oder spitz (unten). Nur für offene Ripples.
+Vernähen erlauben              | ☑  or ▢| Vernäht bei Bedarf an den ausgewählten Positionen
+Vernähen erzwingen             | ☑  or ▢| Vernäht den Faden nach diesem Element, auch dann, wenn der Abstand zum Folgeobjekt geringer ist als in den Ink/Stitch Einstellungen definiert.
+{: .params-table }
+
+## Ripple-Übersicht
 
 ![Many ripples](/assets/images/docs/en/rippleways_en.svg)
 
 [Download](/assets/images/docs/en/rippleways_en.svg){: download="rippleways.svg" }
 
-## Params
-
-Params||Description
----|---|---
-Running stitch along paths      |  ☑ |Must be enabled for these settings to take effect.
-Methode     || Chose Ripple stitch 
-Repeats                        ||◦ Defines how many times to run down and back along the final embroidery path<br />◦ Default: 1 (traveling once from the start to the end of the path)<br />◦ Odd number: stitches will end at the end of the path<br />◦ Even number: stitching will return to the start of the path
-Bean stitch number of repeats ||◦ Enable [Bean Stitch Mode](/docs/stitches/bean-stitch/)<br />◦ Backtrack each stitch this many times.<br />◦ A value of 1 would triple each stitch (forward, back, forward).<br />◦ A value of 2 would quintuple each stitch, etc.<br />◦ Only applies to running stitch.
-Running stitch length||Length of stitches in [Running Stitch Mode](/docs/stitches/running-stitch/)
-Number of line|<img src="/assets/images/docs/ripple_only_lines.svg" alt="Nombre de lignes"/>|Chose how many times the ripple replicates. Default value is 10.
-◦Skip first lines <br /> ◦Skip last lines  |<img src="/assets/images/docs/ripple_only_skip.svg" alt="Sauter"/>| Skip (do not embroider)  that number of replications at start and/or end of the embroidery.
-Line distance exponent|<img src="/assets/images/docs/ripple_only_exponent.svg" alt="Exposant"/>| ◦ With default value of 1 space between replications is constant<br />◦ With a value greater than 1, the space between two consecutive replications increases as one moves away from the original ripple   <br />◦ With a value smaller than 1, the space between two consecutive replications decreases as one moves away from the original ripple.
-Flip exponent |☑  or ▢| exchange role of first and last line in the computation of  line distance
-Reverse |☑  or ▢|  Reverse the final embroidery path.  Has no effect on the other  parameters.
-Grid  max distance |<img src="/assets/images/docs/ripple_only_grid.svg" alt="Distance"/>| If the distance is strictly positive a grid effect is added. The distance controls how far apart the new  lines are. 
-Scale axes|XY or X or Y or None | for guided ripple only
-Starting scale| for guided ripple only|How big the first copy of the line should be, in percent. 
-Ending scale| for guided ripple only| How big the last copy of the line should be, in percent.
-Rotate| ☑  or ▢| for guided ripple only
-Enables lock stitches in only desired positions| ☑  ou ▢| Enables lock stitches in only desired positions
-Force lock stitches| ☑  or ▢|Sew lock stitches after sewing this element, even if the distance to the next object is shorter than defined by the collapse length value in the Ink/Stitch preferences.
-{: .params-table }
-
-##  Guiding 
-
-
-### For any ripple : guide line
-It is always possible to add a guide line to a ripple: 
-
-- Create a ripple
-- Create a stroke
-- Turn the stroke into guide line :`Extensions > Ink/Stitch  > Edit > Selection to Guide`
-- Group the ripple and the guide
-
-The centers of the replications follow  the guide.
-
-If the guide has two sub-paths, distance between the sub-paths determine replications sizes
-
-### For ripple defined from a simple path : target
-
-It is possible to define a ripple stitch target position using  [visual command] (/docs/commands/). If no guiding information is provided, the center of the path is the target.
-
-### [For satin ripple (two subpaths) : rungs](#traverses)
-
-Works similarly to  Satin Columns rungs
-
-### Samples Files Including Ripple Stitches
+### Beispieldateien mit Ripple Stitch
 
 {% include tutorials/tutorial_list key="stitch-type" value="Ripple Stitch" %}
 

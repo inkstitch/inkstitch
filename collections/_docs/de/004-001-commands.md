@@ -2,7 +2,7 @@
 title: "Visuelle Befehle"
 permalink: /de/docs/commands/
 excerpt: ""
-last_modified_at: 2021-10-23
+last_modified_at: 2022-11-27
 toc: true
 ---
 Visuelle Befehle können genutzt werden, um zusätzliche Informationen darüber festzulegen, wie das Design gestickt werden soll. Sie können z.B. der Maschine mitteilen, dass der Faden nach einem Stickobjekt geschnitten werden soll oder definieren, wann und wo die Maschine pausieren soll, so dass man für eine Applikation bequem ein Stück Stoff hinzufügen kann.
@@ -47,6 +47,10 @@ Diese Befehle hängen sich an ausgewählte Objekte.
 
 Definiert (1) die Start- und (2) die Endposition bei Objekten mit Füllstich.
 
+#### ![ripple stitch target symbol](/assets/images/docs/visual-commands-ripple-target.png) Ripplestich Zielposition
+
+Definiert den Zielpunkt für einen Ripplestich-Bereich.
+
 ### ![trim symbol](/assets/images/docs/visual-commands-trim.jpg) Faden trennen
 
 “Faden trennen” tells the embroidery machine to cut the thread after the assigned object has been stitched. Not all home machines support the trim function within a color block. Mainly used to prevent long jump stitched between embroidery objects and to avoid post embroidery trimming by the operator.
@@ -62,6 +66,12 @@ Objekte mit diesem Befehl werden nicht exportiert.
 ### ![satin cut point symbol](/assets/images/docs/visual-commands-satin-cut-point.jpg) Satin-Schnittstelle
 
 Dieser Befehlt definiert an welchem Punkt die Satinsäule geschnitten werden soll. Benutze anschließend die Funktion “[Satinsäule schneiden](/de/docs/satin-tools/#satin-schnittstelle)”.
+
+####  ![auto route starting position symbol](/assets/images/docs/visual-commands-auto-route-satin-stitch-start.jpg) ![auto route  ending position symbol](/assets/images/docs/visual-commands-auto-route-satin-stitch-end.jpg) Start- und Endposition für automatisch geführten Laufstich
+
+Definiert (1) die Start- und (2) die Enposition für automatisch geführte Geradstiche. Benutze anschließend Die Funktion "[Werkzeuge: Linie > Automatisch geführter Geradstich ...]"(https://inkstitch.org/docs/stroke-tools/).
+
+Nutze immer nur einen Anfangs- und einen Endpunkt für jede Operation.
 
 ###  ![auto route satin starting position symbol](/assets/images/docs/visual-commands-auto-route-satin-stitch-start.jpg) ![auto route satin ending position symbol](/assets/images/docs/visual-commands-auto-route-satin-stitch-end.jpg) Anfangs- und Endposition für automatische Satinsäulenführung
 
