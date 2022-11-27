@@ -113,8 +113,8 @@ class FillStitch(EmbroideryElement):
     @property
     @param('guided_fill_strategy', _('Guided Fill Strategy'), type='dropdown', default=0,
            options=[_("Copy"), _("Parallel Offset")], select_items=[('fill_method', 2)], sort_index=3,
-           tooltip=_('Copy (the default) will fill the shape with shifted copies of the line.' +
-                     'Parallel offset will ensure that each line is always a consistent distance from its neighbor.' +
+           tooltip=_('Copy (the default) will fill the shape with shifted copies of the line. '
+                     'Parallel offset will ensure that each line is always a consistent distance from its neighbor. '
                      'Sharp corners may be introduced.'))
     def guided_fill_strategy(self):
         return self.get_int_param('guided_fill_strategy', 0)
@@ -216,7 +216,7 @@ class FillStitch(EmbroideryElement):
     @property
     @param('staggers',
            _('Stagger rows this many times before repeating'),
-           tooltip=_('Length of the cycle by which successive stitch rows are staggered.'
+           tooltip=_('Length of the cycle by which successive stitch rows are staggered. '
                      'Fractional values are allowed and can have less visible diagonals than integer values.'),
            type='int',
            sort_index=6,

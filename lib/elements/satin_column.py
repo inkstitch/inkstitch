@@ -124,7 +124,7 @@ class SatinColumn(EmbroideryElement):
     @param(
         'pull_compensation_percent',
         _('Pull compensation percentage'),
-        tooltip=_('Additional pull compensation which varries as a percentage of stitch width. '
+        tooltip=_('Additional pull compensation which varies as a percentage of stitch width. '
                   'Two values separated by a space may be used for an aysmmetric effect.'),
         unit='% (each side)',
         type='float',
@@ -654,7 +654,7 @@ class SatinColumn(EmbroideryElement):
 
         # don't contract beyond the midpoint, or we'll start expanding
         if offset_total < -distance:
-            scale = distance / offset_total
+            scale = -distance / offset_total
             offset_a = offset_a * scale
             offset_b = offset_b * scale
 
@@ -799,6 +799,7 @@ class SatinColumn(EmbroideryElement):
         # center line between the bezier curves.
 
         inset_prop = -np.array([self.center_walk_underlay_position, 100-self.center_walk_underlay_position]) / 100
+
         # Do it like contour underlay, but inset all the way to the center.
         forward, back = self.plot_points_on_rails(
             self.center_walk_underlay_stitch_length,
