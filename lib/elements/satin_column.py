@@ -2,11 +2,12 @@
 #
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
+
 import random
 from copy import deepcopy
 from itertools import chain
-import numpy as np
 
+import numpy as np
 from inkex import paths
 from shapely import affinity as shaffinity
 from shapely import geometry as shgeo
@@ -16,7 +17,7 @@ from ..i18n import _
 from ..stitch_plan import StitchGroup
 from ..svg import line_strings_to_csp, point_lists_to_csp
 from ..utils import Point, cache, collapse_duplicate_point, cut
-from .element import EmbroideryElement, param, PIXELS_PER_MM
+from .element import PIXELS_PER_MM, EmbroideryElement, param
 from .validation import ValidationError, ValidationWarning
 
 
@@ -108,36 +109,31 @@ class SatinColumn(EmbroideryElement):
         return min(max(self.get_int_param("random_split_factor", 0), 0), 100)
 
     @property
-    @param('random_first_rail_factor_in',
-           _('First Rail Random  Factor inside'),
-           tooltip=_('shorten stitch around  first rail at most this percent.'),
-           type='int', unit="%", sort_index=60)
-    def random_first_rail_factor_in(self):
-        return min(max(self.get_int_param("random_first_rail_factor_in", 0), 0), 100)
+    @param('random_zigzag_spacing',
+           _('Zig-zag spacing randomness(peak-to-peak)'),
+           tooltip=_('percentage  of randomness  of Peak-to-peak distance between zig-zags.'),
+           type='int', unit="%", sort_index=64)
+    def random_zigzag_spacing(self):
+        # peak-to-peak distance between zigzags
+        return max(self.get_int_param("random_zigzag_spacing", 0), 0)
 
     @property
-    @param('random_first_rail_factor_out',
-           _('First Rail Random  Factor outside'),
-           tooltip=_('lengthen stitch around  first rail at most this percent.'),
-           type='int', unit="%", sort_index=61)
-    def random_first_rail_factor_out(self):
-        return max(self.get_int_param("random_first_rail_factor_out", 0), 0)
+    @param('random_width_decrease_percent',
+           _('Random percentage of satin width decrease'),
+           tooltip=_('shorten stitch across rails at most this percent.'
+                     'Two values separated by a space may be used for an aysmmetric effect.'),
+           type='int', unit="% (each side)", sort_index=60)
+    def random_width_decrease_percent(self):
+        return self.get_split_float_param("random_width_decrease_percent", (0, 0))
 
     @property
-    @param('random_second_rail_factor_in',
-           _('Second Rail Random  Factor inside'),
-           tooltip=_('shorten stitch  around second rail at most this percent.'),
-           type='int', unit="%", sort_index=62)
-    def random_second_rail_factor_in(self):
-        return min(max(self.get_int_param("random_second_rail_factor_in", 0), 0), 100)
-
-    @property
-    @param('random_second_rail_factor_out',
-           _('Second Rail Random  Factor outside'),
-           tooltip=_('lengthen stitch  around second rail at most this percent.'),
-           type='int', unit="%", sort_index=63)
-    def random_second_rail_factor_out(self):
-        return max(self.get_int_param("random_second_rail_factor_out", 0), 0)
+    @param('random_width_increase_percent',
+           _('Random percentage of satin width increase'),
+           tooltip=_('lengthen stitch across rails at most this percent.'
+                     'Two values separated by a space may be used for an aysmmetric effect.'),
+           type='int', unit="% (each side)", sort_index=60)
+    def random_width_increase_percent(self):
+        return self.get_split_float_param("random_width_increase_percent", (0, 0))
 
     @property
     @param('short_stitch_inset',
@@ -171,15 +167,6 @@ class SatinColumn(EmbroideryElement):
     def zigzag_spacing(self):
         # peak-to-peak distance between zigzags
         return max(self.get_float_param("zigzag_spacing_mm", 0.4), 0.01)
-
-    @property
-    @param('random_zigzag_spacing',
-           _('Zig-zag spacing randomness(peak-to-peak)'),
-           tooltip=_('percentage  of randomness  of Peak-to-peak distance between zig-zags.'),
-           type='int', unit="%", sort_index=64)
-    def random_zigzag_spacing(self):
-        # peak-to-peak distance between zigzags
-        return max(self.get_int_param("random_zigzag_spacing", 0), 0)
 
     @property
     @param(
@@ -604,7 +591,7 @@ class SatinColumn(EmbroideryElement):
         for rung in self.rungs:
             point_lists.append(self.flatten_subpath(rung))
 
-        # If originally there were only two subpaths (no rungs) with same number of rails, we may the rails may now
+        # If originally there were only two subpaths (no rungs) with same number of rails, the rails may now
         # have two rails with different number of points, and still no rungs, let's add one.
 
         if not self.rungs:
@@ -899,11 +886,9 @@ class SatinColumn(EmbroideryElement):
 
                 if to_travel <= 0:
 
-                    decalage0 = random.uniform(-self.random_first_rail_factor_in, self.random_first_rail_factor_out) / 100
-                    decalage1 = random.uniform(-self.random_second_rail_factor_in, self.random_second_rail_factor_out) / 100
-
-                    add_pair(pos0 + (pos0 - pos1) * decalage0, pos1 + (pos1 - pos0) * decalage1)
-
+                    mismatch0 = random.uniform(-self.random_width_decrease_percent[0], self.random_width_increase_percent[0]) / 100
+                    mismatch1 = random.uniform(-self.random_width_decrease_percent[1], self.random_width_increase_percent[1]) / 100
+                    add_pair(pos0 + (pos0 - pos1) * mismatch0, pos1 + (pos1 - pos0) * mismatch1)
                     to_travel = spacing * (random.uniform(1, 1 + self.random_zigzag_spacing/100))
 
         if to_travel > 0:
@@ -1080,10 +1065,10 @@ class SatinColumn(EmbroideryElement):
         points = []
         distance = left.distance(right)
         split_count = count or int(-(-distance // max_stitch_length))
+        random_move = 0
         for i in range(split_count):
             line = shgeo.LineString((left, right))
 
-            random_move = 0
             if self.random_split_factor and i != split_count-1:
                 random_move = random.uniform(-self.random_split_factor / 100, self.random_split_factor / 100)
 
