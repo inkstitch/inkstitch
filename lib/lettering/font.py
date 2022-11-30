@@ -11,7 +11,7 @@ from random import randint
 import inkex
 
 from ..commands import add_commands, ensure_symbol
-from ..elements import FillStitch, Stroke, nodes_to_elements
+from ..elements import FillStitch, SatinColumn, Stroke, nodes_to_elements
 from ..exceptions import InkstitchException
 from ..extensions.lettering_custom_font_dir import get_custom_font_dir
 from ..i18n import _, get_languages
@@ -417,6 +417,7 @@ class Font(object):
         """
 
         elements = nodes_to_elements(group.iterdescendants(SVG_PATH_TAG))
+        elements = [element for element in elements if isinstance(element, SatinColumn) or isinstance(element, Stroke)]
 
         if elements:
             auto_satin(elements, preserve_order=True, trim=False)
