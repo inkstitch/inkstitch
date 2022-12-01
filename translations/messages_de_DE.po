@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2022-11-28 01:26+0000\n"
-"PO-Revision-Date: 2022-11-28 01:27\n"
+"PO-Revision-Date: 2022-12-01 01:46\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -747,11 +747,11 @@ msgstr "Fehler:"
 
 #: lib/elements/empty_d_object.py:13
 msgid "Empty Path"
-msgstr ""
+msgstr "Pfad ohne Koordinaten"
 
 #: lib/elements/empty_d_object.py:14
 msgid "There is an invalid object in the document without geometry information."
-msgstr ""
+msgstr "Es gibt ein ungültiges Objekt in diesem Dokument. Es enthält keine geometrischen Informationen."
 
 #: lib/elements/empty_d_object.py:16
 msgid "* Run Extensions > Ink/Stitch > Troubleshoot > Cleanup Document..."
@@ -892,7 +892,7 @@ msgstr "Parallelverschiebung"
 
 #: lib/elements/fill_stitch.py:116
 msgid "Copy (the default) will fill the shape with shifted copies of the line. Parallel offset will ensure that each line is always a consistent distance from its neighbor. Sharp corners may be introduced."
-msgstr ""
+msgstr "Kopieren (Voreinstellung) füllt die Form mit verschobenen Kopien der Führungslinie. Parallelversatz stellt einen konstanten Abstand der Reihen sicher. Es kann dabei zur Bildung von scharfe Ecken kommen."
 
 #: lib/elements/fill_stitch.py:123
 msgid "Contour Fill Strategy"
@@ -980,7 +980,7 @@ msgstr "Reihenanzahl bis sich das Muster wiederholt"
 
 #: lib/elements/fill_stitch.py:219
 msgid "Length of the cycle by which successive stitch rows are staggered. Fractional values are allowed and can have less visible diagonals than integer values."
-msgstr ""
+msgstr "Dieser Wert beschreibt, nach wie vielen Reihen die Einstichstellen übereinander liegen. Dezimalwerte sind zulässig und zeigen weniger deutliche Diagonalen im Stickbild."
 
 #: lib/elements/fill_stitch.py:377
 msgid "Running stitch length (traversal between sections)"
@@ -1051,7 +1051,7 @@ msgstr "Stiche zum Verbinden der Teilbereiche verlaufen innerhalb des Objektes. 
 
 #: lib/elements/fill_stitch.py:718
 msgid "Error during autofill! This means it is a bug in Ink/Stitch."
-msgstr ""
+msgstr "Es ist ein Fehler bei der Füllung aufgetreten! Das bedeutet, das ist ein Bug in Ink/Stitch."
 
 #. this message is followed by a URL:
 #. https://github.com/inkstitch/inkstitch/issues/new
@@ -1060,7 +1060,10 @@ msgid "If you'd like to help please\n"
 "- copy the entire error message below\n"
 "- save your SVG file and\n"
 "- create a new issue at"
-msgstr ""
+msgstr "Wenn du uns helfen willst Ink/Stitch zu verbessern,\n"
+"- kopiere die gesamte Fehlermeldung\n"
+"- speichere die SVG-Datei ab und\n"
+"- erstelle einen Fehlerbereicht (New Issue) auf"
 
 #: lib/elements/image.py:13
 msgid "Image"
@@ -1252,7 +1255,7 @@ msgstr "Zugkompensation (%)"
 
 #: lib/elements/satin_column.py:127
 msgid "Additional pull compensation which varies as a percentage of stitch width. Two values separated by a space may be used for an aysmmetric effect."
-msgstr ""
+msgstr "Zusätzliche Zugkompensation, die als Prozentwert der ursprünglichen Breite variiert. Zwei durch ein Leerzeichen getrennte Werte können für einen asymmetrischen Effekt verwendet werden."
 
 #: lib/elements/satin_column.py:140
 msgid "Pull compensation"
@@ -1782,23 +1785,23 @@ msgstr "Sticke Textzeilen vor und zurück"
 
 #: lib/extensions/lettering.py:74
 msgid "Never"
-msgstr ""
+msgstr "nie"
 
 #: lib/extensions/lettering.py:74
 msgid "after each line"
-msgstr ""
+msgstr "nach jeder Reihe"
 
 #: lib/extensions/lettering.py:74
 msgid "after each word"
-msgstr ""
+msgstr "nach jedem Wort"
 
 #: lib/extensions/lettering.py:74
 msgid "after each letter"
-msgstr ""
+msgstr "nach jedem Buchstaben"
 
 #: lib/extensions/lettering.py:75
 msgid "Add trim command"
-msgstr ""
+msgstr "Fadenschnitt-Befehl hinzufügen"
 
 #: lib/extensions/lettering.py:84 lib/extensions/params.py:442
 #: print/templates/custom-page.html:23 print/templates/custom-page.html:27
