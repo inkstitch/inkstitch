@@ -79,24 +79,35 @@ def running_stitch(points, stitch_length, tolerance):
 def bean_stitch(stitches, repeats):
     """Generate bean stitch from a set of stitches.
 
-    "Bean" stitch is made by backtracking each stitch to make it heaver.  A
+    "Bean" stitch is made by backtracking each stitch to make it heavier.  A
     simple bean stitch would be two stitches forward, one stitch back, two
     stitches forward, etc.  This would result in each stitch being tripled.
 
     We'll say that the above counts as 1 repeat.  Backtracking each stitch
     repeatedly will result in a heavier bean stitch.  There will always be
     an odd number of threads piled up for each stitch.
+
+    Repeats is a list of a repeated pattern e.g. [0, 1, 3] doesn't repeat the first stitch,
+    goes back and forth on the second stitch, goes goes 3 times back and forth on the third stitch,
+    and starts the pattern again by not repeating the fourth stitch, etc.
     """
 
     if len(stitches) < 2:
         return stitches
+
+    repeat_list_length = len(repeats)
+    repeat_list_pos = 0
 
     new_stitches = [stitches[0]]
 
     for stitch in stitches:
         new_stitches.append(stitch)
 
-        for i in range(repeats):
+        for i in range(repeats[repeat_list_pos]):
             new_stitches.extend(copy(new_stitches[-2:]))
+
+        repeat_list_pos += 1
+        if repeat_list_pos == repeat_list_length:
+            repeat_list_pos = 0
 
     return new_stitches

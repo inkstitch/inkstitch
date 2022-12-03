@@ -162,6 +162,16 @@ class EmbroideryElement(object):
     def get_split_mm_param_as_px(self, param, default):
         return self.get_split_float_param(param, default) * PIXELS_PER_MM
 
+    # returns an array of multiple space separated int values
+    @cache
+    def get_multiple_int_param(self, param, default="0"):
+        params = self.get_param(param, default).split(" ")
+        try:
+            params = [int(param) for param in params]
+        except (TypeError, ValueError):
+            return [default]
+        return params
+
     def set_param(self, name, value):
         param = INKSTITCH_ATTRIBS[name]
         self.node.set(param, str(value))
