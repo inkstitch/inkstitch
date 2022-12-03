@@ -342,6 +342,12 @@ class EmbroideryElement(object):
         return self.strip_control_points(path[0])
 
     @property
+    @param('trim_after',
+           _ ('Trim After'),
+           tooltip=_('Add a TRIM command after stitching this object.'),
+           type='boolean',
+           default=False,
+           sort_index=52)
     def trim_after(self):
         return self.get_boolean_param('trim_after', False)
 
