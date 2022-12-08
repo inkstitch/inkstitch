@@ -7,12 +7,12 @@ import json
 import sys
 from math import atan2, degrees
 
-from inkex import Transform, errormsg
-from inkex.units import convert_unit
+from inkex import Boolean, Transform, errormsg
 from shapely.ops import substring
 
 from ..elements import Stroke
 from ..i18n import _
+from ..svg import get_correction_transform
 from ..svg.tags import EMBROIDERABLE_TAGS, INKSTITCH_LETTERING, SVG_GROUP_TAG
 from ..utils import DotDict
 from ..utils import Point as InkstitchPoint
@@ -27,27 +27,32 @@ class LetteringAlongPath(InkstitchExtension):
         InkstitchExtension.__init__(self, *args, **kwargs)
         self.arg_parser.add_argument("-o", "--options", type=str, default=None, dest="page_1")
         self.arg_parser.add_argument("-i", "--info", type=str, default=None, dest="page_2")
-        self.arg_parser.add_argument("-s", "--stretch-spaces", type=int, default="", dest="stretch_spaces")
+        self.arg_parser.add_argument("-s", "--stretch-spaces", type=Boolean, default=False, dest="stretch_spaces")
 
     def effect(self):
-        text, path = self.get_selection()
-
         # we ignore everything but the first path/text
-        text_bbox = text.bounding_box()
-        text_y = text_bbox.bottom
+        text, path = self.get_selection()
+        self.load_settings(text)
+
         glyphs = [glyph for glyph in text.iterdescendants(SVG_GROUP_TAG) if len(glyph.label) == 1]
+        if not glyphs:
+            errormsg(_("The text doesn't contain any glyphs."))
+            sys.exit(1)
 
         path = Stroke(path).as_multi_line_string().geoms[0]
         path_length = path.length
 
-        if self.options.stretch_spaces:
-            self.load_settings(text)
-            text = self.settings["text"]
-            space_indices = [i for i, t in enumerate(text) if t == " "]
-            text_width = convert_unit(text_bbox.width, "px", self.svg.unit)
+        # overall bounding box - get from direct glyph parent
+        text_bbox = glyphs[0].getparent().bounding_box()
+        text_y = text_bbox.bottom
 
-            if len(text) - 1 != 0:
-                stretch_space = (path_length - text_width) / (len(text) - 1)
+        if self.options.stretch_spaces:
+            text_content = self.settings["text"]
+            space_indices = [i for i, t in enumerate(text_content) if t == " "]
+            text_width = text_bbox.width
+
+            if len(text_content) - 1 != 0:
+                stretch_space = (path_length - text_width) / (len(text_content) - 1)
             else:
                 stretch_space = 0
         else:
@@ -57,6 +62,7 @@ class LetteringAlongPath(InkstitchExtension):
         self.transform_glyphs(glyphs, path, stretch_space, space_indices, text_y)
 
     def transform_glyphs(self, glyphs, path, stretch_space, space_indices, text_y):
+        text_scale = Transform(f'scale({self.settings["scale"] / 100})')
         distance = 0
         old_bbox = None
         i = 0
@@ -64,12 +70,13 @@ class LetteringAlongPath(InkstitchExtension):
         for glyph in glyphs:
             # dimensions
             bbox = glyph.bounding_box()
+            left = bbox.left
             width = bbox.width
-            x = bbox.left
 
             # adjust position
             if old_bbox:
-                distance += bbox.left - old_bbox.right + stretch_space
+                right = old_bbox.right
+                distance += left - right + stretch_space
 
             if self.options.stretch_spaces and i in space_indices:
                 distance += stretch_space
@@ -82,10 +89,11 @@ class LetteringAlongPath(InkstitchExtension):
             last = substring(path, new_distance, new_distance)
 
             angle = degrees(atan2(last.y - first.y, last.x - first.x)) % 360
-            translate = InkstitchPoint(first.x, first.y) - InkstitchPoint(x, text_y)
+            translate = InkstitchPoint(first.x, first.y) - InkstitchPoint(left, text_y)
 
             transform = Transform(f"rotate({angle}, {first.x}, {first.y}) translate({translate.x} {translate.y})")
-            glyph.transform = transform @ glyph.transform
+            correction_transform = Transform(get_correction_transform(glyph))
+            glyph.transform = correction_transform @ transform @ glyph.transform @ text_scale
 
             # set values for next iteration
             distance = new_distance

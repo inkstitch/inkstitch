@@ -11,20 +11,17 @@
     </effect>
     <param name="options" type="notebook">
       <page name="options" gui-text="Options">
-        <param name="stretch-spaces" type="optiongroup" appearance="combo" gui-text="Stretch"
-               gui-description="Expand glyph and word spacing to stretch lettering over the entire path" indent="1">
-             <option value="0">No</option>
-             <option value="1">Yes</option>
-        </param>
+        <param name="stretch-spaces" type="bool" gui-text="Stretch"
+               gui-description="Expand glyph and word spacing to stretch lettering over the entire path">false</param>
       </page>
       <page name="info" gui-text="Help">
         <label appearance="header">This extension bends an Ink/Stitch text to a path.</label>
         <label>Select Ink/Stitch text and a path before running this extension.</label>
         <spacer />
         <label>The text needs to meet these conditions:</label>
-        <label indent="1">* The text hasn't been transformed</label>
         <label indent="1">* The text consists of only one line of text</label>
         <label indent="1">* The text should not be too large for the given path</label>
+        <label indent="1">* Text text should not contain trim symbols</label>
         <spacer />
         <label>The stretch option defines whether the spaces between glyphs should be expanded so that the text stretches over the entire path.</label>
       </page>
