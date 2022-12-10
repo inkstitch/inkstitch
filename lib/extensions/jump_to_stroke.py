@@ -3,7 +3,7 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-from inkex import DirectedLineSegment, errormsg, PathElement
+from inkex import DirectedLineSegment, PathElement, errormsg
 
 from ..i18n import _
 from ..svg import PIXELS_PER_MM, get_correction_transform
