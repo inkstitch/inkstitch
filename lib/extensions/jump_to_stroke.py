@@ -11,7 +11,8 @@ from .base import InkstitchExtension
 
 
 class JumpToStroke(InkstitchExtension):
-    """Convert a satin column into a running stitch."""
+    """Adds a running stitch as a connection between two (or more) selected elements.
+       The elements must have the same color and a minimum distance (collapse_len)."""
 
     def effect(self):
         if not self.svg.selection or not self.get_elements() or len(self.elements) < 2:
@@ -19,14 +20,16 @@ class JumpToStroke(InkstitchExtension):
             return
 
         last_stitch_group = None
+        last_color = None
         for element in self.elements:
             stitch_group = element.to_stitch_groups(last_stitch_group)
             end = stitch_group[-1].stitches[-1]
-            if last_stitch_group is not None:
+            if last_stitch_group is not None and element.color == last_color:
                 start = last_stitch_group.stitches[-1]
                 self.generate_stroke(element, start, end)
 
             last_stitch_group = stitch_group[-1]
+            last_color = element.color
 
     def generate_stroke(self, element, start, end):
         node = element.node
