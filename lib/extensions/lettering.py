@@ -71,8 +71,8 @@ class LetteringFrame(wx.Frame):
         self.back_and_forth_checkbox = wx.CheckBox(self, label=_("Stitch lines of text back and forth"))
         self.back_and_forth_checkbox.Bind(wx.EVT_CHECKBOX, lambda event: self.on_change("back_and_forth", event))
 
-        self.trim_option_choice = wx.Choice(self, choices=["Never", "after each line", "after each word", "after each letter"],
-                                            name=_("Add trim after"))
+        self.trim_option_choice = wx.Choice(self, choices=[_("Never"), _("after each line"), _("after each word"), _("after each letter")],
+                                            name=_("Add trim command"))
         self.trim_option_choice.Bind(wx.EVT_CHOICE, lambda event: self.on_trim_option_change(event))
 
         # text editor

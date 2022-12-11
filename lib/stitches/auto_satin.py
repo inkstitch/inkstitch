@@ -81,6 +81,8 @@ class SatinSegment(object):
 
         satin = satin.apply_transform()
 
+        _ensure_even_repeats(satin)
+
         return satin
 
     to_element = to_satin
@@ -507,7 +509,6 @@ def name_elements(new_elements, preserve_order):
     for element in new_elements:
         if isinstance(element, SatinColumn):
             element.node.set("id", generate_unique_id(element.node, "autosatin"))
-            _ensure_even_repeats(element)
         else:
             element.node.set("id", generate_unique_id(element.node, "autosatinrun"))
 
@@ -515,7 +516,6 @@ def name_elements(new_elements, preserve_order):
             if isinstance(element, SatinColumn):
                 # L10N Label for a satin column created by Auto-Route Satin Columns and Lettering extensions
                 element.node.set(INKSCAPE_LABEL, _("AutoSatin %d") % index)
-                _ensure_even_repeats(element)
             else:
                 # L10N Label for running stitch (underpathing) created by Auto-Route Satin Columns amd Lettering extensions
                 element.node.set(INKSCAPE_LABEL, _("AutoSatin Running Stitch %d") % index)

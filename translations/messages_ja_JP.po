@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-11-23 01:27+0000\n"
-"PO-Revision-Date: 2022-11-23 01:29\n"
+"POT-Creation-Date: 2022-11-28 01:26+0000\n"
+"PO-Revision-Date: 2022-12-01 01:46\n"
 "Last-Translator: \n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-23 01:27+0000\n"
+"POT-Creation-Date: 2022-11-28 01:26+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -523,7 +523,7 @@ msgid "If you'd like to help please\n"
 "- create a new issue at https://github.com/inkstitch/inkstitch/issues"
 msgstr ""
 
-#: inkstitch.py:107
+#: inkstitch.py:107 lib/elements/fill_stitch.py:726
 msgid "Include the error description and also (if possible) the svg file."
 msgstr ""
 
@@ -696,41 +696,41 @@ msgstr ""
 msgid "Flip automatically calucalted angle if it appears to be wrong."
 msgstr ""
 
-#: lib/elements/element.py:202
+#: lib/elements/element.py:229
 msgid "Allow lock stitches"
 msgstr "ロックステッチを許可する"
 
-#: lib/elements/element.py:203
+#: lib/elements/element.py:230
 msgid "Tie thread at the beginning and/or end of this object. Manual stitch will not add lock stitches."
 msgstr "このオブジェクトの最初または最後、あるいはその両方でスレッドを結びます。手動ステッチはロックステッチを追加しません。"
 
 #. options to allow lock stitch before and after objects
-#: lib/elements/element.py:207
+#: lib/elements/element.py:234
 msgid "Both"
 msgstr "両方"
 
-#: lib/elements/element.py:207
+#: lib/elements/element.py:234
 msgid "Before"
 msgstr "前"
 
-#: lib/elements/element.py:207
+#: lib/elements/element.py:234
 msgid "After"
 msgstr "後"
 
-#: lib/elements/element.py:207
+#: lib/elements/element.py:234
 msgid "Neither"
 msgstr "どちらでもない"
 
-#: lib/elements/element.py:216
+#: lib/elements/element.py:243
 #: inx/inkstitch_lettering_force_lock_stitches.inx:3
 msgid "Force lock stitches"
 msgstr ""
 
-#: lib/elements/element.py:217
+#: lib/elements/element.py:244
 msgid "Sew lock stitches after sewing this element, even if the distance to the next object is shorter than defined by the collapse length value in the Ink/Stitch preferences."
 msgstr ""
 
-#: lib/elements/element.py:261
+#: lib/elements/element.py:288
 #, python-format
 msgid "Object %(id)s has an empty 'd' attribute.  Please delete this object from your document."
 msgstr "オブジェクト %(id)sには空の 'd' 属性があります。このオブジェクトをドキュメントから削除してください。"
@@ -738,17 +738,17 @@ msgstr "オブジェクト %(id)sには空の 'd' 属性があります。この
 #. used when showing an error message to the user such as
 #. "Some Path (path1234): error: satin column: One or more of the rungs doesn't
 #. intersect both rails."
-#: lib/elements/element.py:354
+#: lib/elements/element.py:381
 msgid "error:"
 msgstr "エラー"
 
 #: lib/elements/empty_d_object.py:13
-msgid "Empty D-Attribute"
-msgstr "空のD属性"
+msgid "Empty Path"
+msgstr ""
 
 #: lib/elements/empty_d_object.py:14
-msgid "There is an invalid path object in the document, the d-attribute is missing."
-msgstr "ドキュメントに無効なパスオブジェクトがあり、d属性がありません。"
+msgid "There is an invalid object in the document without geometry information."
+msgstr ""
 
 #: lib/elements/empty_d_object.py:16
 msgid "* Run Extensions > Ink/Stitch > Troubleshoot > Cleanup Document..."
@@ -762,7 +762,7 @@ msgstr "スモールフィル"
 msgid "This fill object is so small that it would probably look better as running stitch or satin column. For very small shapes, fill stitch is not possible, and Ink/Stitch will use running stitch around the outline instead."
 msgstr "この塗りつぶしオブジェクトは非常に小さいので、ランニングステッチやサテンステッチのラインとした方が見栄えがよくなります。非常に小さい形状の場合、塗りつぶしステッチは不可能であり、インク/ステッチは代わりにアウトラインの周りにランニングステッチを使用します。"
 
-#: lib/elements/fill_stitch.py:35 lib/elements/fill_stitch.py:472
+#: lib/elements/fill_stitch.py:35 lib/elements/fill_stitch.py:474
 msgid "Expand"
 msgstr "展開"
 
@@ -771,7 +771,7 @@ msgid "The expand parameter for this fill object cannot be applied. Ink/Stitch w
 msgstr "この塗りつぶしオブジェクトの展開パラメータは適用できません。\n"
 "インク/ステッチはそれを無視し、代わりに元のサイズを使用します。"
 
-#: lib/elements/fill_stitch.py:41 lib/elements/fill_stitch.py:449
+#: lib/elements/fill_stitch.py:41 lib/elements/fill_stitch.py:451
 msgid "Inset"
 msgstr "挿入する"
 
@@ -890,7 +890,7 @@ msgid "Parallel Offset"
 msgstr ""
 
 #: lib/elements/fill_stitch.py:116
-msgid "Copy (the default) will fill the shape with shifted copies of the line.Parallel offset will ensure that each line is always a consistent distance from its neighbor.Sharp corners may be introduced."
+msgid "Copy (the default) will fill the shape with shifted copies of the line. Parallel offset will ensure that each line is always a consistent distance from its neighbor. Sharp corners may be introduced."
 msgstr ""
 
 #: lib/elements/fill_stitch.py:123
@@ -941,11 +941,11 @@ msgstr "ステッチの線の角度"
 msgid "The angle increases in a counter-clockwise direction.  0 is horizontal.  Negative angles are allowed."
 msgstr "角度は反時計回りに回転します。 0は水平です。負の角度も設定可能です。"
 
-#: lib/elements/fill_stitch.py:165 lib/elements/fill_stitch.py:461
+#: lib/elements/fill_stitch.py:165 lib/elements/fill_stitch.py:463
 msgid "Skip last stitch in each row"
 msgstr "各行の最後のステッチをスキップします"
 
-#: lib/elements/fill_stitch.py:166 lib/elements/fill_stitch.py:462
+#: lib/elements/fill_stitch.py:166 lib/elements/fill_stitch.py:464
 msgid "The last stitch in each row is quite close to the first stitch in the next row.  Skipping it decreases stitch count and density."
 msgstr "各行の最後のステッチは、次の行の最初のステッチに非常に近いです。スキップすると、ステッチ数と密度が減少します。"
 
@@ -978,85 +978,88 @@ msgid "Stagger rows this many times before repeating"
 msgstr "繰り返す前に、行をずらしていきます"
 
 #: lib/elements/fill_stitch.py:219
-msgid "Length of the cycle by which successive stitch rows are staggered.Fractional values are allowed and can have less visible diagonals than integer values."
+msgid "Length of the cycle by which successive stitch rows are staggered. Fractional values are allowed and can have less visible diagonals than integer values."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:375
+#: lib/elements/fill_stitch.py:377
 msgid "Running stitch length (traversal between sections)"
 msgstr "ランニングステッチの長さ（セクション間の間隔）"
 
-#: lib/elements/fill_stitch.py:376
+#: lib/elements/fill_stitch.py:378
 msgid "Length of stitches around the outline of the fill region used when moving from section to section."
 msgstr "セクション間を移動するときに使用される塗りつぶし領域の輪郭の周りのステッチの長さ。"
 
-#: lib/elements/fill_stitch.py:387 lib/elements/stroke.py:124
+#: lib/elements/fill_stitch.py:389 lib/elements/stroke.py:124
 msgid "Running stitch tolerance"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:388
+#: lib/elements/fill_stitch.py:390
 msgid "All stitches must be within this distance of the path.  A lower tolerance means stitches will be closer together.  A higher tolerance means sharp corners may be rounded."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:399
+#: lib/elements/fill_stitch.py:401
 msgid "Underlay"
 msgstr "アンダーレイ"
 
-#: lib/elements/fill_stitch.py:399 lib/elements/fill_stitch.py:408
-#: lib/elements/fill_stitch.py:431 lib/elements/fill_stitch.py:442
-#: lib/elements/fill_stitch.py:452 lib/elements/fill_stitch.py:464
-#: lib/elements/fill_stitch.py:502
+#: lib/elements/fill_stitch.py:401 lib/elements/fill_stitch.py:410
+#: lib/elements/fill_stitch.py:433 lib/elements/fill_stitch.py:444
+#: lib/elements/fill_stitch.py:454 lib/elements/fill_stitch.py:466
+#: lib/elements/fill_stitch.py:504
 msgid "Fill Underlay"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:405
+#: lib/elements/fill_stitch.py:407
 msgid "Fill angle"
 msgstr "塗りつぶし角度"
 
-#: lib/elements/fill_stitch.py:406
+#: lib/elements/fill_stitch.py:408
 msgid "Default: fill angle + 90 deg. Insert comma-seperated list for multiple layers."
 msgstr "デフォルト：塗りつぶし角度+90度。複数のレイヤーにコンマ区切りのリストを挿入します。"
 
-#: lib/elements/fill_stitch.py:428
+#: lib/elements/fill_stitch.py:430
 msgid "Row spacing"
 msgstr "行間隔"
 
-#: lib/elements/fill_stitch.py:429
+#: lib/elements/fill_stitch.py:431
 msgid "default: 3x fill row spacing"
 msgstr "デフォルト：3x塗りつぶし行間隔"
 
-#: lib/elements/fill_stitch.py:439
+#: lib/elements/fill_stitch.py:441
 msgid "Max stitch length"
 msgstr "最大ステッチ長さ"
 
-#: lib/elements/fill_stitch.py:440
+#: lib/elements/fill_stitch.py:442
 msgid "default: equal to fill max stitch length"
 msgstr "デフォルト：最大フィルステッチ長"
 
-#: lib/elements/fill_stitch.py:450
+#: lib/elements/fill_stitch.py:452
 msgid "Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill."
 msgstr "アンダーレイを行う前に形状を縮小して、アンダーレイが塗りつぶしの外側に表示されないようにします。"
 
-#: lib/elements/fill_stitch.py:473
+#: lib/elements/fill_stitch.py:475
 msgid "Expand the shape before fill stitching, to compensate for gaps between shapes."
 msgstr "形状間のギャップを補正するために、塗りつぶしステッチの前に形状を拡張します。"
 
-#: lib/elements/fill_stitch.py:484 lib/elements/fill_stitch.py:498
+#: lib/elements/fill_stitch.py:486 lib/elements/fill_stitch.py:500
 msgid "Underpath"
 msgstr "アンダーパス"
 
-#: lib/elements/fill_stitch.py:485 lib/elements/fill_stitch.py:499
+#: lib/elements/fill_stitch.py:487 lib/elements/fill_stitch.py:501
 msgid "Travel inside the shape when moving from section to section.  Underpath stitches avoid traveling in the direction of the row angle so that they are not visible.  This gives them a jagged appearance."
 msgstr "セクション間を移動するときは、シェイプ内を移動します。アンダーパスステッチは、列の角度の方向に移動しないようにして、非表示にします。ギザギザの外観を与えます。"
 
-#: lib/elements/fill_stitch.py:716
-msgid "Error during autofill!  This means that there is a problem with Ink/Stitch."
-msgstr "自動入力中にエラーが発生しました！インク/ステッチに問題があります。"
+#: lib/elements/fill_stitch.py:718
+msgid "Error during autofill! This means it is a bug in Ink/Stitch."
+msgstr ""
 
 #. this message is followed by a URL:
 #. https://github.com/inkstitch/inkstitch/issues/new
-#: lib/elements/fill_stitch.py:719
-msgid "If you'd like to help us make Ink/Stitch better, please paste this whole message into a new issue at: "
-msgstr "インク/ステッチの改善にご協力いただける場合は、このメッセージ全体を新しい Issue に貼り付けてください。 "
+#: lib/elements/fill_stitch.py:721
+msgid "If you'd like to help please\n"
+"- copy the entire error message below\n"
+"- save your SVG file and\n"
+"- create a new issue at"
+msgstr ""
 
 #: lib/elements/image.py:13
 msgid "Image"
@@ -1106,7 +1109,7 @@ msgstr "ポリラインオブジェクト"
 msgid "This object is an SVG PolyLine.  Ink/Stitch can work with this shape, but you can't edit it in Inkscape.  Convert it to a manual stitch path to allow editing."
 msgstr "このオブジェクトはSVGポリラインです。インク/ステッチはこの形状で機能しますが、Inkscapeで編集することはできません。編集できるように、手動のステッチパスに変換します。"
 
-#: lib/elements/polyline.py:23 lib/elements/satin_column.py:27
+#: lib/elements/polyline.py:23
 msgid "* Select this object."
 msgstr "*このオブジェクトを選択します。"
 
@@ -1123,217 +1126,235 @@ msgid "Manual stitch along path"
 msgstr "パスに沿った手動ステッチ"
 
 #: lib/elements/satin_column.py:24
-msgid "Satin column has fill"
-msgstr "サテンの列がいっぱいです"
-
-#: lib/elements/satin_column.py:25
-msgid "Satin column: Object has a fill (but should not)"
-msgstr "サテンの列：オブジェクトに塗りつぶしがあります（表示されるべきではありません）"
-
-#: lib/elements/satin_column.py:28
-msgid "* Open the Fill and Stroke panel"
-msgstr "* フィルストロークパネルを開きます"
-
-#: lib/elements/satin_column.py:29
-msgid "* Open the Fill tab"
-msgstr "* フィルタブを開きます"
-
-#: lib/elements/satin_column.py:30
-msgid "* Disable the Fill"
-msgstr "*フィルを無効にする"
-
-#: lib/elements/satin_column.py:31
-msgid "* Alternative: open Params and switch this path to Stroke to disable Satin Column mode"
-msgstr "*代替方法：パラメータを開き、このパスをストロークに切り替えて、サテンカラムモードを無効にします"
-
-#: lib/elements/satin_column.py:36
 msgid "Too few subpaths"
 msgstr "サブパスが少なすぎます"
 
-#: lib/elements/satin_column.py:37
+#: lib/elements/satin_column.py:25
 msgid "Satin column: Object has too few subpaths.  A satin column should have at least two subpaths (the rails)."
 msgstr "サテンの列：オブジェクトのサブパスが少なすぎます。サテンの柱には、少なくとも2つのサブパス（レール）が必要です。"
 
-#: lib/elements/satin_column.py:39
+#: lib/elements/satin_column.py:27
 msgid "* Add another subpath (select two rails and do Path > Combine)"
 msgstr "*別のサブパスを追加します（2つのパスを選択し、[パス]> [結合] を実行します）"
 
-#: lib/elements/satin_column.py:40
+#: lib/elements/satin_column.py:28
 msgid "* Convert to running stitch or simple satin (Params extension)"
 msgstr "*ランニングステッチまたはシンプルなサテンに変換（パラメーターエクステンション）"
 
-#: lib/elements/satin_column.py:45
+#: lib/elements/satin_column.py:33
 msgid "Unequal number of points"
 msgstr "ポイント数が等しくありません"
 
-#: lib/elements/satin_column.py:46
+#: lib/elements/satin_column.py:34
 msgid "Satin column: There are no rungs and rails have an an unequal number of points."
 msgstr "サテンの柱：横木はなく、パスのポイント数は等しくありません。"
 
-#: lib/elements/satin_column.py:48
+#: lib/elements/satin_column.py:36
 msgid "The easiest way to solve this issue is to add one or more rungs. "
 msgstr "この問題を解決する最も簡単な方法は、1つ以上のラングを追加することです。 "
 
-#: lib/elements/satin_column.py:49
+#: lib/elements/satin_column.py:37
 msgid "Rungs control the stitch direction in satin columns."
 msgstr "ラングは、サテンの柱のステッチの方向を制御します。"
 
-#: lib/elements/satin_column.py:50
+#: lib/elements/satin_column.py:38
 msgid "* With the selected object press \"P\" to activate the pencil tool."
 msgstr "*選択したオブジェクトで「P」を押して鉛筆ツールをアクティブにします。"
 
-#: lib/elements/satin_column.py:51
+#: lib/elements/satin_column.py:39
 msgid "* Hold \"Shift\" while drawing the rung."
 msgstr "*ラングを描画している間「Shift」を押したままにします。"
 
-#: lib/elements/satin_column.py:56
+#: lib/elements/satin_column.py:44
 msgid "Not stitchable satin column"
 msgstr ""
 
-#: lib/elements/satin_column.py:57
+#: lib/elements/satin_column.py:45
 msgid "A satin column consists out of two rails and one or more rungs. This satin column may have a different setup."
 msgstr ""
 
-#: lib/elements/satin_column.py:59
+#: lib/elements/satin_column.py:47
 msgid "Make sure your satin column is not a combination of multiple satin columns."
 msgstr ""
 
-#: lib/elements/satin_column.py:60
+#: lib/elements/satin_column.py:48
 msgid "Go to our website and read how a satin column should look like https://inkstitch.org/docs/stitches/satin-column/"
 msgstr ""
 
-#: lib/elements/satin_column.py:64
+#: lib/elements/satin_column.py:52
 msgid "Each rung should intersect both rails once."
 msgstr "各ラングは、両方のレールと1回交差する必要があります。"
 
-#: lib/elements/satin_column.py:68
+#: lib/elements/satin_column.py:56
 msgid "Rung doesn't intersect rails"
 msgstr "ラングはレールと交差しません"
 
-#: lib/elements/satin_column.py:69
+#: lib/elements/satin_column.py:57
 msgid "Satin column: A rung doesn't intersect both rails."
 msgstr "サテンの柱：ラングは両方のパスと交差しません。"
 
-#: lib/elements/satin_column.py:73
+#: lib/elements/satin_column.py:61
 msgid "Rungs intersects too many times"
 msgstr "ラングが何度も交差する"
 
-#: lib/elements/satin_column.py:74
+#: lib/elements/satin_column.py:62
 msgid "Satin column: A rung intersects a rail more than once."
 msgstr "サテンの柱：ラングがパスと複数回交差します。"
 
-#: lib/elements/satin_column.py:78
+#: lib/elements/satin_column.py:66
 msgid "Satin Column"
 msgstr "サテンカラム"
 
-#: lib/elements/satin_column.py:84
+#: lib/elements/satin_column.py:72
 msgid "Custom satin column"
 msgstr "カスタムサテンカラム"
 
-#: lib/elements/satin_column.py:90
+#: lib/elements/satin_column.py:78
 msgid "\"E\" stitch"
 msgstr "「E」ステッチ"
 
-#: lib/elements/satin_column.py:96 lib/elements/satin_column.py:227
+#: lib/elements/satin_column.py:84 lib/elements/satin_column.py:286
 msgid "Maximum stitch length"
 msgstr "最大ステッチの長さ"
 
-#: lib/elements/satin_column.py:97
+#: lib/elements/satin_column.py:85
 msgid "Maximum stitch length for split stitches."
 msgstr "スプリットステッチの最大ステッチ長さ"
 
-#: lib/elements/satin_column.py:104
+#: lib/elements/satin_column.py:92
 msgid "Short stitch inset"
 msgstr ""
 
-#: lib/elements/satin_column.py:105
+#: lib/elements/satin_column.py:93
 msgid "Stitches in areas with high density will be shortened by this amount."
 msgstr ""
 
-#: lib/elements/satin_column.py:113
+#: lib/elements/satin_column.py:101
 msgid "Short stitch distance"
 msgstr ""
 
-#: lib/elements/satin_column.py:114
+#: lib/elements/satin_column.py:102
 msgid "Do short stitches if the distance between stitches is smaller than this."
 msgstr ""
 
-#: lib/elements/satin_column.py:126 lib/elements/stroke.py:137
+#: lib/elements/satin_column.py:114 lib/elements/stroke.py:137
 msgid "Zig-zag spacing (peak-to-peak)"
 msgstr "ジグザグ間隔（ピークツーピーク）"
 
-#: lib/elements/satin_column.py:127
-msgid "Peak-to-peak distance between zig-zags."
-msgstr "ジグザグ間のピーク間距離"
+#: lib/elements/satin_column.py:115
+msgid "Peak-to-peak distance between zig-zags. This is double the mm/stitch measurement used by most mechanical machines."
+msgstr ""
 
-#: lib/elements/satin_column.py:138
+#: lib/elements/satin_column.py:126
+msgid "Pull compensation percentage"
+msgstr ""
+
+#: lib/elements/satin_column.py:127
+msgid "Additional pull compensation which varies as a percentage of stitch width. Two values separated by a space may be used for an aysmmetric effect."
+msgstr ""
+
+#: lib/elements/satin_column.py:140
 msgid "Pull compensation"
 msgstr "縮み補正"
 
-#: lib/elements/satin_column.py:139
-msgid "Satin stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape.  This setting expands each pair of needle penetrations outward from the center of the satin column."
-msgstr "サテンステッチが生地を引き寄せ、Inkscapeで描くよりも列が狭くなります。この設定は、サテンの柱の中心から外側に向かって針の貫通の各ペアを拡張します。"
+#: lib/elements/satin_column.py:141
+msgid "Satin stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape. This setting expands each pair of needle penetrations outward from the center of the satin column by a fixed length. Two values separated by a space may be used for an aysmmetric effect."
+msgstr ""
 
-#: lib/elements/satin_column.py:151
+#: lib/elements/satin_column.py:157
+msgid "Swap rails"
+msgstr ""
+
+#: lib/elements/satin_column.py:158
+msgid "Swaps the first and second rails of the satin column, affecting which side the thread finished on as well as any sided properties"
+msgstr ""
+
+#: lib/elements/satin_column.py:166
 msgid "Contour underlay"
 msgstr "輪郭アンダーレイ"
 
-#: lib/elements/satin_column.py:151 lib/elements/satin_column.py:158
-#: lib/elements/satin_column.py:167
+#: lib/elements/satin_column.py:166 lib/elements/satin_column.py:173
+#: lib/elements/satin_column.py:181 lib/elements/satin_column.py:194
 msgid "Contour Underlay"
 msgstr "輪郭アンダーレイ"
 
-#: lib/elements/satin_column.py:158 lib/elements/satin_column.py:182
+#: lib/elements/satin_column.py:173 lib/elements/satin_column.py:210
 msgid "Stitch length"
 msgstr "ステッチの長さ"
 
-#: lib/elements/satin_column.py:164
-msgid "Contour underlay inset amount"
-msgstr "輪郭アンダーレイはめ込み量"
+#: lib/elements/satin_column.py:179
+msgid "Inset distance (fixed)"
+msgstr ""
 
-#: lib/elements/satin_column.py:165
-msgid "Shrink the outline, to prevent the underlay from showing around the outside of the satin column."
-msgstr "アウトラインを縮小して、サテンの柱の外側にアンダーレイが表示されないようにします。"
+#: lib/elements/satin_column.py:180
+msgid "Shrink the outline by a fixed length, to prevent the underlay from showing around the outside of the satin column."
+msgstr ""
 
-#: lib/elements/satin_column.py:175
+#: lib/elements/satin_column.py:191
+msgid "Inset distance (proportional)"
+msgstr ""
+
+#: lib/elements/satin_column.py:192
+msgid "Shrink the outline by a proportion of the column width, to prevent the underlay from showing around the outside of the satin column."
+msgstr ""
+
+#: lib/elements/satin_column.py:203
 msgid "Center-walk underlay"
 msgstr "センターウォークアンダーレイ"
 
-#: lib/elements/satin_column.py:175 lib/elements/satin_column.py:182
-#: lib/elements/satin_column.py:187
+#: lib/elements/satin_column.py:203 lib/elements/satin_column.py:210
+#: lib/elements/satin_column.py:219 lib/elements/satin_column.py:229
 msgid "Center-Walk Underlay"
 msgstr "センターウォークアンダーレイ"
 
-#: lib/elements/satin_column.py:187 lib/elements/stroke.py:90
+#: lib/elements/satin_column.py:216 lib/elements/stroke.py:90
 msgid "Repeats"
 msgstr "繰り返し"
 
-#: lib/elements/satin_column.py:192
+#: lib/elements/satin_column.py:217
+msgid "For an odd number of repeats, this will reverse the direction the satin column is stitched, causing stitching to both begin and end at the start point."
+msgstr ""
+
+#: lib/elements/satin_column.py:227
+msgid "Position"
+msgstr ""
+
+#: lib/elements/satin_column.py:228
+#, python-format
+msgid "Position of underlay from between the rails. 0% is along the first rail, 50% is centered, 100% is along the second rail."
+msgstr ""
+
+#: lib/elements/satin_column.py:236
 msgid "Zig-zag underlay"
 msgstr "ジグザグアンダーレイ"
 
-#: lib/elements/satin_column.py:192 lib/elements/satin_column.py:201
-#: lib/elements/satin_column.py:212 lib/elements/satin_column.py:230
+#: lib/elements/satin_column.py:236 lib/elements/satin_column.py:245
+#: lib/elements/satin_column.py:256 lib/elements/satin_column.py:276
+#: lib/elements/satin_column.py:289
 msgid "Zig-zag Underlay"
 msgstr "ジグザグアンダーレイ"
 
-#: lib/elements/satin_column.py:198
+#: lib/elements/satin_column.py:242
 msgid "Zig-Zag spacing (peak-to-peak)"
 msgstr "ジグザグ間隔（ピークツーピーク）"
 
-#: lib/elements/satin_column.py:199
+#: lib/elements/satin_column.py:243
 msgid "Distance between peaks of the zig-zags."
 msgstr "ジグザグのピーク間の距離。"
 
-#: lib/elements/satin_column.py:209
-msgid "Inset amount"
-msgstr "はめ込み量"
+#: lib/elements/satin_column.py:253
+msgid "Inset amount (fixed)"
+msgstr ""
 
-#: lib/elements/satin_column.py:210
+#: lib/elements/satin_column.py:254 lib/elements/satin_column.py:274
 msgid "default: half of contour underlay inset"
 msgstr "デフォルト：等高線アンダーレイインセットの半分"
 
-#: lib/elements/satin_column.py:228
+#: lib/elements/satin_column.py:273
+msgid "Inset amount (proportional)"
+msgstr ""
+
+#: lib/elements/satin_column.py:287
 msgid "Split stitch if distance of maximum stitch length is exceeded"
 msgstr "最大ステッチ長さを超えた場合のスプリットステッチ"
 
@@ -1631,7 +1652,7 @@ msgstr "サテンの列に変換するには、少なくとも1行を選択し�
 msgid "Only simple lines may be converted to satin columns."
 msgstr "単純な線のみをサテンの列に変換できます。"
 
-#: lib/extensions/convert_to_satin.py:140
+#: lib/extensions/convert_to_satin.py:145
 msgid "Ink/Stitch cannot convert your stroke into a satin column. Please break up your path and try again."
 msgstr "インク/ステッチでは、ストロークをサテンの列に変換できません。パスを分割して、もう一度やり直してください。"
 
@@ -1757,8 +1778,24 @@ msgstr "オプション"
 msgid "Stitch lines of text back and forth"
 msgstr "テキストの行を前後にステッチします。"
 
+#: lib/extensions/lettering.py:74
+msgid "Never"
+msgstr ""
+
+#: lib/extensions/lettering.py:74
+msgid "after each line"
+msgstr ""
+
+#: lib/extensions/lettering.py:74
+msgid "after each word"
+msgstr ""
+
+#: lib/extensions/lettering.py:74
+msgid "after each letter"
+msgstr ""
+
 #: lib/extensions/lettering.py:75
-msgid "Add trim after"
+msgid "Add trim command"
 msgstr ""
 
 #: lib/extensions/lettering.py:84 lib/extensions/params.py:442
@@ -2146,7 +2183,7 @@ msgstr "ファイルが存在しないため開けません。ファイルパス
 msgid "There is no selected stitchable element. Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects in case you have expected a stitchout."
 msgstr ""
 
-#: lib/stitches/auto_run.py:135 lib/stitches/auto_satin.py:345
+#: lib/stitches/auto_run.py:135 lib/stitches/auto_satin.py:347
 msgid "Auto-Route"
 msgstr ""
 
@@ -2162,7 +2199,7 @@ msgstr ""
 
 #. Label for a satin column created by Auto-Route Satin Columns and Lettering
 #. extensions
-#: lib/stitches/auto_satin.py:517
+#: lib/stitches/auto_satin.py:518
 #, python-format
 msgid "AutoSatin %d"
 msgstr "自動サテン %d"

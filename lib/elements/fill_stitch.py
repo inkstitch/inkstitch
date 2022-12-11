@@ -113,8 +113,8 @@ class FillStitch(EmbroideryElement):
     @property
     @param('guided_fill_strategy', _('Guided Fill Strategy'), type='dropdown', default=0,
            options=[_("Copy"), _("Parallel Offset")], select_items=[('fill_method', 2)], sort_index=3,
-           tooltip=_('Copy (the default) will fill the shape with shifted copies of the line.' +
-                     'Parallel offset will ensure that each line is always a consistent distance from its neighbor.' +
+           tooltip=_('Copy (the default) will fill the shape with shifted copies of the line. '
+                     'Parallel offset will ensure that each line is always a consistent distance from its neighbor. '
                      'Sharp corners may be introduced.'))
     def guided_fill_strategy(self):
         return self.get_int_param('guided_fill_strategy', 0)
@@ -216,7 +216,7 @@ class FillStitch(EmbroideryElement):
     @property
     @param('staggers',
            _('Stagger rows this many times before repeating'),
-           tooltip=_('Length of the cycle by which successive stitch rows are staggered.'
+           tooltip=_('Length of the cycle by which successive stitch rows are staggered. '
                      'Fractional values are allowed and can have less visible diagonals than integer values.'),
            type='int',
            sort_index=6,
@@ -271,6 +271,8 @@ class FillStitch(EmbroideryElement):
         if isinstance(valid_shape, shgeo.Polygon):
             return shgeo.MultiPolygon([valid_shape])
         if isinstance(valid_shape, shgeo.LineString):
+            return shgeo.MultiPolygon([])
+        if shape.area == 0:
             return shgeo.MultiPolygon([])
 
         polygons = []
@@ -713,12 +715,17 @@ class FillStitch(EmbroideryElement):
 
         # for an uncaught exception, give a little more info so that they can create a bug report
         message = ""
-        message += _("Error during autofill!  This means that there is a problem with Ink/Stitch.")
+        message += _("Error during autofill! This means it is a bug in Ink/Stitch.")
         message += "\n\n"
         # L10N this message is followed by a URL: https://github.com/inkstitch/inkstitch/issues/new
-        message += _("If you'd like to help us make Ink/Stitch better, please paste this whole message into a new issue at: ")
-        message += "https://github.com/inkstitch/inkstitch/issues/new\n\n"
-        message += version.get_inkstitch_version() + "\n\n"
+        message += _("If you'd like to help please\n"
+                     "- copy the entire error message below\n"
+                     "- save your SVG file and\n"
+                     "- create a new issue at")
+        message += " https://github.com/inkstitch/inkstitch/issues/new\n\n"
+        message += _("Include the error description and also (if possible) the svg file.")
+        message += '\n\n\n'
+        message += version.get_inkstitch_version() + '\n'
         message += traceback.format_exc()
 
         self.fatal(message)
