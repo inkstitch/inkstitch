@@ -352,6 +352,12 @@ class EmbroideryElement(object):
         return self.get_boolean_param('trim_after', False)
 
     @property
+    @param('stop_after',
+           _ ('Stop After'),
+           tooltip=_('Add a STOP command after stitching this object.'),
+           type='boolean',
+           default=False,
+           sort_index=53)
     def stop_after(self):
         return self.get_boolean_param('stop_after', False)
 
