@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <inkscape-extension translationdomain="inkstitch" xmlns="http://www.inkscape.org/namespace/inkscape/extension">
-    <name>Convert Satin to Stroke</name>
-    <id>org.inkstitch.convert_to_stroke</id>
-    <param name="extension" type="string" gui-hidden="true">convert_to_stroke</param>
-    <param name="description" type="description">Converts a satin column into a running stitch.</param>
-    <param name="keep_satin" type="boolean" gui-text="Keep satin column"
-       gui-description="Do not delete original satin column.">false</param>
+    <name>Jump Stitch to Stroke</name>
+    <id>org.inkstitch.jump_to_stroke</id>
+    <param name="extension" type="string" gui-hidden="true">jump_to_stroke</param>
     <effect>
         <object-type>all</object-type>
         <effects-menu>
