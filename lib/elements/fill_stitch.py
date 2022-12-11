@@ -415,6 +415,8 @@ class FillStitch(EmbroideryElement):
         default_value = [self.angle + math.pi / 2.0]
         if underlay_angles is not None:
             underlay_angles = underlay_angles.strip().split(' ')
+            # remove comma separator for backward compatibility
+            underlay_angles = [angle[:-1] if angle.endswith(',') else angle for angle in underlay_angles]
             try:
                 underlay_angles = [math.radians(
                     float(angle)) for angle in underlay_angles]
