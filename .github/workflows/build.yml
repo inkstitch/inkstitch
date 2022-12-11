@@ -52,6 +52,7 @@ jobs:
           sudo apt-get install gettext
 
           # for wxPython
+          sudo apt install libnotify4
           sudo apt install glib-networking libsdl2-dev libsdl2-2.0-0
 
           # for PyGObject

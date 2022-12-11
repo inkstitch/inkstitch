@@ -48,6 +48,8 @@ from .stitch_plan_preview import StitchPlanPreview
 from .stitch_plan_preview_undo import StitchPlanPreviewUndo
 from .zip import Zip
 
+from.lettering_along_path import LetteringAlongPath
+
 __all__ = extensions = [StitchPlanPreview,
                         StitchPlanPreviewUndo,
                         DensityMap,
@@ -75,6 +77,7 @@ __all__ = extensions = [StitchPlanPreview,
                         LetteringRemoveKerning,
                         LetteringCustomFontDir,
                         LetteringForceLockStitches,
+                        LetteringAlongPath,
                         LettersToFont,
                         Troubleshoot,
                         RemoveEmbroiderySettings,

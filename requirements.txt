@@ -1,7 +1,7 @@
 ./pyembroidery
 
 # inkex is not currently uploaded to pypi, the version there is extremely out of date
-inkex @ git+https://gitlab.com/inkscape/extensions.git@EXTENSIONS_AT_INKSCAPE_1.2.1
+inkex @ git+https://gitlab.com/inkscape/extensions.git@EXTENSIONS_AT_INKSCAPE_1.2.2
 
 # lower bound to allow for the use of system packages on Debian and distros that have updated to 4.2
 # CI adds an == 4.1.1 constraint for prebuilt packages
