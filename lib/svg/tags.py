@@ -130,9 +130,10 @@ inkstitch_attribs = [
     'use_seed',
     # stitch_plan
     'invisible_layers',
-    # Legacy
+    # All elements
     'trim_after',
     'stop_after',
+    'random_seed',
     'manual_stitch',
 ]
 for attrib in inkstitch_attribs:
