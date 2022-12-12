@@ -163,6 +163,8 @@ class EmbroideryElement(object):
         return self.get_split_float_param(param, default) * PIXELS_PER_MM
 
     def set_param(self, name, value):
+        # Sets a param on the node backing this element. Used by params dialog.
+        # After calling, this element is invalid due to caching and must be re-created to use the new value.
         param = INKSTITCH_ATTRIBS[name]
         self.node.set(param, str(value))
 
