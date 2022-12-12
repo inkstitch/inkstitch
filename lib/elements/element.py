@@ -343,7 +343,7 @@ class EmbroideryElement(object):
 
     @property
     @param('trim_after',
-           _ ('Trim After'),
+           _('Trim After'),
            tooltip=_('Add a TRIM command after stitching this object.'),
            type='boolean',
            default=False,
@@ -353,7 +353,7 @@ class EmbroideryElement(object):
 
     @property
     @param('stop_after',
-           _ ('Stop After'),
+           _('Stop After'),
            tooltip=_('Add a STOP command after stitching this object.'),
            type='boolean',
            default=False,
