@@ -43,6 +43,7 @@ from .preferences import Preferences
 from .print_pdf import Print
 from .remove_embroidery_settings import RemoveEmbroiderySettings
 from .reorder import Reorder
+from .select_elements import SelectElements
 from .selection_to_guide_line import SelectionToGuideLine
 from .selection_to_pattern import SelectionToPattern
 from .simulator import Simulator
@@ -99,4 +100,5 @@ __all__ = extensions = [StitchPlanPreview,
                         Reorder,
                         DuplicateParams,
                         Preferences,
+                        SelectElements,
                         CutworkSegmentation]

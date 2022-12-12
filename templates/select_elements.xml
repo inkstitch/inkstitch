@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <name>Select embroidery elements</name>
+    <id>org.inkstitch.select_elements</id>
+    <param name="extension" type="string" gui-hidden="true">select_elements</param>
+
+    <param name="options" type="notebook">
+        <page name="stitch-type" gui-text="Select options">
+            <label appearance="header">Select Stitch Type</label>
+            <label>Stroke type</label>
+                <param indent="1" name="select-running-stitch" type="boolean" gui-text="Running Stitch">false</param>
+                <param indent="1" name="select-ripples" type="boolean" gui-text="Ripples">false</param>
+                <param indent="1" name="select-manual" type="boolean" gui-text="Manual Stitch">false</param>
+                <param indent="1" name="select-polyline" type="boolean" gui-text="Polyline">false</param>
+                <param indent="1" name="select-zigzag" type="boolean" gui-text="ZigZag Stitch">false</param>
+            <label>Satin</label>
+                <param indent="1" name="select-satin" type="boolean" gui-text="Satin Column">false</param>
+                <param indent="1" name="select-e" type="boolean" gui-text="E-Stitch">false</param>
+                <param indent="1" name="satin-underlay" type="optiongroup" appearance="combo" gui-text="Underlay type"
+                       gui-description="Only select satins with this underlay type">
+                    <option value="all">No restriction</option>
+                    <option value="no">No underlay</option>
+                    <option value="center">Centerwalk</option>
+                    <option value="contour">Contour</option>
+                    <option value="zigzag">Zigzag</option>
+                </param>
+            <label>Fills</label>
+                <param indent="1" name="select-auto-fill" type="boolean" gui-text="Fill">false</param>
+                <param indent="1" name="select-contour-fill" type="boolean" gui-text="Contour Fill">false</param>
+                <param indent="1" name="select-guided-fill" type="boolean" gui-text="Guided Fill">false</param>
+                <param indent="1" name="select-legacy-fill" type="boolean" gui-text="Legacy Fill">false</param>
+                <param indent="1" name="fill-underlay" type="optiongroup" appearance="combo" gui-text="Underlay"
+                       gui-description="Only select fills with this underlay">
+                    <option value="all">No restriction</option>
+                    <option value="yes">Underlay</option>
+                    <option value="no">No Underlay</option>
+                </param>
+            <label>Clone</label>
+                <param indent="1" name="select-clone" type="boolean" gui-text="Clone">false</param>
+        </page>
+        <page name="info" gui-text="Help">
+            <label appearance="header">Select embroidery objects</label>
+            <spacer />
+            <label>Selects specific embroidery elements by stitch type.</label>
+            <label>If there is already an active selection, non maching elements will be deselected.</label>
+            <spacer />
+            <separator />
+            <spacer />
+            <label>If this isn't working for you, you may need to insert your path to a python executable manualy.</label>
+            <label>* Windows: Open the "Command Prompt" and type "where python". Copy the path and paste it here.</label>
+            <label>* Linux: Open the command line and type "which python". Copy the path and paste it here.</label>
+            <label>* macOS: We couldn't make this extension work for your system. But if you want to try with a custom
+                     python path, type "which python" into your command line and paste the result here.
+                     Feedback is very welcome</label>
+            <param name="python-path" type="string" gui-text="Python Path"></param>
+        </page>
+    </param>
+
+    <effect>
+        <object-type>all</object-type>
+        <effects-menu>
+            <submenu name="Ink/Stitch" translatable="no">
+                <submenu name="Edit" />
+            </submenu>
+        </effects-menu>
+    </effect>
+    <script>
+        {{ command_tag | safe }}
+    </script>
+</inkscape-extension>
