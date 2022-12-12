@@ -61,9 +61,9 @@ class CutworkSegmentation(InkstitchExtension):
         self.sectors = {index: sector for index, sector in self.sectors.items() if sector['start'] != sector['end']}
 
         self.new_elements = []
+        parent = None
         for element in self.elements:
             if isinstance(element, Stroke):
-
                 # save parent and index to be able to position and insert new elements later on
                 parent = element.node.getparent()
                 index = parent.index(element.node)
@@ -73,8 +73,11 @@ class CutworkSegmentation(InkstitchExtension):
                     # fill self.new_elements list with line segments
                     self._prepare_line_sections(element, linestring.coords)
 
-        self._insert_elements(parent, element, index)
+        if parent is None:
+            inkex.errormsg(_("Please select at least one element with a stroke color."))
+            return
 
+        self._insert_elements(parent, index)
         self._remove_originals()
 
     def _get_sectors(self, angle):
@@ -150,7 +153,7 @@ class CutworkSegmentation(InkstitchExtension):
         # clear point_list in self.sectors
         self.sectors[sector['id']].update({'point_list': []})
 
-    def _insert_elements(self, parent, element, index):
+    def _insert_elements(self, parent, index):
         self.new_elements.reverse()
         if self.options.sort_by_color is True:
             self.new_elements = sorted(self.new_elements, key=lambda x: x[1], reverse=True)
