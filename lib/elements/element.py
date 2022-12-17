@@ -393,7 +393,7 @@ class EmbroideryElement(object):
         error_msg = "%s %s: %s" % (_("Failed on "), name, message)
         if point_to_troubleshoot:
             error_msg += "\n\n%s" % _("Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects. "
-                "This will indicate the errorneus position.")
+                                      "This will indicate the errorneus position.")
         inkex.errormsg(error_msg)
         sys.exit(1)
 
