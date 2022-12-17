@@ -407,7 +407,18 @@ def add_commands(element, commands):
 
 def add_layer_commands(layer, commands):
     svg = layer.root
-    correction_transform = get_correction_transform(layer)
+
+    if not layer.tag_name == 'svg':
+        correction_transform = get_correction_transform(layer)
+    else:
+        # No layer selected while trying to include only layer commands: return a error message and exit
+        # Since global and layer commands will not be inserted at the same time, we can check the first command only
+        if commands[0] in LAYER_COMMANDS:
+            inkex.errormsg(_('Please select a layer to include layer commands.'))
+            sys.exit(1)
+
+        # global commands do not necesarrily need a layer
+        correction_transform = ''
 
     for i, command in enumerate(commands):
         ensure_symbol(svg, command)
