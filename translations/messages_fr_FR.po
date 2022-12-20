@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-11-28 01:26+0000\n"
-"PO-Revision-Date: 2022-12-01 01:46\n"
+"POT-Creation-Date: 2022-12-20 01:18+0000\n"
+"PO-Revision-Date: 2022-12-20 01:20\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-28 01:26+0000\n"
+"POT-Creation-Date: 2022-12-20 01:18+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -629,7 +629,7 @@ msgstr "Erreur : il y a plus d’une commande de %(command)s dans le document, 
 msgid "%(command)s: %(description)s"
 msgstr "%(command)s: %(description)s"
 
-#: lib/commands.py:295 lib/commands.py:416
+#: lib/commands.py:295 lib/commands.py:427
 msgid "Ink/Stitch Command"
 msgstr "Commande Ink/Stitch"
 
@@ -642,6 +642,10 @@ msgstr "connecteur"
 #: lib/commands.py:339
 msgid "command marker"
 msgstr "marqueur de commande"
+
+#: lib/commands.py:417
+msgid "Please select a layer to include layer commands."
+msgstr ""
 
 #: lib/elements/clone.py:21
 msgid "Clone Object"
@@ -738,12 +742,32 @@ msgstr "Créer des points d'arrêt après avoir cousu cet élément, même si la
 msgid "Object %(id)s has an empty 'd' attribute.  Please delete this object from your document."
 msgstr "L'objet %(id)s a un attribut 'd' vide. S’il vous plaît supprimer cet objet dans votre document."
 
+#: lib/elements/element.py:346
+msgid "Trim After"
+msgstr ""
+
+#: lib/elements/element.py:347
+msgid "Add a TRIM command after stitching this object."
+msgstr ""
+
+#: lib/elements/element.py:356
+msgid "Stop After"
+msgstr ""
+
+#: lib/elements/element.py:357
+msgid "Add a STOP command after stitching this object."
+msgstr ""
+
 #. used when showing an error message to the user such as
-#. "Some Path (path1234): error: satin column: One or more of the rungs doesn't
-#. intersect both rails."
-#: lib/elements/element.py:381
-msgid "error:"
-msgstr "erreur :"
+#. "Failed on PathLabel (path1234): Satin column: One or more of the rungs
+#. doesn't intersect both rails."
+#: lib/elements/element.py:393
+msgid "Failed on "
+msgstr ""
+
+#: lib/elements/element.py:395
+msgid "Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects. This will indicate the errorneus position."
+msgstr ""
 
 #: lib/elements/empty_d_object.py:13
 msgid "Empty Path"
@@ -1674,11 +1698,15 @@ msgstr "Veuillez sélectionner une ou plusieurs colonnes satin à scinder."
 msgid "this satin column does not have a \"satin column cut point\" command attached to it. Please use the \"Attach commands\" extension and attach the \"Satin Column cut point\" command first."
 msgstr "cette colonne satin n’a pas de commande « point de partage » attachée. Utilisez l’extension « ajouter des commandes » et attachez d’abord la commande « point de partage  »."
 
-#: lib/extensions/cutwork_segmentation.py:158
+#: lib/extensions/cutwork_segmentation.py:77
+msgid "Please select at least one element with a stroke color."
+msgstr ""
+
+#: lib/extensions/cutwork_segmentation.py:161
 msgid "Cutwork Group"
 msgstr "Groupe Richelieu"
 
-#: lib/extensions/cutwork_segmentation.py:166
+#: lib/extensions/cutwork_segmentation.py:169
 #, python-format
 msgid "Needle #%s"
 msgstr "Aiguille #%s"
@@ -1755,6 +1783,10 @@ msgstr "Mauvais type de fichier. Ink/Stitch n'accepte que les palettes de couleu
 msgid "Ink/Stitch cannot find your palette folder automatically. Please install your palette manually."
 msgstr "Ink/Stitch ne peut pas automatiquement trouver votre dossier de palette . Veuillez installer votre palette manuellement."
 
+#: lib/extensions/jump_to_stroke.py:19
+msgid "Please select at least two elements to convert the jump stitch to a running stitch."
+msgstr ""
+
 #: lib/extensions/layer_commands.py:20
 msgid "Please choose one or more commands to add."
 msgstr "Veuillez choisir une ou plusieurs commandes à ajouter."
@@ -1772,6 +1804,7 @@ msgid "Font size filter (mm). 0 for all sizes."
 msgstr ""
 
 #: lib/extensions/lettering.py:66 inx/inkstitch_apply_threadlist.inx:7
+#: inx/inkstitch_lettering_along_path.inx:13
 #: inx/inkstitch_palette_to_text.inx:15
 msgid "Options"
 msgstr "Options"
@@ -1839,6 +1872,14 @@ msgstr "Veuillez ne sélectionner qu’un seul bloc de texte."
 #: lib/extensions/lettering.py:471
 msgid "You've selected objects that were not created by the Lettering extension.  Please clear your selection or select different objects before running Lettering again."
 msgstr "Vous avez sélectionné des objets qui ne sont pas créées par l’extension de lettrage.  SVP, effacez votre sélection ou sélectionnez des objets différents avant d’exécuter le lettrage à nouveau."
+
+#: lib/extensions/lettering_along_path.py:39
+msgid "The text doesn't contain any glyphs."
+msgstr ""
+
+#: lib/extensions/lettering_along_path.py:141
+msgid "Please select one path and one Ink/Stitch lettering group."
+msgstr ""
 
 #: lib/extensions/lettering_custom_font_dir.py:27
 msgid "Please specify the directory of your custom fonts."
@@ -3073,7 +3114,9 @@ msgstr "*Choisir une palette de couleurs"
 
 #: inx/inkstitch_apply_threadlist.inx:87 inx/inkstitch_auto_run.inx:23
 #: inx/inkstitch_cutwork_segmentation.inx:42
-#: inx/inkstitch_generate_palette.inx:24 inx/inkstitch_palette_to_text.inx:19
+#: inx/inkstitch_generate_palette.inx:24
+#: inx/inkstitch_lettering_along_path.inx:17
+#: inx/inkstitch_palette_to_text.inx:19
 msgid "Help"
 msgstr "Aide"
 
@@ -3119,7 +3162,8 @@ msgstr "Gestion des couleurs de fil"
 msgid "Auto-Route Running Stitch"
 msgstr "Agencement automatique de Points Droits"
 
-#: inx/inkstitch_auto_run.inx:10
+#: inx/inkstitch_auto_run.inx:10 inx/inkstitch_convert_to_stroke.inx:13
+#: inx/inkstitch_jump_to_stroke.inx:10
 msgid "Tools: Stroke"
 msgstr "Outils : Trait"
 
@@ -3172,8 +3216,7 @@ msgid "Preserve order of satin columns"
 msgstr "Préserver l’ordre des colonnes satin"
 
 #: inx/inkstitch_auto_satin.inx:12 inx/inkstitch_convert_to_satin.inx:10
-#: inx/inkstitch_convert_to_stroke.inx:13 inx/inkstitch_cut_satin.inx:10
-#: inx/inkstitch_flip.inx:10
+#: inx/inkstitch_cut_satin.inx:10 inx/inkstitch_flip.inx:10
 msgid "Tools: Satin"
 msgstr "Outils : Satin"
 
@@ -4052,6 +4095,10 @@ msgstr "Choisissez un fichier de palette de couleurs .gpl à installer dans Inks
 msgid "Restart Inkscape to use."
 msgstr "Redémarrez Inkscape pour l'utiliser."
 
+#: inx/inkstitch_jump_to_stroke.inx:3
+msgid "Jump Stitch to Stroke"
+msgstr ""
+
 #: inx/inkstitch_layer_commands.inx:3
 msgid "Add Layer Commands"
 msgstr "Ajouter des commandes à des calques"
@@ -4059,6 +4106,46 @@ msgstr "Ajouter des commandes à des calques"
 #: inx/inkstitch_lettering.inx:3
 msgid "Lettering"
 msgstr "Lettrage"
+
+#: inx/inkstitch_lettering_along_path.inx:3
+msgid "Lettering along path"
+msgstr ""
+
+#: inx/inkstitch_lettering_along_path.inx:15
+msgid "Stretch"
+msgstr ""
+
+#: inx/inkstitch_lettering_along_path.inx:15
+msgid "Expand glyph and word spacing to stretch lettering over the entire path"
+msgstr ""
+
+#: inx/inkstitch_lettering_along_path.inx:18
+msgid "This extension bends an Ink/Stitch text to a path."
+msgstr ""
+
+#: inx/inkstitch_lettering_along_path.inx:19
+msgid "Select Ink/Stitch text and a path before running this extension."
+msgstr ""
+
+#: inx/inkstitch_lettering_along_path.inx:21
+msgid "The text needs to meet these conditions:"
+msgstr ""
+
+#: inx/inkstitch_lettering_along_path.inx:22
+msgid "* The text consists of only one line of text"
+msgstr ""
+
+#: inx/inkstitch_lettering_along_path.inx:23
+msgid "* The text should not be too large for the given path"
+msgstr ""
+
+#: inx/inkstitch_lettering_along_path.inx:24
+msgid "* Text text should not contain trim symbols"
+msgstr ""
+
+#: inx/inkstitch_lettering_along_path.inx:26
+msgid "The stretch option defines whether the spaces between glyphs should be expanded so that the text stretches over the entire path."
+msgstr ""
 
 #: inx/inkstitch_lettering_custom_font_dir.inx:3
 #: inx/inkstitch_lettering_custom_font_dir.inx:18
