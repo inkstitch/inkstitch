@@ -49,6 +49,8 @@ class FillToStroke(InkstitchExtension):
 
             for polygon in element.shape.geoms:
                 multilinestring = self._get_centerline(polygon)
+                if multilinestring is None:
+                    continue
 
                 # insert new elements
                 self._insert_elements(multilinestring, centerline_group, index, transform, style)
@@ -59,6 +61,8 @@ class FillToStroke(InkstitchExtension):
     def _get_high_res_polygon(self, polygon):
         # use running stitch method
         runs = [running_stitch(line_string_to_point_list(polygon.exterior), 1, 0.1)]
+        if len(runs[0]) < 3:
+            return
         for interior in polygon.interiors:
             runs.append(running_stitch(line_string_to_point_list(interior), 1, 0.1))
         return MultiPolygon([(runs[0], runs[1:])])
