@@ -361,7 +361,7 @@ class EmbroideryElement(object):
 
     @property
     @param('trim_after',
-           _ ('Trim After'),
+           _('Trim After'),
            tooltip=_('Add a TRIM command after stitching this object.'),
            type='boolean',
            default=False,
@@ -371,7 +371,7 @@ class EmbroideryElement(object):
 
     @property
     @param('stop_after',
-           _ ('Stop After'),
+           _('Stop After'),
            tooltip=_('Add a STOP command after stitching this object.'),
            type='boolean',
            default=False,
@@ -398,7 +398,7 @@ class EmbroideryElement(object):
 
         return patches
 
-    def fatal(self, message):
+    def fatal(self, message, point_to_troubleshoot=False):
         label = self.node.get(INKSCAPE_LABEL)
         id = self.node.get("id")
         if label:
@@ -407,8 +407,11 @@ class EmbroideryElement(object):
             name = id
 
         # L10N used when showing an error message to the user such as
-        # "Some Path (path1234): error: satin column: One or more of the rungs doesn't intersect both rails."
-        error_msg = "%s: %s %s" % (name, _("error:"), message)
+        # "Failed on PathLabel (path1234): Satin column: One or more of the rungs doesn't intersect both rails."
+        error_msg = "%s %s: %s" % (_("Failed on "), name, message)
+        if point_to_troubleshoot:
+            error_msg += "\n\n%s" % _("Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects. "
+                                      "This will indicate the errorneus position.")
         inkex.errormsg(error_msg)
         sys.exit(1)
 
@@ -443,4 +446,4 @@ class EmbroideryElement(object):
 
         for error in self.validation_errors():
             # note that self.fatal() exits, so this only shows the first error
-            self.fatal(error.description)
+            self.fatal(error.description, True)

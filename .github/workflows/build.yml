@@ -176,7 +176,7 @@ jobs:
           # with --no-binary argument may fix notary issues as well shapely speedups error issue
           pip install -U lxml --no-binary lxml
           pip uninstall --yes shapely
-          pip install -v -U Shapely==1.8.1 --no-binary Shapely
+          pip install -v -U Shapely==1.8.5 --no-binary Shapely
           pip install pyinstaller
 
           echo "${{ env.pythonLocation }}/bin" >> $GITHUB_PATH

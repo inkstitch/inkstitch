@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-11-28 01:26+0000\n"
-"PO-Revision-Date: 2022-12-01 01:46\n"
+"POT-Creation-Date: 2022-12-20 01:18+0000\n"
+"PO-Revision-Date: 2022-12-20 01:20\n"
 "Last-Translator: \n"
 "Language-Team: Turkish\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-28 01:26+0000\n"
+"POT-Creation-Date: 2022-12-20 01:18+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -626,7 +626,7 @@ msgstr ""
 msgid "%(command)s: %(description)s"
 msgstr ""
 
-#: lib/commands.py:295 lib/commands.py:416
+#: lib/commands.py:295 lib/commands.py:427
 msgid "Ink/Stitch Command"
 msgstr ""
 
@@ -638,6 +638,10 @@ msgstr ""
 #. : the name of a command symbol (example: scissors icon for trim command)
 #: lib/commands.py:339
 msgid "command marker"
+msgstr ""
+
+#: lib/commands.py:417
+msgid "Please select a layer to include layer commands."
 msgstr ""
 
 #: lib/elements/clone.py:21
@@ -735,12 +739,32 @@ msgstr ""
 msgid "Object %(id)s has an empty 'd' attribute.  Please delete this object from your document."
 msgstr ""
 
+#: lib/elements/element.py:346
+msgid "Trim After"
+msgstr ""
+
+#: lib/elements/element.py:347
+msgid "Add a TRIM command after stitching this object."
+msgstr ""
+
+#: lib/elements/element.py:356
+msgid "Stop After"
+msgstr ""
+
+#: lib/elements/element.py:357
+msgid "Add a STOP command after stitching this object."
+msgstr ""
+
 #. used when showing an error message to the user such as
-#. "Some Path (path1234): error: satin column: One or more of the rungs doesn't
-#. intersect both rails."
-#: lib/elements/element.py:381
-msgid "error:"
-msgstr "hata:"
+#. "Failed on PathLabel (path1234): Satin column: One or more of the rungs
+#. doesn't intersect both rails."
+#: lib/elements/element.py:393
+msgid "Failed on "
+msgstr ""
+
+#: lib/elements/element.py:395
+msgid "Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects. This will indicate the errorneus position."
+msgstr ""
 
 #: lib/elements/empty_d_object.py:13
 msgid "Empty Path"
@@ -1669,11 +1693,15 @@ msgstr ""
 msgid "this satin column does not have a \"satin column cut point\" command attached to it. Please use the \"Attach commands\" extension and attach the \"Satin Column cut point\" command first."
 msgstr ""
 
-#: lib/extensions/cutwork_segmentation.py:158
+#: lib/extensions/cutwork_segmentation.py:77
+msgid "Please select at least one element with a stroke color."
+msgstr ""
+
+#: lib/extensions/cutwork_segmentation.py:161
 msgid "Cutwork Group"
 msgstr ""
 
-#: lib/extensions/cutwork_segmentation.py:166
+#: lib/extensions/cutwork_segmentation.py:169
 #, python-format
 msgid "Needle #%s"
 msgstr ""
@@ -1749,6 +1777,10 @@ msgstr ""
 msgid "Ink/Stitch cannot find your palette folder automatically. Please install your palette manually."
 msgstr ""
 
+#: lib/extensions/jump_to_stroke.py:19
+msgid "Please select at least two elements to convert the jump stitch to a running stitch."
+msgstr ""
+
 #: lib/extensions/layer_commands.py:20
 msgid "Please choose one or more commands to add."
 msgstr ""
@@ -1766,6 +1798,7 @@ msgid "Font size filter (mm). 0 for all sizes."
 msgstr ""
 
 #: lib/extensions/lettering.py:66 inx/inkstitch_apply_threadlist.inx:7
+#: inx/inkstitch_lettering_along_path.inx:13
 #: inx/inkstitch_palette_to_text.inx:15
 msgid "Options"
 msgstr ""
@@ -1831,6 +1864,14 @@ msgstr "Lütfen sadece tek blok yazı seçiniz."
 
 #: lib/extensions/lettering.py:471
 msgid "You've selected objects that were not created by the Lettering extension.  Please clear your selection or select different objects before running Lettering again."
+msgstr ""
+
+#: lib/extensions/lettering_along_path.py:39
+msgid "The text doesn't contain any glyphs."
+msgstr ""
+
+#: lib/extensions/lettering_along_path.py:141
+msgid "Please select one path and one Ink/Stitch lettering group."
 msgstr ""
 
 #: lib/extensions/lettering_custom_font_dir.py:27
@@ -3064,7 +3105,9 @@ msgstr ""
 
 #: inx/inkstitch_apply_threadlist.inx:87 inx/inkstitch_auto_run.inx:23
 #: inx/inkstitch_cutwork_segmentation.inx:42
-#: inx/inkstitch_generate_palette.inx:24 inx/inkstitch_palette_to_text.inx:19
+#: inx/inkstitch_generate_palette.inx:24
+#: inx/inkstitch_lettering_along_path.inx:17
+#: inx/inkstitch_palette_to_text.inx:19
 msgid "Help"
 msgstr ""
 
@@ -3110,7 +3153,8 @@ msgstr ""
 msgid "Auto-Route Running Stitch"
 msgstr ""
 
-#: inx/inkstitch_auto_run.inx:10
+#: inx/inkstitch_auto_run.inx:10 inx/inkstitch_convert_to_stroke.inx:13
+#: inx/inkstitch_jump_to_stroke.inx:10
 msgid "Tools: Stroke"
 msgstr ""
 
@@ -3163,8 +3207,7 @@ msgid "Preserve order of satin columns"
 msgstr ""
 
 #: inx/inkstitch_auto_satin.inx:12 inx/inkstitch_convert_to_satin.inx:10
-#: inx/inkstitch_convert_to_stroke.inx:13 inx/inkstitch_cut_satin.inx:10
-#: inx/inkstitch_flip.inx:10
+#: inx/inkstitch_cut_satin.inx:10 inx/inkstitch_flip.inx:10
 msgid "Tools: Satin"
 msgstr ""
 
@@ -4043,12 +4086,56 @@ msgstr ""
 msgid "Restart Inkscape to use."
 msgstr ""
 
+#: inx/inkstitch_jump_to_stroke.inx:3
+msgid "Jump Stitch to Stroke"
+msgstr ""
+
 #: inx/inkstitch_layer_commands.inx:3
 msgid "Add Layer Commands"
 msgstr ""
 
 #: inx/inkstitch_lettering.inx:3
 msgid "Lettering"
+msgstr ""
+
+#: inx/inkstitch_lettering_along_path.inx:3
+msgid "Lettering along path"
+msgstr ""
+
+#: inx/inkstitch_lettering_along_path.inx:15
+msgid "Stretch"
+msgstr ""
+
+#: inx/inkstitch_lettering_along_path.inx:15
+msgid "Expand glyph and word spacing to stretch lettering over the entire path"
+msgstr ""
+
+#: inx/inkstitch_lettering_along_path.inx:18
+msgid "This extension bends an Ink/Stitch text to a path."
+msgstr ""
+
+#: inx/inkstitch_lettering_along_path.inx:19
+msgid "Select Ink/Stitch text and a path before running this extension."
+msgstr ""
+
+#: inx/inkstitch_lettering_along_path.inx:21
+msgid "The text needs to meet these conditions:"
+msgstr ""
+
+#: inx/inkstitch_lettering_along_path.inx:22
+msgid "* The text consists of only one line of text"
+msgstr ""
+
+#: inx/inkstitch_lettering_along_path.inx:23
+msgid "* The text should not be too large for the given path"
+msgstr ""
+
+#: inx/inkstitch_lettering_along_path.inx:24
+msgid "* Text text should not contain trim symbols"
+msgstr ""
+
+#: inx/inkstitch_lettering_along_path.inx:26
+msgid "The stretch option defines whether the spaces between glyphs should be expanded so that the text stretches over the entire path."
 msgstr ""
 
 #: inx/inkstitch_lettering_custom_font_dir.inx:3

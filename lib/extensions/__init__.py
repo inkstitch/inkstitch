@@ -25,6 +25,7 @@ from .gradient_blocks import GradientBlocks
 from .input import Input
 from .install import Install
 from .install_custom_palette import InstallCustomPalette
+from .jump_to_stroke import JumpToStroke
 from .layer_commands import LayerCommands
 from .lettering import Lettering
 from .lettering_custom_font_dir import LetteringCustomFontDir
@@ -69,6 +70,7 @@ __all__ = extensions = [StitchPlanPreview,
                         CommandsScaleSymbols,
                         ConvertToSatin,
                         ConvertToStroke,
+                        JumpToStroke,
                         CutSatin,
                         AutoSatin,
                         AutoRun,
