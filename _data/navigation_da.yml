@@ -1,0 +1,217 @@
+# main links
+main:
+  - title: "Features"
+    url: /da/features/
+  - title: "User Manual"
+    url: /da/docs/install/
+  - title: "Fonts"
+    url: /da/fonts/font-library/
+  - title: "Tutorials"
+    url: /da/tutorials/
+  - title: "Get Help"
+    url: /da/docs/faq/
+  - title: "Get Involved"
+    url: /da/developers/introduction/
+    
+# index + specific pages which have the sidebar option in the header
+pages:
+  - title: "Features"
+    url: /da/features/
+  - title: "User Manual"
+    url: /da/docs/install/
+    children:
+      - title: "Installation"
+        url: /da/docs/install/
+      - title: "Workflow"
+        url: /da/docs/workflow/
+      - title: Stitch Library
+        url: /da/docs/stitch-library/
+      - title: "FAQ"
+        url: /da/docs/faq/
+  - title: "Tutorials"
+    url: /da/tutorials/
+    children:
+      - title: "Artwork Galleries"
+        url: /da/tutorials/inspiration/
+      - title: "Sample Files"
+        url: /da/tutorials/resources/samples/
+      - title: "Templates"
+        url: /da/tutorials/resources/templates/
+      - title: "Tutorials"
+        url: /da/tutorials/
+      - title: "DIY Embroidery Machine"
+        url: /da/tutorials/embroidery-machine/
+  - title: "Get involved"
+    url: /da/developers/introduction/
+  - title: "News"
+    url: /da/news/
+
+# documentation links
+docs:
+  - title: Installation
+    url: /da/docs/install/
+    children:
+      - title: "Windows"
+        url: /da/docs/install-windows/
+      - title: "macOS"
+        url: /da/docs/install-macos/
+      - title: "Linux"
+        url: /da/docs/install-linux/
+  - title: Getting Started
+    children:
+      - title: "Customize"
+        url: /da/docs/customize/
+      - title: "Basic Usage"
+        url: /da/docs/basic-usage/
+      - title: "Workflow"
+        url: /da/docs/workflow/
+  - title: "Stitch Library"
+    url: /da/docs/stitch-library/
+    children:
+      - title: "Manual Stitch"
+        url: /da/docs/stitches/manual-stitch/
+      - title: "Running Stitch"
+        url: /da/docs/stitches/running-stitch/
+      - title: "Bean Stitch"
+        url: /da/docs/stitches/bean-stitch/
+      - title: "Ripple Stitch"
+        url: /da/docs/stitches/ripple-stitch/
+      - title: "Zig-Zag (Simple Satin)"
+        url: /da/docs/stitches/zigzag-stitch/
+      - title: "Satin Column"
+        url: /da/docs/stitches/satin-column/
+      - title: "E-Stitch"
+        url: /da/docs/stitches/e-stitch/
+      - title: "Fill Stitch"
+        url: /da/docs/stitches/fill-stitch/
+      - title: "Contour Fill"
+        url: /da/docs/stitches/contour-fill/
+      - title: "Guided Fill"
+        url: /da/docs/stitches/guided-fill/
+      - title: "Stitch patterns"
+        url: /da/docs/stitches/patterns/
+  - title: Interface
+    children:
+    - title: "Commands"
+      url: /da/docs/commands/
+    - title: "Cutwork"
+      url: /da/docs/cutwork/
+    - title: "Edit"
+      url: /da/docs/edit/
+    - title: "Font Management"
+      url: /da/docs/font-tools/
+    - title: "Lettering"
+      url: /da/docs/lettering/
+    - title: "Params"
+      url: /da/docs/params/
+    - title: "Preferences"
+      url: /da/docs/preferences/
+    - title: "Tools: Fill"
+      url: /da/docs/fill-tools/
+    - title: "Tools: Satin"
+      url: /da/docs/satin-tools/
+    - title: "Tools: Stroke"
+      url: /da/docs/stroke-tools/
+    - title: "Thread Color Management"
+      url: /da/docs/thread-color/
+    - title: "Troubleshoot"
+      url: /da/docs/troubleshoot/
+    - title: "Visualize"
+      url: /da/docs/visualize/
+  - title: "File Handling"
+    children:
+    - title: Supported File Formats
+      url: /da/docs/file-formats/
+    - title: Export and Import Files
+      url: /da/docs/import-export/
+    - title: Print PDF
+      url: /da/docs/print-pdf/
+    - title: Threadlist
+      url: /da/docs/threadlist/
+  - title: Tips
+    children:
+      - title: "Fonts"
+        url: /da/docs/fonts/
+      - title: "Hidden Features"
+        url: /da/docs/features/
+      - title: Inkscape Tips
+        url: /da/docs/inkscape-tips/
+      - title: Machine Database
+        url: /da/docs/machine-database/
+  - title: Troubleshooting
+    children:
+      - title: "F.A.Q."
+        url: /da/docs/faq/
+      - title: Error Messages
+        url: /da/docs/error-messages/
+      - title: "Missing Translation"
+        url: /da/docs/localization/
+
+# fonts
+fonts:
+  - title: Font Tutorials
+    children:
+      - title: Create New Fonts
+        url: /da/tutorials/font-creation
+  - title: Font Library
+    url: /da/fonts/font-library/
+    
+# tutorial links
+tutorials:
+  - title: Inspiration
+    children:
+      - title: "Artwork Gallery"
+        url: /da/tutorials/inspiration/
+  - title: Hardware Projects
+    children:
+      - title: "DIY Embroidery Machine"
+        url: /da/tutorials/embroidery-machine/
+      - title: "Sock Hoop"
+        url: /da/tutorials/sock-hoop/
+  - title: Resources
+    children:
+    - title: "Branding Guide"
+      url: /da/tutorials/resources/branding-guide/
+    - title: "Sample Files"
+      url: /da/tutorials/resources/samples/
+    - title: "Templates"
+      url: /da/tutorials/resources/templates/
+  - title: Tutorials
+    url: /da/tutorials/
+    children:
+    - title: "Tutorials A - Z"
+      url: /da/tutorials/
+    - title: "Video Tutorials"
+      url: /da/tutorials/video/
+    - title: External Tutorials
+      url: /da/tutorials/external-tutorials/
+  
+# developers links
+developers:
+  - title: Get involved
+    url: /da/developers/introduction/
+  - title: Ink/Stitch
+    url: /da/developers/inkstitch/
+    children:
+    - title: Manual Setup (Linux/macOS)
+      url: /da/developers/inkstitch/manual-setup/
+    - title: Manual Setup (Windows)
+      url: /da/developers/inkstitch/windows-manual-setup/
+    - title: Manual Build (Windows)
+      url: /da/developers/inkstitch/windows-manual-build
+    - title: Debugging and Profiling
+      url: /da/developers/inkstitch/debug/
+    - title: Coding Style
+      url: /da/developers/inkstitch/coding-style/
+    - title: Namespace
+      url: /da/developers/inkstitch/namespace/
+  - title: Pyembroidery
+    url: /da/developers/pyembroidery
+  - title: Documentation
+    url: /da/developers/documentation/
+  - title: Localization
+    url: /da/developers/localize/
+  - title: "Bug Reports"
+    url: /da/developers/report-bugs/
+  - title: "Statistics"
+    url: /da/statistics/

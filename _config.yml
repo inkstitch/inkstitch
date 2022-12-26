@@ -280,6 +280,9 @@ languages:
   - 
     - 
     - English
+  -
+    - da
+    - Dansk
   - 
     - de
     - Deutsch
@@ -354,6 +357,11 @@ defaults:
       path: "_posts/de"
     values:
       lang: de
+    # da
+  - scope:
+      path: "_posts/da"
+    values:
+      lang: da
     # fr
   - scope:
       path: "_posts/fr"
@@ -380,6 +388,11 @@ defaults:
       path: "_pages/de"
     values:
       lang: de
+    # da
+  - scope:
+      path: "_pages/da"
+    values:
+      lang: da
     # fr
   - scope:
       path: "_pages/fr"
@@ -406,6 +419,11 @@ defaults:
       path: "_docs/de"
     values:
       lang: de
+    # da
+  - scope:
+      path: "_docs/da"
+    values:
+      lang: da
     # fr
   - scope:
       path: "_docs/fr"
@@ -433,6 +451,11 @@ defaults:
       path: "_lettering/de"
     values:
       lang: de
+    # da
+  - scope:
+      path: "_lettering/da"
+    values:
+      lang: da
     # fr
   - scope:
       path: "_lettering/fr"
@@ -459,6 +482,11 @@ defaults:
       path: "_fonts/de"
     values:
       lang: de
+    # da
+  - scope:
+      path: "_fonts/da"
+    values:
+      lang: da
     # fr
   - scope:
       path: "_fonts/fr"
@@ -485,6 +513,11 @@ defaults:
       path: "_tutorials/de"
     values:
       lang: de
+    # da
+  - scope:
+      path: "_tutorials/da"
+    values:
+      lang: da
     # fr
   - scope:
       path: "_tutorials/fr"
@@ -512,6 +545,11 @@ defaults:
       path: "_tutorial/de"
     values:
       lang: de
+    # da
+  - scope: 
+      path: "_tutorial/da"
+    values:
+      lang: da
     # fr
   - scope:
       path: "_tutorial/fr"
@@ -538,6 +576,11 @@ defaults:
       path: "_developers/de"
     values:
       lang: de
+    # da
+  - scope:
+      path: "_developers/da"
+    values:
+      lang: da
     # fr
   - scope:
       path: "_developers/fr"
@@ -557,8 +600,4 @@ defaults:
 #  - scope:
 #      path: "*/de"
 #    values:
-#      lang: de  
-
-  
-
-
+#      lang: de

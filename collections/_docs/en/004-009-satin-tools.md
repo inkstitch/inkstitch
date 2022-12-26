@@ -47,21 +47,6 @@ This extension will convert a stroke into a satin column with a specified width.
 2. Set the stroke width in the "Fill and Stroke" panel ("Stroke style" tab), which you can access with `Shift+Ctrl+F`
 2. Run `Extensions > Ink/Stitch  >  Tools: Satin > Convert Line to Satin`
 
-## Convert Satin to Stroke
-
-Satin to stroke will convert a satin column to it's centerline. This can be useful, when you decide later in the designing process to turn a satin column into a running stitch. You can also use it to alter the thickness of your satin column, when pull compensation isn't satisfying. In that case use this function to convert your satin column into a running stitch, set stroke width in the fill and stroke panel and run the ["Connvert line to to satin"](#convert-line-to-satin) function. 
-
-This works best on evenly spaced satin columns.
-
-![Satin to Stroke example](/assets/images/docs/en/satin_to_stroke.png)
-
-### Usage
-
-1. Select the satin column(s) you want to convert into a running stitch
-2. Run `Extensions > Ink/Stitch > Satin Tools > Convert satin to stroke...`
-3. Choose wether you want to keep selected satin column(s) or if you want to replace them
-4. Click apply
-
 ## Cut Satin Column
 
 Split a satin column at a specified point. The split happens at a stitch boundary to ensure that the two resulting satins sew just like the original. All parameters set on the original satin remain on the two new satins, and all rungs are retained. If one of the satins would have no rungs left, a new rung is added.

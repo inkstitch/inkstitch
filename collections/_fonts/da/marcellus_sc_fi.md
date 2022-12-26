@@ -1,0 +1,34 @@
+---
+title: "Marcellus SC FI "
+permalink: /da/fonts/marcellus_sc_fi/
+last_modified_at: 2022-05-25
+toc: false
+preview_image:
+  - url: /assets/images/fonts/marcellus_sc_fi.jpg
+    height: 29
+---
+![MarcellusSCFI](/assets/images/fonts/marcellus_sc_fi.jpg)
+
+# Glyphes
+
+This font contains 109 glyphs:
+	
+!@'’(),-./0123456789:;=?@ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz¡¿ÄÆÈÖÜàáâäæçèéêëìíîïñòóôöùúûüŒœ
+
+Note that  lower cases are actually small caps.
+
+## Dimensions
+
+At 100%, this font is approximatively 30 mm (1 1/4 inch) high.
+
+It can be scaled up to 200% (approx. 40 mm, 2.5 inches) or scaled down to 70% (approx. 21 mm, 0.8 inch).
+
+The embroidering parameters allow you to scale up further, but then too long stitches are avoided by spliting the satin stitches you may or not like the effect.
+
+
+
+## In real life
+
+{% include folder-galleries path="fonts/marcellus/" %}
+
+[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/marcelusSC_FI/LICENSE)

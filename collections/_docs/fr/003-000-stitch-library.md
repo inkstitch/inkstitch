@@ -34,6 +34,13 @@ En mode point manuel Ink/Stitch utilisera chaque nœud d’un chemin comme point
 
 [En savoir plus](/fr/docs/stitches/manual-stitch/){: .btn .btn--primary}
 
+### Ripple Stitch
+Ripple stitch is a versatile stitch type that stretches over a surface in spirals, rows of lines or even grids.
+
+![Ripple Stitch](/assets/images/docs/ripplefly.jpg)
+
+[Learn more](/docs/stitches/ripple-stitch){: .btn .btn--primary}
+
 ### Point Zig-Zag
 Le point zig-zag est une option très basique pour créer une simple ligne en zig-zag. Nous vous recommandons de ne l'utiliser que pour les lignes droites, parce qu'ils ne piqueront pas bien autour des bords. Dans la plupart des cas, choisissez plutôt une colonne satin.
 ![Zigzag Detail](/assets/images/docs/zigzag-stitch-detail.png)
@@ -70,3 +77,17 @@ Le point de remplissage est utilisé pour remplir une grande surface avec une co
 ![Point de remplissage](/assets/images/docs/fill-stitch-realistic.png)
 
 [En savoir plus](/fr/docs/stitches/fill-stitch/){: .btn .btn--primary}
+
+### Contour Stitch
+Contour fill covers areas with stitches following the contour of an object.
+
+![Contour stitch](/assets/images/docs/contour-fill-detail.jpg)
+
+[Learn more](/fr/docs/stitches/contour-stitch){: .btn .btn--primary}
+
+### Guided Fill
+Create guide lines to generate a curved fill.
+
+![Guided fill](/assets/images/docs/guided-fill-complex.svg)
+
+[Learn more](/fr/docs/stitches/guided-fill){: .btn .btn--primary}

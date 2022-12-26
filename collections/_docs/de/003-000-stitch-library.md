@@ -2,7 +2,7 @@
 title: "Stich-Bibliothek"
 permalink: /de/docs/stitch-library/
 excerpt: ""
-last_modified_at: 2019-07-06
+last_modified_at: 2022-12-08
 toc: true
 ---
 Ink/Stitch-Sticharten können grob in drei Gruppen eingeteilt werden: Linien, Satin- und Füllstich.
@@ -36,6 +36,13 @@ Im manuellen Stichmodus stellt jeder Knoten des Pfades einen Nadeleinstich dar. 
 ![Manual Stitch Detail](/assets/images/docs/manual-stitch-detail.png)
 
 [Mehr lesen](/de/docs/stitches/manual-stitch/){: .btn .btn--primary}
+
+### Ripple Stich
+Ripple-Stich vielseitiger Stichtyp, der sich in Spiralen, Reihen oder sogar Gittern über eine Fläche erstreckt.
+
+![Ripple Stitch](/assets/images/docs/ripplefly.jpg)
+
+[Mehr lesen](/de/docs/stitches/ripple-stitch){: .btn .btn--primary}
 
 ### Zick-Zack Stich
 
@@ -80,3 +87,17 @@ Füllstich wird benutzt, um große Bereiche mit einer Farbe zu füllen.
 ![Fill stitch realistic](/assets/images/docs/fill-stitch-realistic.png)
 
 [Mehr lesen](/de/docs/stitches/fill-stitch/){: .btn .btn--primary}
+
+### Konturfüllung
+Konturfüllung füllt eine Fläche mit kleiner werdenden Kopien ihrer Kontur.
+
+![Contour stitch](/assets/images/docs/contour-fill-detail.jpg)
+
+[Mehr lesen](/de/docs/stitches/contour-stitch){: .btn .btn--primary}
+
+### Kurvenfüllung
+Kurvenfüllung füllt eine Fläche mit Kopien einer Führungslinie.
+
+![Guided fill](/assets/images/docs/guided-fill-complex.svg)
+
+[Mehr lesen](/de/docs/stitches/guided-fill){: .btn .btn--primary}

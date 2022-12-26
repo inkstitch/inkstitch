@@ -2,7 +2,7 @@
 title: "Stitch Library"
 permalink: /docs/stitch-library/
 excerpt: ""
-last_modified_at: 2019-07-06
+last_modified_at: 2022-12-08
 toc: true
 ---
 Ink/Stitch stitch types can be roughly divided into three sections: stroke, satin and fill.
@@ -32,6 +32,13 @@ In manual stitch mode Ink/Stitch will use each node of a path as a needle penetr
 ![Manual Stitch Detail](/assets/images/docs/manual-stitch-detail.png)
 
 [Learn more](/docs/stitches/manual-stitch/){: .btn .btn--primary}
+
+### Ripple Stitch
+Ripple stitch is a versatile stitch type that stretches over a surface in spirals, rows of lines or even grids.
+
+![Ripple Stitch](/assets/images/docs/ripplefly.jpg)
+
+[Learn more](/docs/stitches/ripple-stitch){: .btn .btn--primary}
 
 ### Zig-Zag Stitch
 Zig-Zag stitches are a very basic option to create a simple zig-zag line. We recommend to use them only for straight lines, because they will not stitch nicely around edges. In most cases, you would prefer a satin column instead.
@@ -72,3 +79,17 @@ Fill stitch is used to fill big areas with a color.
 ![Fill stitch realistic](/assets/images/docs/fill-stitch-realistic.png)
 
 [Learn more](/docs/stitches/fill-stitch/){: .btn .btn--primary}
+
+### Contour Stitch
+Contour fill covers areas with stitches following the contour of an object.
+
+![Contour stitch](/assets/images/docs/contour-fill-detail.jpg)
+
+[Learn more](/docs/stitches/contour-stitch){: .btn .btn--primary}
+
+### Guided Fill
+Create guide lines to generate a curved fill.
+
+![Guided fill](/assets/images/docs/guided-fill-complex.svg)
+
+[Learn more](/docs/stitches/guided-fill){: .btn .btn--primary}

@@ -1,0 +1,30 @@
+---
+title: "Ink/Stitch"
+permalink: /da/
+locale: da_DK
+sidebar:
+  nav: "pages"
+lang: da
+---
+<p>An open-source machine embroidery design platform based on <a href="https://inkscape.org/">Inkscape</a>.</p>
+
+<img src="https://user-images.githubusercontent.com/11083514/41197881-e862e07a-6c62-11e8-89d6-32915e52bece.png" alt="Ink/Stitch" style="margin-bottom: 1em;">
+
+<p>Ink/Stitch aims to be a full-fledged, cross-platform embroidery digitizing platform based entirely on free, open-source software.  Our goal is to be approachable for hobbyists while also providing the power needed by professional digitizers.</p>
+
+<p><a href="/docs/install/" class="btn btn--primary btn--large">Install Ink/Stitch</a></p>
+
+<h2>User Comments</h2>
+<blockquote>
+<p>I've been using Ink/Stitch exclusively in my freelance digitizing work since the beginning of the New Year [2019]. Finally made it possible for me to only go into my Windows VMs for nostalgia only and not a necessity for day to day work.</p>
+<p><strong>wwderw</strong></p>
+</blockquote>
+<blockquote>
+<p>I started embroidery with little to no money after buying the machine-- it's been amazing to find a free software with such amazing capabilities. Thank you so much for creating this wonderful software!!</p>
+<p><strong>HoneyPhantomhive</strong></p>
+</blockquote>
+
+<h2>News</h2>
+{% assign posts = site.posts | where: "lang", "en"  %}
+<ul>{% for post in posts offset: 0 limit: 5 %}<li>{{ post.date  | date: "%B %-d, %Y" }}: <a href="{{ post.url }}">{{ post.title }}</a></li>{% endfor %}</ul>
+<p><a href="{{ site.url }}/news/" class="btn btn--primary">{{ site.data.ui-text[page.lang].more_label | default: "Read more" }}</a></p>
