@@ -3,17 +3,15 @@
 # Copyright (c) 2022 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-from lxml import etree
-from shapely.geometry import LineString, MultiLineString, MultiPolygon
-from shapely.ops import linemerge, voronoi_diagram
+from inkex import Boolean, Group, PathElement, errormsg
+from inkex.units import convert_unit
+from shapely.geometry import LineString, MultiLineString, MultiPolygon, Polygon
+from shapely.ops import linemerge, split, voronoi_diagram
 
-import inkex
-
-from ..elements import FillStitch
+from ..elements import FillStitch, Stroke
 from ..i18n import _
 from ..stitches.running_stitch import running_stitch
 from ..svg import get_correction_transform
-from ..svg.tags import INKSCAPE_LABEL, SVG_PATH_TAG
 from ..utils.geometry import line_string_to_point_list
 from .base import InkstitchExtension
 
@@ -21,33 +19,47 @@ from .base import InkstitchExtension
 class FillToStroke(InkstitchExtension):
     def __init__(self, *args, **kwargs):
         InkstitchExtension.__init__(self, *args, **kwargs)
+        self.arg_parser.add_argument("--options", dest="options", type=str, default="")
+        self.arg_parser.add_argument("--info", dest="help", type=str, default="")
         self.arg_parser.add_argument("-t", "--threshold", dest="threshold", type=int, default=10)
-        self.arg_parser.add_argument("-o", "--keep_original", dest="keep_original", type=inkex.Boolean, default=False)
+        self.arg_parser.add_argument("-o", "--keep_original", dest="keep_original", type=Boolean, default=False)
+        self.arg_parser.add_argument("-d", "--dashed_line", dest="dashed_line", type=Boolean, default=True)
+        self.arg_parser.add_argument("-w", "--line_width", dest="line_width", type=float, default=1)
 
     def effect(self):
-        if not self.get_elements():
+        if not self.svg.selected or not self.get_elements():
+            errormsg(_("Please select one or more fill objects to render the centerline."))
             return
 
-        if not self.svg.selected:
-            inkex.errormsg(_("Please select one or more fill objects to render the centerline."))
+        cut_lines = []
+        fill_shapes = []
+
+        fill_shapes, cut_lines = self._get_shapes()
+
+        if not fill_shapes:
+            errormsg(_("Please select one or more fill objects to render the centerline."))
             return
 
-        for element in self.elements:
-            if not isinstance(element, FillStitch):
-                continue
+        # insert centerline group before the first selected element
+        first = fill_shapes[0].node
+        parent = first.getparent()
+        index = parent.index(first) + 1
+        centerline_group = Group.new("Centerline Group", id=self.uniqueId("centerline_group_"))
+        parent.insert(index, centerline_group)
 
-            parent = element.node.getparent()
-            index = parent.index(element.node) + 1
+        for element in fill_shapes:
             transform = get_correction_transform(element.node)
-            style = "fill:none;stroke:%s;stroke-width:1;stroke-dasharray:12,1.5;" % element.node.style['fill']
-            centerline_group = etree.Element("g",
-                                             {
-                                              INKSCAPE_LABEL: _("Centerline Group"),
-                                              "id": self.uniqueId("centerline_group_")
-                                             })
-            parent.insert(index, centerline_group)
+            dashed = "stroke-dasharray:12,1.5;" if self.options.dashed_line else ""
+            stroke_width = convert_unit(self.options.line_width, self.svg.unit)
+            style = "fill:none;stroke:%s;stroke-width:%s;%s" % (element.node.style['fill'], stroke_width, dashed)
 
-            for polygon in element.shape.geoms:
+            multipolygon = element.shape
+            for cut_line in cut_lines:
+                split_polygon = split(multipolygon, cut_line)
+                poly = [polygon for polygon in split_polygon.geoms if isinstance(polygon, Polygon)]
+                multipolygon = MultiPolygon(poly)
+
+            for polygon in multipolygon.geoms:
                 multilinestring = self._get_centerline(polygon)
                 if multilinestring is None:
                     continue
@@ -55,8 +67,28 @@ class FillToStroke(InkstitchExtension):
                 # insert new elements
                 self._insert_elements(multilinestring, centerline_group, index, transform, style)
 
+        # clean up
         if not self.options.keep_original:
-            parent.remove(element.node)
+            self._remove_elements()
+
+    def _get_shapes(self):
+        fill_shapes = []
+        cut_lines = []
+        for element in self.elements:
+            if isinstance(element, FillStitch):
+                fill_shapes.append(element)
+            elif isinstance(element, Stroke):
+                cut_lines.extend(list(element.as_multi_line_string().geoms))
+        return fill_shapes, cut_lines
+
+    def _remove_elements(self):
+        for element in self.elements:
+            # it is possible, that we get one element twice (if it has both, a fill and a stroke)
+            # just ignore the second time
+            try:
+                element.node.getparent().remove(element.node)
+            except AttributeError:
+                pass
 
     def _get_high_res_polygon(self, polygon):
         # use running stitch method
@@ -70,7 +102,7 @@ class FillToStroke(InkstitchExtension):
     def _get_centerline(self, polygon):
         # increase the resolution of the polygon
         polygon = self._get_high_res_polygon(polygon)
-        if polygon is None:
+        if polygon is isinstance(polygon, MultiPolygon):
             return
 
         # generate voronoi centerline
@@ -95,13 +127,15 @@ class FillToStroke(InkstitchExtension):
 
     def _get_voronoi_centerline(self, polygon):
         lines = voronoi_diagram(polygon, edges=True).geoms[0]
+        if not isinstance(lines, MultiLineString):
+            return
         multilinestring = []
         for line in lines.geoms:
             if polygon.covers(line):
                 multilinestring.append(line)
         lines = linemerge(multilinestring)
         if lines.is_empty:
-            return None
+            return
         return self._ensure_multilinestring(lines)
 
     def _get_start_and_end_points(self, multilinestring):
@@ -169,10 +203,5 @@ class FillToStroke(InkstitchExtension):
             d = "M "
             for coord in line.coords:
                 d += "%s,%s " % (coord[0], coord[1])
-            centerline_element = etree.Element(SVG_PATH_TAG,
-                                               {
-                                                "style": style,
-                                                "transform": transform,
-                                                "d": d
-                                               })
+            centerline_element = PathElement(d=d, style=style, transform=transform)
             parent.insert(index, centerline_element)
