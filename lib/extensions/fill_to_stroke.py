@@ -46,12 +46,14 @@ class FillToStroke(InkstitchExtension):
         index = parent.index(first) + 1
         centerline_group = Group.new("Centerline Group", id=self.uniqueId("centerline_group_"))
         parent.insert(index, centerline_group)
+        transform = get_correction_transform(first)
 
         for element in fill_shapes:
-            transform = get_correction_transform(element.node)
+            transform = element.node.transform @ transform
             dashed = "stroke-dasharray:12,1.5;" if self.options.dashed_line else ""
             stroke_width = convert_unit(self.options.line_width, self.svg.unit)
-            style = "fill:none;stroke:%s;stroke-width:%s;%s" % (element.node.style['fill'], stroke_width, dashed)
+            color = element.node.style('fill')
+            style = "fill:none;stroke:%s;stroke-width:%s;%s" % (color, stroke_width, dashed)
 
             multipolygon = element.shape
             for cut_line in cut_lines:
@@ -203,5 +205,5 @@ class FillToStroke(InkstitchExtension):
             d = "M "
             for coord in line.coords:
                 d += "%s,%s " % (coord[0], coord[1])
-            centerline_element = PathElement(d=d, style=style, transform=transform)
+            centerline_element = PathElement(d=d, style=style, transform=str(transform))
             parent.insert(index, centerline_element)
