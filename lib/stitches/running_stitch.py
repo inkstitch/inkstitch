@@ -4,6 +4,7 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 import math
+import typing
 from copy import copy
 
 import numpy as np
@@ -13,7 +14,7 @@ from ..utils import prng
 """ Utility functions to produce running stitches. """
 
 
-def split_segment_even_n(a, b, segments: int, jitter_sigma: float = 0.0, random_seed: str | None = None) -> list[shgeo.Point]:
+def split_segment_even_n(a, b, segments: int, jitter_sigma: float = 0.0, random_seed=None) -> typing.List[shgeo.Point]:
     if segments <= 1:
         return []
     line = shgeo.LineString((a, b))
@@ -27,13 +28,13 @@ def split_segment_even_n(a, b, segments: int, jitter_sigma: float = 0.0, random_
     return [line.interpolate(x, normalized=True) for x in sorted(splits)]
 
 
-def split_segment_even_dist(a, b, max_length: float, jitter_sigma: float = 0.0, random_seed: str | None = None) -> list[shgeo.Point]:
+def split_segment_even_dist(a, b, max_length: float, jitter_sigma: float = 0.0, random_seed=None) -> typing.List[shgeo.Point]:
     distance = shgeo.Point(a).distance(shgeo.Point(b))
     segments = math.ceil(distance / max_length)
     return split_segment_even_n(a, b, segments, jitter_sigma, random_seed)
 
 
-def split_segment_random_phase(a, b, length: float, length_sigma: float, random_seed: str) -> list[shgeo.Point]:
+def split_segment_random_phase(a, b, length: float, length_sigma: float, random_seed: str) -> typing.List[shgeo.Point]:
     line = shgeo.LineString([a, b])
     progress = length * prng.uniformFloats(random_seed, "phase")[0]
     splits = [progress]

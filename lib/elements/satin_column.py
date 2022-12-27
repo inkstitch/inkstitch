@@ -6,6 +6,7 @@
 from copy import deepcopy
 import itertools
 from itertools import chain
+import typing
 
 import numpy as np
 from inkex import paths
@@ -769,7 +770,7 @@ class SatinColumn(EmbroideryElement):
                 distance_remaining -= segment_length
                 pos = segment_end
 
-    def plot_points_on_rails(self, spacing, offset_px=(0, 0), offset_proportional=(0, 0), use_random=False) -> list[tuple[Point, Point]]:
+    def plot_points_on_rails(self, spacing, offset_px=(0, 0), offset_proportional=(0, 0), use_random=False) -> typing.List[typing.Tuple[Point, Point]]:
         # Take a section from each rail in turn, and plot out an equal number
         # of points on both rails.  Return the points plotted. The points will
         # be contracted or expanded by offset using self.offset_points().
