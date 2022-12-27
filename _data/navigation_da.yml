@@ -1,54 +1,54 @@
 # main links
 main:
-  - title: "Features"
+  - title: "Funktioner"
     url: /da/features/
-  - title: "User Manual"
+  - title: "Bruger Manual"
     url: /da/docs/install/
-  - title: "Fonts"
+  - title: "Skrifttyper (fonter)"
     url: /da/fonts/font-library/
-  - title: "Tutorials"
+  - title: "Vejledninger"
     url: /da/tutorials/
-  - title: "Get Help"
+  - title: "Få hjælp"
     url: /da/docs/faq/
-  - title: "Get Involved"
+  - title: "Bliv involveret"
     url: /da/developers/introduction/
     
 # index + specific pages which have the sidebar option in the header
 pages:
-  - title: "Features"
+  - title: "Funktioner"
     url: /da/features/
-  - title: "User Manual"
+  - title: "Brugermanual"
     url: /da/docs/install/
     children:
       - title: "Installation"
         url: /da/docs/install/
       - title: "Workflow"
         url: /da/docs/workflow/
-      - title: Stitch Library
+      - title: Sting bibliotek
         url: /da/docs/stitch-library/
       - title: "FAQ"
         url: /da/docs/faq/
-  - title: "Tutorials"
+  - title: "Vejledninger"
     url: /da/tutorials/
     children:
-      - title: "Artwork Galleries"
+      - title: "Broderier til inspiration"
         url: /da/tutorials/inspiration/
-      - title: "Sample Files"
+      - title: "Eksempel filer"
         url: /da/tutorials/resources/samples/
-      - title: "Templates"
+      - title: "Skabeloner"
         url: /da/tutorials/resources/templates/
-      - title: "Tutorials"
+      - title: "Vejledninger"
         url: /da/tutorials/
-      - title: "DIY Embroidery Machine"
+      - title: "DIY broderisymaskine"
         url: /da/tutorials/embroidery-machine/
-  - title: "Get involved"
+  - title: "Bliv involveret"
     url: /da/developers/introduction/
-  - title: "News"
+  - title: "Nyheder"
     url: /da/news/
 
 # documentation links
 docs:
-  - title: Installation
+  - title: Installering
     url: /da/docs/install/
     children:
       - title: "Windows"
@@ -57,18 +57,18 @@ docs:
         url: /da/docs/install-macos/
       - title: "Linux"
         url: /da/docs/install-linux/
-  - title: Getting Started
+  - title: Kom igang!
     children:
-      - title: "Customize"
+      - title: "Tilpasning"
         url: /da/docs/customize/
-      - title: "Basic Usage"
+      - title: "Grundlæggende brug"
         url: /da/docs/basic-usage/
       - title: "Workflow"
         url: /da/docs/workflow/
-  - title: "Stitch Library"
+  - title: "Sting bibliotek"
     url: /da/docs/stitch-library/
     children:
-      - title: "Manual Stitch"
+      - title: "Manuelle sting"
         url: /da/docs/stitches/manual-stitch/
       - title: "Running Stitch"
         url: /da/docs/stitches/running-stitch/
@@ -76,19 +76,19 @@ docs:
         url: /da/docs/stitches/bean-stitch/
       - title: "Ripple Stitch"
         url: /da/docs/stitches/ripple-stitch/
-      - title: "Zig-Zag (Simple Satin)"
+      - title: "Zig-Zag (Enkel satin-sting)"
         url: /da/docs/stitches/zigzag-stitch/
       - title: "Satin Column"
         url: /da/docs/stitches/satin-column/
-      - title: "E-Stitch"
+      - title: "E-sting"
         url: /da/docs/stitches/e-stitch/
-      - title: "Fill Stitch"
+      - title: "Fyld sting"
         url: /da/docs/stitches/fill-stitch/
-      - title: "Contour Fill"
+      - title: "Kontur-fyld"
         url: /da/docs/stitches/contour-fill/
-      - title: "Guided Fill"
+      - title: "Guidet fyld"
         url: /da/docs/stitches/guided-fill/
-      - title: "Stitch patterns"
+      - title: "Sting-mønstre"
         url: /da/docs/stitches/patterns/
   - title: Interface
     children:
@@ -120,70 +120,70 @@ docs:
       url: /da/docs/visualize/
   - title: "File Handling"
     children:
-    - title: Supported File Formats
+    - title: Filformater, som er støttet
       url: /da/docs/file-formats/
-    - title: Export and Import Files
+    - title: Export og import af filer
       url: /da/docs/import-export/
     - title: Print PDF
       url: /da/docs/print-pdf/
-    - title: Threadlist
+    - title: Liste over sytråd
       url: /da/docs/threadlist/
   - title: Tips
     children:
-      - title: "Fonts"
+      - title: "Skrifttyper (fonter)"
         url: /da/docs/fonts/
-      - title: "Hidden Features"
+      - title: "Skjulte funktioner"
         url: /da/docs/features/
-      - title: Inkscape Tips
+      - title: Tips til Inkscape
         url: /da/docs/inkscape-tips/
-      - title: Machine Database
+      - title: Database over symaskiner
         url: /da/docs/machine-database/
-  - title: Troubleshooting
+  - title: Problemløsning
     children:
       - title: "F.A.Q."
         url: /da/docs/faq/
-      - title: Error Messages
+      - title: Fejlmeldinger
         url: /da/docs/error-messages/
-      - title: "Missing Translation"
+      - title: "Manglende oversættelse"
         url: /da/docs/localization/
 
 # fonts
 fonts:
-  - title: Font Tutorials
+  - title: Vejledninger til skrifttyper (fonter)
     children:
-      - title: Create New Fonts
+      - title: Lav nye skrifttyper (fonter)
         url: /da/tutorials/font-creation
-  - title: Font Library
+  - title: Skrifttype biblioteket
     url: /da/fonts/font-library/
     
 # tutorial links
 tutorials:
   - title: Inspiration
     children:
-      - title: "Artwork Gallery"
+      - title: "Til inpiration"
         url: /da/tutorials/inspiration/
-  - title: Hardware Projects
+  - title: Hardware prosjekter
     children:
-      - title: "DIY Embroidery Machine"
+      - title: "DIY broderi-symaskine"
         url: /da/tutorials/embroidery-machine/
-      - title: "Sock Hoop"
+      - title: "Broderiramme til sokker"
         url: /da/tutorials/sock-hoop/
-  - title: Resources
+  - title: Ressourcer
     children:
     - title: "Branding Guide"
       url: /da/tutorials/resources/branding-guide/
-    - title: "Sample Files"
+    - title: "Eksempel filer"
       url: /da/tutorials/resources/samples/
-    - title: "Templates"
+    - title: "Skabeloner"
       url: /da/tutorials/resources/templates/
-  - title: Tutorials
+  - title: Vejledninger
     url: /da/tutorials/
     children:
-    - title: "Tutorials A - Z"
+    - title: "Vejledninger A - Z"
       url: /da/tutorials/
-    - title: "Video Tutorials"
+    - title: "Video-vejledninger"
       url: /da/tutorials/video/
-    - title: External Tutorials
+    - title: Externe vejledninger 
       url: /da/tutorials/external-tutorials/
   
 # developers links
