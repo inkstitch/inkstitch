@@ -97,8 +97,8 @@ class SatinColumn(EmbroideryElement):
                      'Two values separated by a space may be used for an aysmmetric effect.'),
            default=0, type='float', unit="% (each side)", sort_index=91)
     @cache
-    def random_width_decrease_percent(self):
-        return self.get_split_float_param("random_width_decrease_percent", (0, 0))
+    def random_width_decrease(self):
+        return self.get_split_float_param("random_width_decrease_percent", (0, 0)) / 100
 
     @property
     @param('random_width_increase_percent',
@@ -107,23 +107,23 @@ class SatinColumn(EmbroideryElement):
                      'Two values separated by a space may be used for an aysmmetric effect.'),
            default=0, type='float', unit="% (each side)", sort_index=90)
     @cache
-    def random_width_increase_percent(self):
-        return self.get_split_float_param("random_width_increase_percent", (0, 0))
+    def random_width_increase(self):
+        return self.get_split_float_param("random_width_increase_percent", (0, 0)) / 100
 
     @property
-    @param('random_zigzag_spacing',
+    @param('random_zigzag_spacing_percent',
            _('Random zig-zag spacing percentage increase'),
            tooltip=_('Percentage of stitch length added randomply Peak-to-peak distance between zig-zags.'),
            default=0, type='float', unit="%", sort_index=92)
     def random_zigzag_spacing(self):
         # peak-to-peak distance between zigzags
-        return max(self.get_float_param("random_zigzag_spacing", 0), 0)
+        return max(self.get_float_param("random_zigzag_spacing_percent", 0), 0) / 100
 
     @property
     @param('random_split_phase',
            _('Random phase for split stitches'),
            tooltip=_('Controls whether split stitches are centered or with a random phase (which may increase stitch count).'),
-           default=False, type='boolean', sort_index=95)
+           default=False, type='boolean', sort_index=96)
     def random_split_phase(self):
         return self.get_boolean_param('random_split_phase')
 
@@ -131,19 +131,19 @@ class SatinColumn(EmbroideryElement):
     @param('min_random_split_length_mm',
            _('Minimum length for random-phase split.'),
            tooltip=_('Defaults to maximum stitch length. Smaller values allow for a transition between single-stitch and split-stitch.'),
-           default='', type='float', unit='mm', sort_index=96)
+           default='', type='float', unit='mm', sort_index=97)
     def min_random_split_length_px(self):
         if self.max_stitch_length_px is None:
             return None
         return min(self.max_stitch_length_px, self.get_float_param('min_random_split_length_mm', self.max_stitch_length_px))
 
     @property
-    @param('random_split_length_percent',
-           _('Random jitter split stitch'),
-           tooltip=_('randomizes split stitch length if random phase is emabled, stitch position if disabled.'),
-           type='float', unit="%", sort_index=97)
-    def random_split_length(self):
-        return min(max(self.get_float_param("random_split_length_percent", 0), 0), 100) / 100
+    @param('random_split_jitter_percent',
+           _('Random jitter for split stitches'),
+           tooltip=_('Randomizes split stitch length if random phase is enabled, stitch position if disabled.'),
+           default=0, type='float', unit="%", sort_index=95)
+    def random_split_jitter(self):
+        return min(max(self.get_float_param("random_split_jitter_percent", 0), 0), 100) / 100
 
     @property
     @param('short_stitch_inset',
@@ -770,7 +770,8 @@ class SatinColumn(EmbroideryElement):
                 distance_remaining -= segment_length
                 pos = segment_end
 
-    def plot_points_on_rails(self, spacing, offset_px=(0, 0), offset_proportional=(0, 0), use_random=False) -> typing.List[typing.Tuple[Point, Point]]:
+    def plot_points_on_rails(self, spacing, offset_px=(0, 0), offset_proportional=(0, 0), use_random=False
+                             ) -> typing.List[typing.Tuple[Point, Point]]:
         # Take a section from each rail in turn, and plot out an equal number
         # of points on both rails.  Return the points plotted. The points will
         # be contracted or expanded by offset using self.offset_points().
@@ -778,8 +779,8 @@ class SatinColumn(EmbroideryElement):
         # pre-cache ramdomised parameters to avoid property calls in loop
         if use_random:
             seed = prng.joinArgs(self.random_seed, "satin-points")
-            offset_proportional_min = np.array(offset_proportional) - self.random_width_decrease_percent/100
-            offset_range = (self.random_width_increase_percent + self.random_width_decrease_percent) / 100
+            offset_proportional_min = np.array(offset_proportional) - self.random_width_decrease
+            offset_range = (self.random_width_increase + self.random_width_decrease)
             spacing_range = spacing * self.random_zigzag_spacing / 100
 
         pairs = []
@@ -962,7 +963,7 @@ class SatinColumn(EmbroideryElement):
         )
 
         max_stitch_length = self.max_stitch_length_px
-        length_sigma = self.random_split_length
+        length_sigma = self.random_split_jitter
         random_phase = self.random_split_phase
         min_split_length = self.min_random_split_length_px
         seed = self.random_seed
@@ -1011,7 +1012,7 @@ class SatinColumn(EmbroideryElement):
             self.zigzag_spacing,
             self.pull_compensation_px,
             self.pull_compensation_percent/100,
-            self.random_width_decrease_percent.any() and self.random_width_increase_percent.any() and self.random_zigzag_spacing,
+            self.random_width_decrease.any() and self.random_width_increase.any() and self.random_zigzag_spacing,
         )
 
         # "left" and "right" here are kind of arbitrary designations meaning

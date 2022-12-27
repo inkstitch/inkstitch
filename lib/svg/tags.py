@@ -126,9 +126,9 @@ inkstitch_attribs = [
     'stroke_first',
     'random_width_decrease_percent',
     'random_width_increase_percent',
-    'random_zigzag_spacing',
+    'random_zigzag_spacing_percent',
     'random_split_phase',
-    'random_split_length_percent',
+    'random_split_jitter_percent',
     'min_random_split_length_mm',
     # stitch_plan
     'invisible_layers',
