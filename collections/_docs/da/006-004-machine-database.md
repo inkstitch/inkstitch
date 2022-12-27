@@ -17,6 +17,12 @@ machine-database:
       features: TRIM
       inkstitch-version: 1.27.2
       comments: Das ist ein Test. Kommentare, Kommentare!
+    - name: Memory Craft 550E
+      file-formats: JEF, DST
+      features:
+      features: TRIM
+      inkstitch-version: 2.2.0
+      comments: Disable the ties checkbox in params, because this machine adds ties automatically
   - brand: Brother
     machines:
     - name: Test
@@ -29,6 +35,12 @@ machine-database:
       inkstitch-version: 1.27.2
       comments: Supi
     - name: PE-800
+      file-formats: PES, PEC, DST
+      features:
+      features: TRIM
+      inkstitch-version: 1.28
+      comments: Disable the ties checkbox in params, because this machine adds ties automatically
+          - name: PE-800
       file-formats: PES, PEC, DST
       features:
       features: TRIM
