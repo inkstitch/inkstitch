@@ -40,7 +40,7 @@ machine-database:
       features: TRIM
       inkstitch-version: 1.28
       comments: Disable the ties checkbox in params, because this machine adds ties automatically
-          - name: PE-800
+    - name: PE-800
       file-formats: PES, PEC, DST
       features:
       features: TRIM

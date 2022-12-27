@@ -64,3 +64,14 @@ You can refine the result by defining cut lines.
 * Threshold for dead ends (px): This will remove small lines. In most cases the best value is the approximate line width of the original shape in pixels.
 * Dashed line: Set to true if you aim for a running stitch outline.
 * Line width (px): If you want to convert this directly into a satin column, set this to the satin column width. In most cases you would want to keep this value low, so it will be easier to check and correct the outlines before the conversion.
+
+## Jump to Stroke
+
+{% include upcoming_release.html %}
+
+This will create a running stitch from the end position of the first element to the start position of the second element. Place this running stitch under following top stitches and avoid jump stitches.
+
+### Usage
+
+* Select two or more objects
+* Run `Extensions > Ink/Stitch > Tools: Stroke > Jump Stitch to Stroke`
