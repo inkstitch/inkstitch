@@ -12,7 +12,7 @@ from inkex import Transform
 from ..i18n import _
 from ..marker import get_marker_elements
 from ..stitch_plan import StitchGroup
-from ..stitches import bean_stitch, running_stitch
+from ..stitches.running_stitch import bean_stitch, running_stitch
 from ..stitches.ripple_stitch import ripple_stitch
 from ..svg import get_node_transform, parse_length_with_units
 from ..utils import Point, cache

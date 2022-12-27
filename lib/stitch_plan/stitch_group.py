@@ -43,14 +43,14 @@ class StitchGroup:
         # This method allows `len(patch)` and `if patch:
         return len(self.stitches)
 
-    def add_stitches(self, stitches):
+    def add_stitches(self, stitches, tags=None):
         for stitch in stitches:
-            self.add_stitch(stitch)
+            self.add_stitch(stitch, tags=tags)
 
-    def add_stitch(self, stitch):
+    def add_stitch(self, stitch, tags=None):
         if not isinstance(stitch, Stitch):
             # probably a Point
-            stitch = Stitch(stitch)
+            stitch = Stitch(stitch, tags=tags)
 
         self.stitches.append(stitch)
 

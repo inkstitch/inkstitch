@@ -3,8 +3,8 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-import random
 from copy import deepcopy
+import itertools
 from itertools import chain
 
 import numpy as np
@@ -16,7 +16,8 @@ from shapely.ops import nearest_points
 from ..i18n import _
 from ..stitch_plan import StitchGroup
 from ..svg import line_strings_to_csp, point_lists_to_csp
-from ..utils import Point, cache, cut, cut_multiple
+from ..utils import Point, cache, cut, cut_multiple, prng
+from ..stitches import running_stitch
 from .element import EmbroideryElement, param, PIXELS_PER_MM
 from .validation import ValidationError, ValidationWarning
 
@@ -85,48 +86,68 @@ class SatinColumn(EmbroideryElement):
            _('Maximum stitch length'),
            tooltip=_('Maximum stitch length for split stitches.'),
            type='float', unit="mm")
-    def max_stitch_length(self):
+    def max_stitch_length_px(self):
         return self.get_float_param("max_stitch_length_mm") or None
-
-    @property
-    @param('random_split_factor',
-           _('Random Split Factor'),
-           tooltip=_('randomize position for split stitches.'),
-           type='int', unit="%", sort_index=70)
-    def random_split_factor(self):
-        return min(max(self.get_int_param("random_split_factor", 0), 0), 100)
-
-    @property
-    @param('random_zigzag_spacing',
-           _('Zig-zag spacing randomness(peak-to-peak)'),
-           tooltip=_('percentage  of randomness  of Peak-to-peak distance between zig-zags.'),
-           type='int', unit="%", sort_index=64)
-    def random_zigzag_spacing(self):
-        # peak-to-peak distance between zigzags
-        return max(self.get_int_param("random_zigzag_spacing", 0), 0)
 
     @property
     @param('random_width_decrease_percent',
            _('Random percentage of satin width decrease'),
-           tooltip=_('shorten stitch across rails at most this percent.'
+           tooltip=_('shorten stitch across rails at most this percent. '
                      'Two values separated by a space may be used for an aysmmetric effect.'),
-           type='int', unit="% (each side)", sort_index=60)
+           default=0, type='float', unit="% (each side)", sort_index=91)
+    @cache
     def random_width_decrease_percent(self):
         return self.get_split_float_param("random_width_decrease_percent", (0, 0))
 
     @property
     @param('random_width_increase_percent',
            _('Random percentage of satin width increase'),
-           tooltip=_('lengthen stitch across rails at most this percent.'
+           tooltip=_('lengthen stitch across rails at most this percent. '
                      'Two values separated by a space may be used for an aysmmetric effect.'),
-           type='int', unit="% (each side)", sort_index=60)
+           default=0, type='float', unit="% (each side)", sort_index=90)
+    @cache
     def random_width_increase_percent(self):
         return self.get_split_float_param("random_width_increase_percent", (0, 0))
 
     @property
+    @param('random_zigzag_spacing',
+           _('Random zig-zag spacing percentage increase'),
+           tooltip=_('Percentage of stitch length added randomply Peak-to-peak distance between zig-zags.'),
+           default=0, type='float', unit="%", sort_index=92)
+    def random_zigzag_spacing(self):
+        # peak-to-peak distance between zigzags
+        return max(self.get_float_param("random_zigzag_spacing", 0), 0)
+
+    @property
+    @param('random_split_phase',
+           _('Random phase for split stitches'),
+           tooltip=_('Controls whether split stitches are centered or with a random phase (which may increase stitch count).'),
+           default=False, type='boolean', sort_index=95)
+    def random_split_phase(self):
+        return self.get_boolean_param('random_split_phase')
+
+    @property
+    @param('min_random_split_length_mm',
+           _('Minimum length for random-phase split.'),
+           tooltip=_('Defaults to maximum stitch length. Smaller values allow for a transition between single-stitch and split-stitch.'),
+           default='', type='float', unit='mm', sort_index=96)
+    def min_random_split_length_px(self):
+        if self.max_stitch_length_px is None:
+            return None
+        return min(self.max_stitch_length_px, self.get_float_param('min_random_split_length_mm', self.max_stitch_length_px))
+
+    @property
+    @param('random_split_length_percent',
+           _('Random jitter split stitch'),
+           tooltip=_('randomizes split stitch length if random phase is emabled, stitch position if disabled.'),
+           type='float', unit="%", sort_index=97)
+    def random_split_length(self):
+        return min(max(self.get_float_param("random_split_length_percent", 0), 0), 100) / 100
+
+    @property
     @param('short_stitch_inset',
            _('Short stitch inset'),
-           tooltip=_('Stitches in areas with high density will be shortened by this amount.'),
+           tooltip=_('Stitches in areas with high density will be inset by this amount.'),
            type='float', unit="%",
            default=15)
     def short_stitch_inset(self):
@@ -135,7 +156,7 @@ class SatinColumn(EmbroideryElement):
     @property
     @param('short_stitch_distance_mm',
            _('Short stitch distance'),
-           tooltip=_('Do short stitches if the distance between stitches is smaller than this.'),
+           tooltip=_('Inset stitches if the distance between stitches is smaller than this.'),
            type='float', unit="mm",
            default=0.25)
     def short_stitch_distance(self):
@@ -327,10 +348,6 @@ class SatinColumn(EmbroideryElement):
            default="")
     def zigzag_underlay_max_stitch_length(self):
         return self.get_float_param("zigzag_underlay_max_stitch_length_mm") or None
-
-    @property
-    def use_seed(self):
-        return self.get_int_param("use_seed", 0)
 
     @property
     @cache
@@ -601,7 +618,7 @@ class SatinColumn(EmbroideryElement):
         """
 
         # like in do_satin()
-        points = list(chain.from_iterable(zip(*self.plot_points_on_rails(self.zigzag_spacing))))
+        points = list(chain.from_iterable(self.plot_points_on_rails(self.zigzag_spacing)))
 
         if isinstance(split_point, float):
             index_of_closest_stitch = int(round(len(points) * split_point))
@@ -689,7 +706,7 @@ class SatinColumn(EmbroideryElement):
     @cache
     def center_line(self):
         # similar technique to do_center_walk()
-        center_walk, _ = self.plot_points_on_rails(self.zigzag_spacing, (0, 0), (-0.5, -0.5))
+        center_walk = [p[0] for p in self.plot_points_on_rails(self.zigzag_spacing, (0, 0), (-0.5, -0.5))]
         return shgeo.LineString(center_walk)
 
     def offset_points(self, pos1, pos2, offset_px, offset_proportional):
@@ -752,19 +769,22 @@ class SatinColumn(EmbroideryElement):
                 distance_remaining -= segment_length
                 pos = segment_end
 
-    def plot_points_on_rails(self, spacing, offset_px=(0, 0), offset_proportional=(0, 0)):
+    def plot_points_on_rails(self, spacing, offset_px=(0, 0), offset_proportional=(0, 0), use_random=False) -> list[tuple[Point, Point]]:
         # Take a section from each rail in turn, and plot out an equal number
         # of points on both rails.  Return the points plotted. The points will
         # be contracted or expanded by offset using self.offset_points().
 
-        def add_pair(pos0, pos1):
-            pos0, pos1 = self.offset_points(pos0, pos1, offset_px, offset_proportional)
-            points[0].append(pos0)
-            points[1].append(pos1)
+        # pre-cache ramdomised parameters to avoid property calls in loop
+        if use_random:
+            seed = prng.joinArgs(self.random_seed, "satin-points")
+            offset_proportional_min = np.array(offset_proportional) - self.random_width_decrease_percent/100
+            offset_range = (self.random_width_increase_percent + self.random_width_decrease_percent) / 100
+            spacing_range = spacing * self.random_zigzag_spacing / 100
 
-        points = [[], []]
+        pairs = []
 
         to_travel = 0
+        cycle = 0
 
         for section0, section1 in self.flattened_sections:
             # Take one section at a time, delineated by the rungs.  For each
@@ -827,26 +847,32 @@ class SatinColumn(EmbroideryElement):
                     old_center = new_center
 
                 if to_travel <= 0:
+                    if use_random:
+                        roll = prng.uniformFloats(seed, cycle)
+                        offset_prop = offset_proportional_min + roll[0:2] * offset_range
+                        to_travel = spacing + roll[2] * spacing_range
+                    else:
+                        offset_prop = offset_proportional
+                        to_travel = spacing
 
-                    mismatch0 = random.uniform(-self.random_width_decrease_percent[0], self.random_width_increase_percent[0]) / 100
-                    mismatch1 = random.uniform(-self.random_width_decrease_percent[1], self.random_width_increase_percent[1]) / 100
-                    add_pair(pos0 + (pos0 - pos1) * mismatch0, pos1 + (pos1 - pos0) * mismatch1)
-                    to_travel = spacing * (random.uniform(1, 1 + self.random_zigzag_spacing/100))
+                    a, b = self.offset_points(pos0, pos1, offset_px, offset_prop)
+                    pairs.append((a, b))
+                    cycle += 1
 
         if to_travel > 0:
-            add_pair(pos0, pos1)
+            pairs.append((pos0, pos1))
 
-        return points
+        return pairs
 
     def do_contour_underlay(self):
         # "contour walk" underlay: do stitches up one side and down the
         # other.
-        forward, back = self.plot_points_on_rails(
+        pairs = self.plot_points_on_rails(
             self.contour_underlay_stitch_length,
             -self.contour_underlay_inset_px, -self.contour_underlay_inset_percent/100)
-        stitches = (forward + list(reversed(back)))
+        stitches = [p[0] for p in pairs] + [p[1] for p in reversed(pairs)]
         if self._center_walk_is_odd():
-            stitches = (list(reversed(back)) + forward)
+            stitches = list(reversed(stitches))
 
         return StitchGroup(
             color=self.color,
@@ -860,16 +886,16 @@ class SatinColumn(EmbroideryElement):
         inset_prop = -np.array([self.center_walk_underlay_position, 100-self.center_walk_underlay_position]) / 100
 
         # Do it like contour underlay, but inset all the way to the center.
-        forward, back = self.plot_points_on_rails(
+        pairs = self.plot_points_on_rails(
             self.center_walk_underlay_stitch_length,
             (0, 0), inset_prop)
 
         stitches = []
         for i in range(self.center_walk_underlay_repeats):
             if i % 2 == 0:
-                stitches += forward
+                stitches += [p[0] for p in pairs]
             else:
-                stitches += list(reversed(back))
+                stitches += [p[1] for p in reversed(pairs)]
 
         return StitchGroup(
             color=self.color,
@@ -889,27 +915,26 @@ class SatinColumn(EmbroideryElement):
 
         patch = StitchGroup(color=self.color)
 
-        sides = self.plot_points_on_rails(self.zigzag_underlay_spacing / 2.0,
+        pairs = self.plot_points_on_rails(self.zigzag_underlay_spacing / 2.0,
                                           -self.zigzag_underlay_inset_px,
                                           -self.zigzag_underlay_inset_percent/100)
 
         if self._center_walk_is_odd():
-            sides = [list(reversed(sides[0])), list(reversed(sides[1]))]
+            pairs = list(reversed(pairs))
 
         # This organizes the points in each side in the order that they'll be
         # visited.
-        sides = [sides[0][::2] + list(reversed(sides[0][1::2])),
-                 sides[1][1::2] + list(reversed(sides[1][::2]))]
+        # take a points, from each side in turn, then go backed over the other points
+        points = [p[i % 2] for i, p in enumerate(pairs)] + list(reversed([p[i % 2] for i, p in enumerate(pairs, 1)]))
 
-        # This fancy bit of iterable magic just repeatedly takes a point
-        # from each side in turn.
+        max_len = self.zigzag_underlay_max_stitch_length
         last_point = None
-        for point in chain.from_iterable(zip(*sides)):
-            if last_point and self.zigzag_underlay_max_stitch_length:
-                if last_point.distance(point) > self.zigzag_underlay_max_stitch_length:
-                    points, count = self._get_split_points(last_point, point, self.zigzag_underlay_max_stitch_length)
-                    for point in points:
-                        patch.add_stitch(point)
+        for point in points:
+            if last_point and max_len:
+                if last_point.distance(point) > max_len:
+                    split_points = running_stitch.split_segment_even_dist(last_point, point, max_len)
+                    for p in split_points:
+                        patch.add_stitch(p)
             last_point = point
             patch.add_stitch(point)
 
@@ -928,28 +953,47 @@ class SatinColumn(EmbroideryElement):
         patch = StitchGroup(color=self.color)
 
         # pull compensation is automatically converted from mm to pixels by get_float_param
-        sides = self.plot_points_on_rails(
+        pairs = self.plot_points_on_rails(
             self.zigzag_spacing,
             self.pull_compensation_px,
-            self.pull_compensation_percent/100
+            self.pull_compensation_percent/100,
+            True,
         )
 
-        if self.max_stitch_length:
-            return self.do_split_stitch(patch, sides)
+        max_stitch_length = self.max_stitch_length_px
+        length_sigma = self.random_split_length
+        random_phase = self.random_split_phase
+        min_split_length = self.min_random_split_length_px
+        seed = self.random_seed
 
-        # short stitches are not not included into the split stitch
-        # they would move the points in a maybe unwanted behaviour
-        if self.short_stitch_inset > 0:
-            self._do_short_stitches(sides)
+        short_pairs = self.inset_short_stitches_sawtooth(pairs)
 
-        # Like in zigzag_underlay(): take a point from each side in turn.
-        for point in chain.from_iterable(zip(*sides)):
-            patch.add_stitch(point)
+        last_point = None
+        last_short_point = None
+        last_count = None
+        for i, (a, b), (a_short, b_short) in zip(itertools.count(0), pairs, short_pairs):
+            if last_point is not None:
+                split_points, _ = self.get_split_points(
+                    last_point, a, last_short_point, a_short, max_stitch_length, last_count,
+                    length_sigma, random_phase, min_split_length, prng.joinArgs(seed, 'satin-split', 2*i))
+                patch.add_stitches(split_points, ("satin_column", "satin_split_stitch"))
+
+            patch.add_stitch(a_short)
+            patch.stitches[-1].add_tags(("satin_column", "satin_column_edge"))
+
+            split_points, last_count = self.get_split_points(
+                a, b, a_short, b_short, max_stitch_length, None,
+                length_sigma, random_phase, min_split_length, prng.joinArgs(seed, 'satin-split', 2*i+1))
+            patch.add_stitches(split_points, ("satin_column", "satin_split_stitch"))
+
+            patch.add_stitch(b_short)
+            patch.stitches[-1].add_tags(("satin_column", "satin_column_edge"))
+            last_point = b
+            last_short_point = b_short
 
         if self._center_walk_is_odd():
             patch.stitches = list(reversed(patch.stitches))
 
-        patch.add_tags(("satin_column", "satin_column_edge"))
         return patch
 
     def do_e_stitch(self):
@@ -962,15 +1006,16 @@ class SatinColumn(EmbroideryElement):
 
         patch = StitchGroup(color=self.color)
 
-        sides = self.plot_points_on_rails(
+        pairs = self.plot_points_on_rails(
             self.zigzag_spacing,
             self.pull_compensation_px,
-            self.pull_compensation_percent/100
+            self.pull_compensation_percent/100,
+            self.random_width_decrease_percent.any() and self.random_width_increase_percent.any() and self.random_zigzag_spacing,
         )
 
         # "left" and "right" here are kind of arbitrary designations meaning
         # a point from the first and second rail respectively
-        for left, right in zip(*sides):
+        for left, right in pairs:
             patch.add_stitch(left)
             patch.add_stitch(right)
             patch.add_stitch(left)
@@ -981,54 +1026,49 @@ class SatinColumn(EmbroideryElement):
         patch.add_tags(("satin_column", "e_stitch"))
         return patch
 
-    def do_split_stitch(self, patch, sides):
-        # stitches exceeding the maximum stitch length will be divided into equal parts through additional stitches
-        for i, (left, right) in enumerate(zip(*sides)):
-            patch.add_stitch(left)
-            patch.stitches[-1].add_tags(("satin_column", "satin_column_edge"))
-            points, count = self._get_split_points(left, right, self.max_stitch_length)
-            for point in points:
-                patch.add_stitch(point)
-                patch.stitches[-1].add_tags(("satin_column", "satin_split_stitch"))
-            patch.add_stitch(right)
-            patch.stitches[-1].add_tags(("satin_column", "satin_column_edge"))
-            # it is possible that the way back has a different length from the first
-            # but it looks ugly if the points differ too much
-            # so let's make sure they have at least the same amount of divisions
-            if not i+1 >= len(sides[0]):
-                points, count = self._get_split_points(right, sides[0][i+1], self.max_stitch_length, count)
-                for point in points:
-                    patch.add_stitch(point)
-                    patch.stitches[-1].add_tags(("satin_column", "satin_split_stitch"))
-        if self._center_walk_is_odd():
-            patch.stitches = list(reversed(patch.stitches))
-        return patch
+    def get_split_points(self, a, b, a_short, b_short, length, count=None, length_sigma=0.0, random_phase=False, min_split_length=None, seed=None):
+        if not length:
+            return ([], None)
+        if min_split_length is None:
+            min_split_length = length
+        distance = a.distance(b)
+        if distance <= min_split_length:
+            return ([], 1)
+        if random_phase:
+            points = running_stitch.split_segment_random_phase(a_short, b_short, length, length_sigma, seed)
+            return (points, None)
+        elif count is not None:
+            points = running_stitch.split_segment_even_n(a, b, count, length_sigma, seed)
+            return (points, count)
+        else:
+            points = running_stitch.split_segment_even_dist(a, b, length, length_sigma, seed)
+            return (points, len(points) + 1)
 
-    def _get_split_points(self, left, right, max_stitch_length, count=None):
-        points = []
-        distance = left.distance(right)
-        split_count = count or int(-(-distance // max_stitch_length))
-        random_move = 0
-        for i in range(split_count):
-            line = shgeo.LineString((left, right))
+    def inset_short_stitches_sawtooth(self, pairs):
+        min_dist = self.short_stitch_distance
+        inset = min(self.short_stitch_inset, 0.5)
+        max_stitch_length = None if self.random_split_phase else self.max_stitch_length_px
+        if not min_dist or not inset:
+            return pairs
 
-            if self.random_split_factor and i != split_count-1:
-                random_move = random.uniform(-self.random_split_factor / 100, self.random_split_factor / 100)
-
-            split_point = line.interpolate((i + 1 + random_move) / split_count, normalized=True)
-            points.append(Point(split_point.x, split_point.y))
-        return [points, split_count]
-
-    def _do_short_stitches(self, sides):
-        for i, (left, right) in enumerate(zip(*sides)):
+        shortened = []
+        for i, (a, b) in enumerate(pairs):
             if i % 2 == 0:
+                shortened.append((a, b))
                 continue
-            if left.distance(sides[0][i-1]) < self.short_stitch_distance:
-                split_point = self._get_inset_point(left, right, self.short_stitch_inset)
-                sides[0][i] = Point(split_point.x, split_point.y)
-            if right.distance(sides[1][i-1]) < self.short_stitch_distance:
-                split_point = self._get_inset_point(right, left, self.short_stitch_inset)
-                sides[1][i] = Point(split_point.x, split_point.y)
+            dist = a.distance(b)
+            inset_px = inset * dist
+            if max_stitch_length and not self.random_split_phase:
+                # make sure inset is less than split etitch length
+                inset_px = min(inset_px, max_stitch_length / 3)
+
+            offset_px = [0, 0]
+            if a.distance(pairs[i-1][0]) < min_dist:
+                offset_px[0] = -inset_px
+            if b.distance(pairs[i-1][0]) < min_dist:
+                offset_px[1] = -inset_px
+            shortened.append(self.offset_points(a, b, offset_px, (0, 0)))
+        return shortened
 
     def _get_inset_point(self, point1, point2, distance_fraction):
         return point1 * (1 - distance_fraction) + point2 * distance_fraction
@@ -1039,16 +1079,6 @@ class SatinColumn(EmbroideryElement):
         # The algorithm will draw zigzags between each consecutive pair of
         # beziers.  The boundary points between beziers serve as "checkpoints",
         # allowing the user to control how the zigzags flow around corners.
-
-        # If no seed is defined, compute one randomly using time to seed,  otherwise, use stored seed
-
-        if self.use_seed == 0:
-            random.seed()
-            x = random.randint(1, 10000)
-            random.seed(x)
-            self.set_param("use_seed", x)
-        else:
-            random.seed(self.use_seed)
 
         patch = StitchGroup(color=self.color)
 
