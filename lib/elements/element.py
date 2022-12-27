@@ -261,7 +261,7 @@ class EmbroideryElement(object):
            sort_index=100)
     @cache
     def random_seed(self) -> str:
-        seed = self.get_param('random_seed')
+        seed = self.get_param('random_seed', '')
         if not seed:
             seed = self.node.get_id() or ''
             # TODO(#1696): When inplementing grouped clones, join this with the IDs of any shadow roots,

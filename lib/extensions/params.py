@@ -7,6 +7,7 @@
 
 import os
 import sys
+import traceback
 from collections import defaultdict
 from copy import copy
 from itertools import groupby, zip_longest
@@ -511,9 +512,10 @@ class SettingsFrame(wx.Frame):
         except SystemExit:
             wx.CallAfter(self._show_warning)
             raise
-        except Exception:
+        except Exception as e:
             # Ignore errors.  This can be things like incorrect paths for
             # satins or division by zero caused by incorrect param values.
+            traceback.print_exception(e, file=sys.stderr)
             pass
 
         return patches
