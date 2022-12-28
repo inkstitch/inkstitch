@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2022-12-20 01:18+0000\n"
-"PO-Revision-Date: 2022-12-20 01:20\n"
+"PO-Revision-Date: 2022-12-28 01:17\n"
 "Last-Translator: \n"
 "Language-Team: Danish\n"
 "MIME-Version: 1.0\n"
@@ -39,7 +39,7 @@ msgstr ""
 #. description of font in fonts/Brockscript
 #: inkstitch-fonts-metadata.py:4
 msgid "Brock Script is a decorative satin column manuscript font of size approximatively 40mm. It can be enlarged up to 250%. It contains 118 glyphs, covering most western european languages needs.More decorative options are hidden in the µ glyph"
-msgstr ""
+msgstr "Brock Script er en dekorativ manuskriptskrifttype til satinsting - med en størrelse på cirka 40 mm. Den kan forstørres op til 250%. Den indeholder 118 glyffer, der dækker de fleste vesteuropæiske sprogs behov. Flere dekorative muligheder er skjult i µ glyfen"
 
 #. name of font in fonts/abecedaire
 #: inkstitch-fonts-metadata.py:6
@@ -49,7 +49,7 @@ msgstr ""
 #. description of font in fonts/abecedaire
 #: inkstitch-fonts-metadata.py:8
 msgid "Abécédaire AGS is a crossstitch font of size 14mm. The font can be scaled down to 75% and up to 200%"
-msgstr ""
+msgstr "Abécédaire AGS er en korsstings-skrifttype i størrelsen 14 mm. Skrifttypen kan skaleres ned til 75 % og op til 200 %"
 
 #. name of font in fonts/amitaclo
 #: inkstitch-fonts-metadata.py:10
@@ -60,17 +60,17 @@ msgstr ""
 #: inkstitch-fonts-metadata.py:12
 #, python-format
 msgid "The capital M is 25.3 millimeter wide at 100% scale. Can be scaled down to 80% or up to 160%. Every satin has zigzag underlay"
-msgstr ""
+msgstr "Det store M er 25,3 millimeter bredt ved 100 % skala. Kan skaleres ned til 80 % eller op til 160 %. Hver satinsøm har en zigzag-underlaggsøm"
 
 #. name of font in fonts/amitaclo_small
 #: inkstitch-fonts-metadata.py:14
 msgid "Amitaclo small"
-msgstr ""
+msgstr "Amitaclo lille"
 
 #. description of font in fonts/amitaclo_small
 #: inkstitch-fonts-metadata.py:16
 msgid "This font is an altered version  of Amitaclo, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory. The altered embroidery parameters of this font allow to scale down the original Amitaclo font between 25% (for a 7 mm font ) and 55 % (for a 16mm font)."
-msgstr ""
+msgstr "Denne skrifttype er en ændret version af Amitaclo, for at kunne tillade en større nedskalering. Brug af både tynd tråd (60) og tynd nål (60) er obligatorisk. De ændrede broderiparametre for denne skrifttype gør det muligt at nedskalere den originale Amitaclo-skrifttype mellem 25 % (for en 7 mm skrifttype) og 55 % (for en 16 mm skrifttype)."
 
 #. name of font in fonts/apex_lake
 #: inkstitch-fonts-metadata.py:18
@@ -80,7 +80,7 @@ msgstr ""
 #. description of font in fonts/apex_lake
 #: inkstitch-fonts-metadata.py:20
 msgid "Apex Lake is a large ornate capital letters font of size approximatively 60mm. It contains 38 glyphs : A-Z,0-9,! and ?. It can be reduced down to 80% and enlarged up to 130%"
-msgstr ""
+msgstr "Apex Lake er en stor udsmykket skrifttype med store bogstaver med en størrelse på cirka 60 mm. Den indeholder 38 glyffer: A-Z,0-9,! og ?. Den kan reduceres ned til 80 % og forstørres op til 130 %"
 
 #. name of font in fonts/aventurina
 #: inkstitch-fonts-metadata.py:22
@@ -90,7 +90,7 @@ msgstr ""
 #. description of font in fonts/aventurina
 #: inkstitch-fonts-metadata.py:24
 msgid "Aventurina is a script satin font of size approximatively 20mm. The glyphs cover most Western European languages. The font can be scaled down to 60% and up to 150% "
-msgstr ""
+msgstr "Aventurina er en satin skrifttype med en størrelse på cirka 20 mm. Glyferne dækker de fleste vesteuropæiske sprog. Skrifttypen kan skaleres ned til 60 % og op til 150 % "
 
 #. name of font in fonts/baumans_FI
 #: inkstitch-fonts-metadata.py:26
@@ -101,7 +101,7 @@ msgstr ""
 #: inkstitch-fonts-metadata.py:28
 #, python-format
 msgid "The capital M is 22.3 millimeter wide at 100% scale. Can be scaled down to 80% or up to 150%. Every satin has zigzag underlay"
-msgstr ""
+msgstr "Det store M er 22,3 millimeter bredt ved 100 % skala. Kan skaleres ned til 80 % eller op til 150 %. Hver satinsøm har et zigzag-underlag"
 
 #. name of font in fonts/cherryforinkstitch
 #: inkstitch-fonts-metadata.py:30
@@ -111,7 +111,7 @@ msgstr ""
 #. description of font in fonts/cherryforinkstitch
 #: inkstitch-fonts-metadata.py:32
 msgid "Cherry for inkstitch is a decorative satin column font of size approximatively 40mm. It can be reduced down to 80% and enlarged up to 180%. It contains 74 glyphs."
-msgstr ""
+msgstr "Cherry for inkstitch er en dekorativ satinsøm-skrifttype med en størrelse på cirka 40 mm. Den kan reduceres ned til 80% og forstørres op til 180%. Den indeholder 74 glyffer."
 
 #. name of font in fonts/cherryforkaalleen
 #: inkstitch-fonts-metadata.py:34
@@ -121,7 +121,7 @@ msgstr ""
 #. description of font in fonts/cherryforkaalleen
 #: inkstitch-fonts-metadata.py:36
 msgid "Cherry for Kaalleen is a large decorative font of size approximatively 75mm. It contains 36 glyphs including the numbers and the 26 capitals  A-Z. It can be reduced down to 80% and enlarged up to 130%"
-msgstr ""
+msgstr "Cherry for Kaalleen er en stor dekorativ skrifttype med en størrelse på cirka 75 mm. Den indeholder 36 glyffer inklusive tallene og de 26 versaler A-Z. Den kan reduceres ned til 80 % og forstørres op til 130 %"
 
 #. name of font in fonts/chopin
 #: inkstitch-fonts-metadata.py:38
@@ -132,7 +132,7 @@ msgstr ""
 #: inkstitch-fonts-metadata.py:40
 #, python-format
 msgid "The capital M is 38.3 millimeter wide at 100% scale. Can be scaled down to 80% or up to 120%. Every satin has zigzag underlay"
-msgstr ""
+msgstr "Det store M er 38,3 millimeter bredt ved 100 % skala. Kan skaleres ned til 80 % eller op til 120 %. Hver satinsøm har zigzag-underlag"
 
 #. name of font in fonts/coronaviral
 #: inkstitch-fonts-metadata.py:42
@@ -142,7 +142,7 @@ msgstr ""
 #. description of font in fonts/coronaviral
 #: inkstitch-fonts-metadata.py:44
 msgid "A font created with manual sitch. Do not change the size or very little. The capital em is 22mm wide at 100%"
-msgstr ""
+msgstr "En skrifttype lavet med manuelle sting. Undgå at ændre størrelsen eller begæns det til kun lidt. Kapitalen er 22 mm bred ved 100 %"
 
 #. name of font in fonts/dejavufont
 #: inkstitch-fonts-metadata.py:46
@@ -153,7 +153,7 @@ msgstr ""
 #: inkstitch-fonts-metadata.py:48
 #, python-format
 msgid "DejaVu Serif Condensed. The capital M is 19,8 millimeter wide at 100% scale.  Can be scaled down to 80% or up to 150%.  Every satin has center-walk underlay."
-msgstr ""
+msgstr "DejaVu Serif sammenpakket. Det store M er 19,8 millimeter bredt ved 100 % skala. Kan skaleres ned til 80 % eller op til 150 %. Hver satinsøm har \"center-walk\" underlag."
 
 #. name of font in fonts/digory_doodles_bean
 #: inkstitch-fonts-metadata.py:50
@@ -163,7 +163,7 @@ msgstr ""
 #. description of font in fonts/digory_doodles_bean
 #: inkstitch-fonts-metadata.py:52
 msgid "All letters have mixed satin and bean stitch. The capital M is 16mm tall. The small x is 7 mm."
-msgstr ""
+msgstr "Alle bogstaver har blandet satinsøm og \"bean stitch\". Det store M er 16 mm højt. Det lille x er 7 mm."
 
 #. name of font in fonts/dinomouse72
 #: inkstitch-fonts-metadata.py:54
@@ -173,7 +173,7 @@ msgstr ""
 #. description of font in fonts/dinomouse72
 #: inkstitch-fonts-metadata.py:56
 msgid "A Font Grove jawn. Satin width is 2.5mm at 18mm capitals"
-msgstr ""
+msgstr "En Font Grove jawn. Satinbredden er 2,5 mm ved 18 mm store bogstaver"
 
 #. name of font in fonts/emilio_20
 #: inkstitch-fonts-metadata.py:58
@@ -184,7 +184,7 @@ msgstr ""
 #: inkstitch-fonts-metadata.py:60
 #, python-format
 msgid "Emilio 20 is a font with capital only and numbers. M is 48.5 millimeter wide at 100% scale. Can be scaled down to 70% or up to 140%. Every satin has zigzag underlay"
-msgstr ""
+msgstr "Emilio 20 er en skrifttype med kun store bogstaver og tal. M er 48,5 millimeter bred ved 100 % skala. Kan skaleres ned til 70 % eller op til 140 %. Hver satinsøm har zigzag-underlag"
 
 #. name of font in fonts/emilio_20_tricolore
 #: inkstitch-fonts-metadata.py:62
@@ -194,12 +194,12 @@ msgstr ""
 #. description of font in fonts/emilio_20_tricolore
 #: inkstitch-fonts-metadata.py:64
 msgid "Emilio 20 tricolore is a large tricolor fill stitches and satin columns font of  size approximately 100mm. It contains 36 glyphs including the numbers and the 26 capitals  A-Z. It can be reduced down to 90% and enlarged up to 120%"
-msgstr ""
+msgstr "Emilio 20 tricolore er en stor trefarvet skrifttype med fyldningssømme og satinsøm med en størrelse på cirka 100 mm. Den indeholder 36 glyffer inklusive tallene og de 26 versaler A-Z. Den kan reduceres ned til 90% og forstørres op til 120%"
 
 #. name of font in fonts/espresso_KOR
 #: inkstitch-fonts-metadata.py:66
 msgid "Espresso KOR"
-msgstr ""
+msgstr "Espresso KOR"
 
 #. description of font in fonts/espresso_KOR
 #: inkstitch-fonts-metadata.py:68
@@ -209,7 +209,7 @@ msgstr ""
 #. name of font in fonts/espresso_tiny
 #: inkstitch-fonts-metadata.py:70
 msgid "Espresso tiny"
-msgstr ""
+msgstr "Espresso lille"
 
 #. description of font in fonts/espresso_tiny
 #: inkstitch-fonts-metadata.py:72
@@ -229,7 +229,7 @@ msgstr ""
 #. name of font in fonts/fold_inkstitch
 #: inkstitch-fonts-metadata.py:78
 msgid "Fold Ink/Stitch"
-msgstr ""
+msgstr "Fold Ink/Stitch"
 
 #. description of font in fonts/fold_inkstitch
 #: inkstitch-fonts-metadata.py:80
@@ -239,12 +239,12 @@ msgstr ""
 #. name of font in fonts/geneva_rounded
 #: inkstitch-fonts-metadata.py:82
 msgid "Geneva Simple Sans Rounded"
-msgstr ""
+msgstr "Geneva Simple Sans Afrundet"
 
 #. description of font in fonts/geneva_rounded
 #: inkstitch-fonts-metadata.py:84
 msgid "Suitable for small fonts (8 to 20 mm)"
-msgstr ""
+msgstr "Velegnet til små skrifttyper (8 til 20 mm)"
 
 #. name of font in fonts/geneva_simple
 #: inkstitch-fonts-metadata.py:86
@@ -487,7 +487,7 @@ msgstr ""
 #. name of font in fonts/tt_directors
 #: inkstitch-fonts-metadata.py:178
 msgid "TT Directors"
-msgstr ""
+msgstr "TT Directors"
 
 #. description of font in fonts/tt_directors
 #: inkstitch-fonts-metadata.py:180
@@ -1109,7 +1109,7 @@ msgstr ""
 
 #: lib/elements/marker.py:18
 msgid "Turn back to normal embroidery element mode, remove the marker:"
-msgstr ""
+msgstr "Vend tilbage til normal broderielementtilstand \"Embroidery Element Mode\", fjern markøren:"
 
 #: lib/elements/marker.py:19
 msgid "* Open the Fill and Stroke panel (Objects > Fill and Stroke)"
@@ -1121,7 +1121,7 @@ msgstr ""
 
 #: lib/elements/marker.py:21
 msgid "* Under \"Markers\" choose the first (empty) option in the first dropdown list."
-msgstr ""
+msgstr "* Under \"Markers\" skal du vælge den første (tomme) mulighed i den første rulleliste."
 
 #: lib/elements/polyline.py:18
 msgid "Polyline Object"
@@ -1129,7 +1129,7 @@ msgstr ""
 
 #: lib/elements/polyline.py:19
 msgid "This object is an SVG PolyLine.  Ink/Stitch can work with this shape, but you can't edit it in Inkscape.  Convert it to a manual stitch path to allow editing."
-msgstr ""
+msgstr "Dette objekt er en SVG PolyLine. Ink/Stitch kan arbejde med denne form, men du kan ikke redigere den i Inkscape. Konverter den til en manuel stingsti  \"Stitch path - for at tillade redigering."
 
 #: lib/elements/polyline.py:23
 msgid "* Select this object."
@@ -1153,7 +1153,7 @@ msgstr ""
 
 #: lib/elements/satin_column.py:25
 msgid "Satin column: Object has too few subpaths.  A satin column should have at least two subpaths (the rails)."
-msgstr ""
+msgstr "Satinsøjle: Objektet har for få understier (subpaths). En satin-søjlesøm skal have mindst to understier (skinnerne - \"the rails\")."
 
 #: lib/elements/satin_column.py:27
 msgid "* Add another subpath (select two rails and do Path > Combine)"
@@ -1348,13 +1348,13 @@ msgstr ""
 
 #: lib/elements/satin_column.py:236
 msgid "Zig-zag underlay"
-msgstr ""
+msgstr "Zigzag-underlag"
 
 #: lib/elements/satin_column.py:236 lib/elements/satin_column.py:245
 #: lib/elements/satin_column.py:256 lib/elements/satin_column.py:276
 #: lib/elements/satin_column.py:289
 msgid "Zig-zag Underlay"
-msgstr ""
+msgstr "Zigzag-underlag"
 
 #: lib/elements/satin_column.py:242
 msgid "Zig-Zag spacing (peak-to-peak)"
@@ -1643,7 +1643,7 @@ msgstr "Vælg mindst én satinsøjle."
 #. This was previously: "No embroiderable paths selected."
 #: lib/extensions/base.py:127
 msgid "Ink/Stitch doesn't know how to work with any of the objects you've selected."
-msgstr ""
+msgstr "Ink/Stitch ved ikke, hvordan man arbejder med nogen af de objekter, du har valgt."
 
 #: lib/extensions/base.py:129
 msgid "There are no objects in the entire document that Ink/Stitch knows how to work with."
@@ -2184,11 +2184,11 @@ msgstr ""
 
 #: lib/gui/simulator.py:242 lib/gui/simulator.py:270
 msgid "Start"
-msgstr ""
+msgstr "Start"
 
 #: lib/gui/simulator.py:816 lib/gui/simulator.py:826
 msgid "Preview"
-msgstr ""
+msgstr "Forhåndsvisning"
 
 #: lib/gui/simulator.py:857
 msgid "Embroidery Simulation"
@@ -2197,7 +2197,8 @@ msgstr ""
 #: lib/gui/warnings.py:21
 msgid "Cannot load simulator.\n"
 "Close Params to get full error message."
-msgstr ""
+msgstr "Kan ikke indlæse simulator.\n"
+"Luk Params for at få fuld fejlmeddelelse."
 
 #: lib/lettering/font.py:164
 #, python-format
@@ -2222,7 +2223,7 @@ msgstr ""
 
 #: lib/stitches/auto_run.py:135 lib/stitches/auto_satin.py:347
 msgid "Auto-Route"
-msgstr ""
+msgstr "Auto-rute"
 
 #: lib/stitches/auto_run.py:261
 #, python-format
@@ -2250,7 +2251,7 @@ msgstr ""
 
 #: lib/svg/rendering.py:222
 msgid "Stitch Plan"
-msgstr ""
+msgstr "Broderiplan"
 
 #: lib/svg/units.py:18
 #, python-format
@@ -2269,15 +2270,15 @@ msgstr ""
 #: print/templates/color_swatch.html:8 print/templates/color_swatch.html:40
 #: print/templates/operator_detailedview.html:9
 msgid "Color"
-msgstr ""
+msgstr "Farve"
 
 #: print/templates/color_swatch.html:11 print/templates/color_swatch.html:41
 msgid "rgb"
-msgstr ""
+msgstr "rgb"
 
 #: print/templates/color_swatch.html:15 print/templates/color_swatch.html:42
 msgid "thread"
-msgstr ""
+msgstr "sytråd"
 
 #: print/templates/color_swatch.html:19 print/templates/color_swatch.html:43
 #: print/templates/operator_detailedview.html:63
@@ -2296,12 +2297,12 @@ msgstr ""
 #: print/templates/color_swatch.html:24 print/templates/color_swatch.html:45
 #: print/templates/operator_detailedview.html:68
 msgid "yes"
-msgstr ""
+msgstr "ja"
 
 #: print/templates/color_swatch.html:24 print/templates/color_swatch.html:45
 #: print/templates/operator_detailedview.html:68
 msgid "no"
-msgstr ""
+msgstr "nej"
 
 #: print/templates/color_swatch.html:40
 #: print/templates/operator_detailedview.html:57
@@ -2311,13 +2312,13 @@ msgstr ""
 
 #: print/templates/custom-page.html:22 print/templates/ui.html:101
 msgid "Enter URL"
-msgstr ""
+msgstr "Skriv ind URL"
 
 #: print/templates/custom-page.html:23 print/templates/custom-page.html:27
 #: print/templates/custom-page.html:33 print/templates/ui.html:102
 #: print/templates/ui.html:106 print/templates/ui.html:112
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 #: print/templates/custom-page.html:26 print/templates/ui.html:105
 msgid "Enter E-Mail"
@@ -2337,7 +2338,7 @@ msgstr ""
 
 #: print/templates/footer.html:2
 msgid "Page"
-msgstr ""
+msgstr "Side"
 
 #: print/templates/footer.html:3 print/templates/ui.html:108
 #: print/templates/ui.html:115
@@ -2356,23 +2357,23 @@ msgstr ""
 
 #: print/templates/headline.html:10
 msgid "Enter job title..."
-msgstr ""
+msgstr "Skriv ind stillingsbetegnelse..."
 
 #: print/templates/headline.html:11
 msgid "CLIENT"
-msgstr ""
+msgstr "Kunde"
 
 #: print/templates/headline.html:11
 msgid "Enter client name..."
-msgstr ""
+msgstr "Skriv ind kundens navn..."
 
 #: print/templates/headline.html:12
 msgid "PURCHASE ORDER #:"
-msgstr ""
+msgstr "KØBSORDRE #:"
 
 #: print/templates/headline.html:12
 msgid "Enter purchase order number..."
-msgstr ""
+msgstr "Indtast indkøbsordrenummer..."
 
 #: print/templates/headline.html:15
 #, python-format
@@ -2381,7 +2382,7 @@ msgstr ""
 
 #: print/templates/operator_detailedview.html:10
 msgid "Thread Consumption"
-msgstr ""
+msgstr "Forbrug af broderitråd"
 
 #: print/templates/operator_detailedview.html:11
 msgid "Stops and Trims"
@@ -2389,13 +2390,13 @@ msgstr ""
 
 #: print/templates/operator_detailedview.html:12
 msgid "Notes"
-msgstr ""
+msgstr "Notater"
 
 #: print/templates/operator_detailedview.html:24
 #: print/templates/operator_overview.html:6
 #: print/templates/print_overview.html:6
 msgid "Unique Colors"
-msgstr ""
+msgstr "Unike farver"
 
 #: print/templates/operator_detailedview.html:25
 #: print/templates/operator_overview.html:7
@@ -2739,7 +2740,7 @@ msgstr ""
 #. description for pyembroidery file format: shv
 #: pyembroidery-format-descriptions.py:24
 msgid "Husqvarna Viking Embroidery Format"
-msgstr ""
+msgstr "Husqvarna Viking broderi-format"
 
 #. description for pyembroidery file format: 10o
 #. description for pyembroidery file format: 100
@@ -2771,7 +2772,7 @@ msgstr ""
 #. description for pyembroidery file format: emd
 #: pyembroidery-format-descriptions.py:38
 msgid "Elna Embroidery Format"
-msgstr ""
+msgstr "Elna broderi-format"
 
 #. description for pyembroidery file format: exy
 #: pyembroidery-format-descriptions.py:40
@@ -2831,7 +2832,7 @@ msgstr ""
 #. description for pyembroidery file format: pmv
 #: pyembroidery-format-descriptions.py:84
 msgid "Brother Stitch Format"
-msgstr ""
+msgstr "Brother broderi-format"
 
 #. description for pyembroidery file format: png
 #: pyembroidery-format-descriptions.py:86
@@ -2841,7 +2842,7 @@ msgstr ""
 #. description for pyembroidery file format: txt
 #: pyembroidery-format-descriptions.py:88
 msgid "txt Format, Text File"
-msgstr ""
+msgstr "txt-format, tekstfil"
 
 #. description for pyembroidery file format: gcode
 #: pyembroidery-format-descriptions.py:90
@@ -2851,7 +2852,7 @@ msgstr ""
 #. description for pyembroidery file format: hus
 #: pyembroidery-format-descriptions.py:92
 msgid "Husqvarna Embroidery Format"
-msgstr ""
+msgstr "Husqvarna broderiformat"
 
 #. description for pyembroidery file format: edr
 #: pyembroidery-format-descriptions.py:94
@@ -2876,35 +2877,35 @@ msgstr ""
 #. name for left arrow keyboard key
 #: electron/src/renderer/components/Simulator.vue:52
 msgid "← Arrow left"
-msgstr ""
+msgstr "← Venstre pil"
 
 #. name for right arrow keyboard key
 #: electron/src/renderer/components/Simulator.vue:63
 msgid "→ Arrow right"
-msgstr ""
+msgstr "→ Højre pil"
 
 #. name for up arrow keyboard key
 #: electron/src/renderer/components/Simulator.vue:129
 msgid "↑ Arrow up"
-msgstr ""
+msgstr "↑ Pil op"
 
 #. name for down arrow keyboard key
 #: electron/src/renderer/components/Simulator.vue:118
 msgid "↓ Arrow down"
-msgstr ""
+msgstr "↓ Pil ned"
 
 #. name for this keyboard key: +
 #: electron/src/renderer/components/Simulator.vue:89
 msgid "+ Plus"
-msgstr ""
+msgstr "+ Plus"
 
 #: electron/src/renderer/components/Simulator.vue:15
 msgid "Button"
-msgstr ""
+msgstr "Knap"
 
 #: electron/src/renderer/components/Simulator.vue:203
 msgid "color changes"
-msgstr ""
+msgstr "Farveændringer"
 
 #: electron/src/renderer/components/Simulator.vue:186
 msgid "Command"
@@ -2948,11 +2949,11 @@ msgstr "Installér paletter"
 
 #: electron/src/renderer/components/InstallPalettes.vue:31
 msgid "Installation Completed"
-msgstr ""
+msgstr "Installeringen er færdig"
 
 #: electron/src/renderer/components/InstallPalettes.vue:48
 msgid "Installation Failed"
-msgstr ""
+msgstr "Installeringen fejlet"
 
 #: electron/src/renderer/components/Simulator.vue:106
 msgid "Jump to next command"
@@ -2973,12 +2974,12 @@ msgstr ""
 
 #: electron/src/renderer/components/Simulator.vue:215
 msgid "needle points"
-msgstr ""
+msgstr "nåle-punkter"
 
 #. description of keyboard shortcut that moves one stitch backward in simulator
 #: electron/src/renderer/components/Simulator.vue:71
 msgid "One step backward"
-msgstr ""
+msgstr "Et skridt tilbage"
 
 #. description of keyboard shortcut that moves one stitch forward in simulator
 #: electron/src/renderer/components/Simulator.vue:84
@@ -3308,7 +3309,7 @@ msgstr ""
 #: inx/inkstitch_cutwork_segmentation.inx:28
 #: inx/inkstitch_cutwork_segmentation.inx:34
 msgid "start"
-msgstr ""
+msgstr "start"
 
 #: inx/inkstitch_cutwork_segmentation.inx:17
 #: inx/inkstitch_cutwork_segmentation.inx:23
@@ -3322,7 +3323,7 @@ msgstr ""
 #: inx/inkstitch_cutwork_segmentation.inx:30
 #: inx/inkstitch_cutwork_segmentation.inx:36
 msgid "color"
-msgstr ""
+msgstr "farve"
 
 #: inx/inkstitch_cutwork_segmentation.inx:21
 msgid "#2"
@@ -3338,11 +3339,11 @@ msgstr ""
 
 #: inx/inkstitch_cutwork_segmentation.inx:39
 msgid "Sort elements by color"
-msgstr ""
+msgstr "Sorter elementer efter farve"
 
 #: inx/inkstitch_cutwork_segmentation.inx:40
 msgid "Keep original"
-msgstr ""
+msgstr "Behold originalen"
 
 #: inx/inkstitch_cutwork_segmentation.inx:43
 msgid "This extension separates a path depending on the angle."
@@ -3350,7 +3351,7 @@ msgstr ""
 
 #: inx/inkstitch_cutwork_segmentation.inx:44
 msgid "* If you don't want to use 4 needles, set both angle values to 0 for the rest of the rows."
-msgstr ""
+msgstr "* Hvis du ikke vil bruge 4 nåle, skal du indstille begge vinkelværdier til 0 for resten af rækkerne."
 
 #: inx/inkstitch_cutwork_segmentation.inx:45
 msgid "* A horizontal line has an angle of 0 degrees."
@@ -3824,7 +3825,7 @@ msgstr ""
 
 #: inx/inkstitch_input_PCD.inx:8
 msgid "Ink/Stitch: Pfaff Embroidery Format (.pcd)"
-msgstr ""
+msgstr "Ink/Stitch: Pfaff broderi-format (.pcd)"
 
 #: inx/inkstitch_input_PCD.inx:9
 msgid "convert PCD file to Ink/Stitch manual-stitch paths"
@@ -3836,7 +3837,7 @@ msgstr ""
 
 #: inx/inkstitch_input_PCM.inx:8
 msgid "Ink/Stitch: Pfaff Embroidery Format (.pcm)"
-msgstr ""
+msgstr "Ink/Stitch: Pfaff broderi-format(.pcm)"
 
 #: inx/inkstitch_input_PCM.inx:9
 msgid "convert PCM file to Ink/Stitch manual-stitch paths"
@@ -3848,7 +3849,7 @@ msgstr ""
 
 #: inx/inkstitch_input_PCQ.inx:8
 msgid "Ink/Stitch: Pfaff Embroidery Format (.pcq)"
-msgstr ""
+msgstr "Ink/Stitch: Pfaff broderi-format (.pcq)"
 
 #: inx/inkstitch_input_PCQ.inx:9
 msgid "convert PCQ file to Ink/Stitch manual-stitch paths"
@@ -3860,7 +3861,7 @@ msgstr ""
 
 #: inx/inkstitch_input_PCS.inx:8
 msgid "Ink/Stitch: Pfaff Embroidery Format (.pcs)"
-msgstr ""
+msgstr "Ink/Stitch: Pfaff broderi-format (.pcs)"
 
 #: inx/inkstitch_input_PCS.inx:9
 msgid "convert PCS file to Ink/Stitch manual-stitch paths"
@@ -3932,7 +3933,7 @@ msgstr ""
 
 #: inx/inkstitch_input_SEW.inx:8
 msgid "Ink/Stitch: Janome Embroidery Format (.sew)"
-msgstr ""
+msgstr "Ink/Stitch: Janome broderi-format (.sew)"
 
 #: inx/inkstitch_input_SEW.inx:9
 msgid "convert SEW file to Ink/Stitch manual-stitch paths"
@@ -4084,7 +4085,7 @@ msgstr ""
 
 #: inx/inkstitch_install_custom_palette.inx:7
 msgid "Restart Inkscape to use."
-msgstr ""
+msgstr "Genstart Inkscape for at bruge."
 
 #: inx/inkstitch_jump_to_stroke.inx:3
 msgid "Jump Stitch to Stroke"
@@ -4178,15 +4179,15 @@ msgstr ""
 
 #: inx/inkstitch_lettering_generate_json.inx:33
 msgid "Disable if you defined manual routing in your font."
-msgstr ""
+msgstr "Deaktiver, hvis du har defineret manuel routing i din skrifttype."
 
 #: inx/inkstitch_lettering_generate_json.inx:35
 msgid "Reversible"
-msgstr ""
+msgstr "Vendbar"
 
 #: inx/inkstitch_lettering_generate_json.inx:35
 msgid "If disabled back and forth stitching will not be possile for this font."
-msgstr ""
+msgstr "Hvis den er deaktiveret, vil frem- og tilbage-syning ikke være muligt for denne skrifttype."
 
 #: inx/inkstitch_lettering_generate_json.inx:36
 msgid "Force letter case"
@@ -4194,11 +4195,11 @@ msgstr ""
 
 #: inx/inkstitch_lettering_generate_json.inx:38
 msgid "Upper"
-msgstr ""
+msgstr "Øvre"
 
 #: inx/inkstitch_lettering_generate_json.inx:39
 msgid "Lower"
-msgstr ""
+msgstr "Nedre"
 
 #: inx/inkstitch_lettering_generate_json.inx:44
 msgid "Min Scale"
@@ -4395,7 +4396,7 @@ msgstr ""
 
 #: inx/inkstitch_output_GCODE.inx:37
 msgid "Laser Settings"
-msgstr ""
+msgstr "Laser indstillinger"
 
 #: inx/inkstitch_output_GCODE.inx:39
 msgid "laser mode"
@@ -4583,7 +4584,7 @@ msgstr ""
 
 #: inx/inkstitch_palette_to_text.inx:16
 msgid "Choose a .gpl color palette file to import colors as text elements."
-msgstr ""
+msgstr "Vælg en .gpl-farvepaletfil for at importere farver som tekstelementer."
 
 #: inx/inkstitch_palette_to_text.inx:21
 msgid "Import a .gpl palette into Inkscape as text elements to edit color entries."
@@ -4591,7 +4592,7 @@ msgstr ""
 
 #: inx/inkstitch_palette_to_text.inx:23
 msgid "Read more on our webiste:"
-msgstr ""
+msgstr "Læs mere på vores hjemmeside:"
 
 #: inx/inkstitch_palette_to_text.inx:24
 msgid "https://inkstitch.org/docs/thread-color#palette-to-text"
@@ -4603,11 +4604,11 @@ msgstr ""
 
 #: inx/inkstitch_print.inx:3
 msgid "PDF Export"
-msgstr ""
+msgstr "PDF-export"
 
 #: inx/inkstitch_remove_embroidery_settings.inx:3
 msgid "Remove embroidery settings"
-msgstr ""
+msgstr "Fjern broderi-indstillingerne"
 
 #: inx/inkstitch_remove_embroidery_settings.inx:7
 msgid "Remove Params"

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2022-12-20 01:18+0000\n"
-"PO-Revision-Date: 2022-12-20 01:20\n"
+"PO-Revision-Date: 2022-12-28 01:18\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -4104,43 +4104,43 @@ msgstr "Надписи"
 
 #: inx/inkstitch_lettering_along_path.inx:3
 msgid "Lettering along path"
-msgstr ""
+msgstr "Текст вдоль пути"
 
 #: inx/inkstitch_lettering_along_path.inx:15
 msgid "Stretch"
-msgstr ""
+msgstr "Растяжение"
 
 #: inx/inkstitch_lettering_along_path.inx:15
 msgid "Expand glyph and word spacing to stretch lettering over the entire path"
-msgstr ""
+msgstr "Увеличьте расстояние между символами и словами, чтобы растянуть надпись по пути"
 
 #: inx/inkstitch_lettering_along_path.inx:18
 msgid "This extension bends an Ink/Stitch text to a path."
-msgstr ""
+msgstr "Расширение Ink/Stitch - текст вдоль пути."
 
 #: inx/inkstitch_lettering_along_path.inx:19
 msgid "Select Ink/Stitch text and a path before running this extension."
-msgstr ""
+msgstr "Выберите текст и путь перед запуском этого расширения Ink/Stitch."
 
 #: inx/inkstitch_lettering_along_path.inx:21
 msgid "The text needs to meet these conditions:"
-msgstr ""
+msgstr "Текст должен соответствовать этим условиям:"
 
 #: inx/inkstitch_lettering_along_path.inx:22
 msgid "* The text consists of only one line of text"
-msgstr ""
+msgstr "*Текст только в одну строку"
 
 #: inx/inkstitch_lettering_along_path.inx:23
 msgid "* The text should not be too large for the given path"
-msgstr ""
+msgstr "* Текст не должен быть больше данного пути"
 
 #: inx/inkstitch_lettering_along_path.inx:24
 msgid "* Text text should not contain trim symbols"
-msgstr ""
+msgstr "* Текст не должен содержать символы обрезки"
 
 #: inx/inkstitch_lettering_along_path.inx:26
 msgid "The stretch option defines whether the spaces between glyphs should be expanded so that the text stretches over the entire path."
-msgstr ""
+msgstr "Опция растяжения определяет, следует ли увеличивать промежутки между символами, чтобы текст растягивался по всему пути."
 
 #: inx/inkstitch_lettering_custom_font_dir.inx:3
 #: inx/inkstitch_lettering_custom_font_dir.inx:18
@@ -4275,11 +4275,11 @@ msgstr "Добавить команды к выбранным объектам"
 
 #: inx/inkstitch_object_commands_toggle_visibility.inx:3
 msgid "Display|Hide Object Commands"
-msgstr ""
+msgstr "Показать|Скрыть команды объекта"
 
 #: inx/inkstitch_output_COL.inx:3
 msgid "COL file output"
-msgstr ""
+msgstr "Выходной файл COL"
 
 #: inx/inkstitch_output_COL.inx:8
 msgid "Ink/Stitch: Col Color Format [COLOR] (.col)"

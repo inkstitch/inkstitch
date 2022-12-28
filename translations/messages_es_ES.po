@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2022-12-20 01:18+0000\n"
-"PO-Revision-Date: 2022-12-20 01:20\n"
+"PO-Revision-Date: 2022-12-28 01:18\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -1906,7 +1906,7 @@ msgstr ""
 
 #: lib/extensions/palette_to_text.py:31
 msgid "Cannot read palette: invalid GIMP palette header"
-msgstr ""
+msgstr "No se puede leer la paleta: la cabecera de la paleta de GIMP no es válida"
 
 #: lib/extensions/params.py:228
 msgid "These settings will be applied to 1 object."
