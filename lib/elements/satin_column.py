@@ -112,9 +112,9 @@ class SatinColumn(EmbroideryElement):
 
     @property
     @param('random_zigzag_spacing_percent',
-           _('Random zig-zag spacing percentage increase'),
-           tooltip=_('Percentage of stitch length added randomply Peak-to-peak distance between zig-zags.'),
-           default=0, type='float', unit="%", sort_index=92)
+           _('Random zig-zag spacing percentage'),
+           tooltip=_('Afount of random jitter added to stitch length.'),
+           default=0, type='float', unit="± %", sort_index=92)
     def random_zigzag_spacing(self):
         # peak-to-peak distance between zigzags
         return max(self.get_float_param("random_zigzag_spacing_percent", 0), 0) / 100
@@ -141,7 +141,7 @@ class SatinColumn(EmbroideryElement):
     @param('random_split_jitter_percent',
            _('Random jitter for split stitches'),
            tooltip=_('Randomizes split stitch length if random phase is enabled, stitch position if disabled.'),
-           default=0, type='float', unit="%", sort_index=95)
+           default=0, type='float', unit="± %", sort_index=95)
     def random_split_jitter(self):
         return min(max(self.get_float_param("random_split_jitter_percent", 0), 0), 100) / 100
 
@@ -781,7 +781,7 @@ class SatinColumn(EmbroideryElement):
             seed = prng.joinArgs(self.random_seed, "satin-points")
             offset_proportional_min = np.array(offset_proportional) - self.random_width_decrease
             offset_range = (self.random_width_increase + self.random_width_decrease)
-            spacing_range = spacing * self.random_zigzag_spacing / 100
+            spacing_sigma = spacing * self.random_zigzag_spacing
 
         pairs = []
 
@@ -852,7 +852,7 @@ class SatinColumn(EmbroideryElement):
                     if use_random:
                         roll = prng.uniformFloats(seed, cycle)
                         offset_prop = offset_proportional_min + roll[0:2] * offset_range
-                        to_travel = spacing + roll[2] * spacing_range
+                        to_travel = spacing + ((roll[2] - 0.5) * 2 * spacing_sigma)
                     else:
                         offset_prop = offset_proportional
                         to_travel = spacing
