@@ -29,9 +29,9 @@ Bei kleinen Elementen kann es nötig sein, Lücken am Rand des Loches zu lassen,
 Nadel|Winkel|Anfang|Ende
 --|--|--
 <span class="cwd">&#124;</span>   | 90°  | 67  | 113
-<span class="cwd">/</span>        | 45°  | 22  | 68
+<span class="cwd">/</span>        | 45°  | 112 | 157
 <span class="cwd">&#8213;</span>  | 0°   | 158 | 23
-<span class="cwd">&#x5c;</span>   | 135° | 112 | 157
+<span class="cwd">&#x5c;</span>   | 135° | 22  | 68
 
 
 Firma | #1  | #2 | #3 | #4
