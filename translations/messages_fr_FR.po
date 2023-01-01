@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-12-20 01:18+0000\n"
-"PO-Revision-Date: 2022-12-28 01:17\n"
+"POT-Creation-Date: 2023-01-01 01:30+0000\n"
+"PO-Revision-Date: 2023-01-01 01:31\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-20 01:18+0000\n"
+"POT-Creation-Date: 2023-01-01 01:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -645,7 +645,7 @@ msgstr "marqueur de commande"
 
 #: lib/commands.py:417
 msgid "Please select a layer to include layer commands."
-msgstr ""
+msgstr "Merci de sélectionner un calque pour ajouter des commandes de calque."
 
 #: lib/elements/clone.py:21
 msgid "Clone Object"
@@ -697,11 +697,11 @@ msgstr "Ce paramètre appliquera un angle de remplissage personnalisé pour le c
 
 #: lib/elements/clone.py:68
 msgid "Flip angle"
-msgstr ""
+msgstr "Inverser l'angle"
 
 #: lib/elements/clone.py:69
 msgid "Flip automatically calucalted angle if it appears to be wrong."
-msgstr ""
+msgstr "Inverse l'angle calculé automatiquement s'il semble faux."
 
 #: lib/elements/element.py:229
 msgid "Allow lock stitches"
@@ -744,38 +744,38 @@ msgstr "L'objet %(id)s a un attribut 'd' vide. S’il vous plaît supprimer cet 
 
 #: lib/elements/element.py:346
 msgid "Trim After"
-msgstr ""
+msgstr "Couper après"
 
 #: lib/elements/element.py:347
 msgid "Add a TRIM command after stitching this object."
-msgstr ""
+msgstr "Ajoute une commande de coupe après avoir brodé cet objet."
 
 #: lib/elements/element.py:356
 msgid "Stop After"
-msgstr ""
+msgstr "Arrêter après"
 
 #: lib/elements/element.py:357
 msgid "Add a STOP command after stitching this object."
-msgstr ""
+msgstr "Ajoute une commande STOP après avoir brodé cet objet."
 
 #. used when showing an error message to the user such as
 #. "Failed on PathLabel (path1234): Satin column: One or more of the rungs
 #. doesn't intersect both rails."
 #: lib/elements/element.py:393
 msgid "Failed on "
-msgstr ""
+msgstr "Erreur sur "
 
 #: lib/elements/element.py:395
 msgid "Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects. This will indicate the errorneus position."
-msgstr ""
+msgstr "Merci d'exécuter Extensions > Ink/Stitch > Résolution de problèmes > Dépistage de problèmes avec des objets. Ceci indiquera la position erronée."
 
 #: lib/elements/empty_d_object.py:13
 msgid "Empty Path"
-msgstr ""
+msgstr "Chemin vide"
 
 #: lib/elements/empty_d_object.py:14
 msgid "There is an invalid object in the document without geometry information."
-msgstr ""
+msgstr "Il y a, dans le document, un objet invalide sans information de géométrie."
 
 #: lib/elements/empty_d_object.py:16
 msgid "* Run Extensions > Ink/Stitch > Troubleshoot > Cleanup Document..."
@@ -916,7 +916,7 @@ msgstr "Décalage parallèle"
 
 #: lib/elements/fill_stitch.py:116
 msgid "Copy (the default) will fill the shape with shifted copies of the line. Parallel offset will ensure that each line is always a consistent distance from its neighbor. Sharp corners may be introduced."
-msgstr ""
+msgstr "Copier (option par défaut) remplit la forme avec des copies translatées de la ligne guide. Décalage parallèle, assure que chaque ligne est à distance constante de la ligne voisine. Cette stratégie peut introduire des angles aigus."
 
 #: lib/elements/fill_stitch.py:123
 msgid "Contour Fill Strategy"
@@ -1004,7 +1004,7 @@ msgstr "Décaler les rangées autant de fois avant de répéter"
 
 #: lib/elements/fill_stitch.py:219
 msgid "Length of the cycle by which successive stitch rows are staggered. Fractional values are allowed and can have less visible diagonals than integer values."
-msgstr ""
+msgstr "Longueur du cycle de décalage des rangées. Les fractions sont autorisées et peuvent produire des diagonales moins visibles que les valeurs entières."
 
 #: lib/elements/fill_stitch.py:377
 msgid "Running stitch length (traversal between sections)"
@@ -1075,7 +1075,7 @@ msgstr "Les points qui relient les sections à l'intérieur de l'objet. Les poin
 
 #: lib/elements/fill_stitch.py:718
 msgid "Error during autofill! This means it is a bug in Ink/Stitch."
-msgstr ""
+msgstr "Erreur pendant l'auto-remplissage. Cela veut dire que Ink/Stitch a un problème."
 
 #. this message is followed by a URL:
 #. https://github.com/inkstitch/inkstitch/issues/new
@@ -1084,7 +1084,10 @@ msgid "If you'd like to help please\n"
 "- copy the entire error message below\n"
 "- save your SVG file and\n"
 "- create a new issue at"
-msgstr ""
+msgstr "Si vous souhaitez aider, merci de \n"
+"- copier le message d'erreur en entier ci-dessous\n"
+"- sauvegarder votre fichier svg\n"
+"- créer un rapport d'erreur (issue) sur"
 
 #: lib/elements/image.py:13
 msgid "Image"
@@ -1268,11 +1271,11 @@ msgstr "Espacement Zig-Zag (crête à crête)"
 
 #: lib/elements/satin_column.py:115
 msgid "Peak-to-peak distance between zig-zags. This is double the mm/stitch measurement used by most mechanical machines."
-msgstr ""
+msgstr "Distance entre les crêtes des zigzags. C'est le double de millimètres par point que ce qu'utilisent la plupart des machines à coudre."
 
 #: lib/elements/satin_column.py:126
 msgid "Pull compensation percentage"
-msgstr ""
+msgstr "Pourcentage de compensation d'étirement"
 
 #: lib/elements/satin_column.py:127
 msgid "Additional pull compensation which varies as a percentage of stitch width. Two values separated by a space may be used for an aysmmetric effect."
@@ -1284,15 +1287,15 @@ msgstr "Compensation d'étirement"
 
 #: lib/elements/satin_column.py:141
 msgid "Satin stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape. This setting expands each pair of needle penetrations outward from the center of the satin column by a fixed length. Two values separated by a space may be used for an aysmmetric effect."
-msgstr ""
+msgstr "Les points satin serrent le tissu, ce qui entraîne une colonne plus étroite que celle que vous dessinez dans Inkscape. Ce paramètre étend le point depuis le centre vers l’extérieur de la colonne satinée. Deux valeurs séparées par un espace peuvent être utilisées pour un effet asymétrique."
 
 #: lib/elements/satin_column.py:157
 msgid "Swap rails"
-msgstr ""
+msgstr "Echanger les rails"
 
 #: lib/elements/satin_column.py:158
 msgid "Swaps the first and second rails of the satin column, affecting which side the thread finished on as well as any sided properties"
-msgstr ""
+msgstr "Échange les deux rails de la colonne satin, ce qui affecte le côté de fin de broderie ainsi que tous les paramètres asymétriques"
 
 #: lib/elements/satin_column.py:166
 msgid "Contour underlay"
@@ -1309,19 +1312,19 @@ msgstr "Longueur de point"
 
 #: lib/elements/satin_column.py:179
 msgid "Inset distance (fixed)"
-msgstr ""
+msgstr "Décalage (fixe)"
 
 #: lib/elements/satin_column.py:180
 msgid "Shrink the outline by a fixed length, to prevent the underlay from showing around the outside of the satin column."
-msgstr ""
+msgstr "Rétrécir le contour, pour empêcher que la sous-couche ne se voit autour de la colonne satin."
 
 #: lib/elements/satin_column.py:191
 msgid "Inset distance (proportional)"
-msgstr ""
+msgstr "Décalage (proportionnel)"
 
 #: lib/elements/satin_column.py:192
 msgid "Shrink the outline by a proportion of the column width, to prevent the underlay from showing around the outside of the satin column."
-msgstr ""
+msgstr "Rétrécir le contour proportionnellement à la largeur de la colonne pour empêcher que la sous-couche ne se voit autour de la colonne satin."
 
 #: lib/elements/satin_column.py:203
 msgid "Center-walk underlay"
@@ -1338,16 +1341,16 @@ msgstr "Répétitions"
 
 #: lib/elements/satin_column.py:217
 msgid "For an odd number of repeats, this will reverse the direction the satin column is stitched, causing stitching to both begin and end at the start point."
-msgstr ""
+msgstr "Pour un nombre impair de répétitions, ceci renversa la direction de broderie de la colonne satin, la broderie commençant et terminant au point de départ."
 
 #: lib/elements/satin_column.py:227
 msgid "Position"
-msgstr ""
+msgstr "Position"
 
 #: lib/elements/satin_column.py:228
 #, python-format
 msgid "Position of underlay from between the rails. 0% is along the first rail, 50% is centered, 100% is along the second rail."
-msgstr ""
+msgstr "Position de la sous-couche entre les rails. A 0% la sous couche est le long du premier rail, à 50% centrée, à 100% le long du second rail."
 
 #: lib/elements/satin_column.py:236
 msgid "Zig-zag underlay"
@@ -1369,7 +1372,7 @@ msgstr "Distance entre les crêtes des zig-zags."
 
 #: lib/elements/satin_column.py:253
 msgid "Inset amount (fixed)"
-msgstr ""
+msgstr "Décalage (fixe)"
 
 #: lib/elements/satin_column.py:254 lib/elements/satin_column.py:274
 msgid "default: half of contour underlay inset"
@@ -1377,7 +1380,7 @@ msgstr "par défaut: la moitié du décalage du contour de la sous-couche"
 
 #: lib/elements/satin_column.py:273
 msgid "Inset amount (proportional)"
-msgstr ""
+msgstr "Décalage (proportionnel)"
 
 #: lib/elements/satin_column.py:287
 msgid "Split stitch if distance of maximum stitch length is exceeded"
@@ -1401,15 +1404,15 @@ msgstr "Diminuez le nombre de lignes sautées ou augmentez le nombre de lignes"
 
 #: lib/elements/stroke.py:43
 msgid "Small ZigZag"
-msgstr ""
+msgstr "Petit Zigzag"
 
 #: lib/elements/stroke.py:44
 msgid "This zig zag stitch has a stroke width smaller than 0.5 units."
-msgstr ""
+msgstr "La largeur de ce zigzag est inférieure à 0,5 unité."
 
 #: lib/elements/stroke.py:46
 msgid "Set your stroke to be dashed to indicate running stitch.  Any kind of dash will work."
-msgstr ""
+msgstr "Mettre votre contour en pointillé pour indiquer un point droit. N'importe quel pointillé fonctionne."
 
 #: lib/elements/stroke.py:51
 msgid "Stroke"
@@ -1700,7 +1703,7 @@ msgstr "cette colonne satin n’a pas de commande « point de partage » attac
 
 #: lib/extensions/cutwork_segmentation.py:77
 msgid "Please select at least one element with a stroke color."
-msgstr ""
+msgstr "Merci de sélectionner au moins un élément ayant une couleur de contour."
 
 #: lib/extensions/cutwork_segmentation.py:161
 msgid "Cutwork Group"
@@ -1764,7 +1767,7 @@ msgstr "Nous n'avons pas trouvé de couleurs de remplissage sur vos éléments d
 
 #: lib/extensions/gradient_blocks.py:25 lib/extensions/gradient_blocks.py:33
 msgid "Please select at least one object with a gradient fill."
-msgstr ""
+msgstr "Merci de sélectionner au moins un objet avec un remplissage en dégradé."
 
 #: lib/extensions/input.py:18
 msgid "Ink/Stitch cannot import color formats directly. But you can open the embroidery file and apply the color with Extensions > Ink/Stitch > Thread Color Management > Apply Threadlist"
@@ -1785,7 +1788,7 @@ msgstr "Ink/Stitch ne peut pas automatiquement trouver votre dossier de palette 
 
 #: lib/extensions/jump_to_stroke.py:19
 msgid "Please select at least two elements to convert the jump stitch to a running stitch."
-msgstr ""
+msgstr "Merci de choisir au moins deux éléments pour convertir le saut en point droit."
 
 #: lib/extensions/layer_commands.py:20
 msgid "Please choose one or more commands to add."
@@ -1801,7 +1804,7 @@ msgstr "Police"
 
 #: lib/extensions/lettering.py:56
 msgid "Font size filter (mm). 0 for all sizes."
-msgstr ""
+msgstr "Filtre des fontes selon leur taille (mm). 0 pour obtenir toutes les fontes."
 
 #: lib/extensions/lettering.py:66 inx/inkstitch_apply_threadlist.inx:7
 #: inx/inkstitch_lettering_along_path.inx:13
@@ -1815,23 +1818,23 @@ msgstr "Brode les lignes de texte en aller-retour"
 
 #: lib/extensions/lettering.py:74
 msgid "Never"
-msgstr ""
+msgstr "Jamais"
 
 #: lib/extensions/lettering.py:74
 msgid "after each line"
-msgstr ""
+msgstr "après chaque ligne"
 
 #: lib/extensions/lettering.py:74
 msgid "after each word"
-msgstr ""
+msgstr "après chaque mot"
 
 #: lib/extensions/lettering.py:74
 msgid "after each letter"
-msgstr ""
+msgstr "après chaque lettre"
 
 #: lib/extensions/lettering.py:75
 msgid "Add trim command"
-msgstr ""
+msgstr "Ajouter une commande de coupe"
 
 #: lib/extensions/lettering.py:84 lib/extensions/params.py:442
 #: print/templates/custom-page.html:23 print/templates/custom-page.html:27
@@ -1875,11 +1878,11 @@ msgstr "Vous avez sélectionné des objets qui ne sont pas créées par l’exte
 
 #: lib/extensions/lettering_along_path.py:39
 msgid "The text doesn't contain any glyphs."
-msgstr ""
+msgstr "Ce texte ne contient aucun glyphe."
 
 #: lib/extensions/lettering_along_path.py:141
 msgid "Please select one path and one Ink/Stitch lettering group."
-msgstr ""
+msgstr "Merci de sélectionner un chemin et un groupe de lettrage Ink/Stitch."
 
 #: lib/extensions/lettering_custom_font_dir.py:27
 msgid "Please specify the directory of your custom fonts."
@@ -2550,11 +2553,11 @@ msgstr "Taille de la miniature"
 
 #: print/templates/ui.html:64
 msgid "Full Page Pattern View"
-msgstr ""
+msgstr "Vue du motif sur une page entière"
 
 #: print/templates/ui.html:68
 msgid "Show Footer"
-msgstr ""
+msgstr "Montrer le pied de page"
 
 #: print/templates/ui.html:72
 msgid "Custom information sheet"
@@ -3513,7 +3516,7 @@ msgstr "Ajouter des commandes"
 
 #: inx/inkstitch_gradient_blocks.inx:3
 msgid "Convert to gradient blocks"
-msgstr ""
+msgstr "Convertir en blocs de dégradés"
 
 #: inx/inkstitch_input_100.inx:3
 msgid "100 file input"
@@ -4097,7 +4100,7 @@ msgstr "Redémarrez Inkscape pour l'utiliser."
 
 #: inx/inkstitch_jump_to_stroke.inx:3
 msgid "Jump Stitch to Stroke"
-msgstr ""
+msgstr "Saut en chemin"
 
 #: inx/inkstitch_layer_commands.inx:3
 msgid "Add Layer Commands"
@@ -4109,43 +4112,43 @@ msgstr "Lettrage"
 
 #: inx/inkstitch_lettering_along_path.inx:3
 msgid "Lettering along path"
-msgstr ""
+msgstr "Lettrage le long d'un chemin"
 
 #: inx/inkstitch_lettering_along_path.inx:15
 msgid "Stretch"
-msgstr ""
+msgstr "Étendre"
 
 #: inx/inkstitch_lettering_along_path.inx:15
 msgid "Expand glyph and word spacing to stretch lettering over the entire path"
-msgstr ""
+msgstr "Augmenter la taille des glyphes et des espaces entre les mots pour que le lettrage couvre la totalité du chemin"
 
 #: inx/inkstitch_lettering_along_path.inx:18
 msgid "This extension bends an Ink/Stitch text to a path."
-msgstr ""
+msgstr "Cette extension courbe un texte Ink/Stitch le long d'un chemin."
 
 #: inx/inkstitch_lettering_along_path.inx:19
 msgid "Select Ink/Stitch text and a path before running this extension."
-msgstr ""
+msgstr "Sélectionner un texte Ink/Stitch et un chemin avant d'exécuter cette extension."
 
 #: inx/inkstitch_lettering_along_path.inx:21
 msgid "The text needs to meet these conditions:"
-msgstr ""
+msgstr "Le texte doit remplir ces conditions :"
 
 #: inx/inkstitch_lettering_along_path.inx:22
 msgid "* The text consists of only one line of text"
-msgstr ""
+msgstr "* Le texte consiste en une unique ligne de texte"
 
 #: inx/inkstitch_lettering_along_path.inx:23
 msgid "* The text should not be too large for the given path"
-msgstr ""
+msgstr "Le texte ne doit pas être trop long pour le chemin"
 
 #: inx/inkstitch_lettering_along_path.inx:24
 msgid "* Text text should not contain trim symbols"
-msgstr ""
+msgstr "Le texte ne doit pas contenir de symbole de coupe"
 
 #: inx/inkstitch_lettering_along_path.inx:26
 msgid "The stretch option defines whether the spaces between glyphs should be expanded so that the text stretches over the entire path."
-msgstr ""
+msgstr "L'option d'étirement détermine si les espaces entre les glyphes sont ou non étendus afin que le texte s'étende sur la longueur totale du chemin."
 
 #: inx/inkstitch_lettering_custom_font_dir.inx:3
 #: inx/inkstitch_lettering_custom_font_dir.inx:18
