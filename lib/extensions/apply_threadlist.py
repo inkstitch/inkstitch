@@ -8,9 +8,11 @@ import re
 import sys
 
 import inkex
+
 import pyembroidery
 
 from ..i18n import _
+from ..svg.tags import INKSTITCH_ATTRIBS
 from ..threads import ThreadCatalog
 from .base import InkstitchExtension
 
@@ -41,6 +43,7 @@ class ApplyThreadlist(InkstitchExtension):
 
         method = self.options.method
 
+        # colors: [[color, cutwork_needle],[...]]
         if path.endswith(('col', 'inf', 'edr')):
             colors = self.parse_color_format(path)
         elif method == 1:
@@ -62,8 +65,12 @@ class ApplyThreadlist(InkstitchExtension):
             if i == len(colors):
                 break
 
-            style = element.node.get('style').replace("%s" % element_color, "%s" % colors[i])
+            style = element.node.get('style').replace("%s" % element_color, "%s" % colors[i][0])
             element.node.set('style', style)
+
+            # apply cutwork
+            if colors[i][1] is not None:
+                element.node.set(INKSTITCH_ATTRIBS['cutwork_needle'], colors[i][1])
 
     def verify_path(self, path):
         if not os.path.exists(path):
@@ -89,17 +96,21 @@ class ApplyThreadlist(InkstitchExtension):
                 if line[0].isdigit():
                     m = re.search(r"\((#[0-9A-Fa-f]{6})\)", line)
                     if m:
-                        colors.append(m.group(1))
+                        colors.append([m.group(1), None])
                     else:
                         # Color not found
-                        colors.append(None)
+                        colors.append([None, None])
         return colors
 
     def parse_color_format(self, path):
         colors = []
         threads = pyembroidery.read(path).threadlist
         for color in threads:
-            colors.append(color.hex_color())
+            if color.description.startswith("Cut"):
+                # there is a maximum of 4 needles, we can simply take the last element from the description string
+                colors.append([color.hex_color(), color.description[-1]])
+            else:
+                colors.append([color.hex_color(), None])
         return colors
 
     def parse_threadlist_by_catalog_number(self, path):
@@ -116,19 +127,14 @@ class ApplyThreadlist(InkstitchExtension):
         with open(path) as threadlist:
             for line in threadlist:
                 if line[0].isdigit():
-                    # some threadlists may add a # in front of the catalof number
+                    # some threadlists may add a # in front of the catalog number
                     # let's remove it from the entire string before splitting it up
                     thread = line.replace('#', '').split()
                     catalog_number = set(thread[1:]).intersection(palette_numbers)
                     if catalog_number:
                         color_index = palette_numbers.index(next(iter(catalog_number)))
-                        colors.append(palette_colors[color_index])
+                        colors.append([palette_colors[color_index], None])
                     else:
                         # No color found
-                        colors.append(None)
+                        colors.append([None, None])
         return colors
-
-    def find_elements(self, xpath):
-        svg = self.document.getroot()
-        elements = svg.xpath(xpath, namespaces=inkex.NSS)
-        return elements

@@ -26,8 +26,8 @@ class ThreadColor(object):
             self.name = color.description
             self.number = color.catalog_number
             self.manufacturer = color.brand
+            self.description = color.description
             self.chart = color.chart
-            self.description
             self.rgb = (color.get_red(), color.get_green(), color.get_blue())
             return
         elif isinstance(color, str):
