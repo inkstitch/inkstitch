@@ -11,27 +11,27 @@ Patterns are created by special stitch positioning.
 
 [Download sample file](/assets/images/docs/pattern.svg)
 
-## Generate Patterns
+## Lav mønsterfyld
 
-In Ink/Stitch you can generate patterns by either adding stitches or removing stitches from any existing embroidery element.
+I Ink/Stitch kan du generere mønstre ved enten at tilføje sømme eller fjerne sømme fra et eksisterende broderielement.
 
-1. **Create embroidery element(s).** This can be either a satin column or fill area. Patterns will also work on strokes, but they may not be the best target for patterns.
+1. **Opret broderielement(er) embroidery element(s).**  Dette kan enten være en satinsøjle eller fyldområde. Mønstre vil også fungere på streger, men de er muligvis ikke det bedste mål for mønstre.
 
-2. **Create pattern path(s).** A pattern consists of strokes or fill areas (or both at the same time). Strokes will be used to add stitches, while patterns with a fill will remove stitches from the embroidery element.
+2. **Opret mønstersti(er).**  Et mønster består af streger eller udfyldningsområder (eller begge på samme tid). Strøg vil blive brugt til at tilføje sting, mens mønstre med fyld fjerner sting fra broderielementet.
 
-3. Select both, the embroidery element and the pattern and hit `Ctrl+G` to **group them together**.
+3. Vælg begge, broderielementet og mønsteret, og tryk på Ctrl+G for at **gruppere** dem sammen.
 
-4. **Convert to pattern.** Select only the pattern and run `Extensions > Ink/Stitch > Edit > Selection to pattern`. This will add a start marker to the pattern element to indicate, that it will not be embroidered but will be used as a pattern for all elements in the same group. Elements in subgroups of the very same group will not be affected.
+4. **Konverter til mønster.** Vælg kun mønsteret og kør `Extensions > Ink/Stitch > Edit > Selection to pattern`. Dette vil tilføje en startmarkør til mønsterelementet for at angive, at det ikke vil blive broderet, men vil blive brugt som et mønster for alle elementer i samme gruppe. Elementer i undergrupper af den samme gruppe vil ikke blive påvirket.
 
    ![Pattern groups](/assets/images/docs/en/pattern.png)
 
-## Remove Pattern Marker
+## Fjern mønstermarkøren
 
-The pattern marker can be removed in the fill and stroke panel (`Ctrl+Shift+F`). Open the Stroke style tab and set the first dropdown list in "Markers" to  the very first (empty) option.
+Mønstermarkøren kan fjernes i fyld- og stregpanelet (`Ctrl+Shift+F`). Åbn fanen Stregstil og sæt den første rulleliste i "Markører" til den allerførste (tomme) mulighed.
 
 ![Remove pattern](/assets/images/docs/en/stitch-type-remove-pattern.png)
 
-### Samples Files Including Pattern Stitches
+### Eksempel-filer inkluderet mønsterfyld 
 
 {% include tutorials/tutorial_list key="stitch-type" value="Pattern Stitch" %}
 
