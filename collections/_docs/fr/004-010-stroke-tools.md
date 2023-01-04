@@ -62,7 +62,7 @@ Merci de noter que chaque trait doit découper le remplissage en deux.
 ### Options
 
 * Garder l'original : utilisez cette option si vous voulez garder les objets de départ, sinon ils seront supprimés.
-* Seuil de cul de sac(pc) : ceci supprimera les petits traits. Dans la plus part des cas, la meilleure valeur  est à peu près la largeur de la forme de départ en pixel.
+* Seuil de cul de sac(px) : ceci supprimera les petits traits. Dans la plus part des cas, la meilleure valeur  est à peu près la largeur de la forme de départ en pixel.
 * Pointillé : Mettre à vrai si vous souhaitez un point droit.
 * Largeur (px) : Si vous souhaitez directement convertir en colonne satin, donner ici la valeur de la largeur de la colonne satin. Dans la plupart des cas, vous voudrez une valeur faible pour pouvoir facilement inspecter et modifier avant conversion.
 
@@ -71,7 +71,7 @@ Merci de noter que chaque trait doit découper le remplissage en deux.
 
 {% include upcoming_release.html %}
 
-Ceci crééra un point droit entre la fin du premier élément et le début du second. il ne vous reste plus qu'à le positionner là où il sera recouvert par des broderies ultérieures pour éviter un saut de fil.
+Ceci crééra un point droit entre la fin du premier élément et le début du second. Il ne vous reste plus qu'à le positionner là où il sera recouvert par des broderies ultérieures pour éviter un saut de fil.
 
 
 
