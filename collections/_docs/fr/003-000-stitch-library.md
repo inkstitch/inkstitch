@@ -2,7 +2,7 @@
 title: "Bibliothèque de points"
 permalink: /fr/docs/stitch-library/
 excerpt: ""
-last_modified_at: 2019-10-21
+last_modified_at: 2023-01-04
 toc: true
 ---
 Les types de points Ink/Stitch peuvent être grossièrement divisés en trois sections: trait, satin et remplissage.
@@ -34,8 +34,8 @@ En mode point manuel Ink/Stitch utilisera chaque nœud d’un chemin comme point
 
 [En savoir plus](/fr/docs/stitches/manual-stitch/){: .btn .btn--primary}
 
-### Ripple Stitch
-Ripple stitch is a versatile stitch type that stretches over a surface in spirals, rows of lines or even grids.
+### Broderie ondulée
+la broderie ondulée est un type de broderie qui s'étnd sur une surface en spirale ou en rangées de lignes ou même en grilles. 
 
 ![Ripple Stitch](/assets/images/docs/ripplefly.jpg)
 
@@ -78,15 +78,15 @@ Le point de remplissage est utilisé pour remplir une grande surface avec une co
 
 [En savoir plus](/fr/docs/stitches/fill-stitch/){: .btn .btn--primary}
 
-### Contour Stitch
-Contour fill covers areas with stitches following the contour of an object.
+### Remplissage selon contour
+Le remplissage selon contour recouvre des zones en suivant leur contours.
 
 ![Contour stitch](/assets/images/docs/contour-fill-detail.jpg)
 
 [Learn more](/fr/docs/stitches/contour-stitch){: .btn .btn--primary}
 
-### Guided Fill
-Create guide lines to generate a curved fill.
+### Remplissage guidé
+Créez des lignes de guidage pour généré un remplissage courbé.
 
 ![Guided fill](/assets/images/docs/guided-fill-complex.svg)
 
