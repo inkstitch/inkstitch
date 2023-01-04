@@ -28,7 +28,7 @@ L'outil de lettrage génère un texte multiligne sous la forme de colonnes satin
    Cela donnera à votre machine des déplacements plus courts.
 
 * **Ajouter des commandes de coupes**<br>
-  Si cette option est activée, Ink/Stitch ajoutera des commandes de coupe pour chaque lettre.
+  Si cette option est activée, Ink/Stitch ajoutera des commandes de coupe  au choix pour chaque lettre, ou après chaque mot ou après chaque ligne.
 
 ## Préconfigurations
 
