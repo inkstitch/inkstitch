@@ -86,7 +86,7 @@ Le remplissage selon contour recouvre des zones en suivant leur contours.
 [Learn more](/fr/docs/stitches/contour-stitch){: .btn .btn--primary}
 
 ### Remplissage guidé
-Créez des lignes de guidage pour généré un remplissage courbé.
+Créez des lignes de guidage pour générer un remplissage courbé.
 
 ![Guided fill](/assets/images/docs/guided-fill-complex.svg)
 
