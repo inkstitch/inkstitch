@@ -31,7 +31,7 @@ Ceci fonctionne d'autant mieux que la largeur de la colonne satin initiale est c
 
 ![Satin to Stroke example](/assets/images/docs/en/satin_to_stroke.png)
 
-### Utilisation
+### Usage
 
 1. Sélectionez la ou les colonnes satin que vous souhaitez convertir en point droits.
 2. Exécutez  `Extensions > Ink/Stitch > Outils Trait > Convertir  le satin en trait...`
@@ -51,7 +51,7 @@ Vous pouvez améliorer le résultat en définissant des lignes de découpage.
 
 
 
-### Utilisation
+### Usage
 * (Optionnel). Dessiner des lignes de découpage aux intersections/jointures. Ce sont des simples traits. Ceci est particulièrement utile si vous voulez définir des colonnes satin.  
 Merci de noter que chaque trait doit découper le remplissage en deux. 
 * Sélectionnez un ou plusieurs objets remplissage que vous souhaitez convertir en trait, ainsi que les lignes de découpages correspondantes si vous en avez définies.
@@ -75,7 +75,7 @@ Ceci crééra un point droit entre la fin du premier élément et le début du s
 
 
 
-### Utilisation
+### Usage
 
 * Sélectionnez au moins deux objets
 * Exécutez  `Extensions > Ink/Stitch > Outils: trait > Saut en Trait`
