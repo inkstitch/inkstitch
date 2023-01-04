@@ -2,7 +2,7 @@
 title: "Outil lettrage"
 permalink: /fr/docs/lettering/
 excerpt: ""
-last_modified_at: 2022-01-15
+last_modified_at: 2023-01-04
 toc: true
 ---
 L'outil de lettrage génère un texte multiligne sous la forme de colonnes satin et génère de manière dynamique les points, divisant éventuellement les points satins et ajoutant du point droit.
@@ -18,16 +18,36 @@ L'outil de lettrage génère un texte multiligne sous la forme de colonnes satin
 
 ## Options
 
+* **Filtrage par taille**<br>
+  Les fontes sont conçues pour être  brodées dans  un intervalle de tailles donné. Le filgtrage par taille vous aide en réduisant la liste des fontes à uniquement les fontes qui peuvent être brodées dans les dimensions choisies.
+  Un filtre actif (pas à 0) déterminera  automatiquement la bonne échelle pour que la fonte sélectionnée soit dans la dimension souhaitée.
+  {% include upcoming_release.html %}
+
 * **Broder les lignes de texte en aller retour**<br>
  Lorsque cette option est activée, la première ligne sera brodée de gauche à droite et la seconde de droite à gauche, etc.
    Cela donnera à votre machine des déplacements plus courts.
 
-* **Ajouter des coupes**<br>
+* **Ajouter des commandes de coupes**<br>
   Si cette option est activée, Ink/Stitch ajoutera des commandes de coupe pour chaque lettre.
 
 ## Préconfigurations
 
 Vous pouvez enregistrer et rouvrir vos paramètres de police préférés.
+
+## Lettrage le long d'un chemin
+
+{% include upcoming_release.html %}
+
+Les lettres d'ink/stitch ont été soigneusement dessinées pour une broderie optimale. Si vous essayez de les modifier avec les outils usuels d'inkscape, il se peut que cela ne fonctionne pas comme vous le souhaitez. Placez les lettres le long  d'un chemin est un gros travail. Cet outil va vous aider àle faire.
+
+### Usage
+
+* Sélectionnez un chemin et un groupe de lettrage 
+* Exécutez `Extensions > Ink/Stitch > Lettrage le long d'un chemin ...`
+* If `Etendre` est coché Ink/Stitch va ét'endre les espaces entre les lettres pour que le texte utilise tout le chemin. Sinon il gardera les distances du texte original. 
+* Cliquez sur 'Appliquer'
+
+
 
 ## Bibliothèque de polices
 
