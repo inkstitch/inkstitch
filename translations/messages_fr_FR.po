@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2023-01-01 01:30+0000\n"
-"PO-Revision-Date: 2023-01-01 01:31\n"
+"PO-Revision-Date: 2023-01-05 01:23\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -1279,7 +1279,7 @@ msgstr "Pourcentage de compensation d'étirement"
 
 #: lib/elements/satin_column.py:127
 msgid "Additional pull compensation which varies as a percentage of stitch width. Two values separated by a space may be used for an aysmmetric effect."
-msgstr ""
+msgstr "Compensation d'étirement supplémentaire qui varie comme un pourcentage de la largeur du point. Deux valeurs séparées par un espace peuvent être utilisées pour un effet asymétrique."
 
 #: lib/elements/satin_column.py:140
 msgid "Pull compensation"
