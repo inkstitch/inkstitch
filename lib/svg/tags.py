@@ -89,6 +89,7 @@ inkstitch_attribs = [
     'repeats',
     'running_stitch_length_mm',
     'running_stitch_tolerance_mm',
+    'cutwork_needle',
     # ripples
     'line_count',
     'exponent',

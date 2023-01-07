@@ -147,6 +147,7 @@ class CutworkSegmentation(InkstitchExtension):
                                         "transform": get_correction_transform(element.node),
                                         INKSTITCH_ATTRIBS["ties"]: "3",
                                         INKSTITCH_ATTRIBS["running_stitch_length_mm"]: "1",
+                                        INKSTITCH_ATTRIBS["cutwork_needle"]: str(sector['id']),
                                         "d": d
                                        })
         self.new_elements.append([stroke_element, sector['id']])
