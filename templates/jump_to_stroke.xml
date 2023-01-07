@@ -11,6 +11,8 @@
             </submenu>
         </effects-menu>
     </effect>
+    <param name="stitch-length" type="float" gui-text="Running stitch length (mm)">2.5</param>
+    <param name="tolerance" type="float" gui-text="Running stitch tolerance (mm)">2.0</param>
     <script>
         {{ command_tag | safe }}
     </script>
