@@ -113,7 +113,7 @@ class SatinColumn(EmbroideryElement):
     @property
     @param('random_zigzag_spacing_percent',
            _('Random zig-zag spacing percentage'),
-           tooltip=_('Afount of random jitter added to stitch length.'),
+           tooltip=_('Amount of random jitter added to stitch length.'),
            default=0, type='float', unit="± %", sort_index=92)
     def random_zigzag_spacing(self):
         # peak-to-peak distance between zigzags
