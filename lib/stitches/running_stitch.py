@@ -4,11 +4,49 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 import math
+import typing
 from copy import copy
 
-from shapely.geometry import LineString
+import numpy as np
+from shapely import geometry as shgeo
+from ..utils import prng
 
 """ Utility functions to produce running stitches. """
+
+
+def split_segment_even_n(a, b, segments: int, jitter_sigma: float = 0.0, random_seed=None) -> typing.List[shgeo.Point]:
+    if segments <= 1:
+        return []
+    line = shgeo.LineString((a, b))
+
+    splits = np.array(range(1, segments)) / segments
+    if random_seed is not None:
+        jitters = (prng.nUniformFloats(len(splits), random_seed) * 2) - 1
+        splits = splits + jitters * (jitter_sigma / segments)
+
+    # sort the splits in case a bad roll transposes any of them
+    return [line.interpolate(x, normalized=True) for x in sorted(splits)]
+
+
+def split_segment_even_dist(a, b, max_length: float, jitter_sigma: float = 0.0, random_seed=None) -> typing.List[shgeo.Point]:
+    distance = shgeo.Point(a).distance(shgeo.Point(b))
+    segments = math.ceil(distance / max_length)
+    return split_segment_even_n(a, b, segments, jitter_sigma, random_seed)
+
+
+def split_segment_random_phase(a, b, length: float, length_sigma: float, random_seed: str) -> typing.List[shgeo.Point]:
+    line = shgeo.LineString([a, b])
+    progress = length * prng.uniformFloats(random_seed, "phase")[0]
+    splits = [progress]
+    distance = line.length
+    if progress >= distance:
+        return []
+    for x in prng.iterUniformFloats(random_seed):
+        progress += length * (1 + length_sigma * (x - 0.5) * 2)
+        if progress >= distance:
+            break
+        splits.append(progress)
+    return [line.interpolate(x, normalized=False) for x in splits]
 
 
 def running_stitch(points, stitch_length, tolerance):
@@ -28,7 +66,7 @@ def running_stitch(points, stitch_length, tolerance):
 
     # simplify will remove as many points as possible while ensuring that the
     # resulting path stays within the specified tolerance of the original path.
-    path = LineString(points)
+    path = shgeo.LineString(points)
     simplified = path.simplify(tolerance, preserve_topology=False)
 
     # save the points that simplify picked and make sure we stitch them
@@ -45,7 +83,7 @@ def running_stitch(points, stitch_length, tolerance):
 
         # Now split each section up evenly into stitches, each with a length no
         # greater than the specified stitch_length.
-        section_ls = LineString(section)
+        section_ls = shgeo.LineString(section)
         section_length = section_ls.length
         if section_length > stitch_length:
             # a fractional stitch needs to be rounded up, which will make all

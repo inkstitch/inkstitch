@@ -7,9 +7,11 @@
 
 import os
 import sys
+import traceback
 from collections import defaultdict
 from copy import copy
 from itertools import groupby, zip_longest
+from secrets import randbelow
 
 import wx
 from wx.lib.scrolledpanel import ScrolledPanel
@@ -34,6 +36,8 @@ class ParamsTab(ScrolledPanel):
     def __init__(self, *args, **kwargs):
         self.params = kwargs.pop('params', [])
         self.name = kwargs.pop('name', None)
+
+        # TODO: this is actually a list of embroidery elements, not DOM nodes, and needs to be renamed
         self.nodes = kwargs.pop('nodes')
         kwargs["style"] = wx.TAB_TRAVERSAL
         ScrolledPanel.__init__(self, *args, **kwargs)
@@ -77,6 +81,9 @@ class ParamsTab(ScrolledPanel):
 
         self.pencil_icon = wx.Image(os.path.join(get_resource_dir(
             "icons"), "pencil_20x20.png")).ConvertToBitmap()
+
+        self.randomize_icon = wx.Image(os.path.join(get_resource_dir(
+            "icons"), "randomize_20x20.png")).ConvertToBitmap()
 
         self.__set_properties()
         self.__do_layout()
@@ -186,6 +193,22 @@ class ParamsTab(ScrolledPanel):
                     values[name] = input.GetSelection()
 
         return values
+
+    def on_reroll(self, event):
+        if len(self.nodes) == 1:
+            new_seed = str(randbelow(int(1e8)))
+            input = self.param_inputs['random_seed']
+            input.SetValue(new_seed)
+            self.changed_inputs.add(input)
+        else:
+            for node in self.nodes:
+                new_seed = str(randbelow(int(1e8)))
+                node.set_param('random_seed', new_seed)
+
+        self.enable_change_indicator('random_seed')
+        event.Skip()
+        if self.on_change_hook:
+            self.on_change_hook(self)
 
     def apply(self):
         values = self.get_values()
@@ -363,7 +386,12 @@ class ParamsTab(ScrolledPanel):
 
             self.param_inputs[param.name] = input
 
-            col4 = wx.StaticText(self, label=param.unit or "")
+            if param.type == 'random_seed':
+                col4 = wx.Button(self, wx.ID_ANY, _("Re-roll"))
+                col4.Bind(wx.EVT_BUTTON, self.on_reroll)
+                col4.SetBitmap(self.randomize_icon)
+            else:
+                col4 = wx.StaticText(self, label=param.unit or "")
 
             if param.select_items is not None:
                 input.Hide()
@@ -379,6 +407,7 @@ class ParamsTab(ScrolledPanel):
         self.inputs_to_params = {v: k for k, v in self.param_inputs.items()}
 
         box.Add(self.settings_grid, proportion=1, flag=wx.ALL, border=10)
+
         self.SetSizer(box)
         self.update_choice_widgets()
 
@@ -399,11 +428,6 @@ class ParamsTab(ScrolledPanel):
         self.param_change_indicators[param].SetBitmapLabel(self.pencil_icon)
         self.param_change_indicators[param].SetToolTip(
             _('This parameter will be saved when you click "Apply and Quit"'))
-
-        self.changed_inputs.add(self.param_inputs[param])
-
-        if self.on_change_hook:
-            self.on_change_hook(self)
 
 # end of class SatinPane
 
@@ -488,9 +512,10 @@ class SettingsFrame(wx.Frame):
         except SystemExit:
             wx.CallAfter(self._show_warning)
             raise
-        except Exception:
+        except Exception as e:
             # Ignore errors.  This can be things like incorrect paths for
             # satins or division by zero caused by incorrect param values.
+            traceback.print_exception(e, file=sys.stderr)
             pass
 
         return patches
@@ -611,6 +636,8 @@ class Params(InkstitchExtension):
         return classes
 
     def get_nodes_by_class(self):
+        # returns embroidery elements (not nodes) by class
+        # TODO: rename this
         nodes = self.get_nodes()
         nodes_by_class = defaultdict(list)
 

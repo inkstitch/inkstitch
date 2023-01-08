@@ -179,6 +179,8 @@ class InkstitchExtension(inkex.Effect):
         return nodes
 
     def get_nodes(self, troubleshoot=False):
+        # Postorder traversal of selected nodes and their descendants.
+        # Returns all nodes if there is no selection.
         return self.descendants(self.document.getroot(), troubleshoot=troubleshoot)
 
     def get_elements(self, troubleshoot=False):

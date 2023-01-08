@@ -163,6 +163,8 @@ class EmbroideryElement(object):
         return self.get_split_float_param(param, default) * PIXELS_PER_MM
 
     def set_param(self, name, value):
+        # Sets a param on the node backing this element. Used by params dialog.
+        # After calling, this element is invalid due to caching and must be re-created to use the new value.
         param = INKSTITCH_ATTRIBS[name]
         self.node.set(param, str(value))
 
@@ -249,6 +251,22 @@ class EmbroideryElement(object):
     @cache
     def force_lock_stitches(self):
         return self.get_boolean_param('force_lock_stitches', False)
+
+    @property
+    @param('random_seed',
+           _('Random seed'),
+           tooltip=_('Use a specific seed for randomized attributes. Uses the element ID if empty.'),
+           type='random_seed',
+           default='',
+           sort_index=100)
+    @cache
+    def random_seed(self) -> str:
+        seed = self.get_param('random_seed', '')
+        if not seed:
+            seed = self.node.get_id() or ''
+            # TODO(#1696): When inplementing grouped clones, join this with the IDs of any shadow roots,
+            # letting each instance without a specified seed get a different default.
+        return seed
 
     @property
     def path(self):

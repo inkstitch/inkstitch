@@ -4,6 +4,7 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 from ..utils.geometry import Point
+from shapely import geometry as shgeo
 
 
 class Stitch(Point):
@@ -17,13 +18,13 @@ class Stitch(Point):
             # Allow creating a Stitch from another Stitch.  Attributes passed as
             # arguments will override any existing attributes.
             base_stitch = x
-            self.x = base_stitch.x
-            self.y = base_stitch.y
-        elif isinstance(x, Point):
+            self.x: float = base_stitch.x
+            self.y: float = base_stitch.y
+        elif isinstance(x, (Point, shgeo.Point)):
             # Allow creating a Stitch from a Point
             point = x
-            self.x = point.x
-            self.y = point.y
+            self.x: float = point.x
+            self.y: float = point.y
         else:
             Point.__init__(self, x, y)
 

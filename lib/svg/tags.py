@@ -125,11 +125,18 @@ inkstitch_attribs = [
     'pull_compensation_mm',
     'pull_compensation_percent',
     'stroke_first',
+    'random_width_decrease_percent',
+    'random_width_increase_percent',
+    'random_zigzag_spacing_percent',
+    'random_split_phase',
+    'random_split_jitter_percent',
+    'min_random_split_length_mm',
     # stitch_plan
     'invisible_layers',
-    # Legacy
+    # All elements
     'trim_after',
     'stop_after',
+    'random_seed',
     'manual_stitch',
 ]
 for attrib in inkstitch_attribs:
