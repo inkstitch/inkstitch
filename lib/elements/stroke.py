@@ -18,6 +18,7 @@ from ..svg import get_node_transform, parse_length_with_units
 from ..utils import Point, cache
 from .element import EmbroideryElement, param
 from .validation import ValidationWarning
+from ..threads import ThreadColor
 
 warned_about_legacy_running_stitch = False
 
@@ -57,7 +58,17 @@ class Stroke(EmbroideryElement):
 
     @property
     def color(self):
-        return self.get_style("stroke")
+        color = self.get_style("stroke")
+        if self.cutwork_needle is not None:
+            color = ThreadColor(color, description=self.cutwork_needle, chart=self.cutwork_needle)
+        return color
+
+    @property
+    def cutwork_needle(self):
+        needle = self.get_int_param('cutwork_needle') or None
+        if needle is not None:
+            needle = f'Cut {needle}'
+        return needle
 
     @property
     def dashed(self):

@@ -15,7 +15,7 @@ from inkex import Color
 class ThreadColor(object):
     hex_str_re = re.compile('#([0-9a-z]{3}|[0-9a-z]{6})', re.I)
 
-    def __init__(self, color, name=None, number=None, manufacturer=None):
+    def __init__(self, color, name=None, number=None, manufacturer=None, description=None, chart=None):
         # set colors with a gradient to black (avoiding an error message)
         if type(color) == str and color.startswith('url'):
             color = None
@@ -26,6 +26,8 @@ class ThreadColor(object):
             self.name = color.description
             self.number = color.catalog_number
             self.manufacturer = color.brand
+            self.description = color.description
+            self.chart = color.chart
             self.rgb = (color.get_red(), color.get_green(), color.get_blue())
             return
         elif isinstance(color, str):
@@ -42,6 +44,8 @@ class ThreadColor(object):
         self.name = name
         self.number = number
         self.manufacturer = manufacturer
+        self.description = description
+        self.chart = chart
 
     def __json__(self):
         jsonified = self._as_dict()
@@ -53,6 +57,8 @@ class ThreadColor(object):
         return dict(name=self.name,
                     number=self.number,
                     manufacturer=self.manufacturer,
+                    description=self.description,
+                    chart=self.chart,
                     rgb=self.rgb,
                     hex=self.to_hex_str(),
                     )
@@ -81,6 +87,8 @@ class ThreadColor(object):
             "name": self.name,
             "id": self.number,
             "manufacturer": self.manufacturer,
+            "description": self.description,
+            "chart": self.chart,
             "rgb": int(self.hex_digits, 16),
         }
 
@@ -125,7 +133,7 @@ class ThreadColor(object):
         # convert back to values in the range of 0-255
         color = tuple(value * 255 for value in color)
 
-        return ThreadColor(color, name=self.name, number=self.number, manufacturer=self.manufacturer)
+        return ThreadColor(color, name=self.name, number=self.number, manufacturer=self.manufacturer, description=self.description, chart=self.chart)
 
     @property
     def darker(self):
@@ -140,4 +148,4 @@ class ThreadColor(object):
         # convert back to values in the range of 0-255
         color = tuple(value * 255 for value in color)
 
-        return ThreadColor(color, name=self.name, number=self.number, manufacturer=self.manufacturer)
+        return ThreadColor(color, name=self.name, number=self.number, manufacturer=self.manufacturer, description=self.description, chart=self.chart)

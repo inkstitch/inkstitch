@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-12-20 01:18+0000\n"
-"PO-Revision-Date: 2022-12-20 01:20\n"
+"POT-Creation-Date: 2023-01-01 01:30+0000\n"
+"PO-Revision-Date: 2023-01-05 01:23\n"
 "Last-Translator: \n"
 "Language-Team: Norwegian\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-20 01:18+0000\n"
+"POT-Creation-Date: 2023-01-01 01:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,7 +39,7 @@ msgstr "Brock Script"
 #. description of font in fonts/Brockscript
 #: inkstitch-fonts-metadata.py:4
 msgid "Brock Script is a decorative satin column manuscript font of size approximatively 40mm. It can be enlarged up to 250%. It contains 118 glyphs, covering most western european languages needs.More decorative options are hidden in the µ glyph"
-msgstr ""
+msgstr "Brock Script er en dekorativ satengsøm-manuskriptskrifttype med en størrelse på omtrent 40 mm. Den kan forstørres opp til 250 %. Den inneholder 118 tegn, som dekker de fleste vesteuropeiske språkene. Flere dekorative alternativer er skjult i µ-glyfen"
 
 #. name of font in fonts/abecedaire
 #: inkstitch-fonts-metadata.py:6
@@ -60,7 +60,7 @@ msgstr "Amitaclo"
 #: inkstitch-fonts-metadata.py:12
 #, python-format
 msgid "The capital M is 25.3 millimeter wide at 100% scale. Can be scaled down to 80% or up to 160%. Every satin has zigzag underlay"
-msgstr ""
+msgstr "Den store M er 25,3 millimeter bred i 100 % skala. Kan skaleres ned til 80 % eller opp til 160 %. Hver satengsøm har sikksakkunderlag"
 
 #. name of font in fonts/amitaclo_small
 #: inkstitch-fonts-metadata.py:14
@@ -163,7 +163,7 @@ msgstr ""
 #. description of font in fonts/digory_doodles_bean
 #: inkstitch-fonts-metadata.py:52
 msgid "All letters have mixed satin and bean stitch. The capital M is 16mm tall. The small x is 7 mm."
-msgstr ""
+msgstr "Alle bokstavene har blandet satengsøm og \"bean stitch\". Den store M er 16 mm høy. Den lille x er 7 mm."
 
 #. name of font in fonts/dinomouse72
 #: inkstitch-fonts-metadata.py:54
