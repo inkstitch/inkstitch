@@ -86,7 +86,7 @@ def stitch_row(stitches, beg, end, angle, row_spacing, max_stitch_length, stagge
     offset = (first_stitch - beg).length()
 
     while offset < segment_length:
-        stitches.append(Stitch(beg + offset * row_direction, tags=('fill_row')))
+        stitches.append(Stitch(beg + offset * row_direction, tags=('fill_row',)))
         offset += max_stitch_length
 
     if (end - stitches[-1]).length() > 0.1 * PIXELS_PER_MM and not skip_last:

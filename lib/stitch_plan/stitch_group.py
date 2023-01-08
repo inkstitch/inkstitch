@@ -18,7 +18,7 @@ class StitchGroup:
     """
 
     def __init__(self, color=None, stitches=None, trim_after=False, stop_after=False,
-                 tie_modus=0, force_lock_stitches=False, stitch_as_is=False, tags=None):
+                 lock_stitches=None, stitch_as_is=False, tags=None):
         # DANGER: if you add new attributes, you MUST also set their default
         # values in __new__() below.  Otherwise, cached stitch plans can be
         # loaded and create objects without those properties defined, because
@@ -27,8 +27,7 @@ class StitchGroup:
         self.color = color
         self.trim_after = trim_after
         self.stop_after = stop_after
-        self.tie_modus = tie_modus
-        self.force_lock_stitches = force_lock_stitches
+        self.lock_stitches = lock_stitches
         self.stitch_as_is = stitch_as_is
         self.stitches = []
 
@@ -44,6 +43,8 @@ class StitchGroup:
         # Set default values for any new attributes here (see note in __init__() above)
         # instance.foo = None
 
+        instance.lock_stitches = None
+        
         return instance
 
     def __add__(self, other):

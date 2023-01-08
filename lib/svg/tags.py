@@ -53,6 +53,14 @@ INKSTITCH_ATTRIBS = {}
 inkstitch_attribs = [
     'ties',
     'force_lock_stitches',
+    'lock_start',
+    'lock_start_scale_mm',
+    'lock_start_scale_percent',
+    'lock_custom_start',
+    'lock_end',
+    'lock_end_scale_mm',
+    'lock_end_scale_percent',
+    'lock_custom_end',
     # clone
     'clone',
     'flip_angle',
