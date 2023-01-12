@@ -628,7 +628,10 @@ class FillStitch(EmbroideryElement):
                                    self.flip,
                                    self.staggers,
                                    self.skip_last)
-        return [StitchGroup(stitches=stitch_list, color=self.color) for stitch_list in stitch_lists]
+        return [StitchGroup(stitches=stitch_list,
+                            color=self.color,
+                            force_lock_stitches=self.force_lock_stitches,
+                            lock_stitches=self.lock_stitches) for stitch_list in stitch_lists]
 
     def do_underlay(self, shape, starting_point):
         stitch_groups = []
@@ -636,6 +639,7 @@ class FillStitch(EmbroideryElement):
             underlay = StitchGroup(
                 color=self.color,
                 tags=("auto_fill", "auto_fill_underlay"),
+                lock_stitches=self.lock_stitches,
                 stitches=auto_fill(
                     shape,
                     self.fill_underlay_angle[i],
@@ -657,6 +661,8 @@ class FillStitch(EmbroideryElement):
         stitch_group = StitchGroup(
             color=self.color,
             tags=("auto_fill", "auto_fill_top"),
+            force_lock_stitches=self.force_lock_stitches,
+            lock_stitches=self.lock_stitches,
             stitches=auto_fill(
                 shape,
                 self.angle,
@@ -710,7 +716,9 @@ class FillStitch(EmbroideryElement):
         stitch_group = StitchGroup(
             color=self.color,
             tags=("auto_fill", "auto_fill_top"),
-            stitches=stitches)
+            stitches=stitches,
+            force_lock_stitches=self.force_lock_stitches,
+            lock_stitches=self.lock_stitches,)
         stitch_groups.append(stitch_group)
 
         return stitch_groups
@@ -725,6 +733,8 @@ class FillStitch(EmbroideryElement):
         stitch_group = StitchGroup(
             color=self.color,
             tags=("guided_fill", "auto_fill_top"),
+            force_lock_stitches=self.force_lock_stitches,
+            lock_stitches=self.lock_stitches,
             stitches=guided_fill(
                 shape,
                 guide_line.geoms[0],

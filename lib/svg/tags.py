@@ -3,9 +3,8 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-from lxml import etree
-
 import inkex
+from lxml import etree
 
 etree.register_namespace("inkstitch", "http://inkstitch.org/namespace")
 inkex.NSS['inkstitch'] = 'http://inkstitch.org/namespace'

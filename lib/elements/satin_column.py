@@ -3,10 +3,10 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-from copy import deepcopy
 import itertools
-from itertools import chain
 import typing
+from copy import deepcopy
+from itertools import chain
 
 import numpy as np
 from inkex import paths
@@ -16,10 +16,10 @@ from shapely.ops import nearest_points
 
 from ..i18n import _
 from ..stitch_plan import StitchGroup
+from ..stitches import running_stitch
 from ..svg import line_strings_to_csp, point_lists_to_csp
 from ..utils import Point, cache, cut, cut_multiple, prng
-from ..stitches import running_stitch
-from .element import EmbroideryElement, param, PIXELS_PER_MM
+from .element import PIXELS_PER_MM, EmbroideryElement, param
 from .validation import ValidationError, ValidationWarning
 from ..utils.threading import check_stop_flag
 
@@ -1092,7 +1092,9 @@ class SatinColumn(EmbroideryElement):
         # beziers.  The boundary points between beziers serve as "checkpoints",
         # allowing the user to control how the zigzags flow around corners.
 
-        patch = StitchGroup(color=self.color)
+        patch = StitchGroup(color=self.color,
+                            force_lock_stitches=self.force_lock_stitches,
+                            lock_stitches=self.lock_stitches)
 
         if self.center_walk_underlay:
             patch += self.do_center_walk()

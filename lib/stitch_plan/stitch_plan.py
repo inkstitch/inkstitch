@@ -31,8 +31,12 @@ def stitch_groups_to_stitch_plan(stitch_groups, collapse_len=None, min_stitch_le
     if collapse_len is None:
         collapse_len = 3.0
     collapse_len = collapse_len * PIXELS_PER_MM
+
     stitch_plan = StitchPlan()
     color_block = stitch_plan.new_color_block(color=stitch_groups[0].color)
+
+    previous_stitch_group = None
+    need_tie_in = True
 
     for stitch_group in stitch_groups:
         check_stop_flag()
@@ -49,6 +53,12 @@ def stitch_groups_to_stitch_plan(stitch_groups, collapse_len=None, min_stitch_le
                 # We'll just claim this new block as ours:
                 color_block.color = stitch_group.color
             else:
+                # add a lock stitch to the last element of the previous group
+                lock_stitches = previous_stitch_group.get_lock_stitches("end", disable_ties)
+                if lock_stitches:
+                    color_block.add_stitches(stitches=lock_stitches)
+                need_tie_in = True
+
                 # end the previous block with a color change
                 color_block.add_stitch(color_change=True)
 
@@ -56,14 +66,30 @@ def stitch_groups_to_stitch_plan(stitch_groups, collapse_len=None, min_stitch_le
                 color_block = stitch_plan.new_color_block(color=stitch_group.color)
 
             # always start a color with a JUMP to the first stitch position
-            color_block.add_stitch(stitch_group.stitches[0], jump=True, lock_stitches=stitch_group.lock_stitches)
+            color_block.add_stitch(stitch_group.stitches[0], jump=True)
         else:
             if (len(color_block) and
-                    ((stitch_group.stitches[0] - color_block.stitches[-1]).length() > collapse_len or
-                     color_block.stitches[-1].lock_stitches.force_lock_stitches)):
-                color_block.add_stitch(stitch_group.stitches[0], jump=True, lock_stitches=stitch_group.lock_stitches)
+                ((stitch_group.stitches[0] - color_block.stitches[-1]).length() > collapse_len or
+                 previous_stitch_group.force_lock_stitches)):
+                lock_stitches = previous_stitch_group.get_lock_stitches("end", disable_ties)
+                if lock_stitches:
+                    color_block.add_stitches(stitches=lock_stitches)
+                need_tie_in = True
+                color_block.add_stitch(stitch_group.stitches[0], jump=True)
 
-        color_block.add_stitches(stitches=stitch_group.stitches, lock_stitches=stitch_group.lock_stitches, no_ties=stitch_group.stitch_as_is)
+        if need_tie_in is True:
+            lock_stitches = stitch_group.get_lock_stitches("start", disable_ties)
+            if lock_stitches:
+                color_block.add_stitches(stitches=lock_stitches)
+            need_tie_in = False
+
+        color_block.add_stitches(stitches=stitch_group.stitches)
+
+        if stitch_group.trim_after or stitch_group.stop_after:
+            lock_stitches = stitch_group.get_lock_stitches("end", disable_ties)
+            if lock_stitches:
+                color_block.add_stitches(stitches=lock_stitches)
+            need_tie_in = True
 
         if stitch_group.trim_after:
             color_block.add_stitch(trim=True)
@@ -72,14 +98,19 @@ def stitch_groups_to_stitch_plan(stitch_groups, collapse_len=None, min_stitch_le
             color_block.add_stitch(stop=True)
             color_block = stitch_plan.new_color_block(color_block.color)
 
+        previous_stitch_group = stitch_group
+
+    if not need_tie_in:
+        # tie off at the end if we haven't already
+        lock_stitches = stitch_group.get_lock_stitches("end", disable_ties)
+        if lock_stitches:
+            color_block.add_stitches(stitches=lock_stitches)
+
     if len(color_block) == 0:
         # last block ended in a stop, so now we have an empty block
         del stitch_plan.color_blocks[-1]
 
     stitch_plan.filter_duplicate_stitches(min_stitch_len)
-
-    if not disable_ties:
-        stitch_plan.add_ties()
 
     return stitch_plan
 
@@ -109,10 +140,6 @@ class StitchPlan(object):
     def filter_duplicate_stitches(self, min_stitch_len):
         for color_block in self:
             color_block.filter_duplicate_stitches(min_stitch_len)
-
-    def add_ties(self):
-        # see ties.py
-        add_ties(self)
 
     def __iter__(self):
         return iter(self.color_blocks)

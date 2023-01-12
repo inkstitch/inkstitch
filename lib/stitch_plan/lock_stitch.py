@@ -1,72 +1,200 @@
+import re
+from copy import copy
+from math import degrees
+
+from inkex import DirectedLineSegment, Path
+from shapely.geometry import LineString
+from shapely.ops import substring
+
 from ..i18n import _
-
-TIES = {
-    "half_stitch": {
-        "name": _("Half Stitch"),
-        "path": "0.5 1 0.5 0",
-        "path_type": "relative_to_stitch"
-    },
-    "arrow": {
-        "name": _("Arrow"),
-        "path": "M 0,0 V 0.8 L -0.4,0.3 H 0.4 L 0.025,0.8 V 0 L 0.01,0.5",
-        "path_type": "svg"
-    },
-    "back_forth": {
-        "name": _("Back and forth"),
-        "path": "1 1 -1 -1",
-        "path_type": "mm",
-        "default": 0.7
-    },
-    "cross": {
-        "name": _("Cross"),
-        "path": "M 0,0 -0.7,-0.7 0.7,0.7 0,0 -0.7,0.7 0.7,-0.7 0,0 -0,-0.7",
-        "path_type": "svg"
-    },
-    "star": {
-        "name": _("Star"),
-        "path": "M 0.67,-0.2 C 0.27,-0.06 -0.22,0.11 -0.67,0.27 L 0.57,0.33 -0.5,-0.27 0,0.67 V 0 -0.5",
-        "path_type": "svg"
-    },
-    "zig_zag": {
-        "name": _("Zig zag"),
-        "path": "M -0.85,-5.23 0.65,-3.54 -0.78,-1.52 0.72,0.24 -0.1,2.91 0,-5.82",
-        "path_type": "svg"
-    },
-    "custom": {
-        "name": _("Custom"),
-        "path": None,
-        "path_type": "mm svg"
-    }
-}
-
-LOCK_TYPES = {'start': ['half_stitch', 'back_forth', 'arrow', 'cross', 'star', 'zig_zag', 'custom'],
-              'end': ['half_stitch', 'back_forth', 'arrow', 'cross', 'star', 'zig_zag', 'custom']}
+from ..svg import PIXELS_PER_MM
+from ..utils import string_to_floats
+from .stitch import Stitch
 
 
-class LockStitch:
-    def __init__(self, tie_modus=0, force_lock_stitches=False,
-                 lock_type={'start': 0, 'end': 0}, lock_scale_mm={'start': 0.7, 'end': 0.7}, lock_scale_percent={'start': 100, 'end': 100},
-                 custom_lock={'start': "", 'end': ""}):
+class LockType:
+    def __init__(self, lock_id=None, name=None, path=None, path_type=None,
+                 scale_percent=100, scale_absolute=0.7):
 
-        self._set('force_lock_stitches', force_lock_stitches)
-        self._set('tie_modus', tie_modus)
-        self._set('lock_type', lock_type)
-        self._set('lock_scale_mm', lock_scale_mm)
-        self._set('lock_scale_percent', lock_scale_percent)
-        self._set('custom_lock', custom_lock)
+        self.id: str = lock_id
+        self.name: str = name
+        self.path: str = path
+        self.path_type: str = path_type
+        self.scale_percent: float = scale_percent
+        self.scale_absolute: float = scale_absolute
 
     def __repr__(self):
-        return "LockStitch(%s, %s, %s, %s, %s, %s)" % (self.tie_modus,
-                                                       self.force_lock_stitches,
-                                                       {'start': self.lock_type['start'], 'end': self.lock_type['end']},
-                                                       self.lock_scale_mm,
-                                                       self.lock_scale_percent,
-                                                       self.custom_lock)
+        return "LockType(%s, %s, %s, %s, %s, %s)" % (self.id, self.name, self.path, self.path_type,
+                                                           self.scale_percent, self.scale_absolute)
 
-    def _set(self, attribute, value):
+    def __str__(self):
+        return str(self.id) or ""
+
+    def copy(self, scale_percent=None, scale_absolute=None):
+        cp = copy(self)
+        cp.set('scale_percent', scale_percent or self.scale_percent)
+        cp.set('scale_absolute', scale_absolute or self.scale_absolute)
+        return cp
+
+    def set(self, attribute, value):
         setattr(self, attribute, value)
 
-    def __json__(self):
-        attributes = dict(vars(self))
-        # attributes['tags'] = list(attributes['tags'])
-        return attributes
+    def _check_custom(self):
+        if not self.id == "custom":
+            return
+        if not self.path:
+            self._fallback()
+            return
+
+        if not re.match("^ *[0-9 .,-]*$", self.path):
+            path = Path(self.path)
+            if not path or len(list(path.end_points)) < 3:
+                self._fallback()
+            else:
+                self.set('path_type', "svg")
+        else:
+            path = string_to_floats(self.path, " ")
+            if path:
+                self.set('path_type', "absolute")
+            else:
+                self._fallback()
+
+    def _fallback(self):
+        self.set('path', half_stitch.path)
+        self.set('path_type', half_stitch.path_type)
+
+    def get_as_stitches(self, group_stitches, pos):
+        self._check_custom()
+
+        if pos == "end":
+            group_stitches = list(reversed(group_stitches))
+
+        if self.path_type == "absolute":
+            lock_stitches = self._absolute_tie(group_stitches, pos)
+        elif self.path_type == "svg":
+            lock_stitches = self._svg_tie(group_stitches, Path(self.path), pos)
+        else:
+            lock_stitches = self._relative_tie(group_stitches, pos)
+        return lock_stitches
+
+    def _svg_tie(self, stitches, path, pos):
+        # scale
+        scale = self.scale_percent / 100
+        path.scale(scale, scale, True)
+
+        end_points = list(path.end_points)
+
+        lock = DirectedLineSegment(end_points[-2], end_points[-1])
+        lock_stitch_angle = lock.angle
+
+        stitch = DirectedLineSegment((stitches[0].x, stitches[0].y),
+                                     (stitches[1].x, stitches[1].y))
+        stitch_angle = stitch.angle
+
+        # rotate and translate the lock stitch
+        path.rotate(degrees(stitch_angle - lock_stitch_angle), lock.start, True)
+        translate = stitch.start - lock.start
+        path.translate(translate.x, translate.y, True)
+
+        # Remove direction indicator from path
+        # Remove last/first stitch, this is the positino of the first/last stitch of the target path
+        path = list(path.end_points)[:-2]
+
+        if pos == 'end':
+            path = reversed(path)
+
+        lock_stitches = []
+        for i, stitch in enumerate(path):
+            stitch = Stitch(stitch[0], stitch[1], tags=('lock_stitch',))
+            lock_stitches.append(stitch)
+        return lock_stitches
+
+    def _absolute_tie(self, stitches, pos):
+        # make sure the path consists of only floats
+        path = string_to_floats(self.path, " ")
+
+        # get the length of our lock stitch path
+        if pos == 'start':
+            lock_pos = []
+            lock = 0
+            # reverse the list to make sure we end with the first stitch of the target path
+            for tie_path in reversed(path):
+                lock = lock - tie_path * self.scale_absolute
+                lock_pos.insert(0, lock)
+            max_lock_length = max(lock_pos)
+        if pos == 'end':
+            lock_pos = []
+            lock = 0
+            for tie_path in path:
+                lock = lock + tie_path * self.scale_absolute
+                lock_pos.append(lock)
+            max_lock_length = max(lock_pos)
+
+        # calculate the amount stitches we need from the target path
+        # and generate a line
+        upcoming = [(stitches[0].x, stitches[0].y)]
+        for i, stitch in enumerate(stitches[1:]):
+            to_start = stitch - stitches[-1]
+            upcoming.append((stitch.x, stitch.y))
+            if to_start.length() >= max_lock_length:
+                break
+        line = LineString(upcoming)
+
+        # add tie stitches
+        lock_stitches = []
+        for i, tie_path in enumerate(lock_pos):
+            if tie_path < 0:
+                stitch = Stitch(stitches[0] + tie_path * (stitches[1] - stitches[0]).unit())
+            else:
+                stitch = substring(line, start_dist=tie_path, end_dist=tie_path)
+                stitch = Stitch(stitch.x, stitch.y, tags=('lock_stitch',))
+            lock_stitches.append(stitch)
+        return lock_stitches
+
+    def _relative_tie(self, stitches, pos):
+        path = string_to_floats(self.path, " ")
+
+        to_previous = stitches[1] - stitches[0]
+        length = to_previous.length()
+
+        lock_stitches = []
+        if length > 0.5 * PIXELS_PER_MM:
+
+            # Travel back one stitch, stopping halfway there.
+            # Then go forward one stitch, stopping halfway between
+            # again.
+
+            # but travel at most 1.5 mm
+            length = min(length, 1.5 * PIXELS_PER_MM)
+
+            direction = to_previous.unit()
+
+            for delta in path:
+                lock_stitches.append(Stitch(stitches[0] + delta * length * direction, tags=('lock_stitch')))
+        else:
+            # Too short to travel part of the way to the previous stitch; just go
+            # back and forth to it a couple times.
+            for i in (1, 0, 1, 0):
+                lock_stitches.append(stitches[i])
+        return lock_stitches
+
+
+def get_lock_stitch_by_id(pos, lock_type, default="half_stitch"):
+    id_list = [str(lock) for lock in LOCK_DEFAULTS[pos]]
+
+    lock = LOCK_DEFAULTS[pos][id_list.index(lock_type)] or None
+    if lock is None:
+        lock = LOCK_DEFAULTS[pos][id_list.index(default)]
+    return lock
+
+
+half_stitch = LockType("half_stitch", _("Half Stitch"), "0 0.5 1 0.5 0", "relative")
+arrow = LockType("arrow", _("Arrow"), "M 0,0 V 0.8 L -0.4,0.3 H 0.4 L 0.025,0.8 V 0 L 0.01,0.5", "svg")
+back_forth = LockType("back_forth", _("Back and forth"), "1 1 -1 -1", "absolute")
+cross = LockType("cross", _("Cross"), "M 0,0 -0.7,-0.7 0.7,0.7 0,0 -0.7,0.7 0.7,-0.7 0,0 -0,-0.7", "svg")
+star = LockType("star", _("Star"), "M 0.67,-0.2 C 0.27,-0.06 -0.22,0.11 -0.67,0.27 L 0.57,0.33 -0.5,-0.27 0,0.67 V 0 -0.5", "svg")
+zigzag = LockType("zigzag", _("Zig-zag"), "M -0.85,-5.23 0.65,-3.54 -0.78,-1.52 0.72,0.24 -0.1,2.91 0,-5.82", "svg")
+custom = LockType("custom", _("Custom"), path_type="absolute svg")
+
+LOCK_DEFAULTS = {'start': [half_stitch, back_forth, arrow, cross, star, zigzag, custom],
+              'end': [half_stitch, back_forth, arrow, cross, star, zigzag, custom]}

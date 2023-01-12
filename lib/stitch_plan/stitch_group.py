@@ -18,7 +18,7 @@ class StitchGroup:
     """
 
     def __init__(self, color=None, stitches=None, trim_after=False, stop_after=False,
-                 lock_stitches=None, stitch_as_is=False, tags=None):
+                 lock_stitches=(None, None), force_lock_stitches=False, tags=None):
         # DANGER: if you add new attributes, you MUST also set their default
         # values in __new__() below.  Otherwise, cached stitch plans can be
         # loaded and create objects without those properties defined, because
@@ -28,7 +28,7 @@ class StitchGroup:
         self.trim_after = trim_after
         self.stop_after = stop_after
         self.lock_stitches = lock_stitches
-        self.stitch_as_is = stitch_as_is
+        self.force_lock_stitches = force_lock_stitches
         self.stitches = []
 
         if stitches:
@@ -49,7 +49,8 @@ class StitchGroup:
 
     def __add__(self, other):
         if isinstance(other, StitchGroup):
-            return StitchGroup(self.color, self.stitches + other.stitches)
+            return StitchGroup(self.color, self.stitches + other.stitches,
+                               lock_stitches=self.lock_stitches, force_lock_stitches=self.force_lock_stitches)
         else:
             raise TypeError("StitchGroup can only be added to another StitchGroup")
 
@@ -78,3 +79,10 @@ class StitchGroup:
     def add_tag(self, tag):
         for stitch in self.stitches:
             stitch.add_tag(tag)
+
+    def get_lock_stitches(self, pos, disable_ties=False):
+        lock_pos = 0 if pos == "start" else 1
+        if disable_ties or self.lock_stitches[lock_pos] is None:
+            return
+        stitches = self.lock_stitches[lock_pos].get_as_stitches(self.stitches, pos)
+        return stitches
