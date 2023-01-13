@@ -862,7 +862,8 @@ class SatinColumn(EmbroideryElement):
                     cycle += 1
 
         if to_travel > 0:
-            pairs.append((pos0, pos1))
+            a, b = self.offset_points(pos0, pos1, offset_px, offset_prop)
+            pairs.append((a, b))
 
         return pairs
 
