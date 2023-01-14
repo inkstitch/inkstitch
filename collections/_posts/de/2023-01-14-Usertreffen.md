@@ -3,6 +3,7 @@ layout: single
 title:  "Ink/Stitch Usertreffen in Essen"
 date:   2023-01-14
 categories: Treffen
+toc: true
 ---
 In entspanner Athmosphäre wollen wir uns gemeinsam mit Ink/Stitch und den Themegebieten rund ums Maschinensticken beschäftigen.
 
@@ -20,6 +21,13 @@ Friedrich-Ebert-Str. 18-26<br>
 45127 Essen
 
 **Raum 304**
+
+## Kosten
+
+9€ Eintritt für das Unperfekthaus.
+
+Darin enthalten ist beliebig viel Cappuccino, Tee, Cola, Limo, Schorlen, Espresso, Kakao, etc.
+Alkoholische Getränke und Speisen kosten extra.
 
 ## Kontakt
 
