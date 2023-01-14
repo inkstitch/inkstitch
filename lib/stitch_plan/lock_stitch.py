@@ -25,7 +25,7 @@ class LockType:
 
     def __repr__(self):
         return "LockType(%s, %s, %s, %s, %s, %s)" % (self.id, self.name, self.path, self.path_type,
-                                                           self.scale_percent, self.scale_absolute)
+                                                     self.scale_percent, self.scale_absolute)
 
     def __str__(self):
         return str(self.id) or ""
@@ -63,7 +63,7 @@ class LockType:
         self.set('path', half_stitch.path)
         self.set('path_type', half_stitch.path_type)
 
-    def get_as_stitches(self, group_stitches, pos):
+    def stitches(self, group_stitches, pos):
         self._check_custom()
 
         if pos == "end":
@@ -78,8 +78,8 @@ class LockType:
         return lock_stitches
 
     def _svg_tie(self, stitches, path, pos):
-        # scale
-        scale = self.scale_percent / 100
+        # convert from mm to px and scale according to scale_percent setting
+        scale = PIXELS_PER_MM * (self.scale_percent / 100)
         path.scale(scale, scale, True)
 
         end_points = list(path.end_points)
@@ -96,8 +96,8 @@ class LockType:
         translate = stitch.start - lock.start
         path.translate(translate.x, translate.y, True)
 
-        # Remove direction indicator from path
-        # Remove last/first stitch, this is the positino of the first/last stitch of the target path
+        # Remove direction indicator from path and also
+        # remove start:last/end:first stitch (it is the position of the first/last stitch of the target path)
         path = list(path.end_points)[:-2]
 
         if pos == 'end':
@@ -121,21 +121,20 @@ class LockType:
             for tie_path in reversed(path):
                 lock = lock - tie_path * self.scale_absolute
                 lock_pos.insert(0, lock)
-            max_lock_length = max(lock_pos)
         if pos == 'end':
             lock_pos = []
             lock = 0
             for tie_path in path:
                 lock = lock + tie_path * self.scale_absolute
                 lock_pos.append(lock)
-            max_lock_length = max(lock_pos)
+        max_lock_length = max(lock_pos)
 
         # calculate the amount stitches we need from the target path
         # and generate a line
-        upcoming = [(stitches[0].x, stitches[0].y)]
-        for i, stitch in enumerate(stitches[1:]):
-            to_start = stitch - stitches[-1]
-            upcoming.append((stitch.x, stitch.y))
+        upcoming = [stitches[0]]
+        for stitch in stitches[1:]:
+            to_start = stitch - upcoming[-1]
+            upcoming.append(stitch)
             if to_start.length() >= max_lock_length:
                 break
         line = LineString(upcoming)
@@ -189,12 +188,15 @@ def get_lock_stitch_by_id(pos, lock_type, default="half_stitch"):
 
 
 half_stitch = LockType("half_stitch", _("Half Stitch"), "0 0.5 1 0.5 0", "relative")
-arrow = LockType("arrow", _("Arrow"), "M 0,0 V 0.8 L -0.4,0.3 H 0.4 L 0.025,0.8 V 0 L 0.01,0.5", "svg")
+arrow = LockType("arrow", _("Arrow"), "M 0.5,0.3 0.3,1.31 -0.11,0.68 H 0.9 L 0.5,1.31 0.4,0.31 V 0.31 1.3", "svg")
 back_forth = LockType("back_forth", _("Back and forth"), "1 1 -1 -1", "absolute")
+bowtie = LockType("bowtie", _("Bowtie"), "M 0,0 -0.39,0.97 0.3,0.03 0.14,1.02 0,0 V 0.15", "svg")
 cross = LockType("cross", _("Cross"), "M 0,0 -0.7,-0.7 0.7,0.7 0,0 -0.7,0.7 0.7,-0.7 0,0 -0,-0.7", "svg")
 star = LockType("star", _("Star"), "M 0.67,-0.2 C 0.27,-0.06 -0.22,0.11 -0.67,0.27 L 0.57,0.33 -0.5,-0.27 0,0.67 V 0 -0.5", "svg")
-zigzag = LockType("zigzag", _("Zig-zag"), "M -0.85,-5.23 0.65,-3.54 -0.78,-1.52 0.72,0.24 -0.1,2.91 0,-5.82", "svg")
+simple = LockType("simple", _("Simple"), "M -0.03,0 0.09,0.81 0,1.49 V 0 0.48", "svg")
+triangle = LockType("triangle", _("Triangle"), "M -0.26,0.33 H 0.55 L 0,0.84 V 0 L 0.34,0.82", "svg")
+zigzag = LockType("zigzag", _("Zig-zag"), "M -0.25,0.2 0.17,0.77 -0.22,1.45 0.21,2.05 -0.03,3 0,0", "svg")
 custom = LockType("custom", _("Custom"), path_type="absolute svg")
 
-LOCK_DEFAULTS = {'start': [half_stitch, back_forth, arrow, cross, star, zigzag, custom],
-              'end': [half_stitch, back_forth, arrow, cross, star, zigzag, custom]}
+LOCK_DEFAULTS = {'start': [half_stitch, arrow, back_forth, bowtie, cross, star, simple, triangle, zigzag, custom],
+                 'end': [half_stitch, arrow, back_forth, cross, bowtie, star, simple, triangle, zigzag, custom]}
