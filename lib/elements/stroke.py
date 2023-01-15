@@ -112,12 +112,13 @@ class Stroke(EmbroideryElement):
         _('Bean stitch number of repeats'),
         tooltip=_('Backtrack each stitch this many times.  '
                   'A value of 1 would triple each stitch (forward, back, forward).  '
-                  'A value of 2 would quintuple each stitch, etc.'),
-        type='int',
+                  'A value of 2 would quintuple each stitch, etc.\n\n'
+                  'A pattern with various repeats can be created with a list of values separated by a space.'),
+        type='str',
         default=0,
         sort_index=3)
     def bean_stitch_repeats(self):
-        return self.get_int_param("bean_stitch_repeats", 0)
+        return self.get_multiple_int_param("bean_stitch_repeats", "0")
 
     @property
     @param('running_stitch_length_mm',
@@ -463,7 +464,7 @@ class Stroke(EmbroideryElement):
         if self.stroke_method == 1:
             patch = self.ripple_stitch()
             if patch:
-                if self.bean_stitch_repeats > 0:
+                if any(self.bean_stitch_repeats):
                     patch.stitches = self.do_bean_repeats(patch.stitches)
                 patches.append(patch)
         else:
@@ -475,7 +476,8 @@ class Stroke(EmbroideryElement):
                 # running stitch
                 elif self.is_running_stitch():
                     patch = self.running_stitch(path, self.running_stitch_length, self.running_stitch_tolerance)
-                    if self.bean_stitch_repeats > 0:
+                    # bean stitch
+                    if any(self.bean_stitch_repeats):
                         patch.stitches = self.do_bean_repeats(patch.stitches)
                 # simple satin
                 else:

@@ -405,7 +405,7 @@ class FillStitch(EmbroideryElement):
     @property
     @param('fill_underlay_angle',
            _('Fill angle'),
-           tooltip=_('Default: fill angle + 90 deg. Insert comma-seperated list for multiple layers.'),
+           tooltip=_('Default: fill angle + 90 deg. Insert a list for multiple layers separated by a space.'),
            unit='deg',
            group=_('Fill Underlay'),
            type='float')
@@ -414,7 +414,9 @@ class FillStitch(EmbroideryElement):
         underlay_angles = self.get_param('fill_underlay_angle', None)
         default_value = [self.angle + math.pi / 2.0]
         if underlay_angles is not None:
-            underlay_angles = underlay_angles.strip().split(',')
+            underlay_angles = underlay_angles.strip().split(' ')
+            # remove comma separator for backward compatibility
+            underlay_angles = [angle[:-1] if angle.endswith(',') else angle for angle in underlay_angles]
             try:
                 underlay_angles = [math.radians(
                     float(angle)) for angle in underlay_angles]
