@@ -11,7 +11,7 @@ from shapely.ops import linemerge, split, voronoi_diagram
 from ..elements import FillStitch, Stroke
 from ..i18n import _
 from ..stitches.running_stitch import running_stitch
-from ..svg import get_correction_transform
+from ..svg import PIXELS_PER_MM, get_correction_transform
 from ..utils.geometry import line_string_to_point_list
 from .base import InkstitchExtension
 
@@ -21,10 +21,10 @@ class FillToStroke(InkstitchExtension):
         InkstitchExtension.__init__(self, *args, **kwargs)
         self.arg_parser.add_argument("--options", dest="options", type=str, default="")
         self.arg_parser.add_argument("--info", dest="help", type=str, default="")
-        self.arg_parser.add_argument("-t", "--threshold", dest="threshold", type=int, default=10)
+        self.arg_parser.add_argument("-t", "--threshold_mm", dest="threshold_mm", type=float, default=10)
         self.arg_parser.add_argument("-o", "--keep_original", dest="keep_original", type=Boolean, default=False)
         self.arg_parser.add_argument("-d", "--dashed_line", dest="dashed_line", type=Boolean, default=True)
-        self.arg_parser.add_argument("-w", "--line_width", dest="line_width", type=float, default=1)
+        self.arg_parser.add_argument("-w", "--line_width_mm", dest="line_width_mm", type=float, default=1)
 
     def effect(self):
         if not self.svg.selected or not self.get_elements():
@@ -40,6 +40,10 @@ class FillToStroke(InkstitchExtension):
             errormsg(_("Please select one or more fill objects to render the centerline."))
             return
 
+        # convert user input from mm to px
+        self.threshold = self.options.threshold_mm * PIXELS_PER_MM
+        self.line_width = self.options.line_width_mm * PIXELS_PER_MM
+
         # insert centerline group before the first selected element
         first = fill_shapes[0].node
         parent = first.getparent()
@@ -51,7 +55,7 @@ class FillToStroke(InkstitchExtension):
         for element in fill_shapes:
             transform = element.node.transform @ transform
             dashed = "stroke-dasharray:12,1.5;" if self.options.dashed_line else ""
-            stroke_width = convert_unit(self.options.line_width, self.svg.unit)
+            stroke_width = convert_unit(self.line_width, self.svg.unit)
             color = element.node.style('fill')
             style = "fill:none;stroke:%s;stroke-width:%s;%s" % (color, stroke_width, dashed)
 
@@ -159,7 +163,7 @@ class FillToStroke(InkstitchExtension):
     def _filter_short_dead_ends(self, multilinestring, dead_ends):
         lines = list(multilinestring.geoms)
         for i, line in enumerate(multilinestring.geoms):
-            if line in dead_ends and line.length < self.options.threshold:
+            if line in dead_ends and line.length < self.threshold:
                 lines.remove(line)
         lines = linemerge(lines)
         if lines.is_empty:

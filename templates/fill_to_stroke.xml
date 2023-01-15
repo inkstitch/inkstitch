@@ -14,11 +14,11 @@
     <param name="options" type="notebook">
       <page name="options" gui-text="Options">
           <param name="keep_original" type="boolean" gui-text="Keep original">false</param>
-          <param name="threshold" type="int" precision="1" min="0" max="500"
-                 gui-text="Threshold for dead ends (px)"
+          <param name="threshold_mm" type="float" precision="2" min="0" max="500"
+                 gui-text="Threshold for dead ends (mm)"
                  gui-description="Deletes small lines. A good value in most cases is the approximate line width of the original shape">10</param>
           <param name="dashed_line" type="boolean" gui-text="Dashed line">true</param>
-          <param name="line_width" type="float" gui-text="Line width (px)" min="0" max="100">1</param>
+          <param name="line_width_mm" type="float" gui-text="Line width (mm)" min="0" max="100">1</param>
       </page>
       <page name="info" gui-text="Help">
           <label appearance="header">Fill to Stroke</label>
@@ -27,7 +27,7 @@
           <label>It is comparable to the Inkscape functionality of Path > Trace bitmap > Centerline tracing (- and has similar issues.)
                  But instead of converting raster graphics, it will find the centerline of vector based objects with a fill.</label>
           <spacer />
-          <label>You can refine the result by defining cut lines.</label>
+          <label>You can improve the result by defining cut lines.</label>
           <spacer />
           <label>Get more information on our website</label>
           <label appearance="url">https://inkstitch.org/docs/stroke-tools/#fill-to-stroke</label>
