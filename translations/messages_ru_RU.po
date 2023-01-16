@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-01-09 01:19+0000\n"
-"PO-Revision-Date: 2023-01-10 01:25\n"
+"POT-Creation-Date: 2023-01-16 01:19+0000\n"
+"PO-Revision-Date: 2023-01-16 01:21\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-09 01:19+0000\n"
+"POT-Creation-Date: 2023-01-16 01:19+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -523,7 +523,7 @@ msgid "If you'd like to help please\n"
 "- create a new issue at https://github.com/inkstitch/inkstitch/issues"
 msgstr ""
 
-#: inkstitch.py:107 lib/elements/fill_stitch.py:726
+#: inkstitch.py:107 lib/elements/fill_stitch.py:728
 msgid "Include the error description and also (if possible) the svg file."
 msgstr ""
 
@@ -700,77 +700,77 @@ msgstr ""
 msgid "Flip automatically calucalted angle if it appears to be wrong."
 msgstr ""
 
-#: lib/elements/element.py:231
+#: lib/elements/element.py:241
 msgid "Allow lock stitches"
 msgstr "Разрешить добавлять закрепки"
 
-#: lib/elements/element.py:232
+#: lib/elements/element.py:242
 msgid "Tie thread at the beginning and/or end of this object. Manual stitch will not add lock stitches."
 msgstr "Закрепки в начале и/или конце этого объекта. Для ручных стежков закрепки добавляться не будут."
 
 #. options to allow lock stitch before and after objects
-#: lib/elements/element.py:236
+#: lib/elements/element.py:246
 msgid "Both"
 msgstr "Обе"
 
-#: lib/elements/element.py:236
+#: lib/elements/element.py:246
 msgid "Before"
 msgstr "Начальная"
 
-#: lib/elements/element.py:236
+#: lib/elements/element.py:246
 msgid "After"
 msgstr "Конечная"
 
-#: lib/elements/element.py:236
+#: lib/elements/element.py:246
 msgid "Neither"
 msgstr "Не добавлять"
 
-#: lib/elements/element.py:245
+#: lib/elements/element.py:255
 #: inx/inkstitch_lettering_force_lock_stitches.inx:3
 msgid "Force lock stitches"
 msgstr "Обязательные закрепки"
 
-#: lib/elements/element.py:246
+#: lib/elements/element.py:256
 msgid "Sew lock stitches after sewing this element, even if the distance to the next object is shorter than defined by the collapse length value in the Ink/Stitch preferences."
 msgstr "Вышивать закрепку после вышивания этого элемента, даже если дистанция до следующего объекта меньше, чем указано в параметре длины свёртки в настройках Ink/Stitch."
 
-#: lib/elements/element.py:257
+#: lib/elements/element.py:267
 msgid "Random seed"
 msgstr ""
 
-#: lib/elements/element.py:258
+#: lib/elements/element.py:268
 msgid "Use a specific seed for randomized attributes. Uses the element ID if empty."
 msgstr ""
 
-#: lib/elements/element.py:306
+#: lib/elements/element.py:316
 #, python-format
 msgid "Object %(id)s has an empty 'd' attribute.  Please delete this object from your document."
 msgstr "У объекта %(id)s атрибут 'd' пуст.  Удалите этот объект из вашего дизайна."
 
-#: lib/elements/element.py:364
+#: lib/elements/element.py:374
 msgid "Trim After"
 msgstr ""
 
-#: lib/elements/element.py:365
+#: lib/elements/element.py:375
 msgid "Add a TRIM command after stitching this object."
 msgstr ""
 
-#: lib/elements/element.py:374
+#: lib/elements/element.py:384
 msgid "Stop After"
 msgstr ""
 
-#: lib/elements/element.py:375
+#: lib/elements/element.py:385
 msgid "Add a STOP command after stitching this object."
 msgstr ""
 
 #. used when showing an error message to the user such as
 #. "Failed on PathLabel (path1234): Satin column: One or more of the rungs
 #. doesn't intersect both rails."
-#: lib/elements/element.py:411
+#: lib/elements/element.py:421
 msgid "Failed on "
 msgstr ""
 
-#: lib/elements/element.py:413
+#: lib/elements/element.py:423
 msgid "Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects. This will indicate the errorneus position."
 msgstr ""
 
@@ -794,7 +794,7 @@ msgstr "Малое заполнение"
 msgid "This fill object is so small that it would probably look better as running stitch or satin column. For very small shapes, fill stitch is not possible, and Ink/Stitch will use running stitch around the outline instead."
 msgstr "Этот объект заполнения слишком мал и вероятно будет лучше выполнить его строчкой или сатином. Для очень маленьких фигур вышивка заполнением невозможна, вместо неё Ink/Stitch будет использовать строчку по контуру."
 
-#: lib/elements/fill_stitch.py:35 lib/elements/fill_stitch.py:474
+#: lib/elements/fill_stitch.py:35 lib/elements/fill_stitch.py:476
 msgid "Expand"
 msgstr "Уширение"
 
@@ -802,7 +802,7 @@ msgstr "Уширение"
 msgid "The expand parameter for this fill object cannot be applied. Ink/Stitch will ignore it and will use original size instead."
 msgstr "Параметр расширения не может быть применен для этого объекта заполнения. Вместо него Ink/Stitch будет использовать оригинальный размер."
 
-#: lib/elements/fill_stitch.py:41 lib/elements/fill_stitch.py:451
+#: lib/elements/fill_stitch.py:41 lib/elements/fill_stitch.py:453
 msgid "Inset"
 msgstr "Отступ"
 
@@ -971,11 +971,11 @@ msgstr "Угол линий стежков"
 msgid "The angle increases in a counter-clockwise direction.  0 is horizontal.  Negative angles are allowed."
 msgstr "Угол увеличивается в направление против часовой стрелки. 0 - горизонтально. Отрицательные значения допускаются."
 
-#: lib/elements/fill_stitch.py:165 lib/elements/fill_stitch.py:463
+#: lib/elements/fill_stitch.py:165 lib/elements/fill_stitch.py:465
 msgid "Skip last stitch in each row"
 msgstr "Пропускать последний стежок в ряду"
 
-#: lib/elements/fill_stitch.py:166 lib/elements/fill_stitch.py:464
+#: lib/elements/fill_stitch.py:166 lib/elements/fill_stitch.py:466
 msgid "The last stitch in each row is quite close to the first stitch in the next row.  Skipping it decreases stitch count and density."
 msgstr "Последний стежок в ряду находится очень близко к первому стежку следующей строки. Его пропуск уменьшает количество стежков и плотность."
 
@@ -1019,7 +1019,7 @@ msgstr "Длина стежка строчки (переход между сек
 msgid "Length of stitches around the outline of the fill region used when moving from section to section."
 msgstr "Длина стежков внутри контура заполнения при переходе от секции к секции."
 
-#: lib/elements/fill_stitch.py:389 lib/elements/stroke.py:135
+#: lib/elements/fill_stitch.py:389 lib/elements/stroke.py:136
 msgid "Running stitch tolerance"
 msgstr ""
 
@@ -1032,9 +1032,9 @@ msgid "Underlay"
 msgstr "Предварительная прострочка"
 
 #: lib/elements/fill_stitch.py:401 lib/elements/fill_stitch.py:410
-#: lib/elements/fill_stitch.py:433 lib/elements/fill_stitch.py:444
-#: lib/elements/fill_stitch.py:454 lib/elements/fill_stitch.py:466
-#: lib/elements/fill_stitch.py:504
+#: lib/elements/fill_stitch.py:435 lib/elements/fill_stitch.py:446
+#: lib/elements/fill_stitch.py:456 lib/elements/fill_stitch.py:468
+#: lib/elements/fill_stitch.py:506
 msgid "Fill Underlay"
 msgstr ""
 
@@ -1043,48 +1043,48 @@ msgid "Fill angle"
 msgstr "Угол заполнения"
 
 #: lib/elements/fill_stitch.py:408
-msgid "Default: fill angle + 90 deg. Insert comma-seperated list for multiple layers."
-msgstr "По умолчанию: угол заполнения +90°. Укажите список через запятую для нескольких слоёв."
+msgid "Default: fill angle + 90 deg. Insert a list for multiple layers separated by a space."
+msgstr ""
 
-#: lib/elements/fill_stitch.py:430
+#: lib/elements/fill_stitch.py:432
 msgid "Row spacing"
 msgstr "Расстояние между рядов"
 
-#: lib/elements/fill_stitch.py:431
+#: lib/elements/fill_stitch.py:433
 msgid "default: 3x fill row spacing"
 msgstr "по умолчанию: растояние между рядов заполнения × 3"
 
-#: lib/elements/fill_stitch.py:441
+#: lib/elements/fill_stitch.py:443
 msgid "Max stitch length"
 msgstr "Максимальная длина стежка"
 
-#: lib/elements/fill_stitch.py:442
+#: lib/elements/fill_stitch.py:444
 msgid "default: equal to fill max stitch length"
 msgstr "по умолчанию: равна максимальной длине стежка заполнения"
 
-#: lib/elements/fill_stitch.py:452
+#: lib/elements/fill_stitch.py:454
 msgid "Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill."
 msgstr "Сжать контур предварительной прострочки, чтобы она не показалась из под заполнения."
 
-#: lib/elements/fill_stitch.py:475
+#: lib/elements/fill_stitch.py:477
 msgid "Expand the shape before fill stitching, to compensate for gaps between shapes."
 msgstr "Увеличение контура заполнения для компенсации расстояния между формами."
 
-#: lib/elements/fill_stitch.py:486 lib/elements/fill_stitch.py:500
+#: lib/elements/fill_stitch.py:488 lib/elements/fill_stitch.py:502
 msgid "Underpath"
 msgstr "Нижние переходы"
 
-#: lib/elements/fill_stitch.py:487 lib/elements/fill_stitch.py:501
+#: lib/elements/fill_stitch.py:489 lib/elements/fill_stitch.py:503
 msgid "Travel inside the shape when moving from section to section.  Underpath stitches avoid traveling in the direction of the row angle so that they are not visible.  This gives them a jagged appearance."
 msgstr "Перемещение внутри контура при переходе от секции к секции. Строчка переходов под заполнением или прострочкой избегает направления рядов, поэтому она не видна. Но могут сделать поверхность заполнения немного неровной."
 
-#: lib/elements/fill_stitch.py:718
+#: lib/elements/fill_stitch.py:720
 msgid "Error during autofill! This means it is a bug in Ink/Stitch."
 msgstr ""
 
 #. this message is followed by a URL:
 #. https://github.com/inkstitch/inkstitch/issues/new
-#: lib/elements/fill_stitch.py:721
+#: lib/elements/fill_stitch.py:723
 msgid "If you'd like to help please\n"
 "- copy the entire error message below\n"
 "- save your SVG file and\n"
@@ -1315,7 +1315,7 @@ msgstr ""
 msgid "Inset stitches if the distance between stitches is smaller than this."
 msgstr ""
 
-#: lib/elements/satin_column.py:172 lib/elements/stroke.py:148
+#: lib/elements/satin_column.py:172 lib/elements/stroke.py:149
 msgid "Zig-zag spacing (peak-to-peak)"
 msgstr "Плотность зигзага (расстояние между пиками)"
 
@@ -1501,138 +1501,139 @@ msgid "Bean stitch number of repeats"
 msgstr "Число повторов стежка"
 
 #: lib/elements/stroke.py:113
-msgid "Backtrack each stitch this many times.  A value of 1 would triple each stitch (forward, back, forward).  A value of 2 would quintuple each stitch, etc."
+msgid "Backtrack each stitch this many times.  A value of 1 would triple each stitch (forward, back, forward).  A value of 2 would quintuple each stitch, etc.\n\n"
+"A pattern with various repeats can be created with a list of values separated by a space."
 msgstr ""
 
-#: lib/elements/stroke.py:124
+#: lib/elements/stroke.py:125
 msgid "Running stitch length"
 msgstr "Длина стежка строчки"
 
-#: lib/elements/stroke.py:125
+#: lib/elements/stroke.py:126
 msgid "Length of stitches in running stitch mode."
 msgstr "Длина стежков в режиме строчки."
 
-#: lib/elements/stroke.py:136
+#: lib/elements/stroke.py:137
 msgid "All stitches must be within this distance from the path.  A lower tolerance means stitches will be closer together.  A higher tolerance means sharp corners may be rounded."
 msgstr ""
 
-#: lib/elements/stroke.py:149
+#: lib/elements/stroke.py:150
 msgid "Length of stitches in zig-zag mode."
 msgstr "Длина стяжков в режиме зигзага."
 
-#: lib/elements/stroke.py:161
+#: lib/elements/stroke.py:162
 msgid "Number of lines"
 msgstr ""
 
-#: lib/elements/stroke.py:162
+#: lib/elements/stroke.py:163
 msgid "Number of lines from start to finish"
 msgstr ""
 
-#: lib/elements/stroke.py:178
+#: lib/elements/stroke.py:179
 msgid "Skip first lines"
 msgstr ""
 
-#: lib/elements/stroke.py:179
+#: lib/elements/stroke.py:180
 msgid "Skip this number of lines at the beginning."
 msgstr ""
 
-#: lib/elements/stroke.py:190
+#: lib/elements/stroke.py:191
 msgid "Skip last lines"
 msgstr ""
 
-#: lib/elements/stroke.py:191
+#: lib/elements/stroke.py:192
 msgid "Skip this number of lines at the end"
 msgstr ""
 
-#: lib/elements/stroke.py:214
+#: lib/elements/stroke.py:215
 msgid "Line distance exponent"
 msgstr ""
 
-#: lib/elements/stroke.py:215
+#: lib/elements/stroke.py:216
 msgid "Increase density towards one side."
 msgstr ""
 
-#: lib/elements/stroke.py:226
+#: lib/elements/stroke.py:227
 msgid "Flip exponent"
 msgstr ""
 
-#: lib/elements/stroke.py:227
+#: lib/elements/stroke.py:228
 msgid "Reverse exponent effect."
 msgstr ""
 
-#: lib/elements/stroke.py:238
+#: lib/elements/stroke.py:239
 msgid "Reverse"
 msgstr ""
 
-#: lib/elements/stroke.py:239
+#: lib/elements/stroke.py:240
 msgid "Flip start and end point"
 msgstr ""
 
-#: lib/elements/stroke.py:250
+#: lib/elements/stroke.py:251
 msgid "Grid size"
 msgstr ""
 
-#: lib/elements/stroke.py:251
+#: lib/elements/stroke.py:252
 msgid "Render as grid. Use with care and watch your stitch density."
 msgstr ""
 
-#: lib/elements/stroke.py:263
+#: lib/elements/stroke.py:264
 msgid "Scale axis"
 msgstr ""
 
-#: lib/elements/stroke.py:264
+#: lib/elements/stroke.py:265
 msgid "Scale axis for satin guided ripple stitches."
 msgstr ""
 
-#: lib/elements/stroke.py:268 print/templates/ui.html:181
+#: lib/elements/stroke.py:269 print/templates/ui.html:181
 msgid "None"
 msgstr "Нет"
 
-#: lib/elements/stroke.py:276
+#: lib/elements/stroke.py:277
 msgid "Starting scale"
 msgstr ""
 
-#: lib/elements/stroke.py:277
+#: lib/elements/stroke.py:278
 msgid "How big the first copy of the line should be, in percent."
 msgstr ""
 
-#: lib/elements/stroke.py:277 lib/elements/stroke.py:288
+#: lib/elements/stroke.py:278 lib/elements/stroke.py:289
 msgid "Used only for ripple stitch with a guide line."
 msgstr ""
 
-#: lib/elements/stroke.py:287
+#: lib/elements/stroke.py:288
 msgid "Ending scale"
 msgstr ""
 
-#: lib/elements/stroke.py:288
+#: lib/elements/stroke.py:289
 msgid "How big the last copy of the line should be, in percent."
 msgstr ""
 
-#: lib/elements/stroke.py:298
+#: lib/elements/stroke.py:299
 msgid "Rotate"
 msgstr ""
 
-#: lib/elements/stroke.py:299
+#: lib/elements/stroke.py:300
 msgid "Rotate satin guided ripple stitches"
 msgstr ""
 
-#: lib/elements/stroke.py:310
+#: lib/elements/stroke.py:311
 msgid "Join style"
 msgstr ""
 
-#: lib/elements/stroke.py:311
+#: lib/elements/stroke.py:312
 msgid "Join style for non circular ripples."
 msgstr ""
 
-#: lib/elements/stroke.py:314
+#: lib/elements/stroke.py:315
 msgid "flat"
 msgstr ""
 
-#: lib/elements/stroke.py:314
+#: lib/elements/stroke.py:315
 msgid "point"
 msgstr ""
 
-#: lib/elements/stroke.py:393
+#: lib/elements/stroke.py:394
 msgid "Legacy running stitch setting detected!\n\n"
 "It looks like you're using a stroke smaller than 0.5 units to indicate a running stitch, which is deprecated.  Instead, please set your stroke to be dashed to indicate running stitch.  Any kind of dash will work."
 msgstr "Обнаружена устаревшая настройка!\n\n"
@@ -1788,6 +1789,10 @@ msgstr ""
 msgid "This function copies Ink/Stitch parameters from the first selected element to the rest of the selection. Please select at least two elements."
 msgstr "Эта функция копирует параметры Ink/Stitch из первого выделенного объекта в остальные объекты в выделении. Выберите как минимум два объекта."
 
+#: lib/extensions/fill_to_stroke.py:31 lib/extensions/fill_to_stroke.py:40
+msgid "Please select one or more fill objects to render the centerline."
+msgstr ""
+
 #: lib/extensions/flip.py:28
 msgid "Please select one or more satin columns to flip."
 msgstr "Выберите одну или несколько сатиновых колонн для разворота."
@@ -1855,6 +1860,7 @@ msgid "Font size filter (mm). 0 for all sizes."
 msgstr ""
 
 #: lib/extensions/lettering.py:66 inx/inkstitch_apply_threadlist.inx:7
+#: inx/inkstitch_fill_to_stroke.inx:15
 #: inx/inkstitch_lettering_along_path.inx:13
 #: inx/inkstitch_palette_to_text.inx:15
 msgid "Options"
@@ -3169,7 +3175,7 @@ msgstr "*Выберите палитру цветов"
 
 #: inx/inkstitch_apply_threadlist.inx:87 inx/inkstitch_auto_run.inx:23
 #: inx/inkstitch_cutwork_segmentation.inx:42
-#: inx/inkstitch_generate_palette.inx:24
+#: inx/inkstitch_fill_to_stroke.inx:23 inx/inkstitch_generate_palette.inx:24
 #: inx/inkstitch_lettering_along_path.inx:17
 #: inx/inkstitch_palette_to_text.inx:19
 msgid "Help"
@@ -3199,7 +3205,7 @@ msgstr ""
 msgid "Import any other Threadlist file in txt format. Ink/Stitch will try to match the colors to the selected thread palette. The objects in this document will be colored accordingly if color matching has been successful."
 msgstr ""
 
-#: inx/inkstitch_apply_threadlist.inx:98
+#: inx/inkstitch_apply_threadlist.inx:98 inx/inkstitch_fill_to_stroke.inx:32
 msgid "Get more information on our website"
 msgstr ""
 
@@ -3218,7 +3224,7 @@ msgid "Auto-Route Running Stitch"
 msgstr ""
 
 #: inx/inkstitch_auto_run.inx:10 inx/inkstitch_convert_to_stroke.inx:13
-#: inx/inkstitch_jump_to_stroke.inx:10
+#: inx/inkstitch_fill_to_stroke.inx:10 inx/inkstitch_jump_to_stroke.inx:10
 msgid "Tools: Stroke"
 msgstr ""
 
@@ -3405,6 +3411,7 @@ msgid "Sort elements by color"
 msgstr ""
 
 #: inx/inkstitch_cutwork_segmentation.inx:40
+#: inx/inkstitch_fill_to_stroke.inx:16
 msgid "Keep original"
 msgstr ""
 
@@ -3515,6 +3522,42 @@ msgstr ""
 
 #: inx/inkstitch_embroider_settings.inx:20
 msgid "Drop stitches smaller than this value."
+msgstr ""
+
+#: inx/inkstitch_fill_to_stroke.inx:3 inx/inkstitch_fill_to_stroke.inx:24
+msgid "Fill to Stroke"
+msgstr ""
+
+#: inx/inkstitch_fill_to_stroke.inx:19
+msgid "Threshold for dead ends (mm)"
+msgstr ""
+
+#: inx/inkstitch_fill_to_stroke.inx:19
+msgid "Deletes small lines. A good value in most cases is the approximate line width of the original shape"
+msgstr ""
+
+#: inx/inkstitch_fill_to_stroke.inx:20
+msgid "Dashed line"
+msgstr ""
+
+#: inx/inkstitch_fill_to_stroke.inx:21
+msgid "Line width (mm)"
+msgstr ""
+
+#: inx/inkstitch_fill_to_stroke.inx:25
+msgid "Fill outlines never look nice when embroidered - but it is a lot of work to convert a fill outline to a satin column or a running stitch. This tool helps you with this operation."
+msgstr ""
+
+#: inx/inkstitch_fill_to_stroke.inx:27
+msgid "It is comparable to the Inkscape functionality of Path > Trace bitmap > Centerline tracing (- and has similar issues.) But instead of converting raster graphics, it will find the centerline of vector based objects with a fill."
+msgstr ""
+
+#: inx/inkstitch_fill_to_stroke.inx:30
+msgid "You can improve the result by defining cut lines."
+msgstr ""
+
+#: inx/inkstitch_fill_to_stroke.inx:33
+msgid "https://inkstitch.org/docs/stroke-tools/#fill-to-stroke"
 msgstr ""
 
 #: inx/inkstitch_flip.inx:3
