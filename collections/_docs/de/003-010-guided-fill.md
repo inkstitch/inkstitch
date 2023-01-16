@@ -49,11 +49,20 @@ Ink/Stitch erlaubt es über visuelle Befehle den [Anfangs- und Endpunkt eines F�
 
 Run `Extensions > Ink/Stitch  > Params` to tweak the settings to your needs.
 
-Read detailed information in the [Guided Fill Params](/de/docs/params/#kurvvenfüllung-parameter) section.
+Einstelung||Beschreibung
+Automatically routed fill stitching| ☑ |Must be enabled for these settings to take effect.
+Expand||Expand the shape before fill stitching, to compensate for gaps between shapes.
+Maximale Füll-Stichlänge|| Die Stichlänge in einer Reihe. Ein kürzerer Stich kann am Anfang oder am Ende einer Reihe verwendet werden.
+Reihenabstand|| Abstand zwischen den Stichreihen.
+Running stitch length||Length of stitches used when moving from section to section
+Skip last stitch in each row||The last stitch in each row is quite close to the first stitch in the next row. Skipping it decreases stitch count and density.
+Underpath||Must be enabled to let running stitches travel inside shape instead of around the border when moving from section to section
+Force lock stitches||Sew lock stitches after sewing this element, even if the distance to the next object is shorter than defined by the collapse length value in the Ink/Stitch preferences.
+Allow lock stitches||Enables lock stitches in only desired positions
 
 ## Underlay
 
-Underlay in Guided Fill doesn't follow the guide line, but uses the fill angle which can be defined in the underlay [params](/docs/params/#fill-underlay).
+Underlay in Guided Fill doesn't follow the guide line, but uses the fill angle which can be defined in the underlay [params](/de/docs/fill-stitch#unterlage).
 
 ## Samples Files Including Guided Fill Stitches
 {% include tutorials/tutorial_list key="stichart" value="Kurvenfüllung" %}
