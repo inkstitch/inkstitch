@@ -783,7 +783,7 @@ class SatinColumn(EmbroideryElement):
 
         # pre-cache ramdomised parameters to avoid property calls in loop
         if use_random:
-            seed = prng.joinArgs(self.random_seed, "satin-points")
+            seed = prng.join_args(self.random_seed, "satin-points")
             offset_proportional_min = np.array(offset_proportional) - self.random_width_decrease
             offset_range = (self.random_width_increase + self.random_width_decrease)
             spacing_sigma = spacing * self.random_zigzag_spacing
@@ -857,7 +857,7 @@ class SatinColumn(EmbroideryElement):
 
                 if to_travel <= 0:
                     if use_random:
-                        roll = prng.uniformFloats(seed, cycle)
+                        roll = prng.uniform_floats(seed, cycle)
                         offset_prop = offset_proportional_min + roll[0:2] * offset_range
                         to_travel = spacing + ((roll[2] - 0.5) * 2 * spacing_sigma)
                     else:
@@ -987,7 +987,7 @@ class SatinColumn(EmbroideryElement):
             if last_point is not None:
                 split_points, _ = self.get_split_points(
                     last_point, a, last_short_point, a_short, max_stitch_length, last_count,
-                    length_sigma, random_phase, min_split_length, prng.joinArgs(seed, 'satin-split', 2*i))
+                    length_sigma, random_phase, min_split_length, prng.join_args(seed, 'satin-split', 2 * i))
                 patch.add_stitches(split_points, ("satin_column", "satin_split_stitch"))
 
             patch.add_stitch(a_short)
@@ -995,7 +995,7 @@ class SatinColumn(EmbroideryElement):
 
             split_points, last_count = self.get_split_points(
                 a, b, a_short, b_short, max_stitch_length, None,
-                length_sigma, random_phase, min_split_length, prng.joinArgs(seed, 'satin-split', 2*i+1))
+                length_sigma, random_phase, min_split_length, prng.join_args(seed, 'satin-split', 2 * i + 1))
             patch.add_stitches(split_points, ("satin_column", "satin_split_stitch"))
 
             patch.add_stitch(b_short)

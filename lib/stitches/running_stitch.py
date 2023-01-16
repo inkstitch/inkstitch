@@ -24,7 +24,7 @@ def split_segment_even_n(a, b, segments: int, jitter_sigma: float = 0.0, random_
 
     splits = np.array(range(1, segments)) / segments
     if random_seed is not None:
-        jitters = (prng.nUniformFloats(len(splits), random_seed) * 2) - 1
+        jitters = (prng.n_uniform_floats(len(splits), random_seed) * 2) - 1
         splits = splits + jitters * (jitter_sigma / segments)
 
     # sort the splits in case a bad roll transposes any of them
@@ -39,12 +39,12 @@ def split_segment_even_dist(a, b, max_length: float, jitter_sigma: float = 0.0, 
 
 def split_segment_random_phase(a, b, length: float, length_sigma: float, random_seed: str) -> typing.List[shgeo.Point]:
     line = shgeo.LineString([a, b])
-    progress = length * prng.uniformFloats(random_seed, "phase")[0]
+    progress = length * prng.uniform_floats(random_seed, "phase")[0]
     splits = [progress]
     distance = line.length
     if progress >= distance:
         return []
-    for x in prng.iterUniformFloats(random_seed):
+    for x in prng.iter_uniform_floats(random_seed):
         progress += length * (1 + length_sigma * (x - 0.5) * 2)
         if progress >= distance:
             break
