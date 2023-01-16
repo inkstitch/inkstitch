@@ -2,7 +2,7 @@
 title: "E-Stich"
 permalink: /de/docs/stitches/e-stitch/
 excerpt: ""
-last_modified_at: 2019-03-16
+last_modified_at: 2023-01-16
 toc: true
 ---
 ## Beschreibung
@@ -16,9 +16,11 @@ E-Stich dient als einfacher (und doch festem) Deckstich für Applikationen. Er i
 
 Bereite deinen Pfad genauso vor, wie du es für [Satinsäulen](/de/docs/stitches/satin-column) tun würdest. Dann aktiviere die Funktion "E Stich" im [Parameter-Dialogfenster](/de/docs/params/#satinsäule). Gleichzeitig macht es Sinn, den Wert "Zick-Zack Abstand" für diese Stichart zu erhöhen.
 
-![Params Satin Column.jpg](/assets/images/docs/en/params-e-stitch.jpg)
+## Parameter
 
-**Tipp:** Sollten die Spitzen in die falsche Richtung zeigen, benutze einfach das Werkzeug ["Satinsäule umkehren"](/de/docs/satin-tools/#satinsäule-umkehren).
+Die Parametereinstellungen sind ähnlich zu denen den [Parametern der Satinsäule](/de/docs/stitches/satin-column).
+
+**Tipp:** Sollten die Spitzen in die falsche Richtung zeigen, benutze einfach das Werkzeug ["Satinsäule umkehren"](/de/docs/satin-tools/#satinsäule-umkehren), bzw. aktiviere die Option "Seiten umkehren" in den Parametereinstellungen.
 {: .notice--info }
 
 ## Beispieldateien die E-Stich enthalten
