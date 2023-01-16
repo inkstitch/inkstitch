@@ -3,7 +3,7 @@ from math import ceil
 from itertools import count, chain
 import numpy as np
 
-# Framework for reproducable pseudo-random number generation.
+# Framework for reproducible pseudo-random number generation.
 
 # Unlike python's random module (which uses a stateful generator based on global variables),
 # a counter-mode PRNG like uniformFloats can be used to generate multiple, independent random streams
