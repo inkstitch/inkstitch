@@ -5,7 +5,7 @@ date:   2023-01-14
 categories: Treffen
 toc: true
 ---
-In entspanner Athmosphäre wollen wir uns gemeinsam mit Ink/Stitch und den Themegebieten rund ums Maschinensticken beschäftigen.
+In entspanner Atmosphäre wollen wir uns gemeinsam mit Ink/Stitch und den Themegebieten rund ums Maschinensticken beschäftigen.
 
 Natürlich sind sowohl Stickanfänger als auch fortgeschrittene Nutzer herzlich willkommen.
 

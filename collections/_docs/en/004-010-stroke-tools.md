@@ -48,7 +48,9 @@ Fill outlines never look nice when embroidered - but it is a lot of work to conv
 
 It is comparable to the Inkscape functionality of `Path > Trace bitmap > Centerline tracing` (- and has similar issues.) But instead of converting raster graphics, it will find the centerline of vector based objects with a fill.
 
-You can refine the result by defining cut lines.
+You can improve the result by defining cut lines.
+
+![Fill to Stroke](/assets/images/docs/en/fill_to_stroke.png)
 
 ### Usage
 

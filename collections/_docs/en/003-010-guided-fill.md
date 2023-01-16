@@ -2,7 +2,7 @@
 title: "Guided Fill"
 permalink: /docs/stitches/guided-fill/
 excerpt: ""
-last_modified_at: 2022-06-26
+last_modified_at: 2023-01-15
 toc: true
 ---
 ## What it is
@@ -47,11 +47,27 @@ Set start and end points for autofill objects with [Visual commands](/docs/comma
 
 Run `Extensions > Ink/Stitch  > Params` to tweak the settings to your needs.
 
-Read detailed information in the [Guided Fill Params](/docs/params/#guided-fill-params) section.
+Settings||Description
+---|---|---
+Automatically routed fill stitching| ☑ |Must be enabled for these settings to take effect.
+Fill method                        |Guided Fill| Guided Fill must be selected.
+Guided Fill Strategy               |![Guided Fill Strategies](/assets/images/docs/guidedfillstrategies.svg)| Copy( défaut), top, fill the shape with copies of the guide lines.  Parallel offset, bottom, will ensure that each line is always a consistent distance from its neighbor. Sharp corners may be introduced.
+Expand                             ||Expand the shape before fill stitching, to compensate for gaps between shapes.
+Maximum fill stitch length         ||The length of each stitch in a row. "Max" is because a shorter stitch may be used at the start or end of a row.
+Spacing between rows               ||Distance between rows of stitches
+Running stitch length              ||Length of stitches used when moving from section to section
+Running Stitch tolerance           |![Tolerance Sample](/assets/images/docs/contourfilltolerance.svg) |All stitches must be within this distance of the path.  A lower tolerance means stitches will be closer together.  A higher tolerance means sharp corners may be rounded.
+Skip last stitch in each row       ||The last stitch in each row is quite close to the first stitch in the next row. Skipping it decreases stitch count and density.
+Stagger this many times before repeating|![Stagger example](/assets/images/docs/params-fill-stagger.png) |Stitches are staggered so that neighboring rows of stitches don't all fall in the same column (which would create a distracting valley effect). Setting this dictates how many rows apart the stitches will be before they fall in the same column position.
+Underpath                          ||Must be enabled to let running stitches travel inside shape instead of around the border when moving from section to section
+Allow lock stitches                ||Enables lock stitches in only desired positions
+Force lock stitches                ||Sew lock stitches after sewing this element, even if the distance to the next object is smaller than defined in the collapse length value value in the Ink/Stitch prefreneces.
+Trim After                         ||Trim the thread after sewing this object.
+Stop After                         ||Stop the machine after sewing this object. Before stopping it will jump to the stop position (frame out) if defined.
 
 ## Underlay
 
-Underlay in Guided Fill doesn't follow the guide line, but uses the fill angle which can be defined in the underlay [params](/docs/params/#fill-underlay).
+Underlay in Guided Fill doesn't follow the guide line, but uses the fill angle which can be defined in the underlay [params](/docs/stitches/fill-stitch#underlay).
 
 ## Samples Files Including Guided Fill Stitches
 {% include tutorials/tutorial_list key="stitch-type" value="Guided Fill" %}
