@@ -69,6 +69,7 @@ inkstitch_attribs = [
     'smoothness_mm',
     'clockwise',
     'reverse',
+    'meander_pattern',
     'expand_mm',
     'fill_underlay',
     'fill_underlay_angle',

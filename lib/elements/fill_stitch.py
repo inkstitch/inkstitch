@@ -17,8 +17,10 @@ from ..i18n import _
 from ..marker import get_marker_elements
 from ..stitch_plan import StitchGroup
 from ..stitches import auto_fill, contour_fill, guided_fill, legacy_fill
+from ..stitches.meander_fill import meander_fill
 from ..svg import PIXELS_PER_MM
 from ..svg.tags import INKSCAPE_LABEL
+from .. import tiles
 from ..utils import cache, version
 from .element import EmbroideryElement, param
 from .validation import ValidationError, ValidationWarning
@@ -107,7 +109,7 @@ class FillStitch(EmbroideryElement):
 
     @property
     @param('fill_method', _('Fill method'), type='dropdown', default=0,
-           options=[_("Auto Fill"), _("Contour Fill"), _("Guided Fill"), _("Legacy Fill")], sort_index=2)
+           options=[_("Auto Fill"), _("Contour Fill"), _("Guided Fill"), _("Legacy Fill"), _("Meander Fill")], sort_index=2)
     def fill_method(self):
         return self.get_int_param('fill_method', 0)
 
@@ -146,7 +148,7 @@ class FillStitch(EmbroideryElement):
            type='integer',
            unit='mm',
            default=0,
-           select_items=[('fill_method', 1)],
+           select_items=[('fill_method', 1), ('fill_method', 4)],
            sort_index=5)
     def smoothness(self):
         return self.get_float_param('smoothness_mm', 0)
@@ -155,6 +157,12 @@ class FillStitch(EmbroideryElement):
     @param('clockwise', _('Clockwise'), type='boolean', default=True, select_items=[('fill_method', 1)], sort_index=5)
     def clockwise(self):
         return self.get_boolean_param('clockwise', True)
+
+    @property
+    @param('meander_pattern', _('Meander Pattern'), type='dropdown', default=0,
+           options=[tile.name for tile in tiles.all_tiles()], select_items=[('fill_method', 4)], sort_index=3)
+    def meander_pattern(self):
+        return self.get_param('meander_pattern', None)
 
     @property
     @param('angle',
@@ -592,6 +600,8 @@ class FillStitch(EmbroideryElement):
                             stitch_groups.extend(self.do_contour_fill(fill_shape, previous_stitch_group, start))
                         elif self.fill_method == 2:
                             stitch_groups.extend(self.do_guided_fill(fill_shape, previous_stitch_group, start, end))
+                        elif self.fill_method == 4:
+                            stitch_groups.extend(self.do_meander_fill(fill_shape, start, end))
                 except ExitThread:
                     raise
                 except Exception:
@@ -721,6 +731,13 @@ class FillStitch(EmbroideryElement):
                 self.underpath,
                 self.guided_fill_strategy,
             ))
+        return [stitch_group]
+
+    def do_meander_fill(self, shape, starting_point, ending_point):
+        stitch_group = StitchGroup(
+            color=self.color,
+            tags=("meander_fill", "meander_fill_top"),
+            stitches=meander_fill(self, shape, starting_point, ending_point))
         return [stitch_group]
 
     @cache
