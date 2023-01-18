@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="54.448723"
+   height="270.41568"
+   viewBox="0 0 54.448723 270.41568"
+   version="1.1"
+   id="svg1587"
+   sodipodi:docname="hex_N6-1.svg"
+   inkscape:version="1.2 (1:1.2.1+202207142221+cd75a1ee6d)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1591" />
+  <sodipodi:namedview
+     id="namedview1589"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="4.4026633"
+     inkscape:cx="6.019084"
+     inkscape:cy="65.187815"
+     inkscape:current-layer="svg1587" />
+  <style
+     type="text/css"
+     id="style1103"><![CDATA[
+polygon.tile { stroke: #000000; stroke-width:3; stroke-linejoin:round }
+polygon.ih1 { fill: #ffff80 }
+polygon.ih2 { fill: #8080ff }
+polygon.ih3 { fill: #ff8080 }
+polygon.ih4 { fill: #80ff80 }
+polygon.ih5 { fill: #ff80ff }
+polygon.ih6 { fill: #80ffff }
+polygon.para {opacity: 0.75; fill: #ff0000; stroke: #ff0000 }
+]]></style>
+  <path
+     id="polygon1415"
+     style="fill:none;stroke:#000000;stroke-width:1.2;stroke-linejoin:round"
+     d="M 28.50279,49.119142 17.80901,30.993132 M 35.82617,251.33534 46.24134,270.1248 M 35.82617,251.33534 10.48563,233.20933 M 7.6724495,183.92994 18.08762,202.7194 M 28.22418,12.203682 17.80901,30.993132 m 36.03432,0 -25.34054,18.12601 m 0,0 -10.41517,18.78946 M 36.10478,79.609082 18.08762,67.908602 M 0.34906952,116.52454 25.68962,98.398532 M 46.24134,0.50320245 28.22418,12.203682 m 0,0 L 10.20701,0.50320245 M 35.82617,251.33534 46.51995,233.20933 m 0,0 -10.41517,-18.78945 M 54.12194,202.7194 36.10478,214.41988 m 0,0 L 18.08762,202.7194 M 7.6724495,183.92994 18.36623,165.80393 M 7.9510695,147.01448 25.96823,135.314 m 17.73855,48.61594 -25.34055,-18.12601 m 0,0 L 7.9510695,147.01448 M 54.12194,67.908602 36.10478,79.609082 m 0,0 -10.41517,18.78945 m 0,0 10.69378,18.126008 M 25.96823,135.314 43.98539,147.01448 m -7.602,-30.48994 -10.41516,18.78946"
+     sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccc" />
+  <polygon
+     class="para"
+     points="300.9571,8.9730035 300.9571,683.027 391.0429,683.027 391.0429,8.9730035 "
+     id="polygon1585"
+     transform="matrix(0.4,0,0,0.4,-110.477,-3.0349275)"
+     style="display:inline"
+     inkscape:label="parallelogram" />
+  <circle
+     style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#0000ff;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="path2736"
+     cx="18.608524"
+     cy="68.284004"
+     r="18.856121" />
+</svg>

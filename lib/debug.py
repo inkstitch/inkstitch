@@ -234,6 +234,15 @@ class Debug(object):
         }))
 
     @check_enabled
+    def log_point(self, point, name="point", color=None):
+        self.log_svg_element(etree.Element("circle", {
+            "cx": str(point.x),
+            "cy": str(point.y),
+            "r": "1",
+            "style": str(inkex.Style({"fill": "#000000"})),
+        }))
+
+    @check_enabled
     def log_graph(self, graph, name="Graph", color=None):
         d = ""
 

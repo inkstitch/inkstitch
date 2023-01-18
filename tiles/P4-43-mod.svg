@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="566" height="566" viewBox="0 0 566 566">
+<style type="text/css">
+polygon.tile { stroke: #000000; stroke-width:3; stroke-linejoin:round }
+polygon.ih1 { fill: #ffff80 }
+polygon.ih2 { fill: #8080ff }
+polygon.ih3 { fill: #ff8080 }
+polygon.ih4 { fill: #80ff80 }
+polygon.ih5 { fill: #ff80ff }
+polygon.ih6 { fill: #80ffff }
+polygon.para {opacity: 0.75; fill: #ff0000; stroke: #ff0000 }
+</style>
+<polygon class="para" points="-19.68836400058131,-4.858514396250412 -1.4855265200179022,12.986409448885766 19.68836400058131,4.858514396250408 1.4855265200179022,-12.986409448885766 -19.68836400058131,-4.858514396250412" style="stroke: none"/>
+<path d="M 0.0,0.0 15.376479204717551,0.0" style="stroke:#000000;stroke-width: 0.2px"/><path d="M -2.8263582758458647,-17.84492384513617 0.0,0.0" style="stroke:#000000;stroke-width: 0.2px"/><path d="M -24.000248796445067,-9.717028792500823 0.0,0.0" style="stroke:#000000;stroke-width: 0.2px"/><path d="M 0.0,0.0 -2.826358275845857,-17.844923845136165" style="stroke:#000000;stroke-width: 0.2px"/><path d="M -21.17389052059921,8.12789505263535 -5.797411315881657,8.12789505263535" style="stroke:#000000;stroke-width: 0.2px"/><path d="M -5.797411315881657,8.12789505263535 0.0,0.0" style="stroke:#000000;stroke-width: 0.2px"/><path d="M 0.0,0.0 -24.000248796445064,-9.71702879250081" style="stroke:#000000;stroke-width: 0.2px"/><path d="M 15.376479204717551,7.721304311292084e-15 0.0,0.0" style="stroke:#000000;stroke-width: 0.2px"/><path d="M -5.797411315881657,8.12789505263535 18.202837480563414,17.844923845136183" style="stroke:#000000;stroke-width: 0.2px"/><path d="M 18.202837480563414,17.844923845136183 15.376479204717551,1.544260862258417e-14" style="stroke:#000000;stroke-width: 0.2px"/><path d="M -5.797411315881657,8.127895052635358 -21.17389052059921,8.12789505263535" style="stroke:#000000;stroke-width: 0.2px"/><path d="M -2.9710530400357964,25.972818897771532 -5.797411315881657,8.127895052635358" style="stroke:#000000;stroke-width: 0.2px"/><path d="M 18.202837480563414,17.844923845136183 -5.797411315881657,8.127895052635358" style="stroke:#000000;stroke-width: 0.2px"/><path d="M -5.797411315881662,8.127895052635358 -2.9710530400357964,25.972818897771532" style="stroke:#000000;stroke-width: 0.2px"/><path d="M 15.376479204717542,7.721304311292084e-15 18.202837480563414,17.844923845136183" style="stroke:#000000;stroke-width: 0.2px"/><circle cx="0.0" cy="0.0" r="9.448818897637796" style="stroke:#0000FF;stroke-width: 0.2px;fill:none"/></svg>
+

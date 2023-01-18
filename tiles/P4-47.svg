@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="566" height="566" viewBox="0 0 566 566">
+<style type="text/css">
+polygon.tile { stroke: #000000; stroke-width:3; stroke-linejoin:round }
+polygon.ih1 { fill: #ffff80 }
+polygon.ih2 { fill: #8080ff }
+polygon.ih3 { fill: #ff8080 }
+polygon.ih4 { fill: #80ff80 }
+polygon.ih5 { fill: #ff80ff }
+polygon.ih6 { fill: #80ffff }
+polygon.para {opacity: 0.75; fill: #ff0000; stroke: #ff0000 }
+</style>
+<polygon class="para" points="-14.488157762908855,21.765483115404013 14.488157762908862,21.765483115404013 14.488157762908862,-21.765483115404013 -14.488157762908855,-21.765483115404013 -14.488157762908855,21.765483115404013" style="stroke: none"/>
+<path d="M 0.0,0.0 14.488157762908862,14.488157762908862" style="stroke:#000000;stroke-width: 0.2px"/><path d="M 28.97631552581771,0.0 10.286592011665299,-7.277325352495159" style="stroke:#000000;stroke-width: 0.2px"/><path d="M 10.286592011665299,-7.277325352495159 0.0,0.0" style="stroke:#000000;stroke-width: 0.2px"/><path d="M 24.774749774574147,-21.765483115404013 10.286592011665299,-7.277325352495159" style="stroke:#000000;stroke-width: 0.2px"/><path d="M 14.488157762908862,-29.04280846789918 -4.201565751243566,-21.765483115404013" style="stroke:#000000;stroke-width: 0.2px"/><path d="M 10.286592011665299,-7.277325352495159 -4.201565751243566,-21.765483115404013" style="stroke:#000000;stroke-width: 0.2px"/><path d="M -14.488157762908855,14.488157762908862 0.0,0.0" style="stroke:#000000;stroke-width: 0.2px"/><path d="M 0.0,0.0 -18.68972351415243,-7.277325352495159" style="stroke:#000000;stroke-width: 0.2px"/><path d="M -4.201565751243566,-21.765483115404013 -18.68972351415243,-7.277325352495159" style="stroke:#000000;stroke-width: 0.2px"/><path d="M 14.488157762908862,14.488157762908862 -4.201565751243566,21.765483115404013" style="stroke:#000000;stroke-width: 0.2px"/><path d="M -4.201565751243566,21.765483115404013 -14.488157762908855,14.488157762908862" style="stroke:#000000;stroke-width: 0.2px"/><circle cx="0.0" cy="0.0" r="9.448818897637796" style="stroke:#0000FF;stroke-width: 0.2px;fill:none"/></svg>
+

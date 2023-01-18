@@ -166,7 +166,7 @@ def _remove_duplicate_coordinates(coords_array):
     return coords_array[keepers]
 
 
-def smooth_path(path, smoothness=100.0):
+def smooth_path(path, smoothness=1.0):
     """Smooth a path of coordinates.
 
     Arguments:
@@ -178,6 +178,11 @@ def smooth_path(path, smoothness=100.0):
         A list of Points.
     """
 
+    if smoothness == 0:
+        # s of exactly zero seems to indicate a default level of smoothing
+        # in splprep, so we'll just exit instead.
+        return path
+
     # splprep blows up on duplicated consecutive points with "Invalid inputs"
     coords = _remove_duplicate_coordinates(np.array(path))
     num_points = len(coords)
@@ -188,7 +193,7 @@ def smooth_path(path, smoothness=100.0):
     # the smoothed path and the original path is equal to the smoothness.
     # In practical terms, if smoothness is 1mm, then the smoothed path can be
     # up to 1mm away from the original path.
-    s = num_points * smoothness ** 2
+    s = num_points * (smoothness ** 2)
 
     # .T transposes the array (for some reason splprep expects
     # [[x1, x2, ...], [y1, y2, ...]]
@@ -279,6 +284,9 @@ class Point:
 
     def rotate(self, angle):
         return self.__class__(self.x * math.cos(angle) - self.y * math.sin(angle), self.y * math.cos(angle) + self.x * math.sin(angle))
+
+    def scale(self, x_scale, y_scale):
+        return self.__class__(self.x * x_scale, self.y * y_scale)
 
     def as_int(self):
         return self.__class__(int(round(self.x)), int(round(self.y)))

@@ -1,15 +1,15 @@
-import inkex
-from math import ceil, floor
-from networkx import Graph
 import os
+from math import ceil, floor
+
+import inkex
+import lxml
+from networkx import Graph
 from shapely.geometry import LineString
 from shapely.prepared import prep
 
 from .debug import debug
 from .svg import apply_transforms
-from .svg.tags import SODIPODI_NAMEDVIEW
-from .utils import cache, get_bundled_dir, guess_inkscape_config_path, Point
-from random import random
+from .utils import Point, cache, get_bundled_dir, guess_inkscape_config_path
 
 
 class Tile:
@@ -33,11 +33,7 @@ class Tile:
     __str__ = __repr__
 
     def _get_name(self, tile_svg, tile_path):
-        name = tile_svg.get(SODIPODI_NAMEDVIEW)
-        if name:
-            return name
-        else:
-            return os.path.splitext(os.path.basename(tile_path))[0]
+        return os.path.splitext(os.path.basename(tile_path)[0])
 
     def _load(self):
         self._load_paths(self.tile_svg)
@@ -46,39 +42,35 @@ class Tile:
         self._load_parallelogram(self.tile_svg)
 
     def _load_paths(self, tile_svg):
-        if self.tile is None:
-            path_elements = tile_svg.findall('.//svg:path', namespaces=inkex.NSS)
-            self.tile = self._path_elements_to_line_strings(path_elements)
-            # self.center, ignore, ignore = self._get_center_and_dimensions(self.tile)
+        path_elements = tile_svg.findall('.//svg:path', namespaces=inkex.NSS)
+        self.tile = self._path_elements_to_line_strings(path_elements)
+        # self.center, ignore, ignore = self._get_center_and_dimensions(self.tile)
 
     def _load_dimensions(self, tile_svg):
-        if self.width is None:
-            svg_element = tile_svg.getroot()
-            self.width = svg_element.viewport_width
-            self.height = svg_element.viewport_height
+        svg_element = tile_svg.getroot()
+        self.width = svg_element.viewport_width
+        self.height = svg_element.viewport_height
 
     def _load_buffer_size(self, tile_svg):
-        if self.buffer_size is None:
-            circle_elements = tile_svg.findall('.//svg:circle', namespaces=inkex.NSS)
-            if circle_elements:
-                self.buffer_size = circle_elements[0].radius
-            else:
-                self.buffer_size = 0
+        circle_elements = tile_svg.findall('.//svg:circle', namespaces=inkex.NSS)
+        if circle_elements:
+            self.buffer_size = circle_elements[0].radius
+        else:
+            self.buffer_size = 0
 
     def _load_parallelogram(self, tile_svg):
-        if self.shift0 is None:
-            parallelogram_elements = tile_svg.findall(".//svg:*[@class='para']", namespaces=inkex.NSS)
-            if parallelogram_elements:
-                path_element = parallelogram_elements[0]
-                path = apply_transforms(path_element.get_path(), path_element)
-                subpaths = path.to_superpath()
-                subpath = subpaths[0]
-                points = [Point.from_tuple(p[1]) for p in subpath]
-                self.shift0 = points[1] - points[0]
-                self.shift1 = points[2] - points[1]
-            else:
-                self.shift0 = Point(self.width, 0)
-                self.shift1 = Point(0, self.height)
+        parallelogram_elements = tile_svg.findall(".//svg:*[@class='para']", namespaces=inkex.NSS)
+        if parallelogram_elements:
+            path_element = parallelogram_elements[0]
+            path = apply_transforms(path_element.get_path(), path_element)
+            subpaths = path.to_superpath()
+            subpath = subpaths[0]
+            points = [Point.from_tuple(p[1]) for p in subpath]
+            self.shift0 = points[1] - points[0]
+            self.shift1 = points[2] - points[1]
+        else:
+            self.shift0 = Point(self.width, 0)
+            self.shift1 = Point(0, self.height)
 
     def _path_elements_to_line_strings(self, path_elements):
         lines = []
@@ -109,8 +101,19 @@ class Tile:
 
         return translated_tile
 
+    def _scale(self, x_scale, y_scale):
+        self.shift0 = self.shift0.scale(x_scale, y_scale)
+        self.shift1 = self.shift1.scale(x_scale, y_scale)
+
+        scaled_tile = []
+        for start, end in self.tile:
+            start = start.scale(x_scale, y_scale)
+            end = end.scale(x_scale, y_scale)
+            scaled_tile.append((start, end))
+        self.tile = scaled_tile
+
     @debug.time
-    def to_graph(self, shape, only_inside=True, pad=True):
+    def to_graph(self, shape, scale, buffer=None):
         """Apply this tile to a shape, repeating as necessary.
 
         Return value:
@@ -119,27 +122,36 @@ class Tile:
               representation of this edge.
         """
         self._load()
+        x_scale, y_scale = scale
+        self._scale(x_scale, y_scale)
 
         shape_center, shape_width, shape_height = self._get_center_and_dimensions(shape)
-        shape_diagonal = (shape_width ** 2 + shape_height ** 2) ** 0.5
+        shape_diagonal = Point(shape_width, shape_height).length()
+
+        if not buffer:
+            average_scale = (x_scale + y_scale) / 2
+            buffer = self.buffer_size * average_scale
+
+        contracted_shape = shape.buffer(-buffer)
+        prepared_shape = prep(contracted_shape)
+
+        # debug.log_line_string(contracted_shape.exterior, "contracted shape")
+
+        return self._generate_graph(prepared_shape, shape_center, shape_diagonal)
+
+    def _generate_graph(self, shape, shape_center, shape_diagonal):
         graph = Graph()
-
-        if pad:
-            shape = shape.buffer(-self.buffer_size)
-
-        prepared_shape = prep(shape)
-
         tiles0 = ceil(shape_diagonal / self.shift0.length()) + 2
         tiles1 = ceil(shape_diagonal / self.shift1.length()) + 2
         for repeat0 in range(floor(-tiles0 / 2), ceil(tiles0 / 2)):
             for repeat1 in range(floor(-tiles1 / 2), ceil(tiles1 / 2)):
-                shift0 = repeat0 * self.shift0 + shape_center
-                shift1 = repeat1 * self.shift1 + shape_center
-                this_tile = self._translate_tile(shift0 + shift1)
+                shift0 = repeat0 * self.shift0
+                shift1 = repeat1 * self.shift1
+                this_tile = self._translate_tile(shift0 + shift1 + shape_center)
                 for line in this_tile:
                     line_string = LineString(line)
-                    if not only_inside or prepared_shape.contains(line_string):
-                        graph.add_edge(line[0], line[1], line_string=line_string, weight=random() + 0.1)
+                    if shape.contains(line_string):
+                        graph.add_edge(line[0], line[1])
 
         return graph
 
@@ -155,7 +167,10 @@ def all_tiles():
     for tile_dir in all_tile_paths():
         try:
             for tile_file in sorted(os.listdir(tile_dir)):
-                tiles.append(Tile(os.path.join(tile_dir, tile_file)))
+                try:
+                    tiles.append(Tile(os.path.join(tile_dir, tile_file)))
+                except (OSError, lxml.etree.XMLSyntaxError):
+                    pass
         except FileNotFoundError:
             pass
 

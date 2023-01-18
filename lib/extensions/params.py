@@ -190,8 +190,13 @@ class ParamsTab(ScrolledPanel):
                 try:
                     values[name] = input.GetValue()
                 except AttributeError:
-                    # dropdown
-                    values[name] = input.GetSelection()
+                    param = self.dict_of_choices[name]['param']
+                    if param.type == 'dropdown':
+                        # dropdown
+                        values[name] = input.GetSelection()
+                    elif param.type == 'select':
+                        selection = input.GetSelection()
+                        values[name] = param.options[selection]
 
         return values
 
@@ -368,9 +373,17 @@ class ParamsTab(ScrolledPanel):
                         input.SetValue(param.values[0])
 
                 input.Bind(wx.EVT_CHECKBOX, self.changed)
-            elif param.type == 'dropdown':
+            elif param.type in ('dropdown', 'select'):
                 input = wx.Choice(self, wx.ID_ANY, choices=param.options)
-                input.SetSelection(int(param.values[0]))
+
+                if param.type == 'dropdown':
+                    input.SetSelection(int(param.values[0]))
+                else:
+                    try:
+                        input.SetSelection(param.options.index(param.values[0]))
+                    except ValueError:
+                        input.SetSelection(param.default)
+
                 input.Bind(wx.EVT_CHOICE, self.changed)
                 input.Bind(wx.EVT_CHOICE, self.update_choice_state)
                 self.dict_of_choices[param.name] = {

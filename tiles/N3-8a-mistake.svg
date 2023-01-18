@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="566" height="566" viewBox="0 0 566 566">
+<style type="text/css">
+polygon.tile { stroke: #000000; stroke-width:3; stroke-linejoin:round }
+polygon.ih1 { fill: #ffff80 }
+polygon.ih2 { fill: #8080ff }
+polygon.ih3 { fill: #ff8080 }
+polygon.ih4 { fill: #80ff80 }
+polygon.ih5 { fill: #ff80ff }
+polygon.ih6 { fill: #80ffff }
+polygon.para {opacity: 0.75; fill: #ff0000; stroke: #ff0000 }
+</style>
+<polygon class="para" points="52.10642787298648,87.3820184241676 74.7835932273172,52.10642787298648 112.57886881786838,77.30327826668726 89.90170346353767,112.57886881786838 52.10642787298648,87.3820184241676" style="stroke: none"/>
+<path d="M 82.34264834542743,82.34264834542743 120.13792393597862,82.34264834542743" style="stroke:#000000;stroke-width: 0.2px"/><path d="M 82.34264834542743,57.145797951726635 82.34264834542743,82.34264834542743" style="stroke:#000000;stroke-width: 0.2px"/><path d="M 82.34264834542743,107.53949873912822 82.34264834542743,82.34264834542743" style="stroke:#000000;stroke-width: 0.2px"/><path d="M 82.34264834542743,82.34264834542743 44.54737275487624,82.34264834542743" style="stroke:#000000;stroke-width: 0.2px"/><path d="M 59.66548299109672,92.42138850290775 82.34264834542743,107.53949873912822" style="stroke:#000000;stroke-width: 0.2px"/><circle cx="82.34264834542743" cy="82.34264834542743" r="9.448818897637796" style="stroke:#0000FF;stroke-width: 0.2px;fill:none"/></svg>
+
