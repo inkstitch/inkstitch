@@ -18,6 +18,7 @@
         <option value="2">Lower opacity</option>
     </param>
     <param name="needle-points" type="boolean" gui-text="Needle points">false</param>
+    <param name="insensitive" type="boolean" gui-text="Insensitive">false</param>
     <spacer />
     <script>
         {{ command_tag | safe }}
