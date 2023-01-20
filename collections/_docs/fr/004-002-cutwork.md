@@ -2,7 +2,7 @@
 title: "Richelieu"
 permalink: /fr/docs/cutwork/
 excerpt: ""
-last_modified_at: 2022-05-23
+last_modified_at: 2023-01-20
 toc: true
 ---
 En broderie machine Richelieu (cutwork en anglais) décrit une  technique où des aiguilles spécifiques sont utilisées pour découper des trous dans le tissu. Ces aiguilles sont généralement vendues par quatre. Chaque aiguille peut couper selon un angle qui est dans un intervalle spécifique. Il est donc nécessaire de diviser un élément selon les sections d'angle de vos aiguilles.
@@ -44,3 +44,22 @@ Bernina                  | <span class="cwd">&#124;</span>                      
 Pfaff, Husqvarna Viking, Inspira | Red <span class="cwd" style="background:red;">/</span> | Yellow <span class="cwd" style="background: yellow">&#8213;</span>| Green <span class="cwd" style="background: green;">&#x5c;</span>   | Blue <span class="cwd" style="background: blue">&#124;</span>
 Brother, Babylock        | Blue <span class="cwd" style="background: blue;">/</span>      | Purple <span class="cwd" style="background: purple;">&#8213;</span>| Green <span class="cwd" style="background: green;">&#x5c;</span>  | Orange <span class="cwd" style="background: #ff6000;">&#124;</span>
 Janome                   | Red <span class="cwd" style="background: #ff3f7e;">&#8213;</span>  | Blue <span class="cwd" style="background: #00abff;">/</span>          | Black <span class="cwd" style="background: #413f57; color: white;">&#124;</span>| Green <span class="cwd" style="background: green;">&#x5c;</span>
+
+
+## Broderie Richelieu avec  Bernina/Bernette
+
+{% include upcoming_release.html %}
+
+Sauvegarder le fichier .inf avec votre fichier .exp (avec le même nom, seule l'extension différe) et la machine reconnaitra les lignes de coupe et montrera les bons numéros d'aiguilles (tels que défini dans l'outil de segmentation).
+
+Utilisez ce paramètrage (ce sont les couleurs classiques, mais elles n'influencent pas la reconaissance du richelieu):
+
+
+
+Aiguille|Couleur                                 |Début|Fin
+------|-------------------------------------------|-----|---
+1     |<span style="color: #ffff00">#ffff00</span>|67   |113
+2     |<span style="color: #00ff00">#00ff00</span>|112  |157
+3     |<span style="color: #ff0000">#ff0000</span>|158  |23
+4     |<span style="color: #ff00ff">#ff00ff</span>|22   |68
+
