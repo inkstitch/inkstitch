@@ -2,7 +2,7 @@
 title: "Broderie Ondulée"
 permalink: /fr/docs/stitches/ripple-stitch/
 excerpt: ""
-last_modified_at: 2022-07-17
+last_modified_at: 2023-01-20
 toc: true
 ---
 # De quoi s'agit-il ?
@@ -114,12 +114,15 @@ Exposant de la distance entre les lignes|<img src="/assets/images/docs/ripple_on
 Inverser effet exposant |☑  ou ▢| Échange le rôle de la  première et de la dernière réplication pour le calcul de la distance entre les réplications
 Changer le sens |☑  ou ▢|  Change le sens du  chemin final de broderie . N'a pas d'effet sur les autres paramètres
 Distance grille  maximum |<img src="/assets/images/docs/ripple_only_grid.svg" alt="Distance"/>| Si une distance positive est spécifiée, les ondulations de la broderie sont complétées  en une "grille", par un chemin "perpendiculaire" aux ondulations. Le paramètre contrôle l'écart de ces perpendiculaires. Intervertir  n'a pas  d'influence sur ce paramètre.
+Axes de mise à l'échelle|XY ou X ou Y ou rien|seulement pour des ondulations guidées
 Démarrer à| seulement pour des ondulations guidées|Taille de la première ondulation en pourcentage.
 Finir à| seulement pour des ondulations guidées |Taille de la dernière ondulation en pourcentage.
 Tourner| ☑  ou ▢| seulement pour des ondulations guidées
 Style de Jointure|<img src="/assets/images/docs/flat_or_point.svg" alt="Join Stile"/> |pour des ondulations ouvertes,les réplications peuvent être jointes par un segment (en haut) ou en un seul point (en bas)
 Autoriser les points d'arrêts | ☑  ou ▢|Choix de l'ajout d'un point d'arrêt en début et en fin de broderie.
 Forcer les points d'arrêts | ☑ ou ▢| Force un point d'arrêt après l'objet indépendament de la valeur de "Saut de fil" dans les Préférences d'Ink/Stitch.
+Couper après 	| ☑ ou ▢| Si coché, le fil est coupé après avoir brodé cet objet
+Arrêter aprus 	| ☑ ou ▢|Si coché, la machine fait une pause après avoir brodé cet objet. Si une position d'arrêt a été définie, la machine la rejoint avant de s'arrêter.
 {: .params-table }
 
 
