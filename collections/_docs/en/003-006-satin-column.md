@@ -86,9 +86,9 @@ Allow lock stitches     |☑ |Enables lock stitches in only desired positions
 Force lock stitches   |☑ | Sew lock stitches after sewing this element, even if the distance to the next object is smaller than defined in the collapse length value value in the Ink/Stitch prefreneces.
 Trim After            |☑ | Trim the thread after sewing this object.
 Stop After            |☑ | Stop the machine after sewing this object. Before stopping it will jump to the stop position (frame out) if defined.
-Random percentage of satin width increase | | Lengthen stitch across rails at most this percent. Two values separated by a space may be used for an aysmmetric effect.
+Random percentage of satin width increase | | Lengthen stitch across rails at most this percent. Two values separated by a space may be used for an asymetric effect.
 Random percentage of satin width decrease | | Shorten stitch across rails at most this percent. Two values separated by a space may be used for an aysmmetric effect.
-Random zig-zag spacing percentage         | |Amount of random jitter added to stitch length.
+Random zig-zag spacing percentage         | |Amount of random jitter added to zigzag spacing
 Random Jitter for split stitches          | | Randomizes split stitch length if random phase is enabled, stitch position if disabled.
 Random Phase for split stitches           |☑ | Controls whether split stitches are centered or with a random phase (which may increase stitch count).
 Minimum length for random-phase split     |  | Defaults to maximum stitch length. Smaller values allow for a transition between single-stitch and split-stitch.
@@ -104,8 +104,8 @@ This is a row of running stitch down the center of the column and back. This may
 Settings      |Description
 ---|---
 Stitch length |Length of stitches (in mm)
-Repeats       |Odd numbers of repeats will reverse the stitch direction of the satin column, causing it to start and end at the same position.
-Position      |Position of underlay from between the rails. 0% is along the first rail, 50% is centered, 100% is along the second rail.
+Repeats       |Un nombre impair de répétitions va renverser la direction de broderie de la colonne satin. La broderie se terminera au point de départ.
+Position      |Position de la sous-couche entre les rails. 0% est le long du premier rail, 50% est centré, 100% est le long du second rail.
 {: .table-full-width }
 
 ### Contour Underlay
