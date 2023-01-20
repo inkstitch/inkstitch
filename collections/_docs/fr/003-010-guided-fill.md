@@ -2,7 +2,7 @@
 title: "Remplissage guidé"
 permalink: /fr/docs/stitches/guided-fill/
 excerpt: ""
-last_modified_at: 2022-06-27
+last_modified_at: 2023-01-20
 toc: true
 ---
 ## De quoi s'agit-il ?
