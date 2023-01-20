@@ -45,7 +45,6 @@ Autoriser les points d'arrêts     |Ajoute un point d'arrêt à la ou les positi
 Forcer les points d'arrêts        |Force un point d'arrêt après l'objet indépendament de la valeur de "Saut de fil" dans les Préférences d'Ink/Stitch.
 Couper après                      |Couper le fil après avoir brodé cet objet
 Arrêter après                     |Arrêter (pause machine) après avoir brodé cet objet. Avant l'arrêt, il y aura un saut vers la position d'arrêt si elle a été définie
-{: .params-table }
 
 ## Fichiers exemple avec point droit
 {% include tutorials/tutorial_list key="stitch-type" value="Running Stitch" %}
