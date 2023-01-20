@@ -30,8 +30,9 @@ Ink/Stitch contient un outil qui va vous aider à découper vos éléments selon
 
 ## Réglages classiques  des aiguilles
 
-Needle|Angle|Start|End
---|--|--
+
+Aiguille|Angle                                    |Début|Fin
+------|-------------------------------------------|-----|---
 <span class="cwd">&#124;</span>   | 90°  | 67  | 113
 <span class="cwd">/</span>        | 45°  | 112 | 157
 <span class="cwd">&#8213;</span>  | 0°   | 158 | 23
