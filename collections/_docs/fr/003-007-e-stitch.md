@@ -2,7 +2,7 @@
 title: "Point en E"
 permalink: /fr/docs/stitches/e-stitch/
 excerpt: ""
-last_modified_at: 2019-10-21
+last_modified_at: 2023-01-20
 toc: true
 ---
 ## Qu'est-ce que c'est
@@ -20,6 +20,10 @@ Préparez votre chemin exactement comme vous le feriez pour une [Colonne Satin](
 
 **Astuce** Si vos points ne sont pas tournés du bon côté utilisez ["Intervertir les rails satin"](/fr/docs/satin-tools/#intrevertir-les-rails-des-colonnes-satin) .
 {: .notice--info }
+
+## Paramétres
+
+Même paramètres que les paramètres des [colonnes satin](/docs/stitches/satin-column/#params).
 
 ## Fichiers exemples contenant du point en E
 {% include tutorials/tutorial_list key="stitch-type" value="E-Stitch" %}
