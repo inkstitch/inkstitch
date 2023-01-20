@@ -19,7 +19,7 @@ class Tile:
     def _load_tile(self, tile_path):
         self.tile_svg = inkex.load_svg(tile_path)
         self.tile_path = tile_path
-        self.name = self._get_name(self.tile_svg, tile_path)
+        self.name = self._get_name(tile_path)
         self.tile = None
         self.width = None
         self.height = None
@@ -32,8 +32,8 @@ class Tile:
 
     __str__ = __repr__
 
-    def _get_name(self, tile_svg, tile_path):
-        return os.path.splitext(os.path.basename(tile_path)[0])
+    def _get_name(self, tile_path):
+        return os.path.splitext(os.path.basename(tile_path))[0]
 
     def _load(self):
         self._load_paths(self.tile_svg)
