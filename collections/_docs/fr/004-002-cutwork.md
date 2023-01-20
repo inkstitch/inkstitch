@@ -5,7 +5,7 @@ excerpt: ""
 last_modified_at: 2023-01-20
 toc: true
 ---
-En broderie machine Richelieu (cutwork en anglais) décrit une  technique où des aiguilles spécifiques sont utilisées pour découper des trous dans le tissu. Ces aiguilles sont généralement vendues par quatre. Chaque aiguille peut couper selon un angle qui est dans un intervalle spécifique. Il est donc nécessaire de diviser un élément selon les sections d'angle de vos aiguilles.
+En broderie machine, Richelieu (cutwork en anglais) décrit une  technique où des aiguilles spécifiques sont utilisées pour découper des trous dans le tissu. Ces aiguilles sont généralement vendues par quatre. Chaque aiguille peut couper selon un angle qui est dans un intervalle spécifique. Il est donc nécessaire de diviser un élément selon les sections d'angle de vos aiguilles.
 
 ## Exemple de segmentation
 
