@@ -2,7 +2,7 @@
 title: "Point manuel"
 permalink: /fr/docs/stitches/manual-stitch/
 excerpt: ""
-last_modified_at: 2019-10-17
+last_modified_at: 2023-01-20
 toc: true
 ---
 ## Qu'est-ce que c'est
@@ -18,13 +18,6 @@ Si vous ouvrez un fichier de broderie machine, vous y trouverez des points manue
 3. Activez `Placement manuel de points`. Les autres réglages n'auront aucun effet en mode point manuel.
    ![Params Stroke](/assets/images/docs/en/params-manual-stitch.jpg)
 
-## Astuce
-
-### Points d'arrêt en début et fin
-
-Il ne sera pas ajouter automatiquement de points d'arrêt. Veillez donc à les créer dans le chemin.
-
-### Faire des noeuds durs
 
 Chaque nœud d'un chemin représente un point de pénétration de l'aiguille. Ça ne va pas suivre les courbes.
 
@@ -33,6 +26,24 @@ Chaque nœud d'un chemin représente un point de pénétration de l'aiguille. Ç
 Une représentation nette de votre chemin de point manuel peut être obtenue comme suit:
 1. Selectionner tous les noeuds (`F2` puis `Ctrl`+`A`)
 2. Cliquer sur ![Rendre durs les noeuds sélectionnés](/assets/images/docs/tool-controls-corner.jpg){: title="Make selected nodes corner" } in the `Tool Controls Bar`.
+
+## Paramétres
+
+Ouvrir `Extensions > Ink/Stitch  > Paramétres` pour paramétrer selon vos besoins.
+
+Paramètre||Description
+---|--|---
+Points droits le long des chemins   ||Doit être activé pour que ces paramètres prennent effet.
+Méthode                             ||Choisir le type "Point droit" 
+Placement de points manuels         || **Activer Point Manuel**
+Répéter                             ||Ce paramètre est sans effet sur les points manuels
+Longueur du point droit             ||Ce paramètre est sans effet sur les points manuels
+Tolérance du point droit            ||Ce paramètre est sans effet sur les points manuels
+Espacement Zig-Zag (crête à crête)  ||Ce paramètre est sans effet sur les points manuels
+Autoriser les points d'arrêts       ||Les points manuels ne permette pas l'ajout automatique de points d'arrêt. Vous devez le inclure manuellement dans votre chemin.
+Forcer les points d'arrêts          ||Ce paramètre est sans effet sur les points manuels
+Couper après                        ||Trim the thread after sewing this object.
+Arrêter après                       ||Arrêter (pause machine) après avoir brodé cet objet. Avant l'arrêt, il y aura un saut vers la position d'arrêt si elle a été définie.
 
 ## Fichier exemple avec point manuel
 {: style="clear: both;" }
