@@ -102,8 +102,8 @@ Longueur maximale du point  | ![Maximum stitch length](/assets/images/docs/param
 Pourcentage de compensation d'étirement|![Pull compensation example](/assets/images/docs/params-satin-pull_compensation.png)|Compensation d'étirement proportionelle à la largeur du point satin. Deux valeurs séparées par un espace peuvent être utilisé pour un effet asymétrique.
 Compensation d'étirement|![exemple de compensation d'étirement](/assets/images/docs/params-satin-pull_compensation.png)|Les points Satin [resserrent le tissu](/fr/tutorials/push-pull-compensation/),   il en résulte une colonne plus étroite que votre dessin dans Inkscape. Ce paramètre étend chaque paire de pénétrations d’aiguilles vers l’extérieur de la colonne satin. Vous devrez expérimentalement déterminer le montant de la compensation en tenant compte de votre tissu, de votre fil et de votre stabilisateur. Deux valeurs séparées par un espace peuvent être utilisé pour un effet asymétrique.
 Distance des points courts ||Faire des points courts si la distance entre les crêtes est inférieure à cette valeur.
-Décalage des points courts    || SLes points dans les zones à forte densité seront raccourcis de ce pourcentage.
-Échanger les rails          |☑ | Échange les deux rails de la colonne satin, ce qui affecte le côté de fin de broderie ainsi que tous les paramètres asymétriques
+Décalage des points courts    ||Les points dans les zones à forte densité seront raccourcis de ce pourcentage.
+Échanger les rails          |☑ |Échange les deux rails de la colonne satin, ce qui affecte le côté de fin de broderie ainsi que tous les paramètres asymétriques
 Espacement de Zig-zag|![exemple d'espacement de zig-zag](/assets/images/docs/params-satin-zig-zag-spacing.png)|la distance de crête à crête entre les zig-zag
 Autoriser les points d'arrêts | ☑|Ajoute un point d'arrêt à la ou les positions choisies.
 Forcer les points d'arrêts | ☑ | Force un point d'arrêt après l'objet indépendament de la valeur de "Saut de fil" dans les Préférences d'Ink/Stitc
