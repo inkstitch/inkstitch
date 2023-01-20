@@ -82,7 +82,7 @@ Cependant, il existe des situations dans lesquelles vous devez ajouter manuellem
 
 ## Paramètres
 
-Utiliser `Extensions > Ink/Stitch  > Paramètres` vous donne la possibilité de parfaire votre colonne de satin et d’utiliser une sous-couche.
+`Extensions > Ink/Stitch  > Paramètres` vous donne la possibilité de parfaire votre colonne de satin et d’utiliser une sous-couche.
 
 Les colonnes satin permettent trois types de sous-couche différents que vous pouvez utilisez ensemble ou séparement.
 
