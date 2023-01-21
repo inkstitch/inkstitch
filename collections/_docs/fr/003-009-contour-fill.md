@@ -44,7 +44,7 @@ Lancez `Extensions > Ink/Stitch  > Paramètres`. Choisir "Remplissage selon le c
 ## Sous-couche
 
 La sous-couche de remplissage selon le contour ne suit pas le contour, mais utilise l'angle de remplissage qui peut être défini dans les 
-[paramètres](/docs/params/#fill-underlay) de la sous-couche.
+[paramètres](/fr/docs/stitches/fill-stitch/#sous-couche) de la sous-couche.
 
 ## Exemples de fichier qui utilisent le remplissage suivant le contour
 {% include tutorials/tutorial_list key="stitch-type" value="Contour Fill" %}
