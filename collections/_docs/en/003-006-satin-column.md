@@ -104,8 +104,8 @@ This is a row of running stitch down the center of the column and back. This may
 Settings      |Description
 ---|---
 Stitch length |Length of stitches (in mm)
-Repeats       |Un nombre impair de répétitions va renverser la direction de broderie de la colonne satin. La broderie se terminera au point de départ.
-Position      |Position de la sous-couche entre les rails. 0% est le long du premier rail, 50% est centré, 100% est le long du second rail.
+Repeats       |Odd numbers of repeats will reverse the stitch direction of the satin column, causing it to start and end at the same position.
+Position      |Position of underlay from between the rails. 0% is along the first rail, 50% is centered, 100% is along the second rail.
 {: .table-full-width }
 
 ### Contour Underlay

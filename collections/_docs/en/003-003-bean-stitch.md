@@ -22,7 +22,7 @@ Bean stitch describes a repetition of running stitches back and forth. This woul
 
    * A value of 1 would triple each stitch (forward, back, forward).
    * A value of 2 would quintuple each stitch, etc.
-   * It is possible to define a repeat pattern by entering multiple values separated by a space.
+   * It is possible to define a repeat pattern by entering multiple values separated by a space (e.g. a value of `1 0` will produce this pattern: `≡-≡-≡`)
 
 ## Params
 

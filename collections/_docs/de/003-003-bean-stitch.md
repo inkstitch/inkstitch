@@ -22,6 +22,7 @@ Mehrfachgeradstich oder "Bean stitch" beschreibt eine Wiederholung von Geradstic
 
    * Ein Wert von 1 verdreifacht jeden Stich (vor, zurück, vor), es entsteht ein Dreifach-Geradstich.
    * Ein Wert von 2 verfünfacht jeden Stich (vor, zurück, vor, zurück, vor), es entsteht ein Fünffach-Geradstich, etc.
+   * Durch die Eingabe mehrerer durch ein Leerzeichen getrennter Werte  ein Muster zu erzeugen (z.B ergibt der Wert `1 0` folgendes Muster: `≡-≡-≡`)
 
 ## Parameter
 

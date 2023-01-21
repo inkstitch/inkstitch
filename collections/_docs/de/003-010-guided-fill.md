@@ -49,16 +49,23 @@ Ink/Stitch erlaubt es über visuelle Befehle den [Anfangs- und Endpunkt eines F�
 
 Run `Extensions > Ink/Stitch  > Params` to tweak the settings to your needs.
 
-Einstelung||Beschreibung
-Automatically routed fill stitching| ☑ |Must be enabled for these settings to take effect.
-Expand||Expand the shape before fill stitching, to compensate for gaps between shapes.
-Maximale Füll-Stichlänge|| Die Stichlänge in einer Reihe. Ein kürzerer Stich kann am Anfang oder am Ende einer Reihe verwendet werden.
-Reihenabstand|| Abstand zwischen den Stichreihen.
-Running stitch length||Length of stitches used when moving from section to section
-Skip last stitch in each row||The last stitch in each row is quite close to the first stitch in the next row. Skipping it decreases stitch count and density.
-Underpath||Must be enabled to let running stitches travel inside shape instead of around the border when moving from section to section
-Force lock stitches||Sew lock stitches after sewing this element, even if the distance to the next object is shorter than defined by the collapse length value in the Ink/Stitch preferences.
-Allow lock stitches||Enables lock stitches in only desired positions
+Einstellung                                 ||Beschreibung
+---|---|---
+Automatisch geführte Füllstiche             | ☑ |Muss aktiviert sein
+Füllmethode                                 | Kurvenfüllung|Für diesen Stichtyp bitte Kurvenfüllung auswählen
+Strategie                                   | ![Guided Fill Strategies](/assets/images/docs/guidedfillstrategies.svg)| Kopieren (Standard), oben, füllt die Form mit Hilfe von Kopien der Führungslinie. Parallelverschiebung, unten, stellt sicher, dass die Abstände gleich bleiben (dies kann zu scharfen Kanten führen).
+Erweitern                                   || Erweitert die Form um beim Sticken Lücken zu benachbarten Formen zu vermeiden.
+Maximale Füllstichlänge                     || Stichlänge des Füllstiches. Am Start oder am Ende der Reihe können auch kürzere Stiche enstehen (deshab "maximal")
+Reihenabstand                               || Abstand zwischen den Reihen
+Geradstichlänge (zwischen den Abschnitten)  || Länge der Stiche zwischen den Füllstich-Sektionen (Verbindungsstiche)
+Geradstich-Toleranz                         || Alle Stiche müssen innerhalb dieses Abstandes zum Pfad befinden. Ein niedrigerer Toleranzwert führt zu kürzeren Stichen. Ein höherer Wert könnte Ecken abrunden.
+Letzten Stich in jeder Reihe überspringen   || Der letzte Stich in jeder Reihe ist dem darauffolgenden Stich sehr nah. Ihn zu überspringen verringert die Stichanzahl und Dichte.
+Reihenanzahl bis sich das Muster wiederholt | ![Stagger example](/assets/images/docs/params-fill-stagger.png) | Die Einstellung bestimmt, wie viele Reihen die Stiche voneinander entfernt sind, bevor sie in die gleiche Position münden.   Dezimalzahlen führen ggf. zu weniger deutlichen Diagonalen als Ganzzahlen.
+Verbindungsstiche innerhalb des Objektes    || Verbindungsstiche werden innerhalb des Objektes versteckt (aktiv) oder am äußeren Rand entlang gestickt (inaktiv)
+Vernähen erlauben                           || Vernäht bei Bedarf an den ausgewählten Positionen
+Vernähen erzwingen                          || Vernäht den Faden nach diesem Element, auch dann, wenn der Abstand zum Folgeobjekt geringer ist als in den [Ink/Stitch Einstellungen](/de/docs/preferences/) definiert.
+Fadenschnitt                                || Schneidet den Faden nachdem dieses Objekt genäht wurde
+Stopp                                       || Stoppt die Maschine nachdem dieses Objekt genäht wurde und springt zur Stopp-Position (sofern vorhanden)
 
 ## Underlay
 

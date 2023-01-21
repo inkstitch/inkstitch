@@ -23,17 +23,20 @@ Ink/Stitch erlaubt es über visuelle Befehle den [Anfangs- und Endpunkt eines F�
 
 Öffne `Erweiterungen > Ink/Stitch > Parameter`. Setze die Füllmethode auf `Konturfüllung` und passe die restlichen Einstellungen den jeweiligen Bedürfnissen an.
 
-Einstellung||Beschreibung
+Einstellung                     ||Beschreibung
+---|---|---
 Automatisch geführte Füllstiche | ☑ |Muss aktiviert sein, damit diese Einstellungen wirksam werden.
-Füllmethode|Contour Fill|Contour Fill must be selected to sew spiral lines of the contour
-Contour Fill Strategy|![Inner to Outer](/assets/images/docs/contour-fill-innertoouter-bottlenecks.jpg)<br>![Contour spirals](/assets/images/docs/contour-fill-spirals.jpg)|**Innter to outer** (default) is able to fill shapes with bottlenecks<br>**Single spiral** fills a shape with a single spiral from the outside to the inside<br>**Double spiral** fills a shape with a double spiral, starts and ends at the outside border of the shape.
-Join Style|Round, Mitered, Beveled|Method to handle the edges when the size the contour is reduced for the inner spirals
-Avoid self-crossing|![Avoid self crossing effect](/assets/images/docs/contour-fill-self-crossing.jpg)|Wheter inner to outer is allowed to cross itself or not
-Clockwise||Direction to move around the contour
-Maximale Füll-Stichlänge|| Die Stichlänge in einer Reihe. Ein kürzerer Stich kann am Anfang oder am Ende einer Reihe verwendet werden.
-Reihenabstand|| Abstand zwischen den Stichreihen.
-Vernähen erzwingen||Sew lock stitches after sewing this element, even if the distance to the next object is shorter than defined by the collapse length value in the Ink/Stitch preferences.
-Vernähen erlauben|| Vernäht bei Bedarf an den ausgewählten Positionen
+Füllmethode                     | Konturfüllung | Contour Fill must be selected to sew spiral lines of the contour
+Methode                         | ![Von Innen nach Außen](/assets/images/docs/contour-fill-innertoouter-bottlenecks.jpg)<br>![Konturspiralen](/assets/images/docs/contour-fill-spirals.jpg)|**Von Innen nach Außen** (Standard) kann auch Formen mit Engpässen füllen<br>**Einfach Spirale** füllt eine Fläche mit einer einfachen Spirale von außen nach innen<br>**Doppelte Spirale** füllt eine Fläche mit einer doppelten Spirale, die Außen beginnt und endet.
+Stil der Verbindungen           | rund, spitz, abgeschrägt|Method to handle the edges when the size the contour is reduced for the inner spirals
+Selbstüberschneidungen vermeiden| ![Avoid self crossing effect](/assets/images/docs/contour-fill-self-crossing.jpg)|Wheter inner to outer is allowed to cross itself or not
+Uhrzeigersinn                   || Bestimmt die Richtung in der die Kontur gestickt wird
+Maximale Füllstichlänge         || Die Stichlänge in einer Reihe. Ein kürzerer Stich kann am Anfang oder am Ende einer Reihe verwendet werden.
+Reihenabstand                   || Abstand zwischen den Stichreihen.
+Geradstich-Toleranz             || Alle Stiche müssen innerhalb dieses Abstandes zum Pfad befinden. Ein niedrigerer Toleranzwert führt zu kürzeren Stichen. Ein höherer Wert könnte Ecken abrunden.
+Vernähen erzwingen              || Vernäht den Faden nach diesem Element, auch dann, wenn der Abstand zum Folgeobjekt geringer ist als in den [Ink/Stitch Einstellungen](/de/docs/preferences/) definiert.
+Fadenschnitt                    || Schneidet den Faden nachdem dieses Objekt genäht wurde
+Stopp                           || Stoppt die Maschine nachdem dieses Objekt genäht wurde und springt zur Stopp-Position (sofern vorhanden)
 
 ### Unterlage
 

@@ -42,7 +42,7 @@ Running stitch length         |Length of stitches
 Running stitch tolerance      |All stitches must be within this distance from a path. A lower tolerance means stitches will be closer together. A higher tolerance means sharp corner may be rounded.
 Zig-Zag spacing (peak-to-peak)|Not relevant for running stitch
 Allow lock stitches           |Enables lock stitches in only desired positions
-Force lock stitches           |Sew lock stitches after sewing this element, even if the distance to the next object is smaller than defined in the collapse length value value in the Ink/Stitch prefreneces.
+Force lock stitches           |Sew lock stitches after sewing this element, even if the distance to the next object is smaller than defined in the collapse length value value in the Ink/Stitch preferences.
 Trim After                    |Trim the thread after sewing this object.
 Stop After                    |Stop the machine after sewing this object. Before stopping it will jump to the stop position (frame out) if defined.
 
