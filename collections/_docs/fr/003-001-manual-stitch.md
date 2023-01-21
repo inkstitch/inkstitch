@@ -40,7 +40,7 @@ Répéter                             ||Ce paramètre est sans effet sur les poi
 Longueur du point droit             ||Ce paramètre est sans effet sur les points manuels
 Tolérance du point droit            ||Ce paramètre est sans effet sur les points manuels
 Espacement Zig-Zag (crête à crête)  ||Ce paramètre est sans effet sur les points manuels
-Autoriser les points d'arrêts       ||Les points manuels ne permette pas l'ajout automatique de points d'arrêt. Vous devez le inclure manuellement dans votre chemin.
+Autoriser les points d'arrêts       ||Les points manuels ne permette pas l'ajout automatique de points d'arrêt. Vous devez les inclure manuellement dans votre chemin.
 Forcer les points d'arrêts          ||Ce paramètre est sans effet sur les points manuels
 Couper après                        ||Couper le fil après avoir brodé cet objet
 Arrêter après                       ||Arrêter (pause machine) après avoir brodé cet objet. Avant l'arrêt, il y aura un saut vers la position d'arrêt si elle a été définie.
