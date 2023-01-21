@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-01-16 01:19+0000\n"
-"PO-Revision-Date: 2023-01-16 01:21\n"
+"POT-Creation-Date: 2023-01-21 01:20+0000\n"
+"PO-Revision-Date: 2023-01-21 01:21\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-16 01:19+0000\n"
+"POT-Creation-Date: 2023-01-21 01:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -739,11 +739,11 @@ msgstr "Créer des points d'arrêt après avoir cousu cet élément, même si la
 
 #: lib/elements/element.py:267
 msgid "Random seed"
-msgstr ""
+msgstr "Graine aléatoire"
 
 #: lib/elements/element.py:268
 msgid "Use a specific seed for randomized attributes. Uses the element ID if empty."
-msgstr ""
+msgstr "Utiliser cette graine aléatoire pour le calcul des attributs. Si vide, utilise l'identificateur de l'élément."
 
 #: lib/elements/element.py:316
 #, python-format
@@ -1047,7 +1047,7 @@ msgstr "Angle de remplissage"
 
 #: lib/elements/fill_stitch.py:408
 msgid "Default: fill angle + 90 deg. Insert a list for multiple layers separated by a space."
-msgstr ""
+msgstr "Par défaut : angle de remplissage + 90 degrés. Pour obtenir plusieurs sous-couches, insérer une liste de valeurs séparée par des espaces."
 
 #: lib/elements/fill_stitch.py:432
 msgid "Row spacing"
@@ -1259,7 +1259,7 @@ msgstr "Longueur maximale du point pour couper les points."
 
 #: lib/elements/satin_column.py:95
 msgid "Random percentage of satin width decrease"
-msgstr ""
+msgstr "Pourcentage de la diminution aléatoire de la largeur du satin"
 
 #: lib/elements/satin_column.py:96
 msgid "shorten stitch across rails at most this percent. Two values separated by a space may be used for an aysmmetric effect."
@@ -1267,43 +1267,43 @@ msgstr ""
 
 #: lib/elements/satin_column.py:105
 msgid "Random percentage of satin width increase"
-msgstr ""
+msgstr "Pourcentage maximum d'augmentation aléatoire de la largeur du satin"
 
 #: lib/elements/satin_column.py:106
 msgid "lengthen stitch across rails at most this percent. Two values separated by a space may be used for an aysmmetric effect."
-msgstr ""
+msgstr "élargir le satin d'au plus ce pourcentage. Deux valeurs séparées par un espace peuvent être utilisées pour un effet asymétrique."
 
 #: lib/elements/satin_column.py:115
 msgid "Random zig-zag spacing percentage"
-msgstr ""
+msgstr "Pourcentage aléatoire pour l'espacement zigzag"
 
 #: lib/elements/satin_column.py:116
 msgid "Amount of random jitter added to stitch length."
-msgstr ""
+msgstr "Quantité d'aléatoire ajoutée à la longueur du point."
 
 #: lib/elements/satin_column.py:124
 msgid "Random phase for split stitches"
-msgstr ""
+msgstr "Découpage totalement aléatoire des points"
 
 #: lib/elements/satin_column.py:125
 msgid "Controls whether split stitches are centered or with a random phase (which may increase stitch count)."
-msgstr ""
+msgstr "Contrôle si le découpage des points est totalement aléatoire (ce qui peut modifier le nombre de points) ou s'il reste centré."
 
 #: lib/elements/satin_column.py:132
 msgid "Minimum length for random-phase split."
-msgstr ""
+msgstr "Longueur minimum du point si découpage totalement aléatoire."
 
 #: lib/elements/satin_column.py:133
 msgid "Defaults to maximum stitch length. Smaller values allow for a transition between single-stitch and split-stitch."
-msgstr ""
+msgstr "Par défaut, prend la valeur de la longueur maximum du point. Une valeur inférieure permet une meilleure transition entre les points découpés et les points non découpés."
 
 #: lib/elements/satin_column.py:142
 msgid "Random jitter for split stitches"
-msgstr ""
+msgstr "Déplacement aléatoire pour le découpage des points"
 
 #: lib/elements/satin_column.py:143
 msgid "Randomizes split stitch length if random phase is enabled, stitch position if disabled."
-msgstr ""
+msgstr "Rend la longueur du point aléatoire si le découpage totalement aléatoire des points est activé. Sinon, le déplacement aléatoire du découpage se fait autour de sa position normale."
 
 #: lib/elements/satin_column.py:150
 msgid "Short stitch inset"
@@ -1311,7 +1311,7 @@ msgstr "Décalage des points courts"
 
 #: lib/elements/satin_column.py:151
 msgid "Stitches in areas with high density will be inset by this amount."
-msgstr ""
+msgstr "Les points dans les zones à forte densité seront raccourcis de cette quantité."
 
 #: lib/elements/satin_column.py:159
 msgid "Short stitch distance"
@@ -1319,7 +1319,7 @@ msgstr "Distance des points courts"
 
 #: lib/elements/satin_column.py:160
 msgid "Inset stitches if the distance between stitches is smaller than this."
-msgstr ""
+msgstr "Faire des points courts si la distance entre les crêtes est inférieure à cette valeur."
 
 #: lib/elements/satin_column.py:172 lib/elements/stroke.py:149
 msgid "Zig-zag spacing (peak-to-peak)"
@@ -1509,7 +1509,9 @@ msgstr "Nombre de répétitions pour le point triple (bean stitch)"
 #: lib/elements/stroke.py:113
 msgid "Backtrack each stitch this many times.  A value of 1 would triple each stitch (forward, back, forward).  A value of 2 would quintuple each stitch, etc.\n\n"
 "A pattern with various repeats can be created with a list of values separated by a space."
-msgstr ""
+msgstr "Repasse sur chaque point le nombre de fois indiqué. Une valeur de 1 triplera chaque point (avant, arrière, avant).\n"
+"Une valeur de 2 permettra de quintupler chaque point, etc.\n\n"
+"Il est possible de définir un motif de répétitions en entrant plusieurs valeurs séparées par un espace."
 
 #: lib/elements/stroke.py:125
 msgid "Running stitch length"
@@ -1798,7 +1800,7 @@ msgstr "Cette fonction copie les paramètres de Ink/Stitch du premier élément 
 
 #: lib/extensions/fill_to_stroke.py:31 lib/extensions/fill_to_stroke.py:40
 msgid "Please select one or more fill objects to render the centerline."
-msgstr ""
+msgstr "Merci de sélectionner un ou plusieurs objets de remplissage pour déterminer leur ligne centrale."
 
 #: lib/extensions/flip.py:28
 msgid "Please select one or more satin columns to flip."
@@ -2011,7 +2013,7 @@ msgstr "Objets Inkscape"
 
 #: lib/extensions/params.py:390
 msgid "Re-roll"
-msgstr ""
+msgstr "Relancer"
 
 #: lib/extensions/params.py:420
 msgid "Click to force this parameter to be saved when you click \"Apply and Quit\""
@@ -3534,39 +3536,39 @@ msgstr "Sauter les points plus courts que cette valeur."
 
 #: inx/inkstitch_fill_to_stroke.inx:3 inx/inkstitch_fill_to_stroke.inx:24
 msgid "Fill to Stroke"
-msgstr ""
+msgstr "Remplissage vers trait"
 
 #: inx/inkstitch_fill_to_stroke.inx:19
 msgid "Threshold for dead ends (mm)"
-msgstr ""
+msgstr "Seuil pour les culs-de-sacs (mm)"
 
 #: inx/inkstitch_fill_to_stroke.inx:19
 msgid "Deletes small lines. A good value in most cases is the approximate line width of the original shape"
-msgstr ""
+msgstr "Supprime les traits courts. Une bonne valeur est souvent approximativement la largeur de la forme originelle"
 
 #: inx/inkstitch_fill_to_stroke.inx:20
 msgid "Dashed line"
-msgstr ""
+msgstr "Trait en pointillé"
 
 #: inx/inkstitch_fill_to_stroke.inx:21
 msgid "Line width (mm)"
-msgstr ""
+msgstr "Largeur du trait (mm)"
 
 #: inx/inkstitch_fill_to_stroke.inx:25
 msgid "Fill outlines never look nice when embroidered - but it is a lot of work to convert a fill outline to a satin column or a running stitch. This tool helps you with this operation."
-msgstr ""
+msgstr "Les contours en remplissage ne rendent jamais bien en broderie - mais leur conversion en satin ou point droit est compliquée. Cet outil aide à effectuer cette opération."
 
 #: inx/inkstitch_fill_to_stroke.inx:27
 msgid "It is comparable to the Inkscape functionality of Path > Trace bitmap > Centerline tracing (- and has similar issues.) But instead of converting raster graphics, it will find the centerline of vector based objects with a fill."
-msgstr ""
+msgstr "Ceci est comparable à la fonctionnalité Inkscape Chemin > Vectoriser un objet matriciel > Traçage Centerline (- et a le même genre de problème). Au lieu de convertir une image bitmap, cet outil trouve la ligne centrale d'objets vectoriels ayant un remplissage."
 
 #: inx/inkstitch_fill_to_stroke.inx:30
 msgid "You can improve the result by defining cut lines."
-msgstr ""
+msgstr "Vous pouvez améliorer le résultat en définissant des lignes de découpage."
 
 #: inx/inkstitch_fill_to_stroke.inx:33
 msgid "https://inkstitch.org/docs/stroke-tools/#fill-to-stroke"
-msgstr ""
+msgstr "https://inkstitch.org/fr/docs/stroke-tools/#fill-to-stroke"
 
 #: inx/inkstitch_flip.inx:3
 msgid "Flip Satin Column Rails"
@@ -4207,11 +4209,11 @@ msgstr "Saut en chemin"
 
 #: inx/inkstitch_jump_to_stroke.inx:14
 msgid "Running stitch length (mm)"
-msgstr ""
+msgstr "Longueur du point droit (mm)"
 
 #: inx/inkstitch_jump_to_stroke.inx:15
 msgid "Running stitch tolerance (mm)"
-msgstr ""
+msgstr "Tolérance du point droit (mm)"
 
 #: inx/inkstitch_layer_commands.inx:3
 msgid "Add Layer Commands"
