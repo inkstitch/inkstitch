@@ -35,7 +35,7 @@ Paramètre||Description
 ---|--|---
 Points droits le long des chemins   ||Doit être activé pour que ces paramètres prennent effet.
 Méthode                             ||Choisir le type "Point droit" 
-Placement de points manuels         || **Activer Point Manuel**
+Placement de points manuels         || **Active le Point Manuel**
 Répéter                             ||Ce paramètre est sans effet sur les points manuels
 Longueur du point droit             ||Ce paramètre est sans effet sur les points manuels
 Tolérance du point droit            ||Ce paramètre est sans effet sur les points manuels
