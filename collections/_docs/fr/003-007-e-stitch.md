@@ -23,7 +23,7 @@ Préparez votre chemin exactement comme vous le feriez pour une [Colonne Satin](
 
 ## Paramétres
 
-Même paramètres que les paramètres des [colonnes satin](/fr/docs/stitches/satin-column/#params).
+Même paramètres que les paramètres des [colonnes satin](/fr/docs/stitches/satin-column/#paramètres).
 
 ## Fichiers exemples contenant du point en E
 {% include tutorials/tutorial_list key="stitch-type" value="E-Stitch" %}
