@@ -118,6 +118,8 @@ class AngleInterval():
         if self.all:
             return None
         segArc = AngleInterval.fromSegment(a - origin, b - origin)
+        if segArc is None:
+            return a  # b is exactly behind origin from a
         if segArc.containsAngle(self.a):
             return cut_segment_with_angle(origin, self.a, a, b)
         elif segArc.containsAngle(self.b):
@@ -209,15 +211,18 @@ def path_to_curves(points: typing.List[Point]):
     # split a path at obvious corner points so that they get stitched exactly
     curves = []
     last = 0
+    last_seg = points[1] - points[0]
     for i in range(1, len(points) - 1):
-        a = points[i] - points[i-1]
+        a = last_seg
         b = points[i + 1] - points[i]
         aabb = (a * a) * (b * b)
-        abab = (a * b) * (a * b)
-        if aabb > 0.000001 and 2 * abab < aabb:
+        abab = (a * b) * abs(a * b)
+        if aabb > 0 and 2 * abab < aabb:
             # inner angle of at most 135 deg
-            curves.append(points[last: i+1])
+            curves.append(points[last: i + 1])
             last = i
+        if b * b > 0:
+            last_seg = b
     curves.append(points[last:])
     return curves
 
