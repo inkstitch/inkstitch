@@ -151,13 +151,10 @@ def cut_segment_with_circle(origin: Point, r: float, a: Point, b: Point) -> Poin
     return a + d*t
 
 
-def take_stitch(start: Point | None, points: typing.Sequence[Point], idx: int, stitch_length: float, tolerance: float):
+def take_stitch(start: Point, points: typing.Sequence[Point], idx: int, stitch_length: float, tolerance: float):
     # Based on a single step of the Zhao-Saalfeld curve simplification algorithm.
     # https://cartogis.org/docs/proceedings/archive/auto-carto-13/pdf/linear-time-sleeve-fitting-polyline-simplification-algorithms.pdf
     # Adds early termination condition based on stitch length.
-    if not start and idx < len(points):
-        start = points[idx]
-        idx += 1
     if idx >= len(points):
         return None, None
 
