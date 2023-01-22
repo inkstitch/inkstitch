@@ -127,6 +127,7 @@ class AngleInterval():
 
 
 def cut_segment_with_angle(origin: Point, angle: float, a: Point, b: Point) -> Point:
+    # Assumes the crossing is inside the segment
     p = a - origin
     d = b - a
     c = Point(math.cos(angle), math.sin(angle))
@@ -137,6 +138,7 @@ def cut_segment_with_angle(origin: Point, angle: float, a: Point, b: Point) -> P
 
 
 def cut_segment_with_circle(origin: Point, r: float, a: Point, b: Point) -> Point:
+    # assumes that a is inside the circle and b is outside
     p = a - origin
     d = b - a
     # inner products
@@ -191,7 +193,10 @@ def stitch_curve_even(points: typing.Sequence[Point], stitch_length: float, tole
     stitches = []
     while i is not None and i < len(points):
         d = last.distance(points[i]) + distLeft[i]
-        stitch_len = d / math.ceil(d / stitch_length) if d > 0 else stitch_length
+        if d == 0:
+            return stitches
+        stitch_len = d / math.ceil(d / stitch_length) + 0.000001  # correction for rounding error
+
         stitch, newidx = take_stitch(last, points, i, stitch_len, tolerance)
         i = newidx
         if stitch is not None:
@@ -201,6 +206,7 @@ def stitch_curve_even(points: typing.Sequence[Point], stitch_length: float, tole
 
 
 def path_to_curves(points: typing.List[Point]):
+    # split a path at obvious corner points so that they get stitched exactly
     curves = []
     last = 0
     for i in range(1, len(points) - 1):
