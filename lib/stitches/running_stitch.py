@@ -209,6 +209,8 @@ def stitch_curve_even(points: typing.Sequence[Point], stitch_length: float, tole
 
 def path_to_curves(points: typing.List[Point]):
     # split a path at obvious corner points so that they get stitched exactly
+    if len(points) < 3:
+        return [points]
     curves = []
     last = 0
     last_seg = points[1] - points[0]
