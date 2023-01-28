@@ -1013,7 +1013,7 @@ class SatinColumn(EmbroideryElement):
             self.zigzag_spacing,
             self.pull_compensation_px,
             self.pull_compensation_percent/100,
-            self.random_width_decrease.any() and self.random_width_increase.any() and self.random_zigzag_spacing,
+            self.random_width_decrease.any() or self.random_width_increase.any() or self.random_zigzag_spacing,
         )
 
         # "left" and "right" here are kind of arbitrary designations meaning
