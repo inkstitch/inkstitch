@@ -1068,7 +1068,7 @@ class SatinColumn(EmbroideryElement):
             offset_px = [0, 0]
             if a.distance(pairs[i-1][0]) < min_dist:
                 offset_px[0] = -inset_px
-            if b.distance(pairs[i-1][0]) < min_dist:
+            if b.distance(pairs[i-1][1]) < min_dist:
                 offset_px[1] = -inset_px
             shortened.append(self.offset_points(a, b, offset_px, (0, 0)))
         return shortened
