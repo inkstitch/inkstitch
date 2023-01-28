@@ -361,7 +361,10 @@ class SatinColumn(EmbroideryElement):
     @property
     @cache
     def csp(self):
-        return self.parse_path()
+        paths = self.parse_path()
+        # exclude subpaths which are just a point
+        paths = [path for path in paths if len(path) >= 2]
+        return paths
 
     @property
     @cache
@@ -518,8 +521,9 @@ class SatinColumn(EmbroideryElement):
     def validation_errors(self):
         # The node should have exactly two paths with the same number of points - or it should
         # have two rails and at least one rung
-
-        if len(self.rails) < 2:
+        if len(self.csp) < 2:
+            yield TooFewPathsError((0, 0))
+        elif len(self.rails) < 2:
             yield TooFewPathsError(self.shape.centroid)
         elif len(self.csp) == 2:
             if len(self.rails[0]) != len(self.rails[1]):
