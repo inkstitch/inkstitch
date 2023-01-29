@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-01-21 01:20+0000\n"
-"PO-Revision-Date: 2023-01-21 01:22\n"
+"POT-Creation-Date: 2023-01-29 01:26+0000\n"
+"PO-Revision-Date: 2023-01-29 01:28\n"
 "Last-Translator: \n"
 "Language-Team: Serbian (Cyrillic)\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-21 01:20+0000\n"
+"POT-Creation-Date: 2023-01-29 01:26+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -4767,6 +4767,14 @@ msgstr ""
 
 #: inx/inkstitch_stitch_plan_preview.inx:20
 msgid "Needle points"
+msgstr ""
+
+#: inx/inkstitch_stitch_plan_preview.inx:22
+msgid "Lock"
+msgstr ""
+
+#: inx/inkstitch_stitch_plan_preview.inx:22
+msgid "Make stitch plan insensitive to mouse interactions"
 msgstr ""
 
 #: inx/inkstitch_stitch_plan_preview_undo.inx:3

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-01-21 01:20+0000\n"
-"PO-Revision-Date: 2023-01-21 01:21\n"
+"POT-Creation-Date: 2023-01-29 01:26+0000\n"
+"PO-Revision-Date: 2023-01-29 01:27\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-21 01:20+0000\n"
+"POT-Creation-Date: 2023-01-29 01:26+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -771,7 +771,7 @@ msgstr "Füge einen Stopp-Befehl nach diesem Objekt hinzu."
 #. doesn't intersect both rails."
 #: lib/elements/element.py:421
 msgid "Failed on "
-msgstr "Folgendes Objekt konnte nicht in einen Stickpfad umgewandelt werden:\\n"
+msgstr "Folgendes Objekt konnte nicht in einen Stickpfad umgewandelt werden: "
 
 #: lib/elements/element.py:423
 msgid "Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects. This will indicate the errorneus position."
@@ -1263,7 +1263,7 @@ msgstr "Zufälliger Prozentwert (Schrumpfen)"
 
 #: lib/elements/satin_column.py:96
 msgid "shorten stitch across rails at most this percent. Two values separated by a space may be used for an aysmmetric effect."
-msgstr ""
+msgstr "Kürzt Stiche um höchstens diesen Wert. Zwei durch ein Leerzeichen getrennte Werte können für einen asymmetrischen Effekt verwendet werden."
 
 #: lib/elements/satin_column.py:105
 msgid "Random percentage of satin width increase"
@@ -4778,6 +4778,14 @@ msgstr "Stickplan an der Seite platzieren"
 #: inx/inkstitch_stitch_plan_preview.inx:20
 msgid "Needle points"
 msgstr "Nadeleinstichstellen"
+
+#: inx/inkstitch_stitch_plan_preview.inx:22
+msgid "Lock"
+msgstr ""
+
+#: inx/inkstitch_stitch_plan_preview.inx:22
+msgid "Make stitch plan insensitive to mouse interactions"
+msgstr ""
 
 #: inx/inkstitch_stitch_plan_preview_undo.inx:3
 msgid "Undo Stitch Plan Preview"
