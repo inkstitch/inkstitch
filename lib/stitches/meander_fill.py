@@ -7,7 +7,7 @@ from .. import tiles
 from ..debug import debug
 from ..stitch_plan import Stitch
 from ..utils import smooth_path
-from ..utils.geometry import Point as InkStitchPoint
+from ..utils.geometry import Point as InkStitchPoint, ensure_geometry_collection
 from ..utils.list import poprandom
 from ..utils.prng import iter_uniform_floats
 
@@ -20,11 +20,10 @@ def meander_fill(fill, shape, shape_index, starting_point, ending_point):
 
     debug.log(f"tile name: {tile.name}")
 
-    # from ..utils.geometry import ensure_geometry_collection
-    # debug.log_line_strings(ensure_geometry_collection(shape.boundary).geoms, 'Meander shape')
+    debug.log_line_strings(lambda: ensure_geometry_collection(shape.boundary).geoms, 'Meander shape')
     graph = tile.to_graph(shape, fill.meander_scale, fill.meander_padding)
-    # debug.log_graph(graph, 'Meander graph')
-    # debug.log(f"graph connected? {nx.is_connected(graph)}")
+    debug.log_graph(graph, 'Meander graph')
+    debug.log(lambda: f"graph connected? {nx.is_connected(graph)}")
     start, end = find_starting_and_ending_nodes(graph, shape, starting_point, ending_point)
     rng = iter_uniform_floats(fill.random_seed, 'meander-fill', shape_index)
 
