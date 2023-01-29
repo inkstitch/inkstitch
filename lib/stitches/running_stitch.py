@@ -227,9 +227,9 @@ def path_to_curves(points: typing.List[Point], min_len: float):
         aabb = (a * a) * (b * b)
         abab = (a * b) * abs(a * b)
 
-        # Test if the turn angle from vectors a to b is more than 45 degrees
-        # Uses the property of inner products that abab = ± aabb * cos(angle(a,b))**2
-        if aabb > 0 and abab < 0.5 * aabb:
+        # Test if the turn angle from vectors a to b is more than 45 degrees.
+        # Optimized version of checking if cos(angle(a,b)) <= sqrt(0.5) and is defined
+        if aabb > 0 and abab <= 0.5 * aabb:
             if seg_len >= min_len:
                 curves.append(points[last: i + 1])
                 last = i
