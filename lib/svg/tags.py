@@ -40,6 +40,7 @@ XLINK_HREF = inkex.addNS('href', 'xlink')
 SODIPODI_NAMEDVIEW = inkex.addNS('namedview', 'sodipodi')
 SODIPODI_GUIDE = inkex.addNS('guide', 'sodipodi')
 SODIPODI_ROLE = inkex.addNS('role', 'sodipodi')
+SODIPODI_INSENSITIVE = inkex.addNS('insensitive', 'sodipodi')
 
 INKSTITCH_LETTERING = inkex.addNS('lettering', 'inkstitch')
 

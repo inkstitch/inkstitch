@@ -3,14 +3,14 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-from lxml import etree
-
 from inkex import Boolean, Style
+from lxml import etree
 
 from ..stitch_plan import stitch_groups_to_stitch_plan
 from ..svg import render_stitch_plan
-from ..svg.tags import (INKSCAPE_GROUPMODE, INKSTITCH_ATTRIBS, SVG_DEFS_TAG,
-                        SVG_GROUP_TAG, SVG_PATH_TAG)
+from ..svg.tags import (INKSCAPE_GROUPMODE, INKSTITCH_ATTRIBS,
+                        SODIPODI_INSENSITIVE, SVG_DEFS_TAG, SVG_GROUP_TAG,
+                        SVG_PATH_TAG)
 from .base import InkstitchExtension
 from .stitch_plan_preview_undo import reset_stitch_plan
 
@@ -21,6 +21,7 @@ class StitchPlanPreview(InkstitchExtension):
         self.arg_parser.add_argument("-s", "--move-to-side", type=Boolean, default=True, dest="move_to_side")
         self.arg_parser.add_argument("-v", "--layer-visibility", type=int, default=0, dest="layer_visibility")
         self.arg_parser.add_argument("-n", "--needle-points", type=Boolean, default=False, dest="needle_points")
+        self.arg_parser.add_argument("-i", "--insensitive", type=Boolean, default=False, dest="insensitive")
 
     def effect(self):
         # delete old stitch plan
@@ -57,6 +58,11 @@ class StitchPlanPreview(InkstitchExtension):
                 if (g.get(INKSCAPE_GROUPMODE) == "layer" and not g == layer and
                         float(style.get('opacity', 1)) > 0.4 and not style.get('display', 'inline') == 'none'):
                     g.style['opacity'] = 0.4
+
+        if self.options.insensitive is True:
+            layer.set(SODIPODI_INSENSITIVE, True)
+        else:
+            layer.set(SODIPODI_INSENSITIVE, False)
 
         # translate stitch plan to the right side of the canvas
         if self.options.move_to_side:

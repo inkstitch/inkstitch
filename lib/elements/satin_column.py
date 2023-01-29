@@ -361,7 +361,10 @@ class SatinColumn(EmbroideryElement):
     @property
     @cache
     def csp(self):
-        return self.parse_path()
+        paths = self.parse_path()
+        # exclude subpaths which are just a point
+        paths = [path for path in paths if len(path) >= 2]
+        return paths
 
     @property
     @cache
@@ -518,8 +521,9 @@ class SatinColumn(EmbroideryElement):
     def validation_errors(self):
         # The node should have exactly two paths with the same number of points - or it should
         # have two rails and at least one rung
-
-        if len(self.rails) < 2:
+        if len(self.csp) < 2:
+            yield TooFewPathsError((0, 0))
+        elif len(self.rails) < 2:
             yield TooFewPathsError(self.shape.centroid)
         elif len(self.csp) == 2:
             if len(self.rails[0]) != len(self.rails[1]):
@@ -1015,7 +1019,7 @@ class SatinColumn(EmbroideryElement):
             self.zigzag_spacing,
             self.pull_compensation_px,
             self.pull_compensation_percent/100,
-            self.random_width_decrease.any() and self.random_width_increase.any() and self.random_zigzag_spacing,
+            self.random_width_decrease.any() or self.random_width_increase.any() or self.random_zigzag_spacing,
         )
 
         # "left" and "right" here are kind of arbitrary designations meaning
@@ -1070,7 +1074,7 @@ class SatinColumn(EmbroideryElement):
             offset_px = [0, 0]
             if a.distance(pairs[i-1][0]) < min_dist:
                 offset_px[0] = -inset_px
-            if b.distance(pairs[i-1][0]) < min_dist:
+            if b.distance(pairs[i-1][1]) < min_dist:
                 offset_px[1] = -inset_px
             shortened.append(self.offset_points(a, b, offset_px, (0, 0)))
         return shortened
