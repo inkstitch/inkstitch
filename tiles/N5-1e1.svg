@@ -6,6 +6,7 @@
    version="1.1"
    id="svg70"
    sodipodi:docname="N5-1e1.svg"
+   inkscape:version="1.2 (1:1.2.1+202207142221+cd75a1ee6d)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -20,7 +21,12 @@
      inkscape:showpageshadow="2"
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#d1d1d1" />
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="15.135154"
+     inkscape:cx="35.975848"
+     inkscape:cy="28.344608"
+     inkscape:current-layer="svg70" />
   <style
      type="text/css"
      id="style2">
@@ -44,10 +50,6 @@ polygon.para {opacity: 0.75; fill: #ff0000; stroke: #ff0000 }
      style="stroke:#000000;stroke-width:0.08px"
      id="path6" />
   <path
-     d="M 50.741929,28.302785 H 61.062321"
-     style="stroke:#000000;stroke-width:0.08px"
-     id="path8" />
-  <path
      d="m 43.861668,22.344304 v 5.958481"
      style="stroke:#000000;stroke-width:0.08px"
      id="path10" />
@@ -56,21 +58,9 @@ polygon.para {opacity: 0.75; fill: #ff0000; stroke: #ff0000 }
      style="stroke:#000000;stroke-width:0.08px"
      id="path12" />
   <path
-     d="m 78.262975,46.178229 -4.809813,-8.33084"
-     style="stroke:#000000;stroke-width:0.08px"
-     id="path14" />
-  <path
-     d="m 86.863302,43.198988 v 5.958481"
-     style="stroke:#000000;stroke-width:0.08px"
-     id="path16" />
-  <path
      d="M 86.863302,49.157469 81.703105,52.13671"
      style="stroke:#000000;stroke-width:0.08px"
      id="path18" />
-  <path
-     d="m 31.821211,13.406582 5.160196,8.937722"
-     style="stroke:#000000;stroke-width:0.08px"
-     id="path20" />
   <path
      d="m 36.981407,22.344304 h 6.880261"
      style="stroke:#000000;stroke-width:0.08px"
@@ -80,17 +70,10 @@ polygon.para {opacity: 0.75; fill: #ff0000; stroke: #ff0000 }
      style="stroke:#000000;stroke-width:0.08px"
      id="path24" />
   <path
-     d="m 26.661015,22.344304 h 3.44013"
+     d="m 26.661015,22.344304 c 3.440131,0 6.880261,0 10.320392,0"
      style="stroke:#000000;stroke-width:0.08px"
-     id="path26" />
-  <path
-     d="m 30.101145,22.344304 h 6.880262"
-     style="stroke:#000000;stroke-width:0.08px"
-     id="path28" />
-  <path
-     d="M 31.821211,13.406582 H 24.940949"
-     style="stroke:#000000;stroke-width:0.08px"
-     id="path30" />
+     id="path26"
+     sodipodi:nodetypes="cc" />
   <path
      d="m 24.940949,13.406582 -5.160196,2.979241"
      style="stroke:#000000;stroke-width:0.08px"
@@ -111,10 +94,6 @@ polygon.para {opacity: 0.75; fill: #ff0000; stroke: #ff0000 }
      d="m 12.900492,16.385823 h 6.880261"
      style="stroke:#000000;stroke-width:0.08px"
      id="path40" />
-  <path
-     d="M 24.940949,13.406582 V 7.448101"
-     style="stroke:#000000;stroke-width:0.08px"
-     id="path42" />
   <path
      d="M 4.300165,1.48962 7.740296,7.448101"
      style="stroke:#000000;stroke-width:0.08px"
