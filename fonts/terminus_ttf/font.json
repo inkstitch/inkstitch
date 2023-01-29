@@ -1,0 +1,16 @@
+{
+    "name": "Terminus TTF",
+    "description": "Terminus TTF is a TrueType version of Terminus Font, a fixed-width font.",
+    "leading": 400,
+    "auto_satin": true,
+    "reversible": true,
+    "letter_case": "",
+    "default_glyph": "o",
+    "min_scale": 1.0,
+    "max_scale": 1.0,
+    "horiz_adv_x_default": 200,
+    "horiz_adv_x_space": 20,
+    "units_per_em": 400,
+    "horiz_adv_x": {},
+    "kerning_pairs": {}
+}
