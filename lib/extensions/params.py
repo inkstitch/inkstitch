@@ -52,6 +52,7 @@ class ParamsTab(ScrolledPanel):
         self.dict_of_choices = {}
         self.paired_tab = None
         self.disable_notify_pair = False
+        self.change_notify_timer = None
 
         toggles = [param for param in self.params if param.type == 'toggle']
 
@@ -213,8 +214,6 @@ class ParamsTab(ScrolledPanel):
 
         self.enable_change_indicator('random_seed')
         event.Skip()
-        if self.on_change_hook:
-            self.on_change_hook(self)
 
     def apply(self):
         values = self.get_values()
@@ -234,7 +233,10 @@ class ParamsTab(ScrolledPanel):
         event.Skip()
 
         if self.on_change_hook:
-            self.on_change_hook(self)
+            if self.change_notify_timer is None or self.change_notify_timer.HasRun():
+                self.change_notify_timer = wx.CallLater(1000, self.on_change_hook, self)
+            else:
+                self.change_notify_timer.Start()
 
     def load_preset(self, preset):
         preset_data = preset.get(self.name, {})
