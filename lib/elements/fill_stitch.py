@@ -413,7 +413,7 @@ class FillStitch(EmbroideryElement):
            unit='mm',
            type='float',
            default=1.5,
-           select_items=[('fill_method', 0), ('fill_method', 2)],
+           select_items=[('fill_method', 0), ('fill_method', 2), ('fill_method', 4)],
            sort_index=6)
     def running_stitch_length(self):
         return max(self.get_float_param("running_stitch_length_mm", 1.5), 0.01)
