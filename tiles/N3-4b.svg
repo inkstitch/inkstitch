@@ -1,5 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="566" height="566" viewBox="0 0 566 566">
-<style type="text/css">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="24.023222"
+   height="22.677166"
+   viewBox="0 0 24.023222 22.677166"
+   version="1.1"
+   id="svg24"
+   sodipodi:docname="N3-4b.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs28" />
+  <sodipodi:namedview
+     id="namedview26"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1" />
+  <style
+     type="text/css"
+     id="style2">
 polygon.tile { stroke: #000000; stroke-width:3; stroke-linejoin:round }
 polygon.ih1 { fill: #ffff80 }
 polygon.ih2 { fill: #8080ff }
@@ -9,6 +33,48 @@ polygon.ih5 { fill: #ff80ff }
 polygon.ih6 { fill: #80ffff }
 polygon.para {opacity: 0.75; fill: #ff0000; stroke: #ff0000 }
 </style>
-<polygon class="para" points="58.296599668058555,76.12417144079677 80.11771220435938,113.91944703134796 112.8493810088106,95.02180923607237 91.02826847250978,57.226533645521194 58.296599668058555,76.12417144079677" style="stroke: none"/>
-<path d="M 85.57299033843458,85.57299033843458 107.3941028747354,85.57299033843458" style="stroke:#000000;stroke-width: 0.2px"/><path d="M 96.48354660658498,66.675352543159 85.57299033843458,85.57299033843458" style="stroke:#000000;stroke-width: 0.2px"/><path d="M 74.66243407028418,66.67535254315898 85.57299033843458,85.57299033843458" style="stroke:#000000;stroke-width: 0.2px"/><path d="M 74.66243407028416,104.47062813371016 74.66243407028418,66.67535254315898" style="stroke:#000000;stroke-width: 0.2px"/><path d="M 74.66243407028418,66.67535254315898 63.75187780213376,85.57299033843458" style="stroke:#000000;stroke-width: 0.2px"/><path d="M 96.48354660658498,104.47062813371016 74.66243407028416,104.47062813371016" style="stroke:#000000;stroke-width: 0.2px"/><path d="M 85.57299033843458,85.57299033843458 96.48354660658498,104.47062813371016" style="stroke:#000000;stroke-width: 0.2px"/><path d="M 118.30465914288581,104.47062813371018 85.57299033843458,85.57299033843458" style="stroke:#000000;stroke-width: 0.2px"/><circle cx="85.57299033843458" cy="85.57299033843458" r="9.448818897637796" style="stroke:#0000FF;stroke-width: 0.2px;fill:none"/></svg>
-
+  <polygon
+     class="para"
+     points="91.028268,57.226534 58.2966,76.124171 80.117712,113.91945 112.84938,95.021809 "
+     style="stroke:none"
+     id="polygon4"
+     transform="matrix(0.4,0,0,0.4,-23.31864,-22.890614)" />
+  <path
+     d="m 10.910556,11.338582 h 8.728445"
+     style="stroke:#000000;stroke-width:0.08px"
+     id="path6" />
+  <path
+     d="M 15.274778,3.7795274 10.910556,11.338582"
+     style="stroke:#000000;stroke-width:0.08px"
+     id="path8" />
+  <path
+     d="m 6.546333,3.7795274 4.364223,7.5590546"
+     style="stroke:#000000;stroke-width:0.08px"
+     id="path10" />
+  <path
+     d="M 6.546333,18.897637 V 3.7795274"
+     style="stroke:#000000;stroke-width:0.08px"
+     id="path12" />
+  <path
+     d="M 6.546333,3.7795274 2.182111,11.338582"
+     style="stroke:#000000;stroke-width:0.08px"
+     id="path14" />
+  <path
+     d="M 15.274778,18.897637 H 6.546333"
+     style="stroke:#000000;stroke-width:0.08px"
+     id="path16" />
+  <path
+     d="m 10.910556,11.338582 4.364222,7.559055"
+     style="stroke:#000000;stroke-width:0.08px"
+     id="path18" />
+  <path
+     d="M 24.003222,18.897637 10.910556,11.338582"
+     style="stroke:#000000;stroke-width:0.08px"
+     id="path20" />
+  <circle
+     cx="10.910553"
+     cy="11.338583"
+     r="3.7795277"
+     style="fill:none;stroke:#0000ff;stroke-width:0.08px"
+     id="circle22" />
+</svg>
