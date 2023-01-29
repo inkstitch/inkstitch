@@ -166,6 +166,27 @@ def _remove_duplicate_coordinates(coords_array):
     return coords_array[keepers]
 
 
+def _add_extra_points(coords):
+    """Add points at the start and end of the path.
+
+    The spline-based smoothing in smooth_path sometimes makes a wild deviation at the
+    start or end.  Adding 3 extra points almost identical to the start and end points
+    seems to avoid this.
+    """
+
+    direction = coords[1] - coords[0]
+    amount = direction * 0.001
+
+    start_points = [coords[0], coords[0] + amount, coords[0] + amount * 2, coords[0] + amount * 3]
+
+    direction = coords[-2] - coords[-1]
+    amount = direction * 0.001
+
+    end_points = [coords[-1] + amount * 3, coords[-1] + amount * 2, coords[-1] + amount, coords[-1]]
+
+    return np.concatenate((start_points, coords[1:-1], end_points), axis=0)
+
+
 def smooth_path(path, smoothness=1.0):
     """Smooth a path of coordinates.
 
@@ -187,6 +208,10 @@ def smooth_path(path, smoothness=1.0):
     coords = _remove_duplicate_coordinates(np.array(path))
     num_points = len(coords)
 
+    if num_points <= 3:
+        # splprep throws an error unless num_points > k
+        return path
+
     # s is explained in this issue: https://github.com/scipy/scipy/issues/11916
     # the smoothness parameter limits how much the smoothed path can deviate
     # from the original path.  The standard deviation of the distance between
@@ -194,6 +219,8 @@ def smooth_path(path, smoothness=1.0):
     # In practical terms, if smoothness is 1mm, then the smoothed path can be
     # up to 1mm away from the original path.
     s = num_points * (smoothness ** 2)
+
+    coords = _add_extra_points(coords)
 
     # .T transposes the array (for some reason splprep expects
     # [[x1, x2, ...], [y1, y2, ...]]
