@@ -82,6 +82,7 @@ class AngleInterval():
             return None
         elif diff < math.pi:
             return AngleInterval(angleA - 1e-6, angleB + 1e-6)
+            # slightly larger than normal to avoid rounding error when this method is used in cutSegment
         else:
             return AngleInterval(angleB - 1e-6, angleA + 1e-6)
 
@@ -183,7 +184,8 @@ def take_stitch(start: Point, points: typing.Sequence[Point], idx: int, stitch_l
 
 
 def stitch_curve_even(points: typing.Sequence[Point], stitch_length: float, tolerance: float):
-    # includes end point but not start point.
+    # Will split a straight line into even-length stitches while still handling curves correctly.
+    # Includes end point but not start point.
     if len(points) < 2:
         return []
     distLeft = [0] * len(points)
@@ -207,31 +209,39 @@ def stitch_curve_even(points: typing.Sequence[Point], stitch_length: float, tole
     return stitches
 
 
-def path_to_curves(points: typing.List[Point]):
+def path_to_curves(points: typing.List[Point], min_len: float):
     # split a path at obvious corner points so that they get stitched exactly
+    # min_len controls the minimum length after splitting for which it won't split again,
+    # which is used to avoid creating large numbers of corner points when encouintering micro-messes.
     if len(points) < 3:
         return [points]
     curves = []
     last = 0
     last_seg = points[1] - points[0]
+    seg_len = last_seg.length()
     for i in range(1, len(points) - 1):
         a = last_seg
         b = points[i + 1] - points[i]
         aabb = (a * a) * (b * b)
         abab = (a * b) * abs(a * b)
-        if aabb > 0 and 2 * abab < aabb:
+        if aabb > 0 and abab < 0.5 * aabb:
             # inner angle of at most 135 deg
-            curves.append(points[last: i + 1])
-            last = i
+            if seg_len >= min_len:
+                curves.append(points[last: i + 1])
+                last = i
+            seg_len = 0
         if b * b > 0:
             last_seg = b
+        seg_len += b.length()
     curves.append(points[last:])
     return curves
 
 
 def running_stitch(points, stitch_length, tolerance):
+    # Turn a continuous path into a running stitch.
     stitches = [points[0]]
-    for curve in path_to_curves(points):
+    for curve in path_to_curves(points, 2 * tolerance):
+        # segments longer than twice the tollerance will usually be forced by it, so set that as the minimum for corner detection
         stitches.extend(stitch_curve_even(curve, stitch_length, tolerance))
     return stitches
 
