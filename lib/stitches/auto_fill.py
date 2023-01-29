@@ -7,6 +7,7 @@
 
 import math
 from itertools import chain, groupby
+from typing import List, Optional
 
 import networkx
 from shapely import geometry as shgeo
@@ -19,6 +20,7 @@ from ..svg import PIXELS_PER_MM
 from ..utils.geometry import Point as InkstitchPoint, line_string_to_point_list, ensure_multi_line_string
 from .fill import intersect_region_with_grating, stitch_row
 from .running_stitch import running_stitch
+from lib.types import Shape, PointLike
 
 
 class PathEdge(object):
@@ -45,20 +47,49 @@ class PathEdge(object):
     def is_segment(self):
         return self.key == self.SEGMENT_KEY
 
+    def __repr__(self):
+        return "PathEdge(%s)" % ("->".join([repr(n) for n in self.nodes]),)
+
 
 @debug.time
-def auto_fill(shape,
-              angle,
-              row_spacing,
-              end_row_spacing,
-              max_stitch_length,
-              running_stitch_length,
-              running_stitch_tolerance,
-              staggers,
-              skip_last,
-              starting_point,
-              ending_point=None,
-              underpath=True):
+def auto_fill(shape: Shape,
+              angle: float,
+              row_spacing: float,
+              end_row_spacing: float,
+              max_stitch_length: float,
+              running_stitch_length: float,
+              running_stitch_tolerance: float,
+              staggers: float,
+              skip_last: bool,
+              starting_point: PointLike,
+              ending_point: Optional[PointLike] = None,
+              underpath: bool = True) -> List[Stitch]:
+    """Outputs a stitch pattern that fills a given polygon.
+
+    :param shape: The shape to fill.
+    :param angle: The angle of the grating pattern for the stitches.
+    :param row_spacing: The spacing of the rows
+    :param end_row_spacing: The row spacing at the end of the grating. Used
+        to produce gradient blending. See
+        https://inkstitch.org/docs/features/#color-blending
+    :param max_stitch_length: The maximum stitch length, in millimeters
+    :param running_stitch_length:
+    :param running_stitch_tolerance:
+    :param staggers: How many times a stitch stagger occurs before the stagger
+        pattern repeats. May be fractional. See py:function::stitch_row in
+        :py:mod:`lib.stitches.fill` and
+        https://github.com/inkstitch/inkstitch/pull/1874
+    :param skip_last: Whether to skip the last stitch in each row. This can
+        sometimes help avoid redundant stitches and thread shredding when the
+        rows are very close together.
+    :param starting_point: The starting point of the stitch path that should
+        fill the shape.
+    :param ending_point: The optional ending point of the stitch path that
+        should fill the shape.
+    :param underpath: Whether to allow travel stitching inside the shape, in
+        which case the travel stitches will always be under the fill stitches.
+    :returns: A list of stitches that fills the shape.
+    """
     rows = intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing)
     if not rows:
         # Small shapes may not intersect with the grating at all.

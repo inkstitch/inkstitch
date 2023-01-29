@@ -3,10 +3,12 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
+from typing import List, Optional
 import math
 
 import shapely
 
+from lib.types import Shape, RowSegments
 from ..stitch_plan import Stitch
 from ..svg import PIXELS_PER_MM
 from ..utils import Point as InkstitchPoint
@@ -74,7 +76,8 @@ def stitch_row(stitches, beg, end, angle, row_spacing, max_stitch_length, stagge
     row_direction = (end - beg).unit()
     segment_length = (end - beg).length()
 
-    stitches.append(beg)
+    if not stitches or not beg.isclose(stitches[-1]):
+        stitches.append(beg)
 
     first_stitch = adjust_stagger(beg, angle, row_spacing, max_stitch_length, staggers)
 
@@ -85,14 +88,42 @@ def stitch_row(stitches, beg, end, angle, row_spacing, max_stitch_length, stagge
     offset = (first_stitch - beg).length()
 
     while offset < segment_length:
-        stitches.append(Stitch(beg + offset * row_direction, tags=('fill_row')))
+        next_stitch = Stitch(beg + offset * row_direction, tags=('fill_row'))
+        # When composing multiple calls to stitch_row together, and for some
+        # choices of arguments to adjust_stagger, the first stitch processed by
+        # this loop duplicates the last stitch in the input list. In this case,
+        # we can skip the stitch.
+        if not next_stitch.isclose(stitches[-1]):
+            stitches.append(next_stitch)
         offset += max_stitch_length
 
     if (end - stitches[-1]).length() > 0.1 * PIXELS_PER_MM and not skip_last:
         stitches.append(end)
 
 
-def intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing=None, flip=False):
+def intersect_region_with_grating(shape: Shape,
+                                  angle: float,
+                                  row_spacing: float,
+                                  end_row_spacing: Optional[float] = None,
+                                  flip=False) -> List[RowSegments]:
+    """Intersects the given region with a grating.
+
+    :param shape: The shape to intersect (a single polygon).
+    :param angle: The angle of the grating
+    :param row_spacing: The spacing of the rows
+    :param end_row_spacing: The row spacing at the end of the grating. Used
+        to produce gradient blending. See
+        https://inkstitch.org/docs/features/#color-blending
+    :param flip: Whether to the reverse the orientation of each returned segment.
+        Used for the legacy (manual) fill stitch. See
+        https://inkstitch.org/docs/params/#legacy-fill-params
+    :returns: A list of row segments. Each RowSegments object in the list
+        corresponds to one row of the grating, and each segment in a RowSegments
+        corresponds to the (possibly disconnected) intesection of `shape` with
+        that row of the grating. An example is a horizontal grating intersected
+        with an `H` shape. At the top of the H, a single row of the grating
+        intersects the H in two disconnected segments.
+    """
     # the max line length I'll need to intersect the whole shape is the diagonal
     (minx, miny, maxx, maxy) = shape.bounds
     upper_left = InkstitchPoint(minx, miny)
