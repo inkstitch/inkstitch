@@ -20,6 +20,7 @@ def meander_fill(fill, shape, shape_index, starting_point, ending_point):
 
     debug.log(f"tile name: {tile.name}")
 
+    # from ..utils.geometry import ensure_geometry_collection
     # debug.log_line_strings(ensure_geometry_collection(shape.boundary).geoms, 'Meander shape')
     graph = tile.to_graph(shape, fill.meander_scale, fill.meander_padding)
     # debug.log_graph(graph, 'Meander graph')
@@ -67,6 +68,8 @@ def find_initial_path(graph, start, end):
     # nx.all_simple_paths(graph, start, end) and choose the first one.
     # However, that tends to pick a really "orderly" path.  Shortest
     # path looks more random.
+
+    # TODO: handle if this can't find a path
     return nx.shortest_path(graph, start, end)
 
 
