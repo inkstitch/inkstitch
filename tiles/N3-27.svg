@@ -6,6 +6,7 @@
    version="1.1"
    id="svg104"
    sodipodi:docname="N3-27.svg"
+   inkscape:version="1.2 (1:1.2.1+202207142221+cd75a1ee6d)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -20,7 +21,12 @@
      inkscape:showpageshadow="2"
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#d1d1d1" />
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="8.6609567"
+     inkscape:cx="21.995261"
+     inkscape:cy="25.863194"
+     inkscape:current-layer="svg104" />
   <style
      type="text/css"
      id="style2">
@@ -40,14 +46,6 @@ polygon.para {opacity: 0.75; fill: #ff0000; stroke: #ff0000 }
      id="polygon4"
      transform="matrix(0.4,0,0,0.4,-8.460161,-0.62241)" />
   <path
-     d="m 22.711807,30.549558 h 15.11811"
-     style="stroke:#000000;stroke-width:0.08px"
-     id="path6" />
-  <path
-     d="M 37.829917,30.549558 30.270862,26.185335"
-     style="stroke:#000000;stroke-width:0.08px"
-     id="path8" />
-  <path
      d="M 30.270862,26.185335 22.711807,21.821113"
      style="stroke:#000000;stroke-width:0.08px"
      id="path10" />
@@ -55,10 +53,6 @@ polygon.para {opacity: 0.75; fill: #ff0000; stroke: #ff0000 }
      d="m 22.711807,21.821113 v 8.728445"
      style="stroke:#000000;stroke-width:0.08px"
      id="path12" />
-  <path
-     d="m 37.829917,30.549558 -7.559055,4.364223"
-     style="stroke:#000000;stroke-width:0.08px"
-     id="path14" />
   <path
      d="m 30.270862,34.913781 -7.559055,4.364222"
      style="stroke:#000000;stroke-width:0.08px"
@@ -80,29 +74,10 @@ polygon.para {opacity: 0.75; fill: #ff0000; stroke: #ff0000 }
      style="stroke:#000000;stroke-width:0.08px"
      id="path24" />
   <path
-     d="m 30.270862,43.642226 -5.129359,2.961436"
+     d="m 30.270862,43.642226 c -2.519685,1.45474 -5.03937,2.909481 -7.559055,4.364222"
      style="stroke:#000000;stroke-width:0.08px"
-     id="path26" />
-  <path
-     d="m 25.141503,46.603662 -2.429696,1.402786"
-     style="stroke:#000000;stroke-width:0.08px"
-     id="path28" />
-  <path
-     d="M 22.711807,48.006448 19.24724,50.006712"
-     style="stroke:#000000;stroke-width:0.08px"
-     id="path30" />
-  <path
-     d="m 22.711807,48.006448 v 8.728444"
-     style="stroke:#000000;stroke-width:0.08px"
-     id="path32" />
-  <path
-     d="M 30.270862,26.185335 37.829917,13.092668"
-     style="stroke:#000000;stroke-width:0.08px"
-     id="path34" />
-  <path
-     d="m 30.270862,17.45689 -7.559055,4.364223"
-     style="stroke:#000000;stroke-width:0.08px"
-     id="path36" />
+     id="path26"
+     sodipodi:nodetypes="cc" />
   <path
      d="M 22.711807,13.092668 15.152752,26.185335"
      style="stroke:#000000;stroke-width:0.08px"
@@ -111,10 +86,6 @@ polygon.para {opacity: 0.75; fill: #ff0000; stroke: #ff0000 }
      d="m 15.152752,26.185335 7.559055,-4.364222"
      style="stroke:#000000;stroke-width:0.08px"
      id="path40" />
-  <path
-     d="M 30.270862,17.45689 22.711807,13.092668"
-     style="stroke:#000000;stroke-width:0.08px"
-     id="path42" />
   <path
      d="M 22.711807,13.092668 15.152752,17.45689"
      style="stroke:#000000;stroke-width:0.08px"
@@ -128,65 +99,21 @@ polygon.para {opacity: 0.75; fill: #ff0000; stroke: #ff0000 }
      style="stroke:#000000;stroke-width:0.08px"
      id="path48" />
   <path
-     d="M 7.593696,13.092668 0.03464102,26.185335"
-     style="stroke:#000000;stroke-width:0.08px"
-     id="path50" />
-  <path
-     d="M 0.03464102,26.185335 7.593696,21.821113"
-     style="stroke:#000000;stroke-width:0.08px"
-     id="path52" />
-  <path
      d="M 15.152752,17.45689 7.593696,13.092668"
      style="stroke:#000000;stroke-width:0.08px"
      id="path54" />
-  <path
-     d="M 0.03464102,8.728445 7.593696,13.092668"
-     style="stroke:#000000;stroke-width:0.08px"
-     id="path56" />
-  <path
-     d="m 30.270862,52.370672 -7.559055,13.09267"
-     style="stroke:#000000;stroke-width:0.08px"
-     id="path58" />
-  <path
-     d="m 37.829917,56.734892 -7.559055,-4.36422"
-     style="stroke:#000000;stroke-width:0.08px"
-     id="path60" />
   <path
      d="m 22.711807,48.006448 7.559055,4.364224"
      style="stroke:#000000;stroke-width:0.08px"
      id="path62" />
   <path
-     d="M 15.152752,8.728445 H 0.03464102"
-     style="stroke:#000000;stroke-width:0.08px"
-     id="path64" />
-  <path
-     d="M 15.152752,0 V 8.728445"
-     style="stroke:#000000;stroke-width:0.08px"
-     id="path66" />
-  <path
      d="M 15.152752,17.45689 V 8.728445"
      style="stroke:#000000;stroke-width:0.08px"
      id="path68" />
   <path
-     d="M 37.829917,56.734892 V 48.006448"
-     style="stroke:#000000;stroke-width:0.08px"
-     id="path70" />
-  <path
      d="M 37.829917,48.006448 V 39.278003"
      style="stroke:#000000;stroke-width:0.08px"
      id="path72" />
-  <path
-     d="m 37.829917,39.278003 7.55906,4.364223"
-     style="stroke:#000000;stroke-width:0.08px"
-     id="path74" />
-  <path
-     d="M 45.388977,34.913781 H 30.270862"
-     style="stroke:#000000;stroke-width:0.08px"
-     id="path76" />
-  <path
-     d="m 45.388977,34.913781 -7.55906,4.364222"
-     style="stroke:#000000;stroke-width:0.08px"
-     id="path78" />
   <path
      d="m 37.829917,39.278003 -7.559055,4.364223"
      style="stroke:#000000;stroke-width:0.08px"
@@ -196,17 +123,9 @@ polygon.para {opacity: 0.75; fill: #ff0000; stroke: #ff0000 }
      style="stroke:#000000;stroke-width:0.08px"
      id="path82" />
   <path
-     d="m 30.270862,8.728445 -7.559055,4.364223"
-     style="stroke:#000000;stroke-width:0.08px"
-     id="path84" />
-  <path
      d="M 22.711807,4.364223 15.152752,17.45689"
      style="stroke:#000000;stroke-width:0.08px"
      id="path86" />
-  <path
-     d="M 52.948027,39.278003 H 37.829917"
-     style="stroke:#000000;stroke-width:0.08px"
-     id="path88" />
   <path
      d="M 7.593696,39.278003 H 22.711807"
      style="stroke:#000000;stroke-width:0.08px"
@@ -216,10 +135,6 @@ polygon.para {opacity: 0.75; fill: #ff0000; stroke: #ff0000 }
      style="stroke:#000000;stroke-width:0.08px"
      id="path92" />
   <path
-     d="M 15.152752,34.913781 7.593696,30.549558"
-     style="stroke:#000000;stroke-width:0.08px"
-     id="path94" />
-  <path
      d="M 15.152752,34.913781 22.711807,21.821113"
      style="stroke:#000000;stroke-width:0.08px"
      id="path96" />
@@ -227,10 +142,6 @@ polygon.para {opacity: 0.75; fill: #ff0000; stroke: #ff0000 }
      d="M 15.152752,26.185335 7.593696,30.549558"
      style="stroke:#000000;stroke-width:0.08px"
      id="path98" />
-  <path
-     d="M 7.593696,21.821113 0.03464102,34.913781"
-     style="stroke:#000000;stroke-width:0.08px"
-     id="path100" />
   <circle
      cx="22.711803"
      cy="30.549559"
