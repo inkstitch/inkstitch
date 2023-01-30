@@ -877,9 +877,11 @@ class SatinColumn(EmbroideryElement):
         pairs = self.plot_points_on_rails(
             self.contour_underlay_stitch_length,
             -self.contour_underlay_inset_px, -self.contour_underlay_inset_percent/100)
-        stitches = [p[0] for p in pairs] + [p[1] for p in reversed(pairs)]
+
         if self._center_walk_is_odd():
-            stitches = list(reversed(stitches))
+            stitches = [p[0] for p in reversed(pairs)] + [p[1] for p in pairs]
+        else:
+            stitches = [p[1] for p in pairs] + [p[0] for p in reversed(pairs)]
 
         return StitchGroup(
             color=self.color,

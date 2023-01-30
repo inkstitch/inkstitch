@@ -432,21 +432,20 @@ class Stroke(EmbroideryElement):
         return patch
 
     def running_stitch(self, path, stitch_length, tolerance):
-        repeated_path = []
+        stitches = running_stitch(path, stitch_length, tolerance)
 
+        repeated_stitches = []
         # go back and forth along the path as specified by self.repeats
         for i in range(self.repeats):
             if i % 2 == 1:
                 # reverse every other pass
-                this_path = path[::-1]
+                this_path = stitches[::-1]
             else:
-                this_path = path[:]
+                this_path = stitches[:]
 
-            repeated_path.extend(this_path)
+            repeated_stitches.extend(this_path)
 
-        stitches = running_stitch(repeated_path, stitch_length, tolerance)
-
-        return StitchGroup(self.color, stitches)
+        return StitchGroup(self.color, repeated_stitches)
 
     def ripple_stitch(self):
         return StitchGroup(

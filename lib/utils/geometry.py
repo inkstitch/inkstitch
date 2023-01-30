@@ -211,6 +211,9 @@ class Point:
     def unit(self):
         return self.mul(1.0 / self.length())
 
+    def angle(self):
+        return math.atan2(self.y, self.x)
+
     def rotate_left(self):
         return self.__class__(-self.y, self.x)
 
@@ -228,6 +231,9 @@ class Point:
 
     def __len__(self):
         return 2
+
+    def __str__(self):
+        return "({0:.3f}, {1:.3f})".format(self.x, self.y)
 
 
 def line_string_to_point_list(line_string):
