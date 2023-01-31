@@ -22,6 +22,7 @@ from ..svg.tags import INKSCAPE_LABEL
 from ..utils import cache, version
 from .element import EmbroideryElement, param
 from .validation import ValidationError, ValidationWarning
+from ..utils.threading import ExitThread
 
 
 class SmallShapeWarning(ValidationWarning):
@@ -571,6 +572,8 @@ class FillStitch(EmbroideryElement):
                             stitch_groups.extend(self.do_contour_fill(fill_shape, last_patch, start))
                         elif self.fill_method == 2:
                             stitch_groups.extend(self.do_guided_fill(fill_shape, last_patch, start, end))
+                except ExitThread:
+                    raise
                 except Exception:
                     self.fatal_fill_error()
                 last_patch = stitch_groups[-1]

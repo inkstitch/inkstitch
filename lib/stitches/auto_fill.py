@@ -19,6 +19,7 @@ from ..svg import PIXELS_PER_MM
 from ..utils.geometry import Point as InkstitchPoint, line_string_to_point_list, ensure_multi_line_string
 from .fill import intersect_region_with_grating, stitch_row
 from .running_stitch import running_stitch
+from ..utils.threading import check_stop_flag
 
 
 class PathEdge(object):
@@ -153,6 +154,8 @@ def build_fill_stitch_graph(shape, segments, starting_point=None, ending_point=N
         # mark this one as a grating segment.
         graph.add_edge(segment[0], segment[-1], key="segment", underpath_edges=[], geometry=shgeo.LineString(segment))
 
+        check_stop_flag()
+
     tag_nodes_with_outline_and_projection(graph, shape, graph.nodes())
     add_edges_between_outline_nodes(graph, duplicate_every_other=True)
 
@@ -196,6 +199,8 @@ def tag_nodes_with_outline_and_projection(graph, shape, nodes):
 
         graph.add_node(node, outline=outline_index, projection=outline_projection)
 
+        check_stop_flag()
+
 
 def add_boundary_travel_nodes(graph, shape):
     outlines = ensure_multi_line_string(shape.boundary).geoms
@@ -214,6 +219,8 @@ def add_boundary_travel_nodes(graph, shape):
                     for i in range(1, int(length)):
                         subpoint = segment.interpolate(i)
                         graph.add_node((subpoint.x, subpoint.y), projection=outline.project(subpoint), outline=outline_index)
+
+            check_stop_flag()
 
             graph.add_node((point.x, point.y), projection=outline.project(point), outline=outline_index)
             prev = point
@@ -244,6 +251,8 @@ def add_edges_between_outline_nodes(graph, duplicate_every_other=False):
 
             if i % 2 == 0:
                 graph.add_edge(node1, node2, key="extra", **data)
+
+        check_stop_flag()
 
 
 def graph_is_valid(graph, shape, max_stitch_length):
@@ -382,6 +391,8 @@ def process_travel_edges(graph, fill_stitch_graph, shape, travel_edges):
 
         graph.add_edge(*edge, weight=weight)
 
+        check_stop_flag()
+
     # without this, we sometimes get exceptions like this:
     # Exception AttributeError: "'NoneType' object has no attribute 'GEOSSTRtree_destroy'" in
     #   <bound method STRtree.__del__ of <shapely.strtree.STRtree instance at 0x0D2BFD50>> ignored
@@ -444,8 +455,12 @@ def build_travel_edges(shape, fill_angle):
 
     diagonal_edges = ensure_multi_line_string(grating1.symmetric_difference(grating2))
 
+    check_stop_flag()
+
     # without this, floating point inaccuracies prevent the intersection points from lining up perfectly.
     vertical_edges = ensure_multi_line_string(snap(grating3.difference(grating1), diagonal_edges, 0.005))
+
+    check_stop_flag()
 
     return endpoints, chain(diagonal_edges.geoms, vertical_edges.geoms)
 
@@ -540,6 +555,8 @@ def find_stitch_path(graph, travel_graph, starting_point=None, ending_point=None
     real_end = nearest_node(outline_nodes, ending_point)
     path.append(PathEdge((ending_node, real_end), key="outline"))
 
+    check_stop_flag()
+
     return path
 
 
@@ -628,5 +645,7 @@ def path_to_stitches(path, travel_graph, fill_stitch_graph, angle, row_spacing, 
             travel_graph.remove_edges_from(fill_stitch_graph[edge[0]][edge[1]]['segment'].get('underpath_edges', []))
         else:
             stitches.extend(travel(travel_graph, edge[0], edge[1], running_stitch_length, running_stitch_tolerance, skip_last))
+
+        check_stop_flag()
 
     return stitches

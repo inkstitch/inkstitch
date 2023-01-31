@@ -11,6 +11,7 @@ from ..stitch_plan import Stitch
 from ..svg import PIXELS_PER_MM
 from ..utils import Point as InkstitchPoint
 from ..utils import cache
+from ..utils.threading import check_stop_flag
 
 
 def legacy_fill(shape, angle, row_spacing, end_row_spacing, max_stitch_length, flip, staggers, skip_last):
@@ -168,6 +169,8 @@ def intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing=Non
             current_row_y += row_spacing + (end_row_spacing - row_spacing) * ((current_row_y - start) / height)
         else:
             current_row_y += row_spacing
+
+        check_stop_flag()
 
     return rows
 
