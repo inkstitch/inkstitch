@@ -3,6 +3,7 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
+import os
 import sys
 
 import inkex
@@ -60,6 +61,10 @@ def write_embroidery_file(file_path, stitch_plan, svg, settings={}):
     # origin = origin * scale
 
     pattern = pyembroidery.EmbPattern()
+
+    # For later use when writing .dst header title field.
+    pattern.extras['filename'] = os.path.splitext(os.path.basename(file_path))[0]
+
     stitch = Stitch(0, 0)
 
     for color_block in stitch_plan:
