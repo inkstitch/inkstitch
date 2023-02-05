@@ -4,6 +4,7 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 from .auto_fill import auto_fill
+from .circular_fill import circular_fill
 from .fill import legacy_fill
 from .guided_fill import guided_fill
 

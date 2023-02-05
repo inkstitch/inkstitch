@@ -9,6 +9,7 @@ import re
 import sys
 import traceback
 
+from inkex import Transform
 from shapely import geometry as shgeo
 from shapely.errors import TopologicalError
 from shapely.validation import explain_validity, make_valid
@@ -16,9 +17,10 @@ from shapely.validation import explain_validity, make_valid
 from ..i18n import _
 from ..marker import get_marker_elements
 from ..stitch_plan import StitchGroup
-from ..stitches import auto_fill, contour_fill, guided_fill, legacy_fill
 from ..stitches.meander_fill import meander_fill
-from ..svg import PIXELS_PER_MM
+from ..stitches import (auto_fill, circular_fill, contour_fill, guided_fill,
+                        legacy_fill)
+from ..svg import PIXELS_PER_MM, get_node_transform
 from ..svg.tags import INKSCAPE_LABEL
 from .. import tiles
 from ..utils import cache, version
@@ -108,8 +110,17 @@ class FillStitch(EmbroideryElement):
         return self.get_boolean_param('auto_fill', True)
 
     @property
-    @param('fill_method', _('Fill method'), type='dropdown', default=0,
-           options=[_("Auto Fill"), _("Contour Fill"), _("Guided Fill"), _("Legacy Fill"), _("Meander Fill")], sort_index=2)
+    @param('fill_method',
+           _('Fill method'),
+           type='dropdown',
+           default=0,
+           options=[_("Auto Fill"),
+                    _("Contour Fill"),
+                    _("Guided Fill"),
+                    _("Legacy Fill"),
+                    _("Meander Fill"),
+                    _("Circular Fill")],
+           sort_index=2)
     def fill_method(self):
         return self.get_int_param('fill_method', 0)
 
@@ -239,7 +250,7 @@ class FillStitch(EmbroideryElement):
            unit='mm',
            sort_index=6,
            type='float',
-           select_items=[('fill_method', 0), ('fill_method', 1), ('fill_method', 2), ('fill_method', 3)],
+           select_items=[('fill_method', 0), ('fill_method', 1), ('fill_method', 2), ('fill_method', 3), ('fill_method', 5)],
            default=3.0)
     def max_stitch_length(self):
         return max(self.get_float_param("max_stitch_length_mm", 3.0), 0.1 * PIXELS_PER_MM)
@@ -411,7 +422,7 @@ class FillStitch(EmbroideryElement):
            unit='mm',
            type='float',
            default=1.5,
-           select_items=[('fill_method', 0), ('fill_method', 2), ('fill_method', 4)],
+           select_items=[('fill_method', 0), ('fill_method', 2), ('fill_method', 4), ('fill_method', 5)],
            sort_index=6)
     def running_stitch_length(self):
         return max(self.get_float_param("running_stitch_length_mm", 1.5), 0.01)
@@ -523,7 +534,7 @@ class FillStitch(EmbroideryElement):
                      'are not visible.  This gives them a jagged appearance.'),
            type='boolean',
            default=True,
-           select_items=[('fill_method', 0), ('fill_method', 2)],
+           select_items=[('fill_method', 0), ('fill_method', 2), ('fill_method', 5)],
            sort_index=6)
     def underpath(self):
         return self.get_boolean_param('underpath', True)
@@ -605,12 +616,14 @@ class FillStitch(EmbroideryElement):
                     for i, fill_shape in enumerate(fill_shapes.geoms):
                         if self.fill_method == 0:
                             stitch_groups.extend(self.do_auto_fill(fill_shape, previous_stitch_group, start, end))
-                        if self.fill_method == 1:
+                        elif self.fill_method == 1:
                             stitch_groups.extend(self.do_contour_fill(fill_shape, previous_stitch_group, start))
                         elif self.fill_method == 2:
                             stitch_groups.extend(self.do_guided_fill(fill_shape, previous_stitch_group, start, end))
                         elif self.fill_method == 4:
                             stitch_groups.extend(self.do_meander_fill(fill_shape, i, start, end))
+                        elif self.fill_method == 5:
+                            stitch_groups.extend(self.do_circular_fill(fill_shape, previous_stitch_group, start, end))
                 except ExitThread:
                     raise
                 except Exception:
@@ -782,3 +795,34 @@ class FillStitch(EmbroideryElement):
         message += traceback.format_exc()
 
         self.fatal(message)
+
+    def do_circular_fill(self, shape, last_patch, starting_point, ending_point):
+        # get target position
+        command = self.get_command('ripple_target')
+        if command:
+            pos = [float(command.use.get("x", 0)), float(command.use.get("y", 0))]
+            transform = get_node_transform(command.use)
+            pos = Transform(transform).apply_to_point(pos)
+            target = shgeo.Point(*pos)
+        else:
+            target = shape.centroid
+        stitches = circular_fill(
+                                 shape,
+                                 self.angle,
+                                 self.row_spacing,
+                                 self.staggers,
+                                 self.max_stitch_length,
+                                 self.running_stitch_length,
+                                 self.running_stitch_tolerance,
+                                 self.skip_last,
+                                 starting_point,
+                                 ending_point,
+                                 self.underpath,
+                                 target
+                                )
+
+        stitch_group = StitchGroup(
+            color=self.color,
+            tags=("circular_fill", "auto_fill_top"),
+            stitches=stitches)
+        return [stitch_group]
