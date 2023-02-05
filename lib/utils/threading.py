@@ -12,6 +12,7 @@ class ExitThread(InkstitchException):
     pass
 
 
+# A default flag used for the main thread.  It will never be set.
 _default_stop_flag = threading.Event()
 
 
