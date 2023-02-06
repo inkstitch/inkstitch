@@ -15,6 +15,7 @@ from ..utils.geometry import (ensure_geometry_collection,
 from .auto_fill import (auto_fill, build_fill_stitch_graph, build_travel_graph,
                         collapse_sequential_outline_edges, find_stitch_path,
                         graph_is_valid, travel)
+from ..utils.threading import check_stop_flag
 
 
 def guided_fill(shape,
@@ -68,6 +69,8 @@ def path_to_stitches(path, travel_graph, fill_stitch_graph, stitch_length, runni
         stitches.append(Stitch(*path[0].nodes[0]))
 
     for edge in path:
+        check_stop_flag()
+
         if edge.is_segment():
             current_edge = fill_stitch_graph[edge[0]][edge[-1]]['segment']
             path_geometry = current_edge['geometry']
@@ -233,6 +236,8 @@ def intersect_region_with_grating_guideline(shape, line, row_spacing, num_stagge
     offset_line = None
     rows = []
     while True:
+        check_stop_flag()
+
         if strategy == 0:
             translate_amount = translate_direction * row * row_spacing
             offset_line = translate(line, xoff=translate_amount.x, yoff=translate_amount.y)

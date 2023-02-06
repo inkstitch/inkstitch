@@ -13,6 +13,7 @@ import inkex
 
 from ...svg import get_correction_transform
 from ...svg.tags import INKSCAPE_LABEL
+from ...utils.threading import check_stop_flag
 
 
 def find_path(graph, starting_node, ending_node):
@@ -31,6 +32,8 @@ def find_path(graph, starting_node, ending_node):
     # "underpathing".
     path = nx.shortest_path(graph, starting_node, ending_node)
 
+    check_stop_flag()
+
     # Copy the graph so that we can remove the edges as we visit them.
     # This also converts the directed graph into an undirected graph in the
     # case that "preserve_order" is set.
@@ -40,6 +43,8 @@ def find_path(graph, starting_node, ending_node):
     final_path = []
     prev = None
     for node in path:
+        check_stop_flag()
+
         if prev is not None:
             final_path.append((prev, node))
         prev = node
@@ -85,6 +90,8 @@ def add_jumps(graph, elements, preserve_order):
         # will enforce stitching the elements in order.
 
         for element1, element2 in zip(elements[:-1], elements[1:]):
+            check_stop_flag()
+
             potential_edges = []
 
             nodes1 = get_nodes_on_element(graph, element1)
@@ -106,6 +113,7 @@ def add_jumps(graph, elements, preserve_order):
         # a weight, which we'll set as the length of the jump stitch.  The
         # algorithm will minimize the total length of jump stitches added.
         for jump in nx.k_edge_augmentation(graph, 1, avail=list(possible_jumps(graph))):
+            check_stop_flag()
             graph.add_edge(*jump, jump=True)
 
     return graph

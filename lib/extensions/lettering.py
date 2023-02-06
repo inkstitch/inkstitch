@@ -24,6 +24,7 @@ from ..svg.tags import (INKSCAPE_LABEL, INKSTITCH_LETTERING, SVG_GROUP_TAG,
 from ..utils import DotDict, cache, get_bundled_dir, get_resource_dir
 from .commands import CommandsExtension
 from .lettering_custom_font_dir import get_custom_font_dir
+from ..utils.threading import ExitThread
 
 
 class LetteringFrame(wx.Frame):
@@ -343,6 +344,8 @@ class LetteringFrame(wx.Frame):
 
                 patches.extend(element.embroider(None))
         except SystemExit:
+            raise
+        except ExitThread:
             raise
         except Exception:
             raise

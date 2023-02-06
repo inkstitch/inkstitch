@@ -15,6 +15,7 @@ from ..utils import DotDict
 from ..utils.geometry import (cut, ensure_geometry_collection,
                               ensure_multi_polygon, reverse_line_string,
                               roll_linear_ring)
+from ..utils.threading import check_stop_flag
 from .running_stitch import running_stitch
 
 
@@ -132,6 +133,8 @@ def offset_polygon(polygon, offset, join_style, clockwise):
         active_holes[0].append(hole_node)
 
     while len(active_polygons) > 0:
+        check_stop_flag()
+
         current_poly = active_polygons.pop()
         current_holes = active_holes.pop()
 
@@ -325,6 +328,7 @@ def _find_path_inner_to_outer(tree, node, offset, starting_point, avoid_self_cro
     Return value:
         LineString -- the stitching path
     """
+    check_stop_flag()
 
     current_node = tree.nodes[node]
     current_ring = current_node.val
@@ -473,6 +477,8 @@ def _check_and_prepare_tree_for_valid_spiral(tree):
     """
 
     def process_node(node):
+        check_stop_flag()
+
         children = set(tree[node])
 
         if len(children) == 0:
@@ -526,6 +532,8 @@ def _get_spiral_rings(tree):
 
     node = 'root'
     while True:
+        check_stop_flag()
+
         rings.append(tree.nodes[node].val)
 
         children = tree[node]
@@ -556,6 +564,8 @@ def _make_spiral(rings, stitch_length, starting_point):
     path = []
 
     for ring1, ring2 in zip(rings[:-1], rings[1:]):
+        check_stop_flag()
+
         spiral_part = _interpolate_linear_rings(ring1, ring2, stitch_length, starting_point)
         path.extend(spiral_part.coords)
 

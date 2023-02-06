@@ -9,6 +9,7 @@ from .running_stitch import running_stitch
 from ..elements import SatinColumn
 from ..utils import Point as InkstitchPoint
 from ..utils.geometry import line_string_to_point_list
+from ..utils.threading import check_stop_flag
 
 
 def ripple_stitch(stroke):
@@ -80,6 +81,8 @@ def _get_satin_ripple_helper_lines(stroke):
 
     helper_lines = []
     for point0, point1 in rail_pairs:
+        check_stop_flag()
+
         helper_lines.append([])
         helper_line = LineString((point0, point1))
         for step in steps:
@@ -95,6 +98,8 @@ def _converge_helper_line_points(helper_lines, point_edge=False):
     num_lines = len(helper_lines)
     steps = _get_steps(num_lines)
     for i, line in enumerate(helper_lines):
+        check_stop_flag()
+
         points = []
         for j in range(len(line) - 1):
             if point_edge and j % 2 == 1:
@@ -133,6 +138,8 @@ def _target_point_helper_lines(stroke, outline):
     target = stroke.get_ripple_target()
     steps = _get_steps(stroke.get_line_count(), exponent=stroke.exponent, flip=stroke.flip_exponent)
     for i, point in enumerate(outline.coords):
+        check_stop_flag()
+
         line = LineString([point, target])
 
         for step in steps:
@@ -193,6 +200,8 @@ def _generate_guided_helper_lines(stroke, outline, max_distance, guide_line):
 
     previous_guide_point = None
     for i in range(stroke.get_line_count()):
+        check_stop_flag()
+
         guide_point = InkstitchPoint.from_shapely_point(guide_line.interpolate(outline_steps[i], normalized=True))
         translation = guide_point - start_point
         scaling = scale_steps[i]
@@ -232,6 +241,8 @@ def _generate_satin_guide_helper_lines(stroke, outline, guide_line):
 
     # add scaled and rotated outlines along the satin column guide line
     for i, (point0, point1) in enumerate(zip(*rail_points)):
+        check_stop_flag()
+
         guide_center = (point0 + point1) / 2
         translation = guide_center - outline_center
         if stroke.rotate_ripples:
