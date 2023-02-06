@@ -10,6 +10,7 @@ from shapely.prepared import prep
 from .debug import debug
 from .svg import apply_transforms
 from .utils import Point, cache, get_bundled_dir, guess_inkscape_config_path
+from .utils.threading import check_stop_flag
 
 
 class Tile:
@@ -145,6 +146,8 @@ class Tile:
         tiles1 = ceil(shape_diagonal / self.shift1.length()) + 2
         for repeat0 in range(floor(-tiles0 / 2), ceil(tiles0 / 2)):
             for repeat1 in range(floor(-tiles1 / 2), ceil(tiles1 / 2)):
+                check_stop_flag()
+
                 shift0 = repeat0 * self.shift0
                 shift1 = repeat1 * self.shift1
                 this_tile = self._translate_tile(shift0 + shift1 + shape_center)

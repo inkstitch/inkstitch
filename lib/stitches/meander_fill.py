@@ -10,6 +10,7 @@ from ..utils import smooth_path
 from ..utils.geometry import Point as InkStitchPoint, ensure_geometry_collection
 from ..utils.list import poprandom
 from ..utils.prng import iter_uniform_floats
+from ..utils.threading import check_stop_flag
 
 
 def meander_fill(fill, shape, shape_index, starting_point, ending_point):
@@ -83,11 +84,15 @@ def generate_meander_path(graph, start, end, rng):
     meander_path = path_edges
     while edges_to_consider:
         while edges_to_consider:
+            check_stop_flag()
+
             edge = poprandom(edges_to_consider, rng)
             edges_to_consider.extend(replace_edge(meander_path, edge, graph, graph_nodes))
 
         edge_pairs = list(zip(meander_path[:-1], meander_path[1:]))
         while edge_pairs:
+            check_stop_flag()
+
             edge1, edge2 = poprandom(edge_pairs, rng)
             edges_to_consider.extend(replace_edge_pair(meander_path, edge1, edge2, graph, graph_nodes))
             break

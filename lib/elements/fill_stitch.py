@@ -168,7 +168,7 @@ class FillStitch(EmbroideryElement):
     @property
     @param('meander_scale_percent', _('Meander pattern scale'), type='float', unit="%", default=100, select_items=[('fill_method', 4)], sort_index=4)
     def meander_scale(self):
-        return np.maximum(self.get_split_float_param('meander_scale_percent', (100, 100)), (30, 30)) / 100
+        return self.get_split_float_param('meander_scale_percent', (100, 100)) / 100
 
     @property
     @param('meander_padding_mm', _('Meander padding'), type='float', unit="mm", default=0, select_items=[('fill_method', 4)], sort_index=5)
