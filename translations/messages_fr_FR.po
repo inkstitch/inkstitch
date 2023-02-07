@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2023-01-29 01:26+0000\n"
-"PO-Revision-Date: 2023-01-29 01:27\n"
+"PO-Revision-Date: 2023-02-07 01:22\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -1263,7 +1263,7 @@ msgstr "Pourcentage de la diminution aléatoire de la largeur du satin"
 
 #: lib/elements/satin_column.py:96
 msgid "shorten stitch across rails at most this percent. Two values separated by a space may be used for an aysmmetric effect."
-msgstr ""
+msgstr "réduire la largeur du satin d'au plus ce pourcentage. Deux valeurs séparées par un espace peuvent être utilisées pour un effet asymétrique."
 
 #: lib/elements/satin_column.py:105
 msgid "Random percentage of satin width increase"
@@ -4784,11 +4784,11 @@ msgstr "Points de l'aiguille"
 
 #: inx/inkstitch_stitch_plan_preview.inx:22
 msgid "Lock"
-msgstr ""
+msgstr "Vérouiller"
 
 #: inx/inkstitch_stitch_plan_preview.inx:22
 msgid "Make stitch plan insensitive to mouse interactions"
-msgstr ""
+msgstr "Rend le plan de broderie insensible aux actions de la souris"
 
 #: inx/inkstitch_stitch_plan_preview_undo.inx:3
 msgid "Undo Stitch Plan Preview"
