@@ -13,7 +13,6 @@
           </submenu>
         </effects-menu>
     </effect>
-    <param name="line-height" type="int" min="1" max="100" gui-text="Line Height">6</param>
     <script>
         {{ command_tag | safe }}
     </script>
