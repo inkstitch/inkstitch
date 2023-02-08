@@ -139,7 +139,18 @@ class Tile:
                     if shape.contains(line_string):
                         graph.add_edge(line[0], line[1])
 
+        self._remove_dead_ends(graph)
+
         return graph
+
+    def _remove_dead_ends(self, graph):
+        while True:
+            nodes_with_degree_1 = [node for node, degree in graph.degree() if degree == 1]
+
+            if nodes_with_degree_1:
+                graph.remove_nodes_from(nodes_with_degree_1)
+            else:
+                return
 
 
 def all_tile_paths():
