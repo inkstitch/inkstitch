@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-01-29 01:26+0000\n"
-"PO-Revision-Date: 2023-02-07 01:22\n"
+"POT-Creation-Date: 2023-02-08 01:22+0000\n"
+"PO-Revision-Date: 2023-02-08 01:24\n"
 "Last-Translator: \n"
 "Language-Team: Finnish\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-29 01:26+0000\n"
+"POT-Creation-Date: 2023-02-08 01:22+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1960,7 +1960,7 @@ msgstr "Valitse yksi tai useampi objekti liittääksesi käskyjä."
 msgid "Please choose one or more commands to attach."
 msgstr "Valitse lisättäväksi yksi tai useampi komento."
 
-#: lib/extensions/palette_split_text.py:20
+#: lib/extensions/palette_split_text.py:16
 msgid "Please select one or more text elements to split lines."
 msgstr ""
 
@@ -4682,10 +4682,6 @@ msgstr ""
 
 #: inx/inkstitch_palette_split_text.inx:3
 msgid "Split text"
-msgstr ""
-
-#: inx/inkstitch_palette_split_text.inx:16
-msgid "Line Height"
 msgstr ""
 
 #: inx/inkstitch_palette_to_text.inx:3 inx/inkstitch_palette_to_text.inx:20
