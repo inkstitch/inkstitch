@@ -71,7 +71,6 @@ inkstitch_attribs = [
     'reverse',
     'meander_pattern',
     'meander_scale_percent',
-    'meander_padding_mm',
     'expand_mm',
     'fill_underlay',
     'fill_underlay_angle',

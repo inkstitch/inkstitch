@@ -24,7 +24,6 @@ class Tile:
         self.tile = None
         self.width = None
         self.height = None
-        self.buffer_size = None
         self.shift0 = None
         self.shift1 = None
 
@@ -39,7 +38,6 @@ class Tile:
     def _load(self):
         self._load_paths(self.tile_svg)
         self._load_dimensions(self.tile_svg)
-        self._load_buffer_size(self.tile_svg)
         self._load_parallelogram(self.tile_svg)
 
     def _load_paths(self, tile_svg):
@@ -51,13 +49,6 @@ class Tile:
         svg_element = tile_svg.getroot()
         self.width = svg_element.viewport_width
         self.height = svg_element.viewport_height
-
-    def _load_buffer_size(self, tile_svg):
-        circle_elements = tile_svg.findall('.//svg:circle', namespaces=inkex.NSS)
-        if circle_elements:
-            self.buffer_size = circle_elements[0].radius
-        else:
-            self.buffer_size = 0
 
     def _load_parallelogram(self, tile_svg):
         parallelogram_elements = tile_svg.findall(".//svg:*[@class='para']", namespaces=inkex.NSS)
@@ -114,7 +105,7 @@ class Tile:
         self.tile = scaled_tile
 
     @debug.time
-    def to_graph(self, shape, scale, buffer=None):
+    def to_graph(self, shape, scale):
         """Apply this tile to a shape, repeating as necessary.
 
         Return value:
@@ -128,15 +119,7 @@ class Tile:
 
         shape_center, shape_width, shape_height = self._get_center_and_dimensions(shape)
         shape_diagonal = Point(shape_width, shape_height).length()
-
-        if not buffer:
-            average_scale = (x_scale + y_scale) / 2
-            buffer = self.buffer_size * average_scale
-
-        contracted_shape = shape.buffer(-buffer)
-        prepared_shape = prep(contracted_shape)
-
-        # debug.log_line_string(contracted_shape.exterior, "contracted shape")
+        prepared_shape = prep(shape)
 
         return self._generate_graph(prepared_shape, shape_center, shape_diagonal)
 

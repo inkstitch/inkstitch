@@ -1,29 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg
-   width="29.527719"
-   height="32.609737"
-   viewBox="0 0 29.527719 32.609737"
-   version="1.1"
-   id="svg30"
-   sodipodi:docname="N3-6.svg"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
-  <defs
-     id="defs34" />
-  <sodipodi:namedview
-     id="namedview32"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:showpageshadow="2"
-     inkscape:pageopacity="0.0"
-     inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#d1d1d1" />
-  <style
-     type="text/css"
-     id="style2">
+<svg xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" width="29.527719" height="32.609737" viewBox="0 0 29.527719 32.609737" version="1.1" id="svg30" sodipodi:docname="N3-6.svg">
+  <defs id="defs34"/>
+  <sodipodi:namedview id="namedview32" pagecolor="#ffffff" bordercolor="#666666" borderopacity="1.0" inkscape:showpageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0" inkscape:deskcolor="#d1d1d1"/>
+  <style type="text/css" id="style2">
 polygon.tile { stroke: #000000; stroke-width:3; stroke-linejoin:round }
 polygon.ih1 { fill: #ffff80 }
 polygon.ih2 { fill: #8080ff }
@@ -33,60 +11,16 @@ polygon.ih5 { fill: #ff80ff }
 polygon.ih6 { fill: #80ffff }
 polygon.para {opacity: 0.75; fill: #ff0000; stroke: #ff0000 }
 </style>
-  <polygon
-     class="para"
-     points="72.141791,108.02427 33.437089,49.967222 64.884659,29.002175 103.58936,87.059228 "
-     style="stroke:none"
-     id="polygon4"
-     transform="matrix(0.4,0,0,0.4,-11.908024,-11.60087)" />
-  <path
-     d="M 15.497266,15.804419 H 28.076294"
-     style="stroke:#000000;stroke-width:0.08px"
-     id="path6" />
-  <path
-     d="M 28.076294,24.190438 15.497266,15.804419"
-     style="stroke:#000000;stroke-width:0.08px"
-     id="path8" />
-  <path
-     d="M 15.497266,15.804419 20.335353,4.193009"
-     style="stroke:#000000;stroke-width:0.08px"
-     id="path10" />
-  <path
-     d="m 12.594413,0.967617 2.902853,14.836802"
-     style="stroke:#000000;stroke-width:0.08px"
-     id="path12" />
-  <path
-     d="M 15.497266,32.576457 28.076294,24.190438"
-     style="stroke:#000000;stroke-width:0.08px"
-     id="path14" />
-  <path
-     d="M 15.497266,24.190438 V 15.804419"
-     style="stroke:#000000;stroke-width:0.08px"
-     id="path16" />
-  <path
-     d="M 28.076294,24.190438 H 15.497266"
-     style="stroke:#000000;stroke-width:0.08px"
-     id="path18" />
-  <path
-     d="m 15.497266,24.190438 v 8.386019"
-     style="stroke:#000000;stroke-width:0.08px"
-     id="path20" />
-  <path
-     d="m 7.7563246,12.579028 7.7409414,3.225391"
-     style="stroke:#000000;stroke-width:0.08px"
-     id="path22" />
-  <path
-     d="M 12.594413,0.967617 7.7563246,12.579028"
-     style="stroke:#000000;stroke-width:0.08px"
-     id="path24" />
-  <path
-     d="M 7.7563246,12.579028 0.01538462,9.353636"
-     style="stroke:#000000;stroke-width:0.08px"
-     id="path26" />
-  <circle
-     cx="15.497265"
-     cy="15.80442"
-     r="3.7795277"
-     style="fill:none;stroke:#0000ff;stroke-width:0.08px"
-     id="circle28" />
-</svg>
+  <polygon class="para" points="72.141791,108.02427 33.437089,49.967222 64.884659,29.002175 103.58936,87.059228 " style="stroke:none" id="polygon4" transform="matrix(0.4,0,0,0.4,-11.908024,-11.60087)"/>
+  <path d="M 15.497266,15.804419 H 28.076294" style="stroke:#000000;stroke-width:0.08px" id="path6"/>
+  <path d="M 28.076294,24.190438 15.497266,15.804419" style="stroke:#000000;stroke-width:0.08px" id="path8"/>
+  <path d="M 15.497266,15.804419 20.335353,4.193009" style="stroke:#000000;stroke-width:0.08px" id="path10"/>
+  <path d="m 12.594413,0.967617 2.902853,14.836802" style="stroke:#000000;stroke-width:0.08px" id="path12"/>
+  <path d="M 15.497266,32.576457 28.076294,24.190438" style="stroke:#000000;stroke-width:0.08px" id="path14"/>
+  <path d="M 15.497266,24.190438 V 15.804419" style="stroke:#000000;stroke-width:0.08px" id="path16"/>
+  <path d="M 28.076294,24.190438 H 15.497266" style="stroke:#000000;stroke-width:0.08px" id="path18"/>
+  <path d="m 15.497266,24.190438 v 8.386019" style="stroke:#000000;stroke-width:0.08px" id="path20"/>
+  <path d="m 7.7563246,12.579028 7.7409414,3.225391" style="stroke:#000000;stroke-width:0.08px" id="path22"/>
+  <path d="M 12.594413,0.967617 7.7563246,12.579028" style="stroke:#000000;stroke-width:0.08px" id="path24"/>
+  <path d="M 7.7563246,12.579028 0.01538462,9.353636" style="stroke:#000000;stroke-width:0.08px" id="path26"/>
+  </svg>

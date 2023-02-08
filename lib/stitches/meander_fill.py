@@ -22,7 +22,7 @@ def meander_fill(fill, shape, shape_index, starting_point, ending_point):
     debug.log(f"tile name: {tile.name}")
 
     debug.log_line_strings(lambda: ensure_geometry_collection(shape.boundary).geoms, 'Meander shape')
-    graph = tile.to_graph(shape, fill.meander_scale, fill.meander_padding)
+    graph = tile.to_graph(shape, fill.meander_scale)
     debug.log_graph(graph, 'Meander graph')
     debug.log(lambda: f"graph connected? {nx.is_connected(graph)}")
     start, end = find_starting_and_ending_nodes(graph, shape, starting_point, ending_point)

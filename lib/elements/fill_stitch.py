@@ -171,11 +171,6 @@ class FillStitch(EmbroideryElement):
         return self.get_split_float_param('meander_scale_percent', (100, 100)) / 100
 
     @property
-    @param('meander_padding_mm', _('Meander padding'), type='float', unit="mm", default=0, select_items=[('fill_method', 4)], sort_index=5)
-    def meander_padding(self):
-        return self.get_float_param('meander_padding_mm', 0)
-
-    @property
     @param('angle',
            _('Angle of lines of stitches'),
            tooltip=_('The angle increases in a counter-clockwise direction.  0 is horizontal.  Negative angles are allowed.'),
