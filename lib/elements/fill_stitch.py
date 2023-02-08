@@ -144,7 +144,7 @@ class FillStitch(EmbroideryElement):
     @param('smoothness_mm', _('Smoothness'),
            tooltip=_(
                'Smooth the stitch path.  Smoothness limits approximately how far the smoothed stitch path ' +
-               'is allowed to deviate from the original path.  Hint: a lower stitchc tolerance may be needed too.'
+               'is allowed to deviate from the original path.  Hint: a lower stitch tolerance may be needed too.'
            ),
            type='integer',
            unit='mm',
@@ -404,7 +404,8 @@ class FillStitch(EmbroideryElement):
     @property
     @param('running_stitch_length_mm',
            _('Running stitch length (traversal between sections)'),
-           tooltip=_('Length of stitches around the outline of the fill region used when moving from section to section.'),
+           tooltip=_(
+               'Length of stitches around the outline of the fill region used when moving from section to section.  Also used for meander fill.'),
            unit='mm',
            type='float',
            default=1.5,
