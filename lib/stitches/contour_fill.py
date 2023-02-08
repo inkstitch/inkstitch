@@ -4,16 +4,18 @@ from itertools import chain
 import networkx as nx
 import numpy as np
 import trimesh
-from shapely.geometry import GeometryCollection, MultiPolygon, Polygon, LineString, Point
+from shapely.geometry import (GeometryCollection, LineString, MultiPolygon,
+                              Point, Polygon)
 from shapely.geometry.polygon import orient
-from shapely.ops import nearest_points
-from shapely.ops import polygonize
+from shapely.ops import nearest_points, polygonize
+from shapely.validation import make_valid
 
-from .running_stitch import running_stitch
 from ..stitch_plan import Stitch
 from ..utils import DotDict
-from ..utils.geometry import cut, reverse_line_string, roll_linear_ring
-from ..utils.geometry import ensure_geometry_collection, ensure_multi_polygon
+from ..utils.geometry import (cut, ensure_geometry_collection,
+                              ensure_multi_polygon, reverse_line_string,
+                              roll_linear_ring)
+from .running_stitch import running_stitch
 
 
 class Tree(nx.DiGraph):
@@ -134,6 +136,7 @@ def offset_polygon(polygon, offset, join_style, clockwise):
         current_holes = active_holes.pop()
 
         outer, inners = _offset_polygon_and_holes(tree, current_poly, current_holes, offset, join_style)
+
         polygons = _match_polygons_and_holes(outer, inners)
 
         for polygon in polygons.geoms:
@@ -183,7 +186,10 @@ def _offset_polygon_and_holes(tree, poly, holes, offset, join_style):
 def _match_polygons_and_holes(outer, inners):
     result = MultiPolygon(polygonize(outer.geoms))
     if len(inners) > 0:
-        result = ensure_geometry_collection(result.difference(MultiPolygon(inners)))
+        inners = MultiPolygon(inners)
+        if not inners.is_valid:
+            inners = make_valid(MultiPolygon(inners))
+        result = ensure_geometry_collection(result.difference(inners))
 
     return result
 
@@ -278,6 +284,11 @@ def _create_nearest_points_list(travel_line, tree, children, threshold, threshol
             # where holes meet outer borders a distance
             # up to 2 * used offset can arise
             result = _get_nearest_points_closer_than_thresh(travel_line, tree.nodes[child].val, threshold_hard)
+
+        # if we still didn't get a result, ignore this child
+        # this may lead to oddities, but at least it doesn't fail
+        if result is None:
+            continue
 
         proj = travel_line.project(result[0])
         children_nearest_points.append(
