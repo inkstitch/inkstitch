@@ -503,12 +503,12 @@ class FillStitch(EmbroideryElement):
     @property
     @param('expand_mm',
            _('Expand'),
-           tooltip=_('Expand the shape before fill stitching, to compensate for gaps between shapes.'),
+           tooltip=_('Expand the shape before fill stitching, to compensate for gaps between shapes.  Negative values contract instead.'),
            unit='mm',
            type='float',
            default=0,
            sort_index=5,
-           select_items=[('fill_method', 0), ('fill_method', 2)])
+           select_items=[('fill_method', 0), ('fill_method', 2), ('fill_method', 4)])
     def expand(self):
         return self.get_float_param('expand_mm', 0)
 
