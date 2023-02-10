@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2023-02-08 01:22+0000\n"
-"PO-Revision-Date: 2023-02-08 01:24\n"
+"PO-Revision-Date: 2023-02-10 01:27\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -1047,7 +1047,7 @@ msgstr "Füllwinkel"
 
 #: lib/elements/fill_stitch.py:408
 msgid "Default: fill angle + 90 deg. Insert a list for multiple layers separated by a space."
-msgstr ""
+msgstr "Standard: Füllwinkel + 90 Grad. Füge eine Liste von mit Leerzeichen getrennten Werten ein, um mehrere Lagen zu erzeugen."
 
 #: lib/elements/fill_stitch.py:432
 msgid "Row spacing"
@@ -1509,7 +1509,8 @@ msgstr "Mehrfach Geradstich Anzahl der Wiederholungen"
 #: lib/elements/stroke.py:113
 msgid "Backtrack each stitch this many times.  A value of 1 would triple each stitch (forward, back, forward).  A value of 2 would quintuple each stitch, etc.\n\n"
 "A pattern with various repeats can be created with a list of values separated by a space."
-msgstr ""
+msgstr "Anzahl der Wiederholungen für jeden Stich. Ein Wert von 1 erzeugt einen Dreifachstich (Vor, zurück, vor). Ein Wert von 2 erzeugt einen Fünffachstich, usw.\n\n"
+"Mit der Eingabe von mehreren durch Leerzeichen getrennte Werte kann ein Muster mit unterschiedlichen Stichwiederholungen erzeugt werden."
 
 #: lib/elements/stroke.py:125
 msgid "Running stitch length"
@@ -1798,7 +1799,7 @@ msgstr "Diese Funktion kopiert Ink/Stitch Parameter von dem zuerst gewählten El
 
 #: lib/extensions/fill_to_stroke.py:31 lib/extensions/fill_to_stroke.py:40
 msgid "Please select one or more fill objects to render the centerline."
-msgstr ""
+msgstr "Bitte ein oder mehrere Füllobjekte auswählen, um die Mittellinie zu zeichnen."
 
 #: lib/extensions/flip.py:28
 msgid "Please select one or more satin columns to flip."
@@ -3533,39 +3534,39 @@ msgstr "Stitche die kleiner sind als dieser Wert, werden gelöscht und nicht exp
 
 #: inx/inkstitch_fill_to_stroke.inx:3 inx/inkstitch_fill_to_stroke.inx:24
 msgid "Fill to Stroke"
-msgstr ""
+msgstr "Füllung zu Mittellinie"
 
 #: inx/inkstitch_fill_to_stroke.inx:19
 msgid "Threshold for dead ends (mm)"
-msgstr ""
+msgstr "Grenzwert für Sackgassen (mm)"
 
 #: inx/inkstitch_fill_to_stroke.inx:19
 msgid "Deletes small lines. A good value in most cases is the approximate line width of the original shape"
-msgstr ""
+msgstr "Löscht kleine Linien. In den meisten Fällen ist die ungefähre Linienbreite der ursprünglichen Form ein guter Wert"
 
 #: inx/inkstitch_fill_to_stroke.inx:20
 msgid "Dashed line"
-msgstr ""
+msgstr "Gestrichelte Linie"
 
 #: inx/inkstitch_fill_to_stroke.inx:21
 msgid "Line width (mm)"
-msgstr ""
+msgstr "Linienbreite (mm)"
 
 #: inx/inkstitch_fill_to_stroke.inx:25
 msgid "Fill outlines never look nice when embroidered - but it is a lot of work to convert a fill outline to a satin column or a running stitch. This tool helps you with this operation."
-msgstr ""
+msgstr "Umrandungen sehen nie gut aus, wenn sie mit einem Füllstich gestickt werden - aber es ist eine Menge Arbeit diese in Satin- oder Geradstich umzuwandeln. Dieses Werkzeug erleichtert diesen Arbeitsschritt."
 
 #: inx/inkstitch_fill_to_stroke.inx:27
 msgid "It is comparable to the Inkscape functionality of Path > Trace bitmap > Centerline tracing (- and has similar issues.) But instead of converting raster graphics, it will find the centerline of vector based objects with a fill."
-msgstr ""
+msgstr "Dieses Werkzeug ist vergleichbar mit der Inkscape Funktion \"Pfad ⇾ Bitmap nachzeichnen ...\" (und hat ähnliche Probleme). Anstelle einer Rastergrafik wird die Mittellinie vektorbasierter Objekte mit Füllung gefunden."
 
 #: inx/inkstitch_fill_to_stroke.inx:30
 msgid "You can improve the result by defining cut lines."
-msgstr ""
+msgstr "Durch vordefinierte Schnittlinien kann das Ergebnis verbessert werden."
 
 #: inx/inkstitch_fill_to_stroke.inx:33
 msgid "https://inkstitch.org/docs/stroke-tools/#fill-to-stroke"
-msgstr ""
+msgstr "https://inkstitch.org/de/docs/stroke-tools/#füllung-zu-mittellinie"
 
 #: inx/inkstitch_flip.inx:3
 msgid "Flip Satin Column Rails"
@@ -4777,11 +4778,11 @@ msgstr "Nadeleinstichstellen"
 
 #: inx/inkstitch_stitch_plan_preview.inx:22
 msgid "Lock"
-msgstr ""
+msgstr "Stickplanebene sperren"
 
 #: inx/inkstitch_stitch_plan_preview.inx:22
 msgid "Make stitch plan insensitive to mouse interactions"
-msgstr ""
+msgstr "Deaktiviere Mausinteraktionen mit dem Stickplan"
 
 #: inx/inkstitch_stitch_plan_preview_undo.inx:3
 msgid "Undo Stitch Plan Preview"
