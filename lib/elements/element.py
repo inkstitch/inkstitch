@@ -275,8 +275,8 @@ class EmbroideryElement(object):
 
     @property
     @param('lock_custom_start',
-           _('Custom svg path'),
-           tooltip=_("Enter a custom svg path. The last node will not be embroidered, but represents the first stitch of the element."),
+           _('Custom path'),
+           tooltip=_("Enter a custom path. For svg paths The last node will not be embroidered, but represents the first stitch of the element."),
            type="string",
            default="",
            select_items=[('lock_start', 'custom')],
@@ -321,8 +321,8 @@ class EmbroideryElement(object):
 
     @property
     @param('lock_custom_end',
-           _('Custom svg path'),
-           tooltip=_("Enter a custom svg path. The first node will not be embroidered, but resembles the last stitch of the element."),
+           _('Custom path'),
+           tooltip=_("Enter a custom path. For svg paths the first node will not be embroidered, but represents the last stitch of the element."),
            type="string",
            default="",
            select_items=[('lock_end', 'custom')],

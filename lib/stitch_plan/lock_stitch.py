@@ -27,9 +27,6 @@ class LockType:
         return "LockType(%s, %s, %s, %s, %s, %s)" % (self.id, self.name, self.path, self.path_type,
                                                      self.scale_percent, self.scale_absolute)
 
-    def __str__(self):
-        return str(self.id) or ""
-
     def copy(self, scale_percent=None, scale_absolute=None):
         cp = copy(self)
         cp.set('scale_percent', scale_percent or self.scale_percent)
@@ -179,10 +176,11 @@ class LockType:
 
 
 def get_lock_stitch_by_id(pos, lock_type, default="half_stitch"):
-    id_list = [str(lock) for lock in LOCK_DEFAULTS[pos]]
+    id_list = [lock.id for lock in LOCK_DEFAULTS[pos]]
 
-    lock = LOCK_DEFAULTS[pos][id_list.index(lock_type)] or None
-    if lock is None:
+    try:
+        lock = LOCK_DEFAULTS[pos][id_list.index(lock_type)]
+    except ValueError:
         lock = LOCK_DEFAULTS[pos][id_list.index(default)]
     return lock
 
