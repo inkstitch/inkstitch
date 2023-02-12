@@ -14,7 +14,8 @@ from ..debug import debug
 from ..i18n import _
 from ..marker import get_marker_elements_cache_key_data
 from ..patterns import apply_patterns, get_patterns_cache_key_data
-from ..stitch_plan.lock_stitch import LOCK_DEFAULTS, get_lock_stitch_by_id
+from ..stitch_plan.lock_stitch import (LOCK_DEFAULTS, AbsoluteLock, CustomLock,
+                                       SVGLock, get_lock_stitch_by_id)
 from ..svg import (PIXELS_PER_MM, apply_transforms, convert_length,
                    get_node_transform)
 from ..svg.tags import INKSCAPE_LABEL, INKSTITCH_ATTRIBS
@@ -291,7 +292,7 @@ class EmbroideryElement(object):
            type='float',
            unit="mm",
            default=0.7,
-           select_items=[('lock_start', lock.id) for lock in LOCK_DEFAULTS['start'] if "absolute" in lock.path_type],
+           select_items=[('lock_start', lock.id) for lock in LOCK_DEFAULTS['start'] if isinstance(lock, (AbsoluteLock, CustomLock))],
            sort_index=54)
     def lock_start_scale_mm(self):
         return self.get_float_param('lock_start_scale_mm', 0.7)
@@ -303,7 +304,7 @@ class EmbroideryElement(object):
            type='float',
            unit="%",
            default=100,
-           select_items=[('lock_start', lock.id) for lock in LOCK_DEFAULTS['start'] if "svg" in lock.path_type],
+           select_items=[('lock_start', lock.id) for lock in LOCK_DEFAULTS['start'] if isinstance(lock, (SVGLock, CustomLock))],
            sort_index=54)
     def lock_start_scale_percent(self):
         return self.get_float_param('lock_start_scale_percent', 100)
@@ -337,7 +338,7 @@ class EmbroideryElement(object):
            type='float',
            unit="mm",
            default=0.7,
-           select_items=[('lock_end', lock.id) for lock in LOCK_DEFAULTS['end'] if "absolute" in lock.path_type],
+           select_items=[('lock_end', lock.id) for lock in LOCK_DEFAULTS['end'] if isinstance(lock, (AbsoluteLock, CustomLock))],
            sort_index=57)
     def lock_end_scale_mm(self):
         return self.get_float_param('lock_end_scale_mm', 0.7)
@@ -349,7 +350,7 @@ class EmbroideryElement(object):
            type='float',
            unit="%",
            default=100,
-           select_items=[('lock_end', lock.id) for lock in LOCK_DEFAULTS['end'] if "svg" in lock.path_type],
+           select_items=[('lock_end', lock.id) for lock in LOCK_DEFAULTS['end'] if isinstance(lock, (SVGLock, CustomLock))],
            sort_index=57)
     @cache
     def lock_end_scale_percent(self):
