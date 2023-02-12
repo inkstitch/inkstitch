@@ -26,39 +26,60 @@ class Lock:
 
     def copy(self, scale_percent=None, scale_absolute=None):
         cp = copy(self)
-        cp.set('scale_percent', scale_percent or self.scale_percent)
-        cp.set('scale_absolute', scale_absolute or self.scale_absolute)
+        cp._set('scale_percent', scale_percent or self.scale_percent)
+        cp._set('scale_absolute', scale_absolute or self.scale_absolute)
         return cp
 
-    def set(self, attribute, value):
+    def _set(self, attribute, value):
         setattr(self, attribute, value)
 
 
 class CustomLock(Lock):
+    @property
+    def path(self):
+        return self._path
+
+    @path.setter
+    def path(self, path):
+        path_type = self._get_path_type(path)
+        if path_type in ['svg', 'absolute']:
+            self._path = path
+        else:
+            self._path = None
+
     def stitches(self, stitches, pos):
-        if not self.path:
+        if self.path is None:
             return half_stitch.stitches(stitches, pos)
 
-        if not re.match("^ *[0-9 .,-]*$", self.path):
-            path = Path(self.path)
+        path_type = self._get_path_type(self.path)
+        if path_type == "svg":
+            return SVGLock(self.id,
+                           self.name,
+                           self.path,
+                           self.scale_percent,
+                           self.scale_absolute).stitches(stitches, pos)
+        elif path_type == "absolute":
+            return AbsoluteLock(self.id,
+                                self.name,
+                                self.path,
+                                self.scale_percent,
+                                self.scale_absolute).stitches(stitches, pos)
+
+    def _get_path_type(self, path):
+        if not path:
+            return "invalid"
+        if not re.match("^ *[0-9 .,-]*$", path):
+            path = Path(path)
             if not path or len(list(path.end_points)) < 3:
-                return half_stitch.stitches(stitches, pos)
+                return None
             else:
-                return SVGLock(self.id,
-                               self.name,
-                               self.path,
-                               self.scale_percent,
-                               self.scale_absolute).stitches(stitches, pos)
+                return "svg"
         else:
-            path = string_to_floats(self.path, " ")
-            if path:
-                return AbsoluteLock(self.id,
-                                    self.name,
-                                    self.path,
-                                    self.scale_percent,
-                                    self.scale_absolute).stitches(stitches, pos)
+            path = string_to_floats(path, " ")
+            if not path:
+                return "invalid"
             else:
-                return half_stitch.stitches(stitches, pos)
+                return "absolute"
 
 
 class RelativeLock(Lock):
