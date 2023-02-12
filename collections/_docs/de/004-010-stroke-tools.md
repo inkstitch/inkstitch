@@ -2,76 +2,77 @@
 title: "Werkzeuge: Linie"
 permalink: /de/docs/stroke-tools/
 excerpt: ""
-last_modified_at: 2022-05-19
+last_modified_at: 2023-02-12
 toc: true
 ---
 ## Automatisch geführter Geradstich
 
-This tool will **replace** your set of running stitches  with a new set of running stitches in logical stitching order avoiding as many jumps as possible . Under-pathing  will be added as necessary  . The resulting running stitches will retain all of the parameters you had set on the original stitches including stitch length, number of repeats, bean stitch number of repeats, etc. Underpaths will only retain the stitch length, but will be set to only one  repeat and no bean stitch number of repeats.
+Dieses Werkzeug **ersetzt** eine Auswahl von Geradstichen mit neuen Geradstichen in logischer Reihenfolge um so viele Sprungstiche wie möglich zu vermeiden.
+Dabei werden Teilbereiche mit einem einfachen Geradstich unterlegt um weitere Sprungstiche zu unterbinden. Das Ergebnis erhält zuvor gesetzte Stickparameter wie beispielsweise Stichkänge, Anzahl der Wiederholungen, etc.
 
-### Usage
+### Funktionsweise
 
-- Select all the running stitches (prepared with parameters)that you wish to organize
-- Run `Extensions > Ink/Stitch > Tools : Stroke > Auto-Route Running stitch...`
-- Enable desired options and click apply
+- Wähle alle Geradstiche aus, die in einem möglichst zusammenhängenden Pfad gestickt werden sollen
+- Führe die Funktion unter `Erweiterungen > Werkzeuge: Linie > Automatisch geführter Geradstich` aus
+- Stelle die Optionen wie gewünscht ein und klicke auf `Anwenden`
 
-Tip: By default, it will choose the left-most extreme node as the starting point and the right-most extreme node  as the ending point (even if these are not terminal nodes). You can override this by attaching the "Auto-route running stitch starting/ending position" commands.
+Tipp: Standardmäßig wird die Stelle als Startpunkt ausgewählt, die am weitesten links liegt and der Punkt am rechten Rand ist der Enpunkt (auch, wenn sich diese Punkte nicht am Ende eines Pfades befinden). Dieses Verhalten kann durch die Befehle "Start-/Endposition für automatisch geführte Satinsäulen" angepasst werden.
 
-### Options
+### Optionen
 
-- Enable **Add nodes at intersections** will normally yield a better routing as under-paths will preferably start/end at intersections and terminal nodes.  You should only disable this option if you have manually added nodes where you want the paths to be split.
-- Enable **Trim jump stitches** to use trims instead of jump stitches. Trim commands are added to the SVG, so you can modify/delete as you see fit.
-- Enable **Preserve order of running stitches** if you prefer to keep your former order. 
+- Aktiviere **Knoten an Überschneidungen hinzufügen** um ein besseres Endergebnis zu erzielen. Deaktiviere diese Option nur, wenn bereits manuell Knoten an den Schnittpunkten der Linien hinzugefügt wurden.
+- Aktiviere **Reihenfolge der Geradstiche beibehalten** wenn die ursprüngliche Reihenfolge beibehalten werden soll.
+- Aktiviere **Schneide Faden bei Sprungstichen** um Fadenschnitt-Befehle zu den Objekten inzuzufügen auf die sonst ein Sprungstich folgen würde.
 
+## Satin zu Geradstich
 
-## Convert Satin to Stroke
-
-Satin to stroke will convert a satin column to it's centerline. This can be useful, when you decide later in the designing process to turn a satin column into a running stitch. You can also use it to alter the thickness of your satin column, when pull compensation isn't satisfying. In that case use this function to convert your satin column into a running stitch, set stroke width in the fill and stroke panel and run the ["Connvert line to to satin"](#convert-line-to-satin) function. 
-
-This works best on evenly spaced satin columns.
+Satin zu Geradstich konvertiert eine Satinsäule in ihre Mittellinie. Das kann beispielsweise dann nützlich sein, wenn nach der Verkleinerung eines Designs ein Geradstich besser passen würde als eine Satinsäule - oder wenn eine Dickenanpassung einer Satinsäule vorgenommen werden soll und eine Verbreiterung über den Zugausgleich kein zufriedenstellendes Ergebnis liefert. Ist dies der Fall, dann konvertiere die Satinsäule mit diesem Toll in einen Geradstich, setze die Linienbreit über `Füllung und Kontur` und im Anschluss ["Linie zu Satinsäule"](/docs/satin-tools/#convert-line-to-satin)
 
 ![Satin to Stroke example](/assets/images/docs/en/satin_to_stroke.png)
 
-### Usage
+### Anwendung
 
-1. Select the satin column(s) you want to convert into a running stitch
-2. Run `Extensions > Ink/Stitch > Satin Tools > Convert satin to stroke...`
-3. Choose wether you want to keep selected satin column(s) or if you want to replace them
-4. Click apply
+1. Wähle eine oder mehrere Satinsäulen aus die in einen Geradstich umgewandelt werden sollen
+2. Öffne die Erweiterung `Erweiterungen > Ink/Stitch > Werkzeuge: Linie > Satin zu Geradstich ...`
+3. Wähle aus ob die Satinsäulen eralten bleiben oder ersetzt werden sollen
+4. Klicke auf `Anwenden`
 
-
-## Fill to Stroke
-
-{% include upcoming_release.html %}
-
-Fill outlines never look nice when embroidered - but it is a lot of work to convert a fill outline to a satin column or a running stitch. This tool helps you with this operation.
-
-It is comparable to the Inkscape functionality of `Path > Trace bitmap > Centerline tracing` (- and has similar issues.) But instead of converting raster graphics, it will find the centerline of vector based objects with a fill.
-
-You can refine the result by defining cut lines.
-
-### Usage
-
-*  (Optional) Draw cut lines at the intersections/joints. They are simple stroke objects. This is especially useful, when you aim for satin columns. Please note, that each stroke element has to cut the fill element in which that each side of the fill is entirely disconnected.
-* Select one or more fill objects which you want to convert to a centerline along with the cut lines if you have defined them ealier.</label>
-* Run `Extensions > Ink/Stitch > Tools: Stroke > Fill to Stroke`
-* Set options and apply
-* Use the node tool to perform corrections if necessary
-
-### Options
-
-* Keep original: enable this option, if you want to keep the original object(s). Otherwise it will be removed.
-* Threshold for dead ends (px): This will remove small lines. In most cases the best value is the approximate line width of the original shape in pixels.
-* Dashed line: Set to true if you aim for a running stitch outline.
-* Line width (px): If you want to convert this directly into a satin column, set this to the satin column width. In most cases you would want to keep this value low, so it will be easier to check and correct the outlines before the conversion.
-
-## Jump to Stroke
+## Füllung zu Mittellinie
 
 {% include upcoming_release.html %}
 
-This will create a running stitch from the end position of the first element to the start position of the second element. Place this running stitch under following top stitches and avoid jump stitches.
+Füllstiche sind für Umrandungen selten gut geeignet - aber es ist eine Menge Arbeit die Umrandungen in eine Satinsäule oder in Geradstiche zu verwandeln. Dieses Werkzeug nimmt dir einen Teil der Arbeit ab.
 
-### Usage
+Die Funktion ist vergleichbar mit der Inkscape Funktion unter `Pfad > Bitmap nachzeichen ...` mit dem Erkennungsmodus `Strichzeichnung vektorisieren (autotrace)` und weist kommt mit ähnlichen Schwierigkeiten einher. Die Unterschiede sind:
 
-* Select two or more objects
-* Run `Extensions > Ink/Stitch > Tools: Stroke > Jump Stitch to Stroke`
+1. Dieses Werkzeug findet die Mittellinie nicht von Bilddateien sondern von gefüllten Vektorflächen.
+2. Es gibt einen Schwellwert um kurze Linien zu entfernen. Dieser Wert sollte auf die ungefähre Linienbreite eingestellt werden.
+3. Ink/Stitch bietet die Möglichkeit sogenannte Schnittlinien zu definieren. Das erfordert ein bisschen Übung, verbessert aber das Ergebnis um Längen. Die Schnittlinien müssen so angelegt sein, dass sie einen Teilbereich komplett abtrennen. Eine nur teilweise angeschnittene Füllfläche wird wieder zu einem Ganzen zusammengefügt und zeigt keinen Effekt. Das bedeutet auch, dass die Reihenfolge der Schnittlinien einen Effekt auf das Ergebnis haben kann.
+
+![Fill to Stroke](/assets/images/docs/en/fill_to_stroke.png)
+
+### Anwendung
+
+*  (Optional) Zeichne Schnittlinien an Schnittpunkten. Schnittlinien sind einfache Bezier-Linien, ohne weitere Kennzeichnung. Normalerweise wird bei der Mittenberechnung an Schnittstellen eine kleine Delle entstehen. Wird die Ursprungsform aber von einer Schnittlinie unterteilt, kann diese Delle vermieden werden. Bitte beim Erstellen darauf achten, dass immer ein ganzer Teilbereich der Füllfäche abgetrennt werden muss. Dabei spielt auch die Reihenfolge der Schnittlinien ggf. eine Rolle.
+* Wähle ein oder mehrere Füllobjekte die in ihre Mittellinie umgewandelt werden sollen zusammen mit ihren Schnittlinien aus.
+* Öffne `Erweiterungen > Ink/Stitch > Werkzeuge: Linie > Füllung zu Mittellinie`
+* Setze die gewünschten Optionen (siehe unten) und klicke auf `Anwenden`
+* Nutze das Knotenwerkzeug um ggf. Stellen nachzukorrigieren
+
+### Optionen
+
+* Original behalten: aktiviere diese Option, wenn die originalen Pfade nicht entfernt werden sollen.
+* Grenzwert für Sackgassen (mm): Entfernt kurze Linien. In den meisten Fällen ist hier der Wert der ungefähren Linienbreite des Originals in Milimetern einzutragen.
+* Gestrichelte Linie: aktiviere diese Option, wenn das Endergebnis ein Geradstich werden soll (sonst: Zick zack oder Weiterverarbeitung zu Satin)
+* Linienbreite (mm): wird eine Weiterverarbeitung zu Satinsäulen angestrebt, kann hier direkt die Linienbreite angegeben werden. In den meisten Fällen ist aber eine Überprüfung des Ergebnisses notwendig, dafür diesen Wert klein halten.
+
+## Sprungstich zu Geradstich
+
+{% include upcoming_release.html %}
+
+Dieses Werkzeug erstellt Geradstiche von der Endposition des ersten Elements zu der Startposition des zweiten. Leite den hier generierten Geradstich versteckt unter später folgenden Stickflächen entlang und vermeide so unnötige Sprungstiche.
+
+### Anwendung
+
+* Wähle zwei oder mehr Objekte aus
+* Öffne `Erweiterungen > Ink/Stitch > Werkzeuge: Linie > Sprungstich zu Geradstich`
