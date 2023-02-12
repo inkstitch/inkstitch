@@ -2,7 +2,7 @@
 title: "Garnfarben-Verwaltung"
 permalink: /de/docs/thread-color/
 excerpt: ""
-last_modified_at: 2021-10-23
+last_modified_at: 2023-02-12
 toc: true
 ---
 ## Garnfarben-Liste anwenden

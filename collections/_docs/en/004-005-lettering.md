@@ -15,8 +15,10 @@ The lettering tool generates multi-line text as satin columns and dynamically ro
 
 * Run `Extensions > Ink/Stitch  > Lettering`
 * Enter your text (multi-line is possible)
-* Set font and scaling
-* Click on `Apply and Quit`
+* Adjust font family and scaling.<br>
+  **⚠ Warning**: For best results please note the limits for scaling in the font description.
+* Click on `Apply and Quit`.
+* Position your text within the svg document.
 
 ### Options
 

@@ -55,8 +55,6 @@ Sauvegarder le fichier .inf avec votre fichier .exp (avec le même nom, seule l'
 
 Utilisez ce paramètrage (ce sont les couleurs classiques, mais elles n'influencent pas la reconaissance du richelieu):
 
-
-
 Aiguille|Couleur                                 |Début|Fin
 ------|-------------------------------------------|-----|---
 1     |<span style="color: #ffff00">#ffff00</span>|67   |113

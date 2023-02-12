@@ -2,7 +2,7 @@
 title: "Kurvenfüllung"
 permalink: /de/docs/stitches/guided-fill/
 excerpt: ""
-last_modified_at: 2022-12-08
+last_modified_at: 2023-02-12
 toc: true
 ---
 ## Beschreibung
@@ -67,9 +67,10 @@ Vernähen erzwingen                          || Vernäht den Faden nach diesem E
 Fadenschnitt                                || Schneidet den Faden nachdem dieses Objekt genäht wurde
 Stopp                                       || Stoppt die Maschine nachdem dieses Objekt genäht wurde und springt zur Stopp-Position (sofern vorhanden)
 
-## Underlay
+## Unterlage
 
-Underlay in Guided Fill doesn't follow the guide line, but uses the fill angle which can be defined in the underlay [params](/de/docs/fill-stitch#unterlage).
+Die Unterlage für geführte Füllstiche folgt nicht der Führungslinie sondern nutzt den Füllwinkel der in den [Unterleger-Parametern](/de/docs/stitches/fill-stitch/#unterlage) festgelegt werden kann.
 
 ## Samples Files Including Guided Fill Stitches
+
 {% include tutorials/tutorial_list key="stichart" value="Kurvenfüllung" %}

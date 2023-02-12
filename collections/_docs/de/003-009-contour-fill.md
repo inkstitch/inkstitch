@@ -2,7 +2,7 @@
 title: "Konturfüllung"
 permalink: /de/docs/stitches/contour-fill/
 excerpt: ""
-last_modified_at: 2022-05-16
+last_modified_at: 2023-02-12
 toc: true
 ---
 ## Beschreibung
@@ -43,4 +43,5 @@ Stopp                           || Stoppt die Maschine nachdem dieses Objekt gen
 Die Unterlage einer Konturfüllung folgt nicht der Kontur, aber nutzt den Stickwinkel, der in den [Parametern der Unterlage](/de/docs/params/#füllung-unterlage) eingestellt werden kann.
 
 ### Beispieldateien für Konturfüllung
-{% include tutorials/tutorial_list key="stichart" value="Konturfülllung" %}
+
+{% include tutorials/tutorial_list key="stichart" value="Konturfüllung" %}

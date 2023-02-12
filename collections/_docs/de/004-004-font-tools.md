@@ -2,7 +2,7 @@
 title: "Schriftwerkzeuge"
 permalink: /de/docs/font-tools/
 excerpt: ""
-last_modified_at: 2021-03-07
+last_modified_at: 2023-02-12
 toc: true
 ---
 Eine Sammlung von Werkzeugen für Schriftarten Entwickler oder Personen, die dem [Text-Werkzeug](/de/docs/lettering/) von Ink/Stitch zusätzliche Schriften hinzufügen wollen.

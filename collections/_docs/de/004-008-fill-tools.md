@@ -2,11 +2,10 @@
 title: Füllstich Werkzeuge
 permalink: /de/docs/fill-tools/
 excerpt: ""
-last_modified_at: 2020-11-29
+last_modified_at: 2023-02-12
 toc: true
 ---
 ## Füllstich-Objekte zerlegen
-
 
 Füllstich Objekte sollten aus Objekten bestehen, deren Randlinien sich nicht kreuzen. Manchmal ist es wirklich nicht einfach, diese Regel zu erfüllen, denn oft entstehen winzige Schleifen, die man in Inkscape gar nicht sehen kann. Aus diesem Grund können Füllstiche oft ärgerliche Fehlermeldungen hervorrufen.
 
