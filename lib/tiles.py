@@ -27,6 +27,9 @@ class Tile:
         self.shift0 = None
         self.shift1 = None
 
+    def __lt__(self, other):
+        return self.name < other.name
+
     def __repr__(self):
         return f"Tile({self.name}, {self.shift0}, {self.shift1})"
 

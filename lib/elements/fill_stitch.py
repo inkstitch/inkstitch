@@ -161,7 +161,7 @@ class FillStitch(EmbroideryElement):
 
     @property
     @param('meander_pattern', _('Meander Pattern'), type='select', default=0,
-           options=[tile.name for tile in tiles.all_tiles()], select_items=[('fill_method', 4)], sort_index=3)
+           options=sorted(tile.name for tile in tiles.all_tiles()), select_items=[('fill_method', 4)], sort_index=3)
     def meander_pattern(self):
         return self.get_param('meander_pattern', None)
 
