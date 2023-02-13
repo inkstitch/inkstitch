@@ -1,5 +1,5 @@
 ---
-title: "Apple Silicon Manual Build"
+title: "Manual Build: Apple Silicon"
 permalink: /developers/inkstitch/apple-silicon-manual-build/
 last_modified_at: 2022-03-31
 toc: true

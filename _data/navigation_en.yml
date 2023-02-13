@@ -199,6 +199,10 @@ developers:
       url: /developers/inkstitch/windows-manual-setup/
     - title: Manual Build (Windows)
       url: /developers/inkstitch/windows-manual-build
+    - title: Manual Build (Apple Silicon)
+      url: /developers/inkstitch/apple-silicon-manual-build/
+    - title: Manual Build (older macOS systems)
+      url: /developers/inkstitch/manual-build-old-macos/
     - title: Debugging and Profiling
       url: /developers/inkstitch/debug/
     - title: Coding Style
