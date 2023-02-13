@@ -7,7 +7,7 @@ toc: true
 This is an instructional guide how to build Ink/Stitch locally. The manual install for developers is described in the [manual setup section](/developers/inkstitch/manual-setup/).
 {: .notice--info}
 
-### Build requirements
+## Build requirements
 
 * MacPorts 
 
