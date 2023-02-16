@@ -59,12 +59,12 @@ class Debug(object):
 
         # To debug with PyCharm:
 
-        # 0. You must use the PyCharm Professional Edition and _not_ the Community
-        #    Edition. Jetbrains has chosen to make remote debugging a Pro feature.
-        #    To debug Inkscape python extensions, the extension code and Inkscape run
-        #    independently of PyCharm, and only communicate with the debugger via a
-        #    TCP socket. Thus, debugging is "remote," even if it's on the same machine,
-        #    connected via the loopback interface.
+        # You must use the PyCharm Professional Edition and _not_ the Community
+        # Edition. Jetbrains has chosen to make remote debugging a Pro feature.
+        # To debug Inkscape python extensions, the extension code and Inkscape run
+        # independently of PyCharm, and only communicate with the debugger via a
+        # TCP socket. Thus, debugging is "remote," even if it's on the same machine,
+        # connected via the loopback interface.
         #
         # 1.     pip install pydev_pycharm
         #
@@ -74,22 +74,33 @@ class Debug(object):
         #    you could do:
         #        pip install pydevd-pycharm~=223.8617.48
         #
-        # 2. In the Run menu, choose "Edit Configurations..." and create a new
+        # 2. From the Pycharm "Run" menu, choose "Edit Configurations..." and create a new
         #    configuration. Set "IDE host name:" to  "localhost" and "Port:" to 5678.
         #    You can leave the default settings for all other choices.
         #
         # 3. Touch a file named "DEBUG" at the top of your git repo, as above.
         #
-        # 4. In the execution env for Inkscape, set the environment variable
+        # 4. Create a symbolic link in the Inkscape extensions directory to the
+        #    top-level directory of your github repo. On a mac, for example:
+        #        cd ~/Library/Application\ Support/org.inkscape.Inkscape/config/inkscape/extensions/
+        #        ln -s <full path to the top level of your Ink/Stitch github repo>
+        #    On other architectures it may be:
+        #        cd ~/.config/inkscape/extensions
+        #        ln -s <full path to the top level of your Ink/Stitch github repo>
+        #    Remove any other Ink/Stitch files or references to Ink/Stitch from the
+        #    extensions directory, or you'll see duplicate entries in the Ink/Stitch
+        #    extensions menu in Inkscape.
+        #
+        # 5. In the execution env for Inkscape, set the environment variable
         #    PYCHARM_REMOTE_DEBUG to any value, and launch Inkscape. If you're starting
         #    Inkscape from the PyCharm Terminal pane, you can do:
         #        export PYCHARM_REMOTE_DEBUG=true;inkscape
         #
-        # 5. Either click on the green "bug" icon or press Ctrl-D to start debugging.
+        # 6. Either click on the green "bug" icon or press Ctrl-D to start debugging.
         #    The PyCharm debugger pane will display the message "Waiting for process
         #    connection..."
         #
-        # 6. Do some action in Inkscape which runs Ink/Stitch extension code, and the
+        # 7. Do some action in Inkscape which invokes Ink/Stitch extension code, and the
         #    debugger will be triggered. If you've left "Suspend after connect" checked
         #    in the Run configuration, PyCharm will pause in the "self.log("Enabled
         #    PyDev debugger.)" statement, below. Uncheck the box to have it continue
