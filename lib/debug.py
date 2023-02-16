@@ -96,9 +96,9 @@ class Debug(object):
         #    Inkscape from the PyCharm Terminal pane, you can do:
         #        export PYCHARM_REMOTE_DEBUG=true;inkscape
         #
-        # 6. Either click on the green "bug" icon or press Ctrl-D to start debugging.
-        #    The PyCharm debugger pane will display the message "Waiting for process
-        #    connection..."
+        # 6. In Pycharm, either click on the green "bug" icon if visible in the upper
+        #    right or press Ctrl-D to start debugging.The PyCharm debugger pane will
+        #    display the message "Waiting for process connection..."
         #
         # 7. Do some action in Inkscape which invokes Ink/Stitch extension code, and the
         #    debugger will be triggered. If you've left "Suspend after connect" checked
