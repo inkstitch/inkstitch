@@ -81,12 +81,12 @@ class Debug(object):
         # 3. Touch a file named "DEBUG" at the top of your git repo, as above.
         #
         # 4. Create a symbolic link in the Inkscape extensions directory to the
-        #    top-level directory of your github repo. On a mac, for example:
+        #    top-level directory of your git repo. On a mac, for example:
         #        cd ~/Library/Application\ Support/org.inkscape.Inkscape/config/inkscape/extensions/
-        #        ln -s <full path to the top level of your Ink/Stitch github repo>
+        #        ln -s <full path to the top level of your Ink/Stitch git repo>
         #    On other architectures it may be:
         #        cd ~/.config/inkscape/extensions
-        #        ln -s <full path to the top level of your Ink/Stitch github repo>
+        #        ln -s <full path to the top level of your Ink/Stitch git repo>
         #    Remove any other Ink/Stitch files or references to Ink/Stitch from the
         #    extensions directory, or you'll see duplicate entries in the Ink/Stitch
         #    extensions menu in Inkscape.
