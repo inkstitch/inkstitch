@@ -63,8 +63,7 @@ def write_embroidery_file(file_path, stitch_plan, svg, settings={}):
     pattern = pyembroidery.EmbPattern()
 
     # For later use when writing .dst header title field.
-    svg_docname = svg.root.attrib['{http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd}docname']
-    pattern.extras['name'] = os.path.splitext(os.path.basename(svg_docname))[0]
+    pattern.extras['name'] = os.path.splitext(svg.name)[0]
 
     stitch = Stitch(0, 0)
 
