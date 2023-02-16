@@ -47,7 +47,7 @@ class Debug(object):
         self.log("Debug logging enabled.")
 
     def init_debugger(self):
-        # How to debug Ink/Stitch:
+        # How to debug Ink/Stitch with LiClipse:
         #
         # 1. Install LiClipse (liclipse.com) -- no need to install Eclipse first
         # 2. Start debug server as described here: http://www.pydev.org/manual_adv_remote_debugger.html
@@ -55,8 +55,63 @@ class Debug(object):
         # 3. Create a file named "DEBUG" next to inkstitch.py in your git clone.
         # 4. Run any extension and PyDev will start debugging.
 
+        ###
+
+        # To debug with PyCharm:
+
+        # You must use the PyCharm Professional Edition and _not_ the Community
+        # Edition. Jetbrains has chosen to make remote debugging a Pro feature.
+        # To debug Inkscape python extensions, the extension code and Inkscape run
+        # independently of PyCharm, and only communicate with the debugger via a
+        # TCP socket. Thus, debugging is "remote," even if it's on the same machine,
+        # connected via the loopback interface.
+        #
+        # 1.     pip install pydev_pycharm
+        #
+        #    pydev_pycharm is versioned frequently. Jetbrains suggests installing
+        #    a version at least compatible with the current build. For example, if your
+        #    PyCharm build, as found in menu PyCharm -> About Pycharm is 223.8617.48,
+        #    you could do:
+        #        pip install pydevd-pycharm~=223.8617.48
+        #
+        # 2. From the Pycharm "Run" menu, choose "Edit Configurations..." and create a new
+        #    configuration. Set "IDE host name:" to  "localhost" and "Port:" to 5678.
+        #    You can leave the default settings for all other choices.
+        #
+        # 3. Touch a file named "DEBUG" at the top of your git repo, as above.
+        #
+        # 4. Create a symbolic link in the Inkscape extensions directory to the
+        #    top-level directory of your git repo. On a mac, for example:
+        #        cd ~/Library/Application\ Support/org.inkscape.Inkscape/config/inkscape/extensions/
+        #        ln -s <full path to the top level of your Ink/Stitch git repo>
+        #    On other architectures it may be:
+        #        cd ~/.config/inkscape/extensions
+        #        ln -s <full path to the top level of your Ink/Stitch git repo>
+        #    Remove any other Ink/Stitch files or references to Ink/Stitch from the
+        #    extensions directory, or you'll see duplicate entries in the Ink/Stitch
+        #    extensions menu in Inkscape.
+        #
+        # 5. In the execution env for Inkscape, set the environment variable
+        #    PYCHARM_REMOTE_DEBUG to any value, and launch Inkscape. If you're starting
+        #    Inkscape from the PyCharm Terminal pane, you can do:
+        #        export PYCHARM_REMOTE_DEBUG=true;inkscape
+        #
+        # 6. In Pycharm, either click on the green "bug" icon if visible in the upper
+        #    right or press Ctrl-D to start debugging.The PyCharm debugger pane will
+        #    display the message "Waiting for process connection..."
+        #
+        # 7. Do some action in Inkscape which invokes Ink/Stitch extension code, and the
+        #    debugger will be triggered. If you've left "Suspend after connect" checked
+        #    in the Run configuration, PyCharm will pause in the "self.log("Enabled
+        #    PyDev debugger.)" statement, below. Uncheck the box to have it continue
+        #    automatically to your first set breakpoint.
+
         try:
-            import pydevd
+            if 'PYCHARM_REMOTE_DEBUG' in os.environ:
+                import pydevd_pycharm
+            else:
+                import pydevd
+
         except ImportError:
             self.log("importing pydevd failed (debugger disabled)")
 
@@ -66,7 +121,12 @@ class Debug(object):
             sys.stderr = devnull
 
             try:
-                pydevd.settrace()
+                if 'PYCHARM_REMOTE_DEBUG' in os.environ:
+                    pydevd_pycharm.settrace('localhost', port=5678, stdoutToServer=True,
+                                            stderrToServer=True)
+                else:
+                    pydevd.settrace()
+
             except socket.error as error:
                 self.log("Debugging: connection to pydevd failed: %s", error)
                 self.log("Be sure to run 'Start debugging server' in PyDev to enable debugging.")
