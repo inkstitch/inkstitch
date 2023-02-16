@@ -106,9 +106,6 @@ class Debug(object):
         #    PyDev debugger.)" statement, below. Uncheck the box to have it continue
         #    automatically to your first set breakpoint.
 
-        # Thanks to lexelby for the hints needed to puzzle this out.
-
-
         try:
             if 'PYCHARM_REMOTE_DEBUG' in os.environ:
                 import pydevd_pycharm
