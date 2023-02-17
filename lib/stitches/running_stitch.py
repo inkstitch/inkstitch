@@ -12,6 +12,7 @@ import numpy as np
 from shapely import geometry as shgeo
 from ..utils import prng
 from ..utils.geometry import Point
+from ..utils.threading import check_stop_flag
 
 """ Utility functions to produce running stitches. """
 
@@ -196,6 +197,8 @@ def stitch_curve_evenly(points: typing.Sequence[Point], stitch_length: float, to
     last = points[0]
     stitches = []
     while i is not None and i < len(points):
+        check_stop_flag()
+
         d = last.distance(points[i]) + distLeft[i]
         if d == 0:
             return stitches

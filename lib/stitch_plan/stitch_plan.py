@@ -11,6 +11,7 @@ from ..i18n import _
 from ..svg import PIXELS_PER_MM
 from .color_block import ColorBlock
 from .ties import add_ties
+from ..utils.threading import check_stop_flag
 
 
 def stitch_groups_to_stitch_plan(stitch_groups, collapse_len=None, min_stitch_len=0.1, disable_ties=False):  # noqa: C901
@@ -34,6 +35,8 @@ def stitch_groups_to_stitch_plan(stitch_groups, collapse_len=None, min_stitch_le
     color_block = stitch_plan.new_color_block(color=stitch_groups[0].color)
 
     for stitch_group in stitch_groups:
+        check_stop_flag()
+
         if not stitch_group.stitches:
             continue
 

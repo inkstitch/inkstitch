@@ -10,6 +10,8 @@ from threading import Event, Thread
 import wx
 from wx.lib.intctrl import IntCtrl
 
+from lib.debug import debug
+from lib.utils.threading import ExitThread
 from ..i18n import _
 from ..stitch_plan import stitch_groups_to_stitch_plan, stitch_plan_from_file
 from ..svg import PIXELS_PER_MM
@@ -749,6 +751,10 @@ class SimulatorPreview(Thread):
         self.simulate_window = None
         self.refresh_needed = Event()
 
+        # This is read by utils.threading.check_stop_flag() to abort stitch plan
+        # generation.
+        self.stop = Event()
+
         # used when closing to avoid having the window reopen at the last second
         self._disabled = False
 
@@ -770,17 +776,27 @@ class SimulatorPreview(Thread):
         if not self.is_alive():
             self.start()
 
+        self.stop.set()
         self.refresh_needed.set()
 
     def run(self):
         while True:
             self.refresh_needed.wait()
             self.refresh_needed.clear()
-            self.update_patches()
+            self.stop.clear()
+
+            try:
+                debug.log("update_patches")
+                self.update_patches()
+            except ExitThread:
+                debug.log("ExitThread caught")
+                self.stop.clear()
 
     def update_patches(self):
         try:
             patches = self.parent.generate_patches(self.refresh_needed)
+        except ExitThread:
+            raise
         except:  # noqa: E722
             # If something goes wrong when rendering patches, it's not great,
             # but we don't really want the simulator thread to crash.  Instead,

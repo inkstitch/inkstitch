@@ -24,6 +24,7 @@ from .utils.autoroute import (add_elements_to_group, add_jumps,
                               get_starting_and_ending_nodes,
                               preserve_original_groups,
                               remove_original_elements)
+from ..utils.threading import check_stop_flag
 
 
 class SatinSegment(object):
@@ -366,6 +367,8 @@ def build_graph(elements, preserve_order=False):
     # best spots for us.
 
     for element in elements:
+        check_stop_flag()
+
         segments = []
         if isinstance(element, Stroke):
             segments.append(RunningStitch(element))

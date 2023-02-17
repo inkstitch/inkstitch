@@ -21,6 +21,7 @@ from .utils.autoroute import (add_elements_to_group, add_jumps,
                               get_starting_and_ending_nodes,
                               preserve_original_groups,
                               remove_original_elements)
+from ..utils.threading import check_stop_flag
 
 
 class LineSegments:
@@ -59,9 +60,13 @@ class LineSegments:
                     self._lines.append(line)
                     self._elements.append(element)
 
+                check_stop_flag()
+
     def _get_intersection_points(self):
         for i, line1 in enumerate(self._lines):
             for j in range(i + 1, len(self._lines)):
+                check_stop_flag()
+
                 line2 = self._lines[j]
                 distance = line1.distance(line2)
                 if distance > 50:
@@ -169,6 +174,8 @@ def build_graph(elements, preserve_order, break_up):
                 # any direction, so we add the edge in the opposite direction too.
                 graph.add_edge(str(end), str(start), element=element)
 
+            check_stop_flag()
+
     return graph
 
 
@@ -199,6 +206,8 @@ def path_to_elements(graph, path, trim):  # noqa: C901
     just_trimmed = False
     el = None
     for start, end, direction in path:
+        check_stop_flag()
+
         element = graph[start][end].get('element')
         start_coord = graph.nodes[start]['point']
         end_coord = graph.nodes[end]['point']

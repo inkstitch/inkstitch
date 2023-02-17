@@ -25,6 +25,7 @@ from ..i18n import _
 from ..svg.tags import SVG_POLYLINE_TAG
 from ..utils import get_resource_dir
 from .base import InkstitchExtension
+from ..utils.threading import ExitThread, check_stop_flag
 
 
 def grouper(iterable_obj, count, fillvalue=None):
@@ -509,8 +510,12 @@ class SettingsFrame(wx.Frame):
                 # for many params in embroider.py.
 
                 patches.extend(copy(node).embroider(None))
+
+                check_stop_flag()
         except SystemExit:
             wx.CallAfter(self._show_warning)
+            raise
+        except ExitThread:
             raise
         except Exception as e:
             # Ignore errors.  This can be things like incorrect paths for

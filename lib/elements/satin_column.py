@@ -21,6 +21,7 @@ from ..utils import Point, cache, cut, cut_multiple, prng
 from ..stitches import running_stitch
 from .element import EmbroideryElement, param, PIXELS_PER_MM
 from .validation import ValidationError, ValidationWarning
+from ..utils.threading import check_stop_flag
 
 
 class TooFewPathsError(ValidationError):
@@ -818,10 +819,12 @@ class SatinColumn(EmbroideryElement):
             index1 = 0
 
             while index0 < last_index0 and index1 < last_index1:
+                check_stop_flag()
+
                 # Each iteration of this outer loop is one stitch.  Keep going
                 # until we fall off the end of the section.
 
-                old_center = shgeo.Point(x/2 for x in (pos0 + pos1))
+                old_center = shgeo.Point(x / 2 for x in (pos0 + pos1))
 
                 while to_travel > 0 and index0 < last_index0 and index1 < last_index1:
                     # In this loop, we inch along each rail a tiny bit per
