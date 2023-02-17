@@ -143,8 +143,9 @@ class FillStitch(EmbroideryElement):
     @property
     @param('smoothness_mm', _('Smoothness'),
            tooltip=_(
-               'Smooth the stitch path.  Smoothness limits approximately how far the smoothed stitch path ' +
-               'is allowed to deviate from the original path.  Hint: a lower stitch tolerance may be needed too.'
+               'Smooth the stitch path.  Smoothness limits how far the smoothed stitch path ' +
+               'is allowed to deviate from the original path.  Try low numbers like 0.2.  ' +
+               'Hint: a lower running stitch tolerance may be needed too.'
            ),
            type='integer',
            unit='mm',
