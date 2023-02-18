@@ -3,7 +3,7 @@ from math import ceil, floor
 
 import inkex
 import lxml
-from networkx import Graph
+import networkx as nx
 from shapely.geometry import LineString
 from shapely.prepared import prep
 
@@ -127,7 +127,7 @@ class Tile:
         return self._generate_graph(prepared_shape, shape_center, shape_diagonal)
 
     def _generate_graph(self, shape, shape_center, shape_diagonal):
-        graph = Graph()
+        graph = nx.Graph()
         tiles0 = ceil(shape_diagonal / self.shift0.length()) + 2
         tiles1 = ceil(shape_diagonal / self.shift1.length()) + 2
         for repeat0 in range(floor(-tiles0 / 2), ceil(tiles0 / 2)):
@@ -147,11 +147,12 @@ class Tile:
         return graph
 
     def _remove_dead_ends(self, graph):
+        graph.remove_edges_from(nx.selfloop_edges(graph))
         while True:
-            nodes_with_degree_1 = [node for node, degree in graph.degree() if degree == 1]
+            dead_end_nodes = [node for node, degree in graph.degree() if degree <= 1]
 
-            if nodes_with_degree_1:
-                graph.remove_nodes_from(nodes_with_degree_1)
+            if dead_end_nodes:
+                graph.remove_nodes_from(dead_end_nodes)
             else:
                 return
 

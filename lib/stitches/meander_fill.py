@@ -1,3 +1,5 @@
+from itertools import combinations
+
 import networkx as nx
 from shapely.geometry import MultiPoint, Point
 from shapely.ops import nearest_points
@@ -5,11 +7,11 @@ from shapely.ops import nearest_points
 from .running_stitch import running_stitch
 from .. import tiles
 from ..debug import debug
-from ..stitch_plan import Stitch
-from ..utils.smoothing import smooth_path
+from ..utils.clamp_path import clamp_path_to_polygon
 from ..utils.geometry import Point as InkStitchPoint, ensure_geometry_collection
 from ..utils.list import poprandom
 from ..utils.prng import iter_uniform_floats
+from ..utils.smoothing import smooth_path
 from ..utils.threading import check_stop_flag
 
 
@@ -24,11 +26,11 @@ def meander_fill(fill, shape, shape_index, starting_point, ending_point):
     debug.log_line_strings(lambda: ensure_geometry_collection(shape.boundary).geoms, 'Meander shape')
     graph = tile.to_graph(shape, fill.meander_scale)
     debug.log_graph(graph, 'Meander graph')
-    debug.log(lambda: f"graph connected? {nx.is_connected(graph)}")
+    ensure_connected(graph)
     start, end = find_starting_and_ending_nodes(graph, shape, starting_point, ending_point)
     rng = iter_uniform_floats(fill.random_seed, 'meander-fill', shape_index)
 
-    return post_process(generate_meander_path(graph, start, end, rng), fill)
+    return post_process(generate_meander_path(graph, start, end, rng), shape, fill)
 
 
 def get_tile(tile_name):
@@ -38,6 +40,24 @@ def get_tile(tile_name):
         return all_tiles.get(tile_name, all_tiles.popitem()[1])
     except KeyError:
         return None
+
+
+def ensure_connected(graph):
+    """If graph is unconnected, add edges to make it connected."""
+
+    # TODO: combine this with possible_jumps() in lib/stitches/utils/autoroute.py
+    possible_connections = []
+    for component1, component2 in combinations(nx.connected_components(graph), 2):
+        points1 = MultiPoint([Point(node) for node in component1])
+        points2 = MultiPoint([Point(node) for node in component2])
+
+        start_point, end_point = nearest_points(points1, points2)
+        possible_connections.append(((start_point.x, start_point.y), (end_point.x, end_point.y), start_point.distance(end_point)))
+
+    if possible_connections:
+        for start, end in nx.k_edge_augmentation(graph, 1, avail=possible_connections):
+            check_stop_flag()
+            graph.add_edge(start, end)
 
 
 def find_starting_and_ending_nodes(graph, shape, starting_point, ending_point):
@@ -137,14 +157,14 @@ def replace_edge_pair(path, edge1, edge2, graph, graph_nodes):
 
 
 @debug.time
-def post_process(points, fill):
+def post_process(points, shape, fill):
     debug.log(f"smoothness: {fill.smoothness}")
     # debug.log_line_string(LineString(points), "pre-smoothed", "#FF0000")
     smoothed_points = smooth_path(points, fill.smoothness)
     smoothed_points = [InkStitchPoint.from_tuple(point) for point in smoothed_points]
 
     stitches = running_stitch(smoothed_points, fill.running_stitch_length, fill.running_stitch_tolerance)
-    stitches = [Stitch(point) for point in stitches]
+    stitches = clamp_path_to_polygon(stitches, shape)
 
     return stitches
 
