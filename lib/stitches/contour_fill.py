@@ -12,9 +12,11 @@ from shapely.validation import make_valid
 
 from ..stitch_plan import Stitch
 from ..utils import DotDict
+from ..utils.clamp_path import clamp_path_to_polygon
 from ..utils.geometry import (cut, ensure_geometry_collection,
                               ensure_multi_polygon, reverse_line_string,
                               roll_linear_ring)
+from ..utils.smoothing import smooth_path
 from ..utils.threading import check_stop_flag
 from .running_stitch import running_stitch
 

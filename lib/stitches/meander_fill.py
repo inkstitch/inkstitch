@@ -6,7 +6,7 @@ from .running_stitch import running_stitch
 from .. import tiles
 from ..debug import debug
 from ..stitch_plan import Stitch
-from ..utils import smooth_path
+from ..utils.smoothing import smooth_path
 from ..utils.geometry import Point as InkStitchPoint, ensure_geometry_collection
 from ..utils.list import poprandom
 from ..utils.prng import iter_uniform_floats
