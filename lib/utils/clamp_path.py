@@ -100,7 +100,7 @@ def clamp_path_to_polygon(path, polygon):
                     if not exit_point.intersects(entry_point):
                         # Now break the border into pieces using those points.
                         border = find_border(polygon, exit_point)
-                        border_pieces = border.difference(MultiPolygon((entry_point, exit_point)))
+                        border_pieces = border.difference(MultiPolygon((entry_point, exit_point))).geoms
                         border_pieces = fix_starting_point(border_pieces)
 
                         # Pick the shortest way to get from the exiting to the
