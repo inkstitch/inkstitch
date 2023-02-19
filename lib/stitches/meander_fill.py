@@ -33,11 +33,11 @@ def meander_fill(fill, shape, shape_index, starting_point, ending_point):
     return post_process(generate_meander_path(graph, start, end, rng), shape, fill)
 
 
-def get_tile(tile_name):
-    all_tiles = {tile.name: tile for tile in tiles.all_tiles()}
+def get_tile(tile_id):
+    all_tiles = {tile.id: tile for tile in tiles.all_tiles()}
 
     try:
-        return all_tiles.get(tile_name, all_tiles.popitem()[1])
+        return all_tiles.get(tile_id, all_tiles.popitem()[1])
     except KeyError:
         return None
 

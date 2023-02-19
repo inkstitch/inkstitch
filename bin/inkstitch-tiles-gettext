@@ -1,0 +1,21 @@
+#!/usr/bin/env python
+
+import os
+import json
+
+# generate fake python code containing the names and descriptions of all built-
+# in tiles as gettext calls so that pybabel will extract them into messages.po
+
+tiles_dir = os.path.join(os.path.dirname(__file__), "..", "tiles")
+
+for tile in sorted(os.listdir(tiles_dir)):
+    with open(os.path.join(tiles_dir, tile, "tile.json")) as tile_json:
+        tile_metadata = json.load(tile_json)
+
+        print("# L10N name of tile in tiles/%s" % tile)
+        print("_(%s)" % repr(tile_metadata.get("name", "")))
+
+        if tile_metadata.get("description", ""):
+            print("# L10N description of tile in tiles/%s" % tile)
+            print("_(%s)" % repr(tile_metadata.get("description", "")))
+

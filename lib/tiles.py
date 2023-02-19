@@ -2,12 +2,14 @@ import os
 from math import ceil, floor
 
 import inkex
+import json
 import lxml
 import networkx as nx
 from shapely.geometry import LineString
 from shapely.prepared import prep
 
 from .debug import debug
+from .i18n import _
 from .svg import apply_transforms
 from .utils import Point, cache, get_bundled_dir, guess_inkscape_config_path
 from .utils.threading import check_stop_flag
@@ -18,10 +20,8 @@ class Tile:
         self._load_tile(path)
 
     def _load_tile(self, tile_path):
-        self.tile_svg = inkex.load_svg(tile_path)
-        self.tile_path = tile_path
-        self.id = self._get_name(tile_path)
-        self.name = self.id
+        self.tile_svg = inkex.load_svg(os.path.join(tile_path, "tile.svg"))
+        self._load_metadata(tile_path)
         self.tile = None
         self.width = None
         self.height = None
@@ -32,9 +32,15 @@ class Tile:
         return self.name < other.name
 
     def __repr__(self):
-        return f"Tile({self.name}, {self.shift0}, {self.shift1})"
+        return f"Tile({self.name}, {self.id})"
 
     __str__ = __repr__
+
+    def _load_metadata(self, tile_path):
+        with open(os.path.join(tile_path, "tile.json"), "rb") as tile_json:
+            tile_metadata = json.load(tile_json)
+            self.name = _(tile_metadata.get('name'))
+            self.id = tile_metadata.get('id')
 
     def _get_name(self, tile_path):
         return os.path.splitext(os.path.basename(tile_path))[0]
@@ -166,13 +172,16 @@ def all_tile_paths():
 @cache
 def all_tiles():
     tiles = []
-    for tile_dir in all_tile_paths():
+    for tiles_path in all_tile_paths():
         try:
-            for tile_file in sorted(os.listdir(tile_dir)):
+            for tile_dir in sorted(os.listdir(tiles_path)):
                 try:
-                    tiles.append(Tile(os.path.join(tile_dir, tile_file)))
-                except (OSError, lxml.etree.XMLSyntaxError):
-                    pass
+                    tiles.append(Tile(os.path.join(tiles_path, tile_dir)))
+                except (OSError, lxml.etree.XMLSyntaxError, json.JSONDecodeError, KeyError) as exc:
+                    debug.log(f"error loading tile {tiles_path}/{tile_dir}: {exc}")
+                except Exception as exc:
+                    debug.log(f"unexpected error loading tile {tiles_path}/{tile_dir}: {exc}")
+                    raise
         except FileNotFoundError:
             pass
 
