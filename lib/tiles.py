@@ -20,7 +20,8 @@ class Tile:
     def _load_tile(self, tile_path):
         self.tile_svg = inkex.load_svg(tile_path)
         self.tile_path = tile_path
-        self.name = self._get_name(tile_path)
+        self.id = self._get_name(tile_path)
+        self.name = self.id
         self.tile = None
         self.width = None
         self.height = None
