@@ -52,7 +52,6 @@ class ParamsTab(ScrolledPanel):
         self.dict_of_choices = {}
         self.paired_tab = None
         self.disable_notify_pair = False
-        self.change_notify_timer = None
 
         toggles = [param for param in self.params if param.type == 'toggle']
 
@@ -191,13 +190,8 @@ class ParamsTab(ScrolledPanel):
                 try:
                     values[name] = input.GetValue()
                 except AttributeError:
-                    param = self.dict_of_choices[name]['param']
-                    if param.type == 'dropdown':
-                        # dropdown
-                        values[name] = input.GetSelection()
-                    elif param.type == 'select':
-                        selection = input.GetSelection()
-                        values[name] = param.options[selection]
+                    # dropdown
+                    values[name] = input.GetSelection()
 
         return values
 
@@ -214,6 +208,8 @@ class ParamsTab(ScrolledPanel):
 
         self.enable_change_indicator('random_seed')
         event.Skip()
+        if self.on_change_hook:
+            self.on_change_hook(self)
 
     def apply(self):
         values = self.get_values()
@@ -233,10 +229,7 @@ class ParamsTab(ScrolledPanel):
         event.Skip()
 
         if self.on_change_hook:
-            if self.change_notify_timer is None or self.change_notify_timer.HasRun():
-                self.change_notify_timer = wx.CallLater(1000, self.on_change_hook, self)
-            else:
-                self.change_notify_timer.Start()
+            self.on_change_hook(self)
 
     def load_preset(self, preset):
         preset_data = preset.get(self.name, {})
@@ -375,17 +368,9 @@ class ParamsTab(ScrolledPanel):
                         input.SetValue(param.values[0])
 
                 input.Bind(wx.EVT_CHECKBOX, self.changed)
-            elif param.type in ('dropdown', 'select'):
+            elif param.type == 'dropdown':
                 input = wx.Choice(self, wx.ID_ANY, choices=param.options)
-
-                if param.type == 'dropdown':
-                    input.SetSelection(int(param.values[0]))
-                else:
-                    try:
-                        input.SetSelection(param.options.index(param.values[0]))
-                    except ValueError:
-                        input.SetSelection(param.default)
-
+                input.SetSelection(int(param.values[0]))
                 input.Bind(wx.EVT_CHOICE, self.changed)
                 input.Bind(wx.EVT_CHOICE, self.update_choice_state)
                 self.dict_of_choices[param.name] = {
