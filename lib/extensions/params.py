@@ -17,7 +17,7 @@ import wx
 from wx.lib.scrolledpanel import ScrolledPanel
 
 from ..commands import is_command, is_command_symbol
-from ..elements import (FillStitch, Clone, EmbroideryElement, Polyline,
+from ..elements import (Clone, EmbroideryElement, FillStitch, Polyline,
                         SatinColumn, Stroke)
 from ..elements.clone import is_clone
 from ..gui import PresetsPanel, SimulatorPreview, WarningPanel
@@ -129,9 +129,12 @@ class ParamsTab(ScrolledPanel):
         if event:
             event.Skip()
 
-    def update_choice_state(self, event=None):
+    def update_choice_state(self, event=None, combo=False):
         input = event.GetEventObject()
-        selection = input.GetSelection()
+        if combo:
+            selection = input.GetClientData(input.GetSelection()).id
+        else:
+            selection = input.GetSelection()
 
         param = self.inputs_to_params[input]
 
@@ -142,6 +145,15 @@ class ParamsTab(ScrolledPanel):
 
         if event:
             event.Skip()
+
+    def update_combo_state(self, event=None):
+        self.update_choice_state(event, True)
+
+    def get_combo_value_index(self, param, options):
+        for option in options:
+            if option.id == param:
+                return options.index(option)
+        return 0
 
     def pair_changed(self, value):
         new_value = not value
@@ -187,11 +199,15 @@ class ParamsTab(ScrolledPanel):
 
         for name, input in self.param_inputs.items():
             if input in self.changed_inputs and input != self.toggle_checkbox:
-                try:
-                    values[name] = input.GetValue()
-                except AttributeError:
-                    # dropdown
+                # there are two types of combo boxes:
+                # 1. multiple values for the same param on selected elements - 2. param type
+                # multiple values will be handled with the GetValue() method
+                if name in self.dict_of_choices and self.dict_of_choices[name]['param'].type == 'combo':
+                    values[name] = input.GetClientData(input.GetSelection()).id
+                elif isinstance(input, wx.Choice):
                     values[name] = input.GetSelection()
+                else:
+                    values[name] = input.GetValue()
 
         return values
 
@@ -234,12 +250,16 @@ class ParamsTab(ScrolledPanel):
     def load_preset(self, preset):
         preset_data = preset.get(self.name, {})
 
+        # print(self.param_inputs, '\n\n', preset_data.items(), file=sys.stderr)
+
         for name, value in preset_data.items():
             if name in self.param_inputs:
-                try:
-                    self.param_inputs[name].SetValue(value)
-                except AttributeError:
+                if name in self.dict_of_choices and self.dict_of_choices[name]['param'].type == 'combo':
+                    self.param_inputs[name].SetSelection(self.get_combo_value_index(value, self.dict_of_choices[name]["param"].options))
+                elif isinstance(self.param_inputs[name], wx.Choice):
                     self.param_inputs[name].SetSelection(int(value))
+                else:
+                    self.param_inputs[name].SetValue(value)
                 self.changed_inputs.add(self.param_inputs[name])
 
         self.update_toggle_state()
@@ -299,16 +319,21 @@ class ParamsTab(ScrolledPanel):
     def update_choice_widgets(self, choice_tuple=None):
         if choice_tuple is None:  # update all choices
             for choice in self.dict_of_choices.values():
-                self.update_choice_widgets(
-                    (choice["param"].name, choice["widget"].GetSelection()))
+                if choice["param"].type == "combo":
+                    self.update_choice_widgets((choice["param"].name, choice["widget"].GetClientData(choice["widget"].GetSelection()).id))
+                else:
+                    self.update_choice_widgets((choice["param"].name, choice["widget"].GetSelection()))
         else:
             choice = self.dict_of_choices[choice_tuple[0]]
             last_selection = choice["last_initialized_choice"]
-            current_selection = choice["widget"].GetSelection()
+            if choice["param"].type == "combo":
+                current_selection = choice["widget"].GetClientData(choice["widget"].GetSelection()).id
+            else:
+                current_selection = choice["widget"].GetSelection()
+
             if last_selection != -1 and last_selection != current_selection:  # Hide the old widgets
                 for widget in self.choice_widgets[(choice["param"].name, last_selection)]:
                     widget.Hide()
-                    # self.settings_grid.Detach(widget)
 
             for widgets in grouper(self.choice_widgets[choice_tuple], 4):
                 widgets[0].Show(True)
@@ -373,6 +398,16 @@ class ParamsTab(ScrolledPanel):
                 input.SetSelection(int(param.values[0]))
                 input.Bind(wx.EVT_CHOICE, self.changed)
                 input.Bind(wx.EVT_CHOICE, self.update_choice_state)
+                self.dict_of_choices[param.name] = {
+                    "param": param, "widget": input, "last_initialized_choice": 1}
+            elif param.type == 'combo':
+                input = wx.ComboBox(self, wx.ID_ANY, choices=[], style=wx.CB_READONLY)
+                for option in param.options:
+                    input.Append(option.name, option)
+                value = self.get_combo_value_index(param.values[0], param.options)
+                input.SetSelection(value)
+                input.Bind(wx.EVT_COMBOBOX, self.changed)
+                input.Bind(wx.EVT_COMBOBOX, self.update_combo_state)
                 self.dict_of_choices[param.name] = {
                     "param": param, "widget": input, "last_initialized_choice": 1}
             elif len(param.values) > 1:
