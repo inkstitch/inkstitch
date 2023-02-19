@@ -160,6 +160,9 @@ class Font(object):
         for variant in FontVariant.VARIANT_TYPES:
             if os.path.isfile(os.path.join(self.path, "%s.svg" % variant)):
                 font_variants.append(variant)
+            elif (os.path.isdir(os.path.join(self.path, "%s" % variant)) and
+                    [svg for svg in os.listdir(os.path.join(self.path, "%s" % variant)) if svg.endswith('.svg')]):
+                font_variants.append(variant)
         if not font_variants:
             raise FontError(_("The font '%s' has no variants.") % self.name)
         return font_variants

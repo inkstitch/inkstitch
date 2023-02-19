@@ -60,19 +60,30 @@ class FontVariant(object):
         self._load_glyphs()
 
     def _load_glyphs(self):
-        svg_path = os.path.join(self.path, "%s.svg" % self.variant)
-        svg = inkex.load_svg(svg_path).getroot()
-        svg = self._apply_transforms(svg)
+        variant_file_paths = self._get_variant_file_paths()
+        for svg_path in variant_file_paths:
+            svg = inkex.load_svg(svg_path).getroot()
+            svg = self._apply_transforms(svg)
 
-        glyph_layers = svg.xpath(".//svg:g[starts-with(@inkscape:label, 'GlyphLayer-')]", namespaces=inkex.NSS)
-        for layer in glyph_layers:
-            self._clean_group(layer)
-            layer.attrib[INKSCAPE_LABEL] = layer.attrib[INKSCAPE_LABEL].replace("GlyphLayer-", "", 1)
-            glyph_name = layer.attrib[INKSCAPE_LABEL]
-            try:
-                self.glyphs[glyph_name] = Glyph(layer)
-            except AttributeError:
-                pass
+            glyph_layers = svg.xpath(".//svg:g[starts-with(@inkscape:label, 'GlyphLayer-')]", namespaces=inkex.NSS)
+            for layer in glyph_layers:
+                self._clean_group(layer)
+                layer.attrib[INKSCAPE_LABEL] = layer.attrib[INKSCAPE_LABEL].replace("GlyphLayer-", "", 1)
+                glyph_name = layer.attrib[INKSCAPE_LABEL]
+                try:
+                    self.glyphs[glyph_name] = Glyph(layer)
+                except AttributeError:
+                    pass
+
+    def _get_variant_file_paths(self):
+        file_paths = []
+        direct_path = os.path.join(self.path, "%s.svg" % self.variant)
+        if os.path.isfile(direct_path):
+            file_paths.append(direct_path)
+        elif os.path.isdir(os.path.join(self.path, "%s" % self.variant)):
+            path = os.path.join(self.path, "%s" % self.variant)
+            file_paths.extend([os.path.join(path, svg) for svg in os.listdir(path) if svg.endswith('.svg')])
+        return file_paths
 
     def _clean_group(self, group):
         # We'll repurpose the layer as a container group labelled with the
