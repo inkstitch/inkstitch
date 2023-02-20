@@ -6,6 +6,7 @@ from .auto_fill import (build_fill_stitch_graph, build_travel_graph,
                         collapse_sequential_outline_edges, fallback,
                         find_stitch_path, graph_is_valid, travel)
 from .contour_fill import _make_fermat_spiral
+from .running_stitch import running_stitch
 
 
 def circular_fill(shape,
@@ -40,10 +41,15 @@ def circular_fill(shape,
     double_spiral = _make_fermat_spiral(circles, max_stitch_length, circles[0].coords[0])
     double_spiral = shgeo.LineString(list(double_spiral))
     intersection = double_spiral.intersection(shape)
+
     segments = []
     for line in intersection.geoms:
         if isinstance(line, shgeo.LineString):
-            segments.append(line.coords[:])
+            # use running stitch here to adjust the stitch length
+            coords = running_stitch([Stitch(point[0], point[1]) for point in line.coords],
+                                    max_stitch_length,
+                                    running_stitch_tolerance)
+            segments.append([(point.x, point.y) for point in coords])
 
     fill_stitch_graph = build_fill_stitch_graph(shape, segments, starting_point, ending_point)
     if not graph_is_valid(fill_stitch_graph, shape, max_stitch_length):
