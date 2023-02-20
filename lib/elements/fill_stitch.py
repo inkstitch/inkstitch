@@ -5,7 +5,6 @@
 
 import logging
 import math
-import numpy as np
 import re
 import sys
 import traceback
