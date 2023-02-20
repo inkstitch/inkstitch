@@ -12,29 +12,35 @@ from ..utils import string_to_floats
 from .stitch import Stitch
 
 
-class Lock:
-    def __init__(self, lock_id=None, name=None, path=None, scale_percent=100, scale_absolute=0.7):
-
+class LockStitchDefinition:
+    def __init__(self, lock_id=None, name=None, path=None):
         self.id: str = lock_id
         self.name: str = name
-        self.path: str = path
-        self.scale_percent: float = scale_percent
-        self.scale_absolute: float = scale_absolute
+        self._path: str = path
 
     def __repr__(self):
-        return "Lock(%s, %s, %s, %s, %s)" % (self.id, self.name, self.path, self.scale_percent, self.scale_absolute)
+        return "LockStitchDefinition(%s, %s, %s)" % (self.id, self.name, self.path)
 
-    def copy(self, scale_percent=None, scale_absolute=None):
-        cp = copy(self)
-        cp._set('scale_percent', scale_percent or self.scale_percent)
-        cp._set('scale_absolute', scale_absolute or self.scale_absolute)
-        return cp
-
-    def _set(self, attribute, value):
-        setattr(self, attribute, value)
+    def stitches(self):
+        raise NotImplementedError(f"{self.__class__.__name__} must implement stitches()")
 
 
-class CustomLock(Lock):
+class LockStitch:
+    def __init__(self, lock_type, lock_id, scale_percent, scale_absolute):
+        self.lock_stitch_definition = get_lock_stitch_definition_by_id(lock_type, lock_id)
+        self.scale = LockStitchScale(scale_percent, scale_absolute)
+
+    def stitches(self, stitches, pos):
+        return self.lock_stitch_definition.stitches(stitches, pos, self.scale)
+
+
+class LockStitchScale:
+    def __init__(self, scale_percent, scale_absolute):
+        self.percent = scale_percent / 100
+        self.absolute = scale_absolute
+
+
+class CustomLock(LockStitchDefinition):
     @property
     def path(self):
         return self._path
@@ -47,7 +53,7 @@ class CustomLock(Lock):
         else:
             self._path = None
 
-    def stitches(self, stitches, pos):
+    def stitches(self, stitches, pos, scale):
         if self.path is None:
             return half_stitch.stitches(stitches, pos)
 
@@ -55,15 +61,11 @@ class CustomLock(Lock):
         if path_type == "svg":
             return SVGLock(self.id,
                            self.name,
-                           self.path,
-                           self.scale_percent,
-                           self.scale_absolute).stitches(stitches, pos)
-        elif path_type == "absolute":
+                           self.path).stitches(stitches, pos, scale.percent)
+        else:
             return AbsoluteLock(self.id,
                                 self.name,
-                                self.path,
-                                self.scale_percent,
-                                self.scale_absolute).stitches(stitches, pos)
+                                self.path).stitches(stitches, pos, scale.absolute)
 
     def _get_path_type(self, path):
         if not path:
@@ -82,12 +84,12 @@ class CustomLock(Lock):
                 return "absolute"
 
 
-class RelativeLock(Lock):
-    def stitches(self, stitches, pos):
+class RelativeLock(LockStitchDefinition):
+    def stitches(self, stitches, pos, scale):
         if pos == "end":
             stitches = list(reversed(stitches))
 
-        path = string_to_floats(self.path, " ")
+        path = string_to_floats(self._path, " ")
 
         to_previous = stitches[1] - stitches[0]
         length = to_previous.length()
@@ -114,13 +116,13 @@ class RelativeLock(Lock):
         return lock_stitches
 
 
-class AbsoluteLock(Lock):
-    def stitches(self, stitches, pos):
+class AbsoluteLock(LockStitchDefinition):
+    def stitches(self, stitches, pos, scale):
         if pos == "end":
             stitches = list(reversed(stitches))
 
         # make sure the path consists of only floats
-        path = string_to_floats(self.path, " ")
+        path = string_to_floats(self._path, " ")
 
         # get the length of our lock stitch path
         if pos == 'start':
@@ -128,13 +130,13 @@ class AbsoluteLock(Lock):
             lock = 0
             # reverse the list to make sure we end with the first stitch of the target path
             for tie_path in reversed(path):
-                lock = lock - tie_path * self.scale_absolute
+                lock = lock - tie_path * scale.absolute
                 lock_pos.insert(0, lock)
-        if pos == 'end':
+        elif pos == 'end':
             lock_pos = []
             lock = 0
             for tie_path in path:
-                lock = lock + tie_path * self.scale_absolute
+                lock = lock + tie_path * scale.absolute
                 lock_pos.append(lock)
         max_lock_length = max(lock_pos)
 
@@ -160,16 +162,14 @@ class AbsoluteLock(Lock):
         return lock_stitches
 
 
-class SVGLock(Lock):
-    def stitches(self, stitches, pos):
+class SVGLock(LockStitchDefinition):
+    def stitches(self, stitches, pos, scale):
         if pos == "end":
             stitches = list(reversed(stitches))
 
-        path = Path(self.path)
-
-        # convert from mm to px and scale according to scale_percent setting
-        scale = PIXELS_PER_MM * (self.scale_percent / 100)
-        path.scale(scale, scale, True)
+        path = Path(self._path)
+        path.scale(PIXELS_PER_MM, PIXELS_PER_MM, True)
+        path.scale(scale.percent, scale.percent, True)
 
         end_points = list(path.end_points)
 
@@ -199,7 +199,7 @@ class SVGLock(Lock):
         return lock_stitches
 
 
-def get_lock_stitch_by_id(pos, lock_type, default="half_stitch"):
+def get_lock_stitch_definition_by_id(pos, lock_type, default="half_stitch"):
     id_list = [lock.id for lock in LOCK_DEFAULTS[pos]]
 
     try:
