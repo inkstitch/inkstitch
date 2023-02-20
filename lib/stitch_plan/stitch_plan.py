@@ -10,7 +10,6 @@ from inkex import errormsg
 from ..i18n import _
 from ..svg import PIXELS_PER_MM
 from .color_block import ColorBlock
-from .ties import add_ties
 from ..utils.threading import check_stop_flag
 
 
