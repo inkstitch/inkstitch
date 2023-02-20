@@ -23,6 +23,7 @@ from ..svg import generate_unique_id
 from ..svg.tags import (CONNECTOR_TYPE, EMBROIDERABLE_TAGS, INKSCAPE_GROUPMODE,
                         NOT_EMBROIDERABLE_TAGS, SVG_CLIPPATH_TAG, SVG_DEFS_TAG,
                         SVG_GROUP_TAG, SVG_MASK_TAG)
+from ..utils.settings import DEFAULT_METADATA, global_settings
 
 SVG_METADATA_TAG = inkex.addNS("metadata", "svg")
 
@@ -52,8 +53,13 @@ class InkStitchMetadata(MutableMapping):
     """
 
     def __init__(self, document):
+        super().__init__()
         self.document = document
         self.metadata = document.metadata
+
+        for setting in DEFAULT_METADATA:
+            if self[setting] is None:
+                self[setting] = global_settings[f'default_{setting}']
 
     # Because this class inherints from MutableMapping, all we have to do is
     # implement these five methods and we get a full dict-like interface.
@@ -95,6 +101,9 @@ class InkStitchMetadata(MutableMapping):
             pass
 
         return i + 1
+
+    def __json__(self):
+        return dict(self)
 
 
 class InkstitchExtension(inkex.Effect):

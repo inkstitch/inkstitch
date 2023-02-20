@@ -10,50 +10,59 @@ from .stitch_plan import Stitch
 from .utils import Point
 
 
-def apply_patterns(patches, node):
+def get_patterns_cache_key_data(node):
     patterns = get_marker_elements(node, "pattern")
-    _apply_fill_patterns(patterns['fill'], patches)
-    _apply_stroke_patterns(patterns['stroke'], patches)
+    data = []
+    data.extend([fill.wkt for fill in patterns['fill']])
+    data.extend([stroke.wkt for stroke in patterns['stroke']])
+
+    return data
 
 
-def _apply_stroke_patterns(patterns, patches):
+def apply_patterns(stitch_groups, node):
+    patterns = get_marker_elements(node, "pattern")
+    _apply_fill_patterns(patterns['fill'], stitch_groups)
+    _apply_stroke_patterns(patterns['stroke'], stitch_groups)
+
+
+def _apply_stroke_patterns(patterns, stitch_groups):
     for pattern in patterns:
-        for patch in patches:
-            patch_points = []
-            for i, stitch in enumerate(patch.stitches):
-                patch_points.append(stitch)
-                if i == len(patch.stitches) - 1:
+        for stitch_group in stitch_groups:
+            stitch_group_points = []
+            for i, stitch in enumerate(stitch_group.stitches):
+                stitch_group_points.append(stitch)
+                if i == len(stitch_group.stitches) - 1:
                     continue
-                intersection_points = _get_pattern_points(stitch, patch.stitches[i+1], pattern)
+                intersection_points = _get_pattern_points(stitch, stitch_group.stitches[i + 1], pattern)
                 for point in intersection_points:
-                    patch_points.append(Stitch(point, tags=('pattern_point',)))
-            patch.stitches = patch_points
+                    stitch_group_points.append(Stitch(point, tags=('pattern_point',)))
+            stitch_group.stitches = stitch_group_points
 
 
-def _apply_fill_patterns(patterns, patches):
+def _apply_fill_patterns(patterns, stitch_groups):
     for pattern in patterns:
-        for patch in patches:
-            patch_points = []
-            for i, stitch in enumerate(patch.stitches):
+        for stitch_group in stitch_groups:
+            stitch_group_points = []
+            for i, stitch in enumerate(stitch_group.stitches):
                 if not shgeo.Point(stitch).within(pattern):
                     # keep points outside the fill pattern
-                    patch_points.append(stitch)
-                elif i - 1 < 0 or i >= len(patch.stitches) - 1:
+                    stitch_group_points.append(stitch)
+                elif i - 1 < 0 or i >= len(stitch_group.stitches) - 1:
                     # keep start and end points
-                    patch_points.append(stitch)
+                    stitch_group_points.append(stitch)
                 elif stitch.has_tag('fill_row_start') or stitch.has_tag('fill_row_end'):
                     # keep points if they are the start or end of a fill stitch row
-                    patch_points.append(stitch)
+                    stitch_group_points.append(stitch)
                 elif stitch.has_tag('auto_fill') and not stitch.has_tag('auto_fill_top'):
                     # keep auto-fill underlay
-                    patch_points.append(stitch)
+                    stitch_group_points.append(stitch)
                 elif stitch.has_tag('auto_fill_travel'):
                     # keep travel stitches (underpath or travel around the border)
-                    patch_points.append(stitch)
+                    stitch_group_points.append(stitch)
                 elif stitch.has_tag('satin_column') and not stitch.has_tag('satin_split_stitch'):
                     # keep satin column stitches unless they are split stitches
-                    patch_points.append(stitch)
-            patch.stitches = patch_points
+                    stitch_group_points.append(stitch)
+            stitch_group.stitches = stitch_group_points
 
 
 def _get_pattern_points(first, second, pattern):

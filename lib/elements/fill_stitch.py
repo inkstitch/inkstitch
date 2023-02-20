@@ -530,16 +530,22 @@ class FillStitch(EmbroideryElement):
     def fill_shape(self, shape):
         return self.shrink_or_grow_shape(shape, self.expand)
 
-    def get_starting_point(self, last_patch):
+    def get_starting_point(self, previous_stitch_group):
         # If there is a "fill_start" Command, then use that; otherwise pick
         # the point closest to the end of the last patch.
 
         if self.get_command('fill_start'):
             return self.get_command('fill_start').target_point
-        elif last_patch:
-            return last_patch.stitches[-1]
+        elif previous_stitch_group:
+            return previous_stitch_group.stitches[-1]
         else:
             return None
+
+    def uses_previous_stitch(self):
+        if self.get_command('fill_start'):
+            return False
+        else:
+            return True
 
     def get_ending_point(self):
         if self.get_command('fill_end'):
@@ -547,7 +553,7 @@ class FillStitch(EmbroideryElement):
         else:
             return None
 
-    def to_stitch_groups(self, last_patch):  # noqa: C901
+    def to_stitch_groups(self, previous_stitch_group):  # noqa: C901
         # backwards compatibility: legacy_fill used to be inkstitch:auto_fill == False
         if not self.auto_fill or self.fill_method == 3:
             return self.do_legacy_fill()
@@ -556,7 +562,7 @@ class FillStitch(EmbroideryElement):
             end = self.get_ending_point()
 
             for shape in self.shape.geoms:
-                start = self.get_starting_point(last_patch)
+                start = self.get_starting_point(previous_stitch_group)
                 try:
                     if self.fill_underlay:
                         underlay_shapes = self.underlay_shape(shape)
@@ -567,16 +573,16 @@ class FillStitch(EmbroideryElement):
                     fill_shapes = self.fill_shape(shape)
                     for fill_shape in fill_shapes.geoms:
                         if self.fill_method == 0:
-                            stitch_groups.extend(self.do_auto_fill(fill_shape, last_patch, start, end))
+                            stitch_groups.extend(self.do_auto_fill(fill_shape, previous_stitch_group, start, end))
                         if self.fill_method == 1:
-                            stitch_groups.extend(self.do_contour_fill(fill_shape, last_patch, start))
+                            stitch_groups.extend(self.do_contour_fill(fill_shape, previous_stitch_group, start))
                         elif self.fill_method == 2:
-                            stitch_groups.extend(self.do_guided_fill(fill_shape, last_patch, start, end))
+                            stitch_groups.extend(self.do_guided_fill(fill_shape, previous_stitch_group, start, end))
                 except ExitThread:
                     raise
                 except Exception:
                     self.fatal_fill_error()
-                last_patch = stitch_groups[-1]
+                previous_stitch_group = stitch_groups[-1]
 
             return stitch_groups
 

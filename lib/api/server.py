@@ -18,6 +18,7 @@ from ..utils.json import InkStitchJSONEncoder
 from .install import install
 from .simulator import simulator
 from .stitch_plan import stitch_plan
+from .preferences import preferences
 
 
 class APIServer(Thread):
@@ -45,6 +46,7 @@ class APIServer(Thread):
         self.app.register_blueprint(simulator, url_prefix="/simulator")
         self.app.register_blueprint(stitch_plan, url_prefix="/stitch_plan")
         self.app.register_blueprint(install, url_prefix="/install")
+        self.app.register_blueprint(preferences, url_prefix="/preferences")
 
         @self.app.before_request
         def store_extension():

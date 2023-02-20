@@ -2,7 +2,6 @@
 #
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
-
 import sys
 from copy import deepcopy
 import numpy as np
@@ -11,12 +10,15 @@ import inkex
 from inkex import bezier
 
 from ..commands import find_commands
+from ..debug import debug
 from ..i18n import _
-from ..patterns import apply_patterns
+from ..marker import get_marker_elements_cache_key_data
+from ..patterns import apply_patterns, get_patterns_cache_key_data
 from ..svg import (PIXELS_PER_MM, apply_transforms, convert_length,
                    get_node_transform)
 from ..svg.tags import INKSCAPE_LABEL, INKSTITCH_ATTRIBS
 from ..utils import Point, cache
+from ..utils.cache import get_stitch_plan_cache, CacheKeyGenerator
 
 
 class Param(object):
@@ -188,9 +190,6 @@ class EmbroideryElement(object):
         if style == 'none':
             style = None
         return style
-
-    def has_style(self, style_name):
-        return self._get_style_raw(style_name) is not None
 
     @property
     @cache
@@ -392,21 +391,100 @@ class EmbroideryElement(object):
     def to_stitch_groups(self, last_patch):
         raise NotImplementedError("%s must implement to_stitch_groups()" % self.__class__.__name__)
 
-    def embroider(self, last_patch):
-        self.validate()
+    @debug.time
+    def _load_cached_stitch_groups(self, previous_stitch):
+        if not self.uses_previous_stitch():
+            # we don't care about the previous stitch
+            previous_stitch = None
 
-        patches = self.to_stitch_groups(last_patch)
-        apply_patterns(patches, self.node)
+        cache_key = self._get_cache_key(previous_stitch)
+        stitch_groups = get_stitch_plan_cache().get(cache_key)
 
-        for patch in patches:
-            patch.tie_modus = self.ties
-            patch.force_lock_stitches = self.force_lock_stitches
+        if stitch_groups:
+            debug.log(f"used cache for {self.node.get('id')} {self.node.get(INKSCAPE_LABEL)}")
+        else:
+            debug.log(f"did not use cache for {self.node.get('id')} {self.node.get(INKSCAPE_LABEL)}, key={cache_key}")
 
-        if patches:
-            patches[-1].trim_after = self.has_command("trim") or self.trim_after
-            patches[-1].stop_after = self.has_command("stop") or self.stop_after
+        return stitch_groups
 
-        return patches
+    def uses_previous_stitch(self):
+        """Returns True if the previous stitch can affect this Element's stitches.
+
+        This function may be overridden in a subclass.
+        """
+        return False
+
+    @debug.time
+    def _save_cached_stitch_groups(self, stitch_groups, previous_stitch):
+        stitch_plan_cache = get_stitch_plan_cache()
+        cache_key = self._get_cache_key(previous_stitch)
+        if cache_key not in stitch_plan_cache:
+            stitch_plan_cache[cache_key] = stitch_groups
+
+        if previous_stitch is not None:
+            # Also store it with None as the previous stitch, so that it can be used next time
+            # if we don't care about the previous stitch
+            cache_key = self._get_cache_key(None)
+            if cache_key not in stitch_plan_cache:
+                stitch_plan_cache[cache_key] = stitch_groups
+
+    def get_params_and_values(self):
+        params = {}
+        for param in self.get_params():
+            params[param.name] = self.get_param(param.name, param.default)
+
+        return params
+
+    @cache
+    def _get_patterns_cache_key_data(self):
+        return get_patterns_cache_key_data(self.node)
+
+    @cache
+    def _get_guides_cache_key_data(self):
+        return get_marker_elements_cache_key_data(self.node, "guide-line")
+
+    def _get_cache_key(self, previous_stitch):
+        cache_key_generator = CacheKeyGenerator()
+        cache_key_generator.update(self.__class__.__name__)
+        cache_key_generator.update(self.get_params_and_values())
+        cache_key_generator.update(self.parse_path())
+        cache_key_generator.update(list(self._get_specified_style().items()))
+        cache_key_generator.update(previous_stitch)
+        cache_key_generator.update([(c.command, c.target_point) for c in self.commands])
+        cache_key_generator.update(self._get_patterns_cache_key_data())
+        cache_key_generator.update(self._get_guides_cache_key_data())
+
+        cache_key = cache_key_generator.get_cache_key()
+        debug.log(f"cache key for {self.node.get('id')} {self.node.get(INKSCAPE_LABEL)} {previous_stitch}: {cache_key}")
+
+        return cache_key
+
+    def embroider(self, last_stitch_group):
+        debug.log(f"starting {self.node.get('id')} {self.node.get(INKSCAPE_LABEL)}")
+        if last_stitch_group:
+            previous_stitch = last_stitch_group.stitches[-1]
+        else:
+            previous_stitch = None
+        stitch_groups = self._load_cached_stitch_groups(previous_stitch)
+
+        if not stitch_groups:
+            self.validate()
+
+            stitch_groups = self.to_stitch_groups(last_stitch_group)
+            apply_patterns(stitch_groups, self.node)
+
+            for stitch_group in stitch_groups:
+                stitch_group.tie_modus = self.ties
+                stitch_group.force_lock_stitches = self.force_lock_stitches
+
+            if stitch_groups:
+                stitch_groups[-1].trim_after = self.has_command("trim") or self.trim_after
+                stitch_groups[-1].stop_after = self.has_command("stop") or self.stop_after
+
+            self._save_cached_stitch_groups(stitch_groups, previous_stitch)
+
+        debug.log(f"ending {self.node.get('id')} {self.node.get(INKSCAPE_LABEL)}")
+        return stitch_groups
 
     def fatal(self, message, point_to_troubleshoot=False):
         label = self.node.get(INKSCAPE_LABEL)

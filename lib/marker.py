@@ -78,6 +78,16 @@ def get_marker_elements(node, marker, get_fills=True, get_strokes=True, get_sati
     return {'fill': fills, 'stroke': strokes, 'satin': satins}
 
 
+def get_marker_elements_cache_key_data(node, marker):
+    marker_elements = get_marker_elements(node, marker, True, True, True)
+
+    marker_elements['fill'] = [shape.wkt for shape in marker_elements['fill']]
+    marker_elements['stroke'] = [shape.wkt for shape in marker_elements['stroke']]
+    marker_elements['satin'] = [satin.csp for satin in marker_elements['satin']]
+
+    return marker_elements
+
+
 def has_marker(node, marker=list()):
     if not marker:
         marker = MARKER
