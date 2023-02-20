@@ -17,7 +17,7 @@ Diese Erweiterung erlaubt dir, einen Ordner zu definieren, in dem du zusätzlich
 Jede Schriftart sollte in einem eigenen Unterordner gespeichert werden und sollte mindestens folgende Dateien enthalten: eine Schriftdatei (svg) und eine json-Datei.
 Zusätzlich empfehlen wir eine Lizenz-Datei.
 
-Die Schriftdatei muss nach der Stichrichtung für die sie erstellt wurde benannt werden (`→.svg`, `←.svg`, etc.).
+Die Schriftdatei muss nach der Stichrichtung für die sie erstellt wurde benannt werden (`→.svg`, `←.svg`, etc.). Es gibt auch die Möglichkeit Ordner mit den Pfeilnamen (`→`, `←`, etc.) anzulegen und darin mehrere Dateien für die Stickrichtung abzuspeichern.
 
 Die JSON-Datei muss als minimale Bedingung den Namen der Schrift enthalten.
 

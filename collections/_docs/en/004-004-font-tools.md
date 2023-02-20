@@ -2,7 +2,7 @@
 title: "Font Tools"
 permalink: /docs/font-tools/
 excerpt: ""
-last_modified_at: 2021-10-23
+last_modified_at: 2023-02-20
 toc: true
 ---
 A collection of tools suitable for font creators or those who want to add additional fonts to the Ink/Stitch [lettering tool](/docs/lettering).
@@ -17,7 +17,7 @@ This extension allows you to define a directory in your file system where you wa
 Place each font in a subdiretory of your custom font directory. Each font folder should contain at least one font variant and one json file.
 Additionally it is recommended to save a license file as well.
 
-Font variants have to be named with an arrow, indicating the stitch direction it has been created for (`→.svg`, `←.svg`, etc.).
+Font variants have to be named with an arrow, indicating the stitch direction it has been created for (`→.svg`, `←.svg`, etc.). It is also possible to create a folder named with an arrow name instead and insert multiple font files for a specific direction.
 
 The json file has to include as a minimum requirement the fonts name.
 

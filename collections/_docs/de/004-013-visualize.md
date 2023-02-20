@@ -2,7 +2,7 @@
 title: "Visualisierung"
 permalink: /de/docs/visualize/
 excerpt: ""
-last_modified_at: 2020-09-28
+last_modified_at: 2023-02-20
 toc: false
 ---
 
@@ -33,5 +33,34 @@ Es ist auch möglich die Simulation mit der Maus zu **zoomen** und zu **verschie
 ## Stich-Plan Vorschau
 
 Führe den Befehl `Erweiterungen > Ink/Stitch > Visualisierung und Export > Stichplan Vorschau` aus.
-Dies fügt den Stichplan direkt am rechten Rand deines Dokuments ein.
-Dort kannst du das Ergebnis untersuchen und anschließend wieder entfernen.
+Anstatt die Vorschau einzufügen, reicht manchmal auch die Option `Live Preview`.
+
+Wird der Stickplan jedoch eingefügt, kann das Design genauer untersucht und ggf. angepasst und ergänzt werden. Es ist immer noch möglich, den Stickplan später durch die Option `Erweiterungen > Ink/Stitch > Visualisieren und Exportieren > Stich-Plan Vorschau aufheben` zu entfernen.
+
+Es gibt die folgenden Optionen:
+
+* **Stickplan an der Seite platzieren** Der Stichplan wird rechts neben dem Canvas abgebildet. Ist diese Option nicht aktiviert, wird der Stichplan direkt über das Design gelegt. In diesem Fall ist es nützlich die Sichtbarkeit des Designs anzupassen.
+* **Design-Layer Sichtbarkeit** definiert die Sichtbarkeit, bzw. Transparenz der Design-Layer
+  * **unverändert** die Design-Layer bleiben unverändert
+  * **versteckt** das Original-Design wird versteckt
+  * **Verrinerte Deckkraft** das Original wird mit 40%-Transparenz dargestellt
+* **Nadeleinstichstellen** zeigt Punkte an den Einstichstellen
+* **Lock** Stichplan reagiert nicht auf Mausinteraktionen. Das ist praktisch, wenn mit aktiviertem Stichplan das Original-Design bearbeitet werden soll
+
+{% include folder-galleries path="stitch-plan/" captions="1:Stitch plan beside canvas;2:Layer visibility set to hidden;3:Layer visibility set to lower opacity;4:Needle points enabled | disabled" caption="<i>Example image from [OpenClipart](https://openclipart.org/detail/334596)</i>" %}
+
+## Stich-Plan Vorschau aufheben
+
+Wird der Stichplan über dem Design mit verringerter Deckkraft angezeigt, hilft es eine visuelle Idee zu bekommen, wie das Design am Ende aussehen wird. Manchmal ist es hilfreich, in einen angezeigten Stichplan hineinzuarbeiten. Dies jedoch, kann es schwieriger machen, den Stichplan wieder zu entfernen und da auch die Deckkraft wieder zurückgesetzt werden muss. Mit dieser Erweiterung kann auch der Stichplan nach erfolgten Änderungen am Dokument einfach wieder entfernt werden.
+
+`Erweiterungen > Ink/Stitch > Visualisieren und Exportieren > Stich-Plan Vorschau aufheben`
+
+## Dichte Indikator
+
+Zeigt Punkte in frei wählbaren Farben (Standart: rot, gelb, grün) über dem Design. Sie helfen Stellen mit hoher Dichte ausfindig zu machen.
+
+* Wähle die Objekte aus, bei denen die Dichte angezeigt werden soll. Wird keine Auswahl getroffen, analysiert diese Erweiterung das gesamte Dokument
+* Öffne `Erweiterungen > Ink/Stitch > Visualisieren und Exportieren > Dichte Indikator`
+* Setze die Farben wie gewünscht und klicke auf `Anwenden`
+* Untersuche das Design (evtl. ist es nötig stärker in das Design hineinzuzoomen)
+* Entferne die Dichte-Punkte mit `Ctrl + Z` (rückgängig machen)

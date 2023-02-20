@@ -2,7 +2,7 @@
 title: "Tools: Fill"
 permalink: /docs/fill-tools/
 excerpt: ""
-last_modified_at: 2020-12-31
+last_modified_at: 2023-02-20
 toc: true
 ---
 ## Break Apart Fill Objects
@@ -16,7 +16,7 @@ Therefore error messages for fill areas happen quiet often and are annoying for 
 * Select one or more fill objects
 * Run: Extensions > Ink/Stitch  > Fill Tools > Break Apart Fill Objects
 
-## Simple or Complex
+### Simple or Complex
 
 Always prefer `simple` when possible. It retains holes and repairs the "border crossing error" by splitting up loops into separate objects or deletes them if they are too small to embroider.
 
@@ -34,3 +34,18 @@ While "simple" splits up loops, it will not respect overlapping subpaths. It wil
 
 ![Break apart fill objects](/assets/images/docs/en/break_apart.jpg)
 [Download SVG](/assets/images/docs/en/break_apart.svg)
+
+## Convert to gradient blocks
+
+{% include upcoming_release.html %}
+
+Convert to gradient blocks will split a fill with a linear gradient into multiple blocks of solid color and adapted row spacing.
+
+### Usage
+
+1. Apply a linear fill color gradient to an element.
+
+   ![linear gradient](/assets/images/docs/en/linear-gradient.png)
+2. Run `Extensions > Ink/Stitch > Tools: Fill > Convert to gradient blocks
+
+   ![color blocks](/assets/images/docs/color_blocks.png)

@@ -37,3 +37,18 @@ Info: Pour les chemins qui se chevauchent, l'étape 1 n'est effectuée que par c
 
 ![Break apart fill objects](/assets/images/docs/en/break_apart.jpg)
 [Download SVG](/assets/images/docs/en/break_apart.svg)
+
+## Convert to gradient blocks
+
+{% include upcoming_release.html %}
+
+Convert to gradient blocks will split a fill with a linear gradient into multiple blocks of solid color and adapted row spacing.
+
+### Usage
+
+1. Apply a linear fill color gradient to an element.
+
+   ![linear gradient](/assets/images/docs/en/linear-gradient.png)
+2. Run `Extensions > Ink/Stitch > Tools: Fill > Convert to gradient blocks
+
+   ![color blocks](/assets/images/docs/color_blocks.png)

@@ -17,7 +17,7 @@ Cette extension vous permet de définir un répertoire dans votre système de fi
 Placez chaque police dans un sous-répertoire de votre répertoire personnalisé de polices. Chaque dossier de polices doit contenir au moins une variante de police et un fichier json.
 De plus, il est recommandé d'enregistrer également un fichier de licence. 
 
-Les variantes de police doivent être nommées avec une flèche, indiquant la direction de broderie pour laquelle elles ont été créées (`→.svg`, `←.svg`, etc.).
+Les variantes de police doivent être nommées avec une flèche, indiquant la direction de broderie pour laquelle elles ont été créées (`→.svg`, `←.svg`, etc.).  It is also possible to create a folder named with an arrow name instead and insert multiple font files for a specific direction.
 
 Le fichier json doit inclure au minimum le nom des polices.
 

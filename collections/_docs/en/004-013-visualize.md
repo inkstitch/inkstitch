@@ -2,7 +2,7 @@
 title: "Visualize"
 permalink: /docs/visualize/
 excerpt: ""
-last_modified_at: 2020-08-19
+last_modified_at: 2023-02-20
 toc: true
 ---
 ## Simulator / Realistic Preview
@@ -34,7 +34,7 @@ It is also possible to **zoom** and **pan** the simulation with the mouse.
 ## Stitch Plan Preview
 
 Run `Extensions > Ink/Stitch > Visualize and Export > Stitch Plan Preview...`.
-Instead of apllying the stitch plan, you can also use the `Live preview` option. Then you don't need to undo your changes afterwards.
+Instead of applying the stitch plan, you can also use the `Live preview` option. Then you don't need to undo your changes afterwards. If you apply the stitch plan, you will have the ability to inspect it and adapt your design as you wish. Use the Undo Stitch Plan extension to remove it afterwards.
 
 You have the following display options:
 * **Move stitch plan beside the canvas** Displays the preview on the right side of the canvas. If not enabled, the stitch plan will be placed on top of your design. In that case you may want to update your design visibility to eather hidden or lower opacity.
@@ -43,6 +43,7 @@ You have the following display options:
   * **hidden** hide the original design
   * **lower opacity** display original design with lower opacity
 * **Needle points** displays needle points if enabled
+* **Lock** make stitch plan insensitive to mouse interactions (makes it easier to work on the actual design while the stitch plan is active)
 
 {% include folder-galleries path="stitch-plan/" captions="1:Stitch plan beside canvas;2:Layer visibility set to hidden;3:Layer visibility set to lower opacity;4:Needle points enabled | disabled" caption="<i>Example image from [OpenClipart](https://openclipart.org/detail/334596)</i>" %}
 
@@ -65,5 +66,3 @@ Run `Extensions > Ink/Stitch > Visualize and Export > Undo Stitch Plan Preview`
 * Undo with `Ctrl + Z`
 
 This will display red, yellow and green dots on top of your elements so you can identify areas of high density easily.
-
-
