@@ -86,8 +86,8 @@ We have good news: Ink/Stitch will be significantly faster due to stitch plan ca
   * Fix macOS: rails point into the same direction again
 
 ### Cutwork
-  * Don't fail if the shape has only a fill
   * Add needle info to .inf files so that [Bernina/Bernette machines can display correct needle numbers](/docs/cutwork/#cutwork-with-berninabernette)
+  * Fix: Don't fail if the shape has only a fill
 
 ### Lettering
   * Add font [size filter](/docs/lettering/#options)
@@ -98,6 +98,10 @@ We have good news: Ink/Stitch will be significantly faster due to stitch plan ca
 
   * Fix: don't fail on invalid glyphs, but ignore them
   * Fix: don't fail but ignore auto-route if font author defined it for a fill font (just in case the author didn't finish to convert all glyphs but wants to test the new font).
+
+### Preferences
+  * It is now possible to set default values for the minimum stitch length and the minimum jump stitch length
+  * Define cache size
 
 ### Print PDF
   * New view: full page pattern
