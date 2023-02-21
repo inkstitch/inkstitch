@@ -81,6 +81,9 @@ class StitchGroup:
             stitch.add_tag(tag)
 
     def get_lock_stitches(self, pos, disable_ties=False):
+        if len(self.stitches) < 2:
+            return []
+
         lock_pos = 0 if pos == "start" else 1
         if disable_ties or self.lock_stitches[lock_pos] is None:
             return
