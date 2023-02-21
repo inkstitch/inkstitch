@@ -156,8 +156,8 @@ class AbsoluteLock(LockStitchDefinition):
             if tie_path < 0:
                 stitch = Stitch(stitches[0] + tie_path * (stitches[1] - stitches[0]).unit())
             else:
-                stitch = substring(line, start_dist=tie_path, end_dist=tie_path)
-                stitch = Stitch(stitch.x, stitch.y, tags=('lock_stitch',))
+                point = line.interpolate(tie_path)
+                stitch = Stitch(point.x, point.y, tags=('lock_stitch',))
             lock_stitches.append(stitch)
         return lock_stitches
 
