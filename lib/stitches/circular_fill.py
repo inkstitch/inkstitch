@@ -45,11 +45,7 @@ def circular_fill(shape,
     segments = []
     for line in intersection.geoms:
         if isinstance(line, shgeo.LineString):
-            # use running stitch here to adjust the stitch length
-            coords = running_stitch([Stitch(point[0], point[1]) for point in line.coords],
-                                    max_stitch_length,
-                                    running_stitch_tolerance)
-            segments.append([(point.x, point.y) for point in coords])
+            segments.append(line.coords[:])
 
     fill_stitch_graph = build_fill_stitch_graph(shape, segments, starting_point, ending_point)
     if not graph_is_valid(fill_stitch_graph, shape, max_stitch_length):
@@ -58,6 +54,11 @@ def circular_fill(shape,
     travel_graph = build_travel_graph(fill_stitch_graph, shape, angle, underpath)
     path = find_stitch_path(fill_stitch_graph, travel_graph, starting_point, ending_point)
     result = path_to_stitches(path, travel_graph, fill_stitch_graph, max_stitch_length, running_stitch_length, running_stitch_tolerance, skip_last)
+
+    # use running stitch to adjust the stitch length
+    result = running_stitch(result,
+                            max_stitch_length,
+                            running_stitch_tolerance)
 
     return result
 
