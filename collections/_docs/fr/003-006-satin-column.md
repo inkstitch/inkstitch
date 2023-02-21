@@ -91,7 +91,6 @@ Lisez aussi [cet excellent article](https://www.mrxstitch.com/underlay/) sur les
 Certains de ces paramètres ne font pas partie de la version récente.
 {: .notice--info}
 
-
 ### Couche supérieure du satin
 
 |Paramètres||Description|
@@ -109,18 +108,14 @@ Certains de ces paramètres ne font pas partie de la version récente.
 |Forcer les points d'arrêts | ☑ | Force un point d'arrêt après l'objet indépendament de la valeur de "Saut de fil" dans les Préférences d'Ink/Stitch|
 |Couper après          |☑ | Coupe le fil après avoir brodé cet objet|
 |Arrêter après           |☑ |Fait faire une pause à la machine après avoir brodé cet objet. Si une position d'arrêt a été définie, elle est rejointe par un saut avant la pause. |
-|Pourcentage maximum d'augmentation aléatoire de la largeur du satin | | Élargir le satin d'au plus ce pourcentage. Deux valeurs séparées par un espace peuvent être utilisées pour un effet asymétrique.|
-|Pourcentage maximum  de diminution aléatoire de la largeur du satin || Réduire la largeur du satin d'au plus ce pourcentage. Deux valeurs séparées par un espace peuvent être utilisées pour un effet asymétrique.|
-|Pourcentage aléatoire pour l'espacement zigzag | |Pourcentage maximum d'augmentation à appliquer à  l'espacement zigzag.|
-|Déplacement aléatoire pour le découpage des points   | | Si le découpage totalement aléatoire des points est activé, ce paramètre rend la longueur du point aléatoire, sinon, le déplacement aléatoire du découpage se fait autour de sa position normale (sans appliquer d'aléatoire)|
+|Pourcentage maximum d'augmentation aléatoire de la largeur du satin |![Random width increase](/assets/images/docs/params-satin-random-width-increase.png)| Élargir le satin d'au plus ce pourcentage. Deux valeurs séparées par un espace peuvent être utilisées pour un effet asymétrique.|
+|Pourcentage maximum  de diminution aléatoire de la largeur du satin |![Random width decrease](/assets/images/docs/params-satin-random-width-decrease.png)| Réduire la largeur du satin d'au plus ce pourcentage. Deux valeurs séparées par un espace peuvent être utilisées pour un effet asymétrique.|
+|Pourcentage aléatoire pour l'espacement zigzag |![Random zigzag spacing](/assets/images/docs/params-satin-random-zigzag-spacing.png)|Pourcentage maximum d'augmentation à appliquer à  l'espacement zigzag.|
+|Déplacement aléatoire pour le découpage des points   |![Random split stitch jitter](/assets/images/docs/params-satin-random-split-stitch-jitter.png)| Si le découpage totalement aléatoire des points est activé, ce paramètre rend la longueur du point aléatoire, sinon, le déplacement aléatoire du découpage se fait autour de sa position normale (sans appliquer d'aléatoire)|
 |Découpage totalement aléatoire des points          |☑ |Si activé, le découpage des points est totalement  aléatoire (ce qui risque de modifier le nombre de points), sinon, le nombre de points est conservé, mais leur position peut varier du déplacement aléatoire paramétré.|
 |Longueur minimum du point si découpage totalement aléatoire   |  | Par défaut, prend la valeur de la longueur maximum du point. Une valeur inférieure permet une meilleure transition entre les points découpés et les points non découpés.|
 |Graine Aléatoire         | | Utiliser cette graine aléatoire pour le calcul des attributs. Si vide, utilise l'identificateur de l'élément. Relancer si vous n'êtes pas satisfait du résultat.|
 {: .params-table }
-
-
-
-
 
 ### Sous-couche centrale
 
