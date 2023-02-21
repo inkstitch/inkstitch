@@ -2,7 +2,7 @@
 title: "Geradstich"
 permalink: /de/docs/stitches/running-stitch/
 excerpt: ""
-last_modified_at: 2023-01-16
+last_modified_at: 2023-02-21
 toc: true
 ---
 ## Beschreibung
@@ -46,6 +46,16 @@ Vernähen erlauben                     | Vernäht bei Bedarf an den ausgewählte
 Vernähen erzwingen                    | Vernäht den Faden nach diesem Element, auch dann, wenn der Abstand zum Folgeobjekt geringer ist als in den [Ink/Stitch Einstellungen](/de/docs/preferences/) definiert.
 Fadenschnitt                          | Schneidet den Faden nachdem dieses Objekt genäht wurde
 Stopp                                 | Stoppt die Maschine nachdem dieses Objekt genäht wurde und springt zur Stopp-Position (sofern vorhanden)
+
+## Anordnen
+
+Für eine bessere Stickreihenfolge lohnt es sich das [Linien-Werkzeug](/de/docs/stroke-tools/) `Automatisch geführter Geradstich` auszuprobieren.
+
+## Gemusterter Geradstich
+
+In einem [Tutorial](/de/tutorials/patterned-unning-stitch/) erklären wir, wie mit einem Inkscape Pfadeffekt schnell und einfach ein gemusterter Geradstich entstehen kann.
+
+![patterned running stitch](/assets/images/tutorials/pattern-along-path/copy-paste.png)
 
 ## Beispieldateien, die Geradstich enthalten
 

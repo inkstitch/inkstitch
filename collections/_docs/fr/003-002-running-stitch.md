@@ -46,5 +46,15 @@ Forcer les points d'arrêts        |Force un point d'arrêt après l'objet indé
 Couper après                      |Couper le fil après avoir brodé cet objet
 Arrêter après                     |Arrêter (pause machine) après avoir brodé cet objet. Avant l'arrêt, il y aura un saut vers la position d'arrêt si elle a été définie
 
+## Routing
+
+For a better stitch routing try the extension `Autoroute Running Stitch` in the [stroke tools](/fr/docs/stroke-tools/).
+
+## Patterned Running Stitch
+
+Read the [tutorial](/fr/tutorials/patterned-unning-stitch/) how to easily create a patterned running stitch.
+
+![patterned running stitch](/assets/images/tutorials/pattern-along-path/copy-paste.png)
+
 ## Fichiers exemple avec point droit
 {% include tutorials/tutorial_list key="stitch-type" value="Running Stitch" %}

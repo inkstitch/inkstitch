@@ -46,6 +46,16 @@ Force lock stitches           |Sew lock stitches after sewing this element, even
 Trim After                    |Trim the thread after sewing this object.
 Stop After                    |Stop the machine after sewing this object. Before stopping it will jump to the stop position (frame out) if defined.
 
+## Routing
+
+For a better stitch routing try the extension `Autoroute Running Stitch` in the [stroke tools](/da/docs/stroke-tools/).
+
+## Patterned Running Stitch
+
+Read the [tutorial](/da/tutorials/patterned-unning-stitch/) how to easily create a patterned running stitch.
+
+![patterned running stitch](/assets/images/tutorials/pattern-along-path/copy-paste.png)
+
 ## Sample Files Including Running Stitch
 
 {% include tutorials/tutorial_list key="stitch-type" value="Running Stitch" %}
