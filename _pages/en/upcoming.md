@@ -8,6 +8,12 @@ toc: true
 ---
 This page lists **changes made after the latest release**. Latest release: Ink/Stitch v2.2.0
 
+## General
+
+We have good news: Ink/Stitch will be significantly faster due to stitch plan caching.
+
+## Fonts
+
 ## Element/Stitch types
 
 ### Clones
