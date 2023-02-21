@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-02-08 01:22+0000\n"
-"PO-Revision-Date: 2023-02-10 01:27\n"
+"POT-Creation-Date: 2023-02-21 01:27+0000\n"
+"PO-Revision-Date: 2023-02-21 01:28\n"
 "Last-Translator: \n"
 "Language-Team: Finnish\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-08 01:22+0000\n"
+"POT-Creation-Date: 2023-02-21 01:27+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -523,7 +523,7 @@ msgid "If you'd like to help please\n"
 "- create a new issue at https://github.com/inkstitch/inkstitch/issues"
 msgstr ""
 
-#: inkstitch.py:107 lib/elements/fill_stitch.py:728
+#: inkstitch.py:107 lib/elements/fill_stitch.py:737
 msgid "Include the error description and also (if possible) the svg file."
 msgstr ""
 
@@ -700,77 +700,77 @@ msgstr ""
 msgid "Flip automatically calucalted angle if it appears to be wrong."
 msgstr ""
 
-#: lib/elements/element.py:241
+#: lib/elements/element.py:240
 msgid "Allow lock stitches"
 msgstr ""
 
-#: lib/elements/element.py:242
+#: lib/elements/element.py:241
 msgid "Tie thread at the beginning and/or end of this object. Manual stitch will not add lock stitches."
 msgstr ""
 
 #. options to allow lock stitch before and after objects
-#: lib/elements/element.py:246
+#: lib/elements/element.py:245
 msgid "Both"
 msgstr ""
 
-#: lib/elements/element.py:246
+#: lib/elements/element.py:245
 msgid "Before"
 msgstr ""
 
-#: lib/elements/element.py:246
+#: lib/elements/element.py:245
 msgid "After"
 msgstr ""
 
-#: lib/elements/element.py:246
+#: lib/elements/element.py:245
 msgid "Neither"
 msgstr ""
 
-#: lib/elements/element.py:255
+#: lib/elements/element.py:254
 #: inx/inkstitch_lettering_force_lock_stitches.inx:3
 msgid "Force lock stitches"
 msgstr ""
 
-#: lib/elements/element.py:256
+#: lib/elements/element.py:255
 msgid "Sew lock stitches after sewing this element, even if the distance to the next object is shorter than defined by the collapse length value in the Ink/Stitch preferences."
 msgstr ""
 
-#: lib/elements/element.py:267
+#: lib/elements/element.py:266
 msgid "Random seed"
 msgstr ""
 
-#: lib/elements/element.py:268
+#: lib/elements/element.py:267
 msgid "Use a specific seed for randomized attributes. Uses the element ID if empty."
 msgstr ""
 
-#: lib/elements/element.py:316
+#: lib/elements/element.py:315
 #, python-format
 msgid "Object %(id)s has an empty 'd' attribute.  Please delete this object from your document."
 msgstr ""
 
-#: lib/elements/element.py:374
+#: lib/elements/element.py:373
 msgid "Trim After"
 msgstr ""
 
-#: lib/elements/element.py:375
+#: lib/elements/element.py:374
 msgid "Add a TRIM command after stitching this object."
 msgstr ""
 
-#: lib/elements/element.py:384
+#: lib/elements/element.py:383
 msgid "Stop After"
 msgstr ""
 
-#: lib/elements/element.py:385
+#: lib/elements/element.py:384
 msgid "Add a STOP command after stitching this object."
 msgstr ""
 
 #. used when showing an error message to the user such as
 #. "Failed on PathLabel (path1234): Satin column: One or more of the rungs
 #. doesn't intersect both rails."
-#: lib/elements/element.py:421
+#: lib/elements/element.py:499
 msgid "Failed on "
 msgstr ""
 
-#: lib/elements/element.py:423
+#: lib/elements/element.py:501
 msgid "Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects. This will indicate the errorneus position."
 msgstr ""
 
@@ -786,305 +786,305 @@ msgstr ""
 msgid "* Run Extensions > Ink/Stitch > Troubleshoot > Cleanup Document..."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:28
+#: lib/elements/fill_stitch.py:29
 msgid "Small Fill"
 msgstr "Pieni täyttö"
 
-#: lib/elements/fill_stitch.py:29
+#: lib/elements/fill_stitch.py:30
 msgid "This fill object is so small that it would probably look better as running stitch or satin column. For very small shapes, fill stitch is not possible, and Ink/Stitch will use running stitch around the outline instead."
 msgstr "Objektin täyttä on niin pieni että se voisi toimia paremmin satiinina tai juoksevana tikkinä. Täytetikki ei ole mahdollista ja Ink/Stitch neuloo vain reunan."
 
-#: lib/elements/fill_stitch.py:35 lib/elements/fill_stitch.py:476
+#: lib/elements/fill_stitch.py:36 lib/elements/fill_stitch.py:477
 msgid "Expand"
 msgstr "Laajenna"
 
-#: lib/elements/fill_stitch.py:36
+#: lib/elements/fill_stitch.py:37
 msgid "The expand parameter for this fill object cannot be applied. Ink/Stitch will ignore it and will use original size instead."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:41 lib/elements/fill_stitch.py:453
+#: lib/elements/fill_stitch.py:42 lib/elements/fill_stitch.py:454
 msgid "Inset"
 msgstr "Sisennys"
 
-#: lib/elements/fill_stitch.py:42
+#: lib/elements/fill_stitch.py:43
 msgid "The underlay inset parameter for this fill object cannot be applied. Ink/Stitch will ignore it and will use the original size instead."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:47
+#: lib/elements/fill_stitch.py:48
 msgid "Missing Guideline"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:48
+#: lib/elements/fill_stitch.py:49
 msgid "This object is set to \"Guided Fill\", but has no guide line."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:50
+#: lib/elements/fill_stitch.py:51
 msgid "* Create a stroke object"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:51
+#: lib/elements/fill_stitch.py:52
 msgid "* Select this object and run Extensions > Ink/Stitch > Edit > Selection to guide line"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:56
+#: lib/elements/fill_stitch.py:57
 msgid "Disjointed Guide Line"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:57
+#: lib/elements/fill_stitch.py:58
 msgid "The guide line of this object isn't within the object borders. The guide line works best, if it is within the target element."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:60
+#: lib/elements/fill_stitch.py:61
 msgid "* Move the guide line into the element"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:65 lib/elements/stroke.py:36
+#: lib/elements/fill_stitch.py:66 lib/elements/stroke.py:36
 msgid "Multiple Guide Lines"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:66 lib/elements/stroke.py:37
+#: lib/elements/fill_stitch.py:67 lib/elements/stroke.py:37
 msgid "This object has multiple guide lines, but only the first one will be used."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:68 lib/elements/stroke.py:39
+#: lib/elements/fill_stitch.py:69 lib/elements/stroke.py:39
 msgid "* Remove all guide lines, except for one."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:73
+#: lib/elements/fill_stitch.py:74
 msgid "Unconnected"
 msgstr "Ei yhteyttä"
 
-#: lib/elements/fill_stitch.py:74
+#: lib/elements/fill_stitch.py:75
 msgid "Fill: This object is made up of unconnected shapes. Ink/Stitch doesn't know what order to stitch them in.  Please break this object up into separate shapes."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:78 lib/elements/fill_stitch.py:87
-#: lib/elements/fill_stitch.py:95
+#: lib/elements/fill_stitch.py:79 lib/elements/fill_stitch.py:88
+#: lib/elements/fill_stitch.py:96
 msgid "* Extensions > Ink/Stitch > Fill Tools > Break Apart Fill Objects"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:83
+#: lib/elements/fill_stitch.py:84
 msgid "Border crosses itself"
 msgstr "Reuna ylittää itsensä"
 
-#: lib/elements/fill_stitch.py:84
+#: lib/elements/fill_stitch.py:85
 msgid "Fill: The border crosses over itself. This may lead into unconnected shapes. Please break this object into separate shapes to indicate in which order it should be stitched in."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:92
+#: lib/elements/fill_stitch.py:93
 msgid "This shape is invalid"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:93
+#: lib/elements/fill_stitch.py:94
 msgid "Fill: This shape cannot be stitched out. Please try to repair it with the \"Break Apart Fill Objects\" extension."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:100
+#: lib/elements/fill_stitch.py:101
 msgid "FillStitch"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:103
+#: lib/elements/fill_stitch.py:104
 msgid "Automatically routed fill stitching"
 msgstr "Automaattisesti reititetty täytetikki"
 
-#: lib/elements/fill_stitch.py:108
+#: lib/elements/fill_stitch.py:109
 msgid "Fill method"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:109
+#: lib/elements/fill_stitch.py:110
 msgid "Auto Fill"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:109
+#: lib/elements/fill_stitch.py:110
 msgid "Contour Fill"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:109
+#: lib/elements/fill_stitch.py:110
 msgid "Guided Fill"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:109
+#: lib/elements/fill_stitch.py:110
 msgid "Legacy Fill"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:114
+#: lib/elements/fill_stitch.py:115
 msgid "Guided Fill Strategy"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:115
+#: lib/elements/fill_stitch.py:116
 msgid "Copy"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:115
+#: lib/elements/fill_stitch.py:116
 msgid "Parallel Offset"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:116
+#: lib/elements/fill_stitch.py:117
 msgid "Copy (the default) will fill the shape with shifted copies of the line. Parallel offset will ensure that each line is always a consistent distance from its neighbor. Sharp corners may be introduced."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:123
+#: lib/elements/fill_stitch.py:124
 msgid "Contour Fill Strategy"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:124
+#: lib/elements/fill_stitch.py:125
 msgid "Inner to Outer"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:124
+#: lib/elements/fill_stitch.py:125
 msgid "Single spiral"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:124
+#: lib/elements/fill_stitch.py:125
 msgid "Double spiral"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:129
+#: lib/elements/fill_stitch.py:130
 msgid "Join Style"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:130
+#: lib/elements/fill_stitch.py:131
 msgid "Round"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:130
+#: lib/elements/fill_stitch.py:131
 msgid "Mitered"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:130
+#: lib/elements/fill_stitch.py:131
 msgid "Beveled"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:135
+#: lib/elements/fill_stitch.py:136
 msgid "Avoid self-crossing"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:140
+#: lib/elements/fill_stitch.py:141
 msgid "Clockwise"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:146
+#: lib/elements/fill_stitch.py:147
 msgid "Angle of lines of stitches"
 msgstr "Tikkien kulma"
 
-#: lib/elements/fill_stitch.py:147
+#: lib/elements/fill_stitch.py:148
 msgid "The angle increases in a counter-clockwise direction.  0 is horizontal.  Negative angles are allowed."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:165 lib/elements/fill_stitch.py:465
+#: lib/elements/fill_stitch.py:166 lib/elements/fill_stitch.py:466
 msgid "Skip last stitch in each row"
 msgstr "Hyppää yli joka rivin viimenen tikki"
 
-#: lib/elements/fill_stitch.py:166 lib/elements/fill_stitch.py:466
+#: lib/elements/fill_stitch.py:167 lib/elements/fill_stitch.py:467
 msgid "The last stitch in each row is quite close to the first stitch in the next row.  Skipping it decreases stitch count and density."
 msgstr "Viimenen tikki jokaisessa rivissä on melko lähellä ensimmäistä tikkiä seuraavassa rivissä. Viimeisen tikin ohitus vähentää tikkimäärää ja tiheyttä."
 
-#: lib/elements/fill_stitch.py:179
+#: lib/elements/fill_stitch.py:180
 msgid "Flip fill (start right-to-left)"
 msgstr "Käännä täytön suunta (aloita oikealta vasemmalle)"
 
-#: lib/elements/fill_stitch.py:180
+#: lib/elements/fill_stitch.py:181
 msgid "The flip option can help you with routing your stitch path.  When you enable flip, stitching goes from right-to-left instead of left-to-right."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:191
+#: lib/elements/fill_stitch.py:192
 msgid "Spacing between rows"
 msgstr "Rivien väli"
 
-#: lib/elements/fill_stitch.py:192
+#: lib/elements/fill_stitch.py:193
 msgid "Distance between rows of stitches."
 msgstr "Tikkirivien välinen etäisyys."
 
-#: lib/elements/fill_stitch.py:206
+#: lib/elements/fill_stitch.py:207
 msgid "Maximum fill stitch length"
 msgstr "Tikin maksimi pituus"
 
-#: lib/elements/fill_stitch.py:207
+#: lib/elements/fill_stitch.py:208
 msgid "The length of each stitch in a row.  Shorter stitch may be used at the start or end of a row."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:218
+#: lib/elements/fill_stitch.py:219
 msgid "Stagger rows this many times before repeating"
 msgstr "Erota rivit näin monta kertaa ennenkuin toistetaan"
 
-#: lib/elements/fill_stitch.py:219
+#: lib/elements/fill_stitch.py:220
 msgid "Length of the cycle by which successive stitch rows are staggered. Fractional values are allowed and can have less visible diagonals than integer values."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:377
+#: lib/elements/fill_stitch.py:378
 msgid "Running stitch length (traversal between sections)"
 msgstr "Juoksevan tikin pituus"
 
-#: lib/elements/fill_stitch.py:378
+#: lib/elements/fill_stitch.py:379
 msgid "Length of stitches around the outline of the fill region used when moving from section to section."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:389 lib/elements/stroke.py:136
+#: lib/elements/fill_stitch.py:390 lib/elements/stroke.py:136
 msgid "Running stitch tolerance"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:390
+#: lib/elements/fill_stitch.py:391
 msgid "All stitches must be within this distance of the path.  A lower tolerance means stitches will be closer together.  A higher tolerance means sharp corners may be rounded."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:401
+#: lib/elements/fill_stitch.py:402
 msgid "Underlay"
 msgstr "Alatäyttö"
 
-#: lib/elements/fill_stitch.py:401 lib/elements/fill_stitch.py:410
-#: lib/elements/fill_stitch.py:435 lib/elements/fill_stitch.py:446
-#: lib/elements/fill_stitch.py:456 lib/elements/fill_stitch.py:468
-#: lib/elements/fill_stitch.py:506
+#: lib/elements/fill_stitch.py:402 lib/elements/fill_stitch.py:411
+#: lib/elements/fill_stitch.py:436 lib/elements/fill_stitch.py:447
+#: lib/elements/fill_stitch.py:457 lib/elements/fill_stitch.py:469
+#: lib/elements/fill_stitch.py:507
 msgid "Fill Underlay"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:407
+#: lib/elements/fill_stitch.py:408
 msgid "Fill angle"
 msgstr "Täytön suuntakulma"
 
-#: lib/elements/fill_stitch.py:408
+#: lib/elements/fill_stitch.py:409
 msgid "Default: fill angle + 90 deg. Insert a list for multiple layers separated by a space."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:432
+#: lib/elements/fill_stitch.py:433
 msgid "Row spacing"
 msgstr "Rivien välit"
 
-#: lib/elements/fill_stitch.py:433
+#: lib/elements/fill_stitch.py:434
 msgid "default: 3x fill row spacing"
 msgstr "vakio: 3x rivien välit"
 
-#: lib/elements/fill_stitch.py:443
+#: lib/elements/fill_stitch.py:444
 msgid "Max stitch length"
 msgstr "Pisin tikin pituus"
 
-#: lib/elements/fill_stitch.py:444
+#: lib/elements/fill_stitch.py:445
 msgid "default: equal to fill max stitch length"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:454
+#: lib/elements/fill_stitch.py:455
 msgid "Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill."
 msgstr "Kutista muotoa ennen pohjan tikkaamista, estääksesi pohjatikkien näkymisen täyttötikin ulkopuolelta."
 
-#: lib/elements/fill_stitch.py:477
+#: lib/elements/fill_stitch.py:478
 msgid "Expand the shape before fill stitching, to compensate for gaps between shapes."
 msgstr "Laajenna muotoa ennen täyttöä, kompensoidaksesi muotojen välejä."
 
-#: lib/elements/fill_stitch.py:488 lib/elements/fill_stitch.py:502
+#: lib/elements/fill_stitch.py:489 lib/elements/fill_stitch.py:503
 msgid "Underpath"
 msgstr "Alipolku"
 
-#: lib/elements/fill_stitch.py:489 lib/elements/fill_stitch.py:503
+#: lib/elements/fill_stitch.py:490 lib/elements/fill_stitch.py:504
 msgid "Travel inside the shape when moving from section to section.  Underpath stitches avoid traveling in the direction of the row angle so that they are not visible.  This gives them a jagged appearance."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:720
+#: lib/elements/fill_stitch.py:729
 msgid "Error during autofill! This means it is a bug in Ink/Stitch."
 msgstr ""
 
 #. this message is followed by a URL:
 #. https://github.com/inkstitch/inkstitch/issues/new
-#: lib/elements/fill_stitch.py:723
+#: lib/elements/fill_stitch.py:732
 msgid "If you'd like to help please\n"
 "- copy the entire error message below\n"
 "- save your SVG file and\n"
@@ -1155,284 +1155,284 @@ msgstr ""
 msgid "Manual stitch along path"
 msgstr ""
 
-#: lib/elements/satin_column.py:27
+#: lib/elements/satin_column.py:28
 msgid "Too few subpaths"
 msgstr "Liian vähän alipolkuja"
 
-#: lib/elements/satin_column.py:28
+#: lib/elements/satin_column.py:29
 msgid "Satin column: Object has too few subpaths.  A satin column should have at least two subpaths (the rails)."
 msgstr "Satiinipolku: objektilla on liianvähän alipolkuja. Satiinipolulla pitää olla vähintään kaksi alipolkua."
 
-#: lib/elements/satin_column.py:30
+#: lib/elements/satin_column.py:31
 msgid "* Add another subpath (select two rails and do Path > Combine)"
 msgstr "* Lisää toinen alipolku (valitse 2 polkua ja tee polku>yhdistä)"
 
-#: lib/elements/satin_column.py:31
+#: lib/elements/satin_column.py:32
 msgid "* Convert to running stitch or simple satin (Params extension)"
 msgstr "* Muuta juoksevaksitikiksi tai yksinkertaiseksi satiiniksi (parametri lisäosa)"
 
-#: lib/elements/satin_column.py:36
+#: lib/elements/satin_column.py:37
 msgid "Unequal number of points"
 msgstr "Pisteitä pariton määrä"
 
-#: lib/elements/satin_column.py:37
+#: lib/elements/satin_column.py:38
 msgid "Satin column: There are no rungs and rails have an an unequal number of points."
 msgstr "Saatiinipolku: Apuviivat puuttuu ja pisteitä on pariton määrä."
 
-#: lib/elements/satin_column.py:39
+#: lib/elements/satin_column.py:40
 msgid "The easiest way to solve this issue is to add one or more rungs. "
 msgstr "Helpoin tapa ratkaista tämä on lisätä yksi tai useampi apuviiva. "
 
-#: lib/elements/satin_column.py:40
+#: lib/elements/satin_column.py:41
 msgid "Rungs control the stitch direction in satin columns."
 msgstr "Apuviivat määrittävät satiinin suunnan satiini polulla."
 
-#: lib/elements/satin_column.py:41
+#: lib/elements/satin_column.py:42
 msgid "* With the selected object press \"P\" to activate the pencil tool."
 msgstr "*valitussa objektissa paina \"P\" aktivoidaksesi kynätyökalun."
 
-#: lib/elements/satin_column.py:42
+#: lib/elements/satin_column.py:43
 msgid "* Hold \"Shift\" while drawing the rung."
 msgstr "*Pidä \"shift\" pohjassa piirtäessäsi apuviivan."
 
-#: lib/elements/satin_column.py:47
+#: lib/elements/satin_column.py:48
 msgid "Not stitchable satin column"
 msgstr ""
 
-#: lib/elements/satin_column.py:48
+#: lib/elements/satin_column.py:49
 msgid "A satin column consists out of two rails and one or more rungs. This satin column may have a different setup."
 msgstr ""
 
-#: lib/elements/satin_column.py:50
+#: lib/elements/satin_column.py:51
 msgid "Make sure your satin column is not a combination of multiple satin columns."
 msgstr ""
 
-#: lib/elements/satin_column.py:51
+#: lib/elements/satin_column.py:52
 msgid "Go to our website and read how a satin column should look like https://inkstitch.org/docs/stitches/satin-column/"
 msgstr ""
 
-#: lib/elements/satin_column.py:55
+#: lib/elements/satin_column.py:56
 msgid "Each rung should intersect both rails once."
 msgstr "Jokaisen apuviivan pitää ylittää molemmat satiiniviivat."
 
-#: lib/elements/satin_column.py:59
+#: lib/elements/satin_column.py:60
 msgid "Rung doesn't intersect rails"
 msgstr "Apuviiva ei ylitä satiinipolkua"
 
-#: lib/elements/satin_column.py:60
+#: lib/elements/satin_column.py:61
 msgid "Satin column: A rung doesn't intersect both rails."
 msgstr "Satiinipolku: apuviiva ei ylitä molempia satiiniviivoja."
 
-#: lib/elements/satin_column.py:64
+#: lib/elements/satin_column.py:65
 msgid "Rungs intersects too many times"
 msgstr ""
 
-#: lib/elements/satin_column.py:65
+#: lib/elements/satin_column.py:66
 msgid "Satin column: A rung intersects a rail more than once."
 msgstr "Satiini: poikkiviiva ylittää muodon enemmän kuin kerran."
 
-#: lib/elements/satin_column.py:69
+#: lib/elements/satin_column.py:70
 msgid "Satin Column"
 msgstr "Satiini"
 
-#: lib/elements/satin_column.py:75
+#: lib/elements/satin_column.py:76
 msgid "Custom satin column"
 msgstr "Erikois satiini"
 
-#: lib/elements/satin_column.py:81
+#: lib/elements/satin_column.py:82
 msgid "\"E\" stitch"
 msgstr "\"E\" tikki"
 
-#: lib/elements/satin_column.py:87 lib/elements/satin_column.py:344
+#: lib/elements/satin_column.py:88 lib/elements/satin_column.py:345
 msgid "Maximum stitch length"
 msgstr ""
 
-#: lib/elements/satin_column.py:88
+#: lib/elements/satin_column.py:89
 msgid "Maximum stitch length for split stitches."
 msgstr ""
 
-#: lib/elements/satin_column.py:95
+#: lib/elements/satin_column.py:96
 msgid "Random percentage of satin width decrease"
 msgstr ""
 
-#: lib/elements/satin_column.py:96
+#: lib/elements/satin_column.py:97
 msgid "shorten stitch across rails at most this percent. Two values separated by a space may be used for an aysmmetric effect."
 msgstr ""
 
-#: lib/elements/satin_column.py:105
+#: lib/elements/satin_column.py:106
 msgid "Random percentage of satin width increase"
 msgstr ""
 
-#: lib/elements/satin_column.py:106
+#: lib/elements/satin_column.py:107
 msgid "lengthen stitch across rails at most this percent. Two values separated by a space may be used for an aysmmetric effect."
 msgstr ""
 
-#: lib/elements/satin_column.py:115
+#: lib/elements/satin_column.py:116
 msgid "Random zig-zag spacing percentage"
 msgstr ""
 
-#: lib/elements/satin_column.py:116
+#: lib/elements/satin_column.py:117
 msgid "Amount of random jitter added to stitch length."
 msgstr ""
 
-#: lib/elements/satin_column.py:124
+#: lib/elements/satin_column.py:125
 msgid "Random phase for split stitches"
 msgstr ""
 
-#: lib/elements/satin_column.py:125
+#: lib/elements/satin_column.py:126
 msgid "Controls whether split stitches are centered or with a random phase (which may increase stitch count)."
 msgstr ""
 
-#: lib/elements/satin_column.py:132
+#: lib/elements/satin_column.py:133
 msgid "Minimum length for random-phase split."
 msgstr ""
 
-#: lib/elements/satin_column.py:133
+#: lib/elements/satin_column.py:134
 msgid "Defaults to maximum stitch length. Smaller values allow for a transition between single-stitch and split-stitch."
 msgstr ""
 
-#: lib/elements/satin_column.py:142
+#: lib/elements/satin_column.py:143
 msgid "Random jitter for split stitches"
 msgstr ""
 
-#: lib/elements/satin_column.py:143
+#: lib/elements/satin_column.py:144
 msgid "Randomizes split stitch length if random phase is enabled, stitch position if disabled."
 msgstr ""
 
-#: lib/elements/satin_column.py:150
+#: lib/elements/satin_column.py:151
 msgid "Short stitch inset"
 msgstr ""
 
-#: lib/elements/satin_column.py:151
+#: lib/elements/satin_column.py:152
 msgid "Stitches in areas with high density will be inset by this amount."
 msgstr ""
 
-#: lib/elements/satin_column.py:159
+#: lib/elements/satin_column.py:160
 msgid "Short stitch distance"
 msgstr ""
 
-#: lib/elements/satin_column.py:160
+#: lib/elements/satin_column.py:161
 msgid "Inset stitches if the distance between stitches is smaller than this."
 msgstr ""
 
-#: lib/elements/satin_column.py:172 lib/elements/stroke.py:149
+#: lib/elements/satin_column.py:173 lib/elements/stroke.py:149
 msgid "Zig-zag spacing (peak-to-peak)"
 msgstr "Sik-sak väli (huipusta huippuun)"
 
-#: lib/elements/satin_column.py:173
+#: lib/elements/satin_column.py:174
 msgid "Peak-to-peak distance between zig-zags. This is double the mm/stitch measurement used by most mechanical machines."
 msgstr ""
 
-#: lib/elements/satin_column.py:184
+#: lib/elements/satin_column.py:185
 msgid "Pull compensation percentage"
 msgstr ""
 
-#: lib/elements/satin_column.py:185
+#: lib/elements/satin_column.py:186
 msgid "Additional pull compensation which varies as a percentage of stitch width. Two values separated by a space may be used for an aysmmetric effect."
 msgstr ""
 
-#: lib/elements/satin_column.py:198
+#: lib/elements/satin_column.py:199
 msgid "Pull compensation"
 msgstr "Veto kompensaatio"
 
-#: lib/elements/satin_column.py:199
+#: lib/elements/satin_column.py:200
 msgid "Satin stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape. This setting expands each pair of needle penetrations outward from the center of the satin column by a fixed length. Two values separated by a space may be used for an aysmmetric effect."
 msgstr ""
 
-#: lib/elements/satin_column.py:215
+#: lib/elements/satin_column.py:216
 msgid "Swap rails"
 msgstr ""
 
-#: lib/elements/satin_column.py:216
+#: lib/elements/satin_column.py:217
 msgid "Swaps the first and second rails of the satin column, affecting which side the thread finished on as well as any sided properties"
 msgstr ""
 
-#: lib/elements/satin_column.py:224
+#: lib/elements/satin_column.py:225
 msgid "Contour underlay"
 msgstr "Muodon pohja"
 
-#: lib/elements/satin_column.py:224 lib/elements/satin_column.py:231
-#: lib/elements/satin_column.py:239 lib/elements/satin_column.py:252
+#: lib/elements/satin_column.py:225 lib/elements/satin_column.py:232
+#: lib/elements/satin_column.py:240 lib/elements/satin_column.py:253
 msgid "Contour Underlay"
 msgstr "Muodon pohja"
 
-#: lib/elements/satin_column.py:231 lib/elements/satin_column.py:268
+#: lib/elements/satin_column.py:232 lib/elements/satin_column.py:269
 msgid "Stitch length"
 msgstr "Tikin pituus"
 
-#: lib/elements/satin_column.py:237
+#: lib/elements/satin_column.py:238
 msgid "Inset distance (fixed)"
 msgstr ""
 
-#: lib/elements/satin_column.py:238
+#: lib/elements/satin_column.py:239
 msgid "Shrink the outline by a fixed length, to prevent the underlay from showing around the outside of the satin column."
 msgstr ""
 
-#: lib/elements/satin_column.py:249
+#: lib/elements/satin_column.py:250
 msgid "Inset distance (proportional)"
 msgstr ""
 
-#: lib/elements/satin_column.py:250
+#: lib/elements/satin_column.py:251
 msgid "Shrink the outline by a proportion of the column width, to prevent the underlay from showing around the outside of the satin column."
 msgstr ""
 
-#: lib/elements/satin_column.py:261
+#: lib/elements/satin_column.py:262
 msgid "Center-walk underlay"
 msgstr "Keskitikki pohjustus"
 
-#: lib/elements/satin_column.py:261 lib/elements/satin_column.py:268
-#: lib/elements/satin_column.py:277 lib/elements/satin_column.py:287
+#: lib/elements/satin_column.py:262 lib/elements/satin_column.py:269
+#: lib/elements/satin_column.py:278 lib/elements/satin_column.py:288
 msgid "Center-Walk Underlay"
 msgstr "Keskitikki pohjustus"
 
-#: lib/elements/satin_column.py:274 lib/elements/stroke.py:101
+#: lib/elements/satin_column.py:275 lib/elements/stroke.py:101
 msgid "Repeats"
 msgstr "Toistot"
 
-#: lib/elements/satin_column.py:275
+#: lib/elements/satin_column.py:276
 msgid "For an odd number of repeats, this will reverse the direction the satin column is stitched, causing stitching to both begin and end at the start point."
 msgstr ""
 
-#: lib/elements/satin_column.py:285
+#: lib/elements/satin_column.py:286
 msgid "Position"
 msgstr ""
 
-#: lib/elements/satin_column.py:286
+#: lib/elements/satin_column.py:287
 #, python-format
 msgid "Position of underlay from between the rails. 0% is along the first rail, 50% is centered, 100% is along the second rail."
 msgstr ""
 
-#: lib/elements/satin_column.py:294
+#: lib/elements/satin_column.py:295
 msgid "Zig-zag underlay"
 msgstr "Sik-Sak pohjustus"
 
-#: lib/elements/satin_column.py:294 lib/elements/satin_column.py:303
-#: lib/elements/satin_column.py:314 lib/elements/satin_column.py:334
-#: lib/elements/satin_column.py:347
+#: lib/elements/satin_column.py:295 lib/elements/satin_column.py:304
+#: lib/elements/satin_column.py:315 lib/elements/satin_column.py:335
+#: lib/elements/satin_column.py:348
 msgid "Zig-zag Underlay"
 msgstr "Sik-Sak pohjustus"
 
-#: lib/elements/satin_column.py:300
+#: lib/elements/satin_column.py:301
 msgid "Zig-Zag spacing (peak-to-peak)"
 msgstr "Sik-Sak väli (huipustahuippuun)"
 
-#: lib/elements/satin_column.py:301
+#: lib/elements/satin_column.py:302
 msgid "Distance between peaks of the zig-zags."
 msgstr "Sik-Sak huippujen väli."
 
-#: lib/elements/satin_column.py:311
+#: lib/elements/satin_column.py:312
 msgid "Inset amount (fixed)"
 msgstr ""
 
-#: lib/elements/satin_column.py:312 lib/elements/satin_column.py:332
+#: lib/elements/satin_column.py:313 lib/elements/satin_column.py:333
 msgid "default: half of contour underlay inset"
 msgstr ""
 
-#: lib/elements/satin_column.py:331
+#: lib/elements/satin_column.py:332
 msgid "Inset amount (proportional)"
 msgstr ""
 
-#: lib/elements/satin_column.py:345
+#: lib/elements/satin_column.py:346
 msgid "Split stitch if distance of maximum stitch length is exceeded"
 msgstr ""
 
@@ -1638,7 +1638,7 @@ msgid "Legacy running stitch setting detected!\n\n"
 "It looks like you're using a stroke smaller than 0.5 units to indicate a running stitch, which is deprecated.  Instead, please set your stroke to be dashed to indicate running stitch.  Any kind of dash will work."
 msgstr ""
 
-#: lib/elements/text.py:13 lib/extensions/lettering.py:79
+#: lib/elements/text.py:13 lib/extensions/lettering.py:80
 msgid "Text"
 msgstr "Teksti"
 
@@ -1698,15 +1698,15 @@ msgid "Please select at least one satin column."
 msgstr ""
 
 #. This was previously: "No embroiderable paths selected."
-#: lib/extensions/base.py:127
+#: lib/extensions/base.py:136
 msgid "Ink/Stitch doesn't know how to work with any of the objects you've selected."
 msgstr ""
 
-#: lib/extensions/base.py:129
+#: lib/extensions/base.py:138
 msgid "There are no objects in the entire document that Ink/Stitch knows how to work with."
 msgstr ""
 
-#: lib/extensions/base.py:131
+#: lib/extensions/base.py:140
 msgid "Tip: Run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot Objects"
 msgstr ""
 
@@ -1846,50 +1846,50 @@ msgstr ""
 msgid "Please choose one or more commands to add."
 msgstr "Valitse lisättäväksi yksi tai useampi komento."
 
-#: lib/extensions/lettering.py:37 lib/extensions/lettering.py:478
+#: lib/extensions/lettering.py:38 lib/extensions/lettering.py:481
 msgid "Ink/Stitch Lettering"
 msgstr "Ink/Stitch Kirjaimet"
 
-#: lib/extensions/lettering.py:47
+#: lib/extensions/lettering.py:48
 msgid "Font"
 msgstr ""
 
-#: lib/extensions/lettering.py:56
+#: lib/extensions/lettering.py:57
 msgid "Font size filter (mm). 0 for all sizes."
 msgstr ""
 
-#: lib/extensions/lettering.py:66 inx/inkstitch_apply_threadlist.inx:7
+#: lib/extensions/lettering.py:67 inx/inkstitch_apply_threadlist.inx:7
 #: inx/inkstitch_fill_to_stroke.inx:15
 #: inx/inkstitch_lettering_along_path.inx:13
 #: inx/inkstitch_palette_to_text.inx:15
 msgid "Options"
 msgstr "Asetukset"
 
-#: lib/extensions/lettering.py:71
+#: lib/extensions/lettering.py:72
 msgid "Stitch lines of text back and forth"
 msgstr "Tikkaa tekstiviivat molempiin suuntiin"
 
-#: lib/extensions/lettering.py:74
+#: lib/extensions/lettering.py:75
 msgid "Never"
 msgstr ""
 
-#: lib/extensions/lettering.py:74
+#: lib/extensions/lettering.py:75
 msgid "after each line"
 msgstr ""
 
-#: lib/extensions/lettering.py:74
+#: lib/extensions/lettering.py:75
 msgid "after each word"
 msgstr ""
 
-#: lib/extensions/lettering.py:74
+#: lib/extensions/lettering.py:75
 msgid "after each letter"
 msgstr ""
 
-#: lib/extensions/lettering.py:75
+#: lib/extensions/lettering.py:76
 msgid "Add trim command"
 msgstr ""
 
-#: lib/extensions/lettering.py:84 lib/extensions/params.py:466
+#: lib/extensions/lettering.py:85 lib/extensions/params.py:467
 #: print/templates/custom-page.html:23 print/templates/custom-page.html:27
 #: print/templates/custom-page.html:33 print/templates/ui.html:102
 #: print/templates/ui.html:106 print/templates/ui.html:112
@@ -1898,33 +1898,33 @@ msgstr ""
 msgid "Cancel"
 msgstr "Peru"
 
-#: lib/extensions/lettering.py:88 lib/extensions/params.py:474
+#: lib/extensions/lettering.py:89 lib/extensions/params.py:475
 msgid "Apply and Quit"
 msgstr "Hyväksy ja lopeta"
 
-#: lib/extensions/lettering.py:249
+#: lib/extensions/lettering.py:250
 msgid "This font has no available font variant. Please update or remove the font."
 msgstr ""
 
 #. The user has chosen to scale the text by some percentage
 #. (50%, 200%, etc).  If you need to use the percentage symbol,
 #. make sure to double it (%%).
-#: lib/extensions/lettering.py:310
+#: lib/extensions/lettering.py:311
 #, python-format
 msgid "Text scale %s%%"
 msgstr "Skaalaa teksti %s%%"
 
-#: lib/extensions/lettering.py:321
+#: lib/extensions/lettering.py:322
 #, python-format
 msgid "Error: Text cannot be applied to the document.\n"
 "%s"
 msgstr ""
 
-#: lib/extensions/lettering.py:468
+#: lib/extensions/lettering.py:471
 msgid "Please select only one block of text."
 msgstr "Valitse vain yksi teksti."
 
-#: lib/extensions/lettering.py:471
+#: lib/extensions/lettering.py:474
 msgid "You've selected objects that were not created by the Lettering extension.  Please clear your selection or select different objects before running Lettering again."
 msgstr ""
 
@@ -1968,54 +1968,54 @@ msgstr ""
 msgid "Cannot read palette: invalid GIMP palette header"
 msgstr ""
 
-#: lib/extensions/params.py:251
+#: lib/extensions/params.py:252
 msgid "These settings will be applied to 1 object."
 msgstr "Nämä asetukset lisätään yhteen objektiin."
 
-#: lib/extensions/params.py:253
+#: lib/extensions/params.py:254
 #, python-format
 msgid "These settings will be applied to %d objects."
 msgstr "Nämä asetukset lisätään %d objekteihin."
 
-#: lib/extensions/params.py:258
+#: lib/extensions/params.py:259
 msgid "Some settings had different values across objects.  Select a value from the dropdown or enter a new one."
 msgstr ""
 
-#: lib/extensions/params.py:263
+#: lib/extensions/params.py:264
 #, python-format
 msgid "Disabling this tab will disable the following %d tabs."
 msgstr "Tämäm välilehden sammuttaminen sulkee myös %d välilehden."
 
-#: lib/extensions/params.py:267
+#: lib/extensions/params.py:268
 msgid "Disabling this tab will disable the following tab."
 msgstr "Tämän välilehden sammuttaminen sammuttaa seuraavan välilehden."
 
-#: lib/extensions/params.py:271
+#: lib/extensions/params.py:272
 #, python-format
 msgid "Enabling this tab will disable %s and vice-versa."
 msgstr "Tämän välilehden käyttöönotto poistaa käytöstä %s ja päinvastoin."
 
-#: lib/extensions/params.py:325
+#: lib/extensions/params.py:326
 msgid "Inkscape objects"
 msgstr "Inkscapen objekteja"
 
-#: lib/extensions/params.py:390
+#: lib/extensions/params.py:391
 msgid "Re-roll"
 msgstr ""
 
-#: lib/extensions/params.py:420
+#: lib/extensions/params.py:421
 msgid "Click to force this parameter to be saved when you click \"Apply and Quit\""
 msgstr "Klikkaa pakottaaksesi tämän asetuksen tallentumaan kun klikkaat \"Hyväksy ja lopeta\""
 
-#: lib/extensions/params.py:430
+#: lib/extensions/params.py:431
 msgid "This parameter will be saved when you click \"Apply and Quit\""
 msgstr "Tämä asetus tullaan tallentamaan kun klikkaat \"Hyväksy ja lopeta\""
 
-#: lib/extensions/params.py:448
+#: lib/extensions/params.py:449
 msgid "Embroidery Params"
 msgstr "Brodeeraus Parametrit"
 
-#: lib/extensions/params.py:471
+#: lib/extensions/params.py:472
 msgid "Use Last Settings"
 msgstr "Käytä viimeisempiä asetuksia"
 
@@ -2167,96 +2167,96 @@ msgstr "Pikavalinta \"%s\" on jo olemassa. Käytä muuta nimeä tai paina ylikir
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command label at bottom of simulator window
-#: lib/gui/simulator.py:18 electron/src/renderer/assets/js/simulator.js:142
+#: lib/gui/simulator.py:20 electron/src/renderer/assets/js/simulator.js:142
 #: inx/inkstitch_output_GCODE.inx:29
 msgid "STITCH"
 msgstr "Tikkaa"
 
-#: lib/gui/simulator.py:18 electron/src/renderer/assets/js/simulator.js:145
+#: lib/gui/simulator.py:20 electron/src/renderer/assets/js/simulator.js:145
 msgid "JUMP"
 msgstr "Hyppää"
 
-#: lib/gui/simulator.py:18 electron/src/renderer/assets/js/simulator.js:148
+#: lib/gui/simulator.py:20 electron/src/renderer/assets/js/simulator.js:148
 msgid "TRIM"
 msgstr "Trimmaa"
 
-#: lib/gui/simulator.py:18 electron/src/renderer/assets/js/simulator.js:151
+#: lib/gui/simulator.py:20 electron/src/renderer/assets/js/simulator.js:151
 #: inx/inkstitch_output_GCODE.inx:33
 msgid "STOP"
 msgstr "Pysäytä"
 
-#: lib/gui/simulator.py:18 electron/src/renderer/assets/js/simulator.js:154
+#: lib/gui/simulator.py:20 electron/src/renderer/assets/js/simulator.js:154
 #: inx/inkstitch_output_GCODE.inx:31
 msgid "COLOR CHANGE"
 msgstr "Vaihda väriä"
 
-#: lib/gui/simulator.py:50
+#: lib/gui/simulator.py:52
 msgid "Slow down (arrow down)"
 msgstr "Hidasta (nuoli alas)"
 
-#: lib/gui/simulator.py:53
+#: lib/gui/simulator.py:55
 msgid "Speed up (arrow up)"
 msgstr "Nopeuta (nuoli ylös)"
 
-#: lib/gui/simulator.py:56
+#: lib/gui/simulator.py:58
 msgid "Go on step backward (-)"
 msgstr "Mene askel taakse (-)"
 
-#: lib/gui/simulator.py:59
+#: lib/gui/simulator.py:61
 msgid "Go on step forward (+)"
 msgstr "Mene askel eteen (+)"
 
-#: lib/gui/simulator.py:62
+#: lib/gui/simulator.py:64
 msgid "Switch direction (arrow left | arrow right)"
 msgstr "Vaihda suuntaa (nuoli vasemmalle | nuoli oikealle)"
 
-#: lib/gui/simulator.py:63 lib/gui/simulator.py:239 lib/gui/simulator.py:246
+#: lib/gui/simulator.py:65 lib/gui/simulator.py:241 lib/gui/simulator.py:248
 #: electron/src/renderer/components/Simulator.vue:29
 msgid "Pause"
 msgstr "Pysäytä"
 
-#: lib/gui/simulator.py:65
+#: lib/gui/simulator.py:67
 msgid "Pause (P)"
 msgstr "Pysäytä (P)"
 
-#: lib/gui/simulator.py:66
+#: lib/gui/simulator.py:68
 msgid "Restart"
 msgstr "Käynnistä uudelleen"
 
-#: lib/gui/simulator.py:68
+#: lib/gui/simulator.py:70
 msgid "Restart (R)"
 msgstr "Käynnistä uudelleen (R)"
 
-#: lib/gui/simulator.py:69
+#: lib/gui/simulator.py:71
 msgid "O"
 msgstr "O"
 
-#: lib/gui/simulator.py:71
+#: lib/gui/simulator.py:73
 msgid "Display needle penetration point (O)"
 msgstr "Näytä neulan paikat (O)"
 
-#: lib/gui/simulator.py:72
+#: lib/gui/simulator.py:74
 msgid "Quit"
 msgstr "Lopeta"
 
-#: lib/gui/simulator.py:74
+#: lib/gui/simulator.py:76
 msgid "Quit (Q)"
 msgstr "Lopeta (Q)"
 
-#: lib/gui/simulator.py:186
+#: lib/gui/simulator.py:188
 #, python-format
 msgid "Speed: %d stitches/sec"
 msgstr "Nopeus: %d Tikkiä/sekunnissa"
 
-#: lib/gui/simulator.py:242 lib/gui/simulator.py:270
+#: lib/gui/simulator.py:244 lib/gui/simulator.py:272
 msgid "Start"
 msgstr "Aloita"
 
-#: lib/gui/simulator.py:816 lib/gui/simulator.py:826
+#: lib/gui/simulator.py:832 lib/gui/simulator.py:842
 msgid "Preview"
 msgstr "Esikatselu"
 
-#: lib/gui/simulator.py:857
+#: lib/gui/simulator.py:873
 msgid "Embroidery Simulation"
 msgstr "Brodeeraus simulaatio"
 
@@ -2265,14 +2265,14 @@ msgid "Cannot load simulator.\n"
 "Close Params to get full error message."
 msgstr ""
 
-#: lib/lettering/font.py:164
+#: lib/lettering/font.py:167
 #, python-format
 msgid "The font '%s' has no variants."
 msgstr ""
 
 #. low-level file error.  %(error)s is (hopefully?) translated by
 #. the user's system automatically.
-#: lib/output.py:108
+#: lib/output.py:113
 #, python-format
 msgid "Error writing to %(path)s: %(error)s"
 msgstr "Virhe kirjoitettaessa %(path)s: %(error)s"
@@ -2282,34 +2282,34 @@ msgstr "Virhe kirjoitettaessa %(path)s: %(error)s"
 msgid "File does not exist and cannot be opened. Please correct the file path and try again.\\r%s"
 msgstr ""
 
-#: lib/stitch_plan/stitch_plan.py:26
+#: lib/stitch_plan/stitch_plan.py:27
 msgid "There is no selected stitchable element. Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects in case you have expected a stitchout."
 msgstr ""
 
-#: lib/stitches/auto_run.py:135 lib/stitches/auto_satin.py:347
+#: lib/stitches/auto_run.py:140 lib/stitches/auto_satin.py:348
 msgid "Auto-Route"
 msgstr ""
 
-#: lib/stitches/auto_run.py:261
+#: lib/stitches/auto_run.py:270
 #, python-format
 msgid "AutoRun %d"
 msgstr ""
 
-#: lib/stitches/auto_run.py:263
+#: lib/stitches/auto_run.py:272
 #, python-format
 msgid "AutoRun Underpath %d"
 msgstr ""
 
 #. Label for a satin column created by Auto-Route Satin Columns and Lettering
 #. extensions
-#: lib/stitches/auto_satin.py:518
+#: lib/stitches/auto_satin.py:521
 #, python-format
 msgid "AutoSatin %d"
 msgstr "Automaattinen satiini %d"
 
 #. Label for running stitch (underpathing) created by Auto-Route Satin Columns
 #. amd Lettering extensions
-#: lib/stitches/auto_satin.py:521
+#: lib/stitches/auto_satin.py:524
 #, python-format
 msgid "AutoSatin Running Stitch %d"
 msgstr "Automaattinen satiini juoksevatikki %d"
@@ -2968,6 +2968,10 @@ msgstr ""
 msgid "Button"
 msgstr ""
 
+#: electron/src/renderer/components/Preferences.vue:117
+msgid "clear stitch plan cache"
+msgstr ""
+
 #: electron/src/renderer/components/Simulator.vue:203
 msgid "color changes"
 msgstr ""
@@ -2982,6 +2986,22 @@ msgstr ""
 
 #: electron/src/renderer/components/Simulator.vue:226
 msgid "cursor"
+msgstr ""
+
+#: electron/src/renderer/components/Preferences.vue:73
+msgid "Default minimum jump stitch length"
+msgstr ""
+
+#: electron/src/renderer/components/Preferences.vue:89
+msgid "Default minimum stitch length"
+msgstr ""
+
+#: electron/src/renderer/components/Preferences.vue:127
+msgid "done"
+msgstr ""
+
+#: electron/src/renderer/components/Preferences.vue:48
+msgid "Drop stitches smaller than this value."
 msgstr ""
 
 #: electron/src/renderer/components/Simulator.vue:18
@@ -3020,6 +3040,10 @@ msgstr "Asennus valmis"
 msgid "Installation Failed"
 msgstr "Asennus epäonnistui"
 
+#: electron/src/renderer/components/Preferences.vue:29
+msgid "Jump stitches smaller than this will be treated as normal stitches."
+msgstr ""
+
 #: electron/src/renderer/components/Simulator.vue:106
 msgid "Jump to next command"
 msgstr ""
@@ -3030,6 +3054,14 @@ msgstr ""
 
 #: electron/src/renderer/components/Simulator.vue:199
 msgid "jumps"
+msgstr ""
+
+#: electron/src/renderer/components/Preferences.vue:27
+msgid "Minimum jump stitch length"
+msgstr ""
+
+#: electron/src/renderer/components/Preferences.vue:46
+msgid "Minimum stitch length"
 msgstr ""
 
 #. name for this keyboard key: -
@@ -3085,6 +3117,11 @@ msgstr ""
 msgid "Rendering stitch-plan..."
 msgstr ""
 
+#: electron/src/renderer/components/Preferences.vue:39
+#: electron/src/renderer/components/Preferences.vue:58
+msgid "set as default"
+msgstr ""
+
 #: electron/src/renderer/components/Simulator.vue:21
 msgid "Shortcut Key"
 msgstr ""
@@ -3115,12 +3152,25 @@ msgid_plural "Speed: %{speed} stitches/sec"
 msgstr[0] ""
 msgstr[1] ""
 
+#: electron/src/renderer/components/Preferences.vue:105
+msgid "Stitch plan cache size"
+msgstr ""
+
 #: electron/src/renderer/components/Simulator.vue:206
 msgid "stops"
 msgstr ""
 
+#: electron/src/renderer/components/Preferences.vue:107
+msgid "The greater the number, the more stitch plans can be cached, speeding up stitch plan calculation.  Default: 100"
+msgstr ""
+
 #: electron/src/renderer/components/InstallPalettes.vue:60
 msgid "Try again"
+msgstr ""
+
+#: electron/src/renderer/components/Preferences.vue:75
+#: electron/src/renderer/components/Preferences.vue:91
+msgid "Used for new SVGs."
 msgstr ""
 
 #: inx/inkstitch_about.inx:3 inx/inkstitch_about.inx:6
@@ -3499,26 +3549,6 @@ msgstr ""
 #: inx/inkstitch_embroider.inx:3
 msgid "Embroider"
 msgstr "Brodeeraus"
-
-#: inx/inkstitch_embroider_settings.inx:3
-msgid "Preferences"
-msgstr ""
-
-#: inx/inkstitch_embroider_settings.inx:17
-msgid "Collapse length (mm)"
-msgstr ""
-
-#: inx/inkstitch_embroider_settings.inx:17
-msgid "Jump stitches smaller than this will be treated as normal stitches."
-msgstr ""
-
-#: inx/inkstitch_embroider_settings.inx:20
-msgid "Minimal stitch length (mm)"
-msgstr ""
-
-#: inx/inkstitch_embroider_settings.inx:20
-msgid "Drop stitches smaller than this value."
-msgstr ""
 
 #: inx/inkstitch_fill_to_stroke.inx:3 inx/inkstitch_fill_to_stroke.inx:24
 msgid "Fill to Stroke"
@@ -4707,6 +4737,10 @@ msgstr ""
 #: inx/inkstitch_params.inx:3
 msgid "Params"
 msgstr "Parametrit"
+
+#: inx/inkstitch_preferences.inx:3
+msgid "Preferences"
+msgstr ""
 
 #: inx/inkstitch_print.inx:3
 msgid "PDF Export"
