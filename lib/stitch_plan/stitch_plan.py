@@ -63,23 +63,22 @@ def stitch_groups_to_stitch_plan(stitch_groups, collapse_len=None, min_stitch_le
 
                 # make a new block of our color
                 color_block = stitch_plan.new_color_block(color=stitch_group.color)
-
-            # always start a color with a JUMP to the first stitch position
-            color_block.add_stitch(stitch_group.stitches[0], jump=True)
         else:
-            if (len(color_block) and
-                ((stitch_group.stitches[0] - color_block.stitches[-1]).length() > collapse_len or
-                 previous_stitch_group.force_lock_stitches)):
+            if (len(color_block) and not need_tie_in and
+                    ((stitch_group.stitches[0] - color_block.stitches[-1]).length() > collapse_len or
+                     previous_stitch_group.force_lock_stitches)):
                 lock_stitches = previous_stitch_group.get_lock_stitches("end", disable_ties)
                 if lock_stitches:
                     color_block.add_stitches(stitches=lock_stitches)
                 need_tie_in = True
-                color_block.add_stitch(stitch_group.stitches[0], jump=True)
 
         if need_tie_in is True:
             lock_stitches = stitch_group.get_lock_stitches("start", disable_ties)
             if lock_stitches:
+                color_block.add_stitch(lock_stitches[0], jump=True)
                 color_block.add_stitches(stitches=lock_stitches)
+            else:
+                color_block.add_stitch(stitch_group.stitches[0], jump=True)
             need_tie_in = False
 
         color_block.add_stitches(stitches=stitch_group.stitches)
