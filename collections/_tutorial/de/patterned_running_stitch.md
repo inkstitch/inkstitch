@@ -39,11 +39,13 @@ Wenn wir also einen gemusterten Geradstich erstellen wollen, können wir ganz ei
 
     ![set pattern size](/assets/images/tutorials/pattern-along-path/set-size.png)
     
-    Jetzt kann der Pfad bearbeitet werden. Mit einem Doppelklick auf die Linie können weitere Knoten punktgenau hinzugefügt werden. Die Linien und Knoten können beliebig gezogen und verschoben werden. Achte dabei darauf den Anfangs- und Endknoten nicht zu bewegen, damit nachher die Übergänge auch gut passen.
+    Jetzt kann der Pfad bearbeitet werden. Mit einem Doppelklick auf die Linie können weitere Knoten punktgenau hinzugefügt werden. Die Linien und Knoten können beliebig gezogen und verschoben werden. Achte dabei darauf den Anfangs- und Endknoten nicht zu bewegen, damit nachher die Übergänge auch gut passen (auf der x-Achse).
 
     ![final path](/assets/images/tutorials/pattern-along-path/final-path.png)
     
     Der fertige gemusterte Pfad kann auch im Nachhinein kopiert und verändert werden. Wenn jedoch ein Richtungswechsel für eine bessere Stickreihenfolge nötig ist, muss auch das Muster gedreht werden. Dies geschieht wie oben beschrieben über den Knopf `Auf der Arbeitsfläche bearbeiten`.
+
+    Wenn Teile des Musters weiter rechts liegen als der Endknoten, kann das Muster mit dem Wert `Abstand` im LPE-Dialog wieder zurech gerückt werden.
 
     ![copy paste](/assets/images/tutorials/pattern-along-path/copy-paste.png)
 

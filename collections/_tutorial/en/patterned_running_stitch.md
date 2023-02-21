@@ -36,11 +36,13 @@ So if we want to create a patterned running stitch we can make use of the LPE `P
 
     ![set pattern size](/assets/images/tutorials/pattern-along-path/set-size.png)
     
-    Now you can edit the path. Double click on the path to add nodes at specific spots and drag the line or nodes to create your pattern. Keep the first and last nodes in place.
+    Now you can edit the path. Double click on the path to add nodes at specific spots and drag the line or nodes to create your pattern. Keep the first and last nodes in place, they should be on line with the x-axis).
 
     ![final path](/assets/images/tutorials/pattern-along-path/final-path.png)
     
     The patterned path can be copied and altered as any other path. If you need to switch the direction to create a better stitch routing, click on the `Edit on canvas` button again and flip your pattern too.
+    
+    If your pattern exceeds the last point in length, adapt the space setting accordingly.
 
     ![copy paste](/assets/images/tutorials/pattern-along-path/copy-paste.png)
 
