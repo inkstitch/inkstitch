@@ -454,7 +454,7 @@ class EmbroideryElement(object):
         cache_key_generator.update(self._get_patterns_cache_key_data())
         cache_key_generator.update(self._get_guides_cache_key_data())
 
-        if self.element_name == 'Clone':
+        if hasattr(self, 'element_name') and self.element_name == 'Clone':
             cache_key_generator.update(self.get_source_cache_key_data())
 
         cache_key = cache_key_generator.get_cache_key()
