@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2023-02-21 01:27+0000\n"
-"PO-Revision-Date: 2023-02-21 01:28\n"
+"PO-Revision-Date: 2023-02-22 01:24\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -2296,7 +2296,7 @@ msgstr "Die Datei kann nicht geöffnet werden. Bitte überprüfe den Dateipfad u
 
 #: lib/stitch_plan/stitch_plan.py:27
 msgid "There is no selected stitchable element. Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects in case you have expected a stitchout."
-msgstr "Es wurde kein stickbares Element ausgewählt. Bitte führe die Funktion Erweiterungen > Ink/Stitch > Fehlerbehebung > Fehlerbehebung an Objekten aus, um Hinweise zu Fehlern in der Stickplanerstellung zu erhalten."
+msgstr "Es wurde kein stickbares Element ausgewählt. Bitte führe die Funktion Erweiterungen > Ink/Stitch > Fehlerbehebung > Fehlerbehebung an Objekten aus, um Hinweise zu Fehlern in der Stichplan-Erstellung zu erhalten."
 
 #: lib/stitches/auto_run.py:140 lib/stitches/auto_satin.py:348
 msgid "Auto-Route"
@@ -2328,7 +2328,7 @@ msgstr "AutoSatin Geradstich %d"
 
 #: lib/svg/rendering.py:222
 msgid "Stitch Plan"
-msgstr "Stich-Plan"
+msgstr "Stichplan"
 
 #: lib/svg/units.py:18
 #, python-format
@@ -2982,7 +2982,7 @@ msgstr "Knopf"
 
 #: electron/src/renderer/components/Preferences.vue:117
 msgid "clear stitch plan cache"
-msgstr ""
+msgstr "Stichplan-Cache leeren"
 
 #: electron/src/renderer/components/Simulator.vue:203
 msgid "color changes"
@@ -3002,15 +3002,15 @@ msgstr "Mauszeiger"
 
 #: electron/src/renderer/components/Preferences.vue:73
 msgid "Default minimum jump stitch length"
-msgstr ""
+msgstr "Minimale Länge für Sprungstiche"
 
 #: electron/src/renderer/components/Preferences.vue:89
 msgid "Default minimum stitch length"
-msgstr ""
+msgstr "Minimale Stichlänge"
 
 #: electron/src/renderer/components/Preferences.vue:127
 msgid "done"
-msgstr ""
+msgstr "Anwenden"
 
 #: electron/src/renderer/components/Preferences.vue:48
 msgid "Drop stitches smaller than this value."
@@ -3054,7 +3054,8 @@ msgstr "Installation fehlgeschlagen"
 
 #: electron/src/renderer/components/Preferences.vue:29
 msgid "Jump stitches smaller than this will be treated as normal stitches."
-msgstr "Sprungstiche, die kleiner sind, werden als normale Stiche behandelt."
+msgstr "Sprungstiche die kleiner sind, werden als normale Stiche behandelt.\n"
+"Dies beeinflusst auch die Verwendung von Vernähstichen. Vor und nach Sprungstichen werden in der Regel Vernähstiche eingefügt. Diese entfallen, wenn der Sprungstich kleiner als dieser Wert ist. Eine individuelle Steuerung für Vernähstiche ist in den Parametereinstellungen für einzelne Objekte möglich."
 
 #: electron/src/renderer/components/Simulator.vue:106
 msgid "Jump to next command"
@@ -3070,11 +3071,11 @@ msgstr "Sprungstiche"
 
 #: electron/src/renderer/components/Preferences.vue:27
 msgid "Minimum jump stitch length"
-msgstr ""
+msgstr "Minimale Länge für Sprungstiche"
 
 #: electron/src/renderer/components/Preferences.vue:46
 msgid "Minimum stitch length"
-msgstr ""
+msgstr "Minimale Stichlänge"
 
 #. name for this keyboard key: -
 #: electron/src/renderer/components/Simulator.vue:76
@@ -3132,7 +3133,7 @@ msgstr "Stichplan wird erstellt..."
 #: electron/src/renderer/components/Preferences.vue:39
 #: electron/src/renderer/components/Preferences.vue:58
 msgid "set as default"
-msgstr ""
+msgstr "Als Standardwert setzen"
 
 #: electron/src/renderer/components/Simulator.vue:21
 msgid "Shortcut Key"
@@ -3166,7 +3167,7 @@ msgstr[1] "Geschwindigkeit: %{speed} Stiche/Sek"
 
 #: electron/src/renderer/components/Preferences.vue:105
 msgid "Stitch plan cache size"
-msgstr ""
+msgstr "Cache Größe"
 
 #: electron/src/renderer/components/Simulator.vue:206
 msgid "stops"
@@ -3174,7 +3175,7 @@ msgstr "Stopp-Befehle"
 
 #: electron/src/renderer/components/Preferences.vue:107
 msgid "The greater the number, the more stitch plans can be cached, speeding up stitch plan calculation.  Default: 100"
-msgstr ""
+msgstr "Je höher die Zahl, desto mehr Stichpläne können im Cache gespeichert werden. Der Cache trägt zur Beschleunigung der Sitchplan-Berechnung bei. Standard: 100"
 
 #: electron/src/renderer/components/InstallPalettes.vue:60
 msgid "Try again"
@@ -3183,7 +3184,7 @@ msgstr "Versuchen sie es erneut"
 #: electron/src/renderer/components/Preferences.vue:75
 #: electron/src/renderer/components/Preferences.vue:91
 msgid "Used for new SVGs."
-msgstr ""
+msgstr "Standardwert für neue SVG-Dateien."
 
 #: inx/inkstitch_about.inx:3 inx/inkstitch_about.inx:6
 msgid "About"
@@ -4800,11 +4801,11 @@ msgstr "Simulator / Realistische Vorschau"
 
 #: inx/inkstitch_stitch_plan_preview.inx:3
 msgid "Stitch Plan Preview"
-msgstr "Stich-Plan Vorschau"
+msgstr "Stichplan Vorschau"
 
 #: inx/inkstitch_stitch_plan_preview.inx:14
 msgid "Move stitch plan beside the canvas"
-msgstr "Stickplan an der Seite platzieren"
+msgstr "Stichplan an der Seite platzieren"
 
 #: inx/inkstitch_stitch_plan_preview.inx:20
 msgid "Needle points"
@@ -4812,15 +4813,15 @@ msgstr "Nadeleinstichstellen"
 
 #: inx/inkstitch_stitch_plan_preview.inx:22
 msgid "Lock"
-msgstr "Stickplanebene sperren"
+msgstr "Stichplan-Ebene sperren"
 
 #: inx/inkstitch_stitch_plan_preview.inx:22
 msgid "Make stitch plan insensitive to mouse interactions"
-msgstr "Deaktiviere Mausinteraktionen mit dem Stickplan"
+msgstr "Deaktiviere Mausinteraktionen mit dem Stichplan"
 
 #: inx/inkstitch_stitch_plan_preview_undo.inx:3
 msgid "Undo Stitch Plan Preview"
-msgstr "Stich-Plan Vorschau aufheben"
+msgstr "Stichplan-Vorschau aufheben"
 
 #: inx/inkstitch_troubleshoot.inx:3
 msgid "Troubleshoot Objects"
