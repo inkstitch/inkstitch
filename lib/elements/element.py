@@ -454,6 +454,9 @@ class EmbroideryElement(object):
         cache_key_generator.update(self._get_patterns_cache_key_data())
         cache_key_generator.update(self._get_guides_cache_key_data())
 
+        if self.element_name == 'Clone':
+            cache_key_generator.update(self.get_source_cache_key_data())
+
         cache_key = cache_key_generator.get_cache_key()
         debug.log(f"cache key for {self.node.get('id')} {self.node.get(INKSCAPE_LABEL)} {previous_stitch}: {cache_key}")
 
