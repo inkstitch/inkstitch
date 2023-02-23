@@ -220,6 +220,9 @@ class Point:
     def rotate(self, angle):
         return self.__class__(self.x * math.cos(angle) - self.y * math.sin(angle), self.y * math.cos(angle) + self.x * math.sin(angle))
 
+    def scale(self, x_scale, y_scale):
+        return self.__class__(self.x * x_scale, self.y * y_scale)
+
     def as_int(self):
         return self.__class__(int(round(self.x)), int(round(self.y)))
 
@@ -238,3 +241,7 @@ class Point:
 
 def line_string_to_point_list(line_string):
     return [Point(*point) for point in line_string.coords]
+
+
+def coordinate_list_to_point_list(coordinate_list):
+    return [Point.from_tuple(coords) for coords in coordinate_list]

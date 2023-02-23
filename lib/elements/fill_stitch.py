@@ -17,8 +17,10 @@ from ..i18n import _
 from ..marker import get_marker_elements
 from ..stitch_plan import StitchGroup
 from ..stitches import auto_fill, contour_fill, guided_fill, legacy_fill
+from ..stitches.meander_fill import meander_fill
 from ..svg import PIXELS_PER_MM
 from ..svg.tags import INKSCAPE_LABEL
+from .. import tiles
 from ..utils import cache, version
 from .element import EmbroideryElement, param
 from .validation import ValidationError, ValidationWarning
@@ -107,7 +109,7 @@ class FillStitch(EmbroideryElement):
 
     @property
     @param('fill_method', _('Fill method'), type='dropdown', default=0,
-           options=[_("Auto Fill"), _("Contour Fill"), _("Guided Fill"), _("Legacy Fill")], sort_index=2)
+           options=[_("Auto Fill"), _("Contour Fill"), _("Guided Fill"), _("Legacy Fill"), _("Meander Fill")], sort_index=2)
     def fill_method(self):
         return self.get_int_param('fill_method', 0)
 
@@ -138,9 +140,35 @@ class FillStitch(EmbroideryElement):
         return self.get_boolean_param('avoid_self_crossing', False)
 
     @property
+    @param('smoothness_mm', _('Smoothness'),
+           tooltip=_(
+               'Smooth the stitch path.  Smoothness limits how far the smoothed stitch path ' +
+               'is allowed to deviate from the original path.  Try low numbers like 0.2.  ' +
+               'Hint: a lower running stitch tolerance may be needed too.'
+           ),
+           type='integer',
+           unit='mm',
+           default=0,
+           select_items=[('fill_method', 1), ('fill_method', 4)],
+           sort_index=5)
+    def smoothness(self):
+        return self.get_float_param('smoothness_mm', 0)
+
+    @property
     @param('clockwise', _('Clockwise'), type='boolean', default=True, select_items=[('fill_method', 1)], sort_index=5)
     def clockwise(self):
         return self.get_boolean_param('clockwise', True)
+
+    @property
+    @param('meander_pattern', _('Meander Pattern'), type='combo', default=0,
+           options=sorted(tiles.all_tiles()), select_items=[('fill_method', 4)], sort_index=3)
+    def meander_pattern(self):
+        return self.get_param('meander_pattern', None)
+
+    @property
+    @param('meander_scale_percent', _('Meander pattern scale'), type='float', unit="%", default=100, select_items=[('fill_method', 4)], sort_index=4)
+    def meander_scale(self):
+        return self.get_split_float_param('meander_scale_percent', (100, 100)) / 100
 
     @property
     @param('angle',
@@ -194,6 +222,7 @@ class FillStitch(EmbroideryElement):
            unit='mm',
            sort_index=6,
            type='float',
+           select_items=[('fill_method', 0), ('fill_method', 1), ('fill_method', 2), ('fill_method', 3)],
            default=0.25)
     def row_spacing(self):
         return max(self.get_float_param("row_spacing_mm", 0.25), 0.1 * PIXELS_PER_MM)
@@ -210,6 +239,7 @@ class FillStitch(EmbroideryElement):
            unit='mm',
            sort_index=6,
            type='float',
+           select_items=[('fill_method', 0), ('fill_method', 1), ('fill_method', 2), ('fill_method', 3)],
            default=3.0)
     def max_stitch_length(self):
         return max(self.get_float_param("max_stitch_length_mm", 3.0), 0.1 * PIXELS_PER_MM)
@@ -375,12 +405,13 @@ class FillStitch(EmbroideryElement):
 
     @property
     @param('running_stitch_length_mm',
-           _('Running stitch length (traversal between sections)'),
-           tooltip=_('Length of stitches around the outline of the fill region used when moving from section to section.'),
+           _('Running stitch length'),
+           tooltip=_(
+               'Length of stitches around the outline of the fill region used when moving from section to section.  Also used for meander fill.'),
            unit='mm',
            type='float',
            default=1.5,
-           select_items=[('fill_method', 0), ('fill_method', 2)],
+           select_items=[('fill_method', 0), ('fill_method', 2), ('fill_method', 4)],
            sort_index=6)
     def running_stitch_length(self):
         return max(self.get_float_param("running_stitch_length_mm", 1.5), 0.01)
@@ -475,12 +506,12 @@ class FillStitch(EmbroideryElement):
     @property
     @param('expand_mm',
            _('Expand'),
-           tooltip=_('Expand the shape before fill stitching, to compensate for gaps between shapes.'),
+           tooltip=_('Expand the shape before fill stitching, to compensate for gaps between shapes.  Negative values contract instead.'),
            unit='mm',
            type='float',
            default=0,
            sort_index=5,
-           select_items=[('fill_method', 0), ('fill_method', 2)])
+           select_items=[('fill_method', 0), ('fill_method', 2), ('fill_method', 4)])
     def expand(self):
         return self.get_float_param('expand_mm', 0)
 
@@ -571,13 +602,15 @@ class FillStitch(EmbroideryElement):
                             stitch_groups.extend(underlay_stitch_groups)
 
                     fill_shapes = self.fill_shape(shape)
-                    for fill_shape in fill_shapes.geoms:
+                    for i, fill_shape in enumerate(fill_shapes.geoms):
                         if self.fill_method == 0:
                             stitch_groups.extend(self.do_auto_fill(fill_shape, previous_stitch_group, start, end))
                         if self.fill_method == 1:
                             stitch_groups.extend(self.do_contour_fill(fill_shape, previous_stitch_group, start))
                         elif self.fill_method == 2:
                             stitch_groups.extend(self.do_guided_fill(fill_shape, previous_stitch_group, start, end))
+                        elif self.fill_method == 4:
+                            stitch_groups.extend(self.do_meander_fill(fill_shape, i, start, end))
                 except ExitThread:
                     raise
                 except Exception:
@@ -651,9 +684,11 @@ class FillStitch(EmbroideryElement):
         if self.contour_strategy == 0:
             stitches = contour_fill.inner_to_outer(
                 tree,
+                polygon,
                 self.row_spacing,
                 self.max_stitch_length,
                 self.running_stitch_tolerance,
+                self.smoothness,
                 starting_point,
                 self.avoid_self_crossing
             )
@@ -705,6 +740,13 @@ class FillStitch(EmbroideryElement):
                 self.underpath,
                 self.guided_fill_strategy,
             ))
+        return [stitch_group]
+
+    def do_meander_fill(self, shape, i, starting_point, ending_point):
+        stitch_group = StitchGroup(
+            color=self.color,
+            tags=("meander_fill", "meander_fill_top"),
+            stitches=meander_fill(self, shape, i, starting_point, ending_point))
         return [stitch_group]
 
     @cache

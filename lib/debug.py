@@ -21,12 +21,46 @@ from .svg.tags import INKSCAPE_GROUPMODE, INKSCAPE_LABEL
 def check_enabled(func):
     def decorated(self, *args, **kwargs):
         if self.enabled:
-            func(self, *args, **kwargs)
+            return func(self, *args, **kwargs)
+
+    return decorated
+
+
+def _unwrap(arg):
+    if callable(arg):
+        return arg()
+    else:
+        return arg
+
+
+def unwrap_arguments(func):
+    def decorated(self, *args, **kwargs):
+        unwrapped_args = [_unwrap(arg) for arg in args]
+        unwrapped_kwargs = {name: _unwrap(value) for name, value in kwargs.items()}
+
+        return func(self, *unwrapped_args, **unwrapped_kwargs)
 
     return decorated
 
 
 class Debug(object):
+    """Tools to help debug Ink/Stitch
+
+    This class contains methods to log strings and SVG elements.  Strings are
+    logged to debug.log, and SVG elements are stored in debug.svg to aid in
+    debugging stitch algorithms.
+
+    All functionality is gated by self.enabled.  If debugging is not enabled,
+    then debug calls will consume very few resources.  Any method argument
+    can be a callable, in which case it is called and the return value is
+    logged instead.  This way one can log potentially expensive expressions
+    by wrapping them in a lambda:
+
+    debug.log(lambda: some_expensive_function(some_argument))
+
+    The lambda is only called if debugging is enabled.
+    """
+
     def __init__(self):
         self.enabled = False
         self.last_log_time = None
@@ -145,6 +179,7 @@ class Debug(object):
         tree.write(debug_svg)
 
     @check_enabled
+    @unwrap_arguments
     def add_layer(self, name="Debug"):
         layer = etree.Element("g", {
             INKSCAPE_GROUPMODE: "layer",
@@ -155,6 +190,7 @@ class Debug(object):
         self.current_layer = layer
 
     @check_enabled
+    @unwrap_arguments
     def open_group(self, name="Group"):
         group = etree.Element("g", {
             INKSCAPE_LABEL: name
@@ -164,11 +200,13 @@ class Debug(object):
         self.group_stack.append(group)
 
     @check_enabled
+    @unwrap_arguments
     def close_group(self):
         if self.group_stack:
             self.group_stack.pop()
 
     @check_enabled
+    @unwrap_arguments
     def log(self, message, *args):
         if self.last_log_time:
             message = "(+%s) %s" % (datetime.now() - self.last_log_time, message)
@@ -201,6 +239,7 @@ class Debug(object):
         return decorated
 
     @check_enabled
+    @unwrap_arguments
     def log_svg_element(self, element):
         if self.current_layer is None:
             self.add_layer()
@@ -211,11 +250,13 @@ class Debug(object):
             self.current_layer.append(element)
 
     @check_enabled
+    @unwrap_arguments
     def log_line_string(self, line_string, name=None, color=None):
         """Add a Shapely LineString to the SVG log."""
         self.log_line_strings([line_string], name, color)
 
     @check_enabled
+    @unwrap_arguments
     def log_line_strings(self, line_strings, name=None, color=None):
         path = line_strings_to_path(line_strings)
         path.set('style', str(inkex.Style({"stroke": color or "#000000", "stroke-width": "0.3", "fill": None})))
@@ -226,6 +267,7 @@ class Debug(object):
         self.log_svg_element(path)
 
     @check_enabled
+    @unwrap_arguments
     def log_line(self, start, end, name="line", color=None):
         self.log_svg_element(etree.Element("path", {
             "d": "M%s,%s %s,%s" % (start + end),
@@ -234,6 +276,17 @@ class Debug(object):
         }))
 
     @check_enabled
+    @unwrap_arguments
+    def log_point(self, point, name="point", color=None):
+        self.log_svg_element(etree.Element("circle", {
+            "cx": str(point.x),
+            "cy": str(point.y),
+            "r": "1",
+            "style": str(inkex.Style({"fill": "#000000"})),
+        }))
+
+    @check_enabled
+    @unwrap_arguments
     def log_graph(self, graph, name="Graph", color=None):
         d = ""
 

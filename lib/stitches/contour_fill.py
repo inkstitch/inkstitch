@@ -12,9 +12,11 @@ from shapely.validation import make_valid
 
 from ..stitch_plan import Stitch
 from ..utils import DotDict
+from ..utils.clamp_path import clamp_path_to_polygon
 from ..utils.geometry import (cut, ensure_geometry_collection,
                               ensure_multi_polygon, reverse_line_string,
                               roll_linear_ring)
+from ..utils.smoothing import smooth_path
 from ..utils.threading import check_stop_flag
 from .running_stitch import running_stitch
 
@@ -406,11 +408,16 @@ def _find_path_inner_to_outer(tree, node, offset, starting_point, avoid_self_cro
     return LineString(result_coords)
 
 
-def inner_to_outer(tree, offset, stitch_length, tolerance, starting_point, avoid_self_crossing):
+def inner_to_outer(tree, polygon, offset, stitch_length, tolerance, smoothness, starting_point, avoid_self_crossing):
     """Fill a shape with spirals, from innermost to outermost."""
 
     stitch_path = _find_path_inner_to_outer(tree, 'root', offset, starting_point, avoid_self_crossing)
     points = [Stitch(*point) for point in stitch_path.coords]
+
+    if smoothness > 0:
+        smoothed = smooth_path(points, smoothness)
+        points = clamp_path_to_polygon(smoothed, polygon)
+
     stitches = running_stitch(points, stitch_length, tolerance)
 
     return stitches

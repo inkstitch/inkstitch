@@ -8,3 +8,10 @@ def string_to_floats(string, delimiter=","):
 
     floats = string.split(delimiter)
     return [float(num) for num in floats]
+
+
+def remove_suffix(string, suffix):
+    if string.endswith(suffix):
+        return string[:-len(suffix)]
+    else:
+        return string

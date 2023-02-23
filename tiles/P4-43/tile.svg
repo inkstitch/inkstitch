@@ -1,0 +1,23 @@
+<svg xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" width="18.509253" height="16.357939" viewBox="0 0 18.509253 16.357939" version="1.1" id="svg24" sodipodi:docname="P4-43.svg">
+  <defs id="defs28"/>
+  <sodipodi:namedview id="namedview26" pagecolor="#ffffff" bordercolor="#666666" borderopacity="1.0" inkscape:showpageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0" inkscape:deskcolor="#d1d1d1"/>
+  <style type="text/css" id="style2">
+polygon.tile { stroke: #000000; stroke-width:3; stroke-linejoin:round }
+polygon.ih1 { fill: #ffff80 }
+polygon.ih2 { fill: #8080ff }
+polygon.ih3 { fill: #ff8080 }
+polygon.ih4 { fill: #80ff80 }
+polygon.ih5 { fill: #ff80ff }
+polygon.ih6 { fill: #80ffff }
+polygon.para {opacity: 0.75; fill: #ff0000; stroke: #ff0000 }
+</style>
+  <polygon class="para" points="-1.7676951,-19.304817 -12.76612,2.2510114 1.7676951,19.304817 12.76612,-2.2510114 " style="stroke:none" id="polygon4" transform="matrix(0.4,0,0,0.4,10.212896,7.7219268)"/>
+  <path d="m 10.212896,7.7219268 h 8.296357" style="stroke:#000000;stroke-width:0.08px" id="path6"/>
+  <path d="M 12.695727,0.90040437 10.212896,7.7219268" style="stroke:#000000;stroke-width:0.08px" id="path8"/>
+  <path d="M 0,9.522736 H 8.2963569" style="stroke:#000000;stroke-width:0.08px" id="path10"/>
+  <path d="M 8.2963569,9.522736 10.212896,7.7219268" style="stroke:#000000;stroke-width:0.08px" id="path12"/>
+  <path d="M 10.212896,7.7219268 2.4828309,2.7012135" style="stroke:#000000;stroke-width:0.08px" id="path14"/>
+  <path d="m 8.2963569,9.522736 7.7300651,5.020713" style="stroke:#000000;stroke-width:0.08px" id="path16"/>
+  <path d="M 8.2963569,9.522736 5.8135258,16.344258" style="stroke:#000000;stroke-width:0.08px" id="path18"/>
+  <path d="M 4.3993698,0.90040437 H 12.695727" style="stroke:#000000;stroke-width:0.08px" id="path20"/>
+  </svg>

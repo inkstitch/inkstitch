@@ -1,0 +1,16 @@
+<svg xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" width="22.078529" height="108.16628" viewBox="0 0 22.078529 108.16628" version="1.1" id="svg1587" sodipodi:docname="hex_N6-1.svg" inkscape:version="1.2 (1:1.2.1+202207142221+cd75a1ee6d)">
+  <defs id="defs1591"/>
+  <sodipodi:namedview id="namedview1589" pagecolor="#ffffff" bordercolor="#666666" borderopacity="1.0" inkscape:showpageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0" inkscape:deskcolor="#d1d1d1" showgrid="false" inkscape:zoom="4.4026633" inkscape:cx="6.019084" inkscape:cy="65.187815" inkscape:current-layer="svg1587"/>
+  <style type="text/css" id="style1103">
+polygon.tile { stroke: #000000; stroke-width:3; stroke-linejoin:round }
+polygon.ih1 { fill: #ffff80 }
+polygon.ih2 { fill: #8080ff }
+polygon.ih3 { fill: #ff8080 }
+polygon.ih4 { fill: #80ff80 }
+polygon.ih5 { fill: #ff80ff }
+polygon.ih6 { fill: #80ffff }
+polygon.para {opacity: 0.75; fill: #ff0000; stroke: #ff0000 }
+</style>
+  <path id="polygon1415" style="fill:none;stroke:#000000;stroke-width:0.48;stroke-linejoin:round" d="M 11.700155,19.647654 7.4226433,12.397253 m 7.2068637,88.136877 4.166068,7.51579 M 14.629507,100.53413 4.4932913,93.283734 m -1.125272,-19.71176 4.166068,7.51579 M 11.588711,4.881473 7.4226433,12.397253 m 14.4137277,0 -10.136216,7.250401 m 0,0 -4.1660677,7.51579 m 7.2068637,4.68019 -7.2068637,-4.68019 M 0.43866735,46.609814 10.574887,39.359414 M 18.795575,0.20128097 11.588711,4.881473 m 0,0 L 4.3818433,0.20128097 M 14.629507,100.53413 18.907019,93.283734 m 0,0 -4.166068,-7.51578 m 7.206864,-4.68019 -7.206864,4.68019 m 0,0 -7.2068637,-4.68019 m -4.166068,-7.51579 4.277512,-7.2504 m -4.166064,-7.51578 7.2068637,-4.68019 m 7.09542,19.44637 -10.1362197,-7.2504 m 0,0 -4.166064,-7.51578 m 18.4683477,-31.64235 -7.206864,4.68019 m 0,0 -4.166068,7.51578 m 0,0 4.277512,7.2504 m -4.166064,7.51579 7.206864,4.68019 m -3.0408,-12.19598 -4.166064,7.51579" sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccc"/>
+  <polygon class="para" points="391.0429,8.9730035 300.9571,8.9730035 300.9571,683.027 391.0429,683.027 " id="polygon1585" transform="matrix(0.16,0,0,0.16,-43.891761,-1.213971)" style="display:inline" inkscape:label="parallelogram"/>
+  </svg>

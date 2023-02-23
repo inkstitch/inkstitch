@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="51.288441"
+   height="30.236219"
+   viewBox="0 0 51.288441 30.236219"
+   version="1.1"
+   id="svg32"
+   sodipodi:docname="P4-1.svg"
+   inkscape:version="1.2.2 (1:1.2.2+202212051550+b0a8486541)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs36" />
+  <sodipodi:namedview
+     id="namedview34"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="18.688769"
+     inkscape:cx="25.416334"
+     inkscape:cy="24.720729"
+     inkscape:current-layer="svg32" />
+  <style
+     type="text/css"
+     id="style2">
+polygon.tile { stroke: #000000; stroke-width:3; stroke-linejoin:round }
+polygon.ih1 { fill: #ffff80 }
+polygon.ih2 { fill: #8080ff }
+polygon.ih3 { fill: #ff8080 }
+polygon.ih4 { fill: #80ff80 }
+polygon.ih5 { fill: #ff80ff }
+polygon.ih6 { fill: #80ffff }
+polygon.para {opacity: 0.75; fill: #ff0000; stroke: #ff0000 }
+</style>
+  <polygon
+     class="para"
+     points="128.95238,195.54474 224.34182,195.54474 224.34182,157.74946 128.95238,157.74946 "
+     style="stroke:none"
+     id="polygon4"
+     transform="matrix(0.32,0,0,0.32,-31.537485,-41.376566)" />
+  <path
+     d="M 24.989587,15.150506 35.014827,9.3624344"
+     style="stroke:#000000;stroke-width:0.064px"
+     id="path6" />
+  <path
+     d="M 24.989587,9.1032664 V 15.150506"
+     style="stroke:#000000;stroke-width:0.064px"
+     id="path12" />
+  <path
+     d="M 4.4902108,21.456922 14.964347,15.409674"
+     style="stroke:#000000;stroke-width:0.064px"
+     id="path16" />
+  <path
+     d="M 14.964347,15.409674 4.4902108,9.3624344"
+     style="stroke:#000000;stroke-width:0.064px"
+     id="path18" />
+  <path
+     d="m 14.964347,15.409674 10.02524,5.78808"
+     style="stroke:#000000;stroke-width:0.064px"
+     id="path20" />
+  <path
+     d="m 24.989587,15.150506 v 6.047248"
+     style="stroke:#000000;stroke-width:0.064px"
+     id="path26" />
+</svg>
