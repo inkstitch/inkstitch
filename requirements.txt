@@ -22,7 +22,7 @@ colormath @ git+https://github.com/gtaylor/python-colormath.git@4a076831fd5136f6
 
 stringcase
 tinycss2
-flask
+flask>=2.2.0
 fonttools
 trimesh>=3.15.2
 scipy
