@@ -72,8 +72,10 @@ class Clone(EmbroideryElement):
     def flip_angle(self):
         return self.get_boolean_param('flip_angle')
 
-    def get_cache_key_data(self):
-        return [(attr, self.node.href.get(attr)) for attr in self.node.href.attrib if 'inkstitch' in attr]
+    def get_cache_key_data(self, previous_stitch):
+        source_node = get_clone_source(self.node)
+        source_elements = self.clone_to_element(source_node)
+        return [element.get_cache_key(previous_stitch) for element in source_elements]
 
     def clone_to_element(self, node):
         from .utils import node_to_elements
