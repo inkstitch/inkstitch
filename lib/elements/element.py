@@ -443,6 +443,9 @@ class EmbroideryElement(object):
     def _get_guides_cache_key_data(self):
         return get_marker_elements_cache_key_data(self.node, "guide-line")
 
+    def get_cache_key_data(self):
+        return []
+
     def _get_cache_key(self, previous_stitch):
         cache_key_generator = CacheKeyGenerator()
         cache_key_generator.update(self.__class__.__name__)
@@ -453,9 +456,7 @@ class EmbroideryElement(object):
         cache_key_generator.update([(c.command, c.target_point) for c in self.commands])
         cache_key_generator.update(self._get_patterns_cache_key_data())
         cache_key_generator.update(self._get_guides_cache_key_data())
-
-        if hasattr(self, 'element_name') and self.element_name == 'Clone':
-            cache_key_generator.update(self.get_source_cache_key_data())
+        cache_key_generator.update(self.get_cache_key_data())
 
         cache_key = cache_key_generator.get_cache_key()
         debug.log(f"cache key for {self.node.get('id')} {self.node.get(INKSCAPE_LABEL)} {previous_stitch}: {cache_key}")
