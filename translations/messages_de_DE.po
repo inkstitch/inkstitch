@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-02-21 01:27+0000\n"
-"PO-Revision-Date: 2023-02-22 01:24\n"
+"POT-Creation-Date: 2023-02-24 01:24+0000\n"
+"PO-Revision-Date: 2023-02-24 01:25\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-21 01:27+0000\n"
+"POT-Creation-Date: 2023-02-24 01:23+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -504,6 +504,381 @@ msgstr "TT Meister"
 msgid "A font suited for heavy typing :)"
 msgstr "Eine Schrift geeignete für fett geschriebenes :)"
 
+#. name of tile in tiles/N3-11a
+#: inkstitch-tiles-metadata.py:2
+msgid "N3-11a"
+msgstr ""
+
+#. name of tile in tiles/N3-12
+#: inkstitch-tiles-metadata.py:4
+msgid "N3-12"
+msgstr ""
+
+#. name of tile in tiles/N3-16a
+#: inkstitch-tiles-metadata.py:6
+msgid "N3-16a"
+msgstr ""
+
+#. name of tile in tiles/N3-17
+#: inkstitch-tiles-metadata.py:8
+msgid "N3-17"
+msgstr ""
+
+#. name of tile in tiles/N3-18
+#: inkstitch-tiles-metadata.py:10
+msgid "N3-18"
+msgstr ""
+
+#. name of tile in tiles/N3-18-modified
+#: inkstitch-tiles-metadata.py:12
+msgid "N3-18-modified"
+msgstr ""
+
+#. name of tile in tiles/N3-20
+#: inkstitch-tiles-metadata.py:14
+msgid "N3-20"
+msgstr ""
+
+#. name of tile in tiles/N3-23b
+#: inkstitch-tiles-metadata.py:16
+msgid "N3-23b"
+msgstr ""
+
+#. name of tile in tiles/N3-25c
+#: inkstitch-tiles-metadata.py:18
+msgid "N3-25c"
+msgstr ""
+
+#. name of tile in tiles/N3-26b
+#: inkstitch-tiles-metadata.py:20
+msgid "N3-26b"
+msgstr ""
+
+#. name of tile in tiles/N3-27
+#: inkstitch-tiles-metadata.py:22
+msgid "N3-27"
+msgstr ""
+
+#. name of tile in tiles/N3-30a
+#: inkstitch-tiles-metadata.py:24
+msgid "N3-30a"
+msgstr ""
+
+#. name of tile in tiles/N3-51b
+#: inkstitch-tiles-metadata.py:26
+msgid "N3-51b"
+msgstr ""
+
+#. name of tile in tiles/N3-57f-modified
+#: inkstitch-tiles-metadata.py:28
+msgid "N3-57f-modified"
+msgstr ""
+
+#. name of tile in tiles/N3-58b
+#: inkstitch-tiles-metadata.py:30
+msgid "N3-58b"
+msgstr ""
+
+#. name of tile in tiles/N3-6
+#: inkstitch-tiles-metadata.py:32
+msgid "N3-6"
+msgstr ""
+
+#. name of tile in tiles/N3-7
+#: inkstitch-tiles-metadata.py:34
+msgid "N3-7"
+msgstr ""
+
+#. name of tile in tiles/N3-8a
+#: inkstitch-tiles-metadata.py:36
+msgid "N3-8a"
+msgstr ""
+
+#. name of tile in tiles/N3-8a-modified
+#: inkstitch-tiles-metadata.py:38
+msgid "N3-8a-modified"
+msgstr ""
+
+#. name of tile in tiles/N3-8b
+#: inkstitch-tiles-metadata.py:40
+msgid "N3-8b"
+msgstr ""
+
+#. name of tile in tiles/N4-13b
+#: inkstitch-tiles-metadata.py:42
+msgid "N4-13b"
+msgstr ""
+
+#. name of tile in tiles/N4-13c
+#: inkstitch-tiles-metadata.py:44
+msgid "N4-13c"
+msgstr ""
+
+#. name of tile in tiles/N4-13d
+#: inkstitch-tiles-metadata.py:46
+msgid "N4-13d"
+msgstr ""
+
+#. name of tile in tiles/N4-13e
+#: inkstitch-tiles-metadata.py:48
+msgid "N4-13e"
+msgstr ""
+
+#. name of tile in tiles/N4-13f
+#: inkstitch-tiles-metadata.py:50
+msgid "N4-13f"
+msgstr ""
+
+#. name of tile in tiles/N4-16a
+#: inkstitch-tiles-metadata.py:52
+msgid "N4-16a"
+msgstr ""
+
+#. name of tile in tiles/N4-19
+#: inkstitch-tiles-metadata.py:54
+msgid "N4-19"
+msgstr ""
+
+#. name of tile in tiles/N4-20
+#: inkstitch-tiles-metadata.py:56
+msgid "N4-20"
+msgstr ""
+
+#. name of tile in tiles/N4-21c
+#: inkstitch-tiles-metadata.py:58
+msgid "N4-21c"
+msgstr ""
+
+#. name of tile in tiles/N4-22
+#: inkstitch-tiles-metadata.py:60
+msgid "N4-22"
+msgstr ""
+
+#. name of tile in tiles/N4-23a
+#: inkstitch-tiles-metadata.py:62
+msgid "N4-23a"
+msgstr ""
+
+#. name of tile in tiles/N4-23c
+#: inkstitch-tiles-metadata.py:64
+msgid "N4-23c"
+msgstr ""
+
+#. name of tile in tiles/N4-27
+#: inkstitch-tiles-metadata.py:66
+msgid "N4-27"
+msgstr ""
+
+#. name of tile in tiles/N4-29e
+#: inkstitch-tiles-metadata.py:68
+msgid "N4-29e"
+msgstr ""
+
+#. name of tile in tiles/N4-29f
+#: inkstitch-tiles-metadata.py:70
+msgid "N4-29f"
+msgstr ""
+
+#. name of tile in tiles/N4-31
+#: inkstitch-tiles-metadata.py:72
+msgid "N4-31"
+msgstr ""
+
+#. name of tile in tiles/N4-38
+#: inkstitch-tiles-metadata.py:74
+msgid "N4-38"
+msgstr ""
+
+#. name of tile in tiles/N4-42e
+#: inkstitch-tiles-metadata.py:76
+msgid "N4-42e"
+msgstr ""
+
+#. name of tile in tiles/N4-44
+#: inkstitch-tiles-metadata.py:78
+msgid "N4-44"
+msgstr ""
+
+#. name of tile in tiles/N4-52
+#: inkstitch-tiles-metadata.py:80
+msgid "N4-52"
+msgstr ""
+
+#. name of tile in tiles/N4-54d
+#: inkstitch-tiles-metadata.py:82
+msgid "N4-54d"
+msgstr ""
+
+#. name of tile in tiles/N4-5a
+#: inkstitch-tiles-metadata.py:84
+msgid "N4-5a"
+msgstr ""
+
+#. name of tile in tiles/N4-5a-2
+#: inkstitch-tiles-metadata.py:86
+msgid "N4-5a-2"
+msgstr ""
+
+#. name of tile in tiles/N4-82
+#: inkstitch-tiles-metadata.py:88
+msgid "N4-82"
+msgstr ""
+
+#. name of tile in tiles/N4-85d
+#: inkstitch-tiles-metadata.py:90
+msgid "N4-85d"
+msgstr ""
+
+#. name of tile in tiles/N5-1e1
+#: inkstitch-tiles-metadata.py:92
+msgid "N5-1e1"
+msgstr ""
+
+#. name of tile in tiles/N5-1q2
+#: inkstitch-tiles-metadata.py:94
+msgid "N5-1q2"
+msgstr ""
+
+#. name of tile in tiles/N5-1t
+#: inkstitch-tiles-metadata.py:96
+msgid "N5-1t"
+msgstr ""
+
+#. name of tile in tiles/N6-1
+#: inkstitch-tiles-metadata.py:98
+msgid "N6-1"
+msgstr ""
+
+#. name of tile in tiles/N6-2
+#: inkstitch-tiles-metadata.py:100
+msgid "N6-2"
+msgstr ""
+
+#. name of tile in tiles/N6-5b
+#: inkstitch-tiles-metadata.py:102
+msgid "N6-5b"
+msgstr ""
+
+#. name of tile in tiles/N6-6a
+#: inkstitch-tiles-metadata.py:104
+msgid "N6-6a"
+msgstr ""
+
+#. name of tile in tiles/N6-6c
+#: inkstitch-tiles-metadata.py:106
+msgid "N6-6c"
+msgstr ""
+
+#. name of tile in tiles/NC5-11a
+#: inkstitch-tiles-metadata.py:108
+msgid "NC5-11a"
+msgstr ""
+
+#. name of tile in tiles/NC5-20a
+#: inkstitch-tiles-metadata.py:110
+msgid "NC5-20a"
+msgstr ""
+
+#. name of tile in tiles/P3-1
+#: inkstitch-tiles-metadata.py:112
+msgid "P3-1"
+msgstr ""
+
+#. name of tile in tiles/P3-12
+#: inkstitch-tiles-metadata.py:114
+msgid "P3-12"
+msgstr ""
+
+#. name of tile in tiles/P4-1
+#: inkstitch-tiles-metadata.py:116
+msgid "P4-1"
+msgstr ""
+
+#. name of tile in tiles/P4-10
+#: inkstitch-tiles-metadata.py:118
+msgid "P4-10"
+msgstr ""
+
+#. name of tile in tiles/P4-15
+#: inkstitch-tiles-metadata.py:120
+msgid "P4-15"
+msgstr ""
+
+#. name of tile in tiles/P4-19
+#: inkstitch-tiles-metadata.py:122
+msgid "P4-19"
+msgstr ""
+
+#. name of tile in tiles/P4-23
+#: inkstitch-tiles-metadata.py:124
+msgid "P4-23"
+msgstr ""
+
+#. name of tile in tiles/P4-24
+#: inkstitch-tiles-metadata.py:126
+msgid "P4-24"
+msgstr ""
+
+#. name of tile in tiles/P4-25
+#: inkstitch-tiles-metadata.py:128
+msgid "P4-25"
+msgstr ""
+
+#. name of tile in tiles/P4-43
+#: inkstitch-tiles-metadata.py:130
+msgid "P4-43"
+msgstr ""
+
+#. name of tile in tiles/P4-43-modified
+#: inkstitch-tiles-metadata.py:132
+msgid "P4-43-modified"
+msgstr ""
+
+#. name of tile in tiles/P4-47
+#: inkstitch-tiles-metadata.py:134
+msgid "P4-47"
+msgstr ""
+
+#. name of tile in tiles/P5-10_11
+#: inkstitch-tiles-metadata.py:136
+msgid "P5-10_11"
+msgstr ""
+
+#. name of tile in tiles/P5-19
+#: inkstitch-tiles-metadata.py:138
+msgid "P5-19"
+msgstr ""
+
+#. name of tile in tiles/P5-23_24
+#: inkstitch-tiles-metadata.py:140
+msgid "P5-23_24"
+msgstr ""
+
+#. name of tile in tiles/P5-4
+#: inkstitch-tiles-metadata.py:142
+msgid "P5-4"
+msgstr ""
+
+#. name of tile in tiles/P6-6_11
+#: inkstitch-tiles-metadata.py:144
+msgid "P6-6_11"
+msgstr ""
+
+#. name of tile in tiles/diamond-square
+#: inkstitch-tiles-metadata.py:146
+msgid "diamonds and squares"
+msgstr ""
+
+#. name of tile in tiles/hexagon
+#: inkstitch-tiles-metadata.py:148
+msgid "hexagonal lattice"
+msgstr ""
+
+#. name of tile in tiles/weird-one
+#: inkstitch-tiles-metadata.py:150
+msgid "weird one"
+msgstr ""
+
 #: inkstitch.py:88
 msgid "Ink/Stitch cannot read your SVG file. This is often the case when you use a file which has been created with Adobe Illustrator."
 msgstr "Ink/Stitch can deine SVG-Datei nicht lesen. Das passiert häufig, wenn du die Datei mit Adobe Illustrator erstellt hast."
@@ -526,7 +901,7 @@ msgstr "Wenn du uns helfen willst Ink/Stitch zu verbessern,\n"
 "- speichere die SVG-Datei ab und\n"
 "- erstelle einen Fehlerbereicht (New Issue) auf https://github.com/inkstitch/inkstitch/issues"
 
-#: inkstitch.py:107 lib/elements/fill_stitch.py:737
+#: inkstitch.py:107 lib/elements/fill_stitch.py:779
 msgid "Include the error description and also (if possible) the svg file."
 msgstr "Sende die Fehlerbeschreibung und (wenn möglich) auch die SVG-Datei."
 
@@ -789,305 +1164,325 @@ msgstr "Es gibt ein ungültiges Objekt in diesem Dokument. Es enthält keine geo
 msgid "* Run Extensions > Ink/Stitch > Troubleshoot > Cleanup Document..."
 msgstr "* Führe die Funktion Erweiterungen > Ink/Stitch > Fehlerbehebung > Dokument bereinigen... aus"
 
-#: lib/elements/fill_stitch.py:29
+#: lib/elements/fill_stitch.py:31
 msgid "Small Fill"
 msgstr "Kleines Füllobjekt"
 
-#: lib/elements/fill_stitch.py:30
+#: lib/elements/fill_stitch.py:32
 msgid "This fill object is so small that it would probably look better as running stitch or satin column. For very small shapes, fill stitch is not possible, and Ink/Stitch will use running stitch around the outline instead."
 msgstr "Dieses Füllobjekt ist so klein, dass es sich besser für einen Geradstich oder Satinstich eignet. Bei sehr kleinen Objekten ist ein Füllstich nicht möglich und Ink/Stitch nutzt automatisch einen Geradstich um die Außenränder herum."
 
-#: lib/elements/fill_stitch.py:36 lib/elements/fill_stitch.py:477
+#: lib/elements/fill_stitch.py:38 lib/elements/fill_stitch.py:508
 msgid "Expand"
 msgstr "Erweitern"
 
-#: lib/elements/fill_stitch.py:37
+#: lib/elements/fill_stitch.py:39
 msgid "The expand parameter for this fill object cannot be applied. Ink/Stitch will ignore it and will use original size instead."
 msgstr "Die \"Erweitern\"-Einstellung für dieses Füll-Objekt kann nicht angewendet werden. Ink/Stitch wird diese Einstellung ignorieren und stattdessen die Originalgröße nutzen."
 
-#: lib/elements/fill_stitch.py:42 lib/elements/fill_stitch.py:454
+#: lib/elements/fill_stitch.py:44 lib/elements/fill_stitch.py:485
 msgid "Inset"
 msgstr "Einzug"
 
-#: lib/elements/fill_stitch.py:43
+#: lib/elements/fill_stitch.py:45
 msgid "The underlay inset parameter for this fill object cannot be applied. Ink/Stitch will ignore it and will use the original size instead."
 msgstr "Die \"Einzug\"-Einstellung für die Unterlage für dieses Füll-Objekt kann nicht angewendet werden. Ink/Stitch wird diese Einstellung ignorieren und stattdessen die Originalgröße nutzen."
 
-#: lib/elements/fill_stitch.py:48
+#: lib/elements/fill_stitch.py:50
 msgid "Missing Guideline"
 msgstr "Fehlende Führungslinie"
 
-#: lib/elements/fill_stitch.py:49
+#: lib/elements/fill_stitch.py:51
 msgid "This object is set to \"Guided Fill\", but has no guide line."
 msgstr "Dieses Objekt ist auf \"Kurvenfüllung\" gesetzt, aber die Führungslinie fehlt."
 
-#: lib/elements/fill_stitch.py:51
+#: lib/elements/fill_stitch.py:53
 msgid "* Create a stroke object"
 msgstr "* Erstelle ein Objekt mit einer Kontur"
 
-#: lib/elements/fill_stitch.py:52
+#: lib/elements/fill_stitch.py:54
 msgid "* Select this object and run Extensions > Ink/Stitch > Edit > Selection to guide line"
 msgstr "* Wähle dieses aus und führe die Funktion Erweiterungen > Ink/Stitch > Bearbeiten > Auswahl zu Führungslinie aus"
 
-#: lib/elements/fill_stitch.py:57
+#: lib/elements/fill_stitch.py:59
 msgid "Disjointed Guide Line"
 msgstr "Unzusammenhängende Führungslinie"
 
-#: lib/elements/fill_stitch.py:58
+#: lib/elements/fill_stitch.py:60
 msgid "The guide line of this object isn't within the object borders. The guide line works best, if it is within the target element."
 msgstr "Die Führungslinie dieses Objekts liegt nicht innerhalb des Objektes. Führungslinien funktionieren am Besten, wenn sie innerhalb des Zielobjektes liegen."
 
-#: lib/elements/fill_stitch.py:61
+#: lib/elements/fill_stitch.py:63
 msgid "* Move the guide line into the element"
 msgstr "* Bewege die Führungslinie in das Objekt"
 
-#: lib/elements/fill_stitch.py:66 lib/elements/stroke.py:36
+#: lib/elements/fill_stitch.py:68 lib/elements/stroke.py:36
 msgid "Multiple Guide Lines"
 msgstr "Mehrere Führungslinien"
 
-#: lib/elements/fill_stitch.py:67 lib/elements/stroke.py:37
+#: lib/elements/fill_stitch.py:69 lib/elements/stroke.py:37
 msgid "This object has multiple guide lines, but only the first one will be used."
 msgstr "Dieses Objekt hat mehrere Führungslinien, aber nur die erste wird verwendet."
 
-#: lib/elements/fill_stitch.py:69 lib/elements/stroke.py:39
+#: lib/elements/fill_stitch.py:71 lib/elements/stroke.py:39
 msgid "* Remove all guide lines, except for one."
 msgstr "* Entferne alle Führungslinien bis auf eine."
 
-#: lib/elements/fill_stitch.py:74
+#: lib/elements/fill_stitch.py:76
 msgid "Unconnected"
 msgstr "Nicht verbunden"
 
-#: lib/elements/fill_stitch.py:75
+#: lib/elements/fill_stitch.py:77
 msgid "Fill: This object is made up of unconnected shapes. Ink/Stitch doesn't know what order to stitch them in.  Please break this object up into separate shapes."
 msgstr "Füllstich: Dieses Objekt besteht aus unzusammenhängenden Formen. Ink/Stitch weiß nicht, in welcher Reihenfolge diese Objekte gestickt werden sollen. Bitte zerlege den Pfad in separate Teile."
 
-#: lib/elements/fill_stitch.py:79 lib/elements/fill_stitch.py:88
-#: lib/elements/fill_stitch.py:96
+#: lib/elements/fill_stitch.py:81 lib/elements/fill_stitch.py:90
+#: lib/elements/fill_stitch.py:98
 msgid "* Extensions > Ink/Stitch > Fill Tools > Break Apart Fill Objects"
 msgstr "* Erweiterung > Ink/Stitch > Füllstich-Werkzeuge > Zerlegen und Löcher erhalten"
 
-#: lib/elements/fill_stitch.py:84
+#: lib/elements/fill_stitch.py:86
 msgid "Border crosses itself"
 msgstr "Außenlinien überkreuzen sich selbst"
 
-#: lib/elements/fill_stitch.py:85
+#: lib/elements/fill_stitch.py:87
 msgid "Fill: The border crosses over itself. This may lead into unconnected shapes. Please break this object into separate shapes to indicate in which order it should be stitched in."
 msgstr "Füllstich: Der Pfad dieses Objektes überschneidet sich selbst. Das kann zu unzusammenhängenden Objekten führen. Bitte den Pfad zerlegen, um die Stickreihenfolge der Einzelelemente zu definieren (Erweiterungen > Ink/Stitch > Werkzeuge: Füllung > Füllobjekte aufspalten)."
 
-#: lib/elements/fill_stitch.py:93
+#: lib/elements/fill_stitch.py:95
 msgid "This shape is invalid"
 msgstr "Diese Form ist ungültig"
 
-#: lib/elements/fill_stitch.py:94
+#: lib/elements/fill_stitch.py:96
 msgid "Fill: This shape cannot be stitched out. Please try to repair it with the \"Break Apart Fill Objects\" extension."
 msgstr "Füllstich: Diese Form kann nicht gestickt werden. Versuche sie mit der Option \"Füllstiche aufspalten\" (Erweiterungen > Ink/Stitch > Werkzeuge: Füllung > Füllobjekte aufspalten) zu reparieren."
 
-#: lib/elements/fill_stitch.py:101
+#: lib/elements/fill_stitch.py:103
 msgid "FillStitch"
 msgstr "Füllstitch"
 
-#: lib/elements/fill_stitch.py:104
+#: lib/elements/fill_stitch.py:106
 msgid "Automatically routed fill stitching"
 msgstr "Automatisch geführte Füllstiche"
 
-#: lib/elements/fill_stitch.py:109
+#: lib/elements/fill_stitch.py:111
 msgid "Fill method"
 msgstr "Füllmethode"
 
-#: lib/elements/fill_stitch.py:110
+#: lib/elements/fill_stitch.py:112
 msgid "Auto Fill"
 msgstr "Automatische Füllung"
 
-#: lib/elements/fill_stitch.py:110
+#: lib/elements/fill_stitch.py:112
 msgid "Contour Fill"
 msgstr "Konturfüllung"
 
-#: lib/elements/fill_stitch.py:110
+#: lib/elements/fill_stitch.py:112
 msgid "Guided Fill"
 msgstr "Kurvenfüllung"
 
-#: lib/elements/fill_stitch.py:110
+#: lib/elements/fill_stitch.py:112
 msgid "Legacy Fill"
 msgstr "Veraltete Füllung"
 
-#: lib/elements/fill_stitch.py:115
+#: lib/elements/fill_stitch.py:112
+msgid "Meander Fill"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:117
 msgid "Guided Fill Strategy"
 msgstr "Strategie"
 
-#: lib/elements/fill_stitch.py:116
+#: lib/elements/fill_stitch.py:118
 msgid "Copy"
 msgstr "Kopieren"
 
-#: lib/elements/fill_stitch.py:116
+#: lib/elements/fill_stitch.py:118
 msgid "Parallel Offset"
 msgstr "Parallelverschiebung"
 
-#: lib/elements/fill_stitch.py:117
+#: lib/elements/fill_stitch.py:119
 msgid "Copy (the default) will fill the shape with shifted copies of the line. Parallel offset will ensure that each line is always a consistent distance from its neighbor. Sharp corners may be introduced."
 msgstr "Kopieren (Voreinstellung) füllt die Form mit verschobenen Kopien der Führungslinie. Parallelversatz stellt einen konstanten Abstand der Reihen sicher. Es kann dabei zur Bildung von scharfe Ecken kommen."
 
-#: lib/elements/fill_stitch.py:124
+#: lib/elements/fill_stitch.py:126
 msgid "Contour Fill Strategy"
 msgstr "Methode"
 
-#: lib/elements/fill_stitch.py:125
+#: lib/elements/fill_stitch.py:127
 msgid "Inner to Outer"
 msgstr "Von Innen nach Außen"
 
-#: lib/elements/fill_stitch.py:125
+#: lib/elements/fill_stitch.py:127
 msgid "Single spiral"
 msgstr "Einfache Spirale"
 
-#: lib/elements/fill_stitch.py:125
+#: lib/elements/fill_stitch.py:127
 msgid "Double spiral"
 msgstr "Doppelte Spirale"
 
-#: lib/elements/fill_stitch.py:130
+#: lib/elements/fill_stitch.py:132
 msgid "Join Style"
 msgstr "Stil der Verbindungen"
 
-#: lib/elements/fill_stitch.py:131
+#: lib/elements/fill_stitch.py:133
 msgid "Round"
 msgstr "Rund"
 
-#: lib/elements/fill_stitch.py:131
+#: lib/elements/fill_stitch.py:133
 msgid "Mitered"
 msgstr "Spitz"
 
-#: lib/elements/fill_stitch.py:131
+#: lib/elements/fill_stitch.py:133
 msgid "Beveled"
 msgstr "Abgeschrägt"
 
-#: lib/elements/fill_stitch.py:136
+#: lib/elements/fill_stitch.py:138
 msgid "Avoid self-crossing"
 msgstr "Selbstüberschneidung vermeiden"
 
-#: lib/elements/fill_stitch.py:141
+#: lib/elements/fill_stitch.py:143
+msgid "Smoothness"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:144
+msgid "Smooth the stitch path.  Smoothness limits how far the smoothed stitch path is allowed to deviate from the original path.  Try low numbers like 0.2.  Hint: a lower running stitch tolerance may be needed too."
+msgstr ""
+
+#: lib/elements/fill_stitch.py:158
 msgid "Clockwise"
 msgstr "Uhrzeigersinn"
 
-#: lib/elements/fill_stitch.py:147
+#: lib/elements/fill_stitch.py:163
+msgid "Meander Pattern"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:169
+msgid "Meander pattern scale"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:175
 msgid "Angle of lines of stitches"
 msgstr "Winkel der Stichlinien"
 
-#: lib/elements/fill_stitch.py:148
+#: lib/elements/fill_stitch.py:176
 msgid "The angle increases in a counter-clockwise direction.  0 is horizontal.  Negative angles are allowed."
 msgstr "Der Winkel nimmt gegen den Uhrzeigersinn zu. 0 ist horizontal. Negative Winkel sind erlaubt."
 
-#: lib/elements/fill_stitch.py:166 lib/elements/fill_stitch.py:466
+#: lib/elements/fill_stitch.py:194 lib/elements/fill_stitch.py:497
 msgid "Skip last stitch in each row"
 msgstr "Letzten Stich in jeder Reihe überspringen"
 
-#: lib/elements/fill_stitch.py:167 lib/elements/fill_stitch.py:467
+#: lib/elements/fill_stitch.py:195 lib/elements/fill_stitch.py:498
 msgid "The last stitch in each row is quite close to the first stitch in the next row.  Skipping it decreases stitch count and density."
 msgstr "Der letzte Stich einer Reihe ist sehr nah an dem ersten Stich der nächsten Reihe. Ihn zu überspringen verringert Stichanzahl und Dichte."
 
-#: lib/elements/fill_stitch.py:180
+#: lib/elements/fill_stitch.py:208
 msgid "Flip fill (start right-to-left)"
 msgstr "Rückwärtsfüllung (von rechts nach links)"
 
-#: lib/elements/fill_stitch.py:181
+#: lib/elements/fill_stitch.py:209
 msgid "The flip option can help you with routing your stitch path.  When you enable flip, stitching goes from right-to-left instead of left-to-right."
 msgstr "Die Umkehr-Option kann bei der Reihenfolge des Stichpfads helfen. Wenn Umdrehen aktiviert wird, wird das Sticken von rechts nach links anstatt von links nach rechts ausgeführt."
 
-#: lib/elements/fill_stitch.py:192
+#: lib/elements/fill_stitch.py:220
 msgid "Spacing between rows"
 msgstr "Reihenabstand"
 
-#: lib/elements/fill_stitch.py:193
+#: lib/elements/fill_stitch.py:221
 msgid "Distance between rows of stitches."
 msgstr "Abstand zwischen den Stichreihen."
 
-#: lib/elements/fill_stitch.py:207
+#: lib/elements/fill_stitch.py:236
 msgid "Maximum fill stitch length"
 msgstr "Maximale Füllstichlänge"
 
-#: lib/elements/fill_stitch.py:208
+#: lib/elements/fill_stitch.py:237
 msgid "The length of each stitch in a row.  Shorter stitch may be used at the start or end of a row."
 msgstr "Die Stichlänge in einer Reihe. Ein kürzerer Stich kann am Anfang oder am Ende einer Reihe verwendet werden."
 
-#: lib/elements/fill_stitch.py:219
+#: lib/elements/fill_stitch.py:249
 msgid "Stagger rows this many times before repeating"
 msgstr "Reihenanzahl bis sich das Muster wiederholt"
 
-#: lib/elements/fill_stitch.py:220
+#: lib/elements/fill_stitch.py:250
 msgid "Length of the cycle by which successive stitch rows are staggered. Fractional values are allowed and can have less visible diagonals than integer values."
 msgstr "Dieser Wert beschreibt, nach wie vielen Reihen die Einstichstellen übereinander liegen. Dezimalwerte sind zulässig und zeigen weniger deutliche Diagonalen im Stickbild."
 
-#: lib/elements/fill_stitch.py:378
-msgid "Running stitch length (traversal between sections)"
-msgstr "Geradstichlänge (zwischen den Abschnitten)"
+#: lib/elements/fill_stitch.py:408 lib/elements/stroke.py:125
+msgid "Running stitch length"
+msgstr "Stichlänge"
 
-#: lib/elements/fill_stitch.py:379
-msgid "Length of stitches around the outline of the fill region used when moving from section to section."
-msgstr "Stichlänge um den Umriss des Füllbereichs, der beim Übergang von Abschnitt zu Abschnitt verwendet wird."
+#: lib/elements/fill_stitch.py:409
+msgid "Length of stitches around the outline of the fill region used when moving from section to section.  Also used for meander fill."
+msgstr ""
 
-#: lib/elements/fill_stitch.py:390 lib/elements/stroke.py:136
+#: lib/elements/fill_stitch.py:421 lib/elements/stroke.py:136
 msgid "Running stitch tolerance"
 msgstr "Geradstich-Toleranz"
 
-#: lib/elements/fill_stitch.py:391
+#: lib/elements/fill_stitch.py:422
 msgid "All stitches must be within this distance of the path.  A lower tolerance means stitches will be closer together.  A higher tolerance means sharp corners may be rounded."
 msgstr "Alle Stiche müssen innerhalb dieser Toleranzgrenze zum Pfad liegen. Eine niedrigere Toleranz bedeutet, dass sich die Stichlänge mehr reduziert. Eine größere Toleranz lann zur Abrundung scharfer Ecken führen."
 
-#: lib/elements/fill_stitch.py:402
+#: lib/elements/fill_stitch.py:433
 msgid "Underlay"
 msgstr "Unterlage"
 
-#: lib/elements/fill_stitch.py:402 lib/elements/fill_stitch.py:411
-#: lib/elements/fill_stitch.py:436 lib/elements/fill_stitch.py:447
-#: lib/elements/fill_stitch.py:457 lib/elements/fill_stitch.py:469
-#: lib/elements/fill_stitch.py:507
+#: lib/elements/fill_stitch.py:433 lib/elements/fill_stitch.py:442
+#: lib/elements/fill_stitch.py:467 lib/elements/fill_stitch.py:478
+#: lib/elements/fill_stitch.py:488 lib/elements/fill_stitch.py:500
+#: lib/elements/fill_stitch.py:538
 msgid "Fill Underlay"
 msgstr "Füllung Unterlage"
 
-#: lib/elements/fill_stitch.py:408
+#: lib/elements/fill_stitch.py:439
 msgid "Fill angle"
 msgstr "Füllwinkel"
 
-#: lib/elements/fill_stitch.py:409
+#: lib/elements/fill_stitch.py:440
 msgid "Default: fill angle + 90 deg. Insert a list for multiple layers separated by a space."
 msgstr "Standard: Füllwinkel + 90 Grad. Füge eine Liste von mit Leerzeichen getrennten Werten ein, um mehrere Lagen zu erzeugen."
 
-#: lib/elements/fill_stitch.py:433
+#: lib/elements/fill_stitch.py:464
 msgid "Row spacing"
 msgstr "Reihenabstand"
 
-#: lib/elements/fill_stitch.py:434
+#: lib/elements/fill_stitch.py:465
 msgid "default: 3x fill row spacing"
 msgstr "Standard: 3x Füllreihenabstand"
 
-#: lib/elements/fill_stitch.py:444
+#: lib/elements/fill_stitch.py:475
 msgid "Max stitch length"
 msgstr "Maximale Stichlänge"
 
-#: lib/elements/fill_stitch.py:445
+#: lib/elements/fill_stitch.py:476
 msgid "default: equal to fill max stitch length"
 msgstr "Standard: entspricht der maximalen Stichlänge"
 
-#: lib/elements/fill_stitch.py:455
+#: lib/elements/fill_stitch.py:486
 msgid "Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill."
 msgstr "Verkleinern Sie die Unterlage, um zu verhindern, dass die Unterlage an der Außenseite der Füllstiche sichtbar wird."
 
-#: lib/elements/fill_stitch.py:478
-msgid "Expand the shape before fill stitching, to compensate for gaps between shapes."
-msgstr "Fülstichform erweitern, um Lücken zwischen den Formen auszugleichen."
+#: lib/elements/fill_stitch.py:509
+msgid "Expand the shape before fill stitching, to compensate for gaps between shapes.  Negative values contract instead."
+msgstr ""
 
-#: lib/elements/fill_stitch.py:489 lib/elements/fill_stitch.py:503
+#: lib/elements/fill_stitch.py:520 lib/elements/fill_stitch.py:534
 msgid "Underpath"
 msgstr "Verbindungsstiche innerhalb des Objektes"
 
-#: lib/elements/fill_stitch.py:490 lib/elements/fill_stitch.py:504
+#: lib/elements/fill_stitch.py:521 lib/elements/fill_stitch.py:535
 msgid "Travel inside the shape when moving from section to section.  Underpath stitches avoid traveling in the direction of the row angle so that they are not visible.  This gives them a jagged appearance."
 msgstr "Stiche zum Verbinden der Teilbereiche verlaufen innerhalb des Objektes. Verbindungsstiche vermeiden im Winkel des Füllmusters zu verlaufen. Das kann ihnen ein zackiges Aussehen verleihen."
 
-#: lib/elements/fill_stitch.py:729
+#: lib/elements/fill_stitch.py:771
 msgid "Error during autofill! This means it is a bug in Ink/Stitch."
 msgstr "Es ist ein Fehler bei der Füllung aufgetreten! Das bedeutet, das ist ein Bug in Ink/Stitch."
 
 #. this message is followed by a URL:
 #. https://github.com/inkstitch/inkstitch/issues/new
-#: lib/elements/fill_stitch.py:732
+#: lib/elements/fill_stitch.py:774
 msgid "If you'd like to help please\n"
 "- copy the entire error message below\n"
 "- save your SVG file and\n"
@@ -1512,10 +1907,6 @@ msgid "Backtrack each stitch this many times.  A value of 1 would triple each st
 msgstr "Anzahl der Wiederholungen für jeden Stich. Ein Wert von 1 erzeugt einen Dreifachstich (Vor, zurück, vor). Ein Wert von 2 erzeugt einen Fünffachstich, usw.\n\n"
 "Mit der Eingabe von mehreren durch Leerzeichen getrennte Werte kann ein Muster mit unterschiedlichen Stichwiederholungen erzeugt werden."
 
-#: lib/elements/stroke.py:125
-msgid "Running stitch length"
-msgstr "Stichlänge"
-
 #: lib/elements/stroke.py:126
 msgid "Length of stitches in running stitch mode."
 msgstr "Länge der Geradstiche."
@@ -1899,7 +2290,7 @@ msgstr "nach jedem Buchstaben"
 msgid "Add trim command"
 msgstr "Fadenschnitt-Befehl hinzufügen"
 
-#: lib/extensions/lettering.py:85 lib/extensions/params.py:467
+#: lib/extensions/lettering.py:85 lib/extensions/params.py:502
 #: print/templates/custom-page.html:23 print/templates/custom-page.html:27
 #: print/templates/custom-page.html:33 print/templates/ui.html:102
 #: print/templates/ui.html:106 print/templates/ui.html:112
@@ -1908,7 +2299,7 @@ msgstr "Fadenschnitt-Befehl hinzufügen"
 msgid "Cancel"
 msgstr "Abbrechen"
 
-#: lib/extensions/lettering.py:89 lib/extensions/params.py:475
+#: lib/extensions/lettering.py:89 lib/extensions/params.py:510
 msgid "Apply and Quit"
 msgstr "Anwenden und schließen"
 
@@ -1979,54 +2370,54 @@ msgstr "Um Text in Textzeilen zu zerlegen, bitte ein oder mehrere Textelemente a
 msgid "Cannot read palette: invalid GIMP palette header"
 msgstr "Palette kann nicht gelesen werden: Ungültiger GIMP-Palettenheader"
 
-#: lib/extensions/params.py:252
+#: lib/extensions/params.py:272
 msgid "These settings will be applied to 1 object."
 msgstr "Diese Einstellung wird auf 1 Objekt angewendet."
 
-#: lib/extensions/params.py:254
+#: lib/extensions/params.py:274
 #, python-format
 msgid "These settings will be applied to %d objects."
 msgstr "Diese Einstellungen werden auf %d Objekte angewendet."
 
-#: lib/extensions/params.py:259
+#: lib/extensions/params.py:279
 msgid "Some settings had different values across objects.  Select a value from the dropdown or enter a new one."
 msgstr "Einige Einstellungen hatten unterschiedliche Werte der Objekte.  Bitte einen Wert aus der Liste auswählen oder einen neuen Namen eingeben."
 
-#: lib/extensions/params.py:264
+#: lib/extensions/params.py:284
 #, python-format
 msgid "Disabling this tab will disable the following %d tabs."
 msgstr "Deaktivierung dieser Registerkarte, deaktiviert die folgenden %d Registerkarten."
 
-#: lib/extensions/params.py:268
+#: lib/extensions/params.py:288
 msgid "Disabling this tab will disable the following tab."
 msgstr "Deaktivierung dieser Registerkarte, deaktiviert die folgende Registerkarte."
 
-#: lib/extensions/params.py:272
+#: lib/extensions/params.py:292
 #, python-format
 msgid "Enabling this tab will disable %s and vice-versa."
 msgstr "Aktivierung dieser Registerkarte deaktiviert %s und umgekehrt."
 
-#: lib/extensions/params.py:326
+#: lib/extensions/params.py:351
 msgid "Inkscape objects"
 msgstr "Inkscape Objekte"
 
-#: lib/extensions/params.py:391
+#: lib/extensions/params.py:426
 msgid "Re-roll"
 msgstr " würfeln"
 
-#: lib/extensions/params.py:421
+#: lib/extensions/params.py:456
 msgid "Click to force this parameter to be saved when you click \"Apply and Quit\""
 msgstr "Hier klicken, um die Speicherung dieses Parameters bei \"Anwenden und schließen\" zu erzwingen"
 
-#: lib/extensions/params.py:431
+#: lib/extensions/params.py:466
 msgid "This parameter will be saved when you click \"Apply and Quit\""
 msgstr "Dieser Parameter wird gespeichert, wenn man auf \"Übernehmen und beenden\" klickt"
 
-#: lib/extensions/params.py:449
+#: lib/extensions/params.py:484
 msgid "Embroidery Params"
 msgstr "Stickparameter"
 
-#: lib/extensions/params.py:472
+#: lib/extensions/params.py:507
 msgid "Use Last Settings"
 msgstr "Letzte Einstellungen verwenden"
 
