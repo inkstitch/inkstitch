@@ -4,7 +4,7 @@ ARCH="$(uname -m)"
 mkdir artifacts
 
 if [ "$BUILD" = "osx" ]; then
-    cp -a icons locales print LICENSE VERSION images/examples palettes symbols fonts inx dist/inkstitch.app/Contents/Resources
+    cp -a icons locales print LICENSE VERSION images/examples palettes symbols fonts tiles inx dist/inkstitch.app/Contents/Resources
     # adding version to Info.plist
     sed -i '' 's/0.0.0/'${VERSION}'/' dist/inkstitch.app/Contents/Info.plist
     rm -rf dist/inkstitch/
@@ -87,7 +87,7 @@ if [ "$BUILD" = "osx" ]; then
     python -m zipfile -c ../artifacts/inkstitch-${VERSION}-${OS}.zip *
     cd ..
 else
-    cp -a images/examples palettes symbols fonts inx LICENSE VERSION dist/inkstitch
+    cp -a images/examples palettes symbols fonts tiles inx LICENSE VERSION dist/inkstitch
     cp -a icons locales print dist/inkstitch/bin
     cp -a electron/build/*-unpacked dist/inkstitch/electron
 
