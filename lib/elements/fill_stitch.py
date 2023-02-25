@@ -250,7 +250,7 @@ class FillStitch(EmbroideryElement):
            unit='mm',
            sort_index=6,
            type='float',
-           select_items=[('fill_method', 0), ('fill_method', 1), ('fill_method', 2), ('fill_method', 3), ('fill_method', 5)],
+           select_items=[('fill_method', 0), ('fill_method', 1), ('fill_method', 2), ('fill_method', 3)],
            default=3.0)
     def max_stitch_length(self):
         return max(self.get_float_param("max_stitch_length_mm", 3.0), 0.1 * PIXELS_PER_MM)
@@ -417,8 +417,8 @@ class FillStitch(EmbroideryElement):
     @property
     @param('running_stitch_length_mm',
            _('Running stitch length'),
-           tooltip=_(
-               'Length of stitches around the outline of the fill region used when moving from section to section.  Also used for meander fill.'),
+           tooltip=_('Length of stitches around the outline of the fill region used when moving from section to section. '
+                     'Also used for meander and circular fill.'),
            unit='mm',
            type='float',
            default=1.5,
@@ -522,7 +522,7 @@ class FillStitch(EmbroideryElement):
            type='float',
            default=0,
            sort_index=5,
-           select_items=[('fill_method', 0), ('fill_method', 2), ('fill_method', 4)])
+           select_items=[('fill_method', 0), ('fill_method', 2), ('fill_method', 4), ('fill_method', 5)])
     def expand(self):
         return self.get_float_param('expand_mm', 0)
 
@@ -811,7 +811,6 @@ class FillStitch(EmbroideryElement):
                                  self.angle,
                                  self.row_spacing,
                                  self.staggers,
-                                 self.max_stitch_length,
                                  self.running_stitch_length,
                                  self.running_stitch_tolerance,
                                  self.skip_last,
