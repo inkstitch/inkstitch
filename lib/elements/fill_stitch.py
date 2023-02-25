@@ -14,19 +14,20 @@ from shapely import geometry as shgeo
 from shapely.errors import TopologicalError
 from shapely.validation import explain_validity, make_valid
 
+from .. import tiles
 from ..i18n import _
 from ..marker import get_marker_elements
 from ..stitch_plan import StitchGroup
-from ..stitches.meander_fill import meander_fill
 from ..stitches import (auto_fill, circular_fill, contour_fill, guided_fill,
                         legacy_fill)
+from ..stitches.meander_fill import meander_fill
 from ..svg import PIXELS_PER_MM, get_node_transform
 from ..svg.tags import INKSCAPE_LABEL
-from .. import tiles
 from ..utils import cache, version
+from ..utils.param import ParamOption
+from ..utils.threading import ExitThread
 from .element import EmbroideryElement, param
 from .validation import ValidationError, ValidationWarning
-from ..utils.threading import ExitThread
 
 
 class SmallShapeWarning(ValidationWarning):
@@ -109,24 +110,33 @@ class FillStitch(EmbroideryElement):
     def auto_fill(self):
         return self.get_boolean_param('auto_fill', True)
 
+    _fill_methods = [ParamOption('auto_fill', _("Auto Fill"), 0),
+                     ParamOption('contour_fill', _("Contour Fill"), 1),
+                     ParamOption('guided_fill', _("Guided Fill"), 2),
+                     ParamOption('meander_fill', _("Meander Fill")),
+                     ParamOption('circular_fill', _("Circular Fill")),
+                     ParamOption('legacy_fill', _("Legacy Fill"), 3)]
+
     @property
     @param('fill_method',
            _('Fill method'),
-           type='dropdown',
+           type='combo',
            default=0,
-           options=[_("Auto Fill"),
-                    _("Contour Fill"),
-                    _("Guided Fill"),
-                    _("Legacy Fill"),
-                    _("Meander Fill"),
-                    _("Circular Fill")],
+           options=_fill_methods,
            sort_index=2)
     def fill_method(self):
-        return self.get_int_param('fill_method', 0)
+        # convert legacy values
+        legacy_method = self.get_int_param('fill_method', None)
+        if legacy_method in range(0, 4):
+            method = [method.id for method in self._fill_methods if method.legacy == legacy_method][0]
+            self.set_param('fill_method', method)
+            return method
+
+        return self.get_param('fill_method', 'auto_fill')
 
     @property
     @param('guided_fill_strategy', _('Guided Fill Strategy'), type='dropdown', default=0,
-           options=[_("Copy"), _("Parallel Offset")], select_items=[('fill_method', 2)], sort_index=3,
+           options=[_("Copy"), _("Parallel Offset")], select_items=[('fill_method', 'guided_fill')], sort_index=3,
            tooltip=_('Copy (the default) will fill the shape with shifted copies of the line. '
                      'Parallel offset will ensure that each line is always a consistent distance from its neighbor. '
                      'Sharp corners may be introduced.'))
@@ -135,18 +145,23 @@ class FillStitch(EmbroideryElement):
 
     @property
     @param('contour_strategy', _('Contour Fill Strategy'), type='dropdown', default=0,
-           options=[_("Inner to Outer"), _("Single spiral"), _("Double spiral")], select_items=[('fill_method', 1)], sort_index=3)
+           options=[_("Inner to Outer"), _("Single spiral"), _("Double spiral")], select_items=[('fill_method', 'contour_fill')], sort_index=3)
     def contour_strategy(self):
         return self.get_int_param('contour_strategy', 0)
 
     @property
     @param('join_style', _('Join Style'), type='dropdown', default=0,
-           options=[_("Round"), _("Mitered"), _("Beveled")], select_items=[('fill_method', 1)], sort_index=4)
+           options=[_("Round"), _("Mitered"), _("Beveled")], select_items=[('fill_method', 'contour_fill')], sort_index=4)
     def join_style(self):
         return self.get_int_param('join_style', 0)
 
     @property
-    @param('avoid_self_crossing', _('Avoid self-crossing'), type='boolean', default=False, select_items=[('fill_method', 1)], sort_index=5)
+    @param('avoid_self_crossing',
+           _('Avoid self-crossing'),
+           type='boolean',
+           default=False,
+           select_items=[('fill_method', 'contour_fill')],
+           sort_index=5)
     def avoid_self_crossing(self):
         return self.get_boolean_param('avoid_self_crossing', False)
 
@@ -160,24 +175,29 @@ class FillStitch(EmbroideryElement):
            type='integer',
            unit='mm',
            default=0,
-           select_items=[('fill_method', 1), ('fill_method', 4)],
+           select_items=[('fill_method', 'contour_fill'), ('fill_method', 'meander_fill')],
            sort_index=5)
     def smoothness(self):
         return self.get_float_param('smoothness_mm', 0)
 
     @property
-    @param('clockwise', _('Clockwise'), type='boolean', default=True, select_items=[('fill_method', 1)], sort_index=5)
+    @param('clockwise', _('Clockwise'), type='boolean', default=True, select_items=[('fill_method', 'contour_fill')], sort_index=5)
     def clockwise(self):
         return self.get_boolean_param('clockwise', True)
 
     @property
     @param('meander_pattern', _('Meander Pattern'), type='combo', default=0,
-           options=sorted(tiles.all_tiles()), select_items=[('fill_method', 4)], sort_index=3)
+           options=sorted(tiles.all_tiles()), select_items=[('fill_method', 'meander_fill')], sort_index=3)
     def meander_pattern(self):
         return self.get_param('meander_pattern', None)
 
     @property
-    @param('meander_scale_percent', _('Meander pattern scale'), type='float', unit="%", default=100, select_items=[('fill_method', 4)], sort_index=4)
+    @param('meander_scale_percent',
+           _('Meander pattern scale'),
+           type='float', unit="%",
+           default=100,
+           select_items=[('fill_method', 'meander_fill')],
+           sort_index=4)
     def meander_scale(self):
         return self.get_split_float_param('meander_scale_percent', (100, 100)) / 100
 
@@ -188,7 +208,7 @@ class FillStitch(EmbroideryElement):
            unit='deg',
            type='float',
            sort_index=6,
-           select_items=[('fill_method', 0), ('fill_method', 3)],
+           select_items=[('fill_method', 'auto_fill'), ('fill_method', 'guided_fill')],
            default=0)
     @cache
     def angle(self):
@@ -207,8 +227,8 @@ class FillStitch(EmbroideryElement):
                   'Skipping it decreases stitch count and density.'),
         type='boolean',
         sort_index=6,
-        select_items=[('fill_method', 0), ('fill_method', 2),
-                      ('fill_method', 3)],
+        select_items=[('fill_method', 'auto_fill'), ('fill_method', 'contour_fill'),
+                      ('fill_method', 'guided_fill')],
         default=False)
     def skip_last(self):
         return self.get_boolean_param("skip_last", False)
@@ -221,7 +241,7 @@ class FillStitch(EmbroideryElement):
                   'When you enable flip, stitching goes from right-to-left instead of left-to-right.'),
         type='boolean',
         sort_index=7,
-        select_items=[('fill_method', 3)],
+        select_items=[('fill_method', 'legacy_fill')],
         default=False)
     def flip(self):
         return self.get_boolean_param("flip", False)
@@ -233,7 +253,10 @@ class FillStitch(EmbroideryElement):
            unit='mm',
            sort_index=6,
            type='float',
-           select_items=[('fill_method', 0), ('fill_method', 1), ('fill_method', 2), ('fill_method', 3)],
+           select_items=[('fill_method', 'auto_fill'),
+                         ('fill_method', 'contour_fill'),
+                         ('fill_method', 'guided_fill'),
+                         ('fill_method', 'legacy_fill')],
            default=0.25)
     def row_spacing(self):
         return max(self.get_float_param("row_spacing_mm", 0.25), 0.1 * PIXELS_PER_MM)
@@ -250,7 +273,10 @@ class FillStitch(EmbroideryElement):
            unit='mm',
            sort_index=6,
            type='float',
-           select_items=[('fill_method', 0), ('fill_method', 1), ('fill_method', 2), ('fill_method', 3)],
+           select_items=[('fill_method', 'auto_fill'),
+                         ('fill_method', 'contour_fill'),
+                         ('fill_method', 'guided_fill'),
+                         ('fill_method', 'legacy_fill')],
            default=3.0)
     def max_stitch_length(self):
         return max(self.get_float_param("max_stitch_length_mm", 3.0), 0.1 * PIXELS_PER_MM)
@@ -262,7 +288,7 @@ class FillStitch(EmbroideryElement):
                      'Fractional values are allowed and can have less visible diagonals than integer values.'),
            type='int',
            sort_index=6,
-           select_items=[('fill_method', 0), ('fill_method', 2), ('fill_method', 3)],
+           select_items=[('fill_method', 'auto_fill'), ('fill_method', 'guided_fill'), ('fill_method', 'legacy_fill')],
            default=4)
     def staggers(self):
         return self.get_float_param("staggers", 4)
@@ -391,7 +417,7 @@ class FillStitch(EmbroideryElement):
                 yield UnderlayInsetWarning(shape.centroid)
 
         # guided fill warnings
-        if self.fill_method == 2:
+        if self.fill_method == 'guided_fill':
             guide_lines = self._get_guide_lines(True)
             if not guide_lines or guide_lines[0].is_empty:
                 yield MissingGuideLineWarning(self.shape.centroid)
@@ -422,7 +448,10 @@ class FillStitch(EmbroideryElement):
            unit='mm',
            type='float',
            default=1.5,
-           select_items=[('fill_method', 0), ('fill_method', 2), ('fill_method', 4), ('fill_method', 5)],
+           select_items=[('fill_method', 'auto_fill'),
+                         ('fill_method', 'guided_fill'),
+                         ('fill_method', 'meander_fill'),
+                         ('fill_method', 'circular_fill')],
            sort_index=6)
     def running_stitch_length(self):
         return max(self.get_float_param("running_stitch_length_mm", 1.5), 0.01)
@@ -522,7 +551,10 @@ class FillStitch(EmbroideryElement):
            type='float',
            default=0,
            sort_index=5,
-           select_items=[('fill_method', 0), ('fill_method', 2), ('fill_method', 4), ('fill_method', 5)])
+           select_items=[('fill_method', 'auto_fill'),
+                         ('fill_method', 'guided_fill'),
+                         ('fill_method', 'meander_fill'),
+                         ('fill_method', 'circular_fill')])
     def expand(self):
         return self.get_float_param('expand_mm', 0)
 
@@ -534,7 +566,7 @@ class FillStitch(EmbroideryElement):
                      'are not visible.  This gives them a jagged appearance.'),
            type='boolean',
            default=True,
-           select_items=[('fill_method', 0), ('fill_method', 2), ('fill_method', 5)],
+           select_items=[('fill_method', 'auto_fill'), ('fill_method', 'guided_fill'), ('fill_method', 'circular_fill')],
            sort_index=6)
     def underpath(self):
         return self.get_boolean_param('underpath', True)
@@ -597,7 +629,7 @@ class FillStitch(EmbroideryElement):
 
     def to_stitch_groups(self, previous_stitch_group):  # noqa: C901
         # backwards compatibility: legacy_fill used to be inkstitch:auto_fill == False
-        if not self.auto_fill or self.fill_method == 3:
+        if not self.auto_fill or self.fill_method == 'legacy_fill':
             return self.do_legacy_fill()
         else:
             stitch_groups = []
@@ -614,15 +646,15 @@ class FillStitch(EmbroideryElement):
 
                     fill_shapes = self.fill_shape(shape)
                     for i, fill_shape in enumerate(fill_shapes.geoms):
-                        if self.fill_method == 0:
+                        if self.fill_method == 'auto_fill':
                             stitch_groups.extend(self.do_auto_fill(fill_shape, previous_stitch_group, start, end))
-                        elif self.fill_method == 1:
+                        elif self.fill_method == 'contour_fill':
                             stitch_groups.extend(self.do_contour_fill(fill_shape, previous_stitch_group, start))
-                        elif self.fill_method == 2:
+                        elif self.fill_method == 'guided_fill':
                             stitch_groups.extend(self.do_guided_fill(fill_shape, previous_stitch_group, start, end))
-                        elif self.fill_method == 4:
+                        elif self.fill_method == 'meander_fill':
                             stitch_groups.extend(self.do_meander_fill(fill_shape, i, start, end))
-                        elif self.fill_method == 5:
+                        elif self.fill_method == 'circular_fill':
                             stitch_groups.extend(self.do_circular_fill(fill_shape, previous_stitch_group, start, end))
                 except ExitThread:
                     raise
