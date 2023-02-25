@@ -66,7 +66,9 @@ def find_starting_and_ending_nodes(graph, shape, starting_point, ending_point):
     starting_point = Point(starting_point)
 
     if ending_point is None:
-        ending_point = starting_point
+        # pick a spot on the opposite side of the shape
+        projection = (shape.exterior.project(starting_point, normalized=True) + 0.5) % 1.0
+        ending_point = shape.exterior.interpolate(projection, normalized=True)
     else:
         ending_point = Point(ending_point)
 
