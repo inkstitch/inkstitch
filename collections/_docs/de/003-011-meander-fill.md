@@ -9,6 +9,8 @@ toc: true
 
 ## Beschreibung
 
+Meanderfüllung hat seinen Ursprung in Quilt-Techniken. Für das Maschinensticken ergibt sich ein schöner gemusterter Effekt. Große Bereiche können mit relativ wenigen Stichen befüllt werden.
+
 ![Meander stitch detail](/assets/images/docs/meander-fill.png)
 
 ## Funktionsweise
@@ -30,7 +32,7 @@ Automatisch geführte Füllstiche | ☑ |Muss aktiviert sein
 Füllmethode          | Meanderfüllung|Für diesen Stichtyp bitte Meanderfüllung auswählen
 Meander Muster       ||Various patterns to choose from
 Meander Muster skalieren||Skaliert das Muster (%)
-Erweitern            |![Expand example](/assets/images/docs/params-fill-expand.png)  |Erweitert die Ursprungsform. Diese Option kann genutzt werden um Lücken zwischen angrenzenden Objekten zu verringern.
+Erweitern            |![Expand example](/assets/images/docs/params-fill-expand.png)  |Erweitert die Ursprungsform. Diese Option kann genutzt werden um Lücken zwischen angrenzenden Objekten zu verringern. Negative Werte verkleinern die Form.
 Glätten              ||Glättet den Stichpfad. Diese Einstellung zeigt an, wie weit der geglättete Stichpfad vom ursprünglichen Pfad abweichen darf. Versuche niedrige Zahlen wie z.B. 0,2. Hinweis: Eventuell ist auch eine geringere Geradstich-Toleranz erforderlich.
 Stichlänge           ||Definiert die maximale Stichlänge. Minimale Stichlänge bitte über die Geradstich-Toleranz festlegen.
 Geradstich-Toleranz  ||Alle Stiche müssen innerhalb dieser Distanz vom Ursprungspfad liegen. Ein geringerer Toleranzwert bedeutet, dass Stiche enger zusammenliegen. Ein höherer Wert kann zu abgerundeten Ecken führen.

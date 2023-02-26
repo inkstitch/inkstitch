@@ -2,7 +2,7 @@
 title: "Stitch Library"
 permalink: /docs/stitch-library/
 excerpt: ""
-last_modified_at: 2022-12-08
+last_modified_at: 2023-02-26
 toc: true
 ---
 Ink/Stitch stitch types can be roughly divided into three sections: stroke, satin and fill.
@@ -92,4 +92,9 @@ Create guide lines to generate a curved fill.
 
 ![Guided fill](/assets/images/docs/guided-fill-complex.svg)
 
-[Learn more](/docs/stitches/guided-fill){: .btn .btn--primary}
+### Meander Fill
+Meander fill has its origins in quilting techniques. A beautiful patterned effect results for machine embroidery. Large areas can be filled with relatively few stitches.
+
+![Meander fill](/assets/images/docs/meander-fill.png)
+
+[Learn more](/docs/stitches/meander-fill){: .btn .btn--primary}

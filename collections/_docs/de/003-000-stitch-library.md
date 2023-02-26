@@ -2,7 +2,7 @@
 title: "Stich-Bibliothek"
 permalink: /de/docs/stitch-library/
 excerpt: ""
-last_modified_at: 2022-12-08
+last_modified_at: 2023-02-26
 toc: true
 ---
 Ink/Stitch-Sticharten können grob in drei Gruppen eingeteilt werden: Linien, Satin- und Füllstich.
@@ -101,3 +101,10 @@ Kurvenfüllung füllt eine Fläche mit Kopien einer Führungslinie.
 ![Guided fill](/assets/images/docs/guided-fill-complex.svg)
 
 [Mehr lesen](/de/docs/stitches/guided-fill){: .btn .btn--primary}
+
+### Meanderfüllung
+Meanderfüllung hat seinen Ursprung in Quilt-Techniken. Für das Maschinensticken ergibt sich ein schöner gemusterter Effekt. Große Bereiche können mit relativ wenigen Stichen befüllt werden.
+
+![Meander fill](/assets/images/docs/meander-fill.png)
+
+[Mehr lesen](/de/docs/stitches/meander-fill){: .btn .btn--primary}

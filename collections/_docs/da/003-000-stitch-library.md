@@ -93,3 +93,10 @@ Create guide lines to generate a curved fill.
 ![Guided fill](/assets/images/docs/guided-fill-complex.svg)
 
 [Learn more](/docs/stitches/guided-fill){: .btn .btn--primary}
+
+### Meander Fill
+Meander fill has its origins in quilting techniques. A beautiful patterned effect results for machine embroidery. Large areas can be filled with relatively few stitches.
+
+![Meander fill](/assets/images/docs/meander-fill.png)
+
+[Learn more](/da/docs/stitches/meander-fill){: .btn .btn--primary}

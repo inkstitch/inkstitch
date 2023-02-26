@@ -16,12 +16,18 @@ We have good news: Ink/Stitch will be significantly faster due to stitch plan ca
 
 ## Element/Stitch types
 
+### New stitch types
+
+#### Meander Fill
+
+[Meander fill](/docs/stitches/meander-fill) has its origins in quilting techniques. A beautiful patterned effect results for machine embroidery. Large areas can be filled with relatively few stitches.
+
 ### Clones
   * Fix: automatic fill angle calculation
   * Fix: positioning
 
 ### Bean Stitch
-  * Add support for [custom repeat patterns](/docs/stitches/bean-stitch/#params) (2 1: =-=-=-)
+  * Add support for [custom repeat patterns](/docs/stitches/bean-stitch/#params) (1 0: ☰-☰-☰-)
 
 ### Fill stitch
   * Add support for [fractional-length stagger cycles in fills](/docs/stitches/fill-stitch/#params)

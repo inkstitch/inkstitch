@@ -9,6 +9,8 @@ toc: true
 
 ## What it is
 
+Meander fill has its origins in quilting techniques. A beautiful patterned effect results for machine embroidery. Large areas can be filled with relatively few stitches.
+
 ![Meander stitch detail](/assets/images/docs/meander-fill.png)
 
 ## How to Create
