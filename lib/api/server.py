@@ -14,7 +14,7 @@ import requests
 from flask import Flask, g
 from werkzeug.serving import make_server
 
-from ..utils.json import InkStitchJSONEncoder
+from ..utils.json import InkStitchJSONProvider
 from .install import install
 from .simulator import simulator
 from .stitch_plan import stitch_plan
@@ -41,7 +41,7 @@ class APIServer(Thread):
         cli.show_server_banner = lambda *x: None
 
         self.app = Flask(__name__)
-        self.app.json_encoder = InkStitchJSONEncoder
+        self.app.json = InkStitchJSONProvider(self.app)
 
         self.app.register_blueprint(simulator, url_prefix="/simulator")
         self.app.register_blueprint(stitch_plan, url_prefix="/stitch_plan")

@@ -37,7 +37,9 @@
                     mm
                   </td>
                   <td class="button">
-                    <v-btn small @click="set_default('collapse_len_mm')"><translate>set as default</translate></v-btn>
+                    <v-btn small @click="setDefault('collapse_len_mm')">
+                      <translate>set as default</translate>
+                    </v-btn>
                   </td>
                 </tr>
                 <tr>
@@ -56,7 +58,9 @@
                     mm
                   </td>
                   <td class="button">
-                    <v-btn small @click="set_default('min_stitch_len_mm')"><translate>set as default</translate></v-btn>
+                    <v-btn small @click="setDefault('min_stitch_len_mm')">
+                      <translate>set as default</translate>
+                    </v-btn>
                   </td>
                 </tr>
               </table>
