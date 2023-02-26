@@ -7,7 +7,7 @@ toc: true
 ---
 ## Beschreibung
 
-Kurvige Füllflächen  mit Hilfe von Führungslinien.
+Kurvige Füllflächen mit Hilfe von Führungslinien.
 
 ![Fill stitch detail](/assets/images/docs/guided-fill-detail.jpg)
 
@@ -47,7 +47,7 @@ Ink/Stitch erlaubt es über visuelle Befehle den [Anfangs- und Endpunkt eines F�
 
 ## Parameter
 
-Run `Extensions > Ink/Stitch  > Params` to tweak the settings to your needs.
+Öffne `Erweiterungen > Ink/Stitch  > Parameter` um das Stickbild deinen Bedürfnissen anzupassen.
 
 Einstellung                                 ||Beschreibung
 ---|---|---
@@ -71,6 +71,6 @@ Stopp                                       || Stoppt die Maschine nachdem diese
 
 Die Unterlage für geführte Füllstiche folgt nicht der Führungslinie sondern nutzt den Füllwinkel der in den [Unterleger-Parametern](/de/docs/stitches/fill-stitch/#unterlage) festgelegt werden kann.
 
-## Samples Files Including Guided Fill Stitches
+## Beispiele mit Kurvenfüllung
 
 {% include tutorials/tutorial_list key="stichart" value="Kurvenfüllung" %}

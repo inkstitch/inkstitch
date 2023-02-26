@@ -88,6 +88,8 @@ docs:
         url: /fr/docs/stitches/contour-fill/
       - title: "Remplissage guidé"
         url: /fr/docs/stitches/guided-fill/
+      - title: "Meander Fill"
+        url: /fr/docs/stitches/meander-fill/
       - title: "Textures"
         url: /fr/docs/stitches/patterns/
   - title: Interface

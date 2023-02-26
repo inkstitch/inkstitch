@@ -88,6 +88,8 @@ docs:
         url: /da/docs/stitches/contour-fill/
       - title: "Guidet fyld"
         url: /da/docs/stitches/guided-fill/
+      - title: "Meander Fill"
+        url: /da/docs/stitches/meander-fill/
       - title: "Sting-mønstre"
         url: /da/docs/stitches/patterns/
   - title: Interface
