@@ -1,10 +1,8 @@
 import re
-from copy import copy
 from math import degrees
 
 from inkex import DirectedLineSegment, Path
 from shapely.geometry import LineString
-from shapely.ops import substring
 
 from ..i18n import _
 from ..svg import PIXELS_PER_MM
