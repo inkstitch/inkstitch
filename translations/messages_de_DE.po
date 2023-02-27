@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-02-24 01:24+0000\n"
-"PO-Revision-Date: 2023-02-24 01:25\n"
+"POT-Creation-Date: 2023-02-27 01:24+0000\n"
+"PO-Revision-Date: 2023-02-27 01:25\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-24 01:23+0000\n"
+"POT-Creation-Date: 2023-02-27 01:24+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -507,377 +507,377 @@ msgstr "Eine Schrift geeignete für fett geschriebenes :)"
 #. name of tile in tiles/N3-11a
 #: inkstitch-tiles-metadata.py:2
 msgid "N3-11a"
-msgstr ""
+msgstr "N3-11a"
 
 #. name of tile in tiles/N3-12
 #: inkstitch-tiles-metadata.py:4
 msgid "N3-12"
-msgstr ""
+msgstr "N3-12"
 
 #. name of tile in tiles/N3-16a
 #: inkstitch-tiles-metadata.py:6
 msgid "N3-16a"
-msgstr ""
+msgstr "N3-16a"
 
 #. name of tile in tiles/N3-17
 #: inkstitch-tiles-metadata.py:8
 msgid "N3-17"
-msgstr ""
+msgstr "N3-17"
 
 #. name of tile in tiles/N3-18
 #: inkstitch-tiles-metadata.py:10
 msgid "N3-18"
-msgstr ""
+msgstr "N3-18"
 
 #. name of tile in tiles/N3-18-modified
 #: inkstitch-tiles-metadata.py:12
 msgid "N3-18-modified"
-msgstr ""
+msgstr "N3-18-modifiziert"
 
 #. name of tile in tiles/N3-20
 #: inkstitch-tiles-metadata.py:14
 msgid "N3-20"
-msgstr ""
+msgstr "N3-20"
 
 #. name of tile in tiles/N3-23b
 #: inkstitch-tiles-metadata.py:16
 msgid "N3-23b"
-msgstr ""
+msgstr "N3-23b"
 
 #. name of tile in tiles/N3-25c
 #: inkstitch-tiles-metadata.py:18
 msgid "N3-25c"
-msgstr ""
+msgstr "N3-25c"
 
 #. name of tile in tiles/N3-26b
 #: inkstitch-tiles-metadata.py:20
 msgid "N3-26b"
-msgstr ""
+msgstr "N3-26b"
 
 #. name of tile in tiles/N3-27
 #: inkstitch-tiles-metadata.py:22
 msgid "N3-27"
-msgstr ""
+msgstr "N3-27"
 
 #. name of tile in tiles/N3-30a
 #: inkstitch-tiles-metadata.py:24
 msgid "N3-30a"
-msgstr ""
+msgstr "N3-30a"
 
 #. name of tile in tiles/N3-51b
 #: inkstitch-tiles-metadata.py:26
 msgid "N3-51b"
-msgstr ""
+msgstr "N3-51b"
 
 #. name of tile in tiles/N3-57f-modified
 #: inkstitch-tiles-metadata.py:28
 msgid "N3-57f-modified"
-msgstr ""
+msgstr "N3-57f-modifiziert"
 
 #. name of tile in tiles/N3-58b
 #: inkstitch-tiles-metadata.py:30
 msgid "N3-58b"
-msgstr ""
+msgstr "N3-58b"
 
 #. name of tile in tiles/N3-6
 #: inkstitch-tiles-metadata.py:32
 msgid "N3-6"
-msgstr ""
+msgstr "N3-6"
 
 #. name of tile in tiles/N3-7
 #: inkstitch-tiles-metadata.py:34
 msgid "N3-7"
-msgstr ""
+msgstr "N3-7"
 
 #. name of tile in tiles/N3-8a
 #: inkstitch-tiles-metadata.py:36
 msgid "N3-8a"
-msgstr ""
+msgstr "N3-8a"
 
 #. name of tile in tiles/N3-8a-modified
 #: inkstitch-tiles-metadata.py:38
 msgid "N3-8a-modified"
-msgstr ""
+msgstr "N3-8a-modifiziert"
 
 #. name of tile in tiles/N3-8b
 #: inkstitch-tiles-metadata.py:40
 msgid "N3-8b"
-msgstr ""
+msgstr "N3-8b"
 
 #. name of tile in tiles/N4-13b
 #: inkstitch-tiles-metadata.py:42
 msgid "N4-13b"
-msgstr ""
+msgstr "N4-13b"
 
 #. name of tile in tiles/N4-13c
 #: inkstitch-tiles-metadata.py:44
 msgid "N4-13c"
-msgstr ""
+msgstr "N4-13c"
 
 #. name of tile in tiles/N4-13d
 #: inkstitch-tiles-metadata.py:46
 msgid "N4-13d"
-msgstr ""
+msgstr "N4-13d"
 
 #. name of tile in tiles/N4-13e
 #: inkstitch-tiles-metadata.py:48
 msgid "N4-13e"
-msgstr ""
+msgstr "N4-13e"
 
 #. name of tile in tiles/N4-13f
 #: inkstitch-tiles-metadata.py:50
 msgid "N4-13f"
-msgstr ""
+msgstr "N4-13f"
 
 #. name of tile in tiles/N4-16a
 #: inkstitch-tiles-metadata.py:52
 msgid "N4-16a"
-msgstr ""
+msgstr "N4-16a"
 
 #. name of tile in tiles/N4-19
 #: inkstitch-tiles-metadata.py:54
 msgid "N4-19"
-msgstr ""
+msgstr "N4-19"
 
 #. name of tile in tiles/N4-20
 #: inkstitch-tiles-metadata.py:56
 msgid "N4-20"
-msgstr ""
+msgstr "N4-20"
 
 #. name of tile in tiles/N4-21c
 #: inkstitch-tiles-metadata.py:58
 msgid "N4-21c"
-msgstr ""
+msgstr "N4-21c"
 
 #. name of tile in tiles/N4-22
 #: inkstitch-tiles-metadata.py:60
 msgid "N4-22"
-msgstr ""
+msgstr "N4-22"
 
 #. name of tile in tiles/N4-23a
 #: inkstitch-tiles-metadata.py:62
 msgid "N4-23a"
-msgstr ""
+msgstr "N4-23a"
 
 #. name of tile in tiles/N4-23c
 #: inkstitch-tiles-metadata.py:64
 msgid "N4-23c"
-msgstr ""
+msgstr "N4-23c"
 
 #. name of tile in tiles/N4-27
 #: inkstitch-tiles-metadata.py:66
 msgid "N4-27"
-msgstr ""
+msgstr "N4-27"
 
 #. name of tile in tiles/N4-29e
 #: inkstitch-tiles-metadata.py:68
 msgid "N4-29e"
-msgstr ""
+msgstr "N4-29e"
 
 #. name of tile in tiles/N4-29f
 #: inkstitch-tiles-metadata.py:70
 msgid "N4-29f"
-msgstr ""
+msgstr "N4-29f"
 
 #. name of tile in tiles/N4-31
 #: inkstitch-tiles-metadata.py:72
 msgid "N4-31"
-msgstr ""
+msgstr "N4-31"
 
 #. name of tile in tiles/N4-38
 #: inkstitch-tiles-metadata.py:74
 msgid "N4-38"
-msgstr ""
+msgstr "N4-38"
 
 #. name of tile in tiles/N4-42e
 #: inkstitch-tiles-metadata.py:76
 msgid "N4-42e"
-msgstr ""
+msgstr "N4-42e"
 
 #. name of tile in tiles/N4-44
 #: inkstitch-tiles-metadata.py:78
 msgid "N4-44"
-msgstr ""
+msgstr "N4-44"
 
 #. name of tile in tiles/N4-52
 #: inkstitch-tiles-metadata.py:80
 msgid "N4-52"
-msgstr ""
+msgstr "N4-52"
 
 #. name of tile in tiles/N4-54d
 #: inkstitch-tiles-metadata.py:82
 msgid "N4-54d"
-msgstr ""
+msgstr "N4-54d"
 
 #. name of tile in tiles/N4-5a
 #: inkstitch-tiles-metadata.py:84
 msgid "N4-5a"
-msgstr ""
+msgstr "N4-5a"
 
 #. name of tile in tiles/N4-5a-2
 #: inkstitch-tiles-metadata.py:86
 msgid "N4-5a-2"
-msgstr ""
+msgstr "N4-5a-2"
 
 #. name of tile in tiles/N4-82
 #: inkstitch-tiles-metadata.py:88
 msgid "N4-82"
-msgstr ""
+msgstr "N4-82"
 
 #. name of tile in tiles/N4-85d
 #: inkstitch-tiles-metadata.py:90
 msgid "N4-85d"
-msgstr ""
+msgstr "N4-85d"
 
 #. name of tile in tiles/N5-1e1
 #: inkstitch-tiles-metadata.py:92
 msgid "N5-1e1"
-msgstr ""
+msgstr "N5-1e1"
 
 #. name of tile in tiles/N5-1q2
 #: inkstitch-tiles-metadata.py:94
 msgid "N5-1q2"
-msgstr ""
+msgstr "N5-1q2"
 
 #. name of tile in tiles/N5-1t
 #: inkstitch-tiles-metadata.py:96
 msgid "N5-1t"
-msgstr ""
+msgstr "N5-1t"
 
 #. name of tile in tiles/N6-1
 #: inkstitch-tiles-metadata.py:98
 msgid "N6-1"
-msgstr ""
+msgstr "N6-1"
 
 #. name of tile in tiles/N6-2
 #: inkstitch-tiles-metadata.py:100
 msgid "N6-2"
-msgstr ""
+msgstr "N6-2"
 
 #. name of tile in tiles/N6-5b
 #: inkstitch-tiles-metadata.py:102
 msgid "N6-5b"
-msgstr ""
+msgstr "N6-5b"
 
 #. name of tile in tiles/N6-6a
 #: inkstitch-tiles-metadata.py:104
 msgid "N6-6a"
-msgstr ""
+msgstr "N6-6a"
 
 #. name of tile in tiles/N6-6c
 #: inkstitch-tiles-metadata.py:106
 msgid "N6-6c"
-msgstr ""
+msgstr "N6-6c"
 
 #. name of tile in tiles/NC5-11a
 #: inkstitch-tiles-metadata.py:108
 msgid "NC5-11a"
-msgstr ""
+msgstr "NC5-11a"
 
 #. name of tile in tiles/NC5-20a
 #: inkstitch-tiles-metadata.py:110
 msgid "NC5-20a"
-msgstr ""
+msgstr "NC5-20a"
 
 #. name of tile in tiles/P3-1
 #: inkstitch-tiles-metadata.py:112
 msgid "P3-1"
-msgstr ""
+msgstr "P3-1"
 
 #. name of tile in tiles/P3-12
 #: inkstitch-tiles-metadata.py:114
 msgid "P3-12"
-msgstr ""
+msgstr "P3-12"
 
 #. name of tile in tiles/P4-1
 #: inkstitch-tiles-metadata.py:116
 msgid "P4-1"
-msgstr ""
+msgstr "P4-1"
 
 #. name of tile in tiles/P4-10
 #: inkstitch-tiles-metadata.py:118
 msgid "P4-10"
-msgstr ""
+msgstr "P4-10"
 
 #. name of tile in tiles/P4-15
 #: inkstitch-tiles-metadata.py:120
 msgid "P4-15"
-msgstr ""
+msgstr "P4-15"
 
 #. name of tile in tiles/P4-19
 #: inkstitch-tiles-metadata.py:122
 msgid "P4-19"
-msgstr ""
+msgstr "P4-19"
 
 #. name of tile in tiles/P4-23
 #: inkstitch-tiles-metadata.py:124
 msgid "P4-23"
-msgstr ""
+msgstr "P4-23"
 
 #. name of tile in tiles/P4-24
 #: inkstitch-tiles-metadata.py:126
 msgid "P4-24"
-msgstr ""
+msgstr "P4-24"
 
 #. name of tile in tiles/P4-25
 #: inkstitch-tiles-metadata.py:128
 msgid "P4-25"
-msgstr ""
+msgstr "P4-25"
 
 #. name of tile in tiles/P4-43
 #: inkstitch-tiles-metadata.py:130
 msgid "P4-43"
-msgstr ""
+msgstr "P4-43"
 
 #. name of tile in tiles/P4-43-modified
 #: inkstitch-tiles-metadata.py:132
 msgid "P4-43-modified"
-msgstr ""
+msgstr "P4-43-modifiziert"
 
 #. name of tile in tiles/P4-47
 #: inkstitch-tiles-metadata.py:134
 msgid "P4-47"
-msgstr ""
+msgstr "P4-47"
 
 #. name of tile in tiles/P5-10_11
 #: inkstitch-tiles-metadata.py:136
 msgid "P5-10_11"
-msgstr ""
+msgstr "P5-10_11"
 
 #. name of tile in tiles/P5-19
 #: inkstitch-tiles-metadata.py:138
 msgid "P5-19"
-msgstr ""
+msgstr "P5-19"
 
 #. name of tile in tiles/P5-23_24
 #: inkstitch-tiles-metadata.py:140
 msgid "P5-23_24"
-msgstr ""
+msgstr "P5-23_24"
 
 #. name of tile in tiles/P5-4
 #: inkstitch-tiles-metadata.py:142
 msgid "P5-4"
-msgstr ""
+msgstr "P5-4"
 
 #. name of tile in tiles/P6-6_11
 #: inkstitch-tiles-metadata.py:144
 msgid "P6-6_11"
-msgstr ""
+msgstr "P6-6_11"
 
 #. name of tile in tiles/diamond-square
 #: inkstitch-tiles-metadata.py:146
 msgid "diamonds and squares"
-msgstr ""
+msgstr "Diamanten und Quadrate"
 
 #. name of tile in tiles/hexagon
 #: inkstitch-tiles-metadata.py:148
 msgid "hexagonal lattice"
-msgstr ""
+msgstr "Hexagonales Gitter"
 
 #. name of tile in tiles/weird-one
 #: inkstitch-tiles-metadata.py:150
 msgid "weird one"
-msgstr ""
+msgstr "Seltsames Teil"
 
 #: inkstitch.py:88
 msgid "Ink/Stitch cannot read your SVG file. This is often the case when you use a file which has been created with Adobe Illustrator."
@@ -1144,11 +1144,11 @@ msgstr "Füge einen Stopp-Befehl nach diesem Objekt hinzu."
 #. used when showing an error message to the user such as
 #. "Failed on PathLabel (path1234): Satin column: One or more of the rungs
 #. doesn't intersect both rails."
-#: lib/elements/element.py:499
+#: lib/elements/element.py:503
 msgid "Failed on "
 msgstr "Folgendes Objekt konnte nicht in einen Stickpfad umgewandelt werden: "
 
-#: lib/elements/element.py:501
+#: lib/elements/element.py:505
 msgid "Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects. This will indicate the errorneus position."
 msgstr "Bitte rufe die Funktion Erweiterungen > Ink/Stitch > Fehlerbehebung > Fehlerbehebung an Objekten auf. Diese Erweiterung zeigt fehlerhafte Stellen an und gibt am rechten Seitenrand Vorschläge zum Lösen des Problems."
 
@@ -1287,7 +1287,7 @@ msgstr "Veraltete Füllung"
 
 #: lib/elements/fill_stitch.py:112
 msgid "Meander Fill"
-msgstr ""
+msgstr "Meanderfüllung"
 
 #: lib/elements/fill_stitch.py:117
 msgid "Guided Fill Strategy"
@@ -1343,11 +1343,11 @@ msgstr "Selbstüberschneidung vermeiden"
 
 #: lib/elements/fill_stitch.py:143
 msgid "Smoothness"
-msgstr ""
+msgstr "Glätten"
 
 #: lib/elements/fill_stitch.py:144
 msgid "Smooth the stitch path.  Smoothness limits how far the smoothed stitch path is allowed to deviate from the original path.  Try low numbers like 0.2.  Hint: a lower running stitch tolerance may be needed too."
-msgstr ""
+msgstr "Glättet den Stichpfad. Diese Einstellung definiert, wie weit der geglättete Stichpfad vom ursprünglichen Pfad abweichen darf. Versuche niedrige Zahlen wie z.B. 0.2. Hinweis: Eventuell ist auch eine geringere Geradstich-Toleranz erforderlich."
 
 #: lib/elements/fill_stitch.py:158
 msgid "Clockwise"
@@ -1355,11 +1355,11 @@ msgstr "Uhrzeigersinn"
 
 #: lib/elements/fill_stitch.py:163
 msgid "Meander Pattern"
-msgstr ""
+msgstr "Meander-Muster"
 
 #: lib/elements/fill_stitch.py:169
 msgid "Meander pattern scale"
-msgstr ""
+msgstr "Meander-Muster skalieren"
 
 #: lib/elements/fill_stitch.py:175
 msgid "Angle of lines of stitches"
@@ -1415,7 +1415,7 @@ msgstr "Stichlänge"
 
 #: lib/elements/fill_stitch.py:409
 msgid "Length of stitches around the outline of the fill region used when moving from section to section.  Also used for meander fill."
-msgstr ""
+msgstr "Stichlänge für Geradstiche für Verbindungsstiche zwischen den Abschnitten. Wird auch für Meanderfüllung verwendet."
 
 #: lib/elements/fill_stitch.py:421 lib/elements/stroke.py:136
 msgid "Running stitch tolerance"
@@ -1466,7 +1466,7 @@ msgstr "Verkleinern Sie die Unterlage, um zu verhindern, dass die Unterlage an d
 
 #: lib/elements/fill_stitch.py:509
 msgid "Expand the shape before fill stitching, to compensate for gaps between shapes.  Negative values contract instead."
-msgstr ""
+msgstr "Erweitert die Ursprungsform. Diese Option kann genutzt werden, um Lücken zwischen angrenzenden Objekten zu verringern. Negative Werte verkleinern die Form."
 
 #: lib/elements/fill_stitch.py:520 lib/elements/fill_stitch.py:534
 msgid "Underpath"
@@ -3371,7 +3371,7 @@ msgstr "+ Plus"
 msgid "Button"
 msgstr "Knopf"
 
-#: electron/src/renderer/components/Preferences.vue:117
+#: electron/src/renderer/components/Preferences.vue:121
 msgid "clear stitch plan cache"
 msgstr "Stichplan-Cache leeren"
 
@@ -3391,19 +3391,19 @@ msgstr "Steuerung"
 msgid "cursor"
 msgstr "Mauszeiger"
 
-#: electron/src/renderer/components/Preferences.vue:73
+#: electron/src/renderer/components/Preferences.vue:77
 msgid "Default minimum jump stitch length"
 msgstr "Minimale Länge für Sprungstiche"
 
-#: electron/src/renderer/components/Preferences.vue:89
+#: electron/src/renderer/components/Preferences.vue:93
 msgid "Default minimum stitch length"
 msgstr "Minimale Stichlänge"
 
-#: electron/src/renderer/components/Preferences.vue:127
+#: electron/src/renderer/components/Preferences.vue:131
 msgid "done"
 msgstr "Anwenden"
 
-#: electron/src/renderer/components/Preferences.vue:48
+#: electron/src/renderer/components/Preferences.vue:50
 msgid "Drop stitches smaller than this value."
 msgstr "Stitche die kleiner sind als dieser Wert, werden gelöscht und nicht exportiert (Ausnahme: Stiche zum Vernähen)."
 
@@ -3464,7 +3464,7 @@ msgstr "Sprungstiche"
 msgid "Minimum jump stitch length"
 msgstr "Minimale Länge für Sprungstiche"
 
-#: electron/src/renderer/components/Preferences.vue:46
+#: electron/src/renderer/components/Preferences.vue:48
 msgid "Minimum stitch length"
 msgstr "Minimale Stichlänge"
 
@@ -3521,8 +3521,8 @@ msgstr "Sprungstiche anzeigen"
 msgid "Rendering stitch-plan..."
 msgstr "Stichplan wird erstellt..."
 
-#: electron/src/renderer/components/Preferences.vue:39
-#: electron/src/renderer/components/Preferences.vue:58
+#: electron/src/renderer/components/Preferences.vue:40
+#: electron/src/renderer/components/Preferences.vue:61
 msgid "set as default"
 msgstr "Als Standardwert setzen"
 
@@ -3556,7 +3556,7 @@ msgid_plural "Speed: %{speed} stitches/sec"
 msgstr[0] "Geschwindigkeit: %{speed} Stich/Sek"
 msgstr[1] "Geschwindigkeit: %{speed} Stiche/Sek"
 
-#: electron/src/renderer/components/Preferences.vue:105
+#: electron/src/renderer/components/Preferences.vue:109
 msgid "Stitch plan cache size"
 msgstr "Cache Größe"
 
@@ -3564,7 +3564,7 @@ msgstr "Cache Größe"
 msgid "stops"
 msgstr "Stopp-Befehle"
 
-#: electron/src/renderer/components/Preferences.vue:107
+#: electron/src/renderer/components/Preferences.vue:111
 msgid "The greater the number, the more stitch plans can be cached, speeding up stitch plan calculation.  Default: 100"
 msgstr "Je höher die Zahl, desto mehr Stichpläne können im Cache gespeichert werden. Der Cache trägt zur Beschleunigung der Sitchplan-Berechnung bei. Standard: 100"
 
@@ -3572,8 +3572,8 @@ msgstr "Je höher die Zahl, desto mehr Stichpläne können im Cache gespeichert 
 msgid "Try again"
 msgstr "Versuchen sie es erneut"
 
-#: electron/src/renderer/components/Preferences.vue:75
-#: electron/src/renderer/components/Preferences.vue:91
+#: electron/src/renderer/components/Preferences.vue:79
+#: electron/src/renderer/components/Preferences.vue:95
 msgid "Used for new SVGs."
 msgstr "Standardwert für neue SVG-Dateien."
 

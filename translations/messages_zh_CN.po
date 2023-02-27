@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-02-24 01:24+0000\n"
-"PO-Revision-Date: 2023-02-24 01:25\n"
+"POT-Creation-Date: 2023-02-27 01:24+0000\n"
+"PO-Revision-Date: 2023-02-27 01:25\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-24 01:23+0000\n"
+"POT-Creation-Date: 2023-02-27 01:24+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1141,11 +1141,11 @@ msgstr ""
 #. used when showing an error message to the user such as
 #. "Failed on PathLabel (path1234): Satin column: One or more of the rungs
 #. doesn't intersect both rails."
-#: lib/elements/element.py:499
+#: lib/elements/element.py:503
 msgid "Failed on "
 msgstr ""
 
-#: lib/elements/element.py:501
+#: lib/elements/element.py:505
 msgid "Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects. This will indicate the errorneus position."
 msgstr ""
 
@@ -3364,7 +3364,7 @@ msgstr "+ 加"
 msgid "Button"
 msgstr "按钮"
 
-#: electron/src/renderer/components/Preferences.vue:117
+#: electron/src/renderer/components/Preferences.vue:121
 msgid "clear stitch plan cache"
 msgstr ""
 
@@ -3384,19 +3384,19 @@ msgstr "控件"
 msgid "cursor"
 msgstr "光标"
 
-#: electron/src/renderer/components/Preferences.vue:73
+#: electron/src/renderer/components/Preferences.vue:77
 msgid "Default minimum jump stitch length"
 msgstr ""
 
-#: electron/src/renderer/components/Preferences.vue:89
+#: electron/src/renderer/components/Preferences.vue:93
 msgid "Default minimum stitch length"
 msgstr ""
 
-#: electron/src/renderer/components/Preferences.vue:127
+#: electron/src/renderer/components/Preferences.vue:131
 msgid "done"
 msgstr ""
 
-#: electron/src/renderer/components/Preferences.vue:48
+#: electron/src/renderer/components/Preferences.vue:50
 msgid "Drop stitches smaller than this value."
 msgstr "小于此值的落针。"
 
@@ -3456,7 +3456,7 @@ msgstr "跳跃"
 msgid "Minimum jump stitch length"
 msgstr ""
 
-#: electron/src/renderer/components/Preferences.vue:46
+#: electron/src/renderer/components/Preferences.vue:48
 msgid "Minimum stitch length"
 msgstr ""
 
@@ -3513,8 +3513,8 @@ msgstr "显示跳跃"
 msgid "Rendering stitch-plan..."
 msgstr "渲染缝合计划..."
 
-#: electron/src/renderer/components/Preferences.vue:39
-#: electron/src/renderer/components/Preferences.vue:58
+#: electron/src/renderer/components/Preferences.vue:40
+#: electron/src/renderer/components/Preferences.vue:61
 msgid "set as default"
 msgstr ""
 
@@ -3548,7 +3548,7 @@ msgid_plural "Speed: %{speed} stitches/sec"
 msgstr[0] "速度：%{speed} 针/秒\n"
 "速度：%{speed} 针/秒"
 
-#: electron/src/renderer/components/Preferences.vue:105
+#: electron/src/renderer/components/Preferences.vue:109
 msgid "Stitch plan cache size"
 msgstr ""
 
@@ -3556,7 +3556,7 @@ msgstr ""
 msgid "stops"
 msgstr "停止"
 
-#: electron/src/renderer/components/Preferences.vue:107
+#: electron/src/renderer/components/Preferences.vue:111
 msgid "The greater the number, the more stitch plans can be cached, speeding up stitch plan calculation.  Default: 100"
 msgstr ""
 
@@ -3564,8 +3564,8 @@ msgstr ""
 msgid "Try again"
 msgstr "再试一次"
 
-#: electron/src/renderer/components/Preferences.vue:75
-#: electron/src/renderer/components/Preferences.vue:91
+#: electron/src/renderer/components/Preferences.vue:79
+#: electron/src/renderer/components/Preferences.vue:95
 msgid "Used for new SVGs."
 msgstr ""
 
