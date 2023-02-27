@@ -3,9 +3,8 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-from lxml import etree
-
 import inkex
+from lxml import etree
 
 etree.register_namespace("inkstitch", "http://inkstitch.org/namespace")
 inkex.NSS['inkstitch'] = 'http://inkstitch.org/namespace'
@@ -53,6 +52,14 @@ INKSTITCH_ATTRIBS = {}
 inkstitch_attribs = [
     'ties',
     'force_lock_stitches',
+    'lock_start',
+    'lock_start_scale_mm',
+    'lock_start_scale_percent',
+    'lock_custom_start',
+    'lock_end',
+    'lock_end_scale_mm',
+    'lock_end_scale_percent',
+    'lock_custom_end',
     # clone
     'clone',
     'flip_angle',

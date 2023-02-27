@@ -7,7 +7,15 @@ def string_to_floats(string, delimiter=","):
     """Convert a string of delimiter-separated floats into a list of floats."""
 
     floats = string.split(delimiter)
-    return [float(num) for num in floats]
+    return [float(num) for num in floats if _is_float(num)]
+
+
+def _is_float(float_string):
+    try:
+        float(float_string)
+        return True
+    except ValueError:
+        return False
 
 
 def remove_suffix(string, suffix):

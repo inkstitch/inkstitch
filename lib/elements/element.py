@@ -4,9 +4,9 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 import sys
 from copy import deepcopy
-import numpy as np
 
 import inkex
+import numpy as np
 from inkex import bezier
 
 from ..commands import find_commands
@@ -14,6 +14,8 @@ from ..debug import debug
 from ..i18n import _
 from ..marker import get_marker_elements_cache_key_data
 from ..patterns import apply_patterns, get_patterns_cache_key_data
+from ..stitch_plan.lock_stitch import (LOCK_DEFAULTS, AbsoluteLock, CustomLock,
+                                       LockStitch, SVGLock)
 from ..svg import (PIXELS_PER_MM, apply_transforms, convert_length,
                    get_node_transform)
 from ..svg.tags import INKSCAPE_LABEL, INKSTITCH_ATTRIBS
@@ -262,6 +264,119 @@ class EmbroideryElement(object):
         return self.get_boolean_param('force_lock_stitches', False)
 
     @property
+    @param('lock_start',
+           _('Tack stitch'),
+           tooltip=_('Tack down stitch type'),
+           type='combo',
+           default='half_stitch',
+           options=LOCK_DEFAULTS['start'],
+           sort_index=52)
+    def lock_start(self):
+        return self.get_param('lock_start', "half_stitch")
+
+    @property
+    @param('lock_custom_start',
+           _('Custom path'),
+           tooltip=_("Enter a custom path. For svg paths The last node will not be embroidered, but represents the first stitch of the element."),
+           type="string",
+           default="",
+           select_items=[('lock_start', 'custom')],
+           sort_index=53)
+    def lock_custom_start(self):
+        return self.get_param('lock_custom_start', '')
+
+    @property
+    @param('lock_start_scale_mm',
+           _('Scale tack stitch'),
+           tooltip=_('Set stitch length. A 1 in a custom path equals this values.'),
+           type='float',
+           unit="mm",
+           default=0.7,
+           select_items=[('lock_start', lock.id) for lock in LOCK_DEFAULTS['start'] if isinstance(lock, (AbsoluteLock, CustomLock))],
+           sort_index=54)
+    def lock_start_scale_mm(self):
+        return self.get_float_param('lock_start_scale_mm', 0.7)
+
+    @property
+    @param('lock_start_scale_percent',
+           _('Scale tack stitch'),
+           tooltip=_('Scale tack stitch by this percentage.'),
+           type='float',
+           unit="%",
+           default=100,
+           select_items=[('lock_start', lock.id) for lock in LOCK_DEFAULTS['start'] if isinstance(lock, (SVGLock, CustomLock))],
+           sort_index=54)
+    def lock_start_scale_percent(self):
+        return self.get_float_param('lock_start_scale_percent', 100)
+
+    @property
+    @param('lock_end',
+           _('Lock stitch'),
+           tooltip=_('Lock stitch type'),
+           type='combo',
+           default='half_stitch',
+           options=LOCK_DEFAULTS['end'],
+           sort_index=55)
+    def lock_end(self):
+        return self.get_param('lock_end', "half_stitch")
+
+    @property
+    @param('lock_custom_end',
+           _('Custom path'),
+           tooltip=_("Enter a custom path. For svg paths the first node will not be embroidered, but represents the last stitch of the element."),
+           type="string",
+           default="",
+           select_items=[('lock_end', 'custom')],
+           sort_index=56)
+    def lock_custom_end(self):
+        return self.get_param('lock_custom_end', '')
+
+    @property
+    @param('lock_end_scale_mm',
+           _('Scale lock stitch'),
+           tooltip=_('Set length of lock stitches (mm).'),
+           type='float',
+           unit="mm",
+           default=0.7,
+           select_items=[('lock_end', lock.id) for lock in LOCK_DEFAULTS['end'] if isinstance(lock, (AbsoluteLock, CustomLock))],
+           sort_index=57)
+    def lock_end_scale_mm(self):
+        return self.get_float_param('lock_end_scale_mm', 0.7)
+
+    @property
+    @param('lock_end_scale_percent',
+           _('Scale lock stitch'),
+           tooltip=_('Scale lock stitch by this percentage.'),
+           type='float',
+           unit="%",
+           default=100,
+           select_items=[('lock_end', lock.id) for lock in LOCK_DEFAULTS['end'] if isinstance(lock, (SVGLock, CustomLock))],
+           sort_index=57)
+    @cache
+    def lock_end_scale_percent(self):
+        return self.get_float_param('lock_end_scale_percent', 100)
+
+    @property
+    @param('trim_after',
+           _('Trim After'),
+           tooltip=_('Add a TRIM command after stitching this object.'),
+           type='boolean',
+           default=False,
+           sort_index=60)
+    def trim_after(self):
+        return self.get_boolean_param('trim_after', False)
+
+    @property
+    @param('stop_after',
+           _('Stop After'),
+           tooltip=_('Add a STOP command after stitching this object.'),
+           type='boolean',
+           default=False,
+           sort_index=60)
+    def stop_after(self):
+        return self.get_boolean_param('stop_after', False)
+
+    @property
     @param('random_seed',
            _('Random seed'),
            tooltip=_('Use a specific seed for randomized attributes. Uses the element ID if empty.'),
@@ -314,7 +429,7 @@ class EmbroideryElement(object):
         if not d:
             self.fatal(_("Object %(id)s has an empty 'd' attribute.  Please delete this object from your document.") % dict(id=self.node.get("id")))
 
-        return inkex.paths.Path(d).to_superpath()
+        return inkex.Path(d).to_superpath()
 
     @cache
     def parse_path(self):
@@ -369,24 +484,26 @@ class EmbroideryElement(object):
         return self.strip_control_points(path[0])
 
     @property
-    @param('trim_after',
-           _('Trim After'),
-           tooltip=_('Add a TRIM command after stitching this object.'),
-           type='boolean',
-           default=False,
-           sort_index=52)
-    def trim_after(self):
-        return self.get_boolean_param('trim_after', False)
+    @cache
+    def lock_stitches(self):
+        lock_start = None
+        lock_end = None
 
-    @property
-    @param('stop_after',
-           _('Stop After'),
-           tooltip=_('Add a STOP command after stitching this object.'),
-           type='boolean',
-           default=False,
-           sort_index=53)
-    def stop_after(self):
-        return self.get_boolean_param('stop_after', False)
+        # Ties: 0 = Both | 1 = Before | 2 = After | 3 = Neither
+        tie_modus = self.ties
+        force = self.force_lock_stitches
+
+        if tie_modus in [0, 1]:
+            lock_start = LockStitch('start', self.lock_start, scale_percent=self.lock_start_scale_percent, scale_absolute=self.lock_start_scale_mm)
+            if self.lock_start == "custom":
+                lock_start.path = self.lock_custom_start
+
+        if tie_modus in [0, 2] or force:
+            lock_end = LockStitch('end', self.lock_end, scale_percent=self.lock_end_scale_percent, scale_absolute=self.lock_end_scale_mm)
+            if self.lock_end == "custom":
+                lock_end.path = self.lock_custom_end
+
+        return lock_start, lock_end
 
     def to_stitch_groups(self, last_patch):
         raise NotImplementedError("%s must implement to_stitch_groups()" % self.__class__.__name__)
@@ -476,10 +593,6 @@ class EmbroideryElement(object):
 
             stitch_groups = self.to_stitch_groups(last_stitch_group)
             apply_patterns(stitch_groups, self.node)
-
-            for stitch_group in stitch_groups:
-                stitch_group.tie_modus = self.ties
-                stitch_group.force_lock_stitches = self.force_lock_stitches
 
             if stitch_groups:
                 stitch_groups[-1].trim_after = self.has_command("trim") or self.trim_after

@@ -3,15 +3,15 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-from ..utils.geometry import Point
 from shapely import geometry as shgeo
+
+from ..utils.geometry import Point
 
 
 class Stitch(Point):
     """A stitch is a Point with extra information telling how to sew it."""
 
-    def __init__(self, x, y=None, color=None, jump=False, stop=False, trim=False, color_change=False,
-                 tie_modus=0, force_lock_stitches=False, no_ties=False, tags=None):
+    def __init__(self, x, y=None, color=None, jump=False, stop=False, trim=False, color_change=False, tags=None):
         # DANGER: if you add new attributes, you MUST also set their default
         # values in __new__() below.  Otherwise, cached stitch plans can be
         # loaded and create objects without those properties defined, because
@@ -37,9 +37,6 @@ class Stitch(Point):
         self._set('trim', trim, base_stitch)
         self._set('stop', stop, base_stitch)
         self._set('color_change', color_change, base_stitch)
-        self._set('force_lock_stitches', force_lock_stitches, base_stitch)
-        self._set('tie_modus', tie_modus, base_stitch)
-        self._set('no_ties', no_ties, base_stitch)
 
         self.tags = set()
         self.add_tags(tags or [])
@@ -55,17 +52,13 @@ class Stitch(Point):
         return instance
 
     def __repr__(self):
-        return "Stitch(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)" % (self.x,
-                                                                       self.y,
-                                                                       self.color,
-                                                                       self.tags,
-                                                                       "JUMP" if self.jump else " ",
-                                                                       "TRIM" if self.trim else " ",
-                                                                       "STOP" if self.stop else " ",
-                                                                       self.tie_modus,
-                                                                       "FORCE LOCK STITCHES" if self.force_lock_stitches else " ",
-                                                                       "NO TIES" if self.no_ties else " ",
-                                                                       "COLOR CHANGE" if self.color_change else " ")
+        return "Stitch(%s, %s, %s, %s, %s, %s, %s)" % (self.x,
+                                                       self.y,
+                                                       self.color,
+                                                       "JUMP" if self.jump else " ",
+                                                       "TRIM" if self.trim else " ",
+                                                       "STOP" if self.stop else " ",
+                                                       "COLOR CHANGE" if self.color_change else " ")
 
     def _set(self, attribute, value, base_stitch):
         # Set an attribute.  If the caller passed a Stitch object, use its value, unless
@@ -98,8 +91,7 @@ class Stitch(Point):
         return tag in self.tags
 
     def copy(self):
-        return Stitch(self.x, self.y, self.color, self.jump, self.stop, self.trim, self.color_change,
-                      self.tie_modus, self.force_lock_stitches, self.no_ties, self.tags)
+        return Stitch(self.x, self.y, self.color, self.jump, self.stop, self.trim, self.color_change, self.tags)
 
     def __json__(self):
         attributes = dict(vars(self))

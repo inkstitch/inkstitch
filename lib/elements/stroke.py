@@ -6,19 +6,18 @@
 import sys
 
 import shapely.geometry
-
 from inkex import Transform
 
 from ..i18n import _
 from ..marker import get_marker_elements
 from ..stitch_plan import StitchGroup
-from ..stitches.running_stitch import bean_stitch, running_stitch
 from ..stitches.ripple_stitch import ripple_stitch
+from ..stitches.running_stitch import bean_stitch, running_stitch
 from ..svg import get_node_transform, parse_length_with_units
+from ..threads import ThreadColor
 from ..utils import Point, cache
 from .element import EmbroideryElement, param
 from .validation import ValidationWarning
-from ..threads import ThreadColor
 
 warned_about_legacy_running_stitch = False
 
@@ -445,13 +444,15 @@ class Stroke(EmbroideryElement):
 
             repeated_stitches.extend(this_path)
 
-        return StitchGroup(self.color, repeated_stitches)
+        return StitchGroup(self.color, repeated_stitches, lock_stitches=self.lock_stitches, force_lock_stitches=self.force_lock_stitches)
 
     def ripple_stitch(self):
         return StitchGroup(
             color=self.color,
             tags=["ripple_stitch"],
-            stitches=ripple_stitch(self))
+            stitches=ripple_stitch(self),
+            lock_stitches=self.lock_stitches,
+            force_lock_stitches=self.force_lock_stitches)
 
     def do_bean_repeats(self, stitches):
         return bean_stitch(stitches, self.bean_stitch_repeats)
@@ -471,7 +472,7 @@ class Stroke(EmbroideryElement):
                 path = [Point(x, y) for x, y in path]
                 # manual stitch
                 if self.manual_stitch_mode:
-                    patch = StitchGroup(color=self.color, stitches=path, stitch_as_is=True)
+                    patch = StitchGroup(color=self.color, stitches=path, lock_stitches=(None, None))
                 # running stitch
                 elif self.is_running_stitch():
                     patch = self.running_stitch(path, self.running_stitch_length, self.running_stitch_tolerance)
