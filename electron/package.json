@@ -7,7 +7,7 @@
   "scripts": {
     "pack": "electron-builder --dir",
     "dist": "node .electron-vue/build.js && electron-builder",
-    "dev": "node --openssl-legacy-provider .electron-vue/dev-runner.js || node .electron-vue/dev-runner.js"
+    "dev": "node .electron-vue/dev-runner.js"
   },
   "build": {
     "productName": "inkstitch-gui",
