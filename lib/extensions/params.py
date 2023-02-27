@@ -24,8 +24,9 @@ from ..gui import PresetsPanel, SimulatorPreview, WarningPanel
 from ..i18n import _
 from ..svg.tags import SVG_POLYLINE_TAG
 from ..utils import get_resource_dir
-from .base import InkstitchExtension
+from ..utils.param import ParamOption
 from ..utils.threading import ExitThread, check_stop_flag
+from .base import InkstitchExtension
 
 
 def grouper(iterable_obj, count, fillvalue=None):
@@ -404,6 +405,8 @@ class ParamsTab(ScrolledPanel):
                 input = wx.ComboBox(self, wx.ID_ANY, choices=[], style=wx.CB_READONLY)
                 for option in param.options:
                     input.Append(option.name, option)
+                if not param.options:
+                    input.Append(_('No options available'), ParamOption('not_available'))
                 value = self.get_combo_value_index(param.values[0], param.options)
                 input.SetSelection(value)
                 input.Bind(wx.EVT_COMBOBOX, self.changed)
