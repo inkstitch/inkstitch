@@ -208,7 +208,7 @@ class FillStitch(EmbroideryElement):
            unit='deg',
            type='float',
            sort_index=6,
-           select_items=[('fill_method', 'auto_fill'), ('fill_method', 'guided_fill')],
+           select_items=[('fill_method', 'auto_fill'), ('fill_method', 'legacy_fill')],
            default=0)
     @cache
     def angle(self):
@@ -227,8 +227,8 @@ class FillStitch(EmbroideryElement):
                   'Skipping it decreases stitch count and density.'),
         type='boolean',
         sort_index=6,
-        select_items=[('fill_method', 'auto_fill'), ('fill_method', 'contour_fill'),
-                      ('fill_method', 'guided_fill')],
+        select_items=[('fill_method', 'auto_fill'), ('fill_method', 'guided_fill'),
+                      ('fill_method', 'legacy_fill')],
         default=False)
     def skip_last(self):
         return self.get_boolean_param("skip_last", False)
