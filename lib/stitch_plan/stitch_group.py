@@ -44,7 +44,7 @@ class StitchGroup:
         # instance.foo = None
 
         instance.lock_stitches = None
-        
+
         return instance
 
     def __add__(self, other):

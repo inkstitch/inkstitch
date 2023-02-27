@@ -256,6 +256,7 @@ class FillStitch(EmbroideryElement):
            select_items=[('fill_method', 'auto_fill'),
                          ('fill_method', 'contour_fill'),
                          ('fill_method', 'guided_fill'),
+                         ('fill_method', 'circular_fill'),
                          ('fill_method', 'legacy_fill')],
            default=0.25)
     def row_spacing(self):
