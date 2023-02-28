@@ -86,6 +86,10 @@ docs:
         url: /de/docs/stitches/guided-fill/
       - title: "Meander Fill"
         url: /de/docs/stitches/meander-fill/
+      - title: "Spiralfüllung"
+        url: /de/docs/stitches/circular-fill/
+      - title: "Vernähstiche"
+        url: /de/docs/stitches/lock-stitches/
       - title: Stichmuster
         url: /de/docs/stitches/patterns
   - title: Benutzeroberfläche

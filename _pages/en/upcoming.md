@@ -16,11 +16,26 @@ We have good news: Ink/Stitch will be significantly faster due to stitch plan ca
 
 ## Element/Stitch types
 
-### New stitch types
+### New Stitch Types
 
 #### Meander Fill
 
 [Meander fill](/docs/stitches/meander-fill) has its origins in quilting techniques. A beautiful patterned effect results for machine embroidery. Large areas can be filled with relatively few stitches.
+
+#### Circular Fill
+
+[Circular fill](/docs/stitches/circular-fill) fills a shape with an embroidered spiral. The center of the spiral is positioned at the center of the shape. A target point can be used to define a custom spiral center.
+
+### New params
+
+#### Trim and Stop Commands
+  * It's not necessary to use symbols for trim and stop commands, they can also be applied through the params dialog
+  * [Scale Commands](/docs/commands/#scale-command-symbols): scales marker symbols as well (guide line & pattern symbols)
+
+#### Tack Stitch and Lock Stitch
+  * Chose from a list of predefined tack/lock stitches
+  * Scale tack/lock stitches
+  * Define custom tack/lock stitches
 
 ### Clones
   * Fix: automatic fill angle calculation
@@ -82,10 +97,6 @@ We have good news: Ink/Stitch will be significantly faster due to stitch plan ca
 
 ### Autorun
   * Fix: Keep settings for underpath running stitch tolerance
-
-### Commands
-  * It's not necessary to use symbols for trim and stop commands, they can also be applied through the params dialog
-  * [Scale Commands](/docs/commands/#scale-command-symbols): scales marker symbols as well (guide line & pattern symbols)
 
 ### Convert to Satin
   * Fix: Do not fail on mixed element selection

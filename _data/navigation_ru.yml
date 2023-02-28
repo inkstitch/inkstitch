@@ -90,6 +90,10 @@ docs:
         url: /ru/docs/stitches/guided-fill/
       - title: "Meander Fill"
         url: /ru/docs/stitches/meander-fill/
+      - title: "Circular Fill"
+        url: /ru/docs/stitches/circular-fill/
+      - title: "Lock stitches"
+        url: /ru/docs/stitches/lock-stitches/
       - title: "Stitch patterns"
         url: /ru/docs/stitches/patterns/
   - title: Интерфейс
