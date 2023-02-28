@@ -38,6 +38,8 @@ Stichlänge           ||Definiert die maximale Stichlänge. Minimale Stichlänge
 Geradstich-Toleranz  ||Alle Stiche müssen innerhalb dieser Distanz vom Ursprungspfad liegen. Ein geringerer Toleranzwert bedeutet, dass Stiche enger zusammenliegen. Ein höherer Wert kann zu abgerundeten Ecken führen.
 Vernähen erlauben    || Vernäht bei Bedarf an den ausgewählten Positionen
 Vernähen erzwingen   || Vernäht den Faden nach diesem Element, auch dann, wenn der Abstand zum Folgeobjekt geringer ist als in den [Ink/Stitch Einstellungen](/de/docs/preferences/) definiert.
+Anstecher            ||Wähle die [Anstecher](/docs/stitches/lock-stitches) Variante (Anfang).
+Verstecher           ||Wähle die [Verstecher](/docs/stitches/lock-stitches) Variante (Ende).
 Fadenschnitt         || Schneidet den Faden nachdem dieses Objekt genäht wurde
 Stopp                || Stoppt die Maschine nachdem dieses Objekt genäht wurde und springt zur Stopp-Position (sofern vorhanden)
 

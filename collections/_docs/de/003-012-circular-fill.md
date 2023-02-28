@@ -7,44 +7,50 @@ toc: true
 ---
 {% include upcoming_release.html %}
 
-## What it is
+## Beschreibung
 
-Circular fill fills a shape with an embroidered spiral. The center of the spiral is positioned at the center of the shape. A target point can be used to define a custom spiral center.
+Eine Spiralfüllung füllt eine Form mit einer gestickten Spirale. Der Mittelpunkt der Spirale liegt im Mittelpunkt des Elements. Eine Zielposition kann definiert werden um den Spiralmittelpunkt zu verschieben.
 
 ![Meander stitch detail](/assets/images/docs/circular-fill-detail.png)
 
-## How to Create
+## Funktionsweise
 
-* Create a **closed path with a fill color**. The shape may have holes.
-* Open the params dialog (`Extensions > Ink/Stitch > Params`) and select `Circular Fill` as the fill method.
-  Set the params as you like wish and Apply.
+* Erstelle einen geschlossenen Pfad mit einer Füllung. Aussparungen innerhalb der Form sind möglich.
+* * In den Parametereinstellungen (`Erweiterungen > Ink/Stitch > Parameter`) `Spiralfüllung` als Füllmethode auswählen. Die restlichen Parameter können nach eigenem Belieben angepasst werden.
 
-## Set spiral center
+## Spiralmittelpunkt festlegen
 
-* Select the circular fill shape and attach the Ripple stitch target point command to the shape. Read [how to attach commands to objects](/docs/commands/).
+Definiere eine Zielposition mit einem [visuellen Befehl](/de/docs/commmands/):
 
-## Set Start and End Point
+* Wähle ein Element mit einer Spiralfüllung aus 
+* Öffne `Erweiterungen > Ink/Stitch > Befehle > Befehle mit gewählten Objekten verknüpfen...`
+* Wähle `Ripplestich Zielposition` und clicke auf Anwenden
+* `Strg + Klick` auf das Symbol des Befehls um es auszuwählen, dann bewege es zur gewünschten Position
 
-Set start and end points for autofill objects with [Visual commands](/docs/commands/).
+Wenn keine Zielposition definiert wurde, liegt der Spiralmittelpunkt in der Mitte des Objektes.
 
-## Params
+## Anfangs- und Endpunkt festlegen
 
-Run `Extensions > Ink/Stitch  > Params` to tweak the settings to your needs.
+Ink/Stitch erlaubt es über visuelle Befehle den [Anfangs- und Endpunkt eines Füllobjekts](/de/docs/commands) zu kennzeichnen.
 
-Settings||Description
+## Parameter
+
+Öffne `Erweiterungen > Ink/Stitch  > Parameter` um das Stickbild deinen Bedürfnissen anzupassen.
+
+Einstellung          ||Beschreibung
 ---|---|---
-Automatically routed fill stitching| ☑ |Must be enabled for these settings to take effect.
-Fill method          |Circular Fill|Circular Fill must be selected.
-Expand               |![Expand example](/assets/images/docs/params-fill-expand.png)  |Expand the shape before stitching, to compensate for gaps between shapes.
-Running stitch length||For circular fill this is the overall stitch length.
-Running stitch tolerance||All stitches must be within this distance from a path. A lower tolerance means stitches will be closer together. A higher tolerance means sharp corner may be rounded.
-Underpath            |![Unterpath example](/assets/images/docs/params-fill-underpathing.png)|Must be enabled to let running stitches travel inside shape instead of around the border when moving from section to section
-Allow lock stitches  ||Enables lock stitches in only desired positions
-Force lock stitches  ||Sew lock stitches after sewing this element, even if the distance to the next object is smaller than defined in the collapse length value value in the Ink/Stitch prefreneces.
-Tack stitch          ||Select [tack stitch](/docs/stitches/lock-stitches) type (start).
-Lock stitch          ||Select [lock stitch](/docs/stitches/lock-stitches) type (end).
-Trim After           ||Trim the thread after sewing this object.
-Stop After           ||Stop the machine after sewing this object. Before stopping it will jump to the stop position (frame out) if defined.
+Automatisch geführte Füllstiche | ☑ |Muss aktiviert sein
+Füllmethode          | Spiralfüllung|Für diesen Stichtyp bitte Spiralfüllung auswählen
+Erweitern            |![Expand example](/assets/images/docs/params-fill-expand.png)  |Erweitert die Ursprungsform. Diese Option kann genutzt werden um Lücken zwischen angrenzenden Objekten zu verringern. Negative Werte verkleinern die Form.
+Stichlänge           ||Definiert die maximale Stichlänge. Minimale Stichlänge bitte über die Geradstich-Toleranz festlegen.
+Geradstich-Toleranz  ||Alle Stiche müssen innerhalb dieser Distanz vom Ursprungspfad liegen. Ein geringerer Toleranzwert bedeutet, dass Stiche enger zusammenliegen. Ein höherer Wert kann zu abgerundeten Ecken führen.
+Verbindungsstiche innerhalb des Objektes|![Skip example](/assets/images/docs/params-fill-underpathing.png)| Muss aktiviert sein, um Geradstiche zum Verbinden der Abschnitte innerhalb des Objekts verlaufen zu lassen, anstatt sie am Rand entlang zu führen.
+Vernähen erlauben    || Vernäht bei Bedarf an den ausgewählten Positionen
+Vernähen erzwingen   || Vernäht den Faden nach diesem Element, auch dann, wenn der Abstand zum Folgeobjekt geringer ist als in den [Ink/Stitch Einstellungen](/de/docs/preferences/) definiert.
+Anstecher            ||Wähle die [Anstecher](/docs/stitches/lock-stitches) Variante (Anfang).
+Verstecher           ||Wähle die [Verstecher](/docs/stitches/lock-stitches) Variante (Ende).
+Fadenschnitt         || Schneidet den Faden nachdem dieses Objekt genäht wurde
+Stopp                || Stoppt die Maschine nachdem dieses Objekt genäht wurde und springt zur Stopp-Position (sofern vorhanden)
 
 ## Underlay
 
