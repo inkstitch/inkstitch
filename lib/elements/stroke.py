@@ -477,8 +477,7 @@ class Stroke(EmbroideryElement):
                                         lock_stitches=self.lock_stitches,
                                         trim_after=self.trim_after,
                                         stop_after=self.stop_after,
-                                        force_lock_stitches=self.force_lock_stitches
-                                        )
+                                        force_lock_stitches=self.force_lock_stitches)
                 # running stitch
                 elif self.is_running_stitch():
                     patch = self.running_stitch(path, self.running_stitch_length, self.running_stitch_tolerance)
