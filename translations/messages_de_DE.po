@@ -2,21 +2,21 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-02-28 01:24+0000\n"
-"PO-Revision-Date: 2023-02-28 01:25\n"
+"POT-Creation-Date: 2023-03-01 01:41+0000\n"
+"PO-Revision-Date: 2023-03-01 01:42\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.11.0\n"
+"Generated-By: Babel 2.12.1\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: easygettext\n"
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-28 01:24+0000\n"
+"POT-Creation-Date: 2023-03-01 01:41+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1114,55 +1114,55 @@ msgstr "Am Ende dieses Objektes vernähen, auch wenn die Distanz zum Folgeobjekt
 
 #: lib/elements/element.py:268
 msgid "Tack stitch"
-msgstr ""
+msgstr "Anstecher"
 
 #: lib/elements/element.py:269
 msgid "Tack down stitch type"
-msgstr ""
+msgstr "Anstecher Variante"
 
 #: lib/elements/element.py:279 lib/elements/element.py:325
 msgid "Custom path"
-msgstr ""
+msgstr "Benutzerdefinierter Pfad"
 
 #: lib/elements/element.py:280
 msgid "Enter a custom path. For svg paths The last node will not be embroidered, but represents the first stitch of the element."
-msgstr ""
+msgstr "Bitte einen benutzerdefinierten Pfad eingeben. Bei SVG-Pfaden wird der letzte Knoten nicht gestickt, sondern bildet den ersten Stich des zugehörigen Elements ab."
 
 #: lib/elements/element.py:290 lib/elements/element.py:302
 msgid "Scale tack stitch"
-msgstr ""
+msgstr "Anstecher skalieren"
 
 #: lib/elements/element.py:291
 msgid "Set stitch length. A 1 in a custom path equals this values."
-msgstr ""
+msgstr "Stichlänge festlegen. Eine 1 in benutzerdefinierten Pfaden entspricht genau diesem Wert."
 
 #: lib/elements/element.py:303
 msgid "Scale tack stitch by this percentage."
-msgstr ""
+msgstr "Anstecher um diesen Prozentwert skalieren."
 
 #: lib/elements/element.py:314
 msgid "Lock stitch"
-msgstr ""
+msgstr "Verstecher"
 
 #: lib/elements/element.py:315
 msgid "Lock stitch type"
-msgstr ""
+msgstr "Verstecher Variante"
 
 #: lib/elements/element.py:326
 msgid "Enter a custom path. For svg paths the first node will not be embroidered, but represents the last stitch of the element."
-msgstr ""
+msgstr "Bitte einen benutzerdefinierten Pfad eingeben. Bei SVG-Pfaden wird der erste Knoten nicht gestickt, sondern bildet den letzten Stich des zugehörigen Elements ab."
 
 #: lib/elements/element.py:336 lib/elements/element.py:348
 msgid "Scale lock stitch"
-msgstr ""
+msgstr "Verstecher skalieren"
 
 #: lib/elements/element.py:337
 msgid "Set length of lock stitches (mm)."
-msgstr ""
+msgstr "Stichlänge des Verstechers festlegen (mm)."
 
 #: lib/elements/element.py:349
 msgid "Scale lock stitch by this percentage."
-msgstr ""
+msgstr "Verstecher um diesen Prozentwert skalieren."
 
 #: lib/elements/element.py:361
 msgid "Trim After"
@@ -1335,7 +1335,7 @@ msgstr "Meanderfüllung"
 
 #: lib/elements/fill_stitch.py:117
 msgid "Circular Fill"
-msgstr ""
+msgstr "Spiralfüllung"
 
 #: lib/elements/fill_stitch.py:118
 msgid "Legacy Fill"
@@ -1471,7 +1471,7 @@ msgstr "Stichlänge"
 
 #: lib/elements/fill_stitch.py:447
 msgid "Length of stitches around the outline of the fill region used when moving from section to section. Also used for meander and circular fill."
-msgstr ""
+msgstr "Stichlänge um den Umriss des Füllbereichs, der beim Übergang von Abschnitt zu Abschnitt verwendet wird. Wird auch für Meander- und Spiralfüllung verwendet."
 
 #: lib/elements/fill_stitch.py:462 lib/elements/stroke.py:135
 msgid "Running stitch tolerance"
@@ -2459,7 +2459,7 @@ msgstr "Inkscape Objekte"
 
 #: lib/extensions/params.py:409
 msgid "No options available"
-msgstr ""
+msgstr "Keine Optionen verfügbar"
 
 #: lib/extensions/params.py:429
 msgid "Re-roll"
@@ -2747,27 +2747,27 @@ msgstr "Die Datei kann nicht geöffnet werden. Bitte überprüfe den Dateipfad u
 
 #: lib/stitch_plan/lock_stitch.py:210
 msgid "Half Stitch"
-msgstr ""
+msgstr "Halbstich"
 
 #: lib/stitch_plan/lock_stitch.py:211
 msgid "Arrow"
-msgstr ""
+msgstr "Pfeil"
 
 #: lib/stitch_plan/lock_stitch.py:212
 msgid "Back and forth"
-msgstr ""
+msgstr "Vor und zurück"
 
 #: lib/stitch_plan/lock_stitch.py:213
 msgid "Bowtie"
-msgstr ""
+msgstr "Schleife"
 
 #: lib/stitch_plan/lock_stitch.py:214
 msgid "Cross"
-msgstr ""
+msgstr "Kreuz"
 
 #: lib/stitch_plan/lock_stitch.py:215
 msgid "Star"
-msgstr ""
+msgstr "Stern"
 
 #: lib/stitch_plan/lock_stitch.py:216 inx/inkstitch_break_apart.inx:18
 msgid "Simple"
@@ -2775,15 +2775,15 @@ msgstr "Einfach"
 
 #: lib/stitch_plan/lock_stitch.py:217
 msgid "Triangle"
-msgstr ""
+msgstr "Dreieck"
 
 #: lib/stitch_plan/lock_stitch.py:218
 msgid "Zig-zag"
-msgstr ""
+msgstr "Zick-Zack"
 
 #: lib/stitch_plan/lock_stitch.py:219
 msgid "Custom"
-msgstr ""
+msgstr "Benutzerdefiniert"
 
 #: lib/stitch_plan/stitch_plan.py:26
 msgid "There is no selected stitchable element. Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects in case you have expected a stitchout."
