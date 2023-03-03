@@ -183,7 +183,7 @@ class FillStitch(EmbroideryElement):
     @param('meander_pattern', _('Meander Pattern'), type='combo', default=0,
            options=sorted(tiles.all_tiles()), select_items=[('fill_method', 'meander_fill')], sort_index=3)
     def meander_pattern(self):
-        return self.get_param('meander_pattern', None)
+        return self.get_param('meander_pattern', min(tiles.all_tiles()).id)
 
     @property
     @param('meander_scale_percent',

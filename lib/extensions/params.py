@@ -149,11 +149,11 @@ class ParamsTab(ScrolledPanel):
     def update_combo_state(self, event=None):
         self.update_choice_state(event, True)
 
-    def get_combo_value_index(self, param, options):
+    def get_combo_value_index(self, param, options, default):
         for option in options:
             if option.id == param:
                 return options.index(option)
-        return 0
+        return default
 
     def pair_changed(self, value):
         new_value = not value
@@ -407,8 +407,7 @@ class ParamsTab(ScrolledPanel):
                     input.Append(option.name, image, option)
                 if not param.options:
                     input.Append(_('No options available'), ParamOption('not_available'))
-
-                value = self.get_combo_value_index(param.values[0], param.options)
+                value = self.get_combo_value_index(param.values[0], param.options, param.default or 0)
                 input.SetSelection(value)
                 input.Bind(wx.EVT_COMBOBOX, self.changed)
                 input.Bind(wx.EVT_COMBOBOX, self.update_combo_state)
