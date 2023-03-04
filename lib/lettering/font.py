@@ -19,7 +19,7 @@ from ..marker import MARKER, ensure_marker, has_marker
 from ..stitches.auto_satin import auto_satin
 from ..svg.tags import (CONNECTION_END, CONNECTION_START, EMBROIDERABLE_TAGS,
                         INKSCAPE_LABEL, SVG_GROUP_TAG, SVG_PATH_TAG,
-                        SVG_USE_TAG, XLINK_HREF)
+                        SVG_USE_TAG, XLINK_HREF, INKSTITCH_ATTRIBS)
 from ..utils import Point
 from .font_variant import FontVariant
 
@@ -184,7 +184,7 @@ class Font(object):
     def is_custom_font(self):
         return get_custom_font_dir() in self.path
 
-    def render_text(self, text, destination_group, variant=None, back_and_forth=True, trim_option=0):
+    def render_text(self, text, destination_group, variant=None, back_and_forth=True, trim_option=0, use_trim_symbols=False):
 
         """Render text into an SVG group element."""
         self._load_variants()
@@ -226,7 +226,7 @@ class Font(object):
                 element.set('style', '%s' % style.to_str())
 
         # add trims
-        self._add_trims(destination_group, text, trim_option, back_and_forth)
+        self._add_trims(destination_group, text, trim_option, use_trim_symbols, back_and_forth)
         # make sure necessary marker and command symbols are in the defs section
         self._ensure_command_symbols(destination_group)
         self._ensure_marker_symbols(destination_group)
@@ -340,7 +340,7 @@ class Font(object):
                 c.set(CONNECTION_END, "#%s" % new_element_id)
                 c.set(CONNECTION_START, "#%s" % new_symbol_id)
 
-    def _add_trims(self, destination_group, text, trim_option, back_and_forth):
+    def _add_trims(self, destination_group, text, trim_option, use_trim_symbols, back_and_forth):
         """
         trim_option == 0  --> no trims
         trim_option == 1  --> trim at the end of each line
@@ -369,15 +369,15 @@ class Font(object):
 
             # letter
             if trim_option == 3:
-                self._process_trim(group)
+                self._process_trim(group, use_trim_symbols)
             # word
             elif trim_option == 2 and i+1 in space_indices + line_break_indices:
-                self._process_trim(group)
+                self._process_trim(group, use_trim_symbols)
             # line
             elif trim_option == 1 and i+1 in line_break_indices:
-                self._process_trim(group)
+                self._process_trim(group, use_trim_symbols)
 
-    def _process_trim(self, group):
+    def _process_trim(self, group, use_trim_symbols):
         # find the last path that does not carry a marker and add a trim there
         for path_child in group.iterdescendants(EMBROIDERABLE_TAGS):
             if not has_marker(path_child):
@@ -390,7 +390,10 @@ class Font(object):
         if element.shape:
             element_id = "%s_%s" % (element.node.get('id'), randint(0, 9999))
             element.node.set("id", element_id)
-            add_commands(element, ['trim'])
+            if use_trim_symbols is False:
+                element.node.set(INKSTITCH_ATTRIBS['trim_after'], 'true')
+            else:
+                add_commands(element, ['trim'])
 
     def _ensure_command_symbols(self, group):
         # collect commands

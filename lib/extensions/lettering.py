@@ -76,6 +76,10 @@ class LetteringFrame(wx.Frame):
                                             name=_("Add trim command"))
         self.trim_option_choice.Bind(wx.EVT_CHOICE, lambda event: self.on_trim_option_change(event))
 
+        self.use_trim_symbols = wx.CheckBox(self, label=_("Use command symbols"))
+        self.use_trim_symbols.Bind(wx.EVT_CHECKBOX, lambda event: self.on_change("use_trim_symbols", event))
+        self.use_trim_symbols.SetToolTip(_('Uses command symbols if enabled. When disabled inserts trim commands as params.'))
+
         # text editor
         self.text_input_box = wx.StaticBox(self, wx.ID_ANY, label=_("Text"))
 
@@ -108,7 +112,8 @@ class LetteringFrame(wx.Frame):
             "back_and_forth": False,
             "font": None,
             "scale": 100,
-            "trim_option": 0
+            "trim_option": 0,
+            "use_trim_symbols": False
         })
 
         if INKSTITCH_LETTERING in self.group.attrib:
@@ -127,6 +132,7 @@ class LetteringFrame(wx.Frame):
         """Make the settings in self.settings visible in the UI."""
         self.back_and_forth_checkbox.SetValue(bool(self.settings.back_and_forth))
         self.trim_option_choice.SetSelection(self.settings.trim_option)
+        self.use_trim_symbols.SetValue(bool(self.settings.use_trim_symbols))
         self.set_initial_font(self.settings.font)
         self.text_editor.SetValue(self.settings.text)
         self.scale_spinner.SetValue(self.settings.scale)
@@ -315,7 +321,7 @@ class LetteringFrame(wx.Frame):
         font = self.fonts.get(self.font_chooser.GetValue(), self.default_font)
         try:
             font.render_text(self.settings.text, destination_group, back_and_forth=self.settings.back_and_forth,
-                             trim_option=self.settings.trim_option)
+                             trim_option=self.settings.trim_option, use_trim_symbols=self.settings.use_trim_symbols)
 
         except FontError as e:
             if raise_error:
@@ -408,6 +414,7 @@ class LetteringFrame(wx.Frame):
         trim_option_sizer = wx.BoxSizer(wx.HORIZONTAL)
         trim_option_sizer.Add(wx.StaticText(self, wx.ID_ANY, "Add trims"), 0, wx.LEFT | wx.ALIGN_CENTRE_VERTICAL, 5)
         trim_option_sizer.Add(self.trim_option_choice, 1, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT | wx.BOTTOM, 5)
+        trim_option_sizer.Add(self.use_trim_symbols, 1, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT | wx.BOTTOM, 5)
         left_option_sizer.Add(trim_option_sizer, 0, wx.ALIGN_LEFT, 5)
 
         font_scale_sizer = wx.BoxSizer(wx.HORIZONTAL)
