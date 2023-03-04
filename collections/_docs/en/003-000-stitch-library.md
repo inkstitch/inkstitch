@@ -92,9 +92,18 @@ Create guide lines to generate a curved fill.
 
 ![Guided fill](/assets/images/docs/guided-fill-complex.svg)
 
+[Learn more](/docs/stitches/guided-fill){: .btn .btn--primary}
+
 ### Meander Fill
 Meander fill has its origins in quilting techniques. A beautiful patterned effect results for machine embroidery. Large areas can be filled with relatively few stitches.
 
 ![Meander fill](/assets/images/docs/meander-fill.png)
 
 [Learn more](/docs/stitches/meander-fill){: .btn .btn--primary}
+
+### Circular Fill
+Circular fill fills a shape with an embroidered spiral. The center of the spiral is positioned at the center of the shape. A target point can be used to define a custom spiral center.
+
+![Meander stitch detail](/assets/images/docs/circular-fill-detail.png)
+
+[Learn more](/docs/stitches/circular-fill){: .btn .btn--primary}

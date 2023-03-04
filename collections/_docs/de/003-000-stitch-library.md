@@ -108,3 +108,10 @@ Meanderfüllung hat seinen Ursprung in Quilt-Techniken. Für das Maschinensticke
 ![Meander fill](/assets/images/docs/meander-fill.png)
 
 [Mehr lesen](/de/docs/stitches/meander-fill){: .btn .btn--primary}
+
+### Circular Fill
+Eine Spiralfüllung füllt eine Form mit einer gestickten Spirale. Der Mittelpunkt der Spirale liegt im Mittelpunkt des Elements. Eine Zielposition kann definiert werden um den Spiralmittelpunkt zu verschieben.
+
+![Meander stitch detail](/assets/images/docs/circular-fill-detail.png)
+
+[Mehr lesen](/de/docs/stitches/circular-fill){: .btn .btn--primary}

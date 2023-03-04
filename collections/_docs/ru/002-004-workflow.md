@@ -35,7 +35,7 @@ Edit objects and paths with:
 
 Scale, rotate and move the whole object with the select tool. The node editor tool serves to manipulate selected nodes, etc.
 
-Additionally you could use path effects (`Path > Path Effects...`). Remember to always convert the resulting object back into a path (`Path > Convert object to path`).
+Additionally you could use path effects (`Path > Path Effects...`).
 
 ### Use Existing Picture/Graphic
 

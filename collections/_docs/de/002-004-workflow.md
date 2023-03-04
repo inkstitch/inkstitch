@@ -36,7 +36,7 @@ Bearbeite Objekte und Pfade mit:
 
 Skalieren, rotierend und Objekte bewegen kann man mit dem Auswahlwerkzeug. Das Knotenwerkzeug dient zum manipulieren der Pfade eines Elements.
 
-Zusaätzlich gibt es eine Reihe an Pfadeffekten (`Pfad > Pfadeffekte...`). Nach der Bearbeitung eines Objektes mit Pfadeffekten, sollte immer die Funktion `Pfad > Objekt in Pfad umwandeln` eingesetzt werden.
+Zusätzlich gibt es eine Reihe an Pfadeffekten (`Pfad > Pfadeffekte...`) die ebenfalls nur Bearbeitung genutzt werden können.
 
 ### Eine existierende Grafik verwenden
 

@@ -32,7 +32,7 @@ Modifier les objets et les chemins avec:
 
 Utilisez l'outil de sélection pour manipuler un objet dans son ensemble que ce soit pour le  mettre à l'échelle, le faire pivoter ou le déplacer. L'éditeur de nœuds lui sert à manipuler une partie seulement d'un objet : un ou des noeuds sélectionnés.
 
-Vous pouvez aussi utiliser les effets de chemin (`Chemin> Effets de chemin`) mais n'oubliez pas de toujours reconvertir l'objet résultant en un chemin, (`Chemin> Objet en chemin`).
+Vous pouvez aussi utiliser les effets de chemin (`Chemin> Effets de chemin`).
 
 ### Utiliser une image / un graphique existant
 
