@@ -110,12 +110,12 @@ class FillStitch(EmbroideryElement):
     def auto_fill(self):
         return self.get_boolean_param('auto_fill', True)
 
-    _fill_methods = [ParamOption('auto_fill', _("Auto Fill"), 0),
-                     ParamOption('contour_fill', _("Contour Fill"), 1),
-                     ParamOption('guided_fill', _("Guided Fill"), 2),
+    _fill_methods = [ParamOption('auto_fill', _("Auto Fill")),
+                     ParamOption('contour_fill', _("Contour Fill")),
+                     ParamOption('guided_fill', _("Guided Fill")),
                      ParamOption('meander_fill', _("Meander Fill")),
                      ParamOption('circular_fill', _("Circular Fill")),
-                     ParamOption('legacy_fill', _("Legacy Fill"), 3)]
+                     ParamOption('legacy_fill', _("Legacy Fill"))]
 
     @property
     @param('fill_method',
@@ -125,13 +125,6 @@ class FillStitch(EmbroideryElement):
            options=_fill_methods,
            sort_index=2)
     def fill_method(self):
-        # convert legacy values
-        legacy_method = self.get_int_param('fill_method', None)
-        if legacy_method in range(0, 4):
-            method = [method.id for method in self._fill_methods if method.legacy == legacy_method][0]
-            self.set_param('fill_method', method)
-            return method
-
         return self.get_param('fill_method', 'auto_fill')
 
     @property
