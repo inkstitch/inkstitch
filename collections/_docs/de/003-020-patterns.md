@@ -15,7 +15,7 @@ Muster werden durch besondere Stichpositionierung erzeugt.
 
 Muster können in Ink/Stitch durch hinzufügen oder entfernen von Stichen aus einem bestehenden Stickobjekt erstellt werden.
 
-* Zuerst benötigst du ein **Stickobject**. Das kann sowohl eine Satinsäule, als auch eine Füllfläche sein. Muster können auch auf Linien angewendet werden, wobei sich hier über die Sinnhaftigkeit streiten lässt.
+* Zuerst benötigst du ein **Stickobjekt**. Das kann sowohl eine Satinsäule, als auch eine Füllfläche sein. Muster können auch auf Linien angewendet werden, wobei sich hier über die Sinnhaftigkeit streiten lässt.
 
 * Nun muss der **Pfad für das Muster** erstellt werden. Ein Muster besteht entweder aus Linien oder gefüllten Flächen (oder beides gleichzeitig). Durch Linien werden Stiche hinzugefügt, während Füllflächen Stiche vom Stickobjekt entfernen.
 
