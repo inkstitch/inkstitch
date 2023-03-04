@@ -472,11 +472,14 @@ class Stroke(EmbroideryElement):
                 path = [Point(x, y) for x, y in path]
                 # manual stitch
                 if self.manual_stitch_mode:
+                    if self.force_lock_stitches:
+                        lock_stitches = self.lock_stitches
+                    else:
+                        # manual stitch disables lock stitches unless they force them
+                        lock_stitches = (None, None)
                     patch = StitchGroup(color=self.color,
                                         stitches=path,
-                                        lock_stitches=self.lock_stitches,
-                                        trim_after=self.trim_after,
-                                        stop_after=self.stop_after,
+                                        lock_stitches=lock_stitches,
                                         force_lock_stitches=self.force_lock_stitches)
                 # running stitch
                 elif self.is_running_stitch():
