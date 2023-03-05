@@ -78,8 +78,7 @@ class ParamsTab(ScrolledPanel):
         self.param_change_indicators = {}
 
         self.settings_grid = wx.FlexGridSizer(rows=0, cols=4, hgap=10, vgap=15)
-        self.settings_grid.AddGrowableCol(1, 2)
-        self.settings_grid.SetFlexibleDirection(wx.HORIZONTAL)
+        self.settings_grid.AddGrowableCol(2, 1)
 
         self.pencil_icon = wx.Image(os.path.join(get_resource_dir(
             "icons"), "pencil_20x20.png")).ConvertToBitmap()
@@ -348,24 +347,21 @@ class ParamsTab(ScrolledPanel):
         # just to add space around the settings
         box = wx.BoxSizer(wx.VERTICAL)
 
-        summary_box = wx.StaticBox(
-            self, wx.ID_ANY, label=_("Inkscape objects"))
+        summary_box = wx.StaticBox(self, wx.ID_ANY, label=_("Inkscape objects"))
         sizer = wx.StaticBoxSizer(summary_box, wx.HORIZONTAL)
         self.description = wx.StaticText(self)
         self.update_description()
         self.description.SetLabel(self.description_text)
         self.description_container = box
         self.Bind(wx.EVT_SIZE, self.resized)
-        sizer.Add(self.description, proportion=0,
-                  flag=wx.EXPAND | wx.ALL, border=5)
+        sizer.Add(self.description, proportion=0, flag=wx.EXPAND | wx.ALL, border=5)
         box.Add(sizer, proportion=0, flag=wx.ALL, border=5)
 
         if self.toggle:
             toggle_sizer = wx.BoxSizer(wx.HORIZONTAL)
             toggle_sizer.Add(self.create_change_indicator(
                 self.toggle.name), proportion=0, flag=wx.ALIGN_CENTER_VERTICAL | wx.RIGHT, border=5)
-            toggle_sizer.Add(self.toggle_checkbox, proportion=0,
-                             flag=wx.ALIGN_CENTER_VERTICAL)
+            toggle_sizer.Add(self.toggle_checkbox, proportion=0, flag=wx.ALIGN_CENTER_VERTICAL)
             box.Add(toggle_sizer, proportion=0, flag=wx.BOTTOM, border=10)
 
         for param in self.params:
@@ -378,11 +374,9 @@ class ParamsTab(ScrolledPanel):
                 description.Hide()
                 for item in param.select_items:
                     self.choice_widgets[item].extend([col1, description])
-            # else:
-            self.settings_grid.Add(
-                col1, proportion=0, flag=wx.ALIGN_CENTER_VERTICAL)
-            self.settings_grid.Add(description, proportion=1, flag=wx.EXPAND |
-                                   wx.RIGHT | wx.ALIGN_CENTER_VERTICAL | wx.TOP, border=5)
+
+            self.settings_grid.Add(col1, flag=wx.ALIGN_CENTER_VERTICAL)
+            self.settings_grid.Add(description, flag=wx.RIGHT | wx.ALIGN_CENTER_VERTICAL | wx.TOP, border=5)
 
             if param.type == 'boolean':
                 if len(param.values) > 1:
@@ -402,11 +396,18 @@ class ParamsTab(ScrolledPanel):
                 self.dict_of_choices[param.name] = {
                     "param": param, "widget": input, "last_initialized_choice": 1}
             elif param.type == 'combo':
-                input = wx.ComboBox(self, wx.ID_ANY, choices=[], style=wx.CB_READONLY)
+                input = wx.adv.BitmapComboBox(self, wx.ID_ANY, choices=[], style=wx.CB_READONLY)
                 for option in param.options:
-                    input.Append(option.name, option)
+                    if option.preview_image:
+                        image = wx.Image(option.preview_image)
+                        image.Rescale(60, 60, quality=wx.IMAGE_QUALITY_HIGH)
+                        image = wx.Bitmap(image)
+                    else:
+                        image = wx.NullBitmap
+                    input.Append(option.name, image, option)
                 if not param.options:
                     input.Append(_('No options available'), ParamOption('not_available'))
+
                 value = self.get_combo_value_index(param.values[0], param.options)
                 input.SetSelection(value)
                 input.Bind(wx.EVT_COMBOBOX, self.changed)
@@ -437,15 +438,13 @@ class ParamsTab(ScrolledPanel):
                 col4.Hide()
                 for item in param.select_items:
                     self.choice_widgets[item].extend([input, col4])
-            # else:
-            self.settings_grid.Add(
-                input, proportion=1, flag=wx.ALIGN_CENTER_VERTICAL | wx.EXPAND | wx.LEFT, border=40)
-            self.settings_grid.Add(
-                col4, proportion=1, flag=wx.ALIGN_CENTER_VERTICAL)
+
+            self.settings_grid.Add(input, flag=wx.ALIGN_CENTER_VERTICAL | wx.LEFT | wx.EXPAND, border=40)
+            self.settings_grid.Add(col4, flag=wx.ALIGN_CENTER_VERTICAL)
 
         self.inputs_to_params = {v: k for k, v in self.param_inputs.items()}
 
-        box.Add(self.settings_grid, proportion=1, flag=wx.ALL, border=10)
+        box.Add(self.settings_grid, proportion=1, flag=wx.ALL | wx.EXPAND, border=10)
 
         self.SetSizer(box)
         self.update_choice_widgets()
