@@ -117,7 +117,6 @@ inkstitch_attribs = [
     'grid_size',
     # satin column
     'satin_column',
-    'satin_method',
     'short_stitch_distance_mm',
     'short_stitch_inset',
     'running_stitch_length_mm',

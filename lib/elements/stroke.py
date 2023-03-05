@@ -14,9 +14,9 @@ from ..stitches.running_stitch import bean_stitch, running_stitch
 from ..svg import get_node_transform, parse_length_with_units
 from ..threads import ThreadColor
 from ..utils import Point, cache
+from ..utils.param import ParamOption
 from .element import EmbroideryElement, param
 from .validation import ValidationWarning
-from ..utils.param import ParamOption
 
 warned_about_legacy_running_stitch = False
 

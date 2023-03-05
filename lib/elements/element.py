@@ -104,11 +104,6 @@ class EmbroideryElement(object):
                     not self.node.style('stroke-dasharray')):
                 self.set_param('stroke_method', 'zigzag_stitch')
 
-        # legacy satin method
-        if self.get_boolean_param('e_stitch', False) is True:
-            self.remove_param('e_stitch')
-            self.set_param('satin_method', 'e_stitch')
-
     @property
     def id(self):
         return self.node.get('id')
