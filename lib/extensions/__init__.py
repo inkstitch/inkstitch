@@ -17,7 +17,6 @@ from .cut_satin import CutSatin
 from .cutwork_segmentation import CutworkSegmentation
 from .density_map import DensityMap
 from .duplicate_params import DuplicateParams
-from .preferences import Preferences
 from .fill_to_stroke import FillToStroke
 from .flip import Flip
 from .generate_palette import GeneratePalette
@@ -40,6 +39,7 @@ from .output import Output
 from .palette_split_text import PaletteSplitText
 from .palette_to_text import PaletteToText
 from .params import Params
+from .preferences import Preferences
 from .print_pdf import Print
 from .remove_embroidery_settings import RemoveEmbroiderySettings
 from .reorder import Reorder
@@ -48,6 +48,7 @@ from .selection_to_pattern import SelectionToPattern
 from .simulator import Simulator
 from .stitch_plan_preview import StitchPlanPreview
 from .stitch_plan_preview_undo import StitchPlanPreviewUndo
+from .stroke_to_lpe_satin import StrokeToLpeSatin
 from .zip import Zip
 
 from.lettering_along_path import LetteringAlongPath
@@ -70,6 +71,7 @@ __all__ = extensions = [StitchPlanPreview,
                         GlobalCommands,
                         CommandsScaleSymbols,
                         ConvertToSatin,
+                        StrokeToLpeSatin,
                         ConvertToStroke,
                         JumpToStroke,
                         FillToStroke,
