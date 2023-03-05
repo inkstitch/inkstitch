@@ -58,13 +58,16 @@ def param(*args, **kwargs):
 class EmbroideryElement(object):
     def __init__(self, node):
         self.node = node
+        self._update_legacy_params()
 
+    def _update_legacy_params(self):  # noqa: C901
         # update legacy embroider_ attributes to namespaced attributes
         legacy_attribs = False
         for attrib in self.node.attrib:
             if attrib.startswith('embroider_'):
                 self.replace_legacy_param(attrib)
                 legacy_attribs = True
+
         # convert legacy tie setting
         legacy_tie = self.get_param('ties', None)
         if legacy_tie == "True":
@@ -86,6 +89,25 @@ class EmbroideryElement(object):
         # default setting for fill_underlay has changed
         if legacy_attribs and not self.get_param('fill_underlay', ""):
             self.set_param('fill_underlay', False)
+
+        # convert legacy stroke_method
+        if self.get_style("stroke"):
+            legacy_stroke_method = self.get_int_param('stroke_method', None)
+            legacy_manual_stitch = self.get_boolean_param('manual_stitch', False)
+            if legacy_stroke_method == 1:
+                self.set_param('stroke_method', 'ripple_stitch')
+            if legacy_manual_stitch is True:
+                self.remove_param('manual_stitch')
+                self.set_param('stroke_method', 'manual_stitch')
+            if (not self.get_param('stroke_method', None) and
+                    self.get_param('satin_column', False) is True and
+                    not self.node.style('stroke-dasharray')):
+                self.set_param('stroke_method', 'zigzag_stitch')
+
+        # legacy satin method
+        if self.get_boolean_param('e_stitch', False) is True:
+            self.remove_param('e_stitch')
+            self.set_param('satin_method', 'e_stitch')
 
     @property
     def id(self):
@@ -192,6 +214,10 @@ class EmbroideryElement(object):
         # After calling, this element is invalid due to caching and must be re-created to use the new value.
         param = INKSTITCH_ATTRIBS[name]
         self.node.set(param, str(value))
+
+    def remove_param(self, name):
+        param = INKSTITCH_ATTRIBS[name]
+        del self.node.attrib[param]
 
     @cache
     def _get_specified_style(self):

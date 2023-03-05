@@ -22,6 +22,7 @@ from ..utils import Point, cache, cut, cut_multiple, prng
 from .element import PIXELS_PER_MM, EmbroideryElement, param
 from .validation import ValidationError, ValidationWarning
 from ..utils.threading import check_stop_flag
+from ..utils.param import ParamOption
 
 
 class TooFewPathsError(ValidationError):
@@ -67,7 +68,7 @@ class UnequalPointsWarning(ValidationError):
 
 
 class SatinColumn(EmbroideryElement):
-    element_name = _("Satin Column")
+    element_name = _("Satin")
 
     def __init__(self, *args, **kwargs):
         super(SatinColumn, self).__init__(*args, **kwargs)
@@ -77,17 +78,25 @@ class SatinColumn(EmbroideryElement):
     def satin_column(self):
         return self.get_boolean_param("satin_column")
 
-    # I18N: "E" stitch is so named because it looks like the letter E.
+    _satin_methods = [ParamOption('satin_column', _('Satin Column')),
+                      ParamOption('e_stitch', _('"E" Stitch'))]
+
     @property
-    @param('e_stitch', _('"E" stitch'), type='boolean', default='false')
-    def e_stitch(self):
-        return self.get_boolean_param("e_stitch")
+    @param('satin_method',
+           _('Method'),
+           type='combo',
+           default=0,
+           options=_satin_methods,
+           sort_index=0)
+    def satin_method(self):
+        return self.get_param('satin_method', 'satin_column')
 
     @property
     @param('max_stitch_length_mm',
            _('Maximum stitch length'),
            tooltip=_('Maximum stitch length for split stitches.'),
-           type='float', unit="mm")
+           type='float', unit="mm",
+           sort_index=1)
     def max_stitch_length_px(self):
         return self.get_float_param("max_stitch_length_mm") or None
 
@@ -151,7 +160,8 @@ class SatinColumn(EmbroideryElement):
            _('Short stitch inset'),
            tooltip=_('Stitches in areas with high density will be inset by this amount.'),
            type='float', unit="%",
-           default=15)
+           default=15,
+           sort_index=3)
     def short_stitch_inset(self):
         return self.get_float_param("short_stitch_inset", 15) / 100
 
@@ -160,7 +170,8 @@ class SatinColumn(EmbroideryElement):
            _('Short stitch distance'),
            tooltip=_('Inset stitches if the distance between stitches is smaller than this.'),
            type='float', unit="mm",
-           default=0.25)
+           default=0.25,
+           sort_index=4)
     def short_stitch_distance(self):
         return self.get_float_param("short_stitch_distance_mm", 0.25)
 
@@ -174,7 +185,8 @@ class SatinColumn(EmbroideryElement):
            tooltip=_('Peak-to-peak distance between zig-zags. This is double the mm/stitch measurement used by most mechanical machines.'),
            unit='mm/cycle',
            type='float',
-           default=0.4)
+           default=0.4,
+           sort_index=5)
     def zigzag_spacing(self):
         # peak-to-peak distance between zigzags
         return max(self.get_float_param("zigzag_spacing_mm", 0.4), 0.01)
@@ -187,7 +199,8 @@ class SatinColumn(EmbroideryElement):
                   'Two values separated by a space may be used for an aysmmetric effect.'),
         unit='% (each side)',
         type='float',
-        default=0)
+        default=0,
+        sort_index=6)
     @cache
     def pull_compensation_percent(self):
         # pull compensation as a percentage of the width
@@ -202,7 +215,8 @@ class SatinColumn(EmbroideryElement):
                   'Two values separated by a space may be used for an aysmmetric effect.'),
         unit='mm (each side)',
         type='float',
-        default=0)
+        default=0,
+        sort_index=7)
     @cache
     def pull_compensation_px(self):
         # In satin stitch, the stitches have a tendency to pull together and
@@ -1104,6 +1118,10 @@ class SatinColumn(EmbroideryElement):
         return point1 * (1 - distance_fraction) + point2 * distance_fraction
 
     def to_stitch_groups(self, last_patch=None):
+        # satin type stitches do not have dashes, so let's make sure they don't
+        if self.node.style('stroke-dasharray'):
+            del self.node.style['stroke-dasharray']
+
         # Stitch a variable-width satin column, zig-zagging between two paths.
 
         # The algorithm will draw zigzags between each consecutive pair of
@@ -1125,7 +1143,7 @@ class SatinColumn(EmbroideryElement):
             # zigzags sit on the contour walk underlay like rail ties on rails.
             patch += self.do_zigzag_underlay()
 
-        if self.e_stitch:
+        if self.satin_method == 'e_stitch':
             patch += self.do_e_stitch()
         else:
             patch += self.do_satin()
