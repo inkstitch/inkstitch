@@ -202,7 +202,7 @@ def color_block_to_paths(color_block, svg, destination, visual_commands):
             'style': "stroke: %s; stroke-width: 0.4; fill: none;" % color,
             'd': "M" + " ".join(" ".join(str(coord) for coord in point) for point in point_list),
             'transform': get_correction_transform(svg),
-            INKSTITCH_ATTRIBS['manual_stitch']: 'true'
+            INKSTITCH_ATTRIBS['stroke_method']: 'manual_stitch'
         })
         destination.append(path)
 
