@@ -73,3 +73,28 @@ A satin column which originally starts on the left rail and ends on the right, w
 * Select one or more satin column(s)
 * Run `Extensions > Ink/Stitch  > Tools: Satin > Flip Satin Columns`
 
+## Stroke to Live Path Effect Satin
+
+{% include upcoming_release.html %}
+
+Converts a stroke into a satin using a live path effect. This makes it more adaptable in width and shape as a normal satin column.
+
+### Usage
+
+1. Select a Stroke
+2. Run `Extensions > Ink/Stitch > Tools: Satin > Stroke to Live Path Effect Satin...`
+3. Set the approximate sizes that you wish your satin to be
+4. Click on apply
+
+### Update and change the pattern
+
+Now you can change the pattern in the following ways.
+
+* Update the path as every other path in inkscape with the node tool
+* Change pattern by opening the path effects dialog (`Path > Path Effects`).
+  * Make the satin wider or thinner by manipulating the `width` setting.
+  * Change the pattern element, by clicking `Edit on-canvas` in the `pattern source` setting.
+    
+    ![edit on canvas](/assets/images/tutorials/pattern-along-path/edit.png)
+* Change the pattern by running this tool again
+* Convert it to a normal path (`Shift + Ctrl + C`) and refine the path manually (it will then lose the path effect functionality)
