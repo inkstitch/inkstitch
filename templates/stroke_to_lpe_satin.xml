@@ -27,7 +27,7 @@
         <label>* If you want to add rungs or change specific parts of the satin, convert it to a normal path with Ctrl + Shift + C</label>
         <spacer />
         <label>Get more information on our website</label>
-        <label appearance="url">https://inkstitch.org/docs/satin-tools/#stroke-to-lpe-satin</label>
+        <label appearance="url">https://inkstitch.org/docs/satin-tools/#stroke-to-live-path-effect-satin</label>
       </page>
     </param>
     <effect>
