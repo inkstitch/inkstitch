@@ -5,7 +5,7 @@
 
 import inkex
 
-from ..elements import Stroke
+from ..elements import SatinColumn, Stroke
 from ..i18n import _
 from ..svg.tags import ORIGINAL_D, PATH_EFFECT, SODIPODI_NODETYPES
 from .base import InkstitchExtension
@@ -31,7 +31,7 @@ class StrokeToLpeSatin(InkstitchExtension):
             inkex.errormsg(_("Please select at least one stroke."))
             return
 
-        if not any(isinstance(item, Stroke) for item in self.elements):
+        if not any((isinstance(item, Stroke) or isinstance(item, SatinColumn)) for item in self.elements):
             # L10N: Convert To Satin extension, user selected one or more objects that were not lines.
             inkex.errormsg(_("Please select at least one stroke to convert to a satin column."))
             return
@@ -55,36 +55,59 @@ class StrokeToLpeSatin(InkstitchExtension):
         copy_type = 'repeated' if self.options.stretched is False else 'repeated_stretched'
 
         # add the path effect element to the defs section
-        lpe = inkex.PathEffect(attrib={'id': f'inkstitch-effect-{pattern}',
-                                       'effect': "skeletal",
-                                       'is_visible': "true",
-                                       'lpeversion': "1",
-                                       'pattern': pattern_path,
-                                       'copytype': copy_type,
-                                       'prop_scale': "1",
-                                       'scale_y_rel': "false",
-                                       'spacing': "0",
-                                       'normal_offset': "0",
-                                       'tang_offset': "0",
-                                       'prop_units': "false",
-                                       'vertical_pattern': "false",
-                                       'hide_knot': "false",
-                                       'fuse_tolerance': "0.02",
-                                       'pattern-nodetypes': pattern_node_type})
-        self.svg.defs.add(lpe)
+        self.lpe = inkex.PathEffect(attrib={'id': f'inkstitch-effect-{pattern}',
+                                            'effect': "skeletal",
+                                            'is_visible': "true",
+                                            'lpeversion': "1",
+                                            'pattern': pattern_path,
+                                            'copytype': copy_type,
+                                            'prop_scale': "1",
+                                            'scale_y_rel': "false",
+                                            'spacing': "0",
+                                            'normal_offset': "0",
+                                            'tang_offset': "0",
+                                            'prop_units': "false",
+                                            'vertical_pattern': "false",
+                                            'hide_knot': "false",
+                                            'fuse_tolerance': "0.02",
+                                            'pattern-nodetypes': pattern_node_type})
+        self.svg.defs.add(self.lpe)
 
         for element in self.elements:
-            if not isinstance(element, Stroke):
-                continue
+            if isinstance(element, SatinColumn):
+                self._process_satin_column(element)
+            elif isinstance(element, Stroke):
+                self._process_stroke(element)
 
-            element.set_param('satin_column', 'true')
-            element.node.set(PATH_EFFECT, lpe.get_id(as_url=1))
-            element.node.set(ORIGINAL_D, element.node.get('d', ''))
-            element.node.pop('d')
+    def _process_stroke(self, element):
+        element.set_param('satin_column', 'true')
+        element.node.set(PATH_EFFECT, self.lpe.get_id(as_url=1))
+        element.node.set(ORIGINAL_D, element.node.get('d', ''))
+        element.node.pop('d')
 
-            element.node.style['stroke-width'] = self.svg.viewport_to_unit('0.756')
-            # remove running_stitch dashes if they are there
-            element.update_dash(False)
+        element.node.style['stroke-width'] = self.svg.viewport_to_unit('0.756')
+        # remove running_stitch dashes if they are there
+        element.update_dash(False)
+
+    def _process_satin_column(self, element):
+        current_effects = element.node.get(PATH_EFFECT, None)
+        # there are possibly multiple path effects, let's check if inkstitch-effect is among them
+        if not current_effects or 'inkstitch-effect' not in current_effects:
+            # it wouldn't make sense to apply it to a normal satin column without the inkstitch-effect
+            inkex.errormsg(_('Cannot convert a satin column into a live path effect satin. Please select a stroke.'))
+            return
+        # isolate get the inkstitch effect
+        current_effects = current_effects.split(';')
+        inkstitch_effect_position = [i for i, effect in enumerate(current_effects) if 'inkstitch-effect' in effect][0]
+        inkstitch_effect = current_effects[inkstitch_effect_position][1:]
+        # get the path effect element
+        old_effect_element = self.svg.getElementById(inkstitch_effect)
+        # remove the old inkstitch-effect
+        old_effect_element.getparent().remove(old_effect_element)
+        # update the path effect link
+        current_effects[inkstitch_effect_position] = self.lpe.get_id(as_url=1)
+        element.node.set(PATH_EFFECT, ';'.join(current_effects))
+        element.node.pop('d')
 
 
 class SatinPattern:
