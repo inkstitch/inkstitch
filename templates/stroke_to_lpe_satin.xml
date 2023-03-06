@@ -15,7 +15,7 @@
     </param>
     <param name="min-width" type="float" precision="1" min="0" max="100" gui-text="Min Width">4</param>
     <param name="max-width" type="float" precision="1" min="0" max="100" gui-text="Max Width">7</param>
-    <param name="length" type="float" precision="1" min="0.1" max="100" gui-text="Pattern Length">0.8</param>
+    <param name="length" type="float" precision="1" min="0.1" max="100" gui-text="Pattern Length">15</param>
     <param name="stretched" type="boolean" gui-text="Stretched">false</param>
     <effect>
         <object-type>all</object-type>

@@ -8,8 +8,6 @@ import inkex
 from ..elements import Stroke
 from ..i18n import _
 from ..svg.tags import ORIGINAL_D, PATH_EFFECT, SODIPODI_NODETYPES
-# from ..svg import get_correction_transform
-# from ..svg.tags import SVG_PATH_TAG
 from .base import InkstitchExtension
 
 
@@ -21,7 +19,7 @@ class StrokeToLpeSatin(InkstitchExtension):
         self.arg_parser.add_argument("-p", "--pattern", type=str, default="normal", dest="pattern")
         self.arg_parser.add_argument("-i", "--min-width", type=float, default=1.5, dest="min_width")
         self.arg_parser.add_argument("-a", "--max-width", type=float, default=7, dest="max_width")
-        self.arg_parser.add_argument("-l", "--length", type=float, default=0.8, dest="length")
+        self.arg_parser.add_argument("-l", "--length", type=float, default=15, dest="length")
         self.arg_parser.add_argument("-t", "--stretched", type=inkex.Boolean, default=False, dest="stretched")
 
     def effect(self):
@@ -35,8 +33,6 @@ class StrokeToLpeSatin(InkstitchExtension):
             return
 
         pattern = self.options.pattern
-        import sys
-        print(pattern, satin_patterns, file=sys.stderr)
         if pattern not in satin_patterns:
             inkex.errormsg(_("Could not find the specified pattern."))
             return
@@ -77,12 +73,15 @@ class StrokeToLpeSatin(InkstitchExtension):
             element.node.set(ORIGINAL_D, element.node.get('d', ''))
             element.node.pop('d')
 
+        # It can happen that the d-less path will disappear and cannot be restored.
+        # Poosibly related: https://gitlab.com/inkscape/inkscape/-/merge_requests/4520
+        # It seems as if it behaves better with some sort of output - but that would be a bit annoying.
+        # inkex.errormsg(_("You can edit the pattern through Path > Path Effects ..."))
 
 class SatinPattern:
-    def __init__(self, path=None, node_types=None, flip=True, rung_node=1):
+    def __init__(self, path=None, node_types=None, flip=True):
         self.path: str = path
         self.node_types: str = node_types
-        self.rung_node: int = rung_node
         self.flip: bool = flip
 
     def get_path(self, min_width, max_width, length):
@@ -106,11 +105,7 @@ class SatinPattern:
         el2.apply_transform()
         path2 = el2.get_path()
 
-        # setup a rung
-        point1 = list(path1.end_points)[self.rung_node]
-        point2 = list(path2.end_points)[self.rung_node]
-
-        return str(path1) + str(path2) + f' M {point1[0]} {point1[1] + 0.5} L {point2[0]} {point2[1] - 0.5}'
+        return str(path1) + str(path2)
 
 
 satin_patterns = {'normal': SatinPattern('M 0,0.4 H 4 H 8', 'cc'),
