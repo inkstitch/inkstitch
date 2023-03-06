@@ -73,6 +73,14 @@ class Stroke(EmbroideryElement):
     def dashed(self):
         return self.get_style("stroke-dasharray") is not None
 
+    def update_dash(self, to_dash):
+        if self.dashed == to_dash:
+            return
+        if to_dash is False:
+            del self.node.style['stroke-dasharray']
+        else:
+            self.node.style['stroke-dasharray'] = "1,0.5"
+
     @property
     @param('stroke_method',
            _('Method'),

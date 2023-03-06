@@ -16,6 +16,10 @@ class StrokeToLpeSatin(InkstitchExtension):
 
     def __init__(self, *args, **kwargs):
         InkstitchExtension.__init__(self, *args, **kwargs)
+        self.arg_parser.add_argument("--lpe_satin", type=str, default=None)
+        self.arg_parser.add_argument("--options", type=str, default=None)
+        self.arg_parser.add_argument("--info", type=str, default=None)
+
         self.arg_parser.add_argument("-p", "--pattern", type=str, default="normal", dest="pattern")
         self.arg_parser.add_argument("-i", "--min-width", type=float, default=1.5, dest="min_width")
         self.arg_parser.add_argument("-a", "--max-width", type=float, default=7, dest="max_width")
@@ -37,17 +41,22 @@ class StrokeToLpeSatin(InkstitchExtension):
             inkex.errormsg(_("Could not find the specified pattern."))
             return
 
-        min_width = max(self.options.min_width, 0.5)
-        max_width = max(self.options.max_width, 0.5)
-        length = self.options.length
-        pattern = satin_patterns[pattern]
-        pattern_path = pattern.get_path(min_width, max_width, length)
-        pattern_node_type = pattern.node_types
+        # convert user input values to the units of the current svg
+        min_width = inkex.units.convert_unit(str(max(self.options.min_width, 0.5)) + 'mm', self.svg.unit)
+        max_width = inkex.units.convert_unit(str(max(self.options.max_width, 0.5)) + 'mm', self.svg.unit)
+        length = inkex.units.convert_unit(str(self.options.length) + 'mm', self.svg.unit)
 
+        # get pattern path and nodetypes
+        pattern_obj = satin_patterns[pattern]
+        pattern_path = pattern_obj.get_path(min_width, max_width, length, self.svg.unit)
+        pattern_node_type = pattern_obj.node_types
+
+        # the lpe 'pattern along path' has two options to repeat the pattern, get user input
         copy_type = 'repeated' if self.options.stretched is False else 'repeated_stretched'
 
         # add the path effect element to the defs section
-        lpe = inkex.PathEffect(attrib={'effect': "skeletal",
+        lpe = inkex.PathEffect(attrib={'id': f'inkstitch-effect-{pattern}',
+                                       'effect': "skeletal",
                                        'is_visible': "true",
                                        'lpeversion': "1",
                                        'pattern': pattern_path,
@@ -73,10 +82,10 @@ class StrokeToLpeSatin(InkstitchExtension):
             element.node.set(ORIGINAL_D, element.node.get('d', ''))
             element.node.pop('d')
 
-        # It can happen that the d-less path will disappear and cannot be restored.
-        # Poosibly related: https://gitlab.com/inkscape/inkscape/-/merge_requests/4520
-        # It seems as if it behaves better with some sort of output - but that would be a bit annoying.
-        # inkex.errormsg(_("You can edit the pattern through Path > Path Effects ..."))
+            element.node.style['stroke-width'] = self.svg.viewport_to_unit('0.756')
+            # remove running_stitch dashes if they are there
+            element.update_dash(False)
+
 
 class SatinPattern:
     def __init__(self, path=None, node_types=None, flip=True):
@@ -84,9 +93,16 @@ class SatinPattern:
         self.node_types: str = node_types
         self.flip: bool = flip
 
-    def get_path(self, min_width, max_width, length):
-        el1 = inkex.PathElement(attrib={'d': self.path,
+    def get_path(self, min_width, max_width, length, to_unit):
+        # scale the pattern path to fit the unit of the current svg
+        scale_factor = scale_factor = 1 / inkex.units.convert_unit('1mm', f'{to_unit}')
+        pattern_path = inkex.Path(self.path).transform(inkex.Transform(f'scale({scale_factor})'), True)
+
+        # create a path element
+        el1 = inkex.PathElement(attrib={'d': str(pattern_path),
                                         SODIPODI_NODETYPES: self.node_types})
+
+        # transform to fit user input size values
         bbox = el1.bounding_box()
         scale_x = length / max(bbox.width, 0.1)
         if bbox.height == 0:
@@ -97,6 +113,7 @@ class SatinPattern:
         el1.apply_transform()
         path1 = el1.get_path()
 
+        # copy first path and (optionally) flip it to generate the second satin rail
         el2 = el1.copy()
         if self.flip:
             el2.transform = inkex.Transform(f'scale(1, -1) translate(0, {min_width})')
@@ -108,10 +125,10 @@ class SatinPattern:
         return str(path1) + str(path2)
 
 
-satin_patterns = {'normal': SatinPattern('M 0,0.4 H 4 H 8', 'cc'),
+satin_patterns = {'normal': SatinPattern('M 0,0.4 H 8', 'cc'),
                   'pearl': SatinPattern('M 0,0 C 0,0.22 0.18,0.4 0.4,0.4 0.62,0.4 0.8,0.22 0.8,0', 'csc'),
                   'diamond': SatinPattern('M 0,0 0.4,0.2 0.8,0', 'ccc'),
-                  'triangle': SatinPattern('M 0.0,0 0.4,0.1 0.8,0.2 V 0', 'cccc'),
+                  'triangle': SatinPattern('M 0.0,0 0.8,0.2 V 0', 'cccc'),
                   'square': SatinPattern('M 0,0 H 0.2 0.4 V 0.2 H 0.8 V 0', 'ccccc'),
                   'wave': SatinPattern('M 0,0 C 0.2,0.01 0.29,0.2 0.4,0.2 0.51,0.2 0.58,0.01 0.8,0', 'cac'),
                   'arch': SatinPattern('M 0,0.25 C 0,0.25 0.07,0.05 0.4,0.05 0.7,0.05 0.8,0.25 0.8,0.25', 'czcczc', False)}
