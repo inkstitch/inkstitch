@@ -95,7 +95,8 @@ class Stroke(EmbroideryElement):
     @property
     @param('manual_stitch',
            _('Manual stitch placement'),
-           tooltip=_("Stitch every node in the path. All options other than stop and trim are ignored. Lock stitches will be added only if force lock stitches is checked."),
+           tooltip=_("Stitch every node in the path. All options other than stop and trim are ignored. "
+                     "Lock stitches will be added only if force lock stitches is checked."),
            type='boolean',
            default=False,
            select_items=[('stroke_method', 0)],
