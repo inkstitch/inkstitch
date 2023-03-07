@@ -10,9 +10,9 @@
             <label>Stroke type</label>
                 <param indent="1" name="select-running-stitch" type="boolean" gui-text="Running Stitch">false</param>
                 <param indent="1" name="select-ripples" type="boolean" gui-text="Ripples">false</param>
+                <param indent="1" name="select-zigzag" type="boolean" gui-text="ZigZag Stitch">false</param>
                 <param indent="1" name="select-manual" type="boolean" gui-text="Manual Stitch">false</param>
                 <param indent="1" name="select-polyline" type="boolean" gui-text="Polyline">false</param>
-                <param indent="1" name="select-zigzag" type="boolean" gui-text="ZigZag Stitch">false</param>
             <label>Satin</label>
                 <param indent="1" name="select-satin" type="boolean" gui-text="Satin Column">false</param>
                 <param indent="1" name="select-e" type="boolean" gui-text="E-Stitch">false</param>

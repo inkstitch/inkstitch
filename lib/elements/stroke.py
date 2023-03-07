@@ -84,6 +84,7 @@ class Stroke(EmbroideryElement):
                        ParamOption('ripple_stitch', _("Ripple Stitch")),
                        ParamOption('zigzag_stitch', _("ZigZag Stitch")),
                        ParamOption('manual_stitch', _("Manual Stitch"))]
+
     @property
     @param('stroke_method',
            _('Method'),
@@ -426,7 +427,7 @@ class Stroke(EmbroideryElement):
     def do_bean_repeats(self, stitches):
         return bean_stitch(stitches, self.bean_stitch_repeats)
 
-    def to_stitch_groups(self, last_patch):
+    def to_stitch_groups(self, last_patch):  # noqa: C901
         patches = []
 
         # ripple stitch
