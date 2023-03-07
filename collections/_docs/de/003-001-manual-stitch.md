@@ -36,8 +36,8 @@ Wiederholungen                        | Diese Einstellung hat keine Auswirkung a
 Bean stitch Anzahl der Wiederholungen | Diese Einstellung hat keine Auswirkung auf manuelle Stichpositionierung
 Stichlänge                            | Diese Einstellung hat keine Auswirkung auf manuelle Stichpositionierung
 Zick-Zack Abstand (Spitze zu Spitze)  | Diese Einstellung hat keine Auswirkung auf manuelle Stichpositionierung
-Vernähen erlauben                     | Diese Einstellung hat keine Auswirkung auf manuelle Stichpositionierung
-Vernähen erzwingen                    | Diese Einstellung hat keine Auswirkung auf manuelle Stichpositionierung
+Vernähen erlauben                     | Bei manueller Stichpositionierung wird normalerweise wird kein Vernähstich automatisch hinzugefügt. Vernähstiche können jedoch über die Einstellung `Vernähstiche erzwingen` aktiviert werden.
+Vernähen erzwingen                    | Aktiviert Vernähstiche für Pfade mit manueller Stichpositionierung.
 Fadenschnitt                          | Schneidet den Faden nachdem dieses Objekt genäht wurde
 Stopp                                 | Stoppt die Maschine nachdem dieses Objekt genäht wurde und springt zur Stopp-Position (sofern vorhanden)
 

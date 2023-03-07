@@ -2,7 +2,7 @@
 title: "Manual Stitch"
 permalink: /da/docs/stitches/manual-stitch/
 excerpt: ""
-last_modified_at: 2023-01-14
+last_modified_at: 2023-03-07
 toc: true
 ---
 ## What it is
@@ -40,8 +40,8 @@ Repeats                       ||This setting has no effect on manual stitches
 Running stitch length         ||This setting has no effect on manual stitches
 Running stitch tolerance      ||This setting has no effect on manual stitches
 Zig-Zag spacing (peak-to-peak)||This setting has no effect on manual stitches
-Allow lock stitches           ||Manual stitches to not add lock stitches automatically. Include them directly into your path.
-Force lock stitches           ||This setting has no effect on manual stitches
+Allow lock stitches           ||Usually manual stitches to not add lock stitches automatically and you have to include them directly into your path. But you can enable them through the setting `force lock stitches`.
+Force lock stitches           ||Enables lock stitches for manual stitches.
 Trim After                    ||Trim the thread after sewing this object.
 Stop After                    ||Stop the machine after sewing this object. Before stopping it will jump to the stop position (frame out) if defined.
 {: .params-table }
