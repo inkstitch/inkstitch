@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension translationdomain="inkstitch" xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <name>Stroke to Live Path Effect Satin</name>
+    <id>org.inkstitch.stroke_lpe_satin</id>
+    <param name="extension" type="string" gui-hidden="true">stroke_to_lpe_satin</param>
+    <param name="lpe_satin" type="notebook">
+      <page name="options" gui-text="Options">
+        <label>Converts a stroke into a satin stitch with a changeable life path effect.</label>
+        <param name="pattern" type="optiongroup" appearance="combo" gui-text="Pattern">
+           <option value="normal">Normal</option>
+           <option value="pearl">Pearls</option>
+           <option value="diamond">Diamonds</option>
+           <option value="square">Squares</option>
+           <option value="triangle">Triangles</option>
+           <option value="wave">Wave</option>
+           <option value="arch">Arch</option>
+        </param>
+        <param name="min-width" type="float" precision="1" min="0" max="100" gui-text="Min Width (mm)">4</param>
+        <param name="max-width" type="float" precision="1" min="0" max="100" gui-text="Max Width (mm)">7</param>
+        <param name="length" type="float" precision="1" min="0.1" max="100" gui-text="Pattern Length (mm)">15</param>
+        <param name="stretched" type="boolean" gui-text="Stretched">false</param>
+      </page>
+      <page name="info" gui-text="Help">
+        <label appearance="header">This extension converts a stroke into a satin column using the path effect "pattern along path".</label>
+        <label>* Please note, that the size values can only be an approximation and will be distorted if the original path is not completely straight.</label>
+        <label>* You can edit the satin path through the live path effect settings through Path > Path Effects ...</label>
+        <label>* If you want to add rungs or change specific parts of the satin, convert it to a normal path with Ctrl + Shift + C</label>
+        <spacer />
+        <label>Get more information on our website</label>
+        <label appearance="url">https://inkstitch.org/docs/satin-tools/#stroke-to-live-path-effect-satin</label>
+      </page>
+    </param>
+    <effect>
+        <object-type>all</object-type>
+        <effects-menu>
+            <submenu name="Ink/Stitch" translatable="no">
+                <submenu name="Tools: Satin" />
+            </submenu>
+        </effects-menu>
+    </effect>
+    <script>
+        {{ command_tag | safe }}
+    </script>
+</inkscape-extension>

@@ -33,6 +33,8 @@ CONNECTION_START = inkex.addNS('connection-start', 'inkscape')
 CONNECTION_END = inkex.addNS('connection-end', 'inkscape')
 CONNECTOR_TYPE = inkex.addNS('connector-type', 'inkscape')
 INKSCAPE_DOCUMENT_UNITS = inkex.addNS('document-units', 'inkscape')
+ORIGINAL_D = inkex.addNS('original-d', 'inkscape')
+PATH_EFFECT = inkex.addNS('path-effect', 'inkscape')
 
 XLINK_HREF = inkex.addNS('href', 'xlink')
 
@@ -40,6 +42,7 @@ SODIPODI_NAMEDVIEW = inkex.addNS('namedview', 'sodipodi')
 SODIPODI_GUIDE = inkex.addNS('guide', 'sodipodi')
 SODIPODI_ROLE = inkex.addNS('role', 'sodipodi')
 SODIPODI_INSENSITIVE = inkex.addNS('insensitive', 'sodipodi')
+SODIPODI_NODETYPES = inkex.addNS('nodetypes', 'sodipodi')
 
 INKSTITCH_LETTERING = inkex.addNS('lettering', 'inkstitch')
 
