@@ -21,6 +21,7 @@ class Tile:
 
     def _load_tile(self, tile_path):
         self.tile_svg = inkex.load_svg(os.path.join(tile_path, "tile.svg"))
+        self.preview_image = self._load_preview(tile_path)
         self._load_metadata(tile_path)
         self.tile = None
         self.width = None
@@ -32,9 +33,15 @@ class Tile:
         return self.name < other.name
 
     def __repr__(self):
-        return f"Tile({self.name}, {self.id})"
+        return f"Tile({self.name}, {self.id}, {self.preview_image})"
 
     __str__ = __repr__
+
+    def _load_preview(self, tile_path):
+        image_path = os.path.join(tile_path, "preview.png")
+        if os.path.isfile(image_path):
+            return image_path
+        return None
 
     def _load_metadata(self, tile_path):
         with open(os.path.join(tile_path, "tile.json"), "rb") as tile_json:

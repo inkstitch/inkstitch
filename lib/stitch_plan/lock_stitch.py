@@ -11,13 +11,14 @@ from .stitch import Stitch
 
 
 class LockStitchDefinition:
-    def __init__(self, lock_id=None, name=None, path=None):
+    def __init__(self, lock_id=None, name=None, path=None, preview_image=None):
         self.id: str = lock_id
         self.name: str = name
         self._path: str = path
+        self.preview_image: str = None
 
     def __repr__(self):
-        return "LockStitchDefinition(%s, %s, %s)" % (self.id, self.name, self.path)
+        return "LockStitchDefinition(%s, %s, %s, %s)" % (self.id, self.name, self._path, self.preview_image)
 
     def stitches(self):
         raise NotImplementedError(f"{self.__class__.__name__} must implement stitches()")
