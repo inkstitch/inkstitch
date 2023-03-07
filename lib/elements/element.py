@@ -240,7 +240,7 @@ class EmbroideryElement(object):
     @property
     @param('ties',
            _('Allow lock stitches'),
-           tooltip=_('Tie thread at the beginning and/or end of this object. Manual stitch will not add lock stitches.'),
+           tooltip=_('Tie thread at the beginning and/or end of this object. Manual stitch will only add lock stitches if force lock stitched is checked.'),
            type='dropdown',
            # Ties: 0 = Both | 1 = Before | 2 = After | 3 = Neither
            # L10N options to allow lock stitch before and after objects

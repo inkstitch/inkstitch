@@ -87,7 +87,7 @@ class Stroke(EmbroideryElement):
     @property
     @param('manual_stitch',
            _('Manual stitch placement'),
-           tooltip=_("Stitch every node in the path.  All other options are ignored."),
+           tooltip=_("Stitch every node in the path. All options other than stop and trim are ignored. Lock stitches will be added only if force lock stitches is checked."),
            type='boolean',
            default=False,
            select_items=[('stroke_method', 0)],
@@ -472,7 +472,15 @@ class Stroke(EmbroideryElement):
                 path = [Point(x, y) for x, y in path]
                 # manual stitch
                 if self.manual_stitch_mode:
-                    patch = StitchGroup(color=self.color, stitches=path, lock_stitches=(None, None))
+                    if self.force_lock_stitches:
+                        lock_stitches = self.lock_stitches
+                    else:
+                        # manual stitch disables lock stitches unless they force them
+                        lock_stitches = (None, None)
+                    patch = StitchGroup(color=self.color,
+                                        stitches=path,
+                                        lock_stitches=lock_stitches,
+                                        force_lock_stitches=self.force_lock_stitches)
                 # running stitch
                 elif self.is_running_stitch():
                     patch = self.running_stitch(path, self.running_stitch_length, self.running_stitch_tolerance)
