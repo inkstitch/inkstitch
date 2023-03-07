@@ -31,6 +31,8 @@ class SelectElements(InkstitchExtension):
         pars.add_argument("--select-auto-fill", type=Boolean, dest="fill", default=False)
         pars.add_argument("--select-contour-fill", type=Boolean, dest="contour", default=False)
         pars.add_argument("--select-guided-fill", type=Boolean, dest="guided", default=False)
+        pars.add_argument("--select-meander-fill", type=Boolean, dest="meander", default=False)
+        pars.add_argument("--select-circular-fill", type=Boolean, dest="circular", default=False)
         pars.add_argument("--select-legacy-fill", type=Boolean, dest="legacy", default=False)
         pars.add_argument("--fill-underlay", type=str, dest="fill_underlay", default="all")
         pars.add_argument("--select-clone", type=Boolean, dest="clone", default=False)
@@ -117,13 +119,17 @@ class SelectElements(InkstitchExtension):
         if not self._select_fill_underlay(element):
             return False
         method = element.fill_method
-        if self.options.fill and method == 0:
+        if self.options.fill and method == 'auto_fill':
             select = True
-        elif self.options.contour and method == 1:
+        elif self.options.contour and method == 'contour_fill':
             select = True
-        elif self.options.guided and method == 2:
+        elif self.options.guided and method == 'guided_fill':
             select = True
-        elif self.options.legacy and method == 3:
+        elif self.options.meander and method == 'meander_fill':
+            select = True
+        elif self.options.circular and method == 'circular_fill':
+            select = True
+        elif self.options.legacy and method == 'legacy_fill':
             select = True
         return select
 
