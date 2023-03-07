@@ -28,6 +28,8 @@
                 <param indent="1" name="select-auto-fill" type="boolean" gui-text="Fill">false</param>
                 <param indent="1" name="select-contour-fill" type="boolean" gui-text="Contour Fill">false</param>
                 <param indent="1" name="select-guided-fill" type="boolean" gui-text="Guided Fill">false</param>
+                <param indent="1" name="select-meander-fill" type="boolean" gui-text="Meander Fill">false</param>
+                <param indent="1" name="select-circular-fill" type="boolean" gui-text="Circular Fill">false</param>
                 <param indent="1" name="select-legacy-fill" type="boolean" gui-text="Legacy Fill">false</param>
                 <param indent="1" name="fill-underlay" type="optiongroup" appearance="combo" gui-text="Underlay"
                        gui-description="Only select fills with this underlay">
