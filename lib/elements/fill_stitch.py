@@ -9,6 +9,7 @@ import re
 import sys
 import traceback
 
+import numpy as np
 from inkex import Transform
 from shapely import geometry as shgeo
 from shapely.errors import TopologicalError
@@ -182,7 +183,7 @@ class FillStitch(EmbroideryElement):
     @param('meander_pattern', _('Meander Pattern'), type='combo', default=0,
            options=sorted(tiles.all_tiles()), select_items=[('fill_method', 'meander_fill')], sort_index=3)
     def meander_pattern(self):
-        return self.get_param('meander_pattern', None)
+        return self.get_param('meander_pattern', min(tiles.all_tiles()).id)
 
     @property
     @param('meander_scale_percent',
@@ -192,7 +193,7 @@ class FillStitch(EmbroideryElement):
            select_items=[('fill_method', 'meander_fill')],
            sort_index=4)
     def meander_scale(self):
-        return self.get_split_float_param('meander_scale_percent', (100, 100)) / 100
+        return np.maximum(self.get_split_float_param('meander_scale_percent', (100, 100)), (1, 1)) / 100
 
     @property
     @param('angle',

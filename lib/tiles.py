@@ -100,10 +100,10 @@ class Tile:
 
         return center, width, height
 
-    def _translate_tile(self, shift):
+    def _translate_tile(self, tile, shift):
         translated_tile = []
 
-        for start, end in self.tile:
+        for start, end in tile:
             start += shift
             end += shift
             translated_tile.append((start.as_int().as_tuple(), end.as_int().as_tuple()))
@@ -111,15 +111,16 @@ class Tile:
         return translated_tile
 
     def _scale(self, x_scale, y_scale):
-        self.shift0 = self.shift0.scale(x_scale, y_scale)
-        self.shift1 = self.shift1.scale(x_scale, y_scale)
+        scaled_shift0 = self.shift0.scale(x_scale, y_scale)
+        scaled_shift1 = self.shift1.scale(x_scale, y_scale)
 
         scaled_tile = []
         for start, end in self.tile:
             start = start.scale(x_scale, y_scale)
             end = end.scale(x_scale, y_scale)
             scaled_tile.append((start, end))
-        self.tile = scaled_tile
+
+        return scaled_shift0, scaled_shift1, scaled_tile
 
     @debug.time
     def to_graph(self, shape, scale):
@@ -132,25 +133,25 @@ class Tile:
         """
         self._load()
         x_scale, y_scale = scale
-        self._scale(x_scale, y_scale)
+        shift0, shift1, tile = self._scale(x_scale, y_scale)
 
         shape_center, shape_width, shape_height = self._get_center_and_dimensions(shape)
         shape_diagonal = Point(shape_width, shape_height).length()
         prepared_shape = prep(shape)
 
-        return self._generate_graph(prepared_shape, shape_center, shape_diagonal)
+        return self._generate_graph(prepared_shape, shape_center, shape_diagonal, shift0, shift1, tile)
 
-    def _generate_graph(self, shape, shape_center, shape_diagonal):
+    def _generate_graph(self, shape, shape_center, shape_diagonal, shift0, shift1, tile):
         graph = nx.Graph()
-        tiles0 = ceil(shape_diagonal / self.shift0.length()) + 2
-        tiles1 = ceil(shape_diagonal / self.shift1.length()) + 2
+        tiles0 = ceil(shape_diagonal / shift0.length()) + 2
+        tiles1 = ceil(shape_diagonal / shift1.length()) + 2
         for repeat0 in range(floor(-tiles0 / 2), ceil(tiles0 / 2)):
             for repeat1 in range(floor(-tiles1 / 2), ceil(tiles1 / 2)):
                 check_stop_flag()
 
-                shift0 = repeat0 * self.shift0
-                shift1 = repeat1 * self.shift1
-                this_tile = self._translate_tile(shift0 + shift1 + shape_center)
+                offset0 = repeat0 * shift0
+                offset1 = repeat1 * shift1
+                this_tile = self._translate_tile(tile, offset0 + offset1 + shape_center)
                 for line in this_tile:
                     line_string = LineString(line)
                     if shape.contains(line_string):
