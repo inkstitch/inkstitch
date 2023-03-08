@@ -106,7 +106,7 @@ class ApplyThreadlist(InkstitchExtension):
         colors = []
         threads = pyembroidery.read(path).threadlist
         for color in threads:
-            if color.description.startswith("Cut"):
+            if color.description is not None and color.description.startswith("Cut"):
                 # there is a maximum of 4 needles, we can simply take the last element from the description string
                 colors.append([color.hex_color(), color.description[-1]])
             else:
