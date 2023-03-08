@@ -285,6 +285,7 @@ class Stroke(EmbroideryElement):
            _('Starting scale'),
            tooltip=_('How big the first copy of the line should be, in percent.') + " " + _('Used only for ripple stitch with a guide line.'),
            type='float',
+           unit='%',
            default=100,
            select_items=[('stroke_method', 1)],
            sort_index=13)
@@ -296,6 +297,7 @@ class Stroke(EmbroideryElement):
            _('Ending scale'),
            tooltip=_('How big the last copy of the line should be, in percent.') + " " + _('Used only for ripple stitch with a guide line.'),
            type='float',
+           unit='%',
            default=0.0,
            select_items=[('stroke_method', 1)],
            sort_index=14)
