@@ -229,10 +229,10 @@ def _get_start_rotation(line):
 
 def _generate_satin_guide_helper_lines(stroke, outline, guide_line):
     spacing = guide_line.center_line.length / (stroke.get_line_count() - 1)
-    rail_points = guide_line.plot_points_on_rails(spacing)
+    pairs = guide_line.plot_points_on_rails(spacing)
 
-    point0 = rail_points[0][0]
-    point1 = rail_points[1][0]
+    point0 = pairs[0][0]
+    point1 = pairs[0][1]
     start_rotation = atan2(point1.y - point0.y, point1.x - point0.x)
     start_scale = (point1 - point0).length()
     outline_center = InkstitchPoint.from_shapely_point(outline.centroid)
@@ -240,7 +240,7 @@ def _generate_satin_guide_helper_lines(stroke, outline, guide_line):
     line_point_dict = defaultdict(list)
 
     # add scaled and rotated outlines along the satin column guide line
-    for i, (point0, point1) in enumerate(zip(*rail_points)):
+    for i, (point0, point1) in enumerate(pairs):
         check_stop_flag()
 
         guide_center = (point0 + point1) / 2
