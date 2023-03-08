@@ -1,0 +1,16 @@
+{
+    "name": "Bluenesia 72",
+    "description": "A Syafrizal a.k.a. Khurasan jawn. Includes trims, is 3.5mm satin at 100%.",
+    "leading": 120,
+    "auto_satin": false,
+    "reversible": false,
+    "letter_case": "",
+    "default_glyph": "_",
+    "min_scale": 0.5,
+    "max_scale": 1.0,
+    "horiz_adv_x_default": null,
+    "horiz_adv_x_space": 45,
+    "units_per_em": 100,
+    "horiz_adv_x": {},
+    "kerning_pairs": {}
+}
