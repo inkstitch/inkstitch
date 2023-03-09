@@ -33,17 +33,6 @@ class TooFewPathsError(ValidationError):
     ]
 
 
-class UnequalPointsError(ValidationError):
-    name = _("Unequal number of points")
-    description = _("Satin column: There are no rungs and rails have an an unequal number of points.")
-    steps_to_solve = [
-        _('The easiest way to solve this issue is to add one or more rungs. '),
-        _('Rungs control the stitch direction in satin columns.'),
-        _('* With the selected object press "P" to activate the pencil tool.'),
-        _('* Hold "Shift" while drawing the rung.')
-    ]
-
-
 class NotStitchableError(ValidationError):
     name = _("Not stitchable satin column")
     description = _("A satin column consists out of two rails and one or more rungs. This satin column may have a different setup.")
@@ -56,14 +45,25 @@ class NotStitchableError(ValidationError):
 rung_message = _("Each rung should intersect both rails once.")
 
 
+class TooManyIntersectionsError(ValidationError):
+    name = _("Rungs intersects too many times")
+    description = _("Satin column: A rung intersects a rail more than once.") + " " + rung_message
+
+
 class DanglingRungWarning(ValidationWarning):
     name = _("Rung doesn't intersect rails")
     description = _("Satin column: A rung doesn't intersect both rails.") + " " + rung_message
 
 
-class TooManyIntersectionsError(ValidationError):
-    name = _("Rungs intersects too many times")
-    description = _("Satin column: A rung intersects a rail more than once.") + " " + rung_message
+class UnequalPointsWarning(ValidationError):
+    name = _("Unequal number of points")
+    description = _("Satin column: There are no rungs and rails have an an unequal number of points.")
+    steps_to_solve = [
+        _('The easiest way to solve this issue is to add one or more rungs. '),
+        _('Rungs control the stitch direction in satin columns.'),
+        _('* With the selected object press "P" to activate the pencil tool.'),
+        _('* Hold "Shift" while drawing the rung.')
+    ]
 
 
 class SatinColumn(EmbroideryElement):
@@ -407,10 +407,13 @@ class SatinColumn(EmbroideryElement):
 
     def _synthesize_rungs(self):
         rung_endpoints = []
+        # check for unequal length of rails
+        equal_length = len(self.rails[0]) == len(self.rails[1])
+
         for rail in self.rails:
             points = self.strip_control_points(rail)
 
-            if len(points) > 2:
+            if len(points) > 2 or not equal_length:
                 # Don't bother putting rungs at the start and end.
                 points = points[1:-1]
             else:
@@ -513,6 +516,8 @@ class SatinColumn(EmbroideryElement):
         return sections
 
     def validation_warnings(self):
+        if len(self.csp) == 2 and len(self.rails[0]) != len(self.rails[1]):
+            yield UnequalPointsWarning(self.flattened_rails[0].interpolate(0.5, normalized=True))
         for rung in self.flattened_rungs:
             for rail in self.flattened_rails:
                 intersection = rung.intersection(rail)
@@ -526,9 +531,6 @@ class SatinColumn(EmbroideryElement):
             yield TooFewPathsError((0, 0))
         elif len(self.rails) < 2:
             yield TooFewPathsError(self.shape.centroid)
-        elif len(self.csp) == 2:
-            if len(self.rails[0]) != len(self.rails[1]):
-                yield UnequalPointsError(self.flattened_rails[0].interpolate(0.5, normalized=True))
         else:
             for rung in self.flattened_rungs:
                 for rail in self.flattened_rails:
