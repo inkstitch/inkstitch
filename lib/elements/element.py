@@ -74,7 +74,9 @@ class EmbroideryElement(object):
 
         # convert legacy fill_method
         legacy_fill_method = self.get_int_param('fill_method', None)
-        if legacy_fill_method == 1:
+        if legacy_fill_method == 0:
+            self.set_param('fill_method', 'auto_fill')
+        elif legacy_fill_method == 1:
             self.set_param('fill_method', 'contour_fill')
         elif legacy_fill_method == 2:
             self.set_param('fill_method', 'guided_fill')
