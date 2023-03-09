@@ -92,15 +92,19 @@ class EmbroideryElement(object):
 
         # convert legacy stroke_method
         if self.get_style("stroke"):
-            legacy_stroke_method = self.get_int_param('stroke_method', None)
+            # manual stitch
             legacy_manual_stitch = self.get_boolean_param('manual_stitch', False)
-            if legacy_stroke_method == 1:
-                self.set_param('stroke_method', 'ripple_stitch')
             if legacy_manual_stitch is True:
                 self.remove_param('manual_stitch')
                 self.set_param('stroke_method', 'manual_stitch')
+            # stroke_method
+            legacy_stroke_method = self.get_int_param('stroke_method', None)
+            if legacy_stroke_method == 0:
+                self.set_param('stroke_method', 'running_stitch')
+            elif legacy_stroke_method == 1:
+                self.set_param('stroke_method', 'ripple_stitch')
             if (not self.get_param('stroke_method', None) and
-                    self.get_param('satin_column', False) is True and
+                    self.get_param('satin_column', False) is False and
                     not self.node.style('stroke-dasharray')):
                 self.set_param('stroke_method', 'zigzag_stitch')
 
