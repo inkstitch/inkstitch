@@ -1,18 +1,21 @@
 from itertools import combinations
 
 import networkx as nx
+from inkex import errormsg
 from shapely.geometry import MultiPoint, Point
 from shapely.ops import nearest_points
 
-from .running_stitch import running_stitch
 from .. import tiles
 from ..debug import debug
+from ..i18n import _
 from ..utils.clamp_path import clamp_path_to_polygon
-from ..utils.geometry import Point as InkStitchPoint, ensure_geometry_collection
+from ..utils.geometry import Point as InkStitchPoint
+from ..utils.geometry import ensure_geometry_collection
 from ..utils.list import poprandom
 from ..utils.prng import iter_uniform_floats
 from ..utils.smoothing import smooth_path
 from ..utils.threading import check_stop_flag
+from .running_stitch import running_stitch
 
 
 def meander_fill(fill, shape, shape_index, starting_point, ending_point):
@@ -25,6 +28,13 @@ def meander_fill(fill, shape, shape_index, starting_point, ending_point):
 
     debug.log_line_strings(lambda: ensure_geometry_collection(shape.boundary).geoms, 'Meander shape')
     graph = tile.to_graph(shape, fill.meander_scale)
+
+    if not graph:
+        label = fill.node.label or fill.node.get_id()
+        errormsg(_('%s: Could not build graph for meander stitching. Try to enlarge your shape or '
+                 'scale your meander pattern down.') % label)
+        return []
+
     debug.log_graph(graph, 'Meander graph')
     ensure_connected(graph)
     start, end = find_starting_and_ending_nodes(graph, shape, starting_point, ending_point)
