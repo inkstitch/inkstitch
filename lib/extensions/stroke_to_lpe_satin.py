@@ -116,10 +116,11 @@ class StrokeToLpeSatin(InkstitchExtension):
 
 
 class SatinPattern:
-    def __init__(self, path=None, node_types=None, flip=True):
+    def __init__(self, path=None, node_types=None, flip=True, rung_node=1):
         self.path: str = path
         self.node_types: str = node_types
         self.flip: bool = flip
+        self.rung_node: int = rung_node
 
     def get_path(self, min_width, max_width, length, to_unit):
         # scale the pattern path to fit the unit of the current svg
@@ -150,13 +151,17 @@ class SatinPattern:
         el2.apply_transform()
         path2 = el2.get_path()
 
-        return str(path1) + str(path2)
+        # setup a rung
+        point1 = list(path1.end_points)[self.rung_node]
+        point2 = list(path2.end_points)[self.rung_node]
+
+        return str(path1) + str(path2) + f' M {point1[0]} {point1[1] + 0.5} L {point2[0]} {point2[1] - 0.5}'
 
 
-satin_patterns = {'normal': SatinPattern('M 0,0.4 H 8', 'cc'),
+satin_patterns = {'normal': SatinPattern('M 0,0.4 H 4 H 8', 'cc'),
                   'pearl': SatinPattern('M 0,0 C 0,0.22 0.18,0.4 0.4,0.4 0.62,0.4 0.8,0.22 0.8,0', 'csc'),
                   'diamond': SatinPattern('M 0,0 0.4,0.2 0.8,0', 'ccc'),
-                  'triangle': SatinPattern('M 0.0,0 0.8,0.2 V 0', 'cccc'),
+                  'triangle': SatinPattern('M 0.0,0 0.4,0.1 0.8,0.2 V 0', 'cccc'),
                   'square': SatinPattern('M 0,0 H 0.2 0.4 V 0.2 H 0.8 V 0', 'ccccc'),
                   'wave': SatinPattern('M 0,0 C 0.2,0.01 0.29,0.2 0.4,0.2 0.51,0.2 0.58,0.01 0.8,0', 'cac'),
                   'arch': SatinPattern('M 0,0.25 C 0,0.25 0.07,0.05 0.4,0.05 0.7,0.05 0.8,0.25 0.8,0.25', 'czcczc', False)}
