@@ -212,12 +212,24 @@ class SatinColumn(EmbroideryElement):
 
     @property
     @param(
+        'reverse_one_rail',
+        _('Reverse one rail'),
+        tooltip=_('Enabling this may help if your satin renders very strangely.'),
+        type='boolean',
+        default='false',
+        sort_index=10)
+    def reverse_one_rail(self):
+        return self.get_boolean_param('reverse_one_rail', False)
+
+    @property
+    @param(
         'swap_satin_rails',
         _('Swap rails'),
         tooltip=_('Swaps the first and second rails of the satin column, '
                   'affecting which side the thread finished on as well as any sided properties'),
         type='boolean',
-        default='false')
+        default='false',
+        sort_index=11)
     def swap_rails(self):
         return self.get_boolean_param('swap_satin_rails', False)
 
@@ -381,7 +393,12 @@ class SatinColumn(EmbroideryElement):
     @cache
     def flattened_rails(self):
         """The rails, as LineStrings."""
-        return tuple(shgeo.LineString(self.flatten_subpath(rail)) for rail in self.rails)
+        paths = [shgeo.LineString(self.flatten_subpath(rail)) for rail in self.rails]
+
+        if paths and self.reverse_one_rail:
+            paths[0] = shgeo.LineString(paths[0].coords[::-1])
+
+        return tuple(paths)
 
     @property
     @cache
