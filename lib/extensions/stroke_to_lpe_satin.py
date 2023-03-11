@@ -25,6 +25,7 @@ class StrokeToLpeSatin(InkstitchExtension):
         self.arg_parser.add_argument("-a", "--max-width", type=float, default=7, dest="max_width")
         self.arg_parser.add_argument("-l", "--length", type=float, default=15, dest="length")
         self.arg_parser.add_argument("-t", "--stretched", type=inkex.Boolean, default=False, dest="stretched")
+        self.arg_parser.add_argument("-r", "--rungs", type=inkex.Boolean, default=False, dest="add_rungs")
 
     def effect(self):
         if not self.svg.selection or not self.get_elements():
@@ -48,7 +49,7 @@ class StrokeToLpeSatin(InkstitchExtension):
 
         # get pattern path and nodetypes
         pattern_obj = satin_patterns[pattern]
-        pattern_path = pattern_obj.get_path(min_width, max_width, length, self.svg.unit)
+        pattern_path = pattern_obj.get_path(self.options.add_rungs, min_width, max_width, length, self.svg.unit)
         pattern_node_type = pattern_obj.node_types
 
         # the lpe 'pattern along path' has two options to repeat the pattern, get user input
@@ -122,7 +123,7 @@ class SatinPattern:
         self.flip: bool = flip
         self.rung_node: int = rung_node
 
-    def get_path(self, min_width, max_width, length, to_unit):
+    def get_path(self, add_rungs, min_width, max_width, length, to_unit):
         # scale the pattern path to fit the unit of the current svg
         scale_factor = scale_factor = 1 / inkex.units.convert_unit('1mm', f'{to_unit}')
         pattern_path = inkex.Path(self.path).transform(inkex.Transform(f'scale({scale_factor})'), True)
@@ -155,7 +156,11 @@ class SatinPattern:
         point1 = list(path1.end_points)[self.rung_node]
         point2 = list(path2.end_points)[self.rung_node]
 
-        return str(path1) + str(path2) + f' M {point1[0]} {point1[1] + 0.1} L {point2[0]} {point2[1] - 0.2}'
+        rungs = ''
+        if add_rungs:
+            rungs = f' M {point1[0]} {point1[1] + 0.1} L {point2[0]} {point2[1] - 0.2}'
+
+        return str(path1) + str(path2) + rungs
 
 
 satin_patterns = {'normal': SatinPattern('M 0,0.4 H 4 H 8', 'cc'),
