@@ -86,6 +86,11 @@ class EmbroideryElement(object):
         elif legacy_fill_method == 3:
             self.set_param('fill_method', 'legacy_fill')
 
+        # legacy satin method
+        if self.get_boolean_param('e_stitch', False) is True:
+            self.remove_param('e_stitch')
+            self.set_param('satin_method', 'e_stitch')
+
         # default setting for fill_underlay has changed
         if legacy_attribs and not self.get_param('fill_underlay', ""):
             self.set_param('fill_underlay', False)
