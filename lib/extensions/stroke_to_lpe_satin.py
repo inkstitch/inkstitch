@@ -155,7 +155,7 @@ class SatinPattern:
         point1 = list(path1.end_points)[self.rung_node]
         point2 = list(path2.end_points)[self.rung_node]
 
-        return str(path1) + str(path2) + f' M {point1[0]} {point1[1] + 0.5} L {point2[0]} {point2[1] - 0.5}'
+        return str(path1) + str(path2) + f' M {point1[0]} {point1[1] + 0.1} L {point2[0]} {point2[1] - 0.2}'
 
 
 satin_patterns = {'normal': SatinPattern('M 0,0.4 H 4 H 8', 'cc'),
