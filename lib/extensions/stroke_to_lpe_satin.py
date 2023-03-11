@@ -80,13 +80,15 @@ class StrokeToLpeSatin(InkstitchExtension):
                 self._process_stroke(element)
 
     def _process_stroke(self, element):
-        previous_effects = element.node.get(PATH_EFFECT, '')
-        url = previous_effects + ';' + self.lpe.get_id(as_url=1)
-        element.set_param('satin_column', 'true')
-        element.node.set(PATH_EFFECT, url)
+        previous_effects = element.node.get(PATH_EFFECT, None)
         if not previous_effects:
+            element.node.set(PATH_EFFECT, self.lpe.get_id(as_url=1))
             element.node.set(ORIGINAL_D, element.node.get('d', ''))
+        else:
+            url = previous_effects + ';' + self.lpe.get_id(as_url=1)
+            element.node.set(PATH_EFFECT, url)
         element.node.pop('d')
+        element.set_param('satin_column', 'true')
 
         element.node.style['stroke-width'] = self.svg.viewport_to_unit('0.756')
         # remove running_stitch dashes if they are there
