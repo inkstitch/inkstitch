@@ -136,13 +136,12 @@ class SelectElements(InkstitchExtension):
 
     def _select_satin(self, element):
         select = False
-        if not (self.options.satin or self.options.e):
-            return False
         if not self._select_satin_underlay(element):
             return False
-        if self.options.e and element.e_stitch:
+        method = element.satin_method
+        if self.options.satin and method == "satin_column":
             select = True
-        elif self.options.satin and not element.e_stitch:
+        elif self.options.e and method == "e_stitch":
             select = True
         return select
 
