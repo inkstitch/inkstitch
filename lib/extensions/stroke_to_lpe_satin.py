@@ -166,7 +166,7 @@ class SatinPattern:
 satin_patterns = {'normal': SatinPattern('M 0,0.4 H 4 H 8', 'cc'),
                   'pearl': SatinPattern('M 0,0 C 0,0.22 0.18,0.4 0.4,0.4 0.62,0.4 0.8,0.22 0.8,0', 'csc'),
                   'diamond': SatinPattern('M 0,0 0.4,0.2 0.8,0', 'ccc'),
-                  'triangle': SatinPattern('M 0.0,0 0.4,0.1 0.8,0.2 V 0', 'cccc'),
-                  'square': SatinPattern('M 0,0 H 0.2 0.4 V 0.2 H 0.8 V 0', 'ccccc'),
+                  'triangle': SatinPattern('M 0,0 0.4,0.1 0.8,0.2 0.81,0', 'cccc'),
+                  'square': SatinPattern('M 0,0 H 0.2 0.4 L 0.402,0.2 H 0.798 L 0.8,0', 'ccccc'),
                   'wave': SatinPattern('M 0,0 C 0.2,0.01 0.29,0.2 0.4,0.2 0.51,0.2 0.58,0.01 0.8,0', 'cac'),
                   'arch': SatinPattern('M 0,0.25 C 0,0.25 0.07,0.05 0.4,0.05 0.7,0.05 0.8,0.25 0.8,0.25', 'czcczc', False)}
