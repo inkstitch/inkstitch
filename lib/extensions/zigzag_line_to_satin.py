@@ -56,6 +56,20 @@ class ZigzagLineToSatin(InkstitchExtension):
             rails = [point_list[0::2], point_list[1::2]]
             rungs = list(zip(point_list[1::2], point_list[:-1:2]))
             return rails, rungs
+        elif self.options.pattern == "zigzag":
+            # zigzag pattern: VVVVV
+            rails = [point_list[0::2], point_list[1::2]]
+            rail_points = [[], []]
+            for i, rail in enumerate(rails):
+                for j, point in enumerate(rail):
+                    if j == 0 or point in point_list[2::len(point_list)-3]:
+                        rail_points[i].append(point)
+                        continue
+                    p0 = rail[j-1]
+                    rail_points[i].append(inkex.DirectedLineSegment(p0, point).point_at_ratio(0.5))
+                    rail_points[i].append(point)
+            rungs = list(zip(*rail_points))
+            return rail_points, rungs
         else:
             # square pattern: |_|▔|_|▔|
             point_list = [point_list[i:i+4] for i in range(0, len(point_list), 4)]

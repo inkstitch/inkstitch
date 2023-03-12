@@ -9,6 +9,7 @@
         <param name="pattern" type="optiongroup" appearance="combo" gui-text="Line Pattern">
            <option value="square">Square</option>
            <option value="sawtooth">Sawtooth</option>
+           <option value="zigzag">Zigzag</option>
         </param>
         <param name="smoothing" type="boolean" gui-text="Smoothing">true</param> 
         <param name="rungs" type="boolean" gui-text="Add rungs">false</param>
