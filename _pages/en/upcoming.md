@@ -44,6 +44,9 @@ We have good news: Ink/Stitch will be significantly faster due to stitch plan ca
 ### Bean Stitch
   * Add support for [custom repeat patterns](/docs/stitches/bean-stitch/#params) (1 0: ☰-☰-☰-)
 
+### Manual Stitch
+  * Enable automated lock stitches through the force lock stitch option
+
 ### Fill stitch
   * Add support for [fractional-length stagger cycles in fills](/docs/stitches/fill-stitch/#params)
   * [Multiple underlay angle values](/docs/stitches/fill-stitch/#underlay) are now separated by space, not by a comma anymore
@@ -108,7 +111,7 @@ We have good news: Ink/Stitch will be significantly faster due to stitch plan ca
 
 ### Lettering
   * Add font [size filter](/docs/lettering/#options)
-  * Add various [options to include trim commands](/docs/lettering/#options) on all fonts (not just auto routed satin fonts)
+  * Add various [options to include trim commands](/docs/lettering/#options) on all fonts (not only auto routed satin fonts)
   * Allow font folders with multiple files. In this case the font folders are named with the arrows.
     This allows font authors to split up their font file and speed up documents with a lot of elements in them.
     Also it allows them to work at the same font at the same time and exchange only parts of the font.
@@ -129,6 +132,9 @@ We have good news: Ink/Stitch will be significantly faster due to stitch plan ca
 
 ### Stitch Plan
   * Add [option to lock stitch plan](/docs/visualize/#stitch-plan-preview) (make it insensitve for mouse interactions)
+
+### Stroke to Live Path Effect Satin
+  * Converts a Stroke type element into a live path effect satin
 
 ## Embroidery Formats
   * Add file name to header of some file formats

@@ -2,7 +2,7 @@
 title: "Satin Column"
 permalink: /docs/stitches/satin-column/
 excerpt: ""
-last_modified_at: 2023-01-15
+last_modified_at: 2023-03-12
 toc: true
 ---
 ## What it is
@@ -80,6 +80,7 @@ Pull compensation percentage |![Pull compensation example](/assets/images/docs/p
 Pull compensation     |![Pull compensation example](/assets/images/docs/params-satin-pull_compensation.png)|Satin stitches [pull the fabric together](/tutorials/push-pull-compensation/), resulting in a column narrower than you draw in Inkscape. This setting expands each pair of needle penetrations outward from the center of the satin column by a fixed length. Two values separated by a space may be used for an aysmmetric effect.
 Short stitch distance |  | Inset stitches if the distance between stitches is smaller than this (mm).
 Short stitch inset    |  | Stitches in areas with high density will be inset by this amount (%)
+Reverse one rail      |![Reverse Rung](/assets/images/docs/satin-reverse-rung.png) | Enabling this may help if your satin renders very strangely.
 Swap rails            |☑ | Swaps the first and the second rails of a satin column. Affecting which side the thread finishes on as well as any other sided property.
 Zig-Zag spacing       |![Zig-zag spacing example](/assets/images/docs/params-satin-zig-zag-spacing.png)|the peak-to-peak distance between zig-zags
 Allow lock stitches   |☑ |Enables lock stitches in only desired positions

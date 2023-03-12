@@ -98,3 +98,26 @@ Now you can change the pattern in the following ways.
     ![edit on canvas](/assets/images/tutorials/pattern-along-path/edit.png)
 * Change the pattern by running this tool again
 * Convert it to a normal path (`Shift + Ctrl + C`) and refine the path manually (it will then lose the path effect functionality)
+
+## Zigzag Line to Satin
+
+{% include upcoming_release.html %}
+
+When you trace a pattern manually this tool can be helpful to do it all in one run.
+Instead of drawing first the two rails and then several rungs, this tools allows to draw a square- or zigzag line which then can be converted into the satin column style.
+
+### Usage
+
+* Draw you shape with your prefered pattern style.
+* Select the shape and run `Extensions > Ink/Stitch > Tools: Satin > Zigzag Line to Satin`
+  * Select your path style (pattern)
+  * Chose wether the resulting path should be smoothed out or straight lines
+  * Chose if rungs should be inserted or not. The resulting path will always have the same amount of nodes on both rungs.
+
+### Pattern styles
+
+* All patterns start and end with a rung.
+* For **square (1)** and **sawtooth (2)** style pattern draw one rung after the other.
+* The **zigzag (3)** style creates rungs from each peak on each rail to the midpoint between the peaks of the other rail.
+
+![Zigzag Line to Satin Patterns](/assets/images/docs/zigzag-line-to-satin.png)

@@ -2,7 +2,7 @@
 title: "Satin Werkzeuge"
 permalink: /de/docs/satin-tools/
 excerpt: ""
-last_modified_at: 2021-10-30
+last_modified_at: 2023-03-12
 toc: true
 ---
 Unter `Erweiterungen > Ink/Stitch  > Satin Tools` befindet sich eine kleine Anzahl nützlicher Helfer, die das Arbeiten mit [Satinsäulen](/docs/stitches/satin-column/) erleichtern sollen.
@@ -87,28 +87,51 @@ Sonst wird nichts an der Satinsäule verändert.
 * Wähle eine oder mehrere Satinsäule(n) aus
 * Starte `Erweiterungen -> Ink/Stitch -> Satinsäule umkehren`
 
-## Stroke to Live Path Effect Satin
+## Linie zu Pfadeffekt-Satin
 
 {% include upcoming_release.html %}
 
-Converts a stroke into a satin using a live path effect. This makes it more adaptable in width and shape as a normal satin column.
+Konvertiert eine Linie in eine Satinsäule mit Hilfe von Pfadeffekten. Dies macht es einfacher Form und Breite auch im Nachhinein noch anzupassen.
 
-### Usage
+### Funktionsweise
 
-1. Select a Stroke
-2. Run `Extensions > Ink/Stitch > Tools: Satin > Stroke to Live Path Effect Satin...`
-3. Set the approximate sizes that you wish your satin to be
-4. Click on apply
+1. Wähle eine Linie
+2. Öffne `Erweiterungen > Ink/Stitch > Werkzeuge: Satin > Linie zu Pfadeffekt-Satin...`
+3. Setze die ungefähren Maße für die Satinsäule
+4. Klicke auf `Anwenden`
 
-### Update and change the pattern
+### Muster anpassen
 
-Now you can change the pattern in the following ways.
+Es ist möglich auch im Nachhinein das Muster zu personalisieren, bzw. ein andere Muster anzuwenden.
 
-* Update the path as every other path in inkscape with the node tool
-* Change pattern by opening the path effects dialog (`Path > Path Effects`).
-  * Make the satin wider or thinner by manipulating the `width` setting.
-  * Change the pattern element, by clicking `Edit on-canvas` in the `pattern source` setting.
+* Mit dem Knotenwerkzeug kann der Ursprungspfad auch weiterhin geändert und angepasst werden
+* Das Muster kann manuell über die Pfadeffekt-Einstellungen geändert werden (`Pfad > Padeffekte...`)
+  * Mit der Einstellung `Breite` kann das Muster schmaler oder breiter gemacht werden
+  * Das Muster selbst kann über `Auf der Arbeitsfläche bearbeiten` unter `Quelle des Musters` nach Belieben geändert werden.
     
     ![edit on canvas](/assets/images/tutorials/pattern-along-path/edit.png)
-* Change the pattern by running this tool again
-* Convert it to a normal path (`Shift + Ctrl + C`) and refine the path manually (it will then lose the path effect functionality)
+* Um eine andere vordefinierte Form zu verwenden, kann dieses Werkzeug einfach erneut auf den Pfad angewendet werden
+* Um weitere Bearbeitungsmöglichkeiten wie z.B. eine Anpassung der Richtungslinien zu erreichen, kann der Pfad mit `Strg + Umstelltaste + C` auch in einen herkömmlichen Pfad umgewandelt werden (er verliert dabei aber die Funktionalität des Pfadeffekts)
+
+## Zickzack-Linie zu Satin
+
+{% include upcoming_release.html %}
+
+Wenn du manuell eine Form für einen Satinstich nachzeichnen willst, kann dieses Tool hilfreich sein.
+Anstatt zunächst beide Außenlinien und dann die Richtungsvektoren zu erstellen, kann die Form mit einer einzigen Linie generiert werden.
+
+### Funktionsweise
+
+* Zeichne die Form mit Hilfe des bevorzugten Pfadstils (Muster) s.u.
+* Wähle diese Form an und öffne `Erweiterungen > Ink/Stitch > Werkzeuge: Satin > Zickzack-Linie zu Satin...`
+  * Wähle den benutzen Pfadstil (Muster). Ist nicht das richtige Muster ausgewählt, kann es zu komischen Effekten führen.
+  * Wähle ob der resultierende Pfad geglättet werden soll oder nicht
+  * Wähle ob der Pfad Richtungslinien enthalten soll oder nicht. Der so erstellte Pfad hat immer die gleiche Anzahl an Knoten auf beiden Außenlinien.
+
+### Muster
+
+* Alle Muster müssen mit einer Richtungslinie beginnen und enden.
+* Für die Muster **Rechteck (1)** und **Sägezahn (2)** werden der Reihe nach die Richtungslinien gezeichnet.
+* Bei dem Muster **Zickzack (3)** werden Richtungslinien von der jeder Spitze auf jeder Seite auf die Mittelpunkte zwischen den Spitzen der anderen Seite projiziert.
+
+![Zigzag Line to Satin Patterns](/assets/images/docs/zigzag-line-to-satin.png)

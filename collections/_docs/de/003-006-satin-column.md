@@ -77,9 +77,10 @@ Benutzerdefinierte Satinsäule       | ☑ |Muss aktiviert sein, damit diese Ein
 Maximale Stichlänge                 | ![Maximum stitch length](/assets/images/docs/params-satin-maximum_stitch_length.png) | Stiche die diesen Wert übersteigen, werden geteilt.
 Zugausgleich (%)                    |![Pull compensation example](/assets/images/docs/params-satin-pull_compensation.png)|Zusätzliche Zugkompensation, die als Prozentwert der ursprünglichen Breite variiert. Zwei durch ein Leerzeichen getrennte Werte können für einen asymmetrischen Effekt verwendet werden.
 Zugausgleich                        |![Pull compensation example](/assets/images/docs/params-satin-pull_compensation.png)|Satinstiche [ziehen den Stoff zusammen](/tutorials/push-pull-compensation/), was zu einer Säule führt, die schmaler ist, als in Inkscape geplant. Diese Einstellung erweitert jedes Nadeleinstichpaar von der Mitte der Satinsäule nach außen. Es muss experimentell bestimmt werden, wie viel Kompensation für deine Kombination aus Stoff, Faden und Stabilisator benötigt wird. Zwei durch ein Leerzeichen getrennte Werte können für einen asymmetrischen Effekt genutzt werden
-Kurzstich-Dichte                    |Verkürzt Stiche falls der Abstand zwischen den Stichen schmaler als dieser Wert ist (mm).
-Kurzstich-Einzug                    |Stiche in Bereichen mit hoher Dichte werden um diesen Wert verkürzt (%)
-Seiten umkehren                     |Kehrt die Seiten der Satinsäule um (links und rechts). Dies beeinflusst z.B. an welcher Seite der Faden startet und endet. Aber auch jede andere seitenbezogene Einstellung ist hiervon betroffen.
+Kurzstich-Dichte                    | | Verkürzt Stiche falls der Abstand zwischen den Stichen schmaler als dieser Wert ist (mm).
+Kurzstich-Einzug                    | | Stiche in Bereichen mit hoher Dichte werden um diesen Wert verkürzt (%)
+Eine Seite umkehren                 |![Reverse Rung](/assets/images/docs/satin-reverse-rung.png) | Diese Einstellung kann helfen eine Satinsäule zu reparieren, die seltsam aussieht (siehe Bild).
+Seiten umkehren                     | | Kehrt die Seiten der Satinsäule um (links und rechts). Dies beeinflusst z.B. an welcher Seite der Faden startet und endet. Aber auch jede andere seitenbezogene Einstellung ist hiervon betroffen.
 Zick-Zack Abstand (Spitze zu Spitze)|![Zig-zag spacing example](/assets/images/docs/params-satin-zig-zag-spacing.png)|Spitze-zu-Spitze Abstand zwischen Zick-Zacks
 Vernähen erlauben                   | |Vernäht bei Bedarf an den ausgewählten Positionen
 Vernähen erzwingen                  | |Vernäht den Faden nach diesem Element, auch dann, wenn der Abstand zum Folgeobjekt geringer ist als in den [Ink/Stitch Einstellungen](/de/docs/preferences/) definiert.
