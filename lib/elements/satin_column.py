@@ -521,8 +521,7 @@ class SatinColumn(EmbroideryElement):
     def validation_warnings(self):
         if len(self.csp) == 2 and len(self.rails[0]) != len(self.rails[1]):
             yield UnequalPointsWarning(self.flattened_rails[0].interpolate(0.5, normalized=True))
-        rungs = self.flattened_rungs
-        for rung in rungs:
+        for rung in self.flattened_rungs:
             for rail in self.flattened_rails:
                 intersection = rung.intersection(rail)
                 if intersection.is_empty:
