@@ -62,7 +62,7 @@ class StitchPlanPreview(InkstitchExtension):
         if self.options.insensitive is True:
             layer.set(SODIPODI_INSENSITIVE, True)
         else:
-            layer.set(SODIPODI_INSENSITIVE, False)
+            layer.pop(SODIPODI_INSENSITIVE)
 
         # translate stitch plan to the right side of the canvas
         if self.options.move_to_side:
