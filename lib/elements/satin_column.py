@@ -386,13 +386,7 @@ class SatinColumn(EmbroideryElement):
     @property
     @cache
     def flattened_rungs(self):
-        rails = self.flattened_rails
-        rungs = []
-        for rung in self.rungs:
-            rung = shgeo.LineString(self.flatten_subpath(rung))
-            if isinstance(rung.intersection(rails[0]), shgeo.Point) and isinstance(rung.intersection(rails[1]), shgeo.Point):
-                rungs.append(rung)
-        return tuple(rungs)
+        return tuple(shgeo.LineString(self.flatten_subpath(rung)) for rung in self.rungs)
 
     @property
     @cache
@@ -489,15 +483,19 @@ class SatinColumn(EmbroideryElement):
 
         rails = list(self.flattened_rails)
         rungs = self.flattened_rungs
+        cut_points = [[], []]
+
+        for rung in rungs:
+            intersections = rung.intersection(shgeo.MultiLineString(rails))
+            # ignore the rungs that are cutting a rail multiple times
+            if isinstance(intersections, shgeo.MultiPoint) and len(intersections.geoms) > 2:
+                continue
+            for i, rail in enumerate(rails):
+                point_on_rung, point_on_rail = nearest_points(rung, rail)
+                cut_points[i].append(rail.project(point_on_rail))
 
         for i, rail in enumerate(rails):
-            cut_points = []
-
-            for rung in rungs:
-                point_on_rung, point_on_rail = nearest_points(rung, rail)
-                cut_points.append(rail.project(point_on_rail))
-
-            rails[i] = cut_multiple(rail, cut_points)
+            rails[i] = cut_multiple(rail, cut_points[i])
 
         for rail in rails:
             for i in range(len(rail)):
@@ -523,7 +521,7 @@ class SatinColumn(EmbroideryElement):
     def validation_warnings(self):
         if len(self.csp) == 2 and len(self.rails[0]) != len(self.rails[1]):
             yield UnequalPointsWarning(self.flattened_rails[0].interpolate(0.5, normalized=True))
-        rungs = tuple(shgeo.LineString(self.flatten_subpath(rung)) for rung in self.rungs)
+        rungs = self.flattened_rungs
         for rung in rungs:
             for rail in self.flattened_rails:
                 intersection = rung.intersection(rail)
