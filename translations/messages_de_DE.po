@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-03-10 01:28+0000\n"
-"PO-Revision-Date: 2023-03-10 01:29\n"
+"POT-Creation-Date: 2023-03-12 01:27+0000\n"
+"PO-Revision-Date: 2023-03-14 01:12\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-10 01:28+0000\n"
+"POT-Creation-Date: 2023-03-12 01:27+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1085,7 +1085,7 @@ msgstr "Vernähen erlauben"
 
 #: lib/elements/element.py:254
 msgid "Tie thread at the beginning and/or end of this object. Manual stitch will only add lock stitches if force lock stitched is checked."
-msgstr ""
+msgstr "Den Faden am Anfang und/oder Ende dieses Objektes vernähen. Bei manueller Stichpositionierung werden nur dann Vernähstiche eingefügt, wenn die Option Vernächstiche erzwingen aktiviert ist."
 
 #. options to allow lock stitch before and after objects
 #: lib/elements/element.py:259
@@ -1702,7 +1702,7 @@ msgstr "Benutzerdefinierte Satinsäule"
 msgid "\"E\" stitch"
 msgstr "\"E\" Stich"
 
-#: lib/elements/satin_column.py:88 lib/elements/satin_column.py:345
+#: lib/elements/satin_column.py:88 lib/elements/satin_column.py:357
 msgid "Maximum stitch length"
 msgstr "Maximale Stichlänge"
 
@@ -1799,99 +1799,107 @@ msgid "Satin stitches pull the fabric together, resulting in a column narrower t
 msgstr "Satinstiche ziehen den Stoff zusammen. Dadurch wird das Stickbild schmaler, als die in Inkscape gezeichnete Form. Diese Einstellung erweitert die Satinsäule um einen festen Wert, um diesen Effekt auszugleichen. Zwei durch ein Leerzeichen getrennte Werte können für einen asymmetrischen Effekt genutzt werden."
 
 #: lib/elements/satin_column.py:216
+msgid "Reverse one rail"
+msgstr "Eine Außenlinie umkehren"
+
+#: lib/elements/satin_column.py:217
+msgid "Enabling this may help if your satin renders very strangely."
+msgstr "Diese Option kann hilfreich sein, wenn die Satinsäule unerwartet seltsam aussieht."
+
+#: lib/elements/satin_column.py:227
 msgid "Swap rails"
 msgstr "Seiten umkehren"
 
-#: lib/elements/satin_column.py:217
+#: lib/elements/satin_column.py:228
 msgid "Swaps the first and second rails of the satin column, affecting which side the thread finished on as well as any sided properties"
 msgstr "Diese Einstellung beeinflusst, ob der Startpunkt der Satinsäule auf der linken oder rechten Seite liegt."
 
-#: lib/elements/satin_column.py:225
+#: lib/elements/satin_column.py:237
 msgid "Contour underlay"
 msgstr "Konturunterlage"
 
-#: lib/elements/satin_column.py:225 lib/elements/satin_column.py:232
-#: lib/elements/satin_column.py:240 lib/elements/satin_column.py:253
+#: lib/elements/satin_column.py:237 lib/elements/satin_column.py:244
+#: lib/elements/satin_column.py:252 lib/elements/satin_column.py:265
 msgid "Contour Underlay"
 msgstr "Konturunterlage"
 
-#: lib/elements/satin_column.py:232 lib/elements/satin_column.py:269
+#: lib/elements/satin_column.py:244 lib/elements/satin_column.py:281
 msgid "Stitch length"
 msgstr "Stichlänge"
 
-#: lib/elements/satin_column.py:238
+#: lib/elements/satin_column.py:250
 msgid "Inset distance (fixed)"
 msgstr "Einzug (fest)"
 
-#: lib/elements/satin_column.py:239
+#: lib/elements/satin_column.py:251
 msgid "Shrink the outline by a fixed length, to prevent the underlay from showing around the outside of the satin column."
 msgstr "Verkleinert die Umrandung um eine feste Breite, um zu verhindern, dass die Unterlage an der Außenseite der Satinsäule sichtbar wird."
 
-#: lib/elements/satin_column.py:250
+#: lib/elements/satin_column.py:262
 msgid "Inset distance (proportional)"
 msgstr "Einzug (proportional)"
 
-#: lib/elements/satin_column.py:251
+#: lib/elements/satin_column.py:263
 msgid "Shrink the outline by a proportion of the column width, to prevent the underlay from showing around the outside of the satin column."
 msgstr "Verkleinert die Breite der Satinsäule proportional im Verhältnis zur Ursprungsbreite. Dies verhindert, dass die Unterlage an der Außenseite der Satinsäule sichtbar wird."
 
-#: lib/elements/satin_column.py:262
+#: lib/elements/satin_column.py:274
 msgid "Center-walk underlay"
 msgstr "Mittellinien Unterlage"
 
-#: lib/elements/satin_column.py:262 lib/elements/satin_column.py:269
-#: lib/elements/satin_column.py:278 lib/elements/satin_column.py:288
+#: lib/elements/satin_column.py:274 lib/elements/satin_column.py:281
+#: lib/elements/satin_column.py:290 lib/elements/satin_column.py:300
 msgid "Center-Walk Underlay"
 msgstr "Mittellinien Unterlage"
 
-#: lib/elements/satin_column.py:275 lib/elements/stroke.py:109
+#: lib/elements/satin_column.py:287 lib/elements/stroke.py:109
 msgid "Repeats"
 msgstr "Wiederholungen"
 
-#: lib/elements/satin_column.py:276
+#: lib/elements/satin_column.py:288
 msgid "For an odd number of repeats, this will reverse the direction the satin column is stitched, causing stitching to both begin and end at the start point."
 msgstr "Bei einer ungeraden Anzahl an Wiederholungen wird die Richtung, in die die Satinsäule verläuft, umgekehrt. Sie endet dementsprechend wieder am Startpunkt."
 
-#: lib/elements/satin_column.py:286
+#: lib/elements/satin_column.py:298
 msgid "Position"
 msgstr "Position"
 
-#: lib/elements/satin_column.py:287
+#: lib/elements/satin_column.py:299
 #, python-format
 msgid "Position of underlay from between the rails. 0% is along the first rail, 50% is centered, 100% is along the second rail."
 msgstr "Position der Unterlage zwischen den Außenseiten. 0% liegt genau auf der ersten Seite, 50% in der Mitte, 100% auf der zweiten Seite."
 
-#: lib/elements/satin_column.py:295
+#: lib/elements/satin_column.py:307
 msgid "Zig-zag underlay"
 msgstr "Zick-Zack Unterlage"
 
-#: lib/elements/satin_column.py:295 lib/elements/satin_column.py:304
-#: lib/elements/satin_column.py:315 lib/elements/satin_column.py:335
-#: lib/elements/satin_column.py:348
+#: lib/elements/satin_column.py:307 lib/elements/satin_column.py:316
+#: lib/elements/satin_column.py:327 lib/elements/satin_column.py:347
+#: lib/elements/satin_column.py:360
 msgid "Zig-zag Underlay"
 msgstr "Zick-Zack Unterlage"
 
-#: lib/elements/satin_column.py:301
+#: lib/elements/satin_column.py:313
 msgid "Zig-Zag spacing (peak-to-peak)"
 msgstr "Zick-Zack Abstand (Spitze zu Spitze)"
 
-#: lib/elements/satin_column.py:302
+#: lib/elements/satin_column.py:314
 msgid "Distance between peaks of the zig-zags."
 msgstr "Abstand zwischen den Spitzen der Zick-Zacks."
 
-#: lib/elements/satin_column.py:312
+#: lib/elements/satin_column.py:324
 msgid "Inset amount (fixed)"
 msgstr "Einzug (fest)"
 
-#: lib/elements/satin_column.py:313 lib/elements/satin_column.py:333
+#: lib/elements/satin_column.py:325 lib/elements/satin_column.py:345
 msgid "default: half of contour underlay inset"
 msgstr "Voreinstellung: Hälfte des Einzuges der Konturunterlage"
 
-#: lib/elements/satin_column.py:332
+#: lib/elements/satin_column.py:344
 msgid "Inset amount (proportional)"
 msgstr "Einzug (proportional)"
 
-#: lib/elements/satin_column.py:346
+#: lib/elements/satin_column.py:358
 msgid "Split stitch if distance of maximum stitch length is exceeded"
 msgstr "Stich unterteilen, wenn maximale Stichlänge überschritten ist"
 
@@ -1949,7 +1957,7 @@ msgstr "Manuelle Stichpositionierung"
 
 #: lib/elements/stroke.py:98
 msgid "Stitch every node in the path. All options other than stop and trim are ignored. Lock stitches will be added only if force lock stitches is checked."
-msgstr ""
+msgstr "Sticke jeden Knoten dieses Pfades. Alle Optionen (außer Stopp und Fadenschanitt) werden ignoriert. Vernähstiche werden nur dann verwendet, wenn die Option Vernähstiche erzwingen aktiviert ist."
 
 #: lib/elements/stroke.py:110
 msgid "Defines how many times to run down and back along the path."
@@ -2350,11 +2358,11 @@ msgstr "Fadenschnitt-Befehl hinzufügen"
 
 #: lib/extensions/lettering.py:79
 msgid "Use command symbols"
-msgstr ""
+msgstr "Visuelle Befehle verwenden"
 
 #: lib/extensions/lettering.py:81
 msgid "Uses command symbols if enabled. When disabled inserts trim commands as params."
-msgstr ""
+msgstr "Wenn aktiviert, werden visuelle Befehle (Symbole) eingefügt. Wenn deaktiviert, wird der Fadenschnitt über die Parametereinstellungen bestimmt."
 
 #: lib/extensions/lettering.py:89 lib/extensions/params.py:503
 #: print/templates/custom-page.html:23 print/templates/custom-page.html:27
@@ -2505,21 +2513,21 @@ msgstr "Wähle mindestens ein Objekt, dass als Muster markiert werden soll."
 
 #: lib/extensions/stroke_to_lpe_satin.py:31
 msgid "Please select at least one stroke."
-msgstr ""
+msgstr "Bitte mindestens eine Linie auswählen."
 
 #. : Convert To Satin extension, user selected one or more objects that were
 #. not lines.
 #: lib/extensions/stroke_to_lpe_satin.py:36
 msgid "Please select at least one stroke to convert to a satin column."
-msgstr ""
+msgstr "Für die Umwandlung in eine Satinsäule bitte mindestens eine Linie auswählen."
 
 #: lib/extensions/stroke_to_lpe_satin.py:41
 msgid "Could not find the specified pattern."
-msgstr ""
+msgstr "Konnte das gewählte Muster nicht finden."
 
 #: lib/extensions/stroke_to_lpe_satin.py:100
 msgid "Cannot convert a satin column into a live path effect satin. Please select a stroke."
-msgstr ""
+msgstr "Eine Satinsäule kann nicht in einen Pfadeffekt-Satinstich umgewandelt werden. Bitte eine Linie auswählen."
 
 #: lib/extensions/troubleshoot.py:45
 msgid "All selected shapes are valid! "
@@ -2848,7 +2856,7 @@ msgstr "AutoSatin Geradstich %d"
 #: lib/stitches/meander_fill.py:34
 #, python-format
 msgid "%s: Could not build graph for meander stitching. Try to enlarge your shape or scale your meander pattern down."
-msgstr ""
+msgstr "%s: Konnte den Graph für den Meanderstich nicht erstellen. Bitte versuche die Form, auf die er angewendet wird, zu vergrößern - oder das Meander-Muster zu verkleinern."
 
 #: lib/svg/rendering.py:222
 msgid "Stitch Plan"
@@ -5313,119 +5321,119 @@ msgstr "Objekte in Auswahlreihenfolge sortieren"
 
 #: inx/inkstitch_select_elements.inx:3
 msgid "Select embroidery elements"
-msgstr ""
+msgstr "Stickobjekte auswählen"
 
 #: inx/inkstitch_select_elements.inx:8
 msgid "Select options"
-msgstr ""
+msgstr "Optionen auswählen"
 
 #: inx/inkstitch_select_elements.inx:9
 msgid "Select Stitch Type"
-msgstr ""
+msgstr "Sticktyp auswählen"
 
 #: inx/inkstitch_select_elements.inx:10
 msgid "Stroke type"
-msgstr ""
+msgstr "Linien"
 
 #: inx/inkstitch_select_elements.inx:12
 msgid "Ripples"
-msgstr ""
+msgstr "Ripplestich"
 
 #: inx/inkstitch_select_elements.inx:13
 msgid "Manual Stitch"
-msgstr ""
+msgstr "Manuelle Stichpositionierung"
 
 #: inx/inkstitch_select_elements.inx:14
 msgid "Polyline"
-msgstr ""
+msgstr "Polyline"
 
 #: inx/inkstitch_select_elements.inx:15
 msgid "ZigZag Stitch"
-msgstr ""
+msgstr "Zickzack-Stich"
 
 #: inx/inkstitch_select_elements.inx:16
 msgid "Satin"
-msgstr ""
+msgstr "Satin"
 
 #: inx/inkstitch_select_elements.inx:18
 msgid "E-Stitch"
-msgstr ""
+msgstr "E-Stich"
 
 #: inx/inkstitch_select_elements.inx:20
 msgid "Underlay type"
-msgstr ""
+msgstr "Art der Unterlage"
 
 #: inx/inkstitch_select_elements.inx:20
 msgid "Only select satins with this underlay type"
-msgstr ""
+msgstr "Wähle nur Satinsäulen mit dieser Unterlage"
 
 #: inx/inkstitch_select_elements.inx:21 inx/inkstitch_select_elements.inx:36
 msgid "No restriction"
-msgstr ""
+msgstr "Keine Einschränkung"
 
 #: inx/inkstitch_select_elements.inx:22
 msgid "No underlay"
-msgstr ""
+msgstr "Keine Unterlage"
 
 #: inx/inkstitch_select_elements.inx:23
 msgid "Centerwalk"
-msgstr ""
+msgstr "Mittellinie"
 
 #: inx/inkstitch_select_elements.inx:24
 msgid "Contour"
-msgstr ""
+msgstr "Kontur"
 
 #: inx/inkstitch_select_elements.inx:25
 msgid "Zigzag"
-msgstr ""
+msgstr "Zickzack"
 
 #: inx/inkstitch_select_elements.inx:27
 msgid "Fills"
-msgstr ""
+msgstr "Füllungen"
 
 #: inx/inkstitch_select_elements.inx:28
 msgid "Fill"
-msgstr ""
+msgstr "Füllung"
 
 #: inx/inkstitch_select_elements.inx:35
 msgid "Only select fills with this underlay"
-msgstr ""
+msgstr "Wähle nur Füllungen mit dieser Unterlage"
 
 #: inx/inkstitch_select_elements.inx:38
 msgid "No Underlay"
-msgstr ""
+msgstr "Keine Unterlage"
 
 #: inx/inkstitch_select_elements.inx:44
 msgid "Select embroidery objects"
-msgstr ""
+msgstr "Stickobjekte auswählen"
 
 #: inx/inkstitch_select_elements.inx:46
 msgid "Selects specific embroidery elements by stitch type."
-msgstr ""
+msgstr "Stickobjekte nach Stichtyp auswählen."
 
 #: inx/inkstitch_select_elements.inx:47
 msgid "If there is already an active selection, non maching elements will be deselected."
-msgstr ""
+msgstr "Gibt es bereits eine aktive Auswahl, werden Elemente die den Suchkriterien nicht entsprechen, von der Auswahl entfernt."
 
 #: inx/inkstitch_select_elements.inx:53
 msgid "If this isn't working for you, you may need to insert your path to a python executable manualy."
-msgstr ""
+msgstr "Funktioniert diese Erweiterung nicht, kann es nötig sein den Pfad zu Python manuell festzulegen."
 
 #: inx/inkstitch_select_elements.inx:55
 msgid "* Windows: Open the \"Command Prompt\" and type \"where python\". Copy the path and paste it here."
-msgstr ""
+msgstr "* Windows: Öffne die Eingabeaufforderung und schreibe \"where python\". Kopiere den Pfad und füge ihn hier ein."
 
 #: inx/inkstitch_select_elements.inx:56
 msgid "* Linux: Open the command line and type \"which python\". Copy the path and paste it here."
-msgstr ""
+msgstr "* Linux: öffne ein Terminal und schreibe \"which python\". Kopiere den Pfad und füge ihn hier ein."
 
 #: inx/inkstitch_select_elements.inx:57
 msgid "* macOS: doesn't work, sorry"
-msgstr ""
+msgstr "* macOS: funktioniert nicht, sorry"
 
 #: inx/inkstitch_select_elements.inx:58
 msgid "Python Path"
-msgstr ""
+msgstr "Python Pfad"
 
 #: inx/inkstitch_selection_to_guide_line.inx:3
 msgid "Selection to guide line"
@@ -5465,79 +5473,79 @@ msgstr "Stichplan-Vorschau aufheben"
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:3
 msgid "Stroke to Live Path Effect Satin"
-msgstr ""
+msgstr "Linie zu Pfadeffekt-Satin"
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:8
 msgid "Converts a stroke into a satin stitch with a changeable life path effect."
-msgstr ""
+msgstr "Wandelt eine Linie in eine Satinsäule mit anpassbarem Pfadeffekt um."
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:9
 msgid "Pattern"
-msgstr ""
+msgstr "Muster"
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:10
 msgid "Normal"
-msgstr ""
+msgstr "Normal"
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:11
 msgid "Pearls"
-msgstr ""
+msgstr "Perlen"
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:12
 msgid "Diamonds"
-msgstr ""
+msgstr "Diamanten"
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:13
 msgid "Squares"
-msgstr ""
+msgstr "Rechtecke"
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:14
 msgid "Triangles"
-msgstr ""
+msgstr "Dreiecke"
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:15
 msgid "Wave"
-msgstr ""
+msgstr "Wellen"
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:16
 msgid "Arch"
-msgstr ""
+msgstr "Bögen"
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:18
 msgid "Min Width (mm)"
-msgstr ""
+msgstr "Minimale Breite (mm)"
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:19
 msgid "Max Width (mm)"
-msgstr ""
+msgstr "Maximale Breite (mm)"
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:20
 msgid "Pattern Length (mm)"
-msgstr ""
+msgstr "Musterlänge (mm)"
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:21
 msgid "Stretched"
-msgstr ""
+msgstr "Gestreckt"
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:24
 msgid "This extension converts a stroke into a satin column using the path effect \"pattern along path\"."
-msgstr ""
+msgstr "Diese Erweiterung konvertiert eine Linie in eine Satinsäule mithilfe des Pfadeffekts \"Muster entlang Pfad\"."
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:25
 msgid "* Please note, that the size values can only be an approximation and will be distorted if the original path is not completely straight."
-msgstr ""
+msgstr "* Achtung: Die Größenangaben können nur ein Annäherungswert sein. Ist der Originalpfad nicht komplett gerade, wird es zu Verzerrungen kommen."
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:26
 msgid "* You can edit the satin path through the live path effect settings through Path > Path Effects ..."
-msgstr ""
+msgstr "* Der Pfad kann durch die Pfadeffekt-Einstellungen angepasst werden (Pfad > Padeffekte...)"
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:27
 msgid "* If you want to add rungs or change specific parts of the satin, convert it to a normal path with Ctrl + Shift + C"
-msgstr ""
+msgstr "* Sollen manuelle Änderungen, wie bspw. das Hinzufügen von Richtungsvektoren, durchgeführt werden, kann der Pfad in einen gewöhnlichen Pfad umgewandelt werden. Dies geschieht mit der Tastenkombination Strg + Umstelltaste + C"
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:30
 msgid "https://inkstitch.org/docs/satin-tools/#stroke-to-live-path-effect-satin"
-msgstr ""
+msgstr "https://inkstitch.org/de/docs/satin-tools/#linie-zu-pfadeffekt-satin"
 
 #: inx/inkstitch_troubleshoot.inx:3
 msgid "Troubleshoot Objects"
