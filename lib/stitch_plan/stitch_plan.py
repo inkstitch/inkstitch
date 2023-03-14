@@ -44,25 +44,17 @@ def stitch_groups_to_stitch_plan(stitch_groups, collapse_len=None, min_stitch_le
             continue
 
         if color_block.color != stitch_group.color:
-            if len(color_block) == 0:
-                # We just processed a stop, which created a new color block.
-                # end the previous block with a color change
-                stitch_plan.color_blocks[-2].add_stitch(color_change=True)
+            # add a lock stitch to the last element of the previous group
+            lock_stitches = previous_stitch_group.get_lock_stitches("end", disable_ties)
+            if lock_stitches:
+                color_block.add_stitches(stitches=lock_stitches)
+            need_tie_in = True
 
-                # We'll just claim this new block as ours:
-                color_block.color = stitch_group.color
-            else:
-                # add a lock stitch to the last element of the previous group
-                lock_stitches = previous_stitch_group.get_lock_stitches("end", disable_ties)
-                if lock_stitches:
-                    color_block.add_stitches(stitches=lock_stitches)
-                need_tie_in = True
+            # end the previous block with a color change
+            color_block.add_stitch(color_change=True)
 
-                # end the previous block with a color change
-                color_block.add_stitch(color_change=True)
-
-                # make a new block of our color
-                color_block = stitch_plan.new_color_block(color=stitch_group.color)
+            # make a new block of our color
+            color_block = stitch_plan.new_color_block(color=stitch_group.color)
         else:
             if (len(color_block) and not need_tie_in and
                     ((stitch_group.stitches[0] - color_block.stitches[-1]).length() > collapse_len or
@@ -94,7 +86,6 @@ def stitch_groups_to_stitch_plan(stitch_groups, collapse_len=None, min_stitch_le
 
         if stitch_group.stop_after:
             color_block.add_stitch(stop=True)
-            color_block = stitch_plan.new_color_block(color_block.color)
 
         previous_stitch_group = stitch_group
 
