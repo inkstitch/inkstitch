@@ -98,6 +98,14 @@ We have good news: Ink/Stitch will be significantly faster due to stitch plan ca
 
     Generates a center line for fill objects
 
+  * Extensions > Ink/Stitch > Tools: Satin: [Stroke to Live Path Effect Satin](/docs/satin-tools/#stroke-to-live-path-effect-satin)
+
+    Converts a Stroke type element into a live path effect satin
+
+  * Extensions > Ink/Stitch > Tools: Satin > [Zigzag line to Satin](/docs/satin-tools/#zigzag-line-to-satin)
+
+    Converts a square or zigzag line into a satin column
+
 ### Autorun
   * Fix: Keep settings for underpath running stitch tolerance
 
@@ -133,8 +141,6 @@ We have good news: Ink/Stitch will be significantly faster due to stitch plan ca
 ### Stitch Plan
   * Add [option to lock stitch plan](/docs/visualize/#stitch-plan-preview) (make it insensitve for mouse interactions)
 
-### Stroke to Live Path Effect Satin
-  * Converts a Stroke type element into a live path effect satin
-
 ## Embroidery Formats
   * Add file name to header of some file formats
+  * Fix an issue when stop commands resulted into a mismatch between colors and color blocks

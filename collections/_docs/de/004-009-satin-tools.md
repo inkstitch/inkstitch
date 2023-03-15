@@ -135,3 +135,7 @@ Anstatt zunächst beide Außenlinien und dann die Richtungsvektoren zu erstellen
 * Bei dem Muster **Zickzack (3)** werden Richtungslinien von der jeder Spitze auf jeder Seite auf die Mittelpunkte zwischen den Spitzen der anderen Seite projiziert.
 
 ![Zigzag Line to Satin Patterns](/assets/images/docs/zigzag-line-to-satin.png)
+
+Wenn dein Ergebnis so in etwas aussieht wie auf demBild unten, hast du wahrscheinlich das falsche Muster für deine Linie gewählt.
+
+![Zigzag Line wrong pattern](/assets/images/docs/zigzag-line-to-satin-wrong-pattern.png)

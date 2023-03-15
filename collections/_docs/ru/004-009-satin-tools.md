@@ -136,3 +136,7 @@ Instead of drawing first the two rails and then several rungs, this tools allows
 * The **zigzag (3)** style creates rungs from each peak on each rail to the midpoint between the peaks of the other rail.
 
 ![Zigzag Line to Satin Patterns](/assets/images/docs/zigzag-line-to-satin.png)
+
+If you see something like in the image below, you most likely chose the wrong pattern for your stroke setup.
+
+![Zigzag Line wrong pattern](/assets/images/docs/zigzag-line-to-satin-wrong-pattern.png)
