@@ -25,6 +25,7 @@ class StrokeToLpeSatin(InkstitchExtension):
         self.arg_parser.add_argument("-a", "--max-width", type=float, default=7, dest="max_width")
         self.arg_parser.add_argument("-l", "--length", type=float, default=15, dest="length")
         self.arg_parser.add_argument("-t", "--stretched", type=inkex.Boolean, default=False, dest="stretched")
+        self.arg_parser.add_argument("-r", "--rungs", type=inkex.Boolean, default=False, dest="add_rungs")
 
     def effect(self):
         if not self.svg.selection or not self.get_elements():
@@ -48,7 +49,7 @@ class StrokeToLpeSatin(InkstitchExtension):
 
         # get pattern path and nodetypes
         pattern_obj = satin_patterns[pattern]
-        pattern_path = pattern_obj.get_path(min_width, max_width, length, self.svg.unit)
+        pattern_path = pattern_obj.get_path(self.options.add_rungs, min_width, max_width, length, self.svg.unit)
         pattern_node_type = pattern_obj.node_types
 
         # the lpe 'pattern along path' has two options to repeat the pattern, get user input
@@ -80,13 +81,15 @@ class StrokeToLpeSatin(InkstitchExtension):
                 self._process_stroke(element)
 
     def _process_stroke(self, element):
-        previous_effects = element.node.get(PATH_EFFECT, '')
-        url = previous_effects + ';' + self.lpe.get_id(as_url=1)
-        element.set_param('satin_column', 'true')
-        element.node.set(PATH_EFFECT, url)
+        previous_effects = element.node.get(PATH_EFFECT, None)
         if not previous_effects:
+            element.node.set(PATH_EFFECT, self.lpe.get_id(as_url=1))
             element.node.set(ORIGINAL_D, element.node.get('d', ''))
+        else:
+            url = previous_effects + ';' + self.lpe.get_id(as_url=1)
+            element.node.set(PATH_EFFECT, url)
         element.node.pop('d')
+        element.set_param('satin_column', 'true')
 
         element.node.style['stroke-width'] = self.svg.viewport_to_unit('0.756')
         # remove running_stitch dashes if they are there
@@ -114,12 +117,13 @@ class StrokeToLpeSatin(InkstitchExtension):
 
 
 class SatinPattern:
-    def __init__(self, path=None, node_types=None, flip=True):
+    def __init__(self, path=None, node_types=None, flip=True, rung_node=1):
         self.path: str = path
         self.node_types: str = node_types
         self.flip: bool = flip
+        self.rung_node: int = rung_node
 
-    def get_path(self, min_width, max_width, length, to_unit):
+    def get_path(self, add_rungs, min_width, max_width, length, to_unit):
         # scale the pattern path to fit the unit of the current svg
         scale_factor = scale_factor = 1 / inkex.units.convert_unit('1mm', f'{to_unit}')
         pattern_path = inkex.Path(self.path).transform(inkex.Transform(f'scale({scale_factor})'), True)
@@ -148,13 +152,21 @@ class SatinPattern:
         el2.apply_transform()
         path2 = el2.get_path()
 
-        return str(path1) + str(path2)
+        # setup a rung
+        point1 = list(path1.end_points)[self.rung_node]
+        point2 = list(path2.end_points)[self.rung_node]
+
+        rungs = ''
+        if add_rungs:
+            rungs = f' M {point1[0]} {point1[1] + 0.1} L {point2[0]} {point2[1] - 0.2}'
+
+        return str(path1) + str(path2) + rungs
 
 
-satin_patterns = {'normal': SatinPattern('M 0,0.4 H 8', 'cc'),
+satin_patterns = {'normal': SatinPattern('M 0,0.4 H 4 H 8', 'cc'),
                   'pearl': SatinPattern('M 0,0 C 0,0.22 0.18,0.4 0.4,0.4 0.62,0.4 0.8,0.22 0.8,0', 'csc'),
                   'diamond': SatinPattern('M 0,0 0.4,0.2 0.8,0', 'ccc'),
-                  'triangle': SatinPattern('M 0.0,0 0.8,0.2 V 0', 'cccc'),
-                  'square': SatinPattern('M 0,0 H 0.2 0.4 V 0.2 H 0.8 V 0', 'ccccc'),
+                  'triangle': SatinPattern('M 0,0 0.4,0.1 0.8,0.2 0.81,0', 'cccc'),
+                  'square': SatinPattern('M 0,0 H 0.2 0.4 L 0.402,0.2 H 0.798 L 0.8,0', 'ccccc'),
                   'wave': SatinPattern('M 0,0 C 0.2,0.01 0.29,0.2 0.4,0.2 0.51,0.2 0.58,0.01 0.8,0', 'cac'),
                   'arch': SatinPattern('M 0,0.25 C 0,0.25 0.07,0.05 0.4,0.05 0.7,0.05 0.8,0.25 0.8,0.25', 'czcczc', False)}
