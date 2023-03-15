@@ -6,25 +6,25 @@
 import math
 from itertools import chain
 
+import inkex
 import networkx as nx
 from shapely import geometry as shgeo
 from shapely.geometry import Point as ShapelyPoint
-
-import inkex
 
 from ..commands import add_commands
 from ..elements import SatinColumn, Stroke
 from ..i18n import _
 from ..svg import PIXELS_PER_MM, generate_unique_id, line_strings_to_csp
-from ..svg.tags import INKSCAPE_LABEL, INKSTITCH_ATTRIBS, PATH_EFFECT, ORIGINAL_D
+from ..svg.tags import (INKSCAPE_LABEL, INKSTITCH_ATTRIBS, ORIGINAL_D,
+                        PATH_EFFECT)
 from ..utils import Point as InkstitchPoint
 from ..utils import cache, cut
+from ..utils.threading import check_stop_flag
 from .utils.autoroute import (add_elements_to_group, add_jumps,
                               create_new_group, find_path,
                               get_starting_and_ending_nodes,
                               preserve_original_groups,
                               remove_original_elements)
-from ..utils.threading import check_stop_flag
 
 
 class SatinSegment(object):
