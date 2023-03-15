@@ -33,6 +33,7 @@ from .lettering_force_lock_stitches import LetteringForceLockStitches
 from .lettering_generate_json import LetteringGenerateJson
 from .lettering_remove_kerning import LetteringRemoveKerning
 from .letters_to_font import LettersToFont
+from .zigzag_line_to_satin import ZigzagLineToSatin
 from .object_commands import ObjectCommands
 from .object_commands_toggle_visibility import ObjectCommandsToggleVisibility
 from .output import Output
@@ -73,6 +74,7 @@ __all__ = extensions = [StitchPlanPreview,
                         CommandsScaleSymbols,
                         ConvertToSatin,
                         StrokeToLpeSatin,
+                        ZigzagLineToSatin,
                         ConvertToStroke,
                         JumpToStroke,
                         FillToStroke,
