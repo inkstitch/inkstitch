@@ -12,16 +12,18 @@
            <option value="zigzag">Zigzag</option>
         </param>
         <param name="smoothing" type="boolean" gui-text="Smoothing">true</param> 
-        <param name="rungs" type="boolean" gui-text="Add rungs">false</param>
+        <param name="rungs" type="boolean" gui-text="Add rungs">true</param>
+        <param indent="1" name="reduce-rungs" type="boolean" gui-text="Reduce number of rungs">false</param>
       </page>
       <page name="info" gui-text="Help">
         <label appearance="header">This extension converts a zigzag line into a satin column.</label>
         <spacer />
         <label appearance="header">Line Pattern</label>
-        <label>▻ No matter which path style you choose, always start and end with a rung.</label>
+        <label>▻ Always start and end with a rung.</label>
+        <spacer />
         <label>Square: |_|▔|_|▔|</label>
         <label>Sawtooth: |\|\|\|</label>
-        <label>Zigzag: |VVVVV|</label>
+        <label>Zigzag: |\/\/\/|</label>
         <spacer />
         <label>Get more information on our website</label>
         <label appearance="url">https://inkstitch.org/docs/satin-tools/#zigzag-line-to-satin</label>

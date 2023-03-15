@@ -19,8 +19,9 @@ class ZigzagLineToSatin(InkstitchExtension):
         self.arg_parser.add_argument("--info", type=str, default=None)
 
         self.arg_parser.add_argument("-s", "--smoothing", type=inkex.Boolean, default=True, dest="smoothing")
-        self.arg_parser.add_argument("-r", "--rungs", type=inkex.Boolean, default=False, dest="rungs")
         self.arg_parser.add_argument("-p", "--pattern", type=str, default="square", dest="pattern")
+        self.arg_parser.add_argument("-r", "--rungs", type=inkex.Boolean, default=True, dest="rungs")
+        self.arg_parser.add_argument("-l", "--reduce-rungs", type=inkex.Boolean, default=False, dest="reduce_rungs")
 
     def effect(self):
         if not self.svg.selection or not self.get_elements():
@@ -38,6 +39,8 @@ class ZigzagLineToSatin(InkstitchExtension):
             rails, rungs = self._get_rails_and_rungs(point_list)
 
             if self.options.rungs:
+                if self.options.reduce_rungs and len(rungs) > 2:
+                    rungs = rungs[0::2]
                 d.extend(self._rung_path(rungs))
             if not self.options.smoothing:
                 for rail in rails:
