@@ -45,10 +45,11 @@ def stitch_groups_to_stitch_plan(stitch_groups, collapse_len=None, min_stitch_le
 
         if color_block.color != stitch_group.color:
             # add a lock stitch to the last element of the previous group
-            lock_stitches = previous_stitch_group.get_lock_stitches("end", disable_ties)
-            if lock_stitches:
-                color_block.add_stitches(stitches=lock_stitches)
-            need_tie_in = True
+            if not need_tie_in:
+                lock_stitches = previous_stitch_group.get_lock_stitches("end", disable_ties)
+                if lock_stitches:
+                    color_block.add_stitches(stitches=lock_stitches)
+                need_tie_in = True
 
             # end the previous block with a color change
             color_block.add_stitch(color_change=True)
