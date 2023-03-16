@@ -29,7 +29,7 @@ class JumpToStroke(InkstitchExtension):
         last_color = None
         for element in self.elements:
             stitch_group = element.to_stitch_groups(last_stitch_group)
-            end = stitch_group[-1].stitches[-1]
+            end = stitch_group[-1].stitches[0]
             if last_stitch_group is not None and element.color == last_color:
                 start = last_stitch_group.stitches[-1]
                 self.generate_stroke(element, start, end)
