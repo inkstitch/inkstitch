@@ -14,6 +14,7 @@ from shapely import affinity as shaffinity
 from shapely import geometry as shgeo
 from shapely.ops import nearest_points
 
+from ..debug import debug
 from ..i18n import _
 from ..stitch_plan import StitchGroup
 from ..stitches import running_stitch
@@ -794,6 +795,16 @@ class SatinColumn(EmbroideryElement):
                 distance_remaining -= segment_length
                 pos = segment_end
 
+    def _stitch_distance(self, pos0, pos1, old_pos0, old_pos1):
+        d0 = Point.from_shapely_point(pos0) - Point.from_shapely_point(old_pos0)
+        d1 = Point.from_shapely_point(pos1) - Point.from_shapely_point(old_pos1)
+        old_stitch = Point.from_shapely_point(old_pos1) - Point.from_shapely_point(old_pos0)
+        if old_stitch.length() < 0.01:
+            return 0
+        normal = old_stitch.unit().rotate_left()
+        return max(abs(d0 * normal), abs(d1 * normal))
+
+    @debug.time
     def plot_points_on_rails(self, spacing, offset_px=(0, 0), offset_proportional=(0, 0), use_random=False
                              ) -> typing.List[typing.Tuple[Point, Point]]:
         # Take a section from each rail in turn, and plot out an equal number
@@ -801,95 +812,73 @@ class SatinColumn(EmbroideryElement):
         # be contracted or expanded by offset using self.offset_points().
 
         # pre-cache ramdomised parameters to avoid property calls in loop
-        if use_random:
-            seed = prng.join_args(self.random_seed, "satin-points")
-            offset_proportional_min = np.array(offset_proportional) - self.random_width_decrease
-            offset_range = (self.random_width_increase + self.random_width_decrease)
-            spacing_sigma = spacing * self.random_zigzag_spacing
+        # if use_random:
+        #     seed = prng.join_args(self.random_seed, "satin-points")
+        #     offset_proportional_min = np.array(offset_proportional) - self.random_width_decrease
+        #     offset_range = (self.random_width_increase + self.random_width_decrease)
+        #     spacing_sigma = spacing * self.random_zigzag_spacing
 
         pairs = []
+        # cycle = 0
 
-        to_travel = 0
-        cycle = 0
+        for i, (section0, section1) in enumerate(self.flattened_sections):
+            check_stop_flag()
 
-        for section0, section1 in self.flattened_sections:
-            # Take one section at a time, delineated by the rungs.  For each
-            # one, we want to try to travel proportionately on each rail as
-            # we go between stitches.  For example, for the letter O, the
-            # outside rail is longer than the inside rail.  We need to travel
-            # further on the outside rail between each stitch than we do
-            # on the inside rail.
+            if i == 0:
+                pairs.append((section0[0], section1[0]))
+                old_pos0 = section0[0]
+                old_pos1 = section1[0]
 
-            pos0 = section0[0]
-            pos1 = section1[0]
+            path0 = shgeo.LineString(section0)
+            path1 = shgeo.LineString(section1)
 
-            len0 = shgeo.LineString(section0).length
-            len1 = shgeo.LineString(section1).length
+            # Base the number of stitches in each section on the _longer_ of
+            # the two sections. Otherwise, things could get too sparse when one
+            # side is significantly longer (e.g. when going around a corner).
+            # The risk here is that we poke a hole in the fabric if we try to
+            # cram too many stitches on the short bezier.  The user will need
+            # to avoid this through careful construction of paths.
+            num_points = max(path0.length, path1.length) / spacing
 
-            last_index0 = len(section0) - 1
-            last_index1 = len(section1) - 1
+            section_stitch_length = 1.0 / num_points
+            cursor = 0
+            distance = self._stitch_distance(section0[0], section1[0], old_pos0, old_pos1)
+            debug.log(f"distance pre-loop: {distance}")
+            to_travel = (1 - min(distance / spacing, 1.0)) * section_stitch_length
+            # to_travel = section_stitch_length
+            debug.log(f"num_points: {num_points}, section_stitch_length: {section_stitch_length}, to_travel: {to_travel}")
 
-            if len0 == 0:
-                continue
+            iterations = 0
+            while cursor + to_travel <= 1:
+                iterations += 1
+                pos0 = path0.interpolate(cursor + to_travel, normalized=True)
+                pos1 = path1.interpolate(cursor + to_travel, normalized=True)
 
-            ratio = len1 / len0
+                if iterations <= 2:
+                    distance = self._stitch_distance(pos0, pos1, old_pos0, old_pos1)
+                    if abs((spacing - distance) / spacing) > 0.05:
+                        to_travel = (spacing / distance) * to_travel
 
-            index0 = 0
-            index1 = 0
+                        if iterations == 1:
+                            # Don't overshoot the end of this section on the first try.
+                            # If we've gone too far, we want to have a chance to correct.
+                            to_travel = min(to_travel, 1 - cursor)
 
-            while index0 < last_index0 and index1 < last_index1:
-                check_stop_flag()
+                        continue
 
-                # Each iteration of this outer loop is one stitch.  Keep going
-                # until we fall off the end of the section.
+                debug.log(f"iterations: {iterations}")
+                iterations = 0
+                cursor += to_travel
+                to_travel = section_stitch_length
 
-                old_center = shgeo.Point(x / 2 for x in (pos0 + pos1))
+                old_pos0 = pos0
+                old_pos1 = pos1
+                pairs.append((Point.from_shapely_point(pos0), Point.from_shapely_point(pos1)))
 
-                while to_travel > 0 and index0 < last_index0 and index1 < last_index1:
-                    # In this loop, we inch along each rail a tiny bit per
-                    # iteration.  The goal is to travel the requested spacing
-                    # amount along the _centerline_ between the two rails.
-                    #
-                    # Why not just travel the requested amount along the rails
-                    # themselves?  Imagine a letter V.  The distance we travel
-                    # along the rails themselves is much longer than the distance
-                    # between the horizontal stitches themselves:
-                    #
-                    # \______/
-                    #  \____/
-                    #   \__/
-                    #    \/
-                    #
-                    # For more complicated rail shapes, the distance between each
-                    # stitch will vary as the angles of the rails vary.  The
-                    # easiest way to compensate for this is to just go a tiny bit
-                    # at a time and see how far we went.
-
-                    # Note that this is 0.05 pixels, which is around 0.01mm, way
-                    # smaller than the resolution of an embroidery machine.
-                    pos0, index0 = self.walk(section0, pos0, index0, 0.05)
-                    pos1, index1 = self.walk(section1, pos1, index1, 0.05 * ratio)
-
-                    new_center = shgeo.Point(x/2 for x in (pos0 + pos1))
-                    to_travel -= new_center.distance(old_center)
-                    old_center = new_center
-
-                if to_travel <= 0:
-                    if use_random:
-                        roll = prng.uniform_floats(seed, cycle)
-                        offset_prop = offset_proportional_min + roll[0:2] * offset_range
-                        to_travel = spacing + ((roll[2] - 0.5) * 2 * spacing_sigma)
-                    else:
-                        offset_prop = offset_proportional
-                        to_travel = spacing
-
-                    a, b = self.offset_points(pos0, pos1, offset_px, offset_prop)
-                    pairs.append((a, b))
-                    cycle += 1
-
-        if to_travel > 0:
-            a, b = self.offset_points(pos0, pos1, offset_px, offset_prop)
-            pairs.append((a, b))
+        end0 = shgeo.Point(path0.coords[-1])
+        end1 = shgeo.Point(path1.coords[-1])
+        if self._stitch_distance(end0, end1, old_pos0, old_pos1) > 0.1 * PIXELS_PER_MM:
+            pairs.append((end0, end1))
 
         return pairs
 
