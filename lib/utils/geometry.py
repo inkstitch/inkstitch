@@ -203,13 +203,14 @@ class Point:
         return "%s(%s,%s)" % (type(self), self.x, self.y)
 
     def length(self):
-        return math.sqrt(math.pow(self.x, 2.0) + math.pow(self.y, 2.0))
+        return (self.x ** 2 + self.y ** 2) ** 0.5
 
     def distance(self, other):
         return (other - self).length()
 
     def unit(self):
-        return self.mul(1.0 / self.length())
+        length = self.length()
+        return self.__class__(self.x / length, self.y / length)
 
     def angle(self):
         return math.atan2(self.y, self.x)
