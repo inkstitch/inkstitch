@@ -3,8 +3,9 @@ title: "Visualisierung"
 permalink: /de/docs/visualize/
 excerpt: ""
 last_modified_at: 2023-02-20
-toc: false
+toc: true
 ---
+## Simulator / Realistische Vorschau
 
 Wähle die Objekte aus, die in der simulierten Vorschau angezeigt werden sollen. Wenn das gesamtes Design simuliert werden soll, wähle alles (`Strg + A`) oder nichts aus.
 
@@ -64,3 +65,7 @@ Zeigt Punkte in frei wählbaren Farben (Standart: rot, gelb, grün) über dem De
 * Setze die Farben wie gewünscht und klicke auf `Anwenden`
 * Untersuche das Design (evtl. ist es nötig stärker in das Design hineinzuzoomen)
 * Entferne die Dichte-Punkte mit `Ctrl + Z` (rückgängig machen)
+
+## PDF-Export
+
+Die Informationen zum PDF-Export sind auf einer gesonderten Seite zusammengefasst: [mehr Informationen zum PDF-Export](/de/docs/print-pdf)

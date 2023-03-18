@@ -5,6 +5,7 @@ excerpt: ""
 last_modified_at: 2023-02-19
 toc: true
 ---
+## Simulate
 
 Sélectionnez les objets que vous souhaitez voir dans un aperçu simulé. Si vous souhaitez regarder toute votre conception simulée, sélectionnez tout (`Ctrl+A`) ou rien.
 
@@ -13,7 +14,7 @@ Puis faites `Extensions > Ink/Stitch  > Simulate` et appréciez.
 ![Simulator](/assets/images/docs/en/simulator.jpg)
 {: style="border: 2px solid gray; padding: 5px;"}
 
-## Raccourcis pour la Simulation 
+### Raccourcis pour la Simulation 
 
 Raccourci | Effet
 -------- | --------
@@ -66,4 +67,6 @@ Run `Extensions > Ink/Stitch > Visualize and Export > Undo Stitch Plan Preview`
 
 This will display red, yellow and green dots on top of your elements so you can identify areas of high density easily.
 
+## Print PDF
 
+Information about the print pdf preview are collected in an other section: [more info about the pdf export](/fr/docs/print-pdf)

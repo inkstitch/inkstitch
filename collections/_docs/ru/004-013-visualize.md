@@ -67,3 +67,6 @@ Run `Extensions > Ink/Stitch > Visualize and Export > Undo Stitch Plan Preview`
 
 This will display red, yellow and green dots on top of your elements so you can identify areas of high density easily.
 
+## Print PDF
+
+Information about the print pdf preview are collected in an other section: [more info about the pdf export](/ru/docs/print-pdf)

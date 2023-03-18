@@ -120,7 +120,7 @@ docs:
       url: /de/docs/troubleshoot/
     - title: Visualisierung
       url: /de/docs/visualize/
-  - title: (Stick-)Dateien
+  - title: Datei-Export
     children:
     - title: Unterstützte Dateiformate
       url: /de/docs/file-formats/
