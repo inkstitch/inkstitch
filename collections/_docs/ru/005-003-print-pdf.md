@@ -8,7 +8,7 @@ toc: true
 
 ## Accessing the Print Preview
 
-Run `Extensions > Ink/Stitch  > Print` to export the design for printing. You have the possibility to adjust some settings, choose from different templates and send it to your (PDF) printer once you are done.
+Run `Extensions > Ink/Stitch  > Visualise and Export > Print PDF` to export the design for printing. You have the possibility to adjust some settings, choose from different templates and send it to your (PDF) printer once you are done.
 
 ## Customizations
 
@@ -37,7 +37,7 @@ Click `Settings` to access the following options.
 Setting|Description
 ---|---
 Printing Size|You can choose between `Letter` and `A4`.
-Print Layouts|There are two different layout types:<br />⚬ **Embroidery machine operator layout** with color blocks, thread names, stitch counts, and custom notes<br />⚬ **Client oriented layout** designed for you to send to your customer<br />⚬ **Custom page** offers space for free text (e.g. instructions for in-the-hoop projects)
+Print Layouts|There are two different layout types:<br />⚬ **Embroidery machine operator layout** with color blocks, thread names, stitch counts, and custom notes<br />⚬ **Client oriented layout** designed for you to send to your customer<br />⚬ **Full page pattern view** A whole page showing the design only, optionally displays the footer<br />⚬ **Custom page** offers space for free text (e.g. instructions for in-the-hoop projects)
 Save as defaults|*Page Setup* settings can be saved as defaults. Next time you open a print preview it will use your default settings. Linux e.g. would save it default print settings to `~/.config/inkstitch/print_settings.json`.
 
 #### Design

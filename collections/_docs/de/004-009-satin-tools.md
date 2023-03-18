@@ -136,6 +136,6 @@ Anstatt zunächst beide Außenlinien und dann die Richtungsvektoren zu erstellen
 
 ![Zigzag Line to Satin Patterns](/assets/images/docs/zigzag-line-to-satin.png)
 
-Wenn dein Ergebnis so in etwas aussieht wie auf demBild unten, hast du wahrscheinlich das falsche Muster für deine Linie gewählt.
+Wenn dein Ergebnis in etwa so aussieht wie auf dem Bild unten, hast du wahrscheinlich das falsche Muster für deine Linie gewählt.
 
 ![Zigzag Line wrong pattern](/assets/images/docs/zigzag-line-to-satin-wrong-pattern.png)
