@@ -762,47 +762,15 @@ class SatinColumn(EmbroideryElement):
 
         return out1, out2
 
-    def walk(self, path, start_pos, start_index, distance):
-        # Move <distance> pixels along <path>, which is a sequence of line
-        # segments defined by points.
-
-        # <start_index> is the index of the line segment in <path> that
-        # we're currently on.  <start_pos> is where along that line
-        # segment we are.  Return a new position and index.
-
-        # print >> dbg, "walk", start_pos, start_index, distance
-
-        pos = start_pos
-        index = start_index
-        last_index = len(path) - 1
-        distance_remaining = distance
-
-        while True:
-            if index >= last_index:
-                return pos, index
-
-            segment_end = path[index + 1]
-            segment = segment_end - pos
-            segment_length = segment.length()
-
-            if segment_length > distance_remaining:
-                # our walk ends partway along this segment
-                return pos + segment.unit() * distance_remaining, index
-            else:
-                # our walk goes past the end of this segment, so advance
-                # one point
-                index += 1
-                distance_remaining -= segment_length
-                pos = segment_end
-
     def _stitch_distance(self, pos0, pos1, old_pos0, old_pos1):
-        d0 = Point.from_shapely_point(pos0) - Point.from_shapely_point(old_pos0)
-        d1 = Point.from_shapely_point(pos1) - Point.from_shapely_point(old_pos1)
-        old_stitch = Point.from_shapely_point(old_pos1) - Point.from_shapely_point(old_pos0)
+        old_stitch = old_pos1 - old_pos0
         if old_stitch.length() < 0.01:
-            return 0
-        normal = old_stitch.unit().rotate_left()
-        return max(abs(d0 * normal), abs(d1 * normal))
+            return shgeo.LineString((pos0, pos1)).distance(shgeo.Point(old_pos0))
+        else:
+            normal = old_stitch.unit().rotate_left()
+            d0 = pos0 - old_pos0
+            d1 = pos1 - old_pos1
+            return max(abs(d0 * normal), abs(d1 * normal))
 
     @debug.time
     def plot_points_on_rails(self, spacing, offset_px=(0, 0), offset_proportional=(0, 0), use_random=False
@@ -825,9 +793,9 @@ class SatinColumn(EmbroideryElement):
             check_stop_flag()
 
             if i == 0:
-                pairs.append((section0[0], section1[0]))
                 old_pos0 = section0[0]
                 old_pos1 = section1[0]
+                pairs.append(self.offset_points(old_pos0, old_pos1, offset_px, offset_proportional))
 
             path0 = shgeo.LineString(section0)
             path1 = shgeo.LineString(section1)
@@ -843,42 +811,36 @@ class SatinColumn(EmbroideryElement):
             section_stitch_length = 1.0 / num_points
             cursor = 0
             distance = self._stitch_distance(section0[0], section1[0], old_pos0, old_pos1)
-            debug.log(f"distance pre-loop: {distance}")
             to_travel = (1 - min(distance / spacing, 1.0)) * section_stitch_length
-            # to_travel = section_stitch_length
-            debug.log(f"num_points: {num_points}, section_stitch_length: {section_stitch_length}, to_travel: {to_travel}")
+            debug.log(f"num_points: {num_points}, section_stitch_length: {section_stitch_length}, distance: {distance}, to_travel: {to_travel}")
 
             iterations = 0
             while cursor + to_travel <= 1:
                 iterations += 1
-                pos0 = path0.interpolate(cursor + to_travel, normalized=True)
-                pos1 = path1.interpolate(cursor + to_travel, normalized=True)
+                pos0 = Point.from_shapely_point(path0.interpolate(cursor + to_travel, normalized=True))
+                pos1 = Point.from_shapely_point(path1.interpolate(cursor + to_travel, normalized=True))
 
                 if iterations <= 2:
                     distance = self._stitch_distance(pos0, pos1, old_pos0, old_pos1)
                     if abs((spacing - distance) / spacing) > 0.05:
                         to_travel = (spacing / distance) * to_travel
-
                         if iterations == 1:
                             # Don't overshoot the end of this section on the first try.
                             # If we've gone too far, we want to have a chance to correct.
                             to_travel = min(to_travel, 1 - cursor)
-
                         continue
 
-                debug.log(f"iterations: {iterations}")
-                iterations = 0
                 cursor += to_travel
                 to_travel = section_stitch_length
 
                 old_pos0 = pos0
                 old_pos1 = pos1
-                pairs.append((Point.from_shapely_point(pos0), Point.from_shapely_point(pos1)))
+                pairs.append(self.offset_points(pos0, pos1, offset_px, offset_proportional))
+                iterations = 0
 
-        end0 = shgeo.Point(path0.coords[-1])
-        end1 = shgeo.Point(path1.coords[-1])
-        if self._stitch_distance(end0, end1, old_pos0, old_pos1) > 0.1 * PIXELS_PER_MM:
-            pairs.append((end0, end1))
+        if pairs and section0 and section1:
+            if self._stitch_distance(section0[-1], section1[-1], old_pos0, old_pos1) > 0.1 * PIXELS_PER_MM:
+                pairs.append((section0[-1], section1[-1]))
 
         return pairs
 
