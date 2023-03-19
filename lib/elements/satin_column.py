@@ -757,8 +757,9 @@ class SatinColumn(EmbroideryElement):
             offset_a = offset_a * scale
             offset_b = offset_b * scale
 
-        out1 = pos1 + (pos1 - pos2).unit() * offset_a
-        out2 = pos2 + (pos2 - pos1).unit() * offset_b
+        # convert offset to float before using because it may be a numpy.float64
+        out1 = pos1 + (pos1 - pos2).unit() * float(offset_a)
+        out2 = pos2 + (pos2 - pos1).unit() * float(offset_b)
 
         return out1, out2
 
@@ -779,15 +780,9 @@ class SatinColumn(EmbroideryElement):
         # of points on both rails.  Return the points plotted. The points will
         # be contracted or expanded by offset using self.offset_points().
 
-        # pre-cache ramdomised parameters to avoid property calls in loop
-        # if use_random:
-        #     seed = prng.join_args(self.random_seed, "satin-points")
-        #     offset_proportional_min = np.array(offset_proportional) - self.random_width_decrease
-        #     offset_range = (self.random_width_increase + self.random_width_decrease)
-        #     spacing_sigma = spacing * self.random_zigzag_spacing
+        processor = SatinProcessor(self, offset_px, offset_proportional, use_random)
 
         pairs = []
-        # cycle = 0
 
         for i, (section0, section1) in enumerate(self.flattened_sections):
             check_stop_flag()
@@ -795,7 +790,7 @@ class SatinColumn(EmbroideryElement):
             if i == 0:
                 old_pos0 = section0[0]
                 old_pos1 = section1[0]
-                pairs.append(self.offset_points(old_pos0, old_pos1, offset_px, offset_proportional))
+                pairs.append(processor.process_points(old_pos0, old_pos1))
 
             path0 = shgeo.LineString(section0)
             path1 = shgeo.LineString(section1)
@@ -808,11 +803,13 @@ class SatinColumn(EmbroideryElement):
             # to avoid this through careful construction of paths.
             num_points = max(path0.length, path1.length) / spacing
 
-            section_stitch_length = 1.0 / num_points
+            section_stitch_spacing = 1.0 / num_points
             cursor = 0
             distance = self._stitch_distance(section0[0], section1[0], old_pos0, old_pos1)
-            to_travel = (1 - min(distance / spacing, 1.0)) * section_stitch_length
-            debug.log(f"num_points: {num_points}, section_stitch_length: {section_stitch_length}, distance: {distance}, to_travel: {to_travel}")
+            spacing_multiple = processor.get_stitch_spacing_multiple()
+            current_spacing = spacing * spacing_multiple
+            to_travel = (1 - min(distance / spacing, 1.0)) * section_stitch_spacing * spacing_multiple
+            debug.log(f"num_points: {num_points}, section_stitch_spacing: {section_stitch_spacing}, distance: {distance}, to_travel: {to_travel}")
 
             iterations = 0
             while cursor + to_travel <= 1:
@@ -822,8 +819,8 @@ class SatinColumn(EmbroideryElement):
 
                 if iterations <= 2:
                     distance = self._stitch_distance(pos0, pos1, old_pos0, old_pos1)
-                    if abs((spacing - distance) / spacing) > 0.05:
-                        to_travel = (spacing / distance) * to_travel
+                    if abs((current_spacing - distance) / current_spacing) > 0.05:
+                        to_travel = (current_spacing / distance) * to_travel
                         if iterations == 1:
                             # Don't overshoot the end of this section on the first try.
                             # If we've gone too far, we want to have a chance to correct.
@@ -831,16 +828,18 @@ class SatinColumn(EmbroideryElement):
                         continue
 
                 cursor += to_travel
-                to_travel = section_stitch_length
+                spacing_multiple = processor.get_stitch_spacing_multiple()
+                to_travel = section_stitch_spacing * spacing_multiple
+                current_spacing = spacing * spacing_multiple
 
                 old_pos0 = pos0
                 old_pos1 = pos1
-                pairs.append(self.offset_points(pos0, pos1, offset_px, offset_proportional))
+                pairs.append(processor.process_points(pos0, pos1))
                 iterations = 0
 
         if pairs and section0 and section1:
             if self._stitch_distance(section0[-1], section1[-1], old_pos0, old_pos1) > 0.1 * PIXELS_PER_MM:
-                pairs.append((section0[-1], section1[-1]))
+                pairs.append(processor.process_points(section0[-1], section1[-1]))
 
         return pairs
 
@@ -1086,3 +1085,37 @@ class SatinColumn(EmbroideryElement):
             return []
 
         return [patch]
+
+
+class SatinProcessor:
+    def __init__(self, satin, offset_px, offset_proportional, use_random):
+        self.satin = satin
+        self.use_random = use_random
+        self.offset_px = offset_px
+        self.offset_proportional = offset_proportional
+        self.random_zigzag_spacing = satin.random_zigzag_spacing
+
+        if use_random:
+            self.seed = prng.join_args(satin.random_seed, "satin-points")
+            self.offset_proportional_min = np.array(offset_proportional) - satin.random_width_decrease
+            self.offset_range = (satin.random_width_increase + satin.random_width_decrease)
+            self.cycle = 0
+
+    def process_points(self, pos0, pos1):
+        if self.use_random:
+            roll = prng.uniform_floats(self.seed, self.cycle)
+            self.cycle += 1
+            offset_prop = self.offset_proportional_min + roll[0:2] * self.offset_range
+        else:
+            offset_prop = self.offset_proportional
+
+        a, b = self.satin.offset_points(pos0, pos1, self.offset_px, offset_prop)
+        return a, b
+
+    def get_stitch_spacing_multiple(self):
+        if self.use_random:
+            roll = prng.uniform_floats(self.seed, self.cycle)
+            self.cycle += 1
+            return 1.0 + ((roll[0] - 0.5) * 2) * self.random_zigzag_spacing
+        else:
+            return 1.0
