@@ -3,15 +3,17 @@
 # Copyright (c) 2022 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-from inkex import Boolean, Group, PathElement, errormsg
+from inkex import Boolean, Group, PathElement, Transform, errormsg
 from inkex.units import convert_unit
-from shapely.geometry import LineString, MultiLineString, MultiPolygon, Polygon
-from shapely.ops import linemerge, split, voronoi_diagram
+from shapely.geometry import (LineString, MultiLineString, MultiPolygon, Point,
+                              Polygon)
+from shapely.ops import linemerge, nearest_points, split, voronoi_diagram
 
 from ..elements import FillStitch, Stroke
 from ..i18n import _
 from ..stitches.running_stitch import running_stitch
 from ..svg import PIXELS_PER_MM, get_correction_transform
+from ..utils.geometry import Point as InkstitchPoint
 from ..utils.geometry import line_string_to_point_list
 from .base import InkstitchExtension
 
@@ -25,6 +27,7 @@ class FillToStroke(InkstitchExtension):
         self.arg_parser.add_argument("-o", "--keep_original", dest="keep_original", type=Boolean, default=False)
         self.arg_parser.add_argument("-d", "--dashed_line", dest="dashed_line", type=Boolean, default=True)
         self.arg_parser.add_argument("-w", "--line_width_mm", dest="line_width_mm", type=float, default=1)
+        self.arg_parser.add_argument("-g", "--close_gaps", dest="close_gaps", type=Boolean, default=False)
 
     def effect(self):
         if not self.svg.selected or not self.get_elements():
@@ -50,10 +53,9 @@ class FillToStroke(InkstitchExtension):
         index = parent.index(first) + 1
         centerline_group = Group.new("Centerline Group", id=self.uniqueId("centerline_group_"))
         parent.insert(index, centerline_group)
-        transform = get_correction_transform(first)
 
         for element in fill_shapes:
-            transform = element.node.transform @ transform
+            transform = element.node.transform @ Transform(get_correction_transform(element.node, child=True))
             dashed = "stroke-dasharray:12,1.5;" if self.options.dashed_line else ""
             stroke_width = convert_unit(self.line_width, self.svg.unit)
             color = element.node.style('fill')
@@ -65,13 +67,19 @@ class FillToStroke(InkstitchExtension):
                 poly = [polygon for polygon in split_polygon.geoms if isinstance(polygon, Polygon)]
                 multipolygon = MultiPolygon(poly)
 
+            lines = []
+
             for polygon in multipolygon.geoms:
                 multilinestring = self._get_centerline(polygon)
                 if multilinestring is None:
                     continue
+                lines.extend(multilinestring.geoms)
 
-                # insert new elements
-                self._insert_elements(multilinestring, centerline_group, index, transform, style)
+            if self.options.close_gaps:
+                lines = self._close_gaps(lines, cut_lines)
+
+            # insert new elements
+            self._insert_elements(lines, centerline_group, index, transform, style)
 
         # clean up
         if not self.options.keep_original:
@@ -102,7 +110,9 @@ class FillToStroke(InkstitchExtension):
         if len(runs[0]) < 3:
             return
         for interior in polygon.interiors:
-            runs.append(running_stitch(line_string_to_point_list(interior), 1, 0.1))
+            shape = running_stitch(line_string_to_point_list(interior), 1, 0.1)
+            if len(shape) >= 3:
+                runs.append(shape)
         return MultiPolygon([(runs[0], runs[1:])])
 
     def _get_centerline(self, polygon):
@@ -199,13 +209,44 @@ class FillToStroke(InkstitchExtension):
                     continue
         return self._ensure_multilinestring(linemerge(lines))
 
+    def _close_gaps(self, lines, cut_lines):
+        snaped_lines = []
+        lines = MultiLineString(lines)
+        for i, line in enumerate(lines.geoms):
+            # for each cutline check if a the line starts or ends close to it
+            # if so extend the line at the start/end for the distance of the nearest point and snap it to that other line
+            # we do not want to snap it to the rest of the lines directly, this could push the connection point into a unwanted direction
+            coords = list(line.coords)
+            start = Point(coords[0])
+            end = Point(coords[-1])
+            l_l = lines.difference(line)
+            for cut_line in cut_lines:
+                distance = start.distance(l_l)
+                if cut_line.distance(start) < 0.6:
+                    distance = start.distance(l_l)
+                    new_start_point = self._extend_line(line.coords[0], line.coords[1], distance)
+                    coords[0] = nearest_points(Point(list(new_start_point)), l_l)[1]
+                if cut_line.distance(end) < 0.6:
+                    distance = end.distance(l_l)
+                    new_end_point = self._extend_line(line.coords[-1], line.coords[-2], distance)
+                    coords[-1] = nearest_points(Point(list(new_end_point)), l_l)[1]
+            snaped_lines.append(LineString(coords))
+        return snaped_lines
+
+    def _extend_line(self, p1, p2, distance):
+        start_point = InkstitchPoint.from_tuple(p1)
+        end_point = InkstitchPoint.from_tuple(p2)
+        direction = (end_point - start_point).unit()
+        new_point = start_point - direction * distance
+        return new_point
+
     def _ensure_multilinestring(self, lines):
         if not isinstance(lines, MultiLineString):
             lines = MultiLineString([lines])
         return lines
 
     def _insert_elements(self, lines, parent, index, transform, style):
-        for line in lines.geoms:
+        for line in lines:
             d = "M "
             for coord in line.coords:
                 d += "%s,%s " % (coord[0], coord[1])
