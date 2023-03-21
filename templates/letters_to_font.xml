@@ -26,7 +26,11 @@
     </param>
     <param type="path" name="font-dir" gui-text="Font directory" indent="1" mode="folder" filetypes="svg"/>
     <spacer />
-    <param type="boolean" name="import-commands" gui-text="Import commands" indent="1">false</param>
+    <param name="import-commands" type="optiongroup" appearance="combo" gui-text="Import commands" indent="1">
+         <option value="params">As param</option>
+         <option value="symbols">As symbol</option>
+         <option value="none">No</option>
+    </param>
     <spacer />
     <separator />
     <param name="file-description" type="description" indent="1" >

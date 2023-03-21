@@ -17,7 +17,7 @@ from .stitch import Stitch
 from .stitch_plan import StitchPlan
 
 
-def generate_stitch_plan(embroidery_file, import_commands=True):  # noqa: C901
+def generate_stitch_plan(embroidery_file, import_commands="symbols"):  # noqa: C901
     validate_file_path(embroidery_file)
     pattern = pyembroidery.read(embroidery_file)
     stitch_plan = StitchPlan()
@@ -29,7 +29,7 @@ def generate_stitch_plan(embroidery_file, import_commands=True):  # noqa: C901
             if command == pyembroidery.STITCH:
                 color_block.add_stitch(Stitch(x * PIXELS_PER_MM / 10.0, y * PIXELS_PER_MM / 10.0))
             if len(color_block) > 0:
-                if not import_commands and command in [pyembroidery.TRIM, pyembroidery.STOP]:
+                if import_commands == "none" and command in [pyembroidery.TRIM, pyembroidery.STOP]:
                     # Importing commands is not wanted:
                     # start a new color block without inserting the command
                     color_block = stitch_plan.new_color_block(thread)
@@ -53,7 +53,9 @@ def generate_stitch_plan(embroidery_file, import_commands=True):  # noqa: C901
         "height": str(extents[1] * 2),
         "viewBox": "0 0 %s %s" % (extents[0] * 2, extents[1] * 2),
     })
-    render_stitch_plan(svg, stitch_plan)
+
+    visual_commands = True if import_commands == "symbols" else False
+    render_stitch_plan(svg, stitch_plan, visual_commands=visual_commands)
 
     # rename the Stitch Plan layer so that it doesn't get overwritten by Embroider
     layer = svg.find(".//*[@id='__inkstitch_stitch_plan__']")
