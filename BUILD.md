@@ -24,7 +24,7 @@ From here, you now should have a compiled version of Ink/Stitch in the `dist/ink
 
 - In the above example we assume you build the `main` branch. 
 
-- If you have `node v18.x` installed you might need to enable openssl legacy provider if you get an error similar to this: `Error: error:0308010C:digital envelope routines::unsupported`. You can do this by giving the quivalent of this when running the `make` step:
+- If you have `node v18.x` installed you might need to enable openssl legacy provider if you get an error similar to this: `Error: error:0308010C:digital envelope routines::unsupported`. You can do this by giving the equivalent of this when running the `make` step:
 
 ```bash
 NODE_OPTIONS=--openssl-legacy-provider make
