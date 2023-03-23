@@ -1129,10 +1129,6 @@ class SatinColumn(EmbroideryElement):
         # beziers.  The boundary points between beziers serve as "checkpoints",
         # allowing the user to control how the zigzags flow around corners.
 
-        # satin type stitches do not have dashes, so let's make sure they don't
-        if self.node.style('stroke-dasharray'):
-            del self.node.style['stroke-dasharray']
-
         patch = StitchGroup(color=self.color,
                             force_lock_stitches=self.force_lock_stitches,
                             lock_stitches=self.lock_stitches)

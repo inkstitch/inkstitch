@@ -38,14 +38,6 @@ class MultipleGuideLineWarning(ValidationWarning):
     ]
 
 
-class SmallZigZagWarning(ValidationWarning):
-    name = _("Small ZigZag")
-    description = _("This zig zag stitch has a stroke width smaller than 0.5 units.")
-    steps_to_solve = [
-        _("Set your stroke to be dashed to indicate running stitch.  Any kind of dash will work.")
-    ]
-
-
 class Stroke(EmbroideryElement):
     element_name = _("Stroke")
 
@@ -67,18 +59,6 @@ class Stroke(EmbroideryElement):
         if needle is not None:
             needle = f'Cut {needle}'
         return needle
-
-    @property
-    def dashed(self):
-        return self.get_style("stroke-dasharray") is not None
-
-    def update_dash(self, to_dash):
-        if self.dashed == to_dash:
-            return
-        if to_dash is False:
-            del self.node.style['stroke-dasharray']
-        else:
-            self.node.style['stroke-dasharray'] = "1,0.5"
 
     _stroke_methods = [ParamOption('running_stitch', _("Running Stitch / Bean Stitch")),
                        ParamOption('ripple_stitch', _("Ripple Stitch")),
@@ -453,18 +433,12 @@ class Stroke(EmbroideryElement):
                                         force_lock_stitches=self.force_lock_stitches)
                 # running stitch
                 elif self.stroke_method == 'running_stitch':
-                    # running stitches have dashed lines, let's ensure they do
-                    self.update_dash(True)
-
                     patch = self.running_stitch(path, self.running_stitch_length, self.running_stitch_tolerance)
                     # bean stitch
                     if any(self.bean_stitch_repeats):
                         patch.stitches = self.do_bean_repeats(patch.stitches)
                 # simple satin
                 elif self.stroke_method == 'zigzag_stitch':
-                    # zigzag stitches have a continous lines, let's ensure that they do
-                    self.update_dash(False)
-
                     patch = self.simple_satin(path, self.zigzag_spacing, self.stroke_width)
 
                 if patch:
@@ -506,5 +480,3 @@ class Stroke(EmbroideryElement):
                 yield MultipleGuideLineWarning(self._representative_point())
 
         stroke_width, units = parse_length_with_units(self.get_style("stroke-width", "1"))
-        if not self.dashed and stroke_width <= 0.5:
-            yield SmallZigZagWarning(self._representative_point())
