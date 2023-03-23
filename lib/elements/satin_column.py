@@ -45,7 +45,7 @@ class NotStitchableError(ValidationError):
 rung_message = _("Each rung should intersect both rails once.")
 
 
-class TooManyIntersectionsError(ValidationError):
+class TooManyIntersectionsWarning(ValidationWarning):
     name = _("Rungs intersects too many times")
     description = _("Satin column: A rung intersects a rail more than once.") + " " + rung_message
 
@@ -403,7 +403,6 @@ class SatinColumn(EmbroideryElement):
     @property
     @cache
     def flattened_rungs(self):
-        """The rungs, as LineStrings."""
         return tuple(shgeo.LineString(self.flatten_subpath(rung)) for rung in self.rungs)
 
     @property
@@ -501,15 +500,19 @@ class SatinColumn(EmbroideryElement):
 
         rails = list(self.flattened_rails)
         rungs = self.flattened_rungs
+        cut_points = [[], []]
+
+        for rung in rungs:
+            intersections = rung.intersection(shgeo.MultiLineString(rails))
+            # ignore the rungs that are cutting a rail multiple times
+            if isinstance(intersections, shgeo.MultiPoint) and len(intersections.geoms) > 2:
+                continue
+            for i, rail in enumerate(rails):
+                point_on_rung, point_on_rail = nearest_points(rung, rail)
+                cut_points[i].append(rail.project(point_on_rail))
 
         for i, rail in enumerate(rails):
-            cut_points = []
-
-            for rung in rungs:
-                point_on_rung, point_on_rail = nearest_points(rung, rail)
-                cut_points.append(rail.project(point_on_rail))
-
-            rails[i] = cut_multiple(rail, cut_points)
+            rails[i] = cut_multiple(rail, cut_points[i])
 
         for rail in rails:
             for i in range(len(rail)):
@@ -540,6 +543,8 @@ class SatinColumn(EmbroideryElement):
                 intersection = rung.intersection(rail)
                 if intersection.is_empty:
                     yield DanglingRungWarning(rung.interpolate(0.5, normalized=True))
+                elif not isinstance(intersection, shgeo.Point):
+                    yield TooManyIntersectionsWarning(rung.interpolate(0.5, normalized=True))
 
     def validation_errors(self):
         # The node should have exactly two paths with the same number of points - or it should
@@ -548,12 +553,6 @@ class SatinColumn(EmbroideryElement):
             yield TooFewPathsError((0, 0))
         elif len(self.rails) < 2:
             yield TooFewPathsError(self.shape.centroid)
-        else:
-            for rung in self.flattened_rungs:
-                for rail in self.flattened_rails:
-                    intersection = rung.intersection(rail)
-                    if not intersection.is_empty and not isinstance(intersection, shgeo.Point):
-                        yield TooManyIntersectionsError(rung.interpolate(0.5, normalized=True))
 
         if not self.to_stitch_groups():
             yield NotStitchableError(self.shape.centroid)
