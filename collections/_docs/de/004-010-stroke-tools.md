@@ -2,7 +2,7 @@
 title: "Werkzeuge: Linie"
 permalink: /de/docs/stroke-tools/
 excerpt: ""
-last_modified_at: 2023-02-12
+last_modified_at: 2023-03-25
 toc: true
 ---
 ## Automatisch geführter Geradstich
@@ -72,6 +72,7 @@ Die Funktion ist vergleichbar mit der Inkscape Funktion unter `Pfad > Bitmap nac
 * Grenzwert für Sackgassen (mm): Entfernt kurze Linien. In den meisten Fällen ist hier der Wert der ungefähren Linienbreite des Originals in Milimetern einzutragen.
 * Gestrichelte Linie: aktiviere diese Option, wenn das Endergebnis ein Geradstich werden soll (sonst: Zick zack oder Weiterverarbeitung zu Satin)
 * Linienbreite (mm): wird eine Weiterverarbeitung zu Satinsäulen angestrebt, kann hier direkt die Linienbreite angegeben werden. In den meisten Fällen ist aber eine Überprüfung des Ergebnisses notwendig, dafür diesen Wert klein halten.
+* Schnittlinien: Lücken schließen: Bei der Nutzung von Schnittlinien entstehen an der Stelle des Schnitts Lücken, die durch diese Option geschlossen werden können. Diese Option nur anwählen, wenn keine Weiterverarbeitung in Satinsäulen geplant ist.
 
 ## Sprungstich zu Geradstich
 

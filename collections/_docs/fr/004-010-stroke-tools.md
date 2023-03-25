@@ -12,6 +12,7 @@ Cet  outil **remplace** un ensemble de chemins paramétrés en points droits par
 Cette extension cherche à minimiser la longueur des sauts de fil inévitables.
 
 ### Usage
+
 - Sélectionnez tous les chemins paramétrés en points droits que vous souhaitez organiser
 - Exécutez `Extensions > Ink/Stitch > Outils : Trait > Agencement automatique  de points droits`
 - Choisir les options désirées et cliquer sur "Appliquer et quitter"
@@ -34,10 +35,9 @@ Ceci fonctionne d'autant mieux que la largeur de la colonne satin initiale est c
 ### Usage
 
 1. Sélectionez la ou les colonnes satin que vous souhaitez convertir en point droits.
-2. Exécutez  `Extensions > Ink/Stitch > Outils Trait > Convertir  le satin en trait...`
+2. Exécutez  `Extensions > Ink/Stitch > Outils: Trait > Convertir  le satin en trait...`
 3. Choisissez si vous vous souhaitez ou non conserver les colonnes satins sélectionnées.
 4. Cliquez sur Appliquer
-
 
 ## Remplissage en trait
 
@@ -45,13 +45,12 @@ Ceci fonctionne d'autant mieux que la largeur de la colonne satin initiale est c
 
 Des contours paramétrés en remplissage ne donnent jamais rien de bon en broderie, mais convertir un tel contour en colonne satin ou en point droit nécessite beaucoup de travail. Cet outil aide à accomplir cette opération.
 
-Il est comparable à la fonctionalité d'Inkscape 'Chemin > Vectoriser un objet matriciel > Traçage Centerline'  ( -et cause le même genre de prolème...). Mais au lieu de convertir un bitmap en lignes, il détermine une ligne centrale pour des objets de type remplissage.
+Il est comparable à la fonctionalité d'Inkscape `Chemin > Vectoriser un objet matriciel > Traçage Centerline`  ( -et cause le même genre de prolème...). Mais au lieu de convertir un bitmap en lignes, il détermine une ligne centrale pour des objets de type remplissage.
 
 Vous pouvez améliorer le résultat en définissant des lignes de découpage.
 
-
-
 ### Usage
+
 * (Optionnel). Dessiner des lignes de découpage aux intersections/jointures. Ce sont des simples traits. Ceci est particulièrement utile si vous voulez définir des colonnes satin.  
 Merci de noter que chaque trait doit découper le remplissage en deux. 
 * Sélectionnez un ou plusieurs objets remplissage que vous souhaitez convertir en trait, ainsi que les lignes de découpages correspondantes si vous en avez définies.
@@ -65,15 +64,13 @@ Merci de noter que chaque trait doit découper le remplissage en deux.
 * Seuil de cul de sac(px) : ceci supprimera les petits traits. Dans la plus part des cas, la meilleure valeur  est à peu près la largeur de la forme de départ en pixel.
 * Pointillé : Mettre à vrai si vous souhaitez un point droit.
 * Largeur (px) : Si vous souhaitez directement convertir en colonne satin, donner ici la valeur de la largeur de la colonne satin. Dans la plupart des cas, vous voudrez une valeur faible pour pouvoir facilement inspecter et modifier avant conversion.
-
+* Cut lines: close gaps: Cut lines create gaps which can be closed by enabling this option. This option will only be useful, when no satin column conversion is planed.
 
 ## Saut en Trait
 
 {% include upcoming_release.html %}
 
 Ceci crééra un point droit entre la fin du premier élément et le début du second. Il ne vous reste plus qu'à le positionner là où il sera recouvert par des broderies ultérieures pour éviter un saut de fil.
-
-
 
 ### Usage
 

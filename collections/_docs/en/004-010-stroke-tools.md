@@ -2,7 +2,7 @@
 title: "Tools: Stroke"
 permalink: /docs/stroke-tools/
 excerpt: ""
-last_modified_at: 2022-12-27
+last_modified_at: 2023-03-25
 toc: true
 ---
 ## Autoroute Running Stitch
@@ -35,7 +35,7 @@ This works best on evenly spaced satin columns.
 ### Usage
 
 1. Select the satin column(s) you want to convert into a running stitch
-2. Run `Extensions > Ink/Stitch > Satin Tools > Convert satin to stroke...`
+2. Run `Extensions > Ink/Stitch > Tools: Stroke > Convert satin to stroke...`
 3. Choose wether you want to keep selected satin column(s) or if you want to replace them
 4. Click apply
 
@@ -66,6 +66,7 @@ You can improve the result by defining cut lines.
 * Threshold for dead ends (px): This will remove small lines. In most cases the best value is the approximate line width of the original shape in pixels.
 * Dashed line: Set to true if you aim for a running stitch outline.
 * Line width (px): If you want to convert this directly into a satin column, set this to the satin column width. In most cases you would want to keep this value low, so it will be easier to check and correct the outlines before the conversion.
+* Cut lines: close gaps: Cut lines create gaps which can be closed by enabling this option. This option will only be useful, when no satin column conversion is planed.
 
 ## Jump to Stroke
 
