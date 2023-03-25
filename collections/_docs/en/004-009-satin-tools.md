@@ -99,6 +99,10 @@ Now you can change the pattern in the following ways.
 * Change the pattern by running this tool again
 * Convert it to a normal path (`Shift + Ctrl + C`) and refine the path manually (it will then lose the path effect functionality)
 
+### Apply path effect
+
+Use `Path > Object to path` to convert this to a standard satin column.
+
 ## Zigzag Line to Satin
 
 {% include upcoming_release.html %}

@@ -47,21 +47,6 @@ Diese Erweiterung konvertiert einen einfachen Pfad in eine Satinsäulen. Dabei w
 2. Stelle die Linienbreite ein (`Ctrl+Shift+F)
 2. Führe `Erweiterungen > Ink/Stitch  > Satin Tools > Linie zu Satin` aus
 
-## Satin zu Linie
-
-Satinsäule zu Linie konvertiert eine Satinsäule in ihre Mittellinie. Das ist besonders dann hilfreich, wenn du während des Designprozesses eine Satinsäule in einen Geradstich abändern willst. Du kannst diese Funktion auch benutzen, wenn du die Breite der Satinsäule ändern willst, aber der Parameter Zugausgleich nicht zum gewünschten Ergebnis (oder zu Überschneidungen) führt. In diesem Fall kannst du die Satinsäule in einen Geradstich ändern, um im Anschluss die Weite im "Füllung und Kontur"-Panel anzupassen. Die Funktion ["Linie zu Satin"](#linie-zu-satin) führt den Geradstich wieder in eine Satinsäule zurück. 
-
-Das funktioniert am Besten mit Satinsäulen gleicher Breite.
-
-![Satin to Stroke example](/assets/images/docs/en/satin_to_stroke.png)
-
-### Funktionsweise
-
-1. Wähle eine oder mehrere Satinsäulen aus, die in einen Geradstich umgewandelt werden sollen
-2. Öffne `Erweiterungen > Ink/Stitch > Satinwerkzeuge > Satin zu Linie...`
-3. Wähle, ob die ursprünglichen Satinsäulen beibehalten oder gelöscht werden sollen
-4. Klicke auf "Anwenden"
-
 ## Satinsäule schneiden
 
 Diese Option schneidet eine Satinsäule an einem vordefiniertem Punkt. Alle Parameter die der Säule zuvor zugewiesen wurden werden auf beide Teile übertragen. Auch alle Sprossen bleiben erhalten. Sollte eine der beiden Säulen keine Sprossen beinhalten, wird eine Neue hinzugefügt.
@@ -112,6 +97,10 @@ Es ist möglich auch im Nachhinein das Muster zu personalisieren, bzw. ein ander
     ![edit on canvas](/assets/images/tutorials/pattern-along-path/edit.png)
 * Um eine andere vordefinierte Form zu verwenden, kann dieses Werkzeug einfach erneut auf den Pfad angewendet werden
 * Um weitere Bearbeitungsmöglichkeiten wie z.B. eine Anpassung der Richtungslinien zu erreichen, kann der Pfad mit `Strg + Umstelltaste + C` auch in einen herkömmlichen Pfad umgewandelt werden (er verliert dabei aber die Funktionalität des Pfadeffekts)
+
+### Pfadeffekt anwenden
+
+Nutze die Funktion `Pfad > Objekt in Pfad umwandeln` um eine "normale" Satinsäule zu erhalten.
 
 ## Zickzack-Linie zu Satin
 

@@ -44,9 +44,9 @@ Janome                   | Rot <span class="cwd" style="background: #ff3f7e;">&#
 
 {% include upcoming_release.html %}
 
-Speichere zusätzlich zur .exp-Datei auch die .inf-Datei mit gleichem Namen ab. Die Maschine wird dann automatisch die mit dem Cutwork-Segmentierungs-Werkzeug erstellten Linien erkennen und die entsprechende Nadelnummern anzeigen.
+Speichere zusätzlich zur .exp-Datei auch die .inf-Datei mit gleichem Namen ab. Die Maschine wird dann automatisch die mit dem Cutwork-Segmentierungs-Werkzeug erstellten Linien erkennen und die entsprechenden Nadelnummern anzeigen.
 
-Nutze die folgenden Einstellungen. Hier wird die typischerweise verwende Farbgebung benannt, sie hat aber keine Auswirkungen auf die Funktion):
+Nutze die folgenden Einstellungen. Hier wird die typischerweise verwendete Farbgebung benannt, sie hat aber keine Auswirkungen auf die Funktion:
 
 Nadel |Farbe                                      |Anfang|Ende
 ------|-------------------------------------------|------|---

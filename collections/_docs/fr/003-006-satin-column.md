@@ -13,6 +13,17 @@ Le point satin est principalement utilisé pour les bordures, les lettres ou les
 
 ## Création à partir d'un trait
 
+Ink/Stitch offers several option to create satin columns. Methods 1-3 will convert to a manual satin column which then can be modified as necessary.
+
+![Methods](/assets/images/docs/satin_methods.svg)
+
+1. [Line to Satin](#1-line-to-satin): for equal width satin columns
+2. [Line to Live Path Effect Satin](#2-line-to-live-path-effect-satin): easily modifiable satin column with optional patterned outline
+3. [Zigzag Line to Satin](#3-zigzag-line-to-satin): simple satin column creation for graphic tablets and touch screens
+4. [Manual Satin Column](#4-manual-satin-column): take full control over every part of the satin column
+
+### 1. Line to Satin
+
 * Choisir un trait (un objet avec une couleur de contour, mais pas de couleur de remplissage)
 * Définissez l'épaisseur du contour à la taille souhaitée pour la largeur de votre point satin.
 * Lancer `Extensions > Ink/Stitch > Outils : Satin > Convertir ligne en satin`
@@ -21,14 +32,27 @@ Vous obtenez un chemin composite composé de
   - deux rails qui correspondent aux bords longs de votre trait 
   - des traverses perpendiculaires aux rails qui indiquent la direction des  points de broderie
 
-
 * Utilisez tel quel ou modifiez les traverses ou les rails en déplaçant leur noeuds
-
 
 * En option lancer `Extensions > Ink/stitch > Outils : Satin > Agencement automatique de colonnes satin...` après avoir sélectionné une ou plusieurs colonnes satins
 
+Get more information about [Stroke to Satin](/docs/satin-tools/#convert-line-to-satin)
 
-## Création manuelle  de colonne Satin
+### 2. Line to Live Path Effect Satin
+
+This can be used to create a satin which can either have a patterned outline or to create a satin which is more easily to adapt in width. Please note, that once you use auto-routing on this type of satin, the live path effect will be applied and the path can only be adapted manually afterwards.
+
+Use `Path > Object to path` to convert this to a standard satin column.
+
+Get more information about [Live Path Effect Satins](/docs/satin-tools/#stroke-to-live-path-effect-satin)
+
+### 3. Zigzag Line to Satin
+
+This method is most convenient in case you have a touch screen or graphic tablet at hand.
+
+Get more information about [Zigzag Line to Satin](/docs/satin-tools/#zigzag-line-to-satin)
+
+### 4. Création manuelle  de colonne Satin
 
 * Commencez par définir les rails de votre colonne satin : dessinez  **deux traits presque parallèles**. La future colonne satin se brodera en zigzag entre les deux rails, vous pouvez faire varier l'épaisseur de la colonne à votre guise, en faisant varier la distance entre les deux rails.
 
@@ -40,17 +64,16 @@ Si ce n'est pas le cas Sélectionnez avec l' *Outil Editer les noeuds* (`N`) un 
  
 * Ink/Stitch va dessiner des zig-zags entre les deux lignes : pour régler la direction des points de broderie, utilisez la méthode des noeuds ou la méthodes des traverses décrites ci-dessous.
 
-
 * Ensuite, sélectionnez votre colonne satin et lancez les paramètres avec `Extensions > Ink/Stitch  > Paramètres` ou un  [raccourci clavier personnalisé](/fr/docs/customize/).
 
-### Méthode des noeuds
+#### Méthode des noeuds
 
 [![Bateau en colonne satin](/assets/images/docs/satin-column.jpg){: width="200x"}](/assets/images/docs/satin-column.svg){: title="Télécharger le fichier SVG" .align-left download="satin-column.svg" }
 Selon la complexité de votre conception, cette méthode peut prendre beaucoup de temps, car les deux rails doivent avoir exactement le **même nombre de noeuds** (Cela signifie que chaque rail sera composé d'un nombre égal de courbes de Bézier). 
 
 Chaque paire de noeuds (une paire de noeud est constituée d'un noeud sur chaque rail, en commençant par la paire des  noeuds initiaux des deux rails, puis la paire des deuxième noeuds de chaque rail, etc....) agit comme un "point de contrôle": Ink/Stitch garantira qu'un "zag" finisse par aller d'un noeud  de chaque paire à l'autre noeud de la paire.
 
-### Méthode des traverses
+#### Méthode des traverses
 
 [![Chapeau du chef en colonne satin](/assets/images/docs/satin-column-rungs-example.jpg){: width="200x"}](/assets/images/docs/satin-column-rungs.svg){: title="Télécharger le fichier SVG" .align-left download="satin-column-rungs.svg" }
 
@@ -132,8 +155,6 @@ C'est une rangée aller-retour de points droits au centre de la colonne. C'est p
 |Position      |Position de la sous-couche entre les rails. 0% est le long du premier rail, 50% est centré, 100% est le long du second  rail.|
 {: .table-full-width }
 
-
-
 #### Sous-couche de contour
 
 Il s’agit d’une rangée de points droits d’un bout de la colonne à l’autre. Les lignes sont placées à la distance du bord de la colonne que vous spécifiez. Pour les colonnes de petite ou moyenne largeur, cela peut suffire.
@@ -148,7 +169,6 @@ Il s’agit d’une rangée de points droits d’un bout de la colonne à l’au
 |Décalage de sous-couche contour (fixe) |décale d'une valeur fixe pour couvrir la sous-couche entièrement par la couche supérieure. Les valeurs négatives sont possibles.|
 |Décalage de sous-couche contour (proportionel) |décale proportionellement à la largeur du satin pour couvrir la sous-couche entièrement par la couche supérieure. Les valeurs négatives sont possibles.|
 {: .table-full-width }
-
 
 #### Sous-couche zig-zag
 
@@ -166,11 +186,11 @@ Il s’agit essentiellement d’un aller-retour en point satin de faible densit�
 |Espacement Zig-Zag      |La distance crête à crête entre zig-zags.|
 {: .table-full-width }
 
-
 ## Outils Satin
 
 Assurez-vous de regarder [Outils: Satin](/fr/docs/params/satin-tools/);
 Cela vous facilitera grandement la vie avec les colonnes en satin.
 
 ## Fichiers exemple avec des colonnes satin
+
 {% include tutorials/tutorial_list key="stitch-type" value="Satin Stitch" %}

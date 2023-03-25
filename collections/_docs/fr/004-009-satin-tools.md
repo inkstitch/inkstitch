@@ -100,6 +100,10 @@ Converts a stroke into a satin using a live path effect. This makes it more adap
 3. Set the approximate sizes that you wish your satin to be
 4. Click on apply
 
+### Apply path effect
+
+Use `Path > Object to path` to convert this to a standard satin column.
+
 ### Update and change the pattern
 
 Now you can change the pattern in the following ways.

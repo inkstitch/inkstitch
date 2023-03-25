@@ -30,6 +30,13 @@ Satin zu Geradstich konvertiert eine Satinsäule in ihre Mittellinie. Das kann b
 
 ![Satin to Stroke example](/assets/images/docs/en/satin_to_stroke.png)
 
+### Funktionsweise
+
+1. Wähle eine oder mehrere Satinsäulen aus, die in einen Geradstich umgewandelt werden sollen
+2. Öffne `Erweiterungen > Ink/Stitch > Werkzeuge: Linie > Satin zu Linie...`
+3. Wähle, ob die ursprünglichen Satinsäulen beibehalten oder gelöscht werden sollen
+4. Klicke auf "Anwenden"
+
 ### Anwendung
 
 1. Wähle eine oder mehrere Satinsäulen aus die in einen Geradstich umgewandelt werden sollen

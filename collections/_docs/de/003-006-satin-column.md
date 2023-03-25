@@ -2,7 +2,7 @@
 title: "Satinsäule"
 permalink: /de/docs/stitches/satin-column/
 excerpt: ""
-last_modified_at: 2023-01-16
+last_modified_at: 2023-03-25
 toc: true
 ---
 ## Beschreibung
@@ -13,13 +13,41 @@ Satinsäulen werden meistens für Ränder, Buchstaben oder sehr kleine Füllbere
 
 ## Funktionsweise
 
-* Füge einem Pfadobjekt eine Kontur hinzu (ohne Füllung).
-* Stelle die Konturenbreite auf die Größe ein, die der Satinstich haben soll.
-* Starte `Erweiterungen > Ink/Stitch > Satin Werkzeuge > Konvertierung Linie zu Satinstich`
-* Optional kann auch noch die Funktion `Erweiterungen > Ink/Stitch > Satin Werkzeuge > Automatisch geführte Satinsäulen` ausgeführt werden
-* Anschließend können auf Wunsch Sprossen und Holme angepasst werden
+Ink/Stitch bietet verschiedene Möglichkeiten Satinsäulen zu erstellen. Die Methoden 1-3 konvertieren in das manuelle Setup von wo aus weitere Modifizierungen möglich sind.
 
-## Manuelles Erstellen von Satinsäulen
+![Methods](/assets/images/docs/satin_methods.svg)
+
+1. [Linie zu Satin](#1-linie-zu-satin): für Satinsäule mit einheitlicher Breite
+2. [Linie zu Pfadeffekt-Satin](#2-linie-zu-pfadeffekt-satin): leicht modifizierbare Satinsäule mit optionalem Muster
+3. [Zickzack-Linie zu Satin](#3-zickzack-linie-zu-satin): für die einfache Erstellung mit Grafiktablets oder Touchscreens
+4. [Manuelle Satinsäule](#4-manuelle-satinsäule): volle Kontrolle über jeden Teil der Satinsäule
+
+### 1. Linie zu Satin
+
+* Erstelle einen Pfad mit einer Kontur (keine Füllung)
+* Lege die Breite der Kontur so fest, dass sie der Breite der zukünftigen Satinsäule entspricht
+* Führe die Funktion unter `Erweiterungen > Ink/Stitch Werkzeuge: Satin > Linie zu Satinsäule` aus
+* Optional kann anschließend die Funktion `Erweiterungen > Ink/Stitch > Werkzeuge: Satin > Automatisch geführter Satinstich...` auf mehrere Satinsäulen angewendet werden, um die Stickreihenfolge zu optimieren
+* Die nun erstellte Satinsäule kann nun genutzt oder nach Belieben modifiziert werden
+
+Mehr Informationen über [Linie zu Satin](/de/docs/satin-tools/#linie-zu-satin)
+
+### 2. Linie zu Pfadeffekt-Satin
+
+This can be used to create a satin which can either have a patterned outline or to create a satin which is more easily to adapt in width. Please note, that once you use auto-routing on this type of satin, the live path effect will be applied and the path can only be adapted manually afterwards.
+
+Use `Path > Object to path` to convert this to a standard satin column.
+
+Mehr Informationen über [Pfadeffekt-Satins](/de/docs/satin-tools/#linie-zu-pfadeffekt-satin)
+
+### 3. Zickzack-Linie zu Satin
+
+Diese Methode zur Erstellung von Satinsäulen ist besonders für Grafik-Tablets oder Touch-Screens interessant.
+
+Mehr Informationen über [Zickzack-Linie zu Satin](/de/docs/satin-tools/#zickzack-line-zu-satin)
+
+### 4. Manuelle Satinsäule
+
 Eine Satinsäule wird aus zwei **meist parallel verlaufenden Linien** gebildet. Ink/Stitch zeichnet ein Zick-Zack Muster zwischen den beiden Linien hin und her. Die Breite der Säule kann beliebig variiert werden.
 
 * Kombiniere zwei Linien mit `Pfad > Kombinieren` oder benutze `Strg + K`.
@@ -27,12 +55,13 @@ Eine Satinsäule wird aus zwei **meist parallel verlaufenden Linien** gebildet. 
 * Benutze die Knoten- oder die Sprossenmethode wie unten beschrieben.
 * Wähle dann die Satinsäule und führe `Erweiterungen > Ink/Stitch > Paramter`, oder eine [Benutzerdefinierte Tastenkombination](/docs/customize/) aus.
 
-### Die Knoten Methode
+#### Die Knoten Methode
+
 [![Satinsäule Boat](/assets/images/docs/satin-column.jpg){: width="200x"}](/assets/images/docs/satin-column.svg){: title="Download SVG-Datei" .align-left download="satin-column.svg" }
 
 Abhängig von der Komplexität des Entwurfs kann diese Methode zeitaufwendig sein, da die beiden Pfade die **gleiche Anzahl an Knoten** aufweisen müssen. Dies bedeutet, dass jeder Pfad aus einer gleichen Anzahl von Bezierkurven bestehen muss. Jedes Knotenpaar fungiert als "Kontrollpunkt": Ink/Stich sorgt dafür, dass ein "Zacken" von einem Punkt zum anderen führt.
 
-### Die Sprossen Methode
+#### Die Sprossen Methode
 
 Die Sprossenmethode gibt mehr Kontrolle darüber, wie die Satinsäule erstellt wird. Eine gute Positionierung der Punkte auf jeder der beiden Linien hilft, die Stichrichtungen festzulegen. Es gibt jedoch Situationen, in denen Richtungslinien ("Sprossen") für Satinsäulen hinzugefügt werden müssen:
 

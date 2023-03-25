@@ -13,26 +13,56 @@ Satin stitch is mostly used for borders, letters or small fill areas.
 
 ## How to create
 
+Ink/Stitch offers several option to create satin columns. Methods 1-3 will convert to a manual satin column which then can be modified as necessary.
+
+![Methods](/assets/images/docs/satin_methods.svg)
+
+1. [Line to Satin](#1-line-to-satin): for equal width satin columns
+2. [Line to Live Path Effect Satin](#2-line-to-live-path-effect-satin): easily modifiable satin column with optional patterned outline
+3. [Zigzag Line to Satin](#3-zigzag-line-to-satin): simple satin column creation for graphic tablets and touch screens
+4. [Manual Satin Column](#4-manual-satin-column): take full control over every part of the satin column
+
+### 1. Line to Satin
+
 * Add a contour to a path object (with no filling).
 * Set contour width to the size you want your satin stitch to be.
 * Run `Extensions > Ink/Stitch > Satin Tools > Convert Line to Satin`
-* Optionally run `Extensions > Ink/stitch > Satin Tools > Auto-route Satin...`
-* Use as-is or customize rungs or rails
+* Optionally run use autoroute to optimize `Extensions > Ink/stitch > Satin Tools > Auto-route Satin...`
+* Use as-is or customize rungs and/or rails
 
-## Manual Satin Column
-You define a satin column using a shape made of **two mostly-parallel lines**. Ink/Stitch will draw zig-zags back and forth between the two lines. You can vary the thickness of the column as you like.
+Get more information about [Stroke to Satin](/docs/satin-tools/#convert-line-to-satin)
+
+### 2. Line to Live Path Effect Satin
+
+This can be used to create a satin which can either have a patterned outline or to create a satin which is more easily to adapt in width. Please note, that once you use auto-routing on this type of satin, the live path effect will be applied and the path can only be adapted manually afterwards.
+
+Use `Path > Object to path` to convert this to a standard satin column.
+
+Get more information about [Live Path Effect Satins](/docs/satin-tools/#stroke-to-live-path-effect-satin)
+
+### 3. Zigzag Line to Satin
+
+This method is most convenient in case you have a touch screen or graphic tablet at hand.
+
+Get more information about [Zigzag Line to Satin](/docs/satin-tools/#zigzag-line-to-satin)
+
+### 4. Manual Satin Column
+
+A satin column is defined by a shape made of **two mostly-parallel lines**. Ink/Stitch will draw zig-zags back and forth between the two lines. Vary the thickness of the column as you like.
 
 * Combine two strokes with `Path > Combine` or hit `Ctrl+K`.
-* [Check path directions](/docs/customize/#enabling-path-outlines--direction). For the satin column to work, they have to be equal.<br />If they are not, with the *Node Editor Tool* (`N`) select one point of one sub-path and run `Path > Reverse`. This will reverse only the selected sub-path.
+* [Check path directions](/docs/customize/#enabling-path-outlines--direction). For the satin column to work, they have to be equal.
+
+  If they are not equal, select one point of one subpath with the *Node Editor Tool* (`N`) and run `Path > Reverse`. This will reverse only the selected subpath.
 * Use node or rung method as described below.
 * Then select your satin column and run params through `Extensions > Ink/Stitch  > Params` or a [custom shortcut key](/docs/customize/).
 
-### Node Method
+#### Node Method
 
 [![Satin Column Boat](/assets/images/docs/satin-column.jpg){: width="200x"}](/assets/images/docs/satin-column.svg){: title="Download SVG File" .align-left download="satin-column.svg" }
 Depending on the complexity of your design, this method might be time consuming, because the two paths must have the **same number of points**. This means that each path will be made up of an equal number of Bezier curves. Each pair of points acts as a "checkpoint": Ink/Stitch will ensure that a "zag" ends up going from one point to the other.
 
-### Rung Method
+#### Rung Method
 
 [![Satin Column chefshat](/assets/images/docs/satin-column-rungs-example.jpg){: width="200x"}](/assets/images/docs/satin-column-rungs.svg){: title="Download SVG File" .align-left download="satin-column-rungs.svg" }
 The rung method will give you more control over the way the satin column is rendered. Good positioning of points on each of the two lines helps getting the stitch directions right. However, there are situations where you need to add direction lines ("rungs") for satin columns:
