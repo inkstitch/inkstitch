@@ -672,8 +672,7 @@ class Params(InkstitchExtension):
                     classes.append(FillStitch)
                 if element.get_style("stroke") is not None:
                     classes.append(Stroke)
-                    if element.get_style("stroke-dasharray") is None:
-                        classes.append(SatinColumn)
+                    classes.append(SatinColumn)
         return classes
 
     def get_nodes_by_class(self):

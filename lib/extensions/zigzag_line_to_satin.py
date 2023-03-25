@@ -50,8 +50,6 @@ class ZigzagLineToSatin(InkstitchExtension):
 
             element.node.set('d', " ".join(d))
             element.set_param('satin_column', True)
-            # remove dashes
-            element.update_dash(False)
 
     def _get_rails_and_rungs(self, point_list):
         if self.options.pattern == "sawtooth":

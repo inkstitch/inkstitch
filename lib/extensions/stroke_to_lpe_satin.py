@@ -92,8 +92,6 @@ class StrokeToLpeSatin(InkstitchExtension):
         element.set_param('satin_column', 'true')
 
         element.node.style['stroke-width'] = self.svg.viewport_to_unit('0.756')
-        # remove running_stitch dashes if they are there
-        element.update_dash(False)
 
     def _process_satin_column(self, element):
         current_effects = element.node.get(PATH_EFFECT, None)

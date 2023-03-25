@@ -22,9 +22,9 @@ class SelectElements(InkstitchExtension):
 
         pars.add_argument("--select-running-stitch", type=Boolean, dest="running", default=False)
         pars.add_argument("--select-ripples", type=Boolean, dest="ripples", default=False)
+        pars.add_argument("--select-zigzag", type=Boolean, dest="zigzag", default=False)
         pars.add_argument("--select-manual", type=Boolean, dest="manual", default=False)
         pars.add_argument("--select-polyline", type=Boolean, dest="poly", default=False)
-        pars.add_argument("--select-zigzag", type=Boolean, dest="zigzag", default=False)
         pars.add_argument("--select-satin", type=Boolean, dest="satin", default=False)
         pars.add_argument("--satin-underlay", type=str, dest="satin_underlay", default="all")
         pars.add_argument("--select-e", type=Boolean, dest="e", default=False)
@@ -101,16 +101,13 @@ class SelectElements(InkstitchExtension):
     def _select_stroke(self, element):
         select = False
         method = element.stroke_method
-        manual = element.manual_stitch_mode
-        if self.options.ripples and method == 1:
+        if self.options.running and method == 'running_stitch':
             select = True
-        elif self.options.manual and manual:
+        if self.options.ripples and method == 'ripple_stitch':
             select = True
-        elif method == 1 or manual:
-            return False
-        elif self.options.zigzag and not element.dashed:
+        elif self.options.zigzag and method == 'zigzag_stitch':
             select = True
-        elif self.options.running and element.dashed:
+        elif self.options.manual and method == 'manual_stitch':
             select = True
         return select
 
@@ -139,13 +136,12 @@ class SelectElements(InkstitchExtension):
 
     def _select_satin(self, element):
         select = False
-        if not (self.options.satin or self.options.e):
-            return False
         if not self._select_satin_underlay(element):
             return False
-        if self.options.e and element.e_stitch:
+        method = element.satin_method
+        if self.options.satin and method == "satin_column":
             select = True
-        elif self.options.satin and not element.e_stitch:
+        elif self.options.e and method == "e_stitch":
             select = True
         return select
 

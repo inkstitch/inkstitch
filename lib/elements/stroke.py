@@ -3,8 +3,6 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-import sys
-
 import shapely.geometry
 from inkex import Transform
 
@@ -16,6 +14,7 @@ from ..stitches.running_stitch import bean_stitch, running_stitch
 from ..svg import get_node_transform, parse_length_with_units
 from ..threads import ThreadColor
 from ..utils import Point, cache
+from ..utils.param import ParamOption
 from .element import EmbroideryElement, param
 from .validation import ValidationWarning
 
@@ -36,14 +35,6 @@ class MultipleGuideLineWarning(ValidationWarning):
     description = _("This object has multiple guide lines, but only the first one will be used.")
     steps_to_solve = [
         _("* Remove all guide lines, except for one.")
-    ]
-
-
-class SmallZigZagWarning(ValidationWarning):
-    name = _("Small ZigZag")
-    description = _("This zig zag stitch has a stroke width smaller than 0.5 units.")
-    steps_to_solve = [
-        _("Set your stroke to be dashed to indicate running stitch.  Any kind of dash will work.")
     ]
 
 
@@ -69,46 +60,27 @@ class Stroke(EmbroideryElement):
             needle = f'Cut {needle}'
         return needle
 
-    @property
-    def dashed(self):
-        return self.get_style("stroke-dasharray") is not None
-
-    def update_dash(self, to_dash):
-        if self.dashed == to_dash:
-            return
-        if to_dash is False:
-            del self.node.style['stroke-dasharray']
-        else:
-            self.node.style['stroke-dasharray'] = "1,0.5"
+    _stroke_methods = [ParamOption('running_stitch', _("Running Stitch / Bean Stitch")),
+                       ParamOption('ripple_stitch', _("Ripple Stitch")),
+                       ParamOption('zigzag_stitch', _("ZigZag Stitch")),
+                       ParamOption('manual_stitch', _("Manual Stitch"))]
 
     @property
     @param('stroke_method',
            _('Method'),
-           type='dropdown',
+           type='combo',
            default=0,
-           # 0: run/simple satin, 1: manual, 2: ripple
-           options=[_("Running Stitch"), _("Ripple")],
+           options=_stroke_methods,
            sort_index=0)
     def stroke_method(self):
-        return self.get_int_param('stroke_method', 0)
-
-    @property
-    @param('manual_stitch',
-           _('Manual stitch placement'),
-           tooltip=_("Stitch every node in the path. All options other than stop and trim are ignored. "
-                     "Lock stitches will be added only if force lock stitches is checked."),
-           type='boolean',
-           default=False,
-           select_items=[('stroke_method', 0)],
-           sort_index=1)
-    def manual_stitch_mode(self):
-        return self.get_boolean_param('manual_stitch')
+        return self.get_param('stroke_method', 'running_stitch')
 
     @property
     @param('repeats',
            _('Repeats'),
            tooltip=_('Defines how many times to run down and back along the path.'),
            type='int',
+           select_items=[('stroke_method', 'running_stitch'), ('stroke_method', 'ripple_stitch'), ('stroke_method', 'zigzag_stitch')],
            default="1",
            sort_index=2)
     def repeats(self):
@@ -123,6 +95,7 @@ class Stroke(EmbroideryElement):
                   'A value of 2 would quintuple each stitch, etc.\n\n'
                   'A pattern with various repeats can be created with a list of values separated by a space.'),
         type='str',
+        select_items=[('stroke_method', 'running_stitch'), ('stroke_method', 'ripple_stitch')],
         default=0,
         sort_index=3)
     def bean_stitch_repeats(self):
@@ -134,6 +107,7 @@ class Stroke(EmbroideryElement):
            tooltip=_('Length of stitches in running stitch mode.'),
            unit='mm',
            type='float',
+           select_items=[('stroke_method', 'running_stitch'), ('stroke_method', 'ripple_stitch')],
            default=1.5,
            sort_index=4)
     def running_stitch_length(self):
@@ -147,6 +121,7 @@ class Stroke(EmbroideryElement):
                      'A higher tolerance means sharp corners may be rounded.'),
            unit='mm',
            type='float',
+           select_items=[('stroke_method', 'running_stitch'), ('stroke_method', 'ripple_stitch')],
            default=0.2,
            sort_index=4)
     def running_stitch_tolerance(self):
@@ -159,7 +134,7 @@ class Stroke(EmbroideryElement):
            unit='mm',
            type='float',
            default=0.4,
-           select_items=[('stroke_method', 0)],
+           select_items=[('stroke_method', 'zigzag_stitch')],
            sort_index=5)
     @cache
     def zigzag_spacing(self):
@@ -171,7 +146,7 @@ class Stroke(EmbroideryElement):
            tooltip=_('Number of lines from start to finish'),
            type='int',
            default=10,
-           select_items=[('stroke_method', 1)],
+           select_items=[('stroke_method', 'ripple_stitch')],
            sort_index=5)
     @cache
     def line_count(self):
@@ -188,7 +163,7 @@ class Stroke(EmbroideryElement):
            tooltip=_('Skip this number of lines at the beginning.'),
            type='int',
            default=0,
-           select_items=[('stroke_method', 1)],
+           select_items=[('stroke_method', 'ripple_stitch')],
            sort_index=6)
     @cache
     def skip_start(self):
@@ -200,7 +175,7 @@ class Stroke(EmbroideryElement):
            tooltip=_('Skip this number of lines at the end'),
            type='int',
            default=0,
-           select_items=[('stroke_method', 1)],
+           select_items=[('stroke_method', 'ripple_stitch')],
            sort_index=7)
     @cache
     def skip_end(self):
@@ -224,7 +199,7 @@ class Stroke(EmbroideryElement):
            tooltip=_('Increase density towards one side.'),
            type='float',
            default=1,
-           select_items=[('stroke_method', 1)],
+           select_items=[('stroke_method', 'ripple_stitch')],
            sort_index=8)
     @cache
     def exponent(self):
@@ -236,7 +211,7 @@ class Stroke(EmbroideryElement):
            tooltip=_('Reverse exponent effect.'),
            type='boolean',
            default=False,
-           select_items=[('stroke_method', 1)],
+           select_items=[('stroke_method', 'ripple_stitch')],
            sort_index=9)
     @cache
     def flip_exponent(self):
@@ -248,7 +223,7 @@ class Stroke(EmbroideryElement):
            tooltip=_('Flip start and end point'),
            type='boolean',
            default=False,
-           select_items=[('stroke_method', 1)],
+           select_items=[('stroke_method', 'ripple_stitch')],
            sort_index=10)
     @cache
     def reverse(self):
@@ -261,7 +236,7 @@ class Stroke(EmbroideryElement):
            type='float',
            default=0,
            unit='mm',
-           select_items=[('stroke_method', 1)],
+           select_items=[('stroke_method', 'ripple_stitch')],
            sort_index=11)
     @cache
     def grid_size(self):
@@ -275,7 +250,7 @@ class Stroke(EmbroideryElement):
            default=0,
            # 0: xy, 1: x, 2: y, 3: none
            options=["X Y", "X", "Y", _("None")],
-           select_items=[('stroke_method', 1)],
+           select_items=[('stroke_method', 'ripple_stitch')],
            sort_index=12)
     def scale_axis(self):
         return self.get_int_param('scale_axis', 0)
@@ -287,7 +262,7 @@ class Stroke(EmbroideryElement):
            type='float',
            unit='%',
            default=100,
-           select_items=[('stroke_method', 1)],
+           select_items=[('stroke_method', 'ripple_stitch')],
            sort_index=13)
     def scale_start(self):
         return self.get_float_param('scale_start', 100.0)
@@ -299,7 +274,7 @@ class Stroke(EmbroideryElement):
            type='float',
            unit='%',
            default=0.0,
-           select_items=[('stroke_method', 1)],
+           select_items=[('stroke_method', 'ripple_stitch')],
            sort_index=14)
     def scale_end(self):
         return self.get_float_param('scale_end', 0.0)
@@ -310,7 +285,7 @@ class Stroke(EmbroideryElement):
            tooltip=_('Rotate satin guided ripple stitches'),
            type='boolean',
            default=True,
-           select_items=[('stroke_method', 1)],
+           select_items=[('stroke_method', 'ripple_stitch')],
            sort_index=15)
     @cache
     def rotate_ripples(self):
@@ -323,7 +298,7 @@ class Stroke(EmbroideryElement):
            type='dropdown',
            default=0,
            options=(_("flat"), _("point")),
-           select_items=[('stroke_method', 1)],
+           select_items=[('stroke_method', 'ripple_stitch')],
            sort_index=16)
     @cache
     def join_style(self):
@@ -349,7 +324,7 @@ class Stroke(EmbroideryElement):
         if len(flattened[0]) == 1:
             return [[[flattened[0][0][0], flattened[0][0][1]], [flattened[0][0][0] + 1.0, flattened[0][0][1]]]]
 
-        if self.manual_stitch_mode:
+        if self.stroke_method == 'manual_stitch':
             return [self.strip_control_points(subpath) for subpath in path]
         else:
             return flattened
@@ -373,42 +348,6 @@ class Stroke(EmbroideryElement):
             return Point(*pos)
         else:
             return self.shape.centroid
-
-    def is_running_stitch(self):
-        # using stroke width <= 0.5 pixels to indicate running stitch is deprecated in favor of dashed lines
-
-        stroke_width, units = parse_length_with_units(self.get_style("stroke-width", "1"))
-
-        if self.dashed:
-            return True
-        elif stroke_width <= 0.5 and self.get_float_param('running_stitch_length_mm', None) is not None:
-            # if they use a stroke width less than 0.5 AND they specifically set a running stitch
-            # length, then assume they intend to use the deprecated <= 0.5 method to set running
-            # stitch.
-            #
-            # Note that we use self.get_style("stroke_width") _not_ self.stroke_width above.  We
-            # explicitly want the stroke width in "user units" ("document units") -- that is, what
-            # the user sees in inkscape's stroke settings.
-            #
-            # Also note that we don't use self.running_stitch_length_mm above.  This is because we
-            # want to see if they set a running stitch length at all, and the property will apply
-            # a default value.
-            #
-            # This is so tricky, and and intricate that's a major reason that we deprecated the
-            # 0.5 units rule.
-
-            # Warn them the first time.
-            global warned_about_legacy_running_stitch
-            if not warned_about_legacy_running_stitch:
-                warned_about_legacy_running_stitch = True
-                print(_("Legacy running stitch setting detected!\n\nIt looks like you're using a stroke " +
-                        "smaller than 0.5 units to indicate a running stitch, which is deprecated.  Instead, please set " +
-                        "your stroke to be dashed to indicate running stitch.  Any kind of dash will work."), file=sys.stderr)
-
-            # still allow the deprecated setting to work in order to support old files
-            return True
-        else:
-            return False
 
     def simple_satin(self, path, zigzag_spacing, stroke_width):
         "zig-zag along the path at the specified spacing and wdith"
@@ -468,11 +407,11 @@ class Stroke(EmbroideryElement):
     def do_bean_repeats(self, stitches):
         return bean_stitch(stitches, self.bean_stitch_repeats)
 
-    def to_stitch_groups(self, last_patch):
+    def to_stitch_groups(self, last_patch):  # noqa: C901
         patches = []
 
         # ripple stitch
-        if self.stroke_method == 1:
+        if self.stroke_method == 'ripple_stitch':
             patch = self.ripple_stitch()
             if patch:
                 if any(self.bean_stitch_repeats):
@@ -482,7 +421,7 @@ class Stroke(EmbroideryElement):
             for path in self.paths:
                 path = [Point(x, y) for x, y in path]
                 # manual stitch
-                if self.manual_stitch_mode:
+                if self.stroke_method == 'manual_stitch':
                     if self.force_lock_stitches:
                         lock_stitches = self.lock_stitches
                     else:
@@ -493,13 +432,13 @@ class Stroke(EmbroideryElement):
                                         lock_stitches=lock_stitches,
                                         force_lock_stitches=self.force_lock_stitches)
                 # running stitch
-                elif self.is_running_stitch():
+                elif self.stroke_method == 'running_stitch':
                     patch = self.running_stitch(path, self.running_stitch_length, self.running_stitch_tolerance)
                     # bean stitch
                     if any(self.bean_stitch_repeats):
                         patch.stitches = self.do_bean_repeats(patch.stitches)
                 # simple satin
-                else:
+                elif self.stroke_method == 'zigzag_stitch':
                     patch = self.simple_satin(path, self.zigzag_spacing, self.stroke_width)
 
                 if patch:
@@ -541,5 +480,3 @@ class Stroke(EmbroideryElement):
                 yield MultipleGuideLineWarning(self._representative_point())
 
         stroke_width, units = parse_length_with_units(self.get_style("stroke-width", "1"))
-        if not self.dashed and stroke_width <= 0.5:
-            yield SmallZigZagWarning(self._representative_point())
