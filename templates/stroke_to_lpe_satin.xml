@@ -31,7 +31,7 @@
         <label appearance="url">https://inkstitch.org/docs/satin-tools/#stroke-to-live-path-effect-satin</label>
       </page>
     </param>
-    <effect>
+    <effect needs-live-preview="false">
         <object-type>all</object-type>
         <effects-menu>
             <submenu name="Ink/Stitch" translatable="no">

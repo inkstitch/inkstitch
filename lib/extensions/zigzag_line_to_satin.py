@@ -5,7 +5,6 @@
 
 import inkex
 
-from ..elements import Stroke
 from ..i18n import _
 from .base import InkstitchExtension
 
@@ -25,17 +24,12 @@ class ZigzagLineToSatin(InkstitchExtension):
 
     def effect(self):
         if not self.svg.selection or not self.get_elements():
-            inkex.errormsg(_("Please select at least one stroke."))
-            return
-
-        if not any(isinstance(item, Stroke) for item in self.elements):
-            # L10N: Convert To Satin extension, user selected one or more objects that were not lines.
             inkex.errormsg(_("Please select at least one stroke to convert to a satin column."))
             return
 
-        for element in self.elements:
+        for node in self.svg.selection:
             d = []
-            point_list = list(element.node.get_path().end_points)
+            point_list = list(node.get_path().end_points)
             rails, rungs = self._get_rails_and_rungs(point_list)
 
             if self.options.rungs:
@@ -48,8 +42,8 @@ class ZigzagLineToSatin(InkstitchExtension):
             else:
                 d.append(self._smooth_path(rails))
 
-            element.node.set('d', " ".join(d))
-            element.set_param('satin_column', True)
+            node.set('d', " ".join(d))
+            node.set('inkstitch:satin_column', True)
 
     def _get_rails_and_rungs(self, point_list):
         if self.options.pattern == "sawtooth":
