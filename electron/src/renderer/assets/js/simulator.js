@@ -552,7 +552,7 @@ export default {
       let width = maxx - minx
       let height = maxy - miny
       this.svg.viewbox(0, 0, width, height);
-      
+
       this.stitchPlan.color_blocks.forEach(color_block => {
         let color = `${color_block.color.visible_on_white.hex}`
         let path_attrs = {fill: "none", stroke: color, "stroke-width": 0.3}
