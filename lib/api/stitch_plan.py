@@ -17,9 +17,17 @@ def get_stitch_plan():
         return dict(colors=[], stitch_blocks=[], commands=[])
 
     metadata = g.extension.get_inkstitch_metadata()
+
+    page_specs = {
+        "width": metadata.document.get('width'),
+        "height": metadata.document.get('height'),
+        "pagecolor": metadata.document[1].get('pagecolor'),
+        "deskcolor": metadata.document[1].get('inkscape:deskcolor')
+    }
+
     collapse_len = metadata['collapse_len_mm']
     min_stitch_len = metadata['min_stitch_len_mm']
     patches = g.extension.elements_to_stitch_groups(g.extension.elements)
-    stitch_plan = stitch_groups_to_stitch_plan(patches, collapse_len=collapse_len, min_stitch_len=min_stitch_len)
+    stitch_plan = stitch_groups_to_stitch_plan(patches, collapse_len=collapse_len, min_stitch_len=min_stitch_len, page_specs=page_specs)
 
     return jsonify(stitch_plan)

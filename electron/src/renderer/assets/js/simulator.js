@@ -508,6 +508,13 @@ export default {
           prevStitch = stitch
         })
       })
+    },
+    generatePage () {
+      this.$refs.simulator.style.backgroundColor = this.stitchPlan.page_specs.deskcolor
+      this.svg.rect(this.stitchPlan.page_specs.width, this.stitchPlan.page_specs.height)
+      .move(-this.stitchPlan.bounding_box[0],-this.stitchPlan.bounding_box[1])
+      .fill(this.stitchPlan.page_specs.pagecolor)
+      .back()
     }
   },
   created: function () {
@@ -530,6 +537,7 @@ export default {
     this.jumpMarks = {}
     this.needlePenetrationPoints = []
     this.cursor = null
+    this.page_specs = null
   },
   mounted: function () {
     this.svg = SVG().addTo(this.$refs.simulator).size('100%', '100%').panZoom({zoomMin: 0.1})
@@ -544,7 +552,7 @@ export default {
       let width = maxx - minx
       let height = maxy - miny
       this.svg.viewbox(0, 0, width, height);
-
+      
       this.stitchPlan.color_blocks.forEach(color_block => {
         let color = `${color_block.color.visible_on_white.hex}`
         let path_attrs = {fill: "none", stroke: color, "stroke-width": 0.3}
@@ -581,7 +589,8 @@ export default {
       this.generateColorSections()
       this.generateScale()
       this.generateCursor()
-
+      this.generatePage()
+      
       this.loading = false
 
       // v-on:keydown doesn't seem to work, maybe an Electron issue?

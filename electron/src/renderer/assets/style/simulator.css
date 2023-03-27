@@ -86,6 +86,7 @@ fieldset {
   position: relative;
   padding: 0 5px;
   font-size: 90%;
+  background-color: white;
 }
 
 .window-controls {

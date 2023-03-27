@@ -13,7 +13,7 @@ from .color_block import ColorBlock
 from ..utils.threading import check_stop_flag
 
 
-def stitch_groups_to_stitch_plan(stitch_groups, collapse_len=None, min_stitch_len=0.1, disable_ties=False):  # noqa: C901
+def stitch_groups_to_stitch_plan(stitch_groups, collapse_len=None, min_stitch_len=0.1, disable_ties=False, page_specs=None):  # noqa: C901
 
     """Convert a collection of StitchGroups to a StitchPlan.
 
@@ -102,6 +102,8 @@ def stitch_groups_to_stitch_plan(stitch_groups, collapse_len=None, min_stitch_le
 
     stitch_plan.filter_duplicate_stitches(min_stitch_len)
 
+    stitch_plan.page_specs = page_specs
+
     return stitch_plan
 
 
@@ -110,6 +112,7 @@ class StitchPlan(object):
 
     def __init__(self):
         self.color_blocks = []
+        self.page_specs = {}
 
     def new_color_block(self, *args, **kwargs):
         color_block = ColorBlock(*args, **kwargs)
@@ -146,7 +149,8 @@ class StitchPlan(object):
                     num_trims=self.num_trims,
                     num_stitches=self.num_stitches,
                     bounding_box=self.bounding_box,
-                    estimated_thread=self.estimated_thread
+                    estimated_thread=self.estimated_thread,
+                    page_specs=self.page_specs
                     )
 
     @property
