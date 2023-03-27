@@ -61,7 +61,7 @@ class ZigzagLineToSatin(InkstitchExtension):
                         rail_points[i].append(point)
                         continue
                     p0 = rail[j-1]
-                    rail_points[i].append(inkex.DirectedLineSegment(p0, point).point_at_ratio(0.5))
+                    rail_points[i].append(inkex.Vector2d(inkex.DirectedLineSegment(p0, point).point_at_ratio(0.5)))
                     rail_points[i].append(point)
             rungs = list(zip(*rail_points))
             return rail_points, rungs
@@ -131,7 +131,7 @@ class ZigzagLineToSatin(InkstitchExtension):
         rungs = rungs[1:-1]
         for point0, point1 in rungs:
             line = inkex.DirectedLineSegment(point0, point1)
-            point0 = line.point_at_length(-0.3)
-            point1 = line.point_at_length(line.length + 0.3)
+            point0 = line.point_at_length(-0.8)
+            point1 = line.point_at_length(line.length + 0.8)
             d.append(f'M {point0[0]}, {point0[1]} {point1[0]}, {point1[1]}')
         return d
