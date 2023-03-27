@@ -514,6 +514,11 @@ export default {
       this.svg.rect(this.stitchPlan.page_specs.width, this.stitchPlan.page_specs.height)
       .move(-this.stitchPlan.bounding_box[0],-this.stitchPlan.bounding_box[1])
       .fill(this.stitchPlan.page_specs.pagecolor)
+      .stroke({width: 1, color: 'black'})
+      .filterWith((add) => {
+        let blur = add.offset(2,2).in(add.$sourceAlpha).gaussianBlur(2)
+        add.blend(add.$source, blur)
+      })
       .back()
     }
   },
