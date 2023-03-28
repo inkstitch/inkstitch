@@ -510,12 +510,12 @@ export default {
       })
     },
     generatePage () {
-      this.$refs.simulator.style.backgroundColor = this.stitchPlan.page_specs.deskcolor
-      this.svg.rect(this.stitchPlan.page_specs.width, this.stitchPlan.page_specs.height)
+      this.$refs.simulator.style.backgroundColor = this.page_specs.deskcolor
+      this.svg.rect(this.page_specs.width, this.page_specs.height)
       .move(-this.stitchPlan.bounding_box[0],-this.stitchPlan.bounding_box[1])
-      .fill(this.stitchPlan.page_specs.pagecolor)
+      .fill(this.page_specs.pagecolor)
       .stroke({width: 1, color: 'black'})
-      .filterWith((add) => {
+      .filterWith(add => {
         let blur = add.offset(2,2).in(add.$sourceAlpha).gaussianBlur(2)
         add.blend(add.$source, blur)
       })
@@ -542,7 +542,7 @@ export default {
     this.jumpMarks = {}
     this.needlePenetrationPoints = []
     this.cursor = null
-    this.page_specs = null
+    this.page_specs = {}
   },
   mounted: function () {
     this.svg = SVG().addTo(this.$refs.simulator).size('100%', '100%').panZoom({zoomMin: 0.1})
@@ -594,7 +594,6 @@ export default {
       this.generateColorSections()
       this.generateScale()
       this.generateCursor()
-      this.generatePage()
       
       this.loading = false
 
@@ -613,6 +612,10 @@ export default {
       this.resizeCursor()
 
       this.start()
+    })
+    inkStitch.get('page_specs').then(response => {
+      this.page_specs = response.data
+      this.generatePage()
     })
   }
 }
