@@ -763,14 +763,26 @@ class SatinColumn(EmbroideryElement):
 
         return out1, out2
 
-    def _stitch_distance(self, pos0, pos1, old_pos0, old_pos1):
-        old_stitch = old_pos1 - old_pos0
-        if old_stitch.length() < 0.01:
-            return shgeo.LineString((pos0, pos1)).distance(shgeo.Point(old_pos0))
+    def _stitch_distance(self, pos0, pos1, previous_pos0, previous_pos1):
+        """Return the distance from one stitch to the next."""
+
+        previous_stitch = previous_pos1 - previous_pos0
+        if previous_stitch.length() < 0.01:
+            return shgeo.LineString((pos0, pos1)).distance(shgeo.Point(previous_pos0))
         else:
-            normal = old_stitch.unit().rotate_left()
-            d0 = pos0 - old_pos0
-            d1 = pos1 - old_pos1
+            # Measure the distance at a right angle to the previous stitch, at
+            # the start and end of the stitch, and pick the biggest.  If we're
+            # going around a curve, the points on the inside of the curve will
+            # be much closer together, and we only care about the distance on
+            # the outside of the curve.
+            #
+            # In this example with two horizontal stitches, we want the vertical
+            # separation between them.
+            #  _________
+            #  \_______/
+            normal = previous_stitch.unit().rotate_left()
+            d0 = pos0 - previous_pos0
+            d1 = pos1 - previous_pos1
             return max(abs(d0 * normal), abs(d1 * normal))
 
     @debug.time
@@ -798,32 +810,72 @@ class SatinColumn(EmbroideryElement):
             # Base the number of stitches in each section on the _longer_ of
             # the two sections. Otherwise, things could get too sparse when one
             # side is significantly longer (e.g. when going around a corner).
-            # The risk here is that we poke a hole in the fabric if we try to
-            # cram too many stitches on the short bezier.  The user will need
-            # to avoid this through careful construction of paths.
             num_points = max(path0.length, path1.length) / spacing
 
+            # Section stitch spacing and the cursor are expressed as a fraction
+            # of the total length of the path, because we use normalized=True
+            # below.
             section_stitch_spacing = 1.0 / num_points
-            cursor = 0
-            distance = self._stitch_distance(section0[0], section1[0], old_pos0, old_pos1)
+
+            # current_spacing, however, is in pixels.
             spacing_multiple = processor.get_stitch_spacing_multiple()
             current_spacing = spacing * spacing_multiple
+
+            # In all sections after the first, we need to figure out how far to
+            # travel before placing the first stitch.
+            distance = self._stitch_distance(section0[0], section1[0], old_pos0, old_pos1)
             to_travel = (1 - min(distance / spacing, 1.0)) * section_stitch_spacing * spacing_multiple
             debug.log(f"num_points: {num_points}, section_stitch_spacing: {section_stitch_spacing}, distance: {distance}, to_travel: {to_travel}")
 
+            cursor = 0
             iterations = 0
             while cursor + to_travel <= 1:
                 iterations += 1
                 pos0 = Point.from_shapely_point(path0.interpolate(cursor + to_travel, normalized=True))
                 pos1 = Point.from_shapely_point(path1.interpolate(cursor + to_travel, normalized=True))
 
+                # If the rails are parallel, then our stitch spacing will be
+                # perfect.  If the rails are coming together or spreading apart,
+                # then we'll have to travel much further along the rails to get
+                # the right stitch spacing.  Imagine a satin like the letter V:
+                #
+                # \______/
+                #  \____/
+                #   \__/
+                #    \/
+                #
+                # In this case the stitches will be way too close together.
+                # We'll compensate for that here.
+                #
+                # We'll measure how far this stitch is from the previous one.
+                # If we went one third as far as we were expecting to, then
+                # we'll need to try again, this time travelling 3x as far as we
+                # originally tried.
+                #
+                # This works great for the V, but what if things change
+                # mid-stitch?
+                #
+                # \      /
+                #  \    /
+                #   \  /
+                #    ||
+                #
+                # In this case, we may way overshoot.  We can also undershoot
+                # for similar reasons.  To deal with that, we'll revise our
+                # guess a second time.  Two tries seems to be the sweet spot.
+                #
+                # In any case, we'll only revise if our stitch spacing is off by
+                # more than 5%.
                 if iterations <= 2:
                     distance = self._stitch_distance(pos0, pos1, old_pos0, old_pos1)
                     if abs((current_spacing - distance) / current_spacing) > 0.05:
+                        # We'll revise to_travel then go back to the start of
+                        # the loop and try again.
                         to_travel = (current_spacing / distance) * to_travel
                         if iterations == 1:
-                            # Don't overshoot the end of this section on the first try.
-                            # If we've gone too far, we want to have a chance to correct.
+                            # Don't overshoot the end of this section on the
+                            # first try. If we've gone too far, we want to have
+                            # a chance to correct.
                             to_travel = min(to_travel, 1 - cursor)
                         continue
 
@@ -837,6 +889,8 @@ class SatinColumn(EmbroideryElement):
                 pairs.append(processor.process_points(pos0, pos1))
                 iterations = 0
 
+        # Add one last stitch at the end unless our previous stitch is already
+        # really close to the end.
         if pairs and section0 and section1:
             if self._stitch_distance(section0[-1], section1[-1], old_pos0, old_pos1) > 0.1 * PIXELS_PER_MM:
                 pairs.append(processor.process_points(section0[-1], section1[-1]))
