@@ -146,7 +146,7 @@ class StitchPlan(object):
                     num_trims=self.num_trims,
                     num_stitches=self.num_stitches,
                     bounding_box=self.bounding_box,
-                    estimated_thread=self.estimated_thread,
+                    estimated_thread=self.estimated_thread
                     )
 
     @property

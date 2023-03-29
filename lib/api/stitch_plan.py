@@ -17,7 +17,6 @@ def get_stitch_plan():
         return dict(colors=[], stitch_blocks=[], commands=[])
 
     metadata = g.extension.get_inkstitch_metadata()
-
     collapse_len = metadata['collapse_len_mm']
     min_stitch_len = metadata['min_stitch_len_mm']
     patches = g.extension.elements_to_stitch_groups(g.extension.elements)
