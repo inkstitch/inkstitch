@@ -290,6 +290,7 @@ div.simulator::v-deep svg.simulation {
   flex-grow: 1;
   flex-shrink: 1;
   order: -2;
+  margin-bottom: -48px;
 }
 
 div.simulator::v-deep svg.simulation-scale {
