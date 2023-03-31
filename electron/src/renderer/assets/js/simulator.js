@@ -511,7 +511,7 @@ export default {
     },
     generatePage () {
       this.$refs.simulator.style.backgroundColor = this.page_specs.deskcolor
-      this.svg.rect(this.page_specs.width, this.page_specs.height)
+      let page = this.svg.rect(this.page_specs.width, this.page_specs.height)
       .move(-this.stitchPlan.bounding_box[0],-this.stitchPlan.bounding_box[1])
       .fill(this.page_specs.pagecolor)
       .stroke({width: 1, color: 'black'})
@@ -520,6 +520,18 @@ export default {
         add.blend(add.$source, blur)
       })
       .back()
+      this.page_specs["bbox"] = page.bbox()
+    },
+    zoomSelection () {
+      let [minx, miny, maxx, maxy] = this.stitchPlan.bounding_box
+      let selectionWidth = maxx - minx
+      let selectionHeight = maxy - miny
+      this.svg.viewbox(0, 0, selectionWidth, selectionHeight);
+      this.resizeCursor()
+    },
+    zoomPage () {
+      this.svg.viewbox(this.page_specs.bbox.x, this.page_specs.bbox.y - 50, this.page_specs.bbox.width + 100, this.page_specs.bbox.height + 100)
+      this.resizeCursor()
     }
   },
   created: function () {
@@ -606,7 +618,9 @@ export default {
       Mousetrap.bind("pageup", this.animationNextCommand)
       Mousetrap.bind("space", this.toggleAnimation)
       Mousetrap.bind("+", this.animationForwardOneStitch)
-      Mousetrap.bind("-", this.animationBackwardOneStitch)
+      Mousetrap.bind("-", this.animationBackwardOneStitch) 
+      Mousetrap.bind("]", this.zoomSelection)
+      Mousetrap.bind("[", this.zoomPage)
 
       this.svg.on('zoom', this.resizeCursor)
       this.resizeCursor()
