@@ -22,6 +22,7 @@ class StitchPlanPreview(InkstitchExtension):
         self.arg_parser.add_argument("-v", "--layer-visibility", type=int, default=0, dest="layer_visibility")
         self.arg_parser.add_argument("-n", "--needle-points", type=Boolean, default=False, dest="needle_points")
         self.arg_parser.add_argument("-i", "--insensitive", type=Boolean, default=False, dest="insensitive")
+        self.arg_parser.add_argument("-c", "--visual-commands", type=Boolean, default="symbols", dest="visual_commands")
 
     def effect(self):
         # delete old stitch plan
@@ -33,7 +34,7 @@ class StitchPlanPreview(InkstitchExtension):
             return
 
         realistic = False
-        visual_commands = True
+        visual_commands = self.options.visual_commands
         self.metadata = self.get_inkstitch_metadata()
         collapse_len = self.metadata['collapse_len_mm']
         min_stitch_len = self.metadata['min_stitch_len_mm']

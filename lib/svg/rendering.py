@@ -195,6 +195,8 @@ def color_block_to_paths(color_block, svg, destination, visual_commands):
             first = False
         elif visual_commands:
             add_commands(Stroke(destination[-1]), ["trim"])
+        else:
+            path.set(INKSTITCH_ATTRIBS['trim_after'], 'true')
 
         color = color_block.color.visible_on_white.to_hex_str()
         path = inkex.PathElement(attrib={
@@ -206,12 +208,17 @@ def color_block_to_paths(color_block, svg, destination, visual_commands):
         })
         destination.append(path)
 
-    if path is not None and visual_commands:
-        if color_block.trim_after:
+    if path is not None and color_block.trim_after:
+        if visual_commands:
             add_commands(Stroke(path), ["trim"])
+        else:
+            path.set(INKSTITCH_ATTRIBS['trim_after'], 'true')
 
-        if color_block.stop_after:
+    if path is not None and color_block.stop_after:
+        if visual_commands:
             add_commands(Stroke(path), ["stop"])
+        else:
+            path.set(INKSTITCH_ATTRIBS['stop_after'], 'true')
 
 
 def render_stitch_plan(svg, stitch_plan, realistic=False, visual_commands=True):

@@ -25,7 +25,7 @@ class LettersToFont(InkstitchExtension):
         InkstitchExtension.__init__(self, *args, **kwargs)
         self.arg_parser.add_argument("-d", "--font-dir", type=str, default="", dest="font_dir")
         self.arg_parser.add_argument("-f", "--file-format", type=str, default="", dest="file_format")
-        self.arg_parser.add_argument("-c", "--import-commands", type=inkex.Boolean, default=False, dest="import_commands")
+        self.arg_parser.add_argument("-c", "--import-commands", type=str, default="params", dest="import_commands")
 
     def effect(self):
         font_dir = self.options.font_dir
@@ -50,7 +50,7 @@ class LettersToFont(InkstitchExtension):
 
             # remove color block groups if we import without commands
             # there will only be one object per color block anyway
-            if not self.options.import_commands:
+            if self.options.import_commands == "none":
                 for element in letter.iter(SVG_PATH_TAG):
                     group.insert(0, element)
             else:
@@ -78,4 +78,4 @@ class LettersToFont(InkstitchExtension):
         return stitch_plan
 
     def insert_baseline(self, document):
-        document.namedview.new_guide(position=0.0, name="baseline")
+        document.namedview.add_guide(position=0.0, name="baseline")
