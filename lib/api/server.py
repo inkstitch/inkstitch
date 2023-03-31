@@ -19,6 +19,7 @@ from .install import install
 from .simulator import simulator
 from .stitch_plan import stitch_plan
 from .preferences import preferences
+from .page_specs import page_specs
 
 
 class APIServer(Thread):
@@ -47,6 +48,7 @@ class APIServer(Thread):
         self.app.register_blueprint(stitch_plan, url_prefix="/stitch_plan")
         self.app.register_blueprint(install, url_prefix="/install")
         self.app.register_blueprint(preferences, url_prefix="/preferences")
+        self.app.register_blueprint(page_specs, url_prefix="/page_specs")
 
         @self.app.before_request
         def store_extension():

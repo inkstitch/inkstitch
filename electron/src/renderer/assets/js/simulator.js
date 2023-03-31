@@ -508,6 +508,18 @@ export default {
           prevStitch = stitch
         })
       })
+    },
+    generatePage () {
+      this.$refs.simulator.style.backgroundColor = this.page_specs.deskcolor
+      this.svg.rect(this.page_specs.width, this.page_specs.height)
+      .move(-this.stitchPlan.bounding_box[0],-this.stitchPlan.bounding_box[1])
+      .fill(this.page_specs.pagecolor)
+      .stroke({width: 1, color: 'black'})
+      .filterWith(add => {
+        let blur = add.offset(2,2).in(add.$sourceAlpha).gaussianBlur(2)
+        add.blend(add.$source, blur)
+      })
+      .back()
     }
   },
   created: function () {
@@ -530,6 +542,7 @@ export default {
     this.jumpMarks = {}
     this.needlePenetrationPoints = []
     this.cursor = null
+    this.page_specs = {}
   },
   mounted: function () {
     this.svg = SVG().addTo(this.$refs.simulator).size('100%', '100%').panZoom({zoomMin: 0.1})
@@ -581,7 +594,7 @@ export default {
       this.generateColorSections()
       this.generateScale()
       this.generateCursor()
-
+      
       this.loading = false
 
       // v-on:keydown doesn't seem to work, maybe an Electron issue?
@@ -599,6 +612,10 @@ export default {
       this.resizeCursor()
 
       this.start()
+    })
+    inkStitch.get('page_specs').then(response => {
+      this.page_specs = response.data
+      this.generatePage()
     })
   }
 }
