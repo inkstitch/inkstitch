@@ -7,6 +7,7 @@ from flask import Blueprint, g, jsonify
 
 page_specs = Blueprint('page_specs', __name__)
 
+
 @page_specs.route('')
 def get_page_specs():
 
@@ -18,5 +19,5 @@ def get_page_specs():
         "pagecolor": metadata.document[1].get('pagecolor'),
         "deskcolor": metadata.document[1].get('inkscape:deskcolor')
     }
-    
+
     return jsonify(page_specs)
