@@ -3,6 +3,8 @@
     <name>Troubleshoot Objects</name>
     <id>org.inkstitch.troubleshoot</id>
     <param name="extension" type="string" gui-hidden="true">troubleshoot</param>
+    <param name="pointer-size" type="float" gui-text="Pointer size (mm)" min="1" max="800" precision="2">5</param>
+    <param name="font-size" type="float" gui-text="Font size (mm)" min="1" max="800" precision="2">2</param>
     <effect>
         <object-type>all</object-type>
         <effects-menu>
