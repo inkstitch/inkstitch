@@ -53,7 +53,7 @@
             <label>If this isn't working for you, you may need to insert your path to a python executable manualy.</label>
             <spacer />
             <label>* Windows: Open the "Command Prompt" and type "where python". Copy the path and paste it here.</label>
-            <label>* Linux: Open the command line and type "which python". Copy the path and paste it here.</label>
+            <label>* Linux: Open the command line and type "which python3". Copy the path and paste it here.</label>
             <label>* macOS: doesn't work, sorry</label>
             <param name="python-path" type="string" gui-text="Python Path"></param>
         </page>
