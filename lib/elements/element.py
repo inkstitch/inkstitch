@@ -112,9 +112,6 @@ class EmbroideryElement(object):
                     self.get_param('satin_column', False) is False and
                     not self.node.style('stroke-dasharray')):
                 self.set_param('stroke_method', 'zigzag_stitch')
-            # if the stroke method is a zigzag-stitch but we are receiving a dashed line, set it to running stitch
-            if self.get_param('stroke_method', None) == 'zigzag_stitch' and self.node.style('stroke-dasharray'):
-                self.set_param('stroke_method', 'running_stitch')
 
     @property
     def id(self):
