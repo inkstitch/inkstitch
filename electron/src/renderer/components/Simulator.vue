@@ -140,6 +140,28 @@
                   </p>
                 </div>
               </div>
+              <div>
+                  <p>
+                    <font-awesome-icon icon="search-minus" class="fa-button"/>
+                  </p>
+                  <p>
+                    <translate>Zoom page</translate>
+                  </p>
+                  <p>
+                    <translate>[ Left square bracket</translate>
+                  </p>
+                </div>
+                <div>
+                  <p>
+                    <font-awesome-icon icon="search-plus" class="fa-button"/>
+                  </p>
+                  <p>
+                    <translate>Zoom selection</translate>
+                  </p>
+                  <p>
+                    <translate>] Right square bracket</translate>
+                  </p>
+                </div>
             </div>
           </collapse-transition>
         </div>
