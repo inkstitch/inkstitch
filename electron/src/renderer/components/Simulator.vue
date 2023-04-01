@@ -213,6 +213,17 @@
               <font-awesome-icon icon="horse" size="2x" class="fa-button fa-fast"/>
             </button>
           </fieldset>
+          <fieldset class="view">
+            <legend>
+              <translate>View</translate>
+            </legend>
+            <button v-on:click="zoomPage" :title="$gettext('Zoom page ([)')">
+              <font-awesome-icon icon="search-minus" size="2x" class="fa-button"/>
+            </button>
+            <button v-on:click="zoomSelection" :title="$gettext('Zoom selection (])')">
+              <font-awesome-icon icon="search-plus" size="2x" class="fa-button"/>
+            </button>
+          </fieldset>
           <fieldset class="command">
             <legend>
               <translate>Command</translate>
