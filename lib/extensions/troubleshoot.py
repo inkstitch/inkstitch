@@ -7,21 +7,25 @@ import textwrap
 
 import inkex
 
-from .base import InkstitchExtension
 from ..commands import add_layer_commands
 from ..elements.validation import (ObjectTypeWarning, ValidationError,
                                    ValidationWarning)
 from ..i18n import _
+from ..svg import PIXELS_PER_MM
 from ..svg.path import get_correction_transform
-from ..svg.tags import (INKSCAPE_GROUPMODE, INKSCAPE_LABEL, SODIPODI_ROLE)
+from ..svg.tags import INKSCAPE_GROUPMODE, INKSCAPE_LABEL, SODIPODI_ROLE
+from .base import InkstitchExtension
 
 
 class Troubleshoot(InkstitchExtension):
 
+    def __init__(self, *args, **kwargs):
+        InkstitchExtension.__init__(self, *args, **kwargs)
+        self.arg_parser.add_argument("-p", "--pointer-size", type=float, default=5, dest="pointer_size_mm")
+        self.arg_parser.add_argument("-f", "--font-size", type=float, default=2, dest="font_size_mm")
+
     def effect(self):
-
         self.create_troubleshoot_layer()
-
         problem_types = {'error': set(), 'warning': set(), 'type_warning': set()}
 
         if self.get_elements(True):
@@ -50,6 +54,8 @@ class Troubleshoot(InkstitchExtension):
 
     def insert_pointer(self, problem):
         correction_transform = get_correction_transform(self.troubleshoot_layer)
+        pointer_size = self.options.pointer_size_mm * PIXELS_PER_MM
+        font_size = self.options.font_size_mm * PIXELS_PER_MM
 
         if isinstance(problem, ValidationWarning):
             fill_color = "#ffdd00"
@@ -61,12 +67,14 @@ class Troubleshoot(InkstitchExtension):
             fill_color = "#ff9900"
             layer = self.type_warning_group
 
-        pointer_style = "stroke:#000000;stroke-width:0.2;fill:%s;" % (fill_color)
-        text_style = "fill:%s;stroke:#000000;stroke-width:0.2;font-size:8px;text-align:center;text-anchor:middle" % (fill_color)
+        pointer_style = f'stroke:#000000;stroke-width:0.1;fill:{ fill_color }'
+        text_style = f'fill:{ fill_color };stroke:#000000;stroke-width:0.1;font-size:{ font_size }px;text-align:center;text-anchor:middle'
+        pointer_path = f'm {problem.position.x},{problem.position.y} {pointer_size / 5},{pointer_size} ' \
+                       f'h -{pointer_size / 2.5} l {pointer_size / 5},-{pointer_size}'
 
         path = inkex.PathElement(attrib={
             "id": self.uniqueId("inkstitch__invalid_pointer__"),
-            "d": "m %s,%s 4,20 h -8 l 4,-20" % (problem.position.x, problem.position.y),
+            "d": pointer_path,
             "style": pointer_style,
             INKSCAPE_LABEL: _('Invalid Pointer'),
             "transform": correction_transform
@@ -76,7 +84,7 @@ class Troubleshoot(InkstitchExtension):
         text = inkex.TextElement(attrib={
             INKSCAPE_LABEL: _('Description'),
             "x": str(problem.position.x),
-            "y": str(float(problem.position.y) + 30),
+            "y": str(float(problem.position.y) + pointer_size + font_size),
             "transform": correction_transform,
             "style": text_style
         })
