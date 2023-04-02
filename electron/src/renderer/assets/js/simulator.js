@@ -522,11 +522,11 @@ export default {
       .back()
       this.page_specs["bbox"] = page.bbox()
     },
-    zoomSelection () {
+    zoomDesign () {
       let [minx, miny, maxx, maxy] = this.stitchPlan.bounding_box
-      let selectionWidth = maxx - minx
-      let selectionHeight = maxy - miny
-      this.svg.viewbox(0, 0, selectionWidth, selectionHeight);
+      let designWidth = maxx - minx
+      let designHeight = maxy - miny
+      this.svg.viewbox(0, 0, designWidth, designHeight);
       this.resizeCursor()
     },
     zoomPage () {
@@ -619,7 +619,7 @@ export default {
       Mousetrap.bind("space", this.toggleAnimation)
       Mousetrap.bind("+", this.animationForwardOneStitch)
       Mousetrap.bind("-", this.animationBackwardOneStitch)
-      Mousetrap.bind("]", this.zoomSelection)
+      Mousetrap.bind("]", this.zoomDesign)
       Mousetrap.bind("[", this.zoomPage)
 
       this.svg.on('zoom', this.resizeCursor)

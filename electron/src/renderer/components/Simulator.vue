@@ -156,7 +156,7 @@
                     <font-awesome-icon icon="search-plus" class="fa-button"/>
                   </p>
                   <p>
-                    <translate>Zoom selection</translate>
+                    <translate>Zoom design</translate>
                   </p>
                   <p>
                     <translate>] Right square bracket</translate>
@@ -220,7 +220,7 @@
             <button v-on:click="zoomPage" :title="$gettext('Zoom page ([)')">
               <font-awesome-icon icon="search-minus" size="2x" class="fa-button"/>
             </button>
-            <button v-on:click="zoomSelection" :title="$gettext('Zoom selection (])')">
+            <button v-on:click="zoomDesign" :title="$gettext('Zoom design (])')">
               <font-awesome-icon icon="search-plus" size="2x" class="fa-button"/>
             </button>
           </fieldset>
