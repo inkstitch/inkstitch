@@ -10,6 +10,8 @@ from copy import copy
 
 import numpy as np
 from shapely import geometry as shgeo
+
+from ..debug import debug
 from ..utils import prng
 from ..utils.geometry import Point
 from ..utils.threading import check_stop_flag
@@ -246,6 +248,7 @@ def path_to_curves(points: typing.List[Point], min_len: float):
     return curves
 
 
+@debug.time
 def running_stitch(points, stitch_length, tolerance):
     # Turn a continuous path into a running stitch.
     stitches = [points[0]]

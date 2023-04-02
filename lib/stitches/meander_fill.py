@@ -2,7 +2,7 @@ from itertools import combinations
 
 import networkx as nx
 from inkex import errormsg
-from shapely.geometry import MultiPoint, Point
+from shapely.geometry import LineString, MultiPoint, Point
 from shapely.ops import nearest_points
 
 from .. import tiles
@@ -126,10 +126,16 @@ def generate_meander_path(graph, start, end, rng):
             check_stop_flag()
 
             edge1, edge2 = poprandom(edge_pairs, rng)
-            edges_to_consider.extend(replace_edge_pair(meander_path, edge1, edge2, graph, graph_nodes))
-            break
+            new_edges = replace_edge_pair(meander_path, edge1, edge2, graph, graph_nodes)
+            if new_edges:
+                edges_to_consider.extend(new_edges)
+                break
 
-    return path_to_points(meander_path)
+    debug.log_graph(graph, "remaining graph", "#FF0000")
+    points = path_to_points(meander_path)
+    debug.log_line_string(LineString(points), "meander path", "#00FF00")
+
+    return points
 
 
 def replace_edge(path, edge, graph, graph_nodes):

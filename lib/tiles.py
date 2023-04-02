@@ -5,7 +5,7 @@ import inkex
 import json
 import lxml
 import networkx as nx
-from shapely.geometry import LineString
+from shapely.geometry import LineString, MultiLineString
 from shapely.prepared import prep
 
 from .debug import debug
@@ -59,8 +59,9 @@ class Tile:
 
     def _load_paths(self, tile_svg):
         path_elements = tile_svg.findall('.//svg:path', namespaces=inkex.NSS)
-        self.tile = self._path_elements_to_line_strings(path_elements)
-        # self.center, ignore, ignore = self._get_center_and_dimensions(self.tile)
+        tile = self._path_elements_to_line_strings(path_elements)
+        center, ignore, ignore = self._get_center_and_dimensions(MultiLineString(tile))
+        self.tile = [(start - center, end - center) for start, end in tile]
 
     def _load_dimensions(self, tile_svg):
         svg_element = tile_svg.getroot()
@@ -136,22 +137,34 @@ class Tile:
         shift0, shift1, tile = self._scale(x_scale, y_scale)
 
         shape_center, shape_width, shape_height = self._get_center_and_dimensions(shape)
-        shape_diagonal = Point(shape_width, shape_height).length()
         prepared_shape = prep(shape)
 
-        return self._generate_graph(prepared_shape, shape_center, shape_diagonal, shift0, shift1, tile)
+        return self._generate_graph(prepared_shape, shape_center, shape_width, shape_height, shift0, shift1, tile)
 
-    def _generate_graph(self, shape, shape_center, shape_diagonal, shift0, shift1, tile):
+    @debug.time
+    def _generate_graph(self, shape, shape_center, shape_width, shape_height, shift0, shift1, tile):
         graph = nx.Graph()
-        tiles0 = ceil(shape_diagonal / shift0.length()) + 2
-        tiles1 = ceil(shape_diagonal / shift1.length()) + 2
-        for repeat0 in range(floor(-tiles0 / 2), ceil(tiles0 / 2)):
-            for repeat1 in range(floor(-tiles1 / 2), ceil(tiles1 / 2)):
+
+        shape_diagonal = Point(shape_width, shape_height).length()
+        num_tiles = ceil(shape_diagonal / min(shift0.length(), shift1.length()))
+        debug.log(f"num_tiles: {num_tiles}")
+
+        tile_diagonal = (shift0 + shift1).length()
+        x_cutoff = shape_width / 2 + tile_diagonal
+        y_cutoff = shape_height / 2 + tile_diagonal
+
+        for repeat0 in range(-num_tiles, num_tiles):
+            for repeat1 in range(-num_tiles, num_tiles):
                 check_stop_flag()
 
                 offset0 = repeat0 * shift0
                 offset1 = repeat1 * shift1
-                this_tile = self._translate_tile(tile, offset0 + offset1 + shape_center)
+                offset = offset0 + offset1
+
+                if abs(offset.x) > x_cutoff or abs(offset.y) > y_cutoff:
+                    continue
+
+                this_tile = self._translate_tile(tile, offset + shape_center)
                 for line in this_tile:
                     line_string = LineString(line)
                     if shape.contains(line_string):
@@ -161,6 +174,7 @@ class Tile:
 
         return graph
 
+    @debug.time
     def _remove_dead_ends(self, graph):
         graph.remove_edges_from(nx.selfloop_edges(graph))
         while True:
