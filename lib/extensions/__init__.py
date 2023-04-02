@@ -52,6 +52,7 @@ from .stitch_plan_preview import StitchPlanPreview
 from .stitch_plan_preview_undo import StitchPlanPreviewUndo
 from .stroke_to_lpe_satin import StrokeToLpeSatin
 from .zip import Zip
+from .image_to_stroke import ImageToStroke
 
 from.lettering_along_path import LetteringAlongPath
 
@@ -78,6 +79,7 @@ __all__ = extensions = [StitchPlanPreview,
                         ConvertToStroke,
                         JumpToStroke,
                         FillToStroke,
+                        ImageToStroke,
                         CutSatin,
                         AutoSatin,
                         AutoRun,
