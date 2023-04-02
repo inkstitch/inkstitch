@@ -97,6 +97,7 @@ inkstitch_attribs = [
     'underpath',
     'flip',
     'expand_mm',
+    'clip',
     # stroke
     'stroke_method',
     'bean_stitch_repeats',
