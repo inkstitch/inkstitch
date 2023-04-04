@@ -36,5 +36,5 @@ if [ "$BUILD" = "osx" ]; then
     command="timeout 10m $command"
 fi
 
-# try up to 3 times
-$command || $command || $command || exit 1
+# try up to 5 times
+$command || $command || $command || $command || $command || exit 1
