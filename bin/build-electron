@@ -28,4 +28,13 @@ fi
 cd electron
 which yarn > /dev/null 2>&1 || npm install -g yarn
 yarn --link-duplicates --pure-lockfile
-yarn run dist ${args}
+
+command="yarn run dist ${args}"
+
+if [ "$BUILD" = "osx" ]; then
+    # mac build freezes on signing fairly often
+    command="timeout 10m $command"
+fi
+
+# try up to 3 times
+$command || $command || $command || exit 1
