@@ -111,20 +111,20 @@ class Tile:
 
         return translated_tile
 
-    def _scale(self, x_scale, y_scale):
-        scaled_shift0 = self.shift0.scale(x_scale, y_scale)
-        scaled_shift1 = self.shift1.scale(x_scale, y_scale)
+    def _scale_and_rotate(self, x_scale, y_scale, angle):
+        transformed_shift0 = self.shift0.scale(x_scale, y_scale).rotate(angle)
+        transformed_shift1 = self.shift1.scale(x_scale, y_scale).rotate(angle)
 
-        scaled_tile = []
+        transformed_tile = []
         for start, end in self.tile:
-            start = start.scale(x_scale, y_scale)
-            end = end.scale(x_scale, y_scale)
-            scaled_tile.append((start, end))
+            start = start.scale(x_scale, y_scale).rotate(angle)
+            end = end.scale(x_scale, y_scale).rotate(angle)
+            transformed_tile.append((start, end))
 
-        return scaled_shift0, scaled_shift1, scaled_tile
+        return transformed_shift0, transformed_shift1, transformed_tile
 
     @debug.time
-    def to_graph(self, shape, scale):
+    def to_graph(self, shape, scale, angle):
         """Apply this tile to a shape, repeating as necessary.
 
         Return value:
@@ -134,7 +134,7 @@ class Tile:
         """
         self._load()
         x_scale, y_scale = scale
-        shift0, shift1, tile = self._scale(x_scale, y_scale)
+        shift0, shift1, tile = self._scale_and_rotate(x_scale, y_scale, angle)
 
         shape_center, shape_width, shape_height = self._get_center_and_dimensions(shape)
         prepared_shape = prep(shape)

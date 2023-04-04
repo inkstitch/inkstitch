@@ -27,7 +27,7 @@ def meander_fill(fill, shape, original_shape, shape_index, starting_point, endin
     debug.log(f"tile name: {tile.name}")
 
     debug.log_line_strings(lambda: ensure_geometry_collection(shape.boundary).geoms, 'Meander shape')
-    graph = tile.to_graph(shape, fill.meander_scale)
+    graph = tile.to_graph(shape, fill.meander_scale, fill.meander_angle)
 
     if not graph:
         label = fill.node.label or fill.node.get_id()

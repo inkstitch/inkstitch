@@ -186,8 +186,20 @@ class FillStitch(EmbroideryElement):
         return self.get_param('meander_pattern', min(tiles.all_tiles()).id)
 
     @property
+    @param('meander_angle',
+           _('Meander pattern angle'),
+           type='float', unit="degrees",
+           default=0,
+           select_items=[('fill_method', 'meander_fill')],
+           sort_index=4)
+    def meander_angle(self):
+        return math.radians(self.get_float_param('meander_angle', 0))
+
+    @property
     @param('meander_scale_percent',
            _('Meander pattern scale'),
+           tooltip=_("Percentage to stretch or compress the meander pattern.  You can scale horizontally " +
+                     "and vertically individually by giving two percentages separated by a space. "),
            type='float', unit="%",
            default=100,
            select_items=[('fill_method', 'meander_fill')],
