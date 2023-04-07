@@ -3,6 +3,8 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
+from math import ceil
+
 import shapely.geometry
 from inkex import Transform
 
@@ -104,7 +106,7 @@ class Stroke(EmbroideryElement):
     @property
     @param('running_stitch_length_mm',
            _('Running stitch length'),
-           tooltip=_('Length of stitches in running stitch mode.'),
+           tooltip=_('Length of stitches. Stitches can be shorter according to the stitch tolerance setting.'),
            unit='mm',
            type='float',
            select_items=[('stroke_method', 'running_stitch'), ('stroke_method', 'ripple_stitch')],
@@ -115,7 +117,7 @@ class Stroke(EmbroideryElement):
 
     @property
     @param('running_stitch_tolerance_mm',
-           _('Running stitch tolerance'),
+           _('Stitch tolerance'),
            tooltip=_('All stitches must be within this distance from the path.  ' +
                      'A lower tolerance means stitches will be closer together.  ' +
                      'A higher tolerance means sharp corners may be rounded.'),
@@ -126,6 +128,20 @@ class Stroke(EmbroideryElement):
            sort_index=4)
     def running_stitch_tolerance(self):
         return max(self.get_float_param("running_stitch_tolerance_mm", 0.2), 0.01)
+
+    @property
+    @param('max_stitch_length_mm',
+           _('Max stitch length'),
+           tooltip=_('Split stitches longer than this.'),
+           unit='mm',
+           type='float',
+           select_items=[('stroke_method', 'manual_stitch')],
+           sort_index=4)
+    def max_stitch_length(self):
+        max_length = self.get_float_param("max_stitch_length_mm", None)
+        if not max_length or max_length <= 0:
+            return
+        return max_length
 
     @property
     @param('zigzag_spacing_mm',
@@ -396,6 +412,21 @@ class Stroke(EmbroideryElement):
 
         return StitchGroup(self.color, repeated_stitches, lock_stitches=self.lock_stitches, force_lock_stitches=self.force_lock_stitches)
 
+    def apply_max_stitch_length(self, path):
+        # apply max distances
+        max_len_path = [path[0]]
+        for points in zip(path[:-1], path[1:]):
+            line = shapely.geometry.LineString(points)
+            dist = line.length
+            if dist > self.max_stitch_length:
+                num_subsections = ceil(dist / self.max_stitch_length)
+                additional_points = [Point(coord.x, coord.y)
+                                     for coord in [line.interpolate((i/num_subsections), normalized=True)
+                                     for i in range(1, num_subsections + 1)]]
+                max_len_path.extend(additional_points)
+            max_len_path.append(points[1])
+        return max_len_path
+
     def ripple_stitch(self):
         return StitchGroup(
             color=self.color,
@@ -422,6 +453,9 @@ class Stroke(EmbroideryElement):
                 path = [Point(x, y) for x, y in path]
                 # manual stitch
                 if self.stroke_method == 'manual_stitch':
+                    if self.max_stitch_length:
+                        path = self.apply_max_stitch_length(path)
+
                     if self.force_lock_stitches:
                         lock_stitches = self.lock_stitches
                     else:
