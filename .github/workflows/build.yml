@@ -182,6 +182,9 @@ jobs:
           echo "${{ env.pythonLocation }}/bin" >> $GITHUB_PATH
       - shell: bash
         run: |
+          # Disables electron-builder during the build process,
+          # code signing for electron app and inkstitch app is done from build-distribution-archives
+          export CSC_IDENTITY_AUTO_DISCOVERY=false
           make dist
         env:
           BUILD: osx
