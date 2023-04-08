@@ -115,7 +115,11 @@ def _update_to_one(element):  # noqa: C901
                 element.get_param('satin_column', False) is False and
                 not element.node.style('stroke-dasharray')):
             element.set_param('stroke_method', 'zigzag_stitch')
-
+        # grid_size was supposed to be mm, but it was in pixels
+        grid_size = self.get_float_param('grid_size', None)
+        if grid_size:
+            size = grid_size / PIXELS_PER_MM
+            self.set_param('grid_size_mm', size)
 
 def _replace_legacy_embroider_param(element, param):
     # remove "embroider_" prefix
