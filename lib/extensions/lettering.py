@@ -31,9 +31,11 @@ class LetteringFrame(wx.Frame):
     DEFAULT_FONT = "small_font"
 
     def __init__(self, *args, **kwargs):
-        # begin wxGlade: MyFrame.__init__
         self.group = kwargs.pop('group')
         self.cancel_hook = kwargs.pop('on_cancel', None)
+        self.metadata = kwargs.pop('metadata', [])
+
+        # begin wxGlade: MyFrame.__init__
         wx.Frame.__init__(self, None, wx.ID_ANY,
                           _("Ink/Stitch Lettering")
                           )
@@ -492,8 +494,9 @@ class Lettering(CommandsExtension):
             return group
 
     def effect(self):
+        metadata = self.get_inkstitch_metadata()
         app = wx.App()
-        frame = LetteringFrame(group=self.get_or_create_group(), on_cancel=self.cancel)
+        frame = LetteringFrame(group=self.get_or_create_group(), on_cancel=self.cancel, metadata=metadata)
 
         # position left, center
         current_screen = wx.Display.GetFromPoint(wx.GetMousePosition())

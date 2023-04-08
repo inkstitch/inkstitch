@@ -478,9 +478,11 @@ class SettingsFrame(wx.Frame):
             lc = wx.Locale()
             lc.Init(wx.LANGUAGE_DEFAULT)
 
-        # begin wxGlade: MyFrame.__init__
         self.tabs_factory = kwargs.pop('tabs_factory', [])
         self.cancel_hook = kwargs.pop('on_cancel', None)
+        self.metadata = kwargs.pop('metadata', [])
+
+        # begin wxGlade: MyFrame.__init__
         wx.Frame.__init__(self, None, wx.ID_ANY,
                           _("Embroidery Params")
                           )
@@ -786,8 +788,11 @@ class Params(InkstitchExtension):
     def effect(self):
         try:
             app = wx.App()
+            metadata = self.get_inkstitch_metadata()
             frame = SettingsFrame(
-                tabs_factory=self.create_tabs, on_cancel=self.cancel)
+                tabs_factory=self.create_tabs,
+                on_cancel=self.cancel,
+                metadata=metadata)
 
             # position left, center
             current_screen = wx.Display.GetFromPoint(wx.GetMousePosition())

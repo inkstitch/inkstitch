@@ -805,7 +805,10 @@ class SimulatorPreview(Thread):
             return
 
         if patches and not self.refresh_needed.is_set():
-            stitch_plan = stitch_groups_to_stitch_plan(patches)
+            metadata = self.parent.metadata
+            collapse_len = metadata['collapse_len_mm']
+            min_stitch_len = metadata['min_stitch_len_mm']
+            stitch_plan = stitch_groups_to_stitch_plan(patches, collapse_len=collapse_len, min_stitch_len=min_stitch_len)
 
             # GUI stuff needs to happen in the main thread, so we ask the main
             # thread to call refresh_simulator().
