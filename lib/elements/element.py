@@ -74,14 +74,6 @@ class EmbroideryElement(object):
                     params.append(prop.fget.param)
         return params
 
-    def replace_legacy_param(self, param):
-        # remove "embroider_" prefix
-        new_param = param[10:]
-        if new_param in INKSTITCH_ATTRIBS:
-            value = self.node.get(param, "").strip()
-            self.set_param(param[10:], value)
-        del self.node.attrib[param]
-
     @cache
     def get_param(self, param, default):
         value = self.node.get(INKSTITCH_ATTRIBS[param], "").strip()

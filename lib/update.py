@@ -1,3 +1,58 @@
+from inkex import errormsg
+
+from .i18n import _
+from .elements import EmbroideryElement
+from .metadata import InkStitchMetadata
+from .svg.tags import INKSTITCH_ATTRIBS
+
+INKSTITCH_SVG_VERSION = 1
+
+
+def update_inkstitch_document(svg):
+    document = svg.getroot()
+    # get the inkstitch svg version from the document
+    search_string = "//*[local-name()='inkstitch_svg_version']//text()"
+    file_version = document.findone(search_string)
+    try:
+        file_version = int(file_version)
+    except (TypeError, ValueError):
+        file_version = 0
+
+    if file_version == INKSTITCH_SVG_VERSION:
+        return
+
+    if file_version > INKSTITCH_SVG_VERSION:
+        errormsg(_("This document was created with a newer Version of Ink/Stitch. "
+                   "It is possible that not everything works as expected.\n\n"
+                   "Please update your Ink/Stitch version: https://inkstitch.org/docs/install/"))
+        # they may not want to be bothered with this info everytime they call an inkstitch extension
+        # let's udowngrade the file version number
+        _update_inkstitch_svg_version(svg)
+    else:
+        # this document is either a new document or it is outdated
+        # if we cannot find any inkstitch attribute in the document, we assume that this is a new document which doesn't need to be updated
+        search_string = "//*[namespace-uri()='http://inkstitch.org/namespace' or " \
+                        "@*[namespace-uri()='http://inkstitch.org/namespace'] or " \
+                        "@*[starts-with(name(), 'embroider_')]]"
+        inkstitch_element = document.findone(search_string)
+        if inkstitch_element is None:
+            _update_inkstitch_svg_version(svg)
+            return
+
+        # update elements
+        for element in document.iterdescendants():
+            # We are just checking for params and update them.
+            # No need to go into check for specific stitch types at this point
+            update_legacy_params(EmbroideryElement(element), file_version, INKSTITCH_SVG_VERSION)
+        _update_inkstitch_svg_version(svg)
+
+
+def _update_inkstitch_svg_version(svg):
+    # set inkstitch svg version
+    metadata = InkStitchMetadata(svg.getroot())
+    metadata['inkstitch_svg_version'] = INKSTITCH_SVG_VERSION
+
+
 def update_legacy_params(element, file_version, inkstitch_svg_version):
     for version in range(file_version + 1, inkstitch_svg_version + 1):
         _update_to(version, element)
@@ -13,7 +68,7 @@ def _update_to_one(element):  # noqa: C901
     legacy_attribs = False
     for attrib in element.node.attrib:
         if attrib.startswith('embroider_'):
-            element.replace_legacy_param(attrib)
+            _replace_legacy_embroider_param(element, attrib)
             legacy_attribs = True
 
     # convert legacy tie setting
@@ -60,3 +115,12 @@ def _update_to_one(element):  # noqa: C901
                 element.get_param('satin_column', False) is False and
                 not element.node.style('stroke-dasharray')):
             element.set_param('stroke_method', 'zigzag_stitch')
+
+
+def _replace_legacy_embroider_param(element, param):
+    # remove "embroider_" prefix
+    new_param = param[10:]
+    if new_param in INKSTITCH_ATTRIBS:
+        value = element.node.get(param, "").strip()
+        element.set_param(param[10:], value)
+    del element.node.attrib[param]
