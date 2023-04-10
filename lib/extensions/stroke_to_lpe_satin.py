@@ -81,6 +81,8 @@ class StrokeToLpeSatin(InkstitchExtension):
                 self._process_stroke(element)
 
     def _process_stroke(self, element):
+        element = self._ensure_path_element(element)
+
         previous_effects = element.node.get(PATH_EFFECT, None)
         if not previous_effects:
             element.node.set(PATH_EFFECT, self.lpe.get_id(as_url=1))
@@ -92,6 +94,17 @@ class StrokeToLpeSatin(InkstitchExtension):
         element.set_param('satin_column', 'true')
 
         element.node.style['stroke-width'] = self.svg.viewport_to_unit('0.756')
+
+    def _ensure_path_element(self, element):
+        # elements other than paths (rectangle, circles, etc.) can be handled by inkscape for lpe
+        # but they are way easier to handle for us if we turn them into paths
+        if element.node.TAG == 'path':
+            return element
+
+        path_element = element.node.to_path_element()
+        parent = element.node.getparent()
+        parent.replace(element.node, path_element)
+        return Stroke(path_element)
 
     def _process_satin_column(self, element):
         current_effects = element.node.get(PATH_EFFECT, None)
