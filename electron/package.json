@@ -26,7 +26,7 @@
         {
           "target": "dir",
           "arch": [
-            "arm64"
+            "CPU_ARCH"
           ]
         }
       ]
@@ -41,7 +41,7 @@
         {
           "target": "dir",
           "arch": [
-            "arm64"
+            "CPU_ARCH"
           ]
         }
       ],
