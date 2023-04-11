@@ -5,32 +5,32 @@
  * Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
  *
  */
-
-import Vue from 'vue'
-import Router from 'vue-router'
-
-Vue.use(Router)
-
-export default new Router({
-  routes: [
+import { createWebHashHistory, createRouter } from 'vue-router'
+const routes = [
     {
-      path: '/simulator',
-      name: 'simulator',
-      component: require('@/components/Simulator').default
+        path: '/simulator',
+        name: 'simulator',
+        component: () => import('../components/Simulator.vue')
     },
     {
-      path: '/install',
-      name: 'install',
-      component: require('@/components/InstallPalettes').default
+        path: '/preferences',
+        name: 'preferences',
+        component: () => import('../components/Preferences.vue')
     },
     {
-      path: '/preferences',
-      name: 'preferences',
-      component: require('@/components/Preferences').default
+        path: '/:pathMatch(.*)*',
+        name: 'NotFound',
+        component: () => import('../components/NotFound.vue')
     },
-    {
-      path: '*',
-      redirect: '/'
-    }
-  ]
+]
+const router = createRouter({
+    history: createWebHashHistory(),
+    routes
 })
+// Sets title for each routes
+const DEFAULT_TITLE = 'Ink/Stitch';
+
+router.beforeEach((to) => {
+  document.title = to.meta.title || DEFAULT_TITLE
+})
+export default router

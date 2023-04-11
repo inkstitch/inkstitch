@@ -15,11 +15,13 @@ from flask import Flask, g
 from werkzeug.serving import make_server
 
 from ..utils.json import InkStitchJSONProvider
-from .install import install
 from .simulator import simulator
 from .stitch_plan import stitch_plan
 from .preferences import preferences
 from .page_specs import page_specs
+from .lang import languages
+# this for electron axios
+from flask_cors import CORS
 
 
 class APIServer(Thread):
@@ -42,14 +44,14 @@ class APIServer(Thread):
         cli.show_server_banner = lambda *x: None
 
         self.app = Flask(__name__)
+        CORS(self.app)
         self.app.json = InkStitchJSONProvider(self.app)
 
         self.app.register_blueprint(simulator, url_prefix="/simulator")
         self.app.register_blueprint(stitch_plan, url_prefix="/stitch_plan")
-        self.app.register_blueprint(install, url_prefix="/install")
         self.app.register_blueprint(preferences, url_prefix="/preferences")
         self.app.register_blueprint(page_specs, url_prefix="/page_specs")
-
+        self.app.register_blueprint(languages, url_prefix="/languages")
         @self.app.before_request
         def store_extension():
             # make the InkstitchExtension object available to the view handling
