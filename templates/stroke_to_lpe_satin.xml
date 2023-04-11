@@ -20,6 +20,8 @@
         <param name="length" type="float" precision="1" min="0.1" max="100" gui-text="Pattern Length (mm)">15</param>
         <param name="stretched" type="boolean" gui-text="Stretched">false</param>
         <param name="rungs" type="boolean" gui-text="Add rungs">true</param>
+        <param name="path-specific" type="boolean" gui-text="Path specific"
+               description="When disabled, changes on the path effect will apply to all elements with the same path effect.">true</param>
       </page>
       <page name="info" gui-text="Help">
         <label appearance="header">This extension converts a stroke into a satin column using the path effect "pattern along path".</label>
