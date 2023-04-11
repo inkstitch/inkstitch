@@ -42,8 +42,33 @@ def open_url(url):
             pass
         else:
             mac_dev_env["PATH"] = yarn_path + mac_dev_env["PATH"]
+            # checking URL for flask server address for printToPDF
+            if url == "http://127.0.0.1:5000/":
+                with open(os.devnull, 'w') as null:
+                    subprocess.Popen(["yarn", "just-build"], cwd=cwd, stdout=null, env=mac_dev_env).wait()
+            else:
+                pass
+
         with open(os.devnull, 'w') as null:
             return subprocess.Popen(command, cwd=cwd, stdout=null, env=mac_dev_env)
     else:
-        with open(os.devnull, 'w') as null:
-            return subprocess.Popen(command, cwd=cwd, stdout=null)
+        if url == "http://127.0.0.1:5000/" and getattr(sys, 'frozen', None) is None:
+            with open(os.devnull, 'w') as null:
+                subprocess.Popen(["yarn", "just-build"], cwd=cwd, stdout=null).wait()
+        else:
+            pass
+        if sys.platform == "linux":
+            # Pyinstaller fix for gnome document view not opening.
+            lenv = dict(os.environ)
+            lp_key = 'LD_LIBRARY_PATH'
+            lp_orig = lenv.get(lp_key + '_ORIG')
+            if lp_orig is not None:
+              lenv[lp_key] = lp_orig  # restore the original, unmodified value
+            else:
+              lenv.pop(lp_key, None)
+                   
+            with open(os.devnull, 'w') as null:
+              return subprocess.Popen(command, cwd=cwd, stdout=null, env=lenv)
+        else:
+            with open(os.devnull, 'w') as null:
+              return subprocess.Popen(command, cwd=cwd, stdout=null)
