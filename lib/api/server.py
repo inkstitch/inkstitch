@@ -52,6 +52,7 @@ class APIServer(Thread):
         self.app.register_blueprint(preferences, url_prefix="/preferences")
         self.app.register_blueprint(page_specs, url_prefix="/page_specs")
         self.app.register_blueprint(languages, url_prefix="/languages")
+
         @self.app.before_request
         def store_extension():
             # make the InkstitchExtension object available to the view handling

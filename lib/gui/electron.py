@@ -63,12 +63,12 @@ def open_url(url):
             lp_key = 'LD_LIBRARY_PATH'
             lp_orig = lenv.get(lp_key + '_ORIG')
             if lp_orig is not None:
-              lenv[lp_key] = lp_orig  # restore the original, unmodified value
+                lenv[lp_key] = lp_orig  # restore the original, unmodified value
             else:
-              lenv.pop(lp_key, None)
-                   
+                lenv.pop(lp_key, None)
+
             with open(os.devnull, 'w') as null:
-              return subprocess.Popen(command, cwd=cwd, stdout=null, env=lenv)
+                return subprocess.Popen(command, cwd=cwd, stdout=null, env=lenv)
         else:
             with open(os.devnull, 'w') as null:
-              return subprocess.Popen(command, cwd=cwd, stdout=null)
+                return subprocess.Popen(command, cwd=cwd, stdout=null)
