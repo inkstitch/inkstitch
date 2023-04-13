@@ -35,13 +35,13 @@ Paramètre||Description
 ---|--|---
 Points droits le long des chemins   ||Doit être activé pour que ces paramètres prennent effet.
 Méthode                             ||Choisir le type "Point droit" 
-Placement de points manuels         || **Active le Point Manuel**
+Placement de points manuels         || **Activer le Point Manuel**
 Répéter                             ||Ce paramètre est sans effet sur les points manuels
 Longueur du point droit             ||Ce paramètre est sans effet sur les points manuels
 Tolérance du point droit            ||Ce paramètre est sans effet sur les points manuels
 Espacement Zig-Zag (crête à crête)  ||Ce paramètre est sans effet sur les points manuels
-Autoriser les points d'arrêts       ||Les points manuels ne permette pas l'ajout automatique de points d'arrêt. Vous devez les inclure manuellement dans votre chemin. But you can enable them through the setting `force lock stitches`.
-Forcer les points d'arrêts          ||Enables lock stitches for manual stitches.
+Autoriser les points d'arrêts       ||Les points manuels ne permette pas l'ajout automatique de points d'arrêt. Vous devez les inclure manuellement dans votre chemin. Mais vous pouvez les activer via "Forcer les points d'arrêts". 
+Forcer les points d'arrêts          ||Ajoute un point d'arrêt sur un point manuel.
 Couper après                        ||Couper le fil après avoir brodé cet objet
 Arrêter après                       ||Arrêter (pause machine) après avoir brodé cet objet. Avant l'arrêt, il y aura un saut vers la position d'arrêt si elle a été définie.
 
