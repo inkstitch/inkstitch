@@ -1,9 +1,9 @@
 ---
-title: Patterned Running Stitch
+title: Motif sur point droit
 permalink: /fr/tutorials/patterned-unning-stitch/
-last_modified_at: 2023-02-20
+last_modified_at: 2023-04-13
 language: fr
-excerpt: "How to create a patterned running stitch with Inkscapes live path effects"
+excerpt: "Comment créer un motif sur point droit en utilisant s"
 image: "/assets/images/tutorials/pattern-along-path/copy-paste.png"
 
 tutorial-type:
@@ -14,33 +14,40 @@ techniques:
 field-of-use:
 user-level: 
 ---
-Ink/Stitch is an Inkscape plugin. Inkscape has so called `Live Path Effects` (LPE). They can directly be used by Ink/Stitch.
+Ink/Stitch est un plugin d'Inkscape. Inkscape propose des  `Effets de chemins`. Ils peuvent être utilisés directement dans Ink/Stitch.
 
-So if we want to create a patterned running stitch we can make use of the LPE `Pattern Along Path`.
+Donc, si vous souhaitez créer un motif sur point droit, vous pouvez utiliser l'effet de chemin "Motif suivant un chemin".
 
-1. Create the target path and select it. The target path is a normal [running stitch path](/docs/stitches/running-stitch/).
+
+1. Créez le chemin cible, et selectionnez le. Le chemin cible est un chemin en  [point droit](/docs/stitches/running-stitch/) normal.
 
    ![Target path](/assets/images/tutorials/pattern-along-path/target-path.png)
-2. Press `Ctrl+&` to open the LPE-dialog. Alternatively go to `Pah > Path effects...`.
-3. Click on the `+` sign in the LPE-dialog and select `Pattern Along Path`
+   
+2.Faites `Ctrl+&` pour ouvrir le dialogue "Effets de chemins". Ou faites 'Chemin > Effets de chemins`.
+
+3. Cliquez sur le signe '+' dans le dialogue "Effets de chemins" et selectionnez `Motif suivant un chemin`
 
    ![pattern along path](/assets/images/tutorials/pattern-along-path/pattern-along-path.png)
-4. In the LPE-dialog chose "Repeated" or "Repeated stretched" for `Pattern copies`
+  
+4.  Dans le menu "Copies du motif", choisissez "Répété" ou "Répété, étiré"
 
    ![repeat pattern](/assets/images/tutorials/pattern-along-path/repeat.png)
-5. There are various methods to apply a pattern to the path. If you want to create your path from scratch, here is how you do it. At the `Pattern source` line, click on the `Edit on canvas` symbol.
+   
+5. Il y a plusieurs méthodes pour appliquer un motif sur un chemin. Si vous souhaitez creer votre chemin à partir de zéro, voici comment faire. Sur la ligne "Source du motif" cliquez sur le symbole "Modifier sur la zone de travail".
 
     ![edit on canvas](/assets/images/tutorials/pattern-along-path/edit.png)
-
-    In the top left corner you'll see a small path. Zoom in and click on the node on the right side. For the x value enter the length, that you wish to have for your pattern.
+    
+    Dans le coin supérieur gauche, vous allez voir un petit chemin, zoomez et cliquez sur le noeud de droite. Dans la valeur X, indiquez la longueur souhaitée pour votre motif.
 
     ![set pattern size](/assets/images/tutorials/pattern-along-path/set-size.png)
     
-    Now you can edit the path. Double click on the path to add nodes at specific spots and drag the line or nodes to create your pattern. Keep the first and last nodes in place.
+    Maintnant vous pouvez éditer ce chemin. Double cliquez sur le chemin pour ajouter un noeud a un endroit specifique, et déplacez noeud ou trait pour créer votre motif. Laissez le premier et le dernier noeud à leur place initiale.
+    
 
     ![final path](/assets/images/tutorials/pattern-along-path/final-path.png)
     
-    The patterned path can be copied and altered as any other path. If you need to switch the direction to create a better stitch routing, click on the `Edit on canvas` button again and flip your pattern too.
+    Le motif sur chemin peut être copié et modifié comme n'importe quel chemin. Si vous avez besoin d'inverser la direction, il vous faut changer la direction du chemin initial et aussi cliquer à nouveau sur le symbole  "Modifier sur la zone de travail" et inverser aussi le sens du motif.
+    
 
     ![copy paste](/assets/images/tutorials/pattern-along-path/copy-paste.png)
 
