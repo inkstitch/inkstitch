@@ -26,6 +26,7 @@ class StrokeToLpeSatin(InkstitchExtension):
         self.arg_parser.add_argument("-l", "--length", type=float, default=15, dest="length")
         self.arg_parser.add_argument("-t", "--stretched", type=inkex.Boolean, default=False, dest="stretched")
         self.arg_parser.add_argument("-r", "--rungs", type=inkex.Boolean, default=False, dest="add_rungs")
+        self.arg_parser.add_argument("-s", "--path-specific", type=inkex.Boolean, default=True, dest="path_specific")
 
     def effect(self):
         if not self.svg.selection or not self.get_elements():
@@ -52,48 +53,79 @@ class StrokeToLpeSatin(InkstitchExtension):
         pattern_path = pattern_obj.get_path(self.options.add_rungs, min_width, max_width, length, self.svg.unit)
         pattern_node_type = pattern_obj.node_types
 
+        if not self.options.path_specific:
+            lpe = self._create_lpe_element(pattern, pattern_path, pattern_node_type)
+
+        for element in self.elements:
+            if self.options.path_specific:
+                lpe = self._create_lpe_element(pattern, pattern_path, pattern_node_type, element)
+            if isinstance(element, SatinColumn):
+                self._process_satin_column(element, lpe)
+            elif isinstance(element, Stroke):
+                self._process_stroke(element, lpe)
+
+    def _create_lpe_element(self, pattern, pattern_path, pattern_node_type, element=None):
+        # define id for the lpe path
+        if not element:
+            lpe_id = f'inkstitch-effect-{pattern}'
+        else:
+            lpe_id = f'inkstitch-effect-{pattern}-{element.id}'
+
+        # it is possible, that there is already a path effect with this id, if so, use it
+        previous_lpe = self.svg.getElementById(lpe_id)
+        if previous_lpe is not None:
+            return previous_lpe
+
         # the lpe 'pattern along path' has two options to repeat the pattern, get user input
         copy_type = 'repeated' if self.options.stretched is False else 'repeated_stretched'
 
+        lpe = inkex.PathEffect(attrib={'id': lpe_id,
+                                       'effect': "skeletal",
+                                       'is_visible': "true",
+                                       'lpeversion': "1",
+                                       'pattern': pattern_path,
+                                       'copytype': copy_type,
+                                       'prop_scale': "1",
+                                       'scale_y_rel': "false",
+                                       'spacing': "0",
+                                       'normal_offset': "0",
+                                       'tang_offset': "0",
+                                       'prop_units': "false",
+                                       'vertical_pattern': "false",
+                                       'hide_knot': "false",
+                                       'fuse_tolerance': "0.02",
+                                       'pattern-nodetypes': pattern_node_type})
         # add the path effect element to the defs section
-        self.lpe = inkex.PathEffect(attrib={'id': f'inkstitch-effect-{pattern}',
-                                            'effect': "skeletal",
-                                            'is_visible': "true",
-                                            'lpeversion': "1",
-                                            'pattern': pattern_path,
-                                            'copytype': copy_type,
-                                            'prop_scale': "1",
-                                            'scale_y_rel': "false",
-                                            'spacing': "0",
-                                            'normal_offset': "0",
-                                            'tang_offset': "0",
-                                            'prop_units': "false",
-                                            'vertical_pattern': "false",
-                                            'hide_knot': "false",
-                                            'fuse_tolerance': "0.02",
-                                            'pattern-nodetypes': pattern_node_type})
-        self.svg.defs.add(self.lpe)
+        self.svg.defs.add(lpe)
+        return lpe
 
-        for element in self.elements:
-            if isinstance(element, SatinColumn):
-                self._process_satin_column(element)
-            elif isinstance(element, Stroke):
-                self._process_stroke(element)
+    def _process_stroke(self, element, lpe):
+        element = self._ensure_path_element(element, lpe)
 
-    def _process_stroke(self, element):
         previous_effects = element.node.get(PATH_EFFECT, None)
         if not previous_effects:
-            element.node.set(PATH_EFFECT, self.lpe.get_id(as_url=1))
+            element.node.set(PATH_EFFECT, lpe.get_id(as_url=1))
             element.node.set(ORIGINAL_D, element.node.get('d', ''))
         else:
-            url = previous_effects + ';' + self.lpe.get_id(as_url=1)
+            url = previous_effects + ';' + lpe.get_id(as_url=1)
             element.node.set(PATH_EFFECT, url)
         element.node.pop('d')
         element.set_param('satin_column', 'true')
 
         element.node.style['stroke-width'] = self.svg.viewport_to_unit('0.756')
 
-    def _process_satin_column(self, element):
+    def _ensure_path_element(self, element, lpe):
+        # elements other than paths (rectangle, circles, etc.) can be handled by inkscape for lpe
+        # but they are way easier to handle for us if we turn them into paths
+        if element.node.TAG == 'path':
+            return element
+
+        path_element = element.node.to_path_element()
+        parent = element.node.getparent()
+        parent.replace(element.node, path_element)
+        return Stroke(path_element)
+
+    def _process_satin_column(self, element, lpe):
         current_effects = element.node.get(PATH_EFFECT, None)
         # there are possibly multiple path effects, let's check if inkstitch-effect is among them
         if not current_effects or 'inkstitch-effect' not in current_effects:
@@ -106,10 +138,11 @@ class StrokeToLpeSatin(InkstitchExtension):
         inkstitch_effect = current_effects[inkstitch_effect_position][1:]
         # get the path effect element
         old_effect_element = self.svg.getElementById(inkstitch_effect)
-        # remove the old inkstitch-effect
-        old_effect_element.getparent().remove(old_effect_element)
-        # update the path effect link
-        current_effects[inkstitch_effect_position] = self.lpe.get_id(as_url=1)
+        # remove the old inkstitch-effect if it is path specific
+        if inkstitch_effect.endswith(element.id):
+            old_effect_element.getparent().remove(old_effect_element)
+        # update path effect link
+        current_effects[inkstitch_effect_position] = lpe.get_id(as_url=1)
         element.node.set(PATH_EFFECT, ';'.join(current_effects))
         element.node.pop('d')
 

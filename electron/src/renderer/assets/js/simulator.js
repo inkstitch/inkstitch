@@ -611,11 +611,11 @@ export default {
       this.svg.on('zoom', this.resizeCursor)
       this.resizeCursor()
 
+      inkStitch.get('page_specs').then(response => {
+        this.page_specs = response.data
+        this.generatePage()
+      })
       this.start()
-    })
-    inkStitch.get('page_specs').then(response => {
-      this.page_specs = response.data
-      this.generatePage()
     })
   }
 }
