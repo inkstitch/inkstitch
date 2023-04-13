@@ -615,7 +615,6 @@ export default {
         this.page_specs = response.data
         this.generatePage()
       })
-
       this.start()
     })
   }
