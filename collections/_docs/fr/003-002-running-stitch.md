@@ -2,7 +2,7 @@
 title: "Point droit"
 permalink: /fr/docs/stitches/running-stitch/
 excerpt: ""
-last_modified_at: 2023-01-20
+last_modified_at: 2023-04-13
 toc: true
 ---
 ## Qu'est-ce que c'est
@@ -46,13 +46,13 @@ Forcer les points d'arrêts        |Force un point d'arrêt après l'objet indé
 Couper après                      |Couper le fil après avoir brodé cet objet
 Arrêter après                     |Arrêter (pause machine) après avoir brodé cet objet. Avant l'arrêt, il y aura un saut vers la position d'arrêt si elle a été définie
 
-## Routing
+## Routage (agencement automatique)
 
-For a better stitch routing try the extension `Autoroute Running Stitch` in the [stroke tools](/fr/docs/stroke-tools/).
+Pour un meilleur ordonnancement des points, essayez l'extension `Agencement automatique de points droits ` dans  [Outils: Traits](/fr/docs/stroke-tools/).
 
-## Patterned Running Stitch
+## Motif sur point droit
 
-Read the [tutorial](/fr/tutorials/patterned-unning-stitch/) how to easily create a patterned running stitch.
+Lire le [tutoriel](/fr/tutorials/patterned-unning-stitch/) pour créer facilement un motif sur point droit
 
 ![patterned running stitch](/assets/images/tutorials/pattern-along-path/copy-paste.png)
 
