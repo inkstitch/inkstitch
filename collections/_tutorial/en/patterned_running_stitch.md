@@ -21,7 +21,7 @@ So if we want to create a patterned running stitch we can make use of the LPE `P
 1. Create the target path and select it. The target path is a normal [running stitch path](/docs/stitches/running-stitch/).
 
    ![Target path](/assets/images/tutorials/pattern-along-path/target-path.png)
-2. Press `Ctrl+&` to open the LPE-dialog. Alternatively go to `Pah > Path effects...`.
+2. Press `Ctrl+&` to open the LPE-dialog. Alternatively go to `Path > Path effects...`.
 3. Click on the `+` sign in the LPE-dialog and select `Pattern Along Path`
 
    ![pattern along path](/assets/images/tutorials/pattern-along-path/pattern-along-path.png)
