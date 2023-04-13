@@ -49,7 +49,7 @@ class DBusActions:
 # start dbus
 dbus = DBusActions()
 # give it some time to start
-sleep(0.2)
+sleep(0.5)
 # clear previous selection
 dbus.run_action('select-clear', None)
 # select with the list of ids

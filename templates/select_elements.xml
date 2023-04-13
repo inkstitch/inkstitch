@@ -8,7 +8,15 @@
         <page name="stitch-type" gui-text="Select options">
             <label appearance="header">Select Stitch Type</label>
             <label>Stroke type</label>
+                <hbox>
                 <param indent="1" name="select-running-stitch" type="boolean" gui-text="Running Stitch">false</param>
+                <param indent="1" name="running-stitch-condition" type="optiongroup" appearance="combo" gui-text="Select"
+                       gui-description="Only select specific running stitches">
+                    <option value="all">All</option>
+                    <option value="autorun-top">Auto-Run Top Stitching</option>
+                    <option value="autorun-underpath">Auto-Run Underpath</option>
+                </param>
+                </hbox>
                 <param indent="1" name="select-ripples" type="boolean" gui-text="Ripples">false</param>
                 <param indent="1" name="select-zigzag" type="boolean" gui-text="ZigZag Stitch">false</param>
                 <param indent="1" name="select-manual" type="boolean" gui-text="Manual Stitch">false</param>
@@ -53,7 +61,7 @@
             <label>If this isn't working for you, you may need to insert your path to a python executable manualy.</label>
             <spacer />
             <label>* Windows: Open the "Command Prompt" and type "where python". Copy the path and paste it here.</label>
-            <label>* Linux: Open the command line and type "which python". Copy the path and paste it here.</label>
+            <label>* Linux: Open the command line and type "which python3". Copy the path and paste it here.</label>
             <label>* macOS: doesn't work, sorry</label>
             <param name="python-path" type="string" gui-text="Python Path"></param>
         </page>
