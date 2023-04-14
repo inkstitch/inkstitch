@@ -7,6 +7,9 @@ preview_image:
   - url: /assets/images/fonts/abril.png
     height: 100
 ---
+
+{% include upcoming_release.html %}
+
 ![April En Fleurs AGS](/assets/images/fonts/abril.png)
 
 ## Glyphs
