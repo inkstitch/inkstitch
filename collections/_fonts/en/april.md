@@ -28,8 +28,8 @@ It can be scaled up to 150%  (150mm, 6 inches) and scalled down to 80% (80mm  3.
 
 ## In real life
 
-{% include folder-galleries path="fonts/april/" %}
+{% include folder-galleries path="fonts/abril/" %}
 
 
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/april/LICENSE)
+[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/abril/LICENSE)
