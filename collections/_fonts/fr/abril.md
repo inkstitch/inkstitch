@@ -1,4 +1,4 @@
-[---](https://inkstitch.org/fr/fonts/abril/)
+---
 title: "Abril En Fleurs AGS"
 permalink: /fr/fonts/abril/
 last_modified_at: 2023-04-15
