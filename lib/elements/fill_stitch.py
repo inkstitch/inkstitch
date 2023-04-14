@@ -186,8 +186,20 @@ class FillStitch(EmbroideryElement):
         return self.get_param('meander_pattern', min(tiles.all_tiles()).id)
 
     @property
+    @param('meander_angle',
+           _('Meander pattern angle'),
+           type='float', unit="degrees",
+           default=0,
+           select_items=[('fill_method', 'meander_fill')],
+           sort_index=4)
+    def meander_angle(self):
+        return math.radians(self.get_float_param('meander_angle', 0))
+
+    @property
     @param('meander_scale_percent',
            _('Meander pattern scale'),
+           tooltip=_("Percentage to stretch or compress the meander pattern.  You can scale horizontally " +
+                     "and vertically individually by giving two percentages separated by a space. "),
            type='float', unit="%",
            default=100,
            select_items=[('fill_method', 'meander_fill')],
@@ -554,6 +566,16 @@ class FillStitch(EmbroideryElement):
         return self.get_float_param('expand_mm', 0)
 
     @property
+    @param('clip', _('Clip path'),
+           tooltip=_('Constrain stitching to the shape.  Useful when smoothing and expand are used.'),
+           type='boolean',
+           default=False,
+           select_items=[('fill_method', 'meander_fill')],
+           sort_index=6)
+    def clip(self):
+        return self.get_boolean_param('clip', False)
+
+    @property
     @param('underpath',
            _('Underpath'),
            tooltip=_('Travel inside the shape when moving from section to section.  Underpath '
@@ -648,7 +670,7 @@ class FillStitch(EmbroideryElement):
                         elif self.fill_method == 'guided_fill':
                             stitch_groups.extend(self.do_guided_fill(fill_shape, previous_stitch_group, start, end))
                         elif self.fill_method == 'meander_fill':
-                            stitch_groups.extend(self.do_meander_fill(fill_shape, i, start, end))
+                            stitch_groups.extend(self.do_meander_fill(fill_shape, shape, i, start, end))
                         elif self.fill_method == 'circular_fill':
                             stitch_groups.extend(self.do_circular_fill(fill_shape, previous_stitch_group, start, end))
                 except ExitThread:
@@ -792,11 +814,11 @@ class FillStitch(EmbroideryElement):
             ))
         return [stitch_group]
 
-    def do_meander_fill(self, shape, i, starting_point, ending_point):
+    def do_meander_fill(self, shape, original_shape, i, starting_point, ending_point):
         stitch_group = StitchGroup(
             color=self.color,
             tags=("meander_fill", "meander_fill_top"),
-            stitches=meander_fill(self, shape, i, starting_point, ending_point))
+            stitches=meander_fill(self, shape, original_shape, i, starting_point, ending_point))
         return [stitch_group]
 
     @cache

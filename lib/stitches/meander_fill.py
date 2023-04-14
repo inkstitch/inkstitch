@@ -2,7 +2,7 @@ from itertools import combinations
 
 import networkx as nx
 from inkex import errormsg
-from shapely.geometry import MultiPoint, Point
+from shapely.geometry import LineString, MultiPoint, Point
 from shapely.ops import nearest_points
 
 from .. import tiles
@@ -18,7 +18,7 @@ from ..utils.threading import check_stop_flag
 from .running_stitch import running_stitch
 
 
-def meander_fill(fill, shape, shape_index, starting_point, ending_point):
+def meander_fill(fill, shape, original_shape, shape_index, starting_point, ending_point):
     debug.log(f"meander pattern: {fill.meander_pattern}")
     tile = get_tile(fill.meander_pattern)
     if not tile:
@@ -27,7 +27,7 @@ def meander_fill(fill, shape, shape_index, starting_point, ending_point):
     debug.log(f"tile name: {tile.name}")
 
     debug.log_line_strings(lambda: ensure_geometry_collection(shape.boundary).geoms, 'Meander shape')
-    graph = tile.to_graph(shape, fill.meander_scale)
+    graph = tile.to_graph(shape, fill.meander_scale, fill.meander_angle)
 
     if not graph:
         label = fill.node.label or fill.node.get_id()
@@ -40,7 +40,7 @@ def meander_fill(fill, shape, shape_index, starting_point, ending_point):
     start, end = find_starting_and_ending_nodes(graph, shape, starting_point, ending_point)
     rng = iter_uniform_floats(fill.random_seed, 'meander-fill', shape_index)
 
-    return post_process(generate_meander_path(graph, start, end, rng), shape, fill)
+    return post_process(generate_meander_path(graph, start, end, rng), shape, original_shape, fill)
 
 
 def get_tile(tile_id):
@@ -126,10 +126,16 @@ def generate_meander_path(graph, start, end, rng):
             check_stop_flag()
 
             edge1, edge2 = poprandom(edge_pairs, rng)
-            edges_to_consider.extend(replace_edge_pair(meander_path, edge1, edge2, graph, graph_nodes))
-            break
+            new_edges = replace_edge_pair(meander_path, edge1, edge2, graph, graph_nodes)
+            if new_edges:
+                edges_to_consider.extend(new_edges)
+                break
 
-    return path_to_points(meander_path)
+    debug.log_graph(graph, "remaining graph", "#FF0000")
+    points = path_to_points(meander_path)
+    debug.log_line_string(LineString(points), "meander path", "#00FF00")
+
+    return points
 
 
 def replace_edge(path, edge, graph, graph_nodes):
@@ -169,14 +175,16 @@ def replace_edge_pair(path, edge1, edge2, graph, graph_nodes):
 
 
 @debug.time
-def post_process(points, shape, fill):
+def post_process(points, shape, original_shape, fill):
     debug.log(f"smoothness: {fill.smoothness}")
     # debug.log_line_string(LineString(points), "pre-smoothed", "#FF0000")
     smoothed_points = smooth_path(points, fill.smoothness)
     smoothed_points = [InkStitchPoint.from_tuple(point) for point in smoothed_points]
 
     stitches = running_stitch(smoothed_points, fill.running_stitch_length, fill.running_stitch_tolerance)
-    stitches = clamp_path_to_polygon(stitches, shape)
+
+    if fill.clip:
+        stitches = clamp_path_to_polygon(stitches, original_shape)
 
     return stitches
 

@@ -81,6 +81,7 @@ inkstitch_attribs = [
     'reverse',
     'meander_pattern',
     'meander_scale_percent',
+    'meander_angle',
     'expand_mm',
     'fill_underlay',
     'fill_underlay_angle',
@@ -97,6 +98,7 @@ inkstitch_attribs = [
     'underpath',
     'flip',
     'expand_mm',
+    'clip',
     # stroke
     'stroke_method',
     'bean_stitch_repeats',
