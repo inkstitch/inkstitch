@@ -28,8 +28,7 @@ Utilisée à 100%, cette fonte mesure approximativement 100mm de haut (4 pouces)
 Elle peut être agrandie jusqu'à 150% et réduite jusqu"à 80%
 
 ## En savoir plus:
-Vous trouverez de nombreux conseils pour utiliser cette fonte en suivant ce lien
-[lien](https://lyogau.over-blog.com/2022/08/abril-en-fleur-nouvelle-police-pour-inkstitch.html)
+Vous trouverez de nombreux conseils pour utiliser cette fonte en suivant ce [lien](https://lyogau.over-blog.com/2022/08/abril-en-fleur-nouvelle-police-pour-inkstitch.html)
 
 
 ## Dans la vraie vie
