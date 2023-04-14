@@ -1,7 +1,7 @@
 ---
 title: "Abécédaire"
 permalink: /fr/fonts/abecedaire/
-last_modified_at: 2022-06-01
+last_modified_at: 2023-04-13
 toc: false
 preview_image:
   - url: /assets/images/fonts/abecedaire.jpg
@@ -9,8 +9,6 @@ preview_image:
 ---
 
 ![Abecedaire](/assets/images/fonts/abecedaire.jpg)
-
-Cette fonte sera dans une prochaine version d'Ink/Stitch et n'est pas disponible dans Ink/Stitch v2.1.2.
 
 ## Glyphes
 
