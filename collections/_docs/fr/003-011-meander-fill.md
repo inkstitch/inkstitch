@@ -34,7 +34,7 @@ Fill method          |Meander Fill|Meander Fill must be selected.
 Meander Pattern      ||Various patterns to choose from
 Meander pattern scale||Scale the pattern (%)
 Expand               |![Expand example](/assets/images/docs/params-fill-expand.png)  |Expand the shape before stitching, to compensate for gaps between shapes.
-Smoothness           ||Smooth the stitch path. Smoothness linits how far the smoothed stitch path is allowed to deviate from the original path. Try low numbers like 0.2. Hint: a lower running stitch tolerance may be needed too.
+Smoothness           ||Smooth the stitch path. Smoothness limits how far the smoothed stitch path is allowed to deviate from the original path. Try low numbers like 0.2. Hint: a lower running stitch tolerance may be needed too.
 Running stitch length||For meander fill this is the overall stitch length.
 Running stitch tolerance||All stitches must be within this distance from a path. A lower tolerance means stitches will be closer together. A higher tolerance means sharp corner may be rounded.
 Allow lock stitches  ||Enables lock stitches in only desired positions
