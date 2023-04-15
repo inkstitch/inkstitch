@@ -10,7 +10,7 @@ preview_image:
 
 {% include upcoming_release.html %}
 
-![April En Fleurs AGS](/assets/images/fonts/abril.png)
+![April En Fleur AGS](/assets/images/fonts/abril.png)
 
 ## Glyphs
 
