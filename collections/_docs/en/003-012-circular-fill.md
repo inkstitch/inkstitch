@@ -48,7 +48,7 @@ Stop After           ||Stop the machine after sewing this object. Before stoppin
 
 ## Underlay
 
-Underlay in Guided Fill doesn't follow the guide line, but uses the fill angle which can be defined in the underlay [params](/docs/stitches/fill-stitch#underlay).
+Underlay in Circular Fill is the same as for Auto Fill and uses the fill angle which can be defined in the underlay [params](/docs/stitches/fill-stitch#underlay).
 
 ## Samples Files Including Circular Fill Stitches
 {% include tutorials/tutorial_list key="stitch-type" value="Circular Fill" %}
