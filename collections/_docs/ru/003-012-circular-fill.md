@@ -1,6 +1,6 @@
 ---
 title: "Circular Fill"
-permalink: /fr/docs/stitches/circular-fill/
+permalink: /ru/docs/stitches/circular-fill/
 excerpt: ""
 last_modified_at: 2023-02-26
 toc: true
