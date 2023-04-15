@@ -1,5 +1,5 @@
 ---
-title: "Abril En Fleurs AGS"
+title: "Abril En Fleur AGS"
 permalink: /fr/fonts/abril/
 last_modified_at: 2023-04-15
 toc: false
@@ -10,7 +10,7 @@ preview_image:
 
 {% include upcoming_release.html %}
 
-![April En Fleurs AGS](/assets/images/fonts/abril.png)
+![April En Fleur AGS](/assets/images/fonts/abril.png)
 
 ## Glyphes
 
