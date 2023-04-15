@@ -53,7 +53,7 @@ If you embroider several letters, you may wish to color sort. It is possible, pr
 ## In real life
 {% include folder-galleries path="fonts/emilio-20/" %}
 
-[Download Emilio Simple Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/emilio_simple/LICENSE)
+[Download Emilio Simple Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/emilio_20_simple/LICENSE)
 
 [Download Emilio 20 Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/emilio_20/LICENSE)
 
