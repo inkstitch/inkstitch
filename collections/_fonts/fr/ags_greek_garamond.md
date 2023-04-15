@@ -28,7 +28,7 @@ Elle peut être agrandie jusqu'à  250%  (50mm, 2 pouces) and diminuée jusqu'à
 
 ## Dans la vraie vie
 
-{% include folder-galleries path="fonts/AGS_greek_garamond/" %}
+{% include folder-galleries path="fonts/ags_greek_garamond/" %}
 
 
 
