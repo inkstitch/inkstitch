@@ -1,5 +1,5 @@
 ---
-title: "Abril En Fleurs AGS"
+title: "Abril En Fleur AGS"
 permalink: /en/fonts/abril/
 last_modified_at: 2023-04-14
 toc: false
@@ -18,7 +18,7 @@ This font contains  67 glyphs:
 
 
 	
-ABCDEFGHIJKLMNOPQRSTUVWXYZµabcçdefghijklmnopqrstuvwxyzß!0123456789?%      
+ABCDEFGHIJKLMNOPQRSTUVWXYZµabcçdefghijklmnopqrstuvwxyzß!0123456789?% 
 
 
 
