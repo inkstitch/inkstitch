@@ -42,7 +42,7 @@ def update_inkstitch_document(svg):
         # update elements
         for element in document.iterdescendants():
             # We are just checking for params and update them.
-            # No need to go into check for specific stitch types at this point
+            # No need to check for specific stitch types at this point
             update_legacy_params(EmbroideryElement(element), file_version, INKSTITCH_SVG_VERSION)
         _update_inkstitch_svg_version(svg)
 
