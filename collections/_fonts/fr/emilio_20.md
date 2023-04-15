@@ -50,7 +50,7 @@ Si vous brodez plusieurs lettes, vous pouvez souhaiter trier les couleurs. C'est
 ## Dans la vraie vie
 {% include folder-galleries path="fonts/emilio-20/" %}
 
-[Download Emilio Simple Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/emilio_simple/LICENSE)
+[Download Emilio Simple Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/emilio_20_simple/LICENSE)
 
 [Download Emilio 20 Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/emilio_20/LICENSE)
 
