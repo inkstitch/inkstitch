@@ -1,6 +1,6 @@
 ---
 title: "Tack and Lock Stitches"
-permalink: /fr/docs/stitches/lock-stitches/
+permalink: /ru/docs/stitches/lock-stitches/
 excerpt: ""
 last_modified_at: 2023-02-26
 toc: true
