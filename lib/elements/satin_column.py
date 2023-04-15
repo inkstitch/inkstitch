@@ -16,6 +16,7 @@ from shapely.ops import nearest_points
 
 from ..debug import debug
 from ..i18n import _
+from ..metadata import InkStitchMetadata
 from ..stitch_plan import StitchGroup
 from ..stitches import running_stitch
 from ..svg import line_strings_to_csp, point_lists_to_csp
@@ -512,6 +513,11 @@ class SatinColumn(EmbroideryElement):
             # the intersection issues later.
             indices_by_length = sorted(list(range(num_paths)), key=lambda index: paths[index].length, reverse=True)
             return indices_by_length[:2]
+
+    @property
+    def collapse_len(self):
+        metadata = InkStitchMetadata(self.node.root)
+        return metadata['collapse_len_mm'] * PIXELS_PER_MM
 
     @property
     @cache
@@ -1066,12 +1072,33 @@ class SatinColumn(EmbroideryElement):
             self.random_width_decrease.any() or self.random_width_increase.any() or self.random_zigzag_spacing,
         )
 
+        short_pairs = self.inset_short_stitches_sawtooth(pairs)
+        max_stitch_length = self.max_stitch_length_px
+        length_sigma = self.random_split_jitter
+        random_phase = self.random_split_phase
+        min_split_length = self.min_random_split_length_px
+        seed = self.random_seed
+        last_point = None
         # "left" and "right" here are kind of arbitrary designations meaning
         # a point from the first and second rail respectively
-        for left, right in pairs:
-            patch.add_stitch(left)
-            patch.add_stitch(right)
-            patch.add_stitch(left)
+        for i, (left, right), (a_short, b_short) in zip(itertools.count(0), pairs, short_pairs):
+            split_points, _ = self.get_split_points(
+                left, right, a_short, b_short, max_stitch_length,
+                None, length_sigma, random_phase, min_split_length,
+                prng.join_args(seed, 'satin-split', 2 * i + 1))
+
+            # zigzag spacing is wider than stitch length, subdivide
+            if self.zigzag_spacing > max_stitch_length and last_point is not None:
+                points, _ = self.get_split_points(last_point, left, last_point, left, max_stitch_length)
+                patch.add_stitches(points)
+
+            patch.add_stitch(a_short)
+            patch.add_stitches(split_points)
+            patch.add_stitch(b_short)
+            patch.add_stitches(split_points[::-1])
+            patch.add_stitch(a_short)
+
+            last_point = a_short
 
         if self._center_walk_is_odd():
             patch.stitches = list(reversed(patch.stitches))
@@ -1089,6 +1116,11 @@ class SatinColumn(EmbroideryElement):
             return ([], 1)
         if random_phase:
             points = running_stitch.split_segment_random_phase(a_short, b_short, length, length_sigma, seed)
+            # avoid hard stitches: do not insert split stitches near the end points
+            if len(points) > 1 and points[0].distance(shgeo.Point(a)) <= self.collapse_len:
+                del points[0]
+            if len(points) > 1 and points[-1].distance(shgeo.Point(b)) <= self.collapse_len:
+                del points[-1]
             return (points, None)
         elif count is not None:
             points = running_stitch.split_segment_even_n(a, b, count, length_sigma, seed)
