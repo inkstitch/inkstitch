@@ -1,48 +1,66 @@
 ---
-title: "Circular Fill"
+title: "Remplissage circulaire"
 permalink: /fr/docs/stitches/circular-fill/
 excerpt: ""
-last_modified_at: 2023-02-26
+last_modified_at: 2023-04-15
 toc: true
 ---
 {% include upcoming_release.html %}
 
-## What it is
+## De quoi s'agit-il ?
 
-Circular fill fills a shape with an embroidered spiral. The center of the spiral is positioned at the center of the shape. A target point can be used to define a custom spiral center.
+Le remplissage circulaire remplit une forme avec une spirale. Le centre de la spirale est positionné au centre de la forme. Il et possible de personnaliser la position du centre de la spiral à l'aide d'une cible.
 
-![Meander stitch detail](/assets/images/docs/circular-fill-detail.png)
+![Détail de point circulaire](/assets/images/docs/circular-fill-detail.png)
 
-## How to Create
+## Comment le créer
 
-* Create a **closed path with a fill color**. The shape may have holes.
-* Open the params dialog (`Extensions > Ink/Stitch > Params`) and select `Circular Fill` as the fill method.
-  Set the params as you like wish and Apply.
+* Créez **un chemin fermé avec une couleur de remplissage**. Cette forme peut avoir des trous.
+* Ouvrir le dialogue de paramètrage (`Extensions > Ink/Stitch > Paramètres`) et sélectionner `Remplissage circulaire` comme méthode de remplissage.
+* Choisissez vos paramètres et cliquez sur Appliquer.
+ 
+## Définir le centre de la spirale
 
-## Set spiral center
+* Selectionnez la forme et attachez lui la commande d'objet "position de la cible pour la broderie ondulée". Lire
+ [comment attacher des commandes aux objets](/fr/docs/commands/).
 
-* Select the circular fill shape and attach the Ripple stitch target point command to the shape. Read [how to attach commands to objects](/docs/commands/).
+## Définir les positions de début et de fin de la broderie.
 
-## Set Start and End Point
+Utilisez les commandes "Position de début du remplissage" et "Position de fin du remplissage". Voir  [Commandes Visuelles](/fr/docs/commands/).
 
-Set start and end points for autofill objects with [Visual commands](/docs/commands/).
+## Paramètres
 
-## Params
+Lancez `Extensions > Ink/Stitch  > Paramètres` pour choisir vos réglages.
 
-Run `Extensions > Ink/Stitch  > Params` to tweak the settings to your needs.
+
+
+|Paramètres||Description|
+|---|---|---|
+|Autoremplissage avec des points de broderie| ☑ |Doit être activé pour que ces paramètres prennent effet.|
+|Méthode de remplissage |Remplissage circulaire| Remplissage circulaire  doit être selectionné.|
+|Etirer|![Expand example](/assets/images/docs/params-fill-expand.png) |Etend la forme avant le point de remplissage pour compenser les écarts entre les formes dues à l'étirement du tissu.|
+|Longueur maximale du point de remplissage|![Exemple de longueur de point](/assets/images/docs/params-fill-stitch_length.png) |Pour le remplissage en méandres il s'agit de longueur du point droit résultant.|
+|Tolérance du point droit|![Exemple de tolerance](/assets/images/docs/contourfilltolerance.svg) |Tous les points doivent rester au plus à cette distance du chemin. Une tolérance plus faible (en haut sur le dessin) signifie que les points seront plus rapprochés. Une tolérance plus élevée (en bas) signifie que les angles vifs peuvent être arrondis.|
+|Chemin de dessous           |![Example de chemin de dessous](/assets/images/docs/params-fill-underpathing.png)| Doit être autorisé pour permettre aux points de voyager dans la forme et non le long de la frontière pour passer de section en section.|
+|Forcer les points d'arrêts |☑|Force un point d'arrêt après l'objet indépendament de la valeur de "Saut de fil" dans les Préférences d'Ink/Stitch.|
+|Autoriser les points d'arrêts | ☑|Ajoute un point d'arrêt à la ou les positions choisies.|
+|Point d'ancrage        ||Selectionnez le type du  [point d'ancrage](/fr/docs/stitches/lock-stitches).|
+|Point d'arrêt        ||Selectionnez le type du [point d'arrêt](/fr/docs/stitches/lock-stitches).|
+|Couper après                 |☑|Couper le fil après avoir brodé cet objet.|
+|Arrêter après                |☑|Faire faire une pause à la machine après avoir brodé  cet objet. Si une position d'arrêt est définie, elle est rejointe  par un saut avant la pause de la machine.|
+
+## Sous-couche
+
+La sous-couche de remplissage circulaire se comporte comme celle du remplissage automatique et utilise l'angle de remplissage qui peut être défini dans les 
+[paramètres](/fr/docs/stitches/fill-stitch/#sous-couche) de la sous-couche.
+
 
 Settings||Description
 ---|---|---
-Automatically routed fill stitching| ☑ |Must be enabled for these settings to take effect.
-Fill method          |Circular Fill|Circular Fill must be selected.
-Expand               |![Expand example](/assets/images/docs/params-fill-expand.png)  |Expand the shape before stitching, to compensate for gaps between shapes.
-Running stitch length||For circular fill this is the overall stitch length.
-Running stitch tolerance||All stitches must be within this distance from a path. A lower tolerance means stitches will be closer together. A higher tolerance means sharp corner may be rounded.
-Underpath            |![Unterpath example](/assets/images/docs/params-fill-underpathing.png)|Must be enabled to let running stitches travel inside shape instead of around the border when moving from section to section
+
 Allow lock stitches  ||Enables lock stitches in only desired positions
 Force lock stitches  ||Sew lock stitches after sewing this element, even if the distance to the next object is smaller than defined in the collapse length value value in the Ink/Stitch prefreneces.
-Tack stitch          ||Select [tack stitch](/docs/stitches/lock-stitches) type (start).
-Lock stitch          ||Select [lock stitch](/docs/stitches/lock-stitches) type (end).
+
 Trim After           ||Trim the thread after sewing this object.
 Stop After           ||Stop the machine after sewing this object. Before stopping it will jump to the stop position (frame out) if defined.
 
