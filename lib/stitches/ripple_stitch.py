@@ -95,7 +95,7 @@ def get_line_count(stroke, pairs_or_line):
     # no min_line_dist set? use line_count from user settings
     if not stroke.min_line_dist:
         num_lines = stroke.line_count
-    # the arious ripple stitch methods need to caluclate the line distances based on various parameters
+    # the various ripple stitch methods need to caluclate the line distances based on various parameters
     elif isinstance(pairs_or_line, LineString):
         num_lines = ceil(pairs_or_line.length / stroke.min_line_dist)
     elif type(pairs_or_line) == tuple:

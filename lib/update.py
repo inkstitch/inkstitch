@@ -120,6 +120,7 @@ def _update_to_one(element):  # noqa: C901
         if grid_size:
             size = grid_size / PIXELS_PER_MM
             self.set_param('grid_size_mm', size)
+            self.remove_param('grid_size')
 
 def _replace_legacy_embroider_param(element, param):
     # remove "embroider_" prefix
