@@ -244,7 +244,7 @@ class Stroke(EmbroideryElement):
         return self.get_boolean_param("reverse", False)
 
     @property
-    @param('grid_size',
+    @param('grid_size_mm',
            _('Grid size'),
            tooltip=_('Render as grid. Use with care and watch your stitch density.'),
            type='float',
@@ -254,7 +254,7 @@ class Stroke(EmbroideryElement):
            sort_index=15)
     @cache
     def grid_size(self):
-        return abs(self.get_float_param("grid_size", 0))
+        return abs(self.get_float_param("grid_size_mm", 0))
 
     @property
     @param('scale_axis',
