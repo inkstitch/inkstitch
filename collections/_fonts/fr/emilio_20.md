@@ -26,7 +26,7 @@ preview_image:
      alt="Emilio 20 Tricolore" height="50">
 
 ## Glyphes
-Les deux fontes contiennent les 36 glyphes :
+Chacune des trois fontes contient les 36 glyphes :
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ
 
 ## Dimensions
