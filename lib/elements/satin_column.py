@@ -515,9 +515,9 @@ class SatinColumn(EmbroideryElement):
             return indices_by_length[:2]
 
     @property
-    def collapse_len(self):
+    def min_stitch_len(self):
         metadata = InkStitchMetadata(self.node.root)
-        return metadata['collapse_len_mm'] * PIXELS_PER_MM
+        return metadata['min_stitch_len_mm'] * PIXELS_PER_MM
 
     @property
     @cache
@@ -1088,7 +1088,7 @@ class SatinColumn(EmbroideryElement):
                 prng.join_args(seed, 'satin-split', 2 * i + 1))
 
             # zigzag spacing is wider than stitch length, subdivide
-            if self.zigzag_spacing > max_stitch_length and last_point is not None:
+            if last_point is not None and max_stitch_length is not None and self.zigzag_spacing > max_stitch_length:
                 points, _ = self.get_split_points(last_point, left, last_point, left, max_stitch_length)
                 patch.add_stitches(points)
 
@@ -1117,9 +1117,9 @@ class SatinColumn(EmbroideryElement):
         if random_phase:
             points = running_stitch.split_segment_random_phase(a_short, b_short, length, length_sigma, seed)
             # avoid hard stitches: do not insert split stitches near the end points
-            if len(points) > 1 and points[0].distance(shgeo.Point(a)) <= self.collapse_len:
+            if len(points) > 1 and points[0].distance(shgeo.Point(a)) <= self.min_stitch_len:
                 del points[0]
-            if len(points) > 1 and points[-1].distance(shgeo.Point(b)) <= self.collapse_len:
+            if len(points) > 1 and points[-1].distance(shgeo.Point(b)) <= self.min_stitch_len:
                 del points[-1]
             return (points, None)
         elif count is not None:
