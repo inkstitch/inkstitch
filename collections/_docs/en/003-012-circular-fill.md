@@ -17,7 +17,7 @@ Circular fill fills a shape with an embroidered spiral. The center of the spiral
 
 * Create a **closed path with a fill color**. The shape may have holes.
 * Open the params dialog (`Extensions > Ink/Stitch > Params`) and select `Circular Fill` as the fill method.
-  Set the params as you like wish and Apply.
+  Set the params as you wish and Apply.
 
 ## Set spiral center
 
