@@ -1,7 +1,7 @@
 ---
 title: "Abril En Fleur AGS"
 permalink: /fr/fonts/abril/
-last_modified_at: 2023-04-15
+last_modified_at: 2023-04-16
 toc: false
 preview_image:
   - url: /assets/images/fonts/abril.png
