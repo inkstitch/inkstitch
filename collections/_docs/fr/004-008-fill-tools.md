@@ -48,7 +48,7 @@ Convertir en blocs de dégradé va découper un remplissage dont la couleur de f
 
 ### Usage
 
-1. Appliquez un dégradé linéaire comme couleur de fond à un élement.
+1. Depuis Fond et Contour, appliquez un dégradé linéaire comme couleur de fond à un élement.
 
    ![linear gradient](/assets/images/docs/en/linear-gradient.png)
    
