@@ -609,6 +609,7 @@ export default {
       this.generateColorSections()
       this.generateScale()
       this.generateCursor()
+      this.resizeCursor()
 
       this.loading = false
 
@@ -626,7 +627,6 @@ export default {
       this.$mousetrap.bind("[", this.zoomPage)
 
       this.svg.on('zoom', this.resizeCursor)
-      this.resizeCursor()
 
       inkStitch.get('page_specs').then(response => {
         this.page_specs = response.data
