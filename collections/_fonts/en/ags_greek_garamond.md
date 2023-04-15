@@ -32,4 +32,4 @@ It can be scaled up to 250%  (50mm, 2 inches) and scalled down to 80% (16mm  5/8
 
 
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/abril/LICENSE)
+[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/AGS_greek_garamond/LICENSE)
