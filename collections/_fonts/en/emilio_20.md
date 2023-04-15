@@ -4,11 +4,17 @@ permalink: /fonts/emilio-20/
 last_modified_at: 2022-05-05
 toc: false
 preview_image:
+  - url: /assets/images/fonts/emilio_simple.png
+    height: 42 
   - url: /assets/images/fonts/emilio_20.jpg
     height: 48
   - url: /assets/images/fonts/emilio_tricolore.jpg
     height: 100  
 ---
+
+<img 
+     src="/assets/images/fonts/emilio_simple.png"
+     alt="Emilio20" height="22">
 
 <img 
      src="/assets/images/fonts/emilio_20.jpg"
@@ -19,15 +25,21 @@ preview_image:
      alt="Emilio 20 Tricolore" height="50">
 
 ## Glyphs
-Both fonts contains 36 glyphs:
+Each of the three fonts contains 36 glyphs:
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ
 
 ## Dimensions
 
+###  Emilio Simple
+
+At 100%, this font is approximatively  45 mm (1.75 inches) high.
+It can be scaled up to  140% (approx. 65 mm, 2.5 inches)  or scaled down to 70% (approx. 30 mm , 1.25 inches).
+
+
 ###  Emilio 20
 
 At 100%, this font is approximatively  50 mm (2 inches) high.
-It can be scaled up to  140% (approx. 70mm, 2.8 inches)  or scaled  jusqu'à 70% (approx. 35 mm , 1.5 inchs).
+It can be scaled up to  140% (approx. 70mm, 2.8 inches)  or scaled  down to 70% (approx. 35 mm , 1.5 inches).
 
 ### Emilio 20 Tricolore
 
