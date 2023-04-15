@@ -228,16 +228,58 @@ class SatinColumn(EmbroideryElement):
         # wider than we desire the column to end up.
         return self.get_split_mm_param_as_px("pull_compensation_mm", (0, 0))
 
+    _reverse_one_rail_options = [ParamOption('automatic', _('Automatic')),
+                                 ParamOption('none', _("Don't reverse")),
+                                 ParamOption('first', _('Reverse first rail')),
+                                 ParamOption('second', _('Reverse second rail')),
+                                 ]
+
     @property
     @param(
         'reverse_one_rail',
         _('Reverse one rail'),
-        tooltip=_('Enabling this may help if your satin renders very strangely.'),
-        type='boolean',
-        default='false',
+        tooltip=_('Enabling this may help if your satin renders very strangely.  ' +
+                  'Default: automatically detect and fix a reversed rail.'),
+        type='combo',
+        options=_reverse_one_rail_options,
+        default='automatic',
         sort_index=10)
     def reverse_one_rail(self):
-        return self.get_boolean_param('reverse_one_rail', False)
+        return self.get_param('reverse_one_rail', 'automatic')
+
+    def _get_rail_to_reverse(self, rails):
+        choice = self.reverse_one_rail
+
+        if choice == 'first':
+            return 0
+        elif choice == 'second':
+            return 1
+        elif choice == 'automatic':
+            if len(rails) == 2:
+                # Sample ten points along the rails.  Compare the distance
+                # between corresponding points on both rails with and without
+                # one rail reversed.  If the average distance between points
+                # with one rail reversed is less than without one reversed, then
+                # the user has probably accidentally reversed a rail.
+                lengths = []
+                lengths_reverse = []
+
+                for i in range(10):
+                    distance = i / 10
+                    point0 = rails[0].interpolate(distance, normalized=True)
+                    point1 = rails[1].interpolate(distance, normalized=True)
+                    point1_reverse = rails[1].interpolate(1 - distance, normalized=True)
+
+                    lengths.append(point0.distance(point1))
+                    lengths_reverse.append(point0.distance(point1_reverse))
+
+                debug.log(f"lengths: {lengths}")
+                debug.log(f"lengths_reverse: {lengths_reverse}")
+                if sum(lengths) > sum(lengths_reverse):
+                    # returning 1 reverses the second rail
+                    return 1
+
+        return None
 
     @property
     @param(
@@ -415,8 +457,9 @@ class SatinColumn(EmbroideryElement):
         """The rails, as LineStrings."""
         paths = [shgeo.LineString(self.flatten_subpath(rail)) for rail in self.rails]
 
-        if paths and self.reverse_one_rail:
-            paths[0] = shgeo.LineString(paths[0].coords[::-1])
+        rail_to_reverse = self._get_rail_to_reverse(paths)
+        if paths and rail_to_reverse is not None:
+            paths[rail_to_reverse] = shgeo.LineString(paths[rail_to_reverse].coords[::-1])
 
         return tuple(paths)
 
