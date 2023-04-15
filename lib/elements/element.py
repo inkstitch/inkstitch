@@ -58,60 +58,6 @@ def param(*args, **kwargs):
 class EmbroideryElement(object):
     def __init__(self, node):
         self.node = node
-        self._update_legacy_params()
-
-    def _update_legacy_params(self):  # noqa: C901
-        # update legacy embroider_ attributes to namespaced attributes
-        legacy_attribs = False
-        for attrib in self.node.attrib:
-            if attrib.startswith('embroider_'):
-                self.replace_legacy_param(attrib)
-                legacy_attribs = True
-
-        # convert legacy tie setting
-        legacy_tie = self.get_param('ties', None)
-        if legacy_tie == "True":
-            self.set_param('ties', 0)
-        elif legacy_tie == "False":
-            self.set_param('ties', 3)
-
-        # convert legacy fill_method
-        legacy_fill_method = self.get_int_param('fill_method', None)
-        if legacy_fill_method == 0:
-            self.set_param('fill_method', 'auto_fill')
-        elif legacy_fill_method == 1:
-            self.set_param('fill_method', 'contour_fill')
-        elif legacy_fill_method == 2:
-            self.set_param('fill_method', 'guided_fill')
-        elif legacy_fill_method == 3:
-            self.set_param('fill_method', 'legacy_fill')
-
-        # legacy satin method
-        if self.get_boolean_param('e_stitch', False) is True:
-            self.remove_param('e_stitch')
-            self.set_param('satin_method', 'e_stitch')
-
-        # default setting for fill_underlay has changed
-        if legacy_attribs and not self.get_param('fill_underlay', ""):
-            self.set_param('fill_underlay', False)
-
-        # convert legacy stroke_method
-        if self.get_style("stroke"):
-            # manual stitch
-            legacy_manual_stitch = self.get_boolean_param('manual_stitch', False)
-            if legacy_manual_stitch is True:
-                self.remove_param('manual_stitch')
-                self.set_param('stroke_method', 'manual_stitch')
-            # stroke_method
-            legacy_stroke_method = self.get_int_param('stroke_method', None)
-            if legacy_stroke_method == 0:
-                self.set_param('stroke_method', 'running_stitch')
-            elif legacy_stroke_method == 1:
-                self.set_param('stroke_method', 'ripple_stitch')
-            if (not self.get_param('stroke_method', None) and
-                    self.get_param('satin_column', False) is False and
-                    not self.node.style('stroke-dasharray')):
-                self.set_param('stroke_method', 'zigzag_stitch')
 
     @property
     def id(self):
@@ -127,14 +73,6 @@ class EmbroideryElement(object):
                 if hasattr(prop.fget, 'param'):
                     params.append(prop.fget.param)
         return params
-
-    def replace_legacy_param(self, param):
-        # remove "embroider_" prefix
-        new_param = param[10:]
-        if new_param in INKSTITCH_ATTRIBS:
-            value = self.node.get(param, "").strip()
-            self.set_param(param[10:], value)
-        del self.node.attrib[param]
 
     @cache
     def get_param(self, param, default):
