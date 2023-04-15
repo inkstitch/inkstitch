@@ -1,8 +1,8 @@
 ---
-title: "Outils Satin"
+title: "Outils Remplissage"
 permalink: /fr/docs/fill-tools/
 excerpt: ""
-last_modified_at: 2021-01-04
+last_modified_at: 2023-04-15
 toc: true
 ---
 ## Briser les objets de remplissage
@@ -18,11 +18,11 @@ Par conséquent, les messages d'erreur pour les zones de remplissage sont souven
 * Exécutez: Extensions > Ink/Stitch  > Outils de remplissage > Briser les objets de remplissage
 * Pour la plupart des formes `simple` sera suffisant. Si vous avez encore des problèmes essayez `complex`.
 
-## Simple ou Complex
+### Simple ou Complexe
 
 Toujours préférer simple si c'est possible. Il conserve les trous et répare "bordure se croise" en divisant les boucles en objets séparés ou en les supprimant si elles sont trop petites pour être brodées.
 
-Bien que "simple" divise les boucles, il ne respectera pas les sous-chemins qui se chevauchent. Il les traitera comme des objets séparés. Complex est capable de reconnaître les chemins qui se chevauchent et de bien les traiter
+Bien que "simple" divise les boucles, il ne respectera pas les sous-chemins qui se chevauchent. Il les traitera comme des objets séparés. Complexe est capable de reconnaître les chemins qui se chevauchent et de bien les traiter
 
 "Briser les objets de remplissage" peut être traduit dans les fonctions natives d'Inkscape:
 
@@ -32,23 +32,26 @@ Bien que "simple" divise les boucles, il ne respectera pas les sous-chemins qui 
  4. Chemin > Combiner (si vous voulez maintenir les trous)
  5. Chemin > Combiner (si vous voulez conserver encore plus de trous)
 
-Info: Pour les chemins qui se chevauchent, l'étape 1 n'est effectuée que par complex.
+Info: Pour les chemins qui se chevauchent, l'étape 1 n'est effectuée que par complexe.
 {: .notice--info}
 
 ![Break apart fill objects](/assets/images/docs/en/break_apart.jpg)
 [Download SVG](/assets/images/docs/en/break_apart.svg)
 
-## Convert to gradient blocks
+## Convertir en blocs de dégradé 
 
 {% include upcoming_release.html %}
 
-Convert to gradient blocks will split a fill with a linear gradient into multiple blocks of solid color and adapted row spacing.
+Convertir en blocs de dégradé va découper un remplissage dont la couleur de fond est un dégradé linéaire en plusieurs blocs monochromes avec un espacement de ligne adequat pour rendre l'effet de dégradé.
+
+
 
 ### Usage
 
-1. Apply a linear fill color gradient to an element.
+1. Appliquez un dégradé linéaire comme couleur de fond à un élement.
 
    ![linear gradient](/assets/images/docs/en/linear-gradient.png)
-2. Run `Extensions > Ink/Stitch > Tools: Fill > Convert to gradient blocks
+   
+2. Lancez `Extensions > Ink/Stitch > Outils: Remplissage > Convertir en blocs de dégradé
 
    ![color blocks](/assets/images/docs/color_blocks.png)
