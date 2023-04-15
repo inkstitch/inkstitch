@@ -9,6 +9,7 @@ preview_image:
 ---
 
 {% include upcoming_release.html %}
+
 ![AGS garamond](/assets/images/fonts/AGS_greek_garamond.png)
 
 
