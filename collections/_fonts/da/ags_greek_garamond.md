@@ -28,7 +28,7 @@ It can be scaled up to 250%  (50mm, 2 inches) and scalled down to 80% (16mm  5/8
 
 ## In real life
 
-{% include folder-galleries path="fonts/AGS_greek_garamond/" %}
+{% include folder-galleries path="fonts/ags_greek_garamond/" %}
 
 
 
