@@ -56,12 +56,12 @@ def _get_staggered_stitches(stroke, lines):
         stitched_line = []
         connector = []
         if i != 0 and stroke.join_style == 0:
-            if i % 2 != 0:
-                last_point = lines[i-1][-1]
-                first_point = line[-1]
-            else:
+            if i % 2 == 0:
                 last_point = lines[i-1][0]
                 first_point = line[0]
+            else:
+                last_point = lines[i-1][-1]
+                first_point = line[-1]
             connector = running_stitch([InkstitchPoint(*last_point), InkstitchPoint(*first_point)],
                                        stroke.running_stitch_length,
                                        stroke.running_stitch_tolerance)

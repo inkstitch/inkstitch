@@ -120,6 +120,7 @@ def _update_to_one(element):  # noqa: C901
         grid_size = element.get_float_param('grid_size', None)
         if grid_size:
             size = grid_size / PIXELS_PER_MM
+            size = "{:.2f}".format(size)
             element.set_param('grid_size_mm', size)
             element.remove_param('grid_size')
 
