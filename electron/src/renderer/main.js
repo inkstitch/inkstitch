@@ -37,7 +37,9 @@ import {
   faSpinner,
   faStepBackward,
   faStepForward,
-  faStop
+  faStop,
+  faSearchPlus,
+  faSearchMinus
 } from '@fortawesome/free-solid-svg-icons'
 import {FontAwesomeIcon, FontAwesomeLayers} from '@fortawesome/vue-fontawesome'
 import Transitions from 'vue2-transitions'
@@ -74,7 +76,9 @@ library.add(
   faSpinner,
   faStepBackward,
   faStepForward,
-  faStop
+  faStop,
+  faSearchPlus,
+  faSearchMinus
 )
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
