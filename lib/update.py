@@ -121,6 +121,7 @@ def _update_to_one(element):  # noqa: C901
         # old satin automatically, only new ones
         element.set_param('reverse_one_rail', 'none')
 
+
 def _replace_legacy_embroider_param(element, param):
     # remove "embroider_" prefix
     new_param = param[10:]
