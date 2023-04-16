@@ -26,10 +26,13 @@ class LockStitchDefinition:
 
 class LockStitch:
     def __init__(self, lock_type, lock_id, scale_percent, scale_absolute):
+        self.id = lock_id
         self.lock_stitch_definition = get_lock_stitch_definition_by_id(lock_type, lock_id)
         self.scale = LockStitchScale(scale_percent, scale_absolute)
 
     def stitches(self, stitches, pos):
+        if self.id == "custom":
+            self.lock_stitch_definition.path = self.path
         return self.lock_stitch_definition.stitches(stitches, pos, self.scale)
 
 
@@ -54,17 +57,17 @@ class CustomLock(LockStitchDefinition):
 
     def stitches(self, stitches, pos, scale):
         if self.path is None:
-            return half_stitch.stitches(stitches, pos)
+            return half_stitch.stitches(stitches, pos, scale)
 
         path_type = self._get_path_type(self.path)
         if path_type == "svg":
             return SVGLock(self.id,
                            self.name,
-                           self.path).stitches(stitches, pos, scale.percent)
+                           self.path).stitches(stitches, pos, scale)
         else:
             return AbsoluteLock(self.id,
                                 self.name,
-                                self.path).stitches(stitches, pos, scale.absolute)
+                                self.path).stitches(stitches, pos, scale)
 
     def _get_path_type(self, path):
         if not path:
