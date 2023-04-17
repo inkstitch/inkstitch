@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-04-15 01:16+0000\n"
-"PO-Revision-Date: 2023-04-15 01:18\n"
+"POT-Creation-Date: 2023-04-17 01:16+0000\n"
+"PO-Revision-Date: 2023-04-17 01:17\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-15 01:16+0000\n"
+"POT-Creation-Date: 2023-04-17 01:16+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1079,117 +1079,117 @@ msgstr "Inverser l'angle"
 msgid "Flip automatically calucalted angle if it appears to be wrong."
 msgstr "Inverse l'angle calculé automatiquement s'il semble faux."
 
-#: lib/elements/element.py:283
+#: lib/elements/element.py:221
 msgid "Allow lock stitches"
 msgstr "Autoriser les points d'arrêts"
 
-#: lib/elements/element.py:284
+#: lib/elements/element.py:222
 msgid "Tie thread at the beginning and/or end of this object. Manual stitch will only add lock stitches if force lock stitched is checked."
 msgstr "Faire un nœud au début et/ou à la fin de cet objet. Le point manuel n'ajoutera de point d'arrêt que si \"Forcer les points d'arrêt\" est coché."
 
 #. options to allow lock stitch before and after objects
-#: lib/elements/element.py:289
+#: lib/elements/element.py:227
 msgid "Both"
 msgstr "Au début et à la fin"
 
-#: lib/elements/element.py:289
+#: lib/elements/element.py:227
 msgid "Before"
 msgstr "Au début"
 
-#: lib/elements/element.py:289
+#: lib/elements/element.py:227
 msgid "After"
 msgstr "A la fin"
 
-#: lib/elements/element.py:289
+#: lib/elements/element.py:227
 msgid "Neither"
 msgstr "Ni"
 
-#: lib/elements/element.py:298
+#: lib/elements/element.py:236
 #: inx/inkstitch_lettering_force_lock_stitches.inx:3
 msgid "Force lock stitches"
 msgstr "Forcer des points d'arrêt"
 
-#: lib/elements/element.py:299
+#: lib/elements/element.py:237
 msgid "Sew lock stitches after sewing this element, even if the distance to the next object is shorter than defined by the collapse length value in the Ink/Stitch preferences."
 msgstr "Créer des points d'arrêt après avoir cousu cet élément, même si la distance jusqu'à l'objet suivant est plus courte que le paramètre 'saut de fils' défini dans les préférences Ink/Stitch."
 
-#: lib/elements/element.py:310
+#: lib/elements/element.py:248
 msgid "Tack stitch"
 msgstr "Point d'ancrage"
 
-#: lib/elements/element.py:311
+#: lib/elements/element.py:249
 msgid "Tack down stitch type"
 msgstr "Type de point d'ancrage"
 
-#: lib/elements/element.py:321 lib/elements/element.py:367
+#: lib/elements/element.py:259 lib/elements/element.py:305
 msgid "Custom path"
 msgstr "Chemin personnalisé"
 
-#: lib/elements/element.py:322
+#: lib/elements/element.py:260
 msgid "Enter a custom path. For svg paths The last node will not be embroidered, but represents the first stitch of the element."
 msgstr "Entrez un chemin personnalisé. Pour les chemins svg, le dernier nœud ne sera pas brodé, mais représente le premier point de l'élément."
 
-#: lib/elements/element.py:332 lib/elements/element.py:344
+#: lib/elements/element.py:270 lib/elements/element.py:282
 msgid "Scale tack stitch"
 msgstr "Échelle du point d'ancrage"
 
-#: lib/elements/element.py:333
+#: lib/elements/element.py:271
 msgid "Set stitch length. A 1 in a custom path equals this values."
 msgstr "Détermine la longueur de point. Un 1 dans un chemin personnalisé représentera cette valeur."
 
-#: lib/elements/element.py:345
+#: lib/elements/element.py:283
 msgid "Scale tack stitch by this percentage."
 msgstr "Mettre le point d'ancrage à l'échelle selon ce pourcentage."
 
-#: lib/elements/element.py:356
+#: lib/elements/element.py:294
 msgid "Lock stitch"
 msgstr "Point d'arrêt"
 
-#: lib/elements/element.py:357
+#: lib/elements/element.py:295
 msgid "Lock stitch type"
 msgstr "Type de point d'arrêt"
 
-#: lib/elements/element.py:368
+#: lib/elements/element.py:306
 msgid "Enter a custom path. For svg paths the first node will not be embroidered, but represents the last stitch of the element."
 msgstr "Entrez un chemin personnalisé. Pour les chemins svg, le premier nœud ne sera pas brodé, mais représente le dernier point de l'élément."
 
-#: lib/elements/element.py:378 lib/elements/element.py:390
+#: lib/elements/element.py:316 lib/elements/element.py:328
 msgid "Scale lock stitch"
 msgstr "Echelle du poit d'arrêt"
 
-#: lib/elements/element.py:379
+#: lib/elements/element.py:317
 msgid "Set length of lock stitches (mm)."
 msgstr "Détermine la longueur des points d'arrêt (mm)."
 
-#: lib/elements/element.py:391
+#: lib/elements/element.py:329
 msgid "Scale lock stitch by this percentage."
 msgstr "Mettre à l'échelle le point d'arrêt selon ce pourcentage."
 
-#: lib/elements/element.py:403
+#: lib/elements/element.py:341
 msgid "Trim After"
 msgstr "Couper après"
 
-#: lib/elements/element.py:404
+#: lib/elements/element.py:342
 msgid "Add a TRIM command after stitching this object."
 msgstr "Ajoute une commande de coupe après avoir brodé cet objet."
 
-#: lib/elements/element.py:413
+#: lib/elements/element.py:351
 msgid "Stop After"
 msgstr "Arrêter après"
 
-#: lib/elements/element.py:414
+#: lib/elements/element.py:352
 msgid "Add a STOP command after stitching this object."
 msgstr "Ajoute une commande STOP après avoir brodé cet objet."
 
-#: lib/elements/element.py:423
+#: lib/elements/element.py:361
 msgid "Random seed"
 msgstr "Graine aléatoire"
 
-#: lib/elements/element.py:424
+#: lib/elements/element.py:362
 msgid "Use a specific seed for randomized attributes. Uses the element ID if empty."
 msgstr "Utiliser cette graine aléatoire pour le calcul des attributs. Si vide, utilise l'identificateur de l'élément."
 
-#: lib/elements/element.py:472
+#: lib/elements/element.py:410
 #, python-format
 msgid "Object %(id)s has an empty 'd' attribute.  Please delete this object from your document."
 msgstr "L'objet %(id)s a un attribut 'd' vide. S’il vous plaît supprimer cet objet dans votre document."
@@ -1197,11 +1197,11 @@ msgstr "L'objet %(id)s a un attribut 'd' vide. S’il vous plaît supprimer cet 
 #. used when showing an error message to the user such as
 #. "Failed on PathLabel (path1234): Satin column: One or more of the rungs
 #. doesn't intersect both rails."
-#: lib/elements/element.py:658
+#: lib/elements/element.py:596
 msgid "Failed on "
 msgstr "Erreur sur "
 
-#: lib/elements/element.py:660
+#: lib/elements/element.py:598
 msgid "Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects. This will indicate the errorneus position."
 msgstr "Merci d'exécuter Extensions > Ink/Stitch > Résolution de problèmes > Dépistage de problèmes avec des objets. Ceci indiquera la position erronée."
 
@@ -2173,15 +2173,15 @@ msgid "Please select at least one satin column."
 msgstr "Veuillez sélectionner une ou plusieurs colonnes satin."
 
 #. This was previously: "No embroiderable paths selected."
-#: lib/extensions/base.py:136
+#: lib/extensions/base.py:57
 msgid "Ink/Stitch doesn't know how to work with any of the objects you've selected."
 msgstr "Ink/Stitch ne sait comment traiter aucun des objets que vous avez sélectionnés."
 
-#: lib/extensions/base.py:138
+#: lib/extensions/base.py:59
 msgid "There are no objects in the entire document that Ink/Stitch knows how to work with."
 msgstr "Il n'y a aucun objet dans tout le document sur lequel Ink/Stitch sait quoi faire."
 
-#: lib/extensions/base.py:140
+#: lib/extensions/base.py:61
 msgid "Tip: Run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot Objects"
 msgstr "Conseil : Exécutez Extensions > Ink/Stitch > Résolution de problèmes > Dépistage de problèmes avec des objets"
 
@@ -2878,6 +2878,11 @@ msgstr "Plan de broderie"
 msgid "parseLengthWithUnits: unknown unit %s"
 msgstr "analyser Longueur avec Unités: unité inconnue %s"
 
+#: lib/update.py:25
+msgid "This document was created with a newer Version of Ink/Stitch. It is possible that not everything works as expected.\n\n"
+"Please update your Ink/Stitch version: https://inkstitch.org/docs/install/"
+msgstr ""
+
 #: lib/utils/version.py:22
 #, python-format
 msgid "Ink/Stitch Version: %s"
@@ -3068,7 +3073,7 @@ msgid "estimated time"
 msgstr "durée estimée"
 
 #: print/templates/operator_detailedview.html:67
-#: electron/src/renderer/components/Simulator.vue:196
+#: electron/src/renderer/components/Simulator.vue:229
 msgid "trims"
 msgstr "coupures"
 
@@ -3496,6 +3501,14 @@ msgstr "Format de couleur Inf"
 msgid "Json Export"
 msgstr "Export Json"
 
+#: electron/src/renderer/components/Simulator.vue:141
+msgid "[ Left square bracket"
+msgstr ""
+
+#: electron/src/renderer/components/Simulator.vue:152
+msgid "] Right square bracket"
+msgstr ""
+
 #. name for left arrow keyboard key
 #: electron/src/renderer/components/Simulator.vue:52
 msgid "← Arrow left"
@@ -3529,19 +3542,19 @@ msgstr "Bouton"
 msgid "clear stitch plan cache"
 msgstr ""
 
-#: electron/src/renderer/components/Simulator.vue:203
+#: electron/src/renderer/components/Simulator.vue:236
 msgid "color changes"
 msgstr "changements de couleur"
 
-#: electron/src/renderer/components/Simulator.vue:186
+#: electron/src/renderer/components/Simulator.vue:219
 msgid "Command"
 msgstr "Commande"
 
-#: electron/src/renderer/components/Simulator.vue:145
+#: electron/src/renderer/components/Simulator.vue:167
 msgid "Controls"
 msgstr "Contrôles"
 
-#: electron/src/renderer/components/Simulator.vue:226
+#: electron/src/renderer/components/Simulator.vue:259
 msgid "cursor"
 msgstr "curseur"
 
@@ -3609,7 +3622,7 @@ msgstr "Sauter à la commande suivante"
 msgid "Jump to previous command"
 msgstr "Sauter à la commande précédente"
 
-#: electron/src/renderer/components/Simulator.vue:199
+#: electron/src/renderer/components/Simulator.vue:232
 msgid "jumps"
 msgstr "sauts"
 
@@ -3626,7 +3639,7 @@ msgstr ""
 msgid "Minus"
 msgstr "- Moins"
 
-#: electron/src/renderer/components/Simulator.vue:215
+#: electron/src/renderer/components/Simulator.vue:248
 msgid "needle points"
 msgstr "points de l'aiguille"
 
@@ -3662,15 +3675,15 @@ msgstr "Lire à l'envers"
 msgid "Play forward"
 msgstr "Lire en avant"
 
-#: electron/src/renderer/components/Simulator.vue:223
+#: electron/src/renderer/components/Simulator.vue:256
 msgid "realistic"
 msgstr "réaliste"
 
-#: electron/src/renderer/components/Simulator.vue:219
+#: electron/src/renderer/components/Simulator.vue:252
 msgid "render jumps"
 msgstr "visualiser les sauts"
 
-#: electron/src/renderer/components/Simulator.vue:263
+#: electron/src/renderer/components/Simulator.vue:296
 msgid "Rendering stitch-plan..."
 msgstr "Calcul du rendu du plan de broderie ..."
 
@@ -3683,7 +3696,7 @@ msgstr ""
 msgid "Shortcut Key"
 msgstr "Raccourci clavier"
 
-#: electron/src/renderer/components/Simulator.vue:192
+#: electron/src/renderer/components/Simulator.vue:225
 msgid "Show"
 msgstr "Montrer"
 
@@ -3703,7 +3716,7 @@ msgstr "Espace"
 msgid "Speed up"
 msgstr "Accélérer"
 
-#: electron/src/renderer/components/Simulator.vue:174
+#: electron/src/renderer/components/Simulator.vue:196
 msgid "Speed: %{speed} stitch/sec"
 msgid_plural "Speed: %{speed} stitches/sec"
 msgstr[0] "Vitesse : %{speed} point/sec"
@@ -3713,7 +3726,7 @@ msgstr[1] "Vitesse : %{speed} point/sec"
 msgid "Stitch plan cache size"
 msgstr ""
 
-#: electron/src/renderer/components/Simulator.vue:206
+#: electron/src/renderer/components/Simulator.vue:239
 msgid "stops"
 msgstr "arrêts"
 
@@ -3728,6 +3741,20 @@ msgstr "Essayer à nouveau"
 #: electron/src/renderer/components/Preferences.vue:79
 #: electron/src/renderer/components/Preferences.vue:95
 msgid "Used for new SVGs."
+msgstr ""
+
+#: electron/src/renderer/components/Simulator.vue:208
+#: inx/inkstitch_commands_scale_symbols.inx:12
+#: inx/inkstitch_object_commands_toggle_visibility.inx:11
+msgid "View"
+msgstr "Affichage"
+
+#: electron/src/renderer/components/Simulator.vue:149
+msgid "Zoom design"
+msgstr ""
+
+#: electron/src/renderer/components/Simulator.vue:138
+msgid "Zoom page"
 msgstr ""
 
 #: inx/inkstitch_about.inx:3 inx/inkstitch_about.inx:6
@@ -3940,11 +3967,6 @@ msgstr "Mise à l'échelle des symboles de commande"
 #: inx/inkstitch_object_commands_toggle_visibility.inx:10
 msgid "Commands"
 msgstr "Commandes"
-
-#: inx/inkstitch_commands_scale_symbols.inx:12
-#: inx/inkstitch_object_commands_toggle_visibility.inx:11
-msgid "View"
-msgstr "Affichage"
 
 #: inx/inkstitch_convert_to_satin.inx:3
 msgid "Convert Line to Satin"
