@@ -476,12 +476,12 @@ class EmbroideryElement(object):
         if tie_modus in [0, 1]:
             lock_start = LockStitch('start', self.lock_start, scale_percent=self.lock_start_scale_percent, scale_absolute=self.lock_start_scale_mm)
             if self.lock_start == "custom":
-                lock_start.path = self.lock_custom_start
+                lock_start.set_path(self.lock_custom_start)
 
         if tie_modus in [0, 2] or force:
             lock_end = LockStitch('end', self.lock_end, scale_percent=self.lock_end_scale_percent, scale_absolute=self.lock_end_scale_mm)
             if self.lock_end == "custom":
-                lock_end.path = self.lock_custom_end
+                lock_end.set_path(self.lock_custom_end)
 
         return lock_start, lock_end
 
