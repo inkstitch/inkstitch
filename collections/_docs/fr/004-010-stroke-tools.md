@@ -48,6 +48,7 @@ Des contours paramétrés en remplissage ne donnent jamais rien de bon en broder
 Il est comparable à la fonctionalité d'Inkscape `Chemin > Vectoriser un objet matriciel > Traçage Centerline`  ( -et cause le même genre de prolème...). Mais au lieu de convertir un bitmap en lignes, il détermine une ligne centrale pour des objets de type remplissage.
 
 Vous pouvez améliorer le résultat en définissant des lignes de découpage.
+![Remplissage en trait](/assets/images/docs/en/fill_to_stroke.png)
 
 ### Usage
 
