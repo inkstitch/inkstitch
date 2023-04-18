@@ -87,7 +87,7 @@ Une colonne satin qui commence à l'origine sur le rail de gauche et se termine 
 * Sélectionnez une ou plusieurs colonnes satin
 * Lancez `Extensions > Ink/Stitch  > Outils Satin > Intervertir les rails satin`
 
-## Ligne vers Effet de Chemin Satin 
+## Converti Ligne en Effet de Chemin Satin 
 
 {% include upcoming_release.html %}
 
