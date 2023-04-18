@@ -9,7 +9,7 @@ toc: true
 
 ## De quoi s'agit-il ?
 
-Le remplissage circulaire remplit une forme avec une spirale. Le centre de la spirale est positionné au centre de la forme. Il et possible de personnaliser la position du centre de la spiral à l'aide d'une cible.
+Le remplissage circulaire remplit une forme avec une spirale. Le centre de la spirale est positionné au centre de la forme. Il et possible de personnaliser la position du centre de la spirale à l'aide d'une cible.
 
 ![Détail de point circulaire](/assets/images/docs/circular-fill-detail.png)
 
