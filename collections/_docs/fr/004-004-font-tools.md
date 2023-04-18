@@ -2,7 +2,7 @@
 title: "Outils de police"
 permalink: /fr/docs/font-tools/
 excerpt: ""
-last_modified_at: 2022-01-15
+last_modified_at: 2023-04-18
 toc: true
 ---
 Un ensemble d'outils adaptés aux créateurs de polices ou à ceux qui souhaitent ajouter des polices supplémentaires dans [l'outil de lettrage](/docs/lettering) d'Ink/Stitch.
