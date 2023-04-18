@@ -16,7 +16,7 @@ Vous pouvvz soit donner de valeurs globales qui seront appliquées à tous le no
 ## Réglages de sortie
 
 * Sauts de fil (mm): Un saut de fil plus court que cette valeur sera traité comme un point normal (sans point d'arrêt)
-* Longueur minimum de points (mm): Les points plus petit que cette valeur seront sautés (à l'exception des noeuds).
+* Longueur minimum de points (mm): Les points plus courts que cette valeur seront sautés (à l'exception des noeuds).
 
 * Seulement en global: **Taille du cache (mb)**  définit la taille maximum occupée sur votre disque dur par les plans de broderie mis en cache. Plus cette valeur est grande, plus il sera possible de possible de stocker des plans de broderie. Un plan de broderie mis en cache sera affiché beaucoup plus rapidement. La valeur par défaut est 100.
 
