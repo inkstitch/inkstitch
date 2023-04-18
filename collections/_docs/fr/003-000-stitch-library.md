@@ -92,16 +92,17 @@ Créez des lignes de guidage pour générer un remplissage courbé.
 
 [Learn more](/fr/docs/stitches/guided-fill){: .btn .btn--primary}
 
-### Meander Fill
-Meander fill has its origins in quilting techniques. A beautiful patterned effect results for machine embroidery. Large areas can be filled with relatively few stitches.
+### Remplissage en méandres
+
+Le remplissage en méandres est originaire des techniques de quilting. Il produit un beau résultat en broderie machine. De grandes zones peuvent être remplies avec relativement peu de points.
 
 ![Meander fill](/assets/images/docs/meander-fill.png)
 
-[Learn more](/fr/docs/stitches/meander-fill){: .btn .btn--primary}
+[En savoir plus](/fr/docs/stitches/meander-fill){: .btn .btn--primary}
 
-### Circular Fill
-Circular fill fills a shape with an embroidered spiral. The center of the spiral is positioned at the center of the shape. A target point can be used to define a custom spiral center.
+### Remplissage circulaire
+Le remplissage circulaire remplit une forme avec une spirale. Le centre de la spirale est positionné au centre de la forme. Il et possible de personnaliser la position du centre de la spirale à l'aide d'une cible.
 
-![Meander stitch detail](/assets/images/docs/circular-fill-detail.png)
+![Remplissage circulaire](/assets/images/docs/circular-fill-detail.png)
 
-[Learn more](/fr/docs/stitches/circular-fill){: .btn .btn--primary}
+[En savoir plus](/fr/docs/stitches/circular-fill){: .btn .btn--primary}
