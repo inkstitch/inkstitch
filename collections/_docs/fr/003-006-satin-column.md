@@ -2,7 +2,7 @@
 title: "Colonne Satin"
 permalink: /fr/docs/stitches/satin-column/
 excerpt: ""
-last_modified_at: 2023-01-20
+last_modified_at: 2023-04-18
 toc: true
 ---
 ## Qu’est-ce que c’est
@@ -13,16 +13,16 @@ Le point satin est principalement utilisé pour les bordures, les lettres ou les
 
 ## Création à partir d'un trait
 
-Ink/Stitch offers several option to create satin columns. Methods 1-3 will convert to a manual satin column which then can be modified as necessary.
+Ink/Stitch offre plusieurs options pour créer des colonnes satin. Les trois premières méthodes permettent une conversion vers une colonne satin standard qui pourra ensuite être modifiée manuellement.
 
-![Methods](/assets/images/docs/satin_methods.svg)
+![Méthodes](/assets/images/docs/satin_methods.svg)
 
-1. [Line to Satin](#1-line-to-satin): for equal width satin columns
-2. [Line to Live Path Effect Satin](#2-line-to-live-path-effect-satin): easily modifiable satin column with optional patterned outline
-3. [Zigzag Line to Satin](#3-zigzag-line-to-satin): simple satin column creation for graphic tablets and touch screens
-4. [Manual Satin Column](#4-manual-satin-column): take full control over every part of the satin column
+1. [Convertir ligne en satin](#1-convertir-ligne-en-satin): pour créer des colonnes satin de largeur constante
+2. [Convertir ligne en Effet de Chemin satin](#2-convertir-ligne-en-effet-de-chemin-satin): colonne satin facilement modifiable avec un motif de contour optionnel
+3. [Convertir "ligne en zigzag" en Satin](#3-convertir-ligne-en-zigzag-en-satin): une manière simple de créer les colonnes satin particulièrement bien adaptée aux tablettes graphiques et aux écrans tactiles.
+4. [Colonne satin manuelle](#4-colonne-satin-manuelle): prendre tout le contrôle sur la colonne satin
 
-### 1. Line to Satin
+### 1. Convertir ligne en satin
 
 * Choisir un trait (un objet avec une couleur de contour, mais pas de couleur de remplissage)
 * Définissez l'épaisseur du contour à la taille souhaitée pour la largeur de votre point satin.
@@ -36,23 +36,26 @@ Vous obtenez un chemin composite composé de
 
 * En option lancer `Extensions > Ink/stitch > Outils : Satin > Agencement automatique de colonnes satin...` après avoir sélectionné une ou plusieurs colonnes satins
 
-Get more information about [Stroke to Satin](/docs/satin-tools/#convert-line-to-satin)
+Get more information about [Stroke to Satin](/fr/docs/satin-tools/#convert-line-to-satin)
 
-### 2. Line to Live Path Effect Satin
+### 2. Convertir ligne en effet de chemin satin
 
-This can be used to create a satin which can either have a patterned outline or to create a satin which is more easily to adapt in width. Please note, that once you use auto-routing on this type of satin, the live path effect will be applied and the path can only be adapted manually afterwards.
+Ceci peut être utilisé pour créer une colonne satin possedant  un motif sur son coutour ou dont la largeur est plus adaptable. Attention, si vous utilisez l'agencement automatique sur ce type de satin, l'effet de chemin sera appliqué et le chemin ne pourra plus être modifié que manuellement.
 
-Use `Path > Object to path` to convert this to a standard satin column.
 
-Get more information about [Live Path Effect Satins](/docs/satin-tools/#stroke-to-live-path-effect-satin)
+Utilisez `Chemin > Objet en chemin` pour convertir en colonne satin standard (colonne satin manuelle).
+Notez que la largeur de la ligne n'a pas d'influence
+Pour plus d'information sur l'[effet de chemin satin ](/fr/docs/satin-tools/#stroke-to-live-path-effect-satin)
 
-### 3. Zigzag Line to Satin
+### 3. Convertir "ligne en zigzag" en Satin
 
-This method is most convenient in case you have a touch screen or graphic tablet at hand.
+Cette péthode est particulierement adaptée aux écrans tactiles et aux tablettes graphiques.
 
-Get more information about [Zigzag Line to Satin](/docs/satin-tools/#zigzag-line-to-satin)
 
-### 4. Création manuelle  de colonne Satin
+
+Plus d'information  sur [Convertir "ligne en zigzag" en satin](/fr/docs/satin-tools/#zigzag-line-to-satin)
+
+### 4. Création manuelle de colonne Satin
 
 * Commencez par définir les rails de votre colonne satin : dessinez  **deux traits presque parallèles**. La future colonne satin se brodera en zigzag entre les deux rails, vous pouvez faire varier l'épaisseur de la colonne à votre guise, en faisant varier la distance entre les deux rails.
 
@@ -125,11 +128,13 @@ Certains de ces paramètres ne font pas partie de la version récente.
 |Compensation d'étirement|![exemple de compensation d'étirement](/assets/images/docs/params-satin-pull_compensation.png)|Les points Satin [resserrent le tissu](/fr/tutorials/push-pull-compensation/),   il en résulte une colonne plus étroite que votre dessin dans Inkscape. Ce paramètre étend chaque paire de pénétrations d’aiguilles vers l’extérieur de la colonne satin. Vous devrez expérimentalement déterminer le montant de la compensation en tenant compte de votre tissu, de votre fil et de votre stabilisateur. Deux valeurs séparées par un espace peuvent être utilisées pour un effet asymétrique.|
 |Distance des points courts ||Faire des points courts si la distance entre les crêtes est inférieure à cette valeur.|
 |Décalage des points courts    ||Les points dans les zones à forte densité seront raccourcis de ce pourcentage.|
-Reverse one rail      |![Reverse Rung](/assets/images/docs/satin-reverse-rung.png) | Enabling this may help if your satin renders very strangely.
+Inverser un rail    |![Inverser un rail](/assets/images/docs/satin-reverse-rung.png) | Enabling this may help if your satin renders very strangely.
 |Échanger les rails          |☑ |Échange les deux rails de la colonne satin, ce qui affecte le côté de fin de broderie ainsi que tous les paramètres asymétriques|
 |Espacement de Zig-zag|![exemple d'espacement de zig-zag](/assets/images/docs/params-satin-zig-zag-spacing.png)|la distance de crête à crête entre les zig-zag|
 |Autoriser les points d'arrêts | ☑|Ajoute un point d'arrêt à la ou les positions choisies.|
 |Forcer les points d'arrêts | ☑ | Force un point d'arrêt après l'objet indépendament de la valeur de "Saut de fil" dans les Préférences d'Ink/Stitch|
+|Point d'ancrage | |Choisir le type de point d'ancrage.|
+|Point d'arrêt| |Choisir le type de point d'arrêt.|
 |Couper après          |☑ | Coupe le fil après avoir brodé cet objet|
 |Arrêter après           |☑ |Fait faire une pause à la machine après avoir brodé cet objet. Si une position d'arrêt a été définie, elle est rejointe par un saut avant la pause. |
 |Pourcentage maximum d'augmentation aléatoire de la largeur du satin |![Random width increase](/assets/images/docs/params-satin-random-width-increase.png)| Élargir le satin d'au plus ce pourcentage. Deux valeurs séparées par un espace peuvent être utilisées pour un effet asymétrique.|
@@ -188,7 +193,7 @@ Il s’agit essentiellement d’un aller-retour en point satin de faible densit�
 
 ## Outils Satin
 
-Assurez-vous de regarder [Outils: Satin](/fr/docs/params/satin-tools/);
+Assurez-vous de lire [Outils: Satin](/fr/docs/params/satin-tools/);
 Cela vous facilitera grandement la vie avec les colonnes en satin.
 
 ## Fichiers exemple avec des colonnes satin
