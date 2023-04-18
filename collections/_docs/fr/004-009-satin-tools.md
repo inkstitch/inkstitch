@@ -2,7 +2,7 @@
 title: "Outils Satin"
 permalink: /fr/docs/satin-tools/
 excerpt: ""
-last_modified_at: 2022-01-16
+last_modified_at: 2023-04-18
 toc: true
 ---
 `Extensions > Ink/Stitch  > Outils de satin` inclut un certain nombre d’aides utiles, facilitant le travail avec [les colonnes satin](/fr/docs/stitches/satin-column/).
@@ -87,59 +87,62 @@ Une colonne satin qui commence à l'origine sur le rail de gauche et se termine 
 * Sélectionnez une ou plusieurs colonnes satin
 * Lancez `Extensions > Ink/Stitch  > Outils Satin > Intervertir les rails satin`
 
-## Stroke to Live Path Effect Satin
+## Ligne vers Effet de Chemin Satin 
 
 {% include upcoming_release.html %}
 
-Converts a stroke into a satin using a live path effect. This makes it more adaptable in width and shape as a normal satin column.
+Converti une ligne en colonne satin, en utilisant un Effet de Chemin. Cela rend le satin plus adaptable en forme et en largeur qu'une conversion en colonne satin normale.
+
+
 
 ### Usage
 
-1. Select a Stroke
-2. Run `Extensions > Ink/Stitch > Tools: Satin > Stroke to Live Path Effect Satin...`
-3. Set the approximate sizes that you wish your satin to be
-4. Click on apply
+1. Sélectionner une ligne 
+2. Lancez `Extensions > Ink/Stitch > Outils: Satin > Ligne vers Effet de Chemin Satin...`
+3. Choisir les paramètres qui vous conviennent
+4. Cliquez sur Appliquer
 
-### Apply path effect
 
-Use `Path > Object to path` to convert this to a standard satin column.
+### Appliquer l'effet de chemin
 
-### Update and change the pattern
+Utilisez `Chemin > Objet en chemin` pour convertir en colonne satin standard.
 
-Now you can change the pattern in the following ways.
+### Modifier ou changer le motif
 
-* Update the path as every other path in inkscape with the node tool
-* Change pattern by opening the path effects dialog (`Path > Path Effects`).
-  * Make the satin wider or thinner by manipulating the `width` setting.
-  * Change the pattern element, by clicking `Edit on-canvas` in the `pattern source` setting.
+Vous pouvez changer le motif de plusieurs manières :
+
+* Modifier le chemin comme n'importe quel chemin à l'aide de l'outil noeud.
+* Modifier le motif en ouvrant le dialogue de l'effet de chemin (via `Chemin > Effets de Chemin`):
+  * Modifier la largeur du satin via le réglage "Largeur"
+  * Modifier le motif en cliquant sur `Modifier sur la zone de travail` dans `source du motif`.
     
-    ![edit on canvas](/assets/images/tutorials/pattern-along-path/edit.png)
-* Change the pattern by running this tool again
-* Convert it to a normal path (`Shift + Ctrl + C`) and refine the path manually (it will then lose the path effect functionality)
+    ![Modifier sur la zone de travail](/assets/images/tutorials/pattern-along-path/edit.png)
+* Changer de motif en relançant à nouveau cet outil.
+* Convertir en chemin normal  (`Shift + Ctrl + C`)  et rafiner manuellement le chemin (ceci perdra la fonctionnalité Effet de Chemin)
 
-## Zigzag Line to Satin
+
+## Ligne en Zigzag vers Colonne Satin
 
 {% include upcoming_release.html %}
 
-When you trace a pattern manually this tool can be helpful to do it all in one run.
-Instead of drawing first the two rails and then several rungs, this tools allows to draw a square- or zigzag line which then can be converted into the satin column style.
+Quand vous tracez manuellement une colonne satin, cet outil vous aidera à le faire en une seule étape : au lieu de dessiner d'abord deux rails puis des traverses, cet outil vous permet de dessiner une ligne en zigzag ( ou en dents de scie, ou en carrés) qui pourra ensuite être converti en colonne satin normale.
+
+
 
 ### Usage
 
-* Draw you shape with your prefered pattern style.
-* Select the shape and run `Extensions > Ink/Stitch > Tools: Satin > Zigzag Line to Satin`
-  * Select your path style (pattern)
-  * Chose wether the resulting path should be smoothed out or straight lines
-  * Chose if rungs should be inserted or not. The resulting path will always have the same amount of nodes on both rungs.
+* Dessinez votre forme avec votre zigzag préféré.
+* Sélectionnez la forme et lancez  `Extensions > Ink/Stitch > Outis: Satin > Ligne en Zigzag vers Colonne Satin`
+  * Selectionnez votre style de zigzag 
+  * Choisissez  si votre chemin doit être adouci ou constitué de segments de droites
+  * Choisissez si les traverses doivent être inserrées ou non. Les colonnes satin crées auront toujours autant de noeuds sur les deux rails.
 
-### Pattern styles
+### Style de zigzag
 
-* All patterns start and end with a rung.
-* For **square (1)** and **sawtooth (2)** style pattern draw one rung after the other.
-* The **zigzag (3)** style creates rungs from each peak on each rail to the midpoint between the peaks of the other rail.
+* Toutes les lignes de zigzag commencent et terminent par une traverse.
+* Pour **Carré (1)** et **dents de scie (2)** dessinez les traverses les unes après les autres.
+*  **zigzag (3)** crée des traverses de chaque pic d'un rail vers le milieu d'un pic sur l'autre rail.
+![Styles de zigzags](/assets/images/docs/zigzag-line-to-satin.png)
 
-![Zigzag Line to Satin Patterns](/assets/images/docs/zigzag-line-to-satin.png)
-
-If you see something like in the image below, you most likely chose the wrong pattern for your stroke setup.
-
+Si vous voyez quelque chose comme le dessin ci-dessous, vous avez probablement choisi le mauvais style de zigzag pour votre dessin.
 ![Zigzag Line wrong pattern](/assets/images/docs/zigzag-line-to-satin-wrong-pattern.png)
