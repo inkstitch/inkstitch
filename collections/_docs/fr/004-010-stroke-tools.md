@@ -2,7 +2,7 @@
 title: "Outils: Trait"
 permalink: /fr/docs/stroke-tools/
 excerpt: ""
-last_modified_at: 2023-01-04
+last_modified_at: 2023-04-18
 toc: true
 ---
 ## Agencement automatique de points droits
