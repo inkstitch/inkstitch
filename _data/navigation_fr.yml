@@ -88,11 +88,11 @@ docs:
         url: /fr/docs/stitches/contour-fill/
       - title: "Remplissage guidé"
         url: /fr/docs/stitches/guided-fill/
-      - title: "Meander Fill"
+      - title: "Remplissage en méandres"
         url: /fr/docs/stitches/meander-fill/
-      - title: "Circular Fill"
+      - title: "Remplissage circulaire"
         url: /fr/docs/stitches/circular-fill/
-      - title: "Lock stitches"
+      - title: "Points de sureté"
         url: /fr/docs/stitches/lock-stitches/
       - title: "Textures"
         url: /fr/docs/stitches/patterns/
@@ -112,11 +112,11 @@ docs:
       url: /fr/docs/params/
     - title: "Préferences"
       url: /fr/docs/preferences/
-    - title: "Outils de remplissage"
+    - title: "Outils : remplissage"
       url: /fr/docs/fill-tools/
-    - title: "Outils: Trait"
+    - title: "Outils : Trait"
       url: /fr/docs/stroke-tools/
-    - title: "Outils: Satin"
+    - title: "Outils : Satin"
       url: /fr/docs/satin-tools/
     - title: "Dépannage pour objets"
       url: /fr/docs/troubleshoot/
