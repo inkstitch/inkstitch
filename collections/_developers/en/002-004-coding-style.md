@@ -1,5 +1,5 @@
 ---
-title: "Debugging and Profiling"
+title: "Coding style"
 permalink: /developers/inkstitch/coding-style/
 last_modified_at: 2022-10-16
 toc: true
