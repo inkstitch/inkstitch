@@ -121,7 +121,7 @@ Vous pouvez changer le motif de plusieurs manières :
 * Convertir en chemin normal  (`Shift + Ctrl + C`)  et rafiner manuellement le chemin (ceci perdra la fonctionnalité Effet de Chemin)
 
 
-## Ligne en Zigzag vers Colonne Satin
+## Convertir Ligne en Zigzag en Satin
 
 {% include upcoming_release.html %}
 
@@ -131,7 +131,7 @@ Quand vous tracez manuellement une colonne satin, cet outil vous aidera à le fa
 
 ### Usage
 
-* Dessinez votre forme avec votre zigzag préféré.
+* Dessinez votre forme avec votre style de zigzag préféré.
 * Sélectionnez la forme et lancez  `Extensions > Ink/Stitch > Outis: Satin > Ligne en Zigzag vers Colonne Satin`
   * Selectionnez votre style de zigzag 
   * Choisissez  si votre chemin doit être adouci ou constitué de segments de droites
@@ -145,4 +145,4 @@ Quand vous tracez manuellement une colonne satin, cet outil vous aidera à le fa
 ![Styles de zigzags](/assets/images/docs/zigzag-line-to-satin.png)
 
 Si vous voyez quelque chose comme le dessin ci-dessous, vous avez probablement choisi le mauvais style de zigzag pour votre dessin.
-![Zigzag Line wrong pattern](/assets/images/docs/zigzag-line-to-satin-wrong-pattern.png)
+![Mauvais choix de style de zigzag](/assets/images/docs/zigzag-line-to-satin-wrong-pattern.png)
