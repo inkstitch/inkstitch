@@ -108,7 +108,7 @@ Use `Path > Object to path` to convert this to a standard satin column.
 {% include upcoming_release.html %}
 
 When you trace a pattern manually this tool can be helpful to do it all in one run.
-Instead of drawing first the two rails and then several rungs, this tools allows to draw a square- or zigzag line which then can be converted into the satin column style.
+Instead of drawing first the two rails and then several rungs, this tool allows to draw a square- or zigzag line which then can be converted into the satin column style.
 
 ### Usage
 
@@ -116,7 +116,7 @@ Instead of drawing first the two rails and then several rungs, this tools allows
 * Select the shape and run `Extensions > Ink/Stitch > Tools: Satin > Zigzag Line to Satin`
   * Select your path style (pattern)
   * Chose wether the resulting path should be smoothed out or straight lines
-  * Chose if rungs should be inserted or not. The resulting path will always have the same amount of nodes on both rungs.
+  * Chose if rungs should be inserted or not. The resulting path will always have the same amount of nodes on both rails.
 
 ### Pattern styles
 
