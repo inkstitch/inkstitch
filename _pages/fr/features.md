@@ -69,10 +69,10 @@ Ink/Stitch a une section [Gestion des fils](/docs/thread-color/) dans le menu.
 
 [Import et Export](/docs/import-export/) beaucoup de format machine (inclant l'export en lot)
 
-### Writing
+### Ecriture
 CSV, **DST**, **EXP**, **JEF**, PEC, **PES**, SVG, TXT (G-CODE), U01, **VP3**
 
-### Reading
+### Lecture
 100, 10o, BRO, DAT, DSB, **DST**, DSZ, EMD, **EXP**, EXY, FXY, GT, INB, **JEF**, JPX, KSM, MAX, MIT, NEW, PCD, PCM, PCQ, PCS, PEC, **PES**, PHB, PHC, SEW, SHV, STC, STX, TAP, TBF, TXT (G-CODE), U01, **VP3**, XXX, ZXY
 
 ###  Commandes Machine
