@@ -113,6 +113,8 @@ Seiten umkehren                     | | Kehrt die Seiten der Satinsäule um (lin
 Zick-Zack Abstand (Spitze zu Spitze)|![Zig-zag spacing example](/assets/images/docs/params-satin-zig-zag-spacing.png)|Spitze-zu-Spitze Abstand zwischen Zick-Zacks
 Vernähen erlauben                   | |Vernäht bei Bedarf an den ausgewählten Positionen
 Vernähen erzwingen                  | |Vernäht den Faden nach diesem Element, auch dann, wenn der Abstand zum Folgeobjekt geringer ist als in den [Ink/Stitch Einstellungen](/de/docs/preferences/) definiert.
+Tack stitch                 | |Chose your [favorite style](/docs/stitches/lock-stitches/)
+Lock stitch                  | |Chose your [favorite style](/docs/stitches/lock-stitches/)
 Fadenschnitt                        | |Schneidet den Faden nachdem dieses Objekt genäht wurde
 Stopp                               | |Stoppt die Maschine nachdem dieses Objekt genäht wurde und springt zur Stopp-Position (sofern vorhanden)
 Zufälliger Prozentwert (Erweitern)  |![Random width increase](/assets/images/docs/params-satin-random-width-increase.png)| Lengthen stitch across rails at most this percent. Two values separated by a space may be used for an aysmmetric effect.
