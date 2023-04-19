@@ -20,10 +20,13 @@ Le point droit produit une série de petits points suivant une ligne ou une cour
 
 [En savoir plus](/fr/docs/stitches/running-stitch/){: .btn .btn--primary}
 
-### Point triple
-Le point triple décrit une répétition de points droits avant arrière.Il en résultera un point plus fourni 
+### Point triple ou plus généralement multiple
+Le point triple décrit une répétition de points droits avant arrière. Il en résultera un point plus fourni.
 
 ![Point triple Détail](/assets/images/docs/bean-stitch-detail.jpg){: width="350x" }
+
+{% include upcoming_release.html %} 
+Il est possible de définir sa propre séquence de répétition, par exemple alternance de point simple et de point triple.
 
 [En savoir plus](/fr/docs/stitches/bean-stitch/){: .btn .btn--primary}
 
