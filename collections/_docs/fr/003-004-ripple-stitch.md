@@ -120,7 +120,7 @@ Forcer les points d'arrêts | ☑ ou ▢| Force un point d'arrêt après l'objet
 Point d'ancrage                  |Choisir le  [style désiré](/fr/docs/stitches/lock-stitches/)
 Point d'arrêt                    |Choisir le  [style désiré](/fr/docs/stitches/lock-stitches/)
 Couper après 	| ☑ ou ▢| Si coché, le fil est coupé après avoir brodé cet objet
-Arrêter aprus 	| ☑ ou ▢|Si coché, la machine fait une pause après avoir brodé cet objet. Si une position d'arrêt a été définie, la machine la rejoint avant de s'arrêter.
+Arrêter après 	| ☑ ou ▢|Si coché, la machine fait une pause après avoir brodé cet objet. Si une position d'arrêt a été définie, la machine la rejoint avant de s'arrêter.
 {: .params-table }
 
 
