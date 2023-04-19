@@ -1,8 +1,8 @@
 ---
-title: "Install Ink/Stitch"
+title: "Installer Ink/Stitch"
 permalink: /fr/docs/install-macos/
-excerpt: "How to quickly install Ink/Stitch."
-last_modified_at: 2022-06-12
+excerpt: "Comment installer rapidement Ink/Stitch."
+last_modified_at: 2023-04-19
 toc: true
 ---
 {% comment %}
@@ -23,13 +23,13 @@ Mojave - Monterey: Cliquez sur le fichier téléchargé pour lancer l'installate
 
 El Capitan - High Sierra: Ctrl+Click  sur le fichier téléchargé et Cliquez sur Ouvrir
 
-Click on Continue.
+Cliquez sur  Continuer.
 
 **Dernière version:** [Ink/Stitch {{ site.github.latest_release.tag_name }} ({{ site.github.latest_release.published_at | date: "%Y-%m-%d" }})](https://github.com/inkstitch/inkstitch/releases/latest)
 
 ## Installation
 
-Ink/Stitch est une extension pour Inkscape. Téléchargez et installez  [Inkscape](https://inkscape.org/release/) Version 1.0.2 ou supérieure avant d'installer Ink/Stitch. Vérifiez que vous avez bien **installé et la lancé Inkscape** avant d'installer Ink/Stitch. Sinon l'installation va échouer.<br><br>
+Ink/Stitch est une extension pour Inkscape. Téléchargez et installez  [Inkscape](https://inkscape.org/release/) Version 1.0.2 ou supérieure avant d'installer Ink/Stitch. Vérifiez que vous avez bien **installé et lancé Inkscape** avant d'installer Ink/Stitch. Sinon l'installation va échouer.<br><br>
 
 Attention, Inkscape 1.2 ne marche pas avec **El Capitan** and **Sierra**.  Si vous utlilisez une de ces versions de macOS, merci d'installer [Inkscape 1.1.2](https://inkscape.org/release/1.1.2/platforms/).
 {: .notice--warning .bold--warning }
@@ -51,7 +51,7 @@ Cliquez sur `Installer`.
 ![Install Ink/Stitch](/assets/images/docs/fr/macos-install/installer03.png)
 
 
-Dans certains cas, votre système vous demandera si vous autorisez l'installateur à sauvegarder des fichiers dans votre répertoire utilisateur (home directory). Ink/Stitch doit être installé dans le dossier des extensions d'Inkscape. Répondez donc 'Oui' à la question.
+Dans certains cas, votre système vous demandera si vous autorisez l'installateur à sauvegarder des fichiers dans votre répertoire utilisateur (home directory). Ink/Stitch doit être installé dans le dossier des extensions d'Inkscape. Répondez donc  'Oui'  à la question.
  
 {: .notice--info }
 
@@ -60,7 +60,7 @@ Votre installation est maintenant terminée.
 ![Install Ink/Stitch](/assets/images/docs/fr/macos-install/installer04.png)
 
 
-A la dernière question :Voulez vous placer le fichier d'installation dans la corbeille?, répondez ce que vous voulez. Ink/Stitch n'en a plus besoin.
+A la dernière question : Voulez vous placer le fichier d'installation dans la corbeille?, répondez ce que vous voulez. Ink/Stitch n'en a plus besoin.
 
 ![Install Ink/Stitch](/assets/images/docs/fr/macos-install/installer05.png)
 
@@ -88,19 +88,20 @@ Les installations antérieures à 2.1.0 doivent être supprimées manuellement. 
 
 Ceci peut arriver si vous avez installé une version de developpement. Faites `Ctrl+Click` sur le fichier téléchargé et cliquez sur `Ouvrir`.
 
-### Installation fails
+### Si l'installation échoue
 
-We also provide a zip download file which can be extraced in the the user extensions folder (see below: confirm installation path).
+Nous vous offrons aussi la possibilité de télécharger un zip qui peut être extrait dans le dossier d'extension utilisateur (voir ci-dessous: vérifier le chemin d'installation)
 
-For Big Sur and Monterey [dowload ZIP]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx.zip)
 
-For older macOS versions [download ZIP]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-capitan-cataline-osx.zip)
+Pour Big Sur et Monterey [dowload ZIP]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx.zip)
+
+Pour des versions plus anciennes de macOS [download ZIP]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-capitan-cataline-osx.zip)
 
 ### Ink/Stitch ne fonctionne pas!
 
 **M1 processors (Apple Silicon Mac)**
 
-Most common issue is a missing Rosetta installation. To fix the issue run this command in your terminal: `softwareupdate --install-rosetta --agree-to-license`
+Le problème le plus fréquent est qque Rosetta n'a pas été installé. Pour corriger lancez cette commande dans une fenêtre terminal :  `softwareupdate --install-rosetta --agree-to-license`
 
 **Vérifier le chemin d'installation**
 
@@ -109,7 +110,7 @@ Vous pouvez trouver leur localisation sous `Inkscape > Preferences > Systeme`.
 
 **Vérifier la  version**
 
-Merci de vérifier que vous avez bien téléchargé la version d'Ink/Stitch compatible avec votre version macOS ([Download](#download)).
+Merci de vérifier que vous avez bien téléchargé la version d'Ink/Stitch compatible avec votre version macOS ([Télécharger](#télécharger)).
 
 ### J'ai installé Ink/Stitch mais le menu est grisé (désactivé)
 
