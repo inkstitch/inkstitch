@@ -5,7 +5,7 @@ excerpt: ""
 last_modified_at: 2023-04-13
 toc: true
 ---
-## Qu'est-ce que c'est
+## De quoi s'agit-il
 [![Fleurs en point manuel](/assets/images/docs/manual-stitch.jpg){: width="200x"}](/assets/images/docs/manual-stitch.svg){: title="Download SVG File" .align-left download="manual-stitch.svg" }
 En mode point manuel Ink / Stitch utilisera chaque nœud d’un chemin comme point de pénétration de l’aiguille, exactement comme vous les avez placés.
 ![Detail de point manuel](/assets/images/docs/manual-stitch-detail.png)
@@ -41,7 +41,7 @@ Longueur du point droit             ||Ce paramètre est sans effet sur les point
 Tolérance du point droit            ||Ce paramètre est sans effet sur les points manuels
 Espacement Zig-Zag (crête à crête)  ||Ce paramètre est sans effet sur les points manuels
 Autoriser les points d'arrêts       ||Les points manuels ne permette pas l'ajout automatique de points d'arrêt. Vous devez les inclure manuellement dans votre chemin. Mais vous pouvez les activer via "Forcer les points d'arrêts". 
-Forcer les points d'arrêts          ||Ajoute un point d'arrêt sur un point manuel.
+Forcer les points d'arrêts          ||Sur un point manuel, ajoute un point d'arrêt.
 Couper après                        ||Couper le fil après avoir brodé cet objet
 Arrêter après                       ||Arrêter (pause machine) après avoir brodé cet objet. Avant l'arrêt, il y aura un saut vers la position d'arrêt si elle a été définie.
 
