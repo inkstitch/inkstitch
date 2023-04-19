@@ -35,6 +35,8 @@ Maximale Füllstichlänge         || Die Stichlänge in einer Reihe. Ein kürzer
 Reihenabstand                   || Abstand zwischen den Stichreihen.
 Geradstich-Toleranz             || Alle Stiche müssen innerhalb dieses Abstandes zum Pfad befinden. Ein niedrigerer Toleranzwert führt zu kürzeren Stichen. Ein höherer Wert könnte Ecken abrunden.
 Vernähen erzwingen              || Vernäht den Faden nach diesem Element, auch dann, wenn der Abstand zum Folgeobjekt geringer ist als in den [Ink/Stitch Einstellungen](/de/docs/preferences/) definiert.
+Tack stitch                     ||Chose your [favorite style](/docs/stitches/lock-stitches/)
+Lock stitch                     ||Chose your [favorite style](/docs/stitches/lock-stitches/)
 Fadenschnitt                    || Schneidet den Faden nachdem dieses Objekt genäht wurde
 Stopp                           || Stoppt die Maschine nachdem dieses Objekt genäht wurde und springt zur Stopp-Position (sofern vorhanden)
 
