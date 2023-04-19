@@ -2,7 +2,7 @@
 title: "Noticeable Ink/Stitch Features"
 permalink: /features/
 excerpt: "Ink/Stitch features"
-last_modified_at: 2022-05-16
+last_modified_at: 2023-04-18
 sidebar:
   nav: pages
 toc: true
@@ -25,7 +25,9 @@ Ink/Stitch: digitize machine embroidery designs using Inkscape (SVG)
 * Adjust stitch length, row spacing and row angle
 * Underlay
 * [Contour fill](/docs/stitches/contour-fill/)
-* [Guided fill](/docs/stitches/guided-fill/)
+* [Guided fill](/docs/stitches/guided-fill/) 
+* [Meander fill](/docs/stitches/meander-fill/)
+* [Circular fill](/docs/stitches/circular-fill/)
 
 ### Satin Stitch
 * Design your [satin column](/docs/stitches/satin-column/) with varying width
