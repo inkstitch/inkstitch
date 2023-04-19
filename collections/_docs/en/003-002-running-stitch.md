@@ -2,7 +2,7 @@
 title: "Running Stitch"
 permalink: /docs/stitches/running-stitch/
 excerpt: ""
-last_modified_at: 2023-02-21
+last_modified_at: 2023-04-18
 toc: true
 ---
 ## What it is
@@ -40,11 +40,15 @@ Repeats                       |◦ Defines how many times to run down and back a
 Bean stitch number of repeats |◦ Enable [Bean Stitch Mode](/docs/stitches/bean-stitch/)<br />◦ Backtrack each stitch this many times.<br />◦ A value of 1 would triple each stitch (forward, back, forward).<br />◦ A value of 2 would quintuple each stitch, etc.
 Running stitch length         |Length of stitches
 Running stitch tolerance      |All stitches must be within this distance from a path. A lower tolerance means stitches will be closer together. A higher tolerance means sharp corner may be rounded.
-Zig-Zag spacing (peak-to-peak)|Not relevant for running stitch
 Allow lock stitches           |Enables lock stitches in only desired positions
 Force lock stitches           |Sew lock stitches after sewing this element, even if the distance to the next object is smaller than defined in the collapse length value value in the Ink/Stitch preferences.
+Tack stitch                 |Chose your [favorite style](/docs/stitches/lock-stitches/)
+Lock stitch                  |Chose your [favorite style](/docs/stitches/lock-stitches/)
 Trim After                    |Trim the thread after sewing this object.
 Stop After                    |Stop the machine after sewing this object. Before stopping it will jump to the stop position (frame out) if defined.
+
+{% include upcoming_release.html %} 
+By entering a sequence of space separated integers in Bean stitch number of repeats, it is possible to define a custom stitch. For instance the sequence 0 1 will yield alternating simple and triple stitches.
 
 ## Routing
 
