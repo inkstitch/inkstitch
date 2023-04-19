@@ -49,7 +49,10 @@ Definiert (1) die Start- und (2) die Endposition bei Objekten mit Füllstich.
 
 #### ![ripple stitch target symbol](/assets/images/docs/visual-commands-ripple-target.png) Ripplestich Zielposition
 
-Definiert den Zielpunkt für einen Ripplestich-Bereich.
+Definiert den Zielpunkt für einen Ripplestich-Bereich
+{% include upcoming_release.html %}
+or a circular fill.
+
 
 ### ![trim symbol](/assets/images/docs/visual-commands-trim.jpg) Faden trennen
 
