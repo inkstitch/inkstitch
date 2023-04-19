@@ -66,7 +66,9 @@ Lancez `Extensions > Ink/Stitch  > Paramètres`. Choisir "Remplissage guidé" da
 |Décaler autant de fois avant de répéter|![Décalage exemple](/assets/images/docs/params-fill-stagger.png) |Les points sont décalés de manière à ce que les rangées de points voisines ne tombent pas toutes dans la même colonne (ce qui créerait un effet de vallée). Ce paramètre détermine combien de lignes les points seront décalées avant de tomber dans la même position en colonne.|
 |Chemin de dessous|![exemple de chemin de dessous](/assets/images/docs/params-fill-underpathing.png)|Doit être activé pour permettre aux points droits de se placer à l'intérieur de la forme plutôt que de suivre la bordure lors du déplacement d'une section à l'autre.|
 |Forcer les points d'arrêts |☑|Force un point d'arrêt après l'objet indépendament de la valeur de "Saut de fil" dans les Préférences d'Ink/Stitch.
-Autoriser les points d'arrêts | ☑|Ajoute un point d'arrêt à la ou les positions choisies.|
+|Autoriser les points d'arrêts | ☑|Ajoute un point d'arrêt à la ou les positions choisies.|
+|Point d'ancrage                  |Choisir le  [style désiré](/fr/docs/stitches/lock-stitches/)|
+|Point d'arrêt                    |Choisir le  [style désiré](/fr/docs/stitches/lock-stitches/)|
 |Couper après          |☑ | Coupe le fil après avoir brodé cet objet.|
 |Arrêter après           |☑ |Fait faire une pause à la machine après avoir brodé cet objet. Si une position d'arrêt a été définie, elle est rejointe par un saut avant la pause. |
 
