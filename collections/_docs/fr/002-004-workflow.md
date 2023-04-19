@@ -2,7 +2,7 @@
 title: "Organisation du travail"
 permalink: /fr/docs/workflow/
 excerpt: ""
-last_modified_at: 2022-06-12
+last_modified_at: 2023-04-19
 ---
 ![Ink/Stitch workflow](/assets/images/docs/en/workflow-chart.svg)
 
@@ -38,7 +38,7 @@ Vous pouvez aussi utiliser les effets de chemin (`Chemin> Effets de chemin`).
 
 Lorsque vous basez un dessin sur une image ou un graphique existant, chargez-le dans Inkscape dans son propre calque. Certains graphiques sont compatibles avec [la fonction de traçage automatique](https://inkscape.org/fr/doc/tutorials/tracing/tutorial-tracing.html) d'Inkscape (`Chemin > Vectoriser une image matricielle` ou `Shift+Alt+B`), surtout si vous simplifiez d’abord l’image dans un éditeur graphique (par exemple avec [GIMP](https://www.gimp.org/)).
 
-Après le traçage, nettoyez les formes vectorielles en utilisant `Chemin> Simplifier` (` Ctrl + L`) et en supprimant les nœuds à la main lorsque cela est possible. Le but est d’utiliser le moins de courbes de Bézier possible pour représenter l’image. 
+Après le traçage, nettoyez les formes vectorielles en utilisant `Chemin> Simplifier` (`Ctrl + L`) et en supprimant les nœuds à la main lorsque cela est possible. Le but est d’utiliser le moins de courbes de Bézier possible pour représenter l’image. 
 
 Souvent la vectorisation produit des objets très petits qu'il n'est pas possible de broder. En conséquence, pensez à  nettoyer votre document en utilisant `Extensions > Ink/Stitch > Résolution de problèmes > Nettoyer le document`.
 
@@ -51,7 +51,7 @@ Lorsque l’image doit être tracée à la main, utilisez l’outil de dessin à
 Ink/Stitch vous offre la possibilité d'utiliser des polices prêtes à broder qui peuvent être inserrées dans votre document via `Extensions > Ink/Stitch > Lettrage`
 
 Si vous souhaitez utiliser une  police non présente dans le lettrage, choisissez la avec soin. 
-Il est assez difficile de faire en sorte que le satin soit beau quand il fait 1mm de large ou moins. Les polices sans empattement (sans serif) ont tendance à être les plus faciles à numériser. Pour un texte de moins de 4 mm de hauteur, il vous sera très difficile de donner une belle apparence aux lettres minuscules. Par conséquent, envisagez des majuscules. Les polices Cursive / Script peuvent bien fonctionner, mais ce ne sera pas aussi facile que vous le pensez.
+Il est assez difficile de faire en sorte que le satin soit beau quand il fait 1 mm de large ou moins. Les polices sans empattement (sans serif) ont tendance à être les plus faciles à numériser. Pour un texte de moins de 4 mm de hauteur, il vous sera très difficile de donner une belle apparence aux lettres minuscules. Par conséquent, envisagez des majuscules. Les polices Cursive / Script peuvent bien fonctionner, mais ce ne sera pas aussi facile que vous le pensez.
 
 
 ## ![Vectorize](/assets/images/docs/workflow-icon-vectorize.png) Etape 2: Convertir en vecteur de broderie et paramétrer
@@ -81,13 +81,13 @@ Utilisez les groupes pour structurer votre document:
 
 * Sélectionnez des objets avec votre souris
 * Ajoutez ou supprimez des objets avec <key>shift</key> <key>click</key>
-* Appuyez sur <key>Ctrl</key><key>G</key>
+* Appuyez sur <key>Ctrl</key><key>G</key> pour les grouper
 
 
 Dégrouper des objets fonctionne comme suit:
 
 * Sélectionnez le(s) groupe(s)
-* Appuyez sur <key>Ctrl</key><key>Shift</key><key>G</key>
+* Appuyez sur <key>Ctrl</key><key>Shift</key><key>G</key> pour les dégrouper
 
 
 
@@ -101,7 +101,8 @@ Objet chemin | Type de point
 Trait en pointillé|[point droit](/fr/docs/stitches/running-stitch/), [point manuel](/fr/docs/stitches/manual-stitch/) , [point triple](/fr/docs/stitches/bean-stitch/), [broderie ondulée](/fr/docs/stitches/ripple/)
 Trait en continu |[point zig-zag](/fr/docs/stitches/zigzag-stitch/), [broderie ondulée](/fr/docs/stitches/ripple/)
 Deux traits combinés (avec traverses optionnelles) | [colonne satin](/fr/docs/stitches/satin-column), [point en E](/fr/docs/stitches/e-stitch), [broderie ondulée](/fr/docs/stitches/ripple/)
-Chemin fermé avec une couleur de remplissage | [point de remplissage](/fr/docs/stitches/fill-stitch/), [remplissage selon contour](/fr/docs/stitches/contour-stitch/), [remplissage guidé](/fr/docs/stitches/guided-stitch/) 
+Chemin fermé avec une couleur de remplissage | [point de remplissage](/fr/docs/stitches/fill-stitch/), [remplissage selon contour](/fr/docs/stitches/contour-fill/), [remplissage guidé](/fr/docs/stitches/guided-fill/),  [remplissage en méandres](/fr/docs/stitches/meander-fill/), [remplissage guidé](/fr/docs/stitches/circular-fill/) 
+{: .equal-tables }
 {: .equal-tables }
 
 ### Paramétrer
@@ -129,7 +130,7 @@ Ink/Stitch vous offre plusieurs outils pour vous aider à optimiser l'ordre de b
 * La fenêtre 'Calque et objets' vous permet de voir l'ordre des objets dans la pile et de déplacer les objets dans cette pile
 * `Extension  > Ink/Stitch > Edition > Reempiler les objets dans l'ordre de leur selection` vous aide à réordonner manuellement des objets
 * `Extension  > Ink/Stitch >Outils: Satin >Arrangement automatique de colonnes satins` appliqué après avoir selectionné des colonnes satin, permet un réordonnnement automatique de ces colonnes satin, avec un eventuel ajout de chemins de dessous en point droit pour éviter les sauts de fils
-* `Extension  > Ink/Stitch >Outils:Trait >Arrangement automatique de points dtoits` appliqué après avoir selectionné des points droits permet un réordonnnement automatique de ces point droits, avec un eventuel ajout de chemins de dessous en point droit pour éviter les sauts de fils
+* `Extension  > Ink/Stitch >Outils:Trait >Arrangement automatique de points droits` appliqué après avoir selectionné des points droits permet un réordonnnement automatique de ces point droits, avec un eventuel ajout de chemins de dessous en point droit pour éviter les sauts de fils
 
 
 
