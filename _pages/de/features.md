@@ -26,6 +26,8 @@ Ink/Stitch: digitalisiere Designs für Maschinenstickerei mit Inkscape (SVG)
 * Unterlage
 * [Konturfüllung](/de/docs/stitches/contour-fill/)
 * [Kurvenfüllung](/de/docs/stitches/guided-fill/)
+* [Meander fill](/de/docs/stitches/meander-fill/)
+* [Circular fill](/de/docs/stitches/circular-fill/)
 
 ### Satinstich
 * [Satinstich](/de/docs/stitches/satin-column/) mit variabler Breite
