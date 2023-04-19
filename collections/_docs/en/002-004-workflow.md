@@ -2,7 +2,7 @@
 title: "Workflow"
 permalink: /docs/workflow/
 excerpt: ""
-last_modified_at: 2021-04-11
+last_modified_at: 2023-04-18
 toc: true
 ---
 ![Ink/Stitch workflow](/assets/images/docs/en/workflow-chart.svg)
@@ -98,7 +98,7 @@ Path Object | Stitch Type
 ---|---
 (Dashed) stroke |[running stitch](/docs/stitches/running-stitch/), [manual stitch](/docs/stitches/manual-stitch/), [zig-zag stitch](/docs/stitches/zigzag-stitch/), [bean stitch](/docs/stitches/bean-stitch/)
 Two combined strokes (with optional rungs) | [satin column](/docs/stitches/satin-column), [e-stitch](/docs/stitches/e-stitch)
-Closed path with a fill color | [fill stitch](/docs/stitches/fill-stitch/)
+Closed path with a fill color | [fill stitch](/docs/stitches/fill-stitch/),  [guided fill](/docs/stitches/guided-fill/),  [contour fill](/docs/stitches/contour-fill/), [meander fill](/docs/stitches/meander-fill/), [circular fill](/docs/stitches/circular-fill/)
 {: .equal-tables }
 
 ### Parametrize
