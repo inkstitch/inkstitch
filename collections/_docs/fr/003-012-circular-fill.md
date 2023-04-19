@@ -55,18 +55,5 @@ La sous-couche de remplissage circulaire se comporte comme celle du remplissage 
 [paramètres](/fr/docs/stitches/fill-stitch/#sous-couche) de la sous-couche.
 
 
-Settings||Description
----|---|---
-
-Allow lock stitches  ||Enables lock stitches in only desired positions
-Force lock stitches  ||Sew lock stitches after sewing this element, even if the distance to the next object is smaller than defined in the collapse length value value in the Ink/Stitch prefreneces.
-
-Trim After           ||Trim the thread after sewing this object.
-Stop After           ||Stop the machine after sewing this object. Before stopping it will jump to the stop position (frame out) if defined.
-
-## Underlay
-
-Underlay in Guided Fill doesn't follow the guide line, but uses the fill angle which can be defined in the underlay [params](/docs/stitches/fill-stitch#underlay).
-
-## Samples Files Including Circular Fill Stitches
+## Examples de fichier incluant des remplissage circulaire
 {% include tutorials/tutorial_list key="stitch-type" value="Circular Fill" %}
