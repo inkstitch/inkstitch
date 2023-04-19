@@ -139,11 +139,11 @@ Si vous avez des signes diacritiques dans votre nom d'utilisateur, essayez le ch
 Vérifiez que vous avez bien extrait Ink/Stitch dans le bon répertoire. Si le  `dossier extensions utilisateur` ne fonctionne pas correctement, vous pouvez aussi essayer d'installer dans le `dossier extensions Inkscape`.
 Vous pouvez retrouver l'adresse de ces dossiers sous  `Edition > Préférences > Système`.
 
-**Confirmer la version d'Ink/Stitch**
+**Vérifiez la version d'Ink/Stitch**
 
-Verifiez si vous avez bien téléchargé Ink/Stitch pour Linux ([Download](#download))
+Verifiez si vous avez bien téléchargé Ink/Stitch pour Linux ([Installation](#download))
 
-**Confirmer  propriétaire/droits**
+**Vérifiez propriétaire/droits d'accès**
 
 Certains utilisateurs ont signaler des problèmes dus à un mauvais propriétaire ou de mauvais droits
 
@@ -156,7 +156,7 @@ Cette erreur a été signalée par des utilisateurs qui ont installé Inkscape v
 
 Ce problème peut être causé par wayland. Démarrez Inkscape avec la commande suivante: `export GDK_BACKEND=x11 && inkscape`.
 
-Cette solution de contournement doit être utilisé jusqu'à ce que nous ayons déployées toutes les applications Ink/Stitch dans l'environement electron.
+Cette solution de contournement doit être utilisé jusqu'à ce que nous ayons déployées toutes les applications Ink/Stitch dans l'environnement electron.
 
 
 ### J'ai installé Ink/Stitch dans ma langue maternelle, mais les fenêtres de dialogue sont affichées en anglais!
