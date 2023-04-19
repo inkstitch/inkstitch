@@ -117,8 +117,8 @@ Tourner| ☑  ou ▢| seulement pour des ondulations guidées
 Style de Jointure|<img src="/assets/images/docs/flat_or_point.svg" alt="Join Stile"/> |pour des ondulations ouvertes,les réplications peuvent être jointes par un segment (en haut) ou en un seul point (en bas)
 Autoriser les points d'arrêts | ☑  ou ▢|Choix de l'ajout d'un point d'arrêt en début et en fin de broderie.
 Forcer les points d'arrêts | ☑ ou ▢| Force un point d'arrêt après l'objet indépendament de la valeur de "Saut de fil" dans les Préférences d'Ink/Stitch.
-Point d'ancrage                  |Choisir le  [style désiré](/fr/docs/stitches/lock-stitches/)
-Point d'arrêt                    |Choisir le  [style désiré](/fr/docs/stitches/lock-stitches/)
+Point d'ancrage                  ||Choisir le  [style désiré](/fr/docs/stitches/lock-stitches/)
+Point d'arrêt                    ||Choisir le  [style désiré](/fr/docs/stitches/lock-stitches/)
 Couper après 	| ☑ ou ▢| Si coché, le fil est coupé après avoir brodé cet objet
 Arrêter après 	| ☑ ou ▢|Si coché, la machine fait une pause après avoir brodé cet objet. Si une position d'arrêt a été définie, la machine la rejoint avant de s'arrêter.
 {: .params-table }
