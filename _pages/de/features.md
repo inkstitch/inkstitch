@@ -2,7 +2,7 @@
 title: "Besondere Ink/Stitch Features"
 permalink: /de/features/
 excerpt: "Ink/Stitch features"
-last_modified_at: 2022-06-07
+last_modified_at: 2023-04-19
 sidebar:
   nav: pages
 toc: true
@@ -26,8 +26,8 @@ Ink/Stitch: digitalisiere Designs für Maschinenstickerei mit Inkscape (SVG)
 * Unterlage
 * [Konturfüllung](/de/docs/stitches/contour-fill/)
 * [Kurvenfüllung](/de/docs/stitches/guided-fill/)
-* [Meander fill](/de/docs/stitches/meander-fill/)
-* [Circular fill](/de/docs/stitches/circular-fill/)
+* [Meanderfüllung](/de/docs/stitches/meander-fill/)
+* [Spiralfüllung](/de/docs/stitches/circular-fill/)
 
 ### Satinstich
 * [Satinstich](/de/docs/stitches/satin-column/) mit variabler Breite
