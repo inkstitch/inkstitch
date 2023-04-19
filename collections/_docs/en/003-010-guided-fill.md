@@ -2,7 +2,7 @@
 title: "Guided Fill"
 permalink: /docs/stitches/guided-fill/
 excerpt: ""
-last_modified_at: 2023-01-15
+last_modified_at: 2023-04-18
 toc: true
 ---
 ## What it is
@@ -61,7 +61,9 @@ Skip last stitch in each row       ||The last stitch in each row is quite close 
 Stagger this many times before repeating|![Stagger example](/assets/images/docs/params-fill-stagger.png) |Stitches are staggered so that neighboring rows of stitches don't all fall in the same column (which would create a distracting valley effect). Setting this dictates the length of the cycle by which successive stitch rows are staggered. Fractional values are allowed and can have less visible diagonals than integer values.
 Underpath                          ||Must be enabled to let running stitches travel inside shape instead of around the border when moving from section to section
 Allow lock stitches                ||Enables lock stitches in only desired positions
-Force lock stitches                ||Sew lock stitches after sewing this element, even if the distance to the next object is smaller than defined in the collapse length value value in the Ink/Stitch prefreneces.
+Force lock stitches                ||Sew lock stitches after sewing this element, even if the distance to the next object is smaller than defined in the collapse length value value in the Ink/Stitch preferences.
+Tack stitch                 |Chose your [favorite style](/docs/stitches/lock-stitches/)
+Lock stitch                  |Chose your [favorite style](/docs/stitches/lock-stitches/)
 Trim After                         ||Trim the thread after sewing this object.
 Stop After                         ||Stop the machine after sewing this object. Before stopping it will jump to the stop position (frame out) if defined.
 
