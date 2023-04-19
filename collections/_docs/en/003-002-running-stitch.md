@@ -47,8 +47,7 @@ Lock stitch                  |Chose your [favorite style](/docs/stitches/lock-st
 Trim After                    |Trim the thread after sewing this object.
 Stop After                    |Stop the machine after sewing this object. Before stopping it will jump to the stop position (frame out) if defined.
 
-{% include upcoming_release.html %} 
-By entering a sequence of space separated integers in Bean stitch number of repeats, it is possible to define a custom stitch. For instance the sequence 0 1 will yield alternating simple and triple stitches.
+
 
 ## Routing
 
