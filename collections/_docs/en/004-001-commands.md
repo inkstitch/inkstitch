@@ -2,7 +2,7 @@
 title: "Visual Commands"
 permalink: /docs/commands/
 excerpt: ""
-last_modified_at: 2022-05-21
+last_modified_at: 2023-04-18
 toc: true
 ---
 Visual commands can be used to specify additional information on how to embroider your design. They can be used e.g. to tell the machine to trim the thread after finishing a specific embroidery element or when to pause and where to stop, so you can add a fabric layer to your appliqué design more conventiently.
@@ -51,7 +51,10 @@ Defines the (1) starting or (2) ending point of an fill stitch area.
 
 #### ![ripple stitch target symbol](/assets/images/docs/visual-commands-ripple-target.png) Ripple stitch target position
 
-Defines the target point of a ripple stitch area.
+Defines the target point of a ripple stitch area
+{% include upcoming_release.html %}
+or a fill stitch.
+
 
 ####  ![auto route starting position symbol](/assets/images/docs/visual-commands-auto-route-satin-stitch-start.jpg) ![auto route  ending position symbol](/assets/images/docs/visual-commands-auto-route-satin-stitch-end.jpg) Starting/Ending Position for Auto Route of running stitch 
 
