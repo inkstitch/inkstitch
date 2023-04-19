@@ -2,7 +2,7 @@
 title: "Kurvenfüllung"
 permalink: /de/docs/stitches/guided-fill/
 excerpt: ""
-last_modified_at: 2023-02-12
+last_modified_at: 2023-04-19
 toc: true
 ---
 ## Beschreibung
@@ -64,6 +64,8 @@ Reihenanzahl bis sich das Muster wiederholt | ![Stagger example](/assets/images/
 Verbindungsstiche innerhalb des Objektes    || Verbindungsstiche werden innerhalb des Objektes versteckt (aktiv) oder am äußeren Rand entlang gestickt (inaktiv)
 Vernähen erlauben                           || Vernäht bei Bedarf an den ausgewählten Positionen
 Vernähen erzwingen                          || Vernäht den Faden nach diesem Element, auch dann, wenn der Abstand zum Folgeobjekt geringer ist als in den [Ink/Stitch Einstellungen](/de/docs/preferences/) definiert.
+Anstecher                                   ||Wähle die [Anstecher](/docs/stitches/lock-stitches) Variante (Anfang).
+Verstecher                                  ||Wähle die [Verstecher](/docs/stitches/lock-stitches) Variante (Ende).
 Fadenschnitt                                || Schneidet den Faden nachdem dieses Objekt genäht wurde
 Stopp                                       || Stoppt die Maschine nachdem dieses Objekt genäht wurde und springt zur Stopp-Position (sofern vorhanden)
 
