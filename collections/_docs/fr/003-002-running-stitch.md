@@ -2,7 +2,7 @@
 title: "Point droit"
 permalink: /fr/docs/stitches/running-stitch/
 excerpt: ""
-last_modified_at: 2023-04-13
+last_modified_at: 2023-04-19
 toc: true
 ---
 ## De quoi s'agit-il
@@ -40,11 +40,15 @@ Répéter                           |Définir combien de fois aller et revenir l
 Nombre de répétitions du point triple |Active le [Mode point triple](/fr/docs/stitches/bean-stitch/)<br />◦ Repasse sur chaque point le nombre de fois indiqué.<br />◦ Une valeur de 1 triplera chaque point (avant, arrière, avant).<br />◦ Une valeur de 2 permettra de quintupler chaque point, etc..<br />
 Longueur du point droit           |Longueur des points 
 Tolerance du point droit          |Les points ne peuvent pas être éloignés du chemin de plus que cette distance. Une tolerance basse peut impliquer des points plus courts. Une tolerance haute entraine un arrondissement des angles aigus.
-Espacement Zig-Zag (crête à crête)|Ce paramètre est sans effet sur le point droit
 Autoriser les points d'arrêts     |Ajoute un point d'arrêt à la ou les positions choisies
 Forcer les points d'arrêts        |Force un point d'arrêt après l'objet indépendament de la valeur de "Saut de fil" dans les Préférences d'Ink/Stitch.
 Couper après                      |Couper le fil après avoir brodé cet objet
+Point d'ancrage                  |Choisir le  [style désiré](/fr/docs/stitches/lock-stitches/)
+Point d'arrêt                    |Choisir le  [style désiré](/fr/docs/stitches/lock-stitches/)
 Arrêter après                     |Arrêter (pause machine) après avoir brodé cet objet. Avant l'arrêt, il y aura un saut vers la position d'arrêt si elle a été définie
+
+{% include upcoming_release.html %} 
+Il est possible définir soit même une sequence de nombre de répétitions de point triple. Par exemple saisir 0 1 permettra d'obtenir une alternance de point simple et de point triple. La suite peut être plus longue. Les valeurs entières doivent être séparées par un espace.
 
 ## Routage (agencement automatique)
 
