@@ -2,7 +2,7 @@
 title: "Bean Stitch"
 permalink: /docs/stitches/bean-stitch/
 excerpt: ""
-last_modified_at: 2023-01-15
+last_modified_at: 2023-04-18
 toc: true
 ---
 ## What it is
