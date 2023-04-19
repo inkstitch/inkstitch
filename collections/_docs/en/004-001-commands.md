@@ -53,7 +53,7 @@ Defines the (1) starting or (2) ending point of an fill stitch area.
 
 Defines the target point of a ripple stitch area
 {% include upcoming_release.html %}
-or a circular stitch.
+or a circular fill.
 
 
 ####  ![auto route starting position symbol](/assets/images/docs/visual-commands-auto-route-satin-stitch-start.jpg) ![auto route  ending position symbol](/assets/images/docs/visual-commands-auto-route-satin-stitch-end.jpg) Starting/Ending Position for Auto Route of running stitch 
