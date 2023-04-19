@@ -38,8 +38,13 @@ Geradstich Toleranz                   | Alle Stiche müssen innerhalb dieser Dis
 Zick-Zack Abstand (Spitze zu Spitze)  | ◦ Stichabstand im [Zick-Zack-Modus](/de/docs/stitches/zigzag-stitch/)<br>◦ Die Höhe wird durch die Breite der Linie definiert
 Vernähen erlauben                     | Vernäht bei Bedarf an den ausgewählten Positionen
 Vernähen erzwingen                    | Vernäht den Faden nach diesem Element, auch dann, wenn der Abstand zum Folgeobjekt geringer ist als in den [Ink/Stitch Einstellungen](/de/docs/preferences/) definiert.
+Tack stitch                           |Chose your [favorite style](/docs/stitches/lock-stitches/)
+Lock stitch                           |Chose your [favorite style](/docs/stitches/lock-stitches/)
 Fadenschnitt                          | Schneidet den Faden nachdem dieses Objekt genäht wurde
 Stopp                                 | Stoppt die Maschine nachdem dieses Objekt genäht wurde und springt zur Stopp-Position (sofern vorhanden)
+
+{% include upcoming_release.html %} 
+By entering a sequence of space separated integers in Bean stitch number of repeats, it is possible to define a custom stitch. For instance the sequence 0 1 will yield alternating simple and triple stitches.
 
 ## Beispieldateien mit Mehrfachgeradstich
 
