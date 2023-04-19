@@ -99,8 +99,8 @@ Einige dieser Einstellungen sind Teil einer zukünftigen Version von Ink/Stitch 
 
 ### Satinsäule
 
-Einstellung|Beschreibung
----|---
+Einstellung||Beschreibung
+---|---|---
 Benutzerdefinierte Satinsäule       | ☑ |Muss aktiviert sein, damit diese Einstellungen wirksam werden.
 "E"-Stich                           |![E-stitch example](/assets/images/docs/params-e-stitch.png)|Aktiviert “E”-Stich anstelle von Satin. Zick-Zack-Abstand bei dieser Stichart vergrößern.
 Maximale Stichlänge                 | ![Maximum stitch length](/assets/images/docs/params-satin-maximum_stitch_length.png) | Stiche die diesen Wert übersteigen, werden geteilt.
@@ -113,8 +113,8 @@ Seiten umkehren                     | | Kehrt die Seiten der Satinsäule um (lin
 Zick-Zack Abstand (Spitze zu Spitze)|![Zig-zag spacing example](/assets/images/docs/params-satin-zig-zag-spacing.png)|Spitze-zu-Spitze Abstand zwischen Zick-Zacks
 Vernähen erlauben                   | |Vernäht bei Bedarf an den ausgewählten Positionen
 Vernähen erzwingen                  | |Vernäht den Faden nach diesem Element, auch dann, wenn der Abstand zum Folgeobjekt geringer ist als in den [Ink/Stitch Einstellungen](/de/docs/preferences/) definiert.
-Tack stitch                 | |Chose your [favorite style](/docs/stitches/lock-stitches/)
-Lock stitch                  | |Chose your [favorite style](/docs/stitches/lock-stitches/)
+Anstecher                            ||Wähle die [Anstecher](/docs/stitches/lock-stitches) Variante (Anfang).
+Verstecher                            ||Wähle die [Verstecher](/docs/stitches/lock-stitches) Variante (Ende).
 Fadenschnitt                        | |Schneidet den Faden nachdem dieses Objekt genäht wurde
 Stopp                               | |Stoppt die Maschine nachdem dieses Objekt genäht wurde und springt zur Stopp-Position (sofern vorhanden)
 Zufälliger Prozentwert (Erweitern)  |![Random width increase](/assets/images/docs/params-satin-random-width-increase.png)| Lengthen stitch across rails at most this percent. Two values separated by a space may be used for an aysmmetric effect.
@@ -157,8 +157,8 @@ Dies ist im Wesentlichen ein Satinstich mit geringerer Dichte, der an das Ende d
 
 ![Params - Zig-Zag Underlay Example](/assets/images/docs/params-zigzag-underlay-example.jpg)
 
-Einstellung          |Beschreibung
----|---
+Einstellung          ||Beschreibung
+---|---|---
 Einzug (proportional)||Einrückung um die Unterlage vollständig von der obenliegenden Schicht zu überdecken. Negative Werte sind möglich. Voreinstellung: Hälfte des Einzuges der Konturunterlage.
 Einzug (fest)        ||Einrückung um die Unterlage vollständig von der obenliegenden Schicht zu überdecken. Negative Werte sind möglich. Voreinstellung: Hälfte des Einzuges der Konturunterlage
 Maximale Stichlänge  |![Maximum stitch length](/assets/images/docs/params-satin-maximum_stitch_length.png) | Stiche die diesen Wert übersteigen, werden geteilt.
