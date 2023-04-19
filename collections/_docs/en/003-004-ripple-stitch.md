@@ -99,6 +99,8 @@ Rotate| ☑  or ▢| for guided ripple only
 Join Style|<img src="/assets/images/docs/flat_or_point.svg" alt="Join Stile"/> |for non circular ripple, how the ripples are joined : Flat(top) or Point(bottom)
 Allow lock stitches| ☑  or ▢| Enables lock stitches in only desired positions
 Force lock stitches| ☑  or ▢| Sew lock stitches after sewing this element, even if the distance to the next object is shorter than defined by the collapse length value in the Ink/Stitch preferences.
+Tack stitch                 |Chose your [favorite style](/docs/stitches/lock-stitches/)
+Lock stitch                  |Chose your [favorite style](/docs/stitches/lock-stitches/)
 Trim After            |☑ | Trim the thread after sewing this object.
 Stop After            |☑ | Stop the machine after sewing this object. Before stopping it will jump to the stop position (frame out) if defined.
 {: .params-table }
