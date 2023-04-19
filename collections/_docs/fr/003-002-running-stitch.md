@@ -5,7 +5,7 @@ excerpt: ""
 last_modified_at: 2023-04-13
 toc: true
 ---
-## Qu'est-ce que c'est
+## De quoi s'agit-il
 
 [![Papillon au point droit](/assets/images/docs/running-stitch.jpg){: width="200x"}](/assets/images/docs/running-stitch.svg){: title="Download SVG File" .align-left download="running-stitch.svg" }
 
