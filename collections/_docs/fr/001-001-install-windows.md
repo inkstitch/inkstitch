@@ -2,7 +2,7 @@
 title: "Install Ink/Stitch"
 permalink: /fr/docs/install-windows/
 excerpt: "How to quickly install Ink/Stitch."
-last_modified_at: 2022-06-12
+last_modified_at: 2023-04-19
 toc: true
 ---
 {% comment %}
@@ -16,7 +16,7 @@ Nous fournissons aussi aux débutants des tutoriels vidéo sur notre <i class="f
 ## Prérequis
 
 Ink/Stitch est une extension pour Inkscape.
-Vous deve **Téléchargez et installez  [Inkscape](https://inkscape.org/release/) Version 1.0.2 ou supérieure** avant d'installer Ink/Stitch. 
+Vous devez **Télécharger et installer  [Inkscape](https://inkscape.org/release/) Version 1.0.2 ou supérieure** avant d'installer Ink/Stitch. 
 
 ## Télécharger
 Téléchargez la dernière version disponible pour windows.
@@ -95,7 +95,7 @@ Dans Inkscape, allez à  `Edition > Préférences > Système` et cherchez dans c
 
 Supprimez chaque dossier ou fichier inkstitch.
 
-## Get informed about Ink/Stitch updates
+## Être informé des mises à jour d'Ink/Stitch 
 
 Inscrivez-vous aux news pour avoir connaissance des mises à jour d'Ink/Stitch.
 
@@ -129,9 +129,9 @@ Traceback (most recent call last):
 WindowsError: [Error 2] The system cannot find the file specified
 ```
 
-**Confirm Ink/Stitch Version**
+**Vérifiez la version d'Ink/Stitch **
 
-Verify if you have downloaded Ink/Stitch for Windows ([Download](#download))
+Vérifiez que vous avez bien téléchargé Ink/Stitch pour Windows ([Téléchargement](#download))
 
 **Confirmer le chemin d'installation**
 
@@ -139,8 +139,9 @@ Vérifiez si vous avez bien installé Ink/Stitch dans le bon dossier.  Si le  do
 Vous pouvez trouver leur localisation dans  `Edition > Préferences > Système`.
 
 ### PYTHONPATH
+On nous a rapporté des messages d'erreur qui commencent comme ça :
 
-There have been reports about an error message starting like this:
+
 
 ```
 Python path configuration:
@@ -148,11 +149,11 @@ PYTHONHOME = 'C:\Users\{username}\AppData\Roaming\inkscape\extensions\inkstitch\
 PYTHONPATH = (not set)
 ```
 
-Reinstall Inkscape. Make sure that "Add to path" is checked, when the PYTHONPATH question pops up during the installation.
+Réinstallez Inkscape en prenant garde à ce que "Ajout au chemin" soit coché quand la questions sur PYTHONPATH est posée.
 
-### Windows 7: Error message
+### message d'erreur Windows 7
 
-When you see the following error message please install Microsoft Windows security updates on your computer.
+Si vous voyez ce message, merci d'installer les mises à jour de sécurité de Microsoft Windows.
 
 ```
 Traceback (most recent call last):
@@ -168,14 +169,14 @@ File "socket.py", line 49, in
 ImportError: DLL load failed while importing _socket: Paramètre incorrect.
 ```
 
-### Windows 8: Error message
+### Message d'erreur Windows 8
 
 ![The program can't start because api-ms-win-crt-math-l1-1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem](/assets/images/docs/en/windows-install/win8.png)
 {: .img-half }
 ![Error loading Python DLL 'C:\Users\...\AppData\Roaming\inkscape\extensions\inkstitch\inkstitch\bin\python38.dll'. LoadLibrary: The specified module could not be found.](/assets/images/docs/en/windows-install/win8a.png)
 {: .img-half }
 
-If you come across these two error messages on Windows 8, download and install [Microsoft Visual C++ Redistributable packages](https://docs.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-170#visual-studio-2015-2017-2019-and-2022). Choose the file for your system architecture.
+Si vous rencontrer l'un de ces deux messages d'erreur sous Windows 8, téléchargez et installez  [Microsoft Visual C++ Redistributable packages](https://docs.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-170#visual-studio-2015-2017-2019-and-2022). Choose the file for your system architecture.
 
 ### J'ai installé Ink/Stitch mais le menu est grisé (désactivé)
 
