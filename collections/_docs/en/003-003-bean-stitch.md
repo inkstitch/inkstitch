@@ -40,8 +40,8 @@ Running stitch tolerance      ||All stitches must be within this distance from a
 Zig-Zag spacing (peak-to-peak)||Not relevant for bean stitch
 Allow lock stitches           ||Enables lock stitches in only desired positions
 Force lock stitches           ||Sew lock stitches after sewing this element, even if the distance to the next object is smaller than defined in the collapse length value value in the Ink/Stitch preferences.
-Tack stitch                 |Chose your [favorite style](/docs/stitches/lock-stitches/)
-Lock stitch                  |Chose your [favorite style](/docs/stitches/lock-stitches/)
+Tack stitch                 ||Chose your [favorite style](/docs/stitches/lock-stitches/)
+Lock stitch                  ||Chose your [favorite style](/docs/stitches/lock-stitches/)
 Trim After                    ||Trim the thread after sewing this object.
 Stop After                    ||Stop the machine after sewing this object. Before stopping it will jump to the stop position (frame out) if defined.
 {: .params-table }
