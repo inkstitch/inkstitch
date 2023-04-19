@@ -2,7 +2,7 @@
 title: "Commandes visuelles"
 permalink: /fr/docs/commands/
 excerpt: ""
-last_modified_at: 2022-05-22
+last_modified_at: 2023-04-19
 ---
 Les commandes visuelles peuvent être utilisées pour spécifier des informations complémentaires sur la manière de broder. Elles peuvent par exemple être utilisées pour dire à la machine de couper le fil après avoir brodé un élément ou pour spécifier un arrêt par exemple pour ajouter le tissu d'un appliqué plus facilement.
 
@@ -53,6 +53,8 @@ Définit  (1) le point de départ  (2) le point d'arrivée d'un remplissage.
 #### ![ripple-stitch-target-symbol](/assets/images/docs/visual-commands-ripple-target.png) [Cible de la broderie ondulée](ripple-stitch-target-symbol)
 
 Défini la position cible d'une broderie ondulée
+{% include upcoming_release.html %}
+ou d'un remplissage circulaire.
 
 ####  ![auto-route-runing-starting-position-symbol](/assets/images/docs/visual-commands-auto-route-satin-stitch-start.jpg) ![auto route  ending position symbol](/assets/images/docs/visual-commands-auto-route-satin-stitch-end.jpg)  [Position de départ/de fin pour l'agencement automatique de points droits](#auto-route-runing-starting-position-symbol)
 
