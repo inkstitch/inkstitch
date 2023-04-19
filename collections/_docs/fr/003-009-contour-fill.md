@@ -38,6 +38,8 @@ Lancez `Extensions > Ink/Stitch  > Paramètres`. Choisir "Remplissage selon le c
 |Tolérance du point droit|![Exemple de tolerance](/assets/images/docs/contourfilltolerance.svg) |Tous les points doivent rester au plus à cette distance du chemin. Une tolérance plus faible (en haut sur le dessin) signifie que les points seront plus rapprochés. Une tolérance plus élevée (en bas) signifie que les angles vifs peuvent être arrondis.|
 |Forcer les points d'arrêts |☑|Force un point d'arrêt après l'objet indépendament de la valeur de "Saut de fil" dans les Préférences d'Ink/Stitch.|
 |Autoriser les points d'arrêts | ☑|Ajoute un point d'arrêt à la ou les positions choisies.|
+|Point d'ancrage        ||Sélectionnez le type du  [point d'ancrage](/fr/docs/stitches/lock-stitches).|
+|Point d'arrêt        ||Sélectionnez le type du [point d'arrêt](/fr/docs/stitches/lock-stitches).|
 |Couper après                 |☑|Couper le fil après avoir brodé cet objet.|
 |Arrêter après                |☑|Faire faire une pause à la machine après avoir brodé  cet objet. Si une position d'arrêt est définie, elle est rejointe  par un saut avant la pause de la machine.|
 
