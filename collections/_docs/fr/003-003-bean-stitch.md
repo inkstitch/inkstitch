@@ -38,8 +38,14 @@ Tolerance du point droit          |Les points ne peuvent pas être éloignés du
 Espacement Zig-Zag (crête à crête)|Ce paramètre est sans effet sur le poin triple
 Autoriser les points d'arrêts     |Ajoute un point d'arrêt à la ou les positions choisies
 Forcer les points d'arrêts        |Force un point d'arrêt après l'objet indépendament de la valeur de "Saut de fil" dans les Préférences d'Ink/Stitch.
+Point d'ancrage                  |Choisir le  [style désiré](/fr/docs/stitches/lock-stitches/)
+Point d'arrêt                    |Choisir le  [style désiré](/fr/docs/stitches/lock-stitches/)
 Couper après                      |Couper le fil après avoir brodé cet objet
 Arrêter après                     |Arrêter (pause machine) après avoir brodé cet objet. Avant l'arrêt, il y aura un saut vers la position d'arrêt si elle a été définie
+
+{% include upcoming_release.html %} 
+Il est possible définir soit même une sequence de nombre de répétitions de point triple. Par exemple saisir 0 1 permettra d'obtenir une alternance de point simple et de point triple. La suite peut être plus longue. Les valeurs entières doivent être séparées par un espace.
+
 
 
 {: .params-table }
