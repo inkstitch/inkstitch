@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2023-04-17 01:16+0000\n"
-"PO-Revision-Date: 2023-04-17 01:17\n"
+"PO-Revision-Date: 2023-04-20 01:14\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -507,217 +507,217 @@ msgstr "Une fonte \"lourde\""
 #. name of tile in tiles/N3-11a
 #: inkstitch-tiles-metadata.py:2
 msgid "N3-11a"
-msgstr ""
+msgstr "N13-11a"
 
 #. name of tile in tiles/N3-12
 #: inkstitch-tiles-metadata.py:4
 msgid "N3-12"
-msgstr ""
+msgstr "N3-12"
 
 #. name of tile in tiles/N3-16a
 #: inkstitch-tiles-metadata.py:6
 msgid "N3-16a"
-msgstr ""
+msgstr "N3-16a"
 
 #. name of tile in tiles/N3-17
 #: inkstitch-tiles-metadata.py:8
 msgid "N3-17"
-msgstr ""
+msgstr "N3-17"
 
 #. name of tile in tiles/N3-18
 #: inkstitch-tiles-metadata.py:10
 msgid "N3-18"
-msgstr ""
+msgstr "N3-18"
 
 #. name of tile in tiles/N3-18-modified
 #: inkstitch-tiles-metadata.py:12
 msgid "N3-18-modified"
-msgstr ""
+msgstr "N3-18-modifié"
 
 #. name of tile in tiles/N3-20
 #: inkstitch-tiles-metadata.py:14
 msgid "N3-20"
-msgstr ""
+msgstr "N3-20"
 
 #. name of tile in tiles/N3-23b
 #: inkstitch-tiles-metadata.py:16
 msgid "N3-23b"
-msgstr ""
+msgstr "N3-23b"
 
 #. name of tile in tiles/N3-25c
 #: inkstitch-tiles-metadata.py:18
 msgid "N3-25c"
-msgstr ""
+msgstr "N3-25c"
 
 #. name of tile in tiles/N3-26b
 #: inkstitch-tiles-metadata.py:20
 msgid "N3-26b"
-msgstr ""
+msgstr "N3-26b"
 
 #. name of tile in tiles/N3-27
 #: inkstitch-tiles-metadata.py:22
 msgid "N3-27"
-msgstr ""
+msgstr "N3-27"
 
 #. name of tile in tiles/N3-30a
 #: inkstitch-tiles-metadata.py:24
 msgid "N3-30a"
-msgstr ""
+msgstr "N3-30a"
 
 #. name of tile in tiles/N3-51b
 #: inkstitch-tiles-metadata.py:26
 msgid "N3-51b"
-msgstr ""
+msgstr "N3-51b"
 
 #. name of tile in tiles/N3-57f-modified
 #: inkstitch-tiles-metadata.py:28
 msgid "N3-57f-modified"
-msgstr ""
+msgstr "N3-57f-modifié"
 
 #. name of tile in tiles/N3-58b
 #: inkstitch-tiles-metadata.py:30
 msgid "N3-58b"
-msgstr ""
+msgstr "N3-58b"
 
 #. name of tile in tiles/N3-6
 #: inkstitch-tiles-metadata.py:32
 msgid "N3-6"
-msgstr ""
+msgstr "N3-6"
 
 #. name of tile in tiles/N3-7
 #: inkstitch-tiles-metadata.py:34
 msgid "N3-7"
-msgstr ""
+msgstr "N3-7"
 
 #. name of tile in tiles/N3-8a
 #: inkstitch-tiles-metadata.py:36
 msgid "N3-8a"
-msgstr ""
+msgstr "N3-8a"
 
 #. name of tile in tiles/N3-8a-modified
 #: inkstitch-tiles-metadata.py:38
 msgid "N3-8a-modified"
-msgstr ""
+msgstr "N3-8a-modifié"
 
 #. name of tile in tiles/N3-8b
 #: inkstitch-tiles-metadata.py:40
 msgid "N3-8b"
-msgstr ""
+msgstr "N3-8b"
 
 #. name of tile in tiles/N4-13b
 #: inkstitch-tiles-metadata.py:42
 msgid "N4-13b"
-msgstr ""
+msgstr "N4-13b"
 
 #. name of tile in tiles/N4-13c
 #: inkstitch-tiles-metadata.py:44
 msgid "N4-13c"
-msgstr ""
+msgstr "N4-13c"
 
 #. name of tile in tiles/N4-13d
 #: inkstitch-tiles-metadata.py:46
 msgid "N4-13d"
-msgstr ""
+msgstr "N4-13d"
 
 #. name of tile in tiles/N4-13e
 #: inkstitch-tiles-metadata.py:48
 msgid "N4-13e"
-msgstr ""
+msgstr "N4-13e"
 
 #. name of tile in tiles/N4-13f
 #: inkstitch-tiles-metadata.py:50
 msgid "N4-13f"
-msgstr ""
+msgstr "N4-13f"
 
 #. name of tile in tiles/N4-16a
 #: inkstitch-tiles-metadata.py:52
 msgid "N4-16a"
-msgstr ""
+msgstr "N4-16a"
 
 #. name of tile in tiles/N4-19
 #: inkstitch-tiles-metadata.py:54
 msgid "N4-19"
-msgstr ""
+msgstr "N4-19"
 
 #. name of tile in tiles/N4-20
 #: inkstitch-tiles-metadata.py:56
 msgid "N4-20"
-msgstr ""
+msgstr "N4-20"
 
 #. name of tile in tiles/N4-21c
 #: inkstitch-tiles-metadata.py:58
 msgid "N4-21c"
-msgstr ""
+msgstr "N4-21c"
 
 #. name of tile in tiles/N4-22
 #: inkstitch-tiles-metadata.py:60
 msgid "N4-22"
-msgstr ""
+msgstr "N4-22"
 
 #. name of tile in tiles/N4-23a
 #: inkstitch-tiles-metadata.py:62
 msgid "N4-23a"
-msgstr ""
+msgstr "N4-23a"
 
 #. name of tile in tiles/N4-23c
 #: inkstitch-tiles-metadata.py:64
 msgid "N4-23c"
-msgstr ""
+msgstr "N4-23c"
 
 #. name of tile in tiles/N4-27
 #: inkstitch-tiles-metadata.py:66
 msgid "N4-27"
-msgstr ""
+msgstr "N4-27"
 
 #. name of tile in tiles/N4-29e
 #: inkstitch-tiles-metadata.py:68
 msgid "N4-29e"
-msgstr ""
+msgstr "N4-29e"
 
 #. name of tile in tiles/N4-29f
 #: inkstitch-tiles-metadata.py:70
 msgid "N4-29f"
-msgstr ""
+msgstr "N4-29f"
 
 #. name of tile in tiles/N4-31
 #: inkstitch-tiles-metadata.py:72
 msgid "N4-31"
-msgstr ""
+msgstr "N4-31"
 
 #. name of tile in tiles/N4-38
 #: inkstitch-tiles-metadata.py:74
 msgid "N4-38"
-msgstr ""
+msgstr "N4-38"
 
 #. name of tile in tiles/N4-42e
 #: inkstitch-tiles-metadata.py:76
 msgid "N4-42e"
-msgstr ""
+msgstr "N4-42e"
 
 #. name of tile in tiles/N4-44
 #: inkstitch-tiles-metadata.py:78
 msgid "N4-44"
-msgstr ""
+msgstr "N4-44"
 
 #. name of tile in tiles/N4-52
 #: inkstitch-tiles-metadata.py:80
 msgid "N4-52"
-msgstr ""
+msgstr "N4-52"
 
 #. name of tile in tiles/N4-54d
 #: inkstitch-tiles-metadata.py:82
 msgid "N4-54d"
-msgstr ""
+msgstr "N4-54d"
 
 #. name of tile in tiles/N4-5a
 #: inkstitch-tiles-metadata.py:84
 msgid "N4-5a"
-msgstr ""
+msgstr "N4-5a"
 
 #. name of tile in tiles/N4-5a-2
 #: inkstitch-tiles-metadata.py:86
 msgid "N4-5a-2"
-msgstr ""
+msgstr "N4-5a-2"
 
 #. name of tile in tiles/N4-82
 #: inkstitch-tiles-metadata.py:88
@@ -752,7 +752,7 @@ msgstr "N6-1"
 #. name of tile in tiles/N6-2
 #: inkstitch-tiles-metadata.py:100
 msgid "N6-2"
-msgstr ""
+msgstr "N6-2"
 
 #. name of tile in tiles/N6-5b
 #: inkstitch-tiles-metadata.py:102
@@ -1532,15 +1532,15 @@ msgstr "Rétrécit la forme avant de faire la sous-couche, pour empêcher que la
 
 #: lib/elements/fill_stitch.py:556
 msgid "Expand the shape before fill stitching, to compensate for gaps between shapes.  Negative values contract instead."
-msgstr ""
+msgstr "Étend la forme avant le remplissage pour éviter les trous entre les formes. Les valeurs négatives contractent."
 
 #: lib/elements/fill_stitch.py:569
 msgid "Clip path"
-msgstr ""
+msgstr "Fixer le chemin"
 
 #: lib/elements/fill_stitch.py:570
 msgid "Constrain stitching to the shape.  Useful when smoothing and expand are used."
-msgstr ""
+msgstr "Contraint le chemin à rester dans la forme. Utile quand lissage et étendre sont utilisés."
 
 #: lib/elements/fill_stitch.py:580 lib/elements/fill_stitch.py:594
 msgid "Underpath"
@@ -1717,7 +1717,7 @@ msgstr "Colonne de satin personnalisée"
 
 #: lib/elements/satin_column.py:83
 msgid "\"E\" Stitch"
-msgstr ""
+msgstr "Point en E"
 
 #: lib/elements/satin_column.py:87 lib/elements/stroke.py:72
 #: inx/inkstitch_break_apart.inx:17
@@ -1822,11 +1822,11 @@ msgstr "Les points satin serrent le tissu, ce qui entraîne une colonne plus ét
 
 #: lib/elements/satin_column.py:234
 msgid "Reverse one rail"
-msgstr ""
+msgstr "Inverser un des rails"
 
 #: lib/elements/satin_column.py:235
 msgid "Enabling this may help if your satin renders very strangely."
-msgstr ""
+msgstr "Cocher ceci peut aider si votre satin à l'air étrange."
 
 #: lib/elements/satin_column.py:245
 msgid "Swap rails"
@@ -1951,19 +1951,19 @@ msgstr "Points droits le long des chemins"
 
 #: lib/elements/stroke.py:65
 msgid "Running Stitch / Bean Stitch"
-msgstr ""
+msgstr "Point droit /Point multiple"
 
 #: lib/elements/stroke.py:66
 msgid "Ripple Stitch"
-msgstr ""
+msgstr "Broderie ondulée"
 
 #: lib/elements/stroke.py:67 inx/inkstitch_select_elements.inx:21
 msgid "ZigZag Stitch"
-msgstr ""
+msgstr "Point zigzag"
 
 #: lib/elements/stroke.py:68 inx/inkstitch_select_elements.inx:22
 msgid "Manual Stitch"
-msgstr ""
+msgstr "Point manuel"
 
 #: lib/elements/stroke.py:83
 msgid "Defines how many times to run down and back along the path."
@@ -1982,11 +1982,11 @@ msgstr "Repasse sur chaque point le nombre de fois indiqué. Une valeur de 1 tri
 
 #: lib/elements/stroke.py:109
 msgid "Length of stitches. Stitches can be shorter according to the stitch tolerance setting."
-msgstr ""
+msgstr "Longueur des points. Selon la valeur de la tolérance, il se peut que les points soient plus court."
 
 #: lib/elements/stroke.py:120
 msgid "Stitch tolerance"
-msgstr ""
+msgstr "Tolérance"
 
 #: lib/elements/stroke.py:121
 msgid "All stitches must be within this distance from the path.  A lower tolerance means stitches will be closer together.  A higher tolerance means sharp corners may be rounded."
@@ -1994,7 +1994,7 @@ msgstr "Tous les points doivent rester au plus à cette distance du chemin. Une 
 
 #: lib/elements/stroke.py:135
 msgid "Split stitches longer than this."
-msgstr ""
+msgstr "Découper les points plus longs que ceci."
 
 #: lib/elements/stroke.py:149
 msgid "Length of stitches in zig-zag mode."
@@ -2368,11 +2368,11 @@ msgstr "Ajouter une commande de coupe"
 
 #: lib/extensions/lettering.py:81
 msgid "Use command symbols"
-msgstr ""
+msgstr "Utiliser des symboles de commandes"
 
 #: lib/extensions/lettering.py:83
 msgid "Uses command symbols if enabled. When disabled inserts trim commands as params."
-msgstr ""
+msgstr "Utilises les symboles de commande si coché. Sinon insère les commandes de coupe en tant que paramètres."
 
 #: lib/extensions/lettering.py:91 lib/extensions/params.py:505
 #: print/templates/custom-page.html:23 print/templates/custom-page.html:27
@@ -2487,7 +2487,7 @@ msgstr "Objets Inkscape"
 
 #: lib/extensions/params.py:409
 msgid "No options available"
-msgstr ""
+msgstr "Aucune option disponible"
 
 #: lib/extensions/params.py:429
 msgid "Re-roll"
@@ -2523,22 +2523,22 @@ msgstr "Veuillez sélectionner au moins un objet à marquer comme texture."
 
 #: lib/extensions/stroke_to_lpe_satin.py:33
 msgid "Please select at least one stroke."
-msgstr ""
+msgstr "Merci de sélectionner au moins un trait."
 
 #. : Convert To Satin extension, user selected one or more objects that were
 #. not lines.
 #: lib/extensions/stroke_to_lpe_satin.py:38
 #: lib/extensions/zigzag_line_to_satin.py:27
 msgid "Please select at least one stroke to convert to a satin column."
-msgstr ""
+msgstr "Veuillez sélectionner au moins une ligne pour la convertir en colonne Satin."
 
 #: lib/extensions/stroke_to_lpe_satin.py:43
 msgid "Could not find the specified pattern."
-msgstr ""
+msgstr "Impossible de trouver le motif spécifié."
 
 #: lib/extensions/stroke_to_lpe_satin.py:133
 msgid "Cannot convert a satin column into a live path effect satin. Please select a stroke."
-msgstr ""
+msgstr "Impossible d'appliquer l'effet de chemin satin à une colonne satin. Merci de sélectionner une ligne."
 
 #: lib/extensions/troubleshoot.py:49
 msgid "All selected shapes are valid! "
@@ -2794,27 +2794,27 @@ msgstr "Le fichier n'existe pas et ne peut être ouvert. Veuillez corriger le ch
 
 #: lib/stitch_plan/lock_stitch.py:211
 msgid "Half Stitch"
-msgstr ""
+msgstr "Demi point"
 
 #: lib/stitch_plan/lock_stitch.py:212
 msgid "Arrow"
-msgstr ""
+msgstr "Flèche"
 
 #: lib/stitch_plan/lock_stitch.py:213
 msgid "Back and forth"
-msgstr ""
+msgstr "Avant/Arrièrre"
 
 #: lib/stitch_plan/lock_stitch.py:214
 msgid "Bowtie"
-msgstr ""
+msgstr "Noeud papillon"
 
 #: lib/stitch_plan/lock_stitch.py:215
 msgid "Cross"
-msgstr ""
+msgstr "Croix"
 
 #: lib/stitch_plan/lock_stitch.py:216
 msgid "Star"
-msgstr ""
+msgstr "Étoile"
 
 #: lib/stitch_plan/lock_stitch.py:217 inx/inkstitch_break_apart.inx:18
 msgid "Simple"
@@ -2822,15 +2822,15 @@ msgstr "Simple"
 
 #: lib/stitch_plan/lock_stitch.py:218
 msgid "Triangle"
-msgstr ""
+msgstr "Triangle"
 
 #: lib/stitch_plan/lock_stitch.py:219
 msgid "Zig-zag"
-msgstr ""
+msgstr "Zigzag"
 
 #: lib/stitch_plan/lock_stitch.py:220
 msgid "Custom"
-msgstr ""
+msgstr "Personnalisé"
 
 #: lib/stitch_plan/stitch_plan.py:26
 msgid "There is no selected stitchable element. Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects in case you have expected a stitchout."
@@ -2867,7 +2867,7 @@ msgstr "Points droits pour auto-remplissage satin %d"
 #: lib/stitches/meander_fill.py:34
 #, python-format
 msgid "%s: Could not build graph for meander stitching. Try to enlarge your shape or scale your meander pattern down."
-msgstr ""
+msgstr "%s: Impossible de construire le remplissage en méandres. Essayer d'agrandir votre forme ou de diminuer la taille du méandre."
 
 #: lib/svg/rendering.py:229
 msgid "Stitch Plan"
@@ -2881,7 +2881,8 @@ msgstr "analyser Longueur avec Unités: unité inconnue %s"
 #: lib/update.py:25
 msgid "This document was created with a newer Version of Ink/Stitch. It is possible that not everything works as expected.\n\n"
 "Please update your Ink/Stitch version: https://inkstitch.org/docs/install/"
-msgstr ""
+msgstr "Ce document a été crée avec une version plus récente d'Ink/Stitch. Il est possible que tout ne fonctionne pas comme prévu.\n\n"
+"Merci de mettre votre version d'Ink/Stich à jour : https://inkstitch.org/fr/docs/install/"
 
 #: lib/utils/version.py:22
 #, python-format
@@ -3503,11 +3504,11 @@ msgstr "Export Json"
 
 #: electron/src/renderer/components/Simulator.vue:141
 msgid "[ Left square bracket"
-msgstr ""
+msgstr "[ Parenthèse carrée gauche"
 
 #: electron/src/renderer/components/Simulator.vue:152
 msgid "] Right square bracket"
-msgstr ""
+msgstr "] Parenthèse carrée droite"
 
 #. name for left arrow keyboard key
 #: electron/src/renderer/components/Simulator.vue:52
@@ -3540,7 +3541,7 @@ msgstr "Bouton"
 
 #: electron/src/renderer/components/Preferences.vue:121
 msgid "clear stitch plan cache"
-msgstr ""
+msgstr "vider le cache de plans de broderie"
 
 #: electron/src/renderer/components/Simulator.vue:236
 msgid "color changes"
@@ -3560,15 +3561,15 @@ msgstr "curseur"
 
 #: electron/src/renderer/components/Preferences.vue:77
 msgid "Default minimum jump stitch length"
-msgstr ""
+msgstr "Valeur par défaut de la longueur minimum de saut"
 
 #: electron/src/renderer/components/Preferences.vue:93
 msgid "Default minimum stitch length"
-msgstr ""
+msgstr "Valeur par défaut de la longueur minimum de point"
 
 #: electron/src/renderer/components/Preferences.vue:131
 msgid "done"
-msgstr ""
+msgstr "fait"
 
 #: electron/src/renderer/components/Preferences.vue:50
 msgid "Drop stitches smaller than this value."
@@ -3628,11 +3629,11 @@ msgstr "sauts"
 
 #: electron/src/renderer/components/Preferences.vue:27
 msgid "Minimum jump stitch length"
-msgstr ""
+msgstr "Longueur minimum de saut"
 
 #: electron/src/renderer/components/Preferences.vue:48
 msgid "Minimum stitch length"
-msgstr ""
+msgstr "Longueur minimum du point"
 
 #. name for this keyboard key: -
 #: electron/src/renderer/components/Simulator.vue:76
@@ -3690,7 +3691,7 @@ msgstr "Calcul du rendu du plan de broderie ..."
 #: electron/src/renderer/components/Preferences.vue:40
 #: electron/src/renderer/components/Preferences.vue:61
 msgid "set as default"
-msgstr ""
+msgstr "utiliser comme valeur par défaut"
 
 #: electron/src/renderer/components/Simulator.vue:21
 msgid "Shortcut Key"
@@ -3724,7 +3725,7 @@ msgstr[1] "Vitesse : %{speed} point/sec"
 
 #: electron/src/renderer/components/Preferences.vue:109
 msgid "Stitch plan cache size"
-msgstr ""
+msgstr "Taille du cache de plan de broderie"
 
 #: electron/src/renderer/components/Simulator.vue:239
 msgid "stops"
@@ -3732,7 +3733,7 @@ msgstr "arrêts"
 
 #: electron/src/renderer/components/Preferences.vue:111
 msgid "The greater the number, the more stitch plans can be cached, speeding up stitch plan calculation.  Default: 100"
-msgstr ""
+msgstr "Plus le nombre et grand, plus on peut stocker de plan de broderie et augmenter la vitesse de calcul des plans de broderie"
 
 #: electron/src/renderer/components/InstallPalettes.vue:60
 msgid "Try again"
@@ -3741,7 +3742,7 @@ msgstr "Essayer à nouveau"
 #: electron/src/renderer/components/Preferences.vue:79
 #: electron/src/renderer/components/Preferences.vue:95
 msgid "Used for new SVGs."
-msgstr ""
+msgstr "Utilisé pour les nouveaux SVGs."
 
 #: electron/src/renderer/components/Simulator.vue:208
 #: inx/inkstitch_commands_scale_symbols.inx:12
@@ -3751,11 +3752,11 @@ msgstr "Affichage"
 
 #: electron/src/renderer/components/Simulator.vue:149
 msgid "Zoom design"
-msgstr ""
+msgstr "Grossir"
 
 #: electron/src/renderer/components/Simulator.vue:138
 msgid "Zoom page"
-msgstr ""
+msgstr "Réduire"
 
 #: inx/inkstitch_about.inx:3 inx/inkstitch_about.inx:6
 msgid "About"
@@ -4154,7 +4155,7 @@ msgstr "Largeur du trait (mm)"
 
 #: inx/inkstitch_fill_to_stroke.inx:22
 msgid "Cut lines: close gaps"
-msgstr ""
+msgstr "Lignes de coupe : fermer les écarts"
 
 #: inx/inkstitch_fill_to_stroke.inx:26
 msgid "Fill outlines never look nice when embroidered - but it is a lot of work to convert a fill outline to a satin column or a running stitch. This tool helps you with this operation."
@@ -4994,11 +4995,11 @@ msgstr "Importer des commandes"
 
 #: inx/inkstitch_letters_to_font.inx:64
 msgid "As param"
-msgstr ""
+msgstr "Comme paramètre"
 
 #: inx/inkstitch_letters_to_font.inx:65
 msgid "As symbol"
-msgstr ""
+msgstr "Comme symbole"
 
 #: inx/inkstitch_object_commands.inx:3
 msgid "Attach Commands to Selected Objects"
@@ -5370,19 +5371,19 @@ msgstr "Réempiler les objets dans l'ordre de leur sélection"
 
 #: inx/inkstitch_select_elements.inx:3
 msgid "Select embroidery elements"
-msgstr ""
+msgstr "Sélectionner des éléments de broderie"
 
 #: inx/inkstitch_select_elements.inx:8
 msgid "Select options"
-msgstr ""
+msgstr "Options de sélection"
 
 #: inx/inkstitch_select_elements.inx:9
 msgid "Select Stitch Type"
-msgstr ""
+msgstr "Sélection du type de point"
 
 #: inx/inkstitch_select_elements.inx:10
 msgid "Stroke type"
-msgstr ""
+msgstr "Type de trait"
 
 #: inx/inkstitch_select_elements.inx:12
 msgid "Running Stitch"
@@ -5390,116 +5391,116 @@ msgstr "Point Droit"
 
 #: inx/inkstitch_select_elements.inx:14
 msgid "Select"
-msgstr ""
+msgstr "Sélectionner"
 
 #: inx/inkstitch_select_elements.inx:14
 msgid "Only select specific running stitches"
-msgstr ""
+msgstr "Sélectionner seulement les points droits spécifiés"
 
 #: inx/inkstitch_select_elements.inx:15
 msgid "All"
-msgstr ""
+msgstr "Tous"
 
 #: inx/inkstitch_select_elements.inx:16
 msgid "Auto-Run Top Stitching"
-msgstr ""
+msgstr "Chemin de dessus de l'agencement automatique de points droit"
 
 #: inx/inkstitch_select_elements.inx:17
 msgid "Auto-Run Underpath"
-msgstr ""
+msgstr "Chemin de dessous de l'agencement automatique de points droit"
 
 #: inx/inkstitch_select_elements.inx:20
 msgid "Ripples"
-msgstr ""
+msgstr "Broderie ondulée"
 
 #: inx/inkstitch_select_elements.inx:23
 msgid "Polyline"
-msgstr ""
+msgstr "Polyline"
 
 #: inx/inkstitch_select_elements.inx:24
 msgid "Satin"
-msgstr ""
+msgstr "Satin"
 
 #: inx/inkstitch_select_elements.inx:26
 msgid "E-Stitch"
-msgstr ""
+msgstr "Point en E"
 
 #: inx/inkstitch_select_elements.inx:28
 msgid "Underlay type"
-msgstr ""
+msgstr "Type de sous-couche"
 
 #: inx/inkstitch_select_elements.inx:28
 msgid "Only select satins with this underlay type"
-msgstr ""
+msgstr "Sélectionner uniquement les colonnes satin avec ce type de sous-couche"
 
 #: inx/inkstitch_select_elements.inx:29 inx/inkstitch_select_elements.inx:44
 msgid "No restriction"
-msgstr ""
+msgstr "Aucune restriction"
 
 #: inx/inkstitch_select_elements.inx:30
 msgid "No underlay"
-msgstr ""
+msgstr "Pas de sous-couche"
 
 #: inx/inkstitch_select_elements.inx:31
 msgid "Centerwalk"
-msgstr ""
+msgstr "Sous-couche centrale"
 
 #: inx/inkstitch_select_elements.inx:32
 msgid "Contour"
-msgstr ""
+msgstr "Sous-couche contour"
 
 #: inx/inkstitch_select_elements.inx:33
 #: inx/inkstitch_zigzag_line_to_satin.inx:12
 msgid "Zigzag"
-msgstr ""
+msgstr "Sous-couche Zigzag"
 
 #: inx/inkstitch_select_elements.inx:35
 msgid "Fills"
-msgstr ""
+msgstr "Remplissages"
 
 #: inx/inkstitch_select_elements.inx:36
 msgid "Fill"
-msgstr ""
+msgstr "Remplissage"
 
 #: inx/inkstitch_select_elements.inx:43
 msgid "Only select fills with this underlay"
-msgstr ""
+msgstr "Sélectionner seulement les remplissages avec cette sous-couche"
 
 #: inx/inkstitch_select_elements.inx:46
 msgid "No Underlay"
-msgstr ""
+msgstr "Pas de remplissage"
 
 #: inx/inkstitch_select_elements.inx:52
 msgid "Select embroidery objects"
-msgstr ""
+msgstr "Sélectionne des objets de broderie"
 
 #: inx/inkstitch_select_elements.inx:54
 msgid "Selects specific embroidery elements by stitch type."
-msgstr ""
+msgstr "Selectionne des éléments de broderie selon leur type ."
 
 #: inx/inkstitch_select_elements.inx:55
 msgid "If there is already an active selection, non maching elements will be deselected."
-msgstr ""
+msgstr "S'il y a déjà une sélection active, les éléments ne correspondant pas aux critères seront désactivés."
 
 #: inx/inkstitch_select_elements.inx:61
 msgid "If this isn't working for you, you may need to insert your path to a python executable manualy."
-msgstr ""
+msgstr "Si ceci ne fonctionne pas pour vous, il se peut qu'il vous faille insérer votre chemin manuellement dans un exécutable python."
 
 #: inx/inkstitch_select_elements.inx:63
 msgid "* Windows: Open the \"Command Prompt\" and type \"where python\". Copy the path and paste it here."
-msgstr ""
+msgstr "*Windows : Ouvrir \"Invite de commande\" et taper \"where python\". Copier le chemin et le coller ici."
 
 #: inx/inkstitch_select_elements.inx:64
 msgid "* Linux: Open the command line and type \"which python3\". Copy the path and paste it here."
-msgstr ""
+msgstr "*Linux : ouvrir la ligne de commande et taper \"which python3\". Copier le chemin et le coller ici."
 
 #: inx/inkstitch_select_elements.inx:65
 msgid "* macOS: doesn't work, sorry"
-msgstr ""
+msgstr "*macOS : désolé ne fonctionne pas"
 
 #: inx/inkstitch_select_elements.inx:66
 msgid "Python Path"
-msgstr ""
+msgstr "Chemin Python"
 
 #: inx/inkstitch_selection_to_guide_line.inx:3
 msgid "Selection to guide line"
@@ -5527,7 +5528,7 @@ msgstr "Points de l'aiguille"
 
 #: inx/inkstitch_stitch_plan_preview.inx:22
 msgid "Lock"
-msgstr "Vérouiller"
+msgstr "Verrouiller"
 
 #: inx/inkstitch_stitch_plan_preview.inx:22
 msgid "Make stitch plan insensitive to mouse interactions"
@@ -5535,7 +5536,7 @@ msgstr "Rend le plan de broderie insensible aux actions de la souris"
 
 #: inx/inkstitch_stitch_plan_preview.inx:23
 msgid "Display command symbols"
-msgstr ""
+msgstr "Montrer les symboles de commandes"
 
 #: inx/inkstitch_stitch_plan_preview_undo.inx:3
 msgid "Undo Stitch Plan Preview"
@@ -5543,88 +5544,88 @@ msgstr "Annuler l'aperçu du plan de broderie"
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:3
 msgid "Stroke to Live Path Effect Satin"
-msgstr ""
+msgstr "Convertir Ligne en Effet de Chemin Satin"
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:8
 msgid "Converts a stroke into a satin stitch with a changeable life path effect."
-msgstr ""
+msgstr "Converti une ligne en colonne satin avec un effet de chemin modifiable."
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:9
 msgid "Pattern"
-msgstr ""
+msgstr "Motif"
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:10
 msgid "Normal"
-msgstr ""
+msgstr "Normal"
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:11
 msgid "Pearls"
-msgstr ""
+msgstr "Perles"
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:12
 msgid "Diamonds"
-msgstr ""
+msgstr "Losanges"
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:13
 msgid "Squares"
-msgstr ""
+msgstr "Carrés"
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:14
 msgid "Triangles"
-msgstr ""
+msgstr "Triangles"
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:15
 msgid "Wave"
-msgstr ""
+msgstr "Vague"
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:16
 msgid "Arch"
-msgstr ""
+msgstr "Arche"
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:18
 msgid "Min Width (mm)"
-msgstr ""
+msgstr "Largeur minimum (mm)"
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:19
 msgid "Max Width (mm)"
-msgstr ""
+msgstr "Largeur maximum (mm)"
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:20
 msgid "Pattern Length (mm)"
-msgstr ""
+msgstr "Longueur du motif (mm)"
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:21
 msgid "Stretched"
-msgstr ""
+msgstr "Étiré"
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:22
 #: inx/inkstitch_zigzag_line_to_satin.inx:15
 msgid "Add rungs"
-msgstr ""
+msgstr "Ajouter des traverses"
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:24
 msgid "Path specific"
-msgstr ""
+msgstr "Chemin spécifique"
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:27
 msgid "This extension converts a stroke into a satin column using the path effect \"pattern along path\"."
-msgstr ""
+msgstr "Cette extension converti une ligne en colonne satin en utilisant l'effet de chemin \"Motif sur chemin\"."
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:28
 msgid "* Please note, that the size values can only be an approximation and will be distorted if the original path is not completely straight."
-msgstr ""
+msgstr "* Merci de noter que les valeurs des tailles ne sont qu'approximatives et seront modifiées si le chemin original n'est pas parfaitement droit."
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:29
 msgid "* You can edit the satin path through the live path effect settings through Path > Path Effects ..."
-msgstr ""
+msgstr "* Vous pouvez modifier la colonne satin via les réglages de l'effet de chemin en utilisant Chemin> Effets de chemin..."
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:30
 msgid "* If you want to add rungs or change specific parts of the satin, convert it to a normal path with Ctrl + Shift + C"
-msgstr ""
+msgstr "* Si vous voulez ajouter des traverses ou modifier de partie spécifique, convertissez en chemin normal via Ctrl +Shift +C"
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:33
 msgid "https://inkstitch.org/docs/satin-tools/#stroke-to-live-path-effect-satin"
-msgstr ""
+msgstr "https://inkstitch.org/fr/docs/satin-tools/#stroke-to-live-path-effect-satin"
 
 #: inx/inkstitch_troubleshoot.inx:3
 msgid "Troubleshoot Objects"
@@ -5632,64 +5633,64 @@ msgstr "Dépistage de problèmes avec des objets"
 
 #: inx/inkstitch_troubleshoot.inx:6
 msgid "Pointer size (mm)"
-msgstr ""
+msgstr "Taille du pointeur (mm)"
 
 #: inx/inkstitch_troubleshoot.inx:7
 msgid "Font size (mm)"
-msgstr ""
+msgstr "Taille de la fonte (mm)"
 
 #: inx/inkstitch_zigzag_line_to_satin.inx:3
 msgid "Zig-Zag Line to Satin"
-msgstr ""
+msgstr "Convertir \"Ligne en zigzag\" en satin"
 
 #: inx/inkstitch_zigzag_line_to_satin.inx:8
 msgid "Converts a zigzag line into a satin column."
-msgstr ""
+msgstr "Converti une ligne en zigzag vers une colonne satin."
 
 #: inx/inkstitch_zigzag_line_to_satin.inx:9
 #: inx/inkstitch_zigzag_line_to_satin.inx:21
 msgid "Line Pattern"
-msgstr ""
+msgstr "Style de zigzag"
 
 #: inx/inkstitch_zigzag_line_to_satin.inx:10
 msgid "Square"
-msgstr ""
+msgstr "Carré"
 
 #: inx/inkstitch_zigzag_line_to_satin.inx:11
 msgid "Sawtooth"
-msgstr ""
+msgstr "Dents de scie"
 
 #: inx/inkstitch_zigzag_line_to_satin.inx:14
 msgid "Smoothing"
-msgstr ""
+msgstr "Adoucir"
 
 #: inx/inkstitch_zigzag_line_to_satin.inx:16
 msgid "Reduce number of rungs"
-msgstr ""
+msgstr "Moins de traverses"
 
 #: inx/inkstitch_zigzag_line_to_satin.inx:19
 msgid "This extension converts a zigzag line into a satin column."
-msgstr ""
+msgstr "Cette extension converti une ligne en zigzag en colonne satin."
 
 #: inx/inkstitch_zigzag_line_to_satin.inx:22
 msgid "▻ Always start and end with a rung."
-msgstr ""
+msgstr "▻ Tours commencer et terminer par une traverse."
 
 #: inx/inkstitch_zigzag_line_to_satin.inx:24
 msgid "Square: |_|▔|_|▔|"
-msgstr ""
+msgstr "Carré : |_|▔|_|▔|"
 
 #: inx/inkstitch_zigzag_line_to_satin.inx:25
 msgid "Sawtooth: |\\|\\|\\|"
-msgstr ""
+msgstr "Dents de scie : |\\|\\|\\|"
 
 #: inx/inkstitch_zigzag_line_to_satin.inx:26
 msgid "Zigzag: |\\/\\/\\/|"
-msgstr ""
+msgstr "Zigzag: |\\/\\/\\/|"
 
 #: inx/inkstitch_zigzag_line_to_satin.inx:29
 msgid "https://inkstitch.org/docs/satin-tools/#zigzag-line-to-satin"
-msgstr ""
+msgstr "https://inkstitch.org/fr/docs/satin-tools/#zigzag-line-to-satin"
 
 #: inx/inkstitch_zip.inx:3
 msgid "embroidery ZIP file output"
