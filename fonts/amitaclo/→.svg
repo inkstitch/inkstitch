@@ -6849,6 +6849,39 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8" />
   </g>
+
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="GlyphLayer-‘"
+     style="display:none"
+     id="g6428">
+    <path
+       id="autosatinrun110-54-0-5"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
+       inkscape:label="Points droits pour auto-remplissage satin 1"
+       d="M 15.118109,59.043885 C 14.83999,56.342661 14.644495,53.633865 14.407874,50.928839 14.267903,49.26491 14.041749,38.202246 13.901779,36.538318"
+       inkstitch:ties="3"
+       sodipodi:nodetypes="ccc" />
+    <path
+       id="autosatin159-64-1-5"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 7.4333077,37.350034 C 9.6651,46.119943 11.769565,60.301065 12.383528,62.451574 M 20.37025,32.23629 c 0,0 -2.756103,27.595633 -2.756103,27.595633 M 8.723878,48.264814 c 0,0 12.481505,-0.922923 12.481505,-0.922923"
+       inkstitch:satin_column="True"
+       inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
+       inkstitch:zigzag_spacing_mm="0.3"
+       inkstitch:pull_compensation_mm="0.2"
+       inkstitch:zigzag_underlay="True"
+       inkstitch:zigzag_underlay_inset_mm="0.1"
+       inkscape:label="Auto-remplissage satin 2"
+       sodipodi:nodetypes="cccccc"
+       inkstitch:max_stitch_length_mm="6"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="5.8" />
+  </g>
+
+
+
+
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-’"

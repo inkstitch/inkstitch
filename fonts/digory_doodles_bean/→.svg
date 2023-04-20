@@ -5,7 +5,7 @@
    sodipodi:docname="→.svg"
    width="113.38583"
    height="113.38583"
-   inkscape:version="1.1.2 (b8e25be8, 2022-02-05)"
+   inkscape:version="1.3-alpha (95f74fb, 2023-03-31)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -28,12 +28,12 @@
      id="namedview201"
      showgrid="true"
      inkscape:zoom="8.6750578"
-     inkscape:cx="22.535873"
-     inkscape:cy="75.734366"
+     inkscape:cx="26.973884"
+     inkscape:cy="58.039959"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g1476"
+     inkscape:current-layer="g651"
      inkscape:document-rotation="0"
      inkscape:lockguides="true"
      inkscape:snap-global="false"
@@ -43,7 +43,9 @@
      inkscape:snap-bbox="true"
      showguides="true"
      inkscape:guide-bbox="true"
-     inkscape:pagecheckerboard="0">
+     inkscape:pagecheckerboard="0"
+     inkscape:showpageshadow="2"
+     inkscape:deskcolor="#d1d1d1">
     <sodipodi:guide
        position="0,113.38583"
        orientation="0,1"
@@ -63,7 +65,8 @@
        id="grid1206"
        units="mm"
        spacingx="3.7795276"
-       spacingy="3.7795276" />
+       spacingy="3.7795276"
+       visible="true" />
     <sodipodi:guide
        position="-10,42.385834"
        orientation="0,1"
@@ -92,7 +95,10 @@ SIL Open Font License (OFL)
        rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
   </cc:Work>
 </rdf:RDF>
-<inkstitch:collapse_len_mm />
+<inkstitch:collapse_len_mm
+   id="collapse_len_mm1">3</inkstitch:collapse_len_mm>
+<inkstitch:min_stitch_len_mm
+   id="min_stitch_len_mm6747">0</inkstitch:min_stitch_len_mm>
 </metadata>
   <defs
      id="defs197">
@@ -205,7 +211,7 @@ SIL Open Font License (OFL)
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-!"
      id="g315"
-     style="display:none">
+     style="display:inline">
     <path
        id="autosatinrun1"
        style="fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -225,7 +231,8 @@ SIL Open Font License (OFL)
        inkstitch:zigzag_underlay="False"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="0"
-       inkstitch:force_lock_stitches="True" />
+       inkstitch:force_lock_stitches="True"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        id="autosatinrun2"
        style="fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -245,12 +252,13 @@ SIL Open Font License (OFL)
        inkstitch:zigzag_underlay="False"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="0"
-       inkstitch:force_lock_stitches="True" />
+       inkstitch:force_lock_stitches="True"
+       inkstitch:max_stitch_length_mm="6" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-&quot;"
-     style="display:none"
+     style="display:inline"
      id="g319">
     <path
        id="autosatin3"
@@ -265,7 +273,8 @@ SIL Open Font License (OFL)
        inkstitch:zigzag_spacing_mm="0.3"
        inkscape:label="AutoSatin 1"
        inkstitch:ties="0"
-       inkstitch:force_lock_stitches="True" />
+       inkstitch:force_lock_stitches="True"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        id="autosatin4"
        style="fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:none"
@@ -279,12 +288,13 @@ SIL Open Font License (OFL)
        inkstitch:zigzag_spacing_mm="0.3"
        inkscape:label="AutoSatin 2"
        inkstitch:ties="0"
-       inkstitch:force_lock_stitches="True" />
+       inkstitch:force_lock_stitches="True"
+       inkstitch:max_stitch_length_mm="6" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-&amp;"
-     style="display:none"
+     style="display:inline"
      id="g335">
     <path
        id="autosatinrun18-8"
@@ -311,7 +321,8 @@ SIL Open Font License (OFL)
        inkstitch:zigzag_underlay="False"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
-       sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccccccccccc" />
+       sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccccccccccc"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        id="path3320"
        style="fill:none;stroke:#28292a;stroke-width:0.378;stroke-miterlimit:4;stroke-dasharray:0.378, 0.378;stroke-dashoffset:0"
@@ -329,7 +340,7 @@ SIL Open Font License (OFL)
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-'"
-     style="display:none"
+     style="display:inline"
      id="g339">
     <path
        id="path337"
@@ -342,12 +353,13 @@ SIL Open Font License (OFL)
        inkstitch:zigzag_underlay="False"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0" />
+       inkstitch:ties="0"
+       inkstitch:max_stitch_length_mm="6" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-("
-     style="display:none"
+     style="display:inline"
      id="g343">
     <path
        d="M 16.1053,99.824 15.18,99.1006 14.2293,98.424 14.144,98.36 v 0 l -0.8431,-0.633 -0.879,-0.7836 -0.7763,-0.8845 -0.1907,-0.2496 v 0 L 10.9284,95.1202 10.2639,94.1444 9.61292,93.159 9.36942,92.7292 v 0 L 9.03182,92.1332 8.50945,91.0731 8.0337,89.9967 7.83427,89.3474 v 0 L 7.68791,88.871 7.36828,87.7345 7.05144,86.5976 6.92145,85.7438 v 0 L 6.87378,85.4308 6.70625,84.2615 6.54247,83.0917 6.46775,82.0507 v 0 L 6.45791,81.9136 6.38756,80.7345 6.34426,79.5538 6.32208,78.3725 6.32244,78.3313 v 0 l 0.00996,-1.14 0.03644,-1.1812 0.03645,-1.1813 0.0232,-0.2179 v 0 l 0.10184,-0.9566 0.13069,-1.174 0.15101,-1.1718 0.05625,-0.3941 v 0 l 0.11073,-0.7758 0.2027,-1.1637 0.23487,-1.1582 0.11449,-0.5647 v 0 l 0.12038,-0.5935 0.26257,-1.152 0.29881,-1.1287 0.20718,-0.7396 v 0 l 0.10574,-0.3774 0.33398,-1.1111 0.33398,-1.1111 0.33848,-0.9521 v 0 l 0.05007,-0.1408 0.39204,-1.0918 0.392,-1.0918 0.3946,-1.0908 0.0343,-0.0868 v 0 l 0.3913,-0.9925 0.4365,-1.0745 0.4558,-1.0642 0.1312,-0.312 v 0 l 0.317,-0.7542 0.4547,-1.062 0.4396,-1.0667 0.2413,-0.5446 v 0 l 0.224,-0.5057 0.5168,-1.0176 0.5167,-1.0175 0.4255,-0.7786 v 0 l 0.1217,-0.2226 0.6341,-0.9579 0.6342,-0.9578 0.6341,-0.9579 0.013,-0.0188 v 0 l 0.6442,-0.9266 0.702,-0.9172 0.7088,-0.9112 0.1749,-0.2249 v 0 l 0.5338,-0.6863 0.74,-0.889 0.773,-0.8819 0.3685,-0.3724 v 0 l 0.4333,-0.4379 0.8064,-0.8054 0.8461,-0.7688 0.641,-0.5175 v 0 l 0.2474,-0.1997 0.9029,-0.6956"
@@ -369,12 +381,13 @@ SIL Open Font License (OFL)
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_spacing_mm="0.3"
        inkscape:label="AutoSatin 2"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:max_stitch_length_mm="6" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-)"
-     style="display:none"
+     style="display:inline"
      id="g347">
     <path
        d="M 4.48356,100.97 5.19757,100.074 6.0162,99.2488 6.17374,99.065 v 0 l 0.58128,-0.6786 0.64674,-0.9332 0.58646,-0.9806 0.24391,-0.4924 v 0 L 8.4936,95.4523 8.93556,94.4018 9.3478,93.3398 9.62231,92.5322 v 0 l 0.09233,-0.2717 0.36236,-1.0808 0.3506,-1.0847 0.3327,-1.0907 0.004,-0.0133 v 0 l 0.3286,-1.0774 0.3327,-1.0907 0.3345,-1.09 0.0862,-0.302 v 0 l 0.2265,-0.7941 0.3128,-1.096 0.3127,-1.0961 0.1685,-0.5921 v 0 l 0.1435,-0.5041 0.2433,-1.1122 0.2423,-1.1125 0.1958,-0.8988 v 0 l 0.0465,-0.2137 0.2424,-1.1125 0.1866,-1.1204 0.1567,-1.127 0.0097,-0.0895 v 0 l 0.1128,-1.0388 0.0833,-1.1343 0.0736,-1.1345 0.016,-0.4015 v 0 l 0.0294,-0.7358 0.0301,-1.1389 0.0301,-1.139 0.0148,-0.7057 v 0 L 14.733,66.694 14.691,65.5386 14.6485,64.3833 14.6129,63.4147 v 0 L 14.606,63.228 14.5414,62.0728 14.4647,60.9188 14.3565,59.7687 14.3504,59.7035 v 0 l -0.1021,-1.085 -0.1082,-1.1502 -0.1081,-1.1502 -0.0394,-0.3182 v 0 l -0.1022,-0.8273 -0.1969,-1.139 -0.1968,-1.1391 -0.1047,-0.5659 v 0 L 13.2864,51.7575 13.0575,50.6231 12.7958,49.4975 12.587,48.6969 v 0 l -0.083,-0.3181 -0.3075,-1.1154 -0.3076,-1.1153 -0.309,-1.033 v 0 L 11.5573,45.0394 11.1871,43.9431 10.8076,42.85 10.3904,41.7708 10.3234,41.6137 v 0 L 9.93671,40.7062 9.48307,39.6415 8.96178,38.6088 8.76614,38.2367 v 0 L 8.4232,37.5844 7.8732,36.5671 7.24039,35.5984 6.8737,35.037 v 0 L 6.60758,34.6297 5.92763,33.6971 5.19714,32.8055 4.59852,32.0969 v 0 L 4.4488,31.9196 3.64569,31.0874 2.81902,30.2743"
@@ -396,12 +409,13 @@ SIL Open Font License (OFL)
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_spacing_mm="0.3"
        inkscape:label="AutoSatin 2"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:max_stitch_length_mm="6" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-,"
-     style="display:none"
+     style="display:inline"
      id="g359">
     <path
        id="path337-6"
@@ -415,12 +429,13 @@ SIL Open Font License (OFL)
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="0"
-       inkstitch:force_lock_stitches="True" />
+       inkstitch:force_lock_stitches="True"
+       inkstitch:max_stitch_length_mm="6" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer--"
-     style="display:none"
+     style="display:inline"
      id="g363">
     <path
        id="path361"
@@ -434,12 +449,13 @@ SIL Open Font License (OFL)
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay="False"
        inkstitch:ties="0"
-       inkstitch:force_lock_stitches="True" />
+       inkstitch:force_lock_stitches="True"
+       inkstitch:max_stitch_length_mm="6" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-."
-     style="display:none"
+     style="display:inline"
      id="g367">
     <path
        id="path365"
@@ -453,12 +469,13 @@ SIL Open Font License (OFL)
        inkstitch:zigzag_spacing_mm="0.3"
        sodipodi:nodetypes="ccccccccccccc"
        inkstitch:ties="0"
-       inkstitch:force_lock_stitches="True" />
+       inkstitch:force_lock_stitches="True"
+       inkstitch:max_stitch_length_mm="6" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-/"
-     style="display:none"
+     style="display:inline"
      id="g371">
     <path
        id="autosatinrun70"
@@ -478,12 +495,13 @@ SIL Open Font License (OFL)
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_spacing_mm="0.3"
        inkscape:label="AutoSatin 2"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:max_stitch_length_mm="6" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-0"
-     style="display:none"
+     style="display:inline"
      id="g375">
     <path
        d="m 11.519576,79.8644 -0.187,-0.2204 -0.6954,-0.902 -0.6135,-0.96 -0.587,-0.976 -0.0169,-0.0338 v 0 l -0.4941,-0.9843 -0.4635,-1.0403 -0.3837,-1.0717 -0.1172,-0.3463 v 0 l -0.2479,-0.7328 -0.3418,-1.0854 -0.279599,-1.1036 -0.1467,-0.6783 v 0 l -0.0941,-0.435 -0.1857,-1.1231 -0.1464,-1.1291 -0.0879,-1.0184 v 0 l -0.01,-0.1167 -0.0676,-1.137 -0.0403,-1.1381 0.0111,-1.1396 0.0043,-0.2094 v 0 l 0.0188,-0.9301 0.0397,-1.1385 0.1307,-1.1311 0.0743,-0.5308 v 0 l 0.0836,-0.5976 0.1646,-1.1273 0.214,-1.1193 0.1726,-0.8443 v 0 l 0.0557,-0.2723 0.237099,-1.1149 0.2859,-1.1025 0.2877,-1.1022 0.0128,-0.0465 v 0 l 0.2881,-1.0524 0.3461,-1.0845 0.3551,-1.0814 0.1174,-0.3576 v 0 l 0.2376,-0.7238 0.3941,-1.0665 0.4167,-1.058 0.2596,-0.6589 v 0 l 0.1572,-0.3991 0.4411,-1.0452 0.4789,-1.0282 0.4638,-0.9379 v 0 l 0.0502,-0.1014 0.5624,-1.0002 0.6132,-0.9737 0.6484,-0.9505 0.1074,-0.1472 v 0 l 0.5713,-0.7828 0.7013,-0.9117 0.7099,-0.9036 0.3024,-0.3671 v 0 l 0.4259,-0.5172 0.7184,-0.8876 0.7681,-0.8425 0.5451,-0.5747 v 0 l 0.2406,-0.2537 0.8677,-0.7466 0.8893,-0.7229 0.9357,-0.58533 v 0 l 0.0398,-0.0249 0.9977,-0.57249 1.09,-0.33885 1.1369,-0.18788 0.2521,-0.0214 v 0 l 0.8844,-0.0751 1.1435,0.005 1.1334,0.13704 0.5552,0.13505 v 0 l 0.5464,0.13292 1.0777,0.44099 1.0145,0.55526 0.7351,0.44779 v 0 l 0.2528,0.1541 0.9091,0.7117 0.7332,0.8688 0.6309,0.9694"
@@ -504,7 +522,8 @@ SIL Open Font License (OFL)
        inkstitch:ties="3"
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
-       inkstitch:zigzag_underlay="False" />
+       inkstitch:zigzag_underlay="False"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        id="autosatinrun4"
        style="fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -523,12 +542,13 @@ SIL Open Font License (OFL)
        inkstitch:ties="2"
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
-       inkstitch:zigzag_underlay="False" />
+       inkstitch:zigzag_underlay="False"
+       inkstitch:max_stitch_length_mm="6" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-1"
-     style="display:none"
+     style="display:inline"
      id="g379">
     <path
        d="m 15.270476,80.0703 0.0097,-0.2247 0.0949,-1.1668 0.1059,-1.1369 0.1474,-1.1345 0.0052,-0.0368 v 0 l 0.1532,-1.0961 0.162,-1.1324 0.1619,-1.1324 0.0478,-0.3205 v 0 l 0.121,-0.8108 0.1833,-1.1293 0.1833,-1.1292 0.1067,-0.6014 v 0 l 0.0931,-0.5248 0.2099,-1.1242 0.21,-1.1242 0.1389,-0.8875 v 0 l 0.038,-0.2427 0.1742,-1.1306 0.1741,-1.1307 0.1742,-1.1307 0.0063,-0.0405 v 0 l 0.1679,-1.0902 0.1742,-1.1306 0.1741,-1.1307 0.0483,-0.324 v 0 l 0.1203,-0.8075 0.1628,-1.1324 0.1389,-1.1353 0.0747,-0.6099 v 0 l 0.0643,-0.5254 0.1028,-1.1393 0.1016,-1.1394 0.0818,-0.8977 v 0 l 0.022,-0.2416 0.1155,-1.1379 0.1185,-1.1377 0.1185,-1.1377 0.0059,-0.0442 v 0 l 0.1449,-1.0898 0.137,-1.135 0.1214,-1.1496 0.0362,-0.318 v 0 l 0.0945,-0.8283 0.0971,-1.1459 0.0958,-1.1458 0.0426,-0.5836 v 0 l 0.0403,-0.5518 -0.0387,-1.1464 -0.1257,-1.1487 -0.0976,-0.8572"
@@ -556,7 +576,8 @@ SIL Open Font License (OFL)
        inkstitch:zigzag_spacing_mm="0.3"
        inkscape:label="AutoSatin 3"
        sodipodi:nodetypes="cccccccccccc"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        d="m 20.311376,35.821 -0.0331,-0.2908 -0.1229,-1.1495 0.2336,-1.113 0.4012,-1.0591"
        style="fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -576,7 +597,8 @@ SIL Open Font License (OFL)
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_spacing_mm="0.3"
        inkscape:label="AutoSatin 5"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        id="autosatinrun8"
        style="fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -595,12 +617,13 @@ SIL Open Font License (OFL)
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_spacing_mm="0.3"
        inkscape:label="AutoSatin 7"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:max_stitch_length_mm="6" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-2"
-     style="display:none"
+     style="display:inline"
      id="g383">
     <path
        id="autosatinrun9"
@@ -621,7 +644,8 @@ SIL Open Font License (OFL)
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
        sodipodi:nodetypes="cccccscccccsccccccccccccccc"
-       inkscape:label="AutoSatin 4" />
+       inkscape:label="AutoSatin 4"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        id="path9521"
        style="fill:none;stroke:#28292a;stroke-width:0.378;stroke-miterlimit:4;stroke-dasharray:0.378, 0.378;stroke-dashoffset:0;stroke-opacity:1"
@@ -633,7 +657,7 @@ SIL Open Font License (OFL)
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-3"
-     style="display:none"
+     style="display:inline"
      id="g387">
     <path
        d="m 7.649876,78.4333 -0.0023,-0.003 -0.591899,-0.9682 -0.4752,-1.0597 -0.2009,-1.116 0.0235,-0.2969 v 0 l 0.067,-0.8455 0.3147,-1.1116 0.760899,-0.8064 0.5295,-0.3217 v 0 l 0.4552,-0.2766 1.0619,-0.4569 1.0952,-0.3701 0.8626,-0.2069 v 0 l 0.2586,-0.0621 1.131,-0.1309 1.1661,-0.0334 1.1445,-0.193"
@@ -654,7 +678,8 @@ SIL Open Font License (OFL)
        inkstitch:zigzag_underlay="False"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        d="m 38.582676,74.7275 0.2407,-0.6891 v 0 l 0.1389,-0.3977 0.3318,-1.1002 0.2396,-1.128 0.1021,-1.003 v 0 l 0.0146,-0.1443 0.0745,-1.1523 -0.0192,-1.1531 -0.0807,-1.1513 -0.0176,-0.1234 v 0 l -0.1446,-1.0166 -0.2883,-1.1123 -0.3349,-1.1048 -0.1416,-0.3756 v 0 l -0.2638,-0.7001 -0.464,-1.0578 -0.4967,-1.0402 -0.3325,-0.5884 v 0 l -0.2359,-0.4176 -0.5794,-0.9943 -0.6708,-0.964 -0.5391,-0.754 v 0 l -0.1443,-0.2019 -0.7648,-0.8881 -0.7941,-0.8612 -0.8599,-0.7486 v 0 l -0.0223,-0.0194 -0.9688,-0.647 -1.0231,-0.5397 -1.0741,-0.3941 -0.2244,-0.0744"
        style="fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -682,7 +707,8 @@ SIL Open Font License (OFL)
        inkstitch:zigzag_underlay="False"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        d="m 25.489591,50.76716 -0.432007,0.43783 -0.65471,0.68067 -0.647625,0.68928 -0.275761,0.33185 v 0 l -0.330589,0.39767 -0.59195,0.7363 -0.537198,0.76256 -0.28015,0.49915"
        style="fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -702,7 +728,8 @@ SIL Open Font License (OFL)
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
-       inkscape:label="AutoSatin 7" />
+       inkscape:label="AutoSatin 7"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        id="autosatin28"
        style="fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:none"
@@ -715,12 +742,13 @@ SIL Open Font License (OFL)
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
-       inkscape:label="AutoSatin 8" />
+       inkscape:label="AutoSatin 8"
+       inkstitch:max_stitch_length_mm="6" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-4"
-     style="display:none"
+     style="display:inline"
      id="g391">
     <path
        d="m 25.444376,91.434 0.0772,-0.7457 0.1817,-1.1382 0.2165,-1.1418 0.1233,-0.6137 v 0 l 0.1078,-0.5359 0.165,-1.1527 0.1267,-1.1514 0.0923,-0.8158 v 0 l 0.0362,-0.3196 0.1285,-1.1353 0.1285,-1.1354 1.182863,-26.97489 -1.851163,0.15799 -0.6993,0.0218 -1.1623,0.0361 -1.1625,0.0294 -0.6142,-10e-4 v 0 l -0.549,-0.001 -1.163,-0.0197 -1.1812,-0.0179 -0.7461,-0.0108 v 0 l -0.4388,-0.006 -1.184,0.0184 -1.1836,0.0416 -0.829,0.074 v 0 l -0.3142,0.028 -1.1736,0.0334 -1.1345,-0.0527 -0.9972,-0.1859 v 0 l -0.127,-0.0237 -1.1137,-0.357 -1.0853,-0.4701 -1.0054,-0.5748 v 0 l -0.0119,-0.007 -1.081899,-0.4552 -0.4447,-1.0286 -0.1727,-1.1555 -9e-4,-0.1632 v 0 l -0.0057,-0.9954 0.2241,-1.1556 0.3595,-1.1303 0.093,-0.2652 v 0 l 0.298699,-0.8519 0.4219,-1.1045 0.4284,-1.1025 0.1385,-0.345 v 0 l 0.3018,-0.7521 0.4429,-1.0958 0.4531,-1.092 0.1774,-0.4298 v 0 l 0.2752,-0.6666 0.4551,-1.104 0.4286,-1.0699 0.2058,-0.5335 v 0 l 0.2091,-0.5418 0.4076,-1.078 0.3692,-1.0918 0.2415,-0.7141 v 0 l 0.1278,-0.3778 0.3058,-1.1091 0.2182,-1.1281 0.1213,-0.93342 v 0 l 0.0257,-0.19829 0.144,-1.13079 0.3041,-1.11287 0.1737,-1.132838"
@@ -742,7 +770,8 @@ SIL Open Font License (OFL)
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
        sodipodi:nodetypes="cssccccccccccccccccc"
-       inkscape:label="AutoSatin 6" />
+       inkscape:label="AutoSatin 6"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        d="m 31.947776,54.734 -4.862464,-0.36737 6.117364,0.44257 1.1722,0.0177 0.5269,-0.0167 v 0 l 0.6545,-0.0208 1.1367,-0.0536 0.387417,-0.0101"
        style="fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -763,7 +792,8 @@ SIL Open Font License (OFL)
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
        sodipodi:nodetypes="ccccccc"
-       inkscape:label="AutoSatin 4" />
+       inkscape:label="AutoSatin 4"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:0.377953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
        d="M 31.791192,54.00188 29.108224,53.21992 31.20538,25.734538"
@@ -782,7 +812,8 @@ SIL Open Font License (OFL)
        inkstitch:zigzag_underlay="False"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:0.377953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
        d="m 27.330102,81.32148 -1.260864,9.61733"
@@ -801,12 +832,13 @@ SIL Open Font License (OFL)
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
        sodipodi:nodetypes="cccsccccc"
-       inkscape:label="AutoSatin 9" />
+       inkscape:label="AutoSatin 9"
+       inkstitch:max_stitch_length_mm="6" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-5"
-     style="display:none"
+     style="display:inline"
      id="g395">
     <path
        d="m 7.949576,78.1999 -0.4004,-0.3824 -0.811299,-0.852 -0.9106,-0.6881 -0.6104,-0.5281 v 0 l -0.2636,-0.228 -0.7204,-0.9113 -0.5787,-1.0345 -0.8887,-0.4204"
@@ -827,7 +859,8 @@ SIL Open Font License (OFL)
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
        inkscape:label="AutoSatin 2"
-       sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccc" />
+       sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccc"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        d="m 37.643776,77.9212 0.5225,-0.724 0.6592,-0.923 0.6497,-0.9785 0.2343,-0.4155 v 0 l 0.3226,-0.5722 0.5002,-1.0174 0.4534,-1.0396 0.2917,-0.6952 v 0 l 0.1471,-0.3505 0.3689,-1.1163 0.3355,-1.0967 0.2614,-0.9403 v 0 l 0.0479,-0.1722 0.1904,-1.1372 0.1579,-1.1434 -7e-4,-1.1508 -0.0022,-0.0418 v 0 l -0.0587,-1.1119 -0.0924,-1.1521 -0.1432,-1.1465 -0.0457,-0.2498 v 0 l -0.1624,-0.8864 -0.2499,-1.1283 -0.3106,-1.1132 -0.1536,-0.4401 v 0 l -0.227,-0.6503 -0.4849,-1.0474 -0.5508,-1.0121 -0.3884,-0.5624 v 0 l -0.2665,-0.3859 -0.7234,-0.9201 -0.814,-0.8166 -0.6662,-0.5845 v 0 l -0.197,-0.1728 -0.9735,-0.6228 -1.021,-0.5377 -1.0188,-0.4328 v 0 l -0.0448,-0.019 -1.1082,-0.3318 -1.1309,-0.2413 -1.1457,-0.1615 -0.1596,-0.009 v 0 l -0.9943,-0.0547 -1.1574,-0.0112 -1.1575,-0.0112 -0.3676,0.0142 v 0 l -0.7879,0.0304 -1.1544,0.0847 -1.1544,0.0847 -0.5724,0.0564 v 0 l -0.5791,0.0571 -1.1499,0.1298 -1.1409,0.1338 -0.7811,0.1236 v 0 l -0.3906,0.0618 -1.1716,0.1854 -1.1683,0.2113 -0.895,0.1632 v 0 l -0.2731,0.0498 -1.1711,0.1965 -1.122,0.1662 -1.0677,0.1581"
        style="fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -861,7 +894,8 @@ SIL Open Font License (OFL)
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
        inkscape:label="AutoSatin 6"
-       sodipodi:nodetypes="cccccccccccc" />
+       sodipodi:nodetypes="cccccccccccc"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        id="autosatin35"
        style="fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:none"
@@ -874,7 +908,8 @@ SIL Open Font License (OFL)
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
        inkscape:label="AutoSatin 8"
-       sodipodi:nodetypes="ccccccc" />
+       sodipodi:nodetypes="ccccccc"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        id="autosatin36"
        style="fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:none"
@@ -887,7 +922,8 @@ SIL Open Font License (OFL)
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
-       inkscape:label="AutoSatin 9" />
+       inkscape:label="AutoSatin 9"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        d="m 9.113776,49.3758 -0.0911,0.5296 -0.1706,1.1519 -0.1554,1.1452 -0.2991,0.7221"
        style="fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -907,7 +943,8 @@ SIL Open Font License (OFL)
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
-       inkscape:label="AutoSatin 11" />
+       inkscape:label="AutoSatin 11"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        id="autosatin38"
        style="fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:none"
@@ -920,12 +957,13 @@ SIL Open Font License (OFL)
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
        inkscape:label="AutoSatin 12"
-       sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccc" />
+       sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccc"
+       inkstitch:max_stitch_length_mm="6" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-6"
-     style="display:none"
+     style="display:inline"
      id="g399">
     <path
        id="autosatinrun32"
@@ -945,7 +983,8 @@ SIL Open Font License (OFL)
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:zigzag_underlay="False"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        id="autosatinrun33"
        style="fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -965,12 +1004,13 @@ SIL Open Font License (OFL)
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:zigzag_underlay="False"
        inkstitch:ties="2"
-       inkscape:label="AutoSatin 4" />
+       inkscape:label="AutoSatin 4"
+       inkstitch:max_stitch_length_mm="6" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-7"
-     style="display:none"
+     style="display:inline"
      id="g403">
     <path
        style="fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -991,7 +1031,8 @@ SIL Open Font License (OFL)
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
-       inkscape:label="AutoSatin 5" />
+       inkscape:label="AutoSatin 5"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        d="m 33.159576,51.3145 1.0277,0.037 1.1424,0.0374 1.1432,0.0653 0.1962,0.0192 v 0 l 0.9421,0.0926 1.1149,0.2621 1.0974,0.3187 0.268,0.0772 v 0 l 0.8528,0.2457 1.1345,0.1992 1.0784,0.3306 0.3461,-0.0125"
        style="fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -1011,7 +1052,8 @@ SIL Open Font License (OFL)
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
-       sodipodi:nodetypes="cccccccccc" />
+       sodipodi:nodetypes="cccccccccc"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
        d="m 35.832576,49.0449 0.1797,-0.3655 0.5195,-1.0565 0.5195,-1.0565 0.3778,-0.7531 v 0 l 0.15,-0.2991 0.5426,-1.0448 0.5427,-1.0448 0.4229,-0.8117 v 0 l 0.121,-0.2324 0.5575,-1.0365 0.5908,-1.0181 0.4501,-0.8801 v 0 l 0.085,-0.1664 0.4917,-1.0688 0.4982,-1.0611 0.3385,-1.0139 v 0 l 0.0319,-0.0957 0.4132,-1.0942 0.3338,-1.0993 0.0252,-1.1849 -0.9741,-2.0142 -0.3558,0.0338 -1.1334,0.097 -1.1357,0.0804 -0.9564,0.0574 v 0 l -0.1803,0.0109 -1.1383,0.0556 -1.1379,0.0657 -1.1285,0.0816 v 0 l -0.0084,6e-4 -1.1369,0.0822 -1.137,0.0822 -1.137,0.0808 -0.163,0.0116 v 0 l -0.974,0.0692 -1.137,0.0809 -1.1385,0.0483 -0.3354,0.0121 v 0 l -0.8034,0.0289 -1.1397,0.0175 -1.1397,0.0176 -0.5079,0.008 v 0 l -0.6319,0.01 -1.1397,0.0176 -1.1392,-0.0249 -0.6797,-0.0268 v 0 l -0.4592,-0.0181 -1.139,-0.0448 -1.1451,-0.0445 -0.8451,-0.0423 v 0 l -0.3306,-0.0165 -1.1751,-0.0711 -1.1737,-0.0887 -0.9027,-0.0799 v 0 l -0.2699,-0.0238 -1.1736,-0.0841 -1.1726,-0.0884 -0.9643,-0.0847 v 0 l -0.2065,-0.0182 -1.1707,-0.0981 -1.169999,-0.0548 -1.0373,-0.0435 v 0 l -0.1305,-0.005 -1.1643,-0.0116 -1.1338,-0.1005"
@@ -1030,7 +1072,8 @@ SIL Open Font License (OFL)
        inkstitch:zigzag_underlay="False"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        id="autosatin48"
        style="fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:none"
@@ -1042,7 +1085,8 @@ SIL Open Font License (OFL)
        inkstitch:zigzag_underlay="False"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        d="m 19.899076,79.8331 -0.1325,0.2736 -0.508,1.018 -0.5068,1.0209 -0.5369,0.927 v 0 l -0.0496,0.0858 -0.672,0.9723 -0.6207,0.9552 -0.6527,0.9258 -0.0657,0.0751"
        style="fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -1062,12 +1106,13 @@ SIL Open Font License (OFL)
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
        inkscape:label="AutoSatin 2"
-       sodipodi:nodetypes="ccccccccccccccc" />
+       sodipodi:nodetypes="ccccccccccccccc"
+       inkstitch:max_stitch_length_mm="6" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-8"
-     style="display:none"
+     style="display:inline"
      id="g407">
     <path
        id="autosatinrun36"
@@ -1087,7 +1132,8 @@ SIL Open Font License (OFL)
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:zigzag_underlay="False"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        id="autosatinrun38"
        style="fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -1106,12 +1152,13 @@ SIL Open Font License (OFL)
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:zigzag_underlay="False"
        inkstitch:ties="2"
-       sodipodi:nodetypes="cccccccccccccc" />
+       sodipodi:nodetypes="cccccccccccccc"
+       inkstitch:max_stitch_length_mm="6" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-9"
-     style="display:none"
+     style="display:inline"
      id="g411">
     <path
        id="autosatin47"
@@ -1125,7 +1172,8 @@ SIL Open Font License (OFL)
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
-       inkscape:label="AutoSatin 1" />
+       inkscape:label="AutoSatin 1"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        d="m 24.629276,77.9085 0.2703,-0.3198 0.7181,-0.8884 0.6941,-0.9079 0.6442,-0.8428 v 0 l 0.0499,-0.0651 0.6388,-0.9475 0.6266,-0.9561 0.6266,-0.9561 0.1291,-0.2183 v 0 l 0.4522,-0.7646 0.5643,-0.9932 0.5339,-1.0085 0.2319,-0.5458 v 0 l 0.2146,-0.5053 0.412,-1.0654 0.3594,-1.082 0.2834,-0.8892 v 0 l 0.0631,-0.1977 0.3281,-1.0938 0.3282,-1.0938 0.3449,-1.0894 0.0393,-0.1245 v 0 l 0.3048,-0.9652 0.3117,-1.0997 0.3117,-1.0998 0.1193,-0.4508 v 0 l 0.1732,-0.6541 0.2913,-1.1053 0.2494,-1.1149 0.1656,-0.7853 v 0 l 0.0744,-0.3534 0.2019,-1.1587 0.201,-1.1589 0.142,-1.0415 v 0 l 0.0168,-0.1233 0.1431,-1.167 0.0702,-1.1735 0.0532,-1.1749 3e-4,-0.1129 v 0 l 0.0034,-1.063 -0.0151,-1.1759 -0.1197,-1.1695 -0.0478,-0.3467 v 0 l -0.1128,-0.8172 -0.206,-1.1561 -0.3163,-1.1298 -0.1833,-0.5632 v 0 l -0.1805,-0.5549 -0.4356,-1.0876 -0.5178,-1.052 -0.4267,-0.7201 v 0 l -0.1716,-0.2895 -0.6402,-0.9769 -0.7176,-0.925 -0.7514,-0.7888 v 0 l -0.0528,-0.0554 -0.8576,-0.7908 -0.9951,-0.6051 -1.0424,-0.5521 -0.165,-0.0653 v 0 l -0.8994,-0.356 -1.0964,-0.3424 -1.1011,-0.3215 -0.4957,-0.0768 v 0 l -0.6383,-0.099 -1.1369,-0.16372 -1.143,-0.0876 -0.8238,-0.004 v 0 l -0.323,-0.002 -1.1433,0.0425 -1.1278,0.21138 -1.1273,0.21977 -0.0016,3.7e-4 v 0 l -1.1147,0.26298 -1.1097,0.2931 -1.0932,0.3447 -0.2993,0.1277 v 0 l -0.7569,0.323 -1.0427,0.4787 -0.9973,0.5677 -0.5621,0.32 v 0 l -0.4352,0.2478 -0.9238,0.6808 -0.918,0.6891 -0.716399,0.6517 v 0 l -0.1316,0.1198 -0.7987,0.8373 -0.7117,0.9385 -0.5611,1.0348 -0.0255,0.0701 v 0 l -0.3776,1.0379 -0.2561,1.1502 -0.0954,1.174 -0.0027,0.304 v 0 l -0.0077,0.879 0.1719,1.1673 0.2452,1.1552 0.1819,0.4923 v 0 l 0.2276,0.6157 0.4865,1.0768 0.5494,1.0465 0.4187,0.6158 v 0 l 0.2453,0.3608 0.7458,0.9153 0.828699,0.8409 0.746,0.6154 v 0 l 0.1647,0.1359 0.9639,0.6816 1.0199,0.5939 1.0359,0.4674 0.0505,0.0192 v 0 l 1.0358,0.3939 1.1274,0.2915 1.1441,0.2031 0.3276,0.0395 v 0 l 0.8285,0.0998 1.164,-0.0101 1.1629,-0.0307 0.5978,-0.0779 v 0 l 0.5563,-0.0725 1.1484,-0.1864 1.1362,-0.2525 0.8447,-0.2333 v 0 l 0.276,-0.0762 1.1158,-0.3259 1.1158,-0.3258 1.1423,-0.161"
        style="fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -1145,12 +1193,13 @@ SIL Open Font License (OFL)
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
-       inkscape:label="AutoSatin 3" />
+       inkscape:label="AutoSatin 3"
+       inkstitch:max_stitch_length_mm="6" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-:"
-     style="display:none"
+     style="display:inline"
      id="g415">
     <path
        id="path365-9"
@@ -1164,7 +1213,8 @@ SIL Open Font License (OFL)
        inkstitch:zigzag_spacing_mm="0.3"
        sodipodi:nodetypes="cccccccccccccc"
        inkstitch:ties="0"
-       inkstitch:force_lock_stitches="True" />
+       inkstitch:force_lock_stitches="True"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:0.378;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.378, 0.378;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
        d="M 4.846921,69.56902 6.565967,63.55511"
@@ -1182,12 +1232,13 @@ SIL Open Font License (OFL)
        inkstitch:zigzag_spacing_mm="0.3"
        sodipodi:nodetypes="cccccccccccccc"
        inkstitch:ties="0"
-       inkstitch:force_lock_stitches="True" />
+       inkstitch:force_lock_stitches="True"
+       inkstitch:max_stitch_length_mm="6" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-;"
-     style="display:none"
+     style="display:inline"
      id="g419">
     <path
        id="path337-6-2"
@@ -1201,7 +1252,8 @@ SIL Open Font License (OFL)
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="0"
-       inkstitch:force_lock_stitches="True" />
+       inkstitch:force_lock_stitches="True"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:0.378;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.378, 0.378;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="M 4.846921,69.56902 6.565967,63.55511"
@@ -1219,12 +1271,13 @@ SIL Open Font License (OFL)
        inkstitch:zigzag_spacing_mm="0.3"
        sodipodi:nodetypes="cccccccccccccc"
        inkstitch:ties="0"
-       inkstitch:force_lock_stitches="True" />
+       inkstitch:force_lock_stitches="True"
+       inkstitch:max_stitch_length_mm="6" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-="
-     style="display:none"
+     style="display:inline"
      id="g427">
     <path
        id="path361-7"
@@ -1238,7 +1291,8 @@ SIL Open Font License (OFL)
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay="False"
        inkstitch:ties="0"
-       inkstitch:force_lock_stitches="True" />
+       inkstitch:force_lock_stitches="True"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        id="path361-0"
        style="display:inline;fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:none"
@@ -1251,12 +1305,13 @@ SIL Open Font License (OFL)
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay="False"
        inkstitch:ties="0"
-       inkstitch:force_lock_stitches="True" />
+       inkstitch:force_lock_stitches="True"
+       inkstitch:max_stitch_length_mm="6" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-?"
-     style="display:none"
+     style="display:inline"
      id="g435">
     <path
        id="path365-2-6"
@@ -1270,7 +1325,8 @@ SIL Open Font License (OFL)
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="0"
        inkstitch:force_lock_stitches="True"
-       sodipodi:nodetypes="ccccccccccccccccc" />
+       sodipodi:nodetypes="ccccccccccccccccc"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        id="autosatinrun42"
        style="fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -1290,12 +1346,13 @@ SIL Open Font License (OFL)
        inkstitch:ties="0"
        inkstitch:force_lock_stitches="True"
        inkscape:label="AutoSatin 2"
-       sodipodi:nodetypes="ccccccccccccccssccccccccccccccc" />
+       sodipodi:nodetypes="ccccccccccccccssccccccccccccccc"
+       inkstitch:max_stitch_length_mm="6" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-@"
-     style="display:none"
+     style="display:inline"
      id="g439">
     <path
        id="autosatinrun43"
@@ -1315,7 +1372,8 @@ SIL Open Font License (OFL)
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
-       inkscape:label="AutoSatin 4" />
+       inkscape:label="AutoSatin 4"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        id="autosatin55"
        style="fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:none"
@@ -1325,7 +1383,8 @@ SIL Open Font License (OFL)
        inkstitch:contour_underlay="True"
        inkstitch:satin_column="True"
        inkstitch:contour_underlay_inset_mm="0.2"
-       inkstitch:pull_compensation_mm="0.2" />
+       inkstitch:pull_compensation_mm="0.2"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        id="autosatinrun45"
        style="fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -1346,12 +1405,13 @@ SIL Open Font License (OFL)
        inkstitch:ties="2"
        sodipodi:nodetypes="ccccccscccc"
        inkscape:label="AutoSatin 7"
-       inkstitch:contour_underlay_inset_mm="0.2" />
+       inkstitch:contour_underlay_inset_mm="0.2"
+       inkstitch:max_stitch_length_mm="6" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-A"
-     style="display:none"
+     style="display:inline"
      id="g443">
     <path
        id="autosatinrun44"
@@ -1371,7 +1431,8 @@ SIL Open Font License (OFL)
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
-       sodipodi:nodetypes="csccccccccc" />
+       sodipodi:nodetypes="csccccccccc"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        id="autosatinrun46"
        style="fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -1398,7 +1459,8 @@ SIL Open Font License (OFL)
        inkstitch:zigzag_underlay="False"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        id="autosatin58"
        style="fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:none"
@@ -1410,7 +1472,8 @@ SIL Open Font License (OFL)
        inkstitch:zigzag_underlay="False"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        id="autosatinrun47"
        style="fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -1436,7 +1499,8 @@ SIL Open Font License (OFL)
        inkstitch:zigzag_underlay="False"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        d="M 49.465304,89.735734 C 60.550306,88.194731 63.94192,77.587526 65.584831,71.020492"
        style="font-variation-settings:normal;display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
@@ -1450,7 +1514,7 @@ SIL Open Font License (OFL)
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-B"
-     style="display:none"
+     style="display:inline"
      id="g447">
     <path
        d="m 14.230524,70.843257 4.02167,-21.036427 -1.458408,-21.213204 -5.126524,-1.679378 -1.159411,-0.06761 c -1.533527,0.124592 -3.2839865,0.50354 -4.9569049,1.314915 -1.67322,0.811521 -3.5585004,2.412155 -5.70695269,5.283585"
@@ -1484,7 +1548,8 @@ SIL Open Font License (OFL)
        inkstitch:satin_column="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay="False"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        id="autosatinrun48"
        style="fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -1504,7 +1569,8 @@ SIL Open Font License (OFL)
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
-       sodipodi:nodetypes="cccccccc" />
+       sodipodi:nodetypes="cccccccc"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        id="autosatin62"
        style="fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:none"
@@ -1516,7 +1582,8 @@ SIL Open Font License (OFL)
        inkstitch:ties="3"
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
-       inkstitch:zigzag_underlay="False" />
+       inkstitch:zigzag_underlay="False"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        id="autosatinrun49"
        style="fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -1540,7 +1607,8 @@ SIL Open Font License (OFL)
        inkstitch:satin_column="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay="False"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.51181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.02362, 1.51181;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 36.07539,54.657862 c 8.002148,0.814382 14.02108,4.892209 15.760211,9.537655"
@@ -1560,7 +1628,8 @@ SIL Open Font License (OFL)
        inkstitch:contour_underlay="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
-       inkstitch:pull_compensation_mm="0.2" />
+       inkstitch:pull_compensation_mm="0.2"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        d="M 26.492277,95.507692 C 0.409918,99.558884 3.5977652,80.077312 23.233923,80.310396 c 5.38723,0.06395 11.11966,2.849953 17.315227,3.147777 4.057454,0.195044 8.636815,-0.914319 12.365767,-1.683846 10.453317,-2.157204 14.627838,-8.775378 15.652222,-10.72383"
        style="font-variation-settings:normal;display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
@@ -1574,7 +1643,7 @@ SIL Open Font License (OFL)
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-C"
-     style="display:none"
+     style="display:inline"
      id="g451">
     <path
        d="M 3.2703689,70.975843 9.3691648,45.078057 C 10.812635,39.75617 13.971211,34.253745 19.887378,28.461048 26.516504,24.429885 33.14563,25.290623 39.774756,24.483572 l 3.821304,2.682219 c 1.244416,1.592529 3.163267,4.155433 2.570971,6.729707 -1.035366,4.499969 -5.867637,6.117017 -7.472059,5.440265"
@@ -1608,7 +1677,8 @@ SIL Open Font License (OFL)
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay="False"
-       sodipodi:nodetypes="csssssssccsscscssccccc" />
+       sodipodi:nodetypes="csssssssccsscscssccccc"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        d="M 46.53425,85.144784 C 53.158832,80.021708 57.515668,73.09288 58.998187,71.109301"
        style="font-variation-settings:normal;display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
@@ -1622,7 +1692,7 @@ SIL Open Font License (OFL)
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-D"
-     style="display:none"
+     style="display:inline"
      id="g455">
     <path
        d="m 18.473165,68.500969 3.18198,-15.998291 C 22.750195,44.871571 21.473437,37.359055 17.854446,29.96365 16.550726,28.277636 15.587141,26.353528 12.020815,26.251339 L 9.0415624,26.053789 C 7.3224953,26.698685 6.0952709,27.244262 4.8969522,28.126333 3.1469075,29.414525 1.4653095,31.096255 0.39311689,32.08666"
@@ -1656,7 +1726,8 @@ SIL Open Font License (OFL)
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay="False"
-       sodipodi:nodetypes="ccccccccccccccccc" />
+       sodipodi:nodetypes="ccccccccccccccccc"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        id="autosatinrun51"
        style="fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -1673,7 +1744,8 @@ SIL Open Font License (OFL)
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="False"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        d="m 22.043154,32.86649 c 1.072192,-0.990405 6.841841,-3.000205 8.919681,-3.636344 2.474544,-0.757591 8.151725,-2.112274 10.184725,-2.437121"
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.51181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.02362, 1.51181;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -1696,7 +1768,8 @@ SIL Open Font License (OFL)
        inkstitch:zigzag_underlay="False"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
-       sodipodi:nodetypes="csccccccccssccccc" />
+       sodipodi:nodetypes="csccccccccssccccc"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        d="M 42.138576,90.6614 C 39.126,92.114952 31.932579,95.76198 25.997982,93.901782 19.722626,91.934774 23.296829,84.91218 23.922131,84.361981 c 3.215732,-2.829498 6.691571,-4.193058 13.967713,-4.053301 5.311067,0.102013 11.123267,5.389021 16.747303,4.472458 1.318357,-0.214856 6.743449,-1.531815 10.629988,-5.146345 3.643342,-3.388354 5.167723,-5.539458 6.614527,-8.281873"
        style="font-variation-settings:normal;display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
@@ -1710,7 +1783,7 @@ SIL Open Font License (OFL)
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-E"
-     style="display:none"
+     style="display:inline"
      id="g459">
     <path
        d="M 1.5909903,68.589358 7.8101491,56.576489 C 12.362965,51.166864 8.068603,50.918093 7.6013979,48.436814 4.315277,42.980623 7.2791626,38.092614 8.8888734,33.081499 12.009914,29.577133 15.838528,26.387245 23.157747,24.748737 l 10.637351,0.396492 c 3.901245,2.323115 6.44463,10.665671 1.304247,12.317551 -0.541855,0.174127 -0.92476,0.118195 -1.642093,0.01073 -1.010924,-0.151444 -3.919724,-1.512146 -3.093962,-5.772524 0.60051,-3.318619 8.849577,-5.320859 12.372163,-4.848035"
@@ -1744,7 +1817,8 @@ SIL Open Font License (OFL)
        inkstitch:zigzag_underlay="False"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
-       sodipodi:nodetypes="cccssccssscc" />
+       sodipodi:nodetypes="cccssccssscc"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        d="m 13.457118,54.684752 c 2.531742,1.962784 5.545737,3.00328 8.041393,3.572301 7.242491,1.651321 7.656041,-2.386108 7.661081,-3.497488 0.01537,-3.390071 -2.498377,-5.721235 -5.162115,-6.659239"
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.51181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.02362, 1.51181;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -1766,7 +1840,8 @@ SIL Open Font License (OFL)
        inkstitch:zigzag_underlay="False"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
-       sodipodi:nodetypes="cccccccscccsccccccccc" />
+       sodipodi:nodetypes="cccccccscccsccccccccc"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        d="m 32.400619,88.264883 c 2.343735,-1.370885 5.684052,-4.094027 8.71319,-7.400366 3.263991,-3.562685 5.043749,-6.206502 6.541846,-9.892166"
        style="font-variation-settings:normal;display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
@@ -1780,7 +1855,7 @@ SIL Open Font License (OFL)
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-F"
-     style="display:none"
+     style="display:inline"
      id="g463">
     <path
        d="M 29.521708,68.059027 32.703689,57.275649 39.540147,33.638946 25.809397,32.880465 H 13.611805 L 1.4417791,31.541383 c -3.4351574,5.181543 1.0764574,11.234608 5.520288,10.642353"
@@ -1815,7 +1890,8 @@ SIL Open Font License (OFL)
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
        sodipodi:nodetypes="cccccccccccccccccccccccccccccccc"
-       inkscape:label="Auto-remplissage satin 2" />
+       inkscape:label="Auto-remplissage satin 2"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        id="autosatinrun11"
        style="fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -1835,7 +1911,8 @@ SIL Open Font License (OFL)
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
        sodipodi:nodetypes="cccccccccc"
-       inkscape:label="Auto-remplissage satin 4" />
+       inkscape:label="Auto-remplissage satin 4"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        d="m 37.151126,37.051795 -5.563175,15.263556 c -4.930229,2.150196 -13.288762,0.900241 -15.718854,0.218523"
        style="fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -1890,7 +1967,8 @@ SIL Open Font License (OFL)
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
        sodipodi:nodetypes="cccccccccsscccccc"
-       inkscape:label="Auto-remplissage satin 5" />
+       inkscape:label="Auto-remplissage satin 5"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="M 18.192676,92.9795 C 13.816293,95 3.5661147,93.987406 3.457792,90.473637 c -0.1766175,-5.729115 5.8656419,-6.166315 9.96686,-5.602391 11.821727,1.625507 6.896489,1.034242 10.340652,1.350754 3.275308,0.300995 6.848732,-0.971976 10.89507,-2.87183 2.97227,-1.282799 5.658039,-2.855763 8.235734,-4.538184 3.930209,-2.33738 6.837082,-5.030384 9.586568,-7.778083"
@@ -1903,7 +1981,7 @@ SIL Open Font License (OFL)
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-G"
-     style="display:none"
+     style="display:inline"
      id="g467">
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -1942,7 +2020,8 @@ SIL Open Font License (OFL)
        inkstitch:zigzag_underlay="False"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
-       sodipodi:nodetypes="ccccccccccscccc" />
+       sodipodi:nodetypes="ccccccccccscccc"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.51181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.02362, 1.51181;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="M 15.789622,87.214443 C 22.60333,86.607407 29.849003,81.305748 34.512341,77.113939"
@@ -1968,7 +2047,8 @@ SIL Open Font License (OFL)
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay="False"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
        d="m 24.594924,109.18226 c -11.347727,-5.17958 -0.872323,-16.358749 5.098997,-18.658727 2.927325,-1.12752 4.350545,-1.664735 6.385729,-2.991212 7.469752,-4.245385 13.699573,-7.707664 18.427499,-12.560414 1.161835,-1.010941 2.052074,-2.4083 3.499907,-3.830157"
@@ -1981,7 +2061,7 @@ SIL Open Font License (OFL)
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-H"
-     style="display:none"
+     style="display:inline"
      id="g471">
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.1512, 0.1512;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -2014,7 +2094,8 @@ SIL Open Font License (OFL)
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
-       sodipodi:nodetypes="ccccccccccc" />
+       sodipodi:nodetypes="ccccccccccc"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        id="autosatinrun55"
        style="fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -2033,7 +2114,8 @@ SIL Open Font License (OFL)
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay="False"
-       inkscape:label="AutoSatin 3" />
+       inkscape:label="AutoSatin 3"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.51181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.02362, 1.51181;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 21.760581,52.807711 c 5.029057,-1.381615 16.364606,1.410943 18.193137,2.158591"
@@ -2062,7 +2144,8 @@ SIL Open Font License (OFL)
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay="False"
-       sodipodi:nodetypes="ccccccccccccccccccccc" />
+       sodipodi:nodetypes="ccccccccccccccccccccc"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
        d="m 51.90762,89.076064 c 5.176494,-4.967639 9.354624,-15.874605 9.710906,-18.393005"
@@ -2075,7 +2158,7 @@ SIL Open Font License (OFL)
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-I"
-     style="display:none"
+     style="display:inline"
      id="g475">
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -2096,7 +2179,8 @@ SIL Open Font License (OFL)
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay="False"
-       sodipodi:nodetypes="ccccccccccccccccccc" />
+       sodipodi:nodetypes="ccccccccccccccccccc"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
        d="M 13.017002,92.237415 C 22.366865,93.151048 32.008639,78.507133 33.296741,70.86446"
@@ -2109,7 +2193,7 @@ SIL Open Font License (OFL)
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-J"
-     style="display:none"
+     style="display:inline"
      id="g479">
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.1512, 0.1512;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -2141,7 +2225,8 @@ SIL Open Font License (OFL)
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay="False"
-       sodipodi:nodetypes="ccsssscssssccsssscccccc" />
+       sodipodi:nodetypes="ccsssscssssccsssscccccc"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
        d="M 11.600708,106.40261 C -7.0146224,107.84731 1.4014795,84.598739 28.423551,83.596543 36.026106,83.314579 49.943007,80.069066 52.322534,71.150057"
@@ -2154,7 +2239,7 @@ SIL Open Font License (OFL)
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-K"
-     style="display:none"
+     style="display:inline"
      id="g483">
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.1512, 0.1512;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -2186,7 +2271,8 @@ SIL Open Font License (OFL)
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay="False"
-       sodipodi:nodetypes="cccccscccccc" />
+       sodipodi:nodetypes="cccccscccccc"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:0.377953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
        d="M 19.436209,65.12726 11.796399,86.5674"
@@ -2204,7 +2290,8 @@ SIL Open Font License (OFL)
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay="False"
-       sodipodi:nodetypes="ccccccccccc" />
+       sodipodi:nodetypes="ccccccccccc"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:0.377953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
        d="m 23.813942,63.19866 13.334807,-9.865708 2.149045,-1.571292 2.052461,-2.209487 1.36856,-1.526082 1.823565,-2.348883 0.995452,-1.490734 2.046343,-3.907155 1.15665,-3.224379"
@@ -2238,7 +2325,8 @@ SIL Open Font License (OFL)
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay="False"
-       sodipodi:nodetypes="cscccccccccccccccccccc" />
+       sodipodi:nodetypes="cscccccccccccccccccccc"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
        d="M 56.955999,85.776959 C 59.474381,84.123388 64.731296,77.09871 66.364364,70.79231"
@@ -2251,7 +2339,7 @@ SIL Open Font License (OFL)
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-L"
-     style="display:none"
+     style="display:inline"
      id="g487">
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.1512, 0.1512;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -2283,7 +2371,8 @@ SIL Open Font License (OFL)
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay="False"
-       sodipodi:nodetypes="csccccsccccc" />
+       sodipodi:nodetypes="csccccsccccc"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.51181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.02362, 1.51181;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 1.7440392,83.794948 c -3.0624012,6.47438 8.0813297,12.940937 15.5719328,-2.34442"
@@ -2304,7 +2393,8 @@ SIL Open Font License (OFL)
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay="False"
-       sodipodi:nodetypes="cscccccccc" />
+       sodipodi:nodetypes="cscccccccc"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 43.485974,87.574341 c 3.216621,-3.161625 7.525051,-7.59828 11.166281,-15.899459"
@@ -2317,7 +2407,7 @@ SIL Open Font License (OFL)
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-M"
-     style="display:none"
+     style="display:inline"
      id="g491">
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.1512, 0.1512;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -2348,7 +2438,8 @@ SIL Open Font License (OFL)
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
-       sodipodi:nodetypes="ccccccccc" />
+       sodipodi:nodetypes="ccccccccc"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        d="m 20.475976,44.278002 -0.1157,1.1555 -0.0374,0.3939 v 0 l -0.0725,0.7626 -0.1099,1.1565 -0.1441,1.1507 -0.1138,0.6399 v 0 l -0.0847,0.4768 -0.2024,1.1279 -0.2051,1.1273 -0.1722,0.9458 v 0 l -0.033,0.1814 -0.2371,1.1218 -0.2596,1.1165 -0.2664,1.1149 -0.0265,0.1107 v 0 l -0.2399,1.0041 -0.2746,1.1131 -0.2791,1.1121 -0.106,0.3981 v 0 l -0.1892,0.7098 -0.3141,1.1029 -0.3152,1.1018 -0.1985,0.6817 v 0 l -0.1215,0.4172 -0.3199,1.0989 -0.32,1.0988 -0.252,0.982 v 0 l -0.0316,0.1229 -0.2779,1.1039 -0.2779,1.1039 -0.2796,1.1037 -0.0525,0.1881 v 0 l -0.2543,0.9116 -0.2824,1.1083 -0.2785,1.1096 -0.1255,0.4873 v 0 l -0.1599,0.621 -0.2955,1.1064 -0.3167,1.0988 -0.2326,0.7732 v 0 l -0.0966,0.3212 -0.3293,1.0943 -0.3293,1.0944 -0.3216,1.069 v 0 l -0.0076,0.0253 -0.327,1.0948 -0.3049,1.0988 -0.3201,1.096 -0.0962,0.2696 v 0 l -0.2869,0.8037 -0.5254,1.0208 -0.6411,0.9659 -0.4232,0.3915"
        style="fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -2368,7 +2459,8 @@ SIL Open Font License (OFL)
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay="False"
-       sodipodi:nodetypes="cccccccccccccccccccccccccccccc" />
+       sodipodi:nodetypes="cccccccccccccccccccccccccccccc"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.51181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.02362, 1.51181;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="M 24.588426,40.685736 C 27.028336,37.18888 32.076189,32.467274 35.10358,30.235447"
@@ -2389,7 +2481,8 @@ SIL Open Font License (OFL)
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
-       sodipodi:nodetypes="cccccccccccc" />
+       sodipodi:nodetypes="cccccccccccc"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        d="m 44.780476,42.988702 -0.0125,0.5586 v 0 l -0.0137,0.6076 -0.018,1.1666 -0.011,1.1668 -0.0111,0.7166 v 0 l -0.007,0.4499 -0.0574,1.1646 -0.0895,1.1764 -0.0806,0.8585 v 0 l -0.0258,0.2755 -0.1349,1.1309 -0.1574,1.1285 -0.1671,1.0902 v 0 l -0.0055,0.0358 -0.1821,1.1246 -0.1821,1.1246 -0.2016,1.1208 -0.0388,0.2008 v 0 l -0.1768,0.9174 -0.2156,1.1182 -0.2156,1.1183 -0.0845,0.438 v 0 l -0.1311,0.6802 -0.2037,1.1198 -0.1992,1.1195 -0.1238,0.6789 v 0 l -0.0802,0.4395 -0.1703,1.1211 -0.1698,1.1212 -0.1502,0.9312 v 0 l -0.0305,0.1892 -0.192,1.1195 -0.2385,1.1567 -0.2556,1.1208 v 0 l -0.0071,0.0309 -0.2503,1.1106 -0.2359,1.1141 -0.2206,1.1177 -0.0403,0.2059 v 0 l -0.1789,0.9121 -0.2222,1.1173 -0.2401,1.1131 -0.088,0.4419 v 0 l -0.1342,0.6739 -0.206,1.1182 -0.2229,1.1552 -0.1213,0.6461 v 0 l -0.0941,0.501 -0.1883,1.1606 -0.1012,1.1383 -0.1777,0.8105"
        style="fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -2409,7 +2502,8 @@ SIL Open Font License (OFL)
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay="False"
-       sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccc" />
+       sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccc"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.51181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.02362, 1.51181;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 49.028039,38.523951 c 1.84555,-3.047132 6.497672,-7.63221 10.654055,-8.841699"
@@ -2431,7 +2525,8 @@ SIL Open Font License (OFL)
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay="False"
-       sodipodi:nodetypes="cscccccccccccc" />
+       sodipodi:nodetypes="cscccccccccccc"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 72.782086,87.411363 c 8.049343,0.813091 17.875578,-8.483494 20.0902,-16.695875"
@@ -2444,7 +2539,7 @@ SIL Open Font License (OFL)
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-N"
-     style="display:none"
+     style="display:inline"
      id="g495">
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.1512, 0.1512;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -2475,7 +2570,8 @@ SIL Open Font License (OFL)
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay="False"
-       sodipodi:nodetypes="ccccccccccc" />
+       sodipodi:nodetypes="ccccccccccc"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        d="m 18.015876,42.654002 -0.0559,1.1829 -0.0826,1.1842 -0.0117,0.2756 v 0 l -0.0389,0.9133 -0.0732,1.1321 -0.0773,1.1322 -0.0328,0.481 v 0 l -0.0445,0.6511 -0.1236,1.1289 -0.1386,1.1268 -0.0999,0.7354 v 0 l -0.0529,0.3895 -0.1527,1.1249 -0.1853,1.1204 -0.1679,0.9875 v 0 l -0.0224,0.1321 -0.1904,1.1197 -0.2065,1.1166 -0.2349,1.1109 -0.0267,0.1219 v 0 l -0.2161,0.9875 -0.2428,1.1095 -0.2428,1.1094 -0.0906,0.3725 v 0 l -0.1777,0.7305 -0.2898,1.0999 -0.2998,1.1421 -0.1652,0.5722 v 0 l -0.1623,0.562 -0.348,1.1284 -0.375,1.1184 -0.2539,0.674 v 0 l -0.1598,0.4244 -0.4591,1.0747 -0.4327,1.076 -0.3458,0.8133 v 0 l -0.1045,0.2459 -0.4527,1.06 -0.446,1.0679 -0.418,1.005 v 0 l -0.0266,0.0639 -0.4858,1.0664 -0.4867,1.0662 -0.5741,1.0107 -0.0554,0.0711 v 0 l -0.6669,0.8557 -0.585,0.9916 -0.5219,1.015 -0.1701,0.2325"
        style="fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -2495,7 +2591,8 @@ SIL Open Font License (OFL)
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay="False"
-       sodipodi:nodetypes="ccccccccccccccccccccc" />
+       sodipodi:nodetypes="ccccccccccccccccccccc"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.51181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.02362, 1.51181;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 21.662157,39.729062 c 2.696729,-4.335649 8.254849,-9.474557 12.36687,-10.159954"
@@ -2517,7 +2614,8 @@ SIL Open Font License (OFL)
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay="False"
-       sodipodi:nodetypes="csccccccsccc" />
+       sodipodi:nodetypes="csccccccsccc"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="M 51.393491,86.556553 C 60.342014,84.186651 65.386812,79.039522 67.601432,70.827141"
@@ -2530,7 +2628,7 @@ SIL Open Font License (OFL)
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-O"
-     style="display:none"
+     style="display:inline"
      id="g499">
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -2551,7 +2649,8 @@ SIL Open Font License (OFL)
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
-       sodipodi:nodetypes="cccscccccccccccccccccccsccccscccccccscccccccccccccc" />
+       sodipodi:nodetypes="cccscccccccccccccccccccsccccscccccccscccccccccccccc"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.51181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.02362, 1.51181;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="M 41.268175,82.706607 C 44.085108,79.9143 51.315496,72.125666 52.599581,63.8547 53.291435,59.398377 53.359644,53.454776 51.65725,49.667131 50.350143,46.758957 48.683884,44.497513 46.738847,43.388086"
@@ -2572,7 +2671,8 @@ SIL Open Font License (OFL)
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
-       sodipodi:nodetypes="ccccsccccsccccccc" />
+       sodipodi:nodetypes="ccccsccccsccccccc"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 50.081186,86.375313 c 9.065445,-0.363816 13.506632,-7.43674 15.13562,-15.585394"
@@ -2585,7 +2685,7 @@ SIL Open Font License (OFL)
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-P"
-     style="display:none"
+     style="display:inline"
      id="g503">
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.1512, 0.1512;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -2617,7 +2717,8 @@ SIL Open Font License (OFL)
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay="False"
-       sodipodi:nodetypes="csccccsccc" />
+       sodipodi:nodetypes="csccccsccc"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.51181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.02362, 1.51181;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 26.287635,39.210828 c 3.105626,-3.557317 7.406311,-8.521569 14.96984,-9.357041"
@@ -2638,7 +2739,8 @@ SIL Open Font License (OFL)
        inkstitch:ties="3"
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
-       inkstitch:zigzag_underlay="False" />
+       inkstitch:zigzag_underlay="False"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        d="M 22.512742,58.573184 C 15.90377,55.912381 23.10151,42.162296 22.119195,39.456897"
        style="display:inline;fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -2658,7 +2760,8 @@ SIL Open Font License (OFL)
        inkstitch:ties="3"
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
-       inkstitch:zigzag_underlay="False" />
+       inkstitch:zigzag_underlay="False"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        id="autosatin89"
        style="fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:none"
@@ -2670,7 +2773,8 @@ SIL Open Font License (OFL)
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay="False"
-       sodipodi:nodetypes="cccccccccccccccc" />
+       sodipodi:nodetypes="cccccccccccccccc"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="M 7.2940355,92.831813 C 6.9001465,92.981085 2.5303552,93.382263 1.5056054,90.512693 0.83135358,88.62461 1.2240926,84.631872 2.3718746,82.976013 5.3717545,78.648208 11.118644,78.2245 18.344782,81.191619 c 5.746625,2.359617 10.617443,4.403089 14.935416,3.935951 5.036575,-0.544879 8.883189,-1.901108 12.264213,-5.506171 2.575564,-2.74623 3.685687,-5.669164 5.007993,-8.596442"
@@ -2683,7 +2787,7 @@ SIL Open Font License (OFL)
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Q"
-     style="display:none"
+     style="display:inline"
      id="g507">
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.1512, 0.1512;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -2715,7 +2819,8 @@ SIL Open Font License (OFL)
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay="False"
-       sodipodi:nodetypes="ccssccsccc" />
+       sodipodi:nodetypes="ccssccsccc"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.51181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.02362, 1.51181;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 38.47048,28.452051 c 1.928572,0.762085 3.076293,2.12683 6.458898,6.101538 2.934558,3.448233 4.912051,10.420033 5.791879,15.873131 2.312663,14.333678 -8.390425,30.741293 -10.290378,31.318952"
@@ -2743,7 +2848,8 @@ SIL Open Font License (OFL)
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay="False"
-       sodipodi:nodetypes="ccccscccscccsssccsscccccsccccccc" />
+       sodipodi:nodetypes="ccccscccscccsssccsscccccsccccccc"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:0.377953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
        d="m 33.433046,84.13336 -0.356061,-4.365405 c -2.898875,-4.31681 -3.002317,-4.629632 -7.03108,-6.344574 -3.437845,-0.18101 -5.313165,1.10002 -7.343545,2.688295 l -2.349085,2.318784"
@@ -2762,7 +2868,8 @@ SIL Open Font License (OFL)
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay="False"
-       sodipodi:nodetypes="csccscccccsccccccc" />
+       sodipodi:nodetypes="csccscccccsccccccc"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 44.170907,88.764616 c 6.22219,-1.960217 16.585278,-9.470603 18.36628,-18.160523"
@@ -2775,7 +2882,7 @@ SIL Open Font License (OFL)
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-R"
-     style="display:none"
+     style="display:inline"
      id="g511">
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.1512, 0.1512;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -2807,7 +2914,8 @@ SIL Open Font License (OFL)
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay="False"
        inkstitch:ties="3"
-       sodipodi:nodetypes="ccccccccccc" />
+       sodipodi:nodetypes="ccccccccccc"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.51181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.02362, 1.51181;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="M 4.6716605,88.38313 C 3.5107454,86.007061 2.8115947,81.011112 5.8382859,72.632167 11.544619,56.835032 27.739949,31.903949 43.08136,30.75212"
@@ -2828,7 +2936,8 @@ SIL Open Font License (OFL)
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay="False"
        inkstitch:ties="3"
-       sodipodi:nodetypes="cccccsccc" />
+       sodipodi:nodetypes="cccccsccc"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.51181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.02362, 1.51181;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="M 40.164793,60.388277 C 28.552878,70.968188 16.530371,56.984463 31.152201,55.87879 c 6.597117,0.04919 10.071068,8.04201 9.253612,12.019254"
@@ -2849,7 +2958,8 @@ SIL Open Font License (OFL)
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay="False"
        inkstitch:ties="3"
-       sodipodi:nodetypes="cccccccc" />
+       sodipodi:nodetypes="cccccccc"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 51.199174,85.10627 c 5.738121,-3.794407 8.015278,-8.099231 9.658442,-14.017815"
@@ -2862,7 +2972,7 @@ SIL Open Font License (OFL)
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-S"
-     style="display:none"
+     style="display:inline"
      id="g515">
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.1512, 0.1512;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -2885,7 +2995,8 @@ SIL Open Font License (OFL)
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay="False"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="M 2.1856828,94.435635 C -0.13581784,92.728699 -1.3885932,89.632828 1.7589915,85.849218 3.13514,84.194994 5.3792812,82.107206 8.3625603,80.61231 15.461371,77.055157 30.584342,85.23309 39.204892,84.294262 53.651891,82.720901 59.225274,73.600797 60.868423,70.879002"
@@ -2898,7 +3009,7 @@ SIL Open Font License (OFL)
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-T"
-     style="display:none"
+     style="display:inline"
      id="g4375">
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.1512, 0.1512;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -2930,7 +3041,8 @@ SIL Open Font License (OFL)
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay="False"
-       sodipodi:nodetypes="ccccccccccccccc" />
+       sodipodi:nodetypes="ccccccccccccccc"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        d="m 27.924976,32.663502 1.072,0.4442 0.3558,0.1482 v 0 l 0.7154,0.298 1.0712,0.4462 1.0741,0.4393 0.6275,0.245 v 0 l 0.4536,0.1771 1.0817,0.4203 1.0817,0.4204 0.8961,0.3482 v 0 l 0.1856,0.0722 1.0849,0.4112 1.0834,0.4145 1.1022,0.3495 0.0896,0.0278 v 0 l 1.0139,0.3139 1.1135,0.2848 1.1374,0.1608 0.4091,0.0281 v 0 l 0.7291,0.0502 1.1372,0.0614 1.1797,0.0362 0.7194,7e-4 v 0 l 0.4345,4e-4 1.1511,-0.0089 1.1517,-0.0651 1.0044,-0.2295 v 0 l 0.1021,-0.0234 1.0993,-0.3642 1.1238,-0.3647 1.0066,-0.529 0.1091,-0.153"
        style="fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -2951,7 +3063,8 @@ SIL Open Font License (OFL)
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay="False"
-       inkscape:label="AutoSatin 3" />
+       inkscape:label="AutoSatin 3"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        id="path3179"
        style="fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:none"
@@ -2964,7 +3077,8 @@ SIL Open Font License (OFL)
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay="False"
-       sodipodi:nodetypes="ccccccccccccc" />
+       sodipodi:nodetypes="ccccccccccccc"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="M 28.360447,95.398322 C 41.453595,95.315515 49.819352,88.558128 56.360273,71.255419"
@@ -2977,7 +3091,7 @@ SIL Open Font License (OFL)
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-U"
-     style="display:none"
+     style="display:inline"
      id="g4383">
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.1512, 0.1512;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -3008,7 +3122,8 @@ SIL Open Font License (OFL)
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay="False"
        inkstitch:ties="3"
-       sodipodi:nodetypes="ccccccccccccccccc" />
+       sodipodi:nodetypes="ccccccccccccccccc"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:0.377953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
        d="M 45.764298,88.11865 47.960478,86.55504 46.596273,69.95836 49.498937,48.69457 50.46634,36.26836"
@@ -3027,7 +3142,8 @@ SIL Open Font License (OFL)
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay="False"
        inkstitch:ties="3"
-       sodipodi:nodetypes="ccsccccccccccc" />
+       sodipodi:nodetypes="ccsccccccccccc"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 60.517802,94.257049 c 6.125842,-1.444546 12.911735,-13.5095 14.24533,-22.720864"
@@ -3040,7 +3156,7 @@ SIL Open Font License (OFL)
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-V"
-     style="display:none"
+     style="display:inline"
      id="g4391">
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.1512, 0.1512;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -3071,7 +3187,8 @@ SIL Open Font License (OFL)
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay="False"
        inkstitch:ties="3"
-       sodipodi:nodetypes="cccccccccc" />
+       sodipodi:nodetypes="cccccccccc"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.51181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.02362, 1.51181;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 31.338546,91.637025 c 1.05433,-2.013292 2.682884,-9.266375 4.740329,-14.333034 2.431658,-5.988196 7.05888,-13.122201 10.052082,-18.408586 2.968128,-5.242101 7.182349,-8.571404 9.440693,-12.292963 4.518495,-7.446091 3.694183,-13.887293 -2.273652,-11.438897"
@@ -3092,7 +3209,8 @@ SIL Open Font License (OFL)
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay="False"
        inkstitch:ties="3"
-       sodipodi:nodetypes="cccsccccc" />
+       sodipodi:nodetypes="cccsccccc"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 45.88692,79.340109 c 4.716049,3.760104 19.797903,1.962472 23.816936,-7.838969"
@@ -3105,7 +3223,7 @@ SIL Open Font License (OFL)
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-W"
-     style="display:none"
+     style="display:inline"
      id="g4401">
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.1512, 0.1512;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -3137,7 +3255,8 @@ SIL Open Font License (OFL)
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay="False"
        inkstitch:ties="3"
-       sodipodi:nodetypes="cccccccccc" />
+       sodipodi:nodetypes="cccccccccc"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.51181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.02362, 1.51181;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="M 19.331928,92.081211 C 29.272474,90.48018 33.38938,80.778525 34.866753,77.456918"
@@ -3166,7 +3285,8 @@ SIL Open Font License (OFL)
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay="False"
        inkstitch:ties="3"
-       sodipodi:nodetypes="cscccsccccc" />
+       sodipodi:nodetypes="cscccsccccc"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.51181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.02362, 1.51181;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 47.721455,88.653405 c 7.866722,0.183295 12.14904,-7.63509 15.07544,-13.409385 3.449424,-6.632543 12.923566,-38.722239 6.267266,-40.083993 -1.154288,-0.14529 -2.843985,0.550498 -4.769734,2.932638"
@@ -3188,7 +3308,8 @@ SIL Open Font License (OFL)
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay="False"
        inkstitch:ties="3"
-       sodipodi:nodetypes="cccssccc" />
+       sodipodi:nodetypes="cccssccc"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 72.031676,84.82482 c 3.373672,-2.520549 7.789141,-7.150459 10.227952,-13.246603"
@@ -3201,7 +3322,7 @@ SIL Open Font License (OFL)
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-X"
-     style="display:none"
+     style="display:inline"
      id="g4413">
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.1512, 0.1512;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -3232,7 +3353,8 @@ SIL Open Font License (OFL)
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay="False"
        inkstitch:ties="3"
-       sodipodi:nodetypes="ccccccc" />
+       sodipodi:nodetypes="ccccccc"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:0.377953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
        d="m 36.669907,59.038961 4.395626,-4.026609 c 3.310645,-2.294886 6.28366,-4.919875 8.642309,-8.145531 2.012922,-2.979025 4.445858,-5.385615 5.385893,-9.826873 -0.548307,-2.374159 0.145524,-4.442042 -1.759533,-7.587641 -1.22193,-0.685415 -2.756734,-1.560503 -4.533458,-1.201557 -1.889609,0.569438 -3.382931,1.910767 -3.699254,4.027884"
@@ -3251,7 +3373,8 @@ SIL Open Font License (OFL)
        inkstitch:ties="3"
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
-       inkstitch:zigzag_underlay="False" />
+       inkstitch:zigzag_underlay="False"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:0.377953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 30.132508,62.854085 -4.775964,3.37958 -8.75178,6.183888 -6.29429,7.231061 -0.3630344,7.472575"
@@ -3270,7 +3393,8 @@ SIL Open Font License (OFL)
        inkstitch:ties="3"
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
-       inkstitch:zigzag_underlay="False" />
+       inkstitch:zigzag_underlay="False"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        id="path12413"
        style="fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:none"
@@ -3282,7 +3406,8 @@ SIL Open Font License (OFL)
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay="False"
        inkstitch:ties="3"
-       sodipodi:nodetypes="cscccsc" />
+       sodipodi:nodetypes="cscccsc"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 57.946395,85.93085 c 3.65835,-1.573652 9.731303,-8.435716 11.567516,-14.799911"
@@ -3295,7 +3420,7 @@ SIL Open Font License (OFL)
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Y"
-     style="display:none"
+     style="display:inline"
      id="g4423">
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.1512, 0.1512;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -3326,7 +3451,8 @@ SIL Open Font License (OFL)
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay="False"
-       sodipodi:nodetypes="cssccccsscccccc" />
+       sodipodi:nodetypes="cssccccsscccccc"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        d="m 40.9062,57.4013 0.1186,-0.8002 0.1661,-1.1315 0.1662,-1.1314 0.0718,-0.5861 v 0 l 0.0674,-0.5489 0.1115,-1.1382 0.1106,-1.1384 0.0818,-0.8422 v 0 l 0.0288,-0.2961 0.1106,-1.1384 0.0872,-1.1402 0.0796,-1.0989 v 0 l 0.003,-0.0417 0.0825,-1.1406 0.0826,-1.1406 0.0605,-1.1414 0.0109,-0.2144 v 0 l 0.047,-0.9272 0.0362,-1.143 0.0362,-1.143 0.0255,-0.4704 v 0 l 0.0363,-0.6711 0.048,-1.1417 0.0515,-1.1415 0.0196,-0.7289 v 0 l 0.0119,-0.4432 0.0237,-1.1742 0.0742,-1.1658 0.0708,-0.8978 v 0 l 0.0198,-0.2515 0.158,-1.1243"
        style="fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -3347,7 +3473,8 @@ SIL Open Font License (OFL)
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay="False"
-       inkscape:label="AutoSatin 3" />
+       inkscape:label="AutoSatin 3"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="M 5.1868436,100.4006 C 1.6462101,98.251574 0.13701246,89.920647 7.277599,84.655213 14.963037,78.988008 26.622755,83.820084 33.345115,83.3685 41.534568,82.818362 48.679334,79.310275 52.543791,71.629827"
@@ -3360,7 +3487,7 @@ SIL Open Font License (OFL)
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Z"
-     style="display:none"
+     style="display:inline"
      id="g543">
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.1512, 0.1512;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -3391,7 +3518,8 @@ SIL Open Font License (OFL)
        inkstitch:zigzag_underlay="False"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
-       sodipodi:nodetypes="csssscccscccccccc" />
+       sodipodi:nodetypes="csssscccscccccccc"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        id="path5418"
        style="fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:none"
@@ -3403,7 +3531,8 @@ SIL Open Font License (OFL)
        inkstitch:zigzag_underlay="False"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
-       sodipodi:nodetypes="ccscccccccccccc" />
+       sodipodi:nodetypes="ccscccccccccccc"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.51181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.02362, 1.51181;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="M 2.91355,84.9038 C 6.1772561,82.369514 14.223104,78.178309 18.09742,77.856406"
@@ -3424,7 +3553,8 @@ SIL Open Font License (OFL)
        inkstitch:zigzag_underlay="False"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
-       sodipodi:nodetypes="csccccc" />
+       sodipodi:nodetypes="csccccc"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="M 44.231773,82.356628 C 45.632382,81.634937 58.89612,74.346313 60.300466,71.503557"
@@ -3437,7 +3567,7 @@ SIL Open Font License (OFL)
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-\"
-     style="display:none"
+     style="display:inline"
      id="g551">
     <path
        d="m 28.0435,92.1262 -0.3686,-0.2605 -0.7415,-0.8682 -0.7116,-0.9164 -0.5657,-0.6999 v 0 l -0.1666,-0.2061 -0.6791,-0.9473 -0.6721,-0.96 -0.6127,-0.8538 v 0 l -0.0577,-0.0803 -0.6616,-0.955 -0.6484,-0.9644 -0.573,-1.005 -0.0363,-0.0642 v 0 L 21.0162,82.4022 20.4635,81.3866 19.889,80.3807 19.7643,80.1573 v 0 L 19.3224,79.3658 18.7577,78.35 18.2017,77.331 18.0074,76.9544 v 0 l -0.3343,-0.6483 -0.5215,-1.0243 -0.4994,-1.0358 -0.273,-0.5618 v 0 l -0.2329,-0.4795 -0.4792,-1.0583 -0.4653,-1.065 -0.3156,-0.7311 v 0 l -0.145,-0.3361 -0.4471,-1.0727 -0.4381,-1.0764 -0.3599,-0.8932 v 0 l -0.0745,-0.1848 -0.4344,-1.0779 -0.4345,-1.078 -0.39,-1.0603 v 0 L 12.1518,63.5413 11.7777,62.4416 11.4255,61.3342 11.0907,60.222 11.0535,60.0906 v 0 L 10.7741,59.1051 10.4756,57.9828 10.2031,56.853 10.132,56.5559 v 0 L 9.9327,55.7226 9.66234,54.5923 9.40256,53.4594 9.29781,52.9991 v 0 L 9.14464,52.326 8.88672,51.1926 8.62441,50.0604 8.47323,49.4401 v 0 L 8.34923,48.9313 8.07405,47.8022 7.83299,46.6669 7.66779,45.8771 v 0 L 7.59547,45.5313 7.36743,44.3952 7.16394,43.2563 6.94225,42.2972 v 0 L 6.90072,42.1175 6.60981,40.9954 6.21986,39.8791 6.02629,38.7686"
@@ -3458,12 +3588,13 @@ SIL Open Font License (OFL)
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay="False"
-       inkscape:label="AutoSatin 2" />
+       inkscape:label="AutoSatin 2"
+       inkstitch:max_stitch_length_mm="6" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-^"
-     style="display:none"
+     style="display:inline"
      id="g559">
     <path
        id="path557"
@@ -3477,7 +3608,8 @@ SIL Open Font License (OFL)
        inkstitch:zigzag_underlay="False"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="0"
-       inkstitch:force_lock_stitches="True" />
+       inkstitch:force_lock_stitches="True"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:none"
        d="m 20.478657,28.05702 c 0.914401,0 1.371602,0.4572 1.371602,1.3716 0,0.6096 0.1524,1.219203 0.457201,1.82881 0.304801,0.9144 0.609601,1.6764 0.914402,2.286 l 1.371603,1.3716 c 0.304801,0.6096 0.609601,1.066803 0.914402,1.37161 0.609601,1.2192 1.371602,2.286 2.286004,3.2004 0.609601,1.219207 1.371603,2.28601 2.286005,3.20041 0.914401,0.9144 1.828803,1.9812 2.743205,3.2004 0.914402,0.914407 1.981204,1.82881 3.200406,2.74321 0.609601,0.3048 1.219203,0.762 1.828804,1.3716 0.793978,1.023421 1.612125,1.575299 1.689064,2.713981 l -0.137821,0.998222 m -18.924882,-25.657849 -0.05795,-0.0064 c -0.677428,-0.07488 -1.066802,-0.09227 -1.33566,0.885027 l -0.435189,4.150589 v 4.11481 c 0,1.8288 0.609601,3.505203 1.828804,5.02921 1.219202,1.524 2.286004,2.895603 3.200406,4.11481 0.914402,1.2192 1.981204,2.4384 3.200406,3.6576 1.524003,1.524007 2.895606,2.74321 4.114808,3.65761 0.914402,0.9144 2.133605,1.524 3.657608,1.8288 1.325121,0.264752 3.604617,0.324438 4.62097,-1.411115 m -0.181156,-5.146814 -5.309641,8.115928 m -5.665323,-18.570944 -7.248487,5.874431 m -3.37093,-14.020298 5.617357,-0.524269"
@@ -3490,12 +3622,13 @@ SIL Open Font License (OFL)
        inkstitch:zigzag_underlay="False"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="0"
-       inkstitch:force_lock_stitches="True" />
+       inkstitch:force_lock_stitches="True"
+       inkstitch:max_stitch_length_mm="6" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-_"
-     style="display:none"
+     style="display:inline"
      id="g563">
     <path
        id="path361-6"
@@ -3508,12 +3641,13 @@ SIL Open Font License (OFL)
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay="False"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:max_stitch_length_mm="6" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-`"
-     style="display:none"
+     style="display:inline"
      id="g567">
     <path
        style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:0.378;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.500062, 0.500062;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
@@ -3532,12 +3666,13 @@ SIL Open Font License (OFL)
        inkstitch:zigzag_underlay="False"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:max_stitch_length_mm="6" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-’"
-     style="display:none"
+     style="display:inline"
      id="g1476">
     <path
        style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:0.378;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.500062, 0.500062;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
@@ -3556,12 +3691,13 @@ SIL Open Font License (OFL)
        inkstitch:zigzag_underlay="False"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:max_stitch_length_mm="6" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-a"
-     style="display:none"
+     style="display:inline"
      id="g571">
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:0.377953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -3587,7 +3723,8 @@ SIL Open Font License (OFL)
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:contour_underlay="True"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        d="m 21.8389,80.344961 -0.0414,-0.3261 -0.1452,-1.1446 -0.1188,-1.1475 -0.024,-1.079 v 0 l -0.002,-0.0876 -0.0157,-1.1584 0.0428,-1.1573 0.0783,-1.1548 0.0131,-0.1532 v 0 l 0.0853,-0.9991 0.2107,-1.1395 0.2218,-1.1363 0.1161,-0.3787 v 0 l 0.2218,-0.724 0.3632,-1.0991 0.3728,-1.0946 0.2254,-0.6036 v 0 l 0.1727,-0.4628 0.5218,-1.0382 0.5701,-0.9957 0.4575,-0.7891 v 0 l 0.1289,-0.2222 0.6619,-0.9318 0.6564,-0.9709 0.6279,-0.9559"
        style="display:inline;fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
@@ -3607,7 +3744,8 @@ SIL Open Font License (OFL)
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay="False"
-       inkscape:label="AutoSatin 4" />
+       inkscape:label="AutoSatin 4"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="M 36.806083,91.426435 C 41.568786,85.204891 43.742667,79.10396 45.311499,71.023528"
@@ -3619,7 +3757,7 @@ SIL Open Font License (OFL)
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-b"
-     style="display:none"
+     style="display:inline"
      id="g575">
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.51181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.02362, 1.51181;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -3638,7 +3776,8 @@ SIL Open Font License (OFL)
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:contour_underlay="True"
-       inkstitch:contour_underlay_inset_mm="0.4" />
+       inkstitch:contour_underlay_inset_mm="0.4"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        d="m 1.5091996,87.765261 0.2457,1.116 0.08729,0.3617 v 0 l 0.18297,0.7583 0.20157,1.1155 -0.04377,1.1418 -0.06867,0.6407"
        style="display:inline;fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -3657,7 +3796,8 @@ SIL Open Font License (OFL)
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.51181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.02362, 1.51181;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="M 4.4904011,81.671316 C 7.021787,76.608954 12.50986,66.189448 21.131198,66.05118"
@@ -3674,7 +3814,8 @@ SIL Open Font License (OFL)
        inkstitch:satin_column="True"
        inkstitch:contour_underlay="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 5.6722697,90.359612 c 0.6210253,-6.113724 5.1765733,-6.091381 6.2417693,-6.04624 3.815537,-0.211834 7.675503,1.771379 11.118792,1.60062 1.603294,-0.104766 3.147421,-0.718639 4.632422,-1.332072 2.094634,-0.865264 4.036208,-2.074732 5.955274,-3.280285 1.82111,-1.144017 3.569978,-2.406536 5.257356,-3.739943 1.572368,-1.242522 3.043637,-2.608915 4.523192,-3.960625 0.834576,-0.762463 2.454935,-2.339678 2.454935,-2.339678"
@@ -3686,7 +3827,7 @@ SIL Open Font License (OFL)
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-c"
-     style="display:none"
+     style="display:inline"
      id="g579">
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:0.377953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -3706,7 +3847,8 @@ SIL Open Font License (OFL)
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay="False"
-       sodipodi:nodetypes="csscccscscccccccccccsccccscccccccccc" />
+       sodipodi:nodetypes="csscccscscccccccccccsccccscccccccccc"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 23.821715,86.937752 c 0,0 3.579903,-2.701616 10.274131,-16.180462"
@@ -3718,7 +3860,7 @@ SIL Open Font License (OFL)
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-d"
-     style="display:none"
+     style="display:inline"
      id="g583">
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:0.377953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -3734,7 +3876,8 @@ SIL Open Font License (OFL)
        sodipodi:nodetypes="csssssssccsssssssssccccccccccc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:0.377953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="M 19.829677,84.731431 22.153912,82.168975 21.261624,69.498438"
@@ -3758,7 +3901,8 @@ SIL Open Font License (OFL)
        sodipodi:nodetypes="cccccccccccccc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 32.446575,91.897876 c 5.343543,-2.370397 11.083776,-9.301497 13.448569,-16.697625 l 1.249088,-3.938198"
@@ -3771,7 +3915,7 @@ SIL Open Font License (OFL)
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-e"
-     style="display:none"
+     style="display:inline"
      id="g587">
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.51181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.02362, 1.51181;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -3789,7 +3933,8 @@ SIL Open Font License (OFL)
        inkstitch:satin_column="True"
        inkstitch:ties="3"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 12.82593,92.674734 c 6.209747,-1.503773 7.290436,-3.710084 12.089587,-8.026544 4.957796,-4.418816 6.14697,-9.100681 8.160183,-13.788884"
@@ -3801,7 +3946,7 @@ SIL Open Font License (OFL)
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-f"
-     style="display:none"
+     style="display:inline"
      id="g591">
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.51181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.02362, 1.51181;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -3822,7 +3967,8 @@ SIL Open Font License (OFL)
        inkstitch:ties="3"
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
-       inkstitch:zigzag_underlay="False" />
+       inkstitch:zigzag_underlay="False"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 4.4285319,111.73085 c 5.168899,0.0475 6.7393371,-2.79388 7.8449491,-8.29274 C 12.647882,97.398851 8.346901,91.086358 6.286013,87.573103 5.429002,86.112131 3.648221,82.097131 1.93121,82.446604 -4.554376,83.76665 0.73480399,88.369817 3.419476,87.17507 8.198558,85.048257 19.915387,82.280343 24.022364,70.884688"
@@ -3834,7 +3980,7 @@ SIL Open Font License (OFL)
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-g"
-     style="display:none"
+     style="display:inline"
      id="g595">
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:0.377953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -3853,7 +3999,8 @@ SIL Open Font License (OFL)
        inkstitch:ties="3"
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
-       inkstitch:zigzag_underlay="False" />
+       inkstitch:zigzag_underlay="False"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.51181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.02362, 1.51181;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="M 8.072969,85.313202 C 10.317228,84.515021 17.371725,81.07632 20.697623,76.23116"
@@ -3879,7 +4026,8 @@ SIL Open Font License (OFL)
        inkstitch:ties="3"
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
-       inkstitch:zigzag_underlay="False" />
+       inkstitch:zigzag_underlay="False"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="M 15.504973,125.42796 C 12.36544,124.90959 7.664342,123.68962 6.999867,115.66154 6.547172,110.19215 9.490941,104.44427 15.696762,96.319605 24.774551,84.434954 28.061975,81.585715 38.907161,71.012439"
@@ -3891,7 +4039,7 @@ SIL Open Font License (OFL)
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-h"
-     style="display:none"
+     style="display:inline"
      id="g599">
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.51181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.02362, 1.51181;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -3910,7 +4058,8 @@ SIL Open Font License (OFL)
        inkstitch:satin_column="True"
        inkstitch:contour_underlay="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        id="autosatinrun71-12"
        style="display:inline;fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -3924,7 +4073,8 @@ SIL Open Font License (OFL)
        d="M 0.899703,98.066345 C 0.10037,97.81094 -0.691208,97.515396 -1.424435,97.103299 c -0.633506,-0.556751 -1.243086,-1.208801 -1.401882,-2.069795 -0.19884,-0.858594 0.139324,-1.704501 0.162761,-2.563682 0.277355,-1.886138 0.352033,-3.791195 0.522219,-5.688033 0.06667,-0.83732 0.126695,-1.675386 0.158657,-2.514844 m 3.13378,13.6338 c 0.963641,-0.23893 1.840814,-0.839183 2.327075,-1.715567 0.39954,-0.62971 0.623531,-1.353152 0.89378,-2.040619 0.248618,-1.3394 0.397467,-2.695157 0.612896,-4.04006 0.217415,-1.877373 0.300387,-3.768521 0.410409,-5.654253 m -9.14949,6.4572 c 3.523576,0.172333 7.047153,0.344667 10.57073,0.517"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.51181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.02362, 1.51181;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 5.379171,84.370833 c 1.303281,-3.149345 2.821672,-8.153395 6.64175,-10.468792 3.8314,-2.165589 6.592699,-2.321275 9.063278,-1.93092"
@@ -3944,7 +4094,8 @@ SIL Open Font License (OFL)
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay="False"
-       sodipodi:nodetypes="csccccccc" />
+       sodipodi:nodetypes="csccccccc"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="M 28.590425,94.869538 C 33.282995,91.493636 39.469883,85.29038 44.106673,70.799803"
@@ -3956,7 +4107,7 @@ SIL Open Font License (OFL)
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-i"
-     style="display:none"
+     style="display:inline"
      id="g603">
     <path
        id="autosatinrun73-7"
@@ -3982,7 +4133,8 @@ SIL Open Font License (OFL)
        inkstitch:ties="2"
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
-       inkstitch:zigzag_underlay="False" />
+       inkstitch:zigzag_underlay="False"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        id="autosatin111-4"
        style="display:inline;fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:none"
@@ -3992,7 +4144,8 @@ SIL Open Font License (OFL)
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:contour_underlay="True"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 11.370447,88.982063 c 3.559137,0.297711 6.775533,-3.465693 9.720018,-7.618319 2.277327,-3.438711 4.484387,-6.902601 5.720412,-10.714442"
@@ -4004,7 +4157,7 @@ SIL Open Font License (OFL)
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-j"
-     style="display:none"
+     style="display:inline"
      id="g607">
     <path
        id="autosatinrun73-3-0"
@@ -4031,7 +4184,8 @@ SIL Open Font License (OFL)
        inkstitch:ties="3"
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
-       inkstitch:zigzag_underlay="False" />
+       inkstitch:zigzag_underlay="False"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        id="path605-7"
        style="display:inline;fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:none"
@@ -4039,7 +4193,8 @@ SIL Open Font License (OFL)
        sodipodi:nodetypes="cccssccsccssccc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m -8.989051,118.48196 c -1.815821,-0.13103 -3.853931,-1.26865 -5.141242,-2.35847 -2.504836,-2.12058 -1.268372,-8.56492 0.275366,-12.20181 3.300391,-7.775374 17.6093,-18.141905 20.483206,-21.32857 2.873906,-3.186665 10.283537,-8.022582 13.446457,-11.552987"
@@ -4051,7 +4206,7 @@ SIL Open Font License (OFL)
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-k"
-     style="display:none"
+     style="display:inline"
      id="g611">
     <path
        id="autosatinrun71-1-9"
@@ -4076,7 +4231,8 @@ SIL Open Font License (OFL)
        sodipodi:nodetypes="ccccccccc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        id="autosatinrun75-0"
        style="display:inline;fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -4091,7 +4247,8 @@ SIL Open Font License (OFL)
        sodipodi:nodetypes="csccccscccc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.51181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.02362, 1.51181;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="M 4.78991,75.540325 C 5.686509,69.447153 9.197975,66.124159 12.338936,62.528598"
@@ -4108,7 +4265,8 @@ SIL Open Font License (OFL)
        sodipodi:nodetypes="csccsccc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        id="path2766-1"
        style="display:inline;fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:none"
@@ -4116,7 +4274,8 @@ SIL Open Font License (OFL)
        sodipodi:nodetypes="cccccccccccc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="M 28.018775,96.848175 C 36.781298,95.042185 40.77375,82.375327 42.550198,70.96131"
@@ -4128,7 +4287,7 @@ SIL Open Font License (OFL)
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-l"
-     style="display:none"
+     style="display:inline"
      id="g6106">
     <path
        id="path3771-8"
@@ -4145,7 +4304,8 @@ SIL Open Font License (OFL)
        sodipodi:nodetypes="ccccccccccccc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        id="path3790-9"
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -4157,7 +4317,7 @@ SIL Open Font License (OFL)
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-m"
-     style="display:none"
+     style="display:inline"
      id="g619">
     <path
        id="path3763-2-5"
@@ -4172,7 +4332,8 @@ SIL Open Font License (OFL)
        sodipodi:nodetypes="cccccccc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        id="autosatinrun76-8"
        style="display:inline;fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
@@ -4187,7 +4348,8 @@ SIL Open Font License (OFL)
        sodipodi:nodetypes="cccccc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.51181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.02362, 1.51181;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 3.932704,78.446925 c 0.01381,-3.823894 3.989984,-19.10368 9.290249,-19.437523"
@@ -4205,7 +4367,8 @@ SIL Open Font License (OFL)
        sodipodi:nodetypes="cccccc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        id="autosatinrun77-7"
        style="display:inline;fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
@@ -4220,7 +4383,8 @@ SIL Open Font License (OFL)
        sodipodi:nodetypes="cccccc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.51181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.02362, 1.51181;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="M 21.369589,75.945337 C 23.452717,71.650553 25.46489,58.33753 30.722804,58.357562"
@@ -4237,7 +4401,8 @@ SIL Open Font License (OFL)
        sodipodi:nodetypes="cccccc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        id="path3790-7-26"
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -4247,7 +4412,7 @@ SIL Open Font License (OFL)
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-n"
-     style="display:none"
+     style="display:inline"
      id="g623">
     <path
        id="path3763-2-3-71"
@@ -4262,7 +4427,8 @@ SIL Open Font License (OFL)
        sodipodi:nodetypes="cccccccc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        id="autosatinrun78-2"
        style="display:inline;fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -4277,7 +4443,8 @@ SIL Open Font License (OFL)
        sodipodi:nodetypes="cccccccc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.51181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.02362, 1.51181;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 6.1005777,77.669034 c 0.318893,-0.768642 1.588117,-5.631135 5.1886743,-9.83162 2.911248,-3.396322 6.340825,-4.314241 8.217545,-4.222392"
@@ -4294,7 +4461,8 @@ SIL Open Font License (OFL)
        sodipodi:nodetypes="ccscccccccc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        id="path3790-7-2-8"
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -4306,7 +4474,7 @@ SIL Open Font License (OFL)
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-o"
-     style="display:none"
+     style="display:inline"
      id="g6118">
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:0.377953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -4321,7 +4489,8 @@ SIL Open Font License (OFL)
        sodipodi:nodetypes="ccccccccccc"
        inkstitch:satin_column="True"
        inkstitch:contour_underlay="True"
-       inkstitch:zigzag_spacing_mm="0.3" />
+       inkstitch:zigzag_spacing_mm="0.3"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        id="path6116-4"
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -4332,7 +4501,7 @@ SIL Open Font License (OFL)
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-p"
-     style="display:none"
+     style="display:inline"
      id="g631">
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:0.377953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -4348,7 +4517,8 @@ SIL Open Font License (OFL)
        sodipodi:nodetypes="cccccc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        d="m 2.037413,70.367822 v 0 l -0.13957,0.6857 -0.22193,1.1227 -0.22193,1.1228 -0.12284,0.7152 v 0 l -0.0708,0.4122 -0.12897,1.1382 -0.12896,1.1382 -0.113174,0.9988 v 0 l -0.0158,0.1394 -0.128788,1.1382 -0.05288,1.1441 -0.05074,1.1442 -0.0061,0.1378 v 0 l -0.04463,1.0065 -0.05074,1.1442 -0.01702,1.1458 -0.0029,0.4157 v 0 l -0.005,0.7302 -0.0053,1.146 -0.0053,1.146 -0.0032,0.6921 v 0 l -0.0021,0.4539 -0.0053,1.146 -0.02027,1.1452 -0.05311,0.9676 v 0 l -0.0096,0.1751 -0.06142,1.1427 -0.03468,1.1448 -0.0303,1.1453 -0.0033,0.1036 v 0 l -0.03314,1.0418 -0.01886,1.1457 -0.01887,1.1458 -0.01824,0.3798 v 0 l -0.03665,0.763698 -0.06985,1.142 -0.06954,1.142 -0.03983,0.66 v 0 l -0.02901,0.482 -0.06884,1.142 -0.06884,1.142 -0.01275,0.944 v 0 l -0.0027,0.201 0.0011,1.146 -0.02222,1.144 -0.08489,1.136 -0.0095,0.083 v 0 l -0.119658,1.046 -0.116603,1.132 -0.09579,1.132 -0.0038,0.388 v 0 l -0.0073,0.754 -0.01111,1.141 0.0075,1.143 -0.01257,0.676 v 0 l -0.0085,0.457 -0.03439,1.174 -0.03439,1.173 -0.09102,0.904 v 0 l -0.02576,0.256 -0.124511,1.159 -0.0635,1.138 -0.07213,1.15"
        style="display:inline;fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -4363,7 +4533,8 @@ SIL Open Font License (OFL)
        d="M -1.446347,125.92582 C -5.081982,114.268 -2.3902,101.85348 -3.148676,89.865473 c 0.175794,-6.789839 0.57027,-13.588948 1.626009,-20.304984 m 0.698175,56.353331 C 4.097702,114.05132 3.166206,100.74468 3.923276,88.155745 4.000846,82.061614 4.294434,75.908004 5.838463,69.983222 m -10.19851,48.492598 c 2.327407,-0.092 4.654813,-0.184 6.98222,-0.276 M -3.281785,78.572581 c 2.780494,0.08619 5.560987,0.172385 8.34148,0.258578"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.51181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.02362, 1.51181;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 6.064762,69.448155 c 0.327651,-0.810239 3.425766,-3.075505 6.31866,-3.914812 4.296137,-1.246426 5.702151,-0.692814 8.273206,-0.264833"
@@ -4381,7 +4552,8 @@ SIL Open Font License (OFL)
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:contour_underlay="True"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        id="path6116-3-6"
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -4392,7 +4564,7 @@ SIL Open Font License (OFL)
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-q"
-     style="display:none"
+     style="display:inline"
      id="g635">
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:0.377953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -4415,7 +4587,8 @@ SIL Open Font License (OFL)
        sodipodi:nodetypes="ccccccccccs"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:0.377953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 19.272778,80.327732 c 5.321348,-2.973435 3.895491,-7.726966 4.793778,-12.020823 0.290054,-3.047005 0.362035,-4.604293 -0.01531,-6.353785"
@@ -4430,7 +4603,8 @@ SIL Open Font License (OFL)
        sodipodi:nodetypes="cscccccccc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        id="path12711-5-7"
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -4441,7 +4615,7 @@ SIL Open Font License (OFL)
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-r"
-     style="display:none"
+     style="display:inline"
      id="g639">
     <path
        style="display:inline;fill:none;stroke:#28292a;stroke-width:1.51181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.02362, 1.51181;stroke-dashoffset:0;stroke-opacity:1"
@@ -4458,7 +4632,8 @@ SIL Open Font License (OFL)
        sodipodi:nodetypes="ccccccccc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 14.930836,93.856475 c 4.159449,-2.34147 6.470556,-5.693928 8.078767,-9.072869 2.163713,-4.546082 3.859948,-10.234375 4.834784,-14.844611"
@@ -4470,7 +4645,7 @@ SIL Open Font License (OFL)
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-s"
-     style="display:none"
+     style="display:inline"
      id="g643">
     <path
        style="display:inline;fill:none;stroke:#28292a;stroke-width:1.51181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.02362, 1.51181;stroke-dashoffset:0;stroke-opacity:1"
@@ -4488,7 +4663,8 @@ SIL Open Font License (OFL)
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:contour_underlay="True"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        id="path12711-5-1-9-4"
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -4499,7 +4675,7 @@ SIL Open Font License (OFL)
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-t"
-     style="display:none"
+     style="display:inline"
      id="g647">
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:0.377953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -4534,7 +4710,8 @@ SIL Open Font License (OFL)
        inkstitch:ties="3"
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
-       inkstitch:zigzag_underlay="False" />
+       inkstitch:zigzag_underlay="False"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
        d="m 3.3518968,94.739933 c 3.526066,0.744592 6.2970729,-0.422069 9.8136472,-2.884383 2.167457,-1.517658 5.081421,-3.397006 8.722451,-8.600222 3.208689,-4.585379 3.766728,-9.125341 6.318489,-12.590283"
@@ -4565,7 +4742,8 @@ SIL Open Font License (OFL)
        inkstitch:contour_underlay="True"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.024, 1.512;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 11.19074,90.331664 c 6.458984,0.556116 7.308913,-1.936667 10.176262,-4.819488"
@@ -4593,7 +4771,8 @@ SIL Open Font License (OFL)
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay="False"
-       sodipodi:nodetypes="cccccccccsccccc" />
+       sodipodi:nodetypes="cccccccccsccccc"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.024, 1.512;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 33.149374,94.478459 c 5.541253,0.581218 7.840018,-15.781755 11.562823,-23.970277"
@@ -4606,7 +4785,7 @@ SIL Open Font License (OFL)
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-v"
-     style="display:none"
+     style="display:inline"
      id="g655">
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:0.377953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -4623,7 +4802,8 @@ SIL Open Font License (OFL)
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:contour_underlay="True"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.51181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.02362, 1.51181;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="M 8.6031638,97.334443 C 15.108157,95.734341 23.747421,73.729393 28.406933,64.798308 c 2.812801,-5.391415 -2.293797,-5.52295 -4.035665,-5.200942"
@@ -4641,7 +4821,8 @@ SIL Open Font License (OFL)
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:contour_underlay="True"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="M 24.179232,81.612807 C 29.869469,79.464923 34.393422,75.37761 37.458961,70.980533"
@@ -4654,7 +4835,7 @@ SIL Open Font License (OFL)
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-w"
-     style="display:none"
+     style="display:inline"
      id="g659">
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:0.377953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -4670,7 +4851,8 @@ SIL Open Font License (OFL)
        sodipodi:nodetypes="cccccccccc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.51181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.02362, 1.51181;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="M 9.2288378,94.330184 C 12.041812,91.812122 12.61907,89.157983 15.252812,83.949813"
@@ -4694,7 +4876,8 @@ SIL Open Font License (OFL)
        sodipodi:nodetypes="cccccsccc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.51181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.02362, 1.51181;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 27.893226,93.361304 c 2.608613,-0.800111 7.03866,-5.710052 9.755368,-11.615663 1.394613,-3.031627 1.640248,-6.920181 1.364045,-10.682041 -0.176355,-2.40194 -1.160653,-3.816206 -2.274497,-4.601101"
@@ -4711,7 +4894,8 @@ SIL Open Font License (OFL)
        sodipodi:nodetypes="ccccccc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 38.193173,80.350021 c 6.673205,-1.577753 7.602959,-4.462584 9.943305,-8.800174"
@@ -4724,7 +4908,7 @@ SIL Open Font License (OFL)
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-x"
-     style="display:none"
+     style="display:inline"
      id="g663">
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:0.377953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -4744,7 +4928,8 @@ SIL Open Font License (OFL)
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay="False"
-       sodipodi:nodetypes="ccccccccccc" />
+       sodipodi:nodetypes="ccccccccccc"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="display:inline;fill:none;stroke:#28292a;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 2;stroke-dashoffset:0;stroke-opacity:1"
        d="m 8.699907,78.190252 2.909867,-3.776691 2.323816,-4.07255 2.918061,-5.701956"
@@ -4772,7 +4957,8 @@ SIL Open Font License (OFL)
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:contour_underlay="True"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="M 22.767576,93.362665 C 29.266818,89.717149 31.754574,76.975499 33.04164,71.091527"
@@ -4785,7 +4971,7 @@ SIL Open Font License (OFL)
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-y"
-     style="display:none"
+     style="display:inline"
      id="g667">
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:0.377953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -4802,7 +4988,8 @@ SIL Open Font License (OFL)
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:contour_underlay="True"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:0.377953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="M 22.371813,84.653453 29.981441,61.340765"
@@ -4821,7 +5008,8 @@ SIL Open Font License (OFL)
        inkstitch:ties="3"
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
-       inkstitch:zigzag_underlay="False" />
+       inkstitch:zigzag_underlay="False"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 10.876577,133.48388 c -11.01067724,-1.03996 -6.445604,-12.11264 -2.728358,-17.78847 1.641628,-2.50658 5.617175,-8.44983 9.440149,-13.44317 2.377246,-3.105023 4.623683,-6.819524 7.573082,-10.084398 8.48246,-9.389768 15.021559,-17.515886 19.534309,-20.590592"
@@ -4833,7 +5021,7 @@ SIL Open Font License (OFL)
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-z"
-     style="display:none"
+     style="display:inline"
      id="g671">
     <path
        d="m 3.071063,71.815359 c -2.055127,0.912986 -5.658026,1.959453 -7.750897,3.474386"
@@ -4850,7 +5038,8 @@ SIL Open Font License (OFL)
        sodipodi:nodetypes="cscccccccc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        id="autosatin120-6"
        style="display:inline;fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:none"
@@ -4859,7 +5048,8 @@ SIL Open Font License (OFL)
        sodipodi:nodetypes="cccccc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        id="autosatinrun80-6"
        style="display:inline;fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -4873,7 +5063,8 @@ SIL Open Font License (OFL)
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:contour_underlay="True"
-       sodipodi:nodetypes="cccccccccc" />
+       sodipodi:nodetypes="cccccccccc"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        id="path22182-3"
        style="display:inline;fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:none"
@@ -4881,7 +5072,8 @@ SIL Open Font License (OFL)
        sodipodi:nodetypes="csccccccccc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:max_stitch_length_mm="6" />
     <path
        id="path12711-5-1-9-2-1-3"
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -4892,7 +5084,7 @@ SIL Open Font License (OFL)
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-{"
-     style="display:none"
+     style="display:inline"
      id="g675">
     <path
        d="M 14.845264,97.603619 C 12.992084,94.928043 10.027312,95.511523 8.5781794,90.062837 7.5499808,86.196848 9.2761945,79.729093 9.0144522,74.045782 8.8102086,69.610961 6.530278,65.86904 6.448208,62.805195 6.3353946,58.593639 9.3137168,57.9973 9.2044002,54.058934 8.9619256,45.323266 6.240685,39.873502 7.421154,33.675493 8.2667236,29.235861 12.269657,28.780192 13.28834,26.675284"
@@ -4914,12 +5106,13 @@ SIL Open Font License (OFL)
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_spacing_mm="0.3"
        inkscape:label="AutoSatin 2"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:max_stitch_length_mm="6" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-}"
-     style="display:none"
+     style="display:inline"
      id="g683">
     <path
        d="M 4.0852964,97.479671 C 5.8293305,94.731703 8.815177,95.19543 10.043921,89.692853 10.915748,85.788627 8.930717,79.395559 8.963593,73.706319 8.989246,69.266871 11.116784,65.436252 11.075521,62.371586 11.018801,58.158901 8.018898,57.682871 7.969675,53.743295 7.860494,45.004945 10.360273,39.450111 8.931398,33.304613 7.907894,28.902595 3.8898699,28.608344 2.7873257,26.546124"
@@ -4941,12 +5134,13 @@ SIL Open Font License (OFL)
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_spacing_mm="0.3"
        inkscape:label="AutoSatin 2"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:max_stitch_length_mm="6" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-~"
-     style="display:none"
+     style="display:inline"
      id="g687">
     <path
        id="path361-6-3"
@@ -4960,6 +5154,7 @@ SIL Open Font License (OFL)
        inkstitch:force_lock_stitches="True"
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
-       inkstitch:zigzag_underlay="False" />
+       inkstitch:zigzag_underlay="False"
+       inkstitch:max_stitch_length_mm="6" />
   </g>
 </svg>
