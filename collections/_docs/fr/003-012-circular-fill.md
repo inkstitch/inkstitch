@@ -39,7 +39,7 @@ Lancez `Extensions > Ink/Stitch  > Paramètres` pour choisir vos réglages.
 |Autoremplissage avec des points de broderie| ☑ |Doit être activé pour que ces paramètres prennent effet.|
 |Méthode de remplissage |Remplissage circulaire| Remplissage circulaire  doit être selectionné.|
 |Etirer|![Expand example](/assets/images/docs/params-fill-expand.png) |Etend la forme avant le point de remplissage pour compenser les écarts entre les formes dues à l'étirement du tissu.|
-|Longueur maximale du point de remplissage|![Exemple de longueur de point](/assets/images/docs/params-fill-stitch_length.png) |Pour le remplissage en méandres il s'agit de longueur du point droit résultant.|
+|Longueur maximale du point de remplissage|![Exemple de longueur de point](/assets/images/docs/params-fill-stitch_length.png) |Pour le remplissage circulaire il s'agit de longueur du point droit résultant.|
 |Tolérance du point droit|![Exemple de tolerance](/assets/images/docs/contourfilltolerance.svg) |Tous les points doivent rester au plus à cette distance du chemin. Une tolérance plus faible (en haut sur le dessin) signifie que les points seront plus rapprochés. Une tolérance plus élevée (en bas) signifie que les angles vifs peuvent être arrondis.|
 |Chemin de dessous           |![Example de chemin de dessous](/assets/images/docs/params-fill-underpathing.png)| Doit être autorisé pour permettre aux points de voyager dans la forme et non le long de la frontière pour passer de section en section.|
 |Forcer les points d'arrêts |☑|Force un point d'arrêt après l'objet indépendament de la valeur de "Saut de fil" dans les Préférences d'Ink/Stitch.|
