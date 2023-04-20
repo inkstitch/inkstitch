@@ -4,6 +4,7 @@ from math import degrees
 from inkex import DirectedLineSegment, Path
 from shapely.geometry import LineString
 
+from ..debug import debug
 from ..i18n import _
 from ..svg import PIXELS_PER_MM
 from ..utils import string_to_floats
@@ -20,7 +21,7 @@ class LockStitchDefinition:
     def __repr__(self):
         return "LockStitchDefinition(%s, %s, %s, %s)" % (self.id, self.name, self._path, self.preview_image)
 
-    def stitches(self):
+    def stitches(self, stitches, pos, scale):
         raise NotImplementedError(f"{self.__class__.__name__} must implement stitches()")
 
 
@@ -28,6 +29,9 @@ class LockStitch:
     def __init__(self, lock_type, lock_id, scale_percent, scale_absolute):
         self.lock_stitch_definition = get_lock_stitch_definition_by_id(lock_type, lock_id)
         self.scale = LockStitchScale(scale_percent, scale_absolute)
+
+    def set_path(self, path):
+        self.lock_stitch_definition = CustomLock("custom", _("Custom"), path)
 
     def stitches(self, stitches, pos):
         return self.lock_stitch_definition.stitches(stitches, pos, self.scale)
@@ -40,43 +44,31 @@ class LockStitchScale:
 
 
 class CustomLock(LockStitchDefinition):
-    @property
-    def path(self):
-        return self._path
-
-    @path.setter
-    def path(self, path):
-        path_type = self._get_path_type(path)
-        if path_type in ['svg', 'absolute']:
-            self._path = path
-        else:
-            self._path = None
-
     def stitches(self, stitches, pos, scale):
-        if self.path is None:
-            return half_stitch.stitches(stitches, pos)
-
-        path_type = self._get_path_type(self.path)
+        path_type = self._get_path_type()
+        debug.log(f"CustomLock path={self._path} path_type={path_type}")
         if path_type == "svg":
             return SVGLock(self.id,
                            self.name,
-                           self.path).stitches(stitches, pos, scale.percent)
-        else:
+                           self._path).stitches(stitches, pos, scale)
+        elif path_type == "absolute":
             return AbsoluteLock(self.id,
                                 self.name,
-                                self.path).stitches(stitches, pos, scale.absolute)
+                                self._path).stitches(stitches, pos, scale)
+        else:
+            return half_stitch.stitches(stitches, pos, scale)
 
-    def _get_path_type(self, path):
-        if not path:
+    def _get_path_type(self):
+        if not self._path:
             return "invalid"
-        if not re.match("^ *[0-9 .,-]*$", path):
-            path = Path(path)
+        if not re.match("^ *[0-9 .,-]*$", self._path):
+            path = Path(self._path)
             if not path or len(list(path.end_points)) < 3:
                 return None
             else:
                 return "svg"
         else:
-            path = string_to_floats(path, " ")
+            path = string_to_floats(self._path, " ")
             if not path:
                 return "invalid"
             else:
