@@ -161,6 +161,7 @@ class Stroke(EmbroideryElement):
     @param('min_line_dist_mm',
            _('Minimum line distance'),
            tooltip=_('Overrides the number of lines setting.'),
+           unit='mm',
            type='float',
            select_items=[('stroke_method', 'ripple_stitch')],
            sort_index=8)
