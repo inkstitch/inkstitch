@@ -74,7 +74,6 @@ Lancez `Extensions > Ink/Stitch  > Paramètres`. Choisir "Remplissage guidé" da
 
 ## Sous couche
 
-La sous-couche du remplissage guidé  n'utilise pas la ligne-guide, mais tout comme pour le remplissage standard, elle utilise l'angle de remplissage qui peut être défini dans les 
-[paramètres](/fr/docs/stitches/fill-stitch/#sous-couche de la sous-couche).
+La sous-couche du remplissage guidé  n'utilise pas la ligne-guide, mais tout comme pour le remplissage standard, elle utilise l'angle de remplissage qui peut être défini dans les [paramètres de la sous-couche](/fr/docs/stitches/fill-stitch/#sous-couche) .
 ##  Exemple de fichiers qui utilisent le remplissage guidé
 {% include tutorials/tutorial_list key="stitch-type" value="Guided Fill" %}
