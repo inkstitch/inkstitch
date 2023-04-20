@@ -515,6 +515,7 @@ class SatinColumn(EmbroideryElement):
             return indices_by_length[:2]
 
     @property
+    @cache
     def min_stitch_len(self):
         metadata = InkStitchMetadata(self.node.root)
         return metadata['min_stitch_len_mm'] * PIXELS_PER_MM
@@ -1082,6 +1083,7 @@ class SatinColumn(EmbroideryElement):
         # "left" and "right" here are kind of arbitrary designations meaning
         # a point from the first and second rail respectively
         for i, (left, right), (a_short, b_short) in zip(itertools.count(0), pairs, short_pairs):
+            check_stop_flag()
             split_points, _ = self.get_split_points(
                 left, right, a_short, b_short, max_stitch_length,
                 None, length_sigma, random_phase, min_split_length,
@@ -1092,11 +1094,11 @@ class SatinColumn(EmbroideryElement):
                 points, _ = self.get_split_points(last_point, left, last_point, left, max_stitch_length)
                 patch.add_stitches(points)
 
-            patch.add_stitch(a_short)
-            patch.add_stitches(split_points)
-            patch.add_stitch(b_short)
-            patch.add_stitches(split_points[::-1])
-            patch.add_stitch(a_short)
+            patch.add_stitch(a_short, ("edge"))
+            patch.add_stitches(split_points, ("split_stitch"))
+            patch.add_stitch(b_short, ("edge"))
+            patch.add_stitches(split_points[::-1], ("split_stitch"))
+            patch.add_stitch(a_short, ("edge"))
 
             last_point = a_short
 
