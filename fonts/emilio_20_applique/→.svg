@@ -2,7 +2,7 @@
 <svg
    version="1.1"
    id="svg83"
-   sodipodi:docname="Emilio20 applique cadratin 200-Asus-Celia.svg.2023_04_20_08_16_36.0.svg"
+   sodipodi:docname="→.svg"
    width="200"
    height="200"
    viewBox="0 0 200 200"
@@ -29,7 +29,7 @@
      inkscape:window-x="-9"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g1252"
+     inkscape:current-layer="g1160"
      inkscape:document-units="px"
      inkscape:snap-smooth-nodes="true"
      inkscape:snap-global="false"
@@ -106,15 +106,18 @@
        inkscape:locked="true" />
     <inkscape:grid
        type="xygrid"
-       id="grid1461" />
+       id="grid1461"
+       visible="true" />
   </sodipodi:namedview>
   <metadata
      id="metadata2">
 Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
  By CELIA
 
-<inkstitch:collapse_len_mm />
-<inkstitch:min_stitch_len_mm />
+<inkstitch:collapse_len_mm
+   id="collapse_len_mm2178">3</inkstitch:collapse_len_mm>
+<inkstitch:min_stitch_len_mm
+   id="min_stitch_len_mm9649">0</inkstitch:min_stitch_len_mm>
 </metadata>
   <defs
      id="defs81">
@@ -493,30 +496,33 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
        inkscape:label="Zigzag-0-1"
        sodipodi:nodetypes="cccc" />
     <path
-       style="display:inline;fill:none;stroke:#ed171f;stroke-width:5.66929;stroke-miterlimit:4;stroke-dasharray:none"
-       d="M 96,156.5 H 50 v -108 h 46 v 108"
-       id="path13896"
-       sodipodi:nodetypes="ccccc"
-       inkstitch:zigzag_spacing_mm="1.2"
-       inkstitch:zigzag_underlay="False"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False"
-       inkscape:label="zigzag-0-2"
-       inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="0" />
+       id="path99"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 96,153.66535 H 52.834645 V 48.5 M 96,159.33464 H 47.165355 V 48.5 M 57.5,152.24803 v 8.50394 M 54.251967,148.6 h -8.503935"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1"
+       inkscape:label="Zigzag-0-2" />
     <path
-       id="autorun_1_1"
-       inkscape:label="Zigzag-0-3"
-       d="M 127,166.5 V 38 L 112,17.5 H 34.5 L 20,37 v 129.5 l 14.5,21 H 112 l 15,-21"
-       style="display:inline;fill:none;stroke:#ed171f;stroke-width:5.66929;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
-       inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:repeats="1"
-       inkstitch:zigzag_spacing_mm="1.2"
-       inkstitch:zigzag_underlay="False"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False"
-       sodipodi:nodetypes="ccccccccc"
-       inkstitch:ties="0" />
+       id="path100"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 50,51.334645 H 93.165355 V 156.5 M 50,45.665355 H 98.834645 V 156.5 M 88.5,52.751967 V 44.248032 M 91.748032,56.4 h 8.503938"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1"
+       inkscape:label="Zigzag-0-3" />
+    <path
+       id="path101"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 129.83464,166.5 V 37.073681 L 113.43831,14.665355 H 33.075379 L 17.725304,35.308559 M 124.16536,166.5 V 38.926319 L 110.56169,20.334645 H 35.924621 L 22.274696,38.691441 M 131.25197,51.43411 h -8.50394 m 0.51696,-25.73913 -6.86294,5.021659 M 99.695486,13.248033 v 8.503934 M 48.555091,13.248033 v 8.503934 M 24.21686,24.203279 31.040948,29.2776"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1"
+       inkscape:label="Zigzag-0-4" />
+    <path
+       id="path102"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="m 17.165355,37 v 130.38355 l 15.847185,22.95109 h 80.44622 L 129.30665,168.1476 M 22.834645,37 v 128.61645 l 13.152815,19.0489 h 74.55378 L 124.69335,164.8524 M 15.748033,153.24696 h 8.503934 m -0.603276,26.0207 6.997861,-4.83186 m 16.746122,17.31617 v -8.50394 m 51.665315,8.50394 v -8.50394 m 23.894511,-3.76618 -6.91993,-4.94281"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1"
+       inkscape:label="Zigzag-0-5" />
     <path
        d="m 20.5893,167.349 14.05895,20.365 77.34025,-0.1765 14.5835,-21.39"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -637,17 +643,19 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
        inkscape:label="Zigzag-1-1"
        sodipodi:nodetypes="cccc" />
     <path
-       style="display:inline;fill:none;stroke:#ed171f;stroke-width:5.66929;stroke-miterlimit:4;stroke-dasharray:none"
-       d="m 68,172 v -15.5 h -9.5 v -139 h -34 v 31 H 34 v 108 H 24.5 V 172 187.5 H 68 V 172"
-       id="path27864"
-       sodipodi:nodetypes="ccccccccccccc"
-       inkscape:label="Zigzag-1-2"
-       inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:zigzag_spacing_mm="1.2"
-       inkstitch:zigzag_underlay="False"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False"
-       inkstitch:ties="0" />
+       id="path97"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 70.834645,172 V 153.66535 H 65.23776 61.334645 V 140.87927 14.665355 h -39.66929 v 36.66929 H 34 M 65.165355,172 V 159.33464 H 62.040952 55.665355 V 133.48996 20.334645 h -28.33071 v 25.33071 H 34 M 72.251968,169.615 H 63.748032 M 64.42,152.24803 v 8.50394 M 62.751967,145.725 H 54.248032 M 62.751967,28.86 H 54.248032 M 46.01,13.248033 v 8.503934 m -9.54,-8.503934 v 8.503934 M 20.248032,29.38 h 8.503935"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1"
+       inkscape:label="Zigzag-1-2" />
+    <path
+       id="path98"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="m 31.165355,48.5 v 105.16535 h -9.5 v 36.66929 h 49.16929 V 172 m -34,-123.5 v 110.83464 h -9.5 v 25.33071 h 37.83071 V 172 M 29.748032,146.025 h 8.503935 M 29.95,152.24803 v 8.50394 M 20.248032,167.65 h 8.503935 m -8.503935,10.375 h 8.503935 M 35.775,191.75197 v -8.50394 m 22.825,8.50394 v -8.50394 M 72.251968,176.15 h -8.503936"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1"
+       inkscape:label="Zigzag-1-3" />
     <path
        d="m 24.5,173.727 c -0.0064,-3.52629 0.02237,17.29896 0,13.773 -0.01453,-0.51325 43.667724,0.49157 43.5,0 V 173"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -842,17 +850,19 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
        inkscape:label="Zigzag-2-1"
        sodipodi:nodetypes="cccc" />
     <path
-       style="display:inline;fill:none;stroke:#ed171f;stroke-width:5.66929;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
-       d="M 127,170.05955 V 132.5 H 97 v 24 H 51 v -39 h 61 L 127,97 V 38 L 112,17.5 H 35 L 20,38 V 72 H 50 V 48.5 h 47 v 38 H 35 l -15,21 V 170.05955 187.5 h 107 v -17.44045"
-       id="path41771"
-       sodipodi:nodetypes="ccccccccccccccccccccccc"
-       inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:zigzag_spacing_mm="1.2"
-       inkstitch:zigzag_underlay="False"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False"
-       inkstitch:ties="0"
+       id="path95"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="m 129.83464,170.05955 v -40.3942 H 95.968099 94.165355 v 24 H 53.834645 V 120.33464 H 88.145219 113.43831 L 129.83464,97.926319 V 37.073681 L 113.43831,14.665355 H 33.561691 L 17.712356,36.326114 M 124.16536,170.05955 V 135.33464 H 99.834645 v 3.58585 20.41415 H 48.165355 V 114.66536 H 80.88273 110.56169 L 124.16536,96.073681 V 38.926319 L 110.56169,20.334645 H 36.438309 L 22.287644,39.673886 M 131.25197,156.5666 h -8.50394 m -7.66262,-28.31857 v 8.50394 m -22.337378,4.64851 h 8.503938 m -25.133636,10.84755 v 8.50394 M 55.251967,141.1395 h -8.503935 m 8.503935,-8.9953 h -8.503935 m 25.588959,-10.39223 v -8.50394 m 17.990594,8.50394 v -8.50394 m 33.553355,-4.78482 -6.86293,-5.02165 m 14.23396,-26.832103 h -8.50394 m 8.50394,-17.990595 h -8.50394 m 1.26774,-31.897816 -6.86294,5.021658 M 90.555904,13.248033 v 8.503934 m -31.48354,-8.503934 v 8.503934 M 19.22444,31.859432 26.087373,36.88109"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1"
        inkscape:label="Zigzag-2-2" />
+    <path
+       id="path96"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="m 17.165355,38 v 36.834645 h 31.426226 4.243064 v -23.5 h 41.33071 v 32.33071 H 56.125681 33.541241 L 17.165355,106.5916 v 83.74304 H 129.83464 V 170.05955 M 22.834645,38 v 31.165355 h 23.913511 0.417199 v -23.5 h 52.66929 v 43.66929 H 62.224269 36.458759 L 22.834645,108.4084 v 76.25695 H 124.16536 v -14.6058 M 15.748033,47.294949 h 8.503934 m 8.222776,28.957019 v -8.503936 m 21.777224,-6.10762 h -8.503935 m 28.29135,-8.888445 v -8.503935 m 18.70865,18.471144 h 8.503938 m -8.503938,9.294949 h 8.503938 M 74.306081,82.248032 v 8.503936 M 60.363658,82.248032 v 8.503936 m -38.392905,6.673617 6.919936,4.942815 m -13.142656,28.32055 h 8.503934 m -8.503934,32.53232 h 8.503934 m 17.944049,28.5307 v -8.50394 m 60.417164,8.50394 v -8.50394"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1"
+       inkscape:label="Zigzag-2-3" />
     <path
        d="M 20,168.87 V 187.5 H 127 V 170.05955"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -1075,17 +1085,19 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
        inkscape:label="Zigzag-3-1"
        sodipodi:nodetypes="cccc" />
     <path
-       style="display:inline;fill:none;stroke:#ed171f;stroke-width:5.66929;stroke-linecap:butt;stroke-dasharray:none;stroke-dashoffset:0"
-       d="m 127,166.5 v -59 L 123.5,102 127,96.5 V 38 L 112,17.5 H 35 L 20,38 V 72 H 50 V 48.5 h 46 v 38 H 50 v 31 h 46 v 39 H 50 v -24 H 20 v 34 l 15,21 h 77 l 15,-21"
-       id="path7161"
-       sodipodi:nodetypes="cccccccccccccccccccccccc"
-       inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:zigzag_spacing_mm="1.2"
-       inkstitch:zigzag_underlay="False"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False"
-       inkstitch:ties="0"
+       id="path93"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 129.83464,166.5 V 106.67455 L 126.85993,102 129.83464,97.325451 V 37.073681 L 113.43831,14.665355 H 33.561691 L 17.165355,37.073681 v 37.760964 h 35.66929 v -23.5 h 40.33071 V 86.5 m 31.000005,80 V 108.32545 L 120.14007,102 124.16536,95.674549 V 38.926319 L 110.56169,20.334645 H 36.438309 L 22.834645,38.926319 v 30.239036 h 24.33071 v -23.5 h 51.66929 V 86.5 m 32.417325,41.31422 h -8.50394 m 8.50394,-53.841044 h -8.50394 m 8.50394,-12.895258 h -8.50394 m 3.54336,-31.246852 -6.86293,5.021659 M 91.704978,13.248033 v 8.503934 M 57.317622,13.248033 v 8.503934 m -35.414647,6.4468 6.862934,5.021659 M 15.748033,50.458479 h 8.503934 m 8.593868,25.793489 V 67.748032 M 54.251967,63.363648 H 45.748032 M 69.523708,52.751967 v -8.503935 m 22.224324,25.05829 h 8.503938"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
        inkscape:label="Zigzag-3-2" />
+    <path
+       id="path94"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 96,83.665355 H 47.165355 v 36.669285 h 46 v 33.33071 h -40.33071 v -24 h -35.66929 v 37.74305 l 16.375886,22.92624 H 113.45876 L 129.30665,168.1476 M 96,89.334645 H 52.834645 v 25.330715 h 46 v 44.66928 h -51.66929 v -24 h -24.33071 v 30.25696 l 13.624114,19.07375 H 110.54124 L 124.69335,164.8524 M 70.523163,82.248032 v 8.503936 m -24.775131,9.193985 h 8.503935 m 16.409242,21.806017 v -8.50394 m 21.086823,21.37457 h 8.503938 m -24.835969,17.62543 v 8.50394 M 54.251967,143.70075 H 45.748032 M 35.723908,128.24803 v 8.50394 m -19.975875,18.23938 h 8.503934 m -2.061111,21.89121 6.919936,-4.94281 m 28.019533,19.81222 v -8.50394 m 33.969116,8.50394 v -8.50394 m 36.892509,-10.8214 -6.91994,-4.94281"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-3-3" />
     <path
        d="M 20.1904,166.367 35,187.5 h 77 l 15,-21"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -1243,7 +1255,8 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-4"
      style="display:none;fill:none;stroke:#000000"
-     id="g1268">
+     id="g1268"
+     inkstitch:stroke_method="zigzag_stitch">
     <path
        id="underpath_0_1"
        inkscape:label="Trace-4-1"
@@ -1284,38 +1297,34 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
        sodipodi:nodetypes="cccc"
        inkstitch:ties="3" />
     <path
-       id="autorun_1_14"
-       inkscape:label="Zigzag-4-2"
-       d="M 139.5,170.05955 V 156.65 h -9.25 v -13.3 h 9.25 V 112.5 h -12 v -95 H 90 L 71.188709,43.655426"
-       style="display:inline;fill:none;stroke:#ed171f;stroke-width:5.66929;stroke-linecap:butt;stroke-dasharray:none;stroke-dashoffset:0"
-       inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:zigzag_spacing_mm="1.2"
-       inkstitch:zigzag_underlay="False"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False"
-       inkstitch:ties="2" />
+       id="path89"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="m 142.33464,170.05955 v -16.2442 h -9.25 v -7.63071 h 9.25 v -36.51928 h -12 V 14.665355 H 88.54707 L 68.887437,42.000324 M 136.66535,170.05955 v -10.57491 h -5.35534 -3.89465 v -7.69057 -11.27872 h 9.24999 V 115.33464 H 124.66536 V 20.334645 H 91.45293 L 73.489981,45.310528 M 135.21515,152.39803 v 8.50394 m -0.71318,-11.92567 h -8.50394 m 17.75394,-18.55548 h -8.50394 m -0.57715,-22.17279 v 8.50394 m -2.91891,-17.303263 h -8.50394 m 8.50394,-68.249819 h -8.50394 m -7.32685,-17.950855 v 8.503934 m -12.63886,-8.503934 v 8.503934 m -23.738133,3.003689 6.903814,4.965305"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-4-2" />
     <path
-       id="autorun_3_10"
-       inkscape:label="Zigzag-4-3"
-       d="m 96,61.5 -36.5,51 H 96 v -51"
-       style="display:inline;fill:none;stroke:#ed171f;stroke-width:5.66929;stroke-linecap:butt;stroke-dasharray:none;stroke-dashoffset:0"
-       inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:zigzag_spacing_mm="1.2"
-       inkstitch:zigzag_underlay="False"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False"
-       inkstitch:ties="0" />
+       id="path90"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 93.694882,59.850259 53.985469,115.33464 H 96 M 98.305118,63.149741 65.014531,109.66536 H 96 m -36.948449,-3.84465 7.560514,2.8202"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       sodipodi:nodetypes="cccccccc"
+       inkscape:label="Zigzag-4-3" />
     <path
-       id="autorun_4_10"
-       inkscape:label="Zigzag-4-4"
-       d="M 71.188709,43.655426 17,119 v 24.5 H 84 V 169.93885 187.5 h 55.5 v -17.44045"
-       style="display:inline;fill:none;stroke:#ed171f;stroke-width:5.66929;stroke-linecap:butt;stroke-dasharray:none;stroke-dashoffset:0"
-       inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:zigzag_spacing_mm="1.2"
-       inkstitch:zigzag_underlay="False"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False"
-       inkstitch:ties="0" />
+       id="path91"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="m 98.834645,112.5 v -51 m -5.66929,51 v -51 M 100.25197,87 h -8.503938"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-4-4" />
+    <path
+       id="path92"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 68.887437,42.000324 14.165355,118.08651 v 28.24813 h 67 v 44 H 142.33464 V 170.05955 M 73.489981,45.310528 19.834645,119.91349 v 20.75186 h 67 v 44 h 49.830705 v -14.6058 m -114.660883,-65.30004 6.903815,4.96531 m -16.160249,18.89202 h 8.503934 m 10.989664,19.13513 v -8.50394 m 36.149747,8.50394 v -8.50394 m 11.356654,18.76814 h 8.503936 m -8.503936,15.06239 h 8.503936 m 11.451383,18.67341 v -8.50394 m 24.099829,8.50394 v -8.50394 m 19.94879,-10.176 h -8.50394"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-4-5" />
     <path
        d="m 90,163 c 0,-8.66667 0,-17.33333 0,-26"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -1517,17 +1526,19 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
        inkstitch:ties="3"
        sodipodi:nodetypes="cccc" />
     <path
-       style="display:inline;fill:none;stroke:#ed171f;stroke-width:5.66929;stroke-linecap:butt;stroke-dasharray:none;stroke-dashoffset:0"
-       d="m 127,166.5 v -59 l -15,-21 H 51 v -38 H 97 V 72 h 30 V 17.5 H 20 V 97 l 15,20.5 h 62 v 39 H 50 v -24 H 20 v 34 l 15,21 h 77 l 15,-21"
-       id="path12627"
-       inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:zigzag_spacing_mm="1.2"
-       inkstitch:zigzag_underlay="False"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False"
-       inkstitch:ties="0"
-       inkscape:label="Zigzag-5-2"
-       sodipodi:nodetypes="ccccccccccccccccccccc" />
+       id="path87"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 129.83464,166.5 V 106.5916 L 113.45876,83.665355 H 53.834645 v -32.33071 h 40.33071 v 23.5 H 129.83464 V 14.665355 H 17.165355 V 97 M 124.16536,166.5 V 108.4084 L 110.54124,89.334645 H 48.165355 v -43.66929 h 51.66929 v 23.5 H 124.16536 V 20.334645 H 22.834645 V 97 m 108.417325,38.04158 h -8.50394 m 2.38785,-37.466709 -6.91994,4.942809 M 86.702511,82.248032 v 8.503936 m -10.48614,-8.503936 v 8.503936 M 55.251967,69.771813 H 46.748032 M 71.672745,52.751967 v -8.503935 m 21.075287,15.626201 h 8.503938 m 9.83761,16.377735 V 67.748032 M 131.25197,45.96586 h -8.50394 M 103.03516,13.248033 v 8.503934 M 45.361395,13.248033 v 8.503934 M 15.748033,44.569302 h 8.503934"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-5-2" />
+    <path
+       id="path88"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="m 17.712356,98.673886 15.849335,21.660754 h 18.943923 41.659741 v 25.93554 7.39517 h -41.33071 v -24 h -35.66929 v 37.74305 l 16.375886,22.92624 H 113.45876 L 129.30665,168.1476 M 22.287644,95.326114 36.438309,114.66536 h 14.334229 49.062107 v 33.30972 11.35956 h -52.66929 v -24 h -24.33071 v 30.25696 l 13.624114,19.07375 H 110.54124 L 124.69335,164.8524 M 21.174697,105.80592 28.03763,100.78426 m 28.362485,20.96771 v -8.50394 m 19.500786,8.50394 v -8.50394 m 16.847131,22.15444 h 8.503938 m -22.156016,16.84556 v 8.50394 m -7.800314,-8.50394 v 8.50394 M 54.251967,146.59438 h -8.503935 m -8.954751,-18.34635 v 8.50394 m -21.045248,14.05616 h 8.503934 m -3.231125,24.43641 6.919937,-4.94281 m 27.962895,21.45024 v -8.50394 m 35.101415,8.50394 v -8.50394 m 34.921041,-7.92925 -6.91994,-4.94281"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-5-3" />
     <path
        d="M 20.1894,166.367 C 19.843334,165.16723 35.060145,188.73139 35,187.5 h 77 l 15,-21"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -1729,28 +1740,33 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
        sodipodi:nodetypes="cccc"
        inkstitch:ties="3" />
     <path
-       id="autorun_3_12"
-       inkscape:label="Zigzag-6-2"
-       d="m 97,156.5 v -39 H 51 v 39 h 46"
-       style="display:inline;fill:none;stroke:#ed171f;stroke-width:5.66929;stroke-linecap:butt;stroke-dasharray:none;stroke-dashoffset:0"
-       inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:zigzag_spacing_mm="1.2"
-       inkstitch:zigzag_underlay="False"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False"
-       inkstitch:ties="0" />
+       id="path83"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 99.834645,156.5 V 114.66536 H 51 M 94.165355,156.5 V 120.33464 H 51 m 50.25197,1.31536 h -8.503938"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-6-2" />
     <path
-       id="autorun_1_16"
-       inkscape:label="Zigzag-6-3"
-       d="M 126.3909,165.77136 V 107.44307 L 111.56168,86.68216 H 51.256163 V 49.114792 H 96.732452 V 72.347243 H 126.3909 V 38.734334 L 111.56168,18.467727 H 35.438324 L 20.609099,38.734334 V 165.77136 l 14.829225,20.76091 h 76.123356 l 9.28497,-12.99895 5.54425,-7.76196"
-       style="display:inline;fill:none;stroke:#ed171f;stroke-width:5.60474;stroke-linecap:butt;stroke-dasharray:none;stroke-dashoffset:0"
-       inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:zigzag_spacing_mm="1.2"
-       inkstitch:zigzag_underlay="False"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False"
-       inkstitch:ties="0"
-       sodipodi:nodetypes="ccccccccccccccccc" />
+       id="path84"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="m 48.165355,117.5 v 41.83464 H 97 M 53.834645,117.5 v 36.16535 H 97 M 46.748032,152.35 h 8.503935"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-6-3" />
+    <path
+       id="path85"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 129.19327,165.77136 V 106.54501 L 113.00383,83.87979 H 54.058533 V 51.917162 H 93.930082 V 75.149613 H 129.19327 V 38.734334 m -5.60474,127.037026 v -57.43023 l -13.469,-18.8566 H 48.453793 V 46.312422 H 99.534822 V 69.544873 H 123.58853 V 38.734334 m 7.00592,83.119806 h -8.4071 m 1.41389,-25.548659 -6.84114,4.886529 M 95.020909,82.478605 v 8.40711 m -28.232498,-8.40711 v 8.40711 M 55.459718,70.844965 h -8.40711 M 67.169321,53.318347 v -8.40711 m 12.547778,8.40711 v -8.40711 m 12.811798,12.283756 h 8.407113 m 8.87669,19.355805 v -8.40711 M 130.59445,57.556 h -8.4071"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-6-4" />
+    <path
+       id="path86"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 128.6525,37.079507 112.98361,15.665357 H 34.016392 L 17.806729,37.818562 V 166.66942 l 16.189445,22.66522 h 79.007656 l 10.1232,-14.17247 5.54425,-7.76197 M 124.1293,40.389161 110.13975,21.270097 H 36.860256 L 23.411469,39.650106 V 164.8733 l 13.469005,18.8566 h 73.239056 l 8.44674,-11.82542 5.54425,-7.76196 m 1.17858,-134.032496 -6.78479,4.964481 M 91.010026,14.264172 v 8.40711 m -38.05352,-8.40711 v 8.40711 m -30.789802,6.815809 6.784793,4.964483 M 16.405544,56.989211 h 8.40711 m -8.40711,91.328449 h 8.40711 m -2.286174,27.3701 6.841146,-4.88653 m 23.989468,19.93459 v -8.40711 m 38.053519,8.40711 v -8.40711 m 33.977237,-7.921 -6.84115,-4.88653"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-6-5" />
     <path
        d="M 21.0987,166.215 C 19.118999,161.8258 20.334734,156.89572 20,152.242 20.04641,115.34973 19.90719,78.451908 20.0696,41.5631 21.440839,37.690461 22.532236,33.633573 25.411617,30.553938 28.443657,26.476618 31.368337,22.316649 34.471,18.2937 37.837542,16.743183 41.715625,17.819683 45.314043,17.5 H 109.594 c 2.44285,1.141599 4.7593,2.512891 6.037,4.9918 3.71932,5.275811 7.85868,10.295091 11.304,15.7382 0.24809,9.505485 -0.17333,19.044597 0.214,28.5367 0.95044,2.744397 1.89992,5.489124 2.851,8.2333 -4.17434,-1.21726 -8.16589,-3.585453 -12.64537,-3 -5.0729,0.149516 -10.24189,-0.302279 -15.25328,0.232095 C 99.397417,73.144276 96.701018,74.079125 94,75 95.178038,70.87608 97.552298,66.948514 97,62.530529 97.07622,58.574865 96.50758,54.507727 98.234287,50.802077 98.822812,48.95137 99.411463,47.100703 100,45.25 95.939918,46.455769 92.124352,49.043804 87.7495,48.5 77.402388,48.483633 67.054543,48.533161 56.7079,48.4747 53.805282,47.399759 50.902621,46.324933 48,45.25 c 1.203948,4.462969 3.558354,8.768986 3,13.5194 -0.108141,7.338797 0.216819,14.727637 -0.162974,22.035447 C 49.891363,83.786569 48.945665,86.768279 48,89.75"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -1917,17 +1933,19 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
        sodipodi:nodetypes="cccc"
        inkstitch:ties="3" />
     <path
-       style="display:inline;fill:none;stroke:#ed171f;stroke-width:5.66929"
-       d="M 89,169.90948 V 156.5 H 80.5 L 127.13178,47.54522 127,17.5 H 20 V 72 H 50 V 49.5 H 92.5 L 46.25323,156.5891 33,156.5 V 170.09052 187.5 h 56 v -17.59052"
-       id="path33165"
-       sodipodi:nodetypes="cccccccccccccccc"
-       inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:zigzag_spacing_mm="1.2"
-       inkstitch:zigzag_underlay="False"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False"
-       inkstitch:ties="0"
+       id="path81"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 91.834645,169.90948 V 153.66535 H 86.573258 84.796561 L 85.8079,151.30237 129.96897,48.120372 129.82224,14.665355 H 17.165355 v 60.16929 h 35.66929 V 49.5 m 33.33071,120.40948 V 159.33464 H 82.740221 76.203439 L 79.924333,150.64081 124.29459,46.970068 124.17776,20.334645 H 22.834645 v 48.83071 h 24.33071 V 49.5 m 39.865349,102.74803 v 8.50394 m 5.398042,-21.31704 -7.817989,-3.34603 M 124.19689,65.208912 116.3789,61.862875 m 14.96306,-23.855384 -8.50386,0.0373 M 109.0794,13.248033 v 8.503934 M 39.874904,13.248033 v 8.503934 m -24.126871,14.32007 h 8.503934 m -8.503934,15.378776 h 8.503934 m 5.956398,24.801155 v -8.503936 m 7.689388,8.503936 V 67.748032 M 54.251967,53.344694 h -8.503935"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
        inkscape:label="Zigzag-7-2" />
+    <path
+       id="path82"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 50,52.334645 H 88.188171 L 67.250767,100.81733 44.395125,153.7419 30.165355,153.6462 v 36.68841 h 61.66929 V 169.90948 M 50,46.665355 H 96.811829 L 68.939373,111.20686 48.111335,159.4363 35.834645,159.3538 v 25.31158 h 50.33071 v -14.7559 M 77.699241,53.751967 v -8.503935 m 5.783466,14.407679 7.807043,3.371496 m -42.94857,78.002283 7.807043,3.3715 m -14.143475,7.90748 -0.05717,8.50375 m -13.199547,8.87081 h 8.503935 m 8.400224,22.06894 v -8.50394 m 30.469164,8.50394 v -8.50394 M 93.251968,172.6794 h -8.503936"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-7-3" />
     <path
        d="m 33,170.251 c -0.0066,-2.28439 0.02323,19.5328 0,17.249 2.73031,-0.37068 56.202575,0.46123 56,0 v -17.246"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -2141,64 +2159,54 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
        sodipodi:nodetypes="cccc"
        inkstitch:ties="3" />
     <path
-       id="path255480"
-       inkscape:label="Zigzag-8-2"
-       d="M 127,166.5 V 117.67783 107.5 L 123.5,102 127,96.5 V 38 L 112,17.5 H 35 L 20,38 v 48.5"
-       style="display:inline;fill:none;stroke:#ed171f;stroke-width:5.6;stroke-dasharray:none;stroke-dashoffset:0"
-       inkstitch:repeats="1"
-       inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="2"
-       inkstitch:zigzag_spacing_mm="1.2"
-       inkstitch:zigzag_underlay="False"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False" />
+       id="path1"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 129.8,166.5 V 106.68464 L 126.81887,102 129.8,97.315362 V 37.085003 L 113.42073,14.7 H 33.57927 L 17.2,37.085003 V 86.5 m 107,80 V 108.31536 L 120.18113,102 124.2,95.684638 V 38.914997 L 110.57927,20.3 H 36.42073 L 22.8,38.914997 V 86.5 m 108.4,37.04213 h -8.4 m 8.4,-40.919471 h -8.4 m 8.4,-30.684194 h -8.4 m 1.32487,-24.980304 -6.77905,4.960284 M 96.108686,13.3 v 8.4 M 50.082393,13.3 v 8.4 m -27.68494,5.910985 6.779055,4.960284 M 15.8,52.747386 h 8.4"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-8-2" />
     <path
-       id="path255482"
-       inkscape:label="Zigzag-8-3"
-       d="m 51,86.5 h 45 v -38 H 51 v 38"
-       style="display:inline;fill:none;stroke:#ed171f;stroke-width:5.6;stroke-dasharray:none;stroke-dashoffset:0"
-       inkstitch:repeats="1"
-       inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="0"
-       inkstitch:zigzag_spacing_mm="1.2"
-       inkstitch:zigzag_underlay="False"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False" />
+       id="path2"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 51,89.3 H 98.8 V 48.5 M 51,83.7 H 93.2 V 48.5 m -1.53,42.2 v -8.4"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-8-3" />
     <path
-       id="path255484"
-       inkscape:label="Zigzag-8-4"
-       d="m 20,86.5 v 10 l 3.5,5.5 -3.5,5.5 v 59 l 15,21 61.027791,-0.0548"
-       style="display:inline;fill:none;stroke:#ed171f;stroke-width:5.6;stroke-dasharray:none;stroke-dashoffset:0"
-       inkstitch:repeats="1"
-       inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="0"
-       inkstitch:zigzag_spacing_mm="1.2"
-       inkstitch:zigzag_underlay="False"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False" />
+       id="path3"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 96,45.7 H 48.2 V 86.5 M 96,51.3 H 53.8 v 35.2 m 1.53,-42.2 v 8.4"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-8-4" />
     <path
-       id="path255486"
-       inkscape:label="Zigzag-8-5"
-       d="m 96,156.5 v -39 H 51 v 39 h 45"
-       style="display:inline;fill:none;stroke:#ed171f;stroke-width:5.6;stroke-dasharray:none;stroke-dashoffset:0"
-       inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="0"
-       inkstitch:zigzag_spacing_mm="1.2"
-       inkstitch:zigzag_underlay="False"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False" />
+       id="path4"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 17.2,86.5 V 97.315362 L 20.181133,102 17.2,106.68464 v 60.71266 l 16.359994,22.90399 62.470311,-0.0561 M 22.8,86.5 v 9.184638 L 26.818867,102 22.8,108.31536 v 57.28734 l 13.640006,19.09601 59.585271,-0.0535 M 15.8,88.188732 h 8.4 m -6.765662,12.102558 7.086757,-4.509755 m -7.482023,8.548305 7.086757,4.50976 M 15.8,116.5475 h 8.4 m -8.4,42.2183 h 8.4 m -2.297537,17.6236 6.835361,-4.8824 m -1.927583,11.75329 6.835361,-4.8824 m 10.035291,13.31432 -0.0075,-8.4"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-8-5" />
     <path
-       id="path255488"
-       inkscape:label="Zigzag-8-6"
-       d="M 96.027791,187.44519 111.96372,187.43088 127,166.5"
-       style="display:inline;fill:none;stroke:#ed171f;stroke-width:5.6;stroke-dasharray:none;stroke-dashoffset:0"
-       inkstitch:repeats="1"
-       inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="0"
-       inkstitch:zigzag_spacing_mm="1.2"
-       inkstitch:zigzag_underlay="False"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False" />
+       id="path5"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 98.8,156.5 V 114.7 H 51 m 42.2,41.8 V 120.3 H 51 m 49.2,1.76 h -8.4"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-8-6" />
+    <path
+       id="path6"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="m 48.2,117.5 v 41.8 H 96 M 53.8,117.5 v 36.2 H 96 m -49.2,-1.76 h 8.4"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-8-7" />
+    <path
+       id="path7"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="m 96.030305,190.24519 17.370485,-0.0156 15.87325,-22.09597 m -33.248763,16.51157 14.501373,-0.013 14.19931,-19.76579 m -14.93081,26.76645 -0.008,-8.4"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-8-8" />
     <path
        d="M 20.2288,166.676 C 19.702932,160.8399 20.145458,154.87139 20,148.98328 c 0.05313,-13.69952 -0.105369,-27.42173 0.07836,-41.10724 0.464164,-2.22514 2.869076,-3.9531 3.172833,-6.05419 C 21.978479,99.086692 19.2646,96.79301 20,93.484238 20,75.035925 20,56.587613 20,38.1393 c 2.380337,-3.57024 5.048971,-6.952379 7.542,-10.4467"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -2379,41 +2387,33 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
        sodipodi:nodetypes="cccc"
        inkstitch:ties="3" />
     <path
-       id="path276610"
-       inkscape:label="Zigzag-9-2"
-       d="M 127,166.5 V 38 L 112,17.5 H 35 L 20,38 v 48.5"
-       style="display:inline;fill:none;stroke:#ed171f;stroke-width:5.6;stroke-dasharray:none;stroke-dashoffset:0"
-       inkstitch:repeats="1"
-       inkstitch:ties="2"
-       inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:zigzag_spacing_mm="1.2"
-       inkstitch:zigzag_underlay="False"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False" />
+       id="path8"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 129.8,166.5 V 37.085003 L 113.42073,14.7 H 33.57927 L 17.2,37.085003 V 86.5 m 107,80 V 38.914997 L 110.57927,20.3 H 36.42073 L 22.8,38.914997 V 86.5 M 131.2,53.722689 h -8.4 m 2.47477,-25.193 -6.77906,4.960284 M 98.259823,13.3 v 8.4 M 49.491256,13.3 v 8.4 m -27.322506,6.223545 6.779055,4.960284 M 15.8,52.97161 h 8.4"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-9-2" />
     <path
-       id="path276612"
-       inkscape:label="Zigzag-9-3"
-       d="m 50,86.5 v -38 h 46 v 38 H 50"
-       style="display:inline;fill:none;stroke:#ed171f;stroke-width:5.6;stroke-dasharray:none;stroke-dashoffset:0"
-       inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="0"
-       inkstitch:repeats="1"
-       inkstitch:zigzag_spacing_mm="1.2"
-       inkstitch:zigzag_underlay="False"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False" />
+       id="path9"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 52.8,86.5 V 51.3 H 96 M 47.2,86.5 V 45.7 H 96 m -41.8,7.2 h -8.4"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-9-3" />
     <path
-       id="path276614"
-       inkscape:label="Zigzag-9-4"
-       d="M 20,86.5 V 97 l 15,20.5 h 61 v 39 H 50 v -24 H 20 v 34 l 15,21 h 77 l 15,-21"
-       style="display:inline;fill:none;stroke:#ed171f;stroke-width:5.6;stroke-dasharray:none;stroke-dashoffset:0"
-       inkstitch:repeats="1"
-       inkstitch:ties="0"
-       inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:zigzag_spacing_mm="1.2"
-       inkstitch:zigzag_underlay="False"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False" />
+       id="path10"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 93.2,48.5 V 83.7 H 50 M 98.8,48.5 V 89.3 H 50 m 41.8,-7.2 h 8.4"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-9-4" />
+    <path
+       id="path11"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 17.2,86.5 V 97.914997 L 33.57927,120.3 H 63.609032 93.2 V 141.85129 153.7 H 52.8 v -24 H 17.2 v 37.6973 L 33.55907,190.3 h 79.88186 l 15.83752,-22.17253 M 22.8,86.5 v 9.585003 L 36.42073,114.7 H 59.473404 98.8 V 144.94017 159.3 H 47.2 v -24 H 22.8 v 30.3027 L 36.44093,184.7 h 74.11814 l 14.16248,-19.82747 M 22.176494,107.08704 28.955548,102.12675 M 54.89043,121.7 v -8.4 m 19.925786,8.4 v -8.4 M 91.8,136.16779 h 8.4 M 76.48064,152.3 v 8.4 m -7.970315,-8.4 v 8.4 M 54.2,143.12907 H 45.8 M 36.718124,128.3 v 8.4 M 15.8,151.64829 h 8.4 m -2.352107,24.66471 6.835361,-4.8824 M 54.118674,191.7 v -8.4 m 39.851572,8.4 v -8.4 m 34.131104,-11.11594 -6.83536,-4.8824"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-9-5" />
     <path
        d="m 20,166.5 15,21 h 77 l 15,-21"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -2601,41 +2601,33 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
        sodipodi:nodetypes="cccccccc"
        inkstitch:ties="3" />
     <path
-       id="path299692"
-       inkscape:label="Zigzag-A-2"
-       d="M 161.5,169.875 V 156.5 h -14 l -33,-108 h 8 v -31 h -68 v 31 H 63 l -33.5,108 h -14 v 14 17 h 57 l -2,-43 h 6"
-       style="fill:none;stroke:#ed171f;stroke-width:5.6;stroke-dasharray:none;stroke-dashoffset:0"
-       inkstitch:repeats="1"
-       inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="2"
-       inkstitch:zigzag_spacing_mm="1.2"
-       inkstitch:zigzag_underlay="False"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False" />
+       id="path12"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 164.3,169.875 V 153.7 H 149.57224 L 118.28335,51.3 H 125.3 V 14.7 H 51.7 v 36.6 h 7.499874 L 27.436911,153.7 H 12.7 v 36.6 h 62.73326 l -2,-43 H 76.5 m 82.2,22.575 V 159.3 H 145.42776 L 110.71665,45.7 H 119.7 V 20.3 H 57.3 v 25.4 h 9.500126 L 31.563089,159.3 H 18.3 v 25.4 h 51.26674 l -2,-43 H 76.5 m 76.33792,10.6 v 8.4 m -9.42087,-31.93518 -8.03335,2.45463 m -8.06576,-55.142618 -8.03335,2.454636 M 117.43683,52.7 V 44.3 M 126.7,31.52609 h -8.4 M 92.451933,13.3 v 8.4 M 81.433394,13.3 v 8.4 M 50.3,29.131494 h 8.4 m -7.776893,44.126237 8.022901,2.488585 M 32.96916,131.13911 40.992062,133.6277 M 21.694526,152.3 v 8.4 M 11.3,172.34255 h 8.4 M 44.416711,191.7 v -8.4 m 31.535795,-11.96874 -8.390928,0.39028 m 7.878991,-11.39692 -8.390928,0.39028"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-A-2" />
     <path
-       id="path299694"
-       inkscape:label="Zigzag-A-3"
-       d="m 76.5,113.5 h 24 l -11.5,-39 -12.5,39"
-       style="fill:none;stroke:#ed171f;stroke-width:5.6;stroke-dasharray:none;stroke-dashoffset:0"
-       inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="0"
-       inkstitch:repeats="1"
-       inkstitch:zigzag_spacing_mm="1.2"
-       inkstitch:zigzag_underlay="False"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False" />
+       id="path13"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="m 76.5,116.3 h 27.74483 L 91.685674,73.70807 M 76.5,110.7 H 96.755167 L 86.314326,75.29193 M 97.191257,117.7 v -8.4"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-A-3" />
     <path
-       id="path299696"
-       inkscape:label="Zigzag-A-4"
-       d="m 76.5,144.5 h 30 l -2,43 h 57 v -17.625"
-       style="fill:none;stroke:#ed171f;stroke-width:5.6;stroke-dasharray:none;stroke-dashoffset:0"
-       inkstitch:repeats="1"
-       inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="0"
-       inkstitch:zigzag_spacing_mm="1.2"
-       inkstitch:zigzag_underlay="False"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False" />
+       id="path14"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="m 86.33361,73.645388 -12.5,39.000002 m 17.83278,-37.290778 -12.5,38.999998 m -0.415976,-21.636528 7.999172,2.563836"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-A-4" />
+    <path
+       id="path15"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="m 76.5,147.3 h 27.06674 l -0.31987,6.87711 L 101.56674,190.3 H 164.3 V 169.875 M 76.5,141.7 h 32.93326 l -0.5168,11.11112 -1.4832,31.88888 H 158.7 V 169.875 M 98.650723,148.7 v -8.4 m 3.332397,10.91526 8.39093,0.39028 m -9.69452,27.63701 8.39093,0.39027 M 111.19612,191.7 v -8.4 m 42.82473,8.4 v -8.4 M 165.7,180.212 h -8.4"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-A-5" />
     <path
        d="m 15.5,170.062 c -0.08346,3.79507 0.170388,7.6237 -0.131843,11.397 -0.918245,3.12711 -2.099052,6.1907 -3.118157,9.291 3.374752,-1.03571 6.640363,-2.53891 10.092439,-3.25 14.560129,0.0297 29.132273,-0.0594 43.684884,0.0447 3.295923,0.8485 6.476805,2.16952 9.722677,3.20532 -1.034656,-3.27688 -2.412372,-6.49139 -3.229018,-9.80791 C 72.472195,174.96225 72.513863,168.9804 72.5,163 L 68.928932,149.71951 C 68.08957,146.88059 67.135418,144.07509 66.25,141.25 c 4.303288,1.04734 8.540407,2.42577 12.8883,3.25 6.546393,-0.0589 13.113632,0.11821 19.646967,-0.0909 3.988203,-1.05321 7.976423,-2.10634 11.964733,-3.15912 -0.76433,2.88892 -1.87619,5.72846 -2.42466,8.64809 0.478,4.385 1.48943,8.73517 2.17466,13.10193"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -2980,17 +2972,12 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
        sodipodi:nodetypes="cccc"
        inkstitch:ties="3" />
     <path
-       id="path326856"
-       inkscape:label="Zigzag-B-2"
-       d="m 139.75,166 0.75,-58.5 -4,-5.5 4.125,-5.875 L 140.5,37.75 125,17.5 H 62"
-       style="fill:none;stroke:#ed171f;stroke-width:5.6;stroke-dasharray:none;stroke-dashoffset:0"
-       inkstitch:repeats="1"
-       inkstitch:ties="2"
-       inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:zigzag_spacing_mm="1.2"
-       inkstitch:zigzag_underlay="False"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False" />
+       id="path16"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="m 142.54977,166.03589 0.76193,-59.43032 -3.37034,-4.63421 3.48554,-4.964241 -0.12893,-60.20838 L 126.38289,14.7 H 62 m 74.95023,151.26411 0.73807,-57.56968 -4.62966,-6.36579 4.76446,-6.785759 -0.12107,-56.54162 L 123.61711,20.3 H 62 m 82.56831,97.49851 -8.39931,-0.10768 m 6.01252,-15.01952 -6.79339,4.94065 m 9.41358,-22.368822 -8.39998,0.01799 m 8.32013,-37.309174 -8.39999,0.01799 m 0.3866,-22.083398 -6.67027,5.105637 M 114.6465,13.3 v 8.4"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-B-2" />
     <path
        id="path326858"
        inkscape:label="Zigzag-B-3"
@@ -2999,46 +2986,47 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
        inkstitch:running_stitch_length_mm="3"
        inkstitch:ties="3" />
     <path
-       id="path326860"
-       inkscape:label="Zigzag-B-4"
-       d="M 108,117.5 H 62 v 39 h 46 v -39"
-       style="fill:none;stroke:#ed171f;stroke-width:5.6;stroke-dasharray:none;stroke-dashoffset:0"
-       inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="0"
-       inkstitch:zigzag_spacing_mm="1.2"
-       inkstitch:zigzag_underlay="False"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False" />
+       id="path17"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 108,114.7 H 59.2 v 41.8 M 108,120.3 H 64.8 v 36.2 m 1.55,-43.2 v 8.4"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-B-4" />
+    <path
+       id="path18"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="m 62,159.3 h 48.8 V 117.5 M 62,153.7 h 43.2 v -36.2 m -1.55,43.2 v -8.4"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-B-5" />
     <path
        id="path326862"
-       inkscape:label="Zigzag-B-5"
+       inkscape:label="Zigzag-B-6"
        d="m 108,86.5 v -38 H 62"
        style="fill:none;stroke:#ed171f;stroke-width:1;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0"
        inkstitch:running_stitch_length_mm="3"
        inkstitch:ties="3" />
     <path
-       id="path326864"
-       inkscape:label="Zigzag-B-6"
-       d="m 62,48.5 h 46 v 38 H 62 v -38"
-       style="fill:none;stroke:#ed171f;stroke-width:5.6;stroke-dasharray:none;stroke-dashoffset:0"
-       inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="0"
-       inkstitch:zigzag_spacing_mm="1.2"
-       inkstitch:zigzag_underlay="False"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False" />
+       id="path19"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="m 62,51.3 h 43.2 V 86.5 M 62,45.7 h 48.8 V 86.5 M 104,52.7 v -8.4"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-B-7" />
     <path
-       id="path326866"
-       inkscape:label="Zigzag-B-7"
-       d="M 62,17.5 H 20 v 31 h 10.5 v 108 H 20 v 9.5 21.5 L 61.962992,187.55 124.875,187.625 139.75,166"
-       style="fill:none;stroke:#ed171f;stroke-width:5.6;stroke-dasharray:none;stroke-dashoffset:0"
-       inkstitch:repeats="1"
-       inkstitch:ties="0"
-       inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:zigzag_spacing_mm="1.2"
-       inkstitch:zigzag_underlay="False"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False" />
+       id="path20"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 108,83.7 H 64.8 V 48.5 M 108,89.3 H 59.2 V 48.5 M 66,82.3 v 8.4"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-B-8" />
+    <path
+       id="path21"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 62,14.7 H 17.2 V 51.3 H 27.7 V 153.7 H 17.2 v 36.59667 l 44.759655,0.0533 64.386585,0.0768 15.71069,-22.83991 M 62,20.3 H 22.8 V 45.7 H 33.3 V 159.3 H 22.8 v 25.40333 l 39.16633,0.0467 61.43743,0.0732 14.03931,-20.41009 M 36.511453,13.3 v 8.4 M 15.8,30.118315 h 8.4 M 23.465641,52.7 V 44.3 M 26.3,66.954187 h 8.4 m -8.4,72.824423 h 8.4 M 25.374067,152.3 v 8.4 M 15.8,172.97326 h 8.4 m 14.03923,18.74848 0.01001,-8.4 m 69.17314,8.48246 0.01,-8.4 m 31.65082,-9.0239 -6.92079,-4.76054"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-B-9" />
     <path
        d="m 20,170.254 c -0.0042,-2.30235 0.0148,19.54739 0,17.246 -0.109567,-0.63443 105.09608,0.73194 104.875,0.125 L 139.75,166"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -3257,16 +3245,19 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
        sodipodi:nodetypes="cccc"
        inkstitch:ties="3" />
     <path
-       id="path344939"
-       inkscape:label="Trace-C-2"
-       d="m 127,166.5 v -34 H 96 v 24 H 50 V 48.5 H 96 V 72 h 31 L 126.992,65.976 127,37.875 111.9375,17.6875 34.5,17.5 19.875,37 20.125,167.0625 34.5,187.5 H 112 l 15,-21"
-       style="fill:none;stroke:#ed171f;stroke-width:5.6;stroke-dasharray:none;stroke-dashoffset:0"
-       inkstitch:ties="0"
-       inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:zigzag_spacing_mm="1.2"
-       inkstitch:zigzag_underlay="False"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False" />
+       id="path22"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 129.8,166.5 V 129.7 H 129.797 93.2 v 24 H 52.8 V 51.3 h 40.4 v 23.5 h 36.5927 0.011 L 129.792,65.972282 M 124.2,166.5 V 135.3 H 124.198 98.8 v 24 H 47.2 V 45.7 h 51.6 v 23.5 h 25.39226 0.004 l -0.004,-3.220282 M 131.2,149.0238 h -8.4 M 112.06664,128.3 v 8.4 M 91.8,144.39528 h 8.4 M 80.142798,152.3 v 8.4 m -13.98096,-8.4 v 8.4 M 54.2,137.70944 H 45.8 M 54.2,64.309397 H 45.8 M 69.143004,52.7 v -8.4 m 10.48572,8.4 V 44.3 M 91.8,60.090645 h 8.4 M 108.55732,76.2 v -8.4"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-C-2" />
+    <path
+       id="path23"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 129.792,65.976797 129.80026,36.94588 113.34438,14.890898 33.102544,14.696608 17.073205,36.069059 17.326703,167.95101 33.046173,190.3 h 80.394757 l 15.83752,-22.17253 M 124.192,65.975203 124.19974,38.80412 110.53062,20.484102 35.897456,20.303392 22.676795,37.930941 22.923297,166.17399 35.953827,184.7 h 74.605243 l 14.16248,-19.82747 m 6.4728,-107.164487 -8.4,-0.0024 m 2.12388,-29.643997 -6.73248,5.023309 M 90.813932,13.436333 90.793592,21.836308 M 53.60285,13.346234 53.58251,21.746209 m -33.313583,7.728544 6.72,5.04 m -11.270316,25.178758 8.399984,-0.01615 m -8.233092,86.842099 8.399985,-0.0162 m -2.768483,29.83869 6.870672,-4.83258 M 55.115444,191.7 v -8.4 m 37.211189,8.4 v -8.4 m 35.687877,-10.99436 -6.83536,-4.8824"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-C-3" />
     <path
        d="M 21.1055,166.316 34.5,187.5 H 112 l 15,-21"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -3430,41 +3421,33 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
        sodipodi:nodetypes="cccc"
        inkstitch:ties="3" />
     <path
-       id="path365939"
-       inkscape:label="Zigzag-D-2"
-       d="M 140.75,166.625 140.5,37.875 125,17.5 H 20 v 31 h 10.5 v 108 H 20 V 169.8824 187.5 h 42"
-       style="fill:none;stroke:#ed171f;stroke-width:5.6;stroke-dasharray:none;stroke-dashoffset:0"
-       inkstitch:repeats="1"
-       inkstitch:ties="2"
-       inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:zigzag_spacing_mm="1.2"
-       inkstitch:zigzag_underlay="False"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False" />
+       id="path24"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 143.54999,166.61956 143.29817,36.928612 126.38806,14.7 H 17.2 V 51.3 H 27.7 V 153.7 H 17.2 v 36.6 H 62 M 137.95001,166.63044 137.70183,38.821388 123.61194,20.3 H 22.8 V 45.7 H 33.3 V 159.3 H 22.8 v 25.4 H 62 m 82.74923,-121.476637 -8.39999,0.01631 m 1.97898,-35.156451 -6.68539,5.085819 M 102.10454,13.3 v 8.4 M 43.022437,13.3 v 8.4 M 15.8,33.86563 h 8.4 M 25.059664,52.7 V 44.3 M 26.3,72.600714 h 8.4 m -8.4,59.082106 h 8.4 M 25.776135,152.3 v 8.4 M 15.8,170.4179 h 8.4 M 42.305966,191.7 v -8.4"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-D-2" />
     <path
-       id="path365941"
-       inkscape:label="Zigzag-D-3"
-       d="m 62,156.5 h 46 V 48.5 H 62 v 108"
-       style="fill:none;stroke:#ed171f;stroke-width:5.6;stroke-dasharray:none;stroke-dashoffset:0"
-       inkstitch:repeats="1"
-       inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="0"
-       inkstitch:zigzag_spacing_mm="1.2"
-       inkstitch:zigzag_underlay="False"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False" />
+       id="path25"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="m 62,159.3 h 48.8 V 48.5 M 62,153.7 h 43.2 V 48.5 m -4.7,112.2 v -8.4 m 11.7,-3.7 h -8.4"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-D-3" />
     <path
-       id="path365943"
-       inkscape:label="Zigzag-D-4"
-       d="m 62,187.5 h 63 l 15.75,-20.875"
-       style="fill:none;stroke:#ed171f;stroke-width:5.6;stroke-dasharray:none;stroke-dashoffset:0"
-       inkstitch:repeats="1"
-       inkstitch:ties="0"
-       inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:zigzag_spacing_mm="1.2"
-       inkstitch:zigzag_underlay="False"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False" />
+       id="path26"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 108,45.7 H 59.2 V 156.5 M 108,51.3 H 64.8 V 156.5 M 69.5,44.3 v 8.4 m -11.7,3.7 h 8.4"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-D-4" />
+    <path
+       id="path27"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="m 62,190.3 h 64.39498 l 16.59019,-21.98858 M 62,184.7 h 61.60502 l 14.90981,-19.76142 M 120.83907,191.7 v -8.4 m 10.37703,2.93456 -6.70551,-5.05926"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-D-5" />
     <path
        d="m 20,170.262 c -0.0065,-2.22437 0.01301,-4.45054 -0.0098,-6.67377 -0.08148,-0.56832 -0.127361,-1.14453 -0.336766,-1.68448 C 18.768846,159.01921 17.884666,156.13453 17,153.25 c 5.496106,2.40441 11.14896,4.36116 16.75,6.5 -1.036128,-3.43004 -2.481178,-6.78906 -3.25,-10.26631 0.02394,-31.3632 -0.04788,-62.733809 0.03591,-94.092364 C 31.330189,51.948117 32.717976,48.636369 33.75,45.25 28.116776,47.29207 22.531819,49.446191 17,51.75"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -3643,17 +3626,26 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
        inkscape:label="Zigzag-E-1"
        sodipodi:nodetypes="cccc" />
     <path
-       style="fill:none;stroke:#ed171f;stroke-width:5.6;stroke-dasharray:none;stroke-dashoffset:0"
-       d="M 140.5,170.05918 V 132 l -31.74369,6.5e-4 L 108,156.5 H 62 v -38 H 96.5 V 132 l 29.323,0.0138 V 72.5 L 109.24755,72.519031 108,48.5 H 62 v 37 h 34.5 v -13 h 44 v -55 H 20 v 31 h 10.5 v 108 H 20 v 13.763 17.237 h 120.5 v -17.44082"
-       id="path382935"
-       inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="0"
-       inkscape:label="Zigzag-E-2"
-       sodipodi:nodetypes="ccccccccccccccccccccccccccc"
-       inkstitch:zigzag_spacing_mm="1.2"
-       inkstitch:zigzag_underlay="False"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False" />
+       id="path28"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="m 143.3,170.05918 v -40.85924 l -37.25859,7.7e-4 -0.36999,11.98523 L 105.2851,153.7 H 64.8 V 121.3 H 93.7 V 132 m 44,38.05918 v -35.25912 l -26.22879,5.3e-4 -0.27745,8.9876 L 110.7149,159.3 H 59.2 V 115.7 H 99.3 V 132 m 45.4,10.90151 h -8.4 m -7.52996,-15.10127 1.7e-4,8.4 m -9.05273,-8.39981 1.7e-4,8.4 m -15.51943,7.3352 8.396,0.25919 M 95.946362,152.3 v 8.4 m -22.631389,-8.4 v 8.4 M 66.2,145.18358 h -8.4 m 8.4,-15.84197 H 57.8 M 73.789777,122.7 v -8.4 m 11.315695,8.4 v -8.4 M 92.3,129.73686 h 8.4"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-E-2" />
+    <path
+       id="path29"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 96.498682,134.8 128.623,134.8151 V 69.696783 L 111.90573,69.715977 110.65834,45.7 H 59.2 v 39.8 m 37.301318,43.7 26.521682,0.0125 V 75.303217 L 106.58937,75.322085 105.34166,51.3 H 64.8 v 34.2 m 50.81975,50.709 0.004,-8.4 m 14.3993,-6.84029 h -8.4 m 8.4,-38.243465 h -8.4 m -6.82594,-14.412588 0.01,8.399994 m -1.95835,-15.838826 -8.38869,0.435709 M 97.237649,44.3 v 8.4 M 71.742008,44.3 v 8.4 M 57.8,60.004359 h 8.4"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-E-3" />
+    <path
+       id="path30"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="m 62,88.3 h 37.3 v -13 h 44 V 14.7 H 17.2 V 51.3 H 27.7 V 153.7 H 17.2 v 36.6 H 143.3 V 170.05918 M 62,82.7 h 31.7 v -13 h 44 V 20.3 H 22.8 V 45.7 H 33.3 V 159.3 H 22.8 v 25.4 H 137.7 V 170.05918 M 67.959408,89.7 V 81.3 M 100.7,78.284143 H 92.3 M 114.55349,76.7 V 68.3 M 144.7,44.811836 h -8.4 M 108.21775,13.3 v 8.4 M 48.623672,13.3 v 8.4 M 15.8,30.592185 h 8.4 M 25.929818,52.7 V 44.3 M 26.3,79.686267 h 8.4 m -8.4,47.675263 h 8.4 M 23.882018,152.3 v 8.4 M 15.8,176.45561 h 8.4 M 50.671472,191.7 v -8.4 m 59.594078,8.4 v -8.4"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-E-4" />
     <path
        d="m 20,170.263 c 0.09813,-4.05511 0.204396,-8.14524 -1.458875,-11.94402 C 18.027234,156.62938 17.513761,154.93965 17,153.25 c 5.539586,2.28261 11.10995,4.47689 16.75,6.5 -1.383507,-4.75029 -3.931032,-9.32197 -3.25,-14.412 C 30.54115,115.30888 30.41805,85.267267 30.56106,55.245886 31.386823,51.86431 32.721427,48.583831 33.75,45.25 28.166262,47.441957 22.487909,49.320115 17,51.75 18.250611,47.000899 20.620157,42.417624 20,37.387 19.738011,32.434407 20.564769,27.338472 19.5283,22.4831 18.685523,19.738737 17.842792,16.994359 17,14.25 c 4.369237,1.395767 8.561755,3.897346 13.3017,3.25 H 133.796 c 3.34492,-0.992904 6.63319,-2.178092 9.954,-3.25 -1.3433,4.740856 -3.90894,9.287512 -3.25,14.3541 0.107,12.901561 -0.21389,25.845947 0.16011,38.720786 0.91277,2.675315 2.08267,5.277833 3.08989,7.925114 -4.86973,-1.290356 -9.65582,-3.359833 -14.8,-2.75 h -3.127"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -3994,17 +3986,19 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
        inkscape:label="Zigzag-F-1"
        sodipodi:nodetypes="cccc" />
     <path
-       style="fill:none;stroke:#ed171f;stroke-width:5.6;stroke-dasharray:none;stroke-dashoffset:0"
-       d="M 72.5,170.23596 V 156.5 H 62 v -39 H 96.5 V 131 H 126 V 72 L 108.24105,71.996735 108,48.5 H 62 v 37 H 96.5 V 72 h 44 V 17.5 H 20 v 31 h 10.5 v 108 H 20 v 13.758 17.242 h 52.5 v -17.26404"
-       id="path11770"
-       inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="0"
-       inkscape:label="Zigzag-F-2"
-       sodipodi:nodetypes="ccccccccccccccccccccccccc"
-       inkstitch:zigzag_spacing_mm="1.2"
-       inkstitch:zigzag_underlay="False"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False" />
+       id="path31"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 75.3,170.23596 V 153.7 H 64.8 V 120.3 H 88.220363 93.7 v 13.5 h 35.1 V 69.200515 L 111.01248,69.197244 110.77142,45.7 H 59.2 V 88.3 H 96.5 M 69.7,170.23596 V 159.3 H 59.2 V 114.7 H 86.702883 99.3 v 13.5 h 23.9 V 74.799485 L 105.46962,74.796226 105.22858,51.3 H 64.8 v 31.4 h 31.7 m -28.188684,69.6 v 8.4 M 66.2,137.71681 H 57.8 M 77.632474,121.7 v -8.4 M 92.3,123.72698 h 8.4 M 107.15162,135.2 v -8.4 M 130.2,113.99909 h -8.4 m 8.4,-25.0945 h -8.4 m -7.57407,-21.106755 -0.002,8.4 m -1.90605,-16.184091 -8.39956,0.08617 M 90.878007,44.3 v 8.4 M 80.12322,44.3 v 8.4 M 57.8,66.226068 h 8.4 M 78.575356,89.7 v -8.4"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-F-2" />
+    <path
+       id="path32"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 99.3,85.5 V 74.8 h 44 V 14.7 H 17.2 V 51.3 H 27.7 V 153.7 H 17.2 v 36.6 H 75.3 V 170.23596 M 93.7,85.5 V 69.2 h 44 V 20.3 H 22.8 V 45.7 H 33.3 V 159.3 H 22.8 v 25.4 H 69.7 V 170.23596 M 117.52848,76.2 V 67.8 M 144.7,45.645113 h -8.4 M 114.38607,13.3 v 8.4 M 45.329103,13.3 v 8.4 M 15.8,31.63202 h 8.4 M 22.862582,52.7 V 44.3 M 26.3,75.391064 h 8.4 m -8.4,54.259046 h 8.4 M 27.754049,152.3 v 8.4 M 15.8,173.40915 h 8.4 M 45.370276,191.7 v -8.4"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-F-3" />
     <path
        d="m 20,170.258 c 0.07841,-4.07379 0.251195,-8.19304 -1.4525,-12.002 -0.515714,-1.6687 -1.031885,-3.33727 -1.5475,-5.006 5.51812,2.33764 11.128714,4.42656 16.75,6.5 -1.383464,-4.74998 -3.931235,-9.32123 -3.25,-14.411 C 30.54105,115.3103 30.41844,85.269183 30.56092,55.248173 31.3854,51.86561 32.721592,48.5846 33.75,45.25 28.126338,47.315583 22.522332,49.424262 17,51.75 18.302898,46.894188 20.640088,42.175245 20,37.0256 19.760042,32.277324 20.49901,27.398448 19.595968,22.738212 18.73068,19.908797 17.86533,17.079402 17,14.25 c 4.485054,1.473776 8.822311,3.934316 13.697447,3.25 H 133.789 c 3.35439,-0.96545 6.6373,-2.181735 9.961,-3.25 -1.39746,4.751877 -3.93626,9.333115 -3.25,14.43 0.088,12.507191 -0.17833,25.044201 0.13499,37.532436 0.92457,2.95732 2.09533,5.8552 3.11501,8.787564 -4.78614,-1.31123 -9.43706,-3.632397 -14.522,-3 -8.95491,-0.138125 -17.96719,0.27943 -26.88618,-0.210385 C 99.311211,70.859753 96.280588,69.929932 93.25,69 c 2.628692,6.61268 4.558729,13.412563 6.5,20.25 C 96.095316,88.10951 92.626895,85.996884 88.8489,85.5 81.8294,85.587632 74.752043,85.324362 67.768434,85.62968 64.811984,86.744905 61.926995,88.056551 59,89.25 60.255224,83.856569 62.613227,78.599171 62,72.955253 61.83056,66.722572 62.33895,60.395683 61.741155,54.221857 60.827387,51.231254 59.913625,48.240648 59,45.25 c 4.459359,1.453325 8.762821,3.930643 13.6081,3.25 9.846874,-0.03578 19.697204,0.07224 29.5419,-0.0542 2.95011,-1.064974 5.89998,-2.130594 8.85,-3.1958 -1.26655,4.757589 -3.61644,9.353275 -3,14.3936 V 66"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -4316,17 +4310,19 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
        sodipodi:nodetypes="cccc"
        inkstitch:running_stitch_length_mm="3" />
     <path
-       style="fill:none;stroke:#ed171f;stroke-width:5.6;stroke-dasharray:none;stroke-dashoffset:0"
-       d="m 127,166.5 v -80 H 71 v 31 h 25 v 39 H 50 V 48.5 H 96 V 72 h 31 V 38 L 112,17.5 H 34.5 L 18.952349,36.956699 19.938485,167.04345 34.586679,187.5946 112.1734,187.46201 127,166.5"
-       id="path28755"
-       inkstitch:ties="0"
-       inkscape:label="Zigzag-G-2"
-       sodipodi:nodetypes="ccccccccccccccccccc"
-       inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:zigzag_spacing_mm="1.2"
-       inkstitch:zigzag_underlay="False"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False" />
+       id="path33"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 129.8,166.5 V 83.7 H 97.731429 68.2 v 36.6 h 25 v 33.4 H 52.8 V 51.3 H 93.2 V 72 m 31,94.5 V 89.3 H 103.44995 73.8 v 25.4 h 25 v 44.6 H 47.2 V 45.7 H 98.8 V 72 m 32.4,35.415 h -8.4 M 102.465,82.3 v 8.4 m -9.09,-8.4 v 8.4 M 66.8,100.485 h 8.4 m 6.055,21.215 v -8.4 M 91.8,134.57 h 8.4 M 72.48,152.3 v 8.4 M 54.2,133.53 H 45.8 M 54.2,69.9 H 45.8 M 74.05,52.7 v -8.4"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-G-2" />
+    <path
+       id="path34"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="m 96,74.8 h 33.8 V 37.085003 L 113.42073,14.7 H 33.153293 L 16.1449,35.984706 17.145267,167.94871 33.145725,190.39707 113.6243,190.25953 129.28597,168.11689 M 96,69.2 h 28.2 V 38.914997 L 110.57927,20.3 H 35.846707 l -14.086909,17.628692 0.971905,128.209498 13.29593,18.65394 74.694867,-0.12764 13.99153,-19.78138 M 105.02795,76.2 V 67.8 M 131.2,48.83229 h -8.4 m 3.32391,-19.142107 -6.77905,4.960284 M 89.552376,13.3 v 8.4 m -31.59783,-8.4 v 8.4 m -34.637091,3.066151 6.562211,5.243795 m -14.946303,30.841298 8.399759,-0.06368 m -7.749623,85.826746 8.399759,-0.0637 m -1.001198,31.99903 6.840269,-4.87552 m 26.782316,18.08282 -0.01435,-8.39999 m 31.61214,8.34599 -0.01436,-8.39999 m 39.634245,-10.69236 -6.85792,-4.85067"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-G-3" />
     <path
        d="M 21.0352,166.149 C 19.108566,161.92023 20.248251,157.15924 19.889014,152.67097 19.636517,115.4622 19.251356,78.245611 19.081471,41.041703 20.147696,37.532635 21.170021,33.748672 23.7587,31.0011 27.409599,26.638427 30.650047,21.873967 34.5685,17.7732 40.07371,17.154993 45.71693,17.668108 51.277048,17.5 c 19.560788,0.06039 39.13117,-0.120658 58.685952,0.0909 2.618,1.135671 4.65416,3.022536 6.09092,5.475486 3.5276,4.972692 7.40109,9.757706 10.70608,14.851814 0.55643,4.922808 0.0825,10.014281 0.24,15.0024 0.16243,4.609167 -0.33173,9.317881 0.26153,13.863014 C 128.17414,69.522482 129.08757,72.261074 130,75"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -4507,17 +4503,19 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
        sodipodi:nodetypes="cccccccccccc"
        inkstitch:running_stitch_length_mm="3" />
     <path
-       style="opacity:0.98;fill:none;stroke:#ed171f;stroke-width:5.6;stroke-dasharray:none;stroke-dashoffset:0"
-       d="M 157.5,169.8824 V 156.5 H 145 v -108 h 12.5 v -31 h -57 v 31 H 113 v 37 H 64.5 v -37 H 77 v -31 H 20.5 v 31 h 12 v 108 h -12 V 170.254 187.5 H 77 v -31 H 64.5 v -38 H 113 v 38 h -12.5 v 31 h 57 v -17.6176"
-       id="path16700"
-       inkstitch:ties="0"
-       inkscape:label="Zigzag-H-2"
-       sodipodi:nodetypes="ccccccccccccccccccccccccccccccc"
-       inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:zigzag_spacing_mm="1.2"
-       inkstitch:zigzag_underlay="False"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False" />
+       id="path35"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 160.3,169.8824 V 153.7 H 147.8 V 51.3 h 12.5 V 14.7 H 97.7 v 36.6 h 12.5 V 82.7 H 67.3 V 51.3 H 79.8 V 14.7 H 17.7 v 33.8 m 137,121.3824 V 159.3 H 143.24424 142.2 V 158.33537 45.7 h 12.5 V 20.3 h -51.4 v 25.4 h 12.5 V 88.3 H 66.384665 61.7 V 83.972482 45.7 H 74.2 V 20.3 H 23.3 v 28.2 m 126.3271,103.8 v 8.4 M 149.2,129.24416 h -8.4 m 8.4,-53.13824 h -8.4 M 149.27702,52.7 V 44.3 M 161.7,35.46768 h -8.4 M 132.95709,13.3 v 8.4 M 96.3,32.867328 h 8.4 M 106.12262,52.7 V 44.3 M 108.8,62.87792 h 8.4 M 93.111488,81.3 v 8.4 M 68.7,71.600896 H 60.3 M 67.968224,52.7 V 44.3 M 81.2,30.962656 H 72.8 M 47.952064,13.3 v 8.4 M 16.3,43.186176 h 8.4"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-H-2" />
+    <path
+       id="path36"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="m 20.5,51.3 h 9.2 V 59.103706 153.7 h -12 v 36.6 H 79.8 V 153.7 H 67.3 V 121.3 H 103.02489 110.2 V 127.38613 153.7 H 97.7 v 36.6 h 62.6 V 169.8824 M 20.5,45.7 H 35.3 V 59.395227 159.3 h -12 v 25.4 H 74.2 V 159.3 H 61.7 V 115.7 H 96.146791 115.8 V 133.88616 159.3 h -12.5 v 25.4 h 51.4 V 169.8824 M 28.3,71.893232 h 8.4 m -8.4,60.674108 h 8.4 M 26.0956,152.3 v 8.4 M 16.3,171.1291 h 8.4 M 44.578512,191.7 v -8.4 M 81.2,174.4159 H 72.8 M 69.635024,152.3 v 8.4 M 68.7,141.41032 h -8.4 m 8.4,-10.11235 H 60.3 M 87.095264,122.7 v -8.4 M 108.8,133.04467 h 8.4 m -8.4,10.11235 h 8.4 M 106.11827,152.3 v 8.4 M 96.3,171.10643 h 8.4 M 124.55584,191.7 v -8.4 m 10.11235,8.4 v -8.4"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-H-3" />
     <path
        d="m 20.5,170.254 c -0.181043,3.86709 0.373635,7.84841 -0.297346,11.63942 -0.980187,2.9535 -1.969053,5.90419 -2.952654,8.85658 4.423572,-1.18483 8.642531,-3.71894 13.350926,-3.25 13.557134,0.0536 27.122005,-0.10769 40.674274,0.081 2.907731,1.05781 5.81664,2.11237 8.7248,3.169 -1.176918,-4.58895 -3.537454,-9.01767 -3,-13.877 0.127193,-4.81721 -0.257137,-9.70955 0.196901,-14.47899 0.934367,-3.048 1.86854,-6.09606 2.803099,-9.14401"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -4928,17 +4926,19 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
        sodipodi:nodetypes="cccc"
        inkstitch:running_stitch_length_mm="3" />
     <path
-       style="opacity:0.98;fill:none;stroke:#ed171f;stroke-width:5.6;stroke-dasharray:none;stroke-dashoffset:0"
-       d="M 73,170.23595 V 156.5 H 60.5 V 48.5 H 73 v -31 H 16.5 v 31 h 12 v 108 h -12 V 170.247 187.5 H 73 v -17.26405"
-       id="path14052"
-       inkstitch:ties="0"
-       inkscape:label="Zigzag-I-2"
-       sodipodi:nodetypes="ccccccccccccccc"
-       inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:zigzag_spacing_mm="1.2"
-       inkstitch:zigzag_underlay="False"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False" />
+       id="path37"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 75.8,170.23595 V 153.7 H 67.364673 63.3 V 145.73193 51.3 H 75.8 V 14.7 H 13.7 V 48.5 M 70.2,170.23595 V 159.3 H 65.627482 57.7 V 140.34009 45.7 H 70.2 V 20.3 H 19.3 v 28.2 m 48.869433,103.8 v 8.4 M 64.7,142.95056 H 56.3 M 64.7,60.727413 H 56.3 M 66.839103,52.7 V 44.3 M 77.2,36.09438 H 68.8 M 59.766066,13.3 v 8.4 M 30.590112,13.3 v 8.4 M 12.3,29.933484 h 8.4"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-I-2" />
+    <path
+       id="path38"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="m 16.5,51.3 h 9.2 V 69.75212 153.7 h -12 v 36.6 H 75.8 V 170.23595 M 16.5,45.7 H 31.3 V 80.022757 159.3 h -12 v 25.4 H 70.2 V 170.23595 M 24.3,60.176405 h 8.4 m -8.4,85.235055 h 8.4 M 23.015053,152.3 v 8.4 M 12.3,168.92607 h 8.4 M 28.705397,191.7 v -8.4 m 33.146967,8.4 v -8.4 M 77.2,174.97123 h -8.4"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-I-3" />
     <path
        d="m 16.5,170.247 c -0.0065,-2.25899 0.01295,-4.51918 -0.0097,-6.77743 -0.05897,-0.50221 -0.03763,-1.02162 -0.254362,-1.49007 -0.995352,-2.90983 -1.990425,-5.81974 -2.985938,-8.7295 3.083296,1.08344 6.166648,2.16672 9.250001,3.25 3.083352,1.08328 6.166704,2.16656 9.249999,3.25 -1.00446,-3.6708 -2.976297,-7.16607 -3.25,-10.97733 C 28.54011,117.49138 28.41904,86.202356 28.56124,54.925979 29.402173,51.658986 30.722478,48.477888 31.75,45.25 28.666661,46.333317 25.583328,47.41665 22.499996,48.499988 19.416664,49.583325 16.333334,50.666666 13.25,51.75 14.258843,48.195503 16.070201,44.79728 16.5,41.124036 16.396862,35.190982 16.710591,29.228 16.3351,23.3145 15.30686,20.292957 14.278346,17.271507 13.25,14.25 c 4.360559,1.214652 8.521624,3.750613 13.181796,3.25 13.568726,-0.05399 27.164208,0.105937 40.716599,-0.07865 C 70.146615,16.524436 73.043533,15.283191 76,14.25 c -1.167541,4.436086 -3.525757,8.708373 -3,13.4186 0.126368,5.072926 -0.264473,10.197827 0.211514,15.236556 C 74.141024,45.853433 75.070457,48.801734 76,51.75 69.793008,49.455383 63.540355,47.304609 57.25,45.25"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -5139,21 +5139,23 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
        id="path3236"
        inkstitch:repeats="1"
        inkstitch:ties="3"
-       inkscape:label="Zigzag-J-2"
+       inkscape:label="Zigzag-J-1"
        sodipodi:nodetypes="cccc"
        inkstitch:running_stitch_length_mm="3" />
     <path
-       style="display:inline;opacity:0.98;fill:none;stroke:#ed171f;stroke-width:5.6;stroke-dasharray:none;stroke-dashoffset:0"
-       d="M 108.75782,166.39909 109.371,48.8972 121,48.5 v -31 H 66 v 31 h 12 v 108 H 44 v -24 H 13.5 v 34 l 14.5,21 h 66 l 14.75782,-21.10091"
-       id="path1473"
-       inkstitch:ties="0"
-       inkscape:label="Zigzag-J-1"
-       sodipodi:nodetypes="ccccccccccccccc"
-       inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:zigzag_spacing_mm="1.2"
-       inkstitch:zigzag_underlay="False"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False" />
+       id="path39"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 111.55778,166.4137 112.15691,51.603677 123.8,51.205996 V 14.7 H 63.2 v 36.6 h 12 v 105.2 m 30.75786,9.88448 L 106.58509,46.190723 118.2,45.794004 V 20.3 H 68.8 v 25.4 h 12 v 110.8 m 32.67364,-88.93525 -8.39988,-0.04383 m 7.76114,-14.53958 -0.28674,-8.395104 M 125.2,34.844956 h -8.4 M 101.73103,13.3 v 8.4 M 83.424065,13.3 v 8.4 M 61.8,29.367077 h 8.4 M 72.496826,52.7 V 44.3 M 73.8,68.626575 h 8.4"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-J-2" />
+    <path
+       id="path40"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 78,153.7 H 46.8 v -24 H 10.7 v 37.67275 L 26.53072,190.3 H 95.458561 L 111.05232,168.00385 M 78,159.3 H 41.2 v -24 H 16.3 v 30.32725 L 29.46928,184.7 H 92.541439 L 106.46332,164.79433 M 56.420772,152.3 v 8.4 M 48.2,144.94385 H 39.8 M 32.466933,128.3 v 8.4 M 9.3,144.70306 h 8.4 m -8.4,9.59077 h 8.4 m -0.968136,24.27868 6.912334,-4.7728 M 40.625761,191.7 v -8.4 m 40.760763,8.4 v -8.4 m 22.567946,-2.70481 -6.883516,-4.81428"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-J-3" />
     <path
        d="m 13.5,166.5 c -0.09906,-9.43357 0.20139,-18.90721 -0.152418,-28.31524 -0.806335,-2.99221 -1.741264,-5.95488 -2.597582,-8.93476 3.934112,1.43715 7.712079,3.8889 12.0703,3.25 5.337163,-0.14115 10.728027,0.28232 16.0316,-0.212 2.715993,-1.01278 5.431993,-2.02553 8.1481,-3.038 -1.261129,4.59785 -3.618287,9.0465 -3,13.94776 0.04083,3.83262 0.31477,7.73774 -1.329374,11.31684 -0.55678,1.74516 -1.114016,3.49018 -1.670626,5.2354 4.204368,-1.36895 8.212123,-3.87779 12.785823,-3.25 6.330106,0.10851 12.72656,-0.21835 19.015106,0.16601 C 75.53385,157.69428 78.266874,158.72228 81,159.75 79.700265,155.17241 77.386298,150.72952 78,145.84024 78.05072,115.43151 77.898533,85.012687 78.07613,54.610262 78.90511,51.461656 80.048293,48.373595 81,45.25 c -6.000004,2.166657 -12.000001,4.333331 -18,6.5"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -5358,17 +5360,19 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
        sodipodi:nodetypes="cccccccccccc"
        inkstitch:running_stitch_length_mm="3" />
     <path
-       style="opacity:0.98;fill:none;stroke:#ed171f;stroke-width:5.6;stroke-dasharray:none;stroke-dashoffset:0"
-       d="M 157.5,170 V 156.5 L 143.25,156.1875 115.75,101.75 143.5,48.5 h 14 v -31 h -57 v 31 h 7 L 88,85.5 H 64.5 v -37 H 77 v -31 H 20.5 v 31 h 12 v 108 h -12 V 170.241 187.5 H 77 v -31 H 64.5 v -38 H 88 l 19,38 h -6.5 v 31 h 57 V 170"
-       id="path52543"
-       inkstitch:ties="0"
-       inkscape:label="Zigzag-K-2"
-       sodipodi:nodetypes="cccccccccccccccccccccccccccccccc"
-       inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:zigzag_spacing_mm="1.2"
-       inkstitch:zigzag_underlay="False"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False" />
+       id="path41"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 160.3,170 V 153.76073 L 144.99148,153.42502 118.89703,101.76988 145.19824,51.3 H 160.3 V 14.7 H 97.7 v 36.6 h 5.15926 L 86.310613,82.7 H 67.3 V 51.3 H 79.8 V 14.7 H 17.7 v 33.8 m 137,121.5 v -10.76073 l -11.92024,-0.26141 -1.27124,-0.0279 -1.08787,-2.15349 L 112.60297,101.73012 141.80176,45.7 H 154.7 V 20.3 h -51.4 v 25.4 h 8.84074 L 89.689387,88.3 H 66.342963 61.7 V 84.006849 45.7 H 74.2 V 20.3 H 23.3 v 28.2 m 112.67076,83.96318 -7.49763,3.78756 m 2.78922,-13.10807 -7.49763,3.78756 m 7.782,-46.404688 -7.44918,-3.881969 M 146.12339,52.7 V 44.3 M 161.7,33.770934 h -8.4 M 132.00185,13.3 v 8.4 M 96.3,27.76724 h 8.4 m -12.328446,40.429763 7.431133,3.916409 M 79.239757,81.3 v 8.4 M 68.7,68.912942 H 60.3 M 70.192738,52.7 V 44.3 M 81.2,34.422718 H 72.8 M 52.153631,13.3 v 8.4 M 16.3,43.278864 h 8.4"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-K-2" />
+    <path
+       id="path42"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="m 20.5,51.3 h 9.2 V 59.111445 153.7 h -12 v 36.6 H 79.8 V 153.7 H 67.3 V 121.3 H 86.269505 L 102.4695,153.7 H 97.7 v 36.6 h 62.6 V 170 M 20.5,45.7 H 35.3 V 59.408197 159.3 h -12 v 25.4 H 74.2 V 159.3 H 61.7 V 115.7 H 89.730495 L 111.5305,159.3 H 103.3 v 25.4 h 51.4 V 170 M 28.3,74.818823 h 8.4 m -8.4,57.478237 h 8.4 M 27.963824,152.3 v 8.4 M 16.3,172.98544 h 8.4 M 44.304264,191.7 v -8.4 m 9.579706,8.4 v -8.4 M 81.2,172.29721 H 72.8 M 73.637795,152.3 v 8.4 M 68.7,141.68853 h -8.4 m 8.4,-9.5797 H 60.3 M 79.630292,122.7 v -8.4 m 13.722591,24.29725 7.513187,-3.75659 M 96.3,175.78265 h 8.4 M 122.31162,191.7 v -8.4 m 9.5797,8.4 v -8.4"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-K-3" />
     <path
        d="m 20.5,170.241 c -0.03609,3.60833 0.07184,7.22995 -0.05432,10.82997 -0.680787,2.83052 -1.84644,5.53325 -2.725546,8.31157 L 17.25,190.75 c 3.19187,-1.06676 6.362518,-2.25945 9.567889,-3.24651 14.604133,0.008 29.210906,-0.0334 43.813406,0.0207 1.838955,0.1674 3.492921,1.16855 5.251347,1.69943 1.372409,0.50892 2.744671,1.01824 4.117358,1.5264 -0.946276,-3.14218 -2.110467,-6.23726 -2.917358,-9.40951 -0.18995,-3.95623 -0.02954,-7.93279 -0.08264,-11.89696 0.0636,-2.60253 -0.129082,-5.23385 0.09887,-7.81791 0.812267,-2.8322 1.95839,-5.58075 2.901132,-8.37564"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -5773,16 +5777,19 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
        sodipodi:nodetypes="ccc"
        inkstitch:running_stitch_length_mm="3" />
     <path
-       id="path12245"
-       inkscape:label="Zigzag-L-2"
-       d="m 129,186 v -52 h -28 v 24 H 61 V 47 H 73 V 18 H 21 V 47 H 33 V 158 H 21 v 14 14 h 108"
-       style="display:inline;fill:none;stroke:#ed171f;stroke-width:5.6;stroke-dasharray:none;stroke-dashoffset:0"
-       inkstitch:ties="2"
-       inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:zigzag_spacing_mm="1.2"
-       inkstitch:zigzag_underlay="False"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False" />
+       id="path43"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 131.8,186 V 131.2 H 98.2 V 134.20505 155.2 H 63.8 V 81.176895 49.8 h 12 V 15.2 H 21 M 126.2,186 V 136.8 H 103.8 V 150.82433 160.8 H 58.2 V 79.21673 44.2 h 12 V 20.8 H 21 m 112.2,130.4 h -8.4 m -6.44,-21.4 v 8.4 m -21.56,6.28 h 8.4 m -22,9.32 v 8.4 m -18,-20.28 H 56.8 M 65.2,65.36 H 56.8 M 67,51.2 v -8.4 m 10.2,-7.2 h -8.4 m -13,-21.8 v 8.4"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-L-2" />
+    <path
+       id="path44"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="m 18.2,18 v 31.8 h 12 v 105.4 h -12 v 33.6 H 129 M 23.8,18 v 26.2 h 12 v 116.6 h -12 v 22.4 H 129 M 16.8,33 h 8.4 M 28,51.2 V 42.8 M 28.8,63 h 8.4 m -8.4,81 h 8.4 M 26,153.8 v 8.4 m -9.2,8.8 h 8.4 M 36,190.2 v -8.4"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-L-3" />
     <path
        d="m 20,170.249 c -0.100247,3.76399 0.199232,7.57092 -0.151463,11.30801 C 18.969887,184.63913 17.93812,187.68354 17,190.75"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -6013,17 +6020,19 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
        inkstitch:ties="3"
        inkstitch:running_stitch_length_mm="3" />
     <path
-       style="display:inline;fill:none;stroke:#ed171f;stroke-width:5.6;stroke-dasharray:none"
-       d="M 188,186 V 158 H 176 V 47 h 12 V 18 H 143 C 137,30 130.83333,42.166667 124.5,54.5 118.16667,66.833333 111.66667,79 105,91 L 68,18 H 22 V 47 H 35 V 158 H 22 v 28 H 78 V 158 H 65 V 74 l 35,65 h 11 c 5.33333,-10.66667 11,-21.5 17,-32.5 6,-11 11.66667,-21.833333 17,-32.5 v 84 h -12 v 28 h 55"
-       id="path34758"
-       sodipodi:nodetypes="cccccccsccccccccccccccsccccc"
-       inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:zigzag_spacing_mm="1.2"
-       inkstitch:zigzag_underlay="False"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False"
-       inkstitch:ties="2"
+       id="path45"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="m 190.8,186 v -30.8 h -12 V 49.8 h 12 V 15.2 H 141.28006 L 122.01097,53.217401 112.4053,71.555503 105.08951,84.983206 69.719941,15.2 H 19.2 v 34.6 h 13 V 155.2 H 22 M 185.2,186 v -25.2 h -12 V 44.2 h 12 V 20.8 H 144.71994 L 126.98903,55.782599 117.34471,74.194497 104.91049,97.016794 66.280059,20.8 H 24.8 v 23.4 h 13 V 160.8 H 22 m 157.21126,-7 v 8.4 M 180.2,124.42251 h -8.4 m 8.4,-49.051652 h -8.4 M 184.41788,51.2 V 42.8 M 192.2,32.187744 h -8.4 M 159.26754,13.8 v 8.4 m -34.83533,23.143651 7.49255,3.797593 m -15.90496,12.496636 7.44099,3.897658 M 95.098152,62.173827 87.605603,65.97142 M 86.782159,45.766598 79.289611,49.564191 M 52.206628,13.8 v 8.4 M 17.8,30.713572 h 8.4 M 30.239401,51.2 V 42.8 M 30.8,79.028143 h 8.4 M 30.8,128.0798 h 8.4"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
        inkscape:label="Zigzag-M-2" />
+    <path
+       id="path46"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="m 19.2,158 v 30.8 H 80.8 V 169.23981 155.2 h -13 V 85.105929 L 98.327577,141.8 h 14.385053 l 9.01869,-17.62743 8.73822,-16.35297 8.76178,-16.397029 L 142.2,85.620147 V 155.2 h -12 V 178.25355 188.8 H 188 M 24.8,158 v 25.2 H 75.2 V 165.78235 160.8 h -13 V 62.894071 L 101.67242,136.2 h 7.61495 l 7.48131,-14.62257 8.76178,-16.39703 8.73822,-16.352971 L 147.8,62.379853 V 160.8 h -12 V 175.13971 183.2 H 188 m -139.381767,7 v -8.4 M 82.2,171.68718 H 73.8 M 69.839887,153.8 v 8.4 M 69.2,130.06895 h -8.4 m 8.4,-27.30912 h -8.4 m 12.761486,-4.001034 7.395957,-3.982438 m 2.961841,23.218352 7.395957,-3.98244 M 106.65252,143.2 v -8.4 m 23.7351,-23.8565 -7.40863,-3.95881 M 140.8,100.06895 h 8.4 m -8.4,32.77094 h 8.4 M 137.38917,153.8 v 8.4 M 128.8,175.45812 h 8.4 M 160.69088,190.2 v -8.4"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-M-3" />
     <path
        d="m 21,170.256 c 0.177958,-4.4476 0.116488,-8.88092 -1.738625,-13.01627 C 18.840712,155.90988 18.42044,154.57991 18,153.25"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -6403,17 +6412,19 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
        inkstitch:ties="3"
        sodipodi:nodetypes="ccccccc" />
     <path
-       style="display:inline;fill:none;stroke:#ed171f;stroke-width:5.6;stroke-dasharray:none"
-       d="M 144,186 V 47 h 12 V 18 h -54 v 29 h 12 v 70 L 65,18 H 22 V 47 H 34 V 158 H 22 v 28 H 76 V 158 H 63 V 81 l 53,105 h 28"
-       id="path76921"
-       sodipodi:nodetypes="ccccccccccccccccccccc"
-       inkscape:label="Zigzag-N-2"
-       inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:zigzag_spacing_mm="1.2"
-       inkstitch:zigzag_underlay="False"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False"
-       inkstitch:ties="2" />
+       id="path47"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 146.8,186 V 49.8 h 12 V 15.2 H 99.2 v 34.6 h 12 v 55.2307 L 66.738338,15.2 H 19.2 V 47 m 122,139 V 44.2 h 12 V 20.8 h -48.4 v 23.4 h 12 v 84.7693 L 63.261662,20.8 H 24.8 V 47 m 123.4,28.232841 h -8.4 M 147.41492,51.2 V 42.8 M 160.2,34.486574 h -8.4 M 130.28956,13.8 v 8.4 M 97.8,31.907452 h 8.4 M 108.00596,51.2 V 42.8 M 109.8,72.653718 h 8.4 m -8.4,15.82388 h 8.4 m -11.18127,4.949165 -7.528333,3.726146 M 81.281315,41.426673 73.752979,45.152819 M 45.746266,13.8 v 8.4"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-N-2" />
+    <path
+       id="path48"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="m 22,49.8 h 9.2 V 60.281967 155.2 h -12 v 33.6 h 59.6 v -33.6 h -13 V 99.703279 92.760952 L 74.047122,109.09959 114.27685,188.8 H 144 M 22,44.2 H 36.8 V 61.062295 160.8 h -12 v 22.4 h 48.4 v -22.4 h -13 V 87.722951 69.239048 L 82.157912,112.74057 117.72315,183.2 H 144 M 29.8,68.643262 h 8.4 m -8.4,67.286528 h 8.4 M 27.233133,153.8 v 8.4 M 17.8,171.99159 h 8.4 M 46.44103,190.2 v -8.4 M 80.2,172.30335 H 71.8 M 71.078627,153.8 v 8.4 M 67.2,132.43536 h -8.4 m 8.4,-28.83708 h -8.4 m 11.924722,2.02609 7.49885,-3.78514 m 22.821208,63.85318 7.49885,-3.78513 M 139.19382,190.2 v -8.4"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-N-3" />
     <path
        d="M 20.5,173.753 C 20.230876,168.64881 21.388366,163.29779 19.056697,158.53224 18.454249,156.77156 17.852647,155.0106 17.25,153.25"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -6772,43 +6783,38 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
        id="underpath_0_6"
        inkscape:label="Zigzag-O-1"
        d="m 21,166 14,20 h 77 l 13.89753,-19.85362"
-       style="display:inline;fill:none;stroke:#ed171f;stroke-width:5.6;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:1;stroke-dasharray:0.0892857, 0.0892857;stroke-dashoffset:0"
        inkstitch:running_stitch_length_mm="3"
        inkstitch:ties="3"
        sodipodi:nodetypes="cccc" />
     <path
-       id="autorun_1_6"
-       inkscape:label="Zigzag-O-2"
-       d="M 126,166 V 38 L 112,18 H 35 L 21,38 v 128 l 5.120805,7.31544"
-       style="display:inline;fill:none;stroke:#ed171f;stroke-width:5.6;stroke-dasharray:none;stroke-dashoffset:0"
-       inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:zigzag_spacing_mm="1.2"
-       inkstitch:ties="2"
-       inkstitch:zigzag_underlay="False"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False" />
+       id="path49"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 128.8,166 V 37.117378 L 113.45784,15.2 H 33.542164 L 18.2,37.117378 V 166.88262 l 5.626955,8.03851 M 123.2,166 V 38.882622 L 110.54216,20.8 H 36.457836 L 23.8,38.882622 V 165.11738 l 4.614655,6.59237 M 130.2,56.588361 h -8.4 m 2.61464,-28.177101 -6.88155,4.817084 M 92.480536,13.8 v 8.4 M 53.40495,13.8 v 8.4 m -31.458717,7.124305 6.881548,4.817084 M 16.8,57.702875 h 8.4 m -8.4,89.873845 h 8.4"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-O-2" />
     <path
-       id="autorun_3_2"
-       inkscape:label="Zigzag-O-3"
-       d="M 48,158 H 97 V 47 H 48 v 111"
-       style="display:inline;fill:none;stroke:#ed171f;stroke-width:5.6;stroke-dasharray:none;stroke-dashoffset:0"
-       inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:zigzag_spacing_mm="1.2"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="False"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False" />
+       id="path50"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 48,160.8 H 99.8 V 47 M 48,155.2 H 94.2 V 47 m -4.6,115.2 v -8.4 m 11.6,-4.4 h -8.4"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-O-3" />
     <path
-       id="autorun_4_2"
-       inkscape:label="Zigzag-O-4"
-       d="M 26.120805,173.31544 35,186 h 77 l 14,-20"
-       style="display:inline;fill:none;stroke:#ed171f;stroke-width:5.6;stroke-dasharray:none;stroke-dashoffset:0"
-       inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:zigzag_spacing_mm="1.2"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="False"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False" />
+       id="path51"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 97,44.2 H 45.2 V 158 M 97,49.8 H 50.8 V 158 M 55.4,42.8 v 8.4 m -11.6,4.4 h 8.4"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-O-4" />
+    <path
+       id="path52"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 23.826956,174.92113 33.542165,188.8 h 79.915675 l 14.83601,-21.19431 M 28.414654,171.70975 36.457835,183.2 h 74.084325 l 13.16399,-18.80569 m -95.663254,18.99091 6.881547,-4.81709 M 40.557906,190.2 v -8.4 M 106.02,190.2 v -8.4 m 12.69505,1.93101 -6.88155,-4.81708"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-O-5" />
     <path
        d="M 20.2373,166.462 C 19.695052,159.92247 20.150873,153.27974 20,146.7 20.04141,110.60312 19.91701,74.485483 20.0622,38.4016 c 2.319552,-4.396861 5.705664,-8.249887 8.4507,-12.4298 2.07716,-2.580345 3.592775,-5.796592 6.039698,-7.95821 3.26517,-1.082944 6.891834,-0.249416 10.308719,-0.51359 21.744337,0.04348 43.504339,-0.08722 65.238823,0.06585 3.60751,0.383935 4.73148,4.416895 6.91086,6.771745 3.22157,4.551468 6.7537,8.952275 9.77787,13.599888 0.48631,6.501553 0.0749,13.126638 0.21113,19.676371 0,36.29538 0,72.590756 0,108.886136"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -6931,38 +6937,33 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
        sodipodi:nodetypes="cccc"
        inkstitch:ties="3" />
     <path
-       id="autorun_1_8"
-       inkscape:label="Zigzag-P-2"
-       d="M 74,172 V 158 H 62 v -33"
-       style="display:inline;fill:none;stroke:#ed171f;stroke-width:5.6;stroke-dasharray:none;stroke-dashoffset:0"
-       inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="3"
-       inkstitch:zigzag_spacing_mm="1.2"
-       inkstitch:zigzag_underlay="False"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False" />
+       id="path53"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 76.8,172 V 155.2 H 72.510638 64.8 V 125 m 6.4,47 V 160.8 H 68.340426 59.2 V 125 m 19,35.79 h -8.4 m -4.81,-6.99 v 8.4"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-P-2" />
     <path
-       id="autorun_3_4"
-       inkscape:label="Zigzag-P-3"
-       d="m 62,97 h 49 V 47 H 62 v 50"
-       style="display:inline;fill:none;stroke:#ed171f;stroke-width:5.6;stroke-dasharray:none;stroke-dashoffset:0"
-       inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="0"
-       inkstitch:zigzag_spacing_mm="1.2"
-       inkstitch:zigzag_underlay="False"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False" />
+       id="path54"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="m 62,99.8 h 51.8 V 47 M 62,94.2 h 46.2 V 47 m -2.64,54.2 v -8.4"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-P-3" />
     <path
-       id="autorun_4_4"
-       inkscape:label="Zigzag-P-4"
-       d="m 62,125 h 64 l 15,-20 V 38 L 126,18 H 21 V 47 H 33 V 158 H 21 v 28 h 53 v -14"
-       style="display:inline;fill:none;stroke:#ed171f;stroke-width:5.6;stroke-dasharray:none;stroke-dashoffset:0"
-       inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="0"
-       inkstitch:zigzag_spacing_mm="1.2"
-       inkstitch:zigzag_underlay="False"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False" />
+       id="path55"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 111,44.2 H 59.2 V 97 M 111,49.8 H 64.8 V 97 m 2.64,-54.2 v 8.4"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-P-4" />
+    <path
+       id="path56"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="m 62,127.8 h 65.4 l 16.4,-21.86667 V 37.066667 L 127.4,15.2 H 18.2 v 34.6 h 12 v 105.4 h -12 v 33.6 H 76.8 V 172 M 62,122.2 h 62.6 l 13.6,-18.13333 V 38.933333 L 124.6,20.8 H 23.8 v 23.4 h 12 v 116.6 h -12 v 22.4 H 71.2 V 172 m 28.95,-42.8 v -8.4 m 39.86,-7.48 -6.72,-5.04 M 145.2,79.55 h -8.4 m 8.4,-16.35 h -8.4 m 3.06,-33.72 -6.72,5.04 M 99.9,13.8 v 8.4 M 50.85,13.8 v 8.4 M 16.8,31.75 h 8.4 m 2.35,19.45 v -8.4 m 1.25,31.45 h 8.4 m -8.4,54.5 h 8.4 m -7.65,25.05 v 8.4 m -12.75,9.05 h 8.4 m 19.2,18.95 v -8.4"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-P-5" />
     <path
        d="m 20,170.257 -2.435052,19.47918 59.653178,-0.8115 L 75.5,170.248"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -7196,38 +7197,33 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
        inkstitch:running_stitch_length_mm="3"
        inkstitch:ties="3" />
     <path
-       id="autorun_1_10"
-       inkscape:label="Zigzag-Q-2"
-       d="m 126,165 -14,21 H 95 l 10,18 -24,16 -18,-34 H 35 L 21,166 v -9"
-       style="display:inline;fill:none;stroke:#ed171f;stroke-width:5.6;stroke-dasharray:none;stroke-dashoffset:0"
-       inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:zigzag_spacing_mm="1.2"
-       inkstitch:ties="2"
-       inkstitch:zigzag_underlay="False"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False" />
+       id="path57"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 123.67026,163.44684 110.50149,183.2 H 90.24136 L 101.29835,203.10258 82.024889,215.95156 64.685828,183.2 H 36.457836 L 23.8,165.11738 V 157 M 128.32974,166.55316 113.49851,188.8 H 99.75864 l 8.94301,16.09742 L 79.975111,224.04844 61.314172,188.8 H 33.542164 L 18.2,166.88262 V 157 m 95.80479,18.42116 6.98922,4.65948 M 104.67393,181.8 v 8.4 m -8.740567,6.12838 7.342917,-4.0794 m -8.894969,13.78237 4.659481,6.98923 m -12.628793,-1.67635 4.659482,6.98922 m -10.968934,-9.00515 -7.423818,3.93026 m -1.538964,-20.85996 -7.423819,3.93026 M 53.307659,181.8 v 8.4 m -9.57792,-8.4 v 8.4 m -11.267942,-15.14994 -6.881548,4.81709"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-Q-2" />
     <path
-       id="autorun_3_6"
-       inkscape:label="Zigzag-Q-3"
-       d="M 49,157 H 97 V 48 H 49 v 109"
-       style="display:inline;fill:none;stroke:#ed171f;stroke-width:5.6;stroke-dasharray:none;stroke-dashoffset:0"
-       inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:zigzag_spacing_mm="1.2"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="False"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False" />
+       id="path58"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 49,159.8 H 99.8 V 48 M 49,154.2 H 94.2 V 48 m -4.38,113.2 v -8.4 m 11.38,-4.32 h -8.4"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-Q-3" />
     <path
-       id="autorun_4_6"
-       inkscape:label="Zigzag-Q-4"
-       d="M 21,157 V 38 L 35,18 h 77 l 14,21 v 126"
-       style="display:inline;fill:none;stroke:#ed171f;stroke-width:5.6;stroke-dasharray:none;stroke-dashoffset:0"
-       inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:zigzag_spacing_mm="1.2"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="False"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False" />
+       id="path59"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 97,45.2 H 46.2 V 157 M 97,50.8 H 51.8 V 157 M 56.18,43.8 v 8.4 M 44.8,56.52 h 8.4"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-Q-4" />
+    <path
+       id="path60"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 23.8,157 V 38.882622 L 36.457836,20.8 H 110.50149 L 123.2,39.847772 V 165 m -105,-8 V 37.117378 L 33.542164,15.2 H 113.49851 L 128.8,38.152228 V 165 M 25.2,56.653968 H 16.8 M 28.662415,34.377627 21.780866,29.560543 M 55.113756,22.2 v -8.4 m 37.165197,8.4 v -8.4 m 25.902707,21.044151 6.98922,-4.659482 M 121.8,57.220929 h 8.4"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-Q-5" />
     <path
        d="M 20.9516,167.41 C 19.152474,164.71059 20.350532,161.19889 20,158.12658 20.004432,117.93099 19.991103,77.735356 20.0067,37.5398 21.931854,33.576647 25.037258,30.217763 27.42129,26.486679 29.885183,23.180281 32.009534,19.5812 34.7411,16.5 c 25.5423,0.03925 51.097169,-0.07862 76.63158,0.05921 1.83595,0.535703 2.42802,3.050595 3.74204,4.416282 3.86502,5.719988 8.12728,11.269339 11.74548,17.094433 0.32404,12.700029 0.048,25.455435 0.1398,38.176898 -0.0447,29.585647 0.0897,59.179397 -0.0671,88.759977 0.0754,0.4063 -0.20596,0.69807 -0.36985,1.0302"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -7370,44 +7366,37 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
        id="underpath_0_12"
        inkscape:label="Zigzag-R-1"
        d="M 21,158 H 33 V 47 H 21 V 18 h 105 l 15,20 v 67 l -15,20 h -3 l 5,33 h 13 v 28"
-       style="display:inline;fill:none;stroke:#ed171f;stroke-width:5.6;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:1;stroke-dasharray:0.0892857, 0.0892857;stroke-dashoffset:0"
        inkstitch:running_stitch_length_mm="3"
        inkstitch:ties="3" />
     <path
-       id="autorun_1_12"
-       inkscape:label="Zigzag-R-2"
-       d="m 141,186 v -28 h -13 l -5,-33 h 3 l 15,-20 V 38 L 126,18 H 21 V 47 H 33 V 158 H 21 v 28 H 76 V 158 H 62 v -33"
-       style="display:inline;fill:none;stroke:#ed171f;stroke-width:5.6;stroke-dasharray:none;stroke-dashoffset:0"
-       inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:zigzag_spacing_mm="1.2"
-       inkstitch:ties="2"
-       inkstitch:zigzag_underlay="False"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False"
-       sodipodi:nodetypes="cccccccccccccccccc" />
+       id="path61"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 143.8,186 V 155.2 H 130.40771 L 126.2562,127.8 H 127.4 l 16.4,-21.86667 V 37.066667 L 127.4,15.2 H 18.2 v 34.6 h 12 v 105.4 h -12 v 33.6 h 60.6 v -33.6 h -14 V 125 m 73.4,61 V 160.8 H 125.59229 L 119.7438,122.2 H 124.6 l 13.6,-18.13333 V 38.933333 L 124.6,20.8 H 23.8 v 23.4 h 12 v 116.6 h -12 v 22.4 h 49.4 v -22.4 h -14 V 125 m 72.5174,28.8 v 8.4 m -1.80048,-19.58467 -8.30521,1.25836 M 145.2,76.887544 h -8.4 m 4.79471,-45.0946 -6.72,5.04 M 96.681049,13.8 v 8.4 M 53.184684,13.8 v 8.4 M 16.8,29.311681 h 8.4 M 28.166746,51.2 V 42.8 M 28.8,79.449345 h 8.4 m -8.4,49.710135 h 8.4 M 24.557926,153.8 v 8.4 M 16.8,173.08337 h 8.4 M 45.365971,190.2 v -8.4 M 80.2,173.13766 H 71.8 M 72.496365,153.8 v 8.4"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-R-2" />
     <path
-       id="autorun_3_8"
-       inkscape:label="Zigzag-R-3"
-       d="m 62,97 h 49 V 47 H 62 v 50"
-       style="display:inline;fill:none;stroke:#ed171f;stroke-width:5.6;stroke-dasharray:none;stroke-dashoffset:0"
-       inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:zigzag_spacing_mm="1.2"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="False"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False" />
+       id="path62"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="m 62,99.8 h 51.8 V 47 M 62,94.2 h 46.2 V 47 m -2.64,54.2 v -8.4"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-R-3" />
     <path
-       id="autorun_4_8"
-       inkscape:label="Zigzag-R-4"
-       d="m 62,125 h 31 l 4,33 H 86 v 28 h 55"
-       style="display:inline;fill:none;stroke:#ed171f;stroke-width:5.6;stroke-dasharray:none;stroke-dashoffset:0"
-       inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:zigzag_spacing_mm="1.2"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="False"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False"
-       sodipodi:nodetypes="cccccc" />
+       id="path63"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 111,44.2 H 59.2 V 97 M 111,49.8 H 64.8 V 97 m 2.64,-54.2 v 8.4"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-R-4" />
+    <path
+       id="path64"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="m 62,127.8 h 28.5189 l 2.94482,24.29477 0.376392,3.10523 H 83.2 v 33.6 H 141 M 62,122.2 H 95.4811 L 98.938311,150.72199 100.15989,160.8 H 88.8 v 22.4 H 141 m -55.263769,-54 v -8.4 m 4.12437,13.20358 8.338964,-1.01079 m -6.244408,18.29087 8.338963,-1.01078 M 90.032847,153.8 v 8.4 M 81.8,166.62648 h 8.4 m -8.4,11.0769 h 8.4 M 93.527538,190.2 v -8.4"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-R-5" />
     <path
        d="m 20,173.745 c -0.107808,-3.89547 0.405643,17.62227 0,13.755 h 122.5 v -17.25"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -7717,17 +7706,19 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
        inkstitch:ties="3"
        inkscape:label="Zigzag-S-1" />
     <path
-       style="display:inline;fill:none;stroke:#ed171f;stroke-width:5.6;stroke-dasharray:none;stroke-dashoffset:0"
-       d="M 126,166 V 108 L 112,88 H 49 V 47 h 49 v 24 h 28 V 38 L 112,18 H 35 L 21,38 v 58 l 14,20 h 62 v 42 H 49 V 134 H 21 v 32 l 14,20 h 77 l 14,-20"
-       id="path47484"
-       sodipodi:nodetypes="ccccccccccccccccccccccc"
-       inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:zigzag_spacing_mm="1.2"
-       inkstitch:ties="2"
-       inkstitch:zigzag_underlay="False"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False"
+       id="path65"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 128.8,166 V 107.11738 L 113.45784,85.2 H 60.164258 51.8 V 75.353351 49.8 h 43.4 v 24 h 33.6 V 37.117378 L 113.45784,15.2 H 33.542164 L 18.706151,36.394305 M 123.2,166 V 108.88262 L 110.54216,90.8 H 63.759486 46.2 V 68.584961 44.2 h 54.6 v 24 h 22.4 V 38.882622 L 110.54216,20.8 H 36.457836 L 23.293849,39.605695 M 130.2,130.30085 h -8.4 m 2.51637,-32.029966 -6.88155,4.817086 M 91.778064,83.8 v 8.4 M 69.466098,83.8 v 8.4 M 53.2,68.304558 H 44.8 M 72.319376,51.2 V 42.8 M 93.8,57.018522 h 8.4 M 110.79288,75.2 V 66.8 M 130.2,50.507971 h -8.4 m 2.01855,-22.948259 -6.88155,4.817084 M 90.909969,13.8 v 8.4 M 55.210822,13.8 v 8.4"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
        inkscape:label="Zigzag-S-2" />
+    <path
+       id="path66"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 18.2,38 V 96.882622 L 33.542164,118.8 H 86.835742 94.2 V 127.46942 155.2 H 51.8 v -24 H 18.2 v 35.68262 L 33.542164,188.8 h 79.915676 l 14.83601,-21.19431 M 23.8,38 V 95.117378 L 36.457836,113.2 H 83.240514 99.8 V 134.14991 160.8 H 46.2 v -24 H 23.8 v 28.31738 L 36.457836,183.2 h 74.084324 l 13.16399,-18.80569 M 16.8,73.539147 h 8.4 m -2.688411,31.944203 6.881549,-4.81709 M 59.204329,120.2 v -8.4 m 17.769573,8.4 v -8.4 M 92.8,135.95544 h 8.4 M 74.620624,153.8 v 8.4 M 53.2,148.08148 H 44.8 M 36.427118,129.8 v 8.4 M 16.8,154.11203 h 8.4 m -1.720351,22.75426 6.881548,-4.81709 M 56.450031,190.2 v -8.4 m 35.539147,8.4 v -8.4"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-S-3" />
     <path
        d="m 20.1508,166.426 15.072227,20.72795 75.983543,0.91852 12.75752,-17.51389"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -7898,23 +7889,25 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
        inkscape:label="Zigzag-T-1"
        sodipodi:nodetypes="cccc" />
     <path
-       style="display:inline;fill:none;stroke:#ed171f;stroke-width:5.6;stroke-dasharray:none;stroke-dashoffset:0"
-       d="M 97,172 V 158 H 85 V 47 h 18 v 24 h 27 V 18 H 12 V 71 H 39 V 47 H 57 V 158 H 44 v 14 14 h 53 v -14"
-       id="path83310"
-       sodipodi:nodetypes="ccccccccccccccccccc"
-       inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="2"
-       inkscape:label="Zigzag-T-2"
-       inkstitch:zigzag_spacing_mm="1.2"
-       inkstitch:zigzag_underlay="False"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False" />
+       id="path67"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="m 99.8,172 v -16.8 h -12 V 49.8 h 12.4 v 24 h 32.6 V 15.2 H 9.2 V 71 m 85,101 V 160.8 H 85.395248 82.2 V 156.73552 44.2 h 23.6 v 24 h 21.4 V 20.8 H 14.8 V 71 m 79,82.8 v 8.4 M 89.2,136.7 H 80.8 M 89.2,67.9 H 80.8 M 94.2,51.2 v -8.4 m 4.6,16.9 h 8.4 m 10.3,15.5 v -8.4 m 16.7,-17.7 h -8.4 m 8.4,-8.6 h -8.4 M 109.5,13.8 v 8.4 M 32.1,13.8 v 8.4 M 7.8,40.9 h 8.4"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-T-2" />
+    <path
+       id="path68"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="m 12,73.8 h 29.8 v -24 H 54.2 V 120.99863 155.2 h -13 v 33.6 H 99.8 V 172 M 12,68.2 h 24.2 v -24 H 59.8 V 128.56058 160.8 h -13 v 22.4 H 94.2 V 172 M 23.52,75.2 V 66.8 M 43.2,60.56 H 34.8 M 48.48,51.2 v -8.4 m 4.32,18.72 h 8.4 m -8.4,80.64 h 8.4 m -8.52,11.64 v 8.4 M 39.8,172.36 h 8.4 m 10.96,17.84 v -8.4 m 23.04,8.4 v -8.4"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-T-3" />
     <path
        d="M 43,170.258 V 187.5"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
        inkstitch:running_stitch_length_mm="3"
        id="autosatinrun73"
-       inkscape:label="Zigzag-T-1"
+       inkscape:label="Colonne-T-1"
        sodipodi:nodetypes="cc"
        inkstitch:ties="3" />
     <path
@@ -7922,7 +7915,7 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
        inkstitch:running_stitch_length_mm="3"
        id="autosatinrun74"
-       inkscape:label="Zigzag-T-2"
+       inkscape:label="Colonne-T-2"
        sodipodi:nodetypes="ccc"
        inkstitch:ties="3" />
     <path
@@ -7936,7 +7929,7 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
        inkstitch:zigzag_underlay="True"
-       inkscape:label="Zigzag-T-3" />
+       inkscape:label="Colonne-T-3" />
     <path
        id="autosatin429"
        style="display:inline;fill:none;stroke:#000000"
@@ -7948,7 +7941,7 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
        inkstitch:zigzag_underlay="True"
-       inkscape:label="Zigzag-T-4" />
+       inkscape:label="Colonne-T-4" />
     <path
        id="autosatin430"
        style="display:inline;fill:none;stroke:#000000"
@@ -7960,7 +7953,7 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
        inkstitch:zigzag_underlay="True"
-       inkscape:label="Zigzag-T-5" />
+       inkscape:label="Colonne-T-5" />
     <path
        id="autosatin431"
        style="display:inline;fill:none;stroke:#000000"
@@ -7972,7 +7965,7 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
        inkstitch:zigzag_underlay="True"
-       inkscape:label="Zigzag-T-6" />
+       inkscape:label="Colonne-T-6" />
     <path
        id="autosatin432"
        style="display:inline;fill:none;stroke:#000000"
@@ -7984,7 +7977,7 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
        inkstitch:zigzag_underlay="True"
-       inkscape:label="Zigzag-T-7" />
+       inkscape:label="Colonne-T-7" />
     <path
        id="autosatin433"
        style="display:inline;fill:none;stroke:#000000"
@@ -7996,7 +7989,7 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
        inkstitch:zigzag_underlay="True"
-       inkscape:label="Zigzag-T-8" />
+       inkscape:label="Colonne-T-8" />
     <path
        id="autosatin434"
        style="display:inline;fill:none;stroke:#000000"
@@ -8008,7 +8001,7 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
        inkstitch:zigzag_underlay="True"
-       inkscape:label="Zigzag-T-9" />
+       inkscape:label="Colonne-T-9" />
     <path
        id="autosatin435"
        style="display:inline;fill:none;stroke:#000000"
@@ -8020,7 +8013,7 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
        inkstitch:zigzag_underlay="True"
-       inkscape:label="Zigzag-T-10" />
+       inkscape:label="Colonne-T-10" />
     <path
        id="autosatin436"
        style="display:inline;fill:none;stroke:#000000"
@@ -8032,7 +8025,7 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
        inkstitch:zigzag_underlay="True"
-       inkscape:label="Zigzag-T-11" />
+       inkscape:label="Colonne-T-11" />
     <path
        id="autosatin437"
        style="display:inline;fill:none;stroke:#000000"
@@ -8044,7 +8037,7 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
        inkstitch:zigzag_underlay="True"
-       inkscape:label="Zigzag-T-12" />
+       inkscape:label="Colonne-T-12" />
     <path
        id="autosatin438"
        style="display:inline;fill:none;stroke:#000000"
@@ -8056,7 +8049,7 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
        inkstitch:zigzag_underlay="True"
-       inkscape:label="Zigzag-T-13" />
+       inkscape:label="Colonne-T-13" />
     <path
        id="autosatin439"
        style="display:inline;fill:none;stroke:#000000"
@@ -8068,7 +8061,7 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
        inkstitch:zigzag_underlay="True"
-       inkscape:label="Zigzag-T-14" />
+       inkscape:label="Colonne-T-14" />
     <path
        id="autosatin440"
        style="display:inline;fill:none;stroke:#000000"
@@ -8080,7 +8073,7 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
        inkstitch:zigzag_underlay="True"
-       inkscape:label="Zigzag-T-15" />
+       inkscape:label="Colonne-T-15" />
     <path
        id="autosatin441"
        style="display:inline;fill:none;stroke:#000000"
@@ -8092,7 +8085,7 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
        inkstitch:zigzag_underlay="True"
-       inkscape:label="Zigzag-T-16" />
+       inkscape:label="Colonne-T-16" />
     <path
        id="autosatin442"
        style="display:inline;fill:none;stroke:#000000"
@@ -8104,7 +8097,7 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
        inkstitch:zigzag_underlay="True"
-       inkscape:label="Zigzag-T-17" />
+       inkscape:label="Colonne-T-17" />
     <path
        id="autosatin443"
        style="display:inline;fill:none;stroke:#000000"
@@ -8115,7 +8108,7 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
        inkstitch:zigzag_underlay="True"
-       inkscape:label="Zigzag-T-18" />
+       inkscape:label="Colonne-T-18" />
     <path
        id="autosatin444"
        style="display:inline;fill:none;stroke:#000000"
@@ -8127,7 +8120,7 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
        inkstitch:zigzag_underlay="True"
-       inkscape:label="Zigzag-T-19" />
+       inkscape:label="Colonne-T-19" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -8157,17 +8150,19 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
        inkstitch:ties="3"
        inkscape:label="Zigzag-U-1" />
     <path
-       style="display:inline;fill:none;stroke:#ed171f;stroke-width:5.6;stroke-dasharray:none;stroke-dashoffset:0"
-       d="M 145,166 V 47 h 11 V 18 h -54 v 29 h 12 V 158 H 64 V 47 H 77 V 18 H 23 v 29 h 12 v 119 l 15,20 h 79 l 16,-20"
-       id="path112672"
-       sodipodi:nodetypes="ccccccccccccccccccc"
-       inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="3"
-       inkscape:label="Zigzag-U-2"
-       inkstitch:zigzag_spacing_mm="1.2"
-       inkstitch:zigzag_underlay="False"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False" />
+       id="path69"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 147.8,166 V 49.8 h 11 V 15.2 H 99.2 v 34.6 h 12 V 112.22963 155.2 H 66.8 V 47 m 75.4,119 V 44.2 h 11 V 20.8 h -48.4 v 23.4 h 12 V 128.68395 160.8 H 61.2 V 47 m 88,24.32 h -8.4 M 152.24,51.2 v -8.4 m 7.96,-13.08 h -8.4 M 130.9,13.8 v 8.4 m -33.1,8.98 h 8.4 m 1.02,20.02 v -8.4 m 2.58,28.98 h 8.4 m -8.4,57.86 h 8.4 M 89.76,153.8 v 8.4 M 68.2,131.16 h -8.4"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-U-2" />
+    <path
+       id="path70"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 64,49.8 H 79.8 V 15.2 H 20.2 v 34.6 h 12 V 166.93333 L 48.6,188.8 h 81.74575 l 16.84068,-21.05085 M 64,44.2 H 74.2 V 20.8 H 25.8 v 23.4 h 12 V 165.06667 L 51.4,183.2 h 76.25425 l 15.15932,-18.94915 M 81.2,36.86325 H 72.8 M 81.2,29.151 H 72.8 M 57.302,13.8 v 8.4 M 41.877501,13.8 v 8.4 M 18.8,29.971499 h 8.4 M 29.108249,51.2 V 42.8 M 30.8,68.101124 h 8.4 m -8.4,77.122496 h 8.4 m -3.830101,28.26958 6.72,-5.04 M 69.777748,190.2 v -8.4 m 38.561252,8.4 v -8.4 m 35.12284,-7.15403 -6.55929,-5.24743"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-U-3" />
     <path
        d="m 33.5,165.279 14.98708,21.89754 81.02778,-0.84127 15.34932,-18.32016"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -8384,17 +8379,19 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
        inkstitch:ties="3"
        inkscape:label="Zigzag-V-1" />
     <path
-       style="display:inline;fill:none;stroke:#ed171f;stroke-width:5.6;stroke-dasharray:none;stroke-dashoffset:0"
-       d="M 106.73566,160.39864 141,47 h 14 V 18 h -54 v 29 h 9 L 83,134 57,47 h 9 V 18 H 11 V 47 H 25 L 59.700808,159.17238 68,186 h 31 l 7.73566,-25.60136"
-       id="path140198"
-       sodipodi:nodetypes="cccccccccccccccccc"
-       inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="2"
-       inkscape:label="Zigzag-V-2"
-       inkstitch:zigzag_spacing_mm="1.2"
-       inkstitch:zigzag_underlay="False"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False" />
+       id="path71"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 109.41598,161.20852 143.07898,49.8 H 157.8 V 15.2 H 98.2 v 34.6 h 7.99929 L 88.378106,107.22383 83.050539,124.39043 60.759144,49.8 H 66 M 104.05534,159.58876 138.92102,44.2 H 152.2 V 20.8 h -48.4 v 23.4 h 10.00071 l -23.173941,74.67157 -7.677308,24.738 L 53.240856,44.2 H 66 m 73.03212,23.833416 -8.04095,-2.42964 M 146.9579,51.2 V 42.8 M 159.2,32.824222 h -8.4 M 134.27562,13.8 v 8.4 m -8.88715,-8.4 v 8.4 M 96.8,29.160138 h 8.4 M 105.37802,51.2 v -8.4 m -5.921771,24.00423 8.022541,2.489754 m -22.510336,44.193146 8.022539,2.48975 m -12.913739,-6.42485 -8.048283,2.40523 m -4.675334,-44.980411 -8.048283,2.405234"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-V-2" />
+    <path
+       id="path72"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 68.8,47 V 15.2 H 8.2 V 49.8 H 22.935269 L 57.025878,159.99988 65.935269,188.8 h 35.143721 l 8.33699,-27.59148 M 63.2,47 V 20.8 H 13.8 V 44.2 H 27.064731 L 62.375738,158.34488 70.064731,183.2 h 26.856284 l 7.134325,-23.61124 M 70.2,33.790253 H 61.8 M 48.765886,13.8 v 8.4 M 28.951265,13.8 v 8.4 M 6.8,29.770666 h 8.4 M 16.887723,51.2 v -8.4 m 8.534311,19.775792 8.024789,-2.482488 M 59.581461,172.99813 67.60625,170.51564 M 82.812856,190.2 v -8.4 m 25.077664,-10.70271 -8.040951,-2.42964"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-V-3" />
     <path
        d="M 62.3083,172.097 C 49.850643,131.39063 37.435402,90.671285 24.9471,49.9743 19.325371,46.279558 12.538652,49.750094 7,51.75"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -8654,17 +8651,19 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
        inkstitch:ties="3"
        inkscape:label="Zigzag-W-1" />
     <path
-       style="display:inline;fill:none;stroke:#ed171f;stroke-width:5.6;stroke-dasharray:none;stroke-dashoffset:0"
-       d="M 208.46714,160.41451 246,47 h 15 V 18 h -59 v 29 h 11 l -29,88 -28,-88 h 10 V 18 h -59 v 29 h 11 L 89,134 60,47 H 70 V 18 H 12 V 47 H 27 L 64.228154,159.49377 73,186 h 32 l 31,-95 32,95 h 32 l 8.46714,-25.58549"
-       id="path172824"
-       sodipodi:nodetypes="cccccccccccccccccccccccccccc"
-       inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="2"
-       inkscape:label="Zigzag-W-2"
-       inkstitch:zigzag_spacing_mm="1.2"
-       inkstitch:zigzag_underlay="False"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False" />
+       id="path73"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 211.12536,161.29421 248.02272,49.8 H 263.8 V 15.2 h -64.6 v 34.6 h 9.92915 L 184.04673,125.91216 159.82923,49.8 H 168.8 V 15.2 h -64.6 v 34.6 h 9.91521 L 86.343687,133.11456 M 205.80892,159.53481 243.97728,44.2 H 258.2 V 20.8 h -53.4 v 23.4 h 12.07085 L 183.95327,144.08784 152.17077,44.2 H 163.2 V 20.8 h -53.4 v 23.4 h 12.08479 L 91.656313,134.88544 M 240.11231,78.159278 232.13765,75.520182 M 255.19905,51.2 V 42.8 M 265.2,32.485787 h -8.4 M 234.85546,13.8 v 8.4 M 197.8,32.546594 h 8.4 M 207.86176,51.2 v -8.4 m -9.95934,36.594311 7.97796,2.6291 m -14.33637,16.665371 7.97796,2.629098 m -20.87933,2.99261 -8.00458,2.54691 m -0.20827,-28.358699 -8.00457,2.546911 M 162.23924,51.2 V 42.8 M 170.2,30.445596 h -8.4 M 137.81527,13.8 v 8.4 M 102.8,34.586785 h 8.4 m -6.91181,40.267086 7.96894,2.656313"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-W-2" />
+    <path
+       id="path74"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 91.656313,133.11456 63.884792,49.8 H 72.8 V 15.2 H 9.2 V 49.8 H 24.977276 L 61.569935,160.37347 70.977276,188.8 h 36.054344 l 15.77353,-48.33824 13.23704,-40.565108 15.98586,47.458038 13.96053,41.44531 h 36.03414 l 9.10264,-27.50579 M 86.343687,134.88544 56.115208,44.2 H 67.2 V 20.8 H 14.8 V 44.2 H 29.022724 L 66.886373,158.61407 75.022724,183.2 H 102.96838 L 116.69093,141.14701 135.95781,82.103348 158.7708,149.82939 170.01142,183.2 h 27.96586 l 7.83164,-23.66519 M 73.908972,75.445351 65.940033,78.101664 M 74.2,28.062013 H 65.8 M 46.54978,13.8 v 8.4 M 33.144887,13.8 v 8.4 M 7.8,30.367346 h 8.4 M 22.177132,51.2 v -8.4 m 11.954869,39.119263 7.974658,-2.639096 m 17.29448,78.995843 7.974659,-2.6391 M 89.3245,190.2 v -8.4 m 29.35999,-24.19743 -7.9856,-2.60582 m 18.38167,-29.25311 -7.98559,-2.60583 m 21.09136,-0.61501 7.96052,-2.68144 m 2.73722,34.44034 7.96052,-2.68144 M 180.03301,190.2 v -8.4"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-W-3" />
     <path
        d="M 66.4231,170.648 C 53.187425,130.65341 39.951858,90.658793 26.7162,50.6642 24.029015,48.37849 19.994225,48.022374 16.645505,48.861236 13.597023,49.824218 10.548502,50.78708 7.5,51.75"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -9067,17 +9066,19 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
        inkstitch:ties="3"
        inkscape:label="Zigzag-X-1" />
     <path
-       style="display:inline;fill:none;stroke:#ed171f;stroke-width:5.6;stroke-dasharray:none;stroke-dashoffset:0"
-       d="m 156,172 v -14 h -14 l -36,-56 36,-55 h 14 V 18 h -54 v 29 h 5 L 89,75 71,47 h 5 V 18 H 22 v 29 h 14 l 35,55 -35,56 H 22 v 14 14 h 54 v -28 h -5 l 18,-28 18,28 h -5 v 28 h 54 v -14"
-       id="path208649"
-       sodipodi:nodetypes="ccccccccccccccccccccccccccccccc"
-       inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="2"
-       inkscape:label="Zigzag-X-2"
-       inkstitch:zigzag_spacing_mm="1.2"
-       inkstitch:zigzag_underlay="False"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False" />
+       id="path75"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 158.8,172 V 155.2 H 143.52866 L 109.33749,102.01373 143.51375,49.8 H 158.8 V 15.2 H 99.2 v 34.6 h 2.67134 L 89,69.822079 76.128663,49.8 H 78.8 V 15.2 H 19.2 V 47 m 134,125 v -11.2 h -11.50464 -1.22402 L 138.42402,157.61528 102.66251,101.98627 140.48625,44.2 H 153.2 V 20.8 h -48.4 v 23.4 h 7.32866 L 89,80.177921 65.871337,44.2 H 73.2 V 20.8 H 24.8 V 47 m 121.45596,106.8 v 8.4 m -13.82929,-26.85873 -7.0659,4.54236 m -3.20592,-20.52075 -7.0659,4.54237 m 7.64949,-39.808867 -7.02829,-4.600337 m 17.43121,-11.293004 -7.0283,-4.600337 M 147.90072,51.2 V 42.8 M 160.2,31.355242 h -8.4 M 131.36477,13.8 v 8.4 M 97.8,26.625694 h 8.4 m -12.123189,32.710164 7.065899,4.542363 M 85.734984,62.154206 78.669085,66.696569 M 80.2,29.97617 H 71.8 M 49.985702,13.8 v 8.4 M 17.8,42.251192 h 8.4"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-X-2" />
+    <path
+       id="path76"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 22,49.8 H 34.462952 L 50.879349,75.597197 67.689696,102.01346 34.448107,155.2 H 19.2 v 33.6 H 78.8 V 155.2 H 76.128663 L 89,135.17792 101.87134,155.2 H 99.2 v 33.6 h 59.6 V 172 M 22,44.2 H 37.537048 L 62.873256,84.014041 74.310304,101.98654 37.551893,160.8 H 24.8 v 22.4 H 73.2 V 160.8 H 65.871337 L 89,124.82208 112.12866,160.8 H 104.8 v 22.4 h 48.4 V 172 M 43.915828,67.262201 51.002584,62.752447 m 4.772908,23.14637 7.086757,-4.509754 m -7.307851,37.399357 7.123186,4.45199 m -18.830946,14.28042 7.123186,4.452 M 31.016818,153.8 v 8.4 M 17.8,171.07334 h 8.4 M 42.417593,190.2 v -8.4 m 13.254095,8.4 v -8.4 M 80.2,175.40209 h -8.4 m 14.50969,-33.45028 -7.065899,-4.54237 m 14.334505,7.47923 7.065894,-4.54236 M 97.8,174.47543 h 8.4 M 125.81968,190.2 v -8.4 m 8.83607,8.4 v -8.4"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-X-3" />
     <path
        d="m 20.5,173.752 c -0.133977,2.79447 0.289129,5.6506 -0.2521,8.4 -0.99915,2.86605 -1.998553,5.73202 -2.9979,8.598"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -9387,17 +9388,19 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
        inkstitch:ties="3"
        inkscape:label="Zigzag-Y-1" />
     <path
-       style="display:inline;fill:none;stroke:#ed171f;stroke-width:5.6;stroke-dasharray:none;stroke-dashoffset:0"
-       d="M 108,172 V 158 H 96 v -42 l 38,-69 h 14 V 18 H 94 v 29 h 7 L 81,82 61,47 h 7 V 18 H 14 v 29 h 14 l 39,69 v 42 H 54 v 14 14 h 54 v -14"
-       id="path6622"
-       sodipodi:nodetypes="cccccccccccccccccccccccc"
-       inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="2"
-       inkstitch:zigzag_spacing_mm="1.2"
-       inkstitch:zigzag_underlay="False"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False"
+       id="path77"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 110.8,172 V 155.2 H 104.91588 98.8 V 137.73832 116.72003 L 135.65451,49.8 H 150.8 V 15.2 H 91.2 v 34.6 h 4.975097 L 81,76.35642 71.444287,59.633921 65.824903,49.8 H 68 M 105.2,172 V 160.8 H 101.93991 93.2 V 130.77419 115.27997 L 132.34549,44.2 H 145.2 V 20.8 H 96.8 v 23.4 h 9.0249 L 81,87.64358 80.277531,86.37926 56.175097,44.2 H 68 m 35.63028,109.6 v 8.4 M 100.2,139.91267 h -8.4 m 17.61136,-39.55851 -7.35797,-4.05221 m 26.85362,-31.347802 -7.35796,-4.05221 M 137.85988,51.2 V 42.8 M 152.2,35.096454 h -8.4 M 128.35701,13.8 v 8.4 m -14.69577,-8.4 v 8.4 M 89.8,27.730314 h 8.4 M 96.773978,51.2 v -8.4 m -8.260625,17.586262 7.293242,4.167567 M 75.755942,64.357528 68.4627,68.525095"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
        inkscape:label="Zigzag-Y-2" />
+    <path
+       id="path78"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 70.8,47 V 15.2 H 11.2 V 49.8 H 26.366299 L 64.2,116.73655 V 155.2 h -13 v 33.6 h 59.6 V 172 M 65.2,47 V 20.8 H 16.8 V 44.2 H 29.633701 L 69.8,115.26345 V 160.8 h -13 v 22.4 h 48.4 V 172 M 72.2,36.312228 H 63.8 M 50.686321,13.8 v 8.4 M 32.873368,13.8 v 8.4 M 9.8,27.627358 h 8.4 M 23.128083,51.2 v -8.4 m 9.336283,20.634085 7.312728,-4.133281 m 15.476254,44.452246 7.312727,-4.133278 M 62.8,135.18414 h 8.4 M 61.31513,153.8 v 8.4 M 49.8,168.49782 h 8.4 M 72.12373,190.2 v -8.4 m 17.812954,8.4 v -8.4"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-Y-3" />
     <path
        d="m 53,170.254 c -0.0473,-3.91663 0.445532,-7.94412 -1.270411,-11.6068 C 51.152914,156.84818 50.576675,155.04902 50,153.25"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -9750,17 +9753,19 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
        inkstitch:ties="3"
        inkscape:label="Zigzag-Z-1" />
     <path
-       style="display:inline;fill:none;stroke:#ed171f;stroke-width:5.6;stroke-dasharray:none;stroke-dashoffset:0"
-       d="M 127.9,160.25806 V 133 H 97.5 v 23.7 H 58.1 L 127.8,43.8 V 17.7 H 20.3 v 53.9 h 29 V 48 h 40 L 20.2,161 v 26.2 h 107.7 v -26.94194"
-       id="path50302"
-       sodipodi:nodetypes="cccccccccccccccc"
-       inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="2"
-       inkscape:label="Zigzag-Z-2"
-       inkstitch:zigzag_spacing_mm="1.2"
-       inkstitch:zigzag_underlay="False"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False" />
+       id="path79"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 130.7,160.25806 V 130.2 h -36 V 132.06292 153.9 H 63.119216 L 82.499636,122.50761 130.6,44.594684 V 14.9 H 17.5 v 56.7 m 107.6,88.65806 V 135.8 H 100.3 V 138.70198 159.5 H 53.080784 L 77.926468,119.25498 125,43.005316 V 20.5 H 23.1 v 51.1 m 109,84.24866 h -8.4 M 115.47346,128.8 v 8.4 M 93.3,141.48294 h 8.4 M 81.851258,152.5 v 8.4 m -9.491073,-19.30345 -7.147618,-4.41266 M 118.68679,66.556758 111.53917,62.144101 M 132,41.494804 h -8.4 M 107.5008,13.5 v 8.4 M 41.359802,13.5 v 8.4 M 16.1,40.734199 h 8.4"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-Z-2" />
+    <path
+       id="path80"
+       style="fill:none;stroke:#ed171f;stroke-width:1px"
+       d="M 20.3,74.4 H 52.1 V 50.8 H 84.305765 L 53.896756,100.52819 17.4,160.21174 V 190 H 130.7 V 160.25806 M 20.3,68.8 H 46.5 V 45.2 H 94.294235 L 59.13712,102.69282 23,161.78826 V 184.4 H 125.1 V 160.25806 M 31.87685,75.8 V 67.4 M 53.5,58.151551 H 45.1 M 70.020048,52.2 v -8.4 m 5.623115,18.482486 7.166313,4.382232 m -55.482924,74.630462 7.166313,4.38223 M 16,167.48394 h 8.4 M 39.073444,191.4 V 183 m 69.461096,8.4 V 183 M 132.1,167.97596 h -8.4"
+       inkstitch:satin_column="true"
+       inkstitch:zigzag_spacing_mm="1.0"
+       inkscape:label="Zigzag-Z-3" />
     <path
        d="M 20,176.278 V 187.5 h 108 v -29.334"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"

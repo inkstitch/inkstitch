@@ -29,13 +29,13 @@
      inkscape:window-height="800"
      id="namedview245"
      showgrid="true"
-     inkscape:zoom="8.0759517"
-     inkscape:cx="91.258594"
-     inkscape:cy="172.30167"
+     inkscape:zoom="2.4692914"
+     inkscape:cx="87.069514"
+     inkscape:cy="142.7535"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g449"
+     inkscape:current-layer="g6871"
      inkscape:document-rotation="0"
      scale-x="1"
      inkscape:snap-global="false"
@@ -181,7 +181,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
      id="g381"
      inkscape:label="GlyphLayer-!"
      inkscape:groupmode="layer"
-     style="display:inline">
+     style="display:none">
     <path
        inkscape:label="Auto-remplissage satin 2"
        inkstitch:center_walk_underlay="False"
@@ -247,7 +247,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g385"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-&quot;"
      inkscape:groupmode="layer">
     <path
@@ -331,7 +331,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g389"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-&amp;"
      inkscape:groupmode="layer">
     <path
@@ -579,8 +579,63 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8" />
   </g>
   <g
+     id="g4"
+     style="display:none"
+     inkscape:label="GlyphLayer-‘"
+     inkscape:groupmode="layer">
+    <path
+       id="path1"
+       style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
+       inkscape:label="Points droits pour auto-remplissage satin 1"
+       d="m 41.770459,86.304 c -0.340414,-1.987046 -0.753365,-2.669996 -0.785158,-4.694071 -0.146952,-2.649515 0.176253,-5.289483 0.535888,-7.90877 C 41.876589,71.148882 41.784159,68.562216 42,66"
+       sodipodi:nodetypes="cccc"
+       inkstitch:ties="3"
+       inkstitch:running_stitch_length_mm="2" />
+    <path
+       inkscape:label="Auto-remplissage satin 2"
+       inkstitch:center_walk_underlay="False"
+       inkstitch:contour_underlay="False"
+       inkstitch:zigzag_underlay_inset_mm="0.25"
+       inkstitch:zigzag_underlay="True"
+       inkstitch:pull_compensation_mm="0.1"
+       inkstitch:zigzag_spacing_mm="0.3"
+       inkstitch:ties="3"
+       inkstitch:satin_column="True"
+       d="m 42,66 c 0,0 -2.238281,0.269531 -2.238281,0.269531 0,0 -2.167969,0.761719 -2.167969,0.761719 0,0 -2.027344,1.183594 -2.027344,1.183594 0,0 -1.816406,1.535156 -1.816406,1.535156 0,0 -1.535156,1.816406 -1.535156,1.816406 0,0 -1.183594,2.027344 -1.183594,2.027344 0,0 -0.761719,2.167969 -0.761719,2.167969 C 30.269531,75.761719 30,78 30,78 c 0,0 0.13092,1.783203 0.13092,1.783203 0,0 0.379242,1.607422 0.379242,1.607422 0,0 0.607292,1.443359 0.607292,1.443359 0,0 0.815066,1.291016 0.815066,1.291016 0,0 1.002565,1.150391 1.002565,1.150391 0,0 1.169792,1.021484 1.169792,1.021484 0,0 0.876079,0.601663 0.876079,0.601663 M 42,66 c 0,0 1.873828,0.181641 1.873828,0.181641 0,0 1.829297,0.521484 1.829297,0.521484 0,0 1.721484,0.826172 1.721484,0.826172 0,0 1.550391,1.095703 1.550391,1.095703 0,0 1.316016,1.330078 1.316016,1.330078 0,0 1.018359,1.529297 1.018359,1.529297 0,0 0.657422,1.693359 0.657422,1.693359 0,0 0.233203,1.822266 0.233203,1.822266 0,0 -0.136799,2.93037 -0.136799,2.93037 0,0 -0.420312,2.816431 -0.420312,2.816431 0,0 -0.718696,2.740472 -0.718696,2.740472 0,0 -1.031949,2.702491 -1.031949,2.702491 0,0 -1.268579,2.520688 -1.268579,2.520688 M 28.712579,71.926461 c 0,0 28.27754,-0.290026 28.27754,-0.290026 M 30.017696,85.847711 c 0,0 23.202085,1.740157 23.202085,1.740157 M 41.890776,66.012071 c 0,0 0.218698,-0.0025 0.218698,-0.0025"
+       style="fill:none;stroke:#000000;stroke-opacity:1"
+       id="path2"
+       sodipodi:nodetypes="cscssccsccccccccc"
+       inkstitch:max_stitch_length_mm="6"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="5.8" />
+    <path
+       id="path3"
+       style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
+       inkscape:label="Points droits pour auto-remplissage satin 3"
+       d="m 41.770459,88.104 c 0.120679,1.159246 0.49772,1.805869 0.300358,2.975894 -0.151656,1.699716 -1.03513,3.23387 -2.086927,4.538421 -1.563503,1.789388 -3.400885,3.329543 -5.369519,4.652085 -1.133919,0.71416 -2.288953,1.52552 -3.671525,1.60764 C 30.298995,101.95032 29.646878,101.96007 29,102"
+       sodipodi:nodetypes="cccccc"
+       inkstitch:ties="3"
+       inkstitch:running_stitch_length_mm="2" />
+    <path
+       inkscape:label="Auto-remplissage satin 4"
+       inkstitch:center_walk_underlay="False"
+       inkstitch:contour_underlay="False"
+       inkstitch:zigzag_underlay_inset_mm="0.25"
+       inkstitch:zigzag_underlay="True"
+       inkstitch:pull_compensation_mm="0.1"
+       inkstitch:zigzag_spacing_mm="0.3"
+       inkstitch:ties="0"
+       inkstitch:force_lock_stitches="True"
+       inkstitch:satin_column="True"
+       d="m 29,102 c 0,0 0.166412,-1.17188 0.166412,-1.17188 0,0 0.516108,-0.70312 0.516108,-0.70312 0,0 0.891107,-0.515625 0.891107,-0.515625 0,0 1.291412,-0.609375 1.291412,-0.609375 0,0 1.9375,-1.25 1.9375,-1.25 0,0 2.3125,-2 2.3125,-2 0,0 1.0625,-1.164062 1.0625,-1.164062 0,0 0.875,-1.210938 0.875,-1.210938 0,0 0.59375,-1.210937 0.59375,-1.210937 0,0 0.21875,-1.164063 0.21875,-1.164063 0,0 -0.171875,-0.890625 -0.171875,-0.890625 0,0 -0.453125,-0.984375 -0.453125,-0.984375 0,0 -0.640625,-0.796875 -0.640625,-0.796875 0,0 -0.361328,-0.240234 -0.361328,-0.240234 0,0 -0.373047,-0.08789 -0.373047,-0.08789 0,0 -1.44342,-0.798828 -1.44342,-0.798828 0,0 -0.440663,-0.302634 -0.440663,-0.302634 M 29,102 c 0,0 0.1375,0.37878 0.1375,0.37878 0,0 0.3625,0.37646 0.3625,0.37646 0,0 1.1,0.68653 1.1,0.68653 0,0 1.6,0.69177 1.6,0.69177 0,0 0.886638,-0.16716 0.886638,-0.16716 0,0 1.118751,-0.46628 1.118751,-0.46628 0,0 2.686855,-1.61857 2.686855,-1.61857 0,0 2.874355,-2.181062 2.874355,-2.181062 0,0 2.567889,-2.32094 2.567889,-2.32094 0,0 2.433674,-2.93037 2.433674,-2.93037 0,0 2.060937,-2.816431 2.060937,-2.816431 0,0 1.703071,-2.740472 1.703071,-2.740472 0,0 0.0915,-0.181803 0.0915,-0.181803 m -16.575791,7.433185 c 0,0 4.930443,7.105633 4.930443,7.105633"
+       style="fill:none;stroke:#000000;stroke-opacity:1"
+       id="path4"
+       sodipodi:nodetypes="cscssccsccccccccc"
+       inkstitch:max_stitch_length_mm="6"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="5.8" />
+  </g>
+  <g
      id="g6871"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-’"
      inkscape:groupmode="layer">
     <path
@@ -635,7 +690,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g397"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-,"
      inkscape:groupmode="layer">
     <path
@@ -690,7 +745,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g401"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer--"
      inkscape:groupmode="layer">
     <path
@@ -727,7 +782,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g405"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-0"
      inkscape:groupmode="layer">
     <path
@@ -798,7 +853,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g409"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-1"
      inkscape:groupmode="layer">
     <path
@@ -872,7 +927,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g413"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-2"
      inkscape:groupmode="layer">
     <path
@@ -939,7 +994,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g417"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-3"
      inkscape:groupmode="layer">
     <path
@@ -1059,7 +1114,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g421"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-4"
      inkscape:groupmode="layer">
     <path
@@ -1199,7 +1254,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g425"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-5"
      inkscape:groupmode="layer">
     <path
@@ -1275,7 +1330,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g429"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-6"
      inkscape:groupmode="layer">
     <path
@@ -1330,7 +1385,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g433"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-7"
      inkscape:groupmode="layer">
     <path
@@ -1406,7 +1461,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g437"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-8"
      inkscape:groupmode="layer">
     <path
@@ -1457,7 +1512,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g441"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-9"
      inkscape:groupmode="layer">
     <path
@@ -1510,7 +1565,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g445"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-:"
      inkscape:groupmode="layer">
     <path
@@ -1576,7 +1631,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g449"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-;"
      inkscape:groupmode="layer">
     <path
@@ -1652,7 +1707,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g453"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-?"
      inkscape:groupmode="layer">
     <path
@@ -1743,7 +1798,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g457"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-@"
      inkscape:groupmode="layer">
     <path
@@ -1835,7 +1890,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g461"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-A"
      inkscape:groupmode="layer">
     <path
@@ -2058,7 +2113,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g465"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-B"
      inkscape:groupmode="layer">
     <path
@@ -2298,7 +2353,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g469"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-C"
      inkscape:groupmode="layer">
     <path
@@ -2422,7 +2477,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g473"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-D"
      inkscape:groupmode="layer">
     <path
@@ -2581,7 +2636,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g477"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-E"
      inkscape:groupmode="layer">
     <path
@@ -2690,7 +2745,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g481"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-F"
      inkscape:groupmode="layer">
     <path
@@ -2911,7 +2966,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g485"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-G"
      inkscape:groupmode="layer">
     <path
@@ -3169,7 +3224,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g489"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-H"
      inkscape:groupmode="layer">
     <path
@@ -3590,7 +3645,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g493"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-I"
      inkscape:groupmode="layer">
     <path
@@ -3835,7 +3890,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g497"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-J"
      inkscape:groupmode="layer">
     <path
@@ -4116,7 +4171,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g501"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-K"
      inkscape:groupmode="layer">
     <path
@@ -4349,7 +4404,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g505"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-L"
      inkscape:groupmode="layer">
     <path
@@ -4478,7 +4533,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g509"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-M"
      inkscape:groupmode="layer">
     <path
@@ -4636,7 +4691,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g513"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-N"
      inkscape:groupmode="layer">
     <path
@@ -4887,7 +4942,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g517"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-O"
      inkscape:groupmode="layer">
     <path
@@ -4940,7 +4995,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g521"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-P"
      inkscape:groupmode="layer">
     <path
@@ -5157,7 +5212,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g525"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-Q"
      inkscape:groupmode="layer">
     <path
@@ -5272,7 +5327,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g529"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-R"
      inkscape:groupmode="layer">
     <path
@@ -5479,7 +5534,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g533"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-S"
      inkscape:groupmode="layer">
     <path
@@ -5761,7 +5816,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g537"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-T"
      inkscape:groupmode="layer">
     <path
@@ -5944,7 +5999,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g541"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-U"
      inkscape:groupmode="layer">
     <path
@@ -6066,7 +6121,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g545"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-V"
      inkscape:groupmode="layer">
     <path
@@ -6181,7 +6236,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g549"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-W"
      inkscape:groupmode="layer">
     <path
@@ -6332,7 +6387,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g553"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-X"
      inkscape:groupmode="layer">
     <path
@@ -6560,7 +6615,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g557"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-Y"
      inkscape:groupmode="layer">
     <path
@@ -6723,7 +6778,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g561"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-Z"
      inkscape:groupmode="layer">
     <path
@@ -6904,7 +6959,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g565"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-^"
      inkscape:groupmode="layer">
     <path
@@ -6968,7 +7023,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g569"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-`"
      inkscape:groupmode="layer">
     <path
@@ -7013,7 +7068,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g573"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-a"
      inkscape:groupmode="layer">
     <path
@@ -7086,7 +7141,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g577"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-b"
      inkscape:groupmode="layer">
     <path
@@ -7187,7 +7242,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g581"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-c"
      inkscape:groupmode="layer">
     <path
@@ -7238,7 +7293,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g585"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-d"
      inkscape:groupmode="layer">
     <path
@@ -7311,7 +7366,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g589"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-e"
      inkscape:groupmode="layer">
     <path
@@ -7362,7 +7417,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g593"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-f"
      inkscape:groupmode="layer">
     <path
@@ -7488,7 +7543,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g597"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-g"
      inkscape:groupmode="layer">
     <path
@@ -7584,7 +7639,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g601"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-h"
      inkscape:groupmode="layer">
     <path
@@ -7674,7 +7729,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g605"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-i"
      inkscape:groupmode="layer">
     <path
@@ -7749,7 +7804,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g609"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-j"
      inkscape:groupmode="layer">
     <path
@@ -7846,7 +7901,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g613"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-k"
      inkscape:groupmode="layer">
     <path
@@ -7971,7 +8026,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g617"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-l"
      inkscape:groupmode="layer">
     <path
@@ -8022,7 +8077,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g621"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-m"
      inkscape:groupmode="layer">
     <path
@@ -8148,7 +8203,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g625"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-n"
      inkscape:groupmode="layer">
     <path
@@ -8238,7 +8293,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g629"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-o"
      inkscape:groupmode="layer">
     <path
@@ -8337,7 +8392,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g633"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-p"
      inkscape:groupmode="layer">
     <path
@@ -8448,7 +8503,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g637"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-q"
      inkscape:groupmode="layer">
     <path
@@ -8521,7 +8576,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g641"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-r"
      inkscape:groupmode="layer">
     <path
@@ -8608,7 +8663,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g645"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-s"
      inkscape:groupmode="layer">
     <path
@@ -8699,7 +8754,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g649"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-t"
      inkscape:groupmode="layer">
     <path
@@ -8816,7 +8871,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g653"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-u"
      inkscape:groupmode="layer">
     <path
@@ -8889,7 +8944,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g657"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-v"
      inkscape:groupmode="layer">
     <path
@@ -8991,7 +9046,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g661"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-w"
      inkscape:groupmode="layer">
     <path
@@ -9113,7 +9168,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g665"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-x"
      inkscape:groupmode="layer">
     <path
@@ -9217,7 +9272,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g669"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-y"
      inkscape:groupmode="layer">
     <path
@@ -9328,7 +9383,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g673"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-z"
      inkscape:groupmode="layer">
     <path
@@ -9453,7 +9508,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g677"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-¡"
      inkscape:groupmode="layer">
     <path
@@ -9530,7 +9585,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g681"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-¿"
      inkscape:groupmode="layer">
     <path
@@ -9625,7 +9680,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g685"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-à"
      inkscape:groupmode="layer">
     <path
@@ -9721,7 +9776,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g689"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-á"
      inkscape:groupmode="layer">
     <path
@@ -9832,7 +9887,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g693"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-â"
      inkscape:groupmode="layer">
     <path
@@ -9950,7 +10005,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g697"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-ã"
      inkscape:groupmode="layer">
     <path
@@ -10061,7 +10116,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g701"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-ä"
      inkscape:groupmode="layer">
     <path
@@ -10195,7 +10250,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g705"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-å"
      inkscape:groupmode="layer">
     <path
@@ -10306,7 +10361,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g709"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-æ"
      inkscape:groupmode="layer">
     <path
@@ -10418,7 +10473,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g713"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-ç"
      inkscape:groupmode="layer">
     <path
@@ -10552,7 +10607,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g717"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-è"
      inkscape:groupmode="layer">
     <path
@@ -10641,7 +10696,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g721"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-é"
      inkscape:groupmode="layer">
     <path
@@ -10722,7 +10777,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g725"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-ê"
      inkscape:groupmode="layer">
     <path
@@ -10835,7 +10890,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g729"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-ë"
      inkscape:groupmode="layer">
     <path
@@ -10954,7 +11009,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g733"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-ì"
      inkscape:groupmode="layer">
     <path
@@ -11050,7 +11105,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g737"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-í"
      inkscape:groupmode="layer">
     <path
@@ -11146,7 +11201,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g741"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-î"
      inkscape:groupmode="layer">
     <path
@@ -11246,7 +11301,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g745"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-ï"
      inkscape:groupmode="layer">
     <path
@@ -11347,7 +11402,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g749"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-ñ"
      inkscape:groupmode="layer">
     <path
@@ -11464,7 +11519,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g753"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-ò"
      inkscape:groupmode="layer">
     <path
@@ -11624,7 +11679,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g757"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-ó"
      inkscape:groupmode="layer">
     <path
@@ -11759,7 +11814,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g761"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-ô"
      inkscape:groupmode="layer">
     <path
@@ -11917,7 +11972,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g765"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-õ"
      inkscape:groupmode="layer">
     <path
@@ -12048,7 +12103,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g769"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-ö"
      inkscape:groupmode="layer">
     <path
@@ -12211,7 +12266,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g773"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-ù"
      inkscape:groupmode="layer">
     <path
@@ -12311,7 +12366,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g777"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-ú"
      inkscape:groupmode="layer">
     <path
@@ -12411,7 +12466,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g781"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-û"
      inkscape:groupmode="layer">
     <path
@@ -12535,7 +12590,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g785"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-ü"
      inkscape:groupmode="layer">
     <path
@@ -12659,7 +12714,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g789"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-ý"
      inkscape:groupmode="layer">
     <path
@@ -12798,7 +12853,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g793"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-ÿ"
      inkscape:groupmode="layer">
     <path
@@ -12961,7 +13016,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g797"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-Œ"
      inkscape:groupmode="layer">
     <path
@@ -13109,7 +13164,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g801"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-œ"
      inkscape:groupmode="layer">
     <path
