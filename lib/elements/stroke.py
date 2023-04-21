@@ -157,6 +157,20 @@ class Stroke(EmbroideryElement):
         return max(self.get_float_param("zigzag_spacing_mm", 0.4), 0.01)
 
     @property
+    @param('pull_compensation_mm',
+           _('Pull compensation'),
+           tooltip=_('Zigzag stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape. '
+                     'This widens the zigzag line width.'),
+           unit='mm',
+           type='float',
+           default=0,
+           select_items=[('stroke_method', 'zigzag_stitch')],
+           sort_index=6)
+    @cache
+    def pull_compensation(self):
+        return self.get_float_param("pull_compensation_mm", 0)
+
+    @property
     @param('line_count',
            _('Number of lines'),
            tooltip=_('Number of lines from start to finish'),
@@ -365,7 +379,7 @@ class Stroke(EmbroideryElement):
         else:
             return self.shape.centroid
 
-    def simple_satin(self, path, zigzag_spacing, stroke_width):
+    def simple_satin(self, path, zigzag_spacing, stroke_width, pull_compensation):
         "zig-zag along the path at the specified spacing and wdith"
 
         # `self.zigzag_spacing` is the length for a zig and a zag
@@ -377,6 +391,7 @@ class Stroke(EmbroideryElement):
         # of points in turn, and move perpendicular to them,
         # alternating left and right.
 
+        stroke_width = stroke_width + pull_compensation
         offset = stroke_width / 2.0
 
         for i in range(len(patch) - 1):
@@ -473,7 +488,7 @@ class Stroke(EmbroideryElement):
                         patch.stitches = self.do_bean_repeats(patch.stitches)
                 # simple satin
                 elif self.stroke_method == 'zigzag_stitch':
-                    patch = self.simple_satin(path, self.zigzag_spacing, self.stroke_width)
+                    patch = self.simple_satin(path, self.zigzag_spacing, self.stroke_width, self.pull_compensation)
 
                 if patch:
                     patches.append(patch)
