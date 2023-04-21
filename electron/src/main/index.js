@@ -13,25 +13,24 @@ const fs = require('fs')
 const tmp = require('tmp')
 const url = require('url')
 const { app, BrowserWindow, ipcMain, dialog, shell, Menu} = require('electron')
+// url for printPDF flask server which is used in development and production mode
+const printPdfUrl = "http://127.0.0.1:5000/"
 
-//moves the URL to proper position
-if (process.argv.includes("http://127.0.0.1:5000/")) {
-process.argv.shift()
-process.argv.shift()
+const isDev = process.env.BABEL_ENV === 'development'
+
+var target = null
+// Finds this url in the argv array and sets to target value
+if (process.argv.includes(printPdfUrl)) {
+    target = process.argv.find(element => element === printPdfUrl);
+} else {
+    target = process.argv[1] || "";
 }
-
-// older code that sets the url for the path I would assume
-var target = process.argv[1] || "";
 var targetURL = url.parse(target)
 var winURL = null
 
-// Print PDF will give us a full URL to a flask server, bypassing Vue entirely.
 // Eventually this will be migrated to Vue.
 if (targetURL.protocol) {
     winURL = target
-} else if(!target) {
-    // check if target exist, which will not in production(installed) mode.
-    winURL = "http://127.0.0.1:5000/"
 } else {
     winURL = `file://${__dirname}/index.html?${targetURL.query || ""}#${targetURL.pathname || ""}`
 }
@@ -45,15 +44,18 @@ function createWindow() {
             contextIsolation: true,
         },
     })
-    if (winURL == "http://127.0.0.1:5000/" && target) {
+    if (isDev) {
+        // printPDF in development mode will have dev tools activated
+        // Vuejs parts of Ink/Stich will not and dev tools must be accessed though the menu of electron window
         mainWindow.loadURL(winURL)
         mainWindow.webContents.openDevTools()
     } else {
         mainWindow.loadURL(winURL)
     }
-    if(process.platform === "darwin" && process.env.NODE_ENV === 'production') {
+    // This will remove the menus from the release or dev release.
+    if(process.platform === "darwin" && !isDev) {
         Menu.setApplicationMenu(Menu.buildFromTemplate([]));
-    } if(process.platform === "win32" || process.platform === "linux" && process.env.NODE_ENV === 'production') {
+    } if(process.platform === "win32" || process.platform === "linux" && !isDev) {
         mainWindow.removeMenu();
     }
     mainWindow.maximize()
@@ -105,4 +107,3 @@ app.whenReady().then(() => {
 app.on('window-all-closed', () => {
     app.quit()
 })
-
