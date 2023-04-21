@@ -66,9 +66,6 @@ const compiler = webpack(devWebpackConfig)
 const server = new WebpackDevServer(devServerOptions, compiler)
 
 compiler.hooks.done.tap('serve', (stats) => {
-  if (stats.hasErrors()) {
-    return
-  }
   console.log()
   console.log()
   console.log(`App running at:`)

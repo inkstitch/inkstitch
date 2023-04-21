@@ -8,7 +8,7 @@
 export function selectLanguage(translations) {
   // get language from flask server, process in modern electron isn't exposed to renderer
   const request = new XMLHttpRequest();
-  request.open('GET', ' http://127.0.0.1:5000/languages', false)
+  request.open('GET', 'http://127.0.0.1:5000/languages', false)
   request.send(null)
   var process = undefined
 
