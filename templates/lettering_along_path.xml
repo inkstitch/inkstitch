@@ -3,7 +3,7 @@
     <name>Lettering along path</name>
     <id>org.inkstitch.lettering_along_path</id>
     <param name="extension" type="string" gui-hidden="true">lettering_along_path</param>
-    <effect needs-live-preview="false">
+    <effect>
         <object-type>all</object-type>
         <effects-menu>
             <submenu name="Ink/Stitch" translatable="no" />
