@@ -2,7 +2,7 @@
 title: "Spiralfüllung"
 permalink: /de/docs/stitches/circular-fill/
 excerpt: ""
-last_modified_at: 2023-02-26
+last_modified_at: 2023-04-22
 toc: true
 ---
 {% include upcoming_release.html %}

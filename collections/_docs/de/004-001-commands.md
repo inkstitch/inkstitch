@@ -2,7 +2,7 @@
 title: "Visuelle Befehle"
 permalink: /de/docs/commands/
 excerpt: ""
-last_modified_at: 2022-11-27
+last_modified_at: 2023-04-22
 toc: true
 ---
 Visuelle Befehle können genutzt werden, um zusätzliche Informationen darüber festzulegen, wie das Design gestickt werden soll. Sie können z.B. der Maschine mitteilen, dass der Faden nach einem Stickobjekt geschnitten werden soll oder definieren, wann und wo die Maschine pausieren soll, so dass man für eine Applikation bequem ein Stück Stoff hinzufügen kann.

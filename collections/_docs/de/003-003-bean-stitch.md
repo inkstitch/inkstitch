@@ -2,7 +2,7 @@
 title: "Mehrfach Geradstich"
 permalink: /de/docs/stitches/bean-stitch/
 excerpt: ""
-last_modified_at: 2023-01-16
+last_modified_at: 2023-04-22
 toc: true
 ---
 ## Beschreibung
