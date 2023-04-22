@@ -2,7 +2,7 @@
 title: "Running Stitch"
 permalink: /docs/stitches/running-stitch/
 excerpt: ""
-last_modified_at: 2023-04-18
+last_modified_at: 2023-04-22
 toc: true
 ---
 ## What it is
@@ -34,16 +34,15 @@ Open `Extensions > Ink/Stitch  > Params` to change parameters to your needs.
 Settings|Description
 ---|---
 Running stitch along paths    |Must be enabled for these settings to take effect.
-Method                        |Choose running stitch for the running stitch type
-Manual stitch placement       |Enable [Manual Stitch Mode](/docs/stitches/manual-stitch/)
+Method                        |Choose `Running stitch / Bean stitch` for the running stitch type
 Repeats                       |◦ Defines how many times to run down and back along the path<br />◦ Default: 1 (traveling once from the start to the end of the path)<br />◦ Odd number: stitches will end at the end of the path<br />◦ Even number: stitching will return to the start of the path
 Bean stitch number of repeats |◦ Enable [Bean Stitch Mode](/docs/stitches/bean-stitch/)<br />◦ Backtrack each stitch this many times.<br />◦ A value of 1 would triple each stitch (forward, back, forward).<br />◦ A value of 2 would quintuple each stitch, etc.
 Running stitch length         |Length of stitches
 Running stitch tolerance      |All stitches must be within this distance from a path. A lower tolerance means stitches will be closer together. A higher tolerance means sharp corner may be rounded.
 Allow lock stitches           |Enables lock stitches in only desired positions
 Force lock stitches           |Sew lock stitches after sewing this element, even if the distance to the next object is smaller than defined in the collapse length value value in the Ink/Stitch preferences.
-Tack stitch                 |Chose your [favorite style](/docs/stitches/lock-stitches/)
-Lock stitch                  |Chose your [favorite style](/docs/stitches/lock-stitches/)
+Tack stitch                   |Chose your [favorite style](/docs/stitches/lock-stitches/)
+Lock stitch                   |Chose your [favorite style](/docs/stitches/lock-stitches/)
 Trim After                    |Trim the thread after sewing this object.
 Stop After                    |Stop the machine after sewing this object. Before stopping it will jump to the stop position (frame out) if defined.
 

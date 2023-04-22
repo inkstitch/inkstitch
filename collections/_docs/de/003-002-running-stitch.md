@@ -2,7 +2,7 @@
 title: "Geradstich"
 permalink: /de/docs/stitches/running-stitch/
 excerpt: ""
-last_modified_at: 2023-04-19
+last_modified_at: 2023-04-22
 toc: true
 ---
 ## Beschreibung
@@ -35,8 +35,7 @@ Wenn ein Objekt aus mehreren Pfaden besteht, werden diese der Reihe nach mit ein
 Einstellung|Beschreibung
 ---|---
 Geradstich                            | Muss aktiviert sein, damit diese Einstellungen wirksam werden.
-Methode                               | Geradstich auswählen
-Manuelle Stichpositionierung          | Aktiviert den [manuellen Stichmodus](#manuelle-füllung)
+Methode                               | `Geradstich / Mehrfachgeradstich` auswählen
 Wiederholungen                        | ◦ Legt fest, wie oft der Pfad durchlaufen werden soll<br/>◦ Standard: 1 (einmal vom Anfang bis zum Ende des Pfades)<br/>◦ Ungerade Zahl: Stiche enden am Ende des Pfades<br/>◦ Gerade Zahl: Die Naht kehrt zum Anfang des Pfades zurück
 Bean stitch Anzahl der Wiederholungen | ◦ Jeden Stich vervielfachen.<br/>◦ Ein Wert von 1 würde jeden Stich verdreifachen (vorwärts, rückwärts, vorwärts).<br/>◦ Ein Wert von 2 würde jeden Stich fünffach ausführen, usw.<br/>◦ Gilt nur für den Geradstich.
 Stichlänge                            | Länge der Stiche

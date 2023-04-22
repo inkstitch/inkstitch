@@ -2,7 +2,7 @@
 title: "Point droit"
 permalink: /fr/docs/stitches/running-stitch/
 excerpt: ""
-last_modified_at: 2023-04-19
+last_modified_at: 2023-04-22
 toc: true
 ---
 ## De quoi s'agit-il
@@ -34,8 +34,7 @@ Ouvrir `Extensions > Ink/Stitch  > Paramètres` pour paramétrer selon vos besoi
 Paramètres|Description
 ---|---
 Points droits le long des chemins |Doit être activé pour que ces paramètres prennent effet
-Méthode                           |Choisir Point Droit
-Placement de points manuels       |Doit être désactivé pour ne pas activer [le mode point manuel](/fr/docs/stitches/manual-stitch/)
+Méthode                           |Choisir `Point droit / Point multiple`
 Répéter                           |Définir combien de fois aller et revenir le long du chemin<br />◦ par défaut: 1 (aller une fois du début à la fin du chemin)<br />◦ Nombre impair: les points se termineront à la fin du chemin<br />◦ Nombre pair: la broderie va revenir au début du chemin
 Nombre de répétitions du point triple |Active le [Mode point triple](/fr/docs/stitches/bean-stitch/)<br />◦ Repasse sur chaque point le nombre de fois indiqué.<br />◦ Une valeur de 1 triplera chaque point (avant, arrière, avant).<br />◦ Une valeur de 2 permettra de quintupler chaque point, etc..<br />
 Longueur du point droit           |Longueur des points 
