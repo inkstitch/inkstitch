@@ -26,7 +26,7 @@ Prepare your path exactly as you would with a [Satin Column](/docs/stitches/sati
 Settings||Description
 ---|---|--
 Custom satin column   | ☑ |Must be enabled for these settings to take effect.
-Method                | |Chose `Satin Column`
+Method                | |Chose `E-Stitch`
 Maximum stitch length | ![Maximum stitch length](/assets/images/docs/params-satin-maximum_stitch_length.png) | Stitches wider than this will be split up (split stitches).
 Short stitch inset    |  | Stitches in areas with high density will be inset by this amount (%)
 Short stitch distance |  | Inset stitches if the distance between stitches is smaller than this (mm).

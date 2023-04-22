@@ -24,7 +24,7 @@ Bereite deinen Pfad genauso vor, wie du es für [Satinsäulen](/de/docs/stitches
 Einstellung||Beschreibung
 ---|---|---
 Benutzerdefinierte Satinsäule       | ☑ |Muss aktiviert sein, damit diese Einstellungen wirksam werden.
-Methode                             | |`Satinsäule` auswählen
+Methode                             | |`E-Stich` auswählen
 Maximale Stichlänge                 | ![Maximum stitch length](/assets/images/docs/params-satin-maximum_stitch_length.png) | Stiche die diesen Wert übersteigen, werden geteilt.
 Kurzstich-Einzug                    | | Stiche in Bereichen mit hoher Dichte werden um diesen Wert verkürzt (%)
 Kurzstich-Dichte                    | | Verkürzt Stiche falls der Abstand zwischen den Stichen schmaler als dieser Wert ist (mm).

@@ -26,7 +26,7 @@ Préparez votre chemin exactement comme vous le feriez pour une [Colonne Satin](
 |Paramètres||Description|
 |---|---|--|
 |Colonne satin personnalisée   | ☑ |Doit être activé pour que ces paramètres prennent effet|
-|Méthode                       | | Choisir `Colonne Satin`|
+|Méthode                       | | Choisir `Point en E`|
 |Longueur maximale du point    | ![Maximum stitch length](/assets/images/docs/params-satin-maximum_stitch_length.png) | Les points plus longs seront découpés en plusieus points.
 |Décalage des points courts    | |Les points dans les zones à forte densité seront raccourcis de ce pourcentage.|
 |Distance des points courts    | |Faire des points courts si la distance entre les crêtes est inférieure à cette valeur.|
