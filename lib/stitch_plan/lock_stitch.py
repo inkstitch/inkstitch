@@ -98,7 +98,7 @@ class RelativeLock(LockStitchDefinition):
             direction = to_previous.unit()
 
             for delta in path:
-                lock_stitches.append(Stitch(stitches[0] + delta * length * direction, tags=('lock_stitch')))
+                lock_stitches.append(Stitch(stitches[0] + delta * length * direction, tags=('lock_stitch',)))
         else:
             # Too short to travel part of the way to the previous stitch; just go
             # back and forth to it a couple times.
