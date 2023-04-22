@@ -13,9 +13,7 @@ Im manuellen Stichmodus stellt jeder Knoten des Pfades einen Nadeleinstich dar. 
 
 1. Erstelle einen Pfad mit mehreren Knoten. Breite und Strichlinien-Einstellung haben keine Auswirkungen im manuellen Stichmodus.
 2. Öffne `Erweiterungen > Ink/Stitch  > Parameter`.
-3. Aktiviere `Manuelle Stichpositionierung`. Alle anderen Einstellungen wirken sich in diesem Modus nicht auf das Endergebnis aus.
-
-   ![Params Stroke](/assets/images/docs/de/params-manual-stitch.jpg)
+3. Wähle als Methode `Manuelle Stichpositionierung`.
 
 Jeder Knoten repräsentiert einen Nadeleinstich. Kurven werden dementsprechend nicht berechnet.
 

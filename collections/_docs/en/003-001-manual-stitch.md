@@ -15,9 +15,7 @@ In manual stitch mode Ink/Stitch will use each node of a path as a needle penetr
 
 1. Create a path. Line style or width are irrelevant.
 2. Open `Extensions > Ink/Stitch  > Params`.
-3. Enable `Manual stitch placement`. The other settings will not have any effect in manual stitch mode.
-
-   ![Params Stroke](/assets/images/docs/en/params-manual-stitch.jpg)
+3. Chose `Manual stitch placement` as the method.
 
 Each node of a path represents a needle penetration point. It doesn't care about bezier curves.
 

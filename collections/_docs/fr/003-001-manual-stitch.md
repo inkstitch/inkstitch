@@ -15,8 +15,7 @@ Si vous ouvrez un fichier de broderie machine, vous y trouverez des points manue
 
 1. Créez un chemin. Le style de trait ou la largeur ne sont pas pertinents.
 2. Ouvrez `Extensions > Ink/Stitch  > Paramètres`.
-3. Activez `Placement manuel de points`. Les autres réglages n'auront aucun effet en mode point manuel.
-   ![Params Stroke](/assets/images/docs/en/params-manual-stitch.jpg)
+3. Choisir le type `Point manuel` comme méthode.
 
 
 Chaque nœud d'un chemin représente un point de pénétration de l'aiguille. Ça ne va pas suivre les courbes.
