@@ -2,7 +2,7 @@
 title: "Point droit"
 permalink: /fr/docs/stitches/running-stitch/
 excerpt: ""
-last_modified_at: 2023-04-21
+last_modified_at: 2023-04-23
 toc: true
 ---
 ## De quoi s'agit-il
@@ -14,8 +14,7 @@ Le point droit produit une série de petits points suivant une ligne ou une cour
 ![Point droit Détail](/assets/images/docs/running-stitch-detail.jpg)
 
 ## Comment le créer
-
-Running stitch is created by a path with a stroke color.
+Un point droit est créé à l'aide d'un chemin muni d'une couleur de contour.
 
 Le sens de la broderie est influencé par [la direction du chemin](/fr/docs/customize/#activation-de-la-direction-des-chemins). Si vous souhaitez échanger le départ et l'arrivée de votre point droit, exécutez `Chemin > Inverser`.
 
