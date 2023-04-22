@@ -15,17 +15,11 @@ Running stitch produces a series of small stitches following a line or curve.
 
 ## How to Create
 
-Running stitch can be created by setting a **dashed stroke** on a path. Any type of dashes will do the job, and the stroke width is irrelevant.
+Running stitch is created by a path with a stroke color.
 
-![Running Stitch Dashes](/assets/images/docs/running-stitch-dashes.jpg){: .align-left style="padding: 5px"}
-Select the stroke and go to `Object > Fill and Stroke...` and choose one of the dashed lines in the `Stroke style` tab.
-
-The stitch direction can be influenced by the path direction. If you want to swap the starting and ending point of your running stitch run `Path > Reverse`.
+The stitch direction can be influenced by the [path direction](/docs/customize/#enabling-path-outlines--direction). If you want to swap the starting and ending point of your running stitch run `Path > Reverse`.
 
 If an object consists of multiple paths, they will be stitched in order with a jump between each.
-
-**Info:** In order to avoid rounding corners, an extra stitch will be added at the point of any sharp corners.
-{: .notice--info style="clear: both;" }
 
 ## Params
 

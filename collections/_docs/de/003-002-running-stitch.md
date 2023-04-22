@@ -15,18 +15,11 @@ Der Geradstich produziert eine Serie von kleinen Stichen entlang einer Kurve.
 
 ## Funktionsweise
 
-Geradstich kann durch eine **gestichelte Linie** erstellt werden. Jede Strichlinienart erfüllt diesen Zweck. Die Linienbreite spielt dabei keine Rolle.
+Geradstich wird durch einen Pfad mit einer Konturfarbe erstellt.
 
-![Running Stitch Dashes](/assets/images/docs/running-stitch-dashes.jpg){: .align-left style="padding: 5px"}
-* Wähle eine Linie aus und öffne das Dialogfeld `Objekte > Küllung und Kontur...`.
-* Im Reiter `Muster der Kontur` eine Strichlinie aktivieren.
-
-Die Stickrichtung wird durch die Pfadrichtung bestimmt. Wenn du die Richtung ändern willst, führe die Funktion `Pfad > Richtung umkehren` aus.
+Die Stickrichtung wird durch die [Pfadrichtung](/de/docs/customize/#pfadkonturen--pfadrichtungen) bestimmt. Wenn du die Richtung ändern willst, führe die Funktion `Pfad > Richtung umkehren` aus.
 
 Wenn ein Objekt aus mehreren Pfaden besteht, werden diese der Reihe nach mit einem Sprungstich verknüpft.
-
-**Info:** Um abgerundete Ecken zu vermeiden, wird an jeder scharfen Ecke ein zusätzlicher Stich eingefügt.
-{: .notice--info style="clear: both;" }
 
 ## Parameter
 
