@@ -46,6 +46,7 @@ We have good news: Ink/Stitch will be significantly faster due to stitch plan ca
 
 ### Manual Stitch
   * Enable automated lock stitches through the force lock stitch option
+  * Add max stitch length setting
 
 ### Fill stitch
   * Add support for [fractional-length stagger cycles in fills](/docs/stitches/fill-stitch/#params)
@@ -127,6 +128,10 @@ We have good news: Ink/Stitch will be significantly faster due to stitch plan ca
   * Fix: don't fail on invalid glyphs, but ignore them
   * Fix: don't fail but ignore auto-route if font author defined it for a fill font (just in case the author didn't finish to convert all glyphs but wants to test the new font).
 
+### Params Simulator
+  * Simulator reloads faster when params have been changed
+  * Doesn't ignore the minimum stitch length anymore
+
 ### Preferences
   * It is now possible to set default values for the minimum stitch length and the minimum jump stitch length
   * Define cache size
@@ -136,10 +141,13 @@ We have good news: Ink/Stitch will be significantly faster due to stitch plan ca
   * Preselect PDF format in save dialog
 
 ### Simulator
-  * Simulator reloads faster when params have been changed
+  * Uses page background color from Inkscape
 
 ### Stitch Plan
   * Add [option to lock stitch plan](/docs/visualize/#stitch-plan-preview) (make it insensitve for mouse interactions)
+
+### Troubleshoot
+  * Add size options
 
 ## Embroidery Formats
   * Add file name to header of some file formats

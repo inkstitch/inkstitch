@@ -97,12 +97,12 @@ Start-Skalierung               | Prozentwert | Definiert die Skalierung der erst
 End-Skalierung                 | Prozentwert | Definiert die Skalierung der letzten Linie. Nur für geführte Ripples.
 Rotieren                       | ☑  oder ▢| Nur für geführte Ripples
 Kantenstil                     |<img src="/assets/images/docs/flat_or_point.svg" alt="Join Stile"/> | Verbindungen zwischen den Linien: flach (oben) oder spitz (unten). Nur für offene Ripples.
-Vernähen erlauben               || Vernäht bei Bedarf an den ausgewählten Positionen
-Vernähen erzwingen              | ☑  oder ▢| Vernäht den Faden nach diesem Element, auch dann, wenn der Abstand zum Folgeobjekt geringer ist als in den [Ink/Stitch Einstellungen](/de/docs/preferences/) definiert.
-Anstecher                      ||Wähle die [Anstecher](/docs/stitches/lock-stitches) Variante (Anfang).
-Verstecher                     ||Wähle die [Verstecher](/docs/stitches/lock-stitches) Variante (Ende).
-Fadenschnitt                    | ☑  oder ▢| Schneidet den Faden nachdem dieses Objekt genäht wurde
-Stopp                           | ☑  oder ▢| Stoppt die Maschine nachdem dieses Objekt genäht wurde und springt zur Stopp-Position (sofern vorhanden)
+Vernähen erlauben              || Vernäht bei Bedarf an den ausgewählten Positionen
+Vernähen erzwingen             | ☑  oder ▢| Vernäht den Faden nach diesem Element, auch dann, wenn der Abstand zum Folgeobjekt geringer ist als in den [Ink/Stitch Einstellungen](/de/docs/preferences/) definiert.
+Anstecher                      ||Wähle die [Anstecher](/de/docs/stitches/lock-stitches) Variante (Anfang).
+Verstecher                     ||Wähle die [Verstecher](/de/docs/stitches/lock-stitches) Variante (Ende).
+Fadenschnitt                   | ☑  oder ▢| Schneidet den Faden nachdem dieses Objekt genäht wurde
+Stopp                          | ☑  oder ▢| Stoppt die Maschine nachdem dieses Objekt genäht wurde und springt zur Stopp-Position (sofern vorhanden)
 {: .params-table }
 
 ## Ripple-Übersicht

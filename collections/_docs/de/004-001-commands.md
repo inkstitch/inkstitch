@@ -51,7 +51,7 @@ Definiert (1) die Start- und (2) die Endposition bei Objekten mit Füllstich.
 
 Definiert den Zielpunkt für einen Ripplestich-Bereich
 {% include upcoming_release.html %}
-or a circular fill.
+oder eine Spiralfüllung.
 
 
 ### ![trim symbol](/assets/images/docs/visual-commands-trim.jpg) Faden trennen

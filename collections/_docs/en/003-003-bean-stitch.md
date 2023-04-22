@@ -22,7 +22,7 @@ Bean stitch describes a repetition of running stitches back and forth. This woul
 
    * A value of 1 would triple each stitch (forward, back, forward).
    * A value of 2 would quintuple each stitch, etc.
-   * It is possible to define a repeat pattern by entering multiple values separated by a space (e.g. a value of `1 0` will produce this pattern: `≡-≡-≡`)
+   * By entering a sequence of space separated integers in Bean stitch number of repeats, it is possible to define a custom stitch. For instance the sequence 0 1 will yield alternating simple and triple stitches (`≡-≡-≡`).
 
 ## Params
 
@@ -45,9 +45,6 @@ Lock stitch                  ||Chose your [favorite style](/docs/stitches/lock-s
 Trim After                    ||Trim the thread after sewing this object.
 Stop After                    ||Stop the machine after sewing this object. Before stopping it will jump to the stop position (frame out) if defined.
 {: .params-table }
-
-{% include upcoming_release.html %} 
-By entering a sequence of space separated integers in Bean stitch number of repeats, it is possible to define a custom stitch. For instance the sequence 0 1 will yield alternating simple and triple stitches.
 
 ## Sample Files Including Bean Stitch
 

@@ -52,9 +52,9 @@ Verstecher           ||Wähle die [Verstecher](/docs/stitches/lock-stitches) Var
 Fadenschnitt         || Schneidet den Faden nachdem dieses Objekt genäht wurde
 Stopp                || Stoppt die Maschine nachdem dieses Objekt genäht wurde und springt zur Stopp-Position (sofern vorhanden)
 
-## Underlay
+## Unterlage
 
-Underlay in Guided Fill doesn't follow the guide line, but uses the fill angle which can be defined in the underlay [params](/docs/stitches/fill-stitch#underlay).
+Die Unterlage der Spiralfüllung ist keine Spirale, sondern nutzt den Stichwinkel der [Parametereinstellungen](/de/docs/fill-stitch/#unterlage)
 
 ## Samples Files Including Circular Fill Stitches
 {% include tutorials/tutorial_list key="stitch-type" value="Circular Fill" %}

@@ -115,8 +115,8 @@ Swap rails            |☑ | Swaps the first and the second rails of a satin col
 Zig-Zag spacing       |![Zig-zag spacing example](/assets/images/docs/params-satin-zig-zag-spacing.png)|the peak-to-peak distance between zig-zags
 Allow lock stitches   |☑ |Enables lock stitches in only desired positions
 Force lock stitches   |☑ | Sew lock stitches after sewing this element, even if the distance to the next object is smaller than defined in the collapse length value value in the Ink/Stitch prefreneces.
-Tack stitch                 | |Chose your [favorite style](/docs/stitches/lock-stitches/)
-Lock stitch                  | |Chose your [favorite style](/docs/stitches/lock-stitches/)
+Tack stitch           | |Chose your [favorite style](/docs/stitches/lock-stitches/)
+Lock stitch           | |Chose your [favorite style](/docs/stitches/lock-stitches/)
 Trim After            |☑ | Trim the thread after sewing this object.
 Stop After            |☑ | Stop the machine after sewing this object. Before stopping it will jump to the stop position (frame out) if defined.
 Random percentage of satin width increase |![Random width increase](/assets/images/docs/params-satin-random-width-increase.png)| Lengthen stitch across rails at most this percent. Two values separated by a space may be used for an asymetric effect.

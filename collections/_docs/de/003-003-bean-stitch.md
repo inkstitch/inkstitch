@@ -22,7 +22,7 @@ Mehrfachgeradstich oder "Bean stitch" beschreibt eine Wiederholung von Geradstic
 
    * Ein Wert von 1 verdreifacht jeden Stich (vor, zurück, vor), es entsteht ein Dreifach-Geradstich.
    * Ein Wert von 2 verfünfacht jeden Stich (vor, zurück, vor, zurück, vor), es entsteht ein Fünffach-Geradstich, etc.
-   * Durch die Eingabe mehrerer durch ein Leerzeichen getrennter Werte  ein Muster zu erzeugen (z.B ergibt der Wert `1 0` folgendes Muster: `≡-≡-≡`)
+   * Die Eingabe mehrerer durch ein Leerzeichen getrennte Werte erzeugt ein Muster (z.B ergibt der Wert `1 0` einen Wechsel von einfachen Geradstichen und Dreifachstichen: `≡-≡-≡`)
 
 ## Parameter
 
@@ -38,13 +38,10 @@ Geradstich Toleranz                   | Alle Stiche müssen innerhalb dieser Dis
 Zick-Zack Abstand (Spitze zu Spitze)  | ◦ Stichabstand im [Zick-Zack-Modus](/de/docs/stitches/zigzag-stitch/)<br>◦ Die Höhe wird durch die Breite der Linie definiert
 Vernähen erlauben                     | Vernäht bei Bedarf an den ausgewählten Positionen
 Vernähen erzwingen                    | Vernäht den Faden nach diesem Element, auch dann, wenn der Abstand zum Folgeobjekt geringer ist als in den [Ink/Stitch Einstellungen](/de/docs/preferences/) definiert.
-Anstecher                             |Wähle die [Anstecher](/docs/stitches/lock-stitches) Variante (Anfang).
-Verstecher                            |Wähle die [Verstecher](/docs/stitches/lock-stitches) Variante (Ende).
+Anstecher                             |Wähle die [Anstecher](/de/docs/stitches/lock-stitches) Variante (Anfang).
+Verstecher                            |Wähle die [Verstecher](/de/docs/stitches/lock-stitches) Variante (Ende).
 Fadenschnitt                          | Schneidet den Faden nachdem dieses Objekt genäht wurde
 Stopp                                 | Stoppt die Maschine nachdem dieses Objekt genäht wurde und springt zur Stopp-Position (sofern vorhanden)
-
-{% include upcoming_release.html %} 
-By entering a sequence of space separated integers in Bean stitch number of repeats, it is possible to define a custom stitch. For instance the sequence 0 1 will yield alternating simple and triple stitches.
 
 ## Beispieldateien mit Mehrfachgeradstich
 

@@ -47,8 +47,6 @@ Lock stitch                  |Chose your [favorite style](/docs/stitches/lock-st
 Trim After                    |Trim the thread after sewing this object.
 Stop After                    |Stop the machine after sewing this object. Before stopping it will jump to the stop position (frame out) if defined.
 
-
-
 ## Routing
 
 For a better stitch routing try the extension `Autoroute Running Stitch` in the [stroke tools](/docs/stroke-tools/).
