@@ -104,21 +104,21 @@ Some of these params are not part of the recent release.
 Settings||Description
 ---|---|--
 Custom satin column   | ☑ |Must be enabled for these settings to take effect.
-"E" stitch            |![E-stitch example](/assets/images/docs/params-e-stitch.png)|Enables "E" stitch instead of satin. Don't forget to enlarge the zig-zag spacing for this stitch type.
+Method                | |Chose `Satin Column`
 Maximum stitch length | ![Maximum stitch length](/assets/images/docs/params-satin-maximum_stitch_length.png) | Stitches wider than this will be split up (split stitches).
+Short stitch inset    |  | Stitches in areas with high density will be inset by this amount (%)
+Short stitch distance |  | Inset stitches if the distance between stitches is smaller than this (mm).
+Zig-Zag spacing       |![Zig-zag spacing example](/assets/images/docs/params-satin-zig-zag-spacing.png)|the peak-to-peak distance between zig-zags
 Pull compensation percentage |![Pull compensation example](/assets/images/docs/params-satin-pull_compensation.png)|Additional pull compensation which varies as a percentage of stitch width. Two values separated by a space may be used for an aysmmetric effect.
 Pull compensation     |![Pull compensation example](/assets/images/docs/params-satin-pull_compensation.png)|Satin stitches [pull the fabric together](/tutorials/push-pull-compensation/), resulting in a column narrower than you draw in Inkscape. This setting expands each pair of needle penetrations outward from the center of the satin column by a fixed length. Two values separated by a space may be used for an aysmmetric effect.
-Short stitch distance |  | Inset stitches if the distance between stitches is smaller than this (mm).
-Short stitch inset    |  | Stitches in areas with high density will be inset by this amount (%)
 Reverse one rail      |![Reverse Rung](/assets/images/docs/satin-reverse-rung.png) | Enabling this may help if your satin renders very strangely.
 Swap rails            |☑ | Swaps the first and the second rails of a satin column. Affecting which side the thread finishes on as well as any other sided property.
-Zig-Zag spacing       |![Zig-zag spacing example](/assets/images/docs/params-satin-zig-zag-spacing.png)|the peak-to-peak distance between zig-zags
 Allow lock stitches   |☑ |Enables lock stitches in only desired positions
 Force lock stitches   |☑ | Sew lock stitches after sewing this element, even if the distance to the next object is smaller than defined in the collapse length value value in the Ink/Stitch prefreneces.
 Tack stitch           | |Chose your [favorite style](/docs/stitches/lock-stitches/)
 Lock stitch           | |Chose your [favorite style](/docs/stitches/lock-stitches/)
-Trim After            |☑ | Trim the thread after sewing this object.
 Stop After            |☑ | Stop the machine after sewing this object. Before stopping it will jump to the stop position (frame out) if defined.
+Trim After            |☑ | Trim the thread after sewing this object.
 Random percentage of satin width increase |![Random width increase](/assets/images/docs/params-satin-random-width-increase.png)| Lengthen stitch across rails at most this percent. Two values separated by a space may be used for an asymetric effect.
 Random percentage of satin width decrease |![Random width decrease](/assets/images/docs/params-satin-random-width-decrease.png)| Shorten stitch across rails at most this percent. Two values separated by a space may be used for an aysmmetric effect.
 Random zig-zag spacing percentage         |![Random zigzag spacing](/assets/images/docs/params-satin-random-zigzag-spacing.png)|Amount of random jitter added to zigzag spacing

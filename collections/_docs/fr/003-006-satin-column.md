@@ -121,29 +121,29 @@ Certains de ces paramètres ne font pas partie de la version récente.
 
 |Paramètres||Description|
 |---|---|--|
-|Colonne satin personnalisée | ☑ |Doit être activé pour que ces paramètres prennent effet|
-|Point en "E" |![exemple de point"E"](/assets/images/docs/params-e-stitch.png)|Active point en E au lieu de colonne satin. N'oubliez pas d'élargir l'espacement du zig-zag pour ce type de point.|
-|Longueur maximale du point  | ![Maximum stitch length](/assets/images/docs/params-satin-maximum_stitch_length.png) | Les points plus longs seront découpés en plusieus points.|
-|Pourcentage de compensation d'étirement|![Pull compensation example](/assets/images/docs/params-satin-pull_compensation.png)|Compensation d'étirement proportionelle à la largeur du point satin. Deux valeurs séparées par un espace peuvent être utilisées pour un effet asymétrique.|
-|Compensation d'étirement|![exemple de compensation d'étirement](/assets/images/docs/params-satin-pull_compensation.png)|Les points Satin [resserrent le tissu](/fr/tutorials/push-pull-compensation/),   il en résulte une colonne plus étroite que votre dessin dans Inkscape. Ce paramètre étend chaque paire de pénétrations d’aiguilles vers l’extérieur de la colonne satin. Vous devrez expérimentalement déterminer le montant de la compensation en tenant compte de votre tissu, de votre fil et de votre stabilisateur. Deux valeurs séparées par un espace peuvent être utilisées pour un effet asymétrique.|
-|Distance des points courts ||Faire des points courts si la distance entre les crêtes est inférieure à cette valeur.|
-|Décalage des points courts    ||Les points dans les zones à forte densité seront raccourcis de ce pourcentage.|
-Inverser un rail    |![Inverser un rail](/assets/images/docs/satin-reverse-rung.png) | Enabling this may help if your satin renders very strangely.
-|Échanger les rails          |☑ |Échange les deux rails de la colonne satin, ce qui affecte le côté de fin de broderie ainsi que tous les paramètres asymétriques|
-|Espacement de Zig-zag|![exemple d'espacement de zig-zag](/assets/images/docs/params-satin-zig-zag-spacing.png)|la distance de crête à crête entre les zig-zag|
+|Colonne satin personnalisée   | ☑ |Doit être activé pour que ces paramètres prennent effet|
+|Méthode                       | | Choisir `Colonne Satin`|
+|Longueur maximale du point    | ![Maximum stitch length](/assets/images/docs/params-satin-maximum_stitch_length.png) | Les points plus longs seront découpés en plusieus points.
+|Décalage des points courts    | |Les points dans les zones à forte densité seront raccourcis de ce pourcentage.|
+|Distance des points courts    | |Faire des points courts si la distance entre les crêtes est inférieure à cette valeur.|
+|Espacement de Zig-zag         |![exemple d'espacement de zig-zag](/assets/images/docs/params-satin-zig-zag-spacing.png)|la distance de crête à crête entre les zig-zag|
+|Pourcentage de compensation d'étirement |![Pull compensation example](/assets/images/docs/params-satin-pull_compensation.png)|Compensation d'étirement proportionelle à la largeur du point satin. Deux valeurs séparées par un espace peuvent être utilisées pour un effet asymétrique.|
+|Compensation d'étirement      |![exemple de compensation d'étirement](/assets/images/docs/params-satin-pull_compensation.png)|Les points Satin [resserrent le tissu](/fr/tutorials/push-pull-compensation/),   il en résulte une colonne plus étroite que votre dessin dans Inkscape. Ce paramètre étend chaque paire de pénétrations d’aiguilles vers l’extérieur de la colonne satin. Vous devrez expérimentalement déterminer le montant de la compensation en tenant compte de votre tissu, de votre fil et de votre stabilisateur. Deux valeurs séparées par un espace peuvent être utilisées pour un effet asymétrique.|
+Inverser un rail               |![Inverser un rail](/assets/images/docs/satin-reverse-rung.png) | Enabling this may help if your satin renders very strangely.
+|Échanger les rails            |☑ |Échange les deux rails de la colonne satin, ce qui affecte le côté de fin de broderie ainsi que tous les paramètres asymétriques|
 |Autoriser les points d'arrêts | ☑|Ajoute un point d'arrêt à la ou les positions choisies.|
-|Forcer les points d'arrêts | ☑ | Force un point d'arrêt après l'objet indépendament de la valeur de "Saut de fil" dans les Préférences d'Ink/Stitch|
-|Point d'ancrage | |Choisir le type de point d'ancrage.|
-|Point d'arrêt| |Choisir le type de point d'arrêt.|
-|Couper après          |☑ | Coupe le fil après avoir brodé cet objet|
-|Arrêter après           |☑ |Fait faire une pause à la machine après avoir brodé cet objet. Si une position d'arrêt a été définie, elle est rejointe par un saut avant la pause. |
+|Forcer les points d'arrêts    | ☑ | Force un point d'arrêt après l'objet indépendament de la valeur de "Saut de fil" dans les Préférences d'Ink/Stitch|
+|Point d'ancrage               | |Choisir le type de point d'ancrage.|
+|Point d'arrêt                 | |Choisir le type de point d'arrêt.|
+|Couper après                  |☑ | Coupe le fil après avoir brodé cet objet|
+|Arrêter après                 |☑ |Fait faire une pause à la machine après avoir brodé cet objet. Si une position d'arrêt a été définie, elle est rejointe par un saut avant la pause. |
 |Pourcentage maximum d'augmentation aléatoire de la largeur du satin |![Random width increase](/assets/images/docs/params-satin-random-width-increase.png)| Élargir le satin d'au plus ce pourcentage. Deux valeurs séparées par un espace peuvent être utilisées pour un effet asymétrique.|
 |Pourcentage maximum  de diminution aléatoire de la largeur du satin |![Random width decrease](/assets/images/docs/params-satin-random-width-decrease.png)| Réduire la largeur du satin d'au plus ce pourcentage. Deux valeurs séparées par un espace peuvent être utilisées pour un effet asymétrique.|
-|Pourcentage aléatoire pour l'espacement zigzag |![Random zigzag spacing](/assets/images/docs/params-satin-random-zigzag-spacing.png)|Pourcentage maximum d'augmentation à appliquer à  l'espacement zigzag.|
-|Déplacement aléatoire pour le découpage des points   |![Random split stitch jitter](/assets/images/docs/params-satin-random-split-stitch-jitter.png)| Si le découpage totalement aléatoire des points est activé, ce paramètre rend la longueur du point aléatoire, sinon, le déplacement aléatoire du découpage se fait autour de sa position normale (sans appliquer d'aléatoire)|
-|Découpage totalement aléatoire des points          |☑ |Si activé, le découpage des points est totalement  aléatoire (ce qui risque de modifier le nombre de points), sinon, le nombre de points est conservé, mais leur position peut varier du déplacement aléatoire paramétré.|
+|Pourcentage aléatoire pour l'espacement zigzag               |![Random zigzag spacing](/assets/images/docs/params-satin-random-zigzag-spacing.png)|Pourcentage maximum d'augmentation à appliquer à  l'espacement zigzag.|
+|Déplacement aléatoire pour le découpage des points           |![Random split stitch jitter](/assets/images/docs/params-satin-random-split-stitch-jitter.png)| Si le découpage totalement aléatoire des points est activé, ce paramètre rend la longueur du point aléatoire, sinon, le déplacement aléatoire du découpage se fait autour de sa position normale (sans appliquer d'aléatoire)|
+|Découpage totalement aléatoire des points                     | ☑ |Si activé, le découpage des points est totalement  aléatoire (ce qui risque de modifier le nombre de points), sinon, le nombre de points est conservé, mais leur position peut varier du déplacement aléatoire paramétré.|
 |Longueur minimum du point si découpage totalement aléatoire   |  | Par défaut, prend la valeur de la longueur maximum du point. Une valeur inférieure permet une meilleure transition entre les points découpés et les points non découpés.|
-|Graine Aléatoire         | | Utiliser cette graine aléatoire pour le calcul des attributs. Si vide, utilise l'identificateur de l'élément. Relancer si vous n'êtes pas satisfait du résultat.|
+|Graine Aléatoire              | | Utiliser cette graine aléatoire pour le calcul des attributs. Si vide, utilise l'identificateur de l'élément. Relancer si vous n'êtes pas satisfait du résultat.|
 {: .params-table }
 
 ### Sous-couche centrale
