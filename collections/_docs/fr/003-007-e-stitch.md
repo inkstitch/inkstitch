@@ -2,7 +2,7 @@
 title: "Point en E"
 permalink: /fr/docs/stitches/e-stitch/
 excerpt: ""
-last_modified_at: 2023-01-20
+last_modified_at: 2023-04-23
 toc: true
 ---
 ## Qu'est-ce que c'est
