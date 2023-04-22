@@ -1,6 +1,6 @@
 {
-    "name": "EMILIO_20_Applique",
-    "description": "Emilio 20 Applique is an Applique font approximatively 50mm high. It should not be scaled down but may be scaled up to 150%. This font is an altered version (larger satin columns) of Emilio_20 while Emilio_20_Bold is  Emilio_20_applique without the applique",
+    "name": "EMILIO_20_Bold",
+    "description": "Emilio_20_Bold is an altered version of Emilio_20  and is approximatively 50mm high.",
     "leading": 200,
     "auto_satin": false,
     "reversible": false,
