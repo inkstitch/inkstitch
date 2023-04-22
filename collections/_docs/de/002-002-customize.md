@@ -74,7 +74,7 @@ Bei der Arbeit mit Ink/Stitch ist es wichtig, erkennen zu können, in welche Ric
 
 Damit die Pfadrichtungen auch wirklich angezeigt werden, aktiviere außerdem die Option `Zeige die Pfadrichtung an Außenlinie` in der Werkzeugleiste. In der Abbildung kannst du sehen, wo du die Option findest.
 
-[![Path outlines & directions](https://user-images.githubusercontent.com/11083514/40360721-f294ef0a-5dbe-11e8-9d4d-98f469ff1fba.png)](https://user-images.githubusercontent.com/11083514/40360721-f294ef0a-5dbe-11e8-9d4d-98f469ff1fba.png)
+[![Path outlines & directions](/assets/images/docs/de/customize-path-outlines.png)](/assets/images/docs/de/customize-path-outlines.png)
 
 ## Vorlagen
 

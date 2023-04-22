@@ -33,8 +33,8 @@ Longueur du point droit           |Longueur des points
 Tolerance du point droit          |Les points ne peuvent pas être éloignés du chemin de plus que cette distance. Une tolerance basse peut impliquer des points plus courts. Une tolerance haute entraine un arrondissement des angles aigus.
 Autoriser les points d'arrêts     |Ajoute un point d'arrêt à la ou les positions choisies
 Forcer les points d'arrêts        |Force un point d'arrêt après l'objet indépendament de la valeur de "Saut de fil" dans les Préférences d'Ink/Stitch.
-Point d'ancrage                  |Choisir le  [style désiré](/fr/docs/stitches/lock-stitches/)
-Point d'arrêt                    |Choisir le  [style désiré](/fr/docs/stitches/lock-stitches/)
+Point d'ancrage                   |Choisir le  [style désiré](/fr/docs/stitches/lock-stitches/)
+Point d'arrêt                     |Choisir le  [style désiré](/fr/docs/stitches/lock-stitches/)
 Couper après                      |Couper le fil après avoir brodé cet objet
 Arrêter après                     |Arrêter (pause machine) après avoir brodé cet objet. Avant l'arrêt, il y aura un saut vers la position d'arrêt si elle a été définie
 

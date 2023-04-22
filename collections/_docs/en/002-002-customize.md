@@ -74,7 +74,7 @@ Knowing path directions is important working with Ink/Stitch. Therefore we recom
 
 Make sure that also **Show path outline** is enabled in `Tool Controls Bar` as you can see in the image below.
 
-[![Path outlines & directions](https://user-images.githubusercontent.com/11083514/40360721-f294ef0a-5dbe-11e8-9d4d-98f469ff1fba.png)](https://user-images.githubusercontent.com/11083514/40360721-f294ef0a-5dbe-11e8-9d4d-98f469ff1fba.png)
+[![Path outlines & directions](/assets/images/docs/en/customize-path-outlines.png)](/assets/images/docs/en/customize-path-outlines.png)
 
 ## Working with Templates
 
