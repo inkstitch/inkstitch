@@ -1,6 +1,6 @@
 ---
 title: "Grand Hotel Marif"
-permalink: /en/fonts/grand_hotel_marif/
+permalink: /fonts/grand_hotel_marif/
 last_modified_at: 2022-05-26
 toc: false
 preview_image:

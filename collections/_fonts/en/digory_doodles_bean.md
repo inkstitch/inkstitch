@@ -1,6 +1,6 @@
 ---
 title: "Digory Doodles Bean"
-permalink: /en/fonts/digory-doodles-bean/
+permalink: /fonts/digory-doodles-bean/
 last_modified_at: 2021-05-26
 toc: false
 preview_image:

@@ -1,6 +1,6 @@
 ---
 title: "Monicha"
-permalink: /en/fonts/monicha/
+permalink: /fonts/monicha/
 last_modified_at: 2022-05-26
 toc: false
 preview_image:

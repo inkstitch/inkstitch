@@ -1,6 +1,6 @@
 ---
 title: "DinoMouse 72"
-permalink: /en/fonts/dinomouse72/
+permalink: /fonts/dinomouse72/
 last_modified_at: 2022-05-05
 toc: false
 preview_image:

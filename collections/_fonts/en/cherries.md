@@ -1,6 +1,6 @@
 ---
 title: "Cherries"
-permalink: /en/fonts/cherries/
+permalink: /fonts/cherries/
 last_modified_at: 2022-05-26
 toc: false
 preview_image:

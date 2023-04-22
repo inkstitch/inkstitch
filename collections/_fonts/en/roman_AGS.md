@@ -1,6 +1,6 @@
 ---
 title: "Roman AGS"
-permalink: /en/fonts/roman_ags/
+permalink: /fonts/roman_ags/
 last_modified_at: 2022-05-26
 toc: false
 preview_image:

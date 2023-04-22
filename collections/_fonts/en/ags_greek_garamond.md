@@ -1,6 +1,6 @@
 ---
 title: "AGS Γαραμου"
-permalink: /en/fonts/AGS_greek_garamond/
+permalink: /fonts/AGS_greek_garamond/
 last_modified_at: 2023-04-14
 toc: false
 preview_image:

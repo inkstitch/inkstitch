@@ -1,6 +1,6 @@
 ---
 title: "Baumans FI"
-permalink: /en/fonts/baumans/
+permalink: /fonts/baumans/
 last_modified_at: 2022-05-26
 toc: false
 preview_image:

@@ -1,6 +1,6 @@
 ---
 title: "Glacial tiny 60 AGS"
-permalink: /en/fonts/glacial_tiny/
+permalink: /fonts/glacial_tiny/
 last_modified_at: 2022-05-26
 toc: false
 preview_image:

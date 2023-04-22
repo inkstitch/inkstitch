@@ -1,6 +1,6 @@
 ---
 title: "Sortefax"
-permalink: /en/fonts/sortefax/
+permalink: /fonts/sortefax/
 last_modified_at: 2022-05-26
 toc: false
 preview_image: 

@@ -1,6 +1,6 @@
 ---
 title: "Abril En Fleur AGS"
-permalink: /en/fonts/abril/
+permalink: /fonts/abril/
 last_modified_at: 2023-04-14
 toc: false
 preview_image:

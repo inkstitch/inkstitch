@@ -1,6 +1,6 @@
 ---
 title: "Aventurina"
-permalink: /en/fonts/aventurina/
+permalink: /fonts/aventurina/
 last_modified_at: 2022-05-26
 toc: false
 preview_image:
