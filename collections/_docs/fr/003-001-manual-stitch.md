@@ -2,7 +2,7 @@
 title: "Point manuel"
 permalink: /fr/docs/stitches/manual-stitch/
 excerpt: ""
-last_modified_at: 2023-04-13
+last_modified_at: 2023-04-23
 toc: true
 ---
 ## De quoi s'agit-il
@@ -34,7 +34,7 @@ Paramètre||Description
 ---|--|---
 Points droits le long des chemins   ||Doit être activé pour que ces paramètres prennent effet.
 Méthode                             ||Choisir le type "Point manuel"
-Max stitch length                   ||Stitches longer than this will be subdivided. Leave empty for no subdivision. Short stitches will be removed according settings in the [preferences](/docs/preferences/).
+Longueur maximum de point           ||Les points plus longs  seront subdivisés. Laissez vide si vous ne souhaitez pas de subdivision. Les points  courts seront  supprimés selon  les [preferences](/fr/docs/preferences/).
 Autoriser les points d'arrêts       ||Les points manuels ne permette pas l'ajout automatique de points d'arrêt. Vous devez les inclure manuellement dans votre chemin. Mais vous pouvez les activer via "Forcer les points d'arrêts". 
 Forcer les points d'arrêts          ||Sur un point manuel, ajoute un point d'arrêt.
 Couper après                        ||Couper le fil après avoir brodé cet objet
