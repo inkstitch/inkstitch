@@ -9,6 +9,7 @@ import inkex
 
 from ..svg.tags import (INKSCAPE_GROUPMODE, INKSCAPE_LABEL, SVG_GROUP_TAG,
                         SVG_PATH_TAG, SVG_USE_TAG)
+from ..update import update_inkstitch_document
 from .glyph import Glyph
 
 
@@ -62,7 +63,9 @@ class FontVariant(object):
     def _load_glyphs(self):
         variant_file_paths = self._get_variant_file_paths()
         for svg_path in variant_file_paths:
-            svg = inkex.load_svg(svg_path).getroot()
+            document = inkex.load_svg(svg_path)
+            update_inkstitch_document(document)
+            svg = document.getroot()
             svg = self._apply_transforms(svg)
 
             glyph_layers = svg.xpath(".//svg:g[starts-with(@inkscape:label, 'GlyphLayer-')]", namespaces=inkex.NSS)
