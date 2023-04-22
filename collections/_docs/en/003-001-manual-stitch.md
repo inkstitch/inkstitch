@@ -2,7 +2,7 @@
 title: "Manual Stitch"
 permalink: /docs/stitches/manual-stitch/
 excerpt: ""
-last_modified_at: 2023-03-07
+last_modified_at: 2023-04-22
 toc: true
 ---
 ## What it is
@@ -34,12 +34,8 @@ Open `Extensions > Ink/Stitch  > Params` to change parameters to your needs.
 Settings||Description
 ---|--|---
 Running stitch along paths    ||Must be enabled for these settings to take effect.
-Method                        ||Choose running stitch for the running stitch type
-Manual stitch placement       ||**Enable manual stitches**
-Repeats                       ||This setting has no effect on manual stitches
-Running stitch length         ||This setting has no effect on manual stitches
-Running stitch tolerance      ||This setting has no effect on manual stitches
-Zig-Zag spacing (peak-to-peak)||This setting has no effect on manual stitches
+Method                        ||Choose manual stitch
+Max stitch length             ||Stitches longer than this will be subdivided. Leave empty for no subdivision. Short stitches will be removed according settings in the [preferences](/docs/preferences/).
 Allow lock stitches           ||Usually manual stitches to not add lock stitches automatically and you have to include them directly into your path. But you can enable them through the setting `force lock stitches`.
 Force lock stitches           ||Enables lock stitches for manual stitches.
 Trim After                    ||Trim the thread after sewing this object.
@@ -47,5 +43,5 @@ Stop After                    ||Stop the machine after sewing this object. Befor
 {: .params-table }
 
 ## Sample Files Including Manual Stitch
-{: style="clear: both;" }
+
 {% include tutorials/tutorial_list key="stitch-type" value="Manual Stitch" %}

@@ -34,12 +34,8 @@ Ouvrir `Extensions > Ink/Stitch  > Paramétres` pour paramétrer selon vos besoi
 Paramètre||Description
 ---|--|---
 Points droits le long des chemins   ||Doit être activé pour que ces paramètres prennent effet.
-Méthode                             ||Choisir le type "Point droit" 
-Placement de points manuels         || **Activer le Point Manuel**
-Répéter                             ||Ce paramètre est sans effet sur les points manuels
-Longueur du point droit             ||Ce paramètre est sans effet sur les points manuels
-Tolérance du point droit            ||Ce paramètre est sans effet sur les points manuels
-Espacement Zig-Zag (crête à crête)  ||Ce paramètre est sans effet sur les points manuels
+Méthode                             ||Choisir le type "Point manuel"
+Max stitch length                   ||Stitches longer than this will be subdivided. Leave empty for no subdivision. Short stitches will be removed according settings in the [preferences](/docs/preferences/).
 Autoriser les points d'arrêts       ||Les points manuels ne permette pas l'ajout automatique de points d'arrêt. Vous devez les inclure manuellement dans votre chemin. Mais vous pouvez les activer via "Forcer les points d'arrêts". 
 Forcer les points d'arrêts          ||Sur un point manuel, ajoute un point d'arrêt.
 Couper après                        ||Couper le fil après avoir brodé cet objet
@@ -47,5 +43,6 @@ Arrêter après                       ||Arrêter (pause machine) après avoir br
 
 ## Fichier exemple avec point manuel
 {: style="clear: both;" }
+
 {% include tutorials/tutorial_list key="stitch-type" value="Manual Stitch" %}
 

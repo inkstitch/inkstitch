@@ -2,7 +2,7 @@
 title: "Manuelle Stichplatzierung"
 permalink: /de/docs/stitches/manual-stitch/
 excerpt: ""
-last_modified_at: 2023-01-16
+last_modified_at: 2023-04-22
 toc: true
 ---
 ## Beschreibung
@@ -30,12 +30,8 @@ Für eine genaue Planung macht es deshalb Sinn, schon beim Zeichnen Kurven direk
 Einstellung|Beschreibung
 ---|---
 Geradstich                            | Muss aktiviert sein, damit diese Einstellungen wirksam werden.
-Methode                               | Geradstich auswählen
-Manuelle Stichpositionierung          | Aktiviert den **manuellen Stichmodus**
-Wiederholungen                        | Diese Einstellung hat keine Auswirkung auf manuelle Stichpositionierung
-Bean stitch Anzahl der Wiederholungen | Diese Einstellung hat keine Auswirkung auf manuelle Stichpositionierung
-Stichlänge                            | Diese Einstellung hat keine Auswirkung auf manuelle Stichpositionierung
-Zick-Zack Abstand (Spitze zu Spitze)  | Diese Einstellung hat keine Auswirkung auf manuelle Stichpositionierung
+Methode                               | `Manuelle Stichpositionierung` auswählen
+Max stitch length                     | Unterteilt Stiche die länger sind als dieser Wert. Leer lassen für keine Unterteilungen. Kurze Stiche werden gemäß den [Einstellungen](/docs/preferences/) herausgefiltert.
 Vernähen erlauben                     | Bei manueller Stichpositionierung wird normalerweise wird kein Vernähstich automatisch hinzugefügt. Vernähstiche können jedoch über die Einstellung `Vernähstiche erzwingen` aktiviert werden.
 Vernähen erzwingen                    | Aktiviert Vernähstiche für Pfade mit manueller Stichpositionierung.
 Fadenschnitt                          | Schneidet den Faden nachdem dieses Objekt genäht wurde
@@ -48,6 +44,6 @@ Stopp                                 | Stoppt die Maschine nachdem dieses Objek
 Im manuellen Modus muss auch das Vernähen von Hand angelegt werden. Wenn du den Faden vernähen willst, plane den Pfad entsprechend.
 
 ## Beispieldateien die den manuellen Stichmodus beinhalten
-{: style="clear: both;" }
+
 {% include tutorials/tutorial_list key="stichart" value="Manueller Stich" %}
 
