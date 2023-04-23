@@ -21,6 +21,8 @@ Apex Lake contient les 38 glyphes :
 
 ?!0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ
 
+{% include upcoming_release.html %}
+
 ### Apex Simple AGS
 Apex Simple AGS contient les 14 glyphes:
 
