@@ -135,9 +135,9 @@ class LetteringFrame(wx.Frame):
         self.back_and_forth_checkbox.SetValue(bool(self.settings.back_and_forth))
         self.trim_option_choice.SetSelection(self.settings.trim_option)
         self.use_trim_symbols.SetValue(bool(self.settings.use_trim_symbols))
-        self.set_initial_font(self.settings.font)
         self.text_editor.SetValue(self.settings.text)
         self.scale_spinner.SetValue(self.settings.scale)
+        self.set_initial_font(self.settings.font)
 
     def save_settings(self):
         """Save the settings into the SVG group element."""

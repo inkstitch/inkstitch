@@ -1094,11 +1094,11 @@ class SatinColumn(EmbroideryElement):
                 points, _ = self.get_split_points(last_point, left, last_point, left, max_stitch_length)
                 patch.add_stitches(points)
 
-            patch.add_stitch(a_short, ("edge"))
-            patch.add_stitches(split_points, ("split_stitch"))
-            patch.add_stitch(b_short, ("edge"))
-            patch.add_stitches(split_points[::-1], ("split_stitch"))
-            patch.add_stitch(a_short, ("edge"))
+            patch.add_stitch(a_short, ("edge", "left"))
+            patch.add_stitches(split_points, ("split_stitch",))
+            patch.add_stitch(b_short, ("edge",))
+            patch.add_stitches(split_points[::-1], ("split_stitch",))
+            patch.add_stitch(a_short, ("edge",))
 
             last_point = a_short
 
