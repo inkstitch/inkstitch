@@ -54,4 +54,5 @@ Et pourquoi pas sur un T shirt ? ou sur un panier en tissu ?
 {%include folder-galleries path="fonts/apex-lake/" %}
 
 [Télécharger la license d'Apex Lake](https://github.com/inkstitch/inkstitch/tree/main/fonts/apex_lake/LICENSE)
+
 [Télécharger la license d'Apex Simple](https://github.com/inkstitch/inkstitch/tree/main/fonts/apex_simple_AGS/LICENSE)
