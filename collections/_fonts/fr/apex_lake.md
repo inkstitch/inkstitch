@@ -6,7 +6,7 @@ toc: false
 preview_image:
  - url: /assets/images/fonts/apex_lake.jpg
    height: 60
- - url: /assets/images/fonts/apex_simple.pnng
+ - url: /assets/images/fonts/apex_simple.png
    height: 35
 ---
 ![Apex Lake](/assets/images/fonts/apex_lake.jpg)
