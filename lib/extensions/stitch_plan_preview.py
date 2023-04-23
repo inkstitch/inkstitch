@@ -47,8 +47,8 @@ class StitchPlanPreview(InkstitchExtension):
 
         # update layer visibility 0 = unchanged, 1 = hidden, 2 = lower opacity
         groups = self.document.getroot().findall(SVG_GROUP_TAG)
+        self.set_invisible_layers_attribute(groups, layer)
         if self.options.layer_visibility == 1:
-            self.set_invisible_layers_attribute(groups, layer)
             self.hide_all_layers()
             layer.style['display'] = "inline"
         elif self.options.layer_visibility == 2:
