@@ -89,6 +89,7 @@ Füllstich wird benutzt, um große Bereiche mit einer Farbe zu füllen.
 [Mehr lesen](/de/docs/stitches/fill-stitch/){: .btn .btn--primary}
 
 ### Konturfüllung
+
 Konturfüllung füllt eine Fläche mit kleiner werdenden Kopien ihrer Kontur.
 
 ![Contour stitch](/assets/images/docs/contour-fill-detail.jpg)
@@ -96,20 +97,23 @@ Konturfüllung füllt eine Fläche mit kleiner werdenden Kopien ihrer Kontur.
 [Mehr lesen](/de/docs/stitches/contour-stitch){: .btn .btn--primary}
 
 ### Kurvenfüllung
+
 Kurvenfüllung füllt eine Fläche mit Kopien einer Führungslinie.
 
 ![Guided fill](/assets/images/docs/guided-fill-complex.svg)
 
 [Mehr lesen](/de/docs/stitches/guided-fill){: .btn .btn--primary}
 
-### Meanderfüllung
-Meanderfüllung hat seinen Ursprung in Quilt-Techniken. Für das Maschinensticken ergibt sich ein schöner gemusterter Effekt. Große Bereiche können mit relativ wenigen Stichen befüllt werden.
+### Mäanderfüllung
+
+Mäanderfüllung hat seinen Ursprung in Quilt-Techniken. Für das Maschinensticken ergibt sich ein schöner gemusterter Effekt. Große Bereiche können mit relativ wenigen Stichen befüllt werden.
 
 ![Meander fill](/assets/images/docs/meander-fill.png)
 
 [Mehr lesen](/de/docs/stitches/meander-fill){: .btn .btn--primary}
 
 ### Circular Fill
+
 Eine Spiralfüllung füllt eine Form mit einer gestickten Spirale. Der Mittelpunkt der Spirale liegt im Mittelpunkt des Elements. Eine Zielposition kann definiert werden um den Spiralmittelpunkt zu verschieben.
 
 ![Meander stitch detail](/assets/images/docs/circular-fill-detail.png)

@@ -94,7 +94,7 @@ Pfad Objekt | Stichart
 ---|---|---
 (Gestrichelte) Linie |[Geradstich](/de/docs/stitches/running-stitch/), [Manueller Stich](/de/docs/stitches/manual-stitch/), [Zick-Zack-Stich](/de/docs/stitches/zigzag-stitch/), [Bohnen-Stich](/de/docs/stitches/bean-stitch/)
 Zwei kombinierte Linien (mit optionalen Querstreben) | [Satinsäule](/de/docs/stitches/satin-column), [E-Stitch](/de/docs/stitches/e-stitch)
-Pfad mit Füllung | [Automatische Füllung](/de/docs/stitches/fill-stitch/), [Kurvenfüllung](/docs/stitches/guided-fill/),  [Konturfüllung](/docs/stitches/contour-fill/), [Meanderfüllung](/docs/stitches/meander-fill/), [Spiralfüllung](/docs/stitches/circular-fill/)
+Pfad mit Füllung | [Automatische Füllung](/de/docs/stitches/fill-stitch/), [Kurvenfüllung](/docs/stitches/guided-fill/),  [Konturfüllung](/docs/stitches/contour-fill/), [Mäanderfüllung](/docs/stitches/meander-fill/), [Spiralfüllung](/docs/stitches/circular-fill/)
 {: .equal-tables }
 
 ### Parametrisieren

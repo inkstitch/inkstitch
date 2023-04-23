@@ -26,26 +26,26 @@ Le remplissage en méandres est originaire des techniques de quilting. Il produi
 Définir le point de départ et d’arrivée pour les remplissages automatiques avec les commandes [commandes visuelles](/docs/commands/).
 
 ## Paramètres
+
 Lancez `Extensions > Ink/Stitch > Paramètres`. Choisir “Remplissage en méandres” dans la méthode de remplissage et ajustez les réglages selon vos besoins
-
-
 
 |Paramètres||Description|
 |---|---|---|
 |Autoremplissage avec des points de broderie| ☑ |Doit être activé pour que ces paramètres prennent effet.|
-|Méthode de remplissage |Remplissage en méandres| Remplissage en méandres  doit être selectionné.|
-|Motif de méandre    || Divers motifs au choix|
-|Echelle du motif||Mise à l'echelle du motif ( en %)|
-|Etirer|![Expand example](/assets/images/docs/params-fill-expand.png) |Etend la forme avant le point de remplissage pour compenser les écarts entre les formes dues à l'étirement du tissu.|
-|Lissage ||Lisse la broderie. Le lissage détermine la mesure dans laquelle le chemin lissé peut s'éloigner du chemin originel. Essayez de petites valeurs comme 0.2. Attention, il est possible qu'il faille aussi modifier la tolérance du point droit.|
-|Longueur maximale du point de remplissage|![Exemple de longueur de point](/assets/images/docs/params-fill-stitch_length.png) |Pour le remplissage en méandres il s'agit de longueur du point droit résultant.|
-|Tolérance du point droit|![Exemple de tolerance](/assets/images/docs/contourfilltolerance.svg) |Tous les points doivent rester au plus à cette distance du chemin. Une tolérance plus faible (en haut sur le dessin) signifie que les points seront plus rapprochés. Une tolérance plus élevée (en bas) signifie que les angles vifs peuvent être arrondis.|
-|Forcer les points d'arrêts |☑|Force un point d'arrêt après l'objet indépendament de la valeur de "Saut de fil" dans les Préférences d'Ink/Stitch.|
-|Autoriser les points d'arrêts | ☑|Ajoute un point d'arrêt à la ou les positions choisies.|
-|Point d'ancrage        ||Selectionnez le type du  [point d'ancrage](/fr/docs/stitches/lock-stitches).|
-|Point d'arrêt        ||Selectionnez le type du [point d'arrêt](/fr/docs/stitches/lock-stitches).|
-|Couper après                 |☑|Couper le fil après avoir brodé cet objet.|
-|Arrêter après                |☑|Faire faire une pause à la machine après avoir brodé  cet objet. Si une position d'arrêt est définie, elle est rejointe  par un saut avant la pause de la machine.|
+|Méthode de remplissage                     |Remplissage en méandres| Remplissage en méandres  doit être selectionné.|
+|Motif de méandre                           || Divers motifs au choix|
+|Echelle du motif                           ||Mise à l'echelle du motif ( en %)|
+|Etirer                                     |![Expand example](/assets/images/docs/params-fill-expand.png) |Etend la forme avant le point de remplissage pour compenser les écarts entre les formes dues à l'étirement du tissu.|
+|Lissage                                    ||Lisse la broderie. Le lissage détermine la mesure dans laquelle le chemin lissé peut s'éloigner du chemin originel. Essayez de petites valeurs comme 0.2. Attention, il est possible qu'il faille aussi modifier la tolérance du point droit.|
+|Clip path                                  ||Constrain stitching to the shape.  Useful when smoothing and expand are used.
+|Longueur maximale du point de remplissage  |![Exemple de longueur de point](/assets/images/docs/params-fill-stitch_length.png) |Pour le remplissage en méandres il s'agit de longueur du point droit résultant.|
+|Tolérance du point droit                   |![Exemple de tolerance](/assets/images/docs/contourfilltolerance.svg) |Tous les points doivent rester au plus à cette distance du chemin. Une tolérance plus faible (en haut sur le dessin) signifie que les points seront plus rapprochés. Une tolérance plus élevée (en bas) signifie que les angles vifs peuvent être arrondis.|
+|Forcer les points d'arrêts                 |☑|Force un point d'arrêt après l'objet indépendament de la valeur de "Saut de fil" dans les Préférences d'Ink/Stitch.|
+|Autoriser les points d'arrêts              | ☑|Ajoute un point d'arrêt à la ou les positions choisies.|
+|Point d'ancrage                            ||Selectionnez le type du  [point d'ancrage](/fr/docs/stitches/lock-stitches).|
+|Point d'arrêt                              ||Selectionnez le type du [point d'arrêt](/fr/docs/stitches/lock-stitches).|
+|Couper après                               |☑|Couper le fil après avoir brodé cet objet.|
+|Arrêter après                              |☑|Faire faire une pause à la machine après avoir brodé  cet objet. Si une position d'arrêt est définie, elle est rejointe  par un saut avant la pause de la machine.|
 
 ## Sous-couche
 
