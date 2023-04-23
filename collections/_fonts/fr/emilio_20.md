@@ -70,9 +70,9 @@ Elle peut être agrandie jusqu'a 150% (env 75 mm) mais ne doit pas être diminu�
 
 ### Emilio 20 Applique
 Même dimensions que Emilio Bold, mais contient en plus de quoi faire un appliqué. 
-Les trois couleurs de cette correspondent à trois étapes de broderie :
+Les trois couleurs de cette version correspondent à trois étapes de broderie :
 * première étape, rouge , indique ou poser le tissu de l'appliqué. Peut aussi être utilisé pour créer un fichier pour les machines de découpe.
-* deuxième étape, vert, fixe le tissu avec un petit zigzag. Après cette étape, il faut découper le tisu
+* deuxième étape, vert, fixe le tissu avec un petit zigzag. Après cette étape, il faut découper le tissu.
 * troisième étape, noir, brode le satin autour des lettres. 
 
 ### Emilio 20
