@@ -228,32 +228,35 @@ class SatinColumn(EmbroideryElement):
         # wider than we desire the column to end up.
         return self.get_split_mm_param_as_px("pull_compensation_mm", (0, 0))
 
-    _reverse_one_rail_options = [ParamOption('automatic', _('Automatic')),
-                                 ParamOption('none', _("Don't reverse")),
-                                 ParamOption('first', _('Reverse first rail')),
-                                 ParamOption('second', _('Reverse second rail')),
-                                 ]
+    _reverse_rails_options = [ParamOption('automatic', _('Automatic')),
+                              ParamOption('none', _("Don't reverse")),
+                              ParamOption('first', _('Reverse first rail')),
+                              ParamOption('second', _('Reverse second rail')),
+                              ParamOption('both', _('Reverse both rails'))
+                              ]
 
     @property
     @param(
-        'reverse_one_rail',
-        _('Reverse one rail'),
-        tooltip=_('Enabling this may help if your satin renders very strangely.  ' +
+        'reverse_rails',
+        _('Reverse rails'),
+        tooltip=_('This may help if your satin renders very strangely.  ' +
                   'Default: automatically detect and fix a reversed rail.'),
         type='combo',
-        options=_reverse_one_rail_options,
+        options=_reverse_rails_options,
         default='automatic',
         sort_index=10)
-    def reverse_one_rail(self):
-        return self.get_param('reverse_one_rail', 'automatic')
+    def reverse_rails(self):
+        return self.get_param('reverse_rails', 'automatic')
 
-    def _get_rail_to_reverse(self, rails):
-        choice = self.reverse_one_rail
+    def _get_rails_to_reverse(self, rails):
+        choice = self.reverse_rails
 
         if choice == 'first':
-            return 0
+            return True, False
         elif choice == 'second':
-            return 1
+            return False, True
+        elif choice == 'both':
+            return True, True
         elif choice == 'automatic':
             if len(rails) == 2:
                 # Sample ten points along the rails.  Compare the distance
@@ -276,8 +279,8 @@ class SatinColumn(EmbroideryElement):
                 debug.log(f"lengths: {lengths}")
                 debug.log(f"lengths_reverse: {lengths_reverse}")
                 if sum(lengths) > sum(lengths_reverse):
-                    # returning 1 reverses the second rail
-                    return 1
+                    # reverse the second rail
+                    return False, True
 
         return None
 
@@ -457,9 +460,11 @@ class SatinColumn(EmbroideryElement):
         """The rails, as LineStrings."""
         paths = [shgeo.LineString(self.flatten_subpath(rail)) for rail in self.rails]
 
-        rail_to_reverse = self._get_rail_to_reverse(paths)
-        if paths and rail_to_reverse is not None:
-            paths[rail_to_reverse] = shgeo.LineString(paths[rail_to_reverse].coords[::-1])
+        rails_to_reverse = self._get_rails_to_reverse(paths)
+        if paths and rails_to_reverse is not None:
+            for i, reverse in enumerate(rails_to_reverse):
+                if reverse:
+                    paths[i] = shgeo.LineString(paths[i].coords[::-1])
 
         return tuple(paths)
 

@@ -117,9 +117,9 @@ def _update_to_one(element):  # noqa: C901
             element.set_param('stroke_method', 'zigzag_stitch')
 
     if element.get_boolean_param('satin_column', False):
-        # reverse_one_rail defaults to Automatic, but we should never reverse an
+        # reverse_rails defaults to Automatic, but we should never reverse an
         # old satin automatically, only new ones
-        element.set_param('reverse_one_rail', 'none')
+        element.set_param('reverse_rails', 'none')
 
 
 def _replace_legacy_embroider_param(element, param):

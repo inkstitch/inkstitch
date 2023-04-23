@@ -1,5 +1,5 @@
 import os
-from math import ceil, floor
+from math import ceil
 
 import inkex
 import json
