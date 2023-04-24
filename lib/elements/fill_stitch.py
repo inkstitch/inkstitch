@@ -301,6 +301,174 @@ class FillStitch(EmbroideryElement):
         return self.get_float_param("staggers", 4)
 
     @property
+    @param('running_stitch_length_mm',
+           _('Running stitch length'),
+           tooltip=_('Length of stitches around the outline of the fill region used when moving from section to section. '
+                     'Also used for meander and circular fill.'),
+           unit='mm',
+           type='float',
+           default=1.5,
+           select_items=[('fill_method', 'auto_fill'),
+                         ('fill_method', 'guided_fill'),
+                         ('fill_method', 'meander_fill'),
+                         ('fill_method', 'circular_fill')],
+           sort_index=6)
+    def running_stitch_length(self):
+        return max(self.get_float_param("running_stitch_length_mm", 1.5), 0.01)
+
+    @property
+    @param('running_stitch_tolerance_mm',
+           _('Running stitch tolerance'),
+           tooltip=_('All stitches must be within this distance of the path.  ' +
+                     'A lower tolerance means stitches will be closer together.  ' +
+                     'A higher tolerance means sharp corners may be rounded.'),
+           unit='mm',
+           type='float',
+           default=0.2,
+           sort_index=6)
+    def running_stitch_tolerance(self):
+        return max(self.get_float_param("running_stitch_tolerance_mm", 0.2), 0.01)
+
+    @property
+    @param('bean_stitch_repeats',
+           _('Bean stitch number of repeats'),
+           tooltip=_('Backtrack each stitch this many times.  '
+                     'A value of 1 would triple each stitch (forward, back, forward).  '
+                     'A value of 2 would quintuple each stitch, etc.\n\n'
+                     'A pattern with various repeats can be created with a list of values separated by a space.'),
+           type='str',
+           select_items=[('fill_method', 'meander_fill')],
+           default=0,
+           sort_index=7)
+    def bean_stitch_repeats(self):
+        return self.get_multiple_int_param("bean_stitch_repeats", "0")
+
+    @property
+    @param('fill_underlay', _('Underlay'), type='toggle', group=_('Fill Underlay'), default=True)
+    def fill_underlay(self):
+        return self.get_boolean_param("fill_underlay", default=True)
+
+    @property
+    @param('fill_underlay_angle',
+           _('Fill angle'),
+           tooltip=_('Default: fill angle + 90 deg. Insert a list for multiple layers separated by a space.'),
+           unit='deg',
+           group=_('Fill Underlay'),
+           type='float')
+    @cache
+    def fill_underlay_angle(self):
+        underlay_angles = self.get_param('fill_underlay_angle', None)
+        default_value = [self.angle + math.pi / 2.0]
+        if underlay_angles is not None:
+            underlay_angles = underlay_angles.strip().split(' ')
+            # remove comma separator for backward compatibility
+            underlay_angles = [angle[:-1] if angle.endswith(',') else angle for angle in underlay_angles]
+            try:
+                underlay_angles = [math.radians(
+                    float(angle)) for angle in underlay_angles]
+            except (TypeError, ValueError):
+                return default_value
+        else:
+            underlay_angles = default_value
+
+        return underlay_angles
+
+    @property
+    @param('fill_underlay_row_spacing_mm',
+           _('Row spacing'),
+           tooltip=_('default: 3x fill row spacing'),
+           unit='mm',
+           group=_('Fill Underlay'),
+           type='float')
+    @cache
+    def fill_underlay_row_spacing(self):
+        return self.get_float_param("fill_underlay_row_spacing_mm") or self.row_spacing * 3
+
+    @property
+    @param('fill_underlay_max_stitch_length_mm',
+           _('Max stitch length'),
+           tooltip=_('default: equal to fill max stitch length'),
+           unit='mm',
+           group=_('Fill Underlay'), type='float')
+    @cache
+    def fill_underlay_max_stitch_length(self):
+        return self.get_float_param("fill_underlay_max_stitch_length_mm") or self.max_stitch_length
+
+    @property
+    @param('fill_underlay_inset_mm',
+           _('Inset'),
+           tooltip=_('Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill.'),
+           unit='mm',
+           group=_('Fill Underlay'),
+           type='float',
+           default=0)
+    def fill_underlay_inset(self):
+        return self.get_float_param('fill_underlay_inset_mm', 0)
+
+    @property
+    @param(
+        'fill_underlay_skip_last',
+        _('Skip last stitch in each row'),
+        tooltip=_('The last stitch in each row is quite close to the first stitch in the next row.  '
+                  'Skipping it decreases stitch count and density.'),
+        group=_('Fill Underlay'),
+        type='boolean',
+        default=False)
+    def fill_underlay_skip_last(self):
+        return self.get_boolean_param("fill_underlay_skip_last", False)
+
+    @property
+    @param('expand_mm',
+           _('Expand'),
+           tooltip=_('Expand the shape before fill stitching, to compensate for gaps between shapes.  Negative values contract instead.'),
+           unit='mm',
+           type='float',
+           default=0,
+           sort_index=5,
+           select_items=[('fill_method', 'auto_fill'),
+                         ('fill_method', 'guided_fill'),
+                         ('fill_method', 'meander_fill'),
+                         ('fill_method', 'circular_fill')])
+    def expand(self):
+        return self.get_float_param('expand_mm', 0)
+
+    @property
+    @param('clip', _('Clip path'),
+           tooltip=_('Constrain stitching to the shape.  Useful when smoothing and expand are used.'),
+           type='boolean',
+           default=False,
+           select_items=[('fill_method', 'meander_fill')],
+           sort_index=6)
+    def clip(self):
+        return self.get_boolean_param('clip', False)
+
+    @property
+    @param('underpath',
+           _('Underpath'),
+           tooltip=_('Travel inside the shape when moving from section to section.  Underpath '
+                     'stitches avoid traveling in the direction of the row angle so that they '
+                     'are not visible.  This gives them a jagged appearance.'),
+           type='boolean',
+           default=True,
+           select_items=[('fill_method', 'auto_fill'), ('fill_method', 'guided_fill'), ('fill_method', 'circular_fill')],
+           sort_index=6)
+    def underpath(self):
+        return self.get_boolean_param('underpath', True)
+
+    @property
+    @param(
+        'underlay_underpath',
+        _('Underpath'),
+        tooltip=_('Travel inside the shape when moving from section to section.  Underpath '
+                  'stitches avoid traveling in the direction of the row angle so that they '
+                  'are not visible.  This gives them a jagged appearance.'),
+        group=_('Fill Underlay'),
+        type='boolean',
+        default=True)
+    def underlay_underpath(self):
+        return self.get_boolean_param('underlay_underpath', True)
+
+    @property
     @cache
     def paths(self):
         paths = self.flatten(self.parse_path())
@@ -447,160 +615,6 @@ class FillStitch(EmbroideryElement):
     def outline_length(self):
         return self.outline.length
 
-    @property
-    @param('running_stitch_length_mm',
-           _('Running stitch length'),
-           tooltip=_('Length of stitches around the outline of the fill region used when moving from section to section. '
-                     'Also used for meander and circular fill.'),
-           unit='mm',
-           type='float',
-           default=1.5,
-           select_items=[('fill_method', 'auto_fill'),
-                         ('fill_method', 'guided_fill'),
-                         ('fill_method', 'meander_fill'),
-                         ('fill_method', 'circular_fill')],
-           sort_index=6)
-    def running_stitch_length(self):
-        return max(self.get_float_param("running_stitch_length_mm", 1.5), 0.01)
-
-    @property
-    @param('running_stitch_tolerance_mm',
-           _('Running stitch tolerance'),
-           tooltip=_('All stitches must be within this distance of the path.  ' +
-                     'A lower tolerance means stitches will be closer together.  ' +
-                     'A higher tolerance means sharp corners may be rounded.'),
-           unit='mm',
-           type='float',
-           default=0.2,
-           sort_index=6)
-    def running_stitch_tolerance(self):
-        return max(self.get_float_param("running_stitch_tolerance_mm", 0.2), 0.01)
-
-    @property
-    @param('fill_underlay', _('Underlay'), type='toggle', group=_('Fill Underlay'), default=True)
-    def fill_underlay(self):
-        return self.get_boolean_param("fill_underlay", default=True)
-
-    @property
-    @param('fill_underlay_angle',
-           _('Fill angle'),
-           tooltip=_('Default: fill angle + 90 deg. Insert a list for multiple layers separated by a space.'),
-           unit='deg',
-           group=_('Fill Underlay'),
-           type='float')
-    @cache
-    def fill_underlay_angle(self):
-        underlay_angles = self.get_param('fill_underlay_angle', None)
-        default_value = [self.angle + math.pi / 2.0]
-        if underlay_angles is not None:
-            underlay_angles = underlay_angles.strip().split(' ')
-            # remove comma separator for backward compatibility
-            underlay_angles = [angle[:-1] if angle.endswith(',') else angle for angle in underlay_angles]
-            try:
-                underlay_angles = [math.radians(
-                    float(angle)) for angle in underlay_angles]
-            except (TypeError, ValueError):
-                return default_value
-        else:
-            underlay_angles = default_value
-
-        return underlay_angles
-
-    @property
-    @param('fill_underlay_row_spacing_mm',
-           _('Row spacing'),
-           tooltip=_('default: 3x fill row spacing'),
-           unit='mm',
-           group=_('Fill Underlay'),
-           type='float')
-    @cache
-    def fill_underlay_row_spacing(self):
-        return self.get_float_param("fill_underlay_row_spacing_mm") or self.row_spacing * 3
-
-    @property
-    @param('fill_underlay_max_stitch_length_mm',
-           _('Max stitch length'),
-           tooltip=_('default: equal to fill max stitch length'),
-           unit='mm',
-           group=_('Fill Underlay'), type='float')
-    @cache
-    def fill_underlay_max_stitch_length(self):
-        return self.get_float_param("fill_underlay_max_stitch_length_mm") or self.max_stitch_length
-
-    @property
-    @param('fill_underlay_inset_mm',
-           _('Inset'),
-           tooltip=_('Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill.'),
-           unit='mm',
-           group=_('Fill Underlay'),
-           type='float',
-           default=0)
-    def fill_underlay_inset(self):
-        return self.get_float_param('fill_underlay_inset_mm', 0)
-
-    @property
-    @param(
-        'fill_underlay_skip_last',
-        _('Skip last stitch in each row'),
-        tooltip=_('The last stitch in each row is quite close to the first stitch in the next row.  '
-                  'Skipping it decreases stitch count and density.'),
-        group=_('Fill Underlay'),
-        type='boolean',
-        default=False)
-    def fill_underlay_skip_last(self):
-        return self.get_boolean_param("fill_underlay_skip_last", False)
-
-    @property
-    @param('expand_mm',
-           _('Expand'),
-           tooltip=_('Expand the shape before fill stitching, to compensate for gaps between shapes.  Negative values contract instead.'),
-           unit='mm',
-           type='float',
-           default=0,
-           sort_index=5,
-           select_items=[('fill_method', 'auto_fill'),
-                         ('fill_method', 'guided_fill'),
-                         ('fill_method', 'meander_fill'),
-                         ('fill_method', 'circular_fill')])
-    def expand(self):
-        return self.get_float_param('expand_mm', 0)
-
-    @property
-    @param('clip', _('Clip path'),
-           tooltip=_('Constrain stitching to the shape.  Useful when smoothing and expand are used.'),
-           type='boolean',
-           default=False,
-           select_items=[('fill_method', 'meander_fill')],
-           sort_index=6)
-    def clip(self):
-        return self.get_boolean_param('clip', False)
-
-    @property
-    @param('underpath',
-           _('Underpath'),
-           tooltip=_('Travel inside the shape when moving from section to section.  Underpath '
-                     'stitches avoid traveling in the direction of the row angle so that they '
-                     'are not visible.  This gives them a jagged appearance.'),
-           type='boolean',
-           default=True,
-           select_items=[('fill_method', 'auto_fill'), ('fill_method', 'guided_fill'), ('fill_method', 'circular_fill')],
-           sort_index=6)
-    def underpath(self):
-        return self.get_boolean_param('underpath', True)
-
-    @property
-    @param(
-        'underlay_underpath',
-        _('Underpath'),
-        tooltip=_('Travel inside the shape when moving from section to section.  Underpath '
-                  'stitches avoid traveling in the direction of the row angle so that they '
-                  'are not visible.  This gives them a jagged appearance.'),
-        group=_('Fill Underlay'),
-        type='boolean',
-        default=True)
-    def underlay_underpath(self):
-        return self.get_boolean_param('underlay_underpath', True)
-
     def shrink_or_grow_shape(self, shape, amount, validate=False):
         new_shape = shape
         if amount:
@@ -663,9 +677,7 @@ class FillStitch(EmbroideryElement):
 
                     fill_shapes = self.fill_shape(shape)
                     for i, fill_shape in enumerate(fill_shapes.geoms):
-                        if self.fill_method == 'auto_fill':
-                            stitch_groups.extend(self.do_auto_fill(fill_shape, previous_stitch_group, start, end))
-                        elif self.fill_method == 'contour_fill':
+                        if self.fill_method == 'contour_fill':
                             stitch_groups.extend(self.do_contour_fill(fill_shape, previous_stitch_group, start))
                         elif self.fill_method == 'guided_fill':
                             stitch_groups.extend(self.do_guided_fill(fill_shape, previous_stitch_group, start, end))
@@ -673,6 +685,9 @@ class FillStitch(EmbroideryElement):
                             stitch_groups.extend(self.do_meander_fill(fill_shape, shape, i, start, end))
                         elif self.fill_method == 'circular_fill':
                             stitch_groups.extend(self.do_circular_fill(fill_shape, previous_stitch_group, start, end))
+                        else:
+                            # auto_fill
+                            stitch_groups.extend(self.do_auto_fill(fill_shape, previous_stitch_group, start, end))
                 except ExitThread:
                     raise
                 except Exception:
