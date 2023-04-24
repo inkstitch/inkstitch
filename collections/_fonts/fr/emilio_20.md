@@ -1,7 +1,7 @@
 ---
 title: "Emilio 20"
 permalink: /fr/fonts/emilio-20/
-last_modified_at: 2023-04-17
+last_modified_at: 2023-04-25
 toc: false
 preview_image:
  - url: /assets/images/fonts/emilio_simple.png
@@ -44,11 +44,11 @@ preview_image:
      alt="Emilio 20 Tricolore" height="50">
      
  <img 
-     src="/assets/images/fonts/emilio_20_all_versions.png"
+     src="/assets/images/fonts/emilio_20_all_versions_french.png"
      alt="Comparaison des Emilio 20" >
 
 ## Glyphes
-Chacune des trois fontes contient les 36 glyphes :
+Chacune des cinq fontes contient les 36 glyphes :
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ
 
 ## Dimensions et particularités
@@ -90,15 +90,15 @@ Si vous brodez plusieurs lettes, vous pouvez souhaiter trier les couleurs. C'est
 ## Dans la vraie vie
 {% include folder-galleries path="fonts/emilio-20/" %}
 
-[Download Emilio Simple Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/emilio_20_simple/LICENSE)
+[Télécharger la license d'Emilio Simple](https://github.com/inkstitch/inkstitch/tree/main/fonts/emilio_20_simple/LICENSE)
 
-[Download Emilio 20 Bold Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/emilio_20_bold/LICENSE)
+[Télécharger la license d'Emilio 20 Bold](https://github.com/inkstitch/inkstitch/tree/main/fonts/emilio_20_bold/LICENSE)
 
-[Download Emilio 20 Applique Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/emilio_20_applique/LICENSE)
+[Télécharger la license d'Emilio 20 Applique](https://github.com/inkstitch/inkstitch/tree/main/fonts/emilio_20_applique/LICENSE)
 
-[Download Emilio 20 Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/emilio_20/LICENSE)
+[Télécharger la license d'Emilio 20](https://github.com/inkstitch/inkstitch/tree/main/fonts/emilio_20/LICENSE)
 
-[Download Emilio 20 Tricolore Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/emilio_20_tricolore/LICENSE)
+[Télécharger la license d'Emilio 20 Tricolore](https://github.com/inkstitch/inkstitch/tree/main/fonts/emilio_20_tricolore/LICENSE)
 
 
 
