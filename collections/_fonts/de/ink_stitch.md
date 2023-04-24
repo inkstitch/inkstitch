@@ -1,7 +1,7 @@
 ---
 title: "Ink/Stitch"
 permalink: /de/fonts/ink_stitch/
-last_modified_at: 2020-12-30
+last_modified_at: 2023-04-24
 toc: false
 preview_image:
   - url: /assets/images/fonts/inkstitch_small.jpg
@@ -14,31 +14,35 @@ preview_image:
 ![Ink/Stitch Small](/assets/images/fonts/inkstitch_small.jpg)
 ![Ink/Stitch Medium](/assets/images/fonts/inkstitch_medium.jpg)
 
-
-
 ## Schriftzeichen
 
-Both fonts  contains  the 89 Schriftzeichen :
+Beide Schriften umfassen 89 Schriftzeichen:
+
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@<>:,'"“”.+-=()_/�#ÄÖÜäößü
 
 ## Maße
 
 ### Ink/Stitch Small
-At 100%, Ink/Stitch Small is about  6 mm (1/4 Zoll) groß.
-Sie kann bis auf 300%  (~ 18 mm, 3/4 Zoll) but should not be scaled down
+
+Bei einer Skalierung von 100% ist die Schrift ungefähr 6 mm hoch (1/4 Zoll).
+
+Sie kann bis auf 300% (~ 18 mm, 3/4 Zoll) hochskaliert werden. Von einer Verkleinerung wird abgeraten.
+
 ### Ink/Stitch Medium
-At 100%, Ink/Stitch Medium is about  19 mm (3/4 Zoll) groß.
-Sie kann bis auf 150%  (~ 29 mm, 1 1/8 Zoll) and downn to 75% (~14 mm, 1/2 Zoll)
 
-## Remark
+Bei einer Skalierung von 100% ist die Schrift ca. 19 mm (3/4 Zoll) hoch.
 
-Both fonts are reversible : a multi line embroidery  may be  embroidered in alternate directions
+Sie kann bis auf 150% (~ 29 mm, 1 1/8 Zoll) hochskaliert und bis zu 75% (~14 mm, 1/2 Zoll) verkleinert werden.
 
+## Anmerkung
 
+Beide Schriften sind in beide Richtungen stickbar. Bei mehrzeiligen Texten kann die Richtung variieren.
 
-## Gestickte Beispiele
+## Impressionen
 
 {% include folder-galleries path="fonts/inkstitch/" %}
+
+## Lizenzen
 
 [Download Ink/Stitch Small Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/small_font/LICENSE)
 

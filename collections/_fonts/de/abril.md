@@ -1,7 +1,7 @@
 ---
 title: "Abril En Fleur AGS"
 permalink: /de/fonts/abril/
-last_modified_at: 2023-04-13
+last_modified_at: 2023-04-24
 toc: false
 preview_image:
   - url: /assets/images/fonts/abril_en_fleur.jpg
@@ -11,20 +11,22 @@ preview_image:
 {% include upcoming_release.html %}
 
 ![April En Fleur AGS](/assets/images/fonts/abril_en_fleur.jpg)
-## Glyphs
 
-This font contains  67 glyphs:
+## Schriftzeichen
+
+Die Schrift enthält 67 Zeichen:
 
 ABCDEFGHIJKLMNOPQRSTUVWXYZµabcçdefghijklmnopqrstuvwxyzß!0123456789?%
 
-## Dimensions
+## Dimensionen
 
-Used at 100%, this font is approximatively 100mm high (4 inches). 
+Bei einer Skalierung von 100% ist die Schrift ungefährt 100 mm (4 inch) hoch.
+Sie kann bis zu 150% vergrößert (150 mm, 6 inch), bzw. auf 80% verkleinert werden (80 mm, 3.25 inch).
 
-It can be scaled up to 150%  (150mm, 6 inches) and scalled down to 80% (80mm  3.25inches)
-
-## In real life
+## Impressionen
 
 {% include folder-galleries path="fonts/abril/" %}
+
+## Lizenz
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/abril/LICENSE)

@@ -1,7 +1,7 @@
 ---
 title: "Emilio 20"
 permalink: /de/fonts/emilio-20/
-last_modified_at: 2022-04-23
+last_modified_at: 2023-04-24
 toc: false
 preview_image:
  - url: /assets/images/fonts/emilio_simple.png
@@ -76,19 +76,25 @@ Same dimension as Emilio Bold, but applique ready :
 * third color is the satin column.
 
 ###  Emilio 20
+
 Bei einer Skalierung auf 100 % ist diese Schrift ungefähr 50 mm hoch (2 Zoll).
 Sie kann bis auf 140% (~70mm, 2.8 Zoll) hochskaliert und bis zu 70% (~35mm, 1.5 Zoll) herunterskaliert werden.
 
 ### Emilio 20 Tricolore
+
 Bei einer Skalierung auf 100 % ist diese Schrift ungefähr 100 mm hoch (4 Zoll).
 Sie kann bis auf 120% (~120mm, 5 Zoll) hochskaliert und bis zu 90% (~90mm, 3.5 Zoll) herunterskaliert werden.
 
 
 ## Sortieren der Farben 
+
 Wenn man mehrere Buchstaben sticken möchte, kann man die Farben sortieren. Das ist möglich, man muss aber die relative Reihenfolge innerhalb der einzelnen Buchstaben beachten. [So geht's](https://inkstitch.org/de/docs/lettering/#sortierung-von-farben)
 
-## Gestickte Beispiele
+## Impressionen
+
 {% include folder-galleries path="fonts/emilio-20/" %}
+
+## Lizenz
 
 [Download Emilio Simple Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/emilio_20_simple/LICENSE)
 
