@@ -15,7 +15,7 @@ from ..utils.list import poprandom
 from ..utils.prng import iter_uniform_floats
 from ..utils.smoothing import smooth_path
 from ..utils.threading import check_stop_flag
-from .running_stitch import running_stitch
+from .running_stitch import bean_stitch, running_stitch
 
 
 def meander_fill(fill, shape, original_shape, shape_index, starting_point, ending_point):
@@ -185,6 +185,17 @@ def post_process(points, shape, original_shape, fill):
 
     if fill.clip:
         stitches = clamp_path_to_polygon(stitches, original_shape)
+
+    if fill.bean_stitch_repeats:
+        stitches = bean_stitch(stitches, fill.bean_stitch_repeats)
+
+    if fill.repeats:
+        for i in range(1, fill.repeats):
+            if i % 2 == 1:
+                # reverse every other pass
+                stitches.extend(stitches[::-1])
+            else:
+                stitches.extend(stitches)
 
     return stitches
 
