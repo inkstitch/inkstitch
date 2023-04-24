@@ -8,8 +8,8 @@ preview_image:
     height: 20
   - url: /assets/images/fonts/auberge_marif.jpg
     height: 53
-
 ---
+
 ![auberge_marif](/assets/images/fonts/auberge_marif.jpg)
 
 ![auberge_small](/assets/images/fonts/auberge_small.jpg)
