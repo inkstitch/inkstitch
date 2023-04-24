@@ -6,11 +6,11 @@ toc: false
 preview_image:
  - url: /assets/images/fonts/apex_lake.jpg
    height: 60
- - url: /assets/images/fonts/apex_simple.png
+ - url: /assets/images/fonts/apex_simple_AGS.jpg
    height: 35
 ---
 ![Apex Lake](/assets/images/fonts/apex_lake.jpg)
-![Apex Simple](/assets/images/fonts/apex_simple.png)
+![Apex Simple](/assets/images/fonts/apex_simple_AGS.jpg)
 
 
 ## Glyphes
