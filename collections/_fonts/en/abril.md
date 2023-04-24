@@ -4,13 +4,13 @@ permalink: /fonts/abril/
 last_modified_at: 2023-04-14
 toc: false
 preview_image:
-  - url: /assets/images/fonts/abril.png
+  - url: /assets/images/fonts/abril_en_fleur.jpg
     height: 100
 ---
 
 {% include upcoming_release.html %}
 
-![April En Fleur AGS](/assets/images/fonts/abril.png)
+![April En Fleur AGS](/assets/images/fonts/abril_en_fleur.jpg)
 
 ## Glyphs
 
