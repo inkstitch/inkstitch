@@ -49,13 +49,14 @@ preview_image:
 ## Schriftzeichen
 
 Jeweils fünf  Schriften enthalten 36 Schriftzeichen:
+
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ
 
 ## Maße
 
 ###  Emilio Simple
 
-Bei einer Skalierung auf 100 % ist diese Schrift ungefähr 42 mm hoch (1.75 Zoll).
+Bei einer Skalierung von 100 % ist diese Schrift ungefähr 42 mm hoch (1.75 Zoll).
 Sie kann bis auf 140% (~60mm, 2.5 Zoll) hochskaliert und bis zu 70% (~30mm, 1.25 Zoll) herunterskaliert werden.
 
 {% include upcoming_release.html %}

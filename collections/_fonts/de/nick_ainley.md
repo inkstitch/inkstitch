@@ -11,6 +11,7 @@ preview_image:
 ## Glyphs
 
 This font contains 70 glyphs:
+
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@/!',‘’
 
 ## Dimensions
@@ -21,6 +22,5 @@ It may be scaled  up to  300% (approx. 21 mm, 3/4 inch ) but should not be scale
 
 ## In real life
 {% include folder-galleries path="fonts/nick_ainley/" %}
-
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/nick_ainley/LICENSE)

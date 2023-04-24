@@ -15,10 +15,15 @@ We have good news: Ink/Stitch will be significantly faster due to stitch plan ca
 ## Fonts
 
 * [Abril En Fleur AGS](/fonts/abril/)
+* [Apex Simple AGS](/fonts/apex-lake/)
 * [AGS Γαραμου](/fonts/AGS_greek_garamond/)
-* [Emilio Simple](/fonts/emilio-20/)
+* [Emilio 20 simple](/fonts/emilio-20/)
+* [Emilio 20 bold](/fonts/emilio-20/)
+* [Emilio 20 Applique](/fonts/emilio-20/)
 
-The font `Grand Hotel` has been renamed to `Auberge`
+* The font `Grand Hotel` has been renamed to `Auberge`
+
+* Other fonts have been improved
 
 ## Element/Stitch types
 
