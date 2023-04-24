@@ -4,18 +4,17 @@ permalink: /ru/fonts/abril/
 last_modified_at: 2023-04-13
 toc: false
 preview_image:
-  - url: /assets/images/fonts/abril.png
+  - url: /assets/images/fonts/abril_en_fleur.jpg
     height: 100
 ---
 
 {% include upcoming_release.html %}
 
-![April En Fleur AGS](/assets/images/fonts/abril.png)
+![April En Fleur AGS](/assets/images/fonts/abril_en_fleur.jpg)
 
 ## Glyphs
 
-This font contains  67 glyphs:
-
+This font contains 67 glyphs:
 
 	
 ABCDEFGHIJKLMNOPQRSTUVWXYZµabcçdefghijklmnopqrstuvwxyzß!0123456789?%      
