@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-04-21 01:13+0000\n"
-"PO-Revision-Date: 2023-04-21 01:15\n"
+"POT-Creation-Date: 2023-04-24 01:17+0000\n"
+"PO-Revision-Date: 2023-04-24 01:19\n"
 "Last-Translator: \n"
 "Language-Team: Catalan\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-21 01:13+0000\n"
+"POT-Creation-Date: 2023-04-24 01:17+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1806,7 +1806,7 @@ msgstr ""
 msgid "Additional pull compensation which varies as a percentage of stitch width. Two values separated by a space may be used for an aysmmetric effect."
 msgstr ""
 
-#: lib/elements/satin_column.py:217
+#: lib/elements/satin_column.py:217 lib/elements/stroke.py:161
 msgid "Pull compensation"
 msgstr ""
 
@@ -1992,115 +1992,119 @@ msgstr ""
 msgid "Length of stitches in zig-zag mode."
 msgstr ""
 
-#: lib/elements/stroke.py:161
+#: lib/elements/stroke.py:162
+msgid "Zigzag stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape. This widens the zigzag line width."
+msgstr ""
+
+#: lib/elements/stroke.py:175
 msgid "Number of lines"
 msgstr ""
 
-#: lib/elements/stroke.py:162
+#: lib/elements/stroke.py:176
 msgid "Number of lines from start to finish"
 msgstr ""
 
-#: lib/elements/stroke.py:178
+#: lib/elements/stroke.py:192
 msgid "Skip first lines"
 msgstr ""
 
-#: lib/elements/stroke.py:179
+#: lib/elements/stroke.py:193
 msgid "Skip this number of lines at the beginning."
 msgstr ""
 
-#: lib/elements/stroke.py:190
+#: lib/elements/stroke.py:204
 msgid "Skip last lines"
 msgstr ""
 
-#: lib/elements/stroke.py:191
+#: lib/elements/stroke.py:205
 msgid "Skip this number of lines at the end"
 msgstr ""
 
-#: lib/elements/stroke.py:214
+#: lib/elements/stroke.py:228
 msgid "Line distance exponent"
 msgstr ""
 
-#: lib/elements/stroke.py:215
+#: lib/elements/stroke.py:229
 msgid "Increase density towards one side."
 msgstr ""
 
-#: lib/elements/stroke.py:226
+#: lib/elements/stroke.py:240
 msgid "Flip exponent"
 msgstr ""
 
-#: lib/elements/stroke.py:227
+#: lib/elements/stroke.py:241
 msgid "Reverse exponent effect."
 msgstr ""
 
-#: lib/elements/stroke.py:238
+#: lib/elements/stroke.py:252
 msgid "Reverse"
 msgstr ""
 
-#: lib/elements/stroke.py:239
+#: lib/elements/stroke.py:253
 msgid "Flip start and end point"
 msgstr ""
 
-#: lib/elements/stroke.py:250
+#: lib/elements/stroke.py:264
 msgid "Grid size"
 msgstr ""
 
-#: lib/elements/stroke.py:251
+#: lib/elements/stroke.py:265
 msgid "Render as grid. Use with care and watch your stitch density."
 msgstr ""
 
-#: lib/elements/stroke.py:263
+#: lib/elements/stroke.py:277
 msgid "Scale axis"
 msgstr ""
 
-#: lib/elements/stroke.py:264
+#: lib/elements/stroke.py:278
 msgid "Scale axis for satin guided ripple stitches."
 msgstr ""
 
-#: lib/elements/stroke.py:268 print/templates/ui.html:181
+#: lib/elements/stroke.py:282 print/templates/ui.html:181
 msgid "None"
 msgstr ""
 
-#: lib/elements/stroke.py:276
+#: lib/elements/stroke.py:290
 msgid "Starting scale"
 msgstr ""
 
-#: lib/elements/stroke.py:277
+#: lib/elements/stroke.py:291
 msgid "How big the first copy of the line should be, in percent."
 msgstr ""
 
-#: lib/elements/stroke.py:277 lib/elements/stroke.py:289
+#: lib/elements/stroke.py:291 lib/elements/stroke.py:303
 msgid "Used only for ripple stitch with a guide line."
 msgstr ""
 
-#: lib/elements/stroke.py:288
+#: lib/elements/stroke.py:302
 msgid "Ending scale"
 msgstr ""
 
-#: lib/elements/stroke.py:289
+#: lib/elements/stroke.py:303
 msgid "How big the last copy of the line should be, in percent."
 msgstr ""
 
-#: lib/elements/stroke.py:300
+#: lib/elements/stroke.py:314
 msgid "Rotate"
 msgstr ""
 
-#: lib/elements/stroke.py:301
+#: lib/elements/stroke.py:315
 msgid "Rotate satin guided ripple stitches"
 msgstr ""
 
-#: lib/elements/stroke.py:312
+#: lib/elements/stroke.py:326
 msgid "Join style"
 msgstr ""
 
-#: lib/elements/stroke.py:313
+#: lib/elements/stroke.py:327
 msgid "Join style for non circular ripples."
 msgstr ""
 
-#: lib/elements/stroke.py:316
+#: lib/elements/stroke.py:330
 msgid "flat"
 msgstr ""
 
-#: lib/elements/stroke.py:316
+#: lib/elements/stroke.py:330
 msgid "point"
 msgstr ""
 

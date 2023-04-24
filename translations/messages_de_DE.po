@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-04-21 01:13+0000\n"
-"PO-Revision-Date: 2023-04-21 01:15\n"
+"POT-Creation-Date: 2023-04-24 01:17+0000\n"
+"PO-Revision-Date: 2023-04-24 01:19\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-21 01:13+0000\n"
+"POT-Creation-Date: 2023-04-24 01:17+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1332,7 +1332,7 @@ msgstr "Kurvenfüllung"
 
 #: lib/elements/fill_stitch.py:117 inx/inkstitch_select_elements.inx:39
 msgid "Meander Fill"
-msgstr "Meanderfüllung"
+msgstr "Mäanderfüllung"
 
 #: lib/elements/fill_stitch.py:118 inx/inkstitch_select_elements.inx:40
 msgid "Circular Fill"
@@ -1412,19 +1412,19 @@ msgstr "Uhrzeigersinn"
 
 #: lib/elements/fill_stitch.py:183
 msgid "Meander Pattern"
-msgstr "Meander-Muster"
+msgstr "Muster"
 
 #: lib/elements/fill_stitch.py:190
 msgid "Meander pattern angle"
-msgstr ""
+msgstr "Winkel des Musters"
 
 #: lib/elements/fill_stitch.py:200
 msgid "Meander pattern scale"
-msgstr "Meander-Muster skalieren"
+msgstr "Muster skalieren"
 
 #: lib/elements/fill_stitch.py:201
 msgid "Percentage to stretch or compress the meander pattern.  You can scale horizontally and vertically individually by giving two percentages separated by a space. "
-msgstr ""
+msgstr "Prozentsatz zum Dehnen oder Komprimieren des Musters. Das Muster kann horizontal und vertikal individuell skaliert werden. Hierfür zwei durch ein Leerzeichen getrennte Prozentsätze eingeben. "
 
 #: lib/elements/fill_stitch.py:212
 msgid "Angle of lines of stitches"
@@ -1480,7 +1480,7 @@ msgstr "Stichlänge"
 
 #: lib/elements/fill_stitch.py:453
 msgid "Length of stitches around the outline of the fill region used when moving from section to section. Also used for meander and circular fill."
-msgstr "Stichlänge um den Umriss des Füllbereichs, der beim Übergang von Abschnitt zu Abschnitt verwendet wird. Wird auch für Meander- und Spiralfüllung verwendet."
+msgstr "Stichlänge um den Umriss des Füllbereichs, der beim Übergang von Abschnitt zu Abschnitt verwendet wird. Wird auch für Mäander- und Spiralfüllung verwendet."
 
 #: lib/elements/fill_stitch.py:468
 msgid "Running stitch tolerance"
@@ -1536,11 +1536,11 @@ msgstr "Erweitert die Ursprungsform. Diese Option kann genutzt werden, um Lücke
 
 #: lib/elements/fill_stitch.py:569
 msgid "Clip path"
-msgstr ""
+msgstr "Pfad auf Form beschränken"
 
 #: lib/elements/fill_stitch.py:570
 msgid "Constrain stitching to the shape.  Useful when smoothing and expand are used."
-msgstr ""
+msgstr "Nützlich bei der Verwendung von Glätten und Erweitern."
 
 #: lib/elements/fill_stitch.py:580 lib/elements/fill_stitch.py:594
 msgid "Underpath"
@@ -1812,7 +1812,7 @@ msgstr "Zugkompensation (%)"
 msgid "Additional pull compensation which varies as a percentage of stitch width. Two values separated by a space may be used for an aysmmetric effect."
 msgstr "Zusätzliche Zugkompensation, die als Prozentwert der ursprünglichen Breite variiert. Zwei durch ein Leerzeichen getrennte Werte können für einen asymmetrischen Effekt verwendet werden."
 
-#: lib/elements/satin_column.py:217
+#: lib/elements/satin_column.py:217 lib/elements/stroke.py:161
 msgid "Pull compensation"
 msgstr "Zugausgleich"
 
@@ -1981,11 +1981,11 @@ msgstr "Anzahl der Wiederholungen für jeden Stich. Ein Wert von 1 erzeugt einen
 
 #: lib/elements/stroke.py:109
 msgid "Length of stitches. Stitches can be shorter according to the stitch tolerance setting."
-msgstr ""
+msgstr "Länge der Stiche. Stiche können abhängig von der Stichtoleranz-Einstellung kürzer ausfallen."
 
 #: lib/elements/stroke.py:120
 msgid "Stitch tolerance"
-msgstr ""
+msgstr "Stichtoleranz"
 
 #: lib/elements/stroke.py:121
 msgid "All stitches must be within this distance from the path.  A lower tolerance means stitches will be closer together.  A higher tolerance means sharp corners may be rounded."
@@ -1993,121 +1993,125 @@ msgstr "Alle Stiche müssen innerhalb dieser Toleranzgrenze zum Pfad liegen. Ein
 
 #: lib/elements/stroke.py:135
 msgid "Split stitches longer than this."
-msgstr ""
+msgstr "Unterteile Stiche die kürzer sind als dieser Wert."
 
 #: lib/elements/stroke.py:149
 msgid "Length of stitches in zig-zag mode."
 msgstr "Stichlänge im Zick-Zack Modus."
 
-#: lib/elements/stroke.py:161
+#: lib/elements/stroke.py:162
+msgid "Zigzag stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape. This widens the zigzag line width."
+msgstr ""
+
+#: lib/elements/stroke.py:175
 msgid "Number of lines"
 msgstr "Anzahl der Linien"
 
-#: lib/elements/stroke.py:162
+#: lib/elements/stroke.py:176
 msgid "Number of lines from start to finish"
 msgstr "Anzahl der Linien von Anfang bis Ende"
 
-#: lib/elements/stroke.py:178
+#: lib/elements/stroke.py:192
 msgid "Skip first lines"
 msgstr "Erste Linien überspringen"
 
-#: lib/elements/stroke.py:179
+#: lib/elements/stroke.py:193
 msgid "Skip this number of lines at the beginning."
 msgstr "Diese Anzahl an Linien am Anfang überspringen."
 
-#: lib/elements/stroke.py:190
+#: lib/elements/stroke.py:204
 msgid "Skip last lines"
 msgstr "Letzte Linien überspringen"
 
-#: lib/elements/stroke.py:191
+#: lib/elements/stroke.py:205
 msgid "Skip this number of lines at the end"
 msgstr "Diese Anzahl an Linien am Ende überspringen"
 
-#: lib/elements/stroke.py:214
+#: lib/elements/stroke.py:228
 msgid "Line distance exponent"
 msgstr "Linienabstand Exponent"
 
-#: lib/elements/stroke.py:215
+#: lib/elements/stroke.py:229
 msgid "Increase density towards one side."
 msgstr "Dichte zu einer Seite hin erhöhen."
 
-#: lib/elements/stroke.py:226
+#: lib/elements/stroke.py:240
 msgid "Flip exponent"
 msgstr "Exponent umkehren"
 
-#: lib/elements/stroke.py:227
+#: lib/elements/stroke.py:241
 msgid "Reverse exponent effect."
 msgstr "Effekt des Exponenten umkehren."
 
-#: lib/elements/stroke.py:238
+#: lib/elements/stroke.py:252
 msgid "Reverse"
 msgstr "Umkehren"
 
-#: lib/elements/stroke.py:239
+#: lib/elements/stroke.py:253
 msgid "Flip start and end point"
 msgstr "Start- und Endpunkt vertauschen"
 
-#: lib/elements/stroke.py:250
+#: lib/elements/stroke.py:264
 msgid "Grid size"
 msgstr "Größe des Gitters"
 
-#: lib/elements/stroke.py:251
+#: lib/elements/stroke.py:265
 msgid "Render as grid. Use with care and watch your stitch density."
 msgstr "Als Gitter rendern. Dabei bitte unbedingt auf die Stichdichte achten."
 
-#: lib/elements/stroke.py:263
+#: lib/elements/stroke.py:277
 msgid "Scale axis"
 msgstr "Skalieren"
 
-#: lib/elements/stroke.py:264
+#: lib/elements/stroke.py:278
 msgid "Scale axis for satin guided ripple stitches."
 msgstr "Achse für Satin-geführte Ripplestiche."
 
-#: lib/elements/stroke.py:268 print/templates/ui.html:181
+#: lib/elements/stroke.py:282 print/templates/ui.html:181
 msgid "None"
 msgstr "Keine"
 
-#: lib/elements/stroke.py:276
+#: lib/elements/stroke.py:290
 msgid "Starting scale"
 msgstr "Start-Skalierung"
 
-#: lib/elements/stroke.py:277
+#: lib/elements/stroke.py:291
 msgid "How big the first copy of the line should be, in percent."
 msgstr "Größe der ersten Kopie der Ursprungsform in Prozent."
 
-#: lib/elements/stroke.py:277 lib/elements/stroke.py:289
+#: lib/elements/stroke.py:291 lib/elements/stroke.py:303
 msgid "Used only for ripple stitch with a guide line."
 msgstr "Kann nur auf Ripplestiche mit einer Führungslinie angewandt werden."
 
-#: lib/elements/stroke.py:288
+#: lib/elements/stroke.py:302
 msgid "Ending scale"
 msgstr "End-Skalierung"
 
-#: lib/elements/stroke.py:289
+#: lib/elements/stroke.py:303
 msgid "How big the last copy of the line should be, in percent."
 msgstr "Größe der letzten Kopie der Ursprungsform in Prozent."
 
-#: lib/elements/stroke.py:300
+#: lib/elements/stroke.py:314
 msgid "Rotate"
 msgstr "Rotieren"
 
-#: lib/elements/stroke.py:301
+#: lib/elements/stroke.py:315
 msgid "Rotate satin guided ripple stitches"
 msgstr "Satin-geführte Ripplestiche rotieren"
 
-#: lib/elements/stroke.py:312
+#: lib/elements/stroke.py:326
 msgid "Join style"
 msgstr "Kantenstil"
 
-#: lib/elements/stroke.py:313
+#: lib/elements/stroke.py:327
 msgid "Join style for non circular ripples."
 msgstr "Kantenstil für nicht kreisförmigen Ripplestich."
 
-#: lib/elements/stroke.py:316
+#: lib/elements/stroke.py:330
 msgid "flat"
 msgstr "flach"
 
-#: lib/elements/stroke.py:316
+#: lib/elements/stroke.py:330
 msgid "point"
 msgstr "spitz"
 
@@ -2866,7 +2870,7 @@ msgstr "AutoSatin Geradstich %d"
 #: lib/stitches/meander_fill.py:34
 #, python-format
 msgid "%s: Could not build graph for meander stitching. Try to enlarge your shape or scale your meander pattern down."
-msgstr "%s: Konnte den Graph für den Meanderstich nicht erstellen. Bitte versuche die Form, auf die er angewendet wird, zu vergrößern - oder das Meander-Muster zu verkleinern."
+msgstr "%s: Graph für Mäanderstich konnte nicht erstellt werden. Bitte versuche die Form, auf die er angewendet wird, zu vergrößern - oder das Muster zu verkleinern."
 
 #: lib/svg/rendering.py:229
 msgid "Stitch Plan"
@@ -2880,7 +2884,8 @@ msgstr "AnalysiereLängeMitEinheiten: Unbekannte Einheit %s"
 #: lib/update.py:25
 msgid "This document was created with a newer Version of Ink/Stitch. It is possible that not everything works as expected.\n\n"
 "Please update your Ink/Stitch version: https://inkstitch.org/docs/install/"
-msgstr ""
+msgstr "Dieses Dokument wurde mit einer neueren Version von Ink/Stitch erstellt. Es ist möglich, dass nicht alles so funktioniert wie erwartet.\n\n"
+"Bitte aktualisiere Ink/Stitch: https://inkstitch.org/docs/install/"
 
 #: lib/utils/version.py:22
 #, python-format
@@ -3501,11 +3506,11 @@ msgstr "Json-Export"
 
 #: electron/src/renderer/components/Simulator.vue:141
 msgid "[ Left square bracket"
-msgstr ""
+msgstr "[ Öffnende eckige Klammer"
 
 #: electron/src/renderer/components/Simulator.vue:152
 msgid "] Right square bracket"
-msgstr ""
+msgstr "] Schließende eckige Klammer"
 
 #. name for left arrow keyboard key
 #: electron/src/renderer/components/Simulator.vue:52
@@ -3750,11 +3755,11 @@ msgstr "Ansicht"
 
 #: electron/src/renderer/components/Simulator.vue:149
 msgid "Zoom design"
-msgstr ""
+msgstr "Auf Designgröße skalieren"
 
 #: electron/src/renderer/components/Simulator.vue:138
 msgid "Zoom page"
-msgstr ""
+msgstr "Auf Seitengröße skalieren"
 
 #: inx/inkstitch_about.inx:3 inx/inkstitch_about.inx:6
 msgid "About"
@@ -5389,23 +5394,23 @@ msgstr "Geradstich"
 
 #: inx/inkstitch_select_elements.inx:14
 msgid "Select"
-msgstr ""
+msgstr "Auswählen"
 
 #: inx/inkstitch_select_elements.inx:14
 msgid "Only select specific running stitches"
-msgstr ""
+msgstr "Auswahl einschränken auf"
 
 #: inx/inkstitch_select_elements.inx:15
 msgid "All"
-msgstr ""
+msgstr "Alle"
 
 #: inx/inkstitch_select_elements.inx:16
 msgid "Auto-Run Top Stitching"
-msgstr ""
+msgstr "Auto-Geradstich"
 
 #: inx/inkstitch_select_elements.inx:17
 msgid "Auto-Run Underpath"
-msgstr ""
+msgstr "Auto-Geradstich Verbindung"
 
 #: inx/inkstitch_select_elements.inx:20
 msgid "Ripples"
@@ -5490,7 +5495,7 @@ msgstr "* Windows: Öffne die Eingabeaufforderung und schreibe \"where python\".
 
 #: inx/inkstitch_select_elements.inx:64
 msgid "* Linux: Open the command line and type \"which python3\". Copy the path and paste it here."
-msgstr ""
+msgstr "* Linux: öffne ein Terminal und schreibe \"which python3\". Kopiere den Pfad und füge ihn hier ein."
 
 #: inx/inkstitch_select_elements.inx:65
 msgid "* macOS: doesn't work, sorry"
@@ -5603,7 +5608,7 @@ msgstr "Richtungslinien hinzufügen"
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:24
 msgid "Path specific"
-msgstr ""
+msgstr "Pfad spezifisch"
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:27
 msgid "This extension converts a stroke into a satin column using the path effect \"pattern along path\"."
