@@ -1,14 +1,38 @@
 ---
 title: "Emilio 20"
 permalink: /de/fonts/emilio-20/
-last_modified_at: 2022-05-24
+last_modified_at: 2022-04-23
 toc: false
 preview_image:
-  - url: /assets/images/fonts/emilio_20.jpg
-    height: 48
-  - url: /assets/images/fonts/emilio_tricolore.jpg
-    height: 100  
+ - url: /assets/images/fonts/emilio_simple.png
+   height: 42
+ - url: /assets/images/fonts/emilio_20_bold.png
+   height: 50
+ - url: /assets/images/fonts/emilio_20_applique.png
+   height: 50
+ - url: /assets/images/fonts/emilio_20.jpg
+   height: 48
+ - url: /assets/images/fonts/emilio_tricolore.jpg
+   height: 100
 ---
+
+{% include upcoming_release.html %}
+
+<img 
+     src="/assets/images/fonts/emilio_simple.png"
+     alt="Emilio20" height="21">
+ 
+{% include upcoming_release.html %}
+    
+<img 
+     src="/assets/images/fonts/emilio_20_bold.png"
+     alt="Emilio20" height="25">
+ 
+{% include upcoming_release.html %}
+     
+<img 
+     src="/assets/images/fonts/emilio_20_applique.png"
+     alt="Emilio20" height="25">
 
 <img 
      src="/assets/images/fonts/emilio_20.jpg"
@@ -17,14 +41,38 @@ preview_image:
 <img 
      src="/assets/images/fonts/emilio_tricolore.jpg"
      alt="Emilio 20 Tricolore" height="50">
-
+     
+ <img 
+     src="/assets/images/fonts/emilio_20_all_versions_english.png"
+     alt="Comparaison des Emilio 20" >
 
 ## Schriftzeichen
 
-Beide Schriften enthalten 36 Schriftzeichen:
+Jeweils fünf  Schriften enthalten 36 Schriftzeichen:
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ
 
 ## Maße
+
+###  Emilio Simple
+
+Bei einer Skalierung auf 100 % ist diese Schrift ungefähr 42 mm hoch (1.75 Zoll).
+Sie kann bis auf 140% (~60mm, 2.5 Zoll) hochskaliert und bis zu 70% (~30mm, 1.25 Zoll) herunterskaliert werden.
+
+{% include upcoming_release.html %}
+
+### Emilio 20 Bold
+
+Bei einer Skalierung auf 100 % ist diese Schrift ungefähr 50 mm hoch (2 Zoll).
+Sie kann bis auf 140% (~70mm, 2.8 Zoll) hochskaliert **but should not be scaled down.**
+
+{% include upcoming_release.html %}
+
+### Emilio 20 Applique
+
+Same dimension as Emilio Bold, but applique ready :
+* first color is placement. Add the applique fabric after that tep.  May also be used to prepare a cutting machine file.
+* second color  is  tackdown. After  that step you need to cut the applique fabric.
+* third color is the satin column.
 
 ###  Emilio 20
 Bei einer Skalierung auf 100 % ist diese Schrift ungefähr 50 mm hoch (2 Zoll).
@@ -41,6 +89,11 @@ Wenn man mehrere Buchstaben sticken möchte, kann man die Farben sortieren. Das 
 ## Gestickte Beispiele
 {% include folder-galleries path="fonts/emilio-20/" %}
 
+[Download Emilio Simple Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/emilio_20_simple/LICENSE)
+
+[Download Emilio 20 Bold Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/emilio_20_bold/LICENSE)
+
+[Download Emilio 20 Applique Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/emilio_20_applique/LICENSE)
 
 [Download Emilio 20 Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/emilio_20/LICENSE)
 
