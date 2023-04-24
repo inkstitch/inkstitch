@@ -255,7 +255,8 @@ class ParamsTab(ScrolledPanel):
         for name, value in preset_data.items():
             if name in self.param_inputs:
                 if name in self.dict_of_choices and self.dict_of_choices[name]['param'].type == 'combo':
-                    self.param_inputs[name].SetSelection(self.get_combo_value_index(value, self.dict_of_choices[name]["param"].options))
+                    param = self.dict_of_choices[name]["param"]
+                    self.param_inputs[name].SetSelection(self.get_combo_value_index(value, param.options, param.default))
                 elif isinstance(self.param_inputs[name], wx.Choice):
                     self.param_inputs[name].SetSelection(int(value))
                 else:
