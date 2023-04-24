@@ -182,11 +182,20 @@ def post_process(points, shape, original_shape, fill):
     smoothed_points = [InkStitchPoint.from_tuple(point) for point in smoothed_points]
 
     stitches = running_stitch(smoothed_points, fill.running_stitch_length, fill.running_stitch_tolerance)
-    if fill.bean_stitch_repeats:
-        stitches = bean_stitch(stitches, fill.bean_stitch_repeats)
 
     if fill.clip:
         stitches = clamp_path_to_polygon(stitches, original_shape)
+
+    if fill.bean_stitch_repeats:
+        stitches = bean_stitch(stitches, fill.bean_stitch_repeats)
+
+    if fill.repeats:
+        for i in range(1, fill.repeats):
+            if i % 2 == 1:
+                # reverse every other pass
+                stitches.extend(stitches[::-1])
+            else:
+                stitches.extend(stitches)
 
     return stitches
 

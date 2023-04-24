@@ -330,6 +330,17 @@ class FillStitch(EmbroideryElement):
         return max(self.get_float_param("running_stitch_tolerance_mm", 0.2), 0.01)
 
     @property
+    @param('repeats',
+           _('Repeats'),
+           tooltip=_('Defines how many times to run down and back along the path.'),
+           type='int',
+           default="1",
+           select_items=[('fill_method', 'meander_fill')],
+           sort_index=7)
+    def repeats(self):
+        return max(1, self.get_int_param("repeats", 1))
+
+    @property
     @param('bean_stitch_repeats',
            _('Bean stitch number of repeats'),
            tooltip=_('Backtrack each stitch this many times.  '
@@ -339,7 +350,7 @@ class FillStitch(EmbroideryElement):
            type='str',
            select_items=[('fill_method', 'meander_fill')],
            default=0,
-           sort_index=7)
+           sort_index=8)
     def bean_stitch_repeats(self):
         return self.get_multiple_int_param("bean_stitch_repeats", "0")
 
