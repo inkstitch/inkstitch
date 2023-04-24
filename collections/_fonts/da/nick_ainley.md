@@ -8,12 +8,10 @@ preview_image:
 ---
 ![Nick Ainley](/assets/images/fonts/nick_ainley.png)
 
-This font will be part of next Ink/Stitch version and is not yet available in Ink/Stitch v2.1.2.
-
 ## Glyphs
 
-This font contains 63 glyphs:
-ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@
+This font contains 70 glyphs:
+ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@/!',‘’
 
 ## Dimensions
 
