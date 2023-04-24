@@ -19,9 +19,9 @@
       {%- endif -%}
 
       {%- if en_page_exists == false -%}
-          <p class="notice--warning"><b>⚠</b> This page is outdated. For more recent information have a look at the <a href="/">englisch section</a>.</p>
+          <p class="notice--warning"><b>⚠</b> This page is outdated. For more recent information have a look at the <a href="/">english section</a>.</p>
       {%- elsif en_page.first.last_modified_at > page.last_modified_at -%}
-            <p class="notice--warning"><b>⚠</b> This page is outdated. For more recent information have a look at the <a href="{{en_url}}">englisch original</a>.</p>
+            <p class="notice--warning"><b>⚠</b> This page is outdated. For more recent information have a look at the <a href="{{en_url}}">english original</a>.</p>
       {%- endif -%}
     {%- endunless -%}
 {%- endif -%}
