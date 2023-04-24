@@ -1,7 +1,7 @@
 ---
 title: "Apex Lake"
 permalink: /fr/fonts/apex-lake/
-last_modified_at: 2023-04-23
+last_modified_at: 2023-04-24
 toc: false
 preview_image:
  - url: /assets/images/fonts/apex_lake.jpg
@@ -10,6 +10,7 @@ preview_image:
    height: 35
 ---
 ![Apex Lake](/assets/images/fonts/apex_lake.jpg)
+
 ![Apex Simple](/assets/images/fonts/apex_simple_AGS.jpg)
 
 
@@ -24,7 +25,7 @@ Apex Lake contient les 38 glyphes :
 {% include upcoming_release.html %}
 
 ### Apex Simple AGS
-Apex Simple AGS contient les 14 glyphes:
+Apex Simple AGS contient les 124 glyphes:
 
 üûúùöõôóòñïîíìëêéèçäâáàßÜÛÚÙÖÔÓÒÏÎÍÌËÊÉÈÄÂÁÀ¿»«¡zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA@!?;:9876543210/.,)('’@"
 
@@ -37,13 +38,16 @@ Si vous souhaitez appliquer un tissu dans le cadre, utilisez une copie de l'avan
 
 Pour éviter les surépaisseurs de broderie, le motif de fond est incomplet dans la plupart des lettres, si toutefois vous souhaitez l'utiliser comme  décoration, vous pouvez le trouver entier dans la lettrine J.
 
-Vous pouvez aussi utiliser les deux fontes conjointement, généralement en utilisant Apex Lake pour la premiere lettre et Apex simple pour la suite:
+Vous pouvez aussi utiliser les deux fontes conjointement, généralement en utilisant Apex Lake pour la premiere lettre et Apex Simple AGS pour la suite:
 ![Both_Apex](/assets/images/fonts/both_apex.png)
 
 ## Dimensions
 ### Apex Lake
 Apex Lake est une grande fonte, elle est faite pour être utilisée une lettre ou quelques lettres à la fois. 
 Utilisée à 100% elle mesure environ 60 mm de haut. Elle peut être réduite jusqu'à 80% (50 mm) et agrandie jusqu'à 130% (110 mm).
+
+{% include upcoming_release.html %}
+
 ### Apex Simple AGS
 Utilisée à 100%, elle mesure environ 35 mm de haut. Elle peut être réduite jusqu'à 75% (25mm) et agrandie jusqu'à 300% (100mm).
 
@@ -57,4 +61,4 @@ Et pourquoi pas sur un T shirt ? ou sur un panier en tissu ?
 
 [Télécharger la license d'Apex Lake](https://github.com/inkstitch/inkstitch/tree/main/fonts/apex_lake/LICENSE)
 
-[Télécharger la license d'Apex Simple](https://github.com/inkstitch/inkstitch/tree/main/fonts/apex_simple_AGS/LICENSE)
+[Télécharger la license d'Apex Simple AGS](https://github.com/inkstitch/inkstitch/tree/main/fonts/apex_simple_AGS/LICENSE)
