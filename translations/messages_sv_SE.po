@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-04-24 01:17+0000\n"
-"PO-Revision-Date: 2023-04-24 01:20\n"
+"POT-Creation-Date: 2023-04-25 01:16+0000\n"
+"PO-Revision-Date: 2023-04-25 01:19\n"
 "Last-Translator: \n"
 "Language-Team: Swedish\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-24 01:17+0000\n"
+"POT-Creation-Date: 2023-04-25 01:16+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -898,7 +898,7 @@ msgid "If you'd like to help please\n"
 "- create a new issue at https://github.com/inkstitch/inkstitch/issues"
 msgstr ""
 
-#: inkstitch.py:107 lib/elements/fill_stitch.py:851
+#: inkstitch.py:107 lib/elements/fill_stitch.py:877
 msgid "Include the error description and also (if possible) the svg file."
 msgstr ""
 
@@ -1222,7 +1222,7 @@ msgstr ""
 msgid "This fill object is so small that it would probably look better as running stitch or satin column. For very small shapes, fill stitch is not possible, and Ink/Stitch will use running stitch around the outline instead."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:42 lib/elements/fill_stitch.py:555
+#: lib/elements/fill_stitch.py:42 lib/elements/fill_stitch.py:433
 msgid "Expand"
 msgstr ""
 
@@ -1230,7 +1230,7 @@ msgstr ""
 msgid "The expand parameter for this fill object cannot be applied. Ink/Stitch will ignore it and will use original size instead."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:48 lib/elements/fill_stitch.py:532
+#: lib/elements/fill_stitch.py:48 lib/elements/fill_stitch.py:410
 msgid "Inset"
 msgstr ""
 
@@ -1431,11 +1431,11 @@ msgstr ""
 msgid "The angle increases in a counter-clockwise direction.  0 is horizontal.  Negative angles are allowed."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:231 lib/elements/fill_stitch.py:544
+#: lib/elements/fill_stitch.py:231 lib/elements/fill_stitch.py:422
 msgid "Skip last stitch in each row"
 msgstr "Hoppa över sista stygnet i varje rad"
 
-#: lib/elements/fill_stitch.py:232 lib/elements/fill_stitch.py:545
+#: lib/elements/fill_stitch.py:232 lib/elements/fill_stitch.py:423
 msgid "The last stitch in each row is quite close to the first stitch in the next row.  Skipping it decreases stitch count and density."
 msgstr ""
 
@@ -1471,89 +1471,107 @@ msgstr ""
 msgid "Length of the cycle by which successive stitch rows are staggered. Fractional values are allowed and can have less visible diagonals than integer values."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:452 lib/elements/stroke.py:108
+#: lib/elements/fill_stitch.py:305 lib/elements/stroke.py:108
 msgid "Running stitch length"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:453
+#: lib/elements/fill_stitch.py:306
 msgid "Length of stitches around the outline of the fill region used when moving from section to section. Also used for meander and circular fill."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:468
+#: lib/elements/fill_stitch.py:321
 msgid "Running stitch tolerance"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:469
+#: lib/elements/fill_stitch.py:322
 msgid "All stitches must be within this distance of the path.  A lower tolerance means stitches will be closer together.  A higher tolerance means sharp corners may be rounded."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:480 inx/inkstitch_select_elements.inx:43
+#: lib/elements/fill_stitch.py:334 lib/elements/satin_column.py:308
+#: lib/elements/stroke.py:82
+msgid "Repeats"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:335 lib/elements/stroke.py:83
+msgid "Defines how many times to run down and back along the path."
+msgstr ""
+
+#: lib/elements/fill_stitch.py:345 lib/elements/stroke.py:94
+msgid "Bean stitch number of repeats"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:346 lib/elements/stroke.py:95
+msgid "Backtrack each stitch this many times.  A value of 1 would triple each stitch (forward, back, forward).  A value of 2 would quintuple each stitch, etc.\n\n"
+"A pattern with various repeats can be created with a list of values separated by a space."
+msgstr ""
+
+#: lib/elements/fill_stitch.py:358 inx/inkstitch_select_elements.inx:43
 #: inx/inkstitch_select_elements.inx:45
 msgid "Underlay"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:480 lib/elements/fill_stitch.py:489
-#: lib/elements/fill_stitch.py:514 lib/elements/fill_stitch.py:525
-#: lib/elements/fill_stitch.py:535 lib/elements/fill_stitch.py:547
-#: lib/elements/fill_stitch.py:598
+#: lib/elements/fill_stitch.py:358 lib/elements/fill_stitch.py:367
+#: lib/elements/fill_stitch.py:392 lib/elements/fill_stitch.py:403
+#: lib/elements/fill_stitch.py:413 lib/elements/fill_stitch.py:425
+#: lib/elements/fill_stitch.py:476
 msgid "Fill Underlay"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:486
+#: lib/elements/fill_stitch.py:364
 msgid "Fill angle"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:487
+#: lib/elements/fill_stitch.py:365
 msgid "Default: fill angle + 90 deg. Insert a list for multiple layers separated by a space."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:511
+#: lib/elements/fill_stitch.py:389
 msgid "Row spacing"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:512
+#: lib/elements/fill_stitch.py:390
 msgid "default: 3x fill row spacing"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:522 lib/elements/stroke.py:134
+#: lib/elements/fill_stitch.py:400 lib/elements/stroke.py:134
 msgid "Max stitch length"
 msgstr "Max stygn längd"
 
-#: lib/elements/fill_stitch.py:523
+#: lib/elements/fill_stitch.py:401
 msgid "default: equal to fill max stitch length"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:533
+#: lib/elements/fill_stitch.py:411
 msgid "Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:556
+#: lib/elements/fill_stitch.py:434
 msgid "Expand the shape before fill stitching, to compensate for gaps between shapes.  Negative values contract instead."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:569
+#: lib/elements/fill_stitch.py:447
 msgid "Clip path"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:570
+#: lib/elements/fill_stitch.py:448
 msgid "Constrain stitching to the shape.  Useful when smoothing and expand are used."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:580 lib/elements/fill_stitch.py:594
+#: lib/elements/fill_stitch.py:458 lib/elements/fill_stitch.py:472
 msgid "Underpath"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:581 lib/elements/fill_stitch.py:595
+#: lib/elements/fill_stitch.py:459 lib/elements/fill_stitch.py:473
 msgid "Travel inside the shape when moving from section to section.  Underpath stitches avoid traveling in the direction of the row angle so that they are not visible.  This gives them a jagged appearance."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:843
+#: lib/elements/fill_stitch.py:869
 msgid "Error during autofill! This means it is a bug in Ink/Stitch."
 msgstr ""
 
 #. this message is followed by a URL:
 #. https://github.com/inkstitch/inkstitch/issues/new
-#: lib/elements/fill_stitch.py:846
+#: lib/elements/fill_stitch.py:872
 msgid "If you'd like to help please\n"
 "- copy the entire error message below\n"
 "- save your SVG file and\n"
@@ -1868,10 +1886,6 @@ msgstr ""
 msgid "Center-Walk Underlay"
 msgstr ""
 
-#: lib/elements/satin_column.py:308 lib/elements/stroke.py:82
-msgid "Repeats"
-msgstr ""
-
 #: lib/elements/satin_column.py:309
 msgid "For an odd number of repeats, this will reverse the direction the satin column is stitched, causing stitching to both begin and end at the start point."
 msgstr ""
@@ -1957,19 +1971,6 @@ msgstr ""
 
 #: lib/elements/stroke.py:68 inx/inkstitch_select_elements.inx:22
 msgid "Manual Stitch"
-msgstr ""
-
-#: lib/elements/stroke.py:83
-msgid "Defines how many times to run down and back along the path."
-msgstr ""
-
-#: lib/elements/stroke.py:94
-msgid "Bean stitch number of repeats"
-msgstr ""
-
-#: lib/elements/stroke.py:95
-msgid "Backtrack each stitch this many times.  A value of 1 would triple each stitch (forward, back, forward).  A value of 2 would quintuple each stitch, etc.\n\n"
-"A pattern with various repeats can be created with a list of values separated by a space."
 msgstr ""
 
 #: lib/elements/stroke.py:109
