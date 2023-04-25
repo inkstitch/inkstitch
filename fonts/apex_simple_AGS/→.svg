@@ -22,17 +22,17 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#ffffff"
      showgrid="true"
-     inkscape:zoom="2.8284271"
-     inkscape:cx="21.213203"
-     inkscape:cy="91.747105"
+     inkscape:zoom="0.99999999"
+     inkscape:cx="-46"
+     inkscape:cy="119.5"
      inkscape:window-width="1920"
      inkscape:window-height="1009"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g30133"
+     inkscape:current-layer="g30477"
      inkscape:document-units="px"
-     showguides="false">
+     showguides="true">
     <sodipodi:guide
        position="0,25"
        orientation="0,1"
@@ -52,7 +52,7 @@
        id="guide27765"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="0,0"
+       position="82.377936,0.26314121"
        orientation="0,1"
        inkscape:label="baseline"
        id="guide29428"
@@ -102,7 +102,8 @@ Sept 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011
    id="collapse_len_mm1618">3</inkstitch:collapse_len_mm>
 <inkstitch:min_stitch_len_mm
    id="min_stitch_len_mm4751">0</inkstitch:min_stitch_len_mm>
-<inkstitch:inkstitch_svg_version>1</inkstitch:inkstitch_svg_version>
+<inkstitch:inkstitch_svg_version
+   id="inkstitch_svg_version75423">1</inkstitch:inkstitch_svg_version>
 </metadata>
   <defs
      id="defs25728">
@@ -3390,9 +3391,9 @@ Sept 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011
        inkstitch:running_stitch_length_mm="2"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:61px;line-height:1.25;font-family:'Apex Lake';-inkscape-font-specification:'Apex Lake';display:inline;fill:none;fill-opacity:0.0725807;stroke:#000000;stroke-width:2;stroke-dasharray:0.5, 0.5;stroke-opacity:1" />
     <path
-       d="m 125.227,68.5804 -0.285,-1.564 -0.519,-1.0164 -19.367,0.2306 -1.124,-0.0118 m 21.31,4.7591 -0.281,1.6658 -0.538,1.0812 -5.538,0.8059 -2.19,0.5366 -1.836,0.726 -10.994,0.135 m 1.165,-10.4959 -0.066,10.8748"
+       d="m 125.227,68.5804 -0.285,-1.564 -0.519,-1.0164 -19.367,0.2306 -1.124,-0.0118 m 21.31,4.7591 -0.281,1.6658 -0.538,1.0812 -5.538,0.8059 -2.19,0.5366 -1.836,0.726 -10.994,0.135 m 3.165,-10.4959 -0.066,10.8748"
        id="autosatin9-4"
-       sodipodi:nodetypes="ccscccccccccc"
+       sodipodi:nodetypes="ccsccccccccccc"
        inkstitch:satin_column="True"
        inkstitch:ties="3"
        inkstitch:force_lock_stitches="True"
@@ -6571,9 +6572,9 @@ Sept 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011
        inkstitch:contour_underlay="False"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:61px;line-height:1.25;font-family:'Apex Lake';-inkscape-font-specification:'Apex Lake';display:inline;fill:none;stroke:#000000;stroke-width:2;stroke-opacity:1" />
     <path
-       d="m 48.1357,98.409 c 1.426419,0.16685 2.43141,1.420184 2.0794,2.85493 -0.0185,8.05828 0.499004,16.47929 -2.858294,24.02381 -2.570693,6.87721 -7.860771,12.18563 -13.153806,17.06326 -4.065669,4.08348 -7.228894,9.2987 -7.739657,15.13804 -0.973594,8.45955 1.354458,17.93987 8.155511,23.51567 3.542885,3.0277 8.388651,3.95653 12.924625,3.36873 5.171546,-0.4859 10.842501,-2.00461 14.109286,-6.3451 0.389898,-0.56235 0.671892,-1.17441 0.907435,-1.81434 M 46.6697,98.34 c -1.448163,0.05449 -3.068675,1.051794 -2.6795,2.70275 -0.134657,7.12996 0.775164,14.73202 -2.674718,21.28353 -2.978423,5.42737 -8.675735,8.42836 -13.373144,12.16185 -6.730287,5.12908 -13.52724,11.14291 -16.155858,19.47318 -2.2682779,7.57393 -1.331407,16.1333 2.612086,22.99477 4.27509,7.47582 12.463766,11.9155 20.794619,13.20779 9.202503,1.33798 19.137489,0.5228 27.292991,-4.25292 1.929518,-1.09777 3.652773,-2.51754 5.331524,-3.96095 m -25.0322,0.95 c 0,2.99767 0,5.99533 0,8.993 M 9.9548,162.202 c 5.6621,-0.095 11.3242,-0.19 16.9863,-0.285 m 5.7097,-31.974 c 2.521767,2.80733 5.043533,5.61467 7.5653,8.422 m 2.8549,-32.26 c 2.9024,0 5.8048,0 8.7072,0"
+       d="m 48.1357,98.409 c 1.426419,0.16685 2.43141,1.420184 2.0794,2.85493 -0.0185,8.05828 0.499004,16.47929 -2.858294,24.02381 -2.570693,6.87721 -7.860771,12.18563 -13.153806,17.06326 -4.065669,4.08348 -7.228894,9.2987 -7.739657,15.13804 -0.973594,8.45955 1.354458,17.93987 8.155511,23.51567 3.542885,3.0277 8.388651,3.95653 12.924625,3.36873 5.171546,-0.4859 10.842501,-2.00461 14.109286,-6.3451 0.389898,-0.56235 0.671892,-1.17441 0.907435,-1.81434 M 46.6697,98.34 c -1.448163,0.05449 -3.068675,1.051794 -2.6795,2.70275 -0.134657,7.12996 0.775164,14.73202 -2.674718,21.28353 -2.978423,5.42737 -8.675735,8.42836 -13.373144,12.16185 -6.730287,5.12908 -13.52724,11.14291 -16.155858,19.47318 -2.2682779,7.57393 -1.331407,16.1333 2.612086,22.99477 4.27509,7.47582 12.463766,11.9155 20.794619,13.20779 9.202503,1.33798 19.137489,0.5228 27.292991,-4.25292 1.929518,-1.09777 3.652773,-2.51754 5.331524,-3.96095 m -24.7822,-1.05 -0.25,10.993 M 9.9548,162.202 26.9411,161.917 m 5.7097,-31.974 c 2.521767,2.80733 5.043533,5.61467 7.5653,8.422 m 2.8549,-32.26 h 8.7072"
        id="autosatin280"
-       sodipodi:nodetypes="cssccsscsccsscssscsccccccccc"
+       sodipodi:nodetypes="cssccsscsccsscssscsccccccc"
        inkstitch:satin_column="True"
        inkstitch:ties="3"
        inkstitch:force_lock_stitches="True"
@@ -6596,7 +6597,7 @@ Sept 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011
        inkstitch:ties="3"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:61px;line-height:1.25;font-family:'Apex Lake';-inkscape-font-specification:'Apex Lake';display:inline;fill:none;stroke:#000000;stroke-width:2;stroke-dasharray:0.5, 0.5;stroke-opacity:1" />
     <path
-       d="m 67.2675,158.075 c -1.6533,0.27 -3.3685,0.393 -4.8941,1.143 -0.7006,0.264 -1.3082,0.73 -1.8872,1.189 -0.4524,0.532 -0.9912,1.008 -1.2125,1.692 -0.333,0.557 -0.4664,1.177 -0.5462,1.815 -0.2047,0.844 -0.1296,1.721 -0.0875,2.578 0.1321,0.942 0.4069,1.876 0.9824,2.647 0.447,0.567 1.0937,0.957 1.5883,1.489 0.5951,0.474 0.9357,1.177 1.3407,1.802 0.4746,1.178 0.3911,2.502 0.0302,3.699 l -0.0151,0.06 -0.0063,0.025 m 6.7861,-18.112 c 1.1501,0.175 2.2704,0.536 3.2669,1.144 0.6892,0.452 1.3266,0.993 1.8116,1.667 0.4504,0.53 0.7203,1.196 1.0131,1.819 0.232,0.84 0.5153,1.67 0.5131,2.552 0.1697,1.231 -0.0387,2.468 -0.1174,3.698 -0.283,1.189 -0.4626,2.41 -0.9774,3.529 -0.3833,1.192 -1.0542,2.254 -1.6505,3.346 -0.7662,1.085 -1.5078,2.189 -2.4282,3.153 -0.8842,1.042 -1.8956,1.972 -2.9034,2.892 l -0.0472,0.04 -0.0092,0.008 m -5.2575,-6.673 6.195,6.361"
+       d="m 67.2675,158.075 c -1.6533,0.27 -3.3685,0.393 -4.8941,1.143 -0.7006,0.264 -1.3082,0.73 -1.8872,1.189 -0.4524,0.532 -0.9912,1.008 -1.2125,1.692 -0.333,0.557 -0.4664,1.177 -0.5462,1.815 -0.2047,0.844 -0.1296,1.721 -0.0875,2.578 0.1321,0.942 0.4069,1.876 0.9824,2.647 0.447,0.567 1.0937,0.957 1.5883,1.489 0.5951,0.474 0.9357,1.177 1.3407,1.802 0.4746,1.178 0.3911,2.502 0.0302,3.699 l -0.0151,0.06 -0.0063,0.025 m 6.7861,-18.112 c 1.1501,0.175 2.2704,0.536 3.2669,1.144 0.6892,0.452 1.3266,0.993 1.8116,1.667 0.4504,0.53 0.7203,1.196 1.0131,1.819 0.232,0.84 0.5153,1.67 0.5131,2.552 0.1697,1.231 -0.0387,2.468 -0.1174,3.698 -0.283,1.189 -0.4626,2.41 -0.9774,3.529 -0.3833,1.192 -1.0542,2.254 -1.6505,3.346 -0.7662,1.085 -1.5078,2.189 -2.4282,3.153 -0.8842,1.042 -1.8956,1.972 -2.9034,2.892 l -0.0472,0.04 -0.0092,0.008 m -6.7575,-9.673 9.695,9.361"
        id="autosatin281"
        sodipodi:nodetypes="cssccsscsccsscssscsccccccc"
        inkstitch:satin_column="True"
@@ -6974,7 +6975,7 @@ Sept 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011
        inkstitch:contour_underlay="False"
        style="font-style:normal;font-weight:bold;font-size:50px;line-height:1.25;font-family:'Linux Libertine Display G';-inkscape-font-specification:'Linux Libertine Display G Bold';display:inline;fill:none;fill-opacity:0.0820895;stroke:#000000;stroke-width:2;stroke-opacity:1" />
     <path
-       d="m 84.9103,116.158 -2.341,2.094 -2.1166,2.232 -1.8281,2.267 -1.5399,2.301 -1.2514,2.335 -6.4822,14.136 -7.728,17.584 -8.9736,21.032 -1.18,2.827 m 18.3331,-66.788 1.7457,1.901 0.3879,0.822 0.2292,0.874 0.0707,0.926 -0.088,0.977 -0.6517,2.111 -17.9011,41.338 -7.9894,18.536 m 0.08839,-0.35355 6.349736,-0.697"
+       d="m 84.9103,116.158 -2.341,2.094 -2.1166,2.232 -1.8281,2.267 -1.5399,2.301 -1.2514,2.335 -6.4822,14.136 -7.728,17.584 -8.9736,21.032 -1.18,2.827 m 18.3331,-66.788 1.7457,1.901 0.3879,0.822 0.2292,0.874 0.0707,0.926 -0.088,0.977 -0.6517,2.111 -17.9011,41.338 -7.9894,18.536 m 0.08839,-2.35355 8.647833,-0.78539"
        id="autosatin255"
        sodipodi:nodetypes="ccscscccccscccscccccc"
        inkstitch:satin_column="True"
@@ -7575,7 +7576,7 @@ Sept 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011
        style="font-style:normal;font-weight:bold;font-size:50px;line-height:1.25;font-family:'Linux Libertine Display G';-inkscape-font-specification:'Linux Libertine Display G Bold';display:inline;fill:none;fill-opacity:0.0820895;stroke:#000000;stroke-width:2;stroke-opacity:1" />
     <path
        id="autosatin225"
-       d="m 79.6579,116.776 -0.8536,0.646 -0.8996,1.015 -1.3841,1.661 -1.1996,2.215 -1.1073,2.214 -1.1072,2.584 -1.1073,2.491 -23.9912,56.564 -0.7497,1.483 m 19.4028,-70.778 0.8165,1.289 0.3201,0.906 0.1759,1.009 -0.0808,2.33 -0.6574,2.745 -1.2342,3.16 -14.5792,35.341 -1.6609,3.622 -1.2919,2.007 -0.2757,0.219 m 1.4808,-7.839 11.4904,0.177 m 4.5962,-38.007 10.4299,0.177 m -27.297776,44.34203 -0.9352,18.15"
+       d="m 79.6579,116.776 -0.8536,0.646 -0.8996,1.015 -1.3841,1.661 -1.1996,2.215 -1.1073,2.214 -1.1072,2.584 -1.1073,2.491 -23.9912,56.564 -0.7497,1.483 m 19.4028,-70.778 0.8165,1.289 0.3201,0.906 0.1759,1.009 -0.0808,2.33 -0.6574,2.745 -1.2342,3.16 -14.5792,35.341 -1.6609,3.622 -1.2919,2.007 -0.2757,0.219 m 1.4808,-7.839 11.4904,0.177 m 4.5962,-38.007 10.4299,0.177 m -26.672776,40.46703 -1.3102,24.525"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_spacing_mm="0.3"
@@ -8137,7 +8138,7 @@ Sept 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011
        inkstitch:contour_underlay="False"
        style="font-style:normal;font-weight:bold;font-size:50px;line-height:1.25;font-family:'Linux Libertine Display G';-inkscape-font-specification:'Linux Libertine Display G Bold';display:inline;fill:none;fill-opacity:0.0820895;stroke:#000000;stroke-width:2;stroke-opacity:1" />
     <path
-       d="m 30.1907,225.346 -1.0258,-3.171 -0.3229,-2.237 -0.3692,-6.367 -0.277,-11.142 -0.0923,-14.602 v -10.6145 m -14.27,48.1215 0.7984,-2.905 0.3461,-3.645 0.2998,-5.213 0.2075,-14.187 0.0691,-21.7505 -5e-4,-0.237 m 0,0 12.5496,-0.184"
+       d="m 30.1907,225.346 -1.0258,-3.171 -0.3229,-2.237 -0.3692,-6.367 -0.277,-11.142 -0.0923,-14.602 v -10.6145 m -14.27,48.1215 0.7984,-2.905 0.3461,-3.645 0.2998,-5.213 0.2075,-14.187 0.0691,-21.7505 -5e-4,-0.237 m -2,2 16.5496,-0.184"
        id="autosatin195"
        sodipodi:nodetypes="cccscccccccccscc"
        inkstitch:satin_column="True"
@@ -8292,9 +8293,9 @@ Sept 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011
        inkstitch:contour_underlay="False"
        style="font-style:normal;font-weight:bold;font-size:50px;line-height:1.25;font-family:'Linux Libertine Display G';-inkscape-font-specification:'Linux Libertine Display G Bold';display:inline;fill:none;fill-opacity:0.0820895;stroke:#000000;stroke-width:2;stroke-opacity:1" />
     <path
-       d="m 33.166,180.489 -0.664,-1.597 -0.5998,-2.169 -0.3229,-2.445 -0.2767,-6.736 h -5e-4 l -0.1844,-8.95 -0.1845,-11.996 0.0924,-9.181 0.2769,-8.166 0.2101,-3.426 m -15.8828,54.583 0.6321,-1.607 0.5998,-2.145 0.3229,-2.376 0.3693,-6.736 0.277,-10.911 0.0922,-10.22 -0.3692,-16.332 -0.1966,-3.245 m -0.8351,0.621 16.25,-0.125"
+       d="m 33.166,180.489 -0.664,-1.597 -0.5998,-2.169 -0.3229,-2.445 -0.2767,-6.736 h -5e-4 l -0.1844,-8.95 -0.1845,-11.996 0.0924,-9.181 0.2769,-8.166 0.2101,-3.426 m -15.8828,54.583 0.6321,-1.607 0.5998,-2.145 0.3229,-2.376 0.3693,-6.736 0.277,-10.911 0.0922,-10.22 -0.3692,-16.332 -0.1966,-3.245 m -0.8351,2.621 16.25,-0.125"
        id="autosatin177"
-       sodipodi:nodetypes="cccccsccccccccscccscccccccc"
+       sodipodi:nodetypes="cccccsccccccccscccsccc"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_spacing_mm="0.3"
@@ -8435,7 +8436,7 @@ Sept 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011
        inkstitch:contour_underlay="False"
        style="font-style:normal;font-weight:bold;font-size:50px;line-height:1.25;font-family:'Linux Libertine Display G';-inkscape-font-specification:'Linux Libertine Display G Bold';display:inline;fill:none;fill-opacity:0.0820895;stroke:#000000;stroke-width:2;stroke-opacity:1" />
     <path
-       d="m 14.3576,180.326 0.6321,-1.607 0.5998,-2.145 0.3229,-2.376 0.3693,-6.736 0.2769,-10.911 0.0923,-10.22 -0.3236,-14.313 m 15.5665,48.391 -0.664,-1.597 -0.5998,-2.169 -0.3229,-2.445 -0.2767,-6.736 h -5e-4 l -0.1844,-8.95 -0.1845,-11.996 0.0923,-9.181 0.1834,-5.408 m -15.5791,48.399 17.5362,0.083"
+       d="m 14.3576,180.326 0.6321,-1.607 0.5998,-2.145 0.3229,-2.376 0.3693,-6.736 0.2769,-10.911 0.0923,-10.22 -0.3236,-14.313 m 15.5665,48.391 -0.664,-1.597 -0.5998,-2.169 -0.3229,-2.445 -0.2767,-6.736 h -5e-4 l -0.1844,-8.95 -0.1845,-11.996 0.0923,-9.181 0.1834,-5.408 m -15.5791,44.399 17.5362,0.083"
        id="autosatin180"
        sodipodi:nodetypes="ccccscccccccscccsccc"
        inkstitch:satin_column="True"
@@ -8531,9 +8532,9 @@ Sept 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011
        inkstitch:ties="3"
        style="font-style:normal;font-weight:bold;font-size:50px;line-height:1.25;font-family:'Linux Libertine Display G';-inkscape-font-specification:'Linux Libertine Display G Bold';display:inline;fill:none;fill-opacity:0.0820895;stroke:#000000;stroke-width:2;stroke-dasharray:0.5, 0.5;stroke-opacity:1" />
     <path
-       d="m 91.441,186.968 -0.1845,1.177 -0.5537,0.946 -8.4428,-0.554 -3.5479,-0.191 m 12.5674,-3.632 -0.1929,-1.421 -0.2582,-0.549 -0.5034,-0.384 -4.7266,-0.65 -2.4224,-0.563 -1.874,-0.676 h -2.5183 m -0.0716,7.875 0.0716,-7.875"
+       d="m 91.441,186.968 -0.1845,1.177 -0.5537,0.946 -8.4428,-0.554 -3.5479,-0.191 m 12.5674,-3.632 -0.1929,-1.421 -0.2582,-0.549 -0.5034,-0.384 -4.7266,-0.65 -2.4224,-0.563 -1.874,-0.676 h -2.5183 m 1.9284,10.5 -0.1784,-13.75"
        id="autosatin187"
-       sodipodi:nodetypes="cccsccccccccccc"
+       sodipodi:nodetypes="ccccccccccccccc"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_spacing_mm="0.3"
@@ -8548,7 +8549,7 @@ Sept 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011
        style="font-style:normal;font-weight:bold;font-size:50px;line-height:1.25;font-family:'Linux Libertine Display G';-inkscape-font-specification:'Linux Libertine Display G Bold';display:inline;fill:none;fill-opacity:0.0820895;stroke:#000000;stroke-width:2;stroke-opacity:1" />
     <path
        id="autosatin188"
-       d="m 64.9379,180.471 0.815,-2.42 0.4613,-4.06 0.2767,-5.536 0.2422,-8.438 0.0808,-8.425 -0.0808,-8.415 -0.2422,-8.402 -0.3331,-3.85 -0.6761,-3.336 -0.4082,-1.13 m 16.2285,54.012 -0.5231,-1.562 -0.3545,-1.688 -0.323,-3.622 -0.2307,-5.144 -0.2422,-7.751 -0.0807,-7.751 0.0807,-7.751 0.2422,-7.751 v -3.599 l -0.1844,-3.598 -0.9388,-5.901 m -15.1079,3.189 16.9706,-0.53 m -15.9099,45.962 16.0867,-0.177"
+       d="m 64.9379,180.471 0.815,-2.42 0.4613,-4.06 0.2767,-5.536 0.2422,-8.438 0.0808,-8.425 -0.0808,-8.415 -0.2422,-8.402 -0.3331,-3.85 -0.6761,-3.336 -0.4082,-1.13 m 16.2285,54.012 -0.5231,-1.562 -0.3545,-1.688 -0.323,-3.622 -0.2307,-5.144 -0.2422,-7.751 -0.0807,-7.751 0.0807,-7.751 0.2422,-7.751 v -3.599 l -0.1844,-3.598 -0.9388,-5.901 m -15.1079,3.189 16.9706,-0.53 m -17.0349,45.837 18.9617,0.073"
        sodipodi:nodetypes="cccccsccccccccscscccccccccc"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.2"
@@ -8603,9 +8604,9 @@ Sept 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011
        inkstitch:contour_underlay="False"
        style="font-style:normal;font-weight:bold;font-size:50px;line-height:1.25;font-family:'Linux Libertine Display G';-inkscape-font-specification:'Linux Libertine Display G Bold';display:inline;fill:none;fill-opacity:0.0820895;stroke:#000000;stroke-width:2;stroke-opacity:1" />
     <path
-       d="m 141.842,184.558 c 0.38779,-2.56535 -2.22908,-2.62226 -4.07031,-2.73101 -0.30057,-0.0363 -0.60113,-0.0727 -0.90169,-0.10899 m 5.132,5.095 c 0.26572,2.74025 -2.38919,2.05623 -4.18846,1.90787 -0.30618,-0.019 -0.61236,-0.0379 -0.91854,-0.0569 m 0,0 c -0.008,-2.31533 -0.0167,-4.63067 -0.025,-6.946"
+       d="m 141.842,184.558 c 0.38779,-2.56535 -2.22908,-2.62226 -4.07031,-2.73101 -0.30057,-0.0363 -0.60113,-0.0727 -0.90169,-0.10899 m 5.132,5.095 c 0.26572,2.74025 -2.38919,2.05623 -4.18846,1.90787 -0.30618,-0.019 -0.61236,-0.0379 -0.91854,-0.0569 m 1.875,1.875 c -0.008,-2.31533 0.1083,-7.50567 0.1,-9.821"
        id="autosatin191"
-       sodipodi:nodetypes="cccsccccccccccc"
+       sodipodi:nodetypes="cccscccc"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_spacing_mm="0.3"
@@ -8626,7 +8627,7 @@ Sept 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011
      id="g30173"
      style="display:none">
     <path
-       d="m 3.1263338,186.81709 0.16148,1.176 0.48444,0.946 10.8737202,-0.554 2.4083,-0.134 m -13.8078702,-3.476 0.15025,-1.562 0.24283,-0.607 0.50913,-0.397 6.1997602,-0.784 3.0113,-0.486 1.1697,-0.29 0.8261,-0.33 h 1.5824 m -13.8115402,6.498 0.12007,-2.042"
+       d="m 3.1263338,186.81709 0.16148,1.176 0.48444,0.946 10.8737202,-0.554 2.4083,-0.134 m -13.8078702,-3.476 0.15025,-1.562 0.24283,-0.607 0.50913,-0.397 6.1997602,-0.784 3.0113,-0.486 1.1697,-0.29 0.8261,-0.33 h 1.5824 m -9.9365402,11.123 0.24507,-12.417"
        id="autosatin161-3"
        sodipodi:nodetypes="cccscccccccccccc"
        inkstitch:satin_column="True"
@@ -8746,7 +8747,7 @@ Sept 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011
        inkstitch:contour_underlay="False"
        style="font-style:normal;font-weight:bold;font-size:50px;line-height:1.25;font-family:'Linux Libertine Display G';-inkscape-font-specification:'Linux Libertine Display G Bold';display:inline;fill:none;fill-opacity:0.0820895;stroke:#000000;stroke-width:2;stroke-opacity:1" />
     <path
-       d="m 30.05,180.415 -0.5687,-1.364 -0.3676,-1.55 -0.3229,-3.691 -0.2307,-5.167 -0.277,-18.363 -0.014,-3.998 m -15.0661,34.14 0.4088,-1.075 0.5998,-2.053 0.3229,-2.284 0.2767,-6.367 h 3e-4 c 0.117522,-8.64112 0.325727,-13.88107 0.3643,-22.523 m 0,0 13.0933,0.162"
+       d="m 30.05,180.415 -0.5687,-1.364 -0.3676,-1.55 -0.3229,-3.691 -0.2307,-5.167 -0.277,-18.363 -0.014,-3.998 m -15.0661,34.14 0.4088,-1.075 0.5998,-2.053 0.3229,-2.284 0.2767,-6.367 h 3e-4 c 0.117522,-8.64112 0.325727,-13.88107 0.3643,-22.523 m 0,4 13.0933,0.162"
        id="autosatin169"
        sodipodi:nodetypes="cccccccccccsccsc"
        inkstitch:satin_column="True"
@@ -8841,9 +8842,9 @@ Sept 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011
        inkstitch:ties="3"
        style="font-style:normal;font-weight:bold;font-size:50px;line-height:1.25;font-family:'Linux Libertine Display G';-inkscape-font-specification:'Linux Libertine Display G Bold';display:inline;fill:none;fill-opacity:0.0820895;stroke:#000000;stroke-width:2;stroke-dasharray:0.5, 0.5;stroke-opacity:1" />
     <path
-       d="m 48.9509,111.787 0.1929,1.42 0.2582,0.549 0.5034,0.384 2.1028,0.235 2.3236,0.416 2.216,0.562 1.7802,0.677 10.9806,0.009 m -20.5192,-6.507 0.1845,-1.176 0.5537,-0.946 9.0428,0.553 5.1442,0.277 4.36,0.093 1.2273,-0.027 m -0.2872,8.296 v -8.838"
+       d="m 48.9509,111.787 0.1929,1.42 0.2582,0.549 0.5034,0.384 2.1028,0.235 2.3236,0.416 2.216,0.562 1.7802,0.677 10.9806,0.009 m -20.5192,-6.507 0.1845,-1.176 0.5537,-0.946 9.0428,0.553 5.1442,0.277 4.36,0.093 1.2273,-0.027 m -4.5372,10.796 0.5,-15.088"
        id="autosatin173"
-       sodipodi:nodetypes="cccsccccccccccc"
+       sodipodi:nodetypes="cccscccccccccccccc"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_spacing_mm="0.3"
@@ -8890,7 +8891,7 @@ Sept 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011
        style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
     <path
        id="autosatin176"
-       d="m 90.9876,188.211 -0.3538,0.435 -0.4351,0.389 -2.7957,-0.22 m 3.6674,-3.058 -0.3753,-0.57 -0.4964,-0.488 -2.0992,-0.375 -0.1683,-0.051 m 0,0 -0.5282,4.542"
+       d="m 90.9876,188.211 -0.3538,0.435 -0.4351,0.389 -2.7957,-0.22 m 3.6674,-3.058 -0.3753,-0.57 -0.4964,-0.488 -2.0992,-0.375 -0.1683,-0.051 m 1.4375,-2.0625 -0.8407,7.4795"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_spacing_mm="0.3"
@@ -8903,7 +8904,8 @@ Sept 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="False"
        inkstitch:force_lock_stitches="True"
-       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       sodipodi:nodetypes="ccccccccccc" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -8919,9 +8921,9 @@ Sept 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011
        inkstitch:ties="3"
        style="font-style:normal;font-weight:bold;font-size:50px;line-height:1.25;font-family:'Linux Libertine Display G';-inkscape-font-specification:'Linux Libertine Display G Bold';display:inline;fill:none;fill-opacity:0.0820895;stroke:#000000;stroke-width:2;stroke-dasharray:0.5, 0.5;stroke-opacity:1" />
     <path
-       d="m 27.203091,65.830957 c -2.147263,0.265323 -4.245845,1.192327 -6.295483,2.780523 -2.461304,1.906998 -3.691918,3.967786 -3.691918,6.182286 0,2.4607 1.090016,4.736693 3.269971,6.828322 1.730835,1.611779 3.594709,2.583798 5.59166,2.915792 m 3.686892,-18.713689 c 2.283023,0.270615 4.288441,1.29207 6.016176,3.064064 2.039395,2.030022 3.059074,4.244636 3.059074,6.643729 0,2.091477 -1.160315,4.152302 -3.480982,6.1824 -1.953071,1.708384 -4.144441,2.67549 -6.574186,2.901203 m -12.0943,-10.462413 22.481424,0.04422"
+       d="m 27.203091,65.830957 c -2.147263,0.265323 -4.245845,1.192327 -6.295483,2.780523 -2.461304,1.906998 -3.691918,3.967786 -3.691918,6.182286 0,2.4607 1.090016,4.736693 3.269971,6.828322 1.730835,1.611779 3.594709,2.583798 5.59166,2.915792 m 3.686892,-18.713689 c 2.283023,0.270615 4.288441,1.29207 6.016176,3.064064 2.039395,2.030022 3.059074,4.244636 3.059074,6.643729 0,2.091477 -1.160315,4.152302 -3.480982,6.1824 -1.953071,1.708384 -4.144441,2.67549 -6.574186,2.901203 M 13.154461,74.153174 42.176623,74.374171"
        id="path172059-9"
-       sodipodi:nodetypes="ccssccsscc"
+       sodipodi:nodetypes="ccssccsscccc"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_spacing_mm="0.3"
@@ -8951,9 +8953,9 @@ Sept 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011
        inkstitch:ties="3"
        style="font-style:normal;font-weight:bold;font-size:50px;line-height:1.25;font-family:'Linux Libertine Display G';-inkscape-font-specification:'Linux Libertine Display G Bold';fill:none;fill-opacity:0.0820895;stroke:#000000;stroke-width:2;stroke-dasharray:0.5, 0.5;stroke-opacity:1" />
     <path
-       d="m -9.10371,225.911 0.21915,1.753 0.65745,1.568 1.09574,1.385 1.53404,1.199 1.74166,0.969 1.71859,0.692 1.695534,0.415 1.672466,0.139 3.1719,-0.101 3.01043,-0.303 2.84895,-0.505 2.6875,-0.706 2.526,-0.908 2.3645,-1.111 2.203,-1.312 2.0416,-1.513 1.7214,-1.571 1.6119,-1.757 1.5024,-1.945 1.3927,-2.132 1.2832,-2.32 1.1736,-2.507 1.064,-2.695 0.9545,-2.882 0.8377,-3.152 0.7137,-3.457 0.5897,-3.763 0.4657,-4.069 0.5594,-9.054 0.0402,-6.527 m -43.06859,42.294 1.00923,-0.646 0.9977,-0.461 0.98618,-0.277 0.97464,-0.092 2.214578,0.276 1.015002,0.393 1.01502,0.622 1.47636,1.108 1.4764,1.384 1.10728,1.199 1.13034,0.889 1.36103,0.634 1.59173,0.381 1.8224,0.126 1.0669,-0.103 0.9862,-0.312 0.9054,-0.519 0.8247,-0.727 0.7901,-0.928 0.7094,-1.125 1.1765,-2.837 0.9227,-3.368 0.7382,-3.829 0.6459,-4.314 0.4614,-5.006 0.5536,-10.611 0.4614,-11.442 0.0774,-3.176 m -16.29748,45.23 -2.51906,10.165 m 9.72274,-7.911 1.0164,5.966 m 3.2784,-14.974 16.125,0.125"
+       d="m -9.10371,225.911 0.21915,1.753 0.65745,1.568 1.09574,1.385 1.53404,1.199 1.74166,0.969 1.71859,0.692 1.695534,0.415 1.672466,0.139 3.1719,-0.101 3.01043,-0.303 2.84895,-0.505 2.6875,-0.706 2.526,-0.908 2.3645,-1.111 2.203,-1.312 2.0416,-1.513 1.7214,-1.571 1.6119,-1.757 1.5024,-1.945 1.3927,-2.132 1.2832,-2.32 1.1736,-2.507 1.064,-2.695 0.9545,-2.882 0.8377,-3.152 0.7137,-3.457 0.5897,-3.763 0.4657,-4.069 0.5594,-9.054 0.0402,-6.527 m -43.06859,42.294 1.00923,-0.646 0.9977,-0.461 0.98618,-0.277 0.97464,-0.092 2.214578,0.276 1.015002,0.393 1.01502,0.622 1.47636,1.108 1.4764,1.384 1.10728,1.199 1.13034,0.889 1.36103,0.634 1.59173,0.381 1.8224,0.126 1.0669,-0.103 0.9862,-0.312 0.9054,-0.519 0.8247,-0.727 0.7901,-0.928 0.7094,-1.125 1.1765,-2.837 0.9227,-3.368 0.7382,-3.829 0.6459,-4.314 0.4614,-5.006 0.5536,-10.611 0.4614,-11.442 0.0774,-3.176 M 6.1871802,222.2059 1.5467998,237.6742 m 9.8995172,-13.74463 2.430613,12.15319 M 16.625,217.75 32.75,217.875"
        id="autosatin165"
-       sodipodi:nodetypes="ccscccscccccssccccscccccccsccccccccccccccccc"
+       sodipodi:nodetypes="ccscccscccccssccccscccccccsccccccccccccccccccccccccccccccccccccccc"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_spacing_mm="0.3"
@@ -9463,9 +9465,9 @@ Sept 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011
        inkstitch:contour_underlay="False"
        style="font-style:normal;font-weight:bold;font-size:50px;line-height:1.25;font-family:'Linux Libertine Display G';-inkscape-font-specification:'Linux Libertine Display G Bold';fill:none;fill-opacity:0.0820895;stroke:#000000;stroke-width:2;stroke-opacity:1" />
     <path
-       d="m 29.3777,180.357 3.5189,-0.028 1.0097,1.05 1.1254,0.654 1.2234,0.341 1.3039,0.114 1.6421,-0.073 m -9.509,6.356 5.1712,0.234 5.5957,0.313 m -11.0813,-8.961 0.3144,8.414"
+       d="m 29.3777,180.357 3.5189,-0.028 1.0097,1.05 1.1254,0.654 1.2234,0.341 1.3039,0.114 1.6421,-0.073 m -9.509,6.356 5.1712,0.234 5.5957,0.313 m -9.0813,-10.961 0.3144,12.414"
        id="autosatin132"
-       sodipodi:nodetypes="cccccccccsccccc"
+       sodipodi:nodetypes="cccccccccscc"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_spacing_mm="0.3"
@@ -9595,9 +9597,9 @@ Sept 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011
        inkstitch:contour_underlay="False"
        style="font-style:normal;font-weight:bold;font-size:50px;line-height:1.25;font-family:'Linux Libertine Display G';-inkscape-font-specification:'Linux Libertine Display G Bold';fill:none;fill-opacity:0.0820895;stroke:#000000;stroke-width:2;stroke-opacity:1" />
     <path
-       d="m 88.4836,179.987 -3.7428,-0.45 -0.4599,-0.107 m 4.2027,3.417 -3.3521,0.477 -3.1359,0.602 -1.4511,0.36 m 0,0 3.7364,-4.856"
+       d="m 88.4836,179.987 -3.7428,-0.45 -0.4599,-0.107 m 4.2027,3.417 -3.3521,0.477 -3.1359,0.602 -1.4511,0.36 m 2,0 3.7364,-4.856"
        id="autosatin93"
-       sodipodi:nodetypes="cccccsscccccccccscccsscccccccccc"
+       sodipodi:nodetypes="cccccsscc"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_spacing_mm="0.3"
@@ -9648,9 +9650,9 @@ Sept 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011
        inkstitch:ties="3"
        style="fill:none;stroke:#000000;stroke-width:2;stroke-dasharray:0.5, 0.5;stroke-opacity:1" />
     <path
-       d="m 70,170 -2.1563,2.844 -2.4687,2.531 -2.7813,2.219 -1.64,1.01 M 73,172 l -2.875,4.219 -3.125,3.656 -3.375,3.094 -0.2191,0.164 m 0,0 -2.4522,-4.529"
+       d="m 70,170 -2.1563,2.844 -2.4687,2.531 -2.7813,2.219 -1.64,1.01 M 73,172 l -2.875,4.219 -3.125,3.656 -3.375,3.094 -0.2191,0.164 m 2,0 -3.601249,-6.73871"
        id="autosatin89"
-       sodipodi:nodetypes="cssssssscccssssssc"
+       sodipodi:nodetypes="cssssssscccs"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_spacing_mm="0.3"
@@ -15189,7 +15191,7 @@ Sept 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-!"
      id="g29897"
-     style="display:none">
+     style="display:inline">
     <path
        id="autosatinrun46-4"
        inkscape:label="Points droits pour auto-remplissage satin 2"
