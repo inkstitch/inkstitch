@@ -8,19 +8,22 @@ preview_image:
 ---
 ![Nick Ainley](/assets/images/fonts/nick_ainley.png)
 
-## Glyphs
+## Schriftzeichen
 
-This font contains 70 glyphs:
+Die Schrift enthält 70 Schriftzeichen:
 
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@/!',‘’
 
-## Dimensions
+## Dimensionen
 
-At 100%, this font is approximatively 7 mm (approx. 1/4 inch) tall.
+Bei einer Größe von 100% ist die Schrift ungefähr 7 mm hoch (~ 1/4 Zoll).
 
-It may be scaled  up to  300% (approx. 21 mm, 3/4 inch ) but should not be scaled down.
+Sie kann bis auf 300% vergrößert (~21 mm, 3/4 Zoll) werden. Die Schrift sollte aber nicht verkleinert werden.
 
-## In real life
+## Impressionen
+
 {% include folder-galleries path="fonts/nick_ainley/" %}
+
+## Lizenz
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/nick_ainley/LICENSE)

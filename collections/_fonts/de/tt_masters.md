@@ -1,7 +1,7 @@
 ---
 title: "TT Masters"
 permalink: /de/fonts/tt_masters/
-last_modified_at: 2020-12-30
+last_modified_at: 2023-04-24
 toc: false
 preview_image:
   - url: /assets/images/fonts/tt_masters.jpg
@@ -11,7 +11,7 @@ preview_image:
 
 ## Schriftzeichen
 
-Diese Schrift enthält folgende 103 Schriftzeichen :
+Diese Schrift umfasst folgende 103 Schriftzeichen :
 
 1234567890§!+"^*-:.;,|<>/}][{€$@=()@%'AaSsDdFfGgHhJjKkLlÖöÄäQqWwEeRrTtYyUuIiOoPpZzXxCcVvBbNnMm?_‰~©«»±°®´Üü
 
@@ -25,11 +25,10 @@ Sie kann bis auf 300% (~ 60 mm 2.5 Zoll ) hochskaliert  werden, aber nicht herun
 
 Diese Schrift kann mit der [Option](https://inkstitch.org/de/docs/lettering/#optionen) 'Sticke Textzeilen vor und zurück" verwendet werden: eine mehrzeilige Stickerei kann von links nach rechts, rechts nach links usw. gestickt werden. 
 
+## Impressionen
 
-## Gestickte Beispiele 
 {% include folder-galleries path="fonts/TT_masters/" %}
 
-
-
+## Lizenz
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/tt_masters/LICENSE)

@@ -1,7 +1,7 @@
 ---
 title: "TT Directors"
 permalink: /de/fonts/tt_directors/
-last_modified_at: 2020-12-30
+last_modified_at: 2023-04-24
 toc: false
 preview_image:
   - url: /assets/images/fonts/tt_directors.jpg
@@ -9,16 +9,15 @@ preview_image:
 ---
 ![TT Directors](/assets/images/fonts/tt_directors.jpg)
 
-
 ## Schriftzeichen
 
-This fontcontains 103 Schriftzeichen :
+Diese Schrift umfasst 103 Schriftzeichen :
 
 QqWwEeRrTtYyUuIiOoPpAaSsDdFfGgHhJjKkLlÖöÄäZzXxCcVvBbNnMmÜü|<>§!"#%@/()=?$€{[]}\,;.:-_1234567890+*`´'^@
 
 ## Maße
 
-Bei einer Skalierung auf 100 % ist diese Schrift ungefähr ~ 20 mm (~ 0.8 Zoll) groß.
+Bei einer Skalierung von 100 % ist diese Schrift ungefähr ~ 20 mm (~ 0.8 Zoll) groß.
 
 Sie kann bis auf 500% (~ 100 mm 4 Zoll ) hochskaliert  werden, aber nicht herunterskaliert.
 
@@ -26,5 +25,6 @@ Sie kann bis auf 500% (~ 100 mm 4 Zoll ) hochskaliert  werden, aber nicht herunt
 
 Diese Schrift kann mit der [Option](https://inkstitch.org/de/docs/lettering/#optionen) 'Sticke Textzeilen vor und zurück" verwendet werden: eine mehrzeilige Stickerei kann von links nach rechts, rechts nach links usw. gestickt werden. 
 
+## Lizenz
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/tt_directors/LICENSE)

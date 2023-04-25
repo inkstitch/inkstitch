@@ -9,10 +9,9 @@ preview_image:
 ---
 ![monicha](/assets/images/fonts/monicha.jpg)
 
-This font will be part of next Ink/Stitch version and is not yet available in Ink/Stitch v2.1.2.
-
 ## Schriftzeichen 
-Monicha contains 195 Schriftzeichen :
+
+Monicha enthält 195 Schriftzeichen :
 	
 !#%@'(’)+,-
 ./01234567
@@ -37,40 +36,39 @@ z§«±»¿ÀÁÂÃ
 
 ## Maße
 
-Bei einer Skalierung auf 100 % ist diese Schrift ungefähr ~ 28 mm (1 Zoll) groß. 
+Bei einer Skalierung von 100 % ist diese Schrift ungefähr ~ 28 mm (1 Zoll) groß. 
 
-Sie kann bis auf  150% (~ 42 mm, 1.5 Zoll) hochskaliert werden, aber nicht herunterskaliert.
-.
-## Description
+Sie kann bis auf 150% (~ 42 mm, 1.5 Zoll) hochskaliert werden, aber nicht herunterskaliert.
 
-MONICHA is our first font with alternative characters.
+## Beschreibung
 
-For instance, these are different ways to write the firstname Sasha.
+MONICHA ist eine Schrift, die es ermöglicht, verschiedene Varianten desselben Buchstabens zu sticken.
+
+Hier ein Beispiel für mögliche Varianten für den Vornamen Sasha.
 
 ![monicha7](/assets/images/fonts/monicha7.jpg)
 
-In addition to the "usual" european  character set, Monicha contains 50 alternative swash lower case letters hidden in the last Schriftzeichen of the list
+Über den "üblichen" europäischen Schriftzeichen, enthält Monicha 50 alternative 
 
-### The parentheses
+In addition to the "usual" european  character set, Monicha contains 50 alternative geschwungene Kleinbuchstaben.
 
-The two usual parentheses ( and ) are binded to 
+### Die Klammern
+
+Die beiden blichen Klammern ( und ) ergeben folgendes Bild
 
 ![monica parentheses](/assets/images/fonts/monicaparentheses.png)
 
-### How to access the alternative letters
+### Alternative Buchstaben sticken
 
-You can't use directly the keyboard to access these alternative letters.
+Die Buchstaben können nicht direkt über die Tastatur eingegeben werden. Stattdessen können sie über Kopieren/Einfügen in das Schriftfeld in Ink/Stitch übertragen werden.
 
-Instead some unusual unicode characters have been used to store them. You will have to copy/paste their code from this file to the lettering dialog window.
+#### Kleine Zierbuchstaben
 
-
-#### Small swashes
-
-<details> <summary>All lower case letters </summary>
+<details> <summary>Alle Kleinbuchstaben</summary>
 
 <img src="/assets/images/fonts/monichasmallswash.jpg" alt="Petite Echarpe" title="Petite Echarpe"><br>
 
-To use these alternative letters, you will need to cut  their code from here and paste it in the lettering dialog.<br><br>
+Um diese Buchstaben zu nutzen, kopiere die Zeichen von hier und füge sie in das Schriftfeld in Ink/Stitch ein<br><br>
 
 ⒜	⒝	⒞	⒟	⒠	⒡<br>
 
@@ -84,16 +82,17 @@ To use these alternative letters, you will need to cut  their code from here and
 	
 </details>
 
-####  Long underscoring swashes
+#### Lange unterstreichende Bögen
 
 <details> <summary> a-d-h-i-k-l-m-n-r-t-u </summary>
 
 <img src="/assets/images/fonts/monichalongswash.jpg" alt="Echarpe Longue Soulignante" title="Echarpe Longue Soulignante"><br>
 
-There are also 11 lower case letters with long underscoring swashes a-d-h-i-k-l-m-n-r-t-u.<br><br>
+11 Kleinbuchstaben mit langen Bögen a-d-h-i-k-l-m-n-r-t-u.<br><br>
 
-They must not be followed, over two letters, by downslope letters (such as g-j-p-q-y-z)
-to avoid satin columns overlays. To access use one of these codes:<br>
+Um Überlagerungen zu vermeiden, sollten ihnen über zwei Buchstaben hinweg keine Buchstaben mit Unterlänge folgen (wie z. B. g-j-p-q-y-z).<br><br>
+
+Sie können mit folgenden Zeichen erstellt werden:<br>
 
 <pre>Ⓐ			Ⓓ
 
@@ -105,17 +104,17 @@ to avoid satin columns overlays. To access use one of these codes:<br>
 
 </details>
 
-####  Medium length swashes 
+#### Halblange Bögen
 
 <details> <summary> g-j-y </summary>
 
 <img src="/assets/images/fonts/monichamediumswash.png" alt="Echarpe Moyenne Soulignante" title="Echarpe Moyenne Soulignante"><br>
 
-There are 3 underscore medium length swash letters: g-j-y.<br><br>
+3 Zierbuchstaben mit halblangen Bögen: g-j-y.<br><br>
 
-They must not be followed by a downslope letter.<br><br>
+Buchstaben mit Unterlänge sollten nicht auf diese Zeichen folgen.<br><br>
 
-To access use one of these codes:<br>
+Nutze folgende Zeichen:<br>
 
 Ⓖ	Ⓙ	Ⓨ
 	
@@ -127,48 +126,51 @@ To access use one of these codes:<br>
 
 <img src="/assets/images/fonts/monichacurly.png" alt="Echarpe Basse Bouclée" title="Echarpe Basse Bouclée"><br>
 
-These three letters feature a curly low swash version.<br><br>
+Für diese 3 Buchstaben gibt es eine Version mit einem geschwungen unteren Bogen.<br><br>
 
-They must not be followed by a downstroke letter over two letters.<br><br>
+Die folgenden zwei Buchstaben sollten keine Unterlänge haben.
 
-To access use one of these codes:<br>
+Nutze diese Zeichen:<br>
 
 ⓖ ⓙ ⓨ
 	
 </details>
 
-####  Retrograde curly upper swashes
+####  Rückwärtsgerichtete Schlaufen
 
 <details> <summary> b-d-h-k-l-t </summary>
 
 <img src="/assets/images/fonts/monichacurlyup.png" alt="Echarpe Superieure Bouclée" title="Echarpe Superieure Bouclée"><br>
 
-There are 6 retrograde curly upper swash letters b-d-h-k-l-t.<br><br>
+6 Buchstaben mit rückwärtsgerichteten Schlaufen.<br><br>
 
-The two previous letters should not  be rising letters, nor capital letter to avoid satin columns overlays.<br>
+Um Überlappungen zu vermeiden sollten die zwei nachfolgenden Buchstaben keine Oberlänge haben oder Großbuchstaben sein.<br>
 
-To access use one of these codes:<br><br>
+Nutze folgende Zeichen:<br><br>
 
 ⓑ	ⓓ	ⓗ	ⓚ	ⓛ	ⓣ
 	
 </details>
 
-#### And the last one
+#### Und der Letzte
 
 <details> <summary> o</summary>
 
 <img src="/assets/images/fonts/monichao.png" alt="Echarpe Queue Droite" title="Echarpe Queue Droite"><br>
 
-Finally there is also  a straight tail o:<br><br>
 
-To access use this code:<br>
+Schließlich ein besonderes `o` für den Wortabschluß:<br><br>
+
+Nutze folgendes Zeichen:<br>
 
 ⓞ
 
 </details>
 	
-## Gestickte Beispiele
+## Impressionen
 
 {% include folder-galleries path="fonts/monicha/" %}
+
+## Lizenz
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/monicha/LICENSE)

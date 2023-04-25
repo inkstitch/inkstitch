@@ -1,7 +1,7 @@
 ---
 title: "Sortefax"
 permalink: /de/fonts/sortefax/
-last_modified_at: 2022-05-04
+last_modified_at: 2023-04-24
 toc: false
 preview_image: 
   - url: /assets/images/fonts/sortefaxXL.jpg
@@ -14,24 +14,31 @@ preview_image:
 ![Sortefax_medium](/assets/images/fonts/sortefax_medium.jpg)
 
 ## Schriftzeichen
-iese Schrift enthält folgende 47 Schriftzeichen:
+
+Diese Schrift enthält folgende 47 Schriftzeichen:
 	
 ?.:;,([{)]}&ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789
 
 Anmerkung: Diese Schriftzeichen :;,.(){}[] werden genutzt um die Rahmen zu speichern.
 
-## Maáe
+## Maße
+
 ### Sortefax XL Initials
-Bei einer Skalierung auf 100 % ist diese Schrift ungefähr ~ 150 mm (6 Zoll) groá.
+
+Bei einer Skalierung von 100 % ist diese Schrift ungefähr ~ 150 mm (6 Zoll) groá.
 Sie kann bis auf 200% (~ 300 mm, 12 Zoll) hochskaliert und bis zu 70% (~ 100 mm, 4 Zoll) herunterskaliert werden.
+
 ### Sortefax Medium Initials
-Bei einer Skalierung auf 100 % ist diese Schrift ungefähr ~ 90 mm (3.5 Zoll) groá.
+
+Bei einer Skalierung von 100 % ist diese Schrift ungefähr ~ 90 mm (3.5 Zoll) groá.
 Sie kann bis auf 200% (~ 180 mm, 7 Zoll) hochskaliert und bis zu 70% (~ 60 mm, 2.5 Zoll) herunterskaliert werden.
 
 ## Beschreibung
 
 ### Sortefax XL Initials
+
 Sortefax XL Initials ist dafür gedacht, einen Buchstaben nach dem anderen zu verwenden.
+
 Um einen gerahmten Buchstaben zu erhalten, gibst du einfach den Buchstaben und einen beliebigen "Rahmen"-Buchstaben in das Beschriftungsdialogfenster ein (gleiche Zeile, kein Leerzeichen).
 
 Achtung, nicht alle Rahmen können direkt mit allen Buchstaben verwendet werden, insbesondere nicht mit groáen Buchstaben wie M oder W oder hohen Buchstaben wie J.
@@ -39,17 +46,16 @@ Achtung, nicht alle Rahmen können direkt mit allen Buchstaben verwendet werden,
 Natürlich kannst du mit Inkscape den Rahmen ganz einfach neu positionieren oder die Größe ändern oder sogar einen Kreisrahmen in eine Ellipse für einen hohen Buchstaben umwandeln.
 
 ### Sortefax Medium Initials
+
 Sortefax Medium Initials ist kleiner, aber auch einfacher.
 
 Es ist immer noch möglich, Rahmen zu verwenden, aber die automatische Anordnung des Rahmens und des Buchstabens ist nicht so gut wie bei der XL-Schrift.
+
 Mit dieser Schriftart kannst du aber ganze Wörter mit korrektem Kerning schreiben und nicht nur einzelne Buchstaben.
-
-
 
 ## Um auf die Rahmen zuzugreifen, benutze die entsprechenden Schriftzeichen:
 
 Übersetzt mit www.DeepL.com/Translator (kostenlose Version)
-
 
 Frame|Key
 ---|---
@@ -64,8 +70,10 @@ Frame|Key
 ![DeuxPoints](/assets/images/fonts/sortefax/deuxpoints.png)|<key>:</key>
 ![PointVirgule](/assets/images/fonts/sortefax/pointvirgule.png)|<key>;</key>
 
-## Gestickte Beispiele 
+## Impressionen
 
 {% include folder-galleries path="fonts/sortefax/" %}
+
+## Lizenz
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/sortefaxXL/LICENSE)
