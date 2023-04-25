@@ -1,7 +1,7 @@
 ---
 title: "Nick Ainley"
 permalink: /de/fonts/nick_ainley/
-last_modified_at: 2022-05-04
+last_modified_at: 2023-04-24
 preview_image:
   - url: /assets/images/fonts/nick_ainley.png
     height: 7
