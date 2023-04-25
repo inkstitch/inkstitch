@@ -6,7 +6,7 @@
    width="110"
    height="110"
    viewBox="0 0 110 110"
-   inkscape:version="1.2.1 (9c6d41e4, 2022-07-14)"
+   inkscape:version="1.3-alpha (95f74fb, 2023-03-31)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -23,14 +23,14 @@
      inkscape:deskcolor="#ffffff"
      showgrid="true"
      inkscape:zoom="3.9999998"
-     inkscape:cx="8.2500004"
-     inkscape:cy="91.000004"
+     inkscape:cx="43.750002"
+     inkscape:cy="53.375003"
      inkscape:window-width="1920"
      inkscape:window-height="1009"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g8260"
+     inkscape:current-layer="g8300"
      inkscape:document-units="px"
      showguides="false">
     <sodipodi:guide
@@ -70,7 +70,8 @@
        inkscape:color="rgb(0,134,229)" />
     <inkscape:grid
        type="xygrid"
-       id="grid70602" />
+       id="grid70602"
+       visible="true" />
   </sodipodi:namedview>
   <metadata
      id="metadata1710">
@@ -3250,7 +3251,7 @@ Copyright 2017 The EB Garamond Project Authors (https://github.com/octaviopardo/
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-μ"
      id="g8300"
-     style="display:none">
+     style="display:inline">
     <path
        d="m 3.91117,140.335 1.54,-1.1 1.54,-1.32 1.5125,-1.43 1.2375,-1.43 0.82503,-1.292 0.275,-1.018 -0.22,-0.99 C 7.8271495,128.44019 6.6803033,125.01619 6.6021603,120.69461 6.4542527,112.5148 8.0517609,106.36059 8.97116,100.845 l 0.66,-0.22 1.44414,-1.4866 m -12.66416,41.0866 -1.1275,-1.265 -0.7425,-1.595 -0.4125,-1.732 -0.1375,-1.678 0.22,-3.41 c 0.9842995,-15.8923 3.48821535,-23.53112 9.1781016,-33.390177 M 2.99432,99.7754 9.99987,101.236 m -14.49419,23.595 12.2949633,-0.29165"
        id="autosatin3"
@@ -3266,14 +3267,14 @@ Copyright 2017 The EB Garamond Project Authors (https://github.com/octaviopardo/
        inkscape:label="Auto-remplissage satin 1"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="False"
-       style="stroke-width:2;stroke-opacity:1;fill:none;stroke:#000000;font-style:italic;font-weight:600;font-size:29.1042px;line-height:1.25;font-family:'EB Garamond';-inkscape-font-specification:'EB Garamond Semi-Bold Italic';opacity:1;" />
+       style="font-style:italic;font-weight:600;font-size:29.1042px;line-height:1.25;font-family:'EB Garamond';-inkscape-font-specification:'EB Garamond Semi-Bold Italic';opacity:1;fill:none;stroke:#000000;stroke-width:2;stroke-opacity:1" />
     <path
-       d="m 8.79683,97.8023 0.32699,-0.5543 0.57962,-0.9878 0.47876,-1.0361 0.153,-0.7455 v 0 l 0.084,-0.4092 0.3349,-1.1324 0.3351,-1.1322 0.3503,-0.8419 v 0 l 0.0994,-0.2388 0.462,-1.0752 0.4656,-1.0741 0.4352,-1.0012 v 0 l 0.0316,-0.0726 0.4667,-1.0738 0.4668,-1.0738 0.4668,-1.0738 0.0394,-0.0914 v 0 l 0.4243,-0.9843 0.463,-1.076 0.463,-1.076 0.108,-0.2547 v 0 l 0.349,-0.823 0.4569,-1.0777 0.457,-1.0777 0.1771,-0.4205 v 0 l 0.2776,-0.6585 0.4452,-1.0845 0.4452,-1.0844 0.2401,-0.5847 v 0 l 0.2052,-0.4997 0.4461,-1.0842 0.4465,-1.0841 0.2731,-0.7586 v 0 l 0.1255,-0.3487 0.3922,-1.1122 0.3031,-1.1495 0.1635,-0.9384 v 0 l 0.0385,-0.2214 -0.0545,-1.1516 -0.0952,-1.1534 -0.1272,-1.1494"
+       d="m 8.79683,97.8023 c 0.664207,-1.141753 1.455825,-2.271136 1.59906,-3.619345 0.382962,-1.469782 0.850685,-2.914967 1.50046,-4.290738 2.763746,-6.378297 5.567577,-12.743202 8.110868,-19.212946 0.591452,-1.635628 1.235599,-3.349128 1.005175,-5.116668 C 20.957756,64.818233 20.8835,64.076227 20.7962,63.335"
        inkstitch:running_stitch_length_mm="2"
        id="autosatinrun2"
        inkscape:label="Points droits pour auto-remplissage satin 2"
        inkstitch:ties="3"
-       style="stroke-width:2;stroke-opacity:1;fill:none;stroke:#000000;font-style:italic;font-weight:600;font-size:29.1042px;line-height:1.25;font-family:'EB Garamond';-inkscape-font-specification:'EB Garamond Semi-Bold Italic';opacity:1;stroke-dasharray:0.5, 0.5;" />
+       style="font-style:italic;font-weight:600;font-size:29.1042px;line-height:1.25;font-family:'EB Garamond';-inkscape-font-specification:'EB Garamond Semi-Bold Italic';opacity:1;fill:none;stroke:#000000;stroke-width:2;stroke-dasharray:0.5, 0.5;stroke-opacity:1" />
     <path
        d="m 18.5412,62.785 -1.2375,0.1925 -1.0725,0.5775 -0.8525,0.7975 -0.5775,1.0725 -1.65,6.05 C 10.760904,80.090121 7.8752755,88.566589 5.3892416,97.154823 M 23.0512,63.885 l 1.9525,1.1825 1.4575,1.3475 0.825,1.3475 0.1237,0.6119 -0.0687,0.5706 -0.385,1.6225 -0.935,2.2275 -3.19,5.7201 -4.07,6.9299 -4.4,7.37 -0.77,2.4201 -0.22,1.54 -2.2959,2.3633 m 1.7335,-31.048 14.3819,3.9326"
        id="autosatin4"
@@ -3289,7 +3290,7 @@ Copyright 2017 The EB Garamond Project Authors (https://github.com/octaviopardo/
        inkscape:label="Auto-remplissage satin 3"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="False"
-       style="stroke-width:2;stroke-opacity:1;fill:none;stroke:#000000;font-style:italic;font-weight:600;font-size:29.1042px;line-height:1.25;font-family:'EB Garamond';-inkscape-font-specification:'EB Garamond Semi-Bold Italic';opacity:1;" />
+       style="font-style:italic;font-weight:600;font-size:29.1042px;line-height:1.25;font-family:'EB Garamond';-inkscape-font-specification:'EB Garamond Semi-Bold Italic';opacity:1;fill:none;stroke:#000000;stroke-width:2;stroke-opacity:1" />
     <path
        id="autosatin5"
        d="m 13.3712,96.7751 c 0,1.2466 0.4766,2.4566 1.43,3.6299 1.0266,1.173 2.31,1.723 3.85,1.65 1.6133,-0.073 3.2266,-0.66 4.84,-1.76 1.6866,-1.1733 3.4466,-2.7866 5.28,-4.8399 1.9066,-2.1267 3.85,-4.5467 5.83,-7.26 0.3785,-1.0559 0.7516,-2.0954 1.1192,-3.1188 M 9.63116,100.625 c 0.29334,0 0.58664,0.22 0.88004,0.66 0.3666,0.44 0.7333,0.953 1.1,1.54 0.3666,0.513 0.6233,0.917 0.77,1.21 1.1733,1.833 2.3466,3.483 3.52,4.95 1.1733,1.467 2.97,2.2 5.39,2.2 1.3933,0 2.8966,-0.66 4.51,-1.98 1.6133,-1.32 3.19,-2.86 4.73,-4.62 1.54,-1.76 2.86,-3.41 3.96,-4.9499 1.1733,-1.5401 1.9067,-2.5301 2.2,-2.9701 m -19.1633,4.346 -3.2584,7.191 m 9.101,-8.6513 4.9437,8.0893"
@@ -3304,14 +3305,14 @@ Copyright 2017 The EB Garamond Project Authors (https://github.com/octaviopardo/
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="False"
        inkscape:label="Auto-remplissage satin 4"
-       style="stroke-width:2;stroke-opacity:1;fill:none;stroke:#000000;font-style:italic;font-weight:600;font-size:29.1042px;line-height:1.25;font-family:'EB Garamond';-inkscape-font-specification:'EB Garamond Semi-Bold Italic';opacity:1;" />
+       style="font-style:italic;font-weight:600;font-size:29.1042px;line-height:1.25;font-family:'EB Garamond';-inkscape-font-specification:'EB Garamond Semi-Bold Italic';opacity:1;fill:none;stroke:#000000;stroke-width:2;stroke-opacity:1" />
     <path
        d="m 39.2754,89.7942 0.0189,-0.1088 0.1908,-1.1321 0.1828,-1.1382 0.3521,-1.1159 0.0255,-0.0537 v 0 l 0.4634,-0.9757 0.5045,-1.0447 0.5334,-1.0371 0.1042,-0.2099 v 0 l 0.4152,-0.8368 0.5193,-1.0467 0.5194,-1.0466 0.171,-0.3279 v 0 l 0.3705,-0.7103 0.5415,-1.0382 0.5415,-1.0381 0.2279,-0.4428 v 0 l 0.3082,-0.5987 0.5141,-1.0547 0.5142,-1.0547 0.272,-0.558 v 0 l 0.2421,-0.4968 0.5142,-1.0547 0.5141,-1.0547 0.3225,-0.6677 v 0 l 0.1879,-0.3889 0.4653,-1.0474 0.4703,-1.0527 0.3037,-0.8576 v 0 L 49.6639,66.384 49.5453,65.2492 49.1265,64.1884 48.4612,63.28"
        inkstitch:running_stitch_length_mm="2"
        id="autosatinrun3"
        inkscape:label="Points droits pour auto-remplissage satin 5"
        inkstitch:ties="3"
-       style="stroke-width:2;stroke-opacity:1;fill:none;stroke:#000000;font-style:italic;font-weight:600;font-size:29.1042px;line-height:1.25;font-family:'EB Garamond';-inkscape-font-specification:'EB Garamond Semi-Bold Italic';opacity:1;stroke-dasharray:0.5, 0.5;" />
+       style="font-style:italic;font-weight:600;font-size:29.1042px;line-height:1.25;font-family:'EB Garamond';-inkscape-font-specification:'EB Garamond Semi-Bold Italic';opacity:1;fill:none;stroke:#000000;stroke-width:2;stroke-dasharray:0.5, 0.5;stroke-opacity:1" />
     <path
        d="m 50.3312,63.775 2.0075,1.0175 1.6225,1.2925 1.1275,1.2925 0.2544,0.6257 0.0481,0.6118 -0.5225,1.6225 -1.1275,2.4476 -3.63,6.3799 -4.73,7.3701 -2.53,3.4925 -2.53,3.2175 -0.3231,1.4781 0.0206,1.3544 0.3643,1.2306 0.7082,1.1069 0.9969,0.8662 1.2306,0.6187 1.4644,0.371 1.6981,0.124 2.0075,-0.275 2.0625,-0.8249 1.184,-0.7313 m -5.144,-35.6788 -1.045,0.165 -0.935,0.495 -0.7425,0.935 -0.6875,1.485 -4.62,11.3301 -2.8408,7.8812 0.9708,11.5887 0.33,0.21 -0.99,2.21 -0.44,2.31 -0.055,2.723 0.495,2.447 0.99,1.98 0.66,0.825 0.77,0.715 0.9075,0.577 0.9625,0.413 1.0175,0.247 1.0725,0.083 1.4987,-0.11 1.5263,-0.33 1.5537,-0.55 1.5813,-0.77 1.5469,-1.025 1.4506,-1.203 1.3544,-1.381 0.0523,-0.065 m -16.6837,-24.7347 9.6628,6.5168 m -0.6742,11.5729 -4.719,13.258 m 1.4606,-47.6396 13.5953,7.528"
        id="autosatin6"
@@ -3327,7 +3328,7 @@ Copyright 2017 The EB Garamond Project Authors (https://github.com/octaviopardo/
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="False"
        inkscape:label="Auto-remplissage satin 6"
-       style="stroke-width:2;stroke-opacity:1;fill:none;stroke:#000000;font-style:italic;font-weight:600;font-size:29.1042px;line-height:1.25;font-family:'EB Garamond';-inkscape-font-specification:'EB Garamond Semi-Bold Italic';opacity:1;" />
+       style="font-style:italic;font-weight:600;font-size:29.1042px;line-height:1.25;font-family:'EB Garamond';-inkscape-font-specification:'EB Garamond Semi-Bold Italic';opacity:1;fill:none;stroke:#000000;stroke-width:2;stroke-opacity:1" />
     <path
        d="m 56.3812,95.6751 -0.7425,0.3025 -1.3475,0.9075 -2.556,1.5787 m 5.636,-1.6888 -0.4469,2.1312 -0.6806,1.9938 -0.9144,1.856 -1.1481,1.719 -1.2058,1.496 m 0.1237,0.296 -1.3397,-8.2298"
        id="path48703"
@@ -3344,7 +3345,14 @@ Copyright 2017 The EB Garamond Project Authors (https://github.com/octaviopardo/
        inkstitch:contour_underlay="False"
        inkscape:label="Auto-remplissage satin 6"
        inkstitch:force_lock_stitches="False"
-       style="stroke-width:2;stroke-opacity:1;fill:none;stroke:#000000;font-style:italic;font-weight:600;font-size:29.1042px;line-height:1.25;font-family:'EB Garamond';-inkscape-font-specification:'EB Garamond Semi-Bold Italic';opacity:1;" />
+       style="font-style:italic;font-weight:600;font-size:29.1042px;line-height:1.25;font-family:'EB Garamond';-inkscape-font-specification:'EB Garamond Semi-Bold Italic';opacity:1;fill:none;stroke:#000000;stroke-width:2;stroke-opacity:1" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.88976;stroke-linecap:round;paint-order:markers stroke fill;stroke-dasharray:7.55904007,3.77952003,1.88976002,3.77952003;stroke-dashoffset:0"
+       d="m 2.0000001,109.25001 1.7500001,30"
+       id="path1"
+       sodipodi:nodetypes="cc"
+       inkstitch:stroke_method="running_stitch"
+       inkstitch:running_stitch_length_mm="2" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -4057,7 +4065,7 @@ Copyright 2017 The EB Garamond Project Authors (https://github.com/octaviopardo/
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-β"
      id="g8260"
-     style="display:inline">
+     style="display:none">
     <path
        d="m 2.94519,105.115 c -2.0287224,7.38786 -5.4647134,14.74986 -4.65442,22.584 0.1595822,2.74294 1.3629675,5.44914 0.92232964,8.19249"
        inkstitch:running_stitch_length_mm="2"
