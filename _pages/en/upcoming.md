@@ -72,7 +72,7 @@ We have good news: Ink/Stitch will be significantly faster due to stitch plan ca
   * Fix: ZoneClose segments can not be changed into curves.
   * Fix: incorrect stagger in guided fill
 
-### Satin Column
+### Satin Column / E-Stitch
   * [Options for randomization](/docs/stitches/satin-column/#satin-top-layer)
       * Stitch length
       * Stitch distance
@@ -90,9 +90,14 @@ We have good news: Ink/Stitch will be significantly faster due to stitch plan ca
   * Fix: don't fail if a satin has a fill, but render the fill as well
 
 ### Stroke
+  * Params have become more flexible. Switching between running stitches and zigzag lines is more easy.
+    No need to setup a dashed line for running stitches anymore.
   * Improved running stitch algorithm (stitch length is more consistant)
   * Zig-zag: Add warning to the troubleshoot extension to inform about dashed lines if the zig zag is small
   * `svg:line` elements are recognized as normal stroke elements now
+
+### Zigzag Stitch
+  * Add pull compensation
 
 ## Extensions
 
@@ -153,6 +158,7 @@ We have good news: Ink/Stitch will be significantly faster due to stitch plan ca
 
 ### Simulator
   * Uses page background color from Inkscape
+  * Add zoom buttons (zoom to design, zoom to page)
 
 ### Stitch Plan
   * Add [option to lock stitch plan](/docs/visualize/#stitch-plan-preview) (make it insensitve for mouse interactions)
