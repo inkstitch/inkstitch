@@ -90,7 +90,7 @@ if [ "$BUILD" = "osx" ]; then
     fi
     # Creating the zip for Drag n' Drop install
     cd dist
-    7z a zipfile -c ../artifacts/inkstitch-${VERSION}-${OS}.zip *
+    7z a ../artifacts/inkstitch-${VERSION}-${OS}.zip *
     cd ..
 else
     cp -a images/examples palettes symbols fonts tiles dbus inx LICENSE VERSION dist/inkstitch
