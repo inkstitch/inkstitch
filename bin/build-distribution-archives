@@ -65,12 +65,13 @@ if [ "$BUILD" = "osx" ]; then
         if [[ "${GITHUB_REF}" =~ ^refs/tags/v[0-9.]+$ || $NOTARIZE_DEVELOPMENT_BUILDS == true ]]; then
             echo "Notary starting"
             echo "Adding keychain item for notarytool"
-            xcrun notarytool store-credentials "${NOTARY_PASSWORD}" \
+            xcrun notarytool store-credentials "inkstitch-profile"  \
                                                 --apple-id "${NOTARY_ACCOUNT}" \
-                                                --team-id '929A568N58'
+                                                --team-id '929A568N58' \
+                                                --password "${NOTARY_PASSWORD}"
             echo "Invoking notary process"
             xcrun notarytool submit --wait \
-                                    --keychain-profile "${NOTARY_PASSWORD}" \
+                                    --keychain-profile "inkstitch-profile" \
                                     artifacts/inkstitch-${VERSION}-${OS}.pkg
             echo "Stapling the pkg for release"
             xcrun stapler staple artifacts/inkstitch-${VERSION}-${OS}.pkg
