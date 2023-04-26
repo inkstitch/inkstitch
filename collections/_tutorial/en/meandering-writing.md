@@ -3,7 +3,7 @@ permalink: /tutorials/meandering-writing/
 title: "Writing with meander fill"
 language: en
 last_modified_at: 2023-04-25
-excerpt: "Writing using meander fill"
+excerpt: "Writing using Meander Fill"
 image: "/assets/images/tutorials/samples/meandering_writing.jpg"
 tutorial-type:
 stitch-type:
@@ -59,7 +59,7 @@ create very large letters that will embroider quickly.
 Meannder fill is very fast to embroider, but may be  somewhat long to calculate. The larger the area to be filled, the longer it takes.
 Don't start with too large an area to fill.
 
-In the  embroidered  negative space sample, they are two embroidery steps, a triple stitch around the letters and a meander fill around the letters.
+In the  embroidered  negative space sample, they are two embroidery steps, a triple stitch around the letters and a meander fill in the space around the letters.
 
 Draw a rectangle (or another shape) around your text where you want  meandering. Give it a fill color, but no stroke color.
 Lower the opacity if you wish, it won't change the result.
