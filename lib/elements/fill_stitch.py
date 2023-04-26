@@ -531,7 +531,7 @@ class FillStitch(EmbroideryElement):
 
         polygons = []
         for polygon in valid_shape.geoms:
-            if isinstance(polygon, shgeo.Polygon):
+            if isinstance(polygon, shgeo.Polygon) and polygon.area > 5:
                 polygons.append(polygon)
             if isinstance(polygon, shgeo.MultiPolygon):
                 polygons.extend(polygon.geoms)
