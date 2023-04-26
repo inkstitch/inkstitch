@@ -21,7 +21,7 @@ user-level:
 This tutorial is **not** about using Ink/Stitch Lettering, but using a font (.ttf or .otf)  installed on your computer **before opening inkscape**.
 {: .notice--info }
 
-This method should not be used for creating small letters (aiming to at least 4 or 5 cm high letters). On the other hand you can
+This method should not be used for creating small letters (aiming to at least 4 or 5 cm high letters is good). On the other hand you can
 create very large letters that will embroider quickly.
 {: .notice--warning }
 
@@ -34,18 +34,17 @@ create very large letters that will embroider quickly.
 
 ![Font chosing](/assets/images/tutorials/meandering_writing/font-chosing.jpg)
 
-* You may wish to tweak the result. Here the font is ![Rubik ultrabold](htps://fonts.google.com/specimen/Rubik), but the height of the letters has been scaled up, 
-* while keeping the width. You may also use any inkscape text manipulation tool at this step.
+* You may wish to tweak the result. Here the font is ![Rubik ultrabold](htps://fonts.google.com/specimen/Rubik), but the height of the letters has been scaled up while keeping the width. You may also use any inkscape text manipulation tool at this step.
 
 
-* Selectionnez your path and `Path > Object to path`
+* Selecti your path and `Path > Object to path`
 * In the "Layers and Objects" dialog, your text is turned into a group of paths
 * Select this group and  `Extensions > Ink/Stitch > Params`
 * In the Parameter dialog:
-  * Uncheck Underlay in the Underlay fill tab
-  * If you prefer trims over jumps, check Trim after. You may wish to do this temporary to avoid seeing the jumps in the params simulator window.
-  * Play with the settings to choose your favorite meanders and their settings
-  * You can also configure letter by letter and choose different meanders for each letter. Sometimes a letter is more difficult to fill because of its shape, treat it separately
+  * Uncheck Underlay in the Underlay Fill tab
+  * If you prefer trims over jumps, check Trim after. You may wish to do so temporarly to avoid seeing the jumps in the params simulator window.
+  * Play with the settings to choose your favorite meanders
+  * You can also configure letter by letter and choose different meanders for each letter. Sometimes a letter is more difficult to fill because of its shape, parametring  it separately may help
   * The meandering filling contains a part of randomness, you can also try to reroll the dice (at the bottom of the setting) if an area has been forgotten. Reducing the size of the meander also helps to visit everywhere
 
 
@@ -57,25 +56,24 @@ create very large letters that will embroider quickly.
 
 ## Negative space writing
 
-Meannder fill is very fast to embroider, but a may be  long to calculate. The larger the area to be filled, the longer it takes.
+Meannder fill is very fast to embroider, but may be  somewhat long to calculate. The larger the area to be filled, the longer it takes.
 Don't start with too large an area to fill.
 
-In the example embroidered in negative, the embroidery consists of two steps, a triple stitch around the letters and a meander fill around the letters.
+In the  embroidered  negative space sample, they are two embroidery steps, a triple stitch around the letters and a meander fill around the letters.
 
-Draw a rectangle (or another shape) around your text where you want to embroider meanders. Give it a fill color, but no stroke color.
+Draw a rectangle (or another shape) around your text where you want  meandering. Give it a fill color, but no stroke color.
 Lower the opacity if you wish, it won't change the result.
 
-Before you turn your text object into a path, duplicate it, you will need both copies
+Before you turn your text object into a path, duplicate it, you will need both copies.
 
 
 
-### Bean stitch 
-
+### Triple stitch 
 
 * Select one of the copies of your text
-* Remove the fill color, and add an stroke color
+* Remove the fill color, and add a stroke color
 * `Path > Object to path`
-* In the "Layers and Objects" dialog, your text object has become a group of paths
+* In the "Layers and Objects" dialog, your text object has turned into a group of paths
 * Select this group of paths and `Extensions > Ink/Stitch > Params`
 * Set your  bean stitch parameters
 
@@ -83,14 +81,14 @@ Before you turn your text object into a path, duplicate it, you will need both c
 * The params simulator shows that there will be jumps  inside the letters. If you want to turn them into trims, select the letters and `Path > Break Apart`
 * You will need to call Params again.
 
-### Negative space meanderinng
+### Negative space meandering
 
 * Select the other text copy 
 * `Path > Object to path`
 * `Path > Combine`
 * Instead of the text object, you now have a group which contains exactly one path.
 * Check that this group is above the rectangle in the "Layers and Objects" dialog. If necessary move the rectangle.
-* Select the group that contains the text  and the rectangle
+* Select both the group that contains the text  and  the rectangle
 * `Path > Exclude`
 * Check that the result of the operation is selected
 * `Extensions > Ink/Stitch > Params` and choose the settings for  your meanders.
