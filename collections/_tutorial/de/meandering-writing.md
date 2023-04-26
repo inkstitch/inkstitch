@@ -2,13 +2,13 @@
 permalink: /de/tutorials/meandering-writing/
 title: "Writing with meander fill"
 language: de
-last_modified_at: 2023-04-24
-excerpt: "Writing using Meander Fill"
+last_modified_at: 2023-04-26
+excerpt: "Mit Mäanderfüllung schreiben"
 image: "/assets/images/tutorials/tutorial-preview-images/meandering_writing.jpg"
 tutorial-type:
 stitch-type:
-  - "Meander Fill"
-  - "Bean Stitch"
+  - "Mäanderfüllung Fill"
+  - "Mehrfachgeradstich"
 techniques:
 field-of-use:
 user-level:
@@ -18,86 +18,75 @@ user-level:
 
 ![Embroidery](/assets/images/tutorials/tutorial-preview-images/meandering_writing.jpg)
 
-This tutorial is **not** about using Ink/Stitch Lettering, but using a font (.ttf or .otf)  installed on your computer **before opening inkscape**.
+Dieses Tutorial ist **nicht** über das Textmodul von Ink/Stitch sondern nutzt installierte Systemschriften (.ttf oder .otf).
 {: .notice--info }
 
-This method should not be used for creating small letters (aiming to at least 4 or 5 cm high letters is good). On the other hand you can
-create very large letters that will embroider quickly.
+Diese Methode sollte nicht für kleine Buchstaben genutzt werden. Die Buchstaben sollten eine Höhe von mindestens 4 oder 5 cm haben.
+Dafür können aber sehr große Buchstaben erstellt werden, die sich schnell sticken lassen.
 {: .notice--warning }
 
+## Schrift erstellen
 
+* Nutze das Text-Werkzeug von Inkscape um einen kurzen Text zu schreiben.
+* Lege die gewünschte Schriftart fest.
+  ![Font chosing](/assets/images/tutorials/meandering_writing/font-chosing.jpg)
+* Passe evtl. die Schrift an deine Bedürfnisse an. Hier wurde die Schrift ![Rubik ultrabold](htps://fonts.google.com/specimen/Rubik) verwendet.
+  Die Höhe wurde bei gleichbleibender Breite etwas vergrößert.
 
+## Schrift im positiven Raum
 
-## Positive space writing
+* Wähle den Schriftzug an und führe die Option `Pfad > Objekt in Pfad umwndeln` aus
+* Im `Ebenen und Objekte`-Dialog befindet sich der Text nun als eine Gruppe mit mehreren Pfaden
+* Wähle die Textgruppe aus und öffne die Ink/Stitch Parameter (`Erweiterungen > Ink/Stitch > Parameter`)
+* Im Parameter-Dialog:
+  * Deaktiviere die Unterlage für Füllstiche
+  * Bevorzugst du Fadenschnitt-Befehle anstelle von Sprungstichen, aktiviere die Option `Fadenschnitt`.
+  * Wähle als Füllmethode `Mäanderfüllung` und spiele mit den Parametereinstellungen, bis du dein favorisiertes Ergebnis erreichst
+  * Es können auch einzelne Buchstaben angewählt werden, um die Mäander-Parameter individuell anzupassen.
+    Manche Buchstaben sind schwieriger zu füllen als andere, eine individuelle Anpassung kann hier Abhilfe schaffen.
+  * Die Mäanderfüllung beinhaltet ein Randomisier-Funktion. Um das Ergebnis zu Ändern, kann der Würfel ganz unten im Parameter-Dialog gewürfelt werden.
+    Dies kann auch helfen unerwünschte Aussparungen in der Form zu verhindern.
+    Auch die Größe des Mäander-Musters kann reduziert werden, sollte es Schwierigkeiten geben, die Form in Gänze auszufüllen.
 
-* Use inkscape Text tool to write a short text with your chosen font.
+    ![Params](/assets/images/tutorials/meandering_writing/meandering-parameter.jpg)
 
-![Font chosing](/assets/images/tutorials/meandering_writing/font-chosing.jpg)
+* Klicke auf `Anwenden und Schließen`. Die Schrift ist nun stickfähig.
 
-* You may wish to tweak the result. Here the font is ![Rubik ultrabold](htps://fonts.google.com/specimen/Rubik), but the height of the letters has been scaled up while keeping the width. You may also use any inkscape text manipulation tool at this step.
+## Schrift im negativen Raum
 
+Mäanderfüllung ist eine gute Methode um auch größere Flächen schnell zu sticken, aber die Berechnung des Stickpfades kann einige Zeit in Anspruch nehmen.
+Je größer der Stickbereich, desto länger lässt das Ergebnis auf sich warten. Es macht also Sinn, nicht mit zu großen Sitckflächen zu beginnen.
 
-* Selecti your path and `Path > Object to path`
-* In the "Layers and Objects" dialog, your text is turned into a group of paths
-* Select this group and  `Extensions > Ink/Stitch > Params`
-* In the Parameter dialog:
-  * Uncheck Underlay in the Underlay Fill tab
-  * If you prefer trims over jumps, check Trim after. You may wish to do so temporarly to avoid seeing the jumps in the params simulator window.
-  * Play with the settings to choose your favorite meanders
-  * You can also configure letter by letter and choose different meanders for each letter. Sometimes a letter is more difficult to fill because of its shape, parametring  it separately may help
-  * The meandering filling contains a part of randomness, you can also try to reroll the dice (at the bottom of the setting) if an area has been forgotten. Reducing the size of the meander also helps to visit everywhere
+In unserem Beispiel für das Sticken im negativen Raum gibt es zwei Stickelemente. Ein Dreifachgeradestich um die Buchstaben herum und die Mäanderfüllung, die den Hintergrund füllt.
 
+* Zeichne ein Rechteck (oder eine andere Form) um den Text. Lege die Füllfarbe fest. Die Form braucht keine Konturfarbe.
+  Es ist erlaubt, die Deckkraft herunter zu setzen, dies ändert das Endergebnis nicht.
+* Dupliziere den Text und wandle beide Kopien in einen Pfad um (`Pfad > Objekt in Pfad umwandeln`)
 
-![Params](/assets/images/tutorials/meandering_writing/meandering-parameter.jpg)
+### Dreifachgeradstich
 
-* Click Apply and Quit and your embroidery is ready.
+* Wähle eine der beiden Kopien des Textes an
+* Entferne die Füllfarbe und setze eine Konturfarbe
+* Öffne den Parameter-Dialog (`Erweiterungen > Ink/Stitch > Parameter`)
+* Setze die entsprechenden Parameter für einen Mehrfachgeradstich
+  ![Bean stitch Parameter](/assets/images/tutorials/meandering_writing/bean-parameter.jpg)
+* Der Parameter-Simulator zeigt Sprungestiche innerhalb der Buchstaben an. Solltest du stattdessen Fadenschnitt-Befehlt bevorzugen, führe die Funktion `Pfad > Aufspalten`.
+  Aktiviere anschließend in den Parametern die Option `Fadenschnitt`.
 
+### Mäander im negativen Raum
 
+Wähle die andere Kopie des Textes aus
+* `Pfad > Kombinieren`
+* Im `Ebenen und Objekte`-Dialog kann überprüft werden, ob der Text über dem Rechteck liegt.
+  Wenn nötig kann die Reihenfolge hier angepasst werden.
+* Wähle den Text als auch das Rechteck an
+* `Pfad > Differenz`
+* Wähle das resultierende Rechteck an und öffne den Parameter-Dialog
+* Wähle als Füllmethode `Mäanderfüllung`
+* `Anwenden und Schließen`.
 
-## Negative space writing
+Das Ergebnis kann jetzt gestickt werden.
 
-Meannder fill is very fast to embroider, but may be  somewhat long to calculate. The larger the area to be filled, the longer it takes.
-Don't start with too large an area to fill.
+## Die richtige Schrift wählen
 
-In the  embroidered  negative space sample, they are two embroidery steps, a triple stitch around the letters and a meander fill in the space around the letters.
-
-Draw a rectangle (or another shape) around your text where you want  meandering. Give it a fill color, but no stroke color.
-Lower the opacity if you wish, it won't change the result.
-
-Before you turn your text object into a path, duplicate it, you will need both copies.
-
-
-
-### Triple stitch 
-
-* Select one of the copies of your text
-* Remove the fill color, and add a stroke color
-* `Path > Object to path`
-* In the "Layers and Objects" dialog, your text object has turned into a group of paths
-* Select this group of paths and `Extensions > Ink/Stitch > Params`
-* Set your  bean stitch parameters
-
-![Bean stitch Parameter](/assets/images/tutorials/meandering_writing/bean-parameter.jpg)
-* The params simulator shows that there will be jumps  inside the letters. If you want to turn them into trims, select the letters and `Path > Break Apart`
-* You will need to call Params again.
-
-### Negative space meandering
-
-* Select the other text copy 
-* `Path > Object to path`
-* `Path > Combine`
-* Instead of the text object, you now have a group which contains exactly one path.
-* Check that this group is above the rectangle in the "Layers and Objects" dialog. If necessary move the rectangle.
-* Select both the group that contains the text  and  the rectangle
-* `Path > Exclude`
-* Check that the result of the operation is selected
-* `Extensions > Ink/Stitch > Params` and choose the settings for  your meanders.
-
-"Apply and Quit" and you are all set.
-
-
-
-## How to choose the font
-Choose a plump font, you want to avoid narrow areas. If possible at least in bold.
-
-
+Wähle eine breite, dicke Schrift. Vermeide Schriften mit schmalen Bereichen.

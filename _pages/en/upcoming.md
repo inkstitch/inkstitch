@@ -93,7 +93,6 @@ We have good news: Ink/Stitch will be significantly faster due to stitch plan ca
   * Params have become more flexible. Switching between running stitches and zigzag lines is more easy.
     No need to setup a dashed line for running stitches anymore.
   * Improved running stitch algorithm (stitch length is more consistant)
-  * Zig-zag: Add warning to the troubleshoot extension to inform about dashed lines if the zig zag is small
   * `svg:line` elements are recognized as normal stroke elements now
 
 ### Zigzag Stitch
