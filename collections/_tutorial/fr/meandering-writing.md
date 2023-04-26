@@ -83,8 +83,11 @@ Avant de transformer votre objet texte en chemin, dupliquez-le, vous aurez besoi
 * Sélectionnez l'autre copie du texte
 * `Chemin > Objet en chemin`
 * `Chemin > Combiner`
-* Vous avez maintenant à la place de l'objet texte un groupe qui contient exactement un chemin. Sélectionnez ce groupe et votre rectangle
+* Vous avez maintenant à la place de l'objet texte un groupe qui contient exactement un chemin. 
+* Vérifiez que ce groupe est bien au dessus du rectangle de fond, au besoin déplacer le rectangle
+* Sélectionnez le groupe qui contient le texte (ou le texte) et votre rectangle
 * `Chemin > Exclusion`
+*  Vérifiez que le résultat de l'opération est bien selectionné 
 *  `Extensions > Ink/Stitch > Paramètres` et paramétrer vos méandres.
 
 Et voilà il ne reste plus qu'à broder
