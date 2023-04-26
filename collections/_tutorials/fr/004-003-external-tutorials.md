@@ -9,7 +9,7 @@ classes: wide
 ## French Tutorials
 
 * [Augusa](http://lyogau.over-blog.com/tag/inkscape%20inkstitch/)
-* [Daniel K. Schneider](https://edutechwiki.unige.ch/fr/InkStitch?fbclid=IwAR1-HL9yZjhM0T1GP7p7_2kieV91-OwhJ0N1eMttuSfU_Tb4B-SMndDq7wo)
+* [Daniel K. Schneider](https://edutechwiki.unige.ch/fr/InkStitch)
 
 ## Foreign Languages
 
