@@ -22,7 +22,8 @@ Kennt ihr deutsche Tutorials? Immer her damit. Wir setzen gerne einen Link.
 
 ### Französisch
 
-* [Augusa](http://lyogau.over-blog.com/tag/inkscape%20inkstitch/) (French)
+* [Augusa](http://lyogau.over-blog.com/tag/inkscape%20inkstitch/) 
+* [Daniel K. Schneider](https://edutechwiki.unige.ch/fr/InkStitch/)
 
 ### Russisch
 
