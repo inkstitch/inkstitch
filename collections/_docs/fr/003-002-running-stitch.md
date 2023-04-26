@@ -18,6 +18,10 @@ Un point droit est créé à l'aide d'un chemin muni d'une couleur de contour.
 
 Le sens de la broderie est influencé par [la direction du chemin](/fr/docs/customize/#activation-de-la-direction-des-chemins). Si vous souhaitez échanger le départ et l'arrivée de votre point droit, exécutez `Chemin > Inverser`.
 
+Si un objet est constitué de plusieurs chemins, ils seront brodés l'un après l'autre, avec un saut entre chaque.
+
+
+
 ## Paramétres
 
 Ouvrir `Extensions > Ink/Stitch  > Paramètres` pour paramétrer selon vos besoins.
