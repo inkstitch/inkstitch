@@ -4,7 +4,7 @@ title: "Écrire avec des méandres, en positif ou en negatif"
 language: fr
 last_modified_at: 2023-04-26
 excerpt: "Utilser le remplissage en méandre pour écrire"
-image: "/assets/images/tutorials/samples/meandering_writIng.jpg"
+image: "/assets/images/tutorials/samples/meandering_writing.jpg"
 tutorial-type:
   - Sample File
 stitch-type:
