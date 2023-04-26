@@ -34,7 +34,7 @@ create very large letters that will embroider quickly.
 
 ![Font chosing](/assets/images/tutorials/meandering_writing/font-chosing.jpg)
 
-* You may wish to tweak the result. Here the font is ![Rubik ultrabold](htps://fonts.google.com/specimen/Rubik), but the height of the letters has been scaled up while keeping the width. You may also use any inkscape text manipulation tool at this step.
+* You may wish to tweak the result. Here the font is [Rubik ultrabold](htps://fonts.google.com/specimen/Rubik/), but the height of the letters has been scaled up while keeping the width. You may also use any inkscape text manipulation tool at this step.
 
 
 * Selecti your path and `Path > Object to path`
