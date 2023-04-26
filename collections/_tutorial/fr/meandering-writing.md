@@ -34,7 +34,7 @@ En revanche vous pouvez obtenir de très grandes lettres qui se brodent très ra
 
 ![Choix de la fonte](/assets/images/tutorials/meandering_writing/font-chosing.jpg)
 
-* Vous pouvez déformer le texte obtenu. Pour cet exemple,j'ai utilisé la police ![Rubik dans sa version ultrabold](htps://fonts.google.com/specimen/Rubik), 
+* Vous pouvez déformer le texte obtenu. Pour cet exemple,j'ai utilisé la police [Rubik dans sa version ultrabold](htps://fonts.google.com/specimen/Rubik), 
 en allongeant les lettres sans les élargir. Vous pouvez aussi utiliser les fonctions de manipulation de texte d'inkscape.
 
 * Sélectionnez votre texte et `Chemin > Objet en chemin`

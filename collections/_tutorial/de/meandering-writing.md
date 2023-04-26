@@ -30,7 +30,7 @@ Dafür können aber sehr große Buchstaben erstellt werden, die sich schnell sti
 * Nutze das Text-Werkzeug von Inkscape um einen kurzen Text zu schreiben.
 * Lege die gewünschte Schriftart fest.
   ![Font chosing](/assets/images/tutorials/meandering_writing/font-chosing.jpg)
-* Passe evtl. die Schrift an deine Bedürfnisse an. Hier wurde die Schrift ![Rubik ultrabold](htps://fonts.google.com/specimen/Rubik) verwendet.
+* Passe evtl. die Schrift an deine Bedürfnisse an. Hier wurde die Schrift [Rubik ultrabold](htps://fonts.google.com/specimen/Rubik) verwendet.
   Die Höhe wurde bei gleichbleibender Breite etwas vergrößert.
 
 ## Schrift im positiven Raum
