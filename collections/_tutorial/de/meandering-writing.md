@@ -4,7 +4,7 @@ title: "Writing with meander fill"
 language: de
 last_modified_at: 2023-04-24
 excerpt: "Writing using Meander Fill"
-image: "/assets/images/tutorials/samples/meandering_writing.jpg"
+image: "/assets/images/tutorials/tutorial-preview-images/meandering_writing.jpg"
 tutorial-type:
 stitch-type:
   - "Meander Fill"
