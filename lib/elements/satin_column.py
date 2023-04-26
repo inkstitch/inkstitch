@@ -717,7 +717,6 @@ class SatinColumn(EmbroideryElement):
         """
 
         rungs = [shgeo.LineString(self.flatten_subpath(rung)) for rung in self.rungs]
-
         for path_list in split_rails:
             path_list.extend(rung for rung in rungs if path_list[0].intersects(rung) and path_list[1].intersects(rung))
 
