@@ -3,7 +3,7 @@ permalink: /fr/tutorials/meandering-writing/
 title: "Écrire avec des méandres, en positif ou en negatif"
 language: fr
 last_modified_at: 2023-04-26
-excerpt: "Utilser le remplissage en méandre pour écrire"
+excerpt: "Écrire avec le remplissage en méandres"
 image: "/assets/images/tutorials/samples/meandering_writing.jpg"
 tutorial-type:
 stitch-type:
@@ -50,7 +50,7 @@ en allongeant les lettres sans les élargir. Vous pouvez aussi utiliser les fonc
 
 ![Paramètrage](/assets/images/tutorials/meandering_writing/meandering-parameter.jpg)
 
-Appliquez et votre fichier est prêt pour la broderie.....
+Cliquez sur Appliquer et Quitter et votre fichier est prêt pour la broderie.....
 
 
 
@@ -60,7 +60,7 @@ Ne commencez pas par une trop grande zone à remplir.
 
 Dans l'exemple brodé en négatif, la broderie est constituée de deux phases, un point triple autour des lettres et un remplissage en méandres.
 
-Dessinez un rectangle autour de votre texte, là où vous souhaitez broder les méandres. Donnez lui une couleur de fond, mais pas de contour. 
+Dessinez un rectangle (ou une autre forme) autour de votre texte, là où vous souhaitez broder les méandres. Donnez lui une couleur de fond, mais pas de contour. 
 Baissez l'opacité si vous le souhaitez, cela ne changera pas le résultat.
 
 Avant de transformer votre objet texte en chemin, dupliquez-le, vous aurez besoin des deux copies
@@ -71,11 +71,11 @@ Avant de transformer votre objet texte en chemin, dupliquez-le, vous aurez besoi
 * `Chemin > Objet en chemin`
 * Dans le dialogue "Calques et Objets", votre objet texte est devenu un groupe de chemins
 * Sélectionnez ce groupe de chemins et `Extensions > Ink/Stitch > Paramètres`
-* Faites votre parmètrage en point triple
+* Faites votre paramètrage en point triple
 
 ![Paramètrage pointdroit](/assets/images/tutorials/meandering_writing/bean-parameter.jpg)
 * La simulation du paramètrage montre qu'il y aura des sauts de fils à l'intérieur des lettres, pour passer d'un bord à l'autre. Si vous souhaitez les transformer en coupe,sélectionnez les lettres et `Chemin > Séparer` 
-* Vous devrez réapliquer le paramètrage
+* Vous devrez réappliquer le paramètrage
 
 ### Les lettres en négatif
 
@@ -95,4 +95,4 @@ Et voilà il ne reste plus qu'à broder
 ## Indices pour un bon choix de fonte
 Choisissez une fonte bien dodue, vous voulez éviter les zones étroites. Si possible au moins en bold. 
 
-[Télécharger](/assets/images/tutorials/samples/ripple-lady.svg){: download="ripple-lady.svg" }
+
