@@ -1,6 +1,6 @@
 ---
 permalink: /de/tutorials/meandering-writing/
-title: "Writing with meander fill"
+title: "Schrift mit Mäanderfüllung"
 language: de
 last_modified_at: 2023-04-26
 excerpt: "Mit Mäanderfüllung schreiben"
