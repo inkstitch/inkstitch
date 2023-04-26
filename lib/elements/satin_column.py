@@ -454,9 +454,10 @@ class SatinColumn(EmbroideryElement):
                 # Don't bother putting rungs at the start and end.
                 points = points[1:-1]
             else:
-                # But do include one at the start if we wouldn't add one otherwise.
+                # But do include one near the start if we wouldn't add one otherwise.
                 # This avoids confusing other parts of the code.
-                points = points[:-1]
+                linestring_rail = shgeo.LineString(points)
+                points = [linestring_rail.interpolate(0.2)]
 
             rung_endpoints.append(points)
 
