@@ -480,15 +480,15 @@ class Stroke(EmbroideryElement):
                                         stitches=path,
                                         lock_stitches=lock_stitches,
                                         force_lock_stitches=self.force_lock_stitches)
+                # simple satin
+                elif self.stroke_method == 'zigzag_stitch':
+                    patch = self.simple_satin(path, self.zigzag_spacing, self.stroke_width, self.pull_compensation)
                 # running stitch
-                elif self.stroke_method == 'running_stitch':
+                else:
                     patch = self.running_stitch(path, self.running_stitch_length, self.running_stitch_tolerance)
                     # bean stitch
                     if any(self.bean_stitch_repeats):
                         patch.stitches = self.do_bean_repeats(patch.stitches)
-                # simple satin
-                elif self.stroke_method == 'zigzag_stitch':
-                    patch = self.simple_satin(path, self.zigzag_spacing, self.stroke_width, self.pull_compensation)
 
                 if patch:
                     patches.append(patch)
