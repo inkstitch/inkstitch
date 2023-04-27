@@ -1,8 +1,9 @@
 from inkex import errormsg
 
-from .i18n import _
 from .elements import EmbroideryElement
+from .i18n import _
 from .metadata import InkStitchMetadata
+from .svg import PIXELS_PER_MM
 from .svg.tags import INKSTITCH_ATTRIBS
 
 INKSTITCH_SVG_VERSION = 1
@@ -115,6 +116,13 @@ def _update_to_one(element):  # noqa: C901
                 element.get_param('satin_column', False) is False and
                 not element.node.style('stroke-dasharray')):
             element.set_param('stroke_method', 'zigzag_stitch')
+        # grid_size was supposed to be mm, but it was in pixels
+        grid_size = element.get_float_param('grid_size', None)
+        if grid_size:
+            size = grid_size / PIXELS_PER_MM
+            size = "{:.2f}".format(size)
+            element.set_param('grid_size_mm', size)
+            element.remove_param('grid_size')
 
     if element.get_boolean_param('satin_column', False):
         # reverse_rails defaults to Automatic, but we should never reverse an

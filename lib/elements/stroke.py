@@ -20,17 +20,6 @@ from ..utils.param import ParamOption
 from .element import EmbroideryElement, param
 from .validation import ValidationWarning
 
-warned_about_legacy_running_stitch = False
-
-
-class IgnoreSkipValues(ValidationWarning):
-    name = _("Ignore skip")
-    description = _("Skip values are ignored, because there was no line left to embroider.")
-    steps_to_solve = [
-        _('* Open the params dialog with this object selected'),
-        _('* Reduce Skip values or increase number of lines'),
-    ]
-
 
 class MultipleGuideLineWarning(ValidationWarning):
     name = _("Multiple Guide Lines")
@@ -136,7 +125,7 @@ class Stroke(EmbroideryElement):
            unit='mm',
            type='float',
            select_items=[('stroke_method', 'manual_stitch')],
-           sort_index=4)
+           sort_index=5)
     def max_stitch_length(self):
         max_length = self.get_float_param("max_stitch_length_mm", None)
         if not max_length or max_length <= 0:
@@ -151,7 +140,7 @@ class Stroke(EmbroideryElement):
            type='float',
            default=0.4,
            select_items=[('stroke_method', 'zigzag_stitch')],
-           sort_index=5)
+           sort_index=6)
     @cache
     def zigzag_spacing(self):
         return max(self.get_float_param("zigzag_spacing_mm", 0.4), 0.01)
@@ -177,15 +166,37 @@ class Stroke(EmbroideryElement):
            type='int',
            default=10,
            select_items=[('stroke_method', 'ripple_stitch')],
-           sort_index=5)
+           sort_index=7)
     @cache
     def line_count(self):
         return max(self.get_int_param("line_count", 10), 1)
 
-    def get_line_count(self):
-        if self.is_closed or self.join_style == 1:
-            return self.line_count + 1
-        return self.line_count
+    @property
+    @param('min_line_dist_mm',
+           _('Minimum line distance'),
+           tooltip=_('Overrides the number of lines setting.'),
+           unit='mm',
+           type='float',
+           select_items=[('stroke_method', 'ripple_stitch')],
+           sort_index=8)
+    @cache
+    def min_line_dist(self):
+        min_dist = self.get_float_param("min_line_dist_mm")
+        if min_dist is None:
+            return
+        return max(min_dist, 0.01)
+
+    @property
+    @param('staggers',
+           _('Stagger rows this many times before repeating. For linear ripples only.'),
+           tooltip=_('Length of the cycle by which successive stitch rows are staggered. '
+                     'Fractional values are allowed and can have less visible diagonals than integer values.'),
+           type='int',
+           select_items=[('stroke_method', 'ripple_stitch')],
+           default=1,
+           sort_index=9)
+    def staggers(self):
+        return self.get_float_param("staggers", 1)
 
     @property
     @param('skip_start',
@@ -194,7 +205,7 @@ class Stroke(EmbroideryElement):
            type='int',
            default=0,
            select_items=[('stroke_method', 'ripple_stitch')],
-           sort_index=6)
+           sort_index=10)
     @cache
     def skip_start(self):
         return abs(self.get_int_param("skip_start", 0))
@@ -206,22 +217,10 @@ class Stroke(EmbroideryElement):
            type='int',
            default=0,
            select_items=[('stroke_method', 'ripple_stitch')],
-           sort_index=7)
+           sort_index=11)
     @cache
     def skip_end(self):
         return abs(self.get_int_param("skip_end", 0))
-
-    def _adjust_skip(self, skip):
-        if self.skip_start + self.skip_end >= self.line_count:
-            return 0
-        else:
-            return skip
-
-    def get_skip_start(self):
-        return self._adjust_skip(self.skip_start)
-
-    def get_skip_end(self):
-        return self._adjust_skip(self.skip_end)
 
     @property
     @param('exponent',
@@ -230,7 +229,7 @@ class Stroke(EmbroideryElement):
            type='float',
            default=1,
            select_items=[('stroke_method', 'ripple_stitch')],
-           sort_index=8)
+           sort_index=12)
     @cache
     def exponent(self):
         return max(self.get_float_param("exponent", 1), 0.1)
@@ -242,7 +241,7 @@ class Stroke(EmbroideryElement):
            type='boolean',
            default=False,
            select_items=[('stroke_method', 'ripple_stitch')],
-           sort_index=9)
+           sort_index=13)
     @cache
     def flip_exponent(self):
         return self.get_boolean_param("flip_exponent", False)
@@ -254,23 +253,23 @@ class Stroke(EmbroideryElement):
            type='boolean',
            default=False,
            select_items=[('stroke_method', 'ripple_stitch')],
-           sort_index=10)
+           sort_index=14)
     @cache
     def reverse(self):
         return self.get_boolean_param("reverse", False)
 
     @property
-    @param('grid_size',
+    @param('grid_size_mm',
            _('Grid size'),
            tooltip=_('Render as grid. Use with care and watch your stitch density.'),
            type='float',
            default=0,
            unit='mm',
            select_items=[('stroke_method', 'ripple_stitch')],
-           sort_index=11)
+           sort_index=15)
     @cache
     def grid_size(self):
-        return abs(self.get_float_param("grid_size", 0))
+        return abs(self.get_float_param("grid_size_mm", 0))
 
     @property
     @param('scale_axis',
@@ -281,7 +280,7 @@ class Stroke(EmbroideryElement):
            # 0: xy, 1: x, 2: y, 3: none
            options=["X Y", "X", "Y", _("None")],
            select_items=[('stroke_method', 'ripple_stitch')],
-           sort_index=12)
+           sort_index=16)
     def scale_axis(self):
         return self.get_int_param('scale_axis', 0)
 
@@ -293,7 +292,7 @@ class Stroke(EmbroideryElement):
            unit='%',
            default=100,
            select_items=[('stroke_method', 'ripple_stitch')],
-           sort_index=13)
+           sort_index=17)
     def scale_start(self):
         return self.get_float_param('scale_start', 100.0)
 
@@ -305,7 +304,7 @@ class Stroke(EmbroideryElement):
            unit='%',
            default=0.0,
            select_items=[('stroke_method', 'ripple_stitch')],
-           sort_index=14)
+           sort_index=18)
     def scale_end(self):
         return self.get_float_param('scale_end', 0.0)
 
@@ -316,7 +315,7 @@ class Stroke(EmbroideryElement):
            type='boolean',
            default=True,
            select_items=[('stroke_method', 'ripple_stitch')],
-           sort_index=15)
+           sort_index=19)
     @cache
     def rotate_ripples(self):
         return self.get_boolean_param("rotate_ripples", True)
@@ -329,7 +328,7 @@ class Stroke(EmbroideryElement):
            default=0,
            options=(_("flat"), _("point")),
            select_items=[('stroke_method', 'ripple_stitch')],
-           sort_index=16)
+           sort_index=20)
     @cache
     def join_style(self):
         return self.get_int_param('join_style', 0)
@@ -519,9 +518,6 @@ class Stroke(EmbroideryElement):
         return coords[int(len(coords)/2)]
 
     def validation_warnings(self):
-        if self.stroke_method == 1 and self.skip_start + self.skip_end >= self.line_count:
-            yield IgnoreSkipValues(self.shape.centroid)
-
         # guided fill warnings
         if self.stroke_method == 1:
             guide_lines = get_marker_elements(self.node, "guide-line", False, True, True)

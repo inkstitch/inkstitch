@@ -109,6 +109,7 @@ inkstitch_attribs = [
     'cutwork_needle',
     # ripples
     'line_count',
+    'min_line_dist_mm',
     'exponent',
     'flip_exponent',
     'skip_start',
@@ -117,7 +118,7 @@ inkstitch_attribs = [
     'scale_start',
     'scale_end',
     'rotate_ripples',
-    'grid_size',
+    'grid_size_mm',
     # satin column
     'satin_column',
     'satin_method',
@@ -157,6 +158,8 @@ inkstitch_attribs = [
     'stop_after',
     'random_seed',
     'manual_stitch',
+    # legacy
+    'grid_size'
 ]
 for attrib in inkstitch_attribs:
     INKSTITCH_ATTRIBS[attrib] = inkex.addNS(attrib, 'inkstitch')

@@ -12,10 +12,10 @@ from ..stitch_plan import Stitch
 from ..utils.geometry import Point as InkstitchPoint
 from ..utils.geometry import (ensure_geometry_collection,
                               ensure_multi_line_string, reverse_line_string)
+from ..utils.threading import check_stop_flag
 from .auto_fill import (auto_fill, build_fill_stitch_graph, build_travel_graph,
                         collapse_sequential_outline_edges, find_stitch_path,
                         graph_is_valid, travel)
-from ..utils.threading import check_stop_flag
 
 
 def guided_fill(shape,
@@ -150,18 +150,23 @@ def take_only_line_strings(thing):
     return shgeo.MultiLineString(line_strings)
 
 
-def apply_stitches(line, max_stitch_length, num_staggers, row_spacing, row_num):
+def apply_stitches(line, max_stitch_length, num_staggers, row_spacing, row_num, threshold=None):
     if num_staggers == 0:
         num_staggers = 1  # sanity check to avoid division by zero.
     start = ((row_num / num_staggers) % 1) * max_stitch_length
     projections = np.arange(start, line.length, max_stitch_length)
     points = np.array([line.interpolate(projection).coords[0] for projection in projections])
+
+    if len(points) <= 2:
+        return line
+
     stitched_line = shgeo.LineString(points)
 
     # stitched_line may round corners, which will look terrible.  This finds the
     # corners.
-    threshold = row_spacing / 2.0
-    simplified_line = line.simplify(row_spacing / 2.0, False)
+    if not threshold:
+        threshold = row_spacing / 2.0
+    simplified_line = line.simplify(threshold, False)
     simplified_points = [shgeo.Point(x, y) for x, y in simplified_line.coords]
 
     extra_points = []
