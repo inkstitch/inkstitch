@@ -37,7 +37,7 @@ def open_url(url):
     if sys.platform == "darwin" and getattr(sys, 'frozen', None) is None:
         mac_dev_env = os.environ.copy()
         # these are paths installed by brew or macports
-        yarn_path = "/usr/local/bin:/opt/local/bin:"
+        yarn_path = "/opt/homebrew/bin:/usr/local/bin:/opt/local/bin:"
         if yarn_path in mac_dev_env["PATH"]:
             pass
         else:
