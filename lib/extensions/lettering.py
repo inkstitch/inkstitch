@@ -68,7 +68,7 @@ class LetteringFrame(wx.Frame):
         # options
         self.options_box = wx.StaticBox(self, wx.ID_ANY, label=_("Options"))
 
-        self.scale_spinner = wx.SpinCtrl(self, wx.ID_ANY, min=100, max=100, initial=100)
+        self.scale_spinner = wx.SpinCtrl(self, wx.ID_ANY, min=0, max=1000, initial=100)
         self.scale_spinner.Bind(wx.EVT_SPINCTRL, lambda event: self.on_change("scale", event))
 
         self.back_and_forth_checkbox = wx.CheckBox(self, label=_("Stitch lines of text back and forth"))
