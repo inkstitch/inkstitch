@@ -10,14 +10,21 @@ page_specs = Blueprint('page_specs', __name__)
 
 @page_specs.route('')
 def get_page_specs():
+    svg = g.extension.document.getroot()
+    width = svg.get('width', 0)
+    height = svg.get('height', 0)
+    pagecolor = "white"
+    deskcolor = "white"
 
-    metadata = g.extension.get_inkstitch_metadata()
+    namedview = svg.namedview
+    if namedview is not None:
+        pagecolor = namedview.get('pagecolor', pagecolor)
+        deskcolor = namedview.get('inkscape:deskcolor', deskcolor)
 
     page_specs = {
-        "width": metadata.document.get('width'),
-        "height": metadata.document.get('height'),
-        "pagecolor": metadata.document[1].get('pagecolor'),
-        "deskcolor": metadata.document[1].get('inkscape:deskcolor')
+        "width": width,
+        "height": height,
+        "pagecolor": pagecolor,
+        "deskcolor": deskcolor
     }
-
     return jsonify(page_specs)
