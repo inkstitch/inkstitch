@@ -16,7 +16,7 @@ class CutSatin(InkstitchExtension):
         if not self.get_elements():
             return
 
-        if not self.svg.selection:
+        if not self.svg.selection or not any([isinstance(element, SatinColumn) for element in self.elements]):
             inkex.errormsg(_("Please select one or more satin columns to cut."))
             return
 

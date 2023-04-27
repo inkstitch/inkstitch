@@ -454,15 +454,19 @@ class SatinColumn(EmbroideryElement):
                 # Don't bother putting rungs at the start and end.
                 points = points[1:-1]
             else:
-                # But do include one at the start if we wouldn't add one otherwise.
+                # But do include one near the start if we wouldn't add one otherwise.
                 # This avoids confusing other parts of the code.
-                points = points[:-1]
+                linestring_rail = shgeo.LineString(points)
+                points = [linestring_rail.interpolate(0.2)]
 
             rung_endpoints.append(points)
 
         rungs = []
         for start, end in zip(*rung_endpoints):
-            rungs.append([[start, start, start], [end, end, end]])
+            rung = shgeo.LineString((start, end))
+            # make it a bit bigger so that it definitely intersects
+            rung = shaffinity.scale(rung, 1.1, 1.1).coords
+            rungs.append([[rung[0]] * 3, [rung[1]] * 3])
 
         return rungs
 
@@ -613,8 +617,8 @@ class SatinColumn(EmbroideryElement):
             rails.reverse()
             path_list = rails
 
-            rung_start = path_list[0].interpolate(0.1)
-            rung_end = path_list[1].interpolate(0.1)
+            rung_start = path_list[0].interpolate(0.2)
+            rung_end = path_list[1].interpolate(0.2)
             rung = shgeo.LineString((rung_start, rung_end))
             # make it a bit bigger so that it definitely intersects
             rung = shaffinity.scale(rung, 1.1, 1.1)
@@ -733,10 +737,14 @@ class SatinColumn(EmbroideryElement):
 
         for path_list in path_lists:
             if len(path_list) in (2, 4):
-                # Add the rung at the start of the satin.
-                rung_start = path_list[0].coords[0]
-                rung_end = path_list[1].coords[0]
+                # Add the rung just after the start of the satin.
+                rung_start = path_list[0].interpolate(0.3)
+                rung_end = path_list[1].interpolate(0.3)
                 rung = shgeo.LineString((rung_start, rung_end))
+
+                # make it a bit bigger so that it definitely intersects
+                rung = shaffinity.scale(rung, 1.1, 1.1)
+
                 path_list.append(rung)
 
     def _path_list_to_satins(self, path_list):
