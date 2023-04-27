@@ -64,11 +64,17 @@ if [ "$BUILD" = "osx" ]; then
                         artifacts/inkstitch-${VERSION}-${OS}.pkg
         if [[ "${GITHUB_REF}" =~ ^refs/tags/v[0-9.]+$ || $NOTARIZE_DEVELOPMENT_BUILDS == true ]]; then
             echo "Notary starting"
-            bash bin/notarize-app "929A568N58" \
-                                "${NOTARY_ACCOUNT}" \
-                                "${NOTARY_PASSWORD}" \
-                                "org.inkstitch.app" \
-                                artifacts/inkstitch-${VERSION}-${OS}.pkg
+            echo "Adding keychain item for notarytool"
+            xcrun notarytool store-credentials "inkstitch-profile"  \
+                                                --apple-id "${NOTARY_ACCOUNT}" \
+                                                --team-id '929A568N58' \
+                                                --password "${NOTARY_PASSWORD}"
+            echo "Invoking notary process"
+            xcrun notarytool submit --wait \
+                                    --keychain-profile "inkstitch-profile" \
+                                    artifacts/inkstitch-${VERSION}-${OS}.pkg
+            echo "Stapling the pkg for release"
+            xcrun stapler staple artifacts/inkstitch-${VERSION}-${OS}.pkg
         fi
     else
         # local builds will not be signed or notarized
@@ -84,7 +90,7 @@ if [ "$BUILD" = "osx" ]; then
     fi
     # Creating the zip for Drag n' Drop install
     cd dist
-    python -m zipfile -c ../artifacts/inkstitch-${VERSION}-${OS}.zip *
+    7z a ../artifacts/inkstitch-${VERSION}-${OS}.zip *
     cd ..
 else
     cp -a images/examples palettes symbols fonts tiles dbus inx LICENSE VERSION dist/inkstitch
@@ -123,6 +129,7 @@ EOF
         -n inkstitch \
         -v "$deb_version" \
         -d "inkscape >= 1.0.0" \
+        --deb-compression xz \
         --license "GPL-3.0" \
         --description "An open-source machine embroidery design platform based on Inkscape" \
         --url "https://inkstitch.org" \
@@ -137,6 +144,7 @@ EOF
         -n inkstitch \
         -v "$VERSION" \
         -d "inkscape >= 1.0.0" \
+        --rpm-compression xz \
         --license "GPL-3.0" \
         --description "An open-source machine embroidery design platform based on Inkscape" \
         --url "https://inkstitch.org"  \
