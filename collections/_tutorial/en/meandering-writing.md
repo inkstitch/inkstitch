@@ -44,7 +44,7 @@ create very large letters that will embroider quickly.
   * Uncheck Underlay in the Underlay Fill tab
   * If you prefer trims over jumps, check Trim after. You may wish to do so temporarly to avoid seeing the jumps in the params simulator window.
   * Play with the settings to choose your favorite meanders
-  * You can also configure letter by letter and choose different meanders for each letter. Sometimes a letter is more difficult to fill because of its shape, parametring  it separately may help
+  * You can also configure letter by letter and choose different meanders for each letter. Sometimes a letter is more difficult to fill because of its shape, parametring  it separately may help.
   * The meandering filling contains a part of randomness, you can also try to reroll the dice (at the bottom of the setting) if an area has been forgotten. Reducing the size of the meander also helps to visit everywhere
 
 
