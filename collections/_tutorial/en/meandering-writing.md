@@ -37,7 +37,7 @@ create very large letters that will embroider quickly.
 * You may wish to tweak the result. Here the font is [Rubik ultrabold](htps://fonts.google.com/specimen/Rubik/), but the height of the letters has been scaled up while keeping the width. You may also use any inkscape text manipulation tool at this step.
 
 
-* Selecti your path and `Path > Object to path`
+* Select your text and `Path > Object to path`
 * In the "Layers and Objects" dialog, your text is turned into a group of paths
 * Select this group and  `Extensions > Ink/Stitch > Params`
 * In the Parameter dialog:
