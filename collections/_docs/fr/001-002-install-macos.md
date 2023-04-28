@@ -5,13 +5,6 @@ excerpt: "Comment installer rapidement Ink/Stitch."
 last_modified_at: 2023-04-19
 toc: true
 ---
-{% comment %}
-## Guide vidéo
-
-Nous fournissons aussi aux débutants des tutoriels vidéo sur notre <i class="fab fa-youtube"></i> [chaine YouTube](https://www.youtube.com/c/InkStitch). Les vidéos sont en anglais. Mais il y a des sous-titres en français.
-
-* <i class="fab fa-apple"></i> [macOS](https://www.youtube.com/watch?v=gmOVLNh9cu8&list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&index=3)
-{% endcomment %}
 
 ## Télécharger
 Téléchargez la dernière version d'Ink/Stitch pour votre version de macOS :
