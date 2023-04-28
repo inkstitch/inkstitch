@@ -2,7 +2,7 @@
 title: "Installation von Ink/Stitch für macOS"
 permalink: /de/docs/install-macos/
 excerpt: "Wie wird Ink/Stitch installiert."
-last_modified_at: 2022-02-13
+last_modified_at: 2023-04-28
 toc: true
 ---
 {% comment %}
@@ -16,8 +16,8 @@ Schaue den Installationsprozess für <i class="fab fa-apple"></i> [macOS](https:
 ## Herunterladen
 Lade die aktuelle Version für dein macOS System herunter.
 
-<p><a href="{{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx.pkg" class="btn btn--info btn--large"><i class="fa fa-download " ></i> Download Ink/Stitch {{ site.github.latest_release.tag_name }} for macOS<br><span style="color:lightblue;">Big Sur / Monterey</span></a></p>
-<p><a href="{{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-capitan-catalina-osx.pkg" class="btn btn--info btn--large"><i class="fa fa-download " ></i> Download Ink/Stitch {{ site.github.latest_release.tag_name }} for macOS<br><span style="color:lightblue;">El Capitan / Sierra / High Sierra / Mojave / Catalina</span></a></p>
+<p><a href="{{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx.pkg" class="btn btn--info btn--large"><i class="fa fa-download " ></i> Download Ink/Stitch {{ site.github.latest_release.tag_name }} for macOS<br><span style="color:lightblue;">Monterey</span></a></p>
+<p><a href="{{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-capitan-catalina-osx.pkg" class="btn btn--info btn--large"><i class="fa fa-download " ></i> Download Ink/Stitch {{ site.github.latest_release.tag_name }} for macOS<br><span style="color:lightblue;">El Capitan / Sierra / High Sierra / Mojave / Catalina / Big Sur</span></a></p>
 
 **Aktuelle Version:** [Ink/Stitch {{ site.github.latest_release.tag_name }} ({{ site.github.latest_release.published_at | date: "%Y-%m-%d"  }})](https://github.com/inkstitch/inkstitch/releases/latest)
 
@@ -27,9 +27,9 @@ Ink/Stitch ist eine Inkscape Erweiterung, deshalb **muss <span style="text-decor
 Inkscape 1.2 funktioniert nicht mit **El Capitan** und **Sierra**. Für diese macOS-Versionen bitte [Inkscape 1.1.2](https://inkscape.org/release/1.1.2/platforms/) installieren.
 {: .notice--warning .bold--warning }
 
-**Big Sur - Monterey:** Öffne die heruntergeladene Datei mit Klick.
+**Monterey:** Öffne die heruntergeladene Datei mit Klick.
 
-**El Capitan - Catalina:** `Strg+Klick` auf die heruntergeladene Installations-Datei und klicke auf `Öffnen`.
+**El Capitan - Big Sur:** `Strg+Klick` auf die heruntergeladene Installations-Datei und klicke auf `Öffnen`.
 
 Klicke auf `Weiter`.
 
