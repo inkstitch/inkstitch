@@ -2,7 +2,7 @@
 title: "Broderie Ondulée"
 permalink: /fr/docs/stitches/ripple-stitch/
 excerpt: ""
-last_modified_at: 2023-04-19
+last_modified_at: 2023-04-29
 toc: true
 ---
 # De quoi s'agit-il ?
@@ -106,6 +106,8 @@ Longueur du point droit||Longueur des points dans le [Mode Point Droit](/fr/docs
 Tolérance du point droit||Tous les points doivent rester au plus à cette distance du chemin. Une tolérance plus faible signifie que les points seront plus rapprochés. Une tolérance plus élevée signifie que les angles vifs peuvent être arrondis.
 Nombre de lignes|<img src="/assets/images/docs/ripple_only_lines.svg" alt="Nombre de lignes"/>|Choisir le nombre de réplications de l'ondulation dans la broderie. La valeur par défaut est 10.
 ◦Sauter les premières lignes <br /> ◦Sauter les dernières lignes  |<img src="/assets/images/docs/ripple_only_skip.svg" alt="Sauter"/>| Permet de sauter (ne pas broder)  ce nombre de réplications au début et/ou à la fin.
+Distance minimum entre les lignes        || Est prioritaire sur le nombre de lignes.
+Décaler les lignes ce nombre de fois avant de répéter.    ||  Ce paramètre détermine la longueur du cycle de décalage des rangées. 
 Exposant de la distance entre les lignes|<img src="/assets/images/docs/ripple_only_exponent.svg" alt="Exposant"/>| ◦ La valeur par défaut de 1 espace les réplications de manière constante<br />◦ Avec une valeur supérieure à  1 l'espace  entre deux réplications consécutives augmente au fur et à mesure qu'on s'éloigne du chemin qui définit l'ondulation  <br />◦ Avec une valeur inférieure à  1 l'espace  entre deux réplications consécutives diminue au fur et à mesure qu'on s'éloigne du chemin qui définit l'ondulation.
 Inverser effet exposant |☑  ou ▢| Échange le rôle de la  première et de la dernière réplication pour le calcul de la distance entre les réplications
 Changer le sens |☑  ou ▢|  Change le sens du  chemin final de broderie . N'a pas d'effet sur les autres paramètres.
