@@ -27,7 +27,7 @@ COMMANDS = {
     "fill_end": N_("Fill stitch ending position"),
 
     # L10N command attached to an object
-    "ripple_target": N_("Ripple stitch target position"),
+    "ripple_target": N_("Target position"),
 
     # L10N command attached to an object
     "run_start": N_("Auto-route running stitch starting position"),
