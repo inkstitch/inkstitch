@@ -2,7 +2,7 @@
 title: "Installer Ink/Stitch"
 permalink: /fr/docs/install-macos/
 excerpt: "Comment installer rapidement Ink/Stitch."
-last_modified_at: 2023-04-19
+last_modified_at: 2023-04-29
 toc: true
 ---
 
