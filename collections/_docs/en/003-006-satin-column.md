@@ -125,7 +125,7 @@ Random zig-zag spacing percentage         |![Random zigzag spacing](/assets/imag
 Random Jitter for split stitches          |![Random split stitch jitter](/assets/images/docs/params-satin-random-split-stitch-jitter.png)| Randomizes split stitch length if random phase is enabled, stitch position if disabled.
 Random Phase for split stitches           |☑ | Controls whether split stitches are centered or with a random phase (which may increase stitch count).
 Minimum length for random-phase split     |  | Defaults to maximum stitch length. Smaller values allow for a transition between single-stitch and split-stitch.
-Random seed           | | Use a specific seed for randomized attributes. Uses the element ID if empty. Re-roll if you are not happy with the result.
+Random seed           | | Use a specific seed to compute stitch plan. If empty, the seed is the element ID . Re-roll if you are not happy with the result.
 {: .params-table }
 
 ### Center-Walk Underlay
