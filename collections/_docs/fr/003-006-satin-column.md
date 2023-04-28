@@ -2,7 +2,7 @@
 title: "Colonne Satin"
 permalink: /fr/docs/stitches/satin-column/
 excerpt: ""
-last_modified_at: 2023-04-18
+last_modified_at: 2023-04-28
 toc: true
 ---
 ## Qu’est-ce que c’est
@@ -20,7 +20,7 @@ Ink/Stitch offre plusieurs options pour créer des colonnes satin. Les trois pre
 1. [Convertir ligne en satin](#1-convertir-ligne-en-satin): pour créer des colonnes satin de largeur constante
 2. [Convertir ligne en Effet de Chemin satin](#2-convertir-ligne-en-effet-de-chemin-satin): colonne satin facilement modifiable avec un motif de contour optionnel
 3. [Convertir "ligne en zigzag" en Satin](#3-convertir-ligne-en-zigzag-en-satin): une manière simple de créer les colonnes satin particulièrement bien adaptée aux tablettes graphiques et aux écrans tactiles.
-4. [Colonne satin manuelle](#4-colonne-satin-manuelle): prendre tout le contrôle sur la colonne satin
+4. [Création manuelle de Colonne Satin ](#4-création-manuelle-de-colonne-satin): prendre tout le contrôle sur la colonne satin
 
 ### 1. Convertir ligne en satin
 
@@ -35,8 +35,7 @@ Vous obtenez un chemin composite composé de
 * Utilisez tel quel ou modifiez les traverses ou les rails en déplaçant leur noeuds
 
 * En option lancer `Extensions > Ink/stitch > Outils : Satin > Agencement automatique de colonnes satin...` après avoir sélectionné une ou plusieurs colonnes satins
-
-Get more information about [Stroke to Satin](/fr/docs/satin-tools/#convert-line-to-satin)
+Plus d'informations sur [Convertir ligne en satin](/fr/docs/satin-tools/#convert-line-to-satin)
 
 ### 2. Convertir ligne en effet de chemin satin
 
@@ -49,7 +48,7 @@ Pour plus d'information sur l'[effet de chemin satin ](/fr/docs/satin-tools/#str
 
 ### 3. Convertir "ligne en zigzag" en Satin
 
-Cette péthode est particulierement adaptée aux écrans tactiles et aux tablettes graphiques.
+Cette méthode est particulierement adaptée aux écrans tactiles et aux tablettes graphiques.
 
 
 
@@ -103,7 +102,7 @@ Cependant, il existe des situations dans lesquelles vous devez ajouter manuellem
 **Info:** Nous recommandons fortement d'utiliser au moins trois traverses. Si vous utilisez exactement deux traverses (et deux rails), il est difficile pour Ink/stitch de décider qui est qui.
 {: .notice--warning }
 
-**Info:** Ink/Stitch examine chaque paire de courbes de Bézier individuellement. Il choisit la plus longue des deux et détermine combien de zig-zags seront nécessaires pour satisfaire le réglage *espacement de zig-zag*. De sorte que l'extérieur de la courbe n'aura jamais des points clairsemés comme dans un zig-zag simple.<br /><br />Toutefois, cela signifie que l'intérieur d'une courbe aura une densité de points supérieure à celle spécifiée. Soyez prudent lorsque vous concevez des courbes prononcées, parce que *broder à une densité trop élevée peut faire un trou dans le tissu*!
+**Info:** Ink/Stitch examine chaque tronçon de rail, c'est à dire chaque paire de courbes de Bézier individuellement . Il choisit la plus longue des deux et détermine combien de zig-zags seront nécessaires pour satisfaire le réglage *espacement de zig-zag*. De sorte que l'extérieur de la courbe n'aura jamais des points clairsemés comme dans un zig-zag simple.<br /><br />Toutefois, cela signifie que l'intérieur d'une courbe aura une densité de points supérieure à celle spécifiée. Soyez prudent lorsque vous concevez des courbes prononcées, parce que *broder à une densité trop élevée peut faire un trou dans le tissu*!. Le paramètrage des points courts peut aider.
 {: .notice--info }
 
 ## Paramètres
@@ -123,13 +122,13 @@ Certains de ces paramètres ne font pas partie de la version récente.
 |---|---|--|
 |Colonne satin personnalisée   | ☑ |Doit être activé pour que ces paramètres prennent effet|
 |Méthode                       | | Choisir `Colonne Satin`|
-|Longueur maximale du point    | ![Maximum stitch length](/assets/images/docs/params-satin-maximum_stitch_length.png) | Les points plus longs seront découpés en plusieus points.
+|Longueur maximale du point    | ![Maximum stitch length](/assets/images/docs/params-satin-maximum_stitch_length.png) | Les points plus longs seront découpés en plusieurs points.
 |Décalage des points courts    | |Les points dans les zones à forte densité seront raccourcis de ce pourcentage.|
 |Distance des points courts    | |Faire des points courts si la distance entre les crêtes est inférieure à cette valeur.|
 |Espacement de Zig-zag         |![exemple d'espacement de zig-zag](/assets/images/docs/params-satin-zig-zag-spacing.png)|la distance de crête à crête entre les zig-zag|
 |Pourcentage de compensation d'étirement |![Pull compensation example](/assets/images/docs/params-satin-pull_compensation.png)|Compensation d'étirement proportionelle à la largeur du point satin. Deux valeurs séparées par un espace peuvent être utilisées pour un effet asymétrique.|
-|Compensation d'étirement      |![exemple de compensation d'étirement](/assets/images/docs/params-satin-pull_compensation.png)|Les points Satin [resserrent le tissu](/fr/tutorials/push-pull-compensation/),   il en résulte une colonne plus étroite que votre dessin dans Inkscape. Ce paramètre étend chaque paire de pénétrations d’aiguilles vers l’extérieur de la colonne satin. Vous devrez expérimentalement déterminer le montant de la compensation en tenant compte de votre tissu, de votre fil et de votre stabilisateur. Deux valeurs séparées par un espace peuvent être utilisées pour un effet asymétrique.|
-Inverser un rail               |![Inverser un rail](/assets/images/docs/satin-reverse-rung.png) | Enabling this may help if your satin renders very strangely.
+|Compensation d'étirement      |![exemple de compensation d'étirement](/assets/images/docs/params-satin-pull_compensation.png)|Les points Satin [resserrent le tissu](/fr/tutorials/push-pull-compensation/),   il en résulte une colonne plus étroite que votre dessin dans Inkscape. Ce paramètre étend chaque paire de pénétrations d’aiguilles vers l’extérieur de la colonne satin. Vous devrez expérimentalement déterminer le montant de la compensation en tenant compte de votre tissu, de votre fil et de votre stabilisateur.<br /> Deux valeurs séparées par un espace peuvent être utilisées pour un effet asymétrique.<br /> Une valeur négative contracte.|
+Inverser la direction des rails    |![Reverse Rung](/assets/images/docs/satin-reverse-rung.png) |Ceci peut aider si le rendu de votre satin est étrange. <br />Options:<br /> ◦ Automatique, valeur par défaut, cherche à détecter et corriger le cas des rails ayant des directions opposées.  <br />◦ Ne pas inverser désactive la détection automatique <br />◦ Inverser la direction du premier rail <br />◦ Inverser la direction du second rail <br />◦ Inverser la direction des deux rails
 |Échanger les rails            |☑ |Échange les deux rails de la colonne satin, ce qui affecte le côté de fin de broderie ainsi que tous les paramètres asymétriques|
 |Autoriser les points d'arrêts | ☑|Ajoute un point d'arrêt à la ou les positions choisies.|
 |Forcer les points d'arrêts    | ☑ | Force un point d'arrêt après l'objet indépendament de la valeur de "Saut de fil" dans les Préférences d'Ink/Stitch|
@@ -143,7 +142,7 @@ Inverser un rail               |![Inverser un rail](/assets/images/docs/satin-re
 |Déplacement aléatoire pour le découpage des points           |![Random split stitch jitter](/assets/images/docs/params-satin-random-split-stitch-jitter.png)| Si le découpage totalement aléatoire des points est activé, ce paramètre rend la longueur du point aléatoire, sinon, le déplacement aléatoire du découpage se fait autour de sa position normale (sans appliquer d'aléatoire)|
 |Découpage totalement aléatoire des points                     | ☑ |Si activé, le découpage des points est totalement  aléatoire (ce qui risque de modifier le nombre de points), sinon, le nombre de points est conservé, mais leur position peut varier du déplacement aléatoire paramétré.|
 |Longueur minimum du point si découpage totalement aléatoire   |  | Par défaut, prend la valeur de la longueur maximum du point. Une valeur inférieure permet une meilleure transition entre les points découpés et les points non découpés.|
-|Graine Aléatoire              | | Utiliser cette graine aléatoire pour le calcul des attributs. Si vide, utilise l'identificateur de l'élément. Relancer si vous n'êtes pas satisfait du résultat.|
+|Graine Aléatoire              | | Utiliser cette graine aléatoire pour le calcul du plan de broderie. Si vide, utilise l'identificateur de l'élément. Relancer le dé si vous n'êtes pas satisfait du résultat.|
 {: .params-table }
 
 ### Sous-couche centrale
