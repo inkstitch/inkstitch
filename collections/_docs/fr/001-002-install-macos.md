@@ -9,12 +9,12 @@ toc: true
 ## Télécharger
 Téléchargez la dernière version d'Ink/Stitch pour votre version de macOS :
 
-<p><a href="{{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx.pkg" class="btn btn--info btn--large"><i class="fa fa-download " ></i> Télécharger Ink/Stitch {{ site.github.latest_release.tag_name }} pour macOS<br /><span style="color:lightblue;">Big Sur / Monterey</span></a></p>
-<p><a href="{{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-capitan-catalina-osx.pkg" class="btn btn--info btn--large"><i class="fa fa-download " ></i> Télécharger Ink/Stitch {{ site.github.latest_release.tag_name }} for macOS<br><span style="color:lightblue;">El Capitan / Sierra / High Sierra / Mojave / Catalina</span></a></p>
+<p><a href="{{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx.pkg" class="btn btn--info btn--large"><i class="fa fa-download " ></i> Télécharger Ink/Stitch {{ site.github.latest_release.tag_name }} pour macOS<br /><span style="color:lightblue;">Monterey</span></a></p>
+<p><a href="{{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-capitan-catalina-osx.pkg" class="btn btn--info btn--large"><i class="fa fa-download " ></i> Télécharger Ink/Stitch {{ site.github.latest_release.tag_name }} for macOS<br><span style="color:lightblue;">El Capitan / Sierra / High Sierra / Mojave / Catalina / Big Sur</span></a></p>
 
-Mojave - Monterey: Cliquez sur le fichier téléchargé pour lancer l'installateur.
+Monterey: Cliquez sur le fichier téléchargé pour lancer l'installateur.
 
-El Capitan - High Sierra: Ctrl+Click  sur le fichier téléchargé et Cliquez sur Ouvrir
+Autres systèmes macOS: Ctrl+Click  sur le fichier téléchargé et Cliquez sur Ouvrir.
 
 Cliquez sur  Continuer.
 
@@ -27,9 +27,9 @@ Ink/Stitch est une extension pour Inkscape. Téléchargez et installez  [Inkscap
 Attention, Inkscape 1.2 ne marche pas avec **El Capitan** and **Sierra**.  Si vous utlilisez une de ces versions de macOS, merci d'installer [Inkscape 1.1.2](https://inkscape.org/release/1.1.2/platforms/).
 {: .notice--warning .bold--warning }
 
-**Big Sur - Monterey:** Lancez l'installateur en cliquant sur le fichier que vous avez téléchargé.
+**Monterey:** Lancez l'installateur en cliquant sur le fichier que vous avez téléchargé.
 
-**El Capitan - Catalina:** `Ctrl+Click` sur le fichier téléchargé et cliquez sur  `ouvrir`.
+**Autres systèmes macOS:** `Ctrl+Click` sur le fichier téléchargé et cliquez sur  `ouvrir`.
 
 Cliquez sur `Continuer`.
 
