@@ -89,6 +89,8 @@ Geradstich Toleranz            || Alle Stiche müssen innerhalb dieser Distanz z
 Anzahl der Linien|<img src="/assets/images/docs/ripple_only_lines.svg" alt="Nombre de lignes"/>| Anzahl der Wiederholungen der Ripple-Form. Voreinstellung: 10.
 ◦ Erste Linien überspringen <br /> ◦ Letzte Linien überspringen |<img src="/assets/images/docs/ripple_only_skip.svg" alt="Sauter"/>| Die ersten / letzten Ripple-Wiederholungen werden übersprungen und die Gesamtanzahl der Wiederholungen verringert sich.
 Linienabstand Exponent|<img src="/assets/images/docs/ripple_only_exponent.svg" alt="Exponant"/>| ◦ Mit der Voreinstellung von 1 ist der Abstand zwischen den Linien konstant<br />◦ Mit einem Wert größer als 1 erhöht sich der Abstand zwischen den Linien sukzessiv<br />◦ Mit einem Wert kleiner als 1 verringert sich der Abstand zwischen den Linien.
+Minimum line distance         || Overrides the number of lines setting.
+Stagger lines this many times before repeating      ||  Setting this dictates the length of the cycle by which successive stitch lines are staggered. 
 Exponent umkehren              |☑  oder ▢| Kehrt den Effekt des Exponent-Wertes um.
 Umkehren                       |☑  oder ▢| Kehrt den gesamten Pfad um (Start = Ende). Andere Parameter bleiben von dieser Einstellung unberührt.
 Größe des Gitters              |<img src="/assets/images/docs/ripple_only_grid.svg" alt="Distance"/>| Fügt quer verlaufende Linien hinzu, die zu einem Gittereffekt führen. Die Größe des Gitters kann auch Auswirkungen auf die Genauigkeit des Linienverlaufs haben.
