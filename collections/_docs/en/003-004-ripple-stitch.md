@@ -89,7 +89,7 @@ Running stitch tolerance      ||All stitches must be within this distance of the
 Number of lines|<img src="/assets/images/docs/ripple_only_lines.svg" alt="Nombre de lignes"/>|Chose how many times the ripple replicates. Default value is 10.
 ◦Skip first lines <br /> ◦Skip last lines  |<img src="/assets/images/docs/ripple_only_skip.svg" alt="Skip"/>| Skip (do not embroider)  that number of replications at start and/or end of the embroidery.
 Minimum line distance         || Overrides the number of lines setting.
-Stagger lines this many times before repeating      ||  Setting this dictates the length of the cycle by which successive stitch lines are staggered. 
+Stagger lines this many times before repeating      ||  Setting this dictates the length of the cycle by which successive stitch lines are staggered. Has no effect on *circular*  ripple stitches. 
 Line distance exponent        |<img src="/assets/images/docs/ripple_only_exponent.svg" alt="Exposant"/>| ◦ With default value of 1 space between replications is constant<br />◦ With a value greater than 1, the space between two consecutive replications increases as one moves away from the original ripple   <br />◦ With a value smaller than 1, the space between two consecutive replications decreases as one moves away from the original ripple.
 Flip exponent                 |☑  or ▢| exchange role of first and last line in the computation of  line distance
 Reverse                       |☑  or ▢|  Reverse the final embroidery path.  Has no effect on the other  parameters.
