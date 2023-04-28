@@ -28,7 +28,7 @@ Cet outil remplacera vos colonnes satin par un nouvel ensemble de colonnes satin
 2. Lancer `Extensions > Ink/Stitch  > Outils de Satin > Agencement automatique de Colonnes Satin...`
 3. Activer les options souhaitées et cliquez sur Appliquer
 
-**Astuce:** Par défaut, le point à l'extrême gauche sera choisi comme départ et celui à l'extrême droite comme fin (même s'ils se trouvent à mi-chemin dans un satin, tel que le bord gauche de la lettre "o"). Vous pouvez le remplacer en activant les [commandes de "Position de départ/fin pour points satin autogénérés"](/fr/docs/commands/).
+**Astuce:** Par défaut, le point à l'extrême gauche sera choisi comme départ et celui à l'extrême droite comme fin (même s'ils se trouvent à mi-chemin dans un satin, tel que le bord gauche de la lettre "o"). Vous pouvez le remplacer en activant les [commandes de "Position de départ/fin pour l'agencement automatique de colonnes satin "](/fr/docs/commands/).
 {: .notice--info }
 
 ### Options
