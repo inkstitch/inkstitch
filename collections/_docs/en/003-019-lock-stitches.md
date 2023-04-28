@@ -38,4 +38,4 @@ At the end of the svg path there is an extra node to indicate in which angle the
 
 ### Custom mm path
 
-Custom mm values are separated by a space. E.g. a custom lock stitch with a path value of 1 1 -1 -1 with a scale setting 0.7 mm will travel 0.7 mm forward (twice) and 0.7 mm backwards (twice). Path values can also be floats (e.g. 0.5 2.2 -0.5 -2.2) if the user wants to travel only fractions of the size setting.
+Custom mm values are separated by a space. E.g. a custom lock stitch with a path value of 1  1  -1  -1 with a scale setting 0.7 mm will travel 0.7 mm forward (twice) and 0.7 mm backwards (twice). Path values can also be floats (e.g. 0.5 2.2 -0.5 -2.2) if the user wants to travel only fractions of the size setting.
