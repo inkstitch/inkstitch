@@ -94,7 +94,7 @@ Il est aussi possible de faire la même opération à partir du paramètrage.
 
 {% include upcoming_release.html %}
 
-Converti une ligne en colonne satin, en utilisant un Effet de Chemin. Cela rend le satin plus adaptable en forme et en largeur qu'une conversion en colonne satin normale.
+Converti une ligne en colonne satin, en utilisant un Effet de Chemin. Cela rend le satin plus adaptable en forme et en largeur qu'une conversion en colonne satin normale. La ligne reste une ligne, mais un effet de chemin lui est appliqué. Si vous utilisez l'éditeur de noeud, vous pourrez agir sur les noeuds de la ligne, même après application de l'effet.
 
 
 
@@ -102,13 +102,20 @@ Converti une ligne en colonne satin, en utilisant un Effet de Chemin. Cela rend 
 
 1. Sélectionner une ligne 
 2. Lancez `Extensions > Ink/Stitch > Outils: Satin > Ligne vers Effet de Chemin Satin...`
-3. Choisir les paramètres qui vous conviennent
-4. Cliquez sur Appliquer
+3. Choisir les paramètres qui vous conviennent:
+ * *Motif* : choix du motif à appliquer repétivement à la colonne satin
+ * *Largeur minimum (mm)* : largeur du motif là où il est le plus étroit
+ * *Largeur maximum (mm)*: largeur du motif là où il est le plus large
+ * *Longueur du motif (mm)*: longueur du motif à répeter
+ * *Étiré* : si coché le motif sera étiré pour que ses répétitions de motif occupent exactement la longueur de la ligne, sinon, il pourra rester un vide en fin de ligne
+ * *Ajouter des traverses*: les motifs ayant tous le même nombre de noeuds sur les deux rails, les traverses sont facultatives. Choisissez d'en ajouter ou non
+ * *Chemin privé*: si coché, la colone satin dispose de son propre motif. Une modification du modif n'influence que cette colonne. Sinon, le motif est commun à toutes les colonnes satin utilisant cet effet et ce motif. Modifier le motif pour l'une d'elle le modifie pour toutes.
+5. Cliquez sur Appliquer
 
 
 ### Appliquer l'effet de chemin
 
-Utilisez `Chemin > Objet en chemin` pour convertir en colonne satin standard.
+Utilisez `Chemin > Objet en chemin` pour convertir en colonne satin standard. 
 
 ### Modifier ou changer le motif
 
@@ -117,10 +124,10 @@ Vous pouvez changer le motif de plusieurs manières :
 * Modifier le chemin comme n'importe quel chemin à l'aide de l'outil noeud.
 * Modifier le motif en ouvrant le dialogue de l'effet de chemin (via `Chemin > Effets de Chemin`):
   * Modifier la largeur du satin via le réglage "Largeur"
-  * Modifier le motif en cliquant sur `Modifier sur la zone de travail` dans `source du motif`.
+  * Modifier le motif en cliquant sur `Modifier sur la zone de travail` dans `Source du motif`.
     
-    ![Modifier sur la zone de travail](/assets/images/tutorials/pattern-along-path/edit.png)
-* Changer de motif en relançant à nouveau cet outil.
+    ![Modifier sur la zone de travail](/assets/images/tutorials/pattern-along-path/edit_french.png)
+* Changer de motif en relançant à nnoveau Convertir Ligne en Effet de Chemin Satin.
 * Convertir en chemin normal  (`Shift + Ctrl + C`)  et rafiner manuellement le chemin (ceci perdra la fonctionnalité Effet de Chemin)
 
 
@@ -138,7 +145,7 @@ Quand vous tracez manuellement une colonne satin, cet outil vous aidera à le fa
 * Sélectionnez la forme et lancez  `Extensions > Ink/Stitch > Outis: Satin > Convertir "Ligne en Zigzag" en Colonne Satin`
   * Sélectionnez votre style de zigzag 
   * Choisissez si votre chemin doit être adouci ou constitué de segments de droites
-  * Choisissez si les traverses doivent être inserrées ou non. Les colonnes satin crées auront toujours autant de noeuds sur les deux rails.
+  * Choisissez si les traverses doivent être inserrées ou non. Les colonnes satin créées auront toujours autant de noeuds sur les deux rails.
 
 ### Style de zigzag
 
