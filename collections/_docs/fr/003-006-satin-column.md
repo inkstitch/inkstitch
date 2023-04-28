@@ -62,7 +62,7 @@ Plus d'information  sur [Convertir "ligne en zigzag" en satin](/fr/docs/satin-to
 
 * [Vérifier les directions de chemin](/fr/docs/customize/#activation-de-la-direction-des-chemins). Pour que la colonne satin fonctionne comme attendu, les deux rails doivent avoir la même direction.
 
-Si ce n'est pas le cas Sélectionnez avec l' *Outil Editer les noeuds* (`N`) un noeud d'un des deux rails et faites `Chemin > Inverser`. Cela n'inversera que le rail sélectionné.
+Si ce n'est pas le cas Sélectionnez avec l' *Outil Editer les noeuds* (`N`) un noeud d'un des deux rails et faites `Chemin > Inverser`. Cela n'inversera que le rail sélectionné. Vous pouvez aussi agir sur la direction des rails dans le paramètrage.
  
 * Ink/Stitch va dessiner des zig-zags entre les deux lignes : pour régler la direction des points de broderie, utilisez la méthode des noeuds ou la méthodes des traverses décrites ci-dessous.
 
