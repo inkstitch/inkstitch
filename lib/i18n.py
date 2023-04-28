@@ -30,7 +30,7 @@ def _set_locale_dir():
     else:
         locale_dir = dirname(dirname(realpath(__file__)))
 
-    if sys.platform == "darwin":
+    if sys.platform == "darwin" and getattr(sys, 'frozen', False):
         locale_dir = os.path.join(locale_dir, "..", 'Resources', 'locales')
     else:
         locale_dir = os.path.join(locale_dir, 'locales')
