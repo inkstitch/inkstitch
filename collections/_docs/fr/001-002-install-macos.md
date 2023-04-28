@@ -17,7 +17,7 @@ Nous fournissons aussi aux débutants des tutoriels vidéo sur notre <i class="f
 Téléchargez la dernière version d'Ink/Stitch pour votre version de macOS :
 
 <p><a href="{{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx.pkg" class="btn btn--info btn--large"><i class="fa fa-download " ></i> Télécharger Ink/Stitch {{ site.github.latest_release.tag_name }} pour macOS<br /><span style="color:lightblue;">Big Sur / Monterey</span></a></p>
-<p><a href="{{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-sierra-capitan-catalina-osx.pkg" class="btn btn--info btn--large"><i class="fa fa-download " ></i> Télécharger Ink/Stitch {{ site.github.latest_release.tag_name }} pour macOS<br /><span style="color:lightblue;">El Capitan / Sierra / High Sierra / Mojave / Catalina</span></a></p>
+<p><a href="{{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-capitan-catalina-osx.pkg" class="btn btn--info btn--large"><i class="fa fa-download " ></i> Télécharger Ink/Stitch {{ site.github.latest_release.tag_name }} for macOS<br><span style="color:lightblue;">El Capitan / Sierra / High Sierra / Mojave / Catalina</span></a></p>
 
 Mojave - Monterey: Cliquez sur le fichier téléchargé pour lancer l'installateur.
 
