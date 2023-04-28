@@ -11,7 +11,7 @@ Le point satin est principalement utilisé pour les bordures, les lettres ou les
 
 ![Stitch Types - Satin Column](/assets/images/docs/stitch-type-satincolumn.jpg)
 
-## Création à partir d'un trait
+## Méthodes de création
 
 Ink/Stitch offre plusieurs options pour créer des colonnes satin. Les trois premières méthodes permettent une conversion vers une colonne satin standard qui pourra ensuite être modifiée manuellement.
 
@@ -22,10 +22,10 @@ Ink/Stitch offre plusieurs options pour créer des colonnes satin. Les trois pre
 3. [Convertir "ligne en zigzag" en Satin](#3-convertir-ligne-en-zigzag-en-satin): une manière simple de créer les colonnes satin particulièrement bien adaptée aux tablettes graphiques et aux écrans tactiles.
 4. [Création manuelle de Colonne Satin ](#4-création-manuelle-de-colonne-satin): prendre tout le contrôle sur la colonne satin
 
-### 1. Convertir ligne en Satin
+### 1. Convertir Ligne en Satin
 
 * Choisir un trait (un objet avec une couleur de contour, mais pas de couleur de remplissage)
-* Définissez l'épaisseur du contour à la taille souhaitée pour la largeur de votre point satin.
+* Définissez l'épaisseur du contour à  la largeursouhaitée pour votre colonne satin.
 * Lancer `Extensions > Ink/Stitch > Outils : Satin > Convertir Ligne en Satin`
 
 Vous obtenez un chemin composite composé de 
@@ -48,9 +48,7 @@ Pour plus d'information sur l'[effet de chemin satin ](/fr/docs/satin-tools/#con
 
 ### 3. Convertir "Ligne en zigzag" en Satin
 
-Cette méthode est particulierement adaptée aux écrans tactiles et aux tablettes graphiques.
-
-
+Cette méthode est particulierement adaptée aux écrans tactiles et aux tablettes graphiques
 
 Plus d'information  sur [Convertir "ligne en zigzag" en satin](/fr/docs/satin-tools/#zigzag-line-to-satin)
 
