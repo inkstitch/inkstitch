@@ -149,7 +149,7 @@ Quand vous tracez manuellement une colonne satin, cet outil vous aidera à le fa
 
 ### Style de zigzag
 
-* Toutes les lignes de zigzag commencent et terminent par une traverse.
+* Toutes les lignes de zigzag commencent et se terminent par une traverse.
 * Pour **Carré (1)** et **dents de scie (2)** dessinez les traverses les unes après les autres.
 *  **zigzag (3)** crée des traverses de chaque pic d'un rail vers le milieu d'un pic sur l'autre rail.
 ![Styles de zigzags](/assets/images/docs/zigzag-line-to-satin.png)
