@@ -22,11 +22,11 @@ Ink/Stitch offre plusieurs options pour créer des colonnes satin. Les trois pre
 3. [Convertir "ligne en zigzag" en Satin](#3-convertir-ligne-en-zigzag-en-satin): une manière simple de créer les colonnes satin particulièrement bien adaptée aux tablettes graphiques et aux écrans tactiles.
 4. [Création manuelle de Colonne Satin ](#4-création-manuelle-de-colonne-satin): prendre tout le contrôle sur la colonne satin
 
-### 1. Convertir ligne en satin
+### 1. Convertir ligne en Satin
 
 * Choisir un trait (un objet avec une couleur de contour, mais pas de couleur de remplissage)
 * Définissez l'épaisseur du contour à la taille souhaitée pour la largeur de votre point satin.
-* Lancer `Extensions > Ink/Stitch > Outils : Satin > Convertir ligne en satin`
+* Lancer `Extensions > Ink/Stitch > Outils : Satin > Convertir Ligne en Satin`
 
 Vous obtenez un chemin composite composé de 
   - deux rails qui correspondent aux bords longs de votre trait 
@@ -35,18 +35,18 @@ Vous obtenez un chemin composite composé de
 * Utilisez tel quel ou modifiez les traverses ou les rails en déplaçant leur noeuds
 
 * En option lancer `Extensions > Ink/stitch > Outils : Satin > Agencement automatique de colonnes satin...` après avoir sélectionné une ou plusieurs colonnes satins
-Plus d'informations sur [Convertir ligne en satin](/fr/docs/satin-tools/#convert-line-to-satin)
+Plus d'informations sur [Convertir ligne en satin](/fr/docs/satin-tools/#convertir-ligne-en-satin)
 
-### 2. Convertir ligne en effet de chemin satin
+### 2. Convertir Ligne en Effet de Chemin Satin
 
 Ceci peut être utilisé pour créer une colonne satin possédant  un motif sur son coutour ou dont la largeur est plus adaptable. Attention, si vous utilisez l'agencement automatique sur ce type de satin, l'effet de chemin sera appliqué et le chemin ne pourra plus être modifié que manuellement.
 
 
 Utilisez `Chemin > Objet en chemin` pour convertir en colonne satin standard (colonne satin manuelle).
 Notez que la largeur de la ligne n'a pas d'influence.
-Pour plus d'information sur l'[effet de chemin satin ](/fr/docs/satin-tools/#stroke-to-live-path-effect-satin)
+Pour plus d'information sur l'[effet de chemin satin ](/fr/docs/satin-tools/#convertir-ligne-en-effet-de-chemin-satin)
 
-### 3. Convertir "ligne en zigzag" en Satin
+### 3. Convertir "Ligne en zigzag" en Satin
 
 Cette méthode est particulierement adaptée aux écrans tactiles et aux tablettes graphiques.
 
@@ -54,7 +54,7 @@ Cette méthode est particulierement adaptée aux écrans tactiles et aux tablett
 
 Plus d'information  sur [Convertir "ligne en zigzag" en satin](/fr/docs/satin-tools/#zigzag-line-to-satin)
 
-### 4. Création manuelle de colonne Satin
+### 4. Création manuelle de Colonne Satin
 
 * Commencez par définir les rails de votre colonne satin : dessinez  **deux traits presque parallèles**. La future colonne satin se brodera en zigzag entre les deux rails, vous pouvez faire varier l'épaisseur de la colonne à votre guise, en faisant varier la distance entre les deux rails.
 
