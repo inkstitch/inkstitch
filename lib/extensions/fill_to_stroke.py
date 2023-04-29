@@ -12,7 +12,7 @@ from shapely.ops import linemerge, nearest_points, split, voronoi_diagram
 from ..elements import FillStitch, Stroke
 from ..i18n import _
 from ..stitches.running_stitch import running_stitch
-from ..svg import PIXELS_PER_MM, get_correction_transform
+from ..svg import get_correction_transform
 from ..utils.geometry import Point as InkstitchPoint
 from ..utils.geometry import line_string_to_point_list
 from .base import InkstitchExtension
@@ -25,7 +25,6 @@ class FillToStroke(InkstitchExtension):
         self.arg_parser.add_argument("--info", dest="help", type=str, default="")
         self.arg_parser.add_argument("-t", "--threshold_mm", dest="threshold_mm", type=float, default=10)
         self.arg_parser.add_argument("-o", "--keep_original", dest="keep_original", type=Boolean, default=False)
-        self.arg_parser.add_argument("-d", "--dashed_line", dest="dashed_line", type=Boolean, default=True)
         self.arg_parser.add_argument("-w", "--line_width_mm", dest="line_width_mm", type=float, default=1)
         self.arg_parser.add_argument("-g", "--close_gaps", dest="close_gaps", type=Boolean, default=False)
 
@@ -44,8 +43,7 @@ class FillToStroke(InkstitchExtension):
             return
 
         # convert user input from mm to px
-        self.threshold = self.options.threshold_mm * PIXELS_PER_MM
-        self.line_width = self.options.line_width_mm * PIXELS_PER_MM
+        self.threshold = convert_unit(self.options.threshold_mm, 'px', 'mm')
 
         # insert centerline group before the first selected element
         first = fill_shapes[0].node
@@ -56,10 +54,9 @@ class FillToStroke(InkstitchExtension):
 
         for element in fill_shapes:
             transform = element.node.transform @ Transform(get_correction_transform(element.node, child=True))
-            dashed = "stroke-dasharray:12,1.5;" if self.options.dashed_line else ""
-            stroke_width = convert_unit(self.line_width, self.svg.unit)
+            stroke_width = convert_unit(self.options.line_width_mm, self.svg.unit, 'mm')
             color = element.node.style('fill')
-            style = "fill:none;stroke:%s;stroke-width:%s;%s" % (color, stroke_width, dashed)
+            style = f"fill:none;stroke:{ color };stroke-width:{ stroke_width }"
 
             multipolygon = element.shape
             for cut_line in cut_lines:
