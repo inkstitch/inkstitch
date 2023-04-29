@@ -2,7 +2,7 @@
 title: "Tools: Satin"
 permalink: /docs/satin-tools/
 excerpt: ""
-last_modified_at: 2023-03-12
+last_modified_at: 2023-04-29
 toc: true
 ---
 `Extensions > Ink/Stitch  > Satin Tools` include a number of useful helpers, making it easy to work with [satin columns](/docs/stitches/satin-column/).
@@ -85,6 +85,17 @@ Converts a stroke into a satin using a live path effect. This makes it more adap
 2. Run `Extensions > Ink/Stitch > Tools: Satin > Stroke to Live Path Effect Satin...`
 3. Set the approximate sizes that you wish your satin to be
 4. Click on apply
+
+## Options
+
+--|--
+Pattern             | ![LPE-Patterns](/assets/images/docs/lpe_patterns.png)
+Min Width (mm)      | ![Min width](/assets/images/docs/lpe_min_width.png)
+Max Width (mm)      | ![Max width](/assets/images/docs/lpe_max_width.png)
+Pattern Length (mm) | ![Length](/assets/images/docs/lpe_length.png)
+Stretched           | ![Stretched](/assets/images/docs/lpe_stretched.png)
+Add rungs           | ![Rungs](/assets/images/docs/lpe_rungs.png)
+Path specific       | Defines wether the path effect only applies to a specific path or to multiple paths. If the effect is not `path specific` all patterns with the same live path effect will update at once (for example if pattern path is manually updated through Inkscapes live path effect dialog).
 
 ### Update and change the pattern
 

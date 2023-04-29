@@ -96,22 +96,23 @@ Il est aussi possible de faire la même opération à partir du paramètrage.
 
 Converti une ligne en colonne satin, en utilisant un Effet de Chemin. Cela rend le satin plus adaptable en forme et en largeur qu'une conversion en colonne satin normale. La ligne reste une ligne, mais un effet de chemin lui est appliqué. Si vous utilisez l'éditeur de noeud, vous pourrez agir sur les noeuds de la ligne, même après application de l'effet.
 
-
-
 ### Usage
 
 1. Sélectionner une ligne 
 2. Lancez `Extensions > Ink/Stitch > Outils: Satin > Ligne vers Effet de Chemin Satin...`
-3. Choisir les paramètres qui vous conviennent:
- * *Motif* : choix du motif à appliquer repétivement à la colonne satin
- * *Largeur minimum (mm)* : largeur du motif là où il est le plus étroit
- * *Largeur maximum (mm)*: largeur du motif là où il est le plus large
- * *Longueur du motif (mm)*: longueur du motif à répeter
- * *Étiré* : si coché le motif sera étiré pour que ses répétitions de motif occupent exactement la longueur de la ligne, sinon, il pourra rester un vide en fin de ligne
- * *Ajouter des traverses*: les motifs ayant tous le même nombre de noeuds sur les deux rails, les traverses sont facultatives. Choisissez d'en ajouter ou non
- * *Chemin privé*: si coché, la colone satin dispose de son propre motif. Une modification du modif n'influence que cette colonne. Sinon, le motif est commun à toutes les colonnes satin utilisant cet effet et ce motif. Modifier le motif pour l'une d'elle le modifie pour toutes.
+3. Choisir les paramètres qui vous conviennent
 5. Cliquez sur Appliquer
 
+## Options
+
+--|--|--
+Motif                  | ![LPE-Patterns](/assets/images/docs/lpe_patterns.png) |Choix du motif à appliquer repétivement à la colonne satin
+Largeur minimum (mm)   | ![Min width](/assets/images/docs/lpe_min_width.png)   |Largeur du motif là où il est le plus étroit
+Longueur du motif (mm) | ![Max width](/assets/images/docs/lpe_max_width.png)   |Largeur du motif là où il est le plus large
+Longueur du motif (mm) | ![Length](/assets/images/docs/lpe_length.png)         |Longueur du motif à répeter
+Étiré                  | ![Stretched](/assets/images/docs/lpe_stretched.png)   |Si coché le motif sera étiré pour que ses répétitions de motif occupent exactement la longueur de la ligne, sinon, il pourra rester un vide en fin de ligne
+Ajouter des traverses  | ![Rungs](/assets/images/docs/lpe_rungs.png)           |Les motifs ayant tous le même nombre de noeuds sur les deux rails, les traverses sont facultatives. Choisissez d'en ajouter ou non
+Chemin privé           |                                                       |Si coché, la colone satin dispose de son propre motif. Une modification du modif n'influence que cette colonne. Sinon, le motif est commun à toutes les colonnes satin utilisant cet effet et ce motif. Modifier le motif pour l'une d'elle le modifie pour toutes.
 
 ### Appliquer l'effet de chemin
 
@@ -130,14 +131,11 @@ Vous pouvez changer le motif de plusieurs manières :
 * Changer de motif en relançant à nnoveau Convertir Ligne en Effet de Chemin Satin.
 * Convertir en chemin normal  (`Shift + Ctrl + C`)  et rafiner manuellement le chemin (ceci perdra la fonctionnalité Effet de Chemin)
 
-
 ## Convertir "Ligne en Zigzag" en Satin
 
 {% include upcoming_release.html %}
 
 Quand vous tracez manuellement une colonne satin, cet outil vous aidera à le faire en une seule étape : au lieu de dessiner d'abord deux rails puis des traverses, cet outil vous permet de dessiner une ligne en zigzag ( ou en dents de scie, ou en carrés) qui pourra ensuite être convertie en colonne satin normale.
-
-
 
 ### Usage
 
