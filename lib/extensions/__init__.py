@@ -33,7 +33,6 @@ from .lettering_force_lock_stitches import LetteringForceLockStitches
 from .lettering_generate_json import LetteringGenerateJson
 from .lettering_remove_kerning import LetteringRemoveKerning
 from .letters_to_font import LettersToFont
-from .zigzag_line_to_satin import ZigzagLineToSatin
 from .object_commands import ObjectCommands
 from .object_commands_toggle_visibility import ObjectCommandsToggleVisibility
 from .output import Output
@@ -51,6 +50,8 @@ from .simulator import Simulator
 from .stitch_plan_preview import StitchPlanPreview
 from .stitch_plan_preview_undo import StitchPlanPreviewUndo
 from .stroke_to_lpe_satin import StrokeToLpeSatin
+from .update_svg import UpdateSvg
+from .zigzag_line_to_satin import ZigzagLineToSatin
 from .zip import Zip
 
 from.lettering_along_path import LetteringAlongPath
@@ -91,6 +92,7 @@ __all__ = extensions = [StitchPlanPreview,
                         Troubleshoot,
                         RemoveEmbroiderySettings,
                         Cleanup,
+                        UpdateSvg,
                         BreakApart,
                         GradientBlocks,
                         ApplyThreadlist,
