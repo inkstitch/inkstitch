@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-04-28 01:16+0000\n"
-"PO-Revision-Date: 2023-04-28 01:18\n"
+"POT-Creation-Date: 2023-04-29 01:14+0000\n"
+"PO-Revision-Date: 2023-04-29 01:15\n"
 "Last-Translator: \n"
 "Language-Team: Catalan\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-28 01:16+0000\n"
+"POT-Creation-Date: 2023-04-29 01:14+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1467,7 +1467,7 @@ msgstr ""
 msgid "Stagger rows this many times before repeating"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:294 lib/elements/stroke.py:192
+#: lib/elements/fill_stitch.py:294
 msgid "Length of the cycle by which successive stitch rows are staggered. Fractional values are allowed and can have less visible diagonals than integer values."
 msgstr ""
 
@@ -2018,7 +2018,11 @@ msgid "Overrides the number of lines setting."
 msgstr ""
 
 #: lib/elements/stroke.py:191
-msgid "Stagger rows this many times before repeating. For linear ripples only."
+msgid "Stagger lines this many times before repeating. For linear ripples only."
+msgstr ""
+
+#: lib/elements/stroke.py:192
+msgid "Length of the cycle by which successive stitch lines are staggered. Fractional values are allowed and can have less visible diagonals than integer values."
 msgstr ""
 
 #: lib/elements/stroke.py:203
