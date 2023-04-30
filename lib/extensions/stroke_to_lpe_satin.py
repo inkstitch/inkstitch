@@ -52,19 +52,20 @@ class StrokeToLpeSatin(InkstitchExtension):
         pattern_obj = satin_patterns[pattern]
         pattern_path = pattern_obj.get_path(self.options.add_rungs, min_width, max_width, length, self.svg.unit)
         pattern_node_type = pattern_obj.node_types
+        copy_type = 'repeated' if self.options.stretched is False else 'repeated_stretched'
 
         if not self.options.path_specific:
-            lpe = self._create_lpe_element(pattern, pattern_path, pattern_node_type)
+            lpe = self._create_lpe_element(pattern, pattern_path, pattern_node_type, copy_type)
 
         for element in self.elements:
             if self.options.path_specific:
-                lpe = self._create_lpe_element(pattern, pattern_path, pattern_node_type, element)
+                lpe = self._create_lpe_element(pattern, pattern_path, pattern_node_type, copy_type, element)
             if isinstance(element, SatinColumn):
-                self._process_satin_column(element, lpe)
+                self._process_satin_column(element, lpe, pattern_path, copy_type)
             elif isinstance(element, Stroke):
                 self._process_stroke(element, lpe)
 
-    def _create_lpe_element(self, pattern, pattern_path, pattern_node_type, element=None):
+    def _create_lpe_element(self, pattern, pattern_path, pattern_node_type, copy_type, element=None):
         # define id for the lpe path
         if not element:
             lpe_id = f'inkstitch-effect-{pattern}'
@@ -75,9 +76,6 @@ class StrokeToLpeSatin(InkstitchExtension):
         previous_lpe = self.svg.getElementById(lpe_id)
         if previous_lpe is not None:
             return previous_lpe
-
-        # the lpe 'pattern along path' has two options to repeat the pattern, get user input
-        copy_type = 'repeated' if self.options.stretched is False else 'repeated_stretched'
 
         lpe = inkex.PathEffect(attrib={'id': lpe_id,
                                        'effect': "skeletal",
@@ -125,22 +123,36 @@ class StrokeToLpeSatin(InkstitchExtension):
         parent.replace(element.node, path_element)
         return Stroke(path_element)
 
-    def _process_satin_column(self, element, lpe):
+    def _process_satin_column(self, element, lpe, pattern_path, copy_type):
         current_effects = element.node.get(PATH_EFFECT, None)
         # there are possibly multiple path effects, let's check if inkstitch-effect is among them
         if not current_effects or 'inkstitch-effect' not in current_effects:
             # it wouldn't make sense to apply it to a normal satin column without the inkstitch-effect
             inkex.errormsg(_('Cannot convert a satin column into a live path effect satin. Please select a stroke.'))
             return
-        # isolate get the inkstitch effect
+
+        # get the inkstitch effect
         current_effects = current_effects.split(';')
         inkstitch_effect_position = [i for i, effect in enumerate(current_effects) if 'inkstitch-effect' in effect][0]
         inkstitch_effect = current_effects[inkstitch_effect_position][1:]
-        # get the path effect element
         old_effect_element = self.svg.getElementById(inkstitch_effect)
-        # remove the old inkstitch-effect if it is path specific
+        old_pattern_type = inkstitch_effect[17:]
+
+        # update pattern if it is equal to the previous pattern
+        if not self.options.path_specific and old_pattern_type == self.options.pattern:
+            old_effect_element.set('pattern', pattern_path)
+            old_effect_element.set('copytype', copy_type)
+            element.node.pop('d')
+            return
+
+        # remove the old inkstitch-effect if it was path specific
         if inkstitch_effect.endswith(element.id):
-            old_effect_element.getparent().remove(old_effect_element)
+            if old_pattern_type.startswith(self.options.pattern) and self.options.path_specific:
+                old_effect_element.set('pattern', pattern_path)
+                old_effect_element.set('copytype', copy_type)
+            else:
+                old_effect_element.getparent().remove(old_effect_element)
+
         # update path effect link
         current_effects[inkstitch_effect_position] = lpe.get_id(as_url=1)
         element.node.set(PATH_EFFECT, ';'.join(current_effects))
@@ -197,7 +209,7 @@ class SatinPattern:
 satin_patterns = {'normal': SatinPattern('M 0,0.4 H 4 H 8', 'cc'),
                   'pearl': SatinPattern('M 0,0 C 0,0.22 0.18,0.4 0.4,0.4 0.62,0.4 0.8,0.22 0.8,0', 'csc'),
                   'diamond': SatinPattern('M 0,0 0.4,0.2 0.8,0', 'ccc'),
-                  'triangle': SatinPattern('M 0,0 0.4,0.1 0.8,0.2 0.81,0', 'cccc'),
-                  'square': SatinPattern('M 0,0 H 0.2 0.4 L 0.402,0.2 H 0.798 L 0.8,0', 'ccccc'),
+                  'triangle': SatinPattern('M 0,0 0.4,0.1 0.78,0.2 0.8,0', 'cccc'),
+                  'square': SatinPattern('M 0,0 H 0.2 0.4 L 0.47,0.2 H 0.8 L 0.86,0', 'ccccc'),
                   'wave': SatinPattern('M 0,0 C 0.2,0.01 0.29,0.2 0.4,0.2 0.51,0.2 0.58,0.01 0.8,0', 'cac'),
                   'arch': SatinPattern('M 0,0.25 C 0,0.25 0.07,0.05 0.4,0.05 0.7,0.05 0.8,0.25 0.8,0.25', 'czcczc', False)}
