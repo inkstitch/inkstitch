@@ -87,7 +87,7 @@ Avec toujours la bordure sélectionnée :
 
  ![satin_path_effet_after](/assets/images/tutorials/circular_monogram/changer_motif.jpg)
  
- * Modifiez le motif à votre gout : ici on a applati le rail suppérieur  et augmenté la largeur
+ * Modifiez le motif à votre gout : ici on a applati un rail et augmenté la largeur
 
 ![satin_path_effet_after](/assets/images/tutorials/circular_monogram/modifier_motif_after.jpg)
 
