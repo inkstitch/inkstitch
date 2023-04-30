@@ -182,6 +182,8 @@ jobs:
           echo "${{ env.pythonLocation }}/bin" >> $GITHUB_PATH
       - shell: bash
         run: |
+          # disable electron-builder signing
+          export CSC_IDENTITY_AUTO_DISCOVERY=false
           make dist
         env:
           BUILD: osx
