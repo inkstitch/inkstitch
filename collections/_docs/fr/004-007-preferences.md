@@ -2,7 +2,7 @@
 title: "Préférences"
 permalink: /fr/docs/preferences/
 excerpt: ""
-last_modified_at: 2023-04-15
+last_modified_at: 2023-04-30
 toc: false
 ---
 La version courante (v 2.2.0) n'a pas de réglage global.
@@ -24,5 +24,5 @@ La simulation tient compte de ces préférences.
 * Seulement en global: **Taille du cache (mb)**  définit la taille maximum occupée sur votre disque dur par les plans de broderie mis en cache. Plus cette valeur est grande, plus il sera possible de possible de stocker des plans de broderie. Un plan de broderie mis en cache sera affiché beaucoup plus rapidement. La valeur par défaut est 100.
 
 
-**W6 machine:** Réglez votre longueur minimum de point global à au moins 0.3mm, sinon vous risquez des points manquants à des endroits inattendus.
+**Si vous utilisez une W6 machine:** Réglez votre longueur minimum de point global à au moins 0.3mm, sinon vous risquez des points manquants à des endroits inattendus.
 {: .notice--warning }
