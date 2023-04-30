@@ -29,7 +29,8 @@ Ink/Stitch offre divers types pour les points de sureté et vous permet même de
 
 ## Points de sureté personnalisés
 
-Il est possible de définir des points de sureté personnalisés à l'aide d'un chemin svg avec comme unité le mm (échelle : %) ou des unités relatives au nombre de pas en avant ou en arrière (échelle :mm)
+Il est possible de définir des points de sureté personnalisés  dans le paramètre chemin personnalisé soit à l'aide d'un chemin svg avec comme unité le mm (échelle : %) soit avec des unités relatives au nombre de pas en avant ou en arrière (échelle :mm)
+
 
 
 ### Chemin svg personnalisé
