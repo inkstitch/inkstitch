@@ -448,7 +448,7 @@ class DrawingPanel(wx.Panel):
 
     def draw_needle_penetration_points(self, canvas, pen, stitches):
         if self.control_panel.nppBtn.GetValue():
-            npp_pen = wx.Pen(pen.GetColour(), width=int(0.3 * PIXELS_PER_MM * self.PIXEL_DENSITY))
+            npp_pen = wx.Pen(pen.GetColour(), width=int(0.5 * PIXELS_PER_MM * self.PIXEL_DENSITY))
             canvas.SetPen(npp_pen)
             canvas.StrokeLineSegments(stitches, stitches)
 
