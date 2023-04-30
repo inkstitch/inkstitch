@@ -17,7 +17,6 @@
           <param name="threshold_mm" type="float" precision="2" min="0" max="500"
                  gui-text="Threshold for dead ends (mm)"
                  gui-description="Deletes small lines. A good value in most cases is the approximate line width of the original shape">10</param>
-          <param name="dashed_line" type="boolean" gui-text="Dashed line">true</param>
           <param name="line_width_mm" type="float" gui-text="Line width (mm)" min="0" max="15" precision="2">0.26</param>
           <param name="close_gaps" type="boolean" gui-text="Cut lines: close gaps">false</param>
       </page>
