@@ -17,7 +17,7 @@ user-level:
 
 ![Brodé](/assets/images/tutorials/tutorial-preview-images/circular_monogram.jpg)
 
-Ce tutoriel n'utilise pas le module lettrage de Ink/Stich**
+Ce tutoriel n'utilise pas le module lettrage de Ink/Stich
 {: .notice--info }
 
 Cette méthode ne permet pas d'obtenir des écritures de petite taille (comptez au moins 5cm de hauteur pour les lettres).
