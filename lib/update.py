@@ -4,7 +4,7 @@ from .elements import EmbroideryElement
 from .i18n import _
 from .metadata import InkStitchMetadata
 from .svg import PIXELS_PER_MM
-from .svg.tags import INKSTITCH_ATTRIBS
+from .svg.tags import EMBROIDERABLE_TAGS, INKSTITCH_ATTRIBS
 
 INKSTITCH_SVG_VERSION = 1
 
@@ -44,7 +44,8 @@ def update_inkstitch_document(svg):
         for element in document.iterdescendants():
             # We are just checking for params and update them.
             # No need to check for specific stitch types at this point
-            update_legacy_params(EmbroideryElement(element), file_version, INKSTITCH_SVG_VERSION)
+            if element.tag in EMBROIDERABLE_TAGS:
+                update_legacy_params(EmbroideryElement(element), file_version, INKSTITCH_SVG_VERSION)
         _update_inkstitch_svg_version(svg)
 
 
@@ -100,7 +101,7 @@ def _update_to_one(element):  # noqa: C901
         element.set_param('fill_underlay', False)
 
     # convert legacy stroke_method
-    if element.get_style("stroke"):
+    if element.get_style("stroke") and not element.node.get('inkscape:connection-start', None):
         # manual stitch
         legacy_manual_stitch = element.get_boolean_param('manual_stitch', False)
         if legacy_manual_stitch is True:
