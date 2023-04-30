@@ -8,7 +8,7 @@ import sys
 from math import atan2, degrees
 
 from inkex import Boolean, Transform, errormsg
-from shapely.ops import substring
+from inkex.units import convert_unit
 
 from ..elements import Stroke
 from ..i18n import _
@@ -49,7 +49,8 @@ class LetteringAlongPath(InkstitchExtension):
         if self.options.stretch_spaces:
             text_content = self.settings["text"]
             space_indices = [i for i, t in enumerate(text_content) if t == " "]
-            text_width = text_bbox.width
+            text_bbox = text.bounding_box()
+            text_width = convert_unit(text_bbox.width, 'px', self.svg.unit)
 
             if len(text_content) - 1 != 0:
                 stretch_space = (path_length - text_width) / (len(text_content) - 1)
@@ -70,13 +71,14 @@ class LetteringAlongPath(InkstitchExtension):
         for glyph in glyphs:
             # dimensions
             bbox = glyph.bounding_box()
+            transformed_bbox = glyph.bounding_box(glyph.getparent().composed_transform())
             left = bbox.left
-            width = bbox.width
+            transformed_left = transformed_bbox.left
+            width = convert_unit(transformed_bbox.width, 'px', self.svg.unit)
 
             # adjust position
             if old_bbox:
-                right = old_bbox.right
-                distance += left - right + stretch_space
+                distance += convert_unit(transformed_left - old_bbox.right, 'px', self.svg.unit) + stretch_space
 
             if self.options.stretch_spaces and i in space_indices:
                 distance += stretch_space
@@ -85,8 +87,8 @@ class LetteringAlongPath(InkstitchExtension):
             new_distance = distance + width
 
             # calculate and apply transform
-            first = substring(path, distance, distance)
-            last = substring(path, new_distance, new_distance)
+            first = path.interpolate(distance)
+            last = path.interpolate(new_distance)
 
             angle = degrees(atan2(last.y - first.y, last.x - first.x)) % 360
             translate = InkstitchPoint(first.x, first.y) - InkstitchPoint(left, text_y)
@@ -97,7 +99,7 @@ class LetteringAlongPath(InkstitchExtension):
 
             # set values for next iteration
             distance = new_distance
-            old_bbox = bbox
+            old_bbox = transformed_bbox
             i += 1
 
     def load_settings(self, text):
