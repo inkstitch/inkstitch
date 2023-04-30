@@ -278,18 +278,13 @@ def bean_stitch(stitches, repeats):
         return stitches
 
     repeat_list_length = len(repeats)
-    repeat_list_pos = 0
-
     new_stitches = [stitches[0]]
 
-    for stitch in stitches:
+    for i, stitch in enumerate(stitches[1:]):
+        repeat_list_pos = i % repeat_list_length
         new_stitches.append(stitch)
 
         for i in range(repeats[repeat_list_pos]):
             new_stitches.extend(copy(new_stitches[-2:]))
-
-        repeat_list_pos += 1
-        if repeat_list_pos == repeat_list_length:
-            repeat_list_pos = 0
 
     return new_stitches
