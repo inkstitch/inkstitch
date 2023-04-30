@@ -11,15 +11,15 @@ from random import randint
 import inkex
 
 from ..commands import add_commands, ensure_symbol
-from ..elements import FillStitch, SatinColumn, Stroke, nodes_to_elements
+from ..elements import SatinColumn, Stroke, nodes_to_elements
 from ..exceptions import InkstitchException
 from ..extensions.lettering_custom_font_dir import get_custom_font_dir
 from ..i18n import _, get_languages
 from ..marker import MARKER, ensure_marker, has_marker
 from ..stitches.auto_satin import auto_satin
 from ..svg.tags import (CONNECTION_END, CONNECTION_START, EMBROIDERABLE_TAGS,
-                        INKSCAPE_LABEL, SVG_GROUP_TAG, SVG_PATH_TAG,
-                        SVG_USE_TAG, XLINK_HREF, INKSTITCH_ATTRIBS)
+                        INKSCAPE_LABEL, INKSTITCH_ATTRIBS, SVG_GROUP_TAG,
+                        SVG_PATH_TAG, SVG_USE_TAG, XLINK_HREF)
 from ..utils import Point
 from .font_variant import FontVariant
 
@@ -382,9 +382,6 @@ class Font(object):
         for path_child in group.iterdescendants(EMBROIDERABLE_TAGS):
             if not has_marker(path_child):
                 path = path_child
-        if path.get('style') and "fill" in path.get('style'):
-            element = FillStitch(path)
-        else:
             element = Stroke(path)
 
         if element.shape:
