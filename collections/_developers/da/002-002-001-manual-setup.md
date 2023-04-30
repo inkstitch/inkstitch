@@ -4,19 +4,19 @@ permalink: /da/developers/inkstitch/manual-setup/
 last_modified_at: 2021-10-13
 toc: true
 ---
-A manual setup will allow you to edit the code while running the extension.
+En manuel installering giver dig mulighed for at redigere koden, mens du kører udvidelsen.
 
-If you are aiming to debug extensions, and are running on Windows, some supplementary instructions are available at [windows-manual-setup](/developers/inkstitch/windows-manual-setup/)
+Hvis du sigter efter at fejlsøge udvidelser og kører på Windows, er nogle supplerende instruktioner (på engelsk) tilgængelige på: [windows-manual-setup](/developers/inkstitch/windows-manual-setup/)
 
-## How to Install Ink/Stich Manually
+## Hvordan Installere Ink/Stitch manuelt
 
-### 1. Clone the extension source
+### 1. Klon udvidelseskilden
 
 ```
 git clone https://github.com/inkstitch/inkstitch
 ```
 
-### 2. Install Pyembroidery
+### 2. Installering af Pyembroidery
 
 ```
 git clone https://github.com/inkstitch/pyembroidery.git
@@ -25,23 +25,23 @@ pip install -e pyembroidery/
 
 We recommend to use `pyenv` with python 3.8.
 
-### 3. Python Dependencies
+### 3. Python afhængigheder
 
-A few python more modules are needed.
-In some cases this extension uses features that aren’t available in the versions of the modules pre-packaged in distributions, so we recommend installing them directly with pip.
+Et par python-moduler mere er nødvendige.
+I nogle tilfælde bruger denne udvidelse funktioner, der ikke er tilgængelige i versionerne af modulerne, der er færdigpakket i distributioner, så vi anbefaler at installere dem direkte med pip.
 
-Since we already installed pyembroidery just temporarely comment it out before you run these commands.
+Da vi allerede har installeret pyembroidery, kan du kun kommenter det midlertidigt, før du kører disse kommandoer.
 
 ```
 cd inkstitch
 pip install -r requirements.txt
 ```
 
-### 4. Install Electron dependencies
+### 4. Installering af Electron afhængigheder
 
-The Ink/Stitch GUI uses Electron.  You'll need a working NodeJS installation of version 10 or greater.  If you don't have the `yarn` command, install it with `npm install yarn`.
+Ink/Stitch GUI bruger Electron. Du skal bruge en fungerende NodeJS-installation af version 10 eller nyere. Hvis du ikke har kommandoen `yarn`, skal du installere den med `npm install yarn`.
 
-Install Electron and its dependencies:
+Installer Electron og dets afhængigheder:
 
 ```
 cd electron
@@ -49,35 +49,35 @@ yarn install
 cd ..
 ```
 
-### 5. Prepare INX files
+### 5. Forberedelse af INX files
 
-Now we need to create the files for the Inkscape menu.
+Nu skal vi oprette filerne til Inkscape-menuen.
 
 ```
 make inx
 ```
 
-### 6. Symbolically link into the Inkscape extensions directory
+### 6. Link symbolsk til Inkscape-udvidelsesbiblioteket
 
 ```
 cd ~/.config/inkscape/extensions
 ln -s /path/to/inkstitch
 ```
 
-### 7. Run Inkscape.
+### 7. Kør Inkscape.
 
-Changes to the Python code take effect the next time the extension is run. Changes to the extension description files (`*.inx`) take effect the next time Inkscape is restarted.
+Ændringer til Python-koden træder i kraft næste gang udvidelsen køres. Ændringer af udvidelsesbeskrivelsesfilerne (`*.inx`) træder i kraft, næste gang Inkscape genstartes.
 
-## Troubleshoot
+## Problemløsning
 
-### ImportError: No module named shapely
+### ImportError: Intet modul er navngivet  shapely
 
-If Ink/Stitch returns `ImportError: No module named shapely`, then it is likely the version of Python used by Inkscape and the version you installed the Python dependencies for above are different.
+Hvis Ink/Stitch returnerer `ImportError: No module named shapely`, så er det sandsynligvis den version af Python, der bruges af Inkscape, og den version, du installerede Python-afhængighederne for ovenfor, er forskellige.
 
-* Open the file `preferences.xml`.<br>
-  The location can be found under `Edit > Preferences > System > User preferences`
-* Close Inkscape before editing the file.<br>
-  It will otherwise be overwritten when Inkscape closes.
-* Search for the term `<group id="extensions" />` and update to the correct Python interpreter.
+* Åbne fil præferencer: `preferences.xml`.<br>
+ Placeringen kan findes under  `Edit > Preferences > System > User preferences`
+* Luk Inkscape, før du redigerer filen.<br>
+  Ellers vil det blive overskrevet, når Inkscape lukker
+* Søg efter udtrykket `<group id="extensions" />` og opdater til den korrekte Python-fortolker..
 
-  **Example:** Use `<group id="extensions" python-interpreter="/usr/local/bin/python3" />` where `/usr/local/bin/python3` is the value returned by `which python3`.
+  **Eksempel:** Brug `<group id="extensions" python-interpreter="/usr/local/bin/python3" />` hvor `/usr/local/bin/python3` værdien er returneret af `which python3`.
