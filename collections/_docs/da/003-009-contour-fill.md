@@ -1,47 +1,47 @@
 ---
-title: "Contour Fill"
+title: "Konturfyld"
 permalink: /da/docs/stitches/contour-fill/
 excerpt: ""
 last_modified_at: 2023-01-14
 toc: true
 ---
-## What it is
+## Hvad det er
 
 ![Contour fill detail](/assets/images/docs/contour-fill-detail.jpg)
 
-Contour fill covers areas with stitches following the contour of an object.
+Konturfyld dækker områder med sting, der følger konturen af et objekt.
 
-## How to Create
+## Hvordan bruge det
 
-Create a **closed path with a fill color**.
+Lav en **closed path with a fill color**.
 
-## Set Start and End Point
+## Sæt start og ende punkt
 
 Set start and end points for autofill objects with [Visual commands](/docs/commands/).
 
 ## Params
 
-Run `Extensions > Ink/Stitch  > Params`. Set fill method to `Contour Fill` and tweak the settings to your needs.
+Kør `Extensions > Ink/Stitch  > Params`. Set fill method to `Contour Fill` and tweak the settings to your needs.
 
 Settings||Description
 ---|---|---
-Automatically routed fill stitching| ☑ |Must be enabled for these settings to take effect.
-Fill method                        |Contour Fill|Contour Fill must be selected to sew spiral lines of the contour
-Contour Fill Strategy              |![Inner to Outer](/assets/images/docs/contour-fill-innertoouter-bottlenecks.jpg)<br>![Contour spirals](/assets/images/docs/contour-fill-spirals.jpg)|**Inner to outer** (default) is able to fill shapes with bottlenecks<br>**Single spiral** fills a shape with a single spiral from the outside to the inside<br>**Double spiral** fills a shape with a double spiral, starts and ends at the outside border of the shape.
-Join Style                         |Round, Mitered, Beveled |Method to handle the edges when the size the contour is reduced for the inner spirals
-Avoid self-crossing                |![Avoid self crossing effect](/assets/images/docs/contour-fill-self-crossing.jpg)|Wheter inner to outer is allowed to cross itself or not
-Clockwise                          ||Direction to move around the contour
-Maximum fill stitch length         ||The length of each stitch in a row. "Max" is because a shorter stitch may be used at the start or end of a row.
-Spacing between rows               ||Distance between rows of stitches
-Running Stitch tolerance           |![Tolerance Sample](/assets/images/docs/contourfilltolerance.svg) |All stitches must be within this distance of the path.  A lower tolerance means stitches will be closer together.  A higher tolerance means sharp corners may be rounded.
-Allow lock stitches                ||Enables lock stitches in only desired positions
-Force lock stitches                ||Sew lock stitches after sewing this element, even if the distance to the next object is smaller than defined in the collapse length value in the Ink/Stitch preferences.
-Trim After                         ||Trim the thread after sewing this object.
-Stop After                         ||Stop the machine after sewing this object. Before stopping it will jump to the stop position (frame out) if defined.
+Automatically routed fill stitching| ☑ |Skal være aktiveret for at disse indstillinger kan træde i kraft.
+Fill method                        |Contour Fill|Contour Fill skal vælges til at sy spirallinjer af konturen
+Contour Fill Strategy              |![Inner to Outer](/assets/images/docs/contour-fill-innertoouter-bottlenecks.jpg)<br>![Contour spirals](/assets/images/docs/contour-fill-spirals.jpg)|**Inner to outer** (default) er i stand til at fylde figurer med flaskehalse<br>**Single spiral** udfylder en form med en enkelt spiral fra ydersiden til indersiden<br>**Double spiral** udfylder en form med en dobbelt spiral, starter og slutter ved den udvendige kant af formen.
+Join Style                         |Round, Mitered, Beveled |Metode til at håndtere kanterne, når størrelsen af konturen er reduceret for de inderste spiraler
+Avoid self-crossing                |![Avoid self crossing effect](/assets/images/docs/contour-fill-self-crossing.jpg)|Om indre til ydre stikning får lov til at krydse sig selv eller ej
+Clockwise                          ||Hvilken retning at bevæge sig rundt i konturen
+Maximum fill stitch length         ||Længden af hvert sting i en række. "Max" skyldes, at et kortere sting kan bruges i starten eller slutningen af en række.
+Spacing between rows               ||Afstand mellem rækker af stikninger
+Running Stitch tolerance           |![Tolerance Sample](/assets/images/docs/contourfilltolerance.svg) |Alle sømme skal være inden for denne afstand af stien. En lavere tolerance betyder, at stingene vil være tættere sammen. En højere tolerance betyder, at skarpe hjørner kan være afrundede.
+Allow lock stitches                ||Aktiverer hæftesting nogle i ønskede positioner
+Force lock stitches                ||Sy hæftesting efter at have syet dette element, selvom afstanden til det næste objekt er mindre end defineret i værdien for collapse length i Ink/Stitch-præferencerne.
+Trim After                         ||Klip tråden efter at have syet dette objekt.
+Stop After                         ||Stop maskinen efter at have syet dette objekt. Før den stopper, vil den springe til stoppositionen (frame out), hvis den er defineret.
 
-## Underlay
+## Underlag
 
-Underlay in Countour Fill doesn't follow the contour, but uses the fill angle which can be defined in the [fill underlay params](/docs/stitches/fill-stitch#underlay).
+Underlag i Countour Fill følger ikke konturen, men bruger fyldningsvinklen, som kan defineres i [fill underlay params](/docs/stitches/fill-stitch#underlay).
 
-## Samples Files Including Contour Fill Stitches
+## Eksempelfiler med konturfyld sting inkluderet
 {% include tutorials/tutorial_list key="stitch-type" value="Contour Fill" %}
