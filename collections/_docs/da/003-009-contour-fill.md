@@ -21,9 +21,9 @@ Set start and end points for autofill objects with [Visual commands](/docs/comma
 
 ## Params
 
-Kør `Extensions > Ink/Stitch  > Params`. Set fill method to `Contour Fill` and tweak the settings to your needs.
+Kør `Extensions > Ink/Stitch  > Params`. Indstil Fill Method til `Contour Fill` og tilpasse indstillingerne til dine behov.
 
-Settings||Description
+Indstillinger||Beskrivelse
 ---|---|---
 Automatically routed fill stitching| ☑ |Skal være aktiveret for at disse indstillinger kan træde i kraft.
 Fill method                        |Contour Fill|Contour Fill skal vælges til at sy spirallinjer af konturen
