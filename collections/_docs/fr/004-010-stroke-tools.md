@@ -2,7 +2,7 @@
 title: "Outils: Trait"
 permalink: /fr/docs/stroke-tools/
 excerpt: ""
-last_modified_at: 2023-04-18
+last_modified_at: 2023-05-01
 toc: true
 ---
 ## Agencement automatique de points droits
@@ -78,5 +78,6 @@ Ceci crééra un point droit entre la fin du premier élément et le début du s
 * Sélectionnez au moins deux objets
 * Exécutez  `Extensions > Ink/Stitch > Outils: trait > Saut en Trait`
 
+## Tutoriaux utilisant Outils: Trait
 
 {% include tutorials/tutorial_list key="tools" value="Stroke" %}
