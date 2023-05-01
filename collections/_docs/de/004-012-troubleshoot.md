@@ -2,7 +2,7 @@
 title: "Troubleshoot Objects"
 permalink: /de/docs/troubleshoot/
 excerpt: ""
-last_modified_at: 2020-04-28
+last_modified_at: 2020-04-27
 toc: false
 ---
 ## Fehlerbehebung
@@ -51,9 +51,8 @@ If you open a file created with an older version of Ink/Stitch you may need to u
 * Select all objects
 * Run `Extensions > Ink/Stitch > Troubleshoot > Update Ink/Stitch svg`
 
-If you import an older file as part of a new file, you should
-* Select all old objects.
+If you import an older file as part of a new file,  or copy/paste from an old file to a new one, you should
+* Select all old objects
 * Run `Extensions > Ink/Stitch > Troubleshoot > Update Ink/Stitch svg`
-
 
 
