@@ -2,7 +2,7 @@
 title: "Troubleshoot"
 permalink: /docs/troubleshoot/
 excerpt: ""
-last_modified_at: 2020-08-23
+last_modified_at: 2023-04-29
 toc: true
 ---
 
@@ -46,10 +46,15 @@ Sometimes you will find very small shapes and leftover objects from various oper
 * Click apply
 
 {% include upcoming_release.html %}
+
 ## Update Ink/Stitch svg
 
-To use older svg files that you created with inkstitch version 1.2.2 or older, you may need to run this extension. 
-In  particular, if you import some older design as part of your new design, you should select the older elements and run this extension.
+If you open a file created with an older version of Ink/Stitch you may need to update it:
+* Select all objects
+* Run `Extensions > Ink/Stitch > Troubleshoot > Update Ink/Stitch svg`
 
+If you import an older file as part of a new file,  or copy/paste from an old file to a new one, you should
+* Select all old objects
+* Run `Extensions > Ink/Stitch > Troubleshoot > Update Ink/Stitch svg`
 
 
