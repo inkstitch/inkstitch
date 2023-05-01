@@ -156,4 +156,7 @@ Si vous voyez quelque chose comme le dessin ci-dessous, vous avez probablement c
 ![Mauvais choix de style de zigzag](/assets/images/docs/zigzag-line-to-satin-wrong-pattern.png)
 
 
+## Examples d'utilisation de ces outils
+
+
 {% include tutorials/tutorial_list key="tool" value="Satin" %}
