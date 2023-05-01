@@ -77,3 +77,6 @@ Ceci crééra un point droit entre la fin du premier élément et le début du s
 
 * Sélectionnez au moins deux objets
 * Exécutez  `Extensions > Ink/Stitch > Outils: trait > Saut en Trait`
+
+
+{% include tutorials/tutorial_list key="tools" value="Stroke" %}
