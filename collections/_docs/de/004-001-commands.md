@@ -2,7 +2,7 @@
 title: "Visuelle Befehle"
 permalink: /de/docs/commands/
 excerpt: ""
-last_modified_at: 2023-04-22
+last_modified_at: 2023-05-01
 toc: true
 ---
 Visuelle Befehle können genutzt werden, um zusätzliche Informationen darüber festzulegen, wie das Design gestickt werden soll. Sie können z.B. der Maschine mitteilen, dass der Faden nach einem Stickobjekt geschnitten werden soll oder definieren, wann und wo die Maschine pausieren soll, so dass man für eine Applikation bequem ein Stück Stoff hinzufügen kann.
@@ -47,7 +47,7 @@ Diese Befehle hängen sich an ausgewählte Objekte.
 
 Definiert (1) die Start- und (2) die Endposition bei Objekten mit Füllstich.
 
-#### ![ripple stitch target symbol](/assets/images/docs/visual-commands-ripple-target.png) Ripplestich Zielposition
+#### ![ripple stitch target symbol](/assets/images/docs/visual-commands-ripple-target.png) Zielposition
 
 Definiert den Zielpunkt für einen Ripplestich-Bereich
 {% include upcoming_release.html %}
