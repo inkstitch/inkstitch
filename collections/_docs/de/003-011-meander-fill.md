@@ -2,7 +2,7 @@
 title: "Mäander Füllung"
 permalink: /de/docs/stitches/meander-fill/
 excerpt: ""
-last_modified_at: 2023-04-23
+last_modified_at: 2023-05-01
 toc: true
 ---
 {% include upcoming_release.html %}
@@ -37,6 +37,8 @@ Glätten              ||Glättet den Stichpfad. Diese Einstellung zeigt an, wie 
 Auf Pfad beschränken || Nützlich bei der Verwendung von Glätten und Erweitern. Sorgt dafür, dass keine Stiche außerhalb der ursprünglichen Form liegen.
 Stichlänge           ||Definiert die maximale Stichlänge. Minimale Stichlänge bitte über die Geradstich-Toleranz festlegen.
 Geradstich-Toleranz  ||Alle Stiche müssen innerhalb dieser Distanz vom Ursprungspfad liegen. Ein geringerer Toleranzwert bedeutet, dass Stiche enger zusammenliegen. Ein höherer Wert kann zu abgerundeten Ecken führen.
+Wiederholungen                       || ◦ Legt fest, wie oft der Pfad durchlaufen werden soll<br/>◦ Standard: 1 (einmal vom Anfang bis zum Ende des Pfades)<br/>◦ Ungerade Zahl: Stiche enden am Ende des Pfades<br/>◦ Gerade Zahl: Die Naht kehrt zum Anfang des Pfades zurück
+**Mehrfach Geradstitch Anzahl der Wiederholungen** || ◦ Jeden Stich vervielfachen.<br/>◦ Ein Wert von 1 würde jeden Stich verdreifachen (vorwärts, rückwärts, vorwärts).<br/>◦ Ein Wert von 2 würde jeden Stich fünffach ausführen, usw.<br/>◦ Durch die Eingabe mehrerer durch ein Leerzeichen getrennte Werte, kann ein Wiederholungsmuster erstellt werden.
 Vernähen erlauben    || Vernäht bei Bedarf an den ausgewählten Positionen
 Vernähen erzwingen   || Vernäht den Faden nach diesem Element, auch dann, wenn der Abstand zum Folgeobjekt geringer ist als in den [Ink/Stitch Einstellungen](/de/docs/preferences/) definiert.
 Anstecher            ||Wähle die [Anstecher](/docs/stitches/lock-stitches) Variante (Anfang).
