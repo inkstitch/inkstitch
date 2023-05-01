@@ -2,7 +2,7 @@
 title: "Remplissage en méandres"
 permalink: /fr/docs/stitches/meander-fill/
 excerpt: ""
-last_modified_at: 2023-04-25
+last_modified_at: 2023-05-01
 toc: true
 ---
 {% include upcoming_release.html %}
@@ -40,6 +40,8 @@ Lancez `Extensions > Ink/Stitch > Paramètres`. Choisir “Remplissage en méand
 |Clip path                                  ||Constrain stitching to the shape.  Useful when smoothing and expand are used.
 |Longueur maximale du point de remplissage  |![Exemple de longueur de point](/assets/images/docs/params-fill-stitch_length.png) |Pour le remplissage en méandres il s'agit de longueur du point droit résultant.|
 |Tolérance du point droit                   |![Exemple de tolerance](/assets/images/docs/contourfilltolerance.svg) |Tous les points doivent rester au plus à cette distance du chemin. Une tolérance plus faible (en haut sur le dessin) signifie que les points seront plus rapprochés. Une tolérance plus élevée (en bas) signifie que les angles vifs peuvent être arrondis.|
+|Répétitions           ||Combien de fois aller et revenir le long du chemin<br />◦ par défaut: 1 (aller une fois du début à la fin du chemin)<br />◦ Nombre impair: les points se termineront à la fin du chemin<br />◦ Nombre pair: la broderie va revenir au début du chemin|
+|Nombre de répétitions pour le point triple (bean stitch)              |Active le [Mode point triple](/fr/docs/stitches/bean-stitch/)<br />|Une valeur de 1 triplera chaque point (avant, arrière, avant).<br />◦ Une valeur de 2 permettra de quintupler chaque point, etc..<br />◦ Il est possible de définir un motif de répétitions en entrant plusieurs valeurs séparées par un espace|
 |Forcer les points d'arrêts                 |☑|Force un point d'arrêt après l'objet indépendament de la valeur de "Saut de fil" dans les Préférences d'Ink/Stitch.|
 |Autoriser les points d'arrêts              | ☑|Ajoute un point d'arrêt à la ou les positions choisies.|
 |Point d'ancrage                            ||Selectionnez le type du  [point d'ancrage](/fr/docs/stitches/lock-stitches).|
