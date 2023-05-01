@@ -63,7 +63,7 @@ Les ondulations construites à partir d'un chemin simple  (une forme fermée ou 
 Il est possible de définir le point cible de l'ondulation grace aux [commandes visuelles](/fr/docs/commands/).
 
 * Ouvrir `Extensions > Ink/Stitch > Commandes  > Attacher des  commandes à des objets selectionnés  ...`
-* Sélectionner `Position de la cible de la broderie ondulée` et appliquer.
+* Sélectionner `Position de la cible` et appliquer.
 * Sélectionner le symbole et le déplacer à la position souhaitée.
 
 En l'absence de  toute information de guidage, c'est le centre de l'ondulation initiale qui tient lieu de point cible.
