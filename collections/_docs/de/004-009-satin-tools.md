@@ -2,7 +2,7 @@
 title: "Satin Werkzeuge"
 permalink: /de/docs/satin-tools/
 excerpt: ""
-last_modified_at: 2023-03-12
+last_modified_at: 2023-05-01
 toc: true
 ---
 Unter `Erweiterungen > Ink/Stitch  > Satin Tools` befindet sich eine kleine Anzahl nützlicher Helfer, die das Arbeiten mit [Satinsäulen](/docs/stitches/satin-column/) erleichtern sollen.

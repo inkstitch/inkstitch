@@ -108,7 +108,7 @@ Converti une ligne en colonne satin, en utilisant un Effet de Chemin. Cela rend 
 --|--|--
 Motif                  | ![LPE-Patterns](/assets/images/docs/lpe_patterns.png) | Choix du motif à appliquer repétivement à la colonne satin
 Largeur minimum (mm)   | ![Min width](/assets/images/docs/lpe_min_width.png)   | Largeur du motif là où il est le plus étroit
-Largeur maximum (mm) | ![Max width](/assets/images/docs/lpe_max_width.png)     | Largeur du motif là où il est le plus large
+Largeur maximum (mm)   | ![Max width](/assets/images/docs/lpe_max_width.png)   | Largeur du motif là où il est le plus large
 Longueur du motif (mm) | ![Length](/assets/images/docs/lpe_length.png)         | Longueur du motif à répeter
 Étiré                  | ![Stretched](/assets/images/docs/lpe_stretched.png)   | Si coché le motif sera étiré pour que ses répétitions de motif occupent exactement la longueur de la ligne, sinon, il pourra rester un vide en fin de ligne
 Ajouter des traverses  | ![Rungs](/assets/images/docs/lpe_rungs.png)           | Les motifs ayant tous le même nombre de noeuds sur les deux rails, les traverses sont facultatives. Choisissez d'en ajouter ou non
