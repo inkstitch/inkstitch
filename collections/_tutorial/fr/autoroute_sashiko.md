@@ -9,6 +9,8 @@ tutorial-type:
   - Sample File
 stitch-type:
   - "Bean Stitch"
+tool:
+  - "Stroke"
 techniques:
 field-of-use:
 user-level: 
