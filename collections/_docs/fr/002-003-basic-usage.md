@@ -17,23 +17,15 @@ Créez un objet, par exemple un cercle et assurez-vous qu'il a un remplissage en
 
 ![Cercle avec couleur de remplissage](/assets/images/docs/en/basic-usage-circle-fill-color.png)
 
-## Etape 2 - Convertir en chemin (optionnel)
 
-Ink/Stitch travaille mieux avec des chemins. Il est préférable de transformer tous  les objets que vous voulez broder en chemin:
-
-* Sélectionnez tous les objets (`Ctrl+A`)
-* `Chemin > Objet en chemin` ou `Ctrl+Alt+C`.
-
-
-
-## Etape 3 - Paramétrer les chemins SVG pour la broderie
+## Etape 2- Paramétrer les chemins SVG pour la broderie
 
 * Sélectionner au moins un objet.
 * Ouvrir `Extensions > Ink/Stitch  > Paramètres`.
 * Essayer différentes valeurs. Le simulateur s'actualisera à chaque modification des paramètres.
 * Pour l'instant, fermer sans sauvegarder.
 
-## Etape 4 - Créer le fichier de Broderie
+## Etape 3 - Créer le fichier de Broderie
 
 
 * Faire `Fichier > Enregistrer sous...`
