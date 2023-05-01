@@ -37,7 +37,7 @@ La première icône en haut du panneau Outils est l'outil de Sélection. que vou
 Cliquez sur un objet avec l'outil de sélection pour le déplacer sur le canevas et pour faire apparaître des poignées qui permettent de le transformer. Cliquer une fois sur un objet fait apparaître les poignées de redimensionnement, cliquer une deuxième fois les remplace par des poignées de rotation. Garder la touche Majuscule enfoncée pour sélectionner plusieurs objets en même temps. Vous pouvez aussi sélectionner plusieurs objets simultanément en glissant l'outil de sélection autour d'eux. 
 [En savoir plus sur les transformations d'objets.](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Transforms.html)
 
-Les objets peuvent aussi être sélectionnés en ouvrant le panneau Objets (`Objet > Objets...` dans le menu) et en cliquant sur un des noms de la liste. Vous pouvez sélectionner des objets de cette manière quelque soit l'outil actif.
+Les objets peuvent aussi être sélectionnés en ouvrant le panneau Calques et Objets (` Objet > Calques et Objets...` dans le menu) et en cliquant sur un des noms de la liste. Vous pouvez sélectionner des objets de cette manière quelque soit l'outil actif.
 
 Pour utiliser une commande de menu sur un objet (par exemple pour le convertir en chemin) vous devez préalablement le sélectionner.
 
@@ -49,7 +49,8 @@ Il y a de nombreux types d'objets dans Inkscape, tels que chemins, rectangles, c
 
 Un _chemin_ est la représentation la plus basique d'une forme vectorielle : il s'agit juste d'une série de noeuds et de segments qui décrivent une forme. Une fois un chemin créé, seuls les outils de base permettent de l'éditer, et ces outils fonctionnent de la même manière quelque soit l'apparence du chemin.  D'autres objets mémorisent l'information sur leur forme de manière plus spécifique ce qui permet de les modifier facilement. Par exemple, après avoir dessiné un polygone avec l'outil étoile, vous pouvez utiliser les contrôles de l'outil pour changer rapidement le nombre de sommets de la forme. Si vous aviez dessiné la même forme comme un chemin, vous devriez déplacer chaque sommet manuellement pour en ajouter d'autres. Toutefois, vous pouvez modifier un chemin pour obtenir n'importe quelle forme, tandis que les autres types d'objets ont des contraintes sur leur forme.
 
-Le chemin est le type d'objet le plus important pour Ink/Stitch. Votre dessin  **doit être sous forme de chemin** pour qu'Ink/Stitch puisse l'utiliser.
+Ink/stitchh peut maintenant travailler avec presque tous les objets sans qu'il ne soit nécessaire de les transformer en chemins.  L'exception restant l'objet texte qu'Ink/Stitch ne connait pas et qui donc necessite une convertion en chemin.
+
 
 Tout objet peut être converti en chemin en le sélectionnant  (soit en cliquant avec l'outil Sélection, soit en cliquant son nom dans le panneau Objets) puis en tapant `Majuscule+ Ctrl + C` ou en exécutant  `Chemin > Objet en Chemin` dans le menu.  Une fois l'objet converti en chemin, vous pouvez utiliser l'outil d'édition de  Noeuds pour faire des changements précis sur les noeuds et les segments.
 
@@ -72,7 +73,9 @@ Vous pouvez vérifier le type d'un objet dans la description qui apparait dans l
 Faites apparaître le panneau "Fond et Contour" en tapant `Majuscule+Ctrl+F` ou en sélectionnant `Objet > Fond et Contour...`  à partir du menu pour contrôler la couleur et le style du fond et du contour du chemin.
 La couleur exacte et le style de votre chemin n'ont globalement rien à voir avec votre fichier de broderie, mais vous devez savoir comment les éditer car Ink/Stitch utilise le style du contour pour décider du type de point de broderie à utiliser, et insère  ou non des changements de fils selon si les chemins sont ou non de la même couleur.
 
-Ce panneau est assez simple. Pour des chemins qu'Ink/Stitch transformera en point de remplissage, l'onglet Fond doit choisir Aplat (le deuxième choix), et l'onglet Contour doit avoir la croix X sélectionnée (premier choix). Pour tous les autres points, sélectionnez le X dans l'onglet Fond et Aplat dans l'onglet Contour. Utilisez l'onglet "Style de contour" pour choisir soit une ligne pleine soit un pointillé selon le style de point désiré.
+Ce panneau est assez simple. Pour des chemins qu'Ink/Stitch transformera en point de remplissage, l'onglet Fond doit choisir Aplat (le deuxième choix) ou dégradé linéaire (troisième choix) et l'onglet Contour doit avoir la croix X sélectionnée (premier choix). Pour tous les autres points, sélectionnez le X dans l'onglet Fond et Aplat dans l'onglet Contour. Utilisez l'onglet "Style de contour" pour choisir soit une ligne pleine soit un pointillé selon le style de point désiré.
+
+Le dégradé linéaire ne peut s'utiliser que sur un remplissage automatique et nécessitera l'usage ultérieur de [Convertir en bloc de dégradés]
 
 Les couleurs peuvent aussi être choisies en utilisant la palette en bas de la fenêtre : cliquez sur une couleur pour l'utiliser comme une couleur de fond, et faites un clic majuscule pour l'utiliser pour le contour.
 
@@ -87,7 +90,7 @@ Deux commandes sont importantes pour préparer les chemins pour  Ink/Stitch:  Co
 
 La commande  _Combiner_  prend tous les chemins sélectionnés et les fusionne en un seul objet chemin. Inkscape traite alors ces chemins comme une seule unité pour la sélection et la transformation. On peut voir dans le panneau objets que la liste est plus courte après un Combiner. Le résultat de combiner est un _chemin composite_, qui comporte plus qu'une ligne.
 
-La commande _Séparer_ , appliquée à un chemin composite , isole chaque ligne continue dans un objet séparer. Elle sépare le chemin composite en autant de chemins que possible sans perdre de segment. Après son utilisation, la liste des objets sera plus longue.
+La commande _Séparer_ , appliquée à un chemin composite , isole chaque ligne continue dans un objet séparé. Elle sépare le chemin composite en autant de chemins que possible sans perdre de segment. Après son utilisation, la liste des objets sera plus longue.
 
 il y a d'autres commandes pour combiner ou diviser au niveau des noeuds d'un chemin, d'une manière qui change la forme elle même, et pas seulement la manière dont Inkscape la gère.
 [lire plus sur les opérations de chemin.](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Paths-Combining.html)
