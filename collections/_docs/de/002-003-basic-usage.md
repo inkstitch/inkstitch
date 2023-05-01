@@ -16,24 +16,15 @@ Erstelle ein Objekt, z.B. ein Kreis und stelle sicher, dass es eine Füllung hat
 
 ![Kreis mit Füllung](/assets/images/docs/en/basic-usage-circle-fill-color.png)
 
-## Schritt 2 - In einen Pfad konvertieren
 
-Wandele **alle Objekte** die gestickt werden sollen in einen Pfad um:
-
-* Markiere alle Objekte (`Strg + A`)
-* `Pfad -> Objekt in Pfad umwandeln` oder `Strg + Alt + C`. <br>
-
-**Info:** Objekte, die kein Pfad sind, werden von Ink/Stitch ignoriert.
-{: .notice--warning }
-
-## Schritt 3 - SVG-Pfad mit Parametern versehen
+## Schritt 2 - SVG-Pfad mit Parametern versehen
 
 * Wähle mindestens ein Objekt aus.
 * Öffne `Erweiterungen > Ink/Stitch  > Parameter`.
 * Spiele mit den Werten. Der Simulator erneuert das Stickbild mit jeder geänderten Einstellung.
 * Schließe das Fenster ohne zu speichern, um die Standardeinstellungen wiederherzustellen.
 
-## Schritt 4 - Stickdatei erstellen
+## Schritt 3 - Stickdatei erstellen
 
 * Öffne `Datei > Speichern als...`
 * Navigiere zu dem Ordner, in dem du die Datei speichern willst
