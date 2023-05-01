@@ -10,6 +10,9 @@ stitch-type:
   - "Circular Fill"
 techniques:
 field-of-use:
+tools:
+  - "Satin"
+  - "Stroke"
 user-level:
 ---
 
@@ -24,7 +27,7 @@ Cette méthode ne permet pas d'obtenir des écritures de petite taille (comptez 
 {: .notice--warning }
 
 Pour la base de départ, vous pouvez soit utiliser une fonte monogramme que vous aurez installée préalablement sur votre ordinateur , par exemple 
-[celle-ci](https://www.dafont.com/round-monogram.font) ou utiliser un des nombreux sites web qui vous permettent de créer un monogramme, par exemple
+[celle-ci](https://www.dafont.com/round-monogram.font) soit utiliser un des nombreux sites web qui vous permettent de créer un monogramme, par exemple
 [celui-ci](https://www.makemonogram.com/monogram-maker)
 
 Je suis partie de ces 4 chemins
@@ -44,7 +47,7 @@ C'est aussi simple que
 
 ![parametres](/assets/images/tutorials/circular_monogram/parametres.jpg)
 
-A ce moment le remplissage de chaque lettre se fait avec des cercles centrés surson centre.
+A ce moment le remplissage d'une lettre se fait avec des cercles centrés sur son propre centre.
 
 Pour obtenir des cercles tous centrés au même endroit, il suffit d'utiliser des commandes cibles :
 
@@ -68,7 +71,7 @@ mais seule la position du marqueur importe.
  
  * `Chemin > Simplifier`
  
- * `Extensions > Ink/Stitch > Outils Satin :Convertir Trait en Effet de Chemin Satin`
+ * `Extensions > Ink/Stitch > Outils: Satin :Convertir Trait en Effet de Chemin Satin`
 
  ![satin_path_effet_before](/assets/images/tutorials/circular_monogram/satin_path_effect_before.jpg)
  
