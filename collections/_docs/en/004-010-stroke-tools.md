@@ -2,7 +2,7 @@
 title: "Tools: Stroke"
 permalink: /docs/stroke-tools/
 excerpt: ""
-last_modified_at: 2023-03-25
+last_modified_at: 2023-04-30
 toc: true
 ---
 ## Autoroute Running Stitch
@@ -78,3 +78,7 @@ This will create a running stitch from the end position of the first element to 
 
 * Select two or more objects
 * Run `Extensions > Ink/Stitch > Tools: Stroke > Jump Stitch to Stroke`
+
+
+## Tutorials using Tools: Stroke
+{% include tutorials/tutorial_list key="tool" value="Stroke" %}
