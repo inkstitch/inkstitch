@@ -402,7 +402,7 @@ class LetteringFrame(wx.Frame):
         font_selector_sizer = wx.StaticBoxSizer(self.font_selector_box, wx.VERTICAL)
         font_selector_box = wx.BoxSizer(wx.HORIZONTAL)
         font_selector_box.Add(self.font_chooser, 4, wx.EXPAND | wx.TOP | wx.BOTTOM | wx.RIGHT, 10)
-        self.filter_label = wx.StaticText(self, wx.ID_ANY, "Filter")
+        self.filter_label = wx.StaticText(self, wx.ID_ANY, _("Filter"))
         font_selector_box.Add(self.filter_label, 0, wx.LEFT | wx.ALIGN_CENTRE_VERTICAL, 0)
         font_selector_box.Add(self.font_filter, 1, wx.LEFT | wx.ALIGN_CENTRE_VERTICAL, 5)
         font_selector_sizer.Add(font_selector_box, 0, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT, 10)
@@ -414,13 +414,13 @@ class LetteringFrame(wx.Frame):
         left_option_sizer.Add(self.back_and_forth_checkbox, 1, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT, 5)
 
         trim_option_sizer = wx.BoxSizer(wx.HORIZONTAL)
-        trim_option_sizer.Add(wx.StaticText(self, wx.ID_ANY, "Add trims"), 0, wx.LEFT | wx.ALIGN_CENTRE_VERTICAL, 5)
+        trim_option_sizer.Add(wx.StaticText(self, wx.ID_ANY, _("Add trims")), 0, wx.LEFT | wx.ALIGN_CENTRE_VERTICAL, 5)
         trim_option_sizer.Add(self.trim_option_choice, 1, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT | wx.BOTTOM, 5)
         trim_option_sizer.Add(self.use_trim_symbols, 1, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT | wx.BOTTOM, 5)
         left_option_sizer.Add(trim_option_sizer, 0, wx.ALIGN_LEFT, 5)
 
         font_scale_sizer = wx.BoxSizer(wx.HORIZONTAL)
-        font_scale_sizer.Add(wx.StaticText(self, wx.ID_ANY, "Scale"), 0, wx.LEFT | wx.ALIGN_CENTRE_VERTICAL, 0)
+        font_scale_sizer.Add(wx.StaticText(self, wx.ID_ANY, _("Scale")), 0, wx.LEFT | wx.ALIGN_CENTRE_VERTICAL, 0)
         font_scale_sizer.Add(self.scale_spinner, 0, wx.LEFT, 10)
         font_scale_sizer.Add(wx.StaticText(self, wx.ID_ANY, "%"), 0, wx.LEFT | wx.ALIGN_CENTRE_VERTICAL, 3)
 
