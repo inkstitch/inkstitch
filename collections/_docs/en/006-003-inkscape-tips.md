@@ -2,7 +2,7 @@
 title: "Inkscape Tips"
 permalink: /docs/inkscape-tips/
 excerpt: ""
-last_modified_at: 2020-10-07
+last_modified_at: 2023-04-30
 toc: true
 ---
 
@@ -28,7 +28,7 @@ The icons along the left side of the window show all the tools for creating and 
 
 The top icon in the Toolbox panel is the Select Tool, which you can also activate by pressing `F1`. Click an object with the Select tool to drag it around the canvas and to display handles for transforming it. Clicking the object once shows handles for resizing it, and clicking it a second time switches to handles for rotating it. Hold down `Shift` to select multiple objects at once. You can also select many objects at once by dragging around them. [Learn more about transforming objects here.](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Transforms.html)
 
-Another way to select objects is to open the Objects panel (`Object > Objects...` in the menu) and click on a name in the list. You can select objects this way no matter what tool is active.
+Another way to select objects is to open the Layers and Objects panel (`Object > Layers and Objects...` in the menu) and click on a name in the list. You can select objects this way no matter what tool is active.
 
 In order to use a menu command on an object (e.g. to convert it to a path), you must select the object first.
 
@@ -39,7 +39,8 @@ There are many types of objects in Inkscape, such as paths, rectangles, circles,
 
 A _path_ is the most basic representation of a vector shape: it is just a series of nodes and segments that describes the shape. Once a path has been made, you can only use basic tools to edit it, and it works the same way no matter what the path looks like. Other object types store the information about the shape in more specific way that allows you to change it easily. For example, after drawing a polygon object with the Star Tool, you can use the tool controls to quickly change the number of corners on the shape. If you drew the same shape as a path instead, you would need to manually move each point in order to add more corners. However, paths can be altered into any shape you like, whereas other types of objects have constraints on their shape.
 
-Paths are the most important type of object for Ink/Stitch. Your design **must be formatted as a path** for Ink/Stitch to work on it.
+
+Ink/Stitch can work with all kind of object, but still need text to be converted into object.
 
 You can convert any object to a path by selecting that object (either by clicking on it with the Select Tool or clicking its name in the Objects panel) and then pressing `Shift + Ctrl + C` or selecting `Path > Object to Path` in the menu. Once it becomes a path, you can use the Node Tool to make precise changes to the points and curves. 
 
