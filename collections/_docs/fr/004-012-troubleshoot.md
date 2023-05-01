@@ -2,7 +2,7 @@
 title: "Dépannage"
 permalink: /fr/docs/troubleshoot/
 excerpt: ""
-last_modified_at: 2022-01-16
+last_modified_at: 2023-04-30
 toc: true
 ---
 ## Dépistage de problèmes avec des objets
@@ -44,9 +44,14 @@ Ink/Stitch  offre une fonction de nettoyage de votre document qui empêche ces o
 * Cliquez sur "Appliquer"
 
 {% include upcoming_release.html %}
-## Update Ink/Stitch svg
+## Mettre à jour le svg d'Ink/Stitch 
 
-To use older svg files that you created with inkstitch version 1.2.2 or older, you may need to run this extension. 
-In  particular, if you import some older design as part of your new design, you should select the older elements and run this extension.
+Si vous ouvrez un fichier créé par une ancienne version d'Ink/Stitch vous pouvez le mettre à jour :
+* Sélectionnez tout
+* Lancez `Extensions > Ink/Stitch > Résolution de problèmes > Mettre à jour le svg d'Ink/Stitch`
+
+Si vous importez un ancien fichier dans  un nouveau fichier ou copier/coller une partie d'un ancien fichier dans un nouveau fichier
 
 
+* Sélectionnez tous les objets anciens
+* Lancez `Extensions > Ink/Stitch > Résolution de problèmes  > Mettre à jour le svg d'Ink/Stitch `
