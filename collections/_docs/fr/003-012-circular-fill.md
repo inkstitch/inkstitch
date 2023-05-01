@@ -2,7 +2,7 @@
 title: "Remplissage circulaire"
 permalink: /fr/docs/stitches/circular-fill/
 excerpt: ""
-last_modified_at: 2023-04-15
+last_modified_at: 2023-05-01
 toc: true
 ---
 {% include upcoming_release.html %}
@@ -21,7 +21,7 @@ Le remplissage circulaire remplit une forme avec une spirale. Le centre de la sp
  
 ## Définir le centre de la spirale
 
-* Selectionnez la forme et attachez lui la commande d'objet "position de la cible pour la broderie ondulée". Lire
+* Selectionnez la forme et attachez lui la commande d'objet "Position de la cible". Lire
  [comment attacher des commandes aux objets](/fr/docs/commands/).
 
 ## Définir les positions de début et de fin de la broderie.
