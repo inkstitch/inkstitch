@@ -10,6 +10,8 @@ tutorial-type:
 stitch-type:
   - Bean Stitch
   - Running Stitch
+tool:
+  - Stroke
 techniques:
 field-of-use:
 user-level: 
