@@ -2,7 +2,7 @@
 title: "Ripple Stitch"
 permalink: /docs/stitches/ripple-stitch/
 excerpt: ""
-last_modified_at: 2023-04-28
+last_modified_at: 2023-04-30
 toc: true
 ---
 ## What it is
@@ -57,7 +57,7 @@ Ripples with only **one subpath** (closed shape or a simple bezier curve) can be
 Define a ripple target position with [visual command] (/docs/commands/):
 
 * Open `Extensions > Ink/Stitch > Commands  > Attach Commands to selected objects ...`
-* Select `Ripple stitch target position` and apply
+* Select `Target position` and apply
 * Select the symbol and move it to the desired position
 
 If no guiding information is provided, the center of the path is used as the target.
