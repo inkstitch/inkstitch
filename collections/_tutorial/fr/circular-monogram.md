@@ -62,7 +62,7 @@ mais seule la position du marqueur importe.
  
  Le 4 ième chemin est lui aussi un remplissage, pour le transformer en satin :
  
- * `Extensions > Ink/Stitch > Outils Trait :Convertir Remplissage en Trait`
+ * `Extensions > Ink/Stitch > Outils Trait> Convertir Remplissage en Trait`
  * Tout décocher et Appliquer
  
  ![after_fill_to_stroke](/assets/images/tutorials/circular_monogram/fill_to_stroke.jpg)
@@ -71,7 +71,7 @@ mais seule la position du marqueur importe.
  
  * `Chemin > Simplifier`
  
- * `Extensions > Ink/Stitch > Outils: Satin :Convertir Trait en Effet de Chemin Satin`
+ * `Extensions > Ink/Stitch > Outils: Satin > Convertir Trait en Effet de Chemin Satin`
 
  ![satin_path_effet_before](/assets/images/tutorials/circular_monogram/satin_path_effect_before.jpg)
  
