@@ -55,3 +55,6 @@ Convertir en blocs de dégradé va découper un remplissage dont la couleur de f
 2. Lancez `Extensions > Ink/Stitch > Outils: Remplissage > Convertir en blocs de dégradé
 
    ![color blocks](/assets/images/docs/color_blocks.png)
+   
+
+{% include tutorials/tutorial_list key="tools" value="Stroke" %}
