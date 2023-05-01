@@ -3,7 +3,7 @@
     <name>Install thread color palettes for Inkscape</name>
     <id>org.inkstitch.install</id>
     <param name="extension" type="string" gui-hidden="true">install</param>
-    <effect implements-custom-gui="true">
+    <effect>
         <object-type>all</object-type>
         <effects-menu>
             <submenu name="Ink/Stitch" translatable="no">
