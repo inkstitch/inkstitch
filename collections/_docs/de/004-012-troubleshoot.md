@@ -45,5 +45,12 @@ Manchmal entstehen während der Arbeit an SVG-Dateien sehr kleine Objekte, die g
 * Wähle welche Objekttypen behandlet werden sollen und definiere den Schwellwert
 * Anwenden
 
+## Update Ink/Stitch svg
+
+To use older svg files that you created with inkstitch version 1.2.2 or older, you may need to run this extension. 
+In  particular, if you import some older design as part of your new design, you should select the older elements and run this extension.
+
+It never hurts using it.
+
 
 
