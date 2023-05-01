@@ -10,7 +10,7 @@ stitch-type:
   - "Circular Fill"
 techniques:
 field-of-use:
-tools:
+tool:
   - "Satin"
   - "Stroke"
 user-level:
