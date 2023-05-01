@@ -9,6 +9,8 @@ tutorial-typ:
   - Beispieldatei
 stichart:
   - Mehrfach-Geradstich
+tool:
+  - Stroke
 techniken:
 field-of-use:
 schwierigkeitsgrad: 
