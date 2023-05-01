@@ -2,7 +2,7 @@
 title: "Ripple Stich"
 permalink: /de/docs/stitches/ripple-stitch/
 excerpt: ""
-last_modified_at: 2023-04-19
+last_modified_at: 2023-05-01
 toc: true
 ---
 ## Beschreibung
@@ -57,7 +57,7 @@ Ripples mit nur **einem Unterpfad** (geschlossene Formen oder einfache Bézier-K
 Definiere eine Zielposition mit einem [visuellen Befehl](/de/docs/commmands/):
 
 * Öffne `Erweiterungen > Ink/Stitch > Befehle > Befehle mit gewählten Objekten verknüpfen...`
-* Wähle `Ripplestich Zielposition` und clicke auf Anwenden
+* Wähle `Zielposition` und clicke auf Anwenden
 * `Strg + Klick` auf das Symbol des Befehls um es auszuwählen, dann bewege es zur gewünschten Position
 
 Wenn keine Zielposition definiert wurde, läuft der Pfad auf die Mitte des Objektes zu.
