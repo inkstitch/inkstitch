@@ -3,7 +3,7 @@
     <name>Lettering</name>
     <id>org.inkstitch.lettering</id>
     <param name="extension" type="string" gui-hidden="true">lettering</param>
-    <effect implements-custom-gui="true">
+    <effect>
         <object-type>all</object-type>
         <effects-menu>
             <submenu name="Ink/Stitch" translatable="no" />
