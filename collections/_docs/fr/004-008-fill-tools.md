@@ -56,6 +56,6 @@ Convertir en blocs de dégradé va découper un remplissage dont la couleur de f
 
    ![color blocks](/assets/images/docs/color_blocks.png)
   
-## Tutoriaux utilisant Outils: Trait
+## Tutoriaux utilisant Outils: Remplissage
 
-{% include tutorials/tutorial_list key="tool" value="Stroke" %}
+{% include tutorials/tutorial_list key="tool" value="Fill" %}
