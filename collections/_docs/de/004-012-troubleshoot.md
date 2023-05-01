@@ -2,7 +2,7 @@
 title: "Troubleshoot Objects"
 permalink: /de/docs/troubleshoot/
 excerpt: ""
-last_modified_at: 2020-09-28
+last_modified_at: 2020-04-28
 toc: false
 ---
 ## Fehlerbehebung
@@ -47,10 +47,13 @@ Manchmal entstehen während der Arbeit an SVG-Dateien sehr kleine Objekte, die g
 
 ## Update Ink/Stitch svg
 
-To use older svg files that you created with inkstitch version 1.2.2 or older, you may need to run this extension. 
-In  particular, if you import some older design as part of your new design, you should select the older elements and run this extension.
+If you open a file created with an older version of Ink/Stitch you may need to update it:
+* Select all objects
+* Run `Extensions > Ink/Stitch > Troubleshoot > Update Ink/Stitch svg`
 
-It never hurts using it.
+If you import an older file as part of a new file, you should
+* Select all old objects.
+* Run `Extensions > Ink/Stitch > Troubleshoot > Update Ink/Stitch svg`
 
 
 
