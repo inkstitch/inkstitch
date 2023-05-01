@@ -2,7 +2,7 @@
 title: "Circular Fill"
 permalink: /docs/stitches/circular-fill/
 excerpt: ""
-last_modified_at: 2023-02-27
+last_modified_at: 2023-04-30
 toc: true
 ---
 {% include upcoming_release.html %}
@@ -21,7 +21,7 @@ Circular fill fills a shape with an embroidered spiral. The center of the spiral
 
 ## Set spiral center
 
-* Select the circular fill shape and attach the Ripple stitch target point command to the shape. Read [how to attach commands to objects](/docs/commands/).
+* Select the circular fill shape and attach the Target point command to the shape. Read [how to attach commands to objects](/docs/commands/).
 
 ## Set Start and End Point
 
