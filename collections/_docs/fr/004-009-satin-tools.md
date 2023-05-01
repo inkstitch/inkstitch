@@ -5,7 +5,7 @@ excerpt: ""
 last_modified_at: 2023-04-30
 toc: true
 ---
-`Extensions > Ink/Stitch  > Outils de satin` inclut un certain nombre d’aides utiles, facilitant le travail avec [les colonnes satin](/fr/docs/stitches/satin-column/).
+`Extensions > Ink/Stitch  > Outils :  Satin` inclut un certain nombre d’aides utiles, facilitant le travail avec [les colonnes satin](/fr/docs/stitches/satin-column/).
 
 **Exemple:**
 * Créer un chemin à l'aide de l'outil courbes de Bézier (`B`)
@@ -154,3 +154,6 @@ Quand vous tracez manuellement une colonne satin, cet outil vous aidera à le fa
 
 Si vous voyez quelque chose comme le dessin ci-dessous, vous avez probablement choisi le mauvais style de zigzag pour votre dessin.
 ![Mauvais choix de style de zigzag](/assets/images/docs/zigzag-line-to-satin-wrong-pattern.png)
+
+
+{% include tutorials/tutorial_list key="tool" value="Satin" %}
