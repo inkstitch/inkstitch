@@ -14,7 +14,7 @@ Ink/Stitch est livré avec une extension de dépannage, conçue pour vous aider 
 ## Usage
 
 * (Optionel) Sélectionnez les objets que vous souhaitez tester. Si vous n'en sélectionnez aucun, l'ensemble du document sera testé.
-* Lancer `Extensions > Ink/Stitch > Résolution de problèmes > Dépistage de problèmes avec des objes`
+* Lancer `Extensions > Ink/Stitch > Résolution de problèmes > Dépistage de problèmes avec des objets`
 
 Vous recevrez soit un message indiquant qu'aucune erreur ne peut être trouvée, soit un nouveau calque contenant les informations de dépannage sera ajouté à votre document SVG. Utilisez le panneau des objets(Ctrl + Shift + O) pour supprimer le calque une fois que vous avez terminé.
 
@@ -42,4 +42,11 @@ Ink/Stitch  offre une fonction de nettoyage de votre document qui empêche ces o
 * Exécutez `Extensions > Ink/Stitch > Résolution de problèmes > Nettoyer le document...`
 * Choisissez quels types d'objets doivent être supprimés et définissez un seuil
 * Cliquez sur "Appliquer"
+
+{% include upcoming_release.html %}
+## Update Ink/Stitch svg
+
+To use older svg files that you created with inkstitch version 1.2.2 or older, you may need to run this extension. 
+In  particular, if you import some older design as part of your new design, you should select the older elements and run this extension.
+
 
