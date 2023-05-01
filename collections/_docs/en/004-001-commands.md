@@ -49,11 +49,9 @@ These commands will be attached to the currently selected objects.
 
 Defines the (1) starting or (2) ending point of an fill stitch area.
 
-#### ![ripple stitch target symbol](/assets/images/docs/visual-commands-ripple-target.png) Ripple stitch target position
+#### ![Target symbol](/assets/images/docs/visual-commands-ripple-target.png) Target position
 
-Defines the target point of a ripple stitch area
-{% include upcoming_release.html %}
-or a circular fill.
+Defines the target point of a ripple stitch area {% include upcoming_release.html %} or of a circular fill.
 
 
 ####  ![auto route starting position symbol](/assets/images/docs/visual-commands-auto-route-satin-stitch-start.jpg) ![auto route  ending position symbol](/assets/images/docs/visual-commands-auto-route-satin-stitch-end.jpg) Starting/Ending Position for Auto Route of running stitch 
