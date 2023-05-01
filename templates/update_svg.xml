@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension translationdomain="inkstitch" xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <name>Update inkstitch svg</name>
+    <id>org.inkstitch.update_svg</id>
+    <param name="extension" type="string" gui-hidden="true">update_svg</param>
+    <effect needs-live-preview="false">
+        <object-type>all</object-type>
+        <effects-menu>
+            <submenu name="Ink/Stitch" translatable="no">
+                <submenu name="Troubleshoot" />
+            </submenu>
+        </effects-menu>
+    </effect>
+    <label appearance="header">Usually there is no need to run this extension: Ink/Stitch automatically updates old designs once.</label>
+    <spacer />
+    <label>However, when you copy and paste parts from old files into a new design, you may see for example, that a former contour fill renders as a standard fill, etc.</label>
+    <spacer />
+    <label>Tipp: You can prevent inserting legacy designs into new files by running any Ink/Stitch extension before you copy the design parts (for example open and re-apply parameters on a single element in the document).</label>
+    <spacer />
+    <label appearance="header">This extension only updates selected elements.</label>
+    <script>
+        {{ command_tag | safe }}
+    </script>
+</inkscape-extension>
