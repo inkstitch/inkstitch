@@ -80,7 +80,7 @@ Konvertiert eine Linie in eine Satinsäule mit Hilfe von Pfadeffekten. Dies mach
 
 ### Funktionsweise
 
-1. Wähle eine Linie
+1. Wähle eine Linie oder einen Pfadeffekt-Satin
 2. Öffne `Erweiterungen > Ink/Stitch > Werkzeuge: Satin > Linie zu Pfadeffekt-Satin...`
 3. Setze die ungefähren Maße für die Satinsäule
 4. Klicke auf `Anwenden`
@@ -88,13 +88,13 @@ Konvertiert eine Linie in eine Satinsäule mit Hilfe von Pfadeffekten. Dies mach
 ## Options
 
 --|--
-Pattern             | ![LPE-Patterns](/assets/images/docs/lpe_patterns.png)
-Min Width (mm)      | ![Min width](/assets/images/docs/lpe_min_width.png)
-Max Width (mm)      | ![Max width](/assets/images/docs/lpe_max_width.png)
-Pattern Length (mm) | ![Length](/assets/images/docs/lpe_length.png)
-Stretched           | ![Stretched](/assets/images/docs/lpe_stretched.png)
-Add rungs           | ![Rungs](/assets/images/docs/lpe_rungs.png)
-Path specific       | Defines wether the path effect only applies to a specific path or to multiple paths. If the effect is not `path specific` all patterns with the same live path effect will update at once (for example if pattern path is manually updated through Inkscapes live path effect dialog).
+Pattern             | ![LPE-Patterns](/assets/images/docs/lpe_patterns.png) | Musters, das wiederholt auf die Satinsäule aufgetragen werden soll
+Min Width (mm)      | ![Min width](/assets/images/docs/lpe_min_width.png)   | Musterbreite an der schmalsten Stelle
+Max Width (mm)      | ![Max width](/assets/images/docs/lpe_max_width.png)   | Musterbreite an der breitesten Stelle
+Pattern Length (mm) | ![Length](/assets/images/docs/lpe_length.png)         | Länge des Musters
+Stretched           | ![Stretched](/assets/images/docs/lpe_stretched.png)   | Wenn diese Option aktiviert ist, wird das Muster so gestreckt, dass seine Musterwiederholungen genau die Länge der Linie einnehmen, andernfalls kann am Ende der Linie eine Lücke entstehen
+Add rungs           | ![Rungs](/assets/images/docs/lpe_rungs.png)           | Da die Muster (i.d.R.) alle die gleiche Knotenanzahl auf beiden Seiten der Außenkontur haben, sind die Richtungslinien optional.
+Path specific       |                                                       | Wenn diese Option aktiviert ist, hat die Satinsäule ein eigenes Muster. Eine Modifikation der Optionen beeinflusst nur diese Satinsäule. Ansonsten ist das Muster allen Satinsäulen gemeinsam, die diesen Effekt und dieses Muster verwenden. Wenn das Muster für eine Satinsäule geändert wird, wird es für alle geändert.
 
 ### Muster anpassen
 

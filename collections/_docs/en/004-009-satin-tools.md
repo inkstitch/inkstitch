@@ -81,7 +81,7 @@ Converts a stroke into a satin using a live path effect. This makes it more adap
 
 ### Usage
 
-1. Select a Stroke
+1. Select a Stroke or a Live Path Effect Satin
 2. Run `Extensions > Ink/Stitch > Tools: Satin > Stroke to Live Path Effect Satin...`
 3. Set the approximate sizes that you wish your satin to be
 4. Click on apply
@@ -89,13 +89,13 @@ Converts a stroke into a satin using a live path effect. This makes it more adap
 ## Options
 
 --|--
-Pattern             | ![LPE-Patterns](/assets/images/docs/lpe_patterns.png)
-Min Width (mm)      | ![Min width](/assets/images/docs/lpe_min_width.png)
-Max Width (mm)      | ![Max width](/assets/images/docs/lpe_max_width.png)
-Pattern Length (mm) | ![Length](/assets/images/docs/lpe_length.png)
-Stretched           | ![Stretched](/assets/images/docs/lpe_stretched.png)
-Add rungs           | ![Rungs](/assets/images/docs/lpe_rungs.png)
-Path specific       | Defines wether the path effect only applies to a specific path or to multiple paths. If the effect is not `path specific` all patterns with the same live path effect will update at once (for example if pattern path is manually updated through Inkscapes live path effect dialog).
+Pattern             | ![LPE-Patterns](/assets/images/docs/lpe_patterns.png) | Choice of the pattern to be applied repeatedly to the satin column
+Min Width (mm)      | ![Min width](/assets/images/docs/lpe_min_width.png)   | Pattern width at the narrowest point
+Max Width (mm)      | ![Max width](/assets/images/docs/lpe_max_width.png)   | Pattern width at the widest point
+Pattern Length (mm) | ![Length](/assets/images/docs/lpe_length.png)         | Length of the pattern
+Stretched           | ![Stretched](/assets/images/docs/lpe_stretched.png)   | If checked the pattern will be stretched so that its pattern repeats occupy exactly the length of the line, otherwise there may be a gap at the end of the line
+Add rungs           | ![Rungs](/assets/images/docs/lpe_rungs.png)           | Since the patterns (usually) all have the same number of nodes on both rails, the rungs are optional.
+Path specific       |                                                       | If checked, the satin column has its own pattern. A modification of any option only influences this column. Otherwise, the pattern is common to all satin columns using this effect and pattern. Modifying the pattern for one of them modifies it for all of them.
 
 ### Update and change the pattern
 
