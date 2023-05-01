@@ -2,7 +2,7 @@
 title: "Tools: Satin"
 permalink: /docs/satin-tools/
 excerpt: ""
-last_modified_at: 2023-04-29
+last_modified_at: 2023-04-30
 toc: true
 ---
 `Extensions > Ink/Stitch  > Tools: Satin` include a number of useful helpers, making it easy to work with [satin columns](/docs/stitches/satin-column/).
@@ -140,3 +140,9 @@ Instead of drawing first the two rails and then several rungs, this tool allows 
 If you see something like in the image below, you most likely chose the wrong pattern for your stroke setup.
 
 ![Zigzag Line wrong pattern](/assets/images/docs/zigzag-line-to-satin-wrong-pattern.png)
+
+
+## Tutorials using Tools: Satin
+
+
+{% include tutorials/tutorial_list key="tool" value="Satin" %}
