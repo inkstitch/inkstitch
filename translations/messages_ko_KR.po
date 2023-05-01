@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-04-29 01:14+0000\n"
-"PO-Revision-Date: 2023-04-30 01:21\n"
+"POT-Creation-Date: 2023-05-01 01:18+0000\n"
+"PO-Revision-Date: 2023-05-01 01:20\n"
 "Last-Translator: \n"
 "Language-Team: Korean\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-29 01:14+0000\n"
+"POT-Creation-Date: 2023-05-01 01:18+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2279,7 +2279,7 @@ msgstr ""
 msgid "This function copies Ink/Stitch parameters from the first selected element to the rest of the selection. Please select at least two elements."
 msgstr ""
 
-#: lib/extensions/fill_to_stroke.py:34 lib/extensions/fill_to_stroke.py:43
+#: lib/extensions/fill_to_stroke.py:33 lib/extensions/fill_to_stroke.py:42
 msgid "Please select one or more fill objects to render the centerline."
 msgstr ""
 
@@ -2432,7 +2432,7 @@ msgstr ""
 msgid "The text doesn't contain any glyphs."
 msgstr ""
 
-#: lib/extensions/lettering_along_path.py:141
+#: lib/extensions/lettering_along_path.py:143
 msgid "Please select one path and one Ink/Stitch lettering group."
 msgstr ""
 
@@ -2550,7 +2550,7 @@ msgstr ""
 msgid "Could not find the specified pattern."
 msgstr ""
 
-#: lib/extensions/stroke_to_lpe_satin.py:133
+#: lib/extensions/stroke_to_lpe_satin.py:131
 msgid "Cannot convert a satin column into a live path effect satin. Please select a stroke."
 msgstr ""
 
@@ -3816,7 +3816,7 @@ msgstr ""
 
 #: inx/inkstitch_apply_threadlist.inx:87 inx/inkstitch_auto_run.inx:23
 #: inx/inkstitch_cutwork_segmentation.inx:42
-#: inx/inkstitch_fill_to_stroke.inx:24 inx/inkstitch_generate_palette.inx:24
+#: inx/inkstitch_fill_to_stroke.inx:23 inx/inkstitch_generate_palette.inx:24
 #: inx/inkstitch_lettering_along_path.inx:17
 #: inx/inkstitch_palette_to_text.inx:19 inx/inkstitch_select_elements.inx:51
 #: inx/inkstitch_stroke_to_lpe_satin.inx:26
@@ -3848,7 +3848,7 @@ msgstr ""
 msgid "Import any other Threadlist file in txt format. Ink/Stitch will try to match the colors to the selected thread palette. The objects in this document will be colored accordingly if color matching has been successful."
 msgstr ""
 
-#: inx/inkstitch_apply_threadlist.inx:98 inx/inkstitch_fill_to_stroke.inx:33
+#: inx/inkstitch_apply_threadlist.inx:98 inx/inkstitch_fill_to_stroke.inx:32
 #: inx/inkstitch_stroke_to_lpe_satin.inx:32
 #: inx/inkstitch_zigzag_line_to_satin.inx:28
 msgid "Get more information on our website"
@@ -4143,7 +4143,7 @@ msgstr ""
 msgid "Embroider"
 msgstr ""
 
-#: inx/inkstitch_fill_to_stroke.inx:3 inx/inkstitch_fill_to_stroke.inx:25
+#: inx/inkstitch_fill_to_stroke.inx:3 inx/inkstitch_fill_to_stroke.inx:24
 msgid "Fill to Stroke"
 msgstr ""
 
@@ -4156,30 +4156,26 @@ msgid "Deletes small lines. A good value in most cases is the approximate line w
 msgstr ""
 
 #: inx/inkstitch_fill_to_stroke.inx:20
-msgid "Dashed line"
-msgstr ""
-
-#: inx/inkstitch_fill_to_stroke.inx:21
 msgid "Line width (mm)"
 msgstr ""
 
-#: inx/inkstitch_fill_to_stroke.inx:22
+#: inx/inkstitch_fill_to_stroke.inx:21
 msgid "Cut lines: close gaps"
 msgstr ""
 
-#: inx/inkstitch_fill_to_stroke.inx:26
+#: inx/inkstitch_fill_to_stroke.inx:25
 msgid "Fill outlines never look nice when embroidered - but it is a lot of work to convert a fill outline to a satin column or a running stitch. This tool helps you with this operation."
 msgstr ""
 
-#: inx/inkstitch_fill_to_stroke.inx:28
+#: inx/inkstitch_fill_to_stroke.inx:27
 msgid "It is comparable to the Inkscape functionality of Path > Trace bitmap > Centerline tracing (- and has similar issues.) But instead of converting raster graphics, it will find the centerline of vector based objects with a fill."
 msgstr ""
 
-#: inx/inkstitch_fill_to_stroke.inx:31
+#: inx/inkstitch_fill_to_stroke.inx:30
 msgid "You can improve the result by defining cut lines."
 msgstr ""
 
-#: inx/inkstitch_fill_to_stroke.inx:34
+#: inx/inkstitch_fill_to_stroke.inx:33
 msgid "https://inkstitch.org/docs/stroke-tools/#fill-to-stroke"
 msgstr ""
 

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-04-29 01:14+0000\n"
-"PO-Revision-Date: 2023-04-30 01:21\n"
+"POT-Creation-Date: 2023-05-01 01:18+0000\n"
+"PO-Revision-Date: 2023-05-01 01:20\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-29 01:14+0000\n"
+"POT-Creation-Date: 2023-05-01 01:18+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2288,7 +2288,7 @@ msgstr "%s densité"
 msgid "This function copies Ink/Stitch parameters from the first selected element to the rest of the selection. Please select at least two elements."
 msgstr "Cette fonction copie les paramètres de Ink/Stitch du premier élément sélectionné vers le reste de la sélection. Veuillez sélectionner au moins deux éléments."
 
-#: lib/extensions/fill_to_stroke.py:34 lib/extensions/fill_to_stroke.py:43
+#: lib/extensions/fill_to_stroke.py:33 lib/extensions/fill_to_stroke.py:42
 msgid "Please select one or more fill objects to render the centerline."
 msgstr "Merci de sélectionner un ou plusieurs objets de remplissage pour déterminer leur ligne centrale."
 
@@ -2443,7 +2443,7 @@ msgstr "Vous avez sélectionné des objets qui ne sont pas créées par l’exte
 msgid "The text doesn't contain any glyphs."
 msgstr "Ce texte ne contient aucun glyphe."
 
-#: lib/extensions/lettering_along_path.py:141
+#: lib/extensions/lettering_along_path.py:143
 msgid "Please select one path and one Ink/Stitch lettering group."
 msgstr "Merci de sélectionner un chemin et un groupe de lettrage Ink/Stitch."
 
@@ -2561,7 +2561,7 @@ msgstr "Veuillez sélectionner au moins une ligne pour la convertir en colonne S
 msgid "Could not find the specified pattern."
 msgstr "Impossible de trouver le motif spécifié."
 
-#: lib/extensions/stroke_to_lpe_satin.py:133
+#: lib/extensions/stroke_to_lpe_satin.py:131
 msgid "Cannot convert a satin column into a live path effect satin. Please select a stroke."
 msgstr "Impossible d'appliquer l'effet de chemin satin à une colonne satin. Merci de sélectionner une ligne."
 
@@ -3831,7 +3831,7 @@ msgstr "*Choisir une palette de couleurs"
 
 #: inx/inkstitch_apply_threadlist.inx:87 inx/inkstitch_auto_run.inx:23
 #: inx/inkstitch_cutwork_segmentation.inx:42
-#: inx/inkstitch_fill_to_stroke.inx:24 inx/inkstitch_generate_palette.inx:24
+#: inx/inkstitch_fill_to_stroke.inx:23 inx/inkstitch_generate_palette.inx:24
 #: inx/inkstitch_lettering_along_path.inx:17
 #: inx/inkstitch_palette_to_text.inx:19 inx/inkstitch_select_elements.inx:51
 #: inx/inkstitch_stroke_to_lpe_satin.inx:26
@@ -3863,7 +3863,7 @@ msgstr "Importez une palette de fils Ink/Stitch (créé par l'option d'exportati
 msgid "Import any other Threadlist file in txt format. Ink/Stitch will try to match the colors to the selected thread palette. The objects in this document will be colored accordingly if color matching has been successful."
 msgstr "Importez tout autre fichier de liste de fils au format txt. Ink/Stitch va essayer de faire correspondre les couleurs à la palette de fils sélectionnée. Les objets de ce document seront colorés en conséquence si la correspondance des couleurs a réussi."
 
-#: inx/inkstitch_apply_threadlist.inx:98 inx/inkstitch_fill_to_stroke.inx:33
+#: inx/inkstitch_apply_threadlist.inx:98 inx/inkstitch_fill_to_stroke.inx:32
 #: inx/inkstitch_stroke_to_lpe_satin.inx:32
 #: inx/inkstitch_zigzag_line_to_satin.inx:28
 msgid "Get more information on our website"
@@ -4158,7 +4158,7 @@ msgstr "Edition"
 msgid "Embroider"
 msgstr "Broder"
 
-#: inx/inkstitch_fill_to_stroke.inx:3 inx/inkstitch_fill_to_stroke.inx:25
+#: inx/inkstitch_fill_to_stroke.inx:3 inx/inkstitch_fill_to_stroke.inx:24
 msgid "Fill to Stroke"
 msgstr "Remplissage vers trait"
 
@@ -4171,30 +4171,26 @@ msgid "Deletes small lines. A good value in most cases is the approximate line w
 msgstr "Supprime les traits courts. Une bonne valeur est souvent approximativement la largeur de la forme originelle"
 
 #: inx/inkstitch_fill_to_stroke.inx:20
-msgid "Dashed line"
-msgstr "Trait en pointillé"
-
-#: inx/inkstitch_fill_to_stroke.inx:21
 msgid "Line width (mm)"
 msgstr "Largeur du trait (mm)"
 
-#: inx/inkstitch_fill_to_stroke.inx:22
+#: inx/inkstitch_fill_to_stroke.inx:21
 msgid "Cut lines: close gaps"
 msgstr "Lignes de coupe : fermer les écarts"
 
-#: inx/inkstitch_fill_to_stroke.inx:26
+#: inx/inkstitch_fill_to_stroke.inx:25
 msgid "Fill outlines never look nice when embroidered - but it is a lot of work to convert a fill outline to a satin column or a running stitch. This tool helps you with this operation."
 msgstr "Les contours en remplissage ne rendent jamais bien en broderie - mais leur conversion en satin ou point droit est compliquée. Cet outil aide à effectuer cette opération."
 
-#: inx/inkstitch_fill_to_stroke.inx:28
+#: inx/inkstitch_fill_to_stroke.inx:27
 msgid "It is comparable to the Inkscape functionality of Path > Trace bitmap > Centerline tracing (- and has similar issues.) But instead of converting raster graphics, it will find the centerline of vector based objects with a fill."
 msgstr "Ceci est comparable à la fonctionnalité Inkscape Chemin > Vectoriser un objet matriciel > Traçage Centerline (- et a le même genre de problème). Au lieu de convertir une image bitmap, cet outil trouve la ligne centrale d'objets vectoriels ayant un remplissage."
 
-#: inx/inkstitch_fill_to_stroke.inx:31
+#: inx/inkstitch_fill_to_stroke.inx:30
 msgid "You can improve the result by defining cut lines."
 msgstr "Vous pouvez améliorer le résultat en définissant des lignes de découpage."
 
-#: inx/inkstitch_fill_to_stroke.inx:34
+#: inx/inkstitch_fill_to_stroke.inx:33
 msgid "https://inkstitch.org/docs/stroke-tools/#fill-to-stroke"
 msgstr "https://inkstitch.org/fr/docs/stroke-tools/#fill-to-stroke"
 
