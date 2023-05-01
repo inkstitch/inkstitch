@@ -84,3 +84,8 @@ Dieses Werkzeug erstellt Geradstiche von der Endposition des ersten Elements zu 
 
 * Wähle zwei oder mehr Objekte aus
 * Öffne `Erweiterungen > Ink/Stitch > Werkzeuge: Linie > Sprungstich zu Geradstich`
+
+
+## Tutorials using Tools: Stroke
+
+{% include tutorials/tutorial_list key="tool" value="Stroke" %}
