@@ -9,7 +9,7 @@ from .svg.tags import EMBROIDERABLE_TAGS, INKSTITCH_ATTRIBS
 INKSTITCH_SVG_VERSION = 1
 
 
-def update_inkstitch_document(svg):
+def update_inkstitch_document(svg, selection=None):
     document = svg.getroot()
     # get the inkstitch svg version from the document
     search_string = "//*[local-name()='inkstitch_svg_version']//text()"
@@ -41,11 +41,15 @@ def update_inkstitch_document(svg):
             return
 
         # update elements
-        for element in document.iterdescendants():
-            # We are just checking for params and update them.
-            # No need to check for specific stitch types at this point
-            if element.tag in EMBROIDERABLE_TAGS:
+        if selection:
+            # this comes from the updater extension where we only update selected elements
+            for element in selection:
                 update_legacy_params(EmbroideryElement(element), file_version, INKSTITCH_SVG_VERSION)
+        else:
+            # this is the automatic update when a legacy inkstitch svg version was recognized
+            for element in document.iterdescendants():
+                if element.tag in EMBROIDERABLE_TAGS:
+                    update_legacy_params(EmbroideryElement(element), file_version, INKSTITCH_SVG_VERSION)
         _update_inkstitch_svg_version(svg)
 
 
@@ -91,10 +95,19 @@ def _update_to_one(element):  # noqa: C901
     elif legacy_fill_method == 3:
         element.set_param('fill_method', 'legacy_fill')
 
+    underlay_angle = element.get_param('fill_underlay_angle', None)
+    if underlay_angle and ',' in underlay_angle:
+        element.set_param('fill_underlay_angle', underlay_angle.replace(',', ' '))
+
     # legacy satin method
     if element.get_boolean_param('e_stitch', False) is True:
         element.remove_param('e_stitch')
         element.set_param('satin_method', 'e_stitch')
+
+    if element.get_boolean_param('satin_column', False):
+        # reverse_rails defaults to Automatic, but we should never reverse an
+        # old satin automatically, only new ones
+        element.set_param('reverse_rails', 'none')
 
     # default setting for fill_underlay has changed
     if legacy_attribs and not element.get_param('fill_underlay', ""):
@@ -124,11 +137,6 @@ def _update_to_one(element):  # noqa: C901
             size = "{:.2f}".format(size)
             element.set_param('grid_size_mm', size)
             element.remove_param('grid_size')
-
-    if element.get_boolean_param('satin_column', False):
-        # reverse_rails defaults to Automatic, but we should never reverse an
-        # old satin automatically, only new ones
-        element.set_param('reverse_rails', 'none')
 
 
 def _replace_legacy_embroider_param(element, param):
