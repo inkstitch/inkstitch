@@ -2,7 +2,7 @@
 title: "Tools: Fill"
 permalink: /docs/fill-tools/
 excerpt: ""
-last_modified_at: 2023-02-20
+last_modified_at: 2023-04-30
 toc: true
 ---
 ## Break Apart Fill Objects
@@ -49,3 +49,9 @@ Convert to gradient blocks will split a fill with a linear gradient into multipl
 2. Run `Extensions > Ink/Stitch > Tools: Fill > Convert to gradient blocks
 
    ![color blocks](/assets/images/docs/color_blocks.png)
+   
+
+## Tutorials using Tools: Fill
+
+
+{% include tutorials/tutorial_list key="tool" value="Fill" %}
