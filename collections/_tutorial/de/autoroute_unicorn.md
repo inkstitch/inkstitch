@@ -10,6 +10,8 @@ tutorial-typ:
 stichart: 
   - Geradstich
   - Mehrfach-Geradstich
+tool:
+  - Stroke
 techniken:
 schwierigkeitsgrad: 
   - leicht
