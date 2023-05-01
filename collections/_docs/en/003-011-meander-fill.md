@@ -2,7 +2,7 @@
 title: "Meander Fill"
 permalink: /docs/stitches/meander-fill/
 excerpt: ""
-last_modified_at: 2023-04-23
+last_modified_at: 2023-04-30
 toc: true
 ---
 {% include upcoming_release.html %}
@@ -38,6 +38,8 @@ Smoothness           ||Smooth the stitch path. Smoothness linits how far the smo
 Clip path            ||Constrain stitching to the shape.  Useful when smoothing and expand are used. 
 Running stitch length||For meander fill this is the overall stitch length.
 Running stitch tolerance||All stitches must be within this distance from a path. A lower tolerance means stitches will be closer together. A higher tolerance means sharp corner may be rounded.
+Repeats                       ||◦ Defines how many times to run down and back along the path<br />◦ Default: 1 (traveling once from the start to the end of the path)<br />◦ Odd number: stitches will end at the end of the path<br />◦ Even number: stitching will return to the start of the path
+Bean stitch number of repeats ||◦ Enable [Bean Stitch Mode](/docs/stitches/bean-stitch/)<br />◦ Backtrack each stitch this many times.<br />◦ A value of 1 would triple each stitch (forward, back, forward).<br />◦ A value of 2 would quintuple each stitch, etc. <br />◦It is possible to define a repeat pattern by entering multiple values separated by a space.
 Allow lock stitches  ||Enables lock stitches in only desired positions
 Force lock stitches  ||Sew lock stitches after sewing this element, even if the distance to the next object is smaller than defined in the collapse length value value in the Ink/Stitch preferences.
 Tack stitch          ||Chose your [favorite style](/docs/stitches/lock-stitches/)
