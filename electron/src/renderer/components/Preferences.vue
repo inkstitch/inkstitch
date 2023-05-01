@@ -210,7 +210,8 @@ td.label {
 td.preference {
   padding-right: 4px;
   padding-left: 16px;
-  max-width: 100px;
+  max-width: 15em;
+  min-width: 8em;
 }
 
 td.preference :deep(input) {
