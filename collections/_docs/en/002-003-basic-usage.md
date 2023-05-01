@@ -16,21 +16,15 @@ Create an object, e.g. a circle and make sure it has a fill.
 
 ![Circle with fill color](/assets/images/docs/en/basic-usage-circle-fill-color.png)
 
-## Step 2 - Convert to Path (optional)
 
-Ink/Stitch works best with path objects. We recommend to transform objects you want to stitch to paths:
-
-* Select all objects (`Ctrl+A`)
-* `Path > Object to Path` or `Ctrl+Alt+C`.
-
-## Step 3 - Parametrize SVG Path for Embroidery
+## Step 2 - Parametrize SVG Path for Embroidery
 
 * Select at least one object.
 * Open `Extensions > Ink/Stitch  > Params`.
 * Play with the values. The simulator will update whenever you change the settings.
 * For now, close without saving.
 
-## Step 4 - Create the Embroidery File
+## Step 3 - Create the Embroidery File
 
 * Run `File > Save as...`
 * Navigate to the folder where you would like to save the file
@@ -38,7 +32,7 @@ Ink/Stitch works best with path objects. We recommend to transform objects you w
 * Click `Save`
 * Copy the file to your machine
 
-**Tipp:** Make sure to save the file as an SVG file as well. Then you will always be able to modify it easily.
+**Tip:** Make sure to save the file as an SVG file as well. Then you will always be able to modify it easily.
 {: .notice--info}
 
 ## Workflow
