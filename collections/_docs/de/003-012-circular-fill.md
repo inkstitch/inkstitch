@@ -2,7 +2,7 @@
 title: "Spiralfüllung"
 permalink: /de/docs/stitches/circular-fill/
 excerpt: ""
-last_modified_at: 2023-04-22
+last_modified_at: 2023-05-01
 toc: true
 ---
 {% include upcoming_release.html %}
@@ -24,7 +24,7 @@ Definiere eine Zielposition mit einem [visuellen Befehl](/de/docs/commmands/):
 
 * Wähle ein Element mit einer Spiralfüllung aus 
 * Öffne `Erweiterungen > Ink/Stitch > Befehle > Befehle mit gewählten Objekten verknüpfen...`
-* Wähle `Ripplestich Zielposition` und clicke auf Anwenden
+* Wähle `Zielposition` und clicke auf Anwenden
 * `Strg + Klick` auf das Symbol des Befehls um es auszuwählen, dann bewege es zur gewünschten Position
 
 Wenn keine Zielposition definiert wurde, liegt der Spiralmittelpunkt in der Mitte des Objektes.
