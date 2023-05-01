@@ -45,5 +45,11 @@ Sometimes you will find very small shapes and leftover objects from various oper
 * Choose which types of objects should be removed and define a threshold
 * Click apply
 
+{% include upcoming_release.html %}
+## Update Ink/Stitch svg
+
+To use older svg files that you created with inkstitch version 1.2.2 or older, you may need to run this extension. 
+In  particular, if you import some older design as part of your new design, you should select the older elements and run this extension.
+
 
 
