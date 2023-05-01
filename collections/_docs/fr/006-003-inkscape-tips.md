@@ -2,7 +2,7 @@
 title: "Astuces Inkscape"
 permalink: /fr/docs/inkscape-tips/
 excerpt: ""
-last_modified_at: 2022-01-19
+last_modified_at: 2023-05-01
 toc: true
 ---
 Beaucoup des outils présentés ici ne créent pas de chemins. Pour les utiliser avec Ink/Stitch, vous devrez  convertir les objets créés en chemin (`Majuscule + Ctrl + C`) et éventuellement les modifier encore plus.
