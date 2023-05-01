@@ -5,7 +5,7 @@ excerpt: ""
 last_modified_at: 2023-04-29
 toc: true
 ---
-`Extensions > Ink/Stitch  > Satin Tools` include a number of useful helpers, making it easy to work with [satin columns](/docs/stitches/satin-column/).
+`Extensions > Ink/Stitch  > Tools: Satin` include a number of useful helpers, making it easy to work with [satin columns](/docs/stitches/satin-column/).
 
 **Example:**
 * Create a path with the help of the bezier curves tool (`B`)
