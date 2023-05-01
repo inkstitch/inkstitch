@@ -2,7 +2,7 @@
 title: "Outils Remplissage"
 permalink: /fr/docs/fill-tools/
 excerpt: ""
-last_modified_at: 2023-04-15
+last_modified_at: 2023-05-01
 toc: true
 ---
 ## Briser les objets de remplissage
@@ -55,6 +55,7 @@ Convertir en blocs de dégradé va découper un remplissage dont la couleur de f
 2. Lancez `Extensions > Ink/Stitch > Outils: Remplissage > Convertir en blocs de dégradé
 
    ![color blocks](/assets/images/docs/color_blocks.png)
-   
+  
+## Tutoriaux utilisant Outils: Trait
 
-{% include tutorials/tutorial_list key="tools" value="Stroke" %}
+{% include tutorials/tutorial_list key="tool" value="Stroke" %}
