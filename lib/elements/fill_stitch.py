@@ -480,6 +480,23 @@ class FillStitch(EmbroideryElement):
         return self.get_boolean_param('underlay_underpath', True)
 
     @property
+    @param('random_seed',
+           _('Random seed'),
+           tooltip=_('Use a specific seed for randomized attributes. Uses the element ID if empty.'),
+           select_items=[('fill_method', 'meander_fill')],
+           type='random_seed',
+           default='',
+           sort_index=100)
+    @cache
+    def random_seed(self) -> str:
+        seed = self.get_param('random_seed', '')
+        if not seed:
+            seed = self.node.get_id() or ''
+            # TODO(#1696): When inplementing grouped clones, join this with the IDs of any shadow roots,
+            # letting each instance without a specified seed get a different default.
+        return seed
+
+    @property
     @cache
     def paths(self):
         paths = self.flatten(self.parse_path())
