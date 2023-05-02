@@ -71,13 +71,13 @@ Merci de noter que chaque trait doit découper le remplissage en deux.
 
 {% include upcoming_release.html %}
 
-Ceci crééra un point droit entre la fin du premier élément et le début du second. Il ne vous reste plus qu'à le positionner là où il sera recouvert par des broderies ultérieures pour éviter un saut de fil.
+Ceci crééra un point droit direct entre la fin du premier élément et le début du second. Il ne vous reste plus qu'à le positionner là où il sera recouvert par des broderies ultérieures pour éviter un saut de fil. 
 
 ### Usage
 
 * Sélectionnez au moins deux objets
-* Exécutez  `Extensions > Ink/Stitch > Outils: trait > Saut en Trait`
+* Exécutez  `Extensions > Ink/Stitch > Outils: Trait > Saut en Trait`
 
 ## Tutoriaux utilisant Outils: Trait
 
-{% include tutorials/tutorial_list key="tools" value="Stroke" %}
+{% include tutorials/tutorial_list key="tool" value="Stroke" %}
