@@ -24,7 +24,7 @@ pages:
         url: /fr/docs/install/
       - title: "Organisation du travail"
         url: /fr/docs/workflow/
-      - title: Bibliothèque de points
+      - title: "Bibliothèque de points"
         url: /fr/docs/stitch-library/
       - title: "F.A.Q."
         url: /fr/docs/faq/
@@ -112,7 +112,7 @@ docs:
       url: /fr/docs/params/
     - title: "Préferences"
       url: /fr/docs/preferences/
-    - title: "Outils : remplissage"
+    - title: "Outils : Remplissage"
       url: /fr/docs/fill-tools/
     - title: "Outils : Trait"
       url: /fr/docs/stroke-tools/
