@@ -24,15 +24,15 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
-     inkscape:zoom="8.3567167"
-     inkscape:cx="30.394712"
-     inkscape:cy="58.635469"
+     inkscape:zoom="6.6203131"
+     inkscape:cx="25.980644"
+     inkscape:cy="61.628505"
      inkscape:window-width="1366"
      inkscape:window-height="703"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g1372"
+     inkscape:current-layer="g1280"
      inkscape:document-units="px">
     <sodipodi:guide
        position="-38.852242,83.599999"
@@ -51,12 +51,6 @@
        orientation="0,1"
        inkscape:label="caps"
        id="guide56428"
-       inkscape:locked="false" />
-    <sodipodi:guide
-       position="-60.323096,52.825108"
-       orientation="0,1"
-       inkscape:label="xheight"
-       id="guide56430"
        inkscape:locked="false" />
     <sodipodi:guide
        position="-367.15189,-376.75263"
@@ -1564,40 +1558,46 @@ Created by Adegoke Adebowale
      id="g1276"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
-       d="M 175.5,643 175.25,680 175,717 C 175,724.33333 172.5,730.33333 167.5,735 162.5,739.66667 156.66667,742 150,742 M 30,643 V 680.125 717.25 729.625 742"
+       d="M 176.49948,665.4918 176.12461,678.36885 175.74974,691.2459 175.37487,704.12295 175,717 C 175,724.33333 172.5,730.33333 167.5,735 162.5,739.66667 156.66667,742 150,742 M 29.5,665 29.625,678.0625 29.75,691.125 29.875,704.1875 30,717.25 V 729.625 742"
        id="path1274"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccscccccc"
+       sodipodi:nodetypes="cccccscccccccc"
        inkstitch:satin_column="True" />
     <path
-       d="M 175,665 175.5,643 M 285,665 283.25,643"
+       d="M 29.5,665 29.75,654 30,643 M 429.5625,663.15624 C 429.5625,663.15624 426.4977,653.71699 423,650.5 418.21584,646.09979 405,643 405,643"
        id="path1263"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccc"
+       sodipodi:nodetypes="ccccsc"
        inkstitch:satin_column="True" />
     <path
-       d="M 285,1000 V 974 665 L 284.125,654 283.25,643 M 437,1000 430,975 V 668 C 430,661.33333 427.66667,655.5 423,650.5 418.33333,645.5 412.33333,643 405,643"
+       d="M 285,979.65319 V 976.8266 974 832 M 431.3125,979.6875 430.875,978.125 430,975 V 832.28509"
        id="path1259"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccccccssc"
+       sodipodi:nodetypes="cccccccc"
        inkstitch:satin_column="True" />
     <path
-       d="M 176,1000 175,978 M 285,1000 V 978"
+       d="M 285,810 V 668.625 665 M 430,810.28509 V 668 C 430,666.33333 429.85417,664.71874 429.5625,663.15624"
+       id="path10419"
+       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
+       sodipodi:nodetypes="ccccsc"
+       inkstitch:satin_column="True" />
+    <path
+       d="M 55,1000 C 55,1000 41.783593,997.30833 37,993 33.448254,989.80113 30.4375,980.25 30.4375,980.25 M 437,1000 433.9375,989.0625 430.875,978.125"
        id="path33133"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccc"
+       sodipodi:nodetypes="cscccc"
        inkstitch:satin_column="True" />
     <path
-       d="M 55,1000 C 47.666667,1000 41.666667,997.66667 37,993 32.333333,988.33333 30,982.33333 30,975 V 835 C 30,827.66667 32.333333,821.66667 37,817 41.666667,812.33333 47.666667,810 55,810 M 176,1000 175.5,989 175,978 V 832 L 175.5,821 176,810"
+       d="M 30.4375,980.25 C 30.145833,978.58333 30,976.83333 30,975 V 835 C 30,833.16667 30.145833,831.41667 30.4375,829.75 M 175,978 V 974.75 835.59 832"
        id="path1255"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="csccsccccccc"
+       sodipodi:nodetypes="cccccccc"
        inkstitch:satin_column="True" />
     <path
-       d="M 175,832 176,810 M 285,832 V 810"
+       d="M 30.4375,829.75 C 30.4375,829.75 30.174383,823.5643 37,817 46.324221,808.03276 55,810 55,810 M 430,832.28509 V 821.28509 810.28509"
        id="path1257"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccc"
+       sodipodi:nodetypes="cscccc"
        inkstitch:satin_column="True" />
   </g>
   <g
@@ -1605,30 +1605,36 @@ Created by Adegoke Adebowale
      inkscape:label="GlyphLayer-b"
      style="display:none"
      id="g1280"
-     transform="matrix(0.1,0,0,0.1,0.06592302,-33.45)">
+     transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
-       d="M 30,1000 37,975 V 498 C 37,491.33333 39.5,485.5 44.5,480.5 49.5,475.5 55.333333,473 62,473 M 183,1000 182,979 V 492 482.5 473"
+       d="M 36.125,978.125 37,975 V 665 M 182,979 V 973.5625 665"
        id="path32592"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="ccsscccccc"
+       sodipodi:nodetypes="cccccc"
        inkstitch:satin_column="True" />
     <path
-       d="M 183,1000 182,979 M 292.5,1000 292,978"
+       d="M 37,643 V 498 C 37,491.33333 39.5,485.5 44.5,480.5 49.5,475.5 55.333333,473 62,473 M 182,642.49992 V 492 482.5 473"
+       id="path6923"
+       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
+       sodipodi:nodetypes="cssccccc"
+       inkstitch:satin_column="True" />
+    <path
+       d="M 30,1000 33.0625,989.0625 36.125,978.125 M 412,1000 C 412,1000 422.02881,998.02745 429.5,993 439.07013,986.56015 436.88281,977.6875 436.88281,977.6875"
        id="path651"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccc"
+       sodipodi:nodetypes="ccccsc"
        inkstitch:satin_column="True" />
     <path
-       d="M 292.5,1000 292.25,989 292,978 V 665 L 291.5,654 291,643 M 412,1000 C 418.66667,1000 424.5,997.66667 429.5,993 434.5,988.33333 437,982.33333 437,975 V 668 C 437,661.33333 434.5,655.5 429.5,650.5 424.5,645.5 418.66667,643 412,643"
+       d="M 292,978 V 975.71875 669.125 665 M 436.88281,977.6875 C 436.96094,976.8125 437,975.91666 437,975 V 668 C 437,666.33333 436.84375,664.71875 436.53125,663.15625"
        id="path653"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccccccsccsc"
+       sodipodi:nodetypes="cccccccc"
        inkstitch:satin_column="True" />
     <path
-       d="M 182,665 V 643 M 292,665 291,643"
+       d="M 37,665 V 654 643 M 436.53125,663.15625 C 436.53125,663.15625 436.85803,660.70061 429.5,650.5 424.06868,642.97043 412,643 412,643"
        id="path655"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccc"
+       sodipodi:nodetypes="ccccsc"
        inkstitch:satin_column="True" />
   </g>
   <g
@@ -1636,33 +1642,33 @@ Created by Adegoke Adebowale
      inkscape:label="GlyphLayer-c"
      style="display:none"
      id="g1284"
-     transform="matrix(0.1,0,0,0.1,0.06592302,-33.45)">
+     transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
-       d="M 293.25,1000 292.625,962.5 292,925 C 292,918.33333 294.33333,912.5 299,907.5 303.66667,902.5 309.33333,900 316,900 M 437,1000 V 962.5 925 912.5 900"
+       d="M 292.9375,981.25 292.625,962.5 292,925 C 292,918.33333 294.33333,912.5 299,907.5 303.66667,902.5 309.33333,900 316,900 M 437,981.25 V 962.5 925 912.5 900"
        id="path1282"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
        sodipodi:nodetypes="cccscccccc"
        inkstitch:satin_column="True" />
     <path
-       d="M 181.75,1000 182,978 M 293.25,1000 292,978"
+       d="M 62,1000 C 62,1000 49.427469,996.89773 44.5,993 41.94331,990.97761 38.875,985 38.875,985 M 437,1000 V 990.625 981.25"
        id="path14759"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccc"
+       sodipodi:nodetypes="cscccc"
        inkstitch:satin_column="True" />
     <path
-       d="M 62,1000 C 55.333333,1000 49.5,997.66667 44.5,993 39.5,988.33333 37,982.33333 37,975 V 668 C 37,661.33333 39.5,655.5 44.5,650.5 49.5,645.5 55.333333,643 62,643 M 181.75,1000 181.875,989 182,978 V 665 L 180.875,654 179.75,643"
+       d="M 38.875,985 C 37.625,982 37,978.66667 37,975 V 668 C 37,666.33333 37.15625,664.71874 37.46875,663.15624 M 181.875,989 182,978 V 669.125 665"
        id="path14761"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="csccsccccccc"
+       sodipodi:nodetypes="cccccccc"
        inkstitch:satin_column="True" />
     <path
-       d="M 182,665 179.75,643 M 292,665 291.5,643"
+       d="M 37.46875,663.15624 C 37.46875,663.15624 40.917588,653.73378 44.5,650.5 49.211013,646.24746 62,643 62,643 M 437.075,665.49434 437.0375,654.24717 437,643"
        id="path14763"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccc"
+       sodipodi:nodetypes="cscccc"
        inkstitch:satin_column="True" />
     <path
-       d="M 316,742 C 309.33333,742 303.66667,739.5 299,734.5 294.33333,729.5 292,723.66667 292,717 L 291.75,680 291.5,643 M 437,742 V 729.625 717.25 680.125 643"
+       d="M 316,742 C 309.33333,742 303.66667,739.5 299,734.5 294.33333,729.5 292,723.66667 292,717 L 291.75,680 292,665 M 437,742 V 729.625 717.25 680.125 L 437.075,665.49434"
        id="path14765"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
        sodipodi:nodetypes="cscccccccc"
@@ -1673,30 +1679,36 @@ Created by Adegoke Adebowale
      inkscape:label="GlyphLayer-d"
      style="display:none"
      id="g1288"
-     transform="matrix(0.1,0,0,0.1,0.06592302,-33.45)">
+     transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
-       d="M 175,665 176,643 M 285,665 V 643"
+       d="M 30.4375,663.15625 C 30.4375,663.15625 33.715071,653.93398 37,650.5 45.18279,641.94591 55,643 55,643 M 430,662.86383 V 651.86383 640.86383"
        id="path31250"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccc"
+       sodipodi:nodetypes="cscccc"
        inkstitch:satin_column="True" />
     <path
-       d="M 55,1000 C 47.666667,1000 41.666667,997.66667 37,993 32.333333,988.33333 30,982.33333 30,975 V 668 C 30,661.33333 32.333333,655.5 37,650.5 41.666667,645.5 47.666667,643 55,643 M 176.5,1000 175.75,989 175,978 V 665 L 175.5,654 176,643"
+       d="M 30.109375,977.6875 C 30.036458,976.8125 30,975.91666 30,975 V 668 C 30,666.33333 30.145833,664.71875 30.4375,663.15625 M 175,978 V 975.71875 669.125 665"
        id="path14231"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="csccsccccccc"
+       sodipodi:nodetypes="cccccccc"
        inkstitch:satin_column="True" />
     <path
-       d="M 176.5,1000 175,978 M 286,1000 285.19737,978.5"
+       d="M 55,1000 C 55,1000 41.668888,997.43237 37,993 32.940732,989.14637 30.109375,977.6875 30.109375,977.6875 M 437,1000 433.9375,989.0625 430.875,978.125"
        id="path14233"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccc"
+       sodipodi:nodetypes="cscccc"
        inkstitch:satin_column="True" />
     <path
-       d="M 286,1000 285.19737,978.5 285,504 V 488.5 473 M 437,1000 430,975 V 498 C 430,491.33333 427.66667,485.5 423,480.5 418.33333,475.5 412.33333,473 405,473"
+       d="M 285.19737,978.5 285.09063,974.07056 284.34343,663.0645 M 430.875,978.125 430,975 V 662.86383"
        id="path14235"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccccccssc"
+       sodipodi:nodetypes="cccccc"
+       inkstitch:satin_column="True" />
+    <path
+       d="M 285.04934,640.86383 285,504 V 488.5 473 M 430,640.86383 V 498 C 430,491.33333 427.66667,485.5 423,480.5 418.33333,475.5 412.33333,473 405,473"
+       id="path3041"
+       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
+       sodipodi:nodetypes="cccccssc"
        inkstitch:satin_column="True" />
   </g>
   <g
@@ -1704,39 +1716,45 @@ Created by Adegoke Adebowale
      inkscape:label="GlyphLayer-e"
      style="display:none"
      id="g1292"
-     transform="matrix(0.1,0,0,0.1,0.06592302,-33.45)">
+     transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
-       d="M 182,843 V 821 M 293,843 292,821"
+       d="M 36.636098,843.5 V 832.5 821.5 M 412,843 C 412,843 424.98044,840.36415 429.5,836 433.9555,831.69772 437,819 437,819"
        id="path1290"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccc"
+       sodipodi:nodetypes="ccccsc"
        inkstitch:satin_column="True" />
     <path
-       d="M 293,843 292.5,832 292,821 V 665 L 291.25,654 290.5,643 M 412,843 C 418.66667,843 424.5,840.66667 429.5,836 434.5,831.33333 437,825.66667 437,819 V 668 C 437,661.33333 434.5,655.5 429.5,650.5 424.5,645.5 418.66667,643 412,643"
+       d="M 292,821 V 665 M 437,819 V 668"
        id="path13703"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccccccsccsc"
+       sodipodi:nodetypes="cccc"
        inkstitch:satin_column="True" />
     <path
-       d="M 182,665 183,643 M 292,665 290.5,643"
+       d="M 37,668 33.5,655.5 30,643 M 437,668 C 437,668 433.98764,654.98764 429.5,650.5 425.01236,646.01236 412,643 412,643"
        id="path13705"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
+       sodipodi:nodetypes="ccccsc"
+       inkstitch:satin_column="True" />
+    <path
+       d="M 36.636098,821.5 37,668 M 182,821 V 665"
+       id="path716"
+       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
        sodipodi:nodetypes="cccc"
        inkstitch:satin_column="True" />
     <path
-       d="M 62,1000 C 55.333333,1000 49.5,997.66667 44.5,993 39.5,988.33333 37,982.33333 37,975 V 668 L 30,643 M 181.75,1000 181.875,989 182,978 V 665 L 183,643"
+       d="M 37.117187,977.6875 C 37.039062,976.8125 37,975.91667 37,975 L 36.636098,843.5 M 182,978 V 975.9375 843.5"
        id="path13707"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cssccccccc"
+       sodipodi:nodetypes="cscccc"
        inkstitch:satin_column="True" />
     <path
-       d="M 181.75,1000 182,978 M 291.5,1000 292,978"
+       d="M 62,1000 C 62,1000 49.0926,997.28722 44.5,993 40.357864,989.13329 37.117187,977.6875 37.117187,977.6875 M 437,1000 437.0375,988.75283 437.075,977.50566"
        id="path13709"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccc"
+       sodipodi:nodetypes="cscccc"
        inkstitch:satin_column="True" />
     <path
-       d="M 291.5,1000 292,925 C 292,918.33333 294.33333,912.5 299,907.5 303.66667,902.5 309.33333,900 316,900 M 437,1000 V 922 911 900"
+       d="M 292,978 V 925 C 292,918.33333 294.33333,912.5 299,907.5 303.66667,902.5 309.33333,900 316,900 M 437.075,977.50566 437,922 V 911 900"
        id="path13711"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
        sodipodi:nodetypes="ccsccccc"
@@ -1747,30 +1765,36 @@ Created by Adegoke Adebowale
      inkscape:label="GlyphLayer-f"
      style="display:none"
      id="g1296"
-     transform="matrix(0.1,0,0,0.1,0.06592302,-33.45)">
+     transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
-       d="M 175,665 V 643 M 303,665 V 643"
+       d="M 28.674373,663.81759 28.5,642.61756 M 303,665 V 643"
        id="path1294"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
        sodipodi:nodetypes="cccc"
        inkstitch:satin_column="True" />
     <path
-       d="M 55,1000 C 47.666667,1000 41.666667,997.66667 37,993 32.333333,988.33333 30,982.33333 30,975 V 498 C 30,491.33333 32.333333,485.5 37,480.5 41.666667,475.5 47.666667,473 55,473 M 175,1000 V 988.75 977.5 495 L 175.25,484 175.5,473"
+       d="M 55,1000 C 47.666667,1000 41.666667,997.66667 37,993 32.333333,988.33333 30,982.33333 30,975 L 28.674373,663.81759 M 175,1000 V 988.75 977.5 L 174.24475,665"
        id="path29118"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="csccsccccccc"
+       sodipodi:nodetypes="cscccccc"
        inkstitch:satin_column="True" />
     <path
-       d="M 175,495 175.5,473 M 231,495 231.5625,473"
+       d="M 31.75,488.625 C 31.75,488.625 34.525375,482.56732 37,480.5 41.988349,476.3327 55,473 55,473 M 376,491.75 376.28125,480.75 376.5625,469.75"
        id="path13191"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccc"
+       sodipodi:nodetypes="cscccc"
        inkstitch:satin_column="True" />
     <path
-       d="M 256,573 C 249.33333,573 243.5,570.5 238.5,565.5 233.5,560.5 231,554.66667 231,548 L 231.28125,510.5 231.5625,473 M 376,573 V 560.5 548 510.5 473"
+       d="M 256,573 C 249.33333,573 243.5,570.5 238.5,565.5 233.5,560.5 231,554.66667 231,548 L 231.28125,491.76278 M 376,573 V 560.5 548 491.75"
        id="path13193"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cscccccccc"
+       sodipodi:nodetypes="cscccccc"
+       inkstitch:satin_column="True" />
+    <path
+       d="M 28.5,642.61756 30,498 C 30,494.66666 30.583333,491.54166 31.75,488.625 M 175,642.24891 175.25,501.64048 175,491.75"
+       id="path4975"
+       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
+       sodipodi:nodetypes="cccccc"
        inkstitch:satin_column="True" />
   </g>
   <g
@@ -1778,42 +1802,48 @@ Created by Adegoke Adebowale
      inkscape:label="GlyphLayer-g"
      style="display:none"
      id="g1300"
-     transform="matrix(0.1,0,0,0.1,0.06592302,-33.45)">
+     transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
-       d="M 175,1000 V 978 M 285,1000 V 978"
+       d="M 55,1000 C 55,1000 41.552167,997.55217 37,993 32.447833,988.44783 30,975 30,975 M 430.03937,1000.5 V 989.5 978.5"
        id="path1298"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccc"
+       sodipodi:nodetypes="cscccc"
        inkstitch:satin_column="True" />
     <path
-       d="M 55,1000 C 47.666667,1000 41.666667,997.66667 37,993 32.333333,988.33333 30,982.33333 30,975 V 668 C 30,661.33333 32.333333,655.5 37,650.5 41.666667,645.5 47.666667,643 55,643 M 175,1000 V 989 978 665 L 174.75,654 174.5,643"
+       d="M 30,975 V 668 C 30,667.16666 30.036458,666.34635 30.109375,665.53906 30.182292,664.73177 30.291667,663.9375 30.4375,663.15625 M 175.99999,974.91046 175.125,668.7388 175.0625,666.8694 175,665"
        id="path11921"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cssssccccccc"
+       sodipodi:nodetypes="cssccccc"
        inkstitch:satin_column="True" />
     <path
-       d="M 175,665 174.5,643 M 285,665 285.5,643"
+       d="M 30.109375,665.53906 C 30.109375,665.53906 33.033558,654.33058 37,650.5 41.675572,645.98458 55,643 55,643 M 430.875,664.875 433.9375,653.9375 437,643"
        id="path11923"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccc"
+       sodipodi:nodetypes="cscccc"
        inkstitch:satin_column="True" />
     <path
-       d="M 285.25,1170 285.125,1159 285,1148 V 665 L 285.5,643 M 405,1170 C 412.33333,1170 418.33333,1167.6667 423,1163 427.66667,1158.3333 430,1152.3333 430,1145 V 668 L 437,643"
+       d="M 285,1148 285.0625,1142.3831 285.17187,1000.5 M 429.5625,1150.25 C 429.85417,1148.5833 430,1146.8333 430,1145 L 430.03937,1000.5"
        id="path11925"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="ccccccsscc"
+       sodipodi:nodetypes="ccccsc"
        inkstitch:satin_column="True" />
     <path
-       d="M 175.5,1170 175,1148 M 285.25,1170 285,1148"
+       d="M 30,1170 V 1159.0625 1148.125 M 405,1170 C 405,1170 418.21641,1167.3083 423,1163 426.55175,1159.8011 429.5625,1150.25 429.5625,1150.25"
        id="path11927"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccc"
+       sodipodi:nodetypes="ccccsc"
        inkstitch:satin_column="True" />
     <path
-       d="M 30,1070 V 1085 1100 1135 1143.75 1152.5 1161.25 1170 M 150,1070 C 156.66667,1070 162.5,1072.3333 167.5,1077 172.5,1081.6667 175,1087.6667 175,1095 L 175.25,1132.5 175.3125,1141.875 175.375,1151.25 175.4375,1160.625 175.5,1170"
+       d="M 30,1070 V 1085 1100 1148.125 M 150,1070 C 156.66667,1070 162.5,1072.3333 167.5,1077 172.5,1081.6667 175,1087.6667 175,1095 175.12492,1113.7373 175.38819,1131.3528 175.5,1148.125"
        id="path11929"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccccccccscccccc"
+       sodipodi:nodetypes="cccccscc"
+       inkstitch:satin_column="True" />
+    <path
+       d="M 284.21316,975 285.5,663.0645 M 430.03937,978.5 432.40625,659.40625"
+       id="path2211"
+       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
+       sodipodi:nodetypes="cccc"
        inkstitch:satin_column="True" />
   </g>
   <g
@@ -1821,24 +1851,30 @@ Created by Adegoke Adebowale
      inkscape:label="GlyphLayer-h"
      style="display:none"
      id="g1304"
-     transform="matrix(0.1,0,0,0.1,0.06592302,-33.45)">
+     transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
-       d="M 62,1000 C 55.333333,1000 49.5,997.66667 44.5,993 39.5,988.33333 37,982.33333 37,975 V 498 L 30,473 M 182,1000 V 986.5 973 497 473"
+       d="M 62,1000 C 55.333333,1000 49.5,997.66667 44.5,993 39.5,988.33333 37,982.33333 37,975 V 665 M 182,1000 V 986.5 973 L 183.06809,665.4918"
        id="path27522"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cssccccccc"
+       sodipodi:nodetypes="cssccccc"
        inkstitch:satin_column="True" />
     <path
-       d="M 182,665 V 643 M 292,665 293,643"
+       d="M 37,665 V 654 643 M 436.53125,663.15624 C 436.53125,663.15624 433.08241,653.73378 429.5,650.5 424.78899,646.24746 412,643 412,643"
        id="path1302"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccc"
+       sodipodi:nodetypes="ccccsc"
        inkstitch:satin_column="True" />
     <path
-       d="M 316,1000 C 310.66667,1000 305,997.66667 299,993 294.33333,988.33333 292,982.33333 292,975 V 665 L 292.5,654 293,643 M 444,1000 440.5,987.5 437,975 V 668 C 437,661.33333 434.5,655.5 429.5,650.5 424.5,645.5 418.66667,643 412,643"
+       d="M 316,1000 C 310.66667,1000 305,997.66667 299,993 294.33333,988.33333 292,982.33333 292,975 L 292.11846,672.84865 292.36651,665 M 444,1000 440.5,987.5 437,975 V 668 C 437,666.33333 436.84375,664.71874 436.53125,663.15624"
        id="path11177"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccccccccssc"
+       sodipodi:nodetypes="ccccccccsc"
+       inkstitch:satin_column="True" />
+    <path
+       d="M 37,643 V 498 L 30,473 M 182,642.24891 V 497 473"
+       id="path2695"
+       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
+       sodipodi:nodetypes="cccccc"
        inkstitch:satin_column="True" />
   </g>
   <g
@@ -1865,24 +1901,24 @@ Created by Adegoke Adebowale
      inkscape:label="GlyphLayer-j"
      style="display:none"
      id="g1312"
-     transform="matrix(0.1,0,0,0.1,0.06592302,-33.45)">
+     transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
-       d="M 30,1170 V 1160.625 1151.25 1141.875 1132.5 1123.125 1113.75 1104.375 1095 1082.5 1070 M 175,1170 V 1160.625 1151.25 1141.875 1132.5 1123.125 1113.75 1104.375 1095 C 175,1087.6667 172.5,1081.6667 167.5,1077 162.5,1072.3333 156.66667,1070 150,1070"
+       d="M 30,1146.5625 V 1133.6719 1120.7813 1107.8906 1095 1082.5 1070 M 175,1146.5625 V 1133.6719 1120.7813 1107.8906 1095 C 175,1087.6667 172.5,1081.6667 167.5,1077 162.5,1072.3333 156.66667,1070 150,1070"
        id="path1310"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="ccccccccccccccccccccsc"
+       sodipodi:nodetypes="ccccccccccccsc"
        inkstitch:satin_column="True" />
     <path
-       d="M 204,1148 204.5,1170 M 175,1148 V 1170"
+       d="M 348.88281,1147.6875 C 348.88281,1147.6875 345.64214,1159.1333 341.5,1163 336.9074,1167.2872 324,1170 324,1170 M 30,1146.5625 V 1158.2813 1170"
        id="path60029"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccc"
+       sodipodi:nodetypes="cscccc"
        inkstitch:satin_column="True" />
     <path
-       d="M 204.5,1170 204.25,1159 204,1148 V 668 L 197,643 M 324,1170 C 330.66667,1170 336.5,1167.6667 341.5,1163 346.5,1158.3333 349,1152.3333 349,1145 V 668 643"
+       d="M 204,1148 V 668 L 197,643 M 348.88281,1147.6875 C 349.1298,988.05249 349,827.83856 349,668 V 643"
        id="path60026"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="ccccccsscc"
+       sodipodi:nodetypes="cccccc"
        inkstitch:satin_column="True" />
     <path
        d="M 349,473 V 493.25 513.5 554 C 349,560.66667 346.5,566.5 341.5,571.5 336.5,576.5 330.66667,579 324,579 M 229,473 C 221.66667,473 215.66667,475.5 211,480.5 206.33333,485.5 204,491.33333 204,498 V 538.5 558.75 579"
@@ -1896,24 +1932,36 @@ Created by Adegoke Adebowale
      inkscape:label="GlyphLayer-k"
      style="display:none"
      id="g1316"
-     transform="matrix(0.1,0,0,0.1,0.06592302,-33.45)">
+     transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
-       d="M 444,526 437,551 V 712 C 437,718.66667 434.5,724.33333 429.5,729 424.5,733.66667 418.66667,736 412,736 418.66667,736 424.5,738.5 429.5,743.5 434.5,748.5 437,754.33333 437,761 V 975 L 444,1000 M 292,526 V 555.75 693.5 725 736.5 748 784 975 1000"
+       d="M 429.5,743.5 C 434.5,748.5 437,754.33333 437,761 V 975 L 444,1000 M 292,743.97661 V 765.63505 975 1000"
        id="path1314"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="ccsscssccccccccccc"
+       sodipodi:nodetypes="cscccccc"
        inkstitch:satin_column="True" />
     <path
-       d="M 182,748 V 725 M 292,748 V 725"
-       id="path24882"
-       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccc"
-       inkstitch:satin_column="True" />
-    <path
-       d="M 62,1000 C 55.333333,1000 49.5,997.66667 44.5,993 39.5,988.33333 37,982.33333 37,975 V 498 L 30,473 M 182,1000 V 979 958 499 473"
+       d="M 62,1000 C 55.333333,1000 49.5,997.66667 44.5,993 39.5,988.33333 37,982.33333 37,975 V 743.97661 M 182,1000 V 984.25 968.5 743.14645"
        id="path24884"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cssccccccc"
+       sodipodi:nodetypes="cssccccc"
+       inkstitch:satin_column="True" />
+    <path
+       d="M 37,743.97661 V 741.10161 738.22661 729.60161 720.97661 M 429.5,743.5 C 429.5,743.5 424.76397,739.33371 421.8473,738.08371 418.93063,736.83371 412,736 412,736 412,736 420.9931,737.71538 429.5,729 431.72964,726.71572 435.125,721.25 435.125,721.25"
+       id="path24882"
+       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
+       sodipodi:nodetypes="ccccccscsc"
+       inkstitch:satin_column="True" />
+    <path
+       d="M 444,526 437,551 V 712 C 437,715.33333 436.375,718.41667 435.125,721.25 M 292,526 V 555.75 709.66996 720.97661"
+       id="path19860"
+       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
+       sodipodi:nodetypes="ccsccccc"
+       inkstitch:satin_column="True" />
+    <path
+       d="M 37,720.97661 V 498 L 30,473 M 182,721.45182 V 499 473"
+       id="path20304"
+       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
+       sodipodi:nodetypes="cccccc"
        inkstitch:satin_column="True" />
   </g>
   <g
@@ -1934,9 +1982,9 @@ Created by Adegoke Adebowale
      inkscape:label="GlyphLayer-m"
      style="display:none"
      id="g1324"
-     transform="matrix(0.1,0,0,0.1,0.06592302,-33.45)">
+     transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
-       d="M 53,1000 C 46.333333,1000 40.666667,997.66667 36,993 31.333333,988.33333 29.333333,982.33333 30,975 L 57,668 52,643 M 173,1000 174.6875,979.0625 176.375,958.125 200,665 200.375,643"
+       d="M 53,1000 C 46.333333,1000 40.666667,997.66667 36,993 31.333333,988.33333 29.333333,982.33333 30,975 L 57,668 56.375,664.875 M 173,1000 174.05469,986.91406 175.10937,973.82812 199.63086,669.58008 200,665"
        id="path22590"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
        sodipodi:nodetypes="cscccccccc"
@@ -1948,16 +1996,16 @@ Created by Adegoke Adebowale
        sodipodi:nodetypes="cccc"
        inkstitch:satin_column="True" />
     <path
-       d="M 400,665 400.75,643 M 200,665 200.375,643"
+       d="M 543.09375,663.15625 C 543.09375,663.15625 539.23819,653.6986 535.5,650.5 530.44407,646.17388 517,643 517,643 M 56.375,664.875 53.875,652.375 52,643"
        id="path2276"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccc"
+       sodipodi:nodetypes="cscccc"
        inkstitch:satin_column="True" />
     <path
-       d="M 517,643 C 524.33333,643 530.5,645.5 535.5,650.5 540.5,655.5 543.33333,661.33333 544,668 L 571,975 C 571.66667,982.33333 569.66667,988.33333 565,993 560.33333,997.66667 554.66667,1000 548,1000 M 400.75,643 400,665 400.8125,696.40625 424.25,958.125 426.125,979.0625 428,1000"
+       d="M 543.09375,663.15625 C 543.53125,664.71875 543.83333,666.33333 544,668 L 545.6875,687.1875 571,975 C 571.66667,982.33333 569.66667,988.33333 565,993 560.33333,997.66667 554.66667,1000 548,1000 M 400,665 400.10156,668.92578 400.8125,696.40625 C 409.51564,793.59136 418.14606,889.96432 425.65625,973.82812 L 426.82812,986.91406 428,1000"
        id="path1322"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="csccsccccccc"
+       sodipodi:nodetypes="ccccsccccccc"
        inkstitch:satin_column="True" />
   </g>
   <g
@@ -1965,24 +2013,24 @@ Created by Adegoke Adebowale
      inkscape:label="GlyphLayer-n"
      style="display:none"
      id="g1328"
-     transform="matrix(0.1,0,0,0.1,0.06592302,-33.45)">
+     transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
-       d="M 62,1000 C 55.333333,1000 49.5,997.66667 44.5,993 39.5,988.33333 37,982.33333 37,975 V 668 L 30,643 M 182,1000 V 986.0625 972.125 665 L 181.5,643"
+       d="M 62,1000 C 55.333333,1000 49.5,997.66667 44.5,993 39.5,988.33333 37,982.33333 37,975 V 668 L 36.125,664.875 35.25,661.75 M 182,1000 V 986.0625 972.125 671.78125 L 182.21154,667.55467 182,661.84733"
        id="path1326"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cssccccccc"
+       sodipodi:nodetypes="cssccccccccc"
        inkstitch:satin_column="True" />
     <path
-       d="M 182,665 181.5,643 M 292,665 290.5,643"
+       d="M 35.25,661.75 32.625,652.375 30,643 M 436.53125,663.15624 C 436.53125,663.15624 433.08241,653.73378 429.5,650.5 424.78899,646.24746 412,643 412,643"
        id="path10681"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccc"
+       sodipodi:nodetypes="ccccsc"
        inkstitch:satin_column="True" />
     <path
-       d="M 292,1000 V 987.0625 974.125 665 L 291.25,654 290.5,643 M 412,1000 C 418.66667,1000 424.5,997.66667 429.5,993 434.5,988.33333 437,982.33333 437,975 V 668 C 437,661.33333 434.5,655.5 429.5,650.5 424.5,645.5 418.66667,643 412,643"
+       d="M 292,1000 V 987.0625 974.125 665 L 291.8125,662.25 M 412,1000 C 418.66667,1000 424.5,997.66667 429.5,993 434.5,988.33333 437,982.33333 437,975 V 668 C 437,666.33333 436.84375,664.71874 436.53125,663.15624"
        id="path10683"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccccccssssc"
+       sodipodi:nodetypes="ccccccsssc"
        inkstitch:satin_column="True" />
   </g>
   <g
@@ -1990,30 +2038,30 @@ Created by Adegoke Adebowale
      inkscape:label="GlyphLayer-o"
      style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1332"
-     transform="matrix(0.1,0,0,0.1,0.06592302,-33.45)">
+     transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
-       d="M 285.5,1000 285.25,989 285,978 V 665 L 284.5,654 284,643 M 405,1000 C 412.33333,1000 418.33333,997.66667 423,993 427.66667,988.33333 430,982.33333 430,975 V 668 C 430,661.33333 427.66667,655.5 423,650.5 418.33333,645.5 412.33333,643 405,643"
+       d="M 285.0625,980.75 285,973.875 285.42308,669.65385 285.59615,659.5 M 429.5625,980.25 C 429.85417,978.58333 430,976.83333 430,975 V 668 C 430.28802,664.61783 429.0496,662.86664 428.37211,659.90856"
        id="path1330"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccccccsccsc"
+       sodipodi:nodetypes="cccccccc"
        inkstitch:satin_column="True" />
     <path
-       d="M 174.5,1000 175,978 M 285.5,1000 285,978"
+       d="M 55,1000 C 55,1000 41.783593,997.30833 37,993 33.448254,989.80113 30.4375,980.25 30.4375,980.25 M 405,1000 C 405,1000 418.21641,997.30833 423,993 426.55175,989.80113 429.5625,980.25 429.5625,980.25"
        id="path9943"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccc"
+       sodipodi:nodetypes="csccsc"
        inkstitch:satin_column="True" />
     <path
-       d="M 55,1000 C 47.666667,1000 41.666667,997.66667 37,993 32.333333,988.33333 30,982.33333 30,975 V 668 C 30,661.33333 32.333333,655.5 37,650.5 41.666667,645.5 47.666667,643 55,643 M 174.5,1000 174.75,989 175,978 V 665 L 174.5,654 174,643"
+       d="M 30.4375,980.25 C 30.145833,978.58333 30,976.83333 30,975 V 668 C 29.711989,664.61783 31.072507,661.58309 31.75,658.625 M 174.9375,980.75 175,972.07692 174.57692,667.96154 174.75,659.5"
        id="path9945"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="csccsccccccc"
+       sodipodi:nodetypes="cccccccc"
        inkstitch:satin_column="True" />
     <path
-       d="M 175,665 174,643 M 285,665 284,643"
+       d="M 31.75,658.625 C 31.75,658.625 34.525375,652.56732 37,650.5 41.988349,646.3327 55,643 55,643 M 429.5625,663.15624 C 429.5625,663.15624 426.4977,653.71699 423,650.5 418.21584,646.09979 405,643 405,643"
        id="path9947"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccc"
+       sodipodi:nodetypes="csccsc"
        inkstitch:satin_column="True" />
   </g>
   <g
@@ -2021,28 +2069,34 @@ Created by Adegoke Adebowale
      inkscape:label="GlyphLayer-p"
      style="display:none"
      id="g1336"
-     transform="matrix(0.1,0,0,0.1,0.06592302,-33.45)">
+     transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
-       d="M 62,1170 C 55.333333,1170 49.5,1167.6667 44.5,1163 39.5,1158.3333 37,1152.3333 37,1145 V 668 L 30,643 M 182,1170 V 1158.375 1146.75 665 L 181.5,643"
+       d="M 62,1170 C 55.333333,1170 49.5,1167.6667 44.5,1163 39.5,1158.3333 37,1152.3333 37,1145 V 1000.5 M 182,1170 V 1158.375 1146.75 1000.5"
        id="path1334"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cssccccccc"
+       sodipodi:nodetypes="cssccccc"
        inkstitch:satin_column="True" />
     <path
-       d="M 182,665 181.5,643 M 290.5,643 292,665"
+       d="M 36.125,664.875 33.0625,653.9375 30,643 M 412,643 C 412,643 424.8984,646.12929 429.5,650.5 433.54911,654.34594 436.88281,665.53906 436.88281,665.53906"
        id="path8250"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccc"
+       sodipodi:nodetypes="ccccsc"
        inkstitch:satin_column="True" />
     <path
-       d="M 293,1000 292.5,989 292,978 V 665 L 291.25,654 290.5,643 M 412,1000 C 418.66667,1000 424.5,997.66667 429.5,993 434.5,988.33333 437,982.33333 437,975 V 668 C 437,661.33333 434.5,655.5 429.5,650.5 424.5,645.5 418.66667,643 412,643"
+       d="M 292,978 V 975.9375 668.01469 665 M 436.88281,977.6875 C 436.96094,976.8125 437,975.91666 437,975 V 668 C 437,667.16666 436.96094,666.34635 436.88281,665.53906"
        id="path8252"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccccccssssc"
+       sodipodi:nodetypes="cccccssc"
        inkstitch:satin_column="True" />
     <path
-       d="M 182,1000 V 978 H 237 M 293,1000 292,978 H 237"
+       d="M 37,1000.5 V 989.5 978.5 L 237,978 M 412,1000 C 412,1000 424.9074,997.28722 429.5,993 433.64214,989.13329 436.88281,977.6875 436.88281,977.6875 L 237,978"
        id="path8254"
+       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
+       sodipodi:nodetypes="cccccscc"
+       inkstitch:satin_column="True" />
+    <path
+       d="M 37,978.5 V 668 L 36.125,664.875 M 181.15385,978 182,667.39904 V 665"
+       id="path3379"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
        sodipodi:nodetypes="cccccc"
        inkstitch:satin_column="True" />
@@ -2052,30 +2106,36 @@ Created by Adegoke Adebowale
      inkscape:label="GlyphLayer-q"
      style="display:none"
      id="g1340"
-     transform="matrix(0.1,0,0,0.1,0.06592302,-33.45)">
+     transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
-       d="M 176,1000 175,978 M 285,1000 V 978"
+       d="M 430.5,1000.5 430,1149 V 1160.5 1170 M 285,1000.5 V 1145 C 285,1151.6667 287.33333,1157.5 292,1162.5 296.66667,1167.5 302.33333,1170 309,1170"
+       id="path710"
+       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
+       sodipodi:nodetypes="ccccccsc"
+       inkstitch:satin_column="True" />
+    <path
+       d="M 55,1000 C 55,1000 41.783593,997.30833 37,993 33.448254,989.80113 30.4375,980.25 30.4375,980.25 M 430.5,1000.5 V 989.5 978.5"
        id="path1338"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccc"
+       sodipodi:nodetypes="cscccc"
        inkstitch:satin_column="True" />
     <path
-       d="M 176.5,643 175.75,654 175,665 V 978 L 175.5,989 176,1000 M 55,643 C 47.666667,643 41.666667,645.5 37,650.5 32.333333,655.5 30,661.33333 30,668 V 975 C 30,982.33333 32.333333,988.33333 37,993 41.666667,997.66667 47.666667,1000 55,1000"
+       d="M 175,665 V 974.96222 978 M 30,668 V 975 C 30,976.83333 30.145833,978.58333 30.4375,980.25"
        id="path7767"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccccccssssc"
+       sodipodi:nodetypes="ccccsc"
        inkstitch:satin_column="True" />
     <path
-       d="M 283.5,643 285,665 M 176.5,643 175,665"
+       d="M 437,643 433.5,655.5 430,668 M 55,643 C 55,643 41.563249,645.8711 37,650.5 32.589309,654.97415 30,668 30,668"
        id="path7769"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccc"
+       sodipodi:nodetypes="ccccsc"
        inkstitch:satin_column="True" />
     <path
-       d="M 437,643 430,668 V 1149 1160.5 1170 M 283.5,643 285,665 V 1145 C 285,1151.6667 287.33333,1157.5 292,1162.5 296.66667,1167.5 302.33333,1170 309,1170"
+       d="M 430,668 430.5,978.5 M 285,665 V 980.33619"
        id="path7772"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="ccccccccsc"
+       sodipodi:nodetypes="cccc"
        inkstitch:satin_column="True" />
   </g>
   <g
@@ -2083,24 +2143,24 @@ Created by Adegoke Adebowale
      inkscape:label="GlyphLayer-r"
      style="display:none"
      id="g1344"
-     transform="matrix(0.1,0,0,0.1,0.06592302,-33.45)">
+     transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
-       d="M 62,1000 C 55.333333,1000 49.5,997.66667 44.5,993 39.5,988.33333 37,982.33333 37,975 V 668 L 30,643 M 182,1000 V 988.125 976.25 665 L 181.75,643"
+       d="M 62,1000 C 55.333333,1000 49.5,997.66667 44.5,993 39.5,988.33333 37,982.33333 37,975 V 668 M 182,1000 V 988.125 976.25 665"
        id="path1342"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cssccccccc"
+       sodipodi:nodetypes="cssccccc"
        inkstitch:satin_column="True" />
     <path
-       d="M 182,665 181.75,643 M 292,665 291.25,643"
+       d="M 37,668 30,643 M 437,667.21875 436.25,645.21875"
        id="path7058"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
        sodipodi:nodetypes="cccc"
        inkstitch:satin_column="True" />
     <path
-       d="M 316,742 C 309.33333,742 303.66667,739.5 299,734.5 294.33333,729.5 292,723.66667 292,717 L 291.90625,707.75 291.8125,698.5 291.71875,689.25 291.625,680 291.53125,670.75 291.4375,661.5 291.34375,652.25 291.25,643 M 437,742 V 731.25 720.5 710.8125 701.125 691.4375 681.75 672.0625 662.375 652.6875 643"
+       d="M 316,742 C 309.33333,742 303.66667,739.5 299,734.5 294.33333,729.5 292,723.66667 292,717 L 291.90625,707.75 291.8125,698.5 291.71875,689.25 291.625,680 291.53125,670.75 291.48437,666.125 M 437,742 V 731.25 720.5 710.8125 701.125 691.4375 681.75 672.0625 667.21875"
        id="path7060"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cscccccccccccccccccccc"
+       sodipodi:nodetypes="cscccccccccccccccc"
        inkstitch:satin_column="True" />
   </g>
   <g
@@ -2108,48 +2168,48 @@ Created by Adegoke Adebowale
      inkscape:label="GlyphLayer-s"
      style="display:none"
      id="g1348"
-     transform="matrix(0.1,0,0,0.1,0.06592302,-33.45)">
+     transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
-       d="M 30,1000 V 990.75 981.5 972.25 963 953.75 944.5 935.25 926 913 900 M 173.75,1000 173.90625,990.625 174.0625,981.25 174.21875,971.875 174.375,962.5 174.53125,953.125 174.6875,943.75 174.84375,934.375 175,925 C 175,918.33333 172.5,912.5 167.5,907.5 162.5,902.5 156.66667,900 150,900"
+       d="M 30,981.5 V 972.25 963 953.75 944.5 935.25 926 913 900 M 174.0625,981.25 174.21875,971.875 174.375,962.5 174.53125,953.125 174.6875,943.75 174.84375,934.375 175,925 C 175,918.33333 172.5,912.5 167.5,907.5 162.5,902.5 156.66667,900 150,900"
        id="path1346"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="ccccccccccccccccccccsc"
+       sodipodi:nodetypes="ccccccccccccccccsc"
        inkstitch:satin_column="True" />
     <path
-       d="M 173.75,1000 175,978 M 286.625,1000 285,978"
+       d="M 30,1000 V 990.75 981.5 M 405,1000 C 405,1000 418.21641,997.30833 423,993 426.55175,989.80113 429.5625,980.25 429.5625,980.25"
        id="path3551"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccc"
+       sodipodi:nodetypes="ccccsc"
        inkstitch:satin_column="True" />
     <path
-       d="M 286.625,1000 285.8125,989 285,978 V 832 L 284.5,821 284,810 M 405,1000 C 412.33333,1000 418.33333,997.66667 423,993 427.66667,988.33333 430,982.33333 430,975 V 835 C 430,827.66667 427.66667,821.66667 423,817 418.33333,812.33333 412.33333,810 405,810"
+       d="M 285,983.5 V 978.79808 974.09615 832 M 428.25,985 C 428.83333,983.5 429.27083,981.91666 429.5625,980.25 429.85417,978.58333 430,976.83333 430,975 V 835"
        id="path3553"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccccccsccsc"
+       sodipodi:nodetypes="cccccscc"
        inkstitch:satin_column="True" />
     <path
-       d="M 176,832 175,810 M 285,832 284,810"
+       d="M 55,832 C 55,832 42.019563,829.36415 37.5,825 33.044502,820.69772 30,808 30,808 M 430,835 C 430,835 427.55217,821.55217 423,817 418.44783,812.44783 405,810 405,810"
        id="path3555"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccc"
+       sodipodi:nodetypes="csccsc"
        inkstitch:satin_column="True" />
     <path
-       d="M 55,832 C 48.333333,832 42.5,829.66667 37.5,825 32.5,820.33333 30,814.66667 30,808 V 668 C 30,661.33333 32.333333,655.5 37,650.5 41.666667,645.5 47.666667,643 55,643 M 176,832 175.5,821 175,810 V 665 L 175.1875,654 175.375,643"
+       d="M 30,808 V 668 C 29.943427,666.69179 30.165793,665.53285 30.246094,664.33789 30.300782,663.94075 30.364584,663.54687 30.4375,663.15625 M 175,810 V 668.61538 666.06731 663.51923"
        id="path3557"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="csccsccccccc"
+       sodipodi:nodetypes="cccccccc"
        inkstitch:satin_column="True" />
     <path
-       d="M 175,665 175.375,643 M 285,665 284.25,643"
+       d="M 30.246094,664.33789 C 30.246094,664.33789 30.17976,661.70087 31.439572,658.65262 32.699384,655.60437 35.285343,652.1449 37,650.5 46.43801,641.44595 55,643 55,643 M 430,665.04296 V 659.53222 654.02148 643"
        id="path3559"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccc"
+       sodipodi:nodetypes="cssccccc"
        inkstitch:satin_column="True" />
     <path
-       d="M 309,742 C 302.33333,742 296.66667,739.5 292,734.5 287.33333,729.5 285,723.66667 285,717 L 284.90625,707.75 284.8125,698.5 284.71875,689.25 284.625,680 284.53125,670.75 284.4375,661.5 284.34375,652.25 284.25,643 M 430,742 V 729.625 717.25 707.96875 698.6875 689.40625 680.125 670.84375 661.5625 652.28125 643"
+       d="M 309,742 C 302.33333,742 296.66667,739.5 292,734.5 287.33333,729.5 285,723.66667 285,717 L 284.90625,707.75 284.46094,663.8125 M 430,742 V 729.625 717.25 707.96875 665.04296"
        id="path3561"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cscccccccccccccccccccc"
+       sodipodi:nodetypes="cscccccccc"
        inkstitch:satin_column="True" />
   </g>
   <g
@@ -2157,30 +2217,36 @@ Created by Adegoke Adebowale
      inkscape:label="GlyphLayer-t"
      style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1352"
-     transform="matrix(0.1,0,0,0.1,0.06592302,-33.45)">
+     transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
-       d="M 182,665 V 643 M 310,665 V 643"
+       d="M 238.07013,976.82902 238.0526,963.87177 238.03506,950.91451 238.01753,937.95726 238,925 C 238,918.33333 240.5,912.5 245.5,907.5 250.5,902.5 256.33333,900 263,900 M 383.5,977.57692 383.375,964.43269 383.25,951.28846 383.125,938.14423 383,925 V 912.5 900"
+       id="path11346"
+       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
+       sodipodi:nodetypes="cccccscccccccc"
+       inkstitch:satin_column="True" />
+    <path
+       d="M 62,1000 C 62,1000 49.792991,998.52694 44,993 41.487115,990.60252 40.082825,987.20719 38.75,984 37.994969,982.18316 37.234623,978.2954 37.234623,978.2954 M 383.5,1000 V 988.78846 983.18269 977.57692"
+       id="path2639"
+       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
+       sodipodi:nodetypes="cssccccc"
+       inkstitch:satin_column="True" />
+    <path
+       d="M 37.246094,978.375 C 37.142166,977.81396 37.099532,977.22925 37.073435,976.65529 37.047338,976.08132 37.037778,975.5181 37,975 L 38.153849,665 M 182.09375,977.46693 182.04687,975.82962 182,974.19231 182.53846,665"
+       id="path13574"
+       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
+       sodipodi:nodetypes="cscccccc"
+       inkstitch:satin_column="True" />
+    <path
+       d="M 38.153849,665 V 643 M 310,665 V 643"
        id="path1350"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
        sodipodi:nodetypes="cccc"
        inkstitch:satin_column="True" />
     <path
-       d="M 238.625,1000 238.54687,990.625 238.46875,981.25 238.39062,971.875 238.3125,962.5 238.23437,953.125 238.15625,943.75 238.07812,934.375 238,925 C 238,918.33333 240.5,912.5 245.5,907.5 250.5,902.5 256.33333,900 263,900 M 383,1000 V 990.625 981.25 971.875 962.5 953.125 943.75 934.375 925 912.5 900"
-       id="path11346"
+       d="M 38.153849,643 37,498 30,473 M 182,642.24891 V 505 473"
+       id="path13577"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccccccccscccccccccccc"
-       inkstitch:satin_column="True" />
-    <path
-       d="M 182.375,1000 182,978 M 238.625,1000 238,978"
-       id="path2639"
-       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccc"
-       inkstitch:satin_column="True" />
-    <path
-       d="M 62,1000 C 56,1000 50,997.66667 44,993 39.333333,987 37,981 37,975 V 498 L 30,473 M 182.375,1000 182.1875,989 182,978 V 505 473"
-       id="path2641"
-       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="ccsccccccc"
+       sodipodi:nodetypes="cccccc"
        inkstitch:satin_column="True" />
   </g>
   <g
@@ -2190,47 +2256,57 @@ Created by Adegoke Adebowale
      id="g1356"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
-       d="M 316,1000 C 309.33333,1000 303.66667,997.5 299,992.5 294.33333,987.5 292,981.66667 292,975 V 672.5 657.75 643 M 437,1000 V 979.25 958.5 668 C 437,661.33333 434.5,655.5 429.5,650.5 424.5,645.5 418.66667,643 412,643"
+       d="M 316,1000 C 309.33333,1000 303.66667,997.5 299,992.5 294.33333,987.5 292,981.66667 292,975 L 291.5,946.5 M 437,1000 V 989.625 979.25 945.57692"
        id="path1354"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="csccccccccsc"
-       inkstitch:satin_column="True" />
+       sodipodi:nodetypes="cscccccc"
+       inkstitch:satin_column="True"
+       inkscape:label="path1354" />
     <path
-       d="M 183,946 182,924 M 292,946 V 924"
-       id="path10827"
-       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccc"
-       inkstitch:satin_column="True" />
-    <path
-       d="M 62,946 C 55.333333,946 49.5,943.66667 44.5,939 39.5,934.33333 37,928.33333 37,921 V 668 L 30,643 M 183,946 182.5,935 182,924 V 668.125 643"
+       d="M 62,946 C 55.333333,946 49.5,943.66667 44.5,939 39.5,934.33333 37,928.33333 37,921 M 437,945.57692 V 933.30769 924"
        id="path1737"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cssccccccc"
-       inkstitch:satin_column="True" />
+       sodipodi:nodetypes="cscccc"
+       inkstitch:satin_column="True"
+       inkscape:label="path1737" />
+    <path
+       d="M 292,923.75 V 672.5 657.75 643 M 437,923.625 V 668 C 437,661.33333 434.5,655.5 429.5,650.5 424.5,645.5 418.66667,643 412,643"
+       id="path10544"
+       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
+       sodipodi:nodetypes="ccccccsc"
+       inkstitch:satin_column="True"
+       inkscape:label="path1354" />
+    <path
+       d="M 37,921 V 668 L 30,643 M 182.84615,921 182,668.125 V 643"
+       id="path10542"
+       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
+       sodipodi:nodetypes="cccccc"
+       inkstitch:satin_column="True"
+       inkscape:label="path1737" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-v"
      style="display:none"
      id="g1360"
-     transform="matrix(0.1,0,0,0.1,0.06592302,-33.45)">
+     transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
-       d="M 102,1000 C 94.666667,1000 88.166667,997.5 82.5,992.5 76.833333,987.5 73.666667,981.66667 73,975 L 30,668 C 29.333333,661.33333 31,655.5 35,650.5 39,645.5 44.666667,643 52,643 M 218.9375,1000 218.96875,989 219,978 174.9375,663.9375 173.46875,653.46875 172,643"
+       d="M 73,975 30,668 C 29.333333,661.33333 31,655.5 35,650.5 39,645.5 44.666667,643 52,643 M 219,978 174.9375,663.9375 173.46875,653.46875 172,643"
        id="path1358"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="csccsccccccc"
+       sodipodi:nodetypes="ccsccccc"
        inkstitch:satin_column="True" />
     <path
-       d="M 234,978 234.0625,1000 M 219,978 218.9375,1000"
+       d="M 380,975 C 380,975 375.48869,988.12181 370.5,992.5 365.26572,997.09373 351,1000 351,1000 M 73,975 C 73,975 77.511311,988.12181 82.5,992.5 87.73428,997.09373 102,1000 102,1000"
        id="path998"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccc"
+       sodipodi:nodetypes="csccsc"
        inkstitch:satin_column="True" />
     <path
-       d="M 402,643 C 408.66667,643 414,645.5 418,650.5 422,655.5 423.66667,661.33333 423,668 L 380,975 C 379.33333,981.66667 376.16667,987.5 370.5,992.5 364.83333,997.5 358.33333,1000 351,1000 M 281,643 279.53125,653.46875 278.0625,663.9375 234,978 234.03125,989 234.0625,1000"
+       d="M 402,643 C 408.66667,643 414,645.5 418,650.5 422,655.5 423.66667,661.33333 423,668 L 380,975 M 281,643 279.53125,653.46875 278.0625,663.9375 234,978"
        id="path1000"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="csccsccccccc"
+       sodipodi:nodetypes="cscccccc"
        inkstitch:satin_column="True" />
   </g>
   <g
@@ -2269,24 +2345,38 @@ Created by Adegoke Adebowale
      inkscape:label="GlyphLayer-x"
      style="display:none"
      id="g1368"
-     transform="matrix(0.1,0,0,0.1,0.06592302,-33.45)">
+     transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
-       d="M 314,1000 C 306.66666,1000 301,998.08333 297,994.25 293,990.41666 290.66666,984.66666 290,977 L 278.625,850.125 277,832 V 821 810 L 278.625,791.875 290,665 C 290.66667,659 293.16667,653.83333 297.5,649.5 301.83333,645.16667 307.33333,643 314,643 M 444,1000 439.5,987.5 435,975 423,846 C 422.33333,839.33333 419.33333,833.5 414,828.5 408.66667,823.5 402.66667,821 396,821 403.33333,821 409.5,818.5 414.5,813.5 419.5,808.5 422.33333,802.66667 423,796 427.66667,746 431.66667,703.33333 435,668 L 439.5,655.5 444,643"
+       d="M 314,1000 C 306.66666,1000 301,998.08333 297,994.25 293,990.41666 290.66666,984.66666 290,977 L 278.625,850.125 277,832 M 444,1000 439.5,987.5 435,975 423,846 C 422.33333,839.33333 419.33333,833.5 414,828.5"
        id="path1366"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cscccccccscccccscscccc"
+       sodipodi:nodetypes="cscccccccc"
        inkstitch:satin_column="True" />
     <path
-       d="M 197,832 V 810 M 277,832 V 810"
-       id="path8262"
-       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccc"
-       inkstitch:satin_column="True" />
-    <path
-       d="M 159,643 C 165.66667,643 171.33333,645.16667 176,649.5 180.66667,653.83333 183.33333,659 184,665 L 195.375,791.875 197,810 V 821 832 L 195.375,850.125 184,977 C 183.33333,983.66667 180.66667,989.16667 176,993.5 171.33333,997.83333 165.66667,1000 159,1000 M 30,643 34.5,655.5 39,668 50,796 C 51.333333,803.33333 54.666667,809.33333 60,814 65.333333,818.66667 71.333333,821 78,821 71.333333,821 65.333333,823.5 60,828.5 54.666667,833.5 51.333333,839.33333 50,846 L 39,975 34.5,987.5 30,1000"
+       d="M 197,832 195.375,850.125 184,977 C 183.33333,983.66667 180.66667,989.16667 176,993.5 171.33333,997.83333 165.66667,1000 159,1000 M 60,828.5 C 54.666667,833.5 51.333333,839.33333 50,846 L 39,975 34.5,987.5 30,1000"
        id="path8264"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cscccccccscccccscscccc"
+       sodipodi:nodetypes="cccscccccc"
+       inkstitch:satin_column="True"
+       inkscape:label="path8264" />
+    <path
+       d="M 60,828.5 C 60,828.5 65.670912,824.05454 68.670912,822.80454 71.670912,821.55454 78,821 78,821 78,821 71.275844,820.32829 68.275844,819.16162 65.275844,817.99495 60,814 60,814 M 414,828.5 C 414,828.5 411.48706,825.60797 408.48706,824.35797 405.48706,823.10797 396,821 396,821 396,821 403.81785,820.04437 406.90119,818.79437 409.98452,817.54437 414.5,813.5 414.5,813.5"
+       id="path8262"
+       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
+       sodipodi:nodetypes="czczcczczc"
+       inkstitch:satin_column="True" />
+    <path
+       d="M 159,643 C 165.66667,643 171.33333,645.16667 176,649.5 180.66667,653.83333 183.33333,659 184,665 L 195.375,791.875 197,810 M 30,643 34.5,655.5 39,668 50,796 C 51.333333,803.33333 54.666667,809.33333 60,814"
+       id="path7510"
+       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
+       sodipodi:nodetypes="cscccccccc"
+       inkstitch:satin_column="True"
+       inkscape:label="path7510" />
+    <path
+       d="M 277,810 278.625,791.875 290,665 C 290.66667,659 293.16667,653.83333 297.5,649.5 301.83333,645.16667 307.33333,643 314,643 M 414.5,813.5 C 419.5,808.5 422.33333,802.66667 423,796 427.66667,746 431.66667,703.33333 435,668 L 439.5,655.5 444,643"
+       id="path7888"
+       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
+       sodipodi:nodetypes="cccscccccc"
        inkstitch:satin_column="True" />
   </g>
   <g
@@ -2294,73 +2384,83 @@ Created by Adegoke Adebowale
      inkscape:label="GlyphLayer-y"
      style="display:none"
      id="g1372"
-     transform="matrix(0.1,0,0,0.1,0.06592302,-33.45)">
+     transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
-       d="M 157,1070 C 164.33333,1070 170.33333,1072.3333 175,1077 179.66667,1081.6667 182,1087.6667 182,1095 V 1148 L 182.5,1170 M 37,1070 V 1081 1096 1153 1170"
+       d="M 157,1070 C 164.33333,1070 170.33333,1072.3333 175,1077 179.66667,1081.6667 182,1087.6667 182,1095 V 1148 M 37,1070 V 1081 1096 1153"
        id="path6744"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cssccccccc"
+       sodipodi:nodetypes="cssccccc"
        inkstitch:satin_column="True" />
     <path
-       d="M 182.5,1170 182,1148 M 294.25,1170 292,1148"
+       d="M 37,1170 V 1157.2692 1144.5385 M 412,1170 C 412,1170 421.71388,1171.6679 429.5,1163 436.35873,1155.3645 437,1145 437,1145"
        id="path3025"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccc"
-       inkstitch:satin_column="True" />
+       sodipodi:nodetypes="ccccsc"
+       inkstitch:satin_column="True"
+       inkscape:label="path3025" />
     <path
-       d="M 292.25,1170 292,1158 V 1143.875 673.5 657.25 643 M 412,1170 C 418.66667,1170 424.5,1167.6667 429.5,1163 434.5,1158.3333 437,1152.3333 437,1145 V 668 C 437,661.33333 434.5,655.5 429.5,650.5 424.5,645.5 418.66667,643 412,643"
+       d="M 292,1143.875 291.5,1000.5009 M 437,1145 437.5,1000.5009"
        id="path3027"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccccccssssc"
-       inkstitch:satin_column="True" />
+       sodipodi:nodetypes="cccc"
+       inkstitch:satin_column="True"
+       inkscape:label="path3027" />
     <path
-       d="M 182,1000 V 978 M 292,1000 V 978"
+       d="M 62,1000 C 62,1000 48.974151,997.41069 44.5,993 39.871096,988.43675 37,975 37,975 M 437.5,1000.5009 V 989.50094 978.50094"
        id="path1370"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccc"
+       sodipodi:nodetypes="cscccc"
        inkstitch:satin_column="True" />
     <path
-       d="M 157,643 C 173.66667,643 182,651.33333 182,668 V 973.5 988 999 M 30,643 37,668 V 975 C 37,982.33333 39.5,988.33333 44.5,993 49.5,997.66667 55.333564,1000.0556 62,1000"
+       d="M 157,643 C 173.66667,643 182,651.33333 182,668 V 973.5 M 30,643 37,668 V 975"
        id="path3029"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccccccssc"
-       inkstitch:satin_column="True" />
+       sodipodi:nodetypes="cccccc"
+       inkstitch:satin_column="True"
+       inkscape:label="path3029" />
+    <path
+       d="M 291,975 292,673.5 V 657.25 643 M 437.5,978.50094 437,668 C 436.98926,661.33334 434.5,655.5 429.5,650.5 424.5,645.5 418.66667,643 412,643"
+       id="path5626"
+       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
+       sodipodi:nodetypes="cccccssc"
+       inkstitch:satin_column="True"
+       inkscape:label="path5626" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-z"
      style="display:none"
      id="g1376"
-     transform="matrix(0.1,0,0,0.1,0.06592302,-33.45)">
+     transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
-       d="M 341,1000 V 990.625 981.25 971.875 962.5 953.125 943.75 934.375 925 C 341,918.33333 343.5,912.5 348.5,907.5 353.5,902.5 359.33333,900 366,900 M 486,1000 V 991 982 973 964 955 946 937 928 913 900"
+       d="M 340.70084,968.5 341,962.5 V 953.125 943.75 934.375 925 C 341,918.33333 343.5,912.5 348.5,907.5 353.5,902.5 359.33333,900 366,900 M 486,968.5 V 964 955 946 937 928 913 900"
        id="path1374"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccccccccscccccccccccc"
+       sodipodi:nodetypes="ccccccsccccccccc"
        inkstitch:satin_column="True" />
     <path
-       d="M 305.5,1000 304,978 M 341,1000 V 978"
+       d="M 184,1000 C 184,1000 169.44295,996.41953 165,991 160.64333,985.68571 160,971 160,971 M 486,1000 V 984.25 968.5"
        id="path608"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccc"
+       sodipodi:nodetypes="cscccc"
        inkstitch:satin_column="True" />
     <path
-       d="M 184,1000 C 176,1000 169.66667,997 165,991 161,984.33333 159.33333,977.66667 160,971 L 214,665 216.5,654 219,643 M 305.5,1000 304.75,989 304,978 359,668 C 360.33333,660.66667 358.83333,654.66667 354.5,650 350.16667,645.33333 344.66667,643 338,643"
+       d="M 160,971 215.19664,667.21875 M 305.71875,968.3125 359,668"
        id="path610"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="ccccccccccsc"
-       inkstitch:satin_column="True" />
-    <path
-       d="M 219,643 214,665 M 174,643 175,665"
-       id="path612"
-       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
        sodipodi:nodetypes="cccc"
        inkstitch:satin_column="True" />
     <path
-       d="M 30,742 V 731.25 720.5 710.8125 701.125 691.4375 681.75 672.0625 662.375 652.6875 643 M 150,742 C 156.66667,742 162.5,739.66667 167.5,735 172.5,730.33333 175,724.33333 175,717 L 174.875,707.75 174.75,698.5 174.625,689.25 174.5,680 174.375,670.75 174.25,661.5 174.125,652.25 174,643"
+       d="M 338,643 C 338,643 348.5197,643.52767 354.5,650 360.88469,656.90999 359,668 359,668 M 30,643 V 655.10937 667.21875"
+       id="path612"
+       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
+       sodipodi:nodetypes="cscccc"
+       inkstitch:satin_column="True" />
+    <path
+       d="M 30,742 V 731.25 720.5 710.8125 701.125 691.4375 681.75 667.21875 M 150,742 C 156.66667,742 162.5,739.66667 167.5,735 172.5,730.33333 175,724.33333 175,717 L 174.875,707.75 174.75,698.5 174.625,689.25 174.5,680 174.375,668.08377"
        id="path614"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="ccccccccccccsccccccccc"
+       sodipodi:nodetypes="cccccccccscccccc"
        inkstitch:satin_column="True" />
   </g>
 </svg>
