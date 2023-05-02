@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-05-01 01:18+0000\n"
-"PO-Revision-Date: 2023-05-01 01:20\n"
+"POT-Creation-Date: 2023-05-02 01:15+0000\n"
+"PO-Revision-Date: 2023-05-02 01:17\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-01 01:18+0000\n"
+"POT-Creation-Date: 2023-05-02 01:15+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -901,7 +901,7 @@ msgstr "Si vous souhaitez aider, merci de \n"
 "- sauvegarder votre fichier svg\n"
 "- créer un rapport d'erreur (issue) sur https://github.com/inkstitch/inkstitch/issues"
 
-#: inkstitch.py:107 lib/elements/fill_stitch.py:877
+#: inkstitch.py:107 lib/elements/fill_stitch.py:894
 msgid "Include the error description and also (if possible) the svg file."
 msgstr "Incluez la description de l'erreur et (si possible) le fichier svg."
 
@@ -920,8 +920,8 @@ msgstr "Position de fin de remplissage"
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
 #: lib/commands.py:30 inx/inkstitch_object_commands.inx:6
-msgid "Ripple stitch target position"
-msgstr "Position de la cible de la broderie ondulée"
+msgid "Target position"
+msgstr ""
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
@@ -1181,15 +1181,7 @@ msgstr "Arrêter après"
 msgid "Add a STOP command after stitching this object."
 msgstr "Ajoute une commande STOP après avoir brodé cet objet."
 
-#: lib/elements/element.py:361
-msgid "Random seed"
-msgstr "Graine aléatoire"
-
-#: lib/elements/element.py:362
-msgid "Use a specific seed for randomized attributes. Uses the element ID if empty."
-msgstr "Utiliser cette graine aléatoire pour le calcul des attributs. Si vide, utilise l'identificateur de l'élément."
-
-#: lib/elements/element.py:410
+#: lib/elements/element.py:394
 #, python-format
 msgid "Object %(id)s has an empty 'd' attribute.  Please delete this object from your document."
 msgstr "L'objet %(id)s a un attribut 'd' vide. S’il vous plaît supprimer cet objet dans votre document."
@@ -1197,11 +1189,11 @@ msgstr "L'objet %(id)s a un attribut 'd' vide. S’il vous plaît supprimer cet 
 #. used when showing an error message to the user such as
 #. "Failed on PathLabel (path1234): Satin column: One or more of the rungs
 #. doesn't intersect both rails."
-#: lib/elements/element.py:596
+#: lib/elements/element.py:580
 msgid "Failed on "
 msgstr "Erreur sur "
 
-#: lib/elements/element.py:598
+#: lib/elements/element.py:582
 msgid "Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects. This will indicate the errorneus position."
 msgstr "Merci d'exécuter Extensions > Ink/Stitch > Résolution de problèmes > Dépistage de problèmes avec des objets. Ceci indiquera la position erronée."
 
@@ -1556,7 +1548,7 @@ msgstr "Étend la forme avant le remplissage pour éviter les trous entre les fo
 
 #: lib/elements/fill_stitch.py:447
 msgid "Clip path"
-msgstr "Fixer le chemin"
+msgstr "Contraindre le chemin à la forme"
 
 #: lib/elements/fill_stitch.py:448
 msgid "Constrain stitching to the shape.  Useful when smoothing and expand are used."
@@ -1570,13 +1562,21 @@ msgstr "Chemin de dessous"
 msgid "Travel inside the shape when moving from section to section.  Underpath stitches avoid traveling in the direction of the row angle so that they are not visible.  This gives them a jagged appearance."
 msgstr "Les points qui relient les sections à l'intérieur de l'objet. Les points des chemins de dessous évitent d'aller dans la même direction que ceux de dessus pour ne pas être visibles. Cela leur donne une apparence déchiquetée."
 
-#: lib/elements/fill_stitch.py:869
+#: lib/elements/fill_stitch.py:484 lib/elements/satin_column.py:434
+msgid "Random seed"
+msgstr "Graine aléatoire"
+
+#: lib/elements/fill_stitch.py:485 lib/elements/satin_column.py:435
+msgid "Use a specific seed for randomized attributes. Uses the element ID if empty."
+msgstr "Utiliser cette graine aléatoire pour le calcul des attributs. Si vide, utilise l'identificateur de l'élément."
+
+#: lib/elements/fill_stitch.py:886
 msgid "Error during autofill! This means it is a bug in Ink/Stitch."
 msgstr "Erreur pendant l'auto-remplissage. Cela veut dire que Ink/Stitch a un problème."
 
 #. this message is followed by a URL:
 #. https://github.com/inkstitch/inkstitch/issues/new
-#: lib/elements/fill_stitch.py:872
+#: lib/elements/fill_stitch.py:889
 msgid "If you'd like to help please\n"
 "- copy the entire error message below\n"
 "- save your SVG file and\n"
@@ -2431,6 +2431,18 @@ msgid "Error: Text cannot be applied to the document.\n"
 msgstr "Erreur : Le texte ne peut pas être appliqué au document.\n"
 "%s"
 
+#: lib/extensions/lettering.py:405
+msgid "Filter"
+msgstr ""
+
+#: lib/extensions/lettering.py:417
+msgid "Add trims"
+msgstr ""
+
+#: lib/extensions/lettering.py:423 print/templates/ui_svg_action_buttons.html:1
+msgid "Scale"
+msgstr "Échelle"
+
 #: lib/extensions/lettering.py:480
 msgid "Please select only one block of text."
 msgstr "Veuillez ne sélectionner qu’un seul bloc de texte."
@@ -2585,6 +2597,7 @@ msgstr "Description"
 #: lib/extensions/troubleshoot.py:106 lib/extensions/troubleshoot.py:155
 #: inx/inkstitch_cleanup.inx:17 inx/inkstitch_remove_embroidery_settings.inx:16
 #: inx/inkstitch_select_elements.inx:59 inx/inkstitch_troubleshoot.inx:12
+#: inx/inkstitch_update_svg.inx:10
 msgid "Troubleshoot"
 msgstr "Résolution de problèmes"
 
@@ -2623,6 +2636,10 @@ msgstr "Solutions possibles"
 #: lib/extensions/troubleshoot.py:191
 msgid "It is possible, that one object contains more than one error, yet there will be only one pointer per object.  Run this function again, when further errors occur.  Remove pointers by deleting the layer named \"Troubleshoot\" through the objects panel (Object -> Objects...)."
 msgstr "Il est possible qu'un objet contienne plus d'une erreur, même s'il n'y a qu'un conseil par objet. Relancer cette fonction quand il y a plus d'erreurs. Enlever les conseils en supprimant le calque \"Résolution de problèmes\" dans le dialogue objets (Objet -> Objets...)."
+
+#: lib/extensions/update_svg.py:23
+msgid "Please select at least one element to update. This extension is designed to help you update copy and pasted elements from old designs."
+msgstr ""
 
 #: lib/extensions/zip.py:63
 msgid "threadlist"
@@ -3303,10 +3320,6 @@ msgstr "Oui"
 #: inx/inkstitch_letters_to_font.inx:66
 msgid "No"
 msgstr "Non"
-
-#: print/templates/ui_svg_action_buttons.html:1
-msgid "Scale"
-msgstr "Échelle"
 
 #: print/templates/ui_svg_action_buttons.html:3
 msgid "Fit"
@@ -5659,6 +5672,26 @@ msgstr "Taille du pointeur (mm)"
 #: inx/inkstitch_troubleshoot.inx:7
 msgid "Font size (mm)"
 msgstr "Taille de la fonte (mm)"
+
+#: inx/inkstitch_update_svg.inx:3
+msgid "Update inkstitch svg"
+msgstr ""
+
+#: inx/inkstitch_update_svg.inx:14
+msgid "Usually there is no need to run this extension: Ink/Stitch automatically updates old designs once."
+msgstr ""
+
+#: inx/inkstitch_update_svg.inx:16
+msgid "However, when you copy and paste parts from old files into a new design, you may see for example, that a former contour fill renders as a standard fill, etc."
+msgstr ""
+
+#: inx/inkstitch_update_svg.inx:18
+msgid "Tipp: You can prevent inserting legacy designs into new files by running any Ink/Stitch extension before you copy the design parts (for example open and re-apply parameters on a single element in the document)."
+msgstr ""
+
+#: inx/inkstitch_update_svg.inx:20
+msgid "This extension only updates selected elements."
+msgstr ""
 
 #: inx/inkstitch_zigzag_line_to_satin.inx:3
 msgid "Zig-Zag Line to Satin"
