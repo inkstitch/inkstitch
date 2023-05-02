@@ -1,16 +1,16 @@
 ---
-title: "AGS Γαραμου"
+title: "AGS Γαραμου GARAMOND"
 permalink: /de/fonts/AGS_greek_garamond/
-last_modified_at: 2023-04-14
+last_modified_at: 2023-05-03
 toc: false
 preview_image:
-  - url: /assets/images/fonts/AGS_greek_garamond.png
+  - url: /assets/images/fonts/garamond.png
     height: 20
 ---
 
 {% include upcoming_release.html %}
 
-![AGS garamond](/assets/images/fonts/AGS_greek_garamond.png)
+![AGS garamond](/assets/images/fonts/garamond.png)
 
 
 ## Glyphs
