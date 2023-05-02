@@ -1,24 +1,26 @@
 ---
-title: "AGS Γαραμου"
+title: "AGS Γαραμου Garamond"
 permalink: /fr/fonts/AGS_greek_garamond/
-last_modified_at: 2023-04-16
+last_modified_at: 2023-05-03
 toc: false
 preview_image:
-  - url: /assets/images/fonts/AGS_greek_garamond.png
+  - url: /assets/images/fonts/garamond.png
     height: 20
 ---
 
 {% include upcoming_release.html %}
 
-![AGS garamond](/assets/images/fonts/AGS_greek_garamond.png)
+![AGS garamond](/assets/images/fonts/garamond.png)
 
 
 ## Glyphes
 
 Cette fonte contient les 264 glyphes:
 
-ΑΆΒΓΔΕΈΖΗΉΘΙΊΚΛΜΝΞΟΌΠΡΣΤΥΎΦΧΨΩΏΪΫϜϏϓαβγδεζηθικλμνξοπρςστυφχψωίϊΐύϋΰόώάέήϗϐϑϕϖϰϱ0123456789.,:;!?/()"'@·̈̈́ͅ΄∫∞√<>+xyabcdt
-AÁÂÄÀÅÆBCČÇDÐĎĐEÉÊËÈFGĞHIÍÎÏİÌJKLMNÑOÓÔÖÒØÕŒÞPQRŘSŞŠTŤUÚÛÜÙVWXYÝZŽaáâäàåãæbcčçdðďđeéêëèfgğhiıíîïìjklmnñoóôöòøõœpÞqrřsşšß
+ΑΆΒΓΔΕΈΖΗΉΘΙΊΚΛΜΝΞΟΌΠΡΣΤΥΎΦΧΨΩΏΪΫϜϏϓαβγδεζηθικλμνξοπρςστυφχψω
+ίϊΐύϋΰόώάέήϗϐϑϕϖϰϱ0123456789.,:;!?/()"'@·̈̈́ͅ΄∫∞√<>+xyabcdt
+AÁÂÄÀÅÆBCČÇDÐĎĐEÉÊËÈFGĞHIÍÎÏİÌJKLMNÑOÓÔÖÒØÕŒÞPQRŘSŞŠTŤUÚÛÜ
+ÙVWXYÝZŽaáâäàåãæbcčçdðďđeéêëèfgğhiıíîïìjklmnñoóôöòøõœpÞqrřsşšß
 tťuúûüùvwxyýzž.,!¡?¿«»÷=→
 
 ## Dimensions
