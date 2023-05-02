@@ -23,7 +23,7 @@
      inkscape:deskcolor="#ffffff"
      showgrid="true"
      inkscape:zoom="5.656854"
-     inkscape:cx="18.031224"
+     inkscape:cx="18.208"
      inkscape:cy="122.41787"
      inkscape:window-width="1920"
      inkscape:window-height="1009"
@@ -478,7 +478,8 @@ Copyright 2017 The EB Garamond Project Authors (https://github.com/octaviopardo/
        inkstitch:satin_column="True"
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay="True"
-       inkstitch:zigzag_underlay_max_stitch_length_mm="5.8" />
+       inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+       inkstitch:zigzag_spacing_mm="0.3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -3374,6 +3375,13 @@ Copyright 2017 The EB Garamond Project Authors (https://github.com/octaviopardo/
      id="g8300"
      style="display:none">
     <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.88976;stroke-linecap:round;stroke-dasharray:7.55904, 3.77952, 1.88976, 3.77952;stroke-dashoffset:0;paint-order:markers stroke fill"
+       d="m 2.0000001,109.25001 1.7500001,30"
+       id="path1"
+       sodipodi:nodetypes="cc"
+       inkstitch:stroke_method="running_stitch"
+       inkstitch:running_stitch_length_mm="2" />
+    <path
        d="m 3.91117,140.335 1.54,-1.1 1.54,-1.32 1.5125,-1.43 1.2375,-1.43 0.82503,-1.292 0.275,-1.018 -0.22,-0.99 C 7.8271495,128.44019 6.6803033,125.01619 6.6021603,120.69461 6.4542527,112.5148 8.0517609,106.36059 8.97116,100.845 l 0.66,-0.22 1.44414,-1.4866 m -12.66416,41.0866 -1.1275,-1.265 -0.7425,-1.595 -0.4125,-1.732 -0.1375,-1.678 0.22,-3.41 c 0.9842995,-15.8923 3.48821535,-23.53112 9.1781016,-33.390177 M 2.99432,99.7754 9.99987,101.236 m -14.49419,23.595 12.2949633,-0.29165"
        id="autosatin3"
        sodipodi:nodetypes="ccccscccscccccccccccccc"
@@ -3472,13 +3480,6 @@ Copyright 2017 The EB Garamond Project Authors (https://github.com/octaviopardo/
        inkstitch:force_lock_stitches="False"
        style="font-style:italic;font-weight:600;font-size:29.1042px;line-height:1.25;font-family:'EB Garamond';-inkscape-font-specification:'EB Garamond Semi-Bold Italic';opacity:1;fill:none;stroke:#000000;stroke-width:2;stroke-opacity:1"
        inkstitch:reverse_rails="none" />
-    <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.88976;stroke-linecap:round;stroke-dasharray:7.55904, 3.77952, 1.88976, 3.77952;stroke-dashoffset:0;paint-order:markers stroke fill"
-       d="m 2.0000001,109.25001 1.7500001,30"
-       id="path1"
-       sodipodi:nodetypes="cc"
-       inkstitch:stroke_method="running_stitch"
-       inkstitch:running_stitch_length_mm="2" />
   </g>
   <g
      inkscape:groupmode="layer"
