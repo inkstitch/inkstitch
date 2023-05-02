@@ -6,8 +6,7 @@
    width="250"
    height="250"
    viewBox="0 0 62.5 250"
-   inkscape:version="1.2 (dc2aeda, 2022-05-15)"
-
+   inkscape:version="1.3-alpha (95f74fb, 2023-03-31)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -23,8 +22,8 @@
      inkscape:pagecheckerboard="0"
      showgrid="true"
      inkscape:zoom="2.8284271"
-     inkscape:cx="122.8598"
-     inkscape:cy="90.1561"
+     inkscape:cx="106.77312"
+     inkscape:cy="89.979339"
      inkscape:window-width="1440"
      inkscape:window-height="796"
      inkscape:window-x="0"
@@ -42,7 +41,6 @@
        inkscape:label="caps"
        id="guide934"
        inkscape:locked="false"
-
        inkscape:color="rgb(0,0,255)" />
     <sodipodi:guide
        position="0,800"
@@ -61,18 +59,22 @@
        orientation="0,1"
        inkscape:label="baseline"
        id="guide1055"
-
        inkscape:locked="false"
        inkscape:color="rgb(0,0,255)" />
     <inkscape:grid
        type="xygrid"
-       id="grid2165" />
+       id="grid2165"
+       visible="true" />
   </sodipodi:namedview>
   <metadata
      id="metadata2">
  By Mathieu Reguer
 Sandrine Nugue
-<inkstitch:collapse_len_mm />
+<inkstitch:collapse_len_mm
+   id="collapse_len_mm4245">3</inkstitch:collapse_len_mm>
+<inkstitch:min_stitch_len_mm
+   id="min_stitch_len_mm9387">0</inkstitch:min_stitch_len_mm>
+<inkstitch:inkstitch_svg_version>1</inkstitch:inkstitch_svg_version>
 </metadata>
   <defs
      id="defs71">
@@ -305,13 +307,15 @@ Sandrine Nugue
          inkscape:connector-curvature="0"
          style="color:#000000;fill:#d5d5d5;fill-opacity:1;fill-rule:evenodd;stroke:#5a5a5a;stroke-width:0.63330007;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:0;stroke-opacity:1"
          d="M 4,4.452769 1.46667,1.286102 H -5.5 l 2.53333,3.166667 z"
-         id="use5800" />
+         id="use5800"
+          />
       <path
          sodipodi:nodetypes="ccccc"
          inkscape:connector-curvature="0"
          style="color:#000000;opacity:0.5;fill:#d5d5d5;fill-opacity:1;fill-rule:evenodd;stroke:#858585;stroke-width:0.63339424;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:0;stroke-opacity:1"
          d="M 4,2.552769 1.46667,-0.613898 H -5.5 l 2.53333,3.166667 z"
-         id="use5864" />
+         id="use5864"
+          />
       <g
          id="g5771">
         <path
@@ -319,17 +323,20 @@ Sandrine Nugue
            inkscape:connector-curvature="0"
            style="fill:#aa0000;fill-rule:evenodd;stroke:#aa0000;stroke-width:1px"
            d="m -1.0666699,-5.0472339 h 4.4333333 l 0.6333333,0.6333333 V 0.01943274 L 3.3666634,0.65276607 H -1.0666699 L -1.7000032,0.01943274 V -4.4139006 Z"
-           id="path8011" />
+           id="path8011"
+            />
         <path
            inkscape:connector-curvature="0"
            id="path8023"
            d="m -0.43333658,-3.8755672 c 0,0 3.16666668,3.16666661 3.16666668,3.16666661"
-           style="fill:none;stroke:#ffffff;stroke-width:1.70000005" />
+           style="fill:none;stroke:#ffffff;stroke-width:1.70000005"
+            />
         <path
            inkscape:connector-curvature="0"
            id="path8025"
            d="m 2.7333301,-3.8755672 c 0,0 -3.16666668,3.16666661 -3.16666668,3.16666661"
-           style="fill:none;stroke:#ffffff;stroke-width:1.79999995;stroke-linejoin:round" />
+           style="fill:none;stroke:#ffffff;stroke-width:1.79999995;stroke-linejoin:round"
+            />
       </g>
     </symbol>
   </defs>
@@ -364,7 +371,8 @@ Sandrine Nugue
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
-       inkstitch:max_stitch_length_mm="4" />
+       inkstitch:max_stitch_length_mm="4"
+       inkstitch:reverse_rails="none" />
     <path
        id="path2431"
        style="display:inline;fill:none;stroke:#008000;stroke-width:0.25"
@@ -375,7 +383,8 @@ Sandrine Nugue
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
-       inkstitch:max_stitch_length_mm="4" />
+       inkstitch:max_stitch_length_mm="4"
+       inkstitch:reverse_rails="none" />
     <path
        id="path1104"
        style="display:inline;fill:none;stroke:#008000;stroke-width:0.25"
@@ -386,7 +395,8 @@ Sandrine Nugue
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:max_stitch_length_mm="4"
-       inkstitch:force_lock_stitches="True" />
+       inkstitch:force_lock_stitches="True"
+       inkstitch:reverse_rails="none" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -671,7 +681,8 @@ Sandrine Nugue
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="4" />
+       inkstitch:max_stitch_length_mm="4"
+       inkstitch:reverse_rails="none" />
     <path
        style="fill:#000000;stroke-width:0.25"
        d="M 38.601367,187.5 83.851367,167.75 V 172.5 L 38.601367,192.5 Z"
@@ -747,7 +758,8 @@ Sandrine Nugue
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:zigzag_underlay="True"
        inkstitch:max_stitch_length_mm="4"
-       inkstitch:force_lock_stitches="True" />
+       inkstitch:force_lock_stitches="True"
+       inkstitch:reverse_rails="none" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -788,7 +800,8 @@ Sandrine Nugue
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:contour_underlay="True"
        inkstitch:contour_underlay_inset_mm="0.1"
-       inkstitch:max_stitch_length_mm="4" />
+       inkstitch:max_stitch_length_mm="4"
+       inkstitch:reverse_rails="none" />
     <path
        style="fill:none;stroke:#ffcc00;stroke-width:0.25"
        d="M 130.85137,41.75 91.351367,74.25 M 122.10137,33 87.351367,70.25"
@@ -801,7 +814,8 @@ Sandrine Nugue
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:contour_underlay="True"
        inkstitch:contour_underlay_inset_mm="0.1"
-       inkstitch:max_stitch_length_mm="4" />
+       inkstitch:max_stitch_length_mm="4"
+       inkstitch:reverse_rails="none" />
     <path
        style="fill:none;stroke:#00ff00;stroke-width:0.25"
        d="M 101.35137,23.75 82.351367,65.5 M 89.851367,23.75 77.851367,61"
@@ -816,7 +830,8 @@ Sandrine Nugue
        inkstitch:contour_underlay_stitch_length_mm="2"
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:max_stitch_length_mm="4"
-       inkstitch:force_lock_stitches="True" />
+       inkstitch:force_lock_stitches="True"
+       inkstitch:reverse_rails="none" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1020,7 +1035,8 @@ Sandrine Nugue
        inkstitch:pull_compensation_mm="0.4"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:max_stitch_length_mm="4" />
+       inkstitch:max_stitch_length_mm="4"
+       inkstitch:reverse_rails="none" />
     <path
        id="path2"
        style="fill:none;stroke:#00ff00;stroke-width:1px"
@@ -1032,7 +1048,8 @@ Sandrine Nugue
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:max_stitch_length_mm="4"
        inkstitch:ties="2"
-       inkstitch:force_lock_stitches="True" />
+       inkstitch:force_lock_stitches="True"
+       inkstitch:reverse_rails="none" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1147,7 +1164,6 @@ Sandrine Nugue
        inkstitch:running_stitch_length_mm="2"
        inkstitch:staggers="1"
        inkstitch:ties="1" />
-
     <path
        style="fill:#c87137;stroke-width:0.25"
        d="M 149.85137,94.25 C 153.10137,94.75 156.60137,95.25 160.10137,95.25 176.85137,95.25 186.85137,92.25 188.60137,73.75 L 191.10137,46.5 H 205.85137 C 207.10137,57 209.85137,78.75 209.85137,92.25 209.85137,120.75 186.10137,133.5 159.85137,133.5 148.35137,133.5 141.85137,132.75 133.60137,131 Z"
@@ -1183,7 +1199,6 @@ Sandrine Nugue
        inkstitch:running_stitch_length_mm="2"
        inkstitch:staggers="1"
        inkstitch:ties="1" />
-
     <path
        style="display:inline;fill:#000000;stroke-width:0.25"
        d="M -33.148633,218.25 C -33.148633,236.75 -19.898633,252.5 1.6013667,252.5 23.351367,252.5 36.601367,237.25 37.101367,218.25 Z"
@@ -1283,9 +1298,7 @@ Sandrine Nugue
        inkstitch:running_stitch_length_mm="2"
        inkstitch:expand_mm="0.3"
        inkstitch:staggers="1"
-
        inkstitch:ties="1" />
-
     <path
        id="path5044"
        style="display:inline;fill:#ff0000;stroke-width:0.25"
@@ -1326,9 +1339,7 @@ Sandrine Nugue
        id="path15821"
        sodipodi:nodetypes="sssss"
        inkstitch:expand_mm="0.3"
-
        inkstitch:ties="1" />
-
     <path
        style="fill:#0000ff;stroke:none;stroke-width:0.25"
        d="M 129.35137,168 C 126.10137,168 123.60137,165.5 123.60137,162.5 123.60137,159.25 126.10137,156.75 129.35137,156.75 132.35137,156.75 134.85137,159.25 134.85137,162.5 134.85137,165.5 132.35137,168 129.35137,168 Z"

@@ -7,7 +7,7 @@
    viewBox="0 0 100 100"
    version="1.1"
    id="svg8"
-   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   inkscape:version="1.3-alpha (95f74fb, 2023-03-31)"
    sodipodi:docname="→.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -18,6 +18,80 @@
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:inkstitch="http://inkstitch.org/namespace">
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="6.1125358"
+     inkscape:cx="-2.4539734"
+     inkscape:cy="351.32719"
+     inkscape:document-units="in"
+     inkscape:current-layer="g6"
+     showgrid="false"
+     inkscape:snap-global="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="1920"
+     inkscape:window-height="1152"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     units="mm"
+     inkscape:pagecheckerboard="0"
+     inkscape:snap-text-baseline="true"
+     inkscape:showpageshadow="2"
+     inkscape:deskcolor="#d1d1d1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid1006"
+       visible="false" />
+    <sodipodi:guide
+       position="103.18992,186.04655"
+       orientation="0,1"
+       id="guide1182"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="0,4.9624235"
+       orientation="0,1"
+       id="guide1290"
+       inkscape:label="baseline"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="3.2464022,8.7111685"
+       orientation="0,1"
+       id="guide1310"
+       inkscape:label="x-height"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="0,10.783021"
+       orientation="0,1"
+       id="guide1490"
+       inkscape:label="caps"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="5.971749,6.6465492"
+       orientation="1,0"
+       id="guide6815"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="-0.95401677,3.2909362"
+       orientation="1,0"
+       id="guide6871"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="0,6.6465502"
+       orientation="1,0"
+       id="guide7260"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="3.442143,6.6465502"
+       orientation="0,-1"
+       id="guide4863"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
   <defs
      id="defs2">
     <symbol
@@ -36,72 +110,6 @@
          inkscape:connector-curvature="0" />
     </symbol>
   </defs>
-  <sodipodi:namedview
-     id="base"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageopacity="0.0"
-     inkscape:pageshadow="2"
-     inkscape:zoom="24.450143"
-     inkscape:cx="8.752505"
-     inkscape:cy="354.7014"
-     inkscape:document-units="in"
-     inkscape:current-layer="layer63"
-     showgrid="false"
-     inkscape:snap-global="false"
-     showguides="true"
-     inkscape:guide-bbox="true"
-     inkscape:window-width="1920"
-     inkscape:window-height="1152"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
-     inkscape:window-maximized="1"
-     units="mm"
-     inkscape:pagecheckerboard="0"
-     inkscape:snap-text-baseline="true">
-    <inkscape:grid
-       type="xygrid"
-       id="grid1006" />
-    <sodipodi:guide
-       position="103.18992,186.04655"
-       orientation="0,1"
-       id="guide1182"
-       inkscape:locked="false" />
-    <sodipodi:guide
-       position="0,4.9624235"
-       orientation="0,1"
-       id="guide1290"
-       inkscape:label="baseline"
-       inkscape:locked="true" />
-    <sodipodi:guide
-       position="0,8.6865192"
-       orientation="0,1"
-       id="guide1310"
-       inkscape:label="x-height"
-       inkscape:locked="true" />
-    <sodipodi:guide
-       position="0,10.783021"
-       orientation="0,1"
-       id="guide1490"
-       inkscape:label="caps" />
-    <sodipodi:guide
-       position="5.971749,6.6465492"
-       orientation="1,0"
-       id="guide6815" />
-    <sodipodi:guide
-       position="-0.95401677,3.2909362"
-       orientation="1,0"
-       id="guide6871" />
-    <sodipodi:guide
-       position="0,6.6465502"
-       orientation="1,0"
-       id="guide7260" />
-    <sodipodi:guide
-       position="3.442143,6.6465502"
-       orientation="0,-1"
-       id="guide4863" />
-  </sodipodi:namedview>
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -112,17 +120,22 @@
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
       </cc:Work>
     </rdf:RDF>
+    <inkstitch:min_stitch_len_mm
+       id="min_stitch_len_mm6343">0</inkstitch:min_stitch_len_mm>
+    <inkstitch:collapse_len_mm
+       id="collapse_len_mm7397">3</inkstitch:collapse_len_mm>
+    <inkstitch:inkstitch_svg_version>1</inkstitch:inkstitch_svg_version>
   </metadata>
   <g
      inkscape:groupmode="layer"
      id="layer2"
      inkscape:label="GlyphLayer-A"
-     style="display:inline"
+     style="display:none"
      transform="translate(0,-17.6)">
     <g
        id="command_group2"
        inkscape:label="Ink/Stitch Command: Trim thread after sewing this object"
-       transform="matrix(0.264583,0,0,0.264583,0,17.6)">
+       transform="matrix(0.264583,0,0,0.264583,1.0583333,17.6)">
       <path
          id="command_connector2"
          d="m 5.8888954,309.91451 2.8673249,41.52101"
@@ -131,7 +144,8 @@
          inkscape:connection-end="#path146"
          inkscape:connector-type="polyline"
          inkscape:label="connector"
-         inkscape:connector-curvature="0" />
+         inkscape:connector-curvature="0"
+          />
       <use
          id="command_use247"
          xlink:href="#inkstitch_trim"
@@ -142,7 +156,8 @@
          inkscape:label="command marker" />
     </g>
     <g
-       id="g8946">
+       id="g8946"
+       transform="translate(1.0583333)">
       <path
          id="path146"
          d="m 0.487255,110.571 c -0.595232,-0.28911 -1.321615,0.22738 -1.423599,0.78673 -0.179392,0.98391 0.72905,1.55858 1.535988,1.19882 1.665561,-0.74257 2.423964,-3.66216 3.682501,-5.31652 0.566559,-0.74474 1.506062,-0.62258 1.27512,0.48378 -0.348904,1.67147 -1.228605,3.25585 -1.698516,5.00958 -0.369686,1.37969 0.350782,1.87881 0.778671,1.5843"
@@ -161,7 +176,7 @@
     <g
        id="command_group3"
        inkscape:label="Ink/Stitch Command: Trim thread after sewing this object"
-       transform="matrix(0.264583,0,0,0.264583,0,17.6)">
+       transform="matrix(0.264583,0,0,0.264583,1.0583333,17.6)">
       <path
          id="command_connector3"
          d="m 11.167976,319.898 1.262052,29.96541"
@@ -170,7 +185,8 @@
          inkscape:connection-end="#path98"
          inkscape:connector-type="polyline"
          inkscape:label="connector"
-         inkscape:connector-curvature="0" />
+         inkscape:connector-curvature="0"
+          />
       <use
          id="command_use2384"
          xlink:href="#inkstitch_trim"
@@ -185,11 +201,11 @@
      inkscape:groupmode="layer"
      id="layer1"
      inkscape:label="GlyphLayer-B"
-     style="display:inline">
+     style="display:none">
     <g
        id="command_group4"
        inkscape:label="Ink/Stitch Command: Trim thread after sewing this object"
-       transform="scale(0.264583)">
+       transform="matrix(0.264583,0,0,0.264583,1.0583333,0)">
       <path
          id="command_connector4"
          d="m 7.1315907,307.53267 3.1684383,29.85461"
@@ -198,7 +214,8 @@
          inkscape:connection-end="#path154"
          inkscape:connector-type="polyline"
          inkscape:label="connector"
-         inkscape:connector-curvature="0" />
+         inkscape:connector-curvature="0"
+          />
       <use
          id="command_use4084"
          xlink:href="#inkstitch_trim"
@@ -209,7 +226,8 @@
          inkscape:label="command marker" />
     </g>
     <g
-       id="g9429">
+       id="g9429"
+       transform="translate(1.0583333)">
       <path
          id="path154"
          d="m 0.870611,92.226832 c 0.128068,-1.880382 0.740772,-2.855226 2.306017,-3.042271 1.6971,-0.202801 3.124397,1.845738 0.986306,3.11173 -0.379864,0.224922 -1.35445,0.328957 -1.319707,-0.111133 0.03471,-0.439727 0.961863,-0.16066 1.319707,0.09724 0.860865,0.620429 0.955101,2.343196 0.01389,3.056162 -0.660107,0.50003 -2.406152,0.22883 -2.278231,-0.708475 0.07386,-0.541161 0.913257,-1.224243 1.403056,-0.152807"
@@ -229,7 +247,7 @@
     <g
        id="command_group5"
        inkscape:label="Ink/Stitch Command: Trim thread after sewing this object"
-       transform="scale(0.264583)">
+       transform="matrix(0.264583,0,0,0.264583,1.0583333,0)">
       <path
          id="command_connector5"
          d="m -4.1969086,314.69378 9.1107089,34.41133"
@@ -238,7 +256,8 @@
          inkscape:connection-end="#path130"
          inkscape:connector-type="polyline"
          inkscape:label="connector"
-         inkscape:connector-curvature="0" />
+         inkscape:connector-curvature="0"
+          />
       <use
          id="command_use2493"
          xlink:href="#inkstitch_trim"
@@ -253,7 +272,8 @@
      inkscape:groupmode="layer"
      id="layer3"
      inkscape:label="GlyphLayer-C"
-     style="display:inline">
+     style="display:none"
+     transform="translate(1.0583333)">
     <path
        style="display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ed171f;stroke-width:0.33;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.033, 0.033;stroke-dashoffset:0;stroke-opacity:1"
        d="m -0.37803731,89.13295 c -1.18435999,1.79977 -0.40372,2.81545 0.94223,3.07247 2.24036001,0.42781 4.38385991,-1.50923 3.11342991,-2.76522 -1.1680999,-1.15482 -2.5753199,1.45023 -3.11342991,2.7857 -0.41847,1.03854 -0.6668,2.78338 0.32773,3.29778 1.14408001,0.59176 2.52546001,-0.31816 3.33873991,-1.94473"
@@ -267,7 +287,8 @@
      inkscape:groupmode="layer"
      id="layer4"
      inkscape:label="GlyphLayer-D"
-     style="display:inline">
+     style="display:none"
+     transform="translate(1.5875)">
     <g
        id="g201"
        transform="translate(-31.2806,-4.9)"
@@ -291,7 +312,8 @@
            inkscape:connection-end="#path130-5"
            inkscape:connector-type="polyline"
            inkscape:label="connector"
-           inkscape:connector-curvature="0" />
+           inkscape:connector-curvature="0"
+            />
         <use
            id="command_use9375"
            xlink:href="#inkstitch_trim"
@@ -321,7 +343,8 @@
            inkscape:connection-end="#path154-6"
            inkscape:connector-type="polyline"
            inkscape:label="connector"
-           inkscape:connector-curvature="0" />
+           inkscape:connector-curvature="0"
+            />
         <use
            id="command_use1313"
            xlink:href="#inkstitch_trim"
@@ -337,10 +360,10 @@
      inkscape:groupmode="layer"
      id="layer5"
      inkscape:label="GlyphLayer-E"
-     style="display:inline">
+     style="display:none">
     <path
        style="display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ed171f;stroke-width:0.33;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.033, 0.033;stroke-dashoffset:0;stroke-opacity:1"
-       d="m 1.776831,89.06249 c 0.159274,0.44597 0.861556,1.13709 1.292106,1.32751 0.989765,0.43773 3.034169,-0.13596 2.513409,-0.95581 -0.554974,-0.87371 -2.143764,0.12845 -2.548811,0.9381 -0.239691,0.47913 0.04277,1.20411 0.460203,1.53991 0.308867,0.24847 1.044947,0.46568 1.079705,0.0708 0.03588,-0.40761 -0.72671,-0.23499 -1.115106,-0.1062 -1.292606,0.42861 -2.263352,2.27451 -1.433705,3.15061 0.965806,1.01989 3.058093,0.56879 3.947117,-1.44846"
+       d="m 0.18933098,89.06249 c 0.159274,0.44597 0.86155592,1.13709 1.29210592,1.32751 0.989765,0.43773 3.034169,-0.13596 2.513409,-0.95581 -0.554974,-0.87371 -2.143764,0.12845 -2.548811,0.9381 -0.239691,0.47913 0.04277,1.20411 0.460203,1.53991 0.308867,0.24847 1.044947,0.46568 1.079705,0.0708 0.03588,-0.40761 -0.72671,-0.23499 -1.115106,-0.1062 -1.29260596,0.42861 -2.26335188,2.27451 -1.43370492,3.15061 C 1.4029379,96.0473 3.4952249,95.5962 4.3842489,93.57895"
        id="path203"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="csssssssc"
@@ -351,10 +374,10 @@
      inkscape:groupmode="layer"
      id="layer6"
      inkscape:label="GlyphLayer-F"
-     style="display:inline">
+     style="display:none">
     <path
        style="display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ed171f;stroke-width:0.33;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.033, 0.033;stroke-dashoffset:0;stroke-opacity:1"
-       d="M 3.190737,91.30978 C 0.59507997,92.24818 0.70816697,89.32324 2.3099549,89.14333 3.099914,89.05463 4.385424,89.5451 5.406903,89.78971 6.040915,89.94154 7.479639,90.03942 7.324738,89.40615 7.196199,88.88066 5.838602,89.18188 5.385593,89.78971 4.899519,90.44191 4.74762,91.2236 4.362748,92.24028 4.270538,92.48387 3.481964,92.57413 3.481964,92.57413 l 1.832599,0.007 c 0,0 -1.038319,0.0893 -1.122288,0.28412 -0.372257,0.86388 -0.572952,1.89986 -1.2785591,2.40084 -0.67354,0.47822 -2.16387693,0.44689 -2.25878293,-1.04415 -0.04458,-0.70036 0.63565993,-1.65777 1.74025793,-1.64081"
+       d="m 2.714598,91.223209 c -2.59565702,0.9384 -2.48257002,-1.98654 -0.8807821,-2.16645 0.7899591,-0.0887 2.0754691,0.40177 3.0969481,0.64638 0.634012,0.15183 2.072736,0.24971 1.917835,-0.38356 -0.128539,-0.52549 -1.486136,-0.22427 -1.939145,0.38356 -0.486074,0.6522 -0.637973,1.43389 -1.022845,2.45057 -0.09221,0.24359 -0.880784,0.33385 -0.880784,0.33385 l 1.832599,0.007 c 0,0 -1.038319,0.0893 -1.122288,0.28412 -0.372257,0.86388 -0.572952,1.89986 -1.2785591,2.40084 -0.67354,0.47822 -2.16387692,0.44689 -2.25878292,-1.04415 -0.04458,-0.70036 0.63565993,-1.65777 1.74025792,-1.64081"
        id="path1330"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="csssssccsssc"
@@ -363,7 +386,7 @@
     <g
        id="command_group8"
        inkscape:label="Ink/Stitch Command: Trim thread after sewing this object"
-       transform="scale(0.264583)">
+       transform="matrix(0.264583,0,0,0.264583,-0.47613899,-0.08657073)">
       <path
          id="command_connector8"
          d="m 11.853325,306.92669 2.370623,30.73448"
@@ -372,7 +395,8 @@
          inkscape:connection-end="#path1330"
          inkscape:connector-type="polyline"
          inkscape:label="connector"
-         inkscape:connector-curvature="0" />
+         inkscape:connector-curvature="0"
+          />
       <use
          id="command_use5449"
          xlink:href="#inkstitch_trim"
@@ -387,7 +411,8 @@
      inkscape:groupmode="layer"
      id="layer7"
      inkscape:label="GlyphLayer-G"
-     style="display:inline">
+     style="display:none"
+     transform="translate(0.17314145,-0.04328536)">
     <path
        style="display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ed171f;stroke-width:0.33;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.033, 0.033;stroke-dashoffset:0;stroke-opacity:1"
        d="M 0.55552698,89.15099 C -0.513284,90.37801 -0.043168,92.03191 1.458233,92.1954 4.050181,92.47764 5.67583,90.50509 4.573445,89.43419 3.265664,88.16376 1.905012,90.85576 1.458233,92.1954 1.206897,92.94902 0.84899698,93.58288 1.08653,94.54951 c 0.144274,0.58712 1.077397,0.85855 1.575305,0.6018 1.476129,-0.76117 1.947082,-2.33165 2.495712,-3.82321 -0.621975,1.85186 -1.127128,2.90411 -1.522206,4.40732 -0.247366,0.94119 -1.311599,2.351 -1.964709,1.4868 -0.76847202,-1.01685 1.174145,-1.34657 1.964709,-1.4868 0.590594,-0.10476 1.891206,-0.76062 2.336408,-2.15647"
@@ -401,7 +426,8 @@
      inkscape:groupmode="layer"
      id="layer8"
      inkscape:label="GlyphLayer-H"
-     style="display:inline">
+     style="display:none"
+     transform="translate(1.5875)">
     <g
        id="g268"
        transform="translate(-65.4885,-4.9)"
@@ -426,7 +452,8 @@
            inkscape:connection-end="#path245"
            inkscape:connector-type="polyline"
            inkscape:label="connector"
-           inkscape:connector-curvature="0" />
+           inkscape:connector-curvature="0"
+            />
         <use
            id="command_use6395"
            xlink:href="#inkstitch_trim"
@@ -456,7 +483,8 @@
            inkscape:connection-end="#path241"
            inkscape:connector-type="polyline"
            inkscape:label="connector"
-           inkscape:connector-curvature="0" />
+           inkscape:connector-curvature="0"
+            />
         <use
            id="command_use6594"
            xlink:href="#inkstitch_trim"
@@ -486,7 +514,8 @@
            inkscape:connection-end="#path247"
            inkscape:connector-type="polyline"
            inkscape:label="connector"
-           inkscape:connector-curvature="0" />
+           inkscape:connector-curvature="0"
+            />
         <use
            id="command_use2638"
            xlink:href="#inkstitch_trim"
@@ -502,7 +531,8 @@
      inkscape:groupmode="layer"
      id="layer9"
      inkscape:label="GlyphLayer-I"
-     style="display:inline">
+     style="display:none"
+     transform="translate(-1.0583333)">
     <path
        style="display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ed171f;stroke-width:0.33;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.033, 0.033;stroke-dashoffset:0;stroke-opacity:1"
        d="m 4.1251409,92.19939 c -1.082409,0.0606 -1.278626,-1.33825 -0.474074,-1.75352 0.57234,-0.29541 1.294211,-0.44597 2.036036,-0.58745 0.506515,-0.0966 1.399566,-0.45175 1.105455,-0.8753 -0.365813,-0.52679 -0.922069,0.4072 -1.104503,0.88285 -0.862518,2.24879 -0.706483,3.4387 -2.050466,5.11961 -0.805226,1.00709 -2.275771,0.49187 -2.430597,-0.57631 -0.113754,-0.78482 0.298031,-1.64843 1.674146,-1.88636"
@@ -523,7 +553,8 @@
          inkscape:connection-end="#path254"
          inkscape:connector-type="polyline"
          inkscape:label="connector"
-         inkscape:connector-curvature="0" />
+         inkscape:connector-curvature="0"
+          />
       <use
          id="command_use7095"
          xlink:href="#inkstitch_trim"
@@ -538,12 +569,12 @@
      inkscape:groupmode="layer"
      id="layer10"
      inkscape:label="GlyphLayer-J"
-     style="display:inline">
+     style="display:none">
     <path
        sodipodi:nodetypes="csssssssc"
        inkscape:connector-curvature="0"
        id="path261"
-       d="M 2.941141,92.49968 C 1.858732,92.56028 1.782633,90.98126 2.587185,90.56599 3.159525,90.27058 4.812317,89.9999 5.554142,89.85842 6.060657,89.76182 6.953708,89.40667 6.659597,88.98312 6.293784,88.45633 5.685582,89.37353 5.555094,89.86597 4.932371,92.21603 4.095152,93.64379 3.594717,95.72183 3.139831,97.61073 1.999588,97.86629 1.646276,97.19699 1.165585,96.28638 1.929363,95.94587 3.594717,95.72183 4.676293,95.57632 5.557433,94.54841 5.971749,93.57895"
+       d="m 1.6230954,92.49968 c -1.08240894,0.0606 -1.15850794,-1.51842 -0.353956,-1.93369 0.57234,-0.29541 2.225132,-0.56609 2.966957,-0.70757 0.506515,-0.0966 1.399566,-0.45175 1.105455,-0.8753 -0.365813,-0.52679 -0.974015,0.39041 -1.104503,0.88285 -0.622723,2.35006 -1.459942,3.77782 -1.960377,5.85586 -0.454886,1.8889 -1.59512894,2.14446 -1.94844094,1.47516 -0.48069096,-0.91061 0.283087,-1.25112 1.94844094,-1.47516 1.081576,-0.14551 1.962716,-1.17342 2.377032,-2.14288"
        style="display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ed171f;stroke-width:0.33;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.033, 0.033;stroke-dashoffset:0;stroke-opacity:1"
        inkstitch:bean_stitch_repeats="1"
        inkstitch:running_stitch_length_mm="1" />
@@ -552,10 +583,10 @@
      inkscape:groupmode="layer"
      id="layer11"
      inkscape:label="GlyphLayer-K"
-     style="display:inline">
+     style="display:none">
     <g
        id="g276"
-       transform="translate(-65.2278,-4.87451)"
+       transform="translate(-63.943297,-4.87451)"
        style="display:inline">
       <path
          style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ed171f;stroke-width:0.33;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.033, 0.033;stroke-dashoffset:0;stroke-opacity:1"
@@ -577,7 +608,8 @@
            inkscape:connection-end="#path270"
            inkscape:connector-type="polyline"
            inkscape:label="connector"
-           inkscape:connector-curvature="0" />
+           inkscape:connector-curvature="0"
+            />
         <use
            id="command_use2116"
            xlink:href="#inkstitch_trim"
@@ -607,7 +639,8 @@
            inkscape:connection-end="#path274"
            inkscape:connector-type="polyline"
            inkscape:label="connector"
-           inkscape:connector-curvature="0" />
+           inkscape:connector-curvature="0"
+            />
         <use
            id="command_use1808"
            xlink:href="#inkstitch_trim"
@@ -623,7 +656,8 @@
      inkscape:groupmode="layer"
      id="layer12"
      inkscape:label="GlyphLayer-L"
-     style="display:inline">
+     style="display:none"
+     transform="translate(0.38956827,-0.04328536)">
     <path
        style="display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ed171f;stroke-width:0.33;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.033, 0.033;stroke-dashoffset:0;stroke-opacity:1"
        d="m 0.708275,92.4787 c -1.197789,-0.11271 -1.097791,-1.6954 0.215678,-2.14813 0.703245,-0.2424 1.631092,-0.33971 2.450081,-0.49175 0.435708,-0.0809 1.515752,-0.57606 1.043871,-0.94034 -0.467143,-0.36063 -0.857977,0.46577 -1.061125,0.96623 -0.631302,1.55522 -0.981183,3.5588 -1.682276,4.48606 -0.704879,0.93227 -1.917772,0.99762 -1.949712,0.18117 -0.03272,-0.83651 0.985241,-1.13309 1.941087,-0.17254 1.085658,1.09099 3.015105,3.39049 4.30587,1.71112"
@@ -644,7 +678,8 @@
          inkscape:connection-end="#path1258"
          inkscape:connector-type="polyline"
          inkscape:label="connector"
-         inkscape:connector-curvature="0" />
+         inkscape:connector-curvature="0"
+          />
       <use
          id="command_use8365"
          xlink:href="#inkstitch_trim"
@@ -659,10 +694,10 @@
      inkscape:groupmode="layer"
      id="layer13"
      inkscape:label="GlyphLayer-M"
-     style="display:inline">
+     style="display:none">
     <path
        style="display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ed171f;stroke-width:0.33;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.033, 0.033;stroke-dashoffset:0;stroke-opacity:1"
-       d="m -3.5298823,89.16591 c 0.4053901,2.43778 3.02652802,0.47737 4.05911802,-0.35106 -0.322538,0.94348 -0.559011,1.81951 -0.899699,2.68596 -0.308042,0.78342 -1.05639392,4.03744 -1.75518292,3.61116 -0.748157,-0.4564 1.0476459,-2.4336 1.75083792,-3.61573 0.438046,-0.73639 0.991286,-1.49188 1.64559098,-2.0451 1.019627,-0.86209 1.753238,-0.14305 1.452574,1.0093 -0.407012,1.55993 -1.470059,4.60765 -1.470059,4.60765 0.971298,-2.69877 1.589406,-4.66194 2.050333,-5.17902 0.936532,-1.05062 1.981638,-0.94466 2.162378,0.0228 0.15484,0.82884 -0.589116,2.33709 -1.03124,3.66705 -0.33662,1.01259 -1.414981,3.15176 0.189003,3.22695"
+       d="m 0.17428448,89.16591 c 0.4053901,2.43778 3.02652802,0.47737 4.05911812,-0.35106 -0.3225381,0.94348 -0.5590111,1.81951 -0.8996991,2.68596 -0.308042,0.78342 -1.056394,4.03744 -1.755183,3.61116 -0.74815696,-0.4564 1.0476459,-2.4336 1.750838,-3.61573 0.438046,-0.73639 0.9912861,-1.49188 1.6455911,-2.0451 1.019627,-0.86209 1.753238,-0.14305 1.452574,1.0093 -0.407012,1.55993 -1.470059,4.60765 -1.470059,4.60765 0.971298,-2.69877 1.589406,-4.66194 2.050333,-5.17902 0.936532,-1.05062 1.981638,-0.94466 2.162378,0.0228 0.15484,0.82884 -0.589116,2.33709 -1.03124,3.66705 -0.33662,1.01259 -1.414981,3.15176 0.189003,3.22695"
        id="path278"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccssssscsssc"
@@ -671,16 +706,17 @@
     <g
        id="command_group16"
        inkscape:label="Ink/Stitch Command: Trim thread after sewing this object"
-       transform="scale(0.264583)">
+       transform="matrix(0.264583,0,0,0.264583,3.7041668,0)">
       <path
          id="command_connector16"
-         d="M 4.3788251,305.80831 3.8750988,338.91946"
+         d="M 4.3788251,305.80831 3.8750989,338.91946"
          style="fill:none;stroke:#000000;stroke-width:1px;stroke-opacity:0.5"
          inkscape:connection-start="#command_use4464"
          inkscape:connection-end="#path278"
          inkscape:connector-type="polyline"
          inkscape:label="connector"
-         inkscape:connector-curvature="0" />
+         inkscape:connector-curvature="0"
+          />
       <use
          id="command_use4464"
          xlink:href="#inkstitch_trim"
@@ -695,28 +731,29 @@
      inkscape:groupmode="layer"
      id="layer14"
      inkscape:label="GlyphLayer-N"
-     style="display:inline">
+     style="display:none">
     <path
        sodipodi:nodetypes="ccsssssc"
        inkscape:connector-curvature="0"
        id="path294"
-       d="m -1.2823215,89.216978 c 0.40539004,2.43778 3.02653,0.47737 4.05912,-0.35106 -0.32254,0.94348 -0.55901,1.81951 -0.8997,2.68596 -0.30804,0.78342 -1.05639996,4.03744 -1.75517996,3.61116 -0.74816,-0.4564 1.04763996,-2.4336 1.75082996,-3.61573 0.43805,-0.73639 0.88215,-1.36456 1.53645,-1.91777 1.01963,-0.86209 2.02667,-0.48062 1.78,0.88197 -0.34134,1.88553 -2.94264,6.3962 -0.79167,6.34546"
+       d="m 0.30517848,89.216978 c 0.40539004,2.43778 3.02653012,0.47737 4.05912012,-0.35106 -0.32254,0.94348 -0.55901,1.81951 -0.8997,2.68596 -0.30804,0.78342 -1.0564,4.03744 -1.75518,3.61116 -0.74816008,-0.4564 1.04764,-2.4336 1.75083,-3.61573 0.43805,-0.73639 0.88215,-1.36456 1.53645,-1.91777 1.01963,-0.86209 2.02667,-0.48062 1.78,0.88197 -0.34134,1.88553 -2.94264,6.3962 -0.79167,6.34546"
        style="display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ed171f;stroke-width:0.33;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.033, 0.033;stroke-dashoffset:0;stroke-opacity:1"
        inkstitch:bean_stitch_repeats="1"
        inkstitch:running_stitch_length_mm="1" />
     <g
        id="command_group17"
        inkscape:label="Ink/Stitch Command: Trim thread after sewing this object"
-       transform="scale(0.264583)">
+       transform="matrix(0.264583,0,0,0.264583,1.5875,0)">
       <path
          id="command_connector17"
-         d="M 0.43527406,306.66533 5.6807299,339.32266"
+         d="M 0.43527406,306.66533 5.68073,339.32266"
          style="fill:none;stroke:#000000;stroke-width:1px;stroke-opacity:0.5"
          inkscape:connection-start="#command_use8112"
          inkscape:connection-end="#path294"
          inkscape:connector-type="polyline"
          inkscape:label="connector"
-         inkscape:connector-curvature="0" />
+         inkscape:connector-curvature="0"
+          />
       <use
          id="command_use8112"
          xlink:href="#inkstitch_trim"
@@ -731,10 +768,10 @@
      inkscape:groupmode="layer"
      id="layer15"
      inkscape:label="GlyphLayer-O"
-     style="display:inline">
+     style="display:none">
     <path
        style="display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ed171f;stroke-width:0.33;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.033, 0.033;stroke-dashoffset:0;stroke-opacity:1"
-       d="m -0.16447744,89.20273 c -1.31895006,1.46983 0.18416,2.35021 1.68004004,2.00313 0.7819699,-0.18144 2.4633199,-1.17443 1.8997399,-1.58958 -0.58931,-0.4341 -1.55881,0.85257 -1.8997399,1.58958 -0.58983004,1.27506 -1.18506004,3.82015 0.1809299,4.14841 1.58903,0.38186 2.76571,-1.7412 3.14038,-3.04992 0.3262,-1.13938 0.88691,-3.82883 -1.44741,-3.19208"
+       d="m 0.58111604,89.20273 c -1.31895006,1.46983 0.18416002,2.35021 1.68004006,2.00313 0.7819699,-0.18144 2.4633199,-1.17443 1.8997399,-1.58958 -0.58931,-0.4341 -1.55881,0.85257 -1.8997399,1.58958 -0.5898301,1.27506 -1.18506,3.82015 0.1809299,4.14841 1.58903,0.38186 2.76571,-1.7412 3.14038,-3.04992 0.3262,-1.13938 0.88691,-3.82883 -1.44741,-3.19208"
        id="path296"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="csssssc"
@@ -743,16 +780,17 @@
     <g
        id="command_group18"
        inkscape:label="Ink/Stitch Command: Trim thread after sewing this object"
-       transform="scale(0.264583)">
+       transform="matrix(0.264583,0,0,0.264583,0.74559346,0)">
       <path
          id="command_connector18"
-         d="M -2.8126305,307.28948 6.8610839,342.7002"
+         d="M -2.8126305,307.28948 6.861084,342.7002"
          style="fill:none;stroke:#000000;stroke-width:1px;stroke-opacity:0.5"
          inkscape:connection-start="#command_use6718"
          inkscape:connection-end="#path296"
          inkscape:connector-type="polyline"
          inkscape:label="connector"
-         inkscape:connector-curvature="0" />
+         inkscape:connector-curvature="0"
+          />
       <use
          id="command_use6718"
          xlink:href="#inkstitch_trim"
@@ -767,10 +805,10 @@
      inkscape:groupmode="layer"
      id="layer16"
      inkscape:label="GlyphLayer-P"
-     style="display:inline">
+     style="display:none">
     <g
        id="g313"
-       transform="matrix(1.0252,0,0,1.11439,-31.2684,-15.8596)"
+       transform="matrix(1.0252,0,0,1.11439,-30.566092,-15.8596)"
        style="display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#ed171f;stroke-width:0.308739;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0308739, 0.0308739;stroke-dashoffset:0;stroke-opacity:1">
       <path
          sodipodi:nodetypes="cssc"
@@ -783,7 +821,8 @@
       <g
          id="command_group19"
          inkscape:label="Ink/Stitch Command: Trim thread after sewing this object"
-         transform="matrix(0.25808,0,0,0.237424,30.4998,14.2316)">
+         transform="matrix(0.25808,0,0,0.237424,30.4998,14.2316)"
+         >
         <path
            id="command_connector19"
            d="m 5.9997452,307.21752 5.8180828,29.39474"
@@ -792,7 +831,8 @@
            inkscape:connection-end="#path309"
            inkscape:connector-type="polyline"
            inkscape:label="connector"
-           inkscape:connector-curvature="0" />
+           inkscape:connector-curvature="0"
+            />
         <use
            id="command_use9525"
            xlink:href="#inkstitch_trim"
@@ -800,7 +840,8 @@
            width="100%"
            x="5.9971652"
            y="307.18167"
-           inkscape:label="command marker" />
+           inkscape:label="command marker"
+            />
       </g>
       <path
          style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ed171f;stroke-width:0.308739;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0308739, 0.0308739;stroke-dashoffset:0;stroke-opacity:1"
@@ -813,7 +854,8 @@
       <g
          id="command_group20"
          inkscape:label="Ink/Stitch Command: Trim thread after sewing this object"
-         transform="matrix(0.25808,0,0,0.237424,30.4998,14.2316)">
+         transform="matrix(0.25808,0,0,0.237424,30.4998,14.2316)"
+         >
         <path
            id="command_connector20"
            d="m -1.4725646,313.40902 8.1015201,36.33882"
@@ -822,7 +864,8 @@
            inkscape:connection-end="#path311"
            inkscape:connector-type="polyline"
            inkscape:label="connector"
-           inkscape:connector-curvature="0" />
+           inkscape:connector-curvature="0"
+            />
         <use
            id="command_use8966"
            xlink:href="#inkstitch_trim"
@@ -830,7 +873,8 @@
            width="100%"
            x="-1.4751446"
            y="313.37317"
-           inkscape:label="command marker" />
+           inkscape:label="command marker"
+            />
       </g>
     </g>
   </g>
@@ -838,10 +882,10 @@
      inkscape:groupmode="layer"
      id="layer17"
      inkscape:label="GlyphLayer-Q"
-     style="display:inline">
+     style="display:none">
     <g
        id="g326"
-       transform="translate(-120.411,-4.9)"
+       transform="translate(-118.82349,-4.9)"
        style="display:inline">
       <path
          style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ed171f;stroke-width:0.33;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.033, 0.033;stroke-dashoffset:0;stroke-opacity:1"
@@ -863,7 +907,8 @@
            inkscape:connection-end="#path315"
            inkscape:connector-type="polyline"
            inkscape:label="connector"
-           inkscape:connector-curvature="0" />
+           inkscape:connector-curvature="0"
+            />
         <use
            id="command_use1146"
            xlink:href="#inkstitch_trim"
@@ -893,7 +938,8 @@
            inkscape:connection-end="#path317"
            inkscape:connector-type="polyline"
            inkscape:label="connector"
-           inkscape:connector-curvature="0" />
+           inkscape:connector-curvature="0"
+            />
         <use
            id="command_use3092"
            xlink:href="#inkstitch_trim"
@@ -909,10 +955,10 @@
      inkscape:groupmode="layer"
      id="layer18"
      inkscape:label="GlyphLayer-R"
-     style="display:inline">
+     style="display:none">
     <g
        id="g338"
-       transform="translate(-30.5863,-4.9)"
+       transform="translate(-29.527966,-4.9)"
        style="display:inline">
       <path
          sodipodi:nodetypes="csscc"
@@ -934,7 +980,8 @@
            inkscape:connection-end="#path334"
            inkscape:connector-type="polyline"
            inkscape:label="connector"
-           inkscape:connector-curvature="0" />
+           inkscape:connector-curvature="0"
+            />
         <use
            id="command_use5073"
            xlink:href="#inkstitch_trim"
@@ -963,7 +1010,8 @@
            inkscape:connection-end="#path336"
            inkscape:connector-type="polyline"
            inkscape:label="connector"
-           inkscape:connector-curvature="0" />
+           inkscape:connector-curvature="0"
+            />
         <use
            id="command_use7750"
            xlink:href="#inkstitch_trim"
@@ -979,7 +1027,8 @@
      inkscape:groupmode="layer"
      id="layer19"
      inkscape:label="GlyphLayer-S"
-     style="display:inline">
+     style="display:none"
+     transform="translate(-0.21642682)">
     <path
        style="display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ed171f;stroke-width:0.33;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.033, 0.033;stroke-dashoffset:0;stroke-opacity:1"
        d="m 0.54083441,89.15914 c 0.50291999,1.15475 1.94983999,1.54203 2.83767999,1.33705 0.99843,-0.23051 1.36691,-1.10144 0.88189,-1.34416 -0.57762,-0.28907 -1.02939,0.58002 -0.87477,1.33705 0.20239,0.99094 1.20725,2.3504 0.93167,3.39243 -0.3133,1.18468 -1.07433,1.62918 -2.23317,1.60731 C 0.84564436,95.46542 0.12364541,94.1962 0.69729441,93.00673 1.1666644,92.03349 2.8964244,91.62604 3.0015844,93.29832"
@@ -991,7 +1040,8 @@
     <g
        id="command_group25"
        inkscape:label="Ink/Stitch Command: Trim thread after sewing this object"
-       transform="scale(0.264583)">
+       transform="scale(0.264583)"
+       style="display:inline">
       <path
          id="command_connector25"
          d="M -0.18101885,307.13216 7.7689195,341.75332"
@@ -1000,7 +1050,8 @@
          inkscape:connection-end="#path1351"
          inkscape:connector-type="polyline"
          inkscape:label="connector"
-         inkscape:connector-curvature="0" />
+         inkscape:connector-curvature="0"
+          />
       <use
          id="command_use7258"
          xlink:href="#inkstitch_trim"
@@ -1015,7 +1066,8 @@
      inkscape:groupmode="layer"
      id="layer20"
      inkscape:label="GlyphLayer-T"
-     style="display:inline">
+     style="display:none"
+     transform="translate(-0.65902273)">
     <path
        style="display:inline;fill:none;fill-rule:evenodd;stroke:#ed171f;stroke-width:0.33;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.033, 0.033;stroke-dashoffset:0;stroke-opacity:1"
        d="m 3.1997551,90.96024 c -0.709994,0.33578 -1.9979841,0.39914 -2.0234141,-0.94525 -0.0142,-0.74814 0.7556201,-1.34987 1.8757241,-1.23324 0.9860199,0.10267 1.8549899,0.42954 2.8652599,0.672 0.77469,0.18593 2.35933,0.33784 2.35641,-0.16241 -0.003,-0.55737 -1.7017,-0.53809 -2.37117,0.15503 -0.86273,0.89321 -1.26712,3.14744 -1.82403,4.54898 -0.60326,1.5182 -1.4554739,1.81235 -2.4147939,1.48433 C 1.092621,95.28439 0.83425104,94.46921 0.98434104,93.88458 1.151621,93.23303 1.7700311,92.58635 2.6680511,92.63656"
@@ -1036,7 +1088,8 @@
          inkscape:connection-end="#path1004"
          inkscape:connector-type="polyline"
          inkscape:label="connector"
-         inkscape:connector-curvature="0" />
+         inkscape:connector-curvature="0"
+          />
       <use
          id="command_use1749"
          xlink:href="#inkstitch_trim"
@@ -1051,7 +1104,8 @@
      inkscape:groupmode="layer"
      id="layer21"
      inkscape:label="GlyphLayer-U"
-     style="display:inline">
+     style="display:none"
+     transform="translate(1.0583333)">
     <path
        inkstitch:running_stitch_length_mm="1"
        inkstitch:bean_stitch_repeats="1"
@@ -1065,7 +1119,8 @@
      inkscape:groupmode="layer"
      id="layer22"
      inkscape:label="GlyphLayer-V"
-     style="display:inline">
+     style="display:none"
+     transform="translate(0.88519185)">
     <path
        sodipodi:nodetypes="csssssc"
        inkscape:connector-curvature="0"
@@ -1086,7 +1141,8 @@
          inkscape:connection-end="#path412"
          inkscape:connector-type="polyline"
          inkscape:label="connector"
-         inkscape:connector-curvature="0" />
+         inkscape:connector-curvature="0"
+          />
       <use
          id="command_use8528"
          xlink:href="#inkstitch_trim"
@@ -1101,7 +1157,8 @@
      inkscape:groupmode="layer"
      id="layer23"
      inkscape:label="GlyphLayer-W"
-     style="display:inline">
+     style="display:none"
+     transform="translate(2.5592627,-0.04328536)">
     <path
        inkstitch:running_stitch_length_mm="1"
        inkstitch:bean_stitch_repeats="1"
@@ -1122,7 +1179,8 @@
          inkscape:connection-end="#path414"
          inkscape:connector-type="polyline"
          inkscape:label="connector"
-         inkscape:connector-curvature="0" />
+         inkscape:connector-curvature="0"
+          />
       <use
          id="command_use7732"
          xlink:href="#inkstitch_trim"
@@ -1137,7 +1195,8 @@
      inkscape:groupmode="layer"
      id="layer24"
      inkscape:label="GlyphLayer-X"
-     style="display:inline">
+     style="display:none"
+     transform="translate(0.84190648)">
     <g
        id="g521"
        transform="translate(-162.52,-4.9)"
@@ -1161,7 +1220,8 @@
            inkscape:connection-end="#path422"
            inkscape:connector-type="polyline"
            inkscape:label="connector"
-           inkscape:connector-curvature="0" />
+           inkscape:connector-curvature="0"
+            />
         <use
            id="command_use1597"
            xlink:href="#inkstitch_trim"
@@ -1190,7 +1250,8 @@
            inkscape:connection-end="#path517"
            inkscape:connector-type="polyline"
            inkscape:label="connector"
-           inkscape:connector-curvature="0" />
+           inkscape:connector-curvature="0"
+            />
         <use
            id="command_use8894"
            xlink:href="#inkstitch_trim"
@@ -1206,12 +1267,12 @@
      inkscape:groupmode="layer"
      id="layer25"
      inkscape:label="GlyphLayer-Y"
-     style="display:inline">
+     style="display:none">
     <path
        inkstitch:running_stitch_length_mm="1"
        inkstitch:bean_stitch_repeats="1"
        style="display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ed171f;stroke-width:0.33;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.033, 0.033;stroke-dashoffset:0;stroke-opacity:1"
-       d="m 0.28412903,92.49968 c -1.08241003,0.0606 -1.15851003,-1.51842 -0.35396,-1.93369 0.57234,-0.29541 2.22513997,-0.56609 2.96695997,-0.70757 0.50652,-0.0966 1.39957,-0.45175 1.10546,-0.8753 -0.36582,-0.52679 -0.93744,0.40158 -1.10451,0.88285 -0.3883,1.11857 -1.00173,2.83755 -1.07478,3.51973 -0.16494,1.54043 0.80936,1.65916 1.61268,1.08459 0.30231,-0.21623 0.59644,-0.12139 2.55733,-5.42788 -1.15991,3.21387 -2.31969,6.35178 -2.39859,6.67942 -0.45488,1.8889 -1.59513,2.14446 -1.94844,1.47516 -0.4807,-0.91061 0.28308,-1.25112 1.94844,-1.47516 1.08157,-0.14551 1.96271,-1.17342 2.37703,-2.14288"
+       d="m 0.98643714,92.49968 c -1.08241003,0.0606 -1.15851003,-1.51842 -0.35396,-1.93369 0.57234006,-0.29541 2.22514006,-0.56609 2.96696006,-0.70757 0.50652,-0.0966 1.39957,-0.45175 1.10546,-0.8753 -0.36582,-0.52679 -0.93744,0.40158 -1.10451,0.88285 -0.3883,1.11857 -1.00173,2.83755 -1.07478,3.51973 -0.16494,1.54043 0.80936,1.65916 1.61268,1.08459 0.30231,-0.21623 0.59644,-0.12139 2.55733,-5.42788 -1.15991,3.21387 -2.31969,6.35178 -2.39859,6.67942 -0.45488,1.8889 -1.59513,2.14446 -1.94844,1.47516 -0.4807,-0.91061 0.28308,-1.25112 1.94844,-1.47516 1.08157,-0.14551 1.96271,-1.17342 2.37703,-2.14288"
        id="path439"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="csssssscsssc" />
@@ -1220,19 +1281,19 @@
      inkscape:groupmode="layer"
      id="layer26"
      inkscape:label="GlyphLayer-Z"
-     style="display:inline">
+     style="display:none">
     <path
        inkstitch:running_stitch_length_mm="1"
        inkstitch:bean_stitch_repeats="1"
        sodipodi:nodetypes="csssssssc"
        inkscape:connector-curvature="0"
        id="path441"
-       d="m 1.764279,91.01905 c -0.53614,-0.63322 -0.57729,-1.50132 0.3833,-2.02463 0.6532,-0.35585 2.18004,0.071 2.95293,0.38164 0.34749,0.13967 1.71865,0.32378 1.62613,-0.2787 -0.0896,-0.58331 -1.3167,-0.15858 -1.63451,0.27811 -0.98418,1.35231 -2.76767,4.0163 -3.46173,4.94884 -0.75068998,1.00861 -1.94089,1.04497 -1.94971,0.18999 -0.009,-0.83711 0.98566002,-1.14233 1.94108,-0.18137 1.0859,1.09221 3.08073,3.47159 4.34998,1.68466"
+       d="m 2.2934457,91.01905 c -0.53614,-0.63322 -0.57729,-1.50132 0.3833,-2.02463 0.6532,-0.35585 2.18004,0.071 2.95293,0.38164 0.34749,0.13967 1.71865,0.32378 1.62613,-0.2787 -0.0896,-0.58331 -1.3167,-0.15858 -1.63451,0.27811 -0.98418,1.35231 -2.76767,4.0163 -3.46173,4.94884 -0.75069,1.00861 -1.94089004,1.04497 -1.94971004,0.18999 -0.009,-0.83711 0.98566004,-1.14233 1.94108004,-0.18137 1.0859,1.09221 3.08073,3.47159 4.34998,1.68466"
        style="display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ed171f;stroke-width:0.33;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.033, 0.033;stroke-dashoffset:0;stroke-opacity:1" />
     <g
        id="command_group31"
        inkscape:label="Ink/Stitch Command: Trim thread after sewing this object"
-       transform="scale(0.264583)">
+       transform="matrix(0.264583,0,0,0.264583,0.52916666,0)">
       <path
          id="command_connector31"
          d="m 5.3999694,306.2939 4.4957935,29.58853"
@@ -1241,7 +1302,8 @@
          inkscape:connection-end="#path441"
          inkscape:connector-type="polyline"
          inkscape:label="connector"
-         inkscape:connector-curvature="0" />
+         inkscape:connector-curvature="0"
+          />
       <use
          id="command_use7296"
          xlink:href="#inkstitch_trim"
@@ -1256,20 +1318,20 @@
      inkscape:groupmode="layer"
      id="layer27"
      inkscape:label="GlyphLayer-a"
-     style="display:inline">
+     style="display:none">
     <g
        id="g1471"
        transform="translate(-61.6262,-17.6)"
        style="display:inline">
       <path
          id="path599"
-         d="m 61.626225,110.95345 c 0.739382,-2.40833 2.132171,-2.37071 2.287659,-1.14109"
+         d="m 62.155392,110.95345 c 0.739382,-2.40833 2.132171,-2.37071 2.287659,-1.14109"
          style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ed171f;stroke-width:0.3302;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.3302, 0.3302;stroke-dashoffset:0;stroke-opacity:1"
          inkstitch:running_stitch_length_mm="1"
          inkscape:connector-curvature="0" />
       <path
          id="path1244"
-         d="m 63.913884,109.81236 c -0.152838,-1.2315 -1.546013,-1.26678 -2.287659,1.14109 -0.3408,1.07891 -0.127646,1.53785 0.208746,1.70464 0.696675,0.16343 0.987921,-0.48978 1.303585,-1.03094 0.49558,-0.8496 0.751599,-1.80661 1.116138,-2.71367 -0.318085,0.91736 -0.63617,1.80687 -0.954255,2.76479 -0.365393,1.10039 0.706275,1.28313 1.099097,0.64753 0.26886,-0.43502 0.42419,-0.91733 0.668832,-1.37235"
+         d="m 64.443051,109.81236 c -0.152838,-1.2315 -1.546013,-1.26678 -2.287659,1.14109 -0.3408,1.07891 -0.127646,1.53785 0.208746,1.70464 0.696675,0.16343 0.987921,-0.48978 1.303585,-1.03094 0.49558,-0.8496 0.751599,-1.80661 1.116138,-2.71367 -0.318085,0.91736 -0.63617,1.80687 -0.954255,2.76479 -0.365393,1.10039 0.706275,1.28313 1.099097,0.64753 0.26886,-0.43502 0.42419,-0.91733 0.668832,-1.37235"
          style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ed171f;stroke-width:0.33;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.033, 0.033;stroke-dashoffset:0;stroke-opacity:1"
          inkstitch:bean_stitch_repeats="1"
          inkstitch:running_stitch_length_mm="1"
@@ -1280,7 +1342,8 @@
      inkscape:groupmode="layer"
      id="layer28"
      inkscape:label="GlyphLayer-b"
-     style="display:inline">
+     style="display:none"
+     transform="translate(0.52916666)">
     <g
        id="g1467"
        transform="translate(-65.0684,-17.6)"
@@ -1305,7 +1368,8 @@
      inkscape:groupmode="layer"
      id="layer29"
      inkscape:label="GlyphLayer-c"
-     style="display:inline">
+     style="display:none"
+     transform="translate(0.21642682,0.04328536)">
     <g
        id="g1442"
        transform="translate(-68.2828,-17.6)"
@@ -1329,7 +1393,9 @@
      inkscape:groupmode="layer"
      id="layer30"
      inkscape:label="GlyphLayer-d"
-     style="display:inline">
+     style="display:none"
+     transform="translate(0.39931057)"
+     inkscape:transform-center-x="-0.34628291">
     <path
        style="display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ed171f;stroke-width:0.33;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.033, 0.033;stroke-dashoffset:0;stroke-opacity:1"
        d="m 0,93.35345 c 0.32183,-0.9459 0.66388,-1.30212 1.00388,-1.72463 0.27764,-0.345 1.03393,-0.38272 1.22634,0.5761 C 2.03637,91.24858 1.27784,91.28648 1.00388,91.62882 0.65971,92.05891 0.31981,92.41184 0,93.35345 c -0.13372,0.39373 -0.22159,0.83313 -0.14259,1.24138 0.0943,0.48721 0.4879,0.60951 0.85558,0.38216 0.90882,-0.56197 1.72203,-3.35922 2.38992,-5.09355 -0.64082,1.83526 -1.10464,3.24527 -1.4716,4.46612 -0.18744,0.62361 0.34052,0.90263 0.91262,0.56469 0.54811,-0.32377 0.76278,-0.88971 1.08373,-1.5608"
@@ -1343,7 +1409,8 @@
      inkscape:groupmode="layer"
      id="layer31"
      inkscape:label="GlyphLayer-e"
-     style="display:inline">
+     style="display:none"
+     transform="translate(0.26945448)">
     <path
        style="display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ed171f;stroke-width:0.33;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.033, 0.033;stroke-dashoffset:0;stroke-opacity:1"
        d="m -0.032539,93.35345 c 1.49698,-0.20294 2.51038,-1.28725 2.06202,-1.77427 -0.62721,-0.68131 -1.84411,0.63785 -2.06202,1.77427 -0.19424,1.01299 -0.1775,1.50906 0.57535,1.67529 0.84636,0.18687 1.72521,-0.62181 2.1419,-1.67529"
@@ -1357,10 +1424,11 @@
      inkscape:groupmode="layer"
      id="layer32"
      inkscape:label="GlyphLayer-f"
-     style="display:inline">
+     style="display:none"
+     transform="translate(-2.2519491,-0.17314145)">
     <g
        id="g1620"
-       transform="translate(-77.3124,-17.6)"
+       transform="translate(-74.223969,-17.6)"
        style="display:inline">
       <path
          inkstitch:running_stitch_length_mm="1"
@@ -1383,10 +1451,10 @@
      inkscape:groupmode="layer"
      id="layer33"
      inkscape:label="GlyphLayer-g"
-     style="display:inline">
+     style="display:none">
     <g
        id="g1624"
-       transform="translate(-78.9201,-17.6)"
+       transform="translate(-78.261077,-17.6)"
        style="display:inline">
       <path
          id="path1602"
@@ -1407,10 +1475,10 @@
      inkscape:groupmode="layer"
      id="layer34"
      inkscape:label="GlyphLayer-h"
-     style="display:inline">
+     style="display:none">
     <g
        id="g1648"
-       transform="translate(-82.3622,-17.6)"
+       transform="translate(-81.833033,-17.6)"
        style="display:inline">
       <path
          id="path1630"
@@ -1431,7 +1499,8 @@
      inkscape:groupmode="layer"
      id="layer35"
      inkscape:label="GlyphLayer-i"
-     style="display:inline">
+     style="display:none"
+     transform="translate(0.52916666)">
     <g
        id="g1652"
        transform="translate(-85.755,-17.6)"
@@ -1456,7 +1525,8 @@
            inkscape:connection-end="#path1316"
            inkscape:connector-type="polyline"
            inkscape:label="connector"
-           inkscape:connector-curvature="0" />
+           inkscape:connector-curvature="0"
+            />
         <use
            id="command_use4187"
            xlink:href="#inkstitch_trim"
@@ -1486,7 +1556,8 @@
            inkscape:connection-end="#path1323"
            inkscape:connector-type="polyline"
            inkscape:label="connector"
-           inkscape:connector-curvature="0" />
+           inkscape:connector-curvature="0"
+            />
         <use
            id="command_use4395"
            xlink:href="#inkstitch_trim"
@@ -1502,10 +1573,11 @@
      inkscape:groupmode="layer"
      id="layer36"
      inkscape:label="GlyphLayer-j"
-     style="display:inline">
+     style="display:none"
+     transform="translate(3.0884294,-0.04328536)">
     <g
        id="g1702"
-       transform="translate(-87.3051,-17.6002)"
+       transform="translate(-88.892601,-17.6002)"
        style="display:inline">
       <path
          sodipodi:nodetypes="ccccssc"
@@ -1527,7 +1599,8 @@
            inkscape:connection-end="#path1669"
            inkscape:connector-type="polyline"
            inkscape:label="connector"
-           inkscape:connector-curvature="0" />
+           inkscape:connector-curvature="0"
+            />
         <use
            id="command_use4780"
            xlink:href="#inkstitch_trim"
@@ -1557,7 +1630,8 @@
            inkscape:connection-end="#path1323-2"
            inkscape:connector-type="polyline"
            inkscape:label="connector"
-           inkscape:connector-curvature="0" />
+           inkscape:connector-curvature="0"
+            />
         <use
            id="command_use2703"
            xlink:href="#inkstitch_trim"
@@ -1573,7 +1647,8 @@
      inkscape:groupmode="layer"
      id="layer37"
      inkscape:label="GlyphLayer-k"
-     style="display:inline">
+     style="display:none"
+     transform="translate(0.79862112)">
     <g
        id="g1746"
        transform="translate(-88.9472,-17.59)"
@@ -1605,7 +1680,8 @@
      inkscape:groupmode="layer"
      id="layer38"
      inkscape:label="GlyphLayer-l"
-     style="display:inline">
+     style="display:none"
+     transform="translate(0.52916666)">
     <g
        id="g1783"
        transform="translate(-92.289,-17.6)"
@@ -1629,7 +1705,8 @@
      inkscape:groupmode="layer"
      id="layer39"
      inkscape:label="GlyphLayer-m"
-     style="display:inline">
+     style="display:none"
+     transform="translate(0.75533576)">
     <g
        id="g1798"
        transform="translate(-94.0344,-17.6)"
@@ -1655,7 +1732,8 @@
      inkscape:groupmode="layer"
      id="layer40"
      inkscape:label="GlyphLayer-n"
-     style="display:inline">
+     style="display:none"
+     transform="translate(0.70230811)">
     <g
        id="g1811"
        transform="translate(-99.2209,-17.6)"
@@ -1681,7 +1759,9 @@
      inkscape:groupmode="layer"
      id="layer41"
      inkscape:label="GlyphLayer-o"
-     style="display:inline">
+     style="display:none"
+     transform="translate(0.52916666)"
+     inkscape:transform-center-x="-0.34628291">
     <g
        id="g1824"
        transform="translate(-102.612,-17.5966)"
@@ -1705,10 +1785,11 @@
      inkscape:groupmode="layer"
      id="layer42"
      inkscape:label="GlyphLayer-p"
-     style="display:inline">
+     style="display:none"
+     transform="translate(1.5875)">
     <path
        style="display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ed171f;stroke-width:0.33;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.033, 0.033;stroke-dashoffset:0;stroke-opacity:1"
-       d="m 0,93.353449 0.70487,-2.01358 -2.13384,5.82481 1.43537,-3.81123 c 0,0 0.46607,-1.42822 1.05731,-1.7893 0.73293,-0.44761 1.15837,-0.002 1.08935,0.49981 -0.14119,1.02638 -0.51222,2.29404 -1.39693,2.85154 -0.77703,0.48965 -1.11202,-0.138 -1.01245,-0.45497 -0.26719,0.79242 2.50146,1.20825 3.4532,-1.10708"
+       d="m -1.0583333,93.353449 0.70486998,-2.01358 -2.13384008,5.82481 1.4353701,-3.81123 c 0,0 0.46606998,-1.42822 1.05730998,-1.7893 0.73292996,-0.44761 1.15836992,-0.002 1.08934992,0.49981 -0.14118996,1.02638 -0.51221996,2.29404 -1.39692992,2.85154 -0.77702998,0.48965 -1.11201998,-0.138 -1.01244998,-0.45497 -0.2671901,0.79242 2.5014599,1.20825 3.4531999,-1.10708"
        id="path1309"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccccccscc"
@@ -1719,7 +1800,8 @@
      inkscape:groupmode="layer"
      id="layer43"
      inkscape:label="GlyphLayer-q"
-     style="display:inline">
+     style="display:none"
+     transform="translate(0.52916666)">
     <g
        id="g1832"
        transform="translate(-109.12,-17.6)"
@@ -1745,7 +1827,8 @@
      inkscape:groupmode="layer"
      id="layer44"
      inkscape:label="GlyphLayer-r"
-     style="display:inline">
+     style="display:none"
+     transform="translate(0.52916666)">
     <path
        style="display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ed171f;stroke-width:0.33;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.033, 0.033;stroke-dashoffset:0;stroke-opacity:1"
        d="m 0,93.353449 c 0,0 0.48095,-1.03805 0.69098,-1.56979 0.29923,-0.75757 0.10686,-1.09355 -0.22384,-1.00727 -0.33247,0.0867 -0.2992,0.72617 0.21897,1.00727 0.3185,0.17278 0.69134,0.34056 1.08027,0.39902 0.15301,0.023 0.21338,0.0945 0.15085,0.21411 -0.1594,0.30479 -0.24897,0.61024 -0.35522,0.95666 -0.36352,1.18518 -0.26574,1.60398 -3e-5,1.68572 0.29181,0.0898 0.9805,-0.18341 1.48714,-1.68572"
@@ -1759,7 +1842,8 @@
      inkscape:groupmode="layer"
      id="layer45"
      inkscape:label="GlyphLayer-s"
-     style="display:inline">
+     style="display:none"
+     transform="translate(0.52916666)">
     <path
        style="display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ed171f;stroke-width:0.33;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.033, 0.033;stroke-dashoffset:0;stroke-opacity:1"
        d="m 0,93.353449 c 0.38572,-0.65235 0.9682,-0.6872 1.65751,-1.38339 0.27945,-0.28224 0.79444,-1.05548 0.29737,-1.16025 -0.41227,-0.0869 -0.59788,0.6367 -0.2925,1.16025 0.43214,0.74087 0.99633,1.85449 0.46801,2.53014 -0.53846,0.68862 -1.45384,0.77073 -1.84276,0.156 -0.19437,-0.30723 -0.23257,-0.81184 0.005,-1.08712 0.62586,-0.72542 1.64168,0.43465 2.56077,-0.21563"
@@ -1773,7 +1857,7 @@
      inkscape:groupmode="layer"
      id="layer46"
      inkscape:label="GlyphLayer-t"
-     style="display:inline">
+     style="display:none">
     <path
        style="display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ed171f;stroke-width:0.33;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.033, 0.033;stroke-dashoffset:0;stroke-opacity:1"
        d="m 0,93.353449 c 0.85115,-0.6449 0.96293,-1.39333 1.6717,-3.40634 -0.23557,0.64078 -0.45274,1.42076 -1.29642,1.43288 l 1.63189,-0.017 c -0.61027,0.006 -0.94372,0.35083 -1.17348,0.94617 -0.40301,1.04429 -0.94936,2.47327 -0.39573,2.70419 0.6414,0.26754 1.1914,-0.36393 1.79665,-1.65984"
@@ -1787,10 +1871,10 @@
      inkscape:groupmode="layer"
      id="layer47"
      inkscape:label="GlyphLayer-u"
-     style="display:inline">
+     style="display:none">
     <g
        id="g1854"
-       transform="translate(-120.709,-17.6001)"
+       transform="translate(-120.17983,-17.6001)"
        style="display:inline">
       <path
          id="path1836"
@@ -1811,7 +1895,8 @@
      inkscape:groupmode="layer"
      id="layer48"
      inkscape:label="GlyphLayer-v"
-     style="display:inline">
+     style="display:none"
+     transform="translate(0.52916666)">
     <g
        id="g1860"
        transform="translate(-120.709,-17.6001)"
@@ -1836,10 +1921,10 @@
      inkscape:groupmode="layer"
      id="layer49"
      inkscape:label="GlyphLayer-w"
-     style="display:inline">
+     style="display:none">
     <g
        id="g2077"
-       transform="translate(-127.037,-17.6)"
+       transform="translate(-126.50783,-17.6)"
        style="display:inline">
       <path
          sodipodi:nodetypes="cc"
@@ -1862,7 +1947,8 @@
      inkscape:groupmode="layer"
      id="layer50"
      inkscape:label="GlyphLayer-x"
-     style="display:inline">
+     style="display:none"
+     transform="translate(0.31273984)">
     <g
        id="g1903"
        transform="translate(-131.507,-17.6)"
@@ -1888,10 +1974,11 @@
      inkscape:groupmode="layer"
      id="layer51"
      inkscape:label="GlyphLayer-y"
-     style="display:inline">
+     style="display:none"
+     transform="translate(-0.52916666)">
     <g
        id="g1915"
-       transform="translate(-78.9201,-17.6)"
+       transform="translate(-77.861766,-17.6)"
        style="display:inline">
       <path
          style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ed171f;stroke-width:0.3302;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.3302, 0.3302;stroke-dashoffset:0;stroke-opacity:1"
@@ -1914,10 +2001,11 @@
      inkscape:groupmode="layer"
      id="layer52"
      inkscape:label="GlyphLayer-z"
-     style="display:inline">
+     style="display:none"
+     transform="translate(0.25971218)">
     <path
        style="display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ed171f;stroke-width:0.33;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.033, 0.033;stroke-dashoffset:0;stroke-opacity:1"
-       d="m -7e-6,93.353759 c 0.40448,-0.9501 1.12425,-2.33031 1.8473,-1.84488 0.98929,0.66417 0.30676,1.98836 -0.28932,2.32366 -0.59671,0.33564 -0.96395,0.30335 -0.95133,-0.016 0.0165,-0.41695 0.66183,-0.30318 0.94408,0.0147 0.52228,0.58827 0.10561,1.41608 0.0588,1.53403 -0.82904,2.08738 -2.24451,2.3104 -2.45528,1.4481 -0.28012,-1.146 1.10714,-0.85663 2.45384,-1.4379 1.03346,-0.44606 1.14629,-0.85329 1.83406,-2.02202"
+       d="M -7.0226294e-6,93.353759 C 0.40447298,92.403659 1.124243,91.023449 1.847293,91.508879 c 0.98929,0.66417 0.30676,1.98836 -0.28932,2.32366 -0.59670996,0.33564 -0.96394996,0.30335 -0.95132996,-0.016 0.0165,-0.41695 0.66182996,-0.30318 0.94407996,0.0147 0.52228,0.58827 0.10561,1.41608 0.0588,1.53403 -0.82903996,2.08738 -2.24451,2.3104 -2.45528,1.4481 -0.28012,-1.146 1.10713998,-0.85663 2.45384,-1.4379 1.03346,-0.44606 1.14629,-0.85329 1.83406,-2.02202"
        id="path1927"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="csssssssc"
@@ -1928,7 +2016,7 @@
      inkscape:groupmode="layer"
      id="layer53"
      inkscape:label="GlyphLayer-0"
-     style="display:inline">
+     style="display:none">
     <path
        id="path4647"
        style="font-size:8.46667px;line-height:1.25;font-family:Nickainley;-inkscape-font-specification:'Nickainley, Normal';opacity:1;vector-effect:none;fill:none;stroke:#ed171f;stroke-width:0.33;stroke-dasharray:0.033, 0.033;stop-color:#000000;stop-opacity:1"
@@ -1948,7 +2036,8 @@
          inkscape:connection-end="#path4647"
          inkscape:connector-type="polyline"
          inkscape:label="connector"
-         inkscape:connector-curvature="0" />
+         inkscape:connector-curvature="0"
+          />
       <use
          id="command_use4704"
          xlink:href="#inkstitch_trim"
@@ -1963,7 +2052,7 @@
      inkscape:groupmode="layer"
      id="layer54"
      inkscape:label="GlyphLayer-1"
-     style="display:inline">
+     style="display:none">
     <path
        d="M 0.14306972,91.084137 C 0.22643562,90.950797 0.39892859,90.700294 0.2670048,90.696351 0.13508102,90.692409 0.05536913,90.937733 0.14306972,91.084137 0.74778764,92.09363 2.2231013,89.854434 2.7816541,89.216978 L 0.65747813,94.907265"
        id="path10694"
@@ -1983,7 +2072,8 @@
          inkscape:connection-end="#path10694"
          inkscape:connector-type="polyline"
          inkscape:label="connector"
-         inkscape:connector-curvature="0" />
+         inkscape:connector-curvature="0"
+          />
       <use
          id="command_use3245"
          xlink:href="#inkstitch_trim"
@@ -1998,7 +2088,7 @@
      inkscape:groupmode="layer"
      id="layer55"
      inkscape:label="GlyphLayer-2"
-     style="display:inline">
+     style="display:none">
     <path
        d="m 1.0416416,90.339624 c 0.2286001,-0.7366 0.744031,-1.296835 1.4721646,-1.296835 1.3762893,0 1.1777678,1.569267 -0.1404717,3.110398 -0.8575432,1.00254 -2.04679204,1.96977 -3.04779262,2.56543 1.66998232,-0.572019 3.20817142,-0.06856 3.57682072,0.09105"
        id="path14926"
@@ -2018,7 +2108,8 @@
          inkscape:connection-end="#path14926"
          inkscape:connector-type="polyline"
          inkscape:label="connector"
-         inkscape:connector-curvature="0" />
+         inkscape:connector-curvature="0"
+          />
       <use
          id="command_use5117"
          xlink:href="#inkstitch_trim"
@@ -2033,7 +2124,7 @@
      inkscape:groupmode="layer"
      id="layer56"
      inkscape:label="GlyphLayer-3"
-     style="display:inline">
+     style="display:none">
     <path
        d="m 0.17623439,92.960806 c -0.82499612,0.986355 -0.0364706,1.815139 0.83195611,1.815139 0.9765397,0 1.900098,-0.807927 1.8904574,-1.829842 -0.00668,-0.707648 -0.6375027,-1.170472 -1.7502235,-1.163082 1.4721063,-0.210095 2.1219344,-1.010595 2.1386416,-1.713912 0,-0.613175 -0.3993365,-0.995166 -1.0882133,-0.995166 -0.6588863,0 -1.1783702,0.45743 -1.43584561,1.280466"
        id="path29198"
@@ -2053,7 +2144,8 @@
          inkscape:connection-end="#path29198"
          inkscape:connector-type="polyline"
          inkscape:label="connector"
-         inkscape:connector-curvature="0" />
+         inkscape:connector-curvature="0"
+          />
       <use
          id="command_use1264"
          xlink:href="#inkstitch_trim"
@@ -2068,7 +2160,7 @@
      inkscape:groupmode="layer"
      id="layer57"
      inkscape:label="GlyphLayer-4"
-     style="display:inline">
+     style="display:none">
     <path
        style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#ed171f;stroke-width:0.295054;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:0.0295054, 0.0295054;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
        d="m 2.1960947,89.061723 c -0.5087306,1.441178 -1.44864976,2.561711 -2.40186993,3.612801 0.85771331,-0.0056 1.88580383,0.119119 2.75176413,0.0058 0.2507977,-0.03281 0.4662455,-0.04957 0.7238395,-0.209601"
@@ -2088,7 +2180,8 @@
          inkscape:connection-end="#path31926"
          inkscape:connector-type="polyline"
          inkscape:label="connector"
-         inkscape:connector-curvature="0" />
+         inkscape:connector-curvature="0"
+          />
       <use
          id="command_use13"
          xlink:href="#inkstitch_trim"
@@ -2116,7 +2209,8 @@
          inkscape:connection-end="#path32708"
          inkscape:connector-type="polyline"
          inkscape:label="connector"
-         inkscape:connector-curvature="0" />
+         inkscape:connector-curvature="0"
+          />
       <use
          id="command_use2244"
          xlink:href="#inkstitch_trim"
@@ -2131,7 +2225,7 @@
      inkscape:groupmode="layer"
      id="layer58"
      inkscape:label="GlyphLayer-5"
-     style="display:inline">
+     style="display:none">
     <path
        style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#ed171f;stroke-width:0.295054;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:0.0295054, 0.0295054;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
        d="m 0.14112064,92.704853 c -0.73465017,1.496915 -0.22886726,1.954293 0.47567237,2.047668 C 1.804687,94.909957 2.8210502,93.731437 3.1586231,92.455071 3.2983674,91.926696 3.1949408,91.002385 2.6635699,90.874506 2.0744702,90.732735 1.1148744,91.235915 0.72182426,91.667973 L 1.6262333,89.175049 c 1.4685605,0.407742 2.041303,0.12079 2.5569804,-0.210415"
@@ -2151,7 +2245,8 @@
          inkscape:connection-end="#path35325"
          inkscape:connector-type="polyline"
          inkscape:label="connector"
-         inkscape:connector-curvature="0" />
+         inkscape:connector-curvature="0"
+          />
       <use
          id="command_use6170"
          xlink:href="#inkstitch_trim"
@@ -2166,7 +2261,7 @@
      inkscape:groupmode="layer"
      id="layer59"
      inkscape:label="GlyphLayer-6"
-     style="display:inline">
+     style="display:none">
     <path
        style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#ed171f;stroke-width:0.295054;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:0.0295054, 0.0295054;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
        d="m -0.39044927,93.113618 c 0.64098181,-1.143288 1.98371077,-2.252454 3.07339547,-1.81787 0.612571,0.244303 0.5436998,1.241162 0.3652371,1.840689 -0.280163,0.941179 -1.0821914,1.673654 -1.8932219,1.673654 -1.50444127,0 -0.8383852,-2.69206 -0.28204395,-3.828381 C 1.8921068,88.900026 3.5127485,88.329046 3.9362629,89.803321"
@@ -2186,7 +2281,8 @@
          inkscape:connection-end="#path37967"
          inkscape:connector-type="polyline"
          inkscape:label="connector"
-         inkscape:connector-curvature="0" />
+         inkscape:connector-curvature="0"
+          />
       <use
          id="command_use2321"
          xlink:href="#inkstitch_trim"
@@ -2201,7 +2297,7 @@
      inkscape:groupmode="layer"
      id="layer60"
      inkscape:label="GlyphLayer-7"
-     style="display:inline">
+     style="display:none">
     <path
        style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#ed171f;stroke-width:0.295054;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:0.0295054, 0.0295054;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
        d="M 0.5212008,90.165549 C 0.71550787,89.729817 1.0168022,89.046981 1.2289917,88.9931 1.7146434,88.869779 3.2423773,89.76487 4.2001062,89.0431 4.0526048,89.348211 3.1283331,90.234988 2.3489966,91.132182 1.8831799,91.823776 1.6713977,91.87877 0.85044957,91.87899 L 2.5729152,91.9062 c -0.9099934,0 -0.959216,0.133831 -1.2975125,0.688497 -0.43390225,0.713568 -0.80817557,1.493517 -1.16745725,2.290155"
@@ -2221,7 +2317,8 @@
          inkscape:connection-end="#path49618"
          inkscape:connector-type="polyline"
          inkscape:label="connector"
-         inkscape:connector-curvature="0" />
+         inkscape:connector-curvature="0"
+          />
       <use
          id="command_use5477"
          xlink:href="#inkstitch_trim"
@@ -2236,7 +2333,7 @@
      inkscape:groupmode="layer"
      id="layer61"
      inkscape:label="GlyphLayer-8"
-     style="display:inline">
+     style="display:none">
     <path
        style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#ed171f;stroke-width:0.295054;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:0.0295054, 0.0295054;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
        d="m 1.7237875,91.602728 c -0.76141185,0.204146 -1.7682273,0.911082 -1.92191561,1.746562 -0.15270912,0.830157 0.16377446,1.44331 1.02573099,1.4509 C 1.8998404,94.809633 2.9859298,94.053269 2.9761835,93.159913 2.9672469,92.340774 2.2338878,91.826562 1.4696476,91.464103 1.1204687,91.298497 0.77126029,90.759097 0.93149554,90.110215 1.0825132,89.49866 1.6090822,88.985887 2.5677232,88.969884 c 0.7754416,-0.01294 1.3207554,0.500487 1.0927005,1.201124 -0.21545,0.661911 -0.6561908,1.15572 -1.383935,1.22416"
@@ -2256,7 +2353,8 @@
          inkscape:connection-end="#path54685"
          inkscape:connector-type="polyline"
          inkscape:label="connector"
-         inkscape:connector-curvature="0" />
+         inkscape:connector-curvature="0"
+          />
       <use
          id="command_use7064"
          xlink:href="#inkstitch_trim"
@@ -2278,7 +2376,8 @@
          inkscape:connection-end="#path54685"
          inkscape:connector-type="polyline"
          inkscape:label="connector"
-         inkscape:connector-curvature="0" />
+         inkscape:connector-curvature="0"
+          />
       <use
          id="command_use6742"
          xlink:href="#inkstitch_trim"
@@ -2293,7 +2392,7 @@
      inkscape:groupmode="layer"
      id="layer62"
      inkscape:label="GlyphLayer-9"
-     style="display:inline">
+     style="display:none">
     <path
        style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#ed171f;stroke-width:0.295054;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:0.0295054, 0.0295054;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
        d="m -0.36265969,93.969495 c 0.0479477,0.371652 0.21737921,0.855286 0.76643248,0.856916 1.44511531,0.0043 2.59818571,-2.234279 2.87042431,-3.685326 0.1579106,-0.841672 0.1961378,-2.155642 -0.8802927,-2.160046 -1.0042942,-0.0041 -1.89571992,1.248998 -2.00700967,2.247115 -0.0670381,0.60124 0.28309273,1.305013 0.86290937,1.337787 1.3047985,0.07375 2.3390594,-1.273707 2.7117872,-1.951585"
@@ -2313,7 +2412,8 @@
          inkscape:connection-end="#path57403"
          inkscape:connector-type="polyline"
          inkscape:label="connector"
-         inkscape:connector-curvature="0" />
+         inkscape:connector-curvature="0"
+          />
       <use
          id="command_use1056"
          xlink:href="#inkstitch_trim"
@@ -2328,10 +2428,10 @@
      inkscape:groupmode="layer"
      id="layer63"
      inkscape:label="GlyphLayer-@"
-     style="display:inline">
+     style="display:none">
     <path
        style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#ed171f;stroke-width:0.295054;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:0.0295054, 0.0295054;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
-       d="M 4.1142221,93.26374 C 2.3205643,93.963441 0.91998006,93.210493 1.1592305,91.301913 1.3155074,90.055241 2.5805186,88.73275 3.917296,88.73275 c 1.3135259,0 1.767394,0.89128 1.767394,1.574089 0,1.137568 -0.7767161,2.187671 -1.512676,2.187671 -0.3114964,0 -0.5424374,-0.06127 -0.5148463,-0.543592 0.03198,-0.55904 0.6465618,-1.77025 0.8091968,-2.243208 -0.4016922,1.160985 -0.9878665,2.765409 -1.6546088,2.765409 -0.3862119,0 -0.4204936,-0.309017 -0.4204936,-0.511231 0,-0.789882 0.5972171,-2.07748 1.2585782,-2.07748 0.2904951,0 0.4899746,0.220393 0.4471495,0.610389"
+       d="M 3.0558887,93.26374 C 1.2622309,93.963441 -0.13835328,93.210493 0.10089718,91.301913 0.25717408,90.055241 1.5221852,88.73275 2.8589626,88.73275 c 1.3135259,0 1.767394,0.89128 1.767394,1.574089 0,1.137568 -0.7767161,2.187671 -1.512676,2.187671 -0.3114964,0 -0.5424374,-0.06127 -0.5148463,-0.543592 0.03198,-0.55904 0.6465618,-1.77025 0.8091968,-2.243208 -0.4016922,1.160985 -0.9878665,2.765409 -1.6546088,2.765409 -0.3862119,0 -0.4204936,-0.309017 -0.4204936,-0.511231 0,-0.789882 0.5972171,-2.07748 1.2585782,-2.07748 0.2904951,0 0.4899746,0.220393 0.4471495,0.610389"
        id="path3217"
        sodipodi:nodetypes="cssssscsssc"
        inkstitch:running_stitch_length_mm="1"
@@ -2339,7 +2439,7 @@
     <g
        id="command_group47"
        inkscape:label="Ink/Stitch Command: Trim thread after sewing this object"
-       transform="scale(0.264583)">
+       transform="matrix(0.264583,0,0,0.264583,-1.0583333,0)">
       <path
          id="command_connector47"
          d="m 4.6624464,306.8366 6.4324016,29.40194"
@@ -2348,7 +2448,8 @@
          inkscape:connection-end="#path3217"
          inkscape:connector-type="polyline"
          inkscape:label="connector"
-         inkscape:connector-curvature="0" />
+         inkscape:connector-curvature="0"
+          />
       <use
          id="command_use3899"
          xlink:href="#inkstitch_trim"
@@ -2356,6 +2457,254 @@
          width="100%"
          x="4.6598663"
          y="306.80075"
+         inkscape:label="command marker" />
+    </g>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="g3"
+     inkscape:label="GlyphLayer-/"
+     style="display:none">
+    <path
+       style="font-variation-settings:normal;display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#ed171f;stroke-width:0.33;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.033, 0.033;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+       d="M -0.69868989,95.511032 1.8350074,88.286515"
+       id="path8540" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="g4"
+     inkscape:label="GlyphLayer-!"
+     style="display:none">
+    <path
+       id="path8981"
+       style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#ed171f;stroke-width:0.33;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.033, 0.033;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:markers fill stroke;stop-color:#000000"
+       d="m 0.90308544,94.932245 a 0.2501809,0.2501809 0 0 1 -0.2501809,0.250181 0.2501809,0.2501809 0 0 1 -0.25018086,-0.250181 0.2501809,0.2501809 0 0 1 0.25018086,-0.250181 0.2501809,0.2501809 0 0 1 0.2501809,0.250181 z" />
+    <g
+       id="command_group48"
+       inkscape:label="Ink/Stitch Command: Trim thread after sewing this object"
+       transform="matrix(0.264583,0,0,0.264583,-1.05833,2.64583)">
+      <path
+         id="command_connector48"
+         d="m 1.9996586,318.26076 4.3316593,29.60306"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-opacity:0.5"
+         inkscape:connection-start="#command_use690"
+         inkscape:connection-end="#path8981"
+         inkscape:label="connector"
+         inkscape:connector-type="polyline"
+         inkscape:connector-curvature="0"
+          />
+      <use
+         id="command_use690"
+         xlink:href="#inkstitch_trim"
+         height="100%"
+         width="100%"
+         x="1.9970785"
+         y="318.22491"
+         inkscape:label="command marker" />
+    </g>
+    <path
+       style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#ed171f;stroke-width:0.33;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.033, 0.033;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
+       d="M 0.98344374,93.953555 2.7422054,88.975905"
+       id="path9320" />
+    <g
+       id="command_group50"
+       inkscape:label="Ink/Stitch Command: Trim thread after sewing this object"
+       transform="scale(0.264583)">
+      <path
+         id="command_connector50"
+         d="m 1.6288829,307.66118 5.3914333,38.09015"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-opacity:0.5"
+         inkscape:connection-start="#command_use3437"
+         inkscape:connection-end="#path9320"
+         inkscape:label="connector"
+         inkscape:connector-type="polyline"
+         inkscape:connector-curvature="0"
+          />
+      <use
+         id="command_use3437"
+         xlink:href="#inkstitch_trim"
+         height="100%"
+         width="100%"
+         x="1.6263028"
+         y="307.62534"
+         inkscape:label="command marker" />
+    </g>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer63-3"
+     inkscape:label="GlyphLayer-@"
+     style="display:none">
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#ed171f;stroke-width:0.295054;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:0.0295054, 0.0295054;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+       d="m 3.5515124,94.648872 c -1.7936578,0.699701 -3.19424206,-0.05325 -2.95499162,-1.961827 0.1562769,-1.246672 1.42128812,-2.569163 2.75806552,-2.569163 1.3135259,0 1.767394,0.89128 1.767394,1.574089 0,1.137568 -0.7767161,2.187671 -1.512676,2.187671 -0.3114964,0 -0.5424374,-0.06127 -0.5148463,-0.543592 0.03198,-0.55904 0.6465618,-1.77025 0.8091968,-2.243208 -0.4016922,1.160985 -0.9878665,2.765409 -1.6546088,2.765409 -0.3862119,0 -0.4204936,-0.309017 -0.4204936,-0.511231 0,-0.789882 0.5972171,-2.07748 1.2585782,-2.07748 0.2904951,0 0.4899746,0.220393 0.4471495,0.610389"
+       id="path3217-2"
+       sodipodi:nodetypes="cssssscsssc"
+       inkstitch:running_stitch_length_mm="1"
+       inkstitch:bean_stitch_repeats="1" />
+    <g
+       id="command_group51"
+       inkscape:label="Ink/Stitch Command: Trim thread after sewing this object"
+       transform="scale(0.264583)">
+      <path
+         id="command_connector51"
+         d="m 6.8005565,311.15303 3.0777917,29.94729"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-opacity:0.5"
+         inkscape:connection-start="#command_use9299"
+         inkscape:connection-end="#path3217-2"
+         inkscape:label="connector"
+         inkscape:connector-type="polyline"
+         inkscape:connector-curvature="0"
+          />
+      <use
+         id="command_use9299"
+         xlink:href="#inkstitch_trim"
+         height="100%"
+         width="100%"
+         x="6.7979765"
+         y="311.11719"
+         inkscape:label="command marker" />
+    </g>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer64"
+     inkscape:label="GlyphLayer-'"
+     style="display:inline">
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#ed171f;stroke-width:0.311743;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0311743, 0.0311743;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+       d="M 1.8770905,89.918608 2.4674103,88.388237"
+       id="path8712"
+       inkstitch:bean_stitch_repeats="1"
+       inkstitch:running_stitch_length_mm="1" />
+    <g
+       id="command_group48-1"
+       inkscape:label="Ink/Stitch Command: Trim thread after sewing this object"
+       transform="scale(0.264583)">
+      <path
+         id="command_connector48-3"
+         d="m 3.2033216,304.75286 5.006769,32.20538"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-opacity:0.5"
+         inkscape:connection-end="#path8712"
+         inkscape:label="connector"
+         inkscape:connector-type="polyline"
+         inkscape:connector-curvature="0"
+         inkscape:connection-start="#command_use6796"
+          />
+      <use
+         id="command_use6796"
+         xlink:href="#inkstitch_trim"
+         height="100%"
+         width="100%"
+         x="3.2007415"
+         y="304.71701"
+         inkscape:label="command marker" />
+    </g>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer65-7"
+     inkscape:label="GlyphLayer-,"
+     style="display:none"
+     transform="translate(-1.5875)">
+    <path
+       id="path13809"
+       style="opacity:1;vector-effect:none;fill:none;stroke:#ed171f;stroke-width:0.311743;stroke-dasharray:0.0311743, 0.0311743;paint-order:markers stroke fill;stop-color:#000000;stop-opacity:1"
+       d="m 2.4687513,94.880342 c 0.04469,-0.137073 -0.029171,-0.298819 -0.1619536,-0.354907 -0.1283466,-0.06069 -0.2949324,-0.01068 -0.3691509,0.110168 -0.077651,0.116153 -0.055637,0.284929 0.049078,0.377359 0.1030312,0.09828 0.2776313,0.103193 0.3860541,0.01091 0.045397,-0.03682 0.079248,-0.08753 0.095973,-0.14353 -0.1093739,0.191225 -0.2187479,0.382451 -0.3281218,0.573676"
+       sodipodi:nodetypes="csssc"
+       inkstitch:running_stitch_length_mm="1"
+       inkstitch:bean_stitch_repeats="1" />
+    <g
+       id="command_group49"
+       inkscape:label="Ink/Stitch Command: Trim thread after sewing this object"
+       transform="scale(0.264583)">
+      <path
+         id="command_connector49"
+         d="M 1.3193937,328.01104 7.9039236,357.2257"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-opacity:0.5"
+         inkscape:connection-start="#command_use5636"
+         inkscape:connection-end="#path13809"
+         inkscape:label="connector"
+         inkscape:connector-type="polyline"
+         inkscape:connector-curvature="0"
+          />
+      <use
+         id="command_use5636"
+         xlink:href="#inkstitch_trim"
+         height="100%"
+         width="100%"
+         x="1.3168137"
+         y="327.97519"
+         inkscape:label="command marker" />
+    </g>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="g6"
+     inkscape:label="GlyphLayer-‘"
+     style="display:inline">
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#ed171f;stroke-width:0.311743;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0311743, 0.0311743;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+       d="M 1.8770905,89.918608 2.4674103,88.388237"
+       id="path4"
+       inkstitch:bean_stitch_repeats="1"
+       inkstitch:running_stitch_length_mm="1" />
+    <g
+       id="g5"
+       inkscape:label="Ink/Stitch Command: Trim thread after sewing this object"
+       transform="scale(0.264583)">
+      <path
+         id="path5"
+         d="m 3.2033216,304.75286 5.006769,32.20538"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-opacity:0.5"
+         inkscape:connection-end="#path8712"
+         inkscape:label="connector"
+         inkscape:connector-type="polyline"
+         inkscape:connector-curvature="0"
+         inkscape:connection-start="#command_use6796"
+          />
+      <use
+         id="use5"
+         xlink:href="#inkstitch_trim"
+         height="100%"
+         width="100%"
+         x="3.2007415"
+         y="304.71701"
+         inkscape:label="command marker" />
+    </g>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="g10"
+     inkscape:label="GlyphLayer-’"
+     style="display:inline">
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#ed171f;stroke-width:0.311743;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0311743, 0.0311743;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+       d="M 1.8770905,89.918608 2.4674103,88.388237"
+       id="path8"
+       inkstitch:bean_stitch_repeats="1"
+       inkstitch:running_stitch_length_mm="1" />
+    <g
+       id="g9"
+       inkscape:label="Ink/Stitch Command: Trim thread after sewing this object"
+       transform="scale(0.264583)">
+      <path
+         id="path9"
+         d="m 3.2033216,304.75286 5.006769,32.20538"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-opacity:0.5"
+         inkscape:connection-end="#path8712"
+         inkscape:label="connector"
+         inkscape:connector-type="polyline"
+         inkscape:connector-curvature="0"
+         inkscape:connection-start="#command_use6796"
+          />
+      <use
+         id="use9"
+         xlink:href="#inkstitch_trim"
+         height="100%"
+         width="100%"
+         x="3.2007415"
+         y="304.71701"
          inkscape:label="command marker" />
     </g>
   </g>

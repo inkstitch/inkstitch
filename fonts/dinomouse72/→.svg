@@ -7,7 +7,7 @@
    viewBox="0 0 50.800001 50.800001"
    version="1.1"
    id="svg3212"
-   inkscape:version="1.1.1 (3bf5ae0, 2021-09-20)"
+   inkscape:version="1.3-alpha (95f74fb, 2023-03-31)"
    sodipodi:docname="→.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -17,24 +17,6 @@
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:inkstitch="http://inkstitch.org/namespace">
-  <title
-     id="title534">Dinomouse72</title>
-  <metadata
-     id="metadata1064">
-    <inkstitch:collapse_len_mm />
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:title>Dinomouse72</dc:title>
-        <dc:creator>
-          <cc:Agent>
-            <dc:title>Fontgrove/Octavian Codrea, Karen Cravens/Silver Seams</dc:title>
-          </cc:Agent>
-        </dc:creator>
-        <dc:description>An Ink/Stitch embroidery alphabet by Karen Cravens/Silver Seams, based on the Dinomouse OpenType font by Fontgrove/Octavian Codrea</dc:description>
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
   <sodipodi:namedview
      id="namedview3214"
      pagecolor="#ffffff"
@@ -49,34 +31,61 @@
      showguides="true"
      inkscape:guide-bbox="true"
      inkscape:zoom="5.1644528"
-     inkscape:cx="-23.235763"
+     inkscape:cx="-32.142805"
      inkscape:cy="155.0019"
      inkscape:window-width="1920"
      inkscape:window-height="1152"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer52"
-     inkscape:snap-global="true">
+     inkscape:current-layer="layer93"
+     inkscape:snap-global="true"
+     inkscape:showpageshadow="2"
+     inkscape:deskcolor="#d1d1d1">
     <inkscape:grid
        type="xygrid"
-       id="grid3273" />
+       id="grid3273"
+       visible="false" />
     <sodipodi:guide
        position="25.400001,0"
        orientation="0,-1"
-       id="guide3275" />
+       id="guide3275"
+       inkscape:locked="false" />
   </sodipodi:namedview>
+  <title
+     id="title534">Dinomouse72</title>
+  <metadata
+     id="metadata1064">
+    <inkstitch:collapse_len_mm
+       id="collapse_len_mm1942">3</inkstitch:collapse_len_mm>
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>Dinomouse72</dc:title>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Fontgrove/Octavian Codrea, Karen Cravens/Silver Seams</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:description>An Ink/Stitch embroidery alphabet by Karen Cravens/Silver Seams, based on the Dinomouse OpenType font by Fontgrove/Octavian Codrea</dc:description>
+      </cc:Work>
+    </rdf:RDF>
+    <inkstitch:min_stitch_len_mm
+       id="min_stitch_len_mm6115">0</inkstitch:min_stitch_len_mm>
+    <inkstitch:inkstitch_svg_version>1</inkstitch:inkstitch_svg_version>
+  </metadata>
   <defs
      id="defs3209" />
   <g
      inkscape:groupmode="layer"
      id="layer65"
      inkscape:label="GlyphLayer-!"
-     style="display:inline">
+     style="display:none">
     <g
        id="g7148"
        style="stroke:#260605"
-       transform="translate(-92.3725, -132.376)">
+       transform="translate(-92.3725,-132.376)"
+       >
       <path
          id="path2548"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -84,7 +93,8 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          id="path2550"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -93,17 +103,18 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
     </g>
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer66"
      inkscape:label="GlyphLayer-&quot;"
-     style="display:inline">
+     style="display:none">
     <g
        id="g20689"
-       transform="translate(-306.396, -132.376)">
+       transform="translate(-306.396,-132.376)">
       <path
          id="path2642"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -112,7 +123,8 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          id="path2644"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -121,17 +133,18 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
     </g>
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer67"
      inkscape:label="GlyphLayer-#"
-     style="display:inline">
+     style="display:none">
     <g
        id="g13464"
-       transform="translate(-117.68, -132.376)">
+       transform="translate(-117.68,-132.376)">
       <path
          id="path2564"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -140,7 +153,8 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
          d="m 123.97792,178.54736 -2.2098,-2.74317"
@@ -153,7 +167,8 @@
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
          inkstitch:zigzag_underlay="False"
-         sodipodi:nodetypes="cccccc" />
+         sodipodi:nodetypes="cccccc"
+         inkstitch:reverse_rails="none" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
          d="m 125.29872,173.51819 0.69677,-7.81621"
@@ -166,7 +181,8 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
          d="m 123.13975,170.69878 -4.80063,1.39701"
@@ -179,7 +195,8 @@
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
          inkstitch:zigzag_underlay="False"
-         sodipodi:nodetypes="cccscccccsccccc" />
+         sodipodi:nodetypes="cccscccccsccccc"
+         inkstitch:reverse_rails="none" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
          d="m 127.83952,170.6986 c 2.11623,0.59214 2.26702,-1.24683 3.8172,-4.696"
@@ -193,7 +210,8 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
          d="m 128.67692,170.69879 6.731,0.9398"
@@ -206,7 +224,8 @@
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
          inkstitch:zigzag_underlay="False"
-         sodipodi:nodetypes="cccccssccccccsc" />
+         sodipodi:nodetypes="cccccssccccccsc"
+         inkstitch:reverse_rails="none" />
       <path
          id="path2571"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -215,7 +234,8 @@
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
          inkstitch:zigzag_underlay="False"
-         sodipodi:nodetypes="cccccc" />
+         sodipodi:nodetypes="cccccc"
+         inkstitch:reverse_rails="none" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
          d="m 127.204,175.677 -9.22048,1.62579"
@@ -227,7 +247,8 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
          d="m 126.46716,178.49659 8.509,-1.4224"
@@ -241,7 +262,8 @@
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
          inkstitch:zigzag_underlay="False"
-         sodipodi:nodetypes="csscsscccscccc" />
+         sodipodi:nodetypes="csscsscccscccc"
+         inkstitch:reverse_rails="none" />
       <path
          id="path2567"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -250,17 +272,18 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
     </g>
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer68"
      inkscape:label="GlyphLayer-$"
-     style="display:inline">
+     style="display:none">
     <g
        id="g18499"
-       transform="translate(-136.07, -132.376)">
+       transform="translate(-136.07,-132.376)">
       <path
          id="path2587"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -269,7 +292,8 @@
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
          inkstitch:zigzag_underlay="False"
-         sodipodi:nodetypes="cccsccccccc" />
+         sodipodi:nodetypes="cccsccccccc"
+         inkstitch:reverse_rails="none" />
       <path
          style="font-variation-settings:normal;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
          d="M 139.28539,166.43157 139.387,169.175"
@@ -283,7 +307,8 @@
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
          inkstitch:zigzag_underlay="False"
-         sodipodi:nodetypes="ccccccc" />
+         sodipodi:nodetypes="ccccccc"
+         inkstitch:reverse_rails="none" />
       <path
          style="font-variation-settings:normal;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
          d="m 139.53939,172.85777 0.1016,2.6162"
@@ -297,7 +322,8 @@
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
          inkstitch:zigzag_underlay="False"
-         sodipodi:nodetypes="cccccsc" />
+         sodipodi:nodetypes="cccccsc"
+         inkstitch:reverse_rails="none" />
       <path
          style="font-variation-settings:normal;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
          d="m 139.74259,178.21717 1.7018,6.3754"
@@ -311,7 +337,8 @@
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
          inkstitch:zigzag_underlay="False"
-         sodipodi:nodetypes="csccccccc" />
+         sodipodi:nodetypes="csccccccc"
+         inkstitch:reverse_rails="none" />
       <path
          style="font-variation-settings:normal;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
          d="m 139.84419,180.83337 4.81379,-0.47909 0.34241,4.23829"
@@ -325,7 +352,8 @@
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
          inkstitch:zigzag_underlay="False"
-         sodipodi:nodetypes="ccccccsc" />
+         sodipodi:nodetypes="ccccccsc"
+         inkstitch:reverse_rails="none" />
       <path
          id="path2581"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -334,7 +362,8 @@
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
          inkstitch:zigzag_underlay="False"
-         sodipodi:nodetypes="cccccc" />
+         sodipodi:nodetypes="cccccc"
+         inkstitch:reverse_rails="none" />
       <path
          id="path2577"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -343,7 +372,8 @@
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
          inkstitch:zigzag_underlay="False"
-         sodipodi:nodetypes="cccccsc" />
+         sodipodi:nodetypes="cccccsc"
+         inkstitch:reverse_rails="none" />
       <path
          style="font-variation-settings:normal;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
          d="m 145.813,168.616 -1.47301,-5.15621"
@@ -356,7 +386,8 @@
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
          inkstitch:zigzag_underlay="False"
-         sodipodi:nodetypes="ccccccsccc" />
+         sodipodi:nodetypes="ccccccsccc"
+         inkstitch:reverse_rails="none" />
       <path
          style="font-variation-settings:normal;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
          d="m 145.712,166 3.87575,2.90292"
@@ -369,17 +400,18 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
     </g>
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer69"
      inkscape:label="GlyphLayer-%"
-     style="display:inline">
+     style="display:none">
     <g
        id="g18504"
-       transform="translate(-150.67, -132.376)">
+       transform="translate(-150.67,-132.376)">
       <path
          id="path2591"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -388,7 +420,8 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          id="path2593"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -397,7 +430,8 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          id="path2595"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -406,17 +440,18 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
     </g>
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer70"
      inkscape:label="GlyphLayer-&amp;"
-     style="display:inline">
+     style="display:none">
     <g
        id="g19921"
-       transform="translate(-188.143, -132.376)">
+       transform="translate(-188.143,-132.376)">
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
          d="m 192.67298,173.67059 11.24288,9.41417"
@@ -429,7 +464,8 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          id="path2601"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -438,7 +474,8 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          id="path2605"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -447,14 +484,15 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
     </g>
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer71"
      inkscape:label="GlyphLayer-'"
-     style="display:inline">
+     style="display:none">
     <path
        id="path2538"
        style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -463,13 +501,14 @@
        inkstitch:satin_column="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
-       inkstitch:zigzag_underlay="False" />
+       inkstitch:zigzag_underlay="False"
+       inkstitch:reverse_rails="none" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer72"
      inkscape:label="GlyphLayer-("
-     style="display:inline">
+     style="display:none">
     <path
        id="path182954"
        style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -478,13 +517,14 @@
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
        inkstitch:zigzag_underlay="False"
-       sodipodi:nodetypes="cccccccccccsscccccccccc" />
+       sodipodi:nodetypes="cccccccccccsscccccccccc"
+       inkstitch:reverse_rails="none" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer73"
      inkscape:label="GlyphLayer-)"
-     style="display:inline">
+     style="display:none">
     <path
        id="path2622"
        style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -493,16 +533,17 @@
        inkstitch:satin_column="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
-       inkstitch:zigzag_underlay="False" />
+       inkstitch:zigzag_underlay="False"
+       inkstitch:reverse_rails="none" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer74"
      inkscape:label="GlyphLayer-*"
-     style="display:inline">
+     style="display:none">
     <g
        id="g20681"
-       transform="translate(-206.709, -132.376)">
+       transform="translate(-206.709,-132.376)">
       <path
          id="path2618"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -511,7 +552,8 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
          d="m 213.62443,170.91901 -2.71703,-3.91919"
@@ -524,7 +566,8 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
          d="m 213.62443,170.91901 2.53816,-4.17919"
@@ -537,7 +580,8 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
          d="m 213.62443,170.91901 5.0435,0.0592"
@@ -550,7 +594,8 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
          d="m 213.62443,170.91901 2.79103,4.22239"
@@ -563,7 +608,8 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
          d="m 213.62443,170.91901 -2.5257,4.22478"
@@ -576,17 +622,18 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
     </g>
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer75"
      inkscape:label="GlyphLayer-+"
-     style="display:inline">
+     style="display:none">
     <g
        id="g22146"
-       transform="translate(-248.033, -132.376)">
+       transform="translate(-248.033,-132.376)">
       <path
          id="path2628"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -595,7 +642,8 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
          d="m 256.46074,177.60759 -1.4224,-6.985"
@@ -608,7 +656,8 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
          d="m 253.64134,174.76279 -4.445,1.3716"
@@ -621,14 +670,15 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
     </g>
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer76"
      inkscape:label="GlyphLayer-,"
-     style="display:inline">
+     style="display:none">
     <path
        id="path2540"
        style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -637,13 +687,14 @@
        inkstitch:satin_column="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
-       inkstitch:zigzag_underlay="False" />
+       inkstitch:zigzag_underlay="False"
+       inkstitch:reverse_rails="none" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer77"
      inkscape:label="GlyphLayer--"
-     style="display:inline">
+     style="display:none">
     <path
        id="path2522"
        style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -651,13 +702,14 @@
        inkstitch:satin_column="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
-       inkstitch:zigzag_underlay="False" />
+       inkstitch:zigzag_underlay="False"
+       inkstitch:reverse_rails="none" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer78"
      inkscape:label="GlyphLayer-."
-     style="display:inline">
+     style="display:none">
     <path
        id="path2542"
        style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -666,13 +718,14 @@
        inkstitch:satin_column="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
-       inkstitch:zigzag_underlay="False" />
+       inkstitch:zigzag_underlay="False"
+       inkstitch:reverse_rails="none" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer79"
      inkscape:label="GlyphLayer-/"
-     style="display:inline">
+     style="display:none">
     <path
        id="path2544"
        style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -681,13 +734,14 @@
        inkstitch:satin_column="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
-       inkstitch:zigzag_underlay="False" />
+       inkstitch:zigzag_underlay="False"
+       inkstitch:reverse_rails="none" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer54"
      inkscape:label="GlyphLayer-0"
-     style="display:inline">
+     style="display:none">
     <path
        id="path2474"
        style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -695,16 +749,17 @@
        inkstitch:satin_column="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
-       inkstitch:zigzag_underlay="False" />
+       inkstitch:zigzag_underlay="False"
+       inkstitch:reverse_rails="none" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer55"
      inkscape:label="GlyphLayer-1"
-     style="display:inline">
+     style="display:none">
     <g
        id="g2886"
-       transform="translate(147.184, -132.405)">
+       transform="translate(147.184,-132.405)">
       <path
          id="path2480"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -713,7 +768,8 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          id="path2478"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -722,7 +778,8 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          style="font-variation-settings:normal;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
          d="m -140.99052,180.32539 -4.4958,1.3716"
@@ -735,14 +792,15 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
     </g>
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer56"
      inkscape:label="GlyphLayer-2"
-     style="display:inline">
+     style="display:none">
     <g
        id="g85900">
       <path
@@ -753,7 +811,8 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          id="path2484"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -762,17 +821,18 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
     </g>
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer57"
      inkscape:label="GlyphLayer-3"
-     style="display:inline">
+     style="display:none">
     <g
        id="g85895"
-       transform="translate(-15.301, 0)">
+       transform="translate(-15.301)">
       <path
          id="path2486"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -781,7 +841,8 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          id="path2488"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -789,7 +850,8 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          id="path2490"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -798,18 +860,20 @@
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
          inkstitch:zigzag_underlay="False"
-         sodipodi:nodetypes="cccccccccccccsssssscccssssssc" />
+         sodipodi:nodetypes="cccccccccccccsssssscccssssssc"
+         inkstitch:reverse_rails="none" />
     </g>
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer58"
      inkscape:label="GlyphLayer-4"
-     style="display:inline">
+     style="display:none">
     <g
        id="g4359"
        style="display:inline;stroke:#260605"
-       transform="translate(103.158, -132.405)">
+       transform="translate(103.158,-132.405)"
+       >
       <path
          id="path2498"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -818,7 +882,8 @@
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
          inkstitch:zigzag_underlay="False"
-         sodipodi:nodetypes="cccscccsc" />
+         sodipodi:nodetypes="cccscccsc"
+         inkstitch:reverse_rails="none" />
       <path
          id="path2496"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -827,7 +892,8 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          id="path2494"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -836,7 +902,8 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          id="path2492"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -845,17 +912,18 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
     </g>
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer59"
      inkscape:label="GlyphLayer-5"
-     style="display:inline">
+     style="display:none">
     <g
        id="g5043"
-       transform="translate(86.3968, -132.405)"
+       transform="translate(86.3968,-132.405)"
        style="display:inline">
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
@@ -868,7 +936,8 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          id="path2502"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -877,14 +946,15 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
     </g>
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer60"
      inkscape:label="GlyphLayer-6"
-     style="display:inline">
+     style="display:none">
     <path
        id="path2504"
        style="display:inline;fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -893,16 +963,17 @@
        inkstitch:satin_column="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
-       inkstitch:zigzag_underlay="False" />
+       inkstitch:zigzag_underlay="False"
+       inkstitch:reverse_rails="none" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer61"
      inkscape:label="GlyphLayer-7"
-     style="display:inline">
+     style="display:none">
     <g
        id="g7132"
-       transform="translate(55.6325, -132.405)"
+       transform="translate(55.6325,-132.405)"
        style="display:inline">
       <path
          id="path2506"
@@ -912,7 +983,8 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          id="path2508"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -921,7 +993,8 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
          d="m -48.925442,173.61979 -5.1816,1.8542"
@@ -933,7 +1006,8 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
          d="m -49.974026,173.73249 8.160584,0.82707"
@@ -945,7 +1019,8 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          id="path2512"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -954,17 +1029,18 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
     </g>
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer62"
      inkscape:label="GlyphLayer-8"
-     style="display:inline">
+     style="display:none">
     <g
        id="g7136"
-       transform="translate(41.0871, -132.405)"
+       transform="translate(41.0871,-132.405)"
        style="display:inline">
       <path
          id="path2516"
@@ -974,7 +1050,8 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          id="path2514"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -983,14 +1060,15 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
     </g>
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer63"
      inkscape:label="GlyphLayer-9"
-     style="display:inline">
+     style="display:none">
     <path
        id="path2518"
        style="display:inline;fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -999,16 +1077,17 @@
        inkstitch:satin_column="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
-       inkstitch:zigzag_underlay="False" />
+       inkstitch:zigzag_underlay="False"
+       inkstitch:reverse_rails="none" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer80"
      inkscape:label="GlyphLayer-:"
-     style="display:inline">
+     style="display:none">
     <g
        id="g20685"
-       transform="translate(-302.033, -132.376)">
+       transform="translate(-302.033,-132.376)">
       <path
          id="path2638"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1017,7 +1096,8 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          id="path2640"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1026,18 +1106,20 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
     </g>
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer81"
      inkscape:label="GlyphLayer-;"
-     style="display:inline">
+     style="display:none">
     <g
        id="g7144"
        style="stroke:#260605"
-       transform="translate(-46.3988, -132.376)">
+       transform="translate(-46.3988,-132.376)"
+       >
       <path
          id="path2534"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1046,7 +1128,8 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          id="path2536"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1055,14 +1138,15 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
     </g>
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer82"
      inkscape:label="GlyphLayer-&lt;"
-     style="display:inline">
+     style="display:none">
     <path
        id="path2646"
        style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1071,17 +1155,19 @@
        inkstitch:satin_column="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
-       inkstitch:zigzag_underlay="False" />
+       inkstitch:zigzag_underlay="False"
+       inkstitch:reverse_rails="none" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer83"
      inkscape:label="GlyphLayer-="
-     style="display:inline">
+     style="display:none">
     <g
        id="g7140"
        style="stroke:#260605"
-       transform="translate(-3.47506, -132.376)">
+       transform="translate(-3.47506,-132.376)"
+       >
       <path
          id="path2524"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1090,7 +1176,8 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          id="path2526"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1099,14 +1186,15 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
     </g>
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer84"
      inkscape:label="GlyphLayer-&gt;"
-     style="display:inline">
+     style="display:none">
     <path
        id="path2648"
        style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1115,16 +1203,17 @@
        inkstitch:satin_column="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
-       inkstitch:zigzag_underlay="False" />
+       inkstitch:zigzag_underlay="False"
+       inkstitch:reverse_rails="none" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer85"
      inkscape:label="GlyphLayer-?"
-     style="display:inline">
+     style="display:none">
     <g
        id="g20693"
-       transform="translate(-341.677, -132.376)">
+       transform="translate(-341.677,-132.376)">
       <path
          id="path2650"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1133,7 +1222,8 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          id="path2652"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1142,17 +1232,18 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
     </g>
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer86"
      inkscape:label="GlyphLayer-@"
-     style="display:inline">
+     style="display:none">
     <g
        id="g7163"
-       transform="translate(-97.1195, -132.376)">
+       transform="translate(-97.1195,-132.376)">
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
          d="m 98.891181,174.73257 c 2.467999,-4.85296 5.186529,-10.04075 10.589989,-8.67696 7.94223,2.00456 6.73425,7.51417 4.47914,11.34096 -1.93853,3.28958 -3.93917,-3.94548 -5.5387,-7.78998"
@@ -1165,7 +1256,8 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          id="path2554"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1174,17 +1266,18 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
     </g>
   </g>
   <g
      inkscape:label="GlyphLayer-A"
      inkscape:groupmode="layer"
      id="layer1"
-     style="display:inline">
+     style="display:none">
     <g
        id="g4770"
-       transform="translate(96.0981, -77.4)">
+       transform="translate(96.0981,-77.4)">
       <path
          id="path2236"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.4px;line-height:1.25;font-family:Dinomouse;-inkscape-font-specification:'Dinomouse, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-variation-settings:normal;letter-spacing:0px;word-spacing:0px;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -1194,7 +1287,8 @@
          inkstitch:pull_compensation_mm="0"
          inkstitch:contour_underlay="True"
          inkstitch:center_walk_underlay="False"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          style="fill:none;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1"
          d="m -90.605532,119.59757 -3.4798,8.636"
@@ -1209,17 +1303,18 @@
          inkstitch:center_walk_underlay="False"
          inkstitch:zigzag_underlay="False"
          inkstitch:pull_compensation_mm="0"
-         sodipodi:nodetypes="cccccccccccscccscccccccccccsccccccc" />
+         sodipodi:nodetypes="cccccccccccscccscccccccccccsccccccc"
+         inkstitch:reverse_rails="none" />
     </g>
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer3"
      inkscape:label="GlyphLayer-B"
-     style="display:inline">
+     style="display:none">
     <g
        id="g5196"
-       transform="translate(80.4243, -77.4)">
+       transform="translate(80.4243,-77.4)">
       <path
          id="path2242"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.4px;line-height:1.25;font-family:Dinomouse;-inkscape-font-specification:'Dinomouse, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-variation-settings:normal;letter-spacing:0px;word-spacing:0px;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -1229,7 +1324,8 @@
          inkstitch:contour_underlay="True"
          inkstitch:pull_compensation_mm="0"
          inkstitch:center_walk_underlay="False"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
          d="M -77.388216,121.13859 -77.566,118.548"
@@ -1244,7 +1340,8 @@
          inkstitch:contour_underlay="True"
          inkstitch:pull_compensation_mm="0"
          inkstitch:center_walk_underlay="False"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
          d="m -77.9216,113.696 -1.752616,-1.168"
@@ -1259,7 +1356,8 @@
          inkstitch:contour_underlay="True"
          inkstitch:pull_compensation_mm="0"
          inkstitch:center_walk_underlay="False"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
          d="m -75.0117,118.501 -3.875116,1.44379"
@@ -1273,14 +1371,15 @@
          sodipodi:nodetypes="ccccccccccccccccsscccsccssccsc"
          inkstitch:pull_compensation_mm="0"
          inkstitch:center_walk_underlay="False"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
     </g>
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer4"
      inkscape:label="GlyphLayer-C"
-     style="display:inline">
+     style="display:none">
     <path
        id="path2252"
        style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1289,16 +1388,17 @@
        inkstitch:contour_underlay="True"
        inkstitch:pull_compensation_mm="0"
        inkstitch:center_walk_underlay="False"
-       inkstitch:zigzag_underlay="False" />
+       inkstitch:zigzag_underlay="False"
+       inkstitch:reverse_rails="none" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer5"
      inkscape:label="GlyphLayer-D"
-     style="display:inline">
+     style="display:none">
     <g
        id="g5201"
-       transform="translate(51.1068, -77.4)">
+       transform="translate(51.1068,-77.4)">
       <path
          id="path2254"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1307,7 +1407,8 @@
          inkstitch:contour_underlay="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:zigzag_underlay="False"
-         inkstitch:pull_compensation_mm="0" />
+         inkstitch:pull_compensation_mm="0"
+         inkstitch:reverse_rails="none" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
          d="m -47.94433,113.56943 -2.271663,-0.72861"
@@ -1320,17 +1421,18 @@
          inkstitch:contour_underlay="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:zigzag_underlay="False"
-         inkstitch:pull_compensation_mm="0" />
+         inkstitch:pull_compensation_mm="0"
+         inkstitch:reverse_rails="none" />
     </g>
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer6"
      inkscape:label="GlyphLayer-E"
-     style="display:inline">
+     style="display:none">
     <g
        id="g5207"
-       transform="translate(34.6569, -77.4)">
+       transform="translate(34.6569,-77.4)">
       <path
          id="path2260"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1339,7 +1441,8 @@
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
          inkstitch:zigzag_underlay="False"
-         inkstitch:pull_compensation_mm="0" />
+         inkstitch:pull_compensation_mm="0"
+         inkstitch:reverse_rails="none" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
          d="m -30.125566,118.97959 -0.626489,-0.53824 -0.824895,-4.63557 11.859627,-1.53707"
@@ -1349,23 +1452,25 @@
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          d="m -33.341685,118.41495 3.555344,-0.32552 m 10.069018,-5.82072 c -0.126761,-0.5642 -0.626271,-0.95992 -1.238844,-0.95992 -0.5334,0 -1.1938,0.2286 -1.7526,0.3048 h -0.0254 c -1.6256,0.2286 -2.9464,0.2286 -4.5974,0.2286 -1.7526,0 -3.5306,-0.1524 -5.2832,-0.1524 -0.508,0 -1.0922,0.5588 -1.143,1.0414 -0.0762,0.1778 -0.127,0.3556 -0.127,0.5588 0,0.1016 0.0254,0.2032 0.0508,0.2794 0.583342,1.91206 0.990949,3.71042 1.209633,5.57971 m 1.890149,-4.60465 -2.983037,0.27404 m 2.978103,-0.4169 -3.078359,-2.22852 m 3.856882,2.54583 -0.428347,-3.33259 m 8.828651,2.81551 -0.495918,-2.99928 m 2.338887,1.06617 c 0.02041,0.0908 0.03116,0.18605 0.03116,0.28468 0,0.5588 -0.3556,1.0414 -0.9144,1.1938 -1.8288,0.4826 -3.8354,0.5588 -5.7658,0.5588 h -1.4478 c -1.0414,0 -2.1336,0 -3.2004,-0.0254 0.4318,1.4986 0.7112,3.0988 0.889,4.699"
          inkstitch:satin_column="True"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:reverse_rails="none" />
       <path
          id="path2262"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          d="m -20.827219,125.00585 0.276809,2.89663 m -9.287822,-2.27414 0.02358,2.71907 m -0.190981,-2.64855 -2.681177,2.27942 m 2.683002,-2.4582 -2.727854,0.11603 m -0.203486,-5.53571 3.132252,-0.2059 m -0.322667,-0.91491 0.1524,2.4892 c 0,1.4478 -0.0254,2.8956 -0.1778,4.3434 2.286,-0.0762 4.5466,-0.1524 6.8326,-0.3556 0.8128,-0.0762 1.6002,-0.2032 2.413,-0.2032 0.6604,0 1.2446,0.5842 1.2446,1.2446 m -12.963571,-7.34889 c 0.124108,1.06087 0.187367,2.14458 0.187367,3.28489 0,1.2192 -0.127,2.4384 -0.2286,3.6576 -0.0254,0.3302 -0.1524,0.6604 -0.1524,0.9906 0,0.6604 0.6096,1.2446 1.27,1.2446 1.3716,0 10.541,-0.381 11.1506,-0.6858 0.4064,-0.2032 0.7366,-0.6604 0.7366,-1.143"
          inkstitch:satin_column="True"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:reverse_rails="none" />
     </g>
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer7"
      inkscape:label="GlyphLayer-F"
-     style="display:inline">
+     style="display:none">
     <g
        id="g5216"
-       transform="translate(18.6509, -77.4)">
+       transform="translate(18.6509,-77.4)">
       <path
          id="path2272"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1375,7 +1480,8 @@
          inkstitch:contour_underlay="True"
          inkstitch:pull_compensation_mm="0"
          inkstitch:center_walk_underlay="False"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
          d="m -14.024346,121.46879 7.6707993,-1.5748"
@@ -1385,7 +1491,8 @@
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          d="m -9.7075116,118.25764 0.130784,3.44829 m 2.1977173,-3.50906 0.3793033,3.00936 m -5.023825,-2.71956 0.130784,3.21926 m 5.5392014,-1.81194 c 0,-0.6604 -0.4318,-1.4224 -1.1938,-1.4224 h -0.1016 c -2.3622004,0 -4.2925994,0.3048 -6.4261994,0.3302 m 7.7215994,1.0922 c 0,0.4572 -0.4064,0.9398 -0.8128,1.0922 -0.8889999,0.3556 -5.6387994,0.4826 -6.8579994,0.4826"
          inkstitch:satin_column="True"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:reverse_rails="none" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
          d="m -14.024346,121.46879 -3.4798,-1.4478"
@@ -1396,7 +1503,8 @@
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          d="m -17.504146,120.02099 c 0,0.7112 0.3556,1.0922 0.8382,1.27 l 2.6416,0.1778 m -3.4798,-1.4478 c 0,-0.4572 0.381,-0.889 0.8128,-1.0922 l 2.6162,-0.127 m -2.99462,2.75674 -0.03996,-2.78979"
          inkstitch:satin_column="True"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:reverse_rails="none" />
       <path
          id="path2268"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1406,7 +1514,8 @@
          inkstitch:contour_underlay="True"
          inkstitch:pull_compensation_mm="0"
          inkstitch:center_walk_underlay="False"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          id="path2266"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1416,18 +1525,20 @@
          inkstitch:contour_underlay="True"
          inkstitch:pull_compensation_mm="0"
          inkstitch:center_walk_underlay="False"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
     </g>
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer8"
      inkscape:label="GlyphLayer-G"
-     style="display:inline">
+     style="display:none">
     <g
        id="g5220"
        style="stroke:#260605"
-       transform="translate(2.60549, -77.4)">
+       transform="translate(2.60549,-77.4)"
+       >
       <path
          id="path2278"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1437,7 +1548,8 @@
          inkstitch:pull_compensation_mm="0"
          inkstitch:center_walk_underlay="False"
          inkstitch:zigzag_underlay="False"
-         sodipodi:nodetypes="cccccccccccccscsscssccsssscssc" />
+         sodipodi:nodetypes="cccccccccccccscsscssccsssscssc"
+         inkstitch:reverse_rails="none" />
       <path
          id="path2276"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1447,18 +1559,20 @@
          inkstitch:contour_underlay="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:zigzag_underlay="False"
-         sodipodi:nodetypes="cccccccsssccccsc" />
+         sodipodi:nodetypes="cccccccsssccccsc"
+         inkstitch:reverse_rails="none" />
     </g>
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer9"
      inkscape:label="GlyphLayer-H"
-     style="display:inline">
+     style="display:none">
     <g
        id="g5229"
        style="stroke:#260605"
-       transform="translate(-12.7424, -77.4)">
+       transform="translate(-12.7424,-77.4)"
+       >
       <path
          id="path2282"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1468,7 +1582,8 @@
          inkstitch:contour_underlay="True"
          inkstitch:pull_compensation_mm="0"
          inkstitch:center_walk_underlay="False"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
          d="m 14.053366,119.13199 1.6764,9.2456"
@@ -1482,13 +1597,15 @@
          inkstitch:contour_underlay="True"
          inkstitch:pull_compensation_mm="0"
          inkstitch:center_walk_underlay="False"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          id="path12149"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          d="m 23.248308,117.64297 0.102177,3.60011 m -3.564231,-3.18752 0.09705,3.34163 m -5.38028,-2.453 -0.0061,2.70686 m -1.103958,-1.47766 c 0,-0.508 0.254,-0.8128 0.6604,-1.0414 l 2.8448,-0.4826 c 0.1778,-0.0254 0.3556,-0.0254 0.508,-0.0508 l 6.6294,-0.635 m -10.6426,2.2098 c 0,0.4572 0.254,0.9652 0.6858,1.27 l 2.8448,0.0254 6.731,-0.6604 c 0.127,0 0.2794,0 0.4572,-0.0254"
          inkstitch:satin_column="True"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:reverse_rails="none" />
       <path
          id="path2288"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1498,7 +1615,8 @@
          inkstitch:contour_underlay="True"
          inkstitch:pull_compensation_mm="0"
          inkstitch:center_walk_underlay="False"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          id="path2290"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1508,29 +1626,33 @@
          inkstitch:contour_underlay="True"
          inkstitch:pull_compensation_mm="0"
          inkstitch:center_walk_underlay="False"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          id="path2286"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          d="m 26.626153,117.76019 0.0493,2.90506 m -2.639887,-2.70166 2.8194,-0.0508 c 0.4826,0.254 0.8128,0.8382 0.8128,1.3462 m -3.556,1.524 2.8194,-0.4572 c 0.4318,-0.2032 0.7366,-0.5334 0.7366,-1.0668"
          inkstitch:satin_column="True"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:reverse_rails="none" />
     </g>
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer10"
      inkscape:label="GlyphLayer-I"
-     style="display:inline">
+     style="display:none">
     <g
        id="g5237"
        style="stroke:#260605"
-       transform="translate(-28.3837, -77.4)">
+       transform="translate(-28.3837,-77.4)"
+       >
       <path
          id="path2065"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          d="m 29.945126,110.58701 0.247488,2.82272 m 0.950771,-3.05508 0.227846,3.15921 m -1.745285,-1.59547 c 0,-0.635 0.7112,-1.1176 1.2954,-1.1684 0.293607,-0.0245 0.590042,-0.0499 0.888397,-0.075 m -2.183797,1.24336 c 0,0.6096 0.4826,1.397 1.1938,1.397 0.3302,0 0.6604,0 1.016,-0.0254"
-         inkstitch:satin_column="True" />
+         inkstitch:satin_column="True"
+         inkstitch:reverse_rails="none" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
          d="m 31.835746,113.28995 4.9276,-1.4224"
@@ -1541,7 +1663,8 @@
          d="m 33.016364,113.39105 -0.116472,-2.93303 m 3.863454,1.40953 c 0,-0.635 -0.4572,-1.397 -1.1684,-1.397 -1.2509,0 -2.534911,0.0993 -3.785203,0.20444 m 4.953603,1.19256 c 0,0.6858 -0.6858,1.1176 -1.2954,1.1684 l -0.9144,0.0762 -2.7178,0.1778"
          sodipodi:nodetypes="cccsccscc"
          inkstitch:satin_column="True"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:reverse_rails="none" />
       <path
          id="path2296"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1551,7 +1674,8 @@
          inkstitch:contour_underlay="True"
          inkstitch:pull_compensation_mm="0"
          inkstitch:center_walk_underlay="False"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
          d="m 34.426546,125.65979 -5.2578,1.4478"
@@ -1565,25 +1689,28 @@
          inkstitch:contour_underlay="True"
          inkstitch:pull_compensation_mm="0"
          inkstitch:center_walk_underlay="False"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
     </g>
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer11"
      inkscape:label="GlyphLayer-J"
-     style="display:inline">
+     style="display:none">
     <g
        id="g5243"
        style="stroke:#260605"
-       transform="translate(-37.7864, -77.4)">
+       transform="translate(-37.7864,-77.4)"
+       >
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
          d="m 45.527534,113.31539 -3.1496,-1.3462"
          id="path3915" />
       <g
          id="g5187"
-         style="stroke:#260605">
+         style="stroke:#260605"
+         >
         <path
            id="path2304"
            style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1592,7 +1719,8 @@
            inkstitch:contour_underlay="True"
            inkstitch:pull_compensation_mm="0"
            inkstitch:center_walk_underlay="False"
-           inkstitch:zigzag_underlay="False" />
+           inkstitch:zigzag_underlay="False"
+           inkstitch:reverse_rails="none" />
         <path
            id="path2302"
            style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1601,7 +1729,8 @@
            inkstitch:contour_underlay="True"
            inkstitch:pull_compensation_mm="0"
            inkstitch:center_walk_underlay="False"
-           inkstitch:zigzag_underlay="False" />
+           inkstitch:zigzag_underlay="False"
+           inkstitch:reverse_rails="none" />
       </g>
     </g>
   </g>
@@ -1609,11 +1738,12 @@
      inkscape:groupmode="layer"
      id="layer12"
      inkscape:label="GlyphLayer-K"
-     style="display:inline">
+     style="display:none">
     <g
        id="g5183"
        style="stroke:#260605"
-       transform="translate(-51.6795, -77.4)">
+       transform="translate(-51.6795,-77.4)"
+       >
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
          d="m 55.610545,118.75099 3.29329,0.56224 6.673634,8.66376"
@@ -1627,7 +1757,8 @@
          inkstitch:contour_underlay="True"
          inkstitch:pull_compensation_mm="0"
          inkstitch:center_walk_underlay="False"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
          d="M 59.826945,118.47159 64.71023,111.1679"
@@ -1641,7 +1772,8 @@
          inkstitch:contour_underlay="True"
          inkstitch:pull_compensation_mm="0"
          inkstitch:center_walk_underlay="False"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
          d="m 55.610545,118.75099 -1.7272,-8.2042"
@@ -1654,14 +1786,15 @@
          inkstitch:contour_underlay="True"
          inkstitch:pull_compensation_mm="0"
          inkstitch:center_walk_underlay="False"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
     </g>
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer13"
      inkscape:label="GlyphLayer-L"
-     style="display:inline">
+     style="display:none">
     <path
        id="path2316"
        style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1670,17 +1803,19 @@
        inkstitch:contour_underlay="True"
        inkstitch:pull_compensation_mm="0"
        inkstitch:center_walk_underlay="False"
-       inkstitch:zigzag_underlay="False" />
+       inkstitch:zigzag_underlay="False"
+       inkstitch:reverse_rails="none" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer14"
      inkscape:label="GlyphLayer-M"
-     style="display:inline">
+     style="display:none">
     <g
        id="g2325"
-       transform="translate(-115.128, -53.3867)"
-       style="stroke:#260605">
+       transform="translate(-115.128,-53.3867)"
+       style="stroke:#260605"
+       >
       <path
          id="path2319"
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
@@ -1690,7 +1825,8 @@
          inkstitch:contour_underlay="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:zigzag_underlay="False"
-         inkstitch:pull_compensation_mm="0" />
+         inkstitch:pull_compensation_mm="0"
+         inkstitch:reverse_rails="none" />
       <path
          id="path2321"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1699,7 +1835,8 @@
          inkstitch:contour_underlay="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:zigzag_underlay="False"
-         inkstitch:pull_compensation_mm="0" />
+         inkstitch:pull_compensation_mm="0"
+         inkstitch:reverse_rails="none" />
       <path
          id="path2323"
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
@@ -1709,17 +1846,18 @@
          inkstitch:contour_underlay="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:zigzag_underlay="False"
-         inkstitch:pull_compensation_mm="0" />
+         inkstitch:pull_compensation_mm="0"
+         inkstitch:reverse_rails="none" />
     </g>
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer15"
      inkscape:label="GlyphLayer-N"
-     style="display:inline">
+     style="display:none">
     <g
        id="g15993"
-       transform="translate(-96.3451, -77.4)">
+       transform="translate(-96.3451,-77.4)">
       <path
          id="path5900"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1727,7 +1865,8 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          id="path7148"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1735,7 +1874,8 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          id="path2327"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1745,7 +1885,8 @@
          inkstitch:center_walk_underlay="False"
          inkstitch:zigzag_underlay="False"
          inkstitch:pull_compensation_mm="0"
-         sodipodi:nodetypes="ccccccccccccc" />
+         sodipodi:nodetypes="ccccccccccccc"
+         inkstitch:reverse_rails="none" />
       <path
          id="path2331"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1754,14 +1895,15 @@
          inkstitch:contour_underlay="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:zigzag_underlay="False"
-         inkstitch:pull_compensation_mm="0" />
+         inkstitch:pull_compensation_mm="0"
+         inkstitch:reverse_rails="none" />
     </g>
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer16"
      inkscape:label="GlyphLayer-O"
-     style="display:inline">
+     style="display:none">
     <path
        id="path2335"
        style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1771,16 +1913,17 @@
        inkstitch:contour_underlay="True"
        inkstitch:pull_compensation_mm="0"
        inkstitch:center_walk_underlay="False"
-       inkstitch:zigzag_underlay="False" />
+       inkstitch:zigzag_underlay="False"
+       inkstitch:reverse_rails="none" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer17"
      inkscape:label="GlyphLayer-P"
-     style="display:inline">
+     style="display:none">
     <g
        id="g9652"
-       transform="translate(-126, -77.4)">
+       transform="translate(-126,-77.4)">
       <path
          id="path2337"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1789,7 +1932,8 @@
          inkstitch:contour_underlay="True"
          inkstitch:pull_compensation_mm="0"
          inkstitch:center_walk_underlay="False"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          id="path2339"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1799,7 +1943,8 @@
          inkstitch:contour_underlay="True"
          inkstitch:pull_compensation_mm="0"
          inkstitch:center_walk_underlay="False"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
          d="m 129.92657,112.98519 -3.08956,0.0323"
@@ -1812,17 +1957,18 @@
          inkstitch:contour_underlay="True"
          inkstitch:pull_compensation_mm="0"
          inkstitch:center_walk_underlay="False"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
     </g>
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer18"
      inkscape:label="GlyphLayer-Q"
-     style="display:inline">
+     style="display:none">
     <g
        id="g15999"
-       transform="translate(-141.044, -77.4)">
+       transform="translate(-141.044,-77.4)">
       <path
          id="path2345"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1831,7 +1977,8 @@
          inkstitch:contour_underlay="True"
          inkstitch:pull_compensation_mm="0"
          inkstitch:center_walk_underlay="False"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
          d="m 150.012,125.457 -0.55674,-3.32273"
@@ -1845,14 +1992,15 @@
          inkstitch:contour_underlay="True"
          inkstitch:pull_compensation_mm="0"
          inkstitch:center_walk_underlay="False"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
     </g>
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer19"
      inkscape:label="GlyphLayer-R"
-     style="display:inline">
+     style="display:none">
     <g
        id="g234645">
       <path
@@ -1864,7 +2012,8 @@
          inkstitch:pull_compensation_mm="0"
          inkstitch:contour_underlay="True"
          inkstitch:center_walk_underlay="False"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          style="font-variation-settings:normal;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
          d="m 6.56455,43.992604 3.62504,-1.03527 4.5697,7.5427"
@@ -1878,7 +2027,8 @@
          inkstitch:pull_compensation_mm="0"
          inkstitch:contour_underlay="True"
          inkstitch:center_walk_underlay="False"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          style="font-variation-settings:normal;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
          d="m 12.25415,42.976644 -5.6134,-1.6764"
@@ -1893,7 +2043,8 @@
          inkstitch:pull_compensation_mm="0"
          inkstitch:contour_underlay="True"
          inkstitch:center_walk_underlay="False"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          style="font-variation-settings:normal;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
          d="m 6.25975,35.864644 -1.1684,-2.5146"
@@ -1907,7 +2058,8 @@
          inkstitch:pull_compensation_mm="0"
          inkstitch:contour_underlay="True"
          inkstitch:center_walk_underlay="False"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
          d="m 3.59275,33.756434 -2.66977,2.97363"
@@ -1921,14 +2073,15 @@
          inkstitch:contour_underlay="True"
          sodipodi:nodetypes="cccccccccccsccssccccsccssccccc"
          inkstitch:center_walk_underlay="False"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
     </g>
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer20"
      inkscape:label="GlyphLayer-S"
-     style="display:inline">
+     style="display:none">
     <path
        id="path2364"
        style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1937,16 +2090,17 @@
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay="False"
-       inkstitch:pull_compensation_mm="0" />
+       inkstitch:pull_compensation_mm="0"
+       inkstitch:reverse_rails="none" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer21"
      inkscape:label="GlyphLayer-T"
-     style="display:inline">
+     style="display:none">
     <g
        id="g16016"
-       transform="translate(-187.774, -77.4)">
+       transform="translate(-187.774,-77.4)">
       <path
          id="path2366"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1955,7 +2109,8 @@
          inkstitch:pull_compensation_mm="0"
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
          d="m 197.15126,114.20439 -1.397,-3.68302"
@@ -1967,7 +2122,8 @@
          inkstitch:satin_column="True"
          inkstitch:contour_underlay="True"
          inkstitch:center_walk_underlay="False"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
          d="m 194.48426,111.33417 -5.93944,0.1151"
@@ -1981,14 +2137,15 @@
          inkstitch:pull_compensation_mm="0"
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
     </g>
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer22"
      inkscape:label="GlyphLayer-U"
-     style="display:inline">
+     style="display:none">
     <path
        id="path2370"
        style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1998,16 +2155,17 @@
        inkstitch:contour_underlay="True"
        inkstitch:pull_compensation_mm="0"
        inkstitch:center_walk_underlay="False"
-       inkstitch:zigzag_underlay="False" />
+       inkstitch:zigzag_underlay="False"
+       inkstitch:reverse_rails="none" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer23"
      inkscape:label="GlyphLayer-V"
-     style="display:inline">
+     style="display:none">
     <g
        id="g12833"
-       transform="translate(-219.006, -77.4)">
+       transform="translate(-219.006,-77.4)">
       <path
          id="path2372"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2017,7 +2175,8 @@
          inkstitch:contour_underlay="True"
          inkstitch:pull_compensation_mm="0"
          inkstitch:center_walk_underlay="False"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          id="path2374"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2027,17 +2186,18 @@
          inkstitch:contour_underlay="True"
          inkstitch:pull_compensation_mm="0"
          inkstitch:center_walk_underlay="False"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
     </g>
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer24"
      inkscape:label="GlyphLayer-W"
-     style="display:inline">
+     style="display:none">
     <g
        id="g16022"
-       transform="translate(-235.516, -77.4)">
+       transform="translate(-235.516,-77.4)">
       <path
          id="path2378"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2047,7 +2207,8 @@
          inkstitch:contour_underlay="True"
          inkstitch:pull_compensation_mm="0"
          inkstitch:center_walk_underlay="False"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          id="path2380"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2057,7 +2218,8 @@
          inkstitch:contour_underlay="True"
          inkstitch:pull_compensation_mm="0"
          inkstitch:center_walk_underlay="False"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          id="path2382"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2066,7 +2228,8 @@
          inkstitch:contour_underlay="True"
          inkstitch:pull_compensation_mm="0"
          inkstitch:center_walk_underlay="False"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          id="path2384"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2075,17 +2238,18 @@
          inkstitch:contour_underlay="True"
          inkstitch:pull_compensation_mm="0"
          inkstitch:center_walk_underlay="False"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
     </g>
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer25"
      inkscape:label="GlyphLayer-X"
-     style="display:inline">
+     style="display:none">
     <g
        id="g16029"
-       transform="translate(-256.088, -77.4)">
+       transform="translate(-256.088,-77.4)">
       <path
          id="path2390"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2095,7 +2259,8 @@
          inkstitch:contour_underlay="True"
          inkstitch:pull_compensation_mm="0"
          inkstitch:center_walk_underlay="False"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
          d="m 260.43178,119.20819 6.15595,-8.44578"
@@ -2109,7 +2274,8 @@
          inkstitch:contour_underlay="True"
          inkstitch:pull_compensation_mm="0"
          inkstitch:center_walk_underlay="False"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
          d="m 261.93038,116.28719 -4.28813,-5.60055"
@@ -2123,17 +2289,18 @@
          inkstitch:contour_underlay="True"
          inkstitch:pull_compensation_mm="0"
          inkstitch:center_walk_underlay="False"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
     </g>
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer26"
      inkscape:label="GlyphLayer-Y"
-     style="display:inline">
+     style="display:none">
     <g
        id="g16034"
-       transform="translate(-268.113, -77.4)">
+       transform="translate(-268.113,-77.4)">
       <path
          id="path2398"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2142,7 +2309,8 @@
          inkstitch:contour_underlay="True"
          inkstitch:pull_compensation_mm="0"
          inkstitch:center_walk_underlay="False"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
          d="m 273.70725,119.41139 c -3.01154,-2.33457 -3.18536,-5.88305 -3.3782,-9.4234"
@@ -2156,17 +2324,18 @@
          inkstitch:contour_underlay="True"
          inkstitch:pull_compensation_mm="0"
          inkstitch:center_walk_underlay="False"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
     </g>
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer27"
      inkscape:label="GlyphLayer-Z"
-     style="display:inline">
+     style="display:none">
     <g
        id="g15987"
-       transform="translate(-281.477, -77.4)">
+       transform="translate(-281.477,-77.4)">
       <path
          id="path2402"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2175,7 +2344,8 @@
          inkstitch:contour_underlay="True"
          inkstitch:pull_compensation_mm="0"
          inkstitch:center_walk_underlay="False"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          id="path2404"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2185,14 +2355,15 @@
          inkstitch:contour_underlay="True"
          inkstitch:pull_compensation_mm="0"
          inkstitch:center_walk_underlay="False"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
     </g>
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer87"
      inkscape:label="GlyphLayer-["
-     style="display:inline">
+     style="display:none">
     <path
        id="path2528"
        style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2201,13 +2372,14 @@
        inkstitch:satin_column="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
-       inkstitch:zigzag_underlay="False" />
+       inkstitch:zigzag_underlay="False"
+       inkstitch:reverse_rails="none" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer88"
      inkscape:label="GlyphLayer-\"
-     style="display:inline">
+     style="display:none">
     <path
        id="path2532"
        style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2216,13 +2388,14 @@
        inkstitch:satin_column="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
-       inkstitch:zigzag_underlay="False" />
+       inkstitch:zigzag_underlay="False"
+       inkstitch:reverse_rails="none" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer89"
      inkscape:label="GlyphLayer-]"
-     style="display:inline">
+     style="display:none">
     <path
        id="path2530"
        style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2231,13 +2404,14 @@
        inkstitch:satin_column="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
-       inkstitch:zigzag_underlay="False" />
+       inkstitch:zigzag_underlay="False"
+       inkstitch:reverse_rails="none" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer90"
      inkscape:label="GlyphLayer-^"
-     style="display:inline">
+     style="display:none">
     <path
        id="path2599"
        style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
@@ -2245,13 +2419,14 @@
        inkstitch:satin_column="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
-       inkstitch:zigzag_underlay="False" />
+       inkstitch:zigzag_underlay="False"
+       inkstitch:reverse_rails="none" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer91"
      inkscape:label="GlyphLayer-_"
-     style="display:inline">
+     style="display:none">
     <path
        id="path2624"
        style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2260,13 +2435,14 @@
        inkstitch:satin_column="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
-       inkstitch:zigzag_underlay="False" />
+       inkstitch:zigzag_underlay="False"
+       inkstitch:reverse_rails="none" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer92"
      inkscape:label="GlyphLayer-`"
-     style="display:inline">
+     style="display:none">
     <path
        id="path2520"
        style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2274,17 +2450,19 @@
        inkstitch:satin_column="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
-       inkstitch:zigzag_underlay="False" />
+       inkstitch:zigzag_underlay="False"
+       inkstitch:reverse_rails="none" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer28"
      inkscape:label="GlyphLayer-a"
-     style="display:inline">
+     style="display:none">
     <g
        id="g16040"
        style="stroke:#260605"
-       transform="translate(68.2213, -107.06)">
+       transform="translate(68.2213,-107.06)"
+       >
       <path
          id="path2186"
          style="fill:none;stroke:#260605;stroke-width:0.264584px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2293,7 +2471,8 @@
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
          inkstitch:zigzag_underlay="False"
-         inkstitch:pull_compensation_mm="0.1" />
+         inkstitch:pull_compensation_mm="0.1"
+         inkstitch:reverse_rails="none" />
       <path
          id="path2184"
          style="fill:none;stroke:#260605;stroke-width:0.264584px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2303,18 +2482,20 @@
          inkstitch:contour_underlay="True"
          inkstitch:zigzag_underlay="False"
          inkstitch:pull_compensation_mm="0.1"
-         sodipodi:nodetypes="cccccccccccscscscccccccsc" />
+         sodipodi:nodetypes="cccccccccccscscscccccccsc"
+         inkstitch:reverse_rails="none" />
     </g>
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer29"
      inkscape:label="GlyphLayer-b"
-     style="display:inline">
+     style="display:none">
     <g
        id="g16046"
        style="stroke:#260605"
-       transform="translate(57.0667, -107.06)">
+       transform="translate(57.0667,-107.06)"
+       >
       <path
          id="path2190"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2323,7 +2504,8 @@
          inkstitch:contour_underlay="True"
          inkstitch:pull_compensation_mm="0.1"
          inkstitch:center_walk_underlay="False"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          id="path2192"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2332,14 +2514,15 @@
          inkstitch:contour_underlay="True"
          inkstitch:pull_compensation_mm="0.1"
          inkstitch:center_walk_underlay="False"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
     </g>
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer30"
      inkscape:label="GlyphLayer-c"
-     style="display:inline">
+     style="display:none">
     <path
        id="path2196"
        style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2349,17 +2532,19 @@
        inkstitch:contour_underlay="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:pull_compensation_mm="0.1"
-       sodipodi:nodetypes="cccccccccccsssssccsssscsc" />
+       sodipodi:nodetypes="cccccccccccsssssccsssscsc"
+       inkstitch:reverse_rails="none" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer31"
      inkscape:label="GlyphLayer-d"
-     style="display:inline">
+     style="display:none">
     <g
        id="g16686"
        style="stroke:#260605"
-       transform="translate(31.52, -107.06)">
+       transform="translate(31.52,-107.06)"
+       >
       <path
          id="path2198"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2369,7 +2554,8 @@
          inkstitch:contour_underlay="True"
          inkstitch:pull_compensation_mm="0.1"
          inkstitch:center_walk_underlay="False"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          id="path2200"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2379,14 +2565,15 @@
          inkstitch:contour_underlay="True"
          inkstitch:pull_compensation_mm="0.1"
          inkstitch:center_walk_underlay="False"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
     </g>
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer32"
      inkscape:label="GlyphLayer-e"
-     style="display:inline">
+     style="display:none">
     <path
        id="path2206"
        style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2395,17 +2582,19 @@
        inkstitch:contour_underlay="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:center_walk_underlay="False"
-       inkstitch:zigzag_underlay="False" />
+       inkstitch:zigzag_underlay="False"
+       inkstitch:reverse_rails="none" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer33"
      inkscape:label="GlyphLayer-f"
-     style="display:inline">
+     style="display:none">
     <g
        id="g17342"
        style="stroke:#260605"
-       transform="translate(5.64096, -107.06)">
+       transform="translate(5.64096,-107.06)"
+       >
       <path
          id="path2412"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2414,7 +2603,8 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
          d="m 0.89083765,149.89623 c -1.87044266,-2.24359 -0.89389479,-9.491 2.84620875,-9.84608 2.0270852,-0.19245 3.4994408,1.90299 3.3005912,4.68988"
@@ -2428,7 +2618,8 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
          d="m -2.0555623,147.28003 -2.7177998,1.5494"
@@ -2441,18 +2632,20 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
     </g>
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer34"
      inkscape:label="GlyphLayer-g"
-     style="display:inline">
+     style="display:none">
     <g
        id="g18625"
        style="stroke:#260605"
-       transform="translate(-6.64224, -107.06)">
+       transform="translate(-6.64224,-107.06)"
+       >
       <path
          id="path2418"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2461,7 +2654,8 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
          d="m 18.2103,149.917 c 0.283854,-1.17829 0.144549,-2.69306 -0.670559,-4.74521"
@@ -2475,14 +2669,15 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
     </g>
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer35"
      inkscape:label="GlyphLayer-h"
-     style="display:inline">
+     style="display:none">
     <g
        id="g69228">
       <path
@@ -2490,7 +2685,8 @@
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          d="m 2.5927037,31.330167 c 0.7112,0 1.4224,0.6096 1.4224,1.3208 0,0.8128 -0.1524,1.651 -0.2032,2.4638 -0.1016,1.6764 -0.1778,2.667 -0.2032,4.3434 -0.0462,2.70123 0.0986,5.39464 0.508,8.0772 m -1.524,-16.2052 c -0.508,0 -0.9144,0.254 -1.1938,0.7112 -0.40639997,0.6858 -0.60959997,6.5024 -0.60959997,7.8232 0,2.67622 0,5.44808 0.44198997,8.11353 m 2.92051,-15.82501 -3.00917,-0.13591 m 2.90172,8.65878 -3.56070997,0.15659"
          inkstitch:satin_column="True"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:reverse_rails="none" />
       <path
          style="font-variation-settings:normal;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
          d="m 1.2312937,47.978097 1.84401,3.11327"
@@ -2500,7 +2696,8 @@
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          d="m 1.3563937,49.996327 3.40191,-0.74612 m -1.683,1.84116 c -0.635,0 -1.2192,-0.4064 -1.397,-1.0414 -0.18473,-0.68087 -0.33108,-1.37271 -0.44701,-2.07187 m 1.84401,3.11327 c 0.762,0 1.3716,-0.6604 1.3716,-1.4224 0,-0.6604 -0.254,-1.4478 -0.3302,-2.1336"
          inkstitch:satin_column="True"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:reverse_rails="none" />
       <path
          id="path2422"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2509,17 +2706,18 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
     </g>
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer36"
      inkscape:label="GlyphLayer-i"
-     style="display:inline">
+     style="display:none">
     <g
        id="g69232"
-       transform="translate(-12.96, 0)">
+       transform="translate(-12.96)">
       <path
          id="path2208"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2528,7 +2726,8 @@
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
          inkstitch:zigzag_underlay="False"
-         inkstitch:pull_compensation_mm="0.1" />
+         inkstitch:pull_compensation_mm="0.1"
+         inkstitch:reverse_rails="none" />
       <path
          id="path2210"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2537,18 +2736,20 @@
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
          inkstitch:zigzag_underlay="False"
-         inkstitch:pull_compensation_mm="0.1" />
+         inkstitch:pull_compensation_mm="0.1"
+         inkstitch:reverse_rails="none" />
     </g>
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer37"
      inkscape:label="GlyphLayer-j"
-     style="display:inline">
+     style="display:none">
     <g
        id="g20570"
        style="stroke:#260605"
-       transform="translate(-37.4823, -107.06)">
+       transform="translate(-37.4823,-107.06)"
+       >
       <path
          id="path2424"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2557,7 +2758,8 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          id="path2426"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2566,18 +2768,20 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
     </g>
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer38"
      inkscape:label="GlyphLayer-k"
-     style="display:inline">
+     style="display:none">
     <g
        id="g21257"
        style="stroke:#260605"
-       transform="translate(-47.98, -107.06)">
+       transform="translate(-47.98,-107.06)"
+       >
       <path
          style="font-variation-settings:normal;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
          d="m 52.690963,148.34679 6.446319,9.88695"
@@ -2590,7 +2794,8 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          style="font-variation-settings:normal;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
          d="m 55.510363,149.84539 3.9535,-4.94818"
@@ -2603,7 +2808,8 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          style="font-variation-settings:normal;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
          d="M 52.665563,152.20759 49.855969,138.45685"
@@ -2616,14 +2822,15 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
     </g>
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer39"
      inkscape:label="GlyphLayer-l"
-     style="display:inline">
+     style="display:none">
     <path
        id="path2214"
        style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2633,17 +2840,19 @@
        inkstitch:contour_underlay="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:pull_compensation_mm="0.1"
-       sodipodi:nodetypes="ccccccccccccscssccsssssc" />
+       sodipodi:nodetypes="ccccccccccccscssccsssssc"
+       inkstitch:reverse_rails="none" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer40"
      inkscape:label="GlyphLayer-m"
-     style="display:inline">
+     style="display:none">
     <g
        id="g23254"
        style="stroke:#260605"
-       transform="translate(-68.7473, -107.06)">
+       transform="translate(-68.7473,-107.06)"
+       >
       <path
          id="path21264"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2652,7 +2861,8 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
          d="m 69.497971,152.86423 1.340101,5.03285"
@@ -2664,7 +2874,8 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          id="path21286"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2673,7 +2884,8 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
          d="m 77.261822,153.10438 1.374071,4.6149"
@@ -2685,7 +2897,8 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          id="path2216"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2695,18 +2908,20 @@
          inkstitch:contour_underlay="True"
          inkstitch:pull_compensation_mm="0.1"
          inkstitch:center_walk_underlay="False"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
     </g>
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer41"
      inkscape:label="GlyphLayer-n"
-     style="display:inline">
+     style="display:none">
     <g
        id="g25226"
        style="stroke:#260605"
-       transform="translate(-87.9628, -107.06)">
+       transform="translate(-87.9628,-107.06)"
+       >
       <path
          id="path23260"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2715,7 +2930,8 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
          d="m 90.267924,149.64724 -0.1064,8.04675"
@@ -2727,7 +2943,8 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          id="path2436"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2736,14 +2953,15 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
     </g>
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer42"
      inkscape:label="GlyphLayer-o"
-     style="display:inline">
+     style="display:none">
     <path
        id="path2224"
        style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2752,16 +2970,17 @@
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay="False"
-       inkstitch:pull_compensation_mm="0.1" />
+       inkstitch:pull_compensation_mm="0.1"
+       inkstitch:reverse_rails="none" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer43"
      inkscape:label="GlyphLayer-p"
-     style="display:inline">
+     style="display:none">
     <g
        id="g29820"
-       transform="translate(-117.152, -107.06)">
+       transform="translate(-117.152,-107.06)">
       <path
          id="path2230"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2771,7 +2990,8 @@
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
          inkstitch:zigzag_underlay="False"
-         inkstitch:pull_compensation_mm="0.1" />
+         inkstitch:pull_compensation_mm="0.1"
+         inkstitch:reverse_rails="none" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
          d="M 119.81566,157.36368 119.689,154.493"
@@ -2785,7 +3005,8 @@
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
          inkstitch:zigzag_underlay="False"
-         inkstitch:pull_compensation_mm="0.1" />
+         inkstitch:pull_compensation_mm="0.1"
+         inkstitch:reverse_rails="none" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
          d="m 119.358,148.88 0.078,-2.252"
@@ -2795,7 +3016,8 @@
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          d="m 119.099,146.409 3.179,-0.24 m -3.179,-0.29 3.179,-0.24 m -1.548,-0.315 c 0.483,0 0.864,0.203 1.143,0.61 l 0.068,0.506 m -1.211,-1.116 c -0.584,0 -1.092,0.33 -1.321,0.813 l 0.027,0.491"
          inkstitch:satin_column="True"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:reverse_rails="none" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
          d="m 119.436,146.628 -1.52534,0.93128"
@@ -2809,17 +3031,18 @@
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
          inkstitch:zigzag_underlay="False"
-         inkstitch:pull_compensation_mm="0.1" />
+         inkstitch:pull_compensation_mm="0.1"
+         inkstitch:reverse_rails="none" />
     </g>
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer44"
      inkscape:label="GlyphLayer-q"
-     style="display:inline">
+     style="display:none">
     <g
        id="g31810"
-       transform="translate(-130.524, -107.06)">
+       transform="translate(-130.524,-107.06)">
       <path
          id="path2438"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2828,7 +3051,8 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
          d="m 142.49469,151.03661 c 0.4728,-1.12186 0.80684,-2.85966 -0.80092,-4.01062"
@@ -2842,7 +3066,8 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          id="path29824"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2850,17 +3075,18 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
     </g>
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer45"
      inkscape:label="GlyphLayer-r"
-     style="display:inline">
+     style="display:none">
     <g
        id="g33154"
-       transform="translate(-143.932, -107.06)">
+       transform="translate(-143.932,-107.06)">
       <path
          id="path2442"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2868,7 +3094,8 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
          d="m 146.119,148.70552 c -1.46462,-1.52959 -0.13564,-2.8872 -0.0465,-4.32113"
@@ -2881,7 +3108,8 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          id="path2444"
          style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2890,14 +3118,15 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
     </g>
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer46"
      inkscape:label="GlyphLayer-s"
-     style="display:inline">
+     style="display:none">
     <path
        id="path2446"
        style="display:inline;fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2906,16 +3135,17 @@
        inkstitch:satin_column="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
-       inkstitch:zigzag_underlay="False" />
+       inkstitch:zigzag_underlay="False"
+       inkstitch:reverse_rails="none" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer47"
      inkscape:label="GlyphLayer-t"
-     style="display:inline">
+     style="display:none">
     <g
        id="g36481"
-       transform="translate(-166.731, -107.06)"
+       transform="translate(-166.731,-107.06)"
        style="display:inline">
       <path
          id="path33820"
@@ -2924,7 +3154,8 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
          d="m 170.516,143.24139 c 0.4555,13.39476 4.73944,16.14683 6.80715,8.9916"
@@ -2938,7 +3169,8 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
          d="m 170.16,146.289 -2.5904,-1.19341"
@@ -2950,17 +3182,18 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
     </g>
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer48"
      inkscape:label="GlyphLayer-u"
-     style="display:inline">
+     style="display:none">
     <g
        id="g37156"
-       transform="translate(-179.41, -107.06)"
+       transform="translate(-179.41,-107.06)"
        style="display:inline">
       <path
          id="path2454"
@@ -2969,7 +3202,8 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
          d="m 188.70479,146.56879 1.4732,-1.4732"
@@ -2981,14 +3215,15 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
     </g>
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer49"
      inkscape:label="GlyphLayer-v"
-     style="display:inline">
+     style="display:none">
     <path
        id="path2458"
        style="display:inline;fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2996,13 +3231,14 @@
        inkstitch:satin_column="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
-       inkstitch:zigzag_underlay="False" />
+       inkstitch:zigzag_underlay="False"
+       inkstitch:reverse_rails="none" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer50"
      inkscape:label="GlyphLayer-w"
-     style="display:inline">
+     style="display:none">
     <path
        id="path2460"
        style="display:inline;fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -3011,16 +3247,17 @@
        inkstitch:satin_column="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
-       inkstitch:zigzag_underlay="False" />
+       inkstitch:zigzag_underlay="False"
+       inkstitch:reverse_rails="none" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer51"
      inkscape:label="GlyphLayer-x"
-     style="display:inline">
+     style="display:none">
     <g
        id="g38507"
-       transform="translate(-227.209, -107.06)"
+       transform="translate(-227.209,-107.06)"
        style="display:inline">
       <path
          id="path2464"
@@ -3030,7 +3267,8 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
          d="m 232.05662,150.96299 6.75432,-6.2422"
@@ -3043,7 +3281,8 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
          d="m 233.91082,148.70239 -5.461,-4.1656"
@@ -3056,17 +3295,18 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
     </g>
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer52"
      inkscape:label="GlyphLayer-y"
-     style="display:inline">
+     style="display:none">
     <g
        id="g79173"
-       transform="translate(-13.8885, 0)">
+       transform="translate(-13.8885)">
       <path
          id="path2468"
          style="display:inline;fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -3075,7 +3315,8 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
          d="m 23.719128,42.074367 1.4478,-3.3528"
@@ -3089,14 +3330,15 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
     </g>
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer53"
      inkscape:label="GlyphLayer-z"
-     style="display:inline">
+     style="display:none">
     <path
        id="path2472"
        style="display:inline;fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -3105,28 +3347,30 @@
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
        inkstitch:zigzag_underlay="False"
-       sodipodi:nodetypes="cccccccccccccsccsscscsccscssccscc" />
+       sodipodi:nodetypes="cccccccccccccsccsscscsccscssccscc"
+       inkstitch:reverse_rails="none" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer93"
      inkscape:label="GlyphLayer-{"
-     style="display:inline">
+     style="display:none">
     <path
        id="path2632"
        style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 4.4760921,48.631186 0.90654,-3.80018 m -0.90654,3.80018 3.58391,0.14596 m -0.075,3.88498 -3.84495,0.11353 m 3.77595,3.22865 0.069,-3.34218 m 1.643588,3.45155 0.0771,-3.534 m -5.864938,-8.05836 -4.36331002,0.0421 m 4.99861002,-4.15197 0.90654,3.80018 m -0.90654,-3.80018 3.58391,-0.14596 m 0.26146,-4.95122 -3.84495,-0.11353 m 3.77595,-3.22865 0.069,3.34218 m 1.643588,-3.45155 0.0771,3.534 m 1.74124,-1.72182 c 0,0.7112 -0.7112,1.3716 -1.4224,1.3462 -0.482599,-0.0254 -0.584199,0 -1.650997,-0.0254 -1.0668,-0.0254 -1.0922,0.9906 -1.0922,1.7526 v 4.0132 c 0,0.4318 -0.0762,1.7018 -0.5588,2.3622 -0.5588,0.7366 -1.3208,0.5334 -2.921,0.9144 -0.635,0.1524 -0.7112,0.3302 -0.6858,0.508 0.0254,0.2032 0.0254,0.381 0.8636,0.5588 1.778,0.381 2.2352,0.2032 2.8448,0.8128 0.6858,0.7112 0.4826,1.5494 0.4826,2.1336 0,1.6256 -0.381,4.953 0.127,4.953 h 1.3716 1.422397 c 0.7366,0 1.397,0.635 1.397,1.397 m -0.1778,-20.7264 c 0,-0.8382 -0.5588,-1.4732 -1.4224,-1.4732 l -2.311397,0.0254 c -1.2446,0 -1.8542,0.1778 -2.5146,0.7366 -0.6604,0.5588 -0.6858,2.5654 -0.6858,4.699 0,1.7018 0.0254,0.1016 0.0254,3.0988 -0.0254,0.6604 -1.2446,0.635 -2.921,1.4732 -1.06680002,0.5334 -1.39700002,2.0066 -1.39700002,2.3114 0.0254,0.381 0.2286,1.4732 1.21920002,2.159 1.8288,1.27 2.9464,0.3556 2.9464,1.3462 0,0.6604 -0.2286,6.5786 0.3048,7.2136 0.4064,0.508 1.0414,0.5842 1.6002,0.5842 0.2794,0 0.5588,-0.0254 0.762,-0.0254 h 1.7272 0.152398 c 0.2794,0 0.5842,0 0.888999,0.0254 0.9398,0 1.8034,-0.1524 1.8034,-1.4478"
+       d="m 4.4760921,48.631186 0.90654,-3.80018 m -0.90654,3.80018 3.58391,0.14596 m -0.075,3.88498 -3.84495,0.11353 m 3.77595,3.22865 0.069,-3.34218 m 1.643588,3.45155 0.0771,-3.534 m -5.864938,-8.05836 -4.36331002,0.0421 m 4.99861002,-4.15197 0.90654,3.80018 m -0.90654,-3.80018 3.58391,-0.14596 m 0.26146,-4.95122 -3.84495,-0.11353 m 3.77595,-3.22865 0.069,3.34218 m 1.643588,-3.45155 0.0771,3.534 m 1.74124,-1.72182 c 0,0.7112 -0.7112,1.3716 -1.4224,1.3462 -0.4825989,-0.0254 -0.5841989,0 -1.6509969,-0.0254 -1.0668,-0.0254 -1.0922,0.9906 -1.0922,1.7526 v 4.0132 c 0,0.4318 -0.0762,1.7018 -0.5588,2.3622 -0.5588,0.7366 -1.3208,0.5334 -2.921,0.9144 -0.635,0.1524 -0.7112,0.3302 -0.6858,0.508 0.0254,0.2032 0.0254,0.381 0.8636,0.5588 1.778,0.381 2.2352,0.2032 2.8448,0.8128 0.6858,0.7112 0.4826,1.5494 0.4826,2.1336 0,1.6256 -0.381,4.953 0.127,4.953 h 1.3716 1.4223969 c 0.7366,0 1.397,0.635 1.397,1.397 m -0.1778,-20.7264 c 0,-0.8382 -0.5588,-1.4732 -1.4224,-1.4732 l -2.3113969,0.0254 c -1.2446,0 -1.8542,0.1778 -2.5146,0.7366 -0.6604,0.5588 -0.6858,2.5654 -0.6858,4.699 0,1.7018 0.0254,0.1016 0.0254,3.0988 -0.0254,0.6604 -1.2446,0.635 -2.921,1.4732 -1.06680002,0.5334 -1.39700002,2.0066 -1.39700002,2.3114 0.0254,0.381 0.2286,1.4732 1.21920002,2.159 1.8288,1.27 2.9464,0.3556 2.9464,1.3462 0,0.6604 -0.2286,6.5786 0.3048,7.2136 0.4064,0.508 1.0414,0.5842 1.6002,0.5842 0.2794,0 0.5588,-0.0254 0.762,-0.0254 h 1.7272 0.152398 c 0.2794,0 0.5842,0 0.8889989,0.0254 0.9398,0 1.8034,-0.1524 1.8034,-1.4478"
        sodipodi:nodetypes="ccccccccccccccccccccccccssscccccsscsccccsscsccscsscscc"
        inkstitch:satin_column="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
-       inkstitch:zigzag_underlay="False" />
+       inkstitch:zigzag_underlay="False"
+       inkstitch:reverse_rails="none" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer94"
      inkscape:label="GlyphLayer-|"
-     style="display:inline">
+     style="display:none">
     <path
        id="path2636"
        style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -3135,13 +3379,14 @@
        inkstitch:satin_column="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
-       inkstitch:zigzag_underlay="False" />
+       inkstitch:zigzag_underlay="False"
+       inkstitch:reverse_rails="none" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer95"
      inkscape:label="GlyphLayer-}"
-     style="display:inline">
+     style="display:none">
     <path
        id="path2634"
        style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -3150,13 +3395,14 @@
        inkstitch:satin_column="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
-       inkstitch:zigzag_underlay="False" />
+       inkstitch:zigzag_underlay="False"
+       inkstitch:reverse_rails="none" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer96"
      inkscape:label="GlyphLayer-~"
-     style="display:inline">
+     style="display:none">
     <path
        id="path2546"
        style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -3164,13 +3410,14 @@
        inkstitch:satin_column="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
-       inkstitch:zigzag_underlay="False" />
+       inkstitch:zigzag_underlay="False"
+       inkstitch:reverse_rails="none" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer97"
      inkscape:label="GlyphLayer-À"
-     style="display:inline">
+     style="display:none">
     <g
        id="g139330">
       <path
@@ -3181,10 +3428,11 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <g
          id="g139323"
-         transform="translate(96.0981, -77.4)"
+         transform="translate(96.0981,-77.4)"
          style="display:inline">
         <path
            id="path139317"
@@ -3195,7 +3443,8 @@
            inkstitch:pull_compensation_mm="0"
            inkstitch:contour_underlay="True"
            inkstitch:center_walk_underlay="False"
-           inkstitch:zigzag_underlay="False" />
+           inkstitch:zigzag_underlay="False"
+           inkstitch:reverse_rails="none" />
         <path
            style="fill:none;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1"
            d="m -90.605532,119.59757 -3.4798,8.636"
@@ -3210,7 +3459,8 @@
            inkstitch:center_walk_underlay="False"
            inkstitch:zigzag_underlay="False"
            inkstitch:pull_compensation_mm="0"
-           sodipodi:nodetypes="cccccccccccscccscccccccccccsccccccc" />
+           sodipodi:nodetypes="cccccccccccscccscccccccccccsccccccc"
+           inkstitch:reverse_rails="none" />
       </g>
     </g>
   </g>
@@ -3218,7 +3468,7 @@
      inkscape:groupmode="layer"
      id="layer98"
      inkscape:label="GlyphLayer-Á"
-     style="display:inline">
+     style="display:none">
     <g
        id="g141224">
       <path
@@ -3229,10 +3479,11 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <g
          id="g141217"
-         transform="translate(96.0981, -77.4)"
+         transform="translate(96.0981,-77.4)"
          style="display:inline">
         <path
            id="path141211"
@@ -3243,7 +3494,8 @@
            inkstitch:pull_compensation_mm="0"
            inkstitch:contour_underlay="True"
            inkstitch:center_walk_underlay="False"
-           inkstitch:zigzag_underlay="False" />
+           inkstitch:zigzag_underlay="False"
+           inkstitch:reverse_rails="none" />
         <path
            style="fill:none;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1"
            d="m -90.605532,119.59757 -3.4798,8.636"
@@ -3258,7 +3510,8 @@
            inkstitch:center_walk_underlay="False"
            inkstitch:zigzag_underlay="False"
            inkstitch:pull_compensation_mm="0"
-           sodipodi:nodetypes="cccccccccccscccscccccccccccsccccccc" />
+           sodipodi:nodetypes="cccccccccccscccscccccccccccsccccccc"
+           inkstitch:reverse_rails="none" />
       </g>
     </g>
   </g>
@@ -3266,7 +3519,7 @@
      inkscape:groupmode="layer"
      id="layer99"
      inkscape:label="GlyphLayer-Â"
-     style="display:inline">
+     style="display:none">
     <g
        id="g142682">
       <path
@@ -3277,10 +3530,11 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <g
          id="g142675"
-         transform="translate(96.0981, -77.4)"
+         transform="translate(96.0981,-77.4)"
          style="display:inline">
         <path
            id="path142669"
@@ -3291,7 +3545,8 @@
            inkstitch:pull_compensation_mm="0"
            inkstitch:contour_underlay="True"
            inkstitch:center_walk_underlay="False"
-           inkstitch:zigzag_underlay="False" />
+           inkstitch:zigzag_underlay="False"
+           inkstitch:reverse_rails="none" />
         <path
            style="fill:none;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1"
            d="m -90.605532,119.59757 -3.4798,8.636"
@@ -3306,7 +3561,8 @@
            inkstitch:center_walk_underlay="False"
            inkstitch:zigzag_underlay="False"
            inkstitch:pull_compensation_mm="0"
-           sodipodi:nodetypes="cccccccccccscccscccccccccccsccccccc" />
+           sodipodi:nodetypes="cccccccccccscccscccccccccccsccccccc"
+           inkstitch:reverse_rails="none" />
       </g>
     </g>
   </g>
@@ -3314,7 +3570,7 @@
      inkscape:groupmode="layer"
      id="layer100"
      inkscape:label="GlyphLayer-Ã"
-     style="display:inline">
+     style="display:none">
     <g
        id="g145313">
       <path
@@ -3325,10 +3581,11 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <g
          id="g145306"
-         transform="translate(96.0981, -77.4)"
+         transform="translate(96.0981,-77.4)"
          style="display:inline">
         <path
            id="path145300"
@@ -3339,7 +3596,8 @@
            inkstitch:pull_compensation_mm="0"
            inkstitch:contour_underlay="True"
            inkstitch:center_walk_underlay="False"
-           inkstitch:zigzag_underlay="False" />
+           inkstitch:zigzag_underlay="False"
+           inkstitch:reverse_rails="none" />
         <path
            style="fill:none;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1"
            d="m -90.605532,119.59757 -3.4798,8.636"
@@ -3354,7 +3612,8 @@
            inkstitch:center_walk_underlay="False"
            inkstitch:zigzag_underlay="False"
            inkstitch:pull_compensation_mm="0"
-           sodipodi:nodetypes="cccccccccccscccscccccccccccsccccccc" />
+           sodipodi:nodetypes="cccccccccccscccscccccccccccsccccccc"
+           inkstitch:reverse_rails="none" />
       </g>
     </g>
   </g>
@@ -3362,12 +3621,12 @@
      inkscape:groupmode="layer"
      id="layer101"
      inkscape:label="GlyphLayer-Ä"
-     style="display:inline">
+     style="display:none">
     <g
        id="g147035">
       <g
          id="g20701"
-         transform="translate(-145.699, -157.799)">
+         transform="translate(-145.699,-157.799)">
         <path
            id="path2674"
            style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -3376,7 +3635,8 @@
            inkstitch:satin_column="True"
            inkstitch:center_walk_underlay="False"
            inkstitch:contour_underlay="True"
-           inkstitch:zigzag_underlay="False" />
+           inkstitch:zigzag_underlay="False"
+           inkstitch:reverse_rails="none" />
         <path
            id="path2678"
            style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -3385,11 +3645,12 @@
            inkstitch:satin_column="True"
            inkstitch:center_walk_underlay="False"
            inkstitch:contour_underlay="True"
-           inkstitch:zigzag_underlay="False" />
+           inkstitch:zigzag_underlay="False"
+           inkstitch:reverse_rails="none" />
       </g>
       <g
          id="g147026"
-         transform="translate(96.0981, -77.4)"
+         transform="translate(96.0981,-77.4)"
          style="display:inline">
         <path
            id="path147020"
@@ -3400,7 +3661,8 @@
            inkstitch:pull_compensation_mm="0"
            inkstitch:contour_underlay="True"
            inkstitch:center_walk_underlay="False"
-           inkstitch:zigzag_underlay="False" />
+           inkstitch:zigzag_underlay="False"
+           inkstitch:reverse_rails="none" />
         <path
            style="fill:none;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1"
            d="m -90.605532,119.59757 -3.4798,8.636"
@@ -3415,7 +3677,8 @@
            inkstitch:center_walk_underlay="False"
            inkstitch:zigzag_underlay="False"
            inkstitch:pull_compensation_mm="0"
-           sodipodi:nodetypes="cccccccccccscccscccccccccccsccccccc" />
+           sodipodi:nodetypes="cccccccccccscccscccccccccccsccccccc"
+           inkstitch:reverse_rails="none" />
       </g>
     </g>
   </g>
@@ -3423,7 +3686,7 @@
      inkscape:groupmode="layer"
      id="layer102"
      inkscape:label="GlyphLayer-Å"
-     style="display:inline">
+     style="display:none">
     <path
        id="path2680"
        style="display:inline;fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -3432,10 +3695,11 @@
        inkstitch:satin_column="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
-       inkstitch:zigzag_underlay="False" />
+       inkstitch:zigzag_underlay="False"
+       inkstitch:reverse_rails="none" />
     <g
        id="g138503"
-       transform="translate(96.0981, -77.4)"
+       transform="translate(96.0981,-77.4)"
        style="display:inline">
       <path
          id="path138497"
@@ -3446,7 +3710,8 @@
          inkstitch:pull_compensation_mm="0"
          inkstitch:contour_underlay="True"
          inkstitch:center_walk_underlay="False"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <path
          style="fill:none;stroke:#260605;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0254, 0.0254;stroke-dashoffset:0;stroke-opacity:1"
          d="m -90.605532,119.59757 -3.4798,8.636"
@@ -3461,14 +3726,15 @@
          inkstitch:center_walk_underlay="False"
          inkstitch:zigzag_underlay="False"
          inkstitch:pull_compensation_mm="0"
-         sodipodi:nodetypes="cccccccccccscccscccccccccccsccccccc" />
+         sodipodi:nodetypes="cccccccccccscccscccccccccccsccccccc"
+         inkstitch:reverse_rails="none" />
     </g>
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer103"
      inkscape:label="GlyphLayer-à"
-     style="display:inline">
+     style="display:none">
     <g
        id="g158901">
       <path
@@ -3479,11 +3745,13 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <g
          id="g158895"
          style="display:inline;stroke:#260605"
-         transform="translate(68.2213, -107.06)">
+         transform="translate(68.2213,-107.06)"
+         >
         <path
            id="path158891"
            style="fill:none;stroke:#260605;stroke-width:0.264584px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -3492,7 +3760,8 @@
            inkstitch:center_walk_underlay="False"
            inkstitch:contour_underlay="True"
            inkstitch:zigzag_underlay="False"
-           inkstitch:pull_compensation_mm="0.1" />
+           inkstitch:pull_compensation_mm="0.1"
+           inkstitch:reverse_rails="none" />
         <path
            id="path158893"
            style="fill:none;stroke:#260605;stroke-width:0.264584px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -3502,7 +3771,8 @@
            inkstitch:contour_underlay="True"
            inkstitch:zigzag_underlay="False"
            inkstitch:pull_compensation_mm="0.1"
-           sodipodi:nodetypes="cccccccccccscscscccccccsc" />
+           sodipodi:nodetypes="cccccccccccscscscccccccsc"
+           inkstitch:reverse_rails="none" />
       </g>
     </g>
   </g>
@@ -3510,7 +3780,7 @@
      inkscape:groupmode="layer"
      id="layer104"
      inkscape:label="GlyphLayer-á"
-     style="display:inline">
+     style="display:none">
     <g
        id="g161135">
       <path
@@ -3521,11 +3791,13 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <g
          id="g161129"
          style="display:inline;stroke:#260605"
-         transform="translate(68.2213, -107.06)">
+         transform="translate(68.2213,-107.06)"
+         >
         <path
            id="path161125"
            style="fill:none;stroke:#260605;stroke-width:0.264584px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -3534,7 +3806,8 @@
            inkstitch:center_walk_underlay="False"
            inkstitch:contour_underlay="True"
            inkstitch:zigzag_underlay="False"
-           inkstitch:pull_compensation_mm="0.1" />
+           inkstitch:pull_compensation_mm="0.1"
+           inkstitch:reverse_rails="none" />
         <path
            id="path161127"
            style="fill:none;stroke:#260605;stroke-width:0.264584px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -3544,7 +3817,8 @@
            inkstitch:contour_underlay="True"
            inkstitch:zigzag_underlay="False"
            inkstitch:pull_compensation_mm="0.1"
-           sodipodi:nodetypes="cccccccccccscscscccccccsc" />
+           sodipodi:nodetypes="cccccccccccscscscccccccsc"
+           inkstitch:reverse_rails="none" />
       </g>
     </g>
   </g>
@@ -3552,7 +3826,7 @@
      inkscape:groupmode="layer"
      id="layer105"
      inkscape:label="GlyphLayer-â"
-     style="display:inline">
+     style="display:none">
     <g
        id="g162927">
       <path
@@ -3563,11 +3837,13 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <g
          id="g162921"
          style="display:inline;stroke:#260605"
-         transform="translate(68.2213, -107.06)">
+         transform="translate(68.2213,-107.06)"
+         >
         <path
            id="path162917"
            style="fill:none;stroke:#260605;stroke-width:0.264584px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -3576,7 +3852,8 @@
            inkstitch:center_walk_underlay="False"
            inkstitch:contour_underlay="True"
            inkstitch:zigzag_underlay="False"
-           inkstitch:pull_compensation_mm="0.1" />
+           inkstitch:pull_compensation_mm="0.1"
+           inkstitch:reverse_rails="none" />
         <path
            id="path162919"
            style="fill:none;stroke:#260605;stroke-width:0.264584px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -3586,7 +3863,8 @@
            inkstitch:contour_underlay="True"
            inkstitch:zigzag_underlay="False"
            inkstitch:pull_compensation_mm="0.1"
-           sodipodi:nodetypes="cccccccccccscscscccccccsc" />
+           sodipodi:nodetypes="cccccccccccscscscccccccsc"
+           inkstitch:reverse_rails="none" />
       </g>
     </g>
   </g>
@@ -3594,7 +3872,7 @@
      inkscape:groupmode="layer"
      id="layer106"
      inkscape:label="GlyphLayer-ã"
-     style="display:inline">
+     style="display:none">
     <g
        id="g167076">
       <path
@@ -3605,11 +3883,13 @@
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="False" />
+         inkstitch:zigzag_underlay="False"
+         inkstitch:reverse_rails="none" />
       <g
          id="g167070"
          style="display:inline;stroke:#260605"
-         transform="translate(68.2213, -107.06)">
+         transform="translate(68.2213,-107.06)"
+         >
         <path
            id="path167066"
            style="fill:none;stroke:#260605;stroke-width:0.264584px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -3618,7 +3898,8 @@
            inkstitch:center_walk_underlay="False"
            inkstitch:contour_underlay="True"
            inkstitch:zigzag_underlay="False"
-           inkstitch:pull_compensation_mm="0.1" />
+           inkstitch:pull_compensation_mm="0.1"
+           inkstitch:reverse_rails="none" />
         <path
            id="path167068"
            style="fill:none;stroke:#260605;stroke-width:0.264584px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -3628,7 +3909,8 @@
            inkstitch:contour_underlay="True"
            inkstitch:zigzag_underlay="False"
            inkstitch:pull_compensation_mm="0.1"
-           sodipodi:nodetypes="cccccccccccscscscccccccsc" />
+           sodipodi:nodetypes="cccccccccccscscscccccccsc"
+           inkstitch:reverse_rails="none" />
       </g>
     </g>
   </g>
@@ -3636,12 +3918,12 @@
      inkscape:groupmode="layer"
      id="layer107"
      inkscape:label="GlyphLayer-ä"
-     style="display:inline">
+     style="display:none">
     <g
        id="g169026">
       <g
          id="g20697"
-         transform="translate(-60.3236, -157.799)"
+         transform="translate(-60.3236,-157.799)"
          style="display:inline">
         <path
            id="path2662"
@@ -3651,7 +3933,8 @@
            inkstitch:satin_column="True"
            inkstitch:center_walk_underlay="False"
            inkstitch:contour_underlay="True"
-           inkstitch:zigzag_underlay="False" />
+           inkstitch:zigzag_underlay="False"
+           inkstitch:reverse_rails="none" />
         <path
            id="path2664"
            style="fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -3660,12 +3943,14 @@
            inkstitch:satin_column="True"
            inkstitch:center_walk_underlay="False"
            inkstitch:contour_underlay="True"
-           inkstitch:zigzag_underlay="False" />
+           inkstitch:zigzag_underlay="False"
+           inkstitch:reverse_rails="none" />
       </g>
       <g
          id="g169018"
          style="display:inline;stroke:#260605"
-         transform="translate(68.2213, -107.06)">
+         transform="translate(68.2213,-107.06)"
+         >
         <path
            id="path169014"
            style="fill:none;stroke:#260605;stroke-width:0.264584px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -3674,7 +3959,8 @@
            inkstitch:center_walk_underlay="False"
            inkstitch:contour_underlay="True"
            inkstitch:zigzag_underlay="False"
-           inkstitch:pull_compensation_mm="0.1" />
+           inkstitch:pull_compensation_mm="0.1"
+           inkstitch:reverse_rails="none" />
         <path
            id="path169016"
            style="fill:none;stroke:#260605;stroke-width:0.264584px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -3684,7 +3970,8 @@
            inkstitch:contour_underlay="True"
            inkstitch:zigzag_underlay="False"
            inkstitch:pull_compensation_mm="0.1"
-           sodipodi:nodetypes="cccccccccccscscscccccccsc" />
+           sodipodi:nodetypes="cccccccccccscscscccccccsc"
+           inkstitch:reverse_rails="none" />
       </g>
     </g>
   </g>
@@ -3692,7 +3979,7 @@
      inkscape:groupmode="layer"
      id="layer108"
      inkscape:label="GlyphLayer-å"
-     style="display:inline">
+     style="display:none">
     <path
        id="path2666"
        style="display:inline;fill:none;stroke:#260605;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -3701,11 +3988,13 @@
        inkstitch:satin_column="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
-       inkstitch:zigzag_underlay="False" />
+       inkstitch:zigzag_underlay="False"
+       inkstitch:reverse_rails="none" />
     <g
        id="g154638"
        style="display:inline;stroke:#260605"
-       transform="translate(68.2213, -107.06)">
+       transform="translate(68.2213,-107.06)"
+       >
       <path
          id="path154634"
          style="fill:none;stroke:#260605;stroke-width:0.264584px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -3714,7 +4003,8 @@
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
          inkstitch:zigzag_underlay="False"
-         inkstitch:pull_compensation_mm="0.1" />
+         inkstitch:pull_compensation_mm="0.1"
+         inkstitch:reverse_rails="none" />
       <path
          id="path154636"
          style="fill:none;stroke:#260605;stroke-width:0.264584px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -3724,7 +4014,8 @@
          inkstitch:contour_underlay="True"
          inkstitch:zigzag_underlay="False"
          inkstitch:pull_compensation_mm="0.1"
-         sodipodi:nodetypes="cccccccccccscscscccccccsc" />
+         sodipodi:nodetypes="cccccccccccscscscccccccsc"
+         inkstitch:reverse_rails="none" />
     </g>
   </g>
 </svg>

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
 <svg
-   inkscape:version="1.1.2 (b8e25be8, 2022-02-05)"
+   inkscape:version="1.3-alpha (95f74fb, 2023-03-31)"
    height="150"
    width="150"
    sodipodi:docname="→.svg"
@@ -29,7 +28,7 @@
      id="namedview6639"
      showgrid="true"
      inkscape:zoom="7.0434425"
-     inkscape:cx="34.145235"
+     inkscape:cx="27.685326"
      inkscape:cy="64.528105"
      inkscape:window-x="0"
      inkscape:window-y="25"
@@ -39,18 +38,21 @@
      showguides="true"
      inkscape:guide-bbox="true"
      inkscape:snap-global="true"
-     inkscape:pagecheckerboard="0">
+     inkscape:pagecheckerboard="0"
+     inkscape:showpageshadow="2"
+     inkscape:deskcolor="#d1d1d1">
     <sodipodi:guide
        position="41.663229,46.564665"
        orientation="0,1"
        inkscape:label="baseline"
-       id="guide6641" />
+       id="guide6641"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="17.828571,105.733"
        orientation="0,1"
        inkscape:label="ascender"
        id="guide6643"
-       inkscape:locked="true"
+       inkscape:locked="false"
        inkscape:color="rgb(0,0,255)" />
     <sodipodi:guide
        position="89.390476,105.733"
@@ -71,22 +73,24 @@
        orientation="0,1"
        id="guide7707"
        inkscape:label="ACCROCHE"
-       inkscape:locked="true"
+       inkscape:locked="false"
        inkscape:color="rgb(173,127,168)" />
     <sodipodi:guide
        position="30.419589,143.42995"
        orientation="0,-1"
-       id="guide8799" />
+       id="guide8799"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="-48.803413,93.89"
        orientation="0,1"
        id="guide8526"
        inkscape:label=""
-       inkscape:locked="true"
+       inkscape:locked="false"
        inkscape:color="rgb(239,41,41)" />
     <inkscape:grid
        type="xygrid"
-       id="grid2779" />
+       id="grid2779"
+       visible="true" />
   </sodipodi:namedview>
   <metadata
      id="metadata5896">
@@ -102,7 +106,11 @@ Font Name &quot;Sacramento&quot;
        rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
   </cc:Work>
 </rdf:RDF>
-<inkstitch:collapse_len_mm />
+<inkstitch:collapse_len_mm
+   id="collapse_len_mm4813">3</inkstitch:collapse_len_mm>
+<inkstitch:min_stitch_len_mm
+   id="min_stitch_len_mm6492">0</inkstitch:min_stitch_len_mm>
+<inkstitch:inkstitch_svg_version>1</inkstitch:inkstitch_svg_version>
 </metadata>
   <defs
      id="defs6635" />
@@ -1668,6 +1676,20 @@ Font Name &quot;Sacramento&quot;
        style="fill:none;stroke:#000000;stroke-width:1.71921;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.71921, 1.71921;stroke-dashoffset:0;stroke-opacity:1"
        d="M 3.8367449,37.980156 6.1634636,24.019844 C 5,30 5,32 3.8367449,37.980156 Z"
        id="path15876"
+       sodipodi:nodetypes="ccc"
+       inkstitch:repeats="1"
+       inkstitch:running_stitch_length_mm="1.4"
+       inkstitch:ties="0" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="GlyphLayer-‘"
+     style="display:none"
+     id="g1">
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.71921;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.71921, 1.71921;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 3.8367449,37.980156 6.1634636,24.019844 C 5,30 5,32 3.8367449,37.980156 Z"
+       id="path1"
        sodipodi:nodetypes="ccc"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
