@@ -17,12 +17,24 @@ import { createGettext } from 'vue3-gettext'
 import translations from './assets/translations.json'
 import { selectLanguage } from '../lib/i18n.js'
 
+import flaskserverport from '../lib/flaskserverport.json'
+
 import { createVuetify, ThemeDefinition }  from 'vuetify'
 import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
 import 'vuetify/styles'
 
 import VueMousetrapPlugin from 'vue-mousetrap'
+
+if (flaskserverport.port === undefined) {
+    var theflaskport = window.inkstitchAPI.flaskport()
+    console.log("Installed mode")
+    console.log(theflaskport)
+} else {
+    var theflaskport = flaskserverport.port
+    console.log("Dev mode")
+    console.log(theflaskport)
+}
 
 const inkStitchTheme = {
   dark: false,
@@ -51,7 +63,7 @@ app.component('font-awesome-icon', FontAwesomeIcon)
 app.component('font-awesome-layers', FontAwesomeLayers)
 
 app.use(createGettext({
-    defaultLanguage: selectLanguage(translations),
+    defaultLanguage: selectLanguage(translations, theflaskport),
     translations: translations,
     silent: true,
     setGlobalProperties: true,

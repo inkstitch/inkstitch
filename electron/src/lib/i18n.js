@@ -5,10 +5,12 @@
  * Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
  *
  */
-export function selectLanguage(translations) {
+
+export function selectLanguage(translations, flaskport) {
+  var port = flaskport
   // get language from flask server, process in modern electron isn't exposed to renderer
   const request = new XMLHttpRequest();
-  request.open('GET', 'http://127.0.0.1:5000/languages', false)
+  request.open('GET', `http://127.0.0.1:${port}/languages`, false)
   request.send(null)
   var process = undefined
 
@@ -42,3 +44,4 @@ export function selectLanguage(translations) {
   }
   return lang
 }
+

@@ -14,6 +14,7 @@ const { spawn } = require('node:child_process')
 const electron = require('electron')
 const path = require('path')
 const url = require('url')
+const fs = require('fs');
 
 let electronProcess = null
 let manualRestart = false
@@ -27,6 +28,14 @@ const port = devServerOptions.port || 8080
 // older code that sets the url for the path I would assume
 var parseArg = process.argv[2] || ""
 var yarnArg = url.parse(parseArg)
+console.log("Checking the url  port from printPDF")
+console.log(process.argv)
+
+function resetPort() {
+    let resetData = { "_comment1": "port should not be declared when commiting" }
+    fs.writeFileSync(path.join(__dirname, "../../src/lib/flaskserverport.json"),  JSON.stringify(resetData), 'utf8')
+     console.log("Resetting the flaskport")
+}
 
 function startElectron() {
     // this sends url to proper position
@@ -58,6 +67,10 @@ function startElectron() {
     } else {
         process.kill(electronProcess.pid)
     }
+    resetPort()
+  })
+  electronProcess.on('exit', () => {
+    resetPort()
   })
 }
 

@@ -29,3 +29,5 @@ export BUILD='"${EXPORT_BUILD}"'\
 export VERSION='"${EXPORT_VERSION}"'\
         ' Makefile
 echo "found ${EXPORT_BUILD}"
+
+echo "Building Ink/Stich for local"

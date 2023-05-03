@@ -17,6 +17,7 @@ def open_url(url):
 
     command = []
     cwd = None
+    searchstring = "http"
 
     if getattr(sys, 'frozen', None) is not None:
         electron_path = os.path.join(get_bundled_dir("electron"), "inkstitch-gui")
@@ -43,7 +44,7 @@ def open_url(url):
         else:
             mac_dev_env["PATH"] = yarn_path + mac_dev_env["PATH"]
             # checking URL for flask server address for printToPDF
-            if url == "http://127.0.0.1:5000/":
+            if searchstring in url:
                 with open(os.devnull, 'w') as null:
                     subprocess.Popen(["yarn", "just-build"], cwd=cwd, stdout=null, env=mac_dev_env).wait()
             else:
@@ -52,7 +53,7 @@ def open_url(url):
         with open(os.devnull, 'w') as null:
             return subprocess.Popen(command, cwd=cwd, stdout=null, env=mac_dev_env)
     else:
-        if url == "http://127.0.0.1:5000/" and getattr(sys, 'frozen', None) is None:
+        if searchstring in url and getattr(sys, 'frozen', None) is None:
             with open(os.devnull, 'w') as null:
                 subprocess.Popen(["yarn", "just-build"], cwd=cwd, stdout=null).wait()
         else:

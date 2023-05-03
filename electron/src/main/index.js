@@ -14,7 +14,9 @@ const tmp = require('tmp')
 const url = require('url')
 const { app, BrowserWindow, ipcMain, dialog, shell, Menu} = require('electron')
 // url for printPDF flask server which is used in development and production mode
-const printPdfUrl = "http://127.0.0.1:5000/"
+
+var port = process.env.FLASKPORT
+const printPdfUrl = `http://127.0.0.1:${port}/`
 
 const isDev = process.env.BABEL_ENV === 'development'
 

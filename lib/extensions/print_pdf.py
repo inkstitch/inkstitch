@@ -331,7 +331,8 @@ class Print(InkstitchExtension):
             realistic_color_block_svgs=realistic_color_block_svgs
         )
         print_server.start()
-
+        # exporting the port number for languages to work in electron vuejs part of inkstitch
+        os.environ['FLASKPORT'] = str(print_server.port)
         # Wait for print_server.host and print_server.port to be populated.
         # Hacky, but Flask doesn't have an option for a callback to be run
         # after startup.
