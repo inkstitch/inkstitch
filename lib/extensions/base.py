@@ -57,7 +57,7 @@ class InkstitchExtension(inkex.EffectExtension):
             inkex.errormsg(_("Ink/Stitch doesn't know how to work with any of the objects you've selected. "
                              "Please check if selected elements are visible.") + "\n")
         else:
-            inkex.errormsg(_("There are no objects in the entire document that Ink/Stitch knows how to work with. ") + "\n")
+            inkex.errormsg(_("There are no objects in the entire document that Ink/Stitch knows how to work with.") + "\n")
 
         inkex.errormsg(_("Tip: Run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot Objects") + "\n")
 
