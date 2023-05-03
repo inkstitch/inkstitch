@@ -15,16 +15,22 @@ def get_page_specs():
     height = svg.get('height', 0)
     pagecolor = "white"
     deskcolor = "white"
+    bordercolor = "black"
+    showpageshadow = True
 
     namedview = svg.namedview
     if namedview is not None:
         pagecolor = namedview.get('pagecolor', pagecolor)
         deskcolor = namedview.get('inkscape:deskcolor', deskcolor)
+        bordercolor = namedview.get('bordercolor', bordercolor)
+        showpageshadow = namedview.get('inkscape:showpageshadow', showpageshadow)
 
     page_specs = {
         "width": width,
         "height": height,
         "pagecolor": pagecolor,
-        "deskcolor": deskcolor
+        "deskcolor": deskcolor,
+        "bordercolor": bordercolor,
+        "showpageshadow": showpageshadow
     }
     return jsonify(page_specs)

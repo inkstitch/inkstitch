@@ -514,15 +514,23 @@ export default {
     },
     generatePage () {
       this.$refs.simulator.style.backgroundColor = this.page_specs.deskcolor
+
       let page = this.svg.rect(this.page_specs.width, this.page_specs.height)
       .move(-this.stitchPlan.bounding_box[0],-this.stitchPlan.bounding_box[1])
       .fill(this.page_specs.pagecolor)
-      .stroke({width: 1, color: 'black'})
-      .filterWith(add => {
-        let blur = add.offset(2,2).in(add.$sourceAlpha).gaussianBlur(2)
-        add.blend(add.$source, blur)
-      })
+      .stroke({width: 0.1, color: this.page_specs.bordercolor})
       .back()
+
+      if (this.page_specs.showpageshadow === "true") {
+        let shadow = this.svg.rect(this.page_specs.width, this.page_specs.height)
+        .move(-this.stitchPlan.bounding_box[0],-this.stitchPlan.bounding_box[1])
+        .fill(this.page_specs.bordercolor)
+        .filterWith(add => {
+            let blur = add.offset(.5,.5).in(add.$source).gaussianBlur(.5)
+          })
+          .back()
+      }
+
       this.page_specs["bbox"] = page.bbox()
     },
     zoomDesign () {
