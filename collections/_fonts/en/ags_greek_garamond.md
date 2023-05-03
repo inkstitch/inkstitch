@@ -27,9 +27,8 @@ tťuúûüùvwxyýzž.,!¡?¿«»÷=→
 
 ## Dimensions
 
-Used at 100%, this font is approximatively 20mm high (3/4 inches). 
-
-It can be scaled up to 250%  (50mm, 2 inches) and scaled down to 80% (16mm  5/8 inch)
+Used at 100%, this font is approximatively 20mm high (3/4 inches). 3
+It can be scaled up to 150%  (30mm, 1.25 inches) and scaled down to 80% (16mm  5/8 inch)
 
 
 ## In real life
