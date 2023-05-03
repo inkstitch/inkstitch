@@ -2,7 +2,7 @@
 title: "Garnfarben-Verwaltung"
 permalink: /de/docs/thread-color/
 excerpt: ""
-last_modified_at: 2023-02-12
+last_modified_at: 2023-05-04
 toc: true
 ---
 ## Garnfarben-Liste anwenden
@@ -16,12 +16,29 @@ Außerdem könnte diese Funktion dazu dienen, verschiedene Farbvariationen auszu
 
 Willst du eine andere Garnliste aus einer Textdatei (txt) importieren, wähle die Option "Andere Garnliste importieren" und wähle aus der Auswahlliste eine Garnpalette aus bevor du auf "Anweden" klickst.
 
-**Tipp:** Installiere die Addons für Ink/Stitch um mehr Garnlisten in der Auswahlliste zur Verfügung zu haben.
-{: .notice--info }
-
 ### Exportieren
 
 Garnlisten können nur über eine ZIP-Datei exportiert werden ([batch export](/de/docs/import-export/#batch-export))
+
+## Farbpalette erstellen
+
+Inkscape kann `.gpl` Farbpaletten erstellen. Aber es ist nicht möglich, die Farben zu sortieren.
+
+Diese Erweiterung exportiert die Farben von Textelementen, während der Text selbst als Farbname und Nummer abgespeichert wird.
+
+1. Importiere ein Bild mit den Garnfarben, die die neue Farbpalette enthalten soll.
+2. Aktiviere das Text-Werkzeug und füge die Farbnamen ein (wenn vorhanden) oder tippe sie ein.
+   Benutze eine Zeile pro Farbe.
+   Wenn der letzte Teil des Farbnamens eine Nummer ist, wird er als Katalognummer interpretiert und abgespeichert.
+3. `Erweiterungen > Ink/Stitch > Garnfarben Verwaltung > Palette erstellen > Text zerlegen` teilt den Text in einzelne Textelemente.
+4. Aktiviere das Farbwahl-Werkzeug (D) und färbe die einzelnen Textelemente ein.
+   Nutze dabei die Tabulator-Taste um das jeweils nachfolgende Textelement auszuwählen.
+5. Wähle alle Text-Elemente aus und führe die Funktion `Erweiterungen > Ink/Stitch > Garnfarben Verwaltung > Palette erstellen > Farbpalette erstellen ...` aus.
+6. Gib einen Namen für die Farbpalette ein und klicke auf Anwenden.
+7. Inkscape neu starten um die neue Farbpalette verfügbar zu machen
+
+{% include video id="4bcRVoKvzAw" provider="youtube" %}
+
 
 ## Benutzerdefinierte Farbpalette installieren
 
@@ -48,25 +65,6 @@ Die Inkscape Farbpaletten befinden sich unten rechts neben den Farbfeldern.
 Klicke auf den kleinen Pfeil, um eine Liste der installierten Paletten zu öffnen und wähle die Herstellerfarbpalette abhängig von dem Garn, das verwendet werden soll.
 
 Die Auswahl wirkt sich auch auf die in der Druckvorschau angezeigten Garnnamen aus.
-
-## Farbpalette erstellen
-
-Inkscape kann `.gpl` Farbpaletten erstellen. Aber es ist nicht möglich, die Farben zu sortieren.
-
-Diese Erweiterung exportiert die Farben von Textelementen, während der Text selbst als Farbname und Nummer abgespeichert wird.
-
-1. Importiere ein Bild mit den Garnfarben, die die neue Farbpalette enthalten soll.
-2. Aktiviere das Text-Werkzeug und füge die Farbnamen ein (wenn vorhanden) oder tippe sie ein.
-   Benutze eine Zeile pro Farbe.
-   Wenn der letzte Teil des Farbnamens eine Nummer ist, wird er als Katalognummer interpretiert und abgespeichert.
-3. `Erweiterungen > Ink/Stitch > Garnfarben Verwaltung > Palette erstellen > Text zerlegen` teilt den Text in einzelne Textelemente.
-4. Aktiviere das Farbwahl-Werkzeug (D) und färbe die einzelnen Textelemente ein.
-   Nutze dabei die Tabulator-Taste um das jeweils nachfolgende Textelement auszuwählen.
-5. Wähle alle Text-Elemente aus und führe die Funktion `Erweiterungen > Ink/Stitch > Garnfarben Verwaltung > Palette erstellen > Farbpalette erstellen ...` aus.
-6. Gib einen Namen für die Farbpalette ein und klicke auf Anwenden.
-7. Inkscape neu starten um die neue Farbpalette verfügbar zu machen
-
-{% include video id="4bcRVoKvzAw" provider="youtube" %}
 
 ## Farbpalette zu Text
 
