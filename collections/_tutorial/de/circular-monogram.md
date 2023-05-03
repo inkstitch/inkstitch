@@ -2,7 +2,7 @@
 permalink: /de/tutorials/circular-monogram/
 title: "Circular Fill Monogram"
 language: de
-last_modified_at: 2023-04-2!
+last_modified_at: 2023-04-28
 excerpt: "Circular Fill Monogram"
 image: "/assets/images/tutorials/tutorial-preview-images/circular_monogram.jpg"
 tutorial-type:
