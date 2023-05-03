@@ -15,7 +15,7 @@
     <spacer />
     <label>However, when you copy and paste parts from old files into a new design, you may see for example, that a former contour fill renders as a standard fill, etc.</label>
     <spacer />
-    <label>Tipp: You can prevent inserting legacy designs into new files by running any Ink/Stitch extension before you copy the design parts (for example open and re-apply parameters on a single element in the document).</label>
+    <label>Tip: You can prevent inserting legacy designs into new files by running any Ink/Stitch extension before you copy the design parts (for example open and re-apply parameters on a single element in the document).</label>
     <spacer />
     <label appearance="header">This extension only updates selected elements.</label>
     <script>
