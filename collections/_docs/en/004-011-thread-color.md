@@ -2,12 +2,12 @@
 title: "Thread Color Management"
 permalink: /docs/thread-color/
 excerpt: ""
-last_modified_at: 2022-04-09
+last_modified_at: 2023-05-03
 toc: true
 ---
 ## Apply Threadlist
 
-Ink/Stitch can apply a threadlists to an embroidery design. This is especially useful, if you want to work on existing embroidery files which do not support color information (e.g. DST).
+Ink/Stitch can apply a threadlist to an embroidery design. This is especially useful, if you want to work on existing embroidery files which do not support color information (e.g. DST).
 
 It could also be helpful, if you are wanting to test different color settings. You can export and import them as you like. But be careful not to change the amount and order of colors. In case you are planing to change these, you'd prefer to save the entire SVG instead.
 
@@ -23,6 +23,25 @@ If you want to import any other threadlist from a txt-file, choose the option "I
 ### Export
 
 Threadlists can only be exported through a zip-file ([batch export](/docs/import-export/#batch-export)).
+
+## Generate Palette
+
+Inkscape allows to generate `.gpl` color palette files. But it doesn't allow us to order color swatches properly.
+
+This extension will export colors of text elements while using the text as color names and numbers.
+
+1. Import an image with the thread colors you want to use for the color palette.
+2. Activate the text tool and copy & paste the color names (if you have them) or type them in.
+   Use one line for each color.
+   If the last part of a color name is a number, it will be used as the catalog number.
+3. Use `Extensions > Ink/Stitch > Thread Color Management > Generate Palette > Split Text` extension to split a text block with multiple lines into separate text elements.
+4. Activate the color picker tool (D) and color the text elements, while using tab to select the text elements.
+5. Select the text elements and run `Extensions > Ink/Stitch > Thread Color Management > Generate Palette > Generate Color Palette ...`
+6. Specify the name for your color palette and click on apply
+7. Restart Inkscape to activate the new color palette
+
+{% include video id="4bcRVoKvzAw" provider="youtube" %}
+
 
 ## Install Custom Palette
 
@@ -53,23 +72,6 @@ Click on the little arrow to open a list of installed palettes and choose the ma
 
 The choice will also take effect on the thread names to appear in the print preview.
 
-## Generate Color Palette
-
-Inkscape allows to generate `.gpl` color palette files. But it doesn't allow us to order color swatches properly.
-
-This extension will export colors of text elements while using the text as color names and numbers.
-
-1. Import an image with the thread colors you want to use for the color palette.
-2. Activate the text tool and copy & paste the color names (if you have them) or type them in.
-   Use one line for each color.
-   If the last part of a color name is a number, it will be used as the catalog number.
-3. Use `Extensions > Ink/Stitch > Thread Color Management > Generate Palette > Split Text` extension to split a text block with multiple lines into separate text elements.
-4. Activate the color picker tool (D) and color the text elements, while using tab to select the text elements.
-5. Select the text elements and run `Extensions > Ink/Stitch > Thread Color Management > Generate Palette > Generate Color Palette ...`
-6. Specify the name for your color palette and click on apply
-7. Restart Inkscape to activate the new color palette
-
-{% include video id="4bcRVoKvzAw" provider="youtube" %}
 
 ## Palette to Text
 
