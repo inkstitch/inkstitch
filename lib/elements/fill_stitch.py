@@ -130,7 +130,7 @@ class FillStitch(EmbroideryElement):
 
     @property
     @param('guided_fill_strategy', _('Guided Fill Strategy'), type='dropdown', default=0,
-           options=[_("Copy"), _("Parallel Offset")], select_items=[('fill_method', 'guided_fill')], sort_index=3,
+           options=[_("Copy"), _("Parallel Offset")], select_items=[('fill_method', 'guided_fill')], sort_index=10,
            tooltip=_('Copy (the default) will fill the shape with shifted copies of the line. '
                      'Parallel offset will ensure that each line is always a consistent distance from its neighbor. '
                      'Sharp corners may be introduced.'))
@@ -139,13 +139,13 @@ class FillStitch(EmbroideryElement):
 
     @property
     @param('contour_strategy', _('Contour Fill Strategy'), type='dropdown', default=0,
-           options=[_("Inner to Outer"), _("Single spiral"), _("Double spiral")], select_items=[('fill_method', 'contour_fill')], sort_index=3)
+           options=[_("Inner to Outer"), _("Single spiral"), _("Double spiral")], select_items=[('fill_method', 'contour_fill')], sort_index=10)
     def contour_strategy(self):
         return self.get_int_param('contour_strategy', 0)
 
     @property
     @param('join_style', _('Join Style'), type='dropdown', default=0,
-           options=[_("Round"), _("Mitered"), _("Beveled")], select_items=[('fill_method', 'contour_fill')], sort_index=4)
+           options=[_("Round"), _("Mitered"), _("Beveled")], select_items=[('fill_method', 'contour_fill')], sort_index=11)
     def join_style(self):
         return self.get_int_param('join_style', 0)
 
@@ -155,9 +155,52 @@ class FillStitch(EmbroideryElement):
            type='boolean',
            default=False,
            select_items=[('fill_method', 'contour_fill')],
-           sort_index=5)
+           sort_index=12)
     def avoid_self_crossing(self):
         return self.get_boolean_param('avoid_self_crossing', False)
+
+    @property
+    @param('clockwise', _('Clockwise'), type='boolean', default=True, select_items=[('fill_method', 'contour_fill')], sort_index=13)
+    def clockwise(self):
+        return self.get_boolean_param('clockwise', True)
+
+    @property
+    @param('meander_pattern', _('Meander Pattern'), type='combo', default=0,
+           options=sorted(tiles.all_tiles()), select_items=[('fill_method', 'meander_fill')], sort_index=10)
+    def meander_pattern(self):
+        return self.get_param('meander_pattern', min(tiles.all_tiles()).id)
+
+    @property
+    @param('meander_angle',
+           _('Meander pattern angle'),
+           type='float', unit="degrees",
+           default=0,
+           select_items=[('fill_method', 'meander_fill')],
+           sort_index=11)
+    def meander_angle(self):
+        return math.radians(self.get_float_param('meander_angle', 0))
+
+    @property
+    @param('meander_scale_percent',
+           _('Meander pattern scale'),
+           tooltip=_("Percentage to stretch or compress the meander pattern.  You can scale horizontally " +
+                     "and vertically individually by giving two percentages separated by a space. "),
+           type='float', unit="%",
+           default=100,
+           select_items=[('fill_method', 'meander_fill')],
+           sort_index=12)
+    def meander_scale(self):
+        return np.maximum(self.get_split_float_param('meander_scale_percent', (100, 100)), (1, 1)) / 100
+
+    @property
+    @param('clip', _('Clip path'),
+           tooltip=_('Constrain stitching to the shape.  Useful when smoothing and expand are used.'),
+           type='boolean',
+           default=False,
+           select_items=[('fill_method', 'meander_fill')],
+           sort_index=13)
+    def clip(self):
+        return self.get_boolean_param('clip', False)
 
     @property
     @param('smoothness_mm', _('Smoothness'),
@@ -170,42 +213,24 @@ class FillStitch(EmbroideryElement):
            unit='mm',
            default=0,
            select_items=[('fill_method', 'contour_fill'), ('fill_method', 'meander_fill')],
-           sort_index=5)
+           sort_index=14)
     def smoothness(self):
         return self.get_float_param('smoothness_mm', 0)
 
     @property
-    @param('clockwise', _('Clockwise'), type='boolean', default=True, select_items=[('fill_method', 'contour_fill')], sort_index=5)
-    def clockwise(self):
-        return self.get_boolean_param('clockwise', True)
-
-    @property
-    @param('meander_pattern', _('Meander Pattern'), type='combo', default=0,
-           options=sorted(tiles.all_tiles()), select_items=[('fill_method', 'meander_fill')], sort_index=3)
-    def meander_pattern(self):
-        return self.get_param('meander_pattern', min(tiles.all_tiles()).id)
-
-    @property
-    @param('meander_angle',
-           _('Meander pattern angle'),
-           type='float', unit="degrees",
+    @param('expand_mm',
+           _('Expand'),
+           tooltip=_('Expand the shape before fill stitching, to compensate for gaps between shapes.  Negative values contract instead.'),
+           unit='mm',
+           type='float',
            default=0,
-           select_items=[('fill_method', 'meander_fill')],
-           sort_index=4)
-    def meander_angle(self):
-        return math.radians(self.get_float_param('meander_angle', 0))
-
-    @property
-    @param('meander_scale_percent',
-           _('Meander pattern scale'),
-           tooltip=_("Percentage to stretch or compress the meander pattern.  You can scale horizontally " +
-                     "and vertically individually by giving two percentages separated by a space. "),
-           type='float', unit="%",
-           default=100,
-           select_items=[('fill_method', 'meander_fill')],
-           sort_index=4)
-    def meander_scale(self):
-        return np.maximum(self.get_split_float_param('meander_scale_percent', (100, 100)), (1, 1)) / 100
+           sort_index=20,
+           select_items=[('fill_method', 'auto_fill'),
+                         ('fill_method', 'guided_fill'),
+                         ('fill_method', 'meander_fill'),
+                         ('fill_method', 'circular_fill')])
+    def expand(self):
+        return self.get_float_param('expand_mm', 0)
 
     @property
     @param('angle',
@@ -213,7 +238,7 @@ class FillStitch(EmbroideryElement):
            tooltip=_('The angle increases in a counter-clockwise direction.  0 is horizontal.  Negative angles are allowed.'),
            unit='deg',
            type='float',
-           sort_index=6,
+           sort_index=21,
            select_items=[('fill_method', 'auto_fill'), ('fill_method', 'legacy_fill')],
            default=0)
     @cache
@@ -221,9 +246,62 @@ class FillStitch(EmbroideryElement):
         return math.radians(self.get_float_param('angle', 0))
 
     @property
-    def color(self):
-        # SVG spec says the default fill is black
-        return self.get_style("fill", "#000000")
+    @param('max_stitch_length_mm',
+           _('Maximum fill stitch length'),
+           tooltip=_(
+               'The length of each stitch in a row.  Shorter stitch may be used at the start or end of a row.'),
+           unit='mm',
+           sort_index=22,
+           type='float',
+           select_items=[('fill_method', 'auto_fill'),
+                         ('fill_method', 'contour_fill'),
+                         ('fill_method', 'guided_fill'),
+                         ('fill_method', 'legacy_fill')],
+           default=3.0)
+    def max_stitch_length(self):
+        return max(self.get_float_param("max_stitch_length_mm", 3.0), 0.1 * PIXELS_PER_MM)
+
+    @property
+    @param('row_spacing_mm',
+           _('Spacing between rows'),
+           tooltip=_('Distance between rows of stitches.'),
+           unit='mm',
+           sort_index=23,
+           type='float',
+           select_items=[('fill_method', 'auto_fill'),
+                         ('fill_method', 'contour_fill'),
+                         ('fill_method', 'guided_fill'),
+                         ('fill_method', 'circular_fill'),
+                         ('fill_method', 'legacy_fill')],
+           default=0.25)
+    def row_spacing(self):
+        return max(self.get_float_param("row_spacing_mm", 0.25), 0.1 * PIXELS_PER_MM)
+
+    @property
+    @param('end_row_spacing_mm',
+           _('End row spacing'),
+           tooltip=_('Increases or decreases the row spacing towards the end.'),
+           unit='mm',
+           sort_index=24,
+           type='float',
+           select_items=[('fill_method', 'auto_fill'),
+                         ('fill_method', 'legacy_fill')],
+           default=None)
+    def end_row_spacing(self):
+        end_row_spacing = self.get_float_param("end_row_spacing_mm")
+        return max(end_row_spacing, 0) if end_row_spacing else None
+
+    @property
+    @param('staggers',
+           _('Stagger rows this many times before repeating'),
+           tooltip=_('Length of the cycle by which successive stitch rows are staggered. '
+                     'Fractional values are allowed and can have less visible diagonals than integer values.'),
+           type='int',
+           sort_index=25,
+           select_items=[('fill_method', 'auto_fill'), ('fill_method', 'guided_fill'), ('fill_method', 'legacy_fill')],
+           default=4)
+    def staggers(self):
+        return self.get_float_param("staggers", 4)
 
     @property
     @param(
@@ -232,7 +310,7 @@ class FillStitch(EmbroideryElement):
         tooltip=_('The last stitch in each row is quite close to the first stitch in the next row.  '
                   'Skipping it decreases stitch count and density.'),
         type='boolean',
-        sort_index=6,
+        sort_index=26,
         select_items=[('fill_method', 'auto_fill'), ('fill_method', 'guided_fill'),
                       ('fill_method', 'legacy_fill')],
         default=False)
@@ -246,59 +324,24 @@ class FillStitch(EmbroideryElement):
         tooltip=_('The flip option can help you with routing your stitch path.  '
                   'When you enable flip, stitching goes from right-to-left instead of left-to-right.'),
         type='boolean',
-        sort_index=7,
+        sort_index=27,
         select_items=[('fill_method', 'legacy_fill')],
         default=False)
     def flip(self):
         return self.get_boolean_param("flip", False)
 
     @property
-    @param('row_spacing_mm',
-           _('Spacing between rows'),
-           tooltip=_('Distance between rows of stitches.'),
-           unit='mm',
-           sort_index=6,
-           type='float',
-           select_items=[('fill_method', 'auto_fill'),
-                         ('fill_method', 'contour_fill'),
-                         ('fill_method', 'guided_fill'),
-                         ('fill_method', 'circular_fill'),
-                         ('fill_method', 'legacy_fill')],
-           default=0.25)
-    def row_spacing(self):
-        return max(self.get_float_param("row_spacing_mm", 0.25), 0.1 * PIXELS_PER_MM)
-
-    @property
-    def end_row_spacing(self):
-        return self.get_float_param("end_row_spacing_mm")
-
-    @property
-    @param('max_stitch_length_mm',
-           _('Maximum fill stitch length'),
-           tooltip=_(
-               'The length of each stitch in a row.  Shorter stitch may be used at the start or end of a row.'),
-           unit='mm',
-           sort_index=6,
-           type='float',
-           select_items=[('fill_method', 'auto_fill'),
-                         ('fill_method', 'contour_fill'),
-                         ('fill_method', 'guided_fill'),
-                         ('fill_method', 'legacy_fill')],
-           default=3.0)
-    def max_stitch_length(self):
-        return max(self.get_float_param("max_stitch_length_mm", 3.0), 0.1 * PIXELS_PER_MM)
-
-    @property
-    @param('staggers',
-           _('Stagger rows this many times before repeating'),
-           tooltip=_('Length of the cycle by which successive stitch rows are staggered. '
-                     'Fractional values are allowed and can have less visible diagonals than integer values.'),
-           type='int',
-           sort_index=6,
-           select_items=[('fill_method', 'auto_fill'), ('fill_method', 'guided_fill'), ('fill_method', 'legacy_fill')],
-           default=4)
-    def staggers(self):
-        return self.get_float_param("staggers", 4)
+    @param('underpath',
+           _('Underpath'),
+           tooltip=_('Travel inside the shape when moving from section to section.  Underpath '
+                     'stitches avoid traveling in the direction of the row angle so that they '
+                     'are not visible.  This gives them a jagged appearance.'),
+           type='boolean',
+           default=True,
+           select_items=[('fill_method', 'auto_fill'), ('fill_method', 'guided_fill'), ('fill_method', 'circular_fill')],
+           sort_index=30)
+    def underpath(self):
+        return self.get_boolean_param('underpath', True)
 
     @property
     @param('running_stitch_length_mm',
@@ -312,7 +355,7 @@ class FillStitch(EmbroideryElement):
                          ('fill_method', 'guided_fill'),
                          ('fill_method', 'meander_fill'),
                          ('fill_method', 'circular_fill')],
-           sort_index=6)
+           sort_index=31)
     def running_stitch_length(self):
         return max(self.get_float_param("running_stitch_length_mm", 1.5), 0.01)
 
@@ -325,7 +368,7 @@ class FillStitch(EmbroideryElement):
            unit='mm',
            type='float',
            default=0.2,
-           sort_index=6)
+           sort_index=32)
     def running_stitch_tolerance(self):
         return max(self.get_float_param("running_stitch_tolerance_mm", 0.2), 0.01)
 
@@ -336,7 +379,7 @@ class FillStitch(EmbroideryElement):
            type='int',
            default="1",
            select_items=[('fill_method', 'meander_fill')],
-           sort_index=7)
+           sort_index=33)
     def repeats(self):
         return max(1, self.get_int_param("repeats", 1))
 
@@ -350,9 +393,14 @@ class FillStitch(EmbroideryElement):
            type='str',
            select_items=[('fill_method', 'meander_fill')],
            default=0,
-           sort_index=8)
+           sort_index=34)
     def bean_stitch_repeats(self):
         return self.get_multiple_int_param("bean_stitch_repeats", "0")
+
+    @property
+    def color(self):
+        # SVG spec says the default fill is black
+        return self.get_style("fill", "#000000")
 
     @property
     @param('fill_underlay', _('Underlay'), type='toggle', group=_('Fill Underlay'), default=True)
@@ -427,44 +475,6 @@ class FillStitch(EmbroideryElement):
         default=False)
     def fill_underlay_skip_last(self):
         return self.get_boolean_param("fill_underlay_skip_last", False)
-
-    @property
-    @param('expand_mm',
-           _('Expand'),
-           tooltip=_('Expand the shape before fill stitching, to compensate for gaps between shapes.  Negative values contract instead.'),
-           unit='mm',
-           type='float',
-           default=0,
-           sort_index=5,
-           select_items=[('fill_method', 'auto_fill'),
-                         ('fill_method', 'guided_fill'),
-                         ('fill_method', 'meander_fill'),
-                         ('fill_method', 'circular_fill')])
-    def expand(self):
-        return self.get_float_param('expand_mm', 0)
-
-    @property
-    @param('clip', _('Clip path'),
-           tooltip=_('Constrain stitching to the shape.  Useful when smoothing and expand are used.'),
-           type='boolean',
-           default=False,
-           select_items=[('fill_method', 'meander_fill')],
-           sort_index=6)
-    def clip(self):
-        return self.get_boolean_param('clip', False)
-
-    @property
-    @param('underpath',
-           _('Underpath'),
-           tooltip=_('Travel inside the shape when moving from section to section.  Underpath '
-                     'stitches avoid traveling in the direction of the row angle so that they '
-                     'are not visible.  This gives them a jagged appearance.'),
-           type='boolean',
-           default=True,
-           select_items=[('fill_method', 'auto_fill'), ('fill_method', 'guided_fill'), ('fill_method', 'circular_fill')],
-           sort_index=6)
-    def underpath(self):
-        return self.get_boolean_param('underpath', True)
 
     @property
     @param(
