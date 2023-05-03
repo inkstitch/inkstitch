@@ -27,7 +27,7 @@ tťuúûüùvwxyýzž.,!¡?¿«»÷=→
 
 Utilisée à 100%, cette fonte fait approximativement 20mm de haut (3/4 pouce).
 
-Elle peut être agrandie jusqu'à  150%  (30mm, 2 pouces) and diminuée jusqu'à 80% (16mm  5/8 pouce)
+Elle peut être agrandie jusqu'à  150%  (30mm, 1.25 pouces) and diminuée jusqu'à 80% (16mm  5/8 pouce)
 
 
 ## Dans la vraie vie
