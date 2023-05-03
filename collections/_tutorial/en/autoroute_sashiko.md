@@ -7,6 +7,8 @@ excerpt: "Using Sashiko extension  with autoroute  runningstitch"
 image: "/assets/images/tutorials/sashiko/sashiko.jpg"
 tutorial-type:
   - Sample File
+tool:
+  - "Stroke" 
 stitch-type:
   - "Bean Stitch"
 techniques:
