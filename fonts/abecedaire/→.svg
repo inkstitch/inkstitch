@@ -6,7 +6,7 @@
    width="130"
    height="130"
    viewBox="0 0 130 130"
-   inkscape:version="1.1.2 (b8e25be8, 2022-02-05)"
+   inkscape:version="1.3-alpha (95f74fb, 2023-03-31)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -22,47 +22,51 @@
      inkscape:pagecheckerboard="0"
      showgrid="true"
      inkscape:zoom="7.8216892"
-     inkscape:cx="21.414812"
-     inkscape:cy="97.67711"
+     inkscape:cx="21.350887"
+     inkscape:cy="97.741035"
      inkscape:window-width="1440"
      inkscape:window-height="808"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g3186"
+     inkscape:current-layer="svg653"
      inkscape:document-units="px"
      inkscape:snap-grids="false"
-     inkscape:snap-global="true">
+     inkscape:snap-global="true"
+     inkscape:showpageshadow="2"
+     inkscape:deskcolor="#d1d1d1">
     <sodipodi:guide
        position="0,100"
        orientation="0,1"
        inkscape:label="ascender"
-       id="guide1802" />
+       id="guide1802"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="0,0"
        orientation="0,1"
        inkscape:label="baseline"
        id="guide2499"
-       inkscape:locked="true"
+       inkscape:locked="false"
        inkscape:color="rgb(0,0,255)" />
     <sodipodi:guide
        position="0,99"
        orientation="0,1"
        inkscape:label="ascender"
-       id="guide2501" />
+       id="guide2501"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="-0.047631,52.31748"
        orientation="0,1"
        inkscape:label="caps"
        id="guide2503"
-       inkscape:locked="true"
+       inkscape:locked="false"
        inkscape:color="rgb(0,0,255)" />
     <sodipodi:guide
        position="0,36.50439"
        orientation="0,1"
        inkscape:label="xheight"
        id="guide2505"
-       inkscape:locked="true"
+       inkscape:locked="false"
        inkscape:color="rgb(0,0,255)" />
     <sodipodi:guide
        position="0,-10"
@@ -73,17 +77,21 @@
        inkscape:color="rgb(0,0,255)" />
     <inkscape:grid
        type="xygrid"
-       id="grid6872" />
+       id="grid6872"
+       visible="true" />
   </sodipodi:namedview>
   <metadata
      id="metadata2">
 Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
  By lyogau
-<inkstitch:collapse_len_mm />
+<inkstitch:collapse_len_mm
+   id="collapse_len_mm486901">3</inkstitch:collapse_len_mm>
+<inkstitch:min_stitch_len_mm
+   id="min_stitch_len_mm333121">0</inkstitch:min_stitch_len_mm>
+<inkstitch:inkstitch_svg_version>1</inkstitch:inkstitch_svg_version>
 </metadata>
   <defs
      id="defs651">
-  
     <symbol
        style="display:inline"
        id="inkstitch_satin_start">
@@ -103,7 +111,8 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
          inkscape:connector-curvature="0"
          style="display:inline;opacity:1;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:0.2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
          d="m -3.0312502,1.577739 c 0,0 0.25,-3.6875002 0.25,-3.6875002 0,0 1.0312501,3.8437502 1.0312501,3.8437502 0,0 0.34375,-3.6250002 0.34375,-3.6250002 0,0 0.96874997,3.5625002 0.96874997,3.5625002 0,0 0.28125,-3.3125002 0.28125,-3.3125002 0,0 0.9375001,3.3125002 0.9375001,3.3125002 0,0 0.21875,-3.0937502 0.21875,-3.0937502 0,0 1.03125013,2.9687502 1.03125013,2.9687502 0,0 0.0625,-2.7187501 0.0625,-2.7187501 0,0 0.96875,2.4687501 0.96875,2.4687501 0,0 0.15625,-2.18750023 0.15625,-2.18750023"
-         id="path31975" />
+         id="path31975"
+          />
     </symbol>
     <symbol
        id="inkstitch_satin_end"
@@ -124,7 +133,8 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
          style="display:inline;opacity:1;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:0.2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
          d="m -3.2964153,1.5777408 0.25,-3.6875001 1.0312501,3.8437501 0.34375,-3.6250001 0.9687501,3.5625001 0.28125,-3.3125001 0.9375,3.3125001 0.21875,-3.0937501 1.0312499,2.9687501 0.0625,-2.7187501 0.96875,2.4687501 0.15625,-2.1875"
          id="path31975-0-2"
-         inkscape:connector-curvature="0" />
+         inkscape:connector-curvature="0"
+          />
     </symbol>
     <symbol
        id="inkstitch_trim">
@@ -1056,6 +1066,36 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 1;stroke-dashoffset:0;stroke-opacity:1"
        d="M 11.338583,77.086614 V 87.829291"
        id="path459714-8"
+       inkstitch:ties="0"
+       inkstitch:running_stitch_length_mm="30"
+       inkstitch:repeats="3"
+       inkstitch:force_lock_stitches="True"
+       sodipodi:nodetypes="cc" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="GlyphLayer-’"
+     style="display:none"
+     id="g1">
+    <path
+       style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 1;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 11.338583,77.086614 V 87.829291"
+       id="path1"
+       inkstitch:ties="0"
+       inkstitch:running_stitch_length_mm="30"
+       inkstitch:repeats="3"
+       inkstitch:force_lock_stitches="True"
+       sodipodi:nodetypes="cc" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="GlyphLayer-‘"
+     style="display:none"
+     id="g2">
+    <path
+       style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 1;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 11.338583,77.086614 V 87.829291"
+       id="path2"
        inkstitch:ties="0"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:repeats="3"
@@ -10084,7 +10124,7 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
      style="display:none"
      id="g2982">
     <path
-       id="path1"
+       id="path3"
        style="fill:none;stroke:#000000;stroke-width:0.999999px;stroke-miterlimit:4;stroke-dasharray:3.00001, 0.999999;stroke-opacity:1"
        d="M 0.00188083,130.00593 3.7798966,126.21997"
        inkstitch:repeats="3"
@@ -10099,7 +10139,7 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkscape:label="Points droits pour auto-remplissage satin 2"
        inkstitch:ties="3" />
     <path
-       id="path2"
+       id="path4"
        style="fill:none;stroke:#000000;stroke-width:0.999999px;stroke-miterlimit:4;stroke-dasharray:3.00001, 0.999999;stroke-opacity:1"
        d="M 7.4543533,130.00593 3.5644635,126.10772"
        inkstitch:repeats="3"
@@ -10113,21 +10153,21 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkscape:label="Points droits pour auto-remplissage satin 4"
        inkstitch:ties="3" />
     <path
-       id="path3"
+       id="path5"
        style="fill:none;stroke:#000000;stroke-width:0.999999px;stroke-miterlimit:4;stroke-dasharray:3.00001, 0.999999;stroke-opacity:1"
        d="m 0.00188083,122.53758 3.56258267,3.57014"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path4"
+       id="path6"
        style="fill:none;stroke:#000000;stroke-width:0.999999px;stroke-miterlimit:4;stroke-dasharray:3.00001, 0.999999;stroke-opacity:1"
        d="m 3.7798966,126.21997 3.6744567,-3.68239"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path5"
+       id="path7"
        style="fill:none;stroke:#000000;stroke-width:0.999999px;stroke-miterlimit:4;stroke-dasharray:3.00001, 0.999999;stroke-opacity:1"
        d="m 7.4547313,122.53758 3.7780157,-3.78557"
        inkstitch:repeats="3"
@@ -10197,7 +10237,7 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkscape:label="Points droits pour auto-remplissage satin 16"
        inkstitch:ties="3" />
     <path
-       id="path6"
+       id="path8"
        style="fill:none;stroke:#000000;stroke-width:0.999999px;stroke-miterlimit:4;stroke-dasharray:3.00001, 0.999999;stroke-opacity:1"
        d="m 37.266511,85.196601 -3.674834,3.682394"
        inkstitch:repeats="3"
@@ -10211,7 +10251,7 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkscape:label="Points droits pour auto-remplissage satin 18"
        inkstitch:ties="3" />
     <path
-       id="path7"
+       id="path9"
        style="fill:none;stroke:#000000;stroke-width:0.999999px;stroke-miterlimit:4;stroke-dasharray:3.00001, 0.999999;stroke-opacity:1"
        d="m 29.814039,92.664947 3.777638,-3.785953"
        inkstitch:repeats="3"
@@ -10246,42 +10286,42 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkscape:label="Points droits pour auto-remplissage satin 23"
        inkstitch:ties="3" />
     <path
-       id="path8"
+       id="path10"
        style="fill:none;stroke:#000000;stroke-width:0.999999px;stroke-miterlimit:4;stroke-dasharray:3.00001, 0.999999;stroke-opacity:1"
        d="m 44.719362,115.06961 -7.452473,-7.46834"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path9"
+       id="path11"
        style="fill:none;stroke:#000000;stroke-width:0.999999px;stroke-miterlimit:4;stroke-dasharray:3.00001, 0.999999;stroke-opacity:1"
        d="m 37.266889,107.60127 7.452473,-7.46835"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path10"
+       id="path12"
        style="fill:none;stroke:#000000;stroke-width:0.999999px;stroke-miterlimit:4;stroke-dasharray:3.00001, 0.999999;stroke-opacity:1"
        d="M 44.719362,100.13292 37.266889,92.664947"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path11"
+       id="path13"
        style="fill:none;stroke:#000000;stroke-width:0.999999px;stroke-miterlimit:4;stroke-dasharray:3.00001, 0.999999;stroke-opacity:1"
        d="M 37.266511,92.664947 29.814039,85.196601"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path12"
+       id="path14"
        style="fill:none;stroke:#000000;stroke-width:0.999999px;stroke-miterlimit:4;stroke-dasharray:3.00001, 0.999999;stroke-opacity:1"
        d="M 29.813661,85.196601 22.36081,77.728633"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path13"
+       id="path15"
        style="fill:none;stroke:#000000;stroke-width:0.999999px;stroke-miterlimit:4;stroke-dasharray:3.00001, 0.999999;stroke-opacity:1"
        d="m 22.360432,77.728255 -3.674834,3.682394"
        inkstitch:repeats="3"
@@ -10302,14 +10342,14 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkscape:label="Points droits pour auto-remplissage satin 31"
        inkstitch:ties="3" />
     <path
-       id="path14"
+       id="path16"
        style="fill:none;stroke:#000000;stroke-width:0.999999px;stroke-miterlimit:4;stroke-dasharray:3.00001, 0.999999;stroke-opacity:1"
        d="M 29.813661,77.728255 22.36081,85.196601"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path15"
+       id="path17"
        style="fill:none;stroke:#000000;stroke-width:0.999999px;stroke-miterlimit:4;stroke-dasharray:3.00001, 0.999999;stroke-opacity:1"
        d="M 22.360432,85.196601 18.470543,81.298396"
        inkstitch:repeats="3"
@@ -10323,49 +10363,49 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkscape:label="Points droits pour auto-remplissage satin 34"
        inkstitch:ties="3" />
     <path
-       id="path16"
+       id="path18"
        style="fill:none;stroke:#000000;stroke-width:0.999999px;stroke-miterlimit:4;stroke-dasharray:3.00001, 0.999999;stroke-opacity:1"
        d="m 14.90796,77.728633 3.562583,3.569764"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path17"
+       id="path19"
        style="fill:none;stroke:#000000;stroke-width:0.999999px;stroke-miterlimit:4;stroke-dasharray:3.00001, 0.999999;stroke-opacity:1"
        d="M 18.685598,81.410648 14.90796,85.196601"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path18"
+       id="path20"
        style="fill:none;stroke:#000000;stroke-width:0.999999px;stroke-miterlimit:4;stroke-dasharray:3.00001, 0.999999;stroke-opacity:1"
        d="M 14.907582,85.196601 7.4547313,92.664947"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path19"
+       id="path21"
        style="fill:none;stroke:#000000;stroke-width:0.999999px;stroke-miterlimit:4;stroke-dasharray:3.00001, 0.999999;stroke-opacity:1"
        d="m 7.4547313,92.664947 7.4528507,7.467973"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path20"
+       id="path22"
        style="fill:none;stroke:#000000;stroke-width:0.999999px;stroke-miterlimit:4;stroke-dasharray:3.00001, 0.999999;stroke-opacity:1"
        d="m 14.907582,100.13292 -7.4528507,7.46835"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path21"
+       id="path23"
        style="fill:none;stroke:#000000;stroke-width:0.999999px;stroke-miterlimit:4;stroke-dasharray:3.00001, 0.999999;stroke-opacity:1"
        d="m 7.4547313,107.60127 7.4528507,7.46834"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path22"
+       id="path24"
        style="fill:none;stroke:#000000;stroke-width:0.999999px;stroke-miterlimit:4;stroke-dasharray:3.00001, 0.999999;stroke-opacity:1"
        d="m 14.907582,115.06961 -3.674835,3.6824"
        inkstitch:repeats="3"
@@ -10421,7 +10461,7 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkscape:label="Points droits pour auto-remplissage satin 48"
        inkstitch:ties="3" />
     <path
-       id="path23"
+       id="path25"
        style="fill:none;stroke:#000000;stroke-width:0.999999px;stroke-miterlimit:4;stroke-dasharray:3.00001, 0.999999;stroke-opacity:1"
        d="M 7.4543533,77.728255 3.7798966,81.410648"
        inkstitch:repeats="3"
@@ -10435,7 +10475,7 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkscape:label="Points droits pour auto-remplissage satin 50"
        inkstitch:ties="3" />
     <path
-       id="path24"
+       id="path26"
        style="fill:none;stroke:#000000;stroke-width:0.999999px;stroke-miterlimit:4;stroke-dasharray:3.00001, 0.999999;stroke-opacity:1"
        d="M 0.00188083,85.196601 3.7798966,81.410648"
        inkstitch:repeats="3"
@@ -10449,49 +10489,49 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkscape:label="Points droits pour auto-remplissage satin 52"
        inkstitch:ties="3" />
     <path
-       id="path25"
+       id="path27"
        style="fill:none;stroke:#000000;stroke-width:0.999999px;stroke-miterlimit:4;stroke-dasharray:3.00001, 0.999999;stroke-opacity:1"
        d="M 0.00188083,77.728633 7.4543533,85.196601"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path26"
+       id="path28"
        style="fill:none;stroke:#000000;stroke-width:0.999999px;stroke-miterlimit:4;stroke-dasharray:3.00001, 0.999999;stroke-opacity:1"
        d="m 7.4547313,85.196601 7.4528507,7.468346"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path27"
+       id="path29"
        style="fill:none;stroke:#000000;stroke-width:0.999999px;stroke-miterlimit:4;stroke-dasharray:3.00001, 0.999999;stroke-opacity:1"
        d="M 14.907582,92.664947 7.4547313,100.13292"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path28"
+       id="path30"
        style="fill:none;stroke:#000000;stroke-width:0.999999px;stroke-miterlimit:4;stroke-dasharray:3.00001, 0.999999;stroke-opacity:1"
        d="m 7.4547313,100.13292 7.4528507,7.46835"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path29"
+       id="path31"
        style="fill:none;stroke:#000000;stroke-width:0.999999px;stroke-miterlimit:4;stroke-dasharray:3.00001, 0.999999;stroke-opacity:1"
        d="m 14.907582,107.60127 -7.4528507,7.46834"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path30"
+       id="path32"
        style="fill:none;stroke:#000000;stroke-width:0.999999px;stroke-miterlimit:4;stroke-dasharray:3.00001, 0.999999;stroke-opacity:1"
        d="m 7.4547313,115.06961 7.4528507,7.46797"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path31"
+       id="path33"
        style="fill:none;stroke:#000000;stroke-width:0.999999px;stroke-miterlimit:4;stroke-dasharray:3.00001, 0.999999;stroke-opacity:1"
        d="m 14.90796,122.53758 3.562583,3.57014"
        inkstitch:repeats="3"
@@ -10540,28 +10580,28 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkscape:label="Points droits pour auto-remplissage satin 65"
        inkstitch:ties="3" />
     <path
-       id="path32"
+       id="path34"
        style="fill:none;stroke:#000000;stroke-width:0.999999px;stroke-miterlimit:4;stroke-dasharray:3.00001, 0.999999;stroke-opacity:1"
        d="m 44.719362,92.664947 -7.452473,7.467973"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path33"
+       id="path35"
        style="fill:none;stroke:#000000;stroke-width:0.999999px;stroke-miterlimit:4;stroke-dasharray:3.00001, 0.999999;stroke-opacity:1"
        d="m 37.266889,100.13292 7.452473,7.46835"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path34"
+       id="path36"
        style="fill:none;stroke:#000000;stroke-width:0.999999px;stroke-miterlimit:4;stroke-dasharray:3.00001, 0.999999;stroke-opacity:1"
        d="m 44.719362,107.60127 -7.452473,7.46834"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path35"
+       id="path37"
        style="fill:none;stroke:#000000;stroke-width:0.999999px;stroke-miterlimit:4;stroke-dasharray:3.00001, 0.999999;stroke-opacity:1"
        d="m 37.266511,115.06961 -3.674834,3.6824"
        inkstitch:repeats="3"
@@ -10575,7 +10615,7 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkscape:label="Points droits pour auto-remplissage satin 70"
        inkstitch:ties="3" />
     <path
-       id="path36"
+       id="path38"
        style="fill:none;stroke:#000000;stroke-width:0.999999px;stroke-miterlimit:4;stroke-dasharray:3.00001, 0.999999;stroke-opacity:1"
        d="m 37.266511,122.53758 -3.890268,-3.8982"
        inkstitch:repeats="3"
@@ -10589,28 +10629,28 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkscape:label="Points droits pour auto-remplissage satin 72"
        inkstitch:ties="3" />
     <path
-       id="path37"
+       id="path39"
        style="fill:none;stroke:#000000;stroke-width:0.999999px;stroke-miterlimit:4;stroke-dasharray:3.00001, 0.999999;stroke-opacity:1"
        d="m 29.814039,115.06961 3.562204,3.56977"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path38"
+       id="path40"
        style="fill:none;stroke:#000000;stroke-width:0.999999px;stroke-miterlimit:4;stroke-dasharray:3.00001, 0.999999;stroke-opacity:1"
        d="m 33.591677,118.75201 -3.777638,3.78557"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path39"
+       id="path41"
        style="fill:none;stroke:#000000;stroke-width:0.999999px;stroke-miterlimit:4;stroke-dasharray:3.00001, 0.999999;stroke-opacity:1"
        d="m 29.813661,122.53758 -7.452851,7.46835"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path40"
+       id="path42"
        style="fill:none;stroke:#000000;stroke-width:0.999999px;stroke-miterlimit:4;stroke-dasharray:3.00001, 0.999999;stroke-opacity:1"
        d="m 22.360432,130.00593 -3.889889,-3.89821"
        inkstitch:repeats="3"
@@ -10624,14 +10664,14 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkscape:label="Points droits pour auto-remplissage satin 77"
        inkstitch:ties="3" />
     <path
-       id="path41"
+       id="path159"
        style="fill:none;stroke:#000000;stroke-width:0.999999px;stroke-miterlimit:4;stroke-dasharray:3.00001, 0.999999;stroke-opacity:1"
        d="m 14.90796,130.00593 7.452472,-7.46835"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path42"
+       id="path160"
        style="fill:none;stroke:#000000;stroke-width:0.999999px;stroke-miterlimit:4;stroke-dasharray:3.00001, 0.999999;stroke-opacity:1"
        d="m 22.36081,122.53758 7.452851,7.46835"
        inkstitch:repeats="3"
@@ -23604,7 +23644,7 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
      style="display:none"
      id="g3098">
     <path
-       id="path159"
+       id="path161"
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.88977;stroke-miterlimit:4;stroke-dasharray:3.77953, 1.88977;stroke-dashoffset:0;stroke-opacity:1"
        d="m 8e-5,130.0002 c 2.439347,-2.43949 4.8786939,-4.87889 7.3180408,-7.31839"
        inkstitch:repeats="3"
@@ -23619,35 +23659,35 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3" />
     <path
-       id="path160"
+       id="path162"
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.88977;stroke-miterlimit:4;stroke-dasharray:3.77953, 1.88977;stroke-dashoffset:0;stroke-opacity:1"
        d="m 3.7e-4,115.36432 c 2.439387,2.4395 4.8787539,4.8789 7.3181408,7.31839"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path161"
+       id="path163"
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.88977;stroke-miterlimit:4;stroke-dasharray:3.77953, 1.88977;stroke-dashoffset:0;stroke-opacity:1"
        d="m 7.3185108,122.68181 c 2.4393478,2.4395 4.8786832,4.8789 7.3180302,7.31839"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path162"
+       id="path164"
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.88977;stroke-miterlimit:4;stroke-dasharray:3.77953, 1.88977;stroke-dashoffset:0;stroke-opacity:1"
        d="m 14.637411,130.0002 c 2.439347,-2.43949 4.878694,-4.87889 7.318041,-7.31839"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path163"
+       id="path165"
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.88977;stroke-miterlimit:4;stroke-dasharray:3.77953, 1.88977;stroke-dashoffset:0;stroke-opacity:1"
        d="m 21.955552,122.68181 c 2.439347,-2.43949 4.878684,-4.87899 7.318031,-7.31849"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path164"
+       id="path166"
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.88977;stroke-miterlimit:4;stroke-dasharray:3.77953, 1.88977;stroke-dashoffset:0;stroke-opacity:1"
        d="m 29.273533,115.36332 c -2.439357,-2.43949 -4.878714,-4.87899 -7.318081,-7.31849"
        inkstitch:repeats="3"
@@ -23668,21 +23708,21 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkscape:label="Points droits pour auto-remplissage satin 10"
        inkstitch:ties="3" />
     <path
-       id="path165"
+       id="path167"
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.88977;stroke-miterlimit:4;stroke-dasharray:3.77953, 1.88977;stroke-dashoffset:0;stroke-opacity:1"
        d="m 7.3188908,108.04483 c 2.4393478,2.4395 4.8786932,4.879 7.3180402,7.31849"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path166"
+       id="path168"
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.88977;stroke-miterlimit:4;stroke-dasharray:3.77953, 1.88977;stroke-dashoffset:0;stroke-opacity:1"
        d="m 14.637031,115.36332 c 2.439347,-2.43949 4.878684,-4.87899 7.318031,-7.31849"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path167"
+       id="path169"
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.88977;stroke-miterlimit:4;stroke-dasharray:3.77953, 1.88977;stroke-dashoffset:0;stroke-opacity:1"
        d="m 21.955552,108.04483 c 1.166039,-1.166 2.332067,-2.332 3.498106,-3.49799"
        inkstitch:repeats="3"
@@ -23696,7 +23736,7 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkscape:label="Points droits pour auto-remplissage satin 14"
        inkstitch:ties="3" />
     <path
-       id="path168"
+       id="path170"
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.88977;stroke-miterlimit:4;stroke-dasharray:3.77953, 1.88977;stroke-dashoffset:0;stroke-opacity:1"
        d="m 29.273583,100.72644 c -1.273308,1.2734 -2.546617,2.5469 -3.819925,3.8204"
        inkstitch:repeats="3"
@@ -23738,14 +23778,14 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkscape:label="Points droits pour auto-remplissage satin 20"
        inkstitch:ties="3" />
     <path
-       id="path169"
+       id="path171"
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.88977;stroke-miterlimit:4;stroke-dasharray:3.77953, 1.88977;stroke-dashoffset:0;stroke-opacity:1"
        d="m 21.955062,93.407949 c -2.439347,2.439497 -4.878684,4.878991 -7.318031,7.318491"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path170"
+       id="path172"
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.88977;stroke-miterlimit:4;stroke-dasharray:3.77953, 1.88977;stroke-dashoffset:0;stroke-opacity:1"
        d="m 14.636541,100.72644 c -1.202778,-1.2028 -2.405547,-2.4056 -3.608335,-3.608396"
        inkstitch:repeats="3"
@@ -23759,7 +23799,7 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkscape:label="Points droits pour auto-remplissage satin 23"
        inkstitch:ties="3" />
     <path
-       id="path171"
+       id="path173"
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.88977;stroke-miterlimit:4;stroke-dasharray:3.77953, 1.88977;stroke-dashoffset:0;stroke-opacity:1"
        d="m 7.3185108,93.407949 c 1.2365685,1.236698 2.4731378,2.473397 3.7096952,3.710095"
        inkstitch:repeats="3"
@@ -23773,28 +23813,28 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkscape:label="Points droits pour auto-remplissage satin 25"
        inkstitch:ties="3" />
     <path
-       id="path172"
+       id="path174"
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.88977;stroke-miterlimit:4;stroke-dasharray:3.77953, 1.88977;stroke-dashoffset:0;stroke-opacity:1"
        d="m 7.3185108,100.72644 c 2.4393478,-2.4395 4.8786832,-4.878994 7.3180302,-7.318491"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path173"
+       id="path175"
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.88977;stroke-miterlimit:4;stroke-dasharray:3.77953, 1.88977;stroke-dashoffset:0;stroke-opacity:1"
        d="m 14.637031,93.407949 c 2.439347,2.439497 4.878684,4.878991 7.318031,7.318491"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path174"
+       id="path176"
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.88977;stroke-miterlimit:4;stroke-dasharray:3.77953, 1.88977;stroke-dashoffset:0;stroke-opacity:1"
        d="m 21.955452,100.72644 c 2.439367,2.4395 4.878724,4.87889 7.318081,7.31839"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path175"
+       id="path177"
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.88977;stroke-miterlimit:4;stroke-dasharray:3.77953, 1.88977;stroke-dashoffset:0;stroke-opacity:1"
        d="m 29.273583,108.04483 c -2.439347,2.4395 -4.878684,4.879 -7.318031,7.31849"
        inkstitch:repeats="3"
@@ -23843,56 +23883,56 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkscape:label="Points droits pour auto-remplissage satin 35"
        inkstitch:ties="3" />
     <path
-       id="path176"
+       id="path178"
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.88977;stroke-miterlimit:4;stroke-dasharray:3.77953, 1.88977;stroke-dashoffset:0;stroke-opacity:1"
        d="m 21.955452,130.0002 c -2.439347,-2.43949 -4.878694,-4.87889 -7.318041,-7.31839"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path177"
+       id="path179"
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.88977;stroke-miterlimit:4;stroke-dasharray:3.77953, 1.88977;stroke-dashoffset:0;stroke-opacity:1"
        d="m 14.636541,122.68181 c -2.439347,2.4395 -4.8786824,4.8789 -7.3180302,7.31839"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path178"
+       id="path180"
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.88977;stroke-miterlimit:4;stroke-dasharray:3.77953, 1.88977;stroke-dashoffset:0;stroke-opacity:1"
        d="M 7.3181208,130.0002 C 4.8787739,127.56071 2.439427,125.12131 8e-5,122.68181"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path179"
+       id="path181"
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.88977;stroke-miterlimit:4;stroke-dasharray:3.77953, 1.88977;stroke-dashoffset:0;stroke-opacity:1"
        d="m 4.7e-4,122.68271 c 2.439347,-2.43949 4.8786939,-4.87889 7.3180408,-7.31839"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path180"
+       id="path182"
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.88977;stroke-miterlimit:4;stroke-dasharray:3.77953, 1.88977;stroke-dashoffset:0;stroke-opacity:1"
        d="m 7.3188908,115.36332 c 2.4393478,-2.43949 4.8786932,-4.87899 7.3180402,-7.31849"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path181"
+       id="path183"
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.88977;stroke-miterlimit:4;stroke-dasharray:3.77953, 1.88977;stroke-dashoffset:0;stroke-opacity:1"
        d="m 14.637031,108.04483 c 2.439347,2.4395 4.878684,4.879 7.318031,7.31849"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path182"
+       id="path184"
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.88977;stroke-miterlimit:4;stroke-dasharray:3.77953, 1.88977;stroke-dashoffset:0;stroke-opacity:1"
        d="m 21.955452,115.36332 c 2.439367,2.4395 4.878724,4.879 7.318081,7.31849"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path183"
+       id="path185"
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.88977;stroke-miterlimit:4;stroke-dasharray:3.77953, 1.88977;stroke-dashoffset:0;stroke-opacity:1"
        d="m 29.273973,122.68181 c 1.166038,1.1661 2.433634,2.43387 3.599663,3.60007"
        inkstitch:repeats="3"
@@ -23908,7 +23948,7 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkstitch:ties="3"
        sodipodi:nodetypes="cc" />
     <path
-       id="path184"
+       id="path186"
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.88977;stroke-miterlimit:4;stroke-dasharray:3.77953, 1.88977;stroke-dashoffset:0;stroke-opacity:1"
        d="m 36.592014,130.0002 c -1.202799,-1.20279 -2.405597,-2.40559 -3.608386,-3.60839"
        inkstitch:repeats="3"
@@ -23923,7 +23963,7 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkstitch:ties="3"
        sodipodi:nodetypes="cc" />
     <path
-       id="path185"
+       id="path188"
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.88977;stroke-miterlimit:4;stroke-dasharray:3.77953, 1.88977;stroke-dashoffset:0;stroke-opacity:1"
        d="M 36.592014,122.68181 C 35.318715,123.95521 30.547221,128.7265 29.273923,130"
        inkstitch:repeats="3"
@@ -23939,7 +23979,7 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkstitch:ties="3"
        sodipodi:nodetypes="cc" />
     <path
-       id="path186"
+       id="path189"
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.88977;stroke-miterlimit:4;stroke-dasharray:3.77953, 1.88977;stroke-dashoffset:0;stroke-opacity:1"
        d="M 32.938261,126.33479 36.591964,130"
        inkstitch:repeats="3"
@@ -23954,7 +23994,7 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
      style="display:none"
      id="g3102">
     <path
-       id="path188"
+       id="path190"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.944881;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944881;stroke-dashoffset:0;stroke-opacity:1"
        d="m 15.118318,130.00001 3.831707,-3.80549"
        inkstitch:repeats="3"
@@ -24003,7 +24043,7 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkstitch:ties="3"
        sodipodi:nodetypes="cc" />
     <path
-       id="path189"
+       id="path191"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.944881;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944881;stroke-dashoffset:0;stroke-opacity:1"
        d="m 37.795394,99.971453 c -2.519576,2.502427 -5.039152,5.004847 -7.558727,7.507257"
        inkstitch:repeats="3"
@@ -24011,7 +24051,7 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkstitch:ties="3"
        sodipodi:nodetypes="cc" />
     <path
-       id="path190"
+       id="path192"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.944881;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944881;stroke-dashoffset:0;stroke-opacity:1"
        d="m 30.236677,107.47912 c 2.519565,2.50235 5.039141,5.0047 7.558717,7.50705"
        inkstitch:repeats="3"
@@ -24019,7 +24059,7 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkstitch:ties="3"
        sodipodi:nodetypes="cc" />
     <path
-       id="path191"
+       id="path193"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.944881;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944881;stroke-dashoffset:0;stroke-opacity:1"
        d="m 37.795383,114.98623 c -2.519565,2.50236 -5.039141,5.00473 -7.558716,7.5071"
        inkstitch:repeats="3"
@@ -24027,7 +24067,7 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkstitch:ties="3"
        sodipodi:nodetypes="cc" />
     <path
-       id="path192"
+       id="path194"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.944881;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944881;stroke-dashoffset:0;stroke-opacity:1"
        d="m 30.23622,122.49294 c -2.519565,2.50236 -5.039131,5.00471 -7.558696,7.50707"
        inkstitch:repeats="3"
@@ -24035,7 +24075,7 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkstitch:ties="3"
        sodipodi:nodetypes="cc" />
     <path
-       id="path193"
+       id="path195"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.944881;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944881;stroke-dashoffset:0;stroke-opacity:1"
        d="m 22.677024,130.00001 -3.945453,-3.9185"
        inkstitch:repeats="3"
@@ -24099,7 +24139,7 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkstitch:ties="3"
        sodipodi:nodetypes="cc" />
     <path
-       id="path194"
+       id="path196"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.944881;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944881;stroke-dashoffset:0;stroke-opacity:1"
        d="M 1.2908106e-6,77.450274 C 2.5195664,79.952633 5.0391421,82.454982 7.5587072,84.957342"
        inkstitch:repeats="3"
@@ -24115,7 +24155,7 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkstitch:ties="3"
        sodipodi:nodetypes="cc" />
     <path
-       id="path195"
+       id="path197"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.944881;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944881;stroke-dashoffset:0;stroke-opacity:1"
        d="m 15.117914,77.450274 c -2.519566,2.502359 -5.039142,5.004708 -7.5587064,7.507065"
        inkstitch:repeats="3"
@@ -24123,7 +24163,7 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkstitch:ties="3"
        sodipodi:nodetypes="cc" />
     <path
-       id="path196"
+       id="path198"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.944881;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944881;stroke-dashoffset:0;stroke-opacity:1"
        d="m 7.5592076,84.957339 c 2.5195644,2.502361 5.0391404,5.00471 7.5587064,7.507069"
        inkstitch:repeats="3"
@@ -24147,7 +24187,7 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkstitch:ties="3"
        sodipodi:nodetypes="cc" />
     <path
-       id="path197"
+       id="path199"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.944881;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944881;stroke-dashoffset:0;stroke-opacity:1"
        d="m 30.23622,92.464909 c -1.242351,1.233791 -2.484691,2.467596 -3.727042,3.701387"
        inkstitch:repeats="3"
@@ -24187,7 +24227,7 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkstitch:ties="3"
        sodipodi:nodetypes="cc" />
     <path
-       id="path198"
+       id="path200"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.944881;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944881;stroke-dashoffset:0;stroke-opacity:1"
        d="m 37.795394,122.49333 c -2.519576,-2.50234 -5.039152,-5.0047 -7.558717,-7.50705"
        inkstitch:repeats="3"
@@ -24195,7 +24235,7 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkstitch:ties="3"
        sodipodi:nodetypes="cc" />
     <path
-       id="path199"
+       id="path201"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.944881;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944881;stroke-dashoffset:0;stroke-opacity:1"
        d="m 30.236667,114.98617 c 2.519575,-2.50235 5.039141,-5.0047 7.558716,-7.50705"
        inkstitch:repeats="3"
@@ -24203,7 +24243,7 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkstitch:ties="3"
        sodipodi:nodetypes="cc" />
     <path
-       id="path200"
+       id="path202"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.944881;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944881;stroke-dashoffset:0;stroke-opacity:1"
        d="m 37.795394,107.47871 c -2.519576,-2.50241 -5.039152,-5.00483 -7.558717,-7.507257"
        inkstitch:repeats="3"
@@ -24211,7 +24251,7 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkstitch:ties="3"
        sodipodi:nodetypes="cc" />
     <path
-       id="path201"
+       id="path203"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.944881;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944881;stroke-dashoffset:0;stroke-opacity:1"
        d="M 30.23622,99.971453 C 28.921054,98.665505 27.605878,97.359547 26.290713,96.053578"
        inkstitch:repeats="3"
@@ -24267,7 +24307,7 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkstitch:ties="3"
        sodipodi:nodetypes="cc" />
     <path
-       id="path202"
+       id="path204"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.944881;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944881;stroke-dashoffset:0;stroke-opacity:1"
        d="M 1.2908106e-6,84.957339 C 2.5195664,82.45498 5.0391421,79.952631 7.5587072,77.450272"
        inkstitch:repeats="3"
@@ -24275,7 +24315,7 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkstitch:ties="3"
        sodipodi:nodetypes="cc" />
     <path
-       id="path203"
+       id="path205"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.944881;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944881;stroke-dashoffset:0;stroke-opacity:1"
        d="m 7.5592076,77.450274 c 2.5195644,2.502359 5.0391404,5.004708 7.5587064,7.507068"
        inkstitch:repeats="3"
@@ -24283,7 +24323,7 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkstitch:ties="3"
        sodipodi:nodetypes="cc" />
     <path
-       id="path204"
+       id="path206"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.944881;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944881;stroke-dashoffset:0;stroke-opacity:1"
        d="m 15.117914,84.957339 c -2.519566,2.502361 -5.039142,5.00471 -7.5587064,7.507069"
        inkstitch:repeats="3"
@@ -24291,7 +24331,7 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkstitch:ties="3"
        sodipodi:nodetypes="cc" />
     <path
-       id="path205"
+       id="path207"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.944881;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944881;stroke-dashoffset:0;stroke-opacity:1"
        d="m 7.5592076,92.464408 c 2.5195644,2.50236 5.0391404,5.004709 7.5587064,7.507045"
        inkstitch:repeats="3"
@@ -24323,7 +24363,7 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkstitch:ties="3"
        sodipodi:nodetypes="cc" />
     <path
-       id="path206"
+       id="path208"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.944881;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944881;stroke-dashoffset:0;stroke-opacity:1"
        d="m 7.5592076,122.49294 c 2.5195644,-2.50237 5.0391404,-5.00474 7.5587064,-7.50711"
        inkstitch:repeats="3"
@@ -24331,7 +24371,7 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkstitch:ties="3"
        sodipodi:nodetypes="cc" />
     <path
-       id="path207"
+       id="path209"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.944881;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944881;stroke-dashoffset:0;stroke-opacity:1"
        d="m 15.117914,114.98578 c -2.519566,-2.50235 -5.039142,-5.00471 -7.5587064,-7.50707"
        inkstitch:repeats="3"
@@ -24339,7 +24379,7 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkstitch:ties="3"
        sodipodi:nodetypes="cc" />
     <path
-       id="path208"
+       id="path210"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.944881;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944881;stroke-dashoffset:0;stroke-opacity:1"
        d="m 7.5592076,107.47871 c 2.5195644,-2.50241 5.0391404,-5.00483 7.5587064,-7.507257"
        inkstitch:repeats="3"
@@ -24347,7 +24387,7 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkstitch:ties="3"
        sodipodi:nodetypes="cc" />
     <path
-       id="path209"
+       id="path211"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.944881;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944881;stroke-dashoffset:0;stroke-opacity:1"
        d="m 15.118318,99.971453 c 2.519565,-2.502336 5.039141,-5.004685 7.558706,-7.507045"
        inkstitch:repeats="3"
@@ -24355,7 +24395,7 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkstitch:ties="3"
        sodipodi:nodetypes="cc" />
     <path
-       id="path210"
+       id="path212"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.944881;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944881;stroke-dashoffset:0;stroke-opacity:1"
        d="m 22.677524,92.465408 c 1.2044,1.196056 2.408789,2.392112 3.613189,3.588169"
        inkstitch:repeats="3"
@@ -24363,7 +24403,7 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkstitch:ties="3"
        sodipodi:nodetypes="cc" />
     <path
-       id="path211"
+       id="path213"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.944881;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944881;stroke-dashoffset:0;stroke-opacity:1"
        d="m 26.509178,96.166296 c -1.277214,1.268401 -2.554429,2.536779 -3.831654,3.805157"
        inkstitch:repeats="3"
@@ -24371,7 +24411,7 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkstitch:ties="3"
        sodipodi:nodetypes="cc" />
     <path
-       id="path212"
+       id="path214"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.944881;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944881;stroke-dashoffset:0;stroke-opacity:1"
        d="M 22.677024,99.971453 C 20.157459,97.469117 17.637883,94.966768 15.118318,92.464408"
        inkstitch:repeats="3"
@@ -24379,7 +24419,7 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkstitch:ties="3"
        sodipodi:nodetypes="cc" />
     <path
-       id="path213"
+       id="path215"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.944881;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944881;stroke-dashoffset:0;stroke-opacity:1"
        d="m 15.117914,92.464408 c -2.519566,2.50236 -5.039142,5.004709 -7.5587064,7.507045"
        inkstitch:repeats="3"
@@ -24387,7 +24427,7 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkstitch:ties="3"
        sodipodi:nodetypes="cc" />
     <path
-       id="path214"
+       id="path216"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.944881;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944881;stroke-dashoffset:0;stroke-opacity:1"
        d="m 7.5592076,99.971453 c 2.5195644,2.502427 5.0391404,5.004847 7.5587064,7.507257"
        inkstitch:repeats="3"
@@ -24395,7 +24435,7 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkstitch:ties="3"
        sodipodi:nodetypes="cc" />
     <path
-       id="path215"
+       id="path217"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.944881;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944881;stroke-dashoffset:0;stroke-opacity:1"
        d="m 15.117914,107.47871 c -2.519566,2.50236 -5.039142,5.00472 -7.5587064,7.50707"
        inkstitch:repeats="3"
@@ -24403,7 +24443,7 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkstitch:ties="3"
        sodipodi:nodetypes="cc" />
     <path
-       id="path216"
+       id="path218"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.944881;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944881;stroke-dashoffset:0;stroke-opacity:1"
        d="m 7.5592076,114.98587 c 2.5195644,2.50236 5.0391404,5.00472 7.5587064,7.50707"
        inkstitch:repeats="3"
@@ -24411,7 +24451,7 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkstitch:ties="3"
        sodipodi:nodetypes="cc" />
     <path
-       id="path217"
+       id="path219"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.944881;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944881;stroke-dashoffset:0;stroke-opacity:1"
        d="m 15.118318,122.49294 c 1.204421,1.19619 2.408832,2.39238 3.613253,3.58857"
        inkstitch:repeats="3"
@@ -24419,7 +24459,7 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkstitch:ties="3"
        sodipodi:nodetypes="cc" />
     <path
-       id="path218"
+       id="path220"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.944881;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944881;stroke-dashoffset:0;stroke-opacity:1"
        d="m 18.950025,126.19452 c 1.24233,-1.23385 2.48467,-2.46772 3.726999,-3.70158"
        inkstitch:repeats="3"
@@ -24427,7 +24467,7 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkstitch:ties="3"
        sodipodi:nodetypes="cc" />
     <path
-       id="path219"
+       id="path221"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.944881;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944881;stroke-dashoffset:0;stroke-opacity:1"
        d="m 22.677524,122.49294 c 2.519565,2.50236 5.039131,5.00471 7.558696,7.50707"
        inkstitch:repeats="3"
@@ -24817,7 +24857,7 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
      style="display:inline"
      id="g3110">
     <path
-       id="path220"
+       id="path222"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0"
        d="m 7.3591514,130 7.3043696,-7.37739"
        inkstitch:repeats="3"
@@ -24825,7 +24865,7 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkstitch:ties="1"
        inkstitch:force_lock_stitches="True" />
     <path
-       id="path221"
+       id="path223"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0"
        d="m 14.663618,122.62261 3.491677,3.5262"
        inkstitch:repeats="3"
@@ -24839,7 +24879,7 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3" />
     <path
-       id="path222"
+       id="path224"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0"
        d="m 21.968085,130 -3.81279,-3.85119"
        inkstitch:repeats="3"
@@ -24881,63 +24921,63 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkscape:label="Points droits pour auto-remplissage satin 9"
        inkstitch:ties="3" />
     <path
-       id="path223"
+       id="path225"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0"
        d="m 0.05461662,100.49044 7.30443778,7.37739"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path224"
+       id="path226"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0"
        d="m 7.3590544,107.86783 -7.30444778,7.37739"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path225"
+       id="path227"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0"
        d="m 0.05461662,115.24522 7.30443778,7.37739"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path226"
+       id="path228"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0"
        d="M 7.3591514,122.62261 14.663521,130"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path227"
+       id="path229"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0"
        d="m 14.663618,130 7.304467,-7.37739"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path228"
+       id="path230"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0"
        d="m 21.968181,122.62261 7.304371,-7.37739"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path229"
+       id="path231"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0"
        d="m 29.272552,115.24522 -7.304371,-7.37739"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path230"
+       id="path232"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0"
        d="m 21.968181,107.86783 7.304371,-7.37739"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path231"
+       id="path233"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0"
        d="M 29.272552,100.48954 21.968181,93.112148"
        inkstitch:repeats="3"
@@ -24965,28 +25005,28 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkscape:label="Points droits pour auto-remplissage satin 21"
        inkstitch:ties="3" />
     <path
-       id="path232"
+       id="path234"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0"
        d="m 14.663618,85.735657 7.304467,-7.378291"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path233"
+       id="path235"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0"
        d="m 21.968181,78.357366 7.304371,7.378291"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path234"
+       id="path236"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0"
        d="m 29.272552,85.734757 -7.304371,7.377391"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path235"
+       id="path237"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0"
        d="M 21.968085,93.112648 18.366583,96.75004"
        inkstitch:repeats="3"
@@ -25007,14 +25047,14 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkscape:label="Points droits pour auto-remplissage satin 27"
        inkstitch:ties="3" />
     <path
-       id="path236"
+       id="path238"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0"
        d="m 7.3591514,93.113048 7.3043696,7.377392"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path237"
+       id="path239"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0"
        d="m 14.663618,100.49044 3.702965,-3.7404"
        inkstitch:repeats="3"
@@ -25056,35 +25096,35 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkscape:label="Points droits pour auto-remplissage satin 34"
        inkstitch:ties="3" />
     <path
-       id="path238"
+       id="path240"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0"
        d="M 0.05459662,122.62261 7.3590544,115.24522"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path239"
+       id="path241"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0"
        d="M 7.3590544,115.24522 0.05461662,107.86783"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path240"
+       id="path242"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0"
        d="M 0.05459662,107.86783 7.3590544,100.49044"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path241"
+       id="path243"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0"
        d="M 7.3591514,100.49044 14.663521,93.112648"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path242"
+       id="path244"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0"
        d="m 14.663618,93.113048 7.304467,7.377392"
        inkstitch:repeats="3"
@@ -25112,7 +25152,7 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkscape:label="Points droits pour auto-remplissage satin 42"
        inkstitch:ties="3" />
     <path
-       id="path243"
+       id="path245"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0"
        d="m 14.663618,78.357366 7.304467,7.378291"
        inkstitch:repeats="3"
@@ -25126,49 +25166,49 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkscape:label="Points droits pour auto-remplissage satin 44"
        inkstitch:ties="3" />
     <path
-       id="path244"
+       id="path246"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0"
        d="m 29.272552,78.357366 -7.304371,7.378291"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path245"
+       id="path247"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0"
        d="m 21.968181,85.734757 7.304371,7.377391"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path246"
+       id="path248"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0"
        d="m 29.272552,93.112148 -7.304371,7.377392"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path247"
+       id="path249"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0"
        d="m 21.968181,100.49044 7.304371,7.37739"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path248"
+       id="path250"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0"
        d="m 29.272552,107.86783 -7.304371,7.37739"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path249"
+       id="path251"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0"
        d="m 21.968181,115.24522 7.304371,7.37739"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path250"
+       id="path252"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0"
        d="m 29.272745,122.62261 3.70287,3.6375"
        inkstitch:repeats="3"
@@ -25183,7 +25223,7 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkscape:label="Points droits pour auto-remplissage satin 52"
        inkstitch:ties="3" />
     <path
-       id="path251"
+       id="path254"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0"
        d="m 36.577115,122.62261 -3.6015,3.6375"
        inkstitch:repeats="3"
@@ -25197,14 +25237,14 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkscape:label="Points droits pour auto-remplissage satin 54"
        inkstitch:ties="3" />
     <path
-       id="path252"
+       id="path1604"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0"
        d="m 29.272648,130 3.702967,-3.73989"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path254"
+       id="path1605"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0"
        d="M 32.975615,126.26011 36.577115,130"
        inkstitch:repeats="3"
@@ -25242,21 +25282,21 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3" />
     <path
-       id="path1604"
+       id="path1606"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.118106, 0.118106;stroke-dashoffset:0;stroke-opacity:1"
        d="m 28.870473,122.72031 -7.152723,7.28002"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path1605"
+       id="path1607"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.118106, 0.118106;stroke-dashoffset:0;stroke-opacity:1"
        d="m 21.71775,130.00042 -7.152683,-7.27999"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path1606"
+       id="path1608"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.118106, 0.118106;stroke-dashoffset:0;stroke-opacity:1"
        d="M 14.565052,122.7204 11.0382,126.31001"
        inkstitch:repeats="3"
@@ -25270,7 +25310,7 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkscape:label="Points droits pour auto-remplissage satin 7"
        inkstitch:ties="3" />
     <path
-       id="path1607"
+       id="path1609"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.118106, 0.118106;stroke-dashoffset:0;stroke-opacity:1"
        d="M 7.4123261,130.00042 11.0382,126.31001"
        inkstitch:repeats="3"
@@ -25333,14 +25373,14 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkscape:label="Points droits pour auto-remplissage satin 16"
        inkstitch:ties="3" />
     <path
-       id="path1608"
+       id="path1610"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.118106, 0.118106;stroke-dashoffset:0;stroke-opacity:1"
        d="m 21.71794,100.88039 7.152722,7.2799"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path1609"
+       id="path1611"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.118106, 0.118106;stroke-dashoffset:0;stroke-opacity:1"
        d="m 28.870567,108.16034 -3.526869,3.58958"
        inkstitch:repeats="3"
@@ -25375,7 +25415,7 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkscape:label="Points droits pour auto-remplissage satin 22"
        inkstitch:ties="3" />
     <path
-       id="path1610"
+       id="path1612"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.118106, 0.118106;stroke-dashoffset:0;stroke-opacity:1"
        d="M 0.25958589,122.72042 7.4123261,115.44044"
        inkstitch:repeats="3"
@@ -25417,7 +25457,7 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkscape:label="Points droits pour auto-remplissage satin 28"
        inkstitch:ties="3" />
     <path
-       id="path1611"
+       id="path1613"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.118106, 0.118106;stroke-dashoffset:0;stroke-opacity:1"
        d="m 21.717845,93.600437 -3.526826,3.589582"
        inkstitch:repeats="3"
@@ -25438,14 +25478,14 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkscape:label="Points droits pour auto-remplissage satin 31"
        inkstitch:ties="3" />
     <path
-       id="path1612"
+       id="path1614"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.118106, 0.118106;stroke-dashoffset:0;stroke-opacity:1"
        d="m 7.4124397,93.600485 7.1527123,7.279905"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path1613"
+       id="path1615"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.118106, 0.118106;stroke-dashoffset:0;stroke-opacity:1"
        d="m 14.565146,100.88039 3.625873,-3.690371"
        inkstitch:repeats="3"
@@ -25459,49 +25499,49 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkscape:label="Points droits pour auto-remplissage satin 34"
        inkstitch:ties="3" />
     <path
-       id="path1614"
+       id="path1616"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.118106, 0.118106;stroke-dashoffset:0;stroke-opacity:1"
        d="M 21.717845,100.88039 14.565161,93.600485"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path1615"
+       id="path1617"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.118106, 0.118106;stroke-dashoffset:0;stroke-opacity:1"
        d="M 14.565146,93.600437 7.4124294,100.88039"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path1616"
+       id="path1618"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.118106, 0.118106;stroke-dashoffset:0;stroke-opacity:1"
        d="m 7.4124294,100.88044 -7.15275051,7.27995"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path1617"
+       id="path1619"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.118106, 0.118106;stroke-dashoffset:0;stroke-opacity:1"
        d="m 0.25967889,108.16048 7.15275051,7.2799"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path1618"
+       id="path1620"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.118106, 0.118106;stroke-dashoffset:0;stroke-opacity:1"
        d="m 7.4124294,115.44038 7.1527166,-7.27994"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path1619"
+       id="path1621"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.118106, 0.118106;stroke-dashoffset:0;stroke-opacity:1"
        d="m 14.565161,108.16039 7.152684,7.2799"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path1620"
+       id="path1622"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.118106, 0.118106;stroke-dashoffset:0;stroke-opacity:1"
        d="m 21.717845,115.44029 3.625853,-3.69037"
        inkstitch:repeats="3"
@@ -25515,7 +25555,7 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkscape:label="Points droits pour auto-remplissage satin 42"
        inkstitch:ties="3" />
     <path
-       id="path1621"
+       id="path1623"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.118106, 0.118106;stroke-dashoffset:0;stroke-opacity:1"
        d="m 28.870567,115.44029 -7.152722,-7.2799"
        inkstitch:repeats="3"
@@ -25529,21 +25569,21 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkscape:label="Points droits pour auto-remplissage satin 44"
        inkstitch:ties="3" />
     <path
-       id="path1622"
+       id="path1624"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.118106, 0.118106;stroke-dashoffset:0;stroke-opacity:1"
        d="m 28.870662,100.88034 -7.152722,7.27995"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path1623"
+       id="path1625"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.118106, 0.118106;stroke-dashoffset:0;stroke-opacity:1"
        d="m 21.717845,108.16034 -7.152699,7.27995"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path1624"
+       id="path1626"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.118106, 0.118106;stroke-dashoffset:0;stroke-opacity:1"
        d="m 14.565152,115.44038 -7.1527123,-7.2799"
        inkstitch:repeats="3"
@@ -25557,42 +25597,42 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkscape:label="Points droits pour auto-remplissage satin 48"
        inkstitch:ties="3" />
     <path
-       id="path1625"
+       id="path1627"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.118106, 0.118106;stroke-dashoffset:0;stroke-opacity:1"
        d="m 0.25967889,100.88048 7.15275051,7.27991"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path1626"
+       id="path1628"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.118106, 0.118106;stroke-dashoffset:0;stroke-opacity:1"
        d="m 7.4124294,108.16044 -7.15275051,7.27994"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path1627"
+       id="path1629"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.118106, 0.118106;stroke-dashoffset:0;stroke-opacity:1"
        d="m 0.25958589,115.44049 7.15275051,7.27993"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path1628"
+       id="path1630"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.118106, 0.118106;stroke-dashoffset:0;stroke-opacity:1"
        d="m 7.4123468,122.72043 7.1527092,7.27999"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path1629"
+       id="path1631"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.118106, 0.118106;stroke-dashoffset:0;stroke-opacity:1"
        d="M 14.565052,130.00042 21.71775,122.7204"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path1630"
+       id="path1632"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.118106, 0.118106;stroke-dashoffset:0;stroke-opacity:1"
        d="m 21.71775,122.72034 7.152723,7.27999"
        inkstitch:repeats="3"
@@ -25607,7 +25647,7 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
      style="display:none"
      id="g3118">
     <path
-       id="path1631"
+       id="path1633"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0;stroke-opacity:1"
        d="M 8.1134589e-4,130.00076 7.2547116,122.53994"
        inkstitch:repeats="3"
@@ -25650,7 +25690,7 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkscape:label="Points droits pour auto-remplissage satin 6"
        inkstitch:ties="3" />
     <path
-       id="path1632"
+       id="path1634"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0;stroke-opacity:1"
        d="M 8.1134589e-4,100.1574 7.2547116,92.696614"
        inkstitch:repeats="3"
@@ -25685,7 +25725,7 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkscape:label="Points droits pour auto-remplissage satin 11"
        inkstitch:ties="3" />
     <path
-       id="path1633"
+       id="path1635"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0;stroke-opacity:1"
        d="m 29.016373,77.774852 -3.576707,3.678743"
        inkstitch:repeats="3"
@@ -25706,14 +25746,14 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkscape:label="Points droits pour auto-remplissage satin 14"
        inkstitch:ties="3" />
     <path
-       id="path1634"
+       id="path1636"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0;stroke-opacity:1"
        d="m 14.508612,77.774904 7.253866,7.460729"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path1635"
+       id="path1637"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0;stroke-opacity:1"
        d="m 21.762478,85.235633 3.677188,-3.782038"
        inkstitch:repeats="3"
@@ -25727,28 +25767,28 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkscape:label="Points droits pour auto-remplissage satin 17"
        inkstitch:ties="3" />
     <path
-       id="path1636"
+       id="path1638"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0;stroke-opacity:1"
        d="m 29.016373,85.235633 -7.2538,-7.460729"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path1637"
+       id="path1639"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0;stroke-opacity:1"
        d="m 21.762478,77.774852 -7.253876,7.460781"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path1638"
+       id="path1640"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0;stroke-opacity:1"
        d="M 14.508607,85.235778 7.2547137,92.696564"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path1639"
+       id="path1641"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0;stroke-opacity:1"
        d="M 7.2547262,92.696664 14.508612,100.1574"
        inkstitch:repeats="3"
@@ -25762,42 +25802,42 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkscape:label="Points droits pour auto-remplissage satin 22"
        inkstitch:ties="3" />
     <path
-       id="path1640"
+       id="path1642"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0;stroke-opacity:1"
        d="m 21.762478,92.696515 -7.253886,7.460775"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path1641"
+       id="path1643"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0;stroke-opacity:1"
        d="m 14.508607,100.15735 -7.2538933,7.46078"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path1642"
+       id="path1644"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0;stroke-opacity:1"
        d="m 7.2547262,107.61823 7.2538858,7.46073"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path1643"
+       id="path1645"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0;stroke-opacity:1"
        d="m 14.508607,115.07911 -7.2538933,7.46078"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path1644"
+       id="path1646"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0;stroke-opacity:1"
        d="m 7.2547262,122.53999 7.2538858,7.46077"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path1645"
+       id="path1647"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0;stroke-opacity:1"
        d="m 14.509451,130.00076 3.677135,-3.78209"
        inkstitch:repeats="3"
@@ -25811,7 +25851,7 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkscape:label="Points droits pour auto-remplissage satin 29"
        inkstitch:ties="3" />
     <path
-       id="path1646"
+       id="path1648"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0;stroke-opacity:1"
        d="m 21.763342,122.53994 -3.576756,3.67873"
        inkstitch:repeats="3"
@@ -25839,14 +25879,14 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkscape:label="Points droits pour auto-remplissage satin 33"
        inkstitch:ties="3" />
     <path
-       id="path1647"
+       id="path1649"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0;stroke-opacity:1"
        d="M 8.3107642e-4,122.53999 7.2547168,130.00076"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path1648"
+       id="path1650"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0;stroke-opacity:1"
        d="m 7.2547096,130.00076 7.2538974,-7.46082"
        inkstitch:repeats="3"
@@ -25881,7 +25921,7 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkscape:label="Points droits pour auto-remplissage satin 39"
        inkstitch:ties="3" />
     <path
-       id="path1649"
+       id="path1651"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0;stroke-opacity:1"
        d="M 8.3107642e-4,92.696664 7.2547168,100.1574"
        inkstitch:repeats="3"
@@ -25902,7 +25942,7 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkscape:label="Points droits pour auto-remplissage satin 42"
        inkstitch:ties="3" />
     <path
-       id="path1650"
+       id="path1652"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0;stroke-opacity:1"
        d="m 7.2547262,85.23583 7.2538858,7.460734"
        inkstitch:repeats="3"
@@ -25916,42 +25956,42 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkscape:label="Points droits pour auto-remplissage satin 44"
        inkstitch:ties="3" />
     <path
-       id="path1651"
+       id="path1653"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0;stroke-opacity:1"
        d="M 21.762478,100.15729 14.508602,92.696564"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path1652"
+       id="path1654"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0;stroke-opacity:1"
        d="M 14.508607,92.696614 7.2547137,100.1574"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path1653"
+       id="path1655"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0;stroke-opacity:1"
        d="m 7.2547262,100.1574 7.2538858,7.46073"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path1654"
+       id="path1656"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0;stroke-opacity:1"
        d="m 14.508607,107.61818 -7.2538933,7.46078"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path1655"
+       id="path1657"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0;stroke-opacity:1"
        d="m 7.2547262,115.07916 7.2538858,7.46073"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path1656"
+       id="path1658"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0;stroke-opacity:1"
        d="m 14.509466,122.53999 7.253876,7.46077"
        inkstitch:repeats="3"
@@ -25965,7 +26005,7 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
      style="display:none"
      id="g3122">
     <path
-       id="path1657"
+       id="path1659"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0;stroke-opacity:1"
        d="m 0.00944744,129.97197 3.62318046,-3.6981"
        inkstitch:repeats="3"
@@ -26029,42 +26069,42 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkscape:label="Points droits pour auto-remplissage satin 9"
        inkstitch:ties="3" />
     <path
-       id="path1658"
+       id="path1660"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0;stroke-opacity:1"
        d="M 0.00954756,115.3815 7.156953,108.08631"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path1659"
+       id="path1661"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0;stroke-opacity:1"
        d="M 7.156958,108.08627 0.00955758,100.79113"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path1660"
+       id="path1662"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0;stroke-opacity:1"
        d="M 0.00954756,100.79104 7.156953,93.495849"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path1661"
+       id="path1663"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0;stroke-opacity:1"
        d="m 7.1570621,93.495809 7.1473669,7.295131"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path1662"
+       id="path1664"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0;stroke-opacity:1"
        d="m 14.304429,100.79104 7.147405,7.29513"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path1663"
+       id="path1665"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0;stroke-opacity:1"
        d="m 21.45174,108.08631 -3.524248,3.5971"
        inkstitch:repeats="3"
@@ -26113,7 +26153,7 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkscape:label="Points droits pour auto-remplissage satin 21"
        inkstitch:ties="3" />
     <path
-       id="path1664"
+       id="path1666"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0;stroke-opacity:1"
        d="M 14.304429,93.495759 7.1570481,100.79094"
        inkstitch:repeats="3"
@@ -26127,42 +26167,42 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
        inkscape:label="Points droits pour auto-remplissage satin 23"
        inkstitch:ties="3" />
     <path
-       id="path1665"
+       id="path1667"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0;stroke-opacity:1"
        d="M 0.00955758,93.4959 7.156958,100.79104"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path1666"
+       id="path1668"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0;stroke-opacity:1"
        d="m 7.156953,100.79108 -7.14740544,7.29519"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path1667"
+       id="path1669"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0;stroke-opacity:1"
        d="M 0.00955758,108.08636 7.156958,115.3815"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path1668"
+       id="path1670"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0;stroke-opacity:1"
        d="m 7.156968,115.3816 7.147366,7.29514"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path1669"
+       id="path1671"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0;stroke-opacity:1"
        d="M 14.304334,122.67664 21.45174,115.3815"
        inkstitch:repeats="3"
        inkstitch:running_stitch_length_mm="30"
        inkstitch:ties="3" />
     <path
-       id="path1670"
+       id="path1672"
        style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:2.83465, 0.944882;stroke-dashoffset:0;stroke-opacity:1"
        d="m 21.45174,115.3815 -3.730814,-3.80792"
        inkstitch:repeats="3"
@@ -43603,7 +43643,8 @@ Created by FontForge 20200314 at Fri Apr 15 19:56:02 2022
      inkscape:label="GlyphLayer-Í"
      style="display:none;fill:none;stroke:#000000;stroke-width:1.00157;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      id="g3390"
-     inkscape:groupmode="layer">
+     inkscape:groupmode="layer"
+     >
     <path
        id="path777-7"
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.00157;stroke-miterlimit:4;stroke-dasharray:3.00472, 1.00157;stroke-dashoffset:0;stroke-opacity:1"
