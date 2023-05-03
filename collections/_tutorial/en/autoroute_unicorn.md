@@ -7,6 +7,8 @@ excerpt: "Auto-route running stitch Unicorn"
 image: "/assets/images/tutorials/tutorial-preview-images/autoroute_unicorn.jpg"
 tutorial-type:
   - Sample File
+tool:
+  - "Stroke" 
 stitch-type:
   - "Bean Stitch"
   - "Running Stitch"
