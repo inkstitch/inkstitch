@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2023-05-02 01:15+0000\n"
-"PO-Revision-Date: 2023-05-02 01:17\n"
+"PO-Revision-Date: 2023-05-03 01:18\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -921,7 +921,7 @@ msgstr "Position de fin de remplissage"
 #. command attached to an object
 #: lib/commands.py:30 inx/inkstitch_object_commands.inx:6
 msgid "Target position"
-msgstr ""
+msgstr "Position de la cible"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
@@ -2433,11 +2433,11 @@ msgstr "Erreur : Le texte ne peut pas être appliqué au document.\n"
 
 #: lib/extensions/lettering.py:405
 msgid "Filter"
-msgstr ""
+msgstr "Filtrer"
 
 #: lib/extensions/lettering.py:417
 msgid "Add trims"
-msgstr ""
+msgstr "Ajouter coupes"
 
 #: lib/extensions/lettering.py:423 print/templates/ui_svg_action_buttons.html:1
 msgid "Scale"
@@ -2639,7 +2639,7 @@ msgstr "Il est possible qu'un objet contienne plus d'une erreur, même s'il n'y 
 
 #: lib/extensions/update_svg.py:23
 msgid "Please select at least one element to update. This extension is designed to help you update copy and pasted elements from old designs."
-msgstr ""
+msgstr "Merci de sélectionner au moins un élément à mettre à jour. Cette extension est prévue pour vous aider à copier/coller des éléments d'anciens dessins."
 
 #: lib/extensions/zip.py:63
 msgid "threadlist"
@@ -5675,23 +5675,23 @@ msgstr "Taille de la fonte (mm)"
 
 #: inx/inkstitch_update_svg.inx:3
 msgid "Update inkstitch svg"
-msgstr ""
+msgstr "Mettre à jour le svg d'Inkstich"
 
 #: inx/inkstitch_update_svg.inx:14
 msgid "Usually there is no need to run this extension: Ink/Stitch automatically updates old designs once."
-msgstr ""
+msgstr "En général il n'est pas besoin d'utiliser cette extension : Ink/Stitch mets à jour automatiquement les anciennes conceptions."
 
 #: inx/inkstitch_update_svg.inx:16
 msgid "However, when you copy and paste parts from old files into a new design, you may see for example, that a former contour fill renders as a standard fill, etc."
-msgstr ""
+msgstr "Toutefois, lorsque vous copiez/collez à partir d'anciens fichiers, vous pouvez par exemple voir ce qui était un remplissage selon contour rendu comme un remplissage automatique, etc."
 
 #: inx/inkstitch_update_svg.inx:18
 msgid "Tipp: You can prevent inserting legacy designs into new files by running any Ink/Stitch extension before you copy the design parts (for example open and re-apply parameters on a single element in the document)."
-msgstr ""
+msgstr "Aide: vous pouvez évitez d'insérrer des parties à l'ancienne dans des nouveaux fichiers en exécutant n'importe qu'elle extension d'Ink/Stitch dans l'ancier fichier avant de copier les anciens éléments (par exemple ouvrir et reappliquer Paramètres sur un unique élément suffit à mettre le document à jour)."
 
 #: inx/inkstitch_update_svg.inx:20
 msgid "This extension only updates selected elements."
-msgstr ""
+msgstr "Cette extension ne mets à jour que les éléments sélectionnés."
 
 #: inx/inkstitch_zigzag_line_to_satin.inx:3
 msgid "Zig-Zag Line to Satin"
