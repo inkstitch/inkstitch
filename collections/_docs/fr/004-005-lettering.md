@@ -44,7 +44,7 @@ Les lettres d'ink/stitch ont été soigneusement dessinées pour une broderie op
 
 * Sélectionnez un chemin et un groupe de lettrage 
 * Exécutez `Extensions > Ink/Stitch > Lettrage le long d'un chemin ...`
-* If `Etendre` est coché Ink/Stitch va étendre les espaces entre les lettres pour que le texte utilise tout le chemin. Sinon il gardera les distances du texte original. 
+* Si `Etendre` est coché Ink/Stitch va étendre les espaces entre les lettres pour que le texte utilise tout le chemin. Sinon il gardera les distances du texte original. 
 * Cliquez sur 'Appliquer'
 
 
