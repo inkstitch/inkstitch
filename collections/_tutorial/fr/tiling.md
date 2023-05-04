@@ -25,6 +25,29 @@ les manipulations à faire pour obtenir une broderie sans sauts de fils. Deux te
 Une technique paresseuse très simple, mais va créer beaucoup de chemins de dessous. Ce n'est pas grave si l'on veut une broderie en point triple qui les camoufler  bien, mais si l'on veut utiliser une alternance de point simple et de point triple pour évoquer un point à la main, la deuxième technique qui ne générera pas de chemins de dessous est préférable
 
 ## Technique paresseuse
+### Étape 1 : Création du pavage
+Le pavage final ![tiles](/assets/images/tutorials/tiling/tiling_lazy.png) est constitué de copies de :
+![tile](/assets/images/tutorials/tiling/tile_lazy.svg)
+
+
+
+[Télécharger le dessin initial](/assets/images/tutorials/tiling/tile_lazy.svg)
+
+Tous les chemins doivent être groupés, et cet effet de chemin appliqué sur le groupe
+
+* ![LPE](/assets/images/tutorials/tiling/LPE_lazy.jpg)
+
+
+### Étape 2: Applatir et paramètrer
+* Applatir l'effet de chemin
+![Flatten](/assets/images/tutorials/tiling/Flaten_lazy.jpg)
+* Tout sélectionner
+* Extensions > Ink/Stitch > Paramètres 
+
+
+### Étape 3 : Agencement automatique de points droits
+* Tout sélectionner
+* Extensions > Ink/Stitch > Outils : Trait > Agencement automatique de points droits.
 
 
 ## Technique sans chemins de dessous
