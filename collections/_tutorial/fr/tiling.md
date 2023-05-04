@@ -79,7 +79,16 @@ Pour Vert et Rouge, sélectionnez les  noeuds  **superposés** à gauche et cliq
 
 Voici un résultat possible: 
 
- ![Two colors joined](/assets/images/tutorials/tiling/two_colors_joined.jpg)
+ ![Two colors joined](/assets/images/tutorials/tiling/joined_two_colors.jpg)
+ 
+ 
+## Étape 6: Séparer les chemins
+
+* Sélectionnez tous les chemins
+* Chemin > Séparer
+
+## Étape 7: Ordonner les chemins
+
  
  
 
