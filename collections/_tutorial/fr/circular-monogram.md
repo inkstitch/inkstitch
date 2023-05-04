@@ -35,7 +35,7 @@ Je suis partie de ces 4 chemins
 
 ![starting-points](/assets/images/tutorials/circular_monogram/starting-point.jpg)
 
- ## Lettres en broderie circulaire
+## Lettres en broderie circulaire
 
 C'est aussi simple que 
 
@@ -59,7 +59,7 @@ Pour obtenir des cercles tous centrés au même endroit, il suffit d'utiliser de
 mais seule la position du marqueur importe.
 *  Lancez une simulation et admirez le travail
  
- ## Bord satin
+## Bord satin
  
  Le 4 ième chemin est lui aussi un remplissage, pour le transformer en satin :
  
@@ -98,21 +98,3 @@ Avec toujours la bordure sélectionnée :
 L'effet des modifications se voient directement sur le canevas.
 
 La broderie est prête. Il est possible de garder l'effet de chemin pour des modifications ultérieures.
- 
-  
-
- 
- 
-
- 
- 
-  
-
-
-
-
-
-
-
-
-

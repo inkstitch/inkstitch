@@ -35,9 +35,9 @@ This was the starting point
 
 ![starting-points](/assets/images/tutorials/circular_monogram/starting-point.jpg)
 
- ## Circular Fill Letters
+## Circular Fill Letters
  
- If you used a system font, don't forget to convert the text into an object
+If you used a system font, don't forget to convert the text into an object
 
 Now you only need to:
 
@@ -61,9 +61,9 @@ To get all circles from all letters to share the same center, use target positio
 * On the canvas, move the 3 command symbols till their markers are overimposed.
 * Run Simulation and enjoy the result
  
- ## Satin Border
+## Satin Border
  
- The 4th path is also a fill , to turn it into a satin column :
+The 4th path is also a fill , to turn it into a satin column :
  
  
  * `Extensions > Ink/Stitch > Tools:Stroke > Fill to Stroke`
@@ -100,23 +100,3 @@ with the satin border still selected :
 Modification's effect  is immediatly seen on the canvas.
 
 Embroidery is  ready. You may keep the live path effect Satin for further modifications.
-
-
- 
-  
-
- 
- 
-
- 
- 
-  
-
-
-
-
-
-
-
-
-

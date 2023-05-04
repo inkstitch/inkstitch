@@ -1,9 +1,9 @@
 ---
 permalink: /de/tutorials/circular-monogram/
-title: "Circular Fill Monogram"
+title: "Monogramm mit Spiralfüllung"
 language: de
-last_modified_at: 2023-04-28
-excerpt: "Circular Fill Monogram"
+last_modified_at: 2023-05-04
+excerpt: "Monogramm mit Spiralfüllung"
 image: "/assets/images/tutorials/tutorial-preview-images/circular_monogram.jpg"
 tutorial-type:
 stitch-type:
@@ -18,105 +18,81 @@ user-level:
 
 {% include upcoming_release.html %}
 
-![Brodé](/assets/images/tutorials/tutorial-preview-images/circular_monogram.jpg)
+![Stickerei](/assets/images/tutorials/tutorial-preview-images/circular_monogram.jpg)
 
-This tutorial is not using Ink/Stich Lettering
+Dieses Tutorial bezieht sich nicht auf das Text-Werkzeug von Ink/Stitch
 {: .notice--info }
 
-This method does not allow for small letters (aiming to 5cm hight is good)
+Diese Methode kann nicht auf sehr kleine Buchstaben angewandt werden (bis zu 5 cm Höhe ist ok)
 {: .notice--warning }
 
-To create the starting paths you may either use one of the monogram fonts already installed on your computer, for example
-[this one](https://www.dafont.com/round-monogram.font), 
-or use one of the websites allowing you to create monogram such as 
-[that one](https://www.makemonogram.com/monogram-maker)
+Für einen schnellen Start können entweder bereits im PC installierte Monogramm-Schriftarten genutzt werden ([z.B. Round Monogram](https://www.dafont.com/round-monogram.font)),
+oder es kann ein Monogramm mit Hilfe von beispielsweise der Webseite [Makemonogram](https://www.makemonogram.com/monogram-maker) erstellt werden.
 
-This was the starting point
+In diesem Tutorial starten wir mit diesem Monogramm:
 
 ![starting-points](/assets/images/tutorials/circular_monogram/starting-point.jpg)
 
- ## Circular Fill Letters
+## Die Buchstaben mit einer Spirale füllen
  
- If you used a system font, don't forget to convert the text into an object
+Bei der Verwendung einer im System installierten Schrift, muss das Textobject zunächst in einen Pfad umgewandelt werden (`Umschalttaste + Strg +C)`
 
-Now you only need to:
+Dann führe der Reihe nach folgende Schritte durch:
 
-* Select the 3 paths that correspond to the 3 letters (they should be fill, no stroke)
-* `Extensions > Ink/Stitch > Params`
-* Chose Circular Fill as method
-  *  disable underpath
-  *  from the underlay tab, disable underlay
-  *  and chose your favorite parameters
+* Wähle die 3 Pfade für die Buchstaben (sie sollten eine Füllung und keine Kontur haben)
+* `Erweiterungen > Ink/Stitch > Params`
+* Wähle als Füllmethode `Spiralfüllung`
+  * Entferne das Häkchen von `Verbindungsstiche innerhalb des Objekts`
+  * Entferne die Unterlage
+  * Setze deine bevorzugten Parametereinstellungen
 
 ![parametres](/assets/images/tutorials/circular_monogram/parameters.jpg)
 
-Each letter is filled with circles centered on the letter own center.
+Jeder Buchstabe wird nun mit Kreisen rund um den eigenen Mittelpunkt gefüllt.
 
-To get all circles from all letters to share the same center, use target position:
+Um nun allen Kreisen den gleichen Mittelpunkt zu geben, muss eine Zielposition festgelegt werden:
 
+* Wähle alle 3 Buchstaben aus
+* `Erweiterungen > Ink/Stitch > Befehle > Befehle mit gewählten Objekten verknüpfen...`
+* Aus der Liste wähle den Befehl `Zielposition` und klicke auf Anwenden
+* Bewege die 3 Symbole nun alle auf die selbe Position
+* Überprüfe das Ergebnis mit der Simulation
 
-* Select all 3 letters and lower their opacity
-* `Extensions > Ink/Stitch > Commands > Add command to selected objects`
-* Chose "Target position" and Apply
-* On the canvas, move the 3 command symbols till their markers are overimposed.
-* Run Simulation and enjoy the result
- 
- ## Satin Border
- 
- The 4th path is also a fill , to turn it into a satin column :
- 
- 
- * `Extensions > Ink/Stitch > Tools:Stroke > Fill to Stroke`
- * Uncheck everything and Apply
+## Die Satinstich-Umrandung erstellen
+
+Der 4. Pfad ist ebenfalls eine Füllung, die wir wie folgt in eine Satinsäule umwandeln:
+
+* `Erweiterungen > Ink/Stitch > Werkzeuge: Linie > Füllung zu Linie` 
+* Deaktiviere die möglichen Optionen und klicke auf Anwenden
  
  ![after_fill_to_stroke](/assets/images/tutorials/circular_monogram/fill_to_stroke.jpg)
  
-  Select the newly created path
+  Wähle den neu erstellten Pfad aus
  
- * `Path> Simplify`
+ * `Pfad > Vereinfachen`
  
- * `Extensions > Ink/Stitch > Tools: Satin > Stroke to  Live Path Effect Satin`
+ * `Erweiterungen > Ink/Stitch > Werkzeuge: Satin > Linie zu Pfadeffekt-Satin...`
 
  ![satin_path_effet_before](/assets/images/tutorials/circular_monogram/satin_path_effect_before.jpg)
  
- * Apply
+ * Anwenden
  
   ![satin_path_effet_after](/assets/images/tutorials/circular_monogram/satin_path_effect_after.jpg)
   
-  * Close Stroke to Live path effect Satin
+  * Schließe das Dialog-Fenster
 
-To modify the satin pattern
+Nun kann das Satinmuster geändert werden:
 
-with the satin border still selected :
- 
- * Path> Path Effect
- * Click on  "Modify on canvas" in Pattern source
+* Wähle die Satinsäule aus
+* `Pfad > Pfadeffekte...`
+* Klicke auf `Auf der Arbeitsfläche bearbeiten` unter `Quelle des Musters`
 
  ![satin_path_effet_after](/assets/images/tutorials/circular_monogram/pattern_before.jpg)
- 
- * Modify the pattern: here one rail was flattend and width was increased.
-![satin_path_effet_after](/assets/images/tutorials/circular_monogram/pattern_after.jpg)
 
-Modification's effect  is immediatly seen on the canvas.
+* Modifiziere das Muster: hier wurde eine Außenlinie begradigt und die Breite etwas erhöht
 
-Embroidery is  ready. You may keep the live path effect Satin for further modifications.
+  ![satin_path_effet_after](/assets/images/tutorials/circular_monogram/pattern_after.jpg)
 
+  Die Änderungen können direkt auf der Arbeitsfläche mitverfolgt werden.
 
- 
-  
-
- 
- 
-
- 
- 
-  
-
-
-
-
-
-
-
-
-
+Die Datei ist fertig zum sticken. Der Pfadeffekt kann für spätere Anpassungen beibehalten werden.
