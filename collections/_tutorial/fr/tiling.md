@@ -95,7 +95,42 @@ Pour limiter au maximum les sauts de chemins, ici le bon  choix c'est de broder 
 * les chemins rouge-vert de bas en haut (on part en bas à droite, on arrive en haut à droite)
 * les chemins jaunes de la droite vers la gauche (on part en haut à droite,  on a arrive en haut à  gauche
 
-L'usage de Extensions > Inkstitch > Editer >Réordonner dans l'ordre de la sélection simplifie la tache ici
+L'usage de Extensions > Inkstitch > Editer >Réordonner dans l'ordre de la sélection simplifie la tâche.
+
+
+## Étape 8: Tout mettre de la même couleur et appliquer les paramètres de broderie
+
+* Tout sélectionner et donner à tous les chemins la même couleur
+* Extensions > Inkstitch> Paramètres
+
+ ![Two colors joined](/assets/images/tutorials/tiling/parameters.jpg)
+ Ici on a choisit un point alternativement simple et quintuple
+ 
+ Observer la simulation et vérifier que tout se passe bien dans l'ordre pévu.
+ 
+ ## Étape 9: Convertir les sauts de fil en chemin
+ 
+ * Tout sélectionner
+ * Extensions > InkStitch > Outils: Trait > Convertir sauts de fil en trait
+ * Choisir la longueur du points pour ces  chemins de liaison
+
+
+## Étape 10: completer le carré extérieur
+  * Ajouter à la fin un chemin à gauche de bas en haut
+  * Modifier les chemins (ex sauts) aux deux coins à droite pour couvrir les manques
+  
+ * Extensions > InkStitch > Visualiser et Exporter > Simulation
+ pour admirer le travail
+
+
+
+ ![Télécharger le fichier complet](/assets/images/tutorials/tiling/tiling.svg)
+
+
+
+
+
+
 
 
 
