@@ -8,6 +8,7 @@ image: "/assets/images/tutorials/tutorial-preview-images/circular_monogram.jpg"
 tutorial-type:
 stitch-type:
   - "Circular Fill"
+  - "Satin Stitch"
 techniques:
 field-of-use:
 tool:
