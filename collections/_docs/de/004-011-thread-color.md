@@ -39,7 +39,6 @@ Diese Erweiterung exportiert die Farben von Textelementen, während der Text sel
 
 {% include video id="4bcRVoKvzAw" provider="youtube" %}
 
-
 ## Benutzerdefinierte Farbpalette installieren
 
 Wenn du eine `.gpl` Liste hast, die deine Garnfarben abbildet, kannst du sie mit dieser Erweiterung einfach in Inkscape verfügbar machen: `Erweiterungen > Ink/Stitch > Garnfarben Verwaltung > Benutzerdefinierte Farbpalette installieren`. Inkscape muss nach diesem Vorgang neu gestartet werden.

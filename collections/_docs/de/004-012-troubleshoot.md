@@ -45,14 +45,17 @@ Manchmal entstehen während der Arbeit an SVG-Dateien sehr kleine Objekte, die g
 * Wähle welche Objekttypen behandlet werden sollen und definiere den Schwellwert
 * Anwenden
 
-## Update Ink/Stitch svg
+## Ink/Stitch SVG aktualisieren
 
-If you open a file created with an older version of Ink/Stitch you may need to update it:
-* Select all objects
-* Run `Extensions > Ink/Stitch > Troubleshoot > Update Ink/Stitch svg`
+Wird eine Datei, die mit einer älteren Version von Ink/Stitch erstellt wurde, geöffnet, aktualisiert Ink/Stitch diese Datei automatisch.
 
-If you import an older file as part of a new file,  or copy/paste from an old file to a new one, you should
-* Select all old objects
-* Run `Extensions > Ink/Stitch > Troubleshoot > Update Ink/Stitch svg`
+Ist eine Datei aber bereits als aktualisiert markiert, wird nicht erneut auf alte Elemente überprüft.
+Sollten nun also Design-Elemente aus einer alten Datei in eine neue Datei hineinkopiert/importiert werden, kann es sein, dass einzelne Parameter nicht mehr richtig erkannt werden.
 
+In diesem Fall kann ein manuelles Update für einzelne Elemente durchgeführt werden:
 
+* Wähle die Elemente aus, die aktualisiert werden sollen.
+* Führe die Funktion unter `Erweiterungen > Ink/Stitch > Fehlerbehebung > Ink/Stitch SVG aktualisieren` aus
+
+Tipp: Diese Operation wird überflüssig, wenn auch in der Quelldatei der zu kopierenden Design-Elemente zuvor eine Ink/Stitch-Funktion ausgeführt wurde. Wähle hierzu einfach ein Element in der alten Datei aus, öffne die Parameter und klicke ohne Änderungen vorzunehmen aud `Anwenden und Schließen`.
+{: .notice--info }

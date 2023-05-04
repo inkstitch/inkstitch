@@ -11,7 +11,7 @@ stichart:
   - Geradstich
   - Mehrfach-Geradstich
 tool:
-  - Stroke
+  - Linie
 techniken:
 schwierigkeitsgrad: 
   - leicht

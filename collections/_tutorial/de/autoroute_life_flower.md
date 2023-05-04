@@ -7,7 +7,7 @@ excerpt: "Auto route running stitches"
 image: "/assets/images/tutorials/life_flower/flower-of-life-two-digitalisation.svg"
 tutorial-typ:
 tool:
-  -Stroke
+  - Linie
 stichart:
   - Mehrfachgeradstich
   - Geradstich

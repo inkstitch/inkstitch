@@ -56,5 +56,6 @@ Stopp                || Stoppt die Maschine nachdem dieses Objekt genäht wurde 
 
 Die Unterlage der Spiralfüllung ist keine Spirale, sondern nutzt den Stichwinkel der [Parametereinstellungen](/de/docs/fill-stitch/#unterlage)
 
-## Samples Files Including Circular Fill Stitches
-{% include tutorials/tutorial_list key="stitch-type" value="Circular Fill" %}
+## Beispieldateien mit Spiralfüllung
+
+{% include tutorials/tutorial_list key="stitch-type" value="Spiralfüllung" %}

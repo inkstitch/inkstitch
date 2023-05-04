@@ -10,7 +10,7 @@ tutorial-typ:
 stichart:
   - Mehrfach-Geradstich
 tool:
-  - Stroke
+  - Linie
 techniken:
 field-of-use:
 schwierigkeitsgrad: 

@@ -16,7 +16,6 @@ Erstelle ein Objekt, z.B. ein Kreis und stelle sicher, dass es eine Füllung hat
 
 ![Kreis mit Füllung](/assets/images/docs/en/basic-usage-circle-fill-color.png)
 
-
 ## Schritt 2 - SVG-Pfad mit Parametern versehen
 
 * Wähle mindestens ein Objekt aus.

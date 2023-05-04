@@ -39,9 +39,7 @@ Convert to gradient blocks will split a fill with a linear gradient into multipl
 2. Run `Extensions > Ink/Stitch > Tools: Fill > Convert to gradient blocks
 
    ![color blocks](/assets/images/docs/color_blocks.png)
-   
- 
-## Tutorials using Tools: Fill
 
+## Tutorials zu Füllwerkzeugen
 
-{% include tutorials/tutorial_list key="tool" value="Fill" %}
+{% include tutorials/tutorial_list key="tool" value="Füllung" %}

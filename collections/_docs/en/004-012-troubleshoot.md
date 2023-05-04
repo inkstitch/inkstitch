@@ -49,12 +49,16 @@ Sometimes you will find very small shapes and leftover objects from various oper
 
 ## Update Ink/Stitch svg
 
-If you open a file created with an older version of Ink/Stitch you may need to update it:
-* Select all objects
-* Run `Extensions > Ink/Stitch > Troubleshoot > Update Ink/Stitch svg`
+A file which was created with an older version of Ink/Stitch will automatically update.
 
-If you import an older file as part of a new file,  or copy/paste from an old file to a new one, you should
-* Select all old objects
-* Run `Extensions > Ink/Stitch > Troubleshoot > Update Ink/Stitch svg`
+However, if a file is already marked as updated, it will not be checked again for old elements.
+If design elements are copied or imported from an old file into a new file, it is possible that some parameters are no longer recognized correctly.
 
+In this case, a manual update can be performed for individual elements:
+
+* Select items to update
+* Run `Extensions > Ink/Stitch > Troubleshoot > Update Ink/Stitch SVG`
+
+Tip: This operation becomes superfluous if an Ink/Stitch function was previously executed in the source file of the (to be copied) design elements. To do this, simply select an item in the old file, open the params dialog and click 'Apply and Close' without any changes.
+{: .notice--info }
 

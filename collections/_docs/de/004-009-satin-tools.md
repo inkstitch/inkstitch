@@ -140,11 +140,6 @@ Wenn dein Ergebnis in etwa so aussieht wie auf dem Bild unten, hast du wahrschei
 
 ![Zigzag Line wrong pattern](/assets/images/docs/zigzag-line-to-satin-wrong-pattern.png)
 
-
-
-## Tutorials using Tools: Satin 
-
-
+## Tutorials zu Satinwerkzeugen
 
 {% include tutorials/tutorial_list key="tool" value="Satin" %}
-

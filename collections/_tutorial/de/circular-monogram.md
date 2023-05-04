@@ -7,12 +7,12 @@ excerpt: "Circular Fill Monogram"
 image: "/assets/images/tutorials/tutorial-preview-images/circular_monogram.jpg"
 tutorial-type:
 stitch-type:
-  - "Circular Fill"
+  - Spiralfüllung
 techniques:
 field-of-use:
 tool:
-  - "Satin"
-  - "Stroke"
+  - Füllung
+  - Linie
 user-level:
 ---
 
