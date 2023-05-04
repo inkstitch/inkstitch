@@ -21,9 +21,15 @@ user-level:
 ![Brodé](/assets/images/tutorials/tutorial-preview-images/tiling_embroidered.jpg)
 
 Le but de ce tutorial est de montrer comment utiliser l'effet de chemin Pavage pour obtenir un pavage, puis  
-les manipulations à faire pour obtenir une broderie sans sauts de fils.
+les manipulations à faire pour obtenir une broderie sans sauts de fils. Deux techniques sont présentées:
+Une technique paresseuse très simple, mais va créer beaucoup de chemins de dessous. Ce n'est pas grave si l'on veut une broderie en point triple qui les camoufler  bien, mais si l'on veut utiliser une alternance de point simple et de point triple pour évoquer un point à la main, la deuxième technique qui ne générera pas de chemins de dessous est préférable
 
-## Étape 1 : Création du pavage
+## Technique paresseuse
+
+
+## Technique sans chemins de dessous
+
+### Étape 1 : Création du pavage
 
 Le pavage final ![tiles](/assets/images/tutorials/tiling/full_tiling.png) est constitué de copies de :
 ![tile](/assets/images/tutorials/tiling/tile.png)
@@ -48,13 +54,13 @@ De plus il y a beaucoup d'extrémités en commun:
 * ![LPE](/assets/images/tutorials/tiling/colored_tiling.jpg)
 
 
-## Étape 2 : Applatir d'effet de chemin 
+### Étape 2 : Applatir d'effet de chemin 
  ![Flaten](/assets/images/tutorials/tiling/flatten.jpg)
 
-## Étape 3 : Dégrouper
+### Étape 3 : Dégrouper
 Le groupe autour des chemins n'est plus utile, vous pouvez dégrouper
 
-## Étape 4 : Couleur par couleur joindre les noeuds
+### Étape 4 : Couleur par couleur joindre les noeuds
 
  ![Join a color](/assets/images/tutorials/tiling/join-a-color.jpg)
  A faire 6 fois, une fois par chemin (un chemin = une couleur) :
@@ -63,7 +69,7 @@ Le groupe autour des chemins n'est plus utile, vous pouvez dégrouper
  * En mode Noeud, sélectionnez **les noeuds intérieurs seulement**, et cliquez sur "Joindre les noeuds selectionnés" (entouré d'un rectangle rouge)
 
 
-## Étape 5 : Joindre les couleurs deux par deux
+### Étape 5 : Joindre les couleurs deux par deux
 
  ![Jointwo colors](/assets/images/tutorials/tiling/join_two_colors.jpg)
  
@@ -82,12 +88,12 @@ Voici un résultat possible:
  ![Two colors joined](/assets/images/tutorials/tiling/joined_two_colors.jpg)
  
  
-## Étape 6: Séparer les chemins
+### Étape 6: Séparer les chemins
 
 * Sélectionnez tous les chemins
 * Chemin > Séparer
 
-## Étape 7: Ordonner les groupes et ordonner dans les groupes 
+### Étape 7: Ordonner les groupes et ordonner dans les groupes 
 
 Pour limiter au maximum les sauts de chemins, ici le bon  choix c'est de broder dans l'ordre:
 
@@ -98,7 +104,7 @@ Pour limiter au maximum les sauts de chemins, ici le bon  choix c'est de broder 
 L'usage de Extensions > Inkstitch > Editer >Réordonner dans l'ordre de la sélection simplifie la tâche.
 
 
-## Étape 8: Tout mettre de la même couleur et appliquer les paramètres de broderie
+### Étape 8: Tout mettre de la même couleur et appliquer les paramètres de broderie
 
 * Tout sélectionner et donner à tous les chemins la même couleur
 * Extensions > Inkstitch> Paramètres
@@ -108,14 +114,14 @@ L'usage de Extensions > Inkstitch > Editer >Réordonner dans l'ordre de la séle
  
  Observer la simulation et vérifier que tout se passe bien dans l'ordre pévu.
  
- ## Étape 9: Convertir les sauts de fil en chemin
+ ### Étape 9: Convertir les sauts de fil en chemin
  
  * Tout sélectionner
  * Extensions > InkStitch > Outils: Trait > Convertir sauts de fil en trait
  * Choisir la longueur du points pour ces  chemins de liaison
 
 
-## Étape 10: completer le carré extérieur
+### Étape 10: Compléter le carré extérieur
   * Ajouter à la fin un chemin à gauche de bas en haut
   * Modifier les chemins (ex sauts) aux deux coins à droite pour couvrir les manques
   
@@ -125,27 +131,5 @@ L'usage de Extensions > Inkstitch > Editer >Réordonner dans l'ordre de la séle
 
 
  [Télécharger le fichier complet](/assets/images/tutorials/tiling/tiling.svg)
-
-
-
-
-
-
-
-
-
- 
- 
-
-
-
-
-
-
-
-
-
-
-
 
 
