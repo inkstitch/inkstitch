@@ -49,6 +49,8 @@ Tous les chemins doivent être groupés, et cet effet de chemin appliqué sur le
 * Tout sélectionner
 * Extensions > Ink/Stitch > Outils : Trait > Agencement automatique de points droits.
 
+[Télécharger le dessin final ](/assets/images/tutorials/tiling/tiling_lazy.svg)
+
 
 ## Technique sans chemins de dessous
 
