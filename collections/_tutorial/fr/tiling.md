@@ -124,7 +124,7 @@ L'usage de Extensions > Inkstitch > Editer >Réordonner dans l'ordre de la séle
 
 
 
- ![Télécharger le fichier complet](/assets/images/tutorials/tiling/tiling.svg)
+ [Télécharger le fichier complet](/assets/images/tutorials/tiling/tiling.svg)
 
 
 
