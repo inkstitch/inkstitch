@@ -2,7 +2,7 @@
 title: "Dépannage"
 permalink: /fr/docs/troubleshoot/
 excerpt: ""
-last_modified_at: 2023-04-30
+last_modified_at: 2023-05-05
 toc: true
 ---
 ## Dépistage de problèmes avec des objets
@@ -46,12 +46,16 @@ Ink/Stitch  offre une fonction de nettoyage de votre document qui empêche ces o
 {% include upcoming_release.html %}
 ## Mettre à jour le svg d'Ink/Stitch 
 
-Si vous ouvrez un fichier créé par une ancienne version d'Ink/Stitch vous pouvez le mettre à jour :
-* Sélectionnez tout
+Un ficher créé avec une version plus ancienne d'Ink/Stitch  se mettra a jour automatiquement.
+
+Toutefois si un fichier est déjà marqué comme mis à jour, il n'y aura plus de vérification de présence d'anciens éléments: Si des objets sont copiés ou importés d'un ancien fichier dans un nouveau fichier, il est possible que certains paramètres ne soient plus reconnus correctement.
+
+Dans ce cas, une mise à jour manuelle peut être effectués sur ces éléments
+
+* Sélectionnez les éléments à mettre à jour:
 * Lancez `Extensions > Ink/Stitch > Résolution de problèmes > Mettre à jour le svg d'Ink/Stitch`
 
-Si vous importez un ancien fichier dans  un nouveau fichier ou copier/coller une partie d'un ancien fichier dans un nouveau fichier
+Remarque : Cette opération est inutile si n'importe quelle fonnction Ink/Stitch a été préalablement exécutée dans le fichier d'origine des éléments. Il suffit par exemple de selectionner n'importe quoi dans l'ancien fichier, d'ouvrir le dialogue de paramètrage et de cliquer 'Appliquer et Fermer ' sans rien changer pour que l'ancien fichier soit mis à jour. 
+{: .notice--info }
 
 
-* Sélectionnez tous les objets anciens
-* Lancez `Extensions > Ink/Stitch > Résolution de problèmes  > Mettre à jour le svg d'Ink/Stitch `
