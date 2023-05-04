@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="50mm"
+   height="50mm"
+   viewBox="0 0 50 50"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3-alpha (95f74fb, 2023-03-31)"
+   sodipodi:docname="2dragonflies.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:inkstitch="http://inkstitch.org/namespace">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.4204826"
+     inkscape:cx="57.077272"
+     inkscape:cy="560.07073"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <inkscape:path-effect
+       effect="tiling"
+       id="path-effect27"
+       is_visible="false"
+       lpeversion="1"
+       unit="px"
+       seed="1;1"
+       lpesatellites=""
+       num_rows="4"
+       num_cols="4"
+       gapx="0"
+       gapy="0"
+       offset="0"
+       offset_type="false"
+       scale="0"
+       rotate="0"
+       mirrorrowsx="false"
+       mirrorrowsy="false"
+       mirrorcolsx="false"
+       mirrorcolsy="false"
+       mirrortrans="false"
+       shrink_interp="false"
+       split_items="false"
+       link_styles="false"
+       interpolate_scalex="false"
+       interpolate_scaley="true"
+       interpolate_rotatex="false"
+       interpolate_rotatey="true"
+       random_scale="false"
+       random_rotate="false"
+       random_gap_y="false"
+       random_gap_x="false"
+       transformorigin="" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g25"
+       style="display:inline"
+       inkscape:path-effect="#path-effect27"
+       class="UnoptimicedTransforms"
+       inkscape:label="g25">
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#feba35;paint-order:markers stroke fill"
+         d="M 25,0 C 25,13.807119 13.807119,25 0,25 13.807119,25 25,36.192881 25,50"
+         id="path15"
+         sodipodi:nodetypes="ccc"
+         inkscape:original-d="M 25,0 C 25,13.807119 13.807119,25 0,25 13.807119,25 25,36.192881 25,50"
+         inkstitch:stroke_method="zigzag_stitch"
+         inkscape:label="path15" />
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#0e1f7c;paint-order:markers stroke fill"
+         d="M 25,50 C 25,36.192881 36.192881,25 50,25 36.192881,25 25,13.807119 25,0"
+         id="path17"
+         sodipodi:nodetypes="ccc"
+         inkscape:original-d="M 25,50 C 25,36.192881 36.192881,25 50,25 36.192881,25 25,13.807119 25,0"
+         inkstitch:stroke_method="zigzag_stitch" />
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#000000;paint-order:markers stroke fill"
+         d="M 25,0 C 38.807119,0 50,11.192881 50,25 50,38.807119 38.807119,50 25,50"
+         id="path18"
+         sodipodi:nodetypes="ccc"
+         inkscape:original-d="M 25,0 C 38.807119,0 50,11.192881 50,25 50,38.807119 38.807119,50 25,50"
+         inkstitch:stroke_method="zigzag_stitch" />
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#e3f35b;paint-order:markers stroke fill"
+         d="M 25,50 C 11.192881,50 0,38.807119 0,25 0,11.192881 11.192881,0 25,0"
+         id="path20"
+         sodipodi:nodetypes="ccc"
+         inkscape:original-d="M 25,50 C 11.192881,50 0,38.807119 0,25 0,11.192881 11.192881,0 25,0"
+         inkstitch:stroke_method="zigzag_stitch" />
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#70bc1f;stroke-width:0.499999;paint-order:markers stroke fill"
+         d="M 50,49.999997 25,24.999998 0,49.999997"
+         id="path60"
+         sodipodi:nodetypes="ccc"
+         inkscape:original-d="M 50,49.999997 25,24.999998 0,49.999997"
+         inkstitch:stroke_method="zigzag_stitch" />
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#fe370f;stroke-width:0.499999;paint-order:markers stroke fill"
+         d="M 50,0 25,24.999998 0,0"
+         id="path25"
+         sodipodi:nodetypes="ccc"
+         inkscape:original-d="M 50,0 25,24.999998 0,0"
+         inkstitch:stroke_method="zigzag_stitch"
+         inkscape:label="path25" />
+    </g>
+  </g>
+</svg>
