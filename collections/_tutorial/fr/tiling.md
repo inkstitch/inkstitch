@@ -80,6 +80,8 @@ Pour Vert et Rouge, sélectionnez les  noeuds  **superposés** à gauche et cliq
 Voici un résultat possible: 
 
  ![Two colors joined](/assets/images/tutorials/tiling/two_colors_joined.jpg)
+ 
+ 
 
 
 
