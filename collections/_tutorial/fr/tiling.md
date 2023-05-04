@@ -87,7 +87,17 @@ Voici un résultat possible:
 * Sélectionnez tous les chemins
 * Chemin > Séparer
 
-## Étape 7: Ordonner les chemins
+## Étape 7: Ordonner les groupes et ordonner dans les groupes 
+
+Pour limiter au maximum les sauts de chemins, ici le bon  choix c'est de broder dans l'ordre:
+
+* les chemins bleus de la gauche vers la droite (on part en bas à gauche, on arrive en bas à droite
+* les chemins rouge-vert de bas en haut (on part en bas à droite, on arrive en haut à droite)
+* les chemins jaunes de la droite vers la gauche (on part en haut à droite,  on a arrive en haut à  gauche
+
+L'usage de Extensions > Inkstitch > Editer >Réordonner dans l'ordre de la sélection simplifie la tache ici
+
+
 
  
  
