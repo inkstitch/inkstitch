@@ -40,7 +40,7 @@ Tous les chemins doivent être groupés, et cet effet de chemin appliqué sur le
 
 ### Étape 2: Applatir et paramètrer
 * Applatir l'effet de chemin
-![Flatten](/assets/images/tutorials/tiling/Flaten_lazy.jpg)
+![Flatten](/assets/images/tutorials/tiling/flatten_lazy.jpg)
 * Tout sélectionner
 * Extensions > Ink/Stitch > Paramètres 
 
@@ -62,7 +62,6 @@ Le pavage final ![tiles](/assets/images/tutorials/tiling/full_tiling.png) est co
 Pour pouvoir créer un cheminement minimisant les sauts de fil dans la broderie finale, ce dessin est en fait :
 
 ![Dessin initial ](/assets/images/tutorials/tiling/tile.svg)
-[Télécharger le dessin initial](/assets/images/tutorials/tiling/tile.svg)
 
 Le dessin est constitué de 6 chemins :
   * Bleu , Jaune , Orange et Noir ont leur deux extrémités alignées sur une verticale
