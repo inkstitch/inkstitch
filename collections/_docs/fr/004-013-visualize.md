@@ -2,7 +2,7 @@
 title: "Simulation"
 permalink: /fr/docs/visualize/
 excerpt: ""
-last_modified_at: 2023-04-18
+last_modified_at: 2023-05-05
 toc: true
 ---
 ## Simulateur/ Aperçu Réaliste
@@ -48,6 +48,10 @@ Vous disposez des options suivanes:
 * **Points de l'aiguille** si coché, montre les points de l'aiguille
 * **Vérouiller** rend le plan de broderie insensible aux interactions de la souris, facilitant le travail sur les objets de broderie quand le plan de broderie est actif.
 
+Utiliser un plan de broderie verrouillé superposé au motif (rendu invisible ou avec visibilité abaissée) aidera à avoir une meilleure idée du rendu final.
+Si le plan est vérouillé, et le motif visible, le plan de broderie ne vous génera pas pour modifier le motif qui est sous lui.
+
+
 
 {% include folder-galleries path="stitch-plan/" captions="1:Stitch plan beside canvas;2:Layer visibility set to hidden;3:Layer visibility set to lower opacity;4:Needle points enabled | disabled" caption="<i>Example image from [OpenClipart](https://openclipart.org/detail/334596)</i>" %}
 
@@ -55,11 +59,10 @@ Vous disposez des options suivanes:
 Utiliser l'aperçu du plan de broderie au dessus d'objets de broderie cachés ou ayant une opacité amoindrie aide à se faire une idée visuelle de la broderie finale.
 Il est parfois utile de garder le plan de broderie de objets déjà présents pour ajouter de nouveaux objets de broderie,mais pour l'export ou pour modifier des éléments existants vous aurez besoin des objets initiaux.
 Pas très rigolo de devoir à chaque fois supprimer le calque du plan de broderie et rétablir l'opacité des éléments originels. 
-Using a stitch plan overlay with hidden or lower density elements helps to get a visual idea of how the design will look in the end.
 Cette extension le fait pour vous et vous aidera si vous utilisez cette méthode de travail.
 
 
-Lances `Extensions > Ink/Stitch > Visualisr et Exporter > Annuler le plan de broderie`
+Lancez `Extensions > Ink/Stitch > Visualisr et Exporter > Annuler le plan de broderie`
 
 ## Carte de densité
 
