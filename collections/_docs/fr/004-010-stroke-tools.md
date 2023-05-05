@@ -2,7 +2,7 @@
 title: "Outils: Trait"
 permalink: /fr/docs/stroke-tools/
 excerpt: ""
-last_modified_at: 2023-05-01
+last_modified_at: 2023-05-05
 toc: true
 ---
 ## Agencement automatique de points droits
@@ -61,12 +61,11 @@ Merci de noter que chaque trait doit découper le remplissage en deux.
 
 ### Options
 
-* Garder l'original : utilisez cette option si vous voulez garder les objets de départ, sinon ils seront supprimés.
-* Seuil de cul de sac(px) : ceci supprimera les petits traits. Dans la plus part des cas, la meilleure valeur  est à peu près la largeur de la forme de départ en pixel.
-* Pointillé : Mettre à vrai si vous souhaitez un point droit.
-* Largeur (px) : Si vous souhaitez directement convertir en colonne satin, donner ici la valeur de la largeur de la colonne satin. Dans la plupart des cas, vous voudrez une valeur faible pour pouvoir facilement inspecter et modifier avant conversion.
-* Cut lines: close gaps: Cut lines create gaps which can be closed by enabling this option. This option will only be useful, when no satin column conversion is planed.
-
+* *Garder l'original* : utilisez cette option si vous voulez garder les objets de départ, sinon ils seront supprimés.
+* *Seuil de cul de sac(px)* : ceci supprimera les petits traits. Dans la plus part des cas, la meilleure valeur  est à peu près la largeur de la forme de départ en pixel.
+* *Pointillé* : Mettre à vrai si vous souhaitez un point droit.
+* *Largeur (px)*: Si vous souhaitez directement convertir en colonne satin, donner ici la valeur de la largeur de la colonne satin. Dans la plupart des cas, vous voudrez une valeur faible pour pouvoir facilement inspecter et modifier avant conversion.
+* *Lignes de découpage : fermer les écarts*:  Les lignes de découpage créent des écarts entre les chemins générés; Ces écarts peuvent être supprimés en activant cette option. Cette option est utile si vous ne pensez pas convertir vos chemins en colonnes satin.
 ## Saut en Trait
 
 {% include upcoming_release.html %}
