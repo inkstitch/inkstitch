@@ -61,6 +61,7 @@ We have good news: Ink/Stitch will be significantly faster due to stitch plan ca
 
 ### Fill stitch
   * Add support for [fractional-length stagger cycles in fills](/docs/stitches/fill-stitch/#params)
+  * Add param for [end row spacing](/docs/stitches/fill-stitch/#params)
   * [Multiple underlay angle values](/docs/stitches/fill-stitch/#underlay) are now separated by space, not by a comma anymore
   
     **Please update your svgs if you used multiple fill underlays**
@@ -98,6 +99,13 @@ We have good news: Ink/Stitch will be significantly faster due to stitch plan ca
 ### Zigzag Stitch
   * Add pull compensation
 
+### Ripple Stitch
+  * Add [params](/docs/stitches/ripple-stitch/#params):
+    * Stagger: Have a nicer stitch placement
+    * Minimum line distance: if set it will overwrite the line count value
+
+      More consistant density, even when the ripple stitch has been resized
+
 ## Extensions
 
 ### New extensions
@@ -121,6 +129,10 @@ We have good news: Ink/Stitch will be significantly faster due to stitch plan ca
   * Extensions > Ink/Stitch > Tools: Satin > [Zigzag line to Satin](/docs/satin-tools/#zigzag-line-to-satin)
 
     Converts a square or zigzag line into a satin column
+
+  * Extensions > ink/Stitch > Troubleshoot > [Update Ink/Sttitch SVG](/docs/troubleshoot/#update-inkstitch-svg)
+
+    Ink/Stich automatically updates old design files. This extension will not be needed (only in rare cases on imported or copied design parts).
 
 ### Autorun
   * Fix: Keep settings for underpath running stitch tolerance
