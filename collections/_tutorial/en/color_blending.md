@@ -1,7 +1,7 @@
 ---
 title: Color Blending
 permalink: /tutorials/color-blending/
-last_modified_at: 2018-10-28
+last_modified_at: 2023-05-05
 language: en
 excerpt: "Color Blending Methods"
 image: "/assets/images/tutorials/samples/True_Blend.svg"
@@ -14,6 +14,54 @@ techniques:
 field-of-use:
 user-level:
 ---
+
+Fills colors don't have to be flat, gradient fills are welcome !
+
+The easiest way is to use
+
+## ["Convert to Gradient Block" Ink/Stitch extension](docs/fill-tools/#convert-to-gradient-blocks)
+* Create a shape with an inkscape gradient fill
+* Chose your fill parameters.
+* Select the shape
+* `Extensions > Ink/Stitch > Tools : fill > Convert to gradient blocks`
+
+
+
+![Download Sample File](/assets/images/tutorials/samples/inkstitch_gradient_extension.svg)
+
+[Download Sample File](/assets/images/tutorials/samples/inkstitch_gradient_extension.svg).
+
+On each subshape, while first color row spacing decreases,  second color row spacing increases, yielding a gradient fill from first color to second color. 
+
+
+The gradient direction dictates the fill *angle*. 
+
+
+
+
+## How is varying row spacing achieved ?
+
+Setting *End row spacing* parameter allows for a varying row spacing fill. 
+Looking perpendicularly to the fill angle, the  row spacing starts at *spacing between rows*  and ends up at *end row spacing*, varying linearly in between.
+
+The two gradient blocks the `Convert to gradient blocks` stacks on each subshape have same *spacing between rows* and *end row spacing* but opposite fill angles, therefore achieving the gradient effect. The actual values of these parameters depends on the initial parameters of the shape, aiming to respect the overall row spacing.
+
+## Tweaking the result
+
+Using the extension instead of manually creating the subshapes and the gradient blocks is a huge time saver. 
+You may carefully change the values of *spacing between rows* and *end row spacing* to achieve a different blending effect, but be aware of possible density issue, as you are filling each subshape twice.
+
+
+These is part of a file containing 100 rectangles each covered by a red varying spacing fill and a blue varying spacing fill, for different values of the parameters
+
+![Download Sample File](/assets/images/tutorials/samples/end_row_spacing_2_colors_blending.svg)
+
+[Dowload the sample  ](/assets/images/tutorials/samples/end_row_spacing_2_colors_blending.svg) 
+
+
+
+  
+<!--
 ## Faux Fill Blend
 
 1. A faux blend has a regular fill layer on bottom and each subsequent layer has variable density settings
@@ -36,8 +84,7 @@ user-level:
 
 [Download Sample File](/assets/images/tutorials/samples/True_Blend.svg){: download="True_Blend.svg" }
 
-## End Row Spacing
 
-Ink/Stitch has a hidden feature to perform color blending.
 
 [Read more](/docs/features/#color-blending)
+-->
