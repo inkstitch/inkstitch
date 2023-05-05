@@ -285,6 +285,7 @@ class FillStitch(EmbroideryElement):
            sort_index=24,
            type='float',
            select_items=[('fill_method', 'auto_fill'),
+                         ('fill_method', 'circular_fill'),
                          ('fill_method', 'legacy_fill')],
            default=None)
     def end_row_spacing(self):
@@ -378,7 +379,8 @@ class FillStitch(EmbroideryElement):
            tooltip=_('Defines how many times to run down and back along the path.'),
            type='int',
            default="1",
-           select_items=[('fill_method', 'meander_fill')],
+           select_items=[('fill_method', 'meander_fill'),
+                         ('fill_method', 'circular_fill')],
            sort_index=33)
     def repeats(self):
         return max(1, self.get_int_param("repeats", 1))
@@ -391,7 +393,8 @@ class FillStitch(EmbroideryElement):
                      'A value of 2 would quintuple each stitch, etc.\n\n'
                      'A pattern with various repeats can be created with a list of values separated by a space.'),
            type='str',
-           select_items=[('fill_method', 'meander_fill')],
+           select_items=[('fill_method', 'meander_fill'),
+                         ('fill_method', 'circular_fill')],
            default=0,
            sort_index=34)
     def bean_stitch_repeats(self):
@@ -922,9 +925,12 @@ class FillStitch(EmbroideryElement):
                                  shape,
                                  self.angle,
                                  self.row_spacing,
+                                 self.end_row_spacing,
                                  self.staggers,
                                  self.running_stitch_length,
                                  self.running_stitch_tolerance,
+                                 self.bean_stitch_repeats,
+                                 self.repeats,
                                  self.skip_last,
                                  starting_point,
                                  ending_point,
