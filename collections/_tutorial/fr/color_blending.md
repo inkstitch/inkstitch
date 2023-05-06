@@ -4,8 +4,7 @@ permalink: /fr/tutorials/color-blending/
 last_modified_at: 2023-05-0
 language: fr
 excerpt: "Dégradés de couleur"
-image: "/assets/images/tutorials/samples/True_Blend.svg"
-
+image: "/assets/images/tutorials/tutorial-preview-images/blend.png"
 tutorial-type:
   - Sample File
 stitch-type: 
