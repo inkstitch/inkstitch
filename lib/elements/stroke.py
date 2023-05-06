@@ -188,9 +188,10 @@ class Stroke(EmbroideryElement):
 
     @property
     @param('staggers',
-           _('Stagger lines this many times before repeating. For linear ripples only.'),
+           _('Stagger lines this many times before repeating'),
            tooltip=_('Length of the cycle by which successive stitch lines are staggered. '
-                     'Fractional values are allowed and can have less visible diagonals than integer values.'),
+                     'Fractional values are allowed and can have less visible diagonals than integer values. '
+                     'For linear ripples only.'),
            type='int',
            select_items=[('stroke_method', 'ripple_stitch')],
            default=1,

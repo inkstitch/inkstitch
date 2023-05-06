@@ -574,6 +574,10 @@ def _make_spiral(rings, stitch_length, starting_point):
         check_stop_flag()
 
         spiral_part = _interpolate_linear_rings(ring1, ring2, stitch_length, starting_point)
-        path.extend(spiral_part.coords)
+        # skip last to avoid duplicated points
+        path.extend(spiral_part.coords[:-1])
+
+    # at the end add last point
+    path.append(spiral_part.coords[-1])
 
     return path
