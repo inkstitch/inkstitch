@@ -15,12 +15,13 @@ tool:
   -Fill Stitch
 user-level:
 ---
-Les remplissages ne sont pas forcement des aplats de couleurs, il est possible d'avoir des remplissage en dégradé.
+Les remplissages automatiques ne sont pas forcement des aplats de couleurs, il est possible d'avoir des remplissages en dégradé. 
+
 Le plus simple est d'utiliser  l'extension Ink/Stitch
 
 ## [Convertir en blocs de dégradés](docs/fill-tools/#convert-to-gradient-blocks)
 * Créer une forme dont la couleur est un dégradé Inkscape
-* Choisir vos paramètres de remplissage
+* Choisir vos paramètres de remplissage **automatique**
 * Sélectionner la forme
 * `Extensions > Ink/Stitch > Outils : Remplissage> Convertir en blocs de dégradés`
 
