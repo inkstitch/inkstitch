@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2023-05-04 01:14+0000\n"
-"PO-Revision-Date: 2023-05-05 01:11\n"
+"PO-Revision-Date: 2023-05-06 01:13\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -54,22 +54,22 @@ msgstr "Abécédaire AGS ist eine Kreuzstich-Schrift. Sie ist 14 mm groß und ka
 #. name of font in fonts/abril
 #: inkstitch-fonts-metadata.py:10
 msgid "Abril En Fleur AGS"
-msgstr ""
+msgstr "Abril En Fleur AGS"
 
 #. description of font in fonts/abril
 #: inkstitch-fonts-metadata.py:12
 msgid "Abril En Fleur AGS is a monogram font. M is 103.5mm high. It can be increased up to 150 % and decreased down to 80 %"
-msgstr ""
+msgstr "Abril En Fleur AGS ist eine Monogramm-Schrift. Das M ist 103 mm hoch. Die Schrift kann bis zu 150 % vergrößert und bis zu 80 % verkleinert werden."
 
 #. name of font in fonts/ags_garamond_latin_grec
 #: inkstitch-fonts-metadata.py:14
 msgid "AGS Γαραμου Garamond"
-msgstr ""
+msgstr "AGS Γαραμου Garamond"
 
 #. description of font in fonts/ags_garamond_latin_grec
 #: inkstitch-fonts-metadata.py:16
 msgid "This font contains all the letters of  the latin and  greek alphabets  and cover most european languages. Μ is 32mm hight and 20mm wide. It may be scaled down to 80% and scaled up to 150%"
-msgstr ""
+msgstr "Diese Schrift enthält alle Buchstaben des lateinischen und griechischen Alphabets und deckt damit die meistens europäischen Sprachen ab. Das M ist 32 mm hoch und 20 mm breit. Die Schrift kann bis zu 150 % vergrößert und bis zu 80 % verkleinert werden."
 
 #. name of font in fonts/amitaclo
 #: inkstitch-fonts-metadata.py:18
@@ -105,32 +105,32 @@ msgstr "Apex Lake ist eine Schrift mit großen, ornamentreichen Buchstaben. Die 
 #. name of font in fonts/apex_simple_AGS
 #: inkstitch-fonts-metadata.py:30
 msgid "Apex Simple AGS"
-msgstr ""
+msgstr "Apex Simple AGS"
 
 #. description of font in fonts/apex_simple_AGS
 #: inkstitch-fonts-metadata.py:32
 msgid "M wide 41mm, hight 33,6mm"
-msgstr ""
+msgstr "Das M ist 33,6 mm hoch und 41 mm breit."
 
 #. name of font in fonts/auberge_marif
 #: inkstitch-fonts-metadata.py:34
 msgid "Auberge Marif"
-msgstr ""
+msgstr "Auberge Marif"
 
 #. description of font in fonts/auberge_marif
 #: inkstitch-fonts-metadata.py:36
 msgid "Auberge Marif is a script satin font of size approximatively 35 mm. The glyphs cover most Western European languages. The font can be scaled down to 60% and up to 140%."
-msgstr ""
+msgstr "Auberge Marif ist eine Schreibschrift-Satin-Schriftart mit einer Größe von ca. 35 mm. Die Buchstaben decken die meisten West-Eruopäischen Sprachen ab. Die Schrift kann von 60 % bis zu 140 % skaliert werden."
 
 #. name of font in fonts/auberge_small
 #: inkstitch-fonts-metadata.py:38
 msgid "Auberge small"
-msgstr ""
+msgstr "Auberge small"
 
 #. description of font in fonts/auberge_small
 #: inkstitch-fonts-metadata.py:40
 msgid "This font is an altered version  of Auberge Marif, to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) are mandatory. The altered embroidery parameters of this font allow to scale down the original Grand Hotel font between 25% (for a 9mm font ) and 55 % (for a  20 mm font)."
-msgstr ""
+msgstr "Diese Schrift ist eine abgewandelte Version von Auberge Marif, die eine kleinere Skalierung erlaubt. Die Verwendung von dünnem Faden (60) und einer schmalen Nadel (60) wird vorausgesetzt. Die veränderten Stickparameter erlauben es, die Originalschrift zwischen 25% (9 mm Schrift) und 55 % (20 mm Schrift) herunterzuskalieren."
 
 #. name of font in fonts/aventurina
 #: inkstitch-fonts-metadata.py:42
@@ -239,33 +239,33 @@ msgstr "Emilio 20 enthält nur Großbuchstaben und Zahlen. Das M ist, bei einer 
 #. name of font in fonts/emilio_20_applique
 #: inkstitch-fonts-metadata.py:82
 msgid "EMILIO_20_Applique"
-msgstr ""
+msgstr "EMILIO_20_Applique"
 
 #. description of font in fonts/emilio_20_applique
 #: inkstitch-fonts-metadata.py:84
 msgid "Emilio 20 Applique is an Applique font approximatively 50mm high. It should not be scaled down but may be scaled up to 150%. This font is an altered version (larger satin columns) of Emilio_20 while Emilio_20_Bold is  Emilio_20_applique without the applique"
-msgstr ""
+msgstr "Emilio 20 Applique ist eine Applikationsschrift mit einer Höhe von ungefähr 50 mm. Die Schrift kann bis zu 150 % vergrößert werden, eine Verkleinerung ist nicht möglich. Diese Version ist eine Variante (breitere Satinsäulen) von Emilio_20. Emilio_20_Bold entspricht dieser Schrift, enthält jedoch nicht die Applikationsmethodik."
 
 #. name of font in fonts/emilio_20_bold
 #: inkstitch-fonts-metadata.py:86
 msgid "EMILIO_20_Bold"
-msgstr ""
+msgstr "EMILIO_20_Bold"
 
 #. description of font in fonts/emilio_20_bold
 #: inkstitch-fonts-metadata.py:88
 msgid "Emilio_20_Bold is an altered version of Emilio_20  and is approximatively 50mm high."
-msgstr ""
+msgstr "Emilio_20_Bold ist eine Variante von Emilio_20  mit einer Höhe von ungefähr 50 mm."
 
 #. name of font in fonts/emilio_20_simple
 #: inkstitch-fonts-metadata.py:90
 msgid "Emilio 20 Simple"
-msgstr ""
+msgstr "Emilio 20 Simple"
 
 #. description of font in fonts/emilio_20_simple
 #: inkstitch-fonts-metadata.py:92
 #, python-format
 msgid "Emilio is a font with capital only and numbers. M is 42.5 millimeter wide at 100% scale. Can be scaled down to 70% or up to 140%. Every satin has zigzag underlay"
-msgstr ""
+msgstr "Emilio ist eine Schrift aus Großbuchstaben und Zahlen. Das M ist bei einer Skalierung von 100 % 42,5 mm breit. Die Schrift kann bis zu 140 % vergrößert und bis zu 70 % verkleinert werden. Jede Satinsäule ist mit einer Zick-Zack Unterlage unterlegt."
 
 #. name of font in fonts/emilio_20_tricolore
 #: inkstitch-fonts-metadata.py:94
@@ -1517,11 +1517,11 @@ msgstr "Abstand zwischen den Stichreihen."
 
 #: lib/elements/fill_stitch.py:282
 msgid "End row spacing"
-msgstr ""
+msgstr "Reihenabstand (Ende)"
 
 #: lib/elements/fill_stitch.py:283
 msgid "Increases or decreases the row spacing towards the end."
-msgstr ""
+msgstr "Erhöht oder verringert den Reihenabstand zum Ende hin."
 
 #: lib/elements/fill_stitch.py:296
 msgid "Stagger rows this many times before repeating"
@@ -2268,7 +2268,7 @@ msgstr "Bitte mindestens eine Satinsäule auswählen."
 #. This was previously: "No embroiderable paths selected."
 #: lib/extensions/base.py:57
 msgid "Ink/Stitch doesn't know how to work with any of the objects you've selected. Please check if selected elements are visible."
-msgstr ""
+msgstr "Ink/Stitch kann keines der gewählten Objekte verarbeiten.  Bitte überprüfen, ob die gewählten Objekte sichtbar sind."
 
 #: lib/extensions/base.py:60
 msgid "There are no objects in the entire document that Ink/Stitch knows how to work with."
@@ -5755,7 +5755,7 @@ msgstr "Sollten aber Teile eines alten Designs in eine neue Design-Datei kopiert
 
 #: inx/inkstitch_update_svg.inx:18
 msgid "Tip: You can prevent inserting legacy designs into new files by running any Ink/Stitch extension before you copy the design parts (for example open and re-apply parameters on a single element in the document)."
-msgstr ""
+msgstr "Tipp: Ink/Stitch aktualisiert alte Designs automatisch. D. h. wurde eine Ink/Stitch Funktion in der alten Datei vor dem Kopieren angewendet, ist diese ebenfalls aktualisiert und diese Erweiterung überflüssig. Markiere dafür nur ein Element in der alten Datei und öffne den Parameter-Dialog. Ohne eine Änderung der Werte kann einfach auf Anwenden und Schließen geklickt werden und die komplette Datei wird aktualisiert."
 
 #: inx/inkstitch_update_svg.inx:20
 msgid "This extension only updates selected elements."

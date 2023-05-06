@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2023-05-04 01:14+0000\n"
-"PO-Revision-Date: 2023-05-05 01:11\n"
+"PO-Revision-Date: 2023-05-06 01:13\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -4258,7 +4258,7 @@ msgstr "Largeur du trait (mm)"
 
 #: inx/inkstitch_fill_to_stroke.inx:21
 msgid "Cut lines: close gaps"
-msgstr "Lignes de coupe : fermer les écarts"
+msgstr "Lignes de découpage : fermer les écarts"
 
 #: inx/inkstitch_fill_to_stroke.inx:25
 msgid "Fill outlines never look nice when embroidered - but it is a lot of work to convert a fill outline to a satin column or a running stitch. This tool helps you with this operation."
