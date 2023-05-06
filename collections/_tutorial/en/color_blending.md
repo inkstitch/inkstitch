@@ -17,13 +17,13 @@ tool:
 user-level:
 ---
 
-Fills colors don't have to be flat, gradient fills are welcome !
+Automatic fills colors don't have to be flat, gradient fills are welcome !
 
 The easiest way is to use
 
 ## ["Convert to Gradient Block" Ink/Stitch extension](docs/fill-tools/#convert-to-gradient-blocks)
 * Create a shape with an inkscape gradient fill
-* Chose your fill parameters.
+* Chose your an automatic fill and its parameters.
 * Select the shape
 * `Extensions > Ink/Stitch > Tools : fill > Convert to gradient blocks`
 
