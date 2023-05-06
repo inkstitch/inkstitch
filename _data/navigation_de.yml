@@ -24,6 +24,8 @@ pages:
         url: /de/docs/install/
       - title: "Arbeitsablauf"
         url: /de/docs/workflow/
+      - title: "Stich-Bibliothek"
+        url: /de/docs/stitch-library/
       - title: "FAQ"
         url: /de/docs/faq/
   - title: "Tutorials"
