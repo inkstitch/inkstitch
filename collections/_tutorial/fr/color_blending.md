@@ -21,7 +21,7 @@ Le plus simple est d'utiliser  l'extension Ink/Stitch
 
 ## [Convertir en blocs de dégradés](docs/fill-tools/#convert-to-gradient-blocks)
 * Créer une forme dont la couleur est un dégradé Inkscape
-* Choisir vos paramètres de remplissage **automatique**
+* Choisir la méthode de remplissage **automatique** et vos autres paramètres de remplissage
 * Sélectionner la forme
 * `Extensions > Ink/Stitch > Outils : Remplissage> Convertir en blocs de dégradés`
 
