@@ -23,7 +23,7 @@ The easiest way is to use
 
 ## ["Convert to Gradient Block" Ink/Stitch extension](docs/fill-tools/#convert-to-gradient-blocks)
 * Create a shape with an inkscape gradient fill
-* Chose an automatic fill and its parameters.
+* Choose the automatic fill method and choose the rest of the parameters.
 * Select the shape
 * `Extensions > Ink/Stitch > Tools : fill > Convert to gradient blocks`
 
