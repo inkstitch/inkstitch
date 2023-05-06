@@ -28,32 +28,31 @@ const port = devServerOptions.port || 8080
 // older code that sets the url for the path I would assume
 var parseArg = process.argv[2] || ""
 var yarnArg = url.parse(parseArg)
-console.log("Checking the url  port from printPDF")
-console.log(process.argv)
 
 function resetPort() {
-    let resetData = { "_comment1": "port should not be declared when commiting" }
-    fs.writeFileSync(path.join(__dirname, "../../src/lib/flaskserverport.json"),  JSON.stringify(resetData), 'utf8')
-     console.log("Resetting the flaskport")
+  let resetData = { "_comment1": "port should not be declared when commiting" }
+  fs.writeFileSync(path.join(__dirname, "../../src/lib/flaskserverport.json"),  JSON.stringify(resetData), 'utf8')
+  console.log("Resetting the flaskport")
 }
 
-function startElectron() {
-    // this sends url to proper position
-    process.argv.shift()
-    process.argv.shift()
-    // get URL from PrintPDF
-    // checks if url is http
-    if (yarnArg.protocol) {
-        var args = [
-            '--inspect=5858',
-            path.join(__dirname, '../../dist/electron/main.js')
-        ].concat(process.argv)
-    } else {
-        var args = [
-            '--inspect=5858',
-            `http://0.0.0.0:8080/#${process.argv}`
-        ].concat(process.argv)
-    }
+function startElectron(webpackport) {
+var wbport = webpackport
+  // this sends url to proper position
+  process.argv.shift()
+  process.argv.shift()
+  // get URL from PrintPDF
+  // checks if url is http
+  if (yarnArg.protocol) {
+    var args = [
+          '--inspect=5858',
+          path.join(__dirname, '../../dist/electron/main.js')
+      ].concat(process.argv)
+  } else {
+      var args = [
+          '--inspect=5858',
+          `http://0.0.0.0:${wbport}/#${process.argv}`
+      ].concat(process.argv)
+  }
   // detect yarn or npm and process commandline args accordingly
   if (process.env.npm_execpath.endsWith('yarn.js')) {
         args = args.concat(process.argv.slice(3))
@@ -85,17 +84,18 @@ compiler.hooks.done.tap('serve', (stats) => {
   console.log(`  - Local:   ${chalk.cyan(`${protocol}://${host}:${port}`)}`)
   console.log(`  - Network: ${chalk.cyan(`${protocol}://${getLocalIP()}:${port}`)}`)
   console.log()
+  
  // allows livereload for webpack devserver to work without multiple instances of electron
  if (electronProcess) {
      manualRestart = true
   } else {
     manualRestart = false
      // starts nodejs electron commandline browser
-     startElectron()
+     startElectron(devServerOptions.port)
     } 
 })
 
-server.start(port, host, (err) => {   
+server.start(port, host, (err) => {
   if (err) {
     process.exit(0)
   }

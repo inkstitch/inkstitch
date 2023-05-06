@@ -27,7 +27,7 @@ module.exports = merge(baseWebpackConfig, cssWebpackConfig, {
     },
     open: false,
     host: '0.0.0.0',
-    port: config.dev.port,
+    port: 'auto',
     liveReload: true,
   },
 
