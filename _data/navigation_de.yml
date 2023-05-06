@@ -134,8 +134,6 @@ docs:
     children:
       - title: "Fonts"
         url: /de/docs/fonts/
-      - title: "Hidden Features"
-        url: /de/docs/features/
       - title: Inkscape Tips
         url: /de/docs/inkscape-tips/
   - title: Fehlerbehebung
