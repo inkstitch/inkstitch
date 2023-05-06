@@ -1,7 +1,7 @@
 ---
 title: Mélange de couleurs
 permalink: /fr/tutorials/color-blending/
-last_modified_at: 2023-05-0
+last_modified_at: 2023-05-06
 language: fr
 excerpt: "Dégradés de couleur"
 image: "/assets/images/tutorials/tutorial-preview-images/blend.png"
