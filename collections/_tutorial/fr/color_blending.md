@@ -1,9 +1,9 @@
 ---
 title: Mélange de couleurs
 permalink: /fr/tutorials/color-blending/
-last_modified_at: 2019-10-26
+last_modified_at: 2023-05-0
 language: fr
-excerpt: "Methode de dégradé de couleur"
+excerpt: "Dégradés de couleur"
 image: "/assets/images/tutorials/samples/True_Blend.svg"
 
 tutorial-type:
@@ -12,8 +12,60 @@ stitch-type:
   - Fill Stitch
 techniques:
 field-of-use:
+tool:
+  -Fill Stitch
 user-level:
 ---
+Les remplissages ne sont pas forcement des aplats de couleurs, il est possible d'avoir des remplissage en dégradé.
+Le plus simple est d'utiliser  l'extension Ink/Stitch
+
+## [Convertir en blocs de dégradés](docs/fill-tools/#convert-to-gradient-blocks)
+* Créer une forme dont la couleur est un dégradé Inkscape
+* Choisir vos paramètres de remplissage
+* Sélectionner la forme
+* `Extensions > Ink/Stitch > Outils : Remplissage> Convertir en blocs de dégradés`
+
+Plus d'informations [ici](/fr/docs/fill-tools/#convertir-en-blocs-de-dégradés)
+
+
+
+![Download Sample File](/assets/images/tutorials/samples/inkstitch_gradient_extension.svg)
+
+[Download Sample File](/assets/images/tutorials/samples/inkstitch_gradient_extension.svg).
+
+
+
+On each subshape, while first color row spacing decreases,  second color row spacing increases, yielding a gradient fill from first color to second color. 
+
+
+The gradient direction dictates the fill *angle*. 
+
+
+
+
+## How is varying row spacing achieved ?
+
+Setting *End row spacing* parameter allows for a varying row spacing fill. 
+Looking perpendicularly to the fill angle, the  row spacing starts at *spacing between rows*  and ends up at *end row spacing*, varying linearly in between.
+
+The two gradient blocks the `Convert to gradient blocks` stacks on each subshape have same *spacing between rows* and *end row spacing* but opposite fill angles, therefore achieving the gradient effect. The actual values of these parameters depends on the initial parameters of the shape, aiming to respect the overall row spacing.
+
+## Tweaking the result
+
+Using the extension instead of manually creating the subshapes and the gradient blocks is a huge time saver. 
+You may carefully change the values of *spacing between rows* and *end row spacing* to achieve a different blending effect, but be aware of possible density issue, as you are filling each subshape twice.
+
+
+These is part of a file containing 100 rectangles each covered by a red varying spacing fill and a blue varying spacing fill, for different values of the parameters
+
+![Download Sample File](/assets/images/tutorials/samples/end_row_spacing_2_colors_blending.svg)
+
+[Dowload the sample  ](/assets/images/tutorials/samples/end_row_spacing_2_colors_blending.svg) 
+
+
+
+## Manual blending
+If you wish to go the manual way and have total control
 ## Faux Remplissage dégradé
 
 1. Un faux dégradé a une couche de remplissage régulier en bas et chaque couche suivante a des paramètres de densité variables
