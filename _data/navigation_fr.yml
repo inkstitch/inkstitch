@@ -138,8 +138,6 @@ docs:
     children:
       - title: "Polices"
         url: /fr/docs/fonts/
-      - title: "Fonctions cachées"
-        url: /fr/docs/features/
       - title: "Astuces pour Inkscape"
         url: /fr/docs/inkscape-tips/
   - title: Dépannage
