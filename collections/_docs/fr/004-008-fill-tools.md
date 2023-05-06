@@ -38,7 +38,7 @@ Info: Pour les chemins qui se chevauchent, l'étape 1 n'est effectuée que par c
 ![Break apart fill objects](/assets/images/docs/en/break_apart.jpg)
 [Download SVG](/assets/images/docs/en/break_apart.svg)
 
-## Convertir en blocs de dégradé 
+## Convertir en blocs de dégradés 
 
 {% include upcoming_release.html %}
 
