@@ -138,8 +138,6 @@ docs:
     children:
       - title: "Fonts"
         url: /docs/fonts/
-      - title: "Hidden Features"
-        url: /docs/features/
       - title: Inkscape Tips
         url: /docs/inkscape-tips/
       - title: Machine Database
