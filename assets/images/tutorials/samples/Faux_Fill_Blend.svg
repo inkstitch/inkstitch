@@ -2,21 +2,22 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    sodipodi:docname="Faux_Fill_Blend.svg"
-   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   inkscape:version="1.3-alpha (95f74fb, 2023-03-31)"
    id="svg8"
    version="1.1"
    viewBox="0 0 100 100"
    height="100mm"
-   width="100mm">
+   width="100mm"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:inkstitch="http://inkstitch.org/namespace">
   <sodipodi:namedview
      inkscape:guide-bbox="true"
      showguides="true"
@@ -28,17 +29,20 @@
      inkscape:window-width="1920"
      inkscape:snap-global="false"
      showgrid="false"
-     inkscape:current-layer="layer3"
+     inkscape:current-layer="__inkstitch_stitch_plan"
      inkscape:document-units="mm"
-     inkscape:cy="-590.61224"
-     inkscape:cx="124.19285"
-     inkscape:zoom="1.062546"
+     inkscape:cy="202.5054"
+     inkscape:cx="502.57841"
+     inkscape:zoom="1.4246533"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0.0"
      borderopacity="1.0"
      bordercolor="#666666"
      pagecolor="#ffffff"
-     id="base" />
+     id="base"
+     inkscape:showpageshadow="2"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1" />
   <defs
      id="defs2">
     <symbol
@@ -85,13 +89,15 @@
          inkscape:connector-curvature="0"
          style="color:#000000;fill:#d5d5d5;fill-opacity:1;fill-rule:evenodd;stroke:#5a5a5a;stroke-width:0.63330007;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:0;stroke-opacity:1"
          d="M 4,4.452769 1.46667,1.286102 H -5.5 l 2.53333,3.166667 z"
-         id="use5800" />
+         id="use5800"
+         inkstitch:stroke_method="zigzag_stitch" />
       <path
          sodipodi:nodetypes="ccccc"
          inkscape:connector-curvature="0"
          style="color:#000000;opacity:0.5;fill:#d5d5d5;fill-opacity:1;fill-rule:evenodd;stroke:#858585;stroke-width:0.63339424;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:0;stroke-opacity:1"
          d="M 4,2.552769 1.46667,-0.613898 H -5.5 l 2.53333,3.166667 z"
-         id="use5864" />
+         id="use5864"
+         inkstitch:stroke_method="zigzag_stitch" />
       <g
          id="g5771">
         <path
@@ -99,17 +105,20 @@
            inkscape:connector-curvature="0"
            style="fill:#aa0000;fill-rule:evenodd;stroke:#aa0000;stroke-width:1px"
            d="m -1.0666699,-5.0472339 h 4.4333333 l 0.6333333,0.6333333 V 0.01943274 L 3.3666634,0.65276607 H -1.0666699 L -1.7000032,0.01943274 V -4.4139006 Z"
-           id="path8011" />
+           id="path8011"
+           inkstitch:stroke_method="zigzag_stitch" />
         <path
            inkscape:connector-curvature="0"
            id="path8023"
            d="m -0.43333658,-3.8755672 c 0,0 3.16666668,3.16666661 3.16666668,3.16666661"
-           style="fill:none;stroke:#ffffff;stroke-width:1.70000005" />
+           style="fill:none;stroke:#ffffff;stroke-width:1.70000005"
+           inkstitch:stroke_method="zigzag_stitch" />
         <path
            inkscape:connector-curvature="0"
            id="path8025"
            d="m 2.7333301,-3.8755672 c 0,0 -3.16666668,3.16666661 -3.16666668,3.16666661"
-           style="fill:none;stroke:#ffffff;stroke-width:1.79999995;stroke-linejoin:round" />
+           style="fill:none;stroke:#ffffff;stroke-width:1.79999995;stroke-linejoin:round"
+           inkstitch:stroke_method="zigzag_stitch" />
       </g>
     </symbol>
   </defs>
@@ -121,7 +130,6 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
         <dc:creator>
           <cc:Agent>
             <dc:title>Evan West at Wild West Designs</dc:title>
@@ -140,6 +148,9 @@
         <dc:source>www.wildwestdesigns.biz</dc:source>
       </cc:Work>
     </rdf:RDF>
+    <inkstitch:min_stitch_len_mm>0.5</inkstitch:min_stitch_len_mm>
+    <inkstitch:collapse_len_mm>3</inkstitch:collapse_len_mm>
+    <inkstitch:inkstitch_svg_version>1</inkstitch:inkstitch_svg_version>
   </metadata>
   <g
      inkscape:label="Instructions"
@@ -150,9 +161,9 @@
        id="text8622"
        y="108.27556"
        x="29.756813"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888855px;line-height:6.61458302px;font-family:sans-serif;-inkscape-font-specification:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:6.61458px;font-family:sans-serif;-inkscape-font-specification:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.26458332px"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.264583px"
          y="108.27556"
          x="29.756813"
          id="tspan8620"
@@ -161,20 +172,20 @@
        id="text8630"
        y="118.13581"
        x="0.52822745"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888855px;line-height:6.61458302px;font-family:sans-serif;-inkscape-font-specification:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:6.61458px;font-family:sans-serif;-inkscape-font-specification:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.26458332px"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.264583px"
          y="118.13581"
          x="0.52822745"
          id="tspan8628"
          sodipodi:role="line">1. A faux blend has a regular fill layer </tspan><tspan
          id="tspan8632"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.26458332px"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.264583px"
          y="124.7504"
          x="0.52822745"
          sodipodi:role="line">on bottom and each subsequent layer </tspan><tspan
          id="tspan8634"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.26458332px"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.264583px"
          y="131.36497"
          x="0.52822745"
          sodipodi:role="line">has variable density settings</tspan></text>
@@ -182,20 +193,20 @@
        id="text8642"
        y="141.55389"
        x="0.70430326"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888855px;line-height:6.61458302px;font-family:sans-serif;-inkscape-font-specification:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:6.61458px;font-family:sans-serif;-inkscape-font-specification:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="stroke-width:0.26458332px"
+         style="stroke-width:0.264583px"
          y="141.55389"
          x="0.70430326"
          id="tspan8640"
          sodipodi:role="line">2. Make sure that all of the layers have</tspan><tspan
          id="tspan8644"
-         style="stroke-width:0.26458332px"
+         style="stroke-width:0.264583px"
          y="148.16847"
          x="0.70430326"
          sodipodi:role="line">the same stitch angle, this allows for </tspan><tspan
          id="tspan8646"
-         style="stroke-width:0.26458332px"
+         style="stroke-width:0.264583px"
          y="154.78307"
          x="0.70430326"
          sodipodi:role="line">blending to happen</tspan></text>
@@ -203,20 +214,20 @@
        id="text8650"
        y="165.32413"
        x="0.70430326"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888855px;line-height:6.61458302px;font-family:sans-serif;-inkscape-font-specification:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:6.61458px;font-family:sans-serif;-inkscape-font-specification:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="stroke-width:0.26458332px"
+         style="stroke-width:0.264583px"
          y="165.32413"
          x="0.70430326"
          id="tspan8648"
          sodipodi:role="line">3. When doing more then 2 layers, each</tspan><tspan
          id="tspan8652"
-         style="stroke-width:0.26458332px"
+         style="stroke-width:0.264583px"
          y="171.93871"
          x="0.70430326"
          sodipodi:role="line">blending layer uses less density then </tspan><tspan
          id="tspan8654"
-         style="stroke-width:0.26458332px"
+         style="stroke-width:0.264583px"
          y="178.5533"
          x="0.70430326"
          sodipodi:role="line">the previous layer</tspan></text>
@@ -224,30 +235,30 @@
        id="text8658"
        y="188.56613"
        x="1.2325308"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888855px;line-height:6.61458302px;font-family:sans-serif;-inkscape-font-specification:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:6.61458px;font-family:sans-serif;-inkscape-font-specification:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="stroke-width:0.26458332px"
+         style="stroke-width:0.264583px"
          y="188.56613"
          x="1.2325308"
          id="tspan8656"
          sodipodi:role="line">4. Make sure to follow the same start</tspan><tspan
          id="tspan8660"
-         style="stroke-width:0.26458332px"
+         style="stroke-width:0.264583px"
          y="195.18071"
          x="1.2325308"
          sodipodi:role="line">and end points for each layer.  For </tspan><tspan
          id="tspan8662"
-         style="stroke-width:0.26458332px"
+         style="stroke-width:0.264583px"
          y="201.7953"
          x="1.2325308"
          sodipodi:role="line">instance, if the base layer starts at top </tspan><tspan
          id="tspan8664"
-         style="stroke-width:0.26458332px"
+         style="stroke-width:0.264583px"
          y="208.40988"
          x="1.2325308"
          sodipodi:role="line">top and ends at bottom right, follow </tspan><tspan
          id="tspan8666"
-         style="stroke-width:0.26458332px"
+         style="stroke-width:0.264583px"
          y="215.02446"
          x="1.2325308"
          sodipodi:role="line">that same sequence for each layer.</tspan></text>
@@ -255,20 +266,20 @@
        id="text8670"
        y="224.13345"
        x="1.7607582"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888855px;line-height:6.61458302px;font-family:sans-serif;-inkscape-font-specification:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:6.61458px;font-family:sans-serif;-inkscape-font-specification:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="stroke-width:0.26458332px"
+         style="stroke-width:0.264583px"
          y="224.13345"
          x="1.7607582"
          id="tspan8668"
          sodipodi:role="line">5. Underlay is typically not needed, but </tspan><tspan
          id="tspan8672"
-         style="stroke-width:0.26458332px"
+         style="stroke-width:0.264583px"
          y="230.74803"
          x="1.7607582"
          sodipodi:role="line">it does depend on the individual</tspan><tspan
          id="tspan8674"
-         style="stroke-width:0.26458332px"
+         style="stroke-width:0.264583px"
          y="237.36263"
          x="1.7607582"
          sodipodi:role="line">project.</tspan></text>
@@ -276,25 +287,25 @@
        id="text8678"
        y="247.1994"
        x="2.1129098"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888855px;line-height:6.61458302px;font-family:sans-serif;-inkscape-font-specification:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:6.61458px;font-family:sans-serif;-inkscape-font-specification:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="stroke-width:0.26458332px"
+         style="stroke-width:0.264583px"
          y="247.1994"
          x="2.1129098"
          id="tspan8676"
          sodipodi:role="line">6. Typically, it is best to work from light</tspan><tspan
          id="tspan8680"
-         style="stroke-width:0.26458332px"
+         style="stroke-width:0.264583px"
          y="253.81398"
          x="2.1129098"
          sodipodi:role="line">to dark colors, but again it does </tspan><tspan
          id="tspan8682"
-         style="stroke-width:0.26458332px"
+         style="stroke-width:0.264583px"
          y="260.42856"
          x="2.1129098"
          sodipodi:role="line">depend on the design and the desired </tspan><tspan
          id="tspan8684"
-         style="stroke-width:0.26458332px"
+         style="stroke-width:0.264583px"
          y="267.04315"
          x="2.1129098"
          sodipodi:role="line">end look.</tspan></text>
@@ -302,25 +313,25 @@
        id="text8688"
        y="277.13226"
        x="2.2889857"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888855px;line-height:6.61458302px;font-family:sans-serif;-inkscape-font-specification:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:6.61458px;font-family:sans-serif;-inkscape-font-specification:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="stroke-width:0.26458332px"
+         style="stroke-width:0.264583px"
          y="277.13226"
          x="2.2889857"
          id="tspan8686"
          sodipodi:role="line">7. While this is not a true blend, in</tspan><tspan
          id="tspan8690"
-         style="stroke-width:0.26458332px"
+         style="stroke-width:0.264583px"
          y="283.74686"
          x="2.2889857"
          sodipodi:role="line">most instances, this type of blend is</tspan><tspan
          id="tspan8692"
-         style="stroke-width:0.26458332px"
+         style="stroke-width:0.264583px"
          y="290.36142"
          x="2.2889857"
          sodipodi:role="line">good enough to achieve the desired</tspan><tspan
          id="tspan8694"
-         style="stroke-width:0.26458332px"
+         style="stroke-width:0.264583px"
          y="296.97601"
          x="2.2889857"
          sodipodi:role="line">end look.</tspan></text>
@@ -328,91 +339,102 @@
        id="text8698"
        y="306.18478"
        x="2.1129098"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888855px;line-height:6.61458302px;font-family:sans-serif;-inkscape-font-specification:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:6.61458px;font-family:sans-serif;-inkscape-font-specification:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="stroke-width:0.26458332px"
+         style="stroke-width:0.264583px"
          y="306.18478"
          x="2.1129098"
          id="tspan8696"
          sodipodi:role="line">8. The density values in this example</tspan><tspan
          id="tspan8702"
-         style="stroke-width:0.26458332px"
+         style="stroke-width:0.264583px"
          y="312.79938"
          x="2.1129098"
          sodipodi:role="line">are not set in stone, but just to</tspan><tspan
          id="tspan8706"
-         style="stroke-width:0.26458332px"
+         style="stroke-width:0.264583px"
          y="319.41394"
          x="2.1129098"
          sodipodi:role="line">illustrate the concept.  True settings will </tspan><tspan
          id="tspan8708"
-         style="stroke-width:0.26458332px"
+         style="stroke-width:0.264583px"
          y="326.02853"
          x="2.1129098"
          sodipodi:role="line">depend on the design, fabric it's going</tspan><tspan
          id="tspan8710"
-         style="stroke-width:0.26458332px"
+         style="stroke-width:0.264583px"
          y="332.64313"
          x="2.1129098"
          sodipodi:role="line">on and the size of design.</tspan></text>
   </g>
   <g
-     transform="translate(0,-197)"
+     transform="translate(0, -197)"
      id="layer1"
      inkscape:groupmode="layer"
      inkscape:label="Base Fill"
      style="display:inline">
     <path
-       embroider_fill_underlay="False"
-       embroider_fill_underlay_row_spacing_mm="1.2"
-       embroider_fill_underlay_angle="45"
-       embroider_fill_underlay_inset_mm=".2"
-       embroider_fill_underlay_max_stitch_length_mm="4"
-       embroider_max_stitch_length_mm="4"
-       embroider_angle="0"
-       embroider_running_stitch_length_mm="1.5"
-       embroider_row_spacing_mm="0.25"
-       embroider_staggers="4"
-       embroider_auto_fill="True"
        inkscape:connector-curvature="0"
        id="rect4798"
        d="M 27.970238,225.5625 H 65.956844 V 265.25 H 27.970238 Z"
-       style="fill:#8fdfe2;fill-opacity:1;stroke:none;stroke-width:0.63499993;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
-       embroider_underpath="False" />
-    <path
-       d="M 61.272088,61.524194 105.71442,107.95511"
-       id="connector"
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-opacity:0.5"
-       transform="matrix(0.264583,0,0,0.264583,0,197)"
-       inkscape:connection-end="#rect4798"
-       inkscape:connection-start="#use"
-       inkscape:connector-type="polyline"
-       inkscape:connector-curvature="0" />
-    <use
-       height="100%"
-       id="use"
-       transform="matrix(0.264583,0,0,0.264583,-39.309524,192.65328)"
-       width="100%"
-       x="209.8437"
-       y="77.952766"
-       xlink:href="#inkstitch_fill_start" />
-    <path
-       d="M 278.92639,288.03202 249.28602,257.32415"
-       id="connectorl"
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-opacity:0.5"
-       transform="matrix(0.264583,0,0,0.264583,0,197)"
-       inkscape:connection-end="#rect4798"
-       inkscape:connection-start="#useU"
-       inkscape:connector-type="polyline"
-       inkscape:connector-curvature="0" />
-    <use
-       height="100%"
-       id="useU"
-       transform="matrix(0.264583,0,0,0.264583,37.608631,197)"
-       width="100%"
-       x="136.80977"
-       y="287.95279"
-       xlink:href="#inkstitch_fill_end" />
+       style="fill:#8fdfe2;fill-opacity:1;stroke:none;stroke-width:0.635;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+       inkstitch:fill_underlay="False"
+       inkstitch:fill_underlay_row_spacing_mm="1.2"
+       inkstitch:fill_underlay_angle="45"
+       inkstitch:fill_underlay_inset_mm=".2"
+       inkstitch:fill_underlay_max_stitch_length_mm="4"
+       inkstitch:max_stitch_length_mm="4"
+       inkstitch:angle="0"
+       inkstitch:running_stitch_length_mm="1.5"
+       inkstitch:row_spacing_mm="0.25"
+       inkstitch:staggers="4"
+       inkstitch:auto_fill="True"
+       inkstitch:underpath="False"
+       inkstitch:lock_start="half_stitch" />
+    <g
+       id="command_group2"
+       inkscape:label="Ink/Stitch Command: Fill stitch ending position"
+       transform="matrix(0.264583 0 0 0.264583 53.6724 244.729)">
+      <path
+         id="command_connector2"
+         d="M 75.690476,108.06762 46.429453,77.514756"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-opacity:0.5"
+         inkscape:connection-start="#command_use4416"
+         inkscape:connection-end="#rect4798"
+         inkscape:label="connector"
+         inkscape:connector-type="polyline"
+         inkscape:connector-curvature="0" />
+      <use
+         id="command_use4416"
+         xlink:href="#inkstitch_fill_end"
+         height="100%"
+         width="100%"
+         x="75.714294"
+         y="107.95277"
+         inkscape:label="command marker" />
+    </g>
+    <g
+       id="command_group1"
+       inkscape:label="Ink/Stitch Command: Fill stitch starting position"
+       transform="matrix(0.264583 0 0 0.264583 -22.1004 197)">
+      <path
+         id="command_connector1"
+         d="m 161.57731,77.988665 28.39065,29.964225"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-opacity:0.5"
+         inkscape:connection-start="#command_use9893"
+         inkscape:connection-end="#rect4798"
+         inkscape:label="connector"
+         inkscape:connector-type="polyline"
+         inkscape:connector-curvature="0" />
+      <use
+         id="command_use9893"
+         xlink:href="#inkstitch_fill_start"
+         height="100%"
+         width="100%"
+         x="161.57472"
+         y="77.952766"
+         inkscape:label="command marker" />
+    </g>
   </g>
   <g
      inkscape:label="Fill Blend"
@@ -420,156 +442,190 @@
      inkscape:groupmode="layer"
      style="display:inline">
     <path
-       embroider_row_spacing_mm="2.1"
-       style="fill:#002857;fill-opacity:1;stroke:none;stroke-width:0.69463408;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+       style="display:inline;fill:#002857;fill-opacity:1;stroke:none;stroke-width:0.694634;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
        d="M 27.922993,35.460564 H 65.956848 V 47.555801 H 27.922993 Z"
        id="rect5322"
        inkscape:connector-curvature="0"
-       embroider_underpath="False" />
+       inkstitch:row_spacing_mm="2.1"
+       inkstitch:underpath="False"
+       inkstitch:fill_underlay="False" />
+    <g
+       id="command_group4"
+       inkscape:label="Ink/Stitch Command: Fill stitch ending position"
+       transform="matrix(0.264583 0 0 0.264583 56.6439 15.4146)"
+       style="display:inline">
+      <path
+         id="command_connector4"
+         d="M 75.511917,134.13906 35.198588,121.37634"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-opacity:0.5"
+         inkscape:connection-start="#command_use4263"
+         inkscape:connection-end="#rect5322"
+         inkscape:label="connector"
+         inkscape:connector-type="polyline"
+         inkscape:connector-curvature="0" />
+      <use
+         id="command_use4263"
+         xlink:href="#inkstitch_fill_end"
+         height="100%"
+         width="100%"
+         x="75.535736"
+         y="134.0242"
+         inkscape:label="command marker" />
+    </g>
+    <g
+       id="command_group3"
+       inkscape:label="Ink/Stitch Command: Fill stitch starting position"
+       transform="matrix(0.264583 0 0 0.264583 -27.4862 3.71435)"
+       style="display:inline">
+      <path
+         id="command_connector3"
+         d="m 159.4802,104.06009 50.0222,15.92575"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-opacity:0.5"
+         inkscape:connection-start="#command_use918"
+         inkscape:connection-end="#rect5322"
+         inkscape:label="connector"
+         inkscape:connector-type="polyline"
+         inkscape:connector-curvature="0" />
+      <use
+         id="command_use918"
+         xlink:href="#inkstitch_fill_start"
+         height="100%"
+         width="100%"
+         x="159.47762"
+         y="104.02419"
+         inkscape:label="command marker" />
+    </g>
     <path
-       d="m 54.189896,117.59563 51.529024,16.42872"
-       id="connectorE"
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-opacity:0.5"
-       transform="scale(0.264583)"
-       inkscape:connection-end="#rect5322"
-       inkscape:connection-start="#usee"
-       inkscape:connector-type="polyline"
-       inkscape:connector-curvature="0" />
-    <use
-       height="100%"
-       id="usee"
-       transform="matrix(0.264583,0,0,0.264583,-37.277902,3.5907738)"
-       width="100%"
-       x="195.08293"
-       y="104.02419"
-       xlink:href="#inkstitch_fill_start" />
-    <path
-       d="M 289.81995,192.67483 249.19396,179.73869"
-       id="connectors"
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-opacity:0.5"
-       transform="scale(0.264583)"
-       inkscape:connection-end="#rect5322"
-       inkscape:connection-start="#use9"
-       inkscape:connector-type="polyline"
-       inkscape:connector-curvature="0" />
-    <use
-       height="100%"
-       id="use9"
-       transform="matrix(0.264583,0,0,0.264583,34.773808,-4.5357144)"
-       width="100%"
-       x="158.41763"
-       y="209.73848"
-       xlink:href="#inkstitch_fill_end" />
-    <path
-       embroider_row_spacing_mm="1.2"
-       style="fill:#002857;fill-opacity:1;stroke:none;stroke-width:0.62527049;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+       style="display:inline;fill:#002857;fill-opacity:1;stroke:none;stroke-width:0.62527;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
        d="M 27.875742,47.465159 H 65.909597 V 57.635042 H 27.875742 Z"
        id="rect5417"
        inkscape:connector-curvature="0"
-       embroider_underpath="False" />
+       inkstitch:row_spacing_mm="1.2"
+       inkstitch:underpath="False"
+       inkstitch:fill_underlay="False" />
+    <g
+       id="command_group6"
+       inkscape:label="Ink/Stitch Command: Fill stitch ending position"
+       transform="matrix(0.264583 0 0 0.264583 -7.42871 16.1574)"
+       style="display:inline">
+      <path
+         id="command_connector6"
+         d="M 75.333329,179.51076 145.78199,156.76609"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-opacity:0.5"
+         inkscape:connection-start="#command_use5127"
+         inkscape:connection-end="#rect5417"
+         inkscape:label="connector"
+         inkscape:connector-type="polyline"
+         inkscape:connector-curvature="0" />
+      <use
+         id="command_use5127"
+         xlink:href="#inkstitch_fill_end"
+         height="100%"
+         width="100%"
+         x="75.357147"
+         y="179.3959"
+         inkscape:label="command marker" />
+    </g>
+    <g
+       id="command_group5"
+       inkscape:label="Ink/Stitch Command: Fill stitch starting position"
+       transform="matrix(0.264583 0 0 0.264583 36.7721 1.85718)"
+       style="display:inline">
+      <path
+         id="command_connector5"
+         d="M 173.73535,149.4318 100.0063,172.37683"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-opacity:0.5"
+         inkscape:connection-start="#command_use7871"
+         inkscape:connection-end="#rect5417"
+         inkscape:label="connector"
+         inkscape:connector-type="polyline"
+         inkscape:connector-curvature="0" />
+      <use
+         id="command_use7871"
+         xlink:href="#inkstitch_fill_start"
+         height="100%"
+         width="100%"
+         x="173.73276"
+         y="149.3959"
+         inkscape:label="command marker" />
+    </g>
     <path
-       d="M 312.40971,157.23852 240.02033,179.3961"
-       id="connectorP"
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-opacity:0.5"
-       transform="scale(0.264583)"
-       inkscape:connection-end="#rect5417"
-       inkscape:connection-start="#useA"
-       inkscape:connector-type="polyline"
-       inkscape:connector-curvature="0" />
-    <use
-       height="100%"
-       id="useA"
-       transform="matrix(0.264583,0,0,0.264583,22.489583,3.0710566)"
-       width="100%"
-       x="227.40961"
-       y="145.63136"
-       xlink:href="#inkstitch_fill_start" />
-    <path
-       d="M 45.830906,240.88914 117.49482,217.8335"
-       id="connectorh"
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-opacity:0.5"
-       transform="scale(0.264583)"
-       inkscape:connection-end="#rect5417"
-       inkscape:connection-start="#useP"
-       inkscape:connector-type="polyline"
-       inkscape:connector-curvature="0" />
-    <use
-       height="100%"
-       id="useP"
-       transform="matrix(0.264583,0,0,0.264583,-30.427084,-3.1655505)"
-       width="100%"
-       x="160.85747"
-       y="252.77422"
-       xlink:href="#inkstitch_fill_end" />
-    <path
-       embroider_row_spacing_mm=".8"
-       style="fill:#002857;fill-opacity:1;stroke:none;stroke-width:0.64055341;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+       style="display:inline;fill:#002857;fill-opacity:1;stroke:none;stroke-width:0.640553;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
        d="M 27.828497,57.432662 H 65.956846 V 68.249999 H 27.828497 Z"
        id="rect5532"
        inkscape:connector-curvature="0"
-       embroider_underpath="False" />
-    <path
-       d="M 15.346761,195.09563 105.1787,218.63226"
-       id="connectorV"
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-opacity:0.5"
-       transform="scale(0.264583)"
-       inkscape:connection-end="#rect5532"
-       inkscape:connection-start="#user"
-       inkscape:connector-type="polyline"
-       inkscape:connector-curvature="0" />
-    <use
-       height="100%"
-       id="user"
-       transform="matrix(0.264583,0,0,0.264583,-48.050223,1.937128)"
-       width="100%"
-       x="196.95413"
-       y="187.7742"
-       xlink:href="#inkstitch_fill_start" />
-    <path
-       d="M 334.09491,281.60344 249.28603,257.76445"
-       id="connectorp"
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-opacity:0.5"
-       transform="scale(0.264583)"
-       inkscape:connection-end="#rect5532"
-       inkscape:connection-start="#usec"
-       inkscape:connector-type="polyline"
-       inkscape:connector-curvature="0" />
-    <use
-       height="100%"
-       id="usec"
-       transform="matrix(0.264583,0,0,0.264583,50.885045,-1.7008929)"
-       width="100%"
-       x="141.79965"
-       y="287.95279"
-       xlink:href="#inkstitch_fill_end" />
+       inkstitch:row_spacing_mm=".8"
+       inkstitch:underpath="False"
+       inkstitch:fill_underlay="False" />
+    <g
+       id="command_group8"
+       inkscape:label="Ink/Stitch Command: Fill stitch ending position"
+       transform="matrix(0.264583 0 0 0.264583 68.5298 17.086)">
+      <path
+         id="command_connector8"
+         d="M 75.154763,217.18321 -9.7245628,193.25029"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-opacity:0.5"
+         inkscape:connection-start="#command_use1692"
+         inkscape:connection-end="#rect5532"
+         inkscape:label="connector"
+         inkscape:connector-type="polyline"
+         inkscape:connector-curvature="0" />
+      <use
+         id="command_use1692"
+         xlink:href="#inkstitch_fill_end"
+         height="100%"
+         width="100%"
+         x="75.178581"
+         y="217.06836"
+         inkscape:label="command marker" />
+    </g>
+    <g
+       id="command_group7"
+       inkscape:label="Ink/Stitch Command: Fill stitch starting position"
+       transform="matrix(0.264583 0 0 0.264583 -40.6722 1.85718)">
+      <path
+         id="command_connector7"
+         d="M 167.84994,187.10426 258.9006,211.3246"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-opacity:0.5"
+         inkscape:connection-start="#command_use1009"
+         inkscape:connection-end="#rect5532"
+         inkscape:label="connector"
+         inkscape:connector-type="polyline"
+         inkscape:connector-curvature="0" />
+      <use
+         id="command_use1009"
+         xlink:href="#inkstitch_fill_start"
+         height="100%"
+         width="100%"
+         x="167.84735"
+         y="187.06836"
+         inkscape:label="command marker" />
+    </g>
   </g>
   <g
-     id="__inkstitch_stitch_plan__"
+     id="__inkstitch_stitch_plan"
      inkscape:groupmode="layer"
      inkscape:label="Exploding View">
     <g
-       transform="translate(75.449675,-2.4900883)"
-       id="__color_block_0__"
-       inkscape:label="color block 1">
+       id="g2"
+       inkscape:label="color block 1"
+       transform="translate(19.31464,-44.943681)">
       <path
-         inkscape:connector-curvature="0"
-         d="m 105.7143,108.66142 h 0.3 0.3 -0.3 -0.3 11.45105 15.11811 15.11811 15.11812 15.11811 15.11811 15.11811 15.11811 15.11811 11.1755 v 0.94488 h -7.39598 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 l -0.11247,0.94488 h 3.892 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 3.61645 v 0.94488 H 234.33071 219.2126 204.09449 188.97638 173.85827 158.74016 143.62205 128.50394 113.38583 105.7143 v 0.94488 h 11.45105 15.11811 15.11811 15.11812 15.11811 15.11811 15.11811 15.11811 15.11811 11.1755 v 0.94489 h -7.39598 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 l -0.11247,0.94488 h 3.892 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 3.61645 v 0.94488 H 234.33071 219.2126 204.09449 188.97638 173.85827 158.74016 143.62205 128.50394 113.38583 105.7143 v 0.94488 h 11.45105 15.11811 15.11811 15.11812 15.11811 15.11811 15.11811 15.11811 15.11811 11.1755 v 0.94488 h -7.39598 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 l -0.11247,0.94489 h 3.892 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 3.61645 v 0.94488 H 234.33071 219.2126 204.09449 188.97638 173.85827 158.74016 143.62205 128.50394 113.38583 105.7143 V 120 h 11.45105 15.11811 15.11811 15.11812 15.11811 15.11811 15.11811 15.11811 15.11811 11.1755 v 0.94488 h -7.39598 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 l -0.11247,0.94488 h 3.892 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 3.61645 v 0.94489 H 234.33071 219.2126 204.09449 188.97638 173.85827 158.74016 143.62205 128.50394 113.38583 105.7143 v 0.94488 h 11.45105 15.11811 15.11811 15.11812 15.11811 15.11811 15.11811 15.11811 15.11811 11.1755 v 0.94488 h -7.39598 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 l -0.11247,0.94488 h 3.892 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 3.61645 v 0.94488 H 234.33071 219.2126 204.09449 188.97638 173.85827 158.74016 143.62205 128.50394 113.38583 105.7143 v 0.94489 h 11.45105 15.11811 15.11811 15.11812 15.11811 15.11811 15.11811 15.11811 15.11811 11.1755 v 0.94488 h -7.39598 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 l -0.11247,0.94488 h 3.892 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 3.61645 v 0.94488 H 234.33071 219.2126 204.09449 188.97638 173.85827 158.74016 143.62205 128.50394 113.38583 105.7143 v 0.94488 h 11.45105 15.11811 15.11811 15.11812 15.11811 15.11811 15.11811 15.11811 15.11811 11.1755 v 0.94488 h -7.39598 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 l -0.11247,0.94489 h 3.892 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 3.61645 v 0.94488 H 234.33071 219.2126 204.09449 188.97638 173.85827 158.74016 143.62205 128.50394 113.38583 105.7143 v 0.94488 h 11.45105 15.11811 15.11811 15.11812 15.11811 15.11811 15.11811 15.11811 15.11811 11.1755 v 0.94488 h -7.39598 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 l -0.11247,0.94488 h 3.892 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 3.61645 v 0.94489 H 234.33071 219.2126 204.09449 188.97638 173.85827 158.74016 143.62205 128.50394 113.38583 105.7143 v 0.94488 h 11.45105 15.11811 15.11811 15.11812 15.11811 15.11811 15.11811 15.11811 15.11811 11.1755 v 0.94488 h -7.39598 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 l -0.11247,0.94488 h 3.892 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 3.61645 v 0.94488 H 234.33071 219.2126 204.09449 188.97638 173.85827 158.74016 143.62205 128.50394 113.38583 105.7143 v 0.94489 h 11.45105 15.11811 15.11811 15.11812 15.11811 15.11811 15.11811 15.11811 15.11811 11.1755 v 0.94488 h -7.39598 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 l -0.11247,0.94488 h 3.892 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 3.61645 v 0.94488 H 234.33071 219.2126 204.09449 188.97638 173.85827 158.74016 143.62205 128.50394 113.38583 105.7143 v 0.94488 h 11.45105 15.11811 15.11811 15.11812 15.11811 15.11811 15.11811 15.11811 15.11811 11.1755 v 0.94488 h -7.39598 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 l -0.11247,0.94489 h 3.892 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 3.61645 v 0.94488 H 234.33071 219.2126 204.09449 188.97638 173.85827 158.74016 143.62205 128.50394 113.38583 105.7143 v 0.94488 h 11.45105 15.11811 15.11811 15.11812 15.11811 15.11811 15.11811 15.11811 15.11811 11.1755 v 0.94488 h -7.39598 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 l -0.11247,0.94488 h 3.892 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 3.61645 v 0.94489 H 234.33071 219.2126 204.09449 188.97638 173.85827 158.74016 143.62205 128.50394 113.38583 105.7143 v 0.94488 h 11.45105 15.11811 15.11811 15.11812 15.11811 15.11811 15.11811 15.11811 15.11811 11.1755 v 0.94488 h -7.39598 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 l -0.11247,0.94488 h 3.892 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 3.61645 v 0.94488 H 234.33071 219.2126 204.09449 188.97638 173.85827 158.74016 143.62205 128.50394 113.38583 105.7143 v 0.94489 h 11.45105 15.11811 15.11811 15.11812 15.11811 15.11811 15.11811 15.11811 15.11811 11.1755 v 0.94488 h -7.39598 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 l -0.11247,0.94488 h 3.892 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 3.61645 v 0.94488 H 234.33071 219.2126 204.09449 188.97638 173.85827 158.74016 143.62205 128.50394 113.38583 105.7143 v 0.94488 h 11.45105 15.11811 15.11811 15.11812 15.11811 15.11811 15.11811 15.11811 15.11811 11.1755 v 0.94489 h -7.39598 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 l -0.11247,0.94488 h 3.892 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 3.61645 v 0.94488 H 234.33071 219.2126 204.09449 188.97638 173.85827 158.74016 143.62205 128.50394 113.38583 105.7143 v 0.94488 h 11.45105 15.11811 15.11811 15.11812 15.11811 15.11811 15.11811 15.11811 15.11811 11.1755 v 0.94488 h -7.39598 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 l -0.11247,0.94488 h 3.892 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 3.61645 v 0.94489 H 234.33071 219.2126 204.09449 188.97638 173.85827 158.74016 143.62205 128.50394 113.38583 105.7143 v 0.94488 h 11.45105 15.11811 15.11811 15.11812 15.11811 15.11811 15.11811 15.11811 15.11811 11.1755 v 0.94488 h -7.39598 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 l -0.11247,0.94488 h 3.892 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 3.61645 v 0.94488 H 234.33071 219.2126 204.09449 188.97638 173.85827 158.74016 143.62205 128.50394 113.38583 105.7143 v 0.94489 h 11.45105 15.11811 15.11811 15.11812 15.11811 15.11811 15.11811 15.11811 15.11811 11.1755 v 0.94488 h -7.39598 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 l -0.11247,0.94488 h 3.892 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 3.61645 v 0.94488 H 234.33071 219.2126 204.09449 188.97638 173.85827 158.74016 143.62205 128.50394 113.38583 105.7143 v 0.94488 h 11.45105 15.11811 15.11811 15.11812 15.11811 15.11811 15.11811 15.11811 15.11811 11.1755 v 0.94489 h -7.39598 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 l -0.11247,0.94488 h 3.892 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 3.61645 v 0.94488 H 234.33071 219.2126 204.09449 188.97638 173.85827 158.74016 143.62205 128.50394 113.38583 105.7143 v 0.94488 h 11.45105 15.11811 15.11811 15.11812 15.11811 15.11811 15.11811 15.11811 15.11811 11.1755 v 0.94488 h -7.39598 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 l -0.11247,0.94488 h 3.892 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 3.61645 v 0.94489 H 234.33071 219.2126 204.09449 188.97638 173.85827 158.74016 143.62205 128.50394 113.38583 105.7143 v 0.94488 h 11.45105 15.11811 15.11811 15.11812 15.11811 15.11811 15.11811 15.11811 15.11811 11.1755 v 0.94488 h -7.39598 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 l -0.11247,0.94488 h 3.892 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 3.61645 v 0.94488 H 234.33071 219.2126 204.09449 188.97638 173.85827 158.74016 143.62205 128.50394 113.38583 105.7143 v 0.94489 h 11.45105 15.11811 15.11811 15.11812 15.11811 15.11811 15.11811 15.11811 15.11811 11.1755 v 0.94488 h -7.39598 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 l -0.11247,0.94488 h 3.892 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 3.61645 v 0.94488 H 234.33071 219.2126 204.09449 188.97638 173.85827 158.74016 143.62205 128.50394 113.38583 105.7143 v 0.94488 h 11.45105 15.11811 15.11811 15.11812 15.11811 15.11811 15.11811 15.11811 15.11811 11.1755 v 0.94489 h -7.39598 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 l -0.11247,0.94488 h 3.892 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 3.61645 v 0.94488 H 234.33071 219.2126 204.09449 188.97638 173.85827 158.74016 143.62205 128.50394 113.38583 105.7143 v 0.94488 h 11.45105 15.11811 15.11811 15.11812 15.11811 15.11811 15.11811 15.11811 15.11811 11.1755 v 0.94488 h -7.39598 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 l -0.11247,0.94488 h 3.892 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 3.61645 v 0.94489 H 234.33071 219.2126 204.09449 188.97638 173.85827 158.74016 143.62205 128.50394 113.38583 105.7143 v 0.94488 h 11.45105 15.11811 15.11811 15.11812 15.11811 15.11811 15.11811 15.11811 15.11811 11.1755 v 0.94488 h -7.39598 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 l -0.11247,0.94488 h 3.892 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 3.61645 v 0.94488 H 234.33071 219.2126 204.09449 188.97638 173.85827 158.74016 143.62205 128.50394 113.38583 105.7143 v 0.94489 h 11.45105 15.11811 15.11811 15.11812 15.11811 15.11811 15.11811 15.11811 15.11811 11.1755 v 0.94488 h -7.39598 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 l -0.11247,0.94488 h 3.892 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 3.61645 v 0.94488 H 234.33071 219.2126 204.09449 188.97638 173.85827 158.74016 143.62205 128.50394 113.38583 105.7143 v 0.94488 h 11.45105 15.11811 15.11811 15.11812 15.11811 15.11811 15.11811 15.11811 15.11811 11.1755 v 0.94489 h -7.39598 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 l -0.11247,0.94488 h 3.892 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 3.61645 v 0.94488 H 234.33071 219.2126 204.09449 188.97638 173.85827 158.74016 143.62205 128.50394 113.38583 105.7143 v 0.94488 h 11.45105 15.11811 15.11811 15.11812 15.11811 15.11811 15.11811 15.11811 15.11811 11.1755 v 0.94488 h -7.39598 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 l -0.11247,0.94489 h 3.892 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 3.61645 v 0.94488 H 234.33071 219.2126 204.09449 188.97638 173.85827 158.74016 143.62205 128.50394 113.38583 105.7143 v 0.94488 h 11.45105 15.11811 15.11811 15.11812 15.11811 15.11811 15.11811 15.11811 15.11811 11.1755 v 0.94488 h -7.39598 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 l -0.11247,0.94488 h 3.892 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 3.61645 v 0.94488 H 234.33071 219.2126 204.09449 188.97638 173.85827 158.74016 143.62205 128.50394 113.38583 105.7143 v 0.94489 h 11.45105 15.11811 15.11811 15.11812 15.11811 15.11811 15.11811 15.11811 15.11811 11.1755 v 0.94488 h -7.39598 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 l -0.11247,0.94488 h 3.892 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 3.61645 v 0.94488 H 234.33071 219.2126 204.09449 188.97638 173.85827 158.74016 143.62205 128.50394 113.38583 105.7143 v 0.94488 h 11.45105 15.11811 15.11811 15.11812 15.11811 15.11811 15.11811 15.11811 15.11811 11.1755 v 0.94489 h -7.39598 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 l -0.11247,0.94488 h 3.892 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 3.61645 v 0.94488 H 234.33071 219.2126 204.09449 188.97638 173.85827 158.74016 143.62205 128.50394 113.38583 105.7143 v 0.94488 h 11.45105 15.11811 15.11811 15.11812 15.11811 15.11811 15.11811 15.11811 15.11811 11.1755 v 0.94488 h -7.39598 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 l -0.11247,0.94489 h 3.892 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 3.61645 v 0.94488 H 234.33071 219.2126 204.09449 188.97638 173.85827 158.74016 143.62205 128.50394 113.38583 105.7143 v 0.94488 h 11.45105 15.11811 15.11811 15.11812 15.11811 15.11811 15.11811 15.11811 15.11811 11.1755 v 0.94488 h -7.39598 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 l -0.11247,0.94488 h 3.892 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 3.61645 v 0.94488 H 234.33071 219.2126 204.09449 188.97638 173.85827 158.74016 143.62205 128.50394 113.38583 105.7143 v 0.94489 h 11.45105 15.11811 15.11811 15.11812 15.11811 15.11811 15.11811 15.11811 15.11811 11.1755 v 0.94488 h -7.39598 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 l -0.11247,0.94488 h 3.892 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 3.61645 v 0.94488 H 234.33071 219.2126 204.09449 188.97638 173.85827 158.74016 143.62205 128.50394 113.38583 105.7143 v 0.94488 h 11.45105 15.11811 15.11811 15.11812 15.11811 15.11811 15.11811 15.11811 15.11811 11.1755 v 0.94489 h -7.39598 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 l -0.11247,0.94488 h 3.892 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 3.61645 V 240 H 234.33071 219.2126 204.09449 188.97638 173.85827 158.74016 143.62205 128.50394 113.38583 105.7143 v 0.94488 h 11.45105 15.11811 15.11811 15.11812 15.11811 15.11811 15.11811 15.11811 15.11811 11.1755 v 0.94488 h -7.39598 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 l -0.11247,0.94489 h 3.892 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 3.61645 v 0.94488 H 234.33071 219.2126 204.09449 188.97638 173.85827 158.74016 143.62205 128.50394 113.38583 105.7143 v 0.94488 h 11.45105 15.11811 15.11811 15.11812 15.11811 15.11811 15.11811 15.11811 15.11811 11.1755 v 0.94488 h -7.39598 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 l -0.11247,0.94488 h 3.892 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 3.61645 v 0.94489 H 234.33071 219.2126 204.09449 188.97638 173.85827 158.74016 143.62205 128.50394 113.38583 105.7143 v 0.94488 h 11.45105 15.11811 15.11811 15.11812 15.11811 15.11811 15.11811 15.11811 15.11811 11.1755 v 0.94488 h -7.39598 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 l -0.11247,0.94488 h 3.892 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 3.61645 v 0.94488 H 234.33071 219.2126 204.09449 188.97638 173.85827 158.74016 143.62205 128.50394 113.38583 105.7143 v 0.94488 h 11.45105 15.11811 15.11811 15.11812 15.11811 15.11811 15.11811 15.11811 15.11811 11.1755 v 0.94489 h -7.39598 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 l -0.11247,0.94488 h 3.892 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 3.61645 v 0.94488 H 234.33071 219.2126 204.09449 188.97638 173.85827 158.74016 143.62205 128.50394 113.38583 105.7143 v 0.94488 h 11.45105 15.11811 15.11811 15.11812 15.11811 15.11811 15.11811 15.11811 15.11811 11.1755 v 0.94488 h -7.39598 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 -15.11811 l -0.11247,0.94489 h 3.892 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 15.11811 3.61645 v -0.94489 0.3 0.3 -0.3 -0.3"
-         embroider_manual_stitch="true"
-         style="fill:none;stroke:#8fdee1;stroke-width:0.40000001"
-         transform="scale(0.264583)"
-         id="path13206" />
+         id="object1556"
+         style="fill:none;stroke:#8fdee1;stroke-width:0.105833"
+         d="m 84.062887,71.83469 h 0.726825 0.726825 -0.726825 -0.726825 1.45365 1.453651 1.45365 1.453651 1.453651 1.45365 1.453651 1.45365 1.453651 1.45365 1.453648 1.45365 1.45365 1.45365 1.45365 1.45365 1.45365 1.45365 1.45366 1.45365 1.45365 1.45365 1.45365 1.45365 1.45365 1.45364 v 1.469906 1.469906 1.469905 1.469906 1.469906 1.469905 1.469906 1.469906 1.469905 1.469906 1.469905 1.469906 1.469905 1.469906 1.469905 1.469906 1.469905 1.469906 1.469905 1.469904 1.46991 1.4699 1.46991 1.4699 1.46991 1.4699 1.46991 h -0.95685 -3.99999 -4 -3.99999 -4 -3.99999 -3.999995 -3.999995 -3.999995 -3.999995 -1.029758 1.461022 1.461022 1.461022 1.461022 1.461022 1.461022 1.461022 1.461021 1.461022 1.461022 1.461022 1.461017 1.46103 1.46102 1.46102 1.46102 1.46102 1.46102 1.46103 1.46102 1.46102 1.46102 1.46102 1.46102 1.46102 1.46102 v -1.46296 -1.46296 -1.46296 -1.46296 -1.46296 -1.46296 -1.46297 -1.462958 -1.462962 -1.462961 -1.462962 -1.462961 -1.462962 -1.462961 -1.462962 -1.462961 -1.462962 -1.462961 -1.462962 -1.462961 -1.462961 -1.462962 -1.462961 -1.462961 -1.462961 -1.462961 -1.46296 h -2.95684 -4 -3.99999 -4 -3.99999 -3.999998 -3.999995 -3.999995 -3.999995 -3.029755 l 4.029754,0.249999 h 3.999995 3.999995 3.999995 3.999999 3.99999 4 3.99999 4 1.95684 l -0.95685,0.25 h -3.99999 -4 -3.99999 -4 -3.99999 -3.999995 -3.999995 -3.999995 -3.999995 -1.029758 l 2.029756,0.25 h 3.999995 3.999995 3.999995 3.999997 3.99999 4 3.99999 4 3.95684 l -2.95684,0.249999 h -4 -3.99999 -4 -3.99999 -3.999998 -3.999995 -3.999995 -3.999995 -3.029755 l 4.029754,0.25 h 3.999995 3.999995 3.999995 3.999999 3.99999 4 3.99999 4 1.95684 l -0.95685,0.25 h -3.99999 -4 -3.99999 -4 -3.99999 -3.999995 -3.999995 -3.999995 -3.999995 -1.029758 l 2.029756,0.25 h 3.999995 3.999995 3.999995 3.999997 3.99999 4 3.99999 4 3.95684 l -2.95684,0.249999 h -4 -3.99999 -4 -3.99999 -3.999998 -3.999995 -3.999995 -3.999995 -3.029755 l 4.029754,0.25 h 3.999995 3.999995 3.999995 3.999999 3.99999 4 3.99999 4 1.95684 l -0.95685,0.25 h -3.99999 -4 -3.99999 -4 -3.99999 -3.999995 -3.999995 -3.999995 -3.999995 -1.029758 l 2.029756,0.249999 h 3.999995 3.999995 3.999995 3.999997 3.99999 4 3.99999 4 3.95684 l -2.95684,0.25 h -4 -3.99999 -4 -3.99999 -3.999998 -3.999995 -3.999995 -3.999995 -3.029755 l 4.029754,0.25 h 3.999995 3.999995 3.999995 3.999999 3.99999 4 3.99999 4 1.95684 l -0.95685,0.249999 h -3.99999 -4 -3.99999 -4 -3.99999 -3.999995 -3.999995 -3.999995 -3.999995 -1.029758 l 2.029756,0.25 h 3.999995 3.999995 3.999995 3.999997 3.99999 4 3.99999 4 3.95684 l -2.95684,0.25 h -4 -3.99999 -4 -3.99999 -3.999998 -3.999995 -3.999995 -3.999995 -3.029755 l 4.029754,0.249999 h 3.999995 3.999995 3.999995 3.999999 3.99999 4 3.99999 4 1.95684 l -0.95685,0.25 h -3.99999 -4 -3.99999 -4 -3.99999 -3.999995 -3.999995 -3.999995 -3.999995 -1.029758 l 2.029756,0.25 h 3.999995 3.999995 3.999995 3.999997 3.99999 4 3.99999 4 3.95684 l -2.95684,0.249999 h -4 -3.99999 -4 -3.99999 -3.999998 -3.999995 -3.999995 -3.999995 -3.029755 l 4.029754,0.25 h 3.999995 3.999995 3.999995 3.999999 3.99999 4 3.99999 4 1.95684 l -0.95685,0.25 h -3.99999 -4 -3.99999 -4 -3.99999 -3.999995 -3.999995 -3.999995 -3.999995 -1.029758 l 2.029756,0.249999 h 3.999995 3.999995 3.999995 3.999997 3.99999 4 3.99999 4 3.95684 l -2.95684,0.25 h -4 -3.99999 -4 -3.99999 -3.999998 -3.999995 -3.999995 -3.999995 -3.029755 l 4.029754,0.25 h 3.999995 3.999995 3.999995 3.999999 3.99999 4 3.99999 4 1.95684 l -0.95685,0.25 h -3.99999 -4 -3.99999 -4 -3.99999 -3.999995 -3.999995 -3.999995 -3.999995 -1.029758 l 2.029756,0.249999 h 3.999995 3.999995 3.999995 3.999997 3.99999 4 3.99999 4 3.95684 l -2.95684,0.25 h -4 -3.99999 -4 -3.99999 -3.999998 -3.999995 -3.999995 -3.999995 -3.029755 l 4.029754,0.25 h 3.999995 3.999995 3.999995 3.999999 3.99999 4 3.99999 4 1.95684 l -0.95685,0.249999 h -3.99999 -4 -3.99999 -4 -3.99999 -3.999995 -3.999995 -3.999995 -3.999995 -1.029758 l 2.029756,0.25 h 3.999995 3.999995 3.999995 3.999997 3.99999 4 3.99999 4 3.95684 l -2.95684,0.25 h -4 -3.99999 -4 -3.99999 -3.999998 -3.999995 -3.999995 -3.999995 -3.029755 l 4.029754,0.249999 h 3.999995 3.999995 3.999995 3.999999 3.99999 4 3.99999 4 1.95684 l -0.95685,0.25 h -3.99999 -4 -3.99999 -4 -3.99999 -3.999995 -3.999995 -3.999995 -3.999995 -1.029758 l 2.029756,0.25 h 3.999995 3.999995 3.999995 3.999997 3.99999 4 3.99999 4 3.95684 l -2.95684,0.249999 h -4 -3.99999 -4 -3.99999 -3.999998 -3.999995 -3.999995 -3.999995 -3.029755 l 4.029754,0.25 h 3.999995 3.999995 3.999995 3.999999 3.99999 4 3.99999 4 1.95684 l -0.95685,0.25 h -3.99999 -4 -3.99999 -4 -3.99999 -3.999995 -3.999995 -3.999995 -3.999995 -1.029758 l 2.029756,0.249999 h 3.999995 3.999995 3.999995 3.999997 3.99999 4 3.99999 4 3.95684 l -2.95684,0.25 h -4 -3.99999 -4 -3.99999 -3.999998 -3.999995 -3.999995 -3.999995 -3.029755 l 4.029754,0.25 h 3.999995 3.999995 3.999995 3.999999 3.99999 4 3.99999 4 1.95684 l -0.95685,0.25 h -3.99999 -4 -3.99999 -4 -3.99999 -3.999995 -3.999995 -3.999995 -3.999995 -1.029758 l 2.029756,0.249999 h 3.999995 3.999995 3.999995 3.999997 3.99999 4 3.99999 4 3.95684 l -2.95684,0.25 h -4 -3.99999 -4 -3.99999 -3.999998 -3.999995 -3.999995 -3.999995 -3.029755 l 4.029754,0.25 h 3.999995 3.999995 3.999995 3.999999 3.99999 4 3.99999 4 1.95684 l -0.95685,0.249999 h -3.99999 -4 -3.99999 -4 -3.99999 -3.999995 -3.999995 -3.999995 -3.999995 -1.029758 l 2.029756,0.25 h 3.999995 3.999995 3.999995 3.999997 3.99999 4 3.99999 4 3.95684 l -2.95684,0.25 h -4 -3.99999 -4 -3.99999 -3.999998 -3.999995 -3.999995 -3.999995 -3.029755 l 4.029754,0.249999 h 3.999995 3.999995 3.999995 3.999999 3.99999 4 3.99999 4 1.95684 l -0.95685,0.25 h -3.99999 -4 -3.99999 -4 -3.99999 -3.999995 -3.999995 -3.999995 -3.999995 -1.029758 l 2.029756,0.25 h 3.999995 3.999995 3.999995 3.999997 3.99999 4 3.99999 4 3.95684 l -2.95684,0.249999 h -4 -3.99999 -4 -3.99999 -3.999998 -3.999995 -3.999995 -3.999995 -3.029755 l 4.029754,0.25 h 3.999995 3.999995 3.999995 3.999999 3.99999 4 3.99999 4 1.95684 l -0.95685,0.25 h -3.99999 -4 -3.99999 -4 -3.99999 -3.999995 -3.999995 -3.999995 -3.999995 -1.029758 l 2.029756,0.249999 h 3.999995 3.999995 3.999995 3.999997 3.99999 4 3.99999 4 3.95684 l -2.95684,0.25 h -4 -3.99999 -4 -3.99999 -3.999998 -3.999995 -3.999995 -3.999995 -3.029755 l 4.029754,0.25 h 3.999995 3.999995 3.999995 3.999999 3.99999 4 3.99999 4 1.95684 l -0.95685,0.249999 h -3.99999 -4 -3.99999 -4 -3.99999 -3.999995 -3.999995 -3.999995 -3.999995 -1.029758 l 2.029756,0.25 h 3.999995 3.999995 3.999995 3.999997 3.99999 4 3.99999 4 3.95684 l -2.95684,0.25 h -4 -3.99999 -4 -3.99999 -3.999998 -3.999995 -3.999995 -3.999995 -3.029755 l 4.029754,0.25 h 3.999995 3.999995 3.999995 3.999999 3.99999 4 3.99999 4 1.95684 l -0.95685,0.249999 h -3.99999 -4 -3.99999 -4 -3.99999 -3.999995 -3.999995 -3.999995 -3.999995 -1.029758 l 2.029756,0.25 h 3.999995 3.999995 3.999995 3.999997 3.99999 4 3.99999 4 3.95684 l -2.95684,0.25 h -4 -3.99999 -4 -3.99999 -3.999998 -3.999995 -3.999995 -3.999995 -3.029755 l 4.029754,0.249999 h 3.999995 3.999995 3.999995 3.999999 3.99999 4 3.99999 4 1.95684 l -0.95685,0.25 h -3.99999 -4 -3.99999 -4 -3.99999 -3.999995 -3.999995 -3.999995 -3.999995 -1.029758 l 2.029756,0.25 h 3.999995 3.999995 3.999995 3.999997 3.99999 4 3.99999 4 3.95684 l -2.95684,0.249999 h -4 -3.99999 -4 -3.99999 -3.999998 -3.999995 -3.999995 -3.999995 -3.029755 l 4.029754,0.25 h 3.999995 3.999995 3.999995 3.999999 3.99999 4 3.99999 4 1.95684 l -0.95685,0.25 h -3.99999 -4 -3.99999 -4 -3.99999 -3.999995 -3.999995 -3.999995 -3.999995 -1.029758 l 2.029756,0.249999 h 3.999995 3.999995 3.999995 3.999997 3.99999 4 3.99999 4 3.95684 l -2.95684,0.25 h -4 -3.99999 -4 -3.99999 -3.999998 -3.999995 -3.999995 -3.999995 -3.029755 l 4.029754,0.25 h 3.999995 3.999995 3.999995 3.999999 3.99999 4 3.99999 4 1.95684 l -0.95685,0.249999 h -3.99999 -4 -3.99999 -4 -3.99999 -3.999995 -3.999995 -3.999995 -3.999995 -1.029758 l 2.029756,0.25 h 3.999995 3.999995 3.999995 3.999997 3.99999 4 3.99999 4 3.95684 l -2.95684,0.25 h -4 -3.99999 -4 -3.99999 -3.999998 -3.999995 -3.999995 -3.999995 -3.029755 l 4.029754,0.249999 h 3.999995 3.999995 3.999995 3.999999 3.99999 4 3.99999 4 1.95684 l -0.95685,0.25 h -3.99999 -4 -3.99999 -4 -3.99999 -3.999995 -3.999995 -3.999995 -3.999995 -1.029758 l 2.029756,0.25 h 3.999995 3.999995 3.999995 3.999997 3.99999 4 3.99999 4 3.95684 l -2.95684,0.25 h -4 -3.99999 -4 -3.99999 -3.999998 -3.999995 -3.999995 -3.999995 -3.029755 l 4.029754,0.249999 h 3.999995 3.999995 3.999995 3.999999 3.99999 4 3.99999 4 1.95684 l -0.95685,0.25 h -3.99999 -4 -3.99999 -4 -3.99999 -3.999995 -3.999995 -3.999995 -3.999995 -1.029758 l 2.029756,0.25 h 3.999995 3.999995 3.999995 3.999997 3.99999 4 3.99999 4 3.95684 l -2.95684,0.249999 h -4 -3.99999 -4 -3.99999 -3.999998 -3.999995 -3.999995 -3.999995 -3.029755 l 4.029754,0.25 h 3.999995 3.999995 3.999995 3.999999 3.99999 4 3.99999 4 1.95684 l -0.95685,0.25 h -3.99999 -4 -3.99999 -4 -3.99999 -3.999995 -3.999995 -3.999995 -3.999995 -1.029758 l 2.029756,0.249999 h 3.999995 3.999995 3.999995 3.999997 3.99999 4 3.99999 4 3.95684 l -2.95684,0.25 h -4 -3.99999 -4 -3.99999 -3.999998 -3.999995 -3.999995 -3.999995 -3.029755 l 4.029754,0.25 h 3.999995 3.999995 3.999995 3.999999 3.99999 4 3.99999 4 1.95684 l -0.95685,0.249999 h -3.99999 -4 -3.99999 -4 -3.99999 -3.999995 -3.999995 -3.999995 -3.999995 -1.029758 l 2.029756,0.25 h 3.999995 3.999995 3.999995 3.999997 3.99999 4 3.99999 4 3.95684 l -2.95684,0.25 h -4 -3.99999 -4 -3.99999 -3.999998 -3.999995 -3.999995 -3.999995 -3.029755 l 4.029754,0.249999 h 3.999995 3.999995 3.999995 3.999999 3.99999 4 3.99999 4 1.95684 l -0.95685,0.25 h -3.99999 -4 -3.99999 -4 -3.99999 -3.999995 -3.999995 -3.999995 -3.999995 -1.029758 l 2.029756,0.25 h 3.999995 3.999995 3.999995 3.999997 3.99999 4 3.99999 4 3.95684 l -2.95684,0.25 h -4 -3.99999 -4 -3.99999 -3.999998 -3.999995 -3.999995 -3.999995 -3.029755 l 4.029754,0.249999 h 3.999995 3.999995 3.999995 3.999999 3.99999 4 3.99999 4 1.95684 l -0.95685,0.25 h -3.99999 -4 -3.99999 -4 -3.99999 -3.999995 -3.999995 -3.999995 -3.999995 -1.029758 l 2.029756,0.25 h 3.999995 3.999995 3.999995 3.999997 3.99999 4 3.99999 4 3.95684 l -2.95684,0.249999 h -4 -3.99999 -4 -3.99999 -3.999998 -3.999995 -3.999995 -3.999995 -3.029755 l 4.029754,0.25 h 3.999995 3.999995 3.999995 3.999999 3.99999 4 3.99999 4 1.95684 l -0.95685,0.25 h -3.99999 -4 -3.99999 -4 -3.99999 -3.999995 -3.999995 -3.999995 -3.999995 -1.029758 l 2.029756,0.249999 h 3.999995 3.999995 3.999995 3.999997 3.99999 4 3.99999 4 3.95684 l -2.95684,0.25 h -4 -3.99999 -4 -3.99999 -3.999998 -3.999995 -3.999995 -3.999995 -3.029755 l 4.029754,0.25 h 3.999995 3.999995 3.999995 3.999999 3.99999 4 3.99999 4 1.95684 l -0.95685,0.249999 h -3.99999 -4 -3.99999 -4 -3.99999 -3.999995 -3.999995 -3.999995 -3.999995 -1.029758 l 2.029756,0.25 h 3.999995 3.999995 3.999995 3.999997 3.99999 4 3.99999 4 3.95684 l -2.95684,0.25 h -4 -3.99999 -4 -3.99999 -3.999998 -3.999995 -3.999995 -3.999995 -3.029755 l 4.029754,0.249999 h 3.999995 3.999995 3.999995 3.999999 3.99999 4 3.99999 4 1.95684 l -0.95685,0.25 h -3.99999 -4 -3.99999 -4 -3.99999 -3.999995 -3.999995 -3.999995 -3.999995 -1.029758 l 2.029756,0.25 h 3.999995 3.999995 3.999995 3.999997 3.99999 4 3.99999 4 3.95684 l -2.95684,0.249998 h -4 -3.99999 -4 -3.99999 -3.999998 -3.999995 -3.999995 -3.999995 -3.029755 l 4.029754,0.25 h 3.999995 3.999995 3.999995 3.999999 3.99999 4 3.99999 4 1.95684 l -0.95685,0.25 h -3.99999 -4 -3.99999 -4 -3.99999 -3.999995 -3.999995 -3.999995 -3.999995 -1.029758 l 2.029756,0.25 h 3.999995 3.999995 3.999995 3.999997 3.99999 4 3.99999 4 3.95684 l -2.95684,0.25 h -4 -3.99999 -4 -3.99999 -3.999998 -3.999995 -3.999995 -3.999995 -3.029755 l 4.029754,0.25 h 3.999995 3.999995 3.999995 3.999999 3.99999 4 3.99999 4 1.95684 l -0.95685,0.25 h -3.99999 -4 -3.99999 -4 -3.99999 -3.999995 -3.999995 -3.999995 -3.999995 -1.029758 l 2.029756,0.25 h 3.999995 3.999995 3.999995 3.999997 3.99999 4 3.99999 4 3.95684 l -2.95684,0.25 h -4 -3.99999 -4 -3.99999 -3.999998 -3.999995 -3.999995 -3.999995 -3.029755 l 4.029754,0.25 h 3.999995 3.999995 3.999995 3.999999 3.99999 4 3.99999 4 1.95684 l -0.95685,0.25 h -3.99999 -4 -3.99999 -4 -3.99999 -3.999995 -3.999995 -3.999995 -3.999995 -1.029758 l 2.029756,0.25 h 3.999995 3.999995 3.999995 3.999997 3.99999 4 3.99999 4 3.95684 l -2.95684,0.25 h -4 -3.99999 -4 -3.99999 -3.999998 -3.999995 -3.999995 -3.999995 -3.029755 l 4.029754,0.25 h 3.999995 3.999995 3.999995 3.999999 3.99999 4 3.99999 4 1.95684 l -0.95685,0.25 h -3.99999 -4 -3.99999 -4 -3.99999 -3.999995 -3.999995 -3.999995 -3.999995 -1.029758 l 2.029756,0.25 h 3.999995 3.999995 3.999995 3.999997 3.99999 4 3.99999 4 3.95684 l -2.95684,0.25 h -4 -3.99999 -4 -3.99999 -3.999998 -3.999995 -3.999995 -3.999995 -3.029755 l 4.029754,0.25 h 3.999995 3.999995 3.999995 3.999999 3.99999 4 3.99999 4 1.95684 l -0.95685,0.25 h -3.99999 -4 -3.99999 -4 -3.99999 -3.999995 -3.999995 -3.999995 -3.999995 -1.029758 l 2.029756,0.25 h 3.999995 3.999995 3.999995 3.999997 3.99999 4 3.99999 4 3.95684 l -2.95684,0.25 h -4 -3.99999 -4 -3.99999 -3.999998 -3.999995 -3.999995 -3.999995 -3.029755 l 4.029754,0.24999 h 3.999995 3.999995 3.999995 3.999999 3.99999 4 3.99999 4 1.95684 l -0.95685,0.25 h -3.99999 -4 -3.99999 -4 -3.99999 -3.999995 -3.999995 -3.999995 -3.999995 -1.029758 l 2.029756,0.25 h 3.999995 3.999995 3.999995 3.999997 3.99999 4 3.99999 4 3.95684 l -2.95684,0.25 h -4 -3.99999 -4 -3.99999 -3.999998 -3.999995 -3.999995 -3.999995 -3.029755 l 4.029754,0.25 h 3.999995 3.999995 3.999995 3.999999 3.99999 4 3.99999 4 1.95684 l -0.95685,0.25 h -3.99999 -4 -3.99999 -4 -3.99999 -3.999995 -3.999995 -3.999995 -3.999995 -1.029758 l 2.029756,0.25 h 3.999995 3.999995 3.999995 3.999997 3.99999 4 3.99999 4 3.95684 l -2.95684,0.25 h -4 -3.99999 -4 -3.99999 -3.999998 -3.999995 -3.999995 -3.999995 -3.029755 l 4.029754,0.25 h 3.999995 3.999995 3.999995 3.999999 3.99999 4 3.99999 4 1.95684 l -0.95685,0.25 h -3.99999 -4 -3.99999 -4 -3.99999 -3.999995 -3.999995 -3.999995 -3.999995 -1.029758 l 2.029756,0.25 h 3.999995 3.999995 3.999995 3.999997 3.99999 4 3.99999 4 3.95684 l -2.95684,0.25 h -4 -3.99999 -4 -3.99999 -3.999998 -3.999995 -3.999995 -3.999995 -3.029755 l 4.029754,0.25 h 3.999995 3.999995 3.999995 3.999999 3.99999 4 3.99999 4 1.95684 l -0.95685,0.25 h -3.99999 -4 -3.99999 -4 -3.99999 -3.999995 -3.999995 -3.999995 -3.999995 -1.029758 l 2.029756,0.25 h 3.999995 3.999995 3.999995 3.999997 3.99999 4 3.99999 4 3.95684 l -2.95684,0.25 h -4 -3.99999 -4 -3.99999 -3.999998 -3.999995 -3.999995 -3.999995 -3.029755 l 4.029754,0.25 h 3.999995 3.999995 3.999995 3.999999 3.99999 4 3.99999 4 1.95684 l -0.95685,0.25 h -3.99999 -4 -3.99999 -4 -3.99999 -3.999995 -3.999995 -3.999995 -3.999995 -1.029758 l 2.029756,0.25 h 3.999995 3.999995 3.999995 3.999997 3.99999 4 3.99999 4 3.95684 l -2.95684,0.25 h -4 -3.99999 -4 -3.99999 -3.999998 -3.999995 -3.999995 -3.999995 -3.029755 l 4.029754,0.25 h 3.999995 3.999995 3.999995 3.999999 3.99999 4 3.99999 4 1.95684 l -0.95685,0.25 h -3.99999 -4 -3.99999 -4 -3.99999 -3.999995 -3.999995 -3.999995 -3.999995 -1.029758 l 2.029756,0.25 h 3.999995 3.999995 3.999995 3.999997 3.99999 4 3.99999 4 3.95684 l -2.95684,0.25 h -4 -3.99999 -4 -3.99999 -3.999998 -3.999995 -3.999995 -3.999995 -3.029755 l 4.029754,0.25 h 3.999995 3.999995 3.999995 3.999999 3.99999 4 3.99999 4 1.95684"
+         inkstitch:stroke_method="manual_stitch" />
     </g>
     <g
-       transform="translate(118.77721,-2.4900883)"
-       id="__color_block_1__"
-       inkscape:label="color block 2">
+       id="__color_block_0__"
+       inkscape:label="color block 2"
+       transform="translate(118.67361,-2.2286133)">
       <path
-         inkscape:connector-curvature="0"
-         d="m 105.53573,134.92913 h 0.3 0.3 -0.3 -0.3 10.68474 11.33859 11.33858 11.33858 11.33858 11.33859 11.33858 11.33858 11.33858 11.33859 11.33858 11.33858 8.34087 v 5.6693 2.26771 h -5.50622 -11.33859 -11.33858 -11.33858 -11.33858 -11.33859 -11.33858 -11.33858 -11.33858 -11.33859 -11.33858 -11.33858 -11.33858 -2.18081 v 5.66929 2.26772 h 5.01545 11.33858 11.33859 11.33858 11.33858 11.33858 11.33859 11.33858 11.33858 11.33859 11.33858 11.33858 11.33858 2.67158 v 5.66929 2.26772 h -11.17551 -11.33859 -11.33858 -11.33858 -11.33858 -11.33859 -11.33858 -11.33858 -11.33859 -11.33858 -11.33858 -11.33858 -7.8501 v 5.66929 2.26772 h 10.68474 11.33859 11.33858 11.33858 11.33858 11.33859 11.33858 11.33858 11.33858 11.33859 11.33858 11.33858 8.34087 v 5.66929 2.26771 h -5.50622 -11.33859 -11.33858 -11.33858 -11.33858 -11.33859 -11.33858 -11.33858 -11.33858 -11.33859 -11.33858 -11.33858 -11.33858 -2.18081 l 0.54499,5.12431 h 5.66929 5.66929 5.66929 5.66929 5.66929 5.6693 5.66929 5.66929 5.66929 5.66929 5.66929 5.66929 5.66929 5.6693 5.66929 5.66929 5.66929 5.66929 5.66929 5.66929 5.6693 5.66929 5.66929 5.66929 5.66929 l 1.47275,-4.19654 v -0.92777 l -0.17858,6.80315 h -10.99693 -11.33859 -11.33858 -11.33858 -11.33858 -11.33859 -11.33858 -11.33858 -11.33859 -11.33858 -11.33858 -11.33858 -8.02868 v 4.53544 h 10.86332 11.33859 11.33858 11.33858 11.33858 11.33859 11.33858 11.33858 11.33858 11.33859 11.33858 11.33858 8.16229 v 4.53543 h -5.32764 -11.33859 -11.33858 -11.33858 -11.33858 -11.33859 -11.33858 -11.33858 -11.33858 -11.33859 -11.33858 -11.33858 -11.33858 -2.35939 v 4.53543 h 5.19403 11.33858 11.33859 11.33858 11.33858 11.33858 11.33859 11.33858 11.33858 11.33859 11.33858 11.33858 11.33858 2.493 v 4.53544 h -10.99693 -11.33859 -11.33858 -11.33858 -11.33858 -11.33859 -11.33858 -11.33858 -11.33859 -11.33858 -11.33858 -11.33858 -8.02868 v 4.53543 h 10.86332 11.33859 11.33858 11.33858 11.33858 11.33859 11.33858 11.33858 11.33858 11.33859 11.33858 11.33858 8.16229 v 4.53543 h -5.32764 -11.33859 -11.33858 -11.33858 -11.33858 -11.33859 -11.33858 -11.33858 -11.33858 -11.33859 -11.33858 -11.33858 -11.33858 -2.35939 v 4.53543 h 5.19403 11.33858 11.33859 11.33858 11.33858 11.33858 11.33859 11.33858 11.33858 11.33859 11.33858 11.33858 11.33858 2.493 v 4.53544 h -10.99693 -11.33859 -11.33858 -11.33858 -11.33858 -11.33859 -11.33858 -11.33858 -11.33859 -11.33858 -11.33858 -11.33858 -8.02868 l -0.17857,3.02362 h 11.04189 11.33859 11.33858 11.33858 11.33858 11.33859 11.33858 11.33858 11.33858 11.33859 11.33858 11.33858 8.34087 v 3.02362 h -5.50622 -11.33859 -11.33858 -11.33858 -11.33858 -11.33859 -11.33858 -11.33858 -11.33858 -11.33859 -11.33858 -11.33858 -11.33858 -2.53796 v 3.02362 h 5.3726 11.33858 11.33859 11.33858 11.33858 11.33858 11.33859 11.33858 11.33858 11.33859 11.33858 11.33858 11.33858 2.67158 v 3.02363 h -11.17551 -11.33859 -11.33858 -11.33858 -11.33858 -11.33859 -11.33858 -11.33858 -11.33859 -11.33858 -11.33858 -11.33858 -8.20725 v 3.02362 h 11.04189 11.33859 11.33858 11.33858 11.33858 11.33859 11.33858 11.33858 11.33858 11.33859 11.33858 11.33858 8.34087 v 3.02362 h -5.50622 -11.33859 -11.33858 -11.33858 -11.33858 -11.33859 -11.33858 -11.33858 -11.33858 -11.33859 -11.33858 -11.33858 -11.33858 -2.53796 v 3.02362 h 5.3726 11.33858 11.33859 11.33858 11.33858 11.33858 11.33859 11.33858 11.33858 11.33859 11.33858 11.33858 11.33858 2.67158 v 3.02362 h -11.17551 -11.33859 -11.33858 -11.33858 -11.33858 -11.33859 -11.33858 -11.33858 -11.33859 -11.33858 -11.33858 -11.33858 -8.20725 v 3.02363 h 11.04189 11.33859 11.33858 11.33858 11.33858 11.33859 11.33858 11.33858 11.33858 11.33859 11.33858 11.33858 8.34087 v 3.02362 h -5.50622 -11.33859 -11.33858 -11.33858 -11.33858 -11.33859 -11.33858 -11.33858 -11.33858 -11.33859 -11.33858 -11.33858 -11.33858 -2.53796 v 3.02362 h 5.3726 11.33858 11.33859 11.33858 11.33858 11.33858 11.33859 11.33858 11.33858 11.33859 11.33858 11.33858 11.33858 2.67158 v 3.02362 h -11.17551 -11.33859 -11.33858 -11.33858 -11.33858 -11.33859 -11.33858 -11.33858 -11.33859 -11.33858 -11.33858 -11.33858 -8.20725 v 3.02362 h 11.04189 11.33859 11.33858 11.33858 11.33858 11.33859 11.33858 11.33858 11.33858 11.33859 11.33858 11.33858 8.34087 -0.3 -0.3 0.3 0.3"
-         embroider_manual_stitch="true"
-         style="fill:none;stroke:#002757;stroke-width:0.40000001"
+         id="object797"
+         style="fill:none;stroke:#002757;stroke-width:0.4"
+         d="m 105.6173,134.02419 -0.0408,2.54165 -0.0408,2.54164 0.0408,-2.54164 0.0408,-2.54165 -0.0816,5.08329 v 5.07239 5.07238 5.07239 5.07238 5.07239 5.07238 5.07238 h 2.18081 11.33858 11.33858 11.33858 11.33859 11.33858 11.33858 11.33858 11.33859 11.33858 11.33858 11.33858 11.33859 5.50622 v -5.07375 -5.07374 -5.07375 -5.07375 -5.07375 -5.07374 -5.07375 -5.07375 h -5.52884 -5.52885 -5.52885 -5.52885 -5.52885 -5.52884 -5.52885 -5.52885 -5.52885 -5.52884 -5.52885 -5.52885 -5.52885 -5.52884 -5.52885 -5.52885 -5.52884 -5.52885 -5.52885 -5.52884 -5.52885 -5.52885 -5.52884 -5.52885 -5.52884 -5.52885 l 10.68474,0.90494 h 11.33859 11.33858 11.33858 11.33858 11.33859 11.33858 11.33858 11.33858 11.33859 11.33858 11.33858 8.34087 v 3.96851 3.9685 H 243.7795 232.44091 221.10233 209.76375 198.42517 187.08658 175.748 164.40942 153.07084 141.73225 130.39367 119.05509 107.71651 105.5357 v 3.96851 3.9685 h 5.01545 11.33858 11.33859 11.33858 11.33858 11.33858 11.33859 11.33858 11.33858 11.33859 11.33858 11.33858 11.33858 2.67158 v 3.9685 3.96851 h -11.17551 -11.33859 -11.33858 -11.33858 -11.33858 -11.33859 -11.33858 -11.33858 -11.33859 -11.33858 -11.33858 -11.33858 -7.8501 v 3.9685 3.96851 h 10.68474 11.33859 11.33858 11.33858 11.33858 11.33859 11.33858 11.33858 11.33858 11.33859 11.33858 11.33858 8.34087 v 4.31965 4.31965 4.31964 l -10.29838,-0.24021 h -5.56793 -5.56793 -5.56792 -5.56793 -5.56793 -5.56792 -5.56793 -5.56793 -5.56792 -5.56793 -5.56793 -5.56792 -5.56793 -5.56792 -5.56793 -5.56793 -5.56792 -5.56793 -5.56792 -5.56793 -5.56792 -5.56793 -5.56792 -5.56792 v 2.02142 h 8.02868 11.33858 11.33858 11.33858 11.33859 11.33858 11.33858 11.33859 11.33858 11.33858 11.33858 11.33859 10.99693 v 4.53544 H 240.94488 229.6063 218.26772 206.92913 195.59055 184.25197 172.91339 161.5748 150.23622 138.89764 127.55906 116.22047 105.35715 v 4.53543 h 2.35939 11.33858 11.33858 11.33858 11.33859 11.33858 11.33858 11.33858 11.33859 11.33858 11.33858 11.33858 11.33859 5.32764 v 4.53543 h -2.493 -11.33858 -11.33858 -11.33858 -11.33859 -11.33858 -11.33858 -11.33859 -11.33858 -11.33858 -11.33858 -11.33859 -11.33858 -5.19403 v 4.53544 h 8.02868 11.33858 11.33858 11.33858 11.33859 11.33858 11.33858 11.33859 11.33858 11.33858 11.33858 11.33859 10.99693 v 4.53543 H 240.94488 229.6063 218.26772 206.92913 195.59055 184.25197 172.91339 161.5748 150.23622 138.89764 127.55906 116.22047 105.35715 v 4.53543 h 2.35939 11.33858 11.33858 11.33858 11.33859 11.33858 11.33858 11.33858 11.33859 11.33858 11.33858 11.33858 11.33859 5.32764 v 4.53543 h -2.493 -11.33858 -11.33858 -11.33858 -11.33859 -11.33858 -11.33858 -11.33859 -11.33858 -11.33858 -11.33858 -11.33859 -11.33858 -5.19403 v 4.53544 h 8.02868 11.33858 11.33858 11.33858 11.33859 11.33858 11.33858 11.33859 11.33858 11.33858 11.33858 11.33859 10.99693 l -5.47902,0.13247 h -5.47493 -5.47493 -5.47493 -5.47493 -5.47492 -5.47493 -5.47493 -5.47493 -5.47493 -5.47493 -5.47493 -5.47492 -5.47493 -5.47493 -5.47493 -5.47493 -5.47492 -5.47493 -5.47493 -5.47493 -5.47492 -5.47493 -5.47492 2.73746 2.73746 -2.73746 -2.73746 l -12.52623,0.51036 v 2.76174 2.76173 -2.76173 -2.76174 5.52347 5.52346 5.52347 5.52346 5.52347 5.52346 5.52346 h 11.04189 11.33859 11.33858 11.33858 11.33858 11.33859 11.33858 11.33858 11.33858 11.33859 11.33858 11.33858 8.34087 v -4.99244 -4.99244 -4.99244 -4.99244 -4.99244 -4.99244 -4.99244 -4.99244 h -5.54259 -5.54258 -5.54259 -5.54258 -5.54258 -5.54259 -5.54258 -5.54259 -5.54258 -5.54258 -5.54259 -5.54258 -5.54258 -5.54259 -5.54258 -5.54258 -5.54259 -5.54258 -5.54258 -5.54259 -5.54258 -5.54258 -5.54258 -5.54259 -5.54258 -5.54258 l 8.20725,0.63244 h 11.33858 11.33858 11.33858 11.33859 11.33858 11.33858 11.33859 11.33858 11.33858 11.33858 11.33859 11.17551 v 3.02362 H 240.94488 229.6063 218.26772 206.92913 195.59055 184.25197 172.91339 161.5748 150.23622 138.89764 127.55906 116.22047 105.17858 v 3.02362 h 2.53796 11.33858 11.33858 11.33858 11.33859 11.33858 11.33858 11.33858 11.33859 11.33858 11.33858 11.33858 11.33859 5.50622 v 3.02362 h -2.67158 -11.33858 -11.33858 -11.33858 -11.33859 -11.33858 -11.33858 -11.33859 -11.33858 -11.33858 -11.33858 -11.33859 -11.33858 -5.3726 v 3.02363 h 8.20725 11.33858 11.33858 11.33858 11.33859 11.33858 11.33858 11.33859 11.33858 11.33858 11.33858 11.33859 11.17551 v 3.02362 H 240.94488 229.6063 218.26772 206.92913 195.59055 184.25197 172.91339 161.5748 150.23622 138.89764 127.55906 116.22047 105.17858 v 3.02362 h 2.53796 11.33858 11.33858 11.33858 11.33859 11.33858 11.33858 11.33858 11.33859 11.33858 11.33858 11.33858 11.33859 5.50622 v 3.02362 h -2.67158 -11.33858 -11.33858 -11.33858 -11.33859 -11.33858 -11.33858 -11.33859 -11.33858 -11.33858 -11.33858 -11.33859 -11.33858 -5.3726 v 3.02362 h 8.20725 11.33858 11.33858 11.33858 11.33859 11.33858 11.33858 11.33859 11.33858 11.33858 11.33858 11.33859 11.17551 v 3.02363 H 240.94488 229.6063 218.26772 206.92913 195.59055 184.25197 172.91339 161.5748 150.23622 138.89764 127.55906 116.22047 105.17858 v 3.02362 h 2.53796 11.33858 11.33858 11.33858 11.33859 11.33858 11.33858 11.33858 11.33859 11.33858 11.33858 11.33858 11.33859 5.50622 v 3.02362 h -2.67158 -11.33858 -11.33858 -11.33858 -11.33859 -11.33858 -11.33858 -11.33859 -11.33858 -11.33858 -11.33858 -11.33859 -11.33858 -5.3726 v 3.02362 h 8.20725 11.33858 11.33858 11.33858 11.33859 11.33858 11.33858 11.33859 11.33858 11.33858 11.33858 11.33859 11.17551 v 3.84283 -1.92141 -1.92142 1.92142 1.92141"
          transform="scale(0.264583)"
-         id="path13209" />
+         inkstitch:stroke_method="manual_stitch" />
     </g>
     <use
        xlink:href="#inkstitch_ignore_layer"
