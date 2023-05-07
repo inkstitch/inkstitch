@@ -46,7 +46,7 @@ Vous reconnaitrez (ou pas) parmi ces exemple les 4 pavages qui ont été utilis�
 Dans tous ces exemples, tous les chemins constituant le motif sont regroupés, et l'effet de chemin est appliqué sur le groupe. 
 Ils sont assez faciles à obtenir car toute modification est réfléchie immédiatement sur le canevas d'inkscape.
 
-Plus de détails sur l'utilisation de l'effet de chemin pavage dans un tutoriel à veni
+Plus de détails sur l'utilisation de l'effet de chemin pavage dans un tutoriel à venir
 
 
 ## Préparation  des  vêtements
@@ -62,22 +62,48 @@ Le svg du  [T Shirt](https://thenounproject.com/browse/icons/term/womans-shirt/)
 * `Extensions > Ink/Stitch > Outils: Remplissage > Convertir remplissage en trait`
 * L'extension a créé un groupe avec beaucoup de chemins, dont certains sont inutiles. Il est utile de les simplifier avant de reconstitué la forme que l'on souhaite remplir ainsi que les détails suplémentaires à broder.
 
-Les quatre images ci dessous montrent successivement l'apparence du svg à l'écran, ce à quoi il ressemble  en supprimant le remplissage, et ce que l'extension de conversion permet d'obtenir, et ce que l'on utilisera finalement : une forme fermée (orange) et deux détails en rouge
+Les quatre images ci dessous montrent successivement l'apparence du svg à l'écran, ce à quoi il ressemble  en supprimant le remplissage, et ce que l'extension de conversion permet d'obtenir, et ce que l'on utilisera finalement : une forme fermée (orange) et deux détails en rouge.
 
 ![T-Shirt](/assets/images/tutorials/cookie_cutter_tiling/Tshirt.png) 
 
+Les vêtéments préparés, se trouvent dans le calque "clothes" de ce fichier qui contient ausi tous les pavages necessaires.
+
+![cloth_line](/assets/images/tutorials/cookie_cutter_tiling/cloth_line.svg) 
+
+[Télécharger le fichier](/assets/images/tutorials/cookie_cutter_tiling/cloth_line.svg)
 
 
 
-### Étape 2: Applatir et paramètrer
+
+## Recouvrir chaque surface à remplir par un pavage
+L'étape suivante consiste à recouvrir chaque surface à remplir par un pavage. Voici le choix qui a été fait (et que vous pouvez retrouver dans le calque "Clothline preparing pattern fill"
+
+![cloth_line](/assets/images/tutorials/cookie_cutter_tiling/tiled_cloths.png) 
+
+Aucune difficulté à cette étape
+
+## Passer au  remplissage de chaque vêtement
+Le but est d'obtenir ceci
+![final](/assets/images/tutorials/cookie_cutter_tiling/clothline_final.png) 
+
+Selon le pavage choisi, le résultat est plus ou moins facile à atteindre
+
+### Exemple d'un résultat facile : le T -Shirt 
+
+* dupliquer la forme T-shirt
+
 * Applatir l'effet de chemin
-![Flatten](/assets/images/tutorials/tiling/flatten_lazy.jpg)
-* Tout sélectionner
+* Prendre l'intersection  du resultat avec une copie du T shi
+
+* Tout sélectionner (intersection plus copie restante)
 * Extensions > Ink/Stitch > Paramètres 
 
-
-### Étape 3 : Agencement automatique de points droits
-* Tout sélectionner
 * Extensions > Ink/Stitch > Outils : Trait > Agencement automatique de points droits.
 
-[Télécharger le dessin final ](/assets/images/tutorials/tiling/tiling_lazy.svg)
+On constate une multitude de tous petits chemins. On pourrait les éliminer, mais le plus simple est d'aller dans les préférences, et pour ce fichier seulement augmenter la longueur minimum de point et la passer à 1mm.
+
+A part, paramétrer les détails
+
+### Exemple d'une suprise : le maillot de bain
+
+### Exemple ou l'intersection n'est pas satisfaisante 
