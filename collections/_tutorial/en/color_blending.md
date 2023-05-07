@@ -32,13 +32,10 @@ The easiest way is to use
 {% include folder-galleries path="color-blending/" captions="1:Inkscape gradient, n+1 colors;2:Result of extension ;3:Split view;" caption="<i>How the extension works</i>" %}
 
 
+If n+1 colors are used, the extension splits the shape into  n parts and stack two gradient blocs over each part. This will yield n+1 colorblocs in the final embroidery
+The 2n gradient blocs  all have varying row spacing. 
 
-![Download Sample File](/assets/images/tutorials/samples/inkstitch_gradient_extension.svg)
-
-[Download Sample File](/assets/images/tutorials/samples/inkstitch_gradient_extension.svg).
-
-On each subshape, while first color row spacing decreases,  second color row spacing increases, yielding a gradient fill from first color to second color. 
-
+Looking at two stacked gradients blocs on a part, one color row spacing increases  while the other color row spacing decreases, yielding a gradient fill.
 
 The gradient direction dictates the fill *angle*. 
 
