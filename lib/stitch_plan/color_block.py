@@ -110,6 +110,9 @@ class ColorBlock(object):
             if stitches[-1].jump or stitch.stop or stitch.trim or stitch.color_change:
                 # Don't consider jumps, stops, color changes, or trims as candidates for filtering
                 pass
+            elif 'lock_stitch' in stitch.tags:
+                # do not filter specific stitches
+                pass
             else:
                 length = (stitch - stitches[-1]).length()
                 if length <= min_stitch_len * PIXELS_PER_MM:
