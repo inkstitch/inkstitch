@@ -16,6 +16,7 @@ from ..i18n import _
 from ..svg import get_correction_transform
 from ..svg.tags import INKSTITCH_ATTRIBS
 from .commands import CommandsExtension
+from .duplicate_params import get_inkstitch_attributes
 
 
 class GradientBlocks(CommandsExtension):
@@ -63,6 +64,11 @@ class GradientBlocks(CommandsExtension):
                     "d": d,
                     INKSTITCH_ATTRIBS['angle']: f'{angle: .2f}'
                 })
+                # apply parameters from original element
+                params = get_inkstitch_attributes(element.node)
+                for attrib in params:
+                    block.attrib[attrib] = str(element.node.attrib[attrib])
+                # set end_row_spacing
                 if end_row_spacing:
                     block.set('inkstitch:end_row_spacing_mm', f'{end_row_spacing: .2f}')
                 # disable underlay and underpath
