@@ -358,6 +358,9 @@ table.inline-table {
   figure.third > figure {
       width: calc(33.3333% - 0.5em);
   }
+  figure.half > figure {
+      width:calc(50% - 0.5em)
+  }
 }
 
 /* Footer */
