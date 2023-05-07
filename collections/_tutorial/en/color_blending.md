@@ -29,16 +29,16 @@ The easiest way is to use
 
 
 
-{% include folder-galleries path="color-blending/" captions="1:Inkscape gradient, n+1 colors;2:Result of extension ;3:Split view;" caption="<i>How the extension works</i>" %}
+{% include folder-galleries path="color-blending/" captions="1:Inkscape gradient;2:Result of extension ;3:Split view;" caption=" %}
 
 
-If n+1 colors are used, the extension splits the shape into  n parts and stack two gradient blocs over each part. This will yield n+1 colorblocs in the final embroidery
-The 2n gradient blocs  all have varying row spacing. 
+If n+1 colors are used, the extension splits the shape into  n parts and stack two gradient blocs over each part. 
 
-Looking at two stacked gradients blocs on a part, one color row spacing increases  while the other color row spacing decreases, yielding a gradient fill.
+This will yield n+1 colorblocs in the final embroidery.
+
+The 2n gradient blocs all have varying row spacing: looking at the two stacked gradients blocs on a given part, one color row spacing increases  while the other color row spacing decreases, yielding a gradient fill.
 
 The gradient direction dictates the fill *angle*. 
-
 
 
 
