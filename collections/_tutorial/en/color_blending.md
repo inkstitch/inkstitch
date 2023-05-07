@@ -29,6 +29,10 @@ The easiest way is to use
 
 
 
+{% include folder-galleries path="color-blending/" captions="1:Inkscape gradient, n+1 colors;2:Result of extension ;3:Split view;" caption="<i>How the extension works</i>" %}
+
+
+
 ![Download Sample File](/assets/images/tutorials/samples/inkstitch_gradient_extension.svg)
 
 [Download Sample File](/assets/images/tutorials/samples/inkstitch_gradient_extension.svg).
