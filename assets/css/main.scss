@@ -354,6 +354,12 @@ table.inline-table {
       text-align: center;
   }
 
+@media (min-width: 37.5em) {
+  figure.third > figure {
+      width: calc(33.3333% - 0.5em);
+  }
+}
+
 /* Footer */
 
   .page__date, .file__path {

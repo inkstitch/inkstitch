@@ -16,7 +16,7 @@ We have good news: Ink/Stitch will be significantly faster due to stitch plan ca
 
 * [Abril En Fleur AGS](/fonts/abril/)
 * [Apex Simple AGS](/fonts/apex-lake/)
-* [AGS Γαραμου](/fonts/AGS_greek_garamond/)
+* [AGS Γαραμου Garamond](/fonts/AGS_greek_garamond/)
 * [Emilio 20 simple](/fonts/emilio-20/)
 * [Emilio 20 bold](/fonts/emilio-20/)
 * [Emilio 20 Applique](/fonts/emilio-20/)

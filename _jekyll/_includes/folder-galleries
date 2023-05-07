@@ -31,9 +31,14 @@
       {% if small_image_exists == 0 %}
         {% assign small_img = image.path %}
       {% endif %}
-        <a href="{{ image.path | relative_url }}" title="{{ title }}">
-          <img src="{{ small_img }}" alt="{{ title }}" stlye="height: 100px !important;  width: auto !important;">
-        </a>
+        <figure>
+            <a href="{{ image.path | relative_url }}" title="{{ title }}">
+                <img src="{{ small_img }}" alt="{{ title }}" stlye="height: 100px !important;  width: auto !important;">
+            </a>
+        {%- if include.captions -%}
+            <figcaption>{{ title }}</figcaption>
+        {%- endif -%}
+        </figure>
     {% endunless %}
   {% endfor %}
   {% if include.caption %}
