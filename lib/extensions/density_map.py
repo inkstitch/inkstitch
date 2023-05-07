@@ -101,12 +101,12 @@ def color_block_to_density_markers(svg, groups, stitch_plan, density_options):
     for red_neighbors, yellow_neighbors, coord in zip(num_neighbors[0][0], num_neighbors[1][0], num_neighbors[0][1]):
         color = "green"  # green
         group = green_group
-        if density_options[0]['max_neighbors'] < red_neighbors:
-            color = "yellow"
-            group = yellow_group
-        elif density_options[1]['max_neighbors'] < yellow_neighbors:
+        if density_options[0]['max_neighbors'] <= red_neighbors:
             color = "red"
             group = red_group
+        elif density_options[1]['max_neighbors'] <= yellow_neighbors:
+            color = "yellow"
+            group = yellow_group
         density_marker = inkex.Circle(attrib={
             'id': svg.get_unique_id("density_marker"),
             'style': "fill: %s; stroke: #7e7e7e; stroke-width: 0.02%%;" % color,
