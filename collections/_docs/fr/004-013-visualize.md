@@ -53,7 +53,7 @@ Si le plan est vérouillé, et le motif visible, le plan de broderie ne vous gé
 
 
 
-{% include folder-galleries path="stitch-plan/" captions="1:Stitch plan beside canvas;2:Layer visibility set to hidden;3:Layer visibility set to lower opacity;4:Needle points enabled | disabled" caption="<i>Example image from [OpenClipart](https://openclipart.org/detail/334596)</i>" %}
+{% include folder-galleries path="stitch-plan/" captions="1:Positionner le plan de broderie hors du canevas;2:Visibilité du calque de conception cachée;3:Opacité du calque de conception baissée ;4:Points de l'aiguille activé | desactivé " caption="<i>i Image en provenance de [OpenClipart](https://openclipart.org/detail/334596)</i>" %}
 
 ## Annuler l'aperçu du plan de broderie
 Utiliser l'aperçu du plan de broderie au dessus d'objets de broderie cachés ou ayant une opacité amoindrie aide à se faire une idée visuelle de la broderie finale.
