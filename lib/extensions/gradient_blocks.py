@@ -5,20 +5,25 @@
 
 from math import degrees
 
-from inkex import PathElement, errormsg
+from inkex import DirectedLineSegment, PathElement, errormsg
+from shapely.geometry import Point
+from shapely.ops import nearest_points
 
+from ..commands import add_commands
 from ..elements import FillStitch
 from ..elements.gradient_fill import gradient_shapes_and_attributes
 from ..i18n import _
 from ..svg import get_correction_transform
 from ..svg.tags import INKSTITCH_ATTRIBS
-from .base import InkstitchExtension
+from .commands import CommandsExtension
 
 
-class GradientBlocks(InkstitchExtension):
+class GradientBlocks(CommandsExtension):
     '''
     This will break apart fill objects with a gradient fill into solid color blocks with end_row_spacing.
     '''
+
+    COMMANDS = ['fill_start', 'fill_end']
 
     def effect(self):
         if not self.svg.selection:
@@ -42,8 +47,12 @@ class GradientBlocks(InkstitchExtension):
             # reverse order so we can always insert with the same index number
             fill_shapes.reverse()
             attributes.reverse()
+
+            previous_color = None
+            previous_element = None
             for i, shape in enumerate(fill_shapes):
-                style['fill'] = attributes[i]['color']
+                color = attributes[i]['color']
+                style['fill'] = color
                 end_row_spacing = attributes[i]['end_row_spacing'] or None
                 angle = degrees(attributes[i]['angle'])
                 d = "M " + " ".join([f'{x}, {y}' for x, y in list(shape.exterior.coords)]) + " Z"
@@ -56,12 +65,31 @@ class GradientBlocks(InkstitchExtension):
                 })
                 if end_row_spacing:
                     block.set('inkstitch:end_row_spacing_mm', f'{end_row_spacing: .2f}')
-                    block.set('inkstitch:underpath', False)
+                # disable underlay and underpath
+                block.set('inkstitch:fill_underlay', False)
+                block.set('inkstitch:underpath', False)
                 parent.insert(index, block)
+
+                if previous_color == color:
+                    current = FillStitch(block)
+                    previous = FillStitch(previous_element)
+                    nearest = nearest_points(current.shape, previous.shape)
+                    pos_current = self._get_command_postion(current, nearest[0])
+                    pos_previous = self._get_command_postion(previous, nearest[1])
+                    add_commands(current, ['fill_end'], pos_current)
+                    add_commands(previous, ['fill_start'], pos_previous)
+                previous_color = color
+                previous_element = block
             parent.remove(element.node)
 
     def has_gradient_color(self, element):
         return element.color.startswith('url') and "linearGradient" in element.color
+
+    def _get_command_postion(self, fill, point):
+        center = fill.shape.centroid
+        line = DirectedLineSegment((center.x, center.y), (point.x, point.y))
+        pos = line.point_at_length(line.length + 20)
+        return Point(pos)
 
 
 if __name__ == '__main__':
