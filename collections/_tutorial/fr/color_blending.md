@@ -78,7 +78,7 @@ Si vous souhaiter réaliser manuellement un dégradé, voici deux techniques pos
 7. Bien qu'il ne s'agisse pas d'un véritable dégradé, dans la plupart des cas, ce type de mélange est suffisant pour obtenir l'aspect final souhaité.
 8. Les valeurs de densité dans cet exemple ne sont pas figées, mais juste pour illustrer le concept. Les véritables paramètres dépendent du design, du tissu utilisé et de la taille du design.
 
-[Télécharger le fichier exemple](/assets/images/tutorials/samples//assets/images/tutorials/samples/Faux_Fill_Blend.svg){: download="/assets/images/tutorials/samples/Faux_Fill_Blend.svg" }
+[Télécharger le fichier exemple](/assets/images/tutorials/samples/Faux_Fill_Blend.svg){: download="/assets/images/tutorials/samples/Faux_Fill_Blend.svg" }
 
 ## Véritable dégradé
 
