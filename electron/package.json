@@ -45,6 +45,7 @@
       ],
       "hardenedRuntime": true,
       "gatekeeperAssess": false,
+      "strictVerify": false,
       "entitlements": "build/electron-entitlements.plist",
       "entitlementsInherit": "build/electron-entitlements.plist"
     }

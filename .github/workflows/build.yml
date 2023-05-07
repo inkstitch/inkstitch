@@ -183,7 +183,7 @@ jobs:
       - shell: bash
         run: |
           # disable electron-builder signing
-          export CSC_IDENTITY_AUTO_DISCOVERY=false
+          #export CSC_IDENTITY_AUTO_DISCOVERY=false
           make dist
         env:
           BUILD: osx
