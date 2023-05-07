@@ -20,10 +20,20 @@ You can either set global values which will be applied to every new svg document
   *  Any shorter jump between subpaths of a composite path will be treated as a normal stitch (no lock stitches added)
   *  In case of a jump beetween two succcesive paths, if the jump between the two paths is shorter than this value, lock stitches at ending point and tack stiches at starting point are only created if Force lock stitches is enabled in the corresponding path.  If the jump is longer, lock stitches and tack stitches are true to their settings.
   
-* **Minimum stitch length (mm)**: Stitches smaller than this value will be dropped (exception: lock stitches). This value is only used at the very end of the stitch plan computation to filter too short stitches. Be aware that the behavior is may be not what you expected : for instance if Minimum stitch length is set to 2mm and you have running stitches with maximum stitch length of 1.5mm, every other stich is dropped, yielding a running path  with 3mm stiches. 
+* **Minimum stitch length (mm)**: Stitches smaller than this value will be dropped (exception: lock stitches). This value is only used at the very end of the stitch plan computation to filter too short stitches. Be aware that the behavior may not be what you expected : for instance if Minimum stitch length is set to 2mm and you have running stitches with maximum stitch length of 1.5mm, every other stich is droped, yielding a running path  with 3mm stiches. 
 
 Simulation take these parameters into account.
 
+Minimum stitch length  affects the sides of fills (in a similar way as skip last stitch of row, - a good way) if set to value smaller than the row spacing. It also affects sharp corners of running stitches where actual stitch length may be much lower than the running  stitch maximum stitch length (tolerance is important there).
+
+Minimum stitch length |  automatic fill with 0.25 row spacing| guided fill with 0.25 row spacing|running stitch -  very small design
+---|---|---|---
+0|![square 0](/assets/images/docs/preference_fill_0.png)|![square 0](/assets/images/docs/preference_guided_0.png)|![running_0](/assets/images/docs/preference_running_stitch_0.png)
+0.5|![square 0.5](/assets/images/docs/preference_fill_half.png)|![square 0.5](/assets/images/docs/preference_guided_half.png)|![running_0](/assets/images/docs/preference_running_stitch_half.png)
+1|![square 1](/assets/images/docs/preference_fill_1.png)|![square 1](/assets/images/docs/preference_guided_1.png)|![running_0](/assets/images/docs/preference_running_stitch_1.png)
+
+
+Manual stitches are also affected by minimum stitch length preference. You can take advantage of this to reduce a manual stitch stitches without getting very short stitches,some deformation may happen, but usually the result is quite good
 
 * Global only: **Cache size (mb)** defines how much space on your harddrive can be occupied with cached stitch plans. The higher the value the more stitch plans can be cached. A cached stitch plan doesn't need to be rendered again which will speed up rendering time significantly. Defaults to 100.
 
