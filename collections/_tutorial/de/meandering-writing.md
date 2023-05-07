@@ -5,13 +5,12 @@ language: de
 last_modified_at: 2023-04-26
 excerpt: "Mit Mäanderfüllung schreiben"
 image: "/assets/images/tutorials/tutorial-preview-images/meandering_writing.jpg"
-tutorial-type:
-stitch-type:
+tutorial-typ:
+stichart:
   - "Mäanderfüllung Fill"
   - "Mehrfachgeradstich"
-techniques:
-field-of-use:
-user-level:
+techniken:
+schwierigkeitsgrad:
 ---
 
 {% include upcoming_release.html %}

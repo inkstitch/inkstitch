@@ -12,8 +12,7 @@ tutorial-typ:
   - Text
 stichart: 
 techniken:
-field-of-use: Text
-schwierigkeitsgrad: fortgeschritten
+schwierigkeitsgrad: Fortgeschritten
 ---
 @Augusa hat einen tollen Artikel in ihrem Blog zur Erstellung neuer Schriftarten veröffentlicht: [Inkstitch : Créer une police de caractères brodés](https://lyogau.over-blog.com/2020/12/inkstitch-creer-une-police-de-caracteres-brodes.html)
 

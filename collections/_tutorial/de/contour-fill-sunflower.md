@@ -12,7 +12,6 @@ stichart:
   - Füllstich
   - Konturfüllung
 techniken:
-field-of-use:
 schwierigkeitsgrad:
 ---
  Sonnenblume mittels Konturfüllung 

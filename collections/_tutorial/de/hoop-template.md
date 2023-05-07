@@ -10,7 +10,6 @@ tutorial-typ:
   - Template
 stichart: 
 techniken:
-field-of-use:
 schwierigkeitsgrad: 
 ---
 [![Hoop template](https://user-images.githubusercontent.com/11083514/40359689-87495ec8-5dbb-11e8-8ef9-80d4fac89d72.png){: width="250"}](/assets/images/tutorials/templates/hoop-template.svg)

@@ -87,4 +87,4 @@ Dieses Werkzeug erstellt Geradstiche von der Endposition des ersten Elements zu 
 
 ## Tutorials zu Linien-Werkzeugen
 
-{% include tutorials/tutorial_list key="tool" value="Linie" %}
+{% include tutorials/tutorial_list key="werkzeug" value="Linie" %}

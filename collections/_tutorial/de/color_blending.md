@@ -5,14 +5,13 @@ last_modified_at: 2020-10-04
 language: de
 excerpt: "Farbübergänge"
 image: "/assets/images/tutorials/tutorial-preview-images/blend.png"
-tool:
-  -Fill Stitch
+werkzeug:
+  - Füllung
 tutorial-typ:
   - Beispieldatei
 stichart: 
   - Füllstich
 techniken:
-field-of-use:
 schwierigkeitsgrad:
 ---
 

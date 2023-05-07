@@ -6,14 +6,11 @@ last_modified_at: 2023-05-04
 excerpt: "Monogramm mit Spiralfüllung"
 image: "/assets/images/tutorials/tutorial-preview-images/circular_monogram.jpg"
 tutorial-type:
-stitch-type:
+stichart:
   - Spiralfüllung
-techniques:
-field-of-use:
-tool:
+werkzeug:
   - Füllung
   - Linie
-user-level:
 ---
 
 {% include upcoming_release.html %}

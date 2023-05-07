@@ -10,7 +10,7 @@ tutorial-typ:
 stichart: 
   - Geradstich
   - Mehrfach-Geradstich
-tool:
+werkzeug:
   - Linie
 techniken:
 schwierigkeitsgrad: 

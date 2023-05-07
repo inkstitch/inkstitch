@@ -12,7 +12,6 @@ stichart:
   - Satinstich
   - Mehrfach-Geradstich
 techniken:
-field-of-use:
 schwierigkeitsgrad:
 ---
 

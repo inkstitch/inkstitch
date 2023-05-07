@@ -10,13 +10,12 @@ image: /assets/images/tutorials/logo/InkStitch_Multi_Color.svg
 topic: "branding-guide" #This is the key we are searching for in _tutorials/002-001-branding-guide.md. It serves to include this file to the tutorial navigation.
 
 tutorial-typ:
-  - Sample File
+  - Beispieldatei
 stichart:
   - Satinstich
   - Geradstich
   - Füllstich
 techniken:
-field-of-use:
 schwierigkeitsgrad: 
 ---
 ## Ink/Stitch Logo

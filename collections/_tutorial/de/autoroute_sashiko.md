@@ -9,10 +9,9 @@ tutorial-typ:
   - Beispieldatei
 stichart:
   - Mehrfach-Geradstich
-tool:
+werkzeug:
   - Linie
 techniken:
-field-of-use:
 schwierigkeitsgrad: 
   - mittel
 ---

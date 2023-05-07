@@ -15,7 +15,6 @@ stichart:
   - Füllstich
 techniken:
   - Fransen
-field-of-use:
 schwierigkeitsgrad: 
 ---
 ## Fransen Beispieldatei

@@ -11,8 +11,7 @@ tutorial-typ:
   - Beispieldatei
 stichart: Satinstich
 techniken:
-  - Puffy 
-field-of-use:
+  - Puffy
 schwierigkeitsgrad: 
 ---
 ## Puff Regular 

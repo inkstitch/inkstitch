@@ -11,7 +11,6 @@ tutorial-typ:
 stichart: 
   - Satinstich
 techniken:
-field-of-use:
 schwierigkeitsgrad: 
 ---
 Wenn du Stickdesigns erstellst, wirst du irgendwann das Problem haben, eine Satinkolumne um eine scharfe Ecke legen zu müssen. Eine einfache, zusammenhängende Satinkolumne wird dann nicht mehr gut aussehen.

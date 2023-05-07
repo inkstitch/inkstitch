@@ -10,7 +10,6 @@ tutorial-typ:
   - Video
 stichart: 
 techniken:
-field-of-use: 
 schwierigkeitsgrad: leicht
 ---
 

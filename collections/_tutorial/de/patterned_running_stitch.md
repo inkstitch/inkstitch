@@ -6,13 +6,12 @@ language: de
 excerpt: "Wie man mit dem Inkscape Pfadeffekten einen gemusterten Geradstich erstellt"
 image: "/assets/images/tutorials/pattern-along-path/copy-paste.png"
 
-tutorial-type:
+tutorial-typ:
   - Beispieldatei
-stitch-type: 
+stichart: 
   - Geradstich
-techniques:
-field-of-use:
-user-level: 
+techniken:
+schwierigkeitsgrad: 
 ---
 Ink/Stitch ist ein Inksape Plugin. Inkscape hat die Option sogenannte Live Pfadeffekte einzusetzen (LPE). Diese Effekte können direkt mit Ink/Stitch genutzt werden.
 
