@@ -26,6 +26,10 @@ class GradientBlocks(CommandsExtension):
 
     COMMANDS = ['fill_start', 'fill_end']
 
+    def __init__(self, *args, **kwargs):
+        CommandsExtension.__init__(self, *args, **kwargs)
+        self.arg_parser.add_argument("-e", "--end-row-spacing", type=float, default=0.0, dest="end_row_spacing")
+
     def effect(self):
         if not self.svg.selection:
             errormsg(_("Please select at least one object with a gradient fill."))
@@ -70,6 +74,8 @@ class GradientBlocks(CommandsExtension):
                     block.attrib[attrib] = str(element.node.attrib[attrib])
                 # set end_row_spacing
                 if end_row_spacing:
+                    if self.options.end_row_spacing != 0:
+                        end_row_spacing = self.options.end_row_spacing
                     block.set('inkstitch:end_row_spacing_mm', f'{end_row_spacing: .2f}')
                 # disable underlay and underpath
                 block.set('inkstitch:fill_underlay', False)
