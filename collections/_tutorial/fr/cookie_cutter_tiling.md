@@ -53,11 +53,19 @@ Plus de détails sur l'utilisation de l'effet de chemin pavage dans un tutoriel 
 
 Les svg des trois vêtements ont été créés par Bernd Lakenbrink du [Noun Project](https://thenounproject.com/browse/collection-icon/clothes-icon-set-158916/?p=1).
 
-Le svg du  [T Shirt](https://thenounproject.com/browse/icons/term/womans-shirt/" target="_blank" title="womans shirt Icons") doit être modifié. En effet, ce type de svg parfait pour les écrans ou les machines de broderie ne convient pas tel quel pour ce type de broderie : ce qui apparait à l'oeil comme des traits est en fait constitué de remplissage. 
+Le svg du  [T Shirt](https://thenounproject.com/browse/icons/term/womans-shirt/) doit être modifié. En effet, ce type de svg parfait pour les écrans ou les machines de broderie ne convient pas tel quel pour ce type de broderie : ce qui apparait à l'oeil comme des traits est en fait constitué de remplissage. 
+
+
 
 * Téléchargez le fichier  du T Shirt
-* Selectionnnez les chemins constituant le vêtement
+* Sélectionnnez les chemins constituant le vêtement
 * `Extensions > Ink/Stitch > Outils: Remplissage > Convertir remplissage en trait`
+* L'extension a créé un groupe avec beaucoup de chemins, dont certains sont inutiles. Il est utile de les simplifier avant de reconstitué la forme que l'on souhaite remplir ainsi que les détails suplémentaires à broder.
+
+Les quatre images ci dessous montrent successivement l'apparence du svg à l'écran, ce à quoi il ressemble  en supprimant le remplissage, et ce que l'extension de conversion permet d'obtenir, et ce que l'on utilisera finalement : une forme fermée (orange) et deux détails en rouge
+
+![T-Shirt](/assets/images/tutorials/cookie_cutter_tiling/Tshirt.png) 
+
 
 
 
