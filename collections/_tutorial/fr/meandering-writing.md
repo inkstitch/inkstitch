@@ -34,17 +34,17 @@ En revanche vous pouvez obtenir de très grandes lettres qui se brodent très ra
 
 ![Choix de la fonte](/assets/images/tutorials/meandering_writing/font-chosing.jpg)
 
-* Vous pouvez déformer le texte obtenu. Pour cet exemple,j'ai utilisé la police [Rubik dans sa version ultrabold](htps://fonts.google.com/specimen/Rubik), 
+* Vous pouvez déformer le texte obtenu. Pour cet example,j'ai utilisé la police [Rubik dans sa version ultrabold](htps://fonts.google.com/specimen/Rubik), 
 en allongeant les lettres sans les élargir. Vous pouvez aussi utiliser les fonctions de manipulation de texte d'inkscape.
 
 * Sélectionnez votre texte et `Chemin > Objet en chemin`
 * Dans le dialogue "Calques et Objets", votre objet texte est devenu un groupe de chemins
 * Sélectionnez ce groupe de chemins et `Extensions > Ink/Stitch > Paramètres`
-* Dans la fenêtre de paramétrage qui s'ouvre :
+* Dans la fenêtre de paramètrage qui s'ouvre :
   * Désélectionnez sous-couche dans l'onglet sous-couche
-  * Si vous préférez des coupes de fil aux sauts de fil, Cochez Couper Après. Seulement temporairement pour ne pas voir les sauts de fil dans le simulateur si vous preferez que votre machine à broder fasse des sauts et non des coupes
+  * Si vous préférez des coupes de fil aux sauts de fil, Cochez Couper Après. Seulement temporairement pour ne pas voir les sauts de fil dans le simulateur si vous préferez que votre machine à broder fasse des sauts et non des coupes
   * Jouez avec les paramètres pour choisir vos méandres préférés et leur paramètres
-  * Vous pouvez aussi paramètrer lettre par lettre et choisir des méandres différents à chaque lettre. Parfois une lettre est plus difficile à remplir à cause de sa forme, traitez là à part
+  * Vous pouvez aussi paramétrer lettre par lettre et choisir des méandres différents à chaque lettre. Parfois une lettre est plus difficile à remplir à cause de sa forme, traitez là à part
   * Le remplissage en méandres contient une part d'aléatoire, vous pouvez aussi tenter de relancer les dés (en bas du paramètrage) si une zone a été oubliée. Réduire la taille du méandre aide aussi à passer partout
   
 
@@ -73,9 +73,9 @@ Avant de transformer votre objet texte en chemin, dupliquez-le, vous aurez besoi
 * Sélectionnez ce groupe de chemins et `Extensions > Ink/Stitch > Paramètres`
 * Faites votre paramètrage en point triple
 
-![Paramètrage pointdroit](/assets/images/tutorials/meandering_writing/bean-parameter.jpg)
-* La simulation du paramètrage montre qu'il y aura des sauts de fils à l'intérieur des lettres, pour passer d'un bord à l'autre. Si vous souhaitez les transformer en coupe,sélectionnez les lettres et `Chemin > Séparer` 
-* Vous devrez réappliquer le paramètrage
+![Paramètrage point droit](/assets/images/tutorials/meandering_writing/bean-parameter.jpg)
+* La simulation du paramétrage montre qu'il y aura des sauts de fils à l'intérieur des lettres, pour passer d'un bord à l'autre. Si vous souhaitez les transformer en coupe, sélectionnez les lettres et `Chemin > Séparer` 
+* Vous devrez réappliquer le paramétrage
 
 ### Les lettres en négatif
 
@@ -86,7 +86,7 @@ Avant de transformer votre objet texte en chemin, dupliquez-le, vous aurez besoi
 * Vérifiez que ce groupe est bien au dessus du rectangle de fond, au besoin déplacer le rectangle
 * Sélectionnez le groupe qui contient le texte (ou le texte) et votre rectangle
 * `Chemin > Exclusion`
-*  Vérifiez que le résultat de l'opération est bien selectionné 
+*  Vérifiez que le résultat de l'opération est bien sélectionné 
 *  `Extensions > Ink/Stitch > Paramètres` et paramétrer vos méandres.
 
 Et voilà il ne reste plus qu'à broder
