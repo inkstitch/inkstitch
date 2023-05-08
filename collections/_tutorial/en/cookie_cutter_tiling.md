@@ -1,7 +1,7 @@
 ---
 permalink: /tutorials/cookie_cutter_tiling/
 title: "Cookie Cutter Tiling"
-language: fr
+language: en
 last_modified_at: 2023-05-07
 excerpt: "Tiling"
 image: "/assets/images/tutorials/tutorial-preview-images/cloth_line.jpg"
