@@ -160,7 +160,7 @@ Il ne reste plus qu'à paramétrer les deux petits détails du T Shirt.
 
 ### Exemple d'une suprise : le maillot de bain
 
-La démarche est identique, mais le pavage de départ est constitué de trois chemin ouverts.
+La démarche est identique, mais le pavage de départ est constitué de trois chemins ouverts.
 Rien à modifier jusqu'à l'étape de l'intersection.
 
 #### Première tentative d'intersection
