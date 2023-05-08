@@ -20,7 +20,7 @@ class DuplicateParams(InkstitchExtension):
             return
 
         copy_from = objects.first()
-        copy_from_attribs = self.get_inkstitch_attributes(copy_from)
+        copy_from_attribs = get_inkstitch_attributes(copy_from)
 
         copy_to = objects
 
@@ -28,7 +28,7 @@ class DuplicateParams(InkstitchExtension):
         for element in copy_to:
             if element == copy_to.first():
                 continue
-            copy_to_attribs = self.get_inkstitch_attributes(element)
+            copy_to_attribs = get_inkstitch_attributes(element)
             for attrib in copy_to_attribs:
                 element.pop(attrib)
 
@@ -37,5 +37,6 @@ class DuplicateParams(InkstitchExtension):
             for element in copy_to:
                 element.attrib[attrib] = copy_from_attribs[attrib]
 
-    def get_inkstitch_attributes(self, node):
-        return {k: v for k, v in node.attrib.iteritems() if NSS['inkstitch'] in k}
+
+def get_inkstitch_attributes(node):
+    return {k: v for k, v in node.attrib.iteritems() if NSS['inkstitch'] in k}

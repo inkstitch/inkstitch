@@ -5,7 +5,7 @@ from shapely import geometry as shgeo
 from shapely.affinity import affine_transform, rotate
 from shapely.ops import split
 
-from ..svg import get_correction_transform
+from ..svg import PIXELS_PER_MM, get_correction_transform
 
 
 def gradient_shapes_and_attributes(element, shape):
@@ -63,7 +63,7 @@ def gradient_shapes_and_attributes(element, shape):
                     shape_rest.append(poly)
         shape = shgeo.MultiPolygon(shape_rest)
         previous_color = color
-        end_row_spacing = element.row_spacing * 2
+        end_row_spacing = element.row_spacing / PIXELS_PER_MM * 2
     # add left over shape(s)
     if shape:
         if offset_outside_shape:

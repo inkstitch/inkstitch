@@ -392,7 +392,7 @@ def remove_legacy_param(element, command):
             del element.node.attrib[attribute]
 
 
-def add_commands(element, commands):
+def add_commands(element, commands, pos=None):
     svg = get_document(element.node)
 
     for i, command in enumerate(commands):
@@ -400,7 +400,8 @@ def add_commands(element, commands):
         remove_legacy_param(element, command)
 
         group = add_group(svg, element.node, command)
-        pos = get_command_pos(element, i, len(commands))
+        if pos is None:
+            pos = get_command_pos(element, i, len(commands))
         symbol = add_symbol(svg, group, command, pos)
         add_connector(svg, symbol, command, element)
 
