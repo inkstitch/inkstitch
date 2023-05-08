@@ -2,19 +2,20 @@
 permalink: /fr/tutorials/cookie_cutter_tiling/
 title: "Pavage à l'emporte pièce"
 language: fr
-last_modified_at: 2023-05-04
+last_modified_at: 2023-05-08
 excerpt: "Pavage"
 image: "/assets/images/tutorials/tutorial-preview-images/cloth_line.jpg"
 tutorial-type:
 stitch-type:
   - "Running Stitch"
   - "Bean Stitch"
+  - "Circular Fill"
 techniques:
 field-of-use:
 tool:
   - "Stroke"
   - "Fill"
-  - "Circular Fill"
+
 user-level:
 toc:
   true
@@ -32,6 +33,7 @@ Le but de ce tutorial est de montrer comment remplir une forme en découpant  un
 L'effet de chemin pavage répéte un dessin un nombre spécifié de fois en lignes et en colonnes, avec des options permettant de varier espacement, décalage, rotation, d'ajouter des symmétries, etc.
 
 Ces pavages sont particulièrement intéréssant pour la broderie, que ce soit pour créer des textures sur des remplissages, ou pour créer des motifs de remplissages.
+
 Voici quelques exemples:
 
  ![tiles](/assets/images/tutorials/cookie_cutter_tiling/all_png.png) 
@@ -43,17 +45,20 @@ Vous reconnaitrez (ou pas) parmi ces exemple les 4 pavages qui ont été utilis�
 * le remplissage du maillot de bain provient du dernier pavage de la rangée du milieu. Moins évident à l'oeil....
 
 [Télécharger le fichier contenant tous ces pavages](/assets/images/tutorials/cookie_cutter_tiling/tiles_ideas.svg) 
+
 Dans tous ces exemples, tous les chemins constituant le motif sont regroupés, et l'effet de chemin est appliqué sur le groupe. 
-Ils sont assez faciles à obtenir car toute modification est réfléchie immédiatement sur le canevas d'inkscape.
 
-Plus de détails sur l'utilisation de l'effet de chemin pavage dans un tutoriel à venir
+Ils sont assez faciles à obtenir car toute modification est réfléchie immédiatement sur le canevas d'inkscape. Vous pouvez modifer un chemin du motif, ajouter un chemin au motif ou faire une modification depuis le pannneau Effet de Chemin et voir immédiatement l'effet sur le canevas.
 
+Vous pouvez utiliser ces pavages pour remplir vos propres formes, et bien sur créer vos propres pavages. C'est simple.
+
+Voici comment la broderie de la corde à linge a été composée.
 
 ## Préparation  des  vêtements
 
 Les svg des trois vêtements ont été créés par Bernd Lakenbrink du [Noun Project](https://thenounproject.com/browse/collection-icon/clothes-icon-set-158916/?p=1).
 
-Le svg du  [T Shirt](https://thenounproject.com/browse/icons/term/womans-shirt/) doit être modifié. En effet, ce type de svg parfait pour les écrans ou les machines de broderie ne convient pas tel quel pour ce type de broderie : ce qui apparait à l'oeil comme des traits est en fait constitué de remplissage. 
+Le svg du  [T Shirt](https://thenounproject.com/browse/icons/term/womans-shirt/) doit être modifié. En effet, ce type de svg parfait pour les écrans ou les machines de découpe ne convient pas tel quel pour ce type de broderie : ce qui apparait à l'oeil comme des traits est en fait constitué de remplissage. 
 
 
 
@@ -66,7 +71,7 @@ Les quatre images ci dessous montrent successivement l'apparence du svg à l'éc
 
 ![T-Shirt](/assets/images/tutorials/cookie_cutter_tiling/Tshirt.png) 
 
-Les vêtéments préparés, se trouvent dans le calque "clothes" de ce fichier qui contient ausi tous les pavages necessaires.
+Les vêtéments préparés, se trouvent dans le calque "clothes" de ce fichier qui contient ausi tous les pavages necessaires dans le calque "Tilings".
 
 ![cloth_line](/assets/images/tutorials/cookie_cutter_tiling/cloth_line.svg) 
 
@@ -103,16 +108,20 @@ On part donc avec :
 Dans un rectangle rouge se trouve l'oeil qui permet de masquer et demasquer l'effet
 
 Dans un autre rectangle rouge le  symbole ![symbole](/assets/images/tutorials/cookie_cutter_tiling/tiling_moulin.jpg) qui dicte la manière dont les triangles sont répétés. 
+
 Pour plus facilement comprendre, redressons le pavage et limitons nous à deux lignes et deux colonnes:
+
 ![starting_point](/assets/images/tutorials/cookie_cutter_tiling/tiling_moulin2x2.jpg)
+
 Le symbole indique quelles transformations  le chemin initial (rose sur le symbole), path8 pour nous, doit effectuer lors des recopies en ligne et en colonne.
+
 Sélectionner un autre symbole, et vous aurez un tout autre pavage, à vous de choisir celui que vous préférez.
 ![mirroring](/assets/images/tutorials/cookie_cutter_tiling/mirroring.jpg)
 
 
-Faites toutes les modifications souhaitées, puis finalement applatissez (flatten) l'effet de chemin. Il en résulte que path8 est maintenant un chemin composite constitué des multiples répétitions du triangle initial. Plus possible après cela de modifier le nombre de lignes et de colonnes, ni les symmétries.
+Faites toutes les modifications souhaitées, puis finalement applatissez (flatten) l'effet de chemin. Il en résulte que path8 est maintenant un chemin composite constitué des multiples répétitions du triangle initial. Impossible après cela de modifier le nombre de lignes et de colonnes, ni les symmétries.
 
-En mode édition de noeuds, voici ce que vous devriez voir si vous sélectionnez les noeuds de path8 :
+En mode édition de noeuds, voici ce que vous devez voir si vous sélectionnez les noeuds de path8 :
 
 ![flattened](/assets/images/tutorials/cookie_cutter_tiling/flatened.jpg)
 Si vous sépariez ce chemin vous obtiendriez de nombreux triangles. Mais ne séparez pas.
@@ -140,7 +149,47 @@ Il ne reste plus qu'à paramétrer les deux petits détails du T Shirt.
 
 ### Exemple d'une suprise : le maillot de bain
 
-La démarche est identique, mais le pavage de départ n'est pas constitué de chemins fermés. De ce fait, l'intersection produit un résultat qui n'est pas forcement celui auquel on s'attendait. Mais le résultat m'a plu. Je l'ai conservé
-mais en combinant d'abord les trois chemins j'aurai pu mieux faire
+La démarche est identique, mais le pavage de départ est constitué de trois chemin ouverts.
+Rien à modifier jusqu'à l'étape de l'intersection
 
-### Exemple ou l'intersection n'est pas satisfaisante 
+#### Première tentative d'intersection
+Sans rien toucher au motif du pavage,  j'ai aplati l'effet puis pris l'intersection avec la forme du maillot de bain.
+![intersection_1](/assets/images/tutorials/cookie_cutter_tiling/ss_intersection_1.jpg )
+Logique en fait, l'intersection appliqué à 4 chemins, a pris l'intersection des 4....
+
+Mais pas terrible pour la broderie, trop de sauts de fils en perspective
+#### Deuxième tentative d'intersection
+Cette fois ci j'ai combiné les trois chemins du motifs avant d'applatir l'effet. Puis intersecté avec la forme du maillot .
+
+![intersection_2](/assets/images/tutorials/cookie_cutter_tiling/ss_intersection_2.jpg )
+
+Le résultat n'est pas  forcement celui auquel on s'attend.C'est du à ce que mls trois chemins combinés ne constituent pas une forme fermée.
+Mais le résultat m'a plu. Je l'ai conservé
+
+J'aurai pu aussi utiliser la division : en selectionnant le maillot et le chemin combiné du pavage, avec le maillot plus bas dans la liste d'objets, on divise le maillot par le pavage pour obtenir ![idivision](/assets/images/tutorials/cookie_cutter_tiling/division.jpg)
+
+L'intérêt de l'intersection et de la division c'est qu'elles éliminent tout ce qui est en dehors de la forme. L'inconvénient c'est que faute de partir d'une pavage constituée de chemins fermés combinés, le résultat n'est pas forcement celui que l'on attend.
+
+
+### Remplacer Intersection par Découper
+Pour obtenir un vrai découpage du pavage par le maillot, il convient d'utiliser l'opération de chemin "Découper". On va placer cette fois le pavage (après avoir combiné et applati, - un seul chemin donc) sous une copie du maillot.
+
+* Sélectionner le page et le maillot (maillot plus haut que le pavage)
+* Chemin > Découper
+
+
+C'est comme si vous preniez un emporte pièce de la forme du maillot pour couper dans le pavage. Les chemins du pavage sont bien découpés, mais rien n'est éliminé.L'unique chemin initial du pavage devient une foule de morceaux parmi lesquels il va falloir faire le tri
+
+![cut_path](/assets/images/tutorials/cookie_cutter_tiling/cut_path.jpg)
+
+
+Ma manière préférrée de faire le ménage consiste à :
+* vérouiller le reste des objets (ici la deuxieme copie du maillot et le decolleté)
+* en maintenant les touches majuscule et alt enfoncées tracé un chemin (qui va s'afficher en rouge) qui rencontre (et donc sélectionne) des objets ) supprimer. 
+* supprimer les objets que je viens de sélectionner.
+* En quelques passage le ménage est fait.
+
+![cut_path](/assets/images/tutorials/cookie_cutter_tiling/ss.jpg)
+
+Le reste des étapes est identique.
+
