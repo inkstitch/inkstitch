@@ -53,7 +53,7 @@ A ce moment le remplissage d'une lettre se fait avec des cercles centrés sur so
 Pour obtenir des cercles tous centrés au même endroit, il suffit d'utiliser des commandes cibles :
 
 *  Sélectionnez les trois lettres et baissez leur opacité 
-* `Extensions > Ink/Stitch > Commandes > Ajouter des commandes à des objets selectionnés`
+* `Extensions > Ink/Stitch > Commandes > Ajouter des commandes à des objets sélectionnés`
 *  Cochez "Position de la cible" et appliquez
 *  Sur le canevas, déplacez les symboles de commandes jusqu'à ce que les marqueurs de commandes soient superposés. Déplacez bien tout le groupe, 
 mais seule la position du marqueur importe.
@@ -61,7 +61,7 @@ mais seule la position du marqueur importe.
  
 ## Bord satin
  
- Le 4 ième chemin est lui aussi un remplissage, pour le transformer en satin :
+ Le 4ième chemin est lui aussi un remplissage, pour le transformer en colonne satin :
  
  * `Extensions > Ink/Stitch > Outils Trait> Convertir Remplissage en Trait`
  * Tout décocher et Appliquer
@@ -91,7 +91,7 @@ Avec toujours la bordure sélectionnée :
 
  ![satin_path_effet_after](/assets/images/tutorials/circular_monogram/changer_motif.jpg)
  
- * Modifiez le motif à votre gout : ici on a applati un rail et augmenté la largeur
+ * Modifiez le motif à votre gout : ici on a aplati un rail et augmenté la largeur
 
 ![satin_path_effet_after](/assets/images/tutorials/circular_monogram/modifier_motif_after.jpg)
 
