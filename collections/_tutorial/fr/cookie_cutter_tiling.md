@@ -80,6 +80,7 @@ L'étape suivante consiste à recouvrir chaque surface à remplir par un pavage.
 
 ![cloth_line](/assets/images/tutorials/cookie_cutter_tiling/tiled_cloths.png) 
 
+Vous pouvez modifier le nombre de lignes et de colonnes du pavage, modifier les dimensions, tourner le pavage, l'adapter au mieux pour  couvrir la surface à remplir sans avoir trop de lignes ou de colonnes inutiles.
 Aucune difficulté à cette étape
 
 ## Passer au  remplissage de chaque vêtement
@@ -90,20 +91,56 @@ Selon le pavage choisi, le résultat est plus ou moins facile à atteindre
 
 ### Exemple d'un résultat facile : le T -Shirt 
 
-* dupliquer la forme T-shirt
+On part donc avec :
+* shape : forme fermée du contour extérieur du T-Shirt
+* details : les petits trucs en plus qu'on traitera à la fin indépendament du reste
+* un groupe "Moulins" constitué de :
+  *  un unique chemin (path8 : un petit triangle) sur lequel est appliqué l'effet de chemin pavage  
 
-* Applatir l'effet de chemin
-* Prendre l'intersection  du resultat avec une copie du T shi
 
-* Tout sélectionner (intersection plus copie restante)
+![starting_point](/assets/images/tutorials/cookie_cutter_tiling/T-shirt-1.jpg)
+
+Dans un rectangle rouge se trouve l'oeil qui permet de masquer et demasquer l'effet
+
+Dans un autre rectangle rouge le  symbole ![symbole](/assets/images/tutorials/cookie_cutter_tiling/tiling_moulin.jpg) qui dicte la manière dont les triangles sont répétés. 
+Pour plus facilement comprendre, redressons le pavage et limitons nous à deux lignes et deux colonnes:
+![starting_point](/assets/images/tutorials/cookie_cutter_tiling/tiling_moulin2x2.jpg)
+Le symbole indique quelles transformations  le chemin initial (rose sur le symbole), path8 pour nous, doit effectuer lors des recopies en ligne et en colonne.
+Sélectionner un autre symbole, et vous aurez un tout autre pavage, à vous de choisir celui que vous préférez.
+![mirroring](/assets/images/tutorials/cookie_cutter_tiling/mirroring.jpg)
+
+
+Faites toutes les modifications souhaitées, puis finalement applatissez (flatten) l'effet de chemin. Il en résulte que path8 est maintenant un chemin composite constitué des multiples répétitions du triangle initial. Plus possible après cela de modifier le nombre de lignes et de colonnes, ni les symmétries.
+
+En mode édition de noeuds, voici ce que vous devriez voir si vous sélectionnez les noeuds de path8 :
+
+![flattened](/assets/images/tutorials/cookie_cutter_tiling/flatened.jpg)
+Si vous sépariez ce chemin vous obtiendriez de nombreux triangles. Mais ne séparez pas.
+
+* Dupliquez shape, la forme du T-shirt
+* Sélectionnez une copie de shape et path8  
+* Chemin > Intersection 
+
+On obtient
+![flattened](/assets/images/tutorials/cookie_cutter_tiling/after_intersection.jpg)
+
+Ici l'intersection fonctionne très bien, car le triangle initial est un chemin fermé. 
+
+* Sélectionnez le nouveau path8 et la copie restante de shape. Supprimez le remplissage si nécessaire, ajoutez un contour si nécessaire. 
 * Extensions > Ink/Stitch > Paramètres 
+
+pour choisir vos paramètres de broderie. Ici on a choisit un point multiple.
+
+Avec toujours ces deux éléments sélectionnés
 
 * Extensions > Ink/Stitch > Outils : Trait > Agencement automatique de points droits.
 
-On constate une multitude de tous petits chemins. On pourrait les éliminer, mais le plus simple est d'aller dans les préférences, et pour ce fichier seulement augmenter la longueur minimum de point et la passer à 1mm.
-
-A part, paramétrer les détails
+On constate dans le résultat  une multitude de tous petits chemins. On pourrait les éliminer, mais le plus simple est d'aller dans les préférences, et pour ce fichier seulement augmenter la longueur minimum de point et la passer à 1mm.
+Il ne reste plus qu'à paramétrer les deux petits détails du T Shirt.
 
 ### Exemple d'une suprise : le maillot de bain
+
+La démarche est identique, mais le pavage de départ n'est pas constitué de chemins fermés. De ce fait, l'intersection produit un résultat qui n'est pas forcement celui auquel on s'attendait. Mais le résultat m'a plu. Je l'ai conservé
+mais en combinant d'abord les trois chemins j'aurai pu mieux faire
 
 ### Exemple ou l'intersection n'est pas satisfaisante 
