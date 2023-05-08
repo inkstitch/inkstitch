@@ -49,7 +49,7 @@ All designs in this file are created  applying Tiling LPE to a group, it makes i
 They are easy to modify:  you may modify a path in the group or add a path and see immediatly the result on the canvas. From the LPE dialog you may change the number of 
 rows and columns, again seeing immediatly the result. 
 
-You may use these tilings or create your tilings, it is really easy to do.
+You may use these tilings or create your tilings, it is really fun and easy to do.
 
 To create the clothline design, besides tilings, we need cloth shapes.
 
@@ -65,7 +65,7 @@ However, we need to modify these svgs to serve our purpose.
 Let's adapt the   [T Shirt](https://thenounproject.com/browse/icons/term/womans-shirt/).
 
 This kind of svg is perfect for screen, or for cutting machine, but must be  modified, as what appears like a stroke is actually a fill. Using
-`Extensions > Ink/Stitch > Tools: Fill> Fill to Stroke`, this is easily solved
+`Extensions > Ink/Stitch > Tools: Fill> Fill to Stroke`, this is easily solved.
 
 The four images below are from left to right:
 * screen look
@@ -83,7 +83,7 @@ details if you wish.
 
 The cloth_line.svg file contains all prepared cloths in the "Clothes" layer and the same tilings again in the "Tilings" layer. 
 
-It also contains what you should obtain  at all  steps of the process.
+It also contains what you should obtain  at all  steps of the process, up to the final embroidery.
 
 ![cloth_line](/assets/images/tutorials/cookie_cutter_tiling/cloth_line.svg) 
 
@@ -106,23 +106,28 @@ This is what was chosen (this is layer "Clothline preparing pattern fill" in the
 This is our goal
 ![final](/assets/images/tutorials/cookie_cutter_tiling/clothline_final.png) 
 
-Some tilings make the job easy, let's start with an  easy one
+Some tilings make the job easy, other will require more work. Let's start with an  easy one.
 
 ### T -Shirt 
 
-We sart  from :
- * shape : a close path that outlines the T-shirt
- * details : a group containing stuff to be embroidered over the filled T-Shirt
- * Moulins : the tiling group that contains a single path (path8, a small triangle) 
- * Tiling LPE is applied on Moulins group
+We start with:
+ * shape: a close path that outlines the T-shirt
+ * details: a group containing stuff to be embroidered over the filled T-Shirt
+ * Moulins: the tiling group that contains a single path (path8, a small triangle) 
+ 
+ 
+ Let's have a look at the Tiling LPE  applied on Moulins group;
 
 
 ![starting_point](/assets/images/tutorials/cookie_cutter_tiling/T-shirt-1.jpg)
 The eye in the red rectangle hides/shows the LPE.
 
-In another red rectangle is the ![symbole](/assets/images/tutorials/cookie_cutter_tiling/tiling_moulin.jpg) symbol that dictates the mirrors effect of the tiling
+Later on you will need to flatten the effect, see the menu for that in a red rectangle.
 
-For a better  understanding, let's turn  the tiling  back  to horizontal and limit to two rows and two columns:
+In another red rectangle is the ![symbole](/assets/images/tutorials/cookie_cutter_tiling/tiling_moulin.jpg) symbol that dictates the mirrors effect of the tiling.
+
+
+For a better  understanding, let's turn  the tiling  back  to horizontal and set it to two rows and two columns:
 ![starting_point](/assets/images/tutorials/cookie_cutter_tiling/tiling_moulin2x2.jpg)
 
 The pink shape of the symbol is the tile and the three other shapes shows the mirroring effects applied to rows and columns.
@@ -141,7 +146,7 @@ In node edition mode, this is what you get when selectiong  all path8 nodes :
 
 ![flattened](/assets/images/tutorials/cookie_cutter_tiling/flatened.jpg)
 Breaking  apart this path would create  plenty of triangles. Don't.
-
+Now
 
 * Duplicate shape, the T-shirt outline
 * Select path8  and a single copy  of shape
@@ -150,13 +155,13 @@ Breaking  apart this path would create  plenty of triangles. Don't.
 and  you get
 ![flattened](/assets/images/tutorials/cookie_cutter_tiling/after_intersection.jpg)
 
-What make this tiling easy to use, is that the group contains a single closed path. In that case intersection does the  work very easily.
+The reason this tiling is easy to use, is that the group contains a single closed path. In that case intersection does the  intersecting work quick and well/
 
 * Select the result of the intersection and the remaining shape copy
 *  Remove fill if any, add stroke if necessary
 * `Extensions > Ink/Stitch > Params `
 
-and chose your embroidery parameters. In the sample bean stitches were chosen
+and chose your embroidery parameters. In the sample, bean stitches were chosen.
 
 
 With the same two elements selected
@@ -169,11 +174,11 @@ If you look at the results, you may notice some unuseful very short paths . You 
 * `Extensions > Ink/Stitch > Preference`
 *  Set  *minimum stitch length* to 1mm locally only 
 
-Now you only need to parameters the T-Shirt details.
+Now you only need to parameter the T-Shirt details.
 
 ### Swimming Suit
 Same  process, but because the tile contains 3 open paths, intersecting is a little surprising.
-Follow the same steps as for the T Shirt and let's try to intersect tiling and shape
+Follow the same first steps as for the T Shirt and let's try to intersect tiling and shape
 
 
 #### First trial
@@ -183,11 +188,11 @@ Follow the same road as for the T shirt, that is flatten the LPE and then inters
 
 The result is quite logical, after flattening the effect, the group contains 3 paths, so we are in fact intersecting 4 paths.
 
-Not ugly but not so good for embroidery, that would yiel too many jumps.
+Not ugly but not so good for embroidery, that would yield too many jumps.
 
 
 #### Second trial
-In oder to intersect only two paths,let's combine the three paths of  the tiling  before flattening. Then intersect the single resulting path with
+In oder to intersect only two paths,let's combine the three paths of the tiling  before flattening. Then intersect the single resulting path with
 the swiming suit shape
 
 ![intersection_2](/assets/images/tutorials/cookie_cutter_tiling/ss_intersection_2.jpg)
@@ -195,37 +200,41 @@ the swiming suit shape
 Still not exactly what was planned, but i liked the result, so i kept it for the final embroidery.
 
 Why is the result not a subpart of the tiling ? this is because  if we do have a single  path in the  tiling,  it is not  a closed  paths combination.
-In that   case,  the way to go is to use 'Path >  Cut  Path', but before that, let's  try Path  >  Division
+Intersection, considers what's *inside* both intersecting shape, and is intended to intersect fills rather than strokes.
+
+In that   case,  the way to go is to use 'Path >  Cut  Path', but because it is more tedious to  use, before that, let's  try another easy path operation
+`Path  >  Division`
 
 
-Intersection is a symmetric  operation, Division and Cut Path are not, and the order inn the object  pile  matters.
+Intersection is a symmetric  operation, Division and Cut Path are not, and the order in the object  stack of the layer  and object pannel matters.
 * Have a copy of the swimming suit shape bellow the tiling group in the Layers and Object pannel
-* Select the tiling path and that  copy of the swimming suit
+* Select the tiling path and the bellow  copy of the swimming suit
 * `Path > Division`
 
 
 ![idivision](/assets/images/tutorials/cookie_cutter_tiling/division.jpg)
 
-Both intersection and  division  are easy to use as thye get rid of everything outside the shape to be  filled.
-But if the tiling  is not a combination of closed path, the result is  probably not  what you wish
+Not bad, but still some jumps to expect...
+
+Both intersection and  division  are easy to use as they get rid of everything outside the shape to be  filled.
+But if the tiling  is not a combination of closed path, the result is  probably not  what you wish.
 
 
 
 ### 'Path Cut' to the rescue
 
 Again you need to combine and flatten the effect to get a single path.
-This time have a copy of the swimming suit shape above the tiling path
-Pour obtenir un vrai découpage du pavage par le maillot, il convient d'utiliser l'opération de chemin "Découper". 
-On va placer cette fois le pavage (après avoir combiné et applati, - un seul chemin donc) sous une copie du maillot.
 
-* Select the tiling path and the coy of the swimming suit above it
+This time have a copy of the swimming suit shape above the tiling path.
+
+* Select the tiling path and the copy of the swimming suit above it
 * `Path > Cut Path`
 
 
 Imagine that you are using a swiming suit shaped cookie cutter, and cut a single cookie from the tiling path. The path get broken in plenty of pieces
 but nothing is gone.
 
-This is the real disadvantage of Cut Path, you need to tidy and get rid of all that is outside the shape
+This is the real disadvantage of Cut Path, you need to tidy and get rid of all that is outside the shape and it is somewhat tedious.
 
 ![cut_path](/assets/images/tutorials/cookie_cutter_tiling/cut_path.jpg)
 
@@ -233,7 +242,7 @@ My favorite way to tidy up is
 * Lock whatever you are sure you want to keep (in that case the leftover swimsuit shape and the decolleté detail)
 * Holding down ALT and MAJ keys, with your mouse, draw a path that intersects as many superfluous paths as you safely may (meaning don't touch what you want to keep). 
 You will see a red path on the screen, and this will select all the intersected paths. Delete them.
-* Repeat  r use any other selecting process to finish the process
+* Repeat  or use any other selecting process to finish the process
 
 
 
