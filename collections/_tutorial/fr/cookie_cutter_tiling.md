@@ -30,7 +30,7 @@ Le but de ce tutorial est de montrer comment remplir une forme en découpant  la
 
 
 ## Pavages
-L'effet de chemin pavage répéte un dessin un nombre spécifié de fois en lignes et en colonnes, avec des options permettant de varier espacement, décalage, rotation, d'ajouter des symmétries, etc.
+L'effet de chemin pavage répète un dessin un nombre spécifié de fois en lignes et en colonnes, avec des options permettant de varier espacement, décalage, rotation, d'ajouter des symmétries, etc.
 
 Ces pavages sont particulièrement intéressants pour la broderie, que ce soit pour créer des textures sur des remplissages, ou pour créer des remplissages en motif.
 
@@ -46,7 +46,7 @@ Vous reconnaitrez (ou pas) parmi ces exemple les 4 pavages qui ont été utilis�
 * la ceinture de la robe, exception de cet exemple, est un remplissage circulaire avec alternance de point simples et de points triples
 * le remplissage du maillot de bain provient du dernier pavage de la rangée du milieu. Moins évident à l'oeil....
 
-[Télécharger le fichier contenant tous ces pavages](/assets/images/tutorials/cookie_cutter_tiling/tiles_ideas.svg) 
+[Télécharger le fichier contenant tous ces pavages](/assets/images/tutorials/cookie_cutter_tiling/tiles_idea.svg){: download="tiles_idea.svg" }
 
 Dans tous ces exemples, tous les chemins constituant le motif sont regroupés, et l'effet de chemin est appliqué sur le groupe. 
 
@@ -78,7 +78,7 @@ Vous  y trouverez aussi le résultat de chaque étape jusqu'à la broderie final
 
 ![cloth_line](/assets/images/tutorials/cookie_cutter_tiling/cloth_line.svg) 
 
-[Télécharger cloth_line.svg](/assets/images/tutorials/cookie_cutter_tiling/cloth_line.svg)
+[Télécharger cloth_line.svg](/assets/images/tutorials/cookie_cutter_tiling/cloth_line.svg){: download="cloth_line.svg" }
 
 
 
@@ -205,8 +205,8 @@ L'unique chemin initial du pavage devient une foule de morceaux parmi lesquels i
 ![cut_path](/assets/images/tutorials/cookie_cutter_tiling/cut_path.jpg)
 
 
-Ma manière préferrée de faire le ménage consiste à :
-* vérouiller le reste des objets (ici la deuxieme copie du maillot et le decolleté)
+Ma manière préferée de faire le ménage consiste à :
+* vérrouiller le reste des objets (ici la deuxieme copie du maillot et le decolleté)
 * en maintenant les touches majuscule et alt enfoncées tracé un chemin (qui va s'afficher en rouge) qui rencontre (et donc sélectionne) des objets à supprimer. 
 * supprimer les objets que je viens de sélectionner.
 * En quelques passages le ménage est fait.
