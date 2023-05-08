@@ -153,6 +153,7 @@ inkstitch_attribs = [
     'min_random_split_length_mm',
     # stitch_plan
     'invisible_layers',
+    'layer_visibility',
     # All elements
     'trim_after',
     'stop_after',

@@ -19,7 +19,7 @@ class StitchPlanPreview(InkstitchExtension):
     def __init__(self, *args, **kwargs):
         InkstitchExtension.__init__(self, *args, **kwargs)
         self.arg_parser.add_argument("-s", "--move-to-side", type=Boolean, default=True, dest="move_to_side")
-        self.arg_parser.add_argument("-v", "--layer-visibility", type=int, default=0, dest="layer_visibility")
+        self.arg_parser.add_argument("-v", "--layer-visibility", type=str, default="unchanged", dest="layer_visibility")
         self.arg_parser.add_argument("-n", "--needle-points", type=Boolean, default=False, dest="needle_points")
         self.arg_parser.add_argument("-i", "--insensitive", type=Boolean, default=False, dest="insensitive")
         self.arg_parser.add_argument("-c", "--visual-commands", type=Boolean, default="symbols", dest="visual_commands")
@@ -45,13 +45,13 @@ class StitchPlanPreview(InkstitchExtension):
         # apply options
         layer = svg.find(".//*[@id='__inkstitch_stitch_plan__']")
 
-        # update layer visibility 0 = unchanged, 1 = hidden, 2 = lower opacity
+        # update layer visibility (unchanged, hidden, lower opacity)
         groups = self.document.getroot().findall(SVG_GROUP_TAG)
         self.set_invisible_layers_attribute(groups, layer)
-        if self.options.layer_visibility == 1:
+        if self.options.layer_visibility == "hidden":
             self.hide_all_layers()
             layer.style['display'] = "inline"
-        elif self.options.layer_visibility == 2:
+        elif self.options.layer_visibility == "lower_opacity":
             for g in groups:
                 style = g.specified_style()
                 # check groupmode and exclude stitch_plan layer
@@ -85,6 +85,7 @@ class StitchPlanPreview(InkstitchExtension):
             if g.get(INKSCAPE_GROUPMODE) == "layer" and 'display' in g.style and g.style['display'] == 'none':
                 invisible_layers.append(g.get_id())
         layer.set(INKSTITCH_ATTRIBS['invisible_layers'], ",".join(invisible_layers))
+        layer.set(INKSTITCH_ATTRIBS['layer_visibility'], self.options.layer_visibility)
 
     def ensure_marker(self):
         xpath = ".//svg:marker[@id='inkstitch-needle-point']"
