@@ -42,7 +42,7 @@ You may (or not) be able to recognize them in the clothline embroidery:
 
 The Belt fill is a circular fill, with bean stitch repeat 0 1, that is alternating simple and triple stitches.
 
-[Download tilings file](/assets/images/tutorials/cookie_cutter_tiling/tiles_ideas.svg) 
+[Download tilings file](/assets/images/tutorials/cookie_cutter_tiling/tiles_idea.svg) {: download="tiles_idea.svg" }
 
 All designs in this file are created  applying Tiling LPE to a group, it makes it much easier to use than trying to apply the LPE individually on each path of a tile.
 
@@ -87,7 +87,7 @@ It also contains what you should obtain  at all  steps of the process, up to the
 
 ![cloth_line](/assets/images/tutorials/cookie_cutter_tiling/cloth_line.svg) 
 
-[download cloth_line.svg](/assets/images/tutorials/cookie_cutter_tiling/cloth_line.svg)
+[download cloth_line.svg](/assets/images/tutorials/cookie_cutter_tiling/cloth_line.svg){: download="cloth_line.svg" }
 
 
 ## Covering each shape with a tiling
