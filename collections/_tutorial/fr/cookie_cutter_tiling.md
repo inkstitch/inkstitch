@@ -25,7 +25,7 @@ toc:
 
 ![Brodé](/assets/images/tutorials/tutorial-preview-images/cloth_line.jpg)
 
-Le but de ce tutorial est de montrer comment remplir une forme en découpant  une répétition régulière de motifs obtenue  en utilisant l'effet de chemin pavage.
+Le but de ce tutorial est de montrer comment remplir une forme en découpant  la répétition régulière de motifs obtenue  en utilisant l'effet de chemin pavage.
 
 
 
@@ -86,6 +86,7 @@ L'étape suivante consiste à recouvrir chaque surface à remplir par un pavage.
 ![cloth_line](/assets/images/tutorials/cookie_cutter_tiling/tiled_cloths.png) 
 
 Vous pouvez modifier le nombre de lignes et de colonnes du pavage, modifier les dimensions, tourner le pavage, l'adapter au mieux pour  couvrir la surface à remplir sans avoir trop de lignes ou de colonnes inutiles.
+
 Aucune difficulté à cette étape
 
 ## Passer au  remplissage de chaque vêtement
@@ -105,7 +106,7 @@ On part donc avec :
 
 ![starting_point](/assets/images/tutorials/cookie_cutter_tiling/T-shirt-1.jpg)
 
-Dans un rectangle rouge se trouve l'oeil qui permet de masquer et demasquer l'effet
+Dans un rectangle rouge se trouve l'oeil qui permet de masquer et demasquer l'effet.
 
 Dans un autre rectangle rouge le  symbole ![symbole](/assets/images/tutorials/cookie_cutter_tiling/tiling_moulin.jpg) qui dicte la manière dont les triangles sont répétés. 
 
@@ -128,7 +129,7 @@ Si vous sépariez ce chemin vous obtiendriez de nombreux triangles. Mais ne sép
 
 * Dupliquez shape, la forme du T-shirt
 * Sélectionnez une copie de shape et path8  
-* Chemin > Intersection 
+* `Chemin > Intersection` 
 
 On obtient
 ![flattened](/assets/images/tutorials/cookie_cutter_tiling/after_intersection.jpg)
@@ -136,13 +137,13 @@ On obtient
 Ici l'intersection fonctionne très bien, car le triangle initial est un chemin fermé. 
 
 * Sélectionnez le nouveau path8 et la copie restante de shape. Supprimez le remplissage si nécessaire, ajoutez un contour si nécessaire. 
-* Extensions > Ink/Stitch > Paramètres 
+* `Extensions > Ink/Stitch > Paramètres `
 
 pour choisir vos paramètres de broderie. Ici on a choisit un point multiple.
 
 Avec toujours ces deux éléments sélectionnés
 
-* Extensions > Ink/Stitch > Outils : Trait > Agencement automatique de points droits.
+* `Extensions > Ink/Stitch > Outils : Trait > Agencement automatique de points droits`.
 
 On constate dans le résultat  une multitude de tous petits chemins. On pourrait les éliminer, mais le plus simple est d'aller dans les préférences, et pour ce fichier seulement augmenter la longueur minimum de point et la passer à 1mm.
 Il ne reste plus qu'à paramétrer les deux petits détails du T Shirt.
@@ -166,7 +167,7 @@ Cette fois ci j'ai combiné les trois chemins du motifs avant d'applatir l'effet
 Le résultat n'est pas  forcement celui auquel on s'attend.C'est du à ce que mls trois chemins combinés ne constituent pas une forme fermée.
 Mais le résultat m'a plu. Je l'ai conservé
 
-J'aurai pu aussi utiliser la division : en selectionnant le maillot et le chemin combiné du pavage, avec le maillot plus bas dans la liste d'objets, on divise le maillot par le pavage pour obtenir ![idivision](/assets/images/tutorials/cookie_cutter_tiling/division.jpg)
+J'aurai pu aussi utiliser la division : en selectionant le maillot et le chemin combiné du pavage, avec le maillot plus bas dans la liste d'objets, on divise le maillot par le pavage pour obtenir ![idivision](/assets/images/tutorials/cookie_cutter_tiling/division.jpg)
 
 L'intérêt de l'intersection et de la division c'est qu'elles éliminent tout ce qui est en dehors de la forme. L'inconvénient c'est que faute de partir d'une pavage constituée de chemins fermés combinés, le résultat n'est pas forcement celui que l'on attend.
 
@@ -175,7 +176,7 @@ L'intérêt de l'intersection et de la division c'est qu'elles éliminent tout c
 Pour obtenir un vrai découpage du pavage par le maillot, il convient d'utiliser l'opération de chemin "Découper". On va placer cette fois le pavage (après avoir combiné et applati, - un seul chemin donc) sous une copie du maillot.
 
 * Sélectionner le page et le maillot (maillot plus haut que le pavage)
-* Chemin > Découper
+* `Chemin > Découper`
 
 
 C'est comme si vous preniez un emporte pièce de la forme du maillot pour couper dans le pavage. Les chemins du pavage sont bien découpés, mais rien n'est éliminé.L'unique chemin initial du pavage devient une foule de morceaux parmi lesquels il va falloir faire le tri
