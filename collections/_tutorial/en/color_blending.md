@@ -29,7 +29,7 @@ The easiest way is to use
 
 
 
-{% include folder-galleries path="color-blending/" captions="1:Inkscape gradient;2:Result of extension ;3:Split view;" caption=" %}
+{% include folder-galleries path="color-blending/" captions="1:Inkscape gradient;2:Result of extension ;3:Split view;"  %}
 
 
 If n+1 colors are used, the extension splits the shape into  n parts and stack two gradient blocs over each part. 
