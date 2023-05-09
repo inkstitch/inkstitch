@@ -20,39 +20,26 @@ user-level:
 
 ![Brodé](/assets/images/tutorials/tutorial-preview-images/tiling_embroidered.jpg)
 
-Le but de ce tutorial est de montrer comment utiliser l'effet de chemin Pavage pour obtenir un pavage, puis  
-les manipulations à faire pour obtenir une broderie sans sauts de fils. Deux techniques sont présentées:
-Une technique paresseuse très simple, mais va créer beaucoup de chemins de dessous. Ce n'est pas grave si l'on veut une broderie en point triple qui les camoufler  bien, mais si l'on veut utiliser une alternance de point simple et de point triple pour évoquer un point à la main, la deuxième technique qui ne générera pas de chemins de dessous est préférable
 
-## Technique paresseuse
-### Étape 1 : Création du pavage
-Le pavage final ![tiles](/assets/images/tutorials/tiling/tiling_lazy.png) est constitué de copies de :
-![tile](/assets/images/tutorials/tiling/tile_lazy.svg)
+Lorsque l'on souhaite remplir un carré ou un rectangle d'une répétion régulière d'un motif, l'outil de choix est l'effet de chemin  Pavage.
 
+En applatissant cet effet, on obtient un chemin composite qui remplit  le carré ou le rectangle (éventuellement en débordant si des décalages sont utilisés). 
 
+Si l'on paramètre directement ce chemin pour la broderie, on va constater énormément de sauts de fil ce qui n'est pas satisfaisant. 
 
-[Télécharger le dessin initial](/assets/images/tutorials/tiling/tile_lazy.svg)
+Il faut donc aplatir le motif puis ordonner les chemins résultants.
 
-Tous les chemins doivent être groupés, et cet effet de chemin appliqué sur le groupe
+La manière la plus simple est d'utiliser  l'arrangement automatique de  points  droits pour ordonner les chemins. L'arrangement  automatiuqe modifie l'ordre des chemins, mais aussi ajoute des "chemins de dessous" pour naviguer sans saut d'un chemin vers un  autre
 
-* ![LPE](/assets/images/tutorials/tiling/LPE_lazy.jpg)
+Si l'on prévoit une broderie en point triple ou n'importe quel point multiple la présence de ces chemins de dessous  n'est vraiment pas gênante, ils seront bien cachés par le point multiple.
 
+En revanche si l'on désire utiliser un point multiple irrégulier comme par exemple  une alternance de point simple et de point triple  pour évoquer un point manuel, alors ces chemins de dessous sont problèmatiques
 
-### Étape 2: Applatir et paramètrer
-* Applatir l'effet de chemin
-![Flatten](/assets/images/tutorials/tiling/flatten_lazy.jpg)
-* Tout sélectionner
-* Extensions > Ink/Stitch > Paramètres 
+Le tutoriel [Pavage à l'emporte pièce](/collections/_tutorial/fr/cookie_cutter_tiling.md) explique cette technique.
+
+Le but de ce tutorial est de montrer comment  avec un certain type de  tuile   obtenir une broderie quasiment sans  sauts de fil et sans chemin de  dessous
 
 
-### Étape 3 : Agencement automatique de points droits
-* Tout sélectionner
-* Extensions > Ink/Stitch > Outils : Trait > Agencement automatique de points droits.
-
-[Télécharger le dessin final ](/assets/images/tutorials/tiling/tiling_lazy.svg)
-
-
-## Technique sans chemins de dessous
 
 ### Étape 1 : Création du pavage
 
@@ -155,5 +142,7 @@ L'usage de Extensions > Inkstitch > Editer >Réordonner dans l'ordre de la séle
 
 
  [Télécharger le fichier complet](/assets/images/tutorials/tiling/tiling.svg)
+ 
+##  Généraliser
 
 
