@@ -77,6 +77,8 @@ class GradientBlocks(CommandsExtension):
                     if self.options.end_row_spacing != 0:
                         end_row_spacing = self.options.end_row_spacing
                     block.set('inkstitch:end_row_spacing_mm', f'{end_row_spacing: .2f}')
+                else:
+                    block.pop('inkstitch:end_row_spacing_mm')
                 # disable underlay and underpath
                 block.set('inkstitch:fill_underlay', False)
                 block.set('inkstitch:underpath', False)
