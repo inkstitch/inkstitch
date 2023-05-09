@@ -23,6 +23,7 @@ from ..stitches import (auto_fill, circular_fill, contour_fill, guided_fill,
                         legacy_fill)
 from ..stitches.meander_fill import meander_fill
 from ..svg import PIXELS_PER_MM, get_node_transform
+from ..svg.clip import get_clip_path
 from ..svg.tags import INKSCAPE_LABEL
 from ..utils import cache, version
 from ..utils.param import ParamOption
@@ -571,12 +572,9 @@ class FillStitch(EmbroideryElement):
         if self.node.clip is None:
             return self.original_shape
 
-        from .element import EmbroideryElement
-        clip_element = EmbroideryElement(self.node.clip)
-        clip_element.paths.sort(key=lambda point_list: shgeo.Polygon(point_list).area, reverse=True)
-        polygon = shgeo.MultiPolygon([(clip_element.paths[0], clip_element.paths[1:])])
+        clip_path = get_clip_path(self.node)
         try:
-            intersection = polygon.intersection(self.original_shape)
+            intersection = clip_path.intersection(self.original_shape)
         except TopologicalError:
             return self.original_shape
 

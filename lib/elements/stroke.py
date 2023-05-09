@@ -5,7 +5,7 @@
 
 from math import ceil
 
-import shapely.geometry
+import shapely.geometry as shgeo
 from inkex import Transform
 
 from ..i18n import _
@@ -18,7 +18,9 @@ from ..threads import ThreadColor
 from ..utils import Point, cache
 from ..utils.param import ParamOption
 from .element import EmbroideryElement, param
+from ..svg.clip import get_clip_path
 from .validation import ValidationWarning
+from shapely.errors import TopologicalError
 
 
 class MultipleGuideLineWarning(ValidationWarning):
@@ -349,6 +351,7 @@ class Stroke(EmbroideryElement):
     def paths(self):
         path = self.parse_path()
         flattened = self.flatten(path)
+        flattened = self._get_clipped_path(flattened)
 
         # manipulate invalid path
         if len(flattened[0]) == 1:
@@ -366,8 +369,32 @@ class Stroke(EmbroideryElement):
 
     @cache
     def as_multi_line_string(self):
-        line_strings = [shapely.geometry.LineString(path) for path in self.paths]
-        return shapely.geometry.MultiLineString(line_strings)
+        line_strings = [shgeo.LineString(path) for path in self.paths]
+        return shgeo.MultiLineString(line_strings)
+
+    def _get_clipped_path(self, paths):
+        if self.node.clip is None:
+            return paths
+
+        clip_path = get_clip_path(self.node)
+        # path to linestrings
+        line_strings = [shgeo.LineString(path) for path in paths]
+        try:
+            intersection = clip_path.intersection(shgeo.MultiLineString(line_strings))
+        except TopologicalError:
+            return paths
+
+        coords = []
+        if intersection.is_empty:
+            return paths
+        elif isinstance(intersection, shgeo.MultiLineString):
+            for c in [intersection for intersection in intersection.geoms if isinstance(intersection, shgeo.LineString)]:
+                coords.append(c.coords)
+        elif isinstance(intersection, shgeo.LineString):
+            coords.append(intersection.coords)
+        else:
+            return paths
+        return coords
 
     def get_ripple_target(self):
         command = self.get_command('ripple_target')
@@ -431,7 +458,7 @@ class Stroke(EmbroideryElement):
         # apply max distances
         max_len_path = [path[0]]
         for points in zip(path[:-1], path[1:]):
-            line = shapely.geometry.LineString(points)
+            line = shgeo.LineString(points)
             dist = line.length
             if dist > self.max_stitch_length:
                 num_subsections = ceil(dist / self.max_stitch_length)
