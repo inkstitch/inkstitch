@@ -19,7 +19,7 @@ You can either set global values which will be applied to every new svg document
 
 
 * **Minimum jump stitch length (mm)**: 
-  If a jump between two consecutive paths is shorter than this value, lock stitches at ending point and tack stiches at starting point are only created if Force lock stitches is enabled in the corresponding path.  If the jump is longer, lock stitches and tack stitches are true to their settings.
+  If a jump between two consecutive paths is shorter than this value, lock stitches at ending of first path and tack stiches at starting point of second path are only created if *Force lock stitches* is enabled in the corresponding path.  If the jump is longer, lock stitches and tack stitches are true to their settings.
   
 * **Minimum stitch length (mm)**: Stitches smaller than this value will be dropped (exception: lock stitches). This value is only used at the very end of the stitch plan computation to filter too short stitches. Be aware that the behavior may not be what you expected : for instance if Minimum stitch length is set to 2mm and you have running stitches with maximum stitch length of 1.5mm, every other stich is droped, yielding a running path  with 3mm stiches.
 
