@@ -3,7 +3,7 @@ title: "Preferences"
 permalink: /docs/preferences/
 excerpt: ""
 last_modified_at: 2023-04-30
-toc: false
+toc: true
 ---
 The current version (v 2.2.0) does not have global settings.
 
@@ -11,7 +11,7 @@ The current version (v 2.2.0) does not have global settings.
 
 The preferences are found in `Extensions > Ink/Stitch > Preferences`.
 
-You can either set global values which will be applied to every new svg document. Also you can set document specific values.
+You can either set global values which will be applied to every new svg document or set document specific values.
 
 **All elements of the document are affected by theses parameters.**
 
@@ -19,8 +19,7 @@ You can either set global values which will be applied to every new svg document
 
 
 * **Minimum jump stitch length (mm)**: 
-  *  Any shorter jump between subpaths of a composite path will be treated as a normal stitch (no lock stitches added)
-  *  In case of a jump beetween two succcesive paths, if the jump between the two paths is shorter than this value, lock stitches at ending point and tack stiches at starting point are only created if Force lock stitches is enabled in the corresponding path.  If the jump is longer, lock stitches and tack stitches are true to their settings.
+  If a jump between two consecutive paths is shorter than this value, lock stitches at ending point and tack stiches at starting point are only created if Force lock stitches is enabled in the corresponding path.  If the jump is longer, lock stitches and tack stitches are true to their settings.
   
 * **Minimum stitch length (mm)**: Stitches smaller than this value will be dropped (exception: lock stitches). This value is only used at the very end of the stitch plan computation to filter too short stitches. Be aware that the behavior may not be what you expected : for instance if Minimum stitch length is set to 2mm and you have running stitches with maximum stitch length of 1.5mm, every other stich is droped, yielding a running path  with 3mm stiches.
 
