@@ -18,27 +18,27 @@ Opret et objekt, f.eks. en cirkel og sørg for, at det har fyld.
 
 ## Step 2 - Konverter til sti (optimalt)
 
-Ink/Stitch works best with path objects. We recommend to transform objects you want to stitch to paths:
+Ink/Stitch fungerer bedst med stiobjekter. Vi anbefaler at transformere objekter, du vil sy, til stier (paths):
 
-* Select all objects (`Ctrl+A`)
+* Vælg alle objekter (`Ctrl+A`)
 * `Path > Object to Path` or `Ctrl+Alt+C`.
 
 ## Step 3 - Parametrize SVG Path for Embroidery
 
-* Select at least one object.
-* Open `Extensions > Ink/Stitch  > Params`.
-* Play with the values. The simulator will update whenever you change the settings.
-* For now, close without saving.
+* Vælg minst et objekt.
+* Åbn `Extensions > Ink/Stitch  > Params`.
+* Leg med værdierne. Simulatoren opdateres, hver gang du ændrer indstillingerne.
+* For nu, luk uden at gemme.
 
 ## Step 4 - Lav en broderi-fil
 
-* Run `File > Save as...`
-* Navigate to the folder where you would like to save the file
-* Choose the correct file format for your machine
-* Click `Save`
-* Copy the file to your machine
+* Kør `File > Save as...`
+* Naviger til den mappe, hvor du vil gemme filen
+* Vælg det korrekte filformat til din broderisymaskine
+* Klik på `Save`
+* Kopier filen til din broderisymaskine
 
-**Tipp:** Make sure to save the file as an SVG file as well. Then you will always be able to modify it easily.
+**Tips:** Sørg for også at gemme filen som en SVG-fil. Så vil det  være nemt at ændre den senere.
 {: .notice--info}
 
 ## Workflow
