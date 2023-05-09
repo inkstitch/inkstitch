@@ -258,7 +258,7 @@ def running_stitch(points, stitch_length, tolerance):
     return stitches
 
 
-def bean_stitch(stitches, repeats):
+def bean_stitch(stitches, repeats, tags_to_ignore=None):
     """Generate bean stitch from a set of stitches.
 
     "Bean" stitch is made by backtracking each stitch to make it heavier.  A
@@ -283,6 +283,10 @@ def bean_stitch(stitches, repeats):
     for i, stitch in enumerate(stitches[1:]):
         repeat_list_pos = i % repeat_list_length
         new_stitches.append(stitch)
+
+        # ignore stitches with specified tags
+        if tags_to_ignore and set(tags_to_ignore).intersection(stitch.tags):
+            continue
 
         for i in range(repeats[repeat_list_pos]):
             new_stitches.extend(copy(new_stitches[-2:]))

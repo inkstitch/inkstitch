@@ -66,7 +66,11 @@ def circular_fill(shape,
     segments = []
     for line in intersection.geoms:
         if isinstance(line, shgeo.LineString):
-            segments.append(line.coords[:])
+            # use running stitch here to adjust the stitch length
+            coords = running_stitch([Stitch(point[0], point[1]) for point in line.coords],
+                                    running_stitch_length,
+                                    running_stitch_tolerance)
+            segments.append([(point.x, point.y) for point in coords])
 
     fill_stitch_graph = build_fill_stitch_graph(shape, segments, starting_point, ending_point)
     if not graph_is_valid(fill_stitch_graph, shape, running_stitch_length):
@@ -75,15 +79,14 @@ def circular_fill(shape,
     travel_graph = build_travel_graph(fill_stitch_graph, shape, angle, underpath)
     path = find_stitch_path(fill_stitch_graph, travel_graph, starting_point, ending_point)
     result = path_to_stitches(path, travel_graph, fill_stitch_graph, running_stitch_length, running_stitch_tolerance, skip_last)
-
-    # use running stitch to adjust the stitch length
-    result = running_stitch(result, running_stitch_length, running_stitch_tolerance)
-    return _apply_bean_stitch_and_repeats(result, repeats, bean_stitch_repeats)
+    result = _apply_bean_stitch_and_repeats(result, repeats, bean_stitch_repeats)
+    return result
 
 
 def _apply_bean_stitch_and_repeats(stitches, repeats, bean_stitch_repeats):
     if any(bean_stitch_repeats):
-        stitches = bean_stitch(stitches, bean_stitch_repeats)
+        # add bean stitches, but ignore travel stitches
+        stitches = bean_stitch(stitches, bean_stitch_repeats, ['auto_fill_travel'])
 
     if repeats:
         for i in range(1, repeats):
