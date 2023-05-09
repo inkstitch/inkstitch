@@ -43,7 +43,7 @@ Ink/Stitch fungerer bedst med stiobjekter. Vi anbefaler at transformere objekter
 
 ## Workflow
 
-If this worked well, we recommend to also read through the next page (workflow). Where you can get a deeper insight into Ink/Stitch and you can learn how to perform essential functions for embroidery files, like e.g. ordering objects, etc.
+Hvis dette fungerede godt, anbefaler vi også at læse næste side (workflow) igennem. Hvor du kan få et dybere indblik i Ink/Stitch, og du kan lære, hvordan du udfører væsentlige funktioner i broderifiler, som f.eks. bestilling af objekter mv.
 
-If you run into trouble, contact us through [GitHub](https://github.com/inkstitch/inkstitch/issues/). We really like to hear about your problem, this way we can either improve the documentation or the program itself.
+Hvis du støder på problemer, så kontakt os igennem [GitHub](https://github.com/inkstitch/inkstitch/issues/). Vi vil meget gerne høre at høre om dit problem og så kan vi enten forbedre dokumentationen eller selve programmet.
 
