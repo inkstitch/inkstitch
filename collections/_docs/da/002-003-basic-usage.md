@@ -10,13 +10,13 @@ Try the following steps in order to test the extension and to learn the basic fu
 **Tip:** If you are new to Inkscape, have a look at their [Basic Tutorial](https://inkscape.org/en/doc/tutorials/basic/tutorial-basic.html) first.
 {: .notice--info }
 
-## Step 1 - Draw an Object
+## Step 1 - Tegn et objekt
 
 Create an object, e.g. a circle and make sure it has a fill.
 
 ![Circle with fill color](/assets/images/docs/en/basic-usage-circle-fill-color.png)
 
-## Step 2 - Convert to Path (optional)
+## Step 2 - Konverter til sti (optimalt)
 
 Ink/Stitch works best with path objects. We recommend to transform objects you want to stitch to paths:
 
@@ -30,7 +30,7 @@ Ink/Stitch works best with path objects. We recommend to transform objects you w
 * Play with the values. The simulator will update whenever you change the settings.
 * For now, close without saving.
 
-## Step 4 - Create the Embroidery File
+## Step 4 - Lav en broderi-fil
 
 * Run `File > Save as...`
 * Navigate to the folder where you would like to save the file
