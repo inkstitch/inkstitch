@@ -13,6 +13,8 @@ The preferences are found in `Extensions > Ink/Stitch > Preferences`.
 
 You can either set global values which will be applied to every new svg document. Also you can set document specific values.
 
+**All elements of the document are affected by theses parameters.**
+
 ## Output Settings
 
 
@@ -28,11 +30,11 @@ These are  the results of simulation for 1.5mm *running stitch length* running s
 
 ![simulation](/assets/images/docs/preference_msl_paths.png)
 
-Except for lock stitchs, every other stitch  is dropped,  as  1.5 is smaller than 2 and 1.5+1.5 is larger than 2. Should we set *minimum stitch length* to 3.1, then we would get  4.5mm running stitches.
+When *Minimum stitch length* is set to 2mm, except for lock stitchs, every other stitch  is dropped,  as  1.5 is smaller than 2 and 1.5+1.5 is larger than 2. The number of stitches is divided by two. Should we set *minimum stitch length* to 3.1, then we would get  4.5mm running stitches.
 
-*Minimum stitch length*  also affects the sides of fills (in a similar way as skip last stitch of row, - a good way) if set to value smaller than the *row spacing*. It also affects sharp corners of running stitches where actual stitch length may be much lower than *running  stitch  length* (tolerance is important there).
+*Minimum stitch length*  also affects the sides of fills (in a similar way as skip last stitch of row, - a good option for dense fills) if set to value smaller than the *row spacing*. It also affects sharp corners of running stitches where actual stitch length may be much lower than *running  stitch  length* (tolerance is important there).
 
-Minimum stitch length |  automatic fill with 0.25 row spacing| guided fill with 0.25 row spacing|running stitch -  very small design
+*Minimum stitch length* |  automatic fill with 0.25 row spacing| guided fill with 0.25 row spacing|running stitch length 1.5mm but very small design(10mm width)
 ---|---|---|---
 0|![square 0](/assets/images/docs/preference_fill_0.png)|![square 0](/assets/images/docs/preference_guided_0.png)|![running_0](/assets/images/docs/preference_running_stitch_0.png)
 0.5|![square 0.5](/assets/images/docs/preference_fill_half.png)|![square 0.5](/assets/images/docs/preference_guided_half.png)|![running_0](/assets/images/docs/preference_running_stitch_half.png)
