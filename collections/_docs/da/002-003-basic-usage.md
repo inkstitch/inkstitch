@@ -12,7 +12,7 @@ Try the following steps in order to test the extension and to learn the basic fu
 
 ## Step 1 - Tegn et objekt
 
-Create an object, e.g. a circle and make sure it has a fill.
+Opret et objekt, f.eks. en cirkel og sørg for, at det har fyld.
 
 ![Circle with fill color](/assets/images/docs/en/basic-usage-circle-fill-color.png)
 
