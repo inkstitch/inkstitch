@@ -33,9 +33,10 @@ La manière la plus simple est d'utiliser  l'arrangement automatique de  points 
 
 Si l'on prévoit une broderie en point triple ou n'importe quel point multiple la présence de ces chemins de dessous  n'est vraiment pas gênante, ils seront bien cachés par le point multiple.
 
+Le tutoriel [Pavage à l'emporte pièce](/collections/_tutorial/fr/cookie_cutter_tiling.md) explique cette technique.
+
 En revanche si l'on désire utiliser un point multiple irrégulier comme par exemple  une alternance de point simple et de point triple  pour évoquer un point manuel, alors ces chemins de dessous sont problèmatiques
 
-Le tutoriel [Pavage à l'emporte pièce](/collections/_tutorial/fr/cookie_cutter_tiling.md) explique cette technique.
 
 Le but de ce tutorial est de montrer comment  avec un certain type de  tuile   obtenir une broderie quasiment sans  sauts de fil et sans chemin de  dessous
 
