@@ -16,7 +16,8 @@
            gui-description="Set to zero to use twice the row spacing value"
            type="float"
            min="0" max="100"
-           indents="1">0.5</param>
+           precision="2"
+           indents="1">0</param>
     <script>
         {{ command_tag | safe }}
     </script>
