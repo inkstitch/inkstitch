@@ -14,8 +14,8 @@ class UpdateSvg(InkstitchExtension):
 
     def __init__(self, *args, **kwargs):
         InkstitchExtension.__init__(self, *args, **kwargs)
-        # TODO: When there are more legacy versions than only one, this can be transformed in a user input
-        # inkstitch_svg_version history: 1 -> v2.3.0
+        # TODO: When there are more legacy versions than only one, this can be transformed into a user input
+        # inkstitch_svg_version history: 1 -> v3.0.0, May 2023
         self.update_from = 0
 
     def effect(self):
