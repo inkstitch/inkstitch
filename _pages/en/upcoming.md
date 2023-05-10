@@ -1,31 +1,41 @@
 ---
-title: "Changes, Updates and Fixes for the Upcoming Release"
+title: "Changes, Updates and Fixes for Ink/Stitch v3.0.0"
 permalink: /upcoming/
 last_modified_at: 2023-02-14
 sidebar:
   nav: pages
 toc: true
 ---
-This page lists **changes made after the latest release**. Latest release: Ink/Stitch v2.2.0
-
 ## General
 
-We have good news: Ink/Stitch will be significantly faster due to stitch plan caching.
+Ink/Stitch will be significantly faster when rebuilding the stitch plan due to caching.
 
-## Fonts
+## New Fonts
 
 * [Abril En Fleur AGS](/fonts/abril/)
+
+  ![Abril En Fleur AGS](/assets/images/fonts/abril_en_fleur.jpg)
 * [Apex Simple AGS](/fonts/apex-lake/)
+
+  ![Apex Simple AGS](/assets/images/fonts/apex_simple_AGS.jpg)
 * [AGS Γαραμου Garamond](/fonts/AGS_greek_garamond/)
+
+  ![AGS Γαραμου Garamond](/assets/images/fonts/garamond.png)
 * [Emilio 20 simple](/fonts/emilio-20/)
+
+  ![Emilio 20 simple](/assets/images/fonts/emilio_simple.png)
 * [Emilio 20 bold](/fonts/emilio-20/)
+
+  ![Emilio 20 bold](/assets/images/fonts/emilio_20_bold.png)
 * [Emilio 20 Applique](/fonts/emilio-20/)
+
+  ![Emilio 20 Applique](/assets/images/fonts/emilio_20_applique.png)
 
 * The font `Grand Hotel` has been renamed to `Auberge`
 
 * Other fonts have been improved
 
-## Element/Stitch types
+## Elements / Stitch types
 
 ### New Stitch Types
 
@@ -33,9 +43,13 @@ We have good news: Ink/Stitch will be significantly faster due to stitch plan ca
 
 [Meander fill](/docs/stitches/meander-fill) has its origins in quilting techniques. A beautiful patterned effect results for machine embroidery. Large areas can be filled with relatively few stitches.
 
+![Meander Fill](/assets/images/tutorials/tutorial-preview-images/meandering_writing.jpg)
+
 #### Circular Fill
 
 [Circular fill](/docs/stitches/circular-fill) fills a shape with an embroidered spiral. The center of the spiral is positioned at the center of the shape. A target point can be used to define a custom spiral center.
+
+![Circular Fill](/assets/images/tutorials/tutorial-preview-images/circular_monogram.jpg)
 
 ### New params
 
@@ -49,11 +63,16 @@ We have good news: Ink/Stitch will be significantly faster due to stitch plan ca
   * Define custom tack/lock stitches
 
 ### Clones
-  * Fix: automatic fill angle calculation
   * Fix: positioning
+  * Fix: automatic fill angle calculation
+
+    ![Clone fill angle](/assets/images/docs/clone_fill_angle.png)
 
 ### Bean Stitch
+
   * Add support for [custom repeat patterns](/docs/stitches/bean-stitch/#params) (1 0: ☰-☰-☰-)
+
+    ![Bean pattern](/assets/images/docs/bean_pattern.jpg)
 
 ### Manual Stitch
   * Enable automated lock stitches through the force lock stitch option
@@ -61,11 +80,8 @@ We have good news: Ink/Stitch will be significantly faster due to stitch plan ca
 
 ### Fill stitch
   * Add support for [fractional-length stagger cycles in fills](/docs/stitches/fill-stitch/#params)
-  * Add param for [end row spacing](/docs/stitches/fill-stitch/#params)
+  * Unhide param for [end row spacing](/docs/stitches/fill-stitch/#params) (useful for color blending)
   * [Multiple underlay angle values](/docs/stitches/fill-stitch/#underlay) are now separated by space, not by a comma anymore
-  
-    **Please update your svgs if you used multiple fill underlays**
-    {: .notice--warning }
 
   * Fix: 'LineString' object has no attribute 'geoms'
   * Fix: 'Point' object has no attribute 'geoms'
@@ -74,10 +90,10 @@ We have good news: Ink/Stitch will be significantly faster due to stitch plan ca
   * Fix: incorrect stagger in guided fill
 
 ### Satin Column / E-Stitch
-  * [Options for randomization](/docs/stitches/satin-column/#satin-top-layer)
-      * Stitch length
-      * Stitch distance
-      * Length/count of split stitches
+  * [Options for randomization](/docs/stitches/satin-column/#satin-top-layer): stitch, length, stitch distance, length/count of split stitches
+
+    ![Bee](https://user-images.githubusercontent.com/88194877/195581323-e065c0ec-29fe-4551-bcce-4f20568b78bf.jpg)
+
   * [Pull compensation](/docs/stitches/satin-column/#satin-top-layer)
 
     Insert multiple values separated by a space.
@@ -100,39 +116,68 @@ We have good news: Ink/Stitch will be significantly faster due to stitch plan ca
   * Add pull compensation
 
 ### Ripple Stitch
-  * Add [params](/docs/stitches/ripple-stitch/#params):
-    * Stagger: Have a nicer stitch placement
-    * Minimum line distance: if set it will overwrite the line count value
 
-      More consistant density, even when the ripple stitch has been resized
+Add [params](/docs/stitches/ripple-stitch/#params):
+* Stagger: nicer stitch placement
+* Minimum line distance: consistent density on resize (will overwrite the line count value)
 
 ## Extensions
 
-### New extensions
-  * Extensions > Ink/Stitch > Tools: Fill > [Convert to gradient blocks](/docs/fill-tools/#convert-to-gradient-blocks)
+### New: Convert to Gradient Blocks
 
-    Splits a shape with a gradient fill color into solid color blocks which can be used to stitch out a gradient
-  * Extensions > Ink/Stitch > [Lettering along path](/docs/lettering/#lettering-along-path)
+Splits a shape with a gradient fill color into solid color blocks which can be used to stitch out a gradient
 
-    Places a lettering group along a path without deforming the glyphs
-  * Extensions > Ink/Stitch > Tools: Stroke > [Jump to Stroke](/docs/stroke-tools/#jump-to-stroke)
+![Gradient](/assets/images/docs/color_blocks.png)
 
-    Generates a running stitch line from end to start position of consecutive elements
-  * Extensions > Ink/Stitch > Tools: Stroke > [Fill to Stroke](/docs/stroke-tools/#fill-to-stroke)
+Extensions > Ink/Stitch > Tools: Fill > [Convert to gradient blocks](/docs/fill-tools/#convert-to-gradient-blocks)
 
-    Generates a center line for fill objects
+### New: Lettering Along Path
 
-  * Extensions > Ink/Stitch > Tools: Satin: [Stroke to Live Path Effect Satin](/docs/satin-tools/#stroke-to-live-path-effect-satin)
+Places a lettering group along a path without deforming the glyphs
 
-    Converts a Stroke type element into a live path effect satin
+![Lettering along path](/assets/images/docs/lettering_along_path.png)
 
-  * Extensions > Ink/Stitch > Tools: Satin > [Zigzag line to Satin](/docs/satin-tools/#zigzag-line-to-satin)
+Extensions > Ink/Stitch > [Lettering along path](/docs/lettering/#lettering-along-path)
 
-    Converts a square or zigzag line into a satin column
+### New: Jump to Stroke
 
-  * Extensions > ink/Stitch > Troubleshoot > [Update Ink/Sttitch SVG](/docs/troubleshoot/#update-inkstitch-svg)
+Generates a running stitch line from end to start position of consecutive elements
 
-    Ink/Stich automatically updates old design files. This extension will not be needed (only in rare cases on imported or copied design parts).
+![Jump to Stroke](/assets/images/docs/jump_to_stroke.png)
+
+*1: Original 2: Jump to Stroke 3: Manually adjusted stroke*
+
+Extensions > Ink/Stitch > Tools: Stroke > [Jump to Stroke](/docs/stroke-tools/#jump-to-stroke)
+
+### New: Fill to Stroke
+
+Generates a center line for fill objects
+
+![Fill to Stroke](/assets/images/docs/fill_to_stroke.png)
+
+Extensions > Ink/Stitch > Tools: Stroke > [Fill to Stroke](/docs/stroke-tools/#fill-to-stroke)
+
+### New: Stroke to Live Path Effect Satin
+
+Converts a Stroke type element into a live path effect satin
+
+![LPE Satins](/assets/images/docs/lpe_patterns.png)
+
+Extensions > Ink/Stitch > Tools: Satin: [Stroke to Live Path Effect Satin](/docs/satin-tools/#stroke-to-live-path-effect-satin)
+
+### New: Zigzag line to Satin
+
+Converts a square or zigzag line into a satin column
+
+![Zigzag to Satin](/assets/images/docs/zigzag-line-to-satin.png)
+
+Extensions > Ink/Stitch > Tools: Satin > [Zigzag line to Satin](/docs/satin-tools/#zigzag-line-to-satin)
+
+### New: Update Ink/Stitch SVG
+
+Ink/Stich automatically updates old design files. Do not use unless you know what you are doing.
+
+Extensions > ink/Stitch > Troubleshoot > [Update Ink/Stitch SVG](/docs/troubleshoot/#update-inkstitch-svg)
 
 ### Autorun
   * Fix: Keep settings for underpath running stitch tolerance
