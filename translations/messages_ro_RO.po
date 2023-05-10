@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-05-07 01:20+0000\n"
-"PO-Revision-Date: 2023-05-08 01:17\n"
+"POT-Creation-Date: 2023-05-09 01:17+0000\n"
+"PO-Revision-Date: 2023-05-10 01:16\n"
 "Last-Translator: \n"
 "Language-Team: Romanian\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-07 01:20+0000\n"
+"POT-Creation-Date: 2023-05-09 01:17+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1062,7 +1062,7 @@ msgstr ""
 msgid "%(command)s: %(description)s"
 msgstr ""
 
-#: lib/commands.py:295 lib/commands.py:427
+#: lib/commands.py:295 lib/commands.py:428
 msgid "Ink/Stitch Command"
 msgstr ""
 
@@ -1076,7 +1076,7 @@ msgstr ""
 msgid "command marker"
 msgstr ""
 
-#: lib/commands.py:417
+#: lib/commands.py:418
 msgid "Please select a layer to include layer commands."
 msgstr ""
 
@@ -1512,7 +1512,7 @@ msgstr ""
 msgid "Distance between rows of stitches."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:282
+#: lib/elements/fill_stitch.py:282 inx/inkstitch_gradient_blocks.inx:19
 msgid "End row spacing"
 msgstr ""
 
@@ -2377,7 +2377,7 @@ msgstr ""
 msgid "We couldn't find any fill colors on your text elements. Please read the instructions on our website."
 msgstr ""
 
-#: lib/extensions/gradient_blocks.py:25 lib/extensions/gradient_blocks.py:33
+#: lib/extensions/gradient_blocks.py:35 lib/extensions/gradient_blocks.py:43
 msgid "Please select at least one object with a gradient fill."
 msgstr ""
 
@@ -4314,6 +4314,10 @@ msgstr "Adauga comenzi"
 
 #: inx/inkstitch_gradient_blocks.inx:3
 msgid "Convert to gradient blocks"
+msgstr ""
+
+#: inx/inkstitch_gradient_blocks.inx:19
+msgid "Set to zero to use twice the row spacing value"
 msgstr ""
 
 #: inx/inkstitch_input_100.inx:3
