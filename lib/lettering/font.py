@@ -182,6 +182,9 @@ class Font(object):
             return self.name + '*'
 
     def is_custom_font(self):
+        custom_dir = get_custom_font_dir()
+        if not custom_dir:
+            return False
         return get_custom_font_dir() in self.path
 
     def render_text(self, text, destination_group, variant=None, back_and_forth=True, trim_option=0, use_trim_symbols=False):
