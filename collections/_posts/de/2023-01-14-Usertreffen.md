@@ -72,6 +72,18 @@ Ink/Stitch ist eine Inkscape Erweiterung. Das bietet einige Vorteile, weil wir a
 
 Vorab gibt es hier schon eine Übersicht über die neuen Funktionen: [https://inkstitch.org/upcoming/](https://inkstitch.org/upcoming)
 
+### Wie kann man das sticken? - Bildstrukturen in Sticharten denken
+
+Sticken lernen heißt auch, ein Auge dafür zu entwickeln, wie ein Bild in eine Stickerei umgewandelt werden kann. Anhand dreier Bildbeispiele wollen wir gemeinsam kreativ werden und herausfinden, welche Details wichtig sind und wie Sticharten möglichst effektvoll genutzt werden können.
+
+### Stickgarnkunde: mit verschiedenen Garndicken sticken
+
+--- Beschreibung kommt bald ---
+
+### Experimente mit E-Textilien und leitenden Fäden
+
+--- Beschreibung kommt bald ---
+
 ### Füllungen, Muster, Pfadeffekte
 
 Ink/Stitch wird in den kreativen Möglichkeiten immer versatiler. Allerdings sind manche dieser Möglichkeiten nicht immer direkt offensichtlich oder einfach zu verstehen. In diesem kleinen Workshop wollen wir verschiedene Möglichkeiten erkunden, Füllflächen und gemusterte Linien zu gestalten. Dabei betrachten wir sowohl Ink/Stitch Kniffe, als auch pfiffige Optionen, die uns Inkscape für die Erstellung von Mustern bereithält.
