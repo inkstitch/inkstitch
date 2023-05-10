@@ -36,11 +36,11 @@ Alkoholische Getränke und Speisen kosten extra.
 10:30 - 11:30 | Vorstellung der neuen Ink/Stitch-Version<br>Testen neuer Funktionen<br>Ideen und Wünsche für zukünftige Versionen
 11:30 - 12:00 | Wie kann man das sticken? - Bildstrukturen in Sticharten denken
 12:00 - 12:15 | Pause
-12:15 - 13:00 | Mit (dicken) 12er Garnen sticken
+12:15 - 13:00 | Stickgarnkunde: mit verschiedenen Garndicken sticken
 |
 13:00 - 14:00 | Mittagspause
 |
-14:00 - 14:45 | Experimente mit leitenden Fäden
+14:00 - 14:45 | Experimente mit E-Textilien und leitenden Fäden
 14:45 - 15:30 | Füllungen, Muster und Farbverläufe
 15:30 - 16:00 | Die Welt der Inkscape-Pfadeffekte
 16:00 - 16:15 | Pause
