@@ -28,6 +28,9 @@ class GradientBlocks(CommandsExtension):
 
     def __init__(self, *args, **kwargs):
         CommandsExtension.__init__(self, *args, **kwargs)
+        self.arg_parser.add_argument("--notebook", type=str, default=0.0)
+        self.arg_parser.add_argument("--options", type=str, default=0.0)
+        self.arg_parser.add_argument("--info", type=str, default=0.0)
         self.arg_parser.add_argument("-e", "--end-row-spacing", type=float, default=0.0, dest="end_row_spacing")
 
     def effect(self):
