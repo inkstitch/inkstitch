@@ -47,7 +47,7 @@ Wenn du Interesse an dem Treffen hast, würden wir uns über eine kurze Rückmel
 --|--
 10:00 - 10:30 | Ankommen, Kennenlernen<br>Ink/Stitch Vorkenntnisse, Wünsche für den Tag, etc.
 10:30 - 11:30 | Vorstellung der neuen Ink/Stitch-Version<br>Testen neuer Funktionen<br>Ideen und Wünsche für zukünftige Versionen
-11:30 - 12:00 | Wie kann man das sticken? - Bildstrukturen in Sticharten denken
+11:30 - 12:00 | Wie kann man das sticken? Bildstrukturen in Sticharten denken
 12:00 - 12:15 | Pause
 12:15 - 13:00 | Stickgarnkunde: mit verschiedenen Garndicken sticken
 |
@@ -68,11 +68,13 @@ Die neue Ink/Stitch Version wird mit großer Wahrscheinlichkeit kurz vor unserem
 
 Die neuen Sticharten, Mäander- und Spiralfüllung, können euch helfen große Flächen mit relativ wenigen Stichen stilvoll zu füllen und beleben besonders die künstlerischen Möglichkeiten unseres lieben Stickprogramms. Andere schon bekannte Sticharten haben neue Funktionen und Parameter bekommen, z.B. für die Erstellung franseliger Satinsäulen.
 
+![Random Satin](/assets/images/docs/random_satin.jpg)
+
 Ink/Stitch ist eine Inkscape Erweiterung. Das bietet einige Vorteile, weil wir aus einem breiten Spektrum an Vektorbearbeitungstools schöpfen können. Dafür machen wir aber auch Abstriche in der Anwenderfreundlichkeit. Das ist mir durchaus bewusst und deshalb suche ich immer wieder nach Möglichkeiten, die Erstellung von Stickdesigns zu vereinfachen. So habe ich mir für diese Version z.B. verschiedene Möglichkeiten für die Erstellung von Satinstichen ausgedacht, die ich euch (neben weiteren neuen Features) gerne vorstellen will.
 
 Vorab gibt es hier schon eine Übersicht über die neuen Funktionen: [https://inkstitch.org/upcoming/](https://inkstitch.org/upcoming)
 
-### Wie kann man das sticken? - Bildstrukturen in Sticharten denken
+### Wie kann man das sticken? Bildstrukturen in Sticharten denken
 
 Sticken lernen heißt auch, ein Auge dafür zu entwickeln, wie ein Bild in eine Stickerei umgewandelt werden kann. Anhand dreier Bildbeispiele wollen wir gemeinsam kreativ werden und herausfinden, welche Details wichtig sind und wie Sticharten möglichst effektvoll genutzt werden können.
 
