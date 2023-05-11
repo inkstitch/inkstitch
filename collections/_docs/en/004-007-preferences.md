@@ -48,7 +48,7 @@ It also affects **Satin stiches** and threfore most of the lettering fonts. You 
 *Minimum stitch length* |  Ink/Stitch Small | Glacial Tiny
 ---|---|---
 0 or 0.5 |![ink_stitch_O](/assets/images/docs/preference_ink_small_0.png)|![glacial_O](/assets/images/docs/preference_glacial_0.png)
-1|![ink_stitch_1](/assets/images/docs/preference_ink_small_0.png)|![glacial_1](/assets/images/docs/preference_glacial_1.png)
+1|![ink_stitch_1](/assets/images/docs/preference_ink_small_1.png)|![glacial_1](/assets/images/docs/preference_glacial_1.png)
 
 **Manual stitches** are also affected by minimum stitch length preference. You can take advantage of this to reduce manual  stitches without getting very short stitches. Some deformation may happen, but usually the result is quite good.
 
