@@ -9,7 +9,7 @@ The current version (v 2.2.0) does not have global settings.
 
 {% include upcoming_release.html %}
 
-Die Einstellungsoptionen werden finden sich unter `Erweiterungen > Ink/Stitch > Einstellungen`.
+Die Einstellungsoptionen finden sich unter `Erweiterungen > Ink/Stitch > Einstellungen`.
 
 Es ist sowohl möglich globale Werte zu setzen, die auf jedes neue Dokument automatisch angewendet werden, als auch die Einstellungen spezifisch für das gerade geöffnete Dokument zu ändern.
 
