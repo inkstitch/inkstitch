@@ -197,7 +197,8 @@ However, you may disable it and check that the embroidery seems fine.
 
 For each Tiling:
   * Select the path in the Tiling group and the shape
-  *  Run `Extensions > Ink/Stitch > Tools : Stroke> Autoroute Running Stitch`
+  *  Run `Extensions > Ink/Stitch > Tools : Stroke> Autoroute Running Stitch` only checking add node at intersections
+
 
 
 One Cloth at a time :
