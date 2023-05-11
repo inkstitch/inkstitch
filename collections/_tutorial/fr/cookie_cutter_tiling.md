@@ -197,7 +197,7 @@ Si vous décochez, vous pourrez plus facilement vérifier que tout à l'air en o
 
 Pour chaque pavage: 
   * Sélectionnez le chemin du groupe de pavage et shape
-  * Lancez  `Extensions > Ink/Stitch > Outils : Trait > Agencement automatique de point droit`
+  * Lancez  `Extensions > Ink/Stitch > Outils : Trait > Agencement automatique de point droit` en sélectionnant uniquement l'option "ajouter des noeuds aux intersections"
 
 
 Un vêtement à la fois:
