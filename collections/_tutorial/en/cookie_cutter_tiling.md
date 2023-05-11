@@ -112,9 +112,9 @@ This is our goal
 This is easy to achieve: just follow the following steps, respecting the ordering of the steps.
 
 For each future pattern filled shape we have a group containing :
- * shape: a close path that outlines the T-shirt
+ * shape: a close path that outlines the piece of cloth.
  * Details: a group containing stuff to be embroidered over the filled shape. We want to embroider that after patterned fill is stitched.
- * Tiling: the tiling group that contains all the paths of the tiling
+ * Tiling: the tiling group that contains all the paths of the tiling. The LPE Tiling is carried by this group
  
  ###  Tiling LPE overview
  Let's have a look at the Tiling LPE  applied on the Tiling group of the T Shirt
@@ -140,7 +140,7 @@ Once you are happy with your modification flatten the LPE using the menu at top 
 
 After that, path8 is no more a triangle, but a composite path containing plenty of copies of the triangle.
 
-Once the LPE is flatten, you can't use the LPE dialog anymore.
+Once the LPE is flattened, you can't use the LPE dialog anymore.
 
 In node edition mode, this is what you get when selectiong  all path8 nodes :
 
@@ -148,9 +148,11 @@ In node edition mode, this is what you get when selectiong  all path8 nodes :
 
 Breaking  apart this path would create  plenty of triangles. Don't.
 
+In the general case you may need an additional step before flattening : 
+
 ### Combine  paths in Tiling groups  and flatten  effect 
 For each Tiling:
-* If there are more than a single path in a Tiling group, combine all paths together.
+* If there is more than a single path in a Tiling group, combine all paths together.
 * Flatten the Effet
 
 If you look at the canvas, nothing is different.
@@ -171,14 +173,14 @@ For each Tiling:
 * Choose if you also want the Details to be same color (i did, to have less color changes)
 
 
-### Chose Embroidery Parameters
+### Add Embroidery Parameters
 * Select shape ,Tiling and  Details 
 * Run `Extensions > Ink/Stitch > Params `
 
 For nice triple stitches: 
   *  Choose  Runninng Stitch/ Bean Stitch as Method
   *  Set Running Stitch Length to 2 mm
-  *  Set Bean Stitch Number of Eepeats to 1
+  *  Set Bean Stitch Number of Repeats to 1
 
 One Cloth at a time :
   *  Select the whole group
@@ -194,8 +196,7 @@ However, you may disable it and check that the embroidery seems fine.
 ### Autoroute
 
 For each Tiling:
-  * Select the path in the Tiling group
-  * Select the shape
+  * Select the path in the Tiling group and the shape
   *  Run `Extensions > Ink/Stitch > Tools : Stroke> Autoroute Running Stitch`
 
 
