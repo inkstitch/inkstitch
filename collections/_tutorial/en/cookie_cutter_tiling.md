@@ -158,19 +158,18 @@ If you look at the canvas, nothing is different.
 ### Duplicate shape, and use it to Clip Tiling
 For each Tiling:
 * Duplicate shape
-* Select the single path in the Tiling group and a  copy  of shape (this copy must be above the Tiling  group in the Layers and Objects pannel
+* Select the single path in the Tiling group and a  copy  of shape (this shape  must be above the Tiling  group in the Layers and Objects pannel)
 * `Object  > Clip > Set Clip` 
 
 You should get :
-![clipepd](/assets/images/tutorials/cookie_cutter_tiling/after_clip.jpg)
+![clipepd](/assets/images/tutorials/cookie_cutter_tiling/after_clip.png)
 
 ### Prepare for Embroidery Parameters
 For each Tiling:
 * Set the remaining shape path to stroke only. 
-* Make sure that Tiling path and shape color is identical
+* Make sure that Tiling path color and shape color are identical
 * Choose if you also want the Details to be same color (i did, to have less color changes)
 
-![strole_shape](/assets/images/tutorials/cookie_cutter_tiling/stroke_shape.jpg)
 
 ### Chose Embroidery Parameters
 * Select shape ,Tiling and  Details 
@@ -187,7 +186,7 @@ One Cloth at a time :
 
 
 You should get :
-![Before_Autoroute](/assets/images/tutorials/cookie_cutter_tiling/before_autoroute.jpg)
+![Before_Autoroute](/assets/images/tutorials/cookie_cutter_tiling/before_autorouting.jpg)
 
 If render jumps is checked, you see that some path  ordering is required, this is next step.
 However, you may disable it and check that the embroidery seems fine.
@@ -198,6 +197,7 @@ For each Tiling:
   * Select the path in the Tiling group
   * Select the shape
   *  Run `Extensions > Ink/Stitch > Tools : Stroke> Autoroute Running Stitch`
+
 
 One Cloth at a time :
   *  Select the whole group
@@ -227,84 +227,7 @@ the end of the first  path to the begining of the second. No need to guess where
 
 
 
-<!--
 
-### Swimming Suit
-Same  process, but because the tile contains 3 open paths, intersecting is a little surprising.
-
-Follow the same first steps as for the T Shirt and let's try to intersect tiling and shape.
-
-
-#### First trial
-Follow the same road as for the T shirt, that is flatten the LPE and then intersect the paths of the tiling group with the swimming suit shape.
-
-![intersection_1](/assets/images/tutorials/cookie_cutter_tiling/ss_intersection_1.jpg )
-
-The result is quite logical, after flattening the effect, the group contains 3 paths, so we are in fact intersecting 4 paths.
-
-Not ugly but not so good for embroidery, that would yield too many jumps.
-
-
-#### Second trial
-In oder to intersect only two paths,let's combine the three paths of the tiling  before flattening. Then intersect the single resulting path with
-the swiming suit shape.
-
-![intersection_2](/assets/images/tutorials/cookie_cutter_tiling/ss_intersection_2.jpg)
-
-Still not exactly what was planned, but i liked the result, so i kept it for the final embroidery.
-
-Why is the result not a subpart of the tiling ? this is because  if we do have a single  path in the  tiling,  it is not  a closed  paths combination.
-Intersection, considers what's *inside* both intersecting shape, and is intended to intersect fills rather than strokes.
-
-In that   case,  the way to go is to use 'Path >  Cut  Path', but because it is more tedious to  use, before that, let's  try another easy path operation
-`Path  >  Division`
-
-
-Intersection is a symmetric  operation, Division and Cut Path are not, and the order in the object  stack of the layer  and object pannel matters.
-* Have a copy of the swimming suit shape bellow the tiling group in the Layers and Object pannel
-* Select the tiling path and the bellow  copy of the swimming suit
-* `Path > Division`
-
-
-![idivision](/assets/images/tutorials/cookie_cutter_tiling/division.jpg)
-
-Not bad, but still some jumps to expect...
-
-Both intersection and  division  are easy to use as they get rid of everything outside the shape to be  filled.
-
-But if the tiling  is not a combination of closed path, the result is  probably not  what you wish.
-
-
-
-### 'Path Cut' to the rescue
-
-Again you need to combine and flatten the effect to get a single path.
-
-This time have a copy of the swimming suit shape above the tiling path.
-
-* Select the tiling path and the copy of the swimming suit above it
-* `Path > Cut Path`
-
-
-Imagine that you are using a swiming suit shaped cookie cutter, and cut a single cookie from the tiling path. The path get broken in plenty of pieces
-but nothing is gone.
-
-This is the real disadvantage of Cut Path, you need to tidy and get rid of all that is outside the shape and it is somewhat tedious.
-
-![cut_path](/assets/images/tutorials/cookie_cutter_tiling/cut_path.jpg)
-
-My favorite way to tidy up is
-* Lock whatever you are sure you want to keep (in that case the leftover swimsuit shape and the decolleté detail)
-* Holding down ALT and MAJ keys, with your mouse, draw a path that intersects as many superfluous paths as you safely may (meaning don't touch what you want to keep). 
-You will see a red path on the screen, and this will select all the intersected paths. Delete them.
-* Repeat  or use any other selecting process to finish the process.
-
-
-
-![cut_path](/assets/images/tutorials/cookie_cutter_tiling/ss.jpg)
-
-After that, same steps as for the T Shirt.
--->
 
 
 
