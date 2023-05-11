@@ -2,7 +2,7 @@
 title: "Werkzeuge: Linie"
 permalink: /de/docs/stroke-tools/
 excerpt: ""
-last_modified_at: 2023-03-25
+last_modified_at: 2023-05-11
 toc: true
 ---
 ## Automatisch geführter Geradstich

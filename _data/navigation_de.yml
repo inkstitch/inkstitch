@@ -86,7 +86,7 @@ docs:
         url: /de/docs/stitches/contour-fill/
       - title: "Kurvenfüllung"
         url: /de/docs/stitches/guided-fill/
-      - title: "Meanderfüllung"
+      - title: "Mäanderfüllung"
         url: /de/docs/stitches/meander-fill/
       - title: "Spiralfüllung"
         url: /de/docs/stitches/circular-fill/
