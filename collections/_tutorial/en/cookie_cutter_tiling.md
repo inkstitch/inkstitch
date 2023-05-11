@@ -136,7 +136,7 @@ Click on another symbol and you will get another tiling. Try and  chose your fav
 
 ![mirroring](/assets/images/tutorials/cookie_cutter_tiling/mirroring.jpg)
 
-Once you are happy with your modification flatten the LPE using the menu at top right of the LPE dialog.
+<!--Once you are happy with your modification flatten the LPE using the menu at top right of the LPE dialog.
 
 After that, path8 is no more a triangle, but a composite path containing plenty of copies of the triangle.
 
@@ -149,11 +149,12 @@ In node edition mode, this is what you get when selectiong  all path8 nodes :
 Breaking  apart this path would create  plenty of triangles. Don't.
 
 In the general case you may need an additional step before flattening : 
+-->
 
-### Combine  paths in Tiling groups  and flatten  effect 
+### Combine  paths in Tiling groups 
 For each Tiling:
 * If there is more than a single path in a Tiling group, combine all paths together.
-* Flatten the Effet
+
 
 If you look at the canvas, nothing is different.
 
