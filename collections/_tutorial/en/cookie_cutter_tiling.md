@@ -3,7 +3,7 @@ permalink: /tutorials/cookie_cutter_tiling/
 title: "Cookie Cutter Tiling"
 language: en
 last_modified_at: 2023-05-07
-excerpt: "Tiling"
+excerpt: "Using Tiling LPE ,clipping mask and autorouting to achieve Pattern Fill"
 image: "/assets/images/tutorials/tutorial-preview-images/cloth_line.jpg"
 tutorial-type:
 stitch-type:
@@ -24,7 +24,7 @@ toc:
 {% include upcoming_release.html %}
 
 ![Brodé](/assets/images/tutorials/tutorial-preview-images/cloth_line.jpg)
-This tutorial explains how to fill a shape with pattern repetitions using the Tiling Live Path Effect.
+This tutorial explains how to fill a shape with pattern repetitions using the Tiling Live Path Effect and Clipping
 
 ## Tiling
 Tiling Live Path Effect repeats a tile (a path or a group of paths) in rows and colomns, with many options to modify spacing, create offset, rotate, and add all kind of mirroring effects.
@@ -88,6 +88,8 @@ It also contains what you should obtain  at all  steps of the process, up to the
 ![cloth_line](/assets/images/tutorials/cookie_cutter_tiling/cloth_line.svg) 
 
 [download cloth_line.svg](/assets/images/tutorials/cookie_cutter_tiling/cloth_line.svg){: download="cloth_line.svg" }
+
+
 
 
 ## Covering each shape with a tiling
