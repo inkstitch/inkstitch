@@ -2,7 +2,7 @@
 title: Füllstich Werkzeuge
 permalink: /de/docs/fill-tools/
 excerpt: ""
-last_modified_at: 2023-02-20
+last_modified_at: 2023-05-11
 toc: true
 ---
 ## Füllstich-Objekte zerlegen
@@ -25,21 +25,22 @@ Diese Erweiterung soll dir helfen, kaputte Objekte zu repaireren. Nutze diese Fu
 ![Break apart fill objects](/assets/images/docs/en/break_apart.jpg)
 [Download SVG](/assets/images/docs/en/break_apart.svg)
 
-## Convert to gradient blocks
+## Farbverlauf in Blöcke aufteilen
 
 {% include upcoming_release.html %}
 
-Convert to gradient blocks will split a fill with a linear gradient into multiple blocks of solid color and adapted row spacing.
+Diese Erweiterung teilt ein Füllobjekt mit einem linearen Farbverlauf in mehrere einfarbige Blöcke auf und setzt den zuvor bestimmten Wert für `Reihenabstand Ende`.
 
-### Usage
+### Anwendung
 
-1. Apply a linear fill color gradient to an element.
+1. Setze einen linearen Farbverlauf
 
    ![linear gradient](/assets/images/docs/en/linear-gradient.png)
-2. Run `Extensions > Ink/Stitch > Tools: Fill > Convert to gradient blocks
+2. `Erweiterungen > Ink/Stitch > Werkzeuge: Füllung > Farbverlauf in Blöcke aufteilen...`
 
    ![color blocks](/assets/images/docs/color_blocks.png)
+3. Setze einen Wert für den Reihenabstand am Ende der Füllung. Bei einem Wert von 0.00 wird der doppelte Wert des ursprünglichen Reihenabstandes angenommen.
 
 ## Tutorials zu Füllwerkzeugen
 
-{% include tutorials/tutorial_list key="tool" value="Füllung" %}
+{% include tutorials/tutorial_list key="werkzeug" value="Füllung" %}
