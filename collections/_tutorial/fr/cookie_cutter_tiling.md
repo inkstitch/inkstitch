@@ -94,7 +94,7 @@ L'étape suivante consiste à recouvrir chaque surface à remplir par un pavage.
 
 Vous pouvez modifier le nombre de lignes et de colonnes du pavage, modifier les dimensions, tourner le pavage, l'adapter au mieux pour couvrir la surface à remplir sans avoir trop de lignes ou de colonnes inutiles.
 
-Ne faites pas comme moi, j'ai utilisé un pavage trop petit pour le bas de la robe, il manque un morceau du remplissage.
+Ne faites pas comme moi, j'ai utilisé un pavage trop petit pour le bas de la robe, il manque un morceau du remplissage, je m'en suis aperçue qu'après avoir brodé...
 
 ## Remplissage en motif
 Voici notre but final
@@ -134,7 +134,9 @@ Cliquez sur un autre symbole, et vous aurez un tout autre pavage, à vous de cho
 ![mirroring](/assets/images/tutorials/cookie_cutter_tiling/mirroring.jpg)
 
 
-Faites toutes les modifications souhaitées, puis finalement aplatissez (flatten) l'effet de chemin. 
+Faites toutes les modifications souhaitées.
+
+<!-- puis finalement aplatissez (flatten) l'effet de chemin. 
 Maintenant, path8 est un chemin composite constitué des multiples répétitions du triangle initial. 
 Impossible après cela de modifier le nombre de lignes et de colonnes, ni les symétries.
 
@@ -142,14 +144,13 @@ En mode édition de noeuds, voici ce que vous devez voir si vous sélectionnez l
 
 ![flattened](/assets/images/tutorials/cookie_cutter_tiling/flattened.jpg)
 
-Si vous sépariez ce chemin vous obtiendriez de nombreux triangles. Mais ne séparez pas.
+Si vous sépariez ce chemin vous obtiendriez de nombreux triangles. Mais ne séparez pas. -->
 
-Ici il n'y avait qu'un chemin dans le pavage, mais en général il faut 
 
-### Combiner les chemins des pavages puis aplatir l'effet ( Calque: Combine  paths in Tiling groups  and flatten  effect )
+
+### Combiner les chemins des pavages ( Calque: Combine  paths in Tiling groups  )
 Pour chaque pavage :
 *  S'il y a plus d'un chemin dans le groupe de pavage, combinez tous les chemins (les sélectionner puis `Chemin > Combiner`)
-*  Sélectionner le groupe de pavage et aplatir l'effet de chemin
 
 Si vous regardez le canevas, il semble que rien n'a changé.
 
