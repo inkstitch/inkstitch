@@ -92,7 +92,7 @@ Ink/Stitch will be significantly faster when rebuilding the stitch plan due to c
 ### Satin Column / E-Stitch
   * [Options for randomization](/docs/stitches/satin-column/#satin-top-layer): stitch, length, stitch distance, length/count of split stitches
 
-    ![Bee](![Random Satin](/assets/images/docs/random_satin.jpg))
+    ![Bee]([Random Satin](/assets/images/docs/random_satin.jpg))
 
   * [Pull compensation](/docs/stitches/satin-column/#satin-top-layer)
 
