@@ -9,9 +9,9 @@ The current version (v 2.2.0) does not have global settings.
 
 {% include upcoming_release.html %}
 
-Die Einstellungsoptionen finden sich unter `Erweiterungen > Ink/Stitch > Einstellungen`.
+Die Einstellungen können über `Erweiterungen > Ink/Stitch > Einstellungen` abgerufen werden.
 
-Es ist sowohl möglich globale Werte zu setzen, die auf jedes neue Dokument automatisch angewendet werden, als auch die Einstellungen spezifisch für das gerade geöffnete Dokument zu ändern.
+Globale Einstellungen werden direkt auf jedes neue SVG-Dokument angewendet, während die Einstellungen im ersten Reiter dokumentspezifisch sind.
 
 Einstellungen für das geöffnete Dokument können mit einem Klick auch auf die globalen Werte übertragen werden.
 
@@ -57,8 +57,8 @@ Stiche mit **manueller Stichpositionierung** werden ebenfalls entsprechend diese
 ## Cache Größe (MB)
 
 * Dieser Wert kann nur global gesetzt werden.
-* Er definiert, wie viel Platz auf der Festplatte zum Speichern der Stichpläne zur Verfügung stehen soll.
+* Er definiert, wie viel Platz auf der Festplatte zum Speichern der Stichpläne zur Verfügung steht.
   Die Standardgröße für den Cache-Speicher ist 100 MB.
 * Je größer der Wert ist, desto mehr Stichpläne können im Cache gespeichert werden.
-  Ein im Cache gespeicherter Stichplan muss nicht erneut gerendert werden und beschleunigt den Vorgang erheblich.
+  Ein im Cache gespeicherter Stichplan muss nicht erneut gerendert werden. Dies beschleunigt den Vorgang erheblich.
 * Der Cache kann über einen Knopf im Reiter `globale Einstellungen` geleert werden.
