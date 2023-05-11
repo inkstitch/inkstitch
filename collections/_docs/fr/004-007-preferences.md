@@ -54,9 +54,10 @@ inférieure à celle de l'*espacement entre les rangées*. *Longueur minimum de 
 1|![square 1](/assets/images/docs/preference_fill_1.png)|![square 1](/assets/images/docs/preference_guided_1.png)|![running_0](/assets/images/docs/preference_running_stitch_1.png)
 
 Elle modifie aussi les  **colonnes satin** et en conséquence certaines fontes du lettrage. Vous ne voulez certainement pas de ça sur les **petites fontes** telle que *ink/stitch small* ou * glacial tiny *:
+
 *Minimum stitch length* |  *Ink/Stitch Small* | *Glacial Tiny*
 ---|---|---
-0 or 0.5 |![ink_stitch_O](/assets/images/docs/preference_ink_small_0.png)|![glacial_O](/assets/images/docs/preference_glacial_0.png)
+0 or 0.5|![ink_stitch_O](/assets/images/docs/preference_ink_small_0.png)|![glacial_O](/assets/images/docs/preference_glacial_0.png)
 1|![ink_stitch_1](/assets/images/docs/preference_ink_small_1.png)|![glacial_1](/assets/images/docs/preference_glacial_1.png)
 
 
