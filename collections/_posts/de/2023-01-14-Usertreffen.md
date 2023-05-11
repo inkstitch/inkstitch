@@ -90,6 +90,6 @@ Sticken lernen heißt auch, ein Auge dafür zu entwickeln, wie ein Bild in eine 
 
 Ink/Stitch wird in den kreativen Möglichkeiten immer versatiler. Allerdings sind manche dieser Möglichkeiten nicht immer direkt offensichtlich oder einfach zu verstehen. In diesem kleinen Workshop wollen wir verschiedene Möglichkeiten erkunden, Füllflächen und gemusterte Linien zu gestalten. Dabei betrachten wir sowohl Ink/Stitch Kniffe, als auch pfiffige Optionen, die uns Inkscape für die Erstellung von Mustern bereithält.
 
-![Pattern](/assets/images/tutorials/tutorial-preview-images/cloth_line.jpg)
+![Pattern](/assets/images/tutorials/tutorial-preview-images/cookie_cutter_tiling.jpg)
 
 
