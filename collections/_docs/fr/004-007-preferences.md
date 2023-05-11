@@ -70,6 +70,14 @@ Les  **points manuels** sont eux aussi affectés  par *Longueur minimum de point
 {: .notice--warning }
 
 ### Seulement en global: Taille du cache (mb)
-Elle définit la taille maximum occupée sur votre disque dur par les plans de broderie mis en cache. Plus cette valeur est grande, plus il sera possible de possible de stocker des plans de broderie. Un plan de broderie mis en cache sera affiché beaucoup plus rapidement. La valeur par défaut est 100. 
+Elle définit la taille maximum occupée sur votre disque dur par les plans de broderie mis en cache. 
+
+Plus cette valeur est grande, plus il sera possible de possible de stocker des plans de broderie. 
+
+Un plan de broderie mis en cache sera affiché beaucoup plus rapidement. 
+
+La valeur par défaut est 100. 
+
+Le cache peut être vidé depuis les préférences globales;
 
 
