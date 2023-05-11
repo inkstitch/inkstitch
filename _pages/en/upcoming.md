@@ -179,6 +179,12 @@ Ink/Stich automatically updates old design files. Do not use unless you know wha
 
 Extensions > ink/Stitch > Troubleshoot > [Update Ink/Stitch SVG](/docs/troubleshoot/#update-inkstitch-svg)
 
+### New: Select embroidery elements
+
+Select elements by stitch type (not for macOS)
+
+Extensions > Ink/Stitch > Edit > Select embroidery elements...
+
 ### Autorun
   * Fix: Keep settings for underpath running stitch tolerance
 
