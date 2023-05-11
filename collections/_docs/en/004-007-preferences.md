@@ -57,7 +57,15 @@ It also affects **Satin stiches** and threfore lettering fonts. You do not want 
 {: .notice--warning }
 
 ### Global only: Cache size (mb)
-Defines how much space on your harddrive can be occupied with cached stitch plans. The higher the value the more stitch plans can be cached. A cached stitch plan doesn't need to be rendered again which will speed up rendering time significantly. Defaults to 100.
+Defines how much space on your harddrive can be occupied with cached stitch plans. 
+
+The higher the value the more stitch plans can be cached. 
+
+A cached stitch plan doesn't need to be rendered again which will speed up rendering time significantly.
+
+Defaults to 100.
+
+You may clear cache from global preferences.
 
 
 
