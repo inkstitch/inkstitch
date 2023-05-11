@@ -44,7 +44,7 @@ When *Minimum stitch length* is set to 2mm, except for lock stitchs, every other
 0.5|![square 0.5](/assets/images/docs/preference_fill_half.png)|![square 0.5](/assets/images/docs/preference_guided_half.png)|![running_0](/assets/images/docs/preference_running_stitch_half.png)
 1|![square 1](/assets/images/docs/preference_fill_1.png)|![square 1](/assets/images/docs/preference_guided_1.png)|![running_0](/assets/images/docs/preference_running_stitch_1.png)
 
-It also affects **Satin stiches** and threfore most of the lettering fonts. You do not want that on **small fonts** like glacial tiny :
+It also affects **Satin stiches** and threfor lettering fonts. You do not want that on **small fonts** like glacial tiny :
 *Minimum stitch length* |  Ink/Stitch Small | Glacial Tiny
 ---|---|---
 0 or 0.5 |![ink_stitch_O](/assets/images/docs/preference_ink_small_0.png)|![glacial_O](/assets/images/docs/preference_glacial_0.png)
