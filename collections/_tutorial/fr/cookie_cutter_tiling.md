@@ -2,9 +2,9 @@
 permalink: /fr/tutorials/cookie_cutter_tiling/
 title: "Pavage à l'emporte pièce"
 language: fr
-last_modified_at: 2023-05-08
-excerpt: "Pavage"
-image: "/assets/images/tutorials/tutorial-preview-images/cloth_line.jpg"
+last_modified_at: 2023-05-12
+excerpt: "Utiliser l'effet de chemin Pavage, la découpe et l'agencement automatique de point droit pour créer un remplissage en motif"
+image: "/assets/images/tutorials/tutorial-preview-images/cookie_cutter_tiling.jpg"
 tutorial-type:
 stitch-type:
   - "Running Stitch"
@@ -23,10 +23,9 @@ toc:
 
 {% include upcoming_release.html %}
 
-![Brodé](/assets/images/tutorials/tutorial-preview-images/cloth_line.jpg)
+![Brodé](/assets/images/tutorials/tutorial-preview-images/cookie_cutter_tiling.jpg)
 
-Le but de ce tutorial est de montrer comment remplir une forme en découpant  la répétition régulière de motifs obtenue  en utilisant l'effet de chemin pavage.
-
+Le but de ce tutorial est de montrer comment Utiliser l'effet de chemin Pavage, la découpe et l'agencement automatique de point droit pour créer un remplissage en motif.
 
 
 ## Pavages
@@ -40,7 +39,7 @@ Voici quelques exemples:
 
  ![tiles](/assets/images/tutorials/cookie_cutter_tiling/all_png.png) 
  
-Vous reconnaitrez (ou pas) parmi ces exemple les 4 pavages qui ont été utilisés pour créer la broderie de la corde la linge.
+Vous reconnaitrez parmi ces exemples les 4 pavages qui ont été utilisés pour créer la broderie de la corde la linge.
 * le remplissage du T shirt à gauche provient du pavage du milieu de la première rangée
 * le haut et le bas de la robe proviennent des deux derniers pavage de la dernière rangée
 * la ceinture de la robe, exception de cet exemple, est un remplissage circulaire avec alternance de point simples et de points triples
@@ -60,21 +59,26 @@ Voici comment la broderie de la corde à linge a été composée.
 
 Les svg des trois vêtements ont été créés par Bernd Lakenbrink du [Noun Project](https://thenounproject.com/browse/collection-icon/clothes-icon-set-158916/?p=1).
 
-Le svg du  [T Shirt](https://thenounproject.com/browse/icons/term/womans-shirt/) doit être modifié. En effet, ce type de svg parfait pour les écrans ou les machines de découpe ne convient pas tel quel pour la broderie : ce qui apparait à l'oeil comme des traits est en fait constitué de remplissages. 
+Il nous faut les adapter à notre fin. Voyons pourquoi et comment sur le [T Shirt](https://thenounproject.com/browse/icons/term/womans-shirt/). 
 
-
+Ce type de svg parfait pour les écrans ou les machines de découpe ne convient pas tel quel pour la broderie : ce qui apparait à l'oeil comme des traits est en fait constitué de remplissages. 
 
 * Téléchargez le fichier  du T Shirt.
 * Sélectionnez les chemins constituant le vêtement.
 * `Extensions > Ink/Stitch > Outils: Remplissage > Convertir remplissage en trait`.
-* L'extension a créé un groupe avec beaucoup de chemins, dont certains sont inutiles. Il est utile de les simplifier avant de reconstitué la forme que l'on souhaite remplir ainsi que les détails supplémentaires à broder.
+* L'extension a créé un groupe "Centerline" avec beaucoup de chemins, dont certains sont inutiles. Il est utile de les simplifier. Reconstituer la forme extérieure du vêtement en utilisant l'outil noeud pour joindre des noeuds ou briser des chemins Garder les détails supplémentaires à broder
 
 Les quatre images ci dessous montrent successivement l'apparence du svg à l'écran, ce à quoi il ressemble  en supprimant le remplissage et en  ajoutant  un contour, ce que l'extension de conversion permet d'obtenir, et ce que l'on utilisera finalement : une forme fermée (orange) et deux détails en rouge.
 
 ![T-Shirt](/assets/images/tutorials/cookie_cutter_tiling/Tshirt.png) 
 
-Les vêtements préparés, se trouvent dans le calque "Clothes" du  fichier cloth_path.svg qui contient aussi tous les pavages nécessaires dans le calque "Tilings".
-Vous  y trouverez aussi le résultat de chaque étape jusqu'à la broderie finale.
+Le fichier cloth_line.svg file contient les vêtements déjà préparés, dans le calque   "Clothes Preparation" .
+
+Son calque Tilings, contient à nouveau tous les pavages vus au dessus.
+
+Il contient aussi le résultat de toutes les étapes jusqu'à la broderie finale.
+
+Chaque étape de ce tutorial correspond à un calque du fichier, de bas en haut. Pour travailler sur un calque, n'oubliez pas de le démasquer et de le dévérouiller. Laissez les autres calques masqués.
 
 ![cloth_line](/assets/images/tutorials/cookie_cutter_tiling/cloth_line.svg) 
 
@@ -84,27 +88,30 @@ Vous  y trouverez aussi le résultat de chaque étape jusqu'à la broderie final
 
 
 ## Recouvrir chaque surface à remplir par un pavage
-L'étape suivante consiste à recouvrir chaque surface à remplir par un pavage. Voici le choix qui a été fait (et que vous pouvez retrouver dans le calque "Clothline preparing pattern fill")
+L'étape suivante consiste à recouvrir chaque surface à remplir par un pavage. Voici le choix qui a été fait (et que vous pouvez retrouver dans le calque "Covering each shape with a tiling")
 
 ![cloth_line](/assets/images/tutorials/cookie_cutter_tiling/tiled_cloths.png) 
 
 Vous pouvez modifier le nombre de lignes et de colonnes du pavage, modifier les dimensions, tourner le pavage, l'adapter au mieux pour couvrir la surface à remplir sans avoir trop de lignes ou de colonnes inutiles.
 
-Vous ne  devriez  rencontrer aucune difficulté à cette étape.
+Ne faites pas comme moi, j'ai utilisé un pavage trop petit pour le bas de la robe, il manque un morceau du remplissage.
 
-## Passer au  remplissage de chaque vêtement
-Le but est d'obtenir ceci
-![final](/assets/images/tutorials/cookie_cutter_tiling/clothline_final.png) 
+## Remplissage en motif
+Voici notre but final
+![final](/assets/images/tutorials/cookie_cutter_tiling/final_embroidery.png) 
 
-Selon le pavage choisi, le résultat est plus ou moins facile à atteindre
+Pour l'atteindre, suivez les étapes suivantes, en respectant scrupuleusement l'ordre.
 
-### Exemple d'un résultat facile : le T -Shirt 
+Pour chaque futur remplissage en motif, vous avez un groupe au nom du vêtement ou de la partie du vêtement concerné qui contient:
 
-On part avec :
-* shape : forme fermée du contour extérieur du T-Shirt.
-* details : les petits trucs en plus qu'on traitera à la fin indépendamment du reste.
-* un groupe "Moulins" constitué de :
-  *  un unique chemin (path8 : un petit triangle) sur lequel est appliqué l'effet de chemin pavage  .
+
+ * shape: forme fermée du contour extérieur 
+ * Details: un groupe qui contient les petits trucs en plus qu'on traitera à la fin indépendamment du reste.
+ * Tiling:  le groupe qui porte l'effet de chemin Pavage et dans le quel se trouve tous les chemins du pavage.
+ 
+ ###  Effet de Chemin Pavage
+ Regardons de plus prêt l'effet de chemin appliqué au pavage sur le T-shirt.
+
 
 
 ![starting_point](/assets/images/tutorials/cookie_cutter_tiling/T-shirt-1.jpg)
@@ -133,10 +140,99 @@ Impossible après cela de modifier le nombre de lignes et de colonnes, ni les sy
 
 En mode édition de noeuds, voici ce que vous devez voir si vous sélectionnez les noeuds de path8 :
 
-![flattened](/assets/images/tutorials/cookie_cutter_tiling/flatened.jpg)
+![flattened](/assets/images/tutorials/cookie_cutter_tiling/flattened.jpg)
 
 Si vous sépariez ce chemin vous obtiendriez de nombreux triangles. Mais ne séparez pas.
 
+Ici il n'y avait qu'un chemin dans le pavage, mais en général il faut 
+
+### Combiner les chemins des pavages puis aplatir l'effet ( Calque: Combine  paths in Tiling groups  and flatten  effect )
+Pour chaque pavage :
+*  S'il y a plus d'un chemin dans le groupe de pavage, combinez tous les chemins (les sélectionner puis `Chemin > Combiner`)
+*  Sélectionner le groupe de pavage et aplatir l'effet de chemin
+
+Si vous regardez le canevas, il semble que rien n'a changé.
+
+
+
+### Dupliquer chaque forme et l'utiliser pour découper le pavage (Calque: Duplicate shape, and use it to Clip Tiling)
+Pour chaque pavage
+* Dupliquez shape
+* Sélectionnez l'unique chemin du groupe de pavage et une copie de shape qui doit être au dessus du groupe de pavage dans le panneau Calques et Objets
+* `Object  > Découpe > Définir une découpe` 
+
+Voici ce que vous devriez obtenir
+![clipped](/assets/images/tutorials/cookie_cutter_tiling/after_clip.png)
+
+###  Se préparer à paramètrer pour la broderie (Calque: Prepare for Embroidery Parameters)
+Pour chaque pavage:
+* La dernière copie de shape doit avoir un contour mais pas de remplissage
+* La couleur de contour de shape et du pavage doivent être identiques
+* Pour les détails choisissez aussi la même couleur si vous voulez limiter les changements de fils, ou une couleur différente si vous préférez.
+
+
+
+###  Ajouter les paramètres de broderie (Calque: Add Embroidery Parameters)
+* Sélectionnez shape,Tiling et Details
+* Lancez  `Extensions > Ink/Stitch > Paramètres `
+
+Pour un point triple: 
+  *  Choisir la méthode  Point Droit / Point Multiple
+  *  Longueur de point droit  2 mm au moins
+  *  Nombre de répétitions pour le point triple 1
+
+En procédant vêtement par vêtement:
+  *  Sélectionnez tout le groupe 
+  * Lancez `Extensions > Ink/Stitch > Visualiser et Exporter > Prévisualisation du plan de broderie`
+
+
+
+![Before_Autoroute](/assets/images/tutorials/cookie_cutter_tiling/before_autorouting.jpg)
+
+Si  visualiser les sauts est coché, vous voyez qu'un ordonnancement des chemins est necessaires, ce sera l'étape suivante.
+
+Si vous décochez, vous pourrez plus facilement vérifier que tout à l'air en ordre.
+
+### Agencement automatique (Calque: Autoroute)
+
+Pour chaque pavage: 
+  * Sélectionnez le chemin du groupe de pavage et shape
+  * Lancez  `Extensions > Ink/Stitch > Outils : Trait > Agencement automatique de point droit`
+
+
+Un vêtement à la fois:
+ *  Sélectionnez tout le groupe 
+  * Lancez `Extensions > Ink/Stitch > Visualiser et Exporter > Prévisualisation du plan de broderie`
+
+
+et vous verrez que les sauts de fils ont quasiment disparus.
+
+On constate dans le résultat  (le groupe "Agencement automatique....") une multitude de tous petits chemins. 
+
+On pourrait les éliminer, mais le plus simple est 
+
+
+ * `Extensions > Ink/Stitch > Préference`
+ *  pour ce fichier seulement augmenter la longueur minimum de point à 1mm.
+
+
+### Etape finale
+
+* Supprimez tous les groupes vides
+
+Les derniers sauts restants sont entre deux détails, ou entre le dernier chemin du  groupe Autoroute et le  premier détail.
+Vous pouvez au choix :
+  - ne rien faire , et soit votre machine convertira le saut en coupe, soit vous couperez vous même le fil
+  - ajouter une commande coupe
+  - remplacer le saut par un chemin de liaison
+
+`Extensions > Ink/Stitch > Outils: Trait >  Convertir saut en chemin ` peut vous aider
+Si vous sélectionner deux chemins entre lesquels il y a un saut, l'extension va créer un chemin en ligne droite de la fin du premier chemin au début du second.
+Il ne vous restera qu'à le modifier pour le faire se camoufler dans les motifs de remplissage (voir l'exemple du T Shirt)
+
+
+
+<!--
 * Dupliquez shape, la forme du T-shirt
 * Sélectionnez une copie de shape et path8  
 * `Chemin > Intersection` 
@@ -214,4 +310,4 @@ Ma manière préférée de faire le ménage consiste à :
 ![cut_path](/assets/images/tutorials/cookie_cutter_tiling/ss.jpg)
 
 Le reste des étapes est identique.
-
+-->
