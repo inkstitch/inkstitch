@@ -83,7 +83,8 @@ details if you wish.
 
 The cloth_line.svg file contains all prepared cloths in the "Cloths Preparation" layer and the same tilings again in the "Tilings" layer. 
 
-It also contains what you should obtain  at all  steps of the process, up to the final embroidery.
+It also contains what you should obtain  after each step of the process, up to the final embroidery.
+Each step of this tutorail corresponds to a layer of the file, proceed from bottom to top, remember to unlock  and unhide a layer  if you want to use it. Other layers are best left hidden and locked.
 
 ![cloth_line](/assets/images/tutorials/cookie_cutter_tiling/cloth_line.svg) 
 
@@ -98,7 +99,7 @@ Next step is simply chose a tiling per shape to cover.
 
 Working on the canvas, you may rotate or resize the tiling, from the LPE dialog you may change the number of rows and columns. 
 
-Do your best to entirely cover each shape to be filled, without having too many unuseful repetitions of patterns.
+Do your best to entirely cover each shape to be filled, without having too many unuseful repetitions of patterns. Be more careful than me, don't put too small a tiling on the bottom of the dress, a little  something  is missing ther....
 
 This is what was chosen (this is layer "Clothline preparing pattern fill" in the cloth_line.svg file )
 
@@ -106,7 +107,7 @@ This is what was chosen (this is layer "Clothline preparing pattern fill" in the
 
 ## Pattern filling
 This is our goal
-![final](/assets/images/tutorials/cookie_cutter_tiling/clothline_final.png) 
+![final](/assets/images/tutorials/cookie_cutter_tiling/final_embroidery.png) 
 
 This is easy to achieve: just follow the following steps, respecting the ordering of the steps.
 
@@ -143,7 +144,7 @@ Once the LPE is flatten, you can't use the LPE dialog anymore.
 
 In node edition mode, this is what you get when selectiong  all path8 nodes :
 
-![flattened](/assets/images/tutorials/cookie_cutter_tiling/flatened.jpg)
+![flattened](/assets/images/tutorials/cookie_cutter_tiling/flattened.jpg)
 
 Breaking  apart this path would create  plenty of triangles. Don't.
 
