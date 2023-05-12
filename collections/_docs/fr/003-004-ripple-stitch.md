@@ -94,7 +94,7 @@ Avec le guidage satin, vous pouvez  guider précisément les ondulations en util
 
 
 
-## Comment la paramètrer
+## Comment la paramétrer
 
 Paramètres||Description
 ---|---|---
