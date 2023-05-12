@@ -55,7 +55,6 @@ Ink/Stitch sera significativement plus rapide pour recalculer le plan de broderi
   * Il  n'est plus obligatoire d'utiliser des commandes visuelles pour les commandes de  coupe et de stop, elles peuvent être ajoutées dans le dialogue de paramètrage.
 
   * [La mise à l'échelle des commandes](/fr/docs/commands/#mise-%C3%A0-lechelle-des-symboles-de-commande) mets aussi à jour les marqueurs  (ligne - guide et symbole de texture)
-https://inkstitch.org/fr/docs/commands/#mise-%C3%A0-lechelle-des-symboles-de-commande
 
 #### Points de sûreté
   * Possibilité de choisir dans une liste de points d'ancrage et points d'arrêt prédéfinis
@@ -106,7 +105,7 @@ https://inkstitch.org/fr/docs/commands/#mise-%C3%A0-lechelle-des-symboles-de-com
 
   * Le paramètrage est plus flexible. Il est plus facile de basculer du point droit au zigzag : plus besoin de mettre un pointillé pour le point droit. 
    
-  * Amélioration de l'algorithme de calcul du point droit (la longueur de point est plus régulière
+  * Amélioration de l'algorithme de calcul du point droit (la longueur de point est plus régulière)
   *  Les éléments de type `svg:line` sont maintenant reconnus comme des traits normaux
 
 ### Point zigzag
@@ -127,8 +126,7 @@ Divise une forme munie d'un  dégradé de couleur en plusieurs blocs monochromes
 
 ![Gradient](/assets/images/docs/color_blocks.png)
 
-Extensions > Ink/Stitch > Outils: Remplissage > [Convertir en blocs de dégradés](/fr/docs/fill-tools/
-#convertir-en-blocs-de-dégradés)
+Extensions > Ink/Stitch > Outils: Remplissage > [Convertir en blocs de dégradés](/fr/docs/fill-tools/#convertir-en-blocs-de-dégradés)
 
 
 ### Nouveau: Lettrage le long d'un chemin
@@ -202,7 +200,7 @@ Extensions > Ink/Stitch > Edition > Selectionner les éléments de broderie
   * Correction: Plus d'échec si la forme n'a qu'un remplissage
 
 ### Lettrage
-  * Ajout d'un [filtre selon la taille de la fonte font](/fr/docs/lettering/#options)
+  * Ajout d'un [filtre selon la taille de la fonte](/fr/docs/lettering/#options)
   * Ajout de diverses [options pour inclure des commandes de cope](/fr/docs/lettering/#options) sur toutes les fontes (et non plus uniquement sur les fontes dont les colonnes satin sont autoroutées)
   * Possibilité de dossier de fontes aux fichiers multiples. Dans ce cas, les dossiers sont nommés avec les flèches.
     Ceci permets aux auteurs de partager une fonte et accelerre les documents lourds
@@ -234,5 +232,5 @@ Extensions > Ink/Stitch > Edition > Selectionner les éléments de broderie
   * Ajout d'options de taille
 
 ## Formats de broderie
-  * Ajout du nom de fichier dans l'entête de certains formats de fichierheader of some file formats
+  * Ajout du nom de fichier dans l'entête de certains formats de fichier
   * Résolution d'un problème ou les commandes de stop résultait en un désaccord entre les couleurs et les blocs de couleur
