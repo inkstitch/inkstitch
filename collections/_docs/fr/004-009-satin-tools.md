@@ -9,7 +9,7 @@ toc: true
 
 **Exemple:**
 * Créer un chemin à l'aide de l'outil courbes de Bézier (`B`)
-* Faire [Convertir  Ligne en Satin](#convertir-ligne-en-satin)
+* Faire [Ligne en Satin](#ligne-en-satin)
 * Utiliser le [Dialogue de Paramètres ](/fr/docs/params/#paramètres-satin) pour choisir une sous-couche
 * Lancer [Agencement automatique des colonnes satin](#agencement-automatique-de-colonnes-satin) pour obtenir des colonnes de satin bien organisées
 
