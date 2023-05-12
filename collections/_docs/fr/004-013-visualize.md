@@ -35,8 +35,13 @@ C'est aussi possible de **zoomer** et de **déplacer** la simulation avec la sou
 
 Lancez `Extensions > Ink/Stitch > Visualiser et Exporter  > Simulation du plan de broderie...`.
 
-Plutôt que d'appliquer le plan de broderie, vous pouvez aussi utilisez l'option Live preview de l'extension. Vous n'aurez alors pas besoin de supprimer le plan de broderie. 
-Si vous appliquez le plan de broderie, vous aurez la possibilité de l'inspecter et de la modifier à votre convenance. Utilisez l'extension "Annuler l'aperçu du plan de broderie" si vous souhaitez le supprimer.
+Plutôt que d'appliquer le plan de broderie, vous pouvez aussi utilisez l'option Live preview de l'extension. 
+
+Vous n'aurez alors pas besoin de supprimer le plan de broderie. 
+
+En revanche,si vous appliquez le plan de broderie, vous aurez la possibilité de l'inspecter et de la modifier à votre convenance. 
+
+Utilisez l'extension "Annuler l'aperçu du plan de broderie" si vous souhaitez le supprimer.
 
 Vous disposez des options suivanes:
 * **Positionner le plan de broderie hors du canevas** Positionne le plan de broderie  à la droite du canevas. Si la case n'est pas cochée, le plan de broderie sera placé au dessus de vos objets. Dans ce cas vous pouvez choisir de modifier la visibilité de vos objets, soit en les cachant soit en nmodifiant l'opacité.
@@ -49,6 +54,7 @@ Vous disposez des options suivanes:
 * **Verrouiller** rend le plan de broderie insensible aux interactions de la souris, facilitant le travail sur les objets de broderie quand le plan de broderie est actif.
 
 Utiliser un plan de broderie verrouillé superposé au motif (rendu invisible ou avec visibilité abaissée) aidera à avoir une meilleure idée du rendu final.
+
 Si le plan est vérouillé, et le motif visible, le plan de broderie ne vous génera pas pour modifier le motif qui est sous lui.
 
 
@@ -57,8 +63,11 @@ Si le plan est vérouillé, et le motif visible, le plan de broderie ne vous gé
 
 ## Annuler l'aperçu du plan de broderie
 Utiliser l'aperçu du plan de broderie au dessus d'objets de broderie cachés ou ayant une opacité amoindrie aide à se faire une idée visuelle de la broderie finale.
+
 Il est parfois utile de garder le plan de broderie de objets déjà présents pour ajouter de nouveaux objets de broderie,mais pour l'export ou pour modifier des éléments existants vous aurez besoin des objets initiaux.
+
 Pas très rigolo de devoir à chaque fois supprimer le calque du plan de broderie et rétablir l'opacité des éléments originels. 
+
 Cette extension le fait pour vous et vous aidera si vous utilisez cette méthode de travail.
 
 
