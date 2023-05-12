@@ -35,7 +35,7 @@ Répéter                           |Définir combien de fois aller et revenir l
 Nombre de répétitions du point triple |Active le [Mode point triple](/fr/docs/stitches/bean-stitch/)<br />◦ Repasse sur chaque point le nombre de fois indiqué.<br />◦ Une valeur de 1 triplera chaque point (avant, arrière, avant).<br />◦ Une valeur de 2 permettra de quintupler chaque point, etc..<br />◦ Il est possible de définir un motif de répétitions en entrant plusieurs valeurs séparées par un espace
 Longueur du point droit           |Longueur des points 
 Tolerance du point droit          |Les points ne peuvent pas être éloignés du chemin de plus que cette distance. Une tolerance basse peut impliquer des points plus courts. Une tolerance haute entraine un arrondissement des angles aigus.
-Espacement Zig-Zag (crête à crête)|Ce paramètre est sans effet sur le poin triple
+Espacement Zig-Zag (crête à crête)|Ce paramètre est sans effet sur le point triple
 Autoriser les points d'arrêts     |Ajoute un point d'arrêt à la ou les positions choisies
 Forcer les points d'arrêts        |Force un point d'arrêt après l'objet indépendament de la valeur de "Saut de fil" dans les Préférences d'Ink/Stitch.
 Point d'ancrage                  |Choisir le  [style désiré](/fr/docs/stitches/lock-stitches/)
