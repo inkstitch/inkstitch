@@ -22,7 +22,7 @@ Le point triple décrit une répétition de points droits avant arrière. Il en 
    * Une valeur de 2 permettra de quintupler chaque point, etc.
    * Il est possible de définir un motif de répétitions en entrant plusieurs valeurs séparées par un espace
   
-## Paramétres
+## Paramètres
 
 Ouvrir `Extensions > Ink/Stitch  > Paramètres` pour paramétrer selon vos besoins.
 
