@@ -37,7 +37,7 @@ Cet outil remplacera vos colonnes satin par un nouvel ensemble de colonnes satin
 
 * Si vous préférez conserver votre ordre initial (ce qui pourrait être le cas si vous avez superposé des satins), activez l'option ** **Préserver l'ordre des colonnes satin**.
 
-## Convertir Ligne en Satin
+## Trait en Satin
 
 Cette extension convertira un trait en une (ou plusieurs) colonne satin avec une largeur spécifiée. Après la conversion, vous verrez les deux rails et (éventuellement) de nombreuses traverses de direction, en fonction de la forme de votre ligne.
 
@@ -45,9 +45,10 @@ Cette extension convertira un trait en une (ou plusieurs) colonne satin avec une
 
 1. Tracer une courbe de Bézier (`B`)
 2. Définir une largeur de trait
-2. Lancer `Extensions > Ink/Stitch  > Outils: Satin > Converti ligne en satin`
+2. Lancer `Extensions > Ink/Stitch  > Outils: Satin > Trait en Satin`
 
-## Convertir Satin en Trait
+<!--
+##  Satin en Trait
 
 Satin en trait converti une colonne satin en sa ligne centrale. Cette fonction peut être utile si vous décidez, tardivement dans le processus, de remplacer une colonne satin par un point droit. Vous pouvez aussi l'utiliser pour modifier l'épaisseur de votre colonne satin lorsqu'un étirement n'est pas satisfaisant.  
 
@@ -58,9 +59,10 @@ Dans ce cas, convertissez votre colonne satin en point droit, modifiez la largeu
 ### Usage
 
 1. Sélectionner la ou les colonne(s) satin que vous souhaitez convertir en point droit.
-2. Exécutez  `Extensions > Ink/Stitch > Outils de satin > Convertir Satin en Trait...`
+2. Exécutez  `Extensions > Ink/Stitch > Outils de satin > Satin en Trait...`
 3. Choisissez si vous souhaitez conserver les colonnes satin selectionnées ou les remplacer.
 4. Cliquez sur `Appliquer`
+-->
 
 ## Scinder une colonne Satin
 
@@ -90,7 +92,7 @@ Il est aussi possible de faire la même opération à partir du paramètrage.
 * Sélectionnez une ou plusieurs colonnes satin
 * Lancez `Extensions > Ink/Stitch  > Outils Satin > Intervertir les rails satin`
 
-## Convertir Ligne en Effet de Chemin Satin 
+## Trait en Effet de Chemin Satin 
 
 {% include upcoming_release.html %}
 
@@ -99,7 +101,7 @@ Converti une ligne en colonne satin, en utilisant un Effet de Chemin. Cela rend 
 ### Usage
 
 1. Sélectionner une ligne ou un Effect de Chemin Satin
-2. Lancez `Extensions > Ink/Stitch > Outils: Satin > Ligne vers Effet de Chemin Satin...`
+2. Lancez `Extensions > Ink/Stitch > Outils: Satin > Trait en Effet de Chemin Satin...`
 3. Choisir les paramètres qui vous conviennent
 5. Cliquez sur Appliquer
 
@@ -131,7 +133,7 @@ Vous pouvez changer le motif de plusieurs manières :
 * Changer de motif en relançant à nouveau `Convertir Ligne en Effet de Chemin Satin`.
 * Convertir en chemin normal  (`Shift + Ctrl + C`)  et raffiner manuellement le chemin (ceci perdra la fonctionnalité Effet de Chemin)
 
-## Convertir "Ligne en Zigzag" en Satin
+## "Ligne  Zigzag" en Satin
 
 {% include upcoming_release.html %}
 
@@ -140,7 +142,7 @@ Quand vous tracez manuellement une colonne satin, cet outil vous aidera à le fa
 ### Usage
 
 * Dessinez votre forme avec votre style de zigzag préféré.
-* Sélectionnez la forme et lancez  `Extensions > Ink/Stitch > Outis: Satin > Convertir "Ligne en Zigzag" en Colonne Satin`
+* Sélectionnez la forme et lancez  `Extensions > Ink/Stitch > Outis: Satin > "Ligne  Zigzag" en Satin`
   * Sélectionnez votre style de zigzag 
   * Choisissez si votre chemin doit être adouci ou constitué de segments de droites
   * Choisissez si les traverses doivent être inserrées ou non. Les colonnes satin créées auront toujours autant de noeuds sur les deux rails.
