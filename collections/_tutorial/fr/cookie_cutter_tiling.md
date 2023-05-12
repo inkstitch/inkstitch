@@ -25,7 +25,7 @@ toc:
 
 ![Brodé](/assets/images/tutorials/tutorial-preview-images/cookie_cutter_tiling.jpg)
 
-Le but de ce tutorial est de montrer comment Utiliser l'effet de chemin Pavage, la découpe et l'agencement automatique de point droit pour créer un remplissage en motif.
+Le but de ce tutorial est de montrer comment utiliser l'effet de chemin Pavage, la découpe et l'agencement automatique de point droit pour créer un remplissage en motif.
 
 
 ## Pavages
@@ -85,8 +85,6 @@ Chaque étape de ce tutorial correspond à un calque du fichier, de bas en haut.
 [Télécharger cloth_line.svg](/assets/images/tutorials/cookie_cutter_tiling/cloth_line.svg){: download="cloth_line.svg" }
 
 
-
-
 ## Recouvrir chaque surface à remplir par un pavage
 L'étape suivante consiste à recouvrir chaque surface à remplir par un pavage. Voici le choix qui a été fait (et que vous pouvez retrouver dans le calque "Covering each shape with a tiling")
 
@@ -94,7 +92,6 @@ L'étape suivante consiste à recouvrir chaque surface à remplir par un pavage.
 
 Vous pouvez modifier le nombre de lignes et de colonnes du pavage, modifier les dimensions, tourner le pavage, l'adapter au mieux pour couvrir la surface à remplir sans avoir trop de lignes ou de colonnes inutiles.
 
-Ne faites pas comme moi, j'ai utilisé un pavage trop petit pour le bas de la robe, il manque un morceau du remplissage, je m'en suis aperçue qu'après avoir brodé...
 
 ## Remplissage en motif
 Voici notre but final
@@ -104,15 +101,12 @@ Pour l'atteindre, suivez les étapes suivantes, en respectant scrupuleusement l'
 
 Pour chaque futur remplissage en motif, vous avez un groupe au nom du vêtement ou de la partie du vêtement concerné qui contient:
 
-
  * shape: forme fermée du contour extérieur 
  * Details: un groupe qui contient les petits trucs en plus qu'on traitera à la fin indépendamment du reste.
  * Tiling:  le groupe qui porte l'effet de chemin Pavage et dans le quel se trouve tous les chemins du pavage.
  
  ###  Effet de Chemin Pavage
  Regardons de plus prêt l'effet de chemin appliqué au pavage sur le T-shirt.
-
-
 
 ![starting_point](/assets/images/tutorials/cookie_cutter_tiling/T-shirt-1.jpg)
 
@@ -136,7 +130,7 @@ Cliquez sur un autre symbole, et vous aurez un tout autre pavage, à vous de cho
 
 Faites toutes les modifications souhaitées.
 
-<!-- puis finalement aplatissez (flatten) l'effet de chemin. 
+Finalement aplatissez (flatten) l'effet de chemin. 
 Maintenant, path8 est un chemin composite constitué des multiples répétitions du triangle initial. 
 Impossible après cela de modifier le nombre de lignes et de colonnes, ni les symétries.
 
@@ -144,13 +138,14 @@ En mode édition de noeuds, voici ce que vous devez voir si vous sélectionnez l
 
 ![flattened](/assets/images/tutorials/cookie_cutter_tiling/flattened.jpg)
 
-Si vous sépariez ce chemin vous obtiendriez de nombreux triangles. Mais ne séparez pas. -->
+Si vous sépariez ce chemin vous obtiendriez de nombreux triangles. Mais ne séparez pas.
 
-
+Dans le cas général avant d'aplatir il faut combiner tous les chemins du pavage
 
 ### Combiner les chemins des pavages ( Calque: Combine  paths in Tiling groups  )
 Pour chaque pavage :
 *  S'il y a plus d'un chemin dans le groupe de pavage, combinez tous les chemins (les sélectionner puis `Chemin > Combiner`)
+*  Sélectionner le groupe Tiling, et à partir du panneau Effet de chemin, aplatir le chemin.
 
 Si vous regardez le canevas, il semble que rien n'a changé.
 
@@ -210,26 +205,26 @@ et vous verrez que les sauts de fils ont quasiment disparus.
 
 On constate dans le résultat  (le groupe "Agencement automatique....") une multitude de tous petits chemins. 
 
-On pourrait les éliminer, mais le plus simple est 
-
+On pourrait les éliminer, mais c'est fastidieux, le plus simple est 
 
  * `Extensions > Ink/Stitch > Préference`
- *  pour ce fichier seulement augmenter la longueur minimum de point à 1mm.
+ *  pour ce fichier seulement augmenter *la longueur minimum de point* à 1mm.
 
 
 ### Etape finale
 
 * Supprimez tous les groupes vides
+* Rectifier si necessaire la position des vêtements par rapport aux épingles et à la corde à lalinge.
 
 Les derniers sauts restants sont entre deux détails, ou entre le dernier chemin du  groupe Autoroute et le  premier détail.
 Vous pouvez au choix :
   - ne rien faire , et soit votre machine convertira le saut en coupe, soit vous couperez vous même le fil
-  - ajouter une commande coupe
+  - ajouter une commande coupe ou cocher dans les paramètres la case Couper après
   - remplacer le saut par un chemin de liaison
 
-`Extensions > Ink/Stitch > Outils: Trait >  Convertir saut en chemin ` peut vous aider
+`Extensions > Ink/Stitch > Outils: Trait >  Convertir saut en chemin ` peut vous aider si vous choisissez cette dernière possibilité
 Si vous sélectionner deux chemins entre lesquels il y a un saut, l'extension va créer un chemin en ligne droite de la fin du premier chemin au début du second.
-Il ne vous restera qu'à le modifier pour le faire se camoufler dans les motifs de remplissage (voir l'exemple du T Shirt)
+Il ne vous restera qu'à le modifier pour le camoufler  (voir l'exemple de la ceinture de la robe)
 
 
 
