@@ -222,7 +222,7 @@ Vous pouvez au choix :
   - ajouter une commande coupe ou cocher dans les paramètres la case Couper après
   - remplacer le saut par un chemin de liaison
 
-`Extensions > Ink/Stitch > Outils: Trait >  Convertir saut en chemin ` peut vous aider si vous choisissez cette dernière possibilité
+`Extensions > Ink/Stitch > Outils: Trait >  Saut en chemin ` peut vous aider si vous choisissez cette dernière possibilité
 Si vous sélectionner deux chemins entre lesquels il y a un saut, l'extension va créer un chemin en ligne droite de la fin du premier chemin au début du second.
 Il ne vous restera qu'à le modifier pour le camoufler  (voir l'exemple de la ceinture de la robe)
 
