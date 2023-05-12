@@ -69,7 +69,7 @@ Ink/Stitch sera significativement plus rapide pour recalculer le plan de broderi
 
 ### Point multiple
 
-  * Ajout [des motifs de répétitions personnalités](/fr/docs/stitches/bean-stitch/#parametres) (1 0: ☰-☰-☰-)
+  * Ajout [des motifs de répétitions personnalités](/fr/docs/stitches/bean-stitch/#paramètres) (1 0: ☰-☰-☰-)
 
     ![Bean pattern](/assets/images/docs/bean_pattern.jpg)
 
@@ -146,7 +146,7 @@ G
 
 *1: Original 2: Saut en chemin 3: Chemin ajusté manuellement*
 
-Extensions > Ink/Stitch > Outils: Trait > [Saut en chemin](/fr/docs/stroke-tools/#saut-en-chemin)
+Extensions > Ink/Stitch > Outils: Trait > [Saut en Trait](/fr/docs/stroke-tools/#saut-en-trait)
 
 ### Nouveau : Remplissage en Trait
 
@@ -165,9 +165,9 @@ Converti un trait en effet de chemin satin
 
 ![LPE Satins](/assets/images/docs/lpe_patterns.png)
 
-Extensions > Ink/Stitch > Outils: Satin: [Trait en effet de chemin Satin](/fr/docs/satin-tools/#trait-en-effet-chemin-satin)
+Extensions > Ink/Stitch > Outils: Satin: [Trait en effet de chemin Satin](/fr/docs/satin-tools/#trait-en-effet-de-chemin-satin)
 
-### Nouveau: Ligne Zigzag enSatin
+### Nouveau: Ligne Zigzag en Satin
 
 Converti une ligne en zigzag ou en dents de scie en colonne satin. s
 
@@ -201,7 +201,7 @@ Extensions > Ink/Stitch > Edition > Selectionner les éléments de broderie
 
 ### Lettrage
   * Ajout d'un [filtre selon la taille de la fonte](/fr/docs/lettering/#options)
-  * Ajout de diverses [options pour inclure des commandes de cope](/fr/docs/lettering/#options) sur toutes les fontes (et non plus uniquement sur les fontes dont les colonnes satin sont autoroutées)
+  * Ajout de diverses [options pour inclure des commandes de coupe](/fr/docs/lettering/#options) sur toutes les fontes (et non plus uniquement sur les fontes dont les colonnes satin sont autoroutées)
   * Possibilité de dossier de fontes aux fichiers multiples. Dans ce cas, les dossiers sont nommés avec les flèches.
     Ceci permets aux auteurs de partager une fonte et accelerre les documents lourds
 
