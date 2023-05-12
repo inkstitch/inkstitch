@@ -99,7 +99,7 @@ Next step is simply chose a tiling per shape to cover.
 
 Working on the canvas, you may rotate or resize the tiling, from the LPE dialog you may change the number of rows and columns. 
 
-Do your best to entirely cover each shape to be filled, without having too many unuseful repetitions of patterns. Be more careful than me, don't put too small a tiling on the bottom of the dress, a little  something  is missing ther....
+Do your best to entirely cover each shape to be filled, without having too many unuseful repetitions of patterns. 
 
 This is what was chosen (this is layer "Clothline preparing pattern fill" in the cloth_line.svg file )
 
@@ -136,7 +136,7 @@ Click on another symbol and you will get another tiling. Try and  chose your fav
 
 ![mirroring](/assets/images/tutorials/cookie_cutter_tiling/mirroring.jpg)
 
-<!--Once you are happy with your modification flatten the LPE using the menu at top right of the LPE dialog.
+Once you are happy with your modification flatten the LPE using the menu at top right of the LPE dialog.
 
 After that, path8 is no more a triangle, but a composite path containing plenty of copies of the triangle.
 
@@ -149,11 +149,11 @@ In node edition mode, this is what you get when selectiong  all path8 nodes :
 Breaking  apart this path would create  plenty of triangles. Don't.
 
 In the general case you may need an additional step before flattening : 
--->
 
-### Combine  paths in Tiling groups 
+### Combine  paths in Tiling groups and flatten the effect
 For each Tiling:
 * If there is more than a single path in a Tiling group, combine all paths together.
+* Select Tiling group and from the LPE panner flatten the effect.
 
 
 If you look at the canvas, nothing is different.
@@ -216,15 +216,16 @@ If you look at the results in the Auto-Route groups you may notice some unuseful
 ### Final steps
 
 * remove all empty groups
+* fine tune the positions of the cloth with respect to the clothline
 
 If Details have a different color, the only jumps left are inside the Details group. Otherwise, there is also a jump from the last path of Autoroute to the first detail.
 You may either : 
   - Left the jumps as they are, and either  your embroidery machine will turn them into trims,  or you will have to trim  later.
-  - Add a trim command 
+  - Add a trim command  or check trim after in the embroidery parameters
   - Or convert jumps to paths 
   
   You may use `Extensions > Ink/Stitch > Tools : Stroke >  Jump Stitch to Stroke` to help you : if you chose two consecutive paths with a jump in between and run this extension, it will create a straight  path from 
-the end of the first  path to the begining of the second. No need to guess where the fill is ending.... But it is up to you to camouflage it (see example in the T Shirt shape)
+the end of the first  path to the begining of the second. No need to guess where the fill is ending.... But it is up to you to camouflage it (see example in the dress belt)
  
 
 
