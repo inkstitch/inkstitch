@@ -63,7 +63,7 @@ mais seule la position du marqueur importe.
  
  Le 4ième chemin est lui aussi un remplissage, pour le transformer en colonne satin :
  
- * `Extensions > Ink/Stitch > Outils Trait> Convertir Remplissage en Trait`
+ * `Extensions > Ink/Stitch > Outils Trait> Remplissage en Trait`
  * Tout décocher et Appliquer
  
  ![after_fill_to_stroke](/assets/images/tutorials/circular_monogram/fill_to_stroke.jpg)
@@ -72,7 +72,7 @@ mais seule la position du marqueur importe.
  
  * `Chemin > Simplifier`
  
- * `Extensions > Ink/Stitch > Outils: Satin > Convertir Trait en Effet de Chemin Satin`
+ * `Extensions > Ink/Stitch > Outils: Satin > Trait en Effet de Chemin Satin`
 
  ![satin_path_effet_before](/assets/images/tutorials/circular_monogram/satin_path_effect_before.jpg)
  
@@ -80,7 +80,7 @@ mais seule la position du marqueur importe.
  
   ![satin_path_effet_after](/assets/images/tutorials/circular_monogram/satin_path_effect_after.jpg)
   
-  * Fermez la fenêtre Convertir Trait en Effet de Chemin Satin
+  * Fermez la fenêtre `Trait en Effet de Chemin Satin`
 
 Pour modifier le motif
 
