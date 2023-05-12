@@ -25,7 +25,7 @@ Par défaut, l'extension choisira de commencer par le noeud le plus à gauche et
 - Cocher **Préserver l'ordre des points droits** si vous souhaitez préserver l'ordre initial des chemins paramétrés en points droits.
 - Cocher **Couper les sauts de fil**  pour  utiliser des commandes de coupe plutôt que des sauts de fil. Les commandes de coupe sont ajoutées au svg, vous pouvez donc ensuite les modifier/supprimer à votre guise.
 
-## Convertir le Satin en trait
+## Satin en Trait
 
 Convertir le satin en trait converti une colonne satin en un trait qui correspond à sa ligne centrale. Ceci peut être utile si vous décider tardivement dans le processus  de transformer une colonne satin en point droit. Vous pouvez aussi l'utiliser pour modifier la largeur d'une colonne satin lorsque la compensation d'étirement ne convient pas bien. Dans ce cas, utilisez cette fonction pour convertir votre colonne satin en point droit, puis modifier l'épaisseur du trait dans le panneau Fond et Contour puis lancez l'extension "Outils Satin > convertir ligne en satin".
 Ceci fonctionne d'autant mieux que la largeur de la colonne satin initiale est constante.
@@ -35,11 +35,11 @@ Ceci fonctionne d'autant mieux que la largeur de la colonne satin initiale est c
 ### Usage
 
 1. Sélectionez la ou les colonnes satin que vous souhaitez convertir en point droits.
-2. Exécutez  `Extensions > Ink/Stitch > Outils: Trait > Convertir  le satin en trait...`
+2. Exécutez  `Extensions > Ink/Stitch > Outils: Trait > Satin en Trait...`
 3. Choisissez si vous vous souhaitez ou non conserver les colonnes satins sélectionnées.
 4. Cliquez sur Appliquer
 
-## Remplissage en trait
+## Remplissage en Trait
 
 {% include upcoming_release.html %}
 
@@ -55,7 +55,7 @@ Vous pouvez améliorer le résultat en définissant des lignes de découpage.
 * (Optionnel). Dessiner des lignes de découpage aux intersections/jointures. Ce sont des simples traits. Ceci est particulièrement utile si vous voulez définir des colonnes satin.  
 Merci de noter que chaque trait doit découper le remplissage en deux. 
 * Sélectionnez un ou plusieurs objets remplissage que vous souhaitez convertir en trait, ainsi que les lignes de découpages correspondantes si vous en avez définies.
-* Exécutez  `Extensions > Ink/Stitch > Outils: trait > Remplissage en trait`
+* Exécutez  `Extensions > Ink/Stitch > Outils: trait > Remplissage en Trait`
 * Choisissez les options et cliquez sur Appliquer
 * Utilisez l'outil noeuds pour les éventuelles corrections
 
@@ -66,6 +66,8 @@ Merci de noter que chaque trait doit découper le remplissage en deux.
 * *Pointillé* : Mettre à vrai si vous souhaitez un point droit.
 * *Largeur (px)* : Si vous souhaitez directement convertir en colonne satin, donner ici la valeur de la largeur de la colonne satin. Dans la plupart des cas, vous voudrez une valeur faible pour pouvoir facilement inspecter et modifier avant conversion.
 * *Lignes de découpage : fermer les écarts* :  Les lignes de découpage créent des écarts entre les chemins générés. Ces écarts peuvent être supprimés en activant cette option. Cette option est utile si vous ne pensez pas convertir vos chemins en colonnes satin.
+
+
 ## Saut en Trait
 
 {% include upcoming_release.html %}
