@@ -16,7 +16,7 @@ Le point triple décrit une répétition de points droits avant arrière. Il en 
 
 2. Définissez le nombre de répétitions dans `Nombre de répétitions de points triples` dans [paramètres de point droit](/fr/docs/stitches/running-stitch).
 
-   ![Bean Stitch Params](/assets/images/docs/en/params-bean-stitch.jpg)
+   ![Bean Stitch Params](/assets/images/docs/fr/params-bean-stitch.jpg)
 
    * Une valeur de 1 triplera chaque point (avant, arrière, avant).
    * Une valeur de 2 permettra de quintupler chaque point, etc.
