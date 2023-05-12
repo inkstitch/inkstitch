@@ -46,7 +46,7 @@ Vous disposez des options suivanes:
   * **Baisser l'opacité** montre le cache de conception avec une opacité amoindrie
  
 * **Points de l'aiguille** si coché, montre les points de l'aiguille
-* **Vérouiller** rend le plan de broderie insensible aux interactions de la souris, facilitant le travail sur les objets de broderie quand le plan de broderie est actif.
+* **Verrouiller** rend le plan de broderie insensible aux interactions de la souris, facilitant le travail sur les objets de broderie quand le plan de broderie est actif.
 
 Utiliser un plan de broderie verrouillé superposé au motif (rendu invisible ou avec visibilité abaissée) aidera à avoir une meilleure idée du rendu final.
 Si le plan est vérouillé, et le motif visible, le plan de broderie ne vous génera pas pour modifier le motif qui est sous lui.
