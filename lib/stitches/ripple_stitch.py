@@ -103,6 +103,11 @@ def _get_satin_line_count(stroke, pairs):
             if shortest_line_len == 0 or length < shortest_line_len:
                 shortest_line_len = length
         num_lines = ceil(shortest_line_len / stroke.min_line_dist)
+    # we want the line count to be constantly even or odd (even if the design is resized
+    # so the stitch plan can be carefully planed connecting the end point to the following object
+    if stroke.line_count % 2 != num_lines % 2:
+        num_lines -= 1
+    # for flat join styles we need to add an other line
     if stroke.join_style == 1:
         num_lines += 1
     return num_lines
