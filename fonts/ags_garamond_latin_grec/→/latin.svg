@@ -22,15 +22,15 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#ffffff"
      showgrid="true"
-     inkscape:zoom="2.8284271"
-     inkscape:cx="44.547727"
-     inkscape:cy="74.776542"
+     inkscape:zoom="7.9999999"
+     inkscape:cx="40.5"
+     inkscape:cy="55.000001"
      inkscape:window-width="1655"
      inkscape:window-height="1000"
      inkscape:window-x="72"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
-     inkscape:current-layer="layer3"
+     inkscape:current-layer="g30084"
      inkscape:document-units="px">
     <sodipodi:guide
        position="0,95"
@@ -15949,8 +15949,16 @@ Copyright 2017 The EB Garamond Project Authors (https://github.com/octaviopardo/
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Ù"
-     style="display:none"
+     style="display:inline"
      id="g30084">
+    <path
+       d="M 20.836375,102.53671 C 10.001439,92.8852 19.606813,67.454423 32.124521,41.958326 L 18.303097,39.684571"
+       inkstitch:running_stitch_length_mm="2"
+       id="path1"
+       inkscape:label="Points droits pour auto-remplissage satin 1"
+       sodipodi:nodetypes="ccc"
+       inkstitch:ties="3"
+       style="font-style:italic;font-size:29.1042px;line-height:1.25;font-family:'EB Garamond';-inkscape-font-specification:'EB Garamond Italic';display:inline;fill:none;stroke:#000000;stroke-width:2;stroke-dasharray:0.500001, 0.500001;stroke-opacity:1" />
     <path
        id="autosatin47-9"
        style="font-style:italic;font-weight:600;font-size:29.1042px;line-height:1.25;font-family:'EB Garamond';-inkscape-font-specification:'EB Garamond Semi-Bold Italic';display:inline;fill:none;fill-opacity:0.308458;stroke:#000000;stroke-width:2;stroke-opacity:1"
@@ -25214,7 +25222,7 @@ Copyright 2017 The EB Garamond Project Authors (https://github.com/octaviopardo/
      inkscape:groupmode="layer"
      id="layer3"
      inkscape:label="GlyphLayer-→"
-     style="display:inline">
+     style="display:none">
     <path
        style="font-style:italic;font-size:29.1042px;line-height:1.25;font-family:'EB Garamond';-inkscape-font-specification:'EB Garamond Italic';display:inline;opacity:1;fill:none;stroke:#000000;stroke-width:0.999999;stroke-opacity:1"
        d="m 4.5149574,82.069957 c 0,0.293342 0.1466583,0.623345 0.4399748,0.99001 0.2933417,0.366664 0.7333417,0.549996 1.32,0.549996 H 87.89504 M 4.5149574,80.309982 c 0.2933417,-0.733354 0.7280919,-1.54079 1.4515424,-2.091005 0.5778359,-0.439469 1.1883946,-0.549033 1.8484009,-0.549033 H 88.224993 M 14.625,86.25 V 76"
