@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+# This code is not run via github, but for local builds only
 # Will check platform; win, mac, linux
 # Match platform and write to Makefile setting BUILD and VERSION
 # Mac and linux build-dis need the VERSION Comment out

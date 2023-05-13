@@ -3,7 +3,6 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-import errno
 import json
 import logging
 import os
@@ -13,6 +12,7 @@ import time
 from copy import deepcopy
 from datetime import date
 from threading import Thread
+from contextlib import closing
 
 import appdirs
 from flask import Flask, Response, jsonify, request, send_from_directory
@@ -162,25 +162,25 @@ class PrintPreviewServer(Thread):
     def disable_logging(self):
         logging.getLogger('werkzeug').setLevel(logging.ERROR)
 
+    # https://github.com/aluo-x/Learning_Neural_Acoustic_Fields/blob/master/train.py
+    # https://github.com/pytorch/pytorch/issues/71029
+    def find_free_port(self):
+        with closing(socket.socket(socket.AF_INET, socket.SOCK_STREAM)) as s:
+            s.bind(('localhost', 0))
+            s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+            return s.getsockname()[1]
+
     def run(self):
         self.disable_logging()
 
         self.host = "127.0.0.1"
-        self.port = 5000
+        self.port = self.find_free_port()
+        # exporting the port number for languages to work in electron vuejs part of inkstitch
+        os.environ['FLASKPORT'] = str(self.port)
 
-        while True:
-            try:
-                self.flask_server = make_server(self.host, self.port, self.app)
-                self.server_thread = Thread(target=self.flask_server.serve_forever)
-                self.server_thread.start()
-            except socket.error as e:
-                if e.errno == errno.EADDRINUSE:
-                    self.port += 1
-                    continue
-                else:
-                    raise
-            else:
-                break
+        self.flask_server = make_server(self.host, self.port, self.app)
+        self.server_thread = Thread(target=self.flask_server.serve_forever)
+        self.server_thread.start()
 
 
 class Print(InkstitchExtension):
@@ -331,8 +331,6 @@ class Print(InkstitchExtension):
             realistic_color_block_svgs=realistic_color_block_svgs
         )
         print_server.start()
-        # exporting the port number for languages to work in electron vuejs part of inkstitch
-        os.environ['FLASKPORT'] = str(print_server.port)
         # Wait for print_server.host and print_server.port to be populated.
         # Hacky, but Flask doesn't have an option for a callback to be run
         # after startup.

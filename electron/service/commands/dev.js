@@ -84,7 +84,7 @@ compiler.hooks.done.tap('serve', (stats) => {
   console.log(`  - Local:   ${chalk.cyan(`${protocol}://${host}:${port}`)}`)
   console.log(`  - Network: ${chalk.cyan(`${protocol}://${getLocalIP()}:${port}`)}`)
   console.log()
-  
+
  // allows livereload for webpack devserver to work without multiple instances of electron
  if (electronProcess) {
      manualRestart = true
