@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2023-05-11 01:15+0000\n"
-"PO-Revision-Date: 2023-05-12 01:17\n"
+"PO-Revision-Date: 2023-05-13 01:14\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -3859,11 +3859,11 @@ msgstr "Affichage"
 
 #: electron/src/renderer/components/Simulator.vue:149
 msgid "Zoom design"
-msgstr "Grossir"
+msgstr "Zoomer sur le dessin"
 
 #: electron/src/renderer/components/Simulator.vue:138
 msgid "Zoom page"
-msgstr "Réduire"
+msgstr "Zoomer sur la page"
 
 #: inx/inkstitch_about.inx:3 inx/inkstitch_about.inx:6
 msgid "About"
@@ -4078,11 +4078,11 @@ msgstr "Commandes"
 
 #: inx/inkstitch_convert_to_satin.inx:3
 msgid "Convert Line to Satin"
-msgstr "Convertir Ligne en Satin"
+msgstr "Trait en Satin"
 
 #: inx/inkstitch_convert_to_stroke.inx:3
 msgid "Convert Satin to Stroke"
-msgstr "Convertir Satin en Trait"
+msgstr "Satin en Trait"
 
 #: inx/inkstitch_convert_to_stroke.inx:8
 msgid "Keep satin column"
@@ -4915,7 +4915,7 @@ msgstr "Redémarrez Inkscape pour l'utiliser."
 
 #: inx/inkstitch_jump_to_stroke.inx:3
 msgid "Jump Stitch to Stroke"
-msgstr "Saut en chemin"
+msgstr "Saut en Trait"
 
 #: inx/inkstitch_jump_to_stroke.inx:14
 msgid "Running stitch length (mm)"
@@ -5651,11 +5651,11 @@ msgstr "Annuler l'aperçu du plan de broderie"
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:3
 msgid "Stroke to Live Path Effect Satin"
-msgstr "Convertir Ligne en Effet de Chemin Satin"
+msgstr "Trait en Effet de Chemin Satin"
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:8
 msgid "Converts a stroke into a satin stitch with a changeable life path effect."
-msgstr "Converti une ligne en colonne satin avec un effet de chemin modifiable."
+msgstr "Converti un trait en colonne satin avec un effet de chemin modifiable."
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:9
 msgid "Pattern"
@@ -5716,7 +5716,7 @@ msgstr "Chemin privé"
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:27
 msgid "This extension converts a stroke into a satin column using the path effect \"pattern along path\"."
-msgstr "Cette extension converti une ligne en colonne satin en utilisant l'effet de chemin \"Motif sur chemin\"."
+msgstr "Cette extension converti un trait en colonne satin en utilisant l'effet de chemin \"Motif sur chemin\"."
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:28
 msgid "* Please note, that the size values can only be an approximation and will be distorted if the original path is not completely straight."
@@ -5768,7 +5768,7 @@ msgstr "Cette extension ne mets à jour que les éléments sélectionnés."
 
 #: inx/inkstitch_zigzag_line_to_satin.inx:3
 msgid "Zig-Zag Line to Satin"
-msgstr "Convertir \"Ligne en zigzag\" en Satin"
+msgstr "\"Ligne zigzag\" en Satin"
 
 #: inx/inkstitch_zigzag_line_to_satin.inx:8
 msgid "Converts a zigzag line into a satin column."
