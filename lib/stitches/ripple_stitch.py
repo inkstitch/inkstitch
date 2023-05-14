@@ -124,10 +124,12 @@ def _line_count_adjust(stroke, num_lines):
         # So that the end point stays the same even if the design is resized. This is necessary to enable
         # the user to carefully plan the output and and connect the end point to the following object
         num_lines -= 1
+    # ensure minimum line count
+    num_lines = max(1, num_lines)
     if stroke.is_closed or stroke.join_style == 1:
         # for flat join styles we need to add an other line
         num_lines += 1
-    return max(1, num_lines)
+    return num_lines
 
 
 def _get_helper_lines(stroke):
