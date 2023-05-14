@@ -22,15 +22,15 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#ffffff"
      showgrid="true"
-     inkscape:zoom="5.656854"
-     inkscape:cx="18.208"
-     inkscape:cy="122.41787"
+     inkscape:zoom="1.4142135"
+     inkscape:cx="-39.597981"
+     inkscape:cy="145.664"
      inkscape:window-width="1920"
      inkscape:window-height="1009"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g8424"
+     inkscape:current-layer="g11"
      inkscape:document-units="px"
      showguides="false">
     <sodipodi:guide
@@ -436,7 +436,7 @@ Copyright 2017 The EB Garamond Project Authors (https://github.com/octaviopardo/
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ϱ"
      id="g8424"
-     style="display:inline">
+     style="display:none">
     <path
        d="m 7.1365294,104.93769 c 2.794862,-8.770503 4.6563866,-18.040463 9.7417096,-25.870103 2.877278,-5.19827 7.320099,-10.1032 13.3966,-11.2858 3.403913,-0.86501 7.357505,-0.0246 9.8118,2.5589 2.963836,3.32014 4.085619,8.1056 2.821323,12.38541 -1.976861,7.99966 -7.18432,15.61995 -14.986723,18.831593 -2.988173,1.05025 -6.727594,1.83037 -9.343504,-0.49142 -1.669897,-1.311043 -2.965545,-3.044213 -4.086196,-4.834283"
        inkstitch:running_stitch_length_mm="2"
@@ -13241,6 +13241,57 @@ Copyright 2017 The EB Garamond Project Authors (https://github.com/octaviopardo/
        inkstitch:use_seed="9902"
        inkscape:label="Auto-remplissage satin 9"
        inkstitch:force_lock_stitches="False"
+       style="font-style:italic;font-size:29.1042px;line-height:1.25;font-family:'EB Garamond';-inkscape-font-specification:'EB Garamond Italic';opacity:1;fill:none;stroke:#000000;stroke-width:2;stroke-opacity:1"
+       inkstitch:reverse_rails="none" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="GlyphLayer--"
+     id="g11"
+     transform="translate(13.7636, -1.9117)"
+     style="display:inline">
+    <path
+       d="m 5.2206,82.4297 0.4119,-1.0451 0.5779,-0.935 0.7425,-0.7425 0.9077,-0.2475 h 21.34 5.5608 m -29.76,4.8401 0.11,0.4674 0.3299,0.5226 0.5774,0.3299 0.6324,0.11 h 22.7702 3.8794 m -20.6893,-6.27 -2.125,6.8896"
+       id="path8"
+       sodipodi:nodetypes="ccsccsccccsccsccccccc"
+       inkstitch:satin_column="True"
+       inkstitch:max_stitch_length_mm="6"
+       inkstitch:pull_compensation_mm="0.2"
+       inkstitch:zigzag_spacing_mm="0.3"
+       inkstitch:ties="3"
+       inkstitch:zigzag_underlay="True"
+       inkstitch:zigzag_underlay_inset_mm=".1"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+       inkstitch:center_walk_underlay="False"
+       inkstitch:contour_underlay="False"
+       inkstitch:use_seed="9510"
+       inkscape:label="Auto-remplissage satin 6"
+       style="font-style:italic;font-size:29.1042px;line-height:1.25;font-family:'EB Garamond';-inkscape-font-specification:'EB Garamond Italic';opacity:1;fill:none;stroke:#000000;stroke-width:2;stroke-opacity:1"
+       inkstitch:reverse_rails="none" />
+    <path
+       d="m 33.6537,82.5946 c 9.553151,0.01932 16.81377,-0.390063 26.363503,-0.329753"
+       inkstitch:running_stitch_length_mm="2"
+       id="path9"
+       inkscape:label="Points droits pour auto-remplissage satin 7"
+       inkstitch:ties="3"
+       sodipodi:nodetypes="cc"
+       style="font-style:italic;font-size:29.1042px;line-height:1.25;font-family:'EB Garamond';-inkscape-font-specification:'EB Garamond Italic';opacity:1;fill:none;stroke:#000000;stroke-width:2;stroke-dasharray:0.5, 0.5;stroke-opacity:1" />
+    <path
+       d="m 62.6392,81.1097 -0.11,-0.6875 -0.5499,-0.5226 -0.6877,-0.33 -0.7425,-0.11 H 38.2189 34.7614 m 27.2301,4.6675 -0.5691,0.6836 -0.7571,0.5027 -0.8397,0.3102 -0.8167,0.106 h -20.79 -4.9182 m 7.0607,-6.8179 -1.6875,7.875 m 18.1875,-7.75 -2.25,7.375 m -19.677,-7.2656 -1.6068,6.897"
+       id="path10"
+       sodipodi:nodetypes="ccsccsccccsccsccccccc"
+       inkstitch:satin_column="True"
+       inkstitch:max_stitch_length_mm="6"
+       inkstitch:pull_compensation_mm="0.2"
+       inkstitch:zigzag_spacing_mm="0.3"
+       inkstitch:ties="3"
+       inkstitch:zigzag_underlay="True"
+       inkstitch:zigzag_underlay_inset_mm=".1"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+       inkstitch:center_walk_underlay="False"
+       inkstitch:contour_underlay="False"
+       inkstitch:use_seed="9510"
+       inkscape:label="Auto-remplissage satin 8"
        style="font-style:italic;font-size:29.1042px;line-height:1.25;font-family:'EB Garamond';-inkscape-font-specification:'EB Garamond Italic';opacity:1;fill:none;stroke:#000000;stroke-width:2;stroke-opacity:1"
        inkstitch:reverse_rails="none" />
   </g>
