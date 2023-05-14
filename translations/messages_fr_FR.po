@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2023-05-11 01:15+0000\n"
-"PO-Revision-Date: 2023-05-13 01:14\n"
+"PO-Revision-Date: 2023-05-14 01:21\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -2096,7 +2096,7 @@ msgstr "Est prioritaire sur le réglage nombre de lignes."
 
 #: lib/elements/stroke.py:193
 msgid "Stagger lines this many times before repeating"
-msgstr "Décaler les lignes ce n'ombre de fois avant de répéter"
+msgstr "Décaler les lignes ce nombre de fois avant de répéter"
 
 #: lib/elements/stroke.py:194
 msgid "Length of the cycle by which successive stitch lines are staggered. Fractional values are allowed and can have less visible diagonals than integer values. For linear ripples only."
