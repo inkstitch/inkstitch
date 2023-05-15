@@ -30,8 +30,10 @@ Plus d'informations [ici](/fr/docs/fill-tools/#convertir-en-blocs-de-dégradés)
 
 
 {% include folder-galleries path="color-blending/" captions="1:Dégradé inkscape;2:Résultat de l'extension ;3:Vision éclatée;" %}
+Si le dégradé comporte n+1 couleurs, l'extension découpe la forme en n parties et empile deux blocs de dégradé sur chaque partie.
 
-Sur chaque partie de la forme, au fur et à mesure que l'espacement entre les rangées augmente pour la première couleur, il diminue pour la seconde, donnant l'impression d'un dégradé de la première à la seconde couleur.
+Dans la broderie, cela produira n+1 blocs de couleurs.
+Ces 2n blocs de dégradé ont tous un espacement variable. Si l'on regarde deux blocs superposés, l'espacement de la première couleur diminue au fur et a mesure que l'espacement de la seconde augmente, produisant  l'impression d'un dégradé de la première à la seconde couleur.
 
 
 
