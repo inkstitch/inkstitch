@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-05-11 01:15+0000\n"
-"PO-Revision-Date: 2023-05-14 01:21\n"
+"POT-Creation-Date: 2023-05-15 01:18+0000\n"
+"PO-Revision-Date: 2023-05-15 01:20\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-11 01:15+0000\n"
+"POT-Creation-Date: 2023-05-15 01:18+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -68,8 +68,8 @@ msgstr "AGS Γαραμου Garamond"
 
 #. description of font in fonts/ags_garamond_latin_grec
 #: inkstitch-fonts-metadata.py:16
-msgid "This font contains all the letters of  the latin and  greek alphabets  and cover most european languages. Μ is 32mm hight and 20mm wide. It may be scaled down to 80% and scaled up to 150%"
-msgstr "Diese Schrift enthält alle Buchstaben des lateinischen und griechischen Alphabets und deckt damit die meistens europäischen Sprachen ab. Das M ist 32 mm hoch und 20 mm breit. Die Schrift kann bis zu 150 % vergrößert und bis zu 80 % verkleinert werden."
+msgid "This font contains all the letters of  the latin and  greek alphabets  and cover most european languages. Μ is 22mm hight and 20mm wide. It may be scaled down to 80% and scaled up to 150%"
+msgstr ""
 
 #. name of font in fonts/amitaclo
 #: inkstitch-fonts-metadata.py:18

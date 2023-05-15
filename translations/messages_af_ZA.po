@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-05-11 01:15+0000\n"
-"PO-Revision-Date: 2023-05-14 01:20\n"
+"POT-Creation-Date: 2023-05-15 01:18+0000\n"
+"PO-Revision-Date: 2023-05-15 01:19\n"
 "Last-Translator: \n"
 "Language-Team: Afrikaans\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-11 01:15+0000\n"
+"POT-Creation-Date: 2023-05-15 01:18+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -68,7 +68,7 @@ msgstr ""
 
 #. description of font in fonts/ags_garamond_latin_grec
 #: inkstitch-fonts-metadata.py:16
-msgid "This font contains all the letters of  the latin and  greek alphabets  and cover most european languages. Μ is 32mm hight and 20mm wide. It may be scaled down to 80% and scaled up to 150%"
+msgid "This font contains all the letters of  the latin and  greek alphabets  and cover most european languages. Μ is 22mm hight and 20mm wide. It may be scaled down to 80% and scaled up to 150%"
 msgstr ""
 
 #. name of font in fonts/amitaclo
