@@ -104,7 +104,7 @@ def _update_to_one(element):  # noqa: C901
         element.remove_param('e_stitch')
         element.set_param('satin_method', 'e_stitch')
 
-    if element.get_boolean_param('satin_column', False):
+    if element.get_boolean_param('satin_column', False) or element.get_int_param('stroke_method', 0) == 1:
         # reverse_rails defaults to Automatic, but we should never reverse an
         # old satin automatically, only new ones
         element.set_param('reverse_rails', 'none')
