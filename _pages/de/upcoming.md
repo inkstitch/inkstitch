@@ -102,7 +102,7 @@ Eine [Spiralfüllung](/de/docs/stitches/circular-fill) füllt eine Form mit eine
 
   * [Zugkomensation](/docs/stitches/satin-column/#satin-top-layer)
 
-    Asymmetrische Zugkomensation möglich durch die Eingabe zweier durch ein Leerzeichen getrennte Werte (mm, %)
+    Asymmetrische Zugkompensation möglich durch die Eingabe zweier durch ein Leerzeichen getrennte Werte (mm, %)
 
   * Option [Konturlinien umkehren]((/docs/stitches/satin-column/#satinsäule)) direkt aus dem Parameterdialog
 
