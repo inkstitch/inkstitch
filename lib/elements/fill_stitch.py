@@ -607,13 +607,13 @@ class FillStitch(EmbroideryElement):
     def validation_errors(self):
         if not self.shape_is_valid(self.shape):
             why = explain_validity(self.shape)
-            message, x, y = re.findall(r".+?(?=\[)|-?\d+(?:\.\d+)?", why)
+            message, x, y = re.match(r"(?P<message>.+)\[(?P<x>.+)\s(?P<y>.+)\]", why).groups()
             yield InvalidShapeError((x, y))
 
     def validation_warnings(self):  # noqa: C901
         if not self.shape_is_valid(self.original_shape):
             why = explain_validity(self.original_shape)
-            message, x, y = re.findall(r".+?(?=\[)|-?\d+(?:\.\d+)?", why)
+            message, x, y = re.match(r"(?P<message>.+)\[(?P<x>.+)\s(?P<y>.+)\]", why).groups()
             if "Hole lies outside shell" in message:
                 yield UnconnectedWarning((x, y))
             else:
