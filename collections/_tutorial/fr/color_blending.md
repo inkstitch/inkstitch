@@ -20,10 +20,11 @@ Les remplissages automatiques ne sont pas forcement des aplats de couleurs, il e
 Le plus simple est d'utiliser  l'extension Ink/Stitch
 
 ## [Convertir en blocs de dégradés](docs/fill-tools/#convert-to-gradient-blocks)
-* Créer une forme dont la couleur est un dégradé Inkscape
-* Choisir la méthode de remplissage **automatique** et vos autres paramètres de remplissage
+* Créer une forme dont la couleur est un dégradé Inkscape, choisissez l'angle du dégradé sur le canevas  en mode édition de noeuds à l'aide des poignées du dégradé, c'est cette direction qui détermine l'*angle* du remplissage.
+* Choisir la méthode de remplissage **automatique** et vos autres paramètres de remplissage (mais l'angle ou l'espacement final entre les rangées seront ignorés, et toute sous-couche sera ignorée)
 * Sélectionner la forme
 * `Extensions > Ink/Stitch > Outils : Remplissage> Convertir en blocs de dégradés`
+* Choisir l'espacement final des rangées dans la fenêtre qui s'ouvre
 
 Plus d'informations [ici](/fr/docs/fill-tools/#convertir-en-blocs-de-dégradés)
 
@@ -36,8 +37,6 @@ Plus d'informations [ici](/fr/docs/fill-tools/#convertir-en-blocs-de-dégradés)
 
 Sur chaque partie de la forme, au fur et à mesure que l'espacement entre les rangées augmente pour la première couleur, il diminue pour la seconde, donnant l'impression d'un dégradé de la première à la seconde couleur.
 
-La direction du dégradé (inkscape) détermine l' *angle* du remplissage.
-
 
 
 
@@ -46,8 +45,7 @@ La direction du dégradé (inkscape) détermine l' *angle* du remplissage.
 Donner une valeur au paramètre *Espacement final entre les rangées* déclenche un espacement variable entre les rangées.
 En regardant perpendiculairement à l'*angle* de remplissage, l'espacement entre les rangées varie linéairement depuis la valeur  *espacement entre les rangées* jusqu'à la valeur *espacement final entre les rangées*.
 
-Les deux blocs de dégradés que `Extensions > Ink/Stitch > Outils : Remplissage> Convertir en blocs de dégradés` empile sur chaque partie de la forme ont en fait le mêmes valeurs pour  *espacement entre les rangées* et  *espacement final entre les rangées*, mais leur *angles*  de remplissage sont opposés, remplissant ainsi les conditions d'obtention d'un dégradé. Les valeurs de ces paramètre dépendent du paramètrage initial de la forme, et visent à maintenir la densité de points souhaités
-
+Les deux blocs de dégradés que `Extensions > Ink/Stitch > Outils : Remplissage> Convertir en blocs de dégradés` empile sur chaque partie de la forme ont en fait le mêmes valeurs pour  *espacement entre les rangées* et  *espacement final entre les rangées*, mais leur *angles*  de remplissage sont opposés, remplissant ainsi les conditions d'obtention d'un dégradé. Les valeurs de ces paramètre dépendent du paramètrage initial de la forme, et visent à maintenir la densité de points souhaités. Il n'y a pas de sous-couche, sauf éventuellement sur les parties monochrome du dégradé.
 
 
 ## Ajuster le résultat
