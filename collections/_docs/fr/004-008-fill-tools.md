@@ -52,9 +52,13 @@ Convertir en blocs de dégradé va découper un remplissage dont la couleur de f
 
    ![linear gradient](/assets/images/docs/en/linear-gradient.png)
    
+   Choisir l'angle du dégradé à l'aide de  poignées du dégradé (passer en mode edition de noeud pour les voirs
+   
 2. Lancez `Extensions > Ink/Stitch > Outils: Remplissage > Convertir en blocs de dégradé
 
    ![color blocks](/assets/images/docs/color_blocks.png)
+   
+   Choisir l'espacement final des rangées
   
 ## Tutoriaux utilisant Outils: Remplissage
 
