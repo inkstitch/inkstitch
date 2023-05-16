@@ -103,9 +103,7 @@ def _get_satin_line_count(stroke, pairs):
             if shortest_line_len == 0 or length < shortest_line_len:
                 shortest_line_len = length
         num_lines = ceil(shortest_line_len / stroke.min_line_dist)
-    if stroke.join_style == 1:
-        num_lines += 1
-    return num_lines
+    return _line_count_adjust(stroke, num_lines)
 
 
 def _get_target_line_count(stroke, target, outline):
@@ -117,7 +115,19 @@ def _get_guided_line_count(stroke, guide_line):
         num_lines = stroke.line_count
     else:
         num_lines = ceil(guide_line.length / stroke.min_line_dist)
+    return _line_count_adjust(stroke, num_lines)
+
+
+def _line_count_adjust(stroke, num_lines):
+    if stroke.min_line_dist and stroke.line_count % 2 != num_lines % 2:
+        # We want the line count always to be either even or odd - depending on the line count value.
+        # So that the end point stays the same even if the design is resized. This is necessary to enable
+        # the user to carefully plan the output and and connect the end point to the following object
+        num_lines -= 1
+    # ensure minimum line count
+    num_lines = max(1, num_lines)
     if stroke.is_closed or stroke.join_style == 1:
+        # for flat join styles we need to add an other line
         num_lines += 1
     return num_lines
 

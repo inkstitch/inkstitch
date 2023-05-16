@@ -99,6 +99,7 @@ class ConvertToSatin(InkstitchExtension):
             path[0] = start.as_tuple()
 
     def remove_duplicate_points(self, path):
+        path = [[round(coord, 4) for coord in point] for point in path]
         return [point for point, repeats in groupby(path)]
 
     def join_style_args(self, element):

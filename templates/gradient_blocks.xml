@@ -11,12 +11,26 @@
             </submenu>
         </effects-menu>
     </effect>
-    <param name="end-row-spacing"
-           gui-text="End row spacing"
-           gui-description="Set to zero to use twice the row spacing value"
-           type="float"
-           min="0" max="100"
-           indents="1">0.5</param>
+    <param name="notebook" type="notebook">
+      <page name="options" gui-text="Options">
+        <param name="end-row-spacing"
+               gui-text="End row spacing"
+               gui-description="Set to zero to use twice the row spacing value"
+               type="float"
+               min="0" max="100"
+               precision="2"
+               indents="1">0</param>
+      </page>
+      <page name="info" gui-text="Help">
+          <label appearance="header">Converts a fill with a linear color gradient into color blocks with variable row spacing.</label>
+          <spacer />
+          <label>This may add density at the center.</label>
+          <spacer />
+          <label>If necessary adapt the end row spacing value after the conversion with the params dialog.</label>
+          <spacer />
+          <label appearance="url">https://inkstitch.org/docs/fill-tools/#convert-to-gradient-blocks</label>
+      </page>
+    </param>
     <script>
         {{ command_tag | safe }}
     </script>
