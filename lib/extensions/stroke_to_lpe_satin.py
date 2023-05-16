@@ -5,7 +5,7 @@
 
 import inkex
 
-from ..elements import SatinColumn, Stroke
+from ..elements import EmptyDObject, SatinColumn, Stroke
 from ..i18n import _
 from ..svg.tags import ORIGINAL_D, PATH_EFFECT, SODIPODI_NODETYPES
 from .base import InkstitchExtension
@@ -35,7 +35,10 @@ class StrokeToLpeSatin(InkstitchExtension):
 
         if not any((isinstance(item, Stroke) or isinstance(item, SatinColumn)) for item in self.elements):
             # L10N: Convert To Satin extension, user selected one or more objects that were not lines.
-            inkex.errormsg(_("Please select at least one stroke to convert to a satin column."))
+            if any(isinstance(item, EmptyDObject) for item in self.elements):
+                inkex.errormsg(_("This element has lost its path information. Please move the element slightly back and forth before you try again."))
+            else:
+                inkex.errormsg(_("Please select at least one stroke to convert to a satin column."))
             return
 
         pattern = self.options.pattern
