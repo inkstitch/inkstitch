@@ -352,14 +352,14 @@ class FillStitch(EmbroideryElement):
                      'Also used for meander and circular fill.'),
            unit='mm',
            type='float',
-           default=1.5,
+           default=2.5,
            select_items=[('fill_method', 'auto_fill'),
                          ('fill_method', 'guided_fill'),
                          ('fill_method', 'meander_fill'),
                          ('fill_method', 'circular_fill')],
            sort_index=31)
     def running_stitch_length(self):
-        return max(self.get_float_param("running_stitch_length_mm", 1.5), 0.01)
+        return max(self.get_float_param("running_stitch_length_mm", 2.5), 0.01)
 
     @property
     @param('running_stitch_tolerance_mm',

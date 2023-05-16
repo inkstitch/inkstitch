@@ -101,10 +101,10 @@ class Stroke(EmbroideryElement):
            unit='mm',
            type='float',
            select_items=[('stroke_method', 'running_stitch'), ('stroke_method', 'ripple_stitch')],
-           default=1.5,
+           default=2.5,
            sort_index=4)
     def running_stitch_length(self):
-        return max(self.get_float_param("running_stitch_length_mm", 1.5), 0.01)
+        return max(self.get_float_param("running_stitch_length_mm", 2.5), 0.01)
 
     @property
     @param('running_stitch_tolerance_mm',

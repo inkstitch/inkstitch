@@ -112,6 +112,9 @@ def _update_to_one(element):  # noqa: C901
     # default setting for fill_underlay has changed
     if legacy_attribs and not element.get_param('fill_underlay', ""):
         element.set_param('fill_underlay', False)
+    # default setting for running stitch length has changed (fills and strokes, not satins)
+    if not element.get_boolean_param('satin_column', False) and element.get_float_param('running_stitch_length_mm', None) is None:
+        element.set_param('running_stitch_length_mm', 1.5)
 
     # convert legacy stroke_method
     if element.get_style("stroke") and not element.node.get('inkscape:connection-start', None):
