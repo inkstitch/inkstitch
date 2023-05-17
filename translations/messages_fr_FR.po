@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-05-15 01:18+0000\n"
-"PO-Revision-Date: 2023-05-15 01:20\n"
+"POT-Creation-Date: 2023-05-17 01:17+0000\n"
+"PO-Revision-Date: 2023-05-17 01:19\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-15 01:18+0000\n"
+"POT-Creation-Date: 2023-05-17 01:17+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -69,7 +69,7 @@ msgstr "AGS Γαραμου Garamond"
 #. description of font in fonts/ags_garamond_latin_grec
 #: inkstitch-fonts-metadata.py:16
 msgid "This font contains all the letters of  the latin and  greek alphabets  and cover most european languages. Μ is 22mm hight and 20mm wide. It may be scaled down to 80% and scaled up to 150%"
-msgstr ""
+msgstr "Cette fonte contient toutes les lettres de lettres des alphabets grecs et latin et couvre la plupart des langages européens. Le M mesure 22 mm de haut et 20 mm de large. Elle peut être agrandie jusqu'à 150% et réduite jusqu'à 150%"
 
 #. name of font in fonts/amitaclo
 #: inkstitch-fonts-metadata.py:18
@@ -1163,7 +1163,7 @@ msgstr "A la fin"
 
 #: lib/elements/element.py:227
 msgid "Neither"
-msgstr "Ni"
+msgstr "Aucun"
 
 #: lib/elements/element.py:236
 #: inx/inkstitch_lettering_force_lock_stitches.inx:3
@@ -1515,7 +1515,7 @@ msgstr "Espacement entre les rangées"
 msgid "Distance between rows of stitches."
 msgstr "Espacement entre les rangées de points."
 
-#: lib/elements/fill_stitch.py:283 inx/inkstitch_gradient_blocks.inx:19
+#: lib/elements/fill_stitch.py:283 inx/inkstitch_gradient_blocks.inx:22
 msgid "End row spacing"
 msgstr "Espacement final entre les rangées"
 
@@ -1909,27 +1909,27 @@ msgstr "Compensation d'étirement"
 msgid "Satin stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape. This setting expands each pair of needle penetrations outward from the center of the satin column by a fixed length. Two values separated by a space may be used for an aysmmetric effect."
 msgstr "Les points satin resserrent le tissu, ce qui entraîne une colonne plus étroite que celle que vous dessinez dans Inkscape. Ce paramètre étend le point depuis le centre vers l’extérieur de la colonne satinée. Deux valeurs séparées par un espace peuvent être utilisées pour un effet asymétrique."
 
-#: lib/elements/satin_column.py:232
+#: lib/elements/satin_column.py:232 lib/elements/stroke.py:264
 msgid "Automatic"
 msgstr "Automatique"
 
-#: lib/elements/satin_column.py:233
+#: lib/elements/satin_column.py:233 lib/elements/stroke.py:265
 msgid "Don't reverse"
 msgstr "Ne pas inverser"
 
-#: lib/elements/satin_column.py:234
+#: lib/elements/satin_column.py:234 lib/elements/stroke.py:266
 msgid "Reverse first rail"
 msgstr "Inverser la direction du premier rail"
 
-#: lib/elements/satin_column.py:235
+#: lib/elements/satin_column.py:235 lib/elements/stroke.py:267
 msgid "Reverse second rail"
 msgstr "Inverser la direction du second rail"
 
-#: lib/elements/satin_column.py:236
+#: lib/elements/satin_column.py:236 lib/elements/stroke.py:268
 msgid "Reverse both rails"
 msgstr "Inverser la direction des deux rails"
 
-#: lib/elements/satin_column.py:242
+#: lib/elements/satin_column.py:242 lib/elements/stroke.py:274
 msgid "Reverse rails"
 msgstr "Inverser la direction des rails"
 
@@ -2142,67 +2142,71 @@ msgstr "Changer le sens"
 msgid "Flip start and end point"
 msgstr "Intervertit le début et la fin"
 
-#: lib/elements/stroke.py:266
+#: lib/elements/stroke.py:275
+msgid "Reverse satin ripple rails.  Default: automatically detect and fix a reversed rail."
+msgstr ""
+
+#: lib/elements/stroke.py:287
 msgid "Grid size"
 msgstr "Taille de la grille"
 
-#: lib/elements/stroke.py:267
+#: lib/elements/stroke.py:288
 msgid "Render as grid. Use with care and watch your stitch density."
 msgstr "Rendu en grille. Utilisez avec précaution et surveillez la densité de points."
 
-#: lib/elements/stroke.py:279
+#: lib/elements/stroke.py:300
 msgid "Scale axis"
 msgstr "Mettre à l'échelle sur l'axe"
 
-#: lib/elements/stroke.py:280
+#: lib/elements/stroke.py:301
 msgid "Scale axis for satin guided ripple stitches."
 msgstr "Axe de mise à l'échelle pour les ondulations guidées."
 
-#: lib/elements/stroke.py:284 print/templates/ui.html:181
+#: lib/elements/stroke.py:305 print/templates/ui.html:181
 msgid "None"
 msgstr "Aucune"
 
-#: lib/elements/stroke.py:292
+#: lib/elements/stroke.py:313
 msgid "Starting scale"
 msgstr "Démarrer à"
 
-#: lib/elements/stroke.py:293
+#: lib/elements/stroke.py:314
 msgid "How big the first copy of the line should be, in percent."
 msgstr "Taille de la première ondulation en pourcentage."
 
-#: lib/elements/stroke.py:293 lib/elements/stroke.py:305
+#: lib/elements/stroke.py:314 lib/elements/stroke.py:326
 msgid "Used only for ripple stitch with a guide line."
 msgstr "Utilisé uniquement pour des ondulations guidées."
 
-#: lib/elements/stroke.py:304
+#: lib/elements/stroke.py:325
 msgid "Ending scale"
 msgstr "Finir à"
 
-#: lib/elements/stroke.py:305
+#: lib/elements/stroke.py:326
 msgid "How big the last copy of the line should be, in percent."
 msgstr "Taille de la dernière ondulation en pourcentage."
 
-#: lib/elements/stroke.py:316
+#: lib/elements/stroke.py:337
 msgid "Rotate"
 msgstr "Tourner"
 
-#: lib/elements/stroke.py:317
+#: lib/elements/stroke.py:338
 msgid "Rotate satin guided ripple stitches"
 msgstr "Tourne les ondulations guidées par un satin"
 
-#: lib/elements/stroke.py:328
+#: lib/elements/stroke.py:349
 msgid "Join style"
 msgstr "Style de jointure"
 
-#: lib/elements/stroke.py:329
+#: lib/elements/stroke.py:350
 msgid "Join style for non circular ripples."
 msgstr "Style de jointure pour les ondulations ouvertes."
 
-#: lib/elements/stroke.py:332
+#: lib/elements/stroke.py:353
 msgid "flat"
 msgstr "segment"
 
-#: lib/elements/stroke.py:332
+#: lib/elements/stroke.py:353
 msgid "point"
 msgstr "point"
 
@@ -2298,7 +2302,7 @@ msgstr "Veuillez sélectionner au moins une ligne pour convertir en colonne Sati
 msgid "Only simple lines may be converted to satin columns."
 msgstr "Seules les lignes simples peuvent être converties en colonnes satin."
 
-#: lib/extensions/convert_to_satin.py:145
+#: lib/extensions/convert_to_satin.py:146
 msgid "Ink/Stitch cannot convert your stroke into a satin column. Please break up your path and try again."
 msgstr "Inkstitch ne peut pas convertir votre trait en colonne satin. Veuillez séparer votre chemin et réessayer."
 
@@ -2387,7 +2391,7 @@ msgstr "Aucun élément n'a été choisi.\n\n"
 msgid "We couldn't find any fill colors on your text elements. Please read the instructions on our website."
 msgstr "Nous n'avons pas trouvé de couleurs de remplissage sur vos éléments de texte. Veuillez lire les instructions sur notre site Web."
 
-#: lib/extensions/gradient_blocks.py:35 lib/extensions/gradient_blocks.py:43
+#: lib/extensions/gradient_blocks.py:39 lib/extensions/gradient_blocks.py:47
 msgid "Please select at least one object with a gradient fill."
 msgstr "Merci de sélectionner au moins un objet avec un remplissage en dégradé."
 
@@ -2429,7 +2433,7 @@ msgid "Font size filter (mm). 0 for all sizes."
 msgstr "Filtre des fontes selon leur taille (mm). 0 pour obtenir toutes les fontes."
 
 #: lib/extensions/lettering.py:69 inx/inkstitch_apply_threadlist.inx:7
-#: inx/inkstitch_fill_to_stroke.inx:15
+#: inx/inkstitch_fill_to_stroke.inx:15 inx/inkstitch_gradient_blocks.inx:15
 #: inx/inkstitch_lettering_along_path.inx:13
 #: inx/inkstitch_palette_to_text.inx:15 inx/inkstitch_stroke_to_lpe_satin.inx:7
 #: inx/inkstitch_zigzag_line_to_satin.inx:7
@@ -2631,18 +2635,20 @@ msgstr "Veuillez sélectionner au moins un objet à marquer comme texture."
 msgid "Please select at least one stroke."
 msgstr "Merci de sélectionner au moins un trait."
 
-#. : Convert To Satin extension, user selected one or more objects that were
-#. not lines.
-#: lib/extensions/stroke_to_lpe_satin.py:38
+#: lib/extensions/stroke_to_lpe_satin.py:39
+msgid "This element has lost its path information. Please move the element slightly back and forth before you try again."
+msgstr ""
+
+#: lib/extensions/stroke_to_lpe_satin.py:41
 #: lib/extensions/zigzag_line_to_satin.py:27
 msgid "Please select at least one stroke to convert to a satin column."
 msgstr "Veuillez sélectionner au moins une ligne pour la convertir en colonne Satin."
 
-#: lib/extensions/stroke_to_lpe_satin.py:43
+#: lib/extensions/stroke_to_lpe_satin.py:46
 msgid "Could not find the specified pattern."
 msgstr "Impossible de trouver le motif spécifié."
 
-#: lib/extensions/stroke_to_lpe_satin.py:131
+#: lib/extensions/stroke_to_lpe_satin.py:134
 msgid "Cannot convert a satin column into a live path effect satin. Please select a stroke."
 msgstr "Impossible d'appliquer l'effet de chemin satin à une colonne satin. Merci de sélectionner une ligne."
 
@@ -3914,6 +3920,7 @@ msgstr "*Choisir une palette de couleurs"
 #: inx/inkstitch_apply_threadlist.inx:87 inx/inkstitch_auto_run.inx:23
 #: inx/inkstitch_cutwork_segmentation.inx:42
 #: inx/inkstitch_fill_to_stroke.inx:23 inx/inkstitch_generate_palette.inx:24
+#: inx/inkstitch_gradient_blocks.inx:24
 #: inx/inkstitch_lettering_along_path.inx:17
 #: inx/inkstitch_palette_to_text.inx:19 inx/inkstitch_select_elements.inx:51
 #: inx/inkstitch_stroke_to_lpe_satin.inx:26
@@ -4329,9 +4336,25 @@ msgstr "Ajouter des commandes"
 msgid "Convert to gradient blocks"
 msgstr "Convertir en blocs de dégradés"
 
-#: inx/inkstitch_gradient_blocks.inx:19
+#: inx/inkstitch_gradient_blocks.inx:22
 msgid "Set to zero to use twice the row spacing value"
 msgstr "Mis à zéro pour utiliser le double de l'espacement entre les rangées"
+
+#: inx/inkstitch_gradient_blocks.inx:25
+msgid "Converts a fill with a linear color gradient into color blocks with variable row spacing."
+msgstr ""
+
+#: inx/inkstitch_gradient_blocks.inx:27
+msgid "This may add density at the center."
+msgstr ""
+
+#: inx/inkstitch_gradient_blocks.inx:29
+msgid "If necessary adapt the end row spacing value after the conversion with the params dialog."
+msgstr ""
+
+#: inx/inkstitch_gradient_blocks.inx:31
+msgid "https://inkstitch.org/docs/fill-tools/#convert-to-gradient-blocks"
+msgstr ""
 
 #: inx/inkstitch_input_100.inx:3
 msgid "100 file input"

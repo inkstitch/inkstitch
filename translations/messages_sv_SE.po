@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-05-15 01:18+0000\n"
-"PO-Revision-Date: 2023-05-15 01:21\n"
+"POT-Creation-Date: 2023-05-17 01:17+0000\n"
+"PO-Revision-Date: 2023-05-17 01:20\n"
 "Last-Translator: \n"
 "Language-Team: Swedish\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-15 01:18+0000\n"
+"POT-Creation-Date: 2023-05-17 01:17+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1512,7 +1512,7 @@ msgstr ""
 msgid "Distance between rows of stitches."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:283 inx/inkstitch_gradient_blocks.inx:19
+#: lib/elements/fill_stitch.py:283 inx/inkstitch_gradient_blocks.inx:22
 msgid "End row spacing"
 msgstr ""
 
@@ -1901,27 +1901,27 @@ msgstr ""
 msgid "Satin stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape. This setting expands each pair of needle penetrations outward from the center of the satin column by a fixed length. Two values separated by a space may be used for an aysmmetric effect."
 msgstr ""
 
-#: lib/elements/satin_column.py:232
+#: lib/elements/satin_column.py:232 lib/elements/stroke.py:264
 msgid "Automatic"
 msgstr ""
 
-#: lib/elements/satin_column.py:233
+#: lib/elements/satin_column.py:233 lib/elements/stroke.py:265
 msgid "Don't reverse"
 msgstr ""
 
-#: lib/elements/satin_column.py:234
+#: lib/elements/satin_column.py:234 lib/elements/stroke.py:266
 msgid "Reverse first rail"
 msgstr ""
 
-#: lib/elements/satin_column.py:235
+#: lib/elements/satin_column.py:235 lib/elements/stroke.py:267
 msgid "Reverse second rail"
 msgstr ""
 
-#: lib/elements/satin_column.py:236
+#: lib/elements/satin_column.py:236 lib/elements/stroke.py:268
 msgid "Reverse both rails"
 msgstr ""
 
-#: lib/elements/satin_column.py:242
+#: lib/elements/satin_column.py:242 lib/elements/stroke.py:274
 msgid "Reverse rails"
 msgstr ""
 
@@ -2134,67 +2134,71 @@ msgstr ""
 msgid "Flip start and end point"
 msgstr ""
 
-#: lib/elements/stroke.py:266
+#: lib/elements/stroke.py:275
+msgid "Reverse satin ripple rails.  Default: automatically detect and fix a reversed rail."
+msgstr ""
+
+#: lib/elements/stroke.py:287
 msgid "Grid size"
 msgstr ""
 
-#: lib/elements/stroke.py:267
+#: lib/elements/stroke.py:288
 msgid "Render as grid. Use with care and watch your stitch density."
 msgstr ""
 
-#: lib/elements/stroke.py:279
+#: lib/elements/stroke.py:300
 msgid "Scale axis"
 msgstr ""
 
-#: lib/elements/stroke.py:280
+#: lib/elements/stroke.py:301
 msgid "Scale axis for satin guided ripple stitches."
 msgstr ""
 
-#: lib/elements/stroke.py:284 print/templates/ui.html:181
+#: lib/elements/stroke.py:305 print/templates/ui.html:181
 msgid "None"
 msgstr ""
 
-#: lib/elements/stroke.py:292
+#: lib/elements/stroke.py:313
 msgid "Starting scale"
 msgstr ""
 
-#: lib/elements/stroke.py:293
+#: lib/elements/stroke.py:314
 msgid "How big the first copy of the line should be, in percent."
 msgstr ""
 
-#: lib/elements/stroke.py:293 lib/elements/stroke.py:305
+#: lib/elements/stroke.py:314 lib/elements/stroke.py:326
 msgid "Used only for ripple stitch with a guide line."
 msgstr ""
 
-#: lib/elements/stroke.py:304
+#: lib/elements/stroke.py:325
 msgid "Ending scale"
 msgstr ""
 
-#: lib/elements/stroke.py:305
+#: lib/elements/stroke.py:326
 msgid "How big the last copy of the line should be, in percent."
 msgstr ""
 
-#: lib/elements/stroke.py:316
+#: lib/elements/stroke.py:337
 msgid "Rotate"
 msgstr ""
 
-#: lib/elements/stroke.py:317
+#: lib/elements/stroke.py:338
 msgid "Rotate satin guided ripple stitches"
 msgstr ""
 
-#: lib/elements/stroke.py:328
+#: lib/elements/stroke.py:349
 msgid "Join style"
 msgstr ""
 
-#: lib/elements/stroke.py:329
+#: lib/elements/stroke.py:350
 msgid "Join style for non circular ripples."
 msgstr ""
 
-#: lib/elements/stroke.py:332
+#: lib/elements/stroke.py:353
 msgid "flat"
 msgstr ""
 
-#: lib/elements/stroke.py:332
+#: lib/elements/stroke.py:353
 msgid "point"
 msgstr ""
 
@@ -2289,7 +2293,7 @@ msgstr ""
 msgid "Only simple lines may be converted to satin columns."
 msgstr ""
 
-#: lib/extensions/convert_to_satin.py:145
+#: lib/extensions/convert_to_satin.py:146
 msgid "Ink/Stitch cannot convert your stroke into a satin column. Please break up your path and try again."
 msgstr ""
 
@@ -2377,7 +2381,7 @@ msgstr ""
 msgid "We couldn't find any fill colors on your text elements. Please read the instructions on our website."
 msgstr ""
 
-#: lib/extensions/gradient_blocks.py:35 lib/extensions/gradient_blocks.py:43
+#: lib/extensions/gradient_blocks.py:39 lib/extensions/gradient_blocks.py:47
 msgid "Please select at least one object with a gradient fill."
 msgstr ""
 
@@ -2419,7 +2423,7 @@ msgid "Font size filter (mm). 0 for all sizes."
 msgstr ""
 
 #: lib/extensions/lettering.py:69 inx/inkstitch_apply_threadlist.inx:7
-#: inx/inkstitch_fill_to_stroke.inx:15
+#: inx/inkstitch_fill_to_stroke.inx:15 inx/inkstitch_gradient_blocks.inx:15
 #: inx/inkstitch_lettering_along_path.inx:13
 #: inx/inkstitch_palette_to_text.inx:15 inx/inkstitch_stroke_to_lpe_satin.inx:7
 #: inx/inkstitch_zigzag_line_to_satin.inx:7
@@ -2620,18 +2624,20 @@ msgstr ""
 msgid "Please select at least one stroke."
 msgstr ""
 
-#. : Convert To Satin extension, user selected one or more objects that were
-#. not lines.
-#: lib/extensions/stroke_to_lpe_satin.py:38
+#: lib/extensions/stroke_to_lpe_satin.py:39
+msgid "This element has lost its path information. Please move the element slightly back and forth before you try again."
+msgstr ""
+
+#: lib/extensions/stroke_to_lpe_satin.py:41
 #: lib/extensions/zigzag_line_to_satin.py:27
 msgid "Please select at least one stroke to convert to a satin column."
 msgstr ""
 
-#: lib/extensions/stroke_to_lpe_satin.py:43
+#: lib/extensions/stroke_to_lpe_satin.py:46
 msgid "Could not find the specified pattern."
 msgstr ""
 
-#: lib/extensions/stroke_to_lpe_satin.py:131
+#: lib/extensions/stroke_to_lpe_satin.py:134
 msgid "Cannot convert a satin column into a live path effect satin. Please select a stroke."
 msgstr ""
 
@@ -3900,6 +3906,7 @@ msgstr ""
 #: inx/inkstitch_apply_threadlist.inx:87 inx/inkstitch_auto_run.inx:23
 #: inx/inkstitch_cutwork_segmentation.inx:42
 #: inx/inkstitch_fill_to_stroke.inx:23 inx/inkstitch_generate_palette.inx:24
+#: inx/inkstitch_gradient_blocks.inx:24
 #: inx/inkstitch_lettering_along_path.inx:17
 #: inx/inkstitch_palette_to_text.inx:19 inx/inkstitch_select_elements.inx:51
 #: inx/inkstitch_stroke_to_lpe_satin.inx:26
@@ -4315,8 +4322,24 @@ msgstr ""
 msgid "Convert to gradient blocks"
 msgstr ""
 
-#: inx/inkstitch_gradient_blocks.inx:19
+#: inx/inkstitch_gradient_blocks.inx:22
 msgid "Set to zero to use twice the row spacing value"
+msgstr ""
+
+#: inx/inkstitch_gradient_blocks.inx:25
+msgid "Converts a fill with a linear color gradient into color blocks with variable row spacing."
+msgstr ""
+
+#: inx/inkstitch_gradient_blocks.inx:27
+msgid "This may add density at the center."
+msgstr ""
+
+#: inx/inkstitch_gradient_blocks.inx:29
+msgid "If necessary adapt the end row spacing value after the conversion with the params dialog."
+msgstr ""
+
+#: inx/inkstitch_gradient_blocks.inx:31
+msgid "https://inkstitch.org/docs/fill-tools/#convert-to-gradient-blocks"
 msgstr ""
 
 #: inx/inkstitch_input_100.inx:3
