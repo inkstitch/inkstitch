@@ -1,3 +1,7 @@
+# used by distlocal
+export BUILD:=$(BUILD)
+export VERSION:=$(VERSION)
+
 dist: version locales inx
 	bash bin/build-python
 	bash bin/build-electron
@@ -7,8 +11,8 @@ distclean:
 	rm -rf build dist inx locales artifacts win mac *.spec *.tar.gz *.zip electron/node_modules electron/dist electron/build/mac electron/build/mac-arm64 electron/build/win-ia32-unpacked electron/build/linux-unpacked electron/build/linux-arm64-unpacked
 
 distlocal:
-	bash bin/build-check
-	make distclean && make dist
+	make distclean && make BUILD=local VERSION=local-build dist
+
 manual:
 	make inx && cd electron && yarn install && cd ..
 .PHONY: inx

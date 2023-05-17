@@ -1,7 +1,21 @@
-VERSION="$(echo ${GITHUB_REF} | sed -e 's|refs/heads/||' -e 's|refs/tags/||' -e 's|/|-|g')"
+VERSION="${VERSION:-$(echo ${GITHUB_REF} | sed -e 's|refs/heads/||' -e 's|refs/tags/||' -e 's|/|-|g')}"
 OS="${BUILD:-$(uname)}"
 ARCH="$(uname -m)"
 mkdir artifacts
+
+if [ "$BUILD" = "local" ]; then
+    case "$OS" in
+    "MINGW")
+        BUILD="windows"
+        ;;
+    "Darwin")
+        BUILD="osx"
+        ;;
+    *)
+        BUILD="linux"
+        ;;
+    esac
+fi
 
 if [ "$BUILD" = "osx" ]; then
     cp -a icons locales print LICENSE VERSION images/examples palettes symbols fonts tiles dbus inx dist/inkstitch.app/Contents/Resources
