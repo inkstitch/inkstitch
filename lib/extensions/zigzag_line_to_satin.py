@@ -55,15 +55,18 @@ class ZigzagLineToSatin(InkstitchExtension):
             # zigzag pattern: VVVVV
             rails = [point_list[0::2], point_list[1::2]]
             rail_points = [[], []]
+            rung_points = [[], []]
             for i, rail in enumerate(rails):
                 for j, point in enumerate(rail):
                     if j == 0 or point in point_list[2::len(point_list)-3]:
                         rail_points[i].append(point)
+                        rung_points[i].append(point)
                         continue
                     p0 = rail[j-1]
-                    rail_points[i].append(inkex.Vector2d(inkex.DirectedLineSegment(p0, point).point_at_ratio(0.5)))
                     rail_points[i].append(point)
-            rungs = list(zip(*rail_points))
+                    rung_points[i].append(inkex.Vector2d(inkex.DirectedLineSegment(p0, point).point_at_ratio(0.5)))
+                    rung_points[i].append(point)
+            rungs = list(zip(*rung_points))
             return rail_points, rungs
         else:
             # square pattern: |_|▔|_|▔|
@@ -88,7 +91,7 @@ class ZigzagLineToSatin(InkstitchExtension):
 
     def _smooth_path(self, rails):
         path_commands = []
-        smoothing = 0.2
+        smoothing = 0.4
         for rail in rails:
             for i, point in enumerate(rail):
                 if i == 0:
