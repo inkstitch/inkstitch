@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2023-05-17 01:17+0000\n"
-"PO-Revision-Date: 2023-05-17 01:19\n"
+"PO-Revision-Date: 2023-05-18 01:17\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -2144,7 +2144,7 @@ msgstr "Intervertit le début et la fin"
 
 #: lib/elements/stroke.py:275
 msgid "Reverse satin ripple rails.  Default: automatically detect and fix a reversed rail."
-msgstr ""
+msgstr "Inverse les rails d'une ondulation satin. Par défaut détecte automatiquement, et corrige la direction d'un des rails."
 
 #: lib/elements/stroke.py:287
 msgid "Grid size"
@@ -2637,7 +2637,7 @@ msgstr "Merci de sélectionner au moins un trait."
 
 #: lib/extensions/stroke_to_lpe_satin.py:39
 msgid "This element has lost its path information. Please move the element slightly back and forth before you try again."
-msgstr ""
+msgstr "Cet élément a perdu son information de chemin. Merci de le déplacer légèrement en arrière puis en avant de réessayer."
 
 #: lib/extensions/stroke_to_lpe_satin.py:41
 #: lib/extensions/zigzag_line_to_satin.py:27
@@ -4342,19 +4342,19 @@ msgstr "Mis à zéro pour utiliser le double de l'espacement entre les rangées"
 
 #: inx/inkstitch_gradient_blocks.inx:25
 msgid "Converts a fill with a linear color gradient into color blocks with variable row spacing."
-msgstr ""
+msgstr "Converti un remplissage avec dégradé linéaire de couleur en blocs de dégradés à espacement de rangées variable."
 
 #: inx/inkstitch_gradient_blocks.inx:27
 msgid "This may add density at the center."
-msgstr ""
+msgstr "Ceci peut ajouter de la densité vers le centre."
 
 #: inx/inkstitch_gradient_blocks.inx:29
 msgid "If necessary adapt the end row spacing value after the conversion with the params dialog."
-msgstr ""
+msgstr "Si nécessaire, après la conversion, adaptez l'espace final entre les rangées dans le dialogue de paramétrage."
 
 #: inx/inkstitch_gradient_blocks.inx:31
 msgid "https://inkstitch.org/docs/fill-tools/#convert-to-gradient-blocks"
-msgstr ""
+msgstr "https://inkstitch.org/fr/docs/fill-tools/#convert-to-gradient-blocks"
 
 #: inx/inkstitch_input_100.inx:3
 msgid "100 file input"
