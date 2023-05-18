@@ -23,7 +23,7 @@ const isDev = process.env.BABEL_ENV === 'development'
 var target = null
 // Finds this url in the argv array and sets to target value
 if (process.argv.includes(printPdfUrl)) {
-    target = process.argv.find(element => element === printPdfUrl);
+    target = printPdfUrl
 } else {
     target = process.argv[1] || "";
 }
