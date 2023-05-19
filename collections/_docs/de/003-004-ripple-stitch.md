@@ -93,6 +93,7 @@ Minimum line distance         || Overrides the number of lines setting.
 Stagger lines this many times before repeating      ||  Setting this dictates the length of the cycle by which successive stitch lines are staggered. Has no effect on *circular*  ripple stitches.
 Exponent umkehren              |☑  oder ▢| Kehrt den Effekt des Exponent-Wertes um.
 Umkehren                       |☑  oder ▢| Kehrt den gesamten Pfad um (Start = Ende). Andere Parameter bleiben von dieser Einstellung unberührt.
+Konturlinien umkehren          || Reverse satin ripple rails.  Default: automatically detect and fix a reversed rail.
 Größe des Gitters              |<img src="/assets/images/docs/ripple_only_grid.svg" alt="Distance"/>| Fügt quer verlaufende Linien hinzu, die zu einem Gittereffekt führen. Die Größe des Gitters kann auch Auswirkungen auf die Genauigkeit des Linienverlaufs haben.
 Skalieren                      | XY, X, Y oder Keine | Nur für geführte Ripples
 Start-Skalierung               | Prozentwert | Definiert die Skalierung der ersten Linie. Nur für geführte Ripples.
