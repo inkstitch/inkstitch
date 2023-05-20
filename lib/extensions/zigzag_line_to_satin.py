@@ -58,9 +58,10 @@ class ZigzagLineToSatin(InkstitchExtension):
                 skip = False
                 continue
             points.append(p0)
-            if inkex.DirectedLineSegment(p0, p1).length < 0.3:
+            if inkex.DirectedLineSegment(p0, p1).length < 0.4:
                 sharp_edges.append(p0)
                 skip = True
+        points.append(p1)
         return points, sharp_edges
 
     def _get_rails_and_rungs(self, point_list):
