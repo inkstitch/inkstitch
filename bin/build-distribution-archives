@@ -3,20 +3,6 @@ OS="${BUILD:-$(uname)}"
 ARCH="$(uname -m)"
 mkdir artifacts
 
-if [ "$BUILD" = "local" ]; then
-    case "$OS" in
-    "MINGW")
-        BUILD="windows"
-        ;;
-    "Darwin")
-        BUILD="osx"
-        ;;
-    *)
-        BUILD="linux"
-        ;;
-    esac
-fi
-
 if [ "$BUILD" = "osx" ]; then
     cp -a icons locales print LICENSE VERSION images/examples palettes symbols fonts tiles dbus inx dist/inkstitch.app/Contents/Resources
     # adding version to Info.plist
