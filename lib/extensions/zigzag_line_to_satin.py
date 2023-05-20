@@ -30,13 +30,15 @@ class ZigzagLineToSatin(InkstitchExtension):
         for node in self.svg.selection:
             d = []
             point_list = list(node.get_path().end_points)
+            # find duplicated nodes (= do not smooth)
+            point_list, sharp_edges = self._get_sharp_edge_nodes(point_list)
             rails, rungs = self._get_rails_and_rungs(point_list)
 
             if not self.options.smoothing:
                 for rail in rails:
                     d.append('M ' + ' '.join([str(point) for point in rail]))
             else:
-                rails, rungs = self._smooth_path(rails, rungs)
+                rails, rungs = self._smooth_path(rails, rungs, sharp_edges)
                 d.append(rails)
 
             if self.options.rungs:
@@ -46,6 +48,20 @@ class ZigzagLineToSatin(InkstitchExtension):
 
             node.set('d', " ".join(d))
             node.set('inkstitch:satin_column', True)
+
+    def _get_sharp_edge_nodes(self, point_list):
+        points = []
+        sharp_edges = []
+        skip = False
+        for p0, p1 in zip(point_list[:-1], point_list[1:]):
+            if skip is True:
+                skip = False
+                continue
+            points.append(p0)
+            if inkex.DirectedLineSegment(p0, p1).length < 0.3:
+                sharp_edges.append(p0)
+                skip = True
+        return points, sharp_edges
 
     def _get_rails_and_rungs(self, point_list):
         if self.options.pattern == "sawtooth":
@@ -91,7 +107,7 @@ class ZigzagLineToSatin(InkstitchExtension):
                 rungs.extend([[points[0], points[1]], [points[2], points[3]]])
             return rails, rungs
 
-    def _smooth_path(self, rails, rungs):
+    def _smooth_path(self, rails, rungs, sharp_edges):  # noqa: C901
         path_commands = []
         new_rungs = []
         k = [1, 0]
@@ -108,7 +124,9 @@ class ZigzagLineToSatin(InkstitchExtension):
                         prev_prev = rail[i - 1]
                     else:
                         prev_prev = rail[i-2]
+
                     prev = rail[i-1]
+
                     if i > len(rail) - 2:
                         next = point
                     else:
@@ -117,14 +135,20 @@ class ZigzagLineToSatin(InkstitchExtension):
                     # get length of handles
                     length = inkex.DirectedLineSegment(point, prev).length * smoothing
 
-                    # get handle positions
+                    # get start handle positions
                     start = inkex.DirectedLineSegment(prev_prev, point)
-                    end = inkex.DirectedLineSegment(next, prev)
-                    if not start.length == 0:
+                    if prev in sharp_edges:
+                        start = prev
+                    elif not start.length == 0:
                         start = start.parallel(*prev).point_at_length(start.length - length)
                     else:
                         start = start.start
-                    if not end.length == 0:
+
+                    # get end handle positions
+                    end = inkex.DirectedLineSegment(next, prev)
+                    if point in sharp_edges:
+                        end = point
+                    elif not end.length == 0:
                         end = end.parallel(*point).point_at_length(end.length - length)
                     else:
                         end = end.start
@@ -132,6 +156,7 @@ class ZigzagLineToSatin(InkstitchExtension):
                     # generate curves
                     path_commands.append(inkex.paths.Curve(*start, *end, *point))
 
+                    # recalculate rungs for zigzag pattern
                     if self.options.pattern == 'zigzag' and (has_equal_rail_point_count or i <= len(r)) and (not self.options.reduce_rungs or j == 0):
                         # in zigzag mode we do have alternating points on rails
                         # when smoothing them out, rungs may not intersect anymore
