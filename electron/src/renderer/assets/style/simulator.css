@@ -246,20 +246,20 @@ button.pressed {
 }
 
 .slider-label-trim {
-  transform: scale(1, 0.75) translate(-50%, -9px);
+  transform: scale(1, 0.75) translate(-50%, -9px) !important;;
 }
 
 .slider-label-stop {
   font-size: 1.2rem;
-  transform: translate(-50%, 12px);
+  transform: translate(-50%, 12px) !important;;
 }
 
 .slider-label-jump {
-  transform: translate(-50%, -50px);
+  transform: translate(-50%, -50px) !important;;
 }
 
 .slider-label-color-change {
-  transform: translate(-50%, 10px);
+  transform: translate(-50%, 10px) !important;;
 }
 
 .current-stitch-input {

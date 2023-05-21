@@ -54,7 +54,7 @@ function createWindow() {
     } else {
         mainWindow.loadURL(winURL)
     }
-    // This will remove the menus from the release or dev release.
+    // This will remove the menu from the release, in dev mode the menu is available.
     if(process.platform === "darwin" && !isDev) {
         Menu.setApplicationMenu(Menu.buildFromTemplate([]));
     } if(process.platform === "win32" || process.platform === "linux" && !isDev) {
