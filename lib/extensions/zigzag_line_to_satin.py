@@ -30,20 +30,39 @@ class ZigzagLineToSatin(InkstitchExtension):
         for node in self.svg.selection:
             d = []
             point_list = list(node.get_path().end_points)
+            # find duplicated nodes (= do not smooth)
+            point_list, sharp_edges = self._get_sharp_edge_nodes(point_list)
             rails, rungs = self._get_rails_and_rungs(point_list)
 
-            if self.options.rungs:
-                if self.options.reduce_rungs and len(rungs) > 2:
-                    rungs = rungs[0::2]
-                d.extend(self._rung_path(rungs))
             if not self.options.smoothing:
                 for rail in rails:
                     d.append('M ' + ' '.join([str(point) for point in rail]))
             else:
-                d.append(self._smooth_path(rails))
+                rails, rungs = self._smooth_path(rails, rungs, sharp_edges)
+                d.append(rails)
+
+            if self.options.rungs:
+                if self.options.pattern != 'zigzag' and self.options.reduce_rungs and len(rungs) > 2:
+                    rungs = rungs[0::2]
+                d.extend(self._rung_path(rungs))
 
             node.set('d', " ".join(d))
             node.set('inkstitch:satin_column', True)
+
+    def _get_sharp_edge_nodes(self, point_list):
+        points = []
+        sharp_edges = []
+        skip = False
+        for p0, p1 in zip(point_list[:-1], point_list[1:]):
+            if skip is True:
+                skip = False
+                continue
+            points.append(p0)
+            if inkex.DirectedLineSegment(p0, p1).length < 0.3:
+                sharp_edges.append(p0)
+                skip = True
+        points.append(p1)
+        return points, sharp_edges
 
     def _get_rails_and_rungs(self, point_list):
         if self.options.pattern == "sawtooth":
@@ -55,15 +74,18 @@ class ZigzagLineToSatin(InkstitchExtension):
             # zigzag pattern: VVVVV
             rails = [point_list[0::2], point_list[1::2]]
             rail_points = [[], []]
+            rung_points = [[], []]
             for i, rail in enumerate(rails):
                 for j, point in enumerate(rail):
                     if j == 0 or point in point_list[2::len(point_list)-3]:
                         rail_points[i].append(point)
+                        rung_points[i].append(point)
                         continue
                     p0 = rail[j-1]
-                    rail_points[i].append(inkex.Vector2d(inkex.DirectedLineSegment(p0, point).point_at_ratio(0.5)))
                     rail_points[i].append(point)
-            rungs = list(zip(*rail_points))
+                    rung_points[i].append(inkex.Vector2d(inkex.DirectedLineSegment(p0, point).point_at_ratio(0.5)))
+                    rung_points[i].append(point)
+            rungs = list(zip(*rung_points))
             return rail_points, rungs
         else:
             # square pattern: |_|▔|_|▔|
@@ -86,10 +108,14 @@ class ZigzagLineToSatin(InkstitchExtension):
                 rungs.extend([[points[0], points[1]], [points[2], points[3]]])
             return rails, rungs
 
-    def _smooth_path(self, rails):
+    def _smooth_path(self, rails, rungs, sharp_edges):  # noqa: C901
         path_commands = []
-        smoothing = 0.2
-        for rail in rails:
+        new_rungs = []
+        k = [1, 0]
+        smoothing = 0.4
+        has_equal_rail_point_count = len(rails[0]) == len(rails[1])
+        for j, rail in enumerate(rails):
+            r = rungs[j:len(rungs):2]
             for i, point in enumerate(rail):
                 if i == 0:
                     path_commands.append(inkex.paths.Move(*point))
@@ -99,7 +125,9 @@ class ZigzagLineToSatin(InkstitchExtension):
                         prev_prev = rail[i - 1]
                     else:
                         prev_prev = rail[i-2]
+
                     prev = rail[i-1]
+
                     if i > len(rail) - 2:
                         next = point
                     else:
@@ -108,21 +136,54 @@ class ZigzagLineToSatin(InkstitchExtension):
                     # get length of handles
                     length = inkex.DirectedLineSegment(point, prev).length * smoothing
 
-                    # get handle positions
+                    # get start handle positions
                     start = inkex.DirectedLineSegment(prev_prev, point)
-                    end = inkex.DirectedLineSegment(next, prev)
-                    if not start.length == 0:
+                    if prev in sharp_edges:
+                        start = prev
+                    elif not start.length == 0:
                         start = start.parallel(*prev).point_at_length(start.length - length)
                     else:
                         start = start.start
-                    if not end.length == 0:
+
+                    # get end handle positions
+                    end = inkex.DirectedLineSegment(next, prev)
+                    if point in sharp_edges:
+                        end = point
+                    elif not end.length == 0:
                         end = end.parallel(*point).point_at_length(end.length - length)
                     else:
                         end = end.start
 
                     # generate curves
                     path_commands.append(inkex.paths.Curve(*start, *end, *point))
-        return str(inkex.Path(path_commands))
+
+                    # recalculate rungs for zigzag pattern
+                    if self.options.pattern == 'zigzag' and (has_equal_rail_point_count or i <= len(r)) and (not self.options.reduce_rungs or j == 0):
+                        # in zigzag mode we do have alternating points on rails
+                        # when smoothing them out, rungs may not intersect anymore
+                        # so we need to find a spot on the smoothed rail to ensure the correct length
+                        rung = r[i-1]
+                        line = inkex.DirectedLineSegment(rung[0], rung[1])
+                        point0 = line.point_at_length(-50)
+                        point1 = line.point_at_length(line.length + 50)
+                        new_point = inkex.bezier.linebezierintersect((point0, point1), [prev, start, end, point])
+                        if new_point:
+                            new_rungs.append((rung[k[j]], new_point[0]))
+                        else:
+                            new_rungs.append(rung)
+
+        rungs = self._update_rungs(new_rungs, rungs, r, has_equal_rail_point_count)
+        return str(inkex.Path(path_commands)), rungs
+
+    def _update_rungs(self, new_rungs, rungs, r, has_equal_rail_point_count):
+        if self.options.pattern == 'zigzag':
+            rungs = new_rungs
+            if not has_equal_rail_point_count and not self.options.reduce_rungs:
+                # make sure, that the last rail on canvas is also the last rail in the list
+                # this important when we delete the very first and very last rung
+                count = len(r)
+                rungs[count], rungs[-1] = rungs[-1], rungs[count]
+        return rungs
 
     def _rung_path(self, rungs):
         if len(rungs) < 3:

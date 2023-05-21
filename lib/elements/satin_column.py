@@ -108,7 +108,7 @@ class SatinColumn(EmbroideryElement):
            _('Random percentage of satin width decrease'),
            tooltip=_('shorten stitch across rails at most this percent. '
                      'Two values separated by a space may be used for an aysmmetric effect.'),
-           default=0, type='float', unit="% (each side)", sort_index=91)
+           default=0, type='float', unit=_("% (each side)"), sort_index=91)
     @cache
     def random_width_decrease(self):
         return self.get_split_float_param("random_width_decrease_percent", (0, 0)) / 100
@@ -118,7 +118,7 @@ class SatinColumn(EmbroideryElement):
            _('Random percentage of satin width increase'),
            tooltip=_('lengthen stitch across rails at most this percent. '
                      'Two values separated by a space may be used for an aysmmetric effect.'),
-           default=0, type='float', unit="% (each side)", sort_index=90)
+           default=0, type='float', unit=_("% (each side)"), sort_index=90)
     @cache
     def random_width_increase(self):
         return self.get_split_float_param("random_width_increase_percent", (0, 0)) / 100
@@ -202,7 +202,7 @@ class SatinColumn(EmbroideryElement):
         _('Pull compensation percentage'),
         tooltip=_('Additional pull compensation which varies as a percentage of stitch width. '
                   'Two values separated by a space may be used for an aysmmetric effect.'),
-        unit='% (each side)',
+        unit=_('% (each side)'),
         type='float',
         default=0,
         sort_index=6)
@@ -218,7 +218,7 @@ class SatinColumn(EmbroideryElement):
         tooltip=_('Satin stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape. '
                   'This setting expands each pair of needle penetrations outward from the center of the satin column by a fixed length. '
                   'Two values separated by a space may be used for an aysmmetric effect.'),
-        unit='mm (each side)',
+        unit=_('mm (each side)'),
         type='float',
         default=0,
         sort_index=7)
@@ -314,7 +314,7 @@ class SatinColumn(EmbroideryElement):
            _('Inset distance (fixed)'),
            tooltip=_('Shrink the outline by a fixed length, to prevent the underlay from showing around the outside of the satin column.'),
            group=_('Contour Underlay'),
-           unit='mm (each side)',
+           unit=_('mm (each side)'),
            type='float',
            default=0.4,
            sort_index=2)
@@ -329,7 +329,7 @@ class SatinColumn(EmbroideryElement):
            tooltip=_('Shrink the outline by a proportion of the column width, '
                      'to prevent the underlay from showing around the outside of the satin column.'),
            group=_('Contour Underlay'),
-           unit='% (each side)', type='float', default=0,
+           unit=_('% (each side)'), type='float', default=0,
            sort_index=3)
     @cache
     def contour_underlay_inset_percent(self):
@@ -389,7 +389,7 @@ class SatinColumn(EmbroideryElement):
     @param('zigzag_underlay_inset_mm',
            _('Inset amount (fixed)'),
            tooltip=_('default: half of contour underlay inset'),
-           unit='mm (each side)',
+           unit=_('mm (each side)'),
            group=_('Zig-zag Underlay'),
            type='float',
            default="")
@@ -409,7 +409,7 @@ class SatinColumn(EmbroideryElement):
     @param('zigzag_underlay_inset_percent',
            _('Inset amount (proportional)'),
            tooltip=_('default: half of contour underlay inset'),
-           unit='% (each side)',
+           unit=_('% (each side)'),
            group=_('Zig-zag Underlay'),
            type='float',
            default="")

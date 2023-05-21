@@ -235,8 +235,8 @@ def _adjust_helper_lines_for_grid(stroke, helper_lines, skip_start, skip_end):
 
     if stroke.join_style == 0 and (stroke.reverse and count % 2 != 0):
         count += 1
-    elif (stroke.join_style == 1 and ((stroke.reverse and skip_end % 2 != 0) or
-          (not stroke.reverse and skip_start % 2 != 0))):
+    elif (stroke.join_style == 1 and ((stroke.reverse and (count + skip_start) % 2 != 0) or
+                                      (not stroke.reverse and skip_start % 2 != 0))):
         count += 1
 
     if count % 2 != 0:
@@ -246,14 +246,15 @@ def _adjust_helper_lines_for_grid(stroke, helper_lines, skip_start, skip_end):
 
 def _do_grid(stroke, helper_lines, skip_start, skip_end):
     helper_lines = _adjust_helper_lines_for_grid(stroke, helper_lines, skip_start, skip_end)
+    grid = []
     for i, helper in enumerate(helper_lines):
         end = len(helper) - skip_end
         points = helper[skip_start:end]
-        if i % 2 == 0:
-            points.reverse()
         if stroke.reverse:
             points.reverse()
-        yield from points
+        grid.append(points)
+    grid = _get_staggered_stitches(stroke, grid, 0)
+    return grid
 
 
 def _get_guided_helper_lines(stroke, outline, max_distance):

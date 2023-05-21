@@ -400,9 +400,11 @@ def add_commands(element, commands, pos=None):
         remove_legacy_param(element, command)
 
         group = add_group(svg, element.node, command)
-        if pos is None:
-            pos = get_command_pos(element, i, len(commands))
-        symbol = add_symbol(svg, group, command, pos)
+        position = pos
+        if position is None:
+            position = get_command_pos(element, i, len(commands))
+
+        symbol = add_symbol(svg, group, command, position)
         add_connector(svg, symbol, command, element)
 
 
