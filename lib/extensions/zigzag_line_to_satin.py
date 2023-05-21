@@ -58,7 +58,7 @@ class ZigzagLineToSatin(InkstitchExtension):
                 skip = False
                 continue
             points.append(p0)
-            if inkex.DirectedLineSegment(p0, p1).length < 0.4:
+            if inkex.DirectedLineSegment(p0, p1).length < 0.3:
                 sharp_edges.append(p0)
                 skip = True
         points.append(p1)
