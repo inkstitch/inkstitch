@@ -108,7 +108,7 @@ class SatinColumn(EmbroideryElement):
            _('Random percentage of satin width decrease'),
            tooltip=_('shorten stitch across rails at most this percent. '
                      'Two values separated by a space may be used for an aysmmetric effect.'),
-           default=0, type='float', unit="_(% (each side))", sort_index=91)
+           default=0, type='float', unit=_("% (each side)"), sort_index=91)
     @cache
     def random_width_decrease(self):
         return self.get_split_float_param("random_width_decrease_percent", (0, 0)) / 100
@@ -118,7 +118,7 @@ class SatinColumn(EmbroideryElement):
            _('Random percentage of satin width increase'),
            tooltip=_('lengthen stitch across rails at most this percent. '
                      'Two values separated by a space may be used for an aysmmetric effect.'),
-           default=0, type='float', unit="_(% (each side))", sort_index=90)
+           default=0, type='float', unit=_("% (each side)"), sort_index=90)
     @cache
     def random_width_increase(self):
         return self.get_split_float_param("random_width_increase_percent", (0, 0)) / 100
@@ -202,7 +202,7 @@ class SatinColumn(EmbroideryElement):
         _('Pull compensation percentage'),
         tooltip=_('Additional pull compensation which varies as a percentage of stitch width. '
                   'Two values separated by a space may be used for an aysmmetric effect.'),
-        unit='% (each side)',
+        unit=_('% (each side)'),
         type='float',
         default=0,
         sort_index=6)
