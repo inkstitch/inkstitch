@@ -7,7 +7,7 @@ from math import degrees, pi
 
 from inkex import DirectedLineSegment, PathElement, Transform, errormsg
 from shapely import geometry as shgeo
-from shapely.affinity import affine_transform, rotate
+from shapely.affinity import rotate
 from shapely.geometry import Point
 from shapely.ops import nearest_points, split
 
@@ -129,10 +129,12 @@ def gradient_shapes_and_attributes(element, shape):
     point1 = (float(gradient.get('x1')), float(gradient.get('y1')))
     point2 = (float(gradient.get('x2')), float(gradient.get('y2')))
     # get 90° angle to calculate the splitting angle
-    line = DirectedLineSegment(point1, point2)
+    transform = -Transform(get_correction_transform(element.node, child=True))
+    line = DirectedLineSegment(transform.apply_to_point(point1), transform.apply_to_point(point2))
     angle = line.angle - (pi / 2)
     # Ink/Stitch somehow turns the stitch angle
     stitch_angle = angle * -1
+
     # create bbox polygon to calculate the length necessary to make sure that
     # the gradient splitter lines will cut the entire design
     bbox = element.node.bounding_box()
@@ -154,9 +156,6 @@ def gradient_shapes_and_attributes(element, shape):
         split_line = shgeo.LineString([(split_point.x - length - 2, split_point.y),
                                        (split_point.x + length + 2, split_point.y)])
         split_line = rotate(split_line, angle, origin=split_point, use_radians=True)
-        transform = -Transform(get_correction_transform(element.node, child=True))
-        transform = list(transform.to_hexad())
-        split_line = affine_transform(split_line, transform)
         offset_line = split_line.parallel_offset(1, 'right')
         polygon = split(shape, split_line)
         color = stop_styles[i]['stop-color']
