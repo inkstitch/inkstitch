@@ -13,22 +13,24 @@ from ..utils import get_bundled_dir
 app_process = None
 
 
-def open_url(url, port):
+def open_url(url, port, pdf=False):  # noqa: C901
     global app
 
-    url = f'{url}?port={port}'
+    if not pdf:
+        url = f'{url}?port={port}'
+        os.environ['FLASKPORT'] = str(port)
 
-    os.environ['FLASKPORT'] = str(port)
-
-    # this creates the .json for dev mode to get translations
-    if getattr(sys, 'frozen', None) is None:
-        dynamic_port = {
-            "_comment1": "port should not be declared when commiting",
-            "port": port,
-        }
-        port_object = json.dumps(dynamic_port, indent=1)
-        with open(os.path.join("electron/src/lib/flaskserverport.json"), "w") as outfile:
-            outfile.write(port_object)
+        # this creates the .json for dev mode to get translations
+        if getattr(sys, 'frozen', None) is None:
+            dynamic_port = {
+                "_comment1": "port should not be declared when commiting",
+                "port": port,
+            }
+            port_object = json.dumps(dynamic_port, indent=1)
+            with open(os.path.join("electron/src/lib/flaskserverport.json"), "w") as outfile:
+                outfile.write(port_object)
+    else:
+        url = f'http://{url}:{port}/'
 
     cwd = None
     searchstring = "http"

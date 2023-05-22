@@ -335,7 +335,7 @@ class Print(InkstitchExtension):
         # after startup.
         time.sleep(0.5)
 
-        browser_window = open_url("http://%s:%s/" % (print_server.host, print_server.port))
+        browser_window = open_url(print_server.host, print_server.port, True)
         browser_window.wait()
         print_server.stop()
         print_server.join()
