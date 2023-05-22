@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-05-17 01:17+0000\n"
-"PO-Revision-Date: 2023-05-18 01:17\n"
+"POT-Creation-Date: 2023-05-22 01:20+0000\n"
+"PO-Revision-Date: 2023-05-22 01:22\n"
 "Last-Translator: \n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-17 01:17+0000\n"
+"POT-Creation-Date: 2023-05-22 01:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -962,7 +962,7 @@ msgstr "以下のご協力をお願いします：\n"
 "- SVG ファイルを保存。\n"
 "- https://github.com/inkstitch/inkstitch/issues に報告がない場合、レポートを新規作成しエラーを報告。"
 
-#: inkstitch.py:107 lib/elements/fill_stitch.py:905
+#: inkstitch.py:107 lib/elements/fill_stitch.py:904
 msgid "Include the error description and also (if possible) the svg file."
 msgstr "エラーの説明と (可能であれば) svg ファイルを添付してください。"
 
@@ -1065,7 +1065,7 @@ msgstr "エラー：ドキュメントに複数の%(command)sコマンドがあ�
 msgid "%(command)s: %(description)s"
 msgstr "%(command)s: %(description)s"
 
-#: lib/commands.py:295 lib/commands.py:428
+#: lib/commands.py:295 lib/commands.py:430
 msgid "Ink/Stitch Command"
 msgstr "インク/ステッチコマンド"
 
@@ -1079,7 +1079,7 @@ msgstr "コネクタ"
 msgid "command marker"
 msgstr "コマンドマーカー"
 
-#: lib/commands.py:418
+#: lib/commands.py:420
 msgid "Please select a layer to include layer commands."
 msgstr "コマンドを含めるレイヤーを選択してください。"
 
@@ -1639,13 +1639,13 @@ msgstr "乱数のシード値"
 msgid "Use a specific seed for randomized attributes. Uses the element ID if empty."
 msgstr "ランダムに決まる属性に対して、パターンを固定する必要がある場合に設定します。空の場合は、要素 ID が使用されます。"
 
-#: lib/elements/fill_stitch.py:897
+#: lib/elements/fill_stitch.py:896
 msgid "Error during autofill! This means it is a bug in Ink/Stitch."
 msgstr ""
 
 #. this message is followed by a URL:
 #. https://github.com/inkstitch/inkstitch/issues/new
-#: lib/elements/fill_stitch.py:900
+#: lib/elements/fill_stitch.py:899
 msgid "If you'd like to help please\n"
 "- copy the entire error message below\n"
 "- save your SVG file and\n"
@@ -1826,6 +1826,12 @@ msgstr ""
 msgid "shorten stitch across rails at most this percent. Two values separated by a space may be used for an aysmmetric effect."
 msgstr ""
 
+#: lib/elements/satin_column.py:111 lib/elements/satin_column.py:121
+#: lib/elements/satin_column.py:205 lib/elements/satin_column.py:332
+#: lib/elements/satin_column.py:412
+msgid "% (each side)"
+msgstr ""
+
 #: lib/elements/satin_column.py:118
 msgid "Random percentage of satin width increase"
 msgstr ""
@@ -1904,6 +1910,11 @@ msgstr "縮み補正"
 
 #: lib/elements/satin_column.py:218
 msgid "Satin stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape. This setting expands each pair of needle penetrations outward from the center of the satin column by a fixed length. Two values separated by a space may be used for an aysmmetric effect."
+msgstr ""
+
+#: lib/elements/satin_column.py:221 lib/elements/satin_column.py:317
+#: lib/elements/satin_column.py:392
+msgid "mm (each side)"
 msgstr ""
 
 #: lib/elements/satin_column.py:232 lib/elements/stroke.py:264

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-05-17 01:17+0000\n"
-"PO-Revision-Date: 2023-05-18 01:17\n"
+"POT-Creation-Date: 2023-05-22 01:20+0000\n"
+"PO-Revision-Date: 2023-05-22 01:21\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-17 01:17+0000\n"
+"POT-Creation-Date: 2023-05-22 01:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -962,7 +962,7 @@ msgstr "Si vous souhaitez aider, merci de \n"
 "- sauvegarder votre fichier svg\n"
 "- créer un rapport d'erreur (issue) sur https://github.com/inkstitch/inkstitch/issues"
 
-#: inkstitch.py:107 lib/elements/fill_stitch.py:905
+#: inkstitch.py:107 lib/elements/fill_stitch.py:904
 msgid "Include the error description and also (if possible) the svg file."
 msgstr "Incluez la description de l'erreur et (si possible) le fichier svg."
 
@@ -1065,7 +1065,7 @@ msgstr "Erreur : il y a plus d’une commande de %(command)s dans le document, 
 msgid "%(command)s: %(description)s"
 msgstr "%(command)s: %(description)s"
 
-#: lib/commands.py:295 lib/commands.py:428
+#: lib/commands.py:295 lib/commands.py:430
 msgid "Ink/Stitch Command"
 msgstr "Commande Ink/Stitch"
 
@@ -1079,7 +1079,7 @@ msgstr "connecteur"
 msgid "command marker"
 msgstr "marqueur de commande"
 
-#: lib/commands.py:418
+#: lib/commands.py:420
 msgid "Please select a layer to include layer commands."
 msgstr "Merci de sélectionner un calque pour ajouter des commandes de calque."
 
@@ -1639,13 +1639,13 @@ msgstr "Graine aléatoire"
 msgid "Use a specific seed for randomized attributes. Uses the element ID if empty."
 msgstr "Utiliser cette graine aléatoire pour le calcul des attributs. Si vide, utilise l'identificateur de l'élément."
 
-#: lib/elements/fill_stitch.py:897
+#: lib/elements/fill_stitch.py:896
 msgid "Error during autofill! This means it is a bug in Ink/Stitch."
 msgstr "Erreur pendant l'auto-remplissage. Cela veut dire que Ink/Stitch a un problème."
 
 #. this message is followed by a URL:
 #. https://github.com/inkstitch/inkstitch/issues/new
-#: lib/elements/fill_stitch.py:900
+#: lib/elements/fill_stitch.py:899
 msgid "If you'd like to help please\n"
 "- copy the entire error message below\n"
 "- save your SVG file and\n"
@@ -1829,6 +1829,12 @@ msgstr "Pourcentage de la diminution aléatoire de la largeur du satin"
 msgid "shorten stitch across rails at most this percent. Two values separated by a space may be used for an aysmmetric effect."
 msgstr "réduire la largeur du satin au plus de ce pourcentage. Deux valeurs séparées par un espace peuvent être utilisées pour un effet asymétrique."
 
+#: lib/elements/satin_column.py:111 lib/elements/satin_column.py:121
+#: lib/elements/satin_column.py:205 lib/elements/satin_column.py:332
+#: lib/elements/satin_column.py:412
+msgid "% (each side)"
+msgstr ""
+
 #: lib/elements/satin_column.py:118
 msgid "Random percentage of satin width increase"
 msgstr "Pourcentage maximum d'augmentation aléatoire de la largeur du satin"
@@ -1908,6 +1914,11 @@ msgstr "Compensation d'étirement"
 #: lib/elements/satin_column.py:218
 msgid "Satin stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape. This setting expands each pair of needle penetrations outward from the center of the satin column by a fixed length. Two values separated by a space may be used for an aysmmetric effect."
 msgstr "Les points satin resserrent le tissu, ce qui entraîne une colonne plus étroite que celle que vous dessinez dans Inkscape. Ce paramètre étend le point depuis le centre vers l’extérieur de la colonne satinée. Deux valeurs séparées par un espace peuvent être utilisées pour un effet asymétrique."
+
+#: lib/elements/satin_column.py:221 lib/elements/satin_column.py:317
+#: lib/elements/satin_column.py:392
+msgid "mm (each side)"
+msgstr ""
 
 #: lib/elements/satin_column.py:232 lib/elements/stroke.py:264
 msgid "Automatic"

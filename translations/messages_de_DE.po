@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-05-17 01:17+0000\n"
-"PO-Revision-Date: 2023-05-18 01:17\n"
+"POT-Creation-Date: 2023-05-22 01:20+0000\n"
+"PO-Revision-Date: 2023-05-22 01:21\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-17 01:17+0000\n"
+"POT-Creation-Date: 2023-05-22 01:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -962,7 +962,7 @@ msgstr "Wenn du uns helfen willst Ink/Stitch zu verbessern,\n"
 "- speichere die SVG-Datei ab und\n"
 "- erstelle einen Fehlerbereicht (New Issue) auf https://github.com/inkstitch/inkstitch/issues"
 
-#: inkstitch.py:107 lib/elements/fill_stitch.py:905
+#: inkstitch.py:107 lib/elements/fill_stitch.py:904
 msgid "Include the error description and also (if possible) the svg file."
 msgstr "Sende die Fehlerbeschreibung und (wenn möglich) auch die SVG-Datei."
 
@@ -1065,7 +1065,7 @@ msgstr "Fehler: Es gibt mehr als einen %(command)s-Befehl in dem Dokument, aber 
 msgid "%(command)s: %(description)s"
 msgstr "%(command)s: %(description)s"
 
-#: lib/commands.py:295 lib/commands.py:428
+#: lib/commands.py:295 lib/commands.py:430
 msgid "Ink/Stitch Command"
 msgstr "Ink/Stitch Befehl"
 
@@ -1079,7 +1079,7 @@ msgstr "Verknüpfung"
 msgid "command marker"
 msgstr "Befehlszeichen"
 
-#: lib/commands.py:418
+#: lib/commands.py:420
 msgid "Please select a layer to include layer commands."
 msgstr "Für Befehle, die sich auf eine Ebene beziehen, bitte eine Ebene auswählen."
 
@@ -1638,13 +1638,13 @@ msgstr "Zufallszahl"
 msgid "Use a specific seed for randomized attributes. Uses the element ID if empty."
 msgstr "Zufallswert für randomisierte Attribute. Verwendet die Element-ID, falls leer."
 
-#: lib/elements/fill_stitch.py:897
+#: lib/elements/fill_stitch.py:896
 msgid "Error during autofill! This means it is a bug in Ink/Stitch."
 msgstr "Es ist ein Fehler bei der Füllung aufgetreten! Das bedeutet, das ist ein Bug in Ink/Stitch."
 
 #. this message is followed by a URL:
 #. https://github.com/inkstitch/inkstitch/issues/new
-#: lib/elements/fill_stitch.py:900
+#: lib/elements/fill_stitch.py:899
 msgid "If you'd like to help please\n"
 "- copy the entire error message below\n"
 "- save your SVG file and\n"
@@ -1828,6 +1828,12 @@ msgstr "Zufälliger Prozentwert (Schrumpfen)"
 msgid "shorten stitch across rails at most this percent. Two values separated by a space may be used for an aysmmetric effect."
 msgstr "Kürzt Stiche um höchstens diesen Wert. Zwei durch ein Leerzeichen getrennte Werte können für einen asymmetrischen Effekt verwendet werden."
 
+#: lib/elements/satin_column.py:111 lib/elements/satin_column.py:121
+#: lib/elements/satin_column.py:205 lib/elements/satin_column.py:332
+#: lib/elements/satin_column.py:412
+msgid "% (each side)"
+msgstr ""
+
 #: lib/elements/satin_column.py:118
 msgid "Random percentage of satin width increase"
 msgstr "Zufälliger Prozentwert (Erweitern)"
@@ -1907,6 +1913,11 @@ msgstr "Zugausgleich"
 #: lib/elements/satin_column.py:218
 msgid "Satin stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape. This setting expands each pair of needle penetrations outward from the center of the satin column by a fixed length. Two values separated by a space may be used for an aysmmetric effect."
 msgstr "Satinstiche ziehen den Stoff zusammen. Dadurch wird das Stickbild schmaler, als die in Inkscape gezeichnete Form. Diese Einstellung erweitert die Satinsäule um einen festen Wert, um diesen Effekt auszugleichen. Zwei durch ein Leerzeichen getrennte Werte können für einen asymmetrischen Effekt genutzt werden."
+
+#: lib/elements/satin_column.py:221 lib/elements/satin_column.py:317
+#: lib/elements/satin_column.py:392
+msgid "mm (each side)"
+msgstr ""
 
 #: lib/elements/satin_column.py:232 lib/elements/stroke.py:264
 msgid "Automatic"
@@ -2143,7 +2154,7 @@ msgstr "Start- und Endpunkt vertauschen"
 
 #: lib/elements/stroke.py:275
 msgid "Reverse satin ripple rails.  Default: automatically detect and fix a reversed rail."
-msgstr ""
+msgstr "Außenkonturen der Satin-Führungslinie umkehren. In der Standardeinstellung werden gegenläufig verlaufende Linien automatisch korrigiert."
 
 #: lib/elements/stroke.py:287
 msgid "Grid size"
@@ -2636,7 +2647,7 @@ msgstr "Bitte mindestens eine Linie auswählen."
 
 #: lib/extensions/stroke_to_lpe_satin.py:39
 msgid "This element has lost its path information. Please move the element slightly back and forth before you try again."
-msgstr ""
+msgstr "Dieses Elemente hat keine Pfadinformation mehr. Das kann an einer vorherigen Anwendung eines Pfadeffekts liegen. Bitte bewege das Element kurz vor und zurück und versuche es erneut."
 
 #: lib/extensions/stroke_to_lpe_satin.py:41
 #: lib/extensions/zigzag_line_to_satin.py:27
@@ -4329,7 +4340,7 @@ msgstr "https://inkstitch.org/de/docs/thread-color/#farbpalette-erstellen"
 
 #: inx/inkstitch_global_commands.inx:3
 msgid "Add Commands"
-msgstr "Befehle hinzufügen"
+msgstr "Dokumentbefehle hinzufügen"
 
 #: inx/inkstitch_gradient_blocks.inx:3
 msgid "Convert to gradient blocks"
@@ -4341,19 +4352,19 @@ msgstr "Setze auf null, um den doppelten Wert des Reihenabstandes zu nutzen"
 
 #: inx/inkstitch_gradient_blocks.inx:25
 msgid "Converts a fill with a linear color gradient into color blocks with variable row spacing."
-msgstr ""
+msgstr "Konvertiert eine Füllung mit einem linearen Farbverlauf in Farbblöcke mit variablem Reihenabstand."
 
 #: inx/inkstitch_gradient_blocks.inx:27
 msgid "This may add density at the center."
-msgstr ""
+msgstr "Dies kann zu einer Stichverdichtung in der Mitte des Objektes führen."
 
 #: inx/inkstitch_gradient_blocks.inx:29
 msgid "If necessary adapt the end row spacing value after the conversion with the params dialog."
-msgstr ""
+msgstr "Falls nötig, kann der Reihenabstand nach der Konvertierung in den Parameter-Einstellungen angepasst werden."
 
 #: inx/inkstitch_gradient_blocks.inx:31
 msgid "https://inkstitch.org/docs/fill-tools/#convert-to-gradient-blocks"
-msgstr ""
+msgstr "https://inkstitch.org/de/docs/fill-tools/#farbverlauf-in-blöcke-aufteilen"
 
 #: inx/inkstitch_input_100.inx:3
 msgid "100 file input"
@@ -5132,7 +5143,7 @@ msgstr "Als Symbol"
 
 #: inx/inkstitch_object_commands.inx:3
 msgid "Attach Commands to Selected Objects"
-msgstr "Befehle mit gewählten Objekten verknüpfen"
+msgstr "Objektbefehle hinzufügen"
 
 #: inx/inkstitch_object_commands_toggle_visibility.inx:3
 msgid "Display|Hide Object Commands"
@@ -5669,7 +5680,7 @@ msgstr "Zeige visuelle Befehle"
 
 #: inx/inkstitch_stitch_plan_preview_undo.inx:3
 msgid "Undo Stitch Plan Preview"
-msgstr "Stichplan-Vorschau aufheben"
+msgstr "Stichplanvorschau aufheben"
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:3
 msgid "Stroke to Live Path Effect Satin"
