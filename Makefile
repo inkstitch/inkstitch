@@ -2,12 +2,13 @@
 OS=$(shell uname)
 
 dist: version locales inx
+	python bin/generate-flaskserverport-file
 	bash bin/build-python
 	bash bin/build-electron
 	bash bin/build-distribution-archives
 
 distclean:
-	rm -rf build dist inx locales artifacts win mac *.spec *.tar.gz *.zip electron/node_modules electron/dist electron/build/mac electron/build/mac-arm64 electron/build/win-ia32-unpacked electron/build/linux-unpacked electron/build/linux-arm64-unpacked
+	rm -rf build dist inx locales artifacts win mac *.spec *.tar.gz *.zip electron/node_modules electron/dist electron/build/mac electron/build/mac-arm64 electron/build/win-ia32-unpacked electron/build/linux-unpacked electron/build/linux-arm64-unpacked electron/src/lib/flaskserverport.json
 
 distlocal:
 	@OS="$(uname)"
