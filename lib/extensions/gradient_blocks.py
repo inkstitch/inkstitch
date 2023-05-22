@@ -154,7 +154,7 @@ def gradient_shapes_and_attributes(element, shape):
         split_line = shgeo.LineString([(split_point.x - length - 2, split_point.y),
                                        (split_point.x + length + 2, split_point.y)])
         split_line = rotate(split_line, angle, origin=split_point, use_radians=True)
-        transform = -Transform(get_correction_transform(element.node))
+        transform = -Transform(get_correction_transform(element.node, child=True))
         transform = list(transform.to_hexad())
         split_line = affine_transform(split_line, transform)
         offset_line = split_line.parallel_offset(1, 'right')
