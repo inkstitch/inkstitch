@@ -3,6 +3,7 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
+import json
 import os
 import subprocess
 import sys
@@ -12,10 +13,23 @@ from ..utils import get_bundled_dir
 app_process = None
 
 
-def open_url(url):
+def open_url(url, port):
     global app
 
-    command = []
+    url = f'{url}?port={port}'
+
+    os.environ['FLASKPORT'] = str(port)
+
+    # this creates the .json for dev mode to get translations
+    if getattr(sys, 'frozen', None) is None:
+        dynamic_port = {
+            "_comment1": "port should not be declared when commiting",
+            "port": port,
+        }
+        port_object = json.dumps(dynamic_port, indent=1)
+        with open(os.path.join("electron/src/lib/flaskserverport.json"), "w") as outfile:
+            outfile.write(port_object)
+
     cwd = None
     searchstring = "http"
 
