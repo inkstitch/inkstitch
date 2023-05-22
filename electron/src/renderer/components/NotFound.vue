@@ -8,10 +8,5 @@
 -->
 
 <template>
-  <div id="app">
-        <router-view></router-view>
-  </div>
+  <h1>Oops, it looks like the page you're looking for doesn't exist.</h1>
 </template>
-<style>
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons');
-</style>

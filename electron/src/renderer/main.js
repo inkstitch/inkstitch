@@ -7,111 +7,68 @@
  */
 
 // ES6
-import Vue from 'vue'
-import axios from 'axios'
-
-import App from './App'
+import { createApp } from 'vue'
+import App from './App.vue'
 import router from './router'
-
-import {library} from '@fortawesome/fontawesome-svg-core'
-import {
-  faAlignRight,
-  faAngleDoubleLeft,
-  faAngleDoubleRight,
-  faAngleRight,
-  faCircle,
-  faCut,
-  faExchangeAlt,
-  faEye,
-  faFrog,
-  faLink,
-  faHippo,
-  faHorse,
-  faInfo,
-  faMinus,
-  faPalette,
-  faPause,
-  faPlay,
-  faPlus,
-  faShoePrints,
-  faSpinner,
-  faStepBackward,
-  faStepForward,
-  faStop,
-  faSearchPlus,
-  faSearchMinus
-} from '@fortawesome/free-solid-svg-icons'
-import {FontAwesomeIcon, FontAwesomeLayers} from '@fortawesome/vue-fontawesome'
-import Transitions from 'vue2-transitions'
-import GetTextPlugin from 'vue-gettext'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon, FontAwesomeLayers } from '@fortawesome/vue-fontawesome'
+import { createGettext } from 'vue3-gettext'
 import translations from './assets/translations.json'
-import {selectLanguage} from '../lib/i18n'
-import Vuetify from 'vuetify'
-import 'vuetify/dist/vuetify.min.css'
-import '@mdi/font/css/materialdesignicons.css'
+import { selectLanguage } from '../lib/i18n.js'
 
-// We have to add to the library every icon we use anywhere in the UI.
-// This avoids the need to bundle the entire font-awesome icon set with
-// Ink/Stitch.
-library.add(
-  faAlignRight,
-  faAngleDoubleLeft,
-  faAngleDoubleRight,
-  faAngleRight,
-  faCircle,
-  faCut,
-  faExchangeAlt,
-  faEye,
-  faFrog,
-  faLink,
-  faHippo,
-  faHorse,
-  faInfo,
-  faMinus,
-  faPalette,
-  faPause,
-  faPlay,
-  faPlus,
-  faShoePrints,
-  faSpinner,
-  faStepBackward,
-  faStepForward,
-  faStop,
-  faSearchPlus,
-  faSearchMinus
-)
+import flaskserverport from '../lib/flaskserverport.json'
 
-Vue.component('font-awesome-icon', FontAwesomeIcon)
-Vue.component('font-awesome-layers', FontAwesomeLayers)
+import { createVuetify, ThemeDefinition }  from 'vuetify'
+import * as components from 'vuetify/components'
+import * as directives from 'vuetify/directives'
+import 'vuetify/styles'
 
-Vue.use(Transitions)
-Vue.use(GetTextPlugin, {
-  translations: translations,
-  defaultLanguage: selectLanguage(translations),
-  silent: true
-})
+import VueMousetrapPlugin from 'vue-mousetrap'
 
-Vue.http = Vue.prototype.$http = axios
-Vue.config.productionTip = false
+if (flaskserverport.port === undefined) {
+    var theflaskport = window.inkstitchAPI.flaskport()
+    console.log("Installed mode")
+    console.log(theflaskport)
+} else {
+    var theflaskport = flaskserverport.port
+    console.log("Dev mode")
+    console.log(theflaskport)
+}
 
-Vue.use(Vuetify)
-const vuetify = new Vuetify({
+const inkStitchTheme = {
+  dark: false,
+  colors: {
+      primary: '#003399',
+      secondary: '#000000',
+      accent: '#8c9eff',
+      error: '#b71c1c',
+  }
+}
+const vuetify = new createVuetify({
+  components,
+  directives,
+  ssr: true,
   theme: {
+    defaultTheme: 'inkStitchTheme',
     themes: {
-      light: {
-        primary: '#003399',
-        secondary: '#000000',
-        accent: '#8c9eff',
-        error: '#b71c1c',
-      },
-    },
-  },
+      inkStitchTheme,
+    }
+  }
 })
 
-/* eslint-disable no-new */
-new Vue({
-  vuetify,
-  components: {App},
-  router,
-  template: '<App/>'
-}).$mount('#app')
+library.add(fas)
+const app = createApp(App)
+app.component('font-awesome-icon', FontAwesomeIcon)
+app.component('font-awesome-layers', FontAwesomeLayers)
+
+app.use(createGettext({
+    defaultLanguage: selectLanguage(translations, theflaskport),
+    translations: translations,
+    silent: true,
+    setGlobalProperties: true,
+}))
+app.use(VueMousetrapPlugin)
+app.use(vuetify)
+app.use(router)
+app.mount('#app')

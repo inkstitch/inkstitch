@@ -1,5 +1,3 @@
-var electron = require('electron');
-
 $.postJSON = function(url, data, success=null) {
     return $.ajax(url, {
                         type: 'POST',
@@ -378,14 +376,14 @@ $(function() {
   });
 
   $('button.print').click(function() {
-	  var pageSize = $('select#printing-size').find(':selected').text();
-	  electron.ipcRenderer.send('open-pdf', pageSize)
+    var pageSize = $('select#printing-size').find(':selected').text();
+    window.inkstitchAPI.openpdf(pageSize)
   });
 
   $('button.save-pdf').click(function() {
-	  var pageSize = $('select#printing-size').find(':selected').text();
-	  electron.ipcRenderer.send('save-pdf', pageSize)
-  });  
+    var pageSize = $('select#printing-size').find(':selected').text();
+    window.inkstitchAPI.savepdf(pageSize)
+    });
   
   $('button.settings').click(function(){
     $('#settings-ui').show();

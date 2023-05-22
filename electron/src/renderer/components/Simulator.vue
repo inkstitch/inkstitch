@@ -13,7 +13,7 @@
       <div class="window-controls">
         <div ref="controlInfoButton" class="control-info-button" v-on:click="toggleInfo">
           <font-awesome-icon icon="info"/>
-          <collapse-transition>
+          <Transition name="collapse">
             <div class="control-info" v-show="infoExpanded" v-bind:style="{'max-height': infoMaxHeight + 'px'}">
               <h1>
                 <font-awesome-icon icon="info" class="info-icon"/>
@@ -163,14 +163,14 @@
                   </p>
                 </div>
             </div>
-          </collapse-transition>
+          </Transition>
         </div>
         <div class="toggle-controls" v-on:click="toggleControls">
           <font-awesome-icon v-if="controlsExpanded" icon="minus"/>
           <font-awesome-icon v-else icon="plus"/>
         </div>
       </div>
-      <collapse-transition>
+      <Transition name="collapse">
         <div class="panel" v-show="controlsExpanded">
           <fieldset class="controls">
             <legend>
@@ -203,7 +203,7 @@
           </fieldset>
           <fieldset class="speed">
             <legend>
-              <translate :translate-n="speed" translate-plural="Speed: %{speed} stitches/sec">Speed: %{speed} stitch/sec</translate>
+              <translate :translate-params="{ speed: speed }" :translate-n="speed" translate-plural="Speed: %{speed} stitches/sec">Speed: %{speed} stitch/sec</translate>
             </legend>
             <button v-on:click="animationSlowDown" :title="$gettext('Slow down (arrow down)')">
               <font-awesome-icon icon="hippo" size="2x" class="fa-button"/>
@@ -248,7 +248,7 @@
               <input id="stop-checkbox" type="checkbox" v-model="showStops"/>
               <label for="stop-checkbox"><font-awesome-icon icon="pause"/> <translate>stops</translate></label>
             </span>
-            <span>
+            <span class="npp">
               <input id="npp-checkbox" type="checkbox" v-model="showNeedlePenetrationPoints"/>
               <label for="npp-checkbox">
                 <font-awesome-layers>
@@ -270,12 +270,11 @@
             </span>
           </fieldset>
         </div>
-      </collapse-transition>
+      </Transition>
       <div class="slider-container">
         <span>1</span>
         <span class="slider-box">
-          <vue-slider
-              :value="currentStitchDisplay"
+          <vue-slider v-model="currentStitchDisplay"
               @change="setCurrentStitch"
               :min="0"
               :max="numStitches"
@@ -297,7 +296,7 @@
                @focus="stop"/>
       </div>
     </fieldset>
-    <loading :active.sync="loading" :is-full-page="false">
+    <loading :active="loading" :is-full-page="false">
       <div class="loading">
         <div class="loading-icon">
           <font-awesome-icon icon="spinner" size="4x" pulse/>

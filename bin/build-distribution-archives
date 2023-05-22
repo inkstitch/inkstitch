@@ -1,4 +1,4 @@
-VERSION="$(echo ${GITHUB_REF} | sed -e 's|refs/heads/||' -e 's|refs/tags/||' -e 's|/|-|g')"
+VERSION="${VERSION:-$(echo ${GITHUB_REF} | sed -e 's|refs/heads/||' -e 's|refs/tags/||' -e 's|/|-|g')}"
 OS="${BUILD:-$(uname)}"
 ARCH="$(uname -m)"
 mkdir artifacts
@@ -6,7 +6,7 @@ mkdir artifacts
 if [ "$BUILD" = "osx" ]; then
     cp -a icons locales print LICENSE VERSION images/examples palettes symbols fonts tiles dbus inx dist/inkstitch.app/Contents/Resources
     # adding version to Info.plist
-    sed -i '' 's/0.0.0/'${VERSION}'/' dist/inkstitch.app/Contents/Info.plist
+    plutil -replace CFBundleShortVersionString -string ${VERSION} dist/inkstitch.app/Contents/Info.plist
     rm -rf dist/inkstitch/
     # Install location for pkgbuild
     PKG_INSTALL_PATH="/tmp/inkstitch/"

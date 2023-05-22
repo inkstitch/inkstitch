@@ -2,35 +2,12 @@
 
 set -e
 info_year=$( date "+%Y" )
-site_packages="$(python -c "import os; print(os.path.dirname(os.__file__) + '/site-packages')")"
-arch=$(uname -m)
-if [ "$BUILD" = "linux" ]; then
-    pyinstaller_args+="--add-binary /usr/lib/"$arch"-linux-gnu/gio/modules/libgiolibproxy.so:. "
-    pyinstaller_args+="--add-binary  /usr/lib/"$arch"-linux-gnu/libproxy.so.1:. "
-    pyinstaller_args+="--add-binary  /lib/"$arch"-linux-gnu/libnsl.so.1:. "
-    pyinstaller_args+="--add-binary  /usr/lib/"$arch"-linux-gnu/libxcb.so.1:. "
-fi
-
-# This one's tricky.  ink/stitch doesn't actually _use_ gi.repository.Gtk,
-# but it does use GTK (through wxPython).  pyinstaller has some special
-# logic to handle GTK apps that is engaged when you import
-# gi.repository.Gtk that pulls in things like themes, icons, etc.  Without
-# that, the Params dialog is unthemed and barely usable.  This hidden
-# import option is actually the only reason we had to install python-gi
-# above!
-pyinstaller_args+="--hidden-import gi.repository.Gtk "
-
-# mac and windows build seem to miss wx import
-pyinstaller_args+="--hidden-import wx "
 
 # We need to use the precompiled bootloader linked with graphical Mac OS X
 # libraries if we develop a GUI application for Mac:
 if [ "$BUILD" = "osx" -o "$BUILD" = "windows" ]; then
     pyinstaller_args+="--windowed "
 fi
-
-# This lets pyinstaller see inkex.py, etc.
-pyinstaller_args+="-p inkscape/share/extensions "
 
 # output useful debugging info that helps us trace library dependency issues
 pyinstaller_args+="--log-level DEBUG "
@@ -67,7 +44,7 @@ if [ "$BUILD" = "windows" ]; then
 	pyinstaller_args+="--version-file  installer_scripts/file_version_info.txt "
     python -m PyInstaller $pyinstaller_args inkstitch.py
 else
-    LD_LIBRARY_PATH="${site_packages}/wx" python -m PyInstaller $pyinstaller_args --strip inkstitch.py;
+    python -m PyInstaller $pyinstaller_args --strip inkstitch.py;
 fi
 
 # pyinstaller put a whole mess of libraries under dist/inkstitch.  We'd like

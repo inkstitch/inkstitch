@@ -8,113 +8,104 @@
 
 'use strict'
 
-import {app, BrowserWindow, ipcMain, dialog, shell} from 'electron'
-var fs = require('fs');
-var path = require('path');
-var tmp = require('tmp');
-
+const path = require('path')
+const fs = require('fs')
+const tmp = require('tmp')
 const url = require('url')
+const { app, BrowserWindow, ipcMain, dialog, shell, Menu} = require('electron')
+// url for printPDF flask server which is used in development and production mode
 
-/**
- * Set `__static` path to static files in production
- * https://simulatedgreg.gitbooks.io/electron-vue/content/en/using-static-assets.html
- */
-if (process.env.NODE_ENV === 'development') {
-  // we were run as electron --inspect=5858 path/to/main.js <args>
-  // so get rid of the first two args
-  console.log("args " + process.argv)
-  process.argv.shift()
-  process.argv.shift()
+var port = process.env.FLASKPORT
+const printPdfUrl = `http://127.0.0.1:${port}/`
+
+const isDev = process.env.BABEL_ENV === 'development'
+
+var target = null
+// Finds this url in the argv array and sets to target value
+if (process.argv.includes(printPdfUrl)) {
+    target = printPdfUrl
 } else {
-  global.__static = path.join(__dirname, '/static').replace(/\\/g, '\\\\')
+    target = process.argv[1] || "";
 }
-
-let mainWindow
-
-var target = process.argv[1] || "";
 var targetURL = url.parse(target)
-var winURL = null;
+var winURL = null
 
-// Print PDF will give us a full URL to a flask server, bypassing Vue entirely.
 // Eventually this will be migrated to Vue.
 if (targetURL.protocol) {
-  winURL = target
+    winURL = target
 } else {
-  if (process.env.NODE_ENV === 'development') {
-    winURL = `http://localhost:9080/?${targetURL.query || ""}#${targetURL.pathname || ""}`
-  } else {
-    winURL = `file://${__dirname}/index.html?${targetURL.query || ""}#${targetURL.pathname || ""}`;
-  }
+    winURL = `file://${__dirname}/index.html?${targetURL.query || ""}#${targetURL.pathname || ""}`
 }
 
 function createWindow() {
-  /**
-   * Initial window options
-   */
-  mainWindow = new BrowserWindow({
-    height: 563,
-    useContentSize: true,
-    width: 1000,
-    webPreferences: {nodeIntegration: true}
-  })
-
-  mainWindow.loadURL(winURL)
-  mainWindow.maximize()
-
-  mainWindow.on('closed', () => {
-    mainWindow = null
-  })
+    const mainWindow = new BrowserWindow({
+        useContentSize: true,
+        webPreferences: {
+            preload: path.join(__dirname, 'preload.js'),
+            nodeIntegration: false,
+            contextIsolation: true,
+        },
+    })
+    if (isDev) {
+        // printPDF in development mode will have dev tools activated
+        // Vuejs parts of Ink/Stich will not and dev tools must be accessed though the menu of electron window
+        mainWindow.loadURL(winURL)
+        mainWindow.webContents.openDevTools()
+    } else {
+        mainWindow.loadURL(winURL)
+    }
+    // This will remove the menu from the release, in dev mode the menu is available.
+    if(process.platform === "darwin" && !isDev) {
+        Menu.setApplicationMenu(Menu.buildFromTemplate([]));
+    } if(process.platform === "win32" || process.platform === "linux" && !isDev) {
+        mainWindow.removeMenu();
+    }
+    mainWindow.maximize()
+    // save to PDF
+    ipcMain.on('save-pdf', (event, pageSize) => {
+      const webContents = event.sender
+      const win = BrowserWindow.fromWebContents(webContents)
+      const saveOpt = {
+        title: "Save PDF",
+        defaultPath: "Inkstitch.pdf",
+        bookmark: "true",
+      }
+      win.webContents.printToPDF({}).then(pageSize => {
+         dialog.showSaveDialog(saveOpt).then(filename => {
+           const { filePath } = filename;
+           fs.writeFileSync(filePath, pageSize, (error) => {
+             if (error) {
+               throw error
+             }
+             console.log(`Wrote PDF successfully to ${pdfPath}`)
+          })
+        }).catch(error => {
+        console.log(`Failed to write PDF to ${pdfPath}: `, error)
+        })
+      })
+    })
+    // openPDF
+    ipcMain.on('open-pdf', (event, pageSize) => {
+      const webContents = event.sender
+      const win = BrowserWindow.fromWebContents(webContents)
+      win.webContents.printToPDF({}).then(pageSize => {
+        tmp.file({keep: true, discardDescriptor: true}, function(err, path, fd, cleanupCallback) {
+                fs.writeFileSync(path, pageSize, 'utf-8');
+                shell.openPath(path);
+            })
+        })
+    })
 }
 
-app.on('ready', createWindow)
+app.whenReady().then(() => {
+    createWindow()
+    app.on('activate', () => {
+        if(BrowserWindow.getAllWindows().length === 0)  {
+            createWindow()
+        }
+    })
+})
 
 app.on('window-all-closed', () => {
     app.quit()
 })
-
-app.on('activate', () => {
-  if (mainWindow === null) {
-    createWindow()
-  }
-})
-
-ipcMain.on('save-pdf', function (event, pageSize) {
-    mainWindow.webContents.printToPDF({"pageSize": pageSize}, function(error, data) {
-        dialog.showSaveDialog(mainWindow, {"defaultPath": "inkstitch.pdf",
-                                           "filters": [{ name: 'PDF', extensions: ['pdf'] }]
-                                          }, function(filename, bookmark) {
-            if (typeof filename !== 'undefined')
-                fs.writeFileSync(filename, data, 'utf-8');
-        })
-    })
-})
-
-ipcMain.on('open-pdf', function (event, pageSize) {
-    mainWindow.webContents.printToPDF({"pageSize": pageSize}, function(error, data) {
-        tmp.file({keep: true, discardDescriptor: true}, function(err, path, fd, cleanupCallback) {
-            fs.writeFileSync(path, data, 'utf-8');
-            shell.openItem(path);
-        })
-    })
-})
-
-
-/**
- * Auto Updater
- *
- * Uncomment the following code below and install `electron-updater` to
- * support auto updating. Code Signing with a valid certificate is required.
- * https://simulatedgreg.gitbooks.io/electron-vue/content/en/using-electron-builder.html#auto-updating
- */
-
-/*
-import { autoUpdater } from 'electron-updater'
-
-autoUpdater.on('update-downloaded', () => {
-  autoUpdater.quitAndInstall()
-})
-
-app.on('ready', () => {
-  if (process.env.NODE_ENV === 'production') autoUpdater.checkForUpdates()
-})
- */

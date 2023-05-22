@@ -27,7 +27,7 @@ class Preferences(InkstitchExtension):
     def effect(self):
         api_server = APIServer(self)
         port = api_server.start_server()
-        electron = open_url("/preferences?port=%d" % port)
+        electron = open_url("/preferences", port)
         electron.wait()
         api_server.stop()
         api_server.join()

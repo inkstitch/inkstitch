@@ -24,3 +24,5 @@ locales/
 /profile_stats.prof
 /.vscode
 __pycache__
+flaskserverport.json
+electron/yarn.lock

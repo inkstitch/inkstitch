@@ -1,13 +1,22 @@
+<!--
+
+  Authors: see git history
+
+  Copyright (c) 2010 Authors
+  Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
+
+-->
+
 <template>
-  <v-card raised rounded="lg" class="preferences-card">
+  <v-card elevation="8" rounded="lg" class="preferences-card">
     <v-card-title class="text-center justify-center py-6">
-      <h1 class="font-weight-bold text-h2 basil--text">
+      <h1 class="font-weight-bold text-h2 text-basil">
         Ink/Stitch Settings
       </h1>
     </v-card-title>
 
     <v-card-text>
-      <v-tabs v-model="tab" background-color="transparent" grow>
+      <v-tabs v-model="tab" bg-color="transparent" class="text-primary" grow>
         <v-tab key="this_svg_settings">
           This SVG
         </v-tab>
@@ -16,16 +25,16 @@
         </v-tab>
       </v-tabs>
 
-      <v-tabs-items v-model="tab">
-        <v-tab-item key="this_svg_settings">
+      <v-window v-model="tab">
+        <v-window-item key="this_svg_settings">
           <v-card flat>
             <v-card-text>
               <table>
                 <tr>
                   <td class="label">
                     <v-tooltip bottom>
-                      <template v-slot:activator="{on, attrs}">
-                        <label for="collapse_len_mm" v-on="on" v-bind="attrs"><translate>Minimum jump stitch length</translate></label>
+                      <template v-slot:activator="{ props }">
+                        <label for="collapse_len_mm" v-bind="props"><translate>Minimum jump stitch length</translate></label>
                       </template>
                       <label for="collapse_len_mm"><translate>Jump stitches smaller than this will be treated as normal stitches.</translate></label>
                     </v-tooltip>
@@ -45,8 +54,8 @@
                 <tr>
                   <td class="label">
                     <v-tooltip bottom>
-                      <template v-slot:activator="{on, attrs}">
-                        <label for="min_stitch_len_mm" v-on="on" v-bind="attrs"><translate>Minimum stitch length</translate></label>
+                      <template v-slot:activator="{ props }">
+                        <label for="min_stitch_len_mm" v-bind="props"><translate>Minimum stitch length</translate></label>
                       </template>
                       <label for="min_stitch_len_mm"><translate>Drop stitches smaller than this value.</translate></label>
                     </v-tooltip>
@@ -66,16 +75,16 @@
               </table>
             </v-card-text>
           </v-card>
-        </v-tab-item>
-        <v-tab-item key="global_settings">
+        </v-window-item>
+        <v-window-item key="global_settings">
           <v-card flat>
             <v-card-text>
               <table>
                 <tr>
                   <td>
                     <v-tooltip bottom>
-                      <template v-slot:activator="{on, attrs}">
-                        <label for="default_collapse_len_mm" v-on="on" v-bind="attrs"><translate>Default minimum jump stitch length</translate></label>
+                      <template v-slot:activator="{ props }">
+                        <label for="default_collapse_len_mm" v-bind="props"><translate>Default minimum jump stitch length</translate></label>
                       </template>
                       <label for="default_collapse_len_mm"><translate>Used for new SVGs.</translate></label>
                     </v-tooltip>
@@ -90,8 +99,8 @@
                 <tr>
                   <td>
                     <v-tooltip bottom>
-                      <template v-slot:activator="{on, attrs}">
-                        <label for="default_min_stitch_len_mm" v-on="on" v-bind="attrs"><translate>Default minimum stitch length</translate></label>
+                      <template v-slot:activator="{ props }">
+                        <label for="default_min_stitch_len_mm" v-bind="props"><translate>Default minimum stitch length</translate></label>
                       </template>
                       <label for="default_min_stitch_len_mm"><translate>Used for new SVGs.</translate></label>
                     </v-tooltip>
@@ -106,8 +115,8 @@
                 <tr>
                   <td>
                     <v-tooltip bottom>
-                      <template v-slot:activator="{on, attrs}">
-                        <label for="cache_size" v-on="on" v-bind="attrs"><translate>Stitch plan cache size</translate></label>
+                      <template v-slot:activator="{ props }">
+                        <label for="cache_size" v-bind="props"><translate>Stitch plan cache size</translate></label>
                       </template>
                       <label for="default_min_stitch_len_mm"><translate>The greater the number, the more stitch plans can be cached, speeding up stitch plan calculation.  Default: 100</translate></label>
                     </v-tooltip>
@@ -125,8 +134,8 @@
               </table>
             </v-card-text>
           </v-card>
-        </v-tab-item>
-      </v-tabs-items>
+        </v-window-item>
+      </v-window>
     </v-card-text>
     <v-card-actions>
       <v-btn text color="primary" @click="close"><translate>done</translate></v-btn>
@@ -136,8 +145,7 @@
 </template>
 
 <script>
-const inkStitch = require("../../lib/api")
-
+import { inkStitch } from '../../lib/api.js'
 export default {
   name: "Preferences",
   data: function () {
@@ -202,10 +210,11 @@ td.label {
 td.preference {
   padding-right: 4px;
   padding-left: 16px;
-  max-width: 100px;
+  max-width: 15em;
+  min-width: 8em;
 }
 
-td.preference::v-deep input {
+td.preference :deep(input) {
   text-align: right;
 }
 

@@ -3,6 +3,7 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
+import json
 import os
 import subprocess
 import sys
@@ -12,11 +13,27 @@ from ..utils import get_bundled_dir
 app_process = None
 
 
-def open_url(url):
+def open_url(url, port, pdf=False):  # noqa: C901
     global app
 
-    command = []
+    if not pdf:
+        url = f'{url}?port={port}'
+        os.environ['FLASKPORT'] = str(port)
+
+        # this creates the .json for dev mode to get translations
+        if getattr(sys, 'frozen', None) is None:
+            dynamic_port = {
+                "_comment1": "port should not be declared when commiting",
+                "port": port,
+            }
+            port_object = json.dumps(dynamic_port, indent=1)
+            with open(os.path.join("electron/src/lib/flaskserverport.json"), "w") as outfile:
+                outfile.write(port_object)
+    else:
+        url = f'http://{url}:{port}/'
+
     cwd = None
+    searchstring = "http"
 
     if getattr(sys, 'frozen', None) is not None:
         electron_path = os.path.join(get_bundled_dir("electron"), "inkstitch-gui")
@@ -42,8 +59,33 @@ def open_url(url):
             pass
         else:
             mac_dev_env["PATH"] = yarn_path + mac_dev_env["PATH"]
+            # checking URL for flask server address for printToPDF
+            if searchstring in url:
+                with open(os.devnull, 'w') as null:
+                    subprocess.Popen(["yarn", "just-build"], cwd=cwd, stdout=null, env=mac_dev_env).wait()
+            else:
+                pass
+
         with open(os.devnull, 'w') as null:
             return subprocess.Popen(command, cwd=cwd, stdout=null, env=mac_dev_env)
     else:
-        with open(os.devnull, 'w') as null:
-            return subprocess.Popen(command, cwd=cwd, stdout=null)
+        if searchstring in url and getattr(sys, 'frozen', None) is None:
+            with open(os.devnull, 'w') as null:
+                subprocess.Popen(["yarn", "just-build"], cwd=cwd, stdout=null).wait()
+        else:
+            pass
+        if sys.platform == "linux":
+            # Pyinstaller fix for gnome document view not opening.
+            lenv = dict(os.environ)
+            lp_key = 'LD_LIBRARY_PATH'
+            lp_orig = lenv.get(lp_key + '_ORIG')
+            if lp_orig is not None:
+                lenv[lp_key] = lp_orig  # restore the original, unmodified value
+            else:
+                lenv.pop(lp_key, None)
+
+            with open(os.devnull, 'w') as null:
+                return subprocess.Popen(command, cwd=cwd, stdout=null, env=lenv)
+        else:
+            with open(os.devnull, 'w') as null:
+                return subprocess.Popen(command, cwd=cwd, stdout=null)

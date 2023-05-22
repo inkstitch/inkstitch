@@ -2,15 +2,6 @@
 
 set -e
 set -x
-ARCH="$(uname -m)"
-# Check for cpu arch to build mac and linux electron arch
-if [[ "$ARCH" = "arm64" ]] || [[ "$ARCH" = "aarch64" ]]; then
-    echo "Found ARM"
-    sed -i'' -e 's/CPU_ARCH/'arm64'/' electron/package.json
-else
-    echo "Found x64"
-    sed -i'' -e 's/CPU_ARCH/'x64'/' electron/package.json
-fi
 
 if [ "$BUILD" = "windows" ]; then
   args="-w --ia32"

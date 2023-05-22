@@ -5,19 +5,18 @@
  * Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
  *
  */
+import { inkStitch } from '../../../lib/api.js'
 
-const inkStitch = require("../../../lib/api")
-const Mousetrap = require("mousetrap")
 import { SVG } from '@svgdotjs/svg.js'
-require('@svgdotjs/svg.panzoom.js/src/svg.panzoom.js')
-require('@svgdotjs/svg.filter.js')
-const svgpath = require('svgpath')
+import '@svgdotjs/svg.panzoom.js'
+import '@svgdotjs/svg.filter.js'
+import svgpath from 'svgpath'
 import Loading from 'vue-loading-overlay';
 import 'vue-loading-overlay/dist/vue-loading.css';
+import { reactive, toRefs } from 'vue'
 import VueSlider from 'vue-slider-component'
-import 'vue-slider-component/theme/default.css'
-
-const throttle = require('lodash.throttle')
+import 'vue-slider-component/theme/antd.css'
+import throttle from 'lodash/throttle'
 
 function SliderMark(command, icon) {
   this.label = ""
@@ -30,6 +29,10 @@ export default {
   components: {
     Loading,
     VueSlider
+  },
+  setup() {
+    const data = reactive({ value: 0 })
+    return toRefs(data)
   },
   data: function () {
     return {
@@ -511,15 +514,23 @@ export default {
     },
     generatePage () {
       this.$refs.simulator.style.backgroundColor = this.page_specs.deskcolor
+
       let page = this.svg.rect(this.page_specs.width, this.page_specs.height)
       .move(-this.stitchPlan.bounding_box[0],-this.stitchPlan.bounding_box[1])
       .fill(this.page_specs.pagecolor)
-      .stroke({width: 1, color: 'black'})
-      .filterWith(add => {
-        let blur = add.offset(2,2).in(add.$sourceAlpha).gaussianBlur(2)
-        add.blend(add.$source, blur)
-      })
+      .stroke({width: 0.1, color: this.page_specs.bordercolor})
       .back()
+
+      if (this.page_specs.showpageshadow === "true") {
+        let shadow = this.svg.rect(this.page_specs.width, this.page_specs.height)
+        .move(-this.stitchPlan.bounding_box[0],-this.stitchPlan.bounding_box[1])
+        .fill(this.page_specs.bordercolor)
+        .filterWith(add => {
+            let blur = add.offset(.5,.5).in(add.$source).gaussianBlur(.5)
+          })
+          .back()
+      }
+
       this.page_specs["bbox"] = page.bbox()
     },
     zoomDesign () {
@@ -606,29 +617,30 @@ export default {
       this.generateColorSections()
       this.generateScale()
       this.generateCursor()
-      
+      this.resizeCursor()
+
       this.loading = false
 
       // v-on:keydown doesn't seem to work, maybe an Electron issue?
-      Mousetrap.bind("up", this.animationSpeedUp)
-      Mousetrap.bind("down", this.animationSlowDown)
-      Mousetrap.bind("left", this.animationReverse)
-      Mousetrap.bind("right", this.animationForward)
-      Mousetrap.bind("pagedown", this.animationPreviousCommand)
-      Mousetrap.bind("pageup", this.animationNextCommand)
-      Mousetrap.bind("space", this.toggleAnimation)
-      Mousetrap.bind("+", this.animationForwardOneStitch)
-      Mousetrap.bind("-", this.animationBackwardOneStitch)
-      Mousetrap.bind("]", this.zoomDesign)
-      Mousetrap.bind("[", this.zoomPage)
+      this.$mousetrap.bind("up", this.animationSpeedUp)
+      this.$mousetrap.bind("down", this.animationSlowDown)
+      this.$mousetrap.bind("left", this.animationReverse)
+      this.$mousetrap.bind("right", this.animationForward)
+      this.$mousetrap.bind("pagedown", this.animationPreviousCommand)
+      this.$mousetrap.bind("pageup", this.animationNextCommand)
+      this.$mousetrap.bind("space", this.toggleAnimation)
+      this.$mousetrap.bind("+", this.animationForwardOneStitch)
+      this.$mousetrap.bind("-", this.animationBackwardOneStitch)
+      this.$mousetrap.bind("]", this.zoomDesign)
+      this.$mousetrap.bind("[", this.zoomPage)
 
       this.svg.on('zoom', this.resizeCursor)
-      this.resizeCursor()
 
       inkStitch.get('page_specs').then(response => {
         this.page_specs = response.data
         this.generatePage()
       })
+
       this.start()
     })
   }

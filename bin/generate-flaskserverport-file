@@ -1,0 +1,12 @@
+#!/usr/bin/env python
+
+import os
+from json import dump
+from os.path import dirname
+
+path = os.path.join(dirname(dirname(__file__)), 'electron', 'src', 'lib', 'flaskserverport.json')
+
+data = {"_comment1" : "port should not be declared when commiting"}
+# write data to font.json into the same directory as the font file
+with open(path, 'w', encoding="utf8") as output:
+    dump(data, output, indent=4, ensure_ascii=False)

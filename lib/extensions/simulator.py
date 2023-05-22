@@ -18,7 +18,7 @@ class Simulator(InkstitchExtension):
             return
         api_server = APIServer(self)
         port = api_server.start_server()
-        electron = open_url("/simulator?port=%d" % port)
+        electron = open_url("/simulator", port)
         electron.wait()
         api_server.stop()
         api_server.join()

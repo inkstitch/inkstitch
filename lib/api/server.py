@@ -9,17 +9,20 @@ import socket
 import sys
 import time
 from threading import Thread
+from contextlib import closing
 
 import requests
 from flask import Flask, g
 from werkzeug.serving import make_server
 
 from ..utils.json import InkStitchJSONProvider
-from .install import install
 from .simulator import simulator
 from .stitch_plan import stitch_plan
 from .preferences import preferences
 from .page_specs import page_specs
+from .lang import languages
+# this for electron axios
+from flask_cors import CORS
 
 
 class APIServer(Thread):
@@ -42,13 +45,14 @@ class APIServer(Thread):
         cli.show_server_banner = lambda *x: None
 
         self.app = Flask(__name__)
+        CORS(self.app)
         self.app.json = InkStitchJSONProvider(self.app)
 
         self.app.register_blueprint(simulator, url_prefix="/simulator")
         self.app.register_blueprint(stitch_plan, url_prefix="/stitch_plan")
-        self.app.register_blueprint(install, url_prefix="/install")
         self.app.register_blueprint(preferences, url_prefix="/preferences")
         self.app.register_blueprint(page_specs, url_prefix="/page_specs")
+        self.app.register_blueprint(languages, url_prefix="/languages")
 
         @self.app.before_request
         def store_extension():
@@ -67,25 +71,21 @@ class APIServer(Thread):
     def disable_logging(self):
         logging.getLogger('werkzeug').setLevel(logging.ERROR)
 
+    # https://github.com/aluo-x/Learning_Neural_Acoustic_Fields/blob/master/train.py
+    # https://github.com/pytorch/pytorch/issues/71029
+    def find_free_port(self):
+        with closing(socket.socket(socket.AF_INET, socket.SOCK_STREAM)) as s:
+            s.bind(('localhost', 0))
+            return s.getsockname()[1]
+
     def run(self):
         self.disable_logging()
 
         self.host = "127.0.0.1"
-        self.port = 5000
-
-        while True:
-            try:
-                self.flask_server = make_server(self.host, self.port, self.app)
-                self.server_thread = Thread(target=self.flask_server.serve_forever)
-                self.server_thread.start()
-            except socket.error as e:
-                if e.errno == errno.EADDRINUSE:
-                    self.port += 1
-                    continue
-                else:
-                    raise
-            else:
-                break
+        self.port = self.find_free_port()
+        self.flask_server = make_server(self.host, self.port, self.app)
+        self.server_thread = Thread(target=self.flask_server.serve_forever)
+        self.server_thread.start()
 
     def ready_checker(self):
         """Wait until the server is started.
