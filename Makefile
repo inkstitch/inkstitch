@@ -11,7 +11,6 @@ distclean:
 	rm -rf build dist inx locales artifacts win mac *.spec *.tar.gz *.zip electron/node_modules electron/dist electron/build/mac electron/build/mac-arm64 electron/build/win-ia32-unpacked electron/build/linux-unpacked electron/build/linux-arm64-unpacked electron/src/lib/flaskserverport.json
 
 distlocal:
-	@OS="$(uname)"
 	@case ${OS} in "Darwin") export BUILD=osx ;; "Linux")export BUILD=linux ;; *) export BUILD=windows ;; esac; export VERSION=local-build; make distclean && make dist;
 manual:
 	make inx && cd electron && yarn install && cd ..
