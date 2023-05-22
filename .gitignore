@@ -24,3 +24,4 @@ locales/
 /profile_stats.prof
 /.vscode
 __pycache__
+flaskserverport.json
