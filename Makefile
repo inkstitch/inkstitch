@@ -1,8 +1,7 @@
 # used for distlocal
 OS=$(shell uname)
 
-dist: version locales inx
-	python bin/generate-flaskserverport-file
+dist: flaskserverport version locales inx
 	bash bin/build-python
 	bash bin/build-electron
 	bash bin/build-distribution-archives
@@ -16,7 +15,7 @@ manual:
 	make inx && cd electron && yarn install && cd ..
 
 .PHONY: inx
-inx: version locales
+inx: flaskserverport version locales
 	mkdir -p inx
 	python bin/generate-inx-files; \
 
@@ -56,6 +55,10 @@ locales:
 .PHONY: version
 version:
 	bash bin/generate-version-file
+
+.PHONY: flaskserverport
+flaskserverport:
+	python bin/generate-flaskserverport-file
 
 .PHONY: style
 style:
