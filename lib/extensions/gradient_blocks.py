@@ -71,7 +71,7 @@ class GradientBlocks(CommandsExtension):
                 is_gradient = attributes[i]['is_gradient']
                 angle = degrees(attributes[i]['angle'])
                 angle = f'{angle: .2f}'
-                d = "M " + " ".join([f'{x}, {y}' for x, y in list(shape.exterior.coords)]) + " Z"
+                d = self._element_to_path(shape)
                 block = PathElement(attrib={
                     "id": self.uniqueId("path"),
                     "style": str(style),
@@ -118,6 +118,13 @@ class GradientBlocks(CommandsExtension):
         line = DirectedLineSegment((center.x, center.y), (point.x, point.y))
         pos = line.point_at_length(line.length + 20)
         return Point(pos)
+
+    def _element_to_path(self, shape):
+        coords = list(shape.exterior.coords)
+        for interior in shape.interiors:
+            coords.extend(interior.coords)
+        path = "M " + " ".join([f'{x}, {y}' for x, y in coords]) + " Z"
+        return path
 
 
 def gradient_shapes_and_attributes(element, shape):
