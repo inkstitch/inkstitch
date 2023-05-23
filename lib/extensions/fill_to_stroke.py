@@ -53,8 +53,8 @@ class FillToStroke(InkstitchExtension):
         parent.insert(index, centerline_group)
 
         for element in fill_shapes:
-            transform = element.node.transform @ Transform(get_correction_transform(element.node, child=True))
-            stroke_width = convert_unit(self.options.line_width_mm, self.svg.unit, 'mm')
+            transform = Transform(get_correction_transform(parent, child=True))
+            stroke_width = convert_unit(self.options.line_width_mm, 'px', 'mm')
             color = element.node.style('fill')
             style = f"fill:none;stroke:{ color };stroke-width:{ stroke_width }"
 
@@ -93,13 +93,19 @@ class FillToStroke(InkstitchExtension):
         return fill_shapes, cut_lines
 
     def _remove_elements(self):
+        parents = []
         for element in self.elements:
             # it is possible, that we get one element twice (if it has both, a fill and a stroke)
             # just ignore the second time
             try:
+                parents.append(element.node.getparent())
                 element.node.getparent().remove(element.node)
             except AttributeError:
                 pass
+        # remove empty groups
+        for parent in set(parents):
+            if not parent.getchildren():
+                parent.getparent().remove(parent)
 
     def _get_high_res_polygon(self, polygon):
         # use running stitch method
