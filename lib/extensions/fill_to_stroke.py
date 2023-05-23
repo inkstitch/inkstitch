@@ -53,7 +53,7 @@ class FillToStroke(InkstitchExtension):
         parent.insert(index, centerline_group)
 
         for element in fill_shapes:
-            transform = element.node.transform @ Transform(get_correction_transform(parent, child=True))
+            transform = Transform(get_correction_transform(parent, child=True))
             stroke_width = convert_unit(self.options.line_width_mm, 'px', 'mm')
             color = element.node.style('fill')
             style = f"fill:none;stroke:{ color };stroke-width:{ stroke_width }"
