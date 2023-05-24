@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-05-22 01:20+0000\n"
-"PO-Revision-Date: 2023-05-22 01:23\n"
+"POT-Creation-Date: 2023-05-24 17:36+0000\n"
+"PO-Revision-Date: 2023-05-24 17:39\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-22 01:20+0000\n"
+"POT-Creation-Date: 2023-05-24 17:36+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2401,6 +2401,15 @@ msgstr ""
 msgid "Ink/Stitch cannot import color formats directly. But you can open the embroidery file and apply the color with Extensions > Ink/Stitch > Thread Color Management > Apply Threadlist"
 msgstr ""
 
+#: lib/extensions/install.py:24
+msgid "Successfully installed color palettes for Inkscape.\n\n"
+"Please restart Inkscape."
+msgstr ""
+
+#: lib/extensions/install.py:27
+msgid "Could not install color palettes. Please file an issue on https://github.com/inkstitch/inkstitch/issues"
+msgstr ""
+
 #: lib/extensions/install_custom_palette.py:24
 #: lib/extensions/palette_to_text.py:26
 msgid "File does not exist."
@@ -2478,8 +2487,6 @@ msgstr ""
 #: print/templates/custom-page.html:23 print/templates/custom-page.html:27
 #: print/templates/custom-page.html:33 print/templates/ui.html:102
 #: print/templates/ui.html:106 print/templates/ui.html:112
-#: electron/src/renderer/components/InstallPalettes.vue:25
-#: electron/src/renderer/components/InstallPalettes.vue:63
 msgid "Cancel"
 msgstr "Cancelar"
 
@@ -2794,34 +2801,34 @@ msgstr "El preajuste %s ya existe. Utilice otro nombre o presione \"Sobrescribir
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command label at bottom of simulator window
-#: lib/gui/simulator.py:20 electron/src/renderer/assets/js/simulator.js:142
+#: lib/gui/simulator.py:20 electron/src/renderer/assets/js/simulator.js:145
 #: inx/inkstitch_output_GCODE.inx:29
 msgid "STITCH"
 msgstr "PUNTADA"
 
-#: lib/gui/simulator.py:20 electron/src/renderer/assets/js/simulator.js:145
+#: lib/gui/simulator.py:20 electron/src/renderer/assets/js/simulator.js:148
 msgid "JUMP"
 msgstr "SALTAR"
 
-#: lib/gui/simulator.py:20 electron/src/renderer/assets/js/simulator.js:148
+#: lib/gui/simulator.py:20 electron/src/renderer/assets/js/simulator.js:151
 msgid "TRIM"
 msgstr "CORTE"
 
-#: lib/gui/simulator.py:20 electron/src/renderer/assets/js/simulator.js:151
+#: lib/gui/simulator.py:20 electron/src/renderer/assets/js/simulator.js:154
 #: inx/inkstitch_output_GCODE.inx:33
 msgid "STOP"
 msgstr "PARAR"
 
-#: lib/gui/simulator.py:20 electron/src/renderer/assets/js/simulator.js:154
+#: lib/gui/simulator.py:20 electron/src/renderer/assets/js/simulator.js:157
 #: inx/inkstitch_output_GCODE.inx:31
 msgid "COLOR CHANGE"
 msgstr "Cambio de Color"
 
-#: lib/gui/simulator.py:52
+#: lib/gui/simulator.py:52 electron/src/renderer/components/Simulator.vue:536
 msgid "Slow down (arrow down)"
 msgstr "Reducir la velocidad (flecha hacia abajo)"
 
-#: lib/gui/simulator.py:55
+#: lib/gui/simulator.py:55 electron/src/renderer/components/Simulator.vue:546
 msgid "Speed up (arrow up)"
 msgstr "Aumentar la velocidad (Flecha hacia arriba)"
 
@@ -3672,10 +3679,12 @@ msgid "cursor"
 msgstr "cursor"
 
 #: electron/src/renderer/components/Preferences.vue:77
+#: electron/src/renderer/components/Preferences.vue:1
 msgid "Default minimum jump stitch length"
 msgstr ""
 
 #: electron/src/renderer/components/Preferences.vue:93
+#: electron/src/renderer/components/Preferences.vue:1
 msgid "Default minimum stitch length"
 msgstr ""
 
@@ -3691,38 +3700,6 @@ msgstr ""
 msgid "Function"
 msgstr "Función"
 
-#: electron/src/renderer/components/InstallPalettes.vue:16
-msgid "If you are not sure which file path to choose, click on install directly. In most cases Ink/Stitch will guess the correct path."
-msgstr "Si no está seguro de qué ruta de archivo elegir, haga clic en instalar directamente. En la mayoría de los casos, Ink/Stitch encontrará la ruta correcta."
-
-#: electron/src/renderer/components/InstallPalettes.vue:9
-msgid "Ink/Stitch can install palettes for Inkscape matching the thread colors from popular machine embroidery thread manufacturers."
-msgstr "Ink/Stitch puede instalar paletas de colores para Inkscape que coincidan con los colores de hilos de los fabricantes."
-
-#: electron/src/renderer/components/InstallPalettes.vue:53
-msgid "Inkscape add-on installation failed"
-msgstr "Falló la instalación del complemento de Inkscape"
-
-#: electron/src/renderer/components/InstallPalettes.vue:36
-msgid "Inkscape palettes have been installed. Please restart Inkscape to load the new palettes."
-msgstr "Se han instalado las paletas de Inkscape. Reinicie Inkscape para cargar las nuevas paletas."
-
-#: electron/src/renderer/components/InstallPalettes.vue:22
-msgid "Install"
-msgstr "Instalar"
-
-#: electron/src/renderer/components/InstallPalettes.vue:4
-msgid "Install Palettes"
-msgstr "Instalar paletas de Colores"
-
-#: electron/src/renderer/components/InstallPalettes.vue:31
-msgid "Installation Completed"
-msgstr "Instalación Completa"
-
-#: electron/src/renderer/components/InstallPalettes.vue:48
-msgid "Installation Failed"
-msgstr "Instalación Fallida"
-
 #: electron/src/renderer/components/Preferences.vue:29
 msgid "Jump stitches smaller than this will be treated as normal stitches."
 msgstr "Los saltos de puntada más pequeños que este se tratarán como puntadas normales."
@@ -3731,19 +3708,29 @@ msgstr "Los saltos de puntada más pequeños que este se tratarán como puntadas
 msgid "Jump to next command"
 msgstr "Saltar al siguiente Comando"
 
+#: electron/src/renderer/components/Simulator.vue:512
+msgid "Jump to next command (Page up)"
+msgstr ""
+
 #: electron/src/renderer/components/Simulator.vue:97
 msgid "Jump to previous command"
 msgstr "Saltar al comando anterior"
+
+#: electron/src/renderer/components/Simulator.vue:502
+msgid "Jump to previous command (Page down)"
+msgstr ""
 
 #: electron/src/renderer/components/Simulator.vue:232
 msgid "jumps"
 msgstr "saltos"
 
 #: electron/src/renderer/components/Preferences.vue:27
+#: electron/src/renderer/components/Preferences.vue:1
 msgid "Minimum jump stitch length"
 msgstr ""
 
 #: electron/src/renderer/components/Preferences.vue:48
+#: electron/src/renderer/components/Preferences.vue:1
 msgid "Minimum stitch length"
 msgstr ""
 
@@ -3761,10 +3748,18 @@ msgstr "puntos de la aguja"
 msgid "One step backward"
 msgstr "Un paso atrás"
 
+#: electron/src/renderer/components/Simulator.vue:482
+msgid "One step backward (-)"
+msgstr ""
+
 #. description of keyboard shortcut that moves one stitch forward in simulator
 #: electron/src/renderer/components/Simulator.vue:84
 msgid "One step forward"
 msgstr "Un paso hacia delante"
+
+#: electron/src/renderer/components/Simulator.vue:492
+msgid "One step forward (+)"
+msgstr ""
 
 #. name for page down keyboard key
 #: electron/src/renderer/components/Simulator.vue:99
@@ -3776,17 +3771,33 @@ msgstr "Página para abajo (PgDn)"
 msgid "Page up (PgUp)"
 msgstr "Página para arriba (PgUp)"
 
+#: electron/src/renderer/components/Simulator.vue:437
+msgid "Pause (space)"
+msgstr ""
+
 #: electron/src/renderer/components/Simulator.vue:40
 msgid "Play"
 msgstr "Play"
+
+#: electron/src/renderer/components/Simulator.vue:448
+msgid "Play (arrow left | arrow right)"
+msgstr ""
 
 #: electron/src/renderer/components/Simulator.vue:49
 msgid "Play backward"
 msgstr "Play marcha atrás"
 
+#: electron/src/renderer/components/Simulator.vue:459
+msgid "Play backward (arrow left)"
+msgstr ""
+
 #: electron/src/renderer/components/Simulator.vue:60
 msgid "Play forward"
 msgstr "Empezar adelante"
+
+#: electron/src/renderer/components/Simulator.vue:471
+msgid "Play forward (arrow right)"
+msgstr ""
 
 #: electron/src/renderer/components/Simulator.vue:256
 msgid "realistic"
@@ -3796,7 +3807,7 @@ msgstr "realista"
 msgid "render jumps"
 msgstr "saltos renderizados"
 
-#: electron/src/renderer/components/Simulator.vue:296
+#: electron/src/renderer/components/Simulator.vue:285
 msgid "Rendering stitch-plan..."
 msgstr "Renderizando plan de bordado..."
 
@@ -3836,6 +3847,7 @@ msgstr[0] "Velocidad: %{speed} puntada/seg"
 msgstr[1] "Velocidad: %{speed} puntadas/seg"
 
 #: electron/src/renderer/components/Preferences.vue:109
+#: electron/src/renderer/components/Preferences.vue:1
 msgid "Stitch plan cache size"
 msgstr ""
 
@@ -3846,10 +3858,6 @@ msgstr "stop"
 #: electron/src/renderer/components/Preferences.vue:111
 msgid "The greater the number, the more stitch plans can be cached, speeding up stitch plan calculation.  Default: 100"
 msgstr ""
-
-#: electron/src/renderer/components/InstallPalettes.vue:60
-msgid "Try again"
-msgstr "Intentar de nuevo"
 
 #: electron/src/renderer/components/Preferences.vue:79
 #: electron/src/renderer/components/Preferences.vue:95
@@ -3866,8 +3874,16 @@ msgstr ""
 msgid "Zoom design"
 msgstr ""
 
+#: electron/src/renderer/components/Simulator.vue:580
+msgid "Zoom design (])"
+msgstr ""
+
 #: electron/src/renderer/components/Simulator.vue:138
 msgid "Zoom page"
+msgstr ""
+
+#: electron/src/renderer/components/Simulator.vue:570
+msgid "Zoom page ([)"
 msgstr ""
 
 #: inx/inkstitch_about.inx:3 inx/inkstitch_about.inx:6
