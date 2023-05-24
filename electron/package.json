@@ -71,7 +71,7 @@
     "vue-slider-component": "^4.1.0-beta.0",
     "vue3-gettext": "^2.2.3",
     "vue3-transitions": "^1.0.0",
-    "vuetify": "^3.1.7",
+    "vuetify": "3.3.0",
     "webpack-plugin-vuetify": "^2.0.1"
   },
   "devDependencies": {
@@ -88,6 +88,7 @@
     "deepmerge": "^4.2.2",
     "dotenv": "^16.0.0",
     "dotenv-expand": "^8.0.3",
+    "easygettext": "^2.17.0",
     "electron": "14.2.9",
     "electron-builder": "^23.0.3",
     "html-webpack-plugin": "^5.5.0",

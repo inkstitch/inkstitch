@@ -26,7 +26,7 @@ module.exports = {
     alias: {
       '@': paths.resolve('src'),
     },
-    extensions: ['.ts', '.tsx', '.js', '.jsx', '.vue', '.json', 'html', 'ejs'],
+    extensions: ['.ts', '.tsx', '.js', '.jsx', '.vue', '.json', '.html', '.ejs'],
   },
 
   plugins: [
