@@ -247,7 +247,11 @@ def intersect_region_with_grating_guideline(shape, line, row_spacing, num_stagge
             translate_amount = translate_direction * row * row_spacing
             offset_line = translate(line, xoff=translate_amount.x, yoff=translate_amount.y)
         elif strategy == 1:
-            offset_line = line.parallel_offset(row * row_spacing, 'left', join_style=shgeo.JOIN_STYLE.round)
+            offset = row * row_spacing
+            if offset == 0:
+                # this is needed for macOS builds
+                offset = 0.0001
+            offset_line = line.parallel_offset(offset, 'left', join_style=shgeo.JOIN_STYLE.round)
 
         offset_line = clean_offset_line(offset_line)
 
