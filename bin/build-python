@@ -44,7 +44,7 @@ if [ "$BUILD" = "windows" ]; then
 	pyinstaller_args+="--version-file  installer_scripts/file_version_info.txt "
     python -m PyInstaller $pyinstaller_args inkstitch.py
 else
-    python -m PyInstaller $pyinstaller_args --strip inkstitch.py;
+    python -m PyInstaller $pyinstaller_args inkstitch.py;
 fi
 
 # pyinstaller put a whole mess of libraries under dist/inkstitch.  We'd like
