@@ -89,7 +89,7 @@ class InkstitchExtension(inkex.EffectExtension):
             return []
 
         if self.svg.selection:
-            if node.get("id") in self.svg.selection:
+            if node in self.svg.selection:
                 selected = True
         else:
             # if the user didn't select anything that means we process everything
