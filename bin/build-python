@@ -23,6 +23,11 @@ if [ "$BUILD" = "osx" ]; then
     fi
 fi
 
+if [ "$BUILD" = "linux" ]; then
+    pyinstaller_args+="--hidden-import gi.repository.Gtk "
+fi
+
+
 if [ "$BUILD" = "windows" ]; then
 	if [[ "$VERSION" =~ ^v[0-9][.0-9]+$ ]]; then
 		# setting the file and product version for release
