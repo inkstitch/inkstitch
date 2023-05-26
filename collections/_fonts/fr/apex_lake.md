@@ -22,8 +22,6 @@ Apex Lake contient les 38 glyphes :
 
 ?!0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ
 
-{% include upcoming_release.html %}
-
 ### Apex Simple AGS
 Apex Simple AGS contient les 124 glyphes:
 
@@ -45,8 +43,6 @@ Vous pouvez aussi utiliser les deux fontes conjointement, généralement en util
 ### Apex Lake
 Apex Lake est une grande fonte, elle est faite pour être utilisée une lettre ou quelques lettres à la fois. 
 Utilisée à 100% elle mesure environ 60 mm de haut. Elle peut être réduite jusqu'à 80% (50 mm) et agrandie jusqu'à 130% (110 mm).
-
-{% include upcoming_release.html %}
 
 ### Apex Simple AGS
 Utilisée à 100%, elle mesure environ 35 mm de haut. Elle peut être réduite jusqu'à 75% (25mm) et agrandie jusqu'à 300% (100mm).

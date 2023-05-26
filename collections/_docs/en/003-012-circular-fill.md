@@ -5,8 +5,6 @@ excerpt: ""
 last_modified_at: 2023-04-30
 toc: true
 ---
-{% include upcoming_release.html %}
-
 ## What it is
 
 Circular fill fills a shape with an embroidered spiral. The center of the spiral is positioned at the center of the shape. A target point can be used to define a custom spiral center.

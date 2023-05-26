@@ -43,7 +43,6 @@ Ink/Stitch  offre une fonction de nettoyage de votre document qui empêche ces o
 * Choisissez quels types d'objets doivent être supprimés et définissez un seuil
 * Cliquez sur "Appliquer"
 
-{% include upcoming_release.html %}
 ## Mettre à jour le svg d'Ink/Stitch 
 
 Un ficher créé avec une version plus ancienne d'Ink/Stitch  se mettra a jour automatiquement.

@@ -16,9 +16,6 @@ tool:
   - "Stroke"
 user-level:
 ---
-
-{% include upcoming_release.html %}
-
 ![Brodé](/assets/images/tutorials/tutorial-preview-images/circular_monogram.jpg)
 
 Ce tutoriel n'utilise pas le module lettrage de Ink/Stich

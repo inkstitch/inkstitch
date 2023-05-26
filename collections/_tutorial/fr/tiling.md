@@ -15,9 +15,6 @@ tool:
   - "Stroke"
 user-level:
 ---
-
-{% include upcoming_release.html %}
-
 ![Brodé](/assets/images/tutorials/tutorial-preview-images/tiling_embroidered.jpg)
 
 

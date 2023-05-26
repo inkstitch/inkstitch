@@ -25,8 +25,6 @@ Apex Lake enthält folgende 38 Schriftzeichen :
 
 ?!0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ
 
-{% include upcoming_release.html %}
-
 ### Apex Simple AGS
 
 Apex simple AGS enthält folgende 124 Schriftzeichen :

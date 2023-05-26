@@ -25,7 +25,6 @@ Le point triple décrit une répétition de points droits avant arrière. Il en 
 
 ![Point triple Détail](/assets/images/docs/bean-stitch-detail.jpg){: width="350x" }
 
-{% include upcoming_release.html %} 
 Il est possible de définir sa propre séquence de répétition, par exemple alternance de point simple et de point triple.
 
 [En savoir plus](/fr/docs/stitches/bean-stitch/){: .btn .btn--primary}

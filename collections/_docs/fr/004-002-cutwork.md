@@ -49,8 +49,6 @@ Janome                   | Red <span class="cwd" style="background: #ff3f7e;">&#
 
 ## Broderie Richelieu avec  Bernina/Bernette
 
-{% include upcoming_release.html %}
-
 Sauvegarder le fichier .inf avec votre fichier .exp (avec le même nom, seule l'extension différe) et la machine reconnaitra les lignes de coupe et montrera les bons numéros d'aiguilles (tels que défini dans l'outil de segmentation).
 
 Utilisez ce paramètrage (ce sont les couleurs classiques, mais elles n'influencent pas la reconaissance du richelieu):

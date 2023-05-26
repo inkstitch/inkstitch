@@ -27,8 +27,6 @@ Diese Erweiterung soll dir helfen, kaputte Objekte zu repaireren. Nutze diese Fu
 
 ## Farbverlauf in Blöcke aufteilen
 
-{% include upcoming_release.html %}
-
 Diese Erweiterung teilt ein Füllobjekt mit einem linearen Farbverlauf in mehrere einfarbige Blöcke auf und setzt den zuvor bestimmten Wert für `Reihenabstand Ende`.
 
 ### Anwendung

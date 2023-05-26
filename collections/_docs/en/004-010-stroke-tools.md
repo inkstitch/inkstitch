@@ -42,8 +42,6 @@ This works best on evenly spaced satin columns.
 
 ## Fill to Stroke
 
-{% include upcoming_release.html %}
-
 Fill outlines never look nice when embroidered - but it is a lot of work to convert a fill outline to a satin column or a running stitch. This tool helps you with this operation.
 
 It is comparable to the Inkscape functionality of `Path > Trace bitmap > Centerline tracing` (- and has similar issues.) But instead of converting raster graphics, it will find the centerline of vector based objects with a fill.
@@ -69,8 +67,6 @@ You can improve the result by defining cut lines.
 * Cut lines: close gaps: Cut lines create gaps which can be closed by enabling this option. This option will only be useful, when no satin column conversion is planed.
 
 ## Jump to Stroke
-
-{% include upcoming_release.html %}
 
 This will create a running stitch from the end position of the first element to the start position of the second element. Place this running stitch under following top stitches and avoid jump stitches.
 

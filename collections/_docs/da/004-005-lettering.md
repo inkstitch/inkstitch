@@ -23,7 +23,6 @@ The lettering tool generates multi-line text as satin columns and dynamically ro
 * **Font size filter**<br>
   Fonts are designed for a special range of sizes. The font size filter helps you to reduce the font list to only the fonts fitting to your target size.
   A active font filter (not 0) will set the correct scale value when you select a font.
-  {% include upcoming_release.html %}
 
 * **Stitch lines of text back and forth**<br>
   With this option enabled the first line will be stitched from left to right and the second from right to left, etc.
@@ -37,8 +36,6 @@ The lettering tool generates multi-line text as satin columns and dynamically ro
 You can save and load your favourite font settings.
 
 ## Lettering along path
-
-{% include upcoming_release.html %}
 
 Ink/Stitch letters are carefully designed. If you try to transform them with common tools, they may not work as expected. This means placing letters along a path will be a lot of work. Therefore we've created a tool to assist you with that.
 

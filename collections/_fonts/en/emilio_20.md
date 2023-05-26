@@ -16,20 +16,14 @@ preview_image:
    height: 100
 ---
 
-{% include upcoming_release.html %}
-
 <img 
      src="/assets/images/fonts/emilio_simple.png"
      alt="Emilio20" height="21">
  
-{% include upcoming_release.html %}
-    
 <img 
      src="/assets/images/fonts/emilio_20_bold.png"
      alt="Emilio20" height="25">
  
-{% include upcoming_release.html %}
-     
 <img 
      src="/assets/images/fonts/emilio_20_applique.png"
      alt="Emilio20" height="25">
@@ -52,21 +46,15 @@ Each of the five fonts contains 36 glyphs:
 
 ## Dimensions
 
-{% include upcoming_release.html %}
-
 ###  Emilio Simple
 
 At 100%, this font is approximatively  42 mm (1.75 inches) high.
 It can be scaled up to  140% (approx. 60 mm, 2.5 inches)  or scaled down to 70% (approx. 30 mm , 1.25 inches).
 
-{% include upcoming_release.html %}
-
 ### Emilio 20 Bold
 
 At 100%, this font is approximatively  50 mm (2 inches) high.
 It can be scaled up to  140% (approx. 70mm, 2.8 inches)  but should not be scaled down.
-
-{% include upcoming_release.html %}
 
 ### Emilio 20 Applique
 

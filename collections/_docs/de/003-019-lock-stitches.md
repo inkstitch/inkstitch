@@ -5,8 +5,6 @@ excerpt: ""
 last_modified_at: 2023-02-27
 toc: true
 ---
-{% include upcoming_release.html %}
-
 An- und Verstecher sind kleine Stiche am Anfang (Anstecher) oder am Ende (Verstecher) eines Farbblocks oder vor und nach einem Sprungstich oder Fadenschnitt-Befehl. Sie helfen den Faden zu sichern.
 
 Ink/Stitch bietet verschiedene Vernähstich-Typen an und erlaubt sogar die Definition eigener Vernähstiche.

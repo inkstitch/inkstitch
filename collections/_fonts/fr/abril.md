@@ -8,19 +8,13 @@ preview_image:
     height: 100
 ---
 
-{% include upcoming_release.html %}
-
 ![April En Fleur AGS](/assets/images/fonts/abril_en_fleur.jpg)
 
 ## Glyphes
 
 Cette fonte contient les  67 glyphs:
-
-
 	
 ABCDEFGHIJKLMNOPQRSTUVWXYZµabcçdefghijklmnopqrstuvwxyzß!0123456789?%      
-
-
 
 ## Dimensions
 Utilisée à 100%, cette fonte mesure approximativement 100mm de haut (4 pouces).

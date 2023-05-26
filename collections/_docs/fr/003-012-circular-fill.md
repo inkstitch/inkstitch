@@ -5,8 +5,6 @@ excerpt: ""
 last_modified_at: 2023-05-01
 toc: true
 ---
-{% include upcoming_release.html %}
-
 ## De quoi s'agit-il ?
 
 Le remplissage circulaire remplit une forme avec une spirale. Le centre de la spirale est positionné au centre de la forme. Il et possible de personnaliser la position du centre de la spirale à l'aide d'une cible.

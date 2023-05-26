@@ -46,8 +46,6 @@ Satin zu Geradstich konvertiert eine Satinsäule in ihre Mittellinie. Das kann b
 
 ## Füllung zu Mittellinie
 
-{% include upcoming_release.html %}
-
 Füllstiche sind für Umrandungen selten gut geeignet - aber es ist eine Menge Arbeit die Umrandungen in eine Satinsäule oder in Geradstiche zu verwandeln. Dieses Werkzeug nimmt dir einen Teil der Arbeit ab.
 
 Die Funktion ist vergleichbar mit der Inkscape Funktion unter `Pfad > Bitmap nachzeichen ...` mit dem Erkennungsmodus `Strichzeichnung vektorisieren (autotrace)` und weist kommt mit ähnlichen Schwierigkeiten einher. Die Unterschiede sind:
@@ -75,8 +73,6 @@ Die Funktion ist vergleichbar mit der Inkscape Funktion unter `Pfad > Bitmap nac
 * Schnittlinien: Lücken schließen: Bei der Nutzung von Schnittlinien entstehen an der Stelle des Schnitts Lücken, die durch diese Option geschlossen werden können. Diese Option nur anwählen, wenn keine Weiterverarbeitung in Satinsäulen geplant ist.
 
 ## Sprungstich zu Geradstich
-
-{% include upcoming_release.html %}
 
 Dieses Werkzeug erstellt Geradstiche von der Endposition des ersten Elements zu der Startposition des zweiten. Leite den hier generierten Geradstich versteckt unter später folgenden Stickflächen entlang und vermeide so unnötige Sprungstiche.
 

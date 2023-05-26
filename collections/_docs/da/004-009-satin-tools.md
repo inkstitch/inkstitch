@@ -75,8 +75,6 @@ A satin column which originally starts on the left rail and ends on the right, w
 
 ## Stroke to Live Path Effect Satin
 
-{% include upcoming_release.html %}
-
 Converts a stroke into a satin using a live path effect. This makes it more adaptable in width and shape as a normal satin column.
 
 ### Usage
@@ -104,8 +102,6 @@ Now you can change the pattern in the following ways.
 Use `Path > Object to path` to convert this to a standard satin column.
 
 ## Zigzag Line to Satin
-
-{% include upcoming_release.html %}
 
 When you trace a pattern manually this tool can be helpful to do it all in one run.
 Instead of drawing first the two rails and then several rungs, this tools allows to draw a square- or zigzag line which then can be converted into the satin column style.

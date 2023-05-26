@@ -5,8 +5,6 @@ excerpt: ""
 last_modified_at: 2023-04-15
 toc: true
 ---
-{% include upcoming_release.html %}
-
 Les points de sureté sont des petits points au début (point d'ancrage) ou à la fin (point d'arrêt)  d'une couleur ou d'un saut de fil ou d'une commande de coupe.
 
 

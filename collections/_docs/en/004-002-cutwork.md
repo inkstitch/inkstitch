@@ -43,8 +43,6 @@ Janome                   | Red <span class="cwd" style="background: #ff3f7e;">&#
 
 ## Cutwork with Bernina/Bernette
 
-{% include upcoming_release.html %}
-
 Save the .inf file along with your .exp file (name it equally) and the machine will recognize the cutwork lines and displays the correct needle numbers (as you defined in the cutwork segmentation tool).
 
 Use the following settings (these are the typical colors, but they do not matter for cutwork recognition):

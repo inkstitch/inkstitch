@@ -42,7 +42,6 @@ Point d'arrêt                    |Choisir le  [style désiré](/fr/docs/stitche
 Couper après                      |Couper le fil après avoir brodé cet objet
 Arrêter après                     |Arrêter (pause machine) après avoir brodé cet objet. Avant l'arrêt, il y aura un saut vers la position d'arrêt si elle a été définie
 
-{% include upcoming_release.html %} 
 Il est possible définir soit même une sequence de nombre de répétitions de point triple. Par exemple saisir 0 1 permettra d'obtenir une alternance de point simple et de point triple. La suite peut être plus longue. Les valeurs entières doivent être séparées par un espace.
 
 

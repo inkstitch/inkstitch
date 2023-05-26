@@ -5,8 +5,6 @@ excerpt: ""
 last_modified_at: 2023-05-01
 toc: true
 ---
-{% include upcoming_release.html %}
-
 ## De quoi s'agit-il?
 
 Le remplissage en méandres est originaire des techniques de quilting. Il produit un beau résultat en broderie machine. De grandes zones peuvent être remplies avec relativement peu de points.

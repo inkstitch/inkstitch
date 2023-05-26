@@ -20,9 +20,6 @@ user-level:
 toc:
   true
 ---
-
-{% include upcoming_release.html %}
-
 ![Brodé](/assets/images/tutorials/tutorial-preview-images/cookie_cutter_tiling.jpg)
 
 Le but de ce tutorial est de montrer comment utiliser l'effet de chemin Pavage, la découpe et l'agencement automatique de point droit pour créer un remplissage en motif.

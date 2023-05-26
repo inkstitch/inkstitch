@@ -12,9 +12,6 @@ werkzeug:
   - Füllung
   - Linie
 ---
-
-{% include upcoming_release.html %}
-
 ![Stickerei](/assets/images/tutorials/tutorial-preview-images/circular_monogram.jpg)
 
 Dieses Tutorial bezieht sich nicht auf das Text-Werkzeug von Ink/Stitch

@@ -16,20 +16,14 @@ preview_image:
    height: 100
 ---
 
-{% include upcoming_release.html %}
-
 <img 
      src="/assets/images/fonts/emilio_simple.png"
      alt="Emilio20" height="21">
  
-{% include upcoming_release.html %}
-    
 <img 
      src="/assets/images/fonts/emilio_20_bold.png"
      alt="Emilio20" height="25">
  
-{% include upcoming_release.html %}
-     
 <img 
      src="/assets/images/fonts/emilio_20_applique.png"
      alt="Emilio20" height="25">
@@ -59,14 +53,10 @@ Jeweils fünf  Schriften enthalten 36 Schriftzeichen:
 Bei einer Skalierung von 100 % ist diese Schrift ungefähr 42 mm hoch (1.75 Zoll).
 Sie kann bis auf 140% (~60mm, 2.5 Zoll) hochskaliert und bis zu 70% (~30mm, 1.25 Zoll) herunterskaliert werden.
 
-{% include upcoming_release.html %}
-
 ### Emilio 20 Bold
 
 Bei einer Skalierung auf 100 % ist diese Schrift ungefähr 50 mm hoch (2 Zoll).
 Sie kann bis auf 140% (~70mm, 2.8 Zoll) hochskaliert **but should not be scaled down.**
-
-{% include upcoming_release.html %}
 
 ### Emilio 20 Applique
 

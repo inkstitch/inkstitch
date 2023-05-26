@@ -5,10 +5,6 @@ excerpt: ""
 last_modified_at: 2023-05-11
 toc: true
 ---
-La version courante (v 2.2.0) n'a pas de réglage global.
-
-{% include upcoming_release.html %}
-
 On accède aux préférences via `Extensions > Ink/Stitch > Préférences`.
 
 Vous pouvez soit donner des valeurs globales qui seront appliquées à tous le nouveaux documents svg, soit donner des valeurs spécifiques pour le document courant qui ont priorité sur les valeurs globales.

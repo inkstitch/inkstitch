@@ -74,8 +74,6 @@ Sonst wird nichts an der Satinsäule verändert.
 
 ## Linie zu Pfadeffekt-Satin
 
-{% include upcoming_release.html %}
-
 Konvertiert eine Linie in eine Satinsäule mit Hilfe von Pfadeffekten. Dies macht es einfacher Form und Breite auch im Nachhinein noch anzupassen.
 
 ### Funktionsweise
@@ -114,8 +112,6 @@ Es ist möglich auch im Nachhinein das Muster zu personalisieren, bzw. ein ander
 Nutze die Funktion `Pfad > Objekt in Pfad umwandeln` um eine "normale" Satinsäule zu erhalten.
 
 ## Zickzack-Linie zu Satin
-
-{% include upcoming_release.html %}
 
 Wenn du manuell eine Form für einen Satinstich nachzeichnen willst, kann dieses Tool hilfreich sein.
 Anstatt zunächst beide Außenlinien und dann die Richtungsvektoren zu erstellen, kann die Form mit einer einzigen Linie generiert werden.

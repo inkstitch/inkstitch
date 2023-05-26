@@ -7,8 +7,6 @@ toc: true
 ---
 The current version (v 2.2.0) does not have global settings.
 
-{% include upcoming_release.html %}
-
 Die Einstellungen können über `Erweiterungen > Ink/Stitch > Einstellungen` abgerufen werden.
 
 Globale Einstellungen werden direkt auf jedes neue SVG-Dokument angewendet, während die Einstellungen im ersten Reiter dokumentspezifisch sind.

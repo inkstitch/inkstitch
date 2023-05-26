@@ -13,9 +13,6 @@ techniques:
 field-of-use:
 user-level:
 ---
-
-{% include upcoming_release.html %}
-
 ![Brodé](/assets/images/tutorials/tutorial-preview-images/meandering_writing.jpg)
 
 Ce tutoriel n'utilise pas le module lettrage de Ink/Stich, mais une fonte (.ttf ou .otf) qui doit avoir été installée sur votre machine **avant l'ouverture d'inkscape**
@@ -24,9 +21,6 @@ Ce tutoriel n'utilise pas le module lettrage de Ink/Stich, mais une fonte (.ttf 
 Cette méthode ne permet pas d'obtenir des écritures de petite taille (comptez au moins 5cm de hauteur pour les lettres) et toutes les fontes ne conviennent pas.
 En revanche vous pouvez obtenir de très grandes lettres qui se brodent très rapidement.
 {: .notice--warning }
-
-
-
 
 ## Écrire en positif
 

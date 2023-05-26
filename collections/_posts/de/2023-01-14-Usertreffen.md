@@ -72,7 +72,9 @@ Die neuen Sticharten, Mäander- und Spiralfüllung, können euch helfen große F
 
 Ink/Stitch ist eine Inkscape Erweiterung. Das bietet einige Vorteile, weil wir aus einem breiten Spektrum an Vektorbearbeitungstools schöpfen können. Dafür machen wir aber auch Abstriche in der Anwenderfreundlichkeit. Das ist mir durchaus bewusst und deshalb suche ich immer wieder nach Möglichkeiten, die Erstellung von Stickdesigns zu vereinfachen. So habe ich mir für diese Version z.B. verschiedene Möglichkeiten für die Erstellung von Satinstichen ausgedacht, die ich euch (neben weiteren neuen Features) gerne vorstellen will.
 
-Vorab gibt es hier schon eine Übersicht über die neuen Funktionen: [https://inkstitch.org/de/upcoming/](https://inkstitch.org/de/upcoming)
+Vorab gibt es hier schon eine Übersicht über die neuen Funktionen ...
+
+**Update** Die neue Version ist da: [https://insktitch.org/de/2023-05-26-v3.0.0](https://insktitch.org/de/2023-05-26-v3.0.0)
 
 ### Wie kann man das sticken? Bildstrukturen in Sticharten denken
 

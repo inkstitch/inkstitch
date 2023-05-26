@@ -5,8 +5,6 @@ excerpt: ""
 last_modified_at: 2023-05-01
 toc: true
 ---
-{% include upcoming_release.html %}
-
 ## Beschreibung
 
 Eine Spiralfüllung füllt eine Form mit einer gestickten Spirale. Der Mittelpunkt der Spirale liegt im Mittelpunkt des Elements. Eine Zielposition kann definiert werden um den Spiralmittelpunkt zu verschieben.

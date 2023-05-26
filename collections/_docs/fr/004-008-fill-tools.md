@@ -40,11 +40,7 @@ Info: Pour les chemins qui se chevauchent, l'étape 1 n'est effectuée que par c
 
 ## Convertir en blocs de dégradés 
 
-{% include upcoming_release.html %}
-
 Convertir en blocs de dégradé va découper un remplissage dont la couleur de fond est un dégradé linéaire en plusieurs blocs monochromes avec un espacement de ligne adequat pour rendre l'effet de dégradé.
-
-
 
 ### Usage
 

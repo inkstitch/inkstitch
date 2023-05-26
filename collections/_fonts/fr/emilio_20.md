@@ -17,20 +17,14 @@ preview_image:
 ---
 
 
-{% include upcoming_release.html %}
-
 <img 
      src="/assets/images/fonts/emilio_simple.png"
      alt="Emilio20" height="21">
  
-{% include upcoming_release.html %}
-    
 <img 
      src="/assets/images/fonts/emilio_20_bold.png"
      alt="Emilio20" height="25">
  
-{% include upcoming_release.html %}
-     
 <img 
      src="/assets/images/fonts/emilio_20_applique.png"
      alt="Emilio20" height="25">
@@ -53,20 +47,14 @@ Chacune des cinq fontes contient les 36 glyphes :
 
 ## Dimensions et particularités
 
-{% include upcoming_release.html %}
-
 ###  Emilio 20 Simple
 
 Utilisée à 100%, cette fonte fait environ 42 mm de haut.
 Elle peut être agrandie jusqu'a 140% (env 60 mm) ou diminuée jusqu'à 70% (env 30 mm).
 
-{% include upcoming_release.html %}
-
 ### Emilio 20 Bold
 Utilisée à 100%, cette fonte fait environ 50 mm de haut.
 Elle peut être agrandie jusqu'a 150% (env 75 mm) mais ne doit pas être diminuée .
-
-{% include upcoming_release.html %}
 
 ### Emilio 20 Applique
 Même dimensions que Emilio Bold, mais contient en plus de quoi faire un appliqué. 

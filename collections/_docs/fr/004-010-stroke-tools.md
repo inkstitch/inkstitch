@@ -41,8 +41,6 @@ Ceci fonctionne d'autant mieux que la largeur de la colonne satin initiale est c
 
 ## Remplissage en Trait
 
-{% include upcoming_release.html %}
-
 Des contours paramétrés en remplissage ne donnent jamais rien de bon en broderie, mais convertir un tel contour en colonne satin ou en point droit nécessite beaucoup de travail. Cet outil aide à accomplir cette opération.
 
 Il est comparable à la fonctionalité d'Inkscape `Chemin > Vectoriser un objet matriciel > Traçage Centerline`  ( -et cause le même genre de prolème...). Mais au lieu de convertir un bitmap en lignes, il détermine une ligne centrale pour des objets de type remplissage.
@@ -69,8 +67,6 @@ Merci de noter que chaque trait doit découper le remplissage en deux.
 
 
 ## Saut en Trait
-
-{% include upcoming_release.html %}
 
 Ceci crééra un point droit direct entre la fin du premier élément et le début du second. Il ne vous reste plus qu'à le positionner là où il sera recouvert par des broderies ultérieures pour éviter un saut de fil. 
 

@@ -81,7 +81,7 @@ With satin guides you will have the ability to lead the ripples precisely using 
 Params||Description
 ---|---|---
 Running stitch along paths    |  ☑ |Must be enabled for these settings to take effect.
-Method                        || Choose Ripple stitch 
+Method                        || Chose Ripple stitch 
 Repeats                       ||◦ Defines how many times to run down and back along the final embroidery path<br />◦ Default: 1 (traveling once from the start to the end of the path)<br />◦ Odd number: stitches will end at the end of the path<br />◦ Even number: stitching will return to the start of the path
 Bean stitch number of repeats ||◦ Enable [Bean Stitch Mode](/docs/stitches/bean-stitch/) which also applies to ripple stitching<br>◦ Backtrack each stitch this many times.<br>◦ A value of 1 would triple each stitch (forward, back, forward).<br>◦ A value of 2 would quintuple each stitch, etc.<br>◦ It is possible to define a repeat pattern by entering multiple values separated by a space.
 Running stitch length         ||Length of stitches in [Running Stitch Mode](/docs/stitches/running-stitch/)
@@ -93,7 +93,6 @@ Stagger lines this many times before repeating      ||  Setting this dictates th
 Line distance exponent        |<img src="/assets/images/docs/ripple_only_exponent.svg" alt="Exposant"/>| ◦ With default value of 1 space between replications is constant<br />◦ With a value greater than 1, the space between two consecutive replications increases as one moves away from the original ripple   <br />◦ With a value smaller than 1, the space between two consecutive replications decreases as one moves away from the original ripple.
 Flip exponent                 |☑  or ▢| exchange role of first and last line in the computation of  line distance
 Reverse                       |☑  or ▢|  Reverse the final embroidery path.  Has no effect on the other  parameters.
-Reverse rails                 || Reverse satin ripple rails.  Default: automatically detect and fix a reversed rail.
 Grid  size                    |<img src="/assets/images/docs/ripple_only_grid.svg" alt="Distance"/>| If the size is strictly positive a grid effect is added. The grid size controls how far apart the new  lines are. 
 Scale axes                    |XY or X or Y or None | for guided ripple only
 Starting scale                | for guided ripple only|How big the first copy of the line should be, in percent. 
@@ -102,8 +101,8 @@ Rotate                        | ☑  or ▢| for guided ripple only
 Join Style                    |<img src="/assets/images/docs/flat_or_point.svg" alt="Join Stile"/> |for non circular ripple, how the ripples are joined : Flat(top) or Point(bottom)
 Allow lock stitches           | ☑  or ▢| Enables lock stitches in only desired positions
 Force lock stitches           | ☑  or ▢| Sew lock stitches after sewing this element, even if the distance to the next object is shorter than defined by the collapse length value in the Ink/Stitch preferences.
-Tack stitch                   ||Choose your [favorite style](/docs/stitches/lock-stitches/)
-Lock stitch                   ||Choose your [favorite style](/docs/stitches/lock-stitches/)
+Tack stitch                   ||Chose your [favorite style](/docs/stitches/lock-stitches/)
+Lock stitch                   ||Chose your [favorite style](/docs/stitches/lock-stitches/)
 Trim After                    |☑ | Trim the thread after sewing this object.
 Stop After                    |☑ | Stop the machine after sewing this object. Before stopping it will jump to the stop position (frame out) if defined.
 {: .params-table }

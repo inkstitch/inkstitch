@@ -17,9 +17,9 @@ Nicht jede Maschine kann diese zusätzliche Informationen umsetzen und verstehen
 * Aktiviere die gewünschten Befehle und wenden sie an
 * Bei Befehlen wo die Positionierung wichtig ist: Der Endpunkt des Zeigers, der dem Objekt am nächsten ist, ist der Punkt, an dem der Befehl ausgeführt wird.
 
-Unter `Erweiterungen -> Ink/stitch -> Sticken -> Befehle` gibt es drei Optionen: `Befehle hinzufügen...`, `Ebenenbefehle hinzufügen...` und `Befehle mit gewählten Objekten verknüpfen...`.
+Unter `Erweiterungen -> Ink/stitch -> Sticken -> Befehle` gibt es drei Optionen: `Dokumentbefehle hinzufügen...`, `Ebenenbefehle hinzufügen...` und `Objektbefehle...`.
 
-### Befehle hinzufügen ...
+### Dokumentbefehle hinzufügen ...
 
 Diese Befehle wirken sich auf das gesamte Motiv aus.
 
@@ -39,7 +39,7 @@ Diese Befehle wirken sich auf die aktive Ebene aus.
 
 Alle Objete in dieser Ebene werden nicht in die Stickdatei exportiert. Eine typische Anwendung wäre z.B. Beschreibungstext für ein Tutorial, der nicht von Ink/Stitch gerendert werden soll.
 
-## Befehle mit gewählten Objekten verknüpfen …
+## Objektbefehle hinzufügen …
 
 Diese Befehle hängen sich an ausgewählte Objekte.
 
@@ -49,9 +49,7 @@ Definiert (1) die Start- und (2) die Endposition bei Objekten mit Füllstich.
 
 #### ![ripple stitch target symbol](/assets/images/docs/visual-commands-ripple-target.png) Zielposition
 
-Definiert den Zielpunkt für einen Ripplestich-Bereich
-{% include upcoming_release.html %}
-oder eine Spiralfüllung.
+Definiert den Zielpunkt für einen Ripplestich-Bereich oder eine Spiralfüllung.
 
 
 ### ![trim symbol](/assets/images/docs/visual-commands-trim.jpg) Faden trennen

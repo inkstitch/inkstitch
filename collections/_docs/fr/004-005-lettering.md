@@ -21,7 +21,6 @@ L'outil de lettrage génère un texte multilignes sous la forme de colonnes sati
 * **Filtrage par taille**
   Les fontes sont conçues pour être  brodées dans  un intervalle de tailles donné. Le filtrage par taille vous aide en réduisant la liste des fontes à uniquement les fontes qui peuvent être brodées dans les dimensions choisies.
   Un filtre actif (pas à 0) déterminera  automatiquement la bonne échelle pour que la fonte sélectionnée soit dans la dimension souhaitée.
-  {% include upcoming_release.html %}
 
 * **Broder les lignes de texte en aller retour**
  Lorsque cette option est activée, la première ligne sera brodée de gauche à droite et la seconde de droite à gauche, etc.
@@ -35,8 +34,6 @@ L'outil de lettrage génère un texte multilignes sous la forme de colonnes sati
 Vous pouvez enregistrer et rouvrir vos paramètres de police préférés.
 
 ## Lettrage le long d'un chemin
-
-{% include upcoming_release.html %}
 
 Les lettres d'ink/stitch ont été soigneusement dessinées pour une broderie optimale. Si vous essayez de les modifier avec les outils usuels d'inkscape, il se peut que cela ne fonctionne pas comme vous le souhaitez. Placez les lettres le long  d'un chemin est un gros travail. Cet outil va vous aider à le faire.
 

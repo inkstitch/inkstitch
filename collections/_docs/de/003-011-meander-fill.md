@@ -5,8 +5,6 @@ excerpt: ""
 last_modified_at: 2023-05-01
 toc: true
 ---
-{% include upcoming_release.html %}
-
 ## Beschreibung
 
 Mäanderfüllung hat seinen Ursprung in Quilt-Techniken. Für das Maschinensticken ergibt sich ein schöner gemusterter Effekt. Große Bereiche können mit relativ wenigen Stichen befüllt werden.

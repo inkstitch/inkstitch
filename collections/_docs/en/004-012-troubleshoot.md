@@ -45,8 +45,6 @@ Sometimes you will find very small shapes and leftover objects from various oper
 * Choose which types of objects should be removed and define a threshold
 * Click apply
 
-{% include upcoming_release.html %}
-
 ## Update Ink/Stitch svg
 
 A file which was created with an older version of Ink/Stitch will automatically update.

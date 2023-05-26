@@ -8,19 +8,13 @@ preview_image:
     height: 100
 ---
 
-{% include upcoming_release.html %}
-
 ![April En Fleur AGS](/assets/images/fonts/abril.png)
 
 ## Glyphs
 
 This font contains  67 glyphs:
 
-
-	
 ABCDEFGHIJKLMNOPQRSTUVWXYZµabcçdefghijklmnopqrstuvwxyzß!0123456789?%      
-
-
 
 ## Dimensions
 

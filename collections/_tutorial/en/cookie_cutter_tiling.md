@@ -20,9 +20,6 @@ user-level:
 toc:
   true
 ---
-
-{% include upcoming_release.html %}
-
 ![Brodé](/assets/images/tutorials/tutorial-preview-images/cookie_cutter_tiling.jpg)
 This tutorial explains how to fill a shape with pattern repetitions using the Tiling Live Path Effect , Clipping and Autorouting.
 

@@ -5,8 +5,6 @@ excerpt: ""
 last_modified_at: 2023-02-27
 toc: true
 ---
-{% include upcoming_release.html %}
-
 Tack and lock stitches are small stitches at the beginning (tack) or the end (lock) of a color block or before and after jump stitches or trim commands. They help to secure the thread.
 
 Ink/Stitch offers various types of tack and lock stitches and even allows to define your own.

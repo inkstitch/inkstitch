@@ -13,9 +13,6 @@ techniques:
 field-of-use:
 user-level:
 ---
-
-{% include upcoming_release.html %}
-
 ![Embroidery](/assets/images/tutorials/tutorial-preview-images/meandering_writing.jpg)
 
 This tutorial is **not** about using Ink/Stitch Lettering, but using a font (.ttf or .otf)  installed on your computer **before opening inkscape**.
@@ -25,9 +22,6 @@ This method should not be used for creating small letters (aiming to at least 4 
 create very large letters that will embroider quickly.
 {: .notice--warning }
 
-
-
-
 ## Positive space writing
 
 * Use inkscape Text tool to write a short text with your chosen font.
@@ -35,7 +29,6 @@ create very large letters that will embroider quickly.
 ![Font chosing](/assets/images/tutorials/meandering_writing/font-chosing.jpg)
 
 * You may wish to tweak the result. Here the font is [Rubik ultrabold](htps://fonts.google.com/specimen/Rubik/), but the height of the letters has been scaled up while keeping the width. You may also use any inkscape text manipulation tool at this step.
-
 
 * Select your text and `Path > Object to path`
 * In the "Layers and Objects" dialog, your text is turned into a group of paths

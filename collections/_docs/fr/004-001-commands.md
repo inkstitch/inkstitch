@@ -52,9 +52,7 @@ Définit  (1) le point de départ  (2) le point d'arrivée d'un remplissage.
 
 #### ![ripple-stitch-target-symbol](/assets/images/docs/visual-commands-ripple-target.png) [Position de la cible](ripple-stitch-target-symbol)
 
-Défini la position cible d'une broderie ondulée
-{% include upcoming_release.html %}
-ou d'un remplissage circulaire.
+Défini la position cible d'une broderie ondulée ou d'un remplissage circulaire.
 
 ####  ![auto-route-runing-starting-position-symbol](/assets/images/docs/visual-commands-auto-route-satin-stitch-start.jpg) ![auto route  ending position symbol](/assets/images/docs/visual-commands-auto-route-satin-stitch-end.jpg)  [Position de départ/de fin pour l'agencement automatique de points droits](#auto-route-runing-starting-position-symbol)
 

@@ -12,9 +12,6 @@ stichart:
 techniken:
 schwierigkeitsgrad:
 ---
-
-{% include upcoming_release.html %}
-
 ![Embroidery](/assets/images/tutorials/tutorial-preview-images/meandering_writing.jpg)
 
 Dieses Tutorial ist **nicht** über das Textmodul von Ink/Stitch sondern nutzt installierte Systemschriften (.ttf oder .otf).

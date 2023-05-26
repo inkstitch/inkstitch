@@ -7,8 +7,6 @@ toc: false
 ---
 The current version (v 2.2.0) does not have global settings.
 
-{% include upcoming_release.html %}
-
 The preferences are found in `Extensions > Ink/Stitch > Preferences`.
 
 You can either set global values which will be applied to every new svg document. Also you can set document specific values.

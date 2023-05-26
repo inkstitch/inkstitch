@@ -27,7 +27,6 @@ Das Text-Modul erzeugt mehrzeiligen Text. Die hinterlegten Schriftarten wurden v
   Schriften sind für eine bestimmte Skalierung digitalisiert. Der Schriftgrößenfilter hilft dir eine Schrift mit der richtigen Größe zu finden, indem er die
   Liste der Schriftarten nach der angegebenen Größe filtert.
   Ein aktivierter Filter (nicht 0) setzt bei der Auswahl einer Schriftart automatisch die Skalierung passend zur Suchgröße.
-  {% include upcoming_release.html %}
 
 * **Sticke Textzeilen vor und zurück**<br>
   Wenn diese Option aktiviert ist, wird die erste Zeile von links nach rechts gestickt und die zweite von rechts nach links usw.
@@ -41,8 +40,6 @@ Das Text-Modul erzeugt mehrzeiligen Text. Die hinterlegten Schriftarten wurden v
 Hier kann eine Liste mit den beliebtesten Schriftarten gespeichert und wieder geöffnet werden.
 
 ## Schrift entlang Pfad
-
-{% include upcoming_release.html %}
 
 Ink/Stitch Schriften sind liebevoll designed. Wenn sie mit Inkscape tools verformt werden (z.B. um sie in eine Kurve zu bringen) verliert das Ergebnis womöglich an Qualität. Auf der anderen Seite ist es ein langwieriger Prozess, die Buchstaben einzelnd an eine Linie anzupassen. Dieses Werkzeug hilft die, eine Schrift auf einen Pfad zu legen - ohne die Buchstaben zu verzerren.
 

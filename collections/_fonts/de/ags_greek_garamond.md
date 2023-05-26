@@ -8,8 +8,6 @@ preview_image:
     height: 20
 ---
 
-{% include upcoming_release.html %}
-
 ![AGS garamond](/assets/images/fonts/garamond.png)
 
 

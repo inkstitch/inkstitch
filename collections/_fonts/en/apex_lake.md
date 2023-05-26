@@ -22,8 +22,6 @@ Apex lake contains 38 glyphs:
 
 ?!0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ
 
-{% include upcoming_release.html %}
-
 ### Apex Simple AGS
 Apex Simple AGS contains 124 glyphs:
 
@@ -50,29 +48,20 @@ Used at 100% it is approximatively 60mm  high (2.2 inches) .
 
 It can be scaled down to 80% (approx. 50mm,  2 inches) and scaled up to 130% (approx 110mm, 4.5 inches).
 
-{% include upcoming_release.html %}
-
 ### Apex Simple AGS
 Used at 100% it is approximatively 35mm  high (1.5 inches) . 
 
 It can be scaled down to 75% (approx. 25mm,  1 inch) and scaled up to 300% (approx 100mm, 4 inches).
 
 
-
-
 ## Color sorting
 If you embroider several letters, you may wish to color sort. It is possible, providing the sorting respects the relative order inside each letter. [This is a way to do it](https://inkstitch.org/en/docs/lettering/#color-sorting)
-
-
-
 
 ## In real life 
 
 Why not use Apex Lake on a T shirt ? or on a fabric basket ?
 
 {%include folder-galleries path="fonts/apex-lake/" %}
-
-
 
 [Download Apex Lake Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/apex_lake/LICENSE)
 

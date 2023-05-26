@@ -37,8 +37,6 @@ While "simple" splits up loops, it will not respect overlapping subpaths. It wil
 
 ## Convert to gradient blocks
 
-{% include upcoming_release.html %}
-
 Convert to gradient blocks will split a fill with a linear gradient into multiple blocks of solid color and adapted row spacing.
 
 ### Usage

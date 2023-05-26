@@ -5,8 +5,6 @@ excerpt: ""
 last_modified_at: 2023-02-25
 toc: true
 ---
-{% include upcoming_release.html %}
-
 ## What it is
 
 Meander fill has its origins in quilting techniques. A beautiful patterned effect results for machine embroidery. Large areas can be filled with relatively few stitches.

@@ -70,17 +70,11 @@ Use only one starting and one ending point per auto-route operation.
 
 ## Display Hide Object Commands
 
-This is part of an upcoming Ink/Stitch version and not available in Ink/Stitch v2.1.2
-{: .notice--warning }
-
 Toggle visibility of object commands. Commands will still be functional when hidden.
 
 `Extensions > Ink/Stitch > Commands > View > Display|Hide Object Commands`
 
 ## Scale Command Symbols
-
-This is part of an upcoming Ink/Stitch version and not available in Ink/Stitch v2.1.2
-{: .notice--warning }
 
 Set the size of command symbols in the entire document: `Extensions > Ink/Stitch > Commands > View > Scale Command Symbols...`
 

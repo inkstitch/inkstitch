@@ -94,8 +94,6 @@ Il est aussi possible de faire la même opération à partir du paramètrage.
 
 ## Trait en Effet de Chemin Satin 
 
-{% include upcoming_release.html %}
-
 Converti une ligne en colonne satin, en utilisant un Effet de Chemin. Cela rend le satin plus adaptable en forme et en largeur qu'une conversion en colonne satin normale. La ligne reste une ligne, mais un effet de chemin lui est appliqué. Si vous utilisez l'éditeur de noeud, vous pourrez agir sur les noeuds de la ligne, même après application de l'effet.
 
 ### Usage
@@ -134,8 +132,6 @@ Vous pouvez changer le motif de plusieurs manières :
 * Convertir en chemin normal  (`Shift + Ctrl + C`)  et raffiner manuellement le chemin (ceci perdra la fonctionnalité Effet de Chemin)
 
 ## "Ligne  Zigzag" en Satin
-
-{% include upcoming_release.html %}
 
 Quand vous tracez manuellement une colonne satin, cet outil vous aidera à le faire en une seule étape : au lieu de dessiner d'abord deux rails puis des traverses, cet outil vous permet de dessiner une ligne en zigzag ( ou en dents de scie, ou en carrés) qui pourra ensuite être convertie en colonne satin normale.
 
