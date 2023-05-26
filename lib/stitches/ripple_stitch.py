@@ -252,6 +252,8 @@ def _do_grid(stroke, helper_lines, skip_start, skip_end):
         points = helper[skip_start:end]
         if stroke.reverse:
             points.reverse()
+        if len(helper_lines) - skip_start - skip_end % 2 != 0:
+            points.reverse()
         grid.append(points)
     grid = _get_staggered_stitches(stroke, grid, 0)
     return grid
