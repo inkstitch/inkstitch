@@ -20,6 +20,6 @@ The pyembroidery version used by the Ink/Stitch organization is a fork of [his w
 
 ## Embroidery File Formats
 
-The [EduTech wiki](http://edutechwiki.unige.ch/en/Machine_embroidery) is a good ressource for embroidery concepts.
+The [EduTech wiki](http://edutechwiki.unige.ch/en/Machine_embroidery) is a good resource for embroidery concepts.
 
 You can also find very detailed information about [embroidery file formats](http://edutechwiki.unige.ch/en/Embroidery_format).
