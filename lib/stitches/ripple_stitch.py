@@ -36,7 +36,7 @@ def ripple_stitch(stroke):
         stitches.reverse()
 
     if stroke.grid_size != 0:
-        stitches.extend(_do_grid(stroke, helper_lines, skip_start, skip_end))
+        stitches.extend(_do_grid(stroke, helper_lines, skip_start, skip_end, is_linear))
 
     return _repeat_coords(stitches, stroke.repeats)
 
@@ -229,7 +229,7 @@ def _target_point_helper_lines(stroke, outline):
     return helper_lines
 
 
-def _adjust_helper_lines_for_grid(stroke, helper_lines, skip_start, skip_end):
+def _adjust_helper_lines_for_grid(stroke, helper_lines, skip_start, skip_end, is_linear):
     num_lines = len(helper_lines[0])
     count = num_lines - skip_start - skip_end
 
@@ -239,18 +239,25 @@ def _adjust_helper_lines_for_grid(stroke, helper_lines, skip_start, skip_end):
                                       (not stroke.reverse and skip_start % 2 != 0))):
         count += 1
 
+    if not is_linear:
+        count = 1
+        if stroke.reverse:
+            count = 0
+
     if count % 2 != 0:
         helper_lines.reverse()
     return helper_lines
 
 
-def _do_grid(stroke, helper_lines, skip_start, skip_end):
-    helper_lines = _adjust_helper_lines_for_grid(stroke, helper_lines, skip_start, skip_end)
+def _do_grid(stroke, helper_lines, skip_start, skip_end, is_linear):
+    helper_lines = _adjust_helper_lines_for_grid(stroke, helper_lines, skip_start, skip_end, is_linear)
     grid = []
     for i, helper in enumerate(helper_lines):
         end = len(helper) - skip_end
         points = helper[skip_start:end]
         if stroke.reverse:
+            points.reverse()
+        if len(helper_lines) - skip_start - skip_end % 2 != 0:
             points.reverse()
         grid.append(points)
     grid = _get_staggered_stitches(stroke, grid, 0)
