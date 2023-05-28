@@ -1,10 +1,10 @@
 ---
-title: Applique
+title: Random Satin
 permalink: /tutorials/random_satin/
 last_modified_at: 2023-05-28
 language: en
-excerpt: "Randomized Satin"
-image: "/assets/images/tutorials/randomized_satin/bee.svg"
+excerpt: "Random Satin"
+image: "/assets/images/tutorials/randomized_satin/random_satin.jpg"
 
 tutorial-type:
   - Sample File
