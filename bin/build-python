@@ -48,6 +48,8 @@ if [ "$BUILD" = "windows" ]; then
 	pyinstaller_args+="--i electron/build/icons/win/inkstitch.ico "
 	pyinstaller_args+="--version-file  installer_scripts/file_version_info.txt "
     python -m PyInstaller $pyinstaller_args inkstitch.py
+elif [ "$BUILD" = "osx" ]; then
+    python -m PyInstaller $pyinstaller_args inkstitch.py;
 else
     python -m PyInstaller $pyinstaller_args --strip inkstitch.py;
 fi
