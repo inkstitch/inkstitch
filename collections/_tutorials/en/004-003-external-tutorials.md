@@ -23,8 +23,13 @@ classes: wide
 ### French
 
 * [Augusa](http://lyogau.over-blog.com/tag/inkscape%20inkstitch/)
-* [Daniel K. Schneider](https://edutechwiki.unige.ch/fr/InkStitch/)
+* [EduTech Wiki](https://edutechwiki.unige.ch/fr/InkStitch/)
+  * [Broder avec du fil conducteur](https://edutechwiki.unige.ch/Broder_avec_du_fil_conducteur)
 
 ### Russian
 
 * [Ink/Stitch forum by Сергей Демин](https://inkstitch.ru/)
+
+### German
+
+* Arbores: [Ink/Stitch - mit dicken Garnen sticken](https://w.arbores.tech/wiki/InkStitch_-_mit_dicken_Garnen_sticken)
