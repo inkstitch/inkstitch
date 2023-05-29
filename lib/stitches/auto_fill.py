@@ -7,6 +7,7 @@
 
 import math
 from itertools import chain, groupby
+import warnings
 
 import networkx
 from shapely import geometry as shgeo
@@ -359,7 +360,10 @@ def process_travel_edges(graph, fill_stitch_graph, shape, travel_edges):
     # allows for building a set of shapes and then efficiently testing
     # the set for intersection.  This allows us to do blazing-fast
     # queries of which line segments overlap each underpath edge.
-    strtree = STRtree(segments)
+    with warnings.catch_warnings():
+        # We know about this upcoming change and we don't want to bother users.
+        warnings.filterwarnings('ignore', 'STRtree will be changed in 2.0.0 and will not be compatible with versions < 2.')
+        strtree = STRtree(segments)
 
     # This makes the distance calculations below a bit faster.  We're
     # not looking for high precision anyway.
