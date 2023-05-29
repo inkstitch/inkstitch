@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2023-05-24 17:36+0000\n"
-"PO-Revision-Date: 2023-05-24 17:38\n"
+"PO-Revision-Date: 2023-05-29 01:21\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -1832,7 +1832,7 @@ msgstr "Kürzt Stiche um höchstens diesen Wert. Zwei durch ein Leerzeichen getr
 #: lib/elements/satin_column.py:205 lib/elements/satin_column.py:332
 #: lib/elements/satin_column.py:412
 msgid "% (each side)"
-msgstr ""
+msgstr "% (pro Seite)"
 
 #: lib/elements/satin_column.py:118
 msgid "Random percentage of satin width increase"
@@ -1917,7 +1917,7 @@ msgstr "Satinstiche ziehen den Stoff zusammen. Dadurch wird das Stickbild schmal
 #: lib/elements/satin_column.py:221 lib/elements/satin_column.py:317
 #: lib/elements/satin_column.py:392
 msgid "mm (each side)"
-msgstr ""
+msgstr "mm (pro Seite)"
 
 #: lib/elements/satin_column.py:232 lib/elements/stroke.py:264
 msgid "Automatic"
@@ -2412,11 +2412,11 @@ msgstr "Ink/Stitch kann Farbformate nicht direkt importieren. Aber du kannst ein
 #: lib/extensions/install.py:24
 msgid "Successfully installed color palettes for Inkscape.\n\n"
 "Please restart Inkscape."
-msgstr ""
+msgstr "Farbpaletten für Inkscape erfolgreich installiert."
 
 #: lib/extensions/install.py:27
 msgid "Could not install color palettes. Please file an issue on https://github.com/inkstitch/inkstitch/issues"
-msgstr ""
+msgstr "Konnte Farbpaletten nicht installieren. Bitte informiere das Entwicklerteam über diesen Vorfall: https://github.com/inkstitch/inkstitch/issues"
 
 #: lib/extensions/install_custom_palette.py:24
 #: lib/extensions/palette_to_text.py:26
@@ -3721,7 +3721,7 @@ msgstr "Zum nächsten Befehl springen"
 
 #: electron/src/renderer/components/Simulator.vue:512
 msgid "Jump to next command (Page up)"
-msgstr ""
+msgstr "Zum nächsten Befehl springen (Bild ↑)"
 
 #: electron/src/renderer/components/Simulator.vue:97
 msgid "Jump to previous command"
@@ -3729,7 +3729,7 @@ msgstr "Zum vorherigen Befehl springen"
 
 #: electron/src/renderer/components/Simulator.vue:502
 msgid "Jump to previous command (Page down)"
-msgstr ""
+msgstr "Zum vorherigen Befehl springen (Bild ↓)"
 
 #: electron/src/renderer/components/Simulator.vue:232
 msgid "jumps"
@@ -3761,7 +3761,7 @@ msgstr " ein Schritt rückwärts"
 
 #: electron/src/renderer/components/Simulator.vue:482
 msgid "One step backward (-)"
-msgstr ""
+msgstr "Schritt zurück (-)"
 
 #. description of keyboard shortcut that moves one stitch forward in simulator
 #: electron/src/renderer/components/Simulator.vue:84
@@ -3770,7 +3770,7 @@ msgstr " ein Schritt vorwärts"
 
 #: electron/src/renderer/components/Simulator.vue:492
 msgid "One step forward (+)"
-msgstr ""
+msgstr "Schritt vor (+)"
 
 #. name for page down keyboard key
 #: electron/src/renderer/components/Simulator.vue:99
@@ -3784,7 +3784,7 @@ msgstr "Bild hoch (PgUp)"
 
 #: electron/src/renderer/components/Simulator.vue:437
 msgid "Pause (space)"
-msgstr ""
+msgstr "Pause (Leerzeichen)"
 
 #: electron/src/renderer/components/Simulator.vue:40
 msgid "Play"
@@ -3792,7 +3792,7 @@ msgstr "Abspielen"
 
 #: electron/src/renderer/components/Simulator.vue:448
 msgid "Play (arrow left | arrow right)"
-msgstr ""
+msgstr "Abspielen (←|→)"
 
 #: electron/src/renderer/components/Simulator.vue:49
 msgid "Play backward"
@@ -3800,7 +3800,7 @@ msgstr "rückwärts Abspielen"
 
 #: electron/src/renderer/components/Simulator.vue:459
 msgid "Play backward (arrow left)"
-msgstr ""
+msgstr "Rückwärts abspielen (←)"
 
 #: electron/src/renderer/components/Simulator.vue:60
 msgid "Play forward"
@@ -3808,7 +3808,7 @@ msgstr "Vorwärts abspielen"
 
 #: electron/src/renderer/components/Simulator.vue:471
 msgid "Play forward (arrow right)"
-msgstr ""
+msgstr "Vorwärts abspielen (→)"
 
 #: electron/src/renderer/components/Simulator.vue:256
 msgid "realistic"
@@ -3887,7 +3887,7 @@ msgstr "Auf Designgröße skalieren"
 
 #: electron/src/renderer/components/Simulator.vue:580
 msgid "Zoom design (])"
-msgstr ""
+msgstr "Auf Designgröße skalieren (])"
 
 #: electron/src/renderer/components/Simulator.vue:138
 msgid "Zoom page"
@@ -3895,7 +3895,7 @@ msgstr "Auf Seitengröße skalieren"
 
 #: electron/src/renderer/components/Simulator.vue:570
 msgid "Zoom page ([)"
-msgstr ""
+msgstr "Auf Seitengröße skalieren ([)"
 
 #: inx/inkstitch_about.inx:3 inx/inkstitch_about.inx:6
 msgid "About"
