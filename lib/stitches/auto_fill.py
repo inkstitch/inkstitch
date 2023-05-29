@@ -37,6 +37,9 @@ class PathEdge(object):
     def __hash__(self):
         return hash((self._sorted_nodes, self.key))
 
+    def __repr__(self):
+        return f"PathEdge({self.key}, {self.nodes})"
+
     def __eq__(self, other):
         return self._sorted_nodes == other._sorted_nodes and self.key == other.key
 
@@ -572,12 +575,12 @@ def pick_edge(edges):
     return list(edges)[0]
 
 
-def collapse_sequential_outline_edges(path):
+def collapse_sequential_outline_edges(path, graph):
     """collapse sequential edges that fall on the same outline
 
     When the path follows multiple edges along the outline of the region,
     replace those edges with the starting and ending points.  We'll use
-    these to stitch along the outline later on.
+    these to underpath later on.
     """
 
     start_of_run = None
@@ -586,8 +589,24 @@ def collapse_sequential_outline_edges(path):
     for edge in path:
         if edge.is_segment():
             if start_of_run:
-                # close off the last run
-                new_path.append(PathEdge((start_of_run, edge[0]), "collapsed"))
+                # Collapse the run of edges along the outline.  If we're
+                # traveling from one segment to its neighbor, we can just go
+                # there directly.  Otherwise, we're going to have to underpath.
+                # The tricky thing is that even if we're going to a neighboring
+                # segment, the algorithm may have taken a weird route to get
+                # there, doubling back on itself.
+                #
+                # We can test whether the segments are neighboring by just
+                # seeing if there's an edge in the graph directly from one
+                # segment to the next.
+                #
+                # This test is important for the "skip last stitch in each row"
+                # feature.
+                if graph.has_edge(start_of_run, edge[0]):
+                    new_path.append(PathEdge((start_of_run, edge[0]), "outline"))
+                else:
+                    new_path.append(PathEdge((start_of_run, edge[0]), "collapsed"))
+
                 start_of_run = None
 
             new_path.append(edge)
@@ -602,9 +621,10 @@ def collapse_sequential_outline_edges(path):
     return new_path
 
 
-def travel(travel_graph, start, end, running_stitch_length, running_stitch_tolerance, skip_last):
+def travel(travel_graph, edge, running_stitch_length, running_stitch_tolerance, skip_last):
     """Create stitches to get from one point on an outline of the shape to another."""
 
+    start, end = edge
     path = networkx.shortest_path(travel_graph, start, end, weight='weight')
     path = [Stitch(*p) for p in path]
     stitches = running_stitch(path, running_stitch_length, running_stitch_tolerance)
@@ -614,7 +634,7 @@ def travel(travel_graph, start, end, running_stitch_length, running_stitch_toler
 
     # The path's first stitch will start at the end of a row of stitches.  We
     # don't want to double that last stitch, so we'd like to skip it.
-    if skip_last and len(path) > 2:
+    if skip_last and not edge.is_outline():
         # However, we don't want to skip it if we've had to do any actual
         # travel in the interior of the shape.  The reason is that we can
         # potentially cut a corner and stitch outside the shape.
@@ -631,7 +651,7 @@ def travel(travel_graph, start, end, running_stitch_length, running_stitch_toler
 @debug.time
 def path_to_stitches(path, travel_graph, fill_stitch_graph, angle, row_spacing, max_stitch_length, running_stitch_length, running_stitch_tolerance,
                      staggers, skip_last):
-    path = collapse_sequential_outline_edges(path)
+    path = collapse_sequential_outline_edges(path, fill_stitch_graph)
 
     stitches = []
 
@@ -644,7 +664,7 @@ def path_to_stitches(path, travel_graph, fill_stitch_graph, angle, row_spacing, 
             stitch_row(stitches, edge[0], edge[1], angle, row_spacing, max_stitch_length, staggers, skip_last)
             travel_graph.remove_edges_from(fill_stitch_graph[edge[0]][edge[1]]['segment'].get('underpath_edges', []))
         else:
-            stitches.extend(travel(travel_graph, edge[0], edge[1], running_stitch_length, running_stitch_tolerance, skip_last))
+            stitches.extend(travel(travel_graph, edge, running_stitch_length, running_stitch_tolerance, skip_last))
 
         check_stop_flag()
 
