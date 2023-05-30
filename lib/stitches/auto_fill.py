@@ -21,6 +21,7 @@ from ..utils.clamp_path import clamp_path_to_polygon
 from ..utils.geometry import Point as InkstitchPoint, line_string_to_point_list, ensure_multi_line_string
 from .fill import intersect_region_with_grating, stitch_row
 from .running_stitch import running_stitch
+from ..utils.smoothing import smooth_path
 from ..utils.threading import check_stop_flag
 
 
@@ -80,7 +81,7 @@ def auto_fill(shape,
     path = find_stitch_path(fill_stitch_graph, travel_graph, starting_point, ending_point)
     result = path_to_stitches(shape, path, travel_graph, fill_stitch_graph, angle, row_spacing,
                               max_stitch_length, running_stitch_length, running_stitch_tolerance,
-                              staggers, skip_last)
+                              staggers, skip_last, underpath)
 
     return result
 
@@ -626,12 +627,15 @@ def collapse_sequential_outline_edges(path, graph):
     return new_path
 
 
-def travel(shape, travel_graph, edge, running_stitch_length, running_stitch_tolerance, skip_last):
+def travel(shape, travel_graph, edge, running_stitch_length, running_stitch_tolerance, skip_last, underpath):
     """Create stitches to get from one point on an outline of the shape to another."""
 
     start, end = edge
     path = networkx.shortest_path(travel_graph, start, end, weight='weight')
+    if underpath and path != (start, end):
+        path = smooth_path(path, 2)
     path = clamp_path_to_polygon(path, shape)
+
     points = running_stitch(path, running_stitch_length, running_stitch_tolerance)
     stitches = [Stitch(point) for point in points]
 
@@ -656,7 +660,7 @@ def travel(shape, travel_graph, edge, running_stitch_length, running_stitch_tole
 
 @debug.time
 def path_to_stitches(shape, path, travel_graph, fill_stitch_graph, angle, row_spacing, max_stitch_length, running_stitch_length,
-                     running_stitch_tolerance, staggers, skip_last):
+                     running_stitch_tolerance, staggers, skip_last, underpath):
     path = collapse_sequential_outline_edges(path, fill_stitch_graph)
 
     stitches = []
@@ -670,7 +674,7 @@ def path_to_stitches(shape, path, travel_graph, fill_stitch_graph, angle, row_sp
             stitch_row(stitches, edge[0], edge[1], angle, row_spacing, max_stitch_length, staggers, skip_last)
             travel_graph.remove_edges_from(fill_stitch_graph[edge[0]][edge[1]]['segment'].get('underpath_edges', []))
         else:
-            stitches.extend(travel(shape, travel_graph, edge, running_stitch_length, running_stitch_tolerance, skip_last))
+            stitches.extend(travel(shape, travel_graph, edge, running_stitch_length, running_stitch_tolerance, skip_last, underpath))
 
         check_stop_flag()
 
