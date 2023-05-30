@@ -66,6 +66,8 @@ def find_border(polygon, point):
 def clamp_path_to_polygon(path, polygon):
     """Constrain a path to a Polygon.
 
+    The path is expected to have at least some part inside the Polygon.
+
     Description: https://gis.stackexchange.com/questions/428848/clamp-linestring-to-polygon
     """
 
@@ -75,6 +77,10 @@ def clamp_path_to_polygon(path, polygon):
     # This splits the path at the points where it intersects with the polygon
     # border and returns the pieces in the same order as the original path.
     split_path = ensure_geometry_collection(LineString(path).difference(polygon.boundary))
+
+    if len(split_path.geoms) == 1:
+        # The path never intersects with the polygon, so it's entirely inside.
+        return path
 
     # Add the start and end points to avoid losing part of the path if the
     # start or end coincides with the polygon boundary
