@@ -1,6 +1,6 @@
 from shapely.geometry import LineString, Point as ShapelyPoint, MultiPolygon
 from shapely.prepared import prep
-from .geometry import Point, ensure_multi_line_string
+from .geometry import Point, ensure_geometry_collection
 
 
 def path_to_segments(path):
@@ -69,20 +69,25 @@ def clamp_path_to_polygon(path, polygon):
     Description: https://gis.stackexchange.com/questions/428848/clamp-linestring-to-polygon
     """
 
-    path = LineString(path)
+    start = path[0]
+    end = path[-1]
 
     # This splits the path at the points where it intersects with the polygon
     # border and returns the pieces in the same order as the original path.
-    split_path = ensure_multi_line_string(path.difference(polygon.boundary))
+    split_path = ensure_geometry_collection(LineString(path).difference(polygon.boundary))
 
-    # contains() checks can fail without this.
+    # Add the start and end points to avoid losing part of the path if the
+    # start or end coincides with the polygon boundary
+    split_path = [ShapelyPoint(start), *split_path.geoms, ShapelyPoint(end)]
+
+    # contains() checks can fail without the buffer.
     buffered_polygon = prep(polygon.buffer(1e-9))
 
     last_segment_inside = None
     was_inside = False
     result = []
 
-    for segment in split_path.geoms:
+    for segment in split_path:
         if buffered_polygon.contains(segment):
             if not was_inside:
                 if last_segment_inside is not None:
