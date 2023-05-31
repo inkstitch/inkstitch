@@ -23,7 +23,7 @@ if [ "$BUILD" = "osx" ]; then
     fi
 fi
 
-if [ "$BUILD" = "linux" ]; then
+if [ "$BUILD" = "linux" -o "$BUILD" = "windows" ]; then
     pyinstaller_args+="--hidden-import gi.repository.Gtk "
 fi
 
