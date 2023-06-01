@@ -450,7 +450,7 @@ class DrawingPanel(wx.Panel):
         if self.control_panel.nppBtn.GetValue():
             npp_pen = wx.Pen(pen.GetColour(), width=int(0.5 * PIXELS_PER_MM * self.PIXEL_DENSITY))
             canvas.SetPen(npp_pen)
-            canvas.StrokeLineSegments(stitches, stitches)
+            canvas.StrokeLineSegments(stitches, [(stitch[0] + 0.001, stitch[1]) for stitch in stitches])
 
     def clear(self):
         dc = wx.ClientDC(self)
