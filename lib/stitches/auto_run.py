@@ -208,7 +208,11 @@ def path_to_elements(graph, path, trim):  # noqa: C901
     for start, end, direction in path:
         check_stop_flag()
 
-        element = graph[start][end].get('element')
+        try:
+            element = graph[start][end].get('element')
+        except KeyError:
+            # runs with the preserve order option may need this
+            element = graph[end][start].get('element')
         start_coord = graph.nodes[start]['point']
         end_coord = graph.nodes[end]['point']
         # create a new element if we hit an other original element to keep it's properties
