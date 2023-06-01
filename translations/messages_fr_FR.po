@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2023-05-24 17:36+0000\n"
-"PO-Revision-Date: 2023-05-29 01:21\n"
+"PO-Revision-Date: 2023-06-01 01:56\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -2413,11 +2413,11 @@ msgstr "Ink/Stitch ne peut pas importer directement les formats de couleur. Mais
 #: lib/extensions/install.py:24
 msgid "Successfully installed color palettes for Inkscape.\n\n"
 "Please restart Inkscape."
-msgstr ""
+msgstr "Les palettes de couleur pour inkscape ont été installées."
 
 #: lib/extensions/install.py:27
 msgid "Could not install color palettes. Please file an issue on https://github.com/inkstitch/inkstitch/issues"
-msgstr ""
+msgstr "Impossible d'installer les palettes de couleur. Merci de le signaler sur https://github.com/inkstitch/inkstitch/issues"
 
 #: lib/extensions/install_custom_palette.py:24
 #: lib/extensions/palette_to_text.py:26
@@ -3722,7 +3722,7 @@ msgstr "Sauter à la commande suivante"
 
 #: electron/src/renderer/components/Simulator.vue:512
 msgid "Jump to next command (Page up)"
-msgstr ""
+msgstr "Aller à la prochaine commande (haut page)"
 
 #: electron/src/renderer/components/Simulator.vue:97
 msgid "Jump to previous command"
@@ -3730,7 +3730,7 @@ msgstr "Sauter à la commande précédente"
 
 #: electron/src/renderer/components/Simulator.vue:502
 msgid "Jump to previous command (Page down)"
-msgstr ""
+msgstr "Aller à la commande précédente (Bas page)"
 
 #: electron/src/renderer/components/Simulator.vue:232
 msgid "jumps"
@@ -3762,7 +3762,7 @@ msgstr "Un pas en arrière"
 
 #: electron/src/renderer/components/Simulator.vue:482
 msgid "One step backward (-)"
-msgstr ""
+msgstr "Un pas en arrière (-)"
 
 #. description of keyboard shortcut that moves one stitch forward in simulator
 #: electron/src/renderer/components/Simulator.vue:84
@@ -3771,7 +3771,7 @@ msgstr "Un pas en avant"
 
 #: electron/src/renderer/components/Simulator.vue:492
 msgid "One step forward (+)"
-msgstr ""
+msgstr "Un pas en avant (+)"
 
 #. name for page down keyboard key
 #: electron/src/renderer/components/Simulator.vue:99
@@ -3785,7 +3785,7 @@ msgstr "Page en haut (PgUp)"
 
 #: electron/src/renderer/components/Simulator.vue:437
 msgid "Pause (space)"
-msgstr ""
+msgstr "Pause (espace)"
 
 #: electron/src/renderer/components/Simulator.vue:40
 msgid "Play"
@@ -3793,7 +3793,7 @@ msgstr "Lecture"
 
 #: electron/src/renderer/components/Simulator.vue:448
 msgid "Play (arrow left | arrow right)"
-msgstr ""
+msgstr "Jouer (flèche gauche | flèche droite)"
 
 #: electron/src/renderer/components/Simulator.vue:49
 msgid "Play backward"
@@ -3801,7 +3801,7 @@ msgstr "Lire à l'envers"
 
 #: electron/src/renderer/components/Simulator.vue:459
 msgid "Play backward (arrow left)"
-msgstr ""
+msgstr "Rembobiner (flèche gauche)"
 
 #: electron/src/renderer/components/Simulator.vue:60
 msgid "Play forward"
@@ -3809,7 +3809,7 @@ msgstr "Lire en avant"
 
 #: electron/src/renderer/components/Simulator.vue:471
 msgid "Play forward (arrow right)"
-msgstr ""
+msgstr "En avant (flèche droite)"
 
 #: electron/src/renderer/components/Simulator.vue:256
 msgid "realistic"
@@ -3888,7 +3888,7 @@ msgstr "Zoomer sur le dessin"
 
 #: electron/src/renderer/components/Simulator.vue:580
 msgid "Zoom design (])"
-msgstr ""
+msgstr "Zoomer sur le dessin (])"
 
 #: electron/src/renderer/components/Simulator.vue:138
 msgid "Zoom page"
@@ -3896,7 +3896,7 @@ msgstr "Zoomer sur la page"
 
 #: electron/src/renderer/components/Simulator.vue:570
 msgid "Zoom page ([)"
-msgstr ""
+msgstr "Zoomer sur la page ([)"
 
 #: inx/inkstitch_about.inx:3 inx/inkstitch_about.inx:6
 msgid "About"
