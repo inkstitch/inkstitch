@@ -68,6 +68,7 @@ function createWindow() {
       const saveOpt = {
         title: "Save PDF",
         defaultPath: "Inkstitch.pdf",
+        filters: [{ name: 'PDF', extensions: ['pdf'] }],
         bookmark: "true",
       }
       win.webContents.printToPDF({}).then(pageSize => {
