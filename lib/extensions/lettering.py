@@ -480,18 +480,19 @@ class Lettering(CommandsExtension):
                 inkex.errormsg(_("Please select only one block of text."))
                 sys.exit(1)
             elif len(groups) == 0:
-                inkex.errormsg(_("You've selected objects that were not created by the Lettering extension.  "
-                                 "Please clear your selection or select different objects before running Lettering again."))
-                sys.exit(1)
+                return self.create_group()
             else:
                 return list(groups)[0]
         else:
-            group = inkex.Group(attrib={
-                INKSCAPE_LABEL: _("Ink/Stitch Lettering"),
-                "transform": get_correction_transform(self.get_current_layer(), child=True)
-            })
-            self.get_current_layer().append(group)
-            return group
+            return self.create_group()
+
+    def create_group(self):
+        group = inkex.Group(attrib={
+            INKSCAPE_LABEL: _("Ink/Stitch Lettering"),
+            "transform": get_correction_transform(self.get_current_layer(), child=True)
+        })
+        self.get_current_layer().append(group)
+        return group
 
     def effect(self):
         metadata = self.get_inkstitch_metadata()
