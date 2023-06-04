@@ -7,47 +7,65 @@
     <param name="options" type="notebook">
         <page name="stitch-type" gui-text="Select options">
             <label appearance="header">Select Stitch Type</label>
-            <label>Stroke type</label>
-                <hbox>
-                <param indent="1" name="select-running-stitch" type="boolean" gui-text="Running Stitch">false</param>
-                <param indent="1" name="running-stitch-condition" type="optiongroup" appearance="combo" gui-text="Select"
-                       gui-description="Only select specific running stitches">
-                    <option value="all">All</option>
-                    <option value="autorun-top">Auto-Run Top Stitching</option>
-                    <option value="autorun-underpath">Auto-Run Underpath</option>
-                </param>
-                </hbox>
-                <param indent="1" name="select-ripples" type="boolean" gui-text="Ripples">false</param>
-                <param indent="1" name="select-zigzag" type="boolean" gui-text="ZigZag Stitch">false</param>
-                <param indent="1" name="select-manual" type="boolean" gui-text="Manual Stitch">false</param>
-                <param indent="1" name="select-polyline" type="boolean" gui-text="Polyline">false</param>
-            <label>Satin</label>
-                <param indent="1" name="select-satin" type="boolean" gui-text="Satin Column">false</param>
-                <param indent="1" name="select-e" type="boolean" gui-text="E-Stitch">false</param>
-                <param indent="1" name="satin-underlay" type="optiongroup" appearance="combo" gui-text="Underlay type"
-                       gui-description="Only select satins with this underlay type">
-                    <option value="all">No restriction</option>
-                    <option value="no">No underlay</option>
-                    <option value="center">Centerwalk</option>
-                    <option value="contour">Contour</option>
-                    <option value="zigzag">Zigzag</option>
-                </param>
-            <label>Fills</label>
-                <param indent="1" name="select-auto-fill" type="boolean" gui-text="Fill">false</param>
-                <param indent="1" name="select-contour-fill" type="boolean" gui-text="Contour Fill">false</param>
-                <param indent="1" name="select-guided-fill" type="boolean" gui-text="Guided Fill">false</param>
-                <param indent="1" name="select-meander-fill" type="boolean" gui-text="Meander Fill">false</param>
-                <param indent="1" name="select-circular-fill" type="boolean" gui-text="Circular Fill">false</param>
-                <param indent="1" name="select-legacy-fill" type="boolean" gui-text="Legacy Fill">false</param>
-                <param indent="1" name="fill-underlay" type="optiongroup" appearance="combo" gui-text="Underlay"
-                       gui-description="Only select fills with this underlay">
-                    <option value="all">No restriction</option>
-                    <option value="yes">Underlay</option>
-                    <option value="no">No Underlay</option>
-                </param>
-            <label>Clone</label>
-                <param indent="1" name="select-clone" type="boolean" gui-text="Clone">false</param>
+            <hbox>
+            <vbox>
+                <label>Stroke</label>
+                    <param indent="1" name="select-running-stitch" type="boolean" gui-text="Running Stitch">false</param>
+                    <param indent="3" name="running-stitch-condition" type="optiongroup" appearance="combo" gui-text="Type"
+                           gui-description="Select only specific running stitches">
+                        <option value="all">No restriction</option>
+                        <option value="autorun-top">Auto-Run Top Stitching</option>
+                        <option value="autorun-underpath">Auto-Run Underpath</option>
+                    </param>
+                    <param indent="1" name="select-ripples" type="boolean" gui-text="Ripples">false</param>
+                    <param indent="1" name="select-zigzag" type="boolean" gui-text="ZigZag Stitch">false</param>
+                    <param indent="1" name="select-manual" type="boolean" gui-text="Manual Stitch">false</param>
+                    <param indent="1" name="select-polyline" type="boolean" gui-text="Polyline">false</param>
+            </vbox>
+            <spacer />
+            <separator />
+            <spacer />
+            <vbox>
+                <label>Satin</label>
+                  <param indent="1" name="select-satin" type="boolean" gui-text="Satin Column">false</param>
+                  <param indent="1" name="select-e" type="boolean" gui-text="E-Stitch">false</param>
+                  <param indent="1" name="satin-underlay" type="optiongroup" appearance="combo" gui-text="Underlay"
+                         gui-description="Only select satins with this underlay type">
+                      <option value="all">No restriction</option>
+                      <option value="no">No underlay</option>
+                      <option value="center">Centerwalk</option>
+                      <option value="contour">Contour</option>
+                      <option value="zigzag">Zigzag</option>
+                  </param>
+          </vbox>
+            <spacer />
+            <separator />
+            <spacer />
+          <vbox>
+                <label>Fill</label>
+                    <param indent="1" name="select-auto-fill" type="boolean" gui-text="Fill">false</param>
+                    <param indent="1" name="select-contour-fill" type="boolean" gui-text="Contour Fill">false</param>
+                    <param indent="1" name="select-guided-fill" type="boolean" gui-text="Guided Fill">false</param>
+                    <param indent="1" name="select-meander-fill" type="boolean" gui-text="Meander Fill">false</param>
+                    <param indent="1" name="select-circular-fill" type="boolean" gui-text="Circular Fill">false</param>
+                    <param indent="1" name="select-legacy-fill" type="boolean" gui-text="Legacy Fill">false</param>
+                    <param indent="1" name="fill-underlay" type="optiongroup" appearance="combo" gui-text="Underlay"
+                           gui-description="Only select fills with this underlay">
+                        <option value="all">No restriction</option>
+                        <option value="yes">Underlay</option>
+                        <option value="no">No Underlay</option>
+                    </param>
+          </vbox>
+            <spacer />
+            <separator />
+            <spacer />
+          <vbox>
+                <label>Clone</label>
+                    <param indent="1" name="select-clone" type="boolean" gui-text="Clone">false</param>
+          </vbox>
+        </hobx>
         </page>
+
         <page name="info" gui-text="Help">
             <label appearance="header">Select embroidery objects</label>
             <spacer />
