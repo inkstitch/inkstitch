@@ -60,7 +60,7 @@ def fallback(shape, guideline, row_spacing, max_stitch_length, running_stitch_le
 
 
 def path_to_stitches(path, travel_graph, fill_stitch_graph, stitch_length, running_stitch_length, running_stitch_tolerance, skip_last):
-    path = collapse_sequential_outline_edges(path)
+    path = collapse_sequential_outline_edges(path, fill_stitch_graph)
 
     stitches = []
 
@@ -89,7 +89,7 @@ def path_to_stitches(path, travel_graph, fill_stitch_graph, stitch_length, runni
 
             travel_graph.remove_edges_from(fill_stitch_graph[edge[0]][edge[1]]['segment'].get('underpath_edges', []))
         else:
-            stitches.extend(travel(travel_graph, edge[0], edge[1], running_stitch_length, running_stitch_tolerance, skip_last))
+            stitches.extend(travel(travel_graph, edge, running_stitch_length, running_stitch_tolerance, skip_last))
 
     return stitches
 
