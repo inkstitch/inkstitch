@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-05-24 17:36+0000\n"
-"PO-Revision-Date: 2023-06-01 01:56\n"
+"POT-Creation-Date: 2023-06-05 01:32+0000\n"
+"PO-Revision-Date: 2023-06-05 01:34\n"
 "Last-Translator: \n"
 "Language-Team: Finnish\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-24 17:36+0000\n"
+"POT-Creation-Date: 2023-06-05 01:32+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1116,8 +1116,7 @@ msgstr ""
 msgid "* Select the clone."
 msgstr ""
 
-#: lib/elements/clone.py:52 inx/inkstitch_select_elements.inx:48
-#: inx/inkstitch_select_elements.inx:49
+#: lib/elements/clone.py:52
 msgid "Clone"
 msgstr ""
 
@@ -1372,23 +1371,23 @@ msgstr "Automaattisesti reititetty täytetikki"
 msgid "Auto Fill"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:116 inx/inkstitch_select_elements.inx:37
+#: lib/elements/fill_stitch.py:116
 msgid "Contour Fill"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:117 inx/inkstitch_select_elements.inx:38
+#: lib/elements/fill_stitch.py:117
 msgid "Guided Fill"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:118 inx/inkstitch_select_elements.inx:39
+#: lib/elements/fill_stitch.py:118
 msgid "Meander Fill"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:119 inx/inkstitch_select_elements.inx:40
+#: lib/elements/fill_stitch.py:119
 msgid "Circular Fill"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:120 inx/inkstitch_select_elements.inx:41
+#: lib/elements/fill_stitch.py:120
 msgid "Legacy Fill"
 msgstr ""
 
@@ -1586,8 +1585,7 @@ msgid "Backtrack each stitch this many times.  A value of 1 would triple each st
 "A pattern with various repeats can be created with a list of values separated by a space."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:410 inx/inkstitch_select_elements.inx:43
-#: inx/inkstitch_select_elements.inx:45
+#: lib/elements/fill_stitch.py:410
 msgid "Underlay"
 msgstr "Alatäyttö"
 
@@ -1788,7 +1786,6 @@ msgid "* Hold \"Shift\" while drawing the rung."
 msgstr "*Pidä \"shift\" pohjassa piirtäessäsi apuviivan."
 
 #: lib/elements/satin_column.py:73 lib/elements/satin_column.py:83
-#: inx/inkstitch_select_elements.inx:25
 msgid "Satin Column"
 msgstr "Satiini"
 
@@ -2049,11 +2046,11 @@ msgstr ""
 msgid "Ripple Stitch"
 msgstr ""
 
-#: lib/elements/stroke.py:58 inx/inkstitch_select_elements.inx:21
+#: lib/elements/stroke.py:58
 msgid "ZigZag Stitch"
 msgstr ""
 
-#: lib/elements/stroke.py:59 inx/inkstitch_select_elements.inx:22
+#: lib/elements/stroke.py:59
 msgid "Manual Stitch"
 msgstr ""
 
@@ -2430,7 +2427,7 @@ msgstr ""
 msgid "Please choose one or more commands to add."
 msgstr "Valitse lisättäväksi yksi tai useampi komento."
 
-#: lib/extensions/lettering.py:40 lib/extensions/lettering.py:490
+#: lib/extensions/lettering.py:40 lib/extensions/lettering.py:491
 msgid "Ink/Stitch Lettering"
 msgstr "Ink/Stitch Kirjaimet"
 
@@ -2526,10 +2523,6 @@ msgstr "Skaalaa"
 #: lib/extensions/lettering.py:480
 msgid "Please select only one block of text."
 msgstr "Valitse vain yksi teksti."
-
-#: lib/extensions/lettering.py:483
-msgid "You've selected objects that were not created by the Lettering extension.  Please clear your selection or select different objects before running Lettering again."
-msgstr ""
 
 #: lib/extensions/lettering_along_path.py:39
 msgid "The text doesn't contain any glyphs."
@@ -2678,8 +2671,7 @@ msgstr "Kuvaus"
 
 #: lib/extensions/troubleshoot.py:106 lib/extensions/troubleshoot.py:155
 #: inx/inkstitch_cleanup.inx:17 inx/inkstitch_remove_embroidery_settings.inx:16
-#: inx/inkstitch_select_elements.inx:59 inx/inkstitch_troubleshoot.inx:12
-#: inx/inkstitch_update_svg.inx:10
+#: inx/inkstitch_troubleshoot.inx:12 inx/inkstitch_update_svg.inx:10
 msgid "Troubleshoot"
 msgstr "Vianhaku"
 
@@ -2963,12 +2955,12 @@ msgstr ""
 msgid "Auto-Route"
 msgstr ""
 
-#: lib/stitches/auto_run.py:270
+#: lib/stitches/auto_run.py:274
 #, python-format
 msgid "AutoRun %d"
 msgstr ""
 
-#: lib/stitches/auto_run.py:272
+#: lib/stitches/auto_run.py:276
 #, python-format
 msgid "AutoRun Underpath %d"
 msgstr ""
@@ -3935,7 +3927,7 @@ msgstr ""
 #: inx/inkstitch_fill_to_stroke.inx:23 inx/inkstitch_generate_palette.inx:24
 #: inx/inkstitch_gradient_blocks.inx:24
 #: inx/inkstitch_lettering_along_path.inx:17
-#: inx/inkstitch_palette_to_text.inx:19 inx/inkstitch_select_elements.inx:51
+#: inx/inkstitch_palette_to_text.inx:19
 #: inx/inkstitch_stroke_to_lpe_satin.inx:26
 #: inx/inkstitch_zigzag_line_to_satin.inx:18
 msgid "Help"
@@ -4250,7 +4242,6 @@ msgid "Duplicate Params"
 msgstr ""
 
 #: inx/inkstitch_duplicate_params.inx:10 inx/inkstitch_reorder.inx:10
-#: inx/inkstitch_select_elements.inx:74
 #: inx/inkstitch_selection_to_guide_line.inx:10
 #: inx/inkstitch_selection_to_pattern.inx:10
 msgid "Edit"
@@ -5512,139 +5503,6 @@ msgstr ""
 msgid "Re-stack objects in order of selection"
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:3
-msgid "Select embroidery elements"
-msgstr ""
-
-#: inx/inkstitch_select_elements.inx:8
-msgid "Select options"
-msgstr ""
-
-#: inx/inkstitch_select_elements.inx:9
-msgid "Select Stitch Type"
-msgstr ""
-
-#: inx/inkstitch_select_elements.inx:10
-msgid "Stroke type"
-msgstr ""
-
-#: inx/inkstitch_select_elements.inx:12
-msgid "Running Stitch"
-msgstr ""
-
-#: inx/inkstitch_select_elements.inx:14
-msgid "Select"
-msgstr ""
-
-#: inx/inkstitch_select_elements.inx:14
-msgid "Only select specific running stitches"
-msgstr ""
-
-#: inx/inkstitch_select_elements.inx:15
-msgid "All"
-msgstr ""
-
-#: inx/inkstitch_select_elements.inx:16
-msgid "Auto-Run Top Stitching"
-msgstr ""
-
-#: inx/inkstitch_select_elements.inx:17
-msgid "Auto-Run Underpath"
-msgstr ""
-
-#: inx/inkstitch_select_elements.inx:20
-msgid "Ripples"
-msgstr ""
-
-#: inx/inkstitch_select_elements.inx:23
-msgid "Polyline"
-msgstr ""
-
-#: inx/inkstitch_select_elements.inx:24
-msgid "Satin"
-msgstr ""
-
-#: inx/inkstitch_select_elements.inx:26
-msgid "E-Stitch"
-msgstr ""
-
-#: inx/inkstitch_select_elements.inx:28
-msgid "Underlay type"
-msgstr ""
-
-#: inx/inkstitch_select_elements.inx:28
-msgid "Only select satins with this underlay type"
-msgstr ""
-
-#: inx/inkstitch_select_elements.inx:29 inx/inkstitch_select_elements.inx:44
-msgid "No restriction"
-msgstr ""
-
-#: inx/inkstitch_select_elements.inx:30
-msgid "No underlay"
-msgstr ""
-
-#: inx/inkstitch_select_elements.inx:31
-msgid "Centerwalk"
-msgstr ""
-
-#: inx/inkstitch_select_elements.inx:32
-msgid "Contour"
-msgstr ""
-
-#: inx/inkstitch_select_elements.inx:33
-#: inx/inkstitch_zigzag_line_to_satin.inx:12
-msgid "Zigzag"
-msgstr ""
-
-#: inx/inkstitch_select_elements.inx:35
-msgid "Fills"
-msgstr ""
-
-#: inx/inkstitch_select_elements.inx:36
-msgid "Fill"
-msgstr ""
-
-#: inx/inkstitch_select_elements.inx:43
-msgid "Only select fills with this underlay"
-msgstr ""
-
-#: inx/inkstitch_select_elements.inx:46
-msgid "No Underlay"
-msgstr ""
-
-#: inx/inkstitch_select_elements.inx:52
-msgid "Select embroidery objects"
-msgstr ""
-
-#: inx/inkstitch_select_elements.inx:54
-msgid "Selects specific embroidery elements by stitch type."
-msgstr ""
-
-#: inx/inkstitch_select_elements.inx:55
-msgid "If there is already an active selection, non maching elements will be deselected."
-msgstr ""
-
-#: inx/inkstitch_select_elements.inx:61
-msgid "If this isn't working for you, you may need to insert your path to a python executable manualy."
-msgstr ""
-
-#: inx/inkstitch_select_elements.inx:63
-msgid "* Windows: Open the \"Command Prompt\" and type \"where python\". Copy the path and paste it here."
-msgstr ""
-
-#: inx/inkstitch_select_elements.inx:64
-msgid "* Linux: Open the command line and type \"which python3\". Copy the path and paste it here."
-msgstr ""
-
-#: inx/inkstitch_select_elements.inx:65
-msgid "* macOS: doesn't work, sorry"
-msgstr ""
-
-#: inx/inkstitch_select_elements.inx:66
-msgid "Python Path"
-msgstr ""
-
 #: inx/inkstitch_selection_to_guide_line.inx:3
 msgid "Selection to guide line"
 msgstr ""
@@ -5821,6 +5679,10 @@ msgstr ""
 
 #: inx/inkstitch_zigzag_line_to_satin.inx:11
 msgid "Sawtooth"
+msgstr ""
+
+#: inx/inkstitch_zigzag_line_to_satin.inx:12
+msgid "Zigzag"
 msgstr ""
 
 #: inx/inkstitch_zigzag_line_to_satin.inx:14
