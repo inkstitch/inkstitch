@@ -5,17 +5,28 @@
     <output>
         <extension>.zip</extension>
         <mimetype>application/zip</mimetype>
-        <filetypename>Ink/Stitch: ZIP export multiple formats (.zip)</filetypename>
+        <filetypename>Ink/Stitch: ZIP export multiple formats and extra options (.zip)</filetypename>
         <filetypetooltip>Create a ZIP with multiple embroidery file formats using Ink/Stitch</filetypetooltip>
         <dataloss>true</dataloss>
     </output>
+    <label>Panelization options (defaults to single design):</label>
+    <param name="x-repeats" type="int" min="1" max="20" gui-text="Horizontal repeats">1</param>
+    <param name="x-spacing" type="float" min="-1000" max="1000" gui-text="Horizontal spacing (mm)">100</param>
+    <param name="y-repeats" type="int" min="1" max="20" gui-text="Vertical repeats">1</param>
+    <param name="y-spacing" type="float" min="-1000" max="1000" gui-text="Vertical spacing (mm)">100</param>
+    
+    
+    <spacer/>
+    <label>Output formats:</label>
     {%- for format, description, mimetype, category in formats %}
     {%- if category != "vector" and category != "debug" %}
     <param name="format-{{ format }}" type="boolean" _gui-text=".{{ format | upper }}: {{ description }}">false</param>
     {%- endif %}
     {%- endfor %}
+    
     <param name="format-threadlist" type="boolean" gui-text=".TXT: Threadlist [COLOR]">false</param>
     <param name="format-svg" type="boolean" gui-text=".SVG: Scalable Vector Graphic">false</param>
+    
     <param name="extension" type="string" gui-hidden="true">zip</param>
     <script>
         {{ command_tag | safe }}

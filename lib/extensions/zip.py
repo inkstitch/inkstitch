@@ -18,6 +18,8 @@ from ..i18n import _
 from ..output import write_embroidery_file
 from ..stitch_plan import stitch_groups_to_stitch_plan
 from ..threads import ThreadCatalog
+from ..svg import PIXELS_PER_MM
+from ..utils.geometry import Point
 from .base import InkstitchExtension
 
 
@@ -34,6 +36,10 @@ class Zip(InkstitchExtension):
                 self.formats.append(extension)
         self.arg_parser.add_argument('--format-svg', type=Boolean, dest='svg')
         self.arg_parser.add_argument('--format-threadlist', type=Boolean, dest='threadlist')
+        self.arg_parser.add_argument('--x-repeats', type=int, dest='x_repeats', default=1)
+        self.arg_parser.add_argument('--y-repeats', type=int, dest='y_repeats', default=1)
+        self.arg_parser.add_argument('--x-spacing', type=float, dest='x_spacing', default=100)
+        self.arg_parser.add_argument('--y-spacing', type=float, dest='y_spacing', default=100)
         self.formats.append('svg')
         self.formats.append('threadlist')
 
@@ -46,6 +52,15 @@ class Zip(InkstitchExtension):
         min_stitch_len = self.metadata['min_stitch_len_mm']
         patches = self.elements_to_stitch_groups(self.elements)
         stitch_plan = stitch_groups_to_stitch_plan(patches, collapse_len=collapse_len, min_stitch_len=min_stitch_len)
+
+        if self.options.x_repeats != 1 or self.options.y_repeats != 1:
+            dx = self.options.x_spacing * PIXELS_PER_MM
+            dy = self.options.y_spacing * PIXELS_PER_MM
+            offsets = []
+            for x in range(self.options.x_repeats):
+                for y in range(self.options.y_repeats):
+                    offsets.append(Point(x * dx, y * dy))
+            stitch_plan = stitch_plan.make_offsets(offsets)
 
         base_file_name = self.get_base_file_name()
         path = tempfile.mkdtemp()
