@@ -16,21 +16,30 @@ import wx.lib.agw.floatspin as fs
 
 from ..elements import nodes_to_elements
 from ..gui import PresetsPanel, SimulatorPreview, info_dialog
-from ..i18n import _
+from ..i18n import _, get_languages
 from ..lettering import Font, FontError
 from ..svg import get_correction_transform
 from ..svg.tags import (INKSCAPE_LABEL, INKSTITCH_LETTERING, SVG_GROUP_TAG,
                         SVG_PATH_TAG)
 from ..utils import DotDict, cache, get_bundled_dir, get_resource_dir
+from ..utils.threading import ExitThread
 from .commands import CommandsExtension
 from .lettering_custom_font_dir import get_custom_font_dir
-from ..utils.threading import ExitThread
 
 
 class LetteringFrame(wx.Frame):
     DEFAULT_FONT = "small_font"
 
     def __init__(self, *args, **kwargs):
+        # This is necessary because of https://github.com/inkstitch/inkstitch/issues/2345
+        if sys.platform.startswith('win'):
+            languages = get_languages()
+            if len(languages) == 1:
+                # they are using the system default, fallback to English
+                languages.append('en')
+            else:
+                wx.Locale(*languages)
+
         self.group = kwargs.pop('group')
         self.cancel_hook = kwargs.pop('on_cancel', None)
         self.metadata = kwargs.pop('metadata', [])
@@ -99,12 +108,6 @@ class LetteringFrame(wx.Frame):
 
         self.load_settings()
         self.apply_settings()
-
-    def InitLocale(self):
-        # This is necessary because of https://github.com/inkstitch/inkstitch/issues/1186
-        if sys.platform.startswith('win'):
-            import locale
-            locale.setlocale(locale.LC_ALL, "C")
 
     def load_settings(self):
         """Load the settings saved into the SVG group element"""
