@@ -1773,7 +1773,7 @@ msgid "Unequal number of points"
 msgstr "Ungerade Anzahl von Punkten"
 
 #: lib/elements/satin_column.py:63
-msgid "Satin column: There are no rungs and rails have an an unequal number of points."
+msgid "Satin column: There are no rungs and rails have an unequal number of points."
 msgstr "Satinsäule: Es gibt keine Stichlagen und die Außenlinien haben eine ungleiche Anzahl an Knotenpunkten."
 
 #: lib/elements/satin_column.py:65

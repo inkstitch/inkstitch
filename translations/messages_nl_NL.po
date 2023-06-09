@@ -1769,7 +1769,7 @@ msgid "Unequal number of points"
 msgstr "Ongelijk aantal punten"
 
 #: lib/elements/satin_column.py:63
-msgid "Satin column: There are no rungs and rails have an an unequal number of points."
+msgid "Satin column: There are no rungs and rails have an unequal number of points."
 msgstr "Satijnbaan: Er zijn geen sporten en de rails hebben een ongelijk aantal punten."
 
 #: lib/elements/satin_column.py:65

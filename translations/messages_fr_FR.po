@@ -1774,7 +1774,7 @@ msgid "Unequal number of points"
 msgstr "Nombre de points inégal"
 
 #: lib/elements/satin_column.py:63
-msgid "Satin column: There are no rungs and rails have an an unequal number of points."
+msgid "Satin column: There are no rungs and rails have an unequal number of points."
 msgstr "Colonne satin: Soit il n'y a aucune traverse de direction, soit les rails n'ont pas le même nombre de points."
 
 #: lib/elements/satin_column.py:65
