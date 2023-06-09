@@ -60,7 +60,7 @@ class DanglingRungWarning(ValidationWarning):
 
 class UnequalPointsWarning(ValidationError):
     name = _("Unequal number of points")
-    description = _("Satin column: There are no rungs and rails have an an unequal number of points.")
+    description = _("Satin column: There are no rungs and rails have an unequal number of points.")
     steps_to_solve = [
         _('The easiest way to solve this issue is to add one or more rungs. '),
         _('Rungs control the stitch direction in satin columns.'),
