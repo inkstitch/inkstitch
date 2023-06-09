@@ -15,7 +15,7 @@ field-of-use:
 user-level: 
 ---
 
-If you wish to fill up a shape following its contour, you have severa possibilities
+If you wish to fill up a shape following its contour, you have several possibilities
 ![Contour Fill](/assets/images/tutorials/tutorial-preview-images/contour-fill.jpg)
 
 
