@@ -170,6 +170,7 @@ jobs:
           pip --version
           pip install wheel
           pip install PyGObject
+          pip install wxpython==4.1.1
           pip install -r requirements.txt
           # with --no-binary argument may fix notary issues as well shapely speedups error issue
           pip install -U lxml --no-binary lxml
