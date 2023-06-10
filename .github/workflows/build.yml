@@ -69,7 +69,7 @@ jobs:
           python -m pip install pycairo
           python -m pip install PyGObject
 
-          python -m pip install https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-20.04/wxPython-4.1.1-cp38-cp38-linux_x86_64.whl
+          python -m pip install https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-20.04/wxPython-4.2.1-cp38-cp38-linux_x86_64.whl
 
           python -m pip install -r requirements.txt
           python -m pip install pyinstaller
@@ -112,7 +112,6 @@ jobs:
           python -m pip install wheel
           # scipy 1.9.1 is the last version to support 32-bit windows
           python -m pip install scipy==1.9.1
-          python -m pip install wxpython==4.2.1
           python -m pip install -r requirements.txt
           python -m pip install pyinstaller
 
@@ -171,7 +170,6 @@ jobs:
           pip --version
           pip install wheel
           pip install PyGObject
-          pip install wxpython==4.1.1
           pip install -r requirements.txt
           # with --no-binary argument may fix notary issues as well shapely speedups error issue
           pip install -U lxml --no-binary lxml
