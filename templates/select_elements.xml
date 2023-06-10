@@ -63,7 +63,7 @@
                 <label>Clone</label>
                     <param indent="1" name="select-clone" type="boolean" gui-text="Clone">false</param>
           </vbox>
-        </hobx>
+        </hbox>
         </page>
 
         <page name="info" gui-text="Help">
