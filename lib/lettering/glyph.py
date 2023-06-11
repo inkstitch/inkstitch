@@ -103,7 +103,7 @@ class Glyph(object):
                     self.commands[command_object].append([connector.get_id(), node.get_id()])
                 except KeyError:
                     self.commands[command_object] = [[connector.get_id(), node.get_id()]]
-            except IndexError:
+            except (IndexError, TypeError):
                 pass
 
     def _move_to_origin(self):
