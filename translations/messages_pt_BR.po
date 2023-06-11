@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2023-06-10 01:24+0000\n"
-"PO-Revision-Date: 2023-06-10 01:26\n"
+"PO-Revision-Date: 2023-06-11 01:48\n"
 "Last-Translator: \n"
 "Language-Team: Portuguese, Brazilian\n"
 "MIME-Version: 1.0\n"
@@ -34,63 +34,63 @@ msgstr ""
 #. name of font in fonts/Brockscript
 #: inkstitch-fonts-metadata.py:2
 msgid "Brock Script"
-msgstr ""
+msgstr "Escrita de Broca"
 
 #. description of font in fonts/Brockscript
 #: inkstitch-fonts-metadata.py:4
 msgid "Brock Script is a decorative satin column manuscript font of size approximatively 40mm. It can be enlarged up to 250%. It contains 118 glyphs, covering most western european languages needs.More decorative options are hidden in the µ glyph"
-msgstr ""
+msgstr "Escrita de Broca é uma fonte manuscrita decorativa de coluna de cetim com tamanho aproximado de 40 mm. Ela pode ser ampliada em até 250%. Contém 118 glifos, que atendem às necessidades da maioria dos idiomas da Europa Ocidental. Mais opções decorativas estão ocultas no glifo µ"
 
 #. name of font in fonts/abecedaire
 #: inkstitch-fonts-metadata.py:6
 msgid "Abécédaire AGS"
-msgstr ""
+msgstr "Cartilha AGS"
 
 #. description of font in fonts/abecedaire
 #: inkstitch-fonts-metadata.py:8
 msgid "Abécédaire AGS is a crossstitch font of size 14mm. The font can be scaled down to 75% and up to 200%"
-msgstr ""
+msgstr "Cartilha AGS é uma fonte de ponto cruz de tamanho 14 mm. A fonte pode ser reduzida para 75% e aumentada para 200%"
 
 #. name of font in fonts/abril
 #: inkstitch-fonts-metadata.py:10
 msgid "Abril En Fleur AGS"
-msgstr ""
+msgstr "Flor aberta AGS"
 
 #. description of font in fonts/abril
 #: inkstitch-fonts-metadata.py:12
 msgid "Abril En Fleur AGS is a monogram font. M is 103.5mm high. It can be increased up to 150 % and decreased down to 80 %"
-msgstr ""
+msgstr "Abrir Em Flor AGS é uma fonte de monograma. O M tem 103,5 mm de altura. Ele pode ser aumentado para 150% e diminuído para 80%"
 
 #. name of font in fonts/ags_garamond_latin_grec
 #: inkstitch-fonts-metadata.py:14
 msgid "AGS Γαραμου Garamond"
-msgstr ""
+msgstr "AGS Γαραμου Garamond (caramelo)"
 
 #. description of font in fonts/ags_garamond_latin_grec
 #: inkstitch-fonts-metadata.py:16
 msgid "This font contains all the letters of  the latin and  greek alphabets  and cover most european languages. Μ is 22mm hight and 20mm wide. It may be scaled down to 80% and scaled up to 150%"
-msgstr ""
+msgstr "Esse tipo de letra contém todas as letras dos alfabetos latino e grego e cobre a maioria das línguas europeias. Μ tem 22 mm de altura e 20 mm de largura. Esta fonte contém todas as letras dos alfabetos latino e grego e cobre a maioria das línguas européias. Μ tem 22 mm de altura e 20 mm de largura. Ela pode ser reduzida a 80% e aumentada até 150%"
 
 #. name of font in fonts/amitaclo
 #: inkstitch-fonts-metadata.py:18
 msgid "Amitaclo"
-msgstr ""
+msgstr "Amitaclo"
 
 #. description of font in fonts/amitaclo
 #: inkstitch-fonts-metadata.py:20
 #, python-format
 msgid "The capital M is 25.3 millimeter wide at 100% scale. Can be scaled down to 80% or up to 160%. Every satin has zigzag underlay"
-msgstr ""
+msgstr "O M maiúsculo tem 25,3 milímetros de largura em escala de 100%. Pode ser reduzida para 80% ou até 160%. Cada cetim tem uma camada inferior em ziguezague"
 
 #. name of font in fonts/amitaclo_small
 #: inkstitch-fonts-metadata.py:22
 msgid "Amitaclo small"
-msgstr ""
+msgstr "Amitaclo pequeno"
 
 #. description of font in fonts/amitaclo_small
 #: inkstitch-fonts-metadata.py:24
 msgid "This font is an altered version  of Amitaclo, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory. The altered embroidery parameters of this font allow to scale down the original Amitaclo font between 25% (for a 7 mm font ) and 55 % (for a 16mm font)."
-msgstr ""
+msgstr "Essa fonte é uma versão alterada da Amitaclo, para permitir uma maior redução de escala. O uso de linha fina (60) e agulha fina (60) é obrigatório. Os parâmetros de bordado alterados dessa fonte permitem reduzir a escala da fonte Amitaclo original entre 25% (para uma fonte de 7 mm) e 55% (para uma fonte de 16 mm)."
 
 #. name of font in fonts/apex_lake
 #: inkstitch-fonts-metadata.py:26
@@ -100,78 +100,78 @@ msgstr "Apex Lake"
 #. description of font in fonts/apex_lake
 #: inkstitch-fonts-metadata.py:28
 msgid "Apex Lake is a large ornate capital letters font of size approximatively 60mm. It contains 38 glyphs : A-Z,0-9,! and ?. It can be reduced down to 80% and enlarged up to 130%"
-msgstr ""
+msgstr "Lago Apex é uma fonte grande e ornamentada com letras maiúsculas de tamanho aproximado de 60 mm. Ela contém 38 glifos: A-Z&0-9! E, ela pode ser reduzida em até80% e ampliada em até 130%"
 
 #. name of font in fonts/apex_simple_AGS
 #: inkstitch-fonts-metadata.py:30
 msgid "Apex Simple AGS"
-msgstr ""
+msgstr "Apex Simples AGS"
 
 #. description of font in fonts/apex_simple_AGS
 #: inkstitch-fonts-metadata.py:32
 msgid "M wide 41mm, hight 33,6mm"
-msgstr ""
+msgstr "M largura 41 mm, altura 33,6 mm"
 
 #. name of font in fonts/auberge_marif
 #: inkstitch-fonts-metadata.py:34
 msgid "Auberge Marif"
-msgstr ""
+msgstr "Auberge Marif"
 
 #. description of font in fonts/auberge_marif
 #: inkstitch-fonts-metadata.py:36
 msgid "Auberge Marif is a script satin font of size approximatively 35 mm. The glyphs cover most Western European languages. The font can be scaled down to 60% and up to 140%."
-msgstr ""
+msgstr "Auberge Marif é uma fonte satin script de tamanho aproximado de 35 mm. Os glifos abrangem a maioria dos idiomas da Europa Ocidental. A fonte pode ser reduzida para 60% e aumentada para 140%."
 
 #. name of font in fonts/auberge_small
 #: inkstitch-fonts-metadata.py:38
 msgid "Auberge small"
-msgstr ""
+msgstr "Auberge pequeno"
 
 #. description of font in fonts/auberge_small
 #: inkstitch-fonts-metadata.py:40
 msgid "This font is an altered version  of Auberge Marif, to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) are mandatory. The altered embroidery parameters of this font allow to scale down the original Grand Hotel font between 25% (for a 9mm font ) and 55 % (for a  20 mm font)."
-msgstr ""
+msgstr "Essa fonte é uma versão alterada da Auberge Marif, para permitir uma maior redução de escala. O uso de linha fina (60) e agulha fina (60) é obrigatório. Os parâmetros de bordado alterados dessa fonte permitem reduzir a escala da fonte Grand Hotel original entre 25% (para uma fonte de 9 mm) e 55% (para uma fonte de 20 mm)."
 
 #. name of font in fonts/aventurina
 #: inkstitch-fonts-metadata.py:42
 msgid "Aventurina"
-msgstr ""
+msgstr "Aventurina"
 
 #. description of font in fonts/aventurina
 #: inkstitch-fonts-metadata.py:44
 msgid "Aventurina is a script satin font of size approximatively 20mm. The glyphs cover most Western European languages. The font can be scaled down to 60% and up to 150% "
-msgstr ""
+msgstr "Aventurina é uma fonte satin script de tamanho aproximado de 20 mm. Os glifos abrangem a maioria dos idiomas da Europa Ocidental. A fonte pode ser reduzida para 60% e aumentada para 150%"
 
 #. name of font in fonts/baumans_FI
 #: inkstitch-fonts-metadata.py:46
 msgid "Baumans FI"
-msgstr ""
+msgstr "Baumans FI"
 
 #. description of font in fonts/baumans_FI
 #: inkstitch-fonts-metadata.py:48
 #, python-format
 msgid "The capital M is 22.3 millimeter wide at 100% scale. Can be scaled down to 80% or up to 150%. Every satin has zigzag underlay"
-msgstr ""
+msgstr "O M maiúsculo tem 22,3 milímetros de largura em escala de 100%. Pode ser reduzida para 80% ou até 150%. Cada cetim tem uma camada inferior em zigue-zague"
 
 #. name of font in fonts/cherryforinkstitch
 #: inkstitch-fonts-metadata.py:50
 msgid "Cherry for inkstitch"
-msgstr ""
+msgstr "Cereja para inkstitch"
 
 #. description of font in fonts/cherryforinkstitch
 #: inkstitch-fonts-metadata.py:52
 msgid "Cherry for inkstitch is a decorative satin column font of size approximatively 40mm. It can be reduced down to 80% and enlarged up to 180%. It contains 74 glyphs."
-msgstr ""
+msgstr "Cereja para inkstitch é uma fonte decorativa de coluna de cetim com tamanho aproximado de 40 mm. Ela pode ser reduzida 80% e ampliada 180%. Ela contém 74 glifos."
 
 #. name of font in fonts/cherryforkaalleen
 #: inkstitch-fonts-metadata.py:54
 msgid "Cherry for Kaalleen"
-msgstr ""
+msgstr "Cereja para Kaalleen"
 
 #. description of font in fonts/cherryforkaalleen
 #: inkstitch-fonts-metadata.py:56
 msgid "Cherry for Kaalleen is a large decorative font of size approximatively 75mm. It contains 36 glyphs including the numbers and the 26 capitals  A-Z. It can be reduced down to 80% and enlarged up to 130%"
-msgstr ""
+msgstr "Cereja para Kaalleen é uma fonte decorativa grande, com tamanho aproximado de 75 mm. Ela contém 36 glifos, incluindo os números e as 26 letras maiúsculas de A até Z. Ela pode ser reduzida em 80% e ampliada em até 130%"
 
 #. name of font in fonts/chopin
 #: inkstitch-fonts-metadata.py:58
@@ -182,7 +182,7 @@ msgstr "Chopin Script"
 #: inkstitch-fonts-metadata.py:60
 #, python-format
 msgid "The capital M is 38.3 millimeter wide at 100% scale. Can be scaled down to 80% or up to 120%. Every satin has zigzag underlay"
-msgstr ""
+msgstr "O M maiúsculo tem 38,3 milímetros de largura em escala de 100%. Pode ser reduzida para 80% ou até 120%. Cada cetim tem uma camada inferior em zigue-zague"
 
 #. name of font in fonts/coronaviral
 #: inkstitch-fonts-metadata.py:62
@@ -192,135 +192,135 @@ msgstr "Coronaviral"
 #. description of font in fonts/coronaviral
 #: inkstitch-fonts-metadata.py:64
 msgid "A font created with manual sitch. Do not change the size or very little. The capital em is 22mm wide at 100%"
-msgstr ""
+msgstr "Uma fonte criada com o sitch manual. Não altere o tamanho ou altere muito pouco. O em maiúsculo tem 22 mm de largura em 100%"
 
 #. name of font in fonts/dejavufont
 #: inkstitch-fonts-metadata.py:66
 msgid "Dejavu Serif"
-msgstr ""
+msgstr "Dejavu Serif"
 
 #. description of font in fonts/dejavufont
 #: inkstitch-fonts-metadata.py:68
 #, python-format
 msgid "DejaVu Serif Condensed. The capital M is 19,8 millimeter wide at 100% scale.  Can be scaled down to 80% or up to 150%.  Every satin has center-walk underlay."
-msgstr ""
+msgstr "DejaVu Serif condensada. O M maiúsculo tem 19,8 milímetros de largura em uma escala de 100%.  Pode ser reduzida para 80% ou até 150%.  Cada cetim tem uma base central."
 
 #. name of font in fonts/digory_doodles_bean
 #: inkstitch-fonts-metadata.py:70
 msgid "Digory Doodles Bean"
-msgstr ""
+msgstr "Feijão de Rabiscos Digital"
 
 #. description of font in fonts/digory_doodles_bean
 #: inkstitch-fonts-metadata.py:72
 msgid "All letters have mixed satin and bean stitch. The capital M is 16mm tall. The small x is 7 mm."
-msgstr ""
+msgstr "Todas as letras têm pontos mistos de cetim e feijão. O M maiúsculo tem 16 mm de altura. O x pequeno tem 7 mm."
 
 #. name of font in fonts/dinomouse72
 #: inkstitch-fonts-metadata.py:74
 msgid "DinoMouse72"
-msgstr ""
+msgstr "RatoDino72"
 
 #. description of font in fonts/dinomouse72
 #: inkstitch-fonts-metadata.py:76
 msgid "A Font Grove jawn. Satin width is 2.5mm at 18mm capitals"
-msgstr ""
+msgstr "Uma joia da Fonte Grove. A largura do cetim é de 2,5 mm com maiúsculas de 18 mm"
 
 #. name of font in fonts/emilio_20
 #: inkstitch-fonts-metadata.py:78
 msgid "Emilio 20"
-msgstr ""
+msgstr "Emílio 20"
 
 #. description of font in fonts/emilio_20
 #: inkstitch-fonts-metadata.py:80
 #, python-format
 msgid "Emilio 20 is a font with capital only and numbers. M is 48.5 millimeter wide at 100% scale. Can be scaled down to 70% or up to 140%. Every satin has zigzag underlay"
-msgstr ""
+msgstr "Emílio 20 é uma fonte com letras maiúsculas e números. M tem 48,5 milímetros de largura em escala de 100%. Pode ser reduzida para 70% ou até 140%. Cada cetim tem uma camada inferior em zigue-zague"
 
 #. name of font in fonts/emilio_20_applique
 #: inkstitch-fonts-metadata.py:82
 msgid "EMILIO_20_Applique"
-msgstr ""
+msgstr "EMILIO_20_Aplique"
 
 #. description of font in fonts/emilio_20_applique
 #: inkstitch-fonts-metadata.py:84
 msgid "Emilio 20 Applique is an Applique font approximatively 50mm high. It should not be scaled down but may be scaled up to 150%. This font is an altered version (larger satin columns) of Emilio_20 while Emilio_20_Bold is  Emilio_20_applique without the applique"
-msgstr ""
+msgstr "Emílio 20 aplique é uma fonte aplique com cerca de 50 mm de altura. Ela não deve ser reduzida, mas pode ser ampliada em até 150%. Essa fonte é uma versão alterada (colunas de cetim maiores) da Emílio_20, enquanto a Emílio_20_Bold é a Emílio_20_aplique sem o aplique"
 
 #. name of font in fonts/emilio_20_bold
 #: inkstitch-fonts-metadata.py:86
 msgid "EMILIO_20_Bold"
-msgstr ""
+msgstr "EMILIO_20_Bold"
 
 #. description of font in fonts/emilio_20_bold
 #: inkstitch-fonts-metadata.py:88
 msgid "Emilio_20_Bold is an altered version of Emilio_20  and is approximatively 50mm high."
-msgstr ""
+msgstr "O Emílio_20_Bold é uma versão alterada do Emílio_20 e tem cerca de 50 mm de altura."
 
 #. name of font in fonts/emilio_20_simple
 #: inkstitch-fonts-metadata.py:90
 msgid "Emilio 20 Simple"
-msgstr ""
+msgstr "Emílio 20 Simples"
 
 #. description of font in fonts/emilio_20_simple
 #: inkstitch-fonts-metadata.py:92
 #, python-format
 msgid "Emilio is a font with capital only and numbers. M is 42.5 millimeter wide at 100% scale. Can be scaled down to 70% or up to 140%. Every satin has zigzag underlay"
-msgstr ""
+msgstr "Emílio é uma fonte com letras maiúsculas e números. M tem 42,5 milímetros de largura em escala de 100%. Pode ser reduzida para 70% ou até 140%. Cada cetim tem uma camada inferior em zigue-zague"
 
 #. name of font in fonts/emilio_20_tricolore
 #: inkstitch-fonts-metadata.py:94
 msgid "EMILIO 20 TRICOLORE"
-msgstr ""
+msgstr "EMÍLIO 20 TRICOLOR"
 
 #. description of font in fonts/emilio_20_tricolore
 #: inkstitch-fonts-metadata.py:96
 msgid "Emilio 20 tricolore is a large tricolor fill stitches and satin columns font of  size approximately 100mm. It contains 36 glyphs including the numbers and the 26 capitals  A-Z. It can be reduced down to 90% and enlarged up to 120%"
-msgstr ""
+msgstr "Emílio 20 tricolor é uma fonte grande tricolor com pontos de preenchimento e colunas de cetim de tamanho aproximado de 100 mm. Ela contém 36 glifos, incluindo os números e as 26 letras maiúsculas de A até Z. Ela pode ser reduzida 90% e ampliada 120%"
 
 #. name of font in fonts/espresso_KOR
 #: inkstitch-fonts-metadata.py:98
 msgid "Espresso KOR"
-msgstr ""
+msgstr "Expresso KOR"
 
 #. description of font in fonts/espresso_KOR
 #: inkstitch-fonts-metadata.py:100
 msgid "The capital M is 16.2 mm high at 100 scale. Every satin has zigzag underlay. x is 11.5 mm high, q is 17.5 mm high, l is 17.2 mm high. The font may be scaled up to 200% and down to 80%"
-msgstr ""
+msgstr "O M maiúsculo tem 16,2 mm de altura na escala 100. Cada cetim tem uma base em zigue-zague. x tem 11,5 mm de altura, Q tem 17,5 mm de altura, L tem 17,2 mm de altura. A fonte pode ser ampliada em até 200% e reduzida em 80%"
 
 #. name of font in fonts/espresso_tiny
 #: inkstitch-fonts-metadata.py:102
 msgid "Espresso tiny"
-msgstr ""
+msgstr "Expresso minúsculo"
 
 #. description of font in fonts/espresso_tiny
 #: inkstitch-fonts-metadata.py:104
 msgid "This font is an altered version  of Espresso KOR, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory. The altered embroidery parameters of this font allow to scale down the original Espresso font between 25% (for a 5mm font ) and 55 % (for a 11mm font)."
-msgstr ""
+msgstr "Essa fonte é uma versão alterada da Expresso KOR, para permitir uma maior redução de escala. O uso de linha fina (60) e agulha fina (60) é obrigatório. Os parâmetros de bordado alterados dessa fonte permitem reduzir a escala da fonte Espresso original entre 25% (para uma fonte de 5 mm) e 55% (para uma fonte de 11 mm)."
 
 #. name of font in fonts/excalibur_KOR
 #: inkstitch-fonts-metadata.py:106
 msgid "Excalibur KOR"
-msgstr ""
+msgstr "Excalibur KOR"
 
 #. description of font in fonts/excalibur_KOR
 #: inkstitch-fonts-metadata.py:108
 msgid "Excalibur KOR is a small satin column manuscript font of size approximatively 20mm. It can be reduced down to 80% and enlarged up to 140%. It contains 144 glyphs, covering most western European languages needs."
-msgstr ""
+msgstr "A Excalibur KOR é uma fonte manuscrita de coluna acetinada pequena, com tamanho aproximado de 20 mm. Ela pode ser reduzida em 80% e ampliada em 140%. Ela contém 144 glifos, que atendem às necessidades da maioria dos idiomas da Europa Ocidental."
 
 #. name of font in fonts/fold_inkstitch
 #: inkstitch-fonts-metadata.py:110
 msgid "Fold Ink/Stitch"
-msgstr ""
+msgstr "Dobrar Ink/Stitch"
 
 #. description of font in fonts/fold_inkstitch
 #: inkstitch-fonts-metadata.py:112
 msgid "Fold Ink/Stitch is a large triple and quintuple running stitches capital font of size 100 mm. It contains 40 glyphs including all numbers and the 26 capitals  A-Z. It can be reduced down to 80% and enlarged up to 200%"
-msgstr ""
+msgstr "A Dobrar tinta/ponto é uma fonte maiúscula grande de pontos corridos triplos e quíntuplos de tamanho 100 mm. Ela contém 40 glifos, incluindo todos os números e as 26 letras maiúsculas de A ate Z. Pode ser reduzida em 80% e ampliada em 200%"
 
 #. name of font in fonts/geneva_rounded
 #: inkstitch-fonts-metadata.py:114
 msgid "Geneva Simple Sans Rounded"
-msgstr ""
+msgstr "Geneva Simples Sans Arredondado"
 
 #. description of font in fonts/geneva_rounded
 #: inkstitch-fonts-metadata.py:116
@@ -330,7 +330,7 @@ msgstr "Adequada para fontes pequenas (8 a 20mm)"
 #. name of font in fonts/geneva_simple
 #: inkstitch-fonts-metadata.py:118
 msgid "Geneva Simple Sans"
-msgstr ""
+msgstr "Geneva Simples Sans"
 
 #. description of font in fonts/geneva_simple
 #: inkstitch-fonts-metadata.py:120
@@ -340,27 +340,27 @@ msgstr "Adequada para fontes pequenas (6 a 15mm)"
 #. name of font in fonts/glacial_tiny
 #: inkstitch-fonts-metadata.py:122
 msgid "Glacial Tiny 60 AGS"
-msgstr ""
+msgstr "Glacial Tiny 60 AGS"
 
 #. description of font in fonts/glacial_tiny
 #: inkstitch-fonts-metadata.py:124
 msgid "Glacial is a very tiny font: at 100%,  M stands at 5.6mm. Thin thread (60 wt ) and thin needle (8/60) are mandatory. The glyphs cover many European languages. It can be reduced down to 40% and enlarged up to 150% "
-msgstr ""
+msgstr "A Glacial é uma fonte muito pequena: em 100%, a M fica em 5,6 mm. É obrigatório usar linha fina (60 wt) e agulha fina (8/60). Os glifos abrangem muitos idiomas europeus. Ela pode ser reduzida até 40% e ampliada até 150% "
 
 #. name of font in fonts/infinipicto
 #: inkstitch-fonts-metadata.py:126
 msgid "InfiniPicto"
-msgstr ""
+msgstr "InfiniPicto"
 
 #. description of font in fonts/infinipicto
 #: inkstitch-fonts-metadata.py:128
 msgid "InfiniPicto is a fun font of size approximatively 70 mm containing only the 26 A-Z glyph. Each letter is a pictogram of an object whose name begins with that very letter..... in French"
-msgstr ""
+msgstr "A InfiniPicto é uma fonte divertida de tamanho aproximado de 70 mm que contém apenas os 26 glifos de A até Z. Cada letra é um pictograma de um objeto cujo nome começa com essa mesma letra..... em francês"
 
 #. name of font in fonts/kaushan_script_MAM
 #: inkstitch-fonts-metadata.py:130
 msgid "Kaushan Script MAM"
-msgstr ""
+msgstr "Script Kaushan MAM"
 
 #. description of font in fonts/kaushan_script_MAM
 #: inkstitch-fonts-metadata.py:132
