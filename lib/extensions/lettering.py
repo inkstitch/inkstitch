@@ -100,12 +100,6 @@ class LetteringFrame(wx.Frame):
         self.load_settings()
         self.apply_settings()
 
-    def InitLocale(self):
-        # This is necessary because of https://github.com/inkstitch/inkstitch/issues/1186
-        if sys.platform.startswith('win'):
-            import locale
-            locale.setlocale(locale.LC_ALL, "C")
-
     def load_settings(self):
         """Load the settings saved into the SVG group element"""
 

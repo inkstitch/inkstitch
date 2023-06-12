@@ -3,8 +3,6 @@
 # get up to date inkex version (March 18 2023)
 inkex @ git+https://gitlab.com/inkscape/extensions.git@29205f3cc6c39283e190a36d72d01ef428f668e5
 
-# lower bound to allow for the use of system packages on Debian and distros that have updated to 4.2
-# CI adds an == 4.1.1 constraint for prebuilt packages
 wxPython>=4.1.1
 
 backports.functools_lru_cache
