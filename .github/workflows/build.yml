@@ -112,6 +112,7 @@ jobs:
           python -m pip install wheel
           # scipy 1.9.1 is the last version to support 32-bit windows
           python -m pip install scipy==1.9.1
+          python -m pip install numpy==1.24.2
           python -m pip install -r requirements.txt
           python -m pip install pyinstaller
 
