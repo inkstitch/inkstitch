@@ -110,8 +110,9 @@ jobs:
           git config --system core.longpaths true
           python -m pip install --upgrade pip
           python -m pip install wheel
-          # scipy 1.9.1 is the last version to support 32-bit windows
-          python -m pip install scipy==1.9.1
+          # Numpy and Scipy version for older cpu compatibility
+          python -m pip install numpy==1.17.3
+          python -m pip install scipy==1.4.1
           python -m pip install -r requirements.txt
           python -m pip install pyinstaller
 
