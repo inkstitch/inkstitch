@@ -19,7 +19,7 @@ jobs:
         with:
           python-version: '3.8.x'
       - env:
-          CROWDIN_API_KEY: ${{ secrets.CROWDIN_API_KEY }}
+          CROWDIN_API_KEY: ${{ secrets.CROWDIN_API_V2_KEY }}
           CROWDIN_PROJECT_ID: "299419"
         run: |
           git config --global user.email "inkstitch-crowdin@lex.gd"
