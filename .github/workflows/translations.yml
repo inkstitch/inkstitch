@@ -20,6 +20,7 @@ jobs:
           python-version: '3.8.x'
       - env:
           CROWDIN_API_KEY: ${{ secrets.CROWDIN_API_KEY }}
+          CROWDIN_PROJECT_ID: "299419"
         run: |
           git config --global user.email "inkstitch-crowdin@lex.gd"
           git config --global user.name "Ink/Stitch Crowdin integration"
@@ -48,10 +49,10 @@ jobs:
 
           make messages.po
           echo "uploading messages.po to crowdin"
-          java -jar crowdin-cli.jar -v upload -b main
+          java -jar crowdin-cli.jar -v upload -b main -T "$CROWDIN_API_KEY" -i "$CROWDIN_PROJECT_ID"
 
           echo "downloading new translations"
-          java -jar crowdin-cli.jar -v pull -b main
+          java -jar crowdin-cli.jar -v pull -b main -T "$CROWDIN_API_KEY" -i "$CROWDIN_PROJECT_ID"
 
           # Try to only commit if translations changed.  Crowdin will update all
           # files when a new translation string is added but we don't need to
