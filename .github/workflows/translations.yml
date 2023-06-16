@@ -23,7 +23,7 @@ jobs:
           git config --global user.email "inkstitch-crowdin@lex.gd"
           git config --global user.name "Ink/Stitch Crowdin integration"
 
-          wget --quiet https://downloads.crowdin.com/cli/v2/crowdin-cli.zip
+          wget --quiet https://downloads.crowdin.com/cli/v3/crowdin-cli.zip
           unzip -j crowdin-cli.zip
 
           sudo apt-get update
