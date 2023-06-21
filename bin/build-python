@@ -24,8 +24,6 @@ if [ "$BUILD" = "osx" ]; then
 fi
 
 if [ "$BUILD" = "linux" ]; then
-    pyinstaller_args+="--hidden-import gi.repository.Gtk "
-    pyinstaller_args+="--hidden-import gi.repository.Gio "
     pyinstaller_args+="--hidden-import wx "
 fi
 
