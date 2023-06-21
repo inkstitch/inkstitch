@@ -965,7 +965,7 @@ class SatinColumn(EmbroideryElement):
                 # more than 5%.
                 if iterations <= 2:
                     distance = self._stitch_distance(pos0, pos1, old_pos0, old_pos1)
-                    if abs((current_spacing - distance) / current_spacing) > 0.05:
+                    if distance > 0.01 and abs((current_spacing - distance) / current_spacing) > 0.05:
                         # We'll revise to_travel then go back to the start of
                         # the loop and try again.
                         to_travel = (current_spacing / distance) * to_travel
@@ -1294,6 +1294,6 @@ class SatinProcessor:
         if self.use_random:
             roll = prng.uniform_floats(self.seed, self.cycle)
             self.cycle += 1
-            return 1.0 + ((roll[0] - 0.5) * 2) * self.random_zigzag_spacing
+            return max(1.0 + ((roll[0] - 0.5) * 2) * self.random_zigzag_spacing, 0.01)
         else:
             return 1.0
