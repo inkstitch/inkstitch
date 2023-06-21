@@ -88,6 +88,10 @@ class BaseCommand(object):
 
         if self.command.startswith('inkstitch_'):
             self.command = self.command[10:]
+            # It is possible that through copy paste or whatever user action a command is defined multiple times
+            # in the defs section. In this case the id will be altered with an additional number (e.g. inkstitch_trim-5)
+            # Let's make sure to remove the number part to recognize the command correctly
+            self.command = self.command.split("-")[0]
         else:
             raise CommandParseError("symbol is not an Ink/Stitch command")
 
