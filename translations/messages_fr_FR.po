@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2023-06-13 01:26+0000\n"
-"PO-Revision-Date: 2023-06-13 01:28\n"
+"PO-Revision-Date: 2023-06-23 01:44\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -1777,7 +1777,7 @@ msgstr "Nombre de points inégal"
 
 #: lib/elements/satin_column.py:63
 msgid "Satin column: There are no rungs and rails have an unequal number of points."
-msgstr ""
+msgstr "Colonne Satin : Il n'y a pas de traverses et les rails n'ont pas le même nombre de nœuds."
 
 #: lib/elements/satin_column.py:65
 msgid "The easiest way to solve this issue is to add one or more rungs. "
@@ -5524,72 +5524,72 @@ msgstr "Réempiler les objets dans l'ordre de leur sélection"
 
 #: inx/inkstitch_select_elements.inx:3
 msgid "Select embroidery elements"
-msgstr ""
+msgstr "Sélectionner des éléments de broderie"
 
 #: inx/inkstitch_select_elements.inx:8
 msgid "Select options"
-msgstr ""
+msgstr "Options de sélection"
 
 #: inx/inkstitch_select_elements.inx:9
 msgid "Select Stitch Type"
-msgstr ""
+msgstr "Sélectionner des types de points"
 
 #: inx/inkstitch_select_elements.inx:13
 msgid "Running Stitch"
-msgstr ""
+msgstr "Point droit"
 
 #: inx/inkstitch_select_elements.inx:15
 msgid "Type"
-msgstr ""
+msgstr "Type"
 
 #: inx/inkstitch_select_elements.inx:15
 msgid "Select only specific running stitches"
-msgstr ""
+msgstr "Sélectionner uniquement des points droits spécifiques"
 
 #: inx/inkstitch_select_elements.inx:16 inx/inkstitch_select_elements.inx:34
 #: inx/inkstitch_select_elements.inx:54
 msgid "No restriction"
-msgstr ""
+msgstr "Pas de restriction"
 
 #: inx/inkstitch_select_elements.inx:17
 msgid "Auto-Run Top Stitching"
-msgstr ""
+msgstr "Chemin de dessus de l'agencement automatique"
 
 #: inx/inkstitch_select_elements.inx:18
 msgid "Auto-Run Underpath"
-msgstr ""
+msgstr "Chemin de dessous de l'agencement automatique"
 
 #: inx/inkstitch_select_elements.inx:20
 msgid "Ripples"
-msgstr ""
+msgstr "Broderie ondulée"
 
 #: inx/inkstitch_select_elements.inx:23
 msgid "Polyline"
-msgstr ""
+msgstr "Polyline"
 
 #: inx/inkstitch_select_elements.inx:29
 msgid "Satin"
-msgstr ""
+msgstr "Satin"
 
 #: inx/inkstitch_select_elements.inx:31
 msgid "E-Stitch"
-msgstr ""
+msgstr "Point en E"
 
 #: inx/inkstitch_select_elements.inx:33
 msgid "Only select satins with this underlay type"
-msgstr ""
+msgstr "Sélectionner uniquement les colonnes satin avec ce type de sous-couche"
 
 #: inx/inkstitch_select_elements.inx:35
 msgid "No underlay"
-msgstr ""
+msgstr "Pas de sous-couche"
 
 #: inx/inkstitch_select_elements.inx:36
 msgid "Centerwalk"
-msgstr ""
+msgstr "Sous-couche centrale"
 
 #: inx/inkstitch_select_elements.inx:37
 msgid "Contour"
-msgstr ""
+msgstr "Sous-couche contour"
 
 #: inx/inkstitch_select_elements.inx:38
 #: inx/inkstitch_zigzag_line_to_satin.inx:12
@@ -5598,47 +5598,47 @@ msgstr "Sous-couche Zigzag"
 
 #: inx/inkstitch_select_elements.inx:45 inx/inkstitch_select_elements.inx:46
 msgid "Fill"
-msgstr ""
+msgstr "Remplissage"
 
 #: inx/inkstitch_select_elements.inx:53
 msgid "Only select fills with this underlay"
-msgstr ""
+msgstr "Sélectionner uniquement les remplissage avec ce type de sous-couche"
 
 #: inx/inkstitch_select_elements.inx:56
 msgid "No Underlay"
-msgstr ""
+msgstr "Pas de sous-couche"
 
 #: inx/inkstitch_select_elements.inx:70
 msgid "Select embroidery objects"
-msgstr ""
+msgstr "Sélectionner des objets de broderie"
 
 #: inx/inkstitch_select_elements.inx:72
 msgid "Selects specific embroidery elements by stitch type."
-msgstr ""
+msgstr "Sélectionner des éléments de broderie par type de point."
 
 #: inx/inkstitch_select_elements.inx:73
 msgid "If there is already an active selection, non maching elements will be deselected."
-msgstr ""
+msgstr "S'il y a déjà des éléments sélectionnés, les éléments qui ne correspondent pas seront désélectionnés."
 
 #: inx/inkstitch_select_elements.inx:79
 msgid "If this isn't working for you, you may need to insert your path to a python executable manualy."
-msgstr ""
+msgstr "Si cela ne fonctionne pas, il est possible que vous deviez insérer manuellement votre chemin vers python."
 
 #: inx/inkstitch_select_elements.inx:81
 msgid "* Windows: Open the \"Command Prompt\" and type \"where python\". Copy the path and paste it here."
-msgstr ""
+msgstr "*Windows : Ouvrir \"Invite de commande\" et taper \"where python\". Copier le chemin et le coller ici."
 
 #: inx/inkstitch_select_elements.inx:82
 msgid "* Linux: Open the command line and type \"which python3\". Copy the path and paste it here."
-msgstr ""
+msgstr "*Linux : ouvrir la ligne de commande et taper \"which python3\". Copier le chemin et le coller ici."
 
 #: inx/inkstitch_select_elements.inx:83
 msgid "* macOS: doesn't work, sorry"
-msgstr ""
+msgstr "*macOS : désolé ne fonctionne pas"
 
 #: inx/inkstitch_select_elements.inx:84
 msgid "Python Path"
-msgstr ""
+msgstr "Chemin Python"
 
 #: inx/inkstitch_selection_to_guide_line.inx:3
 msgid "Selection to guide line"
