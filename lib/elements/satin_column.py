@@ -907,7 +907,7 @@ class SatinColumn(EmbroideryElement):
             # Base the number of stitches in each section on the _longer_ of
             # the two sections. Otherwise, things could get too sparse when one
             # side is significantly longer (e.g. when going around a corner).
-            num_points = max(path0.length, path1.length) / spacing
+            num_points = max(path0.length, path1.length, 0.01) / spacing
 
             # Section stitch spacing and the cursor are expressed as a fraction
             # of the total length of the path, because we use normalized=True
