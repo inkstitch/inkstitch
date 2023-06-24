@@ -15,7 +15,7 @@ pyinstaller_args+="--log-level DEBUG "
 # This adds bundle identifier in reverse DSN format for macos
 if [ "$BUILD" = "osx" ]; then
     pyinstaller_args+="--osx-bundle-identifier org.inkstitch.app "
-    pyinstaller_args+="-i electron/build/icons/mac/inkstitch.icns"
+    pyinstaller_args+="-i electron/build/icons/mac/inkstitch.icns "
     if [[ -z ${GITHUB_REF} ]]; then
         echo "Dev or Local Build"
     else
@@ -25,8 +25,6 @@ fi
 
 if [ "$BUILD" = "linux" ]; then
     pyinstaller_args+="--hidden-import gi.repository.Gtk "
-    pyinstaller_args+="--hidden-import gi.repository.Gio "
-    pyinstaller_args+="--hidden-import wx "
 fi
 
 
