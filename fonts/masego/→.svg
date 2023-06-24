@@ -24,15 +24,15 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
-     inkscape:zoom="4.0000003"
-     inkscape:cx="22.499999"
-     inkscape:cy="66.249996"
+     inkscape:zoom="5.6568547"
+     inkscape:cx="16.086678"
+     inkscape:cy="65.407372"
      inkscape:window-width="1366"
      inkscape:window-height="703"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g1352"
+     inkscape:current-layer="g1276"
      inkscape:document-units="px">
     <sodipodi:guide
        position="-38.852242,83.599999"
@@ -2579,49 +2579,29 @@ Created by Adegoke Adebowale
      id="g1276"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
-       d="M 28.566183,743.76774 28.051457,711.94279 28.06669,665.48668 M 150,742 C 166.41149,740.4008 172.48188,729.49878 176.49721,717 L 177.02514,665.4918"
-       id="path1274"
-       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccccc"
-       inkstitch:satin_column="True"
-       inkstitch:reverse_rails="none"
-       inkstitch:ties="1"
-       inkstitch:center_walk_underlay="True"
-       inkstitch:contour_underlay="True" />
-    <path
-       d="M 28.05241,642.51097 284.5,643 M 28.06669,665.48668 285,665"
-       id="path1263"
+       d="M 285,810 94.86136,809.31993 M 345,832 H 175"
+       id="path1257"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
        sodipodi:nodetypes="cccc"
        inkstitch:satin_column="True"
-       inkstitch:zigzag_spacing_mm="0.4"
+       inkstitch:zigzag_spacing_mm="0.6"
        inkstitch:reverse_rails="none"
-       inkstitch:ties="3"
-       inkstitch:center_walk_underlay="True"
-       inkstitch:contour_underlay="False"
-       inkstitch:contour_underlay_inset_mm="0.0"
-       inkstitch:e_stitch="True" />
+       inkstitch:ties="1"
+       inkstitch:center_walk_underlay="False"
+       inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.3" />
     <path
-       id="path17397"
+       id="path16623"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       d="M 405,643 C 419.29939,646.48085 424.96517,651.22145 430.03806,665.01136 L 431.27854,808.81993 430.01903,832.5 M 284.5,643 285,665 V 810 L 345,832"
+       d="M 95,810 175,832 V 977.62502 L 240.5916,1000.2371 M 55,810 C 40.848871,813.67508 33.704879,817.83935 29.5,832 L 29.066402,977.12408 C 34.493508,991.41865 39.935148,996.84484 55,1000"
        sodipodi:nodetypes="cccccccc"
        inkstitch:satin_column="True"
+       inkstitch:reverse_rails="none"
        inkstitch:ties="3"
        inkstitch:center_walk_underlay="True"
        inkstitch:contour_underlay="True" />
     <path
-       d="M 430.01903,832.5 430,977.65165 437,1000 M 284.85029,832.5 285,977.36656 357.1248,1000"
-       id="path17394"
-       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccccc"
-       inkstitch:satin_column="True"
-       inkstitch:reverse_rails="none"
-       inkstitch:center_walk_underlay="True"
-       inkstitch:contour_underlay="True"
-       inkstitch:ties="3" />
-    <path
-       d="M 285,977.36656 175,977.62502 M 357.1248,1000 240.5916,1000.2371"
+       d="M 175,977.62502 285,977.36656 M 240.5916,1000.2371 357.1248,1000"
        id="path33133"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
        sodipodi:nodetypes="cccc"
@@ -2633,27 +2613,51 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay_inset_mm="0.3"
        inkstitch:ties="3" />
     <path
-       id="path16623"
+       d="M 437,1000 430,977.65165 430.01903,832.5 M 357.1248,1000 285,977.36656 284.85029,832.5"
+       id="path17394"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       d="M 240.5916,1000.2371 207.7958,988.93108 175,977.62502 V 832 L 135,821 95,810 M 55,1000 C 55,1000 41.757841,997.33675 37,993 32.627783,989.01475 29.066402,977.12408 29.066402,977.12408 L 29.5,832 C 29.5,832 32.868143,820.76534 37,817 41.758317,812.66377 55,810 55,810"
-       sodipodi:nodetypes="cccccccsccsc"
+       sodipodi:nodetypes="cccccc"
+       inkstitch:satin_column="True"
+       inkstitch:reverse_rails="none"
+       inkstitch:center_walk_underlay="True"
+       inkstitch:contour_underlay="True"
+       inkstitch:ties="3" />
+    <path
+       id="path17397"
+       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
+       d="M 430.01903,832.5 431.27854,808.81993 430.03806,665.01136 C 424.96517,651.22145 419.29939,646.48085 405,643 M 345,832 285,810 V 665 L 284.5,643"
+       sodipodi:nodetypes="cccccccc"
+       inkstitch:satin_column="True"
+       inkstitch:ties="3"
+       inkstitch:center_walk_underlay="True"
+       inkstitch:contour_underlay="True" />
+    <path
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.36;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.36, 0.36;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 284.75,654 102.53828,653.99883"
+       id="path75450" />
+    <path
+       d="M 28.566183,743.76774 28.051457,711.94279 28.06669,665.48668 M 150,742 C 166.41149,740.4008 172.48188,729.49878 176.49721,717 L 177.02514,665.4918"
+       id="path1274"
+       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
+       sodipodi:nodetypes="cccccc"
        inkstitch:satin_column="True"
        inkstitch:reverse_rails="none"
        inkstitch:ties="3"
        inkstitch:center_walk_underlay="True"
        inkstitch:contour_underlay="True" />
     <path
-       d="M 94.86136,809.31993 285,810 M 175,832 H 345"
-       id="path1257"
+       d="M 28.05241,642.51097 284.5,643 M 28.06669,665.48668 285,665"
+       id="path1263"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
        sodipodi:nodetypes="cccc"
        inkstitch:satin_column="True"
-       inkstitch:zigzag_spacing_mm="0.6"
+       inkstitch:zigzag_spacing_mm="0.4"
        inkstitch:reverse_rails="none"
        inkstitch:ties="2"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="True"
-       inkstitch:contour_underlay_inset_mm="0.3" />
+       inkstitch:center_walk_underlay="True"
+       inkstitch:contour_underlay="False"
+       inkstitch:contour_underlay_inset_mm="0.0"
+       inkstitch:e_stitch="True" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -2662,30 +2666,27 @@ Created by Adegoke Adebowale
      id="g1280"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
-       d="M 102,664.49992 292.35156,663.15625 M 182.5,642.51446 372,643"
-       id="path655"
+       d="M 62,473 C 48.927643,476.17976 38.911923,481.9899 37,498 L 36.999631,642.01446 36.977921,664.42548 M 182,473 V 492 L 181.99963,643.42201 102,664.49992"
+       id="path18233"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccc"
-       inkstitch:satin_column="True"
-       inkstitch:zigzag_spacing_mm="0.6"
-       inkstitch:reverse_rails="none"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="True"
-       inkstitch:contour_underlay_inset_mm="0.3"
-       inkstitch:ties="1" />
-    <path
-       d="M 412,643 C 412,643 424.86662,646.163 429.5,650.5 433.45974,654.20645 436.88281,665 436.88281,665 V 977.56782 C 436.88281,977.56782 433.66251,989.10242 429.5,993 424.91392,997.29419 412,1000 412,1000 M 372,643 332.17578,653.07812 292.35156,663.15625 292,977.6875 252,988.84375 212,1000"
-       id="path653"
-       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cscccccccscc"
+       sodipodi:nodetypes="cccccccc"
        inkstitch:satin_column="True"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay="True"
        inkstitch:contour_underlay="True"
-       inkstitch:contour_underlay_inset_mm="0.4"
+       inkstitch:ties="1" />
+    <path
+       d="M 36.977921,664.42548 36.998522,978.18814 30,1000 M 181.96875,663.70486 181.99852,977.68806 90,1000"
+       id="path6923"
+       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
+       sodipodi:nodetypes="cccccc"
+       inkstitch:satin_column="True"
+       inkstitch:reverse_rails="none"
+       inkstitch:center_walk_underlay="True"
+       inkstitch:contour_underlay="True"
        inkstitch:ties="3" />
     <path
-       d="M 292,977.6875 181.99852,977.68806 M 212,1000 H 90"
+       d="M 181.99852,977.68806 292,977.6875 M 90,1000 H 212"
        id="path651"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
        sodipodi:nodetypes="cccc"
@@ -2697,24 +2698,27 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay_inset_mm="0.3"
        inkstitch:ties="3" />
     <path
-       d="M 30,1000 36.998522,978.18814 36.977921,664.42548 M 90,1000 181.99852,977.68806 181.96875,663.70486"
-       id="path6923"
+       d="M 412,1000 C 426.17541,996.18974 432.88711,991.79851 436.88281,977.56782 V 665 C 431.60811,651.62245 426.02432,646.52202 412,643 M 212,1000 292,977.6875 292.35156,663.15625 372,643"
+       id="path653"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccccc"
+       sodipodi:nodetypes="cccccccc"
        inkstitch:satin_column="True"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay="True"
        inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.4"
        inkstitch:ties="3" />
     <path
-       d="M 36.977921,664.42548 36.999631,642.01446 37,498 C 37.000021,491.33333 39.5,485.5 44.5,480.5 49.5,475.5 55.333333,473 62,473 M 102,664.49992 181.99963,643.42201 182,492 V 482.5 473"
-       id="path18233"
+       d="M 292.35156,663.15625 102,664.49992 M 372,643 182.5,642.51446"
+       id="path655"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="ccsscccccc"
+       sodipodi:nodetypes="cccc"
        inkstitch:satin_column="True"
+       inkstitch:zigzag_spacing_mm="0.6"
        inkstitch:reverse_rails="none"
-       inkstitch:center_walk_underlay="True"
+       inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.3"
        inkstitch:ties="2" />
   </g>
   <g
@@ -2771,7 +2775,7 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay="True"
        inkstitch:ties="3" />
     <path
-       d="M 437.29738,643.01741 182.46867,643.85959 M 437.2983,664.71015 182.30299,664.85053"
+       d="M 182.46867,643.85959 437.29738,643.01741 M 182.30299,664.85053 437.2983,664.71015"
        id="path56210"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
        sodipodi:nodetypes="cccc"
@@ -2791,27 +2795,29 @@ Created by Adegoke Adebowale
      id="g1288"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
-       d="M 405,473 C 412.33333,473 418.33333,475.5 423,480.5 427.66667,485.5 429.98785,491.33334 430,498 L 430.21875,640.36253 430.4375,664.15499 M 285,473 V 488.5 504 L 285.04934,640.86383 388.13438,662.86383"
-       id="path3041"
+       d="M 388.13438,662.86383 175.75525,663.65504 M 285.04934,640.86383 77.136173,640.86253"
+       id="path31250"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccccssccc"
+       sodipodi:nodetypes="cccc"
        inkstitch:satin_column="True"
+       inkstitch:zigzag_spacing_mm="0.6"
        inkstitch:reverse_rails="none"
-       inkstitch:center_walk_underlay="True"
+       inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.3"
        inkstitch:ties="1" />
     <path
-       d="M 430.4375,664.15499 430.875,978.125 437,1000 M 285.04934,662.86383 285.92434,978.125 217,1000"
-       id="path24054"
+       d="M 57.136173,640.86253 C 43.947489,645.65719 34.261388,650.03659 29.499999,663.65625 L 30.255249,978 C 34.941524,992.28744 40.319709,996.8266 55,1000 M 77.136173,640.86253 175.75525,663.65504 175.14587,977.6875 95,1000"
+       id="path14231"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccccc"
+       sodipodi:nodetypes="cccccccc"
        inkstitch:satin_column="True"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay="True"
        inkstitch:contour_underlay="True"
        inkstitch:ties="3" />
     <path
-       d="M 217,1000 H 95 M 285.92434,978.125 175.14587,977.6875"
+       d="M 95,1000 H 217 M 175.14587,977.6875 285.92434,978.125"
        id="path14233"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
        sodipodi:nodetypes="cccc"
@@ -2823,26 +2829,24 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay_inset_mm="0.3"
        inkstitch:ties="3" />
     <path
-       d="M 55,1000 C 40.319709,996.8266 34.941524,992.28744 30.255249,978 L 29.499999,663.65625 C 34.261388,650.03659 43.947489,645.65719 57.136173,640.86253 M 95,1000 175.14587,977.6875 175.75525,663.65504 77.136173,640.86253"
-       id="path14231"
+       d="M 437,1000 430.875,978.125 430.4375,664.15499 M 217,1000 285.92434,978.125 285.04934,662.86383"
+       id="path24054"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccccccc"
+       sodipodi:nodetypes="cccccc"
        inkstitch:satin_column="True"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay="True"
        inkstitch:contour_underlay="True"
        inkstitch:ties="3" />
     <path
-       d="M 175.75525,663.65504 388.13438,662.86383 M 77.136173,640.86253 285.04934,640.86383"
-       id="path31250"
+       d="M 430.4375,664.15499 430.21875,640.36253 430,498 C 426.99575,484.77848 421.44927,474.41926 405,473 M 388.13438,662.86383 285.04934,640.86383 285,488.5 V 473"
+       id="path3041"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccc"
+       sodipodi:nodetypes="cccccccs"
        inkstitch:satin_column="True"
-       inkstitch:zigzag_spacing_mm="0.6"
        inkstitch:reverse_rails="none"
-       inkstitch:center_walk_underlay="False"
+       inkstitch:center_walk_underlay="True"
        inkstitch:contour_underlay="True"
-       inkstitch:contour_underlay_inset_mm="0.3"
        inkstitch:ties="2" />
   </g>
   <g
@@ -2919,12 +2923,12 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay="True"
        inkstitch:ties="3" />
     <path
-       d="M 438.71203,1000.2747 182.7117,1000.9642 M 438.71203,978 181.99963,978.5"
+       d="M 182.7117,1000.9642 438.71203,1000.2747 M 181.99963,978.5 438.71203,978"
        id="path13709"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
        sodipodi:nodetypes="cccc"
        inkstitch:satin_column="True"
-       inkstitch:zigzag_spacing_mm="0.6"
+       inkstitch:zigzag_spacing_mm="0.4"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay="True"
        inkstitch:contour_underlay="False"
@@ -2939,38 +2943,15 @@ Created by Adegoke Adebowale
      id="g1296"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
-       d="M 376.52825,572.62499 376.70192,547.75599 376.70068,492.83495 M 256,573 C 239.98989,571.08809 234.17976,561.07235 231,548 L 230.71485,492.33482"
-       id="path13193"
+       d="M 55,1000 C 41.742222,997.15905 31.193774,991.85845 30,975 L 29.926381,661.33655 M 175,1000 V 977.5 L 175.17384,661.65512"
+       id="path29118"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
        sodipodi:nodetypes="cccccc"
        inkstitch:satin_column="True"
        inkstitch:reverse_rails="none"
-       inkstitch:ties="1"
        inkstitch:center_walk_underlay="True"
-       inkstitch:contour_underlay="True" />
-    <path
-       d="M 376.5,474.06055 174.99798,473.79568 M 376.70068,492.83495 175.31607,492.33482"
-       id="path13191"
-       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccc"
-       inkstitch:satin_column="True"
-       inkstitch:zigzag_spacing_mm="0.4"
-       inkstitch:reverse_rails="none"
-       inkstitch:center_walk_underlay="True"
-       inkstitch:contour_underlay="False"
-       inkstitch:contour_underlay_inset_mm="0.0"
-       inkstitch:ties="3"
-       inkstitch:e_stitch="True" />
-    <path
-       d="M 55,474.06055 C 42.321478,476.61546 36.20502,482.02985 29.252011,492.83482 L 29.752011,636.49242 M 174.99798,473.79568 175.31607,492.33482 174.99947,636.81099"
-       id="path4975"
-       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccccs"
-       inkstitch:satin_column="True"
-       inkstitch:reverse_rails="none"
-       inkstitch:ties="3"
-       inkstitch:center_walk_underlay="True"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:ties="1" />
     <path
        d="M 303.51598,636.81099 H 174.99947 M 303.51598,661.97986 175.17384,661.65512"
        id="path1294"
@@ -2987,15 +2968,42 @@ Created by Adegoke Adebowale
        inkstitch:repeats="2"
        inkstitch:e_stitch="True" />
     <path
-       d="M 29.752011,636.49242 30,975 C 30,982.33333 32.333333,988.33333 37,993 41.666667,997.66667 47.666667,1000 55,1000 M 174.99947,636.81099 175,977.5 V 988.75 1000"
-       id="path29118"
+       d="M 29.926381,661.33655 29.252011,492.83482 C 36.20502,482.02985 42.321478,476.61546 55,474.06055 M 175.17384,661.65512 175.31607,492.33482 174.99798,473.79568"
+       id="path4975"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="ccsccccc"
+       sodipodi:nodetypes="cccscc"
        inkstitch:satin_column="True"
        inkstitch:reverse_rails="none"
+       inkstitch:ties="3"
        inkstitch:center_walk_underlay="True"
-       inkstitch:contour_underlay="True"
-       inkstitch:ties="2" />
+       inkstitch:contour_underlay="True" />
+    <path
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.36;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.36, 0.36;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 175.15702,483.06525 314.00326,483.31531"
+       id="path61270" />
+    <path
+       d="M 376.52825,572.62499 376.70192,547.75599 376.70068,492.83495 M 256,573 C 239.98989,571.08809 234.17976,561.07235 231,548 L 230.71485,492.33482"
+       id="path13193"
+       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
+       sodipodi:nodetypes="cccccc"
+       inkstitch:satin_column="True"
+       inkstitch:reverse_rails="none"
+       inkstitch:ties="3"
+       inkstitch:center_walk_underlay="True"
+       inkstitch:contour_underlay="True" />
+    <path
+       d="M 174.99798,473.79568 376.5,474.06055 M 175.31607,492.33482 376.70068,492.83495"
+       id="path13191"
+       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
+       sodipodi:nodetypes="cccc"
+       inkstitch:satin_column="True"
+       inkstitch:zigzag_spacing_mm="0.4"
+       inkstitch:reverse_rails="none"
+       inkstitch:center_walk_underlay="True"
+       inkstitch:contour_underlay="False"
+       inkstitch:contour_underlay_inset_mm="0.0"
+       inkstitch:ties="2"
+       inkstitch:e_stitch="True" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -3087,17 +3095,27 @@ Created by Adegoke Adebowale
      id="g1304"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
-       d="M 444,1000 440.5,987.5 437,975 V 668 C 437,668 433.98764,654.98764 429.5,650.5 425.01236,646.01236 412,643 412,643 M 316,1000 C 310.66667,1000 305,997.66667 299,993 294.33333,988.33333 292,982.33333 292,975 L 292.11846,664.74891 332.05923,653.87445 372,643"
-       id="path11177"
+       d="M 30,473 38.767767,498.88388 36.499996,644.40056 37.150502,664.73101 M 182,473 V 500.53553 642.24891 L 102,664.24891"
+       id="path2695"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="ccccccccsccc"
+       sodipodi:nodetypes="cccccccc"
        inkstitch:satin_column="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="True"
+       inkstitch:contour_underlay="True"
        inkstitch:ties="1" />
     <path
-       d="M 292.11846,664.74891 102,664.24891 M 372,643 182,642.24891"
+       d="M 62,1000 C 45.570249,998.32308 40.011539,988.12003 37,975 L 37.150502,664.73101 M 182,1000 V 973 L 182.5,665.24891"
+       id="path27522"
+       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
+       sodipodi:nodetypes="cccccc"
+       inkstitch:satin_column="True"
+       inkstitch:reverse_rails="none"
+       inkstitch:ties="3"
+       inkstitch:contour_underlay="True"
+       inkstitch:center_walk_underlay="True" />
+    <path
+       d="M 102,664.24891 292.11846,664.74891 M 182,642.24891 372,643"
        id="path1302"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
        sodipodi:nodetypes="cccc"
@@ -3109,24 +3127,14 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay_inset_mm="0.3"
        inkstitch:ties="3" />
     <path
-       d="M 62,1000 C 55.333333,1000 49.5,997.66667 44.5,993 39.5,988.33333 36.996443,982.33333 37,975 L 37.150502,664.73101 M 182,1000 V 986.5 973 L 182.5,665.24891"
-       id="path27522"
-       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cssccccc"
-       inkstitch:satin_column="True"
-       inkstitch:reverse_rails="none"
-       inkstitch:ties="3"
-       inkstitch:contour_underlay="True"
-       inkstitch:center_walk_underlay="True" />
-    <path
-       d="M 37.150502,664.73101 36.499996,644.40056 38.767767,498.88388 30,473 M 102,664.24891 182,642.24891 V 500.53553 473"
-       id="path2695"
+       d="M 412,643 C 427.14442,647.42974 433.27072,652.67748 437,668 V 975 L 444,1000 M 372,643 292.11846,664.74891 292,975 C 294.78711,988.00653 300.02965,997.90211 316,1000"
+       id="path11177"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
        sodipodi:nodetypes="cccccccc"
        inkstitch:satin_column="True"
        inkstitch:reverse_rails="none"
-       inkstitch:center_walk_underlay="True"
        inkstitch:contour_underlay="True"
+       inkstitch:center_walk_underlay="True"
        inkstitch:ties="2" />
   </g>
   <g
@@ -3161,31 +3169,6 @@ Created by Adegoke Adebowale
      id="g1312"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
-       d="M 349,473 V 493.25 513.5 554 C 349,560.66667 346.5,566.5 341.5,571.5 336.5,576.5 330.66667,579 324,579 M 229,473 C 221.66667,473 215.66667,475.5 211,480.5 206.33333,485.5 204,491.33333 204,498 V 538.5 558.75 579"
-       id="path26196"
-       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccssccssccc"
-       inkstitch:satin_column="True"
-       inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True"
-       inkstitch:center_walk_underlay="True"
-       inkstitch:ties="0" />
-    <path
-       d="M 349,643 V 668 C 349,827.83856 349.1298,988.05249 348.88281,1147.6875 347.41756,1160.5244 343.56685,1165.3629 331.864,1170.5 M 197,643 204,668 V 1148 L 203.76279,1170.5"
-       id="path60026"
-       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccccccc"
-       inkstitch:satin_column="True"
-       inkstitch:reverse_rails="none"
-       inkstitch:center_walk_underlay="True"
-       inkstitch:contour_underlay="True"
-       inkstitch:ties="1" />
-    <path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.982677;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.982677, 0.982677;stroke-dashoffset:0;stroke-opacity:1"
-       d="M 203.8814,1159.25 115.0064,1159"
-       id="path30310"
-       sodipodi:nodetypes="cc" />
-    <path
        d="M 150,1070 C 163.21702,1073.0006 173.58099,1078.5498 175,1095 L 175.22097,1148 M 30,1070 29.998561,1093.724 30,1147.5"
        id="path1310"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
@@ -3194,7 +3177,7 @@ Created by Adegoke Adebowale
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay="True"
        inkstitch:contour_underlay="True"
-       inkstitch:ties="3" />
+       inkstitch:ties="1" />
     <path
        d="M 30,1170 203.76279,1170.5 M 30,1147.5 204,1148"
        id="path60029"
@@ -3206,8 +3189,28 @@ Created by Adegoke Adebowale
        inkstitch:center_walk_underlay="True"
        inkstitch:contour_underlay="False"
        inkstitch:contour_underlay_inset_mm="0.0"
-       inkstitch:ties="2"
+       inkstitch:ties="3"
        inkstitch:e_stitch="True" />
+    <path
+       d="M 331.864,1170.5 C 343.56685,1165.3629 347.41756,1160.5244 348.88281,1147.6875 L 349,668 V 643 M 203.76279,1170.5 204,1148 V 668 L 197,643"
+       id="path60026"
+       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
+       sodipodi:nodetypes="cccccccc"
+       inkstitch:satin_column="True"
+       inkstitch:reverse_rails="none"
+       inkstitch:center_walk_underlay="True"
+       inkstitch:contour_underlay="True"
+       inkstitch:ties="3" />
+    <path
+       d="M 324,579 C 337.07235,575.82024 347.08809,570.01011 349,554 V 493.25 473 M 204,579 V 558.75 498 C 207.00062,484.78299 212.54975,474.419 229,473"
+       id="path26196"
+       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
+       sodipodi:nodetypes="cccccccc"
+       inkstitch:satin_column="True"
+       inkstitch:reverse_rails="none"
+       inkstitch:contour_underlay="True"
+       inkstitch:center_walk_underlay="True"
+       inkstitch:ties="2" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -3216,36 +3219,15 @@ Created by Adegoke Adebowale
      id="g1316"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
-       d="M 444,1000 437,975 436.375,792.875 C 436.32155,777.30112 373.39366,752.49999 373.5782,741.07632 373.76274,729.65265 401.00711,720.51171 401.00711,720.51171 M 292,1000 V 975 L 291.5,744.92603 321.75,732.95132 352,720.97661"
-       id="path1314"
+       d="M 30,473 37,498 36.5,720.47661 37,744.91869 M 182,473 V 499 721.45182 L 122,744.45182"
+       id="path20304"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="ccszcccccc"
+       sodipodi:nodetypes="cccccccc"
        inkstitch:satin_column="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="True"
+       inkstitch:contour_underlay="True"
        inkstitch:ties="1" />
-    <path
-       d="M 292,526 V 555.75 L 291.5,698.11331 291,720.47661 M 444,526 437,551 436.98148,694.47995 C 436.98014,704.90206 401.00711,720.51171 401.00711,720.51171"
-       id="path19860"
-       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="ccccccsc"
-       inkstitch:satin_column="True"
-       inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True"
-       inkstitch:center_walk_underlay="True" />
-    <path
-       d="M 352,720.97661 182,721.45182 M 291.5,744.92603 122,744.45182"
-       id="path24882"
-       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccc"
-       inkstitch:satin_column="True"
-       inkstitch:zigzag_spacing_mm="0.6"
-       inkstitch:reverse_rails="none"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="True"
-       inkstitch:contour_underlay_inset_mm="0.3"
-       inkstitch:ties="3" />
     <path
        d="M 62,1000 C 45.570631,998.32306 40.012538,988.12127 37,975 V 744.91869 M 182,1000 V 968.5 L 182.5,745.42603"
        id="path24884"
@@ -3257,14 +3239,36 @@ Created by Adegoke Adebowale
        inkstitch:center_walk_underlay="True"
        inkstitch:contour_underlay="True" />
     <path
-       d="M 37,744.91869 36.5,720.47661 37,498 30,473 M 122,744.45182 182,721.45182 V 499 473"
-       id="path20304"
+       d="M 182,721.45182 352,720.97661 M 122,744.45182 291.5,744.92603"
+       id="path24882"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccccccc"
+       sodipodi:nodetypes="cccc"
+       inkstitch:satin_column="True"
+       inkstitch:zigzag_spacing_mm="0.6"
+       inkstitch:reverse_rails="none"
+       inkstitch:center_walk_underlay="False"
+       inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.3"
+       inkstitch:ties="3" />
+    <path
+       d="M 292,526 V 555.75 L 291.5,698.11331 291,720.47661 M 444,526 437,551 436.98148,694.47995 C 436.98014,704.90206 401.00711,720.51171 401.00711,720.51171"
+       id="path19860"
+       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
+       sodipodi:nodetypes="ccccccsc"
        inkstitch:satin_column="True"
        inkstitch:reverse_rails="none"
-       inkstitch:center_walk_underlay="True"
        inkstitch:contour_underlay="True"
+       inkstitch:center_walk_underlay="True"
+       inkstitch:ties="3" />
+    <path
+       d="M 401.00711,720.51171 C 401.00711,720.51171 373.76274,729.65265 373.5782,741.07632 373.39366,752.49999 436.32155,777.30112 436.375,792.875 L 437,975 444,1000 M 352,720.97661 291.5,744.92603 290.50012,791.12418 292,975 V 1000"
+       id="path1314"
+       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
+       sodipodi:nodetypes="czsccccccc"
+       inkstitch:satin_column="True"
+       inkstitch:reverse_rails="none"
+       inkstitch:contour_underlay="True"
+       inkstitch:center_walk_underlay="True"
        inkstitch:ties="2" />
   </g>
   <g
@@ -3274,10 +3278,10 @@ Created by Adegoke Adebowale
      id="g1320"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
-       d="M 62,1000 C 56,1000 50,997.66667 44,993 39.333333,987 37,981 37,975 V 498 L 30,473 M 182,1000 V 976.625 953.25 498.5 473"
+       d="M 30,473 37,498 V 975 C 40.213346,988.77148 45.765528,998.20929 62,1000 M 182,473 V 498.5 976.625 1000"
        id="path1318"
        style="fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="ccsccccccc"
+       sodipodi:nodetypes="cccccccc"
        inkstitch:satin_column="True"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay="True"
@@ -3290,19 +3294,20 @@ Created by Adegoke Adebowale
      id="g1324"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
-       d="M 548,1000 C 564.39522,998.25659 569.13091,988.08363 571,975 L 545.6875,687.1875 543.30635,665.12603 M 428,1000 425.65625,973.82812 400.8125,696.40625 400,665"
-       id="path1322"
+       d="M 53,1000 C 39.818864,996.9582 30.31862,991.51156 30,975 L 56.375,664.875 M 173,1000 175.10937,973.82812 199.62906,664.94885"
+       id="path22590"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="ccsccccc"
+       sodipodi:nodetypes="cccccc"
        inkstitch:satin_column="True"
        inkstitch:reverse_rails="none"
-       inkstitch:center_walk_underlay="True"
+       inkstitch:ties="1"
        inkstitch:contour_underlay="True"
-       inkstitch:ties="1" />
+       inkstitch:center_walk_underlay="True" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.982677;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.982677, 0.982677;stroke-dashoffset:0;stroke-opacity:1"
-       d="M 461.6118,653.68797 H 336.10035"
-       id="path28620" />
+       d="M 140.76212,653.19663 260.97026,653.68797"
+       id="path28622"
+       sodipodi:nodetypes="cc" />
     <path
        d="M 373,1000 374.5105,665.62603 M 228,1000 V 665"
        id="path22588"
@@ -3315,20 +3320,21 @@ Created by Adegoke Adebowale
        inkstitch:ties="3" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.982677;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.982677, 0.982677;stroke-dashoffset:0;stroke-opacity:1"
-       d="M 260.97026,653.68797 140.76212,653.19663"
-       id="path28622" />
+       d="M 336.10035,653.68797 H 461.6118"
+       id="path28620"
+       sodipodi:nodetypes="cc" />
     <path
-       d="M 53,1000 C 39.818864,996.9582 30.31862,991.51156 30,975 L 56.375,664.875 M 173,1000 175.10937,973.82812 199.62906,664.94885"
-       id="path22590"
+       d="M 548,1000 C 564.39522,998.25659 569.13091,988.08363 571,975 L 545.6875,687.1875 543.30635,665.12603 M 428,1000 425.65625,973.82812 400.8125,696.40625 400,665"
+       id="path1322"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccccc"
+       sodipodi:nodetypes="ccsccccc"
        inkstitch:satin_column="True"
        inkstitch:reverse_rails="none"
-       inkstitch:ties="3"
+       inkstitch:center_walk_underlay="True"
        inkstitch:contour_underlay="True"
-       inkstitch:center_walk_underlay="True" />
+       inkstitch:ties="3" />
     <path
-       d="M 527.57646,650.36104 C 527.57646,650.36104 517.16137,642.09909 510.98489,642.11105 L 52,643 M 535.38281,664.98707 509.07646,664.48708 56.375,664.875"
+       d="M 52,643 510.98489,642.11105 C 517.16137,642.09909 527.57646,650.36104 527.57646,650.36104 M 56.375,664.875 509.07646,664.48708 535.38281,664.98707"
        id="path69867"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
        sodipodi:nodetypes="cscccc"
@@ -3348,6 +3354,21 @@ Created by Adegoke Adebowale
      id="g1328"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
+       d="M 62,1000 C 48.782984,996.99938 38.418997,991.45025 37,975 V 662.75 M 182,1000 V 972.125 L 181.89599,662.02088"
+       id="path1326"
+       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
+       sodipodi:nodetypes="cccccc"
+       inkstitch:satin_column="True"
+       inkstitch:reverse_rails="none"
+       inkstitch:ties="1"
+       inkstitch:contour_underlay="True"
+       inkstitch:center_walk_underlay="True" />
+    <path
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.982677;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.982677, 0.982677;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 109.5,652.62484 H 364.40625"
+       id="path26095"
+       sodipodi:nodetypes="cc" />
+    <path
        d="M 412,1000 C 428.42937,998.32306 433.98746,988.12127 437,975 V 662.75 M 292,1000 V 974.125 L 291.8125,662.25"
        id="path10683"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
@@ -3356,23 +3377,9 @@ Created by Adegoke Adebowale
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay="True"
        inkstitch:contour_underlay="True"
-       inkstitch:ties="1" />
+       inkstitch:ties="3" />
     <path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.982677;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.982677, 0.982677;stroke-dashoffset:0;stroke-opacity:1"
-       d="M 364.40625,652.62484 H 109.5"
-       id="path26095" />
-    <path
-       d="M 62,1000 C 48.782984,996.99938 38.418997,991.45025 37,975 V 662.75 M 182,1000 V 972.125 L 181.89599,662.02088"
-       id="path1326"
-       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccccc"
-       inkstitch:satin_column="True"
-       inkstitch:reverse_rails="none"
-       inkstitch:ties="3"
-       inkstitch:contour_underlay="True"
-       inkstitch:center_walk_underlay="True" />
-    <path
-       d="M 424.78378,648.23193 C 424.78378,648.23193 412.81884,642.49117 406.3999,642.4997 L 30,643 M 431.3999,662.2497 H 419.4989 L 37,662.75"
+       d="M 30,643 406.3999,642.4997 C 412.81884,642.49117 424.78378,648.23193 424.78378,648.23193 M 37,662.75 419.4989,662.2497 H 431.3999"
        id="path64884"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
        sodipodi:nodetypes="csccsc"
@@ -3392,17 +3399,17 @@ Created by Adegoke Adebowale
      id="g1332"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
-       d="M 345,1000 284.99546,972.25 285.59576,663.06564 257.79788,652.54633 230,642.02703 M 405,1000 C 420.96631,996.69018 426.0842,990.9279 430,975 V 668 C 430,668 427.41069,654.97415 423,650.5 418.43675,645.8711 405,643 405,643"
-       id="path1330"
+       d="M 55,1000 C 39.0721,996.0842 33.309816,990.96631 30,975 L 30.371286,662.94189 C 32.924008,649.5701 43.124765,647.17925 55,643 M 235,1000 174.93296,973.25 174.57692,663.65624 112.875,642.5"
+       id="path9945"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="ccccccccsc"
+       sodipodi:nodetypes="cccccccc"
        inkstitch:satin_column="True"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay="True"
        inkstitch:contour_underlay="True"
        inkstitch:ties="1" />
     <path
-       d="M 230,642.02703 112.875,642.5 M 285.59576,663.06564 174.57692,663.65624"
+       d="M 112.875,642.5 230,642.02703 M 174.57692,663.65624 285.59576,663.06564"
        id="path9947"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
        sodipodi:nodetypes="cccc"
@@ -3413,17 +3420,17 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay="True"
        inkstitch:contour_underlay_inset_mm="0.3" />
     <path
-       d="M 55,643 C 54.802863,644.52625 43.119505,646.30706 37,650.5 30.880495,654.69294 30.324843,661.29801 30.371286,662.94189 L 30,975 C 33.309816,990.96631 39.0721,996.0842 55,1000 M 112.875,642.5 143.72596,653.07812 174.57692,663.65624 174.93296,973.25 235,1000"
-       id="path9945"
+       d="M 230,642.02703 285.59576,663.06564 284.99546,972.25 345,1000 M 405,643 C 420.46429,647.27336 426.63181,652.32443 430,668 V 975 C 426.0842,990.9279 420.96631,996.69018 405,1000"
+       id="path1330"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cscccccccc"
+       sodipodi:nodetypes="cccccccc"
        inkstitch:satin_column="True"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay="True"
        inkstitch:contour_underlay="True"
-       inkstitch:ties="3" />
+       inkstitch:ties="1" />
     <path
-       d="M 174.93296,973.25 284.99546,972.25 M 235,1000 H 345"
+       d="M 284.99546,972.25 174.93296,973.25 M 345,1000 H 235"
        id="path9943"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
        sodipodi:nodetypes="cccc"
@@ -3442,28 +3449,27 @@ Created by Adegoke Adebowale
      id="g1336"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
-       d="M 181.15385,1000 357.94882,1000.3358 M 121.15385,978 291.95854,977.95952"
-       id="path8254"
-       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccc"
-       inkstitch:satin_column="True"
-       inkstitch:zigzag_spacing_mm="0.6"
-       inkstitch:reverse_rails="none"
-       inkstitch:ties="1"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="True"
-       inkstitch:contour_underlay_inset_mm="0.3" />
-    <path
-       d="M 357.94882,1000.3358 291.95854,977.95952 292.625,665 212,643 M 412,1000 C 412.07813,999.125 435.5263,996.2414 436.88281,977.6875 V 665.53906 C 433.91942,641.66117 412.07813,643.80729 412,643"
-       id="path8252"
+       d="M 62,1170 C 48.782975,1166.9994 38.419009,1161.4502 37,1145 V 1000.8255 L 38.25,977.50002 M 182,1170 V 1146.75 L 181.15385,1000 121.15385,978"
+       id="path1334"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
        sodipodi:nodetypes="cccccccc"
        inkstitch:satin_column="True"
        inkstitch:reverse_rails="none"
+       inkstitch:center_walk_underlay="True"
        inkstitch:contour_underlay="True"
-       inkstitch:center_walk_underlay="True" />
+       inkstitch:ties="1" />
     <path
-       d="M 212,643 89.340766,642.5 M 292.625,665 H 182"
+       d="M 38.25,977.50002 37,665 30,643 M 181.15385,978 182,665 89.340766,642.5"
+       id="path46248"
+       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
+       sodipodi:nodetypes="cccccc"
+       inkstitch:satin_column="True"
+       inkstitch:reverse_rails="none"
+       inkstitch:center_walk_underlay="True"
+       inkstitch:contour_underlay="True"
+       inkstitch:ties="3" />
+    <path
+       d="M 89.340766,642.5 212,643 M 182,665 H 292.625"
        id="path8250"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
        sodipodi:nodetypes="cccc"
@@ -3475,25 +3481,26 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay_inset_mm="0.3"
        inkstitch:ties="3" />
     <path
-       d="M 30,643 37,665 38.25,977.50002 M 89.340766,642.5 182,665 181.15385,978"
-       id="path46248"
+       d="M 212,643 292.625,665 291.95854,977.95952 357.94882,1000.3358 M 412,643 C 412.07813,643.80729 433.91942,641.66117 436.88281,665.53906 V 977.6875 C 435.5263,996.2414 412.07813,999.125 412,1000"
+       id="path8252"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccccc"
+       sodipodi:nodetypes="cccccccc"
        inkstitch:satin_column="True"
        inkstitch:reverse_rails="none"
-       inkstitch:center_walk_underlay="True"
        inkstitch:contour_underlay="True"
-       inkstitch:ties="3" />
+       inkstitch:center_walk_underlay="True" />
     <path
-       d="M 38.25,977.50002 37,1000.8255 V 1145 C 37,1152.3333 39.5,1158.3333 44.5,1163 49.5,1167.6667 55.333333,1170 62,1170 M 121.15385,978 181.15385,1000 182,1146.75 V 1158.375 1170"
-       id="path1334"
+       d="M 357.94882,1000.3358 181.15385,1000 M 291.95854,977.95952 121.15385,978"
+       id="path8254"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="ccsscccccc"
+       sodipodi:nodetypes="cccc"
        inkstitch:satin_column="True"
+       inkstitch:zigzag_spacing_mm="0.6"
        inkstitch:reverse_rails="none"
-       inkstitch:center_walk_underlay="True"
+       inkstitch:ties="2"
+       inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
-       inkstitch:ties="2" />
+       inkstitch:contour_underlay_inset_mm="0.3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -3502,27 +3509,29 @@ Created by Adegoke Adebowale
      id="g1340"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
-       d="M 430,1170 V 1160.5 1149 1001 979.75 M 309,1170 C 302.33333,1170 296.66667,1167.5 292,1162.5 287.33333,1157.5 285,1151.6667 285,1145 V 1000.5 L 365,980.33619"
-       id="path710"
-       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="ccccccsccc"
-       inkstitch:satin_column="True"
-       inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True"
-       inkstitch:center_walk_underlay="True"
-       inkstitch:ties="1" />
-    <path
-       d="M 430,979.75 V 668 L 437,643 M 285,980.33619 284.5,668 217,643"
-       id="path47428"
+       d="M 285,1000.5 99.272346,1000 M 365,980.33619 175.32459,980.31539"
+       id="path1338"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
        sodipodi:nodetypes="cccc"
+       inkstitch:satin_column="True"
+       inkstitch:zigzag_spacing_mm="0.6"
+       inkstitch:reverse_rails="none"
+       inkstitch:center_walk_underlay="False"
+       inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.3"
+       inkstitch:ties="1" />
+    <path
+       d="M 59.272346,1000 C 58.980679,998.33333 37.4375,998.25 30.4375,980.25 L 30,668 C 34.074724,652.38928 39.384248,646.67354 55,643 M 99.272346,1000 175.32459,980.31539 175,668.5 95,643"
+       id="path7767"
+       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
+       sodipodi:nodetypes="cccccccc"
        inkstitch:satin_column="True"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay="True"
        inkstitch:contour_underlay="True"
        inkstitch:ties="3" />
     <path
-       d="M 217,643 H 95 M 284.5,668 175,668.5"
+       d="M 95,643 H 217 M 175,668.5 284.5,668"
        id="path7769"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
        sodipodi:nodetypes="cccc"
@@ -3534,26 +3543,24 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay_inset_mm="0.3"
        inkstitch:ties="3" />
     <path
-       d="M 55,643 C 39.384248,646.67354 34.074724,652.38928 30,668 L 30.4375,980.25 C 37.4375,998.25 58.980679,998.33333 59.272346,1000 M 95,643 175,668.5 175.32459,980.31539 99.272346,1000"
-       id="path7767"
+       d="M 437,643 430,668 V 979.75 M 217,643 284.5,668 285,980.33619"
+       id="path47428"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccccccc"
+       sodipodi:nodetypes="cccccc"
        inkstitch:satin_column="True"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay="True"
        inkstitch:contour_underlay="True"
        inkstitch:ties="3" />
     <path
-       d="M 99.272346,1000 285,1000.5 M 175.32459,980.31539 365,980.33619"
-       id="path1338"
+       d="M 430,979.75 V 1001 1149 1170 M 365,980.33619 285,1000.5 V 1145 C 287.93385,1157.9229 293.12949,1168.078 309,1170"
+       id="path710"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccc"
+       sodipodi:nodetypes="cccccccc"
        inkstitch:satin_column="True"
-       inkstitch:zigzag_spacing_mm="0.6"
        inkstitch:reverse_rails="none"
-       inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
-       inkstitch:contour_underlay_inset_mm="0.3"
+       inkstitch:center_walk_underlay="True"
        inkstitch:ties="2" />
   </g>
   <g
@@ -3563,6 +3570,20 @@ Created by Adegoke Adebowale
      id="g1344"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
+       d="M 62,1000 C 45.570631,998.32306 40.012538,988.12127 37,975 V 668 L 30,643 M 182,1000 V 976.25 L 181.24475,666.11993 181.2419,641.52876"
+       id="path1342"
+       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
+       sodipodi:nodetypes="cccccccc"
+       inkstitch:satin_column="True"
+       inkstitch:reverse_rails="none"
+       inkstitch:ties="1"
+       inkstitch:contour_underlay="True"
+       inkstitch:center_walk_underlay="True" />
+    <path
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.36;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.36, 0.36;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 181.24333,653.82434 343.17142,654.1394"
+       id="path31469" />
+    <path
        d="M 436.84074,741.99997 437.5,719.40103 437.49715,666.75005 M 316,742 C 303.69876,742.35585 293.06755,731.40089 292.10937,719.46094 L 291.61097,666.75"
        id="path7060"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
@@ -3571,7 +3592,8 @@ Created by Adegoke Adebowale
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay="True"
        inkstitch:contour_underlay="True"
-       inkstitch:ties="1" />
+       inkstitch:ties="3"
+       inkscape:label="path7060" />
     <path
        d="M 437.5,641.52875 181.2419,641.52876 M 437.49715,666.75005 181.24475,666.11993"
        id="path7058"
@@ -3583,18 +3605,8 @@ Created by Adegoke Adebowale
        inkstitch:center_walk_underlay="True"
        inkstitch:contour_underlay="False"
        inkstitch:contour_underlay_inset_mm="0.0"
-       inkstitch:ties="3"
-       inkstitch:e_stitch="True" />
-    <path
-       d="M 30,643 37,668 V 975 C 37,982.33333 39.5,988.33333 44.5,993 49.5,997.66667 55.333333,1000 62,1000 M 181.2419,641.52876 181.24475,666.11993 182,976.25 V 988.125 1000"
-       id="path1342"
-       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="ccsscccccc"
-       inkstitch:satin_column="True"
-       inkstitch:reverse_rails="none"
        inkstitch:ties="2"
-       inkstitch:contour_underlay="True"
-       inkstitch:center_walk_underlay="True" />
+       inkstitch:e_stitch="True" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -3603,18 +3615,18 @@ Created by Adegoke Adebowale
      id="g1348"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
-       id="path51359"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
-       d="M 431.32207,741.99997 431.32305,718.09595 430.74704,664.1399 M 309,742 C 293.12949,740.07798 287.93385,729.92293 285,717 L 284.51241,664.1399"
+       d="M 150,900 C 163.55663,903.67163 174.78185,910.16929 174.95535,927.67885 L 174.06174,981.08035 M 29.499888,900.12496 29.997175,926.21052 29.999177,980.58035"
+       id="path1346"
+       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
        sodipodi:nodetypes="cccccc"
        inkstitch:satin_column="True"
        inkstitch:reverse_rails="none"
        inkstitch:ties="1"
-       inkstitch:contour_underlay="True"
-       inkstitch:center_walk_underlay="True" />
+       inkstitch:center_walk_underlay="True"
+       inkstitch:contour_underlay="True" />
     <path
-       d="M 431.32207,640.90168 175.64762,640.40169 M 430.74704,664.1399 175.64772,664.118"
-       id="path3559"
+       d="M 29.999177,1001 285.06348,1001.7902 M 29.999177,980.58035 284.4998,981.59955"
+       id="path3551"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
        sodipodi:nodetypes="cccc"
        inkstitch:satin_column="True"
@@ -3626,17 +3638,17 @@ Created by Adegoke Adebowale
        inkstitch:ties="3"
        inkstitch:e_stitch="True" />
     <path
-       d="M 55,640.40169 C 40.119569,642.78433 35.052218,649.83871 30.273438,664.13932 L 30,808 C 30,808 33.044502,820.69772 37.5,825 42.019563,829.36415 55,832 55,832 M 175.64762,640.40169 175.14735,664.1399 175,810 135,821 95,832"
-       id="path3557"
+       d="M 407.1875,1002.2902 C 420.15869,1000.1019 424.55865,993.09371 430.82177,982.73398 L 430.5,832 C 430.5,832 427.13186,820.76534 423,817 418.24168,812.66377 405,810 405,810 M 285.06348,1001.7902 284.9998,981.08035 285,832 321.15678,820.50492 357.31356,809.00984"
+       id="path3553"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
        sodipodi:nodetypes="cccccccccc"
        inkstitch:satin_column="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="True"
+       inkstitch:contour_underlay="True"
        inkstitch:ties="3" />
     <path
-       d="M 95,832 H 285 M 175,810 357.31356,809.00984"
+       d="M 285,832 H 95 M 357.31356,809.00984 175,810"
        id="path3555"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
        sodipodi:nodetypes="cccc"
@@ -3648,32 +3660,34 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay_inset_mm="0.3"
        inkstitch:ties="3" />
     <path
-       d="M 405,810 C 405,810 418.24168,812.66377 423,817 427.13186,820.76534 430.5,832 430.5,832 L 430.82177,982.73398 C 424.55865,993.09371 420.15869,1000.1019 407.1875,1002.2902 M 357.31356,809.00984 321.15678,820.50492 285,832 284.9998,981.08035 285.06348,1001.7902"
-       id="path3553"
+       d="M 55,832 C 55,832 42.019563,829.36415 37.5,825 33.044502,820.69772 30,808 30,808 L 30.273438,664.13932 C 35.052218,649.83871 40.119569,642.78433 55,640.40169 M 95,832 135,821 175,810 175.14735,664.1399 175.64762,640.40169"
+       id="path3557"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
        sodipodi:nodetypes="cccccccccc"
        inkstitch:satin_column="True"
        inkstitch:reverse_rails="none"
-       inkstitch:center_walk_underlay="True"
        inkstitch:contour_underlay="True"
-       inkstitch:ties="3" />
+       inkstitch:center_walk_underlay="True"
+       inkstitch:ties="3"
+       inkscape:label="path3557" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.982677;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.982677, 0.982677;stroke-dashoffset:0;stroke-opacity:1"
-       d="M 285.03164,991.43528 125.7361,991.18528"
-       id="path21054" />
+       d="M 175.39748,652.2708 H 366.34891"
+       id="path21054"
+       sodipodi:nodetypes="cc" />
     <path
-       d="M 150,900 C 163.55663,903.67163 174.78185,910.16929 174.95535,927.67885 L 174.06174,981.08035 M 29.499888,900.12496 29.997175,926.21052 29.999177,980.58035"
-       id="path1346"
-       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
+       id="path51359"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="M 431.32207,741.99997 431.32305,718.09595 430.74704,664.1399 M 309,742 C 293.12949,740.07798 287.93385,729.92293 285,717 L 284.51241,664.1399"
        sodipodi:nodetypes="cccccc"
        inkstitch:satin_column="True"
        inkstitch:reverse_rails="none"
-       inkstitch:ties="3"
-       inkstitch:center_walk_underlay="True"
-       inkstitch:contour_underlay="True" />
+       inkstitch:ties="2"
+       inkstitch:contour_underlay="True"
+       inkstitch:center_walk_underlay="True" />
     <path
-       d="M 29.999177,1001 285.06348,1001.7902 M 29.999177,980.58035 284.4998,981.59955"
-       id="path3551"
+       d="M 431.32207,640.90168 175.64762,640.40169 M 430.74704,664.1399 175.64772,664.118"
+       id="path3559"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
        sodipodi:nodetypes="cccc"
        inkstitch:satin_column="True"
@@ -3692,38 +3706,15 @@ Created by Adegoke Adebowale
      id="g1352"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
-       d="M 383.71575,899.49996 384.06948,925.48556 384.06701,977.32902 M 263,900 C 248.89981,899.74087 237.98412,913.26531 238.00314,927.32412 L 238.07013,976.82902"
-       id="path11346"
+       d="M 30,473 37,498 38.653319,658.73921 M 182,473 V 505 L 182.49947,657.98812"
+       id="path13577"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
        sodipodi:nodetypes="cccccc"
        inkstitch:satin_column="True"
        inkstitch:reverse_rails="none"
-       inkstitch:center_walk_underlay="True"
        inkstitch:contour_underlay="True"
+       inkstitch:center_walk_underlay="True"
        inkstitch:ties="1" />
-    <path
-       d="M 383.5,1001.4875 181.99554,1000.9875 M 384.06701,977.32902 182,976.32903"
-       id="path2639"
-       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccc"
-       inkstitch:satin_column="True"
-       inkstitch:zigzag_spacing_mm="0.6"
-       inkstitch:reverse_rails="none"
-       inkstitch:center_walk_underlay="True"
-       inkstitch:contour_underlay="False"
-       inkstitch:contour_underlay_inset_mm="0.0"
-       inkstitch:ties="3"
-       inkstitch:e_stitch="True" />
-    <path
-       d="M 67.871093,1001 C 51.286112,998.02213 42.310765,994.17279 37,978.97748 L 38.653319,684.49993 M 181.99554,1000.9875 182,976.32903 182.49947,683.74884"
-       id="path13574"
-       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccccc"
-       inkstitch:satin_column="True"
-       inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True"
-       inkstitch:center_walk_underlay="True"
-       inkstitch:ties="3" />
     <path
        d="M 309.96239,657.98812 H 182.49947 M 310.00085,683.36726 181.99947,683.74884"
        id="path1350"
@@ -3740,15 +3731,42 @@ Created by Adegoke Adebowale
        inkstitch:repeats="2"
        inkstitch:e_stitch="True" />
     <path
-       d="M 38.653319,684.49993 37,498 30,473 M 182.49947,683.74884 182,505 V 473"
-       id="path13577"
+       d="M 38.653319,658.73921 37,978.97748 C 42.310765,994.17279 51.286112,998.02213 67.871093,1001 M 182.49947,657.98812 182,976.32903 181.99554,1000.9875"
+       id="path13574"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
        sodipodi:nodetypes="cccccc"
        inkstitch:satin_column="True"
        inkstitch:reverse_rails="none"
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="True"
-       inkstitch:ties="2" />
+       inkstitch:ties="3" />
+    <path
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.36;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.36, 0.36;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 181.99777,988.65827 311.0363,988.90827"
+       id="path25137" />
+    <path
+       d="M 383.71575,899.49996 384.06948,925.48556 384.06701,977.32902 M 263,900 C 248.89981,899.74087 237.98412,913.26531 238.00314,927.32412 L 238.07013,976.82902"
+       id="path11346"
+       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
+       sodipodi:nodetypes="cccccc"
+       inkstitch:satin_column="True"
+       inkstitch:reverse_rails="none"
+       inkstitch:center_walk_underlay="True"
+       inkstitch:contour_underlay="True"
+       inkstitch:ties="1" />
+    <path
+       d="M 181.99554,1000.9875 383.5,1001.4875 M 182,976.32903 384.06701,977.32902"
+       id="path2639"
+       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
+       sodipodi:nodetypes="cccc"
+       inkstitch:satin_column="True"
+       inkstitch:zigzag_spacing_mm="0.6"
+       inkstitch:reverse_rails="none"
+       inkstitch:center_walk_underlay="True"
+       inkstitch:contour_underlay="False"
+       inkstitch:contour_underlay_inset_mm="0.0"
+       inkstitch:ties="3"
+       inkstitch:e_stitch="True" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -3757,29 +3775,18 @@ Created by Adegoke Adebowale
      id="g1356"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
-       d="M 437,1000 V 989.625 979.25 945.57692 L 437.5,920.5 M 316,1000 C 309.33333,1000 303.66667,997.5 299,992.5 294.33333,987.5 292,981.66667 292,975 L 291.5,946.5 351.00008,921.00167"
-       id="path1354"
+       d="M 30,643 37,668 V 921 C 40.673535,936.61575 46.389283,941.92528 62,946 M 182,643 V 668.125 L 182.84615,921 111.59397,947"
+       id="path10542"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cscccccc"
+       sodipodi:nodetypes="cccccccc"
        inkstitch:satin_column="True"
-       inkscape:label="path1354b"
+       inkscape:label="path1737a"
        inkstitch:reverse_rails="none"
        inkstitch:ties="1"
        inkstitch:center_walk_underlay="True"
        inkstitch:contour_underlay="True" />
     <path
-       d="M 292,643 V 657.75 672.5 L 291.00008,921.00167 M 412,643 C 418.66667,643 424.5,645.5 429.5,650.5 434.5,655.5 437,661.33333 437,668 L 437.5,920.5"
-       id="path776"
-       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccccscc"
-       inkstitch:satin_column="True"
-       inkscape:label="path1354a"
-       inkstitch:reverse_rails="none"
-       inkstitch:ties="3"
-       inkstitch:contour_underlay="True"
-       inkstitch:center_walk_underlay="True" />
-    <path
-       d="M 291.5,946.5 111.59397,947 M 351.00008,921.00167 182.84615,921"
+       d="M 111.59397,947 291.5,946.5 M 182.84615,921 351.00008,921.00167"
        id="path1737"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
        sodipodi:nodetypes="cccc"
@@ -3792,12 +3799,23 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay="True"
        inkstitch:contour_underlay_inset_mm="0.3" />
     <path
-       d="M 62,946 C 46.389283,941.92528 40.673535,936.61575 37,921 V 668 L 30,643 M 111.59397,947 182.84615,921 182,668.125 V 643"
-       id="path10542"
+       d="M 292,643 V 657.75 672.5 L 291.00008,921.00167 M 412,643 C 418.66667,643 424.5,645.5 429.5,650.5 434.5,655.5 437,661.33333 437,668 L 437.5,920.5"
+       id="path776"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccccccc"
+       sodipodi:nodetypes="cccccscc"
        inkstitch:satin_column="True"
-       inkscape:label="path1737a"
+       inkscape:label="path1354a"
+       inkstitch:reverse_rails="none"
+       inkstitch:ties="3"
+       inkstitch:contour_underlay="True"
+       inkstitch:center_walk_underlay="True" />
+    <path
+       d="M 437.5,920.5 437,945.57692 V 979.25 989.625 1000 M 351.00008,921.00167 291.5,946.5 292,975 C 292,981.66667 294.33333,987.5 299,992.5 303.66667,997.5 309.33333,1000 316,1000"
+       id="path1354"
+       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
+       sodipodi:nodetypes="cccscccccc"
+       inkstitch:satin_column="True"
+       inkscape:label="path1354b"
        inkstitch:reverse_rails="none"
        inkstitch:ties="2"
        inkstitch:center_walk_underlay="True"
@@ -3810,21 +3828,6 @@ Created by Adegoke Adebowale
      id="g1360"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
-       d="M 402,643 C 408.66667,643 414,645.5 418,650.5 422,655.5 423.66667,661.33333 423,668 L 380,975 M 281,643 279.53125,653.46875 278.0625,663.9375 236.65165,974.5"
-       id="path1000"
-       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="csccccsc"
-       inkstitch:satin_column="True"
-       inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True"
-       inkstitch:center_walk_underlay="True"
-       inkstitch:ties="1" />
-    <path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.982677;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.982677, 0.982677;stroke-dashoffset:0;stroke-opacity:1"
-       d="M 292.375,987.5 H 155.625"
-       id="path13499"
-       sodipodi:nodetypes="cc" />
-    <path
        d="M 172,643 173.46875,653.46875 174.9375,663.9375 219,975 M 52,643 C 44.666667,643 39,645.5 35,650.5 31,655.5 29.333333,661.33333 30,668 L 73,975"
        id="path1358"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
@@ -3833,12 +3836,27 @@ Created by Adegoke Adebowale
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay="True"
        inkstitch:contour_underlay="True"
+       inkstitch:ties="1" />
+    <path
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.982677;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.982677, 0.982677;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 155.625,987.5 H 292.375"
+       id="path13499"
+       sodipodi:nodetypes="cc" />
+    <path
+       d="M 402,643 C 408.66667,643 414,645.5 418,650.5 422,655.5 423.66667,661.33333 423,668 L 380,975 M 281,643 279.53125,653.46875 278.0625,663.9375 236.65165,974.5"
+       id="path1000"
+       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
+       sodipodi:nodetypes="csccccsc"
+       inkstitch:satin_column="True"
+       inkstitch:reverse_rails="none"
+       inkstitch:contour_underlay="True"
+       inkstitch:center_walk_underlay="True"
        inkstitch:ties="3" />
     <path
        id="path37939"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.990145;stroke-opacity:1"
-       d="M 366.90939,991.58899 C 366.90939,991.58899 359.82442,1000.0049 348.51,1000.0049 H 219.15 104.49 C 90.857804,998.07403 86.322207,991.78664 86.322207,991.78664 M 376.93,974.99507 H 360.515 219.15 92.485 76.07"
-       sodipodi:nodetypes="cscccccccc"
+       d="M 86.322207,991.78664 C 86.322207,991.78664 90.857804,998.07403 104.49,1000.0049 H 219.15 348.51 C 359.82442,1000.0049 366.90939,991.58899 366.90939,991.58899 M 76.07,974.99507 H 92.485 219.15 360.515 376.93"
+       sodipodi:nodetypes="cccscccccc"
        inkstitch:satin_column="True"
        inkstitch:e_stitch="True"
        inkstitch:ties="2"
@@ -3851,19 +3869,20 @@ Created by Adegoke Adebowale
      id="g1364"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
-       d="M 548,643 C 554.66667,643 560.33333,645.33333 565,650 569.66667,654.66667 571.66667,660.66667 571,668 L 543.8125,979.25 M 428,643 426.125,663.9375 424.25,684.875 397.11612,979.25"
-       id="path1362"
+       d="M 53,643 C 46.333333,643 40.666667,645.33333 36,650 31.333333,654.66667 29.333333,660.66667 30,668 L 57.1875,979.25 M 173,643 174.8125,663.9375 176.625,684.875 202.88388,979.29512"
+       id="path9285"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="ccccsccc"
+       sodipodi:nodetypes="ccsccccc"
        inkstitch:satin_column="True"
        inkstitch:reverse_rails="none"
        inkstitch:ties="1"
-       inkstitch:contour_underlay="True"
-       inkstitch:center_walk_underlay="True" />
+       inkstitch:center_walk_underlay="True"
+       inkstitch:contour_underlay="True" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.982677;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.982677, 0.982677;stroke-dashoffset:0;stroke-opacity:1"
-       d="M 468.09074,991.08965 H 331.84075"
-       id="path11395" />
+       d="M 114.61124,988.438 H 262.57298"
+       id="path11397"
+       sodipodi:nodetypes="cc" />
     <path
        d="M 373,643 V 726.75 810.5 894.25 L 372.99249,979.25 M 228,643 V 726.75 810.5 894.25 L 227.72541,979.29351"
        id="path34130"
@@ -3876,20 +3895,21 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay="True" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.982677;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.982677, 0.982677;stroke-dashoffset:0;stroke-opacity:1"
-       d="M 264.34075,991.08965 H 116.37901"
-       id="path11397" />
+       d="M 330.07298,988.438 H 466.32297"
+       id="path11395"
+       sodipodi:nodetypes="cc" />
     <path
-       d="M 53,643 C 46.333333,643 40.666667,645.33333 36,650 31.333333,654.66667 29.333333,660.66667 30,668 L 57.1875,979.25 M 173,643 174.8125,663.9375 176.625,684.875 202.88388,979.29512"
-       id="path9285"
+       d="M 548,643 C 554.66667,643 560.33333,645.33333 565,650 569.66667,654.66667 571.66667,660.66667 571,668 L 543.8125,979.25 M 428,643 426.125,663.9375 424.25,684.875 397.11612,979.25"
+       id="path1362"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="ccsccccc"
+       sodipodi:nodetypes="ccccsccc"
        inkstitch:satin_column="True"
        inkstitch:reverse_rails="none"
-       inkstitch:ties="3"
-       inkstitch:center_walk_underlay="True"
-       inkstitch:contour_underlay="True" />
+       inkstitch:ties="1"
+       inkstitch:contour_underlay="True"
+       inkstitch:center_walk_underlay="True" />
     <path
-       d="M 532.03043,1002.9369 67.69775,1002.4366 M 536.26981,979.24234 H 64.730188"
+       d="M 67.69775,1002.4366 532.03043,1002.9369 M 64.730188,979.24234 H 536.26981"
        id="path28839"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.984696;stroke-opacity:1"
        sodipodi:nodetypes="cccc"
@@ -3910,37 +3930,16 @@ Created by Adegoke Adebowale
      id="g1368"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
-       d="M 444,643 439.5,655.5 435,668 C 431.66667,703.33333 427.99683,746.03192 423,796 423.01913,801.19732 420.97553,805.64338 419.0334,809.56189 M 314,643 C 307.33333,643 301.83333,645.16667 297.5,649.5 293.16667,653.83333 290.66667,659 290,665 L 278.625,791.875 277,810"
-       id="path7888"
+       d="M 159,643 C 165.66667,643 171.33333,645.16667 176,649.5 180.66667,653.83333 183.33333,659 184,665 L 195.375,791.875 197,810 177,821 157,832 M 30,643 34.5,655.5 39,668 50,796 C 51.333333,803.33333 57.62844,811.36727 60,814 66.671991,821.40675 78,821 78,821 70.451735,823.74723 63.884201,827.73129 57.5,832.5"
+       id="path7510"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccccccczc"
+       sodipodi:nodetypes="cscccccccscccc"
        inkstitch:satin_column="True"
+       inkscape:label="path7510"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay="True"
        inkstitch:contour_underlay="True"
-       inkstitch:ties="2" />
-    <path
-       d="M 314,1000 C 306.66666,1000 301,998.08333 297,994.25 293,990.41666 290.66666,984.66666 290,977 L 278.625,850.125 277,832 297,821 317,810 M 444,1000 439.5,987.5 435,975 423,846 C 422.33333,839.33333 419.51294,832.64203 414,828.5 408.48706,824.35797 396,821 396,821 405.96463,819.8459 412.24795,816.60013 419.0334,809.56189"
-       id="path1366"
-       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="csccsccccccccc"
-       inkstitch:satin_column="True"
-       inkstitch:reverse_rails="none"
-       inkstitch:center_walk_underlay="True"
-       inkstitch:contour_underlay="True"
-       inkstitch:ties="3" />
-    <path
-       d="M 317,810 H 197 M 277,832 H 157"
-       id="path8262"
-       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccc"
-       inkstitch:satin_column="True"
-       inkstitch:zigzag_spacing_mm="0.6"
-       inkstitch:reverse_rails="none"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="True"
-       inkstitch:contour_underlay_inset_mm="0.4"
-       inkstitch:ties="3" />
+       inkstitch:ties="1" />
     <path
        d="M 30,1000 34.5,987.5 39,975 50,846 C 51.333333,839.33333 55.234076,835.36822 57.5,832.5 M 159,1000 C 165.66667,1000 171.33333,997.83333 176,993.5 180.66667,989.16667 183.33333,983.66667 184,977 L 195.375,850.125 197,832"
        id="path8264"
@@ -3953,12 +3952,33 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay="True"
        inkstitch:ties="3" />
     <path
-       d="M 157,832 177,821 197,810 195.375,791.875 184,665 C 183.33333,659 180.66667,653.83333 176,649.5 171.33333,645.16667 165.66667,643 159,643 M 57.5,832.5 C 63.884201,827.73129 70.451735,823.74723 78,821 78,821 66.671991,821.40675 60,814 57.62844,811.36727 51.333333,803.33333 50,796 L 39,668 34.5,655.5 30,643"
-       id="path7510"
+       d="M 197,810 H 317 M 157,832 H 277"
+       id="path8262"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccccscccccscc"
+       sodipodi:nodetypes="cccc"
        inkstitch:satin_column="True"
-       inkscape:label="path7510"
+       inkstitch:zigzag_spacing_mm="0.6"
+       inkstitch:reverse_rails="none"
+       inkstitch:center_walk_underlay="False"
+       inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.4"
+       inkstitch:ties="3" />
+    <path
+       d="M 444,643 439.5,655.5 435,668 C 431.66667,703.33333 427.99683,746.03192 423,796 423.01913,801.19732 420.97553,805.64338 419.0334,809.56189 M 314,643 C 307.33333,643 301.83333,645.16667 297.5,649.5 293.16667,653.83333 290.66667,659 290,665 L 278.625,791.875 277,810"
+       id="path7888"
+       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
+       sodipodi:nodetypes="cccccccczc"
+       inkstitch:satin_column="True"
+       inkstitch:reverse_rails="none"
+       inkstitch:center_walk_underlay="True"
+       inkstitch:contour_underlay="True"
+       inkstitch:ties="3" />
+    <path
+       d="M 317,810 297,821 277,832 278.625,850.125 290,977 C 290.66666,984.66666 293,990.41666 297,994.25 301,998.08333 306.66666,1000 314,1000 M 419.0334,809.56189 C 412.24795,816.60013 405.96463,819.8459 396,821 396,821 408.48706,824.35797 414,828.5 419.51294,832.64203 422.33333,839.33333 423,846 L 435,975 439.5,987.5 444,1000"
+       id="path1366"
+       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
+       sodipodi:nodetypes="ccsccscccccccc"
+       inkstitch:satin_column="True"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay="True"
        inkstitch:contour_underlay="True"
@@ -4048,48 +4068,13 @@ Created by Adegoke Adebowale
      id="g1376"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
-       d="M 486,900 486.00245,912.83502 486.0049,925.67005 486.00195,967.25 M 366,900 C 359.33333,900 352.61612,900.9532 347.61612,905.9532 342.61612,910.9532 340.11612,914.7978 340.11612,921.46447 L 340.07517,967.7269"
-       id="path8640"
-       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccccscc"
-       inkstitch:satin_column="True"
-       inkstitch:reverse_rails="none"
-       inkstitch:center_walk_underlay="True"
-       inkstitch:contour_underlay="True"
-       inkstitch:ties="1" />
-    <path
-       d="M 486,1000 H 305.71607 M 486.00195,967.25 305.71875,968.3125"
-       id="path8643"
-       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccc"
-       inkstitch:satin_column="True"
-       inkstitch:reverse_rails="none"
-       inkstitch:center_walk_underlay="True"
-       inkstitch:contour_underlay="False"
-       inkstitch:ties="3"
-       inkstitch:e_stitch="True" />
-    <path
-       d="M 184,1000 C 166.84929,994.59753 161.36682,988.77361 160,971 L 215.19664,667.21875 215.20723,643 M 305.71607,1000 305.71875,968.3125 359,668 C 357.37186,652.14223 353.35231,646.62056 338,643"
-       id="path610"
-       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       sodipodi:nodetypes="cccccccc"
-       inkstitch:satin_column="True"
-       inkstitch:reverse_rails="none"
-       inkstitch:center_walk_underlay="True"
-       inkstitch:contour_underlay="True"
-       inkstitch:ties="3" />
-    <path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.982677;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.982677, 0.982677;stroke-dashoffset:0;stroke-opacity:1"
-       d="M 215.20194,655.10937 85.903265,655.07315"
-       id="path4549" />
-    <path
        d="M 150,742 C 156.66667,742 162.5,739.66667 167.5,735 172.5,730.33333 175.625,724.95833 175.625,717.625 L 175.62316,667.14627 M 30,742 29.998324,730.92124 29.996648,719.84248 29.99908,667.63292"
        id="path8638"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
        sodipodi:nodetypes="cccccccc"
        inkstitch:satin_column="True"
        inkstitch:reverse_rails="none"
-       inkstitch:ties="3"
+       inkstitch:ties="1"
        inkstitch:center_walk_underlay="True"
        inkstitch:contour_underlay="True"
        inkstitch:zigzag_underlay="False" />
@@ -4100,10 +4085,48 @@ Created by Adegoke Adebowale
        sodipodi:nodetypes="cccc"
        inkstitch:satin_column="True"
        inkstitch:reverse_rails="none"
-       inkstitch:ties="2"
+       inkstitch:ties="3"
        inkstitch:center_walk_underlay="True"
        inkstitch:contour_underlay="False"
        inkstitch:zigzag_underlay="False"
+       inkstitch:e_stitch="True" />
+    <path
+       d="M 215.20723,643 215.19664,667.21875 160,971 C 161.36682,988.77361 166.84929,994.59753 184,1000 M 338,643 C 353.35231,646.62056 357.37186,652.14223 359,668 L 305.71875,968.3125 305.71607,1000"
+       id="path610"
+       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
+       sodipodi:nodetypes="cccccccc"
+       inkstitch:satin_column="True"
+       inkstitch:reverse_rails="none"
+       inkstitch:center_walk_underlay="True"
+       inkstitch:contour_underlay="True"
+       inkstitch:ties="3"
+       inkscape:label="path610" />
+    <path
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.982677;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.982677, 0.982677;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 304.65325,983.60681 433.95192,983.64303"
+       id="path4549"
+       inkscape:label="path4549"
+       sodipodi:nodetypes="cc" />
+    <path
+       d="M 486,900 486.00245,912.83502 486.0049,925.67005 486.00195,967.25 M 366,900 C 359.33333,900 352.61612,900.9532 347.61612,905.9532 342.61612,910.9532 340.11612,914.7978 340.11612,921.46447 L 340.07517,967.7269"
+       id="path8640"
+       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
+       sodipodi:nodetypes="cccccscc"
+       inkstitch:satin_column="True"
+       inkstitch:reverse_rails="none"
+       inkstitch:center_walk_underlay="True"
+       inkstitch:contour_underlay="True"
+       inkstitch:ties="3" />
+    <path
+       d="M 486,1000 H 305.71607 M 486.00195,967.25 305.71875,968.3125"
+       id="path8643"
+       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
+       sodipodi:nodetypes="cccc"
+       inkstitch:satin_column="True"
+       inkstitch:reverse_rails="none"
+       inkstitch:center_walk_underlay="True"
+       inkstitch:contour_underlay="False"
+       inkstitch:ties="2"
        inkstitch:e_stitch="True" />
   </g>
 </svg>
