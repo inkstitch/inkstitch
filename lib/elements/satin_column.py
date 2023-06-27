@@ -909,7 +909,7 @@ class SatinColumn(EmbroideryElement):
             # Base the number of stitches in each section on the _longer_ of
             # the two sections. Otherwise, things could get too sparse when one
             # side is significantly longer (e.g. when going around a corner).
-            num_points = max(path0.length, path1.length) / spacing
+            num_points = max(path0.length, path1.length, 0.01) / spacing
 
             # Section stitch spacing and the cursor are expressed as a fraction
             # of the total length of the path, because we use normalized=True
@@ -967,7 +967,7 @@ class SatinColumn(EmbroideryElement):
                 # more than 5%.
                 if iterations <= 2:
                     distance = self._stitch_distance(pos0, pos1, old_pos0, old_pos1)
-                    if abs((current_spacing - distance) / current_spacing) > 0.05:
+                    if distance > 0.01 and abs((current_spacing - distance) / current_spacing) > 0.05:
                         # We'll revise to_travel then go back to the start of
                         # the loop and try again.
                         to_travel = (current_spacing / distance) * to_travel
@@ -1296,6 +1296,6 @@ class SatinProcessor:
         if self.use_random:
             roll = prng.uniform_floats(self.seed, self.cycle)
             self.cycle += 1
-            return 1.0 + ((roll[0] - 0.5) * 2) * self.random_zigzag_spacing
+            return max(1.0 + ((roll[0] - 0.5) * 2) * self.random_zigzag_spacing, 0.01)
         else:
             return 1.0
