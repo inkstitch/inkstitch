@@ -63,7 +63,12 @@ class AutoSatin(CommandsExtension):
         starting_point = self.get_starting_point()
         ending_point = self.get_ending_point()
 
-        # Ignore fills
-        elements = [element for element in self.elements if isinstance(element, SatinColumn) or isinstance(element, Stroke)]
+        # Ignore fills and zero length satins
+        elements = [element for element in self.elements if (isinstance(element, SatinColumn) and element.center_line.length != 0) or
+                    isinstance(element, Stroke)]
+
+        # at this point we possibly removed all the elements, in this case stop here
+        if not elements:
+            return
 
         auto_satin(elements, self.options.preserve_order, starting_point, ending_point, self.options.trim)

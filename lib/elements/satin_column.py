@@ -830,6 +830,8 @@ class SatinColumn(EmbroideryElement):
     def center_line(self):
         # similar technique to do_center_walk()
         center_walk = [p[0] for p in self.plot_points_on_rails(self.zigzag_spacing, (0, 0), (-0.5, -0.5))]
+        if len(center_walk) < 2:
+            center_walk = [center_walk[0], center_walk[0]]
         return shgeo.LineString(center_walk)
 
     def offset_points(self, pos1, pos2, offset_px, offset_proportional):
