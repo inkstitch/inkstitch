@@ -104,7 +104,7 @@ class FillToStroke(InkstitchExtension):
                 pass
         # remove empty groups
         for parent in set(parents):
-            if not parent.getchildren():
+            if parent is not None and not parent.getchildren():
                 parent.getparent().remove(parent)
 
     def _get_high_res_polygon(self, polygon):
