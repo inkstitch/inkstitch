@@ -137,6 +137,11 @@ If you see something like in the image below, you most likely chose the wrong pa
 
 ![Zigzag Line wrong pattern](/assets/images/docs/zigzag-line-to-satin-wrong-pattern.png)
 
+### Sharp edges with smoothed option on
+
+When you are using the smooth option it is still possible to quickly produce sharper edges (please be reasonable in terms of the satin column rules).
+
+Sharp edges are indicated by two points that are close together.
 
 ## Tutorials using Tools: Satin
 
