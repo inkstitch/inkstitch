@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-06-13 01:26+0000\n"
-"PO-Revision-Date: 2023-06-16 03:43\n"
+"POT-Creation-Date: 2023-06-24 01:39+0000\n"
+"PO-Revision-Date: 2023-06-29 16:28\n"
 "Last-Translator: \n"
 "Language-Team: Korean\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-13 01:26+0000\n"
+"POT-Creation-Date: 2023-06-24 01:39+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1047,7 +1047,7 @@ msgstr ""
 msgid "Jump destination for Stop commands (a.k.a. \"Frame Out position\")."
 msgstr ""
 
-#: lib/commands.py:223
+#: lib/commands.py:227
 #, python-format
 msgid "Error: there is more than one %(command)s command in the document, but there can only be one.  Please remove all but one."
 msgstr ""
@@ -1057,26 +1057,26 @@ msgstr ""
 #. command name to them.  Contents of %(description)s are in a separate
 #. translation
 #. string.
-#: lib/commands.py:230
+#: lib/commands.py:234
 #, python-format
 msgid "%(command)s: %(description)s"
 msgstr ""
 
-#: lib/commands.py:295 lib/commands.py:430
+#: lib/commands.py:299 lib/commands.py:434
 msgid "Ink/Stitch Command"
 msgstr ""
 
 #. : the name of the line that connects a command to the object it applies to
-#: lib/commands.py:320
+#: lib/commands.py:324
 msgid "connector"
 msgstr ""
 
 #. : the name of a command symbol (example: scissors icon for trim command)
-#: lib/commands.py:339
+#: lib/commands.py:343
 msgid "command marker"
 msgstr ""
 
-#: lib/commands.py:420
+#: lib/commands.py:424
 msgid "Please select a layer to include layer commands."
 msgstr ""
 

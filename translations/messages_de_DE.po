@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-06-13 01:26+0000\n"
-"PO-Revision-Date: 2023-06-16 03:43\n"
+"POT-Creation-Date: 2023-06-24 01:39+0000\n"
+"PO-Revision-Date: 2023-06-29 16:28\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-13 01:26+0000\n"
+"POT-Creation-Date: 2023-06-24 01:39+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1050,7 +1050,7 @@ msgstr "Nullpunkt für exportierte Stickdateien"
 msgid "Jump destination for Stop commands (a.k.a. \"Frame Out position\")."
 msgstr "Rahmenposition nach Stop-Befehlen."
 
-#: lib/commands.py:223
+#: lib/commands.py:227
 #, python-format
 msgid "Error: there is more than one %(command)s command in the document, but there can only be one.  Please remove all but one."
 msgstr "Fehler: Es gibt mehr als einen %(command)s-Befehl in dem Dokument, aber es darf nur einen geben. Bitte alle bis auf einen entfernen."
@@ -1060,26 +1060,26 @@ msgstr "Fehler: Es gibt mehr als einen %(command)s-Befehl in dem Dokument, aber 
 #. command name to them.  Contents of %(description)s are in a separate
 #. translation
 #. string.
-#: lib/commands.py:230
+#: lib/commands.py:234
 #, python-format
 msgid "%(command)s: %(description)s"
 msgstr "%(command)s: %(description)s"
 
-#: lib/commands.py:295 lib/commands.py:430
+#: lib/commands.py:299 lib/commands.py:434
 msgid "Ink/Stitch Command"
 msgstr "Ink/Stitch Befehl"
 
 #. : the name of the line that connects a command to the object it applies to
-#: lib/commands.py:320
+#: lib/commands.py:324
 msgid "connector"
 msgstr "Verknüpfung"
 
 #. : the name of a command symbol (example: scissors icon for trim command)
-#: lib/commands.py:339
+#: lib/commands.py:343
 msgid "command marker"
 msgstr "Befehlszeichen"
 
-#: lib/commands.py:420
+#: lib/commands.py:424
 msgid "Please select a layer to include layer commands."
 msgstr "Für Befehle, die sich auf eine Ebene beziehen, bitte eine Ebene auswählen."
 
@@ -5523,72 +5523,72 @@ msgstr "Objekte in Auswahlreihenfolge sortieren"
 
 #: inx/inkstitch_select_elements.inx:3
 msgid "Select embroidery elements"
-msgstr ""
+msgstr "Stickobjekte auswählen"
 
 #: inx/inkstitch_select_elements.inx:8
 msgid "Select options"
-msgstr ""
+msgstr "Optionen auswählen"
 
 #: inx/inkstitch_select_elements.inx:9
 msgid "Select Stitch Type"
-msgstr ""
+msgstr "Stichart auswählen"
 
 #: inx/inkstitch_select_elements.inx:13
 msgid "Running Stitch"
-msgstr ""
+msgstr "Geradstich"
 
 #: inx/inkstitch_select_elements.inx:15
 msgid "Type"
-msgstr ""
+msgstr "Art"
 
 #: inx/inkstitch_select_elements.inx:15
 msgid "Select only specific running stitches"
-msgstr ""
+msgstr "Auswahl beschränken"
 
 #: inx/inkstitch_select_elements.inx:16 inx/inkstitch_select_elements.inx:34
 #: inx/inkstitch_select_elements.inx:54
 msgid "No restriction"
-msgstr ""
+msgstr "Keine Einschränkung"
 
 #: inx/inkstitch_select_elements.inx:17
 msgid "Auto-Run Top Stitching"
-msgstr ""
+msgstr "Auto-Geradstich"
 
 #: inx/inkstitch_select_elements.inx:18
 msgid "Auto-Run Underpath"
-msgstr ""
+msgstr "Auto-Geradstich Verbindung"
 
 #: inx/inkstitch_select_elements.inx:20
 msgid "Ripples"
-msgstr ""
+msgstr "Ripplestich"
 
 #: inx/inkstitch_select_elements.inx:23
 msgid "Polyline"
-msgstr ""
+msgstr "Polyline"
 
 #: inx/inkstitch_select_elements.inx:29
 msgid "Satin"
-msgstr ""
+msgstr "Satin"
 
 #: inx/inkstitch_select_elements.inx:31
 msgid "E-Stitch"
-msgstr ""
+msgstr "E-Stich"
 
 #: inx/inkstitch_select_elements.inx:33
 msgid "Only select satins with this underlay type"
-msgstr ""
+msgstr "Unterlage"
 
 #: inx/inkstitch_select_elements.inx:35
 msgid "No underlay"
-msgstr ""
+msgstr "Keine Unterlage"
 
 #: inx/inkstitch_select_elements.inx:36
 msgid "Centerwalk"
-msgstr ""
+msgstr "Mittellinie"
 
 #: inx/inkstitch_select_elements.inx:37
 msgid "Contour"
-msgstr ""
+msgstr "Kontur"
 
 #: inx/inkstitch_select_elements.inx:38
 #: inx/inkstitch_zigzag_line_to_satin.inx:12
@@ -5597,47 +5597,47 @@ msgstr "Zickzack"
 
 #: inx/inkstitch_select_elements.inx:45 inx/inkstitch_select_elements.inx:46
 msgid "Fill"
-msgstr ""
+msgstr "Füllung"
 
 #: inx/inkstitch_select_elements.inx:53
 msgid "Only select fills with this underlay"
-msgstr ""
+msgstr "Unterlage"
 
 #: inx/inkstitch_select_elements.inx:56
 msgid "No Underlay"
-msgstr ""
+msgstr "Keine Unterlage"
 
 #: inx/inkstitch_select_elements.inx:70
 msgid "Select embroidery objects"
-msgstr ""
+msgstr "Stickobjekte auswählen"
 
 #: inx/inkstitch_select_elements.inx:72
 msgid "Selects specific embroidery elements by stitch type."
-msgstr ""
+msgstr "Stickobjekte nach Stichart auswählen."
 
 #: inx/inkstitch_select_elements.inx:73
 msgid "If there is already an active selection, non maching elements will be deselected."
-msgstr ""
+msgstr "Gibt es bereits eine aktive Auswahl, werden Elemente die den Suchkriterien nicht entsprechen, von der Auswahl entfernt."
 
 #: inx/inkstitch_select_elements.inx:79
 msgid "If this isn't working for you, you may need to insert your path to a python executable manualy."
-msgstr ""
+msgstr "Funktioniert diese Erweiterung nicht, kann es nötig sein den Pfad zu Python manuell festzulegen."
 
 #: inx/inkstitch_select_elements.inx:81
 msgid "* Windows: Open the \"Command Prompt\" and type \"where python\". Copy the path and paste it here."
-msgstr ""
+msgstr "* Windows: Öffne die Eingabeaufforderung und schreibe \"where python\". Kopiere den Pfad und füge ihn hier ein."
 
 #: inx/inkstitch_select_elements.inx:82
 msgid "* Linux: Open the command line and type \"which python3\". Copy the path and paste it here."
-msgstr ""
+msgstr "* Linux: öffne ein Terminal und schreibe \"which python3\". Kopiere den Pfad und füge ihn hier ein."
 
 #: inx/inkstitch_select_elements.inx:83
 msgid "* macOS: doesn't work, sorry"
-msgstr ""
+msgstr "* macOS: nicht funktionsfähig, sorry"
 
 #: inx/inkstitch_select_elements.inx:84
 msgid "Python Path"
-msgstr ""
+msgstr "Python Pfad"
 
 #: inx/inkstitch_selection_to_guide_line.inx:3
 msgid "Selection to guide line"
