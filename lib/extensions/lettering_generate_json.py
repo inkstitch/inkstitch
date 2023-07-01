@@ -10,7 +10,7 @@ import sys
 from inkex import Boolean
 
 from ..i18n import _
-from ..lettering.kerning import FontKerning
+from ..lettering.font_info import FontFileInfo
 from .base import InkstitchExtension
 
 
@@ -43,26 +43,28 @@ class LetteringGenerateJson(InkstitchExtension):
             return
         output_path = os.path.join(os.path.dirname(path), 'font.json')
 
-        # kerning
-        kerning = FontKerning(path)
+        # font info (kerning, glyphs)
+        font_info = FontFileInfo(path)
 
-        horiz_adv_x = kerning.horiz_adv_x()
-        hkern = kerning.hkern()
+        horiz_adv_x = font_info.horiz_adv_x()
+        hkern = font_info.hkern()
         custom_leading = self.options.use_custom_leading
         custom_spacing = self.options.use_custom_spacing
-        word_spacing = kerning.word_spacing()
+        word_spacing = font_info.word_spacing()
         # use user input in case that the default word spacing is not defined
         # in the svg file or the user forces custom values
         if custom_spacing or not word_spacing:
             word_spacing = self.options.word_spacing
-        letter_spacing = kerning.letter_spacing()
-        units_per_em = kerning.units_per_em() or self.options.leading
+        letter_spacing = font_info.letter_spacing()
+        units_per_em = font_info.units_per_em() or self.options.leading
         # use units_per_em for leading (line height) if defined in the font file,
         # unless the user wishes to overwrite the value
         if units_per_em and not custom_leading:
             leading = units_per_em
         else:
             leading = self.options.leading
+
+        glyphs = font_info.glyph_list()
 
         # collect data
         data = {'name': self.options.font_name,
@@ -79,7 +81,8 @@ class LetteringGenerateJson(InkstitchExtension):
                 'horiz_adv_x_space': word_spacing,
                 'units_per_em': units_per_em,
                 'horiz_adv_x': horiz_adv_x,
-                'kerning_pairs': hkern
+                'kerning_pairs': hkern,
+                'glyphs': glyphs
                 }
 
         # write data to font.json into the same directory as the font file

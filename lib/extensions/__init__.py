@@ -32,6 +32,7 @@ from .lettering_custom_font_dir import LetteringCustomFontDir
 from .lettering_force_lock_stitches import LetteringForceLockStitches
 from .lettering_generate_json import LetteringGenerateJson
 from .lettering_remove_kerning import LetteringRemoveKerning
+from .lettering_update_json_glyphlist import LetteringUpdateJsonGlyphlist
 from .letters_to_font import LettersToFont
 from .object_commands import ObjectCommands
 from .object_commands_toggle_visibility import ObjectCommandsToggleVisibility
@@ -84,6 +85,7 @@ __all__ = extensions = [StitchPlanPreview,
                         AutoRun,
                         Lettering,
                         LetteringGenerateJson,
+                        LetteringUpdateJsonGlyphlist,
                         LetteringRemoveKerning,
                         LetteringCustomFontDir,
                         LetteringForceLockStitches,
