@@ -14,17 +14,6 @@ sidebar:
 
 <p><a href="/de/docs/install/" class="btn btn--primary btn--large">Ink/Stitch installieren</a></p>
 
-<h2>Nutzer-Kommentare</h2>
-<blockquote>
-<p>Seit Beginn diesen Jahres [2019] benutze ich ausschließlich Ink/Stitch für meine freiberuflichen Digitalisierungsarbeiten. Das ermöglicht es mir endlich meine virtuelle Windowsumgebung nur noch aus nostalgischen Gründen zu nutzen und nicht aus der Notwendigkeit heraus, meine tägliche Arbeit zu verrichten.</p>
-<p><strong>wwderw</strong></p>
-</blockquote>
-<blockquote>
-<p>Nach dem Maschinenkauf begann ich mit wenig Geld mit den Stickarbeiten-- es war toll eine freie Software mit einem solchen Funktionsumfang zu finden. Danke dir für die Erstellung dieser wunderbaren Software!!</p>
-<p><strong>HoneyPhantomhive</strong></p>
-</blockquote>
-
-
 <h2>Neuigkeiten</h2>
 {% assign posts = site.posts | where: "lang", "de"  %}
 <ul>{% for post in posts offset: 0 limit: 5 %}<li>{{ post.date  | date: "%B %-d, %Y" }}: <a href="{{ post.url }}">{{ post.title }}</a></li>{% endfor %}</ul>

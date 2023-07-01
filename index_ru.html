@@ -14,16 +14,6 @@ sidebar:
 
 <p><a href="/ru/docs/install/" class="btn btn--primary btn--large">Установка Ink/Stitch</a></p>
 
-<h2>Комментарии пользователей</h2>
-<blockquote>
-<p>Я использовал исключительно Ink/Stitch в своей фрилансовой работе по разработке схем машинной вышивки с самого начала Нового Года[2019]. Наконец-то, виртуалка с Windows стала мне нужна только, чтобы понастальгировать, а не для ежедневной работы.</p>
-<p><strong>wwderw</strong></p>
-</blockquote>
-<blockquote>
-<p>Я начал осваивать вышивку с полным отсутсвием денег, после покупки вышивальной машины-- было просто чудесно найти бесплатную программу с такими богатыми возможностямиi. Спасибо вам большое за создание этой прекрасной программы !!</p>
-<p><strong>HoneyPhantomhive</strong></p>
-</blockquote>
-
 <h2>Новости</h2>
 {% assign posts = site.posts | where: "lang", "ru"  %}
 <ul>{% for post in posts offset: 0 limit: 5 %}<li>{{ post.date  | date: "%B %-d, %Y" }}: <a href="{{ post.url }}">{{ post.title }}</a></li>{% endfor %}</ul>

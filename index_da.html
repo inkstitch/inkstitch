@@ -14,16 +14,6 @@ lang: da
 
 <p><a href="/docs/install/" class="btn btn--primary btn--large">Intallering af Ink/Stitch</a></p>
 
-<h2>User Comments</h2>
-<blockquote>
-<p>Jeg har udelukkende brugt Ink/Stitch i mit freelance digitaliseringsarbejde siden begyndelsen af det nye år [2019]. Endelig gjorde det muligt for mig kun at gå ind i mine Windows VM'er for kun nostalgi og ikke en nødvendighed for det daglige arbejde.</p>
-<p><strong>wwderw</strong></p>
-</blockquote>
-<blockquote>
-<p>Jeg begyndte at brodere med få eller ingen penge efter at have købt broderisymaskinen - det har været fantastisk at finde en gratis software med så fantastiske muligheder. Mange tak for at skabe dette vidunderlige program!!</p>
-<p><strong>HoneyPhantomhive</strong></p>
-</blockquote>
-
 <h2>News</h2>
 {% assign posts = site.posts | where: "lang", "en"  %}
 <ul>{% for post in posts offset: 0 limit: 5 %}<li>{{ post.date  | date: "%B %-d, %Y" }}: <a href="{{ post.url }}">{{ post.title }}</a></li>{% endfor %}</ul>
