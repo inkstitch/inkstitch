@@ -41,7 +41,7 @@ def node_to_elements(node, clone_to_element=False):  # noqa: C901
         if element.get_style("fill", "black") and not element.get_style('fill-opacity', 1) == "0":
             elements.append(FillStitch(node))
         if element.get_style("stroke"):
-            if element.get_boolean_param("satin_column"):
+            if element.get_boolean_param("satin_column") and len(element.path) > 1:
                 elements.append(SatinColumn(node))
             elif not is_command(element.node):
                 elements.append(Stroke(node))
