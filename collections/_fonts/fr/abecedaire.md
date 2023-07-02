@@ -15,7 +15,7 @@ preview_image:
 Cette fonte contient les 154 glyphes :
 !"@'(),012
 3456789:;=
-?@ABCDEFGH
+?&ABCDEFGH
 IJKLMNOPQR
 STUVWXYZ`a
 bcdefghijk
