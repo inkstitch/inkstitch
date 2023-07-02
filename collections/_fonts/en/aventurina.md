@@ -13,7 +13,7 @@ preview_image:
 
 Aventurina contains 142 glyphs :
 
-!"#@'()+,- ./01234567 89:;=?@ABC DEFGHIJKLM NOPQRSTUVW XYZabcdefg hijklmnopq rstuvwxyz~ ¡¿ÀÁÂÃÄÅÆÇ ÈÉÊËÌÍÎÏÑÒ ÓÔÕÖØÙÚÛÜÝ Þßàáâãäåæç èéêëìíîïñò óôõöùúûüýÿ Œœ
+!"#@'()+,- ./01234567 89:;=?&ABC DEFGHIJKLM NOPQRSTUVW XYZabcdefg hijklmnopq rstuvwxyz~ ¡¿ÀÁÂÃÄÅÆÇ ÈÉÊËÌÍÎÏÑÒ ÓÔÕÖØÙÚÛÜÝ Þßàáâãäåæç èéêëìíîïñò óôõöùúûüýÿ Œœ
 
 ## Dimensions:
 At 100%, Aventurina is approximatively  20 mm tall (3/4 inches)
