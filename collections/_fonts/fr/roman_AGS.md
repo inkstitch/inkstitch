@@ -23,7 +23,7 @@ preview_image:
 ## Glyphes
 ### Roman AGS 
 Cette fonte contient les 102 glyphes :	
-!"@'()+,-./0123456789:;?@ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzÄÆÖÜßàáâäæçèéêëîïôöùûüŒœ
+!"@'()+,-./0123456789:;?&ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzÄÆÖÜßàáâäæçèéêëîïôöùûüŒœ
 
 ### Roman AGS Bicolor
 Cette fonte contient les 31 glyphes :	
