@@ -25,7 +25,7 @@ Apex lake contains 38 glyphs:
 ### Apex Simple AGS
 Apex Simple AGS contains 124 glyphs:
 
-üûúùöõôóòñïîíìëêéèçäâáàßÜÛÚÙÖÔÓÒÏÎÍÌËÊÉÈÄÂÁÀ¿»«¡zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA@!?;:9876543210/.,)('’@"
+üûúùöõôóòñïîíìëêéèçäâáàßÜÛÚÙÖÔÓÒÏÎÍÌËÊÉÈÄÂÁÀ¿»«¡zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA&!?;:9876543210/.,)('’@"
 
 
 ## Remark
