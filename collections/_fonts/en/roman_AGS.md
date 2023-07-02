@@ -22,7 +22,7 @@ preview_image:
 ## Glyphs
 ### Roman AGS 
 This font contains 102 glyphs :	
-!"@'()+,-./0123456789:;?@ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzÄÆÖÜßàáâäæçèéêëîïôöùûüŒœ
+!"@'()+,-./0123456789:;?&ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzÄÆÖÜßàáâäæçèéêëîïôöùûüŒœ
 
 ### Roman AGS Bicolor
 This font contains 31 glyphs :		
