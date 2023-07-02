@@ -16,7 +16,7 @@ Cette fonte contient les 85 glyphes :
 	
 !"@'(’),-./
 0123456789
-:;=?@ABCDE
+:;=?&ABCDE
 FGHIJKLMNO
 PQRSTUVWXY
 Z\^_`abcde
