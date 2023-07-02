@@ -12,7 +12,7 @@ preview_image:
 ## Glyphes 
 Monicha contient les 195 glyphes :
 	
-!#%@'(’)+,-
+!#%&'(’)+,-
 ./01234567
 89:;<=>?@A
 BCDEFGHIJK
