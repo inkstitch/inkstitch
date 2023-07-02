@@ -12,7 +12,7 @@ preview_image:
 ## Glyphes
 
 Coronaviral contient 107 glyphes :	
-!"@()*,-./0123456789:;?@AÄBCDEÈFGHIJKLMNOÖPQRSTUVWXYZ\_`aäâáàbcçdeëêéèfghiïîíìjklmnñoöôóòpqrstuüûúùvwxyz|Üß
+!"&()*,-./0123456789:;?@AÄBCDEÈFGHIJKLMNOÖPQRSTUVWXYZ\_`aäâáàbcçdeëêéèfghiïîíìjklmnñoöôóòpqrstuüûúùvwxyz|Üß
 
 ## Dimensions
 Utilisée à  100%, Coronaviral  fait environ 27 mm de haut.
