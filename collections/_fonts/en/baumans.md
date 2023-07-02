@@ -14,7 +14,7 @@ preview_image:
 Baumans contains  102 glyphs:
 
 	
-@'()+,-.0123456789:;=?@ABCDEFGHIJKLMNOPQRSTUVWXYZ`abcdefghijklmnopqrstuvwxyz¨«´’»ÄÖÜßàáâäçèéêëîïôöùûüˆ
+@'()+,-.0123456789:;=?&ABCDEFGHIJKLMNOPQRSTUVWXYZ`abcdefghijklmnopqrstuvwxyz¨«´’»ÄÖÜßàáâäçèéêëîïôöùûüˆ
  
 ## Remark
 
