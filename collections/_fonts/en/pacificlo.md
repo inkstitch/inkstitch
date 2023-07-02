@@ -16,7 +16,7 @@ preview_image:
 ## Glyphs
 Pacificlo contains 120 glyphs :
 
-AÆBCDEÈFGH
+&AÆBCDEÈFGH
 IJKLMNÑOÔÖ
 ÕŒPQRSTUÜV
 WXYZaáâäàã
