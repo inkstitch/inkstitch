@@ -15,7 +15,7 @@ This font will be part of next Ink/Stitch version and is not yet available in In
 
 This font contains 106 glyphs :
 	
-!"#$%@'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ÀÁÂÃÄÅàáâãäå
+!"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ÀÁÂÃÄÅàáâãäå
 
 ## Dimensions
 
