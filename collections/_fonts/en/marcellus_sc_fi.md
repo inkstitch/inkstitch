@@ -13,7 +13,7 @@ preview_image:
 
 This font contains 109 glyphs:
 	
-!@'’(),-./0123456789:;=?@ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz¡¿ÄÆÈÖÜàáâäæçèéêëìíîïñòóôöùúûüŒœ
+!@'’(),-./0123456789:;=?&ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz¡¿ÄÆÈÖÜàáâäæçèéêëìíîïñòóôöùúûüŒœ
 
 Note that  lower cases are actually small caps.
 
