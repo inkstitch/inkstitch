@@ -18,7 +18,7 @@ Baumans contient les 102 glyphes :
 	
 @'()+,-.01
 23456789:;
-=?@ABCDEFG
+=?&ABCDEFG
 HIJKLMNOPQ
 RSTUVWXYZ`
 abcdefghij
