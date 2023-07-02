@@ -13,7 +13,7 @@ preview_image:
 
 Cette fonte contient les 43 glyphes :
 	
-!?@0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZÄÈÖÜ
+!?&0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZÄÈÖÜ
 
 
 
