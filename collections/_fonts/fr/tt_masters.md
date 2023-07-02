@@ -13,7 +13,7 @@ preview_image:
 Cette fonte contient les 109 glyphes :
 
 
-1234567890§!+"^*-:.;,|<>/\}][{€$@=()@%'AaSsDdFfGgHhJjKkLlÖöÄäQqWwEeRrTtYyUuIiOoPpZzXxCcVvBbNnMm?_‰~©«»±°®´Üü
+1234567890§!+"^*-:.;,|<>/\}][{€$@=()&%'AaSsDdFfGgHhJjKkLlÖöÄäQqWwEeRrTtYyUuIiOoPpZzXxCcVvBbNnMm?_‰~©«»±°®´Üü
 
 
 
