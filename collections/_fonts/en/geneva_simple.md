@@ -18,7 +18,7 @@ preview_image:
 ### Glyphs
 
 This font contains 102 glyphs:
-ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#<>:;,'"“”.+@%$*~-=(){}][_/\|!?�ÄÖÜäöü
+ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789&#<>:;,'"“”.+@%$*~-=(){}][_/\|!?�ÄÖÜäöü
 
 ## Sans Rounded
 
@@ -28,7 +28,7 @@ ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#<>:;,'"“”.+@
 ### Glyphes
 
 This font contains 107 glyphs:
-AÄBCDEFGHIJKLMNOÖPQRSTUÜVWXYZaâäbcdeéèfghijklmnoöpqrstuüvwxyz0123456789@<>`^|\*~}{][$%@#!?:,'"“”.;+-=()_/�
+AÄBCDEFGHIJKLMNOÖPQRSTUÜVWXYZaâäbcdeéèfghijklmnoöpqrstuüvwxyz0123456789@<>`^|\*~}{][$%&#!?:,'"“”.;+-=()_/�
 
 
 ## Dimensions
