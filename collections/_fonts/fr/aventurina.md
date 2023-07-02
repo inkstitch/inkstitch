@@ -14,7 +14,7 @@ Aventurina contient les 142 glyphes :
 
 !"#@'()+,-
 ./01234567
-89:;=?@ABC
+89:;=?&ABC
 DEFGHIJKLM
 NOPQRSTUVW
 XYZabcdefg
