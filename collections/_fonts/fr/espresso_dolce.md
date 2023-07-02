@@ -20,7 +20,7 @@ Cette fonte contient les 113 glyphes :
 
 !%@()*+,-.
 /012345678
-9:;<=>?@AB
+9:;<=>?&AB
 CDEFGHIJKL
 MNOPQRSTUV
 WXYZ[\]^_a
