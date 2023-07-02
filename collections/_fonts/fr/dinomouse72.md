@@ -16,7 +16,7 @@ Cette fonte sera dans une prochaine version d'Ink/Stitch version et n'est pas di
 
 Cette fonte contient les 106 glyphes :
 	
-!"#$%@'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ÀÁÂÃÄÅàáâãäå
+!"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ÀÁÂÃÄÅàáâãäå
 
 ## Dimensions
 
