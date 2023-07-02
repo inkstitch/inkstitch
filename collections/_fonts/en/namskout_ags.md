@@ -12,7 +12,7 @@ preview_image:
 ## Glyphs
 This font contains 43 glyphs :
 	
-!?@0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZÄÈÖÜ
+!?&0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZÄÈÖÜ
 
 
 
