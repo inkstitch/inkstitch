@@ -260,7 +260,7 @@ class LetteringFrame(wx.Frame):
             pass
 
         # Update font description
-        color = (0, 0, 0)
+        color = wx.NullColour
         description = font.description
         if len(font_variants) == 0:
             color = (255, 0, 0)
@@ -289,7 +289,7 @@ class LetteringFrame(wx.Frame):
             self.filter_box.SetForegroundColour("red")
             return
         else:
-            self.filter_box.SetForegroundColour("black")
+            self.filter_box.SetForegroundColour(wx.NullColour)
 
         filter_size = self.font_size_filter.GetValue()
         previous_font = self.font_chooser.GetValue()
