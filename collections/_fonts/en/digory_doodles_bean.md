@@ -16,7 +16,7 @@ This font contains 85 glyphs :
 	
 !"@'(’),-./
 0123456789
-:;=?@ABCDE
+:;=?&ABCDE
 FGHIJKLMNO
 PQRSTUVWXY
 Z\^_`abcde
