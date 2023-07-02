@@ -25,7 +25,7 @@ Apex Lake contient les 38 glyphes :
 ### Apex Simple AGS
 Apex Simple AGS contient les 124 glyphes:
 
-üûúùöõôóòñïîíìëêéèçäâáàßÜÛÚÙÖÔÓÒÏÎÍÌËÊÉÈÄÂÁÀ¿»«¡zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA@!?;:9876543210/.,)('’@"
+üûúùöõôóòñïîíìëêéèçäâáàßÜÛÚÙÖÔÓÒÏÎÍÌËÊÉÈÄÂÁÀ¿»«¡zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA&!?;:9876543210/.,)('’@"
 
 ## Particularités
 Apex Lake est une police de lettrines. 
