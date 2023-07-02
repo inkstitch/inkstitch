@@ -13,7 +13,7 @@ preview_image:
 
 Cette fonte contient les 103 glyphes :
 
-QqWwEeRrTtYyUuIiOoPpAaSsDdFfGgHhJjKkLlÖöÄäZzXxCcVvBbNnMmÜü|<>§!"#%@/()=?$€{[]}\,;.:-_1234567890+*`´'^@
+QqWwEeRrTtYyUuIiOoPpAaSsDdFfGgHhJjKkLlÖöÄäZzXxCcVvBbNnMmÜü|<>§!"#%&/()=?$€{[]}\,;.:-_1234567890+*`´'^@
 
 ## Dimensions
 
