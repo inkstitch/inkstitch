@@ -172,8 +172,11 @@ class LetteringFrame(wx.Frame):
         self.fonts = {}
         self.fonts_by_id = {}
 
+        # font size filter value
         filter_size = self.font_size_filter.GetValue()
-        filter_glyph = [*self.font_glyph_filter.GetValue()]
+        # glyph filter string without spaces
+        filter_glyph = [*self.font_glyph_filter.GetValue().replace(" ", "")]
+
         for font in self.font_list:
             if filter_size != 0 and (filter_size < font.size * font.min_scale or filter_size > font.size * font.max_scale):
                 continue
