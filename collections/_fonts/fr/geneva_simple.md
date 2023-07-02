@@ -19,7 +19,7 @@ preview_image:
 ### Glyphes
 
 Cette fonte contient les 102 glyphes :
-ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#<>:;,'"“”.+@%$*~-=(){}][_/\|!?�ÄÖÜäöü
+ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789&#<>:;,'"“”.+@%$*~-=(){}][_/\|!?�ÄÖÜäöü
 
 ## Sans Rounded
 
@@ -30,7 +30,7 @@ ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#<>:;,'"“”.+@
 ### Glyphes
 
 Cette fonte contient les 107 glyphes :	
-AÄBCDEFGHIJKLMNOÖPQRSTUÜVWXYZaâäbcdeéèfghijklmnoöpqrstuüvwxyz0123456789@<>`^|\*~}{][$%@#!?:,'"“”.;+-=()_/�
+AÄBCDEFGHIJKLMNOÖPQRSTUÜVWXYZaâäbcdeéèfghijklmnoöpqrstuüvwxyz0123456789&<>`^|\*~}{][$%@#!?:,'"“”.;+-=()_/�
 
 ## Dimensions
 
