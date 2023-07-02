@@ -24,7 +24,7 @@ UVWXYZaáâä
 èfghiîïjkl
 mnoôöœpqrs
 tuûüùvwxyz
-ß@@-;'’+.?(
+ß&@-;'’+.?(
 ),=:!"
 
 ## Dimensions
