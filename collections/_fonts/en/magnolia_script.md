@@ -12,7 +12,7 @@ preview_image:
 
 This font contains 109 glyphs:
 
-!"%@'’()+,-./0123456789:;<=>?@\_{}°×àâäæçèéêëîïôöùûüÄÖÜßœabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
+!"%@'’()+,-./0123456789:;<=>?&\_{}°×àâäæçèéêëîïôöùûüÄÖÜßœabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
 
 ## Dimensions
 
