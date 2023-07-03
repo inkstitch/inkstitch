@@ -28,7 +28,7 @@ ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#<>:;,'"“”.+@
 
 Diese Schrift enthält folgende 107 Schriftzeichen:
 
-AÄBCDEFGHIJKLMNOÖPQRSTUÜVWXYZaâäbcdeéèfghijklmnoöpqrstuüvwxyz0123456789@<>`^|\*~}{][$%@#!?:,'"“”.;+-=()_/�
+AÄBCDEFGHIJKLMNOÖPQRSTUÜVWXYZaâäbcdeéèfghijklmnoöpqrstuüvwxyz0123456789&<>`^|\*~}{][$%@#!?:,'"“”.;+-=()_/�
 
 ## Maße
 
