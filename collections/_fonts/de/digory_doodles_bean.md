@@ -15,7 +15,7 @@ Diese Schrift enthält 85 Schriftzeichen:
 	
 !"@'(’),-./
 0123456789
-:;=?@ABCDE
+:;=?&ABCDE
 FGHIJKLMNO
 PQRSTUVWXY
 Z\^_`abcde
