@@ -13,7 +13,7 @@ preview_image:
 
 Diese Schrift enthält folgende 43 Schriftzeichen :
 	
-!?@0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZÄÈÖÜ
+!?&0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZÄÈÖÜ
 
 ## Maße
 
