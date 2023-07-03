@@ -23,7 +23,7 @@ UVWXYZaáâä
 èfghiîïjkl
 mnoôöœpqrs
 tuûüùvwxyz
-ß@@-;'’+.?(
+ß&@-;'’+.?(
 ),=:!"
 
 ## Maße
