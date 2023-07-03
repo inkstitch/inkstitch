@@ -15,7 +15,7 @@ Monicha enthält 195 Schriftzeichen :
 	
 !#%@'(’)+,-
 ./01234567
-89:;<=>?@A
+89:;<=>?&A
 BCDEFGHIJK
 LMNOPQRSTU
 VWXYZabcde
