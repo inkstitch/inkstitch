@@ -21,7 +21,7 @@ Diese Schrift enthält folgende 113 Schriftzeichen:
 
 !%@()*+,-.
 /012345678
-9:;<=>?@AB
+9:;<=>?&AB
 CDEFGHIJKL
 MNOPQRSTUV
 WXYZ[\]^_a
