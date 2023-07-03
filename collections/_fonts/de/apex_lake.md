@@ -29,7 +29,7 @@ Apex Lake enthält folgende 38 Schriftzeichen :
 
 Apex simple AGS enthält folgende 124 Schriftzeichen :
 
-üûúùöõôóòñïîíìëêéèçäâáàßÜÛÚÙÖÔÓÒÏÎÍÌËÊÉÈÄÂÁÀ¿»«¡zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA@!?;:9876543210/.,)('’@"
+üûúùöõôóòñïîíìëêéèçäâáàßÜÛÚÙÖÔÓÒÏÎÍÌËÊÉÈÄÂÁÀ¿»«¡zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA&!?;:9876543210/.,)('’@"
 
 ## Besonderheiten
 Apex Lake ist eine Schriftart für Einzelbuchstaben. 
