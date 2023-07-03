@@ -13,7 +13,7 @@ preview_image:
 
 Diese Schrift enthält folgende 109 Schriftzeichen:
 	
-!@'’(),-./0123456789:;=?@ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz¡¿ÄÆÈÖÜàáâäæçèéêëìíîïñòóôöùúûüŒœ
+!@'’(),-./0123456789:;=?&ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz¡¿ÄÆÈÖÜàáâäæçèéêëìíîïñòóôöùúûüŒœ
 
 Beachte, dass die Kleinbuchstaben eigentlich Kapitälchen sind.
 
