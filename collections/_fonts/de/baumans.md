@@ -16,7 +16,7 @@ Diese Schrift enthält 102 Schriftzeichen:
 	
 @'()+,-.01
 23456789:;
-=?@ABCDEFG
+=?&ABCDEFG
 HIJKLMNOPQ
 RSTUVWXYZ`
 abcdefghij
