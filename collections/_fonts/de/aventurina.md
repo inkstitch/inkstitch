@@ -15,7 +15,7 @@ Dies ist Teil einer kommenden Ink/Stitch-Version und nicht in Ink/Stitch v2.1.2 
 
 Diese Schrift enthält 142 Schriftzeichen:
 
-!"#@'()+,- ./01234567 89:;=?@ABC DEFGHIJKLM NOPQRSTUVW XYZabcdefg hijklmnopq rstuvwxyz~ ¡¿ÀÁÂÃÄÅÆÇ ÈÉÊËÌÍÎÏÑÒ ÓÔÕÖØÙÚÛÜÝ Þßàáâãäåæç èéêëìíîïñò óôõöùúûüýÿ Œœ
+!"#@'()+,- ./01234567 89:;=?&ABCDEFGHIJKLM NOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz~¡¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïñòóôõöùúûüýÿŒœ
 
 ## Maße
 
