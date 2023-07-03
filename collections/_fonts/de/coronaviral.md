@@ -12,7 +12,7 @@ preview_image:
 ## Schriftzeichen
 
 Diese Schrift enthält 107 Schriftzeichen:
-!"@()*,-./0123456789:;?@AÄBCDEÈFGHIJKLMNOÖPQRSTUVWXYZ\_`aäâáàbcçdeëêéèfghiïîíìjklmnñoöôóòpqrstuüûúùvwxyz|Üß
+!"@()*,-./0123456789:;?&AÄBCDEÈFGHIJKLMNOÖPQRSTUVWXYZ\_`aäâáàbcçdeëêéèfghiïîíìjklmnñoöôóòpqrstuüûúùvwxyz|Üß
 
 
 ## Maße
