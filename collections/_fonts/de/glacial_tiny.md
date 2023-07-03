@@ -16,7 +16,7 @@ Diese Schrift enthält folgende 159 Schriftzeichen:
 !"»Øø#$€%@
 '’()*+,-./
 0123456789
-:;<=>?@ABC
+:;<=>?&ABC
 DEFGHIJKLM
 NOPQRSTUVW
 XYZ^`abcde
