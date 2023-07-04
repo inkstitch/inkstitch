@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-06-24 01:39+0000\n"
-"PO-Revision-Date: 2023-06-29 16:28\n"
+"POT-Creation-Date: 2023-07-04 01:43+0000\n"
+"PO-Revision-Date: 2023-07-04 01:44\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-24 01:39+0000\n"
+"POT-Creation-Date: 2023-07-04 01:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -962,7 +962,7 @@ msgstr "Si vous souhaitez aider, merci de \n"
 "- sauvegarder votre fichier svg\n"
 "- créer un rapport d'erreur (issue) sur https://github.com/inkstitch/inkstitch/issues"
 
-#: inkstitch.py:107 lib/elements/fill_stitch.py:904
+#: inkstitch.py:107 lib/elements/fill_stitch.py:903
 msgid "Include the error description and also (if possible) the svg file."
 msgstr "Incluez la description de l'erreur et (si possible) le fichier svg."
 
@@ -1286,7 +1286,7 @@ msgstr "Compensation d'étirement - élargir"
 msgid "The expand parameter for this fill object cannot be applied. Ink/Stitch will ignore it and will use original size instead."
 msgstr "Le paramètre élargir pour le remplissage de cet objet ne peut pas être appliqué. Ink/Stitch va l'ignorer et utiliser la taille originale."
 
-#: lib/elements/fill_stitch.py:49 lib/elements/fill_stitch.py:462
+#: lib/elements/fill_stitch.py:49 lib/elements/fill_stitch.py:461
 msgid "Inset"
 msgstr "Décalage"
 
@@ -1531,11 +1531,11 @@ msgstr "Décaler les rangées autant de fois avant de répéter"
 msgid "Length of the cycle by which successive stitch rows are staggered. Fractional values are allowed and can have less visible diagonals than integer values."
 msgstr "Longueur du cycle de décalage des rangées. Les fractions sont autorisées et peuvent produire des diagonales moins visibles que les valeurs entières."
 
-#: lib/elements/fill_stitch.py:311 lib/elements/fill_stitch.py:474
+#: lib/elements/fill_stitch.py:311 lib/elements/fill_stitch.py:473
 msgid "Skip last stitch in each row"
 msgstr "Sauter le dernier point dans chaque rangée"
 
-#: lib/elements/fill_stitch.py:312 lib/elements/fill_stitch.py:475
+#: lib/elements/fill_stitch.py:312 lib/elements/fill_stitch.py:474
 msgid "The last stitch in each row is quite close to the first stitch in the next row.  Skipping it decreases stitch count and density."
 msgstr "Le dernier point dans chaque rangée est très proche du premier point dans la rangée suivante. Le sauter diminue le nombre de points et la densité."
 
@@ -1547,11 +1547,11 @@ msgstr "Intervertir le remplissage (début à la droite vers la gauche)"
 msgid "The flip option can help you with routing your stitch path.  When you enable flip, stitching goes from right-to-left instead of left-to-right."
 msgstr "L’option intervertir peut vous aider avec le routage de votre chemin de broderie.  Lorsque vous activez l'inversion, la broderie va de droite à gauche au lieu de gauche à droite."
 
-#: lib/elements/fill_stitch.py:337 lib/elements/fill_stitch.py:486
+#: lib/elements/fill_stitch.py:337 lib/elements/fill_stitch.py:485
 msgid "Underpath"
 msgstr "Chemin de dessous"
 
-#: lib/elements/fill_stitch.py:338 lib/elements/fill_stitch.py:487
+#: lib/elements/fill_stitch.py:338 lib/elements/fill_stitch.py:486
 msgid "Travel inside the shape when moving from section to section.  Underpath stitches avoid traveling in the direction of the row angle so that they are not visible.  This gives them a jagged appearance."
 msgstr "Les points qui relient les sections à l'intérieur de l'objet. Les points des chemins de dessous évitent d'aller dans la même direction que ceux de dessus pour ne pas être visibles. Cela leur donne une apparence déchiquetée."
 
@@ -1568,84 +1568,84 @@ msgid "Running stitch tolerance"
 msgstr "Tolérance du point droit"
 
 #: lib/elements/fill_stitch.py:367
-msgid "All stitches must be within this distance of the path.  A lower tolerance means stitches will be closer together.  A higher tolerance means sharp corners may be rounded."
-msgstr "Tous les points doivent rester au plus à cette distance du chemin. Une tolérance plus faible signifie que les points seront plus rapprochés. Une tolérance plus élevée signifie que les angles vifs peuvent être arrondis."
+msgid "Determines how hard Ink/Stitch tries to avoid stitching outside the shape.Lower numbers are less likely to stitch outside the shape but require more stitches."
+msgstr ""
 
-#: lib/elements/fill_stitch.py:379 lib/elements/satin_column.py:353
+#: lib/elements/fill_stitch.py:378 lib/elements/satin_column.py:353
 #: lib/elements/stroke.py:73
 msgid "Repeats"
 msgstr "Répétitions"
 
-#: lib/elements/fill_stitch.py:380 lib/elements/stroke.py:74
+#: lib/elements/fill_stitch.py:379 lib/elements/stroke.py:74
 msgid "Defines how many times to run down and back along the path."
 msgstr "Définit combien de fois broder en avant et en arrière le long du chemin."
 
-#: lib/elements/fill_stitch.py:391 lib/elements/stroke.py:85
+#: lib/elements/fill_stitch.py:390 lib/elements/stroke.py:85
 msgid "Bean stitch number of repeats"
 msgstr "Nombre de répétitions pour le point triple (bean stitch)"
 
-#: lib/elements/fill_stitch.py:392 lib/elements/stroke.py:86
+#: lib/elements/fill_stitch.py:391 lib/elements/stroke.py:86
 msgid "Backtrack each stitch this many times.  A value of 1 would triple each stitch (forward, back, forward).  A value of 2 would quintuple each stitch, etc.\n\n"
 "A pattern with various repeats can be created with a list of values separated by a space."
 msgstr "Repasse sur chaque point le nombre de fois indiqué. Une valeur de 1 triplera chaque point (avant, arrière, avant).\n"
 "Une valeur de 2 permettra de quintupler chaque point, etc.\n\n"
 "Il est possible de définir un motif de répétitions en entrant plusieurs valeurs séparées par un espace."
 
-#: lib/elements/fill_stitch.py:410 inx/inkstitch_select_elements.inx:33
+#: lib/elements/fill_stitch.py:409 inx/inkstitch_select_elements.inx:33
 #: inx/inkstitch_select_elements.inx:53 inx/inkstitch_select_elements.inx:55
 msgid "Underlay"
 msgstr "Sous-couche"
 
-#: lib/elements/fill_stitch.py:410 lib/elements/fill_stitch.py:419
-#: lib/elements/fill_stitch.py:444 lib/elements/fill_stitch.py:455
-#: lib/elements/fill_stitch.py:465 lib/elements/fill_stitch.py:477
-#: lib/elements/fill_stitch.py:490
+#: lib/elements/fill_stitch.py:409 lib/elements/fill_stitch.py:418
+#: lib/elements/fill_stitch.py:443 lib/elements/fill_stitch.py:454
+#: lib/elements/fill_stitch.py:464 lib/elements/fill_stitch.py:476
+#: lib/elements/fill_stitch.py:489
 msgid "Fill Underlay"
 msgstr "Sous-couche de remplissage"
 
-#: lib/elements/fill_stitch.py:416
+#: lib/elements/fill_stitch.py:415
 msgid "Fill angle"
 msgstr "Angle de remplissage"
 
-#: lib/elements/fill_stitch.py:417
+#: lib/elements/fill_stitch.py:416
 msgid "Default: fill angle + 90 deg. Insert a list for multiple layers separated by a space."
 msgstr "Par défaut : angle de remplissage + 90 degrés. Pour obtenir plusieurs sous-couches, insérer une liste de valeurs séparée par des espaces."
 
-#: lib/elements/fill_stitch.py:441
+#: lib/elements/fill_stitch.py:440
 msgid "Row spacing"
 msgstr "Espacement entre rangées de points"
 
-#: lib/elements/fill_stitch.py:442
+#: lib/elements/fill_stitch.py:441
 msgid "default: 3x fill row spacing"
 msgstr "défaut: 3x espacement entre les rangées"
 
-#: lib/elements/fill_stitch.py:452 lib/elements/stroke.py:125
+#: lib/elements/fill_stitch.py:451 lib/elements/stroke.py:125
 msgid "Max stitch length"
 msgstr "Longueur de point maximale"
 
-#: lib/elements/fill_stitch.py:453
+#: lib/elements/fill_stitch.py:452
 msgid "default: equal to fill max stitch length"
 msgstr "défaut : égal à longueur max des points de remplissage"
 
-#: lib/elements/fill_stitch.py:463
+#: lib/elements/fill_stitch.py:462
 msgid "Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill."
 msgstr "Rétrécit la forme avant de faire la sous-couche, pour empêcher que la sous-couche se montre en dehors du remplissage."
 
-#: lib/elements/fill_stitch.py:498 lib/elements/satin_column.py:434
+#: lib/elements/fill_stitch.py:497 lib/elements/satin_column.py:434
 msgid "Random seed"
 msgstr "Graine aléatoire"
 
-#: lib/elements/fill_stitch.py:499 lib/elements/satin_column.py:435
+#: lib/elements/fill_stitch.py:498 lib/elements/satin_column.py:435
 msgid "Use a specific seed for randomized attributes. Uses the element ID if empty."
 msgstr "Utiliser cette graine aléatoire pour le calcul des attributs. Si vide, utilise l'identificateur de l'élément."
 
-#: lib/elements/fill_stitch.py:896
+#: lib/elements/fill_stitch.py:895
 msgid "Error during autofill! This means it is a bug in Ink/Stitch."
 msgstr "Erreur pendant l'auto-remplissage. Cela veut dire que Ink/Stitch a un problème."
 
 #. this message is followed by a URL:
 #. https://github.com/inkstitch/inkstitch/issues/new
-#: lib/elements/fill_stitch.py:899
+#: lib/elements/fill_stitch.py:898
 msgid "If you'd like to help please\n"
 "- copy the entire error message below\n"
 "- save your SVG file and\n"
