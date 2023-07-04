@@ -58,12 +58,9 @@ class LetteringFrame(wx.Frame):
         self.font_size_filter.Bind(fs.EVT_FLOATSPIN, self.on_filter_changed)
         self.font_size_filter.SetToolTip(_("Font size filter (mm). 0 for all sizes."))
 
-        self.font_glyph_filter = wx.TextCtrl(self)
-        self.font_glyph_filter.Bind(wx.EVT_TEXT, self.on_filter_changed)
+        self.font_glyph_filter = wx.CheckBox(self, label=_("Glyphs"))
+        self.font_glyph_filter.Bind(wx.EVT_CHECKBOX, self.on_filter_changed)
         self.font_glyph_filter.SetToolTip(_("Filter fonts by available glyphs."))
-
-        self.update_font_list()
-        self.set_font_list()
 
         # font details
         self.font_description = wx.StaticText(self, wx.ID_ANY)
@@ -101,6 +98,10 @@ class LetteringFrame(wx.Frame):
 
         self.apply_button = wx.Button(self, wx.ID_ANY, _("Apply and Quit"))
         self.apply_button.Bind(wx.EVT_BUTTON, self.apply)
+
+        # set font list
+        self.update_font_list()
+        self.set_font_list()
 
         self.__do_layout()
 
@@ -174,14 +175,15 @@ class LetteringFrame(wx.Frame):
 
         # font size filter value
         filter_size = self.font_size_filter.GetValue()
+        filter_glyph = self.font_glyph_filter.GetValue()
         # glyph filter string without spaces
-        filter_glyph = [*self.font_glyph_filter.GetValue().replace(" ", "")]
+        glyphs = [*self.text_editor.GetValue().replace(" ", "").replace("\n", "")]
 
         for font in self.font_list:
             if filter_size != 0 and (filter_size < font.size * font.min_scale or filter_size > font.size * font.max_scale):
                 continue
 
-            if filter_glyph and not set(filter_glyph).issubset(font.available_glyphs):
+            if filter_glyph and glyphs and not set(glyphs).issubset(font.available_glyphs):
                 continue
 
             self.fonts[font.marked_custom_font_name] = font
@@ -237,6 +239,8 @@ class LetteringFrame(wx.Frame):
 
     def on_change(self, attribute, event):
         self.settings[attribute] = event.GetEventObject().GetValue()
+        if attribute == "text" and self.font_glyph_filter.GetValue() is True:
+            self.on_filter_changed()
         self.preview.update()
 
     def on_trim_option_change(self, event=None):
@@ -418,11 +422,9 @@ class LetteringFrame(wx.Frame):
         # filter fon list
         filter_sizer = wx.StaticBoxSizer(self.filter_box, wx.HORIZONTAL)
         filter_size_label = wx.StaticText(self, wx.ID_ANY, _("Size"))
-        filter_glyph_label = wx.StaticText(self, wx.ID_ANY, _("Glyph"))
         filter_sizer.Add(filter_size_label, 0, wx.LEFT | wx.TOP | wx.BOTTOM, 10)
         filter_sizer.AddSpacer(5)
         filter_sizer.Add(self.font_size_filter, 1, wx.RIGHT | wx.TOP | wx.BOTTOM, 10)
-        filter_sizer.Add(filter_glyph_label, 0, wx.LEFT | wx.TOP | wx.BOTTOM, 10)
         filter_sizer.AddSpacer(5)
         filter_sizer.Add(self.font_glyph_filter, 1, wx.RIGHT | wx.TOP | wx.BOTTOM, 10)
         outer_sizer.Add(filter_sizer, 0, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT, 10)
