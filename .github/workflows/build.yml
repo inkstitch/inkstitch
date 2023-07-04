@@ -91,7 +91,7 @@ jobs:
           name: inkstitch-linux
           path: artifacts
   windows:
-    runs-on: windows-latest
+    runs-on: windows-2019
     steps:
       - uses: actions/checkout@v3
         with:
@@ -104,10 +104,21 @@ jobs:
           python-version: '3.8.x'
           architecture: 'x86'
       - uses: microsoft/setup-msbuild@v1.3.1
+ #     - uses: msys2/setup-msys2@v2
+ #       with:
+ #         update: true
+ #         install: >-
+ #           zlib
+ #           zlib-devel
+ #           git
+
+#      - name: Setup tmate session
+#        uses: mxschmitt/action-tmate@v3
       - name: install dependencies
         shell: bash
         run: |
           git config --system core.longpaths true
+          #pacman -S zlib-devel
           python -m pip install --upgrade pip
           python -m pip install wheel
           # Numpy and Scipy version for older cpu compatibility
