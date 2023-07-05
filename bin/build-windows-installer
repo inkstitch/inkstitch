@@ -1,7 +1,7 @@
 #!/bin/bash
 VERSION="${VERSION:-$(echo ${GITHUB_REF} | sed -e 's|refs/heads/||' -e 's|refs/tags/||' -e 's|/|-|g')}"
 OS="${BUILD:-$(uname)}"
-ARCH="$(uname -m)"
+ARCH=$(python -c "import platform; n = platform.architecture()[0]; print(n)")
 # Create windows installer
 mkdir win
 cp installer_scripts/template.iss win/win_build.iss
