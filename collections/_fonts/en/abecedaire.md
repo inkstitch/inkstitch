@@ -16,8 +16,7 @@ This font contains  {{ font.glyphs.size }} glyphs:
 
 {% for glyph in font.glyphs %}
 {{ glyph }}
-{%- endfor -%}
-<br>
+{%- endfor %}
 
 ## Dimensions
 
