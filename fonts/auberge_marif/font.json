@@ -1,6 +1,9 @@
 {
     "name": "Auberge Marif",
     "description": "Auberge Marif is a script satin font of size approximatively 35 mm. The glyphs cover most Western European languages. The font can be scaled down to 60% and up to 140%.",
+    "keywords": [
+        "handwriting"
+    ],
     "leading": 190,
     "auto_satin": false,
     "reversible": false,

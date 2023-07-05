@@ -1,6 +1,9 @@
 {
     "name": "Baumans FI",
     "description": "The capital M is 22.3 millimeter wide at 100% scale. Can be scaled down to 80% or up to 150%. Every satin has zigzag underlay",
+    "keywords": [
+        "display"
+    ],
     "leading": 162,
     "auto_satin": false,
     "reversible": true,
