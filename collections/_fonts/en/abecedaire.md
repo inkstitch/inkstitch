@@ -7,34 +7,24 @@ preview_image:
   - url: /assets/images/fonts/abecedaire.jpg
     height: 14
 ---
+{%- assign font = site.data.fonts.abecedaire.font -%}
 ![Abecedaire](/assets/images/fonts/abecedaire.jpg)
 
 ## Glyphs
 
-This font contains  154 glyphs:
+This font contains  {{ font.glyphs.size }} glyphs:
 
-!"@'(),012
-3456789:;=
-?&ABCDEFGH
-IJKLMNOPQR
-STUVWXYZ`a
-bcdefghijk
-lmnopqrstu
-vwxyz¡«´¸»
-¿ÀÁÂÃÄÅÆŒÇ
-ÈÉÊËÌÍÎÏÐÑ
-ÒÓÔÕÖØÙÚÛÜ
-ÝŸÞßàáâãäå
-æœçèéêëìíî
-ïðñòóôõöøù
-úûüýþÿčČřŘ
-šŠžŽ
+{% for glyph in font.glyphs %}
+{{ glyph }}
+{%- endfor -%}
+<br>
 
 ## Dimensions
 
-Used at 100%, this font is approximatively 14mm high (1/2 inch). 
+At a scale of 100% this font has an approximate height of {{ font.size }} mm. 
 
-It can be scaled up to 200%  (28mm, 1 inch) and scalled to 75% (9mm  1/3 inch)
+It can be scaled from {{ font.min_scale | times: 100 | floor }}% ({{ font.size | times: font.min_scale }} mm)
+up to {{ font.max_scale | times: 100 | floor }}% ({{ font.size | times: font.max_scale }} mm).
 
 
 ## In real life
