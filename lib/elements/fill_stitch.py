@@ -364,12 +364,11 @@ class FillStitch(EmbroideryElement):
     @property
     @param('running_stitch_tolerance_mm',
            _('Running stitch tolerance'),
-           tooltip=_('All stitches must be within this distance of the path.  ' +
-                     'A lower tolerance means stitches will be closer together.  ' +
-                     'A higher tolerance means sharp corners may be rounded.'),
+           tooltip=_('Determines how hard Ink/Stitch tries to avoid stitching outside the shape.' +
+                     'Lower numbers are less likely to stitch outside the shape but require more stitches.'),
            unit='mm',
            type='float',
-           default=0.2,
+           default=0.1,
            sort_index=32)
     def running_stitch_tolerance(self):
         return max(self.get_float_param("running_stitch_tolerance_mm", 0.2), 0.01)

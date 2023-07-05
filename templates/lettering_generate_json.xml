@@ -11,66 +11,102 @@
             </submenu>
         </effects-menu>
     </effect>
-    <param name="header" type="description" appearance="header" indent="1" >
-        Generates font.json which can be used by the lettering tool.
+
+    <param name="options" type="notebook">
+      <page name="general" gui-text="Font info">
+
+        <param name="header" type="description" appearance="header" indent="1" >
+            Generates font.json which can be used by the lettering tool.
+        </param>
+        <param name="file-description" type="description" indent="1" >The generated file can be viewed and updated with a standard text editor tool.</param>
+
+        <spacer />
+        <separator indent="1"/>
+        <spacer />
+
+        <param type="string" name="font-name" gui-text="Name" indent="1" />
+        <param type="string" name="font-description" gui-text="Description" indent="1" />
+
+        <spacer />
+        <separator indent="1"/>
+        <spacer />
+
+        <param type="path" name="font-file" gui-text="SVG Font File" indent="1" mode="file" filetypes="svg"/>
+
+        <spacer />
+        <separator indent="1"/>
+        <spacer />
+
+        <param name="header" type="description" appearance="header" indent="1" >
+            Keywords
+        </param>
+        <hbox>
+            {%- for category in font_categories %}
+            {%- if loop.index is divisibleby 4 %}
+        </hbox>
+        <hbox>
+            {%- endif %}
+            <param type="bool" name="{{ category.id }}" gui-text="{{ category.name }}" indent="1">false</param>
+            {%- endfor %}
+        </hbox>
+        <spacer />
+
+      </page>
+      <page name="settings" gui-text="Settings">
+
+        <spacer />
+        <param type="string" name="default-glyph" gui-text="Default Glyph" indent="1">&#65533;</param>
+        <spacer />
+
+        <hbox>
+          <vbox>
+            <param type="bool" name="auto-satin" gui-text="Autoroute Satin"
+                   gui-description="Disable if you defined manual routing in your font." indent="1">true</param>
+            <param type="bool" name="reversible" gui-text="Reversible"
+                  gui-description='If disabled back and forth stitching will not be possile for this font.' indent="1">true</param>
+            <param name="letter-case" type="optiongroup" appearance="combo" gui-text="Force letter case" indent="1">
+                     <option value="">No</option>
+                     <option value="upper">Upper</option>
+                     <option value="lower">Lower</option>
+            </param>
+            </vbox>
+            <vbox indent="20">
+            <param name="size" type="float" precision="1" min="1" max="1000" gui-text="Size" indent="1">15</param>
+            <param name="min-scale" type="float" precision="1" min="0.1" max="1" gui-text="Min Scale" indent="1">1</param>
+            <param name="max-scale" type="float" precision="1" min="1" max="10" gui-text="Max Scale" indent="1">1</param>
+          </vbox>
+        </hbox>
+
+      </page>
+      <page name="kerning" gui-text="Kerning">
+        <param name="header" type="description" appearance="header" indent="1" >Kerning</param>
+        <param name="kering-info" type="description" indent="1" >
+            If your font file contains kerning information, you can completely ignore the following settings (unless you want to overwrite them).
+            If the kerning information cannot be found, these values will apply automatically.
+        </param>
+
+        <spacer />
+        <hbox indent="1">
+          <param name="use-custom-leading" type="bool" gui-text="Force" indent="1"
+                 gui-description="Overwrite leading information from font file.">false</param>
+          <param name="leading" type="int" precision="1" min="-100" max="500" gui-text="Leading (px)"
+                 gui-description="Line height (default: 100)" indent="1">100</param>
+        </hbox>
+        <spacer />
+
+        <hbox indent="1">
+          <param name="use-custom-spacing" type="bool" gui-text="Force" indent="1"
+                 gui-description="Overwrite word spacing information from font file.">false</param>
+          <param name="word-spacing" type="int" precision="1" min="-100" max="500" gui-text="Word spacing (px)"
+                 gui-description="Space character width (default: 20)" indent="1">20</param>
+         </hbox>
+
+         <spacer />
+        <separator indent="1"/>
+
+      </page>
     </param>
-    <param name="file-description" type="description" indent="1" >The generated file can be viewed and updated with a standard text editor tool.</param>
-    <spacer />
-    <separator indent="1"/>
-    <spacer />
-    <param type="path" name="font-file" gui-text="SVG Font File" indent="1" mode="file" filetypes="svg"/>
-    <spacer />
-    <separator indent="1"/>
-    <spacer />
-    <param type="string" name="font-name" gui-text="Name" indent="1" />
-    <param type="string" name="font-description" gui-text="Description" indent="1" />
-    <spacer />
-    <separator indent="1"/>
-    <spacer />
-    <hbox>
-    <vbox>
-    <param type="bool" name="auto-satin" gui-text="Autoroute Satin"
-           gui-description="Disable if you defined manual routing in your font." indent="1">true</param>
-    <param type="bool" name="reversible" gui-text="Reversible"
-          gui-description='If disabled back and forth stitching will not be possile for this font.' indent="1">true</param>
-    <param name="letter-case" type="optiongroup" appearance="combo" gui-text="Force letter case" indent="1">
-             <option value="">No</option>
-             <option value="upper">Upper</option>
-             <option value="lower">Lower</option>
-    </param>
-    </vbox>
-    <vbox indent="20">
-    <param name="size" type="float" precision="1" min="1" max="1000" gui-text="Size" indent="1">15</param>
-    <param name="min-scale" type="float" precision="1" min="0.1" max="1" gui-text="Min Scale" indent="1">1</param>
-    <param name="max-scale" type="float" precision="1" min="1" max="10" gui-text="Max Scale" indent="1">1</param>
-    </vbox>
-    </hbox>
-    <spacer />
-    <param type="string" name="default-glyph" gui-text="Default Glyph" indent="1">&#65533;</param>
-    <spacer />
-    <separator indent="1"/>
-    <spacer />
-    <param name="header" type="description" appearance="header" indent="1" >Kerning</param>
-    <param name="kering-info" type="description" indent="1" >
-        If your font file contains kerning information, you can completely ignore the following settings (unless you want to overwrite them).
-        If the kerning information cannot be found, these values will apply automatically.
-    </param>
-    <spacer />
-    <hbox indent="1">
-    <param name="use-custom-leading" type="bool" gui-text="Force" indent="1"
-           gui-description="Overwrite leading information from font file.">false</param>
-    <param name="leading" type="int" precision="1" min="-100" max="500" gui-text="Leading (px)"
-           gui-description="Line height (default: 100)" indent="1">100</param>
-    </hbox>
-    <spacer />
-    <hbox indent="1">
-    <param name="use-custom-spacing" type="bool" gui-text="Force" indent="1"
-           gui-description="Overwrite word spacing information from font file.">false</param>    
-    <param name="word-spacing" type="int" precision="1" min="-100" max="500" gui-text="Word spacing (px)"
-           gui-description="Space character width (default: 20)" indent="1">20</param>
-     </hbox>
-     <spacer />
-    <separator indent="1"/>
+
     <script>
         {{ command_tag | safe }}
     </script>

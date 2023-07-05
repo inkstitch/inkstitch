@@ -1,6 +1,9 @@
 {
     "name": "Amitaclo small",
     "description": "This font is an altered version  of Amitaclo, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory. The altered embroidery parameters of this font allow to scale down the original Amitaclo font between 25% (for a 7 mm font ) and 55 % (for a 16mm font).",
+    "keywords": [
+        "handwriting"
+    ],
     "leading": 113,
     "auto_satin": false,
     "reversible": false,

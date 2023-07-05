@@ -1,6 +1,9 @@
 {
     "name": "Cherry for inkstitch",
     "description": "Cherry for inkstitch is a decorative satin column font of size approximatively 40mm. It can be reduced down to 80% and enlarged up to 180%. It contains 74 glyphs.",
+    "keywords": [
+        "display"
+    ],
     "leading": 227,
     "auto_satin": false,
     "reversible": false,

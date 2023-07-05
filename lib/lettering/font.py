@@ -111,6 +111,7 @@ class Font(object):
 
     name = localized_font_metadata('name', '')
     description = localized_font_metadata('description', '')
+    keywords = font_metadata('keywords', '')
     letter_case = font_metadata('letter_case', '')
     default_glyph = font_metadata('default_glyph', "�")
     leading = font_metadata('leading', 100)

@@ -31,6 +31,15 @@ class MultipleGuideLineWarning(ValidationWarning):
     ]
 
 
+class TooFewSubpathsWarning(ValidationWarning):
+    name = _("Too few subpaths")
+    description = _("This element renders as running stitch while it has a satin column parameter.")
+    steps_to_solve = [
+        _("* Convert to stroke: select the element and open the parameter dialog. Enable running stitch along path."),
+        _("* Use as satin column: add an other rail and optionally rungs.")
+    ]
+
+
 class Stroke(EmbroideryElement):
     element_name = _("Stroke")
 
@@ -567,6 +576,9 @@ class Stroke(EmbroideryElement):
         return coords[int(len(coords)/2)]
 
     def validation_warnings(self):
+        # satin column warning
+        if self.get_boolean_param("satin_column", False):
+            yield TooFewSubpathsWarning(self._representative_point())
         # guided fill warnings
         if self.stroke_method == 1:
             guide_lines = get_marker_elements(self.node, "guide-line", False, True, True)

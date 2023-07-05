@@ -11,7 +11,6 @@ from copy import copy
 import numpy as np
 from shapely import geometry as shgeo
 
-from ..debug import debug
 from ..utils import prng
 from ..utils.geometry import Point
 from ..utils.threading import check_stop_flag
@@ -248,9 +247,10 @@ def path_to_curves(points: typing.List[Point], min_len: float):
     return curves
 
 
-@debug.time
 def running_stitch(points, stitch_length, tolerance):
     # Turn a continuous path into a running stitch.
+    if not points:
+        return
     stitches = [points[0]]
     for curve in path_to_curves(points, 2 * tolerance):
         # segments longer than twice the tollerance will usually be forced by it, so set that as the minimum for corner detection

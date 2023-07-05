@@ -3,7 +3,6 @@ from scipy.interpolate import splprep, splev
 
 from .geometry import Point, coordinate_list_to_point_list
 from ..stitches.running_stitch import running_stitch
-from ..debug import debug
 
 
 def _remove_duplicate_coordinates(coords_array):
@@ -23,7 +22,6 @@ def _remove_duplicate_coordinates(coords_array):
     return coords_array[keepers]
 
 
-@debug.time
 def smooth_path(path, smoothness=1.0):
     """Smooth a path of coordinates.
 
@@ -70,8 +68,7 @@ def smooth_path(path, smoothness=1.0):
 
     # .T transposes the array (for some reason splprep expects
     # [[x1, x2, ...], [y1, y2, ...]]
-    with debug.time_this("splprep"):
-        tck, fp, ier, msg = splprep(coords.T, s=s, k=3, nest=-1, full_output=1)
+    tck, fp, ier, msg = splprep(coords.T, s=s, k=3, nest=-1, full_output=1)
     if ier > 0:
         debug.log(f"error {ier} smoothing path: {msg}")
         return path
@@ -79,8 +76,7 @@ def smooth_path(path, smoothness=1.0):
     # Evaluate the spline curve at many points along its length to produce the
     # smoothed point list.  2 * num_points seems to be a good number, but it
     # does produce a lot of points.
-    with debug.time_this("splev"):
-        smoothed_x_values, smoothed_y_values = splev(np.linspace(0, 1, int(num_points * 2)), tck[0])
-        coords = np.array([smoothed_x_values, smoothed_y_values]).T
+    smoothed_x_values, smoothed_y_values = splev(np.linspace(0, 1, int(num_points * 2)), tck[0])
+    coords = np.array([smoothed_x_values, smoothed_y_values]).T
 
     return [Point(x, y) for x, y in coords]

@@ -569,6 +569,7 @@ def _make_fermat_spiral(rings, stitch_length, starting_point):
 
 def _make_spiral(rings, stitch_length, starting_point):
     path = []
+    spiral_part = None
 
     for ring1, ring2 in zip(rings[:-1], rings[1:]):
         check_stop_flag()
@@ -577,7 +578,8 @@ def _make_spiral(rings, stitch_length, starting_point):
         # skip last to avoid duplicated points
         path.extend(spiral_part.coords[:-1])
 
-    # at the end add last point
-    path.append(spiral_part.coords[-1])
+    if spiral_part:
+        # at the end add last point
+        path.append(spiral_part.coords[-1])
 
     return path

@@ -1,6 +1,9 @@
 {
     "name": "Apex Simple AGS",
     "description": "M wide 41mm, hight 33,6mm",
+    "keywords": [
+        "serif"
+    ],
     "leading": 188,
     "auto_satin": false,
     "reversible": false,

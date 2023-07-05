@@ -17,9 +17,11 @@ from shapely.strtree import STRtree
 from ..debug import debug
 from ..stitch_plan import Stitch
 from ..svg import PIXELS_PER_MM
+from ..utils.clamp_path import clamp_path_to_polygon
 from ..utils.geometry import Point as InkstitchPoint, line_string_to_point_list, ensure_multi_line_string
 from .fill import intersect_region_with_grating, stitch_row
 from .running_stitch import running_stitch
+from ..utils.smoothing import smooth_path
 from ..utils.threading import check_stop_flag
 
 
@@ -77,9 +79,9 @@ def auto_fill(shape,
 
     travel_graph = build_travel_graph(fill_stitch_graph, shape, angle, underpath)
     path = find_stitch_path(fill_stitch_graph, travel_graph, starting_point, ending_point)
-    result = path_to_stitches(path, travel_graph, fill_stitch_graph, angle, row_spacing,
+    result = path_to_stitches(shape, path, travel_graph, fill_stitch_graph, angle, row_spacing,
                               max_stitch_length, running_stitch_length, running_stitch_tolerance,
-                              staggers, skip_last)
+                              staggers, skip_last, underpath)
 
     return result
 
@@ -350,9 +352,9 @@ def get_segments(graph):
 def process_travel_edges(graph, fill_stitch_graph, shape, travel_edges):
     """Weight the interior edges and pre-calculate intersection with fill stitch rows."""
 
-    # Set the weight equal to 5x the edge length, to encourage travel()
+    # Set the weight equal to 3x the edge length, to encourage travel()
     # to avoid them.
-    weight_edges_by_length(graph, 5)
+    weight_edges_by_length(graph, 3)
 
     segments = get_segments(fill_stitch_graph)
 
@@ -618,20 +620,26 @@ def collapse_sequential_outline_edges(path, graph):
             if not start_of_run:
                 start_of_run = edge[0]
 
-    if start_of_run:
+    if start_of_run and start_of_run != edge[1]:
         # if we were still in a run, close it off
         new_path.append(PathEdge((start_of_run, edge[1]), "collapsed"))
 
     return new_path
 
 
-def travel(travel_graph, edge, running_stitch_length, running_stitch_tolerance, skip_last):
+def travel(shape, travel_graph, edge, running_stitch_length, running_stitch_tolerance, skip_last, underpath):
     """Create stitches to get from one point on an outline of the shape to another."""
 
     start, end = edge
     path = networkx.shortest_path(travel_graph, start, end, weight='weight')
-    path = [Stitch(*p) for p in path]
-    stitches = running_stitch(path, running_stitch_length, running_stitch_tolerance)
+    if underpath and path != (start, end):
+        path = smooth_path(path, 2)
+    else:
+        path = [InkstitchPoint.from_tuple(point) for point in path]
+    path = clamp_path_to_polygon(path, shape)
+
+    points = running_stitch(path, running_stitch_length, running_stitch_tolerance)
+    stitches = [Stitch(point) for point in points]
 
     for stitch in stitches:
         stitch.add_tag('auto_fill_travel')
@@ -653,8 +661,8 @@ def travel(travel_graph, edge, running_stitch_length, running_stitch_tolerance, 
 
 
 @debug.time
-def path_to_stitches(path, travel_graph, fill_stitch_graph, angle, row_spacing, max_stitch_length, running_stitch_length, running_stitch_tolerance,
-                     staggers, skip_last):
+def path_to_stitches(shape, path, travel_graph, fill_stitch_graph, angle, row_spacing, max_stitch_length, running_stitch_length,
+                     running_stitch_tolerance, staggers, skip_last, underpath):
     path = collapse_sequential_outline_edges(path, fill_stitch_graph)
 
     stitches = []
@@ -668,7 +676,7 @@ def path_to_stitches(path, travel_graph, fill_stitch_graph, angle, row_spacing, 
             stitch_row(stitches, edge[0], edge[1], angle, row_spacing, max_stitch_length, staggers, skip_last)
             travel_graph.remove_edges_from(fill_stitch_graph[edge[0]][edge[1]]['segment'].get('underpath_edges', []))
         else:
-            stitches.extend(travel(travel_graph, edge, running_stitch_length, running_stitch_tolerance, skip_last))
+            stitches.extend(travel(shape, travel_graph, edge, running_stitch_length, running_stitch_tolerance, skip_last, underpath))
 
         check_stop_flag()
 

@@ -10,6 +10,7 @@ import sys
 from inkex import Boolean
 
 from ..i18n import _
+from ..lettering.categories import FONT_CATEGORIES
 from ..lettering.font_info import FontFileInfo
 from .base import InkstitchExtension
 
@@ -20,6 +21,11 @@ class LetteringGenerateJson(InkstitchExtension):
     '''
     def __init__(self, *args, **kwargs):
         InkstitchExtension.__init__(self, *args, **kwargs)
+        self.arg_parser.add_argument("--options")
+        self.arg_parser.add_argument("--general")
+        self.arg_parser.add_argument("--settings")
+        self.arg_parser.add_argument("--kerning")
+
         self.arg_parser.add_argument("-n", "--font-name", type=str, default="Font", dest="font_name")
         self.arg_parser.add_argument("-d", "--font-description", type=str, default="Description", dest="font_description")
         self.arg_parser.add_argument("-s", "--auto-satin", type=Boolean, default="true", dest="auto_satin")
@@ -34,6 +40,9 @@ class LetteringGenerateJson(InkstitchExtension):
         self.arg_parser.add_argument("-l", "--leading", type=int, default=0, dest="leading")
         self.arg_parser.add_argument("-w", "--word-spacing", type=int, default=26, dest="word_spacing")
         self.arg_parser.add_argument("-p", "--font-file", type=str, default="", dest="path")
+
+        for category in FONT_CATEGORIES:
+            self.arg_parser.add_argument(f"--{category.id}", type=Boolean, default="false", dest=category.id)
 
     def effect(self):
         # file paths
@@ -66,9 +75,15 @@ class LetteringGenerateJson(InkstitchExtension):
 
         glyphs = font_info.glyph_list()
 
+        keywords = []
+        for category in FONT_CATEGORIES:
+            if getattr(self.options, category.id):
+                keywords.append(category.id)
+
         # collect data
         data = {'name': self.options.font_name,
                 'description': self.options.font_description,
+                'keywords': keywords,
                 'leading': leading,
                 'auto_satin': self.options.auto_satin,
                 'reversible': self.options.reversible,
