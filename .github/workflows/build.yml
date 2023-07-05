@@ -110,6 +110,9 @@ jobs:
           git config --system core.longpaths true
           python -m pip install --upgrade pip
           python -m pip install wheel
+          # inkex has pillow as a requirement and defaults to the latest release.
+          # for windows we need to pin to the latest possible version for 32 bit
+          python -m pip install pillow==9.5.0
           # Numpy and Scipy version for older cpu compatibility
           python -m pip install numpy==1.23.1
           python -m pip install scipy==1.9.0
