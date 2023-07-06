@@ -1,7 +1,11 @@
 {
     "name": "Sacramarif",
     "description": "Based on Sacramento. Very small font with runstitch. It can be scaled from 80% to 150%",
-    "leading": 83,
+    "keywords": [
+        "handwriting",
+        "running_stitch"   
+     ], 
+     "leading": 83,
     "auto_satin": false,
     "reversible": false,
     "default_glyph": " ",

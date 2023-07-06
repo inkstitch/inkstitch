@@ -1,6 +1,10 @@
 {
     "name": "Learning curve",
     "description": "Small running stitch script font of size approximatively 12 mm. It can be reduced down to 90% and enlarged up to 200%",
+    "keywords": [
+        "handwriting",
+        "running_stitch"
+    ],
     "leading": 100,
     "auto_satin": false,
     "reversible": false,

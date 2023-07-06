@@ -1,7 +1,11 @@
 {
     "name": "NickAinley",
     "description": "A tiny 1mm-bean alphabet based on a 24pt Seniors Studio jawn",
-    "leading": 40,
+    "keywords": [
+        "handwriting",
+        "running_stitch"
+    ],
+   "leading": 40,
     "auto_satin": false,
     "reversible": false,
     "letter_case": "",

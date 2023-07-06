@@ -1,6 +1,9 @@
 {
     "name": "Magnolia KOR",
     "description": "Magnolia KOR is a script font of size approximatively 20mm. It can be scaled down to 80% and up to 120%",
+    "keywords": [
+        "handwriting"
+    ],
     "leading": 100,
     "auto_satin": false,
     "reversible": false,

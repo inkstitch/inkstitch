@@ -1,6 +1,9 @@
 {
     "name": "Pacificlo",
     "description": "Pacificlo is a small satin column manuscript font of size approximatively 20mm. It can be reduced down to 80% and enlarged up to 140%. It contains 120 glyphs, covering most Western European Languages needs. ",
+    "keywords": [
+        "handwriting"
+    ],
     "leading": 100,
     "auto_satin": false,
     "reversible": false,

@@ -1,6 +1,9 @@
 {
     "name": "Digory Doodles Bean",
     "description": "All letters have mixed satin and bean stitch. The capital M is 16mm tall. The small x is 7 mm.",
+    "keywords": [
+        "handwriting"
+    ],
     "leading": 90,
     "auto_satin": false,
     "reversible": false,

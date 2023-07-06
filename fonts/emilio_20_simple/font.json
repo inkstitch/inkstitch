@@ -1,6 +1,9 @@
 {
     "name": "Emilio 20 Simple",
     "description": "Emilio is a font with capital only and numbers. M is 42.5 millimeter wide at 100% scale. Can be scaled down to 70% or up to 140%. Every satin has zigzag underlay",
+    "keywords": [
+        "display"
+    ],
     "leading": 194,
     "auto_satin": false,
     "reversible": false,

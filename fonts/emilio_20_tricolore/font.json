@@ -1,6 +1,11 @@
 {
     "name": "EMILIO 20 TRICOLORE",
     "description": "Emilio 20 tricolore is a large tricolor fill stitches and satin columns font of  size approximately 100mm. It contains 36 glyphs including the numbers and the 26 capitals  A-Z. It can be reduced down to 90% and enlarged up to 120%",
+    "keywords": [
+        "monogram",
+        "display",
+        "multicolor"
+    ],
     "leading": 400,
     "auto_satin": false,
     "reversible": false,

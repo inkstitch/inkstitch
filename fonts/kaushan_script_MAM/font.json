@@ -1,7 +1,10 @@
 {
     "name": "Kaushan Script MAM",
     "description": "The capital M is 29 millimeter wide at 100% scale.  Can be scaled down to 80% or up to 200%.  Every satin has zigzag underlay",
-    "leading": 113,
+    "keywords": [
+        "handwriting"
+    ],
+   "leading": 113,
     "auto_satin": false,
     "reversible": false,
     "default_glyph": " ",

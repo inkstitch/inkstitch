@@ -1,6 +1,10 @@
 {
     "name": "TT Masters",
     "description": "A font suited for heavy typing :)",
+    "keywords": [
+        "sans_serif",
+        "display"
+     ], 
     "leading": 100,
     "auto_satin": true,
     "reversible": true,

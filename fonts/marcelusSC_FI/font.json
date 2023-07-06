@@ -1,6 +1,9 @@
 {
     "name": "MarcellusSC-FI",
     "description": "MarcellusSC-FI is a small capital font of size 36 mm. It contains 107 glyphs covering most Western European languages. It can be reduced down to 70% and enlarged up to 200% or 500% using satin split",
+    "keywords": [
+        "sans_serif"
+    ],
     "leading": 136,
     "auto_satin": false,
     "reversible": false,

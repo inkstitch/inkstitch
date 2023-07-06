@@ -1,6 +1,9 @@
 {
     "name": "Dejavu Serif",
     "description": "DejaVu Serif Condensed. The capital M is 19,8 millimeter wide at 100% scale.  Can be scaled down to 80% or up to 150%.  Every satin has center-walk underlay.",
+    "keywords": [
+        "serif"
+    ],
     "leading": 87,
     "auto_satin": false,
     "reversible": true,

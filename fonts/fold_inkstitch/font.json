@@ -1,6 +1,10 @@
 {
     "name": "Fold Ink/Stitch",
     "description": "Fold Ink/Stitch is a large triple and quintuple running stitches capital font of size 100 mm. It contains 40 glyphs including all numbers and the 26 capitals  A-Z. It can be reduced down to 80% and enlarged up to 200%",
+    "keywords": [
+        "display",
+        "running_stitch"
+    ],
     "leading": 400,
     "auto_satin": false,
     "reversible": false,

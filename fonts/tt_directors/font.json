@@ -1,7 +1,11 @@
 {
     "name": "TT Directors",
     "description": "A font suited for directing",
-    "leading": 100,
+    "keywords": [
+        "sans_serif",
+        "display"
+     ], 
+     "leading": 100,
     "auto_satin": true,
     "reversible": true,
     "default_glyph": "?",

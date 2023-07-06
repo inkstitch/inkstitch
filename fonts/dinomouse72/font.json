@@ -1,6 +1,9 @@
 {
     "name": "DinoMouse72",
     "description": "A Font Grove jawn. Satin width is 2.5mm at 18mm capitals",
+    "keywords": [
+        "sans_serif"
+    ],
     "leading": 100,
     "auto_satin": false,
     "reversible": false,

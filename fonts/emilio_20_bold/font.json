@@ -1,6 +1,10 @@
 {
     "name": "EMILIO_20_Bold",
     "description": "Emilio_20_Bold is an altered version of Emilio_20  and is approximatively 50mm high.",
+    "keywords": [
+        "display",
+        "monogram"
+    ],
     "leading": 200,
     "auto_satin": false,
     "reversible": false,

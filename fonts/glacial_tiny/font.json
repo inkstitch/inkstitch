@@ -1,6 +1,9 @@
 {
     "name": "Glacial Tiny 60 AGS",
     "description": "Glacial is a very tiny font: at 100%,  M stands at 5.6mm. Thin thread (60 wt ) and thin needle (8/60) are mandatory. The glyphs cover many European languages. It can be reduced down to 40% and enlarged up to 150% ",
+    "keywords": [
+        "sans_serif"
+    ],
     "leading": 35,
     "auto_satin": false,
     "reversible": true,

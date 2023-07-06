@@ -1,6 +1,9 @@
 {
     "name": "Geneva Simple Sans",
     "description": "Suitable for small fonts (6 to 15mm)",
+    "keywords": [
+        "sans_serif"
+    ],
     "leading": 60,
     "auto_satin": true,
     "reversible": true,

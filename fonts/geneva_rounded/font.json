@@ -1,6 +1,9 @@
 {
     "name": "Geneva Simple Sans Rounded",
     "description": "Suitable for small fonts (8 to 20 mm)",
+    "keywords": [
+        "sans_serif"
+    ],
     "leading": 60,
     "auto_satin": true,
     "reversible": true,

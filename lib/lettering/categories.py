@@ -16,11 +16,14 @@ class FontCategory:
 
 
 FONT_CATEGORIES = [
-    FontCategory('crossstitch', _("Crossstitch")),
     FontCategory('applique', _("Applique")),
-    FontCategory('monogram', _("Monogram")),
-    FontCategory('serif', _("Serif")),
-    FontCategory('sans_serif', _("Sans Serif")),
+    FontCategory('crossstitch', _("Crossstitch")),
+    FontCategory('display', _('Display')),
     FontCategory('handwriting', _("Handwriting")),
-    FontCategory('display', _('Display'))
+    FontCategory('italic', _("Italic")),
+    FontCategory('monogram', _("Monogram")),
+    FontCategory('multicolor', _('Multicolor')),
+    FontCategory('running_stitch', _('Running Stitch')),
+    FontCategory('sans_serif', _("Sans Serif")),
+    FontCategory('serif', _("Serif"))
 ]
