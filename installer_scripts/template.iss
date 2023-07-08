@@ -1,7 +1,8 @@
 ﻿#define PROGRAMNAME "Ink/Stitch"
 ;inkstitch-version
 #define AppId "org.inkstitch.app"
-#define MyAppPublisher "Inkstitch Open Source Community"
+#define AppDescription "InkStitch: an Inkscape extension for machine embroidery design."
+#define AppPublisher "InkStitch Open Source Community"
 #define URL "https://inkstitch.org/"
 ;inkstitch-year
 #define PATHTODIST "..\dist"
@@ -30,7 +31,7 @@ Compression=lzma
 SolidCompression=yes
 VersionInfoCompany={#URL}
 VersionInfoCopyright=Copyright (C) {#COPYRIGHT}
-VersionInfoDescription=An open-source machine embroidery design platform based on Inkscape.
+VersionInfoDescription={#AppDescription}
 VersionInfoTextVersion={#VERSION}
 VersionInfoVersion=1.0
 WizardStyle=modern
