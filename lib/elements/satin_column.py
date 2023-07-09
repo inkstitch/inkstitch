@@ -825,6 +825,38 @@ class SatinColumn(EmbroideryElement):
 
         return SatinColumn(node)
 
+    def merge(self, satin):
+        """Merge this satin with another satin
+
+        This method expects that the provided satin continues on directly after
+        this one, as would be the case, for example, if the two satins were the
+        result of the split() method.
+
+        Returns a new SatinColumn instance that combines the rails and rungs of
+        this satin and the provided satin.  A rung is added at the end of this
+        satin.
+        """
+        rails = [self.flatten_subpath(rail) for rail in self.rails]
+        other_rails = [satin.flatten_subpath(rail) for rail in satin.rails]
+
+        if len(rails) != 2 or len(other_rails) != 2:
+            # weird non-satin things, give up and don't merge
+            return self
+
+        rails[0].extend(other_rails[0])
+        rails[1].extend(other_rails[1])
+
+        rungs = [self.flatten_subpath(rung) for rung in self.rungs]
+        other_rungs = [satin.flatten_subpath(rung) for rung in satin.rungs]
+
+        # add a rung at the end of my satin
+        rungs.append([rails[0][-1], rails[1][-1]])
+
+        # add on the other satin's rungs
+        rungs.extend(other_rungs)
+
+        return self._csp_to_satin(point_lists_to_csp(rails + rungs))
+
     @property
     @cache
     def center_line(self):

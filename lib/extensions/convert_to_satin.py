@@ -13,7 +13,7 @@ from numpy import diff, setdiff1d, sign
 from shapely import geometry as shgeo
 
 from .base import InkstitchExtension
-from ..elements import Stroke
+from ..elements import SatinColumn, Stroke
 from ..i18n import _
 from ..svg import PIXELS_PER_MM, get_correction_transform
 from ..svg.tags import INKSTITCH_ATTRIBS
@@ -57,16 +57,21 @@ class ConvertToSatin(InkstitchExtension):
                     # ignore paths with just one point -- they're not visible to the user anyway
                     continue
 
-                for satin in self.convert_path_to_satins(path, element.stroke_width, style_args, correction_transform, path_style):
-                    parent.insert(index, satin)
-                    index += 1
+                satins = list(self.convert_path_to_satins(path, element.stroke_width, style_args, correction_transform, path_style))
+
+                if satins:
+                    joined_satin = satins[0]
+                    for satin in satins[1:]:
+                        joined_satin = joined_satin.merge(satin)
+
+                    parent.insert(index, joined_satin.node)
 
             parent.remove(element.node)
 
     def convert_path_to_satins(self, path, stroke_width, style_args, correction_transform, path_style, depth=0):
         try:
             rails, rungs = self.path_to_satin(path, stroke_width, style_args)
-            yield self.satin_to_svg_node(rails, rungs, correction_transform, path_style)
+            yield SatinColumn(self.satin_to_svg_node(rails, rungs, correction_transform, path_style))
         except SelfIntersectionError:
             # The path intersects itself.  Split it in two and try doing the halves
             # individually.
