@@ -81,27 +81,26 @@ class ConvertToSatin(InkstitchExtension):
                 # getting nowhere.  Just give up on this section of the path.
                 return
 
-            half = int(len(path) / 2.0)
-            halves = [path[:half + 1], path[half:]]
+            halves = self.split_path(path)
 
             for path in halves:
                 for satin in self.convert_path_to_satins(path, stroke_width, style_args, correction_transform, path_style, depth=depth + 1):
                     yield satin
 
-    def fix_loop(self, path):
-        if path[0] == path[-1]:
-            # Looping paths seem to confuse shapely's parallel_offset().  It loses track
-            # of where the start and endpoint is, even if the user explicitly breaks the
-            # path.  I suspect this is because parallel_offset() uses buffer() under the
-            # hood.
-            #
-            # To work around this we'll introduce a tiny gap by nudging the starting point
-            # toward the next point slightly.
-            start = Point(*path[0])
-            next = Point(*path[1])
-            direction = (next - start).unit()
-            start += 0.01 * direction
-            path[0] = start.as_tuple()
+    def split_path(self, path):
+        half = len(path) // 2
+        halves = [path[:half], path[half:]]
+
+        start = Point.from_tuple(halves[0][-1])
+        end = Point.from_tuple(halves[1][0])
+
+        midpoint = (start + end) / 2
+        midpoint = midpoint.as_tuple()
+
+        halves[0].append(midpoint)
+        halves[1] = [midpoint] + halves[1]
+
+        return halves
 
     def remove_duplicate_points(self, path):
         path = [[round(coord, 4) for coord in point] for point in path]
