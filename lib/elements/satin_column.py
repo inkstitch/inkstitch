@@ -698,7 +698,7 @@ class SatinColumn(EmbroideryElement):
         new SatinColumn's node will not be in the SVG document.
         """
 
-        return self._csp_to_satin(self.csp)
+        return self._csp_to_satin(self.csp, True)
 
     def split(self, split_point):
         """Split a satin into two satins at the specified point
@@ -814,13 +814,12 @@ class SatinColumn(EmbroideryElement):
     def _path_list_to_satins(self, path_list):
         return self._csp_to_satin(line_strings_to_csp(path_list))
 
-    def _csp_to_satin(self, csp):
+    def _csp_to_satin(self, csp, remove_transform=False):
         node = deepcopy(self.node)
         d = paths.CubicSuperPath(csp).to_path()
         node.set("d", d)
 
-        # we've already applied the transform, so get rid of it
-        if node.get("transform"):
+        if remove_transform and node.get("transform"):
             del node.attrib["transform"]
 
         return SatinColumn(node)
@@ -843,14 +842,16 @@ class SatinColumn(EmbroideryElement):
             # weird non-satin things, give up and don't merge
             return self
 
-        rails[0].extend(other_rails[0])
-        rails[1].extend(other_rails[1])
+        # remove first node of each other rail before merging (avoid duplicated nodes)
+        rails[0].extend(other_rails[0][1:])
+        rails[1].extend(other_rails[1][1:])
 
         rungs = [self.flatten_subpath(rung) for rung in self.rungs]
         other_rungs = [satin.flatten_subpath(rung) for rung in satin.rungs]
 
-        # add a rung at the end of my satin
-        rungs.append([rails[0][-1], rails[1][-1]])
+        # add a rung in between the two satins and extend it just a litte to ensure it is crossing the rails
+        new_rung = shgeo.LineString([other_rails[0][0], other_rails[1][0]])
+        rungs.append(list(shaffinity.scale(new_rung, 1.2, 1.2).coords))
 
         # add on the other satin's rungs
         rungs.extend(other_rungs)

@@ -319,10 +319,8 @@ class ConvertToSatin(InkstitchExtension):
             # Rotate 90 degrees left to make a normal vector.
             normal = tangent.rotate_left()
 
-            # Travel 75% of the stroke width left and right to make the rung's
-            # endpoints.  This means the rung's length is 150% of the stroke
-            # width.
-            offset = normal * stroke_width * 0.75
+            # Extend the rungs by an offset value to make sure they will cross the rails
+            offset = normal * (stroke_width / 2) * 1.2
             rung_start = rung_center + offset
             rung_end = rung_center - offset
 
