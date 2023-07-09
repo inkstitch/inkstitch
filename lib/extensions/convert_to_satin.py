@@ -51,7 +51,7 @@ class ConvertToSatin(InkstitchExtension):
             path_style = self.path_style(element)
 
             for path in element.paths:
-                path = self.remove_duplicate_points(path)
+                path = self.remove_duplicate_points(self.fix_loop(path))
 
                 if len(path) < 2:
                     # ignore paths with just one point -- they're not visible to the user anyway
@@ -101,6 +101,17 @@ class ConvertToSatin(InkstitchExtension):
         halves[1] = [midpoint] + halves[1]
 
         return halves
+
+    def fix_loop(self, path):
+        if path[0] == path[-1] and len(path) > 1:
+            first = Point.from_tuple(path[0])
+            second = Point.from_tuple(path[1])
+            midpoint = (first + second) / 2
+            midpoint = midpoint.as_tuple()
+
+            return [midpoint] + path[1:] + [path[0], midpoint]
+        else:
+            return path
 
     def remove_duplicate_points(self, path):
         path = [[round(coord, 4) for coord in point] for point in path]
