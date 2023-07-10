@@ -7,22 +7,16 @@ preview_image:
   - url: /assets/images/fonts/digory_doodles_bean.jpg
     height: 28
 ---
+{%- assign font = site.data.fonts.digory_doodles_bean.font -%}
 ![Digory Doodles Bean](/assets/images/fonts/digory_doodles_bean.jpg)
 
 ## Glyphs
 
-This font contains 85 glyphs :
+This font contains  {{ font.glyphs.size }} glyphs:
 
-	
-!"@'(’),-./
-0123456789
-:;=?&ABCDE
-FGHIJKLMNO
-PQRSTUVWXY
-Z\^_`abcde
-fghijklmno
-pqrstuvwxy
-z{}~
+{% for glyph in font.glyphs %}
+{{ glyph }}
+{%- endfor %}
 
 ## Dimensions
 At 100%, this font is approximatively 22 mm (1 inch).
