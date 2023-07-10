@@ -11,14 +11,10 @@ preview_image:
 
 ## Glyphs
 
-This font contains 264 glyphs:
+This font contains {{ font.glyphs.size }} glyphs:
 
-ΑΆΒΓΔΕΈΖΗΉΘΙΊΚΛΜΝΞΟΌΠΡΣΤΥΎΦΧΨΩΏΪΫϜϏϓαβγδεζηθικλμν
-ξοπρςστυφχψωίϊΐύϋΰόώάέήϗϐϑϕϖϰϱ0123456789.,:;!?/()"
-'@·̈̈́ͅ΄∫∞√<>+xyabcdtAÁÂÄÀÅÆBCČÇDÐĎĐEÉÊËÈFGĞHIÍÎÏİÌJKL
-MNÑOÓÔÖÒØÕŒÞPQRŘSŞŠTŤUÚÛÜÙVWXYÝZŽaáâäàåãæbcčçdðďđe
-éêëèfgğhiıíîïìjklmnñoóôöòøõœpÞqrřsşšß
-tťuúûüùvwxyýzž.,!¡?¿«»÷=→
+{% for glyph in font.glyphs %} {{ glyph }} {%- endfor %}
+
 
 
 ## Dimensions
