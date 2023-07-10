@@ -7,12 +7,16 @@ preview_image:
   - url: /assets/images/fonts/magnolia_KOR.jpg
     height: 31
 ---
+{%- assign font = site.data.fonts.magnolia_ KOR.font -%}
 ![Magnolia](/assets/images/fonts/magnolia_KOR.jpg)
+
 ## Glyphs
 
-This font contains 109 glyphs:
+This font contains  {{ font.glyphs.size }} glyphs:
 
-!"%@'’()+,-./0123456789:;<=>?&\_{}°×àâäæçèéêëîïôöùûüÄÖÜßœabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
+{% for glyph in font.glyphs %}
+{{ glyph }}
+{%- endfor %}
 
 ## Dimensions
 
