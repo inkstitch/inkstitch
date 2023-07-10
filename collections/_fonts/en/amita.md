@@ -14,19 +14,11 @@ preview_image:
 ![Amitaclo small](/assets/images/fonts/amitaclo-small.jpg)
 
 ## Glyphs
-Amitaclo  contains 111 glyphs :
-	
-œıüûúùöôóñ
-ïîíëêéèçæä
-âáàßÜÖÆÄ|z
-yxwvutsrqp
-onmlkjihgf
-edcba\ZYXW
-VUTSRQPONM
-LKJIHGFEDC
-BA@?=;:987
-6543210/.-
-,+*)('’@&"!
+
+This font contains {{ font.glyphs.size }} glyphs:
+
+{% for glyph in font.glyphs %} {{ glyph }} {%- endfor %}
+
 
 
 
