@@ -7,7 +7,7 @@ preview_image:
   - url: /assets/images/fonts/aventurina.jpg
     height: 20
 ---
-{%- assign font = site.data.fonts.aveturina.font -%}
+{%- assign font = site.data.fonts.aventurina.font -%}
 ![Aventurina](/assets/images/fonts/aventurina.jpg)
 
 
