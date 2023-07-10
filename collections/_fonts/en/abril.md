@@ -7,6 +7,7 @@ preview_image:
   - url: /assets/images/fonts/abril_en_fleur.jpg
     height: 100
 ---
+{%- assign font = site.data.fonts.abecedaire.font -%}
 ![April En Fleur AGS](/assets/images/fonts/abril_en_fleur.jpg)
 
 ## Glyphs
