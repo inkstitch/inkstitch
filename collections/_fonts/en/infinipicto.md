@@ -7,13 +7,16 @@ preview_image:
   - url: /assets/images/fonts/infinipicto.png
     height: 70
 ---
+{%- assign font = site.data.fonts.infinipicto.font -%}
 ![InfiniPicto](/assets/images/fonts/infinipicto.png)
+
 ## Glyphs
 
-This font contains the 26 glyphs: 
+This font contains  {{ font.glyphs.size }} glyphs:
 
-	ABCDEFGHIJKLMNOPQRSTUVWXYZ
-
+{% for glyph in font.glyphs %}
+{{ glyph }}
+{%- endfor %}
 
 ## Description
 InfiniPicto is a fun font of size approximatively 70 mm containing only the 26 A-Z glyph. Each letter is a pictogram of an object whose name begins with that very letter..... in French
