@@ -7,24 +7,19 @@ preview_image:
   - url: /assets/images/fonts/learning_curve.jpg
     height: 25
 ---
+{%- assign font = site.data.fonts.learning_curve.font -%}
 ![LearningCurve](/assets/images/fonts/learning_curve.jpg)
 
 
 
 ## Glyphs
 
-Learning curve contains 101 glyphs:
-	
-üûùôïîëêéè
-çâàßÎÊÉÈÇÀ
-»«zyxwvuts
-rqponmlkji
-hgfedcbaZY
-XWVUTSRQPO
-NMLKJIHGFE
-DCBA&?>=<9
-876543210/
-.-,+)’('@%!
+This font contains  {{ font.glyphs.size }} glyphs:
+
+{% for glyph in font.glyphs %}
+{{ glyph }}
+{%- endfor %}
+
 
 ## Dimensions
 Used at 100%, this font is approximatively  18mm  (0.7 in).
