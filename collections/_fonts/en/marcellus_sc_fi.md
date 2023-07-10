@@ -7,15 +7,18 @@ preview_image:
   - url: /assets/images/fonts/marcellus_sc_fi.jpg
     height: 29
 ---
+{%- assign font = site.data.fonts.marcelusSC_FI.font -%}
 ![MarcellusSCFI](/assets/images/fonts/marcellus_sc_fi.jpg)
 
 # Glyphes
 
-This font contains 109 glyphs:
-	
-!@'’(),-./0123456789:;=?&ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz¡¿ÄÆÈÖÜàáâäæçèéêëìíîïñòóôöùúûüŒœ
+This font contains  {{ font.glyphs.size }} glyphs:
 
-Note that  lower cases are actually small caps.
+{% for glyph in font.glyphs %}
+{{ glyph }}
+{%- endfor %}
+
+Note that lower cases are actually small caps.
 
 ## Dimensions
 
