@@ -11,10 +11,10 @@ preview_image:
 
 ## Glyphs
 
-This font contains  67 glyphs:
+This font contains {{ font.glyphs.size }} glyphs:
 
-	
-ABCDEFGHIJKLMNOPQRSTUVWXYZµabcçdefghijklmnopqrstuvwxyzß!0123456789?% 
+{% for glyph in font.glyphs %} {{ glyph }} {%- endfor %}
+
 
 
 ## Dimensions
