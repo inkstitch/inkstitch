@@ -10,25 +10,18 @@ preview_image:
     height: 22
 
 ---
+{%- assign font = site.data.fonts.espresso_KOR.font -%}
 ![Espresso KOR](/assets/images/fonts/espresso_KOR.jpg)
 ![Espresso tiny](/assets/images/fonts/espresso_tiny.jpg)
 
 
 ## Glyphs
-This font  contains  113 glyphes :
 
-!%@()*+,-.
-/012345678
-9:;<=>?&AB
-CDEFGHIJKL
-MNOPQRSTUV
-WXYZ[\]^_a
-bcdefghijk
-lmnopqrstu
-vwxyz«'°’»×
-àâäæçèéêëî
-ïôö÷ùûüœßÜ
-ÖÄ
+This fonts contain {{ font.glyphs.size }} glyphs:
+
+{% for glyph in font.glyphs %}
+{{ glyph }}
+{%- endfor %}
 
 ## Remark
 Multiline text may be embroidered alternatively from left to right and  right to left.
