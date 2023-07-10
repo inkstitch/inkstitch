@@ -11,7 +11,7 @@ preview_image:
 
 ![TT Masters](/assets/images/fonts/tt_masters.jpg)
 
-## Glyphes
+## Glyphs
 
 This font contains  {{ font.glyphs.size }} glyphs:
 
