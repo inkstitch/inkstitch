@@ -3,7 +3,8 @@
     "description": "Brock Script is a decorative satin column manuscript font of size approximatively 40mm. It can be enlarged up to 250%. It contains 118 glyphs, covering most western european languages needs.More decorative options are hidden in the µ glyph",
     "keywords": [
         "handwriting",
-        "display"
+        "display",
+        "italic"
     ],
     "leading": 200,
     "auto_satin": false,

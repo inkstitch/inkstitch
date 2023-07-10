@@ -2,7 +2,8 @@
     "name": "Pacificlo tiny",
     "description": "This font is an altered version  of Pacificlo, to allow a greater scaling down. Both thin thread (60) and thin needle (60) are mandatory. The altered embroidery parameters of this font allow to scale down the original Pacificlo font between 25% (for a 5mm font ) and 55 % (for a 11mm font).",
     "keywords": [
-        "handwriting"
+        "handwriting",
+        "tiny"
     ],
     "leading": 100,
     "auto_satin": false,

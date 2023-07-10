@@ -25,5 +25,6 @@ FONT_CATEGORIES = [
     FontCategory('multicolor', _('Multicolor')),
     FontCategory('running_stitch', _('Running Stitch')),
     FontCategory('sans_serif', _("Sans Serif")),
-    FontCategory('serif', _("Serif"))
+    FontCategory('serif', _("Serif")),
+    FontCategory('tiny', _("Tiny"))
 ]

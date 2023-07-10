@@ -3,7 +3,8 @@
     "description": "A tiny 1mm-bean alphabet based on a 24pt Seniors Studio jawn",
     "keywords": [
         "handwriting",
-        "running_stitch"
+        "running_stitch",
+        "tiny"
     ],
    "leading": 40,
     "auto_satin": false,
