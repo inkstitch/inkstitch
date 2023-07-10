@@ -7,6 +7,7 @@ preview_image:
   - url: /assets/images/fonts/garamond.png
     height: 20
 ---
+{%- assign font = site.data.fonts.ags_garamond_latin_grec.font -%}
 ![AGS garamond](/assets/images/fonts/garamond.png)
 
 ## Glyphs
