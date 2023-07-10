@@ -8,6 +8,9 @@ preview_image:
   - url: /assets/images/fonts/geneva_simple_sans_rounded.jpg
     height: 13
 ---
+{%- assign font2 = site.data.fonts.geneva_rounded.font -%}
+{%- assign font1 = site.data.fonts.geneva_simple.font -%}
+
 
 ## Sans
 
@@ -17,8 +20,11 @@ preview_image:
 
 ### Glyphs
 
-This font contains 102 glyphs:
-ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789&#<>:;,'"“”.+@%$*~-=(){}][_/\|!?�ÄÖÜäöü
+This font contains  {{ font1.glyphs.size }} glyphs:
+
+{% for glyph in font1.glyphs %}
+{{ glyph }}
+{%- endfor %}
 
 ## Sans Rounded
 
@@ -27,9 +33,11 @@ ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789&#<>:;,'"“”.+@
 
 ### Glyphes
 
-This font contains 107 glyphs:
-AÄBCDEFGHIJKLMNOÖPQRSTUÜVWXYZaâäbcdeéèfghijklmnoöpqrstuüvwxyz0123456789@<>`^|\*~}{][$%&#!?:,'"“”.;+-=()_/�
+This font contains  {{ font2.glyphs.size }} glyphs:
 
+{% for glyph in font2.glyphs %}
+{{ glyph }}
+{%- endfor %}
 
 ## Dimensions
 
