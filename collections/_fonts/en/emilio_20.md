@@ -15,7 +15,7 @@ preview_image:
  - url: /assets/images/fonts/emilio_tricolore.jpg
    height: 100
 ---
-
+{%- assign font = site.data.fonts.emilio_20.font -%}
 <img 
      src="/assets/images/fonts/emilio_simple.png"
      alt="Emilio20" height="21">
@@ -41,8 +41,11 @@ preview_image:
      alt="Comparaison des Emilio 20" >
      
 ## Glyphs
-Each of the five fonts contains 36 glyphs:
-0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ
+Each of the five fonts  contains  {{ font.glyphs.size }} glyphs:
+
+{% for glyph in font.glyphs %}
+{{ glyph }}
+{%- endfor %}
 
 ## Dimensions
 
