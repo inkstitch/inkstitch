@@ -7,14 +7,16 @@ preview_image:
   - url: /assets/images/fonts/namskout_AGS.jpg
     height: 100
 ---
+{%- assign font = site.data.fonts.namskout_AGS.font -%}
 ![NamskoutAGS](/assets/images/fonts/namskout_AGS.jpg)
 
 ## Glyphs
-This font contains 43 glyphs :
-	
-!?&0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZÄÈÖÜ
 
+This font contains  {{ font.glyphs.size }} glyphs:
 
+{% for glyph in font.glyphs %}
+{{ glyph }}
+{%- endfor %}
 
 ## Dimensions
 At 100%, it is approximatively  100 mm tall (4 inches)
