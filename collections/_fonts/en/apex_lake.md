@@ -9,6 +9,10 @@ preview_image:
  - url: /assets/images/fonts/apex_simple_AGS.jpg
    height: 35
 ---
+{%- assign font1 = site.data.fonts.apex_lake.font -%}
+{%- assign font2 = site.data.fonts.apex_simple_AGS.font -%}
+
+
 ![Apex Lake](/assets/images/fonts/apex_lake.jpg)
 
 ![Apex Simple](/assets/images/fonts/apex_simple_AGS.jpg)
@@ -18,15 +22,18 @@ preview_image:
 ## Glyphs
 Commun glyphs are identical (up to decoration)
 ### Apex Lake
-Apex lake contains 38 glyphs:
+This font contains  {{ font1.glyphs.size }} glyphs:
 
-?!0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ
+{% for glyph in font1.glyphs %}
+{{ glyph }}
+{%- endfor %}
 
 ### Apex Simple AGS
-Apex Simple AGS contains 124 glyphs:
+This font contains  {{ font2.glyphs.size }} glyphs:
 
-üûúùöõôóòñïîíìëêéèçäâáàßÜÛÚÙÖÔÓÒÏÎÍÌËÊÉÈÄÂÁÀ¿»«¡zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA&!?;:9876543210/.,)('’@"
-
+{% for glyph in font2.glyphs %}
+{{ glyph }}
+{%- endfor %}
 
 ## Remark
 Apex Lake est a quite large ornemental font. Each letter comes with a square frame. 
