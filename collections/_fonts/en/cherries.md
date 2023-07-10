@@ -35,7 +35,7 @@ This font contains  {{ font1.glyphs.size }} glyphs:
 
 This font contains  {{ font2.glyphs.size }} glyphs:
 
-{% for glyph in font1.glyphs %}
+{% for glyph in font2.glyphs %}
 {{ glyph }}
 {%- endfor %}
 
