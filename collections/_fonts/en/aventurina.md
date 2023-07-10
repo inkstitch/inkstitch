@@ -7,13 +7,17 @@ preview_image:
   - url: /assets/images/fonts/aventurina.jpg
     height: 20
 ---
+{%- assign font = site.data.fonts.aveturina.font -%}
 ![Aventurina](/assets/images/fonts/aventurina.jpg)
+
 
 ## Glyphs
 
-Aventurina contains 142 glyphs :
+This font contains  {{ font.glyphs.size }} glyphs:
 
-!"#@'()+,- ./01234567 89:;=?&ABC DEFGHIJKLM NOPQRSTUVW XYZabcdefg hijklmnopq rstuvwxyz~ ¡¿ÀÁÂÃÄÅÆÇ ÈÉÊËÌÍÎÏÑÒ ÓÔÕÖØÙÚÛÜÝ Þßàáâãäåæç èéêëìíîïñò óôõöùúûüýÿ Œœ
+{% for glyph in font.glyphs %}
+{{ glyph }}
+{%- endfor %}
 
 ## Dimensions:
 At 100%, Aventurina is approximatively  20 mm tall (3/4 inches)
