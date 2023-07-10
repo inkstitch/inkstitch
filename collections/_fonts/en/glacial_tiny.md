@@ -7,28 +7,16 @@ preview_image:
   - url: /assets/images/fonts/glacial_tiny_60_AGS.jpg
     height: 8
 ---
+{%- assign font = site.data.fonts.glacial_tiny.font -%}
 ![glacial_tiny](/assets/images/fonts/glacial_tiny_60_AGS.jpg)
 
 ## Glyphs
 
-This font contains 159 glyphs:
-	
-!"»Øø#$€%@
-'’()*+,-./
-0123456789
-:;<=>?&ABC
-DEFGHIJKLM
-NOPQRSTUVW
-XYZ^`abcde
-fghijklmno
-pqrstuvwxy
-z~ÀÁÂÃÄÅÆŒ
-ÇÈÉÊËÌÍÎÏÑ
-ÒÓÔÕÖ×ÙÚÛÜ
-Ýßàáâãäåæœ
-çèéêëìíîïñ
-òóôõöúùûüč
-ČřŘŠšŽžÐÞ
+This font contains  {{ font.glyphs.size }} glyphs:
+
+{% for glyph in font.glyphs %}
+{{ glyph }}
+{%- endfor %}
 
 ## Remark 
 This font allows  multiline text to be embroidered alternatively from left to right and from right to left.
