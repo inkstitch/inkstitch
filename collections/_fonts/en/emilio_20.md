@@ -44,7 +44,7 @@ preview_image:
 Each of the five fonts  contains  {{ font.glyphs.size }} glyphs:
 
 {% for glyph in font.glyphs %}
-{{ glyph }}
+{{ glyph | escape }}
 {%- endfor %}
 
 ## Dimensions

@@ -26,7 +26,7 @@ preview_image:
 This font contains  {{ font1.glyphs.size }} glyphs:
 
 {% for glyph in font1.glyphs %}
-{{ glyph }}
+{{ glyph | escape }}
 {%- endfor %}
 
 ### Roman AGS Bicolor
@@ -34,7 +34,7 @@ This font contains  {{ font1.glyphs.size }} glyphs:
 This font contains  {{ font2.glyphs.size }} glyphs:
 
 {% for glyph in font2.glyphs %}
-{{ glyph }}
+{{ glyph | escape }}
 {%- endfor %}
 
 ## Dimensions

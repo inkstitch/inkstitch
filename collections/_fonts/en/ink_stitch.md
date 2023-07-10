@@ -21,7 +21,7 @@ preview_image:
 Both fonts contain  {{ font.glyphs.size }} glyphs:
 
 {% for glyph in font.glyphs %}
-{{ glyph }}
+{{ glyph | escape }}
 {%- endfor %}
 
 ## Dimensions

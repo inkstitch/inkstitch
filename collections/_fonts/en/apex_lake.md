@@ -28,7 +28,7 @@ Commun glyphs are identical (up to decoration)
 This font contains  {{ font1.glyphs.size }} glyphs:
 
 {% for glyph in font1.glyphs %}
-{{ glyph }}
+{{ glyph | escape }}
 {%- endfor %}
 
 ### Apex Simple AGS

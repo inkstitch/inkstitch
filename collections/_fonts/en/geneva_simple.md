@@ -23,7 +23,7 @@ preview_image:
 This font contains  {{ font1.glyphs.size }} glyphs:
 
 {% for glyph in font1.glyphs %}
-{{ glyph }}
+{{ glyph | escape }}
 {%- endfor %}
 
 ## Sans Rounded
