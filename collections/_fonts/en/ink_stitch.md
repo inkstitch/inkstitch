@@ -11,14 +11,18 @@ preview_image:
     height: 19
     title: "Ink/Stitch Medium"
 ---
+{%- assign font = site.data.fonts.small_font.font -%}
 ![Ink/Stitch Small](/assets/images/fonts/inkstitch_small.jpg)
 ![Ink/Stitch Medium](/assets/images/fonts/inkstitch_medium.jpg)
 
 
 ## Glyphs
 
-Both fonts  contains  the 89 glyphs :
-ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789ÄÖÜäößü@<>:,'"“”.+-=()_/�#
+Both fonts contain  {{ font.glyphs.size }} glyphs:
+
+{% for glyph in font.glyphs %}
+{{ glyph }}
+{%- endfor %}
 
 ## Dimensions
 
