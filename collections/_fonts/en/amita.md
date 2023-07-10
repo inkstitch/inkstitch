@@ -9,13 +9,14 @@ preview_image:
   - url: /assets/images/fonts/amitaclo.jpg
     height: 30
 ---
+{%- assign font = site.data.fonts.amitaclo.font -%}
 ![Amitaclo](/assets/images/fonts/amitaclo.jpg)
 
 ![Amitaclo small](/assets/images/fonts/amitaclo-small.jpg)
 
 ## Glyphs
 
-This font contains {{ font.glyphs.size }} glyphs:
+These fonts contain {{ font.glyphs.size }} glyphs:
 
 {% for glyph in font.glyphs %} {{ glyph }} {%- endfor %}
 
