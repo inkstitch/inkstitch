@@ -9,16 +9,19 @@ preview_image:
   - url: /assets/images/fonts/sortefax_medium.jpg
     height: 90
 ---
+{%- assign font = site.data.fonts.sortefaxXL.font -%}
 ![SortefaxXL](/assets/images/fonts/sortefaxXL.jpg)
 
 ![Sortefax_medium](/assets/images/fonts/sortefax_medium.jpg)
 
-## Glyphes
-This fonts contains  47 glyphs:
+## Glyphs
 
-- ABCDEFGHIJKLMNOPQRSTUVWXYZ
-- 0123456789
-- ?.:;,([{)]}&
+Both fonts contain  {{ font.glyphs.size }} glyphs:
+
+{% for glyph in font.glyphs %}
+{{ glyph }}
+{%- endfor %}
+
 
 **Remark:** :;,.(){}[]  are used to store frames.
 {: .notice--info }
