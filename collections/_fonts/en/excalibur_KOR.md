@@ -7,27 +7,16 @@ preview_image:
   - url: /assets/images/fonts/excalibur_KOR.jpg
     height: 19
 ---
+{%- assign font = site.data.fonts.excalibur_KOR.font -%}
 ![ExcaliburKOR](/assets/images/fonts/excalibur_KOR.jpg)
 
 ## Glyphs
 
-This font contains 144 glyphs:
+This font contains  {{ font.glyphs.size }} glyphs:
 
-•„”“’‘—–œŒ
-üûúùøöõôóò
-ñïîíìëêéèç
-æåäãâáàßÜÛ
-ÚÙØÖÕÔÓÒÑÏ
-ÎÍÌËÊÉÈÇÆÅ
-ÄÃÂÁÀ»«zyx
-wvutsrqpon
-mlkjihgfed
-cbaZYXWVUT
-SRQPONMLKJ
-IHGFEDCBA?
-;:98765432
-10/.-,*)('
-&%"!
+{% for glyph in font.glyphs %}
+{{ glyph }}
+{%- endfor %}
 
 ## Dimensions
 
