@@ -7,23 +7,16 @@ preview_image:
   - url: /assets/images/fonts/brockscript.jpg
     height: 45
 ---
+{%- assign font = site.data.fonts.Brockscript.font -%}
 ![Brockscript](/assets/images/fonts/brockscript.jpg)
 
 ## Glyphs
 
-This font contains the 119	glyphs :
-!"&'(),-./
-0123456789
-:;=?@ABCDE
-FGHIJKLMNO
-PQRSTUVWXY
-Zabcdefghi
-jklmnopqrs
-tuvwxyz{}~
-œ¡¨´¿ÀÁÄÈÑ
-ÖÜßàáâãäæç
-èéêëìíîïñò
-óôõöùúûüµ
+This font contains  {{ font.glyphs.size }} glyphs:
+
+{% for glyph in font.glyphs %}
+{{ glyph }}
+{%- endfor %}
 
 ## Dimensions
 
