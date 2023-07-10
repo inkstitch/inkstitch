@@ -9,6 +9,8 @@ preview_image:
   - url: /assets/images/fonts/roman_AGS_bicolor.jpg
     height: 28
 ---
+{%- assign font1 = site.data.fonts.roman_ags.font -%}
+{%- assign font2 = site.data.fonts.roman_ags_bicolor.font -%}
 
 <img 
      src="/assets/images/fonts/roman_AGS.jpg"
@@ -21,12 +23,19 @@ preview_image:
 
 ## Glyphs
 ### Roman AGS 
-This font contains 102 glyphs :	
-!"@'()+,-./0123456789:;?&ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzÄÆÖÜßàáâäæçèéêëîïôöùûüŒœ
+This font contains  {{ font1.glyphs.size }} glyphs:
+
+{% for glyph in font1.glyphs %}
+{{ glyph }}
+{%- endfor %}
 
 ### Roman AGS Bicolor
-This font contains 31 glyphs :		
-ABCDEFGHIJKLMNOPQRSTUVWXYZÄÆÖÜŒ
+
+This font contains  {{ font2.glyphs.size }} glyphs:
+
+{% for glyph in font2.glyphs %}
+{{ glyph }}
+{%- endfor %}
 
 ## Dimensions
 At 100%, these fonts are approximatively  28 mm (1 inch) tall .
