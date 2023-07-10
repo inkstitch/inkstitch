@@ -9,6 +9,10 @@ preview_image:
   - url: /assets/images/fonts/cherryforkaalleen.jpg
     height: 75
 ---
+{%- assign font1 = site.data.fonts.cherryforinkstitch.font -%}
+{%- assign font2 = site.data.fonts.cherryforkaalleen.font -%}
+
+
 <img 
      src="/assets/images/fonts/cherry_for_inkstitch.jpg"
      alt="Roman AGS" height="48">
@@ -20,13 +24,20 @@ preview_image:
 
 ## Glyphes
 ### Cherry for Ink/Stitch
-contains these 74	glyphs:
-ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890.:;,?!()'"-`
+
+This font contains  {{ font1.glyphs.size }} glyphs:
+
+{% for glyph in font1.glyphs %}
+{{ glyph }}
+{%- endfor %}
 
 ### Cherry for Kaalleen
-contains these 36 glyphs :
-ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890
 
+This font contains  {{ font2.glyphs.size }} glyphs:
+
+{% for glyph in font1.glyphs %}
+{{ glyph }}
+{%- endfor %}
 
 ## Dimensions
 ### Cherry for Ink/Stitch
