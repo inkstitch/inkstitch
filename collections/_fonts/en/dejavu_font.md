@@ -7,24 +7,18 @@ preview_image:
   - url: /assets/images/fonts/dejavu_serif.jpg
     height: 22
 ---
+{%- assign font = site.data.fonts.dejavufont.font -%}
 ## Serif Semi-condensed
 
 ![Deja Vue Serif Semi-condensed](/assets/images/fonts/dejavu_serif.jpg)
 
-## Glyphe 
-DejaVu Serif contains  92 glyphs :
+## Glyphs
 
-	
-012345678
-9AÄBCDEFGH
-IJKLMNOÖPQ
-RSTUÜVWXYZ
-aâàäbcçdeé
-èêëfghiîïj
-klmnoöôpqr
-stuùüûvwxy
-z@ß.'")(!;
-,?
+This font contains  {{ font.glyphs.size }} glyphs:
+
+{% for glyph in font.glyphs %}
+{{ glyph }}
+{%- endfor %}
 
 ## Dimensions
 
