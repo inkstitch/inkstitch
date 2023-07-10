@@ -20,8 +20,11 @@ preview_image:
 
 
 ## Glyphs
+
 Commun glyphs are identical (up to decoration)
+
 ### Apex Lake
+
 This font contains  {{ font1.glyphs.size }} glyphs:
 
 {% for glyph in font1.glyphs %}
@@ -29,6 +32,7 @@ This font contains  {{ font1.glyphs.size }} glyphs:
 {%- endfor %}
 
 ### Apex Simple AGS
+
 This font contains  {{ font2.glyphs.size }} glyphs:
 
 {% for glyph in font2.glyphs %}
