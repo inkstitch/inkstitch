@@ -7,14 +7,16 @@ preview_image:
   - url: /assets/images/fonts/manuscript_gothisch.jpg
     height: 30
 ---
+{%- assign font = site.data.fonts.manuskript_gotisch.font -%}
 ![ManuscriptGothisch](/assets/images/fonts/manuscript_gothisch.jpg)
 
 ## Glyphs
-This font contains 105 glyphs:
 
+This font contains  {{ font.glyphs.size }} glyphs:
 
-!"@'’(),-./0123456789:;<=>?&ACBDEFGHIJKLMNOPQRSTUVWXYZ\abcdefghijkmnopqrstuvwxyzÄÆÔÖÜßàâäæçèéêëîïôöùûüŒœl
-
+{% for glyph in font.glyphs %}
+{{ glyph }}
+{%- endfor %}
 
 ## Dimensions
 
