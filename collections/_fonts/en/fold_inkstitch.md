@@ -7,15 +7,16 @@ preview_image:
   - url: /assets/images/fonts/fold_inkstitch.jpg
     height: 63
 ---
+{%- assign font = site.data.fonts.fold_inkstitch.font -%}
 ![FoldInkstitch](/assets/images/fonts/fold_inkstitch.jpg)
 
 ## Glyphs
-This font contains 40 glyphs
 
-!'01234567
-89?ABCDEFG
-HIJKLMNOPQ
-RSTUVWXYZ-
+This font contains  {{ font.glyphs.size }} glyphs:
+
+{% for glyph in font.glyphs %}
+{{ glyph }}
+{%- endfor %}
 
 ## Dimensions
 
