@@ -9,6 +9,10 @@ preview_image:
   - url: /assets/images/fonts/auberge_marif.jpg
     height: 53
 ---
+{%- assign font = site.data.fonts.auberge_marif.font -%}
+
+
+
 
 ![auberge_marif](/assets/images/fonts/auberge_marif.jpg)
 
@@ -16,21 +20,12 @@ preview_image:
 
 ## Glyphs
 
-This font contains  132 Glyphs:
-!?"''()+,-
-.012345678
-9:;=?ABCDE
-FGHIJKLMNO
-PQRSTUVWXY
-Zabcdefghi
-jklmnopqrs
-tuvwxyz«»À
-ÁÂÃÆÇÈÉÊËÌ
-ÍÎÏÑÔÕÖÚÛÜ
-ßàáâãæçèéê
-ëìíîïñôõöù
-úûüĨĩĽľŒœŨ
-ũ’
+This font contains  {{ font.glyphs.size }} glyphs:
+
+{% for glyph in font.glyphs %}
+{{ glyph }}
+{%- endfor %}
+
 ## Dimensions:
 
 At 100%, this font is roughtly 35 mm high.
