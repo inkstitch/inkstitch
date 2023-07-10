@@ -7,16 +7,16 @@ preview_image:
   - url: /assets/images/fonts/kaushan_script_MAM.jpg
     height: 36
 ---
+{%- assign font = site.data.fonts.kaushan_script_MAM.font -%}
 ![KaushanScript](/assets/images/fonts/kaushan_script_MAM.jpg)
 
 ## Glyphs
 
-This font contains 62 glyphs:
+This font contains  {{ font.glyphs.size }} glyphs:
 
-
-0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz
-
-
+{% for glyph in font.glyphs %}
+{{ glyph }}
+{%- endfor %}
 
 
 
