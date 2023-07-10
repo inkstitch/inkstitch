@@ -11,7 +11,6 @@ preview_image:
 ## Bold Italic
 
 ![Lobster AGS](/assets/images/fonts/lobster_AGS.jpg)
-## Glyphs
 
 ## Glyphes
 
