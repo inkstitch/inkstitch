@@ -45,4 +45,4 @@ Both fonts are reversible : a multi line embroidery  may be  embroidered in alte
 
 [Download Ink/Stitch Small Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/small_font/LICENSE)
 
-[Download Ink/Stitch Mediu Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/medium_font/LICENSE)
+[Download Ink/Stitch Medium Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/medium_font/LICENSE)
