@@ -16,28 +16,27 @@ preview_image:
 
 ![Geneva Simple Sans](/assets/images/fonts/geneva_simple_sans.jpg)
 
-
-
 ### Glyphs
 
 This font contains  {{ font1.glyphs.size }} glyphs:
 
-{% for glyph in font1.glyphs %}
-{{ glyph | escape }}
-{%- endfor %}
+```
+{{ font1.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
 
 ## Sans Rounded
 
 ![Geneva Simple Sans](/assets/images/fonts/geneva_simple_sans_rounded.jpg)
 
-
 ### Glyphes
 
 This font contains  {{ font2.glyphs.size }} glyphs:
 
-{% for glyph in font2.glyphs %}
-{{ glyph }}
-{%- endfor %}
+```
+{{ font2.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
 
 ## Dimensions
 
@@ -48,7 +47,6 @@ They can be scaled up to  200% (approx 28 mm, 1 inch) or scaled down to 75% (app
 ## In real life
 
 {% include folder-galleries path="fonts/geneva/" %}
-
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/geneva_simple/LICENSE)
 

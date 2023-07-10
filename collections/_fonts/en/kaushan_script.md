@@ -14,19 +14,16 @@ preview_image:
 
 This font contains  {{ font.glyphs.size }} glyphs:
 
-{% for glyph in font.glyphs %}
-{{ glyph | escape }}
-{%- endfor %}
-
-
-
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
 
 ## Dimensions
 
 At 100%, this font is approximatively 30 mm (1.25 inch) high.
 
 It can be scaled up to 200% (approx. 60 mm, 2.5 inches) or scaled down to  80% (approx.  24 mm, 1 inch).
-
 
 ## In real life
 

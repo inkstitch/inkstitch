@@ -14,13 +14,14 @@ preview_image:
 
 This font contains  {{ font.glyphs.size }} glyphs:
 
-{% for glyph in font.glyphs %}
-{{ glyph | escape }}
-{%- endfor %}
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
 
 ## Remark 
-This font allows  multiline text to be embroidered alternatively from left to right and from right to left.
 
+This font allows  multiline text to be embroidered alternatively from left to right and from right to left.
 
 ## Warning
 
@@ -37,16 +38,12 @@ At 100%, this font is approximatively 7 mm (1/4 inch) high.
 
 It can be scaled up to 140% (approx 11 mm, 0.4 inch) or scaled down to 60% (approx 4.5 mm, 1/6  inch).
 
-
 ![Dimensions Glacialtiny](/assets/images/fonts/Sizing/glacialsizing.jpg)
-
-
 
 ## In real life
 
 On a cushion, a T shirt and  in conjunction with Grand Hotel Marif on an apron 
 
 {% include folder-galleries path="fonts/glacial_tiny/" %}
-
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/glacial_tiny/LICENSE)

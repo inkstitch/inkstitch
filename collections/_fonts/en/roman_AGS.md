@@ -22,22 +22,27 @@ preview_image:
 
 
 ## Glyphs
+
 ### Roman AGS 
+
 This font contains  {{ font1.glyphs.size }} glyphs:
 
-{% for glyph in font1.glyphs %}
-{{ glyph | escape }}
+{% for glyph in font.glyphs %}
+`{{ glyph }}`
 {%- endfor %}
+{: .font-glyphs }
 
 ### Roman AGS Bicolor
 
 This font contains  {{ font2.glyphs.size }} glyphs:
 
-{% for glyph in font2.glyphs %}
-{{ glyph | escape }}
-{%- endfor %}
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
 
 ## Dimensions
+
 At 100%, these fonts are approximatively  28 mm (1 inch) tall .
 They may be scaled up to 130% (approx. 37 mm, 1.5 inches) or down to 80% (approx.  22 mm, 0.8 inch).
 
@@ -51,10 +56,11 @@ Whenever a glyph is present in both fonts, the design shape and size of the glyp
 - Hide those monocolor letters
 
 ## Color sorting
+
 If you use bicolor  letters, you may wish to color sort. It is possible, providing the sorting respects the relative order inside each letter. [This is a way to do it](https://inkstitch.org/en/docs/lettering/#color-sorting)
 
-
 ## In real life
+
 {% include folder-galleries path="fonts/roman_AGS/" %}
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/roman_ags_bicolor/LICENSE)

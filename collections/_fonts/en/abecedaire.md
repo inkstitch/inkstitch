@@ -14,9 +14,10 @@ preview_image:
 
 This font contains  {{ font.glyphs.size }} glyphs:
 
-{% for glyph in font.glyphs %}
-{{ glyph | escape }}
-{%- endfor %}
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
 
 ## Dimensions
 

@@ -14,9 +14,10 @@ preview_image:
 
 This font contains  {{ font.glyphs.size }} glyphs:
 
-{% for glyph in font.glyphs %}
-{{ glyph | escape }}
-{%- endfor %}
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
 
 ## Dimensions
 
@@ -33,8 +34,6 @@ The replacement is up to you, but it is easy in inkscape.
 You could also just skip the holly or replace it by any small drawing of your choice.
 
 And if you do not know how to access µ from your keyboard,  copy it from here and paste it in the lettering  dialog window.
-
-
 
 ## In real life
 

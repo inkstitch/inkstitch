@@ -16,16 +16,16 @@ preview_image:
 
 This font contains  {{ font.glyphs.size }} glyphs:
 
-{% for glyph in font.glyphs %}
-{{ glyph | escape }}
-{%- endfor %}
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
 
 ## Dimensions
 
 Used at  100%, this font is approximatively 18 mm  (2/3 inch) high.
 
 It can be scaled up to  150% (env 27 mm, 1 inch)  or scaled down to 80% (env 14 mm, 1/2 inch).
-
 
 ## Remark
 
@@ -36,6 +36,5 @@ Déja Vu may be embroidered left to right, right to left,  top to bottom orbotto
 Used by itself or with Amitaclo  and Magnolia KOR on conserve jars
 
 {% include folder-galleries path="fonts/dejavu/" %}
-
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/dejavufont/LICENSE)

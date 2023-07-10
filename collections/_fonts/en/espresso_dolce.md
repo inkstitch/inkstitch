@@ -14,17 +14,19 @@ preview_image:
 ![Espresso KOR](/assets/images/fonts/espresso_KOR.jpg)
 ![Espresso tiny](/assets/images/fonts/espresso_tiny.jpg)
 
-
 ## Glyphs
 
 This fonts contain {{ font.glyphs.size }} glyphs:
 
-{% for glyph in font.glyphs %}
-{{ glyph | escape }}
-{%- endfor %}
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
 
 ## Remark
+
 Multiline text may be embroidered alternatively from left to right and  right to left.
+
 ## Dimensions
 
 At 100%, this font is approximatively  20 mm  (0.8 inch) tall.
@@ -42,12 +44,10 @@ That's why in the lettering dialog window, if using Espresso tiny, you will have
 Contrarly to Espresso KOR, Espresso tiny   **MUST** be embroidered with thread and needle smaller than usual.
 A USA 8 (EUR 60) size needle, and 60WT thread **MUST** be used.
 
-
 ## In real life
 
 Espresso KOR used  on a child T shirt
 
 {% include folder-galleries path="fonts/espresso_KOR/" %}
-
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/espresso_KOR/LICENSE)

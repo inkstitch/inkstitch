@@ -21,23 +21,24 @@ preview_image:
      src="/assets/images/fonts/cherryforkaalleen.jpg"
      alt="Roman AGS_bicolor" height="72">
 
-
 ## Glyphes
 ### Cherry for Ink/Stitch
 
 This font contains  {{ font1.glyphs.size }} glyphs:
 
-{% for glyph in font1.glyphs %}
-{{ glyph | escape }}
-{%- endfor %}
+```
+{{ font1.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
 
 ### Cherry for Kaalleen
 
 This font contains  {{ font2.glyphs.size }} glyphs:
 
-{% for glyph in font2.glyphs %}
-{{ glyph | escape }}
-{%- endfor %}
+```
+{{ font2.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
 
 ## Dimensions
 ### Cherry for Ink/Stitch

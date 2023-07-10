@@ -14,9 +14,10 @@ preview_image:
 
 This font contains  {{ font.glyphs.size }} glyphs:
 
-{% for glyph in font.glyphs %}
-{{ glyph | escape }}
-{%- endfor %}
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
 
 ## Dimensions
 
@@ -25,10 +26,9 @@ At 100%, this font is approximatively 20 mm (approx 0.8 inch) tall.
 It may be scaled up to  500% (approx 100 mm 4 inch ) but should not be scaled down.
 
 ## Remarks
+
 This font use Auto Route Satin.
 
 It is possible to stitch lines of text back and forth.
-
-
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/tt_directors/LICENSE)

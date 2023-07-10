@@ -14,11 +14,13 @@ preview_image:
 
 This font contains  {{ font.glyphs.size }} glyphs:
 
-{% for glyph in font.glyphs %}
-{{ glyph | escape }}
-{%- endfor %}
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
 
 ## Dimensions
+
 At 100%, this font is approximatively 22 mm (1 inch).
 It may be scaled up to 200% (approx 44 mm, 2 inches) but may not be reduced.
 

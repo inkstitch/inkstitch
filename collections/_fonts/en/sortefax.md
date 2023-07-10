@@ -18,10 +18,10 @@ preview_image:
 
 Both fonts contain  {{ font.glyphs.size }} glyphs:
 
-{% for glyph in font.glyphs %}
-{{ glyph | escape }}
-{%- endfor %}
-
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
 
 **Remark:** :;,.(){}[]  are used to store frames.
 {: .notice--info }
@@ -50,6 +50,7 @@ Beware, not all frames can directly be used with all letters, in particular larg
 Of course, using Inkscape,  you may easily reposition the frame or resize it or even transform a circle frame  into an ellipse for a tall letter.
 
 ### Sortefax Medium Initials
+
 Sortefax Médium Initials is  smaller but  also simplier.
 
 It is still possible to use frames, but the arranging of the frame and the letter is  not as good as for the XL font.

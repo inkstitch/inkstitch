@@ -546,6 +546,16 @@ div.font-separator-test {
     box-shadow: none !important;
 }
 
+.font-glyphs {
+    background: none !important;
+    color: black !important;
+}
+
+.font-glyphs pre {
+    white-space: break-spaces;
+    padding: 0 !important;
+}
+
 /* Machine Database */
 
 .machine-fileformat:hover { background: #ccc; }

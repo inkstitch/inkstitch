@@ -14,14 +14,14 @@ preview_image:
 
 This font contains  {{ font.glyphs.size }} glyphs:
 
-{% for glyph in font.glyphs %}
-{{ glyph | escape }}
-{%- endfor %}
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
 
 ## Dimensions
 At 100%, Coronaviral  is about  27 mm or 1 inch high.
 Because this font uses manual stitches, it should not be rescaled, or only a tiny amount.
-
 
 ## In real life
 

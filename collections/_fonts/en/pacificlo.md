@@ -18,9 +18,10 @@ preview_image:
 
 This font contains  {{ font.glyphs.size }} glyphs:
 
-{% for glyph in font.glyphs %}
-{{ glyph | escape }}
-{%- endfor %}
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
 
 ## Dimensions
 
@@ -39,12 +40,8 @@ That's why in the lettering dialog window, if using Pacificlo tiny, you will hav
 Contrarily to Pacificlo, Pacificlo tiny font **MUST** be embroidered with thread and needle smaller than usual.
 A USA 8 (EUR 60) size needle, and 60WT thread **MUST** be used.
 
-
-
 ## In real life
 
 {% include folder-galleries path="fonts/pacificlo/" %}
-
-
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/pacificlo/LICENSE)

@@ -14,11 +14,10 @@ preview_image:
 
 This font contains  {{ font.glyphs.size }} glyphs:
 
-{% for glyph in font.glyphs %}
-{{ glyph | escape }}
-{%- endfor %}
-
-
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
 
 ## Dimensions
 
@@ -47,7 +46,6 @@ The two usual parentheses ( and ) are binded to
 You can't use directly the keyboard to access these alternative letters.
 
 Instead some unusual unicode characters have been used to store them. You will have to copy/paste their code from this file to the lettering dialog window.
-
 
 #### Small swashes
 

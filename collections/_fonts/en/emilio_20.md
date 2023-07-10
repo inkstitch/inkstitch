@@ -41,11 +41,13 @@ preview_image:
      alt="Comparaison des Emilio 20" >
      
 ## Glyphs
+
 Each of the five fonts  contains  {{ font.glyphs.size }} glyphs:
 
-{% for glyph in font.glyphs %}
-{{ glyph | escape }}
-{%- endfor %}
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
 
 ## Dimensions
 
@@ -66,7 +68,6 @@ Same dimension as Emilio Bold, but applique ready :
 * second color  is  tackdown. After  that step you need to cut the applique fabric.
 * third color is the satin column.
 
-
 ###  Emilio 20
 
 At 100%, this font is approximatively  50 mm (2 inches) high.
@@ -77,11 +78,12 @@ It can be scaled up to  140% (approx. 70mm, 2.8 inches)  or scaled  down to 70% 
 At 100%, this font is approximatively 100mm (4 inches)
 It may be scaled  up to 120% (approx. 120 mm, 5 inches) or scaled down to 90% (approx.en 90 mm, 3.5 inches).
 
-
 ## Color sorting
+
 If you embroider several letters, you may wish to color sort. It is possible, providing the sorting respects the relative order inside each letter. [This is a way to do it](https://inkstitch.org/en/docs/lettering/#color-sorting)
 
 ## In real life
+
 {% include folder-galleries path="fonts/emilio-20/" %}
 
 [Download Emilio Simple Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/emilio_20_simple/LICENSE)

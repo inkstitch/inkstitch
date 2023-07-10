@@ -14,9 +14,10 @@ preview_image:
 
 This font contains  {{ font.glyphs.size }} glyphs:
 
-{% for glyph in font.glyphs %}
-{{ glyph | escape }}
-{%- endfor %}
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
 
 ## Dimensions
 
@@ -29,7 +30,5 @@ It can be scaled up to 120% (approx. 60 mm, 2.4 inches) or scaled down to 80% (a
 On cushions, towels, T shirt, fleece
 
 {% include folder-galleries path="fonts/chopin/" %}
-
-
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/chopin/LICENSE)

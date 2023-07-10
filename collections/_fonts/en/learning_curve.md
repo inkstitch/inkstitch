@@ -10,18 +10,17 @@ preview_image:
 {%- assign font = site.data.fonts.learning_curve.font -%}
 ![LearningCurve](/assets/images/fonts/learning_curve.jpg)
 
-
-
 ## Glyphs
 
 This font contains  {{ font.glyphs.size }} glyphs:
 
-{% for glyph in font.glyphs %}
-{{ glyph | escape }}
-{%- endfor %}
-
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
 
 ## Dimensions
+
 Used at 100%, this font is approximatively  18mm  (0.7 in).
 It can be scaled up to 200% (approx 36 mm, 1.5 inches) or scaled down to  90% (approx 16 mm, 2/3 inch).
 

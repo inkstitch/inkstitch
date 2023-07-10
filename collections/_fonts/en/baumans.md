@@ -14,9 +14,10 @@ preview_image:
 
 This font contains  {{ font.glyphs.size }} glyphs:
 
-{% for glyph in font.glyphs %}
-{{ glyph | escape }}
-{%- endfor %}
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
  
 ## Remark
 
@@ -27,7 +28,6 @@ Baumans FI is reversible : a multi line embroidery  may be  embroidered in alter
 At 100%, this font is roughly 32 mm high (1.25 in).
 
 It may be scaled up to 150% (approx. 48 mm, 2 inches) or down to 80% (approx. 25mm , 1 inch)
-
 
 ## In real life
 

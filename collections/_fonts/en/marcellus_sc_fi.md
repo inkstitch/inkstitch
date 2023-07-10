@@ -14,9 +14,10 @@ preview_image:
 
 This font contains  {{ font.glyphs.size }} glyphs:
 
-{% for glyph in font.glyphs %}
-{{ glyph | escape }}
-{%- endfor %}
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
 
 Note that lower cases are actually small caps.
 
@@ -27,8 +28,6 @@ At 100%, this font is approximatively 30 mm (1 1/4 inch) high.
 It can be scaled up to 200% (approx. 40 mm, 2.5 inches) or scaled down to 70% (approx. 21 mm, 0.8 inch).
 
 The embroidering parameters allow you to scale up further, but then too long stitches are avoided by spliting the satin stitches you may or not like the effect.
-
-
 
 ## In real life
 

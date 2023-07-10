@@ -12,14 +12,15 @@ preview_image:
 ## Bold Italic
 
 ![Lobster AGS](/assets/images/fonts/lobster_AGS.jpg)
+
 ## Glyphs
 
 This font contains  {{ font.glyphs.size }} glyphs:
 
-{% for glyph in font.glyphs %}
-{{ glyph | escape }}
-{%- endfor %}
-
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
 
 ## Dimensions
 
@@ -27,10 +28,8 @@ At 100%, this font is approximatively 22 mm (0.9 inch) high.
 
 It can be scaled up to 150% (approx. 33 mm, 1 1/4 inches) or scaled down to  80% (approx.  20 mm, 0.8 inch).
 
-
 ## In real life
 
 {% include folder-galleries path="fonts/lobster_ags/" %}
-
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/lobster_AGS/LICENSE)
