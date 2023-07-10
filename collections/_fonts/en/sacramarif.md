@@ -7,26 +7,19 @@ preview_image:
   - url: /assets/images/fonts/sacramarif.jpg
     height: 26
 ---
+{%- assign font = site.data.fonts.sacramarif.font -%}
 ![Sacramarif](/assets/images/fonts/sacramarif.jpg)
 
 
 
 ## Glyphs
 
-Sacramarif contains 112 glyphs:
-	
-ABCDEFGHIJ
-KLMNOPQRST
-UVWXYZabcd
-efghijklmn
-opqrstuvwx
-yzßÀàáâäæÇ
-çÈÉËÊèéêëÍ
-ÎÏïîÙÛùüû0
-123456789#
-+=<>@/'’&(
-)*§.,:;!?«
-»-
+This font contains  {{ font.glyphs.size }} glyphs:
+
+{% for glyph in font.glyphs %}
+{{ glyph }}
+{%- endfor %}
+
 
 ## Dimensions
 At 100%, this font is approximatively 28 mm (1 inch) high.
