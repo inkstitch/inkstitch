@@ -12,6 +12,7 @@ preview_image:
 Dies ist Teil einer kommenden Ink/Stitch-Version und nicht in Ink/Stitch v2.1.2 verfügbar.
 
 ## Schriftzeichen
+
 Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 
 ```
