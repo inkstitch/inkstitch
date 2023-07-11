@@ -7,14 +7,16 @@ preview_image:
   - url: /assets/images/fonts/tt_masters.jpg
     height: 20
 ---
+{%- assign font = site.data.fonts.tt_masters.font -%}
 ![TT Masters](/assets/images/fonts/tt_masters.jpg)
 # Glyphes
 
-Cette fonte contient les 109 glyphes :
+Cette fonte comporte  {{ font.glyphs.size }} glyphes:
 
-
-1234567890§!+"^*-:.;,|<>/\}][{€$@=()&%'AaSsDdFfGgHhJjKkLlÖöÄäQqWwEeRrTtYyUuIiOoPpZzXxCcVvBbNnMm?_‰~©«»±°®´Üü
-
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
 
 
 ## Dimensions
