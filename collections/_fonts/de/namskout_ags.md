@@ -7,13 +7,17 @@ preview_image:
   - url: /assets/images/fonts/namskout_AGS.jpg
     height: 100
 ---
+{%- assign font = site.data.fonts.namskout_AGS.font -%}
 ![NamskoutAGS](/assets/images/fonts/namskout_AGS.jpg)
 
 ## Schriftzeichen
 
-Diese Schrift enthält folgende 43 Schriftzeichen :
-	
-!?&0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZÄÈÖÜ
+Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
+
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
 
 ## Maße
 
