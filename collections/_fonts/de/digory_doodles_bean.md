@@ -7,21 +7,20 @@ preview_image:
   - url: /assets/images/fonts/digory_doodles_bean.jpg
     height: 28
 ---
+{%- assign font = site.data.fonts.digory_doodles_bean.font -%}
 ![Digory Doodles Bean](/assets/images/fonts/digory_doodles_bean.jpg)
 
 ## Schriftzeichen
 
 Diese Schrift enthält 85 Schriftzeichen:
 	
-!"@'(’),-./
-0123456789
-:;=?&ABCDE
-FGHIJKLMNO
-PQRSTUVWXY
-Z\^_`abcde
-fghijklmno
-pqrstuvwxy
-z{}~
+Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
+
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
+
 
 ## Maße
 Bei einer Skalierung auf 100 % ist diese Schrift ungefähr 22 mm hoch (1 Zoll)
