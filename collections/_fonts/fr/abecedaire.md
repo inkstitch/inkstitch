@@ -7,28 +7,18 @@ preview_image:
   - url: /assets/images/fonts/abecedaire.jpg
     height: 14
 ---
-
+{%- assign font = site.data.fonts.abecedaire.font -%}
 ![Abecedaire](/assets/images/fonts/abecedaire.jpg)
 
 ## Glyphes
 
-Cette fonte contient les 154 glyphes :
-!"@'(),012
-3456789:;=
-?&ABCDEFGH
-IJKLMNOPQR
-STUVWXYZ`a
-bcdefghijk
-lmnopqrstu
-vwxyz¡«´¸»
-¿ÀÁÂÃÄÅÆŒÇ
-ÈÉÊËÌÍÎÏÐÑ
-ÒÓÔÕÖØÙÚÛÜ
-ÝŸÞßàáâãäå
-æœçèéêëìíî
-ïðñòóôõöøù
-úûüýþÿčČřŘ
-šŠžŽ
+Cette fonte comporte  {{ font.glyphs.size }} glyphes:
+
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
+
 
 ## Dimensions
 
