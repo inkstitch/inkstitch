@@ -10,27 +10,19 @@ preview_image:
     height: 22
 
 ---
+{%- assign font = site.data.fonts.espresso_KOR.font -%}
 ![Espresso KOR](/assets/images/fonts/espresso_KOR.jpg)
 ![Espresso tiny](/assets/images/fonts/espresso_tiny.jpg)
 
 
-
-
 ## Schriftzeichen
-Diese Schrift enthält folgende 113 Schriftzeichen:
+Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 
-!%@()*+,-.
-/012345678
-9:;<=>?&AB
-CDEFGHIJKL
-MNOPQRSTUV
-WXYZ[\]^_a
-bcdefghijk
-lmnopqrstu
-vwxyz«'°’»×
-àâäæçèéêëî
-ïôö÷ùûüœßÜ
-ÖÄ
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
+
 
 ## Anmerkung
 Diese Schrift kann mit der [Option](https://inkstitch.org/de/docs/lettering/#optionen) 'Sticke Textzeilen vor und zurück" verwendet werden: eine mehrzeilige Stickerei kann von links nach rechts, rechts nach links usw. gestickt werden.
