@@ -6,13 +6,17 @@ preview_image:
   - url: /assets/images/fonts/nick_ainley.png
     height: 7
 ---
+{%- assign font = site.data.fonts.nick_ainley.font -%}
 ![Nick Ainley](/assets/images/fonts/nick_ainley.png)
 
 ## Schriftzeichen
 
-Die Schrift enthält 70 Schriftzeichen:
+Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 
-ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@/!',‘’
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
 
 ## Dimensionen
 
