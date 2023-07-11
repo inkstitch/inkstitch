@@ -7,14 +7,17 @@ preview_image:
   - url: /assets/images/fonts/coronaviral.jpg
     height: 27
 ---
+{%- assign font = site.data.fonts.coronaviral.font -%}
 ![Coronaviral](/assets/images/fonts/coronaviral.jpg)
 
 ## Schriftzeichen
 
-Diese Schrift enthält 107 Schriftzeichen:
-!"@()*,-./0123456789:;?&AÄBCDEÈFGHIJKLMNOÖPQRSTUVWXYZ\_`aäâáàbcçdeëêéèfghiïîíìjklmnñoöôóòpqrstuüûúùvwxyz|Üß
+Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 
-
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
 ## Maße
 
 Bei einer Skalierung auf 100 % ist diese Schrift ungefähr 27 mm hoch (1 Zoll).
