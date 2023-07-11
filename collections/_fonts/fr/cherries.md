@@ -9,6 +9,8 @@ preview_image:
   - url: /assets/images/fonts/cherryforkaalleen.jpg
     height: 75
 ---
+{%- assign font1 = site.data.fonts.cherryforinkstitch.font -%}
+{%- assign font2 = site.data.fonts.cherryforkaalleen.font -%}
 <img 
      src="/assets/images/fonts/cherry_for_inkstitch.jpg"
      alt="Cherry for Inkstitch" height="48">
@@ -19,12 +21,20 @@ preview_image:
 
 ## Glyphes
 ### Cherry for Ink/Stitch
-contient les 74	glyphes :
-ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890.:;,?!()'"-`
+Cette fonte comporte  {{ font1.glyphs.size }} glyphes:
+
+```
+{{ font1.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
 
 ### Cherry for Kaalleen
-contient  les 36 glyphes :
-ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890
+Cette fonte comporte  {{ font2.glyphs.size }} glyphes:
+
+```
+{{ font2.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
 
 
 ## Dimensions
