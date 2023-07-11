@@ -7,15 +7,17 @@ preview_image:
   - url: /assets/images/fonts/namskout_AGS.jpg
     height: 100
 ---
+{%- assign font = site.data.fonts.namskout_AGS.font -%}
 ![NamskoutAGS](/assets/images/fonts/namskout_AGS.jpg)
 
 ## Glyphes
 
-Cette fonte contient les 43 glyphes :
-	
-!?&0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZÄÈÖÜ
+Cette fonte comporte  {{ font.glyphs.size }} glyphes:
 
-
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
 
 ## Dimensions
 
