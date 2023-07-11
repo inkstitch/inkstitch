@@ -7,13 +7,17 @@ preview_image:
   - url: /assets/images/fonts/kaushan_script_MAM.jpg
     height: 36
 ---
+{%- assign font = site.data.fonts.kaushan_script_MAM.font -%}
 ![KaushanScript](/assets/images/fonts/kaushan_script_MAM.jpg)
 
 ## Schriftzeichen
 
-Diese Schrift enthält folgende 62 Schriftzeichen:
+Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 
-0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
 
 ## Maße
 
