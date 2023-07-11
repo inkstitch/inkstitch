@@ -9,6 +9,7 @@ preview_image:
   - url: /assets/images/fonts/espresso_KOR.jpg
     height: 22
 ---
+{%- assign font = site.data.fonts.espresso_KOR.font -%}
 ![Espresso KOR](/assets/images/fonts/espresso_KOR.jpg)
 
 ![Espresso tiny](/assets/images/fonts/espresso_tiny.jpg)
@@ -16,20 +17,14 @@ preview_image:
 
 
 ## Glyphes
-Cette fonte contient les 113 glyphes :
 
-!%@()*+,-.
-/012345678
-9:;<=>?&AB
-CDEFGHIJKL
-MNOPQRSTUV
-WXYZ[\]^_a
-bcdefghijk
-lmnopqrstu
-vwxyz«'°’»×
-àâäæçèéêëî
-ïôö÷ùûüœßÜ
-ÖÄ
+Cette fonte comporte  {{ font.glyphs.size }} glyphes:
+
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
+
 
 ## Remarque 
 Cette fonte permet de broder des textes multilignes alternativement de la gauche vers la droite et de la droite vers la gauche.
