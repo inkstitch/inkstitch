@@ -7,16 +7,18 @@ preview_image:
   - url: /assets/images/fonts/kaushan_script_MAM.jpg
     height: 36
 ---
+{%- assign font = site.data.fonts.kaushan_script_MAM.font -%}
 ![KaushanScript](/assets/images/fonts/kaushan_script_MAM.jpg)
 
 
 ## Glyphes
 
-Cette fonte contient les 62 glyphes :
+Cette fonte comporte  {{ font.glyphs.size }} glyphes:
 
-
-0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz
-
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
 ## Dimensions
 
 Utilisée à 100%, cette fonte fait environ 30 mm.
