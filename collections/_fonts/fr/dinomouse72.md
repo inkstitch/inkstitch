@@ -7,16 +7,19 @@ preview_image:
   - url: /assets/images/fonts/dinomouse72.png
     height: 20
 ---
-
+{%- assign font = site.data.fonts.dinomouse72.font -%}
 ![DinoMouse 72](/assets/images/fonts/dinomouse72.png)
 
 Cette fonte sera dans une prochaine version d'Ink/Stitch version et n'est pas disponible dans Ink/Stitch v2.1.2.
 
 ## Glyphes
 
-Cette fonte contient les 106 glyphes :
-	
-!"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ÀÁÂÃÄÅàáâãäå
+Cette fonte comporte  {{ font.glyphs.size }} glyphes:
+
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
 
 ## Dimensions
 
