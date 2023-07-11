@@ -7,12 +7,17 @@ preview_image:
   - url: /assets/images/fonts/coronaviral.jpg
     height: 27
 ---
+{%- assign font = site.data.fonts.coronaviral.font -%}
 ![Coronaviral](/assets/images/fonts/coronaviral.jpg)
 
 ## Glyphes
 
-Coronaviral contient 107 glyphes :	
-!"&()*,-./0123456789:;?@AÄBCDEÈFGHIJKLMNOÖPQRSTUVWXYZ\_`aäâáàbcçdeëêéèfghiïîíìjklmnñoöôóòpqrstuüûúùvwxyz|Üß
+Cette fonte comporte  {{ font.glyphs.size }} glyphes:
+
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
 
 ## Dimensions
 Utilisée à  100%, Coronaviral  fait environ 27 mm de haut.
