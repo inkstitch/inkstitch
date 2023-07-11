@@ -7,14 +7,18 @@ preview_image:
   - url: /assets/images/fonts/marcellus_sc_fi.jpg
     height: 29
 ---
+{%- assign font = site.data.fonts.marcelusSC_FI.font -%}
 ![MarcellusSCFI](/assets/images/fonts/marcellus_sc_fi.jpg)
 
 
 # Glyphes
 
-Cette fonte contient les 109 glyphes :
-	
-!@'’(),-./0123456789:;=?&ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz¡¿ÄÆÈÖÜàáâäæçèéêëìíîïñòóôöùúûüŒœ
+Cette fonte comporte  {{ font.glyphs.size }} glyphes:
+
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
 
 Notez que les minuscules sont ici en fait des petites majuscules.
 
