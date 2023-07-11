@@ -7,13 +7,17 @@ preview_image:
   - url: /assets/images/fonts/infinipicto.png
     height: 70
 ---
+{%- assign font = site.data.fonts.infinipicto.font -%}
 ![InfiniPicto](/assets/images/fonts/infinipicto.png)
 
 ## Schriftzeichen
 
-Diese Schrift enthält folgende the 26 Schriftzeichen: 
+Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 
-	ABCDEFGHIJKLMNOPQRSTUVWXYZ
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
 
 ## Beschreibung
 
