@@ -7,13 +7,17 @@ preview_image:
   - url: /assets/images/fonts/manuscript_gothisch.jpg
     height: 30
 ---
+{%- assign font = site.data.fonts.manuskript_gotisch.font -%}
 ![ManuscriptGothisch](/assets/images/fonts/manuscript_gothisch.jpg)
 
 ## Schriftzeichen
 
-Diese Schrift enthält folgende 105 Schriftzeichen:
+Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 
-!"@'’(),-./0123456789:;<=>?&ACBDEFGHIJKLMNOPQRSTUVWXYZ\abcdefghijkmnopqrstuvwxyzÄÆÔÖÜßàâäæçèéêëîïôöùûüŒœl
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
 
 ## Maße
 
