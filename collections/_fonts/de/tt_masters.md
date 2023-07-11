@@ -7,13 +7,17 @@ preview_image:
   - url: /assets/images/fonts/tt_masters.jpg
     height: 20
 ---
+{%- assign font = site.data.fonts.tt_masters.font -%}
 ![TT Masters](/assets/images/fonts/tt_masters.jpg)
 
 ## Schriftzeichen
 
-Diese Schrift umfasst folgende 103 Schriftzeichen :
+Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 
-1234567890§!+"^*-:.;,|<>/}][{€$@=()&%'AaSsDdFfGgHhJjKkLlÖöÄäQqWwEeRrTtYyUuIiOoPpZzXxCcVvBbNnMm?_‰~©«»±°®´Üü
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
 
 ## Maße
 
