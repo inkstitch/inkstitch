@@ -9,6 +9,8 @@ preview_image:
   - url: /assets/images/fonts/roman_AGS_bicolor.jpg
     height: 28
 ---
+{%- assign font1 = site.data.fonts.roman_ags.font -%}
+{%- assign font2 = site.data.fonts.roman_ags_bicolor.font -%}
 
 <img 
      src="/assets/images/fonts/roman_AGS.jpg"
@@ -22,13 +24,20 @@ preview_image:
 
 ## Glyphes
 ### Roman AGS 
-Cette fonte contient les 102 glyphes :	
-!"@'()+,-./0123456789:;?&ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzÄÆÖÜßàáâäæçèéêëîïôöùûüŒœ
+Cette fonte comporte  {{ font1.glyphs.size }} glyphes:
+
+```
+{{ fon1t.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
 
 ### Roman AGS Bicolor
-Cette fonte contient les 31 glyphes :	
-ABCDEFGHIJKLMNOPQRSTUVWXYZÄÆÖÜŒ
+Cette fonte comporte  {{ font2.glyphs.size }} glyphes:
 
+```
+{{ font2.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
 ## Dimensions
 
 Utilisées à 100%, ces fontes font environ 28 mm de haut .
