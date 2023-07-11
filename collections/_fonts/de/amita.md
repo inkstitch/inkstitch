@@ -9,26 +9,18 @@ preview_image:
   - url: /assets/images/fonts/amitaclo.jpg
     height: 30
 ---
+{%- assign font = site.data.fonts.amitaclo.font -%}
 ![Amitaclo](/assets/images/fonts/amitaclo.jpg)
 
 ![Amitaclo small](/assets/images/fonts/amitaclo-small.jpg)
 
 ## Schriftzeichen
-Amitaclo enthält folgende 110 Schriftzeichen :
+Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 
-œıüûúùöôóñ
-ïîíëêéèçæä
-âáàßÜÖÆÄ|z
-yxwvutsrqp
-onmlkjihgf
-edcba\ZYXW
-VUTSRQPONM
-LKJIHGFEDC
-BA&?=;:987
-6543210/.-
-,+*)('’@"!
-
-
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
 
 
 ## Maße
