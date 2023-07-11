@@ -7,23 +7,18 @@ preview_image:
   - url: /assets/images/fonts/brockscript.jpg
     height: 45
 ---
+{%- assign font = site.data.fonts.Brockscript.font -%}
 ![Brockscript](/assets/images/fonts/brockscript.jpg)
 
 ## Schriftzeichen
 
-Diese Schrift enthält 119 Schriftzeichen:
-!"&'(),-./
-0123456789
-:;=?@ABCDE
-FGHIJKLMNO
-PQRSTUVWXY
-Zabcdefghi
-jklmnopqrs
-tuvwxyz{}~
-œ¡¨´¿ÀÁÄÈÑ
-ÖÜßàáâãäæç
-èéêëìíîïñò
-óôõöùúûüµ
+Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
+
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
+
 
 ## Maße
 
