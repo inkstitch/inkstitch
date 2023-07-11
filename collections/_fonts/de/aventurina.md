@@ -7,15 +7,19 @@ preview_image:
   - url: /assets/images/fonts/aventurina.jpg
     height: 20
 ---
+{%- assign font = site.data.fonts.aventurina.font -%}
 ![Aventurina](/assets/images/fonts/aventurina.jpg)
 
 Dies ist Teil einer kommenden Ink/Stitch-Version und nicht in Ink/Stitch v2.1.2 verfügbar.
 
 ## Schriftzeichen
 
-Diese Schrift enthält 142 Schriftzeichen:
+Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 
-!"#@'()+,- ./01234567 89:;=?&ABCDEFGHIJKLM NOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz~¡¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïñòóôõöùúûüýÿŒœ
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
 
 ## Maße
 
