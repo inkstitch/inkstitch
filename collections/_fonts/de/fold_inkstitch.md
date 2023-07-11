@@ -7,16 +7,18 @@ preview_image:
   - url: /assets/images/fonts/fold_inkstitch.jpg
     height: 63
 ---
+{%- assign font = site.data.fonts.fold_inkstitch.font -%}
 ![FoldInkstitch](/assets/images/fonts/fold_inkstitch.jpg)
 
 ## Schriftzeichen
 
-Diese Schrift enthält folgende 40 Schriftzeichen
+Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 
-!'01234567
-89?ABCDEFG
-HIJKLMNOPQ
-RSTUVWXYZ-
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
+
 
 ## Maße
 
