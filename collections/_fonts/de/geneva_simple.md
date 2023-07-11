@@ -9,6 +9,9 @@ preview_image:
   - url: /assets/images/fonts/geneva_simple_sans_rounded.jpg
     height: 13
 ---
+{%- assign font2 = site.data.fonts.geneva_rounded.font -%}
+{%- assign font1 = site.data.fonts.geneva_simple.font -%}
+
 
 ## Sans
 
@@ -16,9 +19,12 @@ preview_image:
 
 ### Schriftzeichen
 
-Diese Schrift enthält folgende 102 Schriftzeichen:
+Diese Schrift enthält  {{ font1.glyphs.size }} Schriftzeichen:
 
-ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#<>:;,'"“”.+@%$*~-=(){}][_/\|!?�ÄÖÜäöü
+```
+{{ font1.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
 
 ## Sans Rounded
 
@@ -26,10 +32,12 @@ ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#<>:;,'"“”.+@
 
 ### Schriftzeichen
 
-Diese Schrift enthält folgende 107 Schriftzeichen:
+Diese Schrift enthält  {{ font2.glyphs.size }} Schriftzeichen:
 
-AÄBCDEFGHIJKLMNOÖPQRSTUÜVWXYZaâäbcdeéèfghijklmnoöpqrstuüvwxyz0123456789&<>`^|\*~}{][$%@#!?:,'"“”.;+-=()_/�
-
+```
+{{ font2.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
 ## Maße
 
 Bei einer Skalierung von 100 % sind diese Schriften ungefähr 14 mm (1/2 Zoll) groß.
