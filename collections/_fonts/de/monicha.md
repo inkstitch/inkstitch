@@ -7,32 +7,18 @@ preview_image:
   - url: /assets/images/fonts/monicha.jpg
     height: 24
 ---
+{%- assign font = site.data.fonts.monicha.font -%}
 ![monicha](/assets/images/fonts/monicha.jpg)
 
 ## Schriftzeichen 
 
-Monicha enthält 195 Schriftzeichen :
-	
-!#%@'(’)+,-
-./01234567
-89:;<=>?&A
-BCDEFGHIJK
-LMNOPQRSTU
-VWXYZabcde
-fghijklmno
-pqrstuvwxy
-z§«±»¿ÀÁÂÃ
-ÄÅÆÇÈÉÊËÌÍ
-ÎÏÑÒÓÔÕÖ×Ù
-ÚÛÜÝàáâãäå
-æçèéêëìíîï
-ñòóôõöùúûü
-ýÿŒœ⒜⒝⒞⒟⒠⒡
-⒢⒣⒤⒥⒦⒧⒨⒩⒪⒫
-⒬⒭⒮⒯⒰⒱⒲⒳⒴⒵
-ⒶⒹⒼⒽⒾⒿⓀⓁⓂⓃ
-ⓇⓉⓊⓎⓑⓓⓖⓗⓙⓚ
-ⓛⓞⓣⓨ
+Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
+
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
+
 
 ## Maße
 
