@@ -7,28 +7,18 @@ preview_image:
   - url: /assets/images/fonts/glacial_tiny_60_AGS.jpg
     height: 8
 ---
+{%- assign font = site.data.fonts.glacial_tiny.font -%}
 ![glacial_tiny](/assets/images/fonts/glacial_tiny_60_AGS.jpg)
 
 ## Schriftzeichen
 
-Diese Schrift enthält folgende 159 Schriftzeichen:
-	
-!"»Øø#$€%@
-'’()*+,-./
-0123456789
-:;<=>?&ABC
-DEFGHIJKLM
-NOPQRSTUVW
-XYZ^`abcde
-fghijklmno
-pqrstuvwxy
-z~ÀÁÂÃÄÅÆŒ
-ÇÈÉÊËÌÍÎÏÑ
-ÒÓÔÕÖ×ÙÚÛÜ
-Ýßàáâãäåæœ
-çèéêëìíîïñ
-òóôõöúùûüč
-ČřŘŠšŽžÐÞ
+Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
+
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
+
 
 ## Anmerkung
 
