@@ -7,26 +7,17 @@ preview_image:
   - url: /assets/images/fonts/aventurina.jpg
     height: 20
 ---
+{%- assign font = site.data.fonts.aventurina.font -%}
 ![Aventurina](/assets/images/fonts/aventurina.jpg)
 
 ## Glyphes 
-Aventurina contient les 142 glyphes : 
+Cette fonte comporte  {{ font.glyphs.size }} glyphes:
 
-!"#@'()+,-
-./01234567
-89:;=?&ABC
-DEFGHIJKLM
-NOPQRSTUVW
-XYZabcdefg
-hijklmnopq
-rstuvwxyz~
-¡¿ÀÁÂÃÄÅÆÇ
-ÈÉÊËÌÍÎÏÑÒ
-ÓÔÕÖØÙÚÛÜÝ
-Þßàáâãäåæç
-èéêëìíîïñò
-óôõöùúûüýÿ
-Œœ
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
+
 
 ## Dimensions
 
