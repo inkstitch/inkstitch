@@ -9,6 +9,7 @@ preview_image:
   - url: /assets/images/fonts/amitaclo.jpg
     height: 30
 ---
+{%- assign font = site.data.fonts.amitaclo.font -%}
 ![Amitaclo](/assets/images/fonts/amitaclo.jpg)
 
 ![Amitaclo small](/assets/images/fonts/amitaclo-small.jpg)
@@ -16,22 +17,13 @@ preview_image:
 
 
 ## Glyphes
-Amitaclo contient les 110 glyphes :
-	
-œıüûúùöôóñ
-ïîíëêéèçæä
-âáàßÜÖÆÄ|z
-yxwvutsrqp
-onmlkjihgf
-edcba\ZYXW
-VUTSRQPONM
-LKJIHGFEDC
-BA&?=;:987
-6543210/.-
-,+*)('’@"!
 
+Cette fonte comporte  {{ font.glyphs.size }} glyphes:
 
-
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
 
 ## Dimensions
 
