@@ -15,7 +15,7 @@ preview_image:
  - url: /assets/images/fonts/emilio_tricolore.jpg
    height: 100
 ---
-
+{%- assign font = site.data.fonts.emilio_20.font -%}
 <img 
      src="/assets/images/fonts/emilio_simple.png"
      alt="Emilio20" height="21">
@@ -42,9 +42,13 @@ preview_image:
 
 ## Schriftzeichen
 
-Jeweils fünf  Schriften enthalten 36 Schriftzeichen:
+Jeweils fünf  Schriften enthalten  {{ font.glyphs.size }} Schriftzeichen:
 
-0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
+
 
 ## Maße
 
