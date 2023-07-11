@@ -7,24 +7,19 @@ preview_image:
   - url: /assets/images/fonts/chopin_script.jpg
     height: 59
 ---
+{%- assign font = site.data.fonts.chopin.font -%} 
 ![Chopin Script](/assets/images/fonts/chopin_script.jpg)
 
 
 ## Glyphes
 
-Chopin contient les 107 glyphes:
-!"@'’,-0123
-456789:;?@
-ABCDEFGHIJ
-KLMNOPQRST
-UVWXYZ^`ab
-cdefghijkl
-mnopqrstuv
-wxyz¡¿àáâã
-äåæçèéêëìí
-îïñòóôõöùú
-ûüýÿŒœ
- 
+Cette fonte comporte  {{ font.glyphs.size }} glyphes:
+
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
+
 
 ## Dimensions
 
