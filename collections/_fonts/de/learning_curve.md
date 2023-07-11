@@ -7,22 +7,18 @@ preview_image:
   - url: /assets/images/fonts/learning_curve.jpg
     height: 25
 ---
+{%- assign font = site.data.fonts.learning_curve.font -%}
 ![LearningCurve](/assets/images/fonts/learning_curve.jpg)
 
 ## Schriftzeichen
 
-Learning curce umfasst 101 Schriftzeichen:
+Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 
-üûùôïîëêéè
-çâàßÎÊÉÈÇÀ
-»«zyxwvuts
-rqponmlkji
-hgfedcbaZY
-XWVUTSRQPO
-NMLKJIHGFE
-DCBA@?>=<9
-876543210/
-.-,+)’('&%!
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
+
 
 ## Maße
 
