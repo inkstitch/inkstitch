@@ -14,10 +14,12 @@ preview_image:
 ![Sortefax_medium](/assets/images/fonts/sortefax_medium.jpg)
 
 ## Glyphes
-Ces fontes comportent les 47 glyphes :
-	
-?.:;,([{)]}&ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789
+Chacune  de ces deux  fontes comporte  {{ font.glyphs.size }} glyphes:
 
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
 Remarque : Les glyphes ;:,.(){}[] sont utilisés pour stocker des cadres.
 
 ## Dimensions
