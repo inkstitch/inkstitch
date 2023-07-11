@@ -7,13 +7,17 @@ preview_image:
   - url: /assets/images/fonts/marcellus_sc_fi.jpg
     height: 29
 ---
+{%- assign font = site.data.fonts.marcelusSC_FI.font -%}
 ![MarcellusSCFI](/assets/images/fonts/marcellus_sc_fi.jpg)
 
 # Schriftzeichen
 
-Diese Schrift enthält folgende 109 Schriftzeichen:
-	
-!@'’(),-./0123456789:;=?&ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz¡¿ÄÆÈÖÜàáâäæçèéêëìíîïñòóôöùúûüŒœ
+Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
+
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
 
 Beachte, dass die Kleinbuchstaben eigentlich Kapitälchen sind.
 
