@@ -7,31 +7,17 @@ preview_image:
   - url: /assets/images/fonts/monicha.jpg
     height: 24
 ---
+{%- assign font = site.data.fonts.monicha.font -%}
 ![monicha](/assets/images/fonts/monicha.jpg)
 
 ## Glyphes 
-Monicha contient les 195 glyphes :
-	
-!#%&'(’)+,-
-./01234567
-89:;<=>?@A
-BCDEFGHIJK
-LMNOPQRSTU
-VWXYZabcde
-fghijklmno
-pqrstuvwxy
-z§«±»¿ÀÁÂÃ
-ÄÅÆÇÈÉÊËÌÍ
-ÎÏÑÒÓÔÕÖ×Ù
-ÚÛÜÝàáâãäå
-æçèéêëìíîï
-ñòóôõöùúûü
-ýÿŒœ⒜⒝⒞⒟⒠⒡
-⒢⒣⒤⒥⒦⒧⒨⒩⒪⒫
-⒬⒭⒮⒯⒰⒱⒲⒳⒴⒵
-ⒶⒹⒼⒽⒾⒿⓀⓁⓂⓃ
-ⓇⓉⓊⓎⓑⓓⓖⓗⓙⓚ
-ⓛⓞⓣⓨ
+Cette fonte comporte  {{ font.glyphs.size }} glyphes:
+
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
+
 
 ## Dimensions
 
