@@ -6,28 +6,18 @@ preview_image:
   - url: /assets/images/fonts/glacial_tiny_60_AGS.jpg
     height: 8
 ---
+{%- assign font = site.data.fonts.glacial_tiny.font -%}
 ![glacial_tiny](/assets/images/fonts/glacial_tiny_60_AGS.jpg)
 
 ## Glyphes
 
-Cette fonte contient les 159 glyphes :
-	
-!"»Øø#$€%@
-'’()*+,-./
-0123456789
-:;<=>?&ABC
-DEFGHIJKLM
-NOPQRSTUVW
-XYZ^`abcde
-fghijklmno
-pqrstuvwxy
-z~ÀÁÂÃÄÅÆŒ
-ÇÈÉÊËÌÍÎÏÑ
-ÒÓÔÕÖ×ÙÚÛÜ
-Ýßàáâãäåæœ
-çèéêëìíîïñ
-òóôõöúùûüč
-ČřŘŠšŽžÐÞ
+Cette fonte comporte  {{ font.glyphs.size }} glyphes:
+
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
+
 
 ## Remarque 
 Cette fonte permet de broder des textes multilignes alternativement de la gauche vers  la droite et de la droite vers la gauche.
