@@ -9,6 +9,10 @@ preview_image:
  - url: /assets/images/fonts/apex_simple_AGS.jpg
    height: 35
 ---
+{%- assign font1 = site.data.fonts.apex_lake.font -%}
+{%- assign font2 = site.data.fonts.apex_simple_AGS.font -%}
+
+
 ![Apex Lake](/assets/images/fonts/apex_lake.jpg)
 
 ![Apex Simple](/assets/images/fonts/apex_simple_AGS.jpg)
@@ -17,19 +21,26 @@ preview_image:
 
 Glyphen sind identisch (bis auf die Dekoration)
 
-Commun glyphs are identical (up to decoration)
+
 
 ### Apex Lake
 
-Apex Lake enthält folgende 38 Schriftzeichen :
+Diese Schrift enthält  {{ font1.glyphs.size }} Schriftzeichen:
 
-?!0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ
+```
+{{ font1.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
+
 
 ### Apex Simple AGS
 
-Apex simple AGS enthält folgende 124 Schriftzeichen :
+Diese Schrift enthält  {{ font2.glyphs.size }} Schriftzeichen:
 
-üûúùöõôóòñïîíìëêéèçäâáàßÜÛÚÙÖÔÓÒÏÎÍÌËÊÉÈÄÂÁÀ¿»«¡zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA&!?;:9876543210/.,)('’@"
+```
+{{ font2.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
 
 ## Besonderheiten
 Apex Lake ist eine Schriftart für Einzelbuchstaben. 
