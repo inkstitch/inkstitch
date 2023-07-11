@@ -9,6 +9,7 @@ preview_image:
   - url: /assets/images/fonts/sortefax_medium.jpg
     height: 90
 ---
+{%- assign font = site.data.fonts.sortefaxXL.font -%}
 ![SortefaxXL](/assets/images/fonts/sortefaxXL.jpg)
 
 ![Sortefax_medium](/assets/images/fonts/sortefax_medium.jpg)
