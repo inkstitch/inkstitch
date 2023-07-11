@@ -9,6 +9,10 @@ preview_image:
  - url: /assets/images/fonts/apex_simple_AGS.jpg
    height: 35
 ---
+{%- assign font1 = site.data.fonts.apex_lake.font -%}
+{%- assign font2 = site.data.fonts.apex_simple_AGS.font -%}
+
+
 ![Apex Lake](/assets/images/fonts/apex_lake.jpg)
 
 ![Apex Simple](/assets/images/fonts/apex_simple_AGS.jpg)
@@ -18,15 +22,22 @@ preview_image:
 
 Les glypes communs sont identiques, à la décoration près bien sûr.
 ### Apex Lake
-Apex Lake contient les 38 glyphes :
 
-?!0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ
+Cette fonte comporte  {{ font1.glyphs.size }} glyphes:
+
+```
+{{ font1.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
 
 ### Apex Simple AGS
-Apex Simple AGS contient les 124 glyphes:
 
-üûúùöõôóòñïîíìëêéèçäâáàßÜÛÚÙÖÔÓÒÏÎÍÌËÊÉÈÄÂÁÀ¿»«¡zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA&!?;:9876543210/.,)('’@"
+Cette fonte comporte  {{ font2.glyphs.size }} glyphes:
 
+```
+{{ font2.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
 ## Particularités
 Apex Lake est une police de lettrines. 
 
