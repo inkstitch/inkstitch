@@ -9,24 +9,19 @@ preview_image:
   - url: /assets/images/fonts/pacificlo.jpg
     height: 26
 ---
+{%- assign font = site.data.fonts.pacificlo.font -%}
 ![Pacificlo](/assets/images/fonts/pacificlo.jpg)
 
 ![Pacificlo tiny](/assets/images/fonts/pacificlo_tiny.jpg)
 
 ## Glyphes
-Pacificlo contient les 120 glyphes :
-AÆBCDEÈFGH
-IJKLMNÑOÔÖ
-ÕŒPQRSTUÜV
-WXYZaáâäàã
-æbcçdeéêëè
-fghiıíîïìj
-klmnñoóôöò
-õœpqrsßtuú
-ûüùvwxyz01
-23456789*\
-·:,!¡.?¿"'
-';/()-+=@&
+Cette fonte comporte  {{ font.glyphs.size }} glyphes:
+
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
+
 
 ## Dimensions
 
