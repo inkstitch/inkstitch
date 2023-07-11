@@ -7,24 +7,18 @@ preview_image:
   - url: /assets/images/fonts/sacramarif.jpg
     height: 26
 ---
+{%- assign font = site.data.fonts.sacramarif.font -%}
 ![Sacramarif](/assets/images/fonts/sacramarif.jpg)
 
 ## Schriftzeichen
 
-Diese Schrift umfasst folgende 112 Schriftzeichen:
-	
-ABCDEFGHIJ
-KLMNOPQRST
-UVWXYZabcd
-efghijklmn
-opqrstuvwx
-yzßÀàáâäæÇ
-çÈÉËÊèéêëÍ
-ÎÏïîÙÛùüû0
-123456789#
-+=<>&/'’&(
-)*§.,:;!?«
-»-
+Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
+
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
+
 
 ## Maße
 
