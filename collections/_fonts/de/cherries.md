@@ -9,6 +9,9 @@ preview_image:
   - url: /assets/images/fonts/cherryforkaalleen.jpg
     height: 75
 ---
+
+{%- assign font1 = site.data.fonts.cherryforinkstitch.font -%}
+{%- assign font2 = site.data.fonts.cherryforkaalleen.font -%}
 <img 
      src="/assets/images/fonts/cherry_for_inkstitch.jpg"
      alt="Cherry for Inkstitch" height="48">
@@ -20,14 +23,20 @@ preview_image:
 
 ## Schriftzeichen
 ### Cherry for Ink/Stitch
-enthält folgende 74	Schriftzeichen:
-ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890.:;,?!()'"-`
+Diese Schrift enthält  {{ font1.glyphs.size }} Schriftzeichen:
+
+```
+{{ font1.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
 
 ### Cherry for Kaalleen
-enthält folgende 36	Schriftzeichen:
-ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890
+Diese Schrift enthält  {{ font2.glyphs.size }} Schriftzeichen:
 
-
+```
+{{ font2.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
 ## Maße
 ### Cherry for Ink/Stitch
 Bei einer Skalierung auf 100 % ist diese Schrift ungefähr 50 mm hoch (2 Zoll)
