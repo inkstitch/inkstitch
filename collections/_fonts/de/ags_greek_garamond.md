@@ -7,17 +7,18 @@ preview_image:
   - url: /assets/images/fonts/garamond.png
     height: 20
 ---
-
+{%- assign font = site.data.fonts.ags_garamond_latin_grec.font -%}
 ![AGS garamond](/assets/images/fonts/garamond.png)
 
 
 ## Glyphs
 
-This font contains 264 glyphs:
+Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 
-ΑΆΒΓΔΕΈΖΗΉΘΙΊΚΛΜΝΞΟΌΠΡΣΤΥΎΦΧΨΩΏΪΫϜϏϓαβγδεζηθικλμνξοπρςστυφχψωίϊΐύϋΰόώάέήϗϐϑϕϖϰϱ0123456789.,:;!?/()"'@·̈̈́ͅ΄∫∞√<>+xyabcdt
-AÁÂÄÀÅÆBCČÇDÐĎĐEÉÊËÈFGĞHIÍÎÏİÌJKLMNÑOÓÔÖÒØÕŒÞPQRŘSŞŠTŤUÚÛÜÙVWXYÝZŽaáâäàåãæbcčçdðďđeéêëèfgğhiıíîïìjklmnñoóôöòøõœpÞqrřsşšß
-tťuúûüùvwxyýzž.,!¡?¿«»÷=→
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
 
 ## Dimensions
 
