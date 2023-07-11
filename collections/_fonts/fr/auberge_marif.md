@@ -9,27 +9,18 @@ preview_image:
   - url: /assets/images/fonts/auberge_marif.jpg
     height: 53
 ---
-
+{%- assign font = site.data.fonts.auberge_marif.font -%}
 ![auberge_marif](/assets/images/fonts/auberge_marif.jpg)
 
 ![auberge_small](/assets/images/fonts/auberge_small.jpg)
 
 ## Glyphes
-Cette fonte contient les 132 Glyphes :
-!?"''()+,-
-.012345678
-9:;=?ABCDE
-FGHIJKLMNO
-PQRSTUVWXY
-Zabcdefghi
-jklmnopqrs
-tuvwxyz«»À
-ÁÂÃÆÇÈÉÊËÌ
-ÍÎÏÑÔÕÖÚÛÜ
-ßàáâãæçèéê
-ëìíîïñôõöù
-úûüĨĩĽľŒœŨ
-ũ’
+Cette fonte comporte  {{ font.glyphs.size }} glyphes:
+
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
 
 ## Dimensions
 
