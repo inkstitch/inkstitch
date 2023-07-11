@@ -15,7 +15,7 @@ preview_image:
  - url: /assets/images/fonts/emilio_tricolore.jpg
    height: 100
 ---
-
+{%- assign font = site.data.fonts.emilio_20.font -%}
 
 <img 
      src="/assets/images/fonts/emilio_simple.png"
@@ -42,8 +42,12 @@ preview_image:
      alt="Comparaison des Emilio 20" >
 
 ## Glyphes
-Chacune des cinq fontes contient les 36 glyphes :
-0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ
+Chacune des cinq fontes comporte  {{ font.glyphs.size }} glyphes:
+
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
 
 ## Dimensions et particularités
 
