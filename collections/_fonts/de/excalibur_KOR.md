@@ -7,26 +7,17 @@ preview_image:
   - url: /assets/images/fonts/excalibur_KOR.jpg
     height: 19
 ---
+{%- assign font = site.data.fonts.excalibur_KOR.font -%}
 ![ExcaliburKOR](/assets/images/fonts/excalibur_KOR.jpg)
 
 ## Schriftzeichen
 
-Diese Schrift enthält 144 Schriftzeichen:
-•„”“’‘—–œŒ
-üûúùøöõôóò
-ñïîíìëêéèç
-æåäãâáàßÜÛ
-ÚÙØÖÕÔÓÒÑÏ
-ÎÍÌËÊÉÈÇÆÅ
-ÄÃÂÁÀ»«zyx
-wvutsrqpon
-mlkjihgfed
-cbaZYXWVUT
-SRQPONMLKJ
-IHGFEDCBA?
-;:98765432
-10/.-,*)('
-&%"!
+Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
+
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
 
 ## Maße
 
