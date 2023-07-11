@@ -8,8 +8,8 @@ preview_image:
     height: 20
   - url: /assets/images/fonts/auberge_marif.jpg
     height: 53
-
 ---
+{%- assign font = site.data.fonts.auberge_marif.font -%}
 ![grand_hotel_marif](/assets/images/fonts/auberge_marif.jpg)
 
 ![grand_hotel_marif](/assets/images/fonts/auberge_small.jpg)
@@ -18,21 +18,13 @@ preview_image:
 
 ## Schriftzeichen
 
-Diese Schrift enthält folgende  132 Schriftzeichen:
-!?"''()+,-
-.012345678
-9:;=?ABCDE
-FGHIJKLMNO
-PQRSTUVWXY
-Zabcdefghi
-jklmnopqrs
-tuvwxyz«»À
-ÁÂÃÆÇÈÉÊËÌ
-ÍÎÏÑÔÕÖÚÛÜ
-ßàáâãæçèéê
-ëìíîïñôõöù
-úûüĨĩĽľŒœŨ
-ũ’
+Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
+
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
+
 
 ## Maße:
 
