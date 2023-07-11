@@ -8,23 +8,19 @@ preview_image:
   - url: /assets/images/fonts/lobster_AGS.jpg
     height: 27
 ---
+{%- assign font = site.data.fonts.lobster_AGS.font -%}
 ## Bold Italic
 
 ![Lobster AGS](/assets/images/fonts/lobster_AGS.jpg)
 
 ## Glyphes
 
-Cette fonte contient les 97 glyphes :
-0123456789
-ABCDEFGHIJ
-KLMNOPQRST
-UVWXYZaáâä
-æàbcçdeéêë
-èfghiîïjkl
-mnoôöœpqrs
-tuûüùvwxyz
-ß&@-;'’+.?(
-),=:!"
+Cette fonte comporte  {{ font.glyphs.size }} glyphes:
+
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
 
 ## Dimensions
 
