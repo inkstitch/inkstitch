@@ -7,24 +7,18 @@ preview_image:
   - url: /assets/images/fonts/sacramarif.jpg
     height: 26
 ---
+{%- assign font = site.data.fonts.sacramarif.font -%}
 ![Sacramarif](/assets/images/fonts/sacramarif.jpg)
 
 ## Glyphes
 
-Sacramarif contient les 112 glyphes :
-	
-ABCDEFGHIJ
-KLMNOPQRST
-UVWXYZabcd
-efghijklmn
-opqrstuvwx
-yzßÀàáâäæÇ
-çÈÉËÊèéêëÍ
-ÎÏïîÙÛùüû0
-123456789#
-+=<>&/'’@(
-)*§.,:;!?«
-»-
+Cette fonte comporte  {{ font.glyphs.size }} glyphes:
+
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
+
 
 ## Dimensions
 Utilisée à 100%, cette fonte mesure environ 28 mm.
