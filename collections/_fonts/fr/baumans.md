@@ -7,26 +7,20 @@ preview_image:
   - url: /assets/images/fonts/baumans_fi.jpg
     height: 32
 ---
+{%- assign font = site.data.fonts.baumans_FI.font -%}
 ![Baumans](/assets/images/fonts/baumans_fi.jpg)
 
 ## Glyphs
 
 ## Glyphes
 
-Baumans contient les 102 glyphes :
+Cette fonte comporte  {{ font.glyphs.size }} glyphes:
 
-	
-@'()+,-.01
-23456789:;
-=?&ABCDEFG
-HIJKLMNOPQ
-RSTUVWXYZ`
-abcdefghij
-klmnopqrst
-uvwxyz¨«´’
-»ÄÖÜßàáâäç
-èéêëîïôöùû
-üˆ
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
+
  
 ## Particularités
 
