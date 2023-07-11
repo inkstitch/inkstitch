@@ -9,26 +9,20 @@ preview_image:
   - url: /assets/images/fonts/pacificlo.jpg
     height: 26
 ---
+{%- assign font = site.data.fonts.pacificlo.font -%}
 ![Pacificlo](/assets/images/fonts/pacificlo.jpg)
 
 ![Pacificlo tiny](/assets/images/fonts/pacificlo_tiny.jpg)
 
 ## Schriftzeichen
 
-Pacificlo umfasst 120 Schriftzeichen:
+Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 
-AÆBCDEÈFGH
-IJKLMNÑOÔÖ
-ÕŒPQRSTUÜV
-WXYZaáâäàã
-æbcçdeéêëè
-fghiıíîïìj
-klmnñoóôöò
-õœpqrsßtuú
-ûüùvwxyz01
-23456789*\
-·:,!¡.?¿"'
-';/()-+=@&
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
+
 
 ## Maße
 
