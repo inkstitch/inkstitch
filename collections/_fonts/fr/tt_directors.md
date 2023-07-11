@@ -7,13 +7,17 @@ preview_image:
   - url: /assets/images/fonts/tt_directors.jpg
     height: 20
 ---
+{%- assign font = site.data.fonts.tt_directors.font -%}
 ![TT Directors](/assets/images/fonts/tt_directors.jpg)
 
 ## Glyphes
 
-Cette fonte contient les 103 glyphes :
+Cette fonte comporte  {{ font.glyphs.size }} glyphes:
 
-QqWwEeRrTtYyUuIiOoPpAaSsDdFfGgHhJjKkLlÖöÄäZzXxCcVvBbNnMmÜü|<>§!"#%&/()=?$€{[]}\,;.:-_1234567890+*`´'^@
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
 
 ## Dimensions
 
