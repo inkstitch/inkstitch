@@ -7,24 +7,20 @@ preview_image:
   - url: /assets/images/fonts/lobster_AGS.jpg
     height: 27
 ---
+{%- assign font = site.data.fonts.lobster_AGS.font -%}
 ## Bold Italic
 
 ![Lobster AGS](/assets/images/fonts/lobster_AGS.jpg)
 
 ## Schriftzeichen
 
-Diese Schrift enthält folgende 97 Schriftzeichen:
+Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 
-0123456789
-ABCDEFGHIJ
-KLMNOPQRST
-UVWXYZaáâä
-æàbcçdeéêë
-èfghiîïjkl
-mnoôöœpqrs
-tuûüùvwxyz
-ß&@-;'’+.?(
-),=:!"
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
+
 
 ## Maße
 
