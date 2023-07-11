@@ -11,6 +11,9 @@ preview_image:
     height: 28
  
 ---
+{%- assign font1 = site.data.fonts.roman_ags.font -%}
+{%- assign font2 = site.data.fonts.roman_ags_bicolor.font -%}
+
 ![Roman AGS](/assets/images/fonts/roman_AGS.jpg)
 ![Roman AGS_bicolor](/assets/images/fonts/roman_AGS_bicolor.jpg)
 
@@ -18,15 +21,21 @@ preview_image:
 
 ### Roman AGS 
 
-Diese Schrift enthält folgende 102 Schriftzeichen :	
+Diese Schrift enthält  {{ font1.glyphs.size }} Schriftzeichen:
 
-!"@'()+,-./0123456789:;?&ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzÄÆÖÜßàáâäæçèéêëîïôöùûüŒœ
+```
+{{ font1.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
 
 ### Roman AGS Bicolor
 
-Diese Schrift enthält folgende 31 Schriftzeichen :		
+Diese Schrift enthält  {{ font2.glyphs.size }} Schriftzeichen:
 
-ABCDEFGHIJKLMNOPQRSTUVWXYZÄÆÖÜŒ
+```
+{{ font2.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
 
 ## Maße
 
