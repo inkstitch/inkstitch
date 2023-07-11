@@ -7,14 +7,17 @@ preview_image:
   - url: /assets/images/fonts/abril_en_fleur.jpg
     height: 100
 ---
-
+{%- assign font = site.data.fonts.abril.font -%}
 ![April En Fleur AGS](/assets/images/fonts/abril_en_fleur.jpg)
 
 ## Schriftzeichen
 
-Die Schrift enthält 67 Zeichen:
+Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 
-ABCDEFGHIJKLMNOPQRSTUVWXYZµabcçdefghijklmnopqrstuvwxyzß!0123456789?%
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
 
 ## Dimensionen
 
