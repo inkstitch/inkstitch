@@ -7,22 +7,18 @@ preview_image:
   - url: /assets/images/fonts/digory_doodles_bean.jpg
     height: 28
 ---
+{%- assign font = site.data.fonts.digory_doodles_bean.font -%}
 ![Digory Doodles Bean](/assets/images/fonts/digory_doodles_bean.jpg)
 
 ## Glyphes
 
-Cette fonte contient les 85 glyphes :
+Cette fonte comporte  {{ font.glyphs.size }} glyphes:
 
-	
-!"@'(’),-./
-0123456789
-:;=?&ABCDE
-FGHIJKLMNO
-PQRSTUVWXY
-Z\^_`abcde
-fghijklmno
-pqrstuvwxy
-z{}~
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
+
 
 ## Dimensions
 Utilisée à 100%, cette fonte fait environ 22 mm.
