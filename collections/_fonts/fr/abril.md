@@ -7,14 +7,17 @@ preview_image:
   - url: /assets/images/fonts/abril_en_fleur.jpg
     height: 100
 ---
-
+{%- assign font = site.data.fonts.abril.font -%}
 ![April En Fleur AGS](/assets/images/fonts/abril_en_fleur.jpg)
 
 ## Glyphes
 
-Cette fonte contient les  67 glyphs:
-	
-ABCDEFGHIJKLMNOPQRSTUVWXYZµabcçdefghijklmnopqrstuvwxyzß!0123456789?%      
+Cette fonte comporte  {{ font.glyphs.size }} glyphes:
+
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
 
 ## Dimensions
 Utilisée à 100%, cette fonte mesure approximativement 100mm de haut (4 pouces).
