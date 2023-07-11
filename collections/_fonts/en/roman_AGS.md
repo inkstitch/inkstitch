@@ -27,7 +27,7 @@ preview_image:
 
 This font contains  {{ font1.glyphs.size }} glyphs:
 
-{% for glyph in font.glyphs %}
+{% for glyph in font1.glyphs %}
 `{{ glyph }}`
 {%- endfor %}
 {: .font-glyphs }
@@ -36,11 +36,10 @@ This font contains  {{ font1.glyphs.size }} glyphs:
 
 This font contains  {{ font2.glyphs.size }} glyphs:
 
-```
-{{ font.glyphs | join: ' ' }}
-```
+{% for glyph in font2.glyphs %}
+`{{ glyph }}`
+{%- endfor %}
 {: .font-glyphs }
-
 ## Dimensions
 
 At 100%, these fonts are approximatively  28 mm (1 inch) tall .
