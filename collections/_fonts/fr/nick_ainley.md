@@ -7,12 +7,17 @@ preview_image:
   - url: /assets/images/fonts/nick_ainley.png
     height: 7
 ---
+{%- assign font = site.data.fonts.nick_ainley.font -%}
 ![Nick Ainley](/assets/images/fonts/nick_ainley.png)
 
 ## Glyphes
 
-Cette fonte contient les 70 glyphes :
-ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@/!',‘’
+Cette fonte comporte  {{ font.glyphs.size }} glyphes:
+
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
 
 ## Dimensions
 
