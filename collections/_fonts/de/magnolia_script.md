@@ -7,13 +7,17 @@ preview_image:
   - url: /assets/images/fonts/magnolia_KOR.jpg
     height: 31
 ---
+{%- assign font = site.data.fonts.magnolia_KOR.font -%}
 ![Magnolia](/assets/images/fonts/magnolia_KOR.jpg)
 
 ## Schriftzeichen
 
-Diese Schrift umfasst folgende 109 Schriftzeichen:
+Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 
-!"%&'’()+,-./0123456789:;<=>?@\_{}°×àâäæçèéêëîïôöùûüÄÖÜßœabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
 
 ## Maße
 
