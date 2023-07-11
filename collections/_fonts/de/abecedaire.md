@@ -6,32 +6,19 @@ preview_image:
   - url: /assets/images/fonts/abecedaire.jpg
     height: 14
 ---
-
+{%- assign font = site.data.fonts.abecedaire.font -%}
 ![Abecedaire](/assets/images/fonts/abecedaire.jpg)
 
 Dies ist Teil einer kommenden Ink/Stitch-Version und nicht in Ink/Stitch v2.1.2 verfügbar.
 
 ## Schriftzeichen
+Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 
-Diese Schrift enthält 154 Schriftzeichen:
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
 
-	
-!"@'(),012 <br>
-3456789:;= <br>
-?&ABCDEFGH <br>
-IJKLMNOPQR<br>
-STUVWXYZ`a<br>
-bcdefghijk<br>
-lmnopqrstu<br>
-vwxyz¡«´¸»<br>
-¿ÀÁÂÃÄÅÆŒÇ<br>
-ÈÉÊËÌÍÎÏÐÑ<br>
-ÒÓÔÕÖØÙÚÛÜ<br>
-ÝŸÞßàáâãäå<br>
-æœçèéêëìíî<br>
-ïðñòóôõöøù<br>
-úûüýþÿčČřŘ<br>
-šŠžŽ
 
 ## Maße
 
