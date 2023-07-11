@@ -7,12 +7,17 @@ preview_image:
   - url: /assets/images/fonts/infinipicto.png
     height: 70
 ---
+{%- assign font = site.data.fonts.infinipicto.font -%}
 ![InfiniPicto](/assets/images/fonts/infinipicto.png)
 
 ## Glyphes
 
-Cette fonte contient les 26 glyphes :
-ABCDEFGHIJKLMNOPQRSTUVWXYZ
+Cette fonte comporte  {{ font.glyphs.size }} glyphes:
+
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
 
 ## Description
 Infinipicto est une collection de pictogrammes. Chaque lettre représente un objet stylisé dont elle est l'initiale en français : A pour Arrosoir, B pour Bateau...
