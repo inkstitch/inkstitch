@@ -7,13 +7,17 @@ preview_image:
   - url: /assets/images/fonts/dinomouse72.png
     height: 20
 ---
+{%- assign font = site.data.fonts.dinomouse72.font -%}
 ![DinoMouse 72](/assets/images/fonts/dinomouse72.png)
 
 ## Schriftzeichen
 
-Diese Schrift umfasst 106 Zeichen:
+Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 
-!"#$%@'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ÀÁÂÃÄÅàáâãäå
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
 
 ## Dimensionen
 
