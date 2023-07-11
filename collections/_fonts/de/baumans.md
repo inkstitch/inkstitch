@@ -7,24 +7,17 @@ preview_image:
   - url: /assets/images/fonts/baumans_fi.jpg
     height: 32
 ---
+{%- assign font = site.data.fonts.baumans_FI.font -%}
 ![Baumans](/assets/images/fonts/baumans_fi.jpg)
 
 ## Schriftzeichen
 
-Diese Schrift enthält 102 Schriftzeichen:
+Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 
-	
-@'()+,-.01
-23456789:;
-=?&ABCDEFG
-HIJKLMNOPQ
-RSTUVWXYZ`
-abcdefghij
-klmnopqrst
-uvwxyz¨«´’
-»ÄÖÜßàáâäç
-èéêëîïôöùû
-üˆ
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
  
 ## Anmerkung
 
