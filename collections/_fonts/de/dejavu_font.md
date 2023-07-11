@@ -7,25 +7,20 @@ preview_image:
   - url: /assets/images/fonts/dejavu_serif.jpg
     height: 22
 ---
+{%- assign font = site.data.fonts.dejavufont.font -%}
 ## Serif Semi-condensed
 
 ![Deja Vue Serif Semi-condensed](/assets/images/fonts/dejavu_serif.jpg)
 
 ## Schriftzeichen
 
-Diese Schrift enthält 92 Schriftzeichen:
+Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 
-	
-012345678
-9AÄBCDEFGH
-IJKLMNOÖPQ
-RSTUÜVWXYZ
-aâàäbcçdeé
-èêëfghiîïj
-klmnoöôpqr
-stuùüûvwxy
-z@ß.'")(!;
-,?
+```
+{{ font.glyphs | join: ' ' }}
+```
+{: .font-glyphs }
+
 
 ## Maße
 
