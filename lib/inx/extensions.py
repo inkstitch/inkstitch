@@ -8,6 +8,7 @@ import pyembroidery
 from ..commands import (COMMANDS, GLOBAL_COMMANDS, LAYER_COMMANDS,
                         OBJECT_COMMANDS)
 from ..extensions import Input, Output, extensions
+from ..lettering.categories import FONT_CATEGORIES
 from ..threads import ThreadCatalog
 from .outputs import pyembroidery_output_formats
 from .utils import build_environment, write_inx_file
@@ -51,6 +52,7 @@ def generate_extension_inx_files():
         write_inx_file(name, template.render(formats=pyembroidery_output_formats(),
                                              debug_formats=pyembroidery_debug_formats(),
                                              threadcatalog=threadcatalog(),
+                                             font_categories=FONT_CATEGORIES,
                                              layer_commands=layer_commands(),
                                              object_commands=object_commands(),
                                              global_commands=global_commands()))

@@ -18,13 +18,14 @@ from ..elements import nodes_to_elements
 from ..gui import PresetsPanel, SimulatorPreview, info_dialog
 from ..i18n import _
 from ..lettering import Font, FontError
+from ..lettering.categories import FONT_CATEGORIES, FontCategory
 from ..svg import get_correction_transform
 from ..svg.tags import (INKSCAPE_LABEL, INKSTITCH_LETTERING, SVG_GROUP_TAG,
                         SVG_PATH_TAG)
 from ..utils import DotDict, cache, get_bundled_dir, get_resource_dir
+from ..utils.threading import ExitThread
 from .commands import CommandsExtension
 from .lettering_custom_font_dir import get_custom_font_dir
-from ..utils.threading import ExitThread
 
 
 class LetteringFrame(wx.Frame):
@@ -52,18 +53,31 @@ class LetteringFrame(wx.Frame):
         self.font_chooser = wx.adv.BitmapComboBox(self, wx.ID_ANY, style=wx.CB_READONLY | wx.CB_SORT)
         self.font_chooser.Bind(wx.EVT_COMBOBOX, self.on_font_changed)
 
-        self.font_filter = fs.FloatSpin(self, min_val=0, max_val=None, increment=1, value="0")
-        self.font_filter.SetFormat("%f")
-        self.font_filter.SetDigits(2)
-        self.font_filter.Bind(fs.EVT_FLOATSPIN, self.on_filter_changed)
-        self.font_filter.SetToolTip(_("Font size filter (mm). 0 for all sizes."))
+        self.font_size_filter = fs.FloatSpin(self, min_val=0, max_val=None, increment=1, value="0")
+        self.font_size_filter.SetFormat("%f")
+        self.font_size_filter.SetDigits(2)
+        self.font_size_filter.Bind(fs.EVT_FLOATSPIN, self.on_filter_changed)
+        self.font_size_filter.SetToolTip(_("Font size filter (mm). 0 for all sizes."))
 
-        self.update_font_list()
-        self.set_font_list()
+        self.font_glyph_filter = wx.CheckBox(self, label=_("Glyphs"))
+        self.font_glyph_filter.Bind(wx.EVT_CHECKBOX, self.on_filter_changed)
+        self.font_glyph_filter.SetToolTip(_("Filter fonts by available glyphs."))
+
+        self.font_category_filter = wx.ComboBox(self, wx.ID_ANY, choices=[], style=wx.CB_DROPDOWN | wx.CB_READONLY)
+        unfiltered = FontCategory('unfiltered', "---")
+        self.font_category_filter.Append(unfiltered.name, unfiltered)
+        for category in FONT_CATEGORIES:
+            self.font_category_filter.Append(category.name, category)
+        self.font_category_filter.SetToolTip(_("Filter fonts by category."))
+        self.font_category_filter.SetSelection(0)
+        self.font_category_filter.Bind(wx.EVT_COMBOBOX, self.on_filter_changed)
 
         # font details
         self.font_description = wx.StaticText(self, wx.ID_ANY)
         self.Bind(wx.EVT_SIZE, self.resize)
+
+        # font filter
+        self.filter_box = wx.StaticBox(self, wx.ID_ANY, label=_("Font Filter"))
 
         # options
         self.options_box = wx.StaticBox(self, wx.ID_ANY, label=_("Options"))
@@ -94,6 +108,10 @@ class LetteringFrame(wx.Frame):
 
         self.apply_button = wx.Button(self, wx.ID_ANY, _("Apply and Quit"))
         self.apply_button.Bind(wx.EVT_BUTTON, self.apply)
+
+        # set font list
+        self.update_font_list()
+        self.set_font_list()
 
         self.__do_layout()
 
@@ -165,10 +183,26 @@ class LetteringFrame(wx.Frame):
         self.fonts = {}
         self.fonts_by_id = {}
 
-        filter_size = self.font_filter.GetValue()
+        # font size filter value
+        filter_size = self.font_size_filter.GetValue()
+        filter_glyph = self.font_glyph_filter.GetValue()
+        filter_category = self.font_category_filter.GetSelection() - 1
+
+        # glyph filter string without spaces
+        glyphs = [*self.text_editor.GetValue().replace(" ", "").replace("\n", "")]
+
         for font in self.font_list:
+            if filter_glyph and glyphs and not set(glyphs).issubset(font.available_glyphs):
+                continue
+
+            if filter_category != -1:
+                category = FONT_CATEGORIES[filter_category].id
+                if category not in font.keywords:
+                    continue
+
             if filter_size != 0 and (filter_size < font.size * font.min_scale or filter_size > font.size * font.max_scale):
                 continue
+
             self.fonts[font.marked_custom_font_name] = font
             self.fonts_by_id[font.marked_custom_font_id] = font
 
@@ -208,7 +242,7 @@ class LetteringFrame(wx.Frame):
         try:
             font = self.fonts_by_id[font_id].marked_custom_font_name
         except KeyError:
-            font = self.default_font.name
+            font = self.default_font.marked_custom_font_name
         self.font_chooser.SetValue(font)
 
         self.on_font_changed()
@@ -222,6 +256,8 @@ class LetteringFrame(wx.Frame):
 
     def on_change(self, attribute, event):
         self.settings[attribute] = event.GetEventObject().GetValue()
+        if attribute == "text" and self.font_glyph_filter.GetValue() is True:
+            self.on_filter_changed()
         self.preview.update()
 
     def on_trim_option_change(self, event=None):
@@ -232,7 +268,7 @@ class LetteringFrame(wx.Frame):
         font = self.fonts.get(self.font_chooser.GetValue(), self.default_font)
         self.settings.font = font.marked_custom_font_id
 
-        filter_size = self.font_filter.GetValue()
+        filter_size = self.font_size_filter.GetValue()
         self.scale_spinner.SetRange(int(font.min_scale * 100), int(font.max_scale * 100))
         if filter_size != 0:
             self.scale_spinner.SetValue(int(filter_size / font.size * 100))
@@ -245,7 +281,7 @@ class LetteringFrame(wx.Frame):
             pass
 
         # Update font description
-        color = (0, 0, 0)
+        color = wx.NullColour
         description = font.description
         if len(font_variants) == 0:
             color = (255, 0, 0)
@@ -271,17 +307,17 @@ class LetteringFrame(wx.Frame):
         if not self.fonts:
             # No fonts for filtered size
             self.font_chooser.Clear()
-            self.filter_label.SetForegroundColour("red")
+            self.filter_box.SetForegroundColour("red")
             return
         else:
-            self.filter_label.SetForegroundColour("black")
+            self.filter_box.SetForegroundColour(wx.NullColour)
 
-        filter_size = self.font_filter.GetValue()
+        filter_size = self.font_size_filter.GetValue()
         previous_font = self.font_chooser.GetValue()
         self.set_font_list()
         font = self.fonts.get(previous_font, self.default_font)
-        self.font_chooser.SetValue(font.name)
-        if font.name != previous_font:
+        self.font_chooser.SetValue(font.marked_custom_font_name)
+        if font.marked_custom_font_name != previous_font:
             self.on_font_changed()
         elif filter_size != 0:
             self.scale_spinner.SetValue(int(filter_size / font.size * 100))
@@ -396,19 +432,27 @@ class LetteringFrame(wx.Frame):
         font_selector_sizer = wx.StaticBoxSizer(self.font_selector_box, wx.VERTICAL)
         font_selector_box = wx.BoxSizer(wx.HORIZONTAL)
         font_selector_box.Add(self.font_chooser, 4, wx.EXPAND | wx.TOP | wx.BOTTOM | wx.RIGHT, 10)
-        self.filter_label = wx.StaticText(self, wx.ID_ANY, _("Filter"))
-        font_selector_box.Add(self.filter_label, 0, wx.LEFT | wx.ALIGN_CENTRE_VERTICAL, 0)
-        font_selector_box.Add(self.font_filter, 1, wx.LEFT | wx.ALIGN_CENTRE_VERTICAL, 5)
         font_selector_sizer.Add(font_selector_box, 0, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT, 10)
         font_selector_sizer.Add(self.font_description, 1, wx.EXPAND | wx.ALL, 10)
         outer_sizer.Add(font_selector_sizer, 0, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT, 10)
+
+        # filter fon list
+        filter_sizer = wx.StaticBoxSizer(self.filter_box, wx.HORIZONTAL)
+        filter_size_label = wx.StaticText(self, wx.ID_ANY, _("Size"))
+        filter_sizer.Add(filter_size_label, 0, wx.LEFT | wx.TOP | wx.BOTTOM, 10)
+        filter_sizer.AddSpacer(5)
+        filter_sizer.Add(self.font_size_filter, 1, wx.RIGHT | wx.TOP | wx.BOTTOM, 10)
+        filter_sizer.AddSpacer(5)
+        filter_sizer.Add(self.font_glyph_filter, 1, wx.RIGHT | wx.TOP | wx.BOTTOM, 10)
+        filter_sizer.Add(self.font_category_filter, 1, wx.RIGHT | wx.TOP | wx.BOTTOM, 10)
+        outer_sizer.Add(filter_sizer, 0, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT, 10)
 
         # options
         left_option_sizer = wx.BoxSizer(wx.VERTICAL)
         left_option_sizer.Add(self.back_and_forth_checkbox, 1, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT, 5)
 
         trim_option_sizer = wx.BoxSizer(wx.HORIZONTAL)
-        trim_option_sizer.Add(wx.StaticText(self, wx.ID_ANY, _("Add trims")), 0, wx.LEFT | wx.ALIGN_CENTRE_VERTICAL, 5)
+        trim_option_sizer.Add(wx.StaticText(self, wx.ID_ANY, _("Add trims")), 0, wx.LEFT | wx.ALIGN_TOP, 5)
         trim_option_sizer.Add(self.trim_option_choice, 1, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT | wx.BOTTOM, 5)
         trim_option_sizer.Add(self.use_trim_symbols, 1, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT | wx.BOTTOM, 5)
         left_option_sizer.Add(trim_option_sizer, 0, wx.ALIGN_LEFT, 5)
