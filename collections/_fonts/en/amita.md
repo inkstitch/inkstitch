@@ -19,7 +19,7 @@ preview_image:
 These fonts contain {{ font.glyphs.size }} glyphs:
 
 ```
-{{ font.glyphs | join: ' ' }}
+{{ font.glyphs | sort | join: ' ' }}
 ```
 {: .font-glyphs }
 

@@ -9,17 +9,21 @@ preview_image:
   - url: /assets/images/fonts/sortefax_medium.jpg
     height: 90
 ---
+{%- assign font = site.data.fonts.sortefax_medium.font -%}
+
 ![SortefaxXL](/assets/images/fonts/sortefaxXL.jpg)
 
 ![Sortefax_medium](/assets/images/fonts/sortefax_medium.jpg)
 
 ## Glyphes
+
 Chacune  de ces deux  fontes comporte  {{ font.glyphs.size }} glyphes:
 
 ```
-{{ font.glyphs | join: ' ' }}
+{{ font.glyphs | sort | join: ' ' }}
 ```
 {: .font-glyphs }
+
 Remarque : Les glyphes ;:,.(){}[] sont utilisés pour stocker des cadres.
 
 ## Dimensions

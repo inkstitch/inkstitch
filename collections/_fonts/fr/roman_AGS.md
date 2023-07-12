@@ -27,7 +27,7 @@ preview_image:
 Cette fonte comporte  {{ font1.glyphs.size }} glyphes:
 
 ```
-{{ fon1t.glyphs | join: ' ' }}
+{{ font1.glyphs | sort | join: ' ' }}
 ```
 {: .font-glyphs }
 
@@ -35,9 +35,10 @@ Cette fonte comporte  {{ font1.glyphs.size }} glyphes:
 Cette fonte comporte  {{ font2.glyphs.size }} glyphes:
 
 ```
-{{ font2.glyphs | join: ' ' }}
+{{ font2.glyphs | sort | join: ' ' }}
 ```
 {: .font-glyphs }
+
 ## Dimensions
 
 Utilisées à 100%, ces fontes font environ 28 mm de haut .

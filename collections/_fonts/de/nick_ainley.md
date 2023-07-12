@@ -14,7 +14,7 @@ preview_image:
 Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 
 ```
-{{ font.glyphs | join: ' ' }}
+{{ font.glyphs | sort | join: ' ' }}
 ```
 {: .font-glyphs }
 

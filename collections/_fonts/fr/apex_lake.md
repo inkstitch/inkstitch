@@ -26,7 +26,7 @@ Les glypes communs sont identiques, à la décoration près bien sûr.
 Cette fonte comporte  {{ font1.glyphs.size }} glyphes:
 
 ```
-{{ font1.glyphs | join: ' ' }}
+{{ font1.glyphs | sort | join: ' ' }}
 ```
 {: .font-glyphs }
 
@@ -35,7 +35,7 @@ Cette fonte comporte  {{ font1.glyphs.size }} glyphes:
 Cette fonte comporte  {{ font2.glyphs.size }} glyphes:
 
 ```
-{{ font2.glyphs | join: ' ' }}
+{{ font2.glyphs | sort | join: ' ' }}
 ```
 {: .font-glyphs }
 ## Particularités

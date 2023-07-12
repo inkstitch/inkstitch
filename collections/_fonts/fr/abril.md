@@ -15,7 +15,7 @@ preview_image:
 Cette fonte comporte  {{ font.glyphs.size }} glyphes:
 
 ```
-{{ font.glyphs | join: ' ' }}
+{{ font.glyphs | sort | join: ' ' }}
 ```
 {: .font-glyphs }
 

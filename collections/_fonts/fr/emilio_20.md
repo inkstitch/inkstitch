@@ -45,7 +45,7 @@ preview_image:
 Chacune des cinq fontes comporte  {{ font.glyphs.size }} glyphes:
 
 ```
-{{ font.glyphs | join: ' ' }}
+{{ font.glyphs | sort | join: ' ' }}
 ```
 {: .font-glyphs }
 

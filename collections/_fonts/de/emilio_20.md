@@ -45,7 +45,7 @@ preview_image:
 Jeweils fünf  Schriften enthalten  {{ font.glyphs.size }} Schriftzeichen:
 
 ```
-{{ font.glyphs | join: ' ' }}
+{{ font.glyphs | sort | join: ' ' }}
 ```
 {: .font-glyphs }
 

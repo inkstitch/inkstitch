@@ -26,7 +26,7 @@ Commun glyphs are identical (up to decoration)
 This font contains  {{ font1.glyphs.size }} glyphs:
 
 ```
-{{ font1.glyphs | join: ' ' }}
+{{ font1.glyphs | sort | join: ' ' }}
 ```
 {: .font-glyphs }
 
@@ -35,7 +35,7 @@ This font contains  {{ font1.glyphs.size }} glyphs:
 This font contains  {{ font2.glyphs.size }} glyphs:
 
 ```
-{{ font2.glyphs | join: ' ' }}
+{{ font2.glyphs | sort | join: ' ' }}
 ```
 {: .font-glyphs }
 

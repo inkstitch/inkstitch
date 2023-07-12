@@ -17,7 +17,7 @@ Cette fonte sera dans une prochaine version d'Ink/Stitch version et n'est pas di
 Cette fonte comporte  {{ font.glyphs.size }} glyphes:
 
 ```
-{{ font.glyphs | join: ' ' }}
+{{ font.glyphs | sort | join: ' ' }}
 ```
 {: .font-glyphs }
 

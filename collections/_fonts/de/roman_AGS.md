@@ -24,7 +24,7 @@ preview_image:
 Diese Schrift enthält  {{ font1.glyphs.size }} Schriftzeichen:
 
 ```
-{{ font1.glyphs | join: ' ' }}
+{{ font1.glyphs | sort | join: ' ' }}
 ```
 {: .font-glyphs }
 
@@ -33,7 +33,7 @@ Diese Schrift enthält  {{ font1.glyphs.size }} Schriftzeichen:
 Diese Schrift enthält  {{ font2.glyphs.size }} Schriftzeichen:
 
 ```
-{{ font2.glyphs | join: ' ' }}
+{{ font2.glyphs | sort | join: ' ' }}
 ```
 {: .font-glyphs }
 

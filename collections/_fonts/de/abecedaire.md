@@ -16,7 +16,7 @@ Dies ist Teil einer kommenden Ink/Stitch-Version und nicht in Ink/Stitch v2.1.2 
 Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 
 ```
-{{ font.glyphs | join: ' ' }}
+{{ font.glyphs | sort | join: ' ' }}
 ```
 {: .font-glyphs }
 
