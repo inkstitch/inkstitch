@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-07-04 01:43+0000\n"
-"PO-Revision-Date: 2023-07-04 01:44\n"
+"POT-Creation-Date: 2023-07-13 01:44+0000\n"
+"PO-Revision-Date: 2023-07-13 01:45\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-04 01:43+0000\n"
+"POT-Creation-Date: 2023-07-13 01:44+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -389,12 +389,12 @@ msgstr "Lobster AGS"
 msgid " The capital M is 19.8 millimeter wide at 100% scale. Can be scaled down to 80% or up to 150%. Every satin has zigzag underlay"
 msgstr "La majuscule M a 19,8mm de large à l'échelle 100%. Peut être réduite jusqu'à 80% et agrandie jusqu'à 150%. Chaque satin a une sous-couche zigzag."
 
-#. name of font in fonts/magnolia_ KOR
+#. name of font in fonts/magnolia_KOR
 #: inkstitch-fonts-metadata.py:142
 msgid "Magnolia KOR"
 msgstr "Magnolia KOR"
 
-#. description of font in fonts/magnolia_ KOR
+#. description of font in fonts/magnolia_KOR
 #: inkstitch-fonts-metadata.py:144
 msgid "Magnolia KOR is a script font of size approximatively 20mm. It can be scaled down to 80% and up to 120%"
 msgstr "Magnolia KOR est une police scripte d'environ 20mm. Peut être diminuée jusqu'à 80% et agrandie jusqu'à 120%"
@@ -1555,7 +1555,7 @@ msgstr "Chemin de dessous"
 msgid "Travel inside the shape when moving from section to section.  Underpath stitches avoid traveling in the direction of the row angle so that they are not visible.  This gives them a jagged appearance."
 msgstr "Les points qui relient les sections à l'intérieur de l'objet. Les points des chemins de dessous évitent d'aller dans la même direction que ceux de dessus pour ne pas être visibles. Cela leur donne une apparence déchiquetée."
 
-#: lib/elements/fill_stitch.py:350 lib/elements/stroke.py:99
+#: lib/elements/fill_stitch.py:350 lib/elements/stroke.py:108
 msgid "Running stitch length"
 msgstr "Longueur de point droit"
 
@@ -1572,19 +1572,19 @@ msgid "Determines how hard Ink/Stitch tries to avoid stitching outside the shape
 msgstr ""
 
 #: lib/elements/fill_stitch.py:378 lib/elements/satin_column.py:353
-#: lib/elements/stroke.py:73
+#: lib/elements/stroke.py:82
 msgid "Repeats"
 msgstr "Répétitions"
 
-#: lib/elements/fill_stitch.py:379 lib/elements/stroke.py:74
+#: lib/elements/fill_stitch.py:379 lib/elements/stroke.py:83
 msgid "Defines how many times to run down and back along the path."
 msgstr "Définit combien de fois broder en avant et en arrière le long du chemin."
 
-#: lib/elements/fill_stitch.py:390 lib/elements/stroke.py:85
+#: lib/elements/fill_stitch.py:390 lib/elements/stroke.py:94
 msgid "Bean stitch number of repeats"
 msgstr "Nombre de répétitions pour le point triple (bean stitch)"
 
-#: lib/elements/fill_stitch.py:391 lib/elements/stroke.py:86
+#: lib/elements/fill_stitch.py:391 lib/elements/stroke.py:95
 msgid "Backtrack each stitch this many times.  A value of 1 would triple each stitch (forward, back, forward).  A value of 2 would quintuple each stitch, etc.\n\n"
 "A pattern with various repeats can be created with a list of values separated by a space."
 msgstr "Repasse sur chaque point le nombre de fois indiqué. Une valeur de 1 triplera chaque point (avant, arrière, avant).\n"
@@ -1619,7 +1619,7 @@ msgstr "Espacement entre rangées de points"
 msgid "default: 3x fill row spacing"
 msgstr "défaut: 3x espacement entre les rangées"
 
-#: lib/elements/fill_stitch.py:451 lib/elements/stroke.py:125
+#: lib/elements/fill_stitch.py:451 lib/elements/stroke.py:134
 msgid "Max stitch length"
 msgstr "Longueur de point maximale"
 
@@ -1719,7 +1719,7 @@ msgstr "* Optionnel : Exécutez l'extension Paramètres et cochez la boite \"poi
 msgid "Manual stitch along path"
 msgstr "Point manuel le long du chemin"
 
-#: lib/elements/satin_column.py:31
+#: lib/elements/satin_column.py:31 lib/elements/stroke.py:35
 msgid "Too few subpaths"
 msgstr "Trop peu de sous-chemins"
 
@@ -1808,7 +1808,7 @@ msgstr "Colonne de satin personnalisée"
 msgid "\"E\" Stitch"
 msgstr "Point en E"
 
-#: lib/elements/satin_column.py:88 lib/elements/stroke.py:63
+#: lib/elements/satin_column.py:88 lib/elements/stroke.py:72
 #: inx/inkstitch_break_apart.inx:17
 msgid "Method"
 msgstr "Méthode"
@@ -1891,7 +1891,7 @@ msgstr "Distance des points courts"
 msgid "Inset stitches if the distance between stitches is smaller than this."
 msgstr "Faire des points courts si la distance entre les crêtes est inférieure à cette valeur."
 
-#: lib/elements/satin_column.py:189 lib/elements/stroke.py:139
+#: lib/elements/satin_column.py:189 lib/elements/stroke.py:148
 msgid "Zig-zag spacing (peak-to-peak)"
 msgstr "Espacement Zig-Zag (crête à crête)"
 
@@ -1907,7 +1907,7 @@ msgstr "Pourcentage de compensation d'étirement"
 msgid "Additional pull compensation which varies as a percentage of stitch width. Two values separated by a space may be used for an aysmmetric effect."
 msgstr "Compensation d'étirement supplémentaire qui varie comme un pourcentage de la largeur du point. Deux valeurs séparées par un espace peuvent être utilisées pour un effet asymétrique."
 
-#: lib/elements/satin_column.py:217 lib/elements/stroke.py:152
+#: lib/elements/satin_column.py:217 lib/elements/stroke.py:161
 msgid "Pull compensation"
 msgstr "Compensation d'étirement"
 
@@ -1920,27 +1920,27 @@ msgstr "Les points satin resserrent le tissu, ce qui entraîne une colonne plus 
 msgid "mm (each side)"
 msgstr "mm (de chaque côté)"
 
-#: lib/elements/satin_column.py:232 lib/elements/stroke.py:264
+#: lib/elements/satin_column.py:232 lib/elements/stroke.py:273
 msgid "Automatic"
 msgstr "Automatique"
 
-#: lib/elements/satin_column.py:233 lib/elements/stroke.py:265
+#: lib/elements/satin_column.py:233 lib/elements/stroke.py:274
 msgid "Don't reverse"
 msgstr "Ne pas inverser"
 
-#: lib/elements/satin_column.py:234 lib/elements/stroke.py:266
+#: lib/elements/satin_column.py:234 lib/elements/stroke.py:275
 msgid "Reverse first rail"
 msgstr "Inverser la direction du premier rail"
 
-#: lib/elements/satin_column.py:235 lib/elements/stroke.py:267
+#: lib/elements/satin_column.py:235 lib/elements/stroke.py:276
 msgid "Reverse second rail"
 msgstr "Inverser la direction du second rail"
 
-#: lib/elements/satin_column.py:236 lib/elements/stroke.py:268
+#: lib/elements/satin_column.py:236 lib/elements/stroke.py:277
 msgid "Reverse both rails"
 msgstr "Inverser la direction des deux rails"
 
-#: lib/elements/satin_column.py:242 lib/elements/stroke.py:274
+#: lib/elements/satin_column.py:242 lib/elements/stroke.py:283
 msgid "Reverse rails"
 msgstr "Inverser la direction des rails"
 
@@ -2041,187 +2041,199 @@ msgstr "Décalage (proportionnel)"
 msgid "Split stitch if distance of maximum stitch length is exceeded"
 msgstr "Découper le point en plusieurs si sa longueur dépasse la longueur maximale définie"
 
-#: lib/elements/stroke.py:35 inx/inkstitch_select_elements.inx:12
+#: lib/elements/stroke.py:36
+msgid "This element renders as running stitch while it has a satin column parameter."
+msgstr ""
+
+#: lib/elements/stroke.py:38
+msgid "* Convert to stroke: select the element and open the parameter dialog. Enable running stitch along path."
+msgstr ""
+
+#: lib/elements/stroke.py:39
+msgid "* Use as satin column: add an other rail and optionally rungs."
+msgstr ""
+
+#: lib/elements/stroke.py:44 inx/inkstitch_select_elements.inx:12
 msgid "Stroke"
 msgstr "Trait"
 
-#: lib/elements/stroke.py:38
+#: lib/elements/stroke.py:47
 msgid "Running stitch along paths"
 msgstr "Points droits le long des chemins"
 
-#: lib/elements/stroke.py:56
+#: lib/elements/stroke.py:65
 msgid "Running Stitch / Bean Stitch"
 msgstr "Point droit /Point multiple"
 
-#: lib/elements/stroke.py:57
+#: lib/elements/stroke.py:66
 msgid "Ripple Stitch"
 msgstr "Broderie ondulée"
 
-#: lib/elements/stroke.py:58 inx/inkstitch_select_elements.inx:21
+#: lib/elements/stroke.py:67 inx/inkstitch_select_elements.inx:21
 msgid "ZigZag Stitch"
 msgstr "Point zigzag"
 
-#: lib/elements/stroke.py:59 inx/inkstitch_select_elements.inx:22
+#: lib/elements/stroke.py:68 inx/inkstitch_select_elements.inx:22
 msgid "Manual Stitch"
 msgstr "Point manuel"
 
-#: lib/elements/stroke.py:100
+#: lib/elements/stroke.py:109
 msgid "Length of stitches. Stitches can be shorter according to the stitch tolerance setting."
 msgstr "Longueur des points. Selon la valeur de la tolérance, il se peut que les points soient plus court."
 
-#: lib/elements/stroke.py:111
+#: lib/elements/stroke.py:120
 msgid "Stitch tolerance"
 msgstr "Tolérance"
 
-#: lib/elements/stroke.py:112
+#: lib/elements/stroke.py:121
 msgid "All stitches must be within this distance from the path.  A lower tolerance means stitches will be closer together.  A higher tolerance means sharp corners may be rounded."
 msgstr "Tous les points doivent rester au plus à cette distance du chemin. Une tolérance plus faible signifie que les points seront plus rapprochés. Une tolérance plus élevée signifie que les angles vifs peuvent être arrondis."
 
-#: lib/elements/stroke.py:126
+#: lib/elements/stroke.py:135
 msgid "Split stitches longer than this."
 msgstr "Découper les points plus longs que ceci."
 
-#: lib/elements/stroke.py:140
+#: lib/elements/stroke.py:149
 msgid "Length of stitches in zig-zag mode."
 msgstr "Longueur de points en mode zig-zag."
 
-#: lib/elements/stroke.py:153
+#: lib/elements/stroke.py:162
 msgid "Zigzag stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape. This widens the zigzag line width."
 msgstr "Le zigzag tire sur le tissu, et le résultat est plus étroit que ce que vous avez dessiné dans Inkscape. Ceci élargit le zigzag."
 
-#: lib/elements/stroke.py:166
+#: lib/elements/stroke.py:175
 msgid "Number of lines"
 msgstr "Nombre de lignes"
 
-#: lib/elements/stroke.py:167
+#: lib/elements/stroke.py:176
 msgid "Number of lines from start to finish"
 msgstr "Nombre de lignes du début jusqu'à la fin"
 
-#: lib/elements/stroke.py:178
+#: lib/elements/stroke.py:187
 msgid "Minimum line distance"
 msgstr "Distance minimum entre les lignes"
 
-#: lib/elements/stroke.py:179
+#: lib/elements/stroke.py:188
 msgid "Overrides the number of lines setting."
 msgstr "Est prioritaire sur le réglage nombre de lignes."
 
-#: lib/elements/stroke.py:193
+#: lib/elements/stroke.py:202
 msgid "Stagger lines this many times before repeating"
 msgstr "Décaler les lignes ce nombre de fois avant de répéter"
 
-#: lib/elements/stroke.py:194
+#: lib/elements/stroke.py:203
 msgid "Length of the cycle by which successive stitch lines are staggered. Fractional values are allowed and can have less visible diagonals than integer values. For linear ripples only."
 msgstr "Longueur du cycle de décalage des lignes. Les fractions sont autorisées et peuvent produire des diagonales moins visibles que les valeurs entières. Ne concerne que les ondulations linéaires."
 
-#: lib/elements/stroke.py:206
+#: lib/elements/stroke.py:215
 msgid "Skip first lines"
 msgstr "Sauter les premières lignes"
 
-#: lib/elements/stroke.py:207
+#: lib/elements/stroke.py:216
 msgid "Skip this number of lines at the beginning."
 msgstr "Sauter ce nombre de lignes au début."
 
-#: lib/elements/stroke.py:218
+#: lib/elements/stroke.py:227
 msgid "Skip last lines"
 msgstr "Sauter les dernières lignes"
 
-#: lib/elements/stroke.py:219
+#: lib/elements/stroke.py:228
 msgid "Skip this number of lines at the end"
 msgstr "Sauter ce nombre de lignes à la fin."
 
-#: lib/elements/stroke.py:230
+#: lib/elements/stroke.py:239
 msgid "Line distance exponent"
 msgstr "Exposant de l'espacement entre les lignes"
 
-#: lib/elements/stroke.py:231
+#: lib/elements/stroke.py:240
 msgid "Increase density towards one side."
 msgstr "Accroît la densité d'un côté."
 
-#: lib/elements/stroke.py:242
+#: lib/elements/stroke.py:251
 msgid "Flip exponent"
 msgstr "Inverser effet exposant"
 
-#: lib/elements/stroke.py:243
+#: lib/elements/stroke.py:252
 msgid "Reverse exponent effect."
 msgstr "Intervertit l'effet d'espacement de l'exposant."
 
-#: lib/elements/stroke.py:254
+#: lib/elements/stroke.py:263
 msgid "Reverse"
 msgstr "Changer le sens"
 
-#: lib/elements/stroke.py:255
+#: lib/elements/stroke.py:264
 msgid "Flip start and end point"
 msgstr "Intervertit le début et la fin"
 
-#: lib/elements/stroke.py:275
+#: lib/elements/stroke.py:284
 msgid "Reverse satin ripple rails.  Default: automatically detect and fix a reversed rail."
 msgstr "Inverse les rails d'une ondulation satin. Par défaut détecte automatiquement, et corrige la direction d'un des rails."
 
-#: lib/elements/stroke.py:287
+#: lib/elements/stroke.py:296
 msgid "Grid size"
 msgstr "Taille de la grille"
 
-#: lib/elements/stroke.py:288
+#: lib/elements/stroke.py:297
 msgid "Render as grid. Use with care and watch your stitch density."
 msgstr "Rendu en grille. Utilisez avec précaution et surveillez la densité de points."
 
-#: lib/elements/stroke.py:300
+#: lib/elements/stroke.py:309
 msgid "Scale axis"
 msgstr "Mettre à l'échelle sur l'axe"
 
-#: lib/elements/stroke.py:301
+#: lib/elements/stroke.py:310
 msgid "Scale axis for satin guided ripple stitches."
 msgstr "Axe de mise à l'échelle pour les ondulations guidées."
 
-#: lib/elements/stroke.py:305 print/templates/ui.html:181
+#: lib/elements/stroke.py:314 print/templates/ui.html:181
 msgid "None"
 msgstr "Aucune"
 
-#: lib/elements/stroke.py:313
+#: lib/elements/stroke.py:322
 msgid "Starting scale"
 msgstr "Démarrer à"
 
-#: lib/elements/stroke.py:314
+#: lib/elements/stroke.py:323
 msgid "How big the first copy of the line should be, in percent."
 msgstr "Taille de la première ondulation en pourcentage."
 
-#: lib/elements/stroke.py:314 lib/elements/stroke.py:326
+#: lib/elements/stroke.py:323 lib/elements/stroke.py:335
 msgid "Used only for ripple stitch with a guide line."
 msgstr "Utilisé uniquement pour des ondulations guidées."
 
-#: lib/elements/stroke.py:325
+#: lib/elements/stroke.py:334
 msgid "Ending scale"
 msgstr "Finir à"
 
-#: lib/elements/stroke.py:326
+#: lib/elements/stroke.py:335
 msgid "How big the last copy of the line should be, in percent."
 msgstr "Taille de la dernière ondulation en pourcentage."
 
-#: lib/elements/stroke.py:337
+#: lib/elements/stroke.py:346
 msgid "Rotate"
 msgstr "Tourner"
 
-#: lib/elements/stroke.py:338
+#: lib/elements/stroke.py:347
 msgid "Rotate satin guided ripple stitches"
 msgstr "Tourne les ondulations guidées par un satin"
 
-#: lib/elements/stroke.py:349
+#: lib/elements/stroke.py:358
 msgid "Join style"
 msgstr "Style de jointure"
 
-#: lib/elements/stroke.py:350
+#: lib/elements/stroke.py:359
 msgid "Join style for non circular ripples."
 msgstr "Style de jointure pour les ondulations ouvertes."
 
-#: lib/elements/stroke.py:353
+#: lib/elements/stroke.py:362
 msgid "flat"
 msgstr "segment"
 
-#: lib/elements/stroke.py:353
+#: lib/elements/stroke.py:362
 msgid "point"
 msgstr "point"
 
-#: lib/elements/text.py:13 lib/extensions/lettering.py:86
+#: lib/elements/text.py:13 lib/extensions/lettering.py:100
 msgid "Text"
 msgstr "Texte"
 
@@ -2440,19 +2452,35 @@ msgstr "Merci de choisir au moins deux éléments pour convertir le saut en poin
 msgid "Please choose one or more commands to add."
 msgstr "Veuillez choisir une ou plusieurs commandes à ajouter."
 
-#: lib/extensions/lettering.py:40 lib/extensions/lettering.py:485
+#: lib/extensions/lettering.py:41 lib/extensions/lettering.py:529
 msgid "Ink/Stitch Lettering"
 msgstr "Lettrage Ink/Stitch"
 
-#: lib/extensions/lettering.py:50
+#: lib/extensions/lettering.py:51
 msgid "Font"
 msgstr "Police"
 
-#: lib/extensions/lettering.py:59
+#: lib/extensions/lettering.py:60
 msgid "Font size filter (mm). 0 for all sizes."
 msgstr "Filtre des fontes selon leur taille (mm). 0 pour obtenir toutes les fontes."
 
-#: lib/extensions/lettering.py:69 inx/inkstitch_apply_threadlist.inx:7
+#: lib/extensions/lettering.py:62
+msgid "Glyphs"
+msgstr ""
+
+#: lib/extensions/lettering.py:64
+msgid "Filter fonts by available glyphs."
+msgstr ""
+
+#: lib/extensions/lettering.py:71
+msgid "Filter fonts by category."
+msgstr ""
+
+#: lib/extensions/lettering.py:80
+msgid "Font Filter"
+msgstr ""
+
+#: lib/extensions/lettering.py:83 inx/inkstitch_apply_threadlist.inx:7
 #: inx/inkstitch_fill_to_stroke.inx:15 inx/inkstitch_gradient_blocks.inx:15
 #: inx/inkstitch_lettering_along_path.inx:13
 #: inx/inkstitch_palette_to_text.inx:15 inx/inkstitch_stroke_to_lpe_satin.inx:7
@@ -2460,81 +2488,83 @@ msgstr "Filtre des fontes selon leur taille (mm). 0 pour obtenir toutes les font
 msgid "Options"
 msgstr "Options"
 
-#: lib/extensions/lettering.py:74
+#: lib/extensions/lettering.py:88
 msgid "Stitch lines of text back and forth"
 msgstr "Brode les lignes de texte en aller-retour"
 
-#: lib/extensions/lettering.py:77
+#: lib/extensions/lettering.py:91
 msgid "Never"
 msgstr "Jamais"
 
-#: lib/extensions/lettering.py:77
+#: lib/extensions/lettering.py:91
 msgid "after each line"
 msgstr "après chaque ligne"
 
-#: lib/extensions/lettering.py:77
+#: lib/extensions/lettering.py:91
 msgid "after each word"
 msgstr "après chaque mot"
 
-#: lib/extensions/lettering.py:77
+#: lib/extensions/lettering.py:91
 msgid "after each letter"
 msgstr "après chaque lettre"
 
-#: lib/extensions/lettering.py:78
+#: lib/extensions/lettering.py:92
 msgid "Add trim command"
 msgstr "Ajouter une commande de coupe"
 
-#: lib/extensions/lettering.py:81
+#: lib/extensions/lettering.py:95
 msgid "Use command symbols"
 msgstr "Utiliser des symboles de commandes"
 
-#: lib/extensions/lettering.py:83
+#: lib/extensions/lettering.py:97
 msgid "Uses command symbols if enabled. When disabled inserts trim commands as params."
 msgstr "Utilises les symboles de commande si coché. Sinon insère les commandes de coupe en tant que paramètres."
 
-#: lib/extensions/lettering.py:91 lib/extensions/params.py:499
+#: lib/extensions/lettering.py:105 lib/extensions/params.py:499
 #: print/templates/custom-page.html:23 print/templates/custom-page.html:27
 #: print/templates/custom-page.html:33 print/templates/ui.html:102
 #: print/templates/ui.html:106 print/templates/ui.html:112
 msgid "Cancel"
 msgstr "Annuler"
 
-#: lib/extensions/lettering.py:95 lib/extensions/params.py:507
+#: lib/extensions/lettering.py:109 lib/extensions/params.py:507
 msgid "Apply and Quit"
 msgstr "Appliquer et Quitter"
 
-#: lib/extensions/lettering.py:252
+#: lib/extensions/lettering.py:288
 msgid "This font has no available font variant. Please update or remove the font."
 msgstr "Cette police n'a pas de variante de police disponible. Veuillez mettre à jour ou supprimer la police."
 
 #. The user has chosen to scale the text by some percentage
 #. (50%, 200%, etc).  If you need to use the percentage symbol,
 #. make sure to double it (%%).
-#: lib/extensions/lettering.py:313
+#: lib/extensions/lettering.py:349
 #, python-format
 msgid "Text scale %s%%"
 msgstr "Échelle du texte %s%%"
 
-#: lib/extensions/lettering.py:324
+#: lib/extensions/lettering.py:360
 #, python-format
 msgid "Error: Text cannot be applied to the document.\n"
 "%s"
 msgstr "Erreur : Le texte ne peut pas être appliqué au document.\n"
 "%s"
 
-#: lib/extensions/lettering.py:399
-msgid "Filter"
-msgstr "Filtrer"
+#: lib/extensions/lettering.py:441 lib/extensions/zip.py:104
+#: inx/inkstitch_commands_scale_symbols.inx:6
+#: inx/inkstitch_lettering_generate_json.inx:82
+msgid "Size"
+msgstr "Taille"
 
-#: lib/extensions/lettering.py:411
+#: lib/extensions/lettering.py:455
 msgid "Add trims"
 msgstr "Ajouter coupes"
 
-#: lib/extensions/lettering.py:417 print/templates/ui_svg_action_buttons.html:1
+#: lib/extensions/lettering.py:461 print/templates/ui_svg_action_buttons.html:1
 msgid "Scale"
 msgstr "Échelle"
 
-#: lib/extensions/lettering.py:474
+#: lib/extensions/lettering.py:518
 msgid "Please select only one block of text."
 msgstr "Veuillez ne sélectionner qu’un seul bloc de texte."
 
@@ -2554,9 +2584,13 @@ msgstr "Spécifiez le répertoire de vos polices personnalisées."
 msgid "The maximum value is smaller than the minimum value."
 msgstr "La valeur maximale est inférieure à la valeur minimale."
 
-#: lib/extensions/lettering_generate_json.py:42
+#: lib/extensions/lettering_generate_json.py:51
 msgid "Please specify a font file."
 msgstr "Spécifiez un fichier de police."
+
+#: lib/extensions/lettering_update_json_glyphlist.py:29
+msgid "Please verify file locations."
+msgstr ""
 
 #: lib/extensions/letters_to_font.py:35
 msgid "Font directory not found. Please specify an existing directory."
@@ -2679,7 +2713,7 @@ msgid "Invalid Pointer"
 msgstr "Pointeur invalide"
 
 #: lib/extensions/troubleshoot.py:85
-#: inx/inkstitch_lettering_generate_json.inx:26
+#: inx/inkstitch_lettering_generate_json.inx:28
 msgid "Description"
 msgstr "Description"
 
@@ -2745,11 +2779,6 @@ msgstr "Détails du dessin"
 #: lib/extensions/zip.py:103
 msgid "Title"
 msgstr "Titre"
-
-#: lib/extensions/zip.py:104 inx/inkstitch_commands_scale_symbols.inx:6
-#: inx/inkstitch_lettering_generate_json.inx:43
-msgid "Size"
-msgstr "Taille"
 
 #: lib/extensions/zip.py:105
 msgid "Stitches"
@@ -2906,7 +2935,52 @@ msgid "Cannot load simulator.\n"
 msgstr "Impossible de charger le simulateur.\n"
 "Fermez la fenêtre des Paramètres pour obtenir le message d'erreur complet."
 
-#: lib/lettering/font.py:167
+#: lib/lettering/categories.py:19 inx/inkstitch_lettering_generate_json.inx:44
+msgid "Applique"
+msgstr ""
+
+#: lib/lettering/categories.py:20 inx/inkstitch_lettering_generate_json.inx:45
+msgid "Crossstitch"
+msgstr ""
+
+#: lib/lettering/categories.py:21 inx/inkstitch_lettering_generate_json.inx:46
+msgid "Display"
+msgstr ""
+
+#: lib/lettering/categories.py:22 inx/inkstitch_lettering_generate_json.inx:49
+msgid "Handwriting"
+msgstr ""
+
+#: lib/lettering/categories.py:23 inx/inkstitch_lettering_generate_json.inx:50
+msgid "Italic"
+msgstr ""
+
+#: lib/lettering/categories.py:24 inx/inkstitch_lettering_generate_json.inx:51
+msgid "Monogram"
+msgstr ""
+
+#: lib/lettering/categories.py:25 inx/inkstitch_lettering_generate_json.inx:52
+msgid "Multicolor"
+msgstr ""
+
+#: lib/lettering/categories.py:26 inx/inkstitch_lettering_generate_json.inx:55
+#: inx/inkstitch_select_elements.inx:13
+msgid "Running Stitch"
+msgstr "Point droit"
+
+#: lib/lettering/categories.py:27 inx/inkstitch_lettering_generate_json.inx:56
+msgid "Sans Serif"
+msgstr ""
+
+#: lib/lettering/categories.py:28 inx/inkstitch_lettering_generate_json.inx:57
+msgid "Serif"
+msgstr ""
+
+#: lib/lettering/categories.py:29 inx/inkstitch_lettering_generate_json.inx:58
+msgid "Tiny"
+msgstr ""
+
+#: lib/lettering/font.py:169
 #, python-format
 msgid "The font '%s' has no variants."
 msgstr "Aucun fichier variant trouvé pour la police '%s'."
@@ -3239,6 +3313,7 @@ msgid "Save PDF"
 msgstr "Enregistrer PDF"
 
 #: print/templates/ui.html:6 print/templates/ui.html:16
+#: inx/inkstitch_lettering_generate_json.inx:63
 msgid "Settings"
 msgstr "Paramètres"
 
@@ -3405,7 +3480,7 @@ msgstr "Changer la palette de fil recalculera les noms de fils et les numéros d
 msgid "Yes"
 msgstr "Oui"
 
-#: print/templates/ui.html:201 inx/inkstitch_lettering_generate_json.inx:37
+#: print/templates/ui.html:201 inx/inkstitch_lettering_generate_json.inx:76
 #: inx/inkstitch_letters_to_font.inx:66
 msgid "No"
 msgstr "Non"
@@ -5028,6 +5103,7 @@ msgstr "Répertoire de police personnalisé"
 #: inx/inkstitch_lettering_force_lock_stitches.inx:10
 #: inx/inkstitch_lettering_generate_json.inx:10
 #: inx/inkstitch_lettering_remove_kerning.inx:10
+#: inx/inkstitch_lettering_update_json_glyphlist.inx:10
 #: inx/inkstitch_letters_to_font.inx:10
 msgid "Font Management"
 msgstr "Gestion des polices"
@@ -5045,80 +5121,89 @@ msgstr "Ajout de l'attribut \"force lock stitches\" (forcer des points d'arrêt)
 msgid "Generate JSON"
 msgstr "Générer JSON"
 
-#: inx/inkstitch_lettering_generate_json.inx:21
-msgid "SVG Font File"
-msgstr "Fichier svg de la police"
+#: inx/inkstitch_lettering_generate_json.inx:16
+msgid "Font info"
+msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:25
+#: inx/inkstitch_lettering_generate_json.inx:27
 msgid "Name"
 msgstr "Nom"
 
-#: inx/inkstitch_lettering_generate_json.inx:33
-msgid "Autoroute Satin"
-msgstr "Agencement automatique de colonnes satin"
+#: inx/inkstitch_lettering_generate_json.inx:34
+#: inx/inkstitch_lettering_update_json_glyphlist.inx:17
+msgid "SVG Font File"
+msgstr "Fichier svg de la police"
 
-#: inx/inkstitch_lettering_generate_json.inx:33
-msgid "Disable if you defined manual routing in your font."
-msgstr "Désactivez si vous avez défini manuellement l'agencement des colonnes satin."
-
-#: inx/inkstitch_lettering_generate_json.inx:35
-msgid "Reversible"
-msgstr "Réversible"
-
-#: inx/inkstitch_lettering_generate_json.inx:35
-msgid "If disabled back and forth stitching will not be possile for this font."
-msgstr "Si désactivé, la broderie en aller-retour ne sera pas possible pour cette police."
-
-#: inx/inkstitch_lettering_generate_json.inx:36
-msgid "Force letter case"
-msgstr "Forcer la casse"
-
-#: inx/inkstitch_lettering_generate_json.inx:38
-msgid "Upper"
-msgstr "Majuscule"
-
-#: inx/inkstitch_lettering_generate_json.inx:39
-msgid "Lower"
-msgstr "Minuscule"
-
-#: inx/inkstitch_lettering_generate_json.inx:44
-msgid "Min Scale"
-msgstr "Échelle minimum"
-
-#: inx/inkstitch_lettering_generate_json.inx:45
-msgid "Max Scale"
-msgstr "Échelle maximum"
-
-#: inx/inkstitch_lettering_generate_json.inx:49
+#: inx/inkstitch_lettering_generate_json.inx:66
 msgid "Default Glyph"
 msgstr "Glyphe par défaut"
 
-#: inx/inkstitch_lettering_generate_json.inx:61
-#: inx/inkstitch_lettering_generate_json.inx:68
+#: inx/inkstitch_lettering_generate_json.inx:72
+msgid "Autoroute Satin"
+msgstr "Agencement automatique de colonnes satin"
+
+#: inx/inkstitch_lettering_generate_json.inx:72
+msgid "Disable if you defined manual routing in your font."
+msgstr "Désactivez si vous avez défini manuellement l'agencement des colonnes satin."
+
+#: inx/inkstitch_lettering_generate_json.inx:74
+msgid "Reversible"
+msgstr "Réversible"
+
+#: inx/inkstitch_lettering_generate_json.inx:74
+msgid "If disabled back and forth stitching will not be possile for this font."
+msgstr "Si désactivé, la broderie en aller-retour ne sera pas possible pour cette police."
+
+#: inx/inkstitch_lettering_generate_json.inx:75
+msgid "Force letter case"
+msgstr "Forcer la casse"
+
+#: inx/inkstitch_lettering_generate_json.inx:77
+msgid "Upper"
+msgstr "Majuscule"
+
+#: inx/inkstitch_lettering_generate_json.inx:78
+msgid "Lower"
+msgstr "Minuscule"
+
+#: inx/inkstitch_lettering_generate_json.inx:83
+msgid "Min Scale"
+msgstr "Échelle minimum"
+
+#: inx/inkstitch_lettering_generate_json.inx:84
+msgid "Max Scale"
+msgstr "Échelle maximum"
+
+#: inx/inkstitch_lettering_generate_json.inx:89
+msgid "Kerning"
+msgstr ""
+
+#: inx/inkstitch_lettering_generate_json.inx:99
+#: inx/inkstitch_lettering_generate_json.inx:107
 msgid "Force"
 msgstr "Forcer"
 
-#: inx/inkstitch_lettering_generate_json.inx:61
+#: inx/inkstitch_lettering_generate_json.inx:99
 msgid "Overwrite leading information from font file."
 msgstr "Surcharger la valeur d'interligne du fichier."
 
-#: inx/inkstitch_lettering_generate_json.inx:63
+#: inx/inkstitch_lettering_generate_json.inx:101
 msgid "Leading (px)"
 msgstr "Hauteur de ligne (px)"
 
-#: inx/inkstitch_lettering_generate_json.inx:63
+#: inx/inkstitch_lettering_generate_json.inx:101
 msgid "Line height (default: 100)"
 msgstr "Hauteur de ligne (par défaut : 100)"
 
-#: inx/inkstitch_lettering_generate_json.inx:68
+#: inx/inkstitch_lettering_generate_json.inx:107
 msgid "Overwrite word spacing information from font file."
 msgstr "Surcharger la valeur d’espacement des mots du fichier."
 
-#: inx/inkstitch_lettering_generate_json.inx:70
+#: inx/inkstitch_lettering_generate_json.inx:109
 msgid "Word spacing (px)"
 msgstr "Espacement des mots (px)"
 
-#: inx/inkstitch_lettering_generate_json.inx:70
+#: inx/inkstitch_lettering_generate_json.inx:109
 msgid "Space character width (default: 20)"
 msgstr "Largeur du caractère espace (par défaut : 20)"
 
@@ -5129,6 +5214,14 @@ msgstr "Supprimer le crénage"
 #: inx/inkstitch_lettering_remove_kerning.inx:23
 msgid "Select Font Files"
 msgstr "Sélectionnez les fichiers de polices"
+
+#: inx/inkstitch_lettering_update_json_glyphlist.inx:3
+msgid "Update Glyphlist"
+msgstr ""
+
+#: inx/inkstitch_lettering_update_json_glyphlist.inx:18
+msgid "JSON File"
+msgstr ""
 
 #: inx/inkstitch_letters_to_font.inx:3
 msgid "Letters to font"
@@ -5533,10 +5626,6 @@ msgstr "Options de sélection"
 #: inx/inkstitch_select_elements.inx:9
 msgid "Select Stitch Type"
 msgstr "Sélectionner des types de points"
-
-#: inx/inkstitch_select_elements.inx:13
-msgid "Running Stitch"
-msgstr "Point droit"
 
 #: inx/inkstitch_select_elements.inx:15
 msgid "Type"
