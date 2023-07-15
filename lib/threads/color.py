@@ -6,19 +6,24 @@
 import colorsys
 import re
 
-import tinycss2.color3
-from pyembroidery.EmbThread import EmbThread
-
 from inkex import Color
+from pyembroidery.EmbThread import EmbThread
 
 
 class ThreadColor(object):
     hex_str_re = re.compile('#([0-9a-z]{3}|[0-9a-z]{6})', re.I)
 
     def __init__(self, color, name=None, number=None, manufacturer=None, description=None, chart=None):
-        # set colors with a gradient to black (avoiding an error message)
-        if type(color) == str and color.startswith('url'):
+        '''
+        avoid error messages:
+          * set colors with a gradient to black
+          * currentColor should not just be black, but we want to avoid error messages
+            until inkex will be able to handle this css property
+        '''
+        if type(color) == str and color.startswith(('url', 'currentColor')):
             color = None
+        elif type(color) == str and color.startswith('rgb'):
+            color = tuple(int(value) for value in color[4:-1].split(','))
 
         if color is None:
             self.rgb = (0, 0, 0)
@@ -31,9 +36,7 @@ class ThreadColor(object):
             self.rgb = (color.get_red(), color.get_green(), color.get_blue())
             return
         elif isinstance(color, str):
-            self.rgb = tinycss2.color3.parse_color(color)
-            # remove alpha channel and multiply with 255
-            self.rgb = tuple(channel * 255.0 for channel in list(self.rgb)[:-1])
+            self.rgb = Color.parse_str(color)[1]
         elif isinstance(color, (list, tuple)):
             self.rgb = tuple(color)
         elif self.hex_str_re.match(color):

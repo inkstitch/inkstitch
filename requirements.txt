@@ -19,7 +19,6 @@ requests
 colormath @ git+https://github.com/gtaylor/python-colormath.git@4a076831fd5136f685aa7143db81eba27b2cd19a
 
 stringcase
-tinycss2
 flask>=2.2.0
 fonttools
 trimesh>=3.15.2
