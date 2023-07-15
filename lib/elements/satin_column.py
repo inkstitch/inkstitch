@@ -698,7 +698,7 @@ class SatinColumn(EmbroideryElement):
         new SatinColumn's node will not be in the SVG document.
         """
 
-        return self._csp_to_satin(self.csp, True)
+        return self._csp_to_satin(self.csp)
 
     def split(self, split_point):
         """Split a satin into two satins at the specified point
@@ -713,6 +713,9 @@ class SatinColumn(EmbroideryElement):
         Returns two new SatinColumn instances: the part before and the part
         after the split point.  All parameters are copied over to the new
         SatinColumn instances.
+
+        The returned SatinColumns will not be in the SVG document and will have
+        their transforms applied.
         """
 
         cut_points = self._find_cut_points(split_point)
@@ -814,12 +817,13 @@ class SatinColumn(EmbroideryElement):
     def _path_list_to_satins(self, path_list):
         return self._csp_to_satin(line_strings_to_csp(path_list))
 
-    def _csp_to_satin(self, csp, remove_transform=False):
+    def _csp_to_satin(self, csp):
         node = deepcopy(self.node)
         d = paths.CubicSuperPath(csp).to_path()
         node.set("d", d)
 
-        if remove_transform and node.get("transform"):
+        # we've already applied the transform, so get rid of it
+        if node.get("transform"):
             del node.attrib["transform"]
 
         return SatinColumn(node)
@@ -834,6 +838,9 @@ class SatinColumn(EmbroideryElement):
         Returns a new SatinColumn instance that combines the rails and rungs of
         this satin and the provided satin.  A rung is added at the end of this
         satin.
+
+        The returned SatinColumn will not be in the SVG document and will have
+        its transforms applied.
         """
         rails = [self.flatten_subpath(rail) for rail in self.rails]
         other_rails = [satin.flatten_subpath(rail) for rail in satin.rails]

@@ -57,21 +57,22 @@ class ConvertToSatin(InkstitchExtension):
                     # ignore paths with just one point -- they're not visible to the user anyway
                     continue
 
-                satins = list(self.convert_path_to_satins(path, element.stroke_width, style_args, correction_transform, path_style))
+                satins = list(self.convert_path_to_satins(path, element.stroke_width, style_args, path_style))
 
                 if satins:
                     joined_satin = satins[0]
                     for satin in satins[1:]:
                         joined_satin = joined_satin.merge(satin)
 
+                    joined_satin.node.set('transform', correction_transform)
                     parent.insert(index, joined_satin.node)
 
             parent.remove(element.node)
 
-    def convert_path_to_satins(self, path, stroke_width, style_args, correction_transform, path_style, depth=0):
+    def convert_path_to_satins(self, path, stroke_width, style_args, path_style, depth=0):
         try:
             rails, rungs = self.path_to_satin(path, stroke_width, style_args)
-            yield SatinColumn(self.satin_to_svg_node(rails, rungs, correction_transform, path_style))
+            yield SatinColumn(self.satin_to_svg_node(rails, rungs, path_style))
         except SelfIntersectionError:
             # The path intersects itself.  Split it in two and try doing the halves
             # individually.
@@ -84,7 +85,7 @@ class ConvertToSatin(InkstitchExtension):
             halves = self.split_path(path)
 
             for path in halves:
-                for satin in self.convert_path_to_satins(path, stroke_width, style_args, correction_transform, path_style, depth=depth + 1):
+                for satin in self.convert_path_to_satins(path, stroke_width, style_args, path_style, depth=depth + 1):
                     yield satin
 
     def split_path(self, path):
@@ -332,7 +333,7 @@ class ConvertToSatin(InkstitchExtension):
         color = element.get_style('stroke', '#000000')
         return "stroke:%s;stroke-width:1px;fill:none" % (color)
 
-    def satin_to_svg_node(self, rails, rungs, correction_transform, path_style):
+    def satin_to_svg_node(self, rails, rungs, path_style):
         d = ""
         for path in chain(rails, rungs):
             d += "M"
@@ -343,7 +344,6 @@ class ConvertToSatin(InkstitchExtension):
         return inkex.PathElement(attrib={
             "id": self.uniqueId("path"),
             "style": path_style,
-            "transform": correction_transform,
             "d": d,
             INKSTITCH_ATTRIBS['satin_column']: "true",
         })
