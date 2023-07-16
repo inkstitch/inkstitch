@@ -53,6 +53,20 @@ def split_segment_random_phase(a, b, length: float, length_sigma: float, random_
     return [line.interpolate(x, normalized=False) for x in splits]
 
 
+def split_segment_stagger_phase(a, b, segment_length: float, num_staggers: int, this_segment_num: int) -> typing.List[shgeo.Point]:
+    line = shgeo.LineString([a, b])
+    distance = line.length
+    stagger_phase = (this_segment_num / num_staggers) % 1
+    stagger_offset = stagger_phase * segment_length
+
+    splits = []
+    progress = stagger_offset
+    while progress < distance:
+        splits.append(progress)
+        progress += segment_length
+    return [line.interpolate(x, normalized=False) for x in splits]
+
+
 class AngleInterval():
     # Modular interval containing either the entire circle or less than half of it
     # partially based on https://fgiesen.wordpress.com/2015/09/24/intervals-in-modular-arithmetic/
