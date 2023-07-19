@@ -81,7 +81,8 @@ class SatinColumn(EmbroideryElement):
         return self.get_boolean_param("satin_column")
 
     _satin_methods = [ParamOption('satin_column', _('Satin Column')),
-                      ParamOption('e_stitch', _('"E" Stitch'))]
+                      ParamOption('e_stitch', _('"E" Stitch')),
+                      ParamOption('s_stitch', _('"S" Stitch'))]
 
     @property
     @param('satin_method',
@@ -1136,15 +1137,13 @@ class SatinColumn(EmbroideryElement):
         #
         # _|_|_|_|_|_|_|_|_|_|_|_|
 
-        # print >> dbg, "satin", self.zigzag_spacing, self.pull_compensation
-
         patch = StitchGroup(color=self.color)
 
         pairs = self.plot_points_on_rails(
             self.zigzag_spacing,
             self.pull_compensation_px,
-            self.pull_compensation_percent/100,
-            self.random_width_decrease.any() or self.random_width_increase.any() or self.random_zigzag_spacing,
+            self.pull_compensation_percent / 100,
+            True,
         )
 
         short_pairs = self.inset_short_stitches_sawtooth(pairs)
@@ -1180,6 +1179,54 @@ class SatinColumn(EmbroideryElement):
             patch.stitches = list(reversed(patch.stitches))
 
         patch.add_tags(("satin_column", "e_stitch"))
+        return patch
+
+    def do_s_stitch(self):
+        # S stitch: do a pattern that looks like the letter "S".  It looks like
+        # this:
+        #   _   _   _   _   _   _
+        # _| |_| |_| |_| |_| |_| |
+
+        patch = StitchGroup(color=self.color)
+
+        pairs = self.plot_points_on_rails(
+            self.zigzag_spacing,
+            self.pull_compensation_px,
+            self.pull_compensation_percent / 100,
+            True,
+        )
+
+        short_pairs = self.inset_short_stitches_sawtooth(pairs)
+        max_stitch_length = self.max_stitch_length_px
+        length_sigma = self.random_split_jitter
+        random_phase = self.random_split_phase
+        min_split_length = self.min_random_split_length_px
+        seed = self.random_seed
+        last_point = None
+        for i, (a, b), (a_short, b_short) in zip(itertools.count(0), pairs, short_pairs):
+            check_stop_flag()
+            points = [a_short]
+            split_points, _ = self.get_split_points(
+                a, b, a_short, b_short, max_stitch_length,
+                None, length_sigma, random_phase, min_split_length,
+                prng.join_args(seed, 'satin-split', 2 * i + 1))
+            points.extend(split_points)
+            points.append(b_short)
+
+            if i % 2 == 0:
+                points = list(reversed(points))
+
+            # zigzag spacing is wider than stitch length, subdivide
+            if last_point is not None and max_stitch_length is not None and self.zigzag_spacing > max_stitch_length:
+                initial_points, _ = self.get_split_points(last_point, points[0], last_point, points[0], max_stitch_length)
+
+            patch.add_stitches(points)
+            last_point = points[-1]
+
+        if self._center_walk_is_odd():
+            patch.stitches = list(reversed(patch.stitches))
+
+        patch.add_tags(("satin", "s_stitch"))
         return patch
 
     def get_split_points(self, a, b, a_short, b_short, length, count=None, length_sigma=0.0, random_phase=False, min_split_length=None, seed=None):
@@ -1258,6 +1305,8 @@ class SatinColumn(EmbroideryElement):
 
         if self.satin_method == 'e_stitch':
             patch += self.do_e_stitch()
+        elif self.satin_method == 's_stitch':
+            patch += self.do_s_stitch()
         else:
             patch += self.do_satin()
 
