@@ -1139,7 +1139,7 @@ class SatinColumn(EmbroideryElement):
             if last_point is not None:
                 split_points, _ = self.get_split_points(
                     last_point, a, last_short_point, a_short, max_stitch_length, last_count,
-                    length_sigma, random_phase, min_split_length, prng.join_args(seed, 'satin-split', 2 * i), 2 * i)
+                    length_sigma, random_phase, min_split_length, prng.join_args(seed, 'satin-split', 2 * i), 2 * i, from_end=True)
                 patch.add_stitches(split_points, ("satin_column", "satin_split_stitch"))
 
             patch.add_stitch(a_short)
@@ -1267,7 +1267,7 @@ class SatinColumn(EmbroideryElement):
             return self._get_split_points_staggered(*args, **kwargs), None
 
     def _get_split_points_default(self, a, b, a_short, b_short, length, count=None, length_sigma=0.0, random_phase=False, min_split_length=None,
-                                  seed=None, row_num=0):
+                                  seed=None, row_num=0, from_end=None):
         if not length:
             return ([], None)
         if min_split_length is None:
@@ -1294,7 +1294,7 @@ class SatinColumn(EmbroideryElement):
         return self._get_split_points_staggered(*args, **kwargs, _staggers=1)
 
     def _get_split_points_staggered(self, a, b, a_short, b_short, length, count=None, length_sigma=0.0, random_phase=False, min_split_length=None,
-                                    seed=None, row_num=0, _staggers=None):
+                                    seed=None, row_num=0, from_end=False, _staggers=None):
         if not length:
             return ([], None)
 
@@ -1302,10 +1302,18 @@ class SatinColumn(EmbroideryElement):
             # This is only here to allow _get_split_points_simple to override
             _staggers = self.split_staggers
 
+        if from_end:
+            a, b = b, a
+
         line = shgeo.LineString((a, b))
         a_short_projection = line.project(shgeo.Point(a_short))
         b_short_projection = line.project(shgeo.Point(b_short))
-        return running_stitch.split_segment_stagger_phase(a, b, length, _staggers, row_num, min=a_short_projection, max=b_short_projection)
+        split_points = running_stitch.split_segment_stagger_phase(a, b, length, _staggers, row_num, min=a_short_projection, max=b_short_projection)
+
+        if from_end:
+            split_points = list(reversed(split_points))
+
+        return split_points
 
     def inset_short_stitches_sawtooth(self, pairs):
         min_dist = self.short_stitch_distance
