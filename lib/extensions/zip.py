@@ -9,16 +9,16 @@ import tempfile
 from copy import deepcopy
 from zipfile import ZipFile
 
+from inkex import Boolean
 from lxml import etree
 
 import pyembroidery
-from inkex import Boolean
 
 from ..i18n import _
 from ..output import write_embroidery_file
 from ..stitch_plan import stitch_groups_to_stitch_plan
-from ..threads import ThreadCatalog
 from ..svg import PIXELS_PER_MM
+from ..threads import ThreadCatalog
 from ..utils.geometry import Point
 from .base import InkstitchExtension
 
