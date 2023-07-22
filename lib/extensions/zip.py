@@ -27,6 +27,11 @@ class Zip(InkstitchExtension):
     def __init__(self, *args, **kwargs):
         InkstitchExtension.__init__(self)
 
+        self.arg_parser.add_argument('--notebook', type=Boolean, default=True)
+        self.arg_parser.add_argument('--file-formats', type=Boolean, default=True)
+        self.arg_parser.add_argument('--panelization', type=Boolean, default=True)
+        self.arg_parser.add_argument('--output-options', type=Boolean, default=True)
+
         # it's kind of obnoxious that I have to do this...
         self.formats = []
         for format in pyembroidery.supported_formats():
@@ -35,13 +40,16 @@ class Zip(InkstitchExtension):
                 self.arg_parser.add_argument('--format-%s' % extension, type=Boolean, dest=extension)
                 self.formats.append(extension)
         self.arg_parser.add_argument('--format-svg', type=Boolean, dest='svg')
+        self.formats.append('svg')
         self.arg_parser.add_argument('--format-threadlist', type=Boolean, dest='threadlist')
+        self.formats.append('threadlist')
+
         self.arg_parser.add_argument('--x-repeats', type=int, dest='x_repeats', default=1)
         self.arg_parser.add_argument('--y-repeats', type=int, dest='y_repeats', default=1)
         self.arg_parser.add_argument('--x-spacing', type=float, dest='x_spacing', default=100)
         self.arg_parser.add_argument('--y-spacing', type=float, dest='y_spacing', default=100)
-        self.formats.append('svg')
-        self.formats.append('threadlist')
+
+        self.arg_parser.add_argument('--custom-file-name', type=str, dest='custom_file_name', default='')
 
     def effect(self):
         if not self.get_elements():
@@ -54,15 +62,9 @@ class Zip(InkstitchExtension):
         stitch_plan = stitch_groups_to_stitch_plan(patches, collapse_len=collapse_len, min_stitch_len=min_stitch_len)
 
         if self.options.x_repeats != 1 or self.options.y_repeats != 1:
-            dx = self.options.x_spacing * PIXELS_PER_MM
-            dy = self.options.y_spacing * PIXELS_PER_MM
-            offsets = []
-            for x in range(self.options.x_repeats):
-                for y in range(self.options.y_repeats):
-                    offsets.append(Point(x * dx, y * dy))
-            stitch_plan = stitch_plan.make_offsets(offsets)
+            stitch_plan = self._make_offsets(stitch_plan)
 
-        base_file_name = self.get_base_file_name()
+        base_file_name = self._get_file_name()
         path = tempfile.mkdtemp()
 
         files = []
@@ -107,6 +109,22 @@ class Zip(InkstitchExtension):
 
         # don't let inkex output the SVG!
         sys.exit(0)
+
+    def _get_file_name(self):
+        if self.options.custom_file_name:
+            base_file_name = self.options.custom_file_name
+        else:
+            base_file_name = self.get_base_file_name()
+        return base_file_name
+
+    def _make_offsets(self, stitch_plan):
+        dx = self.options.x_spacing * PIXELS_PER_MM
+        dy = self.options.y_spacing * PIXELS_PER_MM
+        offsets = []
+        for x in range(self.options.x_repeats):
+            for y in range(self.options.y_repeats):
+                offsets.append(Point(x * dx, y * dy))
+        return stitch_plan.make_offsets(offsets)
 
     def get_threadlist(self, stitch_plan, design_name):
         ThreadCatalog().match_and_apply_palette(stitch_plan, self.get_inkstitch_metadata()['thread-palette'])
