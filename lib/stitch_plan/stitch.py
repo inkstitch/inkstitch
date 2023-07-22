@@ -68,6 +68,10 @@ class Stitch(Point):
         if value or base_stitch is None:
             setattr(self, attribute, value)
 
+    @property
+    def is_terminator(self) -> bool:
+        return self.trim or self.stop or self.color_change
+
     def add_tags(self, tags):
         for tag in tags:
             self.add_tag(tag)
@@ -92,6 +96,12 @@ class Stitch(Point):
 
     def copy(self):
         return Stitch(self.x, self.y, self.color, self.jump, self.stop, self.trim, self.color_change, self.tags)
+
+    def offset(self, offset: Point):
+        out = self.copy()
+        out.x += offset.x
+        out.y += offset.y
+        return out
 
     def __json__(self):
         attributes = dict(vars(self))
