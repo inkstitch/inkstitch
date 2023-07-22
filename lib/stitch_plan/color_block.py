@@ -5,10 +5,10 @@
 
 from typing import List
 
-from .stitch import Stitch
+from ..svg import PIXELS_PER_MM
 from ..threads import ThreadColor
 from ..utils.geometry import Point
-from ..svg import PIXELS_PER_MM
+from .stitch import Stitch
 
 
 class ColorBlock(object):

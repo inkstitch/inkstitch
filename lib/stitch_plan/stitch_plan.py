@@ -10,9 +10,9 @@ from inkex import errormsg
 
 from ..i18n import _
 from ..svg import PIXELS_PER_MM
-from .color_block import ColorBlock
-from ..utils.threading import check_stop_flag
 from ..utils.geometry import Point
+from ..utils.threading import check_stop_flag
+from .color_block import ColorBlock
 
 
 def stitch_groups_to_stitch_plan(stitch_groups, collapse_len=None, min_stitch_len=0.1, disable_ties=False):  # noqa: C901
