@@ -1273,8 +1273,8 @@ class SatinColumn(EmbroideryElement):
         # alternate picking one point from each pair, first on one rail then the other
         points = [p[i % 2] for i, p in enumerate(pairs)]
 
-        # turn the list of points back into pairs, (a, b), (b, c), (c, d), etc
-        pairs = list(zip(points[:-1], points[1:]))
+        # turn the list of points back into pairs
+        pairs = [points[i:i + 2] for i in range(0, len(points), 2)]
 
         short_pairs = self.inset_short_stitches_sawtooth(pairs)
         max_stitch_length = self.max_stitch_length_px
@@ -1283,13 +1283,26 @@ class SatinColumn(EmbroideryElement):
         min_split_length = self.min_random_split_length_px
         seed = self.random_seed
 
-        patch.add_stitch(pairs[0][0])
+        last_point = None
+        last_point_short = None
         for i, (a, b), (a_short, b_short) in zip(itertools.count(0), pairs, short_pairs):
+            if last_point:
+                split_points, _ = self.get_split_points(
+                    last_point, a, last_point_short, a_short, max_stitch_length, None,
+                    length_sigma, random_phase, min_split_length, prng.join_args(seed, 'satin-split', 2 * i), row_num=2 * i, from_end=True)
+                patch.add_stitches(split_points, ("satin_column", "zigzag_split_stitch"))
+
+            patch.add_stitch(a_short)
+
             split_points, _ = self.get_split_points(
                 a, b, a_short, b_short, max_stitch_length, None,
-                length_sigma, random_phase, min_split_length, prng.join_args(seed, 'satin-split', 2 * i), row_num=i, from_end=(i % 2 == 0))
+                length_sigma, random_phase, min_split_length, prng.join_args(seed, 'satin-split', 2 * i + 1), row_num=2 * i + 1)
             patch.add_stitches(split_points, ("satin_column", "zigzag_split_stitch"))
-            patch.add_stitch(b)
+
+            patch.add_stitch(b_short)
+
+            last_point = b
+            last_point_short = b_short
 
         if self._center_walk_is_odd():
             patch.stitches = list(reversed(patch.stitches))
