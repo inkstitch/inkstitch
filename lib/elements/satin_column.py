@@ -1304,6 +1304,7 @@ class SatinColumn(EmbroideryElement):
 
         if from_end:
             a, b = b, a
+            a_short, b_short = b_short, a_short
 
         line = shgeo.LineString((a, b))
         a_short_projection = line.project(shgeo.Point(a_short))
