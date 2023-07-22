@@ -1334,7 +1334,7 @@ class SatinColumn(EmbroideryElement):
     def _get_split_points_staggered(self, a, b, a_short, b_short, length, count=None, length_sigma=0.0, random_phase=False, min_split_length=None,
                                     seed=None, row_num=0, from_end=False, _staggers=None):
         if not length:
-            return ([], None)
+            return []
 
         if _staggers is None:
             # This is only here to allow _get_split_points_simple to override
