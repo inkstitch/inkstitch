@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-07-13 01:44+0000\n"
-"PO-Revision-Date: 2023-07-13 01:45\n"
+"POT-Creation-Date: 2023-07-23 01:26+0000\n"
+"PO-Revision-Date: 2023-07-23 01:27\n"
 "Last-Translator: \n"
 "Language-Team: Polish\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-13 01:44+0000\n"
+"POT-Creation-Date: 2023-07-23 01:26+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2539,7 +2539,7 @@ msgid "Error: Text cannot be applied to the document.\n"
 "%s"
 msgstr ""
 
-#: lib/extensions/lettering.py:441 lib/extensions/zip.py:104
+#: lib/extensions/lettering.py:441 lib/extensions/zip.py:137
 #: inx/inkstitch_commands_scale_symbols.inx:6
 #: inx/inkstitch_lettering_generate_json.inx:82
 msgid "Size"
@@ -2753,35 +2753,35 @@ msgstr ""
 msgid "Please select at least one element to update. This extension is designed to help you update copy and pasted elements from old designs."
 msgstr ""
 
-#: lib/extensions/zip.py:63
+#: lib/extensions/zip.py:80
 msgid "threadlist"
 msgstr ""
 
-#: lib/extensions/zip.py:72
+#: lib/extensions/zip.py:89
 msgid "No embroidery file formats selected."
 msgstr ""
 
-#: lib/extensions/zip.py:100
+#: lib/extensions/zip.py:133
 msgid "Design Details"
 msgstr ""
 
-#: lib/extensions/zip.py:103
+#: lib/extensions/zip.py:136
 msgid "Title"
 msgstr ""
 
-#: lib/extensions/zip.py:105
+#: lib/extensions/zip.py:138
 msgid "Stitches"
 msgstr ""
 
-#: lib/extensions/zip.py:106
+#: lib/extensions/zip.py:139
 msgid "Colors"
 msgstr ""
 
-#: lib/extensions/zip.py:108
+#: lib/extensions/zip.py:141
 msgid "Thread Order"
 msgstr ""
 
-#: lib/extensions/zip.py:121
+#: lib/extensions/zip.py:154
 msgid "Thread Used"
 msgstr ""
 
@@ -3025,7 +3025,7 @@ msgstr ""
 msgid "Zig-zag"
 msgstr ""
 
-#: lib/stitch_plan/stitch_plan.py:26
+#: lib/stitch_plan/stitch_plan.py:28
 msgid "There is no selected stitchable element. Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects in case you have expected a stitchout."
 msgstr ""
 
@@ -5932,18 +5932,62 @@ msgid "embroidery ZIP file output"
 msgstr "przesyłanie plików do haftowania spakowanych programem ZIP"
 
 #: inx/inkstitch_zip.inx:8
-msgid "Ink/Stitch: ZIP export multiple formats (.zip)"
-msgstr "Ink/Stitch: ZIP eksport wielu formatów (.zip)"
+msgid "Ink/Stitch: ZIP export multiple formats and extra options (.zip)"
+msgstr ""
 
 #: inx/inkstitch_zip.inx:9
 msgid "Create a ZIP with multiple embroidery file formats using Ink/Stitch"
 msgstr "Stwórz ZIP z wieloma plikami ściegu dla różnych hafciarek używając Ink/Stitch"
 
-#: inx/inkstitch_zip.inx:26
+#: inx/inkstitch_zip.inx:13
+msgid "File Formats"
+msgstr ""
+
+#: inx/inkstitch_zip.inx:14
+msgid "Output formats:"
+msgstr ""
+
+#: inx/inkstitch_zip.inx:29
 msgid ".TXT: Threadlist [COLOR]"
 msgstr ""
 
-#: inx/inkstitch_zip.inx:27
+#: inx/inkstitch_zip.inx:30
 msgid ".SVG: Scalable Vector Graphic"
 msgstr "SVG skalowalna grafika wektorowa"
+
+#: inx/inkstitch_zip.inx:33
+msgid "Panelization Options"
+msgstr ""
+
+#: inx/inkstitch_zip.inx:34
+msgid "For single design set horizontal and vertical repeats to 1"
+msgstr ""
+
+#: inx/inkstitch_zip.inx:36
+msgid "Horizontal repeats"
+msgstr ""
+
+#: inx/inkstitch_zip.inx:37
+msgid "Horizontal spacing (mm)"
+msgstr ""
+
+#: inx/inkstitch_zip.inx:38
+msgid "Vertical repeats"
+msgstr ""
+
+#: inx/inkstitch_zip.inx:39
+msgid "Vertical spacing (mm)"
+msgstr ""
+
+#: inx/inkstitch_zip.inx:41
+msgid "Output Options"
+msgstr ""
+
+#: inx/inkstitch_zip.inx:43
+msgid "Custom file name"
+msgstr ""
+
+#: inx/inkstitch_zip.inx:43
+msgid "Defines the file names inside the zip archive. Leave empty for default file name."
+msgstr ""
 

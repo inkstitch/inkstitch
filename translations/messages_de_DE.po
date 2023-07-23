@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-07-13 01:44+0000\n"
-"PO-Revision-Date: 2023-07-13 01:45\n"
+"POT-Creation-Date: 2023-07-23 01:26+0000\n"
+"PO-Revision-Date: 2023-07-23 01:27\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-13 01:44+0000\n"
+"POT-Creation-Date: 2023-07-23 01:26+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1569,7 +1569,7 @@ msgstr "Geradstich-Toleranz"
 
 #: lib/elements/fill_stitch.py:367
 msgid "Determines how hard Ink/Stitch tries to avoid stitching outside the shape.Lower numbers are less likely to stitch outside the shape but require more stitches."
-msgstr ""
+msgstr "Kleinere Werte benötigen mehr Stiche, aber vermeiden mit höherer Wahrscheinlichkeit Stiche außerhalb der Form."
 
 #: lib/elements/fill_stitch.py:378 lib/elements/satin_column.py:353
 #: lib/elements/stroke.py:82
@@ -2042,15 +2042,15 @@ msgstr "Stich unterteilen, wenn maximale Stichlänge überschritten ist"
 
 #: lib/elements/stroke.py:36
 msgid "This element renders as running stitch while it has a satin column parameter."
-msgstr ""
+msgstr "Dieses Element wird als Geradstich ausgegeben, obwohl es als Satinsäule markiert ist."
 
 #: lib/elements/stroke.py:38
 msgid "* Convert to stroke: select the element and open the parameter dialog. Enable running stitch along path."
-msgstr ""
+msgstr "* In einen Geradstich umwandeln: wähle das Element aus und öffne Erweiterungen > Ink/Stitch > Parameter. Aktiviere \"Geradstich\"."
 
 #: lib/elements/stroke.py:39
 msgid "* Use as satin column: add an other rail and optionally rungs."
-msgstr ""
+msgstr "* Als Satinsäule benutzen: füge eine weitere Außenkonturlinie hinzu und ggf. Richtungsvektoren."
 
 #: lib/elements/stroke.py:44 inx/inkstitch_select_elements.inx:12
 msgid "Stroke"
@@ -2465,19 +2465,19 @@ msgstr "Schriftgrößenfilter (mm). 0 für alle Größen."
 
 #: lib/extensions/lettering.py:62
 msgid "Glyphs"
-msgstr ""
+msgstr "Zeichen"
 
 #: lib/extensions/lettering.py:64
 msgid "Filter fonts by available glyphs."
-msgstr ""
+msgstr "Filtert die Schriften nach verfügbaren Zeichen."
 
 #: lib/extensions/lettering.py:71
 msgid "Filter fonts by category."
-msgstr ""
+msgstr "Filtert die Schriften nach Kategorie."
 
 #: lib/extensions/lettering.py:80
 msgid "Font Filter"
-msgstr ""
+msgstr "Schriftfilter"
 
 #: lib/extensions/lettering.py:83 inx/inkstitch_apply_threadlist.inx:7
 #: inx/inkstitch_fill_to_stroke.inx:15 inx/inkstitch_gradient_blocks.inx:15
@@ -2549,7 +2549,7 @@ msgid "Error: Text cannot be applied to the document.\n"
 msgstr "Fehler: Der Text kann nicht in das Dokument eingefügt werden.\n"
 "%s"
 
-#: lib/extensions/lettering.py:441 lib/extensions/zip.py:104
+#: lib/extensions/lettering.py:441 lib/extensions/zip.py:137
 #: inx/inkstitch_commands_scale_symbols.inx:6
 #: inx/inkstitch_lettering_generate_json.inx:82
 msgid "Size"
@@ -2589,7 +2589,7 @@ msgstr "Bitte eine Schriftdatei auswählen."
 
 #: lib/extensions/lettering_update_json_glyphlist.py:29
 msgid "Please verify file locations."
-msgstr ""
+msgstr "Bitte überprüfe die Dateipfade."
 
 #: lib/extensions/letters_to_font.py:35
 msgid "Font directory not found. Please specify an existing directory."
@@ -2763,35 +2763,35 @@ msgstr "Es ist möglich, dass ein Objekt mehr als einen Fehler enthält. Trotzde
 msgid "Please select at least one element to update. This extension is designed to help you update copy and pasted elements from old designs."
 msgstr "Bitte mindestens ein Element zum aktualisieren auswählen. Diese Erweiterung wurde entwickelt, um einzelne Elemente zu aktualisieren, die aus alten Dateien herauskopiert wurden."
 
-#: lib/extensions/zip.py:63
+#: lib/extensions/zip.py:80
 msgid "threadlist"
 msgstr "Garnliste"
 
-#: lib/extensions/zip.py:72
+#: lib/extensions/zip.py:89
 msgid "No embroidery file formats selected."
 msgstr "Keine Stick-Dateiformate ausgewählt."
 
-#: lib/extensions/zip.py:100
+#: lib/extensions/zip.py:133
 msgid "Design Details"
 msgstr "Design Details"
 
-#: lib/extensions/zip.py:103
+#: lib/extensions/zip.py:136
 msgid "Title"
 msgstr "Titel"
 
-#: lib/extensions/zip.py:105
+#: lib/extensions/zip.py:138
 msgid "Stitches"
 msgstr "Stiche"
 
-#: lib/extensions/zip.py:106
+#: lib/extensions/zip.py:139
 msgid "Colors"
 msgstr "Farben"
 
-#: lib/extensions/zip.py:108
+#: lib/extensions/zip.py:141
 msgid "Thread Order"
 msgstr "Garnabfolge"
 
-#: lib/extensions/zip.py:121
+#: lib/extensions/zip.py:154
 msgid "Thread Used"
 msgstr "Verwendetes Garn"
 
@@ -2936,31 +2936,31 @@ msgstr "Die Stickvorschau kann nicht geladen werden.\n"
 
 #: lib/lettering/categories.py:19 inx/inkstitch_lettering_generate_json.inx:44
 msgid "Applique"
-msgstr ""
+msgstr "Applikation"
 
 #: lib/lettering/categories.py:20 inx/inkstitch_lettering_generate_json.inx:45
 msgid "Crossstitch"
-msgstr ""
+msgstr "Kreuzstich"
 
 #: lib/lettering/categories.py:21 inx/inkstitch_lettering_generate_json.inx:46
 msgid "Display"
-msgstr ""
+msgstr "Display (Große Schriftgrößen)"
 
 #: lib/lettering/categories.py:22 inx/inkstitch_lettering_generate_json.inx:49
 msgid "Handwriting"
-msgstr ""
+msgstr "Handschrift"
 
 #: lib/lettering/categories.py:23 inx/inkstitch_lettering_generate_json.inx:50
 msgid "Italic"
-msgstr ""
+msgstr "Kursiv"
 
 #: lib/lettering/categories.py:24 inx/inkstitch_lettering_generate_json.inx:51
 msgid "Monogram"
-msgstr ""
+msgstr "Monogramm"
 
 #: lib/lettering/categories.py:25 inx/inkstitch_lettering_generate_json.inx:52
 msgid "Multicolor"
-msgstr ""
+msgstr "Mehrfarbig"
 
 #: lib/lettering/categories.py:26 inx/inkstitch_lettering_generate_json.inx:55
 #: inx/inkstitch_select_elements.inx:13
@@ -2969,15 +2969,15 @@ msgstr "Geradstich"
 
 #: lib/lettering/categories.py:27 inx/inkstitch_lettering_generate_json.inx:56
 msgid "Sans Serif"
-msgstr ""
+msgstr "Serifenlos"
 
 #: lib/lettering/categories.py:28 inx/inkstitch_lettering_generate_json.inx:57
 msgid "Serif"
-msgstr ""
+msgstr "Serifen"
 
 #: lib/lettering/categories.py:29 inx/inkstitch_lettering_generate_json.inx:58
 msgid "Tiny"
-msgstr ""
+msgstr "Kleine Schriftgrößen"
 
 #: lib/lettering/font.py:169
 #, python-format
@@ -3036,7 +3036,7 @@ msgstr "Dreieck"
 msgid "Zig-zag"
 msgstr "Zick-Zack"
 
-#: lib/stitch_plan/stitch_plan.py:26
+#: lib/stitch_plan/stitch_plan.py:28
 msgid "There is no selected stitchable element. Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects in case you have expected a stitchout."
 msgstr "Es wurde kein stickbares Element ausgewählt. Bitte führe die Funktion Erweiterungen > Ink/Stitch > Fehlerbehebung > Fehlerbehebung an Objekten aus, um Hinweise zu Fehlern in der Stichplan-Erstellung zu erhalten."
 
@@ -5122,7 +5122,7 @@ msgstr "JSON erstellen"
 
 #: inx/inkstitch_lettering_generate_json.inx:16
 msgid "Font info"
-msgstr ""
+msgstr "Schriftinformation"
 
 #: inx/inkstitch_lettering_generate_json.inx:27
 msgid "Name"
@@ -5175,7 +5175,7 @@ msgstr "Maximale Skalierung"
 
 #: inx/inkstitch_lettering_generate_json.inx:89
 msgid "Kerning"
-msgstr ""
+msgstr "Kerning"
 
 #: inx/inkstitch_lettering_generate_json.inx:99
 #: inx/inkstitch_lettering_generate_json.inx:107
@@ -5216,11 +5216,11 @@ msgstr "Schriftdateien auswählen"
 
 #: inx/inkstitch_lettering_update_json_glyphlist.inx:3
 msgid "Update Glyphlist"
-msgstr ""
+msgstr "Liste verfügbarer Zeichen aktualisieren"
 
 #: inx/inkstitch_lettering_update_json_glyphlist.inx:18
 msgid "JSON File"
-msgstr ""
+msgstr "JSON-Datei"
 
 #: inx/inkstitch_letters_to_font.inx:3
 msgid "Letters to font"
@@ -5943,18 +5943,62 @@ msgid "embroidery ZIP file output"
 msgstr "Stickdateien exportieren (ZIP)"
 
 #: inx/inkstitch_zip.inx:8
-msgid "Ink/Stitch: ZIP export multiple formats (.zip)"
-msgstr "Ink/Stitch: Export von mehreren Formaten (.zip)"
+msgid "Ink/Stitch: ZIP export multiple formats and extra options (.zip)"
+msgstr ""
 
 #: inx/inkstitch_zip.inx:9
 msgid "Create a ZIP with multiple embroidery file formats using Ink/Stitch"
 msgstr "Erstellen einer ZIP-Datei mit mehreren Stickformaten die Ink/Stitch unterstützt"
 
-#: inx/inkstitch_zip.inx:26
+#: inx/inkstitch_zip.inx:13
+msgid "File Formats"
+msgstr ""
+
+#: inx/inkstitch_zip.inx:14
+msgid "Output formats:"
+msgstr ""
+
+#: inx/inkstitch_zip.inx:29
 msgid ".TXT: Threadlist [COLOR]"
 msgstr ".TXT: Garnfarben-Liste [FARBE]"
 
-#: inx/inkstitch_zip.inx:27
+#: inx/inkstitch_zip.inx:30
 msgid ".SVG: Scalable Vector Graphic"
 msgstr ".SVG: Skalierbare Vektorgrafik"
+
+#: inx/inkstitch_zip.inx:33
+msgid "Panelization Options"
+msgstr ""
+
+#: inx/inkstitch_zip.inx:34
+msgid "For single design set horizontal and vertical repeats to 1"
+msgstr ""
+
+#: inx/inkstitch_zip.inx:36
+msgid "Horizontal repeats"
+msgstr ""
+
+#: inx/inkstitch_zip.inx:37
+msgid "Horizontal spacing (mm)"
+msgstr ""
+
+#: inx/inkstitch_zip.inx:38
+msgid "Vertical repeats"
+msgstr ""
+
+#: inx/inkstitch_zip.inx:39
+msgid "Vertical spacing (mm)"
+msgstr ""
+
+#: inx/inkstitch_zip.inx:41
+msgid "Output Options"
+msgstr ""
+
+#: inx/inkstitch_zip.inx:43
+msgid "Custom file name"
+msgstr ""
+
+#: inx/inkstitch_zip.inx:43
+msgid "Defines the file names inside the zip archive. Leave empty for default file name."
+msgstr ""
 
