@@ -15,14 +15,25 @@ class WarningPanel(wx.Panel):
     def __init__(self, parent, *args, **kwargs):
         wx.Panel.__init__(self, parent, wx.ID_ANY, *args, **kwargs)
 
-        self.warning_box = wx.StaticBox(self, wx.ID_ANY)
+        self.main_sizer = wx.BoxSizer(wx.VERTICAL)
 
         self.warning = wx.StaticText(self)
-        self.warning.SetLabel(_("Cannot load simulator.\nClose Params to get full error message."))
+        self.warning.SetLabel(_("An internal error occurred while rendering the stitch plan:"))
         self.warning.SetForegroundColour(wx.Colour(255, 25, 25))
+        self.main_sizer.Add(self.warning, 1, wx.LEFT | wx.BOTTOM | wx.EXPAND, 10)
 
-        warning_sizer = wx.StaticBoxSizer(self.warning_box, wx.HORIZONTAL)
-        warning_sizer.Add(self.warning, 1, wx.LEFT | wx.BOTTOM | wx.EXPAND, 10)
+        tc_style = wx.TE_MULTILINE | wx.TE_READONLY | wx.VSCROLL | wx.HSCROLL | wx.TE_RICH2
+        self.warning_text = wx.TextCtrl(self, size=(300, 100), style=tc_style)
+        font = self.warning_text.GetFont()
+        font.SetFamily(wx.FONTFAMILY_TELETYPE)
+        self.warning_text.SetFont(font)
+        self.main_sizer.Add(self.warning_text, 3, wx.LEFT | wx.BOTTOM | wx.EXPAND, 10)
 
-        self.SetSizerAndFit(warning_sizer)
+        self.SetSizerAndFit(self.main_sizer)
         self.Layout()
+
+    def set_warning_text(self, text):
+        self.warning_text.SetValue(text)
+
+    def clear(self):
+        self.warning_text.SetValue("")

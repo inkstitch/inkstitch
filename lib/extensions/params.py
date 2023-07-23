@@ -551,16 +551,17 @@ class SettingsFrame(wx.Frame):
         except Exception:
             # Ignore errors.  This can be things like incorrect paths for
             # satins or division by zero caused by incorrect param values.
-            wx.CallAfter(self._show_warning)
-            traceback.print_exc(file=sys.stderr)
+            wx.CallAfter(self._show_warning, traceback.format_exc())
 
         return patches
 
     def _hide_warning(self):
+        self.warning_panel.clear()
         self.warning_panel.Hide()
         self.Layout()
 
-    def _show_warning(self):
+    def _show_warning(self, warning_text):
+        self.warning_panel.set_warning_text(warning_text)
         self.warning_panel.Show()
         self.Layout()
 
