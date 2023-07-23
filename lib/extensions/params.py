@@ -545,15 +545,14 @@ class SettingsFrame(wx.Frame):
 
                 check_stop_flag()
         except SystemExit:
-            wx.CallAfter(self._show_warning)
             raise
         except ExitThread:
             raise
-        except Exception as e:
+        except Exception:
             # Ignore errors.  This can be things like incorrect paths for
             # satins or division by zero caused by incorrect param values.
-            traceback.print_exception(e, file=sys.stderr)
-            pass
+            wx.CallAfter(self._show_warning)
+            traceback.print_exc(file=sys.stderr)
 
         return patches
 
