@@ -14,9 +14,7 @@ numpy
 jinja2>2.9
 requests
 
-# colormath - last official release: 3.0.0
-# we need already submitted fixes - so let's grab them from the github repository
-colormath @ git+https://github.com/gtaylor/python-colormath.git@4a076831fd5136f685aa7143db81eba27b2cd19a
+scikit-image
 
 stringcase
 flask>=2.2.0

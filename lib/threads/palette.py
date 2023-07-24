@@ -5,16 +5,16 @@
 
 from collections.abc import Set
 
-from colormath.color_conversions import convert_color
-from colormath.color_diff import delta_e_cie1994
-from colormath.color_objects import LabColor, sRGBColor
+from skimage.color import deltaE_ciede94
+from skimage.color import rgb2lab
 
 from .color import ThreadColor
 
 
 def compare_thread_colors(color1, color2):
-    # K_L=2 indicates textiles
-    return delta_e_cie1994(color1, color2, K_L=2)
+    # Textile values from scikit-image documentation
+    # https://scikit-image.org/docs/stable/api/skimage.color.html#skimage.color.deltaE_ciede94
+    return deltaE_ciede94(color1, color2, kL=2, k1=0.048, k2=0.0715)
 
 
 class ThreadPalette(Set):
@@ -64,7 +64,8 @@ class ThreadPalette(Set):
                     thread_name = thread_name.strip()
 
                     thread = ThreadColor(thread_color, thread_name, thread_number, manufacturer=self.name)
-                    self.threads[thread] = convert_color(sRGBColor(*thread_color, is_upscaled=True), LabColor)
+                    scaled_thread_color = [rgb_value/255.0 for rgb_value in thread_color]
+                    self.threads[thread] = rgb2lab(scaled_thread_color)
                 except (ValueError, IndexError):
                     continue
 
@@ -83,6 +84,7 @@ class ThreadPalette(Set):
         if isinstance(color, ThreadColor):
             color = color.rgb
 
-        color = convert_color(sRGBColor(*color, is_upscaled=True), LabColor)
+        scaled_color = [rgb_value/255.0 for rgb_value in color]
+        color = rgb2lab(scaled_color)
 
         return min(self, key=lambda thread: compare_thread_colors(self.threads[thread], color))
