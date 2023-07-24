@@ -11,6 +11,8 @@ import traceback
 from argparse import ArgumentParser
 from io import StringIO
 
+from lib.exceptions import InkstitchException
+
 if getattr(sys, 'frozen', None) is None:
     # When running in development mode, we want to use the inkex installed by
     # pip install, not the one bundled with Inkscape which is not new enough.
@@ -90,6 +92,8 @@ else:
         msg += "\n\n"
         msg += _("Try to import the file into Inkscape through 'File > Import...' (Ctrl+I)")
         errormsg(msg)
+    except InkstitchException as exc:
+        errormsg(str(exc))
     except Exception:
         exception = traceback.format_exc()
     finally:
