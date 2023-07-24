@@ -7,7 +7,6 @@ import os
 
 import inkex
 from lxml.etree import Comment
-from stringcase import snakecase
 
 from ..commands import is_command, layer_commands
 from ..elements import EmbroideryElement, nodes_to_elements
@@ -32,7 +31,21 @@ class InkstitchExtension(inkex.EffectExtension):
 
     @classmethod
     def name(cls):
-        return snakecase(cls.__name__)
+        # Create a table to do replacements of other separating characters
+        chars2underscore = ("-", ".", " ", "\t", "\n", "\r", "\v", "\f")
+        table = dict((ord(c), "_") for c in chars2underscore)
+        # Add underscores before any uppercase letters except the first
+        snakecasename = cls.__name__
+        for i in range(len(snakecasename)-1):
+            if snakecasename[i+1].isupper() and snakecasename[i].islower():
+                table.update({ord(snakecasename[i+1]): "_"+snakecasename[i+1]})
+        # Replace characters
+        snakecasename = snakecasename.translate(table)
+        # Ensure leading character is not an underscore
+        if snakecasename[0] == "_":
+            snakecasename = snakecasename[1:]
+        # Transform all characters to lowercase
+        return snakecasename.lower()
 
     def hide_all_layers(self):
         for g in self.document.getroot().findall(SVG_GROUP_TAG):
