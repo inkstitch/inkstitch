@@ -18,7 +18,7 @@ class WarningPanel(wx.Panel):
         self.main_sizer = wx.BoxSizer(wx.VERTICAL)
 
         self.warning = wx.StaticText(self)
-        self.warning.SetLabel(_("An internal error occurred while rendering the stitch plan:"))
+        self.warning.SetLabel(_("An error occurred while rendering the stitch plan:"))
         self.warning.SetForegroundColour(wx.Colour(255, 25, 25))
         self.main_sizer.Add(self.warning, 1, wx.LEFT | wx.BOTTOM | wx.EXPAND, 10)
 
