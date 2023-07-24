@@ -1,7 +1,6 @@
 from itertools import combinations
 
 import networkx as nx
-from inkex import errormsg
 from shapely.geometry import LineString, MultiPoint, Point
 from shapely.ops import nearest_points
 
@@ -30,10 +29,8 @@ def meander_fill(fill, shape, original_shape, shape_index, starting_point, endin
     graph = tile.to_graph(shape, fill.meander_scale, fill.meander_angle)
 
     if not graph:
-        label = fill.node.label or fill.node.get_id()
-        errormsg(_('%s: Could not build graph for meander stitching. Try to enlarge your shape or '
-                 'scale your meander pattern down.') % label)
-        return []
+        fill.fatal(_('Could not build graph for meander stitching. Try to enlarge your shape or '
+                     'scale your meander pattern down.'))
 
     debug.log_graph(graph, 'Meander graph')
     ensure_connected(graph)
