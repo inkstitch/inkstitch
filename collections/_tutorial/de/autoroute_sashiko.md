@@ -56,4 +56,4 @@ Du hast nun eine automatisch erstellte Gruppe, die eine Mischung aus folgenden E
 
 Die so erstellte Gruppe kannst du nun so skalieren wie du möchtest, die oben gewählte Länge des Geradstichs bleibt erhalten. 
 
-Du könntest es auch mit dieser [Erweiterung](https://tesselace.com/tools/inkscape-extension/) versuchen.
+Du könntest es auch mit dieser [Bobbinlace Erweiterung](https://d-bl.github.io/inkscape-bobbinlace) versuchen.

@@ -56,9 +56,4 @@ Instead of the paths created by the Sashiko extension you now have a group  "Aut
 simple running stitch  paths hidden under triple stitch path to allow the design to have as few jumps as possible.
 
 
-You may wish to also try with this [extension](https://tesselace.com/tools/inkscape-extension/)
-
-
-
- 
-
+You may wish to also try with the [Bobbinlace extension](https://d-bl.github.io/inkscape-bobbinlace).
