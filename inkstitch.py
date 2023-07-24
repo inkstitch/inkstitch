@@ -7,11 +7,10 @@ import pstats
 import logging
 import os
 import sys
-import traceback
 from argparse import ArgumentParser
 from io import StringIO
 
-from lib.exceptions import InkstitchException
+from lib.exceptions import InkstitchException, format_uncaught_exception
 
 if getattr(sys, 'frozen', None) is None:
     # When running in development mode, we want to use the inkex installed by
@@ -30,7 +29,7 @@ from lxml.etree import XMLSyntaxError
 import lib.debug as debug
 from lib import extensions
 from lib.i18n import _
-from lib.utils import restore_stderr, save_stderr, version
+from lib.utils import restore_stderr, save_stderr
 
 # ignore warnings in releases
 if getattr(sys, 'frozen', None):
@@ -95,23 +94,12 @@ else:
     except InkstitchException as exc:
         errormsg(str(exc))
     except Exception:
-        exception = traceback.format_exc()
+        errormsg(format_uncaught_exception())
+        sys.exit(1)
     finally:
         restore_stderr()
 
         if shapely_errors.tell():
             errormsg(shapely_errors.getvalue())
 
-    if exception:
-        errormsg(_("Ink/Stitch experienced an unexpected error. This means it is a bug in Ink/Stitch.") + "\n")
-        errormsg(_("If you'd like to help please\n"
-                   "- copy the entire error message below\n"
-                   "- save your SVG file and\n"
-                   "- create a new issue at https://github.com/inkstitch/inkstitch/issues") + "\n")
-        errormsg(_("Include the error description and also (if possible) "
-                   "the svg file.") + "\n")
-        errormsg(version.get_inkstitch_version() + "\n")
-        errormsg(exception)
-        sys.exit(1)
-    else:
-        sys.exit(0)
+    sys.exit(0)

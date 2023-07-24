@@ -3,7 +3,6 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 import sys
-import traceback
 from contextlib import contextmanager
 from copy import deepcopy
 
@@ -13,7 +12,7 @@ from inkex import bezier
 
 from ..commands import find_commands
 from ..debug import debug
-from ..exceptions import InkstitchException
+from ..exceptions import InkstitchException, format_uncaught_exception
 from ..i18n import _
 from ..marker import get_marker_elements_cache_key_data
 from ..patterns import apply_patterns, get_patterns_cache_key_data
@@ -22,7 +21,7 @@ from ..stitch_plan.lock_stitch import (LOCK_DEFAULTS, AbsoluteLock, CustomLock,
 from ..svg import (PIXELS_PER_MM, apply_transforms, convert_length,
                    get_node_transform)
 from ..svg.tags import INKSCAPE_LABEL, INKSTITCH_ATTRIBS
-from ..utils import Point, cache, version
+from ..utils import Point, cache
 from ..utils.cache import get_stitch_plan_cache, CacheKeyGenerator
 
 
@@ -600,22 +599,7 @@ class EmbroideryElement(object):
                 # if we're debugging, let the exception bubble up
                 raise
 
-            # for an uncaught exception, give a little more info so that they can create a bug report
-            message = ""
-            message += _("Ink/Stitch experienced an unexpected error. This means it is a bug in Ink/Stitch.")
-            message += "\n\n"
-            # L10N this message is followed by a URL: https://github.com/inkstitch/inkstitch/issues/new
-            message += _("If you'd like to help please\n"
-                         "- copy the entire error message below\n"
-                         "- save your SVG file and\n"
-                         "- create a new issue at")
-            message += " https://github.com/inkstitch/inkstitch/issues/new\n\n"
-            message += _("Include the error description and also (if possible) the svg file.")
-            message += '\n\n\n'
-            message += version.get_inkstitch_version() + '\n'
-            message += traceback.format_exc()
-
-            raise InkstitchException(message)
+            raise InkstitchException(format_uncaught_exception())
 
     def validation_errors(self):
         """Return a list of errors with this Element.
