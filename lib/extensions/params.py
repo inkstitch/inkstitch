@@ -7,7 +7,6 @@
 
 import os
 import sys
-import traceback
 from collections import defaultdict
 from copy import copy
 from itertools import groupby, zip_longest
@@ -20,7 +19,7 @@ from ..commands import is_command, is_command_symbol
 from ..elements import (Clone, EmbroideryElement, FillStitch, Polyline,
                         SatinColumn, Stroke)
 from ..elements.clone import is_clone
-from ..exceptions import InkstitchException
+from ..exceptions import InkstitchException, format_uncaught_exception
 from ..gui import PresetsPanel, SimulatorPreview, WarningPanel
 from ..i18n import _
 from ..svg.tags import SVG_POLYLINE_TAG
@@ -550,7 +549,7 @@ class SettingsFrame(wx.Frame):
         except InkstitchException as exc:
             wx.CallAfter(self._show_warning, str(exc))
         except Exception:
-            wx.CallAfter(self._show_warning, traceback.format_exc())
+            wx.CallAfter(self._show_warning, format_uncaught_exception())
 
         return patches
 
