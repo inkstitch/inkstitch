@@ -5,16 +5,33 @@
 
 from collections.abc import Set
 
-from skimage.color import deltaE_ciede94
-from skimage.color import rgb2lab
-
+from colorspacious import cspace_convert
+from numpy import sqrt
 from .color import ThreadColor
 
 
 def compare_thread_colors(color1, color2):
     # Textile values from scikit-image documentation
     # https://scikit-image.org/docs/stable/api/skimage.color.html#skimage.color.deltaE_ciede94
-    return deltaE_ciede94(color1, color2, kL=2, k1=0.048, k2=0.0715)
+    # and Wikipedia
+    # https://en.wikipedia.org/wiki/Color_difference#CIE94
+    kL = 2
+    kC = 1
+    kH = 1
+    K1 = 0.048
+    K2 = 0.014
+    deltaL = color1[0] - color2[0]
+    C1 = color1[1]**2 + color1[2]**2
+    C2 = color2[1]**2 + color2[2]**2
+    deltaC = C1 - C2
+    deltaa = color1[1] - color2[1]
+    deltab = color1[2] - color2[2]
+    SL = 1
+    SC = 1 + K1*C1
+    SH = 1 + K2*C1
+    deltaH = sqrt(deltaa**2 + deltab**2 - deltaC**2)
+    deltaE = sqrt((deltaL/(kL*SL))**2 + (deltaC/(kC*SC))**2 + (deltaH/(kH*SH))**2)
+    return deltaE
 
 
 class ThreadPalette(Set):
@@ -64,8 +81,7 @@ class ThreadPalette(Set):
                     thread_name = thread_name.strip()
 
                     thread = ThreadColor(thread_color, thread_name, thread_number, manufacturer=self.name)
-                    scaled_thread_color = [rgb_value/255.0 for rgb_value in thread_color]
-                    self.threads[thread] = rgb2lab(scaled_thread_color)
+                    self.threads[thread] = cspace_convert(thread_color,"sRGB255","CIELab")
                 except (ValueError, IndexError):
                     continue
 
@@ -84,7 +100,6 @@ class ThreadPalette(Set):
         if isinstance(color, ThreadColor):
             color = color.rgb
 
-        scaled_color = [rgb_value/255.0 for rgb_value in color]
-        color = rgb2lab(scaled_color)
+        color = cspace_convert(color,"sRGB255","CIELab")
 
         return min(self, key=lambda thread: compare_thread_colors(self.threads[thread], color))

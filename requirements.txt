@@ -14,7 +14,7 @@ numpy
 jinja2>2.9
 requests
 
-scikit-image
+colorspacious
 
 stringcase
 flask>=2.2.0
