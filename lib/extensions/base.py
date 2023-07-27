@@ -31,21 +31,17 @@ class InkstitchExtension(inkex.EffectExtension):
 
     @classmethod
     def name(cls):
-        # Create a table to do replacements of other separating characters
-        chars2underscore = ("-", ".", " ", "\t", "\n", "\r", "\v", "\f")
-        table = dict((ord(c), "_") for c in chars2underscore)
-        # Add underscores before any uppercase letters except the first
+        # Convert CamelCase to snake_case
         snakecasename = cls.__name__
-        for i in range(len(snakecasename)-1):
-            if snakecasename[i+1].isupper() and snakecasename[i].islower():
-                table.update({ord(snakecasename[i+1]): "_"+snakecasename[i+1]})
-        # Replace characters
-        snakecasename = snakecasename.translate(table)
-        # Ensure leading character is not an underscore
-        if snakecasename[0] == "_":
-            snakecasename = snakecasename[1:]
-        # Transform all characters to lowercase
-        return snakecasename.lower()
+        underscores = 0
+        # First character is lower case
+        snakecasename = snakecasename[0].lower() + snakecasename[1:]
+        for i in range(len(snakecasename) - 1):
+            if snakecasename[i + 1 + underscores].isupper() and snakecasename[i + underscores].islower():
+                snakecasename = snakecasename.replace(snakecasename[i + 1 + underscores],
+                                                      "_" + snakecasename[i + 1 + underscores].lower())
+                underscores += 1
+        return snakecasename
 
     def hide_all_layers(self):
         for g in self.document.getroot().findall(SVG_GROUP_TAG):
