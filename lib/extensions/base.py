@@ -32,16 +32,8 @@ class InkstitchExtension(inkex.EffectExtension):
     @classmethod
     def name(cls):
         # Convert CamelCase to snake_case
-        snakecasename = cls.__name__
-        underscores = 0
-        # First character is lower case
-        snakecasename = snakecasename[0].lower() + snakecasename[1:]
-        for i in range(len(snakecasename) - 1):
-            if snakecasename[i + 1 + underscores].isupper() and snakecasename[i + underscores].islower():
-                snakecasename = snakecasename.replace(snakecasename[i + 1 + underscores],
-                                                      "_" + snakecasename[i + 1 + underscores].lower())
-                underscores += 1
-        return snakecasename
+        return cls.__name__[0].lower() + ''.join([x if x.islower() else f'_{x.lower()}'
+                                                  for x in cls.__name__[1:]])
 
     def hide_all_layers(self):
         for g in self.document.getroot().findall(SVG_GROUP_TAG):
