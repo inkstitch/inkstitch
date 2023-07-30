@@ -53,11 +53,18 @@ def get_node_transform(node):
 
 
 def get_correction_transform(node, child=False):
-    """Get a transform to apply to new siblings or children of this SVG node"""
+    """Get a transform to apply to new siblings or children of this SVG node
 
-    # if we want to place our new nodes in the same group/layer as this node,
-    # then we'll need to factor in the effects of any transforms set on
-    # the parents of this node.
+    Arguments:
+        child (boolean) -- whether the new nodes we're going to add will be
+                           children of node (child=True) or siblings of node
+                           (child=False)
+
+    This allows us to add a new child node that has its path specified in
+    absolute coordinates.  The correction transform will undo the effects of
+    the parent's and ancestors' transforms so that absolute coordinates
+    work properly.
+    """
 
     if child:
         transform = get_node_transform(node)
