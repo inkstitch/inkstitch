@@ -90,7 +90,7 @@ jobs:
         with:
           name: inkstitch-linux
           path: artifacts
-  windows:
+  windows32:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v3
@@ -141,7 +141,54 @@ jobs:
           folder: 'artifacts'
       - uses: actions/upload-artifact@v3
         with:
-          name: inkstitch-windows
+          name: inkstitch-windows32
+          path: artifacts
+  windows64:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: recursive
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.8.x'
+          architecture: 'x64'
+      - uses: microsoft/setup-msbuild@v1.3.1
+      - name: install dependencies
+        shell: bash
+        run: |
+          git config --system core.longpaths true
+          python -m pip install --upgrade pip
+          python -m pip install wheel
+          python -m pip install -r requirements.txt
+          python -m pip install pyinstaller
+
+          echo "${{ env.pythonLocation }}\bin" >> $GITHUB_PATH
+      - shell: bash
+        run: |
+          make dist
+        env:
+          BUILD: windows
+      - uses: dlemstra/code-sign-action@v1
+        with:
+          certificate: '${{ secrets.INKSTITCH_CODE_SIGNING_CERTIFICATE }}'
+          folder: 'dist'
+          recursive: true
+      - shell: bash
+        run: |
+          bash bin/build-windows-installer
+        env:
+          BUILD: windows
+      - uses: dlemstra/code-sign-action@v1
+        with:
+          certificate: '${{ secrets.INKSTITCH_CODE_SIGNING_CERTIFICATE }}'
+          folder: 'artifacts'
+      - uses: actions/upload-artifact@v3
+        with:
+          name: inkstitch-windows64
           path: artifacts
   mac:
     runs-on: macos-11
@@ -204,7 +251,7 @@ jobs:
 
   release:
     runs-on: ubuntu-latest
-    needs: [linux, windows, mac]
+    needs: [linux, windows32, windows64, mac]
     if: always()
     steps:
       - name: determine release info
@@ -227,10 +274,16 @@ jobs:
         with:
           name: 'inkstitch-linux'
           path: 'artifacts/'
-      - name: download windows
+      - name: download windows32
         uses: actions/download-artifact@v3
         with:
-          name: 'inkstitch-windows'
+          name: 'inkstitch-windows32'
+          path: 'artifacts/'
+        if: always()
+      - name: download windows64
+        uses: actions/download-artifact@v3
+        with:
+          name: 'inkstitch-windows64'
           path: 'artifacts/'
         if: always()
       - name: download mac
