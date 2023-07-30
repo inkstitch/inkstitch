@@ -2452,7 +2452,7 @@ msgstr "Czcionka"
 
 #: lib/extensions/lettering.py:60
 msgid "Font size filter (mm). 0 for all sizes."
-msgstr "Filtruj rozmiaru czcionk. 0 dla braku filtrowania."
+msgstr "Filtruj rozmiary czcionek. 0 dla braku filtrowania."
 
 #: lib/extensions/lettering.py:62
 msgid "Glyphs"
