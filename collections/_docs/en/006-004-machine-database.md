@@ -17,6 +17,11 @@ machine-database:
       features: TRIM
       inkstitch-version: 1.27.2
       comments: Das ist ein Test. Kommentare, Kommentare!
+    - name: Memory Craft 550E
+      file-formats: JEF, JEF+, JPX
+      features: 
+      inkstitch-version: 2.20.0
+      comments: soon
   - brand: Brother
     machines:
     - name: Test
