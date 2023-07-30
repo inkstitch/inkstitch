@@ -1596,7 +1596,7 @@ msgstr "Podszycie"
 #: lib/elements/fill_stitch.py:464 lib/elements/fill_stitch.py:476
 #: lib/elements/fill_stitch.py:489
 msgid "Fill Underlay"
-msgstr "Wypełnienia podszycia"
+msgstr ""
 
 #: lib/elements/fill_stitch.py:415
 msgid "Fill angle"
@@ -2452,7 +2452,7 @@ msgstr "Czcionka"
 
 #: lib/extensions/lettering.py:60
 msgid "Font size filter (mm). 0 for all sizes."
-msgstr "Filtr rozmiaru czcionk. 0 dla braku filtrowania."
+msgstr "Filtruj rozmiaru czcionk. 0 dla braku filtrowania."
 
 #: lib/extensions/lettering.py:62
 msgid "Glyphs"
@@ -2571,7 +2571,7 @@ msgstr ""
 
 #: lib/extensions/lettering_force_lock_stitches.py:29
 msgid "The maximum value is smaller than the minimum value."
-msgstr "Maksymalna wartość jest mniejsza niż minimalna"
+msgstr "Maksymalna wartość jest mniejsza niż minimalna."
 
 #: lib/extensions/lettering_generate_json.py:51
 msgid "Please specify a font file."
@@ -3152,7 +3152,7 @@ msgstr ""
 
 #: print/templates/custom-page.html:32 print/templates/ui.html:111
 msgid "All changes will be lost."
-msgstr "Wszystkie zmiany zostaną stracone"
+msgstr "Wszystkie zmiany zostaną utracone"
 
 #: print/templates/footer.html:2
 msgid "Page"
@@ -3310,7 +3310,7 @@ msgstr "Zamknij"
 
 #: print/templates/ui.html:10
 msgid "⚠ lost connection to Ink/Stitch"
-msgstr "Utracone połączenie z Ink/Stitch"
+msgstr "⚠ utracono połączenie z Ink/Stitch"
 
 #: print/templates/ui.html:19 print/templates/ui.html:30
 msgid "Page Setup"
@@ -3411,7 +3411,7 @@ msgstr "Zawiera średni czas na przygotowanie maszyny, zrywanie sie nici i/lub w
 
 #: print/templates/ui.html:134
 msgid "seconds to add to total time*"
-msgstr "sekunyd do dodania do całkowitego czasu"
+msgstr "sekundy do dodania do całkowitego czasu"
 
 #: print/templates/ui.html:138
 msgid "This will be added to the total time."
@@ -4042,7 +4042,7 @@ msgstr ""
 #: inx/inkstitch_stroke_to_lpe_satin.inx:32
 #: inx/inkstitch_zigzag_line_to_satin.inx:28
 msgid "Get more information on our website"
-msgstr "Zdobądź więcej informacji na naszej strony"
+msgstr "Zdobądź więcej informacji na naszej stronie"
 
 #: inx/inkstitch_apply_threadlist.inx:99
 msgid "https://inkstitch.org/docs/thread-color/#apply-threadlist"
