@@ -39,6 +39,7 @@ class LettersToFont(InkstitchExtension):
             glyphs = list(Path(font_dir).rglob(file_format.lower()))
 
         document = self.document.getroot()
+        group = None
         for glyph in glyphs:
             letter = self.get_glyph_element(glyph)
             label = "GlyphLayer-%s" % letter.get(INKSCAPE_LABEL, ' ').split('.')[0][-1]
@@ -59,15 +60,20 @@ class LettersToFont(InkstitchExtension):
             document.insert(0, group)
             group.set('style', 'display:none')
 
+        # We found no glyphs, no need to proceed
+        if group is None:
+            return
+
         # users may be confused if they get an empty document
         # make last letter visible again
         group.set('style', None)
 
-        # In most cases trims are inserted with the imported letters.
-        # Let's make sure the trim symbol exists in the defs section
-        ensure_symbol(document, 'trim')
+        if self.options.import_commands == "symbols":
+            # In most cases trims are inserted with the imported letters.
+            # Let's make sure the trim symbol exists in the defs section
+            ensure_symbol(document, 'trim')
 
-        self.insert_baseline(document)
+        self.insert_baseline()
 
     def get_glyph_element(self, glyph):
         stitch_plan = generate_stitch_plan(str(glyph), self.options.import_commands)
@@ -77,5 +83,5 @@ class LettersToFont(InkstitchExtension):
         stitch_plan.attrib.pop(INKSCAPE_GROUPMODE)
         return stitch_plan
 
-    def insert_baseline(self, document):
-        document.namedview.add_guide(position=0.0, name="baseline")
+    def insert_baseline(self):
+        self.svg.namedview.add_guide(position=0.0, name="baseline")
