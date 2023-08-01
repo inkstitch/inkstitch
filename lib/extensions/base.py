@@ -7,7 +7,6 @@ import os
 
 import inkex
 from lxml.etree import Comment
-from stringcase import snakecase
 
 from ..commands import is_command, layer_commands
 from ..elements import EmbroideryElement, nodes_to_elements
@@ -32,7 +31,9 @@ class InkstitchExtension(inkex.EffectExtension):
 
     @classmethod
     def name(cls):
-        return snakecase(cls.__name__)
+        # Convert CamelCase to snake_case
+        return cls.__name__[0].lower() + ''.join([x if x.islower() else f'_{x.lower()}'
+                                                  for x in cls.__name__[1:]])
 
     def hide_all_layers(self):
         for g in self.document.getroot().findall(SVG_GROUP_TAG):
