@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-07-23 01:26+0000\n"
-"PO-Revision-Date: 2023-07-26 01:22\n"
+"POT-Creation-Date: 2023-08-02 01:12+0000\n"
+"PO-Revision-Date: 2023-08-02 01:13\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-23 01:26+0000\n"
+"POT-Creation-Date: 2023-08-02 01:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2294,15 +2294,15 @@ msgid "Please select at least one satin column."
 msgstr "Veuillez sélectionner une ou plusieurs colonnes satin."
 
 #. This was previously: "No embroiderable paths selected."
-#: lib/extensions/base.py:57
+#: lib/extensions/base.py:58
 msgid "Ink/Stitch doesn't know how to work with any of the objects you've selected. Please check if selected elements are visible."
 msgstr "Ink/Stitch ne sait pas travailler avec les objets sélectionnés. Vérifier que les éléments sélectionnés sont bien visibles."
 
-#: lib/extensions/base.py:60
+#: lib/extensions/base.py:61
 msgid "There are no objects in the entire document that Ink/Stitch knows how to work with."
 msgstr "Il n'y a aucun objet dans tout le document sur lequel Ink/Stitch sait quoi faire."
 
-#: lib/extensions/base.py:62
+#: lib/extensions/base.py:63
 msgid "Tip: Run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot Objects"
 msgstr "Conseil : Exécutez Extensions > Ink/Stitch > Résolution de problèmes > Dépistage de problèmes avec des objets"
 
@@ -2325,7 +2325,7 @@ msgstr "Veuillez sélectionner au moins une ligne pour convertir en colonne Sati
 msgid "Only simple lines may be converted to satin columns."
 msgstr "Seules les lignes simples peuvent être converties en colonnes satin."
 
-#: lib/extensions/convert_to_satin.py:146
+#: lib/extensions/convert_to_satin.py:162
 msgid "Ink/Stitch cannot convert your stroke into a satin column. Please break up your path and try again."
 msgstr "Inkstitch ne peut pas convertir votre trait en colonne satin. Veuillez séparer votre chemin et réessayer."
 
