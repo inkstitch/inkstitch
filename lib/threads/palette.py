@@ -18,18 +18,11 @@ def f_xyzn_to_lab(xyzn):
     CIE_E = (6.0/29.0)**3
     temp = cbrt(xyzn)
     f_lab = [0.0, 0.0, 0.0]
-    if xyzn[0] > CIE_E:
-        f_lab[0] = temp[0]
-    else:
-        f_lab[0] = 7.787*xyzn[0] + 16.0/116.0
-    if xyzn[1] > CIE_E:
-        f_lab[1] = temp[1]
-    else:
-        f_lab[1] = 7.787*xyzn[1] + 16.0/116.0
-    if xyzn[2] > CIE_E:
-        f_lab[2] = temp[2]
-    else:
-        f_lab[2] = 7.787*xyzn[2] + 16.0/116.0
+    for i in range(len(xyzn)):
+        if xyzn[i] > CIE_E:
+            f_lab[i] = temp[i]
+        else:
+            f_lab[i] = 7.787*xyzn[i] + 16.0/116.0
     return f_lab
 
 
@@ -44,14 +37,12 @@ def convert_rgb_to_lab(color):
     # http://www.brucelindbloom.com/index.html?Eqn_RGB_to_XYZ.html
     # http://www.brucelindbloom.com/index.html?Eqn_RGB_XYZ_Matrix.html
 
-    # Normalize
-    color = color/255.0
-    # Convert to XYZ, values from
+    # Convert to XYZ and normalize, values from
     # https://github.com/gtaylor/python-colormath/blob/master/colormath/color_objects.py
     xyz = [0, 0, 0]
-    xyz[0] = 0.412424*color[0] + 0.357579*color[1] + 0.180464*color[2]
-    xyz[1] = 0.212656*color[0] + 0.715158*color[1] + 0.0721856*color[2]
-    xyz[2] = 0.0193324*color[0] + 0.119193*color[1] + 0.950444*color[2]
+    xyz[0] = (0.412424*color[0] + 0.357579*color[1] + 0.180464*color[2])/255.0
+    xyz[1] = (0.212656*color[0] + 0.715158*color[1] + 0.0721856*color[2])/255.0
+    xyz[2] = (0.0193324*color[0] + 0.119193*color[1] + 0.950444*color[2])/255.0
 
     # scale for transformation, d65 illuminant 2 degree function
     # https://github.com/gtaylor/python-colormath/blob/master/colormath/color_constants.py
