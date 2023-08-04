@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-07-23 01:26+0000\n"
-"PO-Revision-Date: 2023-07-23 01:27\n"
+"POT-Creation-Date: 2023-08-02 01:12+0000\n"
+"PO-Revision-Date: 2023-08-03 01:15\n"
 "Last-Translator: \n"
 "Language-Team: Polish\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-23 01:26+0000\n"
+"POT-Creation-Date: 2023-08-02 01:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -140,7 +140,7 @@ msgstr ""
 #. description of font in fonts/aventurina
 #: inkstitch-fonts-metadata.py:44
 msgid "Aventurina is a script satin font of size approximatively 20mm. The glyphs cover most Western European languages. The font can be scaled down to 60% and up to 150% "
-msgstr ""
+msgstr "Aventurina to satynowa pisanka kaligraficzna o wymiarze ok. 20 mm, skalowalna między 60% a 150%. Glify obejmują większość języków wschodnioeuropejskich."
 
 #. name of font in fonts/baumans_FI
 #: inkstitch-fonts-metadata.py:46
@@ -345,7 +345,7 @@ msgstr ""
 #. description of font in fonts/glacial_tiny
 #: inkstitch-fonts-metadata.py:124
 msgid "Glacial is a very tiny font: at 100%,  M stands at 5.6mm. Thin thread (60 wt ) and thin needle (8/60) are mandatory. The glyphs cover many European languages. It can be reduced down to 40% and enlarged up to 150% "
-msgstr ""
+msgstr "Glacial to bardzo mała czcionka (w 100% skali M ma wymiar 5,6), skalowalna między 40% a 150%. Gruba nić (60 wt) i gruba igła (8/60) są wymagane. Glify obejmują wiele języków europejskich."
 
 #. name of font in fonts/infinipicto
 #: inkstitch-fonts-metadata.py:126
@@ -2285,15 +2285,15 @@ msgid "Please select at least one satin column."
 msgstr ""
 
 #. This was previously: "No embroiderable paths selected."
-#: lib/extensions/base.py:57
+#: lib/extensions/base.py:58
 msgid "Ink/Stitch doesn't know how to work with any of the objects you've selected. Please check if selected elements are visible."
 msgstr ""
 
-#: lib/extensions/base.py:60
+#: lib/extensions/base.py:61
 msgid "There are no objects in the entire document that Ink/Stitch knows how to work with."
 msgstr ""
 
-#: lib/extensions/base.py:62
+#: lib/extensions/base.py:63
 msgid "Tip: Run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot Objects"
 msgstr ""
 
@@ -2316,7 +2316,7 @@ msgstr ""
 msgid "Only simple lines may be converted to satin columns."
 msgstr ""
 
-#: lib/extensions/convert_to_satin.py:146
+#: lib/extensions/convert_to_satin.py:162
 msgid "Ink/Stitch cannot convert your stroke into a satin column. Please break up your path and try again."
 msgstr ""
 

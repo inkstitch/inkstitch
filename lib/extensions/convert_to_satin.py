@@ -13,7 +13,7 @@ from numpy import diff, setdiff1d, sign
 from shapely import geometry as shgeo
 
 from .base import InkstitchExtension
-from ..elements import Stroke
+from ..elements import SatinColumn, Stroke
 from ..i18n import _
 from ..svg import PIXELS_PER_MM, get_correction_transform
 from ..svg.tags import INKSTITCH_ATTRIBS
@@ -51,22 +51,28 @@ class ConvertToSatin(InkstitchExtension):
             path_style = self.path_style(element)
 
             for path in element.paths:
-                path = self.remove_duplicate_points(path)
+                path = self.remove_duplicate_points(self.fix_loop(path))
 
                 if len(path) < 2:
                     # ignore paths with just one point -- they're not visible to the user anyway
                     continue
 
-                for satin in self.convert_path_to_satins(path, element.stroke_width, style_args, correction_transform, path_style):
-                    parent.insert(index, satin)
-                    index += 1
+                satins = list(self.convert_path_to_satins(path, element.stroke_width, style_args, path_style))
+
+                if satins:
+                    joined_satin = satins[0]
+                    for satin in satins[1:]:
+                        joined_satin = joined_satin.merge(satin)
+
+                    joined_satin.node.set('transform', correction_transform)
+                    parent.insert(index, joined_satin.node)
 
             parent.remove(element.node)
 
-    def convert_path_to_satins(self, path, stroke_width, style_args, correction_transform, path_style, depth=0):
+    def convert_path_to_satins(self, path, stroke_width, style_args, path_style, depth=0):
         try:
             rails, rungs = self.path_to_satin(path, stroke_width, style_args)
-            yield self.satin_to_svg_node(rails, rungs, correction_transform, path_style)
+            yield SatinColumn(self.satin_to_svg_node(rails, rungs, path_style))
         except SelfIntersectionError:
             # The path intersects itself.  Split it in two and try doing the halves
             # individually.
@@ -76,27 +82,37 @@ class ConvertToSatin(InkstitchExtension):
                 # getting nowhere.  Just give up on this section of the path.
                 return
 
-            half = int(len(path) / 2.0)
-            halves = [path[:half + 1], path[half:]]
+            halves = self.split_path(path)
 
             for path in halves:
-                for satin in self.convert_path_to_satins(path, stroke_width, style_args, correction_transform, path_style, depth=depth + 1):
+                for satin in self.convert_path_to_satins(path, stroke_width, style_args, path_style, depth=depth + 1):
                     yield satin
 
+    def split_path(self, path):
+        half = len(path) // 2
+        halves = [path[:half], path[half:]]
+
+        start = Point.from_tuple(halves[0][-1])
+        end = Point.from_tuple(halves[1][0])
+
+        midpoint = (start + end) / 2
+        midpoint = midpoint.as_tuple()
+
+        halves[0].append(midpoint)
+        halves[1] = [midpoint] + halves[1]
+
+        return halves
+
     def fix_loop(self, path):
-        if path[0] == path[-1]:
-            # Looping paths seem to confuse shapely's parallel_offset().  It loses track
-            # of where the start and endpoint is, even if the user explicitly breaks the
-            # path.  I suspect this is because parallel_offset() uses buffer() under the
-            # hood.
-            #
-            # To work around this we'll introduce a tiny gap by nudging the starting point
-            # toward the next point slightly.
-            start = Point(*path[0])
-            next = Point(*path[1])
-            direction = (next - start).unit()
-            start += 0.01 * direction
-            path[0] = start.as_tuple()
+        if path[0] == path[-1] and len(path) > 1:
+            first = Point.from_tuple(path[0])
+            second = Point.from_tuple(path[1])
+            midpoint = (first + second) / 2
+            midpoint = midpoint.as_tuple()
+
+            return [midpoint] + path[1:] + [path[0], midpoint]
+        else:
+            return path
 
     def remove_duplicate_points(self, path):
         path = [[round(coord, 4) for coord in point] for point in path]
@@ -304,10 +320,8 @@ class ConvertToSatin(InkstitchExtension):
             # Rotate 90 degrees left to make a normal vector.
             normal = tangent.rotate_left()
 
-            # Travel 75% of the stroke width left and right to make the rung's
-            # endpoints.  This means the rung's length is 150% of the stroke
-            # width.
-            offset = normal * stroke_width * 0.75
+            # Extend the rungs by an offset value to make sure they will cross the rails
+            offset = normal * (stroke_width / 2) * 1.2
             rung_start = rung_center + offset
             rung_end = rung_center - offset
 
@@ -319,7 +333,7 @@ class ConvertToSatin(InkstitchExtension):
         color = element.get_style('stroke', '#000000')
         return "stroke:%s;stroke-width:1px;fill:none" % (color)
 
-    def satin_to_svg_node(self, rails, rungs, correction_transform, path_style):
+    def satin_to_svg_node(self, rails, rungs, path_style):
         d = ""
         for path in chain(rails, rungs):
             d += "M"
@@ -330,7 +344,6 @@ class ConvertToSatin(InkstitchExtension):
         return inkex.PathElement(attrib={
             "id": self.uniqueId("path"),
             "style": path_style,
-            "transform": correction_transform,
             "d": d,
             INKSTITCH_ATTRIBS['satin_column']: "true",
         })
