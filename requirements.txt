@@ -14,8 +14,6 @@ numpy
 jinja2>2.9
 requests
 
-colorspacious
-
 stringcase
 flask>=2.2.0
 fonttools

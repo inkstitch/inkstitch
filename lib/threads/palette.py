@@ -5,9 +5,61 @@
 
 from collections.abc import Set
 
-from colorspacious import cspace_convert
-from numpy import sqrt
+from numpy import sqrt, cbrt
 from .color import ThreadColor
+
+
+def f_xyzn_to_lab(xyzn):
+    """Intermediate function for conversion between xyz and lab coordinates"""
+    # Reference
+    # https://en.wikipedia.org/wiki/CIELAB_color_space#Converting_between_CIELAB_and_CIEXYZ_coordinates
+    # https://github.com/gtaylor/python-colormath/blob/master/colormath/color_conversions.py
+    # https://github.com/gtaylor/python-colormath/blob/master/colormath/color_constants.py
+    CIE_E = (6.0/29.0)**3
+    temp = cbrt(xyzn)
+    f_lab = [0.0, 0.0, 0.0]
+    if xyzn[0] > CIE_E:
+        f_lab[0] = temp[0]
+    else:
+        f_lab[0] = 7.787*xyzn[0] + 16.0/116.0
+    if xyzn[1] > CIE_E:
+        f_lab[1] = temp[1]
+    else:
+        f_lab[1] = 7.787*xyzn[1] + 16.0/116.0
+    if xyzn[2] > CIE_E:
+        f_lab[2] = temp[2]
+    else:
+        f_lab[2] = 7.787*xyzn[2] + 16.0/116.0
+    return f_lab
+
+
+def convert_rgb_to_lab(color):
+    """Convert sRGB255 to CIELab color"""
+    # References
+    # Scikit-image documentation
+    # https://scikit-image.org/docs/stable/api/skimage.color.html#skimage.color.rgb2lab
+    # Wikipedia
+    # https://en.wikipedia.org/wiki/CIELAB_color_space#From_CIEXYZ_to_CIELAB
+    # https://en.wikipedia.org/wiki/CIE_1931_color_space#Construction_of_the_CIE_XYZ_color_space_from_the_Wright%E2%80%93Guild_data
+    # http://www.brucelindbloom.com/index.html?Eqn_RGB_to_XYZ.html
+    # http://www.brucelindbloom.com/index.html?Eqn_RGB_XYZ_Matrix.html
+
+    # Normalize
+    color = color/255.0
+    # Convert to XYZ, values from
+    # https://github.com/gtaylor/python-colormath/blob/master/colormath/color_objects.py
+    xyz = [0, 0, 0]
+    xyz[0] = 0.412424*color[0] + 0.357579*color[1] + 0.180464*color[2]
+    xyz[1] = 0.212656*color[0] + 0.715158*color[1] + 0.0721856*color[2]
+    xyz[2] = 0.0193324*color[0] + 0.119193*color[1] + 0.950444*color[2]
+
+    # scale for transformation, d65 illuminant 2 degree function
+    # https://github.com/gtaylor/python-colormath/blob/master/colormath/color_constants.py
+    xyzn = [0.95047, 1.0000, 1.08883]
+    xyz = [xyz[0]/xyzn[0], xyz[1]/xyzn[1], xyz[2]/xyzn[2]]
+    # Intermediate transformation values
+    fxyz = f_xyzn_to_lab(xyz)
+    return [116.0*fxyz[1] - 16.0, 500.0*(fxyz[0] - fxyz[1]), 200.0*(fxyz[1] - fxyz[2])]
 
 
 def compare_thread_colors(color1, color2):
@@ -81,7 +133,7 @@ class ThreadPalette(Set):
                     thread_name = thread_name.strip()
 
                     thread = ThreadColor(thread_color, thread_name, thread_number, manufacturer=self.name)
-                    self.threads[thread] = cspace_convert(thread_color,"sRGB255","CIELab")
+                    self.threads[thread] = convert_rgb_to_lab(thread_color)
                 except (ValueError, IndexError):
                     continue
 
@@ -100,6 +152,6 @@ class ThreadPalette(Set):
         if isinstance(color, ThreadColor):
             color = color.rgb
 
-        color = cspace_convert(color,"sRGB255","CIELab")
+        color = convert_rgb_to_lab(color)
 
         return min(self, key=lambda thread: compare_thread_colors(self.threads[thread], color))
