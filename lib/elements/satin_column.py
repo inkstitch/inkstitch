@@ -249,7 +249,7 @@ class SatinColumn(EmbroideryElement):
     def reverse_rails(self):
         return self.get_param('reverse_rails', 'automatic')
 
-    def _get_rails_to_reverse(self, rails):
+    def _get_rails_to_reverse(self):
         choice = self.reverse_rails
 
         if choice == 'first':
@@ -259,6 +259,7 @@ class SatinColumn(EmbroideryElement):
         elif choice == 'both':
             return True, True
         elif choice == 'automatic':
+            rails = [shgeo.LineString(self.flatten_subpath(rail)) for rail in self.rails]
             if len(rails) == 2:
                 # Sample ten points along the rails.  Compare the distance
                 # between corresponding points on both rails with and without
@@ -283,7 +284,7 @@ class SatinColumn(EmbroideryElement):
                     # reverse the second rail
                     return False, True
 
-        return None
+        return False, False
 
     @property
     @param(
@@ -477,7 +478,7 @@ class SatinColumn(EmbroideryElement):
         """The rails, as LineStrings."""
         paths = [shgeo.LineString(self.flatten_subpath(rail)) for rail in self.rails]
 
-        rails_to_reverse = self._get_rails_to_reverse(paths)
+        rails_to_reverse = self._get_rails_to_reverse()
         if paths and rails_to_reverse is not None:
             for i, reverse in enumerate(rails_to_reverse):
                 if reverse:
@@ -506,13 +507,18 @@ class SatinColumn(EmbroideryElement):
         else:
             return [subpath for i, subpath in enumerate(self.csp) if i not in self.rail_indices]
 
+    @cache
     def _synthesize_rungs(self):
         rung_endpoints = []
         # check for unequal length of rails
         equal_length = len(self.rails[0]) == len(self.rails[1])
 
-        for rail in self.rails:
+        rails_to_reverse = self._get_rails_to_reverse()
+        for i, rail in enumerate(self.rails):
             points = self.strip_control_points(rail)
+
+            if rails_to_reverse[i]:
+                points = points[::-1]
 
             if len(points) > 2 or not equal_length:
                 # Don't bother putting rungs at the start and end.
