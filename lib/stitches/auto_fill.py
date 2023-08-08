@@ -380,14 +380,11 @@ def process_travel_edges(graph, fill_stitch_graph, shape, travel_edges):
 
         edge = (p1.as_tuple(), p2.as_tuple(), 'travel')
 
-        for segment in strtree.query(ls):
-            # It seems like the STRTree only gives an approximate answer of
-            # segments that _might_ intersect ls.  Refining the result is
-            # necessary but the STRTree still saves us a ton of time.
-            if segment.crosses(ls):
-                start = segment.coords[0]
-                end = segment.coords[-1]
-                fill_stitch_graph[start][end]['segment']['underpath_edges'].append(edge)
+        for segment in strtree.query(ls, predicate='crosses'):
+            segment_geom = strtree.geometries.take(segment)
+            start = segment_geom.coords[0]
+            end = segment_geom.coords[-1]
+            fill_stitch_graph[start][end]['segment']['underpath_edges'].append(edge)
 
         # The weight of a travel edge is the length of the line segment.
         weight = p1.distance(p2)
