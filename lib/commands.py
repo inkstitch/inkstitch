@@ -124,6 +124,8 @@ class Command(BaseCommand):
 
     def parse_command(self):
         path = self.parse_connector_path()
+        if len(path) == 0:
+            raise CommandParseError("connector has no path information")
 
         neighbors = [
             (self.get_node_by_url(self.connector.get(CONNECTION_START)), path[0][0][1]),
