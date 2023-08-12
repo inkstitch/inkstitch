@@ -17,10 +17,10 @@ class ThreadColor(object):
         '''
         avoid error messages:
           * set colors with a gradient to black
-          * currentColor should not just be black, but we want to avoid error messages
-            until inkex will be able to handle this css property
+          * currentColor/context-fill/context-stroke: should not just be black, but we want to avoid
+            error messages until inkex will be able to handle these css properties
         '''
-        if type(color) == str and color.startswith(('url', 'currentColor')):
+        if type(color) == str and color.startswith(('url', 'currentColor', 'context')):
             color = None
         elif type(color) == str and color.startswith('rgb'):
             color = tuple(int(value) for value in color[4:-1].split(','))
