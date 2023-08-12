@@ -23,11 +23,12 @@ class ZigzagLineToSatin(InkstitchExtension):
         self.arg_parser.add_argument("-l", "--reduce-rungs", type=inkex.Boolean, default=False, dest="reduce_rungs")
 
     def effect(self):
-        if not self.svg.selection or not self.get_elements():
+        nodes = self.get_selection(self.svg.selection)
+        if not nodes:
             inkex.errormsg(_("Please select at least one stroke to convert to a satin column."))
             return
 
-        for node in self.svg.selection:
+        for node in nodes:
             d = []
             point_list = list(node.get_path().end_points)
             # find duplicated nodes (= do not smooth)
@@ -48,6 +49,17 @@ class ZigzagLineToSatin(InkstitchExtension):
 
             node.set('d', " ".join(d))
             node.set('inkstitch:satin_column', True)
+
+    def get_selection(self, nodes):
+        selection = []
+        for node in nodes:
+            # we only apply to path elements, no use in converting ellipses or rectangles, etc.
+            if node.TAG == "path":
+                selection.append(node)
+            elif node.TAG == "g":
+                for element in node.descendants():
+                    selection.extend(self.get_selection(element))
+        return selection
 
     def _get_sharp_edge_nodes(self, point_list):
         points = []
