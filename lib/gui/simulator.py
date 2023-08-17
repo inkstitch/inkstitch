@@ -45,6 +45,7 @@ class ControlPanel(wx.Panel):
         self.current_stitch = 1
         self.speed = 1
         self.direction = 1
+        self._last_color_block_end = 0
 
         # Widgets
         self.btnMinus = wx.Button(self, -1, label='-')
@@ -74,8 +75,7 @@ class ControlPanel(wx.Panel):
         self.quitBtn = wx.Button(self, -1, label=_('Quit'))
         self.quitBtn.Bind(wx.EVT_BUTTON, self.animation_quit)
         self.quitBtn.SetToolTip(_('Quit (Q)'))
-        self.slider = wx.Slider(self, -1, value=1, minValue=1, maxValue=2,
-                                style=wx.SL_HORIZONTAL | wx.SL_LABELS)
+        self.slider = SimulatorSlider(self, -1, value=1, minValue=1, maxValue=2)
         self.slider.Bind(wx.EVT_SLIDER, self.on_slider)
         self.stitchBox = IntCtrl(self, -1, value=1, min=1, max=2, limited=True, allow_none=True, style=wx.TE_PROCESS_ENTER)
         self.stitchBox.Bind(wx.EVT_LEFT_DOWN, self.on_stitch_box_focus)
@@ -152,6 +152,11 @@ class ControlPanel(wx.Panel):
         self.stitchBox.SetMax(num_stitches)
         self.slider.SetMax(num_stitches)
         self.choose_speed()
+
+    def add_color(self, color, num_stitches):
+        start = self._last_color_block_end + 1
+        self.slider.add_color_section(ColorSection(color.rgb, start, start + num_stitches - 1))
+        self._last_color_block_end = self._last_color_block_end + num_stitches
 
     def choose_speed(self):
         if self.target_duration:
@@ -460,8 +465,12 @@ class DrawingPanel(wx.Panel):
         self.current_stitch = 1
         self.direction = 1
         self.last_frame_duration = 0
+
         self.num_stitches = stitch_plan.num_stitches
         self.control_panel.set_num_stitches(self.num_stitches)
+        for color_block in stitch_plan:
+            self.control_panel.add_color(color_block.color, len(color_block))
+
         self.minx, self.miny, self.maxx, self.maxy = stitch_plan.bounding_box
         self.width = self.maxx - self.minx
         self.height = self.maxy - self.miny
@@ -638,6 +647,101 @@ class DrawingPanel(wx.Panel):
         self.zoom *= zoom_delta
 
         self.Refresh()
+
+
+class MarkerSet(list):
+    def __init__(self, icon, locations):
+        super().__init__(self)
+        self.icon = icon
+        self.enabled = False
+        self.extend(locations)
+
+
+class ColorSection:
+    def __init__(self, color, start, end):
+        self.color = color
+        self.start = start
+        self.end = end
+        self.brush = wx.Brush(wx.Colour(*color, 255))
+
+
+class SimulatorSlider(wx.Panel):
+    PROXY_EVENTS = (wx.EVT_SLIDER,)
+
+    def __init__(self, parent, id=wx.ID_ANY, *args, **kwargs):
+        super().__init__(parent, id)
+
+        kwargs['style'] = wx.SL_HORIZONTAL | wx.SL_LABELS
+
+        self.sizer = wx.BoxSizer(wx.VERTICAL)
+        self.slider = wx.Slider(self, *args, **kwargs)
+        self.sizer.Add(self.slider, 1, wx.EXPAND)
+        self.SetSizerAndFit(self.sizer)
+
+        self.marker_sets = {}
+        self.color_sections = []
+        self.margin = 15
+        self.color_bar_start = 0.3
+        self.color_bar_thickness = 1 - self.color_bar_start * 2
+
+        self.Bind(wx.EVT_PAINT, self.on_paint)
+        self.Bind(wx.EVT_ERASE_BACKGROUND, self.on_erase_background)
+
+    def SetMax(self, value):
+        self.slider.SetMax(value)
+
+    def SetMin(self, value):
+        self.slider.SetMin(value)
+
+    def SetValue(self, value):
+        self.slider.SetValue(value)
+
+    def Bind(self, event, callback, *args, **kwargs):
+        if event in self.PROXY_EVENTS:
+            self.slider.Bind(event, callback, *args, **kwargs)
+        else:
+            super().Bind(event, callback, *args, **kwargs)
+
+    def add_color_section(self, color_section):
+        self.color_sections.append(color_section)
+
+    def add_marker_set(self, name, marker_set):
+        self.marker_sets[name] = marker_set
+
+    def enable_marker_set(self, name):
+        self.marker_sets[name].enabled = True
+
+    def disable_marker_set(self, name):
+        self.marker_sets[name].enabled = False
+
+    def toggle_marker_set(self, name):
+        self.marker_sets[name].enabled = not self.marker_sets[name].enabled
+
+    def on_paint(self, event):
+        dc = wx.BufferedPaintDC(self)
+        background_brush = wx.Brush(self.GetBackgroundColour(), wx.SOLID)
+        dc.SetBackground(background_brush)
+        dc.Clear()
+
+        width, height = self.GetSize()
+        min_value = self.slider.GetMin()
+        max_value = self.slider.GetMax()
+        spread = max_value - min_value
+
+        def _value_to_x(value):
+            return (value - min_value) * (width - 2 * self.margin) // spread + self.margin
+
+        dc.SetPen(wx.NullPen)
+        for color_section in self.color_sections:
+            dc.SetBrush(color_section.brush)
+            start_x = _value_to_x(color_section.start)
+            end_x = _value_to_x(color_section.end + 1)
+            dc.DrawRectangle(start_x, int(height * self.color_bar_start),
+                             end_x - start_x, int(height * self.color_bar_thickness))
+
+    def on_erase_background(self, event):
+        # supposedly this prevents flickering?
+        pass
 
 
 class SimulatorPanel(wx.Panel):
@@ -839,6 +943,8 @@ class SimulatorPreview(Thread):
                                                            on_close=self.simulate_window_closed,
                                                            target_duration=self.target_duration)
             except Exception:
+                import traceback
+                print(traceback.format_exc(), file=sys.stderr)
                 try:
                     # a window may have been created, so we need to destroy it
                     # or the app will never exit
