@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-08-02 01:12+0000\n"
-"PO-Revision-Date: 2023-08-02 01:13\n"
+"POT-Creation-Date: 2023-08-14 01:02+0000\n"
+"PO-Revision-Date: 2023-08-17 01:03\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-02 01:12+0000\n"
+"POT-Creation-Date: 2023-08-14 01:02+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -38,18 +38,18 @@ msgstr "Brock Script"
 
 #. description of font in fonts/Brockscript
 #: inkstitch-fonts-metadata.py:4
-msgid "Brock Script is a decorative satin column manuscript font of size approximatively 40mm. It can be enlarged up to 250%. It contains 118 glyphs, covering most western european languages needs.More decorative options are hidden in the µ glyph"
-msgstr "Brock Script est une police manuscrite décorative en colonne satin de taille approximative de 40 mm. Elle peut être agrandie jusqu'à 250%. Elle contient 118 glyphes, couvrant les besoins de la plupart des langues de l'Europe occidentale. Des options plus décoratives sont cachées dans le glyphe µ"
+msgid "Brock Script is a decorative satin column manuscript font of size approximatively 40mm. It can be enlarged up to 250%. It contains 118 glyphs, covering most western european languages needs.More decorative options are hidden in the Вµ glyph"
+msgstr ""
 
 #. name of font in fonts/abecedaire
 #: inkstitch-fonts-metadata.py:6
-msgid "Abécédaire AGS"
-msgstr "Abécédaire AGS"
+msgid "AbГ©cГ©daire AGS"
+msgstr ""
 
 #. description of font in fonts/abecedaire
 #: inkstitch-fonts-metadata.py:8
-msgid "Abécédaire AGS is a crossstitch font of size 14mm. The font can be scaled down to 75% and up to 200%"
-msgstr "Abécédaire AGS est une police de point de croix de 14 mm. Cette polive peut être réduite jusqu'à 75% et agrandie jusqu'à 200%."
+msgid "AbГ©cГ©daire AGS is a crossstitch font of size 14mm. The font can be scaled down to 75% and up to 200%"
+msgstr ""
 
 #. name of font in fonts/abril
 #: inkstitch-fonts-metadata.py:10
@@ -63,13 +63,13 @@ msgstr "Abril En Fleur AGS est une grande fonte : le M mesure 103.5 mm. Elle pe
 
 #. name of font in fonts/ags_garamond_latin_grec
 #: inkstitch-fonts-metadata.py:14
-msgid "AGS Γαραμου Garamond"
-msgstr "AGS Γαραμου Garamond"
+msgid "AGS О“О±ПЃО±ОјОїП… Garamond"
+msgstr ""
 
 #. description of font in fonts/ags_garamond_latin_grec
 #: inkstitch-fonts-metadata.py:16
-msgid "This font contains all the letters of  the latin and  greek alphabets  and cover most european languages. Μ is 22mm hight and 20mm wide. It may be scaled down to 80% and scaled up to 150%"
-msgstr "Cette fonte contient toutes les lettres de lettres des alphabets grecs et latin et couvre la plupart des langages européens. Le M mesure 22 mm de haut et 20 mm de large. Elle peut être agrandie jusqu'à 150% et réduite jusqu'à 150%"
+msgid "This font contains all the letters of  the latin and  greek alphabets  and cover most european languages. Оњ is 22mm hight and 20mm wide. It may be scaled down to 80% and scaled up to 150%"
+msgstr ""
 
 #. name of font in fonts/amitaclo
 #: inkstitch-fonts-metadata.py:18
@@ -1050,7 +1050,7 @@ msgstr "Origine des fichiers broderie exportés"
 msgid "Jump destination for Stop commands (a.k.a. \"Frame Out position\")."
 msgstr "Destination de saut pour les commandes stop (\"position en dehors du cadre\")."
 
-#: lib/commands.py:227
+#: lib/commands.py:229
 #, python-format
 msgid "Error: there is more than one %(command)s command in the document, but there can only be one.  Please remove all but one."
 msgstr "Erreur : il y a plus d’une commande de %(command)s dans le document, mais il ne peut y en avoir qu'un seul.  S’il vous plaît supprimer les tous sauf un."
@@ -1060,26 +1060,26 @@ msgstr "Erreur : il y a plus d’une commande de %(command)s dans le document, 
 #. command name to them.  Contents of %(description)s are in a separate
 #. translation
 #. string.
-#: lib/commands.py:234
+#: lib/commands.py:236
 #, python-format
 msgid "%(command)s: %(description)s"
 msgstr "%(command)s: %(description)s"
 
-#: lib/commands.py:299 lib/commands.py:434
+#: lib/commands.py:301 lib/commands.py:436
 msgid "Ink/Stitch Command"
 msgstr "Commande Ink/Stitch"
 
 #. : the name of the line that connects a command to the object it applies to
-#: lib/commands.py:324
+#: lib/commands.py:326
 msgid "connector"
 msgstr "connecteur"
 
 #. : the name of a command symbol (example: scissors icon for trim command)
-#: lib/commands.py:343
+#: lib/commands.py:345
 msgid "command marker"
 msgstr "marqueur de commande"
 
-#: lib/commands.py:424
+#: lib/commands.py:426
 msgid "Please select a layer to include layer commands."
 msgstr "Merci de sélectionner un calque pour ajouter des commandes de calque."
 
@@ -1216,7 +1216,7 @@ msgstr "Entrez un chemin personnalisé. Pour les chemins svg, le premier nœud n
 
 #: lib/elements/element.py:316 lib/elements/element.py:328
 msgid "Scale lock stitch"
-msgstr "Echelle du poit d'arrêt"
+msgstr "Échelle du point d'arrêt"
 
 #: lib/elements/element.py:317
 msgid "Set length of lock stitches (mm)."
@@ -1571,7 +1571,7 @@ msgstr "Tolérance du point droit"
 msgid "Determines how hard Ink/Stitch tries to avoid stitching outside the shape.Lower numbers are less likely to stitch outside the shape but require more stitches."
 msgstr "Détermine la force avec laquelle Ink/Stitch essaie d'éviter de broder en dehors de la forme. Une valeur basse rend moins susceptible de broder en dehors de la forme, mais nécessite plus de points."
 
-#: lib/elements/fill_stitch.py:378 lib/elements/satin_column.py:353
+#: lib/elements/fill_stitch.py:378 lib/elements/satin_column.py:354
 #: lib/elements/stroke.py:82
 msgid "Repeats"
 msgstr "Répétitions"
@@ -1631,11 +1631,11 @@ msgstr "défaut : égal à longueur max des points de remplissage"
 msgid "Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill."
 msgstr "Rétrécit la forme avant de faire la sous-couche, pour empêcher que la sous-couche se montre en dehors du remplissage."
 
-#: lib/elements/fill_stitch.py:497 lib/elements/satin_column.py:434
+#: lib/elements/fill_stitch.py:497 lib/elements/satin_column.py:435
 msgid "Random seed"
 msgstr "Graine aléatoire"
 
-#: lib/elements/fill_stitch.py:498 lib/elements/satin_column.py:435
+#: lib/elements/fill_stitch.py:498 lib/elements/satin_column.py:436
 msgid "Use a specific seed for randomized attributes. Uses the element ID if empty."
 msgstr "Utiliser cette graine aléatoire pour le calcul des attributs. Si vide, utilise l'identificateur de l'élément."
 
@@ -1813,7 +1813,7 @@ msgstr "Point en E"
 msgid "Method"
 msgstr "Méthode"
 
-#: lib/elements/satin_column.py:98 lib/elements/satin_column.py:423
+#: lib/elements/satin_column.py:98 lib/elements/satin_column.py:424
 msgid "Maximum stitch length"
 msgstr "Longueur maximale du point"
 
@@ -1830,8 +1830,8 @@ msgid "shorten stitch across rails at most this percent. Two values separated by
 msgstr "réduire la largeur du satin au plus de ce pourcentage. Deux valeurs séparées par un espace peuvent être utilisées pour un effet asymétrique."
 
 #: lib/elements/satin_column.py:111 lib/elements/satin_column.py:121
-#: lib/elements/satin_column.py:205 lib/elements/satin_column.py:332
-#: lib/elements/satin_column.py:412
+#: lib/elements/satin_column.py:205 lib/elements/satin_column.py:333
+#: lib/elements/satin_column.py:413
 msgid "% (each side)"
 msgstr "% (de chaque côté)"
 
@@ -1915,8 +1915,8 @@ msgstr "Compensation d'étirement"
 msgid "Satin stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape. This setting expands each pair of needle penetrations outward from the center of the satin column by a fixed length. Two values separated by a space may be used for an aysmmetric effect."
 msgstr "Les points satin resserrent le tissu, ce qui entraîne une colonne plus étroite que celle que vous dessinez dans Inkscape. Ce paramètre étend le point depuis le centre vers l’extérieur de la colonne satinée. Deux valeurs séparées par un espace peuvent être utilisées pour un effet asymétrique."
 
-#: lib/elements/satin_column.py:221 lib/elements/satin_column.py:317
-#: lib/elements/satin_column.py:392
+#: lib/elements/satin_column.py:221 lib/elements/satin_column.py:318
+#: lib/elements/satin_column.py:393
 msgid "mm (each side)"
 msgstr "mm (de chaque côté)"
 
@@ -1948,96 +1948,96 @@ msgstr "Inverser la direction des rails"
 msgid "This may help if your satin renders very strangely.  Default: automatically detect and fix a reversed rail."
 msgstr "Ceci peut aider si le rendu de votre satin est étrange. La valeur par défaut Automatique détecte et corrige le cas des deux rails ayant une direction opposée."
 
-#: lib/elements/satin_column.py:291
+#: lib/elements/satin_column.py:292
 msgid "Swap rails"
 msgstr "Echanger les rails"
 
-#: lib/elements/satin_column.py:292
+#: lib/elements/satin_column.py:293
 msgid "Swaps the first and second rails of the satin column, affecting which side the thread finished on as well as any sided properties"
 msgstr "Échange les deux rails de la colonne satin, ce qui affecte le côté de fin de broderie ainsi que tous les paramètres asymétriques"
 
-#: lib/elements/satin_column.py:301
+#: lib/elements/satin_column.py:302
 msgid "Contour underlay"
 msgstr "Sous-couche de contour"
 
-#: lib/elements/satin_column.py:301 lib/elements/satin_column.py:308
-#: lib/elements/satin_column.py:316 lib/elements/satin_column.py:331
+#: lib/elements/satin_column.py:302 lib/elements/satin_column.py:309
+#: lib/elements/satin_column.py:317 lib/elements/satin_column.py:332
 msgid "Contour Underlay"
 msgstr "Sous-couche de Contour"
 
-#: lib/elements/satin_column.py:308 lib/elements/satin_column.py:347
+#: lib/elements/satin_column.py:309 lib/elements/satin_column.py:348
 msgid "Stitch length"
 msgstr "Longueur de point"
 
-#: lib/elements/satin_column.py:314
+#: lib/elements/satin_column.py:315
 msgid "Inset distance (fixed)"
 msgstr "Décalage (fixe)"
 
-#: lib/elements/satin_column.py:315
+#: lib/elements/satin_column.py:316
 msgid "Shrink the outline by a fixed length, to prevent the underlay from showing around the outside of the satin column."
 msgstr "Rétrécir le contour, pour empêcher que la sous-couche ne se voit autour de la colonne satin."
 
-#: lib/elements/satin_column.py:328
+#: lib/elements/satin_column.py:329
 msgid "Inset distance (proportional)"
 msgstr "Décalage (proportionnel)"
 
-#: lib/elements/satin_column.py:329
+#: lib/elements/satin_column.py:330
 msgid "Shrink the outline by a proportion of the column width, to prevent the underlay from showing around the outside of the satin column."
 msgstr "Rétrécir le contour proportionnellement à la largeur de la colonne pour empêcher que la sous-couche ne se voit autour de la colonne satin."
 
-#: lib/elements/satin_column.py:340
+#: lib/elements/satin_column.py:341
 msgid "Center-walk underlay"
 msgstr "Sous-couche centrale"
 
-#: lib/elements/satin_column.py:340 lib/elements/satin_column.py:347
-#: lib/elements/satin_column.py:356 lib/elements/satin_column.py:366
+#: lib/elements/satin_column.py:341 lib/elements/satin_column.py:348
+#: lib/elements/satin_column.py:357 lib/elements/satin_column.py:367
 msgid "Center-Walk Underlay"
 msgstr "Sous-couche centrale"
 
-#: lib/elements/satin_column.py:354
+#: lib/elements/satin_column.py:355
 msgid "For an odd number of repeats, this will reverse the direction the satin column is stitched, causing stitching to both begin and end at the start point."
 msgstr "Pour un nombre impair de répétitions, ceci renversa la direction de broderie de la colonne satin, la broderie commençant et terminant au point de départ."
 
-#: lib/elements/satin_column.py:364
+#: lib/elements/satin_column.py:365
 msgid "Position"
 msgstr "Position"
 
-#: lib/elements/satin_column.py:365
+#: lib/elements/satin_column.py:366
 #, python-format
 msgid "Position of underlay from between the rails. 0% is along the first rail, 50% is centered, 100% is along the second rail."
 msgstr "Position de la sous-couche entre les rails. A 0% la sous couche est le long du premier rail, à 50% centrée, à 100% le long du second rail."
 
-#: lib/elements/satin_column.py:373
+#: lib/elements/satin_column.py:374
 msgid "Zig-zag underlay"
 msgstr "Sous-couche Zig-Zag"
 
-#: lib/elements/satin_column.py:373 lib/elements/satin_column.py:382
-#: lib/elements/satin_column.py:393 lib/elements/satin_column.py:413
-#: lib/elements/satin_column.py:426
+#: lib/elements/satin_column.py:374 lib/elements/satin_column.py:383
+#: lib/elements/satin_column.py:394 lib/elements/satin_column.py:414
+#: lib/elements/satin_column.py:427
 msgid "Zig-zag Underlay"
 msgstr "Sous-couche Zig-Zag"
 
-#: lib/elements/satin_column.py:379
+#: lib/elements/satin_column.py:380
 msgid "Zig-Zag spacing (peak-to-peak)"
 msgstr "Espacement Zig-Zag (crête à crête)"
 
-#: lib/elements/satin_column.py:380
+#: lib/elements/satin_column.py:381
 msgid "Distance between peaks of the zig-zags."
 msgstr "Distance entre les crêtes des zig-zags."
 
-#: lib/elements/satin_column.py:390
+#: lib/elements/satin_column.py:391
 msgid "Inset amount (fixed)"
 msgstr "Décalage (fixe)"
 
-#: lib/elements/satin_column.py:391 lib/elements/satin_column.py:411
+#: lib/elements/satin_column.py:392 lib/elements/satin_column.py:412
 msgid "default: half of contour underlay inset"
 msgstr "par défaut: la moitié du décalage du contour de la sous-couche"
 
-#: lib/elements/satin_column.py:410
+#: lib/elements/satin_column.py:411
 msgid "Inset amount (proportional)"
 msgstr "Décalage (proportionnel)"
 
-#: lib/elements/satin_column.py:424
+#: lib/elements/satin_column.py:425
 msgid "Split stitch if distance of maximum stitch length is exceeded"
 msgstr "Découper le point en plusieurs si sa longueur dépasse la longueur maximale définie"
 
@@ -2688,7 +2688,7 @@ msgid "This element has lost its path information. Please move the element sligh
 msgstr "Cet élément a perdu son information de chemin. Merci de le déplacer légèrement en arrière puis en avant de réessayer."
 
 #: lib/extensions/stroke_to_lpe_satin.py:41
-#: lib/extensions/zigzag_line_to_satin.py:27
+#: lib/extensions/zigzag_line_to_satin.py:28
 msgid "Please select at least one stroke to convert to a satin column."
 msgstr "Veuillez sélectionner au moins une ligne pour la convertir en colonne Satin."
 
@@ -3322,8 +3322,8 @@ msgid "Close"
 msgstr "Fermer"
 
 #: print/templates/ui.html:10
-msgid "⚠ lost connection to Ink/Stitch"
-msgstr "⚠ Connexion perdu avec Ink/Stitch"
+msgid "вљ  lost connection to Ink/Stitch"
+msgstr ""
 
 #: print/templates/ui.html:19 print/templates/ui.html:30
 msgid "Page Setup"
@@ -3714,23 +3714,23 @@ msgstr "] Parenthèse carrée droite"
 
 #. name for left arrow keyboard key
 #: electron/src/renderer/components/Simulator.vue:52
-msgid "← Arrow left"
-msgstr "← Flèche à gauche"
+msgid "в†ђ Arrow left"
+msgstr ""
 
 #. name for right arrow keyboard key
 #: electron/src/renderer/components/Simulator.vue:63
-msgid "→ Arrow right"
-msgstr "→ Flèche à droite"
+msgid "в†’ Arrow right"
+msgstr ""
 
 #. name for up arrow keyboard key
 #: electron/src/renderer/components/Simulator.vue:129
-msgid "↑ Arrow up"
-msgstr "↑ Flèche vers le haut"
+msgid "в†‘ Arrow up"
+msgstr ""
 
 #. name for down arrow keyboard key
 #: electron/src/renderer/components/Simulator.vue:118
-msgid "↓ Arrow down"
-msgstr "↓ Flèche vers le bas"
+msgid "в†“ Arrow down"
+msgstr ""
 
 #. name for this keyboard key: +
 #: electron/src/renderer/components/Simulator.vue:89
@@ -4155,8 +4155,8 @@ msgid "Removes areas smaller than dedined by threshold."
 msgstr "Supprime les zones plus petites que celles délimitées par le seuil."
 
 #: inx/inkstitch_cleanup.inx:8
-msgid "Fill area threshold (px²)"
-msgstr "Seuil de suppression de petites zones de remplissage (px²)"
+msgid "Fill area threshold (pxВІ)"
+msgstr ""
 
 #: inx/inkstitch_cleanup.inx:10
 msgid "Remove Small strokes"
@@ -4407,8 +4407,8 @@ msgid "Folder (optional):"
 msgstr "Dossier (facultatif) :"
 
 #: inx/inkstitch_generate_palette.inx:22
-msgid "⚠ Restart Inkscape to use your color palette."
-msgstr "⚠ Redémarrez Inkscape pour utiliser votre palette de couleurs."
+msgid "вљ  Restart Inkscape to use your color palette."
+msgstr ""
 
 #: inx/inkstitch_generate_palette.inx:25
 msgid "Generate a custom color palette for Ink/Stitch"
@@ -5920,12 +5920,12 @@ msgid "This extension converts a zigzag line into a satin column."
 msgstr "Cette extension converti une ligne en zigzag en colonne satin."
 
 #: inx/inkstitch_zigzag_line_to_satin.inx:22
-msgid "▻ Always start and end with a rung."
-msgstr "▻ Tours commencer et terminer par une traverse."
+msgid "в–» Always start and end with a rung."
+msgstr ""
 
 #: inx/inkstitch_zigzag_line_to_satin.inx:24
-msgid "Square: |_|▔|_|▔|"
-msgstr "Carré : |_|▔|_|▔|"
+msgid "Square: |_|в–”|_|в–”|"
+msgstr ""
 
 #: inx/inkstitch_zigzag_line_to_satin.inx:25
 msgid "Sawtooth: |\\|\\|\\|"
