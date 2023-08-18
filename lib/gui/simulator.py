@@ -722,6 +722,7 @@ class SimulatorSlider(wx.Panel):
         background_brush = wx.Brush(self.GetBackgroundColour(), wx.SOLID)
         dc.SetBackground(background_brush)
         dc.Clear()
+        gc = wx.GraphicsContext.Create(dc)
 
         width, height = self.GetSize()
         min_value = self.slider.GetMin()
@@ -729,17 +730,15 @@ class SimulatorSlider(wx.Panel):
         spread = max_value - min_value
 
         def _value_to_x(value):
-            return (value - min_value) * (width - 2 * self.margin) // spread + self.margin
+            return (value - min_value) * (width - 2 * self.margin) / spread + self.margin
 
         dc.SetPen(wx.NullPen)
         for color_section in self.color_sections:
-            dc.SetBrush(color_section.brush)
+            gc.SetBrush(color_section.brush)
 
-            # I'm not quite sure why we need to subtact 1 from these, but it
-            # makes everything line up nicely.
-            start_x = _value_to_x(color_section.start) - 1
-            end_x = _value_to_x(color_section.end + 1) - 1
-            dc.DrawRectangle(start_x, int(height * self.color_bar_start),
+            start_x = _value_to_x(color_section.start)
+            end_x = _value_to_x(color_section.end)
+            gc.DrawRectangle(start_x, int(height * self.color_bar_start),
                              end_x - start_x, int(height * self.color_bar_thickness))
 
     def on_erase_background(self, event):
