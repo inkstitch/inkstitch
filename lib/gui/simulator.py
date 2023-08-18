@@ -680,7 +680,7 @@ class SimulatorSlider(wx.Panel):
 
         self.marker_sets = {}
         self.color_sections = []
-        self.margin = 15
+        self.margin = 13
         self.color_bar_start = 0.3
         self.color_bar_thickness = 1 - self.color_bar_start * 2
 
@@ -734,8 +734,11 @@ class SimulatorSlider(wx.Panel):
         dc.SetPen(wx.NullPen)
         for color_section in self.color_sections:
             dc.SetBrush(color_section.brush)
-            start_x = _value_to_x(color_section.start)
-            end_x = _value_to_x(color_section.end + 1)
+
+            # I'm not quite sure why we need to subtact 1 from these, but it
+            # makes everything line up nicely.
+            start_x = _value_to_x(color_section.start) - 1
+            end_x = _value_to_x(color_section.end + 1) - 1
             dc.DrawRectangle(start_x, int(height * self.color_bar_start),
                              end_x - start_x, int(height * self.color_bar_thickness))
 
