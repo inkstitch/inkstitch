@@ -48,34 +48,56 @@ class ControlPanel(wx.Panel):
         self.direction = 1
         self._last_color_block_end = 0
 
+        self.icons_dir = get_resource_dir("icons")
+
         # Widgets
-        self.btnMinus = wx.Button(self, -1, label='-')
+        self.button_size = self.GetTextExtent("M").y * 2
+        self.button_style = wx.BU_EXACTFIT | wx.BU_NOTEXT
+        self.btnMinus = wx.Button(self, -1, style=self.button_style)
         self.btnMinus.Bind(wx.EVT_BUTTON, self.animation_slow_down)
+        self.btnMinus.SetBitmap(self.load_icon('slower'))
         self.btnMinus.SetToolTip(_('Slow down (arrow down)'))
-        self.btnPlus = wx.Button(self, -1, label='+')
+        self.btnPlus = wx.Button(self, -1, style=self.button_style)
         self.btnPlus.Bind(wx.EVT_BUTTON, self.animation_speed_up)
+        self.btnPlus.SetBitmap(self.load_icon('faster'))
         self.btnPlus.SetToolTip(_('Speed up (arrow up)'))
-        self.btnBackwardStitch = wx.Button(self, -1, label='<|')
+        self.btnBackwardStitch = wx.Button(self, -1, style=self.button_style)
         self.btnBackwardStitch.Bind(wx.EVT_BUTTON, self.animation_one_stitch_backward)
+        self.btnBackwardStitch.SetBitmap(self.load_icon('backward_stitch'))
         self.btnBackwardStitch.SetToolTip(_('Go on step backward (-)'))
-        self.btnForwardStitch = wx.Button(self, -1, label='|>')
+        self.btnForwardStitch = wx.Button(self, -1, style=self.button_style)
         self.btnForwardStitch.Bind(wx.EVT_BUTTON, self.animation_one_stitch_forward)
+        self.btnForwardStitch.SetBitmap(self.load_icon('forward_stitch'))
         self.btnForwardStitch.SetToolTip(_('Go on step forward (+)'))
-        self.directionBtn = wx.Button(self, -1, label='<<')
-        self.directionBtn.Bind(wx.EVT_BUTTON, self.on_direction_button)
-        self.directionBtn.SetToolTip(_('Switch direction (arrow left | arrow right)'))
-        self.pauseBtn = wx.Button(self, -1, label=_('Pause'))
-        self.pauseBtn.Bind(wx.EVT_BUTTON, self.on_pause_start_button)
-        self.pauseBtn.SetToolTip(_('Pause (P)'))
-        self.restartBtn = wx.Button(self, -1, label=_('Restart'))
-        self.restartBtn.Bind(wx.EVT_BUTTON, self.animation_restart)
-        self.restartBtn.SetToolTip(_('Restart (R)'))
-        self.nppBtn = wx.ToggleButton(self, -1, label=_('O'))
-        self.nppBtn.Bind(wx.EVT_TOGGLEBUTTON, self.toggle_npp)
-        self.nppBtn.SetToolTip(_('Display needle penetration point (O)'))
-        self.quitBtn = wx.Button(self, -1, label=_('Quit'))
-        self.quitBtn.Bind(wx.EVT_BUTTON, self.animation_quit)
-        self.quitBtn.SetToolTip(_('Quit (Q)'))
+        self.btnForward = wx.ToggleButton(self, -1, style=self.button_style)
+        self.btnForward.SetValue(True)
+        self.btnForward.Bind(wx.EVT_TOGGLEBUTTON, self.on_forward_button)
+        self.btnForward.SetBitmap(self.load_icon('forward'))
+        self.btnForward.SetToolTip(_('Animate forward (arrow right)'))
+        self.btnReverse = wx.ToggleButton(self, -1, style=self.button_style)
+        self.btnReverse.Bind(wx.EVT_TOGGLEBUTTON, self.on_reverse_button)
+        self.btnReverse.SetBitmap(self.load_icon('reverse'))
+        self.btnReverse.SetToolTip(_('Animate in reverse (arrow right)'))
+        self.btnPlay = wx.ToggleButton(self, -1, style=self.button_style)
+        self.btnPlay.Bind(wx.EVT_TOGGLEBUTTON, self.on_play_button)
+        self.btnPlay.SetBitmap(self.load_icon('play'))
+        self.btnPlay.SetToolTip(_('Play (P)'))
+        self.btnPause = wx.ToggleButton(self, -1, style=self.button_style)
+        self.btnPause.Bind(wx.EVT_TOGGLEBUTTON, self.on_pause_button)
+        self.btnPause.SetBitmap(self.load_icon('pause'))
+        self.btnPause.SetToolTip(_('Pause (P)'))
+        self.btnRestart = wx.Button(self, -1, style=self.button_style)
+        self.btnRestart.Bind(wx.EVT_BUTTON, self.animation_restart)
+        self.btnRestart.SetBitmap(self.load_icon('restart'))
+        self.btnRestart.SetToolTip(_('Restart (R)'))
+        self.btnNpp = wx.ToggleButton(self, -1, style=self.button_style)
+        self.btnNpp.Bind(wx.EVT_TOGGLEBUTTON, self.toggle_npp)
+        self.btnNpp.SetBitmap(self.load_icon('npp'))
+        self.btnNpp.SetToolTip(_('Display needle penetration point (O)'))
+        self.btnClose = wx.Button(self, -1, style=self.button_style)
+        self.btnClose.Bind(wx.EVT_BUTTON, self.animation_quit)
+        self.btnClose.SetBitmap(self.load_icon('close'))
+        self.btnClose.SetToolTip(_('Close (Q)'))
         self.slider = SimulatorSlider(self, -1, value=1, minValue=1, maxValue=2)
         self.slider.Bind(wx.EVT_SLIDER, self.on_slider)
         self.stitchBox = IntCtrl(self, -1, value=1, min=1, max=2, limited=True, allow_none=True, style=wx.TE_PROCESS_ENTER)
@@ -84,6 +106,19 @@ class ControlPanel(wx.Panel):
         self.stitchBox.Bind(wx.EVT_TEXT_ENTER, self.on_stitch_box_focusout)
         self.stitchBox.Bind(wx.EVT_KILL_FOCUS, self.on_stitch_box_focusout)
         self.Bind(wx.EVT_LEFT_DOWN, self.on_stitch_box_focusout)
+
+        self.btnJump = wx.ToggleButton(self, -1, style=self.button_style)
+        self.btnJump.SetBitmap(self.load_icon('jump'))
+        self.btnJump.Bind(wx.EVT_TOGGLEBUTTON, lambda event: self.on_marker_button('jump', event))
+        self.btnTrim = wx.ToggleButton(self, -1, style=self.button_style)
+        self.btnTrim.SetBitmap(self.load_icon('trim'))
+        self.btnTrim.Bind(wx.EVT_TOGGLEBUTTON, lambda event: self.on_marker_button('trim', event))
+        self.btnStop = wx.ToggleButton(self, -1, style=self.button_style)
+        self.btnStop.SetBitmap(self.load_icon('stop'))
+        self.btnStop.Bind(wx.EVT_TOGGLEBUTTON, lambda event: self.on_marker_button('stop', event))
+        self.btnColorChange = wx.ToggleButton(self, -1, style=self.button_style)
+        self.btnColorChange.SetBitmap(self.load_icon('color_change'))
+        self.btnColorChange.Bind(wx.EVT_TOGGLEBUTTON, lambda event: self.on_marker_button('color_change', event))
 
         # Layout
         self.vbSizer = vbSizer = wx.BoxSizer(wx.VERTICAL)
@@ -96,11 +131,17 @@ class ControlPanel(wx.Panel):
         hbSizer2.Add(self.btnPlus, 0, wx.EXPAND | wx.ALL, 2)
         hbSizer2.Add(self.btnBackwardStitch, 0, wx.EXPAND | wx.ALL, 2)
         hbSizer2.Add(self.btnForwardStitch, 0, wx.EXPAND | wx.ALL, 2)
-        hbSizer2.Add(self.directionBtn, 0, wx.EXPAND | wx.ALL, 2)
-        hbSizer2.Add(self.pauseBtn, 0, wx.EXPAND | wx.ALL, 2)
-        hbSizer2.Add(self.restartBtn, 0, wx.EXPAND | wx.ALL, 2)
-        hbSizer2.Add(self.nppBtn, 0, wx.EXPAND | wx.ALL, 2)
-        hbSizer2.Add(self.quitBtn, 0, wx.EXPAND | wx.ALL, 2)
+        hbSizer2.Add(self.btnReverse, 0, wx.EXPAND | wx.ALL, 2)
+        hbSizer2.Add(self.btnForward, 0, wx.EXPAND | wx.ALL, 2)
+        hbSizer2.Add(self.btnPlay, 0, wx.EXPAND | wx.ALL, 2)
+        hbSizer2.Add(self.btnPause, 0, wx.EXPAND | wx.ALL, 2)
+        hbSizer2.Add(self.btnRestart, 0, wx.EXPAND | wx.ALL, 2)
+        hbSizer2.Add(self.btnNpp, 0, wx.EXPAND | wx.ALL, 2)
+        hbSizer2.Add(self.btnJump, 0, wx.ALL, 2)
+        hbSizer2.Add(self.btnTrim, 0, wx.ALL, 2)
+        hbSizer2.Add(self.btnStop, 0, wx.ALL, 2)
+        hbSizer2.Add(self.btnColorChange, 0, wx.ALL, 2)
+        hbSizer2.Add(self.btnClose, 0, wx.EXPAND | wx.ALL, 2)
         vbSizer.Add(hbSizer2, 0, wx.EXPAND | wx.ALL, 3)
         self.SetSizerAndFit(vbSizer)
 
@@ -126,8 +167,8 @@ class ControlPanel(wx.Panel):
             (wx.ACCEL_NORMAL, wx.WXK_NUMPAD_SUBTRACT, self.animation_one_stitch_backward),
             (wx.ACCEL_NORMAL, ord('r'), self.animation_restart),
             (wx.ACCEL_NORMAL, ord('o'), self.on_toggle_npp_shortcut),
-            (wx.ACCEL_NORMAL, ord('p'), self.on_pause_start_button),
-            (wx.ACCEL_NORMAL, wx.WXK_SPACE, self.on_pause_start_button),
+            (wx.ACCEL_NORMAL, ord('p'), self.play_or_pause),
+            (wx.ACCEL_NORMAL, wx.WXK_SPACE, self.play_or_pause),
             (wx.ACCEL_NORMAL, ord('q'), self.animation_quit)]
 
         self.accel_entries = []
@@ -181,6 +222,14 @@ class ControlPanel(wx.Panel):
                 elif stitch.color_change:
                     self.slider.add_marker("color_change", stitch_num)
 
+    def load_icon(self, icon_name):
+        icon = wx.Image(os.path.join(self.icons_dir, f"{icon_name}.png"))
+        icon.Rescale(self.button_size, self.button_size, wx.IMAGE_QUALITY_HIGH)
+        return icon.ConvertToBitmap()
+
+    def on_marker_button(self, marker_type, event):
+        self.slider.enable_marker_list(marker_type, event.GetEventObject().GetValue())
+
     def choose_speed(self):
         if self.target_duration:
             self.set_speed(int(self.num_stitches / float(self.target_duration)))
@@ -188,22 +237,24 @@ class ControlPanel(wx.Panel):
             self.set_speed(self.target_stitches_per_second)
 
     def animation_forward(self, event=None):
-        self.directionBtn.SetLabel("<<")
+        self.btnForward.SetValue(True)
+        self.btnReverse.SetValue(False)
         self.drawing_panel.forward()
         self.direction = 1
         self.update_speed_text()
 
     def animation_reverse(self, event=None):
-        self.directionBtn.SetLabel(">>")
+        self.btnForward.SetValue(False)
+        self.btnReverse.SetValue(True)
         self.drawing_panel.reverse()
         self.direction = -1
         self.update_speed_text()
 
-    def on_direction_button(self, event):
-        if self.direction == 1:
-            self.animation_reverse()
-        else:
-            self.animation_forward()
+    def on_forward_button(self, event):
+        self.animation_forward()
+
+    def on_reverse_button(self, event):
+        self.animation_forward()
 
     def set_speed(self, speed):
         self.speed = int(max(speed, 1))
@@ -266,14 +317,23 @@ class ControlPanel(wx.Panel):
         self.drawing_panel.go()
 
     def on_start(self):
-        self.pauseBtn.SetLabel(_('Pause'))
+        self.btnPause.SetValue(False)
+        self.btnPlay.SetValue(True)
 
     def on_stop(self):
-        self.pauseBtn.SetLabel(_('Start'))
+        self.btnPause.SetValue(True)
+        self.btnPlay.SetValue(False)
 
-    def on_pause_start_button(self, event):
+    def on_pause_button(self, event):
         """"""
-        if self.pauseBtn.GetLabel() == _('Pause'):
+        self.animation_pause()
+
+    def on_play_button(self, event):
+        """"""
+        self.animation_start()
+
+    def play_or_pause(self, event):
+        if self.drawing_panel.animating:
             self.animation_pause()
         else:
             self.animation_start()
@@ -293,11 +353,11 @@ class ControlPanel(wx.Panel):
         self.drawing_panel.restart()
 
     def on_toggle_npp_shortcut(self, event):
-        self.nppBtn.SetValue(not self.nppBtn.GetValue())
+        self.btnNpp.SetValue(not self.btnNpp.GetValue())
         self.toggle_npp(event)
 
     def toggle_npp(self, event):
-        if self.pauseBtn.GetLabel() == _('Start'):
+        if self.btnPause.GetLabel() == _('Start'):
             stitch = self.stitchBox.GetValue()
             self.drawing_panel.set_current_stitch(stitch)
 
@@ -475,7 +535,7 @@ class DrawingPanel(wx.Panel):
         canvas.EndLayer()
 
     def draw_needle_penetration_points(self, canvas, pen, stitches):
-        if self.control_panel.nppBtn.GetValue():
+        if self.control_panel.btnNpp.GetValue():
             npp_pen = wx.Pen(pen.GetColour(), width=int(0.5 * PIXELS_PER_MM * self.PIXEL_DENSITY))
             canvas.SetPen(npp_pen)
             canvas.StrokeLineSegments(stitches, [(stitch[0] + 0.001, stitch[1]) for stitch in stitches])
@@ -746,15 +806,15 @@ class SimulatorSlider(wx.Panel):
         self.marker_lists[name].append(location)
         self.Refresh()
 
-    def enable_marker_set(self, name):
-        self.marker_lists[name].enabled = True
+    def enable_marker_list(self, name, enabled=True):
+        self.marker_lists[name].enabled = enabled
         self.Refresh()
 
-    def disable_marker_set(self, name):
+    def disable_marker_list(self, name):
         self.marker_lists[name].enabled = False
         self.Refresh()
 
-    def toggle_marker_set(self, name):
+    def toggle_marker_list(self, name):
         self.marker_lists[name].enabled = not self.marker_lists[name].enabled
         self.Refresh()
 
