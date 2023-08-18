@@ -2,7 +2,7 @@
 #
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
-
+import os
 import sys
 import time
 from threading import Event, Thread
@@ -11,6 +11,7 @@ import wx
 from wx.lib.intctrl import IntCtrl
 
 from lib.debug import debug
+from lib.utils import get_resource_dir
 from lib.utils.threading import ExitThread
 from ..i18n import _
 from ..stitch_plan import stitch_groups_to_stitch_plan, stitch_plan_from_file
@@ -140,11 +141,14 @@ class ControlPanel(wx.Panel):
         self.SetAcceleratorTable(self.accel_table)
         self.SetFocus()
 
+        # wait for layouts so that panel size is set
+        wx.CallLater(50, self.load, self.stitch_plan)
+
     def set_drawing_panel(self, drawing_panel):
         self.drawing_panel = drawing_panel
         self.drawing_panel.set_speed(self.speed)
 
-    def set_num_stitches(self, num_stitches):
+    def _set_num_stitches(self, num_stitches):
         if num_stitches < 2:
             # otherwise the slider and intctrl get mad
             num_stitches = 2
@@ -157,6 +161,25 @@ class ControlPanel(wx.Panel):
         start = self._last_color_block_end + 1
         self.slider.add_color_section(ColorSection(color.rgb, start, start + num_stitches - 1))
         self._last_color_block_end = self._last_color_block_end + num_stitches
+
+    def load(self, stitch_plan):
+        self._set_num_stitches(stitch_plan.num_stitches)
+
+        stitch_num = 0
+        for color_block in stitch_plan.color_blocks:
+            start = stitch_num + 1
+            end = start + color_block.num_stitches
+            self.slider.add_color_section(color_block.color.rgb, start, end)
+
+            for stitch_num, stitch in enumerate(color_block.stitches, start):
+                if stitch.trim:
+                    self.slider.add_marker("trim", stitch_num)
+                elif stitch.stop:
+                    self.slider.add_marker("stop", stitch_num)
+                elif stitch.jump:
+                    self.slider.add_marker("jump", stitch_num)
+                elif stitch.color_change:
+                    self.slider.add_marker("color_change", stitch_num)
 
     def choose_speed(self):
         if self.target_duration:
@@ -465,15 +488,10 @@ class DrawingPanel(wx.Panel):
         self.current_stitch = 1
         self.direction = 1
         self.last_frame_duration = 0
-
-        self.num_stitches = stitch_plan.num_stitches
-        self.control_panel.set_num_stitches(self.num_stitches)
-        for color_block in stitch_plan:
-            self.control_panel.add_color(color_block.color, len(color_block))
-
         self.minx, self.miny, self.maxx, self.maxy = stitch_plan.bounding_box
         self.width = self.maxx - self.minx
         self.height = self.maxy - self.miny
+        self.num_stitches = stitch_plan.num_stitches
         self.parse_stitch_plan(stitch_plan)
         self.choose_zoom_and_pan()
         self.set_current_stitch(0)
@@ -649,12 +667,17 @@ class DrawingPanel(wx.Panel):
         self.Refresh()
 
 
-class MarkerSet(list):
-    def __init__(self, icon, locations):
+class MarkerList(list):
+    def __init__(self, icon_name, stitch_numbers=()):
         super().__init__(self)
-        self.icon = icon
+        icons_dir = get_resource_dir("icons")
+        self.icon_name = icon_name
+        self.icon = wx.Image(os.path.join(icons_dir, f"{icon_name}.png")).ConvertToBitmap()
         self.enabled = False
-        self.extend(locations)
+        self.extend(stitch_numbers)
+
+    def __repr__(self):
+        return f"MarkerList({self.icon_name})"
 
 
 class ColorSection:
@@ -662,7 +685,7 @@ class ColorSection:
         self.color = color
         self.start = start
         self.end = end
-        self.brush = wx.Brush(wx.Colour(*color, 255))
+        self.brush = wx.Brush(wx.Colour(*color))
 
 
 class SimulatorSlider(wx.Panel):
@@ -675,14 +698,28 @@ class SimulatorSlider(wx.Panel):
 
         self.sizer = wx.BoxSizer(wx.VERTICAL)
         self.slider = wx.Slider(self, *args, **kwargs)
-        self.sizer.Add(self.slider, 1, wx.EXPAND)
+        self.sizer.Add(self.slider, 0, wx.EXPAND)
+
+        # add 33% additional vertical space for marker icons
+        size = self.sizer.CalcMin()
+        self.sizer.Add((10, size.height // 3), 1, wx.EXPAND)
         self.SetSizerAndFit(self.sizer)
 
-        self.marker_sets = {}
+        self.marker_lists = {
+            "trim": MarkerList("trim"),
+            "stop": MarkerList("stop"),
+            "jump": MarkerList("jump"),
+            "color_change": MarkerList("color_change"),
+        }
+        self.marker_pen = wx.Pen(wx.Colour(0, 0, 0))
         self.color_sections = []
         self.margin = 13
-        self.color_bar_start = 0.3
-        self.color_bar_thickness = 1 - self.color_bar_start * 2
+        self.color_bar_start = 0.25
+        self.color_bar_thickness = 0.25
+        self.marker_start = 0.375
+        self.marker_end = 0.75
+        self.marker_icon_start = 0.75
+        self.marker_icon_size = size.height // 3
 
         self.Bind(wx.EVT_PAINT, self.on_paint)
         self.Bind(wx.EVT_ERASE_BACKGROUND, self.on_erase_background)
@@ -702,24 +739,28 @@ class SimulatorSlider(wx.Panel):
         else:
             super().Bind(event, callback, *args, **kwargs)
 
-    def add_color_section(self, color_section):
-        self.color_sections.append(color_section)
+    def add_color_section(self, color, start, end):
+        self.color_sections.append(ColorSection(color, start, end))
 
-    def add_marker_set(self, name, marker_set):
-        self.marker_sets[name] = marker_set
+    def add_marker(self, name, location):
+        self.marker_lists[name].append(location)
+        self.Refresh()
 
     def enable_marker_set(self, name):
-        self.marker_sets[name].enabled = True
+        self.marker_lists[name].enabled = True
+        self.Refresh()
 
     def disable_marker_set(self, name):
-        self.marker_sets[name].enabled = False
+        self.marker_lists[name].enabled = False
+        self.Refresh()
 
     def toggle_marker_set(self, name):
-        self.marker_sets[name].enabled = not self.marker_sets[name].enabled
+        self.marker_lists[name].enabled = not self.marker_lists[name].enabled
+        self.Refresh()
 
     def on_paint(self, event):
         dc = wx.BufferedPaintDC(self)
-        background_brush = wx.Brush(self.GetBackgroundColour(), wx.SOLID)
+        background_brush = wx.Brush(self.GetTopLevelParent().GetBackgroundColour(), wx.SOLID)
         dc.SetBackground(background_brush)
         dc.Clear()
         gc = wx.GraphicsContext.Create(dc)
@@ -732,14 +773,29 @@ class SimulatorSlider(wx.Panel):
         def _value_to_x(value):
             return (value - min_value) * (width - 2 * self.margin) / spread + self.margin
 
-        dc.SetPen(wx.NullPen)
+        gc.SetPen(wx.NullPen)
         for color_section in self.color_sections:
             gc.SetBrush(color_section.brush)
 
             start_x = _value_to_x(color_section.start)
             end_x = _value_to_x(color_section.end)
-            gc.DrawRectangle(start_x, int(height * self.color_bar_start),
-                             end_x - start_x, int(height * self.color_bar_thickness))
+            gc.DrawRectangle(start_x, height * self.color_bar_start,
+                             end_x - start_x, height * self.color_bar_thickness)
+
+        gc.SetPen(self.marker_pen)
+        for marker_list in self.marker_lists.values():
+            if marker_list.enabled:
+                for value in marker_list:
+                    x = _value_to_x(value)
+                    gc.StrokeLine(
+                        x, height * self.marker_start,
+                        x, height * self.marker_end
+                    )
+                    gc.DrawBitmap(
+                        marker_list.icon,
+                        x - self.marker_icon_size / 2, height * self.marker_icon_start,
+                        self.marker_icon_size, self.marker_icon_size
+                    )
 
     def on_erase_background(self, event):
         # supposedly this prevents flickering?
@@ -781,6 +837,7 @@ class SimulatorPanel(wx.Panel):
 
     def load(self, stitch_plan):
         self.dp.load(stitch_plan)
+        self.cp.load(stitch_plan)
 
     def clear(self):
         self.dp.clear()
