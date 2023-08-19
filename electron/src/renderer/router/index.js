@@ -13,11 +13,6 @@ const routes = [
         component: () => import('../components/Simulator.vue')
     },
     {
-        path: '/preferences',
-        name: 'preferences',
-        component: () => import('../components/Preferences.vue')
-    },
-    {
         path: '/:pathMatch(.*)*',
         name: 'NotFound',
         component: () => import('../components/NotFound.vue')
