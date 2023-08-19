@@ -63,11 +63,19 @@ class ControlPanel(wx.Panel):
         self.btnBackwardStitch = wx.Button(self, -1, style=self.button_style)
         self.btnBackwardStitch.Bind(wx.EVT_BUTTON, self.animation_one_stitch_backward)
         self.btnBackwardStitch.SetBitmap(self.load_icon('backward_stitch'))
-        self.btnBackwardStitch.SetToolTip(_('Go on step backward (-)'))
+        self.btnBackwardStitch.SetToolTip(_('Go backward one stitch (-)'))
         self.btnForwardStitch = wx.Button(self, -1, style=self.button_style)
         self.btnForwardStitch.Bind(wx.EVT_BUTTON, self.animation_one_stitch_forward)
         self.btnForwardStitch.SetBitmap(self.load_icon('forward_stitch'))
-        self.btnForwardStitch.SetToolTip(_('Go on step forward (+)'))
+        self.btnForwardStitch.SetToolTip(_('Go forward one stitch (+)'))
+        self.btnBackwardCommand = wx.Button(self, -1, style=self.button_style)
+        self.btnBackwardCommand.Bind(wx.EVT_BUTTON, self.animation_one_command_backward)
+        self.btnBackwardCommand.SetBitmap(self.load_icon('backward_command'))
+        self.btnBackwardCommand.SetToolTip(_('Go backward one command (page-down)'))
+        self.btnForwardCommand = wx.Button(self, -1, style=self.button_style)
+        self.btnForwardCommand.Bind(wx.EVT_BUTTON, self.animation_one_command_forward)
+        self.btnForwardCommand.SetBitmap(self.load_icon('forward_command'))
+        self.btnForwardCommand.SetToolTip(_('Go forward one command (page-up)'))
         self.btnForward = wx.ToggleButton(self, -1, style=self.button_style)
         self.btnForward.SetValue(True)
         self.btnForward.Bind(wx.EVT_TOGGLEBUTTON, self.on_forward_button)
@@ -136,8 +144,10 @@ class ControlPanel(wx.Panel):
 
         self.controls_sizer = wx.StaticBoxSizer(wx.StaticBox(self, wx.ID_ANY, _("Controls")), wx.HORIZONTAL)
         self.controls_inner_sizer = wx.BoxSizer(wx.HORIZONTAL)
+        self.controls_inner_sizer.Add(self.btnBackwardCommand, 0, wx.EXPAND | wx.ALL, 2)
         self.controls_inner_sizer.Add(self.btnBackwardStitch, 0, wx.EXPAND | wx.ALL, 2)
         self.controls_inner_sizer.Add(self.btnForwardStitch, 0, wx.EXPAND | wx.ALL, 2)
+        self.controls_inner_sizer.Add(self.btnForwardCommand, 0, wx.EXPAND | wx.ALL, 2)
         self.controls_inner_sizer.Add(self.btnReverse, 0, wx.EXPAND | wx.ALL, 2)
         self.controls_inner_sizer.Add(self.btnForward, 0, wx.EXPAND | wx.ALL, 2)
         self.controls_inner_sizer.Add(self.btnPlay, 0, wx.EXPAND | wx.ALL, 2)
@@ -213,7 +223,11 @@ class ControlPanel(wx.Panel):
             (wx.ACCEL_NORMAL, ord('o'), self.on_toggle_npp_shortcut),
             (wx.ACCEL_NORMAL, ord('p'), self.play_or_pause),
             (wx.ACCEL_NORMAL, wx.WXK_SPACE, self.play_or_pause),
-            (wx.ACCEL_NORMAL, ord('q'), self.animation_quit)]
+            (wx.ACCEL_NORMAL, ord('q'), self.animation_quit),
+            (wx.ACCEL_NORMAL, wx.WXK_PAGEDOWN, self.animation_one_command_backward),
+            (wx.ACCEL_NORMAL, wx.WXK_PAGEUP, self.animation_one_command_forward),
+
+        ]
 
         self.accel_entries = []
 
@@ -248,10 +262,13 @@ class ControlPanel(wx.Panel):
         self._last_color_block_end = self._last_color_block_end + num_stitches
 
     def load(self, stitch_plan):
+        self.stitches = []
         self._set_num_stitches(stitch_plan.num_stitches)
 
         stitch_num = 0
         for color_block in stitch_plan.color_blocks:
+            self.stitches.extend(color_block.stitches)
+
             start = stitch_num + 1
             end = start + color_block.num_stitches
             self.slider.add_color_section(color_block.color.rgb, start, end)
@@ -395,6 +412,28 @@ class ControlPanel(wx.Panel):
     def animation_one_stitch_backward(self, event):
         self.animation_pause()
         self.drawing_panel.one_stitch_backward()
+
+    def animation_one_command_backward(self, event):
+        self.animation_pause()
+        stitch_number = self.current_stitch - 1
+        while stitch_number >= 1:
+            # stitch number shown to the user starts at 1
+            stitch = self.stitches[stitch_number - 1]
+            if stitch.jump or stitch.trim or stitch.stop or stitch.color_change:
+                break
+            stitch_number -= 1
+        self.drawing_panel.set_current_stitch(stitch_number)
+
+    def animation_one_command_forward(self, event):
+        self.animation_pause()
+        stitch_number = self.current_stitch + 1
+        while stitch_number <= self.num_stitches:
+            # stitch number shown to the user starts at 1
+            stitch = self.stitches[stitch_number - 1]
+            if stitch.jump or stitch.trim or stitch.stop or stitch.color_change:
+                break
+            stitch_number += 1
+        self.drawing_panel.set_current_stitch(stitch_number)
 
     def animation_quit(self, event):
         self.parent.quit()
