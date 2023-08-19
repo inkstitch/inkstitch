@@ -30,6 +30,7 @@ COLOR_CHANGE = 4
 class ControlPanel(wx.Panel):
     """"""
 
+    @debug.time
     def __init__(self, parent, *args, **kwargs):
         """"""
         self.parent = parent
@@ -38,8 +39,6 @@ class ControlPanel(wx.Panel):
         self.target_duration = kwargs.pop('target_duration')
         kwargs['style'] = wx.BORDER_SUNKEN
         wx.Panel.__init__(self, parent, *args, **kwargs)
-
-        self.statusbar = self.GetTopLevelParent().statusbar
 
         self.drawing_panel = None
         self.num_stitches = 1
@@ -106,43 +105,88 @@ class ControlPanel(wx.Panel):
         self.stitchBox.Bind(wx.EVT_TEXT_ENTER, self.on_stitch_box_focusout)
         self.stitchBox.Bind(wx.EVT_KILL_FOCUS, self.on_stitch_box_focusout)
         self.Bind(wx.EVT_LEFT_DOWN, self.on_stitch_box_focusout)
-
         self.btnJump = wx.ToggleButton(self, -1, style=self.button_style)
+        self.btnJump.SetToolTip(_('Show jump stitches'))
         self.btnJump.SetBitmap(self.load_icon('jump'))
         self.btnJump.Bind(wx.EVT_TOGGLEBUTTON, lambda event: self.on_marker_button('jump', event))
         self.btnTrim = wx.ToggleButton(self, -1, style=self.button_style)
+        self.btnTrim.SetToolTip(_('Show trims'))
         self.btnTrim.SetBitmap(self.load_icon('trim'))
         self.btnTrim.Bind(wx.EVT_TOGGLEBUTTON, lambda event: self.on_marker_button('trim', event))
         self.btnStop = wx.ToggleButton(self, -1, style=self.button_style)
+        self.btnStop.SetToolTip(_('Show stops'))
         self.btnStop.SetBitmap(self.load_icon('stop'))
         self.btnStop.Bind(wx.EVT_TOGGLEBUTTON, lambda event: self.on_marker_button('stop', event))
         self.btnColorChange = wx.ToggleButton(self, -1, style=self.button_style)
+        self.btnColorChange.SetToolTip(_('Show color changes'))
         self.btnColorChange.SetBitmap(self.load_icon('color_change'))
         self.btnColorChange.Bind(wx.EVT_TOGGLEBUTTON, lambda event: self.on_marker_button('color_change', event))
 
         # Layout
+        self.hbSizer1 = wx.BoxSizer(wx.HORIZONTAL)
+        self.hbSizer1.Add(self.slider, 1, wx.EXPAND | wx.RIGHT, 10)
+        self.hbSizer1.Add(self.stitchBox, 0, wx.ALIGN_CENTER_VERTICAL | wx.RIGHT, 10)
+
+        self.command_sizer = wx.StaticBoxSizer(wx.StaticBox(self, wx.ID_ANY, _("Command")), wx.VERTICAL)
+        self.command_text = wx.StaticText(self, wx.ID_ANY, label="", style=wx.ALIGN_CENTRE_HORIZONTAL | wx.ST_NO_AUTORESIZE)
+        self.command_text.SetFont(wx.Font(wx.FontInfo(20).Bold()))
+        self.command_text.SetMinSize(self.get_max_command_text_size())
+        self.command_sizer.Add(self.command_text, 0, wx.EXPAND | wx.ALL, 10)
+        self.hbSizer1.Add(self.command_sizer, 0, wx.EXPAND)
+
+        self.controls_sizer = wx.StaticBoxSizer(wx.StaticBox(self, wx.ID_ANY, _("Controls")), wx.HORIZONTAL)
+        self.controls_inner_sizer = wx.BoxSizer(wx.HORIZONTAL)
+        self.controls_inner_sizer.Add(self.btnBackwardStitch, 0, wx.EXPAND | wx.ALL, 2)
+        self.controls_inner_sizer.Add(self.btnForwardStitch, 0, wx.EXPAND | wx.ALL, 2)
+        self.controls_inner_sizer.Add(self.btnReverse, 0, wx.EXPAND | wx.ALL, 2)
+        self.controls_inner_sizer.Add(self.btnForward, 0, wx.EXPAND | wx.ALL, 2)
+        self.controls_inner_sizer.Add(self.btnPlay, 0, wx.EXPAND | wx.ALL, 2)
+        self.controls_inner_sizer.Add(self.btnPause, 0, wx.EXPAND | wx.ALL, 2)
+        self.controls_inner_sizer.Add(self.btnRestart, 0, wx.EXPAND | wx.ALL, 2)
+        self.controls_inner_sizer.Add(self.btnClose, 0, wx.EXPAND | wx.ALL, 2)
+        self.controls_sizer.Add((1, 1), 1)
+        self.controls_sizer.Add(self.controls_inner_sizer, 0, wx.ALIGN_CENTER_VERTICAL | wx.ALL, 10)
+        self.controls_sizer.Add((1, 1), 1)
+
+        self.show_sizer = wx.StaticBoxSizer(wx.StaticBox(self, wx.ID_ANY, _("Show")), wx.HORIZONTAL)
+        self.show_inner_sizer = wx.BoxSizer(wx.HORIZONTAL)
+        self.show_inner_sizer.Add(self.btnNpp, 0, wx.EXPAND | wx.ALL, 2)
+        self.show_inner_sizer.Add(self.btnJump, 0, wx.ALL, 2)
+        self.show_inner_sizer.Add(self.btnTrim, 0, wx.ALL, 2)
+        self.show_inner_sizer.Add(self.btnStop, 0, wx.ALL, 2)
+        self.show_inner_sizer.Add(self.btnColorChange, 0, wx.ALL, 2)
+        self.show_sizer.Add((1, 1), 1)
+        self.show_sizer.Add(self.show_inner_sizer, 0, wx.ALIGN_CENTER_VERTICAL | wx.ALL, 10)
+        self.show_sizer.Add((1, 1), 1)
+
+        self.speed_sizer = wx.StaticBoxSizer(wx.StaticBox(self, wx.ID_ANY, _("Speed")), wx.VERTICAL)
+
+        self.speed_buttons_sizer = wx.BoxSizer(wx.HORIZONTAL)
+        self.speed_buttons_sizer.Add((1, 1), 1)
+        self.speed_buttons_sizer.Add(self.btnMinus, 0, wx.ALL, 2)
+        self.speed_buttons_sizer.Add(self.btnPlus, 0, wx.ALL, 2)
+        self.speed_buttons_sizer.Add((1, 1), 1)
+        self.speed_sizer.Add(self.speed_buttons_sizer, 0, wx.EXPAND | wx.ALL)
+        self.speed_text = wx.StaticText(self, wx.ID_ANY, label="", style=wx.ALIGN_CENTRE_HORIZONTAL | wx.ST_NO_AUTORESIZE)
+        self.speed_text.SetFont(wx.Font(wx.FontInfo(15).Bold()))
+        extent = self.speed_text.GetTextExtent(self.format_speed_text(100000))
+        self.speed_text.SetMinSize(extent)
+        self.speed_sizer.Add(self.speed_text, 0, wx.EXPAND | wx.ALL, 5)
+
+        # A normal BoxSizer can only make child components the same or
+        # proportional size.  A FlexGridSizer can split up the available extra
+        # space evenly among all growable columns.
+        self.control_row2_sizer = wx.FlexGridSizer(cols=3, vgap=0, hgap=5)
+        self.control_row2_sizer.AddGrowableCol(0)
+        self.control_row2_sizer.AddGrowableCol(1)
+        self.control_row2_sizer.AddGrowableCol(2)
+        self.control_row2_sizer.Add(self.controls_sizer, 0, wx.EXPAND)
+        self.control_row2_sizer.Add(self.speed_sizer, 0, wx.EXPAND)
+        self.control_row2_sizer.Add(self.show_sizer, 0, wx.EXPAND)
+
         self.vbSizer = vbSizer = wx.BoxSizer(wx.VERTICAL)
-        self.hbSizer1 = hbSizer1 = wx.BoxSizer(wx.HORIZONTAL)
-        self.hbSizer2 = hbSizer2 = wx.BoxSizer(wx.HORIZONTAL)
-        hbSizer1.Add(self.slider, 1, wx.EXPAND | wx.ALL, 3)
-        hbSizer1.Add(self.stitchBox, 0, wx.ALL | wx.ALIGN_CENTER_VERTICAL, 2)
-        vbSizer.Add(hbSizer1, 1, wx.EXPAND | wx.ALL, 3)
-        hbSizer2.Add(self.btnMinus, 0, wx.EXPAND | wx.ALL, 2)
-        hbSizer2.Add(self.btnPlus, 0, wx.EXPAND | wx.ALL, 2)
-        hbSizer2.Add(self.btnBackwardStitch, 0, wx.EXPAND | wx.ALL, 2)
-        hbSizer2.Add(self.btnForwardStitch, 0, wx.EXPAND | wx.ALL, 2)
-        hbSizer2.Add(self.btnReverse, 0, wx.EXPAND | wx.ALL, 2)
-        hbSizer2.Add(self.btnForward, 0, wx.EXPAND | wx.ALL, 2)
-        hbSizer2.Add(self.btnPlay, 0, wx.EXPAND | wx.ALL, 2)
-        hbSizer2.Add(self.btnPause, 0, wx.EXPAND | wx.ALL, 2)
-        hbSizer2.Add(self.btnRestart, 0, wx.EXPAND | wx.ALL, 2)
-        hbSizer2.Add(self.btnNpp, 0, wx.EXPAND | wx.ALL, 2)
-        hbSizer2.Add(self.btnJump, 0, wx.ALL, 2)
-        hbSizer2.Add(self.btnTrim, 0, wx.ALL, 2)
-        hbSizer2.Add(self.btnStop, 0, wx.ALL, 2)
-        hbSizer2.Add(self.btnColorChange, 0, wx.ALL, 2)
-        hbSizer2.Add(self.btnClose, 0, wx.EXPAND | wx.ALL, 2)
-        vbSizer.Add(hbSizer2, 0, wx.EXPAND | wx.ALL, 3)
+        vbSizer.Add(self.hbSizer1, 1, wx.EXPAND | wx.ALL, 10)
+        vbSizer.Add(self.control_row2_sizer, 0, wx.EXPAND | wx.LEFT | wx.RIGHT | wx.BOTTOM, 10)
         self.SetSizerAndFit(vbSizer)
 
         # Keyboard Shortcuts
@@ -254,7 +298,7 @@ class ControlPanel(wx.Panel):
         self.animation_forward()
 
     def on_reverse_button(self, event):
-        self.animation_forward()
+        self.animation_reverse()
 
     def set_speed(self, speed):
         self.speed = int(max(speed, 1))
@@ -263,9 +307,15 @@ class ControlPanel(wx.Panel):
         if self.drawing_panel:
             self.drawing_panel.set_speed(self.speed)
 
+    def format_speed_text(self, speed):
+        return _('%d stitches/sec') % speed
+
     def update_speed_text(self):
-        self.statusbar.SetStatusText(_('Speed: %d stitches/sec') % (self.speed * self.direction), 0)
-        self.hbSizer2.Layout()
+        self.speed_text.SetLabel(self.format_speed_text(self.speed * self.direction))
+
+    def get_max_command_text_size(self):
+        extents = [self.command_text.GetTextExtent(command) for command in COMMAND_NAMES]
+        return max(extents, key=lambda extent: extent.x)
 
     def on_slider(self, event):
         stitch = event.GetEventObject().GetValue()
@@ -281,7 +331,7 @@ class ControlPanel(wx.Panel):
             self.current_stitch = stitch
             self.slider.SetValue(stitch)
             self.stitchBox.SetValue(stitch)
-            self.statusbar.SetStatusText(COMMAND_NAMES[command], 1)
+            self.command_text.SetLabel(COMMAND_NAMES[command])
 
     def on_stitch_box_focus(self, event):
         self.animation_pause()
@@ -357,9 +407,7 @@ class ControlPanel(wx.Panel):
         self.toggle_npp(event)
 
     def toggle_npp(self, event):
-        if self.btnPause.GetLabel() == _('Start'):
-            stitch = self.stitchBox.GetValue()
-            self.drawing_panel.set_current_stitch(stitch)
+        self.drawing_panel.Refresh()
 
 
 class DrawingPanel(wx.Panel):
@@ -910,8 +958,6 @@ class EmbroiderySimulator(wx.Frame):
         stitches_per_second = kwargs.pop('stitches_per_second', 16)
         target_duration = kwargs.pop('target_duration', None)
         wx.Frame.__init__(self, *args, **kwargs)
-        self.statusbar = self.CreateStatusBar(2)
-        self.statusbar.SetStatusWidths([250, -1])
 
         sizer = wx.BoxSizer(wx.HORIZONTAL)
         self.simulator_panel = SimulatorPanel(self,
