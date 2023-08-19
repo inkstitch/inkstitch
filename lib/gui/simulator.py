@@ -541,8 +541,8 @@ class DrawingPanel(wx.Panel):
         canvas.SetTransform(canvas.CreateMatrix())
         crosshair_radius = 10
         canvas.SetPen(self.black_pen)
-        canvas.DrawLines(((x - crosshair_radius, y), (x + crosshair_radius, y)))
-        canvas.DrawLines(((x, y - crosshair_radius), (x, y + crosshair_radius)))
+        canvas.StrokeLines(((x - crosshair_radius, y), (x + crosshair_radius, y)))
+        canvas.StrokeLines(((x, y - crosshair_radius), (x, y + crosshair_radius)))
 
     def draw_scale(self, canvas):
         canvas.BeginLayer(1)
@@ -569,13 +569,13 @@ class DrawingPanel(wx.Panel):
         scale_lower_left_x = 20
         scale_lower_left_y = canvas_height - 30
 
-        canvas.DrawLines(((scale_lower_left_x, scale_lower_left_y - 6),
-                          (scale_lower_left_x, scale_lower_left_y),
-                          (scale_lower_left_x + scale_width / 2.0, scale_lower_left_y),
-                          (scale_lower_left_x + scale_width / 2.0, scale_lower_left_y - 3),
-                          (scale_lower_left_x + scale_width / 2.0, scale_lower_left_y),
-                          (scale_lower_left_x + scale_width, scale_lower_left_y),
-                          (scale_lower_left_x + scale_width, scale_lower_left_y - 5)))
+        canvas.StrokeLines(((scale_lower_left_x, scale_lower_left_y - 6),
+                            (scale_lower_left_x, scale_lower_left_y),
+                            (scale_lower_left_x + scale_width / 2.0, scale_lower_left_y),
+                            (scale_lower_left_x + scale_width / 2.0, scale_lower_left_y - 3),
+                            (scale_lower_left_x + scale_width / 2.0, scale_lower_left_y),
+                            (scale_lower_left_x + scale_width, scale_lower_left_y),
+                            (scale_lower_left_x + scale_width, scale_lower_left_y - 6)))
 
         canvas.SetFont(wx.Font(12, wx.DEFAULT, wx.NORMAL, wx.NORMAL), wx.Colour((0, 0, 0)))
         canvas.DrawText("%s mm" % scale_width_mm, scale_lower_left_x, scale_lower_left_y + 5)
