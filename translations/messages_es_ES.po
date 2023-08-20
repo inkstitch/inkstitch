@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-08-14 01:02+0000\n"
-"PO-Revision-Date: 2023-08-14 01:04\n"
+"POT-Creation-Date: 2023-08-20 01:06+0000\n"
+"PO-Revision-Date: 2023-08-20 01:07\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-14 01:02+0000\n"
+"POT-Creation-Date: 2023-08-20 01:06+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2786,6 +2786,60 @@ msgstr "Orden de subprocesos"
 msgid "Thread Used"
 msgstr "Hilo usado"
 
+#: lib/gui/preferences.py:16 inx/inkstitch_preferences.inx:3
+msgid "Preferences"
+msgstr "Preferencias"
+
+#: lib/gui/preferences.py:17
+msgid "frame"
+msgstr ""
+
+#: lib/gui/preferences.py:29
+msgid "This SVG"
+msgstr ""
+
+#: lib/gui/preferences.py:39
+msgid "Minimum jump stitch length"
+msgstr ""
+
+#: lib/gui/preferences.py:40 lib/gui/preferences.py:88
+#: lib/gui/preferences.py:121
+msgid "Jump stitches smaller than this will be treated as normal stitches."
+msgstr "Los saltos de puntada más pequeños que este se tratarán como puntadas normales."
+
+#: lib/gui/preferences.py:51 lib/gui/preferences.py:68
+#: lib/gui/preferences.py:99 lib/gui/preferences.py:115
+msgid "mm"
+msgstr ""
+
+#: lib/gui/preferences.py:54 lib/gui/preferences.py:71
+msgid "Set As Default"
+msgstr ""
+
+#: lib/gui/preferences.py:57 lib/gui/preferences.py:104
+msgid "Minimum stitch length"
+msgstr ""
+
+#: lib/gui/preferences.py:77
+msgid "Global"
+msgstr ""
+
+#: lib/gui/preferences.py:87
+msgid "Default minimum jump stitch length"
+msgstr ""
+
+#: lib/gui/preferences.py:120
+msgid "Stitch plan cache size"
+msgstr ""
+
+#: lib/gui/preferences.py:132
+msgid "MB"
+msgstr ""
+
+#: lib/gui/preferences.py:135
+msgid "Clear Stitch Plan Cache"
+msgstr ""
+
 #: lib/gui/presets.py:52
 msgid "Presets"
 msgstr "Preajustes"
@@ -3729,10 +3783,6 @@ msgstr "+ Más"
 msgid "Button"
 msgstr "Botón"
 
-#: electron/src/renderer/components/Preferences.vue:121
-msgid "clear stitch plan cache"
-msgstr ""
-
 #: electron/src/renderer/components/Simulator.vue:236
 msgid "color changes"
 msgstr "cambio de color"
@@ -3749,31 +3799,9 @@ msgstr "Controles"
 msgid "cursor"
 msgstr "cursor"
 
-#: electron/src/renderer/components/Preferences.vue:77
-#: electron/src/renderer/components/Preferences.vue:1
-msgid "Default minimum jump stitch length"
-msgstr ""
-
-#: electron/src/renderer/components/Preferences.vue:93
-#: electron/src/renderer/components/Preferences.vue:1
-msgid "Default minimum stitch length"
-msgstr ""
-
-#: electron/src/renderer/components/Preferences.vue:131
-msgid "done"
-msgstr ""
-
-#: electron/src/renderer/components/Preferences.vue:50
-msgid "Drop stitches smaller than this value."
-msgstr ""
-
 #: electron/src/renderer/components/Simulator.vue:18
 msgid "Function"
 msgstr "Función"
-
-#: electron/src/renderer/components/Preferences.vue:29
-msgid "Jump stitches smaller than this will be treated as normal stitches."
-msgstr "Los saltos de puntada más pequeños que este se tratarán como puntadas normales."
 
 #: electron/src/renderer/components/Simulator.vue:106
 msgid "Jump to next command"
@@ -3794,16 +3822,6 @@ msgstr ""
 #: electron/src/renderer/components/Simulator.vue:232
 msgid "jumps"
 msgstr "saltos"
-
-#: electron/src/renderer/components/Preferences.vue:27
-#: electron/src/renderer/components/Preferences.vue:1
-msgid "Minimum jump stitch length"
-msgstr ""
-
-#: electron/src/renderer/components/Preferences.vue:48
-#: electron/src/renderer/components/Preferences.vue:1
-msgid "Minimum stitch length"
-msgstr ""
 
 #. name for this keyboard key: -
 #: electron/src/renderer/components/Simulator.vue:76
@@ -3882,11 +3900,6 @@ msgstr "saltos renderizados"
 msgid "Rendering stitch-plan..."
 msgstr "Renderizando plan de bordado..."
 
-#: electron/src/renderer/components/Preferences.vue:40
-#: electron/src/renderer/components/Preferences.vue:61
-msgid "set as default"
-msgstr ""
-
 #: electron/src/renderer/components/Simulator.vue:21
 msgid "Shortcut Key"
 msgstr "Tecla de acceso rápido"
@@ -3917,23 +3930,9 @@ msgid_plural "Speed: %{speed} stitches/sec"
 msgstr[0] "Velocidad: %{speed} puntada/seg"
 msgstr[1] "Velocidad: %{speed} puntadas/seg"
 
-#: electron/src/renderer/components/Preferences.vue:109
-#: electron/src/renderer/components/Preferences.vue:1
-msgid "Stitch plan cache size"
-msgstr ""
-
 #: electron/src/renderer/components/Simulator.vue:239
 msgid "stops"
 msgstr "stop"
-
-#: electron/src/renderer/components/Preferences.vue:111
-msgid "The greater the number, the more stitch plans can be cached, speeding up stitch plan calculation.  Default: 100"
-msgstr ""
-
-#: electron/src/renderer/components/Preferences.vue:79
-#: electron/src/renderer/components/Preferences.vue:95
-msgid "Used for new SVGs."
-msgstr ""
 
 #: electron/src/renderer/components/Simulator.vue:208
 #: inx/inkstitch_commands_scale_symbols.inx:12
@@ -5566,10 +5565,6 @@ msgstr ""
 #: inx/inkstitch_params.inx:3
 msgid "Params"
 msgstr "Parametros"
-
-#: inx/inkstitch_preferences.inx:3
-msgid "Preferences"
-msgstr "Preferencias"
 
 #: inx/inkstitch_print.inx:3
 msgid "PDF Export"

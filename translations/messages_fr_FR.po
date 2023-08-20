@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-08-14 01:02+0000\n"
-"PO-Revision-Date: 2023-08-17 01:03\n"
+"POT-Creation-Date: 2023-08-20 01:06+0000\n"
+"PO-Revision-Date: 2023-08-20 01:07\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-14 01:02+0000\n"
+"POT-Creation-Date: 2023-08-20 01:06+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -38,18 +38,18 @@ msgstr "Brock Script"
 
 #. description of font in fonts/Brockscript
 #: inkstitch-fonts-metadata.py:4
-msgid "Brock Script is a decorative satin column manuscript font of size approximatively 40mm. It can be enlarged up to 250%. It contains 118 glyphs, covering most western european languages needs.More decorative options are hidden in the Вµ glyph"
-msgstr ""
+msgid "Brock Script is a decorative satin column manuscript font of size approximatively 40mm. It can be enlarged up to 250%. It contains 118 glyphs, covering most western european languages needs.More decorative options are hidden in the µ glyph"
+msgstr "Brock Script est une police manuscrite décorative en colonne satin de taille approximative de 40 mm. Elle peut être agrandie jusqu'à 250%. Elle contient 118 glyphes, couvrant les besoins de la plupart des langues de l'Europe occidentale. Des options plus décoratives sont cachées dans le glyphe µ"
 
 #. name of font in fonts/abecedaire
 #: inkstitch-fonts-metadata.py:6
-msgid "AbГ©cГ©daire AGS"
-msgstr ""
+msgid "Abécédaire AGS"
+msgstr "Abécédaire AGS"
 
 #. description of font in fonts/abecedaire
 #: inkstitch-fonts-metadata.py:8
-msgid "AbГ©cГ©daire AGS is a crossstitch font of size 14mm. The font can be scaled down to 75% and up to 200%"
-msgstr ""
+msgid "Abécédaire AGS is a crossstitch font of size 14mm. The font can be scaled down to 75% and up to 200%"
+msgstr "Abécédaire AGS est une police de point de croix de 14 mm. Cette polive peut être réduite jusqu'à 75% et agrandie jusqu'à 200%."
 
 #. name of font in fonts/abril
 #: inkstitch-fonts-metadata.py:10
@@ -63,13 +63,13 @@ msgstr "Abril En Fleur AGS est une grande fonte : le M mesure 103.5 mm. Elle pe
 
 #. name of font in fonts/ags_garamond_latin_grec
 #: inkstitch-fonts-metadata.py:14
-msgid "AGS О“О±ПЃО±ОјОїП… Garamond"
-msgstr ""
+msgid "AGS Γαραμου Garamond"
+msgstr "AGS Γαραμου Garamond"
 
 #. description of font in fonts/ags_garamond_latin_grec
 #: inkstitch-fonts-metadata.py:16
-msgid "This font contains all the letters of  the latin and  greek alphabets  and cover most european languages. Оњ is 22mm hight and 20mm wide. It may be scaled down to 80% and scaled up to 150%"
-msgstr ""
+msgid "This font contains all the letters of  the latin and  greek alphabets  and cover most european languages. Μ is 22mm hight and 20mm wide. It may be scaled down to 80% and scaled up to 150%"
+msgstr "Cette fonte contient toutes les lettres de lettres des alphabets grecs et latin et couvre la plupart des langages européens. Le M mesure 22 mm de haut et 20 mm de large. Elle peut être agrandie jusqu'à 150% et réduite jusqu'à 150%"
 
 #. name of font in fonts/amitaclo
 #: inkstitch-fonts-metadata.py:18
@@ -2796,6 +2796,60 @@ msgstr "Ordre des fils"
 msgid "Thread Used"
 msgstr "Fils utilisés"
 
+#: lib/gui/preferences.py:16 inx/inkstitch_preferences.inx:3
+msgid "Preferences"
+msgstr "Préférences"
+
+#: lib/gui/preferences.py:17
+msgid "frame"
+msgstr ""
+
+#: lib/gui/preferences.py:29
+msgid "This SVG"
+msgstr ""
+
+#: lib/gui/preferences.py:39
+msgid "Minimum jump stitch length"
+msgstr "Longueur minimum de saut"
+
+#: lib/gui/preferences.py:40 lib/gui/preferences.py:88
+#: lib/gui/preferences.py:121
+msgid "Jump stitches smaller than this will be treated as normal stitches."
+msgstr "Des sauts de fil plus petits que cela seront considérés comme des points ordinaires."
+
+#: lib/gui/preferences.py:51 lib/gui/preferences.py:68
+#: lib/gui/preferences.py:99 lib/gui/preferences.py:115
+msgid "mm"
+msgstr ""
+
+#: lib/gui/preferences.py:54 lib/gui/preferences.py:71
+msgid "Set As Default"
+msgstr ""
+
+#: lib/gui/preferences.py:57 lib/gui/preferences.py:104
+msgid "Minimum stitch length"
+msgstr "Longueur minimum du point"
+
+#: lib/gui/preferences.py:77
+msgid "Global"
+msgstr ""
+
+#: lib/gui/preferences.py:87
+msgid "Default minimum jump stitch length"
+msgstr "Valeur par défaut de la longueur minimum de saut"
+
+#: lib/gui/preferences.py:120
+msgid "Stitch plan cache size"
+msgstr "Taille du cache de plan de broderie"
+
+#: lib/gui/preferences.py:132
+msgid "MB"
+msgstr ""
+
+#: lib/gui/preferences.py:135
+msgid "Clear Stitch Plan Cache"
+msgstr ""
+
 #: lib/gui/presets.py:52
 msgid "Presets"
 msgstr "Préréglage"
@@ -3322,8 +3376,8 @@ msgid "Close"
 msgstr "Fermer"
 
 #: print/templates/ui.html:10
-msgid "вљ  lost connection to Ink/Stitch"
-msgstr ""
+msgid "⚠ lost connection to Ink/Stitch"
+msgstr "⚠ Connexion perdu avec Ink/Stitch"
 
 #: print/templates/ui.html:19 print/templates/ui.html:30
 msgid "Page Setup"
@@ -3714,23 +3768,23 @@ msgstr "] Parenthèse carrée droite"
 
 #. name for left arrow keyboard key
 #: electron/src/renderer/components/Simulator.vue:52
-msgid "в†ђ Arrow left"
-msgstr ""
+msgid "← Arrow left"
+msgstr "← Flèche à gauche"
 
 #. name for right arrow keyboard key
 #: electron/src/renderer/components/Simulator.vue:63
-msgid "в†’ Arrow right"
-msgstr ""
+msgid "→ Arrow right"
+msgstr "→ Flèche à droite"
 
 #. name for up arrow keyboard key
 #: electron/src/renderer/components/Simulator.vue:129
-msgid "в†‘ Arrow up"
-msgstr ""
+msgid "↑ Arrow up"
+msgstr "↑ Flèche vers le haut"
 
 #. name for down arrow keyboard key
 #: electron/src/renderer/components/Simulator.vue:118
-msgid "в†“ Arrow down"
-msgstr ""
+msgid "↓ Arrow down"
+msgstr "↓ Flèche vers le bas"
 
 #. name for this keyboard key: +
 #: electron/src/renderer/components/Simulator.vue:89
@@ -3740,10 +3794,6 @@ msgstr "+ Plus"
 #: electron/src/renderer/components/Simulator.vue:15
 msgid "Button"
 msgstr "Bouton"
-
-#: electron/src/renderer/components/Preferences.vue:121
-msgid "clear stitch plan cache"
-msgstr "vider le cache de plans de broderie"
 
 #: electron/src/renderer/components/Simulator.vue:236
 msgid "color changes"
@@ -3761,31 +3811,9 @@ msgstr "Contrôles"
 msgid "cursor"
 msgstr "curseur"
 
-#: electron/src/renderer/components/Preferences.vue:77
-#: electron/src/renderer/components/Preferences.vue:1
-msgid "Default minimum jump stitch length"
-msgstr "Valeur par défaut de la longueur minimum de saut"
-
-#: electron/src/renderer/components/Preferences.vue:93
-#: electron/src/renderer/components/Preferences.vue:1
-msgid "Default minimum stitch length"
-msgstr "Valeur par défaut de la longueur minimum de point"
-
-#: electron/src/renderer/components/Preferences.vue:131
-msgid "done"
-msgstr "fait"
-
-#: electron/src/renderer/components/Preferences.vue:50
-msgid "Drop stitches smaller than this value."
-msgstr "Sauter les points plus courts que cette valeur."
-
 #: electron/src/renderer/components/Simulator.vue:18
 msgid "Function"
 msgstr "Fonction"
-
-#: electron/src/renderer/components/Preferences.vue:29
-msgid "Jump stitches smaller than this will be treated as normal stitches."
-msgstr "Des sauts de fil plus petits que cela seront considérés comme des points ordinaires."
 
 #: electron/src/renderer/components/Simulator.vue:106
 msgid "Jump to next command"
@@ -3806,16 +3834,6 @@ msgstr "Aller à la commande précédente (Bas page)"
 #: electron/src/renderer/components/Simulator.vue:232
 msgid "jumps"
 msgstr "sauts"
-
-#: electron/src/renderer/components/Preferences.vue:27
-#: electron/src/renderer/components/Preferences.vue:1
-msgid "Minimum jump stitch length"
-msgstr "Longueur minimum de saut"
-
-#: electron/src/renderer/components/Preferences.vue:48
-#: electron/src/renderer/components/Preferences.vue:1
-msgid "Minimum stitch length"
-msgstr "Longueur minimum du point"
 
 #. name for this keyboard key: -
 #: electron/src/renderer/components/Simulator.vue:76
@@ -3894,11 +3912,6 @@ msgstr "visualiser les sauts"
 msgid "Rendering stitch-plan..."
 msgstr "Calcul du rendu du plan de broderie ..."
 
-#: electron/src/renderer/components/Preferences.vue:40
-#: electron/src/renderer/components/Preferences.vue:61
-msgid "set as default"
-msgstr "utiliser comme valeur par défaut"
-
 #: electron/src/renderer/components/Simulator.vue:21
 msgid "Shortcut Key"
 msgstr "Raccourci clavier"
@@ -3929,23 +3942,9 @@ msgid_plural "Speed: %{speed} stitches/sec"
 msgstr[0] "Vitesse : %{speed} point/sec"
 msgstr[1] "Vitesse : %{speed} point/sec"
 
-#: electron/src/renderer/components/Preferences.vue:109
-#: electron/src/renderer/components/Preferences.vue:1
-msgid "Stitch plan cache size"
-msgstr "Taille du cache de plan de broderie"
-
 #: electron/src/renderer/components/Simulator.vue:239
 msgid "stops"
 msgstr "arrêts"
-
-#: electron/src/renderer/components/Preferences.vue:111
-msgid "The greater the number, the more stitch plans can be cached, speeding up stitch plan calculation.  Default: 100"
-msgstr "Plus le nombre et grand, plus on peut stocker de plan de broderie et augmenter la vitesse de calcul des plans de broderie"
-
-#: electron/src/renderer/components/Preferences.vue:79
-#: electron/src/renderer/components/Preferences.vue:95
-msgid "Used for new SVGs."
-msgstr "Utilisé pour les nouveaux SVGs."
 
 #: electron/src/renderer/components/Simulator.vue:208
 #: inx/inkstitch_commands_scale_symbols.inx:12
@@ -4155,8 +4154,8 @@ msgid "Removes areas smaller than dedined by threshold."
 msgstr "Supprime les zones plus petites que celles délimitées par le seuil."
 
 #: inx/inkstitch_cleanup.inx:8
-msgid "Fill area threshold (pxВІ)"
-msgstr ""
+msgid "Fill area threshold (px²)"
+msgstr "Seuil de suppression de petites zones de remplissage (px²)"
 
 #: inx/inkstitch_cleanup.inx:10
 msgid "Remove Small strokes"
@@ -4407,8 +4406,8 @@ msgid "Folder (optional):"
 msgstr "Dossier (facultatif) :"
 
 #: inx/inkstitch_generate_palette.inx:22
-msgid "вљ  Restart Inkscape to use your color palette."
-msgstr ""
+msgid "⚠ Restart Inkscape to use your color palette."
+msgstr "⚠ Redémarrez Inkscape pour utiliser votre palette de couleurs."
 
 #: inx/inkstitch_generate_palette.inx:25
 msgid "Generate a custom color palette for Ink/Stitch"
@@ -5579,10 +5578,6 @@ msgstr "https://inkstitch.org/fr/docs/thread-color#palette-vers-texte"
 msgid "Params"
 msgstr "Paramètres"
 
-#: inx/inkstitch_preferences.inx:3
-msgid "Preferences"
-msgstr "Préférences"
-
 #: inx/inkstitch_print.inx:3
 msgid "PDF Export"
 msgstr "Export PDF"
@@ -5920,12 +5915,12 @@ msgid "This extension converts a zigzag line into a satin column."
 msgstr "Cette extension converti une ligne en zigzag en colonne satin."
 
 #: inx/inkstitch_zigzag_line_to_satin.inx:22
-msgid "в–» Always start and end with a rung."
-msgstr ""
+msgid "▻ Always start and end with a rung."
+msgstr "▻ Tours commencer et terminer par une traverse."
 
 #: inx/inkstitch_zigzag_line_to_satin.inx:24
-msgid "Square: |_|в–”|_|в–”|"
-msgstr ""
+msgid "Square: |_|▔|_|▔|"
+msgstr "Carré : |_|▔|_|▔|"
 
 #: inx/inkstitch_zigzag_line_to_satin.inx:25
 msgid "Sawtooth: |\\|\\|\\|"

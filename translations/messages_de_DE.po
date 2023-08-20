@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-08-14 01:02+0000\n"
-"PO-Revision-Date: 2023-08-14 01:04\n"
+"POT-Creation-Date: 2023-08-20 01:06+0000\n"
+"PO-Revision-Date: 2023-08-20 01:07\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-14 01:02+0000\n"
+"POT-Creation-Date: 2023-08-20 01:06+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2795,6 +2795,61 @@ msgstr "Garnabfolge"
 msgid "Thread Used"
 msgstr "Verwendetes Garn"
 
+#: lib/gui/preferences.py:16 inx/inkstitch_preferences.inx:3
+msgid "Preferences"
+msgstr "Einstellungen"
+
+#: lib/gui/preferences.py:17
+msgid "frame"
+msgstr ""
+
+#: lib/gui/preferences.py:29
+msgid "This SVG"
+msgstr ""
+
+#: lib/gui/preferences.py:39
+msgid "Minimum jump stitch length"
+msgstr "Minimale Länge für Sprungstiche"
+
+#: lib/gui/preferences.py:40 lib/gui/preferences.py:88
+#: lib/gui/preferences.py:121
+msgid "Jump stitches smaller than this will be treated as normal stitches."
+msgstr "Sprungstiche die kleiner sind, werden als normale Stiche behandelt.\n"
+"Dies beeinflusst auch die Verwendung von Vernähstichen. Vor und nach Sprungstichen werden in der Regel Vernähstiche eingefügt. Diese entfallen, wenn der Sprungstich kleiner als dieser Wert ist. Eine individuelle Steuerung für Vernähstiche ist in den Parametereinstellungen für einzelne Objekte möglich."
+
+#: lib/gui/preferences.py:51 lib/gui/preferences.py:68
+#: lib/gui/preferences.py:99 lib/gui/preferences.py:115
+msgid "mm"
+msgstr ""
+
+#: lib/gui/preferences.py:54 lib/gui/preferences.py:71
+msgid "Set As Default"
+msgstr ""
+
+#: lib/gui/preferences.py:57 lib/gui/preferences.py:104
+msgid "Minimum stitch length"
+msgstr "Minimale Stichlänge"
+
+#: lib/gui/preferences.py:77
+msgid "Global"
+msgstr ""
+
+#: lib/gui/preferences.py:87
+msgid "Default minimum jump stitch length"
+msgstr "Minimale Länge für Sprungstiche"
+
+#: lib/gui/preferences.py:120
+msgid "Stitch plan cache size"
+msgstr "Cache Größe"
+
+#: lib/gui/preferences.py:132
+msgid "MB"
+msgstr ""
+
+#: lib/gui/preferences.py:135
+msgid "Clear Stitch Plan Cache"
+msgstr ""
+
 #: lib/gui/presets.py:52
 msgid "Presets"
 msgstr "Voreinstellungen"
@@ -3739,10 +3794,6 @@ msgstr "+ Plus"
 msgid "Button"
 msgstr "Knopf"
 
-#: electron/src/renderer/components/Preferences.vue:121
-msgid "clear stitch plan cache"
-msgstr "Stichplan-Cache leeren"
-
 #: electron/src/renderer/components/Simulator.vue:236
 msgid "color changes"
 msgstr "Farbwechsel"
@@ -3759,32 +3810,9 @@ msgstr "Steuerung"
 msgid "cursor"
 msgstr "Mauszeiger"
 
-#: electron/src/renderer/components/Preferences.vue:77
-#: electron/src/renderer/components/Preferences.vue:1
-msgid "Default minimum jump stitch length"
-msgstr "Minimale Länge für Sprungstiche"
-
-#: electron/src/renderer/components/Preferences.vue:93
-#: electron/src/renderer/components/Preferences.vue:1
-msgid "Default minimum stitch length"
-msgstr "Minimale Stichlänge"
-
-#: electron/src/renderer/components/Preferences.vue:131
-msgid "done"
-msgstr "Anwenden"
-
-#: electron/src/renderer/components/Preferences.vue:50
-msgid "Drop stitches smaller than this value."
-msgstr "Stitche die kleiner sind als dieser Wert, werden gelöscht und nicht exportiert (Ausnahme: Stiche zum Vernähen)."
-
 #: electron/src/renderer/components/Simulator.vue:18
 msgid "Function"
 msgstr "Funktion"
-
-#: electron/src/renderer/components/Preferences.vue:29
-msgid "Jump stitches smaller than this will be treated as normal stitches."
-msgstr "Sprungstiche die kleiner sind, werden als normale Stiche behandelt.\n"
-"Dies beeinflusst auch die Verwendung von Vernähstichen. Vor und nach Sprungstichen werden in der Regel Vernähstiche eingefügt. Diese entfallen, wenn der Sprungstich kleiner als dieser Wert ist. Eine individuelle Steuerung für Vernähstiche ist in den Parametereinstellungen für einzelne Objekte möglich."
 
 #: electron/src/renderer/components/Simulator.vue:106
 msgid "Jump to next command"
@@ -3805,16 +3833,6 @@ msgstr "Zum vorherigen Befehl springen (Bild ↓)"
 #: electron/src/renderer/components/Simulator.vue:232
 msgid "jumps"
 msgstr "Sprungstiche"
-
-#: electron/src/renderer/components/Preferences.vue:27
-#: electron/src/renderer/components/Preferences.vue:1
-msgid "Minimum jump stitch length"
-msgstr "Minimale Länge für Sprungstiche"
-
-#: electron/src/renderer/components/Preferences.vue:48
-#: electron/src/renderer/components/Preferences.vue:1
-msgid "Minimum stitch length"
-msgstr "Minimale Stichlänge"
 
 #. name for this keyboard key: -
 #: electron/src/renderer/components/Simulator.vue:76
@@ -3893,11 +3911,6 @@ msgstr "Sprungstiche anzeigen"
 msgid "Rendering stitch-plan..."
 msgstr "Stichplan wird erstellt..."
 
-#: electron/src/renderer/components/Preferences.vue:40
-#: electron/src/renderer/components/Preferences.vue:61
-msgid "set as default"
-msgstr "Als Standardwert setzen"
-
 #: electron/src/renderer/components/Simulator.vue:21
 msgid "Shortcut Key"
 msgstr "Tastenkürzel"
@@ -3928,23 +3941,9 @@ msgid_plural "Speed: %{speed} stitches/sec"
 msgstr[0] "Geschwindigkeit: %{speed} Stich/Sek"
 msgstr[1] "Geschwindigkeit: %{speed} Stiche/Sek"
 
-#: electron/src/renderer/components/Preferences.vue:109
-#: electron/src/renderer/components/Preferences.vue:1
-msgid "Stitch plan cache size"
-msgstr "Cache Größe"
-
 #: electron/src/renderer/components/Simulator.vue:239
 msgid "stops"
 msgstr "Stopp-Befehle"
-
-#: electron/src/renderer/components/Preferences.vue:111
-msgid "The greater the number, the more stitch plans can be cached, speeding up stitch plan calculation.  Default: 100"
-msgstr "Je höher die Zahl, desto mehr Stichpläne können im Cache gespeichert werden. Der Cache trägt zur Beschleunigung der Sitchplan-Berechnung bei. Standard: 100"
-
-#: electron/src/renderer/components/Preferences.vue:79
-#: electron/src/renderer/components/Preferences.vue:95
-msgid "Used for new SVGs."
-msgstr "Standardwert für neue SVG-Dateien."
 
 #: electron/src/renderer/components/Simulator.vue:208
 #: inx/inkstitch_commands_scale_symbols.inx:12
@@ -5577,10 +5576,6 @@ msgstr "https://inkstitch.org/de/docs/thread-color/#farbpalette-zu-text"
 #: inx/inkstitch_params.inx:3
 msgid "Params"
 msgstr "Parameter"
-
-#: inx/inkstitch_preferences.inx:3
-msgid "Preferences"
-msgstr "Einstellungen"
 
 #: inx/inkstitch_print.inx:3
 msgid "PDF Export"
