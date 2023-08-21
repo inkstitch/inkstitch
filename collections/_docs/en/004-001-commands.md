@@ -54,7 +54,7 @@ Defines the (1) starting or (2) ending point of an fill stitch area.
 Defines the target point of a ripple stitch area or of a circular fill.
 
 
-####  ![auto route starting position symbol](/assets/images/docs/visual-commands-auto-route-satin-stitch-start.jpg) ![auto route  ending position symbol](/assets/images/docs/visual-commands-auto-route-satin-stitch-end.jpg) Starting/Ending Position for Auto Route of running stitch 
+####  ![auto route starting position symbol](/assets/images/docs/visual-commands-auto-route-running-stitch-start.jpg) ![auto route  ending position symbol](/assets/images/docs/visual-commands-auto-route-running-stitch-end.jpg) Starting/Ending Position for Auto Route of running stitch 
 
 Defines the (1) starting or (2) ending point for the auto route. Run  "[Tools: Stroke/ Auto-route running stitch](https://inkstitch.org/docs/stroke-tools/)" afterwards.
 Use only one starting and one ending point per auto-route operation.

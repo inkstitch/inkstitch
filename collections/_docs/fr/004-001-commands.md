@@ -54,7 +54,7 @@ Définit  (1) le point de départ  (2) le point d'arrivée d'un remplissage.
 
 Défini la position cible d'une broderie ondulée ou d'un remplissage circulaire.
 
-####  ![auto-route-runing-starting-position-symbol](/assets/images/docs/visual-commands-auto-route-satin-stitch-start.jpg) ![auto route  ending position symbol](/assets/images/docs/visual-commands-auto-route-satin-stitch-end.jpg)  [Position de départ/de fin pour l'agencement automatique de points droits](#auto-route-runing-starting-position-symbol)
+####  ![auto-route-runing-starting-position-symbol](/assets/images/docs/visual-commands-auto-route-running-stitch-start.jpg) ![auto route  ending position symbol](/assets/images/docs/visual-commands-auto-route-running-stitch-end.jpg)  [Position de départ/de fin pour l'agencement automatique de points droits](#auto-route-runing-starting-position-symbol)
 
 Définit le point de départ (1) ou le point final (2) de l'agencement automatique. Exécutez ensuite "[Outils: Trait /Agencement automatique de points droits. ...](/fr/docs/strole-tools)"  
 N'utiliser qu'un point de départ et qu'un point d'arrivée par agencement automatique.

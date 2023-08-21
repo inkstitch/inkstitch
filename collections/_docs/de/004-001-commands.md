@@ -68,7 +68,7 @@ Objekte mit diesem Befehl werden nicht exportiert.
 
 Dieser Befehlt definiert an welchem Punkt die Satinsäule geschnitten werden soll. Benutze anschließend die Funktion “[Satinsäule schneiden](/de/docs/satin-tools/#satin-schnittstelle)”.
 
-####  ![auto route starting position symbol](/assets/images/docs/visual-commands-auto-route-satin-stitch-start.jpg) ![auto route  ending position symbol](/assets/images/docs/visual-commands-auto-route-satin-stitch-end.jpg) Start- und Endposition für automatisch geführten Laufstich
+####  ![auto route starting position symbol](/assets/images/docs/visual-commands-auto-route-running-stitch-start.jpg) ![auto route  ending position symbol](/assets/images/docs/visual-commands-auto-route-running-stitch-end.jpg) Start- und Endposition für automatisch geführten Laufstich
 
 Definiert (1) die Start- und (2) die Enposition für automatisch geführte Geradstiche. Benutze anschließend Die Funktion "[Werkzeuge: Linie > Automatisch geführter Geradstich ...]"(https://inkstitch.org/docs/stroke-tools/).
 
