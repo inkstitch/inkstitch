@@ -13,11 +13,11 @@ Nicht jede Maschine kann diese zusätzliche Informationen umsetzen und verstehen
 ### Visuelle Befehle über die Erweiterung anhängen
 
 * Wähle ein Objekt oder mehrere Objekte
-* Starte `Erweiterungen -> Ink/stitch -> Sticken -> Befehle`
+* Starte `Erweiterungen > Ink/stitch > Befehle`
 * Aktiviere die gewünschten Befehle und wenden sie an
 * Bei Befehlen wo die Positionierung wichtig ist: Der Endpunkt des Zeigers, der dem Objekt am nächsten ist, ist der Punkt, an dem der Befehl ausgeführt wird.
 
-Unter `Erweiterungen -> Ink/stitch -> Sticken -> Befehle` gibt es drei Optionen: `Dokumentbefehle hinzufügen...`, `Ebenenbefehle hinzufügen...` und `Objektbefehle...`.
+Unter `Erweiterungen > Ink/stitch > Befehle` gibt es drei Optionen: `Dokumentbefehle hinzufügen...`, `Ebenenbefehle hinzufügen...` und `Objektbefehle...`.
 
 ### Dokumentbefehle hinzufügen ...
 
