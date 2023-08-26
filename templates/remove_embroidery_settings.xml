@@ -5,8 +5,21 @@
     <param name="description" type="description">Use this extension to remove the information Ink/Stitch has stored in your document.  This can be especially useful if you copy and paste objects from an embroidery design into another document.</param>
     <param name="del_params" type="boolean" gui-text="Remove Params"
            gui-description="Removes params from selected objects or all objects if nothing is selected.">true</param>
-    <param name="del_commands" type="boolean" gui-text="Remove Commands"
-           gui-description="Removes visual commands from selected objects or all objects if nothing is selected.">false</param>
+    <param name="del_commands" type="optiongroup" gui-text="Remove Commands"
+           gui-description="Removes visual commands from selected objects or all objects if nothing is selected."
+           appearance="combo">
+        <option value="none">None</option>
+        <option value="all">All</option>
+        {%- for command, description in object_commands -%}
+        <option value="{{ command }}">{{ description }}</option>
+        {% endfor %}
+        {% for command, description in layer_commands %}
+        <option value="{{ command }}">{{ description }}</option>
+        {% endfor %}
+        {% for command, description in global_commands %}
+        <option value="{{ command }}">{{ description }}</option>
+        {% endfor %}
+    </param>
     <param name="del_print" type="boolean" gui-text="Remove Print Settings from SVG metadata">false</param>
     <param name="extension" type="string" gui-hidden="true">remove_embroidery_settings</param>
     <effect>
