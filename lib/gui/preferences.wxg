@@ -4,7 +4,7 @@
 <application class="PreferencesApp" encoding="UTF-8" for_version="3.0" header_extension=".h" indent_amount="4" indent_symbol="space" is_template="0" language="python" mark_blocks="1" name="app" option="0" overwrite="1" path="/home/lex/repos/inkstitch/lib/gui/preferences.py" source_extension=".cpp" top_window="frame" use_gettext="1" use_new_namespace="1">
     <object class="PreferencesFrame" name="frame" base="EditFrame">
         <extracode_post>self.SetSizeHints(main_sizer.CalcMin())</extracode_post>
-        <title>frame</title>
+        <title>Preferences</title>
         <style>wxDEFAULT_FRAME_STYLE</style>
         <object class="wxPanel" name="panel_1" base="EditPanel">
             <object class="wxBoxSizer" name="main_sizer" base="EditBoxSizer">

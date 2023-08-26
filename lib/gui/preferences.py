@@ -14,7 +14,7 @@ class PreferencesFrame(wx.Frame):
     def __init__(self, *args, **kwargs):
         self.extension = kwargs.pop("extension")
         wx.Frame.__init__(self, None, wx.ID_ANY, _("Preferences"), *args, **kwargs)
-        self.SetTitle(_("frame"))
+        self.SetTitle(_("Preferences"))
 
         metadata = self.extension.get_inkstitch_metadata()
 
