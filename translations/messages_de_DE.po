@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2023-08-20 01:06+0000\n"
-"PO-Revision-Date: 2023-08-20 01:07\n"
+"PO-Revision-Date: 2023-08-27 01:07\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -2805,7 +2805,7 @@ msgstr ""
 
 #: lib/gui/preferences.py:29
 msgid "This SVG"
-msgstr ""
+msgstr "Dokument"
 
 #: lib/gui/preferences.py:39
 msgid "Minimum jump stitch length"
@@ -2820,11 +2820,11 @@ msgstr "Sprungstiche die kleiner sind, werden als normale Stiche behandelt.\n"
 #: lib/gui/preferences.py:51 lib/gui/preferences.py:68
 #: lib/gui/preferences.py:99 lib/gui/preferences.py:115
 msgid "mm"
-msgstr ""
+msgstr "mm"
 
 #: lib/gui/preferences.py:54 lib/gui/preferences.py:71
 msgid "Set As Default"
-msgstr ""
+msgstr "Als Standard definieren"
 
 #: lib/gui/preferences.py:57 lib/gui/preferences.py:104
 msgid "Minimum stitch length"
@@ -2832,7 +2832,7 @@ msgstr "Minimale Stichlänge"
 
 #: lib/gui/preferences.py:77
 msgid "Global"
-msgstr ""
+msgstr "Global"
 
 #: lib/gui/preferences.py:87
 msgid "Default minimum jump stitch length"
@@ -2844,11 +2844,11 @@ msgstr "Cache Größe"
 
 #: lib/gui/preferences.py:132
 msgid "MB"
-msgstr ""
+msgstr "MB"
 
 #: lib/gui/preferences.py:135
 msgid "Clear Stitch Plan Cache"
-msgstr ""
+msgstr "Stichplan-Cache leeren"
 
 #: lib/gui/presets.py:52
 msgid "Presets"
@@ -5939,7 +5939,7 @@ msgstr "Stickdateien exportieren (ZIP)"
 
 #: inx/inkstitch_zip.inx:8
 msgid "Ink/Stitch: ZIP export multiple formats and extra options (.zip)"
-msgstr ""
+msgstr "Ink/Stitch: ZIP-Export in mehrere Formate mit zusätzlichen Optionen (.zip)"
 
 #: inx/inkstitch_zip.inx:9
 msgid "Create a ZIP with multiple embroidery file formats using Ink/Stitch"
@@ -5947,11 +5947,11 @@ msgstr "Erstellen einer ZIP-Datei mit mehreren Stickformaten die Ink/Stitch unte
 
 #: inx/inkstitch_zip.inx:13
 msgid "File Formats"
-msgstr ""
+msgstr "Dateiformate"
 
 #: inx/inkstitch_zip.inx:14
 msgid "Output formats:"
-msgstr ""
+msgstr "Ausgabeformate:"
 
 #: inx/inkstitch_zip.inx:29
 msgid ".TXT: Threadlist [COLOR]"
@@ -5963,37 +5963,37 @@ msgstr ".SVG: Skalierbare Vektorgrafik"
 
 #: inx/inkstitch_zip.inx:33
 msgid "Panelization Options"
-msgstr ""
+msgstr "Panelisierung"
 
 #: inx/inkstitch_zip.inx:34
 msgid "For single design set horizontal and vertical repeats to 1"
-msgstr ""
+msgstr "Für ein einzelnes Design horizontale und vertikale Wiederholungen auf 1 setzen"
 
 #: inx/inkstitch_zip.inx:36
 msgid "Horizontal repeats"
-msgstr ""
+msgstr "Horizontale Wiederholungen"
 
 #: inx/inkstitch_zip.inx:37
 msgid "Horizontal spacing (mm)"
-msgstr ""
+msgstr "Horizontale Abstände (mm)"
 
 #: inx/inkstitch_zip.inx:38
 msgid "Vertical repeats"
-msgstr ""
+msgstr "Vertikale Wiederholungen"
 
 #: inx/inkstitch_zip.inx:39
 msgid "Vertical spacing (mm)"
-msgstr ""
+msgstr "Vertikale Abstände (mm)"
 
 #: inx/inkstitch_zip.inx:41
 msgid "Output Options"
-msgstr ""
+msgstr "Ausgabe Optionen"
 
 #: inx/inkstitch_zip.inx:43
 msgid "Custom file name"
-msgstr ""
+msgstr "Benutzerdefinierter Dateiname"
 
 #: inx/inkstitch_zip.inx:43
 msgid "Defines the file names inside the zip archive. Leave empty for default file name."
-msgstr ""
+msgstr "Definiert die Dateinamen im ZIP-Archiv. Für den Standarddateinamen leer lassen."
 
