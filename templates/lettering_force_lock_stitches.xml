@@ -21,7 +21,7 @@
         This extension has been build to help font authors to define "force lock stitches"-attributes automatically if they are placed in a predefined distance to the next object.
     </param>
     <param indent="1" name="min_distance" type="float" gui-text="Minimum distance (mm)" min="0" max="3">1</param>
-    <param indent="1" name="max_distance" type="float" gui-text="Minimum distance (mm)" min="1" max="10">3</param>
+    <param indent="1" name="max_distance" type="float" gui-text="Maximum distance (mm)" min="1" max="10">3</param>
     <separator />
     <param indent="1" name="last_element" type="boolean" gui-text="Add force lock stitches attribute to the last element of each glyph">false</param>
     <script>
