@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-08-20 01:06+0000\n"
-"PO-Revision-Date: 2023-08-20 01:07\n"
+"POT-Creation-Date: 2023-09-04 01:04+0000\n"
+"PO-Revision-Date: 2023-09-04 01:05\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-20 01:06+0000\n"
+"POT-Creation-Date: 2023-09-04 01:04+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -966,84 +966,98 @@ msgstr ""
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
 #: lib/commands.py:24 inx/inkstitch_object_commands.inx:4
+#: inx/inkstitch_remove_embroidery_settings.inx:12
 msgid "Fill stitch starting position"
 msgstr "Posición de inicio de puntada de relleno"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
 #: lib/commands.py:27 inx/inkstitch_object_commands.inx:5
+#: inx/inkstitch_remove_embroidery_settings.inx:13
 msgid "Fill stitch ending position"
 msgstr "Posicion final de puntada de relleno"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
 #: lib/commands.py:30 inx/inkstitch_object_commands.inx:6
+#: inx/inkstitch_remove_embroidery_settings.inx:14
 msgid "Target position"
 msgstr ""
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
 #: lib/commands.py:33 inx/inkstitch_object_commands.inx:7
+#: inx/inkstitch_remove_embroidery_settings.inx:15
 msgid "Auto-route running stitch starting position"
 msgstr ""
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
 #: lib/commands.py:36 inx/inkstitch_object_commands.inx:8
+#: inx/inkstitch_remove_embroidery_settings.inx:16
 msgid "Auto-route running stitch ending position"
 msgstr ""
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
 #: lib/commands.py:39 inx/inkstitch_object_commands.inx:9
+#: inx/inkstitch_remove_embroidery_settings.inx:17
 msgid "Auto-route satin stitch starting position"
 msgstr "Posición de inicio de puntada de satín automática"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
 #: lib/commands.py:42 inx/inkstitch_object_commands.inx:10
+#: inx/inkstitch_remove_embroidery_settings.inx:18
 msgid "Auto-route satin stitch ending position"
 msgstr "Posición de fin de puntada de satín automática"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
 #: lib/commands.py:45 inx/inkstitch_object_commands.inx:11
+#: inx/inkstitch_remove_embroidery_settings.inx:19
 msgid "Stop (pause machine) after sewing this object"
 msgstr "Parar (pausar máquina) después de coser este objeto"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
 #: lib/commands.py:48 inx/inkstitch_object_commands.inx:12
+#: inx/inkstitch_remove_embroidery_settings.inx:20
 msgid "Trim thread after sewing this object"
 msgstr "Recortar hilo después de coser este objeto"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
 #: lib/commands.py:51 inx/inkstitch_object_commands.inx:13
+#: inx/inkstitch_remove_embroidery_settings.inx:21
 msgid "Ignore this object (do not stitch)"
 msgstr "Ignorar este objeto (no dar puntada)"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
 #: lib/commands.py:54 inx/inkstitch_object_commands.inx:14
+#: inx/inkstitch_remove_embroidery_settings.inx:22
 msgid "Satin cut point (use with Cut Satin Column)"
 msgstr "Punto de corte de satín (usar con Cortar Columna Satín)"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command that affects a layer
 #: lib/commands.py:57 inx/inkstitch_layer_commands.inx:7
+#: inx/inkstitch_remove_embroidery_settings.inx:25
 msgid "Ignore layer (do not stitch any objects in this layer)"
 msgstr "Ignorar capa (no coser ningún objeto en esta capa)"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command that affects entire document
 #: lib/commands.py:60 inx/inkstitch_global_commands.inx:7
+#: inx/inkstitch_remove_embroidery_settings.inx:28
 msgid "Origin for exported embroidery files"
 msgstr "Origen para archivos de bordado exportados"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command that affects entire document
 #: lib/commands.py:63 inx/inkstitch_global_commands.inx:9
+#: inx/inkstitch_remove_embroidery_settings.inx:30
 msgid "Jump destination for Stop commands (a.k.a. \"Frame Out position\")."
 msgstr "Destino de salto para los comandos de parada (también conocido como \"Posición de salida de marco\")."
 
@@ -2178,6 +2192,7 @@ msgid "Scale axis for satin guided ripple stitches."
 msgstr ""
 
 #: lib/elements/stroke.py:314 print/templates/ui.html:181
+#: inx/inkstitch_remove_embroidery_settings.inx:11
 msgid "None"
 msgstr "Ninguno"
 
@@ -2708,7 +2723,7 @@ msgid "Description"
 msgstr "Descripción"
 
 #: lib/extensions/troubleshoot.py:106 lib/extensions/troubleshoot.py:155
-#: inx/inkstitch_cleanup.inx:17 inx/inkstitch_remove_embroidery_settings.inx:16
+#: inx/inkstitch_cleanup.inx:17 inx/inkstitch_remove_embroidery_settings.inx:39
 #: inx/inkstitch_select_elements.inx:77 inx/inkstitch_troubleshoot.inx:12
 #: inx/inkstitch_update_svg.inx:10
 msgid "Troubleshoot"
@@ -2786,13 +2801,10 @@ msgstr "Orden de subprocesos"
 msgid "Thread Used"
 msgstr "Hilo usado"
 
-#: lib/gui/preferences.py:16 inx/inkstitch_preferences.inx:3
+#: lib/gui/preferences.py:16 lib/gui/preferences.py:17
+#: inx/inkstitch_preferences.inx:3
 msgid "Preferences"
 msgstr "Preferencias"
-
-#: lib/gui/preferences.py:17
-msgid "frame"
-msgstr ""
 
 #: lib/gui/preferences.py:29
 msgid "This SVG"
@@ -5096,9 +5108,12 @@ msgid "Font Management"
 msgstr "Gestión de fuentes"
 
 #: inx/inkstitch_lettering_force_lock_stitches.inx:23
-#: inx/inkstitch_lettering_force_lock_stitches.inx:24
 msgid "Minimum distance (mm)"
 msgstr "Distancia mínima (mm)"
+
+#: inx/inkstitch_lettering_force_lock_stitches.inx:24
+msgid "Maximum distance (mm)"
+msgstr ""
 
 #: inx/inkstitch_lettering_force_lock_stitches.inx:26
 msgid "Add force lock stitches attribute to the last element of each glyph"
@@ -5582,15 +5597,19 @@ msgstr "Eliminar parámetros"
 msgid "Removes params from selected objects or all objects if nothing is selected."
 msgstr "Elimina los parámetros de los objetos seleccionados o de todos los objetos si no se selecciona nada."
 
-#: inx/inkstitch_remove_embroidery_settings.inx:9
+#: inx/inkstitch_remove_embroidery_settings.inx:10
 msgid "Remove Commands"
 msgstr "Eliminar Comandos"
 
-#: inx/inkstitch_remove_embroidery_settings.inx:9
+#: inx/inkstitch_remove_embroidery_settings.inx:10
 msgid "Removes visual commands from selected objects or all objects if nothing is selected."
 msgstr "Elimina los comandos visuales de los objetos seleccionados o de todos si no se ha seleccionado ninguno."
 
-#: inx/inkstitch_remove_embroidery_settings.inx:10
+#: inx/inkstitch_remove_embroidery_settings.inx:12
+msgid "All"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:33
 msgid "Remove Print Settings from SVG metadata"
 msgstr "Eliminar la configuración de impresión de los metadatos del SVG"
 
