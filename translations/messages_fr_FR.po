@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2023-09-04 01:04+0000\n"
-"PO-Revision-Date: 2023-09-04 01:05\n"
+"PO-Revision-Date: 2023-09-06 01:05\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -2818,7 +2818,7 @@ msgstr "Préférences"
 
 #: lib/gui/preferences.py:29
 msgid "This SVG"
-msgstr ""
+msgstr "Ce fichier svg"
 
 #: lib/gui/preferences.py:39
 msgid "Minimum jump stitch length"
@@ -2832,11 +2832,11 @@ msgstr "Des sauts de fil plus petits que cela seront considérés comme des poin
 #: lib/gui/preferences.py:51 lib/gui/preferences.py:68
 #: lib/gui/preferences.py:99 lib/gui/preferences.py:115
 msgid "mm"
-msgstr ""
+msgstr "mm"
 
 #: lib/gui/preferences.py:54 lib/gui/preferences.py:71
 msgid "Set As Default"
-msgstr ""
+msgstr "Utiliser comme valeur par défaut"
 
 #: lib/gui/preferences.py:57 lib/gui/preferences.py:104
 msgid "Minimum stitch length"
@@ -2844,7 +2844,7 @@ msgstr "Longueur minimum du point"
 
 #: lib/gui/preferences.py:77
 msgid "Global"
-msgstr ""
+msgstr "Global"
 
 #: lib/gui/preferences.py:87
 msgid "Default minimum jump stitch length"
@@ -2856,11 +2856,11 @@ msgstr "Taille du cache de plan de broderie"
 
 #: lib/gui/preferences.py:132
 msgid "MB"
-msgstr ""
+msgstr "MB"
 
 #: lib/gui/preferences.py:135
 msgid "Clear Stitch Plan Cache"
-msgstr ""
+msgstr "Vider le cache du plan de broderie"
 
 #: lib/gui/presets.py:52
 msgid "Presets"
@@ -5125,7 +5125,7 @@ msgstr "Distance minimale (mm)"
 
 #: inx/inkstitch_lettering_force_lock_stitches.inx:24
 msgid "Maximum distance (mm)"
-msgstr ""
+msgstr "Distance maximum (mm)"
 
 #: inx/inkstitch_lettering_force_lock_stitches.inx:26
 msgid "Add force lock stitches attribute to the last element of each glyph"
@@ -5619,7 +5619,7 @@ msgstr "Supprime les commandes visuelles des objets sélectionnés ou de tous le
 
 #: inx/inkstitch_remove_embroidery_settings.inx:12
 msgid "All"
-msgstr ""
+msgstr "Tous"
 
 #: inx/inkstitch_remove_embroidery_settings.inx:33
 msgid "Remove Print Settings from SVG metadata"
