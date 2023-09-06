@@ -209,7 +209,7 @@ class SatinPattern:
         return str(path1) + str(path2) + rungs
 
 
-satin_patterns = {'normal': SatinPattern('M 0,0.4 H 4 H 8', 'cc'),
+satin_patterns = {'normal': SatinPattern('M 0,0 H 4 H 8', 'cc'),
                   'pearl': SatinPattern('M 0,0 C 0,0.22 0.18,0.4 0.4,0.4 0.62,0.4 0.8,0.22 0.8,0', 'csc'),
                   'diamond': SatinPattern('M 0,0 0.4,0.2 0.8,0', 'ccc'),
                   'triangle': SatinPattern('M 0,0 0.4,0.1 0.78,0.2 0.8,0', 'cccc'),
