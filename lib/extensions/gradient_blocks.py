@@ -52,7 +52,7 @@ class GradientBlocks(CommandsExtension):
             correction_transform = get_correction_transform(element.node)
             style = element.node.style
             index = parent.index(element.node)
-            fill_shapes, attributes = gradient_shapes_and_attributes(element, element.shape)
+            fill_shapes, attributes = gradient_shapes_and_attributes(element, element.shape, self.svg.viewport_to_unit(1))
             # reverse order so we can always insert with the same index number
             fill_shapes.reverse()
             attributes.reverse()
@@ -127,7 +127,7 @@ class GradientBlocks(CommandsExtension):
         return path
 
 
-def gradient_shapes_and_attributes(element, shape):
+def gradient_shapes_and_attributes(element, shape, unit_multiplier):
     # e.g. url(#linearGradient872) -> linearGradient872
     color = element.color[5:-1]
     xpath = f'.//svg:defs/svg:linearGradient[@id="{color}"]'
@@ -144,6 +144,7 @@ def gradient_shapes_and_attributes(element, shape):
 
     # create bbox polygon to calculate the length necessary to make sure that
     # the gradient splitter lines will cut the entire design
+    # bounding_box returns the value in viewport units, we need to convert the length later to px
     bbox = element.node.bounding_box()
     bbox_polygon = shgeo.Polygon([(bbox.left, bbox.top), (bbox.right, bbox.top),
                                   (bbox.right, bbox.bottom), (bbox.left, bbox.bottom)])
@@ -159,7 +160,7 @@ def gradient_shapes_and_attributes(element, shape):
     for i, offset in enumerate(offsets):
         shape_rest = []
         split_point = shgeo.Point(line.point_at_ratio(float(offset)))
-        length = split_point.hausdorff_distance(bbox_polygon)
+        length = split_point.hausdorff_distance(bbox_polygon) / unit_multiplier
         split_line = shgeo.LineString([(split_point.x - length - 2, split_point.y),
                                        (split_point.x + length + 2, split_point.y)])
         split_line = rotate(split_line, angle, origin=split_point, use_radians=True)
