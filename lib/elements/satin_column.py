@@ -1276,6 +1276,10 @@ class SatinColumn(EmbroideryElement):
         # turn the list of points back into pairs
         pairs = [points[i:i + 2] for i in range(0, len(points), 2)]
 
+        # remove last item if it isn't paired up
+        if len(pairs[-1]) == 1:
+            del pairs[-1]
+
         short_pairs = self.inset_short_stitches_sawtooth(pairs)
         max_stitch_length = self.max_stitch_length_px
         length_sigma = self.random_split_jitter
