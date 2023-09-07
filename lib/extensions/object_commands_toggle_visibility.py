@@ -19,6 +19,6 @@ class ObjectCommandsToggleVisibility(InkstitchExtension):
         for command_group in command_groups:
             if first_iteration:
                 first_iteration = False
-                if not command_group.is_visible():
+                if command_group.style('display', 'inline') == 'none':
                     display = "inline"
             command_group.style['display'] = display
