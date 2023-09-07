@@ -37,7 +37,6 @@ class ControlPanel(wx.Panel):
         self.stitch_plan = kwargs.pop('stitch_plan')
         self.target_stitches_per_second = kwargs.pop('stitches_per_second')
         self.target_duration = kwargs.pop('target_duration')
-        close_button = kwargs.pop('close_button', False)
         kwargs['style'] = wx.BORDER_SUNKEN
         wx.Panel.__init__(self, parent, *args, **kwargs)
 
@@ -102,10 +101,6 @@ class ControlPanel(wx.Panel):
         self.btnNpp.Bind(wx.EVT_TOGGLEBUTTON, self.toggle_npp)
         self.btnNpp.SetBitmap(self.load_icon('npp'))
         self.btnNpp.SetToolTip(_('Display needle penetration point (O)'))
-        self.btnClose = wx.Button(self, -1, style=self.button_style)
-        self.btnClose.Bind(wx.EVT_BUTTON, self.animation_quit)
-        self.btnClose.SetBitmap(self.load_icon('close'))
-        self.btnClose.SetToolTip(_('Close (Q)'))
         self.slider = SimulatorSlider(self, -1, value=1, minValue=1, maxValue=2)
         self.slider.Bind(wx.EVT_SLIDER, self.on_slider)
         self.stitchBox = IntCtrl(self, -1, value=1, min=1, max=2, limited=True, allow_none=True, style=wx.TE_PROCESS_ENTER)
@@ -154,8 +149,6 @@ class ControlPanel(wx.Panel):
         self.controls_inner_sizer.Add(self.btnPlay, 0, wx.EXPAND | wx.ALL, 2)
         self.controls_inner_sizer.Add(self.btnPause, 0, wx.EXPAND | wx.ALL, 2)
         self.controls_inner_sizer.Add(self.btnRestart, 0, wx.EXPAND | wx.ALL, 2)
-        if close_button:
-            self.controls_inner_sizer.Add(self.btnClose, 0, wx.EXPAND | wx.ALL, 2)
         self.controls_sizer.Add((1, 1), 1)
         self.controls_sizer.Add(self.controls_inner_sizer, 0, wx.ALIGN_CENTER_VERTICAL | wx.ALL, 10)
         self.controls_sizer.Add((1, 1), 1)
