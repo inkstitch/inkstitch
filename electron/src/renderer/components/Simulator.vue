@@ -312,7 +312,7 @@
           Error Generating Stitch Plan
         </v-card-title>
         <v-card-text>
-          <pre>{{ error_message }}</pre>
+          <p style="white-space: pre-wrap;">{{ error_message }}</p>
         </v-card-text>
         <v-card-actions class="justify-center">
           <v-btn color="primary" variant="text" class="dialog-button" @click="close">Close</v-btn>
