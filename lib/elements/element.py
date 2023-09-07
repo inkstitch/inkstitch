@@ -3,6 +3,7 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 import sys
+from contextlib import contextmanager
 from copy import deepcopy
 
 import inkex
@@ -11,6 +12,7 @@ from inkex import bezier
 
 from ..commands import find_commands
 from ..debug import debug
+from ..exceptions import InkstitchException, format_uncaught_exception
 from ..i18n import _
 from ..marker import get_marker_elements_cache_key_data
 from ..patterns import apply_patterns, get_patterns_cache_key_data
@@ -546,23 +548,25 @@ class EmbroideryElement(object):
 
     def embroider(self, last_stitch_group):
         debug.log(f"starting {self.node.get('id')} {self.node.get(INKSCAPE_LABEL)}")
-        if last_stitch_group:
-            previous_stitch = last_stitch_group.stitches[-1]
-        else:
-            previous_stitch = None
-        stitch_groups = self._load_cached_stitch_groups(previous_stitch)
 
-        if not stitch_groups:
-            self.validate()
+        with self.handle_unexpected_exceptions():
+            if last_stitch_group:
+                previous_stitch = last_stitch_group.stitches[-1]
+            else:
+                previous_stitch = None
+            stitch_groups = self._load_cached_stitch_groups(previous_stitch)
 
-            stitch_groups = self.to_stitch_groups(last_stitch_group)
-            apply_patterns(stitch_groups, self.node)
+            if not stitch_groups:
+                self.validate()
 
-            if stitch_groups:
-                stitch_groups[-1].trim_after = self.has_command("trim") or self.trim_after
-                stitch_groups[-1].stop_after = self.has_command("stop") or self.stop_after
+                stitch_groups = self.to_stitch_groups(last_stitch_group)
+                apply_patterns(stitch_groups, self.node)
 
-            self._save_cached_stitch_groups(stitch_groups, previous_stitch)
+                if stitch_groups:
+                    stitch_groups[-1].trim_after = self.has_command("trim") or self.trim_after
+                    stitch_groups[-1].stop_after = self.has_command("stop") or self.stop_after
+
+                self._save_cached_stitch_groups(stitch_groups, previous_stitch)
 
         debug.log(f"ending {self.node.get('id')} {self.node.get(INKSCAPE_LABEL)}")
         return stitch_groups
@@ -575,14 +579,27 @@ class EmbroideryElement(object):
         else:
             name = id
 
-        # L10N used when showing an error message to the user such as
-        # "Failed on PathLabel (path1234): Satin column: One or more of the rungs doesn't intersect both rails."
-        error_msg = "%s %s: %s" % (_("Failed on "), name, message)
+        error_msg = f"{name}: {message}"
         if point_to_troubleshoot:
             error_msg += "\n\n%s" % _("Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects. "
-                                      "This will indicate the errorneus position.")
-        inkex.errormsg(error_msg)
-        sys.exit(1)
+                                      "This will show you the exact location of the problem.")
+
+        raise InkstitchException(error_msg)
+
+    @contextmanager
+    def handle_unexpected_exceptions(self):
+        try:
+            # This runs the code in the `with` body so that we can catch
+            # exceptions.
+            yield
+        except (InkstitchException, SystemExit, KeyboardInterrupt):
+            raise
+        except Exception:
+            if hasattr(sys, 'gettrace') and sys.gettrace():
+                # if we're debugging, let the exception bubble up
+                raise
+
+            raise InkstitchException(format_uncaught_exception())
 
     def validation_errors(self):
         """Return a list of errors with this Element.

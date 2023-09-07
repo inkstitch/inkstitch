@@ -306,6 +306,19 @@
         </div>
       </div>
     </loading>
+    <v-dialog v-model="error" width="auto">
+      <v-card flat>
+        <v-card-title class="pa-4">
+          Error Generating Stitch Plan
+        </v-card-title>
+        <v-card-text>
+          <p style="white-space: pre-wrap;">{{ error_message }}</p>
+        </v-card-text>
+        <v-card-actions class="justify-center">
+          <v-btn color="primary" variant="text" class="dialog-button" @click="close">Close</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
   </div>
 </template>
 

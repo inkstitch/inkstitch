@@ -26,12 +26,12 @@
   padding: 1rem;
 }
 
-button {
+.controls button {
   color: rgb(0, 51, 153);
   align-items: flex-start;
   text-align: center;
   cursor: default;
-  background: linear-gradient(0deg, rgba(169,169,169,1) 0%, rgba(255,255,255,1) 68%, rgba(227,227,227,1) 100%);
+  background: linear-gradient(0deg, rgba(169, 169, 169, 1) 0%, rgba(255, 255, 255, 1) 68%, rgba(227, 227, 227, 1) 100%);
   box-sizing: border-box;
   padding: 2px 6px 3px;
   border-width: 2px;

@@ -7,7 +7,6 @@
 
 import os
 import sys
-import traceback
 from collections import defaultdict
 from copy import copy
 from itertools import groupby, zip_longest
@@ -20,6 +19,7 @@ from ..commands import is_command, is_command_symbol
 from ..elements import (Clone, EmbroideryElement, FillStitch, Polyline,
                         SatinColumn, Stroke)
 from ..elements.clone import is_clone
+from ..exceptions import InkstitchException, format_uncaught_exception
 from ..gui import PresetsPanel, SimulatorPreview, WarningPanel
 from ..i18n import _
 from ..svg.tags import SVG_POLYLINE_TAG
@@ -544,24 +544,22 @@ class SettingsFrame(wx.Frame):
                 patches.extend(copy(node).embroider(None))
 
                 check_stop_flag()
-        except SystemExit:
-            wx.CallAfter(self._show_warning)
+        except (SystemExit, ExitThread):
             raise
-        except ExitThread:
-            raise
-        except Exception as e:
-            # Ignore errors.  This can be things like incorrect paths for
-            # satins or division by zero caused by incorrect param values.
-            traceback.print_exception(e, file=sys.stderr)
-            pass
+        except InkstitchException as exc:
+            wx.CallAfter(self._show_warning, str(exc))
+        except Exception:
+            wx.CallAfter(self._show_warning, format_uncaught_exception())
 
         return patches
 
     def _hide_warning(self):
+        self.warning_panel.clear()
         self.warning_panel.Hide()
         self.Layout()
 
-    def _show_warning(self):
+    def _show_warning(self, warning_text):
+        self.warning_panel.set_warning_text(warning_text)
         self.warning_panel.Show()
         self.Layout()
 

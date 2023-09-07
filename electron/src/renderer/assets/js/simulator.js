@@ -54,7 +54,9 @@ export default {
       showNeedlePenetrationPoints: false,
       renderJumps: true,
       showRealisticPreview: false,
-      showCursor: true
+      showCursor: true,
+      error: false,
+      error_message: ""
     }
   },
   watch: {
@@ -543,6 +545,9 @@ export default {
     zoomPage () {
       this.svg.viewbox(this.page_specs.bbox.x, this.page_specs.bbox.y - 50, this.page_specs.bbox.width + 100, this.page_specs.bbox.height + 100)
       this.resizeCursor()
+    },
+    close () {
+      window.close()
     }
   },
   created: function () {
@@ -642,6 +647,19 @@ export default {
       })
 
       this.start()
+    }).catch(error => {
+      this.loading = false
+      if (error.response) {
+        // Stitch plan generation had an error.  Show it to the user.
+        this.error_message = error.response.data.error_message
+      } else if (error.request) {
+        // We sent the request and didn't get a response.
+        this.error_message = "Stitch plan generation failed."
+      } else {
+        // Something weird happened in axios.
+        this.error_message = error.message
+      }
+      this.error = true
     })
   }
 }

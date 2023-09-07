@@ -6,8 +6,6 @@
 import logging
 import math
 import re
-import sys
-import traceback
 
 import numpy as np
 from inkex import Transform
@@ -25,9 +23,8 @@ from ..stitches.meander_fill import meander_fill
 from ..svg import PIXELS_PER_MM, get_node_transform
 from ..svg.clip import get_clip_path
 from ..svg.tags import INKSCAPE_LABEL
-from ..utils import cache, version
+from ..utils import cache
 from ..utils.param import ParamOption
-from ..utils.threading import ExitThread
 from .element import EmbroideryElement, param
 from .validation import ValidationError, ValidationWarning
 
@@ -706,30 +703,25 @@ class FillStitch(EmbroideryElement):
 
             for shape in self.shape.geoms:
                 start = self.get_starting_point(previous_stitch_group)
-                try:
-                    if self.fill_underlay:
-                        underlay_shapes = self.underlay_shape(shape)
-                        for underlay_shape in underlay_shapes.geoms:
-                            underlay_stitch_groups, start = self.do_underlay(underlay_shape, start)
-                            stitch_groups.extend(underlay_stitch_groups)
+                if self.fill_underlay:
+                    underlay_shapes = self.underlay_shape(shape)
+                    for underlay_shape in underlay_shapes.geoms:
+                        underlay_stitch_groups, start = self.do_underlay(underlay_shape, start)
+                        stitch_groups.extend(underlay_stitch_groups)
 
-                    fill_shapes = self.fill_shape(shape)
-                    for i, fill_shape in enumerate(fill_shapes.geoms):
-                        if self.fill_method == 'contour_fill':
-                            stitch_groups.extend(self.do_contour_fill(fill_shape, previous_stitch_group, start))
-                        elif self.fill_method == 'guided_fill':
-                            stitch_groups.extend(self.do_guided_fill(fill_shape, previous_stitch_group, start, end))
-                        elif self.fill_method == 'meander_fill':
-                            stitch_groups.extend(self.do_meander_fill(fill_shape, shape, i, start, end))
-                        elif self.fill_method == 'circular_fill':
-                            stitch_groups.extend(self.do_circular_fill(fill_shape, previous_stitch_group, start, end))
-                        else:
-                            # auto_fill
-                            stitch_groups.extend(self.do_auto_fill(fill_shape, previous_stitch_group, start, end))
-                except ExitThread:
-                    raise
-                except Exception:
-                    self.fatal_fill_error()
+                fill_shapes = self.fill_shape(shape)
+                for i, fill_shape in enumerate(fill_shapes.geoms):
+                    if self.fill_method == 'contour_fill':
+                        stitch_groups.extend(self.do_contour_fill(fill_shape, previous_stitch_group, start))
+                    elif self.fill_method == 'guided_fill':
+                        stitch_groups.extend(self.do_guided_fill(fill_shape, previous_stitch_group, start, end))
+                    elif self.fill_method == 'meander_fill':
+                        stitch_groups.extend(self.do_meander_fill(fill_shape, shape, i, start, end))
+                    elif self.fill_method == 'circular_fill':
+                        stitch_groups.extend(self.do_circular_fill(fill_shape, previous_stitch_group, start, end))
+                    else:
+                        # auto_fill
+                        stitch_groups.extend(self.do_auto_fill(fill_shape, previous_stitch_group, start, end))
                 previous_stitch_group = stitch_groups[-1]
 
             return stitch_groups
@@ -884,28 +876,6 @@ class FillStitch(EmbroideryElement):
             return guide_lines['stroke']
         else:
             return guide_lines['stroke'][0]
-
-    def fatal_fill_error(self):
-        if hasattr(sys, 'gettrace') and sys.gettrace():
-            # if we're debugging, let the exception bubble up
-            raise
-
-        # for an uncaught exception, give a little more info so that they can create a bug report
-        message = ""
-        message += _("Error during autofill! This means it is a bug in Ink/Stitch.")
-        message += "\n\n"
-        # L10N this message is followed by a URL: https://github.com/inkstitch/inkstitch/issues/new
-        message += _("If you'd like to help please\n"
-                     "- copy the entire error message below\n"
-                     "- save your SVG file and\n"
-                     "- create a new issue at")
-        message += " https://github.com/inkstitch/inkstitch/issues/new\n\n"
-        message += _("Include the error description and also (if possible) the svg file.")
-        message += '\n\n\n'
-        message += version.get_inkstitch_version() + '\n'
-        message += traceback.format_exc()
-
-        self.fatal(message)
 
     def do_circular_fill(self, shape, last_patch, starting_point, ending_point):
         # get target position
