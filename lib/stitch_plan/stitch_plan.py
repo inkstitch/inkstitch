@@ -31,7 +31,7 @@ def stitch_groups_to_stitch_plan(stitch_groups, collapse_len=None, min_stitch_le
 
     if collapse_len is None:
         collapse_len = 3.0
-    collapse_len = collapse_len * PIXELS_PER_MM
+    collapse_len = float(collapse_len) * PIXELS_PER_MM
 
     stitch_plan = StitchPlan()
     color_block = stitch_plan.new_color_block(color=stitch_groups[0].color)
