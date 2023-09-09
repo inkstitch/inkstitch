@@ -78,7 +78,8 @@ class SatinSegment(object):
                 (self.end - self.start) / (1.0 - self.start))
 
         if self.reverse:
-            satin = satin.reverse()
+            # do not swap the rails to  preserve asymetrical sided properties
+            satin = satin.reverse(swap_the_rails = False)
 
         satin = satin.apply_transform()
 

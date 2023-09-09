@@ -661,7 +661,7 @@ class SatinColumn(EmbroideryElement):
     def _center_walk_is_odd(self):
         return self.center_walk_underlay_repeats % 2 == 1
 
-    def reverse(self):
+    def reverse(self, swap_the_rails = True):
         """Return a new SatinColumn like this one but in the opposite direction.
 
         The path will be flattened and the new satin will contain a new XML
@@ -674,12 +674,13 @@ class SatinColumn(EmbroideryElement):
             point_lists.append(list(reversed(self.flatten_subpath(rail))))
 
         # reverse the order of the rails because we're sewing in the opposite direction
-        point_lists.reverse()
+        if swap_the_rails:
+            point_lists.reverse()
 
         for rung in self.rungs:
             point_lists.append(self.flatten_subpath(rung))
 
-        # If originally there were only two subpaths (no rungs) with same number of rails, the rails may now
+        # If originally there were only two subpaths (no rungs) with same number of points, the rails may now
         # have two rails with different number of points, and still no rungs, let's add one.
 
         if not self.rungs:
