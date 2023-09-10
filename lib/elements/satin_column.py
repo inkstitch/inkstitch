@@ -26,7 +26,8 @@ from ..utils.threading import check_stop_flag
 from .element import PIXELS_PER_MM, EmbroideryElement, param
 from .validation import ValidationError, ValidationWarning
 
-
+from ..svg.tags import (INKSCAPE_LABEL, INKSTITCH_ATTRIBS, ORIGINAL_D,
+                        PATH_EFFECT)
 class TooFewPathsError(ValidationError):
     name = _("Too few subpaths")
     description = _("Satin column: Object has too few subpaths.  A satin column should have at least two subpaths (the rails).")
@@ -828,6 +829,7 @@ class SatinColumn(EmbroideryElement):
         node = deepcopy(self.node)
         d = paths.CubicSuperPath(csp).to_path()
         node.set("d", d)
+        node.set(INKSTITCH_ATTRIBS['swap_satin_rails'], False)
 
         # we've already applied the transform, so get rid of it
         if node.get("transform"):

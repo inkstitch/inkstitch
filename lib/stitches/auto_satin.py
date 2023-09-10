@@ -79,8 +79,8 @@ class SatinSegment(object):
 
         if self.reverse:
             # do not swap the rails to  preserve asymetrical sided properties
-            satin = satin.reverse(swap_the_rails = self.satin.swap_rails)
-            # satin = satin.reverse(swap_the_rails = False)
+            # satin = satin.reverse(swap_the_rails = self.satin.swap_rails)
+            satin = satin.reverse(swap_the_rails = False)
 
         # node =  deepcopy(self.satin.node)
         # node.set(INKSTITCH_ATTRIBS['swap_satin_rails'], False) 
