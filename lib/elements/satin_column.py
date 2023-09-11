@@ -660,7 +660,7 @@ class SatinColumn(EmbroideryElement):
 
     def _center_walk_is_odd(self):
         return self.center_walk_underlay_repeats % 2 == 1
-    
+
     def reverse(self, swap_the_rails = True):
         """Return a new SatinColumn like this one but in the opposite direction.
 
@@ -676,7 +676,7 @@ class SatinColumn(EmbroideryElement):
         # reverse the order of the rails because we're sewing in the opposite direction
         if swap_the_rails:
             point_lists.reverse()
-       
+
         for rung in self.rungs:
             point_lists.append(self.flatten_subpath(rung))
 
@@ -774,7 +774,7 @@ class SatinColumn(EmbroideryElement):
           rails.  Each element is a list of two rails of type LineString.
         """
 
-        rails = [shgeo.LineString(self.flatten_subpath(rail)) for rail in self.rails]
+        rails = self.flattened_rails
 
         path_lists = [[], []]
 
@@ -827,9 +827,10 @@ class SatinColumn(EmbroideryElement):
     def _csp_to_satin(self, csp):
         node = deepcopy(self.node)
         d = paths.CubicSuperPath(csp).to_path()
-        node.set("d", d)
+        node.set("d", d) 
         node.set(INKSTITCH_ATTRIBS['swap_satin_rails'], False)
         node.set(INKSTITCH_ATTRIBS['reverse_rails'], 'none')
+
         # we've already applied the transform, so get rid of it
         if node.get("transform"):
             del node.attrib["transform"]

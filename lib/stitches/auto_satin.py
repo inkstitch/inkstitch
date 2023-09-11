@@ -26,7 +26,6 @@ from .utils.autoroute import (add_elements_to_group, add_jumps,
                               preserve_original_groups,
                               remove_original_elements)
 
-
 class SatinSegment(object):
     """A portion of SatinColumn.
 
