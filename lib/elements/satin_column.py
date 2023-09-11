@@ -81,7 +81,9 @@ class SatinColumn(EmbroideryElement):
         return self.get_boolean_param("satin_column")
 
     _satin_methods = [ParamOption('satin_column', _('Satin Column')),
-                      ParamOption('e_stitch', _('"E" Stitch'))]
+                      ParamOption('e_stitch', _('"E" Stitch')),
+                      ParamOption('s_stitch', _('"S" Stitch')),
+                      ParamOption('zigzag', _('Zig-zag'))]
 
     @property
     @param('satin_method',
@@ -92,16 +94,6 @@ class SatinColumn(EmbroideryElement):
            sort_index=0)
     def satin_method(self):
         return self.get_param('satin_method', 'satin_column')
-
-    @property
-    @param('max_stitch_length_mm',
-           _('Maximum stitch length'),
-           tooltip=_('Maximum stitch length for split stitches.'),
-           type='float',
-           unit="mm",
-           sort_index=1)
-    def max_stitch_length_px(self):
-        return self.get_float_param("max_stitch_length_mm") or None
 
     @property
     @param('random_width_decrease_percent',
@@ -132,18 +124,53 @@ class SatinColumn(EmbroideryElement):
         # peak-to-peak distance between zigzags
         return max(self.get_float_param("random_zigzag_spacing_percent", 0), 0) / 100
 
+    _split_methods = [ParamOption('default', _('Default')),
+                      ParamOption('simple', _('Simple')),
+                      ParamOption('staggered', _('Staggered'))]
+
+    @property
+    @param('split_method',
+           _('Split Method'),
+           type='combo',
+           default=0,
+           options=_split_methods,
+           sort_index=93)
+    def split_method(self):
+        return self.get_param('split_method', 'default')
+
+    @property
+    @param('max_stitch_length_mm',
+           _('Maximum stitch length'),
+           tooltip=_('Maximum stitch length for split stitches.'),
+           type='float',
+           unit="mm",
+           sort_index=94)
+    def max_stitch_length_px(self):
+        return self.get_float_param("max_stitch_length_mm") or None
+
+    @property
+    @param('random_split_jitter_percent',
+           _('Random jitter for split stitches'),
+           tooltip=_('Randomizes split stitch length if random phase is enabled, stitch position if disabled.'),
+           select_items=[('split_method', 'default')],
+           default=0, type='float', unit="± %", sort_index=95)
+    def random_split_jitter(self):
+        return min(max(self.get_float_param("random_split_jitter_percent", 0), 0), 100) / 100
+
     @property
     @param('random_split_phase',
            _('Random phase for split stitches'),
            tooltip=_('Controls whether split stitches are centered or with a random phase (which may increase stitch count).'),
+           select_items=[('split_method', 'default')],
            default=False, type='boolean', sort_index=96)
     def random_split_phase(self):
         return self.get_boolean_param('random_split_phase')
 
     @property
     @param('min_random_split_length_mm',
-           _('Minimum length for random-phase split.'),
+           _('Minimum length for random-phase split'),
            tooltip=_('Defaults to maximum stitch length. Smaller values allow for a transition between single-stitch and split-stitch.'),
+           select_items=[('split_method', 'default')],
            default='', type='float', unit='mm', sort_index=97)
     def min_random_split_length_px(self):
         if self.max_stitch_length_px is None:
@@ -151,12 +178,16 @@ class SatinColumn(EmbroideryElement):
         return min(self.max_stitch_length_px, self.get_float_param('min_random_split_length_mm', self.max_stitch_length_px))
 
     @property
-    @param('random_split_jitter_percent',
-           _('Random jitter for split stitches'),
-           tooltip=_('Randomizes split stitch length if random phase is enabled, stitch position if disabled.'),
-           default=0, type='float', unit="± %", sort_index=95)
-    def random_split_jitter(self):
-        return min(max(self.get_float_param("random_split_jitter_percent", 0), 0), 100) / 100
+    @param('split_staggers',
+           _('Stagger split stitches this many times before repeating'),
+           # This tooltip is _exactly_ the same as the one for FillStitch.staggers, which
+           # means it will be translated the same.
+           tooltip=_('Length of the cycle by which successive stitch rows are staggered. '
+                     'Fractional values are allowed and can have less visible diagonals than integer values.'),
+           select_items=[('split_method', 'staggered')],
+           default=4, type='float', sort_index=98)
+    def split_staggers(self):
+        return self.get_float_param('split_staggers', 4)
 
     @property
     @param('short_stitch_inset',
@@ -1155,7 +1186,7 @@ class SatinColumn(EmbroideryElement):
             if last_point is not None:
                 split_points, _ = self.get_split_points(
                     last_point, a, last_short_point, a_short, max_stitch_length, last_count,
-                    length_sigma, random_phase, min_split_length, prng.join_args(seed, 'satin-split', 2 * i))
+                    length_sigma, random_phase, min_split_length, prng.join_args(seed, 'satin-split', 2 * i), row_num=2 * i, from_end=True)
                 patch.add_stitches(split_points, ("satin_column", "satin_split_stitch"))
 
             patch.add_stitch(a_short)
@@ -1163,7 +1194,7 @@ class SatinColumn(EmbroideryElement):
 
             split_points, last_count = self.get_split_points(
                 a, b, a_short, b_short, max_stitch_length, None,
-                length_sigma, random_phase, min_split_length, prng.join_args(seed, 'satin-split', 2 * i + 1))
+                length_sigma, random_phase, min_split_length, prng.join_args(seed, 'satin-split', 2 * i + 1), row_num=2 * i + 1)
             patch.add_stitches(split_points, ("satin_column", "satin_split_stitch"))
 
             patch.add_stitch(b_short)
@@ -1182,15 +1213,13 @@ class SatinColumn(EmbroideryElement):
         #
         # _|_|_|_|_|_|_|_|_|_|_|_|
 
-        # print >> dbg, "satin", self.zigzag_spacing, self.pull_compensation
-
         patch = StitchGroup(color=self.color)
 
         pairs = self.plot_points_on_rails(
             self.zigzag_spacing,
             self.pull_compensation_px,
-            self.pull_compensation_percent/100,
-            self.random_width_decrease.any() or self.random_width_increase.any() or self.random_zigzag_spacing,
+            self.pull_compensation_percent / 100,
+            True,
         )
 
         short_pairs = self.inset_short_stitches_sawtooth(pairs)
@@ -1207,7 +1236,7 @@ class SatinColumn(EmbroideryElement):
             split_points, _ = self.get_split_points(
                 left, right, a_short, b_short, max_stitch_length,
                 None, length_sigma, random_phase, min_split_length,
-                prng.join_args(seed, 'satin-split', 2 * i + 1))
+                prng.join_args(seed, 'satin-split', 2 * i + 1), 2 * i + 1)
 
             # zigzag spacing is wider than stitch length, subdivide
             if last_point is not None and max_stitch_length is not None and self.zigzag_spacing > max_stitch_length:
@@ -1228,7 +1257,118 @@ class SatinColumn(EmbroideryElement):
         patch.add_tags(("satin_column", "e_stitch"))
         return patch
 
-    def get_split_points(self, a, b, a_short, b_short, length, count=None, length_sigma=0.0, random_phase=False, min_split_length=None, seed=None):
+    def do_s_stitch(self):
+        # S stitch: do a pattern that looks like the letter "S".  It looks like
+        # this:
+        #   _   _   _   _   _   _
+        # _| |_| |_| |_| |_| |_| |
+
+        patch = StitchGroup(color=self.color)
+
+        pairs = self.plot_points_on_rails(
+            self.zigzag_spacing,
+            self.pull_compensation_px,
+            self.pull_compensation_percent / 100,
+            True,
+        )
+
+        short_pairs = self.inset_short_stitches_sawtooth(pairs)
+        max_stitch_length = self.max_stitch_length_px
+        length_sigma = self.random_split_jitter
+        random_phase = self.random_split_phase
+        min_split_length = self.min_random_split_length_px
+        seed = self.random_seed
+        last_point = None
+        for i, (a, b), (a_short, b_short) in zip(itertools.count(0), pairs, short_pairs):
+            check_stop_flag()
+            points = [a_short]
+            split_points, _ = self.get_split_points(
+                a, b, a_short, b_short, max_stitch_length,
+                None, length_sigma, random_phase, min_split_length,
+                prng.join_args(seed, 'satin-split', i), i)
+            points.extend(split_points)
+            points.append(b_short)
+
+            if i % 2 == 0:
+                points = list(reversed(points))
+
+            # zigzag spacing is wider than stitch length, subdivide
+            if last_point is not None and max_stitch_length is not None and self.zigzag_spacing > max_stitch_length:
+                initial_points, _ = self.get_split_points(last_point, points[0], last_point, points[0], max_stitch_length)
+
+            patch.add_stitches(points)
+            last_point = points[-1]
+
+        if self._center_walk_is_odd():
+            patch.stitches = list(reversed(patch.stitches))
+
+        patch.add_tags(("satin", "s_stitch"))
+        return patch
+
+    def do_zigzag(self):
+        patch = StitchGroup(color=self.color)
+
+        # calculate pairs at double the requested density
+        pairs = self.plot_points_on_rails(
+            self.zigzag_spacing / 2.0,
+            self.pull_compensation_px,
+            self.pull_compensation_percent / 100,
+            True,
+        )
+
+        # alternate picking one point from each pair, first on one rail then the other
+        points = [p[i % 2] for i, p in enumerate(pairs)]
+
+        # turn the list of points back into pairs
+        pairs = [points[i:i + 2] for i in range(0, len(points), 2)]
+
+        # remove last item if it isn't paired up
+        if len(pairs[-1]) == 1:
+            del pairs[-1]
+
+        short_pairs = self.inset_short_stitches_sawtooth(pairs)
+        max_stitch_length = self.max_stitch_length_px
+        length_sigma = self.random_split_jitter
+        random_phase = self.random_split_phase
+        min_split_length = self.min_random_split_length_px
+        seed = self.random_seed
+
+        last_point = None
+        last_point_short = None
+        for i, (a, b), (a_short, b_short) in zip(itertools.count(0), pairs, short_pairs):
+            if last_point:
+                split_points, _ = self.get_split_points(
+                    last_point, a, last_point_short, a_short, max_stitch_length, None,
+                    length_sigma, random_phase, min_split_length, prng.join_args(seed, 'satin-split', 2 * i), row_num=2 * i, from_end=True)
+                patch.add_stitches(split_points, ("satin_column", "zigzag_split_stitch"))
+
+            patch.add_stitch(a_short)
+
+            split_points, _ = self.get_split_points(
+                a, b, a_short, b_short, max_stitch_length, None,
+                length_sigma, random_phase, min_split_length, prng.join_args(seed, 'satin-split', 2 * i + 1), row_num=2 * i + 1)
+            patch.add_stitches(split_points, ("satin_column", "zigzag_split_stitch"))
+
+            patch.add_stitch(b_short)
+
+            last_point = b
+            last_point_short = b_short
+
+        if self._center_walk_is_odd():
+            patch.stitches = list(reversed(patch.stitches))
+
+        return patch
+
+    def get_split_points(self, *args, **kwargs):
+        if self.split_method == "default":
+            return self._get_split_points_default(*args, **kwargs)
+        elif self.split_method == "simple":
+            return self._get_split_points_simple(*args, **kwargs), None
+        elif self.split_method == "staggered":
+            return self._get_split_points_staggered(*args, **kwargs), None
+
+    def _get_split_points_default(self, a, b, a_short, b_short, length, count=None, length_sigma=0.0, random_phase=False, min_split_length=None,
+                                  seed=None, row_num=0, from_end=None):
         if not length:
             return ([], None)
         if min_split_length is None:
@@ -1251,6 +1391,32 @@ class SatinColumn(EmbroideryElement):
             points = running_stitch.split_segment_even_dist(a, b, length, length_sigma, seed)
             return (points, len(points) + 1)
 
+    def _get_split_points_simple(self, *args, **kwargs):
+        return self._get_split_points_staggered(*args, **kwargs, _staggers=1)
+
+    def _get_split_points_staggered(self, a, b, a_short, b_short, length, count=None, length_sigma=0.0, random_phase=False, min_split_length=None,
+                                    seed=None, row_num=0, from_end=False, _staggers=None):
+        if not length or a.distance(b) <= length:
+            return []
+
+        if _staggers is None:
+            # This is only here to allow _get_split_points_simple to override
+            _staggers = self.split_staggers
+
+        if from_end:
+            a, b = b, a
+            a_short, b_short = b_short, a_short
+
+        line = shgeo.LineString((a, b))
+        a_short_projection = line.project(shgeo.Point(a_short))
+        b_short_projection = line.project(shgeo.Point(b_short))
+        split_points = running_stitch.split_segment_stagger_phase(a, b, length, _staggers, row_num, min=a_short_projection, max=b_short_projection)
+
+        if from_end:
+            split_points = list(reversed(split_points))
+
+        return split_points
+
     def inset_short_stitches_sawtooth(self, pairs):
         min_dist = self.short_stitch_distance
         inset = min(self.short_stitch_inset, 0.5)
@@ -1265,7 +1431,7 @@ class SatinColumn(EmbroideryElement):
                 continue
             dist = a.distance(b)
             inset_px = inset * dist
-            if max_stitch_length and not self.random_split_phase:
+            if self.split_method == "default" and max_stitch_length and not self.random_split_phase:
                 # make sure inset is less than split etitch length
                 inset_px = min(inset_px, max_stitch_length / 3)
 
@@ -1304,6 +1470,10 @@ class SatinColumn(EmbroideryElement):
 
         if self.satin_method == 'e_stitch':
             patch += self.do_e_stitch()
+        elif self.satin_method == 's_stitch':
+            patch += self.do_s_stitch()
+        elif self.satin_method == 'zigzag':
+            patch += self.do_zigzag()
         else:
             patch += self.do_satin()
 
