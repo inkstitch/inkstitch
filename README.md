@@ -4,7 +4,7 @@
 
 Want to design embroidery pattern files (PES, DST, and many more) using **free, open source software?**
 
-Ink/Stitch aims to be a full-fledged embroidery digitizing platform based entirely on free, open source software.  Our goal is to be approachable for hobbyists while also providing the power needed by professional digitizers.  We also aim to provide a welcoming opens ource environment where contributing is fun and easy.
+Ink/Stitch aims to be a full-fledged embroidery digitizing platform based entirely on free, open source software.  Our goal is to be approachable for hobbyists while also providing the power needed by professional digitizers.  We also aim to provide a welcoming open source environment where contributing is fun and easy.
 
 Want to learn more?
 
