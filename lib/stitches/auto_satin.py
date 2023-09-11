@@ -82,9 +82,6 @@ class SatinSegment(object):
             # satin = satin.reverse(swap_the_rails = self.satin.swap_rails)
             satin = satin.reverse(swap_the_rails = False)
 
-        # node =  deepcopy(self.satin.node)
-        # node.set(INKSTITCH_ATTRIBS['swap_satin_rails'], False) 
-        # satin = SatinColumn(node)
         satin = satin.apply_transform()
 
         _ensure_even_repeats(satin)
