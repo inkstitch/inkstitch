@@ -674,7 +674,8 @@ class SatinColumn(EmbroideryElement):
             point_lists.append(list(reversed(self.flatten_subpath(rail))))
 
         # reverse the order of the rails because we're sewing in the opposite direction
-        if swap_the_rails:
+       
+        if swap_the_rails or (self.reverse_rails == 'both' and not self.swap_rails):
             point_lists.reverse()
 
         for rung in self.rungs:
