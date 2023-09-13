@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2023-09-12 01:02+0000\n"
-"PO-Revision-Date: 2023-09-12 01:03\n"
+"PO-Revision-Date: 2023-09-13 01:05\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -1245,7 +1245,7 @@ msgstr "L'objet %(id)s a un attribut 'd' vide. S’il vous plaît supprimer cet 
 
 #: lib/elements/element.py:584
 msgid "Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects. This will show you the exact location of the problem."
-msgstr ""
+msgstr "Merci d'exécuter Extensions > Ink/Stitch > Résolution de problèmes > Dépistage de problèmes avec des objets. Ceci indiquera la position erronée."
 
 #: lib/elements/empty_d_object.py:13
 msgid "Empty Path"
@@ -1783,7 +1783,7 @@ msgstr "Point en E"
 
 #: lib/elements/satin_column.py:85
 msgid "\"S\" Stitch"
-msgstr ""
+msgstr "Point en S"
 
 #: lib/elements/satin_column.py:86 lib/stitch_plan/lock_stitch.py:211
 msgid "Zig-zag"
@@ -1826,7 +1826,7 @@ msgstr "Quantité d'aléatoire ajoutée à la longueur du point."
 
 #: lib/elements/satin_column.py:127
 msgid "Default"
-msgstr ""
+msgstr "Par défaut"
 
 #: lib/elements/satin_column.py:128 lib/stitch_plan/lock_stitch.py:209
 #: inx/inkstitch_break_apart.inx:18
@@ -1835,11 +1835,11 @@ msgstr "Simple"
 
 #: lib/elements/satin_column.py:129
 msgid "Staggered"
-msgstr ""
+msgstr "Décalés"
 
 #: lib/elements/satin_column.py:133
 msgid "Split Method"
-msgstr ""
+msgstr "Méthode de découpage"
 
 #: lib/elements/satin_column.py:143 lib/elements/satin_column.py:455
 msgid "Maximum stitch length"
@@ -1867,7 +1867,7 @@ msgstr "Contrôle si le découpage des points est totalement aléatoire (ce qui 
 
 #: lib/elements/satin_column.py:171
 msgid "Minimum length for random-phase split"
-msgstr ""
+msgstr "Longueur minimum du point si découpage totalement aléatoire"
 
 #: lib/elements/satin_column.py:172
 msgid "Defaults to maximum stitch length. Smaller values allow for a transition between single-stitch and split-stitch."
@@ -1875,7 +1875,7 @@ msgstr "Par défaut, prend la valeur de la longueur maximum du point. Une valeur
 
 #: lib/elements/satin_column.py:182
 msgid "Stagger split stitches this many times before repeating"
-msgstr ""
+msgstr "Décaler les découpages de points ce nombre de fois avant de répéter"
 
 #: lib/elements/satin_column.py:194
 msgid "Short stitch inset"
@@ -2943,31 +2943,31 @@ msgstr "Accélérer (flèche vers le haut)"
 
 #: lib/gui/simulator.py:66
 msgid "Go backward one stitch (-)"
-msgstr ""
+msgstr "Reculer d'un point (-)"
 
 #: lib/gui/simulator.py:70
 msgid "Go forward one stitch (+)"
-msgstr ""
+msgstr "Avancer d'un point (+)"
 
 #: lib/gui/simulator.py:74
 msgid "Go backward one command (page-down)"
-msgstr ""
+msgstr "Reculer d'une commande (page précédente pgDn)"
 
 #: lib/gui/simulator.py:78
 msgid "Go forward one command (page-up)"
-msgstr ""
+msgstr "Avancer d'une commande (page précédente)"
 
 #: lib/gui/simulator.py:83
 msgid "Animate forward (arrow right)"
-msgstr ""
+msgstr "Animer en avant (flèche droite)"
 
 #: lib/gui/simulator.py:87
 msgid "Animate in reverse (arrow right)"
-msgstr ""
+msgstr "Animer a reculons (flèche gauche)"
 
 #: lib/gui/simulator.py:91
 msgid "Play (P)"
-msgstr ""
+msgstr "Jouer (P)"
 
 #: lib/gui/simulator.py:95
 msgid "Pause (P)"
@@ -2983,19 +2983,19 @@ msgstr "Afficher les points de pénétration de l'aiguille (O)"
 
 #: lib/gui/simulator.py:113
 msgid "Show jump stitches"
-msgstr ""
+msgstr "Montrer les sauts de fil"
 
 #: lib/gui/simulator.py:117
 msgid "Show trims"
-msgstr ""
+msgstr "Montrer les coupes de fil"
 
 #: lib/gui/simulator.py:121
 msgid "Show stops"
-msgstr ""
+msgstr "Montrer les stops"
 
 #: lib/gui/simulator.py:125
 msgid "Show color changes"
-msgstr ""
+msgstr "Montrer les changements de couleur"
 
 #: lib/gui/simulator.py:134 electron/src/renderer/components/Simulator.vue:219
 msgid "Command"
@@ -3011,12 +3011,12 @@ msgstr "Montrer"
 
 #: lib/gui/simulator.py:167
 msgid "Speed"
-msgstr ""
+msgstr "Vitesse"
 
 #: lib/gui/simulator.py:323
 #, python-format
 msgid "%d stitches/sec"
-msgstr ""
+msgstr "%d points/sec"
 
 #: lib/gui/simulator.py:1138 lib/gui/simulator.py:1150
 msgid "Preview"
@@ -3028,7 +3028,7 @@ msgstr "Simulation de broderie"
 
 #: lib/gui/warnings.py:21
 msgid "An error occurred while rendering the stitch plan:"
-msgstr ""
+msgstr "Une erreur s'est produite lors du rendu du plan de broderie :"
 
 #: lib/lettering/categories.py:19 inx/inkstitch_lettering_generate_json.inx:44
 msgid "Applique"
@@ -3158,7 +3158,7 @@ msgstr "Points droits pour auto-remplissage satin %d"
 
 #: lib/stitches/meander_fill.py:32
 msgid "Could not build graph for meander stitching. Try to enlarge your shape or scale your meander pattern down."
-msgstr ""
+msgstr "Impossible de construire le remplissage en méandres. Essayer d'agrandir votre forme ou de diminuer la taille du méandre."
 
 #: lib/svg/rendering.py:229
 msgid "Stitch Plan"
@@ -3853,7 +3853,7 @@ msgstr "Sauter à la commande précédente"
 
 #: electron/src/renderer/components/Simulator.vue:509
 msgid "Jump to previous command (Page down)"
-msgstr "Aller à la commande précédente (Bas page)"
+msgstr "Aller à la commande précédente (Page suivante)"
 
 #: electron/src/renderer/components/Simulator.vue:232
 msgid "jumps"
@@ -3889,12 +3889,12 @@ msgstr "Un pas en avant (+)"
 #. name for page down keyboard key
 #: electron/src/renderer/components/Simulator.vue:99
 msgid "Page down (PgDn)"
-msgstr "Page en bas (PgDn)"
+msgstr "Page précédente (PgDn)"
 
 #. name for page up keyboard key
 #: electron/src/renderer/components/Simulator.vue:108
 msgid "Page up (PgUp)"
-msgstr "Page en haut (PgUp)"
+msgstr "Page précédente (PgUp)"
 
 #: electron/src/renderer/components/Simulator.vue:29
 msgid "Pause"
