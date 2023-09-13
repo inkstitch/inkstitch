@@ -27,6 +27,7 @@ from ..utils.threading import check_stop_flag
 from .element import PIXELS_PER_MM, EmbroideryElement, param
 from .validation import ValidationError, ValidationWarning
 
+
 class TooFewPathsError(ValidationError):
     name = _("Too few subpaths")
     description = _("Satin column: Object has too few subpaths.  A satin column should have at least two subpaths (the rails).")
@@ -661,7 +662,7 @@ class SatinColumn(EmbroideryElement):
     def _center_walk_is_odd(self):
         return self.center_walk_underlay_repeats % 2 == 1
 
-    def reverse(self, swap_the_rails = True):
+    def reverse(self, swap_the_rails=True):
         """Return a new SatinColumn like this one but in the opposite direction.
 
         The path will be flattened and the new satin will contain a new XML
@@ -674,8 +675,8 @@ class SatinColumn(EmbroideryElement):
             point_lists.append(list(reversed(self.flatten_subpath(rail))))
 
         # reverse the order of the rails because we're sewing in the opposite direction
-       
-        if swap_the_rails or (self.reverse_rails == 'both' and not self.swap_rails):
+
+        if swap_the_rails:
             point_lists.reverse()
 
         for rung in self.rungs:
@@ -828,7 +829,7 @@ class SatinColumn(EmbroideryElement):
     def _csp_to_satin(self, csp):
         node = deepcopy(self.node)
         d = paths.CubicSuperPath(csp).to_path()
-        node.set("d", d) 
+        node.set("d", d)
         node.set(INKSTITCH_ATTRIBS['swap_satin_rails'], False)
         node.set(INKSTITCH_ATTRIBS['reverse_rails'], 'none')
 

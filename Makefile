@@ -59,4 +59,4 @@ version:
 
 .PHONY: style
 style:
-	bash -x bin/style-check
+	zsh -x bin/style-check
