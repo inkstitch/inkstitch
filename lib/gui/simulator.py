@@ -101,9 +101,9 @@ class ControlPanel(wx.Panel):
         self.btnNpp.Bind(wx.EVT_TOGGLEBUTTON, self.toggle_npp)
         self.btnNpp.SetBitmap(self.load_icon('npp'))
         self.btnNpp.SetToolTip(_('Display needle penetration point (O)'))
-        self.slider = SimulatorSlider(self, -1, value=1, minValue=1, maxValue=2)
+        self.slider = SimulatorSlider(self, -1, value=1, minValue=1, maxValue=self.stitch_plan.num_stitches)
         self.slider.Bind(wx.EVT_SLIDER, self.on_slider)
-        self.stitchBox = IntCtrl(self, -1, value=1, min=1, max=2, limited=True, allow_none=True, style=wx.TE_PROCESS_ENTER)
+        self.stitchBox = IntCtrl(self, -1, value=1, min=1, max=self.stitch_plan.num_stitches, size=((100, -1)), limited=True, allow_none=True, style=wx.TE_PROCESS_ENTER)
         self.stitchBox.Bind(wx.EVT_LEFT_DOWN, self.on_stitch_box_focus)
         self.stitchBox.Bind(wx.EVT_SET_FOCUS, self.on_stitch_box_focus)
         self.stitchBox.Bind(wx.EVT_TEXT_ENTER, self.on_stitch_box_focusout)
@@ -129,7 +129,7 @@ class ControlPanel(wx.Panel):
         # Layout
         self.hbSizer1 = wx.BoxSizer(wx.HORIZONTAL)
         self.hbSizer1.Add(self.slider, 1, wx.EXPAND | wx.RIGHT, 10)
-        self.hbSizer1.Add(self.stitchBox, 0, wx.ALIGN_CENTER_VERTICAL | wx.RIGHT, 10)
+        self.hbSizer1.Add(self.stitchBox, 0, wx.ALIGN_TOP | wx.RIGHT, 10)
 
         self.command_sizer = wx.StaticBoxSizer(wx.StaticBox(self, wx.ID_ANY, _("Command")), wx.VERTICAL)
         self.command_text = wx.StaticText(self, wx.ID_ANY, label="", style=wx.ALIGN_CENTRE_HORIZONTAL | wx.ST_NO_AUTORESIZE)
@@ -836,7 +836,7 @@ class SimulatorSlider(wx.Panel):
     def __init__(self, parent, id=wx.ID_ANY, *args, **kwargs):
         super().__init__(parent, id)
 
-        kwargs['style'] = wx.SL_HORIZONTAL | wx.SL_LABELS
+        kwargs['style'] = wx.SL_HORIZONTAL | wx.SL_LABELS | wx.SL_TOP | wx.ALIGN_TOP
 
         self.sizer = wx.BoxSizer(wx.VERTICAL)
         self.slider = wx.Slider(self, *args, **kwargs)
@@ -856,9 +856,9 @@ class SimulatorSlider(wx.Panel):
         self.marker_pen = wx.Pen(wx.Colour(0, 0, 0))
         self.color_sections = []
         self.margin = 13
-        self.color_bar_start = 0.25
+        self.color_bar_start = 0
         self.color_bar_thickness = 0.25
-        self.marker_start = 0.375
+        self.marker_start = 0.25
         self.marker_end = 0.75
         self.marker_icon_start = 0.75
         self.marker_icon_size = size.height // 3
