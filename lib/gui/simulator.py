@@ -84,7 +84,7 @@ class ControlPanel(wx.Panel):
         self.btnReverse = wx.BitmapToggleButton(self, -1, style=self.button_style)
         self.btnReverse.Bind(wx.EVT_TOGGLEBUTTON, self.on_reverse_button)
         self.btnReverse.SetBitmap(self.load_icon('reverse'))
-        self.btnReverse.SetToolTip(_('Animate in reverse (arrow right)'))
+        self.btnReverse.SetToolTip(_('Animate in reverse (arrow left)'))
         self.btnPlay = wx.BitmapToggleButton(self, -1, style=self.button_style)
         self.btnPlay.Bind(wx.EVT_TOGGLEBUTTON, self.on_play_button)
         self.btnPlay.SetBitmap(self.load_icon('play'))
