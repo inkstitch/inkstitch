@@ -103,7 +103,8 @@ class ControlPanel(wx.Panel):
         self.btnNpp.SetToolTip(_('Display needle penetration point (O)'))
         self.slider = SimulatorSlider(self, -1, value=1, minValue=1, maxValue=self.stitch_plan.num_stitches)
         self.slider.Bind(wx.EVT_SLIDER, self.on_slider)
-        self.stitchBox = IntCtrl(self, -1, value=1, min=1, max=self.stitch_plan.num_stitches, size=((100, -1)), limited=True, allow_none=True, style=wx.TE_PROCESS_ENTER)
+        self.stitchBox = IntCtrl(self, -1, value=1, min=1, max=self.stitch_plan.num_stitches,
+                                 size=((100, -1)), limited=True, allow_none=True, style=wx.TE_PROCESS_ENTER)
         self.stitchBox.Bind(wx.EVT_LEFT_DOWN, self.on_stitch_box_focus)
         self.stitchBox.Bind(wx.EVT_SET_FOCUS, self.on_stitch_box_focus)
         self.stitchBox.Bind(wx.EVT_TEXT_ENTER, self.on_stitch_box_focusout)
@@ -1000,7 +1001,15 @@ class EmbroiderySimulator(wx.Frame):
                                               stitches_per_second=stitches_per_second)
         sizer.Add(self.simulator_panel, 1, wx.EXPAND)
 
-        self.SetSizeHints(sizer.CalcMin())
+        # SetSizeHints seems to be ignored in macOS, so we have to adjust size manually
+        # self.SetSizeHints(sizer.CalcMin())
+        frame_width, frame_height = self.GetSize()
+        sizer_width, sizer_height = sizer.CalcMin()
+        size_diff = frame_width - sizer_width
+        if size_diff < 0:
+            frame_x, frame_y = self.GetPosition()
+            self.SetPosition((frame_x + size_diff, frame_y))
+            self.SetSize((sizer_width, frame_height))
 
         self.Bind(wx.EVT_CLOSE, self.on_close)
 
