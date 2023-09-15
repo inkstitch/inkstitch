@@ -89,10 +89,6 @@ class ControlPanel(wx.Panel):
         self.btnPlay.Bind(wx.EVT_TOGGLEBUTTON, self.on_play_button)
         self.btnPlay.SetBitmap(self.load_icon('play'))
         self.btnPlay.SetToolTip(_('Play (P)'))
-        self.btnPause = wx.BitmapToggleButton(self, -1, style=self.button_style)
-        self.btnPause.Bind(wx.EVT_TOGGLEBUTTON, self.on_pause_button)
-        self.btnPause.SetBitmap(self.load_icon('pause'))
-        self.btnPause.SetToolTip(_('Pause (P)'))
         self.btnRestart = wx.Button(self, -1, style=self.button_style)
         self.btnRestart.Bind(wx.EVT_BUTTON, self.animation_restart)
         self.btnRestart.SetBitmap(self.load_icon('restart'))
@@ -148,7 +144,6 @@ class ControlPanel(wx.Panel):
         self.controls_inner_sizer.Add(self.btnReverse, 0, wx.EXPAND | wx.ALL, 2)
         self.controls_inner_sizer.Add(self.btnForward, 0, wx.EXPAND | wx.ALL, 2)
         self.controls_inner_sizer.Add(self.btnPlay, 0, wx.EXPAND | wx.ALL, 2)
-        self.controls_inner_sizer.Add(self.btnPause, 0, wx.EXPAND | wx.ALL, 2)
         self.controls_inner_sizer.Add(self.btnRestart, 0, wx.EXPAND | wx.ALL, 2)
         self.controls_sizer.Add((1, 1), 1)
         self.controls_sizer.Add(self.controls_inner_sizer, 0, wx.ALIGN_CENTER_VERTICAL | wx.ALL, 10)
@@ -375,25 +370,26 @@ class ControlPanel(wx.Panel):
 
     def animation_pause(self, event=None):
         self.drawing_panel.stop()
+        self.btnPlay.SetBitmap(self.load_icon('play'))
 
     def animation_start(self, event=None):
         self.drawing_panel.go()
+        self.btnPlay.SetBitmap(self.load_icon('pause'))
 
     def on_start(self):
-        self.btnPause.SetValue(False)
         self.btnPlay.SetValue(True)
+        self.btnPlay.SetBitmap(self.load_icon('pause'))
 
     def on_stop(self):
-        self.btnPause.SetValue(True)
         self.btnPlay.SetValue(False)
-
-    def on_pause_button(self, event):
-        """"""
-        self.animation_pause()
+        self.btnPlay.SetBitmap(self.load_icon('play'))
 
     def on_play_button(self, event):
-        """"""
-        self.animation_start()
+        play = self.btnPlay.GetValue()
+        if play:
+            self.animation_start()
+        else:
+            self.animation_pause()
 
     def play_or_pause(self, event):
         if self.drawing_panel.animating:
