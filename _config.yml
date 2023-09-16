@@ -145,7 +145,7 @@ footer:
       # url:
     - label: "PeerTube"
       icon: "fab fa-fw fa-youtube-square"
-      url: "https://www.diode.zone/a/inkstitch"
+      url: "https://diode.zone/a/inkstitch"
     - label: "Facebook User Groups"
       icon: "fab fa-wf fa-facebook-square"
       url: "/docs/faq/#facebook-user-groups"
