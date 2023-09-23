@@ -138,8 +138,6 @@ docs:
     children:
       - title: "Skrifttyper (fonter)"
         url: /da/docs/fonts/
-      - title: "Skjulte funktioner"
-        url: /da/docs/features/
       - title: Tips til Inkscape
         url: /da/docs/inkscape-tips/
       - title: Database over symaskiner

@@ -34,7 +34,7 @@ Ink/Stitch: digitalisiere Designs für Maschinenstickerei mit Inkscape (SVG)
 * 3 anpassbare und zeitgleich nutzbare Unterlagen (Mittellinien-, Kontur- und Zick-Zack-Unterlage)
 * [E-stitch](/de/docs/stitches/e-stitch/)
 * Geteilte Satinstiche (durch nutzerdefinierte maximale Stichlänge)
-* [Automatisch geführte Satinstitche]](/de/docs/satin-tools/) zur Vermeidung von Sprungstichen (mit verstecktem Geradstich sofern notwendig)
+* [Automatisch geführte Satinsäulen](/de/docs/satin-tools/) zur Vermeidung von Sprungstichen
 
 ### Geradstiche
 

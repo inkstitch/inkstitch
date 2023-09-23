@@ -136,8 +136,6 @@ docs:
     children:
       - title: "Шрифты"
         url: /ru/docs/fonts/
-      - title: "Скрытые возмодности"
-        url: /ru/docs/features/
       - title: Советы для Inkscape
         url: /ru/docs/inkscape-tips/
       - title: Список вышивальных машин
