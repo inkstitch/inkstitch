@@ -2,7 +2,7 @@
 title: "Installer Ink/Stitch"
 permalink: /fr/docs/install/
 excerpt: "Comment installer rapidement Ink/Stitch."
-last_modified_at: 2022-05-28
+last_modified_at: 2023-09-23
 ---
 
 ## Installation automatique 
@@ -11,7 +11,7 @@ last_modified_at: 2022-05-28
 * <i class="fab fa-apple"></i> [macOS](/fr/docs/install-macos/)
 * <i class="fab fa-windows"></i> [Windows](/fr/docs/install-windows/)
 
-A version for **NixOS** is externally maintained and available at [https://codeberg.org/tropf/nix-inkstitch](https://codeberg.org/tropf/nix-inkstitch)
+Il existe une version pour  **NixOS** qui est maintenue en externe et disponible sur [https://codeberg.org/tropf/nix-inkstitch](https://codeberg.org/tropf/nix-inkstitch)
 
 ## Installation manuelle
 
