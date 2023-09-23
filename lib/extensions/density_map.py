@@ -3,11 +3,11 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
+import inkex
 import numpy as np
 from scipy.spatial import KDTree
 
-import inkex
-
+from ..commands import add_layer_commands
 from ..i18n import _
 from ..stitch_plan import stitch_groups_to_stitch_plan
 from ..svg import PIXELS_PER_MM
@@ -70,6 +70,7 @@ def reset_density_plan(svg):
             INKSCAPE_GROUPMODE: 'layer'
         })
         svg.append(layer)
+        add_layer_commands(layer, ["ignore_layer"])
     else:
         # delete old density plan
         del layer[:]
