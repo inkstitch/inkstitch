@@ -14,6 +14,8 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
    xmlns:inkstitch="http://inkstitch.org/namespace">
   <metadata
      id="metadata1146">
@@ -21,6 +23,28 @@
     <inkstitch:collapse_len_mm>3</inkstitch:collapse_len_mm>
     <inkstitch:inkstitch_svg_version>1</inkstitch:inkstitch_svg_version>
     <inkstitch:thread-palette />
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <cc:license
+           rdf:resource="https://creativecommons.org/licenses/by-sa/3.0/" />
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by-sa/3.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Notice" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Attribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#ShareAlike" />
+      </cc:License>
+    </rdf:RDF>
   </metadata>
   <sodipodi:namedview
      id="namedview15966"
@@ -33,9 +57,9 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="1.1465684"
-     inkscape:cx="183.15523"
-     inkscape:cy="292.61229"
+     inkscape:zoom="1.6214926"
+     inkscape:cx="176.99742"
+     inkscape:cy="227.87646"
      inkscape:window-width="1366"
      inkscape:window-height="704"
      inkscape:window-x="0"
@@ -44,6 +68,36 @@
      inkscape:current-layer="layer1" />
   <defs
      id="defs15961">
+    <rect
+       x="11.364271"
+       y="532.8424"
+       width="359.33266"
+       height="34.536082"
+       id="rect5016" />
+    <rect
+       x="-13.004327"
+       y="517.42451"
+       width="411.4027"
+       height="61.671574"
+       id="rect5010" />
+    <rect
+       x="-37.002945"
+       y="536.5427"
+       width="447.11891"
+       height="38.853092"
+       id="rect5004" />
+    <rect
+       x="43.932487"
+       y="502.00661"
+       width="300.53836"
+       height="27.135493"
+       id="rect4998" />
+    <rect
+       x="2.6628631"
+       y="485.972"
+       width="380.93433"
+       height="52.420838"
+       id="rect4942" />
     <symbol
        id="inkstitch_trim">
       <title
@@ -61,13 +115,53 @@
     </symbol>
   </defs>
   <g
-     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Attribution"
+     style="display:none"
+     sodipodi:insensitive="true">
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text4940"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:0;font-family:monospace;-inkscape-font-specification:monospace;text-align:center;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect4942);fill:none;fill-opacity:1;stroke:#ffffff;stroke-opacity:1"><tspan
+         x="68.329803"
+         y="490.53066"
+         id="tspan1067">CC BY-SA 3.0 Deed Unported
+</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,1.0583333,-8.9958338)"
+       id="text5002"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;line-height:0;font-family:monospace;-inkscape-font-specification:monospace;text-align:center;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect5004);fill:none;fill-opacity:1;stroke:#ffffff;stroke-opacity:1"><tspan
+         x="-1.4439803"
+         y="540.34129"
+         id="tspan1069">https://creativecommons.org/licenses/by-sa/3.0/</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,-0.52916663,0.52916667)"
+       id="text5008"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;line-height:0;font-family:monospace;-inkscape-font-specification:monospace;text-align:center;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect5010);fill:none;fill-opacity:1;stroke:#ffffff;stroke-opacity:1"><tspan
+         x="12.697606"
+         y="521.22215"
+         id="tspan1071">Modified for embroidery from the originals at </tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,-0.52916667,0.52916667)"
+       id="text5014"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;line-height:0;font-family:monospace;-inkscape-font-specification:monospace;text-align:center;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect5016);fill:none;fill-opacity:1;stroke:#ffffff;stroke-opacity:1"><tspan
+         x="31.031553"
+         y="536.64012"
+         id="tspan1073">https://wiki.softwarefreedomday.org/Logo</tspan></text>
+  </g>
+  <g
+     inkscape:label="SFD"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(143.60748,19.587826)">
+     transform="translate(143.607, 19.5878)">
     <g
        id="g369"
-       transform="matrix(0.4699815,0,0,0.4699815,-665.67152,-379.72979)"
+       transform="matrix(0.469981 0 0 0.469981 -665.672 -379.73)"
        inkscape:label="hill">
       <path
          d="M 1144.089,956.292 H 1151.9738 1221.3522 1281.27 1326.997 M 1144.089,956.292 C 1144.7055,955.6079 1150.0498,950.19123 1150.6682,949.50884 1169.8022,929.94572 1192.7762,913.87847 1218.1909,903.59076 1236.1236,896.7477 1256.1901,890.6833 1275.2168,896.90997 1300.5188,904.687 1318.0556,932.28878 1326.997,956.292"
@@ -81,7 +175,7 @@
          inkstitch:fill_method="contour_fill" />
     </g>
     <g
-       transform="matrix(0.4699815,0,0,0.4699815,-665.67152,-379.72979)"
+       transform="matrix(0.469981 0 0 0.469981 -665.672 -379.73)"
        id="g345"
        inkscape:label="sun">
       <linearGradient
@@ -120,7 +214,7 @@
          style="fill:none;stroke:#f9d523;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.264583, 0.264583;stroke-dashoffset:0;stroke-opacity:1"
          d="M -107.38868,45.514743 -106.86947,47.673447"
          id="path6385"
-         transform="matrix(2.83128,0,0,2.83128,1481.67,778.028)"
+         transform="matrix(2.83128 0 0 2.83128 1481.67 778.028)"
          inkscape:label="Start"
          inkstitch:ties="1" />
       <path
@@ -143,7 +237,7 @@
          inkstitch:zigzag_underlay="True"
          inkstitch:ties="3"
          inkstitch:reverse_rails="none"
-         transform="translate(2.41839e-5,-3.42113e-5)" />
+         transform="translate(2.41839e-05, -3.42113e-05)" />
       <path
          d="M 1254.9931,865.39472 C 1252.4917,862.75579 1249.639,860.30582 1246.5704,858.09462 1243.5017,855.88342 1240.2171,853.911 1236.8518,852.2272 1233.4864,850.54339 1230.0404,849.1482 1226.6488,848.09145 1223.2573,847.0347 1219.9203,846.3164 1216.773,845.98638 1211.3026,845.35371 1205.7832,845.55261 1200.3952,846.49618 1195.0073,847.43974 1189.7506,849.12797 1184.8056,851.47394 1179.8606,853.81992 1175.2272,856.82365 1171.0857,860.39823 1166.9442,863.97281 1163.2946,868.11823 1160.3172,872.74759 1157.3384,877.18496 1155.0292,882.02687 1153.3991,887.08807 1151.7689,892.14928 1150.8178,897.42978 1150.5549,902.74437 1150.292,908.05895 1150.7174,913.40761 1151.8403,918.60513 M 1235.188,878.839 C 1233.8046,877.29509 1232.293,875.86994 1230.6768,874.57546 1229.0606,873.28099 1227.3398,872.1172 1225.5379,871.096 1223.736,870.07481 1221.853,869.19621 1219.9125,868.47213 1217.972,867.74806 1215.974,867.1785 1213.942,866.77538 1209.6559,865.83991 1205.2568,865.74989 1200.9675,866.39709 1196.6783,867.04429 1192.499,868.42869 1188.6525,870.44207 1184.8061,872.45544 1181.2925,875.09779 1178.3348,878.26086 1175.377,881.42393 1172.9751,885.10772 1171.352,889.204 1170.3069,891.75207 1169.4979,894.40196 1168.9305,897.10587 1168.3631,899.80977 1168.0372,902.5677 1167.9584,905.33184 1167.8796,908.09598 1168.0478,910.86633 1168.4686,913.59511"
          id="path9528"
@@ -167,7 +261,7 @@
       <g
          id="command_group7"
          inkscape:label="Ink/Stitch Command: Trim thread after sewing this object"
-         transform="matrix(0.74911,0,0,0.74911,1110.82,795.415)">
+         transform="matrix(0.74911 0 0 0.74911 1110.82 795.415)">
         <path
            id="command_connector7"
            d="M 57.132974,132.43842 67.197171,171.19269"
@@ -189,7 +283,7 @@
     </g>
     <g
        id="g281"
-       transform="matrix(0.4699815,0,0,0.4699815,-665.67152,-379.72979)"
+       transform="matrix(0.469981 0 0 0.469981 -665.672 -379.73)"
        inkscape:label="rays">
       <g
          id="g490"
@@ -198,7 +292,7 @@
            style="fill:none;stroke:#f9d523;stroke-width:0.74911px;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.74911, 0.74911;stroke-dashoffset:0;stroke-opacity:1"
            d="M 1274.4016,866.38493 1267.431,867.30674"
            id="path5634"
-           transform="translate(-1.23869e-5,3.18519e-5)"
+           transform="translate(-1.23869e-05, 3.18519e-05)"
            inkscape:label="Start"
            inkstitch:ties="1" />
         <path
@@ -209,7 +303,7 @@
            sodipodi:nodetypes="cscccscc"
            inkstitch:satin_column="True"
            inkstitch:zigzag_underlay="True"
-           transform="translate(-3.48011e-5,-3.46124e-5)"
+           transform="translate(-3.48011e-05, -3.46124e-05)"
            inkstitch:reverse_rails="none"
            inkscape:label="Left"
            inkstitch:ties="3" />
@@ -221,14 +315,14 @@
            sodipodi:nodetypes="cscccscc"
            inkstitch:satin_column="True"
            inkstitch:zigzag_underlay="True"
-           transform="translate(-3.48011e-5,-3.46124e-5)"
+           transform="translate(-3.48011e-05, -3.46124e-05)"
            inkstitch:reverse_rails="none"
            inkscape:label="Right"
            inkstitch:ties="2" />
         <g
            id="command_group1"
            inkscape:label="Ink/Stitch Command: Trim thread after sewing this object"
-           transform="matrix(0.74911,0,0,0.74911,1110.82,795.415)">
+           transform="matrix(0.74911 0 0 0.74911 1110.82 795.415)">
           <path
              id="command_connector1"
              d="M 242.82054,42.376331 250.61352,72.954029"
@@ -255,7 +349,7 @@
            style="fill:none;stroke:#f9d523;stroke-width:0.750289;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.750289, 0.750289;stroke-dashoffset:0;stroke-opacity:1"
            d="M 1246.8792,834.53415 1241.0735,840.18873"
            id="path5527"
-           transform="translate(-1.23869e-5,3.18519e-5)"
+           transform="translate(-1.23869e-05, 3.18519e-05)"
            inkscape:label="Start" />
         <path
            d="M 1241.0735,840.18873 C 1240.3724,839.76372 1240.5014,838.74919 1240.985,837.58537 1241.4686,836.42156 1242.3069,835.10847 1243.0242,834.08633 1243.7416,833.06419 1244.338,832.333 1244.338,832.333 1245.6115,831.02975 1246.8878,829.26494 1248.1134,827.25381 M 1241.0735,840.18873 C 1241.7747,840.61375 1243.306,840.44925 1246.143,839.255 1247.5615,838.65712 1249.1039,837.78073 1250.7024,836.68992 1252.3009,835.59911 1253.9554,834.29387 1255.5982,832.83831"
@@ -282,7 +376,7 @@
         <g
            id="command_group2"
            inkscape:label="Ink/Stitch Command: Trim thread after sewing this object"
-           transform="matrix(0.74911,0,0,0.74911,1110.82,795.415)">
+           transform="matrix(0.74911 0 0 0.74911 1110.82 795.415)">
           <path
              id="command_connector2"
              d="M 185.37381,-18.571689 194.87043,15.200365"
@@ -309,7 +403,7 @@
            style="display:inline;fill:none;stroke:#f9d523;stroke-width:0.750289;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.750289, 0.750289;stroke-dashoffset:0;stroke-opacity:1"
            d="M 1205.7999,827.3473 1203.4946,835.03844"
            id="path4700"
-           transform="translate(-1.23869e-5,3.18519e-5)"
+           transform="translate(-1.23869e-05, 3.18519e-05)"
            inkscape:label="Start" />
         <path
            d="M 1203.4946,835.03848 C 1204.1932,835.02194 1205.2178,834.20175 1206.708,832.044 1207.4524,830.96537 1208.1581,829.63002 1208.8059,828.11502 1209.4537,826.60003 1210.0435,824.9054 1210.556,823.10823 M 1203.4946,835.03848 C 1202.796,835.05503 1202.4234,834.26794 1202.2371,833.21112 1201.8645,831.0975 1202.237,827.905 1202.237,827.905 1202.5553,826.3855 1202.6638,824.53337 1202.6229,822.52775"
@@ -319,7 +413,7 @@
            sodipodi:nodetypes="ccsccscc"
            inkstitch:satin_column="True"
            inkstitch:zigzag_underlay="True"
-           transform="translate(-3.48011e-5,-3.46124e-5)"
+           transform="translate(-3.48011e-05, -3.46124e-05)"
            inkstitch:reverse_rails="none"
            inkscape:label="Bottom" />
         <path
@@ -330,14 +424,14 @@
            sodipodi:nodetypes="csssccscsc"
            inkstitch:satin_column="True"
            inkstitch:zigzag_underlay="True"
-           transform="translate(-3.48011e-5,-3.46124e-5)"
+           transform="translate(-3.48011e-05, -3.46124e-05)"
            inkstitch:reverse_rails="none"
            inkscape:label="Top"
            inkstitch:ties="2" />
         <g
            id="command_group3"
            inkscape:label="Ink/Stitch Command: Trim thread after sewing this object"
-           transform="matrix(0.74911,0,0,0.74911,1110.82,795.415)">
+           transform="matrix(0.74911 0 0 0.74911 1110.82 795.415)">
           <path
              id="command_connector3"
              d="M 121.45502,-29.136679 124.83167,0.67862344"
@@ -364,7 +458,7 @@
            style="fill:none;stroke:#f9d523;stroke-width:0.750289;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.750289, 0.750289;stroke-dashoffset:0;stroke-opacity:1"
            d="M 1165.3739,839.92428 1169.688,846.44716"
            id="path3990"
-           transform="translate(-1.23869e-5,3.18519e-5)"
+           transform="translate(-1.23869e-05, 3.18519e-05)"
            inkscape:label="Start"
            inkstitch:ties="1" />
         <path
@@ -375,7 +469,7 @@
            sodipodi:nodetypes="cscscccssc"
            inkstitch:satin_column="True"
            inkstitch:zigzag_underlay="True"
-           transform="translate(-3.48011e-5,-3.46124e-5)"
+           transform="translate(-3.48011e-05, -3.46124e-05)"
            inkstitch:reverse_rails="none"
            inkscape:label="Right"
            inkstitch:ties="3" />
@@ -387,14 +481,14 @@
            sodipodi:nodetypes="cscsccssc"
            inkstitch:satin_column="True"
            inkstitch:zigzag_underlay="True"
-           transform="translate(-3.48011e-5,-3.46124e-5)"
+           transform="translate(-3.48011e-05, -3.46124e-05)"
            inkstitch:reverse_rails="none"
            inkscape:label="Left"
            inkstitch:ties="2" />
         <g
            id="command_group4"
            inkscape:label="Ink/Stitch Command: Trim thread after sewing this object"
-           transform="matrix(0.74911,0,0,0.74911,1110.82,795.415)">
+           transform="matrix(0.74911 0 0 0.74911 1110.82 795.415)">
           <path
              id="command_connector4"
              d="M 51.126481,-0.26303847 54.914886,30.613435"
@@ -421,7 +515,7 @@
            style="fill:none;stroke:#f9d523;stroke-width:0.74911px;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.74911, 0.74911;stroke-dashoffset:0;stroke-opacity:1"
            d="M 1139.4849,868.75332 1146.0025,871.51272"
            id="path3297"
-           transform="translate(-1.23869e-5,3.18519e-5)"
+           transform="translate(-1.23869e-05, 3.18519e-05)"
            inkscape:label="Start"
            inkstitch:ties="1" />
         <path
@@ -449,7 +543,7 @@
         <g
            id="command_group5"
            inkscape:label="Ink/Stitch Command: Trim thread after sewing this object"
-           transform="matrix(0.74911,0,0,0.74911,1110.82,795.415)">
+           transform="matrix(0.74911 0 0 0.74911 1110.82 795.415)">
           <path
              id="command_connector5"
              d="M 15.868429,55.450016 17.226881,85.482844"
@@ -476,7 +570,7 @@
            style="fill:none;stroke:#f9d523;stroke-width:0.750289;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.750289, 0.750289;stroke-dashoffset:0;stroke-opacity:1"
            d="M 1131.4354,900.90183 1137.5225,901.60037"
            id="path2138"
-           transform="translate(-1.23869e-5,3.18519e-5)"
+           transform="translate(-1.23869e-05, 3.18519e-05)"
            inkscape:label="Start"
            inkstitch:ties="1" />
         <path
@@ -504,7 +598,7 @@
         <g
            id="command_group6"
            inkscape:label="Ink/Stitch Command: Trim thread after sewing this object"
-           transform="matrix(0.74911,0,0,0.74911,1110.82,795.415)">
+           transform="matrix(0.74911 0 0 0.74911 1110.82 795.415)">
           <path
              id="command_connector6"
              d="M 12.487342,107.39048 13.059242,137.42211"
@@ -531,7 +625,7 @@
            style="fill:none;stroke:#f9d523;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.264583, 0.264583;stroke-dashoffset:0;stroke-opacity:1"
            d="M -121.92792,54.562639 -119.83218,53.015723"
            id="path826"
-           transform="matrix(2.83128,0,0,2.83128,1481.67,778.028)"
+           transform="matrix(2.83128 0 0 2.83128 1481.67 778.028)"
            inkstitch:ties="1"
            sodipodi:nodetypes="cc"
            inkscape:label="Start" />
@@ -560,7 +654,7 @@
         <g
            id="command_group8"
            inkscape:label="Ink/Stitch Command: Trim thread after sewing this object"
-           transform="matrix(0.74911,0,0,0.74911,1110.82,795.415)">
+           transform="matrix(0.74911 0 0 0.74911 1110.82 795.415)">
           <path
              id="command_connector8"
              d="M 20.330619,155.48174 26.625702,184.9396"
@@ -582,7 +676,7 @@
       </g>
     </g>
     <g
-       transform="matrix(0.21518203,0,0,0.21518203,-428.11594,-104.36446)"
+       transform="matrix(0.215182 0 0 0.215182 -428.116 -104.364)"
        id="g313"
        inkscape:label="Software">
       <g
@@ -603,7 +697,7 @@
            inkstitch:satin_column="True"
            inkstitch:zigzag_underlay="True"
            inkscape:label="S"
-           transform="matrix(6.18383,0,0,6.18383,2132.16,419.613)"
+           transform="matrix(6.18383 0 0 6.18383 2132.16 419.613)"
            inkstitch:ties="3" />
         <path
            d="M -124.52609,68.175277 C -124.70317,68.032532 -124.90046,67.912076 -125.11005,67.817333 -125.31963,67.72259 -125.54153,67.653561 -125.76784,67.613668 M -125.81064,65.897302 C -125.43948,65.934248 -125.07287,66.015688 -124.72241,66.140876 -124.37195,66.266063 -124.03764,66.434999 -123.7311,66.646937"
@@ -614,7 +708,7 @@
            inkstitch:satin_column="True"
            inkstitch:zigzag_underlay="True"
            inkscape:label="S end"
-           transform="matrix(6.18383,0,0,6.18383,2132.16,419.613)"
+           transform="matrix(6.18383 0 0 6.18383 2132.16 419.613)"
            inkstitch:ties="2" />
       </g>
       <g
@@ -635,7 +729,7 @@
            inkstitch:ties="2"
            inkstitch:zigzag_underlay="True"
            inkscape:label="o"
-           transform="matrix(6.18383,0,0,6.18383,2132.16,419.613)" />
+           transform="matrix(6.18383 0 0 6.18383 2132.16 419.613)" />
       </g>
       <g
          id="g18206"
@@ -819,7 +913,7 @@
            inkscape:connector-curvature="0"
            style="display:inline;fill:none;stroke:#f9d523;stroke-width:0.161712;stroke-opacity:1"
            inkscape:label="a("
-           transform="matrix(6.18383,0,0,6.18383,2132.16,419.613)"
+           transform="matrix(6.18383 0 0 6.18383 2132.16 419.613)"
            sodipodi:nodetypes="ccccsccsssccscccsscssccsccc"
            inkstitch:satin_column="True"
            inkstitch:zigzag_underlay="True"
@@ -864,7 +958,7 @@
            inkscape:connector-curvature="0"
            style="display:inline;fill:none;stroke:#f9d523;stroke-width:0.161712;stroke-opacity:1"
            inkscape:label="r|"
-           transform="matrix(6.18383,0,0,6.18383,2132.16,419.613)"
+           transform="matrix(6.18383 0 0 6.18383 2132.16 419.613)"
            sodipodi:nodetypes="cccccccccccccccccc"
            inkstitch:satin_column="True"
            inkstitch:zigzag_underlay="True"
@@ -897,7 +991,7 @@
            style="fill:none;stroke:#f9d523;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.265, 0.265;stroke-dashoffset:0;stroke-opacity:1"
            d="M -85.5608,72.1445 -86.527748,72.240702"
            id="path20813"
-           transform="matrix(6.18383,0,0,6.18383,2132.16,419.613)"
+           transform="matrix(6.18383 0 0 6.18383 2132.16 419.613)"
            inkscape:label="Start"
            inkstitch:ties="1" />
         <path
@@ -907,7 +1001,7 @@
            style="fill:none;stroke:#f9d523;stroke-width:0.161712;stroke-opacity:1"
            inkscape:label="e"
            sodipodi:nodetypes="cssscccssssccsssssssccsscsssssscssssssscsc"
-           transform="matrix(6.18383,0,0,6.18383,2132.16,419.613)"
+           transform="matrix(6.18383 0 0 6.18383 2132.16 419.613)"
            inkstitch:satin_column="True"
            inkstitch:zigzag_underlay="True"
            inkstitch:ties="3" />
@@ -918,14 +1012,14 @@
            style="fill:none;stroke:#f9d523;stroke-width:0.161712;stroke-opacity:1"
            inkscape:label="e end"
            sodipodi:nodetypes="cccc"
-           transform="matrix(6.18383,0,0,6.18383,2132.16,419.613)"
+           transform="matrix(6.18383 0 0 6.18383 2132.16 419.613)"
            inkstitch:satin_column="True"
            inkstitch:zigzag_underlay="True"
            inkstitch:ties="2" />
         <g
            id="command_group9"
            inkscape:label="Ink/Stitch Command: Trim thread after sewing this object"
-           transform="matrix(1.63614,0,0,1.63614,1322.18,457.589)">
+           transform="matrix(1.63614 0 0 1.63614 1322.18 457.589)">
           <path
              id="command_connector9"
              d="M 167.57387,226.8134 176.77427,255.40844"
@@ -947,7 +1041,7 @@
       </g>
     </g>
     <g
-       transform="matrix(0.21518203,0,0,0.21518203,-428.11594,-104.36446)"
+       transform="matrix(0.215182 0 0 0.215182 -431.404 -106.412)"
        id="g321"
        inkscape:label="FreedomDay">
       <g
@@ -1283,12 +1377,12 @@
            inkscape:label="Start"
            inkstitch:ties="1" />
         <path
-           d="M 1753.157,914.707 C 1748.8871,912.47474 1744.0036,911.76303 1739.2445,911.54883 1732.6143,911.01879 1725.9046,913.64507 1721.2683,918.38504 1713.782,925.9416 1711.4211,937.79788 1714.5335,947.84263 1716.0805,952.76059 1720.6735,956.63378 1725.9035,956.81339 1728.089,957.06869 1730.2484,956.718 1732.2591,955.94103 1734.2698,955.16406 1736.1317,953.96082 1737.722,952.511 M 1736.211,943.387 C 1735.2424,944.4271 1734.1727,945.42817 1732.8669,946.02697 1730.2908,947.18922 1726.3626,946.71522 1725.3353,943.69039 1723.6861,939.08139 1724.2942,933.82476 1726.3192,929.4276 1728.2733,925.25832 1732.2948,921.31942 1737.21,921.61508 1741.9092,922.07247 1746.61,922.61089 1751.312,923.08938"
+           d="M 1753.157,914.707 C 1748.8871,912.47474 1744.0036,911.76303 1739.2445,911.54883 1735.9294,911.28381 1732.602,911.81529 1729.52,913.00182 1726.4381,914.18834 1723.6016,916.0299 1721.2683,918.38504 1719.3967,920.27416 1717.8455,922.43203 1716.62,924.76316 1715.3946,927.09428 1714.4949,929.59864 1713.9264,932.18076 1713.3579,934.76288 1713.1206,937.42275 1713.22,940.06489 1713.3194,942.70703 1713.7554,945.33144 1714.5335,947.84263 1715.2964,950.30491 1716.8314,952.50269 1718.8295,954.10736 1720.8275,955.71203 1723.2885,956.72358 1725.9035,956.81339 1728.089,957.06869 1730.2484,956.718 1732.2591,955.94103 1734.2698,955.16406 1736.1317,953.96082 1737.722,952.511 M 1736.211,943.387 C 1735.2424,944.4271 1734.1763,945.43619 1732.8669,946.02697 1731.5788,946.60809 1729.9528,946.78016 1728.5203,946.42883 1727.2891,946.10854 1726.4161,945.31095 1725.8019,944.33054 1725.1878,943.35013 1724.8325,942.18691 1724.6369,941.13535 1724.3462,939.50946 1724.3488,937.83422 1724.4494,936.47955 1724.6484,934.03963 1725.3067,931.62618 1726.3192,929.4276 1727.2962,927.34296 1728.7902,925.31591 1730.6542,923.84699 1732.5182,922.37806 1734.7524,921.46725 1737.21,921.61508 1741.9092,922.07247 1746.61,922.61089 1751.312,923.08938"
            id="path337"
            inkscape:connector-curvature="0"
            style="display:inline;fill:none;stroke:#f9d523;stroke-opacity:1"
            inkscape:label="a("
-           sodipodi:nodetypes="ccsscsccscccs"
+           sodipodi:nodetypes="ccssssssscsccscscccscs"
            inkstitch:satin_column="True"
            inkstitch:zigzag_underlay="True"
            inkstitch:ties="3" />
@@ -1320,7 +1414,7 @@
            style="fill:none;stroke:#f9d523;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.265, 0.265;stroke-dashoffset:0;stroke-opacity:1"
            d="M -59.714781,81.066593 -59.885785,79.776557"
            id="path7683"
-           transform="matrix(6.18383,0,0,6.18383,2132.16,419.613)"
+           transform="matrix(6.18383 0 0 6.18383 2132.16 419.613)"
            inkscape:label="Start"
            sodipodi:nodetypes="cc"
            inkstitch:ties="1" />
@@ -1338,7 +1432,7 @@
            style="fill:none;stroke:#f9d523;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.265, 0.265;stroke-dashoffset:0;stroke-opacity:1"
            d="M -59.100072,85.361487 -58.392545,85.545055 -55.639005,79.834011"
            id="path7685"
-           transform="matrix(6.18383,0,0,6.18383,2132.16,419.613)"
+           transform="matrix(6.18383 0 0 6.18383 2132.16 419.613)"
            inkscape:label="Jump"
            inkstitch:ties="3" />
         <path
@@ -1364,7 +1458,7 @@
         <g
            id="command_group10"
            inkscape:label="Ink/Stitch Command: Trim thread after sewing this object"
-           transform="matrix(1.63614,0,0,1.63614,1322.18,457.589)">
+           transform="matrix(1.63614 0 0 1.63614 1322.18 457.589)">
           <path
              id="command_connector10"
              d="M 267.49016,280.10668 267.71224,311.98921"
@@ -1387,15 +1481,34 @@
     </g>
     <g
        id="g4652"
-       transform="matrix(1.3306497,0,0,1.3306497,30.686769,-14.071228)">
-      <polygon
-         points="1427.333,842.021 1425.147,852.044 1434.922,852.044 1437.192,842.021 "
-         id="polygon317"
-         style="fill:none;fill-opacity:1;stroke:#f15a24;stroke-opacity:1"
-         transform="matrix(0.161712,0,0,0.161712,-344.796,-67.8565)"
-         inkstitch:satin_column="False"
-         inkstitch:stroke_method="ripple_stitch"
-         inkstitch:line_count="5" />
+       transform="matrix(1.33065 0 0 1.33065 30.6868 -14.0712)"
+       inkscape:label="f red bar">
+      <path
+         style="fill:none;stroke:#f15a24;stroke-width:0.19915079;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:0.19915079, 0.19915079;stroke-dashoffset:0"
+         d="M -112.96347,69.118768 -113.75736,69.118845"
+         id="path2994"
+         inkscape:label="start"
+         inkstitch:ties="1" />
+      <path
+         id="path1174"
+         style="fill:none;stroke:#f15a24;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="M -121.44991,78.980093 H -120.3982 M -120.97952,76.823323 H -119.91878"
+         sodipodi:nodetypes="cccc"
+         transform="matrix(0.751513 0 0 0.751513 -23.0615 10.5747)"
+         inkscape:label="left"
+         inkstitch:satin_column="True"
+         inkstitch:zigzag_underlay="True"
+         inkstitch:ties="3" />
+      <path
+         id="path567"
+         style="fill:none;stroke:#f15a24;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="M -119.3465,78.980093 H -120.3982 M -118.85804,76.823323 H -119.91878"
+         sodipodi:nodetypes="cccc"
+         transform="matrix(0.751512 0 0 0.751512 -23.0615 10.5747)"
+         inkscape:label="right"
+         inkstitch:satin_column="True"
+         inkstitch:zigzag_underlay="True"
+         inkstitch:ties="2" />
     </g>
   </g>
 </svg>
