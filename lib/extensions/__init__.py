@@ -36,7 +36,6 @@ from .lettering_update_json_glyphlist import LetteringUpdateJsonGlyphlist
 from .letters_to_font import LettersToFont
 from .object_commands import ObjectCommands
 from .object_commands_toggle_visibility import ObjectCommandsToggleVisibility
-from .outline import Outline
 from .output import Output
 from .palette_split_text import PaletteSplitText
 from .palette_to_text import PaletteToText
@@ -81,7 +80,6 @@ __all__ = extensions = [StitchPlanPreview,
                         ConvertToStroke,
                         JumpToStroke,
                         FillToStroke,
-                        Outline,
                         CutSatin,
                         AutoSatin,
                         AutoRun,
