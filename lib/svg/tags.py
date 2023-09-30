@@ -98,7 +98,6 @@ inkstitch_attribs = [
     'underlay_underpath',
     'underpath',
     'flip',
-    'expand_mm',
     'clip',
     # stroke
     'stroke_method',
@@ -124,7 +123,6 @@ inkstitch_attribs = [
     'satin_method',
     'short_stitch_distance_mm',
     'short_stitch_inset',
-    'running_stitch_length_mm',
     'reverse_rails',
     'swap_satin_rails',
     'center_walk_underlay',
