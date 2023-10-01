@@ -15,22 +15,25 @@ techniques:
 field-of-use:
 user-level: Intermediate
 ---
+
+![Example polo shirts](/assets/images/tutorials/software-freedom-day/sharti.jpg)
+
 ## Steps
 
 1. Download the Software Freedom Day Logo file from https://wiki.softwarefreedomday.org/Logo
 2. Open the file in Inkscape and delete all content other than the squarish logo, delete content by object rather than by group since some of the groups are linked
 3. Using `File>Document Properties...`, Change the background color to black, and resize the document
-![Screen shot of square logo](/assests/images/tutorials/software-freedom-day/SFDTutorial1.png)
+![Screen shot of square logo](/assets/images/tutorials/software-freedom-day/SFDTutorial1.png)
 4. Using `Layer>Layers and Objects...` Re-arrange the objects so that they are grouped by colors, green, yellow and red. By grouping the same colors together, you will minimize the number of times the embroidery machine needs to change the thread. Label them appropriately.  You will likely need to ungroup paths and then group them together appropriately.
-![Screen shot of square logo and layers after re-ordering](/assests/images/tutorials/software-freedom-day/SFDTutorial2.png)
+![Screen shot of square logo and layers after re-ordering](/assets/images/tutorials/software-freedom-day/SFDTutorial2.png)
 5. Using `Object>Fill and Stroke...` give all yellow objects a uniform stroke of RGB
 (249,213,35), and no fill. The green hill should have a uniform fill of RGB
 (57,181,54), and no stroke. The red part of the 'f' should have a uniform stroke of
 RGB (241,90,36) and no fill.
-![Screen shot of square logo after updating the colors](/assests/images/tutorials/software-freedom-day/SFDTutorial3.png)
+![Screen shot of square logo after updating the colors](/assets/images/tutorials/software-freedom-day/SFDTutorial3.png)
 6. Select the green hill, then choose `Extensions>Ink/Stitch>Params...`, then give it
 a contour fill, going from inner to outer. Leave other parameters as default.
-![Screen shot of contour filled hill](/assests/images/tutorials/software-freedom-day/SFDTutorial4.png)
+![Screen shot of contour filled hill](/assets/images/tutorials/software-freedom-day/SFDTutorial4.png)
 7. Select the red bar, and zoom into it.  As it is a polygon, and we want to use
 a satin stitch, we will need to replace it with paths.  Select the 
 `Bezier curves and straght lines` tool and overlay the top and bottom parts of
@@ -47,28 +50,28 @@ choose the `Bezier curves and straight lines` tool again and add a small horizon
 dotted line going from right to left, between the lines forming the left segment.
 This line will be the start of the stitching, and will have a lock stitch that will
 be hidden.
-![Screen shot of red part of f](/assests/images/tutorials/software-freedom-day/SFDTutorial5.png)
+![Screen shot of red part of f](/assets/images/tutorials/software-freedom-day/SFDTutorial5.png)
 Select the right part of, then go to `Path>Reverse`.  With the right part still
 selected, choose `Extensions>Ink/Stitch>Params` and choose a custom satin stitch with
 and end lock stitch, but not a beginning lock stitch. Do also add Zig-zag Underlay.
-![Screen shot of stitches for right part of red part of f](/assests/images/tutorials/software-freedom-day/SFDTutorial6.png)
+![Screen shot of stitches for right part of red part of f](/assets/images/tutorials/software-freedom-day/SFDTutorial6.png)
 Select the left part, choose `Extensions>Ink/Stitch>Params` and choose a custom
 satin stitch with no lock stitches, and add a Zig-Zag Underlay.
-![Screen shot of stitches for left part of red part of f](/assests/images/tutorials/software-freedom-day/SFDTutorial7.png)
+![Screen shot of stitches for left part of red part of f](/assets/images/tutorials/software-freedom-day/SFDTutorial7.png)
 Select the dotted starting line, choose `Extensions>Ink/Stitch>Params` and
 ensure there is a starting lock stitch, but no ending lock stitch.
-![Screen shot of stitches for starting part of f](/assests/images/tutorials/software-freedom-day/SFDTutorial8.png)
+![Screen shot of stitches for starting part of f](/assets/images/tutorials/software-freedom-day/SFDTutorial8.png)
 8. Select the sun.  Break it up into three non intersecting but adjacent paths with
 equal numbers of nodes.
-![Screen shot of top part of sun](/assests/images/tutorials/software-freedom-day/SFDTutorial9.png)
-![Screen shot of right part of sun](/assests/images/tutorials/software-freedom-day/SFDTutorial10.png)
-![Screen shot of bottom part of sun](/assests/images/tutorials/software-freedom-day/SFDTutorial11.png)
+![Screen shot of top part of sun](/assets/images/tutorials/software-freedom-day/SFDTutorial9.png)
+![Screen shot of right part of sun](/assets/images/tutorials/software-freedom-day/SFDTutorial10.png)
+![Screen shot of bottom part of sun](/assets/images/tutorials/software-freedom-day/SFDTutorial11.png)
 Add a starting segment at the beginning of the bottom part of the sun to
 allow for a hidden lock stitch
-![Screen shot of starting segment of sun](/assests/images/tutorials/software-freedom-day/SFDTutorial12.png)
+![Screen shot of starting segment of sun](/assets/images/tutorials/software-freedom-day/SFDTutorial12.png)
 Break off the last part of the top segment, and reverse its direction to
 allow for a hidden lock stitch
-![Screen shot of end of top segment of sun](/assests/images/tutorials/software-freedom-day/SFDTutorial13.png)
+![Screen shot of end of top segment of sun](/assets/images/tutorials/software-freedom-day/SFDTutorial13.png)
 For each of these segments, choose `Extensions>Ink/Stitch>Params` and ensure they
 are stitched in the correct direction. For all but the starting segment, ensure the
 stitch density is uniform and there is a Zig-zag underlay. If the stitch densit is
@@ -76,16 +79,16 @@ not uniform, add additional nodes to make it uniform. For all segments apart
 from the starting and end segments, ensure there are no lock stitches.  For the
 starting segment ensure there is a beginning lock stitch, and for the ending
 segment, ensure there is a final lock stitch
-![Screen shot of stitches for end of top segment](/assests/images/tutorials/software-freedom-day/SFDTutorial14.png)
+![Screen shot of stitches for end of top segment](/assets/images/tutorials/software-freedom-day/SFDTutorial14.png)
 9. For each of the rays, break up the paths into two lines with an equal number of
 nodes.  Add a starting segment with a beginning lock stitch on the portion of the
 ray furthermost from the sun. Create a reversed ending segment with with only an
 ending lock stitch on the portion of the ray closest to the sun.
-![Screen shot of a ray showing dotted starting, left and reversed ending right segments](/assests/images/tutorials/software-freedom-day/SFDTutorial15.png)
+![Screen shot of a ray showing dotted starting, left and reversed ending right segments](/assets/images/tutorials/software-freedom-day/SFDTutorial15.png)
 10 .For each of the letters, break up the paths into two lines with an equal number of
 nodes.  Add a starting segment with a beginning lock stitch. Create a reversed ending
 segment with with only an ending lock stitch.
-![Screen shot of a letter showing dotted starting, middle and reversed ending segments](/assests/images/tutorials/software-freedom-day/SFDTutorial16.png)
+![Screen shot of a letter showing dotted starting, middle and reversed ending segments](/assets/images/tutorials/software-freedom-day/SFDTutorial16.png)
 11. If the embroidery machine used supports automatic stitch trimming, add these
 for each ray by using `Extensions>Ink/Stitch>Commands>Attach Commands to Selected Objects>Trim thread after sewing this object`.
 12. Add a new layer with the license information
