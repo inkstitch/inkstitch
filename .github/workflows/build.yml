@@ -207,10 +207,11 @@ jobs:
         run: |
           brew update
 
-          brew install gtk+3 pkg-config gobject-introspection geos libffi gettext || true
+          brew install gtk+3 pkg-config gobject-introspection geos libffi gettext gfortran openblas || true
 
           export LDFLAGS="-L/usr/local/opt/libffi/lib"
           export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig"
+          export PKG_CONFIG_PATH="/usr/local/opt/openblas/lib/pkgconfig"
 
           # for msgfmt
           echo "/usr/local/opt/gettext/bin" >> $GITHUB_PATH
@@ -227,6 +228,8 @@ jobs:
           pip install -U lxml --no-binary lxml
           pip uninstall --yes shapely
           pip install -v -U Shapely==1.8.5 --no-binary Shapely
+          pip uninstall --yes scipy
+          pip install -v -U scipy --no-binary scipy
           pip install pyinstaller
 
           echo "${{ env.pythonLocation }}/bin" >> $GITHUB_PATH
