@@ -100,6 +100,9 @@ Choose `Extensions>Ink/Stitch>Commands>Add Layer Commands...` and ignore the lay
 machine used. Embroider another sample. If it is ok, embroider a
 final piece, such as a polo shirt.
 
+*This tutorial has benefitted from many suggestions by Kaalleen, Claudine Peyrat
+Michael Njuguna and the [Low Tech Linux video tutorials](https://www.youtube.com/playlist?list=PLq0WwZBpw-4Hfq8V_I_eptPWQBDJ93jNE).*
+
 ## Software Freedom Day
 
 ![Software Freedom Day logo](/assets/images/tutorials/samples/SoftwareFreedomDay.svg)
