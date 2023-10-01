@@ -139,21 +139,23 @@ user-level: Intermediate
 
 12. Add a new layer with the license information
 
-```
-CC BY-SA 3.0 Deed Unported
-https://creativecommons.org/licenses/by-sa/3.0/
-Modified for embroidery from the originals
-https://wiki.softwarefreedomday.org/Logos
-```
+    ```
+    CC BY-SA 3.0 Deed Unported
+    https://creativecommons.org/licenses/by-sa/3.0/
+    Modified for embroidery from the originals
+    https://wiki.softwarefreedomday.org/Logos
+    ```
 
-    Choose `Extensions>Ink/Stitch>Commands>Add Layer Commands...` and ignore the layer for stitching but leave it visible
+    Choose `Extensions>Ink/Stitch>Commands>Add Layer Commands...` and ignore the
+    layer for stitching but leave it visible.
 
-12. Embroider a sample, adjust it as necessary for the embroidery machine used.
+13. Embroider a sample, adjust it as necessary for the embroidery machine used.
     Embroider another sample. If it is ok, embroider a final piece, such as a
     polo shirt.
 
 *This tutorial has benefitted from many suggestions by Kaalleen, Claudine Peyrat
-Michael Njuguna and the [Low Tech Linux video tutorials](https://www.youtube.com/playlist?list=PLq0WwZBpw-4Hfq8V_I_eptPWQBDJ93jNE).*
+Michael Njuguna and from the
+[Low Tech Linux video tutorials](https://www.youtube.com/playlist?list=PLq0WwZBpw-4Hfq8V_I_eptPWQBDJ93jNE).*
 
 ## Software Freedom Day (modified for Ink/Stitch by Benson Muite)
 
