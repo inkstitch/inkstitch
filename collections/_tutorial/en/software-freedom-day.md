@@ -103,7 +103,7 @@ final piece, such as a polo shirt.
 *This tutorial has benefitted from many suggestions by Kaalleen, Claudine Peyrat
 Michael Njuguna and the [Low Tech Linux video tutorials](https://www.youtube.com/playlist?list=PLq0WwZBpw-4Hfq8V_I_eptPWQBDJ93jNE).*
 
-## Software Freedom Day
+## Software Freedom Day (modified for Ink/Stitch by Benson Muite)
 
 ![Software Freedom Day logo](/assets/images/tutorials/samples/SoftwareFreedomDay.svg)
 
