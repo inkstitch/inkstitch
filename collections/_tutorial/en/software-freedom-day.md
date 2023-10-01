@@ -8,6 +8,7 @@ image: "/assets/images/tutorials/samples/SoftwareFreedomDay.svg"
 
 tutorial-type:
   - Sample File
+  - Text
 stitch-type: 
   - Fill Stitch
   - Satin Stitch
