@@ -1,6 +1,6 @@
 ---
 title: Software Freedom Day
-permalink: /tutorials/applique/
+permalink: /tutorials/software-freedom-day/
 last_modified_at: 2023-10-01
 language: en
 excerpt: "Software Freedom Day example file"
