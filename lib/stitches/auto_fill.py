@@ -634,9 +634,9 @@ def travel(shape, travel_graph, edge, running_stitch_length, running_stitch_tole
     path = networkx.shortest_path(travel_graph, start, end, weight='weight')
     if underpath and path != (start, end):
         path = smooth_path(path, 2)
+        path = clamp_path_to_polygon(path, shape)
     else:
         path = [InkstitchPoint.from_tuple(point) for point in path]
-    path = clamp_path_to_polygon(path, shape)
 
     points = running_stitch(path, running_stitch_length, running_stitch_tolerance)
     stitches = [Stitch(point) for point in points]
