@@ -222,11 +222,11 @@ jobs:
           pip install wheel
           pip install PyGObject
           pip install attrdict3
-          pip install scipy==1.10.1
-          pip install wxPython==4.2.1
           pip install -r requirements.txt
           # with --no-binary argument may fix notary issues as well shapely speedups error issue
-          pip install -U lxml --no-binary lxml
+          pip install -U lxml==4.7.1 --no-binary lxml
+          pip install scipy==1.8.0
+          pip install wxPython==4.2.1
           pip uninstall --yes shapely
           pip install -v -U Shapely==1.8.5 --no-binary Shapely
           pip install pyinstaller
