@@ -4,7 +4,7 @@ permalink: /tutorials/software-freedom-day/
 last_modified_at: 2023-10-02
 language: en
 excerpt: "Software Freedom Day example file"
-image: "/assets/images/tutorials/software-freedom-day/sharti.jpg"
+image: "/assets/images/tutorials/software-freedom-day/StitchoutSFD.jpg"
 
 tutorial-type:
   - Sample File
