@@ -1,10 +1,10 @@
 ---
 title: Software Freedom Day
 permalink: /tutorials/software-freedom-day/
-last_modified_at: 2023-10-01
+last_modified_at: 2023-10-02
 language: en
 excerpt: "Software Freedom Day example file"
-image: "/assets/images/tutorials/samples/SoftwareFreedomDay.svg"
+image: "/assets/images/tutorials/software-freedom-day/sharti.jpg"
 
 tutorial-type:
   - Sample File
@@ -153,7 +153,7 @@ user-level: Intermediate
     Embroider another sample. If it is ok, embroider a final piece, such as a
     polo shirt.
 
-*This tutorial has benefitted from many suggestions by Kaalleen, Claudine Peyrat
+*This tutorial has benefitted from many suggestions by Kaalleen, Claudine Peyrat,
 Michael Njuguna and from the
 [Low Tech Linux video tutorials](https://www.youtube.com/playlist?list=PLq0WwZBpw-4Hfq8V_I_eptPWQBDJ93jNE).*
 
