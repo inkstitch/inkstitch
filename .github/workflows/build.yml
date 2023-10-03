@@ -198,7 +198,7 @@ jobs:
           submodules: recursive
       - uses: actions/setup-python@v4
         with:
-          python-version: '3.8.x'
+          python-version: '3.9.x'
       - uses: actions/setup-node@v3
         with:
           node-version: '16.x'
@@ -221,12 +221,12 @@ jobs:
           pip --version
           pip install wheel
           pip install PyGObject
-          pip install wxpython==4.1.1
+          pip install wxpython==4.2.1
           pip install -r requirements.txt
           # with --no-binary argument may fix notary issues as well shapely speedups error issue
           pip install -U lxml --no-binary lxml
-          pip uninstall --yes shapely
-          pip install -v -U Shapely==2.0.1 --no-binary Shapely
+          pip uninstall --yes Shapely
+          pip install -v -U Shapely --no-binary Shapely
           pip install pyinstaller
 
           echo "${{ env.pythonLocation }}/bin" >> $GITHUB_PATH
