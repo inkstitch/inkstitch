@@ -225,8 +225,10 @@ jobs:
           pip install -r requirements.txt
           # with --no-binary argument may fix notary issues as well shapely speedups error issue
           pip install -U lxml --no-binary lxml
-          #pip uninstall --yes Shapely
-          #pip install -v -U Shapely --no-binary Shapely
+          pip uninstall --yes Shapely
+          pip install -v -U Shapely --no-binary Shapely
+          pip uninstall --yes numpy
+          pip install numpy
           pip install pyinstaller
 
           echo "${{ env.pythonLocation }}/bin" >> $GITHUB_PATH
