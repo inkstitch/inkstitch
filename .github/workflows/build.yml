@@ -221,6 +221,7 @@ jobs:
           pip --version
           pip install wheel
           pip install numpy
+          pip install Cython
           pip install PyGObject
           pip install wxpython
           pip install -r requirements.txt
