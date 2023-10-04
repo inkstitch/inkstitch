@@ -220,17 +220,11 @@ jobs:
           pip install --upgrade pip
           pip --version
           pip install wheel
-          pip install numpy
-          pip install Cython
-          pip install PyGObject
-          pip install wxpython
-          pip install -r requirements.txt
           # with --no-binary argument may fix notary issues as well shapely speedups error issue
-          pip uninstall --yes shapely
           pip install -v -U Shapely --no-binary Shapely
           pip install -U lxml --no-binary lxml
-          pip uninstall --yes numpy
-          pip install numpy
+          pip install PyGObject
+          pip install -r requirements.txt
           pip install pyinstaller
 
           echo "${{ env.pythonLocation }}/bin" >> $GITHUB_PATH
