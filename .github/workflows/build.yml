@@ -219,12 +219,12 @@ jobs:
 
           pip install --upgrade pip
           pip --version
-          pip install wheel
-          # with --no-binary argument may fix notary issues as well shapely speedups error issue
-          pip install -v -U Shapely --no-binary Shapely
-          pip install -U lxml --no-binary lxml
+          pip install wheell
           pip install PyGObject
           pip install -r requirements.txt
+          # with --no-binary argument may fix notary issues as well shapely speedups error issue
+          #pip install -v -U Shapely --no-binary Shapely
+          #pip install -U lxml --no-binary lxm
           pip install pyinstaller==5.11.0
           pip install pyinstaller-hooks-contrib==2023.3
 
