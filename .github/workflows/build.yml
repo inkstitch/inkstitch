@@ -164,7 +164,8 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install wheel
           python -m pip install -r requirements.txt
-          python -m pip install pyinstaller
+          python -m pip install pyinstaller==5.11.0
+          python -m pip install pyinstaller-hooks-contrib==2023.3
 
           echo "${{ env.pythonLocation }}\bin" >> $GITHUB_PATH
       - shell: bash
