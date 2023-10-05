@@ -225,7 +225,8 @@ jobs:
           pip install -U lxml --no-binary lxml
           pip install PyGObject
           pip install -r requirements.txt
-          pip install pyinstaller
+          pip install pyinstaller==5.11.0
+          pip install pyinstaller-hooks-contrib==2023.3
 
           echo "${{ env.pythonLocation }}/bin" >> $GITHUB_PATH
       - shell: bash
