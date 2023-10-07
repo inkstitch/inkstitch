@@ -28,5 +28,4 @@ pywinutils ; sys_platform == 'win32'
 pywin32 ; sys_platform == 'win32'
 
 # temp fix for broken release
-pyinstaller==5.11.0
-pyinstaller-hooks-contrib==2023.3
+pyinstaller==5.13.2
