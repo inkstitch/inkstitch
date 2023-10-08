@@ -80,6 +80,12 @@ class ColorBlock(object):
         return sum(1 for stitch in self if stitch.trim)
 
     @property
+    def num_jumps(self):
+        """Number of jumps in this color block."""
+
+        return sum(1 for stitch in self if stitch.jump)
+
+    @property
     def stop_after(self):
         if self.last_stitch is not None:
             return self.last_stitch.stop

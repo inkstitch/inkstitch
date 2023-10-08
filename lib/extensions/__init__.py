@@ -17,6 +17,7 @@ from .cut_satin import CutSatin
 from .cutwork_segmentation import CutworkSegmentation
 from .density_map import DensityMap
 from .duplicate_params import DuplicateParams
+from .element_info import ElementInfo
 from .fill_to_stroke import FillToStroke
 from .flip import Flip
 from .generate_palette import GeneratePalette
@@ -70,6 +71,7 @@ __all__ = extensions = [ApplyThreadlist,
                         CutworkSegmentation,
                         DensityMap,
                         DuplicateParams,
+                        ElementInfo,
                         FillToStroke,
                         Flip,
                         GeneratePalette,

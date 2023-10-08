@@ -173,6 +173,10 @@ class StitchPlan(object):
         return sum(block.num_stitches for block in self)
 
     @property
+    def num_jumps(self):
+        return sum(block.num_jumps for block in self)
+
+    @property
     def bounding_box(self):
         color_block_bounding_boxes = [cb.bounding_box for cb in self]
         minx = min(bb[0] for bb in color_block_bounding_boxes)
