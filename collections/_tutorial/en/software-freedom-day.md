@@ -91,14 +91,15 @@ user-level: Intermediate
 
    ![Screen shot of stitches for starting part of f](/assets/images/tutorials/software-freedom-day/SFDTutorial8.png)
 
-8. Select the sun.  Break it up into three non intersecting but adjacent paths
-   with equal numbers of nodes.
+8. As some machines may not easily create long satin stitches, you can choose to either use a
+   contour stitch for the sun or a satin stitch.  For the satin stitch, select the sun.  Break
+   it up into three non intersecting but adjacent paths with equal numbers of nodes.
 
-   ![Screen shot of top part of sun](/assets/images/tutorials/software-freedom-day/SFDTutorial9.png)
+   ![Screen shot of top part of sun to be used for a satin stitch](/assets/images/tutorials/software-freedom-day/SFDTutorial9.png)
 
-   ![Screen shot of right part of sun](/assets/images/tutorials/software-freedom-day/SFDTutorial10.png)
+   ![Screen shot of right part of sun to be used for a satin stitch](/assets/images/tutorials/software-freedom-day/SFDTutorial10.png)
 
-   ![Screen shot of bottom part of sun](/assets/images/tutorials/software-freedom-day/SFDTutorial11.png)
+   ![Screen shot of bottom part of sun to be used for a satin stitch](/assets/images/tutorials/software-freedom-day/SFDTutorial11.png)
 
    Add a starting segment at the beginning of the bottom part of the sun to
    allow for a hidden lock stitch
@@ -120,18 +121,35 @@ user-level: Intermediate
 
    ![Screen shot of stitches for end of top segment](/assets/images/tutorials/software-freedom-day/SFDTutorial14.png)
 
+   For the filled contour stitch, break the sun into two non intersecting segments,
+   one for the top, and one for the bottom.  Using `Object>Fill and Stroke...` give
+   the segments a uniform fill of RGB (249,213,35), and no stroke
+
+   ![Screen shot of top part of the sun to be used for a fill stitch](/assets/images/tutorials/software-freedom-day/SFDTutorial15.png)
+
+   ![Screen shot of bottom part of the sun to be used for a fill stitch](/assets/images/tutorials/software-freedom-day/SFDTutorial16.png)
+
+   Select the top part of the sun, from the menu choose
+   `Extensions>Ink/Stitch>Params...`, then give it a contour fill, going from inner
+   to outer. Leave other parameters as default.  Repeat this for the bottom part
+   of the sun.
+
+   ![Screen shot of simulated fill stitches for top part of the sun](/assets/images/tutorials/software-freedom-day/SFDTutorial17.png)
+
+   ![Screen shot of simulated fill stitches for bottom part of the sun](/assets/images/tutorials/software-freedom-day/SFDTutorial18.png)
+
 9. For each of the rays, break up the paths into two lines with an equal number
    of nodes.  Add a starting segment with a beginning lock stitch on the portion
    of the ray furthermost from the sun. Create a reversed ending segment with
    only an ending lock stitch on the portion of the ray closest to the sun.
 
-   ![Screen shot of a ray showing dotted starting, left and reversed ending right segments](/assets/images/tutorials/software-freedom-day/SFDTutorial15.png)
+   ![Screen shot of a ray showing dotted starting, left and reversed ending right segments](/assets/images/tutorials/software-freedom-day/SFDTutorial19.png)
 
 10. For each of the letters, break up the paths into two lines with an equal
     number of nodes.  Add a starting segment with a beginning lock stitch.
     Create a reversed ending segment with with only an ending lock stitch.
 
-    ![Screen shot of a letter showing dotted starting, middle and reversed ending segments](/assets/images/tutorials/software-freedom-day/SFDTutorial16.png)
+    ![Screen shot of a letter showing dotted starting, middle and reversed ending segments](/assets/images/tutorials/software-freedom-day/SFDTutorial20.png)
 
 11. If the embroidery machine used supports automatic stitch trimming, add these
     for each ray by using
@@ -154,11 +172,22 @@ user-level: Intermediate
     polo shirt.
 
 *This tutorial has benefitted from many suggestions by Kaalleen, Claudine Peyrat,
-Michael Njuguna and from the
+Michael Njuguna, Bianchifan, Lexelby and from the
 [Low Tech Linux video tutorials](https://www.youtube.com/playlist?list=PLq0WwZBpw-4Hfq8V_I_eptPWQBDJ93jNE).*
 
 ## Software Freedom Day (modified for Ink/Stitch by Benson Muite)
 
 ![Software Freedom Day logo](/assets/images/tutorials/samples/SoftwareFreedomDay.svg)
 
+### Using a Satin Stitch for the sun
+
+![Stitchout with a satin stitch for the sun](/assets/images/tutorials/software-freedom-day/StitchoutSFD.jpg)
+ 
 [Download](/assets/images/tutorials/samples/SoftwareFreedomDay.svg){: download="SoftwareFreedomDay.svg" }
+
+### Using a Filled Contour Stitch for the Sun
+
+![Stitchout with a filled contour stitch for the sun](/assets/images/tutorials/software-freedom-day/SFDFilledSunStitchout.jpg)
+ 
+[Download](/assets/images/tutorials/samples/SoftwareFreedomDayFilledSun.svg){: download="SoftwareFreedomDayFilledSun.svg" }
+
