@@ -27,5 +27,3 @@ flask-cors
 pywinutils ; sys_platform == 'win32'
 pywin32 ; sys_platform == 'win32'
 
-# temp fix for broken release
-pyinstaller==5.13.2
