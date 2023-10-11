@@ -209,7 +209,7 @@ jobs:
         run: |
           brew update
 
-          brew install gtk+3 pkg-config gobject-introspection geos libffi gettext || true
+          brew install gtk+3 pkg-config gobject-introspection geos libffi gettext jq gnu-getopt || true
 
           export LDFLAGS="-L/usr/local/opt/libffi/lib"
           export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig"

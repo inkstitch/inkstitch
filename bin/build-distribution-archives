@@ -71,11 +71,23 @@ if [ "$BUILD" = "osx" ]; then
                                                 --team-id '929A568N58' \
                                                 --password "${NOTARY_PASSWORD}"
             echo "Invoking notary process"
-            xcrun notarytool submit --wait \
+            xcrun notarytool submit -f --wait \
                                     --keychain-profile "inkstitch-profile" \
-                                    artifacts/inkstitch-${VERSION}-${OS}.pkg
+                                    artifacts/inkstitch-${VERSION}-${OS}.pkg 2>&1 | tee /tmp/notarization_info.json
             echo "Stapling the pkg for release"
             xcrun stapler staple artifacts/inkstitch-${VERSION}-${OS}.pkg
+            echo "Fetching the Notary Log"
+            # code snippet is from https://github.com/ddev/signing_tools/blob/master/macos_notarize.sh
+            status=$(jq -r .status </tmp/notarization_info.json)
+            id=$(jq -r .id </tmp/notarization_info.json)
+            echo "status=${status} id=${id}"
+            xcrun notarytool log --apple-id "${NOTARY_ACCOUNT}" --team-id '929A568N58'  --password "${NOTARY_PASSWORD}" ${id} -f json >/tmp/notarization_log.json
+            issues=$(jq -r .issues </tmp/notarization_log.json)
+            if [ "$issues" != "null" ]; then
+                printf "There are issues with the notarization (${issues})\n"
+                printf "=== Log output === \n$(cat /tmp/notarization_log.json)\n"
+                exit 7;
+            fi;
         fi
     else
         # local builds will not be signed or notarized
