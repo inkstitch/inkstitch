@@ -72,7 +72,7 @@ jobs:
           python -m pip install https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-20.04/wxPython-4.2.1-cp38-cp38-linux_x86_64.whl
 
           python -m pip install -r requirements.txt
-          python -m pip install pyinstaller
+          python -m pip install pyinstaller==5.13.2
 
           # scipy gives us a ELF error when stripped
           sudo apt-get install gcc g++ gfortran python3-dev libopenblas-dev liblapack-dev
@@ -116,8 +116,9 @@ jobs:
           # Numpy and Scipy version for older cpu compatibility
           python -m pip install numpy==1.23.1
           python -m pip install scipy==1.9.0
+          pip install wxPython
           python -m pip install -r requirements.txt
-          python -m pip install pyinstaller
+          python -m pip install pyinstaller==5.13.2
 
           echo "${{ env.pythonLocation }}\bin" >> $GITHUB_PATH
       - shell: bash
@@ -163,8 +164,9 @@ jobs:
           git config --system core.longpaths true
           python -m pip install --upgrade pip
           python -m pip install wheel
+          pip install wxPython
           python -m pip install -r requirements.txt
-          python -m pip install pyinstaller
+          python -m pip install pyinstaller==5.13.2
 
           echo "${{ env.pythonLocation }}\bin" >> $GITHUB_PATH
       - shell: bash
@@ -207,7 +209,7 @@ jobs:
         run: |
           brew update
 
-          brew install gtk+3 pkg-config gobject-introspection geos libffi gettext || true
+          brew install gtk+3 pkg-config gobject-introspection geos libffi gettext jq gnu-getopt || true
 
           export LDFLAGS="-L/usr/local/opt/libffi/lib"
           export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig"
@@ -221,13 +223,9 @@ jobs:
           pip --version
           pip install wheel
           pip install PyGObject
-          pip install wxpython==4.1.1
+          pip install wxPython
           pip install -r requirements.txt
-          # with --no-binary argument may fix notary issues as well shapely speedups error issue
-          pip install -U lxml --no-binary lxml
-          # pip uninstall --yes shapely
-          # pip install -v -U Shapely==2.0.1 --no-binary Shapely
-          pip install pyinstaller
+          pip install pyinstaller==5.13.2
 
           echo "${{ env.pythonLocation }}/bin" >> $GITHUB_PATH
       - shell: bash
