@@ -119,7 +119,7 @@ jobs:
           pip install wxPython
           python -m pip install -r requirements.txt
           python -m pip install pyinstaller==5.13.2
-          
+
           echo "${{ env.pythonLocation }}\bin" >> $GITHUB_PATH
       - shell: bash
         run: |
