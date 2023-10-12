@@ -8,7 +8,8 @@ if [ "$BUILD" = "osx" ]; then
     # adding version to Info.plist
     plutil -replace CFBundleShortVersionString -string ${VERSION} dist/inkstitch.app/Contents/Info.plist
     rm -rf dist/inkstitch/
-    python bin/fix_app_qt_folder_names_for_codesign.py dist/inkstitch.app
+    # this removes the extra dylibs that cause notary to fail.
+    rm -rf dist/inkstitch.app/Contents/MacOS/shapely/.dylibs
     # Install location for pkgbuild
     PKG_INSTALL_PATH="/tmp/inkstitch/"
     # Checking arch of macos and setting path of electron for arm64 or intel
