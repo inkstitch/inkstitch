@@ -14,7 +14,7 @@ from lib.debug import debug
 from lib.utils import get_resource_dir
 from lib.utils.threading import ExitThread
 from ..i18n import _
-from ..stitch_plan import stitch_groups_to_stitch_plan, stitch_plan_from_file
+from ..stitch_plan import stitch_plan_from_file
 from ..svg import PIXELS_PER_MM
 
 # L10N command label at bottom of simulator window
@@ -34,7 +34,7 @@ class ControlPanel(wx.Panel):
     def __init__(self, parent, *args, **kwargs):
         """"""
         self.parent = parent
-        self.stitch_plan = kwargs.pop('stitch_plan')
+        self.stitch_plan = kwargs.pop('stitch_plan', None)
         self.target_stitches_per_second = kwargs.pop('stitches_per_second')
         self.target_duration = kwargs.pop('target_duration')
         kwargs['style'] = wx.BORDER_SUNKEN
@@ -209,7 +209,6 @@ class ControlPanel(wx.Panel):
             (wx.ACCEL_NORMAL, ord('o'), self.on_toggle_npp_shortcut),
             (wx.ACCEL_NORMAL, ord('p'), self.play_or_pause),
             (wx.ACCEL_NORMAL, wx.WXK_SPACE, self.play_or_pause),
-            (wx.ACCEL_NORMAL, ord('q'), self.animation_quit),
             (wx.ACCEL_NORMAL, wx.WXK_PAGEDOWN, self.animation_one_command_backward),
             (wx.ACCEL_NORMAL, wx.WXK_PAGEUP, self.animation_one_command_forward),
 
@@ -227,7 +226,8 @@ class ControlPanel(wx.Panel):
         self.SetFocus()
 
         # wait for layouts so that panel size is set
-        wx.CallLater(50, self.load, self.stitch_plan)
+        if self.stitch_plan:
+            wx.CallLater(50, self.load, self.stitch_plan)
 
     def set_drawing_panel(self, drawing_panel):
         self.drawing_panel = drawing_panel
@@ -423,9 +423,6 @@ class ControlPanel(wx.Panel):
             stitch_number += 1
         self.drawing_panel.set_current_stitch(stitch_number)
 
-    def animation_quit(self, event):
-        self.parent.quit()
-
     def animation_restart(self, event):
         self.drawing_panel.restart()
 
@@ -454,7 +451,7 @@ class DrawingPanel(wx.Panel):
 
     def __init__(self, *args, **kwargs):
         """"""
-        self.stitch_plan = kwargs.pop('stitch_plan')
+        self.stitch_plan = kwargs.pop('stitch_plan', None)
         self.control_panel = kwargs.pop('control_panel')
         kwargs['style'] = wx.BORDER_SUNKEN
         wx.Panel.__init__(self, *args, **kwargs)
@@ -484,7 +481,8 @@ class DrawingPanel(wx.Panel):
         self.Bind(wx.EVT_MOUSEWHEEL, self.on_mouse_wheel)
 
         # wait for layouts so that panel size is set
-        wx.CallLater(50, self.load, self.stitch_plan)
+        if self.stitch_plan:
+            wx.CallLater(50, self.load, self.stitch_plan)
 
     def clamp_current_stitch(self):
         if self.current_stitch < 1:
@@ -520,10 +518,12 @@ class DrawingPanel(wx.Panel):
         wx.CallLater(int(1000 * frame_time), self.animate)
 
     def OnPaint(self, e):
+        dc = wx.PaintDC(self)
+
         if not self.loaded:
+            dc.Clear()
             return
 
-        dc = wx.PaintDC(self)
         canvas = wx.GraphicsContext.Create(dc)
 
         self.draw_stitches(canvas)
@@ -616,8 +616,8 @@ class DrawingPanel(wx.Panel):
             canvas.StrokeLineSegments(stitches, [(stitch[0] + 0.001, stitch[1]) for stitch in stitches])
 
     def clear(self):
-        dc = wx.ClientDC(self)
-        dc.Clear()
+        self.loaded = False
+        self.Refresh()
 
     def load(self, stitch_plan):
         self.current_stitch = 1
@@ -1012,14 +1012,9 @@ class SimulatorSlider(wx.Panel):
 class SimulatorPanel(wx.Panel):
     """"""
 
-    def __init__(self, parent, *args, **kwargs):
+    def __init__(self, parent, stitch_plan=None, target_duration=5, stitches_per_second=16):
         """"""
-        self.parent = parent
-        stitch_plan = kwargs.pop('stitch_plan')
-        target_duration = kwargs.pop('target_duration')
-        stitches_per_second = kwargs.pop('stitches_per_second')
-        kwargs['style'] = wx.BORDER_SUNKEN
-        wx.Panel.__init__(self, parent, *args, **kwargs)
+        super().__init__(parent, style=wx.BORDER_SUNKEN)
 
         self.cp = ControlPanel(self,
                                stitch_plan=stitch_plan,
@@ -1032,9 +1027,6 @@ class SimulatorPanel(wx.Panel):
         vbSizer.Add(self.dp, 1, wx.EXPAND | wx.ALL, 2)
         vbSizer.Add(self.cp, 0, wx.EXPAND | wx.ALL, 2)
         self.SetSizerAndFit(vbSizer)
-
-    def quit(self):
-        self.parent.quit()
 
     def go(self):
         self.dp.go()
@@ -1050,13 +1042,9 @@ class SimulatorPanel(wx.Panel):
         self.dp.clear()
 
 
-class EmbroiderySimulator(wx.Frame):
-    def __init__(self, *args, **kwargs):
-        self.on_close_hook = kwargs.pop('on_close', None)
-        stitch_plan = kwargs.pop('stitch_plan', None)
-        stitches_per_second = kwargs.pop('stitches_per_second', 16)
-        target_duration = kwargs.pop('target_duration', None)
-        wx.Frame.__init__(self, *args, **kwargs)
+class EmbroiderySimulator(wx.Panel):
+    def __init__(self, parent, stitch_plan=None, stitches_per_second=16, target_duration=None):
+        super().__init__(parent, wx.ID_ANY)
 
         self.SetWindowStyle(wx.FRAME_FLOAT_ON_PARENT)
 
@@ -1067,31 +1055,10 @@ class EmbroiderySimulator(wx.Frame):
                                               stitches_per_second=stitches_per_second)
         sizer.Add(self.simulator_panel, 1, wx.EXPAND)
 
-        self.statusbar = self.CreateStatusBar()
-
-        # SetSizeHints seems to be ignored in macOS, so we have to adjust size manually
-        # self.SetSizeHints(sizer.CalcMin())
-        frame_width, frame_height = self.GetSize()
-        sizer_width, sizer_height = sizer.CalcMin()
-        size_diff = frame_width - sizer_width
-        if size_diff < 0:
-            frame_x, frame_y = self.GetPosition()
-            self.SetPosition((frame_x + size_diff, frame_y))
-            self.SetSize((sizer_width, frame_height))
-
-        self.Bind(wx.EVT_CLOSE, self.on_close)
+        self.SetSizerAndFit(sizer)
 
     def quit(self):
-        self.Close()
-
-    def on_close(self, event):
         self.simulator_panel.stop()
-
-        if self.on_close_hook:
-            self.on_close_hook()
-
-        self.SetFocus()
-        self.Destroy()
 
     def go(self):
         self.simulator_panel.go()
@@ -1106,52 +1073,27 @@ class EmbroiderySimulator(wx.Frame):
         self.simulator_panel.clear()
 
 
-class SimulatorPreview(Thread):
-    """Manages a preview simulation and a background thread for generating patches."""
+class PreviewRenderer(Thread):
+    """Render stitch plan in a background thread."""
 
-    def __init__(self, parent, *args, **kwargs):
-        """Construct a SimulatorPreview.
-
-        The parent is expected to be a wx.Window and also implement the following methods:
-
-            def generate_patches(self, abort_event):
-                Produce an list of StitchGroup instances.  This method will be
-                invoked in a background thread and it is expected that it may
-                take awhile.
-
-                If possible, this method should periodically check
-                abort_event.is_set(), and if True, stop early.  The return
-                value will be ignored in this case.
-        """
-        self.parent = parent
-        self.target_duration = kwargs.pop('target_duration', 5)
-        super(SimulatorPreview, self).__init__(*args, **kwargs)
+    def __init__(self, render_stitch_plan_hook, rendering_completed_hook):
+        super(PreviewRenderer, self).__init__()
         self.daemon = True
-
-        self.simulate_window = None
         self.refresh_needed = Event()
+
+        self.render_stitch_plan_hook = render_stitch_plan_hook
+        self.rendering_completed_hook = rendering_completed_hook
 
         # This is read by utils.threading.check_stop_flag() to abort stitch plan
         # generation.
         self.stop = Event()
 
-        # used when closing to avoid having the window reopen at the last second
-        self._disabled = False
-
-        wx.CallLater(1000, self.update)
-
-    def disable(self):
-        self._disabled = True
-
     def update(self):
-        """Request an update of the simulator preview with freshly-generated patches."""
+        """Request to render a new stitch plan.
 
-        if self.simulate_window:
-            self.simulate_window.stop()
-            self.simulate_window.clear()
-
-        if self._disabled:
-            return
+        self.render_stitch_plan_hook() will be called in a background thread, and then
+        self.rendering_completed_hook() will be called with the resulting stitch plan.
+        """
 
         if not self.is_alive():
             self.start()
@@ -1167,80 +1109,22 @@ class SimulatorPreview(Thread):
 
             try:
                 debug.log("update_patches")
-                self.update_patches()
+                self.render_stitch_plan()
             except ExitThread:
                 debug.log("ExitThread caught")
                 self.stop.clear()
 
-    def update_patches(self):
+    def render_stitch_plan(self):
         try:
-            patches = self.parent.generate_patches(self.refresh_needed)
+            stitch_plan = self.render_stitch_plan_hook()
+            if stitch_plan:
+                # rendering_completed() will be called in the main thread.
+                wx.CallAfter(self.rendering_completed_hook, stitch_plan)
         except ExitThread:
             raise
         except:  # noqa: E722
-            # If something goes wrong when rendering patches, it's not great,
-            # but we don't really want the simulator thread to crash.  Instead,
-            # just swallow the exception and abort.  It'll show up when they
-            # try to actually embroider the shape.
-            return
-
-        if patches and not self.refresh_needed.is_set():
-            metadata = self.parent.metadata
-            collapse_len = metadata['collapse_len_mm']
-            min_stitch_len = metadata['min_stitch_len_mm']
-            stitch_plan = stitch_groups_to_stitch_plan(patches, collapse_len=collapse_len, min_stitch_len=min_stitch_len)
-
-            # GUI stuff needs to happen in the main thread, so we ask the main
-            # thread to call refresh_simulator().
-            wx.CallAfter(self.refresh_simulator, patches, stitch_plan)
-
-    def refresh_simulator(self, patches, stitch_plan):
-        if self.simulate_window:
-            self.simulate_window.stop()
-            self.simulate_window.load(stitch_plan)
-        else:
-            params_rect = self.parent.GetScreenRect()
-            simulator_pos = params_rect.GetTopRight()
-            simulator_pos.x += 5
-
-            current_screen = wx.Display.GetFromPoint(wx.GetMousePosition())
-            display = wx.Display(current_screen)
-            screen_rect = display.GetClientArea()
-            simulator_pos.y = screen_rect.GetTop()
-
-            width = screen_rect.GetWidth() - params_rect.GetWidth()
-            height = screen_rect.GetHeight()
-
-            try:
-                self.simulate_window = EmbroiderySimulator(None, -1, _("Preview"),
-                                                           simulator_pos,
-                                                           size=(width, height),
-                                                           stitch_plan=stitch_plan,
-                                                           on_close=self.simulate_window_closed,
-                                                           target_duration=self.target_duration)
-            except Exception:
-                import traceback
-                print(traceback.format_exc(), file=sys.stderr)
-                try:
-                    # a window may have been created, so we need to destroy it
-                    # or the app will never exit
-                    wx.Window.FindWindowByName(_("Preview")).Destroy()
-                except Exception:
-                    pass
-
-            self.simulate_window.Show()
-            wx.CallLater(10, self.parent.Raise)
-
-        wx.CallAfter(self.simulate_window.go)
-
-    def simulate_window_closed(self):
-        self.simulate_window = None
-
-    def close(self):
-        self.disable()
-        if self.simulate_window:
-            self.simulate_window.stop()
-            self.simulate_window.Close()
+            import traceback
+            debug.log("unhandled exception in PreviewRenderer.render_stitch_plan(): " + traceback.format_exc())
 
 
 def show_simulator(stitch_plan):

@@ -15,7 +15,7 @@ import wx.adv
 import wx.lib.agw.floatspin as fs
 
 from ..elements import nodes_to_elements
-from ..gui import PresetsPanel, SimulatorPreview, info_dialog
+from ..gui import PresetsPanel, PreviewRenderer, info_dialog
 from ..i18n import _
 from ..lettering import Font, FontError
 from ..lettering.categories import FONT_CATEGORIES, FontCategory
@@ -43,7 +43,7 @@ class LetteringFrame(wx.Frame):
         icon = wx.Icon(os.path.join(get_resource_dir("icons"), "inkstitch256x256.png"))
         self.SetIcon(icon)
 
-        self.preview = SimulatorPreview(self, target_duration=1)
+        self.preview = PreviewRenderer(self, target_duration=1)
         self.presets_panel = PresetsPanel(self)
 
         # font
