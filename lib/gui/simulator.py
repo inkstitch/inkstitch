@@ -106,6 +106,7 @@ class ControlPanel(wx.Panel):
         self.stitchBox.Bind(wx.EVT_TEXT_ENTER, self.on_stitch_box_focusout)
         self.stitchBox.Bind(wx.EVT_KILL_FOCUS, self.on_stitch_box_focusout)
         self.Bind(wx.EVT_LEFT_DOWN, self.on_stitch_box_focusout)
+        self.totalstitchText = wx.StaticText(self, -1, label=f"/ { self.stitch_plan.num_stitches }")
         self.btnJump = wx.BitmapToggleButton(self, -1, style=self.button_style)
         self.btnJump.SetToolTip(_('Show jump stitches'))
         self.btnJump.SetBitmap(self.load_icon('jump'))
@@ -126,7 +127,8 @@ class ControlPanel(wx.Panel):
         # Layout
         self.hbSizer1 = wx.BoxSizer(wx.HORIZONTAL)
         self.hbSizer1.Add(self.slider, 1, wx.EXPAND | wx.RIGHT, 10)
-        self.hbSizer1.Add(self.stitchBox, 0, wx.ALIGN_TOP | wx.RIGHT, 10)
+        self.hbSizer1.Add(self.stitchBox, 0, wx.ALIGN_CENTER | wx.RIGHT, 10)
+        self.hbSizer1.Add(self.totalstitchText, 0, wx.ALIGN_CENTER | wx.RIGHT, 10)
 
         self.controls_sizer = wx.StaticBoxSizer(wx.StaticBox(self, wx.ID_ANY, _("Controls")), wx.HORIZONTAL)
         self.controls_inner_sizer = wx.BoxSizer(wx.HORIZONTAL)
@@ -824,9 +826,10 @@ class SimulatorSlider(wx.Panel):
     def __init__(self, parent, id=wx.ID_ANY, *args, **kwargs):
         super().__init__(parent, id)
 
-        kwargs['style'] = wx.SL_HORIZONTAL | wx.SL_LABELS | wx.SL_TOP | wx.ALIGN_TOP
+        kwargs['style'] = wx.SL_HORIZONTAL | wx.SL_VALUE_LABEL | wx.SL_TOP | wx.ALIGN_TOP
 
         self.sizer = wx.BoxSizer(wx.VERTICAL)
+        self.sizer.Add((10, 1), 1, wx.EXPAND)
         self.slider = wx.Slider(self, *args, **kwargs)
         self.sizer.Add(self.slider, 0, wx.EXPAND)
 
@@ -845,11 +848,14 @@ class SimulatorSlider(wx.Panel):
         self.color_sections = []
         self.margin = 13
         self.color_bar_start = 0
-        self.color_bar_thickness = 0.25
-        self.marker_start = 0.25
+        self.color_bar_thickness = 0.1
+        self.marker_start = 0
         self.marker_end = 0.75
         self.marker_icon_start = 0.75
         self.marker_icon_size = size.height // 3
+
+        if sys.platform == "darwin":
+            self.margin = 8
 
         self.Bind(wx.EVT_PAINT, self.on_paint)
         self.Bind(wx.EVT_ERASE_BACKGROUND, self.on_erase_background)
@@ -890,8 +896,9 @@ class SimulatorSlider(wx.Panel):
 
     def on_paint(self, event):
         dc = wx.BufferedPaintDC(self)
-        background_brush = wx.Brush(self.GetTopLevelParent().GetBackgroundColour(), wx.SOLID)
-        dc.SetBackground(background_brush)
+        if not sys.platform.startswith("win"):
+            background_brush = wx.Brush(self.GetTopLevelParent().GetBackgroundColour(), wx.SOLID)
+            dc.SetBackground(background_brush)
         dc.Clear()
         gc = wx.GraphicsContext.Create(dc)
 
