@@ -339,7 +339,11 @@ class ControlPanel(wx.Panel):
     def on_stitch_box_focusout(self, event):
         self.SetAcceleratorTable(self.accel_table)
         stitch = self.stitchBox.GetValue()
-        self.parent.SetFocus()
+        # We now want to remove the focus from the stitchBox.
+        # In Windows it won't work if we set focus to self.parent, while setting the focus to the
+        # top level would work. This in turn would activate the trim button in Linux. So let's
+        # set the focus on the slider instead where it doesn't cause any harm in any of the operating systems
+        self.slider.SetFocus()
 
         if stitch is None:
             stitch = 1
@@ -349,6 +353,7 @@ class ControlPanel(wx.Panel):
 
         if self.drawing_panel:
             self.drawing_panel.set_current_stitch(stitch)
+        event.Skip()
 
     def animation_slow_down(self, event):
         """"""
