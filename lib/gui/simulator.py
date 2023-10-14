@@ -128,13 +128,6 @@ class ControlPanel(wx.Panel):
         self.hbSizer1.Add(self.slider, 1, wx.EXPAND | wx.RIGHT, 10)
         self.hbSizer1.Add(self.stitchBox, 0, wx.ALIGN_TOP | wx.RIGHT, 10)
 
-        self.command_sizer = wx.StaticBoxSizer(wx.StaticBox(self, wx.ID_ANY, _("Command")), wx.VERTICAL)
-        self.command_text = wx.StaticText(self, wx.ID_ANY, label="", style=wx.ALIGN_CENTRE_HORIZONTAL | wx.ST_NO_AUTORESIZE)
-        self.command_text.SetFont(wx.Font(wx.FontInfo(20).Bold()))
-        self.command_text.SetMinSize(self.get_max_command_text_size())
-        self.command_sizer.Add(self.command_text, 0, wx.EXPAND | wx.ALL, 10)
-        self.hbSizer1.Add(self.command_sizer, 0, wx.EXPAND)
-
         self.controls_sizer = wx.StaticBoxSizer(wx.StaticBox(self, wx.ID_ANY, _("Controls")), wx.HORIZONTAL)
         self.controls_inner_sizer = wx.BoxSizer(wx.HORIZONTAL)
         self.controls_inner_sizer.Add(self.btnBackwardCommand, 0, wx.EXPAND | wx.ALL, 2)
@@ -321,10 +314,6 @@ class ControlPanel(wx.Panel):
     def update_speed_text(self):
         self.speed_text.SetLabel(self.format_speed_text(self.speed * self.direction))
 
-    def get_max_command_text_size(self):
-        extents = [self.command_text.GetTextExtent(command) for command in COMMAND_NAMES]
-        return max(extents, key=lambda extent: extent.x)
-
     def on_slider(self, event):
         stitch = event.GetEventObject().GetValue()
         self.stitchBox.SetValue(stitch)
@@ -339,7 +328,6 @@ class ControlPanel(wx.Panel):
             self.current_stitch = stitch
             self.slider.SetValue(stitch)
             self.stitchBox.SetValue(stitch)
-            self.command_text.SetLabel(COMMAND_NAMES[command])
 
     def on_stitch_box_focus(self, event):
         self.animation_pause()
@@ -723,7 +711,10 @@ class DrawingPanel(wx.Panel):
     def set_current_stitch(self, stitch):
         self.current_stitch = stitch
         self.clamp_current_stitch()
-        self.control_panel.on_current_stitch(self.current_stitch, self.commands[self.current_stitch])
+        command = self.commands[self.current_stitch]
+        self.control_panel.on_current_stitch(self.current_stitch, command)
+        statusbar = self.GetTopLevelParent().statusbar
+        statusbar.SetStatusText(_("Command: %s") % COMMAND_NAMES[command])
         self.stop_if_at_end()
         self.Refresh()
 
@@ -996,6 +987,8 @@ class EmbroiderySimulator(wx.Frame):
                                               target_duration=target_duration,
                                               stitches_per_second=stitches_per_second)
         sizer.Add(self.simulator_panel, 1, wx.EXPAND)
+
+        self.statusbar = self.CreateStatusBar()
 
         # SetSizeHints seems to be ignored in macOS, so we have to adjust size manually
         # self.SetSizeHints(sizer.CalcMin())
