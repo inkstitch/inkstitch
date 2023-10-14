@@ -75,7 +75,7 @@ class FontVariant(object):
                 glyph_name = layer.attrib[INKSCAPE_LABEL]
                 try:
                     self.glyphs[glyph_name] = Glyph(layer)
-                except AttributeError:
+                except (AttributeError, ValueError):
                     pass
 
     def _get_variant_file_paths(self):
