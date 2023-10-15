@@ -39,6 +39,7 @@ class ElementInfo(InkstitchExtension):
 
         self.list_items.append(ListItem(
             name=f"{ element.node.label } ({ element.node.get_id() })",
+            value=stitch_groups[0].color,
             headline=True
         ))
         self.list_items.append(ListItem(
@@ -72,6 +73,7 @@ class ElementInfo(InkstitchExtension):
         ))
 
         stitch_lengths = []
+        removed_stitches = 0
         for group in stitch_groups:
             stitches = group.stitches
 
@@ -80,6 +82,7 @@ class ElementInfo(InkstitchExtension):
                 st = stitch - previous_stitch
                 length = st.length() / PIXELS_PER_MM
                 if length <= self.metadata['min_stitch_len_mm']:
+                    removed_stitches += 1
                     continue
                 stitch_lengths.append(length)
                 previous_stitch = stitch
@@ -91,6 +94,10 @@ class ElementInfo(InkstitchExtension):
         self.list_items.append(ListItem(
             name=_("Stitches"),
             value=str(stitch_plan.num_stitches - stitch_plan.num_jumps) + stitches_per_group
+        ))
+        self.list_items.append(ListItem(
+            name=_("Small stitches (removed)"),
+            value=str(removed_stitches)
         ))
         self.list_items.append(ListItem(
             name=_("Jumps"),
