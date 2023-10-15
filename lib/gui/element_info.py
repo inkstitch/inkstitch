@@ -76,6 +76,9 @@ class ElementInfoFrame(wx.Frame):
             if item.headline:
                 self.info_list.SetItemBackgroundColour(self.index, "black")
                 self.info_list.SetItemTextColour(self.index, "white")
+                self.index += 1
+                self.info_list.InsertItem(self.index, "")
+                self.info_list.SetItemBackgroundColour(self.index, item.value)
             else:
                 self.info_list.SetItem(self.index, 1, item.value)
             self.index += 1
