@@ -1,5 +1,5 @@
 ---
-title: "Changes, Updates and Fixes for Ink/Stitch > v3.0.1"
+title: "Changes, Updates and Fixes for Ink/Stitch made after the release of v3.0.1"
 permalink: /upcoming/
 last_modified_at: 2023-10-15
 sidebar:
@@ -53,16 +53,17 @@ toc: true
     remove specific commands only
 
 ## Bug Fixes
- * #2527 Stitch plan: multiply sequence error
- * #2550 Lettering: error on empty layer in font file
- * #2502 Gradient Blocks: Unit fix
- * #2491 Toggle commands: fix if first command in invisible group/layer
- * #2499 LPE Satin: width of "normal" straight pattern wasn't correct
- * #2458 Density Map: add ignore layer command
- * #2460 Satin Column: obey reversed rails when synthesizing rungs
- * #2468 Zigzag to satin: do not ignore elements in a group
- * #2467 Render context-stroke and context-fill as black
- * #2461 Letters to font: fix guide line insertion
- * #2434 Ignore commands with "empty-d-connectors"
- * #2403 ignore small contour fill with single or double spiral
- * #2404 Render satins with only one subpath as running stitch
+ * [#2527](https://github.com/inkstitch/inkstitch/issues/2527) Stitch plan: multiply sequence error
+ * [#2550](https://github.com/inkstitch/inkstitch/issues/2550) Lettering: error on empty layer in font file
+ * [#2502](https://github.com/inkstitch/inkstitch/issues/2502) Gradient Blocks: Unit fix
+ * [#2499](https://github.com/inkstitch/inkstitch/issues/2499) LPE Satin: width of "normal" straight pattern wasn't correct
+ * [#2491](https://github.com/inkstitch/inkstitch/issues/2491) Toggle commands: fix if first command in invisible group/layer
+ * [#2468](https://github.com/inkstitch/inkstitch/issues/2468) Zigzag to satin: do not ignore elements in a group
+ * [#2467](https://github.com/inkstitch/inkstitch/issues/2467) Render context-stroke and context-fill as black
+ * [#2461](https://github.com/inkstitch/inkstitch/issues/2461) Letters to font: fix guide line insertion
+ * [#2460](https://github.com/inkstitch/inkstitch/issues/2460) Satin Column: obey reversed rails when synthesizing rungs
+ * [#2458](https://github.com/inkstitch/inkstitch/issues/2458) Density Map: add ignore layer command
+ * [#2434](https://github.com/inkstitch/inkstitch/issues/2434) Ignore commands with "empty-d-connectors"
+ * [#2404](https://github.com/inkstitch/inkstitch/issues/2404) Render satins with only one subpath as running stitch ([#2553](https://github.com/inkstitch/inkstitch/issues/2553))
+ * [#2403](https://github.com/inkstitch/inkstitch/issues/2403) ignore small contour fill with single or double spiral
+
