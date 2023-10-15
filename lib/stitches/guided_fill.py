@@ -268,7 +268,7 @@ def intersect_region_with_grating_guideline(shape, line, row_spacing, num_stagge
         stitched_line = apply_stitches(offset_line, max_stitch_length, num_staggers, row_spacing, row)
         intersection = shape.intersection(stitched_line)
 
-        if shape_envelope.intersects(stitched_line):
+        if not intersection.is_empty and shape_envelope.intersects(stitched_line):
             for segment in take_only_line_strings(intersection).geoms:
                 rows.append(segment.coords[:])
             row += direction

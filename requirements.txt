@@ -7,7 +7,7 @@ wxPython>=4.1.1
 
 backports.functools_lru_cache
 networkx
-shapely==1.8.5
+shapely
 lxml
 appdirs
 numpy
@@ -26,3 +26,4 @@ diskcache
 flask-cors
 pywinutils ; sys_platform == 'win32'
 pywin32 ; sys_platform == 'win32'
+
