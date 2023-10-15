@@ -64,7 +64,7 @@ stroke_choices = [
 fill_choices = [
     ParamOption("running_stitch_length_mm", "Running Stitch Length mm"),
     ParamOption("running_stitch_tolerance_mm", "Running Stitch Tolerance mm"),
-    ParamOption("max_stitch_length_mm", "Maximum Stitch Length mm (Auto Fill, Contour Fill, Guided Fill"),
+    ParamOption("max_stitch_length_mm", "Maximum Stitch Length mm (Auto Fill, Contour Fill, Guided Fill)"),
     ParamOption("angle", "Angle (Auto Fill)"),
     ParamOption("row_spacing_mm", "Row Spacing mm"),
     ParamOption("end_row_spacing_mm", "End Row Spacing mm"),
