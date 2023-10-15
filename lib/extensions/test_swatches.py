@@ -14,7 +14,7 @@ from .base import InkstitchExtension
 
 class TestSwatches(InkstitchExtension):
     '''
-    This saves embroider settings into the metadata of the file
+    This generates swatches from selection by altering one param each time.
     '''
 
     def effect(self):

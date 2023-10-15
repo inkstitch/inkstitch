@@ -101,8 +101,8 @@ class GenerateSwatchesFrame(wx.Frame):
         self.help_link = wx.adv.HyperlinkCtrl(
             self.info,
             wx.ID_ANY,
-            "https://inkstitch.org/docs/edit/#generate-test-swatches-from-selection",
-            "https://inkstitch.org/docs/edit/#generate-test-swatches-from-selection",
+            _("https://inkstitch.org/docs/edit/#generate-test-swatches-from-selection"),
+            _("https://inkstitch.org/docs/edit/#generate-test-swatches-from-selection"),
             style=wx.adv.HL_ALIGN_CENTRE
         )
         info_sizer.Add(self.help_link, 0, 0, 0)
