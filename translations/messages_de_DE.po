@@ -2,21 +2,21 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-09-12 01:02+0000\n"
-"PO-Revision-Date: 2023-09-12 01:03\n"
+"POT-Creation-Date: 2023-10-16 01:06+0000\n"
+"PO-Revision-Date: 2023-10-16 01:07\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.12.1\n"
+"Generated-By: Babel 2.13.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: easygettext\n"
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-12 01:02+0000\n"
+"POT-Creation-Date: 2023-10-16 01:06+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1608,6 +1608,7 @@ msgid "default: 3x fill row spacing"
 msgstr "Standard: 3x Füllreihenabstand"
 
 #: lib/elements/fill_stitch.py:448 lib/elements/stroke.py:134
+#: lib/extensions/element_info.py:107
 msgid "Max stitch length"
 msgstr "Maximale Stichlänge"
 
@@ -2385,19 +2386,19 @@ msgstr "Nadel #%s"
 msgid "Density Plan"
 msgstr "Dichte-Indikator"
 
-#: lib/extensions/density_map.py:83
+#: lib/extensions/density_map.py:84
 msgid "Red"
 msgstr "Rot"
 
-#: lib/extensions/density_map.py:83
+#: lib/extensions/density_map.py:84
 msgid "Yellow"
 msgstr "Gelb"
 
-#: lib/extensions/density_map.py:83
+#: lib/extensions/density_map.py:84
 msgid "Green"
 msgstr "Grün"
 
-#: lib/extensions/density_map.py:87
+#: lib/extensions/density_map.py:88
 #, python-format
 msgid "%s density"
 msgstr "%s Dichte"
@@ -2405,6 +2406,63 @@ msgstr "%s Dichte"
 #: lib/extensions/duplicate_params.py:18
 msgid "This function copies Ink/Stitch parameters from the first selected element to the rest of the selection. Please select at least two elements."
 msgstr "Diese Funktion kopiert Ink/Stitch Parameter von dem zuerst gewählten Element auf den Rest der Auswahl. Dafür bitte mindestens zwei Elemente auswählen."
+
+#: lib/extensions/element_info.py:46 inx/inkstitch_select_elements.inx:15
+msgid "Type"
+msgstr "Art"
+
+#: lib/extensions/element_info.py:52
+msgid "Fill Method"
+msgstr ""
+
+#: lib/extensions/element_info.py:59 lib/extensions/element_info.py:66
+msgid "Satin Method"
+msgstr ""
+
+#: lib/extensions/element_info.py:71 lib/extensions/element_info.py:130
+msgid "Dimensions (mm)"
+msgstr ""
+
+#: lib/extensions/element_info.py:95 lib/extensions/element_info.py:154
+#: lib/extensions/zip.py:138
+msgid "Stitches"
+msgstr "Stiche"
+
+#: lib/extensions/element_info.py:99
+msgid "Small stitches (removed)"
+msgstr ""
+
+#: lib/extensions/element_info.py:103 lib/extensions/element_info.py:142
+msgid "Jumps"
+msgstr ""
+
+#: lib/extensions/element_info.py:111
+msgid "Min stitch length"
+msgstr ""
+
+#: lib/extensions/element_info.py:126
+msgid "All Selected Elements"
+msgstr ""
+
+#: lib/extensions/element_info.py:134 lib/extensions/zip.py:139
+msgid "Colors"
+msgstr "Farben"
+
+#: lib/extensions/element_info.py:138
+msgid "Color Changes"
+msgstr ""
+
+#: lib/extensions/element_info.py:146
+msgid "Trims"
+msgstr ""
+
+#: lib/extensions/element_info.py:150
+msgid "Stops"
+msgstr ""
+
+#: lib/extensions/element_info.py:158
+msgid "Filter stitches smaller than (mm)"
+msgstr ""
 
 #: lib/extensions/fill_to_stroke.py:33 lib/extensions/fill_to_stroke.py:42
 msgid "Please select one or more fill objects to render the centerline."
@@ -2502,8 +2560,9 @@ msgstr "Filtert die Schriften nach Kategorie."
 msgid "Font Filter"
 msgstr "Schriftfilter"
 
-#: lib/extensions/lettering.py:83 inx/inkstitch_apply_threadlist.inx:7
-#: inx/inkstitch_fill_to_stroke.inx:15 inx/inkstitch_gradient_blocks.inx:15
+#: lib/extensions/lettering.py:83 lib/gui/test_swatches.py:31
+#: inx/inkstitch_apply_threadlist.inx:7 inx/inkstitch_fill_to_stroke.inx:15
+#: inx/inkstitch_gradient_blocks.inx:15
 #: inx/inkstitch_lettering_along_path.inx:13
 #: inx/inkstitch_palette_to_text.inx:15 inx/inkstitch_stroke_to_lpe_satin.inx:7
 #: inx/inkstitch_zigzag_line_to_satin.inx:7
@@ -2626,6 +2685,10 @@ msgstr "Bitte Objekte auswählen, die mit Befehlen verknüpft werden sollen."
 msgid "Please choose one or more commands to attach."
 msgstr "Bitte einen oder mehrere Befehle auswählen."
 
+#: lib/extensions/outline.py:23
+msgid "Please select one or more shapes to convert to their outline."
+msgstr ""
+
 #: lib/extensions/palette_split_text.py:16
 msgid "Please select one or more text elements to split lines."
 msgstr "Um Text in Textzeilen zu zerlegen, bitte ein oder mehrere Textelemente auswählen."
@@ -2722,6 +2785,10 @@ msgstr "Konnte das gewählte Muster nicht finden."
 msgid "Cannot convert a satin column into a live path effect satin. Please select a stroke."
 msgstr "Eine Satinsäule kann nicht in einen Pfadeffekt-Satinstich umgewandelt werden. Bitte eine Linie auswählen."
 
+#: lib/extensions/test_swatches.py:22
+msgid "Please select one or more elements."
+msgstr ""
+
 #: lib/extensions/troubleshoot.py:49
 msgid "All selected shapes are valid! "
 msgstr "Alle ausgewählten Formen sind gültig! "
@@ -2740,7 +2807,8 @@ msgid "Description"
 msgstr "Beschreibung"
 
 #: lib/extensions/troubleshoot.py:106 lib/extensions/troubleshoot.py:155
-#: inx/inkstitch_cleanup.inx:17 inx/inkstitch_remove_embroidery_settings.inx:39
+#: inx/inkstitch_cleanup.inx:17 inx/inkstitch_element_info.inx:10
+#: inx/inkstitch_remove_embroidery_settings.inx:39
 #: inx/inkstitch_select_elements.inx:77 inx/inkstitch_troubleshoot.inx:12
 #: inx/inkstitch_update_svg.inx:10
 msgid "Troubleshoot"
@@ -2802,14 +2870,6 @@ msgstr "Design Details"
 msgid "Title"
 msgstr "Titel"
 
-#: lib/extensions/zip.py:138
-msgid "Stitches"
-msgstr "Stiche"
-
-#: lib/extensions/zip.py:139
-msgid "Colors"
-msgstr "Farben"
-
 #: lib/extensions/zip.py:141
 msgid "Thread Order"
 msgstr "Garnabfolge"
@@ -2817,6 +2877,46 @@ msgstr "Garnabfolge"
 #: lib/extensions/zip.py:154
 msgid "Thread Used"
 msgstr "Verwendetes Garn"
+
+#: lib/gui/element_info.py:17 inx/inkstitch_element_info.inx:3
+msgid "Element Info"
+msgstr ""
+
+#: lib/gui/element_info.py:26
+msgid "Info"
+msgstr ""
+
+#: lib/gui/element_info.py:31 inx/inkstitch_lettering_generate_json.inx:27
+msgid "Name"
+msgstr "Name"
+
+#: lib/gui/element_info.py:32
+msgid "Value"
+msgstr ""
+
+#: lib/gui/element_info.py:39 lib/gui/test_swatches.py:81
+#: inx/inkstitch_apply_threadlist.inx:87 inx/inkstitch_auto_run.inx:23
+#: inx/inkstitch_cutwork_segmentation.inx:42
+#: inx/inkstitch_fill_to_stroke.inx:23 inx/inkstitch_generate_palette.inx:24
+#: inx/inkstitch_gradient_blocks.inx:24
+#: inx/inkstitch_lettering_along_path.inx:17
+#: inx/inkstitch_palette_to_text.inx:19 inx/inkstitch_select_elements.inx:69
+#: inx/inkstitch_stroke_to_lpe_satin.inx:26
+#: inx/inkstitch_zigzag_line_to_satin.inx:18
+msgid "Help"
+msgstr "Hilfe"
+
+#: lib/gui/element_info.py:46
+msgid "This extension informs about various parameters of selected stitch elements."
+msgstr ""
+
+#: lib/gui/element_info.py:54
+msgid "More information on our website:"
+msgstr ""
+
+#: lib/gui/element_info.py:60 lib/gui/element_info.py:61
+msgid "https://inkstitch.org/troubleshoot#element-info"
+msgstr ""
 
 #: lib/gui/preferences.py:16 lib/gui/preferences.py:17
 #: inx/inkstitch_preferences.inx:3
@@ -3025,6 +3125,54 @@ msgstr "Vorschau"
 #: lib/gui/simulator.py:1181
 msgid "Embroidery Simulation"
 msgstr "Stick Simulation"
+
+#: lib/gui/test_swatches.py:21
+msgid "Generate Swatches"
+msgstr ""
+
+#: lib/gui/test_swatches.py:38
+msgid "Param"
+msgstr ""
+
+#: lib/gui/test_swatches.py:47
+msgid "Start Value"
+msgstr ""
+
+#: lib/gui/test_swatches.py:54
+msgid "Increase by"
+msgstr ""
+
+#: lib/gui/test_swatches.py:61
+msgid "Columns"
+msgstr ""
+
+#: lib/gui/test_swatches.py:67
+msgid "Rows"
+msgstr ""
+
+#: lib/gui/test_swatches.py:73
+msgid "Spacing"
+msgstr ""
+
+#: lib/gui/test_swatches.py:88
+msgid "This extension generates test swatches from a selection.\n"
+"Test swatches help to find best stitch settings for your design.\n"
+"Sew them out with the same thread and fabric as the final designs."
+msgstr ""
+
+#: lib/gui/test_swatches.py:98 inx/inkstitch_apply_threadlist.inx:98
+#: inx/inkstitch_fill_to_stroke.inx:32 inx/inkstitch_stroke_to_lpe_satin.inx:32
+#: inx/inkstitch_zigzag_line_to_satin.inx:28
+msgid "Get more information on our website"
+msgstr "Weitere Informationen auf unserer Webseite"
+
+#: lib/gui/test_swatches.py:104 lib/gui/test_swatches.py:105
+msgid "https://inkstitch.org/docs/edit/#generate-test-swatches-from-selection"
+msgstr ""
+
+#: lib/gui/test_swatches.py:115
+msgid "Apply"
+msgstr ""
 
 #: lib/gui/warnings.py:21
 msgid "An error occurred while rendering the stitch plan:"
@@ -4037,17 +4185,6 @@ msgstr "Andere Garnfarben-Liste andwenden*"
 msgid "*Choose color palette"
 msgstr "* Farbpalette auswählen"
 
-#: inx/inkstitch_apply_threadlist.inx:87 inx/inkstitch_auto_run.inx:23
-#: inx/inkstitch_cutwork_segmentation.inx:42
-#: inx/inkstitch_fill_to_stroke.inx:23 inx/inkstitch_generate_palette.inx:24
-#: inx/inkstitch_gradient_blocks.inx:24
-#: inx/inkstitch_lettering_along_path.inx:17
-#: inx/inkstitch_palette_to_text.inx:19 inx/inkstitch_select_elements.inx:69
-#: inx/inkstitch_stroke_to_lpe_satin.inx:26
-#: inx/inkstitch_zigzag_line_to_satin.inx:18
-msgid "Help"
-msgstr "Hilfe"
-
 #: inx/inkstitch_apply_threadlist.inx:88
 msgid "This extension applies colors from a color file to the objects in this document."
 msgstr "Diese Erweiterung wendet die Farben aus einer Garnfarben-Datei auf die Objekte in diesem Dokument an."
@@ -4072,12 +4209,6 @@ msgstr "Eine Ink/Stitch Garnfarben-Liste importieren (kann über den Zip-Export 
 msgid "Import any other Threadlist file in txt format. Ink/Stitch will try to match the colors to the selected thread palette. The objects in this document will be colored accordingly if color matching has been successful."
 msgstr "Eine andere Garnfarben-Liste im txt-Dateiformat importieren. Ink/Stitch wird versuchen die Farben aus der ausgewählten Farbpalette zu erkennen. Bei erfolgreicher Farberkennung werden die Farben auf die Objekte in diesem Dokument angewendet."
 
-#: inx/inkstitch_apply_threadlist.inx:98 inx/inkstitch_fill_to_stroke.inx:32
-#: inx/inkstitch_stroke_to_lpe_satin.inx:32
-#: inx/inkstitch_zigzag_line_to_satin.inx:28
-msgid "Get more information on our website"
-msgstr "Weitere Informationen auf unserer Webseite"
-
 #: inx/inkstitch_apply_threadlist.inx:99
 msgid "https://inkstitch.org/docs/thread-color/#apply-threadlist"
 msgstr "https://inkstitch.org/de/docs/thread-color/#garnfarben-liste-anwenden"
@@ -4094,6 +4225,7 @@ msgstr "Automatisch geführter Geradstich"
 
 #: inx/inkstitch_auto_run.inx:10 inx/inkstitch_convert_to_stroke.inx:13
 #: inx/inkstitch_fill_to_stroke.inx:10 inx/inkstitch_jump_to_stroke.inx:10
+#: inx/inkstitch_outline.inx:10
 msgid "Tools: Stroke"
 msgstr "Werkzeuge: Linie"
 
@@ -4359,7 +4491,7 @@ msgstr "Parameter duplizieren"
 #: inx/inkstitch_duplicate_params.inx:10 inx/inkstitch_reorder.inx:10
 #: inx/inkstitch_select_elements.inx:92
 #: inx/inkstitch_selection_to_guide_line.inx:10
-#: inx/inkstitch_selection_to_pattern.inx:10
+#: inx/inkstitch_selection_to_pattern.inx:10 inx/inkstitch_test_swatches.inx:10
 msgid "Edit"
 msgstr "Bearbeiten"
 
@@ -5150,10 +5282,6 @@ msgstr "JSON erstellen"
 msgid "Font info"
 msgstr "Schriftinformation"
 
-#: inx/inkstitch_lettering_generate_json.inx:27
-msgid "Name"
-msgstr "Name"
-
 #: inx/inkstitch_lettering_generate_json.inx:34
 #: inx/inkstitch_lettering_update_json_glyphlist.inx:17
 msgid "SVG Font File"
@@ -5279,6 +5407,18 @@ msgstr "Objektbefehle hinzufügen"
 #: inx/inkstitch_object_commands_toggle_visibility.inx:3
 msgid "Display|Hide Object Commands"
 msgstr "Objektbefehle anzeigen|verbergen"
+
+#: inx/inkstitch_outline.inx:3
+msgid "Outline"
+msgstr ""
+
+#: inx/inkstitch_outline.inx:14
+msgid "Ratio"
+msgstr ""
+
+#: inx/inkstitch_outline.inx:15
+msgid "Allow Holes"
+msgstr ""
 
 #: inx/inkstitch_output_COL.inx:3
 msgid "COL file output"
@@ -5653,10 +5793,6 @@ msgid "Select Stitch Type"
 msgstr "Stichart auswählen"
 
 #: inx/inkstitch_select_elements.inx:15
-msgid "Type"
-msgstr "Art"
-
-#: inx/inkstitch_select_elements.inx:15
 msgid "Select only specific running stitches"
 msgstr "Auswahl beschränken"
 
@@ -5878,6 +6014,10 @@ msgstr "* Sollen manuelle Änderungen, wie bspw. das Hinzufügen von Richtungsve
 #: inx/inkstitch_stroke_to_lpe_satin.inx:33
 msgid "https://inkstitch.org/docs/satin-tools/#stroke-to-live-path-effect-satin"
 msgstr "https://inkstitch.org/de/docs/satin-tools/#linie-zu-pfadeffekt-satin"
+
+#: inx/inkstitch_test_swatches.inx:3
+msgid "Generate Test Swatches from Selection"
+msgstr ""
 
 #: inx/inkstitch_troubleshoot.inx:3
 msgid "Troubleshoot Objects"
