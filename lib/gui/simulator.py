@@ -35,6 +35,7 @@ class ControlPanel(wx.Panel):
         """"""
         self.parent = parent
         self.stitch_plan = kwargs.pop('stitch_plan', None)
+        self.detach_callback = kwargs.pop('detach_callback', None)
         self.target_stitches_per_second = kwargs.pop('stitches_per_second')
         self.target_duration = kwargs.pop('target_duration')
         kwargs['style'] = wx.BORDER_SUNKEN
@@ -123,6 +124,11 @@ class ControlPanel(wx.Panel):
         self.btnColorChange.SetToolTip(_('Show color changes'))
         self.btnColorChange.SetBitmap(self.load_icon('color_change'))
         self.btnColorChange.Bind(wx.EVT_TOGGLEBUTTON, lambda event: self.on_marker_button('color_change', event))
+        if self.detach_callback:
+            self.btnDetachSimulator = wx.BitmapButton(self, -1, style=self.button_style)
+            self.btnDetachSimulator.SetToolTip(_('Detach/attach simulator window'))
+            self.btnDetachSimulator.SetBitmap(self.load_icon('detach_window'))
+            self.btnDetachSimulator.Bind(wx.EVT_BUTTON, lambda event: self.detach_callback())
 
         # Layout
         self.hbSizer1 = wx.BoxSizer(wx.HORIZONTAL)
@@ -151,6 +157,8 @@ class ControlPanel(wx.Panel):
         self.show_inner_sizer.Add(self.btnTrim, 0, wx.ALL, 2)
         self.show_inner_sizer.Add(self.btnStop, 0, wx.ALL, 2)
         self.show_inner_sizer.Add(self.btnColorChange, 0, wx.ALL, 2)
+        if self.detach_callback:
+            self.show_inner_sizer.Add(self.btnDetachSimulator, 0, wx.ALL, 2)
         self.show_sizer.Add((1, 1), 1)
         self.show_sizer.Add(self.show_inner_sizer, 0, wx.ALIGN_CENTER_VERTICAL | wx.ALL, 10)
         self.show_sizer.Add((1, 1), 1)
@@ -479,6 +487,8 @@ class DrawingPanel(wx.Panel):
         self.Bind(wx.EVT_SIZE, self.choose_zoom_and_pan)
         self.Bind(wx.EVT_LEFT_DOWN, self.on_left_mouse_button_down)
         self.Bind(wx.EVT_MOUSEWHEEL, self.on_mouse_wheel)
+
+        self.SetMinSize((400, 400))
 
         # wait for layouts so that panel size is set
         if self.stitch_plan:
@@ -1012,14 +1022,15 @@ class SimulatorSlider(wx.Panel):
 class SimulatorPanel(wx.Panel):
     """"""
 
-    def __init__(self, parent, stitch_plan=None, target_duration=5, stitches_per_second=16):
+    def __init__(self, parent, stitch_plan=None, target_duration=5, stitches_per_second=16, detach_callback=None):
         """"""
         super().__init__(parent, style=wx.BORDER_SUNKEN)
 
         self.cp = ControlPanel(self,
                                stitch_plan=stitch_plan,
                                stitches_per_second=stitches_per_second,
-                               target_duration=target_duration)
+                               target_duration=target_duration,
+                               detach_callback=detach_callback)
         self.dp = DrawingPanel(self, stitch_plan=stitch_plan, control_panel=self.cp)
         self.cp.set_drawing_panel(self.dp)
 
@@ -1071,6 +1082,38 @@ class EmbroiderySimulator(wx.Panel):
 
     def clear(self):
         self.simulator_panel.clear()
+
+
+class SimulatorWindow(wx.Frame):
+    def __init__(self, panel=None, parent=None):
+        super().__init__(None, title="Simulator")
+
+        self.sizer = wx.BoxSizer(wx.VERTICAL)
+
+        if panel and parent:
+            self.is_child = True
+            self.panel = panel
+            self.parent = parent
+            self.panel.Reparent(self)
+            self.sizer.Add(self.panel, 1, wx.EXPAND)
+            self.panel.Show()
+        else:
+            self.is_child = False
+            self.simulator_panel = SimulatorPanel(self)
+            self.sizer.Add(self.simulator_panel, 1, wx.EXPAND)
+
+        self.SetSizer(self.sizer)
+        self.Layout()
+        self.SetSizeHints(self.sizer.CalcMin())
+
+        if self.is_child:
+            self.Bind(wx.EVT_CLOSE, self.on_close)
+
+    def detach_simulator_panel(self):
+        self.sizer.Detach(self.panel)
+
+    def on_close(self, event):
+        self.parent.attach_simulator()
 
 
 class PreviewRenderer(Thread):
