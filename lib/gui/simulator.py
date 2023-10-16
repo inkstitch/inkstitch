@@ -993,6 +993,8 @@ class EmbroiderySimulator(wx.Frame):
         target_duration = kwargs.pop('target_duration', None)
         wx.Frame.__init__(self, *args, **kwargs)
 
+        self.SetWindowStyle(wx.FRAME_FLOAT_ON_PARENT)
+
         sizer = wx.BoxSizer(wx.HORIZONTAL)
         self.simulator_panel = SimulatorPanel(self,
                                               stitch_plan=stitch_plan,

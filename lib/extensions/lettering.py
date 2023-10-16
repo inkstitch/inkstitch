@@ -37,9 +37,8 @@ class LetteringFrame(wx.Frame):
         self.metadata = kwargs.pop('metadata', [])
 
         # begin wxGlade: MyFrame.__init__
-        wx.Frame.__init__(self, None, wx.ID_ANY,
-                          _("Ink/Stitch Lettering")
-                          )
+        wx.Frame.__init__(self, None, wx.ID_ANY, _("Ink/Stitch Lettering"))
+        self.SetWindowStyle(wx.FRAME_FLOAT_ON_PARENT)
 
         icon = wx.Icon(os.path.join(get_resource_dir("icons"), "inkstitch256x256.png"))
         self.SetIcon(icon)
