@@ -317,6 +317,7 @@ class ControlPanel(wx.Panel):
         self.speed_text.SetLabel(self.format_speed_text(self.speed * self.direction))
 
     def on_slider(self, event):
+        self.animation_pause()
         stitch = event.GetEventObject().GetValue()
         self.stitchBox.SetValue(stitch)
 
@@ -881,11 +882,6 @@ class SimulatorSlider(wx.Panel):
         self._value = value
         self.Refresh()
 
-        event = wx.CommandEvent(wx.wxEVT_COMMAND_SLIDER_UPDATED, self.GetId())
-        event.SetInt(value)
-        event.SetEventObject(self)
-        self.GetEventHandler().ProcessEvent(event)
-
     def GetValue(self):
         return self._value
 
@@ -942,7 +938,7 @@ class SimulatorSlider(wx.Panel):
         tab_width = self.tab_width * height
         tab_x = value_x - tab_width / 2
         tab_y = height * self.tab_start
-        self._tab_rect = wx.Rect(tab_x, tab_y, tab_width, tab_height)
+        self._tab_rect = wx.Rect(round(tab_x), round(tab_y), round(tab_width), round(tab_height))
         gc.DrawRectangle(
             value_x - 1.5, 0,
             3, height * (self.color_bar_start + self.color_bar_thickness))
@@ -980,6 +976,11 @@ class SimulatorSlider(wx.Panel):
         value = (point.x - self.margin) * spread / (width - 2 * self.margin)
         self.SetValue(round(value))
 
+        event = wx.CommandEvent(wx.wxEVT_COMMAND_SLIDER_UPDATED, self.GetId())
+        event.SetInt(value)
+        event.SetEventObject(self)
+        self.GetEventHandler().ProcessEvent(event)
+
     def on_mouse_down(self, event):
         click_pos = event.GetPosition()
         if self.is_in_tab(click_pos):
@@ -987,9 +988,15 @@ class SimulatorSlider(wx.Panel):
             self.CaptureMouse()
             self.set_value_from_position(click_pos)
             self.Refresh()
+        else:
+            width, height = self.GetSize()
+            relative_y = click_pos.y / height
+            if relative_y > self.color_bar_start and relative_y - self.color_bar_start < self.color_bar_thickness:
+                self.set_value_from_position(click_pos)
+                self.Refresh()
 
     def on_mouse_motion(self, event):
-        if event.Dragging() and event.LeftIsDown():
+        if self.HasCapture() and event.Dragging() and event.LeftIsDown():
             self.set_value_from_position(event.GetPosition())
             self.Refresh()
 
