@@ -1053,40 +1053,9 @@ class SimulatorPanel(wx.Panel):
         self.dp.clear()
 
 
-class EmbroiderySimulator(wx.Panel):
-    def __init__(self, parent, stitch_plan=None, stitches_per_second=16, target_duration=None):
-        super().__init__(parent, wx.ID_ANY)
-
-        self.SetWindowStyle(wx.FRAME_FLOAT_ON_PARENT)
-
-        sizer = wx.BoxSizer(wx.HORIZONTAL)
-        self.simulator_panel = SimulatorPanel(self,
-                                              stitch_plan=stitch_plan,
-                                              target_duration=target_duration,
-                                              stitches_per_second=stitches_per_second)
-        sizer.Add(self.simulator_panel, 1, wx.EXPAND)
-
-        self.SetSizerAndFit(sizer)
-
-    def quit(self):
-        self.simulator_panel.stop()
-
-    def go(self):
-        self.simulator_panel.go()
-
-    def stop(self):
-        self.simulator_panel.stop()
-
-    def load(self, stitch_plan):
-        self.simulator_panel.load(stitch_plan)
-
-    def clear(self):
-        self.simulator_panel.clear()
-
-
 class SimulatorWindow(wx.Frame):
-    def __init__(self, panel=None, parent=None):
-        super().__init__(None, title="Simulator")
+    def __init__(self, panel=None, parent=None, **kwargs):
+        super().__init__(None, title=_("Embroidery Simulation"), **kwargs)
 
         self.sizer = wx.BoxSizer(wx.VERTICAL)
 
@@ -1182,7 +1151,7 @@ def show_simulator(stitch_plan):
     width = screen_rect[2] - 1
     height = screen_rect[3] - 1
 
-    frame = EmbroiderySimulator(None, -1, _("Embroidery Simulation"), pos=simulator_pos, size=(width, height), stitch_plan=stitch_plan)
+    frame = SimulatorWindow(pos=simulator_pos, size=(width, height), stitch_plan=stitch_plan)
     app.SetTopWindow(frame)
     frame.Show()
     app.MainLoop()
