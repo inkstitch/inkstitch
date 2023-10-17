@@ -1086,12 +1086,12 @@ class SimulatorWindow(wx.Frame):
 
 
 class SplitSimulatorWindow(wx.Frame):
-    def __init__(self, panel_class, **kwargs):
+    def __init__(self, panel_class, target_duration=None, **kwargs):
         super().__init__(None, title=_("Embroidery Params"))
 
         self.detached_simulator_frame = None
         self.splitter = wx.SplitterWindow(self)
-        self.simulator_panel = SimulatorPanel(self.splitter, detach_callback=self.toggle_detach_simulator)
+        self.simulator_panel = SimulatorPanel(self.splitter, target_duration=target_duration, detach_callback=self.toggle_detach_simulator)
         self.settings_panel = panel_class(self.splitter, simulator=self.simulator_panel, **kwargs)
 
         self.splitter.SplitVertically(self.settings_panel, self.simulator_panel)

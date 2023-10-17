@@ -540,19 +540,18 @@ class SettingsPanel(wx.Panel):
 
                 check_stop_flag()
 
-            stitch_plan = stitch_groups_to_stitch_plan(
-                stitch_groups,
-                collapse_len=self.metadata['collapse_len_mm'],
-                min_stitch_len=self.metadata['min_stitch_len_mm']
-            )
+            if stitch_groups:
+                return stitch_groups_to_stitch_plan(
+                    stitch_groups,
+                    collapse_len=self.metadata['collapse_len_mm'],
+                    min_stitch_len=self.metadata['min_stitch_len_mm']
+                )
         except (SystemExit, ExitThread):
             raise
         except InkstitchException as exc:
             wx.CallAfter(self._show_warning, str(exc))
         except Exception:
             wx.CallAfter(self._show_warning, format_uncaught_exception())
-        else:
-            return stitch_plan
 
     def on_stitch_plan_rendered(self, stitch_plan):
         self.simulator.stop()
@@ -789,7 +788,9 @@ class Params(InkstitchExtension):
                 panel_class=SettingsPanel,
                 tabs_factory=self.create_tabs,
                 on_cancel=self.cancel,
-                metadata=metadata)
+                metadata=metadata,
+                target_duration=5
+            )
 
             # position left, center
             current_screen = wx.Display.GetFromPoint(wx.GetMousePosition())
