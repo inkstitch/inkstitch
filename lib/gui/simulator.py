@@ -833,15 +833,8 @@ class SimulatorSlider(wx.Panel):
 
         kwargs['style'] = wx.SL_HORIZONTAL | wx.SL_VALUE_LABEL | wx.SL_TOP | wx.ALIGN_TOP
 
-        self.sizer = wx.BoxSizer(wx.VERTICAL)
-        self.sizer.Add((10, 1), 1, wx.EXPAND)
-        self.slider = wx.Slider(self, *args, **kwargs)
-        self.sizer.Add(self.slider, 0, wx.EXPAND)
-
-        # add 33% additional vertical space for marker icons
-        size = self.sizer.CalcMin()
-        self.sizer.Add((10, size.height // 3), 1, wx.EXPAND)
-        self.SetSizerAndFit(self.sizer)
+        self._height = self.GetTextExtent("M").y * 4
+        self.SetMinSize((self._height, self._height))
 
         self.marker_lists = {
             "trim": MarkerList("trim"),
@@ -851,34 +844,50 @@ class SimulatorSlider(wx.Panel):
         }
         self.marker_pen = wx.Pen(wx.Colour(0, 0, 0))
         self.color_sections = []
-        self.margin = 13
-        self.color_bar_start = 0
-        self.color_bar_thickness = 0.1
-        self.marker_start = 0
+        self.margin = 15
+        self.tab_start = 0
+        self.tab_width = 0.2
+        self.tab_height = 0.2
+        self.color_bar_start = 0.3
+        self.color_bar_thickness = 0.25
+        self.marker_start = self.color_bar_start
         self.marker_end = 0.75
         self.marker_icon_start = 0.75
-        self.marker_icon_size = size.height // 3
+        self.marker_icon_size = self._height // 4
+
+        self._min = 0
+        self._max = 1
+        self._value = 0
+        self._tab_rect = None
 
         if sys.platform == "darwin":
             self.margin = 8
 
         self.Bind(wx.EVT_PAINT, self.on_paint)
         self.Bind(wx.EVT_ERASE_BACKGROUND, self.on_erase_background)
+        self.Bind(wx.EVT_LEFT_DOWN, self.on_mouse_down)
+        self.Bind(wx.EVT_LEFT_UP, self.on_mouse_up)
+        self.Bind(wx.EVT_MOTION, self.on_mouse_motion)
 
     def SetMax(self, value):
-        self.slider.SetMax(value)
+        self._max = value
+        self.Refresh()
 
     def SetMin(self, value):
-        self.slider.SetMin(value)
+        self._min = value
+        self.Refresh()
 
     def SetValue(self, value):
-        self.slider.SetValue(value)
+        self._value = value
+        self.Refresh()
 
-    def Bind(self, event, callback, *args, **kwargs):
-        if event in self.PROXY_EVENTS:
-            self.slider.Bind(event, callback, *args, **kwargs)
-        else:
-            super().Bind(event, callback, *args, **kwargs)
+        event = wx.CommandEvent(wx.wxEVT_COMMAND_SLIDER_UPDATED, self.GetId())
+        event.SetInt(value)
+        event.SetEventObject(self)
+        self.GetEventHandler().ProcessEvent(event)
+
+    def GetValue(self):
+        return self._value
 
     def add_color_section(self, color, start, end):
         self.color_sections.append(ColorSection(color, start, end))
@@ -902,14 +911,15 @@ class SimulatorSlider(wx.Panel):
     def on_paint(self, event):
         dc = wx.BufferedPaintDC(self)
         if not sys.platform.startswith("win"):
+            # Without this, the background color will be white.
             background_brush = wx.Brush(self.GetTopLevelParent().GetBackgroundColour(), wx.SOLID)
             dc.SetBackground(background_brush)
         dc.Clear()
         gc = wx.GraphicsContext.Create(dc)
 
         width, height = self.GetSize()
-        min_value = self.slider.GetMin()
-        max_value = self.slider.GetMax()
+        min_value = self._min
+        max_value = self._max
         spread = max_value - min_value
 
         def _value_to_x(value):
@@ -923,6 +933,22 @@ class SimulatorSlider(wx.Panel):
             end_x = _value_to_x(color_section.end)
             gc.DrawRectangle(start_x, height * self.color_bar_start,
                              end_x - start_x, height * self.color_bar_thickness)
+
+        gc.SetPen(wx.Pen(wx.Colour(255, 255, 255), 1))
+        gc.SetBrush(wx.Brush(wx.Colour(0, 0, 0)))
+
+        value_x = _value_to_x(self._value)
+        tab_height = self.tab_height * height
+        tab_width = self.tab_width * height
+        tab_x = value_x - tab_width / 2
+        tab_y = height * self.tab_start
+        self._tab_rect = wx.Rect(tab_x, tab_y, tab_width, tab_height)
+        gc.DrawRectangle(
+            value_x - 1.5, 0,
+            3, height * (self.color_bar_start + self.color_bar_thickness))
+        gc.SetPen(wx.NullPen)
+        gc.DrawRectangle(value_x - tab_width/2, height * self.tab_start,
+                         tab_width, tab_height)
 
         gc.SetPen(self.marker_pen)
         for marker_list in self.marker_lists.values():
@@ -942,6 +968,36 @@ class SimulatorSlider(wx.Panel):
     def on_erase_background(self, event):
         # supposedly this prevents flickering?
         pass
+
+    def is_in_tab(self, point):
+        return self._tab_rect and self._tab_rect.Inflate(2).Contains(point)
+
+    def set_value_from_position(self, point):
+        width, height = self.GetSize()
+        min_value = self._min
+        max_value = self._max
+        spread = max_value - min_value
+        value = (point.x - self.margin) * spread / (width - 2 * self.margin)
+        self.SetValue(round(value))
+
+    def on_mouse_down(self, event):
+        click_pos = event.GetPosition()
+        if self.is_in_tab(click_pos):
+            debug.log("drag start")
+            self.CaptureMouse()
+            self.set_value_from_position(click_pos)
+            self.Refresh()
+
+    def on_mouse_motion(self, event):
+        if event.Dragging() and event.LeftIsDown():
+            self.set_value_from_position(event.GetPosition())
+            self.Refresh()
+
+    def on_mouse_up(self, event):
+        if self.HasCapture():
+            self.ReleaseMouse()
+            self.set_value_from_position(event.GetPosition())
+            self.Refresh()
 
 
 class SimulatorPanel(wx.Panel):
