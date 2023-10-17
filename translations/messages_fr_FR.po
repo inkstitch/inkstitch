@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2023-10-16 01:06+0000\n"
-"PO-Revision-Date: 2023-10-16 01:07\n"
+"PO-Revision-Date: 2023-10-17 01:06\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -2414,7 +2414,7 @@ msgstr "Type"
 
 #: lib/extensions/element_info.py:52
 msgid "Fill Method"
-msgstr ""
+msgstr "Méthode de remplissage"
 
 #: lib/extensions/element_info.py:59 lib/extensions/element_info.py:66
 msgid "Satin Method"
@@ -2422,7 +2422,7 @@ msgstr ""
 
 #: lib/extensions/element_info.py:71 lib/extensions/element_info.py:130
 msgid "Dimensions (mm)"
-msgstr ""
+msgstr "Dimensions (mm)"
 
 #: lib/extensions/element_info.py:95 lib/extensions/element_info.py:154
 #: lib/extensions/zip.py:138
@@ -3128,37 +3128,39 @@ msgstr "Simulation de broderie"
 
 #: lib/gui/test_swatches.py:21
 msgid "Generate Swatches"
-msgstr ""
+msgstr "Générer des échantillons"
 
 #: lib/gui/test_swatches.py:38
 msgid "Param"
-msgstr ""
+msgstr "Paramètre"
 
 #: lib/gui/test_swatches.py:47
 msgid "Start Value"
-msgstr ""
+msgstr "Valeur de départ"
 
 #: lib/gui/test_swatches.py:54
 msgid "Increase by"
-msgstr ""
+msgstr "Augmenter de"
 
 #: lib/gui/test_swatches.py:61
 msgid "Columns"
-msgstr ""
+msgstr "Colonnes"
 
 #: lib/gui/test_swatches.py:67
 msgid "Rows"
-msgstr ""
+msgstr "Rangées"
 
 #: lib/gui/test_swatches.py:73
 msgid "Spacing"
-msgstr ""
+msgstr "Espacement"
 
 #: lib/gui/test_swatches.py:88
 msgid "This extension generates test swatches from a selection.\n"
 "Test swatches help to find best stitch settings for your design.\n"
 "Sew them out with the same thread and fabric as the final designs."
-msgstr ""
+msgstr "Cette extension génère des échantillons à partir d'une sélection.\n"
+"Ces échantillons aident à trouver les meilleurs paramètres pour votre dessin.\n"
+"Brodez les avec le même fil et le même tissu que pour votre projet."
 
 #: lib/gui/test_swatches.py:98 inx/inkstitch_apply_threadlist.inx:98
 #: inx/inkstitch_fill_to_stroke.inx:32 inx/inkstitch_stroke_to_lpe_satin.inx:32
@@ -3168,11 +3170,11 @@ msgstr "Plus d'informations sur notre site web"
 
 #: lib/gui/test_swatches.py:104 lib/gui/test_swatches.py:105
 msgid "https://inkstitch.org/docs/edit/#generate-test-swatches-from-selection"
-msgstr ""
+msgstr "https://inkstitch.org/fr/docs/edit/#generate-test-swatches-from-selection"
 
 #: lib/gui/test_swatches.py:115
 msgid "Apply"
-msgstr ""
+msgstr "Appliquer"
 
 #: lib/gui/warnings.py:21
 msgid "An error occurred while rendering the stitch plan:"
@@ -5415,7 +5417,7 @@ msgstr ""
 
 #: inx/inkstitch_outline.inx:14
 msgid "Ratio"
-msgstr ""
+msgstr "Ratio"
 
 #: inx/inkstitch_outline.inx:15
 msgid "Allow Holes"
@@ -6018,7 +6020,7 @@ msgstr "https://inkstitch.org/fr/docs/satin-tools/#stroke-to-live-path-effect-sa
 
 #: inx/inkstitch_test_swatches.inx:3
 msgid "Generate Test Swatches from Selection"
-msgstr ""
+msgstr "Générer des échantillons à partir de la sélection"
 
 #: inx/inkstitch_troubleshoot.inx:3
 msgid "Troubleshoot Objects"
