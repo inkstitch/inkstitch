@@ -63,7 +63,7 @@ class ElementInfo(InkstitchExtension):
         if isinstance(element, Stroke):
             stroke_method = next((method.name for method in element._stroke_methods if method.id == element.stroke_method), "")
             self.list_items.append(ListItem(
-                name=_("Satin Method"),
+                name=_("Stroke Method"),
                 value=stroke_method
             ))
 
