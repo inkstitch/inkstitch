@@ -22,7 +22,7 @@ from ..elements import (Clone, EmbroideryElement, FillStitch, Polyline,
 from ..elements.clone import is_clone
 from ..exceptions import InkstitchException, format_uncaught_exception
 from ..gui import PresetsPanel, PreviewRenderer, WarningPanel
-from ..gui.simulator import SimulatorPanel, SimulatorWindow
+from ..gui.simulator import SplitSimulatorWindow
 from ..i18n import _
 from ..stitch_plan import stitch_groups_to_stitch_plan
 from ..svg.tags import SVG_POLYLINE_TAG
@@ -647,65 +647,6 @@ class SettingsPanel(wx.Panel):
         # end wxGlade
 
 
-class ParamsWindow(wx.Frame):
-    def __init__(self, *args, **kwargs):
-        super().__init__(None, title=_("Embroidery Params"))
-
-        self.detached_simulator_frame = None
-        self.splitter = wx.SplitterWindow(self)
-        self.simulator_panel = SimulatorPanel(self.splitter, detach_callback=self.toggle_detach_simulator)
-        self.settings_panel = SettingsPanel(self.splitter, *args, simulator=self.simulator_panel, **kwargs)
-
-        self.splitter.SplitVertically(self.settings_panel, self.simulator_panel)
-        self.splitter.SetMinimumPaneSize(100)
-
-        icon = wx.Icon(os.path.join(get_resource_dir("icons"), "inkstitch256x256.png"))
-        self.SetIcon(icon)
-
-        self.sizer = wx.BoxSizer(wx.VERTICAL)
-        self.sizer.Add(self.splitter, 1, wx.EXPAND)
-        self.SetSizer(self.sizer)
-
-        self.SetSizeHints(self.sizer.CalcMin())
-        self.Maximize()
-
-        self.Bind(wx.EVT_CLOSE, self.on_close)
-
-    def on_close(self, event):
-        if self.detached_simulator_frame:
-            self.detached_simulator_frame.Destroy()
-        self.Destroy()
-
-    def toggle_detach_simulator(self):
-        if self.detached_simulator_frame:
-            self.attach_simulator()
-        else:
-            self.detach_simulator()
-
-    def attach_simulator(self):
-        self.detached_simulator_frame.detach_simulator_panel()
-        self.simulator_panel.Reparent(self.splitter)
-        self.splitter.SplitVertically(self.settings_panel, self.simulator_panel)
-        self.detached_simulator_frame.Destroy()
-        self.detached_simulator_frame = None
-        self.Maximize()
-        self.splitter.UpdateSize()
-        self.SetFocus()
-        self.Raise()
-
-    def detach_simulator(self):
-        simulator_rect = self.simulator_panel.GetScreenRect()
-        settings_rect = self.settings_panel.GetScreenRect()
-        self.splitter.Unsplit()
-        self.detached_simulator_frame = SimulatorWindow(panel=self.simulator_panel, parent=self)
-        self.detached_simulator_frame.Show()
-        self.splitter.SetMinimumPaneSize(100)
-        self.Maximize(False)
-        self.SetMinSize((200, 200))
-        self.SetClientRect(settings_rect)
-        self.detached_simulator_frame.SetClientRect(simulator_rect)
-
-
 class NoValidObjects(Exception):
     pass
 
@@ -844,7 +785,8 @@ class Params(InkstitchExtension):
         try:
             app = wx.App()
             metadata = self.get_inkstitch_metadata()
-            frame = ParamsWindow(
+            frame = SplitSimulatorWindow(
+                panel_class=SettingsPanel,
                 tabs_factory=self.create_tabs,
                 on_cancel=self.cancel,
                 metadata=metadata)
