@@ -9,6 +9,12 @@
     <param name="rm_stroke" type="boolean" gui-text="Remove Small strokes"
            gui-description="Removes small strokes shorter than defined by threshold.">true</param>
     <param name="stroke_threshold" type="int" gui-text="Stroke threshold (px)" min="2" max="800">5</param>
+    <param name="rm_groups" type="boolean" gui-text="Remove empty layers and groups">true</param>
+    <spacer />
+    <separator />
+    <spacer />
+    <param name="dry_run" type="boolean" gui-text="Test run"
+        gui-description="Only display labels and ids of affected elements and groups without removing them.">true</param>
     <param name="extension" type="string" gui-hidden="true">cleanup</param>
     <effect>
         <object-type>all</object-type>
