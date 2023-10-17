@@ -57,8 +57,8 @@ class ElementInfoFrame(wx.Frame):
         self.website_link = wx.adv.HyperlinkCtrl(
             self.help,
             wx.ID_ANY,
-            _("https://inkstitch.org/troubleshoot#element-info"),
-            _("https://inkstitch.org/troubleshoot#element-info")
+            _("https://inkstitch.org/docs/troubleshoot#element-info"),
+            _("https://inkstitch.org/docs/troubleshoot#element-info")
         )
         help_sizer.Add(self.website_link, 0, wx.ALL, 8)
 
