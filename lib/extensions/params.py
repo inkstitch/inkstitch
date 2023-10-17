@@ -785,6 +785,7 @@ class Params(InkstitchExtension):
             app = wx.App()
             metadata = self.get_inkstitch_metadata()
             frame = SplitSimulatorWindow(
+                title=_("Embroidery Params"),
                 panel_class=SettingsPanel,
                 tabs_factory=self.create_tabs,
                 on_cancel=self.cancel,

@@ -1086,8 +1086,8 @@ class SimulatorWindow(wx.Frame):
 
 
 class SplitSimulatorWindow(wx.Frame):
-    def __init__(self, panel_class, target_duration=None, **kwargs):
-        super().__init__(None, title=_("Embroidery Params"))
+    def __init__(self, panel_class, title, target_duration=None, **kwargs):
+        super().__init__(None, title=title)
 
         self.detached_simulator_frame = None
         self.splitter = wx.SplitterWindow(self)

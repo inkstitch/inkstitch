@@ -542,6 +542,7 @@ class Lettering(CommandsExtension):
         metadata = self.get_inkstitch_metadata()
         app = wx.App()
         frame = SplitSimulatorWindow(
+            title=_("Ink/Stitch Lettering"),
             panel_class=LetteringPanel,
             group=self.get_or_create_group(),
             on_cancel=self.cancel,
