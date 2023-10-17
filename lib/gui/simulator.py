@@ -829,7 +829,7 @@ class ColorSection:
 class SimulatorSlider(wx.Panel):
     PROXY_EVENTS = (wx.EVT_SLIDER,)
 
-    def __init__(self, parent, id=wx.ID_ANY, *args, **kwargs):
+    def __init__(self, parent, id=wx.ID_ANY, minValue=0, maxValue=1, **kwargs):
         super().__init__(parent, id)
 
         kwargs['style'] = wx.SL_HORIZONTAL | wx.SL_VALUE_LABEL | wx.SL_TOP | wx.ALIGN_TOP
@@ -856,8 +856,8 @@ class SimulatorSlider(wx.Panel):
         self.marker_icon_start = 0.75
         self.marker_icon_size = self._height // 4
 
-        self._min = 0
-        self._max = 1
+        self._min = minValue
+        self._max = maxValue
         self._value = 0
         self._tab_rect = None
 
@@ -973,7 +973,9 @@ class SimulatorSlider(wx.Panel):
         min_value = self._min
         max_value = self._max
         spread = max_value - min_value
-        value = (point.x - self.margin) * spread / (width - 2 * self.margin)
+        value = round((point.x - self.margin) * spread / (width - 2 * self.margin))
+        value = max(value, self._min)
+        value = min(value, self._max)
         self.SetValue(round(value))
 
         event = wx.CommandEvent(wx.wxEVT_COMMAND_SLIDER_UPDATED, self.GetId())
