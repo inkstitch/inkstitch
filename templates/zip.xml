@@ -9,6 +9,9 @@
         <filetypetooltip>Create a ZIP with multiple embroidery file formats using Ink/Stitch</filetypetooltip>
         <dataloss>true</dataloss>
     </output>
+    <param name="custom-file-name" type="string" gui-text="Custom file name"
+       gui-description="Defines the file names inside the zip archive. Leave empty for default file name."></param>
+    <spacer />
     <param name="notebook" type="notebook">
       <page name="file-formats" gui-text="File Formats">
         <label>Output formats:</label>
@@ -28,10 +31,6 @@
         <param name="x-spacing" type="float" min="-1000" max="1000" gui-text="Horizontal spacing (mm)">100</param>
         <param name="y-repeats" type="int" min="1" max="20" gui-text="Vertical repeats">1</param>
         <param name="y-spacing" type="float" min="-1000" max="1000" gui-text="Vertical spacing (mm)">100</param>
-      </page>
-      <page name="output-options" gui-text="Output Options">
-          <param name="custom-file-name" type="string" gui-text="Custom file name"
-                 gui-description="Defines the file names inside the zip archive. Leave empty for default file name."></param>
       </page>
     </param>
     <script>

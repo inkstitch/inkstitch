@@ -30,7 +30,6 @@ class Zip(InkstitchExtension):
         self.arg_parser.add_argument('--notebook', type=Boolean, default=True)
         self.arg_parser.add_argument('--file-formats', type=Boolean, default=True)
         self.arg_parser.add_argument('--panelization', type=Boolean, default=True)
-        self.arg_parser.add_argument('--output-options', type=Boolean, default=True)
 
         # it's kind of obnoxious that I have to do this...
         self.formats = []
