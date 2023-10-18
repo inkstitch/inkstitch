@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-10-16 01:06+0000\n"
-"PO-Revision-Date: 2023-10-16 01:07\n"
+"POT-Creation-Date: 2023-10-18 01:05+0000\n"
+"PO-Revision-Date: 2023-10-18 01:06\n"
 "Last-Translator: \n"
 "Language-Team: Ukrainian\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-16 01:06+0000\n"
+"POT-Creation-Date: 2023-10-18 01:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2328,10 +2328,25 @@ msgstr "Порада: Спробуйте Розширення > Ink/Stitch > В�
 msgid "Please select one or more fill areas to break apart."
 msgstr "Щоб відокремити непов’язані області одну від одної, виберіть один або кілька об’єктів для заливки."
 
-#: lib/extensions/cleanup.py:37 lib/extensions/cleanup.py:49
+#: lib/extensions/cleanup.py:60
+#, python-format
+msgid "%s elements to remove:"
+msgstr ""
+
+#: lib/extensions/cleanup.py:65
+#, python-format
+msgid "%s groups/layers to remove:"
+msgstr ""
+
+#: lib/extensions/cleanup.py:70
 #, python-format
 msgid "%s elements removed"
 msgstr "%s елементів видалено"
+
+#: lib/extensions/cleanup.py:74
+#, python-format
+msgid "%s groups/layers removed"
+msgstr ""
 
 #: lib/extensions/convert_to_satin.py:35
 msgid "Please select at least one line to convert to a satin column."
@@ -2410,8 +2425,12 @@ msgstr ""
 msgid "Fill Method"
 msgstr ""
 
-#: lib/extensions/element_info.py:59 lib/extensions/element_info.py:66
+#: lib/extensions/element_info.py:59
 msgid "Satin Method"
+msgstr ""
+
+#: lib/extensions/element_info.py:66
+msgid "Stroke Method"
 msgstr ""
 
 #: lib/extensions/element_info.py:71 lib/extensions/element_info.py:130
@@ -2419,7 +2438,7 @@ msgid "Dimensions (mm)"
 msgstr ""
 
 #: lib/extensions/element_info.py:95 lib/extensions/element_info.py:154
-#: lib/extensions/zip.py:138
+#: lib/extensions/zip.py:137
 msgid "Stitches"
 msgstr "Стіжки"
 
@@ -2439,7 +2458,7 @@ msgstr ""
 msgid "All Selected Elements"
 msgstr ""
 
-#: lib/extensions/element_info.py:134 lib/extensions/zip.py:139
+#: lib/extensions/element_info.py:134 lib/extensions/zip.py:138
 msgid "Colors"
 msgstr "Кольори"
 
@@ -2624,7 +2643,7 @@ msgid "Error: Text cannot be applied to the document.\n"
 "%s"
 msgstr ""
 
-#: lib/extensions/lettering.py:441 lib/extensions/zip.py:137
+#: lib/extensions/lettering.py:441 lib/extensions/zip.py:136
 #: inx/inkstitch_commands_scale_symbols.inx:6
 #: inx/inkstitch_lettering_generate_json.inx:82
 msgid "Size"
@@ -2800,7 +2819,7 @@ msgid "Description"
 msgstr "Опис"
 
 #: lib/extensions/troubleshoot.py:106 lib/extensions/troubleshoot.py:155
-#: inx/inkstitch_cleanup.inx:17 inx/inkstitch_element_info.inx:10
+#: inx/inkstitch_cleanup.inx:23 inx/inkstitch_element_info.inx:10
 #: inx/inkstitch_remove_embroidery_settings.inx:39
 #: inx/inkstitch_select_elements.inx:77 inx/inkstitch_troubleshoot.inx:12
 #: inx/inkstitch_update_svg.inx:10
@@ -2847,27 +2866,27 @@ msgstr "Можливо, що один об'єкт містить більше н
 msgid "Please select at least one element to update. This extension is designed to help you update copy and pasted elements from old designs."
 msgstr ""
 
-#: lib/extensions/zip.py:80
+#: lib/extensions/zip.py:79
 msgid "threadlist"
 msgstr "список ниток"
 
-#: lib/extensions/zip.py:89
+#: lib/extensions/zip.py:88
 msgid "No embroidery file formats selected."
 msgstr "Не вибрано формат файла вишивки."
 
-#: lib/extensions/zip.py:133
+#: lib/extensions/zip.py:132
 msgid "Design Details"
 msgstr "Деталі дизайну"
 
-#: lib/extensions/zip.py:136
+#: lib/extensions/zip.py:135
 msgid "Title"
 msgstr "Назва"
 
-#: lib/extensions/zip.py:141
+#: lib/extensions/zip.py:140
 msgid "Thread Order"
 msgstr "Порядок ниток"
 
-#: lib/extensions/zip.py:154
+#: lib/extensions/zip.py:153
 msgid "Thread Used"
 msgstr "Використано нитки"
 
@@ -2908,7 +2927,7 @@ msgid "More information on our website:"
 msgstr ""
 
 #: lib/gui/element_info.py:60 lib/gui/element_info.py:61
-msgid "https://inkstitch.org/troubleshoot#element-info"
+msgid "https://inkstitch.org/docs/troubleshoot#element-info"
 msgstr ""
 
 #: lib/gui/preferences.py:16 lib/gui/preferences.py:17
@@ -4315,6 +4334,18 @@ msgstr ""
 
 #: inx/inkstitch_cleanup.inx:11
 msgid "Stroke threshold (px)"
+msgstr ""
+
+#: inx/inkstitch_cleanup.inx:12
+msgid "Remove empty layers and groups"
+msgstr ""
+
+#: inx/inkstitch_cleanup.inx:17
+msgid "Test run"
+msgstr ""
+
+#: inx/inkstitch_cleanup.inx:17
+msgid "Only display labels and ids of affected elements and groups without removing them."
 msgstr ""
 
 #: inx/inkstitch_commands_scale_symbols.inx:3
@@ -6110,54 +6141,50 @@ msgid "Create a ZIP with multiple embroidery file formats using Ink/Stitch"
 msgstr "Створіть ZIP за допомогою декількох форматів файлів для вишивки за допомогою Ink/Stitch"
 
 #: inx/inkstitch_zip.inx:13
-msgid "File Formats"
-msgstr ""
-
-#: inx/inkstitch_zip.inx:14
-msgid "Output formats:"
-msgstr ""
-
-#: inx/inkstitch_zip.inx:29
-msgid ".TXT: Threadlist [COLOR]"
-msgstr ""
-
-#: inx/inkstitch_zip.inx:30
-msgid ".SVG: Scalable Vector Graphic"
-msgstr ""
-
-#: inx/inkstitch_zip.inx:33
-msgid "Panelization Options"
-msgstr ""
-
-#: inx/inkstitch_zip.inx:34
-msgid "For single design set horizontal and vertical repeats to 1"
-msgstr ""
-
-#: inx/inkstitch_zip.inx:36
-msgid "Horizontal repeats"
-msgstr ""
-
-#: inx/inkstitch_zip.inx:37
-msgid "Horizontal spacing (mm)"
-msgstr ""
-
-#: inx/inkstitch_zip.inx:38
-msgid "Vertical repeats"
-msgstr ""
-
-#: inx/inkstitch_zip.inx:39
-msgid "Vertical spacing (mm)"
-msgstr ""
-
-#: inx/inkstitch_zip.inx:41
-msgid "Output Options"
-msgstr ""
-
-#: inx/inkstitch_zip.inx:43
 msgid "Custom file name"
 msgstr ""
 
-#: inx/inkstitch_zip.inx:43
+#: inx/inkstitch_zip.inx:13
 msgid "Defines the file names inside the zip archive. Leave empty for default file name."
+msgstr ""
+
+#: inx/inkstitch_zip.inx:16
+msgid "File Formats"
+msgstr ""
+
+#: inx/inkstitch_zip.inx:17
+msgid "Output formats:"
+msgstr ""
+
+#: inx/inkstitch_zip.inx:32
+msgid ".TXT: Threadlist [COLOR]"
+msgstr ""
+
+#: inx/inkstitch_zip.inx:33
+msgid ".SVG: Scalable Vector Graphic"
+msgstr ""
+
+#: inx/inkstitch_zip.inx:36
+msgid "Panelization Options"
+msgstr ""
+
+#: inx/inkstitch_zip.inx:37
+msgid "For single design set horizontal and vertical repeats to 1"
+msgstr ""
+
+#: inx/inkstitch_zip.inx:39
+msgid "Horizontal repeats"
+msgstr ""
+
+#: inx/inkstitch_zip.inx:40
+msgid "Horizontal spacing (mm)"
+msgstr ""
+
+#: inx/inkstitch_zip.inx:41
+msgid "Vertical repeats"
+msgstr ""
+
+#: inx/inkstitch_zip.inx:42
+msgid "Vertical spacing (mm)"
 msgstr ""
 
