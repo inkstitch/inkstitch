@@ -423,7 +423,7 @@ class LetteringPanel(wx.Panel):
         self.close()
 
     def close(self):
-        self.Destroy()
+        self.GetTopLevelParent().Destroy()
 
     def cancel(self, event):
         if self.cancel_hook:
