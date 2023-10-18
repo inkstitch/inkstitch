@@ -441,7 +441,7 @@ class ParamsTab(ScrolledPanel):
                 for item in param.select_items:
                     self.choice_widgets[item].extend([input, col4])
 
-            self.settings_grid.Add(input, flag=wx.ALIGN_CENTER_VERTICAL | wx.LEFT | wx.EXPAND, border=40)
+            self.settings_grid.Add(input, flag=wx.ALIGN_CENTER_VERTICAL | wx.LEFT | wx.EXPAND, border=10)
             self.settings_grid.Add(col4, flag=wx.ALIGN_CENTER_VERTICAL)
 
         self.inputs_to_params = {v: k for k, v in self.param_inputs.items()}
@@ -504,8 +504,6 @@ class SettingsPanel(wx.Panel):
 
         self.apply_button = wx.Button(self, wx.ID_ANY, _("Apply and Quit"))
         self.apply_button.Bind(wx.EVT_BUTTON, self.apply)
-
-        self.notebook.SetMinSize((800, 600))
 
         self.__do_layout()
         self.update_preview()
