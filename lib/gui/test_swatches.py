@@ -20,6 +20,8 @@ class GenerateSwatchesFrame(wx.Frame):
         wx.Frame.__init__(self, *args, **kwargs)
         wx.Frame.__init__(self, None, wx.ID_ANY, _("Generate Swatches"), *args, **kwargs)
 
+        self.SetWindowStyle(wx.FRAME_FLOAT_ON_PARENT)
+
         self.panel = wx.Panel(self, wx.ID_ANY)
 
         main_sizer = wx.BoxSizer(wx.VERTICAL)

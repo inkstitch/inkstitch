@@ -16,6 +16,8 @@ class PreferencesFrame(wx.Frame):
         wx.Frame.__init__(self, None, wx.ID_ANY, _("Preferences"), *args, **kwargs)
         self.SetTitle(_("Preferences"))
 
+        self.SetWindowStyle(wx.FRAME_FLOAT_ON_PARENT)
+
         metadata = self.extension.get_inkstitch_metadata()
 
         self.panel_1 = wx.Panel(self, wx.ID_ANY)

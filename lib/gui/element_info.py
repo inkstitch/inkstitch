@@ -16,6 +16,8 @@ class ElementInfoFrame(wx.Frame):
         self.index = 0
         wx.Frame.__init__(self, None, wx.ID_ANY, _("Element Info"), *args, **kwargs)
 
+        self.SetWindowStyle(wx.FRAME_FLOAT_ON_PARENT)
+
         self.main_panel = wx.Panel(self, wx.ID_ANY)
 
         notebook_sizer = wx.BoxSizer(wx.VERTICAL)

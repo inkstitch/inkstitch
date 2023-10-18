@@ -84,15 +84,11 @@ class ControlPanel(wx.Panel):
         self.btnReverse = wx.BitmapToggleButton(self, -1, style=self.button_style)
         self.btnReverse.Bind(wx.EVT_TOGGLEBUTTON, self.on_reverse_button)
         self.btnReverse.SetBitmap(self.load_icon('reverse'))
-        self.btnReverse.SetToolTip(_('Animate in reverse (arrow right)'))
+        self.btnReverse.SetToolTip(_('Animate in reverse (arrow left)'))
         self.btnPlay = wx.BitmapToggleButton(self, -1, style=self.button_style)
         self.btnPlay.Bind(wx.EVT_TOGGLEBUTTON, self.on_play_button)
         self.btnPlay.SetBitmap(self.load_icon('play'))
         self.btnPlay.SetToolTip(_('Play (P)'))
-        self.btnPause = wx.BitmapToggleButton(self, -1, style=self.button_style)
-        self.btnPause.Bind(wx.EVT_TOGGLEBUTTON, self.on_pause_button)
-        self.btnPause.SetBitmap(self.load_icon('pause'))
-        self.btnPause.SetToolTip(_('Pause (P)'))
         self.btnRestart = wx.Button(self, -1, style=self.button_style)
         self.btnRestart.Bind(wx.EVT_BUTTON, self.animation_restart)
         self.btnRestart.SetBitmap(self.load_icon('restart'))
@@ -101,14 +97,16 @@ class ControlPanel(wx.Panel):
         self.btnNpp.Bind(wx.EVT_TOGGLEBUTTON, self.toggle_npp)
         self.btnNpp.SetBitmap(self.load_icon('npp'))
         self.btnNpp.SetToolTip(_('Display needle penetration point (O)'))
-        self.slider = SimulatorSlider(self, -1, value=1, minValue=1, maxValue=2)
+        self.slider = SimulatorSlider(self, -1, value=1, minValue=1, maxValue=self.stitch_plan.num_stitches)
         self.slider.Bind(wx.EVT_SLIDER, self.on_slider)
-        self.stitchBox = IntCtrl(self, -1, value=1, min=1, max=2, limited=True, allow_none=True, style=wx.TE_PROCESS_ENTER)
+        self.stitchBox = IntCtrl(self, -1, value=1, min=1, max=self.stitch_plan.num_stitches,
+                                 size=((100, -1)), limited=True, allow_none=True, style=wx.TE_PROCESS_ENTER)
         self.stitchBox.Bind(wx.EVT_LEFT_DOWN, self.on_stitch_box_focus)
         self.stitchBox.Bind(wx.EVT_SET_FOCUS, self.on_stitch_box_focus)
         self.stitchBox.Bind(wx.EVT_TEXT_ENTER, self.on_stitch_box_focusout)
         self.stitchBox.Bind(wx.EVT_KILL_FOCUS, self.on_stitch_box_focusout)
         self.Bind(wx.EVT_LEFT_DOWN, self.on_stitch_box_focusout)
+        self.totalstitchText = wx.StaticText(self, -1, label=f"/ { self.stitch_plan.num_stitches }")
         self.btnJump = wx.BitmapToggleButton(self, -1, style=self.button_style)
         self.btnJump.SetToolTip(_('Show jump stitches'))
         self.btnJump.SetBitmap(self.load_icon('jump'))
@@ -129,14 +127,8 @@ class ControlPanel(wx.Panel):
         # Layout
         self.hbSizer1 = wx.BoxSizer(wx.HORIZONTAL)
         self.hbSizer1.Add(self.slider, 1, wx.EXPAND | wx.RIGHT, 10)
-        self.hbSizer1.Add(self.stitchBox, 0, wx.ALIGN_CENTER_VERTICAL | wx.RIGHT, 10)
-
-        self.command_sizer = wx.StaticBoxSizer(wx.StaticBox(self, wx.ID_ANY, _("Command")), wx.VERTICAL)
-        self.command_text = wx.StaticText(self, wx.ID_ANY, label="", style=wx.ALIGN_CENTRE_HORIZONTAL | wx.ST_NO_AUTORESIZE)
-        self.command_text.SetFont(wx.Font(wx.FontInfo(20).Bold()))
-        self.command_text.SetMinSize(self.get_max_command_text_size())
-        self.command_sizer.Add(self.command_text, 0, wx.EXPAND | wx.ALL, 10)
-        self.hbSizer1.Add(self.command_sizer, 0, wx.EXPAND)
+        self.hbSizer1.Add(self.stitchBox, 0, wx.ALIGN_CENTER | wx.RIGHT, 10)
+        self.hbSizer1.Add(self.totalstitchText, 0, wx.ALIGN_CENTER | wx.RIGHT, 10)
 
         self.controls_sizer = wx.StaticBoxSizer(wx.StaticBox(self, wx.ID_ANY, _("Controls")), wx.HORIZONTAL)
         self.controls_inner_sizer = wx.BoxSizer(wx.HORIZONTAL)
@@ -147,7 +139,6 @@ class ControlPanel(wx.Panel):
         self.controls_inner_sizer.Add(self.btnReverse, 0, wx.EXPAND | wx.ALL, 2)
         self.controls_inner_sizer.Add(self.btnForward, 0, wx.EXPAND | wx.ALL, 2)
         self.controls_inner_sizer.Add(self.btnPlay, 0, wx.EXPAND | wx.ALL, 2)
-        self.controls_inner_sizer.Add(self.btnPause, 0, wx.EXPAND | wx.ALL, 2)
         self.controls_inner_sizer.Add(self.btnRestart, 0, wx.EXPAND | wx.ALL, 2)
         self.controls_sizer.Add((1, 1), 1)
         self.controls_sizer.Add(self.controls_inner_sizer, 0, wx.ALIGN_CENTER_VERTICAL | wx.ALL, 10)
@@ -325,11 +316,8 @@ class ControlPanel(wx.Panel):
     def update_speed_text(self):
         self.speed_text.SetLabel(self.format_speed_text(self.speed * self.direction))
 
-    def get_max_command_text_size(self):
-        extents = [self.command_text.GetTextExtent(command) for command in COMMAND_NAMES]
-        return max(extents, key=lambda extent: extent.x)
-
     def on_slider(self, event):
+        self.animation_pause()
         stitch = event.GetEventObject().GetValue()
         self.stitchBox.SetValue(stitch)
 
@@ -343,7 +331,6 @@ class ControlPanel(wx.Panel):
             self.current_stitch = stitch
             self.slider.SetValue(stitch)
             self.stitchBox.SetValue(stitch)
-            self.command_text.SetLabel(COMMAND_NAMES[command])
 
     def on_stitch_box_focus(self, event):
         self.animation_pause()
@@ -353,7 +340,11 @@ class ControlPanel(wx.Panel):
     def on_stitch_box_focusout(self, event):
         self.SetAcceleratorTable(self.accel_table)
         stitch = self.stitchBox.GetValue()
-        self.parent.SetFocus()
+        # We now want to remove the focus from the stitchBox.
+        # In Windows it won't work if we set focus to self.parent, while setting the focus to the
+        # top level would work. This in turn would activate the trim button in Linux. So let's
+        # set the focus on the slider instead where it doesn't cause any harm in any of the operating systems
+        self.slider.SetFocus()
 
         if stitch is None:
             stitch = 1
@@ -363,6 +354,7 @@ class ControlPanel(wx.Panel):
 
         if self.drawing_panel:
             self.drawing_panel.set_current_stitch(stitch)
+        event.Skip()
 
     def animation_slow_down(self, event):
         """"""
@@ -374,25 +366,26 @@ class ControlPanel(wx.Panel):
 
     def animation_pause(self, event=None):
         self.drawing_panel.stop()
+        self.btnPlay.SetBitmap(self.load_icon('play'))
 
     def animation_start(self, event=None):
         self.drawing_panel.go()
+        self.btnPlay.SetBitmap(self.load_icon('pause'))
 
     def on_start(self):
-        self.btnPause.SetValue(False)
         self.btnPlay.SetValue(True)
+        self.btnPlay.SetBitmap(self.load_icon('pause'))
 
     def on_stop(self):
-        self.btnPause.SetValue(True)
         self.btnPlay.SetValue(False)
-
-    def on_pause_button(self, event):
-        """"""
-        self.animation_pause()
+        self.btnPlay.SetBitmap(self.load_icon('play'))
 
     def on_play_button(self, event):
-        """"""
-        self.animation_start()
+        play = self.btnPlay.GetValue()
+        if play:
+            self.animation_start()
+        else:
+            self.animation_pause()
 
     def play_or_pause(self, event):
         if self.drawing_panel.animating:
@@ -726,7 +719,10 @@ class DrawingPanel(wx.Panel):
     def set_current_stitch(self, stitch):
         self.current_stitch = stitch
         self.clamp_current_stitch()
-        self.control_panel.on_current_stitch(self.current_stitch, self.commands[self.current_stitch])
+        command = self.commands[self.current_stitch]
+        self.control_panel.on_current_stitch(self.current_stitch, command)
+        statusbar = self.GetTopLevelParent().statusbar
+        statusbar.SetStatusText(_("Command: %s") % COMMAND_NAMES[command])
         self.stop_if_at_end()
         self.Refresh()
 
@@ -833,19 +829,13 @@ class ColorSection:
 class SimulatorSlider(wx.Panel):
     PROXY_EVENTS = (wx.EVT_SLIDER,)
 
-    def __init__(self, parent, id=wx.ID_ANY, *args, **kwargs):
+    def __init__(self, parent, id=wx.ID_ANY, minValue=0, maxValue=1, **kwargs):
         super().__init__(parent, id)
 
-        kwargs['style'] = wx.SL_HORIZONTAL | wx.SL_LABELS
+        kwargs['style'] = wx.SL_HORIZONTAL | wx.SL_VALUE_LABEL | wx.SL_TOP | wx.ALIGN_TOP
 
-        self.sizer = wx.BoxSizer(wx.VERTICAL)
-        self.slider = wx.Slider(self, *args, **kwargs)
-        self.sizer.Add(self.slider, 0, wx.EXPAND)
-
-        # add 33% additional vertical space for marker icons
-        size = self.sizer.CalcMin()
-        self.sizer.Add((10, size.height // 3), 1, wx.EXPAND)
-        self.SetSizerAndFit(self.sizer)
+        self._height = self.GetTextExtent("M").y * 4
+        self.SetMinSize((self._height, self._height))
 
         self.marker_lists = {
             "trim": MarkerList("trim"),
@@ -855,31 +845,45 @@ class SimulatorSlider(wx.Panel):
         }
         self.marker_pen = wx.Pen(wx.Colour(0, 0, 0))
         self.color_sections = []
-        self.margin = 13
-        self.color_bar_start = 0.25
+        self.margin = 15
+        self.tab_start = 0
+        self.tab_width = 0.2
+        self.tab_height = 0.2
+        self.color_bar_start = 0.3
         self.color_bar_thickness = 0.25
-        self.marker_start = 0.375
+        self.marker_start = self.color_bar_start
         self.marker_end = 0.75
         self.marker_icon_start = 0.75
-        self.marker_icon_size = size.height // 3
+        self.marker_icon_size = self._height // 4
+
+        self._min = minValue
+        self._max = maxValue
+        self._value = 0
+        self._tab_rect = None
+
+        if sys.platform == "darwin":
+            self.margin = 8
 
         self.Bind(wx.EVT_PAINT, self.on_paint)
         self.Bind(wx.EVT_ERASE_BACKGROUND, self.on_erase_background)
+        self.Bind(wx.EVT_LEFT_DOWN, self.on_mouse_down)
+        self.Bind(wx.EVT_LEFT_UP, self.on_mouse_up)
+        self.Bind(wx.EVT_MOTION, self.on_mouse_motion)
 
     def SetMax(self, value):
-        self.slider.SetMax(value)
+        self._max = value
+        self.Refresh()
 
     def SetMin(self, value):
-        self.slider.SetMin(value)
+        self._min = value
+        self.Refresh()
 
     def SetValue(self, value):
-        self.slider.SetValue(value)
+        self._value = value
+        self.Refresh()
 
-    def Bind(self, event, callback, *args, **kwargs):
-        if event in self.PROXY_EVENTS:
-            self.slider.Bind(event, callback, *args, **kwargs)
-        else:
-            super().Bind(event, callback, *args, **kwargs)
+    def GetValue(self):
+        return self._value
 
     def add_color_section(self, color, start, end):
         self.color_sections.append(ColorSection(color, start, end))
@@ -902,14 +906,16 @@ class SimulatorSlider(wx.Panel):
 
     def on_paint(self, event):
         dc = wx.BufferedPaintDC(self)
-        background_brush = wx.Brush(self.GetTopLevelParent().GetBackgroundColour(), wx.SOLID)
-        dc.SetBackground(background_brush)
+        if not sys.platform.startswith("win"):
+            # Without this, the background color will be white.
+            background_brush = wx.Brush(self.GetTopLevelParent().GetBackgroundColour(), wx.SOLID)
+            dc.SetBackground(background_brush)
         dc.Clear()
         gc = wx.GraphicsContext.Create(dc)
 
         width, height = self.GetSize()
-        min_value = self.slider.GetMin()
-        max_value = self.slider.GetMax()
+        min_value = self._min
+        max_value = self._max
         spread = max_value - min_value
 
         def _value_to_x(value):
@@ -923,6 +929,22 @@ class SimulatorSlider(wx.Panel):
             end_x = _value_to_x(color_section.end)
             gc.DrawRectangle(start_x, height * self.color_bar_start,
                              end_x - start_x, height * self.color_bar_thickness)
+
+        gc.SetPen(wx.Pen(wx.Colour(255, 255, 255), 1))
+        gc.SetBrush(wx.Brush(wx.Colour(0, 0, 0)))
+
+        value_x = _value_to_x(self._value)
+        tab_height = self.tab_height * height
+        tab_width = self.tab_width * height
+        tab_x = value_x - tab_width / 2
+        tab_y = height * self.tab_start
+        self._tab_rect = wx.Rect(round(tab_x), round(tab_y), round(tab_width), round(tab_height))
+        gc.DrawRectangle(
+            value_x - 1.5, 0,
+            3, height * (self.color_bar_start + self.color_bar_thickness))
+        gc.SetPen(wx.NullPen)
+        gc.DrawRectangle(value_x - tab_width/2, height * self.tab_start,
+                         tab_width, tab_height)
 
         gc.SetPen(self.marker_pen)
         for marker_list in self.marker_lists.values():
@@ -942,6 +964,49 @@ class SimulatorSlider(wx.Panel):
     def on_erase_background(self, event):
         # supposedly this prevents flickering?
         pass
+
+    def is_in_tab(self, point):
+        return self._tab_rect and self._tab_rect.Inflate(2).Contains(point)
+
+    def set_value_from_position(self, point):
+        width, height = self.GetSize()
+        min_value = self._min
+        max_value = self._max
+        spread = max_value - min_value
+        value = round((point.x - self.margin) * spread / (width - 2 * self.margin))
+        value = max(value, self._min)
+        value = min(value, self._max)
+        self.SetValue(round(value))
+
+        event = wx.CommandEvent(wx.wxEVT_COMMAND_SLIDER_UPDATED, self.GetId())
+        event.SetInt(value)
+        event.SetEventObject(self)
+        self.GetEventHandler().ProcessEvent(event)
+
+    def on_mouse_down(self, event):
+        click_pos = event.GetPosition()
+        if self.is_in_tab(click_pos):
+            debug.log("drag start")
+            self.CaptureMouse()
+            self.set_value_from_position(click_pos)
+            self.Refresh()
+        else:
+            width, height = self.GetSize()
+            relative_y = click_pos.y / height
+            if relative_y > self.color_bar_start and relative_y - self.color_bar_start < self.color_bar_thickness:
+                self.set_value_from_position(click_pos)
+                self.Refresh()
+
+    def on_mouse_motion(self, event):
+        if self.HasCapture() and event.Dragging() and event.LeftIsDown():
+            self.set_value_from_position(event.GetPosition())
+            self.Refresh()
+
+    def on_mouse_up(self, event):
+        if self.HasCapture():
+            self.ReleaseMouse()
+            self.set_value_from_position(event.GetPosition())
+            self.Refresh()
 
 
 class SimulatorPanel(wx.Panel):
@@ -993,6 +1058,8 @@ class EmbroiderySimulator(wx.Frame):
         target_duration = kwargs.pop('target_duration', None)
         wx.Frame.__init__(self, *args, **kwargs)
 
+        self.SetWindowStyle(wx.FRAME_FLOAT_ON_PARENT)
+
         sizer = wx.BoxSizer(wx.HORIZONTAL)
         self.simulator_panel = SimulatorPanel(self,
                                               stitch_plan=stitch_plan,
@@ -1000,7 +1067,17 @@ class EmbroiderySimulator(wx.Frame):
                                               stitches_per_second=stitches_per_second)
         sizer.Add(self.simulator_panel, 1, wx.EXPAND)
 
-        self.SetSizeHints(sizer.CalcMin())
+        self.statusbar = self.CreateStatusBar()
+
+        # SetSizeHints seems to be ignored in macOS, so we have to adjust size manually
+        # self.SetSizeHints(sizer.CalcMin())
+        frame_width, frame_height = self.GetSize()
+        sizer_width, sizer_height = sizer.CalcMin()
+        size_diff = frame_width - sizer_width
+        if size_diff < 0:
+            frame_x, frame_y = self.GetPosition()
+            self.SetPosition((frame_x + size_diff, frame_y))
+            self.SetSize((sizer_width, frame_height))
 
         self.Bind(wx.EVT_CLOSE, self.on_close)
 

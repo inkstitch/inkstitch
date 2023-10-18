@@ -477,9 +477,9 @@ class SettingsFrame(wx.Frame):
         self.metadata = kwargs.pop('metadata', [])
 
         # begin wxGlade: MyFrame.__init__
-        wx.Frame.__init__(self, None, wx.ID_ANY,
-                          _("Embroidery Params")
-                          )
+        wx.Frame.__init__(self, None, wx.ID_ANY, _("Embroidery Params"))
+
+        self.SetWindowStyle(wx.FRAME_FLOAT_ON_PARENT)
 
         icon = wx.Icon(os.path.join(
             get_resource_dir("icons"), "inkstitch256x256.png"))
