@@ -610,7 +610,7 @@ class SettingsPanel(wx.Panel):
         self.apply(event)
 
     def close(self):
-        self.GetTopLevelParent().Destroy()
+        self.GetTopLevelParent().Close()
 
     def cancel(self, event):
         if self.cancel_hook:
