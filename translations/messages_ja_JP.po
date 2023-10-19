@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-10-18 01:05+0000\n"
-"PO-Revision-Date: 2023-10-18 01:06\n"
+"POT-Creation-Date: 2023-10-19 01:05+0000\n"
+"PO-Revision-Date: 2023-10-19 01:06\n"
 "Last-Translator: \n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-18 01:05+0000\n"
+"POT-Creation-Date: 2023-10-19 01:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2237,7 +2237,7 @@ msgstr ""
 msgid "point"
 msgstr ""
 
-#: lib/elements/text.py:13 lib/extensions/lettering.py:100
+#: lib/elements/text.py:13 lib/extensions/lettering.py:99
 msgid "Text"
 msgstr "文字"
 
@@ -2548,35 +2548,35 @@ msgstr ""
 msgid "Please choose one or more commands to add."
 msgstr "追加するコマンドを1つ以上選択してください。"
 
-#: lib/extensions/lettering.py:41 lib/extensions/lettering.py:529
+#: lib/extensions/lettering.py:40 lib/extensions/lettering.py:528
 msgid "Ink/Stitch Lettering"
 msgstr "インク/ステッチの文字配置"
 
-#: lib/extensions/lettering.py:51
+#: lib/extensions/lettering.py:50
 msgid "Font"
 msgstr "フォント"
 
-#: lib/extensions/lettering.py:60
+#: lib/extensions/lettering.py:59
 msgid "Font size filter (mm). 0 for all sizes."
 msgstr ""
 
-#: lib/extensions/lettering.py:62
+#: lib/extensions/lettering.py:61
 msgid "Glyphs"
 msgstr ""
 
-#: lib/extensions/lettering.py:64
+#: lib/extensions/lettering.py:63
 msgid "Filter fonts by available glyphs."
 msgstr ""
 
-#: lib/extensions/lettering.py:71
+#: lib/extensions/lettering.py:70
 msgid "Filter fonts by category."
 msgstr ""
 
-#: lib/extensions/lettering.py:80
+#: lib/extensions/lettering.py:79
 msgid "Font Filter"
 msgstr ""
 
-#: lib/extensions/lettering.py:83 lib/gui/test_swatches.py:31
+#: lib/extensions/lettering.py:82 lib/gui/test_swatches.py:33
 #: inx/inkstitch_apply_threadlist.inx:7 inx/inkstitch_fill_to_stroke.inx:15
 #: inx/inkstitch_gradient_blocks.inx:15
 #: inx/inkstitch_lettering_along_path.inx:13
@@ -2585,82 +2585,82 @@ msgstr ""
 msgid "Options"
 msgstr "オプション"
 
-#: lib/extensions/lettering.py:88
+#: lib/extensions/lettering.py:87
 msgid "Stitch lines of text back and forth"
 msgstr "テキストの行を前後にステッチします。"
 
-#: lib/extensions/lettering.py:91
+#: lib/extensions/lettering.py:90
 msgid "Never"
 msgstr ""
 
-#: lib/extensions/lettering.py:91
+#: lib/extensions/lettering.py:90
 msgid "after each line"
 msgstr ""
 
-#: lib/extensions/lettering.py:91
+#: lib/extensions/lettering.py:90
 msgid "after each word"
 msgstr ""
 
-#: lib/extensions/lettering.py:91
+#: lib/extensions/lettering.py:90
 msgid "after each letter"
 msgstr ""
 
-#: lib/extensions/lettering.py:92
+#: lib/extensions/lettering.py:91
 msgid "Add trim command"
 msgstr ""
 
-#: lib/extensions/lettering.py:95
+#: lib/extensions/lettering.py:94
 msgid "Use command symbols"
 msgstr ""
 
-#: lib/extensions/lettering.py:97
+#: lib/extensions/lettering.py:96
 msgid "Uses command symbols if enabled. When disabled inserts trim commands as params."
 msgstr ""
 
-#: lib/extensions/lettering.py:105 lib/extensions/params.py:499
+#: lib/extensions/lettering.py:104 lib/extensions/params.py:499
 #: print/templates/custom-page.html:23 print/templates/custom-page.html:27
 #: print/templates/custom-page.html:33 print/templates/ui.html:102
 #: print/templates/ui.html:106 print/templates/ui.html:112
 msgid "Cancel"
 msgstr "キャンセル"
 
-#: lib/extensions/lettering.py:109 lib/extensions/params.py:507
+#: lib/extensions/lettering.py:108 lib/extensions/params.py:507
 msgid "Apply and Quit"
 msgstr "適用して終了"
 
-#: lib/extensions/lettering.py:288
+#: lib/extensions/lettering.py:287
 msgid "This font has no available font variant. Please update or remove the font."
 msgstr "このフォントには、使用可能なフォントバリアントがありません。フォントを更新または削除してください。"
 
 #. The user has chosen to scale the text by some percentage
 #. (50%, 200%, etc).  If you need to use the percentage symbol,
 #. make sure to double it (%%).
-#: lib/extensions/lettering.py:349
+#: lib/extensions/lettering.py:348
 #, python-format
 msgid "Text scale %s%%"
 msgstr "文字の大きさ %s%%"
 
-#: lib/extensions/lettering.py:360
+#: lib/extensions/lettering.py:359
 #, python-format
 msgid "Error: Text cannot be applied to the document.\n"
 "%s"
 msgstr ""
 
-#: lib/extensions/lettering.py:441 lib/extensions/zip.py:136
+#: lib/extensions/lettering.py:440 lib/extensions/zip.py:136
 #: inx/inkstitch_commands_scale_symbols.inx:6
 #: inx/inkstitch_lettering_generate_json.inx:82
 msgid "Size"
 msgstr "サイズ"
 
-#: lib/extensions/lettering.py:455
+#: lib/extensions/lettering.py:454
 msgid "Add trims"
 msgstr ""
 
-#: lib/extensions/lettering.py:461 print/templates/ui_svg_action_buttons.html:1
+#: lib/extensions/lettering.py:460 print/templates/ui_svg_action_buttons.html:1
 msgid "Scale"
 msgstr "サイズ"
 
-#: lib/extensions/lettering.py:518
+#: lib/extensions/lettering.py:517
 msgid "Please select only one block of text."
 msgstr "1ブロックのみ選択してください。"
 
@@ -2759,7 +2759,7 @@ msgstr "適用して終了 \"をクリックしたときに、このパラメー
 msgid "This parameter will be saved when you click \"Apply and Quit\""
 msgstr "このパラメータは、\"適応して終了 \"をクリックしたときに保存されます。"
 
-#: lib/extensions/params.py:481
+#: lib/extensions/params.py:480
 msgid "Embroidery Params"
 msgstr "刺繍パラメータ"
 
@@ -2897,19 +2897,19 @@ msgstr "使用済みスレッド"
 msgid "Element Info"
 msgstr ""
 
-#: lib/gui/element_info.py:26
+#: lib/gui/element_info.py:28
 msgid "Info"
 msgstr ""
 
-#: lib/gui/element_info.py:31 inx/inkstitch_lettering_generate_json.inx:27
+#: lib/gui/element_info.py:33 inx/inkstitch_lettering_generate_json.inx:27
 msgid "Name"
 msgstr "名前"
 
-#: lib/gui/element_info.py:32
+#: lib/gui/element_info.py:34
 msgid "Value"
 msgstr ""
 
-#: lib/gui/element_info.py:39 lib/gui/test_swatches.py:81
+#: lib/gui/element_info.py:41 lib/gui/test_swatches.py:83
 #: inx/inkstitch_apply_threadlist.inx:87 inx/inkstitch_auto_run.inx:23
 #: inx/inkstitch_cutwork_segmentation.inx:42
 #: inx/inkstitch_fill_to_stroke.inx:23 inx/inkstitch_generate_palette.inx:24
@@ -2921,15 +2921,15 @@ msgstr ""
 msgid "Help"
 msgstr ""
 
-#: lib/gui/element_info.py:46
+#: lib/gui/element_info.py:48
 msgid "This extension informs about various parameters of selected stitch elements."
 msgstr ""
 
-#: lib/gui/element_info.py:54
+#: lib/gui/element_info.py:56
 msgid "More information on our website:"
 msgstr ""
 
-#: lib/gui/element_info.py:60 lib/gui/element_info.py:61
+#: lib/gui/element_info.py:62 lib/gui/element_info.py:63
 msgid "https://inkstitch.org/docs/troubleshoot#element-info"
 msgstr ""
 
@@ -2938,49 +2938,49 @@ msgstr ""
 msgid "Preferences"
 msgstr "環境設定"
 
-#: lib/gui/preferences.py:29
+#: lib/gui/preferences.py:31
 msgid "This SVG"
 msgstr ""
 
-#: lib/gui/preferences.py:39
+#: lib/gui/preferences.py:41
 msgid "Minimum jump stitch length"
 msgstr ""
 
-#: lib/gui/preferences.py:40 lib/gui/preferences.py:88
-#: lib/gui/preferences.py:121
+#: lib/gui/preferences.py:42 lib/gui/preferences.py:90
+#: lib/gui/preferences.py:123
 msgid "Jump stitches smaller than this will be treated as normal stitches."
 msgstr "これより小さいジャンプステッチは、通常のステッチとして扱われます。"
 
-#: lib/gui/preferences.py:51 lib/gui/preferences.py:68
-#: lib/gui/preferences.py:99 lib/gui/preferences.py:115
+#: lib/gui/preferences.py:53 lib/gui/preferences.py:70
+#: lib/gui/preferences.py:101 lib/gui/preferences.py:117
 msgid "mm"
 msgstr ""
 
-#: lib/gui/preferences.py:54 lib/gui/preferences.py:71
+#: lib/gui/preferences.py:56 lib/gui/preferences.py:73
 msgid "Set As Default"
 msgstr ""
 
-#: lib/gui/preferences.py:57 lib/gui/preferences.py:104
+#: lib/gui/preferences.py:59 lib/gui/preferences.py:106
 msgid "Minimum stitch length"
 msgstr ""
 
-#: lib/gui/preferences.py:77
+#: lib/gui/preferences.py:79
 msgid "Global"
 msgstr ""
 
-#: lib/gui/preferences.py:87
+#: lib/gui/preferences.py:89
 msgid "Default minimum jump stitch length"
 msgstr ""
 
-#: lib/gui/preferences.py:120
+#: lib/gui/preferences.py:122
 msgid "Stitch plan cache size"
 msgstr ""
 
-#: lib/gui/preferences.py:132
+#: lib/gui/preferences.py:134
 msgid "MB"
 msgstr ""
 
-#: lib/gui/preferences.py:135
+#: lib/gui/preferences.py:137
 msgid "Clear Stitch Plan Cache"
 msgstr ""
 
@@ -3076,7 +3076,7 @@ msgid "Animate forward (arrow right)"
 msgstr ""
 
 #: lib/gui/simulator.py:87
-msgid "Animate in reverse (arrow right)"
+msgid "Animate in reverse (arrow left)"
 msgstr ""
 
 #: lib/gui/simulator.py:91
@@ -3084,59 +3084,56 @@ msgid "Play (P)"
 msgstr ""
 
 #: lib/gui/simulator.py:95
-msgid "Pause (P)"
-msgstr "一時停止（P）"
-
-#: lib/gui/simulator.py:99
 msgid "Restart (R)"
 msgstr "再スタート（R）"
 
-#: lib/gui/simulator.py:103
+#: lib/gui/simulator.py:99
 msgid "Display needle penetration point (O)"
 msgstr "針落ち点（O）を表示"
 
-#: lib/gui/simulator.py:113
+#: lib/gui/simulator.py:111
 msgid "Show jump stitches"
 msgstr ""
 
-#: lib/gui/simulator.py:117
+#: lib/gui/simulator.py:115
 msgid "Show trims"
 msgstr ""
 
-#: lib/gui/simulator.py:121
+#: lib/gui/simulator.py:119
 msgid "Show stops"
 msgstr ""
 
-#: lib/gui/simulator.py:125
+#: lib/gui/simulator.py:123
 msgid "Show color changes"
 msgstr ""
 
-#: lib/gui/simulator.py:134 electron/src/renderer/components/Simulator.vue:219
-msgid "Command"
-msgstr "コマンド"
-
-#: lib/gui/simulator.py:141 electron/src/renderer/components/Simulator.vue:167
+#: lib/gui/simulator.py:133 electron/src/renderer/components/Simulator.vue:167
 msgid "Controls"
 msgstr "コントロール"
 
-#: lib/gui/simulator.py:156 electron/src/renderer/components/Simulator.vue:225
+#: lib/gui/simulator.py:147 electron/src/renderer/components/Simulator.vue:225
 msgid "Show"
 msgstr "表示"
 
-#: lib/gui/simulator.py:167
+#: lib/gui/simulator.py:158
 msgid "Speed"
 msgstr ""
 
-#: lib/gui/simulator.py:323
+#: lib/gui/simulator.py:314
 #, python-format
 msgid "%d stitches/sec"
 msgstr ""
 
-#: lib/gui/simulator.py:1138 lib/gui/simulator.py:1150
+#: lib/gui/simulator.py:725
+#, python-format
+msgid "Command: %s"
+msgstr ""
+
+#: lib/gui/simulator.py:1215 lib/gui/simulator.py:1227
 msgid "Preview"
 msgstr "プレビュー"
 
-#: lib/gui/simulator.py:1181
+#: lib/gui/simulator.py:1258
 msgid "Embroidery Simulation"
 msgstr "刺繡シミュレーション"
 
@@ -3144,47 +3141,47 @@ msgstr "刺繡シミュレーション"
 msgid "Generate Swatches"
 msgstr ""
 
-#: lib/gui/test_swatches.py:38
+#: lib/gui/test_swatches.py:40
 msgid "Param"
 msgstr ""
 
-#: lib/gui/test_swatches.py:47
+#: lib/gui/test_swatches.py:49
 msgid "Start Value"
 msgstr ""
 
-#: lib/gui/test_swatches.py:54
+#: lib/gui/test_swatches.py:56
 msgid "Increase by"
 msgstr ""
 
-#: lib/gui/test_swatches.py:61
+#: lib/gui/test_swatches.py:63
 msgid "Columns"
 msgstr ""
 
-#: lib/gui/test_swatches.py:67
+#: lib/gui/test_swatches.py:69
 msgid "Rows"
 msgstr ""
 
-#: lib/gui/test_swatches.py:73
+#: lib/gui/test_swatches.py:75
 msgid "Spacing"
 msgstr ""
 
-#: lib/gui/test_swatches.py:88
+#: lib/gui/test_swatches.py:90
 msgid "This extension generates test swatches from a selection.\n"
 "Test swatches help to find best stitch settings for your design.\n"
 "Sew them out with the same thread and fabric as the final designs."
 msgstr ""
 
-#: lib/gui/test_swatches.py:98 inx/inkstitch_apply_threadlist.inx:98
+#: lib/gui/test_swatches.py:100 inx/inkstitch_apply_threadlist.inx:98
 #: inx/inkstitch_fill_to_stroke.inx:32 inx/inkstitch_stroke_to_lpe_satin.inx:32
 #: inx/inkstitch_zigzag_line_to_satin.inx:28
 msgid "Get more information on our website"
 msgstr ""
 
-#: lib/gui/test_swatches.py:104 lib/gui/test_swatches.py:105
+#: lib/gui/test_swatches.py:106 lib/gui/test_swatches.py:107
 msgid "https://inkstitch.org/docs/edit/#generate-test-swatches-from-selection"
 msgstr ""
 
-#: lib/gui/test_swatches.py:115
+#: lib/gui/test_swatches.py:117
 msgid "Apply"
 msgstr ""
 
@@ -3990,6 +3987,10 @@ msgstr "ボタン"
 #: electron/src/renderer/components/Simulator.vue:236
 msgid "color changes"
 msgstr "色変更"
+
+#: electron/src/renderer/components/Simulator.vue:219
+msgid "Command"
+msgstr "コマンド"
 
 #: electron/src/renderer/components/Simulator.vue:259
 msgid "cursor"
