@@ -62,7 +62,7 @@ However, we need to modify these svgs to serve our purpose.
 Let's adapt the   [T Shirt](https://thenounproject.com/browse/icons/term/womans-shirt/).
 
 This kind of svg is perfect for screen, or for cutting machine, but must be  modified for embroidery, as what appears like a stroke is actually a fill. Using
-`Extensions > Ink/Stitch > Tools: Fill> Fill to Stroke`, this is easily solved.
+`Extensions > Ink/Stitch > Tools: Stroke> Fill to Stroke`, this is easily solved.
 
 The four images below are from left to right:
 * screen look
