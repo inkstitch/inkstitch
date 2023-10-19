@@ -62,7 +62,7 @@ Ce type de svg parfait pour les écrans ou les machines de découpe ne convient 
 
 * Téléchargez le fichier  du T Shirt.
 * Sélectionnez les chemins constituant le vêtement.
-* `Extensions > Ink/Stitch > Outils: Remplissage > Convertir remplissage en trait`.
+* `Extensions > Ink/Stitch > Outils: Trait> Convertir remplissage en trait`.
 * L'extension a créé un groupe "Centerline" avec beaucoup de chemins, dont certains sont inutiles. Il est utile de les simplifier. Reconstituer la forme extérieure du vêtement en utilisant l'outil noeud pour joindre des noeuds ou briser des chemins Garder les détails supplémentaires à broder
 
 Les quatre images ci dessous montrent successivement l'apparence du svg à l'écran, ce à quoi il ressemble  en supprimant le remplissage et en  ajoutant  un contour, ce que l'extension de conversion permet d'obtenir, et ce que l'on utilisera finalement : une forme fermée (orange) et deux détails en rouge.
