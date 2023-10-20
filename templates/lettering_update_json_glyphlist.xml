@@ -11,9 +11,9 @@
             </submenu>
         </effects-menu>
     </effect>
-    <param name="header" type="description" appearance="header" indent="1" >
+    <label appearance="header" indent="1" >
         Updates the glyphlist in the json file.
-    </param>
+    </label>
     <param type="path" name="font-file" gui-text="SVG Font File" indent="1" mode="file" filetypes="svg"/>
     <param type="path" name="json-file" gui-text="JSON File" indent="1" mode="file" filetypes="json"/>
     <script>

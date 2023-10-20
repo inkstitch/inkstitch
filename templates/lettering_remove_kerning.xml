@@ -11,13 +11,13 @@
             </submenu>
         </effects-menu>
     </effect>
-    <param name="header" type="description" appearance="header" indent="1" >
+    <label appearance="header" indent="1" >
         Removes Kerning information from given SVG files
-    </param>
+    </label>
     <separator />
-    <param name="file-description" type="description" indent="1" >
+    <label indent="1" >
         &#9888; Make sure you keep a copy of the original file. After running this extension kerning information will be lost unrevertably from these files.
-    </param>
+    </label>
     <separator />
     <spacer />
     <param type="path" name="font-files" gui-text="Select Font Files" indent="1" mode="files" filetypes="svg"/>

@@ -11,12 +11,12 @@
             </submenu>
         </effects-menu>
     </effect>
-    <param name="header" type="description" appearance="header" indent="1" >
+    <label appearance="header" indent="1" >
         Includes all letters of a predigitized embroidery font (one file for each letter) into the document in order to make it available for the Ink/Stitch lettering system.
-    </param>
-    <param name="file-description" type="description" indent="1" >
+    </label>
+    <label indent="1" >
         Embroidery files need to have the name of the letter right before the file extension. E.g. A.dst or Example_Font_A.dst will be recognized as the letter A.
-    </param>
+    </label>
     <separator />
     <spacer />
     <param name="file-format" type="optiongroup" appearance="combo" gui-text="File format" indent="1">
@@ -33,10 +33,10 @@
     </param>
     <spacer />
     <separator />
-    <param name="file-description" type="description" indent="1" >
+    <label indent="1" >
         &#9888; After running this function, drag the baseline into the desired position and place the letters accordingly.
                            Save your font in a separate folder. Then generate the json file (with "Autoroute Satin" unchecked).
-    </param>
+    </label>
     <separator />
     <script>
         {{ command_tag | safe }}
