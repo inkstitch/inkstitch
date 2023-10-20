@@ -2,7 +2,7 @@
 <inkscape-extension translationdomain="inkstitch" xmlns="http://www.inkscape.org/namespace/inkscape/extension">
     <name>Remove embroidery settings</name>
     <id>org.inkstitch.remove_embroidery_settings</id>
-    <param name="description" type="description">Use this extension to remove the information Ink/Stitch has stored in your document.  This can be especially useful if you copy and paste objects from an embroidery design into another document.</param>
+    <label>Use this extension to remove the information Ink/Stitch has stored in your document.  This can be especially useful if you copy and paste objects from an embroidery design into another document.</label>
     <param name="del_params" type="boolean" gui-text="Remove Params"
            gui-description="Removes params from selected objects or all objects if nothing is selected.">true</param>
     <param name="del_commands" type="optiongroup" gui-text="Remove Commands"
