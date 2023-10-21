@@ -15,18 +15,20 @@ from secrets import randbelow
 import wx
 from wx.lib.scrolledpanel import ScrolledPanel
 
+from .base import InkstitchExtension
 from ..commands import is_command, is_command_symbol
 from ..elements import (Clone, EmbroideryElement, FillStitch, Polyline,
                         SatinColumn, Stroke)
 from ..elements.clone import is_clone
 from ..exceptions import InkstitchException, format_uncaught_exception
-from ..gui import PresetsPanel, SimulatorPreview, WarningPanel
+from ..gui import PresetsPanel, PreviewRenderer, WarningPanel
+from ..gui.simulator import SplitSimulatorWindow
 from ..i18n import _
+from ..stitch_plan import stitch_groups_to_stitch_plan
 from ..svg.tags import SVG_POLYLINE_TAG
 from ..utils import get_resource_dir
 from ..utils.param import ParamOption
 from ..utils.threading import ExitThread, check_stop_flag
-from .base import InkstitchExtension
 
 
 def grouper(iterable_obj, count, fillvalue=None):
@@ -439,7 +441,7 @@ class ParamsTab(ScrolledPanel):
                 for item in param.select_items:
                     self.choice_widgets[item].extend([input, col4])
 
-            self.settings_grid.Add(input, flag=wx.ALIGN_CENTER_VERTICAL | wx.LEFT | wx.EXPAND, border=40)
+            self.settings_grid.Add(input, flag=wx.ALIGN_CENTER_VERTICAL | wx.LEFT | wx.EXPAND, border=10)
             self.settings_grid.Add(col4, flag=wx.ALIGN_CENTER_VERTICAL)
 
         self.inputs_to_params = {v: k for k, v in self.param_inputs.items()}
@@ -470,20 +472,17 @@ class ParamsTab(ScrolledPanel):
 # end of class SatinPane
 
 
-class SettingsFrame(wx.Frame):
-    def __init__(self, *args, **kwargs):
-        self.tabs_factory = kwargs.pop('tabs_factory', [])
-        self.cancel_hook = kwargs.pop('on_cancel', None)
-        self.metadata = kwargs.pop('metadata', [])
+class SettingsPanel(wx.Panel):
+    def __init__(self, parent, tabs_factory=None, on_cancel=None, metadata=None, simulator=None):
+        self.tabs_factory = tabs_factory
+        self.cancel_hook = on_cancel
+        self.metadata = metadata
+        self.simulator = simulator
+        self.parent = parent
 
-        # begin wxGlade: MyFrame.__init__
-        wx.Frame.__init__(self, None, wx.ID_ANY, _("Embroidery Params"))
+        super().__init__(self.parent, wx.ID_ANY)
 
-        self.SetWindowStyle(wx.FRAME_FLOAT_ON_PARENT)
-
-        icon = wx.Icon(os.path.join(
-            get_resource_dir("icons"), "inkstitch256x256.png"))
-        self.SetIcon(icon)
+        self.preview_renderer = PreviewRenderer(self.render_stitch_plan, self.on_stitch_plan_rendered)
 
         self.notebook = wx.Notebook(self, wx.ID_ANY)
         self.tabs = self.tabs_factory(self.notebook)
@@ -491,7 +490,6 @@ class SettingsFrame(wx.Frame):
         for tab in self.tabs:
             tab.on_change(self.update_preview)
 
-        self.preview = SimulatorPreview(self)
         self.presets_panel = PresetsPanel(self)
         self.warning_panel = WarningPanel(self)
         self.warning_panel.Hide()
@@ -507,25 +505,24 @@ class SettingsFrame(wx.Frame):
         self.apply_button = wx.Button(self, wx.ID_ANY, _("Apply and Quit"))
         self.apply_button.Bind(wx.EVT_BUTTON, self.apply)
 
-        self.notebook.SetMinSize((800, 600))
-
         self.__do_layout()
-        # end wxGlade
+        self.update_preview()
 
-    def update_preview(self, tab):
-        self.preview.update()
+    def update_preview(self, tab=None):
+        self.simulator.stop()
+        self.simulator.clear()
+        self.preview_renderer.update()
 
-    def generate_patches(self, abort_early):
-        # called by self.preview
-
-        patches = []
+    def render_stitch_plan(self):
+        stitch_groups = []
         nodes = []
 
         for tab in self.tabs:
             tab.apply()
-
             if tab.enabled() and not tab.is_dependent_tab():
                 nodes.extend(tab.nodes)
+
+            check_stop_flag()
 
         # sort nodes into the proper stacking order
         nodes.sort(key=lambda node: node.order)
@@ -533,17 +530,20 @@ class SettingsFrame(wx.Frame):
         try:
             wx.CallAfter(self._hide_warning)
             for node in nodes:
-                if abort_early.is_set():
-                    # cancel; params were updated and we need to start over
-                    return []
-
                 # Making a copy of the embroidery element is an easy
                 # way to drop the cache in the @cache decorators used
                 # for many params in embroider.py.
 
-                patches.extend(copy(node).embroider(None))
+                stitch_groups.extend(copy(node).embroider(None))
 
                 check_stop_flag()
+
+            if stitch_groups:
+                return stitch_groups_to_stitch_plan(
+                    stitch_groups,
+                    collapse_len=self.metadata['collapse_len_mm'],
+                    min_stitch_len=self.metadata['min_stitch_len_mm']
+                )
         except (SystemExit, ExitThread):
             raise
         except InkstitchException as exc:
@@ -551,7 +551,10 @@ class SettingsFrame(wx.Frame):
         except Exception:
             wx.CallAfter(self._show_warning, format_uncaught_exception())
 
-        return patches
+    def on_stitch_plan_rendered(self, stitch_plan):
+        self.simulator.stop()
+        self.simulator.load(stitch_plan)
+        self.simulator.go()
 
     def _hide_warning(self):
         self.warning_panel.clear()
@@ -589,7 +592,7 @@ class SettingsFrame(wx.Frame):
         for tab in self.tabs:
             tab.load_preset(preset_data)
 
-        self.preview.update()
+        self.preview_renderer.update()
 
     def _apply(self):
         for tab in self.tabs:
@@ -601,13 +604,11 @@ class SettingsFrame(wx.Frame):
         self.close()
 
     def use_last(self, event):
-        self.preview.disable()
         self.presets_panel.load_preset("__LAST__")
         self.apply(event)
 
     def close(self):
-        self.preview.close()
-        self.Destroy()
+        self.GetTopLevelParent().Close()
 
     def cancel(self, event):
         if self.cancel_hook:
@@ -781,18 +782,14 @@ class Params(InkstitchExtension):
         try:
             app = wx.App()
             metadata = self.get_inkstitch_metadata()
-            frame = SettingsFrame(
+            frame = SplitSimulatorWindow(
+                title=_("Embroidery Params"),
+                panel_class=SettingsPanel,
                 tabs_factory=self.create_tabs,
                 on_cancel=self.cancel,
-                metadata=metadata)
-
-            # position left, center
-            current_screen = wx.Display.GetFromPoint(wx.GetMousePosition())
-            display = wx.Display(current_screen)
-            display_size = display.GetClientArea()
-            frame_size = frame.GetSize()
-            frame.SetPosition((int(display_size[0]), int(
-                display_size[3]/2 - frame_size[1]/2)))
+                metadata=metadata,
+                target_duration=5
+            )
 
             frame.Show()
             app.MainLoop()

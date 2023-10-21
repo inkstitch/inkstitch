@@ -14,36 +14,37 @@ import wx
 import wx.adv
 import wx.lib.agw.floatspin as fs
 
+from .commands import CommandsExtension
+from .lettering_custom_font_dir import get_custom_font_dir
 from ..elements import nodes_to_elements
-from ..gui import PresetsPanel, SimulatorPreview, info_dialog
+from ..gui import PresetsPanel, PreviewRenderer, info_dialog
+from ..gui.simulator import SplitSimulatorWindow
 from ..i18n import _
 from ..lettering import Font, FontError
 from ..lettering.categories import FONT_CATEGORIES, FontCategory
+from ..stitch_plan import stitch_groups_to_stitch_plan
 from ..svg import get_correction_transform
 from ..svg.tags import (INKSCAPE_LABEL, INKSTITCH_LETTERING, SVG_GROUP_TAG,
                         SVG_PATH_TAG)
-from ..utils import DotDict, cache, get_bundled_dir, get_resource_dir
-from ..utils.threading import ExitThread
-from .commands import CommandsExtension
-from .lettering_custom_font_dir import get_custom_font_dir
+from ..utils import DotDict, cache, get_bundled_dir
+from ..utils.threading import ExitThread, check_stop_flag
 
 
-class LetteringFrame(wx.Frame):
+class LetteringPanel(wx.Panel):
     DEFAULT_FONT = "small_font"
 
-    def __init__(self, *args, **kwargs):
-        self.group = kwargs.pop('group')
-        self.cancel_hook = kwargs.pop('on_cancel', None)
-        self.metadata = kwargs.pop('metadata', [])
+    def __init__(self, parent, simulator, group, on_cancel=None, metadata=None):
+        self.parent = parent
+        self.simulator = simulator
+        self.group = group
+        self.cancel_hook = on_cancel
+        self.metadata = metadata or dict()
 
-        # begin wxGlade: MyFrame.__init__
-        wx.Frame.__init__(self, None, wx.ID_ANY, _("Ink/Stitch Lettering"))
-        self.SetWindowStyle(wx.FRAME_FLOAT_ON_PARENT)
+        super().__init__(parent, wx.ID_ANY)
 
-        icon = wx.Icon(os.path.join(get_resource_dir("icons"), "inkstitch256x256.png"))
-        self.SetIcon(icon)
+        self.SetWindowStyle(wx.FRAME_FLOAT_ON_PARENT | wx.DEFAULT_FRAME_STYLE)
 
-        self.preview = SimulatorPreview(self, target_duration=1)
+        self.preview_renderer = PreviewRenderer(self.render_stitch_plan, self.on_stitch_plan_rendered)
         self.presets_panel = PresetsPanel(self)
 
         # font
@@ -257,11 +258,11 @@ class LetteringFrame(wx.Frame):
         self.settings[attribute] = event.GetEventObject().GetValue()
         if attribute == "text" and self.font_glyph_filter.GetValue() is True:
             self.on_filter_changed()
-        self.preview.update()
+        self.preview_renderer.update()
 
     def on_trim_option_change(self, event=None):
         self.settings.trim_option = self.trim_option_choice.GetCurrentSelection()
-        self.preview.update()
+        self.preview_renderer.update()
 
     def on_font_changed(self, event=None):
         font = self.fonts.get(self.font_chooser.GetValue(), self.default_font)
@@ -329,7 +330,7 @@ class LetteringFrame(wx.Frame):
         self.Layout()
 
     def update_preview(self, event=None):
-        self.preview.update()
+        self.preview_renderer.update()
 
     def update_lettering(self, raise_error=False):
         # return if there is no font in the font list (possibly due to a font size filter)
@@ -367,19 +368,24 @@ class LetteringFrame(wx.Frame):
         if self.settings.scale != 100 and not destination_group.get('transform', None):
             destination_group.attrib['transform'] = 'scale(%s)' % (self.settings.scale / 100.0)
 
-    def generate_patches(self, abort_early=None):
-        patches = []
+    def render_stitch_plan(self):
+        stitch_groups = []
 
         try:
             self.update_lettering()
             elements = nodes_to_elements(self.group.iterdescendants(SVG_PATH_TAG))
 
             for element in elements:
-                if abort_early and abort_early.is_set():
-                    # cancel; settings were updated and we need to start over
-                    return []
+                check_stop_flag()
 
-                patches.extend(element.embroider(None))
+                stitch_groups.extend(element.embroider(None))
+
+            if stitch_groups:
+                return stitch_groups_to_stitch_plan(
+                    stitch_groups,
+                    collapse_len=self.metadata['collapse_len_mm'],
+                    min_stitch_len=self.metadata['min_stitch_len_mm']
+                )
         except SystemExit:
             raise
         except ExitThread:
@@ -390,7 +396,10 @@ class LetteringFrame(wx.Frame):
             # satins or division by zero caused by incorrect param values.
             pass
 
-        return patches
+    def on_stitch_plan_rendered(self, stitch_plan):
+        self.simulator.stop()
+        self.simulator.load(stitch_plan)
+        self.simulator.go()
 
     def get_preset_data(self):
         # called by self.presets_panel
@@ -409,14 +418,12 @@ class LetteringFrame(wx.Frame):
         return "lettering"
 
     def apply(self, event):
-        self.preview.disable()
         self.update_lettering(True)
         self.save_settings()
         self.close()
 
     def close(self):
-        self.preview.close()
-        self.Destroy()
+        self.GetTopLevelParent().Close()
 
     def cancel(self, event):
         if self.cancel_hook:
@@ -534,14 +541,14 @@ class Lettering(CommandsExtension):
     def effect(self):
         metadata = self.get_inkstitch_metadata()
         app = wx.App()
-        frame = LetteringFrame(group=self.get_or_create_group(), on_cancel=self.cancel, metadata=metadata)
-
-        # position left, center
-        current_screen = wx.Display.GetFromPoint(wx.GetMousePosition())
-        display = wx.Display(current_screen)
-        display_size = display.GetClientArea()
-        frame_size = frame.GetSize()
-        frame.SetPosition((int(display_size[0]), int(display_size[3] / 2 - frame_size[1] / 2)))
+        frame = SplitSimulatorWindow(
+            title=_("Ink/Stitch Lettering"),
+            panel_class=LetteringPanel,
+            group=self.get_or_create_group(),
+            on_cancel=self.cancel,
+            metadata=metadata,
+            target_duration=1
+        )
 
         frame.Show()
         app.MainLoop()

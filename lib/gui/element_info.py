@@ -16,7 +16,7 @@ class ElementInfoFrame(wx.Frame):
         self.index = 0
         wx.Frame.__init__(self, None, wx.ID_ANY, _("Element Info"), *args, **kwargs)
 
-        self.SetWindowStyle(wx.FRAME_FLOAT_ON_PARENT)
+        self.SetWindowStyle(wx.FRAME_FLOAT_ON_PARENT | wx.DEFAULT_FRAME_STYLE)
 
         self.main_panel = wx.Panel(self, wx.ID_ANY)
 

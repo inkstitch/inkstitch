@@ -20,7 +20,7 @@ class GenerateSwatchesFrame(wx.Frame):
         wx.Frame.__init__(self, *args, **kwargs)
         wx.Frame.__init__(self, None, wx.ID_ANY, _("Generate Swatches"), *args, **kwargs)
 
-        self.SetWindowStyle(wx.FRAME_FLOAT_ON_PARENT)
+        self.SetWindowStyle(wx.FRAME_FLOAT_ON_PARENT | wx.DEFAULT_FRAME_STYLE)
 
         self.panel = wx.Panel(self, wx.ID_ANY)
 

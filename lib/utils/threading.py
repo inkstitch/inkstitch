@@ -17,6 +17,7 @@ _default_stop_flag = threading.Event()
 
 
 def check_stop_flag():
+    # This getattr() actually looks at the PreviewRenderer instance's stop attribute.
     if getattr(threading.current_thread(), 'stop', _default_stop_flag).is_set():
         debug.log("exiting thread")
         raise ExitThread()

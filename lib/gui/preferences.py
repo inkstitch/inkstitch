@@ -16,7 +16,7 @@ class PreferencesFrame(wx.Frame):
         wx.Frame.__init__(self, None, wx.ID_ANY, _("Preferences"), *args, **kwargs)
         self.SetTitle(_("Preferences"))
 
-        self.SetWindowStyle(wx.FRAME_FLOAT_ON_PARENT)
+        self.SetWindowStyle(wx.FRAME_FLOAT_ON_PARENT | wx.DEFAULT_FRAME_STYLE)
 
         metadata = self.extension.get_inkstitch_metadata()
 
