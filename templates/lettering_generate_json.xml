@@ -18,7 +18,7 @@
         <label appearance="header" indent="1" >
             Generates font.json which can be used by the lettering tool.
         </label>
-        <label indent="1" >The generated file can be viewed and updated with a standard text editor tool.</label
+        <label indent="1" >The generated file can be viewed and updated with a standard text editor tool.</label>
 
         <spacer />
         <separator indent="1"/>
