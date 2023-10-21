@@ -11,15 +11,15 @@
             </submenu>
         </effects-menu>
     </effect>
-    <param name="file-description" type="description" indent="1" >
+    <label indent="1" >
         Set a custom directory for additional fonts to be used with the lettering tool.
-    </param>
+    </label>
     <spacer />
     <param name="path" type="path" mode="folder" gui-text="Custom font directory"  indent="1"></param>
     <spacer />
-    <param name="file-description" type="description" indent="1" >
+    <label indent="1" >
         Usage: The custom font directory must contain a subdirectory for each font.
-    </param>
+    </label>
     <script>
         {{ command_tag | safe }}
     </script>

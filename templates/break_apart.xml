@@ -11,9 +11,9 @@
             </submenu>
         </effects-menu>
     </effect>
-    <param name="description" type="description">
+    <label>
         This extension will try to repair fill shapes and break them apart if necessary. Holes will be retained. Use on simple or overlapping shapes.
-    </param>
+    </label>
     <param name="method" type="optiongroup" gui-text="Method">
        <option value="0">Simple</option>
        <option value="1">Complex</option>

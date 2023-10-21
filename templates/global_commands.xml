@@ -2,7 +2,7 @@
 <inkscape-extension translationdomain="inkstitch" xmlns="http://www.inkscape.org/namespace/inkscape/extension">
     <name>Add Commands</name>
     <id>org.inkstitch.global_commands</id>
-    <param name="description" type="description">These commands affect the entire embroidery design.</param>
+    <label>These commands affect the entire embroidery design.</label>
     {% for command, description in global_commands %}
     <param name="{{ command }}" type="boolean" gui-text="{{ description }}">false</param>
     {% endfor %}

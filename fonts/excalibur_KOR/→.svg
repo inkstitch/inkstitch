@@ -4,7 +4,7 @@
    id="svg62655"
    sodipodi:docname="→.svg"
    width="150"
-   inkscape:version="1.3-alpha (95f74fb, 2023-03-31)"
+   inkscape:version="1.3 (0e150ed, 2023-07-21)"
    height="150"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -20,15 +20,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      showgrid="true"
-     inkscape:zoom="31.999999"
-     inkscape:cx="9.3437503"
-     inkscape:cy="76.828127"
+     inkscape:zoom="6.9687498"
+     inkscape:cx="13.48879"
+     inkscape:cy="72.394621"
      inkscape:window-width="1920"
      inkscape:window-height="1001"
      inkscape:window-x="-9"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g157550"
+     inkscape:current-layer="g157602"
      width="150px"
      inkscape:snap-grids="false"
      inkscape:snap-to-guides="false"
@@ -74,14 +74,15 @@
     <inkscape:grid
        type="xygrid"
        id="grid3933"
-       visible="true" />
+       visible="true"
+       originx="0"
+       originy="0"
+       spacingy="1"
+       spacingx="1"
+       units="px" />
   </sodipodi:namedview>
   <metadata
-     id="metadata2">
-Created by FontForge 20200314 at Sun Aug 29 20:57:17 2021
- By regli
-Public Domain
-<inkstitch:collapse_len_mm
+     id="metadata2">&#10;Created by FontForge 20200314 at Sun Aug 29 20:57:17 2021&#10; By regli&#10;Public Domain&#10;<inkstitch:collapse_len_mm
    id="collapse_len_mm12890">3</inkstitch:collapse_len_mm>
 <inkstitch:min_stitch_len_mm
    id="min_stitch_len_mm42202">0</inkstitch:min_stitch_len_mm>
@@ -128,8 +129,7 @@ Public Domain
          inkscape:connector-curvature="0"
          style="display:inline;opacity:1;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:0.2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
          d="m -3.0312502,1.577739 c 0,0 0.25,-3.6875002 0.25,-3.6875002 0,0 1.0312501,3.8437502 1.0312501,3.8437502 0,0 0.34375,-3.6250002 0.34375,-3.6250002 0,0 0.96874997,3.5625002 0.96874997,3.5625002 0,0 0.28125,-3.3125002 0.28125,-3.3125002 0,0 0.9375001,3.3125002 0.9375001,3.3125002 0,0 0.21875,-3.0937502 0.21875,-3.0937502 0,0 1.03125013,2.9687502 1.03125013,2.9687502 0,0 0.0625,-2.7187501 0.0625,-2.7187501 0,0 0.96875,2.4687501 0.96875,2.4687501 0,0 0.15625,-2.18750023 0.15625,-2.18750023"
-         id="path31975"
-          />
+         id="path31975" />
     </symbol>
     <symbol
        id="inkstitch_satin_end"
@@ -150,16 +150,14 @@ Public Domain
          style="display:inline;opacity:1;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:0.2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
          d="m -3.2964153,1.5777408 0.25,-3.6875001 1.0312501,3.8437501 0.34375,-3.6250001 0.9687501,3.5625001 0.28125,-3.3125001 0.9375,3.3125001 0.21875,-3.0937501 1.0312499,2.9687501 0.0625,-2.7187501 0.96875,2.4687501 0.15625,-2.1875"
          id="path31975-0-2"
-         inkscape:connector-curvature="0"
-          />
+         inkscape:connector-curvature="0" />
     </symbol>
   </defs>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-•"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157910"
-     >
+     id="g157910">
     <path
        id="autosatin266"
        d="m 13.8836,53.128 1.2453,-0.1191 1.0654,-0.3564 0.9305,-0.5927 0.8402,-0.8278 0.5907,-0.8298 M 13.4481,53.128 12.1795,53.0089 11.0491,52.6525 10.0199,52.0598 9.05499,51.232 8.38786,50.4288 M 9.04499,51.232 H 17.975"
@@ -192,8 +190,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-„"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157882"
-     >
+     id="g157882">
     <path
        id="autosatin248"
        d="m 7.27708,70.067 0.85764,-0.9114 1.04937,-0.6415 1.18201,-0.3946 1.2556,-0.1703 1.2701,0.0309 1.2254,0.2093 1.1218,0.3648 0.9591,0.4975 1.0649,0.9579 0.79,1.1793 0.5364,1.3268 0.3043,1.4008 0.2076,2.9099 -0.1462,2.3302 -0.4898,2.2778 -0.7975,2.1952 -1.0692,2.0826 -1.1422,1.8019 M 6.82395,70.7545 5.9983,72.2526 l -0.41327,1.6532 0.04775,1.7406 0.50716,1.7893 0.89671,1.6546 1.21638,1.3365 1.06845,0.6858 1.20282,0.4496 1.2793,0.2318 1.2977,0.0324 -0.1137,2.0388 -0.5626,1.9616 -0.8782,1.532 m 0.6359,-4.6634 8.0434,-5.9662 M 5.86296,79.3367 17.4418,68.3765 M 7.3741,69.9518 6.74719,70.8845"
@@ -249,8 +246,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-”"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157906"
-     >
+     id="g157906">
     <path
        id="autosatin262"
        d="m 6.77369,40.0711 0.03827,-0.4689 0.28372,-0.3992 0.92296,-0.5433 1.60775,-0.7652 1.45061,-1.0731 1.2165,-1.3444 0.027,-0.0472 m -5.35931,5.1725 0.2649,0.4745 0.35881,0.2658 0.44404,0.0863 0.52058,-0.0638 1.23595,-0.4613 1.43773,-0.7109 1.9794,-1.2574 1.622,-1.535 1.3586,-1.7413 0.0469,-0.074 m -7.51632,1.2801 2.38652,4.7288"
@@ -322,8 +318,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-“"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157902"
-     >
+     id="g157902">
     <path
        id="autosatin260"
        d="M 18.5239,38.7599 C 16.545,41.5704 11.8908,41.2584 9.60287,39.7752 7.99014,38.6783 7.16777,36.7945 6.90726,34.9103 6.77388,33.9456 6.71533,32.9733 6.69969,32.0005 6.64941,28.8721 7.61162,25.8029 9.2023,23.1147 c 1.5144,-2.5593 3.2299,-4.95 6.1492,-6.4097 2.0205,-1.0103 3.6885,-1.979 4.2619,-0.4094 M 18.977,38.0724 c 0.7051,-1.0453 1.0836,-1.8993 1.2389,-3.1513 0.2737,-2.2068 -0.8641,-5.0328 -2.668,-6.521 -1.3092,-1.0801 -3.1316,-1.4813 -4.8482,-1.3996 -0.0721,-1.3646 0.1496,-2.7388 0.6763,-4.0004 0.9652,-2.2459 2.9658,-3.9631 5.18,-4.7619 0.6464,-0.2332 1.3999,-0.745 1.2449,-1.4113 m -6.1827,9.3045 -8.04332,5.9663 M 17.8609,20.0326 15.4744,15.3039 M 19.938,29.4902 8.35911,40.4503"
@@ -355,8 +350,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-’"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157898"
-     >
+     id="g157898">
     <path
        id="autosatin258"
        d="m 6.95771,39.6411 0.03827,-0.4689 0.28372,-0.3992 0.92298,-0.5433 1.6078,-0.7652 1.45062,-1.0731 1.2165,-1.3444 0.0271,-0.0472 m -5.35948,5.1725 0.26489,0.4745 0.35883,0.2658 0.44405,0.0863 0.52059,-0.0638 1.23598,-0.4613 1.43774,-0.7109 1.9795,-1.2574 1.622,-1.5351 1.3586,-1.7412 0.047,-0.0741 m -7.51656,1.2802 2.38656,4.7288"
@@ -395,8 +389,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-‘"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157894"
-     >
+     id="g157894">
     <path
        d="m 17.5369,37.3363 -1.1904,-0.9387 -0.2651,-0.2311 v 0 l -0.8996,-0.7842 -1.0584,-1.1019 -0.4141,-0.5023 v 0 l -0.5572,-0.676 -0.9186,-1.2338 -0.5745,-0.7665 v 0 L 11.311,30.6376 10.3474,29.4321 9.93947,28.2519 v 0 l -0.05488,-0.1588 0.17611,-1.5139 0.3629,-1.4779 0.0534,-0.149 v 0 l 0.461,-1.2868 0.6862,-1.3611 0.2513,-0.4102 v 0 l 0.5468,-0.8927 0.9614,-1.1861 0.5658,-0.5634 v 0 l 0.5148,-0.5126 1.2376,-0.8904 0.9759,-0.552 v 0 l 0.3744,-0.2118 1.4204,-0.6367"
        inkstitch:running_stitch_length_mm="2"
@@ -423,8 +416,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-—"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157918"
-     >
+     id="g157918">
     <path
        id="path157916"
        d="M 7,47.125 V 46 c 0,-0.666667 0.3333333,-1 1,-1 h 46 c 0.666667,0 1,0.333333 1,1 v 1.203125 M 7,47.6875 V 49 c 0,0.666667 0.3333333,1 1,1 h 46 c 0.666667,0 1,-0.333333 1,-1 v -1.1875"
@@ -442,8 +434,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-–"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157914"
-     >
+     id="g157914">
     <path
        id="path157912"
        d="M 7,54.838896 V 52 h 1 36 1 l 0.01105,2.927283 M 7,55.33608 V 58 c 0,0.666667 0.3333333,1 1,1 h 36 c 0.666667,0 1,-0.333333 1,-1 v -2.531338"
@@ -461,8 +452,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-œ"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157930"
-     >
+     id="g157930">
     <path
        d="m 14.5973,70.3836 0.2262,0.5129 0.7458,1.3237 0.916,1.2435 v 0 l 0.0079,0.0107 1.1472,1.0465 1.3779,0.7437 0.4754,0.129 v 0 l 1.0008,0.2715 1.5434,0.2097 1.0277,0.0667 v 0 l 0.5277,0.0342 1.5331,-0.0044 1.5574,-0.1264 v 0 l 4e-4,-10e-5 1.5228,-0.3032 1.4557,-0.5024 0.4474,-0.2867 v 0 l 0.8495,-0.5444 0.9492,-1.0587 -0.5446,-1.0621 v 0 L 31.2066,71.78 30.6421,70.3048 30.1995,68.7932 30.1701,68.6723 v 0 l -0.3473,-1.4285"
        inkstitch:running_stitch_length_mm="2"
@@ -521,8 +511,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Œ"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157890"
-     >
+     id="g157890">
     <path
        d="m 16.9783,69.1061 0.4032,0.7988 0.868,1.2716 0.895,0.926 v 0 l 0.1705,0.1765 1.2475,0.8911 1.3987,0.7388 0.3401,0.1238 v 0 l 1.1647,0.4242 1.4923,0.2496 0.9634,0.1101 v 0 l 0.5432,0.0621 1.5435,0.0753 1.5267,0.0161 0.1032,-0.0052 v 0 l 1.4461,-0.0726 1.5091,-0.2043 0.6999,-0.2736 v 0 l 0.693,-0.2708 0.3448,-1.5172 0.2275,-1.4039 v 0 l 0.0159,-0.0985 0.2434,-1.5024 0.1769,-1.528 0.0618,-0.5589 v 0 l 0.1075,-0.972 0.1583,-1.5336"
        inkstitch:running_stitch_length_mm="2"
@@ -624,8 +613,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ü"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g158194"
-     >
+     id="g158194">
     <path
        d="M 15.4324,71.9634 C 13.546153,68.33793 13.390985,64.154974 13.436671,60.151436 13.508126,53.835074 13.6446,47.510174 14.133877,41.211364 14.330675,38.509461 14.890925,35.84509 15.7085,33.2648"
        inkstitch:running_stitch_length_mm="2"
@@ -708,8 +696,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-û"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g158190"
-     >
+     id="g158190">
     <path
        d="M 15.4287,71.9463 C 13.526587,68.299922 13.397353,64.085267 13.436527,60.059487 13.508099,53.791682 13.643974,47.515869 14.122926,41.265033 14.30915,38.538397 14.895109,35.869984 15.6872,33.2592"
        inkstitch:running_stitch_length_mm="2"
@@ -798,8 +785,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ú"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g158186"
-     >
+     id="g158186">
     <path
        d="m 15.4378,71.959 c -1.88665,-3.603586 -2.044759,-7.774878 -2.000416,-11.75988 0.06038,-6.241303 0.213114,-12.489124 0.668509,-18.714678 0.20059,-2.796489 0.749936,-5.549558 1.602607,-8.219742"
        inkstitch:running_stitch_length_mm="2"
@@ -868,8 +854,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ù"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g158182"
-     >
+     id="g158182">
     <path
        d="M 15.4273,71.954 C 13.560169,68.356427 13.391425,64.206621 13.437413,60.23432 13.500241,53.958433 13.647512,47.675247 14.113399,41.415724 14.312525,38.641812 14.86746,35.902801 15.7156,33.2556"
        inkstitch:running_stitch_length_mm="2"
@@ -938,8 +923,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ø"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g158178"
-     >
+     id="g158178">
     <path
        d="m 11.0826,79.6047 -0.0765,0.1518 -0.6965,1.3823 -0.60818,1.407"
        inkstitch:running_stitch_length_mm="2"
@@ -1044,8 +1028,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ö"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g158174"
-     >
+     id="g158174">
     <path
        d="m 15.6811,73.0732 c -2.27329,-2.943856 -2.402292,-6.828359 -2.845138,-10.372639 -0.481353,-5.254425 -0.280223,-10.548531 0.193964,-15.7956 0.335733,-3.51193 0.989713,-7.196272 3.224788,-10.036153 1.539886,-1.856136 3.912082,-2.851641 6.305302,-2.83773"
        inkstitch:running_stitch_length_mm="2"
@@ -1154,8 +1137,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-õ"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g158170"
-     >
+     id="g158170">
     <path
        d="M 15.6728,73.0722 C 13.390579,70.110109 13.279256,66.196732 12.823948,62.632703 12.342246,56.877285 12.561979,51.075246 13.2101,45.3419 c 0.373248,-3.062596 1.146703,-6.231082 3.1896,-8.6324 1.309456,-1.464659 3.120685,-2.412646 5.080235,-2.603521 0.553124,-0.07519 0.666026,-0.04799 1.22314,-0.09035"
        inkstitch:running_stitch_length_mm="2"
@@ -1238,8 +1220,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ô"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g158166"
-     >
+     id="g158166">
     <path
        d="m 15.6713,73.0763 -0.7918,-1.169 -0.6525,-1.4327 -0.2334,-0.7403 v 0 L 13.7532,68.9714 13.4414,67.4251 13.234,66.0557 v 0 l -0.025,-0.165 -0.1908,-1.5423 -0.1742,-1.5438 -0.0379,-0.4864 v 0 L 12.723,61.2535 12.6254,59.7002 12.578,58.5631 v 0 l -0.0174,-0.4171 0.0143,-1.5563 0.016,-1.5561 0.0024,-0.2324 v 0 l 0.0135,-1.3238 0.0482,-1.5544 0.0629,-0.8811 v 0 l 0.0477,-0.6681 0.1106,-1.5493 0.1097,-1.5354 v 0 l 10e-4,-0.0138 0.176,-1.5367 0.218,-1.5335 0.1073,-0.644 v 0 l 0.1478,-0.8877 0.4154,-1.4976 0.4364,-1.2334 v 0 l 0.091,-0.2571 0.6938,-1.418 0.9263,-1.2771 0.2303,-0.2411 v 0 l 0.8514,-0.8911 1.306,-0.8803 0.8839,-0.3614 v 0 l 0.5641,-0.2306 1.544,-0.3008 L 23.1562,34"
        inkstitch:running_stitch_length_mm="2"
@@ -1353,8 +1334,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ó"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g158162"
-     >
+     id="g158162">
     <path
        d="M 15.6594,73.0794 15.6197,73.0388 14.7569,71.6764 14.1157,70.1962 13.986,69.7351 v 0 L 13.6787,68.6417 13.4038,67.1459 13.233,66.0542 v 0 l -0.0705,-0.4507 -0.1813,-1.5476 -0.1741,-1.5483 -0.0129,-0.1888 v 0 l -0.093,-1.3687 -0.0917,-1.5579 -0.0259,-0.8287 v 0 l -0.0228,-0.7306 0.0162,-1.5606 0.0152,-1.4699 v 0 l 9e-4,-0.0907 0.0162,-1.5606 0.0676,-1.5574 0.0394,-0.5499 v 0 l 0.0719,-1.0038 0.1112,-1.5536 0.0911,-1.1942 v 0 l 0.0273,-0.3581 0.1859,-1.5393 0.235,-1.537 0.0499,-0.2928 v 0 l 0.2116,-1.2417 0.4572,-1.4463 0.3386,-0.9252 v 0 l 0.1909,-0.5213 0.7223,-1.3579 0.9262,-1.226 0.0925,-0.0939 v 0 l 0.9779,-0.9921 1.2911,-0.8268 0.776,-0.3093 v 0 l 0.6393,-0.2549 1.506,-0.2872"
        inkstitch:running_stitch_length_mm="2"
@@ -1436,8 +1416,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ò"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g158158"
-     >
+     id="g158158">
     <path
        d="m 15.6771,73.0698 -0.171,-0.1847 -0.8204,-1.3291 -0.5976,-1.4431 -0.101,-0.3676 v 0 l -0.313,-1.1388 -0.285,-1.5374 -0.1546,-1.0003 v 0 l -0.0909,-0.588 -0.1753,-1.5437 -0.169,-1.5444 -0.0037,-0.0544 v 0 l -0.102,-1.4987 -0.0892,-1.5535 -0.0193,-0.6983 v 0 l -0.0236,-0.8566 0.016,-1.5561 0.0137,-1.3436 v 0 l 0.0022,-0.2126 0.016,-1.5561 0.0714,-1.5527 0.0309,-0.4326 v 0 l 0.0797,-1.1166 0.1106,-1.5492 0.0832,-1.081 v 0 l 0.0359,-0.4666 0.1848,-1.5349 0.2497,-1.4989 0.0491,-0.2178 v 0 l 0.2875,-1.2764 0.4062,-1.4745 0.3216,-0.8609 v 0 l 0.215,-0.5754 0.7287,-1.345 0.9246,-1.2141 0.0622,-0.0604 v 0 l 1.026,-0.9948 1.2576,-0.834 0.7528,-0.3219 v 0 l 0.6362,-0.272 1.4987,-0.2979 L 23.1562,34"
        inkstitch:running_stitch_length_mm="2"
@@ -1519,8 +1498,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ñ"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g158154"
-     >
+     id="g158154">
     <path
        d="m 15.23,74.2051 -0.1799,4.0731 0.0124,1.5282 0.02511,0.704112"
        inkstitch:running_stitch_length_mm="2"
@@ -1616,8 +1594,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ï"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g158150"
-     >
+     id="g158150">
     <path
        d="m 15.1214,73.5184 c 0.14482,-5.913261 0.514623,-11.821629 0.380931,-17.739125 0.01926,-4.527075 -0.208995,-9.048478 -0.331673,-13.571598 -0.06845,-3.072986 0.237534,-6.142308 0.188823,-9.211126"
        inkstitch:running_stitch_length_mm="2"
@@ -1692,8 +1669,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-î"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g158146"
-     >
+     id="g158146">
     <path
        d="m 15.1183,73.5196 0.0416,-1.378 0.0446,-1.5406 0.0227,-0.8577 v 0 l 0.0175,-0.6601 0.0465,-1.5188 0.0733,-1.5327 0.0027,-0.0635 v 0 l 0.063,-1.4734 0.0565,-1.5388 0.0028,-0.7632 v 0 l 0.0029,-0.7835 0.0235,-1.5482 0.0034,-1.446 v 0 l 2e-4,-0.1067 -0.0113,-1.554 -0.0093,-1.5543 -0.0053,-0.5628 v 0 l -0.0093,-0.9934 -0.0146,-1.5561 -0.0286,-1.2279 v 0 L 15.4335,50.532 15.3951,48.9766 15.3602,47.4211 15.3421,47.0835 v 0 l -0.065,-1.2139 -0.0652,-1.5501 -0.0287,-1.0104 v 0 l -0.0152,-0.5388 -5e-4,-1.5445 0.0148,-1.5454 0.004,-0.1488 v 0 l 0.0375,-1.4001 0.0484,-1.5248 0.0512,-0.8502 v 0 l 0.0425,-0.7053 0.0346,-1.5588 -0.1117,-1.508"
        inkstitch:running_stitch_length_mm="2"
@@ -1785,8 +1761,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-í"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g158142"
-     >
+     id="g158142">
     <path
        d="m 15.1148,73.5245 0.0016,-0.054 0.0458,-1.5264 0.0435,-1.526 0.0186,-0.6701 v 0 l 0.0236,-0.8556 0.0562,-1.5279 0.0628,-1.3918 v 0 l 0.0068,-0.1501 0.0684,-1.5451 0.0481,-1.5483 0.0023,-0.5322 v 0 l 0.0043,-1.0226 0.0291,-1.5568 -0.0042,-1.1984 v 0 L 15.5204,58.056 15.5095,56.4939 15.4976,54.9587 15.4945,54.6412 v 0 l -0.0117,-1.2201 -0.0147,-1.5377 -0.0276,-1.0198 v 0 l -0.014,-0.5172 -0.0347,-1.537 -0.034,-1.537 -0.0102,-0.1857 v 0 l -0.0746,-1.3471 -0.0576,-1.5315 -0.0236,-0.896 v 0 l -0.0167,-0.6346 0.0064,-1.5257 0.0145,-1.527 0.0025,-0.0905 v 0 l 0.0403,-1.4398 0.0454,-1.5304 0.043,-0.8055 v 0 l 0.0389,-0.7277 0.0158,-1.5349 -0.071,-0.716105"
        inkstitch:running_stitch_length_mm="2"
@@ -1859,8 +1834,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ì"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g158138"
-     >
+     id="g158138">
     <path
        d="m 15.1148,73.5245 c 0.128602,-5.793316 0.520805,-11.580633 0.392008,-17.377867 0.01139,-4.569844 -0.187453,-9.13492 -0.330737,-13.700649 -0.03676,-2.986138 0.157908,-5.966497 0.205829,-8.949984"
        inkstitch:running_stitch_length_mm="2"
@@ -1933,8 +1907,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ë"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g158134"
-     >
+     id="g158134">
     <path
        d="m 15.2164,71.0793 c -2.243926,-3.444506 -2.447829,-7.681055 -2.8922,-11.648346 -0.372527,-5.084588 -0.519278,-10.254363 0.436382,-15.285145 0.724494,-3.355737 1.831267,-6.968529 4.724033,-9.089424 1.998603,-1.490301 4.63046,-1.806552 7.021738,-1.273184 2.335424,0.443082 4.352284,1.847934 5.862157,3.648086 1.860026,1.901222 2.896206,4.43773 3.240967,7.050233 0.334053,2.195081 0.516785,4.530172 -0.101942,6.673812 -0.67146,1.196179 -1.88744,1.87907 -3.134131,2.351746 -3.296394,1.315958 -6.790416,2.020766 -10.180639,3.029866"
        inkstitch:running_stitch_length_mm="2"
@@ -2035,8 +2008,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ê"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g158130"
-     >
+     id="g158130">
     <path
        d="m 15.156,71.1458 c -2.274789,-3.487469 -2.591893,-7.78815 -2.93194,-11.82906 -0.301682,-4.579005 -0.336176,-9.215597 0.377938,-13.758374 0.668471,-4.125182 2.330396,-8.420014 5.891655,-10.877426 2.160189,-1.541996 5.040948,-1.317072 7.43703,-0.489546 2.605339,0.926493 4.551129,3.10656 6.043265,5.353665 1.512632,2.58348 1.883319,5.66839 1.934411,8.614051 -0.09752,1.256059 0.05406,2.729003 -0.918834,3.683928 -1.038285,1.248046 -2.732905,1.702028 -4.213866,2.244614 -2.963733,1.062958 -6.073328,1.629145 -9.059359,2.607148 -0.726607,0.726226 -1.45324,1.452426 -2.1799,2.1786"
        inkstitch:running_stitch_length_mm="2"
@@ -2144,8 +2116,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-é"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g158126"
-     >
+     id="g158126">
     <path
        d="m 15.2205,71.0968 c -2.246546,-3.433723 -2.452351,-7.663061 -2.895146,-11.622531 -0.374202,-5.03133 -0.510846,-10.141257 0.393261,-15.125427 0.687279,-3.29437 1.826666,-6.736266 4.515083,-8.946929 1.867429,-1.660636 4.517569,-2.197298 6.9326,-1.672845 2.348514,0.349071 4.433239,1.671546 5.975158,3.446535 1.829107,1.849353 3.024752,4.259227 3.382581,6.836227 0.411951,2.341032 0.632486,4.841283 -0.01488,7.141344 -0.655172,1.155748 -1.812121,1.845296 -3.024255,2.306838 -3.327083,1.348918 -6.863924,2.055971 -10.292276,3.076981 -0.701052,0.118167 -1.047361,0.829339 -1.56623,1.247107"
        inkstitch:running_stitch_length_mm="2"
@@ -2219,8 +2190,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-è"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g158122"
-     >
+     id="g158122">
     <path
        d="m 15.156,71.1458 c -2.250922,-3.446046 -2.580518,-7.694563 -2.922447,-11.689964 -0.311551,-4.623037 -0.351647,-9.30473 0.367475,-13.892023 0.667878,-4.11769 2.321016,-8.406104 5.870635,-10.866091 2.151257,-1.552047 5.033693,-1.340087 7.42987,-0.515055 2.586236,0.89654 4.500626,3.052297 6.010497,5.24996 1.55891,2.607702 1.945563,5.736222 1.996447,8.72372 -0.106166,1.20648 0.06553,2.633323 -0.833405,3.573119 -0.951138,1.27303 -2.609256,1.73653 -4.046002,2.271665 -3.043147,1.10737 -6.240376,1.693922 -9.31277,2.693669"
        inkstitch:running_stitch_length_mm="2"
@@ -2295,8 +2265,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ç"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g158118"
-     >
+     id="g158118">
     <path
        d="m 14.5397,69.792 c -2.115399,-4.85419 -2.018423,-10.286266 -1.994106,-15.48167 0.13304,-4.388745 0.269397,-8.897647 1.777174,-13.066668 1.262801,-3.238096 3.837729,-6.254196 7.327936,-7.063818 3.078202,-0.445246 6.68625,0.182669 8.684334,2.772961 1.583886,1.832508 1.743933,4.410389 1.594706,6.721023 -0.01863,0.57602 0.06245,1.131763 0.393497,2.085965"
        inkstitch:running_stitch_length_mm="2"
@@ -2392,8 +2361,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-æ"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g158114"
-     >
+     id="g158114">
     <path
        d="m 13.4495,70.3995 c 0.416072,1.419161 1.198797,2.812862 2.384151,3.70395 2.228449,1.242636 4.87947,1.231591 7.365149,1.34775 2.177819,-0.303939 2.968031,-0.594256 4.873557,-1.642493"
        inkstitch:running_stitch_length_mm="2"
@@ -2476,8 +2444,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-å"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g158110"
-     >
+     id="g158110">
     <path
        d="m 13.7632,71.9984 c -1.418102,-2.86562 -1.306568,-6.200427 -1.115511,-9.317527 0.48761,-4.843825 2.987305,-9.251152 6.152615,-12.858626 2.039196,-2.25772 4.508176,-4.061743 7.127896,-5.587047 0.244467,-0.425167 0.488933,-0.850333 0.7334,-1.2755"
        inkstitch:running_stitch_length_mm="2"
@@ -2581,8 +2548,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ä"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g158106"
-     >
+     id="g158106">
     <path
        d="m 13.7623,71.9966 -0.3427,-0.653 -0.4657,-1.5199 -0.2282,-1.3208 v 0 L 12.6968,68.3352 12.5684,66.8267 12.52,65.3126 12.5373,64.8444 v 0 l 0.0384,-1.0447 0.0973,-1.5122 0.2034,-1.0879 v 0 l 0.0746,-0.3991 0.352,-1.4695 0.4945,-1.5141 0.0625,-0.1447 v 0 l 0.5685,-1.3161 0.719,-1.4086 0.3413,-0.556 v 0 l 0.4868,-0.7933 0.8418,-1.2881 0.7147,-0.9615 v 0 l 0.1974,-0.2655 0.9838,-1.1717 1.0728,-1.0993 0.1963,-0.1863 v 0 l 0.917,-0.8701 1.1872,-0.9748 0.699,-0.5134 v 0 l 0.5404,-0.3968 1.2974,-0.8235 1.2399,-0.7716 v 0 l 0.0649,-0.0404 0.7334,-1.2755"
        inkstitch:running_stitch_length_mm="2"
@@ -2691,8 +2657,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ã"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g158102"
-     >
+     id="g158102">
     <path
        d="m 13.7625,71.993 c -1.366319,-2.748162 -1.307633,-5.948254 -1.138385,-8.945631 0.381014,-5.026561 2.97603,-9.619058 6.272983,-13.324322 1.989369,-2.203669 4.415067,-3.944723 6.957002,-5.448847 0.636546,-0.813017 0.982431,-1.683435 1.1678,-2.6945"
        inkstitch:running_stitch_length_mm="2"
@@ -2775,8 +2740,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-â"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g158098"
-     >
+     id="g158098">
     <path
        d="m 13.7621,71.9964 c -1.317399,-2.626549 -1.295966,-5.691071 -1.162749,-8.564282 0.243738,-4.810557 2.580745,-9.25969 5.603858,-12.913202 2.135785,-2.579515 4.84145,-4.609928 7.724991,-6.283716 0.574971,-0.842361 0.928015,-1.750273 1.1172,-2.7508"
        inkstitch:running_stitch_length_mm="2"
@@ -2878,8 +2842,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-á"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g158094"
-     >
+     id="g158094">
     <path
        d="m 13.7625,71.997 c -1.302502,-2.586432 -1.290686,-5.604928 -1.17138,-8.436958 0.178438,-4.008836 1.814114,-7.817968 4.107058,-11.067512 2.337811,-3.467974 5.618639,-6.19351 9.230022,-8.25733 0.244467,-0.425167 0.488933,-0.850333 0.7334,-1.2755"
        inkstitch:running_stitch_length_mm="2"
@@ -2961,8 +2924,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-à"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g158090"
-     >
+     id="g158090">
     <path
        d="m 13.7258,71.9233 c -1.404689,-2.926744 -1.270608,-6.302262 -1.0636,-9.4677 0.479741,-4.038141 2.319956,-7.782251 4.781995,-10.97657 2.212078,-2.96357 5.139038,-5.323951 8.347605,-7.13573 0.36143,-0.326233 0.722797,-0.652537 1.0842,-0.9788"
        inkstitch:running_stitch_length_mm="2"
@@ -3044,8 +3006,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ß"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g158086"
-     >
+     id="g158086">
     <path
        d="m 15.0758,73.903 0.002,1.524 0.0085,1.5543 -0.0444,0.6968 v 0 l -0.0547,0.8595 -0.4919,1.454 -0.485675,0.590025"
        inkstitch:running_stitch_length_mm="2"
@@ -3104,8 +3065,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Ü"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g158082"
-     >
+     id="g158082">
     <path
        d="M 16.7097,71.4993 C 14.942291,69.278139 14.521307,66.396607 14.404012,63.64371 13.501321,55.254525 13.954808,46.803917 14.073,38.3879 c 0.193265,-6.534378 0.36189,-13.072736 0.894155,-19.589697 4.82e-4,-0.467467 9.63e-4,-0.934935 0.0014,-1.402403"
        inkstitch:running_stitch_length_mm="2"
@@ -3188,8 +3148,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Û"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g158078"
-     >
+     id="g158078">
     <path
        d="M 16.7017,71.5531 C 14.850294,69.233634 14.691451,66.181234 14.436462,63.350129 13.530086,56.290331 13.93528,49.14992 13.9915,42.0538 c 0.187846,-7.763012 0.363163,-15.532471 0.976208,-23.275193 -0.0018,-0.452769 -0.0035,-0.905538 -0.0053,-1.358307"
        inkstitch:running_stitch_length_mm="2"
@@ -3278,8 +3237,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Ú"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g158074"
-     >
+     id="g158074">
     <path
        d="M 16.7166,71.501 C 14.972304,69.308871 14.526615,66.472133 14.4181,63.7516 13.494655,55.328104 13.955697,46.840681 14.073,38.3891 14.266052,31.85406 14.435101,25.315084 14.967155,18.797449 14.967637,18.3301 14.968118,17.86275 14.9686,17.3954"
        inkstitch:running_stitch_length_mm="2"
@@ -3348,8 +3306,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Ù"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g158070"
-     >
+     id="g158070">
     <path
        d="m 16.7582,71.3912 c -2.106342,-2.481295 -2.445971,-5.828943 -2.540076,-8.953869 -0.637926,-8.926998 -0.269751,-17.884235 -0.05865,-26.820537 0.133021,-5.654828 0.387374,-11.30681 0.806244,-16.946346 -5.38e-4,-0.418949 -0.0011,-0.837899 -0.0016,-1.256848"
        inkstitch:running_stitch_length_mm="2"
@@ -3418,8 +3375,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Ø"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g158066"
-     >
+     id="g158066">
     <path
        d="m 11.5861,70.0503 c 0.238404,-4.696729 1.117104,-9.337427 2.060562,-13.92462 -0.0047,-2.656595 -0.453352,-5.302008 -0.362927,-7.968502 -0.01116,-5.91498 0.355555,-11.855116 1.360202,-17.687206 0.833514,-4.065236 2.385412,-8.5084 6.129712,-10.751771 2.923124,-1.720935 6.512194,-1.275654 9.705237,-0.721033 2.110016,0.374641 4.314374,1.521327 5.125114,3.616432 -0.366824,1.488892 -0.744592,2.975264 -1.1849,4.4444"
        inkstitch:running_stitch_length_mm="2"
@@ -3521,8 +3477,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Ö"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g158062"
-     >
+     id="g158062">
     <path
        d="M 17.9114,71.6972 C 14.920167,68.157461 14.729549,63.312753 14.053041,58.937349 13.338224,53.561262 13.228166,48.111237 13.419265,42.696575 c 0.308893,-5.884188 0.720083,-11.918683 3.092674,-17.392838 1.115121,-2.85482 3.418045,-5.431179 6.553483,-5.966355 0.616357,-0.175241 1.265815,-0.181419 1.896878,-0.279382"
        inkstitch:running_stitch_length_mm="2"
@@ -3631,8 +3586,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Õ"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g158058"
-     >
+     id="g158058">
     <path
        d="M 17.9701,71.5395 C 14.683199,67.580009 14.360309,62.220858 13.783,57.327 13.096951,48.817792 13.088217,40.20014 14.520168,31.764419 15.438042,28.006667 16.401351,23.937399 19.2816,21.1551 c 1.5947,-1.358176 3.612476,-1.948355 5.6726,-2.0966"
        inkstitch:running_stitch_length_mm="2"
@@ -3715,8 +3669,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Ô"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g158054"
-     >
+     id="g158054">
     <path
        d="M 17.9688,71.5421 C 14.649102,67.534553 14.354001,62.119281 13.766261,57.175085 13.103961,48.663518 13.085782,40.042696 14.555074,31.611291 15.488817,27.85973 16.451409,23.746028 19.4274,21.0503 c 1.548102,-1.306353 3.541136,-1.83856 5.5261,-1.9917"
        inkstitch:running_stitch_length_mm="2"
@@ -3838,8 +3791,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Ó"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g158050"
-     >
+     id="g158050">
     <path
        d="M 17.9696,71.543 C 14.681614,67.580517 14.362301,62.223878 13.7832,57.3295 13.098293,48.764347 13.079483,40.085387 14.559787,31.59985 15.49269,27.851872 16.458296,23.747773 19.427,21.0504 c 1.552997,-1.303298 3.542375,-1.841133 5.5307,-1.9921"
        inkstitch:running_stitch_length_mm="2"
@@ -3908,8 +3860,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Ò"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g158046"
-     >
+     id="g158046">
     <path
        d="M 17.9877,71.5666 C 15.339003,68.432703 14.619314,64.264106 14.119106,60.317376 13.477927,55.114328 13.300433,49.857197 13.429437,44.618322 13.71006,38.746124 14.264085,32.801184 16.154767,27.201561 17.081089,24.469629 18.651989,21.796909 21.102825,20.192206 22.251456,19.43513 23.63227,19.204459 24.976,19.0596"
        inkstitch:running_stitch_length_mm="2"
@@ -3991,8 +3942,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Ñ"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g158042"
-     >
+     id="g158042">
     <path
        d="m 14.8452,73.9593 c 0.310965,2.096949 1.009934,4.125835 0.744506,6.264408"
        inkstitch:running_stitch_length_mm="2"
@@ -4098,8 +4048,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Ï"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g158038"
-     >
+     id="g158038">
     <path
        d="m 15.9912,73.7208 c 0.123669,-6.811708 0.358245,-13.621647 0.304288,-20.435653 0.002,-8.980493 0.102051,-17.963977 -0.116555,-26.942509 -0.01613,-2.632419 -0.440976,-5.292159 -0.10268,-7.907726 0.07912,-0.349237 0.158231,-0.698475 0.237347,-1.047712"
        inkstitch:running_stitch_length_mm="2"
@@ -4174,8 +4123,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Î"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g158034"
-     >
+     id="g158034">
     <path
        d="m 15.9912,73.7208 c 0.123728,-6.812752 0.358245,-13.623736 0.304306,-20.438785 0.0019,-8.979658 0.102052,-17.962307 -0.116599,-26.940003 -0.01588,-2.632806 -0.441584,-5.293057 -0.102239,-7.908933 0.07898,-0.348627 0.157955,-0.697253 0.236932,-1.045879"
        inkstitch:running_stitch_length_mm="2"
@@ -4268,8 +4216,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Í"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g158030"
-     >
+     id="g158030">
     <path
        d="m 15.9912,73.7208 c 0.120915,-6.757228 0.357741,-13.512636 0.303372,-20.27212 0.0053,-8.985212 0.09816,-17.973119 -0.109372,-26.95658 -0.01781,-2.678914 -0.444259,-5.384492 -0.111257,-8.04699 0.07989,-0.352637 0.159771,-0.705273 0.239657,-1.05791"
        inkstitch:running_stitch_length_mm="2"
@@ -4342,8 +4289,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Ì"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g158026"
-     >
+     id="g158026">
     <path
        d="M 15.9912,73.7208 C 16.112129,66.963297 16.348942,60.207615 16.294577,53.447856 16.299862,44.462919 16.392736,35.475287 16.1852,26.4921 16.167469,23.812991 15.74073,21.107176 16.074079,18.444507 16.15392,18.092072 16.23376,17.739636 16.3136,17.3872"
        inkstitch:running_stitch_length_mm="2"
@@ -4416,8 +4362,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Ë"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g158022"
-     >
+     id="g158022">
     <path
        d="M 13.9051,71.6573 C 13.042271,67.029065 12.811623,62.304052 12.559851,57.611801 12.519801,56.147317 12.410471,55.340792 12.457,53.87665"
        inkstitch:running_stitch_length_mm="2"
@@ -4554,8 +4499,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Ê"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g158018"
-     >
+     id="g158018">
     <path
        d="M 13.8921,71.5961 C 13.030776,66.885855 12.783238,62.08208 12.55493,57.307253 12.520118,55.916607 12.54336,54.52683 12.5839,53.1366"
        inkstitch:running_stitch_length_mm="2"
@@ -4685,8 +4629,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-É"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g158014"
-     >
+     id="g158014">
     <path
        d="m 13.8901,71.6278 -0.0878,-0.2709 -0.2399,-1.5745 -0.1981,-1.5926 -0.0234,-0.2226 v 0 l -0.1358,-1.291 -0.1592,-1.5136 -0.088,-0.8817 v 0 l -0.0631,-0.6318 -0.0946,-1.5256 -0.0655,-1.532 -7e-4,-0.0092 v 0 l -0.1174,-1.5522 -0.0559,-1.5419 -0.0085,-0.6065 v 0 l -0.0133,-0.9416 0.0206,-1.5509 0.0287,-0.68175"
        inkstitch:running_stitch_length_mm="2"
@@ -4796,8 +4739,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-È"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g158010"
-     >
+     id="g158010">
     <path
        d="M 13.9732,71.8662 13.8443,71.5107 13.6017,70.013 13.403,68.5036 13.375,68.2344 v 0 L 13.2438,66.973 13.0846,65.4424 12.9955,64.5655 v 0 L 12.929,63.9118 12.8215,62.374 12.7516,60.8858 v 0 l -0.0029,-0.0612 -0.1153,-1.5966 -0.072,-1.5194 -0.008,-0.5053 v 0 l -0.016,-1.023 0.0118,-1.5306 0.026,-1.1344"
        inkstitch:running_stitch_length_mm="2"
@@ -4909,8 +4851,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Ç"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g158006"
-     >
+     id="g158006">
     <path
        d="m 18.2796,70.8014 -0.893,-1.2495 -0.6933,-1.2976 v 0 L 16.6621,68.1958 16.0608,66.8093 15.5493,65.381 15.3848,64.7761 v 0 l -0.2336,-0.859 -0.3092,-1.4872 -0.2312,-1.2917 v 0 L 14.5743,60.9346 14.3371,59.4337 14.182,57.9222 14.1424,57.4481 v 0 l -0.087,-1.0397 -0.0859,-1.5165 -0.0656,-1.1574 v 0 L 13.8836,53.3755 13.7977,51.859 13.721,50.3157 13.7113,50.018 v 0 L 13.6701,48.7634 13.6224,47.211 13.6029,46.2981 v 0 l -0.0137,-0.6387 -0.0119,-1.549 -0.0183,-1.5335 v 0 l -2e-4,-0.0147 0.0354,-1.5424 0.0639,-1.5445 0.0661,-0.6146 v 0 l 0.0992,-0.9228 0.1723,-1.5363 0.1887,-1.2331 v 0 l 0.044,-0.2877 0.2971,-1.5155 0.3496,-1.5005 0.0857,-0.3347 v 0 l 0.2954,-1.1528 0.4785,-1.4665 0.3559,-0.9226 v 0 l 0.197,-0.5108 0.6146,-1.4057 0.7331,-1.359 0.0506,-0.0813 v 0 l 0.7706,-1.2389 0.9889,-1.1951 0.4935,-0.5122 v 0 l 0.5733,-0.595 1.2469,-0.9148 1.1773,-0.6582 v 0 l 0.1594,-0.0891 1.4654,-0.4717 1.5326,-0.219 0.4513,-0.0081 v 0 l 1.0742,-0.0193 1.5134,0.0423 1.1301,0.0831 v 0 l 0.4067,0.0299 1.5092,0.2287 1.467,0.3696 0.2556,0.0999 v 0 l 1.1794,0.4613 1.3012,0.7728 0.6434,0.6877 v 0 l 0.3887,0.4154 0.8184,1.2858 0.6681,1.373 0.0213,0.0993 v 0 l 0.298,1.3903 0.099,1.5372 -0.073,0.7557 v 0 l -0.0757,0.7834 -0.11525,1.0036"
        inkstitch:running_stitch_length_mm="2"
@@ -5011,8 +4952,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Æ"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g158002"
-     >
+     id="g158002">
     <path
        d="m 15.5399,74.4733 0.1698,0.8318 0.3791,1.4944 0.4212,1.1888 v 0 l 0.0954,0.2693 0.7342,1.3564 0.374225,0.736587"
        inkstitch:running_stitch_length_mm="2"
@@ -5150,8 +5090,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Å"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157998"
-     >
+     id="g157998">
     <path
        d="m 16.183,73.7471 0.305,1.4546 0.3922,1.4759 0.2612,0.6749 v 0 l 0.2908,0.7511 0.7191,1.338 0.252041,0.743773"
        inkstitch:running_stitch_length_mm="2"
@@ -5279,8 +5218,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Ä"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157994"
-     >
+     id="g157994">
     <path
        d="m 16.1635,73.6856 0.2739,1.3375 0.3888,1.5033 0.2851,0.7657 v 0 l 0.2581,0.6934 0.7251,1.3741 0.303769,0.795876"
        inkstitch:running_stitch_length_mm="2"
@@ -5415,8 +5353,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Ã"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157990"
-     >
+     id="g157990">
     <path
        d="m 16.1754,73.7409 0.3119,1.4701 0.397,1.478 0.257,0.657 v 0 l 0.3009,0.7694 0.7251,1.3371 0.275086,0.636684"
        inkstitch:running_stitch_length_mm="2"
@@ -5525,8 +5462,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Â"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157986"
-     >
+     id="g157986">
     <path
        d="m 16.1615,73.7471 0.2789,1.3279 0.4028,1.499 0.3002,0.7734 v 0 l 0.262,0.6751 0.7517,1.3556 0.373717,0.909961"
        inkstitch:running_stitch_length_mm="2"
@@ -5654,8 +5590,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Á"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157982"
-     >
+     id="g157982">
     <path
        d="m 16.1661,73.7955 0.3023,1.4022 0.4125,1.4819 0.2887,0.7121 v 0 l 0.2889,0.7127 0.7638,1.326"
        inkstitch:running_stitch_length_mm="2"
@@ -5764,8 +5699,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-À"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157978"
-     >
+     id="g157978">
     <path
        d="m 16.1317,73.822 0.3325,1.4452 0.4308,1.4517 0.2917,0.6833 v 0 l 0.3013,0.7057 0.7917,1.2861"
        inkstitch:running_stitch_length_mm="2"
@@ -5874,8 +5808,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-»"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157974"
-     >
+     id="g157974">
     <path
        id="autosatin276"
        d="M 7.48919,56.8353 C 7.08869,56.1451 7.33913,55.2582 7.76753,54.4803 8.97162,52.2937 11.1699,49.9322 13.2734,48.0157 L 22.25,48.0312 M 7.48919,56.8353 v 0 c 3.24091,0.0462 6.99691,0.1003 10.44831,0.1334 1.0467,-3.2275 3.0845,-6.5216 5.5,-9 m -10.4064,-0.3666 5.1929,9.8995"
@@ -5960,8 +5893,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-«"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157958"
-     >
+     id="g157958">
     <path
        d="m 7.625,48.0312 0.96466,-0.493 1.36367,-0.7207 0.79417,-0.5101 v 0 l 0.4917,-0.3157 1.2336,-0.892 1.1387,-0.9186 v 0 l 0.0422,-0.034 1.105,-1.0495 1.3354,-0.6733 0.4517,-0.205 v 0 l 0.9405,-0.4268 1.3637,-0.659 0.8736,-0.5308 v 0 l 0.4558,-0.277 1.1672,-0.9843 0.8018,-1.2789"
        inkstitch:running_stitch_length_mm="2"
@@ -6046,8 +5978,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-z"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157854"
-     >
+     id="g157854">
     <path
        d="m 9.09006,73.9902 0.91854,-1.2306 0.6186,-0.7427 v 0 l 0.3499,-0.42 0.9887,-1.178 0.9797,-1.0945 v 0 l 0.0531,-0.0593 1.0409,-1.1494 1.0408,-1.1494 0.2504,-0.2759 v 0 l 0.7919,-0.8726 0.7468,-1.3011 0.3926,-0.782 v 0 l 0.2897,-0.5772 0.6951,-1.3544 0.681,-1.2064 v 0 l 0.069,-0.1222 0.8018,-1.2976 0.8496,-1.2684 0.2047,-0.2975 v 0 l 0.6612,-0.9613 0.8904,-1.242 0.5086,-0.6917 v 0 l 0.4034,-0.5487 0.9337,-1.2483 0.7954,-1.0454 v 0 l 0.1485,-0.1952 0.9396,-1.2438 0.9216,-1.2567 0.1127,-0.1542 v 0 l 0.8071,-1.104 0.8719,-1.2912 0.3506,-0.521 v 0 l 0.5191,-0.7716 0.8129,-1.3246 0.5446,-0.9204 v 0 l 0.2456,-0.415 0.625,-1.3993 1.1526,-0.9414 0.0412,-0.0293 v 0 l 1.2251,-0.8706 1.2127,-0.9231 0.4168,-0.3216 v 0 l 0.7927,-0.6114 1.1662,-0.9879 0.7716,-0.6733 v 0 l 0.3806,-0.3321 1.0173,-1.1474"
        inkstitch:running_stitch_length_mm="2"
@@ -6119,8 +6050,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-y"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157850"
-     >
+     id="g157850">
     <path
        d="m 19.6938,75.2244 0.0248,-0.6713 0.0079,-1.5165 0.066,-1.5307 10e-5,-0.0163 v 0 l 0.0157,-1.537 -0.5403,-1.3513 -0.4006,-0.6273 v 0 l -0.4182,-0.6548 -0.7435,-1.3351 -0.656,-1.2726 v 0 l -0.0385,-0.0747 -0.6428,-1.3937 -0.5496,-1.4372 -0.1942,-0.5456 v 0 l -0.3212,-0.9021 -0.4578,-1.467 -0.3324,-1.1971 v 0 L 14.434,57.4088 14.0353,55.9233 13.6677,54.4292 13.585,54.0748 v 0 l -0.2673,-1.1445 -0.3346,-1.502 -0.1864,-1.0055 v 0 L 12.7026,49.9151 12.468,48.3959 12.2922,46.87 12.2796,46.7234 v 0 l -0.119,-1.385 -0.1074,-1.5328 -0.0566,-0.8081 v 0 L 11.9459,42.2728 11.8131,40.7411 11.655,39.2768 v 0 l -0.007,-0.0653 -0.171,-1.5271 -0.1612,-1.547 -0.08,-0.5735 v 0 l -0.13,-0.9329 -0.3395,-1.4812"
        inkstitch:running_stitch_length_mm="2"
@@ -6190,8 +6120,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-x"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157846"
-     >
+     id="g157846">
     <path
        d="m 13.5282,74.0153 -0.0523,0.9375 -0.0743,1.5237 -0.0689,1.2185 v 0 l -0.0179,0.3162 -0.1388,1.517 -0.126329,0.79543"
        inkstitch:running_stitch_length_mm="2"
@@ -6296,8 +6225,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-w"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157842"
-     >
+     id="g157842">
     <path
        d="m 18.4551,72.3859 -0.1295,-0.1746 -0.688,-1.3741 -0.5797,-1.4271 -0.1503,-0.4384 v 0 L 16.5583,67.952 16.08,66.4874 15.7732,65.3902 v 0 l -0.1083,-0.3873 -0.3942,-1.491 -0.3961,-1.507 -0.0561,-0.249 v 0 L 14.54,60.5189 14.2236,59.0287 14.0228,58.0833 v 0 l -0.1157,-0.5448 -0.2632,-1.4999 -0.2421,-1.504 -0.0246,-0.1528 v 0 l -0.2175,-1.3512 -0.2054,-1.5087 -0.1129,-0.8593 v 0 l -0.0854,-0.6504 -0.1984,-1.5097 -0.1984,-1.5098 -0.0067,-0.056 v 0 l -0.1742,-1.4562 -0.1664,-1.5144 -0.0628,-0.7652 v 0 l -0.0619,-0.7528 -0.0978,-1.5203 -0.0743,-1.4772 v 0 l -0.0021,-0.0433 -0.0267,-1.5214 0.0031,-1.5156 -0.0085,-0.6772 v 0 l -0.0107,-0.8529 -0.1664,-1.5343"
        inkstitch:running_stitch_length_mm="2"
@@ -6359,8 +6287,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-v"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157838"
-     >
+     id="g157838">
     <path
        d="m 18.468,70.9369 -0.2701,-0.4974 -0.684,-1.3789 -0.5726,-1.4326 -0.0038,-0.0099 v 0 l -0.5473,-1.4306 -0.4763,-1.4674 -0.1776,-0.5564 v 0 l -0.2915,-0.9136 -0.469,-1.47 -0.3299,-1.1086 v 0 l -0.1101,-0.3699 -0.4282,-1.482 -0.4282,-1.482 -0.049,-0.1808 v 0 l -0.3545,-1.3084 -0.3671,-1.4982 -0.1739,-0.7403 v 0 l -0.1788,-0.7614 -0.3528,-1.5016 -0.2809,-1.3041 v 0 l -0.044,-0.2042 -0.2852,-1.516 -0.2715,-1.5187 -0.0499,-0.3609 v 0 L 11.1105,45.2762 10.9317,43.744 10.8386,42.8106 v 0 L 10.7787,42.21 10.6789,40.671 10.5863,39.1611 v 0 L 10.5847,39.1343 10.5348,37.6167 10.5162,36.0973 10.506,35.5036 v 0 L 10.4901,34.58 10.4831,33.0676"
        inkstitch:running_stitch_length_mm="2"
@@ -6409,8 +6336,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-u"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157834"
-     >
+     id="g157834">
     <path
        d="M 15.4727,71.7147 15.2024,71.2889 14.6457,69.8227 14.225,68.2979 14.224,68.292 v 0 L 13.9438,66.7472 13.7298,65.18 13.6809,64.6737 v 0 l -0.1037,-1.072 -0.0953,-1.5097 -0.0156,-1.0706 v 0 l -0.0064,-0.4435 -0.0232,-1.5142 0.0088,-1.5138 0.0053,-0.1885 v 0 l 0.0373,-1.3249 0.0358,-1.5781 0.0211,-0.7562 v 0 l 0.0214,-0.7655 0.0458,-1.5215 0.0413,-1.3718 v 0 l 0.0045,-0.1498 0.0488,-1.5213 0.0724,-1.5193 0.0223,-0.4669 v 0 l 0.0502,-1.0525 0.0724,-1.5193 0.0617,-1.0839 v 0 l 0.0248,-0.4353 0.1424,-1.5121 0.15,-1.511 0.0274,-0.1852 v 0 l 0.1948,-1.3163 0.3249,-1.4809 0.2027,-0.788 v 0 l 0.1762,-0.6845 0.3816,-1.4888"
        inkstitch:running_stitch_length_mm="2"
@@ -6459,8 +6385,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-t"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157830"
-     >
+     id="g157830">
     <path
        d="M 16.5475,73.0168 16.1658,71.512 15.9644,70.6856 v 0 l -0.1565,-0.6425 -0.2062,-1.5399 -0.1501,-1.4195 v 0 L 15.4413,66.986 15.328,65.4587 15.2477,63.9263 15.2311,63.4484 v 0 L 15.1944,62.391 15.1413,60.8556 15.1151,59.8079 v 0 l -0.0123,-0.4886 -0.0017,-1.5377 0.0247,-1.5365 0.0024,-0.0792 v 0 l 0.0448,-1.4681 0.0526,-1.53 0.0222,-0.6423 v 0 l 0.0305,-0.8878 0.0527,-1.53 0.0421,-1.2225 v 0 l 0.0106,-0.3076 0.0527,-1.5301 0.0192,-1.5316 0.0032,-0.2719 v 0 l 0.0152,-1.2598 0.0185,-1.5317 0.0042,-0.8506 v 0 L 15.5,40.9207 v -1.5319"
        inkstitch:running_stitch_length_mm="2"
@@ -6577,8 +6502,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-s"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157826"
-     >
+     id="g157826">
     <path
        id="autosatin220"
        d="m 8.11256,66.592 0.69252,-0.0547 0.90479,0.3305 2.23803,1.3863 2.462,1.6348 1.1847,0.6413 1.0845,0.3803 1.9978,0.3204 2.1051,0.0615 2.014,-0.362 0.9109,-0.3911 0.8136,-0.5588 0.4048,-0.4887 M 7.55006,66.967 l -0.79617,0.7368 -0.37782,0.8578 -0.28712,2.3919 -0.06069,2.2418 0.31915,2.2559 0.34929,1.065 0.50097,0.9867 0.67156,0.8811 0.86105,0.7482 1.08046,0.6399 1.14456,0.4762 2.4255,0.5573 2.5139,0.1908 2.4902,0.0164 3.8006,0.127 3.8604,0.0793 1.8941,-0.1293 1.8387,-0.3223 1.7599,-0.5759 1.6576,-0.8898 1.3134,-1.0142 1.1077,-1.1348 0.4153,-0.5599 M 18.75,69.625 19,82.625 M 4.625,71.8125 13.5,68 m 23.0286,9.0284 -12.2227,-7.8148"
@@ -6619,8 +6543,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-r"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157822"
-     >
+     id="g157822">
     <path
        d="m 15.0328,73.4266 0.011,-0.2874 0.085,-1.5221 0.1135,-1.5334 0.0326,-0.4282 v 0 l 0.0848,-1.1152 0.1122,-1.5528 0.0843,-1.1006 v 0 l 0.0311,-0.407 0.0754,-1.5164 0.0414,-1.5262 0.0114,-0.3257 v 0 l 0.0421,-1.2042 -0.0063,-1.5369 -0.0043,-1.0372 v 0 l -0.0021,-0.4996 0.0231,-1.5392 0.0053,-1.5406 7e-4,-0.1995 v 0 l 0.0047,-1.341 0.0013,-1.5405 -0.0083,-0.8976 v 0 l -0.0059,-0.6428 -0.0142,-1.5404 -0.0513,-1.5376 -0.003,-0.0572 v 0 l -0.0772,-1.4637 -0.0793,-1.5361 -0.0444,-0.774 v 0 l -0.0437,-0.761 -0.1172,-1.534 -0.1025,-1.4748 v 0 l -0.0043,-0.0618 -0.0915,-1.5382 -0.0654,-1.5391 -0.0196,-0.6354 v 0 l -0.028,-0.9042 -0.1099,-1.5156"
        inkstitch:running_stitch_length_mm="2"
@@ -6695,8 +6618,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-q"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157818"
-     >
+     id="g157818">
     <path
        d="M 15.748314,74.222931 C 14.343772,71.992585 13.629596,69.611642 13.1923,67.1703 l -0.1149,-0.6504 v 0 L 12.927,65.668 12.7328,64.154 12.6248,62.8584 v 0 l -0.0187,-0.2251 -0.0617,-1.5249 -0.0335,-1.526 -0.0068,-0.4131 v 0 l -0.0184,-1.1131 0.005,-1.5263 0.0025,-1.052 v 0 l 0.0011,-0.4872 0.0116,-1.5224 0.0374,-1.5219 0.01,-0.1593 v 0 l 0.0857,-1.3596 0.1356,-1.5139 0.0901,-0.8043 v 0 l 0.0789,-0.7045 0.2731,-1.4938 0.3286,-1.4267 v 0 l 0.0116,-0.0502 0.3976,-1.5002 0.4803,-1.4692 0.2159,-0.4975 v 0 l 0.3988,-0.9189 0.6926,-1.3721 0.5944,-0.9878 v 0 l 0.1973,-0.3279 0.9701,-1.1712 1.1816,-0.948 0.2422,-0.1264 v 0 l 1.1117,-0.5804 1.4593,-0.4709 0.8924,-0.1453 v 0 l 0.6175,-0.1006 1.5008,-0.2165"
        inkstitch:running_stitch_length_mm="2"
@@ -6765,8 +6687,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-p"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157814"
-     >
+     id="g157814">
     <path
        d="m 14.5017,73.4066 0.0551,1.2002 0.1165,1.5368 0.0821,1.0289 v 0 l 0.0406,0.5072 0.147,1.532 0.1612,1.5298 0.0249,0.187 v 0 l 0.1773,1.3321 0.2896,1.4928 0.1862,0.8912 v 0 l 0.1295,0.6203 0.1271,1.5417 -0.0332,1.5254 -0.0035,0.0684 v 0 l -0.075,1.4549 -0.412,1.4491"
        inkstitch:running_stitch_length_mm="2"
@@ -6848,8 +6769,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-o"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157810"
-     >
+     id="g157810">
     <path
        d="m 15.9509,72.83 -0.7416,-1.143 -0.6835,-1.3569 -0.3001,-0.7822 v 0 L 13.9748,68.894 13.5305,67.4121 13.1954,65.9785 v 0 L 13.1775,65.9016 12.9433,64.3683 12.7756,62.825 12.743,62.2887 v 0 l -0.0616,-1.0135 -0.0942,-1.5498 -0.0273,-1.1513 v 0 l -0.0095,-0.401 0.0105,-1.5524 0.0314,-1.5555 0.0037,-0.2103 v 0 l 0.0237,-1.3405 0.0847,-1.5456 0.0723,-0.8279 v 0 l 0.0623,-0.7144 0.1346,-1.5422 0.1955,-1.4413 v 0 l 0.0117,-0.0869 0.225,-1.5249 0.2533,-1.5164 0.115,-0.5411 v 0 l 0.2033,-0.9559 0.3618,-1.4887 0.4024,-1.1415 v 0 l 0.1032,-0.2926 0.679,-1.4059 0.8981,-1.2763 0.2009,-0.2056 v 0 l 0.8876,-0.9082 1.229,-0.938 0.8115,-0.3978 v 0 l 0.5875,-0.2879 1.4767,-0.36"
        inkstitch:running_stitch_length_mm="2"
@@ -6896,8 +6816,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-n"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157806"
-     >
+     id="g157806">
     <path
        d="m 15.0052,74.2407 -8e-4,0.9842 0.0226,1.5155 0.0155,1.0272 v 0 l 0.0076,0.5106 0.0124,1.5282"
        inkstitch:running_stitch_length_mm="2"
@@ -6972,8 +6891,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-m"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157802"
-     >
+     id="g157802">
     <path
        d="m 15.0188,74.0659 -0.0317,0.7941 -0.0206,1.5411 0.0151,1.1767 v 0 l 0.0048,0.3771 -0.04989,2.093224"
        inkstitch:running_stitch_length_mm="2"
@@ -7082,8 +7000,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-l"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157798"
-     >
+     id="g157798">
     <path
        d="m 15.0299,72.9192 0.0377,-1.5302 0.0412,-1.2296 v 0 l 0.0101,-0.3027 0.0653,-1.5344 0.0652,-1.5343 0.0085,-0.2391 v 0 l 0.0459,-1.2975 0.0616,-1.5374 0.0315,-0.776 v 0 l 0.0312,-0.7674 0.0306,-1.5486 0.0257,-1.2965 v 0 l 0.005,-0.252 -0.012,-1.5527 0.0086,-1.5559 0.0014,-0.2529 v 0 l 0.0072,-1.3029 0.0086,-1.5559 -3e-4,-0.7547 v 0 l -3e-4,-0.8015 0.0022,-1.5577 0.007,-1.2544 v 0 l 0.0017,-0.3034 0.0087,-1.5579 0.0086,-1.5579 -0.0017,-0.1944 v 0 l -0.0122,-1.3216 -0.0055,-1.5394 -0.0016,-0.7525 v 0 l -0.0016,-0.787 -0.0032,-1.5395 -0.0027,-1.2871 v 0 l -6e-4,-0.2523 -0.0032,-1.5395 -0.0027,-1.5394 -5e-4,-0.2825 v 0 l -0.0022,-1.257 -0.0026,-1.5395 -0.0109,-0.817 v 0 L 15.47,29.6949 15.4448,28.1559 15.4227,26.8038 v 0 l -0.0031,-0.1869 -0.0303,-1.5386 -0.074,-1.5357 -0.0205,-0.3497 v 0 L 15.2255,22.009 15.1053,20.4824 15.1034,19.5861 v 0 L 15.1021,18.9628 15.27,17.4476"
        inkstitch:running_stitch_length_mm="2"
@@ -7122,8 +7039,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-k"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157794"
-     >
+     id="g157794">
     <path
        d="m 15.0479,73.7835 -0.0229,0.8533 -0.0682,1.5409 -0.0591,1.2181 v 0 l -0.0157,0.3244 0.0669,1.5534"
        inkstitch:running_stitch_length_mm="2"
@@ -7230,8 +7146,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-j"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157790"
-     >
+     id="g157790">
     <path
        d="m 15.5114,73.3572 0.06,-1.2051 0.1089,-1.532 0.052,-1.0263 v 0 l 0.0259,-0.5092 0.0645,-1.5371 0.0453,-1.5382 0.0021,-0.1829 v 0 l 0.0162,-1.3569 0.0214,-1.5397 0.0164,-0.873 v 0 l 0.0124,-0.6668 0.0288,-1.5397 0.0288,-1.5415 -10e-5,-0.0214 v 0 l -0.0062,-1.5405 -0.0154,-1.562 -0.0066,-0.6674 v 0 L 15.957,53.623 15.9415,52.061 15.9024,50.7481 v 0 l -0.0074,-0.2476 -0.0574,-1.56 -0.0574,-1.56 -0.0152,-0.3999 v 0 l -0.0441,-1.16 -0.0614,-1.5597 -0.0412,-1.0475 v 0 l -0.0201,-0.5122 -0.05,-1.5605 -0.0509,-1.5603 -0.0138,-0.1344 v 0 l -0.1451,-1.4115 -0.096,-1.5353 -0.0025,-0.8128 v 0 l -0.0023,-0.7226 0.0674,-1.5472"
        inkstitch:running_stitch_length_mm="2"
@@ -7301,8 +7216,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-i"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157786"
-     >
+     id="g157786">
     <path
        d="m 15.1622,71.9441 0.0435,-1.526 0.0186,-0.6701 v 0 l 0.0236,-0.8556 0.0562,-1.5279 0.0628,-1.3918 v 0 l 0.0068,-0.1501 0.0684,-1.5451 0.0481,-1.5483 0.0023,-0.5322 v 0 l 0.0043,-1.0226 0.0291,-1.5568 -0.0042,-1.1984 v 0 L 15.5204,58.056 15.5095,56.4939 15.4976,54.9587 15.4945,54.6412 v 0 l -0.0117,-1.2201 -0.0147,-1.5377 -0.0276,-1.0198 v 0 l -0.014,-0.5172 -0.0347,-1.537 -0.034,-1.537 -0.0102,-0.1857 v 0 l -0.0746,-1.3471 -0.0576,-1.5315 -0.0236,-0.896 v 0 l -0.0167,-0.6346 0.0064,-1.5257 0.0145,-1.527 0.0025,-0.0905 v 0 l 0.0403,-1.4398 0.0454,-1.5304 0.043,-0.8055 v 0 l 0.0389,-0.7277 0.0158,-1.5349"
        inkstitch:running_stitch_length_mm="2"
@@ -7369,8 +7283,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-h"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157782"
-     >
+     id="g157782">
     <path
        d="M 14.8416,77.4986 15.083425,74.322699 14.8667,79.2234 14.841655,80.334613"
        inkstitch:running_stitch_length_mm="2"
@@ -7445,8 +7358,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-g"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157778"
-     >
+     id="g157778">
     <path
        d="m 13.738,70.1681 -0.2768,-0.9288 -0.3025,-1.4865 -0.1199,-1.1505 v 0 L 13.0014,66.244 12.8731,64.7325 12.8234,63.2159 12.8153,62.9677 v 0 L 12.7741,61.6992 12.7248,60.1825 12.701,59.3266 v 0 l -0.0184,-0.6608 -0.0094,-1.517 -0.0039,-1.4648 v 0 l -2e-4,-0.0521 0.0252,-1.5403 0.0377,-1.519 0.0377,-0.5295 v 0 l 0.0701,-0.9858 0.1694,-1.5061 0.1855,-1.1238 v 0 l 0.0669,-0.405 0.2966,-1.523 0.3754,-1.5001 0.0369,-0.1293 v 0 l 0.3868,-1.3535 0.4549,-1.4673 0.2649,-0.6468 v 0 l 0.3193,-0.7796 0.6556,-1.3631 0.7155,-1.0709 v 0 l 0.1242,-0.186 1.0472,-1.1427 1.2156,-0.9636 0.2676,-0.1719 v 0 l 1.0241,-0.6578 1.4153,-0.6023 0.8499,-0.2561 v 0 l 0.633,-0.1908 1.4977,-0.3028"
        inkstitch:running_stitch_length_mm="2"
@@ -7515,8 +7427,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-f"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157774"
-     >
+     id="g157774">
     <path
        d="m 15.0693,73.5046 0.0354,-0.7981 0.0674,-1.518 0.0639,-1.4382 v 0 l 0.0035,-0.0797 0.0808,-1.53 0.0818,-1.5316 0.0219,-0.612 v 0 l 0.033,-0.9247 0.0178,-1.5437 0.0149,-1.2888 v 0 l 0.0029,-0.2549 0.0068,-1.5504 6e-4,-1.5534 2e-4,-0.3992 v 0 l 4e-4,-1.1543 -2e-4,-1.5557 0.0036,-1.048 v 0 l 0.0017,-0.4806 0.0067,-1.5505 -0.0013,-1.5506 -0.0013,-0.1763 v 0 L 15.5,49.5915 v -1.5509 -0.8327 0 -0.7182 -1.5509 -1.4889 0 -0.062 -1.5509 l 0.4499,-1.2838 0.6526,-0.4359 v 0 l 0.6066,-0.4052 1.2592,-0.841"
        inkstitch:running_stitch_length_mm="2"
@@ -7623,8 +7534,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-e"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157770"
-     >
+     id="g157770">
     <path
        d="m 15.2277,71.1202 -0.4229,-0.6536 -0.668,-1.3773 -0.4761,-1.3076 v 0 l -0.0482,-0.1323 -0.3982,-1.4822 -0.2581,-1.5141 -0.0729,-0.4838 v 0 l -0.1565,-1.0382 -0.1909,-1.5163 -0.1188,-1.1164 v 0 l -0.0456,-0.428 -0.1334,-1.5485 -0.0809,-1.5511 -0.0085,-0.1627 v 0 L 12.0763,55.4197 12.027,53.8661 12.0344,53.11 v 0 l 0.0077,-0.7986 0.0342,-1.5546 0.054,-1.3461 v 0 l 0.0084,-0.2089 0.0985,-1.5516 0.1885,-1.5312 0.0654,-0.3888 v 0 l 0.1873,-1.1122 0.3387,-1.4824 0.2997,-1.0088 v 0 l 0.1336,-0.4498 0.4976,-1.4358 0.6466,-1.4061 0.0869,-0.1395 v 0 l 0.7255,-1.1647 0.9631,-1.181 0.5761,-0.5617 v 0 l 0.5277,-0.5145 1.2473,-0.8582 1.3321,-0.5724 v 0 l 0.0754,-0.0324 1.4893,-0.2643 1.5108,0.0175 0.5879,0.0936 v 0 l 0.9197,0.1464 1.473,0.441 1.117,0.5194 v 0 l 0.2678,0.1245 1.2298,0.9071 1.1181,1.0426 0.2315,0.2607 v 0 l 0.7914,0.8911 0.9312,1.232 0.4654,0.845 v 0 l 0.2677,0.486 0.5438,1.4294 0.353,1.4908 0.0151,0.0832 v 0 l 0.2591,1.4239 0.1652,1.5237 0.0226,0.7205 v 0 l 0.0255,0.8116 -0.0654,1.5312 -0.2396,1.3349 v 0 l -0.0279,0.1557 -0.9109,1.2093 -1.3068,0.8219 -0.4467,0.1886 v 0 l -0.9783,0.4128 -1.4337,0.4895 -1.0718,0.3388 v 0 l -0.3792,0.1199 -1.4593,0.4382 -1.4781,0.3919 -0.242,0.0637 v 0 l -1.2369,0.3254 -1.4875,0.3617 -0.8457,0.2803 v 0 l -0.5875,0.1946 -1.0899,1.0893"
        inkstitch:running_stitch_length_mm="2"
@@ -7665,8 +7575,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-d"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157766"
-     >
+     id="g157766">
     <path
        d="m 14.6387,71.3787 -0.1074,-0.1839 -0.5491,-1.4108 -0.396,-1.4707 -0.0964,-0.4858 v 0 l -0.2,-1.0084 -0.2357,-1.5062 -0.1243,-1.1861 v 0 L 12.8951,63.7961 12.7362,62.2793 12.625,60.7599 12.6133,60.396 v 0 l -0.0373,-1.1595 -0.0236,-1.5249 0.0105,-1.0599 v 0 l 0.0046,-0.4649 0.0138,-1.531 0.0579,-1.5782 0.0134,-0.1694 v 0 l 0.1057,-1.338 0.132,-1.5749 0.0983,-0.8167 v 0 l 0.0903,-0.7506 0.2469,-1.5557 0.3178,-1.3779 v 0 l 0.0363,-0.1572 0.4306,-1.5094 0.5504,-1.4674 0.1847,-0.407 v 0 l 0.4592,-1.0117 0.789,-1.3366 0.5929,-0.9051 v 0 l 0.2528,-0.3859 1.0014,-1.1556 1.1594,-1.043 0.1667,-0.1017 v 0 l 1.172,-0.7141 1.4821,-0.438 0.8096,-0.1702 v 0 l 0.713,-0.1498 1.4939,-0.3548"
        inkstitch:running_stitch_length_mm="2"
@@ -7715,8 +7624,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-c"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157762"
-     >
+     id="g157762">
     <path
        d="M 16.5176,72.8896 15.5634,71.7295 14.8073,70.3928 14.5397,69.792 v 0 l -0.3596,-0.8075 -0.4869,-1.4649 -0.3203,-1.2267 v 0 l -0.0701,-0.2685 -0.2654,-1.5226 -0.209,-1.5321 -0.0303,-0.3247 v 0 l -0.1132,-1.2146 -0.0991,-1.5432 -0.0266,-0.9288 v 0 L 12.5416,58.3418 12.534,56.7953 12.5276,55.2655 v -0.0023 0 l 0.0285,-1.5092 0.0386,-1.5117 0.0343,-0.673 v 0 l 0.0446,-0.8763 0.1261,-1.5451 0.103,-1.2636 v 0 l 0.023,-0.2815 0.2062,-1.5304 0.2618,-1.5159 0.0722,-0.3225 v 0 l 0.2616,-1.1678 0.4321,-1.4481 0.3945,-0.9053 v 0 l 0.2245,-0.5152 0.723,-1.3396 0.9004,-1.2399 0.0541,-0.0575 v 0 l 0.9991,-1.0631 1.1779,-0.9885 0.6057,-0.3486 v 0 l 0.7097,-0.4085 1.4318,-0.54 1.337,-0.1585 v 0 l 0.1693,-0.0201 1.5267,0.0434 1.5201,0.23 0.4421,0.128 v 0 l 1.0181,0.2947 1.362,0.7162 0.8354,0.7106 v 0 l 0.3151,0.268 0.9679,1.1928 0.6331,1.4064 0.0494,0.1973 v 0 l 0.3171,1.2675 0.1119,1.5253 -0.0431,0.8585 v 0 l -0.0336,0.6673 0.2321,1.4908"
        inkstitch:running_stitch_length_mm="2"
@@ -7756,8 +7664,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-b"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157758"
-     >
+     id="g157758">
     <path
        d="m 14.0485,71.9228 -0.1626,-0.431 -0.1341,-1.5259 -0.0609,-1.5329 -0.008,-0.2057 v 0 L 13.6308,66.9 13.5706,65.367 13.5574,64.4972 v 0 l -0.01,-0.666 -0.0175,-1.5362 -0.0066,-1.5301 v 0 -0.006 l 4e-4,-1.5362 0.0239,-1.5362 0.0125,-0.6537 v 0 l 0.017,-0.8823 0.0309,-1.536 0.0282,-1.3134 v 0 l 0.0048,-0.2226 0.0246,-1.536 -0.0025,-1.5365 -7e-4,-0.437 v 0 l -0.0018,-1.0995 -0.0188,-1.5336 -0.013,-1.0992 v 0 L 13.6235,45.3876 13.6053,43.8392 13.587,42.2908 13.5848,42.1046 v 0 L 13.5687,40.7425 13.5559,39.194 13.5506,38.3723 v 0 L 13.5459,37.6455 13.536,36.097 13.5266,34.64 v 0 l -6e-4,-0.0916 -0.01,-1.5485 -0.01,-1.5485 -0.0021,-0.5438 v 0 L 13.5,29.9029 v -1.5486 -1.1791 0 -0.3695 -1.5486 -1.5486 -0.2657 0 -1.2829 -1.5485 -0.9011 0 -0.6475 l 5e-4,-1.5442"
        inkstitch:running_stitch_length_mm="2"
@@ -7805,8 +7712,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-a"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157754"
-     >
+     id="g157754">
     <path
        d="m 13.7639,71.9996 -0.3443,-0.656 -0.4657,-1.5199 -0.2276,-1.3178 v 0 L 12.6968,68.3352 12.5684,66.8267 12.52,65.3126 12.5372,64.8471 v 0 l 0.0385,-1.0474 0.0973,-1.5122 0.203,-1.0856 v 0 l 0.075,-0.4014 0.352,-1.4695 0.4945,-1.5141 0.0617,-0.1429 v 0 l 0.5693,-1.3179 0.719,-1.4086 0.3404,-0.5546 v 0 l 0.4877,-0.7947 0.8418,-1.2881 0.7139,-0.9604 v 0 l 0.1982,-0.2666 0.9838,-1.1717 1.0728,-1.0993 0.1956,-0.1856 v 0 l 0.9177,-0.8708 1.1872,-0.9748 0.6985,-0.513 v 0 l 0.5409,-0.3972 1.2974,-0.8235 1.2396,-0.7714 v 0 l 0.0652,-0.0406 0.7334,-1.2755 0.3838,-1.4753"
        inkstitch:running_stitch_length_mm="2"
@@ -7855,8 +7761,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Z"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157726"
-     >
+     id="g157726">
     <path
        d="m 9.32629,76.3287 0.62214,-1.0349 0.83337,-1.3026 0.5152,-0.7655 v 0 l 0.331,-0.4918 0.9051,-1.2428 0.9052,-1.2427 0.0052,-0.0073 v 0 l 0.9012,-1.2351 0.9416,-1.1831 0.3958,-0.4974 v 0 l 0.5458,-0.6857 0.3591,-1.3771 0.1283,-1.3711 v 0 l 0.0146,-0.1554 0.4289,-1.4479 0.5752,-1.4142 0.196,-0.4423 v 0 l 0.4239,-0.9562 0.6489,-1.3841 0.5084,-0.9778 v 0 l 0.1975,-0.3798 0.709,-1.3562 0.7321,-1.3434 0.0931,-0.1636 v 0 l 0.6638,-1.1664 0.7568,-1.33 0.4058,-0.6945 v 0 l 0.3661,-0.6264 0.7824,-1.3144 0.7277,-1.2211 v 0 l 0.0554,-0.093 0.797,-1.305 0.797,-1.3049 0.2663,-0.4352 v 0 l 0.5337,-0.8724 0.794,-1.2969 0.5917,-0.9665 v 0 l 0.2023,-0.3304 0.794,-1.2969 0.794,-1.2969 0.1295,-0.2115 v 0 l 0.6645,-1.0854 0.794,-1.2969 0.4612,-0.7534 v 0 l 0.3328,-0.5435 0.794,-1.2969 0.7844,-1.3004 v 0 l 0.0011,-0.0019 0.7678,-1.3136 0.7227,-1.338 0.2721,-0.5707 v 0 l 0.3805,-0.798 0.4985,-1.4305 0.9288,-0.8774 v 0 l 0.1985,-0.1876 1.1274,-1.0651 1.1273,-1.065 0.2194,-0.2072 v 0 l 0.908,-0.8579 1.1116,-1.0735 0.6106,-0.6366 v 0 l 0.4446,-0.4636 0.924,-1.2202"
        inkstitch:running_stitch_length_mm="2"
@@ -7935,8 +7840,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Y"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157722"
-     >
+     id="g157722">
     <path
        d="m 22.6457,73.93 0.032,0.7874 0.1342,1.521 0.2524,1.4316 v 0 l 0.0137,0.0774 0.4347,1.4583 0.7144,1.3493"
        inkstitch:running_stitch_length_mm="2"
@@ -8017,8 +7921,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-X"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157718"
-     >
+     id="g157718">
     <path
        d="m 14.4069,73.808 0.0813,1.5376 0.1169,1.5109 0.0246,0.7109 v 0 l 0.0277,0.8034 -0.0758,1.5536"
        inkstitch:running_stitch_length_mm="2"
@@ -8124,8 +8027,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-W"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157714"
-     >
+     id="g157714">
     <path
        d="m 17.1439,71.0103 -0.1008,-0.1496 -0.6856,-1.4183 -0.5432,-1.4109 -0.1205,-0.4106 v 0 L 15.3877,66.5778 15.0274,65.103 14.8301,64.0308 v 0 l -0.0774,-0.421 -0.2542,-1.4976 -0.2355,-1.5006 -0.0307,-0.2274 v 0 l -0.1726,-1.2776 -0.1989,-1.5057 -0.1092,-0.8807 v 0 l -0.0777,-0.6269 -0.1613,-1.509 -0.16,-1.5091 -0.0025,-0.0285 v 0 L 13.2168,51.5632 13.1292,50.048 13.0929,49.3607 v 0 L 13.0493,48.5328 12.9694,47.0176 12.922,45.6694 v 0 l -0.006,-0.169 -0.0425,-1.5181 -0.0307,-1.5382 0.0012,-0.4692 v 0 l 0.0029,-1.0881 0.0226,-1.5573 0.0227,-1.0496 v 0 l 0.0111,-0.5081 0.0338,-1.5578 0.0373,-1.5575 0.002,-0.0711 v 0 l 0.0421,-1.4858 0.0714,-1.557 0.0367,-0.6494 v 0 l 0.0513,-0.9076 0.088,-1.5571 0.1298,-1.22 v 0 l 0.0348,-0.3266 0.2752,-1.5222 0.3026,-1.5132 0.0495,-0.2725 v 0 l 0.227,-1.2487 0.1677,-1.5457 -0.0015,-0.8715 v 0 l -0.0012,-0.6695 -0.2586,-1.4987"
        inkstitch:running_stitch_length_mm="2"
@@ -8198,8 +8100,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-V"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157710"
-     >
+     id="g157710">
     <path
        d="m 20.8867,74.4636 -0.27,-1.0487 -0.277,-1.5067 -0.1925,-1.0953 v 0 l -0.0736,-0.4188 -0.805,-1.3227 -0.6526,-1.3796 -0.0836,-0.2112 v 0 l -0.4812,-1.2151 -0.5255,-1.4431 -0.288,-0.8361 v 0 l -0.2132,-0.6187 -0.4581,-1.4712 -0.3988,-1.4788 v 0 l -0.002,-0.0077 -0.3472,-1.5021 -0.333,-1.5053 -0.1249,-0.6232 v 0 l -0.178,-0.8888 -0.2352,-1.5238 -0.1815,-1.2657 v 0 l -0.0374,-0.2608 -0.2189,-1.5265 -0.2145,-1.527 -0.0424,-0.377 v 0 l -0.13,-1.1549 -0.1724,-1.5318 -0.1145,-1.0169 v 0 l -0.058,-0.515 -0.1723,-1.5319 -0.1714,-1.5204 -0.0154,-0.1362 v 0 L 13.2592,40.5969 13.0916,39.054 13.0138,38.2977 v 0 L 12.9329,37.51 12.7786,35.9656 12.6484,34.5887 v 0 l -0.0159,-0.1682 -0.11,-1.5483 -0.0612,-1.5507 -0.0165,-0.4536 v 0 l -0.0398,-1.0972 -0.0508,-1.551 -0.0172,-1.077 v 0 l -0.0077,-0.4752 -0.0248,-1.5521 -0.0248,-1.5521 -0.0032,-0.1471 v 0 l -0.0307,-1.4046 -0.0266,-1.5505 -0.0193,-0.771 v 0 l -0.0194,-0.7761 0.0762,-1.5219"
        inkstitch:running_stitch_length_mm="2"
@@ -8258,8 +8159,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-U"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157706"
-     >
+     id="g157706">
     <path
        d="m 17.0673,70.9279 -0.1416,-0.1672 -0.8859,-1.2893 -0.7095,-1.4027 -0.1287,-0.3285 v 0 l -0.4273,-1.0907 -0.3922,-1.4819 -0.1545,-0.9918 v 0 L 14.1448,63.6446 14.0423,62.1029 13.9997,60.557 13.9976,60.4781 v 0 L 13.9572,59.011 13.9146,57.4651 13.8955,56.7713 v 0 l -0.0235,-0.8521 -0.0354,-1.546 -0.01,-1.3092 v 0 l -0.0018,-0.2371 -3e-4,-1.5466 0.0174,-1.5462 0.0069,-0.3781 v 0 l 0.0214,-1.1679 0.0282,-1.5461 0.0229,-0.9934 v 0 l 0.0127,-0.5524 0.0321,-1.5464 0.0259,-1.5375 0.0012,-0.0712 v 0 l 0.0247,-1.4662 0.0377,-1.5373 0.0219,-0.7036 v 0 l 0.026,-0.8337 0.048,-1.5372 0.0417,-1.3354 v 0 l 0.0063,-0.2018 0.0479,-1.5372 0.048,-1.5372 0.0134,-0.4301 v 0 l 0.0346,-1.1072 0.0524,-1.537 0.0538,-1.0612 v 0 l 0.0241,-0.4747 0.0778,-1.5359 0.0779,-1.5359 0.0122,-0.1566 v 0 l 0.1075,-1.3755 0.1201,-1.5321 0.0506,-0.79 v 0 l 0.0477,-0.7441 -0.0225,-1.527"
        inkstitch:running_stitch_length_mm="2"
@@ -8308,8 +8208,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-T"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157702"
-     >
+     id="g157702">
     <path
        d="m 25.0387,73.8502 -0.0426,-0.9526 -0.0629,-1.5391 -0.0333,-1.1424 v 0 l -0.0117,-0.4001 -0.0316,-1.5444 0.005,-1.5495 5e-4,-0.1423 v 0 l 0.0046,-1.4072 0.0051,-1.5495 0.0021,-0.6801 v 0 l 0.0026,-0.8695 -0.0097,-1.551 -0.0077,-1.2163 v 0 l -0.0021,-0.3347 -0.0097,-1.5511 0.0069,-1.5526 0.0027,-0.1983 v 0 l 0.0179,-1.3415 0.0237,-1.5218 0.0121,-0.7731 v 0 l 0.0116,-0.7488 0.0237,-1.5219 0.0145,-1.3658 v 0 l 0.0017,-0.1566 6e-4,-1.5237 6e-4,-1.5237 0.0024,-0.4327 v 0 l 0.0061,-1.0916 0.0232,-1.5252 0.0156,-1.0197 v 0 l 0.0077,-0.5055 0.0232,-1.5252 0.0233,-1.5251 9e-4,-0.0806 v 0 l 0.0171,-1.4449 -5e-4,-1.5264 -2e-4,-0.6654 v 0 l -3e-4,-0.8611 -5e-4,-1.5264 0.0016,-1.2493 v 0 l 3e-4,-0.2777 -10e-5,-1.5276 -1e-4,-1.5277 v -0.3038 0 l -10e-5,-1.2238 0.8296,-1.1524 0.7762,-0.6195 v 0 l 0.4301,-0.3432 1.2062,-0.9626"
        inkstitch:running_stitch_length_mm="2"
@@ -8399,8 +8298,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-S"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157698"
-     >
+     id="g157698">
     <path
        d="m 11.743,70.4192 -0.3325,-1.4129 -0.2258,-1.5055 -0.0751,-0.7184 v 0 l -0.0839,-0.8035 -0.1094,-1.5383 -0.0968,-1.3425 v 0 l -0.0141,-0.1958 -0.0851,-1.5431 -0.0542,-1.5485 -0.0023,-0.4049 v 0 l -0.0065,-1.15 0.0828,-1.5388 0.0952,-1.0005 v 0 l 0.0495,-0.5206 0.1513,-1.5244"
        inkstitch:running_stitch_length_mm="2"
@@ -8449,8 +8347,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-R"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157694"
-     >
+     id="g157694">
     <path
        d="m 15.8596,73.6678 0.0376,0.7991 0.0152,1.5354 -0.0201,1.3443 v 0 l -0.0028,0.1867 -0.0556,1.524 -0.139406,1.313726"
        inkstitch:running_stitch_length_mm="2"
@@ -8524,8 +8421,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Q"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157690"
-     >
+     id="g157690">
     <path
        d="m 18.1056,71.1975 -0.094,-0.1029 m -0.931,-1.2734 -0.7643,-1.3206 -0.1975,-0.4761 v 0 l -0.3881,-0.9354 -0.4645,-1.4636 -0.2959,-1.173 v 0 l -0.0805,-0.3191 -0.3021,-1.5097 -0.2073,-1.5261 -0.0321,-0.3477 v 0 l -0.1094,-1.1862 -0.1415,-1.5339 -0.0918,-1.0223 v 0 l -0.046,-0.5119 -0.046,-1.5398 -0.0416,-1.54 -0.0044,-0.1629 v 0 l -0.0371,-1.3771 -0.0292,-1.5399 0.0225,-0.84 v 0 l 0.0184,-0.6843 0.0465,-1.5323 0.0465,-1.5323 3e-4,-0.0074 v 0 l 0.052,-1.5245 0.13,-1.5275 0.0626,-0.6968 v 0 l 0.0746,-0.8298 0.1772,-1.5218 0.1948,-1.3792 v 0 l 0.0193,-0.1367 0.2765,-1.5062 0.2765,-1.5062 0.1071,-0.5468 v 0 l 0.1869,-0.9549 0.3634,-1.4858 0.3421,-1.2079 v 0 l 0.0743,-0.2623 0.4517,-1.4565 0.504,-1.436 0.1713,-0.4037 v 0 l 0.4227,-0.9958 0.6925,-1.4085 0.5586,-0.9554 v 0 l 0.226,-0.3865 0.9259,-1.229 1.0481,-1.1594 0.1602,-0.1337 v 0 l 1.0199,-0.851 1.3084,-0.8189 0.7993,-0.3826 v 0 l 0.5921,-0.2833 1.4656,-0.4759"
        inkstitch:running_stitch_length_mm="2"
@@ -8596,8 +8492,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-P"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157686"
-     >
+     id="g157686">
     <path
        d="m 15.1854,73.059 -0.2648,-1.5053 -0.1954,-1.2573 v 0 l -0.04,-0.2576 -0.208,-1.5238 -0.2079,-1.5238 -0.048,-0.3513 v 0 l -0.16,-1.1724 -0.1498,-1.5349 -0.0923,-0.9611 v 0 l -0.0551,-0.5741 -0.1474,-1.5352 -0.1297,-1.537 -0.0015,-0.0296 v 0 l -0.0783,-1.5118 -0.0797,-1.5415 -0.0299,-0.6329 v 0 L 13.2547,54.7 13.2302,53.1504 13.2094,51.9197 v 0 L 13.204,51.6004 13.2014,50.0486 13.1989,48.4968 13.1895,48.2289 v 0 l -0.0447,-1.2842 -0.057,-1.5521 -0.0305,-0.8524 v 0 l -0.0249,-0.6938 -0.043,-1.5393 -0.0395,-1.4564 v 0 L 12.9476,40.7673 12.9058,39.2274 12.864,37.6876 12.852,37.161 v 0 l -0.0232,-1.0134 -2e-4,-1.5405 -0.0024,-1.1369 v 0 l -8e-4,-0.4036 0.0313,-1.5388 0.0026,-1.5373 0.0027,-0.211 v 0 l 0.0173,-1.3224 10e-5,-1.5279 0.0047,-0.8406 v 0 l 0.0039,-0.6857 0.0517,-1.5177 0.1269,-1.4814 v 0 l 0.0033,-0.039 0.497,-1.4389 1.1524,-0.9444 0.6218,-0.15 v 0 l 0.8697,-0.2098 1.4849,-0.2884 1.2595,-0.2487 v 0 l 0.2338,-0.0462 1.507,-0.2413 1.5117,-0.1779 0.4035,-0.0272 v 0 l 1.1195,-0.0756 1.5345,0.0427 1.0263,0.1245 v 0 l 0.4794,0.0582 1.5088,0.3273 1.4301,0.5565 0.1121,0.0652 v 0 l 1.2098,0.7042 1.2059,0.949 0.5248,0.5451 v 0 l 0.5457,0.5667 0.8935,1.2634 0.6242,1.2048 v 0 l 0.0758,0.1463 0.5084,1.445 0.2952,1.5061 0.053,0.4567 v 0 l 0.1246,1.0724 0.0953,1.5366 -0.0567,1.0703 v 0 l -0.0245,0.4617 -0.216,1.5215 -0.3467,1.4902 -0.0539,0.1528 v 0 l -0.4546,1.2887 -0.6259,1.3884 -0.3821,0.7046 v 0 l -0.3413,0.6297 -0.8587,1.2592 -0.897,1.1401 v 0 l -0.0438,0.0557 -1.0425,1.1175 -1.1285,1.0316 -0.4214,0.3732 v 0 l -0.7266,0.6434 -1.2182,0.9329 -0.9521,0.7075 v 0 l -0.2693,0.2002 -1.243,0.882 -1.265,0.8471 -0.2606,0.166 v 0 l -1.0243,0.6525 -1.2849,0.8185 -0.4244,0.8534 v 0 l -0.2675,0.5376 -0.6866,1.3844"
        inkstitch:running_stitch_length_mm="2"
@@ -8646,8 +8541,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-O"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157682"
-     >
+     id="g157682">
     <path
        d="m 17.0711,70.3381 -0.7654,-1.3323 -0.2695,-0.6144 v 0 l -0.3502,-0.7982 -0.5003,-1.4648 -0.3094,-1.284 v 0 l -0.0535,-0.2217 -0.2896,-1.5229 -0.2436,-1.5303 -0.0557,-0.4087 v 0 l -0.1532,-1.1256 -0.1691,-1.5384 -0.1155,-1.0502 v 0 l -0.0537,-0.4882 -0.0969,-1.5455 -0.0744,-1.525 -0.0087,-0.1736 v 0 l -0.0676,-1.3502 -0.0742,-1.5237 -0.0178,-0.8626 v 0 l -0.0137,-0.6613 5e-4,-1.5264 5e-4,-1.5264 6e-4,-0.026 v 0 l 0.0333,-1.4979 0.0681,-1.5215 0.0424,-0.7177 v 0 l 0.0474,-0.8042 0.1129,-1.52 0.155,-1.4019 v 0 l 0.0122,-0.1099 0.1671,-1.5117 0.1719,-1.5117 0.0948,-0.5797 v 0 l 0.1502,-0.9176 0.265,-1.4916 0.2721,-1.2666 v 0 l 0.0456,-0.2123 0.3842,-1.52 0.41,-1.5098 0.1298,-0.3686 v 0 l 0.3898,-1.1062 0.5918,-1.4366 0.4726,-0.8967 v 0 l 0.2396,-0.4546 0.8648,-1.2456 1.0147,-1.1754 0.1172,-0.1049 v 0 l 1.0347,-0.9261 1.338,-0.7453 0.7871,-0.2299 v 0 l 0.6641,-0.1941 1.5089,-0.2"
        inkstitch:running_stitch_length_mm="2"
@@ -8696,8 +8590,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-N"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157678"
-     >
+     id="g157678">
     <path
        d="m 14.8452,73.9593 0.1993,1.132 0.2789,1.4886 0.1965,0.9144 v 0 l 0.1298,0.604 0.23,1.5377"
        inkstitch:running_stitch_length_mm="2"
@@ -8770,8 +8663,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-M"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157674"
-     >
+     id="g157674">
     <path
        d="m 14.9618,74.0845 0.2006,1.2047 0.2129,1.5188 0.0937,0.8695 v 0 l 0.069,0.6396 -0.0407,1.5364"
        inkstitch:running_stitch_length_mm="2"
@@ -8860,8 +8752,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-L"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157670"
-     >
+     id="g157670">
     <path
        d="M 13.457,70.6855 13.1528,69.1798 13.0826,68.334 v 0 l -0.0573,-0.6894 -0.0388,-1.5364 -0.026,-1.5296 v 0 l -2e-4,-0.0079 -0.0193,-1.5383 -0.0193,-1.5382 -0.0084,-0.6738 v 0 l -0.0109,-0.8645 0.0063,-1.5379 0.0162,-1.3559 v 0 l 0.0021,-0.1827 0.0184,-1.5386 0.0183,-1.5386 0.0059,-0.4983 v 0 l 0.0124,-1.0403 0.0043,-1.54 0.0114,-1.1781 v 0 l 0.0035,-0.3629 0.0134,-1.5274 0.0051,-1.5431 8e-4,-0.325 v 0 l 0.0032,-1.2181 -0.0183,-1.5431 -0.0206,-0.997 v 0 l -0.0113,-0.546 -0.0318,-1.5431 -0.0319,-1.5431 -0.0026,-0.1255 v 0 l -0.0293,-1.4176 -0.0134,-1.5432 -0.0188,-0.7971 v 0 L 12.8282,33.7685 12.772,32.2287 12.717,30.7571 v 0 L 12.7147,30.6954 12.6464,29.1638 12.5977,27.6355 12.5884,27.001 v 0 l -0.013,-0.8911 0.0417,-1.5251 0.1367,-1.3346 v 0 l 0.018,-0.1751 0.2712,-1.4885 0.405,-1.4716 0.1525,-0.5213 v 0 l 0.2797,-0.9554 0.3851,-1.4737"
        inkstitch:running_stitch_length_mm="2"
@@ -8910,8 +8801,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-K"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157666"
-     >
+     id="g157666">
     <path
        d="m 16.8285,70.3043 0.0082,1.0719 0.0322,1.5344 -3e-4,1.0181 v 0 l -10e-5,0.5017 -0.0782,1.52 -0.1592,1.545 -0.0083,0.0473 v 0 l -0.2541,1.448 -0.4608,1.4547"
        inkstitch:running_stitch_length_mm="2"
@@ -9014,8 +8904,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-J"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157662"
-     >
+     id="g157662">
     <path
        d="M 11.6892,68.8486 11.3383,67.36 11.3266,67.275 v 0 l -0.196,-1.4276 -0.0836,-1.5247 -0.0355,-0.6892 v 0 l -0.043,-0.8353 -0.0323,-1.5278 -0.0194,-1.2933 v 0 l -0.0036,-0.2377 -0.0423,-1.5309 0.0055,-1.5292 0.0116,-0.3594 v 0 l 0.0379,-1.1688 0.0727,-1.5283 0.0938,-0.954 v 0 l 0.056,-0.5692 0.1856,-1.5334 0.2267,-1.5076 0.0028,-0.0167 v 0 l 0.2549,-1.4821 0.3112,-1.5275 0.1535,-0.5751 v 0 l 0.2449,-0.9174 0.4014,-1.483"
        inkstitch:running_stitch_length_mm="2"
@@ -9064,8 +8953,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-I"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157658"
-     >
+     id="g157658">
     <path
        d="m 15.9912,73.7208 0.0178,-1.3766 0.0195,-1.5143 0.0208,-0.7272 v 0 l 0.0225,-0.7906 0.0467,-1.5183 0.0334,-1.3082 v 0 l 0.0054,-0.2116 0.0281,-1.5216 0.0444,-1.5234 0.0063,-0.361 v 0 l 0.0207,-1.168 0.0183,-1.5302 0.0084,-0.9201 v 0 l 0.0055,-0.6105 -0.0148,-1.5343 0.0082,-1.4737 v 0 l 4e-4,-0.0622 0.0085,-1.5359 0.0086,-1.5359 -0.0015,-0.4846 v 0 l -0.0032,-1.0519 0.0075,-1.5378 0.0062,-1.0289 v 0 l 0.0031,-0.509 0.0093,-1.5378 0.0095,-1.5389 -3e-4,-0.0329 v 0 L 16.316,43.2818 16.3118,41.7552 16.3105,41.1569 v 0 l -0.0019,-0.9282 -0.0031,-1.5266 -0.0024,-1.1638 v 0 l -7e-4,-0.3628 -0.0031,-1.5266 -0.0038,-1.5266 -5e-4,-0.2026 v 0 l -0.0034,-1.324 -0.004,-1.5266 -0.0127,-0.768 v 0 l -0.0126,-0.758 -0.0322,-1.5259 -0.0393,-1.3337 v 0 L 16.1852,26.4921 16.1213,24.9682 16.0575,23.4443 16.0419,23.068 v 0 l -0.0475,-1.1477 -0.0631,-1.524 0.0284,-0.9442 v 0 l 0.0174,-0.5795 0.3365,-1.4854"
        inkstitch:running_stitch_length_mm="2"
@@ -9114,8 +9002,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-H"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157654"
-     >
+     id="g157654">
     <path
        d="m 15.9834,70.205 -0.0649,1.3773 -0.0592,1.5142 -0.0102,0.7219 v 0 l -0.0116,0.8276 -0.0423,1.5512 -0.0466,1.2359 v 0 l -0.011,0.2918 -0.1067,1.546 -0.1565,1.5072"
        inkstitch:running_stitch_length_mm="2"
@@ -9206,8 +9093,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-G"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157650"
-     >
+     id="g157650">
     <path
        d="m 16.9276,68.2712 -0.6828,-1.4028 -0.1496,-0.3703 v 0 l -0.4376,-1.0828 -0.4895,-1.4921 -0.2889,-0.9941 v 0 l -0.1496,-0.5147 -0.3728,-1.5252 -0.309,-1.5412 -0.018,-0.0938 v 0 l -0.279,-1.4492 -0.1964,-1.5588 -0.0825,-0.7218 v 0 L 13.3758,54.6845 13.273,53.1177 13.1938,51.7621 v 0 l -0.0124,-0.212 -0.0382,-1.5694 -0.0064,-1.5705 -0.0045,-0.4207 v 0 l -0.0121,-1.1307 0.0049,-1.5346 0.043,-1.1072 v 0 l 0.0165,-0.4266 0.0595,-1.5337 0.0672,-1.5338 0.0239,-0.2754 v 0 l 0.1087,-1.253 0.1505,-1.5262 0.1289,-0.9737 v 0 l 0.0719,-0.5429 0.212,-1.5142 0.2714,-1.4986 0.0342,-0.1705 v 0 l 0.2647,-1.3208 0.3658,-1.4722 0.2425,-0.8765 v 0 l 0.1756,-0.6346 0.5123,-1.4774 0.6101,-1.4263 v 0 l 0.0029,-0.007 0.7294,-1.3681 0.8515,-1.2968 0.4218,-0.5129 v 0 l 0.5661,-0.6882 1.1212,-1.0822 1.0663,-0.7849 v 0 l 0.1917,-0.1411 1.3828,-0.7273 1.4486,-0.4465 0.452,-0.0688 v 0 l 1.0595,-0.161 1.5232,-0.0513 1.1751,0.0787 v 0 l 0.3678,0.0247 1.5225,0.2132 1.4867,0.32 0.3253,0.12 v 0 l 1.1354,0.4188 1.3442,0.7962 0.7833,0.6232 v 0 l 0.4324,0.344 1.0749,1.1219 0.9012,1.243 0.0605,0.1172 v 0 l 0.6332,1.2268 0.5674,1.4358 0.3525,0.7724 v 0 l 0.2954,0.6474 0.8879,1.2491"
        inkstitch:running_stitch_length_mm="2"
@@ -9256,8 +9142,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-F"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157646"
-     >
+     id="g157646">
     <path
        d="m 14.9538,72.3687 -0.267,-1.5172 -0.0478,-0.2917 v 0 l -0.2004,-1.2247 -0.2333,-1.5185 -0.1349,-0.8781 v 0 L 13.9719,66.298 13.752,64.7798 13.5685,63.3076 v 0 L 13.5622,63.2574 13.3999,61.7265 13.24,60.1959 13.2028,59.6604 v 0 L 13.1337,58.666 13.0733,57.1254 13.0292,55.9992 v 0 l -0.0162,-0.4144 -0.0895,-1.5426 -0.0529,-1.5517 -0.005,-0.1531 v 0 l -0.0459,-1.399 -0.0368,-1.5543 -0.0212,-0.711 v 0 l -0.0252,-0.8444 -0.047,-1.5553 -0.0387,-1.2643 v 0 l -0.0089,-0.291 -0.055,-1.5553 -0.055,-1.5554 -0.0047,-0.2619 v 0 L 12.504,40.0511 12.5029,38.4938 12.5023,37.68 v 0 l -5e-4,-0.7435 -0.0012,-1.5573 -0.0012,-1.3649 v 0 l -2e-4,-0.1924 -0.0018,-1.5573 -0.0457,-1.5556 -0.0146,-0.3595 v 0 l -0.0485,-1.1954 -0.0623,-1.5487 -0.0118,-0.9193 v 0 l -0.008,-0.627 0.0228,-1.5379 0.1043,-1.4969 v 0 l 9e-4,-0.0122 0.4292,-1.4889 0.95,-1.1716 0.567,-0.1826 v 0 l 0.8479,-0.2731 1.5178,-0.2606 1.2256,-0.1514 v 0 l 0.3029,-0.0375 1.5038,-0.1598 1.519,-0.1189 0.3241,-0.0171 v 0 l 1.2031,-0.0633 1.5308,-0.0595 0.929,-0.0093 v 0 l 0.5835,-0.0058 1.5277,0.0211 1.5272,0.0498 0.0263,10e-4 v 0 l 1.4998,0.0604 1.5011,0.1726 0.6305,0.1728 v 0 l 0.8535,0.2338 1.3739,0.6995 1.0171,0.7076 v 0 l 0.2278,0.1585 1.1172,1.0633 1.0192,1.1595 0.1941,0.2315 v 0 l 0.7854,0.9373 0.9289,1.2173 0.5527,0.725 v 0 l 0.3712,0.4869 0.9539,1.2011"
        inkstitch:running_stitch_length_mm="2"
@@ -9332,8 +9217,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-E"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157642"
-     >
+     id="g157642">
     <path
        d="M 13.7425,71.5318 13.3841,70.063 13.1453,68.5571 13.0977,68.2567 v 0 l -0.1912,-1.2056 -0.1829,-1.5255 -0.0947,-0.9302 v 0 l -0.0615,-0.6046 -0.1552,-1.535 -0.0464,-1.5408 v 0 l -3e-4,-0.0108 -0.0421,-1.5514 -0.0099,-1.5522 0.0201,-0.5767 v 0 l 0.034,-0.9752 0.0541,-1.552 0.0433,-1.1625"
        inkstitch:running_stitch_length_mm="2"
@@ -9409,8 +9293,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-D"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157638"
-     >
+     id="g157638">
     <path
        d="m 14.1062,69.2507 -0.1136,-1.5106 -0.0609,-1.0058 v 0 l -0.031,-0.5129 -0.0913,-1.5189 -0.0447,-1.5308 -0.0103,-0.1858 v 0 l -0.075,-1.3462 -0.0845,-1.5329 -0.0281,-0.8691 v 0 l -0.0216,-0.6695 -0.0498,-1.5386 m -0.0498,-1.5385 -1e-4,-0.0045"
        inkstitch:running_stitch_length_mm="2"
@@ -9457,8 +9340,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-C"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157634"
-     >
+     id="g157634">
     <path
        d="m 18.2796,70.8014 -0.893,-1.2495 -0.6933,-1.2976 v 0 L 16.6621,68.1958 16.0608,66.8093 15.5493,65.381 15.3848,64.7761 v 0 l -0.2336,-0.859 -0.3092,-1.4872 -0.2312,-1.2917 v 0 L 14.5743,60.9346 14.3371,59.4337 14.182,57.9222 14.1424,57.4481 v 0 l -0.087,-1.0397 -0.0859,-1.5165 -0.0656,-1.1574 v 0 L 13.8836,53.3755 13.7977,51.859 13.721,50.3157 13.7113,50.018 v 0 L 13.6701,48.7634 13.6224,47.211 13.6029,46.2981 v 0 l -0.0137,-0.6387 -0.0119,-1.549 -0.0183,-1.5335 v 0 l -2e-4,-0.0147 0.0354,-1.5424 0.0639,-1.5445 0.0661,-0.6146 v 0 l 0.0992,-0.9228 0.1723,-1.5363 0.1887,-1.2331 v 0 l 0.044,-0.2877 0.2971,-1.5155 0.3496,-1.5005 0.0857,-0.3347 v 0 l 0.2954,-1.1528 0.4785,-1.4665 0.3559,-0.9226 v 0 l 0.197,-0.5108 0.6146,-1.4057 0.7331,-1.359 0.0506,-0.0813 v 0 l 0.7706,-1.2389 0.9889,-1.1951 0.4935,-0.5122 v 0 l 0.5733,-0.595 1.2469,-0.9148 1.1773,-0.6582 v 0 l 0.1594,-0.0891 1.4654,-0.4717 1.5326,-0.219 0.4513,-0.0081 v 0 l 1.0742,-0.0193 1.5134,0.0423 1.1301,0.0831 v 0 l 0.4067,0.0299 1.5092,0.2287 1.467,0.3696 0.2556,0.0999 v 0 l 1.1794,0.4613 1.3012,0.7728 0.6434,0.6877 v 0 l 0.3887,0.4154 0.8184,1.2858 0.6681,1.373 0.0213,0.0993 v 0 l 0.298,1.3903 0.099,1.5372 -0.073,0.7557 v 0 l -0.0757,0.7834 -0.2715,1.5036"
        inkstitch:running_stitch_length_mm="2"
@@ -9506,8 +9388,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-B"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157630"
-     >
+     id="g157630">
     <path
        d="m 15.3427,70.3432 -0.1012,-1.5777 -0.0347,-0.7673 v 0 L 15.1701,67.1876 15.0986,65.6097 15.078,64.2769 v 0 l -0.004,-0.2583 -0.088,-1.5421 -0.1422,-1.5251 -0.0196,-0.3888 v 0 l -0.0575,-1.1455 -0.0599,-1.5367 -0.0405,-1.0383 v 0 L 14.6469,56.3437 14.587,54.807 14.5344,53.2698 14.5315,53.1207 v 0 L 14.5049,51.7312 14.4753,50.1926 14.46,49.3974 v 0 L 14.4458,48.654 14.4162,47.1154 14.328,45.6766 v 0 l -0.0058,-0.0936 -0.1085,-1.5311 -0.1085,-1.531 -0.0369,-0.5591 v 0 l -0.0642,-0.9725 v -1.5392 -1.2101 0 -0.3291 -1.5392 -1.5392 -0.3164 0 -1.2228 -1.5392 -0.9619 0 -0.5773 -1.5392 l 0.0299,-1.5385 0.0038,-0.0686 v 0 l 0.0816,-1.4645 0.0846,-1.5323 0.0615,-0.7199 v 0 l 0.0697,-0.8159 0.2353,-1.513 0.7445,-1.1546 v 0 l 0.0839,-0.1301 1.4894,-0.3966 1.5513,-0.2554 0.4515,-0.0611 v 0 l 1.1341,-0.1536 1.5279,-0.1143 1.0454,-0.0627 v 0 l 0.4871,-0.0291 1.5275,-0.0344 1.5564,-0.0066 0.1516,0.0041 v 0 l 1.4047,0.0378 1.539,0.1698 0.7572,0.1417 v 0 l 0.7573,0.1417 1.4779,0.453 1.2566,0.6347 v 0 l 0.1251,0.0632 1.2628,0.8943 1.1084,1.0855 0.266,0.4054 v 0 l 0.5837,0.8899 0.6037,1.4258 0.2614,1.0802 v 0 l 0.1039,0.429 0.1396,1.5171 -0.0711,1.5541 -0.0321,0.2007 v 0 l -0.2133,1.3341 -0.4601,1.4817 -0.3361,0.7495 v 0 l -0.2985,0.6656 -0.8757,1.2815 -0.9678,1.0694 v 0 l -0.0672,0.0743 -1.2221,0.946 -1.3027,0.8122 -0.4722,0.2684 v 0 l -0.8732,0.4964 -1.3614,0.7382 -1.0593,0.4987 v 0 l -0.3444,0.1622 -1.4088,0.6479 -1.4358,0.5986 -0.2168,0.0958 v 0 l -1.1772,0.52 -1.4091,0.6219 -0.8244,0.3528 v 0 l -0.5923,0.2536"
        inkstitch:running_stitch_length_mm="2"
@@ -9556,8 +9437,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-A"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157626"
-     >
+     id="g157626">
     <path
        id="autosatin75"
        d="M 17.78305,80.76125 13.7568,80.73 12.4743,80.6287 11.3268,80.325 10.3143,79.8188 9.43677,79.11 8.72802,78.0975 8.22177,76.68 7.91802,74.8575 7.81677,72.63 l 0.135,-8.91 0.405,-8.37 0.675,-7.56 0.945,-6.4801 1.62003,-6.9525 1.62,-5.7375 0.8437,-2.4131 0.9113,-2.1094 0.9787,-1.8056 1.0463,-1.5019 1.1137,-1.2487 1.1813,-1.0463 1.2487,-0.8437 1.3163,-0.6413 2.835,-0.81 3.105,-0.27 h 16.2 l 1.35,0.135 0.81,0.405 0.405,0.675 0.135,0.945 -0.27,2.97 -0.2025,1.62 -0.0675,2.16 v 6.48 8.8387 m -26.905,40.60265 5.305,-0.03125 0.945,-0.2025 0.675,-0.6075 0.1687,-0.4894 -0.0337,-0.6581 -0.675,-1.8225 -2.7,-7.56 -0.8775,-3.1725 -0.4725,-3.0375 -0.27,-5.67 -1.1808,-6.4337 -0.3632,-3.2452 -0.076,-3.2812 v -2.16 -1.0799 l 0.675,-5.4676 0.945,-4.5225 1.1475,-3.645 1.2825,-2.835 0.7087,-1.1137 0.7763,-0.9113 0.8437,-0.7087 0.9113,-0.5063 1.8225,-0.6075 1.6875,-0.2025 1.62,0.27 0.945,0.405 0.675,0.675 1.08,1.89 0.405,1.35 0.135,1.89 v 2.97 l -0.27,2.43 -0.27,2.16 v 2.7 l -0.4222,5.4889 M 7.00163,64.5973 22.8479,64.5018 m -7.064,-44.8659 8.4004,5.823 m 9.2596,-2.0047 13.7462,-7.4458 m -19.3783,-1.2409 2.5774,7.1594"
@@ -9623,8 +9503,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-?"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157618"
-     >
+     id="g157618">
     <path
        d="m 20.0521,73.2669 0.0317,-1.5387 0.0769,-1.1778 v 0 l 0.0216,-0.3311 0.1263,-1.5362"
        inkstitch:running_stitch_length_mm="2"
@@ -9693,9 +9572,8 @@ Public Domain
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-;"
-     style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157602"
-     >
+     style="display:inline;fill:none;stroke:#00673e;stroke-width:0.945;stroke-miterlimit:4;stroke-opacity:1"
+     id="g157602">
     <path
        d="m 13.1618,43.7641 -0.153,-1.5242 0.0025,-0.7932 v 0 l 0.0025,-0.7483 0.1135,-1.5188 0.1532,-0.999 v 0 l 0.079,-0.5154 0.279,-1.4881 0.127,-1.2401 v 0 l 0.0299,-0.2925 0.059,-1.5161"
        inkstitch:running_stitch_length_mm="2"
@@ -9755,9 +9633,8 @@ Public Domain
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-:"
-     style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157598"
-     >
+     style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-miterlimit:4;stroke-opacity:1"
+     id="g157598">
     <path
        d="m 13.4738,73.3802 0.0816,-1.5321 0.0769,-1.2101 v 0 l 0.0206,-0.3233 0.1025,-1.5177 -0.01035,-0.8354"
        inkstitch:running_stitch_length_mm="2"
@@ -9825,8 +9702,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-9"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157594"
-     >
+     id="g157594">
     <path
        d="m 11.5823,70.8269 -0.3847,-0.682 -0.4827,-1.4515 -0.0975,-1.36 v 0 l -0.0105,-0.1474 0.5,-1.4144"
        inkstitch:running_stitch_length_mm="2"
@@ -9873,8 +9749,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-8"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157590"
-     >
+     id="g157590">
     <path
        d="m 16.8001,71.3558 -0.5488,-0.5725 -0.8234,-1.3816 -0.4567,-1.2229 v 0 l -0.1048,-0.2804 -0.4018,-1.5555 -0.2061,-1.5901 -0.0223,-0.1962 v 0 l -0.16,-1.4018 -0.117,-1.547 -0.0107,-0.7444 v 0 l -0.0117,-0.8118 0.0817,-1.5531 0.1873,-1.3265 v 0 l 0.0305,-0.2163 0.4003,-1.5081 0.5375,-1.4629 0.1555,-0.3353 v 0 l 0.5013,-1.0808 0.7879,-1.3466 0.5457,-0.784 v 0 l 0.3455,-0.4963 1.0392,-1.1607 1.1207,-1.0623 v 0 l 0.0024,-0.0023 1.2072,-0.9247 1.1854,-1 0.483,-0.4075 v 0 l 0.7023,-0.5925 1.2253,-0.9538 1.0262,-0.6873 v 0 l 0.2696,-0.1806 1.3198,-0.825 1.3282,-0.8028 0.2353,-0.1403 v 0 l 1.0958,-0.6534 1.2984,-0.8331 0.7259,-0.5119 v 0 l 0.5337,-0.3764 1.1664,-1.0222 0.9931,-1.128 v 0 l 0.0345,-0.0392 0.8715,-1.2903 0.6509,-1.4131 0.1161,-0.5291 v 0 l 0.217,-0.989 0.1023,-1.5563 -0.0567,-1.1332 v 0 l -0.0203,-0.4039 -0.3129,-1.4784 -0.5566,-1.4013 -0.1496,-0.2407 v 0 l -0.6623,-1.0664 -1.0173,-1.1508 -0.7603,-0.51 v 0 l -0.5094,-0.3417 -1.4011,-0.6191 -1.4868,-0.4003 -0.0217,-0.0025 v 0 l -1.5119,-0.172 -1.5128,-0.0694 -0.6706,0.0139 v 0 l -0.8677,0.018 -1.5115,0.0804 -1.3145,0.1685 v 0 l -0.1851,0.0238 -1.4798,0.3931 -1.4064,0.5903 -0.3916,0.2486 v 0 l -0.9032,0.5733 -1.0279,1.1039 -0.5915,0.9612 v 0 l -0.2013,0.3272 -0.5586,1.4081 -0.3287,1.4818 -0.023,0.2891 v 0 l -0.0976,1.2265 0.0957,1.5396 0.1912,0.914 v 0 l 0.1235,0.5903 0.5459,1.4372 0.8132,1.2937 0.0253,0.0288 v 0 l 0.9797,1.1173 1.1051,1.0656 0.0266,0.6851 v 0 l 0.0254,0.6543 -0.408,1.4582 -0.3611,1.4948"
        inkstitch:running_stitch_length_mm="2"
@@ -9919,8 +9794,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-7"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157586"
-     >
+     id="g157586">
     <path
        d="m 20.3616,73.7166 -0.0314,-0.6744 0.0228,-1.5375 0.0884,-1.3734 v 0 l 0.0105,-0.163 0.2047,-1.5284 0.2475,-1.5223 0.0768,-0.3326 v 0 l 0.2711,-1.1729 0.3754,-1.4989 0.2489,-0.8023 v 0 l 0.2089,-0.6733 0.4833,-1.4686 0.4361,-1.265 v 0 l 0.0685,-0.1986 0.5279,-1.4568 0.5676,-1.441 0.1028,-0.2612 v 0 l 0.4647,-1.1799 0.5693,-1.4404 0.3084,-0.7079 v 0 l 0.3106,-0.7128 0.6516,-1.3864 0.5452,-1.1577 v 0 l 0.1052,-0.2234 0.6799,-1.3631 0.6799,-1.3632 0.1328,-0.264 v 0 l 0.5512,-1.0965 0.684,-1.3605 0.3644,-0.7558 v 0 l 0.298,-0.6182 0.6631,-1.3751 0.5859,-1.2452 v 0 l 0.0649,-0.1378 0.6399,-1.3891 0.6052,-1.4062 0.1441,-0.3477 v 0 l 0.4426,-1.0678 0.5845,-1.4163 0.3431,-0.8331 v 0 l 0.2405,-0.5837 0.6192,-1.3996 0.6034,-1.2935 v 0 l 0.0436,-0.0935 0.7535,-1.3273 0.8899,-1.242 0.2424,-0.3573 v 0 l 0.6101,-0.899 0.7977,-1.3172 0.4799,-0.8345 v 0 l 0.2808,-0.4884 0.7236,-1.3289 0.5201,-1.4203"
        inkstitch:running_stitch_length_mm="2"
@@ -9984,8 +9858,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-6"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157582"
-     >
+     id="g157582">
     <path
        d="m 16.7172,70.4787 -0.4078,-0.6232 -0.6469,-1.373 -0.5086,-1.3437 v 0 l -0.0297,-0.0785 -0.368,-1.4732 -0.2926,-1.4928 -0.1065,-0.5658 v 0 l -0.1749,-0.9283 -0.1394,-1.5147 -0.1131,-1.2284 v 0 l -0.0263,-0.2864 -0.1069,-1.5169 -0.0407,-1.5209 -0.0099,-0.3695 v 0 l -0.0308,-1.1513 -0.0262,-1.5211 0.011,-1.0262 v 0 l 0.0055,-0.5153 0.0346,-1.538 0.0346,-1.538 0.0024,-0.1072 v 0 l 0.0322,-1.4308 0.0798,-1.5346 0.0485,-0.7299 v 0 l 0.0534,-0.8036 0.1096,-1.5334 0.0968,-1.3532 v 0 l 0.0128,-0.1801 0.1447,-1.5283 0.1776,-1.5235 0.0688,-0.4445 v 0 l 0.1655,-1.0695 0.2965,-1.503 0.2473,-1.0566 v 0 l 0.1004,-0.4288 0.3974,-1.4682 0.5125,-1.4255 0.0836,-0.2068 v 0 l 0.4836,-1.1962 0.6645,-1.386 0.4713,-0.7337 v 0 l 0.3554,-0.5535 0.9406,-1.2205 1.0832,-1.0386 v 0 l 0.0074,-0.007 1.2361,-0.9189 1.3962,-0.6368 0.5977,-0.1422 v 0 l 0.8821,-0.2099 1.5101,-0.1068 1.2784,-0.027 v 0 l 0.2485,-0.0053 1.527,0.1018 1.4995,0.3014 0.3667,0.1353 v 0 l 1.0658,0.3931 1.3074,0.7855 0.7614,0.7058 v 0 l 0.3576,0.3315 0.8137,1.2702 0.3834,1.4742 -0.0155,0.1793 v 0 l -0.1146,1.3261 -0.6463,1.3803 -0.6481,0.5409 v 0 l -0.5235,0.437 -1.4062,0.5368 -1.5111,0.0579"
        inkstitch:running_stitch_length_mm="2"
@@ -10032,8 +9905,7 @@ Public Domain
      inkscape:label="GlyphLayer-5"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
      id="g157578"
-     inkscape:groupmode="layer"
-     >
+     inkscape:groupmode="layer">
     <path
        d="M 10.5306,71.175 9.93404,70.1536 9.48423,68.7099 9.43623,67.7565 v 0 L 9.40434,67.1232 9.84715,65.6676 10.4507,64.301"
        inkstitch:running_stitch_length_mm="2"
@@ -10116,8 +9988,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-4"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157574"
-     >
+     id="g157574">
     <path
        d="m 31.3385,77.3989 0.0127,0.3341 0.1825,1.5116 0.5528,1.3951 0.1986,0.0903"
        inkstitch:running_stitch_length_mm="2"
@@ -10228,8 +10099,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-3"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157570"
-     >
+     id="g157570">
     <path
        d="M 10.7791,71.9635 9.96708,70.8857 9.35623,69.5004 9.12791,68.7381 v 0 L 8.92151,68.0489 8.84088,66.4916 8.89544,65.1122"
        inkstitch:running_stitch_length_mm="2"
@@ -10293,8 +10163,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-2"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157566"
-     >
+     id="g157566">
     <path
        d="m 9.17345,72.7827 0.81632,-1.295 0.51773,-0.745 v 0 l 0.3661,-0.5267 0.8837,-1.2716 0.8941,-1.267 0.0057,-0.0075 v 0 l 0.9321,-1.2395 0.9369,-1.1906 0.3168,-0.6065 v 0 l 0.3835,-0.7346 0.7741,-1.3198 0.7657,-1.1617 v 0 l 0.0787,-0.1192 0.916,-1.2334 0.9165,-1.233 0.3279,-0.4222 v 0 l 0.6142,-0.7907 0.9566,-1.2015 0.7691,-0.9381 v 0 l 0.2049,-0.2498 1.0791,-1.0798 1.0664,-1.1001 0.255,-0.2657 v 0 l 0.8065,-0.8403 1.0615,-1.106 0.7287,-0.7594 v 0 l 0.3327,-0.3466 1.0832,-1.112 1.0149,-1.1406 0.1248,-0.144 v 0 l 0.8759,-1.0111 1.0007,-1.155 0.5674,-0.678 v 0 l 0.4116,-0.4919 0.898,-1.2329 0.882,-1.2457 0.0311,-0.0479 v 0 l 0.8019,-1.2311 0.7136,-1.3482 0.2916,-0.6969 v 0 l 0.2963,-0.708 0.4581,-1.4542 0.2953,-1.4278 v 0 l 0.0143,-0.0691 0.11,-1.5255 -0.0518,-1.5256 -0.0676,-0.6199 v 0 l -0.0968,-0.8891 -0.3909,-1.488 -0.5297,-1.2061 v 0 l -0.0855,-0.1947 -0.834,-1.2794 -1.0473,-1.1074 -0.3906,-0.2891 v 0 l -0.8261,-0.6112 -1.3448,-0.7001 -1.1482,-0.37 v 0 L 29.6413,22.6355 28.1601,22.2858 26.6416,22.0979 26.255,22.0792 v 0 l -1.1565,-0.0558 -1.5395,-3e-4 -1.0481,0.098 v 0 l -0.4823,0.0451 -1.4895,0.3259 -1.4368,0.5125 -0.1937,0.0946 v 0 l -1.1843,0.5783 -1.2346,0.9 -0.5923,0.6833 v 0 l -0.4059,0.4682 -0.6192,1.3875 -0.1071,1.5064 0.0206,0.0987 v 0 l 0.29,1.3958 0.8156,1.3017 0.587,0.5263 v 0 l 0.5364,0.481 1.345,0.6969"
        inkstitch:running_stitch_length_mm="2"
@@ -10346,8 +10215,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-1"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157584"
-     >
+     id="g157584">
     <path
        d="m 25.0606,73.5728 0.038,-0.8135 0.0688,-1.5585 0.0343,-1.2396 v 0 l 0.0077,-0.2747 0.0465,-1.5148 0.0466,-1.5148 0.0095,-0.3085 v 0 l 0.0371,-1.2063 0.0387,-1.5159 0.0193,-0.891 v 0 l 0.0136,-0.6259 0.0389,-1.5173 0.0465,-1.4699 v 0 l 0.0015,-0.0482 0.0123,-1.5219 -0.0026,-1.5235 0.0122,-0.5206 v 0 l 0.0236,-1.0042 0.057,-1.5238 0.0406,-1.0844 v 0 l 0.0165,-0.4394 0.057,-1.5237 0.1003,-1.5232 0.0108,-0.123 v 0 l 0.1248,-1.4319 0.1358,-1.5555 0.0536,-0.6134 v 0 l 0.0823,-0.942 0.1275,-1.5565 0.086,-1.1038 v 0 l 0.0353,-0.4535 0.1213,-1.5572 0.1047,-1.508 0.0033,-0.086 v 0 l 0.0545,-1.4257 0.038,-1.512 0.0129,-0.6752 v 0 l 0.016,-0.837 0.0364,-1.5119 0.0331,-1.2645 v 0 l 0.0065,-0.2472 0.0397,-1.5117 0.0396,-1.5117 0.009,-0.3426 v 0 l 0.0306,-1.1691 0.0397,-1.5118 0.0244,-0.9324 v 0 l 0.0152,-0.5793 0.0076,-1.5597"
        inkstitch:running_stitch_length_mm="2"
@@ -10408,8 +10276,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-0"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157558"
-     >
+     id="g157558">
     <path
        d="m 16.9659,69.9413 -0.7278,-1.3349 -0.2746,-0.6397 v 0 l -0.3309,-0.7709 -0.4627,-1.4664 -0.3226,-1.2708 v 0 l -0.0568,-0.2234 -0.3154,-1.5104 -0.2116,-1.5276 -0.0426,-0.3695 v 0 L 14.0868,59.664 13.9121,58.1307 13.8564,57.1593 v 0 l -0.0327,-0.5687 -0.0498,-1.5426 -0.0499,-1.5426 -3e-4,-0.0312 v 0 l -0.0165,-1.512 -0.0073,-1.5431 0.0037,-0.6325 v 0 l 0.0057,-0.9481 0.0245,-1.5378 0.0467,-1.2006 v 0 l 0.013,-0.3357 0.0609,-1.5362 0.1213,-1.5317 0.0227,-0.2769 v 0 l 0.1026,-1.2543 0.1773,-1.5234 0.1124,-0.8884 v 0 l 0.0799,-0.6318 0.2475,-1.51 0.3125,-1.4882 v 0 l 0.0019,-0.0092 0.3454,-1.488 0.4161,-1.4611 0.2102,-0.5955 v 0 l 0.2942,-0.8334 0.5927,-1.3917 0.5653,-1.1609 v 0 l 0.1179,-0.2421 0.8157,-1.3311 0.9234,-1.2482 0.2086,-0.222 v 0 l 0.8481,-0.9026 1.1805,-0.9804 0.7936,-0.4545 v 0 l 0.5429,-0.311 1.4538,-0.5172"
        inkstitch:running_stitch_length_mm="2"
@@ -10452,8 +10319,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-/"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157554"
-     >
+     id="g157554">
     <path
        id="autosatin35"
        d="m 11.1107,80.7282 h 2.1404 l 0.7474,-0.0679 0.6115,-0.2039 0.4756,-0.3397 0.3397,-0.4756 1.9625,-3.9587 m -6.8236,5.0458 H 8.35893 L 7.8833,80.6603 7.54357,80.4564 7.33973,80.1167 7.27179,79.6411 9.51666,75.1513 m -0.43829,0.0629 8.65853,0.5843"
@@ -10485,9 +10351,8 @@ Public Domain
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-."
-     style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157550"
-     >
+     style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-miterlimit:4;stroke-opacity:1"
+     id="g157550">
     <path
        d="m 13.4859,73.9784 4e-4,-0.5992 0.0296,-1.5433 0.0477,-1.2366 v 0 l 0.0124,-0.3199 0.0764,-1.5173"
        inkstitch:running_stitch_length_mm="2"
@@ -10498,13 +10363,13 @@ Public Domain
        style="stroke-dasharray:0.5, 0.5" />
     <path
        id="autosatin33"
-       d="M 13.5222,67.224 12.2584,67.359 11.1386,67.764 10.12,68.439 9.16,69.384 8.33313,70.4978 7.7425,71.679 7.38813,72.9278 7.27,74.244 7.33338,74.9411 m 6.69512,-7.7129 1.2389,0.1344 1.0518,0.4035 0.9168,0.6736 0.834,0.9443 0.7088,1.1138 0.5062,1.1812 0.3038,1.2488 0.1012,1.3162 -0.053,0.6808 M 8.30625,69.41525 H 18.83 m -12.2575,4.7975 13.94,0.0625"
+       d="M 13.5222,67.224 12.2584,67.359 11.1386,67.764 10.12,68.439 9.16,69.384 8.33313,70.4978 7.7425,71.679 7.38813,72.9278 7.27,74.244 7.33338,74.9411 m 6.69512,-7.7129 1.2389,0.1344 1.0518,0.4035 0.9168,0.6736 0.834,0.9443 0.7088,1.1138 0.5062,1.1812 0.3038,1.2488 0.1012,1.3162 -0.053,0.6808 M 8.30625,69.41525 H 18.83"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:ties="3"
        inkstitch:zigzag_underlay="True"
        inkscape:label="Auto-remplissage satin 2"
-       sodipodi:nodetypes="cccccccccccccccccccccccc"
+       sodipodi:nodetypes="cccccccccccccccccccccc"
        inkstitch:reverse_rails="none" />
     <path
        d="m 13.4859,73.9784 -7e-4,0.9546 0.0288,1.5434 0.0359,0.8813 v 0 l 0.0269,0.6598 0.0847,1.5402"
@@ -10530,8 +10395,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer--"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157546"
-     >
+     id="g157546">
     <path
        id="autosatin32"
        d="m 7.12363,55.1047 v -2.6832 c 0,-0.36 0.36001,-0.54 1.08003,-0.54 H 29.2642 c 0.5173,0 0.5545,0.2504 0.54,0.54 v 2.6832 M 7.14051,55.6953 7.12363,57.8216 c 0.10187,1.0105 0.63839,1.0801 1.08003,1.0801 H 29.2642 c 0.5787,-0.1778 0.54,-0.7023 0.54,-1.0801 v -2.1431 m -10.8678,-4.742 -0.0675,8.8427"
@@ -10547,8 +10411,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-,"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157542"
-     >
+     id="g157542">
     <path
        id="autosatin30"
        d="m 8.74618,69.7367 -0.68824,1.1121 -0.46112,1.2045 -0.25863,1.3396 -0.08074,1.517 0.135,1.8225 0.40499,1.1475 0.6075,1.1475 0.74249,0.7425 0.94497,0.4725 1.215,0.3375 1.0542,0.0958 M 9.09222,69.3071 9.9024,68.3938 l 0.8374,-0.6052 0.9049,-0.3353 1.0127,-0.1033 1.5356,0.135 1.3669,0.405 1.1981,0.675 1.0294,0.945 0.8268,1.2487 0.5907,1.5863 0.3543,1.9237 0.0063,0.1199 M 7,79.3125 18.4375,68.1875"
@@ -10583,8 +10446,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-*"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157534"
-     >
+     id="g157534">
     <path
        id="autosatin24"
        d="m 8.43273,39.875 c 0.67945,1.016 1.05102,1.5465 1.95107,1.9065 0.9,0.36 1.89,0.18 2.97,-0.5401 0.72,-0.36 1.44,-0.9 2.1601,-1.62 0.72,-0.72 1.35,-1.53 1.89,-2.43 0.54,-0.9 1.7353,-2.9813 2.4553,-3.8813 0.7201,-0.9001 1.4654,-1.4119 2.1601,-1.8901 M 8.16272,39.47 c -0.72156,-1.079 -1.10901,-2.4586 -0.749,-3.3586 0.36,-0.9001 1.08001,-1.7101 2.16003,-2.4301 0.36001,-0.36 1.08005,-0.54 2.16005,-0.54 1.08,0 2.16,-0.09 3.24,-0.27 l 3.2401,-0.54 3.6704,-1.2488 m -9.2055,1.3838 4.1176,6.6826"
@@ -10677,8 +10539,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-)"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157530"
-     >
+     id="g157530">
     <path
        d="m 14.8521,77.2094 -0.9333,1.2199 -0.9511,1.1997 -0.1869,0.2007 v 0 l -0.8753,0.9405 -0.9855,1.1553 -0.6025,0.7502 v 0 l -0.36918,0.4598 -0.98571,1.183 m -1.05169,1.0958 -0.0997,0.0616"
        inkstitch:running_stitch_length_mm="2"
@@ -10719,8 +10580,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-("
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157526"
-     >
+     id="g157526">
     <path
        d="m 18.8578,72.7572 -0.62,-1.4103 -0.4862,-1.2671 v 0 l -0.064,-0.167 -0.5494,-1.4343 -0.4513,-1.4694 -0.1353,-0.4677 v 0 L 16.2599,65.5332 15.8497,64.0546 15.625,62.9217 v 0 l -0.0745,-0.3761 -0.2993,-1.5091 -0.279,-1.5138 -0.0373,-0.2752 v 0 L 14.765,57.992 14.5651,56.461 14.4854,55.5365 v 0 l -0.0529,-0.613 -0.0963,-1.5423 -0.0963,-1.5423 -0.0011,-0.033 v 0 l -0.0514,-1.512 -0.0469,-1.5454 0.002,-0.6799 v 0 l 0.0025,-0.8583 0.045,-1.5568 0.0382,-1.3225 v 0 l 0.0068,-0.2343 0.0972,-1.5535 0.0978,-1.5535 0.034,-0.3899 v 0 l 0.1008,-1.1588 0.2148,-1.5407 0.1408,-1.0104 v 0 l 0.0739,-0.5303 0.2869,-1.5234 0.3035,-1.5193 0.0208,-0.1018 v 0 l 0.2894,-1.4161 0.4329,-1.4854 0.2088,-0.7166 v 0 l 0.2241,-0.7688 0.4892,-1.4698 0.5093,-1.2923 v 0 l 0.0573,-0.1454 0.593,-1.4301 0.6513,-1.4054 0.2206,-0.4324 v 0 l 0.4825,-0.9456 0.7934,-1.329 0.6075,-0.9521 v 0 l 0.2222,-0.3483 0.8968,-1.2586 0.9393,-1.2348 0.1508,-0.1723 v 0 l 0.8581,-0.9802 1.0611,-1.131 0.5565,-0.6885 v 0 l 0.4192,-0.5186 0.9091,-1.2501"
        inkstitch:running_stitch_length_mm="2"
@@ -10755,8 +10615,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-'"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157522"
-     >
+     id="g157522">
     <path
        d="m 11.8286,41.5093 0.0191,-1.5296 0.0052,-0.4229 v 0 l 0.0138,-1.1066 0.0191,-1.5296 0.0064,-0.807 v 0 l 0.0058,-0.7238 5e-4,-1.533 4e-4,-1.1866 v 0 l 10e-5,-0.3465 5e-4,-1.533 -0.0112,-1.5348 -6e-4,-0.0291 v 0 l -0.0331,-1.5092 -0.0337,-1.5382 -0.0093,-0.3951 v 0 l -0.0271,-1.1579 -0.049,-1.5336 -0.0345,-0.7501 v 0 l -0.0361,-0.7863 -0.0956,-1.5354 0.0013,-1.1179 v 0 l 5e-4,-0.4126 -0.019,-1.5168"
        inkstitch:running_stitch_length_mm="2"
@@ -10780,8 +10639,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-&amp;"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157518"
-     >
+     id="g157518">
     <path
        d="m 35.8509,47.3626 0.6733,-1.3962 0.7038,-1.3756 0.0056,-0.0097 v 0 l 0.7714,-1.3302 0.9321,-1.2382 0.4232,-0.4421 v 0 l 0.6334,-0.6617 1.2848,-0.8321 0.9651,-0.7991 v 0 l 0.2047,-0.1695 0.9949,-1.1695"
        inkstitch:running_stitch_length_mm="2"
@@ -10880,8 +10738,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-%"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157514"
-     >
+     id="g157514">
     <path
        id="autosatin7"
        d="M 8.01266,80.3923 8.14133,80.5337 8.54,80.54 h 4.32 L 13.805,80.27 14.48,79.46 28.7695,54.9638 M 7.9958,80.1181 8,80 22.9799,54.3201 m -0.3398,0.0542 6.3685,0.7081"
@@ -10980,8 +10837,7 @@ Public Domain
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-&quot;"
      style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-opacity:1;stroke-miterlimit:4"
-     id="g157502"
-     >
+     id="g157502">
     <path
        id="autosatin4"
        d="m 12.6601,43 1.4167,-7.0616 0.3637,-2.0713 M 11.0401,43 9.46846,34.0941 m -0.22949,0.1098 5.43113,-0.2496"
@@ -11034,9 +10890,8 @@ Public Domain
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-!"
-     style="display:inline;fill:none;stroke:#00673e;stroke-width:0.945;stroke-miterlimit:4;stroke-opacity:1"
-     id="g157498"
-     >
+     style="display:none;fill:none;stroke:#00673e;stroke-width:0.945;stroke-miterlimit:4;stroke-opacity:1"
+     id="g157498">
     <path
        d="m 13.9894,58.9234 0.0011,-1.5407 -9e-4,-1.5475 5e-4,-0.0839 v 0 l 0.0097,-1.4688 0.0211,-1.554 0.0283,-0.6246 v 0 l 0.042,-0.9263 0.0273,-1.5503 0.003,-1.1704 v 0 l 0.001,-0.3802 0.0038,-1.5506 0.0035,-1.551 3e-4,-0.1664 v 0 l 0.0032,-1.3846 0.0271,-1.5466 0.016,-0.7167 v 0 l 0.0185,-0.8246 0.0344,-1.5414 0.0279,-1.2813 v 0 l 0.0057,-0.2602 -0.023,-1.526 -0.0237,-1.5496 -0.0047,-0.312 v 0 l -0.019,-1.2375 -0.0237,-1.5496 0.0099,-0.8607 v 0 l 0.0079,-0.6879 0.0296,-1.5486 0.0269,-1.4112 v 0 l 0.0026,-0.1375 0.0273,-1.5484 -0.0011,-1.5455 -3e-4,-0.4165 v 0 l -7e-4,-1.129 0.0016,-1.5459 -0.0141,-0.9733 v 0 L 14.25,18.7001 14.1872,17.1676"
        inkstitch:running_stitch_length_mm="2"

@@ -2,9 +2,9 @@
 <inkscape-extension translationdomain="inkstitch" xmlns="http://www.inkscape.org/namespace/inkscape/extension">
     <name>Cleanup Document</name>
     <id>org.inkstitch.cleanup</id>
-    <param name="description" type="description">Use this extension to remove small objects from the document.</param>
+    <label>Use this extension to remove small objects from the document.</label>
     <param name="rm_fill" type="boolean" gui-text="Remove Small Fill Areas"
-           gui-description="Removes areas smaller than dedined by threshold.">true</param>
+           gui-description="Removes areas smaller than defined by threshold.">true</param>
     <param name="fill_threshold" type="int" gui-text="Fill area threshold (px²)" min="1" max="800">20</param>
     <param name="rm_stroke" type="boolean" gui-text="Remove Small strokes"
            gui-description="Removes small strokes shorter than defined by threshold.">true</param>

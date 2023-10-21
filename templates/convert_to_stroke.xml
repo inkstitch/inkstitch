@@ -3,7 +3,7 @@
     <name>Convert Satin to Stroke</name>
     <id>org.inkstitch.convert_to_stroke</id>
     <param name="extension" type="string" gui-hidden="true">convert_to_stroke</param>
-    <param name="description" type="description">Converts a satin column into a running stitch.</param>
+    <label>Converts a satin column into a running stitch.</label>
     <param name="keep_satin" type="boolean" gui-text="Keep satin column"
        gui-description="Do not delete original satin column.">false</param>
     <effect>

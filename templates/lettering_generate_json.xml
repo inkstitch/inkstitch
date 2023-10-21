@@ -15,10 +15,10 @@
     <param name="options" type="notebook">
       <page name="general" gui-text="Font info">
 
-        <param name="header" type="description" appearance="header" indent="1" >
+        <label appearance="header" indent="1" >
             Generates font.json which can be used by the lettering tool.
-        </param>
-        <param name="file-description" type="description" indent="1" >The generated file can be viewed and updated with a standard text editor tool.</param>
+        </label>
+        <label indent="1" >The generated file can be viewed and updated with a standard text editor tool.</label
 
         <spacer />
         <separator indent="1"/>
@@ -37,9 +37,9 @@
         <separator indent="1"/>
         <spacer />
 
-        <param name="header" type="description" appearance="header" indent="1" >
+        <label appearance="header" indent="1" >
             Keywords
-        </param>
+        </label>
         <hbox>
             {%- for category in font_categories %}
             {%- if loop.index is divisibleby 4 %}
@@ -79,11 +79,11 @@
 
       </page>
       <page name="kerning" gui-text="Kerning">
-        <param name="header" type="description" appearance="header" indent="1" >Kerning</param>
-        <param name="kering-info" type="description" indent="1" >
+        <label appearance="header" indent="1" >Kerning</label>
+        <label indent="1" >
             If your font file contains kerning information, you can completely ignore the following settings (unless you want to overwrite them).
             If the kerning information cannot be found, these values will apply automatically.
-        </param>
+        </label>
 
         <spacer />
         <hbox indent="1">
