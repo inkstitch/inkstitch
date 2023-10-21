@@ -99,16 +99,16 @@ class ControlPanel(wx.Panel):
         self.btnNpp.Bind(wx.EVT_TOGGLEBUTTON, self.toggle_npp)
         self.btnNpp.SetBitmap(self.load_icon('npp'))
         self.btnNpp.SetToolTip(_('Display needle penetration point (O)'))
-        self.slider = SimulatorSlider(self, -1, value=1, minValue=1, maxValue=self.stitch_plan.num_stitches)
+        self.slider = SimulatorSlider(self, -1, value=1, minValue=1, maxValue=2)
         self.slider.Bind(wx.EVT_SLIDER, self.on_slider)
-        self.stitchBox = IntCtrl(self, -1, value=1, min=1, max=self.stitch_plan.num_stitches,
-                                 size=((100, -1)), limited=True, allow_none=True, style=wx.TE_PROCESS_ENTER)
+        self.stitchBox = IntCtrl(self, -1, value=1, min=1, max=2, limited=True, allow_none=True,
+                                 size=((100, -1)), style=wx.TE_PROCESS_ENTER)
         self.stitchBox.Bind(wx.EVT_LEFT_DOWN, self.on_stitch_box_focus)
         self.stitchBox.Bind(wx.EVT_SET_FOCUS, self.on_stitch_box_focus)
         self.stitchBox.Bind(wx.EVT_TEXT_ENTER, self.on_stitch_box_focusout)
         self.stitchBox.Bind(wx.EVT_KILL_FOCUS, self.on_stitch_box_focusout)
         self.Bind(wx.EVT_LEFT_DOWN, self.on_stitch_box_focusout)
-        self.totalstitchText = wx.StaticText(self, -1, label=f"/ { self.stitch_plan.num_stitches }")
+        self.totalstitchText = wx.StaticText(self, -1, label="/ ________")
         self.btnJump = wx.BitmapToggleButton(self, -1, style=self.button_style)
         self.btnJump.SetToolTip(_('Show jump stitches'))
         self.btnJump.SetBitmap(self.load_icon('jump'))
@@ -134,8 +134,8 @@ class ControlPanel(wx.Panel):
         # Layout
         self.hbSizer1 = wx.BoxSizer(wx.HORIZONTAL)
         self.hbSizer1.Add(self.slider, 1, wx.EXPAND | wx.RIGHT, 10)
-        self.hbSizer1.Add(self.stitchBox, 0, wx.ALIGN_CENTER | wx.RIGHT, 10)
-        self.hbSizer1.Add(self.totalstitchText, 0, wx.ALIGN_CENTER | wx.RIGHT, 10)
+        self.hbSizer1.Add(self.stitchBox, 0, wx.ALIGN_CENTER | wx.Right, 10)
+        self.hbSizer1.Add(self.totalstitchText, 0, wx.ALIGN_CENTER | wx.LEFT, 10)
 
         self.controls_sizer = wx.StaticBoxSizer(wx.StaticBox(self, wx.ID_ANY, _("Controls")), wx.HORIZONTAL)
         self.controls_inner_sizer = wx.BoxSizer(wx.HORIZONTAL)
@@ -249,6 +249,7 @@ class ControlPanel(wx.Panel):
         self.num_stitches = num_stitches
         self.stitchBox.SetMax(num_stitches)
         self.slider.SetMax(num_stitches)
+        self.totalstitchText.SetLabel(f"/ { num_stitches }")
         self.choose_speed()
 
     def add_color(self, color, num_stitches):
@@ -733,7 +734,7 @@ class DrawingPanel(wx.Panel):
         command = self.commands[self.current_stitch]
         self.control_panel.on_current_stitch(self.current_stitch, command)
         statusbar = self.GetTopLevelParent().statusbar
-        statusbar.SetStatusText(_("Command: %s") % COMMAND_NAMES[command])
+        statusbar.SetStatusText(_("Command: %s") % COMMAND_NAMES[command], 1)
         self.stop_if_at_end()
         self.Refresh()
 
@@ -1058,7 +1059,12 @@ class SimulatorWindow(wx.Frame):
     def __init__(self, panel=None, parent=None, **kwargs):
         super().__init__(None, title=_("Embroidery Simulation"), **kwargs)
 
+        self.SetWindowStyle(wx.FRAME_FLOAT_ON_PARENT | wx.DEFAULT_FRAME_STYLE)
+
         self.sizer = wx.BoxSizer(wx.VERTICAL)
+
+        self.statusbar = self.CreateStatusBar(2)
+        self.statusbar.SetStatusWidths((0, -1))
 
         if panel and parent:
             self.is_child = True
@@ -1074,7 +1080,8 @@ class SimulatorWindow(wx.Frame):
 
         self.SetSizer(self.sizer)
         self.Layout()
-        self.SetSizeHints(self.sizer.CalcMin())
+
+        self.SetMinSize(self.sizer.CalcMin())
 
         if self.is_child:
             self.Bind(wx.EVT_CLOSE, self.on_close)
@@ -1090,6 +1097,8 @@ class SplitSimulatorWindow(wx.Frame):
     def __init__(self, panel_class, title, target_duration=None, **kwargs):
         super().__init__(None, title=title)
 
+        self.SetWindowStyle(wx.FRAME_FLOAT_ON_PARENT | wx.DEFAULT_FRAME_STYLE)
+
         self.detached_simulator_frame = None
         self.splitter = wx.SplitterWindow(self, style=wx.SP_LIVE_UPDATE)
         self.simulator_panel = SimulatorPanel(self.splitter, target_duration=target_duration, detach_callback=self.toggle_detach_simulator)
@@ -1101,24 +1110,32 @@ class SplitSimulatorWindow(wx.Frame):
         icon = wx.Icon(os.path.join(get_resource_dir("icons"), "inkstitch256x256.png"))
         self.SetIcon(icon)
 
+        self.statusbar = self.CreateStatusBar(2)
+
         self.sizer = wx.BoxSizer(wx.VERTICAL)
         self.sizer.Add(self.splitter, 1, wx.EXPAND)
         self.SetSizer(self.sizer)
 
-        self.SetSizeHints(self.sizer.CalcMin())
+        self.SetMinSize(self.sizer.CalcMin())
+
         self.Maximize()
         self.Show()
         wx.CallLater(100, self.set_sash_position)
 
+        self.Bind(wx.EVT_SPLITTER_SASH_POS_CHANGING, self.splitter_resize)
         self.Bind(wx.EVT_CLOSE, self.on_close)
 
         if global_settings['pop_out_simulator']:
             self.detach_simulator()
 
+    def splitter_resize(self, event):
+        self.statusbar.SetStatusWidths((self.simulator_panel.GetScreenPosition()[0], -1))
+
     def set_sash_position(self):
         settings_panel_min_size = self.settings_panel.GetSizer().CalcMin()
         debug.log(f"{settings_panel_min_size=}")
         self.splitter.SetSashPosition(settings_panel_min_size.width)
+        self.statusbar.SetStatusWidths((settings_panel_min_size.width, -1))
 
     def on_close(self, event):
         if self.detached_simulator_frame:
@@ -1135,6 +1152,9 @@ class SplitSimulatorWindow(wx.Frame):
         self.detached_simulator_frame.detach_simulator_panel()
         self.simulator_panel.Reparent(self.splitter)
         self.splitter.SplitVertically(self.settings_panel, self.simulator_panel)
+
+        self.GetStatusBar().SetStatusText(self.detached_simulator_frame.GetStatusBar().GetStatusText(1), 1)
+
         self.detached_simulator_frame.Destroy()
         self.detached_simulator_frame = None
         self.Maximize()
@@ -1156,10 +1176,14 @@ class SplitSimulatorWindow(wx.Frame):
         self.SetMinSize(settings_panel_size)
         self.Maximize(False)
         self.SetSize((settings_panel_size.width, screen_rect.height))
-        self.SetPosition((0, 0))
+        self.SetPosition((screen_rect.left, screen_rect.top))
 
-        self.detached_simulator_frame.SetSize((screen_rect.width - settings_panel_size.width - 20, screen_rect.height))
-        self.detached_simulator_frame.SetPosition((settings_panel_size.width + 20, 0))
+        self.detached_simulator_frame.SetSize((screen_rect.width - settings_panel_size.width, screen_rect.height))
+        self.detached_simulator_frame.SetPosition((settings_panel_size.x + settings_panel_size.width, screen_rect.top))
+
+        self.detached_simulator_frame.GetStatusBar().SetStatusText(self.GetStatusBar().GetStatusText(1), 1)
+        self.GetStatusBar().SetStatusText("", 1)
+
         self.detached_simulator_frame.Show()
 
         global_settings['pop_out_simulator'] = True

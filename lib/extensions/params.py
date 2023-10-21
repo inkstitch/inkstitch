@@ -791,14 +791,6 @@ class Params(InkstitchExtension):
                 target_duration=5
             )
 
-            # position left, center
-            current_screen = wx.Display.GetFromPoint(wx.GetMousePosition())
-            display = wx.Display(current_screen)
-            display_size = display.GetClientArea()
-            frame_size = frame.GetSize()
-            frame.SetPosition((int(display_size[0]), int(
-                display_size[3]/2 - frame_size[1]/2)))
-
             frame.Show()
             app.MainLoop()
 
