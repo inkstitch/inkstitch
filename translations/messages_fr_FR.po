@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2023-10-19 01:05+0000\n"
-"PO-Revision-Date: 2023-10-19 01:06\n"
+"PO-Revision-Date: 2023-10-21 01:04\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -2337,12 +2337,12 @@ msgstr "Veuillez sélectionner une ou plusieurs zones de remplissage à séparer
 #: lib/extensions/cleanup.py:60
 #, python-format
 msgid "%s elements to remove:"
-msgstr ""
+msgstr "%s éléments à supprimer :"
 
 #: lib/extensions/cleanup.py:65
 #, python-format
 msgid "%s groups/layers to remove:"
-msgstr ""
+msgstr "%s groupes/calques à supprimer :"
 
 #: lib/extensions/cleanup.py:70
 #, python-format
@@ -2352,7 +2352,7 @@ msgstr "%s éléments supprimés"
 #: lib/extensions/cleanup.py:74
 #, python-format
 msgid "%s groups/layers removed"
-msgstr ""
+msgstr "%s groupes/calques supprimés"
 
 #: lib/extensions/convert_to_satin.py:35
 msgid "Please select at least one line to convert to a satin column."
@@ -2433,11 +2433,11 @@ msgstr "Méthode de remplissage"
 
 #: lib/extensions/element_info.py:59
 msgid "Satin Method"
-msgstr ""
+msgstr "Méthode Satin"
 
 #: lib/extensions/element_info.py:66
 msgid "Stroke Method"
-msgstr ""
+msgstr "Méthode du trait"
 
 #: lib/extensions/element_info.py:71 lib/extensions/element_info.py:130
 msgid "Dimensions (mm)"
@@ -2450,19 +2450,19 @@ msgstr "Points"
 
 #: lib/extensions/element_info.py:99
 msgid "Small stitches (removed)"
-msgstr ""
+msgstr "Points courts (supprimés)"
 
 #: lib/extensions/element_info.py:103 lib/extensions/element_info.py:142
 msgid "Jumps"
-msgstr ""
+msgstr "Sauts"
 
 #: lib/extensions/element_info.py:111
 msgid "Min stitch length"
-msgstr ""
+msgstr "Longueur minimum du point"
 
 #: lib/extensions/element_info.py:126
 msgid "All Selected Elements"
-msgstr ""
+msgstr "Tous les éléments sélectionnés"
 
 #: lib/extensions/element_info.py:134 lib/extensions/zip.py:138
 msgid "Colors"
@@ -2470,19 +2470,19 @@ msgstr "Couleurs"
 
 #: lib/extensions/element_info.py:138
 msgid "Color Changes"
-msgstr ""
+msgstr "Changement de couleurs"
 
 #: lib/extensions/element_info.py:146
 msgid "Trims"
-msgstr ""
+msgstr "Coupes"
 
 #: lib/extensions/element_info.py:150
 msgid "Stops"
-msgstr ""
+msgstr "Stops"
 
 #: lib/extensions/element_info.py:158
 msgid "Filter stitches smaller than (mm)"
-msgstr ""
+msgstr "Filtrer les points plus petits que (mm)"
 
 #: lib/extensions/fill_to_stroke.py:33 lib/extensions/fill_to_stroke.py:42
 msgid "Please select one or more fill objects to render the centerline."
@@ -2707,7 +2707,7 @@ msgstr "Veuillez choisir une ou plusieurs commandes à attacher."
 
 #: lib/extensions/outline.py:23
 msgid "Please select one or more shapes to convert to their outline."
-msgstr ""
+msgstr "Merci de sélection au moins une forme pour la convertir en contour."
 
 #: lib/extensions/palette_split_text.py:16
 msgid "Please select one or more text elements to split lines."
@@ -2807,7 +2807,7 @@ msgstr "Impossible d'appliquer l'effet de chemin satin à une colonne satin. Mer
 
 #: lib/extensions/test_swatches.py:22
 msgid "Please select one or more elements."
-msgstr ""
+msgstr "Merci de sélectionner au moins un élément."
 
 #: lib/extensions/troubleshoot.py:49
 msgid "All selected shapes are valid! "
@@ -2900,11 +2900,11 @@ msgstr "Fils utilisés"
 
 #: lib/gui/element_info.py:17 inx/inkstitch_element_info.inx:3
 msgid "Element Info"
-msgstr ""
+msgstr "Information sur l'élément"
 
 #: lib/gui/element_info.py:28
 msgid "Info"
-msgstr ""
+msgstr "Information"
 
 #: lib/gui/element_info.py:33 inx/inkstitch_lettering_generate_json.inx:27
 msgid "Name"
@@ -2912,7 +2912,7 @@ msgstr "Nom"
 
 #: lib/gui/element_info.py:34
 msgid "Value"
-msgstr ""
+msgstr "Valeur"
 
 #: lib/gui/element_info.py:41 lib/gui/test_swatches.py:83
 #: inx/inkstitch_apply_threadlist.inx:87 inx/inkstitch_auto_run.inx:23
@@ -2928,15 +2928,15 @@ msgstr "Aide"
 
 #: lib/gui/element_info.py:48
 msgid "This extension informs about various parameters of selected stitch elements."
-msgstr ""
+msgstr "Cette extension affiche des informations sur divers paramètres des éléments de broderie sélectionnés."
 
 #: lib/gui/element_info.py:56
 msgid "More information on our website:"
-msgstr ""
+msgstr "Plus d'information sur notre site web :"
 
 #: lib/gui/element_info.py:62 lib/gui/element_info.py:63
 msgid "https://inkstitch.org/docs/troubleshoot#element-info"
-msgstr ""
+msgstr "https://inkstitch.org/fr/docs/troubleshoot#element-info"
 
 #: lib/gui/preferences.py:16 lib/gui/preferences.py:17
 #: inx/inkstitch_preferences.inx:3
@@ -3082,7 +3082,7 @@ msgstr "Animer en avant (flèche droite)"
 
 #: lib/gui/simulator.py:87
 msgid "Animate in reverse (arrow left)"
-msgstr ""
+msgstr "Animer à reculons (flèche gauche)"
 
 #: lib/gui/simulator.py:91
 msgid "Play (P)"
@@ -3132,7 +3132,7 @@ msgstr "%d points/sec"
 #: lib/gui/simulator.py:725
 #, python-format
 msgid "Command: %s"
-msgstr ""
+msgstr "Commande : %s"
 
 #: lib/gui/simulator.py:1215 lib/gui/simulator.py:1227
 msgid "Preview"
@@ -4349,15 +4349,15 @@ msgstr "Seuil de suppression de petits traits (px)"
 
 #: inx/inkstitch_cleanup.inx:12
 msgid "Remove empty layers and groups"
-msgstr ""
+msgstr "Supprime les calques et les groupes vides"
 
 #: inx/inkstitch_cleanup.inx:17
 msgid "Test run"
-msgstr ""
+msgstr "Essayer"
 
 #: inx/inkstitch_cleanup.inx:17
 msgid "Only display labels and ids of affected elements and groups without removing them."
-msgstr ""
+msgstr "Montrer les étiquettes et les identifiants des éléments et groupes concernés sans les supprimer."
 
 #: inx/inkstitch_commands_scale_symbols.inx:3
 msgid "Scale Command Symbols"
@@ -4528,7 +4528,7 @@ msgstr "Dupliquer les paramètres"
 #: inx/inkstitch_selection_to_guide_line.inx:10
 #: inx/inkstitch_selection_to_pattern.inx:10 inx/inkstitch_test_swatches.inx:10
 msgid "Edit"
-msgstr "Edition"
+msgstr "Édition"
 
 #: inx/inkstitch_embroider.inx:3
 msgid "Embroider"
