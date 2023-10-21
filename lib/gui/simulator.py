@@ -1179,7 +1179,7 @@ class SplitSimulatorWindow(wx.Frame):
         self.SetPosition((screen_rect.left, screen_rect.top))
 
         self.detached_simulator_frame.SetSize((screen_rect.width - settings_panel_size.width, screen_rect.height))
-        self.detached_simulator_frame.SetPosition((settings_panel_size.x + settings_panel_size.width, screen_rect.top))
+        self.detached_simulator_frame.SetPosition((settings_panel_size.width, screen_rect.top))
 
         self.detached_simulator_frame.GetStatusBar().SetStatusText(self.GetStatusBar().GetStatusText(1), 1)
         self.GetStatusBar().SetStatusText("", 1)
