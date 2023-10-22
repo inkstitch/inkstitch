@@ -88,6 +88,14 @@ $ tar -xvf ~/Downloads/inkstitch-{{ tag_name }}-linux.tar.xz</code></pre></div><
 
 **Dernière version:** [Ink/Stitch {{ site.github.latest_release.tag_name }} ({{ site.github.latest_release.published_at | date: "%Y-%m-%d" }})](https://github.com/inkstitch/inkstitch/releases/latest)
 
+### NixOS
+
+Il existe une version pour  NixOS qui est maintenue en externe et disponible sur [https://codeberg.org/tropf/nix-inkstitch](https://codeberg.org/tropf/nix-inkstitch)
+
+### Arch Linux
+
+Arch Linux users can use an AUR package: [https://aur.archlinux.org/packages/inkstitchhttps://aur.archlinux.org/packages/inkstitch](https://aur.archlinux.org/packages/inkstitchhttps://aur.archlinux.org/packages/inkstitch)
+
 ## Exécuter Ink/Stitch
 
 Redémarrez Inkscape.

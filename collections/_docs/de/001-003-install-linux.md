@@ -2,7 +2,7 @@
 title: "Installation von Ink/Stitch für Linux"
 permalink: /de/docs/install-linux/
 excerpt: "Wie wird Ink/Stitch installiert."
-last_modified_at: 2022-01-09
+last_modified_at: 2023-10-22
 toc: true
 ---
 {% comment %}
@@ -85,6 +85,14 @@ $ tar -xvf ~/Downloads/inkstitch-{{ tag_name }}-linux.tar.xz</code></pre></div><
 </div>
 
 **Aktuelle Version:** {{ site.github.latest_release.published_at | date: "%d.%m.%Y" }} [Ink/Stitch {{ site.github.latest_release.tag_name }})](https://github.com/inkstitch/inkstitch/releases/latest)
+
+### NixOS
+
+Eine Version für NixOS wird extern betreut und kann unter [https://codeberg.org/tropf/nix-inkstitch](https://codeberg.org/tropf/nix-inkstitch) heruntergeladen werden.
+
+### Arch Linux
+
+ArchLinux-Nutzer können ein AUR-Packet nutzen: [https://aur.archlinux.org/packages/inkstitchhttps://aur.archlinux.org/packages/inkstitch](https://aur.archlinux.org/packages/inkstitchhttps://aur.archlinux.org/packages/inkstitch)
 
 ## Ink/Stitch öffnen
 Starte Inkscape neu.

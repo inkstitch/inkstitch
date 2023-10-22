@@ -8,8 +8,6 @@ last_modified_at: 2023-09-23
 * <i class="fab fa-apple"></i> [macOS](/de/docs/install-macos/)
 * <i class="fab fa-windows"></i> [Windows](/de/docs/install-windows/)
 
-Eine Version für **NixOS** wird extern betreut und kann unter [https://codeberg.org/tropf/nix-inkstitch](https://codeberg.org/tropf/nix-inkstitch) heruntergeladen werden.
-
 ## Manuelle Installation
 
 Es ist auch möglich Ink/Stitch manuell zu installieren. Es wird jedoch nicht empfohlen - es sei denn, man möchte bei der Entwicklung der Erweiterung helfen.
