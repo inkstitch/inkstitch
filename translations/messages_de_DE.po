@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-10-19 01:05+0000\n"
-"PO-Revision-Date: 2023-10-19 01:06\n"
+"POT-Creation-Date: 2023-10-22 01:09+0000\n"
+"PO-Revision-Date: 2023-10-22 01:10\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-19 01:05+0000\n"
+"POT-Creation-Date: 2023-10-22 01:09+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2236,7 +2236,7 @@ msgstr "flach"
 msgid "point"
 msgstr "spitz"
 
-#: lib/elements/text.py:13 lib/extensions/lettering.py:99
+#: lib/elements/text.py:13 lib/extensions/lettering.py:100
 msgid "Text"
 msgstr "Text"
 
@@ -2551,35 +2551,31 @@ msgstr "Bitte mindestens zwei Elemente auswählen, um einen Sprungstich in einen
 msgid "Please choose one or more commands to add."
 msgstr "Bitte hinzuzufügende Befehle auswählen."
 
-#: lib/extensions/lettering.py:40 lib/extensions/lettering.py:528
-msgid "Ink/Stitch Lettering"
-msgstr "Ink/Stitch Text"
-
-#: lib/extensions/lettering.py:50
+#: lib/extensions/lettering.py:51
 msgid "Font"
 msgstr "Schriftart"
 
-#: lib/extensions/lettering.py:59
+#: lib/extensions/lettering.py:60
 msgid "Font size filter (mm). 0 for all sizes."
 msgstr "Schriftgrößenfilter (mm). 0 für alle Größen."
 
-#: lib/extensions/lettering.py:61
+#: lib/extensions/lettering.py:62
 msgid "Glyphs"
 msgstr "Zeichen"
 
-#: lib/extensions/lettering.py:63
+#: lib/extensions/lettering.py:64
 msgid "Filter fonts by available glyphs."
 msgstr "Filtert die Schriften nach verfügbaren Zeichen."
 
-#: lib/extensions/lettering.py:70
+#: lib/extensions/lettering.py:71
 msgid "Filter fonts by category."
 msgstr "Filtert die Schriften nach Kategorie."
 
-#: lib/extensions/lettering.py:79
+#: lib/extensions/lettering.py:80
 msgid "Font Filter"
 msgstr "Schriftfilter"
 
-#: lib/extensions/lettering.py:82 lib/gui/test_swatches.py:33
+#: lib/extensions/lettering.py:83 lib/gui/test_swatches.py:33
 #: inx/inkstitch_apply_threadlist.inx:7 inx/inkstitch_fill_to_stroke.inx:15
 #: inx/inkstitch_gradient_blocks.inx:15
 #: inx/inkstitch_lettering_along_path.inx:13
@@ -2588,85 +2584,89 @@ msgstr "Schriftfilter"
 msgid "Options"
 msgstr "Optionen"
 
-#: lib/extensions/lettering.py:87
+#: lib/extensions/lettering.py:88
 msgid "Stitch lines of text back and forth"
 msgstr "Sticke Textzeilen vor und zurück"
 
-#: lib/extensions/lettering.py:90
+#: lib/extensions/lettering.py:91
 msgid "Never"
 msgstr "nie"
 
-#: lib/extensions/lettering.py:90
+#: lib/extensions/lettering.py:91
 msgid "after each line"
 msgstr "nach jeder Reihe"
 
-#: lib/extensions/lettering.py:90
+#: lib/extensions/lettering.py:91
 msgid "after each word"
 msgstr "nach jedem Wort"
 
-#: lib/extensions/lettering.py:90
+#: lib/extensions/lettering.py:91
 msgid "after each letter"
 msgstr "nach jedem Buchstaben"
 
-#: lib/extensions/lettering.py:91
+#: lib/extensions/lettering.py:92
 msgid "Add trim command"
 msgstr "Fadenschnitt-Befehl hinzufügen"
 
-#: lib/extensions/lettering.py:94
+#: lib/extensions/lettering.py:95
 msgid "Use command symbols"
 msgstr "Visuelle Befehle verwenden"
 
-#: lib/extensions/lettering.py:96
+#: lib/extensions/lettering.py:97
 msgid "Uses command symbols if enabled. When disabled inserts trim commands as params."
 msgstr "Wenn aktiviert, werden visuelle Befehle (Symbole) eingefügt. Wenn deaktiviert, wird der Fadenschnitt über die Parametereinstellungen bestimmt."
 
-#: lib/extensions/lettering.py:104 lib/extensions/params.py:499
+#: lib/extensions/lettering.py:105 lib/extensions/params.py:497
 #: print/templates/custom-page.html:23 print/templates/custom-page.html:27
 #: print/templates/custom-page.html:33 print/templates/ui.html:102
 #: print/templates/ui.html:106 print/templates/ui.html:112
 msgid "Cancel"
 msgstr "Abbrechen"
 
-#: lib/extensions/lettering.py:108 lib/extensions/params.py:507
+#: lib/extensions/lettering.py:109 lib/extensions/params.py:505
 msgid "Apply and Quit"
 msgstr "Anwenden und schließen"
 
-#: lib/extensions/lettering.py:287
+#: lib/extensions/lettering.py:288
 msgid "This font has no available font variant. Please update or remove the font."
 msgstr "Diese Schriftart hat keine verfügbare Schriftvariante. Bitte aktualisieren oder entfernen."
 
 #. The user has chosen to scale the text by some percentage
 #. (50%, 200%, etc).  If you need to use the percentage symbol,
 #. make sure to double it (%%).
-#: lib/extensions/lettering.py:348
+#: lib/extensions/lettering.py:349
 #, python-format
 msgid "Text scale %s%%"
 msgstr "Text Skalierung %s%%"
 
-#: lib/extensions/lettering.py:359
+#: lib/extensions/lettering.py:360
 #, python-format
 msgid "Error: Text cannot be applied to the document.\n"
 "%s"
 msgstr "Fehler: Der Text kann nicht in das Dokument eingefügt werden.\n"
 "%s"
 
-#: lib/extensions/lettering.py:440 lib/extensions/zip.py:136
+#: lib/extensions/lettering.py:447 lib/extensions/zip.py:136
 #: inx/inkstitch_commands_scale_symbols.inx:6
 #: inx/inkstitch_lettering_generate_json.inx:82
 msgid "Size"
 msgstr "Größe"
 
-#: lib/extensions/lettering.py:454
+#: lib/extensions/lettering.py:461
 msgid "Add trims"
 msgstr "Fadenschnittbefehle hinzufügen"
 
-#: lib/extensions/lettering.py:460 print/templates/ui_svg_action_buttons.html:1
+#: lib/extensions/lettering.py:467 print/templates/ui_svg_action_buttons.html:1
 msgid "Scale"
 msgstr "Maßstab"
 
-#: lib/extensions/lettering.py:517
+#: lib/extensions/lettering.py:524
 msgid "Please select only one block of text."
 msgstr "Bitte wähle nur einen Textabschnitt."
+
+#: lib/extensions/lettering.py:535 lib/extensions/lettering.py:545
+msgid "Ink/Stitch Lettering"
+msgstr "Ink/Stitch Text"
 
 #: lib/extensions/lettering_along_path.py:39
 msgid "The text doesn't contain any glyphs."
@@ -2716,60 +2716,60 @@ msgstr "Um Text in Textzeilen zu zerlegen, bitte ein oder mehrere Textelemente a
 msgid "Cannot read palette: invalid GIMP palette header"
 msgstr "Palette kann nicht gelesen werden: Ungültiger GIMP-Palettenheader"
 
-#: lib/extensions/params.py:273
+#: lib/extensions/params.py:275
 msgid "These settings will be applied to 1 object."
 msgstr "Diese Einstellung wird auf 1 Objekt angewendet."
 
-#: lib/extensions/params.py:275
+#: lib/extensions/params.py:277
 #, python-format
 msgid "These settings will be applied to %d objects."
 msgstr "Diese Einstellungen werden auf %d Objekte angewendet."
 
-#: lib/extensions/params.py:280
+#: lib/extensions/params.py:282
 msgid "Some settings had different values across objects.  Select a value from the dropdown or enter a new one."
 msgstr "Einige Einstellungen hatten unterschiedliche Werte der Objekte.  Bitte einen Wert aus der Liste auswählen oder einen neuen Namen eingeben."
 
-#: lib/extensions/params.py:285
+#: lib/extensions/params.py:287
 #, python-format
 msgid "Disabling this tab will disable the following %d tabs."
 msgstr "Deaktivierung dieser Registerkarte, deaktiviert die folgenden %d Registerkarten."
 
-#: lib/extensions/params.py:289
+#: lib/extensions/params.py:291
 msgid "Disabling this tab will disable the following tab."
 msgstr "Deaktivierung dieser Registerkarte, deaktiviert die folgende Registerkarte."
 
-#: lib/extensions/params.py:293
+#: lib/extensions/params.py:295
 #, python-format
 msgid "Enabling this tab will disable %s and vice-versa."
 msgstr "Aktivierung dieser Registerkarte deaktiviert %s und umgekehrt."
 
-#: lib/extensions/params.py:351
+#: lib/extensions/params.py:353
 msgid "Inkscape objects"
 msgstr "Inkscape Objekte"
 
-#: lib/extensions/params.py:410
+#: lib/extensions/params.py:412
 msgid "No options available"
 msgstr "Keine Optionen verfügbar"
 
-#: lib/extensions/params.py:430
+#: lib/extensions/params.py:432
 msgid "Re-roll"
 msgstr " würfeln"
 
-#: lib/extensions/params.py:458
+#: lib/extensions/params.py:460
 msgid "Click to force this parameter to be saved when you click \"Apply and Quit\""
 msgstr "Hier klicken, um die Speicherung dieses Parameters bei \"Anwenden und schließen\" zu erzwingen"
 
-#: lib/extensions/params.py:468
+#: lib/extensions/params.py:470
 msgid "This parameter will be saved when you click \"Apply and Quit\""
 msgstr "Dieser Parameter wird gespeichert, wenn man auf \"Übernehmen und beenden\" klickt"
 
-#: lib/extensions/params.py:480
-msgid "Embroidery Params"
-msgstr "Stickparameter"
-
-#: lib/extensions/params.py:504
+#: lib/extensions/params.py:502
 msgid "Use Last Settings"
 msgstr "Letzte Einstellungen verwenden"
+
+#: lib/extensions/params.py:786
+msgid "Embroidery Params"
+msgstr "Stickparameter"
 
 #: lib/extensions/reorder.py:20
 msgid "Please select at least two elements to reorder."
@@ -3029,116 +3029,116 @@ msgstr "Einstellung \"%s\" bereits vorhanden. Bitte verwenden Sie einen anderen 
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command label at bottom of simulator window
-#: lib/gui/simulator.py:21 electron/src/renderer/assets/js/simulator.js:147
+#: lib/gui/simulator.py:22 electron/src/renderer/assets/js/simulator.js:147
 #: inx/inkstitch_output_GCODE.inx:29
 msgid "STITCH"
 msgstr "STICH"
 
-#: lib/gui/simulator.py:21 electron/src/renderer/assets/js/simulator.js:150
+#: lib/gui/simulator.py:22 electron/src/renderer/assets/js/simulator.js:150
 msgid "JUMP"
 msgstr "SPRUNG"
 
-#: lib/gui/simulator.py:21 electron/src/renderer/assets/js/simulator.js:153
+#: lib/gui/simulator.py:22 electron/src/renderer/assets/js/simulator.js:153
 msgid "TRIM"
 msgstr "SCHNEIDEN"
 
-#: lib/gui/simulator.py:21 electron/src/renderer/assets/js/simulator.js:156
+#: lib/gui/simulator.py:22 electron/src/renderer/assets/js/simulator.js:156
 #: inx/inkstitch_output_GCODE.inx:33
 msgid "STOP"
 msgstr "STOP"
 
-#: lib/gui/simulator.py:21 electron/src/renderer/assets/js/simulator.js:159
+#: lib/gui/simulator.py:22 electron/src/renderer/assets/js/simulator.js:159
 #: inx/inkstitch_output_GCODE.inx:31
 msgid "COLOR CHANGE"
 msgstr "FARBWECHSEL"
 
-#: lib/gui/simulator.py:58 electron/src/renderer/components/Simulator.vue:543
+#: lib/gui/simulator.py:60 electron/src/renderer/components/Simulator.vue:543
 msgid "Slow down (arrow down)"
 msgstr "Langsamer (Pfeil Runter)"
 
-#: lib/gui/simulator.py:62 electron/src/renderer/components/Simulator.vue:553
+#: lib/gui/simulator.py:64 electron/src/renderer/components/Simulator.vue:553
 msgid "Speed up (arrow up)"
 msgstr "Schneller (Pfeil Hoch)"
 
-#: lib/gui/simulator.py:66
+#: lib/gui/simulator.py:68
 msgid "Go backward one stitch (-)"
 msgstr "Gehe einen Stich zurück (-)"
 
-#: lib/gui/simulator.py:70
+#: lib/gui/simulator.py:72
 msgid "Go forward one stitch (+)"
 msgstr "Gehe einen Stich vor (+)"
 
-#: lib/gui/simulator.py:74
+#: lib/gui/simulator.py:76
 msgid "Go backward one command (page-down)"
 msgstr "Gehe einen Befehl zurück (Bild ↓)"
 
-#: lib/gui/simulator.py:78
+#: lib/gui/simulator.py:80
 msgid "Go forward one command (page-up)"
 msgstr "Gehe einen Befehl vor (Bild ↑)"
 
-#: lib/gui/simulator.py:83
+#: lib/gui/simulator.py:85
 msgid "Animate forward (arrow right)"
 msgstr "Vorwärts abspielen (→)"
 
-#: lib/gui/simulator.py:87
+#: lib/gui/simulator.py:89
 msgid "Animate in reverse (arrow left)"
 msgstr ""
 
-#: lib/gui/simulator.py:91
+#: lib/gui/simulator.py:93
 msgid "Play (P)"
 msgstr "Abspielen (P)"
 
-#: lib/gui/simulator.py:95
+#: lib/gui/simulator.py:97
 msgid "Restart (R)"
 msgstr "Neustart (R)"
 
-#: lib/gui/simulator.py:99
+#: lib/gui/simulator.py:101
 msgid "Display needle penetration point (O)"
 msgstr "Zeige Nadeleinstichpositionen (O)"
 
-#: lib/gui/simulator.py:111
+#: lib/gui/simulator.py:113
 msgid "Show jump stitches"
 msgstr "Sprungstiche anzeigen"
 
-#: lib/gui/simulator.py:115
+#: lib/gui/simulator.py:117
 msgid "Show trims"
 msgstr "Fadenschnittbefehle anzeigen"
 
-#: lib/gui/simulator.py:119
+#: lib/gui/simulator.py:121
 msgid "Show stops"
 msgstr "Stoppbefehle anzeigen"
 
-#: lib/gui/simulator.py:123
+#: lib/gui/simulator.py:125
 msgid "Show color changes"
 msgstr "Farbwechsel anzeigen"
 
-#: lib/gui/simulator.py:133 electron/src/renderer/components/Simulator.vue:167
+#: lib/gui/simulator.py:130
+msgid "Detach/attach simulator window"
+msgstr ""
+
+#: lib/gui/simulator.py:140 electron/src/renderer/components/Simulator.vue:167
 msgid "Controls"
 msgstr "Steuerung"
 
-#: lib/gui/simulator.py:147 electron/src/renderer/components/Simulator.vue:225
+#: lib/gui/simulator.py:154 electron/src/renderer/components/Simulator.vue:225
 msgid "Show"
 msgstr "Zeige"
 
-#: lib/gui/simulator.py:158
+#: lib/gui/simulator.py:167
 msgid "Speed"
 msgstr "Geschwindigkeit"
 
-#: lib/gui/simulator.py:314
+#: lib/gui/simulator.py:324
 #, python-format
 msgid "%d stitches/sec"
 msgstr "%d Stiche/Sekunde"
 
-#: lib/gui/simulator.py:725
+#: lib/gui/simulator.py:737
 #, python-format
 msgid "Command: %s"
 msgstr ""
 
-#: lib/gui/simulator.py:1215 lib/gui/simulator.py:1227
-msgid "Preview"
-msgstr "Vorschau"
-
-#: lib/gui/simulator.py:1258
+#: lib/gui/simulator.py:1060
 msgid "Embroidery Simulation"
 msgstr "Stick Simulation"
 
@@ -4312,6 +4312,10 @@ msgstr "Füllobjekte aufspalten"
 msgid "Tools: Fill"
 msgstr "Werkzeuge: Füllung"
 
+#: inx/inkstitch_break_apart.inx:14
+msgid "This extension will try to repair fill shapes and break them apart if necessary. Holes will be retained. Use on simple or overlapping shapes."
+msgstr ""
+
 #: inx/inkstitch_break_apart.inx:19
 msgid "Complex"
 msgstr "Komplex"
@@ -4320,13 +4324,17 @@ msgstr "Komplex"
 msgid "Cleanup Document"
 msgstr "Dokument bereinigen"
 
+#: inx/inkstitch_cleanup.inx:5
+msgid "Use this extension to remove small objects from the document."
+msgstr ""
+
 #: inx/inkstitch_cleanup.inx:7
 msgid "Remove Small Fill Areas"
 msgstr "Kleine Füllbereiche entfernen"
 
 #: inx/inkstitch_cleanup.inx:7
-msgid "Removes areas smaller than dedined by threshold."
-msgstr "Entferne Bereiche, die kleiner sind als der Schwellenwert."
+msgid "Removes areas smaller than defined by threshold."
+msgstr ""
 
 #: inx/inkstitch_cleanup.inx:8
 msgid "Fill area threshold (px²)"
@@ -4374,6 +4382,10 @@ msgstr "Linie zu Satinsäule"
 #: inx/inkstitch_convert_to_stroke.inx:3
 msgid "Convert Satin to Stroke"
 msgstr "Satin zu Geradstich"
+
+#: inx/inkstitch_convert_to_stroke.inx:6
+msgid "Converts a satin column into a running stitch."
+msgstr ""
 
 #: inx/inkstitch_convert_to_stroke.inx:8
 msgid "Keep satin column"
@@ -4531,6 +4543,22 @@ msgstr "Bearbeiten"
 msgid "Embroider"
 msgstr "Sticken"
 
+#: inx/inkstitch_embroider.inx:5
+msgid "Create a stitch file"
+msgstr ""
+
+#: inx/inkstitch_embroider.inx:6
+msgid "Save your embroidery file through | File > Save a Copy ... |"
+msgstr ""
+
+#: inx/inkstitch_embroider.inx:7
+msgid "Choose from listed embroidery file formats and save."
+msgstr ""
+
+#: inx/inkstitch_embroider.inx:9
+msgid "Multiple file formats can be saved by choosing the zip file format."
+msgstr ""
+
 #: inx/inkstitch_fill_to_stroke.inx:3 inx/inkstitch_fill_to_stroke.inx:24
 msgid "Fill to Stroke"
 msgstr "Füllung zu Mittellinie"
@@ -4615,6 +4643,10 @@ msgstr "https://inkstitch.org/de/docs/thread-color/#farbpalette-erstellen"
 #: inx/inkstitch_global_commands.inx:3
 msgid "Add Commands"
 msgstr "Dokumentbefehle hinzufügen"
+
+#: inx/inkstitch_global_commands.inx:5
+msgid "These commands affect the entire embroidery design."
+msgstr ""
 
 #: inx/inkstitch_gradient_blocks.inx:3
 msgid "Convert to gradient blocks"
@@ -5236,6 +5268,10 @@ msgstr "Geradstich-Toleranz (mm)"
 msgid "Add Layer Commands"
 msgstr "Ebenenbefehle hinzufügen"
 
+#: inx/inkstitch_layer_commands.inx:5
+msgid "Commands will be added to the currently-selected layer."
+msgstr ""
+
 #: inx/inkstitch_lettering.inx:3
 msgid "Lettering"
 msgstr "Text"
@@ -5294,6 +5330,22 @@ msgstr "Benutzerdefinierter Ordner für Schriften"
 msgid "Font Management"
 msgstr "Schriftverwaltung"
 
+#: inx/inkstitch_lettering_custom_font_dir.inx:14
+msgid "Set a custom directory for additional fonts to be used with the lettering tool."
+msgstr ""
+
+#: inx/inkstitch_lettering_custom_font_dir.inx:20
+msgid "Usage: The custom font directory must contain a subdirectory for each font."
+msgstr ""
+
+#: inx/inkstitch_lettering_force_lock_stitches.inx:14
+msgid "Small fonts will sometimes unravel if threads are cut after the embroidery machine has finished the work. Therefore it is important that also diacritics with a smaller distance to the font body than defined by the collapse length value (default: 3mm) have lock stitches. This can be achieved by adding a forced lock stitch attribute to them."
+msgstr ""
+
+#: inx/inkstitch_lettering_force_lock_stitches.inx:20
+msgid "This extension has been build to help font authors to define \"force lock stitches\"-attributes automatically if they are placed in a predefined distance to the next object."
+msgstr ""
+
 #: inx/inkstitch_lettering_force_lock_stitches.inx:23
 msgid "Minimum distance (mm)"
 msgstr "Minimale Distanz (mm)"
@@ -5314,10 +5366,22 @@ msgstr "JSON erstellen"
 msgid "Font info"
 msgstr "Schriftinformation"
 
+#: inx/inkstitch_lettering_generate_json.inx:18
+msgid "Generates font.json which can be used by the lettering tool."
+msgstr ""
+
+#: inx/inkstitch_lettering_generate_json.inx:21
+msgid "The generated file can be viewed and updated with a standard text editor tool."
+msgstr ""
+
 #: inx/inkstitch_lettering_generate_json.inx:34
 #: inx/inkstitch_lettering_update_json_glyphlist.inx:17
 msgid "SVG Font File"
 msgstr "SVG-Schriftdatei"
+
+#: inx/inkstitch_lettering_generate_json.inx:40
+msgid "Keywords"
+msgstr ""
 
 #: inx/inkstitch_lettering_generate_json.inx:66
 msgid "Default Glyph"
@@ -5360,8 +5424,13 @@ msgid "Max Scale"
 msgstr "Maximale Skalierung"
 
 #: inx/inkstitch_lettering_generate_json.inx:89
+#: inx/inkstitch_lettering_generate_json.inx:90
 msgid "Kerning"
 msgstr "Kerning"
+
+#: inx/inkstitch_lettering_generate_json.inx:91
+msgid "If your font file contains kerning information, you can completely ignore the following settings (unless you want to overwrite them). If the kerning information cannot be found, these values will apply automatically."
+msgstr ""
 
 #: inx/inkstitch_lettering_generate_json.inx:99
 #: inx/inkstitch_lettering_generate_json.inx:107
@@ -5396,6 +5465,14 @@ msgstr "Breite des Leerzeichens (Standard: 20)"
 msgid "Remove Kerning"
 msgstr "Kerning entfernen"
 
+#: inx/inkstitch_lettering_remove_kerning.inx:14
+msgid "Removes Kerning information from given SVG files"
+msgstr ""
+
+#: inx/inkstitch_lettering_remove_kerning.inx:18
+msgid "⚠ Make sure you keep a copy of the original file. After running this extension kerning information will be lost unrevertably from these files."
+msgstr ""
+
 #: inx/inkstitch_lettering_remove_kerning.inx:23
 msgid "Select Font Files"
 msgstr "Schriftdateien auswählen"
@@ -5404,6 +5481,10 @@ msgstr "Schriftdateien auswählen"
 msgid "Update Glyphlist"
 msgstr "Liste verfügbarer Zeichen aktualisieren"
 
+#: inx/inkstitch_lettering_update_json_glyphlist.inx:14
+msgid "Updates the glyphlist in the json file."
+msgstr ""
+
 #: inx/inkstitch_lettering_update_json_glyphlist.inx:18
 msgid "JSON File"
 msgstr "JSON-Datei"
@@ -5411,6 +5492,14 @@ msgstr "JSON-Datei"
 #: inx/inkstitch_letters_to_font.inx:3
 msgid "Letters to font"
 msgstr "Buchstaben zu Schrift"
+
+#: inx/inkstitch_letters_to_font.inx:14
+msgid "Includes all letters of a predigitized embroidery font (one file for each letter) into the document in order to make it available for the Ink/Stitch lettering system."
+msgstr ""
+
+#: inx/inkstitch_letters_to_font.inx:17
+msgid "Embroidery files need to have the name of the letter right before the file extension. E.g. A.dst or Example_Font_A.dst will be recognized as the letter A."
+msgstr ""
 
 #: inx/inkstitch_letters_to_font.inx:22
 msgid "File format"
@@ -5431,6 +5520,10 @@ msgstr "Als Parameter"
 #: inx/inkstitch_letters_to_font.inx:65
 msgid "As symbol"
 msgstr "Als Symbol"
+
+#: inx/inkstitch_letters_to_font.inx:70
+msgid "⚠ After running this function, drag the baseline into the desired position and place the letters accordingly. Save your font in a separate folder. Then generate the json file (with \"Autoroute Satin\" unchecked)."
+msgstr ""
 
 #: inx/inkstitch_object_commands.inx:3
 msgid "Attach Commands to Selected Objects"
@@ -5783,6 +5876,10 @@ msgstr "PDF-Export"
 #: inx/inkstitch_remove_embroidery_settings.inx:3
 msgid "Remove embroidery settings"
 msgstr "Stickeinstellungen entfernen"
+
+#: inx/inkstitch_remove_embroidery_settings.inx:5
+msgid "Use this extension to remove the information Ink/Stitch has stored in your document. This can be especially useful if you copy and paste objects from an embroidery design into another document."
+msgstr ""
 
 #: inx/inkstitch_remove_embroidery_settings.inx:7
 msgid "Remove Params"
