@@ -753,12 +753,13 @@ class DrawingPanel(wx.Panel):
         self.set_current_stitch(self.current_stitch - 1)
 
     def on_left_mouse_button_down(self, event):
-        self.CaptureMouse()
-        self.drag_start = event.GetPosition()
-        self.drag_original_pan = self.pan
-        self.Bind(wx.EVT_MOTION, self.on_drag)
-        self.Bind(wx.EVT_MOUSE_CAPTURE_LOST, self.on_drag_end)
-        self.Bind(wx.EVT_LEFT_UP, self.on_drag_end)
+        if self.loaded:
+            self.CaptureMouse()
+            self.drag_start = event.GetPosition()
+            self.drag_original_pan = self.pan
+            self.Bind(wx.EVT_MOTION, self.on_drag)
+            self.Bind(wx.EVT_MOUSE_CAPTURE_LOST, self.on_drag_end)
+            self.Bind(wx.EVT_LEFT_UP, self.on_drag_end)
 
     def on_drag(self, event):
         if self.HasCapture() and event.Dragging():
