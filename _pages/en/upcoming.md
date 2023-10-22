@@ -13,9 +13,13 @@ toc: true
   * Test Swatches
 
 ### Extension Updates
-  * Remove embroidery settings: add option to remove only specific commands
-  * Cleanup document: add options to delete empty groups and layers
-  * Preferences: electron -> wxpython
+  * Remove embroidery settings
+    * add option to remove only specific commands
+  * Cleanup document:
+    * add option to delete empty groups and layers
+    * add test run option to display to be removed element names
+  * Preferences
+    * electron -> wxpython
 
 ## Lettering
   * Add glyph filter
@@ -24,8 +28,12 @@ toc: true
   * Update TT Masters
 
 ## Params
-  * Improved simulator
   * Improved error reporting
+
+## Simulator
+  * Improved simulator for params and lettering
+  * Simulator is now attached to the main window (params or lettering).
+    It is detachable and the last state will be remembered.
 
 ## Stitch types
 
@@ -53,8 +61,9 @@ toc: true
     remove specific commands only
 
 ## Bug Fixes
- * [#2527](https://github.com/inkstitch/inkstitch/issues/2527) Stitch plan: multiply sequence error
+ * [#2566](https://github.com/inkstitch/inkstitch/issues/2566) Update depcrecated inx file descriptions, so they are translatable now
  * [#2550](https://github.com/inkstitch/inkstitch/issues/2550) Lettering: error on empty layer in font file
+ * [#2527](https://github.com/inkstitch/inkstitch/issues/2527) Stitch plan: multiply sequence error
  * [#2502](https://github.com/inkstitch/inkstitch/issues/2502) Gradient Blocks: Unit fix
  * [#2499](https://github.com/inkstitch/inkstitch/issues/2499) LPE Satin: width of "normal" straight pattern wasn't correct
  * [#2491](https://github.com/inkstitch/inkstitch/issues/2491) Toggle commands: fix if first command in invisible group/layer
