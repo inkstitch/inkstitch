@@ -24,6 +24,9 @@
         <option value="1">Hidden</option>
         <option value="2">Lower opacity</option>
     </param>
+    <spacer />
+      <param name="indicator-size" type="float" min="0" max="50"  indent="1" gui-text="Indicator size"
+             precision="2">0.5</param>
     <script>
         {{ command_tag | safe }}
     </script>

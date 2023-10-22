@@ -25,6 +25,7 @@ class DensityMap(InkstitchExtension):
         self.arg_parser.add_argument("-r", "--density-radius-red", type=float, default=0.5, dest="radius_red")
         self.arg_parser.add_argument("-m", "--num-neighbors-yellow", type=int, default=3, dest="num_neighbors_yellow")
         self.arg_parser.add_argument("-s", "--density-radius-yellow", type=float, default=0.5, dest="radius_yellow")
+        self.arg_parser.add_argument("-i", "--indicator-size", type=float, default=0.5, dest="indicator_size")
 
     def effect(self):
         # delete old stitch plan
@@ -44,7 +45,7 @@ class DensityMap(InkstitchExtension):
         color_groups = create_color_groups(layer)
         density_options = [{'max_neighbors': self.options.num_neighbors_red, 'radius': self.options.radius_red},
                            {'max_neighbors': self.options.num_neighbors_yellow, 'radius': self.options.radius_yellow}]
-        color_block_to_density_markers(svg, color_groups, stitch_plan, density_options)
+        color_block_to_density_markers(svg, color_groups, stitch_plan, density_options, self.options.indicator_size)
 
         # update layer visibility 0 = unchanged, 1 = hidden, 2 = lower opacity
         groups = self.document.getroot().findall(SVG_GROUP_TAG)
@@ -92,7 +93,7 @@ def create_color_groups(layer):
     return color_groups
 
 
-def color_block_to_density_markers(svg, groups, stitch_plan, density_options):
+def color_block_to_density_markers(svg, groups, stitch_plan, density_options, indicator_size):
     num_neighbors = []
     for option in density_options:
         radius = option['radius'] * PIXELS_PER_MM
@@ -113,7 +114,7 @@ def color_block_to_density_markers(svg, groups, stitch_plan, density_options):
             'style': "fill: %s; stroke: #7e7e7e; stroke-width: 0.02%%;" % color,
             'cx': "%s" % coord[0],
             'cy': "%s" % coord[1],
-            'r': str(0.5),
+            'r': str(indicator_size * 2),
             'transform': get_correction_transform(svg)
         })
         group.append(density_marker)
