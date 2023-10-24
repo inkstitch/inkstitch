@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-10-23 01:05+0000\n"
-"PO-Revision-Date: 2023-10-23 01:06\n"
+"POT-Creation-Date: 2023-10-24 01:05+0000\n"
+"PO-Revision-Date: 2023-10-24 01:06\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-23 01:05+0000\n"
+"POT-Creation-Date: 2023-10-24 01:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1822,8 +1822,8 @@ msgid "Random zig-zag spacing percentage"
 msgstr "Pourcentage aléatoire pour l'espacement zigzag"
 
 #: lib/elements/satin_column.py:121
-msgid "Amount of random jitter added to stitch length."
-msgstr "Quantité d'aléatoire ajoutée à la longueur du point."
+msgid "Amount of random jitter added to zigzag spacing."
+msgstr ""
 
 #: lib/elements/satin_column.py:127
 msgid "Default"
@@ -4564,7 +4564,7 @@ msgstr "Des formats de fichiers multiples peuvent être enregistrés en choisiss
 
 #: inx/inkstitch_fill_to_stroke.inx:3 inx/inkstitch_fill_to_stroke.inx:24
 msgid "Fill to Stroke"
-msgstr "Remplissage vers trait"
+msgstr "Remplissage en Trait"
 
 #: inx/inkstitch_fill_to_stroke.inx:19
 msgid "Threshold for dead ends (mm)"
