@@ -3,8 +3,6 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-from lib.extensions.troubleshoot import Troubleshoot
-
 from .apply_threadlist import ApplyThreadlist
 from .auto_run import AutoRun
 from .auto_satin import AutoSatin
@@ -46,6 +44,7 @@ from .preferences import Preferences
 from .print_pdf import Print
 from .remove_embroidery_settings import RemoveEmbroiderySettings
 from .reorder import Reorder
+from .rhinestone import Rhinestone
 from .select_elements import SelectElements
 from .selection_to_guide_line import SelectionToGuideLine
 from .selection_to_pattern import SelectionToPattern
@@ -54,6 +53,7 @@ from .stitch_plan_preview import StitchPlanPreview
 from .stitch_plan_preview_undo import StitchPlanPreviewUndo
 from .stroke_to_lpe_satin import StrokeToLpeSatin
 from .test_swatches import TestSwatches
+from .troubleshoot import Troubleshoot
 from .update_svg import UpdateSvg
 from .zigzag_line_to_satin import ZigzagLineToSatin
 from .zip import Zip
@@ -102,6 +102,7 @@ __all__ = extensions = [ApplyThreadlist,
                         Print,
                         RemoveEmbroiderySettings,
                         Reorder,
+                        Rhinestone,
                         SelectElements,
                         SelectionToGuideLine,
                         SelectionToPattern,
