@@ -25,7 +25,7 @@
     <param name="stroke_width" type="float" gui-text="Stroke Width" min="0.01" max="10"  precision="2" indents="1">0.264</param>
     <param name="spacing_method" type="optiongroup" appearance="combo" gui-text="Spacing Method" indents="1">
         <option value="distribute">Enlarge spacing to fit line length</option>
-        <option value="even">Strict spacing</option>
+        <option value="strict">Strict spacing</option>
     </param>
     <script>
         {{ command_tag | safe }}
