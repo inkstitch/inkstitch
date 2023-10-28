@@ -813,6 +813,7 @@ class SatinColumn(EmbroideryElement):
                 path_lists[0].append(before)
                 path_lists[1].append(after)
         else:
+            # rails have opposite direction
             rail = rails[0]
             before, after = cut(rail, rail.project(shgeo.Point(cut_points[0])))
             path_lists[0].append(before)
@@ -854,6 +855,7 @@ class SatinColumn(EmbroideryElement):
         for path_list in path_lists:
             if len(path_list) in (2, 4):
                 # Add the rung just after the start of the satin.
+                # If the rails have opposite directions it may end up at the end of the satin.
                 rung_start = path_list[0].interpolate(0.3)
                 rails_to_reverse = self._get_rails_to_reverse()
                 if rails_to_reverse[0] == rails_to_reverse[1]:
