@@ -704,13 +704,10 @@ class SatinColumn(EmbroideryElement):
         for rail in self.rails:
             point_lists.append(list(reversed(self.flatten_subpath(rail))))
 
-        # reverse the order of the rails because we're sewing in the opposite direction
-        point_lists.reverse()
-
         for rung in self.rungs:
             point_lists.append(self.flatten_subpath(rung))
 
-        # If originally there were only two subpaths (no rungs) with same number of rails, the rails may now
+        # If originally there were only two subpaths (no rungs) with same number of points, the rails may now
         # have two rails with different number of points, and still no rungs, let's add one.
 
         if not self.rungs:
@@ -808,10 +805,26 @@ class SatinColumn(EmbroideryElement):
 
         path_lists = [[], []]
 
-        for i, rail in enumerate(rails):
-            before, after = cut(rail, rail.project(shgeo.Point(cut_points[i])))
+        rails_to_reverse = self._get_rails_to_reverse()
+
+        if rails_to_reverse[0] == rails_to_reverse[1]:
+            for i, rail in enumerate(rails):
+                before, after = cut(rail, rail.project(shgeo.Point(cut_points[i])))
+                path_lists[0].append(before)
+                path_lists[1].append(after)
+        else:
+            # rails have opposite direction
+            rail = rails[0]
+            before, after = cut(rail, rail.project(shgeo.Point(cut_points[0])))
             path_lists[0].append(before)
             path_lists[1].append(after)
+            rail = rails[1]
+            before, after = cut(rail, rail.project(shgeo.Point(cut_points[1])))
+            path_lists[1].append(before)
+            path_lists[0].append(after)
+
+        if rails_to_reverse[0]:
+            path_lists = [path_lists[1], path_lists[0]]
 
         return path_lists
 
@@ -842,8 +855,13 @@ class SatinColumn(EmbroideryElement):
         for path_list in path_lists:
             if len(path_list) in (2, 4):
                 # Add the rung just after the start of the satin.
+                # If the rails have opposite directions it may end up at the end of the satin.
                 rung_start = path_list[0].interpolate(0.3)
-                rung_end = path_list[1].interpolate(0.3)
+                rails_to_reverse = self._get_rails_to_reverse()
+                if rails_to_reverse[0] == rails_to_reverse[1]:
+                    rung_end = path_list[1].interpolate(0.3)
+                else:
+                    rung_end = path_list[1].interpolate(-0.3)
                 rung = shgeo.LineString((rung_start, rung_end))
 
                 # make it a bit bigger so that it definitely intersects
