@@ -1,7 +1,7 @@
 ---
 title: "Changes, Updates and Fixes for Ink/Stitch made after the release of v3.0.1"
 permalink: /upcoming/
-last_modified_at: 2023-10-15
+last_modified_at: 2023-10-29
 sidebar:
   nav: pages
 toc: true
@@ -13,6 +13,8 @@ toc: true
   * Test Swatches
 
 ### Extension Updates
+  * Density map
+    * add indicator size option
   * Remove embroidery settings
     * add option to remove only specific commands
   * Cleanup document:
@@ -25,7 +27,11 @@ toc: true
   * Add glyph filter
 
 ## Fonts
-  * Update TT Masters
+
+### Updates
+  * AGS Γαραμου Garamond
+  * Apex Simple AGS
+  * TT Masters
 
 ## Params
   * Improved error reporting
@@ -61,6 +67,7 @@ toc: true
     remove specific commands only
 
 ## Bug Fixes
+ * [#2578](https://github.com/inkstitch/inkstitch/issues/2578) Auto-route Satin: handle sided properties correctly
  * [#2566](https://github.com/inkstitch/inkstitch/issues/2566) Update depcrecated inx file descriptions, so they are translatable now
  * [#2550](https://github.com/inkstitch/inkstitch/issues/2550) Lettering: error on empty layer in font file
  * [#2527](https://github.com/inkstitch/inkstitch/issues/2527) Stitch plan: multiply sequence error
