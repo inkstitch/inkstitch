@@ -9,8 +9,6 @@ In entspannter Atmosphäre wollen wir uns gemeinsam mit Ink/Stitch und den Theme
 
 Natürlich sind sowohl Stickanfänger als auch fortgeschrittene Nutzer herzlich willkommen.
 
-![UserTreffen](/assets/images/posts/de/usertreffen.png)
-
 ## Wann und wo?
 
 **25. Mai 2024**<br>
