@@ -18,7 +18,7 @@ from ..i18n import _
 from ..marker import get_marker_elements
 from ..stitch_plan import StitchGroup
 from ..stitches import (auto_fill, circular_fill, contour_fill, guided_fill,
-                        legacy_fill)
+                        legacy_fill, linear_gradient_fill)
 from ..stitches.meander_fill import meander_fill
 from ..svg import PIXELS_PER_MM, get_node_transform
 from ..svg.clip import get_clip_path
@@ -114,6 +114,7 @@ class FillStitch(EmbroideryElement):
                      ParamOption('guided_fill', _("Guided Fill")),
                      ParamOption('meander_fill', _("Meander Fill")),
                      ParamOption('circular_fill', _("Circular Fill")),
+                     ParamOption('linear_gradient_fill', _("Linear Gradient Fill")),
                      ParamOption('legacy_fill', _("Legacy Fill"))]
 
     @property
@@ -226,7 +227,8 @@ class FillStitch(EmbroideryElement):
            select_items=[('fill_method', 'auto_fill'),
                          ('fill_method', 'guided_fill'),
                          ('fill_method', 'meander_fill'),
-                         ('fill_method', 'circular_fill')])
+                         ('fill_method', 'circular_fill'),
+                         ('fill_method', 'linear_gradient_fill')])
     def expand(self):
         return self.get_float_param('expand_mm', 0)
 
@@ -254,6 +256,7 @@ class FillStitch(EmbroideryElement):
            select_items=[('fill_method', 'auto_fill'),
                          ('fill_method', 'contour_fill'),
                          ('fill_method', 'guided_fill'),
+                         ('fill_method', 'linear_gradient_fill'),
                          ('fill_method', 'legacy_fill')],
            default=3.0)
     def max_stitch_length(self):
@@ -270,6 +273,7 @@ class FillStitch(EmbroideryElement):
                          ('fill_method', 'contour_fill'),
                          ('fill_method', 'guided_fill'),
                          ('fill_method', 'circular_fill'),
+                         ('fill_method', 'linear_gradient_fill'),
                          ('fill_method', 'legacy_fill')],
            default=0.25)
     def row_spacing(self):
@@ -297,7 +301,10 @@ class FillStitch(EmbroideryElement):
                      'Fractional values are allowed and can have less visible diagonals than integer values.'),
            type='int',
            sort_index=25,
-           select_items=[('fill_method', 'auto_fill'), ('fill_method', 'guided_fill'), ('fill_method', 'legacy_fill')],
+           select_items=[('fill_method', 'auto_fill'),
+                         ('fill_method', 'guided_fill'),
+                         ('fill_method', 'linear_gradient_fill'),
+                         ('fill_method', 'legacy_fill')],
            default=4)
     def staggers(self):
         return self.get_float_param("staggers", 4)
@@ -310,7 +317,9 @@ class FillStitch(EmbroideryElement):
                   'Skipping it decreases stitch count and density.'),
         type='boolean',
         sort_index=26,
-        select_items=[('fill_method', 'auto_fill'), ('fill_method', 'guided_fill'),
+        select_items=[('fill_method', 'auto_fill'),
+                      ('fill_method', 'guided_fill'),
+                      ('fill_method', 'linear_gradient_fill'),
                       ('fill_method', 'legacy_fill')],
         default=False)
     def skip_last(self):
@@ -353,7 +362,8 @@ class FillStitch(EmbroideryElement):
            select_items=[('fill_method', 'auto_fill'),
                          ('fill_method', 'guided_fill'),
                          ('fill_method', 'meander_fill'),
-                         ('fill_method', 'circular_fill')],
+                         ('fill_method', 'circular_fill'),
+                         ('fill_method', 'linear_gradient_fill')],
            sort_index=31)
     def running_stitch_length(self):
         return max(self.get_float_param("running_stitch_length_mm", 2.5), 0.01)
@@ -724,10 +734,13 @@ class FillStitch(EmbroideryElement):
                         stitch_groups.extend(self.do_meander_fill(fill_shape, shape, i, start, end))
                     elif self.fill_method == 'circular_fill':
                         stitch_groups.extend(self.do_circular_fill(fill_shape, previous_stitch_group, start, end))
+                    elif self.fill_method == 'linear_gradient_fill':
+                        stitch_groups.extend(self.do_linear_gradient_fill(fill_shape, previous_stitch_group, start, end))
                     else:
                         # auto_fill
                         stitch_groups.extend(self.do_auto_fill(fill_shape, previous_stitch_group, start, end))
-                previous_stitch_group = stitch_groups[-1]
+                if stitch_groups:
+                    previous_stitch_group = stitch_groups[-1]
 
             return stitch_groups
 
@@ -746,10 +759,16 @@ class FillStitch(EmbroideryElement):
                             lock_stitches=self.lock_stitches) for stitch_list in stitch_lists]
 
     def do_underlay(self, shape, starting_point):
+        color = self.color
+        if self.color.startswith('url') and "linearGradient" in color:
+            color = self.color[5:-1]
+            xpath = f'.//svg:defs/svg:linearGradient[@id="{color}"]'
+            gradient = self.node.getroottree().getroot().findone(xpath)
+            color = [style['stop-color'] for style in gradient.stop_styles][0]
         stitch_groups = []
         for i in range(len(self.fill_underlay_angle)):
             underlay = StitchGroup(
-                color=self.color,
+                color=color,
                 tags=("auto_fill", "auto_fill_underlay"),
                 lock_stitches=self.lock_stitches,
                 stitches=auto_fill(
@@ -914,3 +933,14 @@ class FillStitch(EmbroideryElement):
             tags=("circular_fill", "auto_fill_top"),
             stitches=stitches)
         return [stitch_group]
+
+    def do_linear_gradient_fill(self, shape, last_patch, start, end):
+        gradient = linear_gradient_fill(self, shape, start, end)
+        stitch_groups = []
+        for stitches, color in gradient:
+            stitch_groups.append(StitchGroup(
+                color=color,
+                tags=("linear_gradient_fill", "auto_fill_top"),
+                stitches=stitches)
+            )
+        return stitch_groups
