@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2023-10-25 01:05+0000\n"
-"PO-Revision-Date: 2023-10-29 01:09\n"
+"PO-Revision-Date: 2023-11-05 01:10\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -5514,7 +5514,7 @@ msgstr "Format de fichier"
 
 #: inx/inkstitch_letters_to_font.inx:61
 msgid "Font directory"
-msgstr "Répertoire des polices"
+msgstr "Répertoire contenant les lettres"
 
 #: inx/inkstitch_letters_to_font.inx:63
 msgid "Import commands"
