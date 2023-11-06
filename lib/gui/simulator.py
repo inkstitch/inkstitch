@@ -81,7 +81,7 @@ class ControlPanel(wx.Panel):
         self.btnDirection = wx.BitmapToggleButton(self, -1, style=self.button_style)
         self.btnDirection.SetValue(True)
         self.btnDirection.Bind(wx.EVT_TOGGLEBUTTON, self.on_direction_button)
-        self.btnDirection.SetBitmap(self.load_icon('forward'))
+        self.btnDirection.SetBitmap(self.load_icon('reverse'))
         self.btnDirection.SetToolTip(_('Animation direction (arrow left, arrow right)'))
         self.btnPlay = wx.BitmapToggleButton(self, -1, style=self.button_style)
         self.btnPlay.Bind(wx.EVT_TOGGLEBUTTON, self.on_play_button)
@@ -290,14 +290,14 @@ class ControlPanel(wx.Panel):
 
     def animation_forward(self, event=None):
         self.btnDirection.SetValue(True)
-        self.btnDirection.SetBitmap(self.load_icon('forward'))
+        self.btnDirection.SetBitmap(self.load_icon('reverse'))
         self.drawing_panel.forward()
         self.direction = 1
         self.update_speed_text()
 
     def animation_reverse(self, event=None):
         self.btnDirection.SetValue(False)
-        self.btnDirection.SetBitmap(self.load_icon('reverse'))
+        self.btnDirection.SetBitmap(self.load_icon('forward'))
         self.drawing_panel.reverse()
         self.direction = -1
         self.update_speed_text()
