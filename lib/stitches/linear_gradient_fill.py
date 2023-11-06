@@ -59,10 +59,13 @@ def _get_lines_nums_and_colors(shape, fill):
     rotated_shape = rotate(shape, -angle, origin=(orig_bbox[0], orig_bbox[3]), use_radians=True)
     bounds = rotated_shape.bounds
 
+    # extend bounding box for lines just a little to make sure we cover the whole area with lines
     rot_bbox = Polygon([
-        (bounds[0], bounds[1]),
-        (bounds[2], bounds[1]),
-        (bounds[2], bounds[3]), (bounds[0], bounds[3])])
+        (bounds[0] - fill.max_stitch_length, bounds[1] - fill.row_spacing),
+        (bounds[2] + fill.max_stitch_length, bounds[1] - fill.row_spacing),
+        (bounds[2] + fill.max_stitch_length, bounds[3] + fill.row_spacing),
+        (bounds[0]- fill.max_stitch_length, bounds[3] + fill.row_spacing)
+    ])
     rot_bbox = list(rotate(rot_bbox, angle, origin=(orig_bbox[0], orig_bbox[3]), use_radians=True).exterior.coords)
 
     top_line = LineString([rot_bbox[0], rot_bbox[1]])
