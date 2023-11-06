@@ -78,11 +78,10 @@ class ControlPanel(wx.Panel):
         self.btnForwardCommand.Bind(wx.EVT_BUTTON, self.animation_one_command_forward)
         self.btnForwardCommand.SetBitmap(self.load_icon('forward_command'))
         self.btnForwardCommand.SetToolTip(_('Go forward one command (page-up)'))
-        self.btnDirection = wx.BitmapToggleButton(self, -1, style=self.button_style)
-        self.btnDirection.SetValue(True)
-        self.btnDirection.Bind(wx.EVT_TOGGLEBUTTON, self.on_direction_button)
-        self.btnDirection.SetBitmap(self.load_icon('reverse'))
-        self.btnDirection.SetToolTip(_('Animation direction (arrow left, arrow right)'))
+        self.btnDirection = wx.Button(self, -1, style=self.button_style)
+        self.btnDirection.Bind(wx.EVT_BUTTON, self.on_direction_button)
+        self.btnDirection.SetBitmap(self.load_icon('direction'))
+        self.btnDirection.SetToolTip(_('Switch animation direction (arrow left, arrow right)'))
         self.btnPlay = wx.BitmapToggleButton(self, -1, style=self.button_style)
         self.btnPlay.Bind(wx.EVT_TOGGLEBUTTON, self.on_play_button)
         self.btnPlay.SetBitmap(self.load_icon('play'))
@@ -289,22 +288,17 @@ class ControlPanel(wx.Panel):
             self.set_speed(self.target_stitches_per_second)
 
     def animation_forward(self, event=None):
-        self.btnDirection.SetValue(True)
-        self.btnDirection.SetBitmap(self.load_icon('reverse'))
         self.drawing_panel.forward()
         self.direction = 1
         self.update_speed_text()
 
     def animation_reverse(self, event=None):
-        self.btnDirection.SetValue(False)
-        self.btnDirection.SetBitmap(self.load_icon('forward'))
         self.drawing_panel.reverse()
         self.direction = -1
         self.update_speed_text()
 
     def on_direction_button(self, event):
-        direction = self.btnDirection.GetValue()
-        if direction:
+        if self.direction == -1:
             self.animation_forward()
         else:
             self.animation_reverse()
@@ -372,19 +366,15 @@ class ControlPanel(wx.Panel):
 
     def animation_pause(self, event=None):
         self.drawing_panel.stop()
-        self.btnPlay.SetBitmap(self.load_icon('play'))
 
     def animation_start(self, event=None):
         self.drawing_panel.go()
-        self.btnPlay.SetBitmap(self.load_icon('pause'))
 
     def on_start(self):
         self.btnPlay.SetValue(True)
-        self.btnPlay.SetBitmap(self.load_icon('pause'))
 
     def on_stop(self):
         self.btnPlay.SetValue(False)
-        self.btnPlay.SetBitmap(self.load_icon('play'))
 
     def on_play_button(self, event):
         play = self.btnPlay.GetValue()
