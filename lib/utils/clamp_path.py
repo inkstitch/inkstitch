@@ -89,24 +89,30 @@ def clamp_path_to_polygon(path, polygon):
     # contains() checks can fail without the buffer.
     buffered_polygon = prep(polygon.buffer(1e-9))
 
-    last_segment_inside = None
+    last_point_inside = None
     was_inside = False
     result = []
 
     for segment in split_path:
         if buffered_polygon.contains(segment):
-            if not was_inside:
-                if last_segment_inside is not None:
-                    # The path crossed out of the polygon, and now it's crossed
-                    # back in.  We need to add a path along the border between
-                    # the exiting and entering points.
+            start = ShapelyPoint(segment.coords[0])
+
+            # The first part of this or condition checks whether we traveled
+            # outside the shape for a while.
+            #
+            # The second part of this or condition checks whether part of the
+            # path was removed by difference() above, because it coincided
+            # with part of the shape border.
+            if not was_inside or last_point_inside.distance(start) > 0.01:
+                if last_point_inside is not None:
+                    # We traveled outside or on the border of the shape for
+                    # a while.  In either case, we need to add a path along the
+                    # border between the exiting and entering points.
 
                     # First, find the two points.  Buffer them just a bit to
                     # ensure intersection with the border.
-                    x, y = last_segment_inside.coords[-1]
-                    exit_point = ShapelyPoint(x, y).buffer(0.01, resolution=1)
-                    x, y = segment.coords[0]
-                    entry_point = ShapelyPoint(x, y).buffer(0.01, resolution=1)
+                    exit_point = last_point_inside.buffer(0.01, resolution=1)
+                    entry_point = ShapelyPoint(segment.coords[0]).buffer(0.01, resolution=1)
 
                     if not exit_point.intersects(entry_point):
                         # Now break the border into pieces using those points.
@@ -125,7 +131,7 @@ def clamp_path_to_polygon(path, polygon):
 
             result.append(segment)
             was_inside = True
-            last_segment_inside = segment
+            last_point_inside = ShapelyPoint(segment.coords[-1])
         else:
             was_inside = False
 
