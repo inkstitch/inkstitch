@@ -180,7 +180,10 @@ def _get_stitch_groups(fill, shape, colors, color_lines, starting_point, ending_
     stitch_groups = []
     for color in colors:
         lines = color_lines[color]
-        segments = [list(line.coords) for line in MultiLineString(lines).intersection(shape).geoms if len(line.coords) > 1]
+        multiline = MultiLineString(lines).intersection(shape)
+        if not isinstance(multiline, MultiLineString):
+            continue
+        segments = [list(line.coords) for line in multiline.geoms if len(line.coords) > 1]
         fill_stitch_graph = build_fill_stitch_graph(shape, segments, starting_point, ending_point)
         if not graph_is_valid(fill_stitch_graph, shape, fill.running_stitch_length):
             return fallback(shape, fill.running_stitch_length, fill.running_stitch_tolerance)
