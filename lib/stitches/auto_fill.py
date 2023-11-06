@@ -638,7 +638,7 @@ def collapse_sequential_outline_edges(path, graph):
     return new_path
 
 
-def travel(shape, travel_graph, edge, running_stitch_length, running_stitch_tolerance, skip_last, underpath):
+def travel(shape, travel_graph, edge, running_stitch_length, running_stitch_tolerance, skip_last, underpath, clamp=True):
     """Create stitches to get from one point on an outline of the shape to another."""
 
     start, end = edge
@@ -647,7 +647,8 @@ def travel(shape, travel_graph, edge, running_stitch_length, running_stitch_tole
         path = smooth_path(path, 2)
     else:
         path = [InkstitchPoint.from_tuple(point) for point in path]
-    path = clamp_path_to_polygon(path, shape)
+    if clamp:
+        path = clamp_path_to_polygon(path, shape)
 
     points = running_stitch(path, running_stitch_length, running_stitch_tolerance)
     stitches = [Stitch(point) for point in points]

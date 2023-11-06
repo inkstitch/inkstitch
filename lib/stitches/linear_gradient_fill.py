@@ -192,7 +192,8 @@ def _get_stitch_groups(fill, shape, colors, color_lines, starting_point, ending_
             fill.running_stitch_length,
             fill.running_stitch_tolerance,
             fill.skip_last,
-            False
+            False,  # underpath
+            False  # TODO: clamping somehow does the opposite of what it should do
         )
         stitch_groups.append((result, color))
     return stitch_groups

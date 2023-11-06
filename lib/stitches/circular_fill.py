@@ -117,7 +117,7 @@ def _get_start_end_sequence(outline, start, end):
     return substring(outline, start_dist, end_dist)
 
 
-def path_to_stitches(shape, path, travel_graph, fill_stitch_graph, running_stitch_length, running_stitch_tolerance, skip_last, underpath):
+def path_to_stitches(shape, path, travel_graph, fill_stitch_graph, running_stitch_length, running_stitch_tolerance, skip_last, underpath, clamp=True):
     path = collapse_sequential_outline_edges(path, fill_stitch_graph)
 
     stitches = []
@@ -144,6 +144,6 @@ def path_to_stitches(shape, path, travel_graph, fill_stitch_graph, running_stitc
 
             travel_graph.remove_edges_from(fill_stitch_graph[edge[0]][edge[1]]['segment'].get('underpath_edges', []))
         else:
-            stitches.extend(travel(shape, travel_graph, edge, running_stitch_length, running_stitch_tolerance, skip_last, underpath))
+            stitches.extend(travel(shape, travel_graph, edge, running_stitch_length, running_stitch_tolerance, skip_last, underpath, clamp))
 
     return stitches

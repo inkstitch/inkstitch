@@ -11,6 +11,7 @@ import numpy as np
 from inkex import Transform
 from shapely import geometry as shgeo
 from shapely.errors import GEOSException
+from shapely.ops import nearest_points
 from shapely.validation import explain_validity, make_valid
 
 from .. import tiles
@@ -714,10 +715,25 @@ class FillStitch(EmbroideryElement):
             return self.do_legacy_fill()
         else:
             stitch_groups = []
-            end = self.get_ending_point()
 
-            for shape in self.shape.geoms:
+            # start and end points
+            start = self.get_starting_point(previous_stitch_group)
+            final_end = self.get_ending_point()
+
+            # sort shapes to get a nicer routing
+            shapes = list(self.shape.geoms)
+            if start:
+                shapes.sort(key=lambda shape: shape.distance(shgeo.Point(start)))
+            else:
+                shapes.sort(key=lambda shape: shape.bounds[0])
+
+            for i, shape in enumerate(shapes):
                 start = self.get_starting_point(previous_stitch_group)
+                if i < len(shapes) - 1:
+                    end = nearest_points(shape, shapes[i+1])[0].coords
+                else:
+                    end = final_end
+
                 if self.fill_underlay:
                     underlay_shapes = self.underlay_shape(shape)
                     for underlay_shape in underlay_shapes.geoms:
@@ -739,8 +755,13 @@ class FillStitch(EmbroideryElement):
                     else:
                         # auto_fill
                         stitch_groups.extend(self.do_auto_fill(fill_shape, previous_stitch_group, start, end))
-                if stitch_groups:
-                    previous_stitch_group = stitch_groups[-1]
+                    if stitch_groups:
+                        previous_stitch_group = stitch_groups[-1]
+
+            # sort colors of linear gradient (if multiple shapes)
+            if self.fill_method == 'linear_gradient_fill':
+                colors = [stitch_group.color for stitch_group in stitch_groups]
+                stitch_groups.sort(key=lambda group: colors.index(group.color))
 
             return stitch_groups
 
