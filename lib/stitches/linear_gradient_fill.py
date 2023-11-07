@@ -21,7 +21,7 @@ from .guided_fill import apply_stitches
 
 def linear_gradient_fill(fill, shape, starting_point, ending_point):
     has_gradient, colors, lines, line_nums = _get_lines_nums_and_colors(shape, fill)
-    color_lines = _get_color_lines(colors, line_nums, lines)
+    color_lines, colors = _get_color_lines(colors, line_nums, lines)
     if not has_gradient:
         colors.pop()
     stitch_groups = _get_stitch_groups(fill, shape, colors, color_lines, starting_point, ending_point)
@@ -107,9 +107,11 @@ def _get_color_lines(colors, line_nums, lines):  # noqa: C901
             if line_num > 0:
                 color_lines[color].extend(lines[0:line_num + 1])
             prev = line_num
+            prev_color = color
             continue
         if prev < 0 and line_num < 0:
             prev = line_num
+            prev_color = color
             continue
 
         prev += 1
@@ -176,7 +178,12 @@ def _get_color_lines(colors, line_nums, lines):  # noqa: C901
         check_stop_flag()
 
     color_lines[color].extend(lines[prev+1:])
-    return color_lines
+
+    # remove empty line lists and update colors
+    color_lines = {color: lines for color, lines in color_lines.items() if lines}
+    colors = list(color_lines.keys())
+
+    return color_lines, colors
 
 
 def _get_stitch_groups(fill, shape, colors, color_lines, starting_point, ending_point):
