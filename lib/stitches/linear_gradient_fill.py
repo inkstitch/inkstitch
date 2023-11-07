@@ -12,6 +12,7 @@ from shapely.affinity import rotate
 from shapely.geometry import LineString, MultiLineString, Point, Polygon
 
 from ..svg import get_correction_transform
+from ..utils.threading import check_stop_flag
 from .auto_fill import (build_fill_stitch_graph, build_travel_graph, fallback,
                         find_stitch_path, graph_is_valid)
 from .circular_fill import path_to_stitches
@@ -64,7 +65,7 @@ def _get_lines_nums_and_colors(shape, fill):
         (bounds[0] - fill.max_stitch_length, bounds[1] - fill.row_spacing),
         (bounds[2] + fill.max_stitch_length, bounds[1] - fill.row_spacing),
         (bounds[2] + fill.max_stitch_length, bounds[3] + fill.row_spacing),
-        (bounds[0]- fill.max_stitch_length, bounds[3] + fill.row_spacing)
+        (bounds[0] - fill.max_stitch_length, bounds[3] + fill.row_spacing)
     ])
     rot_bbox = list(rotate(rot_bbox, angle, origin=(orig_bbox[0], orig_bbox[3]), use_radians=True).exterior.coords)
 
@@ -172,14 +173,17 @@ def _get_color_lines(colors, line_nums, lines):  # noqa: C901
         prev = np.max(color2)
         prev_color = color
 
+        check_stop_flag()
+
     color_lines[color].extend(lines[prev+1:])
     return color_lines
 
 
 def _get_stitch_groups(fill, shape, colors, color_lines, starting_point, ending_point):
     stitch_groups = []
-    for color in colors:
+    for i, color in enumerate(colors):
         lines = color_lines[color]
+
         multiline = MultiLineString(lines).intersection(shape)
         if not isinstance(multiline, MultiLineString):
             continue
@@ -198,8 +202,33 @@ def _get_stitch_groups(fill, shape, colors, color_lines, starting_point, ending_
             fill.running_stitch_length,
             fill.running_stitch_tolerance,
             fill.skip_last,
-            False,  # underpath
+            False,  # no underpath
             False  # TODO: clamping somehow does the opposite of what it should do
         )
+
+        result = _remove_start_end_travel(fill, result, colors, i)
+
         stitch_groups.append((result, color))
     return stitch_groups
+
+
+def _remove_start_end_travel(fill, stitches, colors, color_section):
+    # We can savely remove travel stitches at start since we are changing color all the time
+    # but we do care for the first starting point, it is important when they use an underlay of the same color
+    remove_before = 0
+    if color_section > 0 or not fill.fill_underlay:
+        for stitch in range(len(stitches)-1):
+            if 'auto_fill_travel' not in stitches[stitch].tags:
+                remove_before = stitch
+                break
+        stitches = stitches[remove_before:]
+    remove_after = len(stitches) - 1
+    # We also remove travel stitches at the end. It is optional to the user if the last color block travels
+    # to the defined ending point
+    if color_section < len(colors) - 2 or not fill.stop_at_ending_point:
+        for stitch in range(remove_after, 0, -1):
+            if 'auto_fill_travel' not in stitches[stitch].tags:
+                remove_after = stitch + 1
+                break
+        stitches = stitches[:remove_after]
+    return stitches

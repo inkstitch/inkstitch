@@ -124,7 +124,7 @@ def path_to_stitches(shape, path, travel_graph, fill_stitch_graph, running_stitc
 
     # If the very first stitch is travel, we'll omit it in travel(), so add it here.
     if not path[0].is_segment():
-        stitches.append(Stitch(*path[0].nodes[0]))
+        stitches.append(Stitch(*path[0].nodes[0], tags={'auto_fill_travel'}))
 
     for edge in path:
         if edge.is_segment():

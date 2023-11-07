@@ -340,6 +340,20 @@ class FillStitch(EmbroideryElement):
         return self.get_boolean_param("flip", False)
 
     @property
+    @param(
+        'stop_at_ending_point',
+        _('Stop at ending point'),
+        tooltip=_('If this option is disabled, the ending point will only be used to define a general direction for '
+                  'stitch routing. When enabled the last section will end at the defined spot.'),
+        type='boolean',
+        sort_index=30,
+        select_items=[('fill_method', 'linear_gradient_fill')],
+        default=False
+     )
+    def stop_at_ending_point(self):
+        return self.get_boolean_param("stop_at_ending_point", False)
+
+    @property
     @param('underpath',
            _('Underpath'),
            tooltip=_('Travel inside the shape when moving from section to section.  Underpath '
