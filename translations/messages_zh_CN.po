@@ -1138,45 +1138,45 @@ msgstr ""
 
 #: lib/elements/element.py:223
 msgid "Allow lock stitches"
-msgstr ""
+msgstr "锁缝"
 
 #: lib/elements/element.py:224
 msgid "Tie thread at the beginning and/or end of this object. Manual stitch will only add lock stitches if force lock stitched is checked."
-msgstr ""
+msgstr "在开始处/结束处添加锁缝。手动缝纫模式仅在开启强制锁缝下添加锁缝。"
 
 #. options to allow lock stitch before and after objects
 #: lib/elements/element.py:229
 msgid "Both"
-msgstr ""
+msgstr "全部启用"
 
 #: lib/elements/element.py:229
 msgid "Before"
-msgstr ""
+msgstr "开始处"
 
 #: lib/elements/element.py:229
 msgid "After"
-msgstr ""
+msgstr "结束处"
 
 #: lib/elements/element.py:229
 msgid "Neither"
-msgstr ""
+msgstr "不启用"
 
 #: lib/elements/element.py:238
 #: inx/inkstitch_lettering_force_lock_stitches.inx:3
 msgid "Force lock stitches"
-msgstr ""
+msgstr "强制锁缝"
 
 #: lib/elements/element.py:239
 msgid "Sew lock stitches after sewing this element, even if the distance to the next object is shorter than defined by the collapse length value in the Ink/Stitch preferences."
-msgstr ""
+msgstr "元素刺绣完成后锁缝，即使到下一对象的距离小于“墨水/针迹”首选项中折叠长度值中定义的值仍生效。"
 
 #: lib/elements/element.py:250
 msgid "Tack stitch"
-msgstr ""
+msgstr "平缝样式"
 
 #: lib/elements/element.py:251
 msgid "Tack down stitch type"
-msgstr ""
+msgstr "选择平缝针迹类型"
 
 #: lib/elements/element.py:261 lib/elements/element.py:307
 msgid "Custom path"
@@ -1200,11 +1200,11 @@ msgstr ""
 
 #: lib/elements/element.py:296
 msgid "Lock stitch"
-msgstr ""
+msgstr "锁缝样式"
 
 #: lib/elements/element.py:297
 msgid "Lock stitch type"
-msgstr ""
+msgstr "选择锁缝样式"
 
 #: lib/elements/element.py:308
 msgid "Enter a custom path. For svg paths the first node will not be embroidered, but represents the last stitch of the element."
@@ -1224,19 +1224,19 @@ msgstr ""
 
 #: lib/elements/element.py:343
 msgid "Trim After"
-msgstr ""
+msgstr "完成后剪线"
 
 #: lib/elements/element.py:344
 msgid "Add a TRIM command after stitching this object."
-msgstr ""
+msgstr "在该元素刺绣完成后剪线"
 
 #: lib/elements/element.py:353
 msgid "Stop After"
-msgstr ""
+msgstr "完成后停止"
 
 #: lib/elements/element.py:354
 msgid "Add a STOP command after stitching this object."
-msgstr ""
+msgstr "在该元素刺绣完成后停止"
 
 #: lib/elements/element.py:396
 #, python-format
@@ -1546,7 +1546,7 @@ msgstr ""
 
 #: lib/elements/fill_stitch.py:347 lib/elements/stroke.py:108
 msgid "Running stitch length"
-msgstr ""
+msgstr "针迹长度"
 
 #: lib/elements/fill_stitch.py:348
 msgid "Length of stitches around the outline of the fill region used when moving from section to section. Also used for meander and circular fill."
@@ -1563,20 +1563,21 @@ msgstr ""
 #: lib/elements/fill_stitch.py:375 lib/elements/satin_column.py:385
 #: lib/elements/stroke.py:82
 msgid "Repeats"
-msgstr ""
+msgstr "重复次数"
 
 #: lib/elements/fill_stitch.py:376 lib/elements/stroke.py:83
 msgid "Defines how many times to run down and back along the path."
-msgstr ""
+msgstr "设定针剂按路径前进回退总次数"
 
 #: lib/elements/fill_stitch.py:387 lib/elements/stroke.py:94
 msgid "Bean stitch number of repeats"
-msgstr ""
+msgstr "豆针绣重复次数"
 
 #: lib/elements/fill_stitch.py:388 lib/elements/stroke.py:95
 msgid "Backtrack each stitch this many times.  A value of 1 would triple each stitch (forward, back, forward).  A value of 2 would quintuple each stitch, etc.\n\n"
 "A pattern with various repeats can be created with a list of values separated by a space."
-msgstr ""
+msgstr "每针回溯次数。值为1则针迹3次（前、后、前），值为2则针迹5次，等等。\n\n"
+"可使用空格分隔多组数值使每一跳具有不同回溯次数"
 
 #: lib/elements/fill_stitch.py:406 inx/inkstitch_select_elements.inx:33
 #: inx/inkstitch_select_elements.inx:53 inx/inkstitch_select_elements.inx:55
@@ -2080,11 +2081,11 @@ msgstr ""
 
 #: lib/elements/stroke.py:109
 msgid "Length of stitches. Stitches can be shorter according to the stitch tolerance setting."
-msgstr ""
+msgstr "可更改针迹长短。调正针迹公差将使针迹变短。"
 
 #: lib/elements/stroke.py:120
 msgid "Stitch tolerance"
-msgstr ""
+msgstr "针迹公差"
 
 #: lib/elements/stroke.py:121
 msgid "All stitches must be within this distance from the path.  A lower tolerance means stitches will be closer together.  A higher tolerance means sharp corners may be rounded."
@@ -2617,11 +2618,11 @@ msgstr ""
 #: print/templates/custom-page.html:33 print/templates/ui.html:102
 #: print/templates/ui.html:106 print/templates/ui.html:112
 msgid "Cancel"
-msgstr ""
+msgstr "取消"
 
 #: lib/extensions/lettering.py:109 lib/extensions/params.py:505
 msgid "Apply and Quit"
-msgstr ""
+msgstr "应用并关闭"
 
 #: lib/extensions/lettering.py:288
 msgid "This font has no available font variant. Please update or remove the font."
@@ -2713,12 +2714,12 @@ msgstr ""
 
 #: lib/extensions/params.py:275
 msgid "These settings will be applied to 1 object."
-msgstr ""
+msgstr "此设定将影响1个对象"
 
 #: lib/extensions/params.py:277
 #, python-format
 msgid "These settings will be applied to %d objects."
-msgstr ""
+msgstr "此设定将影响%d个对象"
 
 #: lib/extensions/params.py:282
 msgid "Some settings had different values across objects.  Select a value from the dropdown or enter a new one."
@@ -2756,11 +2757,11 @@ msgstr ""
 
 #: lib/extensions/params.py:470
 msgid "This parameter will be saved when you click \"Apply and Quit\""
-msgstr ""
+msgstr "该参数将于点击\"应用\"后保存"
 
 #: lib/extensions/params.py:502
 msgid "Use Last Settings"
-msgstr ""
+msgstr "使用上次设定"
 
 #: lib/extensions/params.py:786
 msgid "Embroidery Params"
@@ -3134,7 +3135,7 @@ msgstr ""
 
 #: lib/gui/simulator.py:1061
 msgid "Embroidery Simulation"
-msgstr "刺绣模拟"
+msgstr "模拟刺绣"
 
 #: lib/gui/test_swatches.py:21
 msgid "Generate Swatches"
@@ -3252,35 +3253,35 @@ msgstr "文件不存在，无法打开。 请更正文件路径并重试。\\r%s
 
 #: lib/stitch_plan/lock_stitch.py:34 lib/stitch_plan/lock_stitch.py:212
 msgid "Custom"
-msgstr ""
+msgstr "自定义"
 
 #: lib/stitch_plan/lock_stitch.py:203
 msgid "Half Stitch"
-msgstr ""
+msgstr "半针"
 
 #: lib/stitch_plan/lock_stitch.py:204
 msgid "Arrow"
-msgstr ""
+msgstr "箭头"
 
 #: lib/stitch_plan/lock_stitch.py:205
 msgid "Back and forth"
-msgstr ""
+msgstr "来回"
 
 #: lib/stitch_plan/lock_stitch.py:206
 msgid "Bowtie"
-msgstr ""
+msgstr "领结"
 
 #: lib/stitch_plan/lock_stitch.py:207
 msgid "Cross"
-msgstr ""
+msgstr "交叉"
 
 #: lib/stitch_plan/lock_stitch.py:208
 msgid "Star"
-msgstr ""
+msgstr "星形"
 
 #: lib/stitch_plan/lock_stitch.py:210
 msgid "Triangle"
-msgstr ""
+msgstr "三角形"
 
 #: lib/stitch_plan/stitch_plan.py:28
 msgid "There is no selected stitchable element. Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects in case you have expected a stitchout."
@@ -5865,7 +5866,7 @@ msgstr ""
 
 #: inx/inkstitch_params.inx:3
 msgid "Params"
-msgstr ""
+msgstr "参数设定"
 
 #: inx/inkstitch_print.inx:3
 msgid "PDF Export"
@@ -5971,7 +5972,7 @@ msgstr ""
 #: inx/inkstitch_select_elements.inx:38
 #: inx/inkstitch_zigzag_line_to_satin.inx:12
 msgid "Zigzag"
-msgstr ""
+msgstr "之字形"
 
 #: inx/inkstitch_select_elements.inx:45 inx/inkstitch_select_elements.inx:46
 msgid "Fill"
@@ -6233,7 +6234,7 @@ msgstr ""
 
 #: inx/inkstitch_zip.inx:3
 msgid "embroidery ZIP file output"
-msgstr "刺绣 ZIP 文件输出"
+msgstr "输出刺绣文件压缩包"
 
 #: inx/inkstitch_zip.inx:8
 msgid "Ink/Stitch: ZIP export multiple formats and extra options (.zip)"
