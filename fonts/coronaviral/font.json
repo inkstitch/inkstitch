@@ -2,9 +2,9 @@
     "name": "Coronaviral",
     "description": "A font created with manual sitch. Do not change the size or very little. The capital em is 22mm wide at 100%",
     "keywords": [
-         "display"
-     ],
-     "leading": 150,
+        "display"
+    ],
+    "leading": 150,
     "auto_satin": false,
     "reversible": false,
     "default_glyph": " ",
@@ -1323,6 +1323,9 @@
         "D",
         "E",
         "È",
+        "Ê",
+        "Ë",
+        "É",
         "F",
         "G",
         "H",

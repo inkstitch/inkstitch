@@ -2,9 +2,9 @@
     "name": "Chopin Script",
     "description": "The capital M is 38.3 millimeter wide at 100% scale. Can be scaled down to 80% or up to 120%. Every satin has zigzag underlay",
     "keywords": [
-       "handwriting",
-       "monogram"
-    ], 
+        "handwriting",
+        "monogram"
+    ],
     "leading": 226,
     "auto_satin": false,
     "reversible": true,
@@ -297,6 +297,10 @@
         "C",
         "D",
         "E",
+        "É",
+        "È",
+        "Ê",
+        "Ë",
         "F",
         "G",
         "H",
