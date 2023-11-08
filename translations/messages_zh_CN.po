@@ -1269,7 +1269,7 @@ msgstr ""
 
 #: lib/elements/fill_stitch.py:40 lib/elements/fill_stitch.py:220
 msgid "Expand"
-msgstr ""
+msgstr "形状扩展"
 
 #: lib/elements/fill_stitch.py:41
 msgid "The expand parameter for this fill object cannot be applied. Ink/Stitch will ignore it and will use original size instead."
@@ -1354,39 +1354,39 @@ msgstr ""
 
 #: lib/elements/fill_stitch.py:105
 msgid "FillStitch"
-msgstr ""
+msgstr "填充针迹"
 
 #: lib/elements/fill_stitch.py:108
 msgid "Automatically routed fill stitching"
-msgstr ""
+msgstr "启用填充"
 
 #: lib/elements/fill_stitch.py:112
 msgid "Auto Fill"
-msgstr ""
+msgstr "自动"
 
 #: lib/elements/fill_stitch.py:113 inx/inkstitch_select_elements.inx:47
 msgid "Contour Fill"
-msgstr ""
+msgstr "轮廓"
 
 #: lib/elements/fill_stitch.py:114 inx/inkstitch_select_elements.inx:48
 msgid "Guided Fill"
-msgstr ""
+msgstr "引导"
 
 #: lib/elements/fill_stitch.py:115 inx/inkstitch_select_elements.inx:49
 msgid "Meander Fill"
-msgstr ""
+msgstr "蜿蜒"
 
 #: lib/elements/fill_stitch.py:116 inx/inkstitch_select_elements.inx:50
 msgid "Circular Fill"
-msgstr ""
+msgstr "圆形"
 
 #: lib/elements/fill_stitch.py:117 inx/inkstitch_select_elements.inx:51
 msgid "Legacy Fill"
-msgstr ""
+msgstr "旧填充模式"
 
 #: lib/elements/fill_stitch.py:121
 msgid "Fill method"
-msgstr ""
+msgstr "填充模式"
 
 #: lib/elements/fill_stitch.py:130
 msgid "Guided Fill Strategy"
@@ -1478,11 +1478,11 @@ msgstr ""
 
 #: lib/elements/fill_stitch.py:221
 msgid "Expand the shape before fill stitching, to compensate for gaps between shapes.  Negative values contract instead."
-msgstr ""
+msgstr "扩展形状以补偿形状间空隙。填写负值将收缩形状。"
 
 #: lib/elements/fill_stitch.py:235
 msgid "Angle of lines of stitches"
-msgstr ""
+msgstr "线迹角度"
 
 #: lib/elements/fill_stitch.py:236
 msgid "The angle increases in a counter-clockwise direction.  0 is horizontal.  Negative angles are allowed."
@@ -2765,7 +2765,7 @@ msgstr "使用上次设定"
 
 #: lib/extensions/params.py:786
 msgid "Embroidery Params"
-msgstr ""
+msgstr "刺绣参数"
 
 #: lib/extensions/reorder.py:20
 msgid "Please select at least two elements to reorder."
@@ -2954,7 +2954,7 @@ msgstr "小于此值的跳针将被视为普通针迹。"
 #: lib/gui/preferences.py:53 lib/gui/preferences.py:70
 #: lib/gui/preferences.py:101 lib/gui/preferences.py:117
 msgid "mm"
-msgstr ""
+msgstr "毫米"
 
 #: lib/gui/preferences.py:56 lib/gui/preferences.py:73
 msgid "Set As Default"
