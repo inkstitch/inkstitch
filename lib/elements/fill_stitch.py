@@ -817,7 +817,10 @@ class FillStitch(EmbroideryElement):
                     self.staggers,
                     self.fill_underlay_skip_last,
                     starting_point,
-                    underpath=self.underlay_underpath))
+                    underpath=self.underlay_underpath
+                ),
+                trim_after=self.has_command("trim") or self.trim_after
+            )
             stitch_groups.append(underlay)
             starting_point = underlay.stitches[-1]
         return [stitch_groups, starting_point]
@@ -913,15 +916,9 @@ class FillStitch(EmbroideryElement):
                 starting_point,
                 ending_point,
                 self.underpath,
-                self.guided_fill_strategy,
-            ))
-        return [stitch_group]
-
-    def do_meander_fill(self, shape, original_shape, i, starting_point, ending_point):
-        stitch_group = StitchGroup(
-            color=self.color,
-            tags=("meander_fill", "meander_fill_top"),
-            stitches=meander_fill(self, shape, original_shape, i, starting_point, ending_point))
+                self.guided_fill_strategy
+            )
+        )
         return [stitch_group]
 
     @cache
@@ -936,6 +933,16 @@ class FillStitch(EmbroideryElement):
         else:
             return guide_lines['stroke'][0]
 
+    def do_meander_fill(self, shape, original_shape, i, starting_point, ending_point):
+        stitch_group = StitchGroup(
+            color=self.color,
+            tags=("meander_fill", "meander_fill_top"),
+            stitches=meander_fill(self, shape, original_shape, i, starting_point, ending_point),
+            force_lock_stitches=self.force_lock_stitches,
+            lock_stitches=self.lock_stitches,
+        )
+        return [stitch_group]
+
     def do_circular_fill(self, shape, last_patch, starting_point, ending_point):
         # get target position
         command = self.get_command('ripple_target')
@@ -947,26 +954,28 @@ class FillStitch(EmbroideryElement):
         else:
             target = shape.centroid
         stitches = circular_fill(
-                                 shape,
-                                 self.angle,
-                                 self.row_spacing,
-                                 self.end_row_spacing,
-                                 self.staggers,
-                                 self.running_stitch_length,
-                                 self.running_stitch_tolerance,
-                                 self.bean_stitch_repeats,
-                                 self.repeats,
-                                 self.skip_last,
-                                 starting_point,
-                                 ending_point,
-                                 self.underpath,
-                                 target
-                                )
+            shape,
+            self.angle,
+            self.row_spacing,
+            self.end_row_spacing,
+            self.staggers,
+            self.running_stitch_length,
+            self.running_stitch_tolerance,
+            self.bean_stitch_repeats,
+            self.repeats,
+            self.skip_last,
+            starting_point,
+            ending_point,
+            self.underpath,
+            target
+        )
 
         stitch_group = StitchGroup(
             color=self.color,
             tags=("circular_fill", "auto_fill_top"),
-            stitches=stitches)
+            stitches=stitches,
+            force_lock_stitches=self.force_lock_stitches,
+            lock_stitches=self.lock_stitches,)
         return [stitch_group]
 
     def do_linear_gradient_fill(self, shape, last_patch, start, end):
@@ -976,6 +985,9 @@ class FillStitch(EmbroideryElement):
             stitch_groups.append(StitchGroup(
                 color=color,
                 tags=("linear_gradient_fill", "auto_fill_top"),
-                stitches=stitches)
-            )
+                stitches=stitches,
+                force_lock_stitches=self.force_lock_stitches,
+                lock_stitches=self.lock_stitches,
+                trim_after=self.has_command("trim") or self.trim_after
+            ))
         return stitch_groups
