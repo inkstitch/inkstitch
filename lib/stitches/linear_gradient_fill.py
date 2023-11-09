@@ -11,18 +11,19 @@ from shapely import segmentize
 from shapely.affinity import rotate
 from shapely.geometry import LineString, MultiLineString, Point, Polygon
 
-from ..svg import get_correction_transform
+from ..stitch_plan import StitchGroup
+from ..svg import get_node_transform
 from ..utils.threading import check_stop_flag
-from .auto_fill import (build_fill_stitch_graph, build_travel_graph, fallback,
+from .auto_fill import (build_fill_stitch_graph, build_travel_graph,
                         find_stitch_path, graph_is_valid)
 from .circular_fill import path_to_stitches
 from .guided_fill import apply_stitches
 
 
 def linear_gradient_fill(fill, shape, starting_point, ending_point):
-    has_gradient, colors, lines, line_nums = _get_lines_nums_and_colors(shape, fill)
+    colors, lines, line_nums = _get_lines_nums_and_colors(shape, fill)
     color_lines, colors = _get_color_lines(colors, line_nums, lines)
-    if not has_gradient:
+    if fill.gradient is None:
         colors.pop()
     stitch_groups = _get_stitch_groups(fill, shape, colors, color_lines, starting_point, ending_point)
     return stitch_groups
@@ -32,10 +33,8 @@ def _get_lines_nums_and_colors(shape, fill):
     # min x, min y, max x, max y
     orig_bbox = shape.bounds
 
-    has_gradient = True
-    if "linearGradient" not in fill.color:
-        # they have no linear gradient, let's simply space out the rows
-        has_gradient = False
+    if fill.gradient is None:
+        # there is no linear gradient, let's simply space out one single color instead
         angle = 0
         offsets = [0, 1]
         colors = [fill.color, 'none']
@@ -43,16 +42,12 @@ def _get_lines_nums_and_colors(shape, fill):
         point2 = (orig_bbox[2], orig_bbox[3])
     else:
         node = fill.node
-        color = fill.color[5:-1]
-        xpath = f'.//svg:defs/svg:linearGradient[@id="{color}"]'
-        gradient = node.getroottree().getroot().findone(xpath)
-        gradient.apply_transform()
-
-        offsets = gradient.stop_offsets
-        colors = [style['stop-color'] for style in gradient.stop_styles]
-        transform = -Transform(get_correction_transform(node, child=True))
-        point1 = transform.apply_to_point((float(gradient.x1()), float(gradient.y1())))
-        point2 = transform.apply_to_point((float(gradient.x2()), float(gradient.y2())))
+        fill.gradient.apply_transform()
+        offsets = fill.gradient.stop_offsets
+        colors = [style['stop-color'] for style in fill.gradient.stop_styles]
+        transform = Transform(get_node_transform(node))
+        point1 = transform.apply_to_point((float(fill.gradient.x1()), float(fill.gradient.y1())))
+        point2 = transform.apply_to_point((float(fill.gradient.x2()), float(fill.gradient.y2())))
 
         gradient_line = DirectedLineSegment(point1, point2)
         angle = gradient_line.angle
@@ -92,7 +87,7 @@ def _get_lines_nums_and_colors(shape, fill):
     for offset in offsets[1:]:
         line_nums.append(round((gradient_line.length * offset) / fill.row_spacing) + gradient_start)
 
-    return has_gradient, colors, lines, line_nums
+    return colors, lines, line_nums
 
 
 def _get_color_lines(colors, line_nums, lines):  # noqa: C901
@@ -195,13 +190,14 @@ def _get_stitch_groups(fill, shape, colors, color_lines, starting_point, ending_
         if not isinstance(multiline, MultiLineString):
             continue
         segments = [list(line.coords) for line in multiline.geoms if len(line.coords) > 1]
+
         fill_stitch_graph = build_fill_stitch_graph(shape, segments, starting_point, ending_point)
-        if not graph_is_valid(fill_stitch_graph, shape, fill.running_stitch_length):
-            return fallback(shape, fill.running_stitch_length, fill.running_stitch_tolerance)
+        if not graph_is_valid(fill_stitch_graph):
+            continue
 
         travel_graph = build_travel_graph(fill_stitch_graph, shape, fill.angle, False)
         path = find_stitch_path(fill_stitch_graph, travel_graph, starting_point, ending_point)
-        result = path_to_stitches(
+        stitches = path_to_stitches(
             shape,
             path,
             travel_graph,
@@ -213,9 +209,17 @@ def _get_stitch_groups(fill, shape, colors, color_lines, starting_point, ending_
             False  # TODO: clamping somehow does the opposite of what it should do
         )
 
-        result = _remove_start_end_travel(fill, result, colors, i)
+        stitches = _remove_start_end_travel(fill, stitches, colors, i)
 
-        stitch_groups.append((result, color))
+        stitch_groups.append(StitchGroup(
+            color=color,
+            tags=("linear_gradient_fill", "auto_fill_top"),
+            stitches=stitches,
+            force_lock_stitches=fill.force_lock_stitches,
+            lock_stitches=fill.lock_stitches,
+            trim_after=fill.has_command("trim") or fill.trim_after
+        ))
+
     return stitch_groups
 
 

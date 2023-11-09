@@ -39,7 +39,7 @@ def guided_fill(shape,
 
     fill_stitch_graph = build_fill_stitch_graph(shape, segments, starting_point, ending_point)
 
-    if not graph_is_valid(fill_stitch_graph, shape, max_stitch_length):
+    if not graph_is_valid(fill_stitch_graph):
         return fallback(shape, guideline, row_spacing, max_stitch_length, running_stitch_length, running_stitch_tolerance,
                         num_staggers, skip_last, starting_point, ending_point, underpath)
 

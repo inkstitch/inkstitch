@@ -73,7 +73,7 @@ def circular_fill(shape,
             segments.append([(point.x, point.y) for point in coords])
 
     fill_stitch_graph = build_fill_stitch_graph(shape, segments, starting_point, ending_point)
-    if not graph_is_valid(fill_stitch_graph, shape, running_stitch_length):
+    if not graph_is_valid(fill_stitch_graph):
         return fallback(shape, running_stitch_length, running_stitch_tolerance)
 
     travel_graph = build_travel_graph(fill_stitch_graph, shape, angle, underpath)

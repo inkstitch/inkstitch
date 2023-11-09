@@ -428,6 +428,12 @@ class FillStitch(EmbroideryElement):
         return self.get_style("fill", "#000000")
 
     @property
+    def gradient(self):
+        color = self.color[5:-1]
+        xpath = f'.//svg:defs/svg:linearGradient[@id="{color}"]'
+        return self.node.getroottree().getroot().findone(xpath)
+
+    @property
     @param('fill_underlay', _('Underlay'), type='toggle', group=_('Fill Underlay'), default=True)
     def fill_underlay(self):
         return self.get_boolean_param("fill_underlay", default=True)
@@ -795,11 +801,8 @@ class FillStitch(EmbroideryElement):
 
     def do_underlay(self, shape, starting_point):
         color = self.color
-        if self.color.startswith('url') and "linearGradient" in color:
-            color = self.color[5:-1]
-            xpath = f'.//svg:defs/svg:linearGradient[@id="{color}"]'
-            gradient = self.node.getroottree().getroot().findone(xpath)
-            color = [style['stop-color'] for style in gradient.stop_styles][0]
+        if self.gradient is not None and self.fill_method == 'linear_gradient_fill':
+            color = [style['stop-color'] for style in self.gradient.stop_styles][0]
         stitch_groups = []
         for i in range(len(self.fill_underlay_angle)):
             underlay = StitchGroup(
@@ -818,8 +821,7 @@ class FillStitch(EmbroideryElement):
                     self.fill_underlay_skip_last,
                     starting_point,
                     underpath=self.underlay_underpath
-                ),
-                trim_after=self.has_command("trim") or self.trim_after
+                )
             )
             stitch_groups.append(underlay)
             starting_point = underlay.stitches[-1]
@@ -979,15 +981,4 @@ class FillStitch(EmbroideryElement):
         return [stitch_group]
 
     def do_linear_gradient_fill(self, shape, last_patch, start, end):
-        gradient = linear_gradient_fill(self, shape, start, end)
-        stitch_groups = []
-        for stitches, color in gradient:
-            stitch_groups.append(StitchGroup(
-                color=color,
-                tags=("linear_gradient_fill", "auto_fill_top"),
-                stitches=stitches,
-                force_lock_stitches=self.force_lock_stitches,
-                lock_stitches=self.lock_stitches,
-                trim_after=self.has_command("trim") or self.trim_after
-            ))
-        return stitch_groups
+        return linear_gradient_fill(self, shape, start, end)

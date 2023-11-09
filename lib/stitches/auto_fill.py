@@ -78,7 +78,7 @@ def auto_fill(shape,
     segments = [segment for row in rows for segment in row]
     fill_stitch_graph = build_fill_stitch_graph(shape, segments, starting_point, ending_point)
 
-    if not graph_is_valid(fill_stitch_graph, shape, max_stitch_length):
+    if not graph_is_valid(fill_stitch_graph):
         return fallback(shape, running_stitch_length, running_stitch_tolerance)
 
     travel_graph = build_travel_graph(fill_stitch_graph, shape, angle, underpath)
@@ -269,7 +269,7 @@ def add_edges_between_outline_nodes(graph, duplicate_every_other=False):
         check_stop_flag()
 
 
-def graph_is_valid(graph, shape, max_stitch_length):
+def graph_is_valid(graph):
     # The graph may be empty if the shape is so small that it fits between the
     # rows of stitching.  Certain small weird shapes can also cause a non-
     # eulerian graph.
