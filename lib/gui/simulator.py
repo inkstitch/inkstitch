@@ -78,15 +78,10 @@ class ControlPanel(wx.Panel):
         self.btnForwardCommand.Bind(wx.EVT_BUTTON, self.animation_one_command_forward)
         self.btnForwardCommand.SetBitmap(self.load_icon('forward_command'))
         self.btnForwardCommand.SetToolTip(_('Go forward one command (page-up)'))
-        self.btnForward = wx.BitmapToggleButton(self, -1, style=self.button_style)
-        self.btnForward.SetValue(True)
-        self.btnForward.Bind(wx.EVT_TOGGLEBUTTON, self.on_forward_button)
-        self.btnForward.SetBitmap(self.load_icon('forward'))
-        self.btnForward.SetToolTip(_('Animate forward (arrow right)'))
-        self.btnReverse = wx.BitmapToggleButton(self, -1, style=self.button_style)
-        self.btnReverse.Bind(wx.EVT_TOGGLEBUTTON, self.on_reverse_button)
-        self.btnReverse.SetBitmap(self.load_icon('reverse'))
-        self.btnReverse.SetToolTip(_('Animate in reverse (arrow left)'))
+        self.btnDirection = wx.Button(self, -1, style=self.button_style)
+        self.btnDirection.Bind(wx.EVT_BUTTON, self.on_direction_button)
+        self.btnDirection.SetBitmap(self.load_icon('direction'))
+        self.btnDirection.SetToolTip(_('Switch animation direction (arrow left, arrow right)'))
         self.btnPlay = wx.BitmapToggleButton(self, -1, style=self.button_style)
         self.btnPlay.Bind(wx.EVT_TOGGLEBUTTON, self.on_play_button)
         self.btnPlay.SetBitmap(self.load_icon('play'))
@@ -143,8 +138,7 @@ class ControlPanel(wx.Panel):
         self.controls_inner_sizer.Add(self.btnBackwardStitch, 0, wx.EXPAND | wx.ALL, 2)
         self.controls_inner_sizer.Add(self.btnForwardStitch, 0, wx.EXPAND | wx.ALL, 2)
         self.controls_inner_sizer.Add(self.btnForwardCommand, 0, wx.EXPAND | wx.ALL, 2)
-        self.controls_inner_sizer.Add(self.btnReverse, 0, wx.EXPAND | wx.ALL, 2)
-        self.controls_inner_sizer.Add(self.btnForward, 0, wx.EXPAND | wx.ALL, 2)
+        self.controls_inner_sizer.Add(self.btnDirection, 0, wx.EXPAND | wx.ALL, 2)
         self.controls_inner_sizer.Add(self.btnPlay, 0, wx.EXPAND | wx.ALL, 2)
         self.controls_inner_sizer.Add(self.btnRestart, 0, wx.EXPAND | wx.ALL, 2)
         self.controls_sizer.Add((1, 1), 1)
@@ -173,7 +167,7 @@ class ControlPanel(wx.Panel):
         self.speed_buttons_sizer.Add((1, 1), 1)
         self.speed_sizer.Add(self.speed_buttons_sizer, 0, wx.EXPAND | wx.ALL)
         self.speed_text = wx.StaticText(self, wx.ID_ANY, label="", style=wx.ALIGN_CENTRE_HORIZONTAL | wx.ST_NO_AUTORESIZE)
-        self.speed_text.SetFont(wx.Font(wx.FontInfo(15).Bold()))
+        self.speed_text.SetFont(wx.Font(wx.FontInfo(10).Bold()))
         extent = self.speed_text.GetTextExtent(self.format_speed_text(100000))
         self.speed_text.SetMinSize(extent)
         self.speed_sizer.Add(self.speed_text, 0, wx.EXPAND | wx.ALL, 5)
@@ -294,24 +288,20 @@ class ControlPanel(wx.Panel):
             self.set_speed(self.target_stitches_per_second)
 
     def animation_forward(self, event=None):
-        self.btnForward.SetValue(True)
-        self.btnReverse.SetValue(False)
         self.drawing_panel.forward()
         self.direction = 1
         self.update_speed_text()
 
     def animation_reverse(self, event=None):
-        self.btnForward.SetValue(False)
-        self.btnReverse.SetValue(True)
         self.drawing_panel.reverse()
         self.direction = -1
         self.update_speed_text()
 
-    def on_forward_button(self, event):
-        self.animation_forward()
-
-    def on_reverse_button(self, event):
-        self.animation_reverse()
+    def on_direction_button(self, event):
+        if self.direction == -1:
+            self.animation_forward()
+        else:
+            self.animation_reverse()
 
     def set_speed(self, speed):
         self.speed = int(max(speed, 1))
@@ -376,19 +366,15 @@ class ControlPanel(wx.Panel):
 
     def animation_pause(self, event=None):
         self.drawing_panel.stop()
-        self.btnPlay.SetBitmap(self.load_icon('play'))
 
     def animation_start(self, event=None):
         self.drawing_panel.go()
-        self.btnPlay.SetBitmap(self.load_icon('pause'))
 
     def on_start(self):
         self.btnPlay.SetValue(True)
-        self.btnPlay.SetBitmap(self.load_icon('pause'))
 
     def on_stop(self):
         self.btnPlay.SetValue(False)
-        self.btnPlay.SetBitmap(self.load_icon('play'))
 
     def on_play_button(self, event):
         play = self.btnPlay.GetValue()
