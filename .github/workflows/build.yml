@@ -184,14 +184,15 @@ jobs:
           bash bin/build-windows-installer
         env:
           BUILD: windows
+      - uses: actions/upload-artifact@v3
+          with:
+            name: inkstitch-windows64
+            path: artifacts
       # - uses: dlemstra/code-sign-action@v1
       #   with:
       #     certificate: '${{ secrets.INKSTITCH_CODE_SIGNING_CERTIFICATE }}'
       #     folder: 'artifacts'
-       - uses: actions/upload-artifact@v3
-         with:
-           name: inkstitch-windows64
-           path: artifacts
+
 #  mac:
 #    runs-on: macos-12
 #    steps:
