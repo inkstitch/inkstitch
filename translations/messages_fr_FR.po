@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-10-25 01:05+0000\n"
-"PO-Revision-Date: 2023-11-05 01:10\n"
+"POT-Creation-Date: 2023-11-10 01:06+0000\n"
+"PO-Revision-Date: 2023-11-10 01:07\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-25 01:05+0000\n"
+"POT-Creation-Date: 2023-11-10 01:06+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -3076,69 +3076,65 @@ msgstr "Reculer d'une commande (page précédente pgDn)"
 msgid "Go forward one command (page-up)"
 msgstr "Avancer d'une commande (page précédente)"
 
-#: lib/gui/simulator.py:85
-msgid "Animate forward (arrow right)"
-msgstr "Animer en avant (flèche droite)"
+#: lib/gui/simulator.py:84
+msgid "Switch animation direction (arrow left, arrow right)"
+msgstr ""
 
-#: lib/gui/simulator.py:89
-msgid "Animate in reverse (arrow left)"
-msgstr "Animer à reculons (flèche gauche)"
-
-#: lib/gui/simulator.py:93
+#: lib/gui/simulator.py:88
 msgid "Play (P)"
 msgstr "Jouer (P)"
 
-#: lib/gui/simulator.py:97
+#: lib/gui/simulator.py:92
 msgid "Restart (R)"
 msgstr "Redémarrer (R)"
 
-#: lib/gui/simulator.py:101
+#: lib/gui/simulator.py:96
 msgid "Display needle penetration point (O)"
 msgstr "Afficher les points de pénétration de l'aiguille (O)"
 
-#: lib/gui/simulator.py:113
+#: lib/gui/simulator.py:108
 msgid "Show jump stitches"
 msgstr "Montrer les sauts de fil"
 
-#: lib/gui/simulator.py:117
+#: lib/gui/simulator.py:112
 msgid "Show trims"
 msgstr "Montrer les coupes de fil"
 
-#: lib/gui/simulator.py:121
+#: lib/gui/simulator.py:116
 msgid "Show stops"
 msgstr "Montrer les stops"
 
-#: lib/gui/simulator.py:125
+#: lib/gui/simulator.py:120
 msgid "Show color changes"
 msgstr "Montrer les changements de couleur"
 
-#: lib/gui/simulator.py:130
+#: lib/gui/simulator.py:125
 msgid "Detach/attach simulator window"
 msgstr "Détacher/Attacher le simulateur"
 
-#: lib/gui/simulator.py:140 electron/src/renderer/components/Simulator.vue:167
+#: lib/gui/simulator.py:135 electron/src/renderer/components/Simulator.vue:167
 msgid "Controls"
 msgstr "Contrôles"
 
-#: lib/gui/simulator.py:154 electron/src/renderer/components/Simulator.vue:225
+#: lib/gui/simulator.py:148 electron/src/renderer/components/Simulator.vue:225
 msgid "Show"
 msgstr "Montrer"
 
-#: lib/gui/simulator.py:167
+#: lib/gui/simulator.py:161
 msgid "Speed"
 msgstr "Vitesse"
 
-#: lib/gui/simulator.py:324
+#: lib/gui/simulator.py:314
 #, python-format
 msgid "%d stitches/sec"
 msgstr "%d points/sec"
 
-#: lib/gui/simulator.py:737
+#: lib/gui/simulator.py:723
 #, python-format
 msgid "Command: %s"
 msgstr "Commande : %s"
 
-#: lib/gui/simulator.py:1061
+#: lib/gui/simulator.py:1047
 msgid "Embroidery Simulation"
 msgstr "Simulation de broderie"
 
