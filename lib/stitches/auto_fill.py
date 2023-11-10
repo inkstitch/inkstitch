@@ -25,6 +25,10 @@ from ..utils.smoothing import smooth_path
 from ..utils.threading import check_stop_flag
 
 
+class NoGratingsError(Exception):
+    pass
+
+
 class PathEdge(object):
     OUTLINE_KEYS = ("outline", "extra", "initial")
     SEGMENT_KEY = "segment"
@@ -78,6 +82,10 @@ def auto_fill(shape,
         return fallback(shape, running_stitch_length, running_stitch_tolerance)
 
     travel_graph = build_travel_graph(fill_stitch_graph, shape, angle, underpath)
+
+    if not travel_graph:
+        return fallback(shape, running_stitch_length, running_stitch_tolerance)
+
     path = find_stitch_path(fill_stitch_graph, travel_graph, starting_point, ending_point)
     result = path_to_stitches(shape, path, travel_graph, fill_stitch_graph, angle, row_spacing,
                               max_stitch_length, running_stitch_length, running_stitch_tolerance,
@@ -314,7 +322,10 @@ def build_travel_graph(fill_stitch_graph, shape, fill_stitch_angle, underpath):
     graph.add_nodes_from(fill_stitch_graph.nodes(data=True))
 
     if underpath:
-        boundary_points, travel_edges = build_travel_edges(shape, fill_stitch_angle)
+        try:
+            boundary_points, travel_edges = build_travel_edges(shape, fill_stitch_angle)
+        except NoGratingsError:
+            return
 
         # This will ensure that a path traveling inside the shape can reach its
         # target on the outline, which will be one of the points added above.
@@ -458,6 +469,9 @@ def build_travel_edges(shape, fill_angle):
     endpoints = [coord for mls in (grating1, grating2, grating3)
                  for ls in mls.geoms
                  for coord in ls.coords]
+
+    if grating1.is_empty or grating2.is_empty:
+        raise NoGratingsError()
 
     diagonal_edges = ensure_multi_line_string(grating1.symmetric_difference(grating2))
 

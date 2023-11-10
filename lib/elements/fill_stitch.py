@@ -10,7 +10,7 @@ import re
 import numpy as np
 from inkex import Transform
 from shapely import geometry as shgeo
-from shapely.errors import TopologicalError
+from shapely.errors import GEOSException
 from shapely.validation import explain_validity, make_valid
 
 from .. import tiles
@@ -569,9 +569,14 @@ class FillStitch(EmbroideryElement):
             return self.original_shape
 
         clip_path = get_clip_path(self.node)
+
+        # make sure clip path and shape are valid
+        clip_path = make_valid(clip_path)
+        shape = make_valid(self.original_shape)
+
         try:
-            intersection = clip_path.intersection(self.original_shape)
-        except TopologicalError:
+            intersection = clip_path.intersection(shape)
+        except GEOSException:
             return self.original_shape
 
         if isinstance(intersection, shgeo.Polygon):

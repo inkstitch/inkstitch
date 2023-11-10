@@ -7,6 +7,7 @@ from math import ceil
 
 import shapely.geometry as shgeo
 from inkex import Transform
+from shapely.errors import GEOSException
 
 from ..i18n import _
 from ..marker import get_marker_elements
@@ -14,13 +15,12 @@ from ..stitch_plan import StitchGroup
 from ..stitches.ripple_stitch import ripple_stitch
 from ..stitches.running_stitch import bean_stitch, running_stitch
 from ..svg import get_node_transform, parse_length_with_units
+from ..svg.clip import get_clip_path
 from ..threads import ThreadColor
 from ..utils import Point, cache
 from ..utils.param import ParamOption
 from .element import EmbroideryElement, param
-from ..svg.clip import get_clip_path
 from .validation import ValidationWarning
-from shapely.errors import TopologicalError
 
 
 class MultipleGuideLineWarning(ValidationWarning):
@@ -411,7 +411,7 @@ class Stroke(EmbroideryElement):
         line_strings = [shgeo.LineString(path) for path in paths]
         try:
             intersection = clip_path.intersection(shgeo.MultiLineString(line_strings))
-        except TopologicalError:
+        except GEOSException:
             return paths
 
         coords = []
