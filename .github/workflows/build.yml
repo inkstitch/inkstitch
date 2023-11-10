@@ -7,143 +7,143 @@ on:
     tags:
       - "v*"
 jobs:
-  linux:
-    runs-on: ubuntu-20.04
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          submodules: recursive
-      - uses: actions/setup-python@v4
-        with:
-          python-version: '3.8.x'
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '16.x'
-      - uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 3.1
-      - uses: actions/cache@v3
-        id: pip-cache
-        with:
-          path: ~/.cache/pip
-          key: ${{ runner.os }}-20.04-pip-${{ hashFiles('**/requirements.txt') }}
-          restore-keys: |
-            ${{ runner.os }}-20.04-pip-
-
-      - name: Get yarn cache directory path
-        id: yarn-cache-dir-path
-        run: echo "dir=$(yarn cache dir)" >> $GITHUB_OUTPUT
-
-      - uses: actions/cache@v3
-        id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
-        with:
-          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
-
-      - name: install dependencies
-        shell: bash
-        run: |
-          sudo apt-get update
-          python -m pip install --upgrade pip
-          python -m pip install wheel
-
-          sudo apt-get install gettext
-
-          # for wxPython
-          sudo apt install libnotify4
-          sudo apt install glib-networking libsdl2-dev libsdl2-2.0-0
-
-          # for PyGObject
-          sudo apt install libgirepository1.0-dev libcairo2-dev
-
-          # for shapely
-          sudo apt install build-essential libgtk-3-dev
-
-          uname -a
-          python --version
-          python -m pip --version
-          python -m pip debug
-
-          python -m pip install pycairo
-          python -m pip install PyGObject
-
-          python -m pip install https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-20.04/wxPython-4.2.1-cp38-cp38-linux_x86_64.whl
-
-          python -m pip install -r requirements.txt
-          python -m pip install pyinstaller==5.13.2
-
-          # scipy gives us a ELF error when stripped
-          sudo apt-get install gcc g++ gfortran python3-dev libopenblas-dev liblapack-dev
-          python -m pip uninstall --yes scipy
-          python -m pip install scipy --no-binary scipy
-
-          echo "${{ env.pythonLocation }}\bin" >> $GITHUB_PATH
-      - shell: bash
-        run: |
-          make dist
-        env:
-          BUILD: linux
-          INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY }}
-      - uses: actions/upload-artifact@v3
-        with:
-          name: inkstitch-linux
-          path: artifacts
-  windows32:
-    runs-on: windows-latest
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          submodules: recursive
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '16.x'
-      - uses: actions/setup-python@v4
-        with:
-          python-version: '3.8.x'
-          architecture: 'x86'
-      - uses: microsoft/setup-msbuild@v1.3.1
-      - name: install dependencies
-        shell: bash
-        run: |
-          git config --system core.longpaths true
-          python -m pip install --upgrade pip
-          python -m pip install wheel
-          # inkex has pillow as a requirement and defaults to the latest release.
-          # for windows we need to pin to the latest possible version for 32 bit
-          python -m pip install pillow==9.5.0
-          # Numpy and Scipy version for older cpu compatibility
-          python -m pip install numpy==1.23.1
-          python -m pip install scipy==1.9.0
-          pip install wxPython
-          python -m pip install -r requirements.txt
-          python -m pip install pyinstaller==5.13.2
-
-          echo "${{ env.pythonLocation }}\bin" >> $GITHUB_PATH
-      - shell: bash
-        run: |
-          make dist
-        env:
-          BUILD: windows
-      - uses: dlemstra/code-sign-action@v1
-        with:
-          certificate: '${{ secrets.INKSTITCH_CODE_SIGNING_CERTIFICATE }}'
-          folder: 'dist'
-          recursive: true
-      - shell: bash
-        run: |
-          bash bin/build-windows-installer
-        env:
-          BUILD: windows
-      - uses: dlemstra/code-sign-action@v1
-        with:
-          certificate: '${{ secrets.INKSTITCH_CODE_SIGNING_CERTIFICATE }}'
-          folder: 'artifacts'
-      - uses: actions/upload-artifact@v3
-        with:
-          name: inkstitch-windows32
-          path: artifacts
+#  linux:
+#    runs-on: ubuntu-20.04
+#    steps:
+#      - uses: actions/checkout@v3
+#        with:
+#          submodules: recursive
+#      - uses: actions/setup-python@v4
+#        with:
+#          python-version: '3.8.x'
+#      - uses: actions/setup-node@v3
+#        with:
+#          node-version: '16.x'
+#      - uses: ruby/setup-ruby@v1
+#        with:
+#          ruby-version: 3.1
+#      - uses: actions/cache@v3
+#        id: pip-cache
+#        with:
+#          path: ~/.cache/pip
+#          key: ${{ runner.os }}-20.04-pip-${{ hashFiles('**/requirements.txt') }}
+#          restore-keys: |
+#            ${{ runner.os }}-20.04-pip-
+#
+#      - name: Get yarn cache directory path
+#        id: yarn-cache-dir-path
+#        run: echo "dir=$(yarn cache dir)" >> $GITHUB_OUTPUT
+#
+#      - uses: actions/cache@v3
+#        id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
+#        with:
+#          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+#          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+#          restore-keys: |
+#            ${{ runner.os }}-yarn-
+#
+#      - name: install dependencies
+#        shell: bash
+#        run: |
+#          sudo apt-get update
+#          python -m pip install --upgrade pip
+#          python -m pip install wheel
+#
+#          sudo apt-get install gettext
+#
+#          # for wxPython
+#          sudo apt install libnotify4
+#          sudo apt install glib-networking libsdl2-dev libsdl2-2.0-0
+#
+#          # for PyGObject
+#          sudo apt install libgirepository1.0-dev libcairo2-dev
+#
+#          # for shapely
+#          sudo apt install build-essential libgtk-3-dev
+#
+#          uname -a
+#          python --version
+#          python -m pip --version
+#          python -m pip debug
+#
+#          python -m pip install pycairo
+#          python -m pip install PyGObject
+#
+#          python -m pip install https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-20.04/wxPython-4.2.1-cp38-cp38-linux_x86_64.whl
+#
+#          python -m pip install -r requirements.txt
+#          python -m pip install pyinstaller==5.13.2
+#
+#          # scipy gives us a ELF error when stripped
+#          sudo apt-get install gcc g++ gfortran python3-dev libopenblas-dev liblapack-dev
+#          python -m pip uninstall --yes scipy
+#          python -m pip install scipy --no-binary scipy
+#
+#          echo "${{ env.pythonLocation }}\bin" >> $GITHUB_PATH
+#      - shell: bash
+#        run: |
+#          make dist
+#        env:
+#          BUILD: linux
+#          INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY }}
+#      - uses: actions/upload-artifact@v3
+#        with:
+#          name: inkstitch-linux
+#          path: artifacts
+#  windows32:
+#    runs-on: windows-latest
+#    steps:
+#      - uses: actions/checkout@v3
+#        with:
+#          submodules: recursive
+#      - uses: actions/setup-node@v3
+#        with:
+#          node-version: '16.x'
+#      - uses: actions/setup-python@v4
+#        with:
+#          python-version: '3.8.x'
+#          architecture: 'x86'
+#      - uses: microsoft/setup-msbuild@v1.3.1
+#      - name: install dependencies
+#        shell: bash
+#        run: |
+#          git config --system core.longpaths true
+#          python -m pip install --upgrade pip
+#          python -m pip install wheel
+#          # inkex has pillow as a requirement and defaults to the latest release.
+#          # for windows we need to pin to the latest possible version for 32 bit
+#          python -m pip install pillow==9.5.0
+#          # Numpy and Scipy version for older cpu compatibility
+#          python -m pip install numpy==1.23.1
+#          python -m pip install scipy==1.9.0
+#          pip install wxPython
+#          python -m pip install -r requirements.txt
+#          python -m pip install pyinstaller==5.13.2
+#
+#          echo "${{ env.pythonLocation }}\bin" >> $GITHUB_PATH
+#      - shell: bash
+#        run: |
+#          make dist
+#        env:
+#          BUILD: windows
+#      - uses: dlemstra/code-sign-action@v1
+#        with:
+#          certificate: '${{ secrets.INKSTITCH_CODE_SIGNING_CERTIFICATE }}'
+#          folder: 'dist'
+#          recursive: true
+#      - shell: bash
+#        run: |
+#          bash bin/build-windows-installer
+#        env:
+#          BUILD: windows
+#      - uses: dlemstra/code-sign-action@v1
+#        with:
+#          certificate: '${{ secrets.INKSTITCH_CODE_SIGNING_CERTIFICATE }}'
+#          folder: 'artifacts'
+#      - uses: actions/upload-artifact@v3
+#        with:
+#          name: inkstitch-windows32
+#          path: artifacts
   windows64:
     runs-on: windows-latest
     steps:
@@ -192,60 +192,60 @@ jobs:
       #   with:
       #     name: inkstitch-windows64
       #     path: artifacts
-  mac:
-    runs-on: macos-12
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          submodules: recursive
-      - uses: actions/setup-python@v4
-        with:
-          python-version: '3.9.x'
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '16.x'
-      - name: install dependencies
-        shell: bash
-        run: |
-          brew update
-
-          brew install gtk+3 pkg-config gobject-introspection geos libffi gettext jq gnu-getopt || true
-
-          export LDFLAGS="-L/usr/local/opt/libffi/lib"
-          export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig"
-
-          # for msgfmt
-          echo "/usr/local/opt/gettext/bin" >> $GITHUB_PATH
-
-          echo "GI_TYPELIB_PATH=/usr/local/lib/girepository-1.0/" >> $GITHUB_ENV
-
-          pip install --upgrade pip
-          pip --version
-          pip install wheel
-          pip install PyGObject
-          pip install wxPython
-          pip install -r requirements.txt
-          pip install pyinstaller==5.13.2
-
-          echo "${{ env.pythonLocation }}/bin" >> $GITHUB_PATH
-      - shell: bash
-        run: |
-          make dist
-        env:
-          BUILD: osx
-          MACOS_CERTIFICATE: ${{ secrets.INKSTITCH_APPLE_DEVELOPER_CERTIFICATE }}
-          MACOS_CERTIFICATE_PWD: ${{ secrets.INKSTITCH_APPLE_DEVELOPER_CERTIFICATE_PASSWORD }}
-          KEYCHAIN_PWD: ${{ secrets.KEYCHAIN_PASSWORD }}
-          INSTALLER_CERTIFICATE: ${{ secrets.INKSTITCH_APPLE_INSTALLER_CERTIFICATE }}
-          INSTALLER_PWD: ${{ secrets.INKSTITCH_APPLE_INSTALLER_CERTIFICATE_PASSWORD }}
-          NOTARY_ACCOUNT: ${{ secrets.INKSTITCH_NOTARIZE_AC }}
-          NOTARY_PASSWORD: ${{ secrets.INKSTITCH_NOTARIZE_PASS }}
-
-
-      - uses: actions/upload-artifact@v3
-        with:
-          name: inkstitch-mac
-          path: artifacts
+#  mac:
+#    runs-on: macos-12
+#    steps:
+#      - uses: actions/checkout@v3
+#        with:
+#          submodules: recursive
+#      - uses: actions/setup-python@v4
+#        with:
+#          python-version: '3.9.x'
+#      - uses: actions/setup-node@v3
+#        with:
+#          node-version: '16.x'
+#      - name: install dependencies
+#        shell: bash
+#        run: |
+#          brew update
+#
+#          brew install gtk+3 pkg-config gobject-introspection geos libffi gettext jq gnu-getopt || true
+#
+#          export LDFLAGS="-L/usr/local/opt/libffi/lib"
+#          export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig"
+#
+#          # for msgfmt
+#          echo "/usr/local/opt/gettext/bin" >> $GITHUB_PATH
+#
+#          echo "GI_TYPELIB_PATH=/usr/local/lib/girepository-1.0/" >> $GITHUB_ENV
+#
+#          pip install --upgrade pip
+#          pip --version
+#          pip install wheel
+#          pip install PyGObject
+#          pip install wxPython
+#          pip install -r requirements.txt
+#          pip install pyinstaller==5.13.2
+#
+#          echo "${{ env.pythonLocation }}/bin" >> $GITHUB_PATH
+#      - shell: bash
+#        run: |
+#          make dist
+#        env:
+#          BUILD: osx
+#          MACOS_CERTIFICATE: ${{ secrets.INKSTITCH_APPLE_DEVELOPER_CERTIFICATE }}
+#          MACOS_CERTIFICATE_PWD: ${{ secrets.INKSTITCH_APPLE_DEVELOPER_CERTIFICATE_PASSWORD }}
+#          KEYCHAIN_PWD: ${{ secrets.KEYCHAIN_PASSWORD }}
+#          INSTALLER_CERTIFICATE: ${{ secrets.INKSTITCH_APPLE_INSTALLER_CERTIFICATE }}
+#          INSTALLER_PWD: ${{ secrets.INKSTITCH_APPLE_INSTALLER_CERTIFICATE_PASSWORD }}
+#          NOTARY_ACCOUNT: ${{ secrets.INKSTITCH_NOTARIZE_AC }}
+#          NOTARY_PASSWORD: ${{ secrets.INKSTITCH_NOTARIZE_PASS }}
+#
+#
+#      - uses: actions/upload-artifact@v3
+#        with:
+#          name: inkstitch-mac
+#          path: artifacts
 
   release:
     runs-on: ubuntu-latest
