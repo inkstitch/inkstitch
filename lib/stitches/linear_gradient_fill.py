@@ -7,6 +7,7 @@ from math import ceil, floor, sqrt
 
 import numpy as np
 from inkex import DirectedLineSegment, Transform
+from networkx import eulerize
 from shapely import segmentize
 from shapely.affinity import rotate
 from shapely.geometry import LineString, MultiLineString, Point, Polygon
@@ -192,8 +193,13 @@ def _get_stitch_groups(fill, shape, colors, color_lines, starting_point, ending_
         segments = [list(line.coords) for line in multiline.geoms if len(line.coords) > 1]
 
         fill_stitch_graph = build_fill_stitch_graph(shape, segments, starting_point, ending_point)
+
         if not graph_is_valid(fill_stitch_graph):
-            continue
+            # try to eulerize
+            fill_stitch_graph = eulerize(fill_stitch_graph)
+            # still not valid? continue without rendering the color section
+            if not graph_is_valid(fill_stitch_graph):
+                continue
 
         travel_graph = build_travel_graph(fill_stitch_graph, shape, fill.angle, False)
         path = find_stitch_path(fill_stitch_graph, travel_graph, starting_point, ending_point)
