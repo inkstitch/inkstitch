@@ -249,7 +249,8 @@ jobs:
 
   release:
     runs-on: ubuntu-latest
-    needs: [linux, windows32, windows64, mac]
+#    needs: [linux, windows32, windows64, mac]
+    needs: [windows64]
     if: always()
     steps:
       - name: determine release info
@@ -267,29 +268,29 @@ jobs:
             echo "prerelease=true" >> $GITHUB_ENV
             echo "title=development build of $branch" >> $GITHUB_ENV
           fi
-      - name: download linux
-        uses: actions/download-artifact@v3
-        with:
-          name: 'inkstitch-linux'
-          path: 'artifacts/'
-      - name: download windows32
-        uses: actions/download-artifact@v3
-        with:
-          name: 'inkstitch-windows32'
-          path: 'artifacts/'
-        if: always()
+#      - name: download linux
+#        uses: actions/download-artifact@v3
+#        with:
+#          name: 'inkstitch-linux'
+#          path: 'artifacts/'
+#      - name: download windows32
+#        uses: actions/download-artifact@v3
+#        with:
+#          name: 'inkstitch-windows32'
+#          path: 'artifacts/'
+#        if: always()
       - name: download windows64
         uses: actions/download-artifact@v3
         with:
           name: 'inkstitch-windows64'
           path: 'artifacts/'
         if: always()
-      - name: download mac
-        uses: actions/download-artifact@v3
-        with:
-          name: 'inkstitch-mac'
-          path: 'artifacts/'
-        if: always()
+#      - name: download mac
+#        uses: actions/download-artifact@v3
+#        with:
+#          name: 'inkstitch-mac'
+#          path: 'artifacts/'
+#        if: always()
       - name: create/update release
         uses: "marvinpinto/action-automatic-releases@latest"
         if: always()
