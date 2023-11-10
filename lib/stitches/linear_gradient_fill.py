@@ -205,8 +205,7 @@ def _get_stitch_groups(fill, shape, colors, color_lines, starting_point, ending_
             fill.running_stitch_length,
             fill.running_stitch_tolerance,
             fill.skip_last,
-            False,  # no underpath
-            False  # TODO: clamping somehow does the opposite of what it should do
+            False  # no underpath
         )
 
         stitches = _remove_start_end_travel(fill, stitches, colors, i)
