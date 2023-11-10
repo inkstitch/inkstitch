@@ -562,6 +562,7 @@ class FillStitch(EmbroideryElement):
                 polygons.append(polygon)
             if isinstance(polygon, shgeo.MultiPolygon):
                 polygons.extend(polygon.geoms)
+        return shgeo.MultiPolygon(polygons)
 
     def _get_clipped_path(self):
         if self.node.clip is None:
