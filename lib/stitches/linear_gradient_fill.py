@@ -57,6 +57,7 @@ def _get_lines_nums_and_colors(shape, fill):
     bounds = rotated_shape.bounds
 
     # extend bounding box for lines just a little to make sure we cover the whole area with lines
+    # this avoids rounding errors due to the rotation later on
     rot_bbox = Polygon([
         (bounds[0] - fill.max_stitch_length, bounds[1] - fill.row_spacing),
         (bounds[2] + fill.max_stitch_length, bounds[1] - fill.row_spacing),
@@ -91,7 +92,7 @@ def _get_lines_nums_and_colors(shape, fill):
     return colors, lines, line_nums
 
 
-def _get_color_lines(colors, line_nums, lines):  # noqa: C901
+def _get_color_lines(colors, line_nums, lines):
     color_lines = {}
     for color in colors:
         color_lines[color] = []
@@ -134,24 +135,17 @@ def _get_color_lines(colors, line_nums, lines):  # noqa: C901
             rest = c1_count % c2_count
             c1_count = ceil(c1_count / c2_count)
 
-            for j in range(c2_count):
-                if stop:
-                    break
-                if rest == 0 or j < rest:
-                    count = c1_count
-                else:
-                    count = c1_count - 1
-                if line_count_diff > 0:
-                    count += 1
-                    line_count_diff -= 1
-                for k in range(count):
-                    color1.append(current_line)
-                    current_line += 1
-                    if total_lines / 2 <= current_line + 1:
-                        stop = True
-                        break
-                color2.append(current_line)
-                current_line += 1
+            current_line, line_count_diff, color1, color2, stop, rest = _add_lines(
+                current_line,
+                total_lines,
+                line_count_diff,
+                color1,
+                color2,
+                stop,
+                rest,
+                c1_count,
+                c2_count
+            )
 
         block2_end = color2[-1] * 2 + 1
 
@@ -182,6 +176,28 @@ def _get_color_lines(colors, line_nums, lines):  # noqa: C901
     return color_lines, colors
 
 
+def _add_lines(current_line, total_lines, line_count_diff, color1, color2, stop, rest, c1_count, c2_count):
+    for j in range(c2_count):
+        if stop:
+            break
+        if rest == 0 or j < rest:
+            count = c1_count
+        else:
+            count = c1_count - 1
+        if line_count_diff > 0:
+            count += 1
+            line_count_diff -= 1
+        for k in range(count):
+            color1.append(current_line)
+            current_line += 1
+            if total_lines / 2 <= current_line + 1:
+                stop = True
+                break
+        color2.append(current_line)
+        current_line += 1
+    return current_line, line_count_diff, color1, color2, stop, rest
+
+
 def _get_stitch_groups(fill, shape, colors, color_lines, starting_point, ending_point):
     stitch_groups = []
     for i, color in enumerate(colors):
@@ -189,7 +205,10 @@ def _get_stitch_groups(fill, shape, colors, color_lines, starting_point, ending_
 
         multiline = MultiLineString(lines).intersection(shape)
         if not isinstance(multiline, MultiLineString):
-            continue
+            if isinstance(multiline, LineString):
+                multiline = MultiLineString([multiline])
+            else:
+                continue
         segments = [list(line.coords) for line in multiline.geoms if len(line.coords) > 1]
 
         fill_stitch_graph = build_fill_stitch_graph(shape, segments, starting_point, ending_point)
