@@ -459,7 +459,7 @@ class FillStitch(EmbroideryElement):
             except (TypeError, ValueError):
                 return default_value
         elif self.fill_method == 'linear_gradient_fill' and self.gradient is not None:
-            return [gradient_angle(self.node, self.gradient) / 2]
+            return [-gradient_angle(self.node, self.gradient)]
         else:
             underlay_angles = default_value
 
