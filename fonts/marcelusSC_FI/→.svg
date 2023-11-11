@@ -26,15 +26,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      showgrid="true"
-     inkscape:zoom="3.6203867"
-     inkscape:cx="69.605824"
-     inkscape:cy="87.974028"
+     inkscape:zoom="7.2407734"
+     inkscape:cx="32.386043"
+     inkscape:cy="61.112256"
      inkscape:window-width="1440"
      inkscape:window-height="798"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g15058"
+     inkscape:current-layer="g60"
      inkscape:document-units="px"
      inkscape:snap-global="true"
      showguides="true"
@@ -84,9 +84,9 @@ Created by FontForge 20201107 at Tue Sep 14 10:52:54 2021
  By Claudine 
 Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astigmatic.com), with Reserved Font Name &quot;Marcellus&quot;
 <inkstitch:collapse_len_mm
-   id="collapse_len_mm1319">0.10000000149011612</inkstitch:collapse_len_mm>
+   id="collapse_len_mm1319">2.0</inkstitch:collapse_len_mm>
 <inkstitch:min_stitch_len_mm
-   id="min_stitch_len_mm9235">0</inkstitch:min_stitch_len_mm>
+   id="min_stitch_len_mm9235">0.5</inkstitch:min_stitch_len_mm>
 <inkstitch:inkstitch_svg_version>1</inkstitch:inkstitch_svg_version>
 </metadata>
   <defs
@@ -191,8 +191,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
          inkscape:connector-curvature="0"
          style="display:inline;opacity:1;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:0.2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
          d="m -3.0312502,1.577739 c 0,0 0.25,-3.6875002 0.25,-3.6875002 0,0 1.0312501,3.8437502 1.0312501,3.8437502 0,0 0.34375,-3.6250002 0.34375,-3.6250002 0,0 0.96874997,3.5625002 0.96874997,3.5625002 0,0 0.28125,-3.3125002 0.28125,-3.3125002 0,0 0.9375001,3.3125002 0.9375001,3.3125002 0,0 0.21875,-3.0937502 0.21875,-3.0937502 0,0 1.03125013,2.9687502 1.03125013,2.9687502 0,0 0.0625,-2.7187501 0.0625,-2.7187501 0,0 0.96875,2.4687501 0.96875,2.4687501 0,0 0.15625,-2.18750023 0.15625,-2.18750023"
-         id="path31975"
-          />
+         id="path31975" />
     </symbol>
     <symbol
        id="inkstitch_satin_end"
@@ -213,32 +212,30 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
          style="display:inline;opacity:1;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:0.2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
          d="m -3.2964153,1.5777408 0.25,-3.6875001 1.0312501,3.8437501 0.34375,-3.6250001 0.9687501,3.5625001 0.28125,-3.3125001 0.9375,3.3125001 0.21875,-3.0937501 1.0312499,2.9687501 0.0625,-2.7187501 0.96875,2.4687501 0.15625,-2.1875"
          id="path31975-0-2"
-         inkscape:connector-curvature="0"
-          />
+         inkscape:connector-curvature="0" />
     </symbol>
   </defs>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-!"
-     style="display:inline;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15414"
-     >
+     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
+     id="g15414">
     <path
-       d="M 15.7729,136.055 C 15.83093,131.98667 15.888967,127.91833 15.947,123.85"
+       d="m 15.7729,136.055 c 0.05803,-4.06833 0.116067,-8.13667 0.1741,-12.205"
        id="path43352"
        sodipodi:nodetypes="cc"
        inkstitch:ties="3"
        inkstitch:running_stitch_length_mm="2"
-       style="stroke-dasharray:0.5,0.5;stroke-width:0.94488189;stroke-miterlimit:4;stroke-dashoffset:0" />
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0" />
     <path
        d="M 15.2107,112.938 C 15.869633,89.008567 16.528567,65.079133 17.1875,41.1497"
        id="path19356"
        inkstitch:ties="3"
        inkstitch:running_stitch_length_mm="2"
-       style="stroke-dasharray:0.5,0.5;stroke-width:0.94488189;stroke-miterlimit:4;stroke-dashoffset:0" />
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0" />
     <path
        id="path43364"
-       d="M 25,40.759101 23.681282,47.532006 18.847509,103.87811 18.394815,109.15595 18,113.759 M 9,40.759101 9.5569588,47.535261 14.187785,103.87811 14.620219,109.13882 15,113.759 M 26.2403,46.421101 H 7.31966"
+       d="m 25,40.759101 -1.318718,6.772905 -4.833773,56.346104 -0.452694,5.27784 L 18,113.759 m -9,-72.999899 0.5569588,6.77616 4.6308262,56.342849 0.432434,5.26071 L 15,113.759 M 26.2403,46.421101 H 7.31966"
        inkstitch:running_stitch_length_mm="2"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.3"
@@ -248,11 +245,11 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        inkstitch:zigzag_underlay_max_stitch_length_mm="6"
        inkstitch:ties="2"
        inkstitch:force_lock_stitches="True"
-       style="stroke-width:0.94488189;stroke-miterlimit:4;stroke-dasharray:none"
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:none"
        inkstitch:reverse_rails="none" />
     <path
        id="path43358"
-       d="M 16.523312,122.96043 C 20.384954,122.96043 24.415435,126.09091 24.415438,129.95255 24.41544,133.8142 20.384958,136.94468 16.523312,136.94468 M 16.523312,122.96043 C 12.66167,122.96043 8.6311893,126.09091 8.631186,129.95255 8.6311838,133.8142 12.661666,136.94468 16.523312,136.94468"
+       d="m 16.523312,122.96043 c 3.861642,0 7.892123,3.13048 7.892126,6.99212 2e-6,3.86165 -4.03048,6.99213 -7.892126,6.99213 m 0,-13.98425 c -3.861642,0 -7.8921227,3.13048 -7.892126,6.99212 -2.2e-6,3.86165 4.03048,6.99213 7.892126,6.99213"
        sodipodi:nodetypes="cccccc"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.3"
@@ -263,15 +260,14 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        inkstitch:force_lock_stitches="True"
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay_max_stitch_length_mm="6"
-       style="stroke-width:0.94488189;stroke-miterlimit:4;stroke-dasharray:none"
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:none"
        inkstitch:reverse_rails="none" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-&amp;"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15386"
-     >
+     id="g15386">
     <path
        id="autosatinrun41"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -375,8 +371,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-'"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15378"
-     >
+     id="g15378">
     <path
        id="path7677"
        d="M 9.3213463,66.455061 C 9.93412,70.055697 10.535204,73.484771 11,76.875366 M 15.230961,66.455061 C 14.865217,69.910413 14.487569,73.457626 14.031128,76.875366 M 6.9053395,70.123061 17.677669,70.399275"
@@ -405,8 +400,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-‘"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g2"
-     >
+     id="g2">
     <path
        id="path1"
        d="M 9.3213463,66.455061 C 9.93412,70.055697 10.535204,73.484771 11,76.875366 M 15.230961,66.455061 C 14.865217,69.910413 14.487569,73.457626 14.031128,76.875366 M 6.9053395,70.123061 17.677669,70.399275"
@@ -435,8 +429,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-’"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g4936"
-     >
+     id="g4936">
     <path
        id="path4932"
        d="M 9.3213463,66.455061 C 9.93412,70.055697 10.535204,73.484771 11,76.875366 M 15.230961,66.455061 C 14.865217,69.910413 14.487569,73.457626 14.031128,76.875366 M 6.9053395,70.123061 17.677669,70.399275"
@@ -465,8 +458,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-("
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15390"
-     >
+     id="g15390">
     <path
        d="M 23.2564,135.429 C 19.283973,122.50069 11.644774,109.74071 14.192229,95.721731 15.050614,84.459233 15.825288,72.980193 19.132002,62.14677 23.606423,53.074436 31.000159,45.97629 37.524151,38.409198"
        inkstitch:running_stitch_length_mm="2"
@@ -506,8 +498,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-)"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15394"
-     >
+     id="g15394">
     <path
        d="M 17.7436,135.429 C 21.716027,122.50069 29.355226,109.74071 26.807771,95.721731 25.949386,84.459233 25.174712,72.980193 21.867998,62.14677 17.393578,53.074436 9.9998431,45.976289 3.4758494,38.409198"
        inkstitch:running_stitch_length_mm="2"
@@ -547,8 +538,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-,"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15402"
-     >
+     id="g15402">
     <path
        id="path1149"
        d="M 8.4200606,123.91432 6.5724036,125.39674 C 5.2638926,126.89753 4.7849229,128.53086 4.5802166,130.41432 4.5802166,132.41432 5.2468866,134.08132 6.5802166,135.41432 7.9135166,136.74732 9.5802166,137.41432 11.580217,137.41432 M 11.580217,123.41432 C 12.913517,123.41432 13.913517,123.58132 14.580217,123.91432 15.246917,124.24732 16.401798,124.81666 17.068498,125.81666 18.113051,127.16985 18.694151,129.33983 18.580217,131.41432 18.580217,133.41432 18.246917,135.41432 17.580217,137.41432 M 2.2677165,130.45729 19.552873,125.86745"
@@ -584,8 +574,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer--"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15430"
-     >
+     id="g15430">
     <path
        id="path15428"
        d="M 5,96 H 43.503639 M 5,106 H 43.503639"
@@ -614,8 +603,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-."
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15398"
-     >
+     id="g15398">
     <path
        d="M 14.224999,135.86189 C 14.224999,131.85679 14.224999,127.8517 14.224999,123.8466"
        id="path18445"
@@ -643,8 +631,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-/"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15374"
-     >
+     id="g15374">
     <path
        d="M 6.0766988,136 C 22.189158,102.94644 38.301616,69.892883 54.414075,36.839325"
        id="path26265"
@@ -669,8 +656,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-0"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15318"
-     >
+     id="g15318">
     <path
        d="M 23.1413,119.826 C 6.0207761,102.5665 6.40153,70.615753 25.724534,55.108075 33.199285,48.707197 42.777735,44.793702 52.6035,44.1829"
        inkstitch:running_stitch_length_mm="2"
@@ -723,8 +709,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-1"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15322"
-     >
+     id="g15322">
     <path
        d="M 19.801126,127.73288 C 19.955966,104.5331 20.445123,81.321513 19.550577,58.130138 16.249183,53.27728 17.634207,45.321242 23.6112,43.2865"
        inkstitch:running_stitch_length_mm="2"
@@ -769,8 +754,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-2"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15326"
-     >
+     id="g15326">
     <path
        d="M 20.9613,127.03 C 36.560586,111.41778 50.944036,92.820129 55.061206,70.625268 56.552538,58.925341 49.782575,45.32741 37.38035,43.158537 28.599185,40.881216 19.00905,42.779366 11.3788,47.5511"
        inkstitch:running_stitch_length_mm="2"
@@ -814,8 +798,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-3"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15330"
-     >
+     id="g15330">
     <path
        id="path8437"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -904,8 +887,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-4"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15334"
-     >
+     id="g15334">
     <path
        id="path8452"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -1029,8 +1011,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-5"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15338"
-     >
+     id="g15338">
     <path
        id="path8469"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -1129,8 +1110,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-6"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15342"
-     >
+     id="g15342">
     <path
        d="M 15.3665,114.367 C 10.029376,96.20486 13.463496,75.660348 24.99869,60.556052 35.22674,45.412548 51.053611,34.777099 67.96627,28.387426"
        inkstitch:running_stitch_length_mm="2"
@@ -1183,8 +1163,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-7"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15346"
-     >
+     id="g15346">
     <path
        d="M 23.4572,113.723 C 19.138481,121.14887 14.819289,128.57446 10.5,136"
        inkstitch:running_stitch_length_mm="2"
@@ -1259,8 +1238,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-8"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15350"
-     >
+     id="g15350">
     <path
        d="M 11.3906,117.301 C 8.7499873,104.4061 18.545783,92.466093 29.6189,87.2722"
        inkstitch:running_stitch_length_mm="2"
@@ -1311,8 +1289,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-9"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15354"
-     >
+     id="g15354">
     <path
        d="M -7,146 0,144.75 7,143 10.4688,141.906 13.875,140.625 17.2188,139.156 20.5,137.5 23.6875,135.656 26.75,133.625 29.6875,131.406 32.5,129 37.73,123.895 M -5,149 -0.03125,148.812 4.875,148.25 9.71875,147.312 14.5,146 19.1562,144.375 23.625,142.5 27.9063,140.375 32,138 35.9375,135.406 39.75,132.625 43.4375,129.656 43.8324,129.306 M 44.0625,129.643 37.3535,123.694"
        id="path22360"
@@ -1361,8 +1338,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-:"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15406"
-     >
+     id="g15406">
     <path
        d="M 16.296599,135.44757 C 16.296599,131.58058 16.296599,127.71359 16.296599,123.8466"
        id="path956"
@@ -1410,8 +1386,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-;"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15410"
-     >
+     id="g15410">
     <path
        d="M 15.606069,136.1381 C 15.639969,131.81066 15.673859,127.48322 15.707758,123.15578 M 15.916545,96.50064 C 15.951165,92.081493 15.985775,87.662347 16.020389,83.2432"
        id="path12200"
@@ -1468,8 +1443,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-="
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15358"
-     >
+     id="g15358">
     <path
        d="M 11.794506,76.5 C 32.948936,76.5 54.103367,76.5 75.257797,76.5"
        id="path112201"
@@ -1512,8 +1486,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-?"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15422"
-     >
+     id="g15422">
     <path
        d="M 21.682766,135.86189 C 21.682766,131.62662 21.682766,127.39135 21.682766,123.15608 M 22.649514,113.35049 C 21.911164,103.03259 29.22933,94.632239 31.532262,84.973759 34.855091,76.406075 40.452244,68.750562 43.055396,59.945845 44.155696,47.399901 29.363275,37.99325 18.083443,42.584241 14.469963,43.529973 11.06186,45.191705 8.0101938,47.335441"
        id="path79537"
@@ -1554,8 +1527,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-@"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15362"
-     >
+     id="g15362">
     <path
        d="M 16.5714,114.633 C 22.113766,133.47754 39.939319,146.88117 59.103856,149.35328 77.843206,152.70921 98.230811,149.00161 113.19108,136.76995"
        inkstitch:running_stitch_length_mm="2"
@@ -1639,8 +1611,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-A"
      id="g14994"
-     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     >
+     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1">
     <path
        id="autosatin7"
        d="M -0.377953,136 C 0.288714,135.333 1.122047,133.833 2.122047,131.5 3.122047,129.167 4.622047,126.333 6.622047,123 L 14.694447,105.06 M 12.622047,136 V 135.5 134 C 12.622047,132 12.955347,129.833 13.622047,127.5 14.288747,125.167 14.955347,123.333 15.622047,122 18.397847,116.101 20.915747,110.574 23.300647,105.06 M 23.840847,124.086 H 1.965797"
@@ -1726,8 +1697,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-B"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g14998"
-     >
+     id="g14998">
     <path
        id="autosatin57"
        d="M 9.29702,135.376 C 11.699536,119.29725 11.439199,104.8207 11.3411,90.4433 M 16.159322,132.70754 24.9069,129.3305 C 24.3669,116.6735 24.1916,103.651 24.2012,90.4433 M 25.1883,115.689 10.4929,115.524"
@@ -1844,8 +1814,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-C"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15002"
-     >
+     id="g15002">
     <path
        d="M 30.3749,125.903 29.6593,125.362 28.7632,124.639 27.8999,123.876 27.5041,123.52 V 123.52 L 27.0429,123.105 26.2129,122.308 25.4193,121.472 24.8638,120.884 V 120.884 L 24.6282,120.634 23.8695,119.769 23.1469,118.871 22.4662,118.024 V 118.024 L 22.425,117.973 21.7424,117.046 21.0909,116.096 20.4424,115.144 20.3308,114.963 V 114.963 L 19.837,114.165 19.2589,113.169 18.6869,112.169 18.4618,111.733 V 111.733 L 18.159,111.147 17.6474,110.115 17.1358,109.084 16.816,108.383 V 108.383 L 16.6538,108.027 16.2225,106.926 15.7932,105.823 15.4636,104.905 V 104.905 L 15.4103,104.756 15.0531,103.679 14.7272,102.593 14.4231,101.501 14.3806,101.333 V 101.333 L 14.1434,100.401 13.877,99.2983 13.6499,98.1871 13.5628,97.6922 V 97.6922 L 13.4533,97.0697 13.2568,95.9523 13.0869,94.831 13.0022,94.0031 V 94.0031 L 12.9714,93.7025 12.856,92.5739 12.7421,91.4454 12.6932,90.2843 V 90.2843 L 12.6923,90.2635 12.6559,89.1299 12.6194,87.9963 12.6245,86.8149 12.6332,86.5526 V 86.5526 L 12.6635,85.6326 12.7042,84.4995 12.8002,83.3238 12.8461,82.8269 V 82.8269 L 12.9088,82.149 13.0489,80.9759 13.2193,79.809 13.3192,79.1247 V 79.1247 L 13.3897,78.6421 13.5922,77.4802 13.8373,76.3261 14.0213,75.4594 V 75.4594 L 14.0823,75.1719 14.3641,74.027 14.6844,72.8969 14.9874,71.8547 V 71.8547 L 15.0101,71.7767 15.3701,70.6696 15.7718,69.5734 16.1851,68.4825 16.2426,68.3401 V 68.3401 L 16.6209,67.4021 17.0822,66.3303 17.5883,65.2789 17.759,64.9306 V 64.9306 L 18.1017,64.2314 18.6265,63.1903 19.2198,62.1842 19.5349,61.6497 V 61.6497 L 19.8131,61.178 20.4372,60.1942 21.1071,59.2391 21.6231,58.559 V 58.559 L 21.8127,58.309 22.5307,57.3894 23.2693,56.4876 24.009,55.6913 V 55.6913 L 24.0648,55.6312 24.8699,54.7849 25.6903,53.9548 26.5542,53.1692 26.6687,53.0752 V 53.0752 L 27.4574,52.4274 28.3607,51.6856 29.2716,50.9537 29.5766,50.7355 V 50.7355 L 30.2226,50.2734 31.2077,49.6431 32.1927,49.0129 32.7089,48.7072 V 48.7072 L 33.1988,48.4172 34.2121,47.8334 35.2538,47.3024 35.9958,46.9417 V 46.9417 L 36.3054,46.7912 37.3716,46.3107 38.4378,45.8301 39.4111,45.4369 V 45.4369 L 39.5218,45.3922 40.6273,45.0107 41.7343,44.6332 42.8413,44.2557 42.9421,44.2264 V 44.2264 L 43.9635,43.93 45.1004,43.6549 46.2373,43.3799 46.5583,43.3027 V 43.3027 L 47.3746,43.1066 48.5231,42.8914 49.68,42.7183 50.229,42.6361 V 42.6361 L 50.8369,42.5452 51.9964,42.3944 53.1584,42.2668 53.9368,42.2142 V 42.2142 L 54.3255,42.188 55.4929,42.1152 56.6618,42.0797 57.666,42.0713 V 42.0713 L 57.8315,42.0699 59.0013,42.0602 60.1709,42.0937 61.3254,42.1588 61.3966,42.1628 V 42.1628 L 62.4799,42.2238 63.6299,42.33 64.7741,42.4889 65.1088,42.5354 V 42.5354 L 65.9183,42.6478 67.0603,42.8249 68.1886,43.0656 68.7816,43.1922 V 43.1922 L 69.3169,43.3063 70.4414,43.5681 71.5575,43.8607 72.4019,44.0985 V 44.0985 L 72.6669,44.1732 73.7707,44.5097 74.8723,44.8555 75.9597,45.2272 V 45.2272 L 75.9626,45.2282 77.0436,45.6313 78.1228,46.0406 79.199,46.456 79.3845,46.6501 V 46.6501 L 79.9832,47.2763 80.7364,48.1321 81.4897,48.9879 81.8684,49.4357 V 49.4357 L 82.2312,49.8645 82.9689,50.7476 83.7067,51.6307 84.2644,52.2983 V 52.2983 L 84.4444,52.5138 85.1822,53.3969 85.9199,54.28 86.6577,55.1632"
        inkstitch:running_stitch_length_mm="2"
@@ -1898,8 +1867,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-D"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15006"
-     >
+     id="g15006">
     <path
        id="autosatin50"
        d="M 8.7,136.6 10.4665,130.808 10.9786,128.171 C 11.116084,114.77887 11.15282,100.88549 11.2373,87.3022 L 11.264,68.2264 10.9687,49.1563 10.9001,47.2786 10.6311,44.6338 10.3615,43.3059 9.11053,40.3331 M 31.2121,107.55 H 3.03835 M 30.1073,63.3558 H 5.52427 M 15.881553,133.69976 24.124796,129.37087 24.0512,120.512 24.045107,80.851042 24,46 16.804519,43.073393"
@@ -1956,8 +1924,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-E"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15010"
-     >
+     id="g15010">
     <path
        d="M 17.4199,127.648 C 17.605837,113.58822 17.447289,99.527034 17.5,85.4667"
        inkstitch:running_stitch_length_mm="2"
@@ -2056,8 +2023,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-F"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15014"
-     >
+     id="g15014">
     <path
        d="M 15.933112,136.3261 C 16.417155,118.98134 17.707114,101.65636 17.569362,84.296803 28.965512,84.018182 40.361661,83.73956 51.757811,83.460939"
        inkstitch:running_stitch_length_mm="2"
@@ -2135,8 +2101,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-G"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15018"
-     >
+     id="g15018">
     <path
        d="M 30.981067,125.91436 C 12.560056,113.30723 8.3373172,86.945997 16.779955,67.240691 25.157798,46.676855 50.769836,37.499407 71.285586,43.702283 74.059999,44.434601 76.776546,45.384841 79.404988,46.535625"
        inkstitch:running_stitch_length_mm="2"
@@ -2188,8 +2153,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-H"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15022"
-     >
+     id="g15022">
     <path
        id="path11043"
        d="M 9,136 C 10.335728,133.19857 10.980697,130.02506 11,127 V 120 110 90.4248 M 25,136 C 25,136.667 24.162048,134.10579 24.08568,130.75704 L 24,127 V 120 110 90 M 8.28641,120.946 H 28.8643 M 7.73398,96.6396 H 28.7262"
@@ -2294,8 +2258,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-I"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15026"
-     >
+     id="g15026">
     <path
        d="M 17.9969,127.237 C 17.97834,98.874002 18.05085,70.510947 17.9699,42.148"
        inkstitch:running_stitch_length_mm="2"
@@ -2348,8 +2311,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-J"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15030"
-     >
+     id="g15030">
     <path
        d="M 16.685316,128.66166 C 16.631792,142.93619 12.163841,154.21944 0.444572,163.2"
        inkstitch:running_stitch_length_mm="2"
@@ -2400,8 +2362,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-K"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15034"
-     >
+     id="g15034">
     <path
        id="path13301"
        d="M 25,136 C 24.145512,131.81779 24,125.57764 24,120 V 110 83 M 9,136 C 10.982364,130.75863 11,125.94341 11,120 V 110 83.14806 M 7.0434463,108.51675 H 29.002426"
@@ -2463,8 +2424,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-L"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15038"
-     >
+     id="g15038">
     <path
        d="M 10.150849,135.17136 C 17.396727,133.11047 19.383004,128.17065 17.804387,121.18692 17.052362,94.598265 17.521194,67.992732 17.401456,41.396846"
        id="path50498"
@@ -2519,8 +2479,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-M"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15042"
-     >
+     id="g15042">
     <path
        id="autosatin11"
        d="M 5.00031,136 V 135.734 C 5.48752,135.026 6.04116,133.985 6.66124,132.612 7.28132,131.194 7.76852,129.423 8.12285,127.297 8.61006,124.196 9.14156,120.719 9.71734,116.866 10.3374,112.969 10.9575,108.894 11.5776,104.642 12.2419,100.39 12.8842,96.0492 13.5043,91.6201 14.1686,87.1467 14.7887,82.7618 15.3645,78.4655 15.9846,74.125 16.5604,69.9616 17.0919,65.9754 17.6676,61.9449 18.177,58.2687 18.6199,54.9468 19.0628,51.625 19.4171,48.7461 19.6829,46.31 19.9929,43.8297 20.2144,41.9695 20.3473,40.7293 M 18.2877,136 C 18.1548,135.291 18.022,134.472 17.8891,133.542 17.8005,132.745 17.7119,131.77 17.6233,130.619 17.5348,129.467 17.4905,128.138 17.4905,126.632 17.4905,125.437 17.6012,123.598 17.8227,121.118 18.0441,118.594 18.332,115.692 18.6863,112.415 19.085,109.137 19.5279,105.616 20.0151,101.851 20.5023,98.0423 20.9895,94.2333 21.4767,90.4242 22.6283,81.5216 23.9792,71.8218 25.5294,61.3248 L 23.1793,51.985 M 5.52427,123.847 H 20.716 M 11.0485,73.0233 H 25.4117"
@@ -2601,8 +2560,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-N"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15046"
-     >
+     id="g15046">
     <path
        d="M 15.01,117.155 C 15.249966,122.88368 14.653884,128.61135 14.902344,134.33984"
        inkstitch:running_stitch_length_mm="2"
@@ -2684,8 +2642,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-O"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15050"
-     >
+     id="g15050">
     <path
        id="autosatinrun40"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -2732,8 +2689,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-P"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15054"
-     >
+     id="g15054">
     <path
        id="path22479"
        d="M 25,136 V 136 L 24.9687,136.125 24.875,135.5 24.7653,134.476 M 9,136 V 136 L 9.25,134.625 9.37995,134.257 M 8.5752,134.34 25.5475,134.587"
@@ -2803,9 +2759,8 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Q"
-     style="display:inline;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15058"
-     >
+     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
+     id="g15058">
     <path
        id="path22488"
        d="M 57,138 C 49.6667,138 42.8333,136.833 36.5,134.5 30.1667,132.167 24.6667,128.833 20,124.5 15.3333,120.167 11.6667,115 9,109 6.33333,103 5,96.3333 5,89 5,85 5.5,80.8333 6.5,76.5 c 1,-4.3333 2.5,-8.3333 4.5,-12 2,-3.6667 4.3333,-7 7,-10 2.6667,-3 5.8333,-5.6667 9.5,-8 3.6667,-2.3333 7.6667,-4.1667 12,-5.5 4.3333,-1.3333 8.8333,-2 13.5,-2 7.3333,0 14.1667,1.1667 20.5,3.5 6.3333,2.3333 11.6667,5.8333 16,10.5 4.3333,4.6667 7.8333,10 10.5,16 2.667,6 4,12.6667 4,20 0,5.3333 -0.667,10.3333 -2,15 -1.333,4.667 -3.3333,9 -6,13 -2.6667,4 -5.8333,7.5 -9.5,10.5 -3.6667,3 -7.8333,5.5 -12.5,7.5 m -17,-3 c -6,0 -11.3333,-1.167 -16,-3.5 -4.6667,-2.333 -8.6667,-5.667 -12,-10 C 25.6667,114.167 23.3333,109 22,103 20.6667,97 20,90.6667 20,84 20,78 20.8333,72.5 22.5,67.5 24.1667,62.5 26.3333,58.3333 29,55 31.6667,51.6667 35.1667,49.1667 39.5,47.5 43.8333,45.8333 48.3333,45 53,45 c 6,0 11.3333,1.1667 16,3.5 4.6667,2.3333 8.5,5.6667 11.5,10 3,4.3333 5.3333,9.5 7,15.5 1.6667,6 2.5,12.3333 2.5,19 0,6 -0.8333,11.5 -2.5,16.5 -1.6667,5 -4,9.167 -7,12.5 -3,3.333 -6.005463,5.37872 -10.005463,7.04572 M 5.27344,108.266 H 29.8828 m 52.3438,0.195 H 104.688 M 78.5156,63.5391 H 100.977 M 7.22656,63.3438 H 26.9531 M 54.296875,46.9375 V 34.242188"
@@ -2833,7 +2788,6 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        id="autosatin31"
        style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:none"
        d="m 119.02344,173.42969 c -6,0.375 -10.52344,-0.0967 -15.52344,-1.42969 -5,-1.333 -9.5,-3 -13.5,-5 -7.6492,-3.838 -14.5632,-8.746 -20.5,-14 -3,-2.667 -5.5,-5.333 -7.5,-8 -2,-2.667 -3.6667,-5 -4.9887,-7.029 M 121,172 c -12.159,-2.788 -17.923,-3.629 -24.5,-8 -5.7393,-4.165 -11.5846,-9.519 -14,-13.5 C 79.2301,145.566 76.511261,140.34253 74,135 m 12.1328,15.844 -10.7422,10.742"
-       
        inkstitch:satin_column="True"
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay="True"
@@ -2851,7 +2805,6 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:none"
        inkscape:label="AutoSatin 6"
        d="m 50,137.953 28.125,-5.231 m -21.1137,5.249 c -0.6555,-1.641 -2.0191,-3.708 -0.0918,-6.146 M 74,135 c -1.09318,-2.32566 -0.9552,-5.256 -3.3772,-6.547"
-       
        inkstitch:satin_column="True"
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay="True"
@@ -2861,8 +2814,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-R"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15062"
-     >
+     id="g15062">
     <path
        d="M 17.5103,128.678 C 17.53236,130.73981 17.215711,132.78161 17.0349,134.83"
        inkstitch:running_stitch_length_mm="2"
@@ -2960,8 +2912,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-S"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15066"
-     >
+     id="g15066">
     <path
        id="path8175"
        d="M 7,131 9.69549,133.02 12.643,134.648 15.769,135.92 19,136.875 22.1932,137.472 25.4509,137.869 28.7395,138.034 32.0254,137.936 35.2748,137.543 38.4543,136.825 41.5301,135.751 44.4688,134.289 46.0435,133.206 47.4938,131.989 48.8187,130.649 50.0173,129.198 50.3712,128.686 M 8,117 H 8.88702 L 9.89002,117.659 10.696,118.659 11.9968,121.284 13.3491,124.079 14.2194,125.292 15.3125,126.25 16.2827,127.351 17.3444,128.329 19.7038,129.925 22.3133,131.06 25.0956,131.751 27.9734,132.018 30.8693,131.88 33.706,131.357 36.4062,130.469 38.2126,129.527 39.6823,128.238 40.8429,126.669 41.7222,124.888 41.7453,124.816 M 30.2288,129.813 V 139.712"
@@ -3006,8 +2957,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-T"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15070"
-     >
+     id="g15070">
     <path
        d="M 40.5457,128.769 C 41.343704,102.36871 40.875896,75.953535 41,49.5467"
        inkstitch:running_stitch_length_mm="2"
@@ -3098,8 +3048,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-U"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15074"
-     >
+     id="g15074">
     <path
        d="M 25.3266,125.589 C 15.339242,116.00847 16.901164,101.07315 17.004177,88.475149 17.002404,72.6501 16.969104,56.82504 17,41"
        inkstitch:running_stitch_length_mm="2"
@@ -3155,8 +3104,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-V"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15078"
-     >
+     id="g15078">
     <path
        d="M 40.29,119.514 C 28.939153,93.308042 16.780614,67.451721 6,41"
        inkstitch:running_stitch_length_mm="2"
@@ -3212,8 +3160,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-W"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15082"
-     >
+     id="g15082">
     <path
        d="M 39.0125,121.507 C 28.580254,94.907412 17.383636,68.575448 7.1684295,41.913236 L 7,41"
        inkstitch:running_stitch_length_mm="2"
@@ -3302,8 +3249,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-X"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15086"
-     >
+     id="g15086">
     <path
        id="path22545"
        d="M 2,136 C 9.56518,127.19 16.6241,117.958 24.2034,109.156 29.8024,102.437 35.4011,95.7186 41,89 M 14,136 C 15.6736,130.89 20.1259,127.473 22.8069,122.947 30.2046,113.298 37.6023,103.649 45,94 M 3.90625,129.359 H 23.6328 M 18.1641,108.655 H 36.9141"
@@ -3375,8 +3321,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Y"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15090"
-     >
+     id="g15090">
     <path
        d="M 42,136 C 41.739849,120.36202 41.479699,104.72404 41.219548,89.086054 29.847114,73.176273 17.996284,57.599079 7.25,41.25"
        id="path22556"
@@ -3450,8 +3395,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Z"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15094"
-     >
+     id="g15094">
     <path
        d="M 9.9436891,133.79029 C 32.174639,105.2555 51.788733,74.822941 73.001725,45.547462 69.469921,40.217152 62.382426,44.999493 57.285945,43.647281 42.057621,44.048026 26.829296,44.448772 11.600971,44.849517"
        id="path23806"
@@ -3524,8 +3468,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-a"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g22594"
-     >
+     id="g22594">
     <path
        id="path22737"
        d="M -1.0000042,136.201 V 136 L 0.09699439,134.684 1.4379927,132.64 2.9689908,129.88201 4.6349887,126.52301 C 9.7311368,117.58885 10.73694,115.18698 13.787916,109.51897 M 10.051982,136.201 V 136 L 9.8359822,135.448 9.7269824,134.345 9.9579821,132.101 10.647981,129.88201 12.381979,125.82101 19.68719,112.58203 21.415188,108.77903 M 5.4739877,120.83102 17.399973,120.64402"
@@ -3625,8 +3568,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-b"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15102"
-     >
+     id="g15102">
     <path
        d="M 16.573987,128.27201 C 16.68351,108.55543 16.993642,88.829004 16.229857,69.120862 24.627407,64.213343 36.112536,65.128119 43.763313,71.010711 51.290811,78.653517 47.884132,94.545284 36.539039,96.214169 32.39332,97.478751 28.086729,98.10242 23.922318,99.295365"
        inkstitch:running_stitch_length_mm="2"
@@ -3730,8 +3672,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-c"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15106"
-     >
+     id="g15106">
     <path
        id="path8326"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -3787,8 +3728,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-d"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15110"
-     >
+     id="g15110">
     <path
        id="path8335"
        d="M 8.80474,136.215 C 12.0064,120.627 10.6913,72.349 9.01949,63.6294 M 14.5922,134.346 23.3211,131.938 C 20.7831,121.262 21.008,76.4243 22.204,69.11 L 15.4568,66.3765 M 4.96455,71.6972 26.714,72.17 M 5.20096,124.18 H 25.532"
@@ -3849,8 +3789,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-e"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g22639"
-     >
+     id="g22639">
     <path
        d="M 15.804186,133.50412 C 17.232018,121.52488 16.579756,109.43861 16.765145,97.409168"
        inkstitch:running_stitch_length_mm="2"
@@ -3963,8 +3902,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-f"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15118"
-     >
+     id="g15118">
     <path
        id="path8344"
        inkscape:label="Auto-remplissage satin 2"
@@ -4064,8 +4002,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-g"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15122"
-     >
+     id="g15122">
     <path
        d="M 34.0625,135.60154 C 23.690667,126.19954 11.747711,115.87134 10.362241,100.96575 8.1802898,88.833313 16.900521,77.940694 26.637556,71.916948 36.861787,65.886846 49.415981,65.33505 60.84425,67.4025"
        inkstitch:running_stitch_length_mm="2"
@@ -4118,8 +4055,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-h"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15126"
-     >
+     id="g15126">
     <path
        id="path8371"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -4234,8 +4170,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-i"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15130"
-     >
+     id="g15130">
     <path
        d="M 16.6697,128.539 C 17.336971,108.90337 16.966335,89.253494 16.7934,69.6131"
        inkstitch:running_stitch_length_mm="2"
@@ -4284,8 +4219,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-j"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15134"
-     >
+     id="g15134">
     <path
        id="path8390"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -4343,8 +4277,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-k"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15138"
-     >
+     id="g15138">
     <path
        id="path8399"
        d="M 9,136 9.72578,129.65 10.3653,121.586 10.858,112.304 11.1433,102.3 11.1562,94.729 M 24,136 23.3614,133.801 22.812,130.944 21.9772,123.566 21.4888,114.482 21.3398,104.306 21.5041,94.7754 M 22.0197,94.8777 10.6387,94.8267"
@@ -4450,8 +4383,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-l"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15142"
-     >
+     id="g15142">
     <path
        id="path8414"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -4523,8 +4455,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-m"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15146"
-     >
+     id="g15146">
     <path
        d="M 4,136 C 4.6666667,135.33333 5.3333333,134.16667 6,132.5 10.711248,110.58899 13.824378,85.780272 17,65 M 15,136 V 134 132 C 15,114.5406 18.55841,99.351384 21,82 L 19.240577,74.319442 M 11.523438,90.492187 H 21.484375"
        id="path3475"
@@ -4611,8 +4542,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-n"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15150"
-     >
+     id="g15150">
     <path
        d="M 13.5,117.658 C 13.56141,123.7736 13.907562,129.28427 14,135.4"
        inkstitch:running_stitch_length_mm="2"
@@ -4695,8 +4625,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-o"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15154"
-     >
+     id="g15154">
     <path
        id="autosatinrun39"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -4744,8 +4673,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-p"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15158"
-     >
+     id="g15158">
     <path
        d="M 10.787138,135.46491 C 18.926848,128.90805 13.979448,117.76049 15.349763,109.01197 15.528967,107.01261 15.836535,106.24759 15.746864,104.2384"
        inkstitch:running_stitch_length_mm="2"
@@ -4814,8 +4742,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-q"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15162"
-     >
+     id="g15162">
     <path
        d="M 14.138658,113.75614 C 6.7075197,96.561961 14.250229,72.673744 33.049725,66.772877 49.032594,61.616238 67.626105,71.952912 72.108091,88.060022 75.145404,96.982358 75.333478,107.03409 71.775681,115.83813"
        inkstitch:running_stitch_length_mm="2"
@@ -4868,8 +4795,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-r"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15166"
-     >
+     id="g15166">
     <path
        id="path17471"
        d="M 9.02349,135.867 C 9.33352,134.804 9.59927,133.608 9.82073,132.147 10.0865,130.685 10.2858,128.891 10.4187,126.765 10.5958,124.595 10.7287,122.026 10.8173,119.059 10.9059,116.091 10.9502,112.614 10.9502,108.628 V 105.4784 M 24.3704,135.867 C 24.0604,134.804 23.7946,133.63 23.5732,132.213 23.3517,130.751 23.1524,128.958 22.9753,126.832 22.8424,124.706 22.7317,122.181 22.6431,119.258 22.5545,116.29 22.5102,112.836 22.5102,108.894 V 105.638"
@@ -4973,8 +4899,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-s"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15170"
-     >
+     id="g15170">
     <path
        d="M 12.695312,135.21875 C 19.661458,134.89323 26.627604,134.56771 33.59375,134.24219 43.771409,127.0283 40.809547,109.36264 29.709807,104.61544 21.12006,97.794813 12.120775,88.530847 12.252535,76.833603 14.309821,66.02587 29.306089,62.773001 37.121624,69.554445 38.494972,70.424 39.788843,71.416648 41,72.5"
        inkstitch:running_stitch_length_mm="2"
@@ -5026,8 +4951,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-t"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15174"
-     >
+     id="g15174">
     <path
        d="M 33,117.674 C 33,101.78267 33,85.891333 33,70"
        inkstitch:running_stitch_length_mm="2"
@@ -5125,8 +5049,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-u"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15178"
-     >
+     id="g15178">
     <path
        d="M 28.726213,135.03325 C 25.126278,131.61479 21.526344,128.19633 17.926409,124.77787 17.038605,105.56739 16.234338,86.320681 15.982287,67.105245 L 16.014193,66.052983 16,65"
        id="autosatinrun8"
@@ -5176,8 +5099,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-v"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15182"
-     >
+     id="g15182">
     <path
        d="M 28.726,116.602 C 22.023236,99.623518 15.255939,82.664463 8.2633448,65.809676"
        inkstitch:running_stitch_length_mm="2"
@@ -5255,8 +5177,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-w"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15186"
-     >
+     id="g15186">
     <path
        d="M 28.726,116.602 C 22.023236,99.623518 15.255939,82.664463 8.2633448,65.809676"
        inkstitch:running_stitch_length_mm="2"
@@ -5366,8 +5287,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-x"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15190"
-     >
+     id="g15190">
     <path
        d="M 19.1944,119.271 C 14.764445,124.68988 10.18629,130.02883 6.5,136"
        inkstitch:running_stitch_length_mm="2"
@@ -5461,8 +5381,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-y"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15194"
-     >
+     id="g15194">
     <path
        d="M 34,118.227 C 34.225308,124.14832 34.256972,130.07913 34,136"
        inkstitch:running_stitch_length_mm="2"
@@ -5540,8 +5459,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-z"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15198"
-     >
+     id="g15198">
     <path
        d="M 4.5646193,134.56478 C 22.141803,112.23366 39.718988,89.902544 57.296173,67.571426 41.576959,67.668616 25.791436,67.10234 10.117173,68.345274"
        inkstitch:running_stitch_length_mm="2"
@@ -5600,8 +5518,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-¡"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15418"
-     >
+     id="g15418">
     <path
        id="path20214"
        d="M 9.17969,135.414 C 11.84896,135.479 14.51823,135.544 17.1875,135.609 17.416084,111.67814 15.873347,87.725989 17.4302,63.8153 M 16.1585,53.1359 C 16.20453,49.222867 16.25057,45.309833 16.2966,41.3968"
@@ -5653,8 +5570,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-¿"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15426"
-     >
+     id="g15426">
     <path
        d="M 17.320389,135.35246 C 12.413869,127.61461 8.3760771,116.6397 14.483615,108.42341 23.060166,94.3342 27.563068,78.320787 34.031311,63.260706 M 32.512136,53.455124 C 32.512136,49.403994 32.512136,45.352864 32.512136,41.301734"
        id="path91395"
@@ -5707,8 +5623,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Ä"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15218"
-     >
+     id="g15218">
     <path
        id="path2847"
        d="M -0.377953,136 C 0.288714,135.333 1.122047,133.833 2.122047,131.5 3.122047,129.167 4.622047,126.333 6.622047,123 L 14.694447,105.06 M 12.622047,136 V 135.5 134 C 12.622047,132 12.955347,129.833 13.622047,127.5 14.288747,125.167 14.955347,123.333 15.622047,122 18.397847,116.101 20.915747,110.574 23.300647,105.06 M 23.840847,124.086 H 1.965797"
@@ -5854,8 +5769,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Æ"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15226"
-     >
+     id="g15226">
     <path
        d="M 3.52942,129.504 C 2.2552017,131.61593 1.3143819,133.9109 0,136"
        inkstitch:running_stitch_length_mm="2"
@@ -6025,8 +5939,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-È"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15242"
-     >
+     id="g15242">
     <path
        d="M 17.4199,127.648 C 17.605837,113.58822 17.447289,99.527034 17.5,85.4667"
        inkstitch:running_stitch_length_mm="2"
@@ -6034,18 +5947,18 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        inkscape:label="Points droits pour auto-remplissage satin 2"
        sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
        inkstitch:ties="3"
-       style="stroke-dasharray:0.5,0.5;stroke-width:0.94488189;stroke-miterlimit:4;stroke-dashoffset:0" />
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0" />
     <path
-       d="M 24,86 C 32.834401,86.169574 41.670986,86.02603 50.5059,86.1365"
+       d="m 24,86 c 8.834401,0.169574 17.670986,0.02603 26.5059,0.1365"
        inkstitch:running_stitch_length_mm="2"
        id="path8120-4"
        inkscape:label="Points droits pour auto-remplissage satin 3"
        sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccc"
        inkstitch:ties="3"
-       style="stroke-dasharray:0.5,0.5;stroke-width:0.94488189;stroke-miterlimit:4;stroke-dashoffset:0" />
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0" />
     <path
        id="path8122-7"
-       d="M 51,91 46.25,90.25 C 40.376114,89.332382 34.523721,88.907953 28.25,89.125 L 24,89 M 53,81 51.375,81.4375 C 42.288209,82.197773 33.131913,82.824386 24,83 M 28.0762,81.752 28.0273,89.9551 M 46.6797,80.6777 46.8262,91.3711"
+       d="m 51,91 -4.75,-0.75 c -5.873886,-0.917618 -11.726279,-1.342047 -18,-1.125 L 24,89 m 29,-8 -1.625,0.4375 C 42.288209,82.197773 33.131913,82.824386 24,83 m 4.0762,-1.248 -0.0489,8.2031 m 18.6524,-9.2774 0.1465,10.6934"
        inkstitch:satin_column="True"
        inkstitch:max_stitch_length_mm="6"
        inkstitch:pull_compensation_mm="0.3"
@@ -6056,7 +5969,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        sodipodi:nodetypes="cccsccccccc"
        inkscape:label="Auto-remplissage satin 4"
        inkstitch:zigzag_underlay_max_stitch_length_mm="6"
-       style="stroke-width:0.94488189;stroke-miterlimit:4;stroke-dasharray:none"
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:none"
        inkstitch:reverse_rails="none" />
     <path
        d="M 17.5,85.4667 C 17.133487,72.526359 18.248603,59.375528 16.914926,46.569032 16.460729,45.826832 15.884464,45.184636 15.3096,44.5358"
@@ -6065,24 +5978,24 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        inkscape:label="Points droits pour auto-remplissage satin 5"
        sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
        inkstitch:ties="3"
-       style="stroke-dasharray:0.5,0.5;stroke-width:0.94488189;stroke-miterlimit:4;stroke-dashoffset:0" />
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0" />
     <path
-       d="M 15.9964,43.1832 C 27.349241,45.115888 35.088214,42.643013 46.474515,43.516937"
+       d="m 15.9964,43.1832 c 11.352841,1.932688 19.091814,-0.540187 30.478115,0.333737"
        inkstitch:running_stitch_length_mm="2"
        id="path8126-9"
        inkscape:label="Points droits pour auto-remplissage satin 6"
        sodipodi:nodetypes="cc"
        inkstitch:ties="3"
-       style="stroke-dasharray:0.5,0.5;stroke-width:0.94488189;stroke-miterlimit:4;stroke-dashoffset:0" />
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0" />
     <path
        d="M 47.360838,32.335918 22.774968,16.191038"
        id="path24615"
        inkstitch:ties="3"
        inkstitch:running_stitch_length_mm="2"
        sodipodi:nodetypes="cc"
-       style="stroke-dasharray:0.5,0.5;stroke-width:0.94488189;stroke-miterlimit:4;stroke-dashoffset:0" />
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0" />
     <path
-       d="M 24.360866,10.335945 34.962353,19.170434 M 18.360874,20.335933 31.170958,25.636626 M 24.736866,9.9009458 18.154074,20.872832"
+       d="m 24.360866,10.335945 10.601487,8.834489 m -16.601479,1.165499 12.810084,5.300693 M 24.736866,9.9009458 18.154074,20.872832"
        id="path15204-6"
        inkstitch:satin_column="True"
        inkstitch:max_stitch_length_mm="6"
@@ -6094,10 +6007,17 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="False"
        inkstitch:zigzag_underlay_max_stitch_length_mm="6"
-       style="stroke-width:0.94488189;stroke-miterlimit:4;stroke-dasharray:none"
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:none"
        inkstitch:reverse_rails="none" />
     <path
-       d="M 34.962353,19.170434 48.360836,30.33592 M 31.170958,25.636626 47.360838,32.335918 M 35.227953,18.912435 31.074558,25.996926"
+       d="m 31.534459,25.066551 3.236723,-5.570077"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
+       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_tolerance_mm="2.0"
+       id="path78"
+       sodipodi:nodetypes="cc" />
+    <path
+       d="M 34.962353,19.170434 48.360836,30.33592 m -17.189878,-4.699294 16.18988,6.699292 M 35.227953,18.912435 31.074558,25.996926"
        id="path12874-53"
        inkstitch:satin_column="True"
        inkstitch:max_stitch_length_mm="6"
@@ -6111,18 +6031,18 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        inkstitch:contour_underlay="False"
        inkstitch:zigzag_underlay_max_stitch_length_mm="6"
        sodipodi:nodetypes="cccccc"
-       style="stroke-width:0.94488189;stroke-miterlimit:4;stroke-dasharray:none"
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:none"
        inkstitch:reverse_rails="none" />
     <path
-       d="M 46.474515,43.516937 51.905218,45.003145"
+       d="m 46.474515,43.516937 5.430703,1.486208"
        id="path24615-1"
        inkstitch:ties="3"
        inkstitch:running_stitch_length_mm="2"
        sodipodi:nodetypes="cc"
-       style="stroke-dasharray:0.5,0.5;stroke-width:0.94488189;stroke-miterlimit:4;stroke-dashoffset:0" />
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0" />
     <path
        id="path8128-7"
-       d="M 56,49 53.567,47.7607 C 45.919341,45.597225 37.465586,45.577478 29.6496,46.9397 L 27.7722,47.0299 24,47 16.799066,44.064284 M 59,40 H 53 L 53.5781,40.0078 53.5625,40.0313 51.75,40.125 41,40.5 25.5,41 H 9 M 28.8086,40.1465 29.0039,48.1582 M 48.9258,39.5605 V 47.7188"
+       d="M 56,49 53.567,47.7607 C 45.919341,45.597225 37.465586,45.577478 29.6496,46.9397 L 27.7722,47.0299 24,47 16.799066,44.064284 M 59,40 h -6 l 0.5781,0.0078 -0.0156,0.0235 L 51.75,40.125 41,40.5 25.5,41 H 9 m 19.8086,-0.8535 0.1953,8.0117 m 19.9219,-8.5977 v 8.1583"
        inkstitch:satin_column="True"
        inkstitch:max_stitch_length_mm="6"
        inkstitch:pull_compensation_mm="0.3"
@@ -6133,11 +6053,11 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        sodipodi:nodetypes="ccccsssccccccccccc"
        inkscape:label="Auto-remplissage satin 7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="6"
-       style="stroke-width:0.94488189;stroke-miterlimit:4;stroke-dasharray:none"
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:none"
        inkstitch:reverse_rails="none" />
     <path
        id="path8130-3"
-       d="M 9,41 C 9.71176,42.2562 11,46.4009 11,50 V 57 67 110 120 127 C 11,129 10.6667,130.833 10,132.5 9.5949,133.521 9.22338,134.593 9,136 M 16.745666,44.085484 24,47 V 83 89 130 M 8.69141,52.8945 H 25.3906 M 8.88672,124.574 25.4883,124.379"
+       d="m 9,41 c 0.71176,1.2562 2,5.4009 2,9 v 7 10 43 10 7 c 0,2 -0.3333,3.833 -1,5.5 -0.4051,1.021 -0.77662,2.093 -1,3.5 M 16.745666,44.085484 24,47 v 36 6 41 M 8.69141,52.8945 H 25.3906 M 8.88672,124.574 25.4883,124.379"
        inkstitch:satin_column="True"
        inkstitch:max_stitch_length_mm="6"
        inkstitch:pull_compensation_mm="0.3"
@@ -6148,11 +6068,17 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        sodipodi:nodetypes="csccccsccccccccccc"
        inkscape:label="Auto-remplissage satin 8"
        inkstitch:zigzag_underlay_max_stitch_length_mm="6"
-       style="stroke-width:0.94488189;stroke-miterlimit:4;stroke-dasharray:none"
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:none"
        inkstitch:reverse_rails="none" />
     <path
+       d="M 22.493445,130.51855 9.3509331,135.85966"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
+       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_tolerance_mm="2.0"
+       id="path80" />
+    <path
        id="path8132-8"
-       d="M 9,136 H 38 40.5 44 48 52 L 53.875,136.125 55.5,136.5 56.875,136.875 58,137 M 17.485589,132.60666 24,130 31.5,129.875 38,129.5 43.75,128.875 49,128 60,126 M 30.2246,128.383 V 137.367 M 52.9297,125.746 52.7832,137.123"
+       d="m 9,136 h 29 2.5 3.5 4 4 l 1.875,0.125 1.625,0.375 1.375,0.375 L 58,137 M 17.485589,132.60666 24,130 31.5,129.875 38,129.5 43.75,128.875 49,128 60,126 m -29.7754,2.383 v 8.984 m 22.7051,-11.621 -0.1465,11.377"
        inkstitch:satin_column="True"
        inkstitch:max_stitch_length_mm="6"
        inkstitch:pull_compensation_mm="0.3"
@@ -6164,15 +6090,494 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        sodipodi:nodetypes="cccccsscccscccccccccc"
        inkscape:label="Auto-remplissage satin 9"
        inkstitch:zigzag_underlay_max_stitch_length_mm="6"
-       style="stroke-width:0.94488189;stroke-miterlimit:4;stroke-dasharray:none"
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:none"
+       inkstitch:reverse_rails="none" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="GlyphLayer-É"
+     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
+     id="g48">
+    <path
+       d="M 17.4199,127.648 C 17.605837,113.58822 17.447289,99.527034 17.5,85.4667"
+       inkstitch:running_stitch_length_mm="2"
+       id="path37"
+       inkscape:label="Points droits pour auto-remplissage satin 2"
+       sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+       inkstitch:ties="3"
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0" />
+    <path
+       d="m 24,86 c 8.834401,0.169574 17.670986,0.02603 26.5059,0.1365"
+       inkstitch:running_stitch_length_mm="2"
+       id="path38"
+       inkscape:label="Points droits pour auto-remplissage satin 3"
+       sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccc"
+       inkstitch:ties="3"
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0" />
+    <path
+       id="path39"
+       d="m 51,91 -4.75,-0.75 c -5.873886,-0.917618 -11.726279,-1.342047 -18,-1.125 L 24,89 m 29,-8 -1.625,0.4375 C 42.288209,82.197773 33.131913,82.824386 24,83 m 4.0762,-1.248 -0.0489,8.2031 m 18.6524,-9.2774 0.1465,10.6934"
+       inkstitch:satin_column="True"
+       inkstitch:max_stitch_length_mm="6"
+       inkstitch:pull_compensation_mm="0.3"
+       inkstitch:zigzag_spacing_mm="0.3"
+       inkstitch:ties="3"
+       inkstitch:zigzag_underlay="True"
+       inkstitch:zigzag_underlay_inset_mm="0.1"
+       sodipodi:nodetypes="cccsccccccc"
+       inkscape:label="Auto-remplissage satin 4"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="6"
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:none"
+       inkstitch:reverse_rails="none" />
+    <path
+       d="M 17.5,85.4667 C 17.133487,72.526359 18.248603,59.375528 16.914926,46.569032 16.460729,45.826832 15.884464,45.184636 15.3096,44.5358"
+       inkstitch:running_stitch_length_mm="2"
+       id="path40"
+       inkscape:label="Points droits pour auto-remplissage satin 5"
+       sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+       inkstitch:ties="3"
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0" />
+    <g
+       id="g75"
+       transform="translate(0,-24)">
+      <path
+         d="M 15.1839,57.139 39.6317,39.751"
+         id="path73"
+         sodipodi:nodetypes="cc"
+         inkstitch:ties="3"
+         inkstitch:running_stitch_length_mm="2"
+         style="display:inline;fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0;stroke-opacity:1" />
+      <path
+         d="m 38.1839,35.139 -10.6015,8.8345 m 16.6015,1.1655 -12.8101,5.3007 m 3.602069,-16.712263 9.610144,14.487526"
+         id="path74"
+         inkstitch:satin_column="True"
+         inkstitch:max_stitch_length_mm="6"
+         inkstitch:pull_compensation_mm="0.3"
+         inkstitch:zigzag_spacing_mm="0.3"
+         inkstitch:ties="3"
+         inkstitch:zigzag_underlay="True"
+         inkstitch:zigzag_underlay_inset_mm="0.1"
+         inkstitch:center_walk_underlay="False"
+         inkstitch:contour_underlay="False"
+         inkstitch:zigzag_underlay_max_stitch_length_mm="6"
+         style="display:inline;fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkstitch:reverse_rails="none"
+         sodipodi:nodetypes="cccccc"
+         inkstitch:swap_satin_rails="True" />
+      <path
+         d="M 27.5824,43.9735 14.1839,55.139 M 31.3738,50.4397 15.1839,57.139 m 9.691494,-13.618813 5.520587,9.330594"
+         id="path76"
+         inkstitch:satin_column="True"
+         inkstitch:max_stitch_length_mm="6"
+         inkstitch:pull_compensation_mm="0.3"
+         inkstitch:zigzag_spacing_mm="0.3"
+         inkstitch:ties="2"
+         inkstitch:force_lock_stitches="True"
+         inkstitch:zigzag_underlay="True"
+         inkstitch:zigzag_underlay_inset_mm="0.1"
+         inkstitch:center_walk_underlay="False"
+         inkstitch:contour_underlay="False"
+         inkstitch:zigzag_underlay_max_stitch_length_mm="6"
+         sodipodi:nodetypes="cccccc"
+         style="display:inline;fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkstitch:reverse_rails="none" />
+    </g>
+    <path
+       d="m 15.9964,43.1832 c 11.352841,1.932688 19.091814,-0.540187 30.478115,0.333737"
+       inkstitch:running_stitch_length_mm="2"
+       id="path41"
+       inkscape:label="Points droits pour auto-remplissage satin 6"
+       sodipodi:nodetypes="cc"
+       inkstitch:ties="3"
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0" />
+    <path
+       d="m 46.474515,43.516937 5.430703,1.486208"
+       id="path45"
+       inkstitch:ties="3"
+       inkstitch:running_stitch_length_mm="2"
+       sodipodi:nodetypes="cc"
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0" />
+    <path
+       id="path46"
+       d="M 56,49 53.567,47.7607 C 45.919341,45.597225 37.465586,45.577478 29.6496,46.9397 L 27.7722,47.0299 24,47 16.799066,44.064284 M 59,40 h -6 l 0.5781,0.0078 -0.0156,0.0235 L 51.75,40.125 41,40.5 25.5,41 H 9 m 19.8086,-0.8535 0.1953,8.0117 m 19.9219,-8.5977 v 8.1583"
+       inkstitch:satin_column="True"
+       inkstitch:max_stitch_length_mm="6"
+       inkstitch:pull_compensation_mm="0.3"
+       inkstitch:zigzag_spacing_mm="0.3"
+       inkstitch:ties="3"
+       inkstitch:zigzag_underlay="True"
+       inkstitch:zigzag_underlay_inset_mm="0.1"
+       sodipodi:nodetypes="ccccsssccccccccccc"
+       inkscape:label="Auto-remplissage satin 7"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="6"
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:none"
+       inkstitch:reverse_rails="none" />
+    <path
+       id="path47"
+       d="m 9,41 c 0.71176,1.2562 2,5.4009 2,9 v 7 10 43 10 7 c 0,2 -0.3333,3.833 -1,5.5 -0.4051,1.021 -0.77662,2.093 -1,3.5 M 16.745666,44.085484 24,47 v 36 6 41 M 8.69141,52.8945 H 25.3906 M 8.88672,124.574 25.4883,124.379"
+       inkstitch:satin_column="True"
+       inkstitch:max_stitch_length_mm="6"
+       inkstitch:pull_compensation_mm="0.3"
+       inkstitch:zigzag_spacing_mm="0.3"
+       inkstitch:ties="3"
+       inkstitch:zigzag_underlay="True"
+       inkstitch:zigzag_underlay_inset_mm="0.1"
+       sodipodi:nodetypes="csccccsccccccccccc"
+       inkscape:label="Auto-remplissage satin 8"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="6"
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:none"
+       inkstitch:reverse_rails="none" />
+    <path
+       d="M 22.493445,130.51855 9.3509331,135.85966"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
+       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_tolerance_mm="2.0"
+       id="path81" />
+    <path
+       id="path48"
+       d="m 9,136 h 29 2.5 3.5 4 4 l 1.875,0.125 1.625,0.375 1.375,0.375 L 58,137 M 17.485589,132.60666 24,130 31.5,129.875 38,129.5 43.75,128.875 49,128 60,126 m -29.7754,2.383 v 8.984 m 22.7051,-11.621 -0.1465,11.377"
+       inkstitch:satin_column="True"
+       inkstitch:max_stitch_length_mm="6"
+       inkstitch:pull_compensation_mm="0.3"
+       inkstitch:zigzag_spacing_mm="0.3"
+       inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
+       inkstitch:zigzag_underlay="True"
+       inkstitch:zigzag_underlay_inset_mm="0.1"
+       sodipodi:nodetypes="cccccsscccscccccccccc"
+       inkscape:label="Auto-remplissage satin 9"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="6"
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:none"
+       inkstitch:reverse_rails="none" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="GlyphLayer-Ê"
+     style="display:inline;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
+     id="g60">
+    <path
+       d="M 17.4199,127.648 C 17.605837,113.58822 17.447289,99.527034 17.5,85.4667"
+       inkstitch:running_stitch_length_mm="2"
+       id="path49"
+       inkscape:label="Points droits pour auto-remplissage satin 2"
+       sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+       inkstitch:ties="3"
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0" />
+    <path
+       d="m 24,86 c 8.834401,0.169574 17.670986,0.02603 26.5059,0.1365"
+       inkstitch:running_stitch_length_mm="2"
+       id="path50"
+       inkscape:label="Points droits pour auto-remplissage satin 3"
+       sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccc"
+       inkstitch:ties="3"
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0" />
+    <path
+       id="path51"
+       d="m 51,91 -4.75,-0.75 c -5.873886,-0.917618 -11.726279,-1.342047 -18,-1.125 L 24,89 m 29,-8 -1.625,0.4375 C 42.288209,82.197773 33.131913,82.824386 24,83 m 4.0762,-1.248 -0.0489,8.2031 m 18.6524,-9.2774 0.1465,10.6934"
+       inkstitch:satin_column="True"
+       inkstitch:max_stitch_length_mm="6"
+       inkstitch:pull_compensation_mm="0.3"
+       inkstitch:zigzag_spacing_mm="0.3"
+       inkstitch:ties="3"
+       inkstitch:zigzag_underlay="True"
+       inkstitch:zigzag_underlay_inset_mm="0.1"
+       sodipodi:nodetypes="cccsccccccc"
+       inkscape:label="Auto-remplissage satin 4"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="6"
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:none"
+       inkstitch:reverse_rails="none" />
+    <path
+       d="M 17.5,85.4667 C 17.133487,72.526359 18.248603,59.375528 16.914926,46.569032 16.460729,45.826832 15.332037,42.974927 14.757173,42.326091"
+       inkstitch:running_stitch_length_mm="2"
+       id="path52"
+       inkscape:label="Points droits pour auto-remplissage satin 5"
+       sodipodi:nodetypes="ccc"
+       inkstitch:ties="3"
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0" />
+    <g
+       id="g85"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
+       transform="translate(4,-24)">
+      <path
+         d="M 29.195407,47.750897 C 22.334678,50.078892 15.47395,52.406888 8.6132208,54.734883"
+         id="path82"
+         sodipodi:nodetypes="cc"
+         inkstitch:ties="3"
+         inkstitch:running_stitch_length_mm="2"
+         style="display:inline;fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0;stroke-opacity:1" />
+      <path
+         d="M 6.1982977,57.691813 29.198284,47.69182 M 4.1982989,55.691814 29.198284,35.691828 m -13.726494,9.263794 3.7289,7.733996"
+         id="path83"
+         inkstitch:satin_column="True"
+         inkstitch:max_stitch_length_mm="6"
+         inkstitch:pull_compensation_mm="0.3"
+         inkstitch:zigzag_spacing_mm="0.3"
+         inkstitch:ties="3"
+         inkstitch:zigzag_underlay="True"
+         inkstitch:zigzag_underlay_inset_mm="0.1"
+         inkstitch:center_walk_underlay="False"
+         inkstitch:contour_underlay="False"
+         inkstitch:zigzag_underlay_max_stitch_length_mm="6"
+         style="display:inline;fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkstitch:reverse_rails="none" />
+      <path
+         d="m 33.198284,12.698126 3.620699,8.037996 19.238287,11.523491"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
+         transform="translate(-4,24)"
+         inkstitch:running_stitch_length_mm="2.5"
+         inkstitch:running_stitch_tolerance_mm="2.0"
+         id="path86"
+         sodipodi:nodetypes="ccc" />
+      <path
+         id="path87"
+         d="M 54.198268,55.691814 29.198284,35.691828 M 52.198269,57.691813 29.198284,47.69182 m 14.027291,-1.648399 -3.613299,7.324195"
+         inkstitch:satin_column="True"
+         inkstitch:max_stitch_length_mm="6"
+         inkstitch:pull_compensation_mm="0.3"
+         inkstitch:zigzag_spacing_mm="0.3"
+         inkstitch:ties="2"
+         inkstitch:force_lock_stitches="True"
+         inkstitch:zigzag_underlay="True"
+         inkstitch:zigzag_underlay_inset_mm="0.1"
+         inkstitch:center_walk_underlay="False"
+         inkstitch:contour_underlay="False"
+         inkstitch:zigzag_underlay_max_stitch_length_mm="6"
+         style="display:inline;fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkstitch:reverse_rails="none"
+         sodipodi:nodetypes="cccccc" />
+    </g>
+    <path
+       d="m 35.932425,42.536722 c 4.188254,-0.249375 5.566871,0.598357 10.54209,0.980215"
+       inkstitch:running_stitch_length_mm="2"
+       id="path53"
+       inkscape:label="Points droits pour auto-remplissage satin 6"
+       sodipodi:nodetypes="cc"
+       inkstitch:ties="3"
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0" />
+    <path
+       d="m 46.474515,43.516937 5.430703,1.486208"
+       id="path57"
+       inkstitch:ties="3"
+       inkstitch:running_stitch_length_mm="2"
+       sodipodi:nodetypes="cc"
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0" />
+    <path
+       id="path58"
+       d="M 56,49 53.567,47.7607 C 45.919341,45.597225 37.465586,45.577478 29.6496,46.9397 L 27.7722,47.0299 24,47 16.799066,44.064284 M 59,40 h -6 l 0.5781,0.0078 -0.0156,0.0235 L 51.75,40.125 41,40.5 25.5,41 H 9 m 19.8086,-0.8535 0.1953,8.0117 m 19.9219,-8.5977 v 8.1583"
+       inkstitch:satin_column="True"
+       inkstitch:max_stitch_length_mm="6"
+       inkstitch:pull_compensation_mm="0.3"
+       inkstitch:zigzag_spacing_mm="0.3"
+       inkstitch:ties="3"
+       inkstitch:zigzag_underlay="True"
+       inkstitch:zigzag_underlay_inset_mm="0.1"
+       sodipodi:nodetypes="ccccsssccccccccccc"
+       inkscape:label="Auto-remplissage satin 7"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="6"
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:none"
+       inkstitch:reverse_rails="none" />
+    <path
+       id="path59"
+       d="m 9,41 c 0.71176,1.2562 2,5.4009 2,9 v 7 10 43 10 7 c 0,2 -0.3333,3.833 -1,5.5 -0.4051,1.021 -0.77662,2.093 -1,3.5 M 16.745666,44.085484 24,47 v 36 6 41 M 8.69141,52.8945 H 25.3906 M 8.88672,124.574 25.4883,124.379"
+       inkstitch:satin_column="True"
+       inkstitch:max_stitch_length_mm="6"
+       inkstitch:pull_compensation_mm="0.3"
+       inkstitch:zigzag_spacing_mm="0.3"
+       inkstitch:ties="3"
+       inkstitch:zigzag_underlay="True"
+       inkstitch:zigzag_underlay_inset_mm="0.1"
+       sodipodi:nodetypes="csccccsccccccccccc"
+       inkscape:label="Auto-remplissage satin 8"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="6"
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:none"
+       inkstitch:reverse_rails="none" />
+    <path
+       d="M 22.493445,130.51855 9.3509331,135.85966"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
+       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_tolerance_mm="2.0"
+       id="path89" />
+    <path
+       id="path60"
+       d="m 9,136 h 29 2.5 3.5 4 4 l 1.875,0.125 1.625,0.375 1.375,0.375 L 58,137 M 17.485589,132.60666 24,130 31.5,129.875 38,129.5 43.75,128.875 49,128 60,126 m -29.7754,2.383 v 8.984 m 22.7051,-11.621 -0.1465,11.377"
+       inkstitch:satin_column="True"
+       inkstitch:max_stitch_length_mm="6"
+       inkstitch:pull_compensation_mm="0.3"
+       inkstitch:zigzag_spacing_mm="0.3"
+       inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
+       inkstitch:zigzag_underlay="True"
+       inkstitch:zigzag_underlay_inset_mm="0.1"
+       sodipodi:nodetypes="cccccsscccscccccccccc"
+       inkscape:label="Auto-remplissage satin 9"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="6"
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:none"
+       inkstitch:reverse_rails="none" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="GlyphLayer-Ë"
+     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
+     id="g72">
+    <path
+       d="M 17.4199,127.648 C 17.605837,113.58822 17.447289,99.527034 17.5,85.4667"
+       inkstitch:running_stitch_length_mm="2"
+       id="path61"
+       inkscape:label="Points droits pour auto-remplissage satin 2"
+       sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+       inkstitch:ties="3"
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0" />
+    <path
+       d="m 24,86 c 8.834401,0.169574 17.670986,0.02603 26.5059,0.1365"
+       inkstitch:running_stitch_length_mm="2"
+       id="path62"
+       inkscape:label="Points droits pour auto-remplissage satin 3"
+       sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccc"
+       inkstitch:ties="3"
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0" />
+    <path
+       id="path63"
+       d="m 51,91 -4.75,-0.75 c -5.873886,-0.917618 -11.726279,-1.342047 -18,-1.125 L 24,89 m 29,-8 -1.625,0.4375 C 42.288209,82.197773 33.131913,82.824386 24,83 m 4.0762,-1.248 -0.0489,8.2031 m 18.6524,-9.2774 0.1465,10.6934"
+       inkstitch:satin_column="True"
+       inkstitch:max_stitch_length_mm="6"
+       inkstitch:pull_compensation_mm="0.3"
+       inkstitch:zigzag_spacing_mm="0.3"
+       inkstitch:ties="3"
+       inkstitch:zigzag_underlay="True"
+       inkstitch:zigzag_underlay_inset_mm="0.1"
+       sodipodi:nodetypes="cccsccccccc"
+       inkscape:label="Auto-remplissage satin 4"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="6"
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:none"
+       inkstitch:reverse_rails="none" />
+    <path
+       d="M 17.5,85.4667 C 17.133487,72.526359 18.248603,59.375528 16.914926,46.569032 16.460729,45.826832 15.884464,45.184636 15.3096,44.5358"
+       inkstitch:running_stitch_length_mm="2"
+       id="path64"
+       inkscape:label="Points droits pour auto-remplissage satin 5"
+       sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+       inkstitch:ties="3"
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0" />
+    <path
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0"
+       d="m 15.9964,43.1832 c 1.878335,0.319765 3.657745,0.518932 5.371114,0.632612"
+       id="path65" />
+    <g
+       id="g94"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
+       transform="translate(1.9334951,-21.95898)">
+      <path
+         d="m 20.152545,50.665589 c -0.577333,-2.269467 1.187815,-5.165501 3.715377,-4.951137 m 10.099388,0.299899 c 1.978931,1.412332 3.957861,2.824663 5.936792,4.236995"
+         id="path90"
+         inkstitch:ties="3"
+         inkstitch:running_stitch_length_mm="2"
+         sodipodi:nodetypes="cccc"
+         style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0" />
+      <path
+         d="m 40.834801,51.920144 c 3.288996,-0.111 5.213993,-3.189796 5.101994,-6.412392 m -6.523992,6.388292 c -3.289996,0.111 -5.273994,-2.764897 -5.386993,-5.988493"
+         id="path91"
+         inkstitch:satin_column="True"
+         inkstitch:pull_compensation_mm="0.3"
+         inkstitch:zigzag_spacing_mm="0.3"
+         inkstitch:ties="3"
+         inkstitch:zigzag_underlay="False"
+         inkstitch:center_walk_underlay="True"
+         inkstitch:max_stitch_length_mm="6"
+         inkstitch:zigzag_underlay_max_stitch_length_mm="6"
+         style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:none"
+         inkstitch:reverse_rails="none" />
+      <path
+         d="m 40.690801,39.863359 c 3.215996,-0.0068 5.108994,2.489597 5.218994,5.639793 m -6.457992,-5.660093 c -3.288996,0.1101 -5.563993,2.837296 -5.450993,6.059892"
+         id="path92"
+         inkstitch:satin_column="True"
+         inkstitch:pull_compensation_mm="0.3"
+         inkstitch:zigzag_spacing_mm="0.3"
+         inkstitch:ties="2"
+         inkstitch:force_lock_stitches="True"
+         inkstitch:zigzag_underlay="False"
+         inkstitch:center_walk_underlay="True"
+         inkstitch:max_stitch_length_mm="6"
+         inkstitch:zigzag_underlay_max_stitch_length_mm="6"
+         style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:none"
+         inkstitch:reverse_rails="none" />
+      <path
+         d="M 24.052722,45.696252 C 22.084924,44.741053 20.117127,43.785854 18.149329,42.830655"
+         id="path93"
+         inkstitch:ties="3"
+         inkstitch:running_stitch_length_mm="2"
+         style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0" />
+      <path
+         id="path94"
+         d="m 17.45783,39.926659 c -3.223596,0.113 -5.722893,2.096997 -5.611893,5.386993 l -0.0241,1.421998 c 0.111,3.288996 2.813197,5.213994 6.035793,5.101994 m 0.358299,-11.935985 c 3.222596,-0.113 5.949793,2.161997 6.059893,5.450993 l -0.0203,1.238998 c 0.0068,3.215996 -2.489597,5.108994 -5.639793,5.218994"
+         inkstitch:satin_column="True"
+         inkstitch:zigzag_spacing_mm="0.3"
+         inkstitch:ties="2"
+         inkstitch:force_lock_stitches="True"
+         inkstitch:pull_compensation_mm="0.3"
+         inkstitch:zigzag_underlay="False"
+         inkstitch:zigzag_underlay_inset_mm=".25"
+         inkstitch:max_stitch_length_mm="6"
+         inkstitch:zigzag_underlay_max_stitch_length_mm="6"
+         style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:none"
+         inkstitch:reverse_rails="none" />
+    </g>
+    <path
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0"
+       d="m 21.367514,43.815812 c 6.813772,0.452086 12.583119,-0.447814 19.376387,-0.491446 1.823131,-0.01171 3.720009,0.03825 5.730614,0.192571 l 5.430703,1.486208"
+       id="path95"
+       sodipodi:nodetypes="cscc" />
+    <path
+       id="path70"
+       d="M 56,49 53.567,47.7607 C 45.919341,45.597225 37.465586,45.577478 29.6496,46.9397 L 27.7722,47.0299 24,47 16.799066,44.064284 M 59,40 h -6 l 0.5781,0.0078 -0.0156,0.0235 L 51.75,40.125 41,40.5 25.5,41 H 9 m 19.8086,-0.8535 0.1953,8.0117 m 19.9219,-8.5977 v 8.1583"
+       inkstitch:satin_column="True"
+       inkstitch:max_stitch_length_mm="6"
+       inkstitch:pull_compensation_mm="0.3"
+       inkstitch:zigzag_spacing_mm="0.3"
+       inkstitch:ties="3"
+       inkstitch:zigzag_underlay="True"
+       inkstitch:zigzag_underlay_inset_mm="0.1"
+       sodipodi:nodetypes="ccccsssccccccccccc"
+       inkscape:label="Auto-remplissage satin 7"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="6"
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:none"
+       inkstitch:reverse_rails="none" />
+    <path
+       id="path71"
+       d="m 9,41 c 0.71176,1.2562 2,5.4009 2,9 v 7 10 43 10 7 c 0,2 -0.3333,3.833 -1,5.5 -0.4051,1.021 -0.77662,2.093 -1,3.5 M 16.745666,44.085484 24,47 v 36 6 41 M 8.69141,52.8945 H 25.3906 M 8.88672,124.574 25.4883,124.379"
+       inkstitch:satin_column="True"
+       inkstitch:max_stitch_length_mm="6"
+       inkstitch:pull_compensation_mm="0.3"
+       inkstitch:zigzag_spacing_mm="0.3"
+       inkstitch:ties="3"
+       inkstitch:zigzag_underlay="True"
+       inkstitch:zigzag_underlay_inset_mm="0.1"
+       sodipodi:nodetypes="csccccsccccccccccc"
+       inkscape:label="Auto-remplissage satin 8"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="6"
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:none"
+       inkstitch:reverse_rails="none" />
+    <path
+       id="path72"
+       d="m 9,136 h 29 2.5 3.5 4 4 l 1.875,0.125 1.625,0.375 1.375,0.375 L 58,137 M 17.485589,132.60666 24,130 31.5,129.875 38,129.5 43.75,128.875 49,128 60,126 m -29.7754,2.383 v 8.984 m 22.7051,-11.621 -0.1465,11.377"
+       inkstitch:satin_column="True"
+       inkstitch:max_stitch_length_mm="6"
+       inkstitch:pull_compensation_mm="0.3"
+       inkstitch:zigzag_spacing_mm="0.3"
+       inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
+       inkstitch:zigzag_underlay="True"
+       inkstitch:zigzag_underlay_inset_mm="0.1"
+       sodipodi:nodetypes="cccccsscccscccccccccc"
+       inkscape:label="Auto-remplissage satin 9"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="6"
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:none"
        inkstitch:reverse_rails="none" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer5"
      inkscape:label="GlyphLayer-Ö"
-     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     >
+     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1">
     <path
        d="M 24.306796,121.63689 C 19.088196,115.42393 12.897485,110.66914 11.877184,98.158738 11.805724,84.163916 12.378434,70.169095 20.992233,56.174273 28.265857,49.229491 35.539482,44.161196 42.813106,42.363594 M 42.910406,27.67602 C 42.28039,24.746002 45.476439,22.678436 48.041799,22.627226 L 58.141188,22.927128 64.077979,27.164123"
        id="autosatinrun23-8-1-3-9-7-8-9-0"
@@ -6274,8 +6679,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Ü"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15310"
-     >
+     id="g15310">
     <path
        d="M 20.375949,124.91241 C 20.800235,97.628957 21.224521,70.345505 21.648807,43.062052"
        id="autosatinrun60-9-3"
@@ -6394,8 +6798,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-à"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15206"
-     >
+     id="g15206">
     <path
        id="autosatin4-2"
        d="M -1.0000042,136.201 V 136 L 0.09699439,134.684 1.4379927,132.64 2.9689908,129.88201 4.6349887,126.52301 C 9.7311368,117.58885 10.73694,115.18698 13.787916,109.51897 M 10.051982,136.201 V 136 L 9.8359822,135.448 9.7269824,134.345 9.9579821,132.101 10.647981,129.88201 12.381979,125.82101 19.68719,112.58203 21.415188,108.77903 M 5.4739877,120.83102 17.399973,120.64402"
@@ -6541,8 +6944,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-á"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15210"
-     >
+     id="g15210">
     <path
        id="autosatin4-2-0"
        d="M -1.0000042,136.201 V 136 L 0.09699439,134.684 1.4379927,132.64 2.9689908,129.88201 4.6349887,126.52301 C 9.7311368,117.58885 10.73694,115.18698 13.787916,109.51897 M 10.051982,136.201 V 136 L 9.8359822,135.448 9.7269824,134.345 9.9579821,132.101 10.647981,129.88201 12.381979,125.82101 19.68719,112.58203 21.415188,108.77903 M 5.4739877,120.83102 17.399973,120.64402"
@@ -6689,8 +7091,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-â"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15214"
-     >
+     id="g15214">
     <path
        id="autosatin4-27"
        d="M -1.0000042,136.201 V 136 L 0.09699439,134.684 1.4379927,132.64 2.9689908,129.88201 4.6349887,126.52301 C 9.7311368,117.58885 10.73694,115.18698 13.787916,109.51897 M 10.051982,136.201 V 136 L 9.8359822,135.448 9.7269824,134.345 9.9579821,132.101 10.647981,129.88201 12.381979,125.82101 19.68719,112.58203 21.415188,108.77903 M 5.4739877,120.83102 17.399973,120.64402"
@@ -6844,8 +7245,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ä"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15222"
-     >
+     id="g15222">
     <path
        id="autosatin4-8"
        d="M -1.0000042,136.201 V 136 L 0.09699439,134.684 1.4379927,132.64 2.9689908,129.88201 4.6349887,126.52301 C 9.7311368,117.58885 10.73694,115.18698 13.787916,109.51897 M 10.051982,136.201 V 136 L 9.8359822,135.448 9.7269824,134.345 9.9579821,132.101 10.647981,129.88201 12.381979,125.82101 19.68719,112.58203 21.415188,108.77903 M 5.4739877,120.83102 17.399973,120.64402"
@@ -7010,8 +7410,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-æ"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15230"
-     >
+     id="g15230">
     <path
        d="M 6.31007,129.483 C 5.2632793,131.06993 4.593364,132.85773 3.86079,134.6"
        inkstitch:running_stitch_length_mm="2"
@@ -7176,8 +7575,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ç"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15234"
-     >
+     id="g15234">
     <path
        id="path54522"
        inkscape:label="Points droits pour auto-remplissage satin 3"
@@ -7255,18 +7653,17 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      id="layer2"
      inkscape:label="GlyphLayer-è"
-     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     >
+     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1">
     <path
-       d="M 16.08313,133.70398 C 17.477614,122.12321 16.874464,110.44099 17.044128,98.809129 26.496351,98.343536 35.960403,98.979263 45.415093,98.658227"
+       d="m 16.08313,133.70398 c 1.394484,-11.58077 0.791334,-23.26299 0.960998,-34.894851 9.452223,-0.465593 18.916275,0.170134 28.370965,-0.150902"
        inkstitch:running_stitch_length_mm="2"
        id="autosatinrun2-6-5"
        inkscape:label="Points droits pour auto-remplissage satin 2"
        inkstitch:ties="3"
        sodipodi:nodetypes="ccccc"
-       style="stroke-dasharray:0.5,0.5;stroke-width:0.94488189;stroke-miterlimit:4;stroke-dashoffset:0" />
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0" />
     <path
-       d="M 46.211992,94.705232 C 41.448998,95.440231 36.632004,95.756231 31.82201,95.999231 28.825013,96.12923 25.826017,96.19323 22.826021,96.23323 M 44.616994,102.61102 C 37.387003,101.72502 30.115012,101.08202 22.826021,101.01702 M 27.617015,95.194232 27.742015,102.06902 M 38.992001,94.569232 38.992101,102.94402"
+       d="m 46.211992,94.705232 c -4.762994,0.734999 -9.579988,1.050999 -14.389982,1.293999 -2.996997,0.129999 -5.995993,0.193999 -8.995989,0.233999 m 21.790973,6.37779 c -7.229991,-0.886 -14.501982,-1.529 -21.790973,-1.594 m 4.790994,-5.822788 0.125,6.874788 m 11.249986,-7.499788 10e-5,8.374788"
        id="autosatin7-3-1"
        sodipodi:nodetypes="ccscccccc"
        inkstitch:satin_column="True"
@@ -7280,18 +7677,18 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        inkscape:label="Auto-remplissage satin 4"
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay_max_stitch_length_mm="6"
-       style="stroke-width:0.94488189;stroke-miterlimit:4;stroke-dasharray:none"
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:none"
        inkstitch:reverse_rails="none" />
     <path
-       d="M 17.044128,97.609229 C 18.444474,88.146883 14.171013,77.988135 18.892926,69.051423 28.565719,64.303332 39.493277,68.685398 49.699987,67.599266"
+       d="m 17.044128,97.609229 c 1.400346,-9.462346 -2.873115,-19.621094 1.848798,-28.557806 9.672793,-4.748091 20.600351,-0.366025 30.807061,-1.452157"
        inkstitch:running_stitch_length_mm="2"
        id="autosatinrun5-0-8"
        inkscape:label="Points droits pour auto-remplissage satin 5"
        sodipodi:nodetypes="ccccc"
        inkstitch:ties="3"
-       style="stroke-dasharray:0.5,0.5;stroke-width:0.94488189;stroke-miterlimit:4;stroke-dashoffset:0" />
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0" />
     <path
-       d="M 48.404,71.1873 44.352,70.3233 39.502,69.7253 36.479,69.4763 32.991,69.3933 29.935,69.5263 26.613,69.7253 22.826,69.9913 16.2626,67.4694 M 26.6171,63.3193 26.4921,70.5693 M 42.7421,63.5693 V 71.0693 M 50.3115,64.109 C 41.8128,64.6302 30.9013,64.9635 22.0711,65.0223 16.7378,65.0578 12.1638,64.9931 9.33913,64.8093"
+       d="m 48.404,71.1873 -4.052,-0.864 -4.85,-0.598 -3.023,-0.249 -3.488,-0.083 -3.056,0.133 -3.322,0.199 -3.787,0.266 -6.5634,-2.5219 m 10.3545,-4.1501 -0.125,7.25 m 16.25,-7 v 7.5 m 7.5694,-6.9603 c -8.4987,0.5212 -19.4102,0.8545 -28.2404,0.9133 -5.3333,0.0355 -9.9073,-0.0292 -12.73197,-0.213"
        id="autosatin8-5-5"
        sodipodi:nodetypes="cccccccccscccccc"
        inkstitch:satin_column="True"
@@ -7306,17 +7703,17 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        inkscape:label="Auto-remplissage satin 7"
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay_max_stitch_length_mm="6"
-       style="stroke-width:0.94488189;stroke-miterlimit:4;stroke-dasharray:none"
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:none"
        inkstitch:reverse_rails="none" />
     <path
-       d="M 14.2938,46.185 40.424614,55.191747"
+       d="m 14.2938,46.185 26.130814,9.006747"
        id="path13092-5"
        sodipodi:nodetypes="cc"
        inkstitch:ties="3"
        inkstitch:running_stitch_length_mm="2"
-       style="stroke-dasharray:0.5,0.5;stroke-width:0.94488189;stroke-miterlimit:4;stroke-dashoffset:0" />
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0" />
     <path
-       d="M 44.2938,56.185 30.8953,45.0195 M 43.2938,58.185 27.1039,51.4857 M 27.0075,51.846 31.1609,44.7615"
+       d="M 44.2938,56.185 30.8953,45.0195 M 43.2938,58.185 27.1039,51.4857 m -0.0964,0.3603 4.1534,-7.0845"
        id="path11422"
        inkstitch:satin_column="True"
        inkstitch:max_stitch_length_mm="6"
@@ -7329,7 +7726,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        inkstitch:contour_underlay="False"
        sodipodi:nodetypes="cccccc"
        inkstitch:zigzag_underlay_max_stitch_length_mm="6"
-       style="stroke-width:0.94488189;stroke-miterlimit:4;stroke-dasharray:none"
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:none"
        inkstitch:reverse_rails="none" />
     <path
        d="M 30.8953,45.0195 20.2938,36.185 M 27.1039,51.4857 14.2938,46.185 M 14.087,46.7219 20.6698,35.75"
@@ -7346,11 +7743,11 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        inkstitch:contour_underlay="False"
        sodipodi:nodetypes="cccccc"
        inkstitch:zigzag_underlay_max_stitch_length_mm="6"
-       style="stroke-width:0.94488189;stroke-miterlimit:4;stroke-dasharray:none"
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:none"
        inkstitch:reverse_rails="none" />
     <path
        id="autosatin9-3-1"
-       d="M 9.339128,64.80927 C 11.054136,71.676261 11.021136,78.847252 11.224136,85.892243 11.268136,96.83623 11.344135,107.78202 11.149136,118.725 10.922136,124.57799 10.810136,130.53699 9.339128,136.22798 M 10.117127,80.194251 H 23.36712 M 10.242137,121.569 23.49212,121.319 M 16.293361,67.538522 22.826121,69.991263 V 131.17899"
+       d="m 9.339128,64.80927 c 1.715008,6.866991 1.682008,14.037982 1.885008,21.082973 0.044,10.943987 0.119999,21.889777 -0.075,32.832757 -0.227,5.85299 -0.339,11.81199 -1.810008,17.50298 M 10.117127,80.194251 H 23.36712 M 10.242137,121.569 23.49212,121.319 m -7.198759,-53.780478 6.53276,2.452741 v 61.187727"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
@@ -7363,12 +7760,12 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        inkscape:label="Auto-remplissage satin 9"
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay_max_stitch_length_mm="6"
-       style="stroke-width:0.94488189;stroke-miterlimit:4;stroke-dasharray:none"
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:none"
        inkstitch:reverse_rails="none" />
     <path
        id="autosatin10-2-7"
        inkscape:label="Auto-remplissage satin 10"
-       d="M 27.617115,130.31899 27.492115,137.69398 M 42.742096,128.81899 42.616096,137.44398 M 46.576091,136.80998 47.59409,128.41699 M 17.312128,133.22098 19.279125,132.49198 22.826121,131.17899 28.756114,131.06299 34.187107,130.71399 43.222095,129.58499 47.52399,128.80399 47.64499,128.77699 M 9.339078,136.22798 H 12.916634 34.519106 37.442103 L 41.960097,136.29498 46.611091,136.42798 46.722091,136.43498"
+       d="m 27.617115,130.31899 -0.125,7.37499 m 15.249981,-8.87499 -0.126,8.62499 m 3.959995,-0.634 1.017999,-8.39299 m -30.281962,4.80399 1.966997,-0.729 3.546996,-1.31299 5.929993,-0.116 5.430993,-0.349 9.034988,-1.129 4.301895,-0.781 0.121,-0.027 m -38.305912,7.45099 h 3.577556 21.602472 2.922997 l 4.517994,0.067 4.650994,0.133 0.111,0.007"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
@@ -7380,10 +7777,10 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        sodipodi:nodetypes="ccccccccccccccccccccc"
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay_max_stitch_length_mm="6"
-       style="stroke-width:0.94488189;stroke-miterlimit:4;stroke-dasharray:none"
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:none"
        inkstitch:reverse_rails="none" />
     <path
-       d="M 51.393985,127.92399 47.64499,128.77699 M 49.865987,136.62698 46.721991,136.43498 M 49.689987,137.05498 51.372985,127.51199"
+       d="m 51.393985,127.92399 -3.748995,0.853 m 2.220997,7.84999 -3.143996,-0.192 m 2.967996,0.62 1.682998,-9.54299"
        id="autosatin11-5-9"
        sodipodi:nodetypes="cccccc"
        inkstitch:satin_column="True"
@@ -7398,25 +7795,24 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        inkscape:label="Auto-remplissage satin 12"
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay_max_stitch_length_mm="6"
-       style="stroke-width:0.94488189;stroke-miterlimit:4;stroke-dasharray:none"
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:none"
        inkstitch:reverse_rails="none" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer1"
      inkscape:label="GlyphLayer-é"
-     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     >
+     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1">
     <path
-       d="M 15.78313,133.70398 C 17.209513,121.72339 16.559777,109.64066 16.744128,97.609129 26.082476,99.555634 35.666954,98.443828 45.115093,98.658227"
+       d="m 15.78313,133.70398 c 1.426383,-11.98059 0.776647,-24.06332 0.960998,-36.094851 9.338348,1.946505 18.922826,0.834699 28.370965,1.049098"
        inkstitch:running_stitch_length_mm="2"
        id="path1074"
        inkscape:label="Points droits pour auto-remplissage satin 2"
        inkstitch:ties="3"
        sodipodi:nodetypes="ccccc"
-       style="stroke-dasharray:0.5,0.5;stroke-width:0.94488189;stroke-miterlimit:4;stroke-dashoffset:0" />
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0" />
     <path
-       d="M 45.911992,94.705232 C 41.148998,95.440231 36.332004,95.756231 31.52201,95.999231 28.525013,96.12923 25.526017,96.19323 22.526021,96.23323 M 44.316994,102.61102 C 37.087003,101.72502 29.815012,101.08202 22.526021,101.01702 M 27.317015,95.194232 27.442015,102.06902 M 38.692001,94.569232 38.692101,102.94402"
+       d="m 45.911992,94.705232 c -4.762994,0.734999 -9.579988,1.050999 -14.389982,1.293999 -2.996997,0.129999 -5.995993,0.193999 -8.995989,0.233999 m 21.790973,6.37779 c -7.229991,-0.886 -14.501982,-1.529 -21.790973,-1.594 m 4.790994,-5.822788 0.125,6.874788 m 11.249986,-7.499788 1e-4,8.374788"
        id="path1078"
        sodipodi:nodetypes="ccsccccc"
        inkstitch:satin_column="True"
@@ -7430,18 +7826,18 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        inkscape:label="Auto-remplissage satin 4"
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay_max_stitch_length_mm="6"
-       style="stroke-width:0.94488189;stroke-miterlimit:4;stroke-dasharray:none"
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:none"
        inkstitch:reverse_rails="none" />
     <path
-       d="M 16.744128,97.609229 C 18.144474,88.146883 13.871013,77.988135 18.592926,69.051423 28.265719,64.303332 39.193277,68.685398 49.399987,67.599266"
+       d="m 16.744128,97.609229 c 1.400346,-9.462346 -2.873115,-19.621094 1.848798,-28.557806 9.672793,-4.748091 20.600351,-0.366025 30.807061,-1.452157"
        inkstitch:running_stitch_length_mm="2"
        id="path1080"
        inkscape:label="Points droits pour auto-remplissage satin 5"
        sodipodi:nodetypes="ccccc"
        inkstitch:ties="3"
-       style="stroke-dasharray:0.5,0.5;stroke-width:0.94488189;stroke-miterlimit:4;stroke-dashoffset:0" />
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0" />
     <path
-       d="M 48.104,71.1873 44.052,70.3233 39.202,69.7253 36.179,69.4763 32.691,69.3933 29.635,69.5263 26.313,69.7253 22.526,69.9913 15.1862,67.2031 M 26.3171,63.3193 26.1921,70.5693 M 42.4421,63.5693 V 71.0693 M 50.0115,64.109 C 36.3798,64.945 16.6437,65.3954 9.14223,64.9071"
+       d="m 48.104,71.1873 -4.052,-0.864 -4.85,-0.598 -3.023,-0.249 -3.488,-0.083 -3.056,0.133 -3.322,0.199 -3.787,0.266 -7.3398,-2.7882 m 11.1309,-3.8838 -0.125,7.25 m 16.25,-7 v 7.5 M 50.0115,64.109 C 36.3798,64.945 16.6437,65.3954 9.14223,64.9071"
        id="path1082"
        sodipodi:nodetypes="ccccccccccccccc"
        inkstitch:satin_column="True"
@@ -7456,7 +7852,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        inkscape:label="Auto-remplissage satin 7"
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay_max_stitch_length_mm="6"
-       style="stroke-width:0.94488189;stroke-miterlimit:4;stroke-dasharray:none"
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:none"
        inkstitch:reverse_rails="none" />
     <path
        d="M 15.1839,57.139 39.6317,39.751"
@@ -7464,7 +7860,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        sodipodi:nodetypes="cc"
        inkstitch:ties="3"
        inkstitch:running_stitch_length_mm="2"
-       style="stroke-dasharray:0.5,0.5;stroke-width:0.94488189;stroke-miterlimit:4;stroke-dashoffset:0" />
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0" />
     <path
        d="M 38.1839,35.139 27.5824,43.9735 M 44.1839,45.139 31.3738,50.4397 M 37.8079,34.704 44.3907,45.6759"
        id="path15204-4-0"
@@ -7478,7 +7874,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="False"
        inkstitch:zigzag_underlay_max_stitch_length_mm="6"
-       style="stroke-width:0.94488189;stroke-miterlimit:4;stroke-dasharray:none"
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:none"
        inkstitch:reverse_rails="none" />
     <path
        d="M 27.5824,43.9735 14.1839,55.139 M 31.3738,50.4397 15.1839,57.139 M 27.3168,43.7155 31.4702,50.8"
@@ -7495,11 +7891,11 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        inkstitch:contour_underlay="False"
        inkstitch:zigzag_underlay_max_stitch_length_mm="6"
        sodipodi:nodetypes="cccccc"
-       style="stroke-width:0.94488189;stroke-miterlimit:4;stroke-dasharray:none"
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:none"
        inkstitch:reverse_rails="none" />
     <path
        id="path1086"
-       d="M 9.142234,64.907116 C 10.857242,71.774107 10.721136,78.847252 10.924136,85.892243 10.968136,96.83623 11.044135,107.78202 10.849136,118.725 10.622136,124.57799 10.510136,130.53699 9.039128,136.22798 M 9.817127,80.194251 H 23.06712 M 9.9421369,121.569 23.19212,121.319 M 15.881332,67.467102 22.526121,69.991263 V 131.17899"
+       d="m 9.142234,64.907116 c 1.715008,6.866991 1.578902,13.940136 1.781902,20.985127 0.044,10.943987 0.119999,21.889777 -0.075,32.832757 -0.227,5.85299 -0.339,11.81199 -1.810008,17.50298 M 9.817127,80.194251 H 23.06712 M 9.9421369,121.569 23.19212,121.319 m -7.310788,-53.851898 6.644789,2.524161 v 61.187727"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
@@ -7512,12 +7908,12 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        inkscape:label="Auto-remplissage satin 9"
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay_max_stitch_length_mm="6"
-       style="stroke-width:0.94488189;stroke-miterlimit:4;stroke-dasharray:none"
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:none"
        inkstitch:reverse_rails="none" />
     <path
        id="path1088"
        inkscape:label="Auto-remplissage satin 10"
-       d="M 27.317115,130.31899 27.192115,137.69398 M 42.442096,128.81899 42.316096,137.44398 M 46.276091,136.80998 47.29409,128.41699 M 17.012128,133.22098 18.979125,132.49198 22.526121,131.17899 28.456114,131.06299 33.887107,130.71399 42.922095,129.58499 47.22399,128.80399 47.34499,128.77699 M 9.039078,136.22798 H 12.616634 34.219106 37.142103 L 41.660097,136.29498 46.311091,136.42798 46.422091,136.43498"
+       d="m 27.317115,130.31899 -0.125,7.37499 m 15.249981,-8.87499 -0.126,8.62499 m 3.959995,-0.634 1.017999,-8.39299 m -30.281962,4.80399 1.966997,-0.729 3.546996,-1.31299 5.929993,-0.116 5.430993,-0.349 9.034988,-1.129 4.301895,-0.781 0.121,-0.027 m -38.305912,7.45099 h 3.577556 21.602472 2.922997 l 4.517994,0.067 4.650994,0.133 0.111,0.007"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
@@ -7528,10 +7924,10 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        inkstitch:contour_underlay="False"
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay_max_stitch_length_mm="6"
-       style="stroke-width:0.94488189;stroke-miterlimit:4;stroke-dasharray:none"
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:none"
        inkstitch:reverse_rails="none" />
     <path
-       d="M 51.093985,127.92399 47.34499,128.77699 M 49.565987,136.62698 46.421991,136.43498 M 49.389987,137.05498 51.072985,127.51199"
+       d="m 51.093985,127.92399 -3.748995,0.853 m 2.220997,7.84999 -3.143996,-0.192 m 2.967996,0.62 1.682998,-9.54299"
        id="path1090"
        sodipodi:nodetypes="ccccccccccc"
        inkstitch:satin_column="True"
@@ -7546,31 +7942,30 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        inkscape:label="Auto-remplissage satin 12"
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay_max_stitch_length_mm="6"
-       style="stroke-width:0.94488189;stroke-miterlimit:4;stroke-dasharray:none"
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:none"
        inkstitch:reverse_rails="none" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer3"
      inkscape:label="GlyphLayer-ê"
-     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     >
+     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1">
     <path
-       d="M 16.08313,133.70398 C 17.510911,121.72477 16.858755,109.63853 17.044128,97.609129"
+       d="m 16.08313,133.70398 c 1.427781,-11.97921 0.775625,-24.06545 0.960998,-36.094851"
        inkstitch:running_stitch_length_mm="2"
        id="path1096"
        inkscape:label="Points droits pour auto-remplissage satin 2"
        inkstitch:ties="3"
-       style="stroke-dasharray:0.5,0.5;stroke-width:0.94488189;stroke-miterlimit:4;stroke-dashoffset:0" />
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0" />
     <path
-       d="M 22.826121,98.625227 C 30.355929,98.564417 37.886647,98.924429 45.415093,98.658227"
+       d="m 22.826121,98.625227 c 7.529808,-0.06081 15.060526,0.299202 22.588972,0.033"
        inkstitch:running_stitch_length_mm="2"
        id="path1098"
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3"
-       style="stroke-dasharray:0.5,0.5;stroke-width:0.94488189;stroke-miterlimit:4;stroke-dashoffset:0" />
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0" />
     <path
-       d="M 46.211992,94.705232 C 41.448998,95.440231 36.632004,95.756231 31.82201,95.999231 28.825013,96.12923 25.826017,96.19323 22.826021,96.23323 M 44.616994,102.61102 C 37.387003,101.72502 30.115012,101.08202 22.826021,101.01702 M 27.617015,95.194232 27.742015,102.06902 M 38.992001,94.569232 38.992101,102.94402"
+       d="m 46.211992,94.705232 c -4.762994,0.734999 -9.579988,1.050999 -14.389982,1.293999 -2.996997,0.129999 -5.995993,0.193999 -8.995989,0.233999 m 21.790973,6.37779 c -7.229991,-0.886 -14.501982,-1.529 -21.790973,-1.594 m 4.790994,-5.822788 0.125,6.874788 m 11.249986,-7.499788 10e-5,8.374788"
        id="path1100"
        sodipodi:nodetypes="ccsccccc"
        inkstitch:satin_column="True"
@@ -7584,18 +7979,18 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        inkscape:label="Auto-remplissage satin 4"
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay_max_stitch_length_mm="6"
-       style="stroke-width:0.94488189;stroke-miterlimit:4;stroke-dasharray:none"
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:none"
        inkstitch:reverse_rails="none" />
     <path
-       d="M 17.044128,97.609229 C 18.444474,88.146883 14.171013,77.988135 18.892926,69.051423 28.565719,64.303332 39.493277,68.685398 49.699987,67.599266"
+       d="m 17.044128,97.609229 c 1.400346,-9.462346 -2.873115,-19.621094 1.848798,-28.557806 9.672793,-4.748091 20.600351,-0.366025 30.807061,-1.452157"
        inkstitch:running_stitch_length_mm="2"
        id="path1102"
        inkscape:label="Points droits pour auto-remplissage satin 5"
        sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
        inkstitch:ties="3"
-       style="stroke-dasharray:0.5,0.5;stroke-width:0.94488189;stroke-miterlimit:4;stroke-dashoffset:0" />
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0" />
     <path
-       d="M 48.404,71.1873 44.352,70.3233 39.502,69.7253 36.479,69.4763 32.991,69.3933 29.935,69.5263 26.613,69.7253 22.826,69.9913 16.917,67.7467 M 26.6171,63.3193 26.4921,70.5693 M 42.7421,63.5693 V 71.0693 M 50.3115,64.109 C 36.6798,64.945 16.8635,65.3653 9.36197,64.877"
+       d="m 48.404,71.1873 -4.052,-0.864 -4.85,-0.598 -3.023,-0.249 -3.488,-0.083 -3.056,0.133 -3.322,0.199 -3.787,0.266 -5.909,-2.2446 m 9.7001,-4.4274 -0.125,7.25 m 16.25,-7 v 7.5 m 7.5694,-6.9603 c -13.6317,0.836 -33.448,1.2563 -40.94953,0.768"
        id="path1104"
        sodipodi:nodetypes="ccccccccccccccc"
        inkstitch:satin_column="True"
@@ -7610,7 +8005,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        inkscape:label="Auto-remplissage satin 7"
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay_max_stitch_length_mm="6"
-       style="stroke-width:0.94488189;stroke-miterlimit:4;stroke-dasharray:none"
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:none"
        inkstitch:reverse_rails="none" />
     <path
        d="M 29.195407,47.750897 C 22.334678,50.078892 15.47395,52.406888 8.6132208,54.734883"
@@ -7618,9 +8013,9 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        sodipodi:nodetypes="cc"
        inkstitch:ties="3"
        inkstitch:running_stitch_length_mm="2"
-       style="stroke-dasharray:0.5,0.5;stroke-width:0.94488189;stroke-miterlimit:4;stroke-dashoffset:0" />
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0" />
     <path
-       d="M 6.1982977,57.691813 29.198284,47.69182 M 4.1982989,55.691814 29.198284,35.691828 M 15.47179,44.955622 19.20069,52.689618"
+       d="M 6.1982977,57.691813 29.198284,47.69182 M 4.1982989,55.691814 29.198284,35.691828 m -13.726494,9.263794 3.7289,7.733996"
        id="path32595-6"
        inkstitch:satin_column="True"
        inkstitch:max_stitch_length_mm="6"
@@ -7632,17 +8027,17 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="False"
        inkstitch:zigzag_underlay_max_stitch_length_mm="6"
-       style="stroke-width:0.94488189;stroke-miterlimit:4;stroke-dasharray:none"
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:none"
        inkstitch:reverse_rails="none" />
     <path
-       d="M 32.818983,44.736122 C 39.231745,48.577286 45.644508,52.418449 52.05727,56.259613"
+       d="m 32.818983,44.736122 c 6.412762,3.841164 12.825525,7.682327 19.238287,11.523491"
        id="path13092-4-4-0-2-4"
        inkstitch:ties="3"
        inkstitch:running_stitch_length_mm="2"
-       style="stroke-dasharray:0.5,0.5;stroke-width:0.94488189;stroke-miterlimit:4;stroke-dashoffset:0" />
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0" />
     <path
        id="path15212-2"
-       d="M 54.198268,55.691814 29.198284,35.691828 M 52.198269,57.691813 29.198284,47.69182 M 43.225575,46.043421 39.612276,53.367616"
+       d="M 54.198268,55.691814 29.198284,35.691828 M 52.198269,57.691813 29.198284,47.69182 m 14.027291,-1.648399 -3.613299,7.324195"
        inkstitch:satin_column="True"
        inkstitch:max_stitch_length_mm="6"
        inkstitch:pull_compensation_mm="0.3"
@@ -7654,11 +8049,11 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="False"
        inkstitch:zigzag_underlay_max_stitch_length_mm="6"
-       style="stroke-width:0.94488189;stroke-miterlimit:4;stroke-dasharray:none"
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:none"
        inkstitch:reverse_rails="none" />
     <path
        id="path1108"
-       d="M 9.3619731,64.876981 C 11.076981,71.743972 11.021136,78.847252 11.224136,85.892243 11.268136,96.83623 11.344135,107.78202 11.149136,118.725 10.922136,124.57799 10.810136,130.53699 9.339128,136.22798 M 10.117127,80.194251 H 23.36712 M 10.242137,121.569 23.49212,121.319 M 16.342518,67.528502 22.826121,69.991263 V 131.17899"
+       d="m 9.3619731,64.876981 c 1.7150079,6.866991 1.6591629,13.970271 1.8621629,21.015262 0.044,10.943987 0.119999,21.889777 -0.075,32.832757 -0.227,5.85299 -0.339,11.81199 -1.810008,17.50298 M 10.117127,80.194251 H 23.36712 M 10.242137,121.569 23.49212,121.319 m -7.149602,-53.790498 6.483603,2.462761 v 61.187727"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
@@ -7671,12 +8066,12 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        inkscape:label="Auto-remplissage satin 9"
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay_max_stitch_length_mm="6"
-       style="stroke-width:0.94488189;stroke-miterlimit:4;stroke-dasharray:none"
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:none"
        inkstitch:reverse_rails="none" />
     <path
        id="path1110"
        inkscape:label="Auto-remplissage satin 10"
-       d="M 27.617115,130.31899 27.492115,137.69398 M 42.742096,128.81899 42.616096,137.44398 M 46.576091,136.80998 47.59409,128.41699 M 17.312128,133.22098 19.279125,132.49198 22.826121,131.17899 28.756114,131.06299 34.187107,130.71399 43.222095,129.58499 47.52399,128.80399 47.64499,128.77699 M 9.339078,136.22798 H 12.916634 34.519106 37.442103 L 41.960097,136.29498 46.611091,136.42798 46.722091,136.43498"
+       d="m 27.617115,130.31899 -0.125,7.37499 m 15.249981,-8.87499 -0.126,8.62499 m 3.959995,-0.634 1.017999,-8.39299 m -30.281962,4.80399 1.966997,-0.729 3.546996,-1.31299 5.929993,-0.116 5.430993,-0.349 9.034988,-1.129 4.301895,-0.781 0.121,-0.027 m -38.305912,7.45099 h 3.577556 21.602472 2.922997 l 4.517994,0.067 4.650994,0.133 0.111,0.007"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
@@ -7687,10 +8082,10 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        inkstitch:contour_underlay="False"
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay_max_stitch_length_mm="6"
-       style="stroke-width:0.94488189;stroke-miterlimit:4;stroke-dasharray:none"
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:none"
        inkstitch:reverse_rails="none" />
     <path
-       d="M 51.393985,127.92399 47.64499,128.77699 M 49.865987,136.62698 46.721991,136.43498 M 49.689987,137.05498 51.372985,127.51199"
+       d="m 51.393985,127.92399 -3.748995,0.853 m 2.220997,7.84999 -3.143996,-0.192 m 2.967996,0.62 1.682998,-9.54299"
        id="path1112"
        sodipodi:nodetypes="ccccccccccc"
        inkstitch:satin_column="True"
@@ -7705,31 +8100,30 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        inkscape:label="Auto-remplissage satin 12"
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay_max_stitch_length_mm="6"
-       style="stroke-width:0.94488189;stroke-miterlimit:4;stroke-dasharray:none"
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:none"
        inkstitch:reverse_rails="none" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer4"
      inkscape:label="GlyphLayer-ë"
-     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     >
+     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1">
     <path
-       d="M 16.38313,133.70398 C 17.810911,121.72477 17.158755,109.63853 17.344128,97.609129"
+       d="m 16.38313,133.70398 c 1.427781,-11.97921 0.775625,-24.06545 0.960998,-36.094851"
        inkstitch:running_stitch_length_mm="2"
        id="path1052"
        inkscape:label="Points droits pour auto-remplissage satin 2"
        inkstitch:ties="3"
-       style="stroke-dasharray:0.5,0.5;stroke-width:0.94488189;stroke-miterlimit:4;stroke-dashoffset:0" />
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0" />
     <path
-       d="M 23.126121,98.625227 C 30.655929,98.564417 38.186647,98.924429 45.715093,98.658227"
+       d="m 23.126121,98.625227 c 7.529808,-0.06081 15.060526,0.299202 22.588972,0.033"
        inkstitch:running_stitch_length_mm="2"
        id="path1054"
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3"
-       style="stroke-dasharray:0.5,0.5;stroke-width:0.94488189;stroke-miterlimit:4;stroke-dashoffset:0" />
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0" />
     <path
-       d="M 46.511992,94.705232 C 41.748998,95.440231 36.932004,95.756231 32.12201,95.999231 29.125013,96.12923 26.126017,96.19323 23.126021,96.23323 M 44.916994,102.61102 C 37.687003,101.72502 30.415012,101.08202 23.126021,101.01702 M 27.917015,95.194232 28.042015,102.06902 M 39.292001,94.569232 39.292101,102.94402"
+       d="m 46.511992,94.705232 c -4.762994,0.734999 -9.579988,1.050999 -14.389982,1.293999 -2.996997,0.129999 -5.995993,0.193999 -8.995989,0.233999 m 21.790973,6.37779 c -7.229991,-0.886 -14.501982,-1.529 -21.790973,-1.594 m 4.790994,-5.822788 0.125,6.874788 m 11.249986,-7.499788 1e-4,8.374788"
        id="path1056"
        sodipodi:nodetypes="ccsccccc"
        inkstitch:satin_column="True"
@@ -7743,18 +8137,18 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        inkscape:label="Auto-remplissage satin 4"
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay_max_stitch_length_mm="6"
-       style="stroke-width:0.94488189;stroke-miterlimit:4;stroke-dasharray:none"
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:none"
        inkstitch:reverse_rails="none" />
     <path
-       d="M 17.344128,97.609229 C 18.744474,88.146883 14.471013,77.988135 19.192926,69.051423 28.865719,64.303332 39.793277,68.685398 49.999987,67.599266"
+       d="m 17.344128,97.609229 c 1.400346,-9.462346 -2.873115,-19.621094 1.848798,-28.557806 9.672793,-4.748091 20.600351,-0.366025 30.807061,-1.452157"
        inkstitch:running_stitch_length_mm="2"
        id="path1058"
        inkscape:label="Points droits pour auto-remplissage satin 5"
        sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
        inkstitch:ties="3"
-       style="stroke-dasharray:0.5,0.5;stroke-width:0.94488189;stroke-miterlimit:4;stroke-dashoffset:0" />
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0" />
     <path
-       d="M 48.704,71.1873 44.652,70.3233 39.802,69.7253 36.779,69.4763 33.291,69.3933 30.235,69.5263 26.913,69.7253 23.126,69.9913 15.8661,67.2208 M 26.9171,63.3193 26.7921,70.5693 M 43.0421,63.5693 V 71.0693 M 50.6115,64.109 C 36.9798,64.945 17.1528,65.3613 9.65131,64.873"
+       d="m 48.704,71.1873 -4.052,-0.864 -4.85,-0.598 -3.023,-0.249 -3.488,-0.083 -3.056,0.133 -3.322,0.199 -3.787,0.266 -7.2599,-2.7705 m 11.051,-3.9015 -0.125,7.25 m 16.25,-7 v 7.5 M 50.6115,64.109 C 36.9798,64.945 17.1528,65.3613 9.65131,64.873"
        id="path1060"
        sodipodi:nodetypes="ccccccccccccccc"
        inkstitch:satin_column="True"
@@ -7769,17 +8163,17 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        inkscape:label="Auto-remplissage satin 7"
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay_max_stitch_length_mm="6"
-       style="stroke-width:0.94488189;stroke-miterlimit:4;stroke-dasharray:none"
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:none"
        inkstitch:reverse_rails="none" />
     <path
-       d="M 20.152545,50.665589 C 19.575212,48.396122 21.34036,45.500088 23.867922,45.714452 M 33.96731,46.014351 C 35.946241,47.426683 37.925171,48.839014 39.904102,50.251346"
+       d="m 20.152545,50.665589 c -0.577333,-2.269467 1.187815,-5.165501 3.715377,-4.951137 m 10.099388,0.299899 c 1.978931,1.412332 3.957861,2.824663 5.936792,4.236995"
        id="autosatinrun23-8-1-3-9-7-8"
        inkstitch:ties="3"
        inkstitch:running_stitch_length_mm="2"
        sodipodi:nodetypes="cccc"
-       style="stroke-dasharray:0.5,0.5;stroke-width:0.94488189;stroke-miterlimit:4;stroke-dashoffset:0" />
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0" />
     <path
-       d="M 40.834801,51.920144 C 44.123797,51.809144 46.048794,48.730348 45.936795,45.507752 M 39.412803,51.896044 C 36.122807,52.007044 34.138809,49.131147 34.02581,45.907551"
+       d="m 40.834801,51.920144 c 3.288996,-0.111 5.213993,-3.189796 5.101994,-6.412392 m -6.523992,6.388292 c -3.289996,0.111 -5.273994,-2.764897 -5.386993,-5.988493"
        id="path22949"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.3"
@@ -7789,10 +8183,10 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        inkstitch:center_walk_underlay="True"
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay_max_stitch_length_mm="6"
-       style="stroke-width:0.94488189;stroke-miterlimit:4;stroke-dasharray:none"
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:none"
        inkstitch:reverse_rails="none" />
     <path
-       d="M 40.690801,39.863359 C 43.906797,39.856559 45.799795,42.352956 45.909795,45.503152 M 39.451803,39.843059 C 36.162807,39.953159 33.88781,42.680355 34.00081,45.902951"
+       d="m 40.690801,39.863359 c 3.215996,-0.0068 5.108994,2.489597 5.218994,5.639793 m -6.457992,-5.660093 c -3.288996,0.1101 -5.563993,2.837296 -5.450993,6.059892"
        id="path22951"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.3"
@@ -7803,17 +8197,17 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        inkstitch:center_walk_underlay="True"
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay_max_stitch_length_mm="6"
-       style="stroke-width:0.94488189;stroke-miterlimit:4;stroke-dasharray:none"
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:none"
        inkstitch:reverse_rails="none" />
     <path
        d="M 24.052722,45.696252 C 22.084924,44.741053 20.117127,43.785854 18.149329,42.830655"
        id="path22953"
        inkstitch:ties="3"
        inkstitch:running_stitch_length_mm="2"
-       style="stroke-dasharray:0.5,0.5;stroke-width:0.94488189;stroke-miterlimit:4;stroke-dashoffset:0" />
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0" />
     <path
        id="path22955"
-       d="M 17.45783,39.926659 C 14.234234,40.039659 11.734937,42.023656 11.845937,45.313652 L 11.821837,46.73565 C 11.932837,50.024646 14.635034,51.949644 17.85763,51.837644 M 18.215929,39.901659 C 21.438525,39.788659 24.165722,42.063656 24.275822,45.352652 L 24.255522,46.59165 C 24.262322,49.807646 21.765925,51.700644 18.615729,51.810644"
+       d="m 17.45783,39.926659 c -3.223596,0.113 -5.722893,2.096997 -5.611893,5.386993 l -0.0241,1.421998 c 0.111,3.288996 2.813197,5.213994 6.035793,5.101994 m 0.358299,-11.935985 c 3.222596,-0.113 5.949793,2.161997 6.059893,5.450993 l -0.0203,1.238998 c 0.0068,3.215996 -2.489597,5.108994 -5.639793,5.218994"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
@@ -7823,11 +8217,11 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        inkstitch:zigzag_underlay_inset_mm=".25"
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay_max_stitch_length_mm="6"
-       style="stroke-width:0.94488189;stroke-miterlimit:4;stroke-dasharray:none"
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:none"
        inkstitch:reverse_rails="none" />
     <path
        id="path1064"
-       d="M 9.651313,64.872979 C 11.366321,71.73997 11.321136,78.847252 11.524136,85.892243 11.568136,96.83623 11.644135,107.78202 11.449136,118.725 11.222136,124.57799 11.110136,130.53699 9.639128,136.22798 M 10.417127,80.194251 H 23.66712 M 10.542137,121.569 23.79212,121.319 M 15.866119,67.220794 C 17.010525,67.527437 23.126121,69.991263 23.126121,69.991263 V 131.17899"
+       d="m 9.651313,64.872979 c 1.715008,6.866991 1.669823,13.974273 1.872823,21.019264 0.044,10.943987 0.119999,21.889777 -0.075,32.832757 -0.227,5.85299 -0.339,11.81199 -1.810008,17.50298 M 10.417127,80.194251 H 23.66712 M 10.542137,121.569 23.79212,121.319 M 15.866119,67.220794 c 1.144406,0.306643 7.260002,2.770469 7.260002,2.770469 v 61.187727"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
@@ -7840,12 +8234,12 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        inkscape:label="Auto-remplissage satin 9"
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay_max_stitch_length_mm="6"
-       style="stroke-width:0.94488189;stroke-miterlimit:4;stroke-dasharray:none"
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:none"
        inkstitch:reverse_rails="none" />
     <path
        id="path1066"
        inkscape:label="Auto-remplissage satin 10"
-       d="M 27.917115,130.31899 27.792115,137.69398 M 43.042096,128.81899 42.916096,137.44398 M 46.876091,136.80998 47.89409,128.41699 M 17.612128,133.22098 19.579125,132.49198 23.126121,131.17899 29.056114,131.06299 34.487107,130.71399 43.522095,129.58499 47.82399,128.80399 47.94499,128.77699 M 9.639078,136.22798 H 13.216634 34.819106 37.742103 L 42.260097,136.29498 46.911091,136.42798 47.022091,136.43498"
+       d="m 27.917115,130.31899 -0.125,7.37499 m 15.249981,-8.87499 -0.126,8.62499 m 3.959995,-0.634 1.017999,-8.39299 m -30.281962,4.80399 1.966997,-0.729 3.546996,-1.31299 5.929993,-0.116 5.430993,-0.349 9.034988,-1.129 4.301895,-0.781 0.121,-0.027 m -38.305912,7.45099 h 3.577556 21.602472 2.922997 l 4.517994,0.067 4.650994,0.133 0.111,0.007"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
@@ -7856,10 +8250,10 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        inkstitch:contour_underlay="False"
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay_max_stitch_length_mm="6"
-       style="stroke-width:0.94488189;stroke-miterlimit:4;stroke-dasharray:none"
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:none"
        inkstitch:reverse_rails="none" />
     <path
-       d="M 51.693985,127.92399 47.94499,128.77699 M 50.165987,136.62698 47.021991,136.43498 M 49.989987,137.05498 51.672985,127.51199"
+       d="m 51.693985,127.92399 -3.748995,0.853 m 2.220997,7.84999 -3.143996,-0.192 m 2.967996,0.62 1.682998,-9.54299"
        id="path1068"
        sodipodi:nodetypes="ccccccccccc"
        inkstitch:satin_column="True"
@@ -7874,15 +8268,14 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        inkscape:label="Auto-remplissage satin 12"
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay_max_stitch_length_mm="6"
-       style="stroke-width:0.94488189;stroke-miterlimit:4;stroke-dasharray:none"
+       style="stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:none"
        inkstitch:reverse_rails="none" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ì"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15250"
-     >
+     id="g15250">
     <path
        d="M 16.6697,128.539 C 17.336971,108.90337 16.966335,89.253494 16.7934,69.6131"
        inkstitch:running_stitch_length_mm="2"
@@ -7969,8 +8362,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-í"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15254"
-     >
+     id="g15254">
     <path
        d="M 16.6938,128.561 C 17.518065,108.16159 16.601217,87.744456 16.984,67.3393"
        inkstitch:running_stitch_length_mm="2"
@@ -8057,8 +8449,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-î"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15258"
-     >
+     id="g15258">
     <path
        d="M 16.6792,128.57 C 17.557245,107.77433 16.551458,86.958784 17.0005,66.1571"
        inkstitch:running_stitch_length_mm="2"
@@ -8154,8 +8545,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ï"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15262"
-     >
+     id="g15262">
     <path
        d="M 16.8737,124.812 C 16.934295,106.74313 17.427593,88.659459 16.508045,70.603157 14.005363,68.735438 11.502682,66.867719 9,65"
        inkstitch:running_stitch_length_mm="2"
@@ -8251,8 +8641,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ñ"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15270"
-     >
+     id="g15270">
     <path
        d="M 13.5,117.658 C 13.55588,123.57485 13.913271,129.48386 14,135.4"
        inkstitch:running_stitch_length_mm="2"
@@ -8373,8 +8762,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ò"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15274"
-     >
+     id="g15274">
     <path
        id="autosatinrun39-2-3-2"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -8476,8 +8864,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ó"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15278"
-     >
+     id="g15278">
     <path
        id="autosatinrun39-2-3"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -8579,8 +8966,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ô"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15282"
-     >
+     id="g15282">
     <path
        id="autosatinrun39-2"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -8687,8 +9073,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ö"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15286"
-     >
+     id="g15286">
     <path
        id="autosatinrun39-2-3-2-2"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -8805,8 +9190,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ù"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15298"
-     >
+     id="g15298">
     <path
        d="M 19.307767,128.72605 C 34.366035,132.67025 49.424303,139.0092 64.482571,124.91598 65.370375,105.7055 66.174642,86.458788 66.426693,67.243352 L 66.394783,66.19109 66.408973,65.138107"
        id="path28809"
@@ -8887,8 +9271,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ú"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15302"
-     >
+     id="g15302">
     <path
        d="M 28.726213,135.03325 C 25.126278,131.61479 21.526344,128.19633 17.926409,124.77787 16.840525,106.73549 16.800449,88.648635 15.727988,70.605621 17.336577,67.599787 21.271678,67.619191 23.73398,65.690534"
        id="path28904"
@@ -8962,8 +9345,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-û"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15306"
-     >
+     id="g15306">
     <path
        d="M 28.726213,135.03325 C 25.126278,131.61479 21.526344,128.19633 17.926409,124.77787 16.840525,106.73549 16.800449,88.648635 15.727988,70.605621 15.826518,68.834863 17.338434,67.502906 17.242961,65.690534"
        id="path28919"
@@ -9068,8 +9450,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ü"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15314"
-     >
+     id="g15314">
     <path
        d="M 28.726213,135.03325 C 25.126278,131.61479 21.526344,128.19633 17.926409,124.77787 17.038605,105.56739 16.234338,86.320681 15.982287,67.105245 L 16.014193,66.052983 16,65"
        id="path28934"
@@ -9178,8 +9559,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Œ"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15290"
-     >
+     id="g15290">
     <path
        id="path40892"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -9301,8 +9681,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-œ"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g15294"
-     >
+     id="g15294">
     <path
        id="path32847"
        inkscape:label="Points droits pour auto-remplissage satin 1"
