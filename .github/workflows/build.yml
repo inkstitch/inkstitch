@@ -185,9 +185,9 @@ jobs:
         env:
           BUILD: windows
       - uses: actions/upload-artifact@v3
-          with:
-            name: inkstitch-windows64
-            path: artifacts
+        with:
+          name: inkstitch-windows64
+          path: artifacts
       # - uses: dlemstra/code-sign-action@v1
       #   with:
       #     certificate: '${{ secrets.INKSTITCH_CODE_SIGNING_CERTIFICATE }}'
