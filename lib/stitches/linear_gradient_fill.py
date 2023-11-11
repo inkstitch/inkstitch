@@ -68,11 +68,8 @@ def _get_gradient_info(fill, bbox):
         fill.gradient.apply_transform()
         offsets = fill.gradient.stop_offsets
         colors = [style['stop-color'] for style in fill.gradient.stop_styles]
-        transform = Transform(get_node_transform(fill.node))
-        gradient_start = transform.apply_to_point((float(fill.gradient.x1()), float(fill.gradient.y1())))
-        gradient_end = transform.apply_to_point((float(fill.gradient.x2()), float(fill.gradient.y2())))
-        gradient_line = DirectedLineSegment(gradient_start, gradient_end)
-        angle = gradient_line.angle
+        gradient_start, gradient_end = gradient_start_end(fill.node, fill.gradient)
+        angle = gradient_angle(fill.node, fill.gradient)
     return angle, colors, offsets, gradient_start, gradient_end
 
 
@@ -324,3 +321,18 @@ def _remove_start_end_travel(fill, stitches, colors, color_section):
                 break
         stitches = stitches[:remove_after]
     return stitches
+
+
+def gradient_start_end(node, gradient):
+    transform = Transform(get_node_transform(node))
+    gradient_start = transform.apply_to_point((float(gradient.x1()), float(gradient.y1())))
+    gradient_end = transform.apply_to_point((float(gradient.x2()), float(gradient.y2())))
+    return gradient_start, gradient_end
+
+
+def gradient_angle(node, gradient):
+    if gradient is None:
+        return
+    gradient_start, gradient_end = gradient_start_end(node, gradient)
+    gradient_line = DirectedLineSegment(gradient_start, gradient_end)
+    return gradient_line.angle

@@ -19,8 +19,8 @@ from ..i18n import _
 from ..marker import get_marker_elements
 from ..stitch_plan import StitchGroup
 from ..stitches import (auto_fill, circular_fill, contour_fill, guided_fill,
-                        legacy_fill, linear_gradient_fill)
-from ..stitches.meander_fill import meander_fill
+                        legacy_fill, linear_gradient_fill, meander_fill)
+from ..stitches.linear_gradient_fill import gradient_angle
 from ..svg import PIXELS_PER_MM, get_node_transform
 from ..svg.clip import get_clip_path
 from ..svg.tags import INKSCAPE_LABEL
@@ -458,6 +458,8 @@ class FillStitch(EmbroideryElement):
                     float(angle)) for angle in underlay_angles]
             except (TypeError, ValueError):
                 return default_value
+        elif self.fill_method == 'linear_gradient_fill' and self.gradient is not None:
+            return [gradient_angle(self.node, self.gradient) / 2]
         else:
             underlay_angles = default_value
 
