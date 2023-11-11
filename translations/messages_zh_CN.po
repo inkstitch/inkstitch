@@ -1498,7 +1498,7 @@ msgstr ""
 
 #: lib/elements/fill_stitch.py:264
 msgid "Spacing between rows"
-msgstr ""
+msgstr "行间距"
 
 #: lib/elements/fill_stitch.py:265
 msgid "Distance between rows of stitches."
