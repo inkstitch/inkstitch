@@ -67,7 +67,7 @@ def _get_gradient_info(fill, bbox):
     else:
         fill.gradient.apply_transform()
         offsets = fill.gradient.stop_offsets
-        colors = [style['stop-color'] for style in fill.gradient.stop_styles]
+        colors = [style['stop-color'] if float(style['stop-opacity']) > 0 else 'none' for style in fill.gradient.stop_styles]
         gradient_start, gradient_end = gradient_start_end(fill.node, fill.gradient)
         angle = gradient_angle(fill.node, fill.gradient)
     return angle, colors, offsets, gradient_start, gradient_end
@@ -222,6 +222,9 @@ def _get_color_lines(lines, colors, stop_color_line_indices):
 
     # add left over lines to last color
     color_lines[color].extend(lines[prev+1:])
+
+    # remove transparent colors (we just want a gap)
+    color_lines.pop('none', None)
 
     # remove empty line lists and update colors
     color_lines = {color: lines for color, lines in color_lines.items() if lines}

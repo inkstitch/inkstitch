@@ -531,7 +531,7 @@ class EmbroideryElement(object):
         if hasattr(self, 'gradient') and self.gradient is not None:
             gradient['stops'] = self.gradient.stop_offsets
             gradient['orientation'] = [self.gradient.x1(), self.gradient.x2(), self.gradient.y1(), self.gradient.y2()]
-            gradient['styles'] = [style['stop-color'] for style in self.gradient.stop_styles]
+            gradient['styles'] = [(style['stop-color'], style['stop-opacity']) for style in self.gradient.stop_styles]
         return gradient
 
     def get_cache_key_data(self, previous_stitch):
