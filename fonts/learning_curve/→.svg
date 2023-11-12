@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   inkscape:version="1.3-alpha (95f74fb, 2023-03-31)"
+   inkscape:version="1.3.1 (5ab75fa9, 2023-11-03)"
    height="150"
    width="150"
    sodipodi:docname="→.svg"
@@ -27,13 +27,13 @@
      inkscape:window-height="798"
      id="namedview3180"
      showgrid="false"
-     inkscape:zoom="11.787255"
-     inkscape:cx="26.469267"
-     inkscape:cy="85.897862"
+     inkscape:zoom="4.948816"
+     inkscape:cx="34.957857"
+     inkscape:cy="87.192573"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g6293"
+     inkscape:current-layer="g48"
      inkscape:document-rotation="0"
      inkscape:snap-global="false"
      inkscape:snap-bbox="false"
@@ -110,8 +110,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ü"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3724"
-     >
+     id="g3724">
     <path
        d="M -0.82190902,85.646374 C 3.7701942,81.300189 6.8661757,74.994309 10,70"
        id="path2227-7"
@@ -141,8 +140,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-û"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3720"
-     >
+     id="g3720">
     <path
        d="M 0.22473203,84.258878 C 4.8168352,79.912693 6.8661757,74.994309 10,70"
        id="path2227-1"
@@ -171,8 +169,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ù"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3716"
-     >
+     id="g3716">
     <path
        d="M -0.11098799,84.258878 C 4.4811151,79.912693 6.8661757,74.994309 10,70"
        id="path2227-5"
@@ -201,8 +198,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ô"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3712"
-     >
+     id="g3712">
     <path
        d="M -0.37828566,85.646374 C 2.9223466,78.132879 11,70 11,70"
        id="path1555-2"
@@ -230,8 +226,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:label="GlyphLayer-ï"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
      id="g3708"
-     inkscape:groupmode="layer"
-     >
+     inkscape:groupmode="layer">
     <path
        d="M 0,84.472522 C 7.076969,77.188315 8.409306,74.768224 12.540296,69.976768"
        id="path5350-1"
@@ -261,8 +256,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-î"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3704"
-     >
+     id="g3704">
     <path
        d="M 0,84.472522 C 7.076969,77.188315 8.409306,74.768224 12.540296,69.976768"
        id="path5350-8"
@@ -290,9 +284,8 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ë"
-     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3700"
-     >
+     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
+     id="g3700">
     <path
        d="m 0,85.54034 c 5.4639315,0.02604 11.012237,-1.461223 17.230941,-8.479741 2.589358,-2.922387 -0.05046,-7.419318 -4.461991,-6.843063"
        id="path4636-0-0"
@@ -322,8 +315,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ê"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3696"
-     >
+     id="g3696">
     <path
        d="M 0.02419389,85.646374 C 5.4881254,85.672414 11.012236,84.079117 17.230941,77.060599 20.738375,73.102059 14.651182,66.254505 7.5624687,73.040046"
        id="path4636-0"
@@ -352,8 +344,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-é"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3692"
-     >
+     id="g3692">
     <path
        d="M -0.16935724,85.646374 C 5.2945743,85.672414 11.012236,84.079117 17.230941,77.060599 20.738375,73.102059 14.651182,66.254505 7.5624687,73.040046"
        id="path4636-09"
@@ -382,8 +373,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-è"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3688"
-     >
+     id="g3688">
     <path
        d="M -0.09677556,85.646374 C 5.3671559,85.672414 11.012237,84.079117 17.230941,77.060599 c 1.513104,-1.707711 1.240598,-3.953081 -0.127615,-5.409625"
        id="path4636-5"
@@ -412,8 +402,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ç"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3684"
-     >
+     id="g3684">
     <path
        d="M -0.55645949,85.646374 C 1.8313067,81.663837 3.0490532,76.7243 9.0941081,72.274228 14.928606,67.979157 21.55195,70.466123 17.135214,78.687967"
        id="path2080-6"
@@ -434,8 +423,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-â"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3680"
-     >
+     id="g3680">
     <path
        d="M -0.62904117,85.646374 C 7.3666856,72.143647 21.601453,66.213475 25.164082,71.753721"
        id="path3928-8"
@@ -463,8 +451,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-à"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3676"
-     >
+     id="g3676">
     <path
        d="M -0.87098008,85.646374 C 7.1247467,72.143647 21.601453,66.213475 25.164082,71.753721"
        id="path3928-9"
@@ -492,8 +479,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ß"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3672"
-     >
+     id="g3672">
     <path
        d="M -0.07589344,84.448601 -17.684307,127.65785"
        id="path2641"
@@ -514,8 +500,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Î"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3668"
-     >
+     id="g3668">
     <path
        d="M 20.642641,84.747 C 15.788283,105.49826 -10.521047,99.269 4.8982539,92.367073"
        id="path7192-4"
@@ -556,8 +541,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Ê"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3664"
-     >
+     id="g3664">
     <path
        d="M -0.13595751,84.747 C 0.04318384,78.332494 5.0392448,69.550287 28.007247,66.075349 c 7.360947,-1.113673 5.623347,7.106354 -3.127023,5.166386 -7.281856,-1.614397 -11.599144,-22.171306 -5.4383,-28.551077 11.89336,-12.315994 24.842183,-1.03125 22.976819,2.17532"
        id="path12275-3"
@@ -586,8 +570,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-É"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3660"
-     >
+     id="g3660">
     <path
        d="M -0.13595751,84.747 C 0.04318384,78.332494 5.0392448,69.550287 28.007247,66.075349 c 7.360947,-1.113673 5.623347,7.106354 -3.127023,5.166386 -7.281856,-1.614397 -11.599144,-22.171306 -5.4383,-28.551077 3.776257,-3.910448 7.658918,-5.441648 11.140013,-5.607609"
        id="path12275-0"
@@ -620,8 +603,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-È"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3656"
-     >
+     id="g3656">
     <path
        d="M -0.13595751,84.747 C 0.04318384,78.332494 5.0392448,69.550287 28.007247,66.075349 c 7.360947,-1.113673 5.623347,7.106354 -3.127023,5.166386 -7.281856,-1.614397 -11.599144,-22.171306 -5.4383,-28.551077 5.871492,-6.080137 12.000219,-6.408347 16.476772,-4.796183"
        id="path12275-6"
@@ -654,8 +636,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Ç"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3652"
-     >
+     id="g3652">
     <path
        d="M 3.3989377,84.747 C 2.0806113,70.153714 14.883664,50.258297 22.297031,44.322148 51.547022,20.900631 51.129364,57.051964 36.45617,61.63149"
        id="path11090-6"
@@ -676,8 +657,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-À"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3648"
-     >
+     id="g3648">
     <path
        d="M -0.62889494,85.646374 C -0.01732853,78.418212 6.4008608,62.035376 14.096244,53.315924 29.009963,36.417548 48.070107,34.479907 56,41"
        id="path9133-8"
@@ -705,8 +685,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-»"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3644"
-     >
+     id="g3644">
     <path
        d="M 15.120993,84.747 6.0554741,99.269 15.120993,84.747 11.595652,70.29 15.120993,84.747 h 8.870938 L 20.047845,70.29 23.991931,84.747 14.257426,99.269 23.991931,84.747"
        id="path9069-2"
@@ -720,8 +699,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-«"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3640"
-     >
+     id="g3640">
     <path
        d="M 2,85 4.379562,99.269 2,85 13.686131,70.29 2,85 11.548367,84.747 22.718978,70.29 11.548367,84.747 13.54927,99.269 11.548367,84.747"
        id="path9069"
@@ -735,8 +713,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-z"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3636"
-     >
+     id="g3636">
     <path
        d="m 0,84.324325 c 0,0 2.9354944,-4.150472 7.9453787,-9.465456 C 12.796069,69.712774 24.968276,67.499459 25.846413,74.47596 26.963315,83.349375 16.784782,92.605356 12.061659,96.397547 8.084211,99.591036 -3.5798709,102.27765 4.6906453,94.674453 11.386866,88.518523 18.448722,93.906751 17.039487,98.120641 14.089154,106.94272 13.595783,108.33302 6.8923767,122.14823 0.18897005,135.96344 -8.327756,130.59398 -7.4667414,121.19096 -6.6057268,111.78794 22.982158,101.52709 37.297586,84.258878"
        id="path1562"
@@ -750,8 +727,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-y"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3632"
-     >
+     id="g3632">
     <path
        d="m 0.06958153,84.258878 c 0,0 6.06860657,-7.917166 9.81309017,-11.424941 2.1748803,-2.037395 5.8280253,-4.973824 6.9043323,0.135379 1.497303,7.107662 -6.342983,13.461837 -6.768953,20.712997 -0.5542694,9.435167 5.079074,3.888919 11.50722,-0.406138 C 31.668404,86.498896 37.569387,71.966548 37,72 37,72 25.124682,104.00667 18.682311,119.81047 13.738537,131.93806 1.2343166,137.15775 3.6552347,120.35199 5.5848225,106.95699 37.567567,98.781244 47.378226,84.258878"
        id="path1560"
@@ -765,8 +741,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-x"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3628"
-     >
+     id="g3628">
     <path
        d="M 0,84.393906 C 2.8248187,80.33775 7.2294189,75.658636 10.018051,73.240074 12.813343,70.815736 17.835333,68.675201 18.916967,73 c 0.907624,3.629039 1.352145,11.343658 1.352145,11.343658 L 2.8429604,99.26937 20.269112,84.343658 39,70 20.269112,84.343658 20.509928,94.494587 c 0.23471,9.893543 9.327173,3.197949 12.116427,-0.338448 l 7.806243,-9.897261"
        id="path1556"
@@ -780,8 +755,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-w"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3624"
-     >
+     id="g3624">
     <path
        d="M 0,84.397359 C 6.4564422,77.070074 9.7351709,72.948545 10.965704,70.126354 11.169142,70.15092 3.2414958,85.692252 1.2861011,93.005417 -2.0852701,105.61433 11.058509,96.220298 14.620939,92.666969 20.400956,86.901718 29.986458,70.126361 29.986463,70.126354 c 0,0 -8.0932,11.499412 -9.679603,21.86372 -2.164518,14.141256 11.853519,4.232095 15.568592,-1.42148 4.211808,-6.409504 10.559567,-20.44224 10.559567,-20.44224 0,0 -4.811827,9.468681 -5.75361,14.620646 -2.650347,14.498552 12.634739,0.635849 12.676184,-0.488122"
        id="path1549"
@@ -795,8 +769,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-v"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3620"
-     >
+     id="g3620">
     <path
        d="m 0,84.462337 c 0,0 5.7283926,-6.894074 8.7996392,-10.27461 4.4866948,-4.938526 8.6756018,-5.917977 8.1904338,0.06769 -0.467529,5.768043 -5.357267,10.323379 -7.1074013,15.83935 -5.0092843,15.787973 6.1439983,8.103892 14.0117333,0.06769 5.665471,-5.786783 13.740975,-20.036103 13.740975,-20.036103 0.406674,0.948906 -11.103794,13.846378 -6.972022,18.817691 5.432129,6.535891 13.563469,-4.514658 13.449797,-4.685167"
        id="path363"
@@ -810,8 +783,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-u"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3616"
-     >
+     id="g3616">
     <path
        d="M 0,84.393906 C 4.5921032,80.047721 6.9688217,75.952338 10.102646,70.958029 L 2.166065,90.230146 C 0.75989006,98.045732 -2.6965085,106.84288 15.433213,90.907042 23.32584,83.969503 26.424184,76.556956 29,70 26.236721,77.142628 22.229,85.363078 20.442238,91.854695 17.359899,109.4492 33.092394,90.570645 38.247052,84.258878"
        id="path2227"
@@ -825,8 +797,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-t"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3612"
-     >
+     id="g3612">
     <path
        d="M 0.2087446,84.258878 C 2.746612,81.611164 3.9644794,79.891067 5.8629977,76.981993 7.1995873,74.933954 8.7207802,73.139621 9.8601353,70.997954 12.58194,65.881726 14.669193,58.724127 17,53 L 10.221119,71.006319 1,71 23.08213,71.074009 10.221119,71.006319 C 8.5288808,75.586546 6.2042448,80.377572 5.1444044,84.747 -1.366732,111.59061 16.364361,95.137161 24.605263,84.258878"
        id="path1864"
@@ -840,8 +811,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-s"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3608"
-     >
+     id="g3608">
     <path
        d="m 0.254482,84.258878 c -3.7051281,3.997914 -6.7909693,7.39188 -9.6357723,9.841208"
        id="path4638"
@@ -862,8 +832,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-r"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3604"
-     >
+     id="g3604">
     <path
        d="M 0.2087446,84.258878 C 5.3910238,79.43086 9.7769269,74.209517 13.876354,67.757221 c -0.442307,2.676019 -3.842326,6.461179 0.947653,7.175091 4.438452,-1.396174 5.01167,0.655023 2.775271,5.212094 -2.215389,4.682101 -5.489999,9.960256 -8.1904331,15.162455 -1.140974,6.010799 6.3603021,4.898679 9.8826721,0.203068 L 27.73139,84.258878"
        id="path3391"
@@ -877,8 +846,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-q"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3600"
-     >
+     id="g3600">
     <path
        d="M -0.58240172,85.646374 C 0.52994795,83.704137 5.9426432,77.496966 7.2427799,76.489171 16.578855,69.252353 19.726657,69.136431 25.722022,71.547835"
        id="path3005"
@@ -900,8 +868,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-p"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3596"
-     >
+     id="g3596">
     <path
        d="M 0,84.467623 C 3.473856,80.273549 8.3309268,75.322526 12.454874,70.126354 L -12,128 6.498195,84.747 c 21.535938,-27.049685 25.329449,-11.935012 19.765343,0 C 22.621101,92.560031 17.645501,99.5512 4,99 22.295745,105.76452 28.438432,93.281628 36.732032,84.258878"
        id="path2281"
@@ -915,8 +882,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-o"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3592"
-     >
+     id="g3592">
     <path
        d="M -0.35610618,85.646374 C 2.9445261,78.132879 11,70 11,70"
        id="path1555"
@@ -937,8 +903,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-n"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3588"
-     >
+     id="g3588">
     <path
        d="M 0,84.531919 8.9983807,74.763142 C 15.128601,67.691755 19.041482,67.986411 16.94376,77.82642 15.461849,84.777773 10.980507,92.103506 7.6700922,99.26937 L 14.933483,84.747 c 22.829679,-26.68754 24.959922,-11.232937 18.188216,0 -8.422939,13.97201 -2.439663,18.44435 4.690645,10.980454 l 9.752288,-11.468576"
        id="path1192"
@@ -952,8 +917,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-m"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3584"
-     >
+     id="g3584">
     <path
        d="M 0.2087446,84.258878 C 17.745207,59.951003 18.637362,72.054826 16.273667,81.176881 L 6.9881041,99.26937 16.273667,81.176881 C 32.093851,61.160594 35.903203,72.248356 33.121699,84.747 L 26.32505,99.26937 c 0,0 5.773269,-13.256568 6.796649,-14.52237 16.132344,-19.953828 26.855544,-17.04499 18.092489,0 -0.809772,1.575085 -3.330388,6.817994 -4.020553,10.310362 -0.947248,11.378828 11.442485,-3.324389 18.027933,-10.798484"
        id="path6058"
@@ -967,8 +931,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-l"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3580"
-     >
+     id="g3580">
     <path
        d="M 0,84.72003 C 9.1498142,72.872334 20.100687,61.974188 26.918297,48.315216 36.253666,29.611956 22.400895,35.877074 16.628772,51.948368 13.237885,61.389599 5.5684346,73.027275 2.2294055,93.074759 0,106.46008 14.766849,92.401965 21.608062,84.258878"
        id="path5697"
@@ -982,8 +945,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-k"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3576"
-     >
+     id="g3576">
     <path
        d="M 0,84.730774 C 10.765968,72.066633 21.798167,61.997635 31.015695,45.661996 c 7.610352,-13.487343 -4.442225,-11.283432 -9.285563,0 C 13.647084,64.492917 7.2219041,81.402393 0,99.26937 L 6.5094669,83.570067 C 20.088177,66.792899 27.126016,70.512518 26.803687,74.667414 26.021732,84.747 13.540639,86.661549 8.3282885,86.537618 11.706789,94.914629 15.187955,106.0942 26.70796,94.674452 29.674915,91.368878 31.784708,89.054477 35,84.258878"
        id="path5336"
@@ -997,8 +959,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-j"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3572"
-     >
+     id="g3572">
     <path
        d="M -0.06958154,84.258878 C 3.6559544,80.557563 7.5177004,76.857302 12.253114,70.126354"
        id="path4973"
@@ -1027,8 +988,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-i"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3568"
-     >
+     id="g3568">
     <path
        d="M 0,84.324325 C 7.076969,77.040118 8.409306,74.768224 12.540296,69.976768"
        id="path5350"
@@ -1057,8 +1017,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-h"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3564"
-     >
+     id="g3564">
     <path
        d="M -0.06958154,84.258878 C 10.691406,71.093809 24.345961,61.318548 33.121699,43.747447 36.185336,37.613323 30.667158,30.049943 23.261771,43.938901 12.350381,64.403441 7.3130502,81.128981 -4.9571412e-8,99.26937 L 4.9778279,86.633346 C 9.0301392,76.346711 35.16151,59.459552 25.654958,81.751246 c -4.44426,10.421243 -9.535381,26.966244 3.637643,12.540296 l 9.161305,-10.032664"
        id="path4594"
@@ -1072,8 +1031,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-g"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3560"
-     >
+     id="g3560">
     <path
        d="M 0.40587819,84.258878 C 2.7671772,80.118756 6.250462,76.220038 11.391567,73.231503 16.180122,70.447906 21.814913,68.254388 25.272048,72.274228"
        id="path4231"
@@ -1094,8 +1052,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-f"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3556"
-     >
+     id="g3556">
     <path
        d="M -0.42075779,84.258878 C 12.658474,70.064142 27.761398,52.856725 29.851083,43.592058 32.148604,33.405948 22.066243,34.114837 18.81769,43.862817 10.415978,69.073957 -8.010162,103.5468 -11.845668,116.56137 -17.696531,136.41441 3.5486925,136.58588 0.40613719,112.43231 0.00403023,109.34173 -0.0593817,102.97672 -3.181408,96.254514 11.535004,98.868765 14.787545,89.718309 20.304167,84.258878"
        id="path3515"
@@ -1109,8 +1066,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-e"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3552"
-     >
+     id="g3552">
     <path
        d="M 0.61079563,84.258878 C 6.0747271,84.284914 11.012236,84.079117 17.230941,77.060599 20.738375,73.102059 14.651182,66.254505 7.5624687,73.040046 4.4377203,76.031154 -5.2872134,92.716595 -0.86154704,96.684727 10.084534,106.49918 25.216088,86.035345 26.554411,84.258878"
        id="path4636"
@@ -1124,8 +1080,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-d"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3548"
-     >
+     id="g3548">
     <path
        d="m 0.64928398,84.258878 c 0,0 3.88237282,-4.752425 8.25336932,-8.797441 2.6210447,-2.425573 12.5488357,-7.432854 16.4215277,-3.634801"
        id="path2796"
@@ -1146,8 +1101,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-c"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3544"
-     >
+     id="g3544">
     <path
        d="M 0.5405071,84.258878 C 2.9747467,80.35767 3.948924,76.937527 9.8925065,72.419391 14.778846,68.70494 20.148704,71.675818 17.135214,78.687967"
        id="path2080"
@@ -1168,8 +1122,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-b"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3540"
-     >
+     id="g3540">
     <path
        d="m 0,84.531919 c 0,0 30.794154,-30.944007 32.068697,-40.49729 1.846699,-13.841846 -7.080589,-7.081689 -9.955655,0.09573 C 19.814551,49.86839 4.9660658,76.339361 3.9248256,94.00436 c -0.5210871,8.84042 9.7660314,6.34651 14.5505734,-0.574365 3.490353,-5.048823 7.445019,-12.203823 7.849651,-16.656577 1.05367,-11.595074 -8.548638,-4.082865 -8.998381,-0.09573 -1.988505,17.628823 12.746799,15.021239 18.15159,7.58119"
        id="path901"
@@ -1183,8 +1136,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-a"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3536"
-     >
+     id="g3536">
     <path
        d="M -0.43549004,85.646374 C 7.5602368,72.143647 21.601453,66.213475 25.164082,71.753721"
        id="path3928"
@@ -1205,8 +1157,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Z"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3532"
-     >
+     id="g3532">
     <path
        d="M 6.4967671,91.006466 C 12.400222,90.934276 26.776485,87.621415 37.007299,70.29 41.387156,62.870343 46.617649,57.206493 43.649635,45.310219 40.336752,32.031658 10.855979,35.467721 8.3029197,51.715329"
        id="path6203"
@@ -1227,8 +1178,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Y"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3528"
-     >
+     id="g3528">
     <path
        d="M 7.5912409,85.646374 C 12.031144,72.131157 18.423758,59.003889 24.19708,42.226278 27.498487,32.632196 2.474774,39.10175 3,45"
        id="path5298"
@@ -1249,8 +1199,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-X"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3524"
-     >
+     id="g3524">
     <path
        d="M 13.145509,84.258878 25.837114,69.663766 C 25.409804,59.435006 26.333218,50.194341 23.248175,40.80292 20.088976,31.185755 -4.5954157,41.062441 5,46"
        id="path3507"
@@ -1271,8 +1220,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-W"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3520"
-     >
+     id="g3520">
     <path
        d="M 3.8458029,85.646374 C 6.5362242,71.854069 14.139203,51.902629 15.182482,44.242701 16.864484,31.893165 -5.5708345,37.895613 -4,46.118613"
        id="path3053"
@@ -1300,8 +1248,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-V"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3516"
-     >
+     id="g3516">
     <path
        d="M 7.3813869,85.646374 19.215329,46.377737 C 21.271886,37.777 5.5419281,32.970905 0,47"
        id="path2155"
@@ -1329,8 +1276,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-U"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3512"
-     >
+     id="g3512">
     <path
        d="M 2.7766454,85.646374 C 4.407771,81.169242 7.0959238,74.969137 8.8904484,70.29 12.911563,59.805137 20.377256,45.342436 19.961573,39.587657 19.659627,35.407464 0,36.59427 0,46"
        id="path3158"
@@ -1351,8 +1297,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-T"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3508"
-     >
+     id="g3508">
     <path
        d="M 10.894161,85.646374 5,100"
        id="path9112"
@@ -1394,8 +1339,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-S"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3504"
-     >
+     id="g3504">
     <path
        d="m 8.3226986,84.747 -9.50883,14.522"
        id="path1397"
@@ -1416,8 +1360,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-R"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3500"
-     >
+     id="g3500">
     <path
        d="M 6.7477562,84.56557 C 18.803627,56.150841 22.051726,45.441099 22.892336,41.613891 24.740924,35.591792 6.1566799,34.000619 5.2189781,44.717153"
        id="path7396-2"
@@ -1438,8 +1381,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Q"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3496"
-     >
+     id="g3496">
     <path
        d="M 10.319343,81.724453 C 3.535999,82.267121 5.6237958,59.300636 11.386861,50.291971 22.072138,33.58904 41.781982,29.671813 44.124088,51.596715 45.409873,63.633195 38.429415,76.801107 29.297445,84.747 21.752915,91.311633 10.272988,99.164446 5.9306569,99.269 -2.8692842,99.480884 -0.93848918,95.629189 5.4562044,93.585766 12.24256,91.417188 19.796085,98.673258 23.248175,99.269 40.460471,102.2394 45.545228,88.859194 49.520985,84.258878"
        id="path7811"
@@ -1453,8 +1395,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-P"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3492"
-     >
+     id="g3492">
     <path
        d="M 6.7477562,84.56557 C 18.803627,56.150841 22.051726,45.441099 22.892336,41.613891 24.740924,35.591792 6.1566799,34.000619 5.2189781,44.717153"
        id="path7396"
@@ -1481,9 +1422,8 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-O"
-     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3488"
-     >
+     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
+     id="g3488">
     <path
        d="M 3.9142336,84.747 C 3.8043641,73.959901 5.6530562,68.371951 8.8959853,58.713503 12.218436,48.818213 29.613866,33.391908 40.684307,37.777"
        id="path6578"
@@ -1511,8 +1451,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-N"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3484"
-     >
+     id="g3484">
     <path
        d="M 6.3288574,84.556646 C 12.123887,71.14252 20.012432,52.069134 22.142248,42.942543 24.554329,32.6064 4.8721848,40.176752 4,45"
        id="path5736-8"
@@ -1533,8 +1472,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-M"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3480"
-     >
+     id="g3480">
     <path
        d="M 6.2888423,84.649258 C 12.087512,71.230448 20.007526,52.090158 22.142248,42.942543 24.554329,32.6064 3.0929877,40.295365 4,45"
        id="path2845"
@@ -1555,8 +1493,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-L"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3476"
-     >
+     id="g3476">
     <path
        d="M -0.23722628,85.221453 C -4.9436229,87.102726 -6.9345888,92.61291 -5.5748175,95.710606 -1.8394958,104.22005 10.774262,98.23011 16.131387,93.70438 27.529696,84.075021 28.542069,53.614345 43.293796,39.972628 51.547236,32.340227 60.586033,39.52235 53.968978,46.85219 38.756519,63.703324 4.2570451,55.991103 5,48.474453"
        id="path2378"
@@ -1577,8 +1514,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-K"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3472"
-     >
+     id="g3472">
     <path
        d="M 6.0903286,84.747 0.30474453,99.269"
        id="path1093"
@@ -1629,8 +1565,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-J"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3468"
-     >
+     id="g3468">
     <path
        d="m 11.759176,84.258878 c 1.14943,3.647787 2.553824,7.352233 4.875144,11.26044"
        id="path16470"
@@ -1651,8 +1586,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-I"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3464"
-     >
+     id="g3464">
     <path
        d="M 20.642641,84.747 C 15.788283,105.49826 -10.521047,99.269 4.8982539,92.367073"
        id="path7192"
@@ -1679,8 +1613,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-H"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3460"
-     >
+     id="g3460">
     <path
        d="M 5.7664802,84.747 21.709102,47.319058 C 26.889507,34.666032 12.414201,33.147959 3.5410734,44.535169"
        id="path2102"
@@ -1722,8 +1655,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-G"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3456"
-     >
+     id="g3456">
     <path
        d="M 4.2073179,85.646374 C 4.0892174,85.188492 3.8588828,83.819753 3.789068,83.339871 1.8855661,70.25586 17.569439,49.353489 31.206834,40.195759 46.649175,29.825979 40.579913,60.189485 15.603417,62.413668 -0.5056691,63.848199 10.746964,40.100806 25.270752,37.777"
        id="path1693"
@@ -1744,8 +1676,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-F"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3452"
-     >
+     id="g3452">
     <path
        d="M 27.636079,84.396816 C 26.442897,87.324141 25.21044,90.3307 23.928522,93.402809 18.202639,107.12485 1.8527615,96.611716 1,91"
        id="path12571"
@@ -1803,8 +1734,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-E"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3448"
-     >
+     id="g3448">
     <path
        d="M -0.13595751,84.747 C 0.04318384,78.332494 5.0392448,69.550287 28.007247,66.075349 c 7.360947,-1.113673 5.623347,7.106354 -3.127023,5.166386 -7.281856,-1.614397 -11.599144,-22.171306 -5.4383,-28.551077 11.89336,-12.315994 24.842183,-1.03125 22.976819,2.17532"
        id="path12275"
@@ -1825,8 +1755,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-D"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3444"
-     >
+     id="g3444">
     <path
        d="M 15.635114,84.747 C 22.719743,70.343834 27.666805,46.399673 36.728085,40.232552"
        id="path11486"
@@ -1854,8 +1783,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-C"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3440"
-     >
+     id="g3440">
     <path
        d="M 3.4957133,85.646374 C 2.1773869,71.053088 14.883664,50.258297 22.297031,44.322148 51.547022,20.900631 51.129364,57.051964 36.45617,61.63149"
        id="path11090"
@@ -1876,8 +1804,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-B"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3436"
-     >
+     id="g3436">
     <path
        d="M 5.8046239,85.646374 23.384692,42.418743 C 26.75722,33.9726 -1.25428,38.646081 4,46"
        id="path9927"
@@ -1905,8 +1832,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-A"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3432"
-     >
+     id="g3432">
     <path
        d="M -1.0394789,85.646374 C -0.42791248,78.418212 6.4008608,62.035376 14.096244,53.315924 29.009963,36.417548 48.070107,34.479907 56,41"
        id="path9133"
@@ -1927,8 +1853,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-@"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3428"
-     >
+     id="g3428">
     <path
        d="M -0.76909181,84.747 C -6.6057151,107.85937 2.4285643,123.49788 25,118"
        id="path8357"
@@ -1956,8 +1881,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-?"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3424"
-     >
+     id="g3424">
     <path
        d="m 8.2529482,94.617261 10.3809468,-0.177814 -5.166529,0.0817 0.03568,-4.909572 v 9.655733 l -0.03568,-4.746162 4.160508,-3.469503 -7.8053775,6.519343 3.6448695,-3.04984 3.330899,3.213937 -7.1433498,-6.916542"
        id="path7196"
@@ -1986,8 +1910,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-&gt;"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3420"
-     >
+     id="g3420">
     <path
        d="m 32,73.700463 -25.0000001,-17"
        id="path6402-6"
@@ -2014,8 +1937,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-="
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3416"
-     >
+     id="g3416">
     <path
        d="M 3,74 H 34"
        id="path6430"
@@ -2044,8 +1966,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-&lt;"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3412"
-     >
+     id="g3412">
     <path
        d="M 4,73 29,56"
        id="path6402"
@@ -2072,8 +1993,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-9"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3408"
-     >
+     id="g3408">
     <path
        d="M 19.10565,84.458643 C 15.365761,89.200627 11.21592,94.120083 6.7009218,99.26937"
        id="path4542"
@@ -2101,8 +2021,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-8"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3404"
-     >
+     id="g3404">
     <path
        d="m -0.19145491,84.747 c 0,0 -2.65537609,8.694283 0.19145491,11.363365 5.1856699,4.861885 15.957282,3.716785 22.304497,0.09573 C 26.395282,93.872318 29.109334,89.455526 29.005419,84.747 28.902049,80.063132 10.714902,55.927654 15.507848,46.714998 22.261907,33.732833 48.894222,34.629462 40.492714,46.906453 34.894395,55.087187 4.71912,76.022907 -0.19145491,84.747"
        id="path3796"
@@ -2122,8 +2041,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-7"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3400"
-     >
+     id="g3400">
     <path
        d="M 12.444569,84.747 41,37 10.14711,37.333707"
        id="path2684"
@@ -2149,8 +2067,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-6"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3396"
-     >
+     id="g3396">
     <path
        d="M 2.7661675,84.617003 C 3.0560514,79.568409 4.8112728,74.348987 6.5094669,70.604991 10.45971,61.895919 31.379164,35.960878 35.227703,36.28159"
        id="path2307"
@@ -2178,8 +2095,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-5"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3392"
-     >
+     id="g3392">
     <path
        d="M 1.5743647,84.747 C -6.2088151,93.844743 15.429396,115.67726 31.975505,80.439265 40.274286,62.765476 19.129139,53.312059 7,64 l 15,-27 20.779784,0.334592"
        id="path1573"
@@ -2200,8 +2116,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-4"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3388"
-     >
+     id="g3388">
     <path
        d="M 21.254513,84.747 42.138453,36.28159 2.030686,74.593864 37,75 25.61709,74.851271 15.699303,99.26937 21.254513,84.747"
        id="path367"
@@ -2215,8 +2130,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-3"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3384"
-     >
+     id="g3384">
     <path
        d="M -5,88 C -6.2943595,90.703593 -4.6369958,99.598646 7.4458485,99.26937 18.517486,98.967651 32.881666,87.940558 32.220217,76.62455 31.428619,63.081957 16.696163,65.882315 13.808665,67.554153 7.3507159,71.293254 16.90487,72.052756 22.066787,70.126354 32.669546,66.169457 45.315998,49.291689 37.63538,40.207582 28.536569,29.446133 10.685484,43.465205 14.350181,47.65343"
        id="path1559"
@@ -2237,8 +2151,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-2"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3380"
-     >
+     id="g3380">
     <path
        d="M 17.326853,84.581949 C 28.526885,72.928471 38.012271,57.526568 37.364621,47.518052 36.472257,33.727827 22.861902,33.506512 14.756318,39.936824 9.4572806,44.14065 9.9844925,57.002976 11.642599,56.588449"
        id="path4099"
@@ -2266,8 +2179,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-1"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3376"
-     >
+     id="g3376">
     <path
        d="M 8.6642601,84.747 27.820398,36.28159 19.020758,41.087546"
        id="path1915"
@@ -2294,8 +2206,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-0"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3372"
-     >
+     id="g3372">
     <path
        d="M 2.5722022,84.747 C 1.8698925,73.226159 8.4315349,53.511986 17.4639,42.373647 28.527659,28.730276 37.642614,39.844702 38.583033,45.622744 40.820587,59.370536 33.543032,77.47054 28.97112,84.747 c -12.94597,20.60425 -23.7894189,19.79118 -26.3989178,0"
        id="path364"
@@ -2314,8 +2225,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-/"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3368"
-     >
+     id="g3368">
     <path
        d="M 6.9043323,84.747 0,99"
        id="path3630"
@@ -2342,8 +2252,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      id="layer1"
      inkscape:label="GlyphLayer-."
-     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     >
+     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4">
     <path
        d="m 0.97487843,97.119138 -8.41327863,0.109363 16.0194639,-0.005 -7.60618527,-0.104394 0.0351487,8.261143 0.2764223,-17.456592 z"
        id="path1339"
@@ -2357,8 +2266,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer--"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3364"
-     >
+     id="g3364">
     <path
        d="M 4.0613719,73.78159 H 34.115524"
        id="path5660"
@@ -2370,8 +2278,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-,"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3360"
-     >
+     id="g3360">
     <path
        d="M 0,96.119136 C 4.6450251,99.167052 -1.5634156,103.96915 -3,108"
        id="path5664"
@@ -2392,8 +2299,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-+"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3356"
-     >
+     id="g3356">
     <path
        d="M 2,73 19.494585,72.969316 26.331228,55.166969 13.199459,88.740977 19.494585,72.969316 38,73"
        id="path6409"
@@ -2407,8 +2313,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-)"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3352"
-     >
+     id="g3352">
     <path
        d="m 24.220449,85.605282 c -1.629861,4.43287 -3.477955,9.007973 -5.538138,13.664088 -6.202361,14.01764 -14.9848673,31.25754 -30.731048,31.5068"
        id="path3703"
@@ -2435,9 +2340,8 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-("
-     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3348"
-     >
+     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
+     id="g3348">
     <path
        d="M 4.1974053,85.700477 C -0.05537219,100.01183 -9.5835282,120.40006 7,131"
        id="path5134"
@@ -2457,7 +2361,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
        d="M 42.014017,34.273281 C 32.909197,35.471694 16.016098,47.716597 4.265836,85.646374"
        id="path6791-6"
        sodipodi:nodetypes="cc"
-       inkstitch:ties="3"
+       inkstitch:ties="2"
        inkstitch:running_stitch_length_mm="2"
        style="stroke-dasharray:0.5, 0.5" />
   </g>
@@ -2465,8 +2369,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-'"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g3344"
-     >
+     id="g3344">
     <path
        d="M 9.3064203,50 16.447215,36.28159 Z"
        id="path7197"
@@ -2479,8 +2382,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-‘"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1"
-     >
+     id="g1">
     <path
        d="M 9.3064203,50 16.447215,36.28159 Z"
        id="path1"
@@ -2493,8 +2395,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-’"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g6293"
-     >
+     id="g6293">
     <path
        d="M 9.3064203,50 16.447215,36.28159 Z"
        id="path6291"
@@ -2507,8 +2408,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-&amp;"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     id="g3340"
-     >
+     id="g3340">
     <path
        d="m -0.16252372,85.646374 c -3.00962818,4.267876 -3.19173718,6.85863 -2.82854138,10.883457 0.299892,3.323314 12.7378778,4.141279 19.8497961,0 C 27.242821,90.483157 45,74 45,74"
        id="path7951"
@@ -2529,8 +2429,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-%"
      id="g3336"
-     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4"
-     >
+     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4">
     <path
        d="M 26.170526,70.227767 46,37 c -16.511653,17.273443 -31.529857,14.204431 -34,6 -1.743363,-5.790477 8.352695,-9.348556 10.688208,-4.353137 2.020227,4.321056 1.906617,11.208519 0.576819,15.57411 C 20.823763,62.23539 8.7264716,78.386618 3.845459,61.335072 2.3417922,56.082096 6.857851,44.454884 12.82468,39.048297"
        id="path2747"
@@ -2555,9 +2454,8 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-!"
-     style="display:inline;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1172"
-     >
+     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
+     id="g1172">
     <path
        d="m 8.2529482,94.617261 10.3809468,-0.177814 -5.166529,0.0817 0.03568,-4.909572 v 9.655733 l -0.03568,-4.746162 4.160508,-3.469503 -7.8053775,6.519343 3.6448695,-3.04984 3.330899,3.213937 -7.1433498,-6.916542"
        id="path1166"
@@ -2580,5 +2478,251 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
        inkstitch:ties="3"
        inkstitch:running_stitch_length_mm="2"
        style="stroke-dasharray:0.5, 0.5" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="GlyphLayer-Ä"
+     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
+     id="g13">
+    <path
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
+       d="m -1.0394789,85.646374 c 0.61156642,-7.228162 7.4403397,-23.610998 15.1357229,-32.33045 5.10819,-5.787967 10.702827,-9.82078 16.170048,-12.359751"
+       id="path14" />
+    <path
+       d="m 25.251322,28.252548 1.792961,-7.434459 -0.865567,4.00317 -3.276792,-0.142976 6.244451,0.214455 4.204184,0.142977 6.285163,0.04645 -3.008371,-0.04645 0.680083,-4.074657 -1.628538,7.361721 0.948455,-3.287064 -3.214968,-0.07149 -7.23367,-0.07149 z"
+       id="path11"
+       sodipodi:nodetypes="cccccccccccccc"
+       inkstitch:ties="3"
+       inkstitch:running_stitch_length_mm="2"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.343478;stroke-miterlimit:4;stroke-dasharray:0.686956, 0.686956;stroke-opacity:1"
+       inkstitch:stroke_method="manual_stitch" />
+    <path
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
+       d="M 30.266292,40.956173 C 40.761006,36.08244 50.786224,36.713144 56,41"
+       id="path16" />
+    <path
+       d="M 56,41 C 48.070107,34.479907 29.009963,36.417548 14.096244,53.315924 6.4008608,62.035376 -0.35948182,78.340006 -0.97104823,85.568168 -2.0349807,98.142888 7.0078516,110.3992 30.955945,84.747 41.145321,73.832567 47.982091,56.967794 55.543556,39.272655 44.2913,66.632842 38.330445,79.424806 36.147315,84.747 25.194439,111.44872 47.815669,96.051577 56.608012,84.258878"
+       id="path15"
+       sodipodi:nodetypes="cssscsc"
+       inkstitch:ties="3"
+       inkstitch:bean_stitch_repeats="1"
+       inkstitch:running_stitch_length_mm="2"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-opacity:1" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="GlyphLayer-Ü"
+     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
+     id="g20">
+    <path
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
+       d="M 2.7766454,85.646374 C 4.407771,81.169242 7.0959238,74.969137 8.8904484,70.29 12.911563,59.805137 20.377256,45.342436 19.961573,39.587657"
+       id="path21"
+       inkstitch:running_stitch_length_mm="2" />
+    <path
+       d="m 25.251322,28.252548 1.792961,-7.434459 -0.865567,4.00317 -3.276792,-0.142976 6.244451,0.214455 4.204184,0.142977 6.285163,0.04645 -3.008371,-0.04645 0.680083,-4.074657 -1.628538,7.361721 0.948455,-3.287064 -3.214968,-0.07149 -7.23367,-0.07149 z"
+       id="path18"
+       sodipodi:nodetypes="cccccccccccccc"
+       inkstitch:ties="3"
+       inkstitch:running_stitch_length_mm="2"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.343478;stroke-miterlimit:4;stroke-dasharray:0.686956, 0.686956;stroke-opacity:1"
+       inkstitch:stroke_method="manual_stitch" />
+    <path
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
+       d="M 19.961573,39.587657 C 19.659627,35.407464 0,36.59427 0,46"
+       id="path23"
+       inkstitch:running_stitch_length_mm="2" />
+    <path
+       d="M 0,46 C 0,36.59427 19.659627,35.407464 19.961573,39.587657 20.377256,45.342436 12.911564,59.805137 8.8904484,70.29 5.8160829,78.30626 0.72143202,88.030343 1.350384,92.594859 6.0401894,115.23372 34.501398,76.678758 43.486478,62.854985 L 55.167744,37.777 40.525547,70.29 c -19.25536,45.07516 3.60259,26.632238 13.104689,13.968878"
+       id="path22"
+       sodipodi:nodetypes="cssccccc"
+       inkstitch:ties="3"
+       inkstitch:bean_stitch_repeats="1"
+       inkstitch:running_stitch_length_mm="2"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-opacity:1" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="GlyphLayer-Ö"
+     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
+     id="g27">
+    <path
+       d="M 3.9142336,84.747 C 3.8043641,73.959901 5.6530562,68.371951 8.8959853,58.713503 12.218436,48.818213 29.613866,33.391908 40.684307,37.777"
+       id="path28"
+       sodipodi:nodetypes="csc"
+       inkstitch:ties="3"
+       inkstitch:running_stitch_length_mm="2"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-opacity:1" />
+    <path
+       d="m 25.251322,28.252548 1.792961,-7.434459 -0.865567,4.00317 -3.276792,-0.142976 6.244451,0.214455 4.204184,0.142977 6.285163,0.04645 -3.008371,-0.04645 0.680083,-4.074657 -1.628538,7.361721 0.948455,-3.287064 -3.214968,-0.07149 -7.23367,-0.07149 z"
+       id="path25"
+       sodipodi:nodetypes="cccccccccccccc"
+       inkstitch:ties="3"
+       inkstitch:running_stitch_length_mm="2"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.343478;stroke-miterlimit:4;stroke-dasharray:0.686956, 0.686956;stroke-opacity:1"
+       inkstitch:stroke_method="manual_stitch" />
+    <path
+       d="M 40.684307,37.777 C 29.945598,32.997513 13.232458,48.372908 9.6076642,57.883211 5.9790718,67.403481 3.8043641,73.959901 3.9142336,84.747 4.1370304,106.62141 28.007306,101.0739 38.54927,84.747 45.315598,74.267631 53.781674,55.6348 49.698905,42.226277 47.37164,34.583135 35.929929,42.175622 36.65146,48.987226 39.231383,73.342982 58.593077,55.454958 58,49"
+       id="path29"
+       sodipodi:nodetypes="csssssc"
+       inkstitch:ties="3"
+       inkstitch:bean_stitch_repeats="1"
+       inkstitch:running_stitch_length_mm="2"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-opacity:1" />
+    <path
+       d="M 58,49 C 58.593077,55.454958 39.231383,73.342982 36.65146,48.987226 35.929929,42.175622 47.37164,34.583135 49.698905,42.226277 53.708876,55.395718 45.613519,73.604822 38.912754,84.178738"
+       id="path30"
+       sodipodi:nodetypes="cssc"
+       inkstitch:ties="3"
+       inkstitch:running_stitch_length_mm="2"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-opacity:1" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="GlyphLayer-Ë"
+     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
+     id="g9">
+    <path
+       d="M -0.13595751,84.747 C 0.04318384,78.332494 5.0392448,69.550287 28.007247,66.075349 c 7.360947,-1.113673 5.623347,7.106354 -3.127023,5.166386 -7.281856,-1.614397 -11.599144,-22.171306 -5.4383,-28.551077 3.776257,-3.910448 7.658918,-5.441648 11.140013,-5.607609"
+       id="path6"
+       inkstitch:ties="3"
+       inkstitch:running_stitch_length_mm="2"
+       style="stroke-dasharray:0.5, 0.5" />
+    <path
+       d="m 25.251322,28.252548 1.792961,-7.434459 -0.865567,4.00317 -3.276792,-0.142976 6.244451,0.214455 4.204184,0.142977 6.285163,0.04645 -3.008371,-0.04645 0.680083,-4.074657 -1.628538,7.361721 0.948455,-3.287064 -3.214968,-0.07149 -7.23367,-0.07149 z"
+       id="path5"
+       sodipodi:nodetypes="cccccccccccccc"
+       inkstitch:ties="3"
+       inkstitch:running_stitch_length_mm="2"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.343478;stroke-miterlimit:4;stroke-dasharray:0.686956, 0.686956;stroke-opacity:1"
+       inkstitch:stroke_method="manual_stitch" />
+    <path
+       d="m 30.581937,37.083049 c 7.482647,-0.356734 13.109899,5.594476 11.836806,7.782929"
+       id="path8"
+       inkstitch:ties="3"
+       inkstitch:running_stitch_length_mm="2"
+       style="stroke-dasharray:0.5, 0.5" />
+    <path
+       d="m 42.418743,44.865978 c 1.865364,-3.20657 -11.083459,-14.491314 -22.976819,-2.17532 -6.160844,6.379771 -1.843556,26.93668 5.4383,28.551077 8.75037,1.939968 10.48797,-6.280059 3.127023,-5.166386 C 5.0392448,69.550287 0.04318384,78.332494 -0.13595751,84.747 -0.70517344,105.12889 19.372133,102.28383 32.22193,96.121959 36.665758,93.991009 44.432996,84.258878 44.432996,84.258878"
+       id="path9"
+       sodipodi:nodetypes="csssssc"
+       inkstitch:ties="3"
+       inkstitch:bean_stitch_repeats="1"
+       inkstitch:running_stitch_length_mm="2"
+       style="stroke-dasharray:0.5, 0.5" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="GlyphLayer-ä"
+     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
+     id="g33">
+    <path
+       d="M -0.43549004,85.646374 C 7.5602368,72.143647 21.601453,66.213475 25.164082,71.753721"
+       id="path34"
+       sodipodi:nodetypes="cc"
+       inkstitch:ties="3"
+       inkstitch:running_stitch_length_mm="2"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-opacity:1" />
+    <path
+       d="m 11,60 1.403246,-5.032329 -0.677429,2.709716 -2.564553,-0.09678 4.887166,0.145163 3.290369,0.09678 4.919029,0.03144 -2.354476,-0.03144 0.532261,-2.758104 -1.274561,4.983093 0.7423,-2.224989 -2.516167,-0.04839 -5.66137,-0.04839 z"
+       id="path32"
+       sodipodi:nodetypes="cccccccccccccc"
+       inkstitch:ties="3"
+       inkstitch:running_stitch_length_mm="2"
+       style="stroke-dasharray:0.5, 0.5"
+       inkstitch:stroke_method="manual_stitch" />
+    <path
+       d="M 25.164082,71.753721 C 21.114237,65.741244 5.9964156,73.429718 -0.43549004,85.646374 -3.5819149,91.333368 -3.0545458,92.877093 -2.0102765,95.44027 1.0846554,103.03683 10.565099,99.975444 16.560849,88.069256 l 8.603233,-16.315535 -8.603233,16.315535 c -5.555474,24.743614 17.821659,0.07135 20.726615,-3.810378"
+       id="path35"
+       sodipodi:nodetypes="ccscccc"
+       inkstitch:bean_stitch_repeats="1"
+       inkstitch:ties="3"
+       inkstitch:running_stitch_length_mm="2"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-opacity:1" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="GlyphLayer-ö"
+     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
+     id="g38">
+    <path
+       d="M -0.35610618,85.646374 C 2.9445261,78.132879 11,70 11,70"
+       id="path39"
+       sodipodi:nodetypes="cc"
+       inkstitch:ties="3"
+       inkstitch:running_stitch_length_mm="2"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-opacity:1" />
+    <path
+       d="m 11,60 1.403246,-5.032329 -0.677429,2.709716 -2.564553,-0.09678 4.887166,0.145163 3.290369,0.09678 4.919029,0.03144 -2.354476,-0.03144 0.532261,-2.758104 -1.274561,4.983093 0.7423,-2.224989 -2.516167,-0.04839 -5.66137,-0.04839 z"
+       id="path37"
+       sodipodi:nodetypes="cccccccccccccc"
+       inkstitch:ties="3"
+       inkstitch:running_stitch_length_mm="2"
+       style="stroke-dasharray:0.5, 0.5"
+       inkstitch:stroke_method="manual_stitch" />
+    <path
+       d="m 11,70 c 0,0 -7.6847368,7.461559 -11.269963,15.586605 -4.6156911,12.690462 6.3570368,18.467025 15.394901,7.939118 4.646485,-5.791773 8.58396,-13.418578 7.32206,-20.38727 -1.115316,-6.159202 -6.134594,-3.913222 -8.08788,0.858847 -3.395839,8.296366 -5.6091498,18.458495 8.136834,18.475399 4.12534,0.0051 9.403957,-8.213821 9.403957,-8.213821"
+       id="path40"
+       sodipodi:nodetypes="cccsssc"
+       inkstitch:ties="3"
+       inkstitch:bean_stitch_repeats="1"
+       inkstitch:running_stitch_length_mm="2"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-opacity:1" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="GlyphLayer-ü"
+     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
+     id="g43">
+    <path
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
+       d="M 0,84.393906 C 4.5921032,80.047721 6.9688217,75.952338 10.102646,70.958029"
+       id="path44"
+       inkstitch:bean_stitch_repeats="1"
+       inkstitch:running_stitch_length_mm="2" />
+    <path
+       d="m 11,60 1.403246,-5.032329 -0.677429,2.709716 -2.564553,-0.09678 4.887166,0.145163 3.290369,0.09678 4.919029,0.03144 -2.354476,-0.03144 0.532261,-2.758104 -1.274561,4.983093 0.7423,-2.224989 -2.516167,-0.04839 -5.66137,-0.04839 z"
+       id="path42"
+       sodipodi:nodetypes="cccccccccccccc"
+       inkstitch:ties="3"
+       inkstitch:running_stitch_length_mm="2"
+       style="stroke-dasharray:0.5, 0.5"
+       inkstitch:stroke_method="manual_stitch" />
+    <path
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
+       d="M 10.102646,70.958029 2.166065,90.230146 C 0.75989006,98.045732 -2.6965085,106.84288 15.433213,90.907042 23.32584,83.969503 26.424184,76.556956 29,70 26.236721,77.142628 22.229,85.363078 20.442238,91.854695 17.359899,109.4492 33.092394,90.570645 38.247052,84.258878"
+       id="path45"
+       inkstitch:bean_stitch_repeats="1"
+       inkstitch:running_stitch_length_mm="2" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="GlyphLayer-ß"
+     style="display:inline;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
+     id="g48">
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.226772;stroke-dasharray:0.453543, 0.907087;stroke-dashoffset:0"
+       d="m 1.9759215,77.705825 c -2.9935571,6.854568 -5.5775333,13.920231 -8.4505018,20.796261 -0.3769946,0.923124 -0.7638075,1.842984 -1.1190409,2.773184 -0.377105,0.92307 -0.7639344,1.84291 -1.1190404,2.77316 -0.377219,0.92304 -0.764064,1.84288 -1.119041,2.77317 -0.3764834,0.92387 -0.7670644,1.84311 -1.1169204,2.77564 -0.373838,0.92595 -0.754072,1.84952 -1.10126,2.78382 -0.372477,0.92527 -0.753281,1.84759 -1.099537,2.78108 -0.372664,0.92521 -0.75357,1.84749 -1.099535,2.78107 -0.665083,1.566 -1.317416,3.226 -1.887549,4.88965"
+       id="path10"
+       sodipodi:nodetypes="cccccccccc"
+       inkstitch:running_stitch_length_mm="2" />
+    <path
+       d="m -16.136504,122.83286 c 0.570133,-1.66365 1.222466,-3.32365 1.887549,-4.88965 0.345965,-0.93358 0.726871,-1.85586 1.099535,-2.78107 0.346256,-0.93349 0.72706,-1.85581 1.099537,-2.78108 0.347188,-0.9343 0.727422,-1.85787 1.10126,-2.78382 0.349856,-0.93253 0.740437,-1.85177 1.1169204,-2.77564 0.354977,-0.93029 0.741822,-1.85013 1.119041,-2.77317 0.355106,-0.93025 0.7419354,-1.85009 1.1190404,-2.77316 0.3552334,-0.9302 0.7420463,-1.85006 1.1190409,-2.773184 2.8729685,-6.87603 5.4569447,-13.941693 8.4505018,-20.796261 3.9702881,-9.321394 7.6549441,-18.785031 12.2995125,-27.799354 0.89191,-1.471768 1.788817,-3.007748 3.437467,-3.733477 1.574096,-0.748953 3.721054,-0.612662 4.767608,0.932625 1.225578,1.538199 1.299866,3.665966 0.827987,5.513045 -1.09915,4.799817 -4.148259,8.819545 -6.674821,12.955645 -1.858717,2.84881 -4.015808,5.525119 -5.678142,8.487465 -1.0666214,1.988421 -1.6002124,4.33479 -1.3736144,6.577186 0.07351,3.075443 0.7829474,6.095795 1.2578674,9.134054 -0.12593,1.511183 0.379853,3.05436 -0.09532,4.563384 -0.148379,0.972466 -0.7853724,1.942763 -0.607578,2.931308"
+       style="fill:none;stroke:#000000;stroke-width:0.226772;stroke-dasharray:0.453543, 0.907087;stroke-dashoffset:0"
+       id="path2"
+       inkstitch:running_stitch_length_mm="2"
+       inkstitch:ties="1"
+       inkstitch:bean_stitch_repeats="1" />
+    <path
+       d="m 10.136882,97.267705 c -3.3876594,2.999255 -8.6478527,2.942925 -12.2829463,0.43187"
+       style="fill:none;stroke:#000000;stroke-width:0.226772;stroke-dasharray:0.453543, 0.907087;stroke-dashoffset:0"
+       id="path7"
+       inkstitch:running_stitch_length_mm="2" />
+    <path
+       d="m -2.1460643,97.699575 c 3.6213202,2.519345 8.9072689,2.555805 12.2829463,-0.431869 1.809383,0.45226 3.058821,-1.354044 4.52758,-2.097807 2.747615,-2.038642 5.356858,-4.306235 7.719104,-6.786717 0.609542,-0.713569 1.219084,-1.427139 1.828626,-2.140708"
+       style="fill:none;stroke:#000000;stroke-width:0.226772;stroke-dasharray:0.453543, 0.907087;stroke-dashoffset:0"
+       id="path3"
+       inkstitch:running_stitch_length_mm="2"
+       inkstitch:bean_stitch_repeats="1" />
   </g>
 </svg>

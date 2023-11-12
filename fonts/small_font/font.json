@@ -4,7 +4,7 @@
     "keywords": [
         "sans_serif",
         "tiny"
-     ], 
+    ],
     "leading": 30,
     "auto_satin": true,
     "reversible": true,
@@ -106,6 +106,14 @@
         "/",
         "�",
         "#",
-        ";"
+        ";",
+        "é",
+        "è",
+        "ê",
+        "ë",
+        "Ë",
+        "Ê",
+        "É",
+        "È"
     ]
 }
