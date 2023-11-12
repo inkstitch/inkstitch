@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2023-11-10 01:06+0000\n"
-"PO-Revision-Date: 2023-11-10 01:07\n"
+"PO-Revision-Date: 2023-11-12 01:12\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -1783,7 +1783,7 @@ msgstr "\"E\"-Stich"
 
 #: lib/elements/satin_column.py:85
 msgid "\"S\" Stitch"
-msgstr ""
+msgstr "\"S\"-Stich"
 
 #: lib/elements/satin_column.py:86 lib/stitch_plan/lock_stitch.py:211
 msgid "Zig-zag"
@@ -1822,11 +1822,11 @@ msgstr "Zufallswert Zick-Zack-Abstand (Prozent)"
 
 #: lib/elements/satin_column.py:121
 msgid "Amount of random jitter added to zigzag spacing."
-msgstr ""
+msgstr "Maximale randomisierte Abweichung der Stichabstände in Prozent."
 
 #: lib/elements/satin_column.py:127
 msgid "Default"
-msgstr ""
+msgstr "Standard"
 
 #: lib/elements/satin_column.py:128 lib/stitch_plan/lock_stitch.py:209
 #: inx/inkstitch_break_apart.inx:18
@@ -1839,7 +1839,7 @@ msgstr ""
 
 #: lib/elements/satin_column.py:133
 msgid "Split Method"
-msgstr ""
+msgstr "Zwischenstich-Methode"
 
 #: lib/elements/satin_column.py:143 lib/elements/satin_column.py:455
 msgid "Maximum stitch length"
@@ -1867,7 +1867,7 @@ msgstr "Kontrolliert ob die Zwischenstiche mittig liegen oder sich zufällig üb
 
 #: lib/elements/satin_column.py:171
 msgid "Minimum length for random-phase split"
-msgstr ""
+msgstr "Minimale Stichlänge für randomisierte Zwischenstiche"
 
 #: lib/elements/satin_column.py:172
 msgid "Defaults to maximum stitch length. Smaller values allow for a transition between single-stitch and split-stitch."
@@ -1875,7 +1875,7 @@ msgstr "Wenn leer, wir er Wert für die maximale Stichlänge verwendet. Kleinere
 
 #: lib/elements/satin_column.py:182
 msgid "Stagger split stitches this many times before repeating"
-msgstr ""
+msgstr "Linienanzahl bis sich das Muster wiederholt"
 
 #: lib/elements/satin_column.py:194
 msgid "Short stitch inset"
@@ -2336,12 +2336,12 @@ msgstr "Um unverbundene Flächen voneinander zu trennen, wähle bitte ein oder m
 #: lib/extensions/cleanup.py:60
 #, python-format
 msgid "%s elements to remove:"
-msgstr ""
+msgstr "%s Elemente entfernt:"
 
 #: lib/extensions/cleanup.py:65
 #, python-format
 msgid "%s groups/layers to remove:"
-msgstr ""
+msgstr "%s Gruppen/Ebenen werden entfernt:"
 
 #: lib/extensions/cleanup.py:70
 #, python-format
@@ -2351,7 +2351,7 @@ msgstr "%s Elemente entfernt"
 #: lib/extensions/cleanup.py:74
 #, python-format
 msgid "%s groups/layers removed"
-msgstr ""
+msgstr "%s Gruppen/Ebenen entfernt"
 
 #: lib/extensions/convert_to_satin.py:35
 msgid "Please select at least one line to convert to a satin column."
@@ -2428,19 +2428,19 @@ msgstr "Art"
 
 #: lib/extensions/element_info.py:52
 msgid "Fill Method"
-msgstr ""
+msgstr "Füllmethode"
 
 #: lib/extensions/element_info.py:59
 msgid "Satin Method"
-msgstr ""
+msgstr "Satin Methode"
 
 #: lib/extensions/element_info.py:66
 msgid "Stroke Method"
-msgstr ""
+msgstr "Linien-Methode"
 
 #: lib/extensions/element_info.py:71 lib/extensions/element_info.py:130
 msgid "Dimensions (mm)"
-msgstr ""
+msgstr "Ausmaße (mm)"
 
 #: lib/extensions/element_info.py:95 lib/extensions/element_info.py:154
 #: lib/extensions/zip.py:137
@@ -2449,19 +2449,19 @@ msgstr "Stiche"
 
 #: lib/extensions/element_info.py:99
 msgid "Small stitches (removed)"
-msgstr ""
+msgstr "Kleine Stiche (entfernt)"
 
 #: lib/extensions/element_info.py:103 lib/extensions/element_info.py:142
 msgid "Jumps"
-msgstr ""
+msgstr "Sprungstiche"
 
 #: lib/extensions/element_info.py:111
 msgid "Min stitch length"
-msgstr ""
+msgstr "Minimale Stichlänge"
 
 #: lib/extensions/element_info.py:126
 msgid "All Selected Elements"
-msgstr ""
+msgstr "Gesamte Auswahl"
 
 #: lib/extensions/element_info.py:134 lib/extensions/zip.py:138
 msgid "Colors"
@@ -2469,19 +2469,19 @@ msgstr "Farben"
 
 #: lib/extensions/element_info.py:138
 msgid "Color Changes"
-msgstr ""
+msgstr "Farbwechsel"
 
 #: lib/extensions/element_info.py:146
 msgid "Trims"
-msgstr ""
+msgstr "Fadenschnitt-Befehle"
 
 #: lib/extensions/element_info.py:150
 msgid "Stops"
-msgstr ""
+msgstr "Stopp-Befehle"
 
 #: lib/extensions/element_info.py:158
 msgid "Filter stitches smaller than (mm)"
-msgstr ""
+msgstr "Filtert Stiche kleiner als (mm)"
 
 #: lib/extensions/fill_to_stroke.py:33 lib/extensions/fill_to_stroke.py:42
 msgid "Please select one or more fill objects to render the centerline."
@@ -2706,7 +2706,7 @@ msgstr "Bitte einen oder mehrere Befehle auswählen."
 
 #: lib/extensions/outline.py:23
 msgid "Please select one or more shapes to convert to their outline."
-msgstr ""
+msgstr "Bitte mindestens ein Element auswählen, um eine Außenkontur zu erstellen."
 
 #: lib/extensions/palette_split_text.py:16
 msgid "Please select one or more text elements to split lines."
@@ -2806,7 +2806,7 @@ msgstr "Eine Satinsäule kann nicht in einen Pfadeffekt-Satinstich umgewandelt w
 
 #: lib/extensions/test_swatches.py:22
 msgid "Please select one or more elements."
-msgstr ""
+msgstr "Bitte mindestens ein Element auswählen."
 
 #: lib/extensions/troubleshoot.py:49
 msgid "All selected shapes are valid! "
@@ -2899,11 +2899,11 @@ msgstr "Verwendetes Garn"
 
 #: lib/gui/element_info.py:17 inx/inkstitch_element_info.inx:3
 msgid "Element Info"
-msgstr ""
+msgstr "Element Info"
 
 #: lib/gui/element_info.py:28
 msgid "Info"
-msgstr ""
+msgstr "Info"
 
 #: lib/gui/element_info.py:33 inx/inkstitch_lettering_generate_json.inx:27
 msgid "Name"
@@ -2911,7 +2911,7 @@ msgstr "Name"
 
 #: lib/gui/element_info.py:34
 msgid "Value"
-msgstr ""
+msgstr "Wert"
 
 #: lib/gui/element_info.py:41 lib/gui/test_swatches.py:83
 #: inx/inkstitch_apply_threadlist.inx:87 inx/inkstitch_auto_run.inx:23
@@ -2927,11 +2927,11 @@ msgstr "Hilfe"
 
 #: lib/gui/element_info.py:48
 msgid "This extension informs about various parameters of selected stitch elements."
-msgstr ""
+msgstr "Diese Erweiterung sammelt Informationen über verschiedene Parameter für eine Auswahl von Stickobjekten."
 
 #: lib/gui/element_info.py:56
 msgid "More information on our website:"
-msgstr ""
+msgstr "Mehr Informationen auf unserer Webseite:"
 
 #: lib/gui/element_info.py:62 lib/gui/element_info.py:63
 msgid "https://inkstitch.org/docs/troubleshoot#element-info"
@@ -3078,7 +3078,7 @@ msgstr "Gehe einen Befehl vor (Bild ↑)"
 
 #: lib/gui/simulator.py:84
 msgid "Switch animation direction (arrow left, arrow right)"
-msgstr ""
+msgstr "Richtung wechseln (Pfeil Links | Pfeil Rechts)"
 
 #: lib/gui/simulator.py:88
 msgid "Play (P)"
@@ -3110,7 +3110,7 @@ msgstr "Farbwechsel anzeigen"
 
 #: lib/gui/simulator.py:125
 msgid "Detach/attach simulator window"
-msgstr ""
+msgstr "Simulator-Fenster loslösen/anhängen"
 
 #: lib/gui/simulator.py:135 electron/src/renderer/components/Simulator.vue:167
 msgid "Controls"
@@ -3132,7 +3132,7 @@ msgstr "%d Stiche/Sekunde"
 #: lib/gui/simulator.py:723
 #, python-format
 msgid "Command: %s"
-msgstr ""
+msgstr "Befehl: %s"
 
 #: lib/gui/simulator.py:1047
 msgid "Embroidery Simulation"
@@ -3140,37 +3140,39 @@ msgstr "Stick Simulation"
 
 #: lib/gui/test_swatches.py:21
 msgid "Generate Swatches"
-msgstr ""
+msgstr "Testmuster erstellen"
 
 #: lib/gui/test_swatches.py:40
 msgid "Param"
-msgstr ""
+msgstr "Parameter"
 
 #: lib/gui/test_swatches.py:49
 msgid "Start Value"
-msgstr ""
+msgstr "Startwert"
 
 #: lib/gui/test_swatches.py:56
 msgid "Increase by"
-msgstr ""
+msgstr "Erhöhen um"
 
 #: lib/gui/test_swatches.py:63
 msgid "Columns"
-msgstr ""
+msgstr "Spalten"
 
 #: lib/gui/test_swatches.py:69
 msgid "Rows"
-msgstr ""
+msgstr "Reihen"
 
 #: lib/gui/test_swatches.py:75
 msgid "Spacing"
-msgstr ""
+msgstr "Abstand"
 
 #: lib/gui/test_swatches.py:90
 msgid "This extension generates test swatches from a selection.\n"
 "Test swatches help to find best stitch settings for your design.\n"
 "Sew them out with the same thread and fabric as the final designs."
-msgstr ""
+msgstr "Diese Erweiterung generiert Testmuster von einer Auswahl.\n"
+"Testmuster helfen die besten Stickeinstellungen zu identifizieren.\n"
+"Sticke die Muster auf dem gleichen Stoff mit dem gleichen Garn wie es für das fertige Design vorgesehen ist."
 
 #: lib/gui/test_swatches.py:100 inx/inkstitch_apply_threadlist.inx:98
 #: inx/inkstitch_fill_to_stroke.inx:32 inx/inkstitch_stroke_to_lpe_satin.inx:32
@@ -3180,11 +3182,11 @@ msgstr "Weitere Informationen auf unserer Webseite"
 
 #: lib/gui/test_swatches.py:106 lib/gui/test_swatches.py:107
 msgid "https://inkstitch.org/docs/edit/#generate-test-swatches-from-selection"
-msgstr ""
+msgstr "https://inkstitch.org/de/docs/edit/#testmuster-aus-auswahl-generieren"
 
 #: lib/gui/test_swatches.py:117
 msgid "Apply"
-msgstr ""
+msgstr "Anwenden"
 
 #: lib/gui/warnings.py:21
 msgid "An error occurred while rendering the stitch plan:"
@@ -4310,7 +4312,7 @@ msgstr "Werkzeuge: Füllung"
 
 #: inx/inkstitch_break_apart.inx:14
 msgid "This extension will try to repair fill shapes and break them apart if necessary. Holes will be retained. Use on simple or overlapping shapes."
-msgstr ""
+msgstr "Diese Erweiterung versucht, Füllformen zu reparieren und bei Bedarf auseinanderzubrechen. Löcher bleiben erhalten. Verwendung bei einfachen oder überlappenden Formen."
 
 #: inx/inkstitch_break_apart.inx:19
 msgid "Complex"
@@ -4322,7 +4324,7 @@ msgstr "Dokument bereinigen"
 
 #: inx/inkstitch_cleanup.inx:5
 msgid "Use this extension to remove small objects from the document."
-msgstr ""
+msgstr "Diese Erweiterung entfernt kleine Objekte aus dem Dokument."
 
 #: inx/inkstitch_cleanup.inx:7
 msgid "Remove Small Fill Areas"
@@ -4330,7 +4332,7 @@ msgstr "Kleine Füllbereiche entfernen"
 
 #: inx/inkstitch_cleanup.inx:7
 msgid "Removes areas smaller than defined by threshold."
-msgstr ""
+msgstr "Entferne Bereiche, die kleiner sind als der Schwellenwert."
 
 #: inx/inkstitch_cleanup.inx:8
 msgid "Fill area threshold (px²)"
@@ -4350,15 +4352,15 @@ msgstr "Minimale Länge für Linien (px)"
 
 #: inx/inkstitch_cleanup.inx:12
 msgid "Remove empty layers and groups"
-msgstr ""
+msgstr "Leere Ebenen und Gruppen entfernen"
 
 #: inx/inkstitch_cleanup.inx:17
 msgid "Test run"
-msgstr ""
+msgstr "Testlauf"
 
 #: inx/inkstitch_cleanup.inx:17
 msgid "Only display labels and ids of affected elements and groups without removing them."
-msgstr ""
+msgstr "Gibt eine Liste von zu entfernenden Elementen und Ebenen aus, ohne diese wirklich zu entfernen."
 
 #: inx/inkstitch_commands_scale_symbols.inx:3
 msgid "Scale Command Symbols"
@@ -4381,7 +4383,7 @@ msgstr "Satin zu Geradstich"
 
 #: inx/inkstitch_convert_to_stroke.inx:6
 msgid "Converts a satin column into a running stitch."
-msgstr ""
+msgstr "Konvertiert eine Satinsäule in einen Laufstich."
 
 #: inx/inkstitch_convert_to_stroke.inx:8
 msgid "Keep satin column"
@@ -4526,7 +4528,7 @@ msgstr "Verringerte Deckkraft"
 
 #: inx/inkstitch_density_map.inx:29
 msgid "Indicator size"
-msgstr ""
+msgstr "Indikator-Größe"
 
 #: inx/inkstitch_duplicate_params.inx:3
 msgid "Duplicate Params"
@@ -4545,19 +4547,19 @@ msgstr "Sticken"
 
 #: inx/inkstitch_embroider.inx:5
 msgid "Create a stitch file"
-msgstr ""
+msgstr "Stickdatei erstellen"
 
 #: inx/inkstitch_embroider.inx:6
 msgid "Save your embroidery file through | File > Save a Copy ... |"
-msgstr ""
+msgstr "Speichere deine Stickdatei über | Datei > Kopie speichern ... |"
 
 #: inx/inkstitch_embroider.inx:7
 msgid "Choose from listed embroidery file formats and save."
-msgstr ""
+msgstr "Wähle aus den aufgelisteten Stickdatei-Formaten und klicke auf \"Speichern\"."
 
 #: inx/inkstitch_embroider.inx:9
 msgid "Multiple file formats can be saved by choosing the zip file format."
-msgstr ""
+msgstr "Mehrere Dateiformate können über das zip-Format gleichzeitig gespeichert werden."
 
 #: inx/inkstitch_fill_to_stroke.inx:3 inx/inkstitch_fill_to_stroke.inx:24
 msgid "Fill to Stroke"
@@ -4646,7 +4648,7 @@ msgstr "Dokumentbefehle hinzufügen"
 
 #: inx/inkstitch_global_commands.inx:5
 msgid "These commands affect the entire embroidery design."
-msgstr ""
+msgstr "Diese Befehle wirken sich auf das gesamte Stickdesign aus."
 
 #: inx/inkstitch_gradient_blocks.inx:3
 msgid "Convert to gradient blocks"
@@ -5270,7 +5272,7 @@ msgstr "Ebenenbefehle hinzufügen"
 
 #: inx/inkstitch_layer_commands.inx:5
 msgid "Commands will be added to the currently-selected layer."
-msgstr ""
+msgstr "Befehle werden zur aktuell ausgewählten Ebene hinzugefügt."
 
 #: inx/inkstitch_lettering.inx:3
 msgid "Lettering"
@@ -5332,11 +5334,11 @@ msgstr "Schriftverwaltung"
 
 #: inx/inkstitch_lettering_custom_font_dir.inx:14
 msgid "Set a custom directory for additional fonts to be used with the lettering tool."
-msgstr ""
+msgstr "Definiere einen Ordner mit zusätzliche Schriften für das Textwerkzeug."
 
 #: inx/inkstitch_lettering_custom_font_dir.inx:20
 msgid "Usage: The custom font directory must contain a subdirectory for each font."
-msgstr ""
+msgstr "Verwendung: Der benutzerdefinierte Ordner für Schriften muss für jede Schrift einen Unterordner enthalten."
 
 #: inx/inkstitch_lettering_force_lock_stitches.inx:14
 msgid "Small fonts will sometimes unravel if threads are cut after the embroidery machine has finished the work. Therefore it is important that also diacritics with a smaller distance to the font body than defined by the collapse length value (default: 3mm) have lock stitches. This can be achieved by adding a forced lock stitch attribute to them."
@@ -5344,7 +5346,7 @@ msgstr ""
 
 #: inx/inkstitch_lettering_force_lock_stitches.inx:20
 msgid "This extension has been build to help font authors to define \"force lock stitches\"-attributes automatically if they are placed in a predefined distance to the next object."
-msgstr ""
+msgstr "Diese Erweiterung soll Schriftautoren dabei helfen die \"Vernähstiche erzwingen\"-Option automatisch auf Elemente anzuwenden, sobald der Abstand zum nächsten Element größer ist als ein definierter Abstand."
 
 #: inx/inkstitch_lettering_force_lock_stitches.inx:23
 msgid "Minimum distance (mm)"
@@ -5368,11 +5370,11 @@ msgstr "Schriftinformation"
 
 #: inx/inkstitch_lettering_generate_json.inx:18
 msgid "Generates font.json which can be used by the lettering tool."
-msgstr ""
+msgstr "Erstellt die font.json-Datei, um die Schrift für das Textwerkzeug nutzbar zu machen."
 
 #: inx/inkstitch_lettering_generate_json.inx:21
 msgid "The generated file can be viewed and updated with a standard text editor tool."
-msgstr ""
+msgstr "Die erstellte Datei kann mit einem Standard-Texteditor angeschaut und bearbeitet werden."
 
 #: inx/inkstitch_lettering_generate_json.inx:34
 #: inx/inkstitch_lettering_update_json_glyphlist.inx:17
@@ -5381,7 +5383,7 @@ msgstr "SVG-Schriftdatei"
 
 #: inx/inkstitch_lettering_generate_json.inx:40
 msgid "Keywords"
-msgstr ""
+msgstr "Stichwörter"
 
 #: inx/inkstitch_lettering_generate_json.inx:66
 msgid "Default Glyph"
@@ -5430,7 +5432,7 @@ msgstr "Kerning"
 
 #: inx/inkstitch_lettering_generate_json.inx:91
 msgid "If your font file contains kerning information, you can completely ignore the following settings (unless you want to overwrite them). If the kerning information cannot be found, these values will apply automatically."
-msgstr ""
+msgstr "Wenn deine Schriftdatei Kerning-Informationen enthält, kannst du die nächsten Einstellungen ignorieren (es sei denn, sie sollen manuell gesetzt werden). Wenn keine Kerning-Informationen gefunden werden, werden die unten stehenden Werte automatisch genutzt."
 
 #: inx/inkstitch_lettering_generate_json.inx:99
 #: inx/inkstitch_lettering_generate_json.inx:107
@@ -5467,11 +5469,11 @@ msgstr "Kerning entfernen"
 
 #: inx/inkstitch_lettering_remove_kerning.inx:14
 msgid "Removes Kerning information from given SVG files"
-msgstr ""
+msgstr "Entfernt die Kerning Information aus den ausgewählten SVG-Dateien"
 
 #: inx/inkstitch_lettering_remove_kerning.inx:18
 msgid "⚠ Make sure you keep a copy of the original file. After running this extension kerning information will be lost unrevertably from these files."
-msgstr ""
+msgstr "⚠ Stelle sicher, dass eine Kopie der Original-Dateien existiert. Nach dem Ausführen dieser Funktion, wird die Kerning Information unwiederbringlich aus den Dateien entfernt sein."
 
 #: inx/inkstitch_lettering_remove_kerning.inx:23
 msgid "Select Font Files"
@@ -5483,7 +5485,7 @@ msgstr "Liste verfügbarer Zeichen aktualisieren"
 
 #: inx/inkstitch_lettering_update_json_glyphlist.inx:14
 msgid "Updates the glyphlist in the json file."
-msgstr ""
+msgstr "Aktualisiert die Liste der Zeichen in der json-Datei."
 
 #: inx/inkstitch_lettering_update_json_glyphlist.inx:18
 msgid "JSON File"
@@ -5495,11 +5497,11 @@ msgstr "Buchstaben zu Schrift"
 
 #: inx/inkstitch_letters_to_font.inx:14
 msgid "Includes all letters of a predigitized embroidery font (one file for each letter) into the document in order to make it available for the Ink/Stitch lettering system."
-msgstr ""
+msgstr "Fügt alle Buchstaben einer bereits digitalisierten Schrift (eine Datei pro Buchstabe) in das aktuelle Dokument ein um sie für das Ink/Stitch Text-Modul zugänglich zu machen."
 
 #: inx/inkstitch_letters_to_font.inx:17
 msgid "Embroidery files need to have the name of the letter right before the file extension. E.g. A.dst or Example_Font_A.dst will be recognized as the letter A."
-msgstr ""
+msgstr "Der Name der Stickdateien sollte wie folgt aufgebaut sein: z.B. A.dst oder Beispielschrift_A.dst wird als Buchstabe A erkannt. Der betreffende Buchstabe steht am Ende des Dateinamens."
 
 #: inx/inkstitch_letters_to_font.inx:22
 msgid "File format"
@@ -5523,7 +5525,7 @@ msgstr "Als Symbol"
 
 #: inx/inkstitch_letters_to_font.inx:70
 msgid "⚠ After running this function, drag the baseline into the desired position and place the letters accordingly. Save your font in a separate folder. Then generate the json file (with \"Autoroute Satin\" unchecked)."
-msgstr ""
+msgstr "⚠ Ziehe nach dem Ausführen dieser Funktion die Hilfslinie \"baseline\" an die gewünschte Stelle und positioniere die Buchstaben entsprechend darauf. Speichere dann die Schrift in einen eigenen Schriftordner. Als letztes muss noch die json-Datei erstellt werden (\"Automatische Führung von Satinsäulen\" sollte hierbei deaktiviert sein)."
 
 #: inx/inkstitch_object_commands.inx:3
 msgid "Attach Commands to Selected Objects"
@@ -5535,15 +5537,15 @@ msgstr "Objektbefehle anzeigen|verbergen"
 
 #: inx/inkstitch_outline.inx:3
 msgid "Outline"
-msgstr ""
+msgstr "Außenkontur"
 
 #: inx/inkstitch_outline.inx:14
 msgid "Ratio"
-msgstr ""
+msgstr "Auflösung"
 
 #: inx/inkstitch_outline.inx:15
 msgid "Allow Holes"
-msgstr ""
+msgstr "Löcher erlauben"
 
 #: inx/inkstitch_output_COL.inx:3
 msgid "COL file output"
@@ -5879,7 +5881,7 @@ msgstr "Stickeinstellungen entfernen"
 
 #: inx/inkstitch_remove_embroidery_settings.inx:5
 msgid "Use this extension to remove the information Ink/Stitch has stored in your document. This can be especially useful if you copy and paste objects from an embroidery design into another document."
-msgstr ""
+msgstr "Entfernt Informationen, die Ink/Stitch in diesem Dokument gespeichert hat. Das kann besonders dann hilfreich sein, wenn du Objekte aus einem Stickdesign in ein anderes Dokument kopierst."
 
 #: inx/inkstitch_remove_embroidery_settings.inx:7
 msgid "Remove Params"
@@ -6146,7 +6148,7 @@ msgstr "https://inkstitch.org/de/docs/satin-tools/#linie-zu-pfadeffekt-satin"
 
 #: inx/inkstitch_test_swatches.inx:3
 msgid "Generate Test Swatches from Selection"
-msgstr ""
+msgstr "Testmuster aus Auswahl erstellen"
 
 #: inx/inkstitch_troubleshoot.inx:3
 msgid "Troubleshoot Objects"
