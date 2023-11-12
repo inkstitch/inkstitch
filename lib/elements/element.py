@@ -526,6 +526,16 @@ class EmbroideryElement(object):
     def _get_guides_cache_key_data(self):
         return get_marker_elements_cache_key_data(self.node, "guide-line")
 
+    def _get_gradient_cache_key_data(self):
+        if hasattr(self, 'gradient'):
+            gradient = {}
+            gradient['stops'] = self.gradient.stop_offsets
+            gradient['orientation'] = [self.gradient.x1(), self.gradient.x2(), self.gradient.y1(), self.gradient.y2()]
+            gradient['styles'] = [style['stop-color'] for style in self.gradient.stop_styles]
+            return gradient
+        else:
+            return None
+
     def get_cache_key_data(self, previous_stitch):
         return []
 
@@ -535,6 +545,7 @@ class EmbroideryElement(object):
         cache_key_generator.update(self.get_params_and_values())
         cache_key_generator.update(self.parse_path())
         cache_key_generator.update(list(self._get_specified_style().items()))
+        cache_key_generator.update(self._get_gradient_cache_key_data())
         cache_key_generator.update(previous_stitch)
         cache_key_generator.update([(c.command, c.target_point) for c in self.commands])
         cache_key_generator.update(self._get_patterns_cache_key_data())
