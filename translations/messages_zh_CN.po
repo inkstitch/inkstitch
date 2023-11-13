@@ -1151,11 +1151,11 @@ msgstr "两端"
 
 #: lib/elements/element.py:229
 msgid "Before"
-msgstr "开端"
+msgstr "仅起始端"
 
 #: lib/elements/element.py:229
 msgid "After"
-msgstr "尾端"
+msgstr "仅结束端"
 
 #: lib/elements/element.py:229
 msgid "Neither"
@@ -1172,11 +1172,11 @@ msgstr ""
 
 #: lib/elements/element.py:250
 msgid "Tack stitch"
-msgstr "开端锁缝样式"
+msgstr "起始端锁缝样式"
 
 #: lib/elements/element.py:251
 msgid "Tack down stitch type"
-msgstr "选择开端锁缝样式"
+msgstr "选择起始端锁缝样式"
 
 #: lib/elements/element.py:261 lib/elements/element.py:307
 msgid "Custom path"
@@ -1188,7 +1188,7 @@ msgstr ""
 
 #: lib/elements/element.py:272 lib/elements/element.py:284
 msgid "Scale tack stitch"
-msgstr "前锁缝缩放百分比"
+msgstr "结束端锁缝缩放"
 
 #: lib/elements/element.py:273
 msgid "Set stitch length. A 1 in a custom path equals this values."
@@ -1200,11 +1200,11 @@ msgstr ""
 
 #: lib/elements/element.py:296
 msgid "Lock stitch"
-msgstr "尾端锁缝样式"
+msgstr "结束端锁缝样式"
 
 #: lib/elements/element.py:297
 msgid "Lock stitch type"
-msgstr "选择尾端锁缝样式"
+msgstr "选择结束端锁缝样式"
 
 #: lib/elements/element.py:308
 msgid "Enter a custom path. For svg paths the first node will not be embroidered, but represents the last stitch of the element."
@@ -1212,7 +1212,7 @@ msgstr ""
 
 #: lib/elements/element.py:318 lib/elements/element.py:330
 msgid "Scale lock stitch"
-msgstr "尾锁缝缩放百分比"
+msgstr "结束端锁缝缩放"
 
 #: lib/elements/element.py:319
 msgid "Set length of lock stitches (mm)."
@@ -1269,7 +1269,7 @@ msgstr ""
 
 #: lib/elements/fill_stitch.py:40 lib/elements/fill_stitch.py:220
 msgid "Expand"
-msgstr "扩展"
+msgstr "缩放"
 
 #: lib/elements/fill_stitch.py:41
 msgid "The expand parameter for this fill object cannot be applied. Ink/Stitch will ignore it and will use original size instead."
@@ -1354,11 +1354,11 @@ msgstr ""
 
 #: lib/elements/fill_stitch.py:105
 msgid "FillStitch"
-msgstr ""
+msgstr "填充线迹"
 
 #: lib/elements/fill_stitch.py:108
 msgid "Automatically routed fill stitching"
-msgstr "自动填充布线"
+msgstr "自动布线填充"
 
 #: lib/elements/fill_stitch.py:112
 msgid "Auto Fill"
@@ -1478,23 +1478,23 @@ msgstr ""
 
 #: lib/elements/fill_stitch.py:221
 msgid "Expand the shape before fill stitching, to compensate for gaps between shapes.  Negative values contract instead."
-msgstr "扩展以填充图案间缝隙。填写负值将收缩图案。"
+msgstr "缩放以填充图案间缝隙。填写负值将收缩图案。"
 
 #: lib/elements/fill_stitch.py:235
 msgid "Angle of lines of stitches"
-msgstr ""
+msgstr "线迹角度"
 
 #: lib/elements/fill_stitch.py:236
 msgid "The angle increases in a counter-clockwise direction.  0 is horizontal.  Negative angles are allowed."
-msgstr ""
+msgstr "线迹按角度数值逆时针旋转。0度时线迹水平。允许填写负值。"
 
 #: lib/elements/fill_stitch.py:248
 msgid "Maximum fill stitch length"
-msgstr ""
+msgstr "最大线迹长度"
 
 #: lib/elements/fill_stitch.py:249
 msgid "The length of each stitch in a row.  Shorter stitch may be used at the start or end of a row."
-msgstr ""
+msgstr "每行线迹的长度。每行起始处或结束处线迹可能小于此长度。"
 
 #: lib/elements/fill_stitch.py:264
 msgid "Spacing between rows"
@@ -1502,15 +1502,15 @@ msgstr "行间距"
 
 #: lib/elements/fill_stitch.py:265
 msgid "Distance between rows of stitches."
-msgstr ""
+msgstr "针迹行间距"
 
 #: lib/elements/fill_stitch.py:280 inx/inkstitch_gradient_blocks.inx:22
 msgid "End row spacing"
-msgstr ""
+msgstr "末端行距"
 
 #: lib/elements/fill_stitch.py:281
 msgid "Increases or decreases the row spacing towards the end."
-msgstr ""
+msgstr "增减末端行距"
 
 #: lib/elements/fill_stitch.py:295
 msgid "Stagger rows this many times before repeating"
@@ -1522,11 +1522,11 @@ msgstr ""
 
 #: lib/elements/fill_stitch.py:308 lib/elements/fill_stitch.py:470
 msgid "Skip last stitch in each row"
-msgstr ""
+msgstr "跳过每行尾针"
 
 #: lib/elements/fill_stitch.py:309 lib/elements/fill_stitch.py:471
 msgid "The last stitch in each row is quite close to the first stitch in the next row.  Skipping it decreases stitch count and density."
-msgstr ""
+msgstr "每行尾针与下一行头针相距很近，每行跳过尾针可减少针数及降低密度。"
 
 #: lib/elements/fill_stitch.py:322
 msgid "Flip fill (start right-to-left)"
@@ -1546,7 +1546,7 @@ msgstr ""
 
 #: lib/elements/fill_stitch.py:347 lib/elements/stroke.py:108
 msgid "Running stitch length"
-msgstr "针距"
+msgstr ""
 
 #: lib/elements/fill_stitch.py:348
 msgid "Length of stitches around the outline of the fill region used when moving from section to section. Also used for meander and circular fill."
@@ -1563,11 +1563,11 @@ msgstr ""
 #: lib/elements/fill_stitch.py:375 lib/elements/satin_column.py:385
 #: lib/elements/stroke.py:82
 msgid "Repeats"
-msgstr "重复次数"
+msgstr "描边次数"
 
 #: lib/elements/fill_stitch.py:376 lib/elements/stroke.py:83
 msgid "Defines how many times to run down and back along the path."
-msgstr "定义沿路径前进和回退的次数。"
+msgstr "沿路径前进和回退的次数。"
 
 #: lib/elements/fill_stitch.py:387 lib/elements/stroke.py:94
 msgid "Bean stitch number of repeats"
@@ -1581,14 +1581,14 @@ msgstr ""
 #: lib/elements/fill_stitch.py:406 inx/inkstitch_select_elements.inx:33
 #: inx/inkstitch_select_elements.inx:53 inx/inkstitch_select_elements.inx:55
 msgid "Underlay"
-msgstr ""
+msgstr "打底线迹"
 
 #: lib/elements/fill_stitch.py:406 lib/elements/fill_stitch.py:415
 #: lib/elements/fill_stitch.py:440 lib/elements/fill_stitch.py:451
 #: lib/elements/fill_stitch.py:461 lib/elements/fill_stitch.py:473
 #: lib/elements/fill_stitch.py:486
 msgid "Fill Underlay"
-msgstr ""
+msgstr "填充打底线迹"
 
 #: lib/elements/fill_stitch.py:412
 msgid "Fill angle"
@@ -1600,7 +1600,7 @@ msgstr ""
 
 #: lib/elements/fill_stitch.py:437
 msgid "Row spacing"
-msgstr ""
+msgstr "行间距"
 
 #: lib/elements/fill_stitch.py:438
 msgid "default: 3x fill row spacing"
@@ -1609,11 +1609,11 @@ msgstr "默认值：3x 填充行间距"
 #: lib/elements/fill_stitch.py:448 lib/elements/stroke.py:134
 #: lib/extensions/element_info.py:107
 msgid "Max stitch length"
-msgstr ""
+msgstr "线迹长度"
 
 #: lib/elements/fill_stitch.py:449
 msgid "default: equal to fill max stitch length"
-msgstr ""
+msgstr "默认与填充线迹长度相同"
 
 #: lib/elements/fill_stitch.py:459
 msgid "Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill."
@@ -2056,7 +2056,7 @@ msgstr ""
 
 #: lib/elements/stroke.py:44 inx/inkstitch_select_elements.inx:12
 msgid "Stroke"
-msgstr "描边"
+msgstr "描边线迹"
 
 #: lib/elements/stroke.py:47
 msgid "Running stitch along paths"
@@ -2722,7 +2722,7 @@ msgstr "此设定将影响%d个对象。"
 
 #: lib/extensions/params.py:282
 msgid "Some settings had different values across objects.  Select a value from the dropdown or enter a new one."
-msgstr ""
+msgstr "选定的对象在某些参数项中存在不同的设定值，请从下拉列表选择或直接输入作为其新值。"
 
 #: lib/extensions/params.py:287
 #, python-format
@@ -2957,7 +2957,7 @@ msgstr "毫米"
 
 #: lib/gui/preferences.py:56 lib/gui/preferences.py:73
 msgid "Set As Default"
-msgstr ""
+msgstr "设为默认值"
 
 #: lib/gui/preferences.py:59 lib/gui/preferences.py:106
 msgid "Minimum stitch length"
