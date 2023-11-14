@@ -1002,21 +1002,21 @@ msgstr ""
 #: lib/commands.py:45 inx/inkstitch_object_commands.inx:11
 #: inx/inkstitch_remove_embroidery_settings.inx:19
 msgid "Stop (pause machine) after sewing this object"
-msgstr "缝制此物件后停止（暂停机器）"
+msgstr "缝制此对象后停止（暂停机器）"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
 #: lib/commands.py:48 inx/inkstitch_object_commands.inx:12
 #: inx/inkstitch_remove_embroidery_settings.inx:20
 msgid "Trim thread after sewing this object"
-msgstr ""
+msgstr "缝制此对象后剪线"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
 #: lib/commands.py:51 inx/inkstitch_object_commands.inx:13
 #: inx/inkstitch_remove_embroidery_settings.inx:21
 msgid "Ignore this object (do not stitch)"
-msgstr ""
+msgstr "忽略此对象（不缝合此对象）"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
@@ -1030,7 +1030,7 @@ msgstr "缎面切割点（与切割缎面柱一起使用）"
 #: lib/commands.py:57 inx/inkstitch_layer_commands.inx:7
 #: inx/inkstitch_remove_embroidery_settings.inx:25
 msgid "Ignore layer (do not stitch any objects in this layer)"
-msgstr ""
+msgstr "隐藏该图层（不缝合该图层对象）"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command that affects entire document
@@ -1277,7 +1277,7 @@ msgstr ""
 
 #: lib/elements/fill_stitch.py:46 lib/elements/fill_stitch.py:458
 msgid "Inset"
-msgstr ""
+msgstr "范围收缩"
 
 #: lib/elements/fill_stitch.py:47
 msgid "The underlay inset parameter for this fill object cannot be applied. Ink/Stitch will ignore it and will use the original size instead."
@@ -1592,11 +1592,11 @@ msgstr "填充打底线迹"
 
 #: lib/elements/fill_stitch.py:412
 msgid "Fill angle"
-msgstr ""
+msgstr "线迹角度"
 
 #: lib/elements/fill_stitch.py:413
 msgid "Default: fill angle + 90 deg. Insert a list for multiple layers separated by a space."
-msgstr ""
+msgstr "打底线迹默认垂直于填充线迹。输入多组数值并以空格隔开可构建多层打底线迹。"
 
 #: lib/elements/fill_stitch.py:437
 msgid "Row spacing"
@@ -1617,7 +1617,7 @@ msgstr "默认与填充线迹长度相同"
 
 #: lib/elements/fill_stitch.py:459
 msgid "Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill."
-msgstr ""
+msgstr "收缩打底范围以避免线迹露出。"
 
 #: lib/elements/fill_stitch.py:494 lib/elements/satin_column.py:466
 msgid "Random seed"
@@ -2586,7 +2586,7 @@ msgstr ""
 
 #: lib/extensions/lettering.py:91
 msgid "Never"
-msgstr ""
+msgstr "不启用"
 
 #: lib/extensions/lettering.py:91
 msgid "after each line"
@@ -2649,7 +2649,7 @@ msgstr "尺寸"
 
 #: lib/extensions/lettering.py:461
 msgid "Add trims"
-msgstr ""
+msgstr "剪线"
 
 #: lib/extensions/lettering.py:467 print/templates/ui_svg_action_buttons.html:1
 msgid "Scale"
@@ -2727,11 +2727,11 @@ msgstr "选定的对象在某些参数项中存在不同的设定值，请从下
 #: lib/extensions/params.py:287
 #, python-format
 msgid "Disabling this tab will disable the following %d tabs."
-msgstr ""
+msgstr "后续%d页选项仅当此页选项启用时方可启用。"
 
 #: lib/extensions/params.py:291
 msgid "Disabling this tab will disable the following tab."
-msgstr ""
+msgstr "后续页选项卡仅当此页选项启用时方可启用。"
 
 #: lib/extensions/params.py:295
 #, python-format
@@ -3116,12 +3116,12 @@ msgstr "显示"
 
 #: lib/gui/simulator.py:161
 msgid "Speed"
-msgstr ""
+msgstr "速度"
 
 #: lib/gui/simulator.py:314
 #, python-format
 msgid "%d stitches/sec"
-msgstr ""
+msgstr "%d针/秒"
 
 #: lib/gui/simulator.py:723
 #, python-format
@@ -3998,19 +3998,19 @@ msgstr "功能"
 
 #: electron/src/renderer/components/Simulator.vue:106
 msgid "Jump to next command"
-msgstr "跳转到下一个命令"
+msgstr "跳转至下一个命令"
 
 #: electron/src/renderer/components/Simulator.vue:519
 msgid "Jump to next command (Page up)"
-msgstr ""
+msgstr "跳转至下一个命令（Page up）"
 
 #: electron/src/renderer/components/Simulator.vue:97
 msgid "Jump to previous command"
-msgstr "跳转到上一个命令"
+msgstr "跳转至上一个命令"
 
 #: electron/src/renderer/components/Simulator.vue:509
 msgid "Jump to previous command (Page down)"
-msgstr ""
+msgstr "跳转至上一个命令（Page down）"
 
 #: electron/src/renderer/components/Simulator.vue:232
 msgid "jumps"
@@ -4032,7 +4032,7 @@ msgstr "后退一步"
 
 #: electron/src/renderer/components/Simulator.vue:489
 msgid "One step backward (-)"
-msgstr ""
+msgstr "步退 (-)"
 
 #. description of keyboard shortcut that moves one stitch forward in simulator
 #: electron/src/renderer/components/Simulator.vue:84
@@ -4041,7 +4041,7 @@ msgstr "向前一步"
 
 #: electron/src/renderer/components/Simulator.vue:499
 msgid "One step forward (+)"
-msgstr ""
+msgstr "步进 (+)"
 
 #. name for page down keyboard key
 #: electron/src/renderer/components/Simulator.vue:99
@@ -4059,31 +4059,31 @@ msgstr "暂停"
 
 #: electron/src/renderer/components/Simulator.vue:444
 msgid "Pause (space)"
-msgstr ""
+msgstr "暂停（空格）"
 
 #: electron/src/renderer/components/Simulator.vue:40
 msgid "Play"
-msgstr "播放"
+msgstr "运行"
 
 #: electron/src/renderer/components/Simulator.vue:455
 msgid "Play (arrow left | arrow right)"
-msgstr ""
+msgstr "运行（← | →）"
 
 #: electron/src/renderer/components/Simulator.vue:49
 msgid "Play backward"
-msgstr "向后"
+msgstr "反向运行"
 
 #: electron/src/renderer/components/Simulator.vue:466
 msgid "Play backward (arrow left)"
-msgstr ""
+msgstr "反向运行（←）"
 
 #: electron/src/renderer/components/Simulator.vue:60
 msgid "Play forward"
-msgstr "向前"
+msgstr "正向运行"
 
 #: electron/src/renderer/components/Simulator.vue:478
 msgid "Play forward (arrow right)"
-msgstr ""
+msgstr "正向运行（→）"
 
 #: electron/src/renderer/components/Simulator.vue:256
 msgid "realistic"
@@ -4111,7 +4111,7 @@ msgstr "减速"
 
 #: electron/src/renderer/components/Simulator.vue:32
 msgid "Space"
-msgstr "空间"
+msgstr "空格"
 
 #: electron/src/renderer/components/Simulator.vue:126
 msgid "Speed up"
@@ -4131,23 +4131,23 @@ msgstr "停止"
 #: inx/inkstitch_commands_scale_symbols.inx:12
 #: inx/inkstitch_object_commands_toggle_visibility.inx:11
 msgid "View"
-msgstr ""
+msgstr "视图"
 
 #: electron/src/renderer/components/Simulator.vue:149
 msgid "Zoom design"
-msgstr ""
+msgstr "局部"
 
 #: electron/src/renderer/components/Simulator.vue:587
 msgid "Zoom design (])"
-msgstr ""
+msgstr "局部（]）"
 
 #: electron/src/renderer/components/Simulator.vue:138
 msgid "Zoom page"
-msgstr ""
+msgstr "全局"
 
 #: electron/src/renderer/components/Simulator.vue:577
 msgid "Zoom page ([)"
-msgstr ""
+msgstr "全局（[）"
 
 #: inx/inkstitch_about.inx:3 inx/inkstitch_about.inx:6
 msgid "About"
@@ -4237,7 +4237,7 @@ msgstr ""
 #: inx/inkstitch_fill_to_stroke.inx:10 inx/inkstitch_jump_to_stroke.inx:10
 #: inx/inkstitch_outline.inx:10
 msgid "Tools: Stroke"
-msgstr ""
+msgstr "工具：描边"
 
 #: inx/inkstitch_auto_run.inx:15
 msgid "Auto-Route Running Stitch Options"
@@ -4363,7 +4363,7 @@ msgstr ""
 #: inx/inkstitch_object_commands.inx:21
 #: inx/inkstitch_object_commands_toggle_visibility.inx:10
 msgid "Commands"
-msgstr ""
+msgstr "命令"
 
 #: inx/inkstitch_convert_to_satin.inx:3
 msgid "Convert Line to Satin"
@@ -4371,7 +4371,7 @@ msgstr ""
 
 #: inx/inkstitch_convert_to_stroke.inx:3
 msgid "Convert Satin to Stroke"
-msgstr ""
+msgstr "缎纹转换为描边"
 
 #: inx/inkstitch_convert_to_stroke.inx:6
 msgid "Converts a satin column into a running stitch."
@@ -4640,7 +4640,7 @@ msgstr "添加命令"
 
 #: inx/inkstitch_global_commands.inx:5
 msgid "These commands affect the entire embroidery design."
-msgstr ""
+msgstr "命令将影响整个绣花花样。"
 
 #: inx/inkstitch_gradient_blocks.inx:3
 msgid "Convert to gradient blocks"
@@ -5260,15 +5260,15 @@ msgstr ""
 
 #: inx/inkstitch_layer_commands.inx:3
 msgid "Add Layer Commands"
-msgstr ""
+msgstr "添加图层命令"
 
 #: inx/inkstitch_layer_commands.inx:5
 msgid "Commands will be added to the currently-selected layer."
-msgstr ""
+msgstr "命令将添加至当前选择图层。"
 
 #: inx/inkstitch_lettering.inx:3
 msgid "Lettering"
-msgstr ""
+msgstr "文字"
 
 #: inx/inkstitch_lettering_along_path.inx:3
 msgid "Lettering along path"
@@ -5521,7 +5521,7 @@ msgstr ""
 
 #: inx/inkstitch_object_commands.inx:3
 msgid "Attach Commands to Selected Objects"
-msgstr ""
+msgstr "添加命令至选定对象"
 
 #: inx/inkstitch_object_commands_toggle_visibility.inx:3
 msgid "Display|Hide Object Commands"
