@@ -4,7 +4,7 @@
     "keywords": [
         "serif",
         "italic"
-    ], 
+    ],
     "leading": 150,
     "auto_satin": false,
     "reversible": true,
@@ -11332,6 +11332,10 @@
         "û",
         "ü",
         "Œ",
-        "œ"
+        "œ",
+        "Ë",
+        "Ê",
+        "È",
+        "É"
     ]
 }
