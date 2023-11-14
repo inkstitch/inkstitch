@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2023-11-10 01:06+0000\n"
-"PO-Revision-Date: 2023-11-12 01:12\n"
+"PO-Revision-Date: 2023-11-14 01:08\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -2935,7 +2935,7 @@ msgstr "Mehr Informationen auf unserer Webseite:"
 
 #: lib/gui/element_info.py:62 lib/gui/element_info.py:63
 msgid "https://inkstitch.org/docs/troubleshoot#element-info"
-msgstr ""
+msgstr "https://inkstitch.org/de/docs/troubleshoot#element-info"
 
 #: lib/gui/preferences.py:16 lib/gui/preferences.py:17
 #: inx/inkstitch_preferences.inx:3
@@ -5342,7 +5342,7 @@ msgstr "Verwendung: Der benutzerdefinierte Ordner für Schriften muss für jede 
 
 #: inx/inkstitch_lettering_force_lock_stitches.inx:14
 msgid "Small fonts will sometimes unravel if threads are cut after the embroidery machine has finished the work. Therefore it is important that also diacritics with a smaller distance to the font body than defined by the collapse length value (default: 3mm) have lock stitches. This can be achieved by adding a forced lock stitch attribute to them."
-msgstr ""
+msgstr "Kleine Schriftarten ribbeln manchmal auf wenn Spungstichfäden geschnitten werden. Daher ist es wichtig, dass auch diakritische Zeichen mit einem geringeren Abstand zum Schriftkörper, als durch die minimale Sprungstichlänge definiert (in der Standardeinstellung: 3 mm), mit Vernähstichen abschließen. Dies kann durch die Option Vernähstiche erzwingen erreicht werden."
 
 #: inx/inkstitch_lettering_force_lock_stitches.inx:20
 msgid "This extension has been build to help font authors to define \"force lock stitches\"-attributes automatically if they are placed in a predefined distance to the next object."
