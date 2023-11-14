@@ -175,7 +175,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -195,7 +195,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -216,7 +216,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -287,7 +287,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -307,7 +307,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -328,7 +328,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -353,7 +353,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="autosatin98"
        inkscape:label="Auto-remplissage satin 2"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -372,7 +372,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="autosatin99"
        inkscape:label="Auto-remplissage satin 4"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -391,7 +391,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="autosatin100"
        inkscape:label="Auto-remplissage satin 6"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -406,7 +406,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="autosatin101"
        inkscape:label="Auto-remplissage satin 7"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -426,7 +426,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="autosatin102"
        inkscape:label="Auto-remplissage satin 9"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -447,7 +447,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        style="display:inline;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="autosatin7-3"
        sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -468,7 +468,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        style="display:inline;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="autosatin95"
        sodipodi:nodetypes="cccccccc"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -482,7 +482,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        d="m 28.502077,71.840777 c 0,0 4.455466,-0.02334 4.455466,-0.02334 0,-5e-6 3.819142,0.11339 3.819142,0.11339 0,0 2,0.125 2,0.125 0,0 2,0.375 2,0.375 0,0 2,0.625 2,0.625 0,0 2,0.875 2,0.875 0,0 1.9375,1.0625 1.9375,1.0625 0,0 1.8125,1.1875 1.8125,1.1875 0,0 1.6875,1.3125 1.6875,1.3125 0,0 1.5625,1.4375 1.5625,1.4375 0,0 1.3125,1.625 1.3125,1.625 0,0 0.9375,1.875 0.9375,1.875 0,0 0.5625,2.125 0.5625,2.125 0,0 0.1875,2.375 0.1875,2.375 0,0 -0.179687,2.929687 -0.179687,2.929687 0,0 -0.539063,2.789063 -0.539063,2.789063 0,0 -0.898437,2.648437 -0.898437,2.648437 0,0 -1.257813,2.507813 -1.257813,2.507813 0,0 -1.617187,2.367193 -1.617187,2.367193 0,0 -1.976563,2.22656 -1.976563,2.22656 0,0 -2.335937,2.08594 -2.335937,2.08594 0,0 -2.695313,1.94531 -2.695313,1.94531 0,0 -0.283985,0.17587 -0.283985,0.17587 M 33.141338,69.112594 c 0,0 3.471454,-0.750009 3.471454,-0.750009 0,0 3.846078,-0.3835 3.846078,-0.3835 0,0 4.06667,-0.03385 4.06667,-0.03385 0,0 4.133232,0.298948 4.133232,0.298948 0,0 4.045762,0.61489 4.045762,0.61489 0,0 3.80426,0.913974 3.80426,0.913974 0,0 3.408727,1.196202 3.408727,1.196202 0,0 2.859164,1.461576 2.859164,1.461576 0,0 1.640625,1.210937 1.640625,1.210937 0,0 1.421875,1.382813 1.421875,1.382813 0,0 1.203125,1.554687 1.203125,1.554687 0,0 0.984375,1.726563 0.984375,1.726563 0,0 0.765625,1.898437 0.765625,1.898437 0,0 0.546875,2.070313 0.546875,2.070313 0,0 0.328125,2.242187 0.328125,2.242187 0,2e-6 0.109375,2.414065 0.109375,2.414065 0,0 -0.132812,2.460938 -0.132812,2.460938 0,0 -0.398438,2.382812 -0.398438,2.382812 0,0 -0.664062,2.304688 -0.664062,2.304688 0,0 -0.929688,2.226562 -0.929688,2.226562 0,0 -1.195312,2.148438 -1.195312,2.148438 0,0 -1.460938,2.070315 -1.460938,2.070315 0,0 -1.726562,1.99219 -1.726562,1.99219 0,0 -1.992188,1.91406 -1.992188,1.91406 0,0 -4.46875,3.5625 -4.46875,3.5625 0,0 -4.16129,2.70351 -4.16129,2.70351 M 48.308567,89.450967 c 0,0 26.356266,0.363535 26.356266,0.363535"
        style="display:inline;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="autosatin96"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -503,7 +503,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        d="m 17.776684,116.93083 c 0,0 3.460938,-0.82031 3.460938,-0.82031 0,0 3.382813,-0.96094 3.382813,-0.96094 0,0 3.304687,-1.10156 3.304687,-1.10156 0,0 3.226563,-1.24219 3.226563,-1.24219 0,0 3.148437,-1.38281 3.148437,-1.38281 0,0 3.070313,-1.52344 3.070313,-1.52344 0,0 2.992187,-1.66406 2.992187,-1.66406 0,0 2.630078,-1.62882 2.630078,-1.62882 m -24.216016,14.32413 c 0,0 5.125001,-0.28125 5.125001,-0.28125 0,0 5.375,-0.84375 5.375,-0.84375 0,0 5.625,-1.40625 5.625,-1.40625 0,0 5.875,-1.96875 5.875,-1.96875 0,0 5.78125,-2.4375 5.78125,-2.4375 0,0 5.34375,-2.8125 5.34375,-2.8125 0,0 0.74496,-0.48399 0.74496,-0.48399 m -10.221717,-4.24208 c 0,0 10.620615,4.50116 10.620615,4.50116"
        style="display:inline;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="autosatin97"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -526,7 +526,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -545,7 +545,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -571,7 +571,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        style="display:inline;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="autosatin1-0"
        inkscape:label="Auto-remplissage satin 2"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -585,7 +585,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        style="display:inline;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="autosatin2-9"
        inkscape:label="Auto-remplissage satin 4"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -601,7 +601,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        style="display:inline;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="autosatin3-3"
        inkscape:label="Auto-remplissage satin 5"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -624,7 +624,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        style="display:inline;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="autosatin10-2"
        inkscape:label="Auto-remplissage satin 7"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -656,7 +656,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:center_walk_underlay="False"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -677,7 +677,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:center_walk_underlay="False"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -693,7 +693,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:center_walk_underlay="False"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -715,7 +715,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:center_walk_underlay="False"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -748,7 +748,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:center_walk_underlay="False"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -772,7 +772,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="False"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkscape:label="satin"
        inkstitch:force_lock_stitches="True"
@@ -801,7 +801,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:center_walk_underlay="False"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -824,7 +824,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:center_walk_underlay="False"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -849,7 +849,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:center_walk_underlay="False"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -881,7 +881,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:center_walk_underlay="False"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -905,7 +905,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:force_lock_stitches="True"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8" />
     <path
@@ -933,7 +933,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:center_walk_underlay="False"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -956,7 +956,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:center_walk_underlay="False"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -981,7 +981,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:center_walk_underlay="False"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -1013,7 +1013,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:center_walk_underlay="False"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -1037,7 +1037,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
        inkstitch:force_lock_stitches="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8" />
     <path
@@ -1065,7 +1065,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:center_walk_underlay="False"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -1088,7 +1088,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:center_walk_underlay="False"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -1113,7 +1113,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:center_walk_underlay="False"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -1145,7 +1145,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:center_walk_underlay="False"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -1225,7 +1225,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:center_walk_underlay="False"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -1248,7 +1248,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:center_walk_underlay="False"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -1273,7 +1273,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:center_walk_underlay="False"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -1313,7 +1313,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:center_walk_underlay="False"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -1335,7 +1335,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:center_walk_underlay="False"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -1351,7 +1351,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:center_walk_underlay="False"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -1373,7 +1373,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:center_walk_underlay="False"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -1395,7 +1395,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:center_walk_underlay="False"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -1411,7 +1411,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:center_walk_underlay="False"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -1433,7 +1433,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:center_walk_underlay="False"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -1462,7 +1462,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        style="display:inline;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="autosatin20-1"
        inkscape:label="Auto-remplissage satin 2"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -1485,7 +1485,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        style="display:inline;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="autosatin21-9"
        inkscape:label="Auto-remplissage satin 4"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -1508,7 +1508,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        style="display:inline;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="autosatin22-3"
        inkscape:label="Auto-remplissage satin 6"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -1528,7 +1528,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        style="display:inline;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="autosatin23-3"
        inkscape:label="Auto-remplissage satin 1"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -1547,7 +1547,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        style="display:inline;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="autosatin24-2"
        inkscape:label="Auto-remplissage satin 3"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -1562,7 +1562,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        id="autosatin25-7"
        inkscape:label="Auto-remplissage satin 5"
        sodipodi:nodetypes="ccccccccc"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -1581,7 +1581,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        style="display:inline;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="autosatin26-4"
        inkscape:label="Auto-remplissage satin 7"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -1596,7 +1596,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        style="display:inline;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="autosatin27-1"
        inkscape:label="Auto-remplissage satin 9"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -1619,7 +1619,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -1632,7 +1632,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -1655,7 +1655,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -1673,7 +1673,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -1691,7 +1691,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -1708,7 +1708,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -1724,7 +1724,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -1741,7 +1741,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -1753,7 +1753,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -1771,7 +1771,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -1794,7 +1794,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -1806,7 +1806,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -1824,7 +1824,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -1842,7 +1842,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -1859,7 +1859,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -1871,7 +1871,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -1888,7 +1888,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -1900,7 +1900,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -1919,7 +1919,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -1937,7 +1937,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -1955,7 +1955,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -1967,7 +1967,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -1986,7 +1986,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -2010,7 +2010,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -2023,7 +2023,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -2093,7 +2093,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
        sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -2106,7 +2106,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -2130,7 +2130,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -2148,7 +2148,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -2161,7 +2161,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -2184,7 +2184,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -2201,7 +2201,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -2219,7 +2219,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -2237,7 +2237,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -2255,7 +2255,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -2268,7 +2268,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -2280,7 +2280,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -2299,7 +2299,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -2322,7 +2322,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -2340,7 +2340,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -2358,7 +2358,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -2380,7 +2380,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -2397,7 +2397,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -2410,7 +2410,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -2433,7 +2433,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -2450,7 +2450,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -2468,7 +2468,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -2534,7 +2534,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        id="autosatin105"
        inkscape:label="Auto-remplissage satin 2"
        sodipodi:nodetypes="cccccccsscc"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -2553,7 +2553,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="autosatin106"
        inkscape:label="Auto-remplissage satin 4"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -2574,7 +2574,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="autosatin107"
        inkscape:label="Auto-remplissage satin 6"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -2598,7 +2598,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
        sodipodi:nodetypes="ccccccc"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -2616,7 +2616,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -2773,7 +2773,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
        sodipodi:nodetypes="cccssssssssccsssssssc"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -2791,7 +2791,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
        sodipodi:nodetypes="ccccccccccc"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -2810,7 +2810,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -2828,7 +2828,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -2845,7 +2845,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -2862,7 +2862,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -2874,7 +2874,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -2886,7 +2886,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -2904,7 +2904,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -2977,7 +2977,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 2"
        sodipodi:nodetypes="cccccc"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -3041,7 +3041,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:ties="2"
        inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -3197,7 +3197,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 2"
        sodipodi:nodetypes="cccccc"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -3261,7 +3261,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 2"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -3280,7 +3280,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 4"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -3300,7 +3300,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 6"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -3323,7 +3323,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -3341,7 +3341,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -3504,7 +3504,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -3521,7 +3521,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -3539,7 +3539,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -3563,7 +3563,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -3582,7 +3582,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -3610,7 +3610,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 2"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -3628,7 +3628,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -3647,7 +3647,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -3673,7 +3673,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:ties="2"
        inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -3691,7 +3691,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -3710,7 +3710,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -3779,7 +3779,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -3798,7 +3798,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -3826,7 +3826,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 2"
        sodipodi:nodetypes="cccccc"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -3844,7 +3844,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -3863,7 +3863,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -3890,7 +3890,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -3907,7 +3907,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -3923,7 +3923,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -3935,7 +3935,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -3953,7 +3953,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -3976,7 +3976,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -3988,7 +3988,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -4006,7 +4006,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -4024,7 +4024,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -4041,7 +4041,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -4053,7 +4053,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -4072,7 +4072,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -4105,7 +4105,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="autosatin127"
        inkscape:label="Auto-remplissage satin 3"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -4119,7 +4119,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="autosatin128"
        inkscape:label="Auto-remplissage satin 4"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -4139,7 +4139,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="autosatin129"
        inkscape:label="Auto-remplissage satin 6"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -4164,7 +4164,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="autosatin128-3"
        inkscape:label="Auto-remplissage satin 4"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -4185,7 +4185,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="autosatin129-1"
        inkscape:label="Auto-remplissage satin 6"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -4214,7 +4214,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 2"
        sodipodi:nodetypes="cccccc"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -4226,7 +4226,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -4246,7 +4246,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -4273,7 +4273,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        sodipodi:nodetypes="cccccccccc"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -4287,7 +4287,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="autosatin128-0"
        inkscape:label="Auto-remplissage satin 4"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -4308,7 +4308,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="autosatin129-5"
        inkscape:label="Auto-remplissage satin 6"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -4373,7 +4373,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="autosatin128-4"
        inkscape:label="Auto-remplissage satin 4"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -4394,7 +4394,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="autosatin129-0"
        inkscape:label="Auto-remplissage satin 6"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -4432,7 +4432,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 4"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -4452,7 +4452,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 2"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -4477,7 +4477,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 2"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -4496,7 +4496,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 4"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -4516,7 +4516,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -4531,7 +4531,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 5"
        sodipodi:nodetypes="cccccc"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -4546,7 +4546,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 8"
        sodipodi:nodetypes="ccccccccccccccccccccccccccccc"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -4561,7 +4561,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 10"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -4587,7 +4587,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 2"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -4608,7 +4608,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 4"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -4633,7 +4633,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 2"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -4654,7 +4654,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 4"
        sodipodi:nodetypes="cccccccccccccccscccccccc"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -4668,7 +4668,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 5"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -4687,7 +4687,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 7"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -4701,7 +4701,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 8"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -4716,7 +4716,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 10"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -4767,7 +4767,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 4"
        sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -4788,7 +4788,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 6"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -4857,7 +4857,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 4"
        sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -4879,7 +4879,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 6"
        sodipodi:nodetypes="cccccccccc"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -4902,7 +4902,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -4920,7 +4920,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -4949,7 +4949,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 2"
        sodipodi:nodetypes="cccccc"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -4967,7 +4967,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -4985,7 +4985,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -5011,7 +5011,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:ties="2"
        inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -5029,7 +5029,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -5047,7 +5047,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -5116,7 +5116,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -5134,7 +5134,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -5191,7 +5191,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -5212,7 +5212,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 7"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -5239,7 +5239,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 2"
        sodipodi:nodetypes="cccccccc"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -5260,7 +5260,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 4"
        sodipodi:nodetypes="cccccccccccccccccccccccccccc"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -5275,7 +5275,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 5"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -5297,7 +5297,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 7"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -5324,7 +5324,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 2"
        sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -5338,7 +5338,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 3"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -5359,7 +5359,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 5"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -5396,7 +5396,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 4"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -5415,7 +5415,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 6"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -5435,7 +5435,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 8"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -5449,7 +5449,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 9"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -5470,7 +5470,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 11"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -5495,7 +5495,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 2"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -5514,7 +5514,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 4"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -5533,7 +5533,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 6"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -5549,7 +5549,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 7"
        sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccc"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -5574,7 +5574,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 2"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -5593,7 +5593,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 4"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -5612,7 +5612,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 6"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -5627,7 +5627,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 7"
        sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -5647,7 +5647,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 9"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -5673,7 +5673,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 7"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -5693,7 +5693,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 3"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -5713,7 +5713,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 5"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -5727,7 +5727,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 8"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -5748,7 +5748,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 10"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -5771,7 +5771,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -5788,7 +5788,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -5806,7 +5806,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -5835,7 +5835,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 2"
        sodipodi:nodetypes="cccccc"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -5853,7 +5853,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -5870,7 +5870,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -5888,7 +5888,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -5914,7 +5914,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:ties="2"
        inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -5932,7 +5932,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -5949,7 +5949,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -5967,7 +5967,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -6036,7 +6036,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -6053,7 +6053,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -6071,7 +6071,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -6095,7 +6095,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -6116,7 +6116,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 2"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -6128,7 +6128,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -6146,7 +6146,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -6192,7 +6192,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay_inset_mm="0.1"
        sodipodi:nodetypes="ccccsssccccsscccccccccccccccccc"
        inkscape:label="Auto-remplissage satin 4"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -6214,7 +6214,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay_inset_mm="0.1"
        sodipodi:nodetypes="ccccsss"
        inkscape:label="Auto-remplissage satin 6"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -6234,7 +6234,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 1"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -6254,7 +6254,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 3"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -6268,7 +6268,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 4"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -6288,7 +6288,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 6"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -6308,7 +6308,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 8"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -6329,7 +6329,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 10"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -6356,7 +6356,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 2"
        sodipodi:nodetypes="ccccccccccccccccccccccccccccccccc"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -6377,7 +6377,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 4"
        sodipodi:nodetypes="ccccccccccccccccccccccccccccccccc"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -6398,7 +6398,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 6"
        sodipodi:nodetypes="cccssccsssc"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -6413,7 +6413,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 7"
        sodipodi:nodetypes="ccccccccccccccccccccccccccccccccc"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -6435,7 +6435,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 9"
        sodipodi:nodetypes="cccccccccccccc"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -6460,7 +6460,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 2"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -6479,7 +6479,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 4"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -6501,7 +6501,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 6"
        sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccc"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -6527,7 +6527,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 2"
        sodipodi:nodetypes="cccccc"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -6551,7 +6551,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 5"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -6571,7 +6571,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 7"
        sodipodi:nodetypes="ccccccc"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -6585,7 +6585,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 8"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -6605,7 +6605,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 10"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -6631,7 +6631,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 2"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -6652,7 +6652,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 4"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -6685,7 +6685,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay_inset_mm="0.1"
        sodipodi:nodetypes="cccccc"
        inkscape:label="Auto-remplissage satin 3"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -6706,7 +6706,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay_inset_mm="0.1"
        sodipodi:nodetypes="cccccc"
        inkscape:label="Auto-remplissage satin 5"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -6721,7 +6721,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 6"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -6742,7 +6742,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 8"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -6767,7 +6767,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 2"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -6786,7 +6786,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 4"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -6800,7 +6800,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 5"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -6820,7 +6820,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 7"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -6845,7 +6845,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 2"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -6871,7 +6871,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 5"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -6891,7 +6891,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 7"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -6906,7 +6906,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 8"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -6927,7 +6927,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay_inset_mm="0.1"
        sodipodi:nodetypes="cccccc"
        inkscape:label="Auto-remplissage satin 2"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -6960,7 +6960,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay_inset_mm="0.1"
        sodipodi:nodetypes="cccsccsc"
        inkscape:label="Auto-remplissage satin 6"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -6981,7 +6981,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay_inset_mm="0.1"
        sodipodi:nodetypes="cccsccsc"
        inkscape:label="Auto-remplissage satin 8"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -6996,7 +6996,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay_inset_mm="0.1"
        sodipodi:nodetypes="cccccccc"
        inkscape:label="Auto-remplissage satin 9"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -7017,7 +7017,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay_inset_mm="0.1"
        sodipodi:nodetypes="cccccc"
        inkscape:label="Auto-remplissage satin 11"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -7038,7 +7038,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay_inset_mm="0.1"
        sodipodi:nodetypes="cccccccc"
        inkscape:label="Auto-remplissage satin 13"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -7054,7 +7054,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay_inset_mm="0.1"
        sodipodi:nodetypes="cccccc"
        inkscape:label="Auto-remplissage satin 14"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -7080,7 +7080,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 2"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -7106,7 +7106,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 5"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -7121,7 +7121,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 6"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -7146,7 +7146,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 2"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -7166,7 +7166,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 4"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -7192,7 +7192,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 2"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -7212,7 +7212,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 4"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -7232,7 +7232,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 6"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -7247,7 +7247,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 7"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -7273,7 +7273,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 2"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -7294,7 +7294,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 4"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -7320,7 +7320,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 2"
        sodipodi:nodetypes="cccccccccccccccc"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -7340,7 +7340,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 4"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -7431,7 +7431,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 2"
        sodipodi:nodetypes="cccccc"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -7446,7 +7446,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 4"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -7477,7 +7477,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 2"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -7493,7 +7493,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 2"
        sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccc"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -7519,7 +7519,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 2"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -7540,7 +7540,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 4"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -7567,7 +7567,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 2"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -7588,7 +7588,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 4"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -7604,7 +7604,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 2"
        sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccc"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -7626,7 +7626,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 2"
        sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccc"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -7651,7 +7651,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 2"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -7671,7 +7671,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 4"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -7687,7 +7687,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 2"
        sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccc"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -7716,7 +7716,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 2"
        sodipodi:nodetypes="cccccc"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -7739,7 +7739,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 2"
        sodipodi:nodetypes="cccccc"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -7768,7 +7768,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 2"
        sodipodi:nodetypes="cccccc"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -7797,7 +7797,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 2"
        sodipodi:nodetypes="cccccc"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -7826,7 +7826,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 2"
        sodipodi:nodetypes="cccccc"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -7848,7 +7848,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 2"
        sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccc"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -7870,7 +7870,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 2"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -7897,7 +7897,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkscape:transform-center-x="-22.904916"
        inkscape:transform-center-y="-42.940953"
        sodipodi:nodetypes="cccccc"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -7914,7 +7914,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkscape:label="Auto-remplissage satin 4"
        inkscape:transform-center-x="2.3174199"
        inkscape:transform-center-y="-2.7165025"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -7939,7 +7939,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 2"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -7959,7 +7959,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 4"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -7984,7 +7984,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 2"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -8004,7 +8004,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 4"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -8123,7 +8123,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 2"
        sodipodi:nodetypes="cccccc"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -8139,7 +8139,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 4"
        sodipodi:nodetypes="cccccc"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -8166,7 +8166,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 3"
        sodipodi:nodetypes="ccccssssssccsssssssscc"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -8181,7 +8181,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 4"
        sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -8203,7 +8203,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 6"
        sodipodi:nodetypes="cccccccc"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>
@@ -8228,7 +8228,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 2"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -8247,7 +8247,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 4"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -8268,7 +8268,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 6"
        sodipodi:nodetypes="cccccc"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -8283,7 +8283,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 7"
        sodipodi:nodetypes="cccccccccccccccccccccc"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
@@ -8304,7 +8304,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 9"
-       inkstitch:max_stitch_length_mm="6"
+       inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
   </g>

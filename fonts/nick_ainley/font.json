@@ -6,7 +6,7 @@
         "running_stitch",
         "tiny"
     ],
-   "leading": 40,
+    "leading": 40,
     "auto_satin": false,
     "reversible": false,
     "letter_case": "",
@@ -576,6 +576,20 @@
         "'",
         ",",
         "‘",
-        "’"
+        "’",
+        "é",
+        "è",
+        "ê",
+        "ë",
+        "Ë",
+        "É",
+        "È",
+        "Ä",
+        "Ö",
+        "Ü",
+        "ä",
+        "ö",
+        "ü",
+        "ß"
     ]
 }
