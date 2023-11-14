@@ -4,7 +4,7 @@
    id="svg2327"
    sodipodi:docname="→.svg"
    width="180"
-   inkscape:version="1.3-alpha (95f74fb, 2023-03-31)"
+   inkscape:version="1.3.1 (5ab75fa9, 2023-11-03)"
    height="180"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -27,13 +27,13 @@
      inkscape:window-height="1869"
      id="namedview2329"
      showgrid="true"
-     inkscape:zoom="10.739364"
-     inkscape:cx="39.248133"
-     inkscape:cy="43.252094"
+     inkscape:zoom="6.6491765"
+     inkscape:cx="33.688382"
+     inkscape:cy="96.327718"
      inkscape:window-x="1556"
      inkscape:window-y="236"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g81"
+     inkscape:current-layer="g2"
      inkscape:document-rotation="0"
      inkscape:snap-global="false"
      inkscape:showpageshadow="2"
@@ -63,7 +63,12 @@
     <inkscape:grid
        type="xygrid"
        id="grid2857"
-       visible="true" />
+       visible="true"
+       originx="0"
+       originy="0"
+       spacingy="1"
+       spacingx="1"
+       units="px" />
   </sodipodi:namedview>
   <metadata
      id="metadata2">
@@ -1285,7 +1290,7 @@ Created by FontForge 20200314 at Sat Mar 06 17:46:07 2021
        inkstitch:stroke_method="manual_stitch" />
     <path
        style="font-size:36px;line-height:1.25;font-family:sans-serif;display:inline;fill:none;stroke:#000000;stroke-width:0.500001;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 15.435178,131.79653 -3.433054,-14.72185 -1.337269,15.62314 6.009588,-15.09865 -9.3446774,12.64799 11.9373624,-8.46365 -13.5003637,3.60326 13.2682467,2.391 -11.2453522,-8.04615 7.7949312,12.91279 -1.149207,-1.85406 0.693424,1.0852 -1.090137,-1.83725"
+       d="M 19.044648,59.30635 15.611594,44.5845 14.274325,60.20764 20.283913,45.10899 10.939235,57.75698 22.876598,49.29333 9.3762338,52.89659 l 13.2682472,2.391 -11.245353,-8.04615 7.794932,12.91279 -1.149207,-1.85406 0.693424,1.0852 -1.090137,-1.83725"
        id="path945-2-8-31-8-85-4-84-7"
        inkstitch:stroke_method="manual_stitch" />
   </g>
@@ -2413,7 +2418,7 @@ Created by FontForge 20200314 at Sat Mar 06 17:46:07 2021
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Ë"
-     style="display:inline"
+     style="display:none"
      id="g81">
     <path
        style="font-size:36px;line-height:1.25;font-family:sans-serif;display:inline;fill:none;stroke:#000000;stroke-width:0.500001;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -8602,5 +8607,68 @@ Created by FontForge 20200314 at Sat Mar 06 17:46:07 2021
        d="m 52.810883,128.69382 -18.548566,-3.99824 16.033531,10.46244 -12.037668,-16.00185 6.924346,18.78735 -0.467185,-19.67007 -5.971468,18.88651 12.329148,-15.22315 -17.004914,9.51439 19.775626,-2.46677 -2.861419,0.39162 1.690058,-0.25517 -2.799819,0.32733"
        id="path945-2-8-31-8-85-4-80"
        inkstitch:stroke_method="manual_stitch" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="GlyphLayer-'"
+     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
+     id="g15378">
+    <g
+       id="g26"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
+       transform="translate(3.6094695,-72.49018)">
+      <path
+         style="font-size:36px;line-height:1.25;font-family:sans-serif;display:inline;fill:none;stroke:#000000;stroke-width:0.500001;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 13.506419,123.4271 -2.815041,4.73738 1.376147,-2.28324 -9.260669,15.34199 10.334548,-6.40213 -11.1930011,0.61267 10.1195561,5.29471 -7.0745968,-10.10646 2.3721353,13.14532 3.7560305,-17.1699 1.748317,1.80656"
+         id="path25"
+         inkstitch:stroke_method="manual_stitch" />
+      <path
+         style="font-size:36px;line-height:1.25;font-family:sans-serif;display:inline;fill:none;stroke:#000000;stroke-width:0.500001;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 15.435178,131.79653 -3.433054,-14.72185 -1.337269,15.62314 6.009588,-15.09865 -9.3446774,12.64799 11.9373624,-8.46365 -13.5003637,3.60326 13.2682467,2.391 -11.2453522,-8.04615 7.7949312,12.91279 -1.149207,-1.85406 0.693424,1.0852 -1.090137,-1.83725"
+         id="path26"
+         inkstitch:stroke_method="manual_stitch" />
+    </g>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="GlyphLayer-‘"
+     style="display:inline;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
+     id="g2">
+    <g
+       id="g24"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
+       transform="translate(3.6094695,-72.49018)">
+      <path
+         style="font-size:36px;line-height:1.25;font-family:sans-serif;display:inline;fill:none;stroke:#000000;stroke-width:0.500001;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 13.506419,123.4271 -2.815041,4.73738 1.376147,-2.28324 -9.260669,15.34199 10.334548,-6.40213 -11.1930011,0.61267 10.1195561,5.29471 -7.0745968,-10.10646 2.3721353,13.14532 3.7560305,-17.1699 1.748317,1.80656"
+         id="path23"
+         inkstitch:stroke_method="manual_stitch" />
+      <path
+         style="font-size:36px;line-height:1.25;font-family:sans-serif;display:inline;fill:none;stroke:#000000;stroke-width:0.500001;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 15.435178,131.79653 -3.433054,-14.72185 -1.337269,15.62314 6.009588,-15.09865 -9.3446774,12.64799 11.9373624,-8.46365 -13.5003637,3.60326 13.2682467,2.391 -11.2453522,-8.04615 7.7949312,12.91279 -1.149207,-1.85406 0.693424,1.0852 -1.090137,-1.83725"
+         id="path24"
+         inkstitch:stroke_method="manual_stitch" />
+    </g>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="GlyphLayer-’"
+     style="display:inline;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
+     id="g4936">
+    <g
+       id="g21"
+       style="display:inline"
+       transform="translate(3.6094695,-72.49018)">
+      <path
+         style="font-size:36px;line-height:1.25;font-family:sans-serif;display:inline;fill:none;stroke:#000000;stroke-width:0.500001;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 13.506419,123.4271 -2.815041,4.73738 1.376147,-2.28324 -9.260669,15.34199 10.334548,-6.40213 -11.1930011,0.61267 10.1195561,5.29471 -7.0745968,-10.10646 2.3721353,13.14532 3.7560305,-17.1699 1.748317,1.80656"
+         id="path3"
+         inkstitch:stroke_method="manual_stitch" />
+      <path
+         style="font-size:36px;line-height:1.25;font-family:sans-serif;display:inline;fill:none;stroke:#000000;stroke-width:0.500001;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 15.435178,131.79653 -3.433054,-14.72185 -1.337269,15.62314 6.009588,-15.09865 -9.3446774,12.64799 11.9373624,-8.46365 -13.5003637,3.60326 13.2682467,2.391 -11.2453522,-8.04615 7.7949312,12.91279 -1.149207,-1.85406 0.693424,1.0852 -1.090137,-1.83725"
+         id="path21"
+         inkstitch:stroke_method="manual_stitch" />
+    </g>
   </g>
 </svg>

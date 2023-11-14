@@ -6,7 +6,7 @@
    width="75"
    height="75"
    viewBox="0 0 75 75"
-   inkscape:version="1.3-alpha (95f74fb, 2023-03-31)"
+   inkscape:version="1.3.1 (5ab75fa9, 2023-11-03)"
    H="124"
    L="120"
    Y0="-36"
@@ -33,13 +33,13 @@
      inkscape:window-height="1017"
      id="namedview9654"
      showgrid="true"
-     inkscape:zoom="11.313708"
-     inkscape:cx="30.096234"
-     inkscape:cy="19.224466"
+     inkscape:zoom="4.9531248"
+     inkscape:cx="30.485806"
+     inkscape:cy="4.9463725"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g10"
+     inkscape:current-layer="g25"
      inkscape:document-units="px"
      inkscape:document-rotation="0"
      inkscape:snap-global="false"
@@ -88,7 +88,10 @@
        id="grid18714"
        originx="-2.498264"
        originy="-40.583028"
-       visible="true" />
+       visible="true"
+       spacingy="1"
+       spacingx="1"
+       units="px" />
   </sodipodi:namedview>
   <metadata
      id="metadata6143"
@@ -6396,7 +6399,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-É"
-     style="display:inline;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g10"
      transform="translate(-2.49826,-0.500265)">
     <path
@@ -9364,6 +9367,118 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
        id="autosatin171"
        inkscape:label="Auto-remplissage satin 4"
        d="M 32.2479,59.3719 34.1467,58.72 35.874,57.811 37.4762,56.7144 39,55.5 40.3125,54.2812 41.25,53.125 41.8125,52.0312 42,51 41.75,49.875 41,48.5 40,47.375 39.5,47.0938 39,47 37.5625,47.2188 36.25,47.875 35.0625,48.9688 34,50.5 33.1609,52.283 32.5958,54.1296 32.2328,56.0364 32,58 l -0.1818,1.8884 0.5718,2.5143 0.5216,1.3746 0.7496,1.3255 1.0305,1.1806 1.3646,0.9402 1.7517,0.6041 L 40,68 41.5938,67.8438 43.375,67.375 c 0.608295,-0.241398 0.654279,-0.29536 1.31154,-0.53828 L 47.5,65.5 49.7187,64.1562 51.875,62.625 53.9687,60.9063 56,59 57.0151,58.3354 58,58 l 0.7129,0.0117 0.6215,0.4618 0.4068,0.7695 0.0687,0.9347 M 33,64 37.1875,62.9063 40.75,61.625 43.6875,60.1562 46,58.5 47.75,56.6563 49,54.625 49.75,52.4062 50,50 49.8125,47.6563 49.25,45.625 48.3125,43.9063 47,42.5 45.4375,41.4062 43.75,40.625 41.9375,40.1562 40,40 37,40.25 34,41 l -1.3521,0.7087 -1.3148,0.9997 -1.2594,1.26 -1.1858,1.4894 -1.0941,1.688 -0.9843,1.8558 -0.8562,1.9926 -0.7102,2.0987 -0.5458,2.1739 -0.3635,2.2183 -0.1628,2.2319 0.0558,2.2145 0.2927,2.1664 0.5476,2.0875 0.8208,1.9776 L 27,70 28.0937,71.375 29.375,72.5 30.8438,73.375 32.5,74 36.125,74.75 40,75 42.5,74.8125 45,74.25 45.7743,73.9596 47.5,73.3125 50,72 l 4.2978,-2.8395 3.4542,-2.6646 0.8482,-0.9594 0.7123,-1.3991 0.4476,-1.7158 0.0539,-1.9092 M 48.3471,40.5372 38.4298,49.8347 M 22.562,57.7686 34.0909,57.3967 m 7.1901,8.9256 0.124,9.9174"
+       inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
+       inkstitch:satin_column="True"
+       inkstitch:pull_compensation_mm="0.2"
+       inkstitch:zigzag_spacing_mm="0.3"
+       inkstitch:zigzag_underlay="True"
+       inkstitch:zigzag_underlay_inset_mm="0.1"
+       style="stroke-width:0.944882"
+       inkstitch:max_stitch_length_mm="6"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+       inkstitch:reverse_rails="none" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="GlyphLayer-Ä"
+     id="g25"
+     style="display:inline;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
+     transform="translate(-2.49826, -0.500265)">
+    <path
+       style="stroke-width:0.945;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0"
+       d="M 16.9507,69.1549 C 9.2515402,64.763488 8.8105776,54.659762 10.015452,46.856404 11.882879,32.623859 22.336591,19.039305 36.8905,16.3597 c 1.606985,-0.394554 3.221105,-0.614137 4.839448,-0.717538"
+       id="path10" />
+    <g
+       id="g40"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
+       transform="matrix(-1 0 0 1 56.0326 -32.6153)">
+      <path
+         d="m 14.707487,33.361607 c -0.387367,-2.155284 -0.314065,-3.862481 2.344944,-3.0546 3.466311,0.04321 6.932621,0.08643 10.398932,0.129638"
+         id="path36"
+         sodipodi:nodetypes="ccc"
+         inkstitch:ties="3"
+         inkstitch:running_stitch_length_mm="2"
+         style="stroke-width:0.945;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0" />
+      <path
+         id="path37"
+         d="m 29.899819,34.990023 c 1.9782,-0.5378 3.2597,-0.9633 3.6591,-4.9355 m -5.2016,5.0599 c -3.0503,0.0272 -6.0626,-0.9636 -6.0862,-4.8809"
+         sodipodi:nodetypes="cccc"
+         inkstitch:zigzag_underlay="True"
+         inkstitch:center_walk_underlay="False"
+         inkstitch:contour_underlay="False"
+         inkstitch:satin_column="True"
+         inkstitch:pull_compensation_mm="0.2"
+         inkstitch:zigzag_spacing_mm="0.3"
+         style="stroke-width:0.944882"
+         inkstitch:max_stitch_length_mm="6"
+         inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+         inkstitch:reverse_rails="none" />
+      <path
+         id="path38"
+         d="m 29.494119,23.672023 c 3.5693,0.4064 4.4287,2.763 4.0648,6.3825 m -5.2418,-6.6304 c -4.1475,0.712 -6.0751,1.9803 -6.046,6.8094"
+         inkstitch:satin_column="True"
+         inkstitch:pull_compensation_mm="0.2"
+         inkstitch:zigzag_spacing_mm="0.3"
+         inkstitch:ties="2"
+         inkstitch:force_lock_stitches="True"
+         inkstitch:zigzag_underlay="True"
+         inkstitch:zigzag_underlay_inset_mm="0.1"
+         style="stroke-width:0.944882"
+         inkstitch:max_stitch_length_mm="6"
+         inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+         inkstitch:reverse_rails="none" />
+      <path
+         d="M 17.42055,30.318421 C 15.813496,28.601152 14.206443,26.883883 12.599389,25.166614"
+         id="path39"
+         sodipodi:nodetypes="cc"
+         inkstitch:ties="3"
+         inkstitch:running_stitch_length_mm="2"
+         style="stroke-width:0.945;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0" />
+      <path
+         d="m 13.096509,23.282911 c -4.1475271,0.711947 -6.0751141,1.980308 -6.0460381,6.809405 0.02359,3.917235 3.0359321,4.908078 6.0861931,4.880862 m 1.136824,-11.442334 c 3.569269,0.406338 4.321841,2.753768 4.064785,6.382412 -0.272407,3.845343 -1.480787,4.197612 -3.659056,4.935577"
+         id="path40"
+         sodipodi:nodetypes="csccsc"
+         inkstitch:satin_column="True"
+         inkstitch:ties="2"
+         inkstitch:force_lock_stitches="True"
+         inkstitch:zigzag_spacing_mm="0.3"
+         inkstitch:pull_compensation_mm="0.2"
+         inkstitch:zigzag_underlay="True"
+         style="stroke-width:0.944882"
+         inkstitch:max_stitch_length_mm="6"
+         inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+         inkstitch:reverse_rails="none" />
+    </g>
+    <path
+       style="stroke-width:0.945;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0"
+       d="m 41.729948,15.642162 c 5.141162,-0.328485 10.324949,0.515554 15.45802,0.647328 0.858008,0.154578 1.63767,0.590842 2.334794,1.096873"
+       id="path41" />
+    <path
+       id="path15"
+       d="m 30,61.239669 0.247934,13.264463 M 2.10744,49.8347 17.7273,49.7107 M 60.8802,20.5 c -1,1 -1.5469,1.5 -2.8802,1.5 H 57 C 54.3333,21.3333 52.1667,20.8333 50.5,20.5 48.8333,20.1667 47,20 45,20 c -6.6667,0 -12.1667,1.5 -16.5,4.5 -4.3333,3 -7.6667,7 -10,12 C 16.1667,41.5 15,47 15,53 c 0,4 0.8333,7.3333 2.5,10 1.6667,2.6667 3.8333,4 6.5,4 3.3333,0 6.1667,-1.3333 8.5,-4 2.3333,-2.6667 6.1928,-8.5689 7.8595,-14.2355 M 62.3802,17 C 62.3802,15.6667 62.3333,14.3333 61,13 59,11.6667 56.128099,10.670832 53.128099,11.004132 50.128099,10.670832 48,11 46,11 37.3333,11 29.8333,13 23.5,17 17.1667,21 12.3333,26.3333 9,33 5.66667,39.6667 4,46.6667 4,54 c 0,4.6667 0.83333,8.5 2.5,11.5 1.66667,3 3.8333,5.3333 6.5,7 2,1.6667 5,2.5 9,2.5 6.6667,0.6667 11.9614,-5.4793 16.6281,-13.4793"
+       inkstitch:satin_column="True"
+       inkstitch:pull_compensation_mm="0.2"
+       inkstitch:zigzag_spacing_mm="0.3"
+       inkstitch:ties="0"
+       inkstitch:force_lock_stitches="True"
+       inkstitch:zigzag_underlay="True"
+       inkstitch:zigzag_underlay_inset_mm="0.1"
+       style="stroke-width:0.944882"
+       inkstitch:max_stitch_length_mm="6"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+       inkstitch:reverse_rails="none" />
+    <path
+       d="M 35.976420741098835, 61.852528428417074 L 48.37082453175352, 23.67352386458151"
+       style="stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1;fill:none"
+       transform="translate(2.49826, 0.500265)"
+       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_tolerance_mm="2.0"
+       id="path42" />
+    <path
+       id="path25"
+       inkscape:label="Auto-remplissage satin 6"
+       d="m 51.2397,24.2479 1.9938,0.2113 0.6608,0.2728 0.4755,0.392 0.3193,0.5169 0.1921,0.6478 L 55,28 v 1 L 53.125,36.5 51.5,45 50.375,53 50.0938,56.25 50,59 50.25,62.375 50.5625,63.5938 51,64.5 51.5625,65.1562 52.25,65.625 53.0625,65.9062 54,66 l 1.0312,-0.0938 1.0313,-0.3437 2.375,-1.125 1.292,-1.167 L 64,59 64.5625,58.5625 65.25,58.25 67,58 M 50,24 47.375,24.25 46.3438,24.5625 45.5,25 44.8438,25.5625 44.375,26.25 44.0938,27.0625 44,28 l -1.3835,6.9642 -1.1816,6.637 -1.9432,10.7583 -0.8636,11.1446 v 1.1157 l 0.6831,2.2782 1.0028,1.9119 1.2529,1.6619 L 43,72 44.625,73.3125 46.5,74.25 48.625,74.8125 51,75 53.4062,74.8438 55.625,74.375 57.6563,73.5938 59.75,72.4375 61.4051,71.1248 63.125,69.625 67,66 68.3868,64.0945 68.8326,63.2229 69,62 68.875,60.25 68.5,59 M 36.4463,46.4876 H 52.686 m 1.5805,13.6395 -8.251,16.7376"
        inkstitch:ties="2"
        inkstitch:force_lock_stitches="True"
        inkstitch:satin_column="True"
