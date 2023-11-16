@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2023-11-10 01:06+0000\n"
-"PO-Revision-Date: 2023-11-15 01:09\n"
+"PO-Revision-Date: 2023-11-16 01:08\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -1293,7 +1293,7 @@ msgstr "Cet objet est paramétré à \"Remplissage Guidé\", mais il n'y a aucun
 
 #: lib/elements/fill_stitch.py:55
 msgid "* Create a stroke object"
-msgstr "Créez une ligne-guide (objet de trait/contour)"
+msgstr "* Créez un trait (objet avec couleur de contour, mais pas de remplissage)"
 
 #: lib/elements/fill_stitch.py:56
 msgid "* Select this object and run Extensions > Ink/Stitch > Edit > Selection to guide line"
@@ -1703,11 +1703,11 @@ msgstr "Colonne satin: L'objet a trop peu de sous-chemins. Une colonne satin doi
 
 #: lib/elements/satin_column.py:34
 msgid "* Add another subpath (select two rails and do Path > Combine)"
-msgstr "Ajouter un autre sous-chemin (sélectionner deux rails et faire Chemin>Combiner)"
+msgstr "* Ajouter un autre sous-chemin (sélectionner deux rails et faire Chemin>Combiner)"
 
 #: lib/elements/satin_column.py:35
 msgid "* Convert to running stitch or simple satin (Params extension)"
-msgstr "Convertir en point droit ou satin simple (Params extension)"
+msgstr "* Convertir en point droit ou satin simple (Params extension)"
 
 #: lib/elements/satin_column.py:40
 msgid "Not stitchable satin column"
