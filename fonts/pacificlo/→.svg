@@ -6,7 +6,7 @@
    width="75"
    height="75"
    viewBox="0 0 75 75"
-   inkscape:version="1.3-alpha (95f74fb, 2023-03-31)"
+   inkscape:version="1.3.1 (5ab75fa9, 2023-11-03)"
    H="124"
    L="120"
    Y0="-36"
@@ -33,13 +33,13 @@
      inkscape:window-height="1017"
      id="namedview9654"
      showgrid="true"
-     inkscape:zoom="11.313708"
-     inkscape:cx="14.849243"
-     inkscape:cy="31.422059"
+     inkscape:zoom="4.9531248"
+     inkscape:cx="30.485806"
+     inkscape:cy="4.9463725"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g14198"
+     inkscape:current-layer="g25"
      inkscape:document-units="px"
      inkscape:document-rotation="0"
      inkscape:snap-global="false"
@@ -88,7 +88,10 @@
        id="grid18714"
        originx="-2.498264"
        originy="-40.583028"
-       visible="true" />
+       visible="true"
+       spacingy="1"
+       spacingx="1"
+       units="px" />
   </sodipodi:namedview>
   <metadata
      id="metadata6143"
@@ -107,9 +110,9 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
   </cc:Work>
 </rdf:RDF>
 <inkstitch:collapse_len_mm
-   id="collapse_len_mm2555">3</inkstitch:collapse_len_mm>
+   id="collapse_len_mm2555">3.0</inkstitch:collapse_len_mm>
 <inkstitch:min_stitch_len_mm
-   id="min_stitch_len_mm1841">0</inkstitch:min_stitch_len_mm>
+   id="min_stitch_len_mm1841">0.5</inkstitch:min_stitch_len_mm>
 <inkstitch:inkstitch_svg_version>1</inkstitch:inkstitch_svg_version>
 </metadata>
   <defs
@@ -159,8 +162,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
          inkscape:connector-curvature="0"
          style="display:inline;opacity:1;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:0.944882;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
          d="m -3.0312502,1.577739 c 0,0 0.25,-3.6875002 0.25,-3.6875002 0,0 1.0312501,3.8437502 1.0312501,3.8437502 0,0 0.34375,-3.6250002 0.34375,-3.6250002 0,0 0.96874997,3.5625002 0.96874997,3.5625002 0,0 0.28125,-3.3125002 0.28125,-3.3125002 0,0 0.9375001,3.3125002 0.9375001,3.3125002 0,0 0.21875,-3.0937502 0.21875,-3.0937502 0,0 1.03125013,2.9687502 1.03125013,2.9687502 0,0 0.0625,-2.7187501 0.0625,-2.7187501 0,0 0.96875,2.4687501 0.96875,2.4687501 0,0 0.15625,-2.18750023 0.15625,-2.18750023"
-         id="path31975"
-          />
+         id="path31975" />
     </symbol>
     <symbol
        id="inkstitch_satin_end"
@@ -181,8 +183,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
          style="display:inline;opacity:1;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:0.944882;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
          d="m -3.2964153,1.5777408 0.25,-3.6875001 1.0312501,3.8437501 0.34375,-3.6250001 0.9687501,3.5625001 0.28125,-3.3125001 0.9375,3.3125001 0.21875,-3.0937501 1.0312499,2.9687501 0.0625,-2.7187501 0.96875,2.4687501 0.15625,-2.1875"
          id="path31975-0-2"
-         inkscape:connector-curvature="0"
-          />
+         inkscape:connector-curvature="0" />
     </symbol>
   </defs>
   <g
@@ -190,8 +191,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-!"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g14178"
-     transform="translate(-2.49826,-0.500265)"
-     >
+     transform="translate(-2.49826,-0.500265)">
     <path
        id="autosatinrun263"
        d="M 8.76652,75.0594 C 8.8666628,70.680305 8.9072025,66.187948 10.480309,62.03433"
@@ -236,10 +236,9 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-&quot;"
-     style="display:inline;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g14198"
-     transform="translate(-2.49826,-0.500291)"
-     >
+     transform="translate(-2.49826,-0.500291)">
     <path
        id="autosatin261"
        d="M 12.0865,36.9446 10.7201,36.6185 9.5,36 8.98506,35.4591 8.83517,34.8076 9,33 10,19 10.3281,17.3594 10.8125,15.9375 11.387,14.8586 M 13,37 14.75,36.75 15.4375,36.4375 16,36 17,34.75 18,33 21,19 21.75,17.25 22,16 21.9881,15.9202 M 8.50281,24.8948 20.6873,24.7195"
@@ -307,8 +306,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-&amp;"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g14270"
-     transform="translate(-2.49827,-0.500365)"
-     >
+     transform="translate(-2.49827,-0.500365)">
     <path
        id="autosatinrun244"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -435,8 +433,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-'"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g14202"
-     transform="translate(-2.49826,-0.500291)"
-     >
+     transform="translate(-2.49826,-0.500291)">
     <path
        id="autosatinrun233-4"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -489,8 +486,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-‘"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g4"
-     transform="translate(-2.49826,-0.500291)"
-     >
+     transform="translate(-2.49826,-0.500291)">
     <path
        id="path1"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -543,8 +539,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-’"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g1672"
-     transform="translate(-2.49826,-0.500291)"
-     >
+     transform="translate(-2.49826,-0.500291)">
     <path
        id="path1664"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -597,8 +592,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-("
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g14234"
-     transform="translate(-2.49826,-0.500265)"
-     >
+     transform="translate(-2.49826,-0.500265)">
     <path
        id="autosatinrun249"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -651,8 +645,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-)"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g14238"
-     transform="translate(-2.49826,-0.500265)"
-     >
+     transform="translate(-2.49826,-0.500265)">
     <path
        id="autosatinrun251"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -705,8 +698,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-*"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g14158"
-     transform="translate(-2.49826,-0.500265)"
-     >
+     transform="translate(-2.49826,-0.500265)">
     <path
        id="path3421"
        d="m 8.9752067,26.396694 c -1.1083323,-0.184722 1.1603253,-5.009354 3.1271443,-5.249867 2.672197,-0.326769 7.996823,-1.130298 7.996823,-1.130298 M 9.1404959,27.07438 c -0.779231,0.935077 2.2367511,2.008849 4.3452281,1.259688 4.173375,-1.482838 7.478799,-3.528586 7.249813,-3.557209"
@@ -783,8 +775,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-+"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g14246"
-     transform="translate(-2.49826,-0.500265)"
-     >
+     transform="translate(-2.49826,-0.500265)">
     <path
        id="autosatin281"
        d="m 23.28536,75.1427 -0.8012,-0.221 -0.682,-0.3823 -1.0216,-1.0956 -0.4604,-0.9995 m 3.6798,2.5557 1.875,-0.25 1.625,-0.75 0.6563,-0.5625 0.1099,-0.1613 m 0.3361,0.1238 -8.6327,-0.906"
@@ -898,8 +889,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-,"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g14174"
-     transform="translate(-2.49826,-0.500291)"
-     >
+     transform="translate(-2.49826,-0.500291)">
     <path
        id="autosatinrun233"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -952,8 +942,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer--"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g14242"
-     transform="translate(-2.49826,-0.500265)"
-     >
+     transform="translate(-2.49826,-0.500265)">
     <path
        id="autosatinrun253"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -983,8 +972,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-."
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g14186"
-     transform="translate(-2.49826,-0.500291)"
-     >
+     transform="translate(-2.49826,-0.500291)">
     <path
        id="path43869-16-5-1-3-6-1-1-6-7-2-6-7-6"
        d="m 8.9435643,61.840961 c -1.7075898,0.292226 -3.5736865,0.66164 -4.7915418,2.005576 -1.1855917,1.367455 -1.3320666,3.279885 -1.3225957,5.010111 0.00995,1.463741 0.6666282,2.981341 1.9698207,3.737396 1.2107865,0.738962 2.666259,0.928777 4.0606808,0.936886 M 10.117914,62.101309 c 1.358908,0.145192 2.797265,0.740824 3.446024,2.019436 0.778656,1.543344 0.653155,3.337272 0.491428,5.005226 -0.152287,1.263895 -0.455873,2.704293 -1.599322,3.446633 -0.623393,0.41019 -1.351891,0.615287 -2.052286,0.850366"
@@ -1005,8 +993,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-/"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g14210"
-     transform="translate(-2.49826,-0.500265)"
-     >
+     transform="translate(-2.49826,-0.500265)">
     <path
        id="autosatin295"
        d="M 2.821488,74.2347 1.810047,73.586 1.26467,72.8233 1.04233,71.9577 1,71 1.07318,70.4145 M 3.47438,74.8826 4.4108,75.2163 5.41322,75.1244 7,74.5 7.84053,73.9747 m 0.24995,0.2287 -7.36445,-3.8653"
@@ -1051,8 +1038,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-0"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g14118"
-     transform="translate(-2.49826,-0.500291)"
-     >
+     transform="translate(-2.49826,-0.500291)">
     <path
        id="autosatinrun200"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -1106,8 +1092,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-1"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g14122"
-     transform="translate(-2.49826,-0.500291)"
-     >
+     transform="translate(-2.49826,-0.500291)">
     <path
        id="autosatinrun202"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -1206,8 +1191,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-2"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g14126"
-     transform="translate(-2.49826,-0.500291)"
-     >
+     transform="translate(-2.49826,-0.500291)">
     <path
        id="autosatin229"
        d="M 3.38017,73.3843 4.69008,75.0671 5.40315,75.7319 6,76 7.125,75.875 8.5,75.5 10,75 11,74.25 12,74 13.1656,74.0448 M 2.87603,71.9917 2.68518,71.3039 2.65008,70.5871 3.00495,69.1881 3.85631,68.037 4.44182,67.6301 5.11983,67.376 8.58678,67.124 11.8599,67.1092 m -0.1652,-0.3462 1.4362,7.6246"
@@ -1290,8 +1274,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-3"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g14130"
-     transform="translate(-2.49826,-0.500291)"
-     >
+     transform="translate(-2.49826,-0.500291)">
     <path
        id="autosatinrun208"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -1376,8 +1359,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-4"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g14134"
-     transform="translate(-2.49826,-0.500291)"
-     >
+     transform="translate(-2.49826,-0.500291)">
     <path
        id="autosatinrun212"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -1499,8 +1481,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-5"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g14138"
-     transform="translate(-2.49826,-0.500291)"
-     >
+     transform="translate(-2.49826,-0.500291)">
     <path
        id="autosatinrun217"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -1600,8 +1581,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-6"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g14142"
-     transform="translate(-2.498264,-0.50029085)"
-     >
+     transform="translate(-2.498264,-0.50029085)">
     <path
        id="autosatinrun221"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -1654,8 +1634,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-7"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g14146"
-     transform="translate(-2.498264,-0.50029085)"
-     >
+     transform="translate(-2.498264,-0.50029085)">
     <path
        id="autosatin247"
        d="M 12.6074,74.9876 11.5149,74.0185 10.3085,72.489 9.42102,70.8442 M 14,75 14.9687,74.9062 15.875,74.625 16.7187,74.1562 17.5,73.5 18.0495,72.7935 m 0.3646,0.176 -9.37158,-2.1343"
@@ -1746,8 +1725,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-8"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g14150"
-     transform="translate(-2.498264,-0.50029085)"
-     >
+     transform="translate(-2.498264,-0.50029085)">
     <path
        id="autosatinrun226"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -1800,8 +1778,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-9"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g14154"
-     transform="translate(-2.498264,-0.50029085)"
-     >
+     transform="translate(-2.498264,-0.50029085)">
     <path
        id="autosatinrun228"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -1854,8 +1831,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-:"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g14170"
-     transform="translate(-2.49826,-0.50026485)"
-     >
+     transform="translate(-2.49826,-0.50026485)">
     <path
        id="autosatinrun261"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -1907,8 +1883,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-;"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g14206"
-     transform="translate(-2.49826,-0.500291)"
-     >
+     transform="translate(-2.49826,-0.500291)">
     <path
        id="autosatinrun241"
        inkscape:label="Points droits pour auto-remplissage satin 7"
@@ -1985,8 +1960,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-="
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g14250"
-     transform="translate(-2.49826,-0.500265)"
-     >
+     transform="translate(-2.49826,-0.500265)">
     <path
        id="autosatin286"
        d="M 5,63 5.09375,62.0313 5.375,61.125 5.84375,60.2813 6.5,59.5 7.28125,58.8438 8.125,58.375 9.03125,58.0938 10,58 h 32.29156 m -37.27101,5.2043 0.21398,0.6162 0.36383,0.5496 1.03949,0.88 1.2257,0.556 L 9,66 h 32.99996 l 0.9375,-0.0937 0.7553,-0.2615 m -17.5245,-8.8193 -0.2449,10.774"
@@ -2061,8 +2035,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-?"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g14190"
-     transform="translate(-2.49826,-0.500291)"
-     >
+     transform="translate(-2.49826,-0.500291)">
     <path
        id="autosatinrun133"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -2115,8 +2088,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-@"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g14266"
-     transform="translate(-2.498264,-0.50029085)"
-     >
+     transform="translate(-2.498264,-0.50029085)">
     <path
        id="autosatinrun238"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -2199,8 +2171,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-A"
      id="g13762"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     transform="translate(-2.49826,-0.500265)"
-     >
+     transform="translate(-2.49826,-0.500265)">
     <path
        id="autosatinrun1"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -2252,8 +2223,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-B"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g13774"
-     transform="translate(-2.49826,-0.500265)"
-     >
+     transform="translate(-2.49826,-0.500265)">
     <path
        id="autosatinrun8"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -2377,8 +2347,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-C"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g13778"
-     transform="translate(-2.49826,-0.50026485)"
-     >
+     transform="translate(-2.49826,-0.50026485)">
     <path
        id="autosatinrun13"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -2409,8 +2378,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-D"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g13782"
-     transform="translate(-2.498264,-0.50029085)"
-     >
+     transform="translate(-2.498264,-0.50029085)">
     <path
        id="autosatinrun15"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -2465,8 +2433,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-E"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g13786"
-     transform="translate(-2.49826,-0.50026485)"
-     >
+     transform="translate(-2.49826,-0.500265)">
     <path
        id="autosatinrun17"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -2536,8 +2503,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-F"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g13794"
-     transform="translate(-2.498264,-0.50029085)"
-     >
+     transform="translate(-2.498264,-0.50029085)">
     <path
        id="autosatinrun18"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -2705,8 +2671,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-G"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g13798"
-     transform="translate(-2.49826,-0.50026485)"
-     >
+     transform="translate(-2.49826,-0.50026485)">
     <path
        id="autosatinrun27"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -2800,8 +2765,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-H"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g13802"
-     transform="translate(-2.49826,-0.50026485)"
-     >
+     transform="translate(-2.49826,-0.50026485)">
     <path
        id="autosatin34"
        d="M 14.2402,75.8099 12.8226,75.215 11.81,74.215 11.2025,72.81 11,71 v -3 l 0.1445,-1.9679 0.3867,-2.1317 1.2188,-4.5167 1.3437,-4.4586 0.543,-2.0589 L 15,51 m 1,25 0.9904,-0.1329 0.9587,-0.3852 0.9086,-0.6175 0.8399,-0.8294 0.7527,-1.0213 0.647,-1.1931 L 21.62,70.476 22,69 24,59.1 26,50.7 M 9.04959,64.2149 26.405,64.0909"
@@ -2892,8 +2856,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-I"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g13806"
-     transform="translate(-2.498264,-0.50029085)"
-     >
+     transform="translate(-2.498264,-0.50029085)">
     <path
        id="autosatin39"
        d="M -0.895054,71.8337 -0.592638,70.8224 -0.0926563,69.9297 0.60489,69.1556 1.5,68.5 2.84376,67.8413 4.37502,67.3684 6.09377,67.0863 8,67 16.9147,67.059 M -1,73 -0.9375,73.9062 -0.75,74.625 -0.4375,75.1563 0,75.5 1.25,75.875 3,76 H 6 L 8.76319,75.8438 11.2339,75.5 13.5877,75.1562 16,75 h 1.0435 m -1.9663,-9.6072 0.3506,11.3955"
@@ -2996,8 +2959,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-J"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g13810"
-     transform="translate(-2.49826,-0.50026485)"
-     >
+     transform="translate(-2.49826,-0.50026485)">
     <path
        id="autosatinrun38"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -3096,8 +3058,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-K"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g13814"
-     transform="translate(-2.49826,-0.50026485)"
-     >
+     transform="translate(-2.49826,-0.50026485)">
     <path
        id="autosatinrun42"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -3263,8 +3224,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-L"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g13818"
-     transform="translate(-2.49826,-0.50026485)"
-     >
+     transform="translate(-2.49826,-0.50026485)">
     <path
        id="autosatin57"
        d="m -3,69 0.15625,1.4062 0.46875,1.2188 0.78125,1.0312 L -0.5,73.5 0.84375,74.1562 2.375,74.625 4.09375,74.9062 6,75 7.9375,74.8906 9.75,74.5625 11.4375,74.0156 13,73.25 14.4375,72.2656 15.5569,71.2395 M -2.8748,67.5406 -2.46258,66.0955 -1.76271,64.7737 -0.775182,63.5752 0.5,62.5 2.40625,61.4062 4.625,60.625 7.15625,60.1562 10,60 l 4.8969,0.2195 m -17.89294,8.9626 0.15576,-1.8205"
@@ -3321,8 +3281,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-M"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g13822"
-     transform="translate(-2.49826,-0.50026485)"
-     >
+     transform="translate(-2.49826,-0.50026485)">
     <path
        id="path21354"
        d="M 12.397755,49.598611 26.539891,49.421835 M 17,75 15.125,74.75 13.5,74 12.8438,73.3125 12.375,72.25 12.0938,70.8125 12,69 12.125,66.625 12.5,63.5 14,53 15.2857,44.9187 M 18.219,74.952 19.9144,74.6284 21,74 21.5,73.3125 22,72.25 23,69 l 0.7587,-8.7019 0.6926,-9.5459 c 0.195499,-3.969433 -0.08973,-2.164306 0.3304,-6.1141 M 8.92562,60.2479 26.405,60.6198"
@@ -3417,8 +3376,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-N"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g13826"
-     transform="translate(-2.49826,-0.50026485)"
-     >
+     transform="translate(-2.49826,-0.50026485)">
     <path
        id="autosatin67"
        inkscape:label="Auto-remplissage satin 1"
@@ -3477,8 +3435,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-O"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g13834"
-     transform="translate(-2.498264,-0.50029085)"
-     >
+     transform="translate(-2.498264,-0.50029085)">
     <path
        id="autosatin108-5-4"
        d="M 28.4741,67 27.0357,66.9219 25.7125,66.6875 24.492,66.2969 23.362,65.75 22.3101,65.0469 21.3241,64.1875 19.5,62 18.6797,60.6875 17.9688,59.25 16.875,56 16.2188,52.25 16,48 16.1562,44.0938 16.625,40.375 17.4062,36.8437 18.5,33.5 19.8438,30.4375 21.375,27.75 23.0937,25.4375 25,23.5 27.125,21.9688 29.5,20.875 32.125,20.2188 35,20 l 2.875,0.2812 1.3437,0.3516 1.2813,0.4922 1.2187,0.6328 1.1563,0.7734 L 45,24.5 45.9375,25.6953 46.75,27.0312 47.4375,28.5078 48,30.125 48.4375,31.8828 48.75,33.7812 49,38 48.8438,42.3125 48.375,46.25 47.5938,49.8125 46.5,53 45.125,55.875 43.5,58.5 41.625,60.875 39.5,63 37.1562,64.75 34.6393,65.9929 M 28,75 25.0313,74.8125 22.125,74.25 19.2813,73.3125 16.5,72 13.9062,70.3438 11.625,68.375 9.65625,66.0938 8,63.5 6.6875,60.5937 5.75,57.375 5.1875,53.8437 5,50 5.25,44.625 6,39.5 7.25,34.625 9,30 11.1875,25.75 13.75,22 15.1719,20.3125 16.6875,18.75 18.2969,17.3125 20,16 21.7813,14.8281 23.625,13.8125 25.5313,12.9531 27.5,12.25 29.5313,11.7031 31.625,11.3125 33.7813,11.0781 36,11 39.4063,11.1875 42.625,11.75 45.6562,12.6875 48.5,14 51.0938,15.6875 53.375,17.75 55.3438,20.1875 57,23 58.3125,26.125 59.25,29.5 59.8125,33.125 60,37 59.75,42.375 59,47.5 57.75,52.375 56,57 l -1.0547,2.1797 -1.1641,2.0391 -1.2734,1.8984 -1.3828,1.7578 -1.4922,1.6172 -1.6016,1.4766 -1.7109,1.3359 L 44.5,70.5 40.3497,72.4824 36.3441,73.9188 36.337,73.9204 M 44.876,41.9008 62.4793,41.6529 M 37.438,8.18182 V 23.3058 M 2.97521,41.405 H 18.3471"
@@ -3523,8 +3480,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-P"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g13854"
-     transform="translate(-2.498264,-0.50029085)"
-     >
+     transform="translate(-2.498264,-0.50029085)">
     <path
        id="autosatinrun57"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -3607,8 +3563,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-Q"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g13858"
-     transform="translate(-2.498264,-0.50029085)"
-     >
+     transform="translate(-2.498264,-0.50029085)">
     <path
        d="m 10.5577,50.2619 c -0.466644,-12.577554 4.459206,-26.8687 16.321124,-32.814976 8.939144,-4.420748 21.555843,-1.116405 25.433582,8.556381 3.661232,9.141754 2.350018,19.714534 -1.236914,28.669384 C 48.603799,60.463631 44.344605,65.518796 38.75,68.5"
        inkstitch:running_stitch_length_mm="2"
@@ -3675,8 +3630,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-R"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g13862"
-     transform="translate(-2.49826,-0.50026485)"
-     >
+     transform="translate(-2.49826,-0.50026485)">
     <path
        d="m 15.74826,71.833 c 8.064874,-5.154256 9.575246,-15.73884 8.5,-24.5"
        id="path160243"
@@ -3759,8 +3713,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-S"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g13866"
-     transform="translate(-2.498264,-0.50029085)"
-     >
+     transform="translate(-2.498264,-0.50029085)">
     <path
        id="autosatinrun67"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -3812,8 +3765,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-T"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g13870"
-     transform="translate(-2.498264,-0.50029085)"
-     >
+     transform="translate(-2.498264,-0.50029085)">
     <path
        id="autosatinrun69"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -3909,8 +3861,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-U"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g13874"
-     transform="translate(-2.49826,-0.50026485)"
-     >
+     transform="translate(-2.49826,-0.50026485)">
     <path
        id="autosatinrun73"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -3961,8 +3912,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-V"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g13882"
-     transform="translate(-2.49826,-0.50026485)"
-     >
+     transform="translate(-2.49826,-0.50026485)">
     <path
        id="autosatinrun76"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -4013,8 +3963,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-W"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g13886"
-     transform="translate(-2.49826,-0.50026485)"
-     >
+     transform="translate(-2.49826,-0.50026485)">
     <path
        id="autosatinrun80"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -4091,8 +4040,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-X"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g13890"
-     transform="translate(-2.49826,-0.50026485)"
-     >
+     transform="translate(-2.49826,-0.50026485)">
     <path
        id="autosatin99"
        d="M -0.561711,73.0519 -0.505193,71.8875 -0.280855,70.5259 0.193483,69.1644 1,68 25.2206,40.3521 M 0.675316,74.6753 2.21266,74.9627 4,75 5.75,74.875 7,74.5 7.46565,74.1525 7.94008,73.613 9.38017,71.976 27.8338,50.5279 M 2.35537,57.8926 16.7355,71.5289"
@@ -4159,8 +4107,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-Y"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g13894"
-     transform="translate(-2.49826,-0.50026485)"
-     >
+     transform="translate(-2.49826,-0.50026485)">
     <path
        id="autosatinrun88"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -4246,8 +4193,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-Z"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g13898"
-     transform="translate(-2.49826,-0.50026485)"
-     >
+     transform="translate(-2.49826,-0.50026485)">
     <path
        id="autosatinrun94"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -4348,8 +4294,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-\"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g14162"
-     transform="translate(-2.49826,-0.50026485)"
-     >
+     transform="translate(-2.49826,-0.50026485)">
     <path
        id="autosatinrun93"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -4379,8 +4324,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-a"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g13915"
-     transform="translate(-2.49826,-0.50026485)"
-     >
+     transform="translate(-2.49826,-0.50026485)">
     <path
        id="autosatinrun104"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -4422,8 +4366,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-b"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g13930"
-     transform="translate(-2.49826,-0.50026485)"
-     >
+     transform="translate(-2.49826,-0.50026485)">
     <path
        id="autosatinrun110"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -4467,8 +4410,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-c"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g13934"
-     transform="translate(-2.49826,-0.50026485)"
-     >
+     transform="translate(-2.49826,-0.50026485)">
     <path
        d="M 7.1241743,57.633069 C 7.7099051,51.53527 11.608998,44.31053 18.234854,43.549657 c 6.437085,-0.450396 5.503054,7.274963 4.806476,11.396724"
        id="path15129"
@@ -4496,8 +4438,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-d"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g13942"
-     transform="translate(-2.49826,-0.50026485)"
-     >
+     transform="translate(-2.49826,-0.50026485)">
     <path
        id="autosatinrun119"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -4551,8 +4492,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-e"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g13946"
-     transform="translate(-2.49826,-0.50026485)"
-     >
+     transform="translate(-2.49826,-0.50026485)">
     <path
        id="autosatinrun122"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -4581,8 +4521,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-f"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g13966"
-     transform="translate(-2.49826,-0.50026485)"
-     >
+     transform="translate(-2.49826,-0.50026485)">
     <path
        d="M 8.8301489,51.334653 C 11.751738,38.952066 14.420403,26.298522 20.053383,14.807069 21.758745,7.9933206 31.723646,6.672633 31.227708,15.15247 c 0.611501,11.875696 -6.15919,22.682849 -13.553694,31.410828 -0.602866,0.682855 -1.21368,1.358642 -1.827079,2.032033"
        id="autosatinrun124"
@@ -4610,8 +4549,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-g"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g13970"
-     transform="translate(-2.49826,-0.50026485)"
-     >
+     transform="translate(-2.49826,-0.50026485)">
     <path
        id="autosatinrun126"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -4689,8 +4627,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-h"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g13974"
-     transform="translate(-2.49826,-0.50026485)"
-     >
+     transform="translate(-2.49826,-0.50026485)">
     <path
        id="autosatinrun130"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -4761,8 +4698,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-i"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g13978"
-     transform="translate(-2.49826,-0.50026485)"
-     >
+     transform="translate(-2.49826,-0.50026485)">
     <path
        d="M 6.8404771,53.004697 C 7.6553012,48.396012 10.336988,44.53146 13.492357,41.200773"
        id="autosatinrun96-3-3-1-7-1-7-4-7"
@@ -4811,8 +4747,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-j"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g14002"
-     transform="translate(-2.49826,-0.50026485)"
-     >
+     transform="translate(-2.49826,-0.50026485)">
     <path
        d="M 9.9002225,55.923301 C 10.23431,50.983952 11.020904,46.059786 12.361112,41.291346"
        id="autosatinrun96-3-3-1-7-1-7-4-7-0"
@@ -4884,8 +4819,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-k"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g14006"
-     transform="translate(-2.49826,-0.50026485)"
-     >
+     transform="translate(-2.49826,-0.50026485)">
     <path
        id="autosatinrun138"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -4956,8 +4890,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-l"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g14010"
-     transform="translate(-2.49826,-0.50026485)"
-     >
+     transform="translate(-2.49826,-0.50026485)">
     <path
        id="autosatinrun141"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -4986,8 +4919,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-m"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g14014"
-     transform="translate(-2.49826,-0.50026485)"
-     >
+     transform="translate(-2.49826,-0.50026485)">
     <path
        id="autosatinrun143"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -5094,8 +5026,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-n"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g14018"
-     transform="translate(-2.49826,-0.50026485)"
-     >
+     transform="translate(-2.49826,-0.50026485)">
     <path
        id="autosatinrun143-7"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -5165,8 +5096,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-o"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g14026"
-     transform="translate(-2.49826,-0.50026485)"
-     >
+     transform="translate(-2.49826,-0.50026485)">
     <path
        d="M 8.8243063,51.178719 C 10.866505,46.74372 15.334419,43.501427 20.375317,44.119006"
        inkstitch:running_stitch_length_mm="2"
@@ -5234,8 +5164,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-p"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g14054"
-     transform="translate(-2.49826,-0.50026485)"
-     >
+     transform="translate(-2.49826,-0.50026485)">
     <path
        id="path246511"
        d="M 1.2608231,90.610807 13.104862,93.08568 M 5,71.8058 2.25,79.0279 0,85.5 -0.875,88.6562 -1.5,91.625 -1.875,94.4063 -2,97 l 0.125,1.875 0.375,1.625 0.625,1.125 0.40625,0.281 L 0,102 0.484375,101.859 0.9375,101.438 1.35937,100.734 1.75,99.75 2.4375,96.9375 3,93 4.22469,81.1658 4.83994,73.9883 5.30992,66.7397 5.08046,49.9035 M 5.24793,59.6281 1.92794,65.1237 -1.00103,70.564 -3.49251,75.8794 -5.5,81 -7.03125,85.8125 -8.125,90.25 -8.78125,94.3125 -9,98 l 0.125,2.375 0.375,2.125 0.625,1.875 L -7,106 l 1.125,1.312 1.375,0.938 1.625,0.562 L -1,109 0.695313,108.844 2.28125,108.375 3.75781,107.594 5.125,106.5 6.38281,105.094 7.53125,103.375 8.57031,101.344 9.5,99 l 0.8357,-2.671 0.7561,-2.9823 1.2677,-6.714 0.932,-7.4052 L 13.876,71.5 14,63 14.1122,49.8865 M -8.05785,79.8347 1.36364,87.0248 M 3.84298,56.6529 H 15.8678 M -0.123967,99.7934 -4.46281,110.579"
@@ -5336,8 +5265,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-q"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g14058"
-     transform="translate(-2.49826,-0.50026485)"
-     >
+     transform="translate(-2.49826,-0.50026485)">
     <path
        id="autosatinrun159"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -5391,8 +5319,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g14062"
      transform="translate(-2.49826,-0.50026485)"
-     inkscape:groupmode="layer"
-     >
+     inkscape:groupmode="layer">
     <path
        id="autosatin14"
        d="M 9,75 7.625,74.8125 6.5,74.25 5.625,73.3125 5,72 4.5625,70.3125 4.25,68.25 4.10136,65.1286 v 0 m 5.61954,9.8356 0.6835,-0.2311 0.6223,-0.5553 0.5488,-0.8303 0.4635,-1.0563 0.62276,-2.5944 0.1369,-2.9096 -0.027,-2.3118 v 0 m 0.4345,0.0673 -9.53338,0.7184"
@@ -5454,8 +5381,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-s"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g14066"
-     transform="translate(-2.49826,-0.50026485)"
-     >
+     transform="translate(-2.49826,-0.50026485)">
     <path
        id="autosatinrun165"
        inkscape:label="Points droits pour auto-remplissage satin 3"
@@ -5562,8 +5488,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-t"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g14074"
-     transform="translate(-2.49826,-0.50026485)"
-     >
+     transform="translate(-2.49826,-0.50026485)">
     <path
        id="autosatinrun172"
        inkscape:label="Points droits pour auto-remplissage satin 2"
@@ -5684,8 +5609,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-u"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g14078"
-     transform="translate(-2.49826,-0.50026485)"
-     >
+     transform="translate(-2.49826,-0.50026485)">
     <path
        id="autosatinrun176"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -5755,8 +5679,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-v"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g14098"
-     transform="translate(-2.49826,-0.50026485)"
-     >
+     transform="translate(-2.49826,-0.50026485)">
     <path
        id="autosatinrun179"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -5810,8 +5733,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-w"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g14102"
-     transform="translate(-2.49826,-0.50026485)"
-     >
+     transform="translate(-2.49826,-0.50026485)">
     <path
        id="autosatinrun183"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -5887,8 +5809,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-x"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g14106"
-     transform="translate(-2.49826,-0.50026485)"
-     >
+     transform="translate(-2.49826,-0.50026485)">
     <path
        id="autosatin210"
        d="M 5.45455,75.8678 11.6598,65.1199 M 8.27893,58 c -2,0 -3.9456,0.8333 -5.27893,2.5 -1.33333,1.6667 -2,3.8333 -2,6.5 0,2.6667 0.83333,4.6667 2.5,6 1.66667,1.3333 3.83333,2 6.5,2 4,0 6.3416,-4.27 9.0083,-7.6033 M 9.1862468,58.083588 C 10.567237,58.270888 11,58.8921 11,60 c 0,0.6667 -0.3333,1.3333 -1,2 v 3 c 0,1.3333 0.6667,2 2,2 0.6667,0 1.5,-0.5 2.5,-1.5 1,-1 2.5771,-3.3058 3.2438,-5.3058"
@@ -5973,8 +5894,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-y"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g14110"
-     transform="translate(-2.49826,-0.50026485)"
-     >
+     transform="translate(-2.49826,-0.50026485)">
     <path
        id="autosatinrun192"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -6048,8 +5968,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-z"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g14114"
-     transform="translate(-2.49826,-0.50026485)"
-     >
+     transform="translate(-2.49826,-0.50026485)">
     <path
        id="autosatinrun196"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -6125,8 +6044,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-¡"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g14182"
-     transform="translate(-2.49826,-0.500265)"
-     >
+     transform="translate(-2.49826,-0.500265)">
     <path
        id="autosatinrun230-2"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -6203,8 +6121,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-·"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g14166"
-     transform="translate(-2.49826,-0.500291)"
-     >
+     transform="translate(-2.49826,-0.500291)">
     <path
        d="m 9.99736,51.0515 c -4.14755,0.7119 -6.07514,1.9803 -6.04606,6.8094 0.02359,3.9172 3.03596,4.9081 6.0862,4.8808 m 1.1369,-11.4423 c 3.5692,0.4063 4.3218,2.7538 4.0647,6.3824 -0.2724,3.8454 -1.4807,4.1976 -3.659,4.9356"
        id="path43869-16-5-1-3-6-1-1-6-7-2-6-7"
@@ -6225,8 +6142,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-¿"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g14194"
-     transform="translate(-2.49826,-0.500291)"
-     >
+     transform="translate(-2.49826,-0.500291)">
     <path
        id="autosatinrun230"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -6301,8 +6217,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-Æ"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g13770"
-     transform="translate(-2.49826,-0.50026485)"
-     >
+     transform="translate(-2.49826,-0.50026485)">
     <path
        id="autosatinrun4"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -6394,8 +6309,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-È"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g13790"
-     transform="translate(-2.49826,-0.500265)"
-     >
+     transform="translate(-2.49826,-0.500265)">
     <path
        d="M 15.11811,71.811024 C 8.9762729,67.097314 9.2206353,58.232166 12.60613,51.956939 c 2.095341,-5.989148 8.938326,-10.330616 7.185022,-17.307281 -0.678623,-6.095726 -0.217728,-14.235357 6.31834,-16.984286 3.064946,-1.314056 6.357207,-1.68332 9.667989,-1.604136 L 37.009585,5.773781 18.379304,-7.3105684"
        id="path50006"
@@ -6443,6 +6357,14 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
+       d="M 20.376894,42.9301 33.732743,42.500732"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
+       transform="translate(2.49826,0.500265)"
+       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_tolerance_mm="2.0"
+       id="path12"
+       inkscape:label="path12" />
+    <path
        id="autosatin18-8"
        d="M 36.5,42.7355 36.5375,40.9334 36.3652,39.2773 36.181,38.6435 35.8535,38.1465 35.3565,37.819 34.7227,37.6348 33,37.5 29.8252,37.3721 27.2324,37.0014 26.0835,36.6611 m 6.5273,9.913 -9.1384,-3.7164 m 3.6764,-8.6428 -5.5786,13.5124"
        inkstitch:satin_column="True"
@@ -6476,11 +6398,347 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
   </g>
   <g
      inkscape:groupmode="layer"
+     inkscape:label="GlyphLayer-É"
+     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
+     id="g10"
+     transform="translate(-2.49826,-0.500265)">
+    <path
+       d="M 15.11811,71.811024 C 8.9762729,67.097314 9.2206353,58.232166 12.60613,51.956939 14.701471,45.967791 21.544456,41.626323 19.791152,34.649658 19.112529,28.553932 19.573424,20.414301 26.109492,17.665372 M 22.867449,2.503412 41.62544,-10.757714"
+       id="path5"
+       sodipodi:nodetypes="cscccc"
+       inkstitch:ties="3"
+       inkstitch:running_stitch_length_mm="2"
+       style="stroke-width:0.945;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0"
+       inkscape:label="path5" />
+    <path
+       id="path6"
+       d="m 42.5,-11.5 c -1,-1 -2.1667,-1.5 -3.5,-1.5 -1.3333,0 -1.7197,0.842 -3,2 L 23,0 21,2 M 37.8017,0.10744 30.8595,-8.10537 m 12.2734,-2.64676 C 43.711,-9.93109 44,-9.01371 44,-8 c 0,2 -1.3333,3.66667 -4,5 L 26,5 H 24 C 23.3333,5 22.6667,4.66667 22,4"
+       inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
+       inkstitch:satin_column="True"
+       inkstitch:pull_compensation_mm="0.2"
+       inkstitch:zigzag_spacing_mm="0.3"
+       inkstitch:zigzag_underlay="True"
+       inkstitch:zigzag_underlay_inset_mm="0.1"
+       style="stroke-width:0.944882"
+       inkscape:label="path9367"
+       inkstitch:max_stitch_length_mm="6"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+       inkstitch:reverse_rails="none" />
+    <path
+       id="path7"
+       inkscape:label="Points droits pour auto-remplissage satin 5"
+       d="m 25.976319,17.32375 c 5.40828,-0.203603 22.385647,1.064446 22.168047,7.380532 -0.170371,3.259107 -0.983627,6.54588 0.01622,9.767256"
+       sodipodi:nodetypes="ccc"
+       inkstitch:ties="3"
+       inkstitch:running_stitch_length_mm="2"
+       style="stroke-width:0.945;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0" />
+    <path
+       id="path8"
+       d="m 47.000004,36.500026 -1.0113,-0.0688 -0.9025,-0.2102 -0.784,-0.3574 -0.6557,-0.5101 -0.4553,-0.5553 -0.2968,-0.5442 -0.7663,-1.3862 -0.0278,-1.9594 0.4524,-2.1311 0.7181,-1.6899 0.2292,-1.0874 -0.1361,-1.2912 -0.4151,-1.0952 -0.7039,-0.9197 -1.0027,-0.7642 -1.2697,-0.6197 -1.462,-0.4475 -1.6567,-0.2712 -1.8538,-0.0913 -2.8176,0.1527 -2.5593,0.4565 -2.3044,0.7579 -2.0531,1.0567 -1.6598,1.3253 -1.1753,1.608 -0.6993,1.9105 -0.2312,2.2324 0.1448,1.7843 0.4341,1.5194 0.7227,1.2699 1.0109,1.0358 1.4141,0.7979 0.8569,0.2538 m 23.8053,-1.0051 1.1431,-1.0272 0.9154,-1.4061 0.6812,-1.6221 0.485,-1.7456 0.2901,-1.8675 0.0964,-1.9875 -0.0731,-1.746 -0.2192,-1.6565 -0.3651,-1.5654 -0.511,-1.4727 -0.6567,-1.3785 -0.8022,-1.2826 -0.9477,-1.1852 -1.093,-1.0861 -1.242,-0.9746 -1.3829,-0.8417 -1.5228,-0.7097 -1.6619,-0.5788 -1.8002,-0.4485 -1.9377,-0.3193 -4.2845,-0.2544 -3.4836,0.1586 -3.3605,0.476 -3.2364,0.7934 -3.1109,1.1111 -2.8689,1.4031 -2.4969,1.6651 -2.1202,1.9268 -1.7386,2.1886 -1.3456,2.3405 -0.9642,2.4123 -0.58024,2.4802 -0.19396,2.5443 0.16442,2.0197 0.49198,1.898 0.8176,1.7693 1.1412,1.6333 1.2032,0.8576 2.3021,1.2021 6.4797,2.9197 1.3722,0.558 m 16.6929,-16.4527 14.2562,-8.4298 m -47.85125,8.6777 17.35535,-0.124 m 10.1653,-18.2231099 -0.2479,15.4959099"
+       inkstitch:satin_column="True"
+       inkstitch:pull_compensation_mm="0.2"
+       inkstitch:zigzag_spacing_mm="0.3"
+       inkstitch:ties="0"
+       inkstitch:force_lock_stitches="True"
+       inkstitch:zigzag_underlay="True"
+       inkstitch:zigzag_underlay_inset_mm="0.1"
+       inkscape:label="Auto-remplissage satin 6"
+       sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+       style="stroke-width:0.944882"
+       inkstitch:max_stitch_length_mm="6"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+       inkstitch:reverse_rails="none" />
+    <path
+       d="M 20.376894,42.9301 33.732743,42.500732"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
+       transform="translate(2.49826,0.500265)"
+       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_tolerance_mm="2.0"
+       id="path11"
+       inkscape:label="path11" />
+    <path
+       id="path9"
+       d="M 36.5,42.7355 36.5375,40.9334 36.3652,39.2773 36.181,38.6435 35.8535,38.1465 35.3565,37.819 34.7227,37.6348 33,37.5 29.8252,37.3721 27.2324,37.0014 26.0835,36.6611 m 6.5273,9.913 -9.1384,-3.7164 m 3.6764,-8.6428 -5.5786,13.5124"
+       inkstitch:satin_column="True"
+       inkstitch:pull_compensation_mm="0.2"
+       inkstitch:zigzag_spacing_mm="0.3"
+       inkstitch:ties="0"
+       inkstitch:force_lock_stitches="True"
+       inkstitch:zigzag_underlay="True"
+       inkstitch:zigzag_underlay_inset_mm="0.1"
+       inkscape:label="Auto-remplissage satin 4"
+       sodipodi:nodetypes="ccccccccccccccc"
+       style="stroke-width:0.944882"
+       inkstitch:max_stitch_length_mm="6"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+       inkstitch:reverse_rails="none" />
+    <path
+       id="path13"
+       inkscape:label="Auto-remplissage satin 9"
+       d="m 17.672804,40.561726 -3.416,1.2605 -3.0866,1.6448 -2.7212,1.9683 -2.32009,2.2307 -2.01696,2.6283 -1.44744,2.7696 -0.87247,2.9041 -0.29204,3.032 0.2298,2.4989 0.68687,2.315 1.14016,2.1215 1.58965,1.9181 1.99419,1.7054 2.3674,1.5043 2.73833,1.3056 3.1071,1.1097 3.4501,0.8864 3.7575,0.6315 4.0654,0.3779 4.3735,0.1257 7.0354,-0.2517 7.0349,-0.7542 3.3268,-0.5644 2.9597,-0.692 0.9231,-0.2924 1.6721,-0.5296 2.2335,-0.9548 1.4322,-0.5911 1.1955,-0.735 0.9471,-0.8815 0.687,-1.0306 0.7875,-2.1025 0.2652,-2.1202 m -29.5,-17.5 -2.8728,0.0927 -2.6812,0.2775 -2.4896,0.461 -2.2982,0.6434 -2.0448,0.7938 -1.7237,0.9072 -1.4063,1.0162 -1.0928,1.1207 -0.8322,1.2159 -0.5902,1.2659 -0.3517,1.3219 -0.1165,1.3838 0.2547,2.1866 0.3214,0.9476 0.4535,0.8546 0.5874,0.765 0.7234,0.6785 1.8627,1.1107 2.5137,0.8447 3.2252,0.6128 3.9299,0.3734 4.6281,0.1261 3.0325,-0.0928 3.1599,-0.2786 3.2873,-0.465 3.4148,-0.6519 4.3537,-1.0887 2.1116,-0.5281 5.4547,-1.8597 0.0898,-0.0352 h 1.0957 l 0.6173,0.0771 0.5999,0.224 1.1363,0.8454 m -27.1304,1.2047 -0.1239,15 m -33.71903505,-20.9504 18.59503505,0.248"
+       inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
+       inkstitch:satin_column="True"
+       inkstitch:pull_compensation_mm="0.2"
+       inkstitch:zigzag_spacing_mm="0.3"
+       inkstitch:zigzag_underlay="True"
+       inkstitch:zigzag_underlay_inset_mm="0.1"
+       style="stroke-width:0.944882"
+       inkstitch:max_stitch_length_mm="6"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+       inkstitch:reverse_rails="none" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="GlyphLayer-Ê"
+     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
+     id="g20"
+     transform="translate(-2.49826,-0.500265)">
+    <path
+       d="M 15.11811,71.811024 C 8.9762729,67.097314 9.2206353,58.232166 12.60613,51.956939 14.701471,45.967791 21.544456,41.626323 19.791152,34.649658 19.112529,28.553932 19.573424,20.414301 26.109492,17.665372"
+       id="path14"
+       sodipodi:nodetypes="cscc"
+       inkstitch:ties="3"
+       inkstitch:running_stitch_length_mm="2"
+       style="stroke-width:0.945;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0"
+       inkscape:label="n" />
+    <g
+       id="g22"
+       inkscape:label="g21"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
+       transform="translate(13.435029,-30.140429)">
+      <path
+         d="m 10.842715,33.82527 c 3.944817,-6.23572 7.889633,-12.47144 11.83445,-18.70716 2.060867,5.03937 4.121734,10.07874 6.182601,15.11811"
+         id="path21"
+         inkstitch:ties="3"
+         inkstitch:running_stitch_length_mm="2"
+         style="stroke-width:0.945;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0" />
+      <path
+         id="path22"
+         inkscape:label="Auto-remplissage satin 4"
+         d="m 31.477973,33.147979 0.316879,-5.249086 c 0,0 -2.137177,-17.370513 -8.307216,-16.685797 l -3.431152,0.380769 C 16.396757,12 5.67909,31.85403 7.5590551,34.015748 m 22.6771649,0 c 0,0 -4.346727,2.309858 -5.23622,-0.01575 C 22.677165,27.926882 22,18 22,18 18.794751,24.290916 18.742498,33.008563 9.6845836,34.940972 M 22.169819,31.921942 31.91705,20.8609"
+         inkstitch:satin_column="True"
+         inkstitch:pull_compensation_mm="0.2"
+         inkstitch:zigzag_spacing_mm="0.3"
+         inkstitch:ties="2"
+         inkstitch:force_lock_stitches="True"
+         inkstitch:zigzag_underlay="True"
+         sodipodi:nodetypes="ccssccscccc"
+         style="stroke-width:0.944882"
+         inkstitch:max_stitch_length_mm="6"
+         inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+         inkstitch:reverse_rails="none" />
+    </g>
+    <path
+       id="path16"
+       inkscape:label="Points droits pour auto-remplissage satin 5"
+       d="m 25.976319,17.32375 c 5.40828,-0.203603 22.385647,1.064446 22.168047,7.380532 -0.170371,3.259107 -0.983627,6.54588 0.01622,9.767256"
+       sodipodi:nodetypes="ccc"
+       inkstitch:ties="3"
+       inkstitch:running_stitch_length_mm="2"
+       style="stroke-width:0.945;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0" />
+    <path
+       id="path17"
+       d="m 47.000004,36.500026 -1.0113,-0.0688 -0.9025,-0.2102 -0.784,-0.3574 -0.6557,-0.5101 -0.4553,-0.5553 -0.2968,-0.5442 -0.7663,-1.3862 -0.0278,-1.9594 0.4524,-2.1311 0.7181,-1.6899 0.2292,-1.0874 -0.1361,-1.2912 -0.4151,-1.0952 -0.7039,-0.9197 -1.0027,-0.7642 -1.2697,-0.6197 -1.462,-0.4475 -1.6567,-0.2712 -1.8538,-0.0913 -2.8176,0.1527 -2.5593,0.4565 -2.3044,0.7579 -2.0531,1.0567 -1.6598,1.3253 -1.1753,1.608 -0.6993,1.9105 -0.2312,2.2324 0.1448,1.7843 0.4341,1.5194 0.7227,1.2699 1.0109,1.0358 1.4141,0.7979 0.8569,0.2538 m 23.8053,-1.0051 1.1431,-1.0272 0.9154,-1.4061 0.6812,-1.6221 0.485,-1.7456 0.2901,-1.8675 0.0964,-1.9875 -0.0731,-1.746 -0.2192,-1.6565 -0.3651,-1.5654 -0.511,-1.4727 -0.6567,-1.3785 -0.8022,-1.2826 -0.9477,-1.1852 -1.093,-1.0861 -1.242,-0.9746 -1.3829,-0.8417 -1.5228,-0.7097 -1.6619,-0.5788 -1.8002,-0.4485 -1.9377,-0.3193 -4.2845,-0.2544 -3.4836,0.1586 -3.3605,0.476 -3.2364,0.7934 -3.1109,1.1111 -2.8689,1.4031 -2.4969,1.6651 -2.1202,1.9268 -1.7386,2.1886 -1.3456,2.3405 -0.9642,2.4123 -0.58024,2.4802 -0.19396,2.5443 0.16442,2.0197 0.49198,1.898 0.8176,1.7693 1.1412,1.6333 1.2032,0.8576 2.3021,1.2021 6.4797,2.9197 1.3722,0.558 m 16.6929,-16.4527 14.2562,-8.4298 m -47.85125,8.6777 17.35535,-0.124 m 10.1653,-18.2231099 -0.2479,15.4959099"
+       inkstitch:satin_column="True"
+       inkstitch:pull_compensation_mm="0.2"
+       inkstitch:zigzag_spacing_mm="0.3"
+       inkstitch:ties="0"
+       inkstitch:force_lock_stitches="True"
+       inkstitch:zigzag_underlay="True"
+       inkstitch:zigzag_underlay_inset_mm="0.1"
+       inkscape:label="Auto-remplissage satin 6"
+       sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+       style="stroke-width:0.944882"
+       inkstitch:max_stitch_length_mm="6"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+       inkstitch:reverse_rails="none" />
+    <path
+       d="M 20.376894,42.9301 33.732743,42.500732"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
+       transform="translate(2.49826,0.500265)"
+       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_tolerance_mm="2.0"
+       id="path18"
+       inkscape:label="path11" />
+    <path
+       id="path19"
+       d="M 36.5,42.7355 36.5375,40.9334 36.3652,39.2773 36.181,38.6435 35.8535,38.1465 35.3565,37.819 34.7227,37.6348 33,37.5 29.8252,37.3721 27.2324,37.0014 26.0835,36.6611 m 6.5273,9.913 -9.1384,-3.7164 m 3.6764,-8.6428 -5.5786,13.5124"
+       inkstitch:satin_column="True"
+       inkstitch:pull_compensation_mm="0.2"
+       inkstitch:zigzag_spacing_mm="0.3"
+       inkstitch:ties="0"
+       inkstitch:force_lock_stitches="True"
+       inkstitch:zigzag_underlay="True"
+       inkstitch:zigzag_underlay_inset_mm="0.1"
+       inkscape:label="Auto-remplissage satin 4"
+       sodipodi:nodetypes="ccccccccccccccc"
+       style="stroke-width:0.944882"
+       inkstitch:max_stitch_length_mm="6"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+       inkstitch:reverse_rails="none" />
+    <path
+       id="path20"
+       inkscape:label="Auto-remplissage satin 9"
+       d="m 17.672804,40.561726 -3.416,1.2605 -3.0866,1.6448 -2.7212,1.9683 -2.32009,2.2307 -2.01696,2.6283 -1.44744,2.7696 -0.87247,2.9041 -0.29204,3.032 0.2298,2.4989 0.68687,2.315 1.14016,2.1215 1.58965,1.9181 1.99419,1.7054 2.3674,1.5043 2.73833,1.3056 3.1071,1.1097 3.4501,0.8864 3.7575,0.6315 4.0654,0.3779 4.3735,0.1257 7.0354,-0.2517 7.0349,-0.7542 3.3268,-0.5644 2.9597,-0.692 0.9231,-0.2924 1.6721,-0.5296 2.2335,-0.9548 1.4322,-0.5911 1.1955,-0.735 0.9471,-0.8815 0.687,-1.0306 0.7875,-2.1025 0.2652,-2.1202 m -29.5,-17.5 -2.8728,0.0927 -2.6812,0.2775 -2.4896,0.461 -2.2982,0.6434 -2.0448,0.7938 -1.7237,0.9072 -1.4063,1.0162 -1.0928,1.1207 -0.8322,1.2159 -0.5902,1.2659 -0.3517,1.3219 -0.1165,1.3838 0.2547,2.1866 0.3214,0.9476 0.4535,0.8546 0.5874,0.765 0.7234,0.6785 1.8627,1.1107 2.5137,0.8447 3.2252,0.6128 3.9299,0.3734 4.6281,0.1261 3.0325,-0.0928 3.1599,-0.2786 3.2873,-0.465 3.4148,-0.6519 4.3537,-1.0887 2.1116,-0.5281 5.4547,-1.8597 0.0898,-0.0352 h 1.0957 l 0.6173,0.0771 0.5999,0.224 1.1363,0.8454 m -27.1304,1.2047 -0.1239,15 m -33.71903505,-20.9504 18.59503505,0.248"
+       inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
+       inkstitch:satin_column="True"
+       inkstitch:pull_compensation_mm="0.2"
+       inkstitch:zigzag_spacing_mm="0.3"
+       inkstitch:zigzag_underlay="True"
+       inkstitch:zigzag_underlay_inset_mm="0.1"
+       style="stroke-width:0.944882"
+       inkstitch:max_stitch_length_mm="6"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+       inkstitch:reverse_rails="none" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="GlyphLayer-Ë"
+     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
+     id="g30"
+     transform="translate(-2.49826,-0.500265)">
+    <path
+       d="M 15.11811,71.811024 C 8.9762729,67.097314 9.2206353,58.232166 12.60613,51.956939 14.701471,45.967791 21.544456,41.626323 19.791152,34.649658 19.112529,28.553932 19.573424,20.414301 26.109492,17.665372"
+       id="path23"
+       sodipodi:nodetypes="cscc"
+       inkstitch:ties="3"
+       inkstitch:running_stitch_length_mm="2"
+       style="stroke-width:0.945;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0"
+       inkscape:label="n" />
+    <g
+       id="g35"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
+       transform="translate(13.346641,-32.615302)">
+      <path
+         d="m 14.707487,33.361607 c -0.387367,-2.155284 -0.314065,-3.862481 2.344944,-3.0546 3.466311,0.04321 6.932621,0.08643 10.398932,0.129638"
+         id="path31"
+         sodipodi:nodetypes="ccc"
+         inkstitch:ties="3"
+         inkstitch:running_stitch_length_mm="2"
+         style="stroke-width:0.945;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0" />
+      <path
+         id="path32"
+         d="m 29.899819,34.990023 c 1.9782,-0.5378 3.2597,-0.9633 3.6591,-4.9355 m -5.2016,5.0599 c -3.0503,0.0272 -6.0626,-0.9636 -6.0862,-4.8809"
+         sodipodi:nodetypes="cccc"
+         inkstitch:zigzag_underlay="True"
+         inkstitch:center_walk_underlay="False"
+         inkstitch:contour_underlay="False"
+         inkstitch:satin_column="True"
+         inkstitch:pull_compensation_mm="0.2"
+         inkstitch:zigzag_spacing_mm="0.3"
+         style="stroke-width:0.944882"
+         inkstitch:max_stitch_length_mm="6"
+         inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+         inkstitch:reverse_rails="none" />
+      <path
+         id="path33"
+         d="m 29.494119,23.672023 c 3.5693,0.4064 4.4287,2.763 4.0648,6.3825 m -5.2418,-6.6304 c -4.1475,0.712 -6.0751,1.9803 -6.046,6.8094"
+         inkstitch:satin_column="True"
+         inkstitch:pull_compensation_mm="0.2"
+         inkstitch:zigzag_spacing_mm="0.3"
+         inkstitch:ties="2"
+         inkstitch:force_lock_stitches="True"
+         inkstitch:zigzag_underlay="True"
+         inkstitch:zigzag_underlay_inset_mm="0.1"
+         style="stroke-width:0.944882"
+         inkstitch:max_stitch_length_mm="6"
+         inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+         inkstitch:reverse_rails="none" />
+      <path
+         d="M 17.42055,30.318421 C 15.813496,28.601152 14.206443,26.883883 12.599389,25.166614"
+         id="path34"
+         sodipodi:nodetypes="cc"
+         inkstitch:ties="3"
+         inkstitch:running_stitch_length_mm="2"
+         style="stroke-width:0.945;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0" />
+      <path
+         d="m 13.096509,23.282911 c -4.1475271,0.711947 -6.0751141,1.980308 -6.0460381,6.809405 0.02359,3.917235 3.0359321,4.908078 6.0861931,4.880862 m 1.136824,-11.442334 c 3.569269,0.406338 4.321841,2.753768 4.064785,6.382412 -0.272407,3.845343 -1.480787,4.197612 -3.659056,4.935577"
+         id="path35"
+         sodipodi:nodetypes="csccsc"
+         inkstitch:satin_column="True"
+         inkstitch:ties="2"
+         inkstitch:force_lock_stitches="True"
+         inkstitch:zigzag_spacing_mm="0.3"
+         inkstitch:pull_compensation_mm="0.2"
+         inkstitch:zigzag_underlay="True"
+         style="stroke-width:0.944882"
+         inkstitch:max_stitch_length_mm="6"
+         inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+         inkstitch:reverse_rails="none" />
+    </g>
+    <path
+       id="path26"
+       inkscape:label="Points droits pour auto-remplissage satin 5"
+       d="m 25.976319,17.32375 c 5.40828,-0.203603 22.385647,1.064446 22.168047,7.380532 -0.170371,3.259107 -0.983627,6.54588 0.01622,9.767256"
+       sodipodi:nodetypes="ccc"
+       inkstitch:ties="3"
+       inkstitch:running_stitch_length_mm="2"
+       style="stroke-width:0.945;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0" />
+    <path
+       id="path27"
+       d="m 47.000004,36.500026 -1.0113,-0.0688 -0.9025,-0.2102 -0.784,-0.3574 -0.6557,-0.5101 -0.4553,-0.5553 -0.2968,-0.5442 -0.7663,-1.3862 -0.0278,-1.9594 0.4524,-2.1311 0.7181,-1.6899 0.2292,-1.0874 -0.1361,-1.2912 -0.4151,-1.0952 -0.7039,-0.9197 -1.0027,-0.7642 -1.2697,-0.6197 -1.462,-0.4475 -1.6567,-0.2712 -1.8538,-0.0913 -2.8176,0.1527 -2.5593,0.4565 -2.3044,0.7579 -2.0531,1.0567 -1.6598,1.3253 -1.1753,1.608 -0.6993,1.9105 -0.2312,2.2324 0.1448,1.7843 0.4341,1.5194 0.7227,1.2699 1.0109,1.0358 1.4141,0.7979 0.8569,0.2538 m 23.8053,-1.0051 1.1431,-1.0272 0.9154,-1.4061 0.6812,-1.6221 0.485,-1.7456 0.2901,-1.8675 0.0964,-1.9875 -0.0731,-1.746 -0.2192,-1.6565 -0.3651,-1.5654 -0.511,-1.4727 -0.6567,-1.3785 -0.8022,-1.2826 -0.9477,-1.1852 -1.093,-1.0861 -1.242,-0.9746 -1.3829,-0.8417 -1.5228,-0.7097 -1.6619,-0.5788 -1.8002,-0.4485 -1.9377,-0.3193 -4.2845,-0.2544 -3.4836,0.1586 -3.3605,0.476 -3.2364,0.7934 -3.1109,1.1111 -2.8689,1.4031 -2.4969,1.6651 -2.1202,1.9268 -1.7386,2.1886 -1.3456,2.3405 -0.9642,2.4123 -0.58024,2.4802 -0.19396,2.5443 0.16442,2.0197 0.49198,1.898 0.8176,1.7693 1.1412,1.6333 1.2032,0.8576 2.3021,1.2021 6.4797,2.9197 1.3722,0.558 m 16.6929,-16.4527 14.2562,-8.4298 m -47.85125,8.6777 17.35535,-0.124 m 10.1653,-18.2231099 -0.2479,15.4959099"
+       inkstitch:satin_column="True"
+       inkstitch:pull_compensation_mm="0.2"
+       inkstitch:zigzag_spacing_mm="0.3"
+       inkstitch:ties="0"
+       inkstitch:force_lock_stitches="True"
+       inkstitch:zigzag_underlay="True"
+       inkstitch:zigzag_underlay_inset_mm="0.1"
+       inkscape:label="Auto-remplissage satin 6"
+       sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+       style="stroke-width:0.944882"
+       inkstitch:max_stitch_length_mm="6"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+       inkstitch:reverse_rails="none" />
+    <path
+       d="M 20.376894,42.9301 33.732743,42.500732"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
+       transform="translate(2.49826,0.500265)"
+       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_tolerance_mm="2.0"
+       id="path28"
+       inkscape:label="path11" />
+    <path
+       id="path29"
+       d="M 36.5,42.7355 36.5375,40.9334 36.3652,39.2773 36.181,38.6435 35.8535,38.1465 35.3565,37.819 34.7227,37.6348 33,37.5 29.8252,37.3721 27.2324,37.0014 26.0835,36.6611 m 6.5273,9.913 -9.1384,-3.7164 m 3.6764,-8.6428 -5.5786,13.5124"
+       inkstitch:satin_column="True"
+       inkstitch:pull_compensation_mm="0.2"
+       inkstitch:zigzag_spacing_mm="0.3"
+       inkstitch:ties="0"
+       inkstitch:force_lock_stitches="True"
+       inkstitch:zigzag_underlay="True"
+       inkstitch:zigzag_underlay_inset_mm="0.1"
+       inkscape:label="Auto-remplissage satin 4"
+       sodipodi:nodetypes="ccccccccccccccc"
+       style="stroke-width:0.944882"
+       inkstitch:max_stitch_length_mm="6"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+       inkstitch:reverse_rails="none" />
+    <path
+       id="path30"
+       inkscape:label="Auto-remplissage satin 9"
+       d="m 17.672804,40.561726 -3.416,1.2605 -3.0866,1.6448 -2.7212,1.9683 -2.32009,2.2307 -2.01696,2.6283 -1.44744,2.7696 -0.87247,2.9041 -0.29204,3.032 0.2298,2.4989 0.68687,2.315 1.14016,2.1215 1.58965,1.9181 1.99419,1.7054 2.3674,1.5043 2.73833,1.3056 3.1071,1.1097 3.4501,0.8864 3.7575,0.6315 4.0654,0.3779 4.3735,0.1257 7.0354,-0.2517 7.0349,-0.7542 3.3268,-0.5644 2.9597,-0.692 0.9231,-0.2924 1.6721,-0.5296 2.2335,-0.9548 1.4322,-0.5911 1.1955,-0.735 0.9471,-0.8815 0.687,-1.0306 0.7875,-2.1025 0.2652,-2.1202 m -29.5,-17.5 -2.8728,0.0927 -2.6812,0.2775 -2.4896,0.461 -2.2982,0.6434 -2.0448,0.7938 -1.7237,0.9072 -1.4063,1.0162 -1.0928,1.1207 -0.8322,1.2159 -0.5902,1.2659 -0.3517,1.3219 -0.1165,1.3838 0.2547,2.1866 0.3214,0.9476 0.4535,0.8546 0.5874,0.765 0.7234,0.6785 1.8627,1.1107 2.5137,0.8447 3.2252,0.6128 3.9299,0.3734 4.6281,0.1261 3.0325,-0.0928 3.1599,-0.2786 3.2873,-0.465 3.4148,-0.6519 4.3537,-1.0887 2.1116,-0.5281 5.4547,-1.8597 0.0898,-0.0352 h 1.0957 l 0.6173,0.0771 0.5999,0.224 1.1363,0.8454 m -27.1304,1.2047 -0.1239,15 m -33.71903505,-20.9504 18.59503505,0.248"
+       inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
+       inkstitch:satin_column="True"
+       inkstitch:pull_compensation_mm="0.2"
+       inkstitch:zigzag_spacing_mm="0.3"
+       inkstitch:zigzag_underlay="True"
+       inkstitch:zigzag_underlay_inset_mm="0.1"
+       style="stroke-width:0.944882"
+       inkstitch:max_stitch_length_mm="6"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+       inkstitch:reverse_rails="none" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Ñ"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g13830"
-     transform="translate(-2.49826,-0.500265)"
-     >
+     transform="translate(-2.49826,-0.500265)">
     <path
        d="m 17.470553,71.811024 c 5.045714,-18.995738 0.04744,-38.974 5.206612,-57.932583"
        id="path38402-5"
@@ -6575,8 +6833,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-Ô"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g13838"
-     transform="translate(-2.49826,-0.500265)"
-     >
+     transform="translate(-2.49826,-0.500265)">
     <path
        d="M 21.322314,70.413223 C 14.474518,60.867696 8.055917,48.801829 11.698195,36.776833 14.048639,28.816194 20.065573,22.79001 24.214454,15.803957"
        id="path23574-5"
@@ -6656,8 +6913,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-Õ"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g13846"
-     transform="translate(-2.49826,-0.500265)"
-     >
+     transform="translate(-2.49826,-0.500265)">
     <path
        d="M 22.677165,73.281976 C 14.466277,61.265707 9.8726075,45.3845 15.56971,31.35966 17.937423,25.221542 21.842445,19.768468 26.456693,15.11811"
        id="path38402"
@@ -6736,8 +6992,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-Ö"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g13842"
-     transform="translate(-2.49826,-0.500291)"
-     >
+     transform="translate(-2.49826,-0.500291)">
     <path
        d="M 21.322314,70.413223 C 15.402376,59.009422 9.5371071,46.151807 11.814655,32.993269 c 1.508456,-9.063174 9.325997,-15.35115 17.584751,-18.230624 0.548327,-0.291823 1.242385,-0.423413 1.59233,-1.002314"
        id="path23574-5-3"
@@ -6843,8 +7098,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-Ü"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g13902"
-     transform="translate(-2.49826,-0.500265)"
-     >
+     transform="translate(-2.49826,-0.500265)">
     <path
        d="M 22.474916,71.619551 C 16.841504,53.450348 22.373718,34.775866 27.254094,17.164343"
        id="autosatinrun96-3-3-1-7-1-4"
@@ -6957,8 +7211,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-ß"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g14070"
-     transform="translate(-2.49826,-0.50026485)"
-     >
+     transform="translate(-2.49826,-0.50026485)">
     <path
        id="autosatinrun168"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -7019,8 +7272,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-à"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g13918"
-     transform="translate(-2.49826,-0.500265)"
-     >
+     transform="translate(-2.49826,-0.500265)">
     <path
        d="M 7.2236416,58.355123 C 7.0729998,51.831289 11.968424,46.649428 17.613175,44.133556 c 1.684716,-0.884767 3.411132,-1.687131 5.145743,-2.468425"
        id="autosatinrun110-3"
@@ -7093,8 +7345,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-á"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g13906"
-     transform="translate(-2.49826,-0.500265)"
-     >
+     transform="translate(-2.49826,-0.500265)">
     <path
        id="autosatinrun110-7-2"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -7161,8 +7412,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-â"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g13910"
-     transform="translate(-2.49826,-0.500265)"
-     >
+     transform="translate(-2.49826,-0.500265)">
     <path
        id="autosatinrun109-4-8"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -7230,8 +7480,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-ã"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g13922"
-     transform="translate(-2.49826,-0.500265)"
-     >
+     transform="translate(-2.49826,-0.500265)">
     <path
        d="M 6.7588191,55.987861 C 8.6469503,50.188926 12.926252,45.738495 17.684923,42.142553 l 0.589952,-0.619484"
        id="path38402-70"
@@ -7305,8 +7554,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-ä"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g13914"
-     transform="translate(-2.49826,-0.500265)"
-     >
+     transform="translate(-2.49826,-0.500265)">
     <path
        d="m 6.8435466,62.428298 c -1.3150008,-6.307222 2.37972,-12.173926 7.0426974,-16.069558 1.826406,-1.709837 3.72791,-3.336862 5.627683,-4.963959 M 18.274258,33.23764 c -0.387369,-2.155171 -0.314065,-3.862421 2.344956,-3.055528 3.599697,0.04352 7.199394,0.08704 10.799091,0.130566"
        id="autosatinrun96-3-3-1-7-1"
@@ -7405,8 +7653,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-æ"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g13926"
-     transform="translate(-2.49826,-0.50026485)"
-     >
+     transform="translate(-2.49826,-0.50026485)">
     <path
        id="autosatinrun107"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -7461,8 +7708,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-ç"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g13938"
-     transform="translate(-2.49826,-0.50026485)"
-     >
+     transform="translate(-2.49826,-0.50026485)">
     <path
        id="autosatinrun116"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -7515,8 +7761,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-è"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g13962"
-     transform="translate(-2.49826,-0.500265)"
-     >
+     transform="translate(-2.49826,-0.500265)">
     <path
        d="M 7.3225555,53.066998 C 9.1739686,47.321043 14.448868,43.526005 19.929833,41.577376"
        id="autosatinrun109-4-84-4"
@@ -7575,8 +7820,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-é"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g13950"
-     transform="translate(-2.49826,-0.500265)"
-     >
+     transform="translate(-2.49826,-0.500265)">
     <path
        id="autosatinrun110-7"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -7629,36 +7873,40 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-ê"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g13954"
-     transform="translate(-2.49826,-0.500265)"
-     >
+     transform="translate(-2.49826,-0.500265)">
     <path
        d="M 4.4192037,54.744034 C 4.8287861,50.048466 8.1847212,46.277082 11.804825,43.577324"
        id="autosatinrun109-4"
        sodipodi:nodetypes="cc"
        inkstitch:ties="3"
        inkstitch:running_stitch_length_mm="2"
-       style="stroke-width:0.945;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0" />
-    <path
-       d="m 10.842715,33.82527 c 3.944817,-6.23572 7.889633,-12.47144 11.83445,-18.70716 2.060867,5.03937 4.121734,10.07874 6.182601,15.11811"
-       id="path43722"
-       inkstitch:ties="3"
-       inkstitch:running_stitch_length_mm="2"
-       style="stroke-width:0.945;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0" />
-    <path
-       id="autosatin158-6"
-       inkscape:label="Auto-remplissage satin 4"
-       d="m 31.477973,33.147979 0.316879,-5.249086 c 0,0 -2.137177,-17.370513 -8.307216,-16.685797 l -3.431152,0.380769 C 16.396757,12 5.67909,31.85403 7.5590551,34.015748 m 22.6771649,0 c 0,0 -4.346727,2.309858 -5.23622,-0.01575 C 22.677165,27.926882 22,18 22,18 18.794751,24.290916 18.742498,33.008563 9.6845836,34.940972 M 22.169819,31.921942 31.91705,20.8609"
-       inkstitch:satin_column="True"
-       inkstitch:pull_compensation_mm="0.2"
-       inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
-       inkstitch:force_lock_stitches="True"
-       inkstitch:zigzag_underlay="True"
-       sodipodi:nodetypes="ccssccscccc"
-       style="stroke-width:0.944882"
-       inkstitch:max_stitch_length_mm="6"
-       inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
-       inkstitch:reverse_rails="none" />
+       style="stroke-width:0.945;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0"
+       inkscape:label="autosatinrun109-4" />
+    <g
+       id="g21"
+       inkscape:label="g21">
+      <path
+         d="m 10.842715,33.82527 c 3.944817,-6.23572 7.889633,-12.47144 11.83445,-18.70716 2.060867,5.03937 4.121734,10.07874 6.182601,15.11811"
+         id="path43722"
+         inkstitch:ties="3"
+         inkstitch:running_stitch_length_mm="2"
+         style="stroke-width:0.945;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0" />
+      <path
+         id="autosatin158-6"
+         inkscape:label="Auto-remplissage satin 4"
+         d="m 31.477973,33.147979 0.316879,-5.249086 c 0,0 -2.137177,-17.370513 -8.307216,-16.685797 l -3.431152,0.380769 C 16.396757,12 5.67909,31.85403 7.5590551,34.015748 m 22.6771649,0 c 0,0 -4.346727,2.309858 -5.23622,-0.01575 C 22.677165,27.926882 22,18 22,18 18.794751,24.290916 18.742498,33.008563 9.6845836,34.940972 M 22.169819,31.921942 31.91705,20.8609"
+         inkstitch:satin_column="True"
+         inkstitch:pull_compensation_mm="0.2"
+         inkstitch:zigzag_spacing_mm="0.3"
+         inkstitch:ties="2"
+         inkstitch:force_lock_stitches="True"
+         inkstitch:zigzag_underlay="True"
+         sodipodi:nodetypes="ccssccscccc"
+         style="stroke-width:0.944882"
+         inkstitch:max_stitch_length_mm="6"
+         inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+         inkstitch:reverse_rails="none" />
+    </g>
     <path
        id="autosatinrun122-7-5"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -7687,8 +7935,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-ë"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g13958"
-     transform="translate(-2.49826,-0.500265)"
-     >
+     transform="translate(-2.49826,-0.500265)">
     <path
        d="M 6.3290542,54.199424 C 7.2999141,48.844148 10.935466,44.384294 15.205,41.20235"
        id="autosatinrun109-4-84"
@@ -7696,62 +7943,65 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
        inkstitch:ties="3"
        inkstitch:running_stitch_length_mm="2"
        style="stroke-width:0.945;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0" />
-    <path
-       d="m 14.707487,33.361607 c -0.387367,-2.155284 -0.314065,-3.862481 2.344944,-3.0546 3.466311,0.04321 6.932621,0.08643 10.398932,0.129638"
-       id="path57526"
-       sodipodi:nodetypes="ccc"
-       inkstitch:ties="3"
-       inkstitch:running_stitch_length_mm="2"
-       style="stroke-width:0.945;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0" />
-    <path
-       id="path51372-2"
-       d="m 29.899819,34.990023 c 1.9782,-0.5378 3.2597,-0.9633 3.6591,-4.9355 m -5.2016,5.0599 c -3.0503,0.0272 -6.0626,-0.9636 -6.0862,-4.8809"
-       sodipodi:nodetypes="cccc"
-       inkstitch:zigzag_underlay="True"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False"
-       inkstitch:satin_column="True"
-       inkstitch:pull_compensation_mm="0.2"
-       inkstitch:zigzag_spacing_mm="0.3"
-       style="stroke-width:0.944882"
-       inkstitch:max_stitch_length_mm="6"
-       inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
-       inkstitch:reverse_rails="none" />
-    <path
-       id="path9992-8"
-       d="m 29.494119,23.672023 c 3.5693,0.4064 4.4287,2.763 4.0648,6.3825 m -5.2418,-6.6304 c -4.1475,0.712 -6.0751,1.9803 -6.046,6.8094"
-       inkstitch:satin_column="True"
-       inkstitch:pull_compensation_mm="0.2"
-       inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
-       inkstitch:force_lock_stitches="True"
-       inkstitch:zigzag_underlay="True"
-       inkstitch:zigzag_underlay_inset_mm="0.1"
-       style="stroke-width:0.944882"
-       inkstitch:max_stitch_length_mm="6"
-       inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
-       inkstitch:reverse_rails="none" />
-    <path
-       d="M 17.42055,30.318421 C 15.813496,28.601152 14.206443,26.883883 12.599389,25.166614"
-       id="path16553-5-5-7-6-5"
-       sodipodi:nodetypes="cc"
-       inkstitch:ties="3"
-       inkstitch:running_stitch_length_mm="2"
-       style="stroke-width:0.945;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0" />
-    <path
-       d="m 13.096509,23.282911 c -4.1475271,0.711947 -6.0751141,1.980308 -6.0460381,6.809405 0.02359,3.917235 3.0359321,4.908078 6.0861931,4.880862 m 1.136824,-11.442334 c 3.569269,0.406338 4.321841,2.753768 4.064785,6.382412 -0.272407,3.845343 -1.480787,4.197612 -3.659056,4.935577"
-       id="path43869-16-5-1-3-6-1-1-6"
-       sodipodi:nodetypes="csccsc"
-       inkstitch:satin_column="True"
-       inkstitch:ties="2"
-       inkstitch:force_lock_stitches="True"
-       inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:pull_compensation_mm="0.2"
-       inkstitch:zigzag_underlay="True"
-       style="stroke-width:0.944882"
-       inkstitch:max_stitch_length_mm="6"
-       inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
-       inkstitch:reverse_rails="none" />
+    <g
+       id="g31">
+      <path
+         d="m 14.707487,33.361607 c -0.387367,-2.155284 -0.314065,-3.862481 2.344944,-3.0546 3.466311,0.04321 6.932621,0.08643 10.398932,0.129638"
+         id="path57526"
+         sodipodi:nodetypes="ccc"
+         inkstitch:ties="3"
+         inkstitch:running_stitch_length_mm="2"
+         style="stroke-width:0.945;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0" />
+      <path
+         id="path51372-2"
+         d="m 29.899819,34.990023 c 1.9782,-0.5378 3.2597,-0.9633 3.6591,-4.9355 m -5.2016,5.0599 c -3.0503,0.0272 -6.0626,-0.9636 -6.0862,-4.8809"
+         sodipodi:nodetypes="cccc"
+         inkstitch:zigzag_underlay="True"
+         inkstitch:center_walk_underlay="False"
+         inkstitch:contour_underlay="False"
+         inkstitch:satin_column="True"
+         inkstitch:pull_compensation_mm="0.2"
+         inkstitch:zigzag_spacing_mm="0.3"
+         style="stroke-width:0.944882"
+         inkstitch:max_stitch_length_mm="6"
+         inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+         inkstitch:reverse_rails="none" />
+      <path
+         id="path9992-8"
+         d="m 29.494119,23.672023 c 3.5693,0.4064 4.4287,2.763 4.0648,6.3825 m -5.2418,-6.6304 c -4.1475,0.712 -6.0751,1.9803 -6.046,6.8094"
+         inkstitch:satin_column="True"
+         inkstitch:pull_compensation_mm="0.2"
+         inkstitch:zigzag_spacing_mm="0.3"
+         inkstitch:ties="2"
+         inkstitch:force_lock_stitches="True"
+         inkstitch:zigzag_underlay="True"
+         inkstitch:zigzag_underlay_inset_mm="0.1"
+         style="stroke-width:0.944882"
+         inkstitch:max_stitch_length_mm="6"
+         inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+         inkstitch:reverse_rails="none" />
+      <path
+         d="M 17.42055,30.318421 C 15.813496,28.601152 14.206443,26.883883 12.599389,25.166614"
+         id="path16553-5-5-7-6-5"
+         sodipodi:nodetypes="cc"
+         inkstitch:ties="3"
+         inkstitch:running_stitch_length_mm="2"
+         style="stroke-width:0.945;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0" />
+      <path
+         d="m 13.096509,23.282911 c -4.1475271,0.711947 -6.0751141,1.980308 -6.0460381,6.809405 0.02359,3.917235 3.0359321,4.908078 6.0861931,4.880862 m 1.136824,-11.442334 c 3.569269,0.406338 4.321841,2.753768 4.064785,6.382412 -0.272407,3.845343 -1.480787,4.197612 -3.659056,4.935577"
+         id="path43869-16-5-1-3-6-1-1-6"
+         sodipodi:nodetypes="csccsc"
+         inkstitch:satin_column="True"
+         inkstitch:ties="2"
+         inkstitch:force_lock_stitches="True"
+         inkstitch:zigzag_spacing_mm="0.3"
+         inkstitch:pull_compensation_mm="0.2"
+         inkstitch:zigzag_underlay="True"
+         style="stroke-width:0.944882"
+         inkstitch:max_stitch_length_mm="6"
+         inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+         inkstitch:reverse_rails="none" />
+    </g>
     <path
        id="autosatinrun122-7-5-1"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -7780,8 +8030,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-ì"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g13998"
-     transform="translate(-2.49826,-0.500265)"
-     >
+     transform="translate(-2.49826,-0.500265)">
     <path
        d="M 8.0762338,53.942107 C 8.3879351,49.490156 9.897626,45.120622 12.807897,41.691841"
        id="autosatinrun110-3-9-4"
@@ -7832,8 +8081,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-í"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g13986"
-     transform="translate(-2.49826,-0.500265)"
-     >
+     transform="translate(-2.49826,-0.500265)">
     <path
        id="autosatinrun110-7-2-6"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -7878,8 +8126,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-î"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g13990"
-     transform="translate(-2.49826,-0.500265)"
-     >
+     transform="translate(-2.49826,-0.500265)">
     <path
        id="autosatinrun109-4-6"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -7923,8 +8170,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-ï"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g13994"
-     transform="translate(-2.49826,-0.500265)"
-     >
+     transform="translate(-2.49826,-0.500265)">
     <path
        d="M 9.3874274,53.415056 C 9.3334912,49.283704 11.544662,45.502557 11.522768,41.431476 M 7.3651672,33.23764 c -0.3873688,-2.155171 -0.3140653,-3.862421 2.3449557,-3.055528 3.5996971,0.04352 7.1993941,0.08704 10.7990911,0.130566"
        id="autosatinrun96-3-3-1-7-1-7-4"
@@ -7987,8 +8233,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-ñ"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g14022"
-     transform="translate(-2.49826,-0.500265)"
-     >
+     transform="translate(-2.49826,-0.500265)">
     <path
        id="autosatinrun143-7-64"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -8079,8 +8324,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-ò"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g14042"
-     transform="translate(-2.49826,-0.500265)"
-     >
+     transform="translate(-2.49826,-0.500265)">
     <path
        d="M 7.5815262,52.185501 C 9.8781196,46.977863 14.31688,41.26229 20.374345,40.75738"
        id="autosatinrun110-3-9-4-2"
@@ -8178,8 +8422,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-ó"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g14030"
-     transform="translate(-2.49826,-0.500265)"
-     >
+     transform="translate(-2.49826,-0.500265)">
     <path
        id="autosatinrun110-7-2-6-1"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -8271,8 +8514,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-ô"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g14034"
-     transform="translate(-2.49826,-0.500265)"
-     >
+     transform="translate(-2.49826,-0.500265)">
     <path
        id="autosatinrun109-4-6-9"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -8363,8 +8605,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-õ"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g14046"
-     transform="translate(-2.49826,-0.500265)"
-     >
+     transform="translate(-2.49826,-0.500265)">
     <path
        d="m 5.908682,51.947719 c 1.1822326,-3.557205 3.4953223,-6.744558 6.539747,-8.937047"
        id="path38402-70-9-5"
@@ -8461,8 +8702,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-ö"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g14038"
-     transform="translate(-2.49826,-0.500265)"
-     >
+     transform="translate(-2.49826,-0.500265)">
     <path
        d="M 5.4285118,52.529404 C 6.5111726,47.07609 11.295485,43.503912 16.290787,41.766682 m -1.859504,-8.900943 c -0.387369,-2.155171 -0.314065,-3.862421 2.344956,-3.055528 3.599697,0.04352 7.199394,0.08704 10.799091,0.130566"
        id="autosatinrun96-3-3-1-7-1-7-4-1"
@@ -8572,8 +8812,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-ù"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g14094"
-     transform="translate(-2.49826,-0.50026485)"
-     >
+     transform="translate(-2.49826,-0.50026485)">
     <path
        d="M 7.0963385,51.172324 C 7.6277556,47.318733 8.6795604,41.636714 13.427731,41.072006"
        id="autosatinrun110-3-9-4-2-6"
@@ -8664,8 +8903,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-ú"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g14082"
-     transform="translate(-2.49826,-0.500265)"
-     >
+     transform="translate(-2.49826,-0.500265)">
     <path
        id="autosatinrun110-7-2-6-1-2"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -8751,8 +8989,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-û"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g14086"
-     transform="translate(-2.49826,-0.500265)"
-     >
+     transform="translate(-2.49826,-0.500265)">
     <path
        id="autosatinrun109-4-6-9-9"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -8837,8 +9074,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-ü"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g14090"
-     transform="translate(-2.49826,-0.500265)"
-     >
+     transform="translate(-2.49826,-0.500265)">
     <path
        d="m 8.608344,52.357364 c 0.1881759,-4.434747 3.403733,-7.361905 5.537193,-10.874195 m 2.14525,-8.493463 c -0.387369,-2.155171 -0.314065,-3.862421 2.344956,-3.055528 3.599697,0.04352 7.199394,0.08704 10.799091,0.130566"
        id="autosatinrun96-3-3-1-7-1-7-4-1-7"
@@ -8956,8 +9192,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-ı"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g13982"
-     transform="translate(-2.498264,-0.50029085)"
-     >
+     transform="translate(-2.498264,-0.50029085)">
     <path
        d="M 6.5974545,54.346612 C 7.2222254,49.251122 9.9729947,44.824494 13.492361,41.200799"
        id="autosatinrun96-3-3-1-7-1-7-4-7-5"
@@ -8985,8 +9220,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-Œ"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g13850"
-     transform="translate(-2.49826,-0.50026485)"
-     >
+     transform="translate(-2.49826,-0.50026485)">
     <path
        id="autosatinrun99"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -9097,8 +9331,7 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
      inkscape:label="GlyphLayer-œ"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g14050"
-     transform="translate(-2.49826,-0.50026485)"
-     >
+     transform="translate(-2.49826,-0.50026485)">
     <path
        id="autosatinrun152"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -9134,6 +9367,118 @@ Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Paci
        id="autosatin171"
        inkscape:label="Auto-remplissage satin 4"
        d="M 32.2479,59.3719 34.1467,58.72 35.874,57.811 37.4762,56.7144 39,55.5 40.3125,54.2812 41.25,53.125 41.8125,52.0312 42,51 41.75,49.875 41,48.5 40,47.375 39.5,47.0938 39,47 37.5625,47.2188 36.25,47.875 35.0625,48.9688 34,50.5 33.1609,52.283 32.5958,54.1296 32.2328,56.0364 32,58 l -0.1818,1.8884 0.5718,2.5143 0.5216,1.3746 0.7496,1.3255 1.0305,1.1806 1.3646,0.9402 1.7517,0.6041 L 40,68 41.5938,67.8438 43.375,67.375 c 0.608295,-0.241398 0.654279,-0.29536 1.31154,-0.53828 L 47.5,65.5 49.7187,64.1562 51.875,62.625 53.9687,60.9063 56,59 57.0151,58.3354 58,58 l 0.7129,0.0117 0.6215,0.4618 0.4068,0.7695 0.0687,0.9347 M 33,64 37.1875,62.9063 40.75,61.625 43.6875,60.1562 46,58.5 47.75,56.6563 49,54.625 49.75,52.4062 50,50 49.8125,47.6563 49.25,45.625 48.3125,43.9063 47,42.5 45.4375,41.4062 43.75,40.625 41.9375,40.1562 40,40 37,40.25 34,41 l -1.3521,0.7087 -1.3148,0.9997 -1.2594,1.26 -1.1858,1.4894 -1.0941,1.688 -0.9843,1.8558 -0.8562,1.9926 -0.7102,2.0987 -0.5458,2.1739 -0.3635,2.2183 -0.1628,2.2319 0.0558,2.2145 0.2927,2.1664 0.5476,2.0875 0.8208,1.9776 L 27,70 28.0937,71.375 29.375,72.5 30.8438,73.375 32.5,74 36.125,74.75 40,75 42.5,74.8125 45,74.25 45.7743,73.9596 47.5,73.3125 50,72 l 4.2978,-2.8395 3.4542,-2.6646 0.8482,-0.9594 0.7123,-1.3991 0.4476,-1.7158 0.0539,-1.9092 M 48.3471,40.5372 38.4298,49.8347 M 22.562,57.7686 34.0909,57.3967 m 7.1901,8.9256 0.124,9.9174"
+       inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
+       inkstitch:satin_column="True"
+       inkstitch:pull_compensation_mm="0.2"
+       inkstitch:zigzag_spacing_mm="0.3"
+       inkstitch:zigzag_underlay="True"
+       inkstitch:zigzag_underlay_inset_mm="0.1"
+       style="stroke-width:0.944882"
+       inkstitch:max_stitch_length_mm="6"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+       inkstitch:reverse_rails="none" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="GlyphLayer-Ä"
+     id="g25"
+     style="display:inline;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
+     transform="translate(-2.49826, -0.500265)">
+    <path
+       style="stroke-width:0.945;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0"
+       d="M 16.9507,69.1549 C 9.2515402,64.763488 8.8105776,54.659762 10.015452,46.856404 11.882879,32.623859 22.336591,19.039305 36.8905,16.3597 c 1.606985,-0.394554 3.221105,-0.614137 4.839448,-0.717538"
+       id="path10" />
+    <g
+       id="g40"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
+       transform="matrix(-1 0 0 1 56.0326 -32.6153)">
+      <path
+         d="m 14.707487,33.361607 c -0.387367,-2.155284 -0.314065,-3.862481 2.344944,-3.0546 3.466311,0.04321 6.932621,0.08643 10.398932,0.129638"
+         id="path36"
+         sodipodi:nodetypes="ccc"
+         inkstitch:ties="3"
+         inkstitch:running_stitch_length_mm="2"
+         style="stroke-width:0.945;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0" />
+      <path
+         id="path37"
+         d="m 29.899819,34.990023 c 1.9782,-0.5378 3.2597,-0.9633 3.6591,-4.9355 m -5.2016,5.0599 c -3.0503,0.0272 -6.0626,-0.9636 -6.0862,-4.8809"
+         sodipodi:nodetypes="cccc"
+         inkstitch:zigzag_underlay="True"
+         inkstitch:center_walk_underlay="False"
+         inkstitch:contour_underlay="False"
+         inkstitch:satin_column="True"
+         inkstitch:pull_compensation_mm="0.2"
+         inkstitch:zigzag_spacing_mm="0.3"
+         style="stroke-width:0.944882"
+         inkstitch:max_stitch_length_mm="6"
+         inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+         inkstitch:reverse_rails="none" />
+      <path
+         id="path38"
+         d="m 29.494119,23.672023 c 3.5693,0.4064 4.4287,2.763 4.0648,6.3825 m -5.2418,-6.6304 c -4.1475,0.712 -6.0751,1.9803 -6.046,6.8094"
+         inkstitch:satin_column="True"
+         inkstitch:pull_compensation_mm="0.2"
+         inkstitch:zigzag_spacing_mm="0.3"
+         inkstitch:ties="2"
+         inkstitch:force_lock_stitches="True"
+         inkstitch:zigzag_underlay="True"
+         inkstitch:zigzag_underlay_inset_mm="0.1"
+         style="stroke-width:0.944882"
+         inkstitch:max_stitch_length_mm="6"
+         inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+         inkstitch:reverse_rails="none" />
+      <path
+         d="M 17.42055,30.318421 C 15.813496,28.601152 14.206443,26.883883 12.599389,25.166614"
+         id="path39"
+         sodipodi:nodetypes="cc"
+         inkstitch:ties="3"
+         inkstitch:running_stitch_length_mm="2"
+         style="stroke-width:0.945;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0" />
+      <path
+         d="m 13.096509,23.282911 c -4.1475271,0.711947 -6.0751141,1.980308 -6.0460381,6.809405 0.02359,3.917235 3.0359321,4.908078 6.0861931,4.880862 m 1.136824,-11.442334 c 3.569269,0.406338 4.321841,2.753768 4.064785,6.382412 -0.272407,3.845343 -1.480787,4.197612 -3.659056,4.935577"
+         id="path40"
+         sodipodi:nodetypes="csccsc"
+         inkstitch:satin_column="True"
+         inkstitch:ties="2"
+         inkstitch:force_lock_stitches="True"
+         inkstitch:zigzag_spacing_mm="0.3"
+         inkstitch:pull_compensation_mm="0.2"
+         inkstitch:zigzag_underlay="True"
+         style="stroke-width:0.944882"
+         inkstitch:max_stitch_length_mm="6"
+         inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+         inkstitch:reverse_rails="none" />
+    </g>
+    <path
+       style="stroke-width:0.945;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0"
+       d="m 41.729948,15.642162 c 5.141162,-0.328485 10.324949,0.515554 15.45802,0.647328 0.858008,0.154578 1.63767,0.590842 2.334794,1.096873"
+       id="path41" />
+    <path
+       id="path15"
+       d="m 30,61.239669 0.247934,13.264463 M 2.10744,49.8347 17.7273,49.7107 M 60.8802,20.5 c -1,1 -1.5469,1.5 -2.8802,1.5 H 57 C 54.3333,21.3333 52.1667,20.8333 50.5,20.5 48.8333,20.1667 47,20 45,20 c -6.6667,0 -12.1667,1.5 -16.5,4.5 -4.3333,3 -7.6667,7 -10,12 C 16.1667,41.5 15,47 15,53 c 0,4 0.8333,7.3333 2.5,10 1.6667,2.6667 3.8333,4 6.5,4 3.3333,0 6.1667,-1.3333 8.5,-4 2.3333,-2.6667 6.1928,-8.5689 7.8595,-14.2355 M 62.3802,17 C 62.3802,15.6667 62.3333,14.3333 61,13 59,11.6667 56.128099,10.670832 53.128099,11.004132 50.128099,10.670832 48,11 46,11 37.3333,11 29.8333,13 23.5,17 17.1667,21 12.3333,26.3333 9,33 5.66667,39.6667 4,46.6667 4,54 c 0,4.6667 0.83333,8.5 2.5,11.5 1.66667,3 3.8333,5.3333 6.5,7 2,1.6667 5,2.5 9,2.5 6.6667,0.6667 11.9614,-5.4793 16.6281,-13.4793"
+       inkstitch:satin_column="True"
+       inkstitch:pull_compensation_mm="0.2"
+       inkstitch:zigzag_spacing_mm="0.3"
+       inkstitch:ties="0"
+       inkstitch:force_lock_stitches="True"
+       inkstitch:zigzag_underlay="True"
+       inkstitch:zigzag_underlay_inset_mm="0.1"
+       style="stroke-width:0.944882"
+       inkstitch:max_stitch_length_mm="6"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+       inkstitch:reverse_rails="none" />
+    <path
+       d="M 35.976420741098835, 61.852528428417074 L 48.37082453175352, 23.67352386458151"
+       style="stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1;fill:none"
+       transform="translate(2.49826, 0.500265)"
+       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_tolerance_mm="2.0"
+       id="path42" />
+    <path
+       id="path25"
+       inkscape:label="Auto-remplissage satin 6"
+       d="m 51.2397,24.2479 1.9938,0.2113 0.6608,0.2728 0.4755,0.392 0.3193,0.5169 0.1921,0.6478 L 55,28 v 1 L 53.125,36.5 51.5,45 50.375,53 50.0938,56.25 50,59 50.25,62.375 50.5625,63.5938 51,64.5 51.5625,65.1562 52.25,65.625 53.0625,65.9062 54,66 l 1.0312,-0.0938 1.0313,-0.3437 2.375,-1.125 1.292,-1.167 L 64,59 64.5625,58.5625 65.25,58.25 67,58 M 50,24 47.375,24.25 46.3438,24.5625 45.5,25 44.8438,25.5625 44.375,26.25 44.0938,27.0625 44,28 l -1.3835,6.9642 -1.1816,6.637 -1.9432,10.7583 -0.8636,11.1446 v 1.1157 l 0.6831,2.2782 1.0028,1.9119 1.2529,1.6619 L 43,72 44.625,73.3125 46.5,74.25 48.625,74.8125 51,75 53.4062,74.8438 55.625,74.375 57.6563,73.5938 59.75,72.4375 61.4051,71.1248 63.125,69.625 67,66 68.3868,64.0945 68.8326,63.2229 69,62 68.875,60.25 68.5,59 M 36.4463,46.4876 H 52.686 m 1.5805,13.6395 -8.251,16.7376"
        inkstitch:ties="2"
        inkstitch:force_lock_stitches="True"
        inkstitch:satin_column="True"

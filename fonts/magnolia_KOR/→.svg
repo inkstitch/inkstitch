@@ -23,13 +23,13 @@
      inkscape:window-width="1347"
      inkscape:window-height="800"
      id="namedview5275"
-     inkscape:zoom="2.8284271"
-     inkscape:cx="9.899495"
-     inkscape:cy="120.38493"
+     inkscape:zoom="5.6568542"
+     inkscape:cx="34.383068"
+     inkscape:cy="95.371028"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
-     inkscape:current-layer="layer3"
+     inkscape:current-layer="g9249"
      inkscape:document-rotation="0"
      showguides="true"
      inkscape:guide-bbox="true"
@@ -131,8 +131,7 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkscape:connector-curvature="0"
          style="display:inline;opacity:1;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:0.2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
          d="m -3.0312502,1.577739 c 0,0 0.25,-3.6875002 0.25,-3.6875002 0,0 1.0312501,3.8437502 1.0312501,3.8437502 0,0 0.34375,-3.6250002 0.34375,-3.6250002 0,0 0.96874997,3.5625002 0.96874997,3.5625002 0,0 0.28125,-3.3125002 0.28125,-3.3125002 0,0 0.9375001,3.3125002 0.9375001,3.3125002 0,0 0.21875,-3.0937502 0.21875,-3.0937502 0,0 1.03125013,2.9687502 1.03125013,2.9687502 0,0 0.0625,-2.7187501 0.0625,-2.7187501 0,0 0.96875,2.4687501 0.96875,2.4687501 0,0 0.15625,-2.18750023 0.15625,-2.18750023"
-         id="path31975"
-          />
+         id="path31975" />
     </symbol>
     <symbol
        id="inkstitch_satin_end"
@@ -153,8 +152,7 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          style="display:inline;opacity:1;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:0.2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
          d="m -3.2964153,1.5777408 0.25,-3.6875001 1.0312501,3.8437501 0.34375,-3.6250001 0.9687501,3.5625001 0.28125,-3.3125001 0.9375,3.3125001 0.21875,-3.0937501 1.0312499,2.9687501 0.0625,-2.7187501 0.96875,2.4687501 0.15625,-2.1875"
          id="path31975-0-2"
-         inkscape:connector-curvature="0"
-          />
+         inkscape:connector-curvature="0" />
     </symbol>
   </defs>
   <g
@@ -6517,6 +6515,286 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
   </g>
   <g
      inkscape:groupmode="layer"
+     inkscape:label="GlyphLayer-Ë"
+     style="display:none"
+     id="g7">
+    <path
+       d="m 10.397453,83.06422 -0.250435,-1.507179 -0.06552,-1.491516 v 0 l -0.0016,-0.0366 0.04652,-1.584243 0.206371,-1.544551 0.12152,-0.546536 v 0 l 0.216751,-0.974842 0.511831,-1.472129 0.476026,-1.082455 v 0 l 0.15154,-0.344595 0.8049,-1.332648 0.847495,-1.311347 0.160241,-0.185388 v 0 L 14.48142,68.65716 15.529594,67.499999 16.1926,66.943133 v 0 l 0.53098,-0.445975 1.215262,-0.981011 1.270018,-0.768607 v 0 l 0.06679,-0.04042 1.362744,-0.765599 1.444518,-0.60156 0.506949,-0.167175 v 0 l 0.976429,-0.321994 1.521238,-0.330996 1.154646,-0.01435 v 0 l 0.410147,-0.0051 1.56658,-0.01505 1.555971,-0.106709 0.202093,-0.02176 v 0 l 1.3461,-0.144913 1.495029,-0.354617 0.796482,-0.294919 v 0 l 0.648093,-0.239974 0.459393,-1.234337 c -3.888703,-0.217619 -6.982112,-0.62216 -9.925645,-1.503271 -1.387634,-0.888442 -2.637374,-1.995299 -3.691295,-3.259351 -1.085908,-1.356997 -1.972747,-2.878577 -2.47669,-4.548404 -0.418146,-1.260569 -0.572998,-2.608231 -0.582556,-3.932173 0.04344,-2.232808 0.434791,-4.467511 1.313161,-6.528415 0.83475,-2.168903 2.166701,-4.126035 3.72518,-5.839039 1.441777,-1.565049 3.10306,-2.919394 4.948349,-3.981654 0.703824,-0.450762 1.812178,-3.449229 2.56445,-3.809118"
+       style="fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5"
+       inkstitch:running_stitch_length_mm=""
+       id="path4"
+       inkscape:label="AutoSatin Running Stitch 1"
+       sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+       inkstitch:ties="3" />
+    <path
+       d="m 29.859615,14.502518 0.154224,-1.50273 -0.0066,-1.524789 -9.91e-4,-0.170966 v 0 l -0.0079,-1.3708403 0.04468,-1.5305829 0.09813,-0.8096231 v 0 l 0.08713,-0.7188681 0.301303,-1.4833076"
+       style="display:inline;fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5"
+       inkstitch:running_stitch_length_mm=""
+       id="path8"
+       inkscape:label="AutoSatin Running Stitch 8"
+       inkstitch:ties="3"
+       sodipodi:nodetypes="ccccccccccc" />
+    <path
+       id="path9"
+       style="display:inline;fill:none;stroke:#4e2990"
+       d="M 30.733315,4.0269373 C 27.733315,4.0269373 24,6 24,10 c 0,3 2.333287,4.951898 5.333287,4.9519 M 31.49269,4.0346373 C 34.49269,4.0346337 36.004665,6.0000036 36,9 c -0.007,4.500951 -3.112699,5.918549 -6,6"
+       sodipodi:nodetypes="csccsc"
+       inkstitch:satin_column="True"
+       inkstitch:ties="0"
+       inkstitch:force_lock_stitches="True"
+       inkstitch:pull_compensation_mm="0.3"
+       inkstitch:zigzag_underlay="True"
+       inkstitch:zigzag_underlay_inset_mm="0.2"
+       inkscape:label="AutoSatin 9"
+       inkstitch:max_stitch_length_mm="6"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+       inkstitch:reverse_rails="none" />
+    <path
+       style="fill:none;stroke:#4e2990;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round"
+       d="m 30.935922,27.753942 13.965359,0.707106"
+       id="path13"
+       sodipodi:nodetypes="cc" />
+    <path
+       d="m 46.839264,14.560745 0.294363,-1.489333 0.172548,-1.511331 0.01457,-0.198983 v 0 l 0.09652,-1.318563 0.02454,-1.5276025 0.03396,-0.8737505 v 0 l 0.02596,-0.6678101 0.22286,-1.5405528"
+       style="display:inline;fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5"
+       inkstitch:running_stitch_length_mm=""
+       id="path10"
+       inkscape:label="AutoSatin Running Stitch 11"
+       inkstitch:ties="3"
+       sodipodi:nodetypes="ccccccccccc" />
+    <path
+       id="path11"
+       style="display:inline;fill:none;stroke:#4e2990"
+       d="m 48.662193,4.1231419 c 3,0 4.630664,1.9407095 4.630664,4.9407095 C 53.292857,12.063851 51,15 47,15 M 48,4 c -4,0 -6.428571,1.3592061 -6.428571,5.3592061 0,2.9999999 1.727957,5.6561869 4.727957,5.6561839"
+       inkstitch:satin_column="True"
+       inkstitch:ties="0"
+       inkstitch:force_lock_stitches="True"
+       inkstitch:pull_compensation_mm="0.3"
+       inkstitch:zigzag_underlay="True"
+       inkstitch:zigzag_underlay_inset_mm="0.2"
+       inkscape:label="AutoSatin 12"
+       inkstitch:max_stitch_length_mm="6"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+       inkstitch:reverse_rails="none" />
+    <path
+       style="fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5"
+       d="m 45.13498,28.740148 c 0.74797,0.35265 1.51194,0.67693 2.175488,1.179259 0.647658,0.406663 1.212947,0.934766 1.766359,1.457509 0.527725,0.569279 1.04717,1.14507 1.452369,1.810731 0.432996,0.587345 0.698992,1.27778 1.000927,1.936607 0.293193,0.798367 0.549525,1.607175 0.703839,2.444877 0.146863,0.660631 0.152131,1.347791 0.189478,2.021365 -0.01664,0.818707 -0.04741,1.636028 -0.21865,2.43957 -0.101579,0.708526 -0.364079,1.386067 -0.597976,2.058688 -0.312644,0.658442 -0.581562,1.342444 -1.055149,1.906806 -0.402124,0.646461 -0.977292,1.153157 -1.504706,1.69239 -0.637165,0.427662 -1.239278,0.917719 -1.970477,1.177999 -0.656743,0.367718 -1.409436,0.449258 -2.12861,0.630771 -0.503003,-0.0098 -1.006007,-0.01965 -1.50901,-0.02947"
+       id="path12" />
+    <path
+       id="path6"
+       style="fill:none;stroke:#4e2990"
+       d="m 42,49 c 0,0 2,3 6,3 6,0 10,-5 10,-11 0,-8 -7,-16 -20,-16 -15,0 -27,10 -27,22 0,6 4,11 10,14 5.124815,0.190532 10.406611,0.233156 15.284574,-1.131485 M 42.099437,48.679592 C 42.099437,48.679592 47,45 47,38 c 0,-5 -3,-8 -8,-8 -8,0 -14,8 -14,17 0,6 3,12 12,12 m 1.620657,-35.362806 -1.352342,7.636753 m 8.898182,6.727309 12.792319,-0.187049 m -49.0782614,7.801228 16.1750674,0.07095"
+       inkstitch:satin_column="True"
+       inkstitch:ties="3"
+       inkstitch:pull_compensation_mm="0.3"
+       inkstitch:zigzag_underlay="True"
+       inkstitch:zigzag_underlay_inset_mm="0.2"
+       inkscape:label="AutoSatin 3"
+       sodipodi:nodetypes="csssscccsssccccccc"
+       inkstitch:max_stitch_length_mm="6"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+       inkstitch:reverse_rails="none" />
+    <path
+       id="path7"
+       style="display:inline;fill:none;stroke:#4e2990"
+       d="m 37,59 v 1 c 0,2 -1.606538,3.558609 -5,4 -0.894293,0.116322 -2.066703,-0.0254 -3,0 -5.74255,0.156254 -12,7 -12,14 0,7 4,14 18,14 13,0 22,-5 25,-9 M 36.284574,59.868515 C 31.57775,61.214501 26.14798,60.94183 21,61 10,64 3,72 3,81 c 0,12 10,19 26,19 17,0 32,-9 33,-15 0,-1 0.303835,-2.004 -1.696165,-2.004 M 1.9180271,79.347653 18.024909,79.183179 m 8.788328,10.590835 -2.939544,12.080776"
+       inkstitch:satin_column="True"
+       inkstitch:ties="0"
+       inkstitch:force_lock_stitches="True"
+       inkstitch:pull_compensation_mm="0.3"
+       inkstitch:zigzag_underlay="True"
+       inkstitch:zigzag_underlay_inset_mm="0.2"
+       inkscape:label="AutoSatin 4"
+       sodipodi:nodetypes="csscsscccsscccccc"
+       inkstitch:max_stitch_length_mm="6"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+       inkstitch:reverse_rails="none" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="GlyphLayer-Ê"
+     style="display:none"
+     id="g22">
+    <path
+       d="m 10.397453,83.06422 -0.250435,-1.507179 -0.06552,-1.491516 v 0 l -0.0016,-0.0366 0.04652,-1.584243 0.206371,-1.544551 0.12152,-0.546536 v 0 l 0.216751,-0.974842 0.511831,-1.472129 0.476026,-1.082455 v 0 l 0.15154,-0.344595 0.8049,-1.332648 0.847495,-1.311347 0.160241,-0.185388 v 0 L 14.48142,68.65716 15.529594,67.499999 16.1926,66.943133 v 0 l 0.53098,-0.445975 1.215262,-0.981011 1.270018,-0.768607 v 0 l 0.06679,-0.04042 1.362744,-0.765599 1.444518,-0.60156 0.506949,-0.167175 v 0 l 0.976429,-0.321994 1.521238,-0.330996 1.154646,-0.01435 v 0 l 0.410147,-0.0051 1.56658,-0.01505 1.555971,-0.106709 0.202093,-0.02176 v 0 l 1.3461,-0.144913 1.495029,-0.354617 0.796482,-0.294919 v 0 l 0.648093,-0.239974 0.459393,-1.234337 c -3.888703,-0.217619 -6.982112,-0.62216 -9.925645,-1.503271 -1.387634,-0.888442 -2.637374,-1.995299 -3.691295,-3.259351 -1.085908,-1.356997 -1.972747,-2.878577 -2.47669,-4.548404 -0.418146,-1.260569 -0.572998,-2.608231 -0.582556,-3.932173 0.04344,-2.232808 0.434791,-4.467511 1.313161,-6.528415 0.83475,-2.168903 2.166701,-4.126035 3.72518,-5.839039 1.441777,-1.565049 3.10306,-2.919394 4.948349,-3.981654 0.703824,-0.450762 1.812178,-3.449229 2.56445,-3.809118"
+       style="fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5"
+       inkstitch:running_stitch_length_mm=""
+       id="path14"
+       inkscape:label="AutoSatin Running Stitch 1"
+       sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+       inkstitch:ties="3" />
+    <path
+       style="fill:none;stroke:#4e2990;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round"
+       d="M 28.107495,16.61701 40.835417,4.9497475 53.740116,17.67767 v 0"
+       id="path33" />
+    <path
+       d="m 55.053052,18.466169 -7.104,-12.5760004 c -1.536,-2.688 -3.36,-3.84 -7.296,-3.84 -2.496,0 -4.032,0.768 -4.032,0.768 l -12.288,15.6480004 m 30.72,0 c 0,0 -2.016,0.672 -3.552,0.672 -4.32,0 -6.048,-1.056 -7.68,-3.84 l -3.552,-6.0480004 -7.104,7.4880004 c -1.728,1.728 -2.976,2.4 -5.28,2.4 -2.496,0 -3.552,-0.672 -3.552,-0.672 M 53.563339,8.4852814 42.249631,18.915107 M 39.59798,12.551145 41.542523,-2.8284272 M 27.223611,7.601398 36.94633,17.854446"
+       id="path32"
+       style="font-size:96px;font-family:'Magnolia Script';-inkscape-font-specification:'Magnolia Script';font-feature-settings:'salt', 'ss00', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09', 'ss10', 'ss11';text-align:center;text-anchor:middle;display:inline;fill:none;stroke:#4e2990;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round"
+       sodipodi:nodetypes="ccscccscccsccccccc"
+       inkstitch:satin_column="True"
+       inkstitch:zigzag_underlay="True"
+       inkstitch:force_lock_stitches="True" />
+    <path
+       style="fill:none;stroke:#4e2990;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round"
+       d="m 30.935922,27.753942 c 4.694069,0.282219 9.388139,0.564437 14.082208,0.846656 1.868084,0.911283 3.642172,2.093417 4.922514,3.757994 2.323743,2.975865 3.062723,7.096979 2.014777,10.714282 -0.719259,2.549907 -2.52002,4.845541 -5.003171,5.858763 -1.043586,0.458437 -2.190973,0.642958 -3.324762,0.539297 l -0.188626,-0.0037"
+       id="path17" />
+    <path
+       id="path21"
+       style="fill:none;stroke:#4e2990"
+       d="m 42,49 c 0,0 2,3 6,3 6,0 10,-5 10,-11 0,-8 -7,-16 -20,-16 -15,0 -27,10 -27,22 0,6 4,11 10,14 5.124815,0.190532 10.406611,0.233156 15.284574,-1.131485 M 42.099437,48.679592 C 42.099437,48.679592 47,45 47,38 c 0,-5 -3,-8 -8,-8 -8,0 -14,8 -14,17 0,6 3,12 12,12 m 1.620657,-35.362806 -1.352342,7.636753 m 8.898182,6.727309 12.792319,-0.187049 m -49.0782614,7.801228 16.1750674,0.07095"
+       inkstitch:satin_column="True"
+       inkstitch:ties="3"
+       inkstitch:pull_compensation_mm="0.3"
+       inkstitch:zigzag_underlay="True"
+       inkstitch:zigzag_underlay_inset_mm="0.2"
+       inkscape:label="AutoSatin 3"
+       sodipodi:nodetypes="csssscccsssccccccc"
+       inkstitch:max_stitch_length_mm="6"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+       inkstitch:reverse_rails="none" />
+    <path
+       id="path22"
+       style="display:inline;fill:none;stroke:#4e2990"
+       d="m 37,59 v 1 c 0,2 -1.606538,3.558609 -5,4 -0.894293,0.116322 -2.066703,-0.0254 -3,0 -5.74255,0.156254 -12,7 -12,14 0,7 4,14 18,14 13,0 22,-5 25,-9 M 36.284574,59.868515 C 31.57775,61.214501 26.14798,60.94183 21,61 10,64 3,72 3,81 c 0,12 10,19 26,19 17,0 32,-9 33,-15 0,-1 0.303835,-2.004 -1.696165,-2.004 M 1.9180271,79.347653 18.024909,79.183179 m 8.788328,10.590835 -2.939544,12.080776"
+       inkstitch:satin_column="True"
+       inkstitch:ties="0"
+       inkstitch:force_lock_stitches="True"
+       inkstitch:pull_compensation_mm="0.3"
+       inkstitch:zigzag_underlay="True"
+       inkstitch:zigzag_underlay_inset_mm="0.2"
+       inkscape:label="AutoSatin 4"
+       sodipodi:nodetypes="csscsscccsscccccc"
+       inkstitch:max_stitch_length_mm="6"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+       inkstitch:reverse_rails="none" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="GlyphLayer-È"
+     style="display:inline"
+     id="g30">
+    <path
+       d="m 10.397453,83.06422 -0.250435,-1.507179 -0.06552,-1.491516 v 0 l -0.0016,-0.0366 0.04652,-1.584243 0.206371,-1.544551 0.12152,-0.546536 v 0 l 0.216751,-0.974842 0.511831,-1.472129 0.476026,-1.082455 v 0 l 0.15154,-0.344595 0.8049,-1.332648 0.847495,-1.311347 0.160241,-0.185388 v 0 L 14.48142,68.65716 15.529594,67.499999 16.1926,66.943133 v 0 l 0.53098,-0.445975 1.215262,-0.981011 1.270018,-0.768607 v 0 l 0.06679,-0.04042 1.362744,-0.765599 1.444518,-0.60156 0.506949,-0.167175 v 0 l 0.976429,-0.321994 1.521238,-0.330996 1.154646,-0.01435 v 0 l 0.410147,-0.0051 1.56658,-0.01505 1.555971,-0.106709 0.202093,-0.02176 v 0 l 1.3461,-0.144913 1.495029,-0.354617 0.796482,-0.294919 v 0 l 0.648093,-0.239974 0.459393,-1.234337 c -3.888703,-0.217619 -6.982112,-0.62216 -9.925645,-1.503271 -1.387634,-0.888442 -2.637374,-1.995299 -3.691295,-3.259351 -1.085908,-1.356997 -1.972747,-2.878577 -2.47669,-4.548404 -0.418146,-1.260569 -0.572998,-2.608231 -0.582556,-3.932173 0.04344,-2.232808 0.434791,-4.467511 1.313161,-6.528415 0.83475,-2.168903 2.166701,-4.126035 3.72518,-5.839039 1.441777,-1.565049 3.10306,-2.919394 4.948349,-3.981654 0.703824,-0.450762 14.00977,-3.979559 14.762042,-4.339448"
+       style="display:inline;fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5"
+       inkstitch:running_stitch_length_mm=""
+       id="path34"
+       inkscape:label="AutoSatin Running Stitch 1"
+       sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+       inkstitch:ties="3" />
+    <path
+       style="fill:none;stroke:#4e2990;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round"
+       d="M 41.896077,17.67767 25.986175,3.0052038"
+       id="path52"
+       sodipodi:nodetypes="cc"
+       inkscape:label="path52" />
+    <path
+       d="m 24.757437,2.6566149 9.696,13.7280001 c 0.96,1.344 2.208,2.4 4.704,2.4 2.4,0 3.648,-0.672 3.648,-0.672 m -18.048,-15.4560001 c 0,0 2.4,-0.96 5.952,-0.96 4.608,0 6.336,1.44 7.488,4.416 l 4.608,12.0000001 M 24.925514,10.429825 31.643029,-1.2374369 M 29.344932,12.551145 40.835417,4.9497475 M 34.825009,19.445437 45.078058,11.313709"
+       id="path51"
+       style="font-size:96px;font-family:'Magnolia Script';-inkscape-font-specification:'Magnolia Script';font-feature-settings:'salt', 'ss00', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09', 'ss10', 'ss11';text-align:center;text-anchor:middle;fill:none;stroke:#4e2990;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round"
+       inkscape:label="path51"
+       sodipodi:nodetypes="ccsccscc"
+       inkstitch:zigzag_underlay="True"
+       inkstitch:satin_column="True" />
+    <path
+       style="display:inline;fill:none;stroke:#4e2990;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round"
+       d="m 42.603184,26.162952 2.414946,2.437646 c 1.868084,0.911283 3.642172,2.093417 4.922514,3.757994 2.323743,2.975865 3.062723,7.096979 2.014777,10.714282 -0.719259,2.549907 -2.52002,4.845541 -5.003171,5.858763 -1.043586,0.458437 -2.190973,0.642958 -3.324762,0.539297 l -0.188626,-0.0037"
+       id="path37"
+       sodipodi:nodetypes="ccccccc" />
+    <path
+       id="path38"
+       style="display:inline;fill:none;stroke:#4e2990"
+       d="m 42,49 c 0,0 2,3 6,3 6,0 10,-5 10,-11 0,-8 -7,-16 -20,-16 -15,0 -27,10 -27,22 0,6 4,11 10,14 5.124815,0.190532 10.406611,0.233156 15.284574,-1.131485 M 42.099437,48.679592 C 42.099437,48.679592 47,45 47,38 c 0,-5 -3,-8 -8,-8 -8,0 -14,8 -14,17 0,6 3,12 12,12 m 1.620657,-35.362806 -1.352342,7.636753 m 8.898182,6.727309 12.792319,-0.187049 m -49.0782614,7.801228 16.1750674,0.07095"
+       inkstitch:satin_column="True"
+       inkstitch:ties="3"
+       inkstitch:pull_compensation_mm="0.3"
+       inkstitch:zigzag_underlay="True"
+       inkstitch:zigzag_underlay_inset_mm="0.2"
+       inkscape:label="AutoSatin 3"
+       sodipodi:nodetypes="csssscccsssccccccc"
+       inkstitch:max_stitch_length_mm="6"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+       inkstitch:reverse_rails="none" />
+    <path
+       id="path39"
+       style="display:inline;fill:none;stroke:#4e2990"
+       d="m 37,59 v 1 c 0,2 -1.606538,3.558609 -5,4 -0.894293,0.116322 -2.066703,-0.0254 -3,0 -5.74255,0.156254 -12,7 -12,14 0,7 4,14 18,14 13,0 22,-5 25,-9 M 36.284574,59.868515 C 31.57775,61.214501 26.14798,60.94183 21,61 10,64 3,72 3,81 c 0,12 10,19 26,19 17,0 32,-9 33,-15 0,-1 0.303835,-2.004 -1.696165,-2.004 M 1.9180271,79.347653 18.024909,79.183179 m 8.788328,10.590835 -2.939544,12.080776"
+       inkstitch:satin_column="True"
+       inkstitch:ties="0"
+       inkstitch:force_lock_stitches="True"
+       inkstitch:pull_compensation_mm="0.3"
+       inkstitch:zigzag_underlay="True"
+       inkstitch:zigzag_underlay_inset_mm="0.2"
+       inkscape:label="AutoSatin 4"
+       sodipodi:nodetypes="csscsscccsscccccc"
+       inkstitch:max_stitch_length_mm="6"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+       inkstitch:reverse_rails="none" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="GlyphLayer-É"
+     style="display:inline"
+     id="g45">
+    <path
+       d="m 10.397453,83.06422 -0.250435,-1.507179 -0.06552,-1.491516 v 0 l -0.0016,-0.0366 0.04652,-1.584243 0.206371,-1.544551 0.12152,-0.546536 v 0 l 0.216751,-0.974842 0.511831,-1.472129 0.476026,-1.082455 v 0 l 0.15154,-0.344595 0.8049,-1.332648 0.847495,-1.311347 0.160241,-0.185388 v 0 L 14.48142,68.65716 15.529594,67.499999 16.1926,66.943133 v 0 l 0.53098,-0.445975 1.215262,-0.981011 1.270018,-0.768607 v 0 l 0.06679,-0.04042 1.362744,-0.765599 1.444518,-0.60156 0.506949,-0.167175 v 0 l 0.976429,-0.321994 1.521238,-0.330996 1.154646,-0.01435 v 0 l 0.410147,-0.0051 1.56658,-0.01505 1.555971,-0.106709 0.202093,-0.02176 v 0 l 1.3461,-0.144913 1.495029,-0.354617 0.796482,-0.294919 v 0 l 0.648093,-0.239974 0.459393,-1.234337 c -3.888703,-0.217619 -6.982112,-0.62216 -9.925645,-1.503271 -1.387634,-0.888442 -2.637374,-1.995299 -3.691295,-3.259351 -1.085908,-1.356997 -1.972747,-2.878577 -2.47669,-4.548404 -0.418146,-1.260569 -0.572998,-2.608231 -0.582556,-3.932173 0.04344,-2.232808 0.434791,-4.467511 1.313161,-6.528415 0.83475,-2.168903 2.166701,-4.126035 3.72518,-5.839039 1.441777,-1.565049 3.10306,-2.919394 4.948349,-3.981654 0.703824,-0.450762 2.342508,-3.449229 3.09478,-3.809118"
+       style="display:inline;fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5"
+       inkstitch:running_stitch_length_mm=""
+       id="path53"
+       inkscape:label="AutoSatin Running Stitch 1"
+       sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+       inkstitch:ties="3" />
+    <path
+       style="display:inline;fill:none;stroke:#4e2990;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round"
+       d="M 27.939418,17.67767 43.84932,3.0052038"
+       id="path54"
+       sodipodi:nodetypes="cc"
+       inkscape:label="path52" />
+    <path
+       d="m 45.078058,2.6566149 -9.696,13.7280001 c -0.96,1.344 -2.208,2.4 -4.704,2.4 -2.4,0 -3.648,-0.672 -3.648,-0.672 m 18.048,-15.4560001 c 0,0 -2.4,-0.96 -5.952,-0.96 -4.608,0 -6.336,1.44 -7.488,4.416 l -4.608,12.0000001 M 44.909981,10.429825 38.192466,-1.2374369 M 40.490563,12.551145 29.000078,4.9497475 M 35.010486,19.445437 24.757437,11.313709"
+       id="path55"
+       style="font-size:96px;font-family:'Magnolia Script';-inkscape-font-specification:'Magnolia Script';font-feature-settings:'salt', 'ss00', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09', 'ss10', 'ss11';text-align:center;text-anchor:middle;display:inline;fill:none;stroke:#4e2990;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round"
+       inkscape:label="path51"
+       sodipodi:nodetypes="ccsccscc"
+       inkstitch:zigzag_underlay="True"
+       inkstitch:satin_column="True" />
+    <path
+       style="display:inline;fill:none;stroke:#4e2990;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round"
+       d="m 31.643029,26.339729 13.375101,2.260869 c 1.868084,0.911283 3.642172,2.093417 4.922514,3.757994 2.323743,2.975865 3.062723,7.096979 2.014777,10.714282 -0.719259,2.549907 -2.52002,4.845541 -5.003171,5.858763 -1.043586,0.458437 -2.190973,0.642958 -3.324762,0.539297 l -0.188626,-0.0037"
+       id="path56"
+       sodipodi:nodetypes="ccccccc" />
+    <path
+       id="path57"
+       style="display:inline;fill:none;stroke:#4e2990"
+       d="m 42,49 c 0,0 2,3 6,3 6,0 10,-5 10,-11 0,-8 -7,-16 -20,-16 -15,0 -27,10 -27,22 0,6 4,11 10,14 5.124815,0.190532 10.406611,0.233156 15.284574,-1.131485 M 42.099437,48.679592 C 42.099437,48.679592 47,45 47,38 c 0,-5 -3,-8 -8,-8 -8,0 -14,8 -14,17 0,6 3,12 12,12 m 1.620657,-35.362806 -1.352342,7.636753 m 8.898182,6.727309 12.792319,-0.187049 m -49.0782614,7.801228 16.1750674,0.07095"
+       inkstitch:satin_column="True"
+       inkstitch:ties="3"
+       inkstitch:pull_compensation_mm="0.3"
+       inkstitch:zigzag_underlay="True"
+       inkstitch:zigzag_underlay_inset_mm="0.2"
+       inkscape:label="AutoSatin 3"
+       sodipodi:nodetypes="csssscccsssccccccc"
+       inkstitch:max_stitch_length_mm="6"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+       inkstitch:reverse_rails="none" />
+    <path
+       id="path58"
+       style="display:inline;fill:none;stroke:#4e2990"
+       d="m 37,59 v 1 c 0,2 -1.606538,3.558609 -5,4 -0.894293,0.116322 -2.066703,-0.0254 -3,0 -5.74255,0.156254 -12,7 -12,14 0,7 4,14 18,14 13,0 22,-5 25,-9 M 36.284574,59.868515 C 31.57775,61.214501 26.14798,60.94183 21,61 10,64 3,72 3,81 c 0,12 10,19 26,19 17,0 32,-9 33,-15 0,-1 0.303835,-2.004 -1.696165,-2.004 M 1.9180271,79.347653 18.024909,79.183179 m 8.788328,10.590835 -2.939544,12.080776"
+       inkstitch:satin_column="True"
+       inkstitch:ties="0"
+       inkstitch:force_lock_stitches="True"
+       inkstitch:pull_compensation_mm="0.3"
+       inkstitch:zigzag_underlay="True"
+       inkstitch:zigzag_underlay_inset_mm="0.2"
+       inkscape:label="AutoSatin 4"
+       sodipodi:nodetypes="csscsscccsscccccc"
+       inkstitch:max_stitch_length_mm="6"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+       inkstitch:reverse_rails="none" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-F"
      style="display:none"
      id="g9253">
@@ -7027,7 +7305,7 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
     <path
        id="autosatin309"
        style="fill:none;stroke:#4e2990"
-       d="M 15.9375,45.65625 C 15.333333,45.875 14.666667,46 14,46 c -2,0 -4,-2 -4,-5 0,-6 5,-11 14,-11 0,0 1,0 1,0 0,1 -0.666074,3.028074 -1,5 0,0 -8.690641,51.320621 -8.690641,51.320621 4.101597,-0.19015 8.047786,0.862961 11.914252,2.553862 M 16,46 c 0,2 -3,6 -8,6 C 2,52 -2,48 -2,42 -2,32 7,25 23,25 c 0,0 7,0 7,0 7,0 9,3 8,11 0,0 -10,53 -10,53 M -3.375,41.5 c 0,0 14.375,0.125 14.375,0.125 M 27.5,25 c 0,0 -3.625,6.125 -3.625,6.125 M 18,64.375 c 0,0 16.125,-0.25 16.125,-0.25"
+       d="M 15.9375,45.65625 C 15.333333,45.875 14.666667,46 14,46 12,46 10,44 10,41 10,35 15,30 24,30 h 1 c 0,1 -0.666074,3.028074 -1,5 l -8.690641,51.320621 c 4.101597,-0.19015 8.047786,0.862961 11.914252,2.553862 M 16,46 c 0,2 -3,6 -8,6 C 2,52 -2,48 -2,42 -2,32 7,25 23,25 h 7 c 7,0 9,3 8,11 L 28,89 M -3.375,41.5 11,41.625 M 29.267767,22.259961 22.549175,33.688262 M 15.967068,64.286612 34.125,64.125"
        inkstitch:satin_column="True"
        inkstitch:ties="3"
        inkstitch:pull_compensation_mm="0.3"
@@ -7036,7 +7314,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin 2"
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
-       inkstitch:reverse_rails="none" />
+       inkstitch:reverse_rails="none"
+       sodipodi:nodetypes="cssscscccsssscccccccc" />
     <path
        d="m 25.336478,91.508577 c -0.518316,0.110865 -1.031476,0.303019 -1.540234,0.462754 l -1.496547,0.365334 -0.551171,0.115431 v 0 l -0.973958,0.203975 -1.532453,0.241415 -1.161984,0.119035 v 0 l -0.369565,0.03786 -1.511548,0.08454 -1.544155,0.0789 -0.282416,0.01701 v 0 l -1.255344,0.07559 -1.544221,0.11513 -0.903399,0.095 v 0 l -0.637367,0.06702 -1.5315791,0.208963"
        style="fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5"

@@ -6,7 +6,7 @@
    width="100"
    height="100"
    viewBox="0 0 100 100"
-   inkscape:version="1.3-alpha (95f74fb, 2023-03-31)"
+   inkscape:version="1.3.1 (5ab75fa9, 2023-11-03)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -28,13 +28,13 @@
      inkscape:window-height="800"
      id="namedview461"
      showgrid="true"
-     inkscape:zoom="6.7552268"
-     inkscape:cx="50.923531"
-     inkscape:cy="52.921983"
+     inkscape:zoom="16.729741"
+     inkscape:cx="8.1292351"
+     inkscape:cy="82.697035"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g1244"
+     inkscape:current-layer="g11"
      inkscape:document-units="px"
      inkscape:document-rotation="0"
      showguides="true"
@@ -74,7 +74,12 @@
     <inkscape:grid
        type="xygrid"
        id="grid2931"
-       visible="true" />
+       visible="true"
+       originx="0"
+       originy="0"
+       spacingy="1"
+       spacingx="1"
+       units="px" />
   </sodipodi:namedview>
   <metadata
      id="metadata2">
@@ -1427,8 +1432,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-!"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1244"
-     >
+     id="g1244">
     <path
        d="M 21,63 C 17.166667,73.041667 13.333333,83.083333 9.5,93.125"
        id="path14000-7"
@@ -1493,8 +1497,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-#"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1260"
-     >
+     id="g1260">
     <path
        d="M 19.25,77.5 C 16.708333,83.25 14.166667,89 11.625,94.75"
        id="path10766"
@@ -1663,8 +1666,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-%"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1296"
-     >
+     id="g1296">
     <path
        d="m 33.23978,73.131252 c 1.281592,-2.159526 2.130073,-4.534459 2.970918,-6.888617"
        id="path4688"
@@ -1805,8 +1807,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-&amp;"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1308"
-     >
+     id="g1308">
     <path
        d="M 7.9549513,90.067726 C 8.249909,79.978421 14.054314,70.175531 24.808421,68.653797 27.602855,65.830738 16.766519,61.788768 20.8842,55.826296 22.090717,44.621265 37.891389,32.965495 47.911848,41.031656 c 4.277982,4.573918 1.950394,11.10305 -0.270531,16.067217"
        id="path10250"
@@ -1862,8 +1863,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-'"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1304"
-     >
+     id="g1304">
     <path
        id="path1855"
        d="M 5.6910568,32.215446 19.918699,32.317073 M 12,26 C 24.464112,29.762932 10.230833,42.082492 4,40 M 9,26 c -2.6110435,2.874633 0.7287939,9.051316 -2,12 -1,1 -2,1 -3,1"
@@ -1881,8 +1881,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-‘"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1"
-     >
+     id="g1">
     <path
        id="path1"
        d="M 5.6910568,32.215446 19.918699,32.317073 M 12,26 C 24.464112,29.762932 10.230833,42.082492 4,40 M 9,26 c -2.6110435,2.874633 0.7287939,9.051316 -2,12 -1,1 -2,1 -3,1"
@@ -1900,8 +1899,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-’"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g5483"
-     >
+     id="g5483">
     <path
        id="path5481"
        d="M 5.6910568,32.215446 19.918699,32.317073 M 12,26 C 24.464112,29.762932 10.230833,42.082492 4,40 M 9,26 c -2.6110435,2.874633 0.7287939,9.051316 -2,12 -1,1 -2,1 -3,1"
@@ -1919,8 +1917,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-("
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1284"
-     >
+     id="g1284">
     <path
        id="path1852"
        d="M 6.4895923,83.276517 18.182506,90.199501 M 5,89 C 5.8501782,80.498218 23.324827,80.670072 28.541908,80.912402 M 5.1997532,90.348484 C 5.5826635,91.449495 6.5160791,92 8,92 14,92 30,81 30,81"
@@ -1992,8 +1989,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-)"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1288"
-     >
+     id="g1288">
     <path
        id="path1852-2"
        d="m 41.745474,84.369087 -12.7268,4.762407 m 13.188328,1.133705 C 42.862766,81.746216 25.629405,78.847218 20.450822,78.169773 M 41.773586,91.557662 C 41.20331,92.574338 40.187737,92.952403 38.726868,92.691858 32.820076,91.638383 19,78 19,78"
@@ -2065,8 +2061,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-+"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1216"
-     >
+     id="g1216">
     <path
        d="M 21.566757,68.854522 C 23.658615,63.197668 25.750472,57.540814 27.84233,51.88396"
        id="path1921"
@@ -2148,8 +2143,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-,"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1228"
-     >
+     id="g1228">
     <path
        id="path1855-9"
        d="M 0.19471532,95.741529 16.556504,95.868109 M 7.45,88 c 12.91053,5.973182 -2.4657724,19.71235 -9.2,17.43743 M 4,88 c -3.08558538,3.667415 0.9742485,11.11437 -2.3,14.94637 -1.15,1.24553 -2.3,1.24553 -3.45,1.24553"
@@ -2167,8 +2161,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer--"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1204"
-     >
+     id="g1204">
     <path
        id="path2065"
        d="m 23.25,61.5 0.375,14.375 M 1,69 c 8.5080821,-3.596056 18.613153,-4.456952 27,-5 6.504509,-0.410855 20.942441,1.1713 20.823223,6.790291 M 1,72.5 c 1.8916962,5.640777 6.9532412,4.612943 11,3.5 7.950999,-2.186691 14,-4 24,-4 6,0 6.705066,1.098311 12,1"
@@ -2186,8 +2179,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-."
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1224"
-     >
+     id="g1224">
     <path
        id="path4549-6"
        d="m 9.483738,101.73171 1.626016,-14.430896 m 3.901712,8.846498 c 0.96507,-4.782914 -6.134598,-9.845803 -9.40171,-4.773328 m 8.690328,6.602597 C 12.526149,101.15174 8.8153256,100.38926 6.6762451,98.977272 4.9492692,97.837313 4.209148,97.382183 5,93"
@@ -2207,8 +2199,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-/"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1264"
-     >
+     id="g1264">
     <path
        d="M 22.75,60 C 27.583333,48 32.416667,36 37.25,24"
        id="path14002"
@@ -2250,8 +2241,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-0"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1164"
-     >
+     id="g1164">
     <path
        d="m 6.7334715,89.143449 c 3.261398,-9.900063 5.9777305,-20.104748 9.5766175,-29.816197 2.780997,-3.198332 5.561995,-6.396664 8.342992,-9.594996"
        id="path2188-7-8"
@@ -2302,8 +2292,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-1"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1168"
-     >
+     id="g1168">
     <path
        d="M 13.414634,82.520324 C 17.953929,71.612465 22.493225,60.704606 27.03252,49.796747 21.571748,52.427674 14.840022,53.119219 11.033907,58.275035 8.7182414,60.572001 6.4277563,62.893159 4.1666666,65.243902"
        id="path1892"
@@ -2366,8 +2355,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-2"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1172"
-     >
+     id="g1172">
     <path
        d="M 14.634146,89.024389 C 25.492503,79.014252 38.050277,69.340237 43.749318,55.29351 45.76366,42.958009 29.783499,38.837753 22.161818,46.845592 17.112084,50.434454 13.67193,54.608281 13.00813,60.772357"
        id="path6360"
@@ -2443,8 +2431,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-3"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1176"
-     >
+     id="g1176">
     <path
        d="m 32.113821,85.569105 c -2.100271,-5.01355 -4.200542,-10.0271 -6.300813,-15.04065 4.89543,-4.755465 10.271155,-9.161829 14.872898,-14.13076 1.749684,-3.758581 3.499369,-7.517163 5.249053,-11.275744 -2.55321,-2.184943 -4.63652,-5.647378 -7.473744,-7.060185 -5.416177,1.010283 -11.656712,-0.3536 -16.043539,3.621228 -3.295556,2.061282 -6.944918,3.805618 -7.978254,7.893445 -0.680349,1.360699 -1.360699,2.721398 -2.041048,4.082097"
        id="path13709"
@@ -2506,8 +2493,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-4"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1180"
-     >
+     id="g1180">
     <path
        d="m 23.780488,84.552845 c 2.98103,-5.826558 5.962059,-11.653117 8.943089,-17.479675 -7.860912,1.182338 -15.743139,1.340593 -23.646368,0.489804 -4.0556758,-0.863655 -1.160885,-5.706663 1.72791,-6.818205 3.718966,-3.362174 8.480499,-5.920349 9.872955,-11.076662 1.779395,-3.751158 3.558791,-7.502315 5.338186,-11.253473"
        id="path17424"
@@ -2573,8 +2559,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-5"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1184"
-     >
+     id="g1184">
     <path
        d="M 32.520325,83.943089 C 41.387708,78.490178 39.011712,59.076621 26.751091,63.737936 20.751229,64.45828 7.5369168,74.499303 13.21297,62.480944 c 1.668619,-7.148942 5.754958,-13.467205 9.348005,-19.798018 9.661964,1.20989 19.338229,1.43214 29.065041,1.422765"
        id="path21135"
@@ -2622,8 +2607,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-6"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1188"
-     >
+     id="g1188">
     <path
        d="M 6.0975609,80.284552 C 7.7931459,73.351726 8.865618,66.15404 10.950338,59.38662 c 5.339838,-6.903984 11.76718,-18.169733 22.111295,-15.330243 6.461748,0.851663 9.985553,5.329491 9.011537,11.837931"
        id="path24825"
@@ -2671,8 +2655,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-7"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1192"
-     >
+     id="g1192">
     <path
        d="M 2.6516505,88.211575 C -1.0270231,94.434219 -6.7716664,100.20815 -4.772971,108.18734"
        id="path4849"
@@ -2715,8 +2698,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-8"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1196"
-     >
+     id="g1196">
     <path
        d="M 3.8617886,86.178861 C 9.2140921,79.607045 14.566396,73.03523 19.918699,66.463414"
        id="path32355"
@@ -2763,8 +2745,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-9"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1200"
-     >
+     id="g1200">
     <path
        d="m 19.105691,83.536585 c 3.99729,-6.571816 7.99458,-13.143631 11.99187,-19.715447 C 25.581209,64.374949 19.902195,64.31434 15.049294,67.374189 11.912449,68.843999 8.2954704,71.583678 7.7061477,66.31576 6.5778455,62.599908 2.6338533,59.014106 5.1830408,55.128399 6.0591753,51.262815 7.9404403,48.0183 11.057353,45.53729 c 1.943556,-3.483625 5.254972,-3.626572 8.826122,-3.135183 4.212283,0.09361 8.424567,0.187213 12.63685,0.280819"
        id="path30446"
@@ -2830,8 +2811,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-:"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1300"
-     >
+     id="g1300">
     <path
        id="path4549"
        d="M 5.4046091,105.07138 7.030625,90.640487 m 3.901712,8.846498 c 0.96507,-4.782914 -6.1345979,-9.845803 -9.4017099,-4.773328 m 8.6903279,6.602593 c -5.44074,5.17135 -11.941151,-0.0123 -9.3000839,-4.976577"
@@ -2865,8 +2845,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-;"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1232"
-     >
+     id="g1232">
     <path
        id="path4549-1"
        d="m 17.233738,83.356708 1.626016,-14.430894 m 3.901712,8.846498 c 0.96507,-4.782914 -6.134598,-9.845803 -9.40171,-4.773328 m 8.690328,6.602597 c -1.773935,3.175155 -5.12745,2.116192 -7.179738,0.852657 C 13.109656,79.370232 11.959148,79.007183 12.75,74.625"
@@ -2898,8 +2877,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-&lt;"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1268"
-     >
+     id="g1268">
     <path
        d="m 21.906467,68.881738 c -2.445156,3.609553 -19.507115,7.173794 -11.103926,10.55382 4.263808,2.377893 8.527617,4.755787 12.791426,7.13368"
        id="path19941-9"
@@ -2941,8 +2919,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-="
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1208"
-     >
+     id="g1208">
     <path
        id="path2065-0"
        d="M 32.375,57.5 V 76.125 M 10.125,65 c 1,-1 6.097924,-1.952218 10.18566,-2.491117 C 41.500648,61.066575 51.634562,66.791242 48.5,70.875 M 10.125,68.5 c 0,2 2,4.5 5,4.5 10.004468,-2.56616 21.950637,-2.959355 31.482765,-0.07712"
@@ -2972,8 +2949,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-&gt;"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1272"
-     >
+     id="g1272">
     <path
        d="M 18.875,79.875 C 21.320156,76.265447 38.382115,72.701206 29.978926,69.32118 25.715118,66.943287 21.451309,64.565393 17.1875,62.1875"
        id="path19941"
@@ -3015,8 +2991,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-?"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1240"
-     >
+     id="g1240">
     <path
        d="M 14.875,78.25 C 11.832732,82.717258 6.5021352,86.088404 6.3330509,91.93192 6.1387006,92.87128 5.9443503,93.81064 5.75,94.75"
        id="path12566"
@@ -3081,8 +3056,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-@"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1256"
-     >
+     id="g1256">
     <path
        d="m 8.75,88.25 c 1.928656,9.121732 8.030958,17.92505 18.190878,18.23612 4.174366,0.34608 8.738512,0.41411 12.434122,-1.86112"
        id="path8652"
@@ -3144,8 +3118,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-A"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1060"
-     >
+     id="g1060">
     <path
        d="M -7.4734863,83.933 C -2.0544535,80.730541 2.3977006,75.291632 9.0086699,74.846196 16.38013,72.68429 24.012801,72.821823 31.618596,72.722771 42.030742,59.952703 50.922234,46.07566 60.937658,33"
        id="path36123"
@@ -3225,8 +3198,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-B"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1064"
-     >
+     id="g1064">
     <path
        d="M 27.019528,92.556254 C 26.34883,97.634393 25.678133,102.71253 25.007435,107.79067"
        id="path38838"
@@ -3327,8 +3299,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-C"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1068"
-     >
+     id="g1068">
     <path
        d="M 11.210229,84.220441 C 10.039101,65.831493 20.73742,49.243711 32.18022,35.845659 c 7.671448,-5.64846 18.131861,-6.845593 27.363674,-5.881655 8.595943,1.691633 6.20845,25.292465 16.153895,11.146317 1.074486,-1.741036 1.98876,-3.579032 2.773816,-5.467541"
        id="path1680"
@@ -3375,8 +3346,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-D"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1072"
-     >
+     id="g1072">
     <path
        d="M 30.468828,86.232533 C 36.590313,70.871046 44.192487,56.097618 51.164636,41.104174"
        id="path4179"
@@ -3444,8 +3414,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-E"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1076"
-     >
+     id="g1076">
     <path
        d="M 20.731707,89.430895 C 29.346558,71.617531 38.037361,53.840744 46.544716,35.97561 37.737128,35.840109 28.929539,35.704607 20.121951,35.569106"
        id="path42431"
@@ -3559,8 +3528,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-F"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1080"
-     >
+     id="g1080">
     <path
        d="M 14.186991,88.455285 C 20.552559,74.832079 27.71961,61.533082 33.555561,47.695542 34.862685,42.175026 34.819184,29.698117 27.694796,29.763935 19.539641,30.415649 11.384486,31.067364 3.229331,31.719078"
        id="path42431-95"
@@ -3676,8 +3644,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-G"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1084"
-     >
+     id="g1084">
     <path
        d="M 18.649319,82.493013 C 17.691805,67.155829 25.295693,52.863993 34.049581,40.84123 41.29582,35.060725 49.833686,26.847868 59.331604,27.219968 c 6.968989,0.462264 15.769772,-0.01289 19.286091,7.319288 2.020446,4.743102 4.364742,3.585153 6.850585,-0.151995 l 0.386921,-0.412716 0.05549,-0.05919"
        id="path1680-7"
@@ -3825,8 +3792,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-H"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1088"
-     >
+     id="g1088">
     <path
        d="m 19.546041,85.370208 c -2.778604,8.335811 -5.557208,16.671622 -8.335812,25.007432"
        id="path12842"
@@ -3980,8 +3946,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-I"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1092"
-     >
+     id="g1092">
     <path
        d="M 25.406504,84.95935 C 33.196192,71.206729 42.283425,56.886078 43.0916,40.697311 41.575129,29.445364 29.830106,38.490422 23.495502,39.459519 c -2.073026,0.396963 -4.146053,0.793925 -6.219079,1.190888"
        id="path45694"
@@ -4098,8 +4063,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-J"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1096"
-     >
+     id="g1096">
     <path
        d="M 28.442291,79.615389 C 23.273154,90.348543 18.104017,101.0817 12.93488,111.81485 8.4316255,114.78508 3.928371,117.75532 -0.57488356,120.72555 -4.209218,120.519 -7.7767547,119.06106 -10.060462,116.12648"
        id="path18063"
@@ -4182,8 +4146,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-K"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1100"
-     >
+     id="g1100">
     <path
        d="M 20.120924,63.237191 C 24.719993,52.889287 29.319061,42.541383 33.91813,32.193479"
        id="path19805"
@@ -4284,8 +4247,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-L"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1104"
-     >
+     id="g1104">
     <path
        d="M 21.138211,91.869919 C 26.219512,80.555556 31.300813,69.241192 36.382114,57.926829 32.113821,57.588076 27.845529,57.249322 23.577236,56.910569"
        id="path41657"
@@ -4375,8 +4337,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-M"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1108"
-     >
+     id="g1108">
     <path
        d="M 23.170731,85.569104 C 20.07634,95.239466 12.86358,111.27453 0.16092324,104.70987 l -1.35398454,-0.5213 -1.245963,-0.53004"
        id="path1772"
@@ -4431,8 +4392,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-N"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1112"
-     >
+     id="g1112">
     <path
        d="M 15.809298,76.459513 C 13.030694,83.549744 10.25209,90.639974 7.4734862,97.730205"
        id="path23321"
@@ -4514,8 +4474,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-O"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1116"
-     >
+     id="g1116">
     <path
        d="m 16.056911,81.504065 c 2.211774,-8.046767 3.895639,-16.343611 6.432585,-24.23634 4.250791,-5.484038 8.032723,-11.521442 12.56803,-16.669683 5.048576,-2.557071 10.097151,-5.114142 15.145726,-7.671213"
        id="path1636"
@@ -4561,8 +4520,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-P"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1120"
-     >
+     id="g1120">
     <path
        d="M 31.504064,85.569104 C 37.804877,71.544714 44.10569,57.520324 50.406503,43.495934"
        id="path6149"
@@ -4629,8 +4587,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Q"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1124"
-     >
+     id="g1124">
     <path
        d="m 16.056911,81.504065 c 2.211774,-8.046767 3.895639,-16.343611 6.432585,-24.23634 4.250791,-5.484038 8.032723,-11.521442 12.56803,-16.669683 5.048576,-2.557071 10.097151,-5.114142 15.145726,-7.671213"
        id="path1636-58"
@@ -4730,8 +4687,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-R"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1128"
-     >
+     id="g1128">
     <path
        d="M 34.120924,75.237191 C 38.719993,64.889287 43.319061,54.541383 47.91813,44.193479"
        id="path19805-9"
@@ -4833,8 +4789,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-S"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1132"
-     >
+     id="g1132">
     <path
        d="M 5.4782785,100.04139 C 4.7869699,96.141498 5.8069867,93.124152 9.6309378,91.552817 l 0.1251634,-0.0894"
        id="path44195"
@@ -4881,8 +4836,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-T"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1136"
-     >
+     id="g1136">
     <path
        d="m 31.504064,82.520324 c -1.964769,7.181572 -3.929539,14.363144 -5.894308,21.544716"
        id="path15183"
@@ -4963,8 +4917,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-U"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1140"
-     >
+     id="g1140">
     <path
        d="M 16.09674,83.358116 C 22.803715,66.686493 29.510689,50.01487 36.217664,33.343247"
        id="path5840"
@@ -5030,8 +4983,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-V"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1144"
-     >
+     id="g1144">
     <path
        d="m 20.365033,96.77275 c 4.574529,-11.800379 9.764002,-23.406391 13.949277,-35.329803 1.650857,-9.638505 8.121742,-20.091994 3.487198,-29.67501 -4.721957,-4.31688 -14.459428,-4.288791 -17.31697,2.167057 -3.563212,4.74855 -7.126425,9.497101 -10.6896373,14.245651"
        id="path5840-9"
@@ -5079,8 +5031,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-W"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1148"
-     >
+     id="g1148">
     <path
        d="m 21.584545,96.569498 c 4.574529,-11.800379 9.764002,-23.406391 13.949277,-35.329803 1.650857,-9.638505 8.121742,-20.091994 3.487198,-29.67501 -4.721957,-4.31688 -14.459428,-4.288791 -17.31697,2.167057 -3.563212,4.74855 -7.126425,9.497101 -10.689637,14.245651"
        id="path5840-9-0"
@@ -5163,8 +5114,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-X"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1152"
-     >
+     id="g1152">
     <path
        d="m 20.124382,89.322619 c -1.890155,3.334768 -3.780309,6.669537 -5.670464,10.004305"
        id="path18833-7"
@@ -5252,8 +5202,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Y"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1156"
-     >
+     id="g1156">
     <path
        d="M 29.606503,80.196255 C 36.196858,64.72389 43.72057,48.787525 43.96493,31.67274 c -5.625498,-12.165979 -21.683766,1.2396 -25.319528,9.395198 -3.395913,7.961306 -9.226013,16.354483 -8.44255,25.248823 0.144165,1.12929 0.288329,2.258579 0.432494,3.387869"
        id="path31589"
@@ -5321,8 +5270,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Z"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1160"
-     >
+     id="g1160">
     <path
        d="M 42.541383,73.585094 C 54.901379,64.195329 67.261376,54.805565 79.621372,45.4158 c 0.47907,-4.215813 0.958139,-8.431625 1.437209,-12.647438 -13.268434,1.339225 -26.575008,1.670078 -39.902906,1.437209 -5.95763,0 -11.915261,0 -17.872891,0"
        id="path33431"
@@ -5369,8 +5317,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-a"
      id="g956"
-     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     >
+     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1">
     <path
        id="autosatinrun1"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -5436,101 +5383,9 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
   </g>
   <g
      inkscape:groupmode="layer"
-     inkscape:label="GlyphLayer-b"
-     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g960"
-     >
-    <path
-       d="M 2.5,84.5 C 9.5833333,69.166667 16.666667,53.833333 23.75,38.5"
-       id="path6816-4-31-3"
-       sodipodi:nodetypes="cc"
-       inkstitch:ties="3"
-       inkstitch:running_stitch_length_mm="2"
-       style="stroke-dasharray:0.5, 0.5" />
-    <path
-       id="autosatin19-5"
-       d="m 22.7811,33 c 0,0 -4.495549,-1.550172 -5.4298,0 C 12.658271,44.521472 9.0993958,54.630004 4.52794,64.8665 M 28,35 c 1.139666,1.142224 2.973014,1.12831 2.25,5.375 L 25.279793,50.557893 C 23.611752,53.975353 21.350639,58.025852 19.3821,61.941 l -4.4954,8.8249 M 32.25,51.265 6.9999992,40.250001"
-       inkstitch:satin_column="True"
-       inkstitch:zigzag_underlay="True"
-       sodipodi:nodetypes="cccccscccc"
-       inkstitch:ties="3"
-       inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False"
-       inkstitch:zigzag_underlay_inset_mm="0.1"
-       inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
-       inkscape:label="Auto-remplissage satin 4"
-       inkstitch:pull_compensation_mm="0.1"
-       inkstitch:max_stitch_length_mm="6"
-       inkstitch:reverse_rails="none" />
-    <path
-       d="m 7.07447,73.0818 c -2.8605603,7.955156 -7.57076273,15.604865 -7.903821,24.2167 0.12554854,1.569018 0.84031858,3.04434 2.033461,4.0805"
-       inkstitch:running_stitch_length_mm="2"
-       id="autosatinrun14-6"
-       inkscape:label="Points droits pour auto-remplissage satin 5"
-       sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccc"
-       inkstitch:ties="3"
-       style="stroke-dasharray:0.5, 0.5" />
-    <path
-       id="autosatin20-1"
-       d="m 2,98 2.1571,-5.1441 2.65263,-5.7842 6.19317,-12.6075 1.8838,-3.6983 m -14.478471,33.9911 -1.716939,-0.402 -1.39979,-0.647 -1.10763,-0.864 -0.84045,-1.054 -0.59828,-1.219 -0.38109,-1.3556 -0.1889,-1.4661 -0.0217,-1.5498 c 0.4224759,-5.92599 4.71975,-16.9991 4.71975,-16.9991 0,0 4.0093634,-10.171114 5.65474,-14.3339 M -3.25,74.5 l 15,8"
-       inkstitch:satin_column="True"
-       inkstitch:zigzag_underlay="True"
-       sodipodi:nodetypes="ccccccccccccccccsc"
-       inkstitch:ties="3"
-       inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False"
-       inkstitch:zigzag_underlay_inset_mm="0.1"
-       inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
-       inkscape:label="Auto-remplissage satin 6"
-       inkstitch:pull_compensation_mm="0.1"
-       inkstitch:max_stitch_length_mm="6"
-       inkstitch:reverse_rails="none" />
-    <path
-       id="autosatin21-7"
-       d="m 21.2132,77.9585 16.617,5.3033 M 25.455884,64.700229 27.753987,53.9169 M 21.92028,71.064278 13.788535,68.58938 M 14.8867,70.7659 c 5.468719,-9.165151 8.607417,-19.309773 19.0141,-13.7326 9.852422,7.163112 3.753822,25.167319 -1.7788,32.8866 M 18.21615,71.033829 c 1.056766,-2.525411 8.307675,-14.814788 8.95915,-8.106329 0.07584,7.242775 -2.81874,14.582957 -5.254,20.6512"
-       sodipodi:nodetypes="cccccccccccc"
-       inkstitch:satin_column="True"
-       inkstitch:zigzag_underlay="True"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False"
-       inkstitch:ties="3"
-       inkscape:label="Auto-remplissage satin 7"
-       inkstitch:pull_compensation_mm="0.1"
-       inkstitch:zigzag_underlay_inset_mm="0.1"
-       inkstitch:max_stitch_length_mm="6"
-       inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
-       inkstitch:reverse_rails="none" />
-    <path
-       d="M 27.0216,86.7493 C 23.525473,92.459792 18.208474,99.276336 10.7276,98.4349 6.3425148,96.080473 7.1218205,90.084413 7.08403,85.9186"
-       inkstitch:running_stitch_length_mm="2"
-       id="autosatinrun15-1"
-       inkscape:label="Points droits pour auto-remplissage satin 8"
-       inkstitch:ties="3"
-       style="stroke-dasharray:0.5, 0.5" />
-    <path
-       id="autosatin22-6"
-       d="m 10.7834,103.061 1.591,-9.7229 M 18.21615,71.033829 C 15.41844,78.564429 8.1748261,87.301316 9.15177,92.2543 11.545152,104.38845 19.697528,88.533395 21.9213,83.5787 M 14.8867,70.7659 C 8.5751199,85.155893 -5.6576088,103.07333 18.3654,100.7 24.2653,99.3193 28.6706,94.6353 32.122,89.9199"
-       sodipodi:nodetypes="cccscccc"
-       inkstitch:satin_column="True"
-       inkstitch:zigzag_underlay="True"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False"
-       inkstitch:ties="2"
-       inkscape:label="Auto-remplissage satin 9"
-       inkstitch:pull_compensation_mm="0.1"
-       inkstitch:zigzag_underlay_inset_mm="0.1"
-       inkstitch:max_stitch_length_mm="6"
-       inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
-       inkstitch:reverse_rails="none" />
-  </g>
-  <g
-     inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-c"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g964"
-     >
+     id="g964">
     <path
        d="M 3.3587574,84.676041 C 7.7023764,74.026028 11.482199,61.646942 21.510539,54.97762 c 9.967918,-4.279644 16.768051,6.604353 7.834394,13.611741"
        id="path6746"
@@ -5557,8 +5412,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-d"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g968"
-     >
+     id="g968">
     <path
        id="autosatinrun1-4"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -5626,8 +5480,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-e"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g972"
-     >
+     id="g972">
     <path
        d="M 1.5909903,89.449012 C 6.1520399,77.157989 10.642664,63.266948 21.743534,55.331108 c 15.411479,-6.350053 12.672342,20.717734 0.632047,21.69196 l -1.687709,0.186913 -0.712105,0.04144"
        id="path4402"
@@ -5654,8 +5507,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-f"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g976"
-     >
+     id="g976">
     <path
        d="M 2.0325203,92.682927 C 5.6470551,77.094394 11.935132,61.352419 23.297713,49.834028 c 1.177185,-0.960936 2.35437,-1.921872 3.531555,-2.882808"
        id="path1289"
@@ -5724,8 +5576,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-g"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g980"
-     >
+     id="g980">
     <path
        id="autosatinrun11-1-4"
        inkscape:label="Points droits pour auto-remplissage satin 5"
@@ -5810,8 +5661,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-h"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g984"
-     >
+     id="g984">
     <path
        d="M 2.5,84.5 C 9.5833333,69.166667 16.666667,53.833333 23.75,38.5"
        id="path6816-4-3-3"
@@ -5877,8 +5727,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-i"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g988"
-     >
+     id="g988">
     <path
        d="M 0.82069919,89.845602 C 4.9637995,80.980401 9.1068997,72.115201 13.25,63.25"
        inkstitch:running_stitch_length_mm="2"
@@ -5953,8 +5802,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-j"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g992"
-     >
+     id="g992">
     <path
        d="M 4.4365531,101.61779 C 8.9912051,89.05147 13.545857,76.485149 18.100509,63.918829 14.742156,54.28944 -0.18800421,58.75573 -2.2358513,66.705341 l -0.2374298,1.186413 -0.3029224,1.375458"
        id="path26350-7-4"
@@ -6073,8 +5921,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-k"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g996"
-     >
+     id="g996">
     <path
        d="M 0.50000001,83.5 C 6.8704407,68.36933 17.883586,55.073708 21.510371,38.868495"
        inkstitch:running_stitch_length_mm="2"
@@ -6152,8 +5999,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-l"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1000"
-     >
+     id="g1000">
     <path
        d="M 2.5,84.5 C 9.5833333,69.166667 16.666667,53.833333 23.75,38.5"
        id="path6816-4-30"
@@ -6181,8 +6027,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-m"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1004"
-     >
+     id="g1004">
     <path
        d="M 1.907025,81.934941 C 4.9711547,76.160235 8.0352843,70.38553 11.099414,64.610824"
        id="path3982-9-6-3"
@@ -6238,8 +6083,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-n"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1008"
-     >
+     id="g1008">
     <path
        d="M 2.0755004,83.142108 C 5.1396299,77.367402 8.2037595,71.592697 11.267889,65.817991"
        id="path3982-9-6-3-4"
@@ -6281,8 +6125,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-o"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1012"
-     >
+     id="g1012">
     <path
        d="m 2.625,92.25 c 2.5629161,-8.277134 4.5871714,-16.835453 7.480363,-24.940181 2.129811,-2.63815 4.259622,-5.2763 6.389433,-7.91445"
        id="path2188-7"
@@ -6333,8 +6176,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-p"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1016"
-     >
+     id="g1016">
     <path
        d="M 2.7431079,88.465845 C 5.5502012,80.444841 12.958909,73.498481 13.085752,64.900671 12.992127,62.372805 12.898503,59.844939 12.804878,57.317073"
        id="path7202"
@@ -6402,8 +6244,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-q"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1020"
-     >
+     id="g1020">
     <path
        d="M 2.8455285,89.430895 C 2.7406034,77.459925 7.1418035,62.370187 20.31011,59.199598 c 3.258668,-1.207878 6.239309,1.511881 8.145175,3.808532"
        id="path8525"
@@ -6470,8 +6311,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-r"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1024"
-     >
+     id="g1024">
     <path
        d="M 11.75,89.125004 C 15.625,80.583337 19.500001,72.04167 23.375001,63.500003 19.000001,60.708336 14.625,57.91667 10.25,55.125003 8.2916667,58.833336 6.3333334,62.54167 4.3750001,66.250003"
        id="path1598-2"
@@ -6520,8 +6360,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-s"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1028"
-     >
+     id="g1028">
     <path
        d="M -4.2682927,95.731708 C 0.46191,92.511609 4.5510828,87.944236 10.560287,87.412256 c 6.405725,-1.053448 13.23441,5.350809 13.902107,-4.574498 5.327918,-8.021629 -6.56941,-15.178571 -10.412093,-22.03949 -2.776375,-4.897967 -4.5360953,-1.203519 -6.3265695,2.231006 -1.4905664,2.431977 -2.9811327,4.863953 -4.471699,7.29593"
        id="path14979"
@@ -6599,8 +6438,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-t"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1032"
-     >
+     id="g1032">
     <path
        d="M 2.5,84.5 C 9.5833333,69.166667 16.666667,53.833333 23.75,38.5"
        id="path6816-8"
@@ -6665,8 +6503,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-u"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1036"
-     >
+     id="g1036">
     <path
        d="M 1.9445437,90.686446 C 0.68970867,80.325264 5.8034718,70.52078 12.197592,62.755727"
        id="path781-9"
@@ -6716,8 +6553,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-v"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1040"
-     >
+     id="g1040">
     <path
        d="M 0.20325203,90.447155 C 3.5254968,80.507534 7.4818243,70.78141 11.178862,60.97561"
        id="path13622"
@@ -6763,8 +6599,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-w"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1044"
-     >
+     id="g1044">
     <path
        d="M 1.1605156,92.937536 C -0.09431947,82.576354 5.0194437,72.77187 11.413564,65.006817"
        id="path781-9-8"
@@ -6832,8 +6667,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-x"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1048"
-     >
+     id="g1048">
     <path
        d="M 4.7427894,87.669744 C 2.8265109,89.633929 0.91023233,91.598115 -1.0060462,93.5623"
        id="path18833"
@@ -6900,8 +6734,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-y"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1052"
-     >
+     id="g1052">
     <path
        d="M 0.88388347,91.570328 C 2.9977164,84.469917 4.0477966,76.942404 6.8424636,70.11535 8.1561018,67.779993 9.4697399,65.444637 10.783378,63.10928"
        id="path26350-35"
@@ -6987,8 +6820,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-z"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1056"
-     >
+     id="g1056">
     <path
        d="M 4.0241849,98.44881 C 8.9511796,92.042208 19.837503,90.336427 23.070624,84.437287 18.53096,80.680681 7.6304318,75.463968 18.485253,70.849554 27.55223,69.074228 35.776265,54.277673 22.83849,51.40503 11.391081,49.107433 8.3927985,62.167445 3.9971857,69.667579 l -0.5157552,0.963327 -0.4774158,0.890592"
        id="path21431"
@@ -7055,8 +6887,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-§"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1220"
-     >
+     id="g1220">
     <path
        d="M 24.925514,83.703765 C 19.25921,78.421734 10.715281,69.211265 18.284292,61.834894 24.631002,57.86917 30.161684,52.767362 24.330453,45.24161 25.673919,34.597394 44.405343,28.562652 49.115306,39.785354 50.287099,46.123252 48.708342,53.754107 43.133514,57.629203"
        id="path10580"
@@ -7119,8 +6950,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-«"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1276"
-     >
+     id="g1276">
     <path
        id="path8321-9"
        d="M 35.209735,77.646105 20.979212,76.32028 M 49.483599,59.240667 c -11.382602,6.12663 -27.803019,15.74571 -26.322875,19.129001 3.513204,4.881059 9.399785,6.997986 14.719478,9.257793 1.055773,0.459892 2.512636,0.846156 3.633315,0.453492 M 52.055726,60.36476 c 1.384441,0.844895 1.931444,2.589643 1.278676,4.096758 -3.656153,4.157598 -22.36183,11.690492 -20.386513,14.578934 3.088312,1.696573 10.216568,4.471165 9.828214,7.933123"
@@ -7150,8 +6980,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-±"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1212"
-     >
+     id="g1212">
     <path
        d="m 23.246136,75.748814 c 3.211443,-8.279042 6.422887,-16.558084 9.63433,-24.837126"
        id="path1921-2"
@@ -7271,8 +7100,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-»"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1280"
-     >
+     id="g1280">
     <path
        id="path8321"
        d="m 22.273864,71.594562 14.230523,1.325825 M 8,90 C 21.455071,82.541068 38.467622,75.734625 34.322875,70.870999 23.59325,64.376051 21.249564,58.924506 15.970082,61.159714 M 5.4278732,88.875907 C 1.7851115,85.338465 5.9458763,83.280526 8.511797,81.297228 11.949268,78.49794 26.490802,73.059081 24.53571,70.200215 21.447398,68.503642 14.319142,65.72905 14.707496,62.267092"
@@ -7302,8 +7130,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-¿"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1248"
-     >
+     id="g1248">
     <path
        d="M 2.854387,89.175892 C 4.8022032,76.816673 13.73565,66.65865 25.100318,61.809099 34.052611,57.299924 45.527684,51.461264 46.240192,40.207001 c 0.07973,-0.385369 0.159463,-0.770739 0.239195,-1.156109"
        id="path12566-8"
@@ -7368,8 +7195,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-À"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1312"
-     >
+     id="g1312">
     <path
        d="M -7.4734863,83.933 C -2.0544535,80.730541 2.3977006,75.291632 9.0086699,74.846196 16.38013,72.68429 24.012801,72.821823 31.618596,72.722771 42.030742,59.952703 50.922234,46.07566 60.937658,33"
        id="path36123-7"
@@ -7503,8 +7329,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Á"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1316"
-     >
+     id="g1316">
     <path
        d="M -7.4734863,83.933 C -3.6152497,77.394262 3.0571951,73.768947 10.51871,73.857573 17.501843,72.744652 24.57219,72.909028 31.618596,72.722771 42.030742,59.952703 50.922234,46.07566 60.937658,33"
        id="path36123-1"
@@ -7641,8 +7466,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Â"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1320"
-     >
+     id="g1320">
     <path
        d="M -7.4734863,83.933 C -2.0544535,80.730541 2.3977006,75.291632 9.0086699,74.846196 16.38013,72.68429 24.012801,72.821823 31.618596,72.722771 42.030742,59.952703 50.922234,46.07566 60.937658,33"
        id="path36123-0"
@@ -7770,8 +7594,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Ã"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1324"
-     >
+     id="g1324">
     <path
        d="M -7.4734863,83.933 C -2.0544535,80.730541 2.3977006,75.291632 9.0086699,74.846196 16.38013,72.68429 24.012801,72.821823 31.618596,72.722771 42.030742,59.952703 50.922234,46.07566 60.937658,33"
        id="path36123-78"
@@ -7897,8 +7720,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Ä"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1328"
-     >
+     id="g1328">
     <path
        d="M -7.4734863,83.933 C -2.0544535,80.730541 2.3977006,75.291632 9.0086699,74.846196 16.38013,72.68429 24.012801,72.821823 31.618596,72.722771 42.030742,59.952703 50.922234,46.07566 60.937658,33"
        id="path36123-6"
@@ -8061,8 +7883,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Å"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1332"
-     >
+     id="g1332">
     <path
        d="M -7.4734863,83.933 C -2.0544535,80.730541 2.3977006,75.291632 9.0086699,74.846196 16.38013,72.68429 24.012801,72.821823 31.618596,72.722771 42.030742,59.952703 50.922234,46.07566 60.937658,33"
        id="path36123-4"
@@ -8190,8 +8011,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Æ"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1336"
-     >
+     id="g1336">
     <path
        d="M -7.4734863,83.933 C -2.0544535,80.730541 2.3977006,75.291632 9.0086699,74.846196 16.38013,72.68429 24.012801,72.821823 31.618596,72.722771 42.030742,59.952703 50.922234,46.07566 60.937658,33"
        id="path36123-47"
@@ -8360,8 +8180,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Ç"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1340"
-     >
+     id="g1340">
     <path
        d="m 6.9693461,77.043562 c -0.9800244,11.20058 3.0959149,23.569368 13.7228299,28.869748 4.456219,2.08534 9.712818,3.5439 3.151409,7.42252 -7.216016,5.06668 0.207769,8.48986 5.149503,9.56903 -0.341859,2.98324 3.114537,7.90858 -0.103781,9.42106 -3.491938,1.25676 -6.772661,5.01314 -10.5685,2.67339 -4.927855,-1.49769 -9.8557098,-2.99537 -14.7835645,-4.49305"
        id="path1058-5"
@@ -8429,8 +8248,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-È"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1344"
-     >
+     id="g1344">
     <path
        d="m 20.731707,89.430895 c 9.105058,-19.047058 18.922677,-37.774047 26.51346,-57.501287 0.204692,-0.493645 0.409385,-0.987291 0.614078,-1.480936"
        id="path42431-8"
@@ -8606,8 +8424,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-É"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1348"
-     >
+     id="g1348">
     <path
        d="M 20.731707,89.430895 C 29.821594,70.635469 39.009219,51.887283 47.907706,33"
        id="path42431-4"
@@ -8780,8 +8597,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Ê"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1352"
-     >
+     id="g1352">
     <path
        d="M 20.731707,89.430895 C 27.267477,76.318213 33.236545,62.872368 40.134252,49.972467 43.498889,45.111065 45.520348,38.767358 43.266132,33"
        id="path42431-9"
@@ -8951,8 +8767,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Ë"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1356"
-     >
+     id="g1356">
     <path
        d="M 20.731707,89.430895 C 26.897019,76.70893 33.06233,63.986965 39.227642,51.265 44.858181,46.624945 44.370275,39.361532 42.605541,33"
        id="path42431-6"
@@ -9158,8 +8973,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Ì"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1360"
-     >
+     id="g1360">
     <path
        d="M 25.406504,84.95935 C 31.300813,70.867209 37.195122,56.775068 43.089431,42.682927 42.344174,40.311653 41.598916,37.94038 40.853659,35.569106"
        id="path45694-6"
@@ -9335,8 +9149,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Í"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1364"
-     >
+     id="g1364">
     <path
        d="M 25.406504,84.95935 C 31.288984,70.668876 37.509261,56.475689 43.182171,42.124857 43.567648,39.805238 43.953124,37.485619 44.3386,35.166"
        id="path45694-8"
@@ -9510,8 +9323,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Î"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1368"
-     >
+     id="g1368">
     <path
        d="M 25.406504,84.95935 C 31.300813,70.867209 37.195122,56.775068 43.089431,42.682927 41.885459,39.944056 40.681486,37.205185 39.477514,34.466314"
        id="path45694-5"
@@ -9683,8 +9495,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Ï"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1372"
-     >
+     id="g1372">
     <path
        d="M 25.406504,84.95935 C 31.300813,70.867209 37.195122,56.775068 43.089431,42.682927 41.614063,39.70441 40.138694,36.725894 38.663326,33.747377"
        id="path45694-1"
@@ -9889,8 +9700,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Ñ"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1376"
-     >
+     id="g1376">
     <path
        d="M 15.809298,76.459513 C 13.030694,83.549744 10.25209,90.639974 7.4734862,97.730205"
        id="path23321-6"
@@ -10016,8 +9826,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Ò"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1380"
-     >
+     id="g1380">
     <path
        d="m 16.056911,81.504065 c 2.211774,-8.046767 3.895639,-16.343611 6.432585,-24.23634 4.432169,-5.578505 8.117233,-11.940132 13.005568,-17.04048 5.061773,-3.365215 10.123547,-6.730431 15.18532,-10.095646"
        id="path1636-2"
@@ -10118,8 +9927,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Ó"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1384"
-     >
+     id="g1384">
     <path
        d="m 16.056911,81.504065 c 2.350958,-8.193739 3.804119,-16.78061 6.712371,-24.730319 4.444489,-6.505111 8.347908,-13.611695 13.122779,-19.749541 5.048576,-2.557071 10.097151,-5.114142 15.145726,-7.671213"
        id="path1636-8"
@@ -10221,8 +10029,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Ô"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1388"
-     >
+     id="g1388">
     <path
        d="m 16.056911,81.504065 c 2.211774,-8.046767 3.895639,-16.343611 6.432585,-24.23634 4.409429,-5.610897 8.162264,-11.875987 12.972595,-17.087449 4.413961,-3.268961 8.827923,-6.537922 13.241885,-9.806883"
        id="path1636-5"
@@ -10317,8 +10124,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Õ"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1392"
-     >
+     id="g1392">
     <path
        d="m 16.056911,81.504065 c 2.211774,-8.046767 3.895639,-16.343611 6.432585,-24.23634 4.250791,-5.484038 8.032723,-11.521442 12.56803,-16.669683 5.048576,-2.557071 10.097151,-5.114142 15.145726,-7.671213"
        id="path1636-9"
@@ -10410,8 +10216,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Ö"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1396"
-     >
+     id="g1396">
     <path
        d="m 16.056911,81.504065 c 2.211774,-8.046767 3.895639,-16.343611 6.432585,-24.23634 4.559287,-5.734879 8.305042,-12.239969 13.373918,-17.492395 4.55661,-3.749155 9.113221,-7.49831 13.669831,-11.247465"
        id="path1636-7"
@@ -10541,8 +10346,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-×"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1292"
-     >
+     id="g1292">
     <path
        d="M 14.4375,77.125 C 11.041667,81.25 7.6458333,85.375 4.25,89.5"
        id="path16111"
@@ -10620,8 +10424,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Ù"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1400"
-     >
+     id="g1400">
     <path
        d="M 16.09674,83.358116 C 22.803715,66.686493 29.510689,50.01487 36.217664,33.343247"
        id="path5840-8"
@@ -10740,8 +10543,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Ú"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1404"
-     >
+     id="g1404">
     <path
        d="M 16.09674,83.358116 C 22.803715,66.686493 29.510689,50.01487 36.217664,33.343247"
        id="path5840-4"
@@ -10858,8 +10660,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Û"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1408"
-     >
+     id="g1408">
     <path
        d="M 16.09674,83.358116 C 22.803715,66.686493 29.510689,50.01487 36.217664,33.343247"
        id="path5840-6"
@@ -10972,8 +10773,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Ü"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1412"
-     >
+     id="g1412">
     <path
        d="M 16.09674,83.358116 C 22.803715,66.686493 29.510689,50.01487 36.217664,33.343247"
        id="path5840-47"
@@ -11123,8 +10923,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Ý"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1416"
-     >
+     id="g1416">
     <path
        d="M 29.606503,80.196255 C 31.547015,65.884526 37.00238,52.080044 42.496677,38.744869 50.917901,25.356392 30.164847,23.465283 24.840786,33.061284 16.816242,41.329862 12.798814,52.686094 9.844659,63.510918 c 0.263562,2.06457 0.527125,4.129141 0.790687,6.193712"
        id="path31589-5"
@@ -11243,8 +11042,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-à"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1420"
-     >
+     id="g1420">
     <path
        d="M 0.298106,90.8393 C 6.0429117,86.175581 4.3876378,78.045757 7.741547,72.042696 11.025312,64.346897 17.998659,56.421676 27.19537,57.609795 c 0.511264,-0.01306 1.022529,-0.02611 1.533794,-0.03917"
        inkstitch:running_stitch_length_mm="2"
@@ -11366,8 +11164,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-á"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1424"
-     >
+     id="g1424">
     <path
        id="autosatinrun28"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -11486,8 +11283,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-â"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1428"
-     >
+     id="g1428">
     <path
        d="M 0.29810602,90.839259 C 7.0947369,83.95333 4.6366046,72.400274 11.67635,65.287392 c 3.095342,-3.955309 7.601065,-7.985618 12.986976,-7.540015"
        id="autosatinrun1-9"
@@ -11600,8 +11396,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ã"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1432"
-     >
+     id="g1432">
     <path
        d="M 0.29810602,90.839259 C 7.0947369,83.95333 4.6366046,72.400274 11.67635,65.287392 c 3.095342,-3.955309 7.601065,-7.985618 12.986976,-7.540015"
        id="autosatinrun1-0"
@@ -11715,8 +11510,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ä"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1436"
-     >
+     id="g1436">
     <path
        d="M 0.29810602,90.839259 C 7.0947369,83.95333 4.6366046,72.400274 11.67635,65.287392 c 3.095342,-3.955309 7.601065,-7.985618 12.986976,-7.540015"
        id="autosatinrun1-41"
@@ -11864,8 +11658,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-å"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1440"
-     >
+     id="g1440">
     <path
        d="M 0.29810602,90.839259 C 7.0947369,83.95333 4.6366046,72.400274 11.67635,65.287392 c 3.095342,-3.955309 7.601065,-7.985618 12.986976,-7.540015"
        id="autosatinrun1-7"
@@ -11978,8 +11771,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-æ"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1444"
-     >
+     id="g1444">
     <path
        id="autosatinrun1-8"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -12067,8 +11859,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ç"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1448"
-     >
+     id="g1448">
     <path
        d="M 3.3587574,84.676041 C 5.9514823,89.784027 8.5442071,94.892014 11.136932,100 c -6.3932058,4.00907 -9.7170211,12.18745 -0.349108,13.08191 3.282816,1.20038 1.80866,6.32324 3.000759,9.24757 -3.139857,1.26264 -6.1808787,3.69496 -9.3801118,4.25491 -5.8299824,-1.77185 -11.6599648,-3.54371 -17.4899472,-5.31557"
        id="path1058"
@@ -12116,8 +11907,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-è"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1452"
-     >
+     id="g1452">
     <path
        id="autosatinrun25-1"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -12198,8 +11988,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-é"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1456"
-     >
+     id="g1456">
     <path
        id="autosatinrun28-1"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -12279,8 +12068,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ê"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1460"
-     >
+     id="g1460">
     <path
        d="M 0.29810602,90.839259 C 6.754829,83.592123 5.6624571,72.270814 12.573566,64.876692 16.424717,59.630347 22.862308,51.635634 30.228816,55.507885"
        id="autosatinrun1-9-0"
@@ -12354,8 +12142,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ë"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1464"
-     >
+     id="g1464">
     <path
        d="M 0.29810602,90.839259 C 7.0947369,83.95333 4.6366046,72.400274 11.67635,65.287392 15.648416,60.84661 20.541603,55.495712 26.784646,54.91895"
        id="autosatinrun1-41-4"
@@ -12465,8 +12252,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ì"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1468"
-     >
+     id="g1468">
     <path
        d="m -1.011765,88.616126 c 5.7448057,-4.663719 4.0895318,-12.793543 7.443441,-18.796604 1.61321,-3.724875 3.921418,-7.139377 6.820353,-9.985296"
        inkstitch:running_stitch_length_mm="2"
@@ -12548,8 +12334,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-í"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1472"
-     >
+     id="g1472">
     <path
        id="autosatinrun28-12"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -12629,8 +12414,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-î"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1476"
-     >
+     id="g1476">
     <path
        d="M 0.29810602,90.839259 C 2.9924594,80.186338 4.3383811,68.402431 13.061852,60.432447"
        id="autosatinrun1-9-0-1"
@@ -12705,8 +12489,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ï"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1480"
-     >
+     id="g1480">
     <path
        d="M 0.29810602,90.839259 C 7.7491523,83.713329 3.9584783,71.746254 9.7507963,63.522301 10.49812,62.278619 11.39083,61.117327 12.440532,60.112903"
        id="autosatinrun1-41-4-5"
@@ -12817,8 +12600,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ñ"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1484"
-     >
+     id="g1484">
     <path
        d="m 34,44 c -2.128159,-2.802676 -3.792329,-6.926092 -7.816853,-4.330787 -1.916399,0.21445 -3.217996,1.058084 -4.498896,2.465752"
        id="path28580-22"
@@ -12906,8 +12688,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ò"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1488"
-     >
+     id="g1488">
     <path
        d="M 2.625,92.25 C 5,84.083333 7.375,75.916667 9.75,67.75 c 3.913706,-2.77354 7.827411,-5.547081 11.741117,-8.320621"
        id="path2188-7-12"
@@ -13003,8 +12784,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ó"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1492"
-     >
+     id="g1492">
     <path
        id="autosatinrun28-12-4"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -13108,8 +12888,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ô"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1496"
-     >
+     id="g1496">
     <path
        d="M 4.9432445,86.131892 C 7.637598,75.478971 8.9835199,63.695064 17.706991,55.72508"
        id="autosatinrun1-9-0-1-7"
@@ -13207,8 +12986,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-õ"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1500"
-     >
+     id="g1500">
     <path
        d="m 2.625,92.25 c 2.5629161,-8.277134 4.5871714,-16.835453 7.480363,-24.940181 2.129811,-2.63815 4.259622,-5.2763 6.389433,-7.91445"
        id="path2188-7-9"
@@ -13305,8 +13083,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ö"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1504"
-     >
+     id="g1504">
     <path
        d="m 5.1715816,86.248269 c 7.4510464,-7.125931 3.660373,-19.093004 9.4526904,-27.316958 0.747324,-1.243682 1.640034,-2.404974 2.689736,-3.409398"
        id="autosatinrun1-41-4-5-4"
@@ -13440,8 +13217,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ù"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1508"
-     >
+     id="g1508">
     <path
        d="M 1.9445437,90.686446 C 1.7712468,78.878613 13.293019,69.389395 10,57"
        id="path781-9-98"
@@ -13536,8 +13312,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ú"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1512"
-     >
+     id="g1512">
     <path
        d="M 1.9445437,90.686446 C 0.9780895,79.433565 7.306814,68.98671 13.995227,60.49451"
        id="path781-9-1"
@@ -13638,8 +13413,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-û"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1516"
-     >
+     id="g1516">
     <path
        d="M 1.9445437,90.686446 C 0.92220147,79.589879 6.3561887,68.894287 13.061852,60.432447"
        id="path781-9-9"
@@ -13736,8 +13510,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ü"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1520"
-     >
+     id="g1520">
     <path
        d="M 0.29810602,90.839259 C 7.7491523,83.713329 3.9584783,71.746254 9.7507963,63.522301 10.49812,62.278619 11.39083,61.117327 12.440532,60.112903"
        id="autosatinrun1-41-4-5-1"
@@ -13870,8 +13643,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ý"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1524"
-     >
+     id="g1524">
     <path
        d="M 0.88388347,91.570328 C 2.778893,84.796874 4.1188959,77.753312 6.3548632,71.145793 8.5683178,68.262032 10.781772,65.378271 12.995227,62.49451"
        id="path26350-35-8"
@@ -14008,8 +13780,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ÿ"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1528"
-     >
+     id="g1528">
     <path
        d="M 0.88388347,91.570328 C 2.9977164,84.469917 4.0477966,76.942404 6.8424636,70.11535 8.1561018,67.779993 9.4697399,65.444637 10.783378,63.10928"
        id="path26350-35-0"
@@ -14178,8 +13949,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      id="layer2"
      inkscape:label="GlyphLayer-Œ"
-     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     >
+     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1">
     <path
        d="m 16.056911,81.504065 c 2.211774,-8.046767 3.895639,-16.343611 6.432585,-24.23634 4.250791,-5.484038 8.032723,-11.521442 12.56803,-16.669683 5.048576,-2.557071 10.097151,-5.114142 15.145726,-7.671213"
        id="path1636-85"
@@ -14332,8 +14102,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      id="layer1"
      inkscape:label="GlyphLayer-œ"
-     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     >
+     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1">
     <path
        d="m 2.625,92.25 c 2.5629161,-8.277134 4.5871714,-16.835453 7.480363,-24.940181 2.129811,-2.63815 4.259622,-5.2763 6.389433,-7.91445"
        id="path2188-7-7"
@@ -14405,8 +14174,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-⒜"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1532"
-     >
+     id="g1532">
     <path
        id="autosatinrun1-4-6-8-4"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -14502,8 +14270,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-⒝"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1536"
-     >
+     id="g1536">
     <path
        d="M 2.5,84.5 C 9.5833333,69.166667 16.666667,53.833333 23.75,38.5"
        id="path6816-4-31-3-7"
@@ -14630,8 +14397,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-⒞"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1540"
-     >
+     id="g1540">
     <path
        d="M 3.3587574,84.676041 C 7.1535519,77.084576 10.274506,69.085294 14.502312,61.755894 c 2.967056,-10.311983 23.394206,-10.060476 18.080477,2.636162 -0.904657,1.523262 -2.033876,2.902499 -3.237856,4.197305"
        id="path6746-8"
@@ -14679,8 +14445,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-⒟"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1544"
-     >
+     id="g1544">
     <path
        id="autosatinrun1-4-6-8"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -14775,8 +14540,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-⒠"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1548"
-     >
+     id="g1548">
     <path
        d="M 1.5909903,89.449012 C 8.3085049,78.076377 15.026019,66.703743 21.743534,55.331108 c 2.766825,0.909091 8.148557,-1.677168 8.998241,1.79457 1.405706,3.342553 2.402093,6.652989 -0.238854,9.678036 -1.788712,2.92845 -2.782165,6.86251 -5.06743,9.163065 -1.819908,0.428213 -3.639816,0.856427 -5.459724,1.28464"
        id="path4402-9"
@@ -14826,8 +14590,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-⒡"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1552"
-     >
+     id="g1552">
     <path
        d="M 2.0123962,92.682927 C 5.626931,77.094394 11.915008,61.352419 23.277589,49.834028 c 1.177185,-0.960936 2.35437,-1.921872 3.531555,-2.882808"
        id="path1289-8"
@@ -14934,8 +14697,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-⒢"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1556"
-     >
+     id="g1556">
     <path
        id="autosatinrun11-1-4-6"
        inkscape:label="Points droits pour auto-remplissage satin 5"
@@ -15028,8 +14790,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-⒣"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1560"
-     >
+     id="g1560">
     <path
        d="M 2.5,84.5 C 9.5833333,69.166667 16.666667,53.833333 23.75,38.5"
        id="path6816-4-3-3-0"
@@ -15118,8 +14879,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-⒤"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1564"
-     >
+     id="g1564">
     <path
        d="M 0.82069919,89.845602 C 4.9637995,80.980401 9.1068997,72.115201 13.25,63.25"
        inkstitch:running_stitch_length_mm="2"
@@ -15217,8 +14977,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-⒥"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1568"
-     >
+     id="g1568">
     <path
        d="M 4.4365531,101.61779 C 8.9912051,89.05147 13.545857,76.485149 18.100509,63.918829 14.95992,55.043654 -0.35277651,57.362284 -1.9972326,65.850361 l -0.6905825,1.649084"
        id="path26350-7-4-2"
@@ -15352,8 +15111,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-⒦"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1572"
-     >
+     id="g1572">
     <path
        d="M 0.50000001,83.5 C 6.8704407,68.36933 17.883586,55.073708 21.510371,38.868495"
        inkstitch:running_stitch_length_mm="2"
@@ -15453,8 +15211,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-⒧"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1576"
-     >
+     id="g1576">
     <path
        d="M 2.5,84.5 C 9.5833333,69.166667 16.666667,53.833333 23.75,38.5"
        id="path6816-4-30-6"
@@ -15505,8 +15262,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-⒨"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1580"
-     >
+     id="g1580">
     <path
        d="M 1.907025,81.934941 C 4.9711547,76.160235 8.0352843,70.38553 11.099414,64.610824"
        id="path3982-9-6-3-8"
@@ -15585,8 +15341,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-⒩"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1584"
-     >
+     id="g1584">
     <path
        d="M 2.4803536,79.757384 C 5.5444834,73.982678 8.6086132,68.207973 11.672743,62.433267"
        id="path3982-9-6-3-8-4"
@@ -15651,8 +15406,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-⒪"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1588"
-     >
+     id="g1588">
     <path
        d="M 3.3055805,86.663697 C 4.0800964,76.937793 6.7222881,66.487787 14.659531,60.075332"
        id="path32849"
@@ -15746,8 +15500,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-⒫"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1592"
-     >
+     id="g1592">
     <path
        d="M 2.7431079,88.465845 C 5.5502012,80.444841 12.958909,73.498481 13.085752,64.900671 12.992127,62.372805 12.898503,59.844939 12.804878,57.317073"
        id="path7202-5"
@@ -15852,8 +15605,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-⒬"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1596"
-     >
+     id="g1596">
     <path
        d="M 2.8455285,89.430895 C 6.1953521,78.758941 8.6802627,66.64734 17.15251,58.738599 c 4.112573,-2.572665 8.323896,1.835616 11.302775,4.269531"
        id="path8525-4"
@@ -15943,8 +15695,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-⒭"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1600"
-     >
+     id="g1600">
     <path
        d="M 11.75,89.125004 C 15.625,80.583337 19.500001,72.04167 23.375001,63.500003 19.000001,60.708336 14.625,57.91667 10.25,55.125003 8.2916667,58.833336 6.3333334,62.54167 4.3750001,66.250003"
        id="path1598-2-1"
@@ -16017,8 +15768,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-⒮"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1604"
-     >
+     id="g1604">
     <path
        d="M -4.2682927,95.731708 C 0.46191,92.511609 4.5510828,87.944236 10.560287,87.412256 c 6.405725,-1.053448 13.23441,5.350809 13.902107,-4.574498 5.327918,-8.021629 -6.56941,-15.178571 -10.412093,-22.03949 -2.776375,-4.897967 -4.5360953,-1.203519 -6.3265695,2.231006 -1.4905664,2.431977 -2.9811327,4.863953 -4.471699,7.29593"
        id="path14979-1"
@@ -16119,8 +15869,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-⒯"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1608"
-     >
+     id="g1608">
     <path
        d="M 2.5,84.5 C 9.5833333,69.166667 16.666667,53.833333 23.75,38.5"
        id="path6816-8-2"
@@ -16208,8 +15957,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-⒰"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1612"
-     >
+     id="g1612">
     <path
        id="autosatin30-9-0"
        d="m 11.121666,86.909612 6.280162,7.792564 M -0.176777,63.8164 17.1473,72.1249 M 12.845528,57 C 10,57 9.115033,58.092315 8.6876079,58.651933 3.3653691,65.62023 0.07297293,73.995729 -0.949566,82.7668 -1.6108632,88.439234 -2.27368,98.5884 5.90662,98.0646 14.7013,95.9501 18.197,86.6374 23,80 M 16.5,58.875 c 0.594568,0.235069 3.609613,2.370702 1.47102,5.296674 C 12.872318,71.147597 9.295004,77.744839 7.34189,85.7696 6.5869274,88.871515 4.6957381,96.111797 9.77266,91.6695 16.676335,85.628798 19.088228,79.914872 24.577236,73.252033"
@@ -16276,8 +16024,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-⒱"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1616"
-     >
+     id="g1616">
     <path
        d="M 0.20325203,90.447155 C 3.5254968,80.507534 7.4818243,70.78141 11.178862,60.97561"
        id="path13622-96"
@@ -16359,8 +16106,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-⒲"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1620"
-     >
+     id="g1620">
     <path
        d="M 0.6097561,91.056911 C 4.0650407,82.283198 7.5203254,73.509486 10.97561,64.735773"
        id="path33422"
@@ -16463,8 +16209,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-⒳"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1624"
-     >
+     id="g1624">
     <path
        d="M 4.7427894,87.669744 C 2.8265109,89.633929 0.91023233,91.598115 -1.0060462,93.5623"
        id="path18833-5"
@@ -16556,8 +16301,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-⒴"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1628"
-     >
+     id="g1628">
     <path
        d="M 0.88388347,91.570328 C 2.9977164,84.469917 4.0477966,76.942404 6.8424636,70.11535 8.1561018,67.779993 9.4697399,65.444637 10.783378,63.10928"
        id="path26350-35-00"
@@ -16644,8 +16388,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-⒵"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1632"
-     >
+     id="g1632">
     <path
        d="M 4.0241849,98.44881 C 10.23499,93.857115 16.208207,88.892095 23.282784,85.657651 c -2.575021,-3.762053 -6.21854,-6.434704 -9.77302,-9.198137 4.215337,-3.881596 9.406992,-6.992822 13.002576,-11.363438 0.962427,-3.263765 4.934085,-6.40637 2.486327,-9.807439 -0.341146,-4.712918 -4.099284,-4.409882 -7.84735,-4.121631 -3.209307,8.41e-4 -6.38413,2.154777 -8.930745,3.792978 C 9.1153658,60.16538 6.142608,65.426464 3.7367432,70.99812"
        id="path21431-9"
@@ -16715,8 +16458,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Ⓐ"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1636"
-     >
+     id="g1636">
     <path
        id="autosatinrun1-4-6-7"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -16812,8 +16554,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Ⓓ"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1640"
-     >
+     id="g1640">
     <path
        id="autosatinrun1-4-6"
        inkscape:label="Points droits pour auto-remplissage satin 1"
@@ -16903,8 +16644,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Ⓖ"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1644"
-     >
+     id="g1644">
     <path
        id="autosatinrun11-1-7"
        inkscape:label="Points droits pour auto-remplissage satin 5"
@@ -16984,8 +16724,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Ⓗ"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1648"
-     >
+     id="g1648">
     <path
        d="M 1.0606602,81.670837 C 8.3085051,67.41085 15.55635,53.150862 22.804195,38.890875"
        id="path3982-5"
@@ -17045,8 +16784,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Ⓘ"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1652"
-     >
+     id="g1652">
     <path
        d="M 0.82069919,89.845602 C 4.9637995,80.980401 9.1068997,72.115201 13.25,63.25"
        inkstitch:running_stitch_length_mm="2"
@@ -17139,8 +16877,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Ⓙ"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1656"
-     >
+     id="g1656">
     <path
        d="M 2.561553,101.24279 C 7.741205,88.80147 12.920857,76.360149 18.100509,63.918829 13.779728,52.382075 0.66710694,62.647021 -0.26227964,70.971706 l -0.60652498,2.103352"
        id="path26350-7-2"
@@ -17268,8 +17005,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Ⓚ"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1660"
-     >
+     id="g1660">
     <path
        d="M 4.7096984,78.015001 C 10.409684,65.682004 17.651971,53.993185 22.058586,41.107325 22.448165,39.827185 22.71736,38.51288 22.588699,37.1694"
        inkstitch:running_stitch_length_mm="2"
@@ -17363,8 +17099,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Ⓛ"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1664"
-     >
+     id="g1664">
     <path
        d="M 0.97069968,89.345602 C 8.1381927,72.856217 15.893862,56.601071 22.6782,39.9552"
        inkstitch:running_stitch_length_mm="2"
@@ -17411,8 +17146,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Ⓜ"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1668"
-     >
+     id="g1668">
     <path
        d="M 0.383607,82.251988 C 3.4477367,76.477282 6.5118663,70.702577 9.575996,64.927871"
        id="path3982-9-6"
@@ -17485,8 +17219,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Ⓝ"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1672"
-     >
+     id="g1672">
     <path
        d="M 1.0606602,81.670837 C 4.1247898,75.896131 7.1889194,70.121426 10.253049,64.34672"
        id="path3982"
@@ -17545,8 +17278,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Ⓡ"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1676"
-     >
+     id="g1676">
     <path
        d="m 10.25,91.125004 c 3.875,-8.541667 7.750001,-17.083334 11.625001,-25.625001 -4.375,-2.791667 -8.75,-5.583333 -13.1250006,-8.375 -1.9583334,3.708333 -3.9166669,7.416667 -5.8750003,11.125"
        id="path1598"
@@ -17613,8 +17345,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Ⓣ"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1680"
-     >
+     id="g1680">
     <path
        id="autosatinrun22"
        inkscape:label="Points droits pour auto-remplissage satin 4"
@@ -17717,8 +17448,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Ⓤ"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1684"
-     >
+     id="g1684">
     <path
        d="M 1.9445437,90.686446 C 0.68970867,80.325264 5.8034718,70.52078 12.197592,62.755727"
        id="path781"
@@ -17786,8 +17516,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Ⓨ"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1728"
-     >
+     id="g1728">
     <path
        d="M 18.561553,106.24279 C 22.038161,97.875361 25.51477,89.507932 28.991378,81.140503 23.292683,80.764814 19.378183,83.708273 16.263366,88.365376 12.415807,95.63691 0.8825555,100.88811 0.49487695,88.834697 0.99806287,79.385744 6.29702,71.147133 10.783378,63.10928"
        id="path26350-3"
@@ -17868,8 +17597,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ⓑ"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1704"
-     >
+     id="g1704">
     <path
        d="M 2.5,84.5 C 10.224812,67.439609 17.949624,50.379218 25.674436,33.318827 18.330636,25.535127 9.00653,19.179435 -2.0264945,18.74341 -11.405481,17.245754 -21.419078,16.606031 -30.048406,21.310355 c -8.358196,3.021173 -17.509149,15.810039 -11.375756,24.344142"
        id="path6816-4-31"
@@ -17977,8 +17705,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ⓓ"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1708"
-     >
+     id="g1708">
     <path
        d="M 2.5000001,87 C 1.7200429,96.503652 12.066563,101.40121 16.589626,91.963138 23.328937,84.763683 24.246612,72.015292 35.390007,69.898502 39.281352,68.560658 39.062409,62.994738 41.05479,59.703511 45.884439,47.282657 50.714088,34.861802 55.543737,22.440948 45.901091,18.579909 36.376515,14.118559 26.660984,10.628099 18.814497,10.902117 10.678114,10.298951 3.0133168,11.122734 -0.97608787,14.337842 -5.7979386,16.976616 -9.2771377,20.544959 -10.643092,25.446639 -12.009046,30.34832 -13.375,35.25"
        id="path6816-4-5"
@@ -18088,8 +17815,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ⓖ"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1724"
-     >
+     id="g1724">
     <path
        id="autosatinrun11-1"
        inkscape:label="Points droits pour auto-remplissage satin 5"
@@ -18181,8 +17907,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ⓗ"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1712"
-     >
+     id="g1712">
     <path
        d="M 2.5,84.5 C 10.471534,64.232216 18.443069,43.964432 26.414603,23.696648 16.275809,17.602816 5.6604309,10.154505 -6.8168237,11.538815 c -9.9481753,0.03377 -21.0606573,-0.200094 -28.6478713,7.421179 -5.02411,4.827561 -7.469574,12.732147 -5.910305,19.546743"
        id="path6816-4-3"
@@ -18272,8 +17997,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ⓙ"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1720"
-     >
+     id="g1720">
     <path
        d="M 2.561553,101.24279 C 7.741205,88.80147 12.920857,76.360149 18.100509,63.918829 14.854472,54.647126 -0.21460763,58.037129 -2.1647017,66.204497 l -0.415169,1.364647 -0.5498862,1.60968"
        id="path26350-7"
@@ -18397,8 +18121,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ⓚ"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1696"
-     >
+     id="g1696">
     <path
        d="M 0.50000001,83.5 C 9.184488,64.464378 21.972235,47.197997 27.777377,26.946606 29.517145,16.060439 13.277263,14.969203 5.7621242,12.247855 -4.9975868,11.821155 -16.609505,9.9092343 -26.928874,13.287116 -35.629178,18.607488 -42.42398,25.732722 -40.82887,36.831618"
        inkstitch:running_stitch_length_mm="2"
@@ -18500,8 +18223,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ⓛ"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1700"
-     >
+     id="g1700">
     <path
        d="M 2.5,84.5 C 11.645386,64.521471 23.285191,45.424599 29.35678,24.186315 27.638166,14.337782 12.633613,16.794714 5.0570872,13.252166 -5.3599743,12.403064 -16.401811,10.034305 -26.597606,13.00913 c -8.161917,3.1665 -14.318883,10.960061 -13.586069,19.983516 -0.01441,1.802076 0.110592,3.619341 0.585077,5.366058"
        id="path6816-4"
@@ -18542,8 +18264,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ⓞ"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1688"
-     >
+     id="g1688">
     <path
        d="m 2.625,92.25 c 2.5629161,-8.277134 4.5871714,-16.835453 7.480363,-24.940181 2.129811,-2.63815 4.259622,-5.2763 6.389433,-7.91445"
        id="path2188"
@@ -18624,8 +18345,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ⓣ"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1692"
-     >
+     id="g1692">
     <path
        d="M 2.5,84.5 C 11.458425,63.541393 20.416849,42.582786 29.375274,21.624179 21.293679,18.466369 13.326352,14.76627 5.174652,11.941164 c -9.1306646,-0.01502 -18.362426,-0.963292 -27.429545,-0.391703 -10.91317,2.935944 -21.121901,13.589512 -17.943319,25.545717 l 0.451581,2.003694"
        id="path6816"
@@ -18703,8 +18423,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ⓨ"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
-     id="g1716"
-     >
+     id="g1716">
     <path
        d="M 18.561553,106.24279 C 22.038161,97.875361 25.51477,89.507932 28.991378,81.140503 25.420049,81.677569 21.382297,81.250302 19.263767,84.79104 15.199534,88.759644 11.135301,92.728248 7.0710678,96.696852 5.3016989,94.223143 -0.35182948,93.010058 1.4463966,89.378466 3.9165883,81.413754 4.4682911,72.67876 9.3386317,65.677718 9.8202138,64.821572 10.301796,63.965426 10.783378,63.10928"
        id="path26350"
@@ -18782,6 +18501,209 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
        inkstitch:ties="2"
        inkstitch:zigzag_underlay="True"
        sodipodi:nodetypes="cccccccccccccc"
+       inkstitch:pull_compensation_mm="0.1"
+       inkstitch:zigzag_underlay_inset_mm="0.1"
+       inkstitch:max_stitch_length_mm="6"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+       inkstitch:reverse_rails="none" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="GlyphLayer-ß"
+     style="display:inline;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
+     id="g11">
+    <path
+       d="M -1.3109573,99.618852 C 8.9316524,74.899422 19.174263,50.179992 29.416873,25.460561"
+       id="path20"
+       inkstitch:ties="3"
+       inkstitch:running_stitch_length_mm="2"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-opacity:1" />
+    <path
+       id="path21"
+       d="m 6.0910437,47.631072 c 7.9949773,0.29552 15.9899553,0.59104 23.9849323,0.88656 M 24.40724,20.312295 c -3.852004,3.148062 -4.786971,8.916873 -7.063188,13.284808 -2.48319,5.943857 -4.898027,11.91607 -7.269572,17.905287 M 30.450102,19.502796 c 6.265247,-1.107612 7.574467,5.642414 4.258672,9.707456 -3.375021,7.793773 -7.217339,15.373108 -11.107058,22.919404"
+       inkstitch:satin_column="True"
+       inkstitch:ties="3"
+       inkstitch:zigzag_underlay="True"
+       inkstitch:pull_compensation_mm="0.1"
+       inkstitch:zigzag_underlay_inset_mm="0.1"
+       inkstitch:max_stitch_length_mm="6"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+       inkstitch:reverse_rails="none"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1" />
+    <path
+       d="M 23.70859,52.112842 C 34.247988,46.675901 36.102931,48.437597 44.63285,39.695087 55.680469,28.052757 50.496796,2.8470635 31.32771,8.7330242 9.931595,17.539286 10.702759,24.237497 5.074666,41.595872"
+       id="path7"
+       inkstitch:ties="3"
+       inkstitch:running_stitch_length_mm="2"
+       style="fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
+       sodipodi:nodetypes="cccc" />
+    <path
+       id="path8"
+       d="m 25.973533,19.30567 -14.084647,-15 m 19.86976,33.265 13.509764,13.984284 M 42.681434,27.409845 67.077708,25.972636 M 8.545639,40.293578 C 8.627265,23.597924 20.467872,13.835045 34.642911,14.421483 c 4.724567,0.685349 11.283983,1.61459 12.745461,7.051614 1.79807,14.442898 -18.588152,26.424711 -21.705058,26.832573 m -20,-4 C -0.3528858,16.86438 18.538176,4.3774424 33.978891,4.4951387 39.858348,4.5399547 55.317169,7.4495789 54.284705,26.860157 53.74406,37.024414 46.232211,47.068829 36.59303,51.124711 30.043776,53.880443 28.646753,54.048156 21.683314,55.30567"
+       inkstitch:satin_column="True"
+       inkstitch:zigzag_underlay="True"
+       inkstitch:center_walk_underlay="False"
+       inkstitch:ties="3"
+       inkstitch:contour_underlay="False"
+       inkstitch:pull_compensation_mm="0.1"
+       inkstitch:zigzag_underlay_inset_mm="0.1"
+       inkstitch:max_stitch_length_mm="6"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+       inkstitch:reverse_rails="none"
+       style="fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
+       sodipodi:nodetypes="cccccccccccsssc" />
+    <path
+       id="path29"
+       d="M 10.07448,51.50239 C 7.2157547,59.215616 6.3877091,61.455711 3.378353,69.110995 M 23.601716,52.129656 c -3.797219,7.595079 -5.075982,11.286849 -8.582893,19.018501"
+       inkstitch:pull_compensation_mm="0.1"
+       inkstitch:zigzag_underlay="True"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
+       inkstitch:satin_column="True"
+       inkstitch:max_stitch_length_mm="6"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+       sodipodi:nodetypes="cccc"
+       inkstitch:swap_satin_rails="True" />
+    <path
+       d="m 3.3874457,70.367982 0.1541699,9.929 C -1.3205963,90.688495 -6.1828081,101.08001 -11.04502,111.47152"
+       style="fill:none;stroke:#000000;stroke-width:0.25;stroke-dasharray:3, 1"
+       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_tolerance_mm="2.0"
+       id="path31"
+       sodipodi:nodetypes="ccc" />
+    <path
+       id="path23"
+       d="m -7.5040717,86.280734 c 6.5877869,0.06197 13.1755738,0.123937 19.7633607,0.185905 M -12.909258,110.55204 C -8.4534893,98.451532 -1.2996035,81.127229 3.3783536,69.110966 M -13.051293,113.54868 c 5.3094827,0.0899 8.3973244,-5.24335 11.1261275,-9.05463 C 3.9190262,95.234719 10.442719,80.896491 15.018819,70.979061"
+       inkstitch:pull_compensation_mm="0.1"
+       inkstitch:zigzag_underlay="True"
+       style="fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
+       inkstitch:satin_column="True"
+       inkstitch:max_stitch_length_mm="6"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+       sodipodi:nodetypes="ccccccc" />
+    <path
+       id="path16"
+       d="m 21.2132,77.9585 16.617,5.3033 M 25.455884,64.700229 27.753987,53.9169 M 21.92028,71.064278 13.788535,68.58938 M 14.8867,70.7659 c 3.374172,-5.08778 5.247881,-11.997816 11.094219,-14.864887 6.044792,-2.082185 12.187673,3.318776 12.815069,9.278808 C 40.108487,73.849629 36.832652,82.759544 32.122,89.9199 M 18.21615,71.033829 c 2.105489,-3.607289 3.943234,-8.413738 7.980994,-10.065751 2.255039,3.647046 0.08072,8.698752 -0.707181,12.725471 -0.979433,3.36686 -2.261915,6.634723 -3.568663,9.885151"
+       inkstitch:satin_column="True"
+       inkstitch:zigzag_underlay="True"
+       inkstitch:center_walk_underlay="False"
+       inkstitch:contour_underlay="False"
+       inkstitch:ties="3"
+       inkscape:label="Auto-remplissage satin 7"
+       inkstitch:pull_compensation_mm="0.1"
+       inkstitch:zigzag_underlay_inset_mm="0.1"
+       inkstitch:max_stitch_length_mm="6"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+       inkstitch:reverse_rails="none"
+       style="fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
+       sodipodi:nodetypes="cccccccccccccc" />
+    <path
+       d="M 27.0216,86.7493 C 23.538227,92.497336 18.241198,99.201703 10.7276,98.4349 6.2992595,95.986987 6.0979433,90.894864 8.4365564,86.932995 L 17.839415,71.003512"
+       inkstitch:running_stitch_length_mm="2"
+       id="path17"
+       inkscape:label="Points droits pour auto-remplissage satin 8"
+       inkstitch:ties="3"
+       style="fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
+       sodipodi:nodetypes="ccsc" />
+    <path
+       id="path18"
+       d="m 10.7834,103.061 c 0.530333,-3.240967 1.060667,-6.481933 1.591,-9.7229 m 5.84175,-22.304271 c -2.394129,6.687771 -7.441261,12.22145 -9.0701345,19.195478 -1.3164894,4.374174 3.5756515,9.13467 6.4541235,4.09551 C 18.241293,91.098285 20.170775,87.342828 21.9213,83.5787 M 14.8867,70.7659 C 11.684773,78.587427 6.148351,85.636349 4.9354995,94.158199 4.3510996,100.76163 12.522656,101.42467 17.267165,100.79648 23.68772,100.07383 28.479186,94.827425 32.122,89.9199"
+       inkstitch:satin_column="True"
+       inkstitch:zigzag_underlay="True"
+       inkstitch:center_walk_underlay="False"
+       inkstitch:contour_underlay="False"
+       inkstitch:ties="2"
+       inkscape:label="Auto-remplissage satin 9"
+       inkstitch:pull_compensation_mm="0.1"
+       inkstitch:zigzag_underlay_inset_mm="0.1"
+       inkstitch:max_stitch_length_mm="6"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+       inkstitch:reverse_rails="none"
+       style="fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="GlyphLayer-b"
+     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
+     id="g960-1">
+    <path
+       d="M 2.5,84.5 C 9.5833333,69.166667 16.666667,53.833333 23.75,38.5"
+       id="path6816-4-31-3"
+       sodipodi:nodetypes="cc"
+       inkstitch:ties="3"
+       inkstitch:running_stitch_length_mm="2"
+       style="stroke-dasharray:0.5, 0.5" />
+    <path
+       id="autosatin19-5"
+       d="m 22.7811,33 c 0,0 -4.495549,-1.550172 -5.4298,0 C 12.658271,44.521472 9.0993958,54.630004 4.52794,64.8665 M 28,35 c 1.139666,1.142224 2.973014,1.12831 2.25,5.375 L 25.279793,50.557893 C 23.611752,53.975353 21.350639,58.025852 19.3821,61.941 l -4.4954,8.8249 M 32.25,51.265 6.9999992,40.250001"
+       inkstitch:satin_column="True"
+       inkstitch:zigzag_underlay="True"
+       sodipodi:nodetypes="cccccscccc"
+       inkstitch:ties="3"
+       inkstitch:zigzag_spacing_mm="0.3"
+       inkstitch:center_walk_underlay="False"
+       inkstitch:contour_underlay="False"
+       inkstitch:zigzag_underlay_inset_mm="0.1"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+       inkscape:label="Auto-remplissage satin 4"
+       inkstitch:pull_compensation_mm="0.1"
+       inkstitch:max_stitch_length_mm="6"
+       inkstitch:reverse_rails="none" />
+    <path
+       d="m 7.07447,73.0818 c -2.8605603,7.955156 -7.57076273,15.604865 -7.903821,24.2167 0.12554854,1.569018 0.84031858,3.04434 2.033461,4.0805"
+       inkstitch:running_stitch_length_mm="2"
+       id="autosatinrun14-6"
+       inkscape:label="Points droits pour auto-remplissage satin 5"
+       sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccc"
+       inkstitch:ties="3"
+       style="stroke-dasharray:0.5, 0.5" />
+    <path
+       id="autosatin20-1"
+       d="m 2,98 2.1571,-5.1441 2.65263,-5.7842 6.19317,-12.6075 1.8838,-3.6983 m -14.478471,33.9911 -1.716939,-0.402 -1.39979,-0.647 -1.10763,-0.864 -0.84045,-1.054 -0.59828,-1.219 -0.38109,-1.3556 -0.1889,-1.4661 -0.0217,-1.5498 c 0.4224759,-5.92599 4.71975,-16.9991 4.71975,-16.9991 0,0 4.0093634,-10.171114 5.65474,-14.3339 M -3.25,74.5 l 15,8"
+       inkstitch:satin_column="True"
+       inkstitch:zigzag_underlay="True"
+       sodipodi:nodetypes="ccccccccccccccccsc"
+       inkstitch:ties="3"
+       inkstitch:zigzag_spacing_mm="0.3"
+       inkstitch:center_walk_underlay="False"
+       inkstitch:contour_underlay="False"
+       inkstitch:zigzag_underlay_inset_mm="0.1"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+       inkscape:label="Auto-remplissage satin 6"
+       inkstitch:pull_compensation_mm="0.1"
+       inkstitch:max_stitch_length_mm="6"
+       inkstitch:reverse_rails="none" />
+    <path
+       id="autosatin21-7-4"
+       d="m 21.2132,77.9585 16.617,5.3033 M 25.455884,64.700229 27.753987,53.9169 M 21.92028,71.064278 13.788535,68.58938 M 14.8867,70.7659 c 5.468719,-9.165151 8.607417,-19.309773 19.0141,-13.7326 9.852422,7.163112 3.753822,25.167319 -1.7788,32.8866 M 18.21615,71.033829 c 1.056766,-2.525411 8.307675,-14.814788 8.95915,-8.106329 0.07584,7.242775 -2.81874,14.582957 -5.254,20.6512"
+       sodipodi:nodetypes="cccccccccccc"
+       inkstitch:satin_column="True"
+       inkstitch:zigzag_underlay="True"
+       inkstitch:center_walk_underlay="False"
+       inkstitch:contour_underlay="False"
+       inkstitch:ties="3"
+       inkscape:label="Auto-remplissage satin 7"
+       inkstitch:pull_compensation_mm="0.1"
+       inkstitch:zigzag_underlay_inset_mm="0.1"
+       inkstitch:max_stitch_length_mm="6"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+       inkstitch:reverse_rails="none" />
+    <path
+       d="M 27.0216,86.7493 C 23.525473,92.459792 18.208474,99.276336 10.7276,98.4349 6.3425148,96.080473 7.1218205,90.084413 7.08403,85.9186"
+       inkstitch:running_stitch_length_mm="2"
+       id="autosatinrun15-1-8"
+       inkscape:label="Points droits pour auto-remplissage satin 8"
+       inkstitch:ties="3"
+       style="stroke-dasharray:0.5, 0.5" />
+    <path
+       id="autosatin22-6-9"
+       d="m 10.7834,103.061 1.591,-9.7229 M 18.21615,71.033829 C 15.41844,78.564429 8.1748261,87.301316 9.15177,92.2543 11.545152,104.38845 19.697528,88.533395 21.9213,83.5787 M 14.8867,70.7659 C 8.5751199,85.155893 -5.6576088,103.07333 18.3654,100.7 24.2653,99.3193 28.6706,94.6353 32.122,89.9199"
+       sodipodi:nodetypes="cccscccc"
+       inkstitch:satin_column="True"
+       inkstitch:zigzag_underlay="True"
+       inkstitch:center_walk_underlay="False"
+       inkstitch:contour_underlay="False"
+       inkstitch:ties="2"
+       inkscape:label="Auto-remplissage satin 9"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:max_stitch_length_mm="6"

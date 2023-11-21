@@ -4,7 +4,7 @@
     "keywords": [
         "handwriting"
     ],
-   "leading": 100,
+    "leading": 100,
     "auto_satin": false,
     "reversible": false,
     "letter_case": "",
@@ -16,6 +16,7 @@
     "horiz_adv_x_space": 20,
     "units_per_em": 100,
     "horiz_adv_x": {
+        "ß": 42,
         "b": 42,
         "c": 38,
         "e": 38,
@@ -200,6 +201,8 @@
         "Ⓨ": 43
     },
     "kerning_pairs": {
+        "tr": -4,
+        "ßß":-8,
         "CD": 5,
         "Aj": -14,
         "Ap": -7,
@@ -1139,6 +1142,7 @@
         "ⓛ",
         "ⓞ",
         "ⓣ",
-        "ⓨ"
+        "ⓨ",
+        "ß"
     ]
 }
