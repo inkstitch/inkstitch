@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2023-11-10 01:06+0000\n"
-"PO-Revision-Date: 2023-11-16 01:08\n"
+"PO-Revision-Date: 2023-11-22 01:10\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -69,7 +69,7 @@ msgstr "AGS Γαραμου Garamond"
 #. description of font in fonts/ags_garamond_latin_grec
 #: inkstitch-fonts-metadata.py:16
 msgid "This font contains all the letters of  the latin and  greek alphabets  and cover most european languages. Μ is 22mm hight and 20mm wide. It may be scaled down to 80% and scaled up to 150%"
-msgstr "Cette fonte contient toutes les lettres de lettres des alphabets grecs et latin et couvre la plupart des langages européens. Le M mesure 22 mm de haut et 20 mm de large. Elle peut être agrandie jusqu'à 150% et réduite jusqu'à 150%"
+msgstr "Cette fonte contient toutes les lettres des alphabets grecs et latin et couvre la plupart des langages européens. Le M mesure 22 mm de haut et 20 mm de large. Elle peut être agrandie jusqu'à 150% et réduite jusqu'à 80%"
 
 #. name of font in fonts/amitaclo
 #: inkstitch-fonts-metadata.py:18
@@ -491,7 +491,7 @@ msgstr "Roman AGS"
 #: inkstitch-fonts-metadata.py:180
 #, python-format
 msgid "Based on Latin Modern Roman 10 Bold italic. The capital M is 42.5 millimeter wide at 100% scale.  Can be scaled down to 80% or up to 130%.  Every satin has zigzag underlay"
-msgstr "Basée sur Latin Modern Roman 10 Bold italic. Le  M majuscule a une largeur de 42.5 millimètres à l'échelle 100 %. Peut être réduit à 80 % ou augmenté à 150 %. Chaque satin a une sous-couche zigzag."
+msgstr "Basée sur Latin Modern Roman 10 Bold italic. Le  M majuscule a une largeur de 42.5 millimètres à l'échelle 100 %. Peut être réduit à 80 % ou augmenté à 130 %. Chaque satin a une sous-couche zigzag."
 
 #. name of font in fonts/roman_ags_bicolor
 #: inkstitch-fonts-metadata.py:182
