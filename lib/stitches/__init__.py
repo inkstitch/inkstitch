@@ -7,6 +7,8 @@ from .auto_fill import auto_fill
 from .circular_fill import circular_fill
 from .fill import legacy_fill
 from .guided_fill import guided_fill
+from .linear_gradient_fill import linear_gradient_fill
+from .meander_fill import meander_fill
 
 # Can't put this here because we get a circular import :(
 # from .auto_satin import auto_satin

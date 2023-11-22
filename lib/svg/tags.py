@@ -97,6 +97,7 @@ inkstitch_attribs = [
     'staggers',
     'underlay_underpath',
     'underpath',
+    'stop_at_ending_point',
     'flip',
     'clip',
     # stroke

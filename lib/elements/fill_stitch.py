@@ -11,6 +11,7 @@ import numpy as np
 from inkex import Transform
 from shapely import geometry as shgeo
 from shapely.errors import GEOSException
+from shapely.ops import nearest_points
 from shapely.validation import explain_validity, make_valid
 
 from .. import tiles
@@ -18,8 +19,8 @@ from ..i18n import _
 from ..marker import get_marker_elements
 from ..stitch_plan import StitchGroup
 from ..stitches import (auto_fill, circular_fill, contour_fill, guided_fill,
-                        legacy_fill)
-from ..stitches.meander_fill import meander_fill
+                        legacy_fill, linear_gradient_fill, meander_fill)
+from ..stitches.linear_gradient_fill import gradient_angle
 from ..svg import PIXELS_PER_MM, get_node_transform
 from ..svg.clip import get_clip_path
 from ..svg.tags import INKSCAPE_LABEL
@@ -114,6 +115,7 @@ class FillStitch(EmbroideryElement):
                      ParamOption('guided_fill', _("Guided Fill")),
                      ParamOption('meander_fill', _("Meander Fill")),
                      ParamOption('circular_fill', _("Circular Fill")),
+                     ParamOption('linear_gradient_fill', _("Linear Gradient Fill")),
                      ParamOption('legacy_fill', _("Legacy Fill"))]
 
     @property
@@ -226,7 +228,8 @@ class FillStitch(EmbroideryElement):
            select_items=[('fill_method', 'auto_fill'),
                          ('fill_method', 'guided_fill'),
                          ('fill_method', 'meander_fill'),
-                         ('fill_method', 'circular_fill')])
+                         ('fill_method', 'circular_fill'),
+                         ('fill_method', 'linear_gradient_fill')])
     def expand(self):
         return self.get_float_param('expand_mm', 0)
 
@@ -254,6 +257,7 @@ class FillStitch(EmbroideryElement):
            select_items=[('fill_method', 'auto_fill'),
                          ('fill_method', 'contour_fill'),
                          ('fill_method', 'guided_fill'),
+                         ('fill_method', 'linear_gradient_fill'),
                          ('fill_method', 'legacy_fill')],
            default=3.0)
     def max_stitch_length(self):
@@ -270,6 +274,7 @@ class FillStitch(EmbroideryElement):
                          ('fill_method', 'contour_fill'),
                          ('fill_method', 'guided_fill'),
                          ('fill_method', 'circular_fill'),
+                         ('fill_method', 'linear_gradient_fill'),
                          ('fill_method', 'legacy_fill')],
            default=0.25)
     def row_spacing(self):
@@ -297,7 +302,10 @@ class FillStitch(EmbroideryElement):
                      'Fractional values are allowed and can have less visible diagonals than integer values.'),
            type='int',
            sort_index=25,
-           select_items=[('fill_method', 'auto_fill'), ('fill_method', 'guided_fill'), ('fill_method', 'legacy_fill')],
+           select_items=[('fill_method', 'auto_fill'),
+                         ('fill_method', 'guided_fill'),
+                         ('fill_method', 'linear_gradient_fill'),
+                         ('fill_method', 'legacy_fill')],
            default=4)
     def staggers(self):
         return self.get_float_param("staggers", 4)
@@ -310,7 +318,9 @@ class FillStitch(EmbroideryElement):
                   'Skipping it decreases stitch count and density.'),
         type='boolean',
         sort_index=26,
-        select_items=[('fill_method', 'auto_fill'), ('fill_method', 'guided_fill'),
+        select_items=[('fill_method', 'auto_fill'),
+                      ('fill_method', 'guided_fill'),
+                      ('fill_method', 'linear_gradient_fill'),
                       ('fill_method', 'legacy_fill')],
         default=False)
     def skip_last(self):
@@ -328,6 +338,20 @@ class FillStitch(EmbroideryElement):
         default=False)
     def flip(self):
         return self.get_boolean_param("flip", False)
+
+    @property
+    @param(
+        'stop_at_ending_point',
+        _('Stop at ending point'),
+        tooltip=_('If this option is disabled, the ending point will only be used to define a general direction for '
+                  'stitch routing. When enabled the last section will end at the defined spot.'),
+        type='boolean',
+        sort_index=30,
+        select_items=[('fill_method', 'linear_gradient_fill')],
+        default=False
+     )
+    def stop_at_ending_point(self):
+        return self.get_boolean_param("stop_at_ending_point", False)
 
     @property
     @param('underpath',
@@ -353,7 +377,8 @@ class FillStitch(EmbroideryElement):
            select_items=[('fill_method', 'auto_fill'),
                          ('fill_method', 'guided_fill'),
                          ('fill_method', 'meander_fill'),
-                         ('fill_method', 'circular_fill')],
+                         ('fill_method', 'circular_fill'),
+                         ('fill_method', 'linear_gradient_fill')],
            sort_index=31)
     def running_stitch_length(self):
         return max(self.get_float_param("running_stitch_length_mm", 2.5), 0.01)
@@ -403,6 +428,12 @@ class FillStitch(EmbroideryElement):
         return self.get_style("fill", "#000000")
 
     @property
+    def gradient(self):
+        color = self.color[5:-1]
+        xpath = f'.//svg:defs/svg:linearGradient[@id="{color}"]'
+        return self.node.getroottree().getroot().findone(xpath)
+
+    @property
     @param('fill_underlay', _('Underlay'), type='toggle', group=_('Fill Underlay'), default=True)
     def fill_underlay(self):
         return self.get_boolean_param("fill_underlay", default=True)
@@ -427,6 +458,8 @@ class FillStitch(EmbroideryElement):
                     float(angle)) for angle in underlay_angles]
             except (TypeError, ValueError):
                 return default_value
+        elif self.fill_method == 'linear_gradient_fill' and self.gradient is not None:
+            return [-gradient_angle(self.node, self.gradient)]
         else:
             underlay_angles = default_value
 
@@ -704,10 +737,25 @@ class FillStitch(EmbroideryElement):
             return self.do_legacy_fill()
         else:
             stitch_groups = []
-            end = self.get_ending_point()
 
-            for shape in self.shape.geoms:
+            # start and end points
+            start = self.get_starting_point(previous_stitch_group)
+            final_end = self.get_ending_point()
+
+            # sort shapes to get a nicer routing
+            shapes = list(self.shape.geoms)
+            if start:
+                shapes.sort(key=lambda shape: shape.distance(shgeo.Point(start)))
+            else:
+                shapes.sort(key=lambda shape: shape.bounds[0])
+
+            for i, shape in enumerate(shapes):
                 start = self.get_starting_point(previous_stitch_group)
+                if i < len(shapes) - 1:
+                    end = nearest_points(shape, shapes[i+1])[0].coords
+                else:
+                    end = final_end
+
                 if self.fill_underlay:
                     underlay_shapes = self.underlay_shape(shape)
                     for underlay_shape in underlay_shapes.geoms:
@@ -724,10 +772,18 @@ class FillStitch(EmbroideryElement):
                         stitch_groups.extend(self.do_meander_fill(fill_shape, shape, i, start, end))
                     elif self.fill_method == 'circular_fill':
                         stitch_groups.extend(self.do_circular_fill(fill_shape, previous_stitch_group, start, end))
+                    elif self.fill_method == 'linear_gradient_fill':
+                        stitch_groups.extend(self.do_linear_gradient_fill(fill_shape, previous_stitch_group, start, end))
                     else:
                         # auto_fill
                         stitch_groups.extend(self.do_auto_fill(fill_shape, previous_stitch_group, start, end))
-                previous_stitch_group = stitch_groups[-1]
+                    if stitch_groups:
+                        previous_stitch_group = stitch_groups[-1]
+
+            # sort colors of linear gradient (if multiple shapes)
+            if self.fill_method == 'linear_gradient_fill':
+                colors = [stitch_group.color for stitch_group in stitch_groups]
+                stitch_groups.sort(key=lambda group: colors.index(group.color))
 
             return stitch_groups
 
@@ -746,10 +802,13 @@ class FillStitch(EmbroideryElement):
                             lock_stitches=self.lock_stitches) for stitch_list in stitch_lists]
 
     def do_underlay(self, shape, starting_point):
+        color = self.color
+        if self.gradient is not None and self.fill_method == 'linear_gradient_fill':
+            color = [style['stop-color'] for style in self.gradient.stop_styles][0]
         stitch_groups = []
         for i in range(len(self.fill_underlay_angle)):
             underlay = StitchGroup(
-                color=self.color,
+                color=color,
                 tags=("auto_fill", "auto_fill_underlay"),
                 lock_stitches=self.lock_stitches,
                 stitches=auto_fill(
@@ -763,7 +822,9 @@ class FillStitch(EmbroideryElement):
                     self.staggers,
                     self.fill_underlay_skip_last,
                     starting_point,
-                    underpath=self.underlay_underpath))
+                    underpath=self.underlay_underpath
+                )
+            )
             stitch_groups.append(underlay)
             starting_point = underlay.stitches[-1]
         return [stitch_groups, starting_point]
@@ -859,15 +920,9 @@ class FillStitch(EmbroideryElement):
                 starting_point,
                 ending_point,
                 self.underpath,
-                self.guided_fill_strategy,
-            ))
-        return [stitch_group]
-
-    def do_meander_fill(self, shape, original_shape, i, starting_point, ending_point):
-        stitch_group = StitchGroup(
-            color=self.color,
-            tags=("meander_fill", "meander_fill_top"),
-            stitches=meander_fill(self, shape, original_shape, i, starting_point, ending_point))
+                self.guided_fill_strategy
+            )
+        )
         return [stitch_group]
 
     @cache
@@ -882,6 +937,16 @@ class FillStitch(EmbroideryElement):
         else:
             return guide_lines['stroke'][0]
 
+    def do_meander_fill(self, shape, original_shape, i, starting_point, ending_point):
+        stitch_group = StitchGroup(
+            color=self.color,
+            tags=("meander_fill", "meander_fill_top"),
+            stitches=meander_fill(self, shape, original_shape, i, starting_point, ending_point),
+            force_lock_stitches=self.force_lock_stitches,
+            lock_stitches=self.lock_stitches,
+        )
+        return [stitch_group]
+
     def do_circular_fill(self, shape, last_patch, starting_point, ending_point):
         # get target position
         command = self.get_command('ripple_target')
@@ -893,24 +958,29 @@ class FillStitch(EmbroideryElement):
         else:
             target = shape.centroid
         stitches = circular_fill(
-                                 shape,
-                                 self.angle,
-                                 self.row_spacing,
-                                 self.end_row_spacing,
-                                 self.staggers,
-                                 self.running_stitch_length,
-                                 self.running_stitch_tolerance,
-                                 self.bean_stitch_repeats,
-                                 self.repeats,
-                                 self.skip_last,
-                                 starting_point,
-                                 ending_point,
-                                 self.underpath,
-                                 target
-                                )
+            shape,
+            self.angle,
+            self.row_spacing,
+            self.end_row_spacing,
+            self.staggers,
+            self.running_stitch_length,
+            self.running_stitch_tolerance,
+            self.bean_stitch_repeats,
+            self.repeats,
+            self.skip_last,
+            starting_point,
+            ending_point,
+            self.underpath,
+            target
+        )
 
         stitch_group = StitchGroup(
             color=self.color,
             tags=("circular_fill", "auto_fill_top"),
-            stitches=stitches)
+            stitches=stitches,
+            force_lock_stitches=self.force_lock_stitches,
+            lock_stitches=self.lock_stitches,)
         return [stitch_group]
+
+    def do_linear_gradient_fill(self, shape, last_patch, start, end):
+        return linear_gradient_fill(self, shape, start, end)
