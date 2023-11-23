@@ -3,10 +3,36 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 import traceback
+import sys
+import platform
+import subprocess
+from glob import glob
 
 
 class InkstitchException(Exception):
     pass
+
+
+def get_os():
+    if sys.platform == "win32":
+        # To get the version of windows python functions are used
+        # Using subprocess with cmd.exe in windows is currently a security risk
+        os_ver = "Windows " + platform.release() + " version: " + platform.version()
+    if sys.platform == "darwin":
+        # macOS command line progam provides accurate info than python
+        mac_v = subprocess.run(["sw_vers"], capture_output=True, text=True)
+        os_ver = str(mac_v.stdout.strip())
+    if sys.platform == "linux":
+        # Getting linux version method used here is for systemd and nonsystemd versons.
+        try:
+            ltmp = subprocess.run(["cat"] + glob("/etc/*-release"), capture_output=True, text=True)
+            lnx_ver = ltmp.stdout.splitlines()
+            lnx_ver = str(list(filter(lambda x: "PRETTY_NAME" in x, lnx_ver)))
+            os_ver = lnx_ver[15:][:-3]
+        except FileNotFoundError:
+            os_ver = "Cannot get Linux distro version"
+
+    return os_ver
 
 
 def format_uncaught_exception():
@@ -31,6 +57,8 @@ def format_uncaught_exception():
     message += " https://github.com/inkstitch/inkstitch/issues/new\n\n"
     message += _("Include the error description and also (if possible) the svg file.")
     message += '\n\n\n'
+    message += get_os()
+    message += '\n\n'
     message += version.get_inkstitch_version() + '\n'
     message += traceback.format_exc()
 
