@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-11-10 01:06+0000\n"
-"PO-Revision-Date: 2023-11-10 01:07\n"
+"POT-Creation-Date: 2023-11-23 01:07+0000\n"
+"PO-Revision-Date: 2023-11-23 01:08\n"
 "Last-Translator: \n"
 "Language-Team: Czech\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-10 01:06+0000\n"
+"POT-Creation-Date: 2023-11-23 01:07+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1243,7 +1243,7 @@ msgstr ""
 msgid "Object %(id)s has an empty 'd' attribute.  Please delete this object from your document."
 msgstr "Objekt %(id)s má prázdný atribut 'd'.  Odstraňte prosím tento objekt z dokumentu."
 
-#: lib/elements/element.py:584
+#: lib/elements/element.py:593
 msgid "Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects. This will show you the exact location of the problem."
 msgstr ""
 
@@ -1259,371 +1259,383 @@ msgstr ""
 msgid "* Run Extensions > Ink/Stitch > Troubleshoot > Cleanup Document..."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:33
+#: lib/elements/fill_stitch.py:34
 msgid "Small Fill"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:34
+#: lib/elements/fill_stitch.py:35
 msgid "This fill object is so small that it would probably look better as running stitch or satin column. For very small shapes, fill stitch is not possible, and Ink/Stitch will use running stitch around the outline instead."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:40 lib/elements/fill_stitch.py:220
+#: lib/elements/fill_stitch.py:41 lib/elements/fill_stitch.py:222
 msgid "Expand"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:41
+#: lib/elements/fill_stitch.py:42
 msgid "The expand parameter for this fill object cannot be applied. Ink/Stitch will ignore it and will use original size instead."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:46 lib/elements/fill_stitch.py:458
+#: lib/elements/fill_stitch.py:47 lib/elements/fill_stitch.py:491
 msgid "Inset"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:47
+#: lib/elements/fill_stitch.py:48
 msgid "The underlay inset parameter for this fill object cannot be applied. Ink/Stitch will ignore it and will use the original size instead."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:52
+#: lib/elements/fill_stitch.py:53
 msgid "Missing Guideline"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:53
+#: lib/elements/fill_stitch.py:54
 msgid "This object is set to \"Guided Fill\", but has no guide line."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:55
+#: lib/elements/fill_stitch.py:56
 msgid "* Create a stroke object"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:56
+#: lib/elements/fill_stitch.py:57
 msgid "* Select this object and run Extensions > Ink/Stitch > Edit > Selection to guide line"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:61
+#: lib/elements/fill_stitch.py:62
 msgid "Disjointed Guide Line"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:62
+#: lib/elements/fill_stitch.py:63
 msgid "The guide line of this object isn't within the object borders. The guide line works best, if it is within the target element."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:65
+#: lib/elements/fill_stitch.py:66
 msgid "* Move the guide line into the element"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:70 lib/elements/stroke.py:27
+#: lib/elements/fill_stitch.py:71 lib/elements/stroke.py:27
 msgid "Multiple Guide Lines"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:71 lib/elements/stroke.py:28
+#: lib/elements/fill_stitch.py:72 lib/elements/stroke.py:28
 msgid "This object has multiple guide lines, but only the first one will be used."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:73 lib/elements/stroke.py:30
+#: lib/elements/fill_stitch.py:74 lib/elements/stroke.py:30
 msgid "* Remove all guide lines, except for one."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:78
+#: lib/elements/fill_stitch.py:79
 msgid "Unconnected"
 msgstr "Nepřipojeno"
 
-#: lib/elements/fill_stitch.py:79
+#: lib/elements/fill_stitch.py:80
 msgid "Fill: This object is made up of unconnected shapes. Ink/Stitch doesn't know what order to stitch them in.  Please break this object up into separate shapes."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:83 lib/elements/fill_stitch.py:92
-#: lib/elements/fill_stitch.py:100
+#: lib/elements/fill_stitch.py:84 lib/elements/fill_stitch.py:93
+#: lib/elements/fill_stitch.py:101
 msgid "* Extensions > Ink/Stitch > Fill Tools > Break Apart Fill Objects"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:88
+#: lib/elements/fill_stitch.py:89
 msgid "Border crosses itself"
 msgstr "Hranice přechází přes sebe"
 
-#: lib/elements/fill_stitch.py:89
+#: lib/elements/fill_stitch.py:90
 msgid "Fill: The border crosses over itself. This may lead into unconnected shapes. Please break this object into separate shapes to indicate in which order it should be stitched in."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:97
+#: lib/elements/fill_stitch.py:98
 msgid "This shape is invalid"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:98
+#: lib/elements/fill_stitch.py:99
 msgid "Fill: This shape cannot be stitched out. Please try to repair it with the \"Break Apart Fill Objects\" extension."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:105
+#: lib/elements/fill_stitch.py:106
 msgid "FillStitch"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:108
+#: lib/elements/fill_stitch.py:109
 msgid "Automatically routed fill stitching"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:112
+#: lib/elements/fill_stitch.py:113
 msgid "Auto Fill"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:113 inx/inkstitch_select_elements.inx:47
+#: lib/elements/fill_stitch.py:114 inx/inkstitch_select_elements.inx:47
 msgid "Contour Fill"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:114 inx/inkstitch_select_elements.inx:48
+#: lib/elements/fill_stitch.py:115 inx/inkstitch_select_elements.inx:48
 msgid "Guided Fill"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:115 inx/inkstitch_select_elements.inx:49
+#: lib/elements/fill_stitch.py:116 inx/inkstitch_select_elements.inx:49
 msgid "Meander Fill"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:116 inx/inkstitch_select_elements.inx:50
+#: lib/elements/fill_stitch.py:117 inx/inkstitch_select_elements.inx:50
 msgid "Circular Fill"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:117 inx/inkstitch_select_elements.inx:51
+#: lib/elements/fill_stitch.py:118
+msgid "Linear Gradient Fill"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:119 inx/inkstitch_select_elements.inx:51
 msgid "Legacy Fill"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:121
+#: lib/elements/fill_stitch.py:123
 msgid "Fill method"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:130
+#: lib/elements/fill_stitch.py:132
 msgid "Guided Fill Strategy"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:131
+#: lib/elements/fill_stitch.py:133
 msgid "Copy"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:131
+#: lib/elements/fill_stitch.py:133
 msgid "Parallel Offset"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:132
+#: lib/elements/fill_stitch.py:134
 msgid "Copy (the default) will fill the shape with shifted copies of the line. Parallel offset will ensure that each line is always a consistent distance from its neighbor. Sharp corners may be introduced."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:139
+#: lib/elements/fill_stitch.py:141
 msgid "Contour Fill Strategy"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:140
+#: lib/elements/fill_stitch.py:142
 msgid "Inner to Outer"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:140
+#: lib/elements/fill_stitch.py:142
 msgid "Single spiral"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:140
+#: lib/elements/fill_stitch.py:142
 msgid "Double spiral"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:145
+#: lib/elements/fill_stitch.py:147
 msgid "Join Style"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:146
+#: lib/elements/fill_stitch.py:148
 msgid "Round"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:146
+#: lib/elements/fill_stitch.py:148
 msgid "Mitered"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:146
+#: lib/elements/fill_stitch.py:148
 msgid "Beveled"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:152
+#: lib/elements/fill_stitch.py:154
 msgid "Avoid self-crossing"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:161
+#: lib/elements/fill_stitch.py:163
 msgid "Clockwise"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:166
+#: lib/elements/fill_stitch.py:168
 msgid "Meander Pattern"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:173
+#: lib/elements/fill_stitch.py:175
 msgid "Meander pattern angle"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:183
+#: lib/elements/fill_stitch.py:185
 msgid "Meander pattern scale"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:184
+#: lib/elements/fill_stitch.py:186
 msgid "Percentage to stretch or compress the meander pattern.  You can scale horizontally and vertically individually by giving two percentages separated by a space. "
 msgstr ""
 
-#: lib/elements/fill_stitch.py:194
+#: lib/elements/fill_stitch.py:196
 msgid "Clip path"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:195
+#: lib/elements/fill_stitch.py:197
 msgid "Constrain stitching to the shape.  Useful when smoothing and expand are used."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:204
+#: lib/elements/fill_stitch.py:206
 msgid "Smoothness"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:205
+#: lib/elements/fill_stitch.py:207
 msgid "Smooth the stitch path.  Smoothness limits how far the smoothed stitch path is allowed to deviate from the original path.  Try low numbers like 0.2.  Hint: a lower running stitch tolerance may be needed too."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:221
+#: lib/elements/fill_stitch.py:223
 msgid "Expand the shape before fill stitching, to compensate for gaps between shapes.  Negative values contract instead."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:235
+#: lib/elements/fill_stitch.py:238
 msgid "Angle of lines of stitches"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:236
+#: lib/elements/fill_stitch.py:239
 msgid "The angle increases in a counter-clockwise direction.  0 is horizontal.  Negative angles are allowed."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:248
+#: lib/elements/fill_stitch.py:251
 msgid "Maximum fill stitch length"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:249
+#: lib/elements/fill_stitch.py:252
 msgid "The length of each stitch in a row.  Shorter stitch may be used at the start or end of a row."
 msgstr "Délka všech stehů v řádku. Kratší stehy mohou být použity na začátku nebo konce řádku."
 
-#: lib/elements/fill_stitch.py:264
+#: lib/elements/fill_stitch.py:268
 msgid "Spacing between rows"
 msgstr "Vzdálenost mezi řádky"
 
-#: lib/elements/fill_stitch.py:265
+#: lib/elements/fill_stitch.py:269
 msgid "Distance between rows of stitches."
 msgstr "Vzdálenost mezi řádkami stehů."
 
-#: lib/elements/fill_stitch.py:280 inx/inkstitch_gradient_blocks.inx:22
+#: lib/elements/fill_stitch.py:285 inx/inkstitch_gradient_blocks.inx:22
 msgid "End row spacing"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:281
+#: lib/elements/fill_stitch.py:286
 msgid "Increases or decreases the row spacing towards the end."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:295
+#: lib/elements/fill_stitch.py:300
 msgid "Stagger rows this many times before repeating"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:296 lib/elements/satin_column.py:185
+#: lib/elements/fill_stitch.py:301 lib/elements/satin_column.py:185
 msgid "Length of the cycle by which successive stitch rows are staggered. Fractional values are allowed and can have less visible diagonals than integer values."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:308 lib/elements/fill_stitch.py:470
+#: lib/elements/fill_stitch.py:316 lib/elements/fill_stitch.py:503
 msgid "Skip last stitch in each row"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:309 lib/elements/fill_stitch.py:471
+#: lib/elements/fill_stitch.py:317 lib/elements/fill_stitch.py:504
 msgid "The last stitch in each row is quite close to the first stitch in the next row.  Skipping it decreases stitch count and density."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:322
+#: lib/elements/fill_stitch.py:332
 msgid "Flip fill (start right-to-left)"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:323
+#: lib/elements/fill_stitch.py:333
 msgid "The flip option can help you with routing your stitch path.  When you enable flip, stitching goes from right-to-left instead of left-to-right."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:334 lib/elements/fill_stitch.py:482
+#: lib/elements/fill_stitch.py:345
+msgid "Stop at ending point"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:346
+msgid "If this option is disabled, the ending point will only be used to define a general direction for stitch routing. When enabled the last section will end at the defined spot."
+msgstr ""
+
+#: lib/elements/fill_stitch.py:358 lib/elements/fill_stitch.py:515
 msgid "Underpath"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:335 lib/elements/fill_stitch.py:483
+#: lib/elements/fill_stitch.py:359 lib/elements/fill_stitch.py:516
 msgid "Travel inside the shape when moving from section to section.  Underpath stitches avoid traveling in the direction of the row angle so that they are not visible.  This gives them a jagged appearance."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:347 lib/elements/stroke.py:108
+#: lib/elements/fill_stitch.py:371 lib/elements/stroke.py:108
 msgid "Running stitch length"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:348
+#: lib/elements/fill_stitch.py:372
 msgid "Length of stitches around the outline of the fill region used when moving from section to section. Also used for meander and circular fill."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:363
+#: lib/elements/fill_stitch.py:388
 msgid "Running stitch tolerance"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:364
+#: lib/elements/fill_stitch.py:389
 msgid "Determines how hard Ink/Stitch tries to avoid stitching outside the shape.Lower numbers are less likely to stitch outside the shape but require more stitches."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:375 lib/elements/satin_column.py:385
+#: lib/elements/fill_stitch.py:400 lib/elements/satin_column.py:385
 #: lib/elements/stroke.py:82
 msgid "Repeats"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:376 lib/elements/stroke.py:83
+#: lib/elements/fill_stitch.py:401 lib/elements/stroke.py:83
 msgid "Defines how many times to run down and back along the path."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:387 lib/elements/stroke.py:94
+#: lib/elements/fill_stitch.py:412 lib/elements/stroke.py:94
 msgid "Bean stitch number of repeats"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:388 lib/elements/stroke.py:95
+#: lib/elements/fill_stitch.py:413 lib/elements/stroke.py:95
 msgid "Backtrack each stitch this many times.  A value of 1 would triple each stitch (forward, back, forward).  A value of 2 would quintuple each stitch, etc.\n\n"
 "A pattern with various repeats can be created with a list of values separated by a space."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:406 inx/inkstitch_select_elements.inx:33
+#: lib/elements/fill_stitch.py:437 inx/inkstitch_select_elements.inx:33
 #: inx/inkstitch_select_elements.inx:53 inx/inkstitch_select_elements.inx:55
 msgid "Underlay"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:406 lib/elements/fill_stitch.py:415
-#: lib/elements/fill_stitch.py:440 lib/elements/fill_stitch.py:451
-#: lib/elements/fill_stitch.py:461 lib/elements/fill_stitch.py:473
-#: lib/elements/fill_stitch.py:486
+#: lib/elements/fill_stitch.py:437 lib/elements/fill_stitch.py:446
+#: lib/elements/fill_stitch.py:473 lib/elements/fill_stitch.py:484
+#: lib/elements/fill_stitch.py:494 lib/elements/fill_stitch.py:506
+#: lib/elements/fill_stitch.py:519
 msgid "Fill Underlay"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:412
+#: lib/elements/fill_stitch.py:443
 msgid "Fill angle"
 msgstr "Úhel výplně"
 
-#: lib/elements/fill_stitch.py:413
+#: lib/elements/fill_stitch.py:444
 msgid "Default: fill angle + 90 deg. Insert a list for multiple layers separated by a space."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:437
+#: lib/elements/fill_stitch.py:470
 msgid "Row spacing"
 msgstr "Řádkování"
 
-#: lib/elements/fill_stitch.py:438
+#: lib/elements/fill_stitch.py:471
 msgid "default: 3x fill row spacing"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:448 lib/elements/stroke.py:134
+#: lib/elements/fill_stitch.py:481 lib/elements/stroke.py:134
 #: lib/extensions/element_info.py:107
 msgid "Max stitch length"
 msgstr "Maximální délka stehu"
 
-#: lib/elements/fill_stitch.py:449
+#: lib/elements/fill_stitch.py:482
 msgid "default: equal to fill max stitch length"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:459
+#: lib/elements/fill_stitch.py:492
 msgid "Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:494 lib/elements/satin_column.py:466
+#: lib/elements/fill_stitch.py:527 lib/elements/satin_column.py:466
 msgid "Random seed"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:495 lib/elements/satin_column.py:467
+#: lib/elements/fill_stitch.py:528 lib/elements/satin_column.py:467
 msgid "Use a specific seed for randomized attributes. Uses the element ID if empty."
 msgstr ""
 
