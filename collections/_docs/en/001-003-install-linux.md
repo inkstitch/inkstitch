@@ -92,7 +92,7 @@ A version for **NixOS** is externally maintained and available at [https://codeb
 
 ### Arch Linux
 
-Arch Linux users can use an AUR package: [https://aur.archlinux.org/packages/inkstitchhttps://aur.archlinux.org/packages/inkstitch](https://aur.archlinux.org/packages/inkstitchhttps://aur.archlinux.org/packages/inkstitch)
+Arch Linux users can use an AUR package: [https://aur.archlinux.org/packages/inkstitch](https://aur.archlinux.org/packages/inkstitch)
 
 ## Run Ink/Stitch
 Restart Inkscape.
