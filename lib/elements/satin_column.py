@@ -1093,20 +1093,28 @@ class SatinColumn(EmbroideryElement):
 
     def do_contour_underlay(self):
         # "contour walk" underlay: do stitches up one side and down the
-        # other.
+        # other. if the two sides are far away, adding a running stitch to travel
+        # in between avoids a long jump or a trim.
+
         pairs = self.plot_points_on_rails(
             self.contour_underlay_stitch_length,
             -self.contour_underlay_inset_px, -self.contour_underlay_inset_percent/100)
 
         if self._center_walk_is_odd():
-            stitches = [p[0] for p in reversed(pairs)] + [p[1] for p in pairs]
+            first_side = [p[0] for p in reversed(pairs)]
+            second_side = [p[1] for p in pairs]
         else:
-            stitches = [p[1] for p in pairs] + [p[0] for p in reversed(pairs)]
+            first_side = [p[1] for p in pairs]
+            second_side = [p[0] for p in reversed(pairs)]
 
-        return StitchGroup(
+        patch = StitchGroup(
             color=self.color,
             tags=("satin_column", "satin_column_underlay", "satin_contour_underlay"),
-            stitches=stitches)
+            stitches=first_side)
+
+        self.add_running_stitches(first_side[-1], second_side[0], patch)
+        patch.stitches += second_side
+        return patch
 
     def do_center_walk(self):
         # Center walk underlay is just a running stitch down and back on the
@@ -1464,9 +1472,21 @@ class SatinColumn(EmbroideryElement):
     def _get_inset_point(self, point1, point2, distance_fraction):
         return point1 * (1 - distance_fraction) + point2 * distance_fraction
 
+    def add_running_stitches(self, start_stitch, end_stitch, patch):
+        # when max_stitch_length is set, the satin column may be quite wide annd  the jumps
+        # between underlays or from underlay to final satin are better turned into paths
+        # to avoid long jumps or  trims
+
+        if self.max_stitch_length_px:
+            max_len = self.max_stitch_length_px
+            if end_stitch.distance(start_stitch) > max_len:
+                split_points = running_stitch.split_segment_even_dist(start_stitch, end_stitch, max_len)
+                for p in split_points:
+                    patch.add_stitch(p)
+                patch.add_stitch(end_stitch)
+
     def to_stitch_groups(self, last_patch=None):
         # Stitch a variable-width satin column, zig-zagging between two paths.
-
         # The algorithm will draw zigzags between each consecutive pair of
         # beziers.  The boundary points between beziers serve as "checkpoints",
         # allowing the user to control how the zigzags flow around corners.
@@ -1479,21 +1499,31 @@ class SatinColumn(EmbroideryElement):
             patch += self.do_center_walk()
 
         if self.contour_underlay:
-            patch += self.do_contour_underlay()
+            contour = self.do_contour_underlay()
+            if patch.stitches:
+                self.add_running_stitches(patch.stitches[-1], contour.stitches[0], patch)
+            patch += contour
 
         if self.zigzag_underlay:
             # zigzag underlay comes after contour walk underlay, so that the
             # zigzags sit on the contour walk underlay like rail ties on rails.
-            patch += self.do_zigzag_underlay()
+            zigzag = self.do_zigzag_underlay()
+            if patch.stitches:
+                self.add_running_stitches(patch.stitches[-1], zigzag.stitches[0], patch)
+            patch += zigzag
 
         if self.satin_method == 'e_stitch':
-            patch += self.do_e_stitch()
+            final_patch = self.do_e_stitch()
         elif self.satin_method == 's_stitch':
-            patch += self.do_s_stitch()
+            final_patch = self.do_s_stitch()
         elif self.satin_method == 'zigzag':
-            patch += self.do_zigzag()
+            final_patch = self.do_zigzag()
         else:
-            patch += self.do_satin()
+            final_patch = self.do_satin()
+
+        if patch.stitches:
+            self.add_running_stitches(patch.stitches[-1], final_patch.stitches[0], patch)
+        patch += final_patch
 
         if not patch.stitches:
             return []
