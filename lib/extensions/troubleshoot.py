@@ -100,16 +100,17 @@ class Troubleshoot(InkstitchExtension):
         svg = self.document.getroot()
         layer = svg.find(".//*[@id='__validation_layer__']")
 
-        if layer is None:
-            layer = inkex.Group(attrib={
-                'id': '__validation_layer__',
-                INKSCAPE_LABEL: _('Troubleshoot'),
-                INKSCAPE_GROUPMODE: 'layer',
-            })
-            svg.append(layer)
-        else:
-            # Clear out everything from the last run
-            del layer[:]
+        # Remove the old layer - they may have used tranfsorms
+        # or moved it into an other group (which could lead to more transforms)
+        # We don't want to deal with it.
+        layer.getparent().remove(layer)
+
+        layer = inkex.Group(attrib={
+            'id': '__validation_layer__',
+            INKSCAPE_LABEL: _('Troubleshoot'),
+            INKSCAPE_GROUPMODE: 'layer',
+        })
+        svg.append(layer)
 
         add_layer_commands(layer, ["ignore_layer"])
 
