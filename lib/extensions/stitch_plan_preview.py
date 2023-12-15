@@ -3,14 +3,13 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-from inkex import Boolean, Style
-from lxml import etree
+from inkex import Boolean
 
+from ..marker import set_marker
 from ..stitch_plan import stitch_groups_to_stitch_plan
 from ..svg import render_stitch_plan
 from ..svg.tags import (INKSCAPE_GROUPMODE, INKSTITCH_ATTRIBS,
-                        SODIPODI_INSENSITIVE, SVG_DEFS_TAG, SVG_GROUP_TAG,
-                        SVG_PATH_TAG)
+                        SODIPODI_INSENSITIVE, SVG_GROUP_TAG, SVG_PATH_TAG)
 from .base import InkstitchExtension
 from .stitch_plan_preview_undo import reset_stitch_plan
 
@@ -23,16 +22,17 @@ class StitchPlanPreview(InkstitchExtension):
         self.arg_parser.add_argument("-n", "--needle-points", type=Boolean, default=False, dest="needle_points")
         self.arg_parser.add_argument("-i", "--insensitive", type=Boolean, default=False, dest="insensitive")
         self.arg_parser.add_argument("-c", "--visual-commands", type=Boolean, default="symbols", dest="visual_commands")
+        self.arg_parser.add_argument("-o", "--overwrite", type=Boolean, default=True, dest="overwrite")
 
     def effect(self):
         # delete old stitch plan
-        svg = self.document.getroot()
-        reset_stitch_plan(svg)
+        self.remove_old()
 
         # create new stitch plan
         if not self.get_elements():
             return
 
+        svg = self.document.getroot()
         realistic = False
         visual_commands = self.options.visual_commands
         self.metadata = self.get_inkstitch_metadata()
@@ -48,6 +48,30 @@ class StitchPlanPreview(InkstitchExtension):
         # update layer visibility (unchanged, hidden, lower opacity)
         groups = self.document.getroot().findall(SVG_GROUP_TAG)
         self.set_invisible_layers_attribute(groups, layer)
+        self.set_visibility(groups, layer)
+
+        self.set_sensitivity(layer)
+        self.translate(svg, layer)
+        self.set_needle_points(layer)
+
+    def remove_old(self):
+        svg = self.document.getroot()
+        if self.options.overwrite:
+            reset_stitch_plan(svg)
+        else:
+            layer = svg.find(".//*[@id='__inkstitch_stitch_plan__']")
+            if layer is not None:
+                layer.set('id', svg.get_unique_id('inkstitch_stitch_plan_'))
+
+    def set_invisible_layers_attribute(self, groups, layer):
+        invisible_layers = []
+        for g in groups:
+            if g.get(INKSCAPE_GROUPMODE) == "layer" and 'display' in g.style and g.style['display'] == 'none':
+                invisible_layers.append(g.get_id())
+        layer.set(INKSTITCH_ATTRIBS['invisible_layers'], ",".join(invisible_layers))
+        layer.set(INKSTITCH_ATTRIBS['layer_visibility'], self.options.layer_visibility)
+
+    def set_visibility(self, groups, layer):
         if self.options.layer_visibility == "hidden":
             self.hide_all_layers()
             layer.style['display'] = "inline"
@@ -60,49 +84,23 @@ class StitchPlanPreview(InkstitchExtension):
                         float(style.get('opacity', 1)) > 0.4 and not style.get('display', 'inline') == 'none'):
                     g.style['opacity'] = 0.4
 
+    def set_sensitivity(self, layer):
         if self.options.insensitive is True:
             layer.set(SODIPODI_INSENSITIVE, True)
         else:
             layer.pop(SODIPODI_INSENSITIVE)
 
-        # translate stitch plan to the right side of the canvas
+    def translate(self, svg, layer):
         if self.options.move_to_side:
-            layer.set('transform', 'translate(%s)' % svg.get('viewBox', '0 0 800 0').split(' ')[2])
+            # translate stitch plan to the right side of the canvas
+            translate = svg.get('viewBox', '0 0 800 0').split(' ')[2]
+            layer.set('transform', f'translate({ translate })')
         else:
             layer.set('transform', None)
 
-        # display needle points
+    def set_needle_points(self, layer):
         if self.options.needle_points:
-            markers = 'marker-mid:url(#inkstitch-needle-point);marker-start:url(#inkstitch-needle-point);marker-end:url(#inkstitch-needle-point)'
             for element in layer.iterdescendants(SVG_PATH_TAG):
-                style = element.style + Style(markers)
-                element.set('style', style)
-            self.ensure_marker()
-
-    def set_invisible_layers_attribute(self, groups, layer):
-        invisible_layers = []
-        for g in groups:
-            if g.get(INKSCAPE_GROUPMODE) == "layer" and 'display' in g.style and g.style['display'] == 'none':
-                invisible_layers.append(g.get_id())
-        layer.set(INKSTITCH_ATTRIBS['invisible_layers'], ",".join(invisible_layers))
-        layer.set(INKSTITCH_ATTRIBS['layer_visibility'], self.options.layer_visibility)
-
-    def ensure_marker(self):
-        xpath = ".//svg:marker[@id='inkstitch-needle-point']"
-        point_marker = self.document.getroot().xpath(xpath)
-
-        if not point_marker:
-            # get or create def element
-            defs = self.document.find(SVG_DEFS_TAG)
-            if defs is None:
-                defs = etree.SubElement(self.document, SVG_DEFS_TAG)
-
-            # insert marker
-            marker = """<marker
-                      orient="auto"
-                      id="inkstitch-needle-point">
-                         <circle
-                                 cx="0" cy="0" r="1.5"
-                                 style="fill:context-stroke;opacity:0.8;" />
-                     </marker>"""
-            defs.append(etree.fromstring(marker))
+                set_marker(element, 'start', 'needle-point')
+                set_marker(element, 'mid', 'needle-point')
+                set_marker(element, 'end', 'needle-point')

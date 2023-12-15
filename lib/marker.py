@@ -33,11 +33,9 @@ def set_marker(node, position, marker):
     ensure_marker(node.getroottree().getroot(), marker)
 
     # attach marker to node
-    style = node.get('style') or ''
-    style = style.split(";")
-    style = [i for i in style if not i.startswith('marker-%s' % position)]
-    style.append('marker-%s:url(#inkstitch-%s-marker)' % (position, marker))
-    node.set('style', ";".join(style))
+    style = node.style
+    style += inkex.Style(f'marker-{ position }:url(#inkstitch-{ marker }-marker)')
+    node.set('style', style)
 
 
 def get_marker_elements(node, marker, get_fills=True, get_strokes=True, get_satins=False):
