@@ -3,9 +3,10 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-from lxml import etree
+from html import unescape
 
 from inkex import errormsg
+from lxml import etree
 
 from ..i18n import _
 from ..stitch_plan import generate_stitch_plan
@@ -20,4 +21,4 @@ class Input(object):
             errormsg(msg)
             exit(0)
         stitch_plan = generate_stitch_plan(embroidery_file)
-        print(etree.tostring(stitch_plan).decode('utf-8'))
+        print(unescape(etree.tostring(stitch_plan).decode('utf-8')))
