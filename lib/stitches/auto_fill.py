@@ -6,8 +6,8 @@
 # -*- coding: UTF-8 -*-
 
 import math
-from itertools import chain, groupby
 import warnings
+from itertools import chain, groupby
 
 import networkx
 from shapely import geometry as shgeo
@@ -18,11 +18,13 @@ from ..debug import debug
 from ..stitch_plan import Stitch
 from ..svg import PIXELS_PER_MM
 from ..utils.clamp_path import clamp_path_to_polygon
-from ..utils.geometry import Point as InkstitchPoint, line_string_to_point_list, ensure_multi_line_string
-from .fill import intersect_region_with_grating, stitch_row
-from .running_stitch import running_stitch
+from ..utils.geometry import Point as InkstitchPoint
+from ..utils.geometry import (ensure_multi_line_string,
+                              line_string_to_point_list)
 from ..utils.smoothing import smooth_path
 from ..utils.threading import check_stop_flag
+from .fill import intersect_region_with_grating, stitch_row
+from .running_stitch import running_stitch
 
 
 class NoGratingsError(Exception):
@@ -78,6 +80,7 @@ def auto_fill(shape,
     segments = [segment for row in rows for segment in row]
     fill_stitch_graph = build_fill_stitch_graph(shape, segments, starting_point, ending_point)
 
+    fill_stitch_graph = graph_make_valid(fill_stitch_graph)
     if not graph_is_valid(fill_stitch_graph):
         return fallback(shape, running_stitch_length, running_stitch_tolerance)
 
@@ -274,6 +277,12 @@ def graph_is_valid(graph):
     # rows of stitching.  Certain small weird shapes can also cause a non-
     # eulerian graph.
     return not networkx.is_empty(graph) and networkx.is_eulerian(graph)
+
+
+def graph_make_valid(graph):
+    if not networkx.is_eulerian(graph):
+        return networkx.eulerize(graph)
+    return graph
 
 
 def fallback(shape, running_stitch_length, running_stitch_tolerance):

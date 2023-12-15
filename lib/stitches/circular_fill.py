@@ -5,7 +5,8 @@ from ..stitch_plan import Stitch
 from ..utils.geometry import reverse_line_string
 from .auto_fill import (build_fill_stitch_graph, build_travel_graph,
                         collapse_sequential_outline_edges, fallback,
-                        find_stitch_path, graph_is_valid, travel)
+                        find_stitch_path, graph_is_valid, graph_make_valid,
+                        travel)
 from .contour_fill import _make_fermat_spiral
 from .running_stitch import bean_stitch, running_stitch
 
@@ -73,6 +74,8 @@ def circular_fill(shape,
             segments.append([(point.x, point.y) for point in coords])
 
     fill_stitch_graph = build_fill_stitch_graph(shape, segments, starting_point, ending_point)
+
+    fill_stitch_graph = graph_make_valid(fill_stitch_graph)
     if not graph_is_valid(fill_stitch_graph):
         return fallback(shape, running_stitch_length, running_stitch_tolerance)
 

@@ -15,7 +15,7 @@ from ..utils.geometry import (ensure_geometry_collection,
 from ..utils.threading import check_stop_flag
 from .auto_fill import (auto_fill, build_fill_stitch_graph, build_travel_graph,
                         collapse_sequential_outline_edges, find_stitch_path,
-                        graph_is_valid, travel)
+                        graph_is_valid, graph_make_valid, travel)
 
 
 def guided_fill(shape,
@@ -39,6 +39,7 @@ def guided_fill(shape,
 
     fill_stitch_graph = build_fill_stitch_graph(shape, segments, starting_point, ending_point)
 
+    fill_stitch_graph = graph_make_valid(fill_stitch_graph)
     if not graph_is_valid(fill_stitch_graph):
         return fallback(shape, guideline, row_spacing, max_stitch_length, running_stitch_length, running_stitch_tolerance,
                         num_staggers, skip_last, starting_point, ending_point, underpath)
