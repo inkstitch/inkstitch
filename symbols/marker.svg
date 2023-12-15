@@ -55,13 +55,13 @@
           id="inkstitch-guide-line-marker-spiral"
           d="M 1.7506092,6.2728168 3.4558825,5.2833684 7.1038696,7.400035 8.8193256,6.4046783 M 1.7963222,4.129626 3.4558825,3.1667016 7.1038696,5.2833682 8.8475785,4.2716184 M 1.6318889,5.2833683 3.4558825,4.225035 7.1038696,6.3417016 8.9558408,5.2677331" />
      </g>
-     </marker>
-          <marker
+    </marker>
+    <marker
         orient="auto"
         id="inkstitch-needle-point-marker">
        <circle
          cx="0" cy="0" r="1.5"
          style="fill:context-stroke;opacity:0.8;" />
-      </marker>
+    </marker>
   </defs>
 </svg>
