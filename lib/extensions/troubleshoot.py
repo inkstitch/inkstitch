@@ -100,10 +100,11 @@ class Troubleshoot(InkstitchExtension):
         svg = self.document.getroot()
         layer = svg.find(".//*[@id='__validation_layer__']")
 
-        # Remove the old layer - they may have used tranfsorms
-        # or moved it into an other group (which could lead to more transforms)
-        # We don't want to deal with it.
-        layer.getparent().remove(layer)
+        if layer is not None:
+            # Remove the old layer - they may have used tranfsorms
+            # or moved it into an other group (which could lead to more transforms)
+            # We don't want to deal with it.
+            layer.getparent().remove(layer)
 
         layer = inkex.Group(attrib={
             'id': '__validation_layer__',
