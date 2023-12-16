@@ -149,14 +149,13 @@ def intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing=Non
 
         res = grating_line.intersection(shape)
 
-        if (isinstance(res, shapely.geometry.MultiLineString) or isinstance(res, shapely.geometry.GeometryCollection)):
+        if res.geom_type in ["MultiLineString", "GeometryCollection"]:
             runs = [line_string.coords for line_string in res.geoms if isinstance(line_string, shapely.geometry.LineString)]
+        elif res.geom_type == "MultiPoint" or res.is_empty or len(res.coords) == 1:
+            # ignore if we intersected at a single point or no points
+            runs = []
         else:
-            if res.is_empty or len(res.coords) == 1:
-                # ignore if we intersected at a single point or no points
-                runs = []
-            else:
-                runs = [res.coords]
+            runs = [res.coords]
 
         if runs:
             runs.sort(key=lambda seg: (InkstitchPoint(*seg[0]) - upper_left).length())
