@@ -151,7 +151,7 @@ def intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing=Non
 
         if res.geom_type in ["MultiLineString", "GeometryCollection"]:
             runs = [line_string.coords for line_string in res.geoms if isinstance(line_string, shapely.geometry.LineString)]
-        elif res.geom_type == "MultiPoint" or res.is_empty or len(res.coords) == 1:
+        elif res.geom_type in ["Point", "MultiPoint"] or res.is_empty:
             # ignore if we intersected at a single point or no points
             runs = []
         else:
