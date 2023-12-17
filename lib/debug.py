@@ -62,12 +62,17 @@ class Debug(object):
     """
 
     def __init__(self):
+        self.debugger = None
         self.enabled = False
         self.last_log_time = None
         self.current_layer = None
         self.group_stack = []
 
-    def enable(self):
+
+    def enable(self, debug_type):
+        if debug_type == 'none':
+            return
+        self.debugger = debug_type
         self.enabled = True
         self.init_log()
         self.init_debugger()
@@ -140,11 +145,45 @@ class Debug(object):
         #    PyDev debugger.)" statement, below. Uncheck the box to have it continue
         #    automatically to your first set breakpoint.
 
+        ###
+
+        # To debug with VS Code
+        # see: https://code.visualstudio.com/docs/python/debugging#_command-line-debugging
+        #      https://code.visualstudio.com/docs/python/debugging#_debugging-by-attaching-over-a-network-connection
+        # 
+        # 1. Install the Python extension for VS Code
+        #      pip install debugpy
+        # 2. create .vscode/launch.json containing somewhere:
+        #       "configurations": [ ...
+        #           {
+        #               "name": "Python: Attach",
+        #               "type": "python",
+        #               "request": "attach",
+        #               "connect": {
+        #                 "host": "localhost",
+        #                 "port": 5678
+        #               }
+        #           }
+        #       ]
+        # 3. Touch a file named "DEBUG" at the top of your git repo, as above.
+        #     containing "vscode" or "vscode-script" see parse_file() in debug_mode.py for details
+        # 4. Start the debug server in VS Code by clicking on the debug icon in the left pane
+        #    select "Python: Attach" from the dropdown menu and click on the green arrow
+        #
+        # Notes:
+        #   to see flask server url routes:
+        #      - comment out the line self.disable_logging() in run() of lib/api/server.py
+                
+
         try:
-            if 'PYCHARM_REMOTE_DEBUG' in os.environ:
+            if self.debugger == 'vscode':
+                import debugpy
+            elif self.debugger == 'pycharm':
                 import pydevd_pycharm
-            else:
+            elif self.debugger == 'pydev':
                 import pydevd
+            else:
+                raise ValueError(f"unknown debugger: '{self.debugger}'")
 
         except ImportError:
             self.log("importing pydevd failed (debugger disabled)")
@@ -155,17 +194,24 @@ class Debug(object):
             sys.stderr = devnull
 
             try:
-                if 'PYCHARM_REMOTE_DEBUG' in os.environ:
+                if self.debugger == 'vscode':
+                    debugpy.listen(('localhost', 5678))
+                    print("Waiting for debugger attach")
+                    debugpy.wait_for_client()        # wait for debugger to attach
+                    debugpy.breakpoint()             # stop here to start normal debugging
+                elif self.debugger == 'pycharm':
                     pydevd_pycharm.settrace('localhost', port=5678, stdoutToServer=True,
                                             stderrToServer=True)
-                else:
+                elif self.debugger == 'pydev':
                     pydevd.settrace()
+                else:
+                    raise ValueError(f"unknown debugger: '{self.debugger}'")
 
             except socket.error as error:
                 self.log("Debugging: connection to pydevd failed: %s", error)
-                self.log("Be sure to run 'Start debugging server' in PyDev to enable debugging.")
+                self.log(f"Be sure to run 'Start debugging server' in {self.debugger} to enable debugging.")
             else:
-                self.log("Enabled PyDev debugger.")
+                self.log(f"Enabled '{self.debugger}' debugger.")
 
             sys.stderr = stderr
 
@@ -314,5 +360,5 @@ class Debug(object):
 debug = Debug()
 
 
-def enable():
-    debug.enable()
+def enable(debug_type):
+    debug.enable(debug_type)
