@@ -1484,50 +1484,51 @@ class SatinColumn(EmbroideryElement):
                 stitch_group.add_stitches(split_points)
                 stitch_group.add_stitch(end_stitch)
 
+    def connect_and_add(self, stitch_group, next_stitch_group):
+
+        if stitch_group.stitches:
+            self.add_running_stitches(stitch_group.stitches[-1], next_stitch_group.stitches[0], stitch_group)
+        stitch_group += next_stitch_group
+        return stitch_group
+
     def to_stitch_groups(self, last_patch=None):
         # Stitch a variable-width satin column, zig-zagging between two paths.
         # The algorithm will draw zigzags between each consecutive pair of
         # beziers.  The boundary points between beziers serve as "checkpoints",
         # allowing the user to control how the zigzags flow around corners.
 
-        patch = StitchGroup(color=self.color,
-                            force_lock_stitches=self.force_lock_stitches,
-                            lock_stitches=self.lock_stitches)
+        stitch_group = StitchGroup(color=self.color,
+                                   force_lock_stitches=self.force_lock_stitches,
+                                   lock_stitches=self.lock_stitches)
 
         if self.center_walk_underlay:
-            patch += self.do_center_walk()
+            stitch_group += self.do_center_walk()
 
         if self.contour_underlay:
             contour = self.do_contour_underlay()
-            if patch.stitches:
-                self.add_running_stitches(patch.stitches[-1], contour.stitches[0], patch)
-            patch += contour
+            stitch_group = self.connect_and_add(stitch_group, contour)
 
         if self.zigzag_underlay:
             # zigzag underlay comes after contour walk underlay, so that the
             # zigzags sit on the contour walk underlay like rail ties on rails.
             zigzag = self.do_zigzag_underlay()
-            if patch.stitches:
-                self.add_running_stitches(patch.stitches[-1], zigzag.stitches[0], patch)
-            patch += zigzag
+            stitch_group = self.connect_and_add(stitch_group, zigzag)
 
         if self.satin_method == 'e_stitch':
-            final_patch = self.do_e_stitch()
+            final_stitch_group = self.do_e_stitch()
         elif self.satin_method == 's_stitch':
-            final_patch = self.do_s_stitch()
+            final_stitch_group = self.do_s_stitch()
         elif self.satin_method == 'zigzag':
-            final_patch = self.do_zigzag()
+            final_stitch_group = self.do_zigzag()
         else:
-            final_patch = self.do_satin()
+            final_stitch_group = self.do_satin()
 
-        if patch.stitches:
-            self.add_running_stitches(patch.stitches[-1], final_patch.stitches[0], patch)
-        patch += final_patch
+        stitch_group = self.connect_and_add(stitch_group, final_stitch_group)
 
-        if not patch.stitches:
+        if not stitch_group.stitches:
             return []
 
-        return [patch]
+        return [stitch_group]
 
 
 class SatinProcessor:
