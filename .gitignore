@@ -21,8 +21,11 @@ locales/
 .DS_Store
 /PROFILE
 /profile_stats
+/profile_stats.html
 /profile_stats.prof
 /.vscode
 __pycache__
 flaskserverport.json
 electron/yarn.lock
+.ink.sh
+.ink.svg
