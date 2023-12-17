@@ -1107,14 +1107,14 @@ class SatinColumn(EmbroideryElement):
             first_side = [p[1] for p in pairs]
             second_side = [p[0] for p in reversed(pairs)]
 
-        patch = StitchGroup(
+        stitch_group = StitchGroup(
             color=self.color,
             tags=("satin_column", "satin_column_underlay", "satin_contour_underlay"),
             stitches=first_side)
 
-        self.add_running_stitches(first_side[-1], second_side[0], patch)
-        patch.stitches += second_side
-        return patch
+        self.add_running_stitches(first_side[-1], second_side[0], stitch_group)
+        stitch_group.stitches += second_side
+        return stitch_group
 
     def do_center_walk(self):
         # Center walk underlay is just a running stitch down and back on the
@@ -1472,18 +1472,17 @@ class SatinColumn(EmbroideryElement):
     def _get_inset_point(self, point1, point2, distance_fraction):
         return point1 * (1 - distance_fraction) + point2 * distance_fraction
 
-    def add_running_stitches(self, start_stitch, end_stitch, patch):
-        # when max_stitch_length is set, the satin column may be quite wide annd  the jumps
-        # between underlays or from underlay to final satin are better turned into paths
-        # to avoid long jumps or  trims
+    def add_running_stitches(self, start_stitch, end_stitch, stitch_group):
+        # When max_stitch_length is set, the satin column may be quite wide and the jumps
+        # between underlays or from underlay to final satin should be turned into running stitch
+        # to avoid long jumps or unexpected trims.
 
         if self.max_stitch_length_px:
             max_len = self.max_stitch_length_px
             if end_stitch.distance(start_stitch) > max_len:
                 split_points = running_stitch.split_segment_even_dist(start_stitch, end_stitch, max_len)
-                for p in split_points:
-                    patch.add_stitch(p)
-                patch.add_stitch(end_stitch)
+                stitch_group.add_stitches(split_points)
+                stitch_group.add_stitch(end_stitch)
 
     def to_stitch_groups(self, last_patch=None):
         # Stitch a variable-width satin column, zig-zagging between two paths.
