@@ -30,17 +30,17 @@ class PreferencesFrame(wx.Frame):
         self.this_svg_page = wx.Panel(self.notebook, wx.ID_ANY)
         self.notebook.AddPage(self.this_svg_page, _("This SVG"))
 
-        sizer_1 = wx.BoxSizer(wx.VERTICAL)
+        this_svg_margin = wx.BoxSizer(wx.VERTICAL)
 
         # add space above and below to center sizer_2 vertically
-        sizer_1.Add((0, 20), 1, wx.EXPAND, 0)
+        this_svg_margin.Add((0, 20), 1, wx.EXPAND, 0)
 
-        sizer_2 = wx.FlexGridSizer(2, 4, 15, 10)
-        sizer_1.Add(sizer_2, 0, wx.EXPAND | wx.LEFT | wx.RIGHT, 20)
+        this_svg_grid = wx.FlexGridSizer(2, 4, 15, 10)
+        this_svg_margin.Add(this_svg_grid, 0, wx.EXPAND | wx.LEFT | wx.RIGHT, 20)
 
         label_1 = wx.StaticText(self.this_svg_page, wx.ID_ANY, _("Minimum jump stitch length"), style=wx.ALIGN_LEFT)
         label_1.SetToolTip(_("Jump stitches smaller than this will be treated as normal stitches."))
-        sizer_2.Add(label_1, 1, wx.ALIGN_CENTER_VERTICAL | wx.RIGHT, 15)
+        this_svg_grid.Add(label_1, 1, wx.ALIGN_CENTER_VERTICAL | wx.RIGHT, 15)
 
         self.minimum_jump_stitch_length = wx.SpinCtrlDouble(
             self.this_svg_page, wx.ID_ANY, inc=0.1,
@@ -48,16 +48,16 @@ class PreferencesFrame(wx.Frame):
             style=wx.ALIGN_RIGHT | wx.SP_ARROW_KEYS
         )
         self.minimum_jump_stitch_length.SetDigits(1)
-        sizer_2.Add(self.minimum_jump_stitch_length, 0, wx.ALIGN_CENTER_VERTICAL, 0)
+        this_svg_grid.Add(self.minimum_jump_stitch_length, 0, wx.ALIGN_CENTER_VERTICAL, 0)
 
         label_2 = wx.StaticText(self.this_svg_page, wx.ID_ANY, _("mm"))
-        sizer_2.Add(label_2, 0, wx.ALIGN_CENTER_VERTICAL | wx.RIGHT, 15)
+        this_svg_grid.Add(label_2, 0, wx.ALIGN_CENTER_VERTICAL | wx.RIGHT, 15)
 
         self.button_1 = wx.Button(self.this_svg_page, wx.ID_ANY, _("Set As Default"))
-        sizer_2.Add(self.button_1, 0, wx.ALIGN_CENTER_VERTICAL, 0)
+        this_svg_grid.Add(self.button_1, 0, wx.ALIGN_CENTER_VERTICAL, 0)
 
         label_3 = wx.StaticText(self.this_svg_page, wx.ID_ANY, _("Minimum stitch length"))
-        sizer_2.Add(label_3, 0, 0, 0)
+        this_svg_grid.Add(label_3, 0, 0, 0)
 
         self.minimum_stitch_length = wx.SpinCtrlDouble(
             self.this_svg_page, wx.ID_ANY, inc=0.1,
@@ -65,30 +65,30 @@ class PreferencesFrame(wx.Frame):
             style=wx.ALIGN_RIGHT | wx.SP_ARROW_KEYS
         )
         self.minimum_stitch_length.SetDigits(1)
-        sizer_2.Add(self.minimum_stitch_length, 0, wx.ALIGN_CENTER_VERTICAL, 0)
+        this_svg_grid.Add(self.minimum_stitch_length, 0, wx.ALIGN_CENTER_VERTICAL, 0)
 
         label_4 = wx.StaticText(self.this_svg_page, wx.ID_ANY, _("mm"))
-        sizer_2.Add(label_4, 0, wx.ALIGN_CENTER_VERTICAL, 0)
+        this_svg_grid.Add(label_4, 0, wx.ALIGN_CENTER_VERTICAL, 0)
 
         self.button_2 = wx.Button(self.this_svg_page, wx.ID_ANY, _("Set As Default"))
-        sizer_2.Add(self.button_2, 0, wx.ALIGN_CENTER_VERTICAL, 0)
+        this_svg_grid.Add(self.button_2, 0, wx.ALIGN_CENTER_VERTICAL, 0)
 
-        sizer_1.Add((0, 20), 1, wx.EXPAND, 0)
+        this_svg_margin.Add((0, 20), 1, wx.EXPAND, 0)
 
         self.global_page = wx.Panel(self.notebook, wx.ID_ANY)
         self.notebook.AddPage(self.global_page, _("Global"))
 
-        sizer_3 = wx.BoxSizer(wx.VERTICAL)
+        global_margin = wx.BoxSizer(wx.VERTICAL)
 
         # add space above and below to center sizer_4 vertically
-        sizer_3.Add((0, 20), 1, wx.EXPAND, 0)
+        global_margin.Add((0, 20), 1, wx.EXPAND, 0)
 
-        sizer_4 = wx.FlexGridSizer(3, 4, 15, 10)
-        sizer_3.Add(sizer_4, 0, wx.EXPAND | wx.LEFT | wx.RIGHT, 20)
+        global_grid_sizer = wx.FlexGridSizer(3, 4, 15, 10)
+        global_margin.Add(global_grid_sizer, 0, wx.EXPAND | wx.LEFT | wx.RIGHT, 20)
 
         label_5 = wx.StaticText(self.global_page, wx.ID_ANY, _("Default minimum jump stitch length"), style=wx.ALIGN_LEFT)
         label_5.SetToolTip(_("Jump stitches smaller than this will be treated as normal stitches."))
-        sizer_4.Add(label_5, 1, wx.ALIGN_CENTER_VERTICAL | wx.RIGHT, 15)
+        global_grid_sizer.Add(label_5, 1, wx.ALIGN_CENTER_VERTICAL | wx.RIGHT, 15)
 
         self.default_minimum_jump_stitch_length = wx.SpinCtrlDouble(
             self.global_page, wx.ID_ANY, inc=0.1,
@@ -96,15 +96,15 @@ class PreferencesFrame(wx.Frame):
             style=wx.ALIGN_RIGHT | wx.SP_ARROW_KEYS
         )
         self.default_minimum_jump_stitch_length.SetDigits(1)
-        sizer_4.Add(self.default_minimum_jump_stitch_length, 0, wx.ALIGN_CENTER_VERTICAL, 0)
+        global_grid_sizer.Add(self.default_minimum_jump_stitch_length, 0, wx.ALIGN_CENTER_VERTICAL, 0)
 
         label_6 = wx.StaticText(self.global_page, wx.ID_ANY, _("mm"))
-        sizer_4.Add(label_6, 0, wx.ALIGN_CENTER_VERTICAL | wx.RIGHT, 15)
+        global_grid_sizer.Add(label_6, 0, wx.ALIGN_CENTER_VERTICAL | wx.RIGHT, 15)
 
-        sizer_4.Add((0, 0), 0, 0, 0)
+        global_grid_sizer.Add((0, 0), 0, 0, 0)
 
         label_7 = wx.StaticText(self.global_page, wx.ID_ANY, _("Minimum stitch length"))
-        sizer_4.Add(label_7, 0, wx.ALIGN_CENTER_VERTICAL, 0)
+        global_grid_sizer.Add(label_7, 0, wx.ALIGN_CENTER_VERTICAL, 0)
 
         self.default_minimum_stitch_length = wx.SpinCtrlDouble(
             self.global_page, wx.ID_ANY, inc=0.1,
@@ -112,16 +112,16 @@ class PreferencesFrame(wx.Frame):
             style=wx.ALIGN_RIGHT | wx.SP_ARROW_KEYS
         )
         self.default_minimum_stitch_length.SetDigits(1)
-        sizer_4.Add(self.default_minimum_stitch_length, 0, wx.ALIGN_CENTER_VERTICAL, 0)
+        global_grid_sizer.Add(self.default_minimum_stitch_length, 0, wx.ALIGN_CENTER_VERTICAL, 0)
 
         label_8 = wx.StaticText(self.global_page, wx.ID_ANY, _("mm"))
-        sizer_4.Add(label_8, 0, wx.ALIGN_CENTER_VERTICAL, 0)
+        global_grid_sizer.Add(label_8, 0, wx.ALIGN_CENTER_VERTICAL, 0)
 
-        sizer_4.Add((0, 20), 0, 0, 0)
+        global_grid_sizer.Add((0, 20), 0, 0, 0)
 
         label_9 = wx.StaticText(self.global_page, wx.ID_ANY, _("Stitch plan cache size"), style=wx.ALIGN_LEFT)
         label_9.SetToolTip(_("Jump stitches smaller than this will be treated as normal stitches."))
-        sizer_4.Add(label_9, 1, wx.ALIGN_CENTER_VERTICAL, 0)
+        global_grid_sizer.Add(label_9, 1, wx.ALIGN_CENTER_VERTICAL, 0)
 
         self.stitch_plan_cache_size = wx.SpinCtrl(
             self.global_page, wx.ID_ANY,
@@ -129,15 +129,15 @@ class PreferencesFrame(wx.Frame):
             style=wx.ALIGN_RIGHT | wx.SP_ARROW_KEYS
         )
         self.stitch_plan_cache_size.SetIncrement(10)
-        sizer_4.Add(self.stitch_plan_cache_size, 0, wx.ALIGN_CENTER_VERTICAL | wx.ALIGN_RIGHT, 0)
+        global_grid_sizer.Add(self.stitch_plan_cache_size, 0, wx.ALIGN_CENTER_VERTICAL | wx.ALIGN_RIGHT, 0)
 
         label_10 = wx.StaticText(self.global_page, wx.ID_ANY, _("MB"))
-        sizer_4.Add(label_10, 0, wx.ALIGN_CENTER_VERTICAL, 0)
+        global_grid_sizer.Add(label_10, 0, wx.ALIGN_CENTER_VERTICAL, 0)
 
         self.clear_cache_button = wx.Button(self.global_page, wx.ID_ANY, _("Clear Stitch Plan Cache"))
-        sizer_4.Add(self.clear_cache_button, 0, wx.ALIGN_CENTER_VERTICAL, 0)
+        global_grid_sizer.Add(self.clear_cache_button, 0, wx.ALIGN_CENTER_VERTICAL, 0)
 
-        sizer_3.Add((0, 0), 1, wx.EXPAND, 0)
+        global_margin.Add((0, 0), 1, wx.EXPAND, 0)
 
         button_sizer = wx.BoxSizer(wx.HORIZONTAL)
         main_sizer.Add(button_sizer, 0, wx.BOTTOM | wx.EXPAND | wx.LEFT | wx.RIGHT, 10)
@@ -150,13 +150,13 @@ class PreferencesFrame(wx.Frame):
         self.ok_button = wx.Button(self.panel_1, wx.ID_OK, "")
         button_sizer.Add(self.ok_button, 0, 0, 0)
 
-        sizer_4.AddGrowableCol(0)
+        global_grid_sizer.AddGrowableCol(0)
 
-        self.global_page.SetSizer(sizer_3)
+        self.global_page.SetSizer(global_margin)
 
-        sizer_2.AddGrowableCol(0)
+        this_svg_grid.AddGrowableCol(0)
 
-        self.this_svg_page.SetSizer(sizer_1)
+        self.this_svg_page.SetSizer(this_svg_margin)
 
         self.panel_1.SetSizer(main_sizer)
 
