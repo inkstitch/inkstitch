@@ -7,7 +7,7 @@ import math
 import typing
 
 import numpy
-from shapely.geometry import LineString, LinearRing, MultiLineString, Polygon, MultiPolygon, MultiPoint, GeometryCollection
+from shapely.geometry import LineString, LinearRing, MultiLineString, MultiPolygon, MultiPoint, GeometryCollection
 from shapely.geometry import Point as ShapelyPoint
 
 
@@ -103,12 +103,19 @@ def reverse_line_string(line_string):
 
 
 def ensure_multi_line_string(thing):
-    """Given either a MultiLineString or a single LineString, return a MultiLineString"""
-
-    if isinstance(thing, LineString):
-        return MultiLineString([thing])
-    else:
+    """Given either a MultiLineString, a single LineString or GeometryCollection, return a MultiLineString"""
+    if thing.is_empty:
         return thing
+    if thing.geom_type == "LineString":
+        return MultiLineString([thing])
+    if thing.geom_type == "GeometryCollection":
+        multilinestring = []
+        for line in thing.geoms:
+            if line.geom_type == "LineString":
+                multilinestring.append(line)
+        if multilinestring:
+            return MultiLineString(multilinestring)
+    return thing
 
 
 def ensure_geometry_collection(thing):
@@ -124,9 +131,17 @@ def ensure_geometry_collection(thing):
 
 def ensure_multi_polygon(thing):
     """Given either a MultiPolygon or a single Polygon, return a MultiPolygon"""
-
-    if isinstance(thing, Polygon):
+    if thing.is_empty:
+        return thing
+    if thing.geom_type == "Polygon":
         return MultiPolygon([thing])
+    elif thing.geom_type == "GeometryCollection":
+        multipolygon = []
+        for polygon in thing.geoms:
+            if thing.geom_type == "Polygon":
+                multipolygon.append(polygon)
+        if multipolygon:
+            return MultiPolygon(multipolygon)
     else:
         return thing
 
