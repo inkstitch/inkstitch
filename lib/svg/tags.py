@@ -46,6 +46,7 @@ SODIPODI_INSENSITIVE = inkex.addNS('insensitive', 'sodipodi')
 SODIPODI_NODETYPES = inkex.addNS('nodetypes', 'sodipodi')
 
 INKSTITCH_LETTERING = inkex.addNS('lettering', 'inkstitch')
+INKSTITCH_TARTAN = inkex.addNS('tartan', 'inkstitch')
 
 EMBROIDERABLE_TAGS = (SVG_PATH_TAG, SVG_LINE_TAG, SVG_POLYLINE_TAG, SVG_POLYGON_TAG,
                       SVG_RECT_TAG, SVG_ELLIPSE_TAG, SVG_CIRCLE_TAG)
@@ -100,6 +101,9 @@ inkstitch_attribs = [
     'stop_at_ending_point',
     'flip',
     'clip',
+    'rows_per_thread',
+    'herringbone_width_mm',
+    'tartan_angle',
     # stroke
     'stroke_method',
     'bean_stitch_repeats',
