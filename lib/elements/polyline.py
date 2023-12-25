@@ -49,7 +49,7 @@ class Polyline(EmbroideryElement):
     @property
     @cache
     def shape(self):
-        return shgeo.LineString(self.path)
+        return shgeo.MultiLineString(self.csp[0])
 
     @property
     def path(self):
