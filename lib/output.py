@@ -107,6 +107,11 @@ def write_embroidery_file(file_path, stitch_plan, svg, settings={}):
 
     try:
         pyembroidery.write(pattern, file_path, settings)
+    except AssertionError:
+        msg = _("Could not save file due to too many color changes.")
+        msg += _("Please reduce the amount of color changes in your file.")
+        inkex.errormsg(msg)
+        sys.exit(1)
     except IOError as e:
         # L10N low-level file error.  %(error)s is (hopefully?) translated by
         # the user's system automatically.
