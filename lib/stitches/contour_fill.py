@@ -201,10 +201,10 @@ def _match_polygons_and_holes(outer, inners):
 
 
 def _convert_polygon_to_nodes(tree, polygon, parent_polygon, child_holes):
-    polygon = orient(polygon, -1)
-
     if polygon.area < 0.1:
         return None, None
+
+    polygon = orient(polygon, -1)
 
     valid_rings = _take_only_valid_linear_rings(polygon.exterior)
 
