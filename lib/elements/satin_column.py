@@ -684,10 +684,10 @@ class SatinColumn(EmbroideryElement):
         if len(self.csp) < 2:
             yield TooFewPathsError((0, 0))
         elif len(self.rails) < 2:
-            yield TooFewPathsError(self.shape.centroid)
+            yield TooFewPathsError(self.flattened_rails[0].representative_point())
 
         if not self.to_stitch_groups():
-            yield NotStitchableError(self.shape.centroid)
+            yield NotStitchableError(self.flattened_rails[0].representative_point())
 
     def _center_walk_is_odd(self):
         return self.center_walk_underlay_repeats % 2 == 1
