@@ -195,7 +195,7 @@ def insert_node(graph, shape, point):
 
     edges = []
     for start, end, key, data in graph.edges(keys=True, data=True):
-        if key == "outline":
+        if key == "outline" and data['outline'] == outline:
             edges.append(((start, end), data))
 
     edge, data = min(edges, key=lambda edge_data: shgeo.LineString(edge_data[0]).distance(projected_point))
