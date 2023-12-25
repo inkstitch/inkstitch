@@ -22,7 +22,7 @@ from ..svg import (PIXELS_PER_MM, apply_transforms, convert_length,
                    get_node_transform)
 from ..svg.tags import INKSCAPE_LABEL, INKSTITCH_ATTRIBS
 from ..utils import Point, cache
-from ..utils.cache import get_stitch_plan_cache, CacheKeyGenerator
+from ..utils.cache import get_stitch_plan_cache, is_cache_disabled, CacheKeyGenerator
 
 
 class Param(object):
@@ -476,6 +476,9 @@ class EmbroideryElement(object):
 
     @debug.time
     def _load_cached_stitch_groups(self, previous_stitch):
+        if is_cache_disabled():
+            return None
+
         if not self.uses_previous_stitch():
             # we don't care about the previous stitch
             previous_stitch = None
@@ -499,6 +502,9 @@ class EmbroideryElement(object):
 
     @debug.time
     def _save_cached_stitch_groups(self, stitch_groups, previous_stitch):
+        if is_cache_disabled():
+            return
+
         stitch_plan_cache = get_stitch_plan_cache()
         cache_key = self.get_cache_key(previous_stitch)
         if cache_key not in stitch_plan_cache:

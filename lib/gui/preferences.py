@@ -83,7 +83,7 @@ class PreferencesFrame(wx.Frame):
         # add space above and below to center sizer_4 vertically
         global_margin.Add((0, 20), 1, wx.EXPAND, 0)
 
-        global_grid_sizer = wx.FlexGridSizer(3, 4, 15, 10)
+        global_grid_sizer = wx.FlexGridSizer(4, 4, 15, 10)
         global_margin.Add(global_grid_sizer, 0, wx.EXPAND | wx.LEFT | wx.RIGHT, 20)
 
         label_5 = wx.StaticText(self.global_page, wx.ID_ANY, _("Default minimum jump stitch length"), style=wx.ALIGN_LEFT)
@@ -120,7 +120,6 @@ class PreferencesFrame(wx.Frame):
         global_grid_sizer.Add((0, 20), 0, 0, 0)
 
         label_9 = wx.StaticText(self.global_page, wx.ID_ANY, _("Stitch plan cache size"), style=wx.ALIGN_LEFT)
-        label_9.SetToolTip(_("Jump stitches smaller than this will be treated as normal stitches."))
         global_grid_sizer.Add(label_9, 1, wx.ALIGN_CENTER_VERTICAL, 0)
 
         self.stitch_plan_cache_size = wx.SpinCtrl(
@@ -136,6 +135,13 @@ class PreferencesFrame(wx.Frame):
 
         self.clear_cache_button = wx.Button(self.global_page, wx.ID_ANY, _("Clear Stitch Plan Cache"))
         global_grid_sizer.Add(self.clear_cache_button, 0, wx.ALIGN_CENTER_VERTICAL, 0)
+
+        label_11 = wx.StaticText(self.global_page, wx.ID_ANY, _("Disable stitch plan cache size"), style=wx.ALIGN_LEFT)
+        global_grid_sizer.Add(label_11, 1, wx.ALIGN_CENTER_VERTICAL, 0)
+
+        self.disable_stitch_plan_cache = wx.CheckBox(self.global_page)
+        self.disable_stitch_plan_cache.SetValue(global_settings['disable_cache'])
+        global_grid_sizer.Add(self.disable_stitch_plan_cache, 0, wx.ALIGN_CENTER_VERTICAL | wx.ALIGN_RIGHT, 0)
 
         global_margin.Add((0, 0), 1, wx.EXPAND, 0)
 
@@ -188,11 +194,14 @@ class PreferencesFrame(wx.Frame):
         global_settings['default_min_stitch_len_mm'] = self.default_minimum_stitch_length.GetValue()
         global_settings['default_collapse_len_mm'] = self.default_minimum_jump_stitch_length.GetValue()
         global_settings['cache_size'] = self.stitch_plan_cache_size.GetValue()
+        global_settings['disable_cache'] = self.disable_stitch_plan_cache.GetValue()
 
         # cache size may have changed
         stitch_plan_cache = get_stitch_plan_cache()
         stitch_plan_cache.size_limit = int(global_settings['cache_size'] * 1024 * 1024)
         stitch_plan_cache.cull()
+        if global_settings['disable_cache']:
+            stitch_plan_cache.clear(retry=True)
 
     def cancel_button_clicked(self, event):
         self.Destroy()
