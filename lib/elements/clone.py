@@ -6,6 +6,7 @@
 from math import atan2, degrees, radians
 
 from inkex import CubicSuperPath, Path, Transform
+from shapely import MultiLineString
 
 from ..commands import is_command_symbol
 from ..i18n import _
@@ -141,6 +142,14 @@ class Clone(EmbroideryElement):
         transform = get_node_transform(self.node.getparent())
         center = self.node.bounding_box(transform).center
         return center
+
+    @property
+    def shape(self):
+        path = self.node.get_path()
+        transform = Transform(self.node.composed_transform())
+        path = path.transform(transform)
+        path = path.to_superpath()
+        return MultiLineString(path)
 
     def validation_warnings(self):
         source_node = get_clone_source(self.node)
