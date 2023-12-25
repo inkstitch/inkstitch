@@ -17,6 +17,7 @@ import sys
 #    as "vscode-script" or "pycharm-script" or "pydev-script"
 #    - in that case running from inkscape will not start debugger
 #      but prepare script for offline debugging from console
+#    - valid for "none-script" too
 #  - backward compatibilty is broken due to confusion
 #      debug_type = 'pydev'                      # default debugger backwards compatibility
 #      if 'PYCHARM_REMOTE_DEBUG' in os.environ:  # backwards compatibility
@@ -44,14 +45,14 @@ def parse_file(filename):
             break
     return value_type
 
-def write_offline_debug_script(SCRIPTDIR):
+def write_offline_debug_script(SCRIPTDIR, bash_name, bash_svg):
     # prepare script for offline debugging from console
     # - only tested on linux
     import shutil
-    ink_file = os.path.join(SCRIPTDIR, ".ink.sh")
+    ink_file = os.path.join(SCRIPTDIR, bash_name)
     with open(ink_file, 'w') as f:
         f.write(f"#!/usr/bin/env bash\n\n")
-        f.write(f"# version: {sys.version}\n")   # python version
+        f.write(f"# python version: {sys.version}\n")   # python version
         
         myargs = " ".join(sys.argv[1:])
         f.write(f'# script: {sys.argv[0]}  arguments: {myargs}\n') # script name and arguments
@@ -61,24 +62,29 @@ def write_offline_debug_script(SCRIPTDIR):
         for p in sys.path:
             f.write(f"#   {p}\n")
 
-        # print PYTHONPATH one per line
+        # see static void set_extensions_env() in inkscape/src/inkscape-main.cpp
         f.write(f"# PYTHONPATH:\n")
-        for p in os.environ.get('PYTHONPATH', '').split(os.pathsep):
+        for p in os.environ.get('PYTHONPATH', '').split(os.pathsep): # PYTHONPATH to list
             f.write(f"#   {p}\n")
 
         # take argument that not start with '-' as file name
         svg_file = " ".join([arg for arg in sys.argv[1:] if not arg.startswith('-')])
-        f.write(f"# copy {svg_file} to .ink.svg\n")
-        # check if filer are not the same
-        if svg_file != '.ink.svg':
-            shutil.copy(svg_file, f'{SCRIPTDIR}/.ink.svg')  # copy file to .ink.svg
-        myargs = myargs.replace(svg_file, '.ink.svg')   # replace file name with .ink.svg
+        f.write(f"# copy {svg_file} to {bash_svg}\n")
+        # check if files are not the same
+        if svg_file != bash_svg:
+            shutil.copy(svg_file, SCRIPTDIR / bash_svg)  # copy file to bash_svg
+        myargs = myargs.replace(svg_file, bash_svg)   # replace file name with bash_svg
 
-        # export INK*|PYTHON* environment variables
-        for k, v in sorted(os.environ.items()):
-            if k.startswith('INK') or k.startswith('PYTHON'):
-                f.write(f'export {k}="{v}"\n')
+        # see void Extension::set_environment() in inkscape/src/extension/extension.cpp
+        notexported = ["SELF_CALL"] # if an extension calls inkscape itself
+        exported = ["INKEX_GETTEXT_DOMAIN", "INKEX_GETTEXT_DIRECTORY", 
+                    "INKSCAPE_PROFILE_DIR", "DOCUMENT_PATH", "PYTHONPATH"]
+        for k in notexported:
+            if k in os.environ:
+                f.write(f'# export {k}="{os.environ[k]}"\n')
+        for k in exported:
+            if k in os.environ:
+                f.write(f'export {k}="{os.environ[k]}"\n')
 
-        # f.write(f"# python3 -m debugpy --listen 5678 --wait-for-client inkstitch.py {myargs}\n")
         f.write(f"python3 inkstitch.py {myargs}\n")
     os.chmod(ink_file, 0o0755)  # make file executable

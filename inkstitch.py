@@ -11,11 +11,17 @@ from pathlib import Path
 SCRIPTDIR = Path(__file__).parent.absolute()
 
 if len(sys.argv) < 2:
-    exit(1)  # no arguments - prevent uncidentally running this script
+    exit(1)  # no arguments - prevent accidentally running this script
+
+prefere_pip_inkex = True  # prefer pip installed inkex over inkscape bundled inkex
+
+# define names of files used by offline Bash script
+bash_name = ".ink.sh"
+bash_svg  = ".ink.svg"
 
 running_as_frozen = getattr(sys, 'frozen', None) is not None  # check if running from pyinstaller bundle
-running_from_inkscape = '.ink.svg' not in sys.argv  # inkscape never starts extension with .ink.svg file in args
-# running_from_inkscape = True  # for testing
+# we assume that if arguments contain svg file (=.ink.svg)  then we are running not from inkscape
+running_from_inkscape = bash_svg not in sys.argv
 
 debug_active = bool((gettrace := getattr(sys, 'gettrace')) and gettrace())  # check if debugger is active on startup
 debug_file = SCRIPTDIR / "DEBUG"
@@ -24,53 +30,59 @@ debug_type = 'none'
 profile_file = SCRIPTDIR / "PROFILE"
 profile_type = 'none'
 
-# print(f"debug_type:'{debug_type}' profile_type:'{profile_type}'", file=sys.stderr)  # for testing
+if not running_as_frozen: # debugging/profiling only in development mode
+    # parse debug file
+    # - if script was already started from debugger then don't read debug file
+    if not debug_active and os.path.exists(debug_file):
+        debug_type = debug_utils.parse_file(debug_file)  # read type of debugger from debug_file DEBUG
+        if debug_type == 'none':  # for better backward compatibility
+            print(f"Debug file exists but no debugger type found in '{debug_file.name}'", file=sys.stderr)
 
-# if script was already started from debugger then don't read debug file
-if not running_as_frozen and not debug_active and os.path.exists(debug_file):
-    debug_type = debug_utils.parse_file(debug_file)  # read type of debugger from debug_file DEBUG
-    if debug_type == 'none':  # for better backward compatibility
-        print(f"Debug file exists but no debugger type found in '{debug_file.name}'", file=sys.stderr)
+    # parse profile file
+    if os.path.exists(profile_file):
+        profile_type = debug_utils.parse_file(profile_file)  # read type of profiler from profile_file PROFILE
+        if profile_type == 'none':  # for better backward compatibility
+            print(f"Profile file exists but no profiler type found in '{profile_file.name}'", file=sys.stderr)
 
-if os.path.exists(profile_file):
-    profile_type = debug_utils.parse_file(profile_file)  # read type of profiler from profile_file PROFILE
-    if profile_type == 'none':  # for better backward compatibility
-        print(f"Profile file exists but no profiler type found in '{profile_file.name}'", file=sys.stderr)
+    # process creation of the Bash script
+    if running_from_inkscape:
+        if debug_type.endswith('-script'):  # if offline debugging just create script for later debugging
+            debug_utils.write_offline_debug_script(SCRIPTDIR, bash_name, bash_svg)
+            debug_type = 'none'  # do not start debugger when running from inkscape
+    else:  # not running from inkscape
+        if debug_type.endswith('-script'):  # remove '-script' to propely initialize debugger packages for each editor
+            debug_type = debug_type.replace('-script', '')
 
-if running_from_inkscape:
-    if debug_type.endswith('-script'):  # if offline debugging just create script for later debugging
-        debug_utils.write_offline_debug_script(SCRIPTDIR)
-        debug_type = 'none'  # do not start debugger when running from inkscape
-else:  # not running from inkscape
-    if debug_type.endswith('-script'):  # remove '-script' to propely initialize debugger packages for each editor
-        debug_type = debug_type.replace('-script', '')
+    if prefere_pip_inkex and 'PYTHONPATH' in os.environ:
+        # see static void set_extensions_env() in inkscape/src/inkscape-main.cpp
 
-if not running_as_frozen:
-    # When running in development mode, we prefer inkex installed by pip, not the one bundled with Inkscape.
-    # - move inkscape extensions path to the end of sys.path
-    # - we compare PYTHONPATH with sys.path and move PYTHONPATH to the end of sys.path
-    #   - also user inkscape extensions path is moved to the end of sys.path - may cause problems?
-    #   - path for deprecated-simple are removed from sys.path, will be added later by importing inkex
+        # When running in development mode, we prefer inkex installed by pip, not the one bundled with Inkscape.
+        # - move inkscape extensions path to the end of sys.path
+        # - we compare PYTHONPATH with sys.path and move PYTHONPATH to the end of sys.path
+        #   - also user inkscape extensions path is moved to the end of sys.path - may cause problems?
+        #   - path for deprecated-simple are removed from sys.path, will be added later by importing inkex
 
-    # PYTHONPATH to list
-    pythonpath = os.environ.get('PYTHONPATH', '').split(os.pathsep)
-    # remove pythonpath from sys.path
-    sys.path = [p for p in sys.path if p not in pythonpath]
-    # remove deprecated-simple, it will be added later by importing inkex
-    pythonpath = [p for p in pythonpath if not p.endswith('deprecated-simple')]
-    # add pythonpath to the end of sys.path
-    sys.path.extend(pythonpath)
+        # PYTHONPATH to list
+        pythonpath = os.environ.get('PYTHONPATH', '').split(os.pathsep)
+        # remove pythonpath from sys.path
+        sys.path = [p for p in sys.path if p not in pythonpath]
+        # remove deprecated-simple, it will be added later by importing inkex
+        pythonpath = [p for p in pythonpath if not p.endswith('deprecated-simple')]
+        # remove nonexisting paths
+        pythonpath = [p for p in pythonpath if os.path.exists(p)]
+        # add pythonpath to the end of sys.path
+        sys.path.extend(pythonpath)
 
-    # >> should be removed after previous code was tested <<
-    # if sys.platform == "darwin":
-    #     extensions_path = "/Applications/Inkscape.app/Contents/Resources/share/inkscape/extensions" # Mac
-    # else:
-    #     extensions_path = "/usr/share/inkscape/extensions" # Linux
-    #                                                        # windows not solved
-    # move inkscape extensions path to the end of sys.path
-    # sys.path.remove(extensions_path)
-    # sys.path.append(extensions_path)
-    # >> ------------------------------------------------- <<
+        # >> should be removed after previous code was tested <<
+        # if sys.platform == "darwin":
+        #     extensions_path = "/Applications/Inkscape.app/Contents/Resources/share/inkscape/extensions" # Mac
+        # else:
+        #     extensions_path = "/usr/share/inkscape/extensions" # Linux
+        #                                                        # windows ?
+        # move inkscape extensions path to the end of sys.path
+        # sys.path.remove(extensions_path)
+        # sys.path.append(extensions_path)
+        # >> ------------------------------------------------- <<
 
 import logging
 from argparse import ArgumentParser
@@ -122,7 +134,7 @@ extension = extension_class()  # create instance of extension class - call __ini
 
 # extension run(), but we differentiate between debug and normal mode
 # - in debug or profile mode we run extension or profile extension
-# - in normal mode we run extension in try/except block to catch all exceptions
+# - in normal mode we run extension in try/except block to catch all exceptions and hide GTK spam
 if debug_active or profile_type != "none":  # if debug or profile mode
     print(f"Extension:'{extension_name}' Debug active:{debug_active} type:'{debug_type}' "
           f"Profile type:'{profile_type}'", file=sys.stderr)
