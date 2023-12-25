@@ -268,7 +268,7 @@ def _get_stitch_groups(fill, shape, colors, color_lines, starting_point, ending_
 
         if is_empty(fill_stitch_graph):
             continue
-        fill_stitch_graph = graph_make_valid(fill_stitch_graph)
+        graph_make_valid(fill_stitch_graph)
 
         travel_graph = build_travel_graph(fill_stitch_graph, shape, fill.angle, False)
         path = find_stitch_path(fill_stitch_graph, travel_graph, starting_point, ending_point)
