@@ -57,7 +57,7 @@ class PathEdge(object):
         return self.key in self.OUTLINE_KEYS
 
     def is_segment(self):
-        return self.key == self.SEGMENT_KEY
+        return self.key.startswith(self.SEGMENT_KEY)
 
 
 @debug.time
@@ -87,7 +87,7 @@ def auto_fill(shape,
         return fallback(shape, running_stitch_length, running_stitch_tolerance)
 
     # ensure graph is eulerian
-    fill_stitch_graph = graph_make_valid(fill_stitch_graph)
+    graph_make_valid(fill_stitch_graph)
 
     travel_graph = build_travel_graph(fill_stitch_graph, shape, angle, underpath)
 
@@ -298,8 +298,24 @@ def add_edges_between_outline_nodes(graph, duplicate_every_other=False):
 
 def graph_make_valid(graph):
     if not networkx.is_eulerian(graph):
-        return networkx.eulerize(graph)
-    return graph
+        newgraph = networkx.eulerize(graph)
+        for start, end, key, data in newgraph.edges(keys=True, data=True):
+            if isinstance(key, int):
+                # make valid duplicated edges, we cannot use the very same key
+                # again, but the automatic naming will not apply to the autofill algorithm
+                graph_edges = graph[start][end]
+                if 'segment' in graph_edges.keys():
+                    data = graph_edges['segment']
+                    graph.add_edge(start, end, key=f'segment-{key}', **data)
+                elif 'outline' in graph_edges.keys():
+                    data = graph_edges['outline']
+                    graph.add_edge(start, end, key='outline-{key}', **data)
+                elif 'extra' in graph_edges.keys():
+                    data = graph_edges['extra']
+                    graph.add_edge(start, end, key='extra-{key}', **data)
+                elif 'initial' in graph_edges.keys():
+                    data = graph_edges['initial']
+                    graph.add_edge(start, end, key='initial-{key}', **data)
 
 
 def fallback(shape, running_stitch_length, running_stitch_tolerance):
@@ -380,7 +396,7 @@ def weight_edges_by_length(graph, multiplier=1):
 def get_segments(graph):
     segments = []
     for start, end, key, data in graph.edges(keys=True, data=True):
-        if key == 'segment':
+        if key.startswith('segment'):
             segments.append(data["geometry"])
 
     return segments

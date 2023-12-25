@@ -1,6 +1,9 @@
-from shapely.geometry import LineString, Point as ShapelyPoint, MultiPolygon
+from shapely.geometry import LineString, MultiPolygon
+from shapely.geometry import Point as ShapelyPoint
 from shapely.prepared import prep
-from .geometry import Point, ensure_geometry_collection
+
+from .geometry import (Point, ensure_geometry_collection,
+                       ensure_multi_line_string)
 
 
 def path_to_segments(path):
@@ -122,7 +125,7 @@ def clamp_path_to_polygon(path, polygon):
                     if not exit_point.intersects(entry_point):
                         # Now break the border into pieces using those points.
                         border = find_border(polygon, exit_point)
-                        border_pieces = border.difference(MultiPolygon((entry_point, exit_point))).geoms
+                        border_pieces = ensure_multi_line_string(border.difference(MultiPolygon((entry_point, exit_point)))).geoms
                         border_pieces = fix_starting_point(border_pieces)
 
                         # Pick the shortest way to get from the exiting to the
