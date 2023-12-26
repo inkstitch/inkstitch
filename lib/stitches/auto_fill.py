@@ -118,7 +118,7 @@ def which_outline(shape, coords):
 def get_shape_outlines_and_indices(shape):
     outlines = ensure_multi_line_string(shape.boundary).geoms
     outline_indices = list(range(len(outlines)))
-    # exclude small holes/atrifacts from outline indices
+    # exclude small holes/artifacts from outline indices
     for i, outline in enumerate(outlines):
         if i > 0 and outline.length < 2:
             outline_indices.remove(i)
