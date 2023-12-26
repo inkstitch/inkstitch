@@ -135,7 +135,7 @@ def ensure_multi_polygon(thing):
         return thing
     if thing.geom_type == "Polygon":
         return MultiPolygon([thing])
-    elif thing.geom_type == "GeometryCollection":
+    if thing.geom_type == "GeometryCollection":
         multipolygon = []
         for polygon in thing.geoms:
             if thing.geom_type == "Polygon":
