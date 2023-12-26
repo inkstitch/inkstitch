@@ -138,12 +138,11 @@ def ensure_multi_polygon(thing):
     if thing.geom_type == "GeometryCollection":
         multipolygon = []
         for polygon in thing.geoms:
-            if thing.geom_type == "Polygon":
+            if polygon.geom_type == "Polygon":
                 multipolygon.append(polygon)
         if multipolygon:
             return MultiPolygon(multipolygon)
-    else:
-        return thing
+    return thing
 
 
 def cut_path(points, length):
