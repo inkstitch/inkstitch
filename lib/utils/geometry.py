@@ -103,7 +103,7 @@ def reverse_line_string(line_string):
 
 
 def ensure_multi_line_string(thing):
-    """Given either a MultiLineString, a single LineString or GeometryCollection, return a MultiLineString"""
+    """Given either a MultiLineString, a single LineString or GeometryCollection return a MultiLineString"""
     if thing.is_empty:
         return thing
     if thing.geom_type == "LineString":
@@ -130,7 +130,7 @@ def ensure_geometry_collection(thing):
 
 
 def ensure_multi_polygon(thing):
-    """Given either a MultiPolygon or a single Polygon, return a MultiPolygon"""
+    """Given either a MultiPolygon, a single Polygon or GeometryCollection return a MultiPolygon"""
     if thing.is_empty:
         return thing
     if thing.geom_type == "Polygon":

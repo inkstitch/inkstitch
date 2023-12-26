@@ -6,7 +6,6 @@
 # -*- coding: UTF-8 -*-
 
 import math
-import warnings
 from itertools import chain, groupby
 
 import networkx
@@ -17,6 +16,7 @@ from shapely.strtree import STRtree
 from ..debug import debug
 from ..stitch_plan import Stitch
 from ..svg import PIXELS_PER_MM
+from ..utils import cache
 from ..utils.clamp_path import clamp_path_to_polygon
 from ..utils.geometry import Point as InkstitchPoint
 from ..utils.geometry import (ensure_multi_line_string,
@@ -108,12 +108,21 @@ def which_outline(shape, coords):
     # fail sometimes.
 
     point = shgeo.Point(*coords)
-    outlines = ensure_multi_line_string(shape.boundary).geoms
-    outline_indices = list(range(len(outlines)))
+    outlines, outline_indices = get_shape_outlines_and_indices(shape)
     closest = min(outline_indices,
                   key=lambda index: outlines[index].distance(point))
-
     return closest
+
+
+@cache
+def get_shape_outlines_and_indices(shape):
+    outlines = ensure_multi_line_string(shape.boundary).geoms
+    outline_indices = list(range(len(outlines)))
+    # exclude small holes/atrifacts from outline indices
+    for i, outline in enumerate(outlines):
+        if i > 0 and outline.length < 2:
+            outline_indices.remove(i)
+    return outlines, outline_indices
 
 
 def project(shape, coords, outline_index):
@@ -201,11 +210,22 @@ def insert_node(graph, shape, point):
         if key == "outline" and data['outline'] == outline:
             edges.append(((start, end), data))
 
-    edge, data = min(edges, key=lambda edge_data: shgeo.LineString(edge_data[0]).distance(projected_point))
+    if len(edges) > 0:
+        edge, data = min(edges, key=lambda edge_data: shgeo.LineString(edge_data[0]).distance(projected_point))
+        graph.remove_edge(*edge, key="outline")
+        graph.add_edge(edge[0], node, key="outline", **data)
+        graph.add_edge(node, edge[1], key="outline", **data)
+    else:
+        # The node lies on an outline which has no intersection with any segment.
+        # We need to add a segment to connect the inserted node with the nearest available edge from
+        # an other outline.  It's the best we can do without running into networkx no path errors.
+        for start, end, key, data in graph.edges(keys=True, data=True):
+            if key == "outline":
+                edges.append(((start, end), data))
+        edge, data = min(edges, key=lambda edge_data: shgeo.LineString(edge_data[0]).distance(projected_point))
+        graph.add_edge(edge[0], node, key='segment', underpath_edges=[], geometry=shgeo.LineString([edge[0], node]))
+        graph.add_edge(node, edge[1], key='segment', underpath_edges=[], geometry=shgeo.LineString([node, edge[0]]))
 
-    graph.remove_edge(*edge, key="outline")
-    graph.add_edge(edge[0], node, key="outline", **data)
-    graph.add_edge(node, edge[1], key="outline", **data)
     tag_nodes_with_outline_and_projection(graph, shape, nodes=[node])
 
 
@@ -382,10 +402,7 @@ def process_travel_edges(graph, fill_stitch_graph, shape, travel_edges):
     # allows for building a set of shapes and then efficiently testing
     # the set for intersection.  This allows us to do blazing-fast
     # queries of which line segments overlap each underpath edge.
-    with warnings.catch_warnings():
-        # We know about this upcoming change and we don't want to bother users.
-        warnings.filterwarnings('ignore', 'STRtree will be changed in 2.0.0 and will not be compatible with versions < 2.')
-        strtree = STRtree(segments)
+    strtree = STRtree(segments)
 
     # This makes the distance calculations below a bit faster.  We're
     # not looking for high precision anyway.
@@ -656,7 +673,8 @@ def travel(shape, travel_graph, edge, running_stitch_length, running_stitch_tole
         path = smooth_path(path, 2)
     else:
         path = [InkstitchPoint.from_tuple(point) for point in path]
-    path = clamp_path_to_polygon(path, shape)
+    if len(path) > 1:
+        path = clamp_path_to_polygon(path, shape)
 
     points = running_stitch(path, running_stitch_length, running_stitch_tolerance)
     stitches = [Stitch(point) for point in points]
