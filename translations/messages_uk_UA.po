@@ -2,21 +2,21 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-11-23 01:07+0000\n"
-"PO-Revision-Date: 2023-11-23 01:08\n"
+"POT-Creation-Date: 2023-12-27 01:05+0000\n"
+"PO-Revision-Date: 2023-12-27 01:06\n"
 "Last-Translator: \n"
 "Language-Team: Ukrainian\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.13.1\n"
+"Generated-By: Babel 2.14.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: easygettext\n"
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-23 01:07+0000\n"
+"POT-Creation-Date: 2023-12-27 01:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1079,60 +1079,60 @@ msgstr "маркер команд"
 msgid "Please select a layer to include layer commands."
 msgstr ""
 
-#: lib/elements/clone.py:21
+#: lib/elements/clone.py:22
 msgid "Clone Object"
 msgstr "Клонувати об'єкт"
 
-#: lib/elements/clone.py:22
+#: lib/elements/clone.py:23
 msgid "There are one or more clone objects in this document.  Ink/Stitch can work with single clones, but you are limited to set a very few parameters. "
 msgstr "У дизайні присутні один або більше об'єктів-клонів. Ink/Stitch може працювати з простими клонами, але ви будет обмежені лише невеликим списком параметрів. "
 
-#: lib/elements/clone.py:25
+#: lib/elements/clone.py:26
 msgid "If you want to convert the clone into a real element, follow these steps:"
 msgstr "Якщо ви хочете перетворити клон в реальний об'єкт, виконайте наступні кроки:"
 
-#: lib/elements/clone.py:26
+#: lib/elements/clone.py:27
 msgid "* Select the clone"
 msgstr "* Виберіть клон"
 
-#: lib/elements/clone.py:27 lib/elements/clone.py:38
+#: lib/elements/clone.py:28 lib/elements/clone.py:39
 msgid "* Run: Edit > Clone > Unlink Clone (Alt+Shift+D)"
 msgstr "* Виберіть: Правка > Клони > Від'єднати клона (Alt+Shift+D)"
 
-#: lib/elements/clone.py:32
+#: lib/elements/clone.py:33
 msgid "Clone is not embroiderable"
 msgstr "Клон не може бути вишитий"
 
-#: lib/elements/clone.py:33
+#: lib/elements/clone.py:34
 msgid "There are one ore more clone objects in this document. A clone must be a direct child of an embroiderable element. Ink/Stitch cannot embroider clones of groups or other not embroiderable elements (text or image)."
 msgstr "У дизайні присутні один або більше об'єктів-клонів. Клон повинен бути прямим нащадком елемента, який можна вишити. Ink/Stitch не може вишити клони груп чи інших невишиваємі елементи (текст або картинка)."
 
-#: lib/elements/clone.py:36
+#: lib/elements/clone.py:37
 msgid "Convert the clone into a real element:"
 msgstr "Перетворіть клон в реальний об'єкт:"
 
-#: lib/elements/clone.py:37
+#: lib/elements/clone.py:38
 msgid "* Select the clone."
 msgstr "* Виберіть клон."
 
-#: lib/elements/clone.py:52 inx/inkstitch_select_elements.inx:63
+#: lib/elements/clone.py:53 inx/inkstitch_select_elements.inx:63
 #: inx/inkstitch_select_elements.inx:64
 msgid "Clone"
 msgstr "Клонувати"
 
-#: lib/elements/clone.py:58
+#: lib/elements/clone.py:59
 msgid "Custom fill angle"
 msgstr "Свій кут гладі"
 
-#: lib/elements/clone.py:59
+#: lib/elements/clone.py:60
 msgid "This setting will apply a custom fill angle for the clone."
 msgstr "Ця настройка вказує свій кут гладі для клону."
 
-#: lib/elements/clone.py:68
+#: lib/elements/clone.py:69
 msgid "Flip angle"
 msgstr ""
 
-#: lib/elements/clone.py:69
+#: lib/elements/clone.py:70
 msgid "Flip automatically calucalted angle if it appears to be wrong."
 msgstr ""
 
@@ -1619,7 +1619,7 @@ msgid "default: 3x fill row spacing"
 msgstr "типовий: 3-кратний проміжок між рядками"
 
 #: lib/elements/fill_stitch.py:481 lib/elements/stroke.py:134
-#: lib/extensions/element_info.py:107
+#: lib/extensions/element_info.py:110 lib/extensions/element_info.py:166
 msgid "Max stitch length"
 msgstr "Максимальна довжина стібка"
 
@@ -2247,7 +2247,7 @@ msgstr ""
 msgid "point"
 msgstr ""
 
-#: lib/elements/text.py:13 lib/extensions/lettering.py:100
+#: lib/elements/text.py:13 lib/gui/lettering.py:95
 msgid "Text"
 msgstr "Текст"
 
@@ -2429,64 +2429,64 @@ msgstr ""
 msgid "This function copies Ink/Stitch parameters from the first selected element to the rest of the selection. Please select at least two elements."
 msgstr "Ця функція копіює параметри Ink/Stitch з першого виділеного об'єкта в інші об'єкти у виділенні. Виберіть як мінімум два об'єкти."
 
-#: lib/extensions/element_info.py:46 inx/inkstitch_select_elements.inx:15
+#: lib/extensions/element_info.py:47 inx/inkstitch_select_elements.inx:15
 msgid "Type"
 msgstr ""
 
-#: lib/extensions/element_info.py:52
+#: lib/extensions/element_info.py:53
 msgid "Fill Method"
 msgstr ""
 
-#: lib/extensions/element_info.py:59
+#: lib/extensions/element_info.py:60
 msgid "Satin Method"
 msgstr ""
 
-#: lib/extensions/element_info.py:66
+#: lib/extensions/element_info.py:67
 msgid "Stroke Method"
 msgstr ""
 
-#: lib/extensions/element_info.py:71 lib/extensions/element_info.py:130
+#: lib/extensions/element_info.py:72 lib/extensions/element_info.py:134
 msgid "Dimensions (mm)"
 msgstr ""
 
-#: lib/extensions/element_info.py:95 lib/extensions/element_info.py:154
+#: lib/extensions/element_info.py:98 lib/extensions/element_info.py:158
 #: lib/extensions/zip.py:137
 msgid "Stitches"
 msgstr "Стіжки"
 
-#: lib/extensions/element_info.py:99
+#: lib/extensions/element_info.py:102
 msgid "Small stitches (removed)"
 msgstr ""
 
-#: lib/extensions/element_info.py:103 lib/extensions/element_info.py:142
+#: lib/extensions/element_info.py:106 lib/extensions/element_info.py:146
 msgid "Jumps"
 msgstr ""
 
-#: lib/extensions/element_info.py:111
+#: lib/extensions/element_info.py:114 lib/extensions/element_info.py:162
 msgid "Min stitch length"
 msgstr ""
 
-#: lib/extensions/element_info.py:126
+#: lib/extensions/element_info.py:130
 msgid "All Selected Elements"
 msgstr ""
 
-#: lib/extensions/element_info.py:134 lib/extensions/zip.py:138
+#: lib/extensions/element_info.py:138 lib/extensions/zip.py:138
 msgid "Colors"
 msgstr "Кольори"
 
-#: lib/extensions/element_info.py:138
+#: lib/extensions/element_info.py:142
 msgid "Color Changes"
 msgstr ""
 
-#: lib/extensions/element_info.py:146
+#: lib/extensions/element_info.py:150
 msgid "Trims"
 msgstr ""
 
-#: lib/extensions/element_info.py:150
+#: lib/extensions/element_info.py:154
 msgid "Stops"
 msgstr ""
 
-#: lib/extensions/element_info.py:158
+#: lib/extensions/element_info.py:170
 msgid "Filter stitches smaller than (mm)"
 msgstr ""
 
@@ -2557,119 +2557,11 @@ msgstr ""
 msgid "Please choose one or more commands to add."
 msgstr "Виберіть одну або декілька команд, які потрібно додати."
 
-#: lib/extensions/lettering.py:51
-msgid "Font"
-msgstr "Шрифт"
-
-#: lib/extensions/lettering.py:60
-msgid "Font size filter (mm). 0 for all sizes."
-msgstr ""
-
-#: lib/extensions/lettering.py:62
-msgid "Glyphs"
-msgstr ""
-
-#: lib/extensions/lettering.py:64
-msgid "Filter fonts by available glyphs."
-msgstr ""
-
-#: lib/extensions/lettering.py:71
-msgid "Filter fonts by category."
-msgstr ""
-
-#: lib/extensions/lettering.py:80
-msgid "Font Filter"
-msgstr ""
-
-#: lib/extensions/lettering.py:83 lib/gui/test_swatches.py:33
-#: inx/inkstitch_apply_threadlist.inx:7 inx/inkstitch_fill_to_stroke.inx:15
-#: inx/inkstitch_gradient_blocks.inx:15
-#: inx/inkstitch_lettering_along_path.inx:13
-#: inx/inkstitch_palette_to_text.inx:15 inx/inkstitch_stroke_to_lpe_satin.inx:7
-#: inx/inkstitch_zigzag_line_to_satin.inx:7
-msgid "Options"
-msgstr "Параметри"
-
-#: lib/extensions/lettering.py:88
-msgid "Stitch lines of text back and forth"
-msgstr "Прошийте рядки тексту вперед і назад"
-
-#: lib/extensions/lettering.py:91
-msgid "Never"
-msgstr ""
-
-#: lib/extensions/lettering.py:91
-msgid "after each line"
-msgstr ""
-
-#: lib/extensions/lettering.py:91
-msgid "after each word"
-msgstr ""
-
-#: lib/extensions/lettering.py:91
-msgid "after each letter"
-msgstr ""
-
-#: lib/extensions/lettering.py:92
-msgid "Add trim command"
-msgstr ""
-
-#: lib/extensions/lettering.py:95
-msgid "Use command symbols"
-msgstr ""
-
-#: lib/extensions/lettering.py:97
-msgid "Uses command symbols if enabled. When disabled inserts trim commands as params."
-msgstr ""
-
-#: lib/extensions/lettering.py:105 lib/extensions/params.py:497
-#: print/templates/custom-page.html:23 print/templates/custom-page.html:27
-#: print/templates/custom-page.html:33 print/templates/ui.html:102
-#: print/templates/ui.html:106 print/templates/ui.html:112
-msgid "Cancel"
-msgstr "Скасувати"
-
-#: lib/extensions/lettering.py:109 lib/extensions/params.py:505
-msgid "Apply and Quit"
-msgstr "Застосувати і закрити"
-
-#: lib/extensions/lettering.py:288
-msgid "This font has no available font variant. Please update or remove the font."
-msgstr "Для цього шрифта немає доступного варіанта. Оновіть або видаліть цей шрифт."
-
-#. The user has chosen to scale the text by some percentage
-#. (50%, 200%, etc).  If you need to use the percentage symbol,
-#. make sure to double it (%%).
-#: lib/extensions/lettering.py:349
-#, python-format
-msgid "Text scale %s%%"
-msgstr "Масштаб тексту %s%%"
-
-#: lib/extensions/lettering.py:360
-#, python-format
-msgid "Error: Text cannot be applied to the document.\n"
-"%s"
-msgstr ""
-
-#: lib/extensions/lettering.py:447 lib/extensions/zip.py:136
-#: inx/inkstitch_commands_scale_symbols.inx:6
-#: inx/inkstitch_lettering_generate_json.inx:82
-msgid "Size"
-msgstr "Розмір"
-
-#: lib/extensions/lettering.py:461
-msgid "Add trims"
-msgstr ""
-
-#: lib/extensions/lettering.py:467 print/templates/ui_svg_action_buttons.html:1
-msgid "Scale"
-msgstr "Масштаб"
-
-#: lib/extensions/lettering.py:524
+#: lib/extensions/lettering.py:43
 msgid "Please select only one block of text."
 msgstr "Виберіть лише один блок тексту."
 
-#: lib/extensions/lettering.py:535 lib/extensions/lettering.py:545
+#: lib/extensions/lettering.py:54 lib/extensions/lettering.py:64
 msgid "Ink/Stitch Lettering"
 msgstr "Надписи Ink/Stitch"
 
@@ -2768,9 +2660,20 @@ msgstr "Натисніть тут, щоб ці параметри були зб�
 msgid "This parameter will be saved when you click \"Apply and Quit\""
 msgstr "Ці параметри будуть збережені, коли ви натиснете \"Застосувати і Вийти\""
 
+#: lib/extensions/params.py:497 lib/gui/lettering.py:100
+#: print/templates/custom-page.html:23 print/templates/custom-page.html:27
+#: print/templates/custom-page.html:33 print/templates/ui.html:102
+#: print/templates/ui.html:106 print/templates/ui.html:112
+msgid "Cancel"
+msgstr "Скасувати"
+
 #: lib/extensions/params.py:502
 msgid "Use Last Settings"
 msgstr "Використовувати останні налаштування"
+
+#: lib/extensions/params.py:505 lib/gui/lettering.py:104
+msgid "Apply and Quit"
+msgstr "Застосувати і закрити"
 
 #: lib/extensions/params.py:786
 msgid "Embroidery Params"
@@ -2830,7 +2733,7 @@ msgstr "Неправильний вказівник"
 msgid "Description"
 msgstr "Опис"
 
-#: lib/extensions/troubleshoot.py:106 lib/extensions/troubleshoot.py:155
+#: lib/extensions/troubleshoot.py:111 lib/extensions/troubleshoot.py:157
 #: inx/inkstitch_cleanup.inx:23 inx/inkstitch_element_info.inx:10
 #: inx/inkstitch_remove_embroidery_settings.inx:39
 #: inx/inkstitch_select_elements.inx:77 inx/inkstitch_troubleshoot.inx:12
@@ -2838,39 +2741,39 @@ msgstr "Опис"
 msgid "Troubleshoot"
 msgstr "Виправлення неполадок"
 
-#: lib/extensions/troubleshoot.py:118 lib/extensions/troubleshoot.py:162
+#: lib/extensions/troubleshoot.py:120 lib/extensions/troubleshoot.py:164
 msgid "Errors"
 msgstr "Помилки"
 
-#: lib/extensions/troubleshoot.py:124 lib/extensions/troubleshoot.py:166
+#: lib/extensions/troubleshoot.py:126 lib/extensions/troubleshoot.py:168
 msgid "Warnings"
 msgstr "Попередження"
 
-#: lib/extensions/troubleshoot.py:130
+#: lib/extensions/troubleshoot.py:132
 msgid "Type Warnings"
 msgstr "Попередження про тип"
 
-#: lib/extensions/troubleshoot.py:163
+#: lib/extensions/troubleshoot.py:165
 msgid "Problems that will prevent the shape from being embroidered."
 msgstr "Проблеми, які не дозволяють вишити цю форму."
 
-#: lib/extensions/troubleshoot.py:167
+#: lib/extensions/troubleshoot.py:169
 msgid "These are problems that won't prevent the shape from being embroidered. You should consider to fix the warning, but if you don't, Ink/Stitch will do its best to process the object."
 msgstr "Ці проблеми не перешкоджатимуть вишивці фігури. Ви можете виправити ці попередження, але якщо ви цього не зробите - Ink/Stitch постарається обробити об'єкт якнайкраще."
 
-#: lib/extensions/troubleshoot.py:172
+#: lib/extensions/troubleshoot.py:174
 msgid "Object Type Warnings"
 msgstr "Попередження про тип об'єкта"
 
-#: lib/extensions/troubleshoot.py:173
+#: lib/extensions/troubleshoot.py:175
 msgid "These objects may not work properly with Ink/Stitch. Follow the instructions to correct unwanted behaviour."
 msgstr "Ці об'єкти можуть не коректно працювати з Ink/Stitch. Дотримуйтесь інструкцій, щоб виправити можливі проблеми."
 
-#: lib/extensions/troubleshoot.py:186
+#: lib/extensions/troubleshoot.py:188
 msgid "Possible solutions"
 msgstr ""
 
-#: lib/extensions/troubleshoot.py:191
+#: lib/extensions/troubleshoot.py:193
 msgid "It is possible, that one object contains more than one error, yet there will be only one pointer per object.  Run this function again, when further errors occur.  Remove pointers by deleting the layer named \"Troubleshoot\" through the objects panel (Object -> Objects...)."
 msgstr "Можливо, що один об'єкт містить більше ніж одну помилку, але на кожен об'єкт встановлюється тільки один вказівник. Запустіть цю функцию знову, коли будуть виникати нові помилки. Видаліть вказівники шляхом видалення шару з іменем \"Вирішення проблем\" через панель об'єктів  (Об'бєкт -> Об'єкти...)."
 
@@ -2893,6 +2796,12 @@ msgstr "Деталі дизайну"
 #: lib/extensions/zip.py:135
 msgid "Title"
 msgstr "Назва"
+
+#: lib/extensions/zip.py:136 lib/gui/lettering.py:442
+#: inx/inkstitch_commands_scale_symbols.inx:6
+#: inx/inkstitch_lettering_generate_json.inx:82
+msgid "Size"
+msgstr "Розмір"
 
 #: lib/extensions/zip.py:140
 msgid "Thread Order"
@@ -2941,6 +2850,97 @@ msgstr ""
 #: lib/gui/element_info.py:62 lib/gui/element_info.py:63
 msgid "https://inkstitch.org/docs/troubleshoot#element-info"
 msgstr ""
+
+#: lib/gui/lettering.py:46
+msgid "Font"
+msgstr "Шрифт"
+
+#: lib/gui/lettering.py:55
+msgid "Font size filter (mm). 0 for all sizes."
+msgstr ""
+
+#: lib/gui/lettering.py:57
+msgid "Glyphs"
+msgstr ""
+
+#: lib/gui/lettering.py:59
+msgid "Filter fonts by available glyphs."
+msgstr ""
+
+#: lib/gui/lettering.py:66
+msgid "Filter fonts by category."
+msgstr ""
+
+#: lib/gui/lettering.py:75
+msgid "Font Filter"
+msgstr ""
+
+#: lib/gui/lettering.py:78 lib/gui/test_swatches.py:33
+#: inx/inkstitch_apply_threadlist.inx:7 inx/inkstitch_fill_to_stroke.inx:15
+#: inx/inkstitch_gradient_blocks.inx:15
+#: inx/inkstitch_lettering_along_path.inx:13
+#: inx/inkstitch_palette_to_text.inx:15 inx/inkstitch_stroke_to_lpe_satin.inx:7
+#: inx/inkstitch_zigzag_line_to_satin.inx:7
+msgid "Options"
+msgstr "Параметри"
+
+#: lib/gui/lettering.py:83
+msgid "Stitch lines of text back and forth"
+msgstr "Прошийте рядки тексту вперед і назад"
+
+#: lib/gui/lettering.py:86
+msgid "Never"
+msgstr ""
+
+#: lib/gui/lettering.py:86
+msgid "after each line"
+msgstr ""
+
+#: lib/gui/lettering.py:86
+msgid "after each word"
+msgstr ""
+
+#: lib/gui/lettering.py:86
+msgid "after each letter"
+msgstr ""
+
+#: lib/gui/lettering.py:87
+msgid "Add trim command"
+msgstr ""
+
+#: lib/gui/lettering.py:90
+msgid "Use command symbols"
+msgstr ""
+
+#: lib/gui/lettering.py:92
+msgid "Uses command symbols if enabled. When disabled inserts trim commands as params."
+msgstr ""
+
+#: lib/gui/lettering.py:283
+msgid "This font has no available font variant. Please update or remove the font."
+msgstr "Для цього шрифта немає доступного варіанта. Оновіть або видаліть цей шрифт."
+
+#. The user has chosen to scale the text by some percentage
+#. (50%, 200%, etc).  If you need to use the percentage symbol,
+#. make sure to double it (%%).
+#: lib/gui/lettering.py:344
+#, python-format
+msgid "Text scale %s%%"
+msgstr "Масштаб тексту %s%%"
+
+#: lib/gui/lettering.py:355
+#, python-format
+msgid "Error: Text cannot be applied to the document.\n"
+"%s"
+msgstr ""
+
+#: lib/gui/lettering.py:456
+msgid "Add trims"
+msgstr ""
+
+#: lib/gui/lettering.py:462 print/templates/ui_svg_action_buttons.html:1
+msgid "Scale"
+msgstr "Масштаб"
 
 #: lib/gui/preferences.py:16 lib/gui/preferences.py:17
 #: inx/inkstitch_preferences.inx:3
