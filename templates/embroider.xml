@@ -11,7 +11,7 @@
         <object-type>all</object-type>
         <effects-menu>
             <submenu name="Ink/Stitch" translatable="no">
-                <submenu name="Visualise and Export" />
+                <submenu name="Visualize and Export" />
             </submenu>
         </effects-menu>
     </effect>
