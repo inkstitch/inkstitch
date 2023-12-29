@@ -84,9 +84,9 @@ def add_jumps(graph, elements, preserve_order):
     minimal number and length of jumps necessary will be added.
     """
     if preserve_order:
-        graph = _add_ordered_jumps(graph, elements)
+        _add_ordered_jumps(graph, elements)
     else:
-        graph = _add_unordered_jumps(graph, elements)
+        _add_unordered_jumps(graph, elements)
     return graph
 
 
@@ -96,7 +96,7 @@ def _add_ordered_jumps(graph, elements):
     # will enforce stitching the elements in order.
     for element1, element2 in zip(elements[:-1], elements[1:]):
         check_stop_flag()
-        graph = _insert_smallest_jump(graph, element1, element2)
+        _insert_smallest_jump(graph, element1, element2)
 
     # add jumps between subpath too, we do not care about directions here
     for element in elements:
@@ -108,10 +108,8 @@ def _add_ordered_jumps(graph, elements):
                 if line1.distance(line2) == 0:
                     continue
                 node1, node2 = nearest_points(line1, line2)
-                graph = _insert_jump(graph, node1, node2)
+                _insert_jump(graph, node1, node2)
             i += 1
-    return graph
-
 
 def _insert_smallest_jump(graph, element1, element2):
     potential_edges = []
@@ -128,15 +126,12 @@ def _insert_smallest_jump(graph, element1, element2):
     if potential_edges:
         edge = min(potential_edges, key=lambda p1_p2: p1_p2[0].distance(p1_p2[1]))
         graph.add_edge(str(edge[0]), str(edge[1]), jump=True)
-    return graph
-
 
 def _insert_jump(graph, node1, node2):
     graph.add_node(str(node1), point=node1)
     graph.add_node(str(node2), point=node2)
     graph.add_edge(str(node1), str(node2), jump=True)
     graph.add_edge(str(node2), str(node1), jump=True)
-    return graph
 
 
 def _add_unordered_jumps(graph, elements):
@@ -148,7 +143,6 @@ def _add_unordered_jumps(graph, elements):
     for jump in nx.k_edge_augmentation(graph, 1, avail=list(possible_jumps(graph))):
         check_stop_flag()
         graph.add_edge(*jump, jump=True)
-    return graph
 
 
 def possible_jumps(graph):
