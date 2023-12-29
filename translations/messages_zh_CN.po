@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-12-27 01:05+0000\n"
-"PO-Revision-Date: 2023-12-27 01:06\n"
+"POT-Creation-Date: 2023-12-29 00:57+0000\n"
+"PO-Revision-Date: 2023-12-29 00:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-27 01:05+0000\n"
+"POT-Creation-Date: 2023-12-29 00:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2426,6 +2426,10 @@ msgstr "绿色"
 msgid "%s density"
 msgstr "%s 密度"
 
+#: lib/extensions/display_stacking_order.py:55
+msgid "Stacking Order"
+msgstr ""
+
 #: lib/extensions/duplicate_params.py:18
 msgid "This function copies Ink/Stitch parameters from the first selected element to the rest of the selection. Please select at least two elements."
 msgstr "此功能将 Ink/Stitch 参数从第一个选定元素复制到选择的其余部分。 请至少选择两个元素。"
@@ -4487,12 +4491,12 @@ msgstr "https://inkstitch.org/docs/cutwork/"
 msgid "Density Map"
 msgstr "密度图"
 
-#: inx/inkstitch_density_map.inx:10 inx/inkstitch_embroider.inx:14
-#: inx/inkstitch_print.inx:10 inx/inkstitch_simulator.inx:10
-#: inx/inkstitch_stitch_plan_preview.inx:10
+#: inx/inkstitch_density_map.inx:10 inx/inkstitch_display_stacking_order.inx:10
+#: inx/inkstitch_embroider.inx:14 inx/inkstitch_print.inx:10
+#: inx/inkstitch_simulator.inx:10 inx/inkstitch_stitch_plan_preview.inx:10
 #: inx/inkstitch_stitch_plan_preview_undo.inx:10
-msgid "Visualise and Export"
-msgstr "可视化和导出"
+msgid "Visualize and Export"
+msgstr ""
 
 #: inx/inkstitch_density_map.inx:14
 msgid "Red markers"
@@ -4532,6 +4536,14 @@ msgstr "降低不透明度"
 
 #: inx/inkstitch_density_map.inx:29
 msgid "Indicator size"
+msgstr ""
+
+#: inx/inkstitch_display_stacking_order.inx:3
+msgid "Display stacking order"
+msgstr ""
+
+#: inx/inkstitch_display_stacking_order.inx:14
+msgid "Font size"
 msgstr ""
 
 #: inx/inkstitch_duplicate_params.inx:3
