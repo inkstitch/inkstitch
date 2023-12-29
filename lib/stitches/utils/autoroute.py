@@ -111,6 +111,7 @@ def _add_ordered_jumps(graph, elements):
                 _insert_jump(graph, node1, node2)
             i += 1
 
+
 def _insert_smallest_jump(graph, element1, element2):
     potential_edges = []
 
@@ -126,6 +127,7 @@ def _insert_smallest_jump(graph, element1, element2):
     if potential_edges:
         edge = min(potential_edges, key=lambda p1_p2: p1_p2[0].distance(p1_p2[1]))
         graph.add_edge(str(edge[0]), str(edge[1]), jump=True)
+
 
 def _insert_jump(graph, node1, node2):
     graph.add_node(str(node1), point=node1)
