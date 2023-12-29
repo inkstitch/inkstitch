@@ -63,23 +63,25 @@ class Debug(object):
 
     def __init__(self):
         self.debugger = None
+        self.wait_attach = True
         self.enabled = False
         self.last_log_time = None
         self.current_layer = None
         self.group_stack = []
 
 
-    def enable(self, debug_type):
+    def enable(self, debug_type, debug_file, wait_attach):
         if debug_type == 'none':
             return
         self.debugger = debug_type
+        self.wait_attach = wait_attach
         self.enabled = True
-        self.init_log()
+        self.init_log(debug_file)
         self.init_debugger()
         self.init_svg()
 
-    def init_log(self):
-        self.log_file = os.path.join(os.path.dirname(os.path.dirname(__file__)), "debug.log")
+    def init_log(self, debug_file):
+        self.log_file = os.path.join(os.path.dirname(os.path.dirname(__file__)), debug_file)
         # delete old content
         with open(self.log_file, "w"):
             pass
@@ -196,9 +198,10 @@ class Debug(object):
             try:
                 if self.debugger == 'vscode':
                     debugpy.listen(('localhost', 5678))
-                    print("Waiting for debugger attach")
-                    debugpy.wait_for_client()        # wait for debugger to attach
-                    debugpy.breakpoint()             # stop here to start normal debugging
+                    if self.wait_attach:
+                        print("Waiting for debugger attach")
+                        debugpy.wait_for_client()        # wait for debugger to attach
+                        debugpy.breakpoint()             # stop here to start normal debugging
                 elif self.debugger == 'pycharm':
                     pydevd_pycharm.settrace('localhost', port=5678, stdoutToServer=True,
                                             stderrToServer=True)
@@ -360,5 +363,5 @@ class Debug(object):
 debug = Debug()
 
 
-def enable(debug_type):
-    debug.enable(debug_type)
+def enable(debug_type, debug_file, wait_attach):
+    debug.enable(debug_type, debug_file, wait_attach)

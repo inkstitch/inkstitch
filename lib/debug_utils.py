@@ -5,6 +5,12 @@
 
 import os
 import sys
+from pathlib import Path
+
+# this file is without: import inkex
+# - so we can modify sys.path before importing inkex
+
+# DEBUG and PROFILE are in DEVEL.ini file
 
 # DEBUG file format:
 #  - first non-comment line is debugger type
@@ -45,12 +51,24 @@ def parse_file(filename):
             break
     return value_type
 
-def write_offline_debug_script(SCRIPTDIR, bash_name, bash_svg):
+def write_offline_debug_script(SCRIPTDIR : Path, bash_name : Path, bash_svg : Path):
     # prepare script for offline debugging from console
-    # - only tested on linux
+
+    # check if input svg file exists in arguments, take argument that not start with '-' as file name
+    svgs = [arg for arg in sys.argv[1:] if not arg.startswith('-')]
+    if len(svgs) != 1:
+        print(f"WARN: {len(svgs)} svg files found, expected 1, [{svgs}]. No script created in write debug script.", file=sys.stderr)
+        return
+
+    svg_file = Path(svgs[0])
+    if svg_file.exists() and bash_svg.exists() and bash_svg.samefile(svg_file):
+        print(f"WARN: input svg file is same as output svg file. No script created in write debug script.", file=sys.stderr)
+        return
+    
     import shutil
-    ink_file = os.path.join(SCRIPTDIR, bash_name)
-    with open(ink_file, 'w') as f:
+    bash_file = SCRIPTDIR / bash_name
+
+    with open(bash_file, 'w') as f:  # "w" text mode, automatic conversion of \n to os.linesep
         f.write(f"#!/usr/bin/env bash\n\n")
         f.write(f"# python version: {sys.version}\n")   # python version
         
@@ -67,13 +85,11 @@ def write_offline_debug_script(SCRIPTDIR, bash_name, bash_svg):
         for p in os.environ.get('PYTHONPATH', '').split(os.pathsep): # PYTHONPATH to list
             f.write(f"#   {p}\n")
 
-        # take argument that not start with '-' as file name
-        svg_file = " ".join([arg for arg in sys.argv[1:] if not arg.startswith('-')])
         f.write(f"# copy {svg_file} to {bash_svg}\n")
         # check if files are not the same
         if svg_file != bash_svg:
             shutil.copy(svg_file, SCRIPTDIR / bash_svg)  # copy file to bash_svg
-        myargs = myargs.replace(svg_file, bash_svg)   # replace file name with bash_svg
+        myargs = myargs.replace(str(svg_file), str(bash_svg))   # replace file name with bash_svg
 
         # see void Extension::set_environment() in inkscape/src/extension/extension.cpp
         notexported = ["SELF_CALL"] # if an extension calls inkscape itself
@@ -86,5 +102,9 @@ def write_offline_debug_script(SCRIPTDIR, bash_name, bash_svg):
             if k in os.environ:
                 f.write(f'export {k}="{os.environ[k]}"\n')
 
+        f.write('# signal inkstitch.py that we are running from offline script\n')
+        f.write(f'export INKSTITCH_OFFLINE_SCRIPT="True"\n')
+
+        f.write('# call inkstitch\n')
         f.write(f"python3 inkstitch.py {myargs}\n")
-    os.chmod(ink_file, 0o0755)  # make file executable
+    bash_file.chmod(0o0755)  # make file executable

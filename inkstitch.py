@@ -5,53 +5,60 @@
 
 import os
 import sys
-import lib.debug_utils as debug_utils
 from pathlib import Path
+import configparser
+import lib.debug_utils as debug_utils
 
 SCRIPTDIR = Path(__file__).parent.absolute()
 
 if len(sys.argv) < 2:
-    exit(1)  # no arguments - prevent accidentally running this script
-
-prefere_pip_inkex = True  # prefer pip installed inkex over inkscape bundled inkex
-
-# define names of files used by offline Bash script
-bash_name = ".ink.sh"
-bash_svg  = ".ink.svg"
+    # no arguments - prevent accidentally running this script
+    print("No arguments given, continue without arguments?")
+    answer = input("Continue? [y/N] ")
+    if answer.lower() != 'y':
+        exit(1)
 
 running_as_frozen = getattr(sys, 'frozen', None) is not None  # check if running from pyinstaller bundle
-# we assume that if arguments contain svg file (=.ink.svg)  then we are running not from inkscape
-running_from_inkscape = bash_svg not in sys.argv
+
+ini = configparser.ConfigParser()
+ini.read(SCRIPTDIR / "DEVEL.ini")  # read DEVEL.ini file if exists
+
+# prefer pip installed inkex over inkscape bundled inkex, pip version is bundled with Inkstitch
+prefere_pip_inkex = ini.getboolean("LIBRARY","prefer_pip_inkex", fallback=True)  
+
+# check if running from inkscape, given by environment variable
+if os.environ.get('INKSTITCH_OFFLINE_SCRIPT', '').lower() in ['true', '1', 'yes', 'y']:
+    running_from_inkscape = False
+else:
+    running_from_inkscape = True
 
 debug_active = bool((gettrace := getattr(sys, 'gettrace')) and gettrace())  # check if debugger is active on startup
-debug_file = SCRIPTDIR / "DEBUG"
 debug_type = 'none'
-
-profile_file = SCRIPTDIR / "PROFILE"
 profile_type = 'none'
 
 if not running_as_frozen: # debugging/profiling only in development mode
-    # parse debug file
-    # - if script was already started from debugger then don't read debug file
-    if not debug_active and os.path.exists(debug_file):
-        debug_type = debug_utils.parse_file(debug_file)  # read type of debugger from debug_file DEBUG
-        if debug_type == 'none':  # for better backward compatibility
-            print(f"Debug file exists but no debugger type found in '{debug_file.name}'", file=sys.stderr)
+    # define names of files used by offline Bash script
+    bash_file_base = ini.get("DEBUG","bash_file_base", fallback="debug_inkstitch")
+    bash_name = Path(bash_file_base).with_suffix(".sh")  # Path object
+    bash_svg  = Path(bash_file_base).with_suffix(".svg") # Path object
 
-    # parse profile file
-    if os.path.exists(profile_file):
-        profile_type = debug_utils.parse_file(profile_file)  # read type of profiler from profile_file PROFILE
-        if profile_type == 'none':  # for better backward compatibility
-            print(f"Profile file exists but no profiler type found in '{profile_file.name}'", file=sys.stderr)
+    # specify debugger type
+    # - if script was already started from debugger then don't read debug file
+    if not debug_active:
+        debug_type = ini.get("DEBUG","debugger", fallback="none")  # debugger type vscode, pycharm, pydevd, none
+
+    # specify profiler type
+    profile_type = ini.get("PROFILE","profiler", fallback="none")  # profiler type cprofile, profile, pyinstrument, none
 
     # process creation of the Bash script
     if running_from_inkscape:
-        if debug_type.endswith('-script'):  # if offline debugging just create script for later debugging
+        if ini.getboolean("DEBUG","create_bash_script", fallback=False):  # create script only if enabled in DEVEL.ini
             debug_utils.write_offline_debug_script(SCRIPTDIR, bash_name, bash_svg)
+        
+        # disable debugger when running from inkscape
+        disable_from_inkscape = ini.getboolean("DEBUG","disable_from_inkscape", fallback=False)
+        if disable_from_inkscape:
             debug_type = 'none'  # do not start debugger when running from inkscape
-    else:  # not running from inkscape
-        if debug_type.endswith('-script'):  # remove '-script' to propely initialize debugger packages for each editor
-            debug_type = debug_type.replace('-script', '')
 
     if prefere_pip_inkex and 'PYTHONPATH' in os.environ:
         # see static void set_extensions_env() in inkscape/src/inkscape-main.cpp
@@ -100,7 +107,9 @@ from lib.utils import restore_stderr, save_stderr
 
 # file DEBUG exists next to inkstitch.py - enabling debug mode depends on value of debug_type in DEBUG file
 if debug_type != 'none':
-    debug.enable(debug_type)
+    debug_file = ini.get("DEBUG","debug_file", fallback="debug.log")
+    wait_attach = ini.getboolean("DEBUG","wait_attach", fallback=True) # currently only for vscode
+    debug.enable(debug_type, debug_file, wait_attach)
     # check if debugger is really activated
     debug_active = bool((gettrace := getattr(sys, 'gettrace')) and gettrace())
 
@@ -136,9 +145,8 @@ extension = extension_class()  # create instance of extension class - call __ini
 # - in debug or profile mode we run extension or profile extension
 # - in normal mode we run extension in try/except block to catch all exceptions and hide GTK spam
 if debug_active or profile_type != "none":  # if debug or profile mode
-    print(f"Extension:'{extension_name}' Debug active:{debug_active} type:'{debug_type}' "
-          f"Profile type:'{profile_type}'", file=sys.stderr)
-    profile_path = SCRIPTDIR / "profile_stats"
+    profile_file_base = ini.get("PROFILE","profile_file_base", fallback="debug_profile")
+    profile_path = SCRIPTDIR / profile_file_base  # Path object
 
     if profile_type == 'none':
         extension.run(args=remaining_args)
@@ -156,7 +164,7 @@ if debug_active or profile_type != "none":  # if debug or profile mode
             stats = pstats.Stats(profiler, stream=stats_file)
             stats.sort_stats(pstats.SortKey.CUMULATIVE)
             stats.print_stats()
-        print(f"profiling stats written to '{profile_path.name}' and '{profile_path.name}.prof'", file=sys.stderr)
+        print(f"profiling stats written to '{profile_path.name}' and '{profile_path.name}.prof'. Use snakeviz to see it.", file=sys.stderr)
 
     elif profile_type == 'profile':
         import profile
@@ -183,7 +191,7 @@ if debug_active or profile_type != "none":  # if debug or profile mode
         profile_path = SCRIPTDIR / "profile_stats.html"
         with open(profile_path, 'w') as stats_file:
             stats_file.write(profiler.output_html())
-        print(f"profiling stats written to '{profile_path.name}'", file=sys.stderr)
+        print(f"profiling stats written to '{profile_path.name}'. Use browser to see it.", file=sys.stderr)
 
 else:   # if not debug nor profile mode
     save_stderr() # hide GTK spam
