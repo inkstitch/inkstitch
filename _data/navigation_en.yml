@@ -142,6 +142,8 @@ docs:
         url: /docs/inkscape-tips/
       - title: Machine Database
         url: /docs/machine-database/
+      - title: "Command Line"
+        url: /docs/command-line/
   - title: Troubleshooting
     children:
       - title: "F.A.Q."

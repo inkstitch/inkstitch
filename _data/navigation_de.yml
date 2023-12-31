@@ -138,6 +138,8 @@ docs:
         url: /de/docs/fonts/
       - title: Inkscape Tips
         url: /de/docs/inkscape-tips/
+      - title: "Ink/Stitch im Terminal"
+        url: /de/docs/command-line/
   - title: Fehlerbehebung
     children:
       - title: "F.A.Q."

@@ -140,6 +140,8 @@ docs:
         url: /fr/docs/fonts/
       - title: "Astuces pour Inkscape"
         url: /fr/docs/inkscape-tips/
+      - title: "Command Line"
+        url: /fr/docs/command-line/
   - title: Dépannage
     children:
       - title: "F.A.Q."
