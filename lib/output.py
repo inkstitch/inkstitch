@@ -5,8 +5,10 @@
 
 import os
 import sys
+from re import search
 
 import inkex
+
 import pyembroidery
 
 from .commands import global_command
@@ -107,15 +109,25 @@ def write_embroidery_file(file_path, stitch_plan, svg, settings={}):
 
     try:
         pyembroidery.write(pattern, file_path, settings)
-    except AssertionError:
-        msg = _("Could not save file due to too many color changes.")
-        msg += "\n"
-        msg += _("Please reduce the amount of color changes in your file.")
-        inkex.errormsg(msg)
-        sys.exit(1)
+    except AssertionError as e:
+        _handle_assertion_error(e)
     except IOError as e:
         # L10N low-level file error.  %(error)s is (hopefully?) translated by
         # the user's system automatically.
         msg = _("Error writing to %(path)s: %(error)s") % dict(path=file_path, error=e.strerror)
         inkex.errormsg(msg)
         sys.exit(1)
+
+
+def _handle_assertion_error(e):
+    error = str(e)
+    if "too many color changes" in error:
+        num_colors = search(r'\(.*?\)', error).group(0)
+        msg = _("Could not save file due to too many color changes")
+        msg += f" { num_colors }.\n"
+        msg += _("Please reduce the amount of color changes in your file.")
+    else:
+        msg = _("Could not save file.")
+        msg += "\n" + error
+    inkex.errormsg(msg)
+    sys.exit(1)
