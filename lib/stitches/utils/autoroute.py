@@ -83,40 +83,68 @@ def add_jumps(graph, elements, preserve_order):
     Jump stitches are added to ensure that all elements can be reached.  Only the
     minimal number and length of jumps necessary will be added.
     """
-
     if preserve_order:
-        # For each sequential pair of elements, find the shortest possible jump
-        # stitch between them and add it.  The directions of these new edges
-        # will enforce stitching the elements in order.
-
-        for element1, element2 in zip(elements[:-1], elements[1:]):
-            check_stop_flag()
-
-            potential_edges = []
-
-            nodes1 = get_nodes_on_element(graph, element1)
-            nodes2 = get_nodes_on_element(graph, element2)
-
-            for node1 in nodes1:
-                for node2 in nodes2:
-                    point1 = graph.nodes[node1]['point']
-                    point2 = graph.nodes[node2]['point']
-                    potential_edges.append((point1, point2))
-
-            if potential_edges:
-                edge = min(potential_edges, key=lambda p1_p2: p1_p2[0].distance(p1_p2[1]))
-                graph.add_edge(str(edge[0]), str(edge[1]), jump=True)
+        _add_ordered_jumps(graph, elements)
     else:
-        # networkx makes this super-easy!  k_edge_agumentation tells us what edges
-        # we need to add to ensure that the graph is fully connected.  We give it a
-        # set of possible edges that it can consider adding (avail).  Each edge has
-        # a weight, which we'll set as the length of the jump stitch.  The
-        # algorithm will minimize the total length of jump stitches added.
-        for jump in nx.k_edge_augmentation(graph, 1, avail=list(possible_jumps(graph))):
-            check_stop_flag()
-            graph.add_edge(*jump, jump=True)
-
+        _add_unordered_jumps(graph, elements)
     return graph
+
+
+def _add_ordered_jumps(graph, elements):
+    # For each sequential pair of elements, find the shortest possible jump
+    # stitch between them and add it.  The directions of these new edges
+    # will enforce stitching the elements in order.
+    for element1, element2 in zip(elements[:-1], elements[1:]):
+        check_stop_flag()
+        _insert_smallest_jump(graph, element1, element2)
+
+    # add jumps between subpath too, we do not care about directions here
+    for element in elements:
+        check_stop_flag()
+        geoms = list(element.as_multi_line_string().geoms)
+        i = 0
+        for line1 in geoms:
+            for line2 in geoms[i+1:]:
+                if line1.distance(line2) == 0:
+                    continue
+                node1, node2 = nearest_points(line1, line2)
+                _insert_jump(graph, node1, node2)
+            i += 1
+
+
+def _insert_smallest_jump(graph, element1, element2):
+    potential_edges = []
+
+    nodes1 = get_nodes_on_element(graph, element1)
+    nodes2 = get_nodes_on_element(graph, element2)
+
+    for node1 in nodes1:
+        for node2 in nodes2:
+            point1 = graph.nodes[node1]['point']
+            point2 = graph.nodes[node2]['point']
+            potential_edges.append((point1, point2))
+
+    if potential_edges:
+        edge = min(potential_edges, key=lambda p1_p2: p1_p2[0].distance(p1_p2[1]))
+        graph.add_edge(str(edge[0]), str(edge[1]), jump=True)
+
+
+def _insert_jump(graph, node1, node2):
+    graph.add_node(str(node1), point=node1)
+    graph.add_node(str(node2), point=node2)
+    graph.add_edge(str(node1), str(node2), jump=True)
+    graph.add_edge(str(node2), str(node1), jump=True)
+
+
+def _add_unordered_jumps(graph, elements):
+    # networkx makes this super-easy!  k_edge_agumentation tells us what edges
+    # we need to add to ensure that the graph is fully connected.  We give it a
+    # set of possible edges that it can consider adding (avail).  Each edge has
+    # a weight, which we'll set as the length of the jump stitch.  The
+    # algorithm will minimize the total length of jump stitches added.
+    for jump in nx.k_edge_augmentation(graph, 1, avail=list(possible_jumps(graph))):
+        check_stop_flag()
+        graph.add_edge(*jump, jump=True)
 
 
 def possible_jumps(graph):
