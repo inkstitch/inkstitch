@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Ink/Stitch Usertreffen in Essen"
+title:  "2. Ink/Stitch Usertreffen in Essen"
 date:   2023-10-30
 categories: Treffen
 toc: true
@@ -32,6 +32,10 @@ Alkoholische Getränke und Speisen kosten extra.
 **Bringt eure Laptops mit**.
 Ein Computerprogramm nur in der Theorie ist langweilig.
 Wir wollen gemeinsam Ausprobieren und Testen.
+
+**Stickmotive**
+Wenn ihr bereits Erfahrung mit Ink/Stitch habt, bringt gerne mit, was ihr bereits Schönes mit Ink/Stitch gemacht habt.
+Das wird uns alle inspirieren.
 
 ## Kontakt
 

@@ -2,7 +2,7 @@
 title: "Visuelle Befehle"
 permalink: /de/docs/commands/
 excerpt: ""
-last_modified_at: 2023-05-01
+last_modified_at: 2023-12-31
 toc: true
 ---
 Visuelle Befehle können genutzt werden, um zusätzliche Informationen darüber festzulegen, wie das Design gestickt werden soll. Sie können z.B. der Maschine mitteilen, dass der Faden nach einem Stickobjekt geschnitten werden soll oder definieren, wann und wo die Maschine pausieren soll, so dass man für eine Applikation bequem ein Stück Stoff hinzufügen kann.
@@ -10,16 +10,7 @@ Visuelle Befehle können genutzt werden, um zusätzliche Informationen darüber 
 Nicht jede Maschine kann diese zusätzliche Informationen umsetzen und verstehen. In diesem Fall wird ein Befehl einfach ignoriert.
 {: .notice--warning }
 
-### Visuelle Befehle über die Erweiterung anhängen
-
-* Wähle ein Objekt oder mehrere Objekte
-* Starte `Erweiterungen > Ink/stitch > Befehle`
-* Aktiviere die gewünschten Befehle und wenden sie an
-* Bei Befehlen wo die Positionierung wichtig ist: Der Endpunkt des Zeigers, der dem Objekt am nächsten ist, ist der Punkt, an dem der Befehl ausgeführt wird.
-
-Unter `Erweiterungen > Ink/stitch > Befehle` gibt es drei Optionen: `Dokumentbefehle hinzufügen...`, `Ebenenbefehle hinzufügen...` und `Objektbefehle...`.
-
-### Dokumentbefehle hinzufügen ...
+## Dokumentbefehle hinzufügen ...
 
 Diese Befehle wirken sich auf das gesamte Motiv aus.
 
@@ -31,6 +22,7 @@ Die Stickmaschine springt nach jedem Stopp-Befehl zu diesem Punkt. Das erleichte
 
 Dieser Befehlt definiert den Ursprung (0,0) für das Dokument. Nullpunkte sind besonders für diejenigen sinnvoll, die unabhängig vom Rahmen vollen Zugang zur gesamten Arbeitsfläche der Maschine haben.
 
+
 ## Ebenenbefehle hinzufügen …
 
 Diese Befehle wirken sich auf die aktive Ebene aus.
@@ -39,18 +31,31 @@ Diese Befehle wirken sich auf die aktive Ebene aus.
 
 Alle Objete in dieser Ebene werden nicht in die Stickdatei exportiert. Eine typische Anwendung wäre z.B. Beschreibungstext für ein Tutorial, der nicht von Ink/Stitch gerendert werden soll.
 
+
 ## Objektbefehle hinzufügen …
 
 Diese Befehle hängen sich an ausgewählte Objekte.
+
+* Wähle ein Objekt oder mehrere Objekte
+* Starte `Erweiterungen > Ink/stitch > Befehle`
+* Aktiviere die gewünschten Befehle und wenden sie an
+* Bei Befehlen wo die Positionierung wichtig ist: Der Endpunkt des Zeigers, der dem Objekt am nächsten ist, ist der Punkt, an dem der Befehl ausgeführt wird.
+
+Unter `Erweiterungen > Ink/stitch > Befehle` gibt es drei Optionen: `Dokumentbefehle hinzufügen...`, `Ebenenbefehle hinzufügen...` und `Objektbefehle...`.
+
+**Befehle duplizieren?** In Inkscape ist es üblich Objekte über die Funktion duplizieren zu vervielfältigen. Das funktioniert allerdings für Objekte die Befehle angehängt haben nicht. Wir empfehlen daher, für Objekte mit Befehlen `Kopieren` und `Einfügen` zu verwenden. So bleiben die Befehle intakt.
+{: .notice--info }
+
+**Befehle positioneren** Befehle sind in den meisten Anwendungsfällen Zeiger auf eine bestimmte Position. Um einen Befehl zu positionieren, markiere nur das Symbol und verschiebe es mit der Maus oder den Pfeiltasten. Beim Verschieben mit den Pfeiltasten kann für schnelles Bewegen die Umschalttaste gedrückt werden, die Alt-Taste dient zur Feinjustierung.
+{: .notice--info }
 
 ### ![starting point symbol](/assets/images/docs/visual-commands-start.jpg) ![ending point symbol](/assets/images/docs/visual-commands-end.jpg) Füllstich Anfangs- und Endposition
 
 Definiert (1) die Start- und (2) die Endposition bei Objekten mit Füllstich.
 
-#### ![ripple stitch target symbol](/assets/images/docs/visual-commands-ripple-target.png) Zielposition
+### ![ripple stitch target symbol](/assets/images/docs/visual-commands-ripple-target.png) Zielposition
 
 Definiert den Zielpunkt für einen Ripplestich-Bereich oder eine Spiralfüllung.
-
 
 ### ![trim symbol](/assets/images/docs/visual-commands-trim.jpg) Faden trennen
 
@@ -68,7 +73,7 @@ Objekte mit diesem Befehl werden nicht exportiert.
 
 Dieser Befehlt definiert an welchem Punkt die Satinsäule geschnitten werden soll. Benutze anschließend die Funktion “[Satinsäule schneiden](/de/docs/satin-tools/#satin-schnittstelle)”.
 
-####  ![auto route starting position symbol](/assets/images/docs/visual-commands-auto-route-running-stitch-start.jpg) ![auto route  ending position symbol](/assets/images/docs/visual-commands-auto-route-running-stitch-end.jpg) Start- und Endposition für automatisch geführten Laufstich
+###  ![auto route starting position symbol](/assets/images/docs/visual-commands-auto-route-running-stitch-start.jpg) ![auto route  ending position symbol](/assets/images/docs/visual-commands-auto-route-running-stitch-end.jpg) Start- und Endposition für automatisch geführten Laufstich
 
 Definiert (1) die Start- und (2) die Enposition für automatisch geführte Geradstiche. Benutze anschließend Die Funktion "[Werkzeuge: Linie > Automatisch geführter Geradstich ...]"(https://inkstitch.org/docs/stroke-tools/).
 
@@ -80,13 +85,16 @@ Definiert (1) die Start- und (2) die Endposition für automatish geführte Satin
 
 Nutze immer nur einen Anfangs- und einen Endpunkt für jede Auto-Route Operation.
 
-## Objektbefehle anzeigen/verbergen
+
+## Ansicht
+
+### Objektbefehle anzeigen/verbergen
 
 Schalte die Sichtbarkeit von Objekt-Befehlen an und aus. Befehle funktionieren auch, wenn sie nicht angezeigt werden.
 
 `Erweiterungen > Ink/Stitch > Befehle > Ansicht > Objektbefehle anzeigen|vergergen`
 
-## Befehlsymbole skalieren
+### Befehlsymbole skalieren
 
 Anpassen der Größe der Befehlsymbole im gesamten Dokument: `Erweiterungen > Ink/Stitch > Befehle > Ansicht > Befehlsymbole skalieren...`
 

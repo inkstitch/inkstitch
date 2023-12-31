@@ -131,6 +131,9 @@ $text-color: #000;
 
 .page__content h2 {
     border-bottom: 3px solid #ccc;
+    background: rgb(242, 243, 243);
+    border-radius: 10px 10px 0 0;
+    padding: 10px;
 }
 
 .page__content p, .page__content li, .page__content dl {
