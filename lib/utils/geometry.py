@@ -7,7 +7,7 @@ import math
 import typing
 
 import numpy
-from shapely.geometry import LineString, LinearRing, MultiLineString, MultiPolygon, MultiPoint, GeometryCollection
+from shapely.geometry import LineString, LinearRing, MultiLineString, MultiPolygon, GeometryCollection
 from shapely.geometry import Point as ShapelyPoint
 
 
@@ -103,8 +103,10 @@ def reverse_line_string(line_string):
 
 
 def ensure_multi_line_string(thing):
-    """Given either a MultiLineString, a single LineString or GeometryCollection return a MultiLineString"""
+    """Given a shapely geometry, return a MultiLineString"""
     if thing.is_empty:
+        return MultiLineString()
+    if thing.geom_type == "MultiLineString":
         return thing
     if thing.geom_type == "LineString":
         return MultiLineString([thing])
@@ -115,23 +117,26 @@ def ensure_multi_line_string(thing):
                 multilinestring.append(line)
         if multilinestring:
             return MultiLineString(multilinestring)
-    return thing
+    return MultiLineString()
 
 
 def ensure_geometry_collection(thing):
-    """Given either some kind of geometry or a GeometryCollection, return a GeometryCollection"""
-
-    if isinstance(thing, (MultiLineString, MultiPolygon, MultiPoint)):
-        return GeometryCollection(thing.geoms)
-    elif isinstance(thing, GeometryCollection):
+    """Given a shapely geometry, return a GeometryCollection"""
+    if thing.is_empty:
+        return GeometryCollection()
+    if thing.geom_type == "GeometryCollection":
         return thing
-    else:
-        return GeometryCollection([thing])
+    if thing.geom_type in ["MultiLineString", "MultiPolygon", "MultiPoint"]:
+        return GeometryCollection(thing.geoms)
+    # LineString, Polygon, Point
+    return GeometryCollection([thing])
 
 
 def ensure_multi_polygon(thing):
-    """Given either a MultiPolygon, a single Polygon or GeometryCollection return a MultiPolygon"""
+    """Given a shapely geometry, return a MultiPolygon"""
     if thing.is_empty:
+        return MultiPolygon()
+    if thing.geom_type == "MultiPolygon":
         return thing
     if thing.geom_type == "Polygon":
         return MultiPolygon([thing])
@@ -142,7 +147,7 @@ def ensure_multi_polygon(thing):
                 multipolygon.append(polygon)
         if multipolygon:
             return MultiPolygon(multipolygon)
-    return thing
+    return MultiPolygon()
 
 
 def cut_path(points, length):
