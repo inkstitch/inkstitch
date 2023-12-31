@@ -5,15 +5,13 @@
 
 from math import atan2, degrees
 
-from lxml import etree
-from shapely.geometry import LineString, Point
-
 import inkex
+from shapely.geometry import LineString, Point
 
 from ..elements import Stroke
 from ..i18n import _
 from ..svg import get_correction_transform
-from ..svg.tags import INKSCAPE_LABEL, INKSTITCH_ATTRIBS, SVG_PATH_TAG
+from ..svg.tags import INKSCAPE_LABEL, INKSTITCH_ATTRIBS
 from .base import InkstitchExtension
 
 
@@ -27,18 +25,18 @@ class CutworkSegmentation(InkstitchExtension):
         InkstitchExtension.__init__(self, *args, **kwargs)
         self.arg_parser.add_argument("-o", "--options", type=str, default=None, dest="page_1")
         self.arg_parser.add_argument("-i", "--info", type=str, default=None, dest="page_2")
-        self.arg_parser.add_argument("-as", "--a_start", type=int, default=0, dest="a_start")
-        self.arg_parser.add_argument("-ae", "--a_end", type=int, default=0, dest="a_end")
-        self.arg_parser.add_argument("-ac", "--a_color", type=inkex.Color, default=inkex.Color(0x808080FF), dest="a_color")
-        self.arg_parser.add_argument("-bs", "--b_start", type=int, default=0, dest="b_start")
-        self.arg_parser.add_argument("-be", "--b_end", type=int, default=0, dest="b_end")
-        self.arg_parser.add_argument("-bc", "--b_color", type=inkex.Color, default=inkex.Color(0x808080FF), dest="b_color")
-        self.arg_parser.add_argument("-cs", "--c_start", type=int, default=0, dest="c_start")
-        self.arg_parser.add_argument("-ce", "--c_end", type=int, default=0, dest="c_end")
-        self.arg_parser.add_argument("-cc", "--c_color", type=inkex.Color, default=inkex.Color(0x808080FF), dest="c_color")
-        self.arg_parser.add_argument("-ds", "--d_start", type=int, default=0, dest="d_start")
-        self.arg_parser.add_argument("-de", "--d_end", type=int, default=0, dest="d_end")
-        self.arg_parser.add_argument("-dc", "--d_color", type=inkex.Color, default=inkex.Color(0x808080FF), dest="d_color")
+        self.arg_parser.add_argument("-as", "--a_start", type=int, default=112, dest="a_start")
+        self.arg_parser.add_argument("-ae", "--a_end", type=int, default=157, dest="a_end")
+        self.arg_parser.add_argument("-ac", "--a_color", type=inkex.Color, default=inkex.Color(0x990000ff), dest="a_color")
+        self.arg_parser.add_argument("-bs", "--b_start", type=int, default=158, dest="b_start")
+        self.arg_parser.add_argument("-be", "--b_end", type=int, default=23, dest="b_end")
+        self.arg_parser.add_argument("-bc", "--b_color", type=inkex.Color, default=inkex.Color(0xe5a50aff), dest="b_color")
+        self.arg_parser.add_argument("-cs", "--c_start", type=int, default=22, dest="c_start")
+        self.arg_parser.add_argument("-ce", "--c_end", type=int, default=68, dest="c_end")
+        self.arg_parser.add_argument("-cc", "--c_color", type=inkex.Color, default=inkex.Color(0x009900ff), dest="c_color")
+        self.arg_parser.add_argument("-ds", "--d_start", type=int, default=67, dest="d_start")
+        self.arg_parser.add_argument("-de", "--d_end", type=int, default=113, dest="d_end")
+        self.arg_parser.add_argument("-dc", "--d_color", type=inkex.Color, default=inkex.Color(0x000099ff), dest="d_color")
         self.arg_parser.add_argument("-s", "--sort_by_color", type=inkex.Boolean, default=True, dest="sort_by_color")
         self.arg_parser.add_argument("-k", "--keep_original", type=inkex.Boolean, default=False, dest="keep_original")
 
@@ -139,17 +137,16 @@ class CutworkSegmentation(InkstitchExtension):
 
         d = "M "
         for point in point_list:
-            d += "%s,%s " % (point.x, point.y)
+            d += f"{ point.x }, { point.y } "
 
-        stroke_element = etree.Element(SVG_PATH_TAG,
-                                       {
-                                        "style": color,
-                                        "transform": get_correction_transform(element.node),
-                                        INKSTITCH_ATTRIBS["ties"]: "3",
-                                        INKSTITCH_ATTRIBS["running_stitch_length_mm"]: "1",
-                                        INKSTITCH_ATTRIBS["cutwork_needle"]: str(sector['id']),
-                                        "d": d
-                                       })
+        stroke_element = inkex.PathElement(attrib={
+            "style": color,
+            "transform": get_correction_transform(element.node),
+            INKSTITCH_ATTRIBS["ties"]: "3",
+            INKSTITCH_ATTRIBS["running_stitch_length_mm"]: "1",
+            INKSTITCH_ATTRIBS["cutwork_needle"]: str(sector['id']),
+            "d": d
+        })
         self.new_elements.append([stroke_element, sector['id']])
         # clear point_list in self.sectors
         self.sectors[sector['id']].update({'point_list': []})
@@ -174,9 +171,9 @@ class CutworkSegmentation(InkstitchExtension):
             section_group.insert(0, element)
 
     def _insert_group(self, parent, label, group_id, index=0):
-        group = etree.Element("g", {
-            INKSCAPE_LABEL: "%s" % label,
-            "id": self.uniqueId("%s" % group_id)
+        group = inkex.Group(attrib={
+            INKSCAPE_LABEL: label,
+            "id": self.uniqueId(group_id)
         })
         parent.insert(index, group)
         return group
@@ -192,4 +189,4 @@ class CutworkSegmentation(InkstitchExtension):
 
     def path_style(self, element, color):
         # set stroke color and make it a running stitch - they don't want to cut zigzags
-        return inkex.Style(element.node.get('style', '')) + inkex.Style('stroke:%s;stroke-dasharray:6,1;' % color)
+        return inkex.Style(element.node.get('style', '')) + inkex.Style(f'stroke-width:1;stroke:{ color };')
