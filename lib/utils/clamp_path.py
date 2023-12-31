@@ -56,8 +56,10 @@ def adjust_line_end(line, end):
 
 
 def find_border(polygon, point):
+    """Finds subpath of polygon which intersects with the point.
+       Ignores small border fragments"""
     for border in polygon.interiors:
-        if border.intersects(point):
+        if border.length > 0.1 and border.intersects(point):
             return border
     else:
         return polygon.exterior
