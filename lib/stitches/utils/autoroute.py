@@ -5,12 +5,12 @@
 
 from itertools import combinations
 
+import inkex
 import networkx as nx
-from shapely.geometry import Point, MultiPoint
+from shapely.geometry import MultiPoint, Point
 from shapely.ops import nearest_points
 
-import inkex
-
+from ...elements import SatinColumn
 from ...svg import get_correction_transform
 from ...svg.tags import INKSCAPE_LABEL
 from ...utils.threading import check_stop_flag
@@ -100,6 +100,9 @@ def _add_ordered_jumps(graph, elements):
 
     # add jumps between subpath too, we do not care about directions here
     for element in elements:
+        if isinstance(element, SatinColumn):
+            # don't try this for satin columns
+            continue
         check_stop_flag()
         geoms = list(element.as_multi_line_string().geoms)
         i = 0
