@@ -1,5 +1,5 @@
 ---
-title: "Changes, Updates and Fixes for Ink/Stitch made after the release of v3.0.1"
+title: "New Features, Updates and Fixes for Ink/Stitch after the release of v3.0.1"
 permalink: /upcoming/
 last_modified_at: 202-01-01
 sidebar:
