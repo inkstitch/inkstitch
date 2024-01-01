@@ -1,7 +1,7 @@
 ---
 title: "New Features, Updates and Fixes for Ink/Stitch after the release of v3.0.1"
 permalink: /upcoming/
-last_modified_at: 202-01-01
+last_modified_at: 2024-01-01
 sidebar:
   nav: pages
 toc: true
