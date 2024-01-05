@@ -22,12 +22,10 @@ flaskserverport.json
 electron/yarn.lock
 
 # debug and profile files
-/DEVEL.ini
-/DEBUG
-/PROFILE
+/DEBUG.ini
 /debug*
 /.debug*
-# old profile files
-/profile_stats
-/profile_stats.html
-/profile_stats.prof
+# old debug files
+/DEBUG
+/PROFILE
+/profile*

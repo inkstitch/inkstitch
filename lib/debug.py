@@ -3,21 +3,25 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-import atexit
 import os
-import socket
 import sys
-import time
-from contextlib import contextmanager
-from datetime import datetime
+import atexit  # to save svg file on exit
+import socket  # to check if debugger is running
+import time    # to measure time of code block, use time.monotonic() instead of time.time()
+from datetime import datetime  
+
+from contextlib import contextmanager  # to measure time of with block
+import configparser  # to read DEBUG.ini
+from pathlib import Path # to work with paths as objects
 
 import inkex
-from lxml import etree
+from lxml import etree   # to create svg file
 
 from .svg import line_strings_to_path
 from .svg.tags import INKSCAPE_GROUPMODE, INKSCAPE_LABEL
 
-
+# decorator to check if debugging is enabled
+# - if debug is not enabled then decorated function is not called
 def check_enabled(func):
     def decorated(self, *args, **kwargs):
         if self.enabled:
@@ -26,13 +30,17 @@ def check_enabled(func):
     return decorated
 
 
+# unwrapping = provision for functions as arguments
+# - if argument is callable then it is called and return value is used as argument
+#   otherwise argument is returned as is
 def _unwrap(arg):
     if callable(arg):
         return arg()
     else:
         return arg
 
-
+# decorator to unwrap arguments if they are callable
+#   eg: if argument is lambda function then it is called and return value is used as argument
 def unwrap_arguments(func):
     def decorated(self, *args, **kwargs):
         unwrapped_args = [_unwrap(arg) for arg in args]
@@ -69,21 +77,26 @@ class Debug(object):
         self.current_layer = None
         self.group_stack = []
 
+    def enable(self, debug_type, debug_dir : Path, ini : configparser.ConfigParser):
+        # initilize file names and other parameters from DEBUG.ini file
+        self.debug_dir = debug_dir  # directory where debug files are stored
+        self.debug_log_file = ini.get("DEBUG","debug_log_file", fallback="debug.log")
+        self.debug_svg_file = ini.get("DEBUG","debug_svg_file", fallback="debug.svg")
+        self.wait_attach = ini.getboolean("DEBUG","wait_attach", fallback=True) # currently only for vscode
 
-    def enable(self, debug_type, debug_file, wait_attach):
         if debug_type == 'none':
             return
+        
         self.debugger = debug_type
-        self.wait_attach = wait_attach
         self.enabled = True
-        self.init_log(debug_file)
+        self.init_log()
         self.init_debugger()
         self.init_svg()
 
-    def init_log(self, debug_file):
-        self.log_file = os.path.join(os.path.dirname(os.path.dirname(__file__)), debug_file)
+    def init_log(self):
+        self.log_file = self.debug_dir / self.debug_log_file
         # delete old content
-        with open(self.log_file, "w"):
+        with self.log_file.open("w"):
             pass
         self.log("Debug logging enabled.")
 
@@ -93,8 +106,13 @@ class Debug(object):
         # 1. Install LiClipse (liclipse.com) -- no need to install Eclipse first
         # 2. Start debug server as described here: http://www.pydev.org/manual_adv_remote_debugger.html
         #    * follow the "Note:" to enable the debug server menu item
-        # 3. Create a file named "DEBUG" next to inkstitch.py in your git clone.
+        # 3. Copy and edit a file named "DEBUG.ini" from "DEBUG_template.ini" next to inkstitch.py in your git clone.
         # 4. Run any extension and PyDev will start debugging.
+
+        # debugger = vscode    - 'debugpy' for vscode editor 
+        # debugger = pycharm   - 'pydevd-pycharm' for pycharm editor
+        # debugger = pydev     - 'pydevd' for eclipse editor
+        # debugger = file      -  no debugger, only debug.log, debug.svg are used
 
         ###
 
@@ -119,7 +137,7 @@ class Debug(object):
         #    configuration. Set "IDE host name:" to  "localhost" and "Port:" to 5678.
         #    You can leave the default settings for all other choices.
         #
-        # 3. Touch a file named "DEBUG" at the top of your git repo, as above.
+        # 3. Touch a file named "DEBUG.ini" at the top of your git repo, as above.
         #
         # 4. Create a symbolic link in the Inkscape extensions directory to the
         #    top-level directory of your git repo. On a mac, for example:
@@ -132,16 +150,11 @@ class Debug(object):
         #    extensions directory, or you'll see duplicate entries in the Ink/Stitch
         #    extensions menu in Inkscape.
         #
-        # 5. In the execution env for Inkscape, set the environment variable
-        #    PYCHARM_REMOTE_DEBUG to any value, and launch Inkscape. If you're starting
-        #    Inkscape from the PyCharm Terminal pane, you can do:
-        #        export PYCHARM_REMOTE_DEBUG=true;inkscape
-        #
-        # 6. In Pycharm, either click on the green "bug" icon if visible in the upper
+        # 5. In Pycharm, either click on the green "bug" icon if visible in the upper
         #    right or press Ctrl-D to start debugging.The PyCharm debugger pane will
         #    display the message "Waiting for process connection..."
         #
-        # 7. Do some action in Inkscape which invokes Ink/Stitch extension code, and the
+        # 6. Do some action in Inkscape which invokes Ink/Stitch extension code, and the
         #    debugger will be triggered. If you've left "Suspend after connect" checked
         #    in the Run configuration, PyCharm will pause in the "self.log("Enabled
         #    PyDev debugger.)" statement, below. Uncheck the box to have it continue
@@ -155,7 +168,7 @@ class Debug(object):
         # 
         # 1. Install the Python extension for VS Code
         #      pip install debugpy
-        # 2. create .vscode/launch.json containing somewhere:
+        # 2. create .vscode/launch.json containing:
         #       "configurations": [ ...
         #           {
         #               "name": "Python: Attach",
@@ -167,10 +180,11 @@ class Debug(object):
         #               }
         #           }
         #       ]
-        # 3. Touch a file named "DEBUG" at the top of your git repo, as above.
-        #     containing "vscode" or "vscode-script" see parse_file() in debug_mode.py for details
+        # 3. Touch a file named "DEBUG.ini" at the top of your git repo, as above.
         # 4. Start the debug server in VS Code by clicking on the debug icon in the left pane
-        #    select "Python: Attach" from the dropdown menu and click on the green arrow
+        #    select "Python: Attach" from the dropdown menu and click on the green arrow.
+        #    The debug server will start and connect to already running python processes,
+        #    but immediately exit if no python processes are running.
         #
         # Notes:
         #   to see flask server url routes:
@@ -184,11 +198,13 @@ class Debug(object):
                 import pydevd_pycharm
             elif self.debugger == 'pydev':
                 import pydevd
+            elif self.debugger == 'file':
+                pass
             else:
                 raise ValueError(f"unknown debugger: '{self.debugger}'")
 
         except ImportError:
-            self.log("importing pydevd failed (debugger disabled)")
+            self.log(f"importing debugger failed (debugger disabled) for {self.debugger}")
 
         # pydevd likes to shout about errors to stderr whether I want it to or not
         with open(os.devnull, 'w') as devnull:
@@ -207,6 +223,8 @@ class Debug(object):
                                             stderrToServer=True)
                 elif self.debugger == 'pydev':
                     pydevd.settrace()
+                elif self.debugger == 'file':
+                    pass
                 else:
                     raise ValueError(f"unknown debugger: '{self.debugger}'")
 
@@ -224,7 +242,7 @@ class Debug(object):
 
     def save_svg(self):
         tree = etree.ElementTree(self.svg)
-        debug_svg = os.path.join(os.path.dirname(os.path.dirname(__file__)), "debug.svg")
+        debug_svg = self.debug_dir / self.debug_svg_file
         tree.write(debug_svg)
 
     @check_enabled
@@ -267,20 +285,21 @@ class Debug(object):
         timestamp = now.isoformat()
         self.last_log_time = now
 
-        with open(self.log_file, "a") as logfile:
+        with self.log_file.open("a") as logfile:
             print(timestamp, message % args, file=logfile)
             logfile.flush()
 
+    # decorator to measure time of function
     def time(self, func):
         def decorated(*args, **kwargs):
             if self.enabled:
                 self.raw_log("entering %s()", func.__name__)
-                start = time.time()
+                start = time.monotonic()
 
             result = func(*args, **kwargs)
 
             if self.enabled:
-                end = time.time()
+                end = time.monotonic()
                 self.raw_log("leaving %s(), duration = %s", func.__name__, round(end - start, 6))
 
             return result
@@ -348,20 +367,19 @@ class Debug(object):
             INKSCAPE_LABEL: name
         }))
 
+    # decorator to measure time of with block
     @contextmanager
     def time_this(self, label="code block"):
         if self.enabled:
-            start = time.time()
+            start = time.monotonic()
             self.raw_log("begin %s", label)
 
         yield
 
         if self.enabled:
-            self.raw_log("completed %s, duration = %s", label, time.time() - start)
+            self.raw_log("completed %s, duration = %s", label, time.monotonic() - start)
 
 
+# global debug object
 debug = Debug()
 
-
-def enable(debug_type, debug_file, wait_attach):
-    debug.enable(debug_type, debug_file, wait_attach)
