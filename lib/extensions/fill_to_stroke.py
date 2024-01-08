@@ -3,16 +3,16 @@
 # Copyright (c) 2022 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-from inkex import Boolean, Group, PathElement, Transform, errormsg
+from inkex import Boolean, Group, Path, PathElement, Transform, errormsg
 from inkex.units import convert_unit
-from shapely.geometry import (LineString, MultiLineString, MultiPolygon, Point,
-                              Polygon)
+from shapely.geometry import LineString, MultiLineString, MultiPolygon, Point
 from shapely.ops import linemerge, nearest_points, split, voronoi_diagram
 
 from ..elements import FillStitch, Stroke
 from ..i18n import _
 from ..stitches.running_stitch import running_stitch
 from ..svg import get_correction_transform
+from ..utils import ensure_multi_line_string
 from ..utils.geometry import Point as InkstitchPoint
 from ..utils.geometry import line_string_to_point_list
 from .base import InkstitchExtension
@@ -61,12 +61,14 @@ class FillToStroke(InkstitchExtension):
             multipolygon = element.shape
             for cut_line in cut_lines:
                 split_polygon = split(multipolygon, cut_line)
-                poly = [polygon for polygon in split_polygon.geoms if isinstance(polygon, Polygon)]
+                poly = [polygon for polygon in split_polygon.geoms if polygon.geom_type == 'Polygon']
                 multipolygon = MultiPolygon(poly)
 
             lines = []
 
             for polygon in multipolygon.geoms:
+                if polygon.area < 0.5:
+                    continue
                 multilinestring = self._get_centerline(polygon)
                 if multilinestring is None:
                     continue
@@ -121,7 +123,7 @@ class FillToStroke(InkstitchExtension):
     def _get_centerline(self, polygon):
         # increase the resolution of the polygon
         polygon = self._get_high_res_polygon(polygon)
-        if polygon is isinstance(polygon, MultiPolygon):
+        if polygon is polygon.geom_type == 'MultiPolygon':
             return
 
         # generate voronoi centerline
@@ -139,14 +141,14 @@ class FillToStroke(InkstitchExtension):
         if multilinestring is None:
             return
         # simplify polygon
-        multilinestring = self._ensure_multilinestring(multilinestring.simplify(0.1))
+        multilinestring = ensure_multi_line_string(multilinestring.simplify(0.1))
         if multilinestring is None:
             return
         return multilinestring
 
     def _get_voronoi_centerline(self, polygon):
         lines = voronoi_diagram(polygon, edges=True).geoms[0]
-        if not isinstance(lines, MultiLineString):
+        if not lines.geom_type == 'MultiLineString':
             return
         multilinestring = []
         for line in lines.geoms:
@@ -155,7 +157,7 @@ class FillToStroke(InkstitchExtension):
         lines = linemerge(multilinestring)
         if lines.is_empty:
             return
-        return self._ensure_multilinestring(lines)
+        return ensure_multi_line_string(lines)
 
     def _get_start_and_end_points(self, multilinestring):
         points = []
@@ -182,43 +184,49 @@ class FillToStroke(InkstitchExtension):
         if lines.is_empty:
             lines = None
         else:
-            lines = self._ensure_multilinestring(lines)
+            lines = ensure_multi_line_string(lines)
         return lines
 
     def _repair_splitted_ends(self, polygon, multilinestring, dead_ends):
         lines = list(multilinestring.geoms)
         for i, dead_end in enumerate(dead_ends):
-            coords = dead_end.coords
-            for j in range(i + 1, len(dead_ends)):
-                common_point = set([coords[0], coords[-1]]).intersection(dead_ends[j].coords)
-                if len(common_point) > 0:
-                    # prepare all lines to point to the common point
-                    dead_point1 = coords[0]
-                    if dead_point1 in common_point:
-                        dead_point1 = coords[-1]
-                    dead_point2 = dead_ends[j].coords[0]
-                    if dead_point2 in common_point:
-                        dead_point2 = dead_ends[j].coords[-1]
-                    end_line = LineString([dead_point1, dead_point2])
-                    if polygon.covers(end_line):
-                        dead_end_center_point = end_line.centroid
-                    else:
-                        continue
-                    lines.append(LineString([dead_end_center_point, list(common_point)[0]]))
-                    if dead_end in lines:
-                        lines.remove(dead_end)
-                    if dead_ends[j] in lines:
-                        lines.remove(dead_ends[j])
+            if dead_end.length > self.threshold:
+                continue
+            self._join_end(polygon, lines, dead_ends, dead_end, i)
+        return ensure_multi_line_string(linemerge(lines))
+
+    def _join_end(self, polygon, lines, dead_ends, dead_end, index):
+        coords = dead_end.coords
+        for j in range(index + 1, len(dead_ends)):
+            if dead_ends[j].length > self.threshold:
+                continue
+            common_point = set([coords[0], coords[-1]]).intersection(dead_ends[j].coords)
+            if len(common_point) > 0:
+                dead_point1 = coords[0]
+                if dead_point1 in common_point:
+                    dead_point1 = coords[-1]
+                dead_point2 = dead_ends[j].coords[0]
+                if dead_point2 in common_point:
+                    dead_point2 = dead_ends[j].coords[-1]
+                end_line = LineString([dead_point1, dead_point2])
+                if polygon.covers(end_line):
+                    dead_end_center_point = end_line.centroid
+                else:
                     continue
-        return self._ensure_multilinestring(linemerge(lines))
+                lines.append(LineString([dead_end_center_point, list(common_point)[0]]))
+                if dead_end in lines:
+                    lines.remove(dead_end)
+                if dead_ends[j] in lines:
+                    lines.remove(dead_ends[j])
+                continue
 
     def _close_gaps(self, lines, cut_lines):
         snaped_lines = []
         lines = MultiLineString(lines)
         for i, line in enumerate(lines.geoms):
-            # for each cutline check if a the line starts or ends close to it
+            # for each cutline check if a line starts or ends close to it
             # if so extend the line at the start/end for the distance of the nearest point and snap it to that other line
-            # we do not want to snap it to the rest of the lines directly, this could push the connection point into a unwanted direction
+            # we do not want to snap it to the rest of the lines directly, this could push the connection point into an unwanted direction
             coords = list(line.coords)
             start = Point(coords[0])
             end = Point(coords[-1])
@@ -243,15 +251,11 @@ class FillToStroke(InkstitchExtension):
         new_point = start_point - direction * distance
         return new_point
 
-    def _ensure_multilinestring(self, lines):
-        if not isinstance(lines, MultiLineString):
-            lines = MultiLineString([lines])
-        return lines
-
     def _insert_elements(self, lines, parent, index, transform, style):
         for line in lines:
-            d = "M "
-            for coord in line.coords:
-                d += "%s,%s " % (coord[0], coord[1])
-            centerline_element = PathElement(d=d, style=style, transform=str(transform))
+            centerline_element = PathElement(
+                d=str(Path(line.coords)),
+                style=style,
+                transform=str(transform)
+            )
             parent.insert(index, centerline_element)
