@@ -33,10 +33,7 @@ class FillToStroke(InkstitchExtension):
             errormsg(_("Please select one or more fill objects to render the centerline."))
             return
 
-        cut_lines = []
-        fill_shapes = []
-
-        fill_shapes, cut_lines = self._get_shapes()
+        fill_shapes, cut_lines, cut_line_nodes = self._get_shapes()
 
         if not fill_shapes:
             errormsg(_("Please select one or more fill objects to render the centerline."))
@@ -45,69 +42,72 @@ class FillToStroke(InkstitchExtension):
         # convert user input from mm to px
         self.threshold = convert_unit(self.options.threshold_mm, 'px', 'mm')
 
-        # insert centerline group before the first selected element
-        first = fill_shapes[0].node
-        parent = first.getparent()
-        index = parent.index(first) + 1
-        centerline_group = Group.new("Centerline Group", id=self.uniqueId("centerline_group_"))
-        parent.insert(index, centerline_group)
-
+        # convert to center line elements and insert into svg
         for element in fill_shapes:
-            transform = Transform(get_correction_transform(parent, child=True))
-            stroke_width = convert_unit(self.options.line_width_mm, 'px', 'mm')
-            color = element.node.style('fill')
-            style = f"fill:none;stroke:{ color };stroke-width:{ stroke_width }"
+            self._convert_to_centerline(element, cut_lines)
 
-            multipolygon = element.shape
-            for cut_line in cut_lines:
-                split_polygon = split(multipolygon, cut_line)
-                poly = [polygon for polygon in split_polygon.geoms if polygon.geom_type == 'Polygon']
-                multipolygon = MultiPolygon(poly)
-
-            lines = []
-
-            for polygon in multipolygon.geoms:
-                if polygon.area < 0.5:
-                    continue
-                multilinestring = self._get_centerline(polygon)
-                if multilinestring is None:
-                    continue
-                lines.extend(multilinestring.geoms)
-
-            if self.options.close_gaps:
-                lines = self._close_gaps(lines, cut_lines)
-
-            # insert new elements
-            self._insert_elements(lines, centerline_group, index, transform, style)
-
-        # clean up
-        if not self.options.keep_original:
-            self._remove_elements()
+        # remove cut lines
+        for cut_line in cut_line_nodes:
+            cut_line.getparent().remove(cut_line)
 
     def _get_shapes(self):
         fill_shapes = []
         cut_lines = []
+        cut_line_nodes = []
         for element in self.elements:
             if isinstance(element, FillStitch):
                 fill_shapes.append(element)
             elif isinstance(element, Stroke):
                 cut_lines.extend(list(element.as_multi_line_string().geoms))
-        return fill_shapes, cut_lines
+                cut_line_nodes.append(element.node)
+        return fill_shapes, cut_lines, cut_line_nodes
 
-    def _remove_elements(self):
-        parents = []
-        for element in self.elements:
-            # it is possible, that we get one element twice (if it has both, a fill and a stroke)
-            # just ignore the second time
-            try:
-                parents.append(element.node.getparent())
-                element.node.getparent().remove(element.node)
-            except AttributeError:
-                pass
-        # remove empty groups
-        for parent in set(parents):
-            if parent is not None and not parent.getchildren():
-                parent.getparent().remove(parent)
+    def _convert_to_centerline(self, element, cut_lines):
+        element_id = element.node.get_id()
+        element_label = element.node.label
+        group_name = element_id or element_id
+        group_name += " " + _("center line")
+
+        centerline_group = Group.new(group_name, id=self.uniqueId("centerline_group_"))
+        parent = element.node.getparent()
+        index = parent.index(element.node) + 1
+        parent.insert(index, centerline_group)
+
+        transform = Transform(get_correction_transform(parent, child=True))
+        stroke_width = convert_unit(self.options.line_width_mm, 'px', 'mm')
+        color = element.node.style('fill')
+        style = f"fill:none;stroke:{ color };stroke-width:{ stroke_width }"
+
+        multipolygon = element.shape
+        multipolygon = self._apply_cut_lines(cut_lines, multipolygon)
+
+        lines = self._get_lines(multipolygon)
+
+        if self.options.close_gaps:
+            lines = self._close_gaps(lines, cut_lines)
+
+        # do not use a group in case there is only one line
+        if len(lines) <= 1:
+            parent.remove(centerline_group)
+            centerline_group = parent
+
+        # clean up
+        if not self.options.keep_original:
+            parent.remove(element.node)
+
+        # insert new elements
+        self._insert_elements(lines, centerline_group, index, element_id, element_label, transform, style)
+
+    def _get_lines(self, multipolygon):
+        lines = []
+        for polygon in multipolygon.geoms:
+            if polygon.area < 0.5:
+                continue
+            multilinestring = self._get_centerline(polygon)
+            if multilinestring is None:
+                continue
+            lines.extend(multilinestring.geoms)
+        return lines
 
     def _get_high_res_polygon(self, polygon):
         # use running stitch method
@@ -158,6 +158,13 @@ class FillToStroke(InkstitchExtension):
         if lines.is_empty:
             return
         return ensure_multi_line_string(lines)
+
+    def _apply_cut_lines(self, cut_lines, multipolygon):
+        for cut_line in cut_lines:
+            split_polygon = split(multipolygon, cut_line)
+            poly = [polygon for polygon in split_polygon.geoms if polygon.geom_type == 'Polygon']
+            multipolygon = MultiPolygon(poly)
+        return multipolygon
 
     def _get_start_and_end_points(self, multilinestring):
         points = []
@@ -251,11 +258,17 @@ class FillToStroke(InkstitchExtension):
         new_point = start_point - direction * distance
         return new_point
 
-    def _insert_elements(self, lines, parent, index, transform, style):
-        for line in lines:
+    def _insert_elements(self, lines, parent, index, element_id, element_label, transform, style):
+        replace = False if len(lines) > 1 or self.options.keep_original else True
+        for i, line in enumerate(lines):
+            line_id = element_id if replace else self.uniqueId(f"{ element_id }_")
             centerline_element = PathElement(
+                id=line_id,
                 d=str(Path(line.coords)),
                 style=style,
                 transform=str(transform)
             )
+            if element_label is not None:
+                label = element_label if replace else f"{ element_label }_{ i }"
+                centerline_element.label = label
             parent.insert(index, centerline_element)
