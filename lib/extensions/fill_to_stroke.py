@@ -47,8 +47,8 @@ class FillToStroke(InkstitchExtension):
             self._convert_to_centerline(element, cut_lines)
 
         # remove cut lines
-        for cut_line in cut_line_nodes:
-            cut_line.getparent().remove(cut_line)
+        if not self.options.keep_original:
+            self._remove_cutlines(cut_line_nodes)
 
     def _get_shapes(self):
         fill_shapes = []
@@ -65,10 +65,9 @@ class FillToStroke(InkstitchExtension):
     def _convert_to_centerline(self, element, cut_lines):
         element_id = element.node.get_id()
         element_label = element.node.label
-        group_name = element_id or element_id
-        group_name += " " + _("center line")
+        group_name = element_label or element_id
 
-        centerline_group = Group.new(group_name, id=self.uniqueId("centerline_group_"))
+        centerline_group = Group.new(f'{ group_name } { _("center line") }', id=self.uniqueId("centerline_group_"))
         parent = element.node.getparent()
         index = parent.index(element.node) + 1
         parent.insert(index, centerline_group)
@@ -257,6 +256,15 @@ class FillToStroke(InkstitchExtension):
         direction = (end_point - start_point).unit()
         new_point = start_point - direction * distance
         return new_point
+
+    def _remove_cutlines(self, cut_line_nodes):
+        for cut_line in cut_line_nodes:
+            # it is possible, that we get one element twice (if it has both, a fill and a stroke)
+            # this means that we already removed it from the svg and we can ignore the error.
+            try:
+                cut_line.getparent().remove(cut_line)
+            except AttributeError:
+                pass
 
     def _insert_elements(self, lines, parent, index, element_id, element_label, transform, style):
         replace = False if len(lines) > 1 or self.options.keep_original else True
