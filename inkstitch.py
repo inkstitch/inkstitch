@@ -41,16 +41,36 @@ else:
 
 debug_active = bool((gettrace := getattr(sys, 'gettrace')) and gettrace())  # check if debugger is active on startup
 debug_type = 'none'
-profile_type = 'none'
+profiler_type = 'none'
 
 if not running_as_frozen: # debugging/profiling only in development mode
     # specify debugger type
-    # - if script was already started from debugger then don't read debug type from ini file
+    # - if script was already started from debugger then don't read debug type from ini file or cmd line
     if not debug_active:
-        debug_type = ini.get("DEBUG","debugger", fallback="none")  # debugger type vscode, pycharm, pydevd, file
+        # enable/disable debugger
+        if os.environ.get('INKSTITCH_DEBUG_ENABLE', '').lower() in ['true', '1', 'yes', 'y']:
+            debug_enable = True
+        else:
+            debug_enable = ini.getboolean("DEBUG","debug_enable", fallback=False)  # enable debugger on startup from ini
+
+        debug_type = ini.get("DEBUG","debug_type", fallback="none")  # debugger type vscode, pycharm, pydevd
+        if not debug_enable:
+            debug_type = 'none'
+
+        debug_to_file = ini.getboolean("DEBUG","debug_to_file", fallback=False)  # write debug output to file
+        if debug_to_file and debug_type == 'none':
+            debug_type = 'file'
+
+    # enbale/disable profiling
+    if os.environ.get('INKSTITCH_PROFILE_ENABLE', '').lower() in ['true', '1', 'yes', 'y']: 
+        profile_enable = True
+    else:
+        profile_enable = ini.getboolean("PROFILE","profile_enable", fallback=False) # read from ini
 
     # specify profiler type
-    profile_type = ini.get("PROFILE","profiler", fallback="none")  # profiler type cprofile, profile, pyinstrument
+    profiler_type = ini.get("PROFILE","profiler_type", fallback="none")  # profiler type cprofile, profile, pyinstrument
+    if not profile_enable:
+        profiler_type = 'none'
 
     if running_from_inkscape:
         # process creation of the Bash script - should be done before sys.path is modified, see below in prefere_pip_inkex
@@ -96,7 +116,7 @@ if running_as_frozen or not debug_active:
     warnings.filterwarnings('ignore')
 
 # TODO - check if this is still for shapely needed, apparently, shapely uses only exceptions instead of io.
-#        all logs were removed from version 2.0.0, if we ensure that shapely is always >= 2.0.0
+#        all logs were removed from version 2.0.0, ensure that shapely is always >= 2.0.0
 
 #  ---- plan to remove this in future ----
 # set logger for shapely - for old versions of shapely
@@ -127,11 +147,11 @@ extension = extension_class()  # create instance of extension class - call __ini
 # extension run(), we differentiate between debug and normal mode
 # - in debug or profile mode we debug or profile extension.run() method
 # - in normal mode we run extension.run() in try/except block to catch all exceptions and hide GTK spam
-if debug_active or profile_type != "none":  # if debug or profile mode
-    if profile_type == 'none':             # only debugging
+if debug_active or profiler_type != "none":  # if debug or profile mode
+    if profiler_type == 'none':             # only debugging
         extension.run(args=remaining_args)
     else:                                  # do profiling
-        debug_utils.profile(profile_type, SCRIPTDIR, ini, extension, remaining_args)
+        debug_utils.profile(profiler_type, SCRIPTDIR, ini, extension, remaining_args)
 
 else:   # if not debug nor profile mode
     save_stderr() # hide GTK spam
@@ -154,7 +174,7 @@ else:   # if not debug nor profile mode
     finally:
         restore_stderr()
 
-        if shapely_errors.tell():
-            errormsg(shapely_errors.getvalue())
+        # if shapely_errors.tell():
+        #     errormsg(shapely_errors.getvalue())
 
     sys.exit(0)

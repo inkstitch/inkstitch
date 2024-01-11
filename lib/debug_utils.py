@@ -13,7 +13,6 @@ import configparser       # to read DEBUG.ini
 #   - later sys.path may be modified that influences importing inkex (see prefere_pip_inkex)
 
 
-
 def write_offline_debug_script(debug_script_dir : Path, ini : configparser.ConfigParser):
     '''
     prepare Bash script for offline debugging from console
@@ -42,30 +41,40 @@ def write_offline_debug_script(debug_script_dir : Path, ini : configparser.Confi
     bash_file = debug_script_dir / bash_name
 
     with open(bash_file, 'w') as f:  # "w" text mode, automatic conversion of \n to os.linesep
-        f.write(f"#!/usr/bin/env bash\n\n")
-        f.write(f"# python version: {sys.version}\n")   # python version
+        f.write(f'#!/usr/bin/env bash\n')
+
+        # cmd line arguments for debugging and profiling
+        f.write(bash_parser())  # parse cmd line arguments: -d -p
+
+        f.write(f'# python version: {sys.version}\n')   # python version
         
         myargs = " ".join(sys.argv[1:])
         f.write(f'# script: {sys.argv[0]}  arguments: {myargs}\n') # script name and arguments
 
+        # environment PATH
+        f.write(f'# PATH:\n')
+        f.write(f'#   {os.environ["PATH"]}\n')
+        # for p in os.environ.get("PATH", '').split(os.pathsep): # PATH to list
+        #     f.write(f'#   {p}\n')
+
         # python module path
-        f.write(f"# python sys.path:\n")
+        f.write(f'# python sys.path:\n')
         for p in sys.path:
-            f.write(f"#   {p}\n")
+            f.write(f'#   {p}\n')
 
         # see static void set_extensions_env() in inkscape/src/inkscape-main.cpp
-        f.write(f"# PYTHONPATH:\n")
+        f.write(f'# PYTHONPATH:\n')
         for p in os.environ.get('PYTHONPATH', '').split(os.pathsep): # PYTHONPATH to list
-            f.write(f"#   {p}\n")
+            f.write(f'#   {p}\n')
 
-        f.write(f"# copy {svg_file} to {bash_svg}\n")
+        f.write(f'# copy {svg_file} to {bash_svg}\n')
         shutil.copy(svg_file, debug_script_dir / bash_svg)  # copy file to bash_svg
         myargs = myargs.replace(str(svg_file), str(bash_svg))   # replace file name with bash_svg
 
         # see void Extension::set_environment() in inkscape/src/extension/extension.cpp
-        notexported = ["SELF_CALL"] # if an extension calls inkscape itself
-        exported = ["INKEX_GETTEXT_DOMAIN", "INKEX_GETTEXT_DIRECTORY", 
-                    "INKSCAPE_PROFILE_DIR", "DOCUMENT_PATH", "PYTHONPATH"]
+        notexported = ['SELF_CALL'] # if an extension calls inkscape itself
+        exported = ['INKEX_GETTEXT_DOMAIN', 'INKEX_GETTEXT_DIRECTORY', 
+                    'INKSCAPE_PROFILE_DIR', 'DOCUMENT_PATH', 'PYTHONPATH']
         for k in notexported:
             if k in os.environ:
                 f.write(f'# export {k}="{os.environ[k]}"\n')
@@ -77,8 +86,46 @@ def write_offline_debug_script(debug_script_dir : Path, ini : configparser.Confi
         f.write(f'export INKSTITCH_OFFLINE_SCRIPT="True"\n')
 
         f.write('# call inkstitch\n')
-        f.write(f"python3 inkstitch.py {myargs}\n")
+        f.write(f'python3 inkstitch.py {myargs}\n')
     bash_file.chmod(0o0755)  # make file executable, hopefully ignored on Windows
+
+
+def bash_parser():
+    return '''
+set -e   #  exit on error
+
+# parse cmd line arguments:
+#   -d enable debugging
+#   -p enable profiling
+#             ":..." - silent error reporting
+while getopts ":dp" opt; do
+  case $opt in
+    d)
+        arg_d="true"
+        ;;
+    p)
+        arg_p="true"
+        ;;
+    \?)
+        echo "Invalid option: -$OPTARG" >&2
+        exit 1
+        ;;
+    :)
+        echo "Option -$OPTARG requires an argument." >&2
+        exit 1
+        ;;
+  esac
+done
+
+#     -v: check if variable is set
+if [[ -v arg_d ]]; then
+    export INKSTITCH_DEBUG_ENABLE="True"
+fi
+if [[ -v arg_p ]]; then
+    export INKSTITCH_PROFILE_ENABLE="True"
+fi
+
+'''
 
 
 def reorder_sys_path():
