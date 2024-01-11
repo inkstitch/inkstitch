@@ -47,7 +47,7 @@ if not running_as_frozen: # debugging/profiling only in development mode
     # specify debugger type
     # - if script was already started from debugger then don't read debug type from ini file or cmd line
     if not debug_active:
-        # enable/disable debugger
+        # enable/disable debugger from bash: -d
         if os.environ.get('INKSTITCH_DEBUG_ENABLE', '').lower() in ['true', '1', 'yes', 'y']:
             debug_enable = True
         else:
@@ -61,7 +61,7 @@ if not running_as_frozen: # debugging/profiling only in development mode
         if debug_to_file and debug_type == 'none':
             debug_type = 'file'
 
-    # enbale/disable profiling
+    # enbale/disable profiling from bash: -p
     if os.environ.get('INKSTITCH_PROFILE_ENABLE', '').lower() in ['true', '1', 'yes', 'y']: 
         profile_enable = True
     else:
@@ -115,8 +115,8 @@ if running_as_frozen or not debug_active:
     import warnings
     warnings.filterwarnings('ignore')
 
-# TODO - check if this is still for shapely needed, apparently, shapely uses only exceptions instead of io.
-#        all logs were removed from version 2.0.0, ensure that shapely is always >= 2.0.0
+# TODO - check if this is still needed for shapely, apparently shapely now uses only exceptions instead of io.
+#        all logs were removed from version 2.0.0 and above
 
 #  ---- plan to remove this in future ----
 # set logger for shapely - for old versions of shapely
@@ -174,7 +174,7 @@ else:   # if not debug nor profile mode
     finally:
         restore_stderr()
 
-        # if shapely_errors.tell():
+        # if shapely_errors.tell():                   # see above plan to remove this in future for shapely
         #     errormsg(shapely_errors.getvalue())
 
     sys.exit(0)

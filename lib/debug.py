@@ -101,22 +101,54 @@ class Debug(object):
         self.log("Debug logging enabled.")
 
     def init_debugger(self):
-        # How to debug Ink/Stitch with LiClipse:
+        ### General debugging notes:
+        # 1. to enable debugging or profiling copy DEBUG_template.ini to DEBUG.ini and edit it
+
+        ### How create bash script for offline debugging from console
+        # 1. in DEBUG.ini set create_bash_script = True
+        # 2. call inkstitch.py extension from inkscape to create bash script named by bash_file_base in DEBUG.ini
+        # 3. run bash script from console
+
+        ### Enable debugging
+        # 1. set debug_type to one of  - vscode, pycharm, pydev, see below for details
+        #      debug_type = vscode    - 'debugpy' for vscode editor 
+        #      debug_type = pycharm   - 'pydevd-pycharm' for pycharm editor
+        #      debug_type = pydev     - 'pydevd' for eclipse editor
+        # 2. set debug_enable = True in DEBUG.ini
+        #    or use command line argument -d in bash script
+        #    or set environment variable INKSTITCH_DEBUG_ENABLE = True or 1 or yes or y
+
+        ### Enable profiling
+        # 1. set profiler_type to one of - cprofile, profile, pyinstrument
+        #      profiler_type = cprofile    - 'cProfile' profiler
+        #      profiler_type = profile     - 'profile' profiler
+        #      profiler_type = pyinstrument- 'pyinstrument' profiler
+        # 2. set profile_enable = True in DEBUG.ini
+        #    or use command line argument -p in bash script
+        #    or set environment variable INKSTITCH_PROFILE_ENABLE = True or 1 or yes or y
+
+        ### Miscelaneous notes:
+        # - to disable debugger when running from inkscape set disable_from_inkscape = True in DEBUG.ini
+        # - to write debug output to file set debug_to_file = True in DEBUG.ini
+        # - to change various output file names see DEBUG.ini
+        # - to disable waiting for debugger to attach (vscode editor) set wait_attach = False in DEBUG.ini
+        # - to prefer inkscape version of inkex module over pip version set prefer_pip_inkex = False in DEBUG.ini
+
+        ###
+
+
+        ### How to debug Ink/Stitch with LiClipse:
         #
         # 1. Install LiClipse (liclipse.com) -- no need to install Eclipse first
         # 2. Start debug server as described here: http://www.pydev.org/manual_adv_remote_debugger.html
         #    * follow the "Note:" to enable the debug server menu item
-        # 3. Copy and edit a file named "DEBUG.ini" from "DEBUG_template.ini" next to inkstitch.py in your git clone.
+        # 3. Copy and edit a file named "DEBUG.ini" from "DEBUG_template.ini" next to inkstitch.py in your git clone
+        #    and set debug_type = pydev
         # 4. Run any extension and PyDev will start debugging.
-
-        # debugger = vscode    - 'debugpy' for vscode editor 
-        # debugger = pycharm   - 'pydevd-pycharm' for pycharm editor
-        # debugger = pydev     - 'pydevd' for eclipse editor
-        # debugger = file      -  no debugger, only debug.log, debug.svg are used
 
         ###
 
-        # To debug with PyCharm:
+        ### To debug with PyCharm:
 
         # You must use the PyCharm Professional Edition and _not_ the Community
         # Edition. Jetbrains has chosen to make remote debugging a Pro feature.
@@ -137,7 +169,8 @@ class Debug(object):
         #    configuration. Set "IDE host name:" to  "localhost" and "Port:" to 5678.
         #    You can leave the default settings for all other choices.
         #
-        # 3. Touch a file named "DEBUG.ini" at the top of your git repo, as above.
+        # 3. Touch a file named "DEBUG.ini" at the top of your git repo, as above
+        #    set debug_type = pycharm
         #
         # 4. Create a symbolic link in the Inkscape extensions directory to the
         #    top-level directory of your git repo. On a mac, for example:
@@ -162,7 +195,7 @@ class Debug(object):
 
         ###
 
-        # To debug with VS Code
+        ### To debug with VS Code
         # see: https://code.visualstudio.com/docs/python/debugging#_command-line-debugging
         #      https://code.visualstudio.com/docs/python/debugging#_debugging-by-attaching-over-a-network-connection
         # 
@@ -180,7 +213,8 @@ class Debug(object):
         #               }
         #           }
         #       ]
-        # 3. Touch a file named "DEBUG.ini" at the top of your git repo, as above.
+        # 3. Touch a file named "DEBUG.ini" at the top of your git repo, as above
+        #    set debug_type = vscode
         # 4. Start the debug server in VS Code by clicking on the debug icon in the left pane
         #    select "Python: Attach" from the dropdown menu and click on the green arrow.
         #    The debug server will start and connect to already running python processes,

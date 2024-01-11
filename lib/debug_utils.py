@@ -53,7 +53,7 @@ def write_offline_debug_script(debug_script_dir : Path, ini : configparser.Confi
 
         # environment PATH
         f.write(f'# PATH:\n')
-        f.write(f'#   {os.environ["PATH"]}\n')
+        f.write(f'#   {os.environ.get("PATH","")}\n')
         # for p in os.environ.get("PATH", '').split(os.pathsep): # PATH to list
         #     f.write(f'#   {p}\n')
 
@@ -67,17 +67,18 @@ def write_offline_debug_script(debug_script_dir : Path, ini : configparser.Confi
         for p in os.environ.get('PYTHONPATH', '').split(os.pathsep): # PYTHONPATH to list
             f.write(f'#   {p}\n')
 
-        f.write(f'# copy {svg_file} to {bash_svg}\n')
+        f.write(f'# copy {svg_file} to {bash_svg}\n#\n')
         shutil.copy(svg_file, debug_script_dir / bash_svg)  # copy file to bash_svg
         myargs = myargs.replace(str(svg_file), str(bash_svg))   # replace file name with bash_svg
 
         # see void Extension::set_environment() in inkscape/src/extension/extension.cpp
+        f.write('# Export inkscape environment variables:\n')
         notexported = ['SELF_CALL'] # if an extension calls inkscape itself
         exported = ['INKEX_GETTEXT_DOMAIN', 'INKEX_GETTEXT_DIRECTORY', 
                     'INKSCAPE_PROFILE_DIR', 'DOCUMENT_PATH', 'PYTHONPATH']
         for k in notexported:
             if k in os.environ:
-                f.write(f'# export {k}="{os.environ[k]}"\n')
+                f.write(f'#   export {k}="{os.environ[k]}"\n')
         for k in exported:
             if k in os.environ:
                 f.write(f'export {k}="{os.environ[k]}"\n')
@@ -159,21 +160,21 @@ def reorder_sys_path():
 # - pyinstrument - profiler with nice html output
     
 
-def profile(profile_type, profile_dir : Path, ini : configparser.ConfigParser, extension, remaining_args):
+def profile(profiler_type, profile_dir : Path, ini : configparser.ConfigParser, extension, remaining_args):
     '''
     profile with cProfile, profile or pyinstrument
     '''
     profile_file_base = ini.get("PROFILE","profile_file_base", fallback="debug_profile")
     profile_file_path = profile_dir / profile_file_base  # Path object
 
-    if profile_type == 'cprofile':
+    if profiler_type == 'cprofile':
         with_cprofile(extension, remaining_args, profile_file_path)
-    elif profile_type == 'profile':
+    elif profiler_type == 'profile':
         with_profile(extension, remaining_args, profile_file_path)
-    elif profile_type == 'pyinstrument':
+    elif profiler_type == 'pyinstrument':
         with_pyinstrument(extension, remaining_args, profile_file_path)
     else:
-        raise ValueError(f"unknown profiler type: '{profile_type}'")
+        raise ValueError(f"unknown profiler type: '{profiler_type}'")
 
 def with_cprofile(extension, remaining_args, profile_file_path):
     '''
