@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "2. Ink/Stitch Usertreffen in Essen"
+title:  "&#50;. Ink/Stitch Usertreffen in Essen"
 date:   2023-10-30
 categories: Treffen
 toc: true
