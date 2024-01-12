@@ -49,10 +49,6 @@ Further updates have been made to:
 ([#2607](https://github.com/inkstitch/inkstitch/issues/2607))
 ([#2579](https://github.com/inkstitch/inkstitch/issues/2579))
 ([#2476](https://github.com/inkstitch/inkstitch/issues/2476))
-([#](https://github.com/inkstitch/inkstitch/issues/))
-([#](https://github.com/inkstitch/inkstitch/issues/))
-([#](https://github.com/inkstitch/inkstitch/issues/))
-
 
 ## Params
 
@@ -76,7 +72,8 @@ Further updates have been made to:
 
   * Add stagger option for split stitches ([#2431](https://github.com/inkstitch/inkstitch/issues/2431))
   * Convert line to satin: do not split into several parts ([#2418](https://github.com/inkstitch/inkstitch/issues/2418))
-  * S-Stitch: a new stitch type for the satin stitch type family ([#2431](https://github.com/inkstitch/inkstitch/issues/2431))
+  * S-Stitch: a new stitch type for the satin stitch type family |_|▔|_|▔|_|▔| ([#2431](https://github.com/inkstitch/inkstitch/issues/2431))
+  * Zig-Zag: a new stitch type for the satin stitch type family /\/\/\/\/ ([#2431](https://github.com/inkstitch/inkstitch/issues/2431))
 
 ## Export
 
@@ -118,4 +115,3 @@ Further updates have been made to:
  * [#2434](https://github.com/inkstitch/inkstitch/issues/2434) Ignore commands with "empty-d-connectors"
  * [#2404](https://github.com/inkstitch/inkstitch/issues/2404) Render satins with only one subpath as running stitch ([#2553](https://github.com/inkstitch/inkstitch/issues/2553))
  * [#2403](https://github.com/inkstitch/inkstitch/issues/2403) ignore small contour fill with single or double spiral
-
