@@ -277,7 +277,7 @@ class Debug(object):
     def save_svg(self):
         tree = etree.ElementTree(self.svg)
         debug_svg = self.debug_dir / self.debug_svg_file
-        tree.write(debug_svg)
+        tree.write(str(debug_svg))    # xlml <5.0.0 does not support Path objects
 
     @check_enabled
     @unwrap_arguments
