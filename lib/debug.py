@@ -8,17 +8,18 @@ import sys
 import atexit  # to save svg file on exit
 import socket  # to check if debugger is running
 import time    # to measure time of code block, use time.monotonic() instead of time.time()
-from datetime import datetime  
+from datetime import datetime
 
 from contextlib import contextmanager  # to measure time of with block
 import configparser  # to read DEBUG.ini
-from pathlib import Path # to work with paths as objects
+from pathlib import Path  # to work with paths as objects
 
 import inkex
 from lxml import etree   # to create svg file
 
 from .svg import line_strings_to_path
 from .svg.tags import INKSCAPE_GROUPMODE, INKSCAPE_LABEL
+
 
 # decorator to check if debugging is enabled
 # - if debug is not enabled then decorated function is not called
@@ -38,6 +39,7 @@ def _unwrap(arg):
         return arg()
     else:
         return arg
+
 
 # decorator to unwrap arguments if they are callable
 #   eg: if argument is lambda function then it is called and return value is used as argument
@@ -77,16 +79,16 @@ class Debug(object):
         self.current_layer = None
         self.group_stack = []
 
-    def enable(self, debug_type, debug_dir : Path, ini : configparser.ConfigParser):
+    def enable(self, debug_type, debug_dir: Path, ini: configparser.ConfigParser):
         # initilize file names and other parameters from DEBUG.ini file
         self.debug_dir = debug_dir  # directory where debug files are stored
-        self.debug_log_file = ini.get("DEBUG","debug_log_file", fallback="debug.log")
-        self.debug_svg_file = ini.get("DEBUG","debug_svg_file", fallback="debug.svg")
-        self.wait_attach = ini.getboolean("DEBUG","wait_attach", fallback=True) # currently only for vscode
+        self.debug_log_file = ini.get("DEBUG", "debug_log_file", fallback="debug.log")
+        self.debug_svg_file = ini.get("DEBUG", "debug_svg_file", fallback="debug.svg")
+        self.wait_attach = ini.getboolean("DEBUG", "wait_attach", fallback=True)  # currently only for vscode
 
         if debug_type == 'none':
             return
-        
+
         self.debugger = debug_type
         self.enabled = True
         self.init_log()
@@ -100,25 +102,28 @@ class Debug(object):
             pass
         self.log("Debug logging enabled.")
 
+    # we intentionally disable flakes C901 - function is too complex, beacuse it is used only for debugging
+    # currently complexity is set 10 see 'make style', this means that function can have max 10 nested blocks, here we have more
+    # flake8: noqa: C901
     def init_debugger(self):
-        ### General debugging notes:
+        # ### General debugging notes:
         # 1. to enable debugging or profiling copy DEBUG_template.ini to DEBUG.ini and edit it
 
-        ### How create bash script for offline debugging from console
+        # ### How create bash script for offline debugging from console
         # 1. in DEBUG.ini set create_bash_script = True
         # 2. call inkstitch.py extension from inkscape to create bash script named by bash_file_base in DEBUG.ini
         # 3. run bash script from console
 
-        ### Enable debugging
+        # ### Enable debugging
         # 1. set debug_type to one of  - vscode, pycharm, pydev, see below for details
-        #      debug_type = vscode    - 'debugpy' for vscode editor 
+        #      debug_type = vscode    - 'debugpy' for vscode editor
         #      debug_type = pycharm   - 'pydevd-pycharm' for pycharm editor
         #      debug_type = pydev     - 'pydevd' for eclipse editor
         # 2. set debug_enable = True in DEBUG.ini
         #    or use command line argument -d in bash script
         #    or set environment variable INKSTITCH_DEBUG_ENABLE = True or 1 or yes or y
 
-        ### Enable profiling
+        # ### Enable profiling
         # 1. set profiler_type to one of - cprofile, profile, pyinstrument
         #      profiler_type = cprofile    - 'cProfile' profiler
         #      profiler_type = profile     - 'profile' profiler
@@ -127,17 +132,16 @@ class Debug(object):
         #    or use command line argument -p in bash script
         #    or set environment variable INKSTITCH_PROFILE_ENABLE = True or 1 or yes or y
 
-        ### Miscelaneous notes:
+        # ### Miscelaneous notes:
         # - to disable debugger when running from inkscape set disable_from_inkscape = True in DEBUG.ini
         # - to write debug output to file set debug_to_file = True in DEBUG.ini
         # - to change various output file names see DEBUG.ini
         # - to disable waiting for debugger to attach (vscode editor) set wait_attach = False in DEBUG.ini
         # - to prefer inkscape version of inkex module over pip version set prefer_pip_inkex = False in DEBUG.ini
 
-        ###
+        # ###
 
-
-        ### How to debug Ink/Stitch with LiClipse:
+        # ### How to debug Ink/Stitch with LiClipse:
         #
         # 1. Install LiClipse (liclipse.com) -- no need to install Eclipse first
         # 2. Start debug server as described here: http://www.pydev.org/manual_adv_remote_debugger.html
@@ -146,9 +150,9 @@ class Debug(object):
         #    and set debug_type = pydev
         # 4. Run any extension and PyDev will start debugging.
 
-        ###
+        # ###
 
-        ### To debug with PyCharm:
+        # ### To debug with PyCharm:
 
         # You must use the PyCharm Professional Edition and _not_ the Community
         # Edition. Jetbrains has chosen to make remote debugging a Pro feature.
@@ -193,12 +197,12 @@ class Debug(object):
         #    PyDev debugger.)" statement, below. Uncheck the box to have it continue
         #    automatically to your first set breakpoint.
 
-        ###
+        # ###
 
-        ### To debug with VS Code
+        # ### To debug with VS Code
         # see: https://code.visualstudio.com/docs/python/debugging#_command-line-debugging
         #      https://code.visualstudio.com/docs/python/debugging#_debugging-by-attaching-over-a-network-connection
-        # 
+        #
         # 1. Install the Python extension for VS Code
         #      pip install debugpy
         # 2. create .vscode/launch.json containing:
@@ -223,7 +227,6 @@ class Debug(object):
         # Notes:
         #   to see flask server url routes:
         #      - comment out the line self.disable_logging() in run() of lib/api/server.py
-                
 
         try:
             if self.debugger == 'vscode':
@@ -416,4 +419,3 @@ class Debug(object):
 
 # global debug object
 debug = Debug()
-

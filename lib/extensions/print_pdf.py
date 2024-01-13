@@ -216,7 +216,7 @@ class Print(InkstitchExtension):
     def strip_namespaces(self, svg):
         # namespace prefixes seem to trip up HTML, so get rid of them
         for element in svg.iter():
-            if type(element.tag) == str and element.tag[0] == '{':
+            if isinstance(element.tag, str) and element.tag[0] == '{':
                 element.tag = element.tag[element.tag.index('}', 1) + 1:]
 
     def render_svgs(self, stitch_plan, realistic=False):

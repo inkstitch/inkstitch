@@ -62,7 +62,7 @@ class GeneratePalette(InkstitchExtension):
     def _get_color_from_elements(self, elements):
         colors = []
         for element in elements:
-            if 'fill' not in element.style.keys() or type(element) != inkex.TextElement:
+            if 'fill' not in element.style.keys() or not isinstance(element, inkex.TextElement):  # type(element) != inkex.TextElement:
                 continue
 
             color = inkex.Color(element.style['fill']).to_rgb()
