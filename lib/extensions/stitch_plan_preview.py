@@ -59,6 +59,7 @@ class StitchPlanPreview(InkstitchExtension):
         if self.options.overwrite:
             reset_stitch_plan(svg)
         else:
+            reset_stitch_plan(svg, False)
             layer = svg.find(".//*[@id='__inkstitch_stitch_plan__']")
             if layer is not None:
                 layer.set('id', svg.get_unique_id('inkstitch_stitch_plan_'))
