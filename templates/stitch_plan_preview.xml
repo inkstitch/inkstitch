@@ -11,16 +11,23 @@
             </submenu>
         </effects-menu>
     </effect>
-    <param name="move-to-side" type="boolean" gui-text="Move stitch plan beside the canvas">true</param>
     <param name="layer-visibility" type="optiongroup" appearance="combo" gui-text="Design layer visibility">
         <option value="unchanged">Unchanged</option>
         <option value="hidden">Hidden</option>
         <option value="lower_opacity">Lower opacity</option>
     </param>
+    <spacer />
+    <separator />
+    <spacer />
+    <param name="move-to-side" type="boolean" gui-text="Move stitch plan beside the canvas">true</param>
     <param name="needle-points" type="boolean" gui-text="Needle points">false</param>
     <param name="insensitive" type="boolean" gui-text="Lock"
            gui-description="Make stitch plan insensitive to mouse interactions">false</param>
     <param name="visual-commands" type="boolean" gui-text="Display command symbols">false</param>
+    <spacer />
+    <separator />
+    <spacer />
+    <param name="overwrite" type="boolean" gui-text="Override last stitch plan">true</param>
     <spacer />
     <script>
         {{ command_tag | safe }}
