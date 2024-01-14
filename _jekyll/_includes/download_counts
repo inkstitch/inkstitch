@@ -39,7 +39,7 @@
 
 {%- assign linux = linuxtarxz | plus: linuxsh | plus: linuxrpm | plus: linuxdeb %}
 
-## Ink/Stitch {{ site.github.latest_release.name }}
+## Ink/Stitch {{ site.github.latest_release.name }} ({{ site.github.latest_release.published_at | date: "%Y-%m-%d"  }})
 
 <table class="inline-table">
 <thead>

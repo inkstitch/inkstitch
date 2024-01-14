@@ -90,6 +90,10 @@ Further updates have been made to:
 
   * Windows is now available as 32 bit and 64 bit version ([#2413](https://github.com/inkstitch/inkstitch/issues/2413))
 
+## Developer Features
+
+  * [#2653](https://github.com/inkstitch/inkstitch/issues/2653) Updated debug and profiling procedures
+
 ## Bug Fixes
 
  * [#2644](https://github.com/inkstitch/inkstitch/issues/2644) Letters to font: escape labels to allow import of filenames with quotes
@@ -98,7 +102,7 @@ Further updates have been made to:
  * [#2637](https://github.com/inkstitch/inkstitch/issues/2637) Add shape property to clone
  * [#2638](https://github.com/inkstitch/inkstitch/issues/2638) Troubleshoot: remove old layer before creating a new one to avoid transform (and other) issues
  * [#2647](https://github.com/inkstitch/inkstitch/issues/2647) Ignore multipoints in intersect regions with gratings
- * [#2635](https://github.com/inkstitch/inkstitch/issues/635) [#2645)](https://github.com/inkstitch/inkstitch/issues/2645) Fix some networkx no path errors
+ * [#2635](https://github.com/inkstitch/inkstitch/issues/2635) [#2645](https://github.com/inkstitch/inkstitch/issues/2645) Fix some networkx no path errors
  * [#2624](https://github.com/inkstitch/inkstitch/issues/2624) Replace jumps by running stitches in large satin columns
  * [#2578](https://github.com/inkstitch/inkstitch/issues/2578) [#2578](https://github.com/inkstitch/inkstitch/issues/2578)Auto-route Satin: handle sided properties correctly
  * [#2566](https://github.com/inkstitch/inkstitch/issues/2566) Update depcrecated inx file descriptions, so they are translatable now
