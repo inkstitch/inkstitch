@@ -6,9 +6,8 @@
 from copy import deepcopy
 from os import path
 
+from inkex import NSS, Style, load_svg
 from shapely import geometry as shgeo
-
-import inkex
 
 from .svg.tags import EMBROIDERABLE_TAGS
 from .utils import cache, get_bundled_dir
@@ -26,7 +25,7 @@ def ensure_marker(svg, marker):
 def _marker_svg():
     marker_path = path.join(get_bundled_dir("symbols"), "marker.svg")
     with open(marker_path) as marker_file:
-        return inkex.load_svg(marker_file).getroot()
+        return load_svg(marker_file).getroot()
 
 
 def set_marker(node, position, marker):
@@ -34,7 +33,7 @@ def set_marker(node, position, marker):
 
     # attach marker to node
     style = node.style
-    style += inkex.Style(f'marker-{ position }:url(#inkstitch-{ marker }-marker)')
+    style += Style(f'marker-{ position }:url(#inkstitch-{ marker }-marker)')
     node.set('style', style)
 
 
@@ -50,7 +49,7 @@ def get_marker_elements(node, marker, get_fills=True, get_strokes=True, get_sati
     # do not close marker-start:url(
     # if the marker group has been copied and pasted in Inkscape it may have been duplicated with an updated id (e.g. -4)
     xpath = "./parent::svg:g/*[contains(@style, 'marker-start:url(#inkstitch-%s-marker')]" % marker
-    markers = node.xpath(xpath, namespaces=inkex.NSS)
+    markers = node.xpath(xpath, namespaces=NSS)
     for marker in markers:
         if marker.tag not in EMBROIDERABLE_TAGS:
             continue
