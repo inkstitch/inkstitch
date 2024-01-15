@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-12-29 00:57+0000\n"
-"PO-Revision-Date: 2023-12-29 00:58\n"
+"POT-Creation-Date: 2024-01-15 01:11+0000\n"
+"PO-Revision-Date: 2024-01-15 01:11\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-29 00:57+0000\n"
+"POT-Creation-Date: 2024-01-15 01:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -940,11 +940,11 @@ msgstr "Hexagonales Gitter"
 msgid "weird one"
 msgstr "Seltsames Teil"
 
-#: inkstitch.py:89
+#: inkstitch.py:141
 msgid "Ink/Stitch cannot read your SVG file. This is often the case when you use a file which has been created with Adobe Illustrator."
 msgstr "Ink/Stitch can deine SVG-Datei nicht lesen. Das passiert häufig, wenn du die Datei mit Adobe Illustrator erstellt hast."
 
-#: inkstitch.py:92
+#: inkstitch.py:144
 msgid "Try to import the file into Inkscape through 'File > Import...' (Ctrl+I)"
 msgstr "Versuche die Datei über 'Datei > Importieren...' (Strg+I) in Inkscape zu öffnen"
 
@@ -1382,7 +1382,7 @@ msgstr "Spiralfüllung"
 
 #: lib/elements/fill_stitch.py:118
 msgid "Linear Gradient Fill"
-msgstr ""
+msgstr "Lineare Verlaufsfüllung"
 
 #: lib/elements/fill_stitch.py:119 inx/inkstitch_select_elements.inx:51
 msgid "Legacy Fill"
@@ -1542,11 +1542,11 @@ msgstr "Die Umkehr-Option kann bei der Reihenfolge des Stichpfads helfen. Wenn U
 
 #: lib/elements/fill_stitch.py:345
 msgid "Stop at ending point"
-msgstr ""
+msgstr "Endposition erzwingen"
 
 #: lib/elements/fill_stitch.py:346
 msgid "If this option is disabled, the ending point will only be used to define a general direction for stitch routing. When enabled the last section will end at the defined spot."
-msgstr ""
+msgstr "Ist diese Option deaktiviert, legt die Endposition lediglich die generelle Stickrichtung fest. In aktiviertem Zustand endet der letzte Farbabschnitt an diesem Punkt."
 
 #: lib/elements/fill_stitch.py:358 lib/elements/fill_stitch.py:515
 msgid "Underpath"
@@ -2307,7 +2307,7 @@ msgid "Please chose an other color palette for your design."
 msgstr "Wähle eine andere Garnpalette für das Design."
 
 #. auto-route running stitch columns extension
-#: lib/extensions/auto_run.py:57 lib/extensions/cutwork_segmentation.py:47
+#: lib/extensions/auto_run.py:57 lib/extensions/cutwork_segmentation.py:45
 msgid "Please select one or more stroke elements."
 msgstr "Bitte wähle ein oder mehrere Elemente mit einer Kontur (Linie)."
 
@@ -2396,15 +2396,15 @@ msgstr "Bitte wähle eine oder mehrere Satinsäulen zum Zerteilen aus."
 msgid "this satin column does not have a \"satin column cut point\" command attached to it. Please use the \"Attach commands\" extension and attach the \"Satin Column cut point\" command first."
 msgstr "Diese Satinsäule hat keinen \"Satinsäule schneiden\" -Befehl. Bitte verwende die Erweiterung \"Befehle zu Objekten hinzufügen\" und füge zuerst den Befehl \"Satinsäule schneiden\" hinzu."
 
-#: lib/extensions/cutwork_segmentation.py:77
+#: lib/extensions/cutwork_segmentation.py:75
 msgid "Please select at least one element with a stroke color."
 msgstr "Bitte mindestens ein Element mit einer Konturfarbe auswählen."
 
-#: lib/extensions/cutwork_segmentation.py:162
+#: lib/extensions/cutwork_segmentation.py:159
 msgid "Cutwork Group"
 msgstr "Cutwork Gruppe"
 
-#: lib/extensions/cutwork_segmentation.py:170
+#: lib/extensions/cutwork_segmentation.py:167
 #, python-format
 msgid "Needle #%s"
 msgstr "Nadel #%s"
@@ -2432,7 +2432,7 @@ msgstr "%s Dichte"
 
 #: lib/extensions/display_stacking_order.py:55
 msgid "Stacking Order"
-msgstr ""
+msgstr "Stickreihenfolge"
 
 #: lib/extensions/duplicate_params.py:18
 msgid "This function copies Ink/Stitch parameters from the first selected element to the rest of the selection. Please select at least two elements."
@@ -2533,7 +2533,7 @@ msgstr "Keine Textelemente mit Füllfarben gefunden. Anwendungshinweise sind auf
 msgid "Please select at least one object with a gradient fill."
 msgstr "Bitte mindestens ein Objekt mit Farbverlauf auswählen."
 
-#: lib/extensions/input.py:18
+#: lib/extensions/input.py:19
 msgid "Ink/Stitch cannot import color formats directly. But you can open the embroidery file and apply the color with Extensions > Ink/Stitch > Thread Color Management > Apply Threadlist"
 msgstr "Ink/Stitch kann Farbformate nicht direkt importieren. Aber du kannst eine Stickdatei öffnen und die Farben darauf anwenden (Erweiterungen > Ink/Stitch > Garn Farbenverwaltung > Garnfarben-Liste anwenden)"
 
@@ -2599,7 +2599,7 @@ msgstr "Bitte eine Schriftdatei auswählen."
 msgid "Please verify file locations."
 msgstr "Bitte überprüfe die Dateipfade."
 
-#: lib/extensions/letters_to_font.py:35
+#: lib/extensions/letters_to_font.py:36
 msgid "Font directory not found. Please specify an existing directory."
 msgstr "Schriftverzeichnis nicht gefunden. Bitte einen existierenden Ordner angeben."
 
@@ -3265,7 +3265,7 @@ msgstr "Die Schrift '%s' hat keine Varianten."
 msgid "Error writing to %(path)s: %(error)s"
 msgstr "Fehler beim Schreiben in %(path)s: %(error)s"
 
-#: lib/stitch_plan/generate_stitch_plan.py:75
+#: lib/stitch_plan/generate_stitch_plan.py:76
 #, python-format
 msgid "File does not exist and cannot be opened. Please correct the file path and try again.\\r%s"
 msgstr "Die Datei kann nicht geöffnet werden. Bitte überprüfe den Dateipfad und versuche es erneut.\\r%s"
@@ -3306,16 +3306,16 @@ msgstr "Dreieck"
 msgid "There is no selected stitchable element. Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects in case you have expected a stitchout."
 msgstr "Es wurde kein stickbares Element ausgewählt. Bitte führe die Funktion Erweiterungen > Ink/Stitch > Fehlerbehebung > Fehlerbehebung an Objekten aus, um Hinweise zu Fehlern in der Stichplan-Erstellung zu erhalten."
 
-#: lib/stitches/auto_run.py:140 lib/stitches/auto_satin.py:356
+#: lib/stitches/auto_run.py:139 lib/stitches/auto_satin.py:356
 msgid "Auto-Route"
 msgstr "Auto-Führung"
 
-#: lib/stitches/auto_run.py:274
+#: lib/stitches/auto_run.py:273
 #, python-format
 msgid "AutoRun %d"
 msgstr "AutoGeradstich %d"
 
-#: lib/stitches/auto_run.py:276
+#: lib/stitches/auto_run.py:275
 #, python-format
 msgid "AutoRun Underpath %d"
 msgstr "AutoGeradstich Verbindung %d"
@@ -4504,7 +4504,7 @@ msgstr "Dichte-Indikator"
 #: inx/inkstitch_simulator.inx:10 inx/inkstitch_stitch_plan_preview.inx:10
 #: inx/inkstitch_stitch_plan_preview_undo.inx:10
 msgid "Visualize and Export"
-msgstr ""
+msgstr "Visualisieren und exportieren"
 
 #: inx/inkstitch_density_map.inx:14
 msgid "Red markers"
@@ -4526,19 +4526,19 @@ msgstr "innerhalb eines Radius von (mm)"
 msgid "Yellow markers"
 msgstr "Gelbe Markierungen"
 
-#: inx/inkstitch_density_map.inx:22 inx/inkstitch_stitch_plan_preview.inx:15
+#: inx/inkstitch_density_map.inx:22 inx/inkstitch_stitch_plan_preview.inx:14
 msgid "Design layer visibility"
 msgstr "Design-Layer Sichtbarkeit"
 
-#: inx/inkstitch_density_map.inx:23 inx/inkstitch_stitch_plan_preview.inx:16
+#: inx/inkstitch_density_map.inx:23 inx/inkstitch_stitch_plan_preview.inx:15
 msgid "Unchanged"
 msgstr "Unverändert"
 
-#: inx/inkstitch_density_map.inx:24 inx/inkstitch_stitch_plan_preview.inx:17
+#: inx/inkstitch_density_map.inx:24 inx/inkstitch_stitch_plan_preview.inx:16
 msgid "Hidden"
 msgstr "Versteckt"
 
-#: inx/inkstitch_density_map.inx:25 inx/inkstitch_stitch_plan_preview.inx:18
+#: inx/inkstitch_density_map.inx:25 inx/inkstitch_stitch_plan_preview.inx:17
 msgid "Lower opacity"
 msgstr "Verringerte Deckkraft"
 
@@ -4548,11 +4548,11 @@ msgstr "Indikator-Größe"
 
 #: inx/inkstitch_display_stacking_order.inx:3
 msgid "Display stacking order"
-msgstr ""
+msgstr "Stickreihenfolge anzeigen"
 
 #: inx/inkstitch_display_stacking_order.inx:14
 msgid "Font size"
-msgstr ""
+msgstr "Schriftgröße"
 
 #: inx/inkstitch_duplicate_params.inx:3
 msgid "Duplicate Params"
@@ -6061,25 +6061,29 @@ msgstr "Simulator / Realistische Vorschau"
 msgid "Stitch Plan Preview"
 msgstr "Stichplan Vorschau"
 
-#: inx/inkstitch_stitch_plan_preview.inx:14
+#: inx/inkstitch_stitch_plan_preview.inx:22
 msgid "Move stitch plan beside the canvas"
 msgstr "Stichplan an der Seite platzieren"
 
-#: inx/inkstitch_stitch_plan_preview.inx:20
+#: inx/inkstitch_stitch_plan_preview.inx:23
 msgid "Needle points"
 msgstr "Nadeleinstichstellen"
 
-#: inx/inkstitch_stitch_plan_preview.inx:22
+#: inx/inkstitch_stitch_plan_preview.inx:25
 msgid "Lock"
 msgstr "Stichplan-Ebene sperren"
 
-#: inx/inkstitch_stitch_plan_preview.inx:22
+#: inx/inkstitch_stitch_plan_preview.inx:25
 msgid "Make stitch plan insensitive to mouse interactions"
 msgstr "Deaktiviere Mausinteraktionen mit dem Stichplan"
 
-#: inx/inkstitch_stitch_plan_preview.inx:23
+#: inx/inkstitch_stitch_plan_preview.inx:26
 msgid "Display command symbols"
 msgstr "Zeige visuelle Befehle"
+
+#: inx/inkstitch_stitch_plan_preview.inx:30
+msgid "Override last stitch plan"
+msgstr ""
 
 #: inx/inkstitch_stitch_plan_preview_undo.inx:3
 msgid "Undo Stitch Plan Preview"

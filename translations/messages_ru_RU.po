@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-12-29 00:57+0000\n"
-"PO-Revision-Date: 2023-12-29 00:58\n"
+"POT-Creation-Date: 2024-01-15 01:11+0000\n"
+"PO-Revision-Date: 2024-01-15 01:12\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-29 00:57+0000\n"
+"POT-Creation-Date: 2024-01-15 01:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -940,11 +940,11 @@ msgstr ""
 msgid "weird one"
 msgstr ""
 
-#: inkstitch.py:89
+#: inkstitch.py:141
 msgid "Ink/Stitch cannot read your SVG file. This is often the case when you use a file which has been created with Adobe Illustrator."
 msgstr "Ink/Stitch не может прочитать ваш SVG файл. Такая ситуация часто возникает, если файл был создан в программе Adobe Illustrator."
 
-#: inkstitch.py:92
+#: inkstitch.py:144
 msgid "Try to import the file into Inkscape through 'File > Import...' (Ctrl+I)"
 msgstr "Попробуйте импортировать файл в Inkscape через меню 'Файл > Импортировать...' (Ctrl+I)"
 
@@ -2302,7 +2302,7 @@ msgid "Please chose an other color palette for your design."
 msgstr "Выберите другую палитру для вашего дизайна."
 
 #. auto-route running stitch columns extension
-#: lib/extensions/auto_run.py:57 lib/extensions/cutwork_segmentation.py:47
+#: lib/extensions/auto_run.py:57 lib/extensions/cutwork_segmentation.py:45
 msgid "Please select one or more stroke elements."
 msgstr ""
 
@@ -2391,15 +2391,15 @@ msgstr "Выберите одну или несколько сатиновых �
 msgid "this satin column does not have a \"satin column cut point\" command attached to it. Please use the \"Attach commands\" extension and attach the \"Satin Column cut point\" command first."
 msgstr "эта сатиновая колонна не имеет команды \"точка разрыва сатиновой колонны\" прикрепленной к ней. Используйте \"Добавить команды\" из меню и прикрепите команду \"Точка разрыва сатиновой колонны\"."
 
-#: lib/extensions/cutwork_segmentation.py:77
+#: lib/extensions/cutwork_segmentation.py:75
 msgid "Please select at least one element with a stroke color."
 msgstr ""
 
-#: lib/extensions/cutwork_segmentation.py:162
+#: lib/extensions/cutwork_segmentation.py:159
 msgid "Cutwork Group"
 msgstr ""
 
-#: lib/extensions/cutwork_segmentation.py:170
+#: lib/extensions/cutwork_segmentation.py:167
 #, python-format
 msgid "Needle #%s"
 msgstr ""
@@ -2527,7 +2527,7 @@ msgstr ""
 msgid "Please select at least one object with a gradient fill."
 msgstr ""
 
-#: lib/extensions/input.py:18
+#: lib/extensions/input.py:19
 msgid "Ink/Stitch cannot import color formats directly. But you can open the embroidery file and apply the color with Extensions > Ink/Stitch > Thread Color Management > Apply Threadlist"
 msgstr ""
 
@@ -2593,7 +2593,7 @@ msgstr "Укажите имя файла шрифтов."
 msgid "Please verify file locations."
 msgstr ""
 
-#: lib/extensions/letters_to_font.py:35
+#: lib/extensions/letters_to_font.py:36
 msgid "Font directory not found. Please specify an existing directory."
 msgstr "Папка шрифтов не найдена. Укажите существующую папку."
 
@@ -3255,7 +3255,7 @@ msgstr "Для шрифта '%s' нет вариантов."
 msgid "Error writing to %(path)s: %(error)s"
 msgstr "Ошибка при записи в %(path)s: %(error)s"
 
-#: lib/stitch_plan/generate_stitch_plan.py:75
+#: lib/stitch_plan/generate_stitch_plan.py:76
 #, python-format
 msgid "File does not exist and cannot be opened. Please correct the file path and try again.\\r%s"
 msgstr "Файл не существует и не может быть открыт. Проверьте правильность пути и попробуйте снова.\\r%s"
@@ -3296,16 +3296,16 @@ msgstr ""
 msgid "There is no selected stitchable element. Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects in case you have expected a stitchout."
 msgstr ""
 
-#: lib/stitches/auto_run.py:140 lib/stitches/auto_satin.py:356
+#: lib/stitches/auto_run.py:139 lib/stitches/auto_satin.py:356
 msgid "Auto-Route"
 msgstr ""
 
-#: lib/stitches/auto_run.py:274
+#: lib/stitches/auto_run.py:273
 #, python-format
 msgid "AutoRun %d"
 msgstr ""
 
-#: lib/stitches/auto_run.py:276
+#: lib/stitches/auto_run.py:275
 #, python-format
 msgid "AutoRun Underpath %d"
 msgstr ""
@@ -4517,19 +4517,19 @@ msgstr ""
 msgid "Yellow markers"
 msgstr ""
 
-#: inx/inkstitch_density_map.inx:22 inx/inkstitch_stitch_plan_preview.inx:15
+#: inx/inkstitch_density_map.inx:22 inx/inkstitch_stitch_plan_preview.inx:14
 msgid "Design layer visibility"
 msgstr "Видимость слоя дизайна"
 
-#: inx/inkstitch_density_map.inx:23 inx/inkstitch_stitch_plan_preview.inx:16
+#: inx/inkstitch_density_map.inx:23 inx/inkstitch_stitch_plan_preview.inx:15
 msgid "Unchanged"
 msgstr "Не изменялось"
 
-#: inx/inkstitch_density_map.inx:24 inx/inkstitch_stitch_plan_preview.inx:17
+#: inx/inkstitch_density_map.inx:24 inx/inkstitch_stitch_plan_preview.inx:16
 msgid "Hidden"
 msgstr "Спрятано"
 
-#: inx/inkstitch_density_map.inx:25 inx/inkstitch_stitch_plan_preview.inx:18
+#: inx/inkstitch_density_map.inx:25 inx/inkstitch_stitch_plan_preview.inx:17
 msgid "Lower opacity"
 msgstr "Полупрозрачный"
 
@@ -6052,24 +6052,28 @@ msgstr "Симулятор / Реалистичный предпросмотр"
 msgid "Stitch Plan Preview"
 msgstr "Предпросмотр плана вышивки"
 
-#: inx/inkstitch_stitch_plan_preview.inx:14
+#: inx/inkstitch_stitch_plan_preview.inx:22
 msgid "Move stitch plan beside the canvas"
 msgstr "Расположить план вышивки рядом с холстом"
 
-#: inx/inkstitch_stitch_plan_preview.inx:20
+#: inx/inkstitch_stitch_plan_preview.inx:23
 msgid "Needle points"
 msgstr "Точки проколов"
 
-#: inx/inkstitch_stitch_plan_preview.inx:22
+#: inx/inkstitch_stitch_plan_preview.inx:25
 msgid "Lock"
 msgstr ""
 
-#: inx/inkstitch_stitch_plan_preview.inx:22
+#: inx/inkstitch_stitch_plan_preview.inx:25
 msgid "Make stitch plan insensitive to mouse interactions"
 msgstr ""
 
-#: inx/inkstitch_stitch_plan_preview.inx:23
+#: inx/inkstitch_stitch_plan_preview.inx:26
 msgid "Display command symbols"
+msgstr ""
+
+#: inx/inkstitch_stitch_plan_preview.inx:30
+msgid "Override last stitch plan"
 msgstr ""
 
 #: inx/inkstitch_stitch_plan_preview_undo.inx:3

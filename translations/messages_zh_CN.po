@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-12-29 00:57+0000\n"
-"PO-Revision-Date: 2023-12-29 00:58\n"
+"POT-Creation-Date: 2024-01-15 01:11+0000\n"
+"PO-Revision-Date: 2024-01-15 01:11\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-29 00:57+0000\n"
+"POT-Creation-Date: 2024-01-15 01:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -940,11 +940,11 @@ msgstr ""
 msgid "weird one"
 msgstr ""
 
-#: inkstitch.py:89
+#: inkstitch.py:141
 msgid "Ink/Stitch cannot read your SVG file. This is often the case when you use a file which has been created with Adobe Illustrator."
 msgstr ""
 
-#: inkstitch.py:92
+#: inkstitch.py:144
 msgid "Try to import the file into Inkscape through 'File > Import...' (Ctrl+I)"
 msgstr ""
 
@@ -2303,7 +2303,7 @@ msgid "Please chose an other color palette for your design."
 msgstr "请为您的设计选择另一个调色板。"
 
 #. auto-route running stitch columns extension
-#: lib/extensions/auto_run.py:57 lib/extensions/cutwork_segmentation.py:47
+#: lib/extensions/auto_run.py:57 lib/extensions/cutwork_segmentation.py:45
 msgid "Please select one or more stroke elements."
 msgstr "请选择一个或多个笔画元素。"
 
@@ -2392,15 +2392,15 @@ msgstr "请选择一根或多根缎面柱进行切割。"
 msgid "this satin column does not have a \"satin column cut point\" command attached to it. Please use the \"Attach commands\" extension and attach the \"Satin Column cut point\" command first."
 msgstr "此缎面柱没有附加“缎面柱切割点”命令。 请先使用“附加命令”扩展并附加“缎柱切割点”命令。"
 
-#: lib/extensions/cutwork_segmentation.py:77
+#: lib/extensions/cutwork_segmentation.py:75
 msgid "Please select at least one element with a stroke color."
 msgstr ""
 
-#: lib/extensions/cutwork_segmentation.py:162
+#: lib/extensions/cutwork_segmentation.py:159
 msgid "Cutwork Group"
 msgstr ""
 
-#: lib/extensions/cutwork_segmentation.py:170
+#: lib/extensions/cutwork_segmentation.py:167
 #, python-format
 msgid "Needle #%s"
 msgstr "针 #%s"
@@ -2529,7 +2529,7 @@ msgstr "我们在您的文本元素上找不到任何填充颜色。 请阅读�
 msgid "Please select at least one object with a gradient fill."
 msgstr ""
 
-#: lib/extensions/input.py:18
+#: lib/extensions/input.py:19
 msgid "Ink/Stitch cannot import color formats directly. But you can open the embroidery file and apply the color with Extensions > Ink/Stitch > Thread Color Management > Apply Threadlist"
 msgstr "Ink/Stitch 无法直接导入颜色格式。 但是您可以打开刺绣文件并使用扩展 > 墨水/针迹 > 线色管理 > 应用线列表应用颜色"
 
@@ -2595,7 +2595,7 @@ msgstr ""
 msgid "Please verify file locations."
 msgstr ""
 
-#: lib/extensions/letters_to_font.py:35
+#: lib/extensions/letters_to_font.py:36
 msgid "Font directory not found. Please specify an existing directory."
 msgstr ""
 
@@ -3257,7 +3257,7 @@ msgstr "字体“%s”没有变体。"
 msgid "Error writing to %(path)s: %(error)s"
 msgstr "写入错误 %(path)s%(error)s"
 
-#: lib/stitch_plan/generate_stitch_plan.py:75
+#: lib/stitch_plan/generate_stitch_plan.py:76
 #, python-format
 msgid "File does not exist and cannot be opened. Please correct the file path and try again.\\r%s"
 msgstr "文件不存在，无法打开。 请更正文件路径并重试。\\r%s"
@@ -3298,16 +3298,16 @@ msgstr ""
 msgid "There is no selected stitchable element. Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects in case you have expected a stitchout."
 msgstr "没有选择可缝合的元素。请运行扩展 > Ink/Stitch >疑难解答>疑难解答对象，以防您期望一个缝线。"
 
-#: lib/stitches/auto_run.py:140 lib/stitches/auto_satin.py:356
+#: lib/stitches/auto_run.py:139 lib/stitches/auto_satin.py:356
 msgid "Auto-Route"
 msgstr "自动路线"
 
-#: lib/stitches/auto_run.py:274
+#: lib/stitches/auto_run.py:273
 #, python-format
 msgid "AutoRun %d"
 msgstr "自动运行 %d"
 
-#: lib/stitches/auto_run.py:276
+#: lib/stitches/auto_run.py:275
 #, python-format
 msgid "AutoRun Underpath %d"
 msgstr "自动下缝 %d"
@@ -4518,19 +4518,19 @@ msgstr "在半径（毫米）内"
 msgid "Yellow markers"
 msgstr "黄色标记"
 
-#: inx/inkstitch_density_map.inx:22 inx/inkstitch_stitch_plan_preview.inx:15
+#: inx/inkstitch_density_map.inx:22 inx/inkstitch_stitch_plan_preview.inx:14
 msgid "Design layer visibility"
 msgstr "设计层可见性"
 
-#: inx/inkstitch_density_map.inx:23 inx/inkstitch_stitch_plan_preview.inx:16
+#: inx/inkstitch_density_map.inx:23 inx/inkstitch_stitch_plan_preview.inx:15
 msgid "Unchanged"
 msgstr "不变"
 
-#: inx/inkstitch_density_map.inx:24 inx/inkstitch_stitch_plan_preview.inx:17
+#: inx/inkstitch_density_map.inx:24 inx/inkstitch_stitch_plan_preview.inx:16
 msgid "Hidden"
 msgstr "隐藏"
 
-#: inx/inkstitch_density_map.inx:25 inx/inkstitch_stitch_plan_preview.inx:18
+#: inx/inkstitch_density_map.inx:25 inx/inkstitch_stitch_plan_preview.inx:17
 msgid "Lower opacity"
 msgstr "降低不透明度"
 
@@ -6053,24 +6053,28 @@ msgstr "模拟器/现实预览"
 msgid "Stitch Plan Preview"
 msgstr ""
 
-#: inx/inkstitch_stitch_plan_preview.inx:14
+#: inx/inkstitch_stitch_plan_preview.inx:22
 msgid "Move stitch plan beside the canvas"
 msgstr "在画布旁边移动缝合计划"
 
-#: inx/inkstitch_stitch_plan_preview.inx:20
+#: inx/inkstitch_stitch_plan_preview.inx:23
 msgid "Needle points"
 msgstr "针点"
 
-#: inx/inkstitch_stitch_plan_preview.inx:22
+#: inx/inkstitch_stitch_plan_preview.inx:25
 msgid "Lock"
 msgstr ""
 
-#: inx/inkstitch_stitch_plan_preview.inx:22
+#: inx/inkstitch_stitch_plan_preview.inx:25
 msgid "Make stitch plan insensitive to mouse interactions"
 msgstr ""
 
-#: inx/inkstitch_stitch_plan_preview.inx:23
+#: inx/inkstitch_stitch_plan_preview.inx:26
 msgid "Display command symbols"
+msgstr ""
+
+#: inx/inkstitch_stitch_plan_preview.inx:30
+msgid "Override last stitch plan"
 msgstr ""
 
 #: inx/inkstitch_stitch_plan_preview_undo.inx:3

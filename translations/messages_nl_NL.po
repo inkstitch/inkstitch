@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-12-29 00:57+0000\n"
-"PO-Revision-Date: 2023-12-29 00:58\n"
+"POT-Creation-Date: 2024-01-15 01:11+0000\n"
+"PO-Revision-Date: 2024-01-15 01:11\n"
 "Last-Translator: \n"
 "Language-Team: Dutch\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-29 00:57+0000\n"
+"POT-Creation-Date: 2024-01-15 01:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -940,11 +940,11 @@ msgstr ""
 msgid "weird one"
 msgstr ""
 
-#: inkstitch.py:89
+#: inkstitch.py:141
 msgid "Ink/Stitch cannot read your SVG file. This is often the case when you use a file which has been created with Adobe Illustrator."
 msgstr "Ink/Stitch kan uw SVG-bestand niet lezen. Dit is vaak het geval wanneer u een bestand gebruikt dat met Adobe Illustrator is gemaakt."
 
-#: inkstitch.py:92
+#: inkstitch.py:144
 msgid "Try to import the file into Inkscape through 'File > Import...' (Ctrl+I)"
 msgstr "Probeer het bestand te importeren in Inkscape via 'Bestand > Importeren...' (Ctrl+I)"
 
@@ -2303,7 +2303,7 @@ msgid "Please chose an other color palette for your design."
 msgstr "Kies een ander kleurpalet voor je ontwerp."
 
 #. auto-route running stitch columns extension
-#: lib/extensions/auto_run.py:57 lib/extensions/cutwork_segmentation.py:47
+#: lib/extensions/auto_run.py:57 lib/extensions/cutwork_segmentation.py:45
 msgid "Please select one or more stroke elements."
 msgstr "Selecteer een of meer lijnelementen."
 
@@ -2392,15 +2392,15 @@ msgstr "Selecteer een of meer satijnbanen om te snijden."
 msgid "this satin column does not have a \"satin column cut point\" command attached to it. Please use the \"Attach commands\" extension and attach the \"Satin Column cut point\" command first."
 msgstr "deze satijnbaan heeft geen \"satijnbaan snijpunt\" commando gekoppeld. Gebruik de \"Koppel commando's\" uitbreiding en koppel het \"Satijnbaan Snijpunt\" commando eerst."
 
-#: lib/extensions/cutwork_segmentation.py:77
+#: lib/extensions/cutwork_segmentation.py:75
 msgid "Please select at least one element with a stroke color."
 msgstr ""
 
-#: lib/extensions/cutwork_segmentation.py:162
+#: lib/extensions/cutwork_segmentation.py:159
 msgid "Cutwork Group"
 msgstr "Snijwerk groep"
 
-#: lib/extensions/cutwork_segmentation.py:170
+#: lib/extensions/cutwork_segmentation.py:167
 #, python-format
 msgid "Needle #%s"
 msgstr "Naald #%s"
@@ -2529,7 +2529,7 @@ msgstr "We konden geen vulkleuren vinden op uw tekst elementen. Lees de instruct
 msgid "Please select at least one object with a gradient fill."
 msgstr ""
 
-#: lib/extensions/input.py:18
+#: lib/extensions/input.py:19
 msgid "Ink/Stitch cannot import color formats directly. But you can open the embroidery file and apply the color with Extensions > Ink/Stitch > Thread Color Management > Apply Threadlist"
 msgstr "Ink/Stitch kan kleurformaten niet rechtstreeks importeren. Maar u kunt het borduurbestand openen en de kleur toepassen met Extensies > Ink/Stitch > Garenkleurenbeheer > Garenlijst toepassen"
 
@@ -2595,7 +2595,7 @@ msgstr "Geef een lettertype-bestand op."
 msgid "Please verify file locations."
 msgstr ""
 
-#: lib/extensions/letters_to_font.py:35
+#: lib/extensions/letters_to_font.py:36
 msgid "Font directory not found. Please specify an existing directory."
 msgstr "Lettertype map niet gevonden. Gelieve een bestaande map op te geven."
 
@@ -3258,7 +3258,7 @@ msgstr "Het lettertype '%s' heeft geen varianten."
 msgid "Error writing to %(path)s: %(error)s"
 msgstr "Fout bij schrijven naar %(path)s: %(error)s"
 
-#: lib/stitch_plan/generate_stitch_plan.py:75
+#: lib/stitch_plan/generate_stitch_plan.py:76
 #, python-format
 msgid "File does not exist and cannot be opened. Please correct the file path and try again.\\r%s"
 msgstr "Bestand bestaat niet en kan niet worden geopend. Corrigeer het bestandspad en probeer het opnieuw.\\r%s"
@@ -3299,16 +3299,16 @@ msgstr ""
 msgid "There is no selected stitchable element. Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects in case you have expected a stitchout."
 msgstr "Er is geen geselecteerd stitchable element. Voer Extensies > Inkt/Stik > Probleemoplossing > Objecten oplossen uit voor het geval u een stitchout verwachtte."
 
-#: lib/stitches/auto_run.py:140 lib/stitches/auto_satin.py:356
+#: lib/stitches/auto_run.py:139 lib/stitches/auto_satin.py:356
 msgid "Auto-Route"
 msgstr "Auto route"
 
-#: lib/stitches/auto_run.py:274
+#: lib/stitches/auto_run.py:273
 #, python-format
 msgid "AutoRun %d"
 msgstr "AutoRun %d"
 
-#: lib/stitches/auto_run.py:276
+#: lib/stitches/auto_run.py:275
 #, python-format
 msgid "AutoRun Underpath %d"
 msgstr "AutoRun Onderpad %d"
@@ -4519,19 +4519,19 @@ msgstr "binnen een straal (mm) van"
 msgid "Yellow markers"
 msgstr "Gele markeringen"
 
-#: inx/inkstitch_density_map.inx:22 inx/inkstitch_stitch_plan_preview.inx:15
+#: inx/inkstitch_density_map.inx:22 inx/inkstitch_stitch_plan_preview.inx:14
 msgid "Design layer visibility"
 msgstr "Zichtbaarheid ontwerplaag"
 
-#: inx/inkstitch_density_map.inx:23 inx/inkstitch_stitch_plan_preview.inx:16
+#: inx/inkstitch_density_map.inx:23 inx/inkstitch_stitch_plan_preview.inx:15
 msgid "Unchanged"
 msgstr "Ongewijzigd"
 
-#: inx/inkstitch_density_map.inx:24 inx/inkstitch_stitch_plan_preview.inx:17
+#: inx/inkstitch_density_map.inx:24 inx/inkstitch_stitch_plan_preview.inx:16
 msgid "Hidden"
 msgstr "Verborgen"
 
-#: inx/inkstitch_density_map.inx:25 inx/inkstitch_stitch_plan_preview.inx:18
+#: inx/inkstitch_density_map.inx:25 inx/inkstitch_stitch_plan_preview.inx:17
 msgid "Lower opacity"
 msgstr "Lagere ondoorzichtigheid"
 
@@ -6054,24 +6054,28 @@ msgstr "Simulator / Realistisch Voorbeeld"
 msgid "Stitch Plan Preview"
 msgstr "Stekenplan Voorbeeld"
 
-#: inx/inkstitch_stitch_plan_preview.inx:14
+#: inx/inkstitch_stitch_plan_preview.inx:22
 msgid "Move stitch plan beside the canvas"
 msgstr "Verplaats steekplan naast het canvas"
 
-#: inx/inkstitch_stitch_plan_preview.inx:20
+#: inx/inkstitch_stitch_plan_preview.inx:23
 msgid "Needle points"
 msgstr "Naaldpunten"
 
-#: inx/inkstitch_stitch_plan_preview.inx:22
+#: inx/inkstitch_stitch_plan_preview.inx:25
 msgid "Lock"
 msgstr ""
 
-#: inx/inkstitch_stitch_plan_preview.inx:22
+#: inx/inkstitch_stitch_plan_preview.inx:25
 msgid "Make stitch plan insensitive to mouse interactions"
 msgstr ""
 
-#: inx/inkstitch_stitch_plan_preview.inx:23
+#: inx/inkstitch_stitch_plan_preview.inx:26
 msgid "Display command symbols"
+msgstr ""
+
+#: inx/inkstitch_stitch_plan_preview.inx:30
+msgid "Override last stitch plan"
 msgstr ""
 
 #: inx/inkstitch_stitch_plan_preview_undo.inx:3
