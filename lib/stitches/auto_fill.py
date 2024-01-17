@@ -10,6 +10,7 @@ from itertools import chain, groupby
 
 import networkx
 from shapely import geometry as shgeo
+from shapely import segmentize
 from shapely.ops import snap
 from shapely.strtree import STRtree
 
@@ -80,9 +81,13 @@ def auto_fill(shape,
     segments = [segment for row in rows for segment in row]
     fill_stitch_graph = build_fill_stitch_graph(shape, segments, starting_point, ending_point)
 
-    fill_stitch_graph = graph_make_valid(fill_stitch_graph)
-    if not graph_is_valid(fill_stitch_graph):
+    if networkx.is_empty(fill_stitch_graph):
+        # The graph may be empty if the shape is so small that it fits between the
+        # rows of stitching.
         return fallback(shape, running_stitch_length, running_stitch_tolerance)
+
+    # ensure graph is eulerian
+    fill_stitch_graph = graph_make_valid(fill_stitch_graph)
 
     travel_graph = build_travel_graph(fill_stitch_graph, shape, angle, underpath)
 
@@ -118,10 +123,6 @@ def which_outline(shape, coords):
 def get_shape_outlines_and_indices(shape):
     outlines = ensure_multi_line_string(shape.boundary).geoms
     outline_indices = list(range(len(outlines)))
-    # exclude small holes/artifacts from outline indices
-    for i, outline in enumerate(outlines):
-        if i > 0 and outline.length < 2:
-            outline_indices.remove(i)
     return outlines, outline_indices
 
 
@@ -223,8 +224,11 @@ def insert_node(graph, shape, point):
             if key == "outline":
                 edges.append(((start, end), data))
         edge, data = min(edges, key=lambda edge_data: shgeo.LineString(edge_data[0]).distance(projected_point))
-        graph.add_edge(edge[0], node, key='segment', underpath_edges=[], geometry=shgeo.LineString([edge[0], node]))
-        graph.add_edge(node, edge[1], key='segment', underpath_edges=[], geometry=shgeo.LineString([node, edge[0]]))
+        line_segment = shgeo.LineString([edge[0], node])
+        if line_segment.length > 10:
+            line_segment = segmentize(line_segment, 10)
+        graph.add_edge(edge[0], node, key='segment', underpath_edges=[], geometry=line_segment)
+        graph.add_edge(node, edge[1], key='segment', underpath_edges=[], geometry=line_segment.reverse())
 
     tag_nodes_with_outline_and_projection(graph, shape, nodes=[node])
 
@@ -292,13 +296,6 @@ def add_edges_between_outline_nodes(graph, duplicate_every_other=False):
         check_stop_flag()
 
 
-def graph_is_valid(graph):
-    # The graph may be empty if the shape is so small that it fits between the
-    # rows of stitching.  Certain small weird shapes can also cause a non-
-    # eulerian graph.
-    return not networkx.is_empty(graph) and networkx.is_eulerian(graph)
-
-
 def graph_make_valid(graph):
     if not networkx.is_eulerian(graph):
         return networkx.eulerize(graph)
@@ -308,7 +305,7 @@ def graph_make_valid(graph):
 def fallback(shape, running_stitch_length, running_stitch_tolerance):
     """Generate stitches when the auto-fill algorithm fails.
 
-    If graph_is_valid() returns False, we're not going to be able to run the
+    If we received an empty graph, we're not going to be able to run the
     auto-fill algorithm.  Instead, we'll just do running stitch around the
     outside of the shape.  In all likelihood, the shape is so small it won't
     matter.

@@ -7,15 +7,17 @@ from math import ceil, floor, sqrt
 
 import numpy as np
 from inkex import DirectedLineSegment, Transform
+from networkx import is_empty
 from shapely import segmentize
 from shapely.affinity import rotate
 from shapely.geometry import LineString, MultiLineString, Point, Polygon
 
 from ..stitch_plan import StitchGroup
 from ..svg import get_node_transform
+from ..utils.geometry import ensure_multi_line_string
 from ..utils.threading import check_stop_flag
-from .auto_fill import (build_fill_stitch_graph, build_travel_graph, fallback,
-                        find_stitch_path, graph_is_valid, graph_make_valid)
+from .auto_fill import (build_fill_stitch_graph, build_travel_graph,
+                        find_stitch_path, graph_make_valid)
 from .circular_fill import path_to_stitches
 from .guided_fill import apply_stitches
 
@@ -257,19 +259,16 @@ def _get_stitch_groups(fill, shape, colors, color_lines, starting_point, ending_
     for i, color in enumerate(colors):
         lines = color_lines[color]
 
-        multiline = MultiLineString(lines).intersection(shape)
-        if not isinstance(multiline, MultiLineString):
-            if isinstance(multiline, LineString):
-                multiline = MultiLineString([multiline])
-            else:
-                continue
-        segments = [list(line.coords) for line in multiline.geoms if len(line.coords) > 1]
+        multiline = ensure_multi_line_string(MultiLineString(lines).intersection(shape), 1.5)
+        if multiline.is_empty:
+            continue
 
+        segments = [list(line.coords) for line in multiline.geoms if len(line.coords) > 1]
         fill_stitch_graph = build_fill_stitch_graph(shape, segments, starting_point, ending_point)
 
+        if is_empty(fill_stitch_graph):
+            continue
         fill_stitch_graph = graph_make_valid(fill_stitch_graph)
-        if not graph_is_valid(fill_stitch_graph):
-            return fallback(shape, fill.running_stitch_length, fill.running_stitch_tolerance)
 
         travel_graph = build_travel_graph(fill_stitch_graph, shape, fill.angle, False)
         path = find_stitch_path(fill_stitch_graph, travel_graph, starting_point, ending_point)

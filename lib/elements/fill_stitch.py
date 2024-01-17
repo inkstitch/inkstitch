@@ -3,7 +3,6 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-import logging
 import math
 import re
 
@@ -25,6 +24,7 @@ from ..svg import PIXELS_PER_MM, get_node_transform
 from ..svg.clip import get_clip_path
 from ..svg.tags import INKSCAPE_LABEL
 from ..utils import cache
+from ..utils.geometry import ensure_multi_polygon
 from ..utils.param import ParamOption
 from .element import EmbroideryElement, param
 from .validation import ValidationError, ValidationWarning
@@ -557,12 +557,6 @@ class FillStitch(EmbroideryElement):
         # biggest path.
         paths = self.paths
         paths.sort(key=lambda point_list: shgeo.Polygon(point_list).area, reverse=True)
-        # Very small holes will cause a shape to be rendered as an outline only
-        # they are too small to be rendered and only confuse the auto_fill algorithm.
-        # So let's ignore them
-        if shgeo.Polygon(paths[0]).area > 5 and shgeo.Polygon(paths[-1]).area < 5:
-            paths = [path for path in paths if shgeo.Polygon(path).area > 3]
-
         return shgeo.MultiPolygon([(paths[0], paths[1:])])
 
     @property
@@ -570,32 +564,11 @@ class FillStitch(EmbroideryElement):
     def shape(self):
         shape = self._get_clipped_path()
 
-        if self.shape_is_valid(shape):
-            return shape
+        if shape.is_valid:
+            return ensure_multi_polygon(shape, 3)
 
-        # Repair not valid shapes
-        logger = logging.getLogger('shapely.geos')
-        level = logger.level
-        logger.setLevel(logging.CRITICAL)
-
-        valid_shape = make_valid(shape)
-
-        logger.setLevel(level)
-
-        if isinstance(valid_shape, shgeo.Polygon):
-            return shgeo.MultiPolygon([valid_shape])
-        if isinstance(valid_shape, shgeo.LineString):
-            return shgeo.MultiPolygon([])
-        if shape.area == 0:
-            return shgeo.MultiPolygon([])
-
-        polygons = []
-        for polygon in valid_shape.geoms:
-            if isinstance(polygon, shgeo.Polygon) and polygon.area > 5:
-                polygons.append(polygon)
-            if isinstance(polygon, shgeo.MultiPolygon):
-                polygons.extend(polygon.geoms)
-        return shgeo.MultiPolygon(polygons)
+        shape = make_valid(shape)
+        return ensure_multi_polygon(shape, 3)
 
     def _get_clipped_path(self):
         if self.node.clip is None:
@@ -612,40 +585,16 @@ class FillStitch(EmbroideryElement):
         except GEOSException:
             return self.original_shape
 
-        if isinstance(intersection, shgeo.Polygon):
-            return shgeo.MultiPolygon([intersection])
-
-        if isinstance(intersection, shgeo.MultiPolygon):
-            return intersection
-
-        polygons = []
-        if isinstance(intersection, shgeo.GeometryCollection):
-            for geom in intersection.geoms:
-                if isinstance(geom, shgeo.Polygon):
-                    polygons.append(geom)
-        return shgeo.MultiPolygon([polygons])
-
-    def shape_is_valid(self, shape):
-        # Shapely will log to stdout to complain about the shape unless we make
-        # it shut up.
-        logger = logging.getLogger('shapely.geos')
-        level = logger.level
-        logger.setLevel(logging.CRITICAL)
-
-        valid = shape.is_valid
-
-        logger.setLevel(level)
-
-        return valid
+        return intersection
 
     def validation_errors(self):
-        if not self.shape_is_valid(self.shape):
+        if not self.shape.is_valid:
             why = explain_validity(self.shape)
             message, x, y = re.match(r"(?P<message>.+)\[(?P<x>.+)\s(?P<y>.+)\]", why).groups()
             yield InvalidShapeError((x, y))
 
     def validation_warnings(self):  # noqa: C901
-        if not self.shape_is_valid(self.original_shape):
+        if not self.original_shape.is_valid:
             why = explain_validity(self.original_shape)
             message, x, y = re.match(r"(?P<message>.+)\[(?P<x>.+)\s(?P<y>.+)\]", why).groups()
             if "Hole lies outside shell" in message:
