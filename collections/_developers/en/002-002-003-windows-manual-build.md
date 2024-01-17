@@ -137,8 +137,7 @@ The bash environment needs some paths for the installed software. So let's set i
 
 ## Manual Install for developing Ink/Stitch
 
-* We are basically setup. We only need to generate the files for the Inkscape menu etry and setup build the electron extensions.
-  In your terminal emulator run:
+* We prepared everything to finally setup Ink/Stitch itself. In your terminal emulator run:
   ```
   cd inkstitch
   make manual
