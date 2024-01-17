@@ -93,6 +93,10 @@ The bash environment needs some paths for the installed software. So let's set i
 
   ![Inkscape extensions folder](/assets/images/docs/en/extensions-folder-location-win.jpg)
 
+  If you do not aim for manual install but want to install a build version **do not follow this step**, but choose any other
+  directory to where you want to save the project files
+  {: .notice--warning }
+
 * Right click into the file browser and click on `Git Bash Here` to download Ink/Stitch into the extensions folder
 
   ![Right click menu](/assets/images/developers/windows-manual-build/GIT.png)
@@ -156,6 +160,9 @@ The bash environment needs some paths for the installed software. So let's set i
   python -m pip install pyinstaller==5.13.2
   ```
 
+* Ink/Stitch uses [7-zip](https://7-zip.org/) to zip up the build file. So you need to install it as well.
+  Add it to PATHS as described above as `C:\Program Files\7-Zip` (64bit) or `C:\Program Files (x86)\7-Zip` (32bit)
+
 * In the terminal emulator run:
 
   ```
@@ -164,3 +171,6 @@ The bash environment needs some paths for the installed software. So let's set i
   ```
 
 * In the file browser you will find the finished builds in the folder `artifacts`
+
+  Do not install the build version if you have the manual install in the extensions folder or you'll have duplicated menu entries.
+  {: .notice--warning }
