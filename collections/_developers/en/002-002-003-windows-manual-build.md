@@ -142,13 +142,12 @@ The bash environment needs some paths for the installed software. So let's set i
   cd inkstitch
   make manual
   ```
-
+* You can now use the Ink/Stitch installation. Changes to the Python code take effect the next time the extension is run.
 * After adding a new template for new Ink/Stitch extensions, run the following command to update the Inskcape menu entries.
   ```
   make inx
   ```
   If you are running Ink/Stitch through Inkscape, close and reopen Inkscape after running the command.
-* You can now use the Ink/Stitch installation. Changes to the Python code take effect the next time the extension is run.
 
 ## Generate a build to test run your update on other Windows systems
 
