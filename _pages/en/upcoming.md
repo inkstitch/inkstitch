@@ -27,6 +27,8 @@ toc: true
     * add test run option to display to be removed element names ([#2552](https://github.com/inkstitch/inkstitch/issues/2552))
   * Preferences
     * electron -> wxpython ([#2479](https://github.com/inkstitch/inkstitch/issues/2479))
+  * Stitch Plan Preview
+    * Add option to keep/overwrite previous stitch plan ([#2642](https://github.com/inkstitch/inkstitch/issues/#2642))
 
 ## Lettering
 
@@ -43,12 +45,14 @@ Further updates have been made to:
 
   * AGS Γαραμου Garamond
   * Apex Simple AGS
+  * Dinomouse
   * TT Masters
   * TT Directors
 
 ([#2607](https://github.com/inkstitch/inkstitch/issues/2607))
 ([#2579](https://github.com/inkstitch/inkstitch/issues/2579))
 ([#2476](https://github.com/inkstitch/inkstitch/issues/2476))
+([#2682](https://github.com/inkstitch/inkstitch/pull/2682))
 
 ## Params
 

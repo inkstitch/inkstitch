@@ -1,11 +1,9 @@
 ---
-title: "Windows Manual Build"
+title: "Windows Manual Install and Manual Build"
 permalink: /developers/inkstitch/windows-manual-build/
-last_modified_at: 2022-02-02
+last_modified_at: 2024-01-17
 toc: true
 ---
-This is an instructional guide how to build Ink/Stitch without using the manual install.
-
 **Info:** For this description we use **`foo`** as a user name. Whenever it occures **replace it** with your personal windows user name.
 {: .notice--warning }
 
@@ -13,15 +11,10 @@ This is an instructional guide how to build Ink/Stitch without using the manual 
 
 Install these dependancies to build a local build of inkstitch for windows.
 
-* [Build Tools for Visual Studio 2022](https://visualstudio.microsoft.com/de/downloads/)
-  * Scroll down on their website until you see "Tools for Visual Studio 2022" and open the submenu
-  * Scroll down again and download "Buildtools for Visual Studio 2022"
-  * Run the installation
-    ![Click on modify](/assets/images/developers/windows-manual-build/build-tools-modify.png)
-    ![Select desktop development with c++](/assets/images/developers/windows-manual-build/windows_build-tools.png)
 * [Python](https://www.python.org/downloads/release/python-398/)
 
-  Choose the 32bit version, run the installer and check "Add Python x.xx to PATH".
+  Depending on your target arch, select either 32bit or 64 bit version and run the installer.
+  Check "Add Python x.xx to PATH".
   This for the bash enviroment to find python.
   ![Add python to path](/assets/images/developers/windows-manual-build/Python.png)
   Then click on "Install now"
@@ -33,7 +26,7 @@ Install these dependancies to build a local build of inkstitch for windows.
   Use the default settings during installation.
 * [nodejs](https://nodejs.org/en/download/)
 
-  Install LTS 32 bit version. Install with default settings.
+  Install LTS 32bit or 64bit version (depending on your target arch). Install with default settings.
 
 * [Inno setup](https://jrsoftware.org/isdl.php)
 
@@ -77,10 +70,30 @@ The bash environment needs some paths for the installed software. So let's set i
 
   ![Environment Variables](/assets/images/developers/windows-manual-build/Final-paths.png)
 
+## Enable long names for git
+
+* In the search bar type `cdm` and chose `Run as administrator`.
+
+  ![Run CMD as administrator](/assets/images/developers/windows-manual-build/cmd-admin.png)
+
+* Run the following command
+
+  ```
+  git config --system core.longpaths true
+  ```
+
+* Close the command prompt, we do not need admin rights after this.
+
 ## Download Ink/Stitch
 
-* Create a folder where you want to keep your Ink/Stitch source files
-* Right click into the file browser and click on `Git Bash Here`
+* If you already have an Ink/Stitch version installed [uninstall](/docs/install-windows/#uninstall-inkstitch)
+  it first to avoid double menu entries in Inkscape.
+
+* Go to `Edit > Preferences > System` and open your extensions folder.
+
+  ![Inkscape extensions folder](/assets/images/docs/en/extensions-folder-location-win.jpg)
+
+* Right click into the file browser and click on `Git Bash Here` to download Ink/Stitch into the extensions folder
 
   ![Right click menu](/assets/images/developers/windows-manual-build/GIT.png)
 * Run the following commands in the terminal emulator:
@@ -90,25 +103,25 @@ The bash environment needs some paths for the installed software. So let's set i
   git clone https://github.com/inkstitch/pyembroidery
   ```
 
-## Edit Ink/Stitch requirements
-
-* Open the new inkstitch folder in the file browser
-* Open requirements.txt with your prefered text editor
-  * Delete `./pyembroidery`
-  * Replace `numpy<=1.17.4` with `numpy`
-
 ## Setup Python
 
-* In the terminal emulator run the following commands:
-
+* For **32bit** run the following commands in the terminal emulator:
   ```
   python -m pip install --upgrade pip
   python -m pip install wheel
-  python -m pip install git+https://github.com/gtaylor/python-colormath
-  python -m pip install -e pyembroidery/
-  cd inkstitch
-  python -m pip install -r requirements.txt
-  python -m pip install pyinstaller
+  python -m pip install pillow==9.5.0
+  python -m pip install numpy==1.23.1
+  python -m pip install scipy==1.9.0
+  pip install wxPython
+  ```
+* For **64bit** run the following commands in the terminal emulator:
+  ```
+  python -m pip install --upgrade pip
+  python -m pip install wheel
+  ```
+* Now we are ready to install the rest of the requirements through the Ink/Stitch requirements file
+  ```
+  python -m pip install -r inkstitch/requirements.txt
   ```
 * For debugging with pydevd also run:
   ```
@@ -118,43 +131,38 @@ The bash environment needs some paths for the installed software. So let's set i
 ## Setup yarn
 
 * In the terminal emulator run
-
   ```
   npm install --global yarn
   ```
 
-## Set Ink/Stitch environment variables BUILD and VERSION
+## Manual Install for developing Ink/Stitch
 
-* In the file browser open the `Makefile` with your predered text editor
-  Add these line to the Makefile at the beginging:
-
+* We are basically setup. We only need to generate the files for the Inkscape menu etry and setup build the electron extensions.
+  In your terminal emulator run:
   ```
-  export BUILD=windows
-  export VERSION=my-dev-build
-  ```
-
-* Open the bin folder and edit the file `build-distribution-archives`
-
-  Comment out VERSION
-
-  ```
-  # VERSION
+  cd inkstitch
+  make manual
   ```
 
-* Also in the bin folder edit `build-windows-installer`
-
-  Update VERSION to the **same** name which you used in the Makefile
-
+* After adding a new template for new Ink/Stitch extensions, run the following command to update the Inskcape menu entries.
   ```
-  VERSION=my-dev-build
+  make inx
   ```
+  If you are running Ink/Stitch through Inkscape, close and reopen Inkscape after running the command.
+* You can now use the Ink/Stitch installation. Changes to the Python code take effect the next time the extension is run.
 
-## Build Ink/Stitch
+## Generate a build to test run your update on other Windows systems
+
+* To build Ink/Stitch you'll need to install pyinstaller.
+  ```
+  python -m pip install pyinstaller==5.13.2
+  ```
 
 * In the terminal emulator run:
 
   ```
-  make distclean && make dist
+  cd inkstitch
+  make distlocal
   ```
 
 * In the file browser you will find the finished builds in the folder `artifacts`
