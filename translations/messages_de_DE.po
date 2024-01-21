@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-01-15 01:11+0000\n"
-"PO-Revision-Date: 2024-01-15 01:11\n"
+"PO-Revision-Date: 2024-01-21 01:15\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -1847,7 +1847,7 @@ msgstr "Einfach"
 
 #: lib/elements/satin_column.py:129
 msgid "Staggered"
-msgstr ""
+msgstr "Gemustert"
 
 #: lib/elements/satin_column.py:133
 msgid "Split Method"
@@ -1887,7 +1887,7 @@ msgstr "Wenn leer, wir er Wert für die maximale Stichlänge verwendet. Kleinere
 
 #: lib/elements/satin_column.py:182
 msgid "Stagger split stitches this many times before repeating"
-msgstr "Linienanzahl bis sich das Muster wiederholt"
+msgstr "Reihenanzahl bis sich das Muster wiederholt"
 
 #: lib/elements/satin_column.py:194
 msgid "Short stitch inset"
@@ -2133,11 +2133,11 @@ msgstr "Diese Einstellung überschreibt den Wert \"Anzahl der Linien\""
 
 #: lib/elements/stroke.py:202
 msgid "Stagger lines this many times before repeating"
-msgstr "Linienanzahl bis sich das Muster wiederholt"
+msgstr "Reihenanzahl bis sich das Muster wiederholt"
 
 #: lib/elements/stroke.py:203
 msgid "Length of the cycle by which successive stitch lines are staggered. Fractional values are allowed and can have less visible diagonals than integer values. For linear ripples only."
-msgstr "Dieser Wert beschreibt, nach wie vielen Linien die Einstichstellen übereinander liegen. Dezimalwerte sind zulässig und zeigen weniger deutliche Diagonalen im Stickbild. Nur für lineare Ripples."
+msgstr "Dieser Wert beschreibt, nach wie vielen Reihen die Einstichstellen übereinander liegen. Dezimalwerte sind zulässig und zeigen weniger deutliche Diagonalen im Stickbild. Nur für lineare Ripples."
 
 #: lib/elements/stroke.py:215
 msgid "Skip first lines"
@@ -6083,7 +6083,7 @@ msgstr "Zeige visuelle Befehle"
 
 #: inx/inkstitch_stitch_plan_preview.inx:30
 msgid "Override last stitch plan"
-msgstr ""
+msgstr "Letzten Stichplan überschreiben"
 
 #: inx/inkstitch_stitch_plan_preview_undo.inx:3
 msgid "Undo Stitch Plan Preview"
