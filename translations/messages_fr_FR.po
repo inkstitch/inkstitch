@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-01-15 01:11+0000\n"
-"PO-Revision-Date: 2024-01-15 01:11\n"
+"PO-Revision-Date: 2024-01-23 01:11\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -2433,7 +2433,7 @@ msgstr "%s densité"
 
 #: lib/extensions/display_stacking_order.py:55
 msgid "Stacking Order"
-msgstr ""
+msgstr "Ordre d'empilement"
 
 #: lib/extensions/duplicate_params.py:18
 msgid "This function copies Ink/Stitch parameters from the first selected element to the rest of the selection. Please select at least two elements."
@@ -4505,7 +4505,7 @@ msgstr "Carte de densité"
 #: inx/inkstitch_simulator.inx:10 inx/inkstitch_stitch_plan_preview.inx:10
 #: inx/inkstitch_stitch_plan_preview_undo.inx:10
 msgid "Visualize and Export"
-msgstr ""
+msgstr "Visualiser et exporter"
 
 #: inx/inkstitch_density_map.inx:14
 msgid "Red markers"
@@ -4549,11 +4549,11 @@ msgstr "Taille des marqueurs"
 
 #: inx/inkstitch_display_stacking_order.inx:3
 msgid "Display stacking order"
-msgstr ""
+msgstr "Montrer l'ordre d'empilement"
 
 #: inx/inkstitch_display_stacking_order.inx:14
 msgid "Font size"
-msgstr ""
+msgstr "Taille de la police"
 
 #: inx/inkstitch_duplicate_params.inx:3
 msgid "Duplicate Params"
@@ -6084,7 +6084,7 @@ msgstr "Montrer les symboles de commandes"
 
 #: inx/inkstitch_stitch_plan_preview.inx:30
 msgid "Override last stitch plan"
-msgstr ""
+msgstr "Écraser le dernier plan de broderie"
 
 #: inx/inkstitch_stitch_plan_preview_undo.inx:3
 msgid "Undo Stitch Plan Preview"
