@@ -423,6 +423,32 @@ class FillStitch(EmbroideryElement):
         return self.get_multiple_int_param("bean_stitch_repeats", "0")
 
     @property
+    @param('zigzag_spacing_mm',
+           _('Zig-zag spacing (peak-to-peak)'),
+           tooltip=_('Length of stitches in zig-zag mode.'),
+           unit='mm',
+           type='float',
+           select_items=[('fill_method', 'meander_fill')],
+           default=0,
+           sort_index=35)
+    @cache
+    def zigzag_spacing(self):
+        return self.get_float_param("zigzag_spacing_mm", 0)
+
+    @property
+    @param('zigzag_width_mm',
+           _('Zigzag width'),
+           tooltip=_('Width of the zigzag line.'),
+           unit='mm',
+           type='float',
+           select_items=[('fill_method', 'meander_fill')],
+           default=3,
+           sort_index=36)
+    @cache
+    def zigzag_width(self):
+        return self.get_float_param("zigzag_width_mm", 0)
+
+    @property
     def color(self):
         # SVG spec says the default fill is black
         return self.get_style("fill", "#000000")

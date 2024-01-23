@@ -13,7 +13,8 @@ from ..i18n import _
 from ..marker import get_marker_elements
 from ..stitch_plan import StitchGroup
 from ..stitches.ripple_stitch import ripple_stitch
-from ..stitches.running_stitch import bean_stitch, running_stitch
+from ..stitches.running_stitch import (bean_stitch, running_stitch,
+                                       zigzag_stitch)
 from ..svg import get_node_transform, parse_length_with_units
 from ..svg.clip import get_clip_path
 from ..threads import ThreadColor
@@ -444,27 +445,7 @@ class Stroke(EmbroideryElement):
         # that length:
         patch = self.running_stitch(path, zigzag_spacing / 2.0, self.running_stitch_tolerance)
 
-        # Now move the points left and right.  Consider each pair
-        # of points in turn, and move perpendicular to them,
-        # alternating left and right.
-
-        stroke_width = stroke_width + pull_compensation
-        offset = stroke_width / 2.0
-
-        for i in range(len(patch) - 1):
-            start = patch.stitches[i]
-            end = patch.stitches[i + 1]
-            # sometimes the stitch results into zero length which cause a division by zero error
-            # ignoring this leads to a slightly bad result, but that is better than no output
-            if (end - start).length() == 0:
-                continue
-            segment_direction = (end - start).unit()
-            zigzag_direction = segment_direction.rotate_left()
-
-            if i % 2 == 1:
-                zigzag_direction *= -1
-
-            patch.stitches[i] += zigzag_direction * offset
+        patch.stitches = zigzag_stitch(patch.stitches, zigzag_spacing, stroke_width, pull_compensation)
 
         return patch
 
