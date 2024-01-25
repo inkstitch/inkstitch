@@ -3,6 +3,7 @@ from random import random
 
 import numpy as np
 import shapely.prepared
+from networkx import is_empty
 from shapely import geometry as shgeo
 from shapely.affinity import translate
 from shapely.ops import linemerge, nearest_points, unary_union
@@ -15,7 +16,7 @@ from ..utils.geometry import (ensure_geometry_collection,
 from ..utils.threading import check_stop_flag
 from .auto_fill import (auto_fill, build_fill_stitch_graph, build_travel_graph,
                         collapse_sequential_outline_edges, find_stitch_path,
-                        graph_is_valid, travel)
+                        graph_make_valid, travel)
 
 
 def guided_fill(shape,
@@ -39,9 +40,10 @@ def guided_fill(shape,
 
     fill_stitch_graph = build_fill_stitch_graph(shape, segments, starting_point, ending_point)
 
-    if not graph_is_valid(fill_stitch_graph):
+    if is_empty(fill_stitch_graph):
         return fallback(shape, guideline, row_spacing, max_stitch_length, running_stitch_length, running_stitch_tolerance,
                         num_staggers, skip_last, starting_point, ending_point, underpath)
+    fill_stitch_graph = graph_make_valid(fill_stitch_graph)
 
     travel_graph = build_travel_graph(fill_stitch_graph, shape, angle, underpath)
     path = find_stitch_path(fill_stitch_graph, travel_graph, starting_point, ending_point)

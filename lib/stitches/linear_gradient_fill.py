@@ -7,16 +7,17 @@ from math import ceil, floor, sqrt
 
 import numpy as np
 from inkex import DirectedLineSegment, Transform
-from networkx import eulerize
+from networkx import is_empty
 from shapely import segmentize
 from shapely.affinity import rotate
 from shapely.geometry import LineString, MultiLineString, Point, Polygon
 
 from ..stitch_plan import StitchGroup
 from ..svg import get_node_transform
+from ..utils.geometry import ensure_multi_line_string
 from ..utils.threading import check_stop_flag
 from .auto_fill import (build_fill_stitch_graph, build_travel_graph,
-                        find_stitch_path, graph_is_valid)
+                        find_stitch_path, graph_make_valid)
 from .circular_fill import path_to_stitches
 from .guided_fill import apply_stitches
 
@@ -24,8 +25,6 @@ from .guided_fill import apply_stitches
 def linear_gradient_fill(fill, shape, starting_point, ending_point):
     lines, colors, stop_color_line_indices = _get_lines_and_colors(shape, fill)
     color_lines, colors = _get_color_lines(lines, colors, stop_color_line_indices)
-    if fill.gradient is None:
-        colors.pop()
     stitch_groups = _get_stitch_groups(fill, shape, colors, color_lines, starting_point, ending_point)
     return stitch_groups
 
@@ -45,7 +44,7 @@ def _get_lines_and_colors(shape, fill):
     # get lines
     lines, bottom_line = _get_lines(fill, shape, orig_bbox, angle)
 
-    gradient_start_line_index = round(bottom_line.project(Point(gradient_start)) / fill.row_spacing)
+    gradient_start_line_index = round(bottom_line.project(gradient_start) / fill.row_spacing)
     if gradient_start_line_index == 0:
         gradient_start_line_index = -round(LineString([gradient_start, gradient_end]).project(Point(bottom_line.coords[0])) / fill.row_spacing)
     stop_color_line_indices = [gradient_start_line_index]
@@ -70,7 +69,7 @@ def _get_gradient_info(fill, bbox):
         colors = [style['stop-color'] if float(style['stop-opacity']) > 0 else 'none' for style in fill.gradient.stop_styles]
         gradient_start, gradient_end = gradient_start_end(fill.node, fill.gradient)
         angle = gradient_angle(fill.node, fill.gradient)
-    return angle, colors, offsets, gradient_start, gradient_end
+    return angle, colors, offsets, Point(list(gradient_start)), Point(list(gradient_end))
 
 
 def _get_lines(fill, shape, bounding_box, angle):
@@ -260,22 +259,16 @@ def _get_stitch_groups(fill, shape, colors, color_lines, starting_point, ending_
     for i, color in enumerate(colors):
         lines = color_lines[color]
 
-        multiline = MultiLineString(lines).intersection(shape)
-        if not isinstance(multiline, MultiLineString):
-            if isinstance(multiline, LineString):
-                multiline = MultiLineString([multiline])
-            else:
-                continue
-        segments = [list(line.coords) for line in multiline.geoms if len(line.coords) > 1]
+        multiline = ensure_multi_line_string(MultiLineString(lines).intersection(shape), 1.5)
+        if multiline.is_empty:
+            continue
 
+        segments = [list(line.coords) for line in multiline.geoms if len(line.coords) > 1]
         fill_stitch_graph = build_fill_stitch_graph(shape, segments, starting_point, ending_point)
 
-        if not graph_is_valid(fill_stitch_graph):
-            # try to eulerize
-            fill_stitch_graph = eulerize(fill_stitch_graph)
-            # still not valid? continue without rendering the color section
-            if not graph_is_valid(fill_stitch_graph):
-                continue
+        if is_empty(fill_stitch_graph):
+            continue
+        fill_stitch_graph = graph_make_valid(fill_stitch_graph)
 
         travel_graph = build_travel_graph(fill_stitch_graph, shape, fill.angle, False)
         path = find_stitch_path(fill_stitch_graph, travel_graph, starting_point, ending_point)
@@ -290,7 +283,7 @@ def _get_stitch_groups(fill, shape, colors, color_lines, starting_point, ending_
             False  # no underpath
         )
 
-        stitches = _remove_start_end_travel(fill, stitches, colors, i)
+        stitches = remove_start_end_travel(fill, stitches, colors, i)
 
         stitch_groups.append(StitchGroup(
             color=color,
@@ -304,7 +297,7 @@ def _get_stitch_groups(fill, shape, colors, color_lines, starting_point, ending_
     return stitch_groups
 
 
-def _remove_start_end_travel(fill, stitches, colors, color_section):
+def remove_start_end_travel(fill, stitches, colors, color_section):
     # We can savely remove travel stitches at start since we are changing color all the time
     # but we do care for the first starting point, it is important when they use an underlay of the same color
     remove_before = 0

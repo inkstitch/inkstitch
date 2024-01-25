@@ -7,22 +7,25 @@
 
 import math
 from itertools import chain, groupby
-import warnings
 
 import networkx
 from shapely import geometry as shgeo
+from shapely import segmentize
 from shapely.ops import snap
 from shapely.strtree import STRtree
 
 from ..debug import debug
 from ..stitch_plan import Stitch
 from ..svg import PIXELS_PER_MM
+from ..utils import cache
 from ..utils.clamp_path import clamp_path_to_polygon
-from ..utils.geometry import Point as InkstitchPoint, line_string_to_point_list, ensure_multi_line_string
-from .fill import intersect_region_with_grating, stitch_row
-from .running_stitch import running_stitch
+from ..utils.geometry import Point as InkstitchPoint
+from ..utils.geometry import (ensure_multi_line_string,
+                              line_string_to_point_list)
 from ..utils.smoothing import smooth_path
 from ..utils.threading import check_stop_flag
+from .fill import intersect_region_with_grating, stitch_row
+from .running_stitch import running_stitch
 
 
 class NoGratingsError(Exception):
@@ -78,8 +81,13 @@ def auto_fill(shape,
     segments = [segment for row in rows for segment in row]
     fill_stitch_graph = build_fill_stitch_graph(shape, segments, starting_point, ending_point)
 
-    if not graph_is_valid(fill_stitch_graph):
+    if networkx.is_empty(fill_stitch_graph):
+        # The graph may be empty if the shape is so small that it fits between the
+        # rows of stitching.
         return fallback(shape, running_stitch_length, running_stitch_tolerance)
+
+    # ensure graph is eulerian
+    fill_stitch_graph = graph_make_valid(fill_stitch_graph)
 
     travel_graph = build_travel_graph(fill_stitch_graph, shape, angle, underpath)
 
@@ -105,12 +113,17 @@ def which_outline(shape, coords):
     # fail sometimes.
 
     point = shgeo.Point(*coords)
-    outlines = ensure_multi_line_string(shape.boundary).geoms
-    outline_indices = list(range(len(outlines)))
+    outlines, outline_indices = get_shape_outlines_and_indices(shape)
     closest = min(outline_indices,
                   key=lambda index: outlines[index].distance(point))
-
     return closest
+
+
+@cache
+def get_shape_outlines_and_indices(shape):
+    outlines = ensure_multi_line_string(shape.boundary).geoms
+    outline_indices = list(range(len(outlines)))
+    return outlines, outline_indices
 
 
 def project(shape, coords, outline_index):
@@ -198,11 +211,25 @@ def insert_node(graph, shape, point):
         if key == "outline" and data['outline'] == outline:
             edges.append(((start, end), data))
 
-    edge, data = min(edges, key=lambda edge_data: shgeo.LineString(edge_data[0]).distance(projected_point))
+    if len(edges) > 0:
+        edge, data = min(edges, key=lambda edge_data: shgeo.LineString(edge_data[0]).distance(projected_point))
+        graph.remove_edge(*edge, key="outline")
+        graph.add_edge(edge[0], node, key="outline", **data)
+        graph.add_edge(node, edge[1], key="outline", **data)
+    else:
+        # The node lies on an outline which has no intersection with any segment.
+        # We need to add a segment to connect the inserted node with the nearest available edge from
+        # an other outline.  It's the best we can do without running into networkx no path errors.
+        for start, end, key, data in graph.edges(keys=True, data=True):
+            if key == "outline":
+                edges.append(((start, end), data))
+        edge, data = min(edges, key=lambda edge_data: shgeo.LineString(edge_data[0]).distance(projected_point))
+        line_segment = shgeo.LineString([edge[0], node])
+        if line_segment.length > 10:
+            line_segment = segmentize(line_segment, 10)
+        graph.add_edge(edge[0], node, key='segment', underpath_edges=[], geometry=line_segment)
+        graph.add_edge(node, edge[1], key='segment', underpath_edges=[], geometry=line_segment.reverse())
 
-    graph.remove_edge(*edge, key="outline")
-    graph.add_edge(edge[0], node, key="outline", **data)
-    graph.add_edge(node, edge[1], key="outline", **data)
     tag_nodes_with_outline_and_projection(graph, shape, nodes=[node])
 
 
@@ -269,17 +296,16 @@ def add_edges_between_outline_nodes(graph, duplicate_every_other=False):
         check_stop_flag()
 
 
-def graph_is_valid(graph):
-    # The graph may be empty if the shape is so small that it fits between the
-    # rows of stitching.  Certain small weird shapes can also cause a non-
-    # eulerian graph.
-    return not networkx.is_empty(graph) and networkx.is_eulerian(graph)
+def graph_make_valid(graph):
+    if not networkx.is_eulerian(graph):
+        return networkx.eulerize(graph)
+    return graph
 
 
 def fallback(shape, running_stitch_length, running_stitch_tolerance):
     """Generate stitches when the auto-fill algorithm fails.
 
-    If graph_is_valid() returns False, we're not going to be able to run the
+    If we received an empty graph, we're not going to be able to run the
     auto-fill algorithm.  Instead, we'll just do running stitch around the
     outside of the shape.  In all likelihood, the shape is so small it won't
     matter.
@@ -373,10 +399,7 @@ def process_travel_edges(graph, fill_stitch_graph, shape, travel_edges):
     # allows for building a set of shapes and then efficiently testing
     # the set for intersection.  This allows us to do blazing-fast
     # queries of which line segments overlap each underpath edge.
-    with warnings.catch_warnings():
-        # We know about this upcoming change and we don't want to bother users.
-        warnings.filterwarnings('ignore', 'STRtree will be changed in 2.0.0 and will not be compatible with versions < 2.')
-        strtree = STRtree(segments)
+    strtree = STRtree(segments)
 
     # This makes the distance calculations below a bit faster.  We're
     # not looking for high precision anyway.
@@ -647,7 +670,8 @@ def travel(shape, travel_graph, edge, running_stitch_length, running_stitch_tole
         path = smooth_path(path, 2)
     else:
         path = [InkstitchPoint.from_tuple(point) for point in path]
-    path = clamp_path_to_polygon(path, shape)
+    if len(path) > 1:
+        path = clamp_path_to_polygon(path, shape)
 
     points = running_stitch(path, running_stitch_length, running_stitch_tolerance)
     stitches = [Stitch(point) for point in points]

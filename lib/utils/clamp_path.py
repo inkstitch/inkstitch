@@ -56,8 +56,10 @@ def adjust_line_end(line, end):
 
 
 def find_border(polygon, point):
+    """Finds subpath of polygon which intersects with the point.
+       Ignores small border fragments"""
     for border in polygon.interiors:
-        if border.intersects(point):
+        if border.length > 0.1 and border.intersects(point):
             return border
     else:
         return polygon.exterior
@@ -76,7 +78,10 @@ def clamp_path_to_polygon(path, polygon):
 
     # This splits the path at the points where it intersects with the polygon
     # border and returns the pieces in the same order as the original path.
-    split_path = ensure_geometry_collection(LineString(path).difference(polygon.boundary))
+    try:
+        split_path = ensure_geometry_collection(LineString(path).difference(polygon.boundary))
+    except FloatingPointError:
+        return path
 
     if len(split_path.geoms) == 1:
         # The path never intersects with the polygon, so it's entirely inside.

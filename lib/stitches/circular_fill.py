@@ -1,3 +1,4 @@
+from networkx import is_empty
 from shapely import geometry as shgeo
 from shapely.ops import substring
 
@@ -5,7 +6,7 @@ from ..stitch_plan import Stitch
 from ..utils.geometry import reverse_line_string
 from .auto_fill import (build_fill_stitch_graph, build_travel_graph,
                         collapse_sequential_outline_edges, fallback,
-                        find_stitch_path, graph_is_valid, travel)
+                        find_stitch_path, graph_make_valid, travel)
 from .contour_fill import _make_fermat_spiral
 from .running_stitch import bean_stitch, running_stitch
 
@@ -73,8 +74,10 @@ def circular_fill(shape,
             segments.append([(point.x, point.y) for point in coords])
 
     fill_stitch_graph = build_fill_stitch_graph(shape, segments, starting_point, ending_point)
-    if not graph_is_valid(fill_stitch_graph):
+
+    if is_empty(fill_stitch_graph):
         return fallback(shape, running_stitch_length, running_stitch_tolerance)
+    fill_stitch_graph = graph_make_valid(fill_stitch_graph)
 
     travel_graph = build_travel_graph(fill_stitch_graph, shape, angle, underpath)
     path = find_stitch_path(fill_stitch_graph, travel_graph, starting_point, ending_point)
