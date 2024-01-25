@@ -7,9 +7,10 @@ import os
 import subprocess
 import sys
 
-from inkex import Boolean
+from inkex import Boolean, errormsg
 
 from ..elements import Clone, FillStitch, Polyline, SatinColumn, Stroke
+from ..i18n import _
 from ..utils import get_bundled_dir
 from .base import InkstitchExtension
 
@@ -67,16 +68,15 @@ class SelectElements(InkstitchExtension):
             # we are running a local install
             py_path = sys.executable
 
-            # For some reason we cannot use the subprocess method wait() to finish the process properly
-            # and we'll get a warning. It will break functionality of the selection.
-            # There is most possibly a better way than to just ignore the warning?!?
-            with open(os.devnull, 'w') as null:
-                sys.stderr = null
-                sys.stdout = null
-
         # custom python path
         if self.options.python_path:
             py_path = self.options.python_path
+
+        if not os.path.isfile(py_path):
+            errormsg(_("Could not detect python path. "
+                       "Please insert python path manually as described in the help tab "
+                       "of the select elements dialog."))
+            sys.exit(0)
 
         return py_path, file_path
 
