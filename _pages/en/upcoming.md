@@ -1,7 +1,7 @@
 ---
 title: "New Features, Updates and Fixes for Ink/Stitch after the release of v3.0.1"
 permalink: /upcoming/
-last_modified_at: 2024-01-01
+last_modified_at: 2024-01-25
 sidebar:
   nav: pages
 toc: true
@@ -25,6 +25,8 @@ toc: true
   * Cleanup document:
     * add option to delete empty groups and layers ([#2552](https://github.com/inkstitch/inkstitch/issues/2552))
     * add test run option to display to be removed element names ([#2552](https://github.com/inkstitch/inkstitch/issues/2552))
+  * Fill to Stroke
+    * add one centerline group for each selected fill or replace existing fill if it results in only one path ([#2675](https://github.com/inkstitch/inkstitch/issues/2675#issuecomment-1882919122))
   * Preferences
     * electron -> wxpython ([#2479](https://github.com/inkstitch/inkstitch/issues/2479))
   * Stitch Plan Preview
@@ -100,8 +102,11 @@ Further updates have been made to:
 
 ## Bug Fixes
 
+* [#2683](https://github.com/inkstitch/inkstitch/issues/2683) Select elements: output error message when python path cannot be found
+* [#2675](https://github.com/inkstitch/inkstitch/issues/2675) Fix error message on fill to stroke if small fill artifacts are present
  * [#2644](https://github.com/inkstitch/inkstitch/issues/2644) Letters to font: escape labels to allow import of filenames with quotes
  * [#2657](https://github.com/inkstitch/inkstitch/issues/2657) Troubleshoot satin: point on rail and not the center of the element
+* [#2643](https://github.com/inkstitch/inkstitch/issues/2643) Fix some networkx errors for fill stitches
  * [#2603](https://github.com/inkstitch/inkstitch/issues/2603) fix polyline shape 
  * [#2637](https://github.com/inkstitch/inkstitch/issues/2637) Add shape property to clone
  * [#2638](https://github.com/inkstitch/inkstitch/issues/2638) Troubleshoot: remove old layer before creating a new one to avoid transform (and other) issues
