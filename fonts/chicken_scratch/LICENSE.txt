@@ -1,4 +1,9 @@
-Copyright 2022 The Instrument Serif Project Authors (https://github.com/Instrument/instrument-serif)
+This font has been adapted for Ink/Stitch by safire3002
+
+ORIGINAL FONT DOWNLOAD: https://fonts.google.com/specimen/Reenie+Beanie
+with Reserved Font Name "Reenie Beanie"
+
+Copyright (c) 2010, James Grieshaber (james@typeco.com)
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1.
 This license is copied below, and is also available with a FAQ at:
