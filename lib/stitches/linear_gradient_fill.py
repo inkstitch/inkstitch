@@ -259,7 +259,7 @@ def _get_stitch_groups(fill, shape, colors, color_lines, starting_point, ending_
     for i, color in enumerate(colors):
         lines = color_lines[color]
 
-        multiline = ensure_multi_line_string(MultiLineString(lines).intersection(shape), 1.5)
+        multiline = ensure_multi_line_string(MultiLineString(lines).intersection(shape))
         if multiline.is_empty:
             continue
 
