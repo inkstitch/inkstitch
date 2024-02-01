@@ -114,9 +114,11 @@ def ensure_multi_line_string(thing, min_size=0):
         multi_line_string = MultiLineString([thing])
     elif thing.geom_type == "GeometryCollection":
         multilinestring = []
-        for line in thing.geoms:
-            if line.geom_type == "LineString":
-                multilinestring.append(line)
+        for shape in thing.geoms:
+            if shape.geom_type == "MultiLineString":
+                multilinestring.extend(shape.geoms)
+            elif shape.geom_type == "LineString":
+                multilinestring.append(shape)
         multi_line_string = MultiLineString(multilinestring)
     if min_size > 0:
         multi_line_string = MultiLineString([line for line in multi_line_string.geoms if line.length > min_size])
@@ -146,9 +148,11 @@ def ensure_multi_polygon(thing, min_size=0):
         multi_polygon = MultiPolygon([thing])
     elif thing.geom_type == "GeometryCollection":
         multipolygon = []
-        for polygon in thing.geoms:
-            if polygon.geom_type == "Polygon":
-                multipolygon.append(polygon)
+        for shape in thing.geoms:
+            if shape.geom_type == "MultiPolygon":
+                multipolygon.extend(shape.geoms)
+            elif shape.geom_type == "Polygon":
+                multipolygon.append(shape)
         multi_polygon = MultiPolygon(multipolygon)
     if min_size > 0:
         multi_polygon = MultiPolygon([polygon for polygon in multi_polygon.geoms if polygon.area > min_size])
