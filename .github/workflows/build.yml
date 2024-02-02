@@ -124,7 +124,6 @@ jobs:
           python -m pip install -r requirements.txt
           # for networkx
           python -m pip install pandas
-          python -m pip install pyarrow
 
           python -m pip install pyinstaller
 

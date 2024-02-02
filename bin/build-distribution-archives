@@ -9,7 +9,7 @@ if [ "$BUILD" = "osx" ]; then
     plutil -replace CFBundleShortVersionString -string ${VERSION} dist/inkstitch.app/Contents/Info.plist
     rm -rf dist/inkstitch/
     # this removes the extra dylibs that cause notary to fail.
-    rm -rf dist/inkstitch.app/Contents/MacOS/shapely/.dylibs
+    rm -rf dist/inkstitch.app/Contents/Resources/shapely/.dylibs
     # Install location for pkgbuild
     PKG_INSTALL_PATH="/tmp/inkstitch/"
     # Checking arch of macos and setting path of electron for arm64 or intel
@@ -36,7 +36,7 @@ if [ "$BUILD" = "osx" ]; then
         DEV_IDENT="Developer ID Application: Lex Neva (929A568N58)"
         echo "Signing of inkstitch.app"
         # Coyping inkstitch-gui.app into inkstitch
-        ditto "${ELECTRON_BUILD_PATH}" dist/inkstitch.app/Contents/MacOS/electron
+        ditto "${ELECTRON_BUILD_PATH}" dist/inkstitch.app/Contents/Frameworks/electron
         # signing the binary may fix notary issue
         /usr/bin/codesign -s "${DEV_IDENT}" \
                         --deep \
@@ -92,7 +92,7 @@ if [ "$BUILD" = "osx" ]; then
         fi
     else
         # local builds will not be signed or notarized
-        cp -a "${ELECTRON_BUILD_PATH}" dist/inkstitch.app/Contents/MacOS/electron
+        cp -a "${ELECTRON_BUILD_PATH}" dist/inkstitch.app/Contents/Frameworks/electron
         pkgbuild --root dist/inkstitch.app \
                 --component-plist installer_scripts/inkstitch.plist \
                 --ownership recommended \
