@@ -3,9 +3,6 @@
 set -e
 info_year=$( date "+%Y" )
 
-# New version of PyInstaller rearranges folder configuration causing broken builds, this reverts to original.
-pyinstaller_args+="--contents-directory . "
-
 # We need to use the precompiled bootloader linked with graphical Mac OS X
 # libraries if we develop a GUI application for Mac:
 if [ "$BUILD" = "osx" -o "$BUILD" = "windows" ]; then

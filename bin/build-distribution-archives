@@ -8,8 +8,21 @@ if [ "$BUILD" = "osx" ]; then
     # adding version to Info.plist
     plutil -replace CFBundleShortVersionString -string ${VERSION} dist/inkstitch.app/Contents/Info.plist
     rm -rf dist/inkstitch/
-    # this removes the extra dylibs that cause notary to fail.
-    rm -rf dist/inkstitch.app/Contents/Resources/shapely/.dylibs
+    # unlinking the libgeos and dot dylib folder syslinks and fix broken syslinks for notary.
+    # copying libgeos dylibs with ditto preserves information to pass notary.
+    unlink dist/inkstitch.app/Contents/Resources/shapely/.dylibs
+
+    unlink dist/inkstitch.app/Contents/Resources/libgeos.3.11.2.dylib
+    unlink dist/inkstitch.app/Contents/Resources/libgeos_c.1.17.2.dylib
+
+    unlink dist/inkstitch.app/Contents/Frameworks/libgeos.3.11.2.dylib
+    unlink dist/inkstitch.app/Contents/Frameworks/libgeos_c.1.17.2.dylib
+
+    ditto dist/inkstitch.app/Contents/Frameworks/shapely/__dot__dylibs/libgeos.3.11.2.dylib dist/inkstitch.app/Contents/Resources/
+    ditto dist/inkstitch.app/Contents/Frameworks/shapely/__dot__dylibs/libgeos_c.1.17.2.dylib dist/inkstitch.app/Contents/Resources/
+
+    ditto dist/inkstitch.app/Contents/Frameworks/shapely/__dot__dylibs/libgeos.3.11.2.dylib dist/inkstitch.app/Contents/Frameworks/
+    ditto dist/inkstitch.app/Contents/Frameworks/shapely/__dot__dylibs/libgeos_c.1.17.2.dylib dist/inkstitch.app/Contents/Frameworks/
     # Install location for pkgbuild
     PKG_INSTALL_PATH="/tmp/inkstitch/"
     # Checking arch of macos and setting path of electron for arm64 or intel
