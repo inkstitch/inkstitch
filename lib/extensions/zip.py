@@ -35,11 +35,11 @@ class Zip(InkstitchExtension):
         for format in pyembroidery.supported_formats():
             if 'writer' in format and format['category'] in ['embroidery', 'color', 'image', 'stitch']:
                 extension = format['extension']
-                self.arg_parser.add_argument('--format-%s' % extension, type=Boolean, default=True, dest=extension)
+                self.arg_parser.add_argument('--format-%s' % extension, type=Boolean, default=False, dest=extension)
                 self.formats.append(extension)
-        self.arg_parser.add_argument('--format-svg', type=Boolean, default=True, dest='svg')
+        self.arg_parser.add_argument('--format-svg', type=Boolean, default=False, dest='svg')
         self.formats.append('svg')
-        self.arg_parser.add_argument('--format-threadlist', type=Boolean, default=True, dest='threadlist')
+        self.arg_parser.add_argument('--format-threadlist', type=Boolean, default=False, dest='threadlist')
         self.formats.append('threadlist')
 
         self.arg_parser.add_argument('--x-repeats', type=int, default=1, dest='x_repeats', )
