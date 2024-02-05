@@ -9,7 +9,7 @@ import tempfile
 from copy import deepcopy
 from zipfile import ZipFile
 
-from inkex import Boolean
+from inkex import Boolean, errormsg
 from lxml import etree
 
 import pyembroidery
@@ -27,28 +27,25 @@ class Zip(InkstitchExtension):
     def __init__(self, *args, **kwargs):
         InkstitchExtension.__init__(self)
 
-        self.arg_parser.add_argument('--notebook', type=Boolean, default=True)
-        self.arg_parser.add_argument('--file-formats', type=Boolean, default=True)
-        self.arg_parser.add_argument('--panelization', type=Boolean, default=True)
+        self.arg_parser.add_argument('--notebook', type=str, default='')
+        self.arg_parser.add_argument('--custom-file-name', type=str, default='', dest='custom_file_name')
 
         # it's kind of obnoxious that I have to do this...
         self.formats = []
         for format in pyembroidery.supported_formats():
             if 'writer' in format and format['category'] in ['embroidery', 'color', 'image', 'stitch']:
                 extension = format['extension']
-                self.arg_parser.add_argument('--format-%s' % extension, type=Boolean, dest=extension)
+                self.arg_parser.add_argument('--format-%s' % extension, type=Boolean, default=False, dest=extension)
                 self.formats.append(extension)
-        self.arg_parser.add_argument('--format-svg', type=Boolean, dest='svg')
+        self.arg_parser.add_argument('--format-svg', type=Boolean, default=False, dest='svg')
         self.formats.append('svg')
-        self.arg_parser.add_argument('--format-threadlist', type=Boolean, dest='threadlist')
+        self.arg_parser.add_argument('--format-threadlist', type=Boolean, default=False, dest='threadlist')
         self.formats.append('threadlist')
 
-        self.arg_parser.add_argument('--x-repeats', type=int, dest='x_repeats', default=1)
-        self.arg_parser.add_argument('--y-repeats', type=int, dest='y_repeats', default=1)
-        self.arg_parser.add_argument('--x-spacing', type=float, dest='x_spacing', default=100)
-        self.arg_parser.add_argument('--y-spacing', type=float, dest='y_spacing', default=100)
-
-        self.arg_parser.add_argument('--custom-file-name', type=str, dest='custom_file_name', default='')
+        self.arg_parser.add_argument('--x-repeats', type=int, default=1, dest='x_repeats', )
+        self.arg_parser.add_argument('--y-repeats', type=int, default=1, dest='y_repeats',)
+        self.arg_parser.add_argument('--x-spacing', type=float, default=100, dest='x_spacing')
+        self.arg_parser.add_argument('--y-spacing', type=float, default=100, dest='y_spacing',)
 
     def effect(self):
         if not self.get_elements():
@@ -85,7 +82,7 @@ class Zip(InkstitchExtension):
                 files.append(output_file)
 
         if not files:
-            self.errormsg(_("No embroidery file formats selected."))
+            errormsg(_("No embroidery file formats selected."))
 
         temp_file = tempfile.NamedTemporaryFile(suffix=".zip", delete=False)
 
