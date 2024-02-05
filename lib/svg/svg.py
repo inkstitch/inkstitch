@@ -14,13 +14,13 @@ def get_document(node):
     return node.getroottree().getroot()
 
 
-def generate_unique_id(document_or_element, prefix="path", blacklist=None):
+def generate_unique_id(document_or_element, prefix="path", blocklist=None):
     if isinstance(document_or_element, etree._ElementTree):
         document = document_or_element.getroot()
     else:
         document = get_document(document_or_element)
 
-    new_id = document.get_unique_id(prefix, blacklist=blacklist)
+    new_id = document.get_unique_id(prefix, blacklist=blocklist)
 
     return new_id
 
