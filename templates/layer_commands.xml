@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <inkscape-extension translationdomain="inkstitch" xmlns="http://www.inkscape.org/namespace/inkscape/extension">
     <name>Add Layer Commands</name>
-    <id>org.inkstitch.layer_commands</id>
+    <id>org.{{ id_inkstitch }}.layer_commands</id>
     <label>Commands will be added to the currently-selected layer.</label>
     {% for command, description in layer_commands %}
     <param name="{{ command }}" type="boolean" gui-text="{{ description }}">false</param>
@@ -10,7 +10,7 @@
     <effect>
         <object-type>all</object-type>
         <effects-menu>
-            <submenu name="Ink/Stitch" translatable="no">
+            <submenu name="{{ menu_inkstitch }}" translatable="no">
                 <submenu name="Commands" />
             </submenu>
         </effects-menu>
