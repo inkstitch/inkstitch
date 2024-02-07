@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-01-29 01:05+0000\n"
-"PO-Revision-Date: 2024-01-29 01:06\n"
+"POT-Creation-Date: 2024-02-06 01:03+0000\n"
+"PO-Revision-Date: 2024-02-06 01:04\n"
 "Last-Translator: \n"
 "Language-Team: Ukrainian\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-29 01:05+0000\n"
+"POT-Creation-Date: 2024-02-06 01:03+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -173,397 +173,419 @@ msgstr ""
 msgid "Cherry for Kaalleen is a large decorative font of size approximatively 75mm. It contains 36 glyphs including the numbers and the 26 capitals  A-Z. It can be reduced down to 80% and enlarged up to 130%"
 msgstr ""
 
-#. name of font in fonts/chopin
+#. name of font in fonts/chicken_scratch
 #: inkstitch-fonts-metadata.py:58
+msgid "Chicken Scratch"
+msgstr ""
+
+#. description of font in fonts/chicken_scratch
+#: inkstitch-fonts-metadata.py:60
+#, python-format
+msgid "A handwritten font. Can be scaled up to 120% or down to 80%. Caps height is around 19mm or .75 inches."
+msgstr ""
+
+#. name of font in fonts/chopin
+#: inkstitch-fonts-metadata.py:62
 msgid "Chopin Script"
 msgstr "Chopin Script"
 
 #. description of font in fonts/chopin
-#: inkstitch-fonts-metadata.py:60
+#: inkstitch-fonts-metadata.py:64
 #, python-format
 msgid "The capital M is 38.3 millimeter wide at 100% scale. Can be scaled down to 80% or up to 120%. Every satin has zigzag underlay"
 msgstr "Велика М має ширину 38.3 мм при 100% масштабі. Може масштабуватися від 80% до 120%. Кожний сатин має попередню прострочку зигзагом"
 
 #. name of font in fonts/coronaviral
-#: inkstitch-fonts-metadata.py:62
+#: inkstitch-fonts-metadata.py:66
 msgid "Coronaviral"
 msgstr "Coronaviral"
 
 #. description of font in fonts/coronaviral
-#: inkstitch-fonts-metadata.py:64
+#: inkstitch-fonts-metadata.py:68
 msgid "A font created with manual sitch. Do not change the size or very little. The capital em is 22mm wide at 100%"
 msgstr "Шрифт створено ручним прошиттям. Не міняйте розмір (чуть-чуть можна). Велика М має ширину 22 мм при 100% масштабі"
 
 #. name of font in fonts/dejavufont
-#: inkstitch-fonts-metadata.py:66
+#: inkstitch-fonts-metadata.py:70
 msgid "Dejavu Serif"
 msgstr "Dejavu Serif"
 
 #. description of font in fonts/dejavufont
-#: inkstitch-fonts-metadata.py:68
+#: inkstitch-fonts-metadata.py:72
 #, python-format
 msgid "DejaVu Serif Condensed. The capital M is 19,8 millimeter wide at 100% scale.  Can be scaled down to 80% or up to 150%.  Every satin has center-walk underlay."
 msgstr "DejaVu Serif стиснутий. Велика М має ширину 19.8 мм при 100% масштабі. Може маштабуватися від 80% до 150%. Кожний сатин має попередню прострочку по центру."
 
 #. name of font in fonts/digory_doodles_bean
-#: inkstitch-fonts-metadata.py:70
+#: inkstitch-fonts-metadata.py:74
 msgid "Digory Doodles Bean"
 msgstr "Digory Doodles Bean"
 
 #. description of font in fonts/digory_doodles_bean
-#: inkstitch-fonts-metadata.py:72
+#: inkstitch-fonts-metadata.py:76
 msgid "All letters have mixed satin and bean stitch. The capital M is 16mm tall. The small x is 7 mm."
 msgstr ""
 
 #. name of font in fonts/dinomouse72
-#: inkstitch-fonts-metadata.py:74
+#: inkstitch-fonts-metadata.py:78
 msgid "DinoMouse72"
 msgstr ""
 
 #. description of font in fonts/dinomouse72
-#: inkstitch-fonts-metadata.py:76
+#: inkstitch-fonts-metadata.py:80
 msgid "A Font Grove jawn. Satin width is 2.5mm at 18mm capitals"
 msgstr ""
 
 #. name of font in fonts/emilio_20
-#: inkstitch-fonts-metadata.py:78
+#: inkstitch-fonts-metadata.py:82
 msgid "Emilio 20"
 msgstr "Emilio 20"
 
 #. description of font in fonts/emilio_20
-#: inkstitch-fonts-metadata.py:80
+#: inkstitch-fonts-metadata.py:84
 #, python-format
 msgid "Emilio 20 is a font with capital only and numbers. M is 48.5 millimeter wide at 100% scale. Can be scaled down to 70% or up to 140%. Every satin has zigzag underlay"
 msgstr ""
 
 #. name of font in fonts/emilio_20_applique
-#: inkstitch-fonts-metadata.py:82
+#: inkstitch-fonts-metadata.py:86
 msgid "EMILIO_20_Applique"
 msgstr ""
 
 #. description of font in fonts/emilio_20_applique
-#: inkstitch-fonts-metadata.py:84
+#: inkstitch-fonts-metadata.py:88
 msgid "Emilio 20 Applique is an Applique font approximatively 50mm high. It should not be scaled down but may be scaled up to 150%. This font is an altered version (larger satin columns) of Emilio_20 while Emilio_20_Bold is  Emilio_20_applique without the applique"
 msgstr ""
 
 #. name of font in fonts/emilio_20_bold
-#: inkstitch-fonts-metadata.py:86
+#: inkstitch-fonts-metadata.py:90
 msgid "EMILIO_20_Bold"
 msgstr ""
 
 #. description of font in fonts/emilio_20_bold
-#: inkstitch-fonts-metadata.py:88
+#: inkstitch-fonts-metadata.py:92
 msgid "Emilio_20_Bold is an altered version of Emilio_20  and is approximatively 50mm high."
 msgstr ""
 
 #. name of font in fonts/emilio_20_simple
-#: inkstitch-fonts-metadata.py:90
+#: inkstitch-fonts-metadata.py:94
 msgid "Emilio 20 Simple"
 msgstr ""
 
 #. description of font in fonts/emilio_20_simple
-#: inkstitch-fonts-metadata.py:92
+#: inkstitch-fonts-metadata.py:96
 #, python-format
 msgid "Emilio is a font with capital only and numbers. M is 42.5 millimeter wide at 100% scale. Can be scaled down to 70% or up to 140%. Every satin has zigzag underlay"
 msgstr ""
 
 #. name of font in fonts/emilio_20_tricolore
-#: inkstitch-fonts-metadata.py:94
+#: inkstitch-fonts-metadata.py:98
 msgid "EMILIO 20 TRICOLORE"
 msgstr ""
 
 #. description of font in fonts/emilio_20_tricolore
-#: inkstitch-fonts-metadata.py:96
+#: inkstitch-fonts-metadata.py:100
 msgid "Emilio 20 tricolore is a large tricolor fill stitches and satin columns font of  size approximately 100mm. It contains 36 glyphs including the numbers and the 26 capitals  A-Z. It can be reduced down to 90% and enlarged up to 120%"
 msgstr ""
 
 #. name of font in fonts/espresso_KOR
-#: inkstitch-fonts-metadata.py:98
+#: inkstitch-fonts-metadata.py:102
 msgid "Espresso KOR"
 msgstr ""
 
 #. description of font in fonts/espresso_KOR
-#: inkstitch-fonts-metadata.py:100
+#: inkstitch-fonts-metadata.py:104
 msgid "The capital M is 16.2 mm high at 100 scale. Every satin has zigzag underlay. x is 11.5 mm high, q is 17.5 mm high, l is 17.2 mm high. The font may be scaled up to 200% and down to 80%"
 msgstr ""
 
 #. name of font in fonts/espresso_tiny
-#: inkstitch-fonts-metadata.py:102
+#: inkstitch-fonts-metadata.py:106
 msgid "Espresso tiny"
 msgstr ""
 
 #. description of font in fonts/espresso_tiny
-#: inkstitch-fonts-metadata.py:104
+#: inkstitch-fonts-metadata.py:108
 msgid "This font is an altered version  of Espresso KOR, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory. The altered embroidery parameters of this font allow to scale down the original Espresso font between 25% (for a 5mm font ) and 55 % (for a 11mm font)."
 msgstr ""
 
 #. name of font in fonts/excalibur_KOR
-#: inkstitch-fonts-metadata.py:106
+#: inkstitch-fonts-metadata.py:110
 msgid "Excalibur KOR"
 msgstr ""
 
 #. description of font in fonts/excalibur_KOR
-#: inkstitch-fonts-metadata.py:108
+#: inkstitch-fonts-metadata.py:112
 msgid "Excalibur KOR is a small satin column manuscript font of size approximatively 20mm. It can be reduced down to 80% and enlarged up to 140%. It contains 144 glyphs, covering most western European languages needs."
 msgstr ""
 
 #. name of font in fonts/fold_inkstitch
-#: inkstitch-fonts-metadata.py:110
+#: inkstitch-fonts-metadata.py:114
 msgid "Fold Ink/Stitch"
 msgstr ""
 
 #. description of font in fonts/fold_inkstitch
-#: inkstitch-fonts-metadata.py:112
+#: inkstitch-fonts-metadata.py:116
 msgid "Fold Ink/Stitch is a large triple and quintuple running stitches capital font of size 100 mm. It contains 40 glyphs including all numbers and the 26 capitals  A-Z. It can be reduced down to 80% and enlarged up to 200%"
 msgstr ""
 
 #. name of font in fonts/geneva_rounded
-#: inkstitch-fonts-metadata.py:114
+#: inkstitch-fonts-metadata.py:118
 msgid "Geneva Simple Sans Rounded"
 msgstr "Geneva Simple Sans Заокруглений"
 
 #. description of font in fonts/geneva_rounded
-#: inkstitch-fonts-metadata.py:116
+#: inkstitch-fonts-metadata.py:120
 msgid "Suitable for small fonts (8 to 20 mm)"
 msgstr "Маленькі символи (8 - 20мм)"
 
 #. name of font in fonts/geneva_simple
-#: inkstitch-fonts-metadata.py:118
+#: inkstitch-fonts-metadata.py:122
 msgid "Geneva Simple Sans"
 msgstr "Geneva Simple Sans"
 
 #. description of font in fonts/geneva_simple
-#: inkstitch-fonts-metadata.py:120
+#: inkstitch-fonts-metadata.py:124
 msgid "Suitable for small fonts (6 to 15mm)"
 msgstr "Маленькі символи (6 - 15мм)"
 
 #. name of font in fonts/glacial_tiny
-#: inkstitch-fonts-metadata.py:122
+#: inkstitch-fonts-metadata.py:126
 msgid "Glacial Tiny 60 AGS"
 msgstr ""
 
 #. description of font in fonts/glacial_tiny
-#: inkstitch-fonts-metadata.py:124
+#: inkstitch-fonts-metadata.py:128
 msgid "Glacial is a very tiny font: at 100%,  M stands at 5.6mm. Thin thread (60 wt ) and thin needle (8/60) are mandatory. The glyphs cover many European languages. It can be reduced down to 40% and enlarged up to 150% "
 msgstr ""
 
 #. name of font in fonts/infinipicto
-#: inkstitch-fonts-metadata.py:126
+#: inkstitch-fonts-metadata.py:130
 msgid "InfiniPicto"
 msgstr ""
 
 #. description of font in fonts/infinipicto
-#: inkstitch-fonts-metadata.py:128
+#: inkstitch-fonts-metadata.py:132
 msgid "InfiniPicto is a fun font of size approximatively 70 mm containing only the 26 A-Z glyph. Each letter is a pictogram of an object whose name begins with that very letter..... in French"
 msgstr ""
 
 #. name of font in fonts/kaushan_script_MAM
-#: inkstitch-fonts-metadata.py:130
+#: inkstitch-fonts-metadata.py:134
 msgid "Kaushan Script MAM"
 msgstr ""
 
 #. description of font in fonts/kaushan_script_MAM
-#: inkstitch-fonts-metadata.py:132
+#: inkstitch-fonts-metadata.py:136
 #, python-format
 msgid "The capital M is 29 millimeter wide at 100% scale.  Can be scaled down to 80% or up to 200%.  Every satin has zigzag underlay"
 msgstr "Велика М має ширину 29 мм при 100% масштабі. Може масштабуватися від 80% до 200%. Кожний сатин має попередню прострочку зигзагом"
 
 #. name of font in fonts/learning_curve
-#: inkstitch-fonts-metadata.py:134
+#: inkstitch-fonts-metadata.py:138
 msgid "Learning curve"
 msgstr "Learning curve"
 
 #. description of font in fonts/learning_curve
-#: inkstitch-fonts-metadata.py:136
+#: inkstitch-fonts-metadata.py:140
 msgid "Small running stitch script font of size approximatively 12 mm. It can be reduced down to 90% and enlarged up to 200%"
 msgstr ""
 
 #. name of font in fonts/lobster_AGS
-#: inkstitch-fonts-metadata.py:138
+#: inkstitch-fonts-metadata.py:142
 msgid "Lobster AGS"
 msgstr ""
 
 #. description of font in fonts/lobster_AGS
-#: inkstitch-fonts-metadata.py:140
+#: inkstitch-fonts-metadata.py:144
 #, python-format
 msgid " The capital M is 19.8 millimeter wide at 100% scale. Can be scaled down to 80% or up to 150%. Every satin has zigzag underlay"
 msgstr ""
 
 #. name of font in fonts/magnolia_KOR
-#: inkstitch-fonts-metadata.py:142
+#: inkstitch-fonts-metadata.py:146
 msgid "Magnolia KOR"
 msgstr ""
 
 #. description of font in fonts/magnolia_KOR
-#: inkstitch-fonts-metadata.py:144
+#: inkstitch-fonts-metadata.py:148
 msgid "Magnolia KOR is a script font of size approximatively 20mm. It can be scaled down to 80% and up to 120%"
 msgstr ""
 
 #. name of font in fonts/manuskript_gotisch
-#: inkstitch-fonts-metadata.py:146
+#: inkstitch-fonts-metadata.py:150
 msgid "Manuskript Gothisch"
 msgstr "Manuskript Gothisch"
 
 #. description of font in fonts/manuskript_gotisch
-#: inkstitch-fonts-metadata.py:148
+#: inkstitch-fonts-metadata.py:152
 #, python-format
 msgid "The capital M is 35 millimeter wide at 100% scale.  Can be scaled down to 70% or up to 140%.  Every satin has zigzag underlay"
 msgstr "Велика М має ширину 35 мм при 100% масштабі. Може масштабуватися від 70% до 140%. Кожний сатин має попередню прострочку зигзагом"
 
 #. name of font in fonts/marcelusSC_FI
-#: inkstitch-fonts-metadata.py:150
+#: inkstitch-fonts-metadata.py:154
 msgid "MarcellusSC-FI"
 msgstr ""
 
 #. description of font in fonts/marcelusSC_FI
-#: inkstitch-fonts-metadata.py:152
+#: inkstitch-fonts-metadata.py:156
 #, python-format
 msgid "MarcellusSC-FI is a small capital font of size 36 mm. It contains 107 glyphs covering most Western European languages. It can be reduced down to 70% and enlarged up to 200% or 500% using satin split"
 msgstr ""
 
 #. name of font in fonts/medium_font
-#: inkstitch-fonts-metadata.py:154
+#: inkstitch-fonts-metadata.py:158
 msgid "Ink/Stitch Medium Font"
 msgstr "Ink/Stitch середній шрифт"
 
 #. description of font in fonts/medium_font
-#: inkstitch-fonts-metadata.py:156
+#: inkstitch-fonts-metadata.py:160
 #, python-format
 msgid "A basic font suited for medium-sized characters.  The capital em is 0.6 inches wide at 100% scale.  Can be scaled down to 75% or up to 150%.  Every satin has contour underlay."
 msgstr "Основний шрифт підходить для символів середнього розміру. Столиця є шириною 0,6 дюйма в масштабі 100%. Можна зменшити до 75% або до 150%. Кожен атлас має контурну підкладку."
 
 #. name of font in fonts/monicha
-#: inkstitch-fonts-metadata.py:158
+#: inkstitch-fonts-metadata.py:162
 msgid "MONICHA"
 msgstr ""
 
 #. description of font in fonts/monicha
-#: inkstitch-fonts-metadata.py:160
+#: inkstitch-fonts-metadata.py:164
 msgid "Monicha is a script satin font of size approximatively 20mm. In addition to the glyphs covering most Western European languages it contains additional ornemental letters with swashes. These ornemental letters should be used with caution to avoid overlays. In particular do not use two ornemental letters in a row. Please consult the documentation for information on how to access the ornemental letters. The font can not be scaled down but can be scaled up to 150%. "
 msgstr ""
 
 #. name of font in fonts/namskout_AGS
-#: inkstitch-fonts-metadata.py:162
+#: inkstitch-fonts-metadata.py:166
 msgid "Namskout"
 msgstr ""
 
 #. description of font in fonts/namskout_AGS
-#: inkstitch-fonts-metadata.py:164
+#: inkstitch-fonts-metadata.py:168
 msgid "Namskout  is a large applique font of size approximatively 90mm. It contains 43 glyphs including all numbers and the 26 capitals  A-Z.  It can be reduced down to 50% and enlarged up to 150%  "
 msgstr ""
 
 #. name of font in fonts/nick_ainley
-#: inkstitch-fonts-metadata.py:166
+#: inkstitch-fonts-metadata.py:170
 msgid "NickAinley"
 msgstr ""
 
 #. description of font in fonts/nick_ainley
-#: inkstitch-fonts-metadata.py:168
+#: inkstitch-fonts-metadata.py:172
 msgid "A tiny 1mm-bean alphabet based on a 24pt Seniors Studio jawn"
 msgstr ""
 
 #. name of font in fonts/pacificlo
-#: inkstitch-fonts-metadata.py:170
+#: inkstitch-fonts-metadata.py:174
 msgid "Pacificlo"
 msgstr ""
 
 #. description of font in fonts/pacificlo
-#: inkstitch-fonts-metadata.py:172
+#: inkstitch-fonts-metadata.py:176
 msgid "Pacificlo is a small satin column manuscript font of size approximatively 20mm. It can be reduced down to 80% and enlarged up to 140%. It contains 120 glyphs, covering most Western European Languages needs. "
 msgstr ""
 
 #. name of font in fonts/pacificlo_tiny
-#: inkstitch-fonts-metadata.py:174
+#: inkstitch-fonts-metadata.py:178
 msgid "Pacificlo tiny"
 msgstr ""
 
 #. description of font in fonts/pacificlo_tiny
-#: inkstitch-fonts-metadata.py:176
+#: inkstitch-fonts-metadata.py:180
 msgid "This font is an altered version  of Pacificlo, to allow a greater scaling down. Both thin thread (60) and thin needle (60) are mandatory. The altered embroidery parameters of this font allow to scale down the original Pacificlo font between 25% (for a 5mm font ) and 55 % (for a 11mm font)."
 msgstr ""
 
 #. name of font in fonts/roman_ags
-#: inkstitch-fonts-metadata.py:178
+#: inkstitch-fonts-metadata.py:182
 msgid "Roman AGS"
 msgstr ""
 
 #. description of font in fonts/roman_ags
-#: inkstitch-fonts-metadata.py:180
+#: inkstitch-fonts-metadata.py:184
 #, python-format
 msgid "Based on Latin Modern Roman 10 Bold italic. The capital M is 42.5 millimeter wide at 100% scale.  Can be scaled down to 80% or up to 130%.  Every satin has zigzag underlay"
 msgstr ""
 
 #. name of font in fonts/roman_ags_bicolor
-#: inkstitch-fonts-metadata.py:182
+#: inkstitch-fonts-metadata.py:186
 msgid "Roman bicolor AGS"
 msgstr ""
 
 #. description of font in fonts/roman_ags_bicolor
-#: inkstitch-fonts-metadata.py:184
+#: inkstitch-fonts-metadata.py:188
 #, python-format
 msgid "Based on Latin Modern Roman 10 Bold italic. A font with capital letters with 2 colors. Very easy to use with letters from Romanaugusa. The capital M is 42.5 millimeter wide at 100% scale. Can be scaled down to 70% or up to 130%. Every satin has zigzag underlay"
 msgstr "Жирний курсив на основе Latin Modern Roman 10. Шрифт з двохколірними великими літерами. Можна використовувати з буквами із шрифта Romanaugusa. Велика М має ширину 42.5 мм при 100% масштабі. Може масштабуватися від 70% до 130%. Кожний сатин має прошиття зигзагом"
 
 #. name of font in fonts/sacramarif
-#: inkstitch-fonts-metadata.py:186
+#: inkstitch-fonts-metadata.py:190
 msgid "Sacramarif"
 msgstr "Sacramarif"
 
 #. description of font in fonts/sacramarif
-#: inkstitch-fonts-metadata.py:188
+#: inkstitch-fonts-metadata.py:192
 msgid "Based on Sacramento. Very small font with runstitch. It can be scaled from 80% to 150%"
 msgstr "Шрифт, який базується на Sacramento. Дуже маленький шрифт виконаний біжучою стрічкою. Може масштабуватися від 80% до 150%"
 
 #. name of font in fonts/small_font
-#: inkstitch-fonts-metadata.py:190
+#: inkstitch-fonts-metadata.py:194
 msgid "Ink/Stitch Small Font"
 msgstr "Ink/Stitch дрібний шрифт"
 
 #. description of font in fonts/small_font
-#: inkstitch-fonts-metadata.py:192
+#: inkstitch-fonts-metadata.py:196
 #, python-format
 msgid "A font suited for small characters.  The capital em is 0.2 inches wide at 100% scale.  Can be scaled up to 300%."
 msgstr "Шрифт пасує до маленьких написів. Великі літери мають ширину 0,2 дюйма при 100% масштабі. Можна масштабувати до 300%."
 
 #. name of font in fonts/sortefaxXL
-#: inkstitch-fonts-metadata.py:194
+#: inkstitch-fonts-metadata.py:198
 msgid "Sortefax XL Initials"
 msgstr ""
 
 #. description of font in fonts/sortefaxXL
-#: inkstitch-fonts-metadata.py:196
+#: inkstitch-fonts-metadata.py:200
 msgid " Sortefax is a very large satin stitch Capital font of size 150mm.  It can be reduced down to 75% and enlarged up to 200%  It contains the 37 glyphs :ampersand, A-Z and 0-9. In addition the ten glyphs (){}[],;.: are used to store frames. Type any letter followed by any frame (e.g. A( or B; )  to obtain a framed Capital or Number. Warning: for a few large letters you will need to manually enlarge the frame"
 msgstr ""
 
 #. name of font in fonts/sortefax_medium
-#: inkstitch-fonts-metadata.py:198
+#: inkstitch-fonts-metadata.py:202
 msgid "Sortefax Medium Initials"
 msgstr ""
 
 #. description of font in fonts/sortefax_medium
-#: inkstitch-fonts-metadata.py:200
+#: inkstitch-fonts-metadata.py:204
 msgid "Sortefax  Medium Initials is a  satin stitch Capital font of size 90 mm.  It can be reduced down to 70% and enlarged up to 200%. It contains the 37 glyphs :ampersand, A-Z and 0-9. In addition the ten glyphs (){}[],;.: are used to store frames. Type any letter followed by any frame (e.g. A( or B; or 7, ) to obtain a framed Capital or Number. Some manual arranging of the frame around the letter may be required"
 msgstr ""
 
 #. name of font in fonts/tt_directors
-#: inkstitch-fonts-metadata.py:202
+#: inkstitch-fonts-metadata.py:206
 msgid "TT Directors"
 msgstr "TT Directors"
 
 #. description of font in fonts/tt_directors
-#: inkstitch-fonts-metadata.py:204
+#: inkstitch-fonts-metadata.py:208
 msgid "A font suited for directing"
 msgstr "Шрифт для важливого"
 
 #. name of font in fonts/tt_masters
-#: inkstitch-fonts-metadata.py:206
+#: inkstitch-fonts-metadata.py:210
 msgid "TT Masters"
 msgstr "TT Masters"
 
 #. description of font in fonts/tt_masters
-#: inkstitch-fonts-metadata.py:208
+#: inkstitch-fonts-metadata.py:212
 msgid "A font suited for heavy typing :)"
 msgstr "Шрифт пасує до важкого тексту :)"
+
+#. name of font in fonts/violin_serif
+#: inkstitch-fonts-metadata.py:214
+msgid "Violin Serif"
+msgstr ""
+
+#. description of font in fonts/violin_serif
+#: inkstitch-fonts-metadata.py:216
+#, python-format
+msgid "A condensed serif font designed. Can be scaled up to 120% or scaled down to 80%. Caps height is about 28 millimeters or 1.1 inches"
+msgstr ""
 
 #. name of tile in tiles/N3-11a
 #: inkstitch-tiles-metadata.py:2
@@ -2463,7 +2485,7 @@ msgid "Dimensions (mm)"
 msgstr ""
 
 #: lib/extensions/element_info.py:98 lib/extensions/element_info.py:158
-#: lib/extensions/zip.py:137
+#: lib/extensions/zip.py:134
 msgid "Stitches"
 msgstr "Стіжки"
 
@@ -2483,7 +2505,7 @@ msgstr ""
 msgid "All Selected Elements"
 msgstr ""
 
-#: lib/extensions/element_info.py:138 lib/extensions/zip.py:138
+#: lib/extensions/element_info.py:138 lib/extensions/zip.py:135
 msgid "Colors"
 msgstr "Кольори"
 
@@ -2798,33 +2820,33 @@ msgstr "Можливо, що один об'єкт містить більше н
 msgid "Please select at least one element to update. This extension is designed to help you update copy and pasted elements from old designs."
 msgstr ""
 
-#: lib/extensions/zip.py:79
+#: lib/extensions/zip.py:76
 msgid "threadlist"
 msgstr "список ниток"
 
-#: lib/extensions/zip.py:88
+#: lib/extensions/zip.py:85
 msgid "No embroidery file formats selected."
 msgstr "Не вибрано формат файла вишивки."
 
-#: lib/extensions/zip.py:132
+#: lib/extensions/zip.py:129
 msgid "Design Details"
 msgstr "Деталі дизайну"
 
-#: lib/extensions/zip.py:135
+#: lib/extensions/zip.py:132
 msgid "Title"
 msgstr "Назва"
 
-#: lib/extensions/zip.py:136 lib/gui/lettering.py:442
+#: lib/extensions/zip.py:133 lib/gui/lettering.py:442
 #: inx/inkstitch_commands_scale_symbols.inx:6
 #: inx/inkstitch_lettering_generate_json.inx:82
 msgid "Size"
 msgstr "Розмір"
 
-#: lib/extensions/zip.py:140
+#: lib/extensions/zip.py:137
 msgid "Thread Order"
 msgstr "Порядок ниток"
 
-#: lib/extensions/zip.py:153
+#: lib/extensions/zip.py:150
 msgid "Thread Used"
 msgstr "Використано нитки"
 
