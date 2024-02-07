@@ -1,19 +1,73 @@
 #!/usr/bin/env python
 
+# Implemented support for multiple diverse versions of Inkstitch extensions in Inkscape.
+#   - useful for testing and development
+#   - useful for comparing different versions of Inkstitch
+
+
+# this script generates inx files in inx/ directory from xml templates in templates/ directory
+# - added support for alternative id registration and menu names for Inkscape extensions
+#   - each xml template should be modified to use the new id_inkstitch and menu_inkstitch:
+#        <id>org.inkstitch.....</id>    ---> <id>org.{{ id_inkstitch }}.....</id>
+#        <submenu name="Ink/Stitch"     ---> <submenu name="{{ menu_inkstitch }}"
+#     or input/output xml template should be modified to use the filetypename:
+#        <filetypename>Ink/Stitch:...   ---> <filetypename>{{ menu_inkstitch }}:...
+
+
+# Here's an example of how to use two Inkstitch extensions:
+#   - install Inkstitch in two different locations (e.g. inkstitch and inkstitch-k)
+#       - check out the Inkstitch repository in two different locations
+#   - ensure 'make inx' is executed in both locations
+#       - this will generate also inx/locale/ files
+#   - generate modified inx files for second location
+#       - in the second location:
+#            > generate-inx-files -a k
+#   - install the inx files in Inkscape extensions directory
+#       - symlink .config/inkscape/extensions/inkstitch   -> inkstitch
+#       - symlink .config/inkscape/extensions/inkstitch-k -> inkstitch-k
+#   - modify .config/inkscape/keys/default.xml if necessary
+#   - run Inkscape with both Inkstitch extensions enabled
+#       - first version:  Extensions > Ink/Stitch
+#       - second version: Extensions > Ink/Stitch-k
+
 import sys
 import os
-from os.path import dirname
+from pathlib import Path
+import argparse
 
-# add inkstitch libs to python path
-parent_dir = os.path.join(dirname(dirname(__file__)))
-sys.path.append(parent_dir)
+# add inkstitch lib dir to python path
+parent_dir = Path(__file__).resolve().parents[1]
+sys.path.append(str(parent_dir))  # we need import from lib/ directory
 
-# try find add inkex.py et al. as well
-sys.path.append(os.path.join(parent_dir, "inkscape", "share", "extensions"))
-sys.path.append(os.path.join("/usr/share/inkscape/extensions"))
-# default inkex.py location on macOS
-sys.path.append("/Applications/Inkscape.app/Contents/Resources/share/inkscape/extensions/")
+# find inkex module
+try:
+    import inkex     # if it is already in the path, do nothing
+except ImportError:  # if not, add inkscape version
+    import subprocess
+    inkscape_path = 'inkscape'
+    # for now assume inkscape is in the path and raise an error if inkscape is not in the path
+    system_path = subprocess.run([inkscape_path, "--system-data-directory"], capture_output=True, text=True).stdout.strip()
+    inkex_path = os.path.join(system_path, "extensions")
+    sys.path.append(inkex_path)
 
-from lib.inx import generate_inx_files
+    # possible last attempt to import inkex may be as follows:
+    # sys.path.append(os.path.join("/usr/share/inkscape/extensions"))
+    # default inkex.py location on macOS
+    # sys.path.append("/Applications/Inkscape.app/Contents/Resources/share/inkscape/extensions/")
 
-generate_inx_files()
+
+from lib.inx.generate import generate_inx_files
+
+# parse arguments
+#   -a, --alter letter a-z: generate inx files for the given alter
+parser = argparse.ArgumentParser(description='Generate INX files, supporting multiple active inkstitch extensions in inkscape.')
+parser.add_argument('-a', '--alter', type=str, help='Letter a-z representing the alter')
+args = parser.parse_args()
+
+# print(f"generate_inx_files: alter={args.alter}")
+
+inx_path = parent_dir / "inx"
+inx_path.mkdir(parents=True, exist_ok=True)
+
+# if -a is not given, args.alter is None - not alternative inx, but generate default inx
+generate_inx_files(args.alter)

@@ -23,10 +23,10 @@ def pyembroidery_output_formats():
             yield format['extension'], description, format['mimetype'], format['category']
 
 
-def generate_output_inx_files():
+def generate_output_inx_files(alter_data):
     env = build_environment()
     template = env.get_template('output.xml')
 
     for format, description, mimetype, category in pyembroidery_output_formats():
-        name = "output_%s" % format.upper()
-        write_inx_file(name, template.render(format=format, mimetype=mimetype, description=description))
+        name = f"output_{format.upper()}"
+        write_inx_file(name, template.render(alter_data, format=format, mimetype=mimetype, description=description))
