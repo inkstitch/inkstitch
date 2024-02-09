@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <inkscape-extension translationdomain="inkstitch" xmlns="http://www.inkscape.org/namespace/inkscape/extension">
     <name>Display stacking order</name>
-    <id>org.inkstitch.display_stacking_order</id>
+    <id>org.{{ id_inkstitch }}.display_stacking_order</id>
     <param name="extension" type="string" gui-hidden="true">display_stacking_order</param>
     <effect>
         <object-type>all</object-type>
         <effects-menu>
-            <submenu name="Ink/Stitch" translatable="no">
+            <submenu name="{{ menu_inkstitch }}" translatable="no">
                 <submenu name="Visualize and Export" />
             </submenu>
         </effects-menu>

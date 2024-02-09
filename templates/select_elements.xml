@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
     <name>Select embroidery elements</name>
-    <id>org.inkstitch.select_elements</id>
+    <id>org.{{ id_inkstitch }}.select_elements</id>
     <param name="extension" type="string" gui-hidden="true">select_elements</param>
 
     <param name="options" type="notebook">
@@ -88,7 +88,7 @@
     <effect>
         <object-type>all</object-type>
         <effects-menu>
-            <submenu name="Ink/Stitch" translatable="no">
+            <submenu name="{{ menu_inkstitch }}" translatable="no">
                 <submenu name="Edit" />
             </submenu>
         </effects-menu>
