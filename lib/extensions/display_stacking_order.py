@@ -5,6 +5,7 @@
 
 import inkex
 
+from ..commands import add_layer_commands
 from ..i18n import _
 from ..svg.tags import INKSCAPE_GROUPMODE, INKSCAPE_LABEL
 from .base import InkstitchExtension
@@ -27,6 +28,8 @@ class DisplayStackingOrder(InkstitchExtension):
                 path = node.get_path().transform(node.composed_transform())
                 position = next(path.end_points)
                 self.insert_stacking_num(layer, i + 1, position)
+
+        add_layer_commands(layer, ["ignore_layer"])
 
         # remove layer if empty
         if len(layer) == 0:
