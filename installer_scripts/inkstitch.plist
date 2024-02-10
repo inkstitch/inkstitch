@@ -12,7 +12,7 @@
 		<key>BundleOverwriteAction</key>
 		<string>install</string>
 		<key>RootRelativeBundlePath</key>
-		<string>Contents/MacOS/electron/inkstitch-gui.app</string>
+		<string>Contents/Frameworks/electron/inkstitch-gui.app</string>
 	</dict>
 </array>
 </plist>
