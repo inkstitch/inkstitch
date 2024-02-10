@@ -231,7 +231,7 @@ class Print(InkstitchExtension):
         # for all color blocks together.
 
         layers = svg.findall("./g[@%s='layer']" % INKSCAPE_GROUPMODE)
-        stitch_plan_layer = svg.find(".//*[@id='__inkstitch_stitch_plan__']")
+        stitch_plan_layer = svg.findone(".//*[@id='__inkstitch_stitch_plan__']")
 
         # Make sure there is no leftover translation from stitch plan preview
         stitch_plan_layer.pop('transform')
