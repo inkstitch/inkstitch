@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-02-06 01:03+0000\n"
-"PO-Revision-Date: 2024-02-06 01:04\n"
+"PO-Revision-Date: 2024-02-10 01:02\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -176,13 +176,13 @@ msgstr "Cherry for Kaalleen est une grande police décorative d'environ 75mm. Il
 #. name of font in fonts/chicken_scratch
 #: inkstitch-fonts-metadata.py:58
 msgid "Chicken Scratch"
-msgstr ""
+msgstr "Chicken Scratch"
 
 #. description of font in fonts/chicken_scratch
 #: inkstitch-fonts-metadata.py:60
 #, python-format
 msgid "A handwritten font. Can be scaled up to 120% or down to 80%. Caps height is around 19mm or .75 inches."
-msgstr ""
+msgstr "Une fonte d'écriture manuelle. Peut être agrandie jusqu'à 100% ou diminuée jusqu'à 80%. Une majuscule mesure approximativement 19mm (3/4 de pouce)."
 
 #. name of font in fonts/chopin
 #: inkstitch-fonts-metadata.py:62
@@ -579,13 +579,14 @@ msgstr "Une fonte \"lourde\""
 #. name of font in fonts/violin_serif
 #: inkstitch-fonts-metadata.py:214
 msgid "Violin Serif"
-msgstr ""
+msgstr "Violinn Serif"
 
 #. description of font in fonts/violin_serif
 #: inkstitch-fonts-metadata.py:216
 #, python-format
 msgid "A condensed serif font designed. Can be scaled up to 120% or scaled down to 80%. Caps height is about 28 millimeters or 1.1 inches"
-msgstr ""
+msgstr "Une police serif condensée. Peut être agrandie jusqu'à 120 % ou réduite à 80 %. La hauteur des majuscules est d'environ 28 millimètres (1,1 pouces)\n\n"
+"Icône de validation par la communauté"
 
 #. name of tile in tiles/N3-11a
 #: inkstitch-tiles-metadata.py:2
@@ -1625,11 +1626,11 @@ msgstr "Longueur de points en mode zig-zag."
 
 #: lib/elements/fill_stitch.py:440
 msgid "Zigzag width"
-msgstr ""
+msgstr "Largeur du zigzag"
 
 #: lib/elements/fill_stitch.py:441
 msgid "Width of the zigzag line."
-msgstr ""
+msgstr "Largeur du zigzag."
 
 #: lib/elements/fill_stitch.py:463 inx/inkstitch_select_elements.inx:33
 #: inx/inkstitch_select_elements.inx:53 inx/inkstitch_select_elements.inx:55
@@ -2727,7 +2728,7 @@ msgstr "Veuillez sélectionner au moins deux éléments à ré-ordonner."
 
 #: lib/extensions/select_elements.py:76
 msgid "Could not detect python path. Please insert python path manually as described in the help tab of the select elements dialog."
-msgstr ""
+msgstr "Impossible de detecter le chemin vers python. Merci d'ajouter le chemin manuellement comme décrit dans l'onglet aide du dialogue de selection des éléments."
 
 #: lib/extensions/selection_to_guide_line.py:21
 msgid "Please select at least one object to be marked as a guide line."
