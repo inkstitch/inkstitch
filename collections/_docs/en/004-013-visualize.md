@@ -67,6 +67,13 @@ Run `Extensions > Ink/Stitch > Visualize and Export > Undo Stitch Plan Preview`
 
 This will display red, yellow and green dots on top of your elements so you can identify areas of high density easily.
 
+## Display stacking order
+{% upcoming_release %}
+Run `Extensions > Ink/Stitch > Visualize and Export > Display stacking order...`.
+
+Chose the font size and then apply, to create a new layer with one text label per embroidery object , numbering them in the embroidery order.
+
+
 ## Print PDF
 
 Information about the print pdf preview are collected in an other section: [more info about the pdf export](/docs/print-pdf)
