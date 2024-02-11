@@ -66,6 +66,14 @@ Zeigt Punkte in frei wählbaren Farben (Standart: rot, gelb, grün) über dem De
 * Untersuche das Design (evtl. ist es nötig stärker in das Design hineinzuzoomen)
 * Entferne die Dichte-Punkte mit `Ctrl + Z` (rückgängig machen)
 
+## Display stacking order
+{% include upcoming_release.html %}
+
+Run `Extensions > Ink/Stitch > Visualize and Export > Display stacking order...`.
+
+Chose the font size and then apply  to create a new layer with one text label per embroidery object , numbering them in the embroidery order.
+
+
 ## PDF-Export
 
 Die Informationen zum PDF-Export sind auf einer gesonderten Seite zusammengefasst: [mehr Informationen zum PDF-Export](/de/docs/print-pdf)
