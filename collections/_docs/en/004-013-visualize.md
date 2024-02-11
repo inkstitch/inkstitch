@@ -68,6 +68,7 @@ Run `Extensions > Ink/Stitch > Visualize and Export > Undo Stitch Plan Preview`
 This will display red, yellow and green dots on top of your elements so you can identify areas of high density easily.
 
 ## Display stacking order
+{% include upcoming_release.html %}
 
 Run `Extensions > Ink/Stitch > Visualize and Export > Display stacking order...`.
 
