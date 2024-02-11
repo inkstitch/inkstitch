@@ -2,7 +2,7 @@
 title: "Simulation"
 permalink: /fr/docs/visualize/
 excerpt: ""
-last_modified_at: 2023-05-05
+last_modified_at: 2024-02-10
 toc: true
 ---
 ## Simulateur/ Aperçu Réaliste
@@ -83,6 +83,12 @@ Lancez `Extensions > Ink/Stitch > Visualisr et Exporter > Annuler le plan de bro
 
 Ceci montrera des points rouges, jaunes et verts au dessus de vos éléments, pour vous permettre d'identifier facilement les zones à forte densité. Tous les points d'une même couleur sont dans un groupe du calque Densité, ce qui vous permet de masquer facilement tous les points d'une couleur donnée.
 
+## Montrer l'ordre de broderie
+{% include upcoming_release.html %}
+
+Lancez `Extensions > Ink/Stitch > Visualiser et Exporter> Montrer l'ordre de broderie...`.
+
+Choisir la taille de la fonte et cliquer sur  Appliquer pour créer un nouveau calque de texte qui numérote les éléments de broderie dans l'ordre de broderie, c'est à dire dans l'ordre  inverse de la  pile d'objets.
 
 
 ## Export PDF
