@@ -1,7 +1,6 @@
 ---
 title: "Localization"
 permalink: /fr/developers/localize/
-excerpt: ""
 last_modified_at: 2022-05-29
 toc: true
 ---

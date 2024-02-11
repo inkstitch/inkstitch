@@ -1,7 +1,6 @@
 ---
 title: "Inkscape Tipps"
 permalink: /de/docs/inkscape-tips/
-excerpt: ""
 last_modified_at: 2019-03-15
 toc: true
 ---

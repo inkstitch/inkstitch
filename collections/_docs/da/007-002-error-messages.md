@@ -1,7 +1,6 @@
 ---
 title: "Error Messages"
 permalink: /da/docs/error-messages/
-excerpt: ""
 last_modified_at: 2018-12-14
 toc: true
 classes: equal-tables

@@ -1,7 +1,6 @@
 ---
 title: "Ink/Stitch Logo & Branding Guide"
 permalink: /fr/tutorials/resources/branding-guide/
-excerpt: ""
 read_time: false
 ---
 {% comment %}This file only includes /_tutorial/inkstitch-logo.md{% endcomment %}

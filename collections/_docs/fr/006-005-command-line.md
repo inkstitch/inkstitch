@@ -1,7 +1,6 @@
 ---
 title: "Running Ink/Stitch from Command Line"
 permalink: /fr/docs/command-line/
-excerpt: ""
 last_modified_at: 2023-12-30
 ---
 Ink/Stitch extensions can be run from command line.

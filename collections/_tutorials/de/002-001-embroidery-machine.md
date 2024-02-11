@@ -1,7 +1,6 @@
 ---
 title: "Self-Made Embroidery Machine (Running on G-Code)"
 permalink: /de/tutorials/embroidery-machine/
-excerpt: ""
 last_modified_at: 2019-03-15
 read_time: false
 toc: true

@@ -1,7 +1,6 @@
 ---
 title: "Remplissage en méandres"
 permalink: /fr/docs/stitches/meander-fill/
-excerpt: ""
 last_modified_at: 2023-05-01
 toc: true
 ---

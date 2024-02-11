@@ -1,7 +1,6 @@
 ---
 title: "Stitch patterns"
 permalink: /da/docs/stitches/patterns/
-excerpt: ""
 last_modified_at: 2023-01-14
 toc: true
 ---

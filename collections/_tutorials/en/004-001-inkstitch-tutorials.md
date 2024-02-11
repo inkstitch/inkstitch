@@ -1,7 +1,6 @@
 ---
 title: "Ink/Stitch Tutorials"
 permalink: /tutorials/
-excerpt: ""
 read_time: false
 classes: wide
 ---

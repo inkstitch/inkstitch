@@ -1,7 +1,6 @@
 ---
 title: "Troubleshoot Objects"
 permalink: /de/docs/troubleshoot/
-excerpt: ""
 last_modified_at: 2020-04-27
 toc: true
 ---

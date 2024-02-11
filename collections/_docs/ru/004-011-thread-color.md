@@ -1,7 +1,6 @@
 ---
 title: "Thread Color Management"
 permalink: /ru/docs/thread-color/
-excerpt: ""
 last_modified_at: 2022-04-08
 toc: true
 ---

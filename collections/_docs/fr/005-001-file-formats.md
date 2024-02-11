@@ -1,7 +1,6 @@
 ---
 title: "Formats de fichiers"
 permalink: /fr/docs/file-formats/
-excerpt: ""
 last_modified_at: 2022-01-16
 ---
 

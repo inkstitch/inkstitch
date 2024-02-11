@@ -1,7 +1,6 @@
 ---
 title: "Einstellungen"
 permalink: /de/docs/preferences/
-excerpt: ""
 last_modified_at: 2023-05-10
 toc: true
 ---

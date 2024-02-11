@@ -1,7 +1,6 @@
 ---
 title: "Report Bugs "
 permalink: /ru/developers/report-bugs/
-excerpt: ""
 last_modified_at: 2018-06-05
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: "Sock Hoop"
 permalink: /da/tutorials/sock-hoop/
-excerpt: ""
 last_modified_at: 2021-01-07
 read_time: false
 

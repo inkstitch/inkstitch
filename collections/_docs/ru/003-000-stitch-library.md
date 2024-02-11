@@ -1,7 +1,6 @@
 ---
 title: "Stitch Library"
 permalink: /ru/docs/stitch-library/
-excerpt: ""
 last_modified_at: 2019-07-06
 toc: true
 ---

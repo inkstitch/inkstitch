@@ -1,7 +1,6 @@
 ---
 title: "Stichmuster"
 permalink: /de/docs/stitches/patterns/
-excerpt: ""
 last_modified_at: 2021-10-23
 toc: true
 ---

@@ -1,7 +1,6 @@
 ---
 title: "Textures"
 permalink: /fr/docs/stitches/patterns/
-excerpt: ""
 last_modified_at: 2022-01-18
 toc: true
 ---

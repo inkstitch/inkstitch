@@ -1,7 +1,6 @@
 ---
 title: "Schriftwerkzeuge"
 permalink: /de/docs/font-tools/
-excerpt: ""
 last_modified_at: 2023-04-22
 toc: true
 ---

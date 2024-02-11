@@ -1,7 +1,6 @@
 ---
 title: "Tools: Satin"
 permalink: /da/docs/satin-tools/
-excerpt: ""
 last_modified_at: 2021-10-29
 toc: true
 ---

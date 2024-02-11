@@ -1,7 +1,6 @@
 ---
 title: "Visualize"
 permalink: /ru/docs/visualize/
-excerpt: ""
 last_modified_at: 2023-02-19
 toc: true
 ---

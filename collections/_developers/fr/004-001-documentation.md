@@ -1,7 +1,6 @@
 ---
 title: "Documentation"
 permalink: /fr/developers/documentation/
-excerpt: ""
 last_modified_at: 2022-05-29
 toc: true
 ---

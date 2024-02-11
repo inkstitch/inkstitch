@@ -1,7 +1,6 @@
 ---
 title: "Noticeable Ink/Stitch Features"
 permalink: /ru/features/
-excerpt: "Ink/Stitch features"
 last_modified_at: 2022-05-15
 sidebar:
   nav: pages

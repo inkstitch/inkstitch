@@ -1,7 +1,6 @@
 ---
 title: "Garnfarben-Verwaltung"
 permalink: /de/docs/thread-color/
-excerpt: ""
 last_modified_at: 2023-05-04
 toc: true
 ---

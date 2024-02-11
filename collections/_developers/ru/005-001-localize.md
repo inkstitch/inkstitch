@@ -1,7 +1,6 @@
 ---
 title: "Localization"
 permalink: /ru/developers/localize/
-excerpt: ""
 last_modified_at: 2021-10-03
 toc: true
 ---

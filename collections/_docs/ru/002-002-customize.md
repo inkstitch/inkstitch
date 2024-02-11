@@ -1,7 +1,6 @@
 ---
 title: "Настройка Ink/Stitch"
 permalink: /ru/docs/customize/
-excerpt: ""
 last_modified_at: 2021-12-02
 toc: true
 ---

@@ -1,7 +1,6 @@
 ---
 title: "Richelieu"
 permalink: /fr/docs/cutwork/
-excerpt: ""
 last_modified_at: 2023-01-20
 toc: true
 ---

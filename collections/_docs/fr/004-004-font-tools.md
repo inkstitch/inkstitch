@@ -1,7 +1,6 @@
 ---
 title: "Outils de police"
 permalink: /fr/docs/font-tools/
-excerpt: ""
 last_modified_at: 2023-04-18
 toc: true
 ---

@@ -1,7 +1,6 @@
 ---
 title: "Ripple Stitch"
 permalink: /docs/stitches/ripple-stitch/
-excerpt: ""
 last_modified_at: 2023-04-30
 toc: true
 ---

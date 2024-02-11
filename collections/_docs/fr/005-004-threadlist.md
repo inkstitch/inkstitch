@@ -1,7 +1,6 @@
 ---
 title: "Liste de fils"
 permalink: /fr/docs/threadlist/
-excerpt: ""
 last_modified_at: 2022-01-18
 toc: true
 ---

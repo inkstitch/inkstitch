@@ -1,7 +1,6 @@
 ---
 title: "Tools: Fill"
 permalink: /docs/fill-tools/
-excerpt: ""
 last_modified_at: 2023-04-30
 toc: true
 ---

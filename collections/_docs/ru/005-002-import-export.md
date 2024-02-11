@@ -1,7 +1,6 @@
 ---
 title: "Import and Export Files"
 permalink: /ru/docs/import-export/
-excerpt: ""
 last_modified_at: 2020-10-01
 toc: true
 ---

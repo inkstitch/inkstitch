@@ -1,7 +1,6 @@
 ---
 title: "Tools: Stroke"
 permalink: /da/docs/stroke-tools/
-excerpt: ""
 last_modified_at: 2022-12-26
 toc: true
 ---

@@ -1,7 +1,6 @@
 ---
 title: "Tack and Lock Stitches"
 permalink: /docs/stitches/lock-stitches/
-excerpt: ""
 last_modified_at: 2023-02-27
 toc: true
 ---

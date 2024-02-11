@@ -1,7 +1,6 @@
 ---
 title: "Import et Export de Fichiers"
 permalink: /fr/docs/import-export/
-excerpt: ""
 last_modified_at: 2021-04-11
 toc: true
 ---

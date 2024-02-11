@@ -1,7 +1,6 @@
 ---
 title: "Broder sur une chaussette"
 permalink: /fr/tutorials/sock-hoop/
-excerpt: ""
 last_modified_at: 2022-01-07
 read_time: false
 

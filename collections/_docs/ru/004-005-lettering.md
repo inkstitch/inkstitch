@@ -1,7 +1,6 @@
 ---
 title: "Lettering Tool"
 permalink: /ru/docs/lettering/
-excerpt: ""
 last_modified_at: 2021-03-05
 toc: true
 ---

@@ -1,7 +1,6 @@
 ---
 title: "Personnaliser Ink/Stitch"
 permalink: /fr/docs/customize/
-excerpt: ""
 last_modified_at: 2022-01-16
 toc: true
 ---

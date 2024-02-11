@@ -2,7 +2,6 @@
 lang: fr
 title: "Ink/Stitch: Un logiciel de broderie machine basé sur Inkscape"
 permalink: /fr/about/
-excerpt: ""
 last_modified_at: 2019-12-05
 ---
 ## Contexte et philosophie

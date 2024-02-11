@@ -1,7 +1,6 @@
 ---
 title: "Font Tools"
 permalink: /docs/font-tools/
-excerpt: ""
 last_modified_at: 2023-02-20
 toc: true
 ---

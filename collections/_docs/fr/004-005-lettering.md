@@ -1,7 +1,6 @@
 ---
 title: "Outil lettrage"
 permalink: /fr/docs/lettering/
-excerpt: ""
 last_modified_at: 2023-01-04
 toc: true
 ---

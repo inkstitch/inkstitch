@@ -1,7 +1,6 @@
 ---
 title: "Workflow"
 permalink: /ru/docs/workflow/
-excerpt: ""
 last_modified_at: 2021-04-11
 toc: true
 ---

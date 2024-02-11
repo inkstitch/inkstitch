@@ -1,7 +1,6 @@
 ---
 title: "Pyembroidery"
 permalink: /da/developers/pyembroidery/
-excerpt: ""
 last_modified_at: 2018-10-11
 toc: false
 ---

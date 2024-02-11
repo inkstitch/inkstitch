@@ -1,7 +1,6 @@
 ---
 title: "Visualize"
 permalink: /da/bdocs/visualize/
-excerpt: ""
 last_modified_at: 2020-08-18
 toc: true
 ---

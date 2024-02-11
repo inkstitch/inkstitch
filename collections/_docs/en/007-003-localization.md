@@ -1,7 +1,6 @@
 ---
 title: "Localization"
 permalink: /docs/localization/
-excerpt: ""
 last_modified_at: 2018-07-21
 toc: false
 ---

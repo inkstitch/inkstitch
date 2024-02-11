@@ -1,7 +1,6 @@
 ---
 title: "Brodeuse auto-construite (Fonctionnant avec G-Code)"
 permalink: /fr/tutorials/embroidery-machine/
-excerpt: ""
 last_modified_at: 2018-10-13
 read_time: false
 toc: true

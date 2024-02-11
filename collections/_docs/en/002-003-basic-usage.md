@@ -1,7 +1,6 @@
 ---
 title: "Basic Usage"
 permalink: /docs/basic-usage/
-excerpt: ""
 last_modified_at: 2019-03-30
 toc: true
 ---

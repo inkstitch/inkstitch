@@ -1,7 +1,6 @@
 ---
 title: "Customize Ink/Stitch"
 permalink: /docs/customize/
-excerpt: ""
 last_modified_at: 2021-10-15
 toc: true
 ---

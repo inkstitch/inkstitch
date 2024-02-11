@@ -1,7 +1,6 @@
 ---
 title: "E-Stitch"
 permalink: /docs/stitches/e-stitch/
-excerpt: ""
 last_modified_at: 2023-04-22
 toc: true
 ---

@@ -1,7 +1,6 @@
 ---
 title: "Ink/Stitch Galleries"
 permalink: /fr/tutorials/inspiration/
-excerpt: ""
 last_modified_at: 2020-04-03
 read_time: false  
 ---

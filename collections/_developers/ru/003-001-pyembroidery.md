@@ -1,7 +1,6 @@
 ---
 title: "Pyembroidery"
 permalink: /ru/developers/pyembroidery/
-excerpt: ""
 last_modified_at: 2018-10-12
 toc: false
 ---

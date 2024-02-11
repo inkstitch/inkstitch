@@ -1,7 +1,6 @@
 ---
 title: "Gestion des couleurs de fil"
 permalink: /fr/docs/thread-color/
-excerpt: ""
 last_modified_at: 2023-05-04
 toc: true
 ---

@@ -1,7 +1,6 @@
 ---
 title: "Ink/Stitch: Ein auf Inkscape basierendes Open Source Programm für Stickmaschinen"
 permalink: /de/about/
-excerpt: ""
 last_modified_at: 2022-06-07
 ---
 ## Hintergrund und Philosophie

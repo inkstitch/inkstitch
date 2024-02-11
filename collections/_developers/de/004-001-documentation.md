@@ -1,7 +1,6 @@
 ---
 title: "Documentation"
 permalink: /de/developers/documentation/
-excerpt: ""
 last_modified_at: 2019-03-15
 ---
 Wir wollen alle Funktionen von Ink/Stitch mit Text, Bilder und/oder Videos beschreiben. Außerdem wollen wir Instruktionen über den Installationsprozess geben, als auch einen Überblick über die Arbeitsweise mit Ink/Stitch schaffen. Unterstützend sollten Beispieldateien zur Verfügung gestellt werden, die andere Benutzer dann verwenden können.

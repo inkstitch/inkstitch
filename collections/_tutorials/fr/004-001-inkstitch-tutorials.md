@@ -1,7 +1,6 @@
 ---
 title: "Tutoriels pour Ink/Stitch "
 permalink: /fr/tutorials/
-excerpt: ""
 read_time: false
 classes: wide
 ---

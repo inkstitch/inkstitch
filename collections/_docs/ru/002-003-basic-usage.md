@@ -1,7 +1,6 @@
 ---
 title: "Основы Работы"
 permalink: /ru/docs/basic-usage/
-excerpt: ""
 last_modified_at: 2021-12-02
 toc: true
 ---

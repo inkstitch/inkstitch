@@ -1,7 +1,6 @@
 ---
 title: "Werkzeuge: Linie"
 permalink: /de/docs/stroke-tools/
-excerpt: ""
 last_modified_at: 2023-05-11
 toc: true
 ---
@@ -17,6 +16,7 @@ Dabei werden Teilbereiche mit einem einfachen Geradstich unterlegt um weitere Sp
 - Stelle die Optionen wie gewünscht ein und klicke auf `Anwenden`
 
 Tipp: Standardmäßig wird die Stelle als Startpunkt ausgewählt, die am weitesten links liegt and der Punkt am rechten Rand ist der Enpunkt (auch, wenn sich diese Punkte nicht am Ende eines Pfades befinden). Dieses Verhalten kann durch die Befehle "Start-/Endposition für automatisch geführte Satinsäulen" angepasst werden.
+{: .notice--info }
 
 ### Optionen
 

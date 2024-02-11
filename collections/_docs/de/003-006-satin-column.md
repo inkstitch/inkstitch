@@ -1,7 +1,6 @@
 ---
 title: "Satinsäule"
 permalink: /de/docs/stitches/satin-column/
-excerpt: ""
 last_modified_at: 2023-04-19
 toc: true
 ---

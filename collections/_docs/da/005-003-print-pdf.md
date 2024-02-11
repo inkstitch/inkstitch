@@ -1,7 +1,6 @@
 ---
 title: "Print PDF"
 permalink: /da/docs/print-pdf/
-excerpt: ""
 last_modified_at: 2020-09-30
 toc: true
 ---

@@ -1,7 +1,6 @@
 ---
 title: "Points de sureté"
 permalink: /fr/docs/stitches/lock-stitches/
-excerpt: ""
 last_modified_at: 2023-04-15
 toc: true
 ---

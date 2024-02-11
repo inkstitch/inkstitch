@@ -1,7 +1,6 @@
 ---
 title: "Outils Remplissage"
 permalink: /fr/docs/fill-tools/
-excerpt: ""
 last_modified_at: 2023-05-01
 toc: true
 ---

@@ -1,7 +1,6 @@
 ---
 title: "Contour Fill"
 permalink: /ru/docs/stitches/contour-fill/
-excerpt: ""
 last_modified_at: 2023-01-14
 toc: true
 ---

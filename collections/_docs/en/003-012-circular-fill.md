@@ -1,7 +1,6 @@
 ---
 title: "Circular Fill"
 permalink: /docs/stitches/circular-fill/
-excerpt: ""
 last_modified_at: 2023-04-30
 toc: true
 ---

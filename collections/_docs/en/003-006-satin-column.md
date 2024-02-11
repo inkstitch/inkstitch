@@ -1,7 +1,6 @@
 ---
 title: "Satin Column"
 permalink: /docs/stitches/satin-column/
-excerpt: ""
 last_modified_at: 2023-04-27
 toc: true
 ---

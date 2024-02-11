@@ -1,7 +1,6 @@
 ---
 title: "Fehler melden"
 permalink: /de/developers/report-bugs/
-excerpt: ""
 last_modified_at: 2019-03-15
 ---
 

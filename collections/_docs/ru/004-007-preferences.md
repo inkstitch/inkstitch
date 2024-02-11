@@ -1,7 +1,6 @@
 ---
 title: "Preferences"
 permalink: /ru/docs/preferences/
-excerpt: ""
 last_modified_at: 2021-03-07
 toc: false
 ---

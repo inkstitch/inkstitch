@@ -1,7 +1,6 @@
 ---
 title: "Print PDF"
 permalink: /docs/print-pdf/
-excerpt: ""
 last_modified_at: 2020-10-01
 toc: true
 ---

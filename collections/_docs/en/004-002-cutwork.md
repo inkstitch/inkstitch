@@ -1,7 +1,6 @@
 ---
 title: "Cutwork"
 permalink: /docs/cutwork/
-excerpt: ""
 last_modified_at: 2022-12-30
 toc: true
 ---

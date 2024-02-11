@@ -1,7 +1,6 @@
 ---
 title: "Visual Commands"
 permalink: /da/docs/commands/
-excerpt: ""
 last_modified_at: 2022-05-20
 toc: true
 ---

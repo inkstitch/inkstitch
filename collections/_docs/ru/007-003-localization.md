@@ -1,7 +1,6 @@
 ---
 title: "Локализация"
 permalink: /ru/docs/localization/
-excerpt: ""
 last_modified_at: 2021-12-02
 toc: false
 ---

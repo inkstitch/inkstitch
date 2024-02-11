@@ -1,7 +1,6 @@
 ---
 title: "Preferences"
 permalink: /da/docs/preferences/
-excerpt: ""
 last_modified_at: 2022-06-24
 toc: false
 ---

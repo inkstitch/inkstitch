@@ -1,7 +1,6 @@
 ---
 title: Füllstich Werkzeuge
 permalink: /de/docs/fill-tools/
-excerpt: ""
 last_modified_at: 2023-05-11
 toc: true
 ---

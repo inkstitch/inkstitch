@@ -1,7 +1,6 @@
 ---
 title: "File Formats"
 permalink: /ru/docs/file-formats/
-excerpt: ""
 last_modified_at: 2020-05-12
 toc: true
 ---

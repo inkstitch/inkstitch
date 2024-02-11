@@ -1,7 +1,6 @@
 ---
 title: "Manuelle Stichplatzierung"
 permalink: /de/docs/stitches/manual-stitch/
-excerpt: ""
 last_modified_at: 2023-04-22
 toc: true
 ---

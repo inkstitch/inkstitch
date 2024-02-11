@@ -1,7 +1,6 @@
 ---
 title: "Text"
 permalink: /de/docs/lettering/
-excerpt: ""
 last_modified_at: 2023-02-12
 toc: true
 ---

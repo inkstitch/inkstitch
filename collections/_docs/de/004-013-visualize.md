@@ -1,7 +1,6 @@
 ---
 title: "Visualisierung"
 permalink: /de/docs/visualize/
-excerpt: ""
 last_modified_at: 2023-02-20
 toc: true
 ---
@@ -67,12 +66,12 @@ Zeigt Punkte in frei wählbaren Farben (Standart: rot, gelb, grün) über dem De
 * Entferne die Dichte-Punkte mit `Ctrl + Z` (rückgängig machen)
 
 ## Display stacking order
+
 {% include upcoming_release.html %}
 
 Run `Extensions > Ink/Stitch > Visualize and Export > Display stacking order...`.
 
-Chose the font size and then apply  to create a new layer with one text label per embroidery object , numbering them in the embroidery order.
-
+Chose the font size and then apply  to create a new layer with one text label per embroidery object, numbering them in the embroidery order.
 
 ## PDF-Export
 

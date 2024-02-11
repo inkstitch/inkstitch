@@ -1,7 +1,6 @@
 ---
 title: "Satin Werkzeuge"
 permalink: /de/docs/satin-tools/
-excerpt: ""
 last_modified_at: 2023-05-01
 toc: true
 ---

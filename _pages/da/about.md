@@ -2,7 +2,6 @@
 lang: dk
 title: "Ink/Stitch: An open source machine embroidery design platform based on Inkscape"
 permalink: /da/about/
-excerpt: ""
 last_modified_at: 2018-06-22
 ---
 ## Background and Philosophy

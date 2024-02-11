@@ -1,7 +1,6 @@
 ---
 title: "Spiralfüllung"
 permalink: /de/docs/stitches/circular-fill/
-excerpt: ""
 last_modified_at: 2023-05-01
 toc: true
 ---

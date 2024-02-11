@@ -1,7 +1,6 @@
 ---
 title: "Organisation du travail"
 permalink: /fr/docs/workflow/
-excerpt: ""
 last_modified_at: 2023-04-19
 toc: true
 ---

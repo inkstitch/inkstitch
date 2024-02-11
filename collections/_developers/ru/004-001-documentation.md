@@ -1,7 +1,6 @@
 ---
 title: "Documentation"
 permalink: /ru/developers/documentation/
-excerpt: ""
 last_modified_at: 2020-10-04
 toc: true
 ---

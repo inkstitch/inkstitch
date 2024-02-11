@@ -1,7 +1,6 @@
 ---
 title: "Machine Database"
 permalink: /da/docs/machine-database/
-excerpt: ""
 last_modified_at: 2020-04-11
 classes: wide
 

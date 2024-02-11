@@ -1,7 +1,6 @@
 ---
 title: "Externe Tutorials"
 permalink: /de/tutorials/external-tutorials/
-excerpt: ""
 read_time: false
 
 classes: wide

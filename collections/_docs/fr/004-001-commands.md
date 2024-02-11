@@ -1,7 +1,6 @@
 ---
 title: "Commandes visuelles"
 permalink: /fr/docs/commands/
-excerpt: ""
 last_modified_at: 2023-12-31
 toc: true
 ---

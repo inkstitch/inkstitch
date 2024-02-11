@@ -1,7 +1,6 @@
 ---
 title: "Visual Commands"
 permalink: /ru/docs/commands/
-excerpt: ""
 last_modified_at: 2021-09-28
 toc: true
 ---

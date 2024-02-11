@@ -1,7 +1,6 @@
 ---
 title: "Übersetzungen"
 permalink: /de/docs/localization/
-excerpt: ""
 last_modified_at: 2019-03-15
 toc: false
 ---

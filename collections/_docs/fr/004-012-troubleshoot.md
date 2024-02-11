@@ -1,7 +1,6 @@
 ---
 title: "Dépannage"
 permalink: /fr/docs/troubleshoot/
-excerpt: ""
 last_modified_at: 2023-05-05
 toc: true
 ---

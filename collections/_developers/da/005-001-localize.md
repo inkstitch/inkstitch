@@ -1,7 +1,6 @@
 ---
 title: "Localization"
 permalink: /da/developers/localize/
-excerpt: ""
 last_modified_at: 2021-10-02
 toc: true
 ---

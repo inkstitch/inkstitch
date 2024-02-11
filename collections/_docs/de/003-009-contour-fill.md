@@ -1,7 +1,6 @@
 ---
 title: "Konturfüllung"
 permalink: /de/docs/stitches/contour-fill/
-excerpt: ""
 last_modified_at: 2023-04-19
 toc: true
 ---

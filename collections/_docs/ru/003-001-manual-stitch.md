@@ -1,7 +1,6 @@
 ---
 title: "Manual Stitch"
 permalink: /ru/docs/stitches/manual-stitch/
-excerpt: ""
 last_modified_at: 2023-01-15
 toc: true
 ---

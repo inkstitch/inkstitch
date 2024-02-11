@@ -1,7 +1,6 @@
 ---
 title: "Troubleshoot"
 permalink: /ru/docs/troubleshoot/
-excerpt: ""
 last_modified_at: 2020-08-23
 toc: true
 ---

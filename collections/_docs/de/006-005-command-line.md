@@ -1,7 +1,6 @@
 ---
 title: "Ink/Stitch in der Shell"
 permalink: /de/docs/command-line/
-excerpt: ""
 last_modified_at: 2023-12-31
 ---
 Ink/Stitch kann bequem über die Shell ausgeführt werden.

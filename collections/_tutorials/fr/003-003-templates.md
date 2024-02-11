@@ -1,7 +1,6 @@
 ---
 title: "Templates"
 permalink: /fr/tutorials/resources/templates/
-excerpt: ""
 read_time: false
 
 classes: wide

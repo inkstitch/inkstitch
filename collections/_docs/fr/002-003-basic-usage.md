@@ -1,7 +1,6 @@
 ---
 title: "Premiers pas"
 permalink: /fr/docs/basic-usage/
-excerpt: ""
 last_modified_at: 2022-06-14
 toc: true
 ---
