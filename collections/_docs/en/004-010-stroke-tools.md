@@ -23,6 +23,8 @@ Tip: By default, it will choose the left-most extreme node as the starting point
 - Enable **Trim jump stitches** to use trims instead of jump stitches. Trim commands are added to the SVG, so you can modify/delete as you see fit.
 - Enable **Preserve order of running stitches** if you prefer to keep your former order. 
 
+## Outline {#outline}
+This extension helps reconstruct an original  object when one only has  the  stitch file, but  not the svg design file. Select one (or several) stitch object (usually from a fill), and this extension will try to find the outline. Best way to use it is to allow live preview and change the ratio via the scroll bar to find the best value for the given object.
 
 ## Convert Satin to Stroke
 
