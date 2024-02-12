@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-02-06 01:03+0000\n"
-"PO-Revision-Date: 2024-02-06 01:04\n"
+"POT-Creation-Date: 2024-02-11 01:08+0000\n"
+"PO-Revision-Date: 2024-02-11 01:09\n"
 "Last-Translator: \n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-06 01:03+0000\n"
+"POT-Creation-Date: 2024-02-11 01:08+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2296,20 +2296,20 @@ msgstr "*テキスト：独自の文字を作成するか、レタリングツ�
 msgid "- Extensions > Ink/Stitch > Lettering"
 msgstr "-拡張機能>インク/ステッチ>レタリング"
 
-#: lib/exceptions.py:24
+#: lib/exceptions.py:50
 msgid "Ink/Stitch experienced an unexpected error. This means it is a bug in Ink/Stitch."
 msgstr "Ink/Stitch に予期せぬエラーが発生しました。これは、Ink/Stitch の不具合である可能性があります。"
 
 #. this message is followed by a URL:
 #. https://github.com/inkstitch/inkstitch/issues/new
-#: lib/exceptions.py:27
+#: lib/exceptions.py:53
 msgid "If you'd like to help please\n"
 "- copy the entire error message below\n"
 "- save your SVG file and\n"
 "- create a new issue at"
 msgstr ""
 
-#: lib/exceptions.py:32
+#: lib/exceptions.py:58
 msgid "Include the error description and also (if possible) the svg file."
 msgstr "エラーの説明と (可能であれば) svg ファイルを添付してください。"
 
@@ -2459,7 +2459,7 @@ msgstr ""
 msgid "%s density"
 msgstr ""
 
-#: lib/extensions/display_stacking_order.py:55
+#: lib/extensions/display_stacking_order.py:58
 msgid "Stacking Order"
 msgstr ""
 

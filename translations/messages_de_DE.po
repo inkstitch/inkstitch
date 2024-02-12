@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-02-06 01:03+0000\n"
-"PO-Revision-Date: 2024-02-06 01:04\n"
+"POT-Creation-Date: 2024-02-11 01:08+0000\n"
+"PO-Revision-Date: 2024-02-11 01:09\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-06 01:03+0000\n"
+"POT-Creation-Date: 2024-02-11 01:08+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2295,13 +2295,13 @@ msgstr "* Text: Erstelle eigene Buchstaben oder probiere das Textwerkzeug aus:"
 msgid "- Extensions > Ink/Stitch > Lettering"
 msgstr "- Erweiterungen> Ink/Stitch > Text"
 
-#: lib/exceptions.py:24
+#: lib/exceptions.py:50
 msgid "Ink/Stitch experienced an unexpected error. This means it is a bug in Ink/Stitch."
 msgstr "Es ist ein unerwarteter Fehler aufgetreten. Das heißt, dies ist ein Fehler in Ink/Stitch."
 
 #. this message is followed by a URL:
 #. https://github.com/inkstitch/inkstitch/issues/new
-#: lib/exceptions.py:27
+#: lib/exceptions.py:53
 msgid "If you'd like to help please\n"
 "- copy the entire error message below\n"
 "- save your SVG file and\n"
@@ -2311,7 +2311,7 @@ msgstr "Wenn du uns helfen willst Ink/Stitch zu verbessern,\n"
 "- speichere die SVG-Datei ab und\n"
 "- erstelle einen Fehlerbereicht (New Issue) auf"
 
-#: lib/exceptions.py:32
+#: lib/exceptions.py:58
 msgid "Include the error description and also (if possible) the svg file."
 msgstr "Sende die Fehlerbeschreibung und (wenn möglich) auch die SVG-Datei."
 
@@ -2461,7 +2461,7 @@ msgstr "Grün"
 msgid "%s density"
 msgstr "%s Dichte"
 
-#: lib/extensions/display_stacking_order.py:55
+#: lib/extensions/display_stacking_order.py:58
 msgid "Stacking Order"
 msgstr "Stickreihenfolge"
 

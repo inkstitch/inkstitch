@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-02-06 01:03+0000\n"
-"PO-Revision-Date: 2024-02-10 01:02\n"
+"POT-Creation-Date: 2024-02-11 01:08+0000\n"
+"PO-Revision-Date: 2024-02-12 01:05\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-06 01:03+0000\n"
+"POT-Creation-Date: 2024-02-11 01:08+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2297,13 +2297,13 @@ msgstr "* Texte : Créez vos propres lettres ou essayez l'outil de lettrage :"
 msgid "- Extensions > Ink/Stitch > Lettering"
 msgstr "- Extensions > Ink/Stitch > Lettrage"
 
-#: lib/exceptions.py:24
+#: lib/exceptions.py:50
 msgid "Ink/Stitch experienced an unexpected error. This means it is a bug in Ink/Stitch."
 msgstr "Ink/Stitch a rencontré une erreur inattendue. Ceci signifie qu'il s'agit d'un bug dans Ink/Stitch."
 
 #. this message is followed by a URL:
 #. https://github.com/inkstitch/inkstitch/issues/new
-#: lib/exceptions.py:27
+#: lib/exceptions.py:53
 msgid "If you'd like to help please\n"
 "- copy the entire error message below\n"
 "- save your SVG file and\n"
@@ -2313,7 +2313,7 @@ msgstr "Si vous souhaitez aider, merci de \n"
 "- sauvegarder votre fichier svg\n"
 "- créer un rapport d'erreur (issue) sur"
 
-#: lib/exceptions.py:32
+#: lib/exceptions.py:58
 msgid "Include the error description and also (if possible) the svg file."
 msgstr "Incluez la description de l'erreur et (si possible) le fichier svg."
 
@@ -2463,7 +2463,7 @@ msgstr "Vert"
 msgid "%s density"
 msgstr "%s densité"
 
-#: lib/extensions/display_stacking_order.py:55
+#: lib/extensions/display_stacking_order.py:58
 msgid "Stacking Order"
 msgstr "Ordre d'empilement"
 
@@ -4585,7 +4585,7 @@ msgstr "Taille des marqueurs"
 
 #: inx/inkstitch_display_stacking_order.inx:3
 msgid "Display stacking order"
-msgstr "Montrer l'ordre d'empilement"
+msgstr "Montrer l'ordre de broderie"
 
 #: inx/inkstitch_display_stacking_order.inx:14
 msgid "Font size"
