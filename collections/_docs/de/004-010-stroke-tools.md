@@ -24,6 +24,11 @@ Tipp: Standardmäßig wird die Stelle als Startpunkt ausgewählt, die am weitest
 - Aktiviere **Reihenfolge der Geradstiche beibehalten** wenn die ursprüngliche Reihenfolge beibehalten werden soll.
 - Aktiviere **Schneide Faden bei Sprungstichen** um Fadenschnitt-Befehle zu den Objekten inzuzufügen auf die sonst ein Sprungstich folgen würde.
 
+## Außenkontur {#outline}
+{% include upcoming_release.html %}
+This extension helps reconstruct an original  object when one only has  the  stitch file, but  not the svg design file. Select one (or several) stitch object (usually from a fill), and this extension will try to find the outline. Best way to use it is to allow live preview and change the ratio via the scroll bar to find the best ratio value for the given object.
+
+
 ## Satin zu Geradstich
 
 Satin zu Geradstich konvertiert eine Satinsäule in ihre Mittellinie. Das kann beispielsweise dann nützlich sein, wenn nach der Verkleinerung eines Designs ein Geradstich besser passen würde als eine Satinsäule - oder wenn eine Dickenanpassung einer Satinsäule vorgenommen werden soll und eine Verbreiterung über den Zugausgleich kein zufriedenstellendes Ergebnis liefert. Ist dies der Fall, dann konvertiere die Satinsäule mit diesem Toll in einen Geradstich, setze die Linienbreit über `Füllung und Kontur` und im Anschluss ["Linie zu Satinsäule"](/docs/satin-tools/#convert-line-to-satin)
