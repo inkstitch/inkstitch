@@ -25,6 +25,7 @@ Vous recevrez soit un message indiquant qu'aucune erreur ne peut être trouvée,
 ## Informations sur l'élément {#element-info}
 {% include upcoming_release.html %}
 Cette extension affiche des informations sur divers paramètres des éléments de broderie sélectionnés.
+### My precious headline 1 {#my_id}
 
 
 ## Supprimer tous les paramètres de broderie
