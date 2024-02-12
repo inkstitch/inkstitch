@@ -13,6 +13,7 @@ appdirs
 numpy
 jinja2>2.9
 requests
+toml
 
 # colormath - last official release: 3.0.0
 # we need already submitted fixes - so let's grab them from the github repository
