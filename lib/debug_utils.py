@@ -147,7 +147,7 @@ def reorder_sys_path():
 
 # -----------------------------------------------------------------------------
 # try to resolve debugger type from ini file or cmd line of bash
-def resole_debug_type(ini: configparser.ConfigParser):
+def resolve_debug_type(ini: configparser.ConfigParser):
     # enable/disable debugger from bash: -d
     if os.environ.get('INKSTITCH_DEBUG_ENABLE', '').lower() in ['true', '1', 'yes', 'y']:
         debug_enable = True
@@ -166,7 +166,7 @@ def resole_debug_type(ini: configparser.ConfigParser):
 
 
 # try to resolve profiler type from ini file or cmd line of bash
-def resole_profile_type(ini: configparser.ConfigParser):
+def resolve_profile_type(ini: configparser.ConfigParser):
     # enable/disable profiling from bash: -p
     if os.environ.get('INKSTITCH_PROFILE_ENABLE', '').lower() in ['true', '1', 'yes', 'y']:
         profile_enable = True

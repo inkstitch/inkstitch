@@ -6,14 +6,29 @@
 import os
 import sys
 from pathlib import Path  # to work with paths as objects
-import configparser   # to read DEBUG.ini
 from argparse import ArgumentParser  # to parse arguments and remove --extension
 
+import configparser   # to read DEBUG.ini
+import toml           # to read logging configuration from toml file
+import warnings
+import logging
+import logging.config
+
 import lib.debug_utils as debug_utils
+import lib.debug_logging as debug_logging
 
 SCRIPTDIR = Path(__file__).parent.absolute()
 
+logger = logging.getLogger("inkstitch")   # create module logger with name 'inkstitch'
+
+ini = configparser.ConfigParser()
+ini.read(SCRIPTDIR / "DEBUG.ini")  # read DEBUG.ini file if exists, otherwise use default values in ini object
 running_as_frozen = getattr(sys, 'frozen', None) is not None  # check if running from pyinstaller bundle
+
+if not running_as_frozen:  # override running_as_frozen from DEBUG.ini - for testing
+    if ini.getboolean("DEBUG", "force_frozen", fallback=False):
+        running_as_frozen = True
+
 
 if len(sys.argv) < 2:
     # no arguments - prevent accidentally running this script
@@ -31,8 +46,46 @@ if len(sys.argv) < 2:
         print(msg)
     exit(1)
 
-ini = configparser.ConfigParser()
-ini.read(SCRIPTDIR / "DEBUG.ini")  # read DEBUG.ini file if exists
+# Configure logging:
+# in release mode normally we want to ignore all warnings and logging, but we can enable it by setting environment variables
+#  - INKSTITCH_LOGLEVEL - logging level:
+#       'DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL'
+#  - PYTHONWARNINGS, -W - warnings action controlled by python
+#       actions: 'error', 'ignore', 'always', 'default', 'module', 'once'
+if running_as_frozen:  # in release mode
+    loglevel = os.environ.get('INKSTITCH_LOGLEVEL')  # read log level from environment variable or None
+    docpath = os.environ.get('DOCUMENT_PATH')  # read document path from environment variable (set by inkscape) or None
+
+    if docpath is not None and loglevel is not None and loglevel.upper() in ['DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL']:
+        # enable logging-warning and redirect output to input_svg.inkstitch.log
+        logfilename = Path(docpath).with_suffix('.inkstitch.log')  # log file is created in document path
+        loglevel = loglevel.upper()
+
+        logging.config.dictConfig(debug_logging.frozen_config)  # configure root logger from dict - using loglevel, logfilename
+        logging.captureWarnings(True)                           # capture all warnings to log file with level WARNING
+        logger.info(f"Running as frozen: {running_as_frozen}")
+    else:
+        logging.disable()                # globally disable all logging of all loggers
+        warnings.simplefilter('ignore')  # ignore all warnings
+
+else:
+    # in development mode we want to use configuration from some LOGGING.toml file
+    logging_config_file = ini.get("LOGGING", "log_config_file", fallback=None)
+    if logging_config_file is not None:
+        logging_config_file = Path(logging_config_file)
+        if logging_config_file.exists():
+            with open(logging_config_file, "r") as f:
+                development_config = toml.load(f)
+        else:
+            raise FileNotFoundError(f"{logging_config_file} file not found")
+    else:                         # if LOGGING.toml file does not exist, use default logging configuration
+        loglevel = 'DEBUG'        # set log level to DEBUG
+        logfilename = SCRIPTDIR / "inkstitch.log"  # log file is created in current directory
+        development_config = debug_logging.development_config
+
+    debug_logging.configure_logging(development_config, ini, SCRIPTDIR)  # initialize logging configuration
+    logger.info("Running in development mode")
+    logger.info(f"Using logging configuration from file: {logging_config_file}")
 
 # check if running from inkscape, given by environment variable
 if os.environ.get('INKSTITCH_OFFLINE_SCRIPT', '').lower() in ['true', '1', 'yes', 'y']:
@@ -48,9 +101,9 @@ if not running_as_frozen:  # debugging/profiling only in development mode
     # specify debugger type
     #   but if script was already started from debugger then don't read debug type from ini file or cmd line
     if not debug_active:
-        debug_type = debug_utils.resole_debug_type(ini)  # read debug type from ini file or cmd line
+        debug_type = debug_utils.resolve_debug_type(ini)  # read debug type from ini file or cmd line
 
-    profile_type = debug_utils.resole_profile_type(ini)  # read profile type from ini file or cmd line
+    profile_type = debug_utils.resolve_profile_type(ini)  # read profile type from ini file or cmd line
 
     if running_from_inkscape:
         # process creation of the Bash script - should be done before sys.path is modified, see below in prefere_pip_inkex
@@ -75,27 +128,8 @@ if debug_type != 'none':
     # check if debugger is really activated
     debug_active = bool((gettrace := getattr(sys, 'gettrace')) and gettrace())
 
-# warnings are used by some modules, we want to ignore them all in release
-#   - see warnings.warn()
-if running_as_frozen or not debug_active:
-    import warnings
-    warnings.filterwarnings('ignore')
-
-# TODO - check if this is still needed for shapely, apparently shapely now uses only exceptions instead of io.
-#        all logs were removed from version 2.0.0 and above
-#  ---- plan to remove this in future ----
-# import logging # to set logger for shapely
-# from io import StringIO  # to store shapely errors
-# set logger for shapely - for old versions of shapely
-# logger = logging.getLogger('shapely.geos')  # attach logger of shapely
-# logger.setLevel(logging.DEBUG)
-# shapely_errors = StringIO()                # in memory file to store shapely errors
-# ch = logging.StreamHandler(shapely_errors)
-# ch.setLevel(logging.DEBUG)
-# formatter = logging.Formatter('%(name)s - %(levelname)s - %(message)s')
-# ch.setFormatter(formatter)
-# logger.addHandler(ch)
-#  ---- plan to remove this in future ----
+# log startup info
+debug_logging.startup_info(logger, SCRIPTDIR, running_as_frozen, running_from_inkscape, debug_active, debug_type, profiler_type)
 
 # pop '--extension' from arguments and generate extension class name from extension name
 #   example:  --extension=params will instantiate Params() class from lib.extensions.
@@ -150,8 +184,5 @@ else:   # if not debug nor profile mode
         sys.exit(1)
     finally:
         restore_stderr()
-
-        # if shapely_errors.tell():                   # see above plan to remove this in future for shapely
-        #     errormsg(shapely_errors.getvalue())
 
     sys.exit(0)
