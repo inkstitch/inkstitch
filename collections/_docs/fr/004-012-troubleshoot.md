@@ -22,7 +22,7 @@ Vous recevrez soit un message indiquant qu'aucune erreur ne peut être trouvée,
 **Astuce:** Il est possible qu'un objet contienne plus d'une erreur. Les formes de remplissage affichent uniquement la première erreur qui apparaîtra. Exécutez l'extension à nouveau si vous recevez encore des messages d'erreur.
 {: .notice--info }
 
-## Informations sur l'élément
+## <a name="element-info">Informations sur l'élément</a>
 {% include upcoming_release.html %}
 Cette extension affiche des informations sur divers paramètres des éléments de broderie sélectionnés.
 
