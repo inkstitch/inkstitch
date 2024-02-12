@@ -24,6 +24,7 @@ Tip: By default, it will choose the left-most extreme node as the starting point
 - Enable **Preserve order of running stitches** if you prefer to keep your former order. 
 
 ## Outline {#outline}
+{% include upcoming_release.html %}
 This extension helps reconstruct an original  object when one only has  the  stitch file, but  not the svg design file. Select one (or several) stitch object (usually from a fill), and this extension will try to find the outline. Best way to use it is to allow live preview and change the ratio via the scroll bar to find the best value for the given object.
 
 ## Convert Satin to Stroke
