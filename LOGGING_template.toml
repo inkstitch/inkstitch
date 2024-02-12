@@ -1,0 +1,38 @@
+# logging/warning template for inkstitch
+# format: toml
+# enable config file in DEBUG.ini: log_config_file
+
+# warnings.simplefilter(action), default: "default"
+# - possible values: "error", "ignore", "always", "default", "module", "once"
+warnings_action = "default"
+
+# logging.captureWarnings()  default: true
+# - possible values: true, false
+warnings_capture = true
+
+# mandatory, must be an integer and 1
+version = 1
+
+# false - to keep existing loggers, not specified here
+# true  - to disable all loggers not specified here
+disable_existing_loggers = false
+
+[filters]
+
+[formatters.simple]
+    format = "%(asctime)s [%(levelname)s]: %(filename)s.%(funcName)s: %(message)s"
+
+[handlers.file]
+    class = "logging.FileHandler"
+    formatter = "simple"
+    filename = "%(SCRIPTDIR)s/inkstitch.log"
+    mode = "w"
+
+[loggers.inkstitch]
+    level = "DEBUG"
+    handlers = [ "file",]
+    propagate = false
+
+[loggers.root]
+    level = "DEBUG"
+    handlers = [ "file",]

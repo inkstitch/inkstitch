@@ -6,6 +6,7 @@ __pycache__
 *.zip
 *.tar.gz
 *.po
+*.log
 dist/
 build/
 locales/
@@ -23,6 +24,8 @@ electron/yarn.lock
 
 # debug and profile files
 /DEBUG.ini
+/LOGGING.toml
+/LOGGING[0-9]*.toml
 /debug*
 /.debug*
 # old debug files
