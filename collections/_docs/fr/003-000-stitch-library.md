@@ -31,7 +31,7 @@ Il est possible de définir sa propre séquence de répétition, par exemple alt
 ### Point manuel
 En mode point manuel Ink/Stitch utilisera chaque nœud d’un chemin comme point de pénétration de l’aiguille, exactement comme vous les avez placés. 
 
-!Point manuel Détail](/assets/images/docs/manual-stitch-detail.png)
+![Point manuel Détail](/assets/images/docs/manual-stitch-detail.png)
 
 [En savoir plus](/fr/docs/stitches/manual-stitch/){: .btn .btn--primary}
 
