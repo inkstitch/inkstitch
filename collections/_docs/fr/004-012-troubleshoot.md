@@ -10,7 +10,7 @@ Ink/Stitch peut parfois être déroutant. Surtout pour les débutants. Mais si v
 
 Ink/Stitch est livré avec une extension de dépannage, conçue pour vous aider à comprendre les erreurs tout en vous indiquant la position exacte du problème. Elle vous indiquera comment résoudre chaque type d'erreur et donnera des conseils utiles sur les formes présentant des problèmes, même si elles ne causent pas d'erreur dans Ink/Stitch.
 
-## Usage
+### Usage
 
 * (Optionel) Sélectionnez les objets que vous souhaitez tester. Si vous n'en sélectionnez aucun, l'ensemble du document sera testé.
 * Lancer `Extensions > Ink/Stitch > Résolution de problèmes > Dépistage de problèmes avec des objets`
@@ -21,6 +21,11 @@ Vous recevrez soit un message indiquant qu'aucune erreur ne peut être trouvée,
 
 **Astuce:** Il est possible qu'un objet contienne plus d'une erreur. Les formes de remplissage affichent uniquement la première erreur qui apparaîtra. Exécutez l'extension à nouveau si vous recevez encore des messages d'erreur.
 {: .notice--info }
+
+## Informations sur l'élément
+{% include upcoming_release.html %}
+Cette extension affiche des informations sur divers paramètres des éléments de broderie sélectionnés.
+
 
 ## Supprimer tous les paramètres de broderie
 
