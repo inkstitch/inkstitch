@@ -1,7 +1,7 @@
 ---
 title: "Troubleshoot Objects"
 permalink: /de/docs/troubleshoot/
-last_modified_at: 2020-04-27
+last_modified_at: 2024-02-11
 toc: true
 ---
 ## Fehlerbehebung
@@ -21,6 +21,10 @@ Entweder erhälst du eine nun Nachricht, dass kein Fehler gefunden wurde oder es
 
 **Tipp:** Es ist möglich, dass ein Objekt mehrere Fehler enthält. Objekte mit Füllstich zeigen aber in der Regel nur den zuerst aufgetretenen Fehler an. Nutze das Troubleshoot-Werkzeug erneut, wenn du weitere Fehlermeldungen erhälst.
 {: .notice--info }
+
+## Element Info
+{% include upcoming_release.html %}
+Diese Erweiterung sammelt Informationen über verschiedene Parameter für eine Auswahl von Stickobjekten.
 
 
 ## Stickeinstellungen entfernen
