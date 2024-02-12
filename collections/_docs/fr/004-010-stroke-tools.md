@@ -1,7 +1,7 @@
 ---
 title: "Outils: Trait"
 permalink: /fr/docs/stroke-tools/
-last_modified_at: 2023-05-05
+last_modified_at: 2024-02-11
 toc: true
 ---
 ## Agencement automatique de points droits
@@ -24,6 +24,10 @@ Par défaut, l'extension choisira de commencer par le noeud le plus à gauche et
 - Cocher **Ajouter des noeuds aux intersections** donnera un meilleur résultat de routage, avec des chemins de dessous qui auront leurs extrémités aux intersections ou aux noeuds terminaux. Ne décocher cette option que si vous avez manuellement ajouté des noeuds là où vous souhaitez les coupures de chemin.
 - Cocher **Préserver l'ordre des points droits** si vous souhaitez préserver l'ordre initial des chemins paramétrés en points droits.
 - Cocher **Couper les sauts de fil**  pour  utiliser des commandes de coupe plutôt que des sauts de fil. Les commandes de coupe sont ajoutées au svg, vous pouvez donc ensuite les modifier/supprimer à votre guise.
+
+## Contour {#outline}
+{% include upcoming_release.html %}
+Cette extensionn aide àreconstruire l'objet original à partir du fichier de points lorsqu'on ne dispose plus du fichier svg de départ. Sélectionner un ou plusieurs chemins de points (en general un remplissage) et cette extension va essayer de trouver leur contour. La manière la plus simple de procéder est de permettre  le  "live preview"  et d'utiliser la scroll bar pour modifier le ratio et trouver la meilleure valeur pour le chemin choisi.
 
 ## Satin en Trait
 
