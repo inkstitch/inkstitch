@@ -23,6 +23,10 @@ You will either get a message, that no error could be found or a new layer with 
 **Tip:** It is possible that one object contains more than one error. Fill shapes only display the first error that will appear. Run the extension again, if you are receiving more error messages.
 {: .notice--info }
 
+## Element Info
+{% include upcoming_release.html %}
+This extension informs about various parameters of selected stitch elements.
+
 ## Remove embroidery settings
 
 Use this function to remove the information Ink/Stitch has stored in your document.
