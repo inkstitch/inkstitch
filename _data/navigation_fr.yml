@@ -205,8 +205,10 @@ developers:
       url: /fr/developers/inkstitch/debug/
     - title: Coding Style
       url: /fr/developers/inkstitch/coding-style/
-    - title: Espace de nommage
-      url: /fr/developers/inkstitch/namespace/
+    - title: Manual Build (Apple Silicon)
+      url: /developers/inkstitch/apple-silicon-manual-build/
+    - title: Manual Build (older macOS systems)
+      url: /developers/inkstitch/manual-build-old-macos/
   - title: Pyembroidery
     url: /fr/developers/pyembroidery
   - title: Documentation
@@ -217,4 +219,5 @@ developers:
     url: /fr/developers/report-bugs/
   - title: "Statistiques"
     url: /fr/statistics/
-      
+  - title: Espace de nommage
+    url: /fr/developers/inkstitch/namespace/

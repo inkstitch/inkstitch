@@ -195,14 +195,20 @@ developers:
   - title: Ink/Stitch
     url: /de/developers/inkstitch/
     children:
-    - title: Manualle Installation
+    - title: Manuelle Installation
       url: /de/developers/inkstitch/manual-setup/
+    - title: Manuelle Installation (Windows)
+      url: /developers/inkstitch/windows-manual-build/
+    - title: Multiversion
+      url: /de/developers/inkstitch/multiversion
     - title: Debugging und Profiling
       url: /de/developers/inkstitch/debug/
     - title: Coding Style
       url: /de/developers/inkstitch/coding-style/
-    - title: Namespace
-      url: /de/developers/inkstitch/namespace/
+    - title: Manual Build (Apple Silicon)
+      url: /developers/inkstitch/apple-silicon-manual-build/
+    - title: Manual Build (older macOS systems)
+      url: /developers/inkstitch/manual-build-old-macos/
   - title: Pyembroidery
     url: /de/developers/pyembroidery
   - title: Dokumentation
@@ -213,4 +219,5 @@ developers:
     url: /de/developers/report-bugs/
   - title: "Statistik"
     url: /de/statistics/
-      
+  - title: Namespace
+    url: /de/developers/inkstitch/namespace/

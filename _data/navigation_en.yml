@@ -203,16 +203,16 @@ developers:
       url: /developers/inkstitch/manual-setup/
     - title: Manual Setup (Windows)
       url: /developers/inkstitch/windows-manual-build/
-    - title: Manual Build (Apple Silicon)
-      url: /developers/inkstitch/apple-silicon-manual-build/
-    - title: Manual Build (older macOS systems)
-      url: /developers/inkstitch/manual-build-old-macos/
+    - title: Multiversion
+      url: /developers/inkstitch/multiversion
     - title: Debugging and Profiling
       url: /developers/inkstitch/debug/
     - title: Coding Style
       url: /developers/inkstitch/coding-style/
-    - title: Namespace
-      url: /developers/inkstitch/namespace/
+    - title: Manual Build (Apple Silicon)
+      url: /developers/inkstitch/apple-silicon-manual-build/
+    - title: Manual Build (older macOS systems)
+      url: /developers/inkstitch/manual-build-old-macos/
   - title: Pyembroidery
     url: /developers/pyembroidery
   - title: Documentation
@@ -223,4 +223,5 @@ developers:
     url: /developers/report-bugs/
   - title: "Statistics"
     url: /statistics/
-      
+  - title: Namespace
+    url: /developers/inkstitch/namespace/

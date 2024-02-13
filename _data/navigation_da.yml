@@ -207,8 +207,6 @@ developers:
       url: /da/developers/inkstitch/debug/
     - title: Coding Style
       url: /da/developers/inkstitch/coding-style/
-    - title: Namespace
-      url: /da/developers/inkstitch/namespace/
   - title: Pyembroidery
     url: /da/developers/pyembroidery
   - title: Documentation
@@ -219,3 +217,5 @@ developers:
     url: /da/developers/report-bugs/
   - title: "Statistics"
     url: /da/statistics/
+  - title: Namespace
+    url: /da/developers/inkstitch/namespace/

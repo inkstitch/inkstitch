@@ -1,7 +1,7 @@
 ---
 title: "New Features, Updates and Fixes for Ink/Stitch after the release of v3.0.1"
 permalink: /upcoming/
-last_modified_at: 2024-02-05
+last_modified_at: 2024-02-13
 sidebar:
   nav: pages
 toc: true
@@ -69,6 +69,7 @@ Further updates have been made to:
 
   * Improved simulator for params and lettering ([#2481](https://github.com/inkstitch/inkstitch/issues/2481))
   * Simulator is now attached to the main window (params or lettering) ([#2557](https://github.com/inkstitch/inkstitch/issues/2557))
+
     It is detachable and the last state will be remembered.
 
 ## Stitch types
@@ -78,7 +79,7 @@ Further updates have been made to:
   * Smooth underpath ([#2346](https://github.com/inkstitch/inkstitch/issues/2346))
   * Prevent fill stitch from going outside the shape ([#2346](https://github.com/inkstitch/inkstitch/issues/2346))
   * Linear gradient fill: a new stitch type to stitch gradients ([#2587](https://github.com/inkstitch/inkstitch/issues/2587))
-  * Meander fill: add zig-zag option ([#2699]https://github.com/inkstitch/inkstitch/pull/2699)
+  * Meander fill: add zig-zag option ([#2699](https://github.com/inkstitch/inkstitch/pull/2699))
 
 ### Satin column - family
 
@@ -104,6 +105,7 @@ Further updates have been made to:
 
 ## Developer Features
 
+  * [#2715](https://github.com/inkstitch/inkstitch/issues/#2715) Multiversion support
   * [#2653](https://github.com/inkstitch/inkstitch/issues/2653) Updated debug and profiling procedures
 
 ## Bug Fixes
@@ -120,7 +122,7 @@ Further updates have been made to:
   * [#2647](https://github.com/inkstitch/inkstitch/issues/2647) Ignore multipoints in intersect regions with gratings
   * [#2635](https://github.com/inkstitch/inkstitch/issues/2635) [#2645](https://github.com/inkstitch/inkstitch/issues/2645) Fix some networkx no path errors
   * [#2624](https://github.com/inkstitch/inkstitch/issues/2624) Replace jumps by running stitches in large satin columns
-  * [#2578](https://github.com/inkstitch/inkstitch/issues/2578) [#2578](https://github.com/inkstitch/inkstitch/issues/2578)Auto-route Satin: handle sided properties correctly
+  * [#2578](https://github.com/inkstitch/inkstitch/issues/2578) Auto-route Satin: handle sided properties correctly
   * [#2566](https://github.com/inkstitch/inkstitch/issues/2566) Update depcrecated inx file descriptions, so they are translatable now
   * [#2550](https://github.com/inkstitch/inkstitch/issues/2550) Lettering: error on empty layer in font file
   * [#2527](https://github.com/inkstitch/inkstitch/issues/2527) Stitch plan: multiply sequence error
