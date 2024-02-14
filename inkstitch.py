@@ -63,7 +63,6 @@ if running_as_frozen:  # in release mode
 
         logging.config.dictConfig(debug_logging.frozen_config)  # configure root logger from dict - using loglevel, logfilename
         logging.captureWarnings(True)                           # capture all warnings to log file with level WARNING
-        logger.info(f"Running as frozen: {running_as_frozen}")
     else:
         logging.disable()                # globally disable all logging of all loggers
         warnings.simplefilter('ignore')  # ignore all warnings
@@ -93,6 +92,7 @@ if os.environ.get('INKSTITCH_OFFLINE_SCRIPT', '').lower() in ['true', '1', 'yes'
 else:
     running_from_inkscape = True
 
+# initialize debug and profiler type
 debug_active = bool((gettrace := getattr(sys, 'gettrace')) and gettrace())  # check if debugger is active on startup
 debug_type = 'none'
 profiler_type = 'none'

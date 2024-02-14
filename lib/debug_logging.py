@@ -144,10 +144,8 @@ development_config = {
 #  - capture all warnings to log file with level WARNING - depends on warnings_capture
 #  - set action for warnings: 'error', 'ignore', 'always', 'default', 'module', 'once' - depends on warnings_action
 def configure_logging(config, ini, SCRIPTDIR):
-
     # replace %(SCRIPTDIR)s ->  script path in filenames
     config = evaluate_filenames(config, {'SCRIPTDIR': SCRIPTDIR})
-
     logging.config.dictConfig(config)  # configure loggers from dict - using loglevel, logfilename
 
     warnings_capture = config.get('warnings_capture', True)
@@ -170,9 +168,7 @@ def configure_logging(config, ini, SCRIPTDIR):
 #    config - logging configuration
 #    myvars - dictionary with variables
 # returns: logging configuration with evaluated filenames
-def evaluate_filenames(config, myvars):
-    import copy
-    cfg = copy.deepcopy(config)
+def evaluate_filenames(cfg, myvars):
     for k, v in cfg.get('handlers', {}).items():
         if 'filename' in v:
             cfg['handlers'][k]['filename'] = v['filename'] % myvars
@@ -185,7 +181,6 @@ def startup_info(logger, SCRIPTDIR, running_as_frozen, running_from_inkscape, de
     logger.info(f"Debugger active: {debug_active}")
     logger.info(f"Debugger type: {debug_type}")
     logger.info(f"Profiler type: {profiler_type}")
-    logger.info(f"Using logging configuration from file: {SCRIPTDIR / 'LOGGING.toml'}")
 
     # log Python version, platform, command line arguments, sys.path
     import sys
