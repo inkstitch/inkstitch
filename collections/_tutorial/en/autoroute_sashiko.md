@@ -2,7 +2,7 @@
 permalink: /tutorials/autoroute_sashiko/
 title: "Sashiko "
 language: en
-last_modified_at: 2022-05-27
+last_modified_at: 2024-02-14
 excerpt: "Using Sashiko extension  with autoroute  runningstitch"
 image: "/assets/images/tutorials/sashiko/sashiko.jpg"
 tutorial-type:
@@ -40,7 +40,6 @@ You can now close the Sashiko extension dialog window.
 
 To change from design to triple stitch embroidery
 * Select all the paths that the extension just created (there are many)
-  * Set all stroke style to dashed
   * `Extensions > Ink/Stitch > Params'
     * Set the length of the running stitch (2 mm for the embroidered sample)
      * Choose the bean stitch number of repeats (1 for the embroidered sample)
@@ -58,4 +57,8 @@ Instead of the paths created by the Sashiko extension you now have a group  "Aut
 simple running stitch  paths hidden under triple stitch path to allow the design to have as few jumps as possible.
 
 
-You may wish to also try with the [bobbinlace extension](https://d-bl.github.io/inkscape-bobbinlace).
+You may wish to also try with other extensions such as :
+
+*[bobbinlace extension](https://d-bl.github.io/inkscape-bobbinlace).
+*[Tiling extension](https://inkscape.org/fr/~cwant/%E2%98%85inkscape-tiling-extension+2)
+
