@@ -39,8 +39,8 @@ Vous pouvez maintenant fermer la fenêtre de dialogue de l'extension.
 
 Pour passer du dessin à une broderie en point triple
 * Selectionnez tous les chemins que l'extension vient de créer (il y en a beaucoup)
-  * Mettre tous les contours en pointillé
-  * `Extensions > Ink/Stitch > Paramètres' 
+  * `Extensions > Ink/Stitch > Paramètres'
+    * choisir point droit comme methode
     * Choisir la longueur du point droit (2 mm sur l'exemple brodé)
      * Choisir le nombre de répétitions de point triple (1 sur  l'exemple brodé)
   * `Extensions > Ink/Stitch > Outils:Trait > Agencement automatique de points droits` 
