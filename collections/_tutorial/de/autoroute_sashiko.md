@@ -2,7 +2,7 @@
 permalink: /de/tutorials/autoroute_sashiko/
 title: "Sashiko "
 language: de
-last_modified_at: 2022-07-08
+last_modified_at: 2024-02-15
 excerpt: "Automatisch Geführter Geradstich und Sashiko-Erweiterung"
 image: "/assets/images/tutorials/sashiko/sashiko.jpg"
 tutorial-typ:
@@ -39,7 +39,6 @@ Du kannst nun das Dialogfenster der Sashiko Erweiterung schließen.
 
 Um von der Zeichnung zu einer Stickerei mit Dreifach-Geradstich zu gelangen:
 * Wähle alle Pfade aus, die die Erweiterung gerade erstellt hat (es gibt viele).
-  * Alle Konturen auf gepunktet setzen.
   * `Erweiterungen > Ink/Stitch > Parameter`. 
     * Die Länge des Geradstichs wählen (2 mm im gestickten Beispiel).
      * Die Anzahl der Wiederholungen des Mehrfach-Geradstiches wählen (1 im gestickten Beispiel, also Dreifach-Geradstich).
@@ -56,4 +55,4 @@ Du hast nun eine automatisch erstellte Gruppe, die eine Mischung aus folgenden E
 
 Die so erstellte Gruppe kannst du nun so skalieren wie du möchtest, die oben gewählte Länge des Geradstichs bleibt erhalten. 
 
-Du könntest es auch mit dieser [Bobbinlace Erweiterung](https://d-bl.github.io/inkscape-bobbinlace) versuchen.
+Du könntest es auch mit dieser [Bobbinlace Erweiterung](https://d-bl.github.io/inkscape-bobbinlace)  oder [Tiling extension](https://inkscape.org/fr/~cwant/%E2%98%85inkscape-tiling-extension+2) versuchen.
