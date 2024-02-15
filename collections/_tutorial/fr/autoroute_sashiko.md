@@ -2,7 +2,7 @@
 permalink: /fr/tutorials/autoroute_sashiko/
 title: "Sashiko "
 language: fr
-last_modified_at: 2022-05-28
+last_modified_at: 2024-02-15
 excerpt: "Agencement automatique de points droits et extension Sashiko"
 image: "/assets/images/tutorials/sashiko/sashiko.jpg"
 tutorial-type:
@@ -54,4 +54,6 @@ Vous avez maintenant un groupe Agencement automatique qui contient un mélange d
 * chemins en  point triple dont les noms commencent par "Agencement automatique", qui correspondent au dessin choisi
 * chemins en point droit simple dont les noms commencent par "Chemin de dessous", qui ont été ajouté pour vous permettre d'obtenir un résultat sans sauts de fils
 
-Vous pourriez aussi essayer avec cette  [Bobbinlace extension](https://d-bl.github.io/inkscape-bobbinlace).
+Vous pourriez aussi essayer avec d'autrez extensions comme :
+*[Tiling extension](https://inkscape.org/fr/~cwant/%E2%98%85inkscape-tiling-extension+2)
+*[Bobbinlace extension](https://d-bl.github.io/inkscape-bobbinlace).
