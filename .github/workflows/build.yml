@@ -86,7 +86,7 @@ jobs:
           echo "${{ env.pythonLocation }}\bin" >> $GITHUB_PATH
       - shell: bash
         run: |
-          make dist
+          bin/geos-shapely-build
         env:
           BUILD: linux
           INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY }}
@@ -128,6 +128,9 @@ jobs:
           python -m pip install pyinstaller
 
           echo "${{ env.pythonLocation }}\bin" >> $GITHUB_PATH
+      - name: install geos 32
+        shell: cmd
+        run: bin\build32.cmd
       - shell: bash
         run: |
           make dist
@@ -180,6 +183,9 @@ jobs:
           python -m pip install pyinstaller
 
           echo "${{ env.pythonLocation }}\bin" >> $GITHUB_PATH
+      - name: install geos 64
+        shell: cmd
+        run: bin\build64.cmd
       - shell: bash
         run: |
           make dist
