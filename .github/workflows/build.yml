@@ -130,7 +130,8 @@ jobs:
           echo "${{ env.pythonLocation }}\bin" >> $GITHUB_PATH
       - name: install geos 32
         shell: cmd
-        run: SET BUILD32="1"
+        run: |
+          SET BUILD32="1"
           bin\build-geos-win.cmd
       - shell: bash
         run: |
@@ -186,7 +187,8 @@ jobs:
           echo "${{ env.pythonLocation }}\bin" >> $GITHUB_PATH
       - name: install geos 64
         shell: cmd
-        run: bin\build-geos-win.cmd
+        run: |
+          bin\build-geos-win.cmd
       - shell: bash
         run: |
           make dist

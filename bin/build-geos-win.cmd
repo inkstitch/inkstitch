@@ -1,7 +1,7 @@
 @echo off
 mkdir %CD%\geos-build
-
 SET GEOS_INSTALL=%CD%\geos-build
+
 if NOT DEFINED BUILD32 (SET BUILDFLAG="x64") else (SET BUILDFLAG="Win32")
 echo %BUILDFLAG%
 
