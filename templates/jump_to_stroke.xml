@@ -11,8 +11,15 @@
             </submenu>
         </effects-menu>
     </effect>
+    <param name="minimum-jump-length" type="float" gui-text="Convert jumps longer than (mm)">3.0</param>
     <param name="stitch-length" type="float" gui-text="Running stitch length (mm)">2.5</param>
     <param name="tolerance" type="float" gui-text="Running stitch tolerance (mm)">2.0</param>
+    <param name="connect" type="optiongroup" appearance="combo" gui-text="Connect">
+        <option value="all">all</option>
+        <option value="layer">in same layer</option>
+        <option value="group">in same group</option>
+    </param>
+    <param name="merge" type="bool" gui-text="Merge consecutive strokes">false</param>
     <script>
         {{ command_tag | safe }}
     </script>
