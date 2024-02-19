@@ -71,11 +71,8 @@ class JumpToStroke(InkstitchExtension):
         index = parent.index(node)
 
         # do not add a running stitch if the distance is smaller than the collapse setting
-        self.metadata = self.get_inkstitch_metadata()
-        collapse_len = self.metadata['collapse_len_mm'] or 3.0
-        collapse_len *= PIXELS_PER_MM
         line = DirectedLineSegment((start.x, start.y), (end.x, end.y))
-        if self.options.min_jump > line.length:
+        if self.options.min_jump * PIXELS_PER_MM > line.length:
             return
 
         path = Path([(start.x, start.y), (end.x, end.y)])
