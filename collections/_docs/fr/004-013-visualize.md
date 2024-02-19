@@ -88,7 +88,7 @@ Ceci montrera des points rouges, jaunes et verts au dessus de vos éléments, po
 
 Lancez `Extensions > Ink/Stitch > Visualiser et Exporter> Montrer l'ordre de broderie...`.
 
-Choisir la taille de la fonte et cliquer sur  Appliquer pour créer un nouveau calque de texte qui numérote les éléments de broderie dans l'ordre de broderie, c'est à dire dans l'ordre  inverse de la  pile d'objets.
+Choisir la taille de la fonte et cliquer sur  Appliquer pour créer un nouveau calque (non brodable) de texte qui numérote les éléments de broderie dans l'ordre de broderie, c'est à dire dans l'ordre  inverse de la  pile d'objets.
 
 ## Export PDF
 
