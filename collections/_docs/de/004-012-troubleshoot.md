@@ -48,6 +48,11 @@ Manchmal entstehen während der Arbeit an SVG-Dateien sehr kleine Objekte, die g
 * Wähle welche Objekttypen behandlet werden sollen und definiere den Schwellwert
 * Anwenden
 
+{% include upcoming_release.html %}
+* You may also  choose  to additionnaly delete empty groups or layers 
+* If you check "test run" before applying, then you get a summary of the changes to be done, but no changes are actually made.
+
+
 ## Ink/Stitch SVG aktualisieren
 
 Wird eine Datei, die mit einer älteren Version von Ink/Stitch erstellt wurde, geöffnet, aktualisiert Ink/Stitch diese Datei automatisch.
