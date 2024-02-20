@@ -49,7 +49,7 @@ Sometimes you will find very small shapes and leftover objects from various oper
 * Click apply
  {% include upcoming_release.html %}
 * You may also  choose  to additionnaly delete empty groups or layers 
-* If you check "test run" before applying, then you get a summary of the changes to be done, but no changes are actually made.
+* Check test run option to display names of the elements that will be removed with the current settings without actually removing anything
 
 ## Update Ink/Stitch svg
 
