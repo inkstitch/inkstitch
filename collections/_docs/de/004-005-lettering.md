@@ -8,7 +8,7 @@ toc: true
 
 Das Text-Modul erzeugt mehrzeiligen Text. Die hinterlegten Schriftarten wurden von Community-Mitgliedern zur direkten Verwendung digitalisiert. Es gibt bereits Schriftarten die auf Satinsäulen beruhen, Applikations-, Füllstichschriften und Geradstichschriften. 
 
-![Lettrage Extensions](/assets/images/docs/en:lettering.png)
+![Lettrage Extensions](/assets/images/docs/en/lettering.png)
 
 ## Anwendung
 
