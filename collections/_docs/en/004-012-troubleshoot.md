@@ -38,6 +38,8 @@ The extensions will remove embroidery settings from your entire design or from s
 * Run `Extensions > Ink/Stitch > Troubleshoot > Remove embroidery settings...`
 * Select one or all of the given options and click apply
 
+{% include upcoming_release.html %} 
+* before applying you may also chose to remove none/ all/  or some of the embroidery commands
 ![Remove embroidery settings - GUI](/assets/images/docs/en/remove-embroidery-settings.png)
 
 ## Cleanup Document
