@@ -19,6 +19,7 @@ class JumpToStroke(InkstitchExtension):
 
     def __init__(self, *args, **kwargs):
         InkstitchExtension.__init__(self, *args, **kwargs)
+        self.arg_parser.add_argument("--tab")
         self.arg_parser.add_argument("-l", "--stitch-length", type=float, default=2.5, dest="running_stitch_length_mm")
         self.arg_parser.add_argument("-t", "--tolerance", type=float, default=2.0, dest="running_stitch_tolerance_mm")
         self.arg_parser.add_argument("-c", "--connect", type=str, default="all", dest="connect")
