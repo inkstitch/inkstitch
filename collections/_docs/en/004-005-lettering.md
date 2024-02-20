@@ -1,14 +1,14 @@
 ---
 title: "Lettering"
 permalink: /docs/lettering/
-last_modified_at: 2022-12-27
+last_modified_at: 2024-02-19
 toc: true
 ---
 ## Lettering Tool
 
 The lettering tool generates multi-line text as satin columns and dynamically routes stitching, breaking up satins if necessary and adding running stitch.
 
-![Lettering Extensions](/assets/images/docs/lettering.jpg)
+![Lettering Extensions](/assets/images/docs/en/lettering.png)
 
 ### Usage
 
@@ -19,18 +19,29 @@ The lettering tool generates multi-line text as satin columns and dynamically ro
 * Click on `Apply and Quit`.
 * Position your text within the svg document.
 
-### Options
+### Font filters
 
 * **Font size filter**<br>
   Fonts are designed for a special range of sizes. The font size filter helps you to reduce the font list to only the fonts fitting to your target size.
   A active font filter (not 0) will set the correct scale value when you select a font.
 
+{% include upcoming_release.html %}
+* **Glyphs**<br>
+ If checked only the fonts that contain all the glyphs of your text are listed
+
+* **Font family**
+Filter the fonts by families, by example get only the applique fonts or only the script fonts
+
+
+  
+### Options
 * **Stitch lines of text back and forth**<br>
   With this option enabled the first line will be stitched from left to right and the second from right to left, etc.
   This will give your machine shorter ways to travel.
 
 * **Add trims**<br>
   Adds TRIM commands according to the chosen option (Never, after each line, after each word, after each letter).
+
 
 ### Presets
 
