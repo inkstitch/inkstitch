@@ -43,6 +43,8 @@ You have the following display options:
   * **lower opacity** display original design with lower opacity
 * **Needle points** displays needle points if enabled
 * **Lock** make stitch plan insensitive to mouse interactions (makes it easier to work on the actual design while the stitch plan is active)
+{% include upcoming_release.html %}
+* **Overide last stitch plan** if check the new stitch plan will replace the previous one, uncheck if you wish to keep the previous stitch plan
 
 {% include folder-galleries path="stitch-plan/" captions="1:Stitch plan beside canvas;2:Layer visibility set to hidden;3:Layer visibility set to lower opacity;4:Needle points enabled | disabled" caption="<i>Example image from [OpenClipart](https://openclipart.org/detail/334596)</i>" %}
 
