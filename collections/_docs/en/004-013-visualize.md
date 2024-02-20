@@ -1,7 +1,7 @@
 ---
 title: "Visualize"
 permalink: /docs/visualize/
-last_modified_at: 2024-02-09
+last_modified_at: 2024-02-19
 toc: true
 ---
 ## Simulator / Realistic Preview
@@ -65,6 +65,8 @@ Run `Extensions > Ink/Stitch > Visualize and Export > Undo Stitch Plan Preview`
 * Undo with `Ctrl + Z`
 
 This will display red, yellow and green dots on top of your elements so you can identify areas of high density easily.
+
+{% include upcoming_release.html %} You may choose the marker (dot) size.
 
 ## Display stacking order
 
