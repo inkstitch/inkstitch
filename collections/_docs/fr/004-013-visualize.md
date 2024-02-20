@@ -1,7 +1,7 @@
 ---
 title: "Simulation"
 permalink: /fr/docs/visualize/
-last_modified_at: 2024-02-10
+last_modified_at: 2024-02-20
 toc: true
 ---
 ## Simulateur/ Aperçu Réaliste
@@ -77,10 +77,13 @@ Lancez `Extensions > Ink/Stitch > Visualisr et Exporter > Annuler le plan de bro
 * Sélectionnez des objets si vous ne souhaitez la carte de densité que pour ces objets là, sinon lancez l'extension sans rien sélectionner
 * Lancez `Extensions > Ink/Stitch > Visualiser et Exporter > Carte de densité`
 * Choisissez les valeurs de densité associées aux couleurs et appliquez
+* Un nouveau calque non brodable est  créer
 * Inspectez (zoomez)
 * Vous pouvez annuler avec `Ctrl + Z`
 
-Ceci montrera des points rouges, jaunes et verts au dessus de vos éléments, pour vous permettre d'identifier facilement les zones à forte densité. Tous les points d'une même couleur sont dans un groupe du calque Densité, ce qui vous permet de masquer facilement tous les points d'une couleur donnée.
+Ceci montrera des marqueurs rouges, jaunes et verts au dessus de vos éléments, pour vous permettre d'identifier facilement les zones à forte densité. Tous les marqueurss d'une même couleur sont dans un groupe du calque Densité, ce qui vous permet de masquer facilement tous les marqueurs d'une couleur donnée.
+
+{% include upcoming_release.html %} Vous pouvez choisir la taille des marqueurs
 
 ## Montrer l'ordre de broderie
 
