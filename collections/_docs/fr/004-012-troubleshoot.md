@@ -35,8 +35,9 @@ Cette extension supprimera les paramètres de broderie de votre broderie toute e
 * Sélectionnez des objets (sautez cette étape si vous voulez supprimer toutes les informations de broderie)
 * Exécutez `Extensions > Ink/Stitch > Supprimez tous les paramètres de broderie...`
 * Sélectionnez une ou plusieurs des options proposées et cliquez sur "Appliquer"
+  
 {% include upcoming_release.html %} 
-Avant d'appliquer vous pouvez choisir de supprimer aucune/toutes ou certaines commandes 
+* Avant d'appliquer vous pouvez choisir de supprimer aucune/toutes ou certaines commandes 
 ![Remove embroidery settings - GUI](/assets/images/docs/fr/supprimer_parametres_broderie.png)
 
 ## Nettoyer le document
