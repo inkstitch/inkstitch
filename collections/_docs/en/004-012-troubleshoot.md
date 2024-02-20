@@ -1,7 +1,7 @@
 ---
 title: "Troubleshoot"
 permalink: /docs/troubleshoot/
-last_modified_at: 2024-02-10
+last_modified_at: 2024-02-19
 toc: true
 ---
 
@@ -47,6 +47,9 @@ Sometimes you will find very small shapes and leftover objects from various oper
 * Run `Extensions > Ink/Stitch > Troubleshoot > Cleanup Document...`
 * Choose which types of objects should be removed and define a threshold
 * Click apply
+ {% include upcoming_release.html %}
+* You may also  choose  to additionnaly delete empty groups or layers 
+* If you check "test run" before applying, then you get a summary of the changes to be done, but no changes are actually made.
 
 ## Update Ink/Stitch svg
 
