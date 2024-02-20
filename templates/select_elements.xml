@@ -29,13 +29,21 @@
                 <label>Satin</label>
                   <param indent="1" name="select-satin" type="boolean" gui-text="Satin Column">false</param>
                   <param indent="1" name="select-e" type="boolean" gui-text="E-Stitch">false</param>
+                  <param indent="1" name="select-s" type="boolean" gui-text="S-Stitch">false</param>
+                  <param indent="1" name="select-satin-zigzag" type="boolean" gui-text="Zig-Zag">false</param>
                   <param indent="1" name="satin-underlay" type="optiongroup" appearance="combo" gui-text="Underlay"
                          gui-description="Only select satins with this underlay type">
                       <option value="all">No restriction</option>
-                      <option value="no">No underlay</option>
+                      <option value="no">No underlay</optiagon>
                       <option value="center">Centerwalk</option>
                       <option value="contour">Contour</option>
                       <option value="zigzag">Zigzag</option>
+                  </param>
+                  <param indent="1" name="rung-count" type="optiongroup" appearance="combo" gui-text="Rung count"
+                         gui-description="Only select satins with this rung count">
+                      <option value="all">No restriction</option>
+                      <option value="zero">No Rungs</optiagon>
+                      <option value="two">Two Rungs</option>
                   </param>
           </vbox>
             <spacer />
@@ -44,10 +52,11 @@
           <vbox>
                 <label>Fill</label>
                     <param indent="1" name="select-auto-fill" type="boolean" gui-text="Fill">false</param>
+                    <param indent="1" name="select-circular-fill" type="boolean" gui-text="Circular Fill">false</param>
                     <param indent="1" name="select-contour-fill" type="boolean" gui-text="Contour Fill">false</param>
                     <param indent="1" name="select-guided-fill" type="boolean" gui-text="Guided Fill">false</param>
+                    <param indent="1" name="select-linear-gradient-fill" type="boolean" gui-text="Linear Gradient Fill">false</param>
                     <param indent="1" name="select-meander-fill" type="boolean" gui-text="Meander Fill">false</param>
-                    <param indent="1" name="select-circular-fill" type="boolean" gui-text="Circular Fill">false</param>
                     <param indent="1" name="select-legacy-fill" type="boolean" gui-text="Legacy Fill">false</param>
                     <param indent="1" name="fill-underlay" type="optiongroup" appearance="combo" gui-text="Underlay"
                            gui-description="Only select fills with this underlay">

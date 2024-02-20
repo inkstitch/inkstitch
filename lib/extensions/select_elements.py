@@ -7,10 +7,9 @@ import os
 import subprocess
 import sys
 
-from inkex import Boolean, errormsg
+from inkex import Boolean
 
 from ..elements import Clone, FillStitch, Polyline, SatinColumn, Stroke
-from ..i18n import _
 from ..utils import get_bundled_dir
 from .base import InkstitchExtension
 
@@ -29,12 +28,16 @@ class SelectElements(InkstitchExtension):
         pars.add_argument("--select-polyline", type=Boolean, dest="poly", default=False)
         pars.add_argument("--select-satin", type=Boolean, dest="satin", default=False)
         pars.add_argument("--satin-underlay", type=str, dest="satin_underlay", default="all")
+        pars.add_argument("--rung-count", type=str, dest="rung_count", default="all")
         pars.add_argument("--select-e", type=Boolean, dest="e", default=False)
+        pars.add_argument("--select-s", type=Boolean, dest="s", default=False)
+        pars.add_argument("--select-satin-zigzag", type=Boolean, dest="satin_zigzag", default=False)
         pars.add_argument("--select-auto-fill", type=Boolean, dest="fill", default=False)
         pars.add_argument("--select-contour-fill", type=Boolean, dest="contour", default=False)
         pars.add_argument("--select-guided-fill", type=Boolean, dest="guided", default=False)
         pars.add_argument("--select-meander-fill", type=Boolean, dest="meander", default=False)
         pars.add_argument("--select-circular-fill", type=Boolean, dest="circular", default=False)
+        pars.add_argument("--select-linear-gradient-fill", type=Boolean, dest="linear_gradient", default=False)
         pars.add_argument("--select-legacy-fill", type=Boolean, dest="legacy", default=False)
         pars.add_argument("--fill-underlay", type=str, dest="fill_underlay", default="all")
         pars.add_argument("--select-clone", type=Boolean, dest="clone", default=False)
@@ -68,15 +71,16 @@ class SelectElements(InkstitchExtension):
             # we are running a local install
             py_path = sys.executable
 
+            # For some reason we cannot use the subprocess method wait() to finish the process properly
+            # and we'll get a warning. It will break functionality of the selection.
+            # There is most possibly a better way than to just ignore the warning?!?
+            with open(os.devnull, 'w') as null:
+                sys.stderr = null
+                sys.stdout = null
+
         # custom python path
         if self.options.python_path:
             py_path = self.options.python_path
-
-        if not os.path.isfile(py_path):
-            errormsg(_("Could not detect python path. "
-                       "Please insert python path manually as described in the help tab "
-                       "of the select elements dialog."))
-            sys.exit(0)
 
         return py_path, file_path
 
@@ -127,6 +131,8 @@ class SelectElements(InkstitchExtension):
             select = True
         elif self.options.circular and method == 'circular_fill':
             select = True
+        elif self.options.linear_gradient and method == 'linear_gradient_fill':
+            select = True
         elif self.options.legacy and method == 'legacy_fill':
             select = True
         return select
@@ -144,10 +150,16 @@ class SelectElements(InkstitchExtension):
         select = False
         if not self._select_satin_underlay(element):
             return False
+        if not self._select_rung_count(element):
+            return False
         method = element.satin_method
         if self.options.satin and method == "satin_column":
             select = True
         elif self.options.e and method == "e_stitch":
+            select = True
+        elif self.options.s and method == "s_stitch":
+            select = True
+        elif self.options.satin_zigzag and method == "zigzag":
             select = True
         return select
 
@@ -159,6 +171,13 @@ class SelectElements(InkstitchExtension):
         underlay['no'] = not any(underlay.values())
         underlay['all'] = True
         return underlay[self.options.satin_underlay]
+
+    def _select_rung_count(self, element):
+        rung_count = {'all': None, 'zero': None, 'two': None}
+        rung_count['zero'] = len(element.paths) == 2
+        rung_count['two'] = len(element.paths) == 4
+        rung_count['all'] = True
+        return rung_count[self.options.rung_count]
 
 
 if __name__ == '__main__':
