@@ -52,6 +52,8 @@ Vous disposez des options suivanes:
 * **Points de l'aiguille** si coché, montre les points de l'aiguille
 * **Verrouiller** rend le plan de broderie insensible aux interactions de la souris, facilitant le travail sur les objets de broderie quand le plan de broderie est actif.
 
+{% include upcoming_release.html %}
+* **Écraser le dernier plan de broderie** si l'option est cochée, le nouveau plan de broderie écrase le présendant, décochez si vous souhaitez garder le plan de broderie précédent.f
 Utiliser un plan de broderie verrouillé superposé au motif (rendu invisible ou avec visibilité abaissée) aidera à avoir une meilleure idée du rendu final.
 
 Si le plan est vérouillé, et le motif visible, le plan de broderie ne vous génera pas pour modifier le motif qui est sous lui.
