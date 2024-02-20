@@ -8,7 +8,7 @@ toc: true
 
 Das Text-Modul erzeugt mehrzeiligen Text. Die hinterlegten Schriftarten wurden von Community-Mitgliedern zur direkten Verwendung digitalisiert. Es gibt bereits Schriftarten die auf Satinsäulen beruhen, Applikations-, Füllstichschriften und Geradstichschriften. 
 
-![Lettrage Extensions](/assets/images/docs/lettering.jpg)
+![Lettrage Extensions](/assets/images/docs/en:lettering.png)
 
 ## Anwendung
 
@@ -19,6 +19,22 @@ Das Text-Modul erzeugt mehrzeiligen Text. Die hinterlegten Schriftarten wurden v
 * Klicke auf `Anwenden und schließen`.
 * Der eingegebene Text erscheint über der Seite.
 * Freie Positionierung ist nun möglich.
+
+  
+### Font filters
+
+* **Schriftgrößenfilter**<br>
+  Schriften sind für eine bestimmte Skalierung digitalisiert. Der Schriftgrößenfilter hilft dir eine Schrift mit der richtigen Größe zu finden, indem er die
+  Liste der Schriftarten nach der angegebenen Größe filtert.
+  Ein aktivierter Filter (nicht 0) setzt bei der Auswahl einer Schriftart automatisch die Skalierung passend zur Suchgröße.
+  
+{% include upcoming_release.html %}
+* **Glyphs**<br>
+ If checked only the fonts that contain all the glyphs of your text are listed
+
+* **Font family**<br>
+Filter the fonts by families, by example get only the applique fonts or only the script fonts
+
 
 ### Optionen
 
