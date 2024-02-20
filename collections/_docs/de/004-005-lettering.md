@@ -38,11 +38,6 @@ Filter the fonts by families, by example get only the applique fonts or only the
 
 ### Optionen
 
-* **Schriftgrößenfilter**<br>
-  Schriften sind für eine bestimmte Skalierung digitalisiert. Der Schriftgrößenfilter hilft dir eine Schrift mit der richtigen Größe zu finden, indem er die
-  Liste der Schriftarten nach der angegebenen Größe filtert.
-  Ein aktivierter Filter (nicht 0) setzt bei der Auswahl einer Schriftart automatisch die Skalierung passend zur Suchgröße.
-
 * **Sticke Textzeilen vor und zurück**<br>
   Wenn diese Option aktiviert ist, wird die erste Zeile von links nach rechts gestickt und die zweite von rechts nach links usw.
   Dadurch muss die Stickmaschine weniger hin und herspringen, und die Laufzeit der Datei verkürzt sich.
