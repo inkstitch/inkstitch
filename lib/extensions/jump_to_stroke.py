@@ -23,7 +23,8 @@ class JumpToStroke(InkstitchExtension):
         self.arg_parser.add_argument("-t", "--tolerance", type=float, default=2.0, dest="running_stitch_tolerance_mm")
         self.arg_parser.add_argument("-c", "--connect", type=str, default="all", dest="connect")
         self.arg_parser.add_argument("-m", "--merge", type=Boolean, default=False, dest="merge")
-        self.arg_parser.add_argument("-j", "--minimum-jump-length", type=float, default=3.0, dest="min_jump")
+        self.arg_parser.add_argument("-i", "--minimum-jump-length", type=float, default=3.0, dest="min_jump")
+        self.arg_parser.add_argument("-a", "--maximum-jump-length", type=float, default=0, dest="max_jump")
 
     def effect(self):
         if not self.svg.selection or not self.get_elements() or len(self.elements) < 2:
@@ -70,9 +71,12 @@ class JumpToStroke(InkstitchExtension):
         parent = node.getparent()
         index = parent.index(node)
 
-        # do not add a running stitch if the distance is smaller than the collapse setting
+        # do not add a running stitch if the distance is smaller than min_jump setting
         line = DirectedLineSegment((start.x, start.y), (end.x, end.y))
-        if self.options.min_jump * PIXELS_PER_MM > line.length:
+        if line.length < self.options.min_jump * PIXELS_PER_MM:
+            return
+        # do not add a running stitch if the distance is longer than max_jump setting
+        if self.options.max_jump > 0 and line.length > self.options.max_jump * PIXELS_PER_MM:
             return
 
         path = Path([(start.x, start.y), (end.x, end.y)])
@@ -88,13 +92,15 @@ class JumpToStroke(InkstitchExtension):
             path.transform(Transform(get_correction_transform(node)), True)
             path = path + node.get_path()[1:]
             node.set('d', str(path))
-            # remove last element (since it is merged)
-            last_parent = last_element.node.getparent()
-            last_parent.remove(last_element.node)
-            # remove parent group if empty
-            if len(last_parent) == 0:
-                last_parent.getparent().remove(last_parent)
+            if merged:
+                # remove last element (since it is merged)
+                last_parent = last_element.node.getparent()
+                last_parent.remove(last_element.node)
+                # remove parent group if empty
+                if len(last_parent) == 0:
+                    last_parent.getparent().remove(last_parent)
             return
+
         if merged:
             return
 
