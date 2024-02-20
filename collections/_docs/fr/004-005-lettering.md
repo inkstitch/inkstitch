@@ -1,12 +1,12 @@
 ---
 title: "Outil lettrage"
 permalink: /fr/docs/lettering/
-last_modified_at: 2023-01-04
+last_modified_at: 2024-02-20
 toc: true
 ---
 L'outil de lettrage génère un texte multilignes sous la forme de colonnes satin et génère de manière dynamique les points, divisant éventuellement les points satins et ajoutant du point droit.
 
-![Lettrage Extensions](/assets/images/docs/lettering.jpg)
+![Lettrage Extensions](/assets/images/docs/fr/lettering.png)
 
 ## Usage
 
@@ -15,11 +15,21 @@ L'outil de lettrage génère un texte multilignes sous la forme de colonnes sati
 * Définir la police et l'échelle
 * Cliquer sur `Appliquer et Quitter`
 
-## Options
+
+## Filtres de fonte
 
 * **Filtrage par taille**
   Les fontes sont conçues pour être  brodées dans  un intervalle de tailles donné. Le filtrage par taille vous aide en réduisant la liste des fontes à uniquement les fontes qui peuvent être brodées dans les dimensions choisies.
   Un filtre actif (pas à 0) déterminera  automatiquement la bonne échelle pour que la fonte sélectionnée soit dans la dimension souhaitée.
+
+{% include upcoming_release.html %}
+* **Glyphs**<br>
+si l'option est cochée, seules les fontes contenant tous les glyphes de votre texte apparaissent dans le menu déroulant des fontes
+
+* **Famille de fonte**<br>
+Filtre les fontes par famille, par exemple les fontes d'appliqué ou les fontes d'écriture manuelle. 
+## Options
+
 
 * **Broder les lignes de texte en aller retour**
  Lorsque cette option est activée, la première ligne sera brodée de gauche à droite et la seconde de droite à gauche, etc.
