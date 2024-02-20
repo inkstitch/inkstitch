@@ -47,6 +47,9 @@ Es gibt die folgenden Optionen:
 * **Nadeleinstichstellen** zeigt Punkte an den Einstichstellen
 * **Lock** Stichplan reagiert nicht auf Mausinteraktionen. Das ist praktisch, wenn mit aktiviertem Stichplan das Original-Design bearbeitet werden soll
 
+{% include upcoming_release.html %}
+* **Overide last stitch plan** if checked,  the new stitch plan will replace the previous one, uncheck if you wish to keep the previous stitch plan
+  
 {% include folder-galleries path="stitch-plan/" captions="1:Stitch plan beside canvas;2:Layer visibility set to hidden;3:Layer visibility set to lower opacity;4:Needle points enabled | disabled" caption="<i>Example image from [OpenClipart](https://openclipart.org/detail/334596)</i>" %}
 
 ## Stich-Plan Vorschau aufheben
