@@ -34,9 +34,10 @@ Ceci peut être particulierement utie lorsque vous copier/coller des broderies e
 Cette extension supprimera les paramètres de broderie de votre broderie toute entière ou bien uniquement des objets selectionnés:
 * Sélectionnez des objets (sautez cette étape si vous voulez supprimer toutes les informations de broderie)
 * Exécutez `Extensions > Ink/Stitch > Supprimez tous les paramètres de broderie...`
-* Sélectionnez une ou plusieurs des options proposées et cliquez sur "Appliquer" 
-
-![Remove embroidery settings - GUI](/assets/images/docs/en/remove-embroidery-settings.png)
+* Sélectionnez une ou plusieurs des options proposées et cliquez sur "Appliquer"
+{% include upcoming_release.html %} 
+Avant d'appliquer vous pouvez choisir de supprimer aucune/toutes ou certaines commandes 
+![Remove embroidery settings - GUI](/assets/images/docs/fr/supprimer_parametres_broderie.png)
 
 ## Nettoyer le document
 
