@@ -1,7 +1,7 @@
 ---
 title: "Dépannage"
 permalink: /fr/docs/troubleshoot/
-last_modified_at: 2024-02-11
+last_modified_at: 2024-02-20
 toc: true
 ---
 ## Dépistage de problèmes avec des objets
@@ -46,6 +46,10 @@ Ink/Stitch  offre une fonction de nettoyage de votre document qui empêche ces o
 * Exécutez `Extensions > Ink/Stitch > Résolution de problèmes > Nettoyer le document...`
 * Choisissez quels types d'objets doivent être supprimés et définissez un seuil
 * Cliquez sur "Appliquer"
+
+ {% include upcoming_release.html %}
+* Il est aussi possible de choisir de supprimer les groupes et calques vides
+* Si vous cochez l'option "essayer" avant de cliquer sur "Applique", vous verrez un résumé des modifications à apporter au document, mais aucune modification ne sera réellement effectuée.
 
 ## Mettre à jour le svg d'Ink/Stitch 
 
