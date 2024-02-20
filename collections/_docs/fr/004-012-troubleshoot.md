@@ -49,7 +49,7 @@ Ink/Stitch  offre une fonction de nettoyage de votre document qui empêche ces o
 
  {% include upcoming_release.html %}
 * Il est aussi possible de choisir de supprimer les groupes et calques vides
-* Si vous cochez l'option "essayer" avant de cliquer sur "Applique", vous verrez un résumé des modifications à apporter au document, mais aucune modification ne sera réellement effectuée.
+* Cochez l'option "essayer" pour obtenir la liste des noms des éléments qui seraient supprimés avec le paramètrage choisi, sans rien réellement supprimer
 
 ## Mettre à jour le svg d'Ink/Stitch 
 
