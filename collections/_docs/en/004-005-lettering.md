@@ -29,7 +29,7 @@ The lettering tool generates multi-line text as satin columns and dynamically ro
 * **Glyphs**<br>
  If checked only the fonts that contain all the glyphs of your text are listed
 
-* **Font family**
+* **Font family**<br>
 Filter the fonts by families, by example get only the applique fonts or only the script fonts
 
 
