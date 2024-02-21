@@ -58,7 +58,15 @@ class DanglingRungWarning(ValidationWarning):
     description = _("Satin column: A rung doesn't intersect both rails.") + " " + rung_message
 
 
-class UnequalPointsWarning(ValidationError):
+class TwoRungsWarning(ValidationWarning):
+    name = _("Satin has exactly two rungs")
+    description = _("Satin column: There are exactly two rungs.  This may lead to false rail/rung detection.")
+    steps_to_solve = [
+        _("Add an other rung.")
+    ]
+
+
+class UnequalPointsWarning(ValidationWarning):
     name = _("Unequal number of points")
     description = _("Satin column: There are no rungs and rails have an unequal number of points.")
     steps_to_solve = [
@@ -668,6 +676,8 @@ class SatinColumn(EmbroideryElement):
         return sections
 
     def validation_warnings(self):
+        if len(self.csp) == 4:
+            yield TwoRungsWarning(self.flattened_rails[0].interpolate(0.5, normalized=True))
         if len(self.csp) == 2 and len(self.rails[0]) != len(self.rails[1]):
             yield UnequalPointsWarning(self.flattened_rails[0].interpolate(0.5, normalized=True))
         for rung in self.flattened_rungs:

@@ -34,7 +34,7 @@
                   <param indent="1" name="satin-underlay" type="optiongroup" appearance="combo" gui-text="Underlay"
                          gui-description="Only select satins with this underlay type">
                       <option value="all">No restriction</option>
-                      <option value="no">No underlay</optiagon>
+                      <option value="no">No underlay</option>
                       <option value="center">Centerwalk</option>
                       <option value="contour">Contour</option>
                       <option value="zigzag">Zigzag</option>
