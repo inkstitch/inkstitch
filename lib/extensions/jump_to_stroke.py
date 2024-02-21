@@ -20,12 +20,17 @@ class JumpToStroke(InkstitchExtension):
     def __init__(self, *args, **kwargs):
         InkstitchExtension.__init__(self, *args, **kwargs)
         self.arg_parser.add_argument("--tab")
-        self.arg_parser.add_argument("-l", "--stitch-length", type=float, default=2.5, dest="running_stitch_length_mm")
-        self.arg_parser.add_argument("-t", "--tolerance", type=float, default=2.0, dest="running_stitch_tolerance_mm")
-        self.arg_parser.add_argument("-c", "--connect", type=str, default="all", dest="connect")
-        self.arg_parser.add_argument("-m", "--merge", type=Boolean, default=False, dest="merge")
+
         self.arg_parser.add_argument("-i", "--minimum-jump-length", type=float, default=3.0, dest="min_jump")
         self.arg_parser.add_argument("-a", "--maximum-jump-length", type=float, default=0, dest="max_jump")
+        self.arg_parser.add_argument("--connect", type=str, default="all", dest="connect")
+        self.arg_parser.add_argument("--exclude-trim", type=Boolean, default=True, dest="exclude_trim")
+        self.arg_parser.add_argument("--exclude-stop", type=Boolean, default=True, dest="exclude_stop")
+        self.arg_parser.add_argument("--exclude-force-lock-stitch", type=Boolean, default=True, dest="exclude_forced_lock")
+
+        self.arg_parser.add_argument("-m", "--merge", type=Boolean, default=False, dest="merge")
+        self.arg_parser.add_argument("-l", "--stitch-length", type=float, default=2.5, dest="running_stitch_length_mm")
+        self.arg_parser.add_argument("-t", "--tolerance", type=float, default=2.0, dest="running_stitch_tolerance_mm")
 
     def effect(self):
         if not self.svg.selection or not self.get_elements() or len(self.elements) < 2:
@@ -51,7 +56,10 @@ class JumpToStroke(InkstitchExtension):
             if (last_stitch_group is None or
                     element.color != last_element.color or
                     (self.options.connect == "layer" and last_layer != layer) or
-                    (self.options.connect == "group" and last_group != group)):
+                    (self.options.connect == "group" and last_group != group) or
+                    (self.options.exclude_trim and (last_element.has_command("trim") or last_element.trim_after)) or
+                    (self.options.exclude_stop and (last_element.has_command("stop") or last_element.stop_after)) or
+                    (self.options.exclude_forced_lock and last_element.force_lock_stitches)):
                 last_layer = layer
                 last_group = group
                 last_stitch_group = stitch_group[-1]
