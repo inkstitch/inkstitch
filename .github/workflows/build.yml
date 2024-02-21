@@ -86,7 +86,7 @@ jobs:
           echo "${{ env.pythonLocation }}\bin" >> $GITHUB_PATH
       - shell: bash
         run: |
-          make dist
+          bin/build-linux-dist
         env:
           BUILD: linux
           INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY }}
@@ -128,6 +128,11 @@ jobs:
           python -m pip install pyinstaller
 
           echo "${{ env.pythonLocation }}\bin" >> $GITHUB_PATH
+      - name: install geos 32
+        shell: cmd
+        run: |
+          SET BUILD32="1"
+          bin\build-geos-win.cmd
       - shell: bash
         run: |
           make dist
@@ -180,6 +185,10 @@ jobs:
           python -m pip install pyinstaller
 
           echo "${{ env.pythonLocation }}\bin" >> $GITHUB_PATH
+      - name: install geos 64
+        shell: cmd
+        run: |
+          bin\build-geos-win.cmd
       - shell: bash
         run: |
           make dist
@@ -239,6 +248,10 @@ jobs:
           # for networkx
           pip install pandas
           pip install pyarrow
+          # remove and build shapely with brew geos version
+          pip uninstall -y shapely
+          pip cache remove shapely
+          pip install -v shapely --no-binary shapely
 
           pip install pyinstaller
 
