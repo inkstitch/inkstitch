@@ -680,13 +680,14 @@ class SatinColumn(EmbroideryElement):
             yield TwoRungsWarning(self.flattened_rails[0].interpolate(0.5, normalized=True))
         if len(self.csp) == 2 and len(self.rails[0]) != len(self.rails[1]):
             yield UnequalPointsWarning(self.flattened_rails[0].interpolate(0.5, normalized=True))
-        for rung in self.flattened_rungs:
-            for rail in self.flattened_rails:
-                intersection = rung.intersection(rail)
-                if intersection.is_empty:
-                    yield DanglingRungWarning(rung.interpolate(0.5, normalized=True))
-                elif not isinstance(intersection, shgeo.Point):
-                    yield TooManyIntersectionsWarning(rung.interpolate(0.5, normalized=True))
+        if len(self.csp) > 2:
+            for rung in self.flattened_rungs:
+                for rail in self.flattened_rails:
+                    intersection = rung.intersection(rail)
+                    if intersection.is_empty:
+                        yield DanglingRungWarning(rung.interpolate(0.5, normalized=True))
+                    elif not isinstance(intersection, shgeo.Point):
+                        yield TooManyIntersectionsWarning(rung.interpolate(0.5, normalized=True))
 
     def validation_errors(self):
         # The node should have exactly two paths with the same number of points - or it should
