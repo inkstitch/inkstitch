@@ -42,7 +42,7 @@
                   <param indent="1" name="rung-count" type="optiongroup" appearance="combo" gui-text="Rung count"
                          gui-description="Only select satins with this rung count">
                       <option value="all">No restriction</option>
-                      <option value="zero">No Rungs</optiagon>
+                      <option value="zero">No Rungs</option>
                       <option value="two">Two Rungs</option>
                   </param>
           </vbox>
