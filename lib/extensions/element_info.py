@@ -87,8 +87,23 @@ class ElementInfo(InkstitchExtension):
                     continue
                 stitch_lengths.append(length)
                 previous_stitch = stitch
-        self.max_stitch_lengths.append(max(stitch_lengths))
-        self.min_stitch_lengths.append(min(stitch_lengths))
+
+        if stitch_lengths:
+            self.max_stitch_lengths.append(max(stitch_lengths))
+            self.min_stitch_lengths.append(min(stitch_lengths))
+        else:
+            self.max_stitch_lengths.append(0)
+            self.min_stitch_lengths.append(0)
+            self.list_items.append(ListItem(
+                name=_("Stitches"),
+                value="0",
+                warning=True
+            ))
+            self.list_items.append(ListItem(
+                name=_("Small stitches (removed)"),
+                value=str(removed_stitches)
+            ))
+            return stitch_groups[0]
 
         stitches_per_group = ""
         if len(stitch_groups) > 1:
@@ -176,10 +191,11 @@ class ElementInfo(InkstitchExtension):
 
 
 class ListItem:
-    def __init__(self, name="", value="", headline=False):
+    def __init__(self, name="", value="", headline=False, warning=False):
         self.name: str = name
         self.value: str = value
         self.headline: bool = headline
+        self.warning: bool = warning
 
     def __repr__(self):
-        return "ListItem(%s, %s, %s)" % (self.name, self.value, self.headline)
+        return f"ListItem({self.name}, {self.value}, {self.headline}, {self.warning})"
