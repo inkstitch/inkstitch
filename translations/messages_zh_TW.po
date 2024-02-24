@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-02-22 01:03+0000\n"
-"PO-Revision-Date: 2024-02-22 01:04\n"
+"POT-Creation-Date: 2024-02-24 01:01+0000\n"
+"PO-Revision-Date: 2024-02-24 01:01\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Traditional\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-22 01:03+0000\n"
+"POT-Creation-Date: 2024-02-24 01:00+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1137,7 +1137,8 @@ msgstr ""
 msgid "* Select the clone."
 msgstr ""
 
-#: lib/elements/clone.py:53
+#: lib/elements/clone.py:53 inx/inkstitch_select_elements.inx:72
+#: inx/inkstitch_select_elements.inx:73
 msgid "Clone"
 msgstr ""
 
@@ -1385,27 +1386,27 @@ msgstr ""
 msgid "Auto Fill"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:114
+#: lib/elements/fill_stitch.py:114 inx/inkstitch_select_elements.inx:56
 msgid "Contour Fill"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:115
+#: lib/elements/fill_stitch.py:115 inx/inkstitch_select_elements.inx:57
 msgid "Guided Fill"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:116
+#: lib/elements/fill_stitch.py:116 inx/inkstitch_select_elements.inx:59
 msgid "Meander Fill"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:117
+#: lib/elements/fill_stitch.py:117 inx/inkstitch_select_elements.inx:55
 msgid "Circular Fill"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:118
+#: lib/elements/fill_stitch.py:118 inx/inkstitch_select_elements.inx:58
 msgid "Linear Gradient Fill"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:119
+#: lib/elements/fill_stitch.py:119 inx/inkstitch_select_elements.inx:60
 msgid "Legacy Fill"
 msgstr ""
 
@@ -1628,7 +1629,8 @@ msgstr ""
 msgid "Width of the zigzag line."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:463
+#: lib/elements/fill_stitch.py:463 inx/inkstitch_select_elements.inx:35
+#: inx/inkstitch_select_elements.inx:62 inx/inkstitch_select_elements.inx:64
 msgid "Underlay"
 msgstr ""
 
@@ -1656,7 +1658,7 @@ msgid "default: 3x fill row spacing"
 msgstr ""
 
 #: lib/elements/fill_stitch.py:507 lib/elements/stroke.py:135
-#: lib/extensions/element_info.py:110 lib/extensions/element_info.py:166
+#: lib/extensions/element_info.py:125 lib/extensions/element_info.py:181
 msgid "Max stitch length"
 msgstr ""
 
@@ -1829,6 +1831,7 @@ msgid "* Hold \"Shift\" while drawing the rung."
 msgstr ""
 
 #: lib/elements/satin_column.py:81 lib/elements/satin_column.py:91
+#: inx/inkstitch_select_elements.inx:30
 msgid "Satin Column"
 msgstr ""
 
@@ -2110,7 +2113,7 @@ msgstr ""
 msgid "* Use as satin column: add an other rail and optionally rungs."
 msgstr ""
 
-#: lib/elements/stroke.py:45
+#: lib/elements/stroke.py:45 inx/inkstitch_select_elements.inx:12
 msgid "Stroke"
 msgstr ""
 
@@ -2126,11 +2129,11 @@ msgstr ""
 msgid "Ripple Stitch"
 msgstr ""
 
-#: lib/elements/stroke.py:68
+#: lib/elements/stroke.py:68 inx/inkstitch_select_elements.inx:21
 msgid "ZigZag Stitch"
 msgstr ""
 
-#: lib/elements/stroke.py:69
+#: lib/elements/stroke.py:69 inx/inkstitch_select_elements.inx:22
 msgid "Manual Stitch"
 msgstr ""
 
@@ -2473,7 +2476,7 @@ msgstr ""
 msgid "This function copies Ink/Stitch parameters from the first selected element to the rest of the selection. Please select at least two elements."
 msgstr ""
 
-#: lib/extensions/element_info.py:47
+#: lib/extensions/element_info.py:47 inx/inkstitch_select_elements.inx:15
 msgid "Type"
 msgstr ""
 
@@ -2489,48 +2492,48 @@ msgstr ""
 msgid "Stroke Method"
 msgstr ""
 
-#: lib/extensions/element_info.py:72 lib/extensions/element_info.py:134
+#: lib/extensions/element_info.py:72 lib/extensions/element_info.py:149
 msgid "Dimensions (mm)"
 msgstr ""
 
-#: lib/extensions/element_info.py:98 lib/extensions/element_info.py:158
-#: lib/extensions/zip.py:134
+#: lib/extensions/element_info.py:98 lib/extensions/element_info.py:113
+#: lib/extensions/element_info.py:173 lib/extensions/zip.py:134
 msgid "Stitches"
 msgstr ""
 
-#: lib/extensions/element_info.py:102
+#: lib/extensions/element_info.py:103 lib/extensions/element_info.py:117
 msgid "Small stitches (removed)"
 msgstr ""
 
-#: lib/extensions/element_info.py:106 lib/extensions/element_info.py:146
+#: lib/extensions/element_info.py:121 lib/extensions/element_info.py:161
 msgid "Jumps"
 msgstr ""
 
-#: lib/extensions/element_info.py:114 lib/extensions/element_info.py:162
+#: lib/extensions/element_info.py:129 lib/extensions/element_info.py:177
 msgid "Min stitch length"
 msgstr ""
 
-#: lib/extensions/element_info.py:130
+#: lib/extensions/element_info.py:145
 msgid "All Selected Elements"
 msgstr ""
 
-#: lib/extensions/element_info.py:138 lib/extensions/zip.py:135
+#: lib/extensions/element_info.py:153 lib/extensions/zip.py:135
 msgid "Colors"
 msgstr ""
 
-#: lib/extensions/element_info.py:142
+#: lib/extensions/element_info.py:157
 msgid "Color Changes"
 msgstr ""
 
-#: lib/extensions/element_info.py:150
+#: lib/extensions/element_info.py:165
 msgid "Trims"
 msgstr ""
 
-#: lib/extensions/element_info.py:154
+#: lib/extensions/element_info.py:169
 msgid "Stops"
 msgstr ""
 
-#: lib/extensions/element_info.py:170
+#: lib/extensions/element_info.py:185
 msgid "Filter stitches smaller than (mm)"
 msgstr ""
 
@@ -2593,7 +2596,7 @@ msgstr ""
 msgid "Ink/Stitch cannot find your palette folder automatically. Please install your palette manually."
 msgstr ""
 
-#: lib/extensions/jump_to_stroke.py:25
+#: lib/extensions/jump_to_stroke.py:37
 msgid "Please select at least two elements to convert the jump stitch to a running stitch."
 msgstr ""
 
@@ -2784,7 +2787,8 @@ msgstr ""
 #: lib/extensions/troubleshoot.py:111 lib/extensions/troubleshoot.py:157
 #: inx/inkstitch_cleanup.inx:23 inx/inkstitch_element_info.inx:10
 #: inx/inkstitch_remove_embroidery_settings.inx:39
-#: inx/inkstitch_troubleshoot.inx:12 inx/inkstitch_update_svg.inx:10
+#: inx/inkstitch_select_elements.inx:86 inx/inkstitch_troubleshoot.inx:12
+#: inx/inkstitch_update_svg.inx:10
 msgid "Troubleshoot"
 msgstr ""
 
@@ -2878,9 +2882,9 @@ msgstr ""
 #: inx/inkstitch_apply_threadlist.inx:87 inx/inkstitch_auto_run.inx:23
 #: inx/inkstitch_cutwork_segmentation.inx:42
 #: inx/inkstitch_fill_to_stroke.inx:23 inx/inkstitch_generate_palette.inx:24
-#: inx/inkstitch_gradient_blocks.inx:24
+#: inx/inkstitch_gradient_blocks.inx:24 inx/inkstitch_jump_to_stroke.inx:39
 #: inx/inkstitch_lettering_along_path.inx:17
-#: inx/inkstitch_palette_to_text.inx:19
+#: inx/inkstitch_palette_to_text.inx:19 inx/inkstitch_select_elements.inx:78
 #: inx/inkstitch_stroke_to_lpe_satin.inx:26
 #: inx/inkstitch_zigzag_line_to_satin.inx:18
 msgid "Help"
@@ -2924,7 +2928,7 @@ msgstr ""
 
 #: lib/gui/lettering.py:78 lib/gui/test_swatches.py:33
 #: inx/inkstitch_apply_threadlist.inx:7 inx/inkstitch_fill_to_stroke.inx:15
-#: inx/inkstitch_gradient_blocks.inx:15
+#: inx/inkstitch_gradient_blocks.inx:15 inx/inkstitch_jump_to_stroke.inx:15
 #: inx/inkstitch_lettering_along_path.inx:13
 #: inx/inkstitch_palette_to_text.inx:15 inx/inkstitch_stroke_to_lpe_satin.inx:7
 #: inx/inkstitch_zigzag_line_to_satin.inx:7
@@ -3224,7 +3228,8 @@ msgid "This extension generates test swatches from a selection.\n"
 msgstr ""
 
 #: lib/gui/test_swatches.py:100 inx/inkstitch_apply_threadlist.inx:98
-#: inx/inkstitch_fill_to_stroke.inx:32 inx/inkstitch_stroke_to_lpe_satin.inx:32
+#: inx/inkstitch_fill_to_stroke.inx:32 inx/inkstitch_jump_to_stroke.inx:41
+#: inx/inkstitch_stroke_to_lpe_satin.inx:32
 #: inx/inkstitch_zigzag_line_to_satin.inx:28
 msgid "Get more information on our website"
 msgstr ""
@@ -3270,6 +3275,7 @@ msgid "Multicolor"
 msgstr ""
 
 #: lib/lettering/categories.py:26 inx/inkstitch_lettering_generate_json.inx:55
+#: inx/inkstitch_select_elements.inx:13
 msgid "Running Stitch"
 msgstr ""
 
@@ -4589,6 +4595,7 @@ msgid "Duplicate Params"
 msgstr ""
 
 #: inx/inkstitch_duplicate_params.inx:10 inx/inkstitch_reorder.inx:10
+#: inx/inkstitch_select_elements.inx:101
 #: inx/inkstitch_selection_to_guide_line.inx:10
 #: inx/inkstitch_selection_to_pattern.inx:10 inx/inkstitch_test_swatches.inx:10
 msgid "Edit"
@@ -5311,12 +5318,72 @@ msgstr ""
 msgid "Jump Stitch to Stroke"
 msgstr ""
 
-#: inx/inkstitch_jump_to_stroke.inx:14
+#: inx/inkstitch_jump_to_stroke.inx:17
+msgid "Convert jumps not shorter than (mm)"
+msgstr ""
+
+#: inx/inkstitch_jump_to_stroke.inx:19
+msgid "Convert jumps not longer than (mm)"
+msgstr ""
+
+#: inx/inkstitch_jump_to_stroke.inx:20
+msgid "Connect"
+msgstr ""
+
+#: inx/inkstitch_jump_to_stroke.inx:21
+msgid "all"
+msgstr ""
+
+#: inx/inkstitch_jump_to_stroke.inx:22
+msgid "in same layer"
+msgstr ""
+
+#: inx/inkstitch_jump_to_stroke.inx:23
+msgid "in same group"
+msgstr ""
+
+#: inx/inkstitch_jump_to_stroke.inx:25
+msgid "Do not connect after"
+msgstr ""
+
+#: inx/inkstitch_jump_to_stroke.inx:26
+msgid "Trim"
+msgstr ""
+
+#: inx/inkstitch_jump_to_stroke.inx:27
+msgid "Stop"
+msgstr ""
+
+#: inx/inkstitch_jump_to_stroke.inx:28
+msgid "Force lock stitch"
+msgstr ""
+
+#: inx/inkstitch_jump_to_stroke.inx:30
+msgid "Output settings"
+msgstr ""
+
+#: inx/inkstitch_jump_to_stroke.inx:31
+msgid "Merge consecutive strokes"
+msgstr ""
+
+#: inx/inkstitch_jump_to_stroke.inx:35
+msgid "These settings only apply when merging is disabled"
+msgstr ""
+
+#: inx/inkstitch_jump_to_stroke.inx:36
 msgid "Running stitch length (mm)"
 msgstr ""
 
-#: inx/inkstitch_jump_to_stroke.inx:15
+#: inx/inkstitch_jump_to_stroke.inx:37
 msgid "Running stitch tolerance (mm)"
+msgstr ""
+
+#: inx/inkstitch_jump_to_stroke.inx:40
+msgid "This extension converts jump stithes to running stitches."
+msgstr ""
+
+#: inx/inkstitch_jump_to_stroke.inx:42
+msgid "https://inkstitch.org/docs/stroke-tools/#jump-to-stroke"
 msgstr ""
 
 #: inx/inkstitch_layer_commands.inx:3
@@ -5964,6 +6031,140 @@ msgstr ""
 msgid "Re-stack objects in order of selection"
 msgstr ""
 
+#: inx/inkstitch_select_elements.inx:3
+msgid "Select embroidery elements"
+msgstr ""
+
+#: inx/inkstitch_select_elements.inx:8
+msgid "Select options"
+msgstr ""
+
+#: inx/inkstitch_select_elements.inx:9
+msgid "Select Stitch Type"
+msgstr ""
+
+#: inx/inkstitch_select_elements.inx:15
+msgid "Select only specific running stitches"
+msgstr ""
+
+#: inx/inkstitch_select_elements.inx:16 inx/inkstitch_select_elements.inx:36
+#: inx/inkstitch_select_elements.inx:44 inx/inkstitch_select_elements.inx:63
+msgid "No restriction"
+msgstr ""
+
+#: inx/inkstitch_select_elements.inx:17
+msgid "Auto-Run Top Stitching"
+msgstr ""
+
+#: inx/inkstitch_select_elements.inx:18
+msgid "Auto-Run Underpath"
+msgstr ""
+
+#: inx/inkstitch_select_elements.inx:20
+msgid "Ripples"
+msgstr ""
+
+#: inx/inkstitch_select_elements.inx:23
+msgid "Polyline"
+msgstr ""
+
+#: inx/inkstitch_select_elements.inx:29
+msgid "Satin"
+msgstr ""
+
+#: inx/inkstitch_select_elements.inx:31
+msgid "E-Stitch"
+msgstr ""
+
+#: inx/inkstitch_select_elements.inx:32
+msgid "S-Stitch"
+msgstr ""
+
+#: inx/inkstitch_select_elements.inx:33
+msgid "Zig-Zag"
+msgstr ""
+
+#: inx/inkstitch_select_elements.inx:35
+msgid "Only select satins with this underlay type"
+msgstr ""
+
+#: inx/inkstitch_select_elements.inx:37
+msgid "No underlay"
+msgstr ""
+
+#: inx/inkstitch_select_elements.inx:38
+msgid "Centerwalk"
+msgstr ""
+
+#: inx/inkstitch_select_elements.inx:39
+msgid "Contour"
+msgstr ""
+
+#: inx/inkstitch_select_elements.inx:40
+#: inx/inkstitch_zigzag_line_to_satin.inx:12
+msgid "Zigzag"
+msgstr ""
+
+#: inx/inkstitch_select_elements.inx:43
+msgid "Rung count"
+msgstr ""
+
+#: inx/inkstitch_select_elements.inx:43
+msgid "Only select satins with this rung count"
+msgstr ""
+
+#: inx/inkstitch_select_elements.inx:45
+msgid "No Rungs"
+msgstr ""
+
+#: inx/inkstitch_select_elements.inx:46
+msgid "Two Rungs"
+msgstr ""
+
+#: inx/inkstitch_select_elements.inx:53 inx/inkstitch_select_elements.inx:54
+msgid "Fill"
+msgstr ""
+
+#: inx/inkstitch_select_elements.inx:62
+msgid "Only select fills with this underlay"
+msgstr ""
+
+#: inx/inkstitch_select_elements.inx:65
+msgid "No Underlay"
+msgstr ""
+
+#: inx/inkstitch_select_elements.inx:79
+msgid "Select embroidery objects"
+msgstr ""
+
+#: inx/inkstitch_select_elements.inx:81
+msgid "Selects specific embroidery elements by stitch type."
+msgstr ""
+
+#: inx/inkstitch_select_elements.inx:82
+msgid "If there is already an active selection, non maching elements will be deselected."
+msgstr ""
+
+#: inx/inkstitch_select_elements.inx:88
+msgid "If this isn't working for you, you may need to insert your path to a python executable manualy."
+msgstr ""
+
+#: inx/inkstitch_select_elements.inx:90
+msgid "* Windows: Open the \"Command Prompt\" and type \"where python\". Copy the path and paste it here."
+msgstr ""
+
+#: inx/inkstitch_select_elements.inx:91
+msgid "* Linux: Open the command line and type \"which python3\". Copy the path and paste it here."
+msgstr ""
+
+#: inx/inkstitch_select_elements.inx:92
+msgid "* macOS: doesn't work, sorry"
+msgstr ""
+
+#: inx/inkstitch_select_elements.inx:93
+msgid "Python Path"
+msgstr ""
+
 #: inx/inkstitch_selection_to_guide_line.inx:3
 msgid "Selection to guide line"
 msgstr ""
@@ -6148,10 +6349,6 @@ msgstr ""
 
 #: inx/inkstitch_zigzag_line_to_satin.inx:11
 msgid "Sawtooth"
-msgstr ""
-
-#: inx/inkstitch_zigzag_line_to_satin.inx:12
-msgid "Zigzag"
 msgstr ""
 
 #: inx/inkstitch_zigzag_line_to_satin.inx:14
