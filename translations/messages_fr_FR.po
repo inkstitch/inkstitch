@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-02-24 01:01+0000\n"
-"PO-Revision-Date: 2024-02-24 01:01\n"
+"PO-Revision-Date: 2024-02-25 01:08\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -1799,15 +1799,15 @@ msgstr "Colonne satin : Une traverse de direction ne coupe pas les deux rails."
 
 #: lib/elements/satin_column.py:62
 msgid "Satin has exactly two rungs"
-msgstr ""
+msgstr "La colonne satin a exactement deux traverses"
 
 #: lib/elements/satin_column.py:63
 msgid "Satin column: There are exactly two rungs.  This may lead to false rail/rung detection."
-msgstr ""
+msgstr "Colonne satin : Il y a exactement deux traverses. Ceci peut conduire à une mauvaise détection des rails/traverses."
 
 #: lib/elements/satin_column.py:65
 msgid "Add an other rung."
-msgstr ""
+msgstr "Ajouter une autre traverse."
 
 #: lib/elements/satin_column.py:70
 msgid "Unequal number of points"
@@ -5334,55 +5334,55 @@ msgstr "Saut en Trait"
 
 #: inx/inkstitch_jump_to_stroke.inx:17
 msgid "Convert jumps not shorter than (mm)"
-msgstr ""
+msgstr "Convertir seulement les sauts de longueur au moins (mm)"
 
 #: inx/inkstitch_jump_to_stroke.inx:19
 msgid "Convert jumps not longer than (mm)"
-msgstr ""
+msgstr "Convertir seulement les sauts de longueur au maximum (mm)"
 
 #: inx/inkstitch_jump_to_stroke.inx:20
 msgid "Connect"
-msgstr ""
+msgstr "Connecter"
 
 #: inx/inkstitch_jump_to_stroke.inx:21
 msgid "all"
-msgstr ""
+msgstr "tout"
 
 #: inx/inkstitch_jump_to_stroke.inx:22
 msgid "in same layer"
-msgstr ""
+msgstr "dans le même calque"
 
 #: inx/inkstitch_jump_to_stroke.inx:23
 msgid "in same group"
-msgstr ""
+msgstr "dans le même groupe"
 
 #: inx/inkstitch_jump_to_stroke.inx:25
 msgid "Do not connect after"
-msgstr ""
+msgstr "Ne pas connecter après"
 
 #: inx/inkstitch_jump_to_stroke.inx:26
 msgid "Trim"
-msgstr ""
+msgstr "Couper"
 
 #: inx/inkstitch_jump_to_stroke.inx:27
 msgid "Stop"
-msgstr ""
+msgstr "Stop"
 
 #: inx/inkstitch_jump_to_stroke.inx:28
 msgid "Force lock stitch"
-msgstr ""
+msgstr "Point d'arrêt forcé"
 
 #: inx/inkstitch_jump_to_stroke.inx:30
 msgid "Output settings"
-msgstr ""
+msgstr "Options de sortie"
 
 #: inx/inkstitch_jump_to_stroke.inx:31
 msgid "Merge consecutive strokes"
-msgstr ""
+msgstr "Fusionner les traits consécutifs"
 
 #: inx/inkstitch_jump_to_stroke.inx:35
 msgid "These settings only apply when merging is disabled"
-msgstr ""
+msgstr "Ces options ne s'appliquent que si la fusion est désactivée"
 
 #: inx/inkstitch_jump_to_stroke.inx:36
 msgid "Running stitch length (mm)"
@@ -5394,11 +5394,11 @@ msgstr "Tolérance du point droit (mm)"
 
 #: inx/inkstitch_jump_to_stroke.inx:40
 msgid "This extension converts jump stithes to running stitches."
-msgstr ""
+msgstr "Cette extension convertit les sauts en points droits."
 
 #: inx/inkstitch_jump_to_stroke.inx:42
 msgid "https://inkstitch.org/docs/stroke-tools/#jump-to-stroke"
-msgstr ""
+msgstr "https://inkstitch.org/docs/fr/stroke-tools/#jump-to-stroke"
 
 #: inx/inkstitch_layer_commands.inx:3
 msgid "Add Layer Commands"
@@ -6047,72 +6047,72 @@ msgstr "Réempiler les objets dans l'ordre de leur sélection"
 
 #: inx/inkstitch_select_elements.inx:3
 msgid "Select embroidery elements"
-msgstr ""
+msgstr "Choisir des éléments de broderie"
 
 #: inx/inkstitch_select_elements.inx:8
 msgid "Select options"
-msgstr ""
+msgstr "Options de sélection"
 
 #: inx/inkstitch_select_elements.inx:9
 msgid "Select Stitch Type"
-msgstr ""
+msgstr "Sélectionner le type de point"
 
 #: inx/inkstitch_select_elements.inx:15
 msgid "Select only specific running stitches"
-msgstr ""
+msgstr "Sélectionner seulement des points droits spécifiques"
 
 #: inx/inkstitch_select_elements.inx:16 inx/inkstitch_select_elements.inx:36
 #: inx/inkstitch_select_elements.inx:44 inx/inkstitch_select_elements.inx:63
 msgid "No restriction"
-msgstr ""
+msgstr "Sans restriction"
 
 #: inx/inkstitch_select_elements.inx:17
 msgid "Auto-Run Top Stitching"
-msgstr ""
+msgstr "Points de dessus de l'agencement automatique"
 
 #: inx/inkstitch_select_elements.inx:18
 msgid "Auto-Run Underpath"
-msgstr ""
+msgstr "Points de dessous de l'agencement automatique"
 
 #: inx/inkstitch_select_elements.inx:20
 msgid "Ripples"
-msgstr ""
+msgstr "Ondulations"
 
 #: inx/inkstitch_select_elements.inx:23
 msgid "Polyline"
-msgstr ""
+msgstr "Polyline"
 
 #: inx/inkstitch_select_elements.inx:29
 msgid "Satin"
-msgstr ""
+msgstr "Colonne satin"
 
 #: inx/inkstitch_select_elements.inx:31
 msgid "E-Stitch"
-msgstr ""
+msgstr "Point en E"
 
 #: inx/inkstitch_select_elements.inx:32
 msgid "S-Stitch"
-msgstr ""
+msgstr "Point en S"
 
 #: inx/inkstitch_select_elements.inx:33
 msgid "Zig-Zag"
-msgstr ""
+msgstr "Zig-Zag"
 
 #: inx/inkstitch_select_elements.inx:35
 msgid "Only select satins with this underlay type"
-msgstr ""
+msgstr "Ne sélectionner que les satins avec ce type de sous-couche"
 
 #: inx/inkstitch_select_elements.inx:37
 msgid "No underlay"
-msgstr ""
+msgstr "Aucune"
 
 #: inx/inkstitch_select_elements.inx:38
 msgid "Centerwalk"
-msgstr ""
+msgstr "Centrale"
 
 #: inx/inkstitch_select_elements.inx:39
 msgid "Contour"
-msgstr ""
+msgstr "Contour"
 
 #: inx/inkstitch_select_elements.inx:40
 #: inx/inkstitch_zigzag_line_to_satin.inx:12
@@ -6121,63 +6121,63 @@ msgstr "Sous-couche Zigzag"
 
 #: inx/inkstitch_select_elements.inx:43
 msgid "Rung count"
-msgstr ""
+msgstr "Nombre de traverses"
 
 #: inx/inkstitch_select_elements.inx:43
 msgid "Only select satins with this rung count"
-msgstr ""
+msgstr "Ne sélectionner que les satins avec ce nombre de traverses"
 
 #: inx/inkstitch_select_elements.inx:45
 msgid "No Rungs"
-msgstr ""
+msgstr "Aucune traverse"
 
 #: inx/inkstitch_select_elements.inx:46
 msgid "Two Rungs"
-msgstr ""
+msgstr "Deux traverses"
 
 #: inx/inkstitch_select_elements.inx:53 inx/inkstitch_select_elements.inx:54
 msgid "Fill"
-msgstr ""
+msgstr "Remplissage"
 
 #: inx/inkstitch_select_elements.inx:62
 msgid "Only select fills with this underlay"
-msgstr ""
+msgstr "Ne sélectionner que les remplissages avec ce type de sous-couche"
 
 #: inx/inkstitch_select_elements.inx:65
 msgid "No Underlay"
-msgstr ""
+msgstr "Aucune"
 
 #: inx/inkstitch_select_elements.inx:79
 msgid "Select embroidery objects"
-msgstr ""
+msgstr "Sélectionner des objets de broderie"
 
 #: inx/inkstitch_select_elements.inx:81
 msgid "Selects specific embroidery elements by stitch type."
-msgstr ""
+msgstr "Sélectionne des éléments de broderie par type de points."
 
 #: inx/inkstitch_select_elements.inx:82
 msgid "If there is already an active selection, non maching elements will be deselected."
-msgstr ""
+msgstr "S'il y a déjà des éléments sélectionnés, les éléments qui ne correspondent pas seront désélectionnés."
 
 #: inx/inkstitch_select_elements.inx:88
 msgid "If this isn't working for you, you may need to insert your path to a python executable manualy."
-msgstr ""
+msgstr "Si cela ne fonctionne pas, il est possible que vous deviez insérer manuellement votre chemin vers python."
 
 #: inx/inkstitch_select_elements.inx:90
 msgid "* Windows: Open the \"Command Prompt\" and type \"where python\". Copy the path and paste it here."
-msgstr ""
+msgstr "*Windows : Ouvrir \"Invite de commande\" et taper \"where python\". Copier le chemin et le coller ici."
 
 #: inx/inkstitch_select_elements.inx:91
 msgid "* Linux: Open the command line and type \"which python3\". Copy the path and paste it here."
-msgstr ""
+msgstr "*Linux : ouvrir la ligne de commande et taper \"which python3\". Copier le chemin et le coller ici."
 
 #: inx/inkstitch_select_elements.inx:92
 msgid "* macOS: doesn't work, sorry"
-msgstr ""
+msgstr "*macOS : désolé ne fonctionne pas"
 
 #: inx/inkstitch_select_elements.inx:93
 msgid "Python Path"
-msgstr ""
+msgstr "Chemin vers python"
 
 #: inx/inkstitch_selection_to_guide_line.inx:3
 msgid "Selection to guide line"
