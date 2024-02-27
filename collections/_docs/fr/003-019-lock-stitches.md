@@ -6,6 +6,19 @@ toc: true
 ---
 Les points de sureté sont des petits points au début (point d'ancrage) ou à la fin (point d'arrêt)  d'une couleur ou d'un saut de fil ou d'une commande de coupe.
 
+Ink/Stitch permet d'ajouter des commandes de coupe:
+
+* soit sous forme de commande visuelle en utilisant Extension < Ink/Stitch < Commandes < Attacher des commandes à des objets selectionnés
+* soit en cochant la case "couper après" dans le dialogue de paramètrage.
+  
+Le fichier de broderie est composé de multiples objets brodés consécutivement.
+
+Lorsque la distance entre la fin de la broderie d'un objet et le début du suivant est supérieure à la "distance minimum de saut" telle que définie dans Extension > Innk/Stitch > Préférences, alors il y a un saut entre les deux objets, et un point d'arrêt est systématiquement fait à la fin du premier objet et un point d'ancrage au début du second. 
+
+Si cette distance est inférieure à la "distance minimum de saut", alors le déplacement entre les deux objets est traité commme un point de broderie, sans ajout de points de sureté. 
+
+Il est toutefois possible de forcer les points d'arrêts de chaque coté d'un de ces mini sauts, en cochant la case "forcer les points d'arrêt" lors du paramètrage de l'objet situé avant le saut. Attention si vous cochez aussi ce paramètre pour l'objet situé après le saut, alors vous forcez un point d'arrêt sur le deuxième  objet, et de plus un point d'ancrage sur l'objet suivant, quelque soit la distance entre les deux.
+
 
 Ink/Stitch offre divers types pour les points de sureté et vous permet même de définir le votre.
 
