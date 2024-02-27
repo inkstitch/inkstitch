@@ -1,7 +1,7 @@
 ---
 title: "Points de sureté"
 permalink: /fr/docs/stitches/lock-stitches/
-last_modified_at: 2023-04-15
+last_modified_at: 2024-02-26
 toc: true
 ---
 Les points de sureté sont des petits points au début (point d'ancrage) ou à la fin (point d'arrêt)  d'une couleur ou d'un saut de fil ou d'une commande de coupe.
@@ -13,7 +13,7 @@ Ink/Stitch permet d'ajouter des commandes de coupe:
   
 Le fichier de broderie est composé de multiples objets brodés consécutivement.
 
-Lorsque la distance entre la fin de la broderie d'un objet et le début du suivant est supérieure à la "distance minimum de saut" telle que définie dans Extension > Innk/Stitch > Préférences, alors il y a un saut entre les deux objets, et un point d'arrêt est systématiquement fait à la fin du premier objet et un point d'ancrage au début du second. 
+Lorsque la distance entre la fin de la broderie d'un objet et le début du suivant est supérieure à la "distance minimum de saut" telle que définie dans Extension > Ink/Stitch > Préférences, alors il y a un saut entre les deux objets, et un point d'arrêt est systématiquement fait à la fin du premier objet et un point d'ancrage au début du second. 
 
 Si cette distance est inférieure à la "distance minimum de saut", alors le déplacement entre les deux objets est traité commme un point de broderie, sans ajout de points de sureté. 
 
