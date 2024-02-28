@@ -6,10 +6,10 @@ toc: true
 ---
 Tack and lock stitches are small stitches at the beginning (tack) or the end (lock) of a color block or before and after jump stitches or trim commands. They help to secure the thread.
 
-Ink/Stitch allows you to add trim command
+Ink/Stitch allows you to add trim commands
 
 *  either as a visual command  using  Extension < Ink/Stitch < Commands < Attach commands to selected objects
-* soit en cochant la case "couper après" dans le dialogue de paramètrage.
+* or by ckecking "Trim after" in the parameters dialog
   
 The embroidery file contains several embroidery objects that will be embroidered one after another. 
 
