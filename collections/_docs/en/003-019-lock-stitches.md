@@ -15,7 +15,7 @@ The embroidery file contains several embroidery objects that will be embroidered
 
 When the distance between the end of an object and the begining of the next one is larger than the  "minimum  jump stitch length"  as defined in Extension > Ink/Stitch > Preferences, then there is a jump in between the objects. In that  case,   lock stitches are added  at the end of the first object and tack stitches at the begining of the second one except if their respective  "allow lock stitches" parameter do not  allow one (or both) of them.
 
-If this distance is smaller thant the "minimum jump stitch length", then the needle move to go from first object to second object is not a jump, but a regular stitch and no tack down stitches is added to the first object and no lock stitches to the second one, regardless t their respective "allow lock stitch parameter" value.
+If this distance is smaller thant the "minimum jump stitch length", then the needle move to go from first object to second object is not a jump, but a regular stitch and no tack down stitches is added to the first object and no lock stitches to the second one, regardless their respective "allow lock stitch parameter" value.
 
 It is however possible to force small distance jumps to have  lock and tack stitches. Check the "force lock stitch" parameter of the **before jump** object to add lock stitches before jump and tack stitches after jump. This overides the "allow lock stitches"  parameters. Beware not to check "force lock stitch" on  the after jump object, as you would then force the "lock stitches" for it, not the "tack stitches", plus you would force lock stitches for next object, whatever its distance from after jump object.
 
