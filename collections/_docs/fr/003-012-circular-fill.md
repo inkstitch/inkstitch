@@ -41,8 +41,8 @@ Lancez `Extensions > Ink/Stitch  > Paramètres` pour choisir vos réglages.
 |Chemin de dessous           |![Example de chemin de dessous](/assets/images/docs/params-fill-underpathing.png)| Doit être autorisé pour permettre aux points de voyager dans la forme et non le long de la frontière pour passer de section en section.|
 |Forcer les points d'arrêts |☑|Force un point d'arrêt après l'objet indépendament de la valeur de "Saut de fil" dans les Préférences d'Ink/Stitch.|
 |Autoriser les points d'arrêts | ☑|Ajoute un point d'arrêt à la ou les positions choisies.|
-|Point d'ancrage        ||Selectionnez le type du  [point d'ancrage](/fr/docs/stitches/lock-stitches).|
-|Point d'arrêt        ||Selectionnez le type du [point d'arrêt](/fr/docs/stitches/lock-stitches).|
+|Point d'arrêt initial        ||Selectionnez le type du  [point d'ancrage](/fr/docs/stitches/lock-stitches).|
+|Point d'arrêt  final      ||Selectionnez le type du [point d'arrêt](/fr/docs/stitches/lock-stitches).|
 |Couper après                 |☑|Couper le fil après avoir brodé cet objet.|
 |Arrêter après                |☑|Faire faire une pause à la machine après avoir brodé  cet objet. Si une position d'arrêt est définie, elle est rejointe  par un saut avant la pause de la machine.|
 
