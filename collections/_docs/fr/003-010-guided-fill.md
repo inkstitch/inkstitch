@@ -66,8 +66,8 @@ Lancez `Extensions > Ink/Stitch  > Paramètres`. Choisir "Remplissage guidé" da
 |Chemin de dessous|![exemple de chemin de dessous](/assets/images/docs/params-fill-underpathing.png)|Doit être activé pour permettre aux points droits de se placer à l'intérieur de la forme plutôt que de suivre la bordure lors du déplacement d'une section à l'autre.|
 |Forcer les points d'arrêts |☑|Force un point d'arrêt après l'objet indépendament de la valeur de "Saut de fil" dans les Préférences d'Ink/Stitch.
 |Autoriser les points d'arrêts | ☑|Ajoute un point d'arrêt à la ou les positions choisies.|
-|Point d'ancrage                  |Choisir le  [style désiré](/fr/docs/stitches/lock-stitches/)|
-|Point d'arrêt                    |Choisir le  [style désiré](/fr/docs/stitches/lock-stitches/)|
+|Point d'arrêt initial                 |Choisir le  [style désiré](/fr/docs/stitches/lock-stitches/)|
+|Point d'arrêt final                   |Choisir le  [style désiré](/fr/docs/stitches/lock-stitches/)|
 |Couper après          |☑ | Coupe le fil après avoir brodé cet objet.|
 |Arrêter après           |☑ |Fait faire une pause à la machine après avoir brodé cet objet. Si une position d'arrêt a été définie, elle est rejointe par un saut avant la pause. |
 
