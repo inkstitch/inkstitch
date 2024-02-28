@@ -19,7 +19,7 @@ Si cette distance est inférieure à la "distance minimum de saut", alors le dé
 
 Il est toutefois possible de forcer les points d'arrêt de chaque coté d'un de ces mini sauts, en cochant la case "forcer les points d'arrêt" lors du paramètrage de l'objet situé avant le saut. Dans ce cas la valeur du paramètre "autoriser les points d'arrêt" est ignorée pour les deux objets de chaque choté du saut. Attention si vous cochez aussi ce paramètre pour l'objet situé après le saut, alors en plus de son point d'arrêt initial, vous forcez un point d'arrêt final sur le deuxième  objet, et de plus un point d'arrêt initial sur l'objet suivant, quelque soit la distance entre les deux.
 
-Ink/Stitch offre divers types pour les points de sureté et vous permet même de définir le votre.
+Ink/Stitch offre divers types pour les points d'arrêt et vous permet même de définir le votre.
 
 ## Points d'arrêts prédéfinis
 
