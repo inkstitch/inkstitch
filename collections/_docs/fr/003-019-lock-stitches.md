@@ -4,7 +4,7 @@ permalink: /fr/docs/stitches/lock-stitches/
 last_modified_at: 2024-02-26
 toc: true
 ---
-Les points d'arrêt sont des petits points au début (point d'arrêt initial) ou à la fin (point d'arrêt final)  d'une couleur ou d'un saut de fil ou d'une commande de coupe.
+Les points d'arrêt sont des petits points au début (point d'arrêt initial) ou à la fin (point d'arrêt final)  d'une couleur ou d'un saut de fil ou d'une commande de coupe.Ils aident à sécuriser le fil.
 
 Ink/Stitch permet d'ajouter des commandes de coupe:
 
@@ -13,11 +13,11 @@ Ink/Stitch permet d'ajouter des commandes de coupe:
   
 Le fichier de broderie est composé de multiples objets brodés consécutivement.
 
-Lorsque la distance entre la fin de la broderie d'un objet et le début du suivant est supérieure à la "distance minimum de saut" telle que définie dans Extension > Ink/Stitch > Préférences, alors il y a un saut entre les deux objets, et un point d'arrêt final est normalement fait à la fin du premier objet et un point d'arrêt initial au début du second, sauf si l'un ou l'autre a été interdit dans le paramètrage en modifiant la valeur par défaut (au début et à la fin) du paramètre "autoriser les points d'arrêt".
+Lorsque la distance entre la fin de la broderie d'un objet et le début du suivant est supérieure à la "distance minimum de saut" telle que définie dans Extension > Ink/Stitch > Préférences, alors il y a un saut entre les deux objets, et un point d'arrêt final est normalement fait à la fin du premier objet et un point d'arrêt initial au début du second, sauf si l'un ou l'autre a été interdit dans le paramètrage de ces deux objets en modifiant la valeur par défaut (au début et à la fin) du paramètre "autoriser les points d'arrêt".
 
 Si cette distance est inférieure à la "distance minimum de saut", alors le déplacement entre les deux objets est traité commme un point de broderie, sans ajout de points d'arrêt, quelque soit l'option choisie pour le paramètre "autoriser les points d'arrêt". 
 
-Il est toutefois possible de forcer les points d'arrêt de chaque coté d'un de ces mini sauts, en cochant la case "forcer les points d'arrêt" lors du paramètrage de l'objet situé avant le saut. Dans ce cas la valeur du paramètre "autoriser les points d'arrêt" est ignorée pour les deux objets de chaque choté du saut. Attention si vous cochez aussi ce paramètre pour l'objet situé après le saut, alors en plus de son point d'arrêt initial, vous forcez un point d'arrêt final sur le deuxième  objet, et de plus un point d'arrêt initial sur l'objet suivant, quelque soit la distance entre les deux.
+Il est toutefois possible de forcer les points d'arrêt de chaque coté d'un de ces mini sauts, en cochant la case "forcer les points d'arrêt" lors du paramètrage de **l'objet situé avant le saut**. Dans ce cas la valeur du paramètre "autoriser les points d'arrêt" est ignorée pour les deux objets de chaque coté du saut. Attention si vous cochez aussi ce paramètre pour l'objet situé après le saut, alors en plus de son point d'arrêt initial, vous forcez un point d'arrêt final sur le deuxième  objet, et de plus un point d'arrêt initial sur l'objet suivant, quelque soit la distance entre les deux.
 
 Ink/Stitch offre divers types pour les points d'arrêt et vous permet même de définir le votre.
 
