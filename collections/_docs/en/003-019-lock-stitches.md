@@ -49,7 +49,7 @@ The svg path is always built as if it is a tack (start) lock stitching, if posit
 At the end of the svg path there is an extra node to indicate in which angle the path connects to the lock stitch. It will be removed when the angle has been processed.
 
 For instance the triangle lock stitches corresponds to the custom path  M -0.26,0.33 H 0.55 L 0,0.84 V 0 L 0.34,0.82 (this is the d attribute of the path). 
-On next image, this are the black paths, on one copy its last segment is colored green for clarity.
+On next image, they are the black paths, on one copy the last segment is green colored for clarity.
 
 ![Triangle lock stitch](/assets/images/docs/triangle_lock.png)
 
