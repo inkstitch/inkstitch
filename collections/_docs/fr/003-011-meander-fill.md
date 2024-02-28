@@ -41,8 +41,8 @@ Lancez `Extensions > Ink/Stitch > Paramètres`. Choisir “Remplissage en méand
 |Nombre de répétitions pour le point triple (bean stitch)              |Active le [Mode point triple](/fr/docs/stitches/bean-stitch/)<br />|Une valeur de 1 triplera chaque point (avant, arrière, avant).<br />◦ Une valeur de 2 permettra de quintupler chaque point, etc..<br />◦ Il est possible de définir un motif de répétitions en entrant plusieurs valeurs séparées par un espace|
 |Forcer les points d'arrêts                 |☑|Force un point d'arrêt après l'objet indépendament de la valeur de "Saut de fil" dans les Préférences d'Ink/Stitch.|
 |Autoriser les points d'arrêts              | ☑|Ajoute un point d'arrêt à la ou les positions choisies.|
-|Point d'ancrage                            ||Selectionnez le type du  [point d'ancrage](/fr/docs/stitches/lock-stitches).|
-|Point d'arrêt                              ||Selectionnez le type du [point d'arrêt](/fr/docs/stitches/lock-stitches).|
+|Point d'arrêt initial                           ||Selectionnez le type du  [point d'ancrage](/fr/docs/stitches/lock-stitches).|
+|Point d'arrêt final                             ||Selectionnez le type du [point d'arrêt](/fr/docs/stitches/lock-stitches).|
 |Couper après                               |☑|Couper le fil après avoir brodé cet objet.|
 |Arrêter après                              |☑|Faire faire une pause à la machine après avoir brodé  cet objet. Si une position d'arrêt est définie, elle est rejointe  par un saut avant la pause de la machine.|
 
