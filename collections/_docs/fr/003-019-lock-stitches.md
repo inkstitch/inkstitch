@@ -46,12 +46,18 @@ Il est possible de définir des points de sureté personnalisés  dans le param�
 
 Le chemin svg est toujours construit comme s'il s'agissait d'un point d'ancrage (début de la broderie). S'il est positionné en fin (point d'arrêt) il sera inversé.
 
-A la fin du chemin svg, un noeud supplémentaire indique l'angle de connection du chemin avec le point de sureté. Il sera supprimé quand l'angle sera traité.
+A la fin du chemin svg, un noeud supplémentaire indique l'angle de connection du chemin avec le point de sureté. 
 
+Par exemple le Triangle est défini par le chemin M -0.26,0.33 H 0.55 L 0,0.84 V 0 L 0.34,0.82 (ceci est la valeur de l'attribut d du chemin). Sur l'image suivante c'est le chemin en noir.
+
+![Triangle lock stitch](/assets/images/docs/triangle_lock.png)
+
+Les deux chemins rouges et bleus ont été paramétrés avec un triangle comme point d'ancrage. 
+Le chemin personnnalisé est tourné de telle sorte que son dernier segment (le segment en vert) soit dans l'axe du début des chemins bleu et rouge. Ce dernier segment vert ne fait pas partie du point d'ancrage et ne sera pas brodé.
 
 
 ### Chemin personnalisé en mm
 
-Les valeurs personnalisées en mm sont séparées par un espace. Par exemple un point de sureté personnalisé avec comme valeur de chemin
+Les valeurs personnalisées (positives ou négatives) en mm sont séparées par un espace. Par exemple un point de sureté personnalisé avec comme valeur de chemin
 1 1 -1 -1 , une echelle définie à 0.7 mm  fera deux points de 0.7 mm en avant puis deux points de 0.7mm en arrière.
 Il est possible d'utiliser des valeurs non entières, (par exemple 0.5 2.2 -0.5 -2.2), si l'utilisateur le souhaite.
