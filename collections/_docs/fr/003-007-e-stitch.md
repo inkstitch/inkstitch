@@ -36,8 +36,8 @@ Inverser un rail               |![Inverser un rail](/assets/images/docs/satin-re
 |Échanger les rails            |☑ |Échange les deux rails de la colonne satin, ce qui affecte le côté de fin de broderie ainsi que tous les paramètres asymétriques|
 |Autoriser les points d'arrêts | ☑|Ajoute un point d'arrêt à la ou les positions choisies.|
 |Forcer les points d'arrêts    | ☑ | Force un point d'arrêt après l'objet indépendament de la valeur de "Saut de fil" dans les Préférences d'Ink/Stitch|
-|Point d'arrêt initial                | |Choisir le type de point d'arrêt initial.|
-|Point d'arrêt final                 | |Choisir le type de point d'arrêt final.|
+|Point d'arrêt initial                | |Choisir le  [style désiré](/fr/docs/stitches/lock-stitches/).|
+|Point d'arrêt final                 | |Choisir le  [style désiré](/fr/docs/stitches/lock-stitches/).|
 |Couper après                  |☑ | Coupe le fil après avoir brodé cet objet|
 |Arrêter après                 |☑ |Fait faire une pause à la machine après avoir brodé cet objet. Si une position d'arrêt a été définie, elle est rejointe par un saut avant la pause. |
 |Pourcentage maximum d'augmentation aléatoire de la largeur du satin |![Random width increase](/assets/images/docs/params-satin-random-width-increase.png)| Élargir le satin d'au plus ce pourcentage. Deux valeurs séparées par un espace peuvent être utilisées pour un effet asymétrique.|
