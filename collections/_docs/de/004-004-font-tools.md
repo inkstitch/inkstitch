@@ -9,6 +9,14 @@ Eine Sammlung von Werkzeugen für Schriftarten Entwickler oder Personen, die dem
 Ein Blick in das [Schriften für Ink/Stitch erstellen Tutorial](/de/tutorials/font-creation) lohnt sich auf jeden Fall, wenn du neue Schriften erstellen willst.
 {: .notice--info }
 
+## Force lock stitches
+{% include upcoming_release.html %} 
+Small fonts will sometimes unravel if threads are cut after the embroidery machine has finished the work.
+
+Therefore it is important that also diacritics with a smaller distance to the font body than defined by the minimum jump stitch length (default: 3mm) have lock stitches.
+
+This extension helps adding forced lock stitches
+
 ## Benutzerdefinierter Ordner für Schriften
 
 Diese Erweiterung erlaubt dir, einen Ordner zu definieren, in dem du zusätzliche Schriften für das Text-Werkzeug speichern willst.
@@ -40,7 +48,7 @@ Wenn du deine Schrift ohne Kerning erstellt hast, kannst du mit diesem Werkzeug 
     * Nein: Wähle diese Option, wenn deine Schrift sowohl Klein- als auch Großbuchstaben enthält (Standard)
     * Großbuchstaben: Wähle diese Option, wenn deine Schrift nur Großbuchstaben enthält.
     * Kleinbuchstaben: Wähle diese Option, wenn deine Schrift nur Kleinbuchstaben enthält.
-* **Umkehrbar**: definiere, ob deine Schrift vorwärts und rückwärts gestickt werden kann.
+* **Umkehrbar**: definiere, ob deine Schrift vorwärts und rückwärts gestickt werden kann.  Check this only if you do have created font variants.
 * **Standard-Glyphe**: das Zeichen/der Buchstabe der ausgegeben werden soll, wenn der eingegebene Buchstabe nicht in der Schriftdatei vorhanden ist
 * **Minimale Skalierung / Maximale Skalierung**: definiert, wie weit die Schrift maximal skaliert werden darf ohne beim Sticken an Qualität zu verlieren 
 
@@ -54,18 +62,6 @@ Wenn keine Kerning Information vorhanden ist, werden die unten stehenden Werte a
 
 Die Datei `font.json` wird in demselben Ordner erstellt, in dem deine SVG-Schriftdatei liegt.
 
-## Kerning entfernen
-
-**⚠ Warnung**: Änderungen die von diesem Werkzeug durchgeführt werden, können nicht rückgängig gemacht werden. Speichere auf jeden Fall eine **Kopie** deiner Datei ab, bevor du die hier beschriebenen Schritte durchführst.
-{: .notice--warning }
-
-Deine Schrift ist bereits einsatzbereit. Aber wenn du sie mit FontForge erstellt hast, beinhaltet sie noch jede Menge Informationen, die wir jetzt nicht mehr brauchen. Sie können sogar die Benutzung der Schrift ein wenig verlangsamen. Ink/Stitch stellt deshalb ein Werkzeug bereit, um die Datei von überflüssigen Informationen zu bereinigen.
-
-1. Stelle sicher, dass du eine **Kopie** deiner Schriftdatei erstellt hast. Die zusätzlichen Informationen werden zwar nicht für den Gebrauch der Schrift benötigt,
-   könnten aber nützlich werden, wenn du z.B. weitere Buchstaben zu der Schrift hinzufügen willst.
-2. Öffne `Erweiterungen > Ink/Stitch > Font Tools > Remove Kerning`
-3. Die die zu bereinigende(n) Datei(en)
-4. Klicke auf `Anwenden`
 
 ## Buchstaben zu Schrift
 
@@ -87,3 +83,24 @@ Bei gekauften Schriften kommt es häufig vor, dass die Buchstaben in Unterordner
 * Nach dem Import muss die Grundlinie (`baseline`) an die richtige Stelle gerückt werden und die Buchstaben entsprechend positioniert. Der linke Dokumentenrand wirkt sich ebenfalls auf die Positionierung der Buchstaben durch das Textwerkzeug aus
 * Speichere die Datei als `→.svg` in einem neuen Ordner in dem [Benutzerdefinierten Ordner für Schriften](#benutzerdefinierter-ordner-für-schriften)
 * Erstelle mit [JSON-Datei erstellen](#json-datei-erstellen) eine JSON-Datei, die die Schrift für das Textwerkzeug von Ink/Stitch nutzbar macht. "Automatisch geführte Satinsäulen" sollte für digitalisierte Schriften nicht ausgewählt sein. Die Skalierung bleibt bei 1.
+
+## Update glyph list
+
+This extension insert the list of the glyphs into the json file. Must be done a first time when all the glyphs are present in the  svg file, and must be redone if glyphs are added or deleted
+
+## Kerning entfernen
+
+**⚠ Warnung**: Änderungen die von diesem Werkzeug durchgeführt werden, können nicht rückgängig gemacht werden. Speichere auf jeden Fall eine **Kopie** deiner Datei ab, bevor du die hier beschriebenen Schritte durchführst.
+{: .notice--warning }
+
+Deine Schrift ist bereits einsatzbereit. Aber wenn du sie mit FontForge erstellt hast, beinhaltet sie noch jede Menge Informationen, die wir jetzt nicht mehr brauchen. Sie können sogar die Benutzung der Schrift ein wenig verlangsamen. Ink/Stitch stellt deshalb ein Werkzeug bereit, um die Datei von überflüssigen Informationen zu bereinigen.
+
+1. Stelle sicher, dass du eine **Kopie** deiner Schriftdatei erstellt hast. Die zusätzlichen Informationen werden zwar nicht für den Gebrauch der Schrift benötigt,
+   könnten aber nützlich werden, wenn du z.B. weitere Buchstaben zu der Schrift hinzufügen willst.
+2. Öffne `Erweiterungen > Ink/Stitch > Font Tools > Remove Kerning`
+3. Die die zu bereinigende(n) Datei(en)
+4. Klicke auf `Anwenden`
+
+
+
+  
