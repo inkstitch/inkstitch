@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-02-24 01:01+0000\n"
-"PO-Revision-Date: 2024-02-25 01:08\n"
+"PO-Revision-Date: 2024-02-29 01:03\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -1195,11 +1195,11 @@ msgstr "Créer des points d'arrêt après avoir cousu cet élément, même si la
 
 #: lib/elements/element.py:250
 msgid "Tack stitch"
-msgstr "Point d'ancrage"
+msgstr "Point d'arrêt initial"
 
 #: lib/elements/element.py:251
 msgid "Tack down stitch type"
-msgstr "Type de point d'ancrage"
+msgstr "Type de point d'arrêt initial"
 
 #: lib/elements/element.py:261 lib/elements/element.py:307
 msgid "Custom path"
@@ -1211,7 +1211,7 @@ msgstr "Entrez un chemin personnalisé. Pour les chemins svg, le dernier nœud n
 
 #: lib/elements/element.py:272 lib/elements/element.py:284
 msgid "Scale tack stitch"
-msgstr "Échelle du point d'ancrage"
+msgstr "Échelle du point d'arrêt initial"
 
 #: lib/elements/element.py:273
 msgid "Set stitch length. A 1 in a custom path equals this values."
@@ -1219,7 +1219,7 @@ msgstr "Détermine la longueur de point. Un 1 dans un chemin personnalisé repr�
 
 #: lib/elements/element.py:285
 msgid "Scale tack stitch by this percentage."
-msgstr "Mettre le point d'ancrage à l'échelle selon ce pourcentage."
+msgstr "Mettre le point d'arrêt initial à l'échelle selon ce pourcentage."
 
 #: lib/elements/element.py:296
 msgid "Lock stitch"
@@ -1227,7 +1227,7 @@ msgstr "Point d'arrêt"
 
 #: lib/elements/element.py:297
 msgid "Lock stitch type"
-msgstr "Type de point d'arrêt"
+msgstr "Type de point d'arrêt final"
 
 #: lib/elements/element.py:308
 msgid "Enter a custom path. For svg paths the first node will not be embroidered, but represents the last stitch of the element."
@@ -1235,7 +1235,7 @@ msgstr "Entrez un chemin personnalisé. Pour les chemins svg, le premier nœud n
 
 #: lib/elements/element.py:318 lib/elements/element.py:330
 msgid "Scale lock stitch"
-msgstr "Échelle du point d'arrêt"
+msgstr "Échelle du point d'arrêt final"
 
 #: lib/elements/element.py:319
 msgid "Set length of lock stitches (mm)."
