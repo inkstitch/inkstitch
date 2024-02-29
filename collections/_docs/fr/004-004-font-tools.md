@@ -1,13 +1,23 @@
 ---
 title: "Outils de police"
 permalink: /fr/docs/font-tools/
-last_modified_at: 2023-04-18
+last_modified_at: 2024-02-29
 toc: true
 ---
 Un ensemble d'outils adaptés aux créateurs de polices ou à ceux qui souhaitent ajouter des polices supplémentaires dans [l'outil de lettrage](/docs/lettering) d'Ink/Stitch.
 
 Lisez le [Tutoriel de création de police pour Ink/Stitch](/fr/tutorials/font-creation) pour des instructions approfondies.
 {: .notice--info }
+
+## Forcer des points d'arrêt
+{% include upcoming_release.html %} 
+Les petites fontes se défont parfois si les fils sont coupés après la broderie. 
+
+Il est donc important que les diacritiques qui sont plus proches du corps de la lettre que la valeur de la longueur minimum de saut définie dans les préférences (3mm par défaut) aient des points d'arrêt. 
+
+Ceci peut être obtenu en leur ajoutant un attribut forcer les points d'arrêt.
+
+Pour la même raison, lorsque les lettres sont détachées, il peut être utile de forcer les points d'arrêts sur le dernier élément de chaque glyphe.
 
 ## Répertoire personnalisé de polices 
 
@@ -16,7 +26,8 @@ Cette extension vous permet de définir un répertoire dans votre système de fi
 Placez chaque police dans un sous-répertoire de votre répertoire personnalisé de polices. Chaque dossier de polices doit contenir au moins une variante de police et un fichier json.
 De plus, il est recommandé d'enregistrer également un fichier de licence. 
 
-Les variantes de police doivent être nommées avec une flèche, indiquant la direction de broderie pour laquelle elles ont été créées (`→.svg`, `←.svg`, etc.).  It is also possible to create a folder named with an arrow name instead and insert multiple font files for a specific direction.
+Les variantes de police doivent être nommées avec une flèche, indiquant la direction de broderie pour laquelle elles ont été créées (`→.svg`, `←.svg`, etc.). 
+Il est aussi possible pour une direction donnée de créer un repertoire dont le nom est la flêche de direction et de répartir les glyphes de cette direction dans plusieurs fichiers dont le nom est alors quelconque.
 
 Le fichier json doit inclure au minimum le nom des polices.
 
@@ -34,7 +45,7 @@ De plus, le fichier de police sera utilisé pour déterminer le chemin de sortie
 * **Agencement automatique des colonnes Satin**:
     * activé: Ink/Stitch générera une organisation raisonnable pour les colonnes de satin de votre police lorsqu'elle est utilisée dans l'outil de lettrage. [Plus d'information sur Agencement automatique des colonnes Satin](/fr/docs/satin-tools/#auto-route-satin-columns)
     * désactivé: Ink/Stitch utilisera les glyphes tels quels. Désactivez l'option, si vous vous avez créé vous-même l'agencement des colonnes satin dans votre police.
-* **Réversible**: si votre police peut être brodée vers l'avant et vers l'arrière ou seulement vers l'avant
+* **Réversible**: si votre police peut être brodée vers l'avant et vers l'arrière ou seulement vers l'avant. Ne cocher cette case que si vous avez effectivement créé plusieurs variantes de la police pour des directions différentes.
 * **Forcer la casse**:
   * Non: choisissez cette option si votre police contient des lettres majuscules et minuscules (par défaut).
   * Majuscule: Choisissez cette option si votre police ne contient que des majuscules.
@@ -52,19 +63,6 @@ Si les informations de crénage ne peuvent être trouvées, ces valeurs seront u
 
 Un fichier `font.json` sera enregistré dans le dossier de votre fichier de fonte svg.
 
-## Supprimer les informations de crénage
-
-**⚠ Attention**: Les modifications effectuées par cet outil sont irréversibles. N'oubliez pas de faire **une copie** de votre fichier svg avant d'utiliser cet outil.
-{: .notice--warning }
-
-Votre fonte est prête pour l'utilisation. Toutefois lorsque vous avez créé votre fichier de fonte avec Fontforge, il contient beaucoup d'informations qui ne sont plus nécessaires et qui peuvent ralentir légèrement le travail.
-
-Ink/Stitch contient un outil de nettoyage de votre fichier de fonte.
-
-1. Faites une **copie** de votre fonte. Les informations additionnelles ne sont pas utiles pour se servir de la fonte, mais pourront vous être utiles si vous souhaitez ajouter de nouveaux glyphes.
-2. Exécutez `Extensions > Ink/Stitch > Gestion des polices > Supprimer les informations de crénage`
-3. Sélectionnez votre fichier de fonte
-4. Cliquez sur `Appliquer`
 
 ## Lettres vers police
 
@@ -87,3 +85,22 @@ Souvent les fontes de broderie achetées sont organisées en sous dossiers car c
 * Après l'importation déplacez la ligne de base à un endroit correct et positionnez les lettres en fonction. La position des lettres par rapport au  bord gauche de la page influence aussi le positionnement des lettres par l'outil de lettrage.
 * Sauvegardez votre fonte dans un fichier  `→.svg` dans un nouveau répertoire de votre  [répertoire personnalisé de polices](#custom-font-directory)
 * Exécutez  [`Génerer JSON`](#generate-json) pour rendre la police disponible dans l'outil de Lettrage et sauvegarder le fichier json dans le même dossier que votre fonte.  Ne pas cocher  "Agencement automatique de colonnes satin" pour les fontes pré-digitalisées et laisser l'échelle à 1.
+
+## Mettre à jour la liste des glyphes
+
+Permet d'insérer la liste des glyphes définis dans le fichier json. Cette opération doit être effectuée chaque fois que la liste des glyphes effectivement programmés est modifiée.
+
+## Supprimer les informations de crénage
+
+**⚠ Attention**: Les modifications effectuées par cet outil sont irréversibles. N'oubliez pas de faire **une copie** de votre fichier svg avant d'utiliser cet outil.
+{: .notice--warning }
+
+Votre fonte est prête pour l'utilisation. Toutefois lorsque vous avez créé votre fichier de fonte avec Fontforge, il contient beaucoup d'informations qui ne sont plus nécessaires et qui peuvent ralentir légèrement le travail.
+
+Ink/Stitch contient un outil de nettoyage de votre fichier de fonte.
+
+1. Faites une **copie** de votre fonte. Les informations additionnelles ne sont pas utiles pour se servir de la fonte, mais pourront vous être utiles si vous souhaitez ajouter de nouveaux glyphes.
+2. Exécutez `Extensions > Ink/Stitch > Gestion des polices > Supprimer les informations de crénage`
+3. Sélectionnez votre fichier de fonte
+4. Cliquez sur `Appliquer`
+
