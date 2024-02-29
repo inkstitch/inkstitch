@@ -81,8 +81,9 @@ You will often see, that bought fonts are organized in subfolders, because each 
 * Run [`Generate JSON`](#generate-json) to make the font available for the lettering tool and save the json file into the same folder as your font. Do not check "AutoRoute Satin" for predigitized fonts and leave scaling to 1.
 
 ## Update glyph list
+dans le fichier json
 
-This extension insert the list of the glyphs into the json file. Must be done a first time when all the glyphs are present in the  svg file, and must be redone if glyphs are added or deleted
+This extension insert the list of the glyphs into the json file. Must be done a first time when all the glyphs are present in the  svg file, and must be redone if glyphs are added or deleted.
 
 ## Remove Kerning
 
