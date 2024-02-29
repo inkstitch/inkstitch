@@ -86,7 +86,9 @@ Bei gekauften Schriften kommt es häufig vor, dass die Buchstaben in Unterordner
 
 ## Update glyph list
 
-This extension insert the list of the glyphs into the json file. Must be done a first time when all the glyphs are present in the  svg file, and must be redone if glyphs are added or deleted
+dans le fichier json
+
+This extension insert the list of the glyphs into the json file. Must be done a first time when all the glyphs are present in the  svg file, and must be redone if glyphs are added or deleted.
 
 ## Kerning entfernen
 
