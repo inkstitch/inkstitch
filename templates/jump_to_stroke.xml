@@ -28,7 +28,7 @@
         <param name="exclude-force-lock-stitch" indent="1" type="bool" gui-text="Force lock stitch">true</param>
       </page>
       <page name="output-settings" gui-text="Output settings">
-        <param name="merge" type="bool" gui-text="Merge consecutive strokes">false</param>
+        <param name="merge" type="bool" gui-text="Merge consecutive strokes of same type">false</param>
         <spacer />
         <separator />
         <spacer />

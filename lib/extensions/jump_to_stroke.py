@@ -3,12 +3,10 @@
 # Copyright (c) 2023 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-from inkex import (Boolean, DirectedLineSegment, Path, PathElement, Transform,
-                   errormsg)
+from inkex import Boolean, DirectedLineSegment, Path, PathElement, Transform
 
 from ..elements import Stroke
-from ..i18n import _
-from ..svg import PIXELS_PER_MM, get_correction_transform
+from ..svg import PIXELS_PER_MM, generate_unique_id, get_correction_transform
 from ..svg.tags import INKSTITCH_ATTRIBS, SVG_GROUP_TAG
 from .base import InkstitchExtension
 
@@ -33,28 +31,27 @@ class JumpToStroke(InkstitchExtension):
         self.arg_parser.add_argument("-t", "--tolerance", type=float, default=2.0, dest="running_stitch_tolerance_mm")
 
     def effect(self):
-        if not self.svg.selection or not self.get_elements() or len(self.elements) < 2:
-            errormsg(_("Please select at least two elements to convert the jump stitch to a running stitch."))
-            return
+        self._set_selection()
+        self.get_elements()
+
+        if self.options.merge:
+            # when we merge stroke elements we are going to replace original path elements
+            # which would be bad in the case that the element has more subpaths
+            self._split_stroke_elements_with_subpaths()
 
         last_group = None
         last_layer = None
         last_element = None
         last_stitch_group = None
         for element in self.elements:
-            group = None
-            layer = None
-            for ancestor in element.node.iterancestors(SVG_GROUP_TAG):
-                if group is None:
-                    group = ancestor
-                if ancestor.groupmode == "layer":
-                    layer = ancestor
-                    break
+            layer, group = self._get_element_layer_and_group(element)
+            stitch_groups = element.to_stitch_groups(last_stitch_group)
 
-            stitch_group = element.to_stitch_groups(last_stitch_group)
+            if not self.options.merge and stitch_groups:
+                stitch_groups = [stitch_groups[-1]]
 
-            if (last_stitch_group is None or
-                    element.color != last_element.color or
+            if (not stitch_groups or
+                    last_element is None or
                     (self.options.connect == "layer" and last_layer != layer) or
                     (self.options.connect == "group" and last_group != group) or
                     (self.options.exclude_trim and (last_element.has_command("trim") or last_element.trim_after)) or
@@ -62,18 +59,76 @@ class JumpToStroke(InkstitchExtension):
                     (self.options.exclude_forced_lock and last_element.force_lock_stitches)):
                 last_layer = layer
                 last_group = group
-                last_stitch_group = stitch_group[-1]
                 last_element = element
+                if stitch_groups:
+                    last_stitch_group = stitch_groups[-1]
                 continue
 
-            start = last_stitch_group.stitches[-1]
-            end = stitch_group[-1].stitches[0]
-            self.generate_stroke(last_element, element, start, end)
+            for stitch_group in stitch_groups:
+                if last_stitch_group is None or stitch_group.color != last_stitch_group.color:
+                    last_layer = layer
+                    last_group = group
+                    last_stitch_group = stitch_group
+                    continue
+
+                start = last_stitch_group.stitches[-1]
+                end = stitch_group.stitches[0]
+                self.generate_stroke(last_element, element, start, end)
+                last_stitch_group = stitch_group
 
             last_group = group
             last_layer = layer
-            last_stitch_group = stitch_group[-1]
             last_element = element
+
+    def _set_selection(self):
+        if not self.svg.selection:
+            self.svg.selection.clear()
+
+    def _get_element_layer_and_group(self, element):
+        layer = None
+        group = None
+        for ancestor in element.node.iterancestors(SVG_GROUP_TAG):
+            if group is None:
+                group = ancestor
+            if ancestor.groupmode == "layer":
+                layer = ancestor
+                break
+        return layer, group
+
+    def _split_stroke_elements_with_subpaths(self):
+        elements = []
+        for element in self.elements:
+            if isinstance(element, Stroke) and len(element.paths) > 1:
+                if element.get_param('stroke_method', None) in ['ripple_stitch']:
+                    elements.append(element)
+                    continue
+                node = element.node
+                parent = node.getparent()
+                index = parent.index(node)
+                paths = node.get_path().break_apart()
+
+                block_ids = []
+                for path in paths:
+                    subpath_element = node.copy()
+                    subpath_id = generate_unique_id(node, f'{node.get_id()}_', block_ids)
+                    subpath_element.set('id', subpath_id)
+                    subpath_element.set('d', str(path))
+                    block_ids.append(subpath_id)
+                    parent.insert(index, subpath_element)
+                    elements.append(Stroke(subpath_element))
+                parent.remove(node)
+            else:
+                elements.append(element)
+        self.elements = elements
+
+    def _is_mergable(self, element1, element2):
+        if (self.options.merge and
+                isinstance(element1, Stroke) and
+                element1.node.TAG == "path" and
+                element1.get_param('stroke_method', None) == element2.get_param('stroke_method', None) and
+                not element1.get_param('stroke_method', '') == 'ripple_stitch'):
+            return True
+        return False
 
     def generate_stroke(self, last_element, element, start, end):
         node = element.node
@@ -91,13 +146,13 @@ class JumpToStroke(InkstitchExtension):
         path = Path([(start.x, start.y), (end.x, end.y)])
         # option: merge line with paths
         merged = False
-        if self.options.merge and isinstance(last_element, Stroke) and last_element.node.TAG == "path":
+        if self._is_mergable(last_element, element):
             path.transform(Transform(get_correction_transform(last_element.node)), True)
             path = last_element.node.get_path() + path[1:]
             last_element.node.set('d', str(path))
             path.transform(-Transform(get_correction_transform(last_element.node)), True)
             merged = True
-        if self.options.merge and isinstance(element, Stroke) and node.TAG == "path":
+        if self._is_mergable(element, last_element):
             path.transform(Transform(get_correction_transform(node)), True)
             path = path + node.get_path()[1:]
             node.set('d', str(path))
