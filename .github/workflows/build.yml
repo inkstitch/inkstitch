@@ -22,7 +22,7 @@ jobs:
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: 3.1
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         id: pip-cache
         with:
           path: ~/.cache/pip
@@ -34,7 +34,7 @@ jobs:
         id: yarn-cache-dir-path
         run: echo "dir=$(yarn cache dir)" >> $GITHUB_OUTPUT
 
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
         with:
           path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
@@ -90,7 +90,7 @@ jobs:
         env:
           BUILD: linux
           INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY }}
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: inkstitch-linux
           path: artifacts
@@ -152,7 +152,7 @@ jobs:
         with:
           certificate: '${{ secrets.INKSTITCH_CODE_SIGNING_CERTIFICATE }}'
           folder: 'artifacts'
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: inkstitch-windows32
           path: artifacts
@@ -208,7 +208,7 @@ jobs:
         with:
           certificate: '${{ secrets.INKSTITCH_CODE_SIGNING_CERTIFICATE }}'
           folder: 'artifacts'
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: inkstitch-windows64
           path: artifacts
@@ -270,7 +270,7 @@ jobs:
           NOTARY_PASSWORD: ${{ secrets.INKSTITCH_NOTARIZE_PASS }}
 
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: inkstitch-mac
           path: artifacts
@@ -296,24 +296,24 @@ jobs:
             echo "title=development build of $branch" >> $GITHUB_ENV
           fi
       - name: download linux
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: 'inkstitch-linux'
           path: 'artifacts/'
       - name: download windows32
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: 'inkstitch-windows32'
           path: 'artifacts/'
         if: always()
       - name: download windows64
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: 'inkstitch-windows64'
           path: 'artifacts/'
         if: always()
       - name: download mac
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: 'inkstitch-mac'
           path: 'artifacts/'
