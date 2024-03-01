@@ -27,6 +27,7 @@ class JumpToStroke(InkstitchExtension):
         self.arg_parser.add_argument("--exclude-force-lock-stitch", type=Boolean, default=True, dest="exclude_forced_lock")
 
         self.arg_parser.add_argument("-m", "--merge", type=Boolean, default=False, dest="merge")
+        self.arg_parser.add_argument("--merge_subpaths", type=Boolean, default=False, dest="merge_subpaths")
         self.arg_parser.add_argument("-l", "--stitch-length", type=float, default=2.5, dest="running_stitch_length_mm")
         self.arg_parser.add_argument("-t", "--tolerance", type=float, default=2.0, dest="running_stitch_tolerance_mm")
 
@@ -34,7 +35,7 @@ class JumpToStroke(InkstitchExtension):
         self._set_selection()
         self.get_elements()
 
-        if self.options.merge:
+        if self.options.merge_subpaths:
             # when we merge stroke elements we are going to replace original path elements
             # which would be bad in the case that the element has more subpaths
             self._split_stroke_elements_with_subpaths()
@@ -47,7 +48,7 @@ class JumpToStroke(InkstitchExtension):
             layer, group = self._get_element_layer_and_group(element)
             stitch_groups = element.to_stitch_groups(last_stitch_group)
 
-            if not self.options.merge and stitch_groups:
+            if not self.options.merge_subpaths and stitch_groups:
                 stitch_groups = [stitch_groups[-1]]
 
             if (not stitch_groups or
@@ -122,6 +123,10 @@ class JumpToStroke(InkstitchExtension):
         self.elements = elements
 
     def _is_mergable(self, element1, element2):
+        if (self.options.merge_subpaths and
+                element1.node.get_id() not in self.svg.selection.ids and
+                element2.node.get_id() not in self.svg.selection.ids):
+            return True
         if (self.options.merge and
                 isinstance(element1, Stroke) and
                 element1.node.TAG == "path" and

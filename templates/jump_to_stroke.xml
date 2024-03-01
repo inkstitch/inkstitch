@@ -29,10 +29,11 @@
       </page>
       <page name="output-settings" gui-text="Output settings">
         <param name="merge" type="bool" gui-text="Merge consecutive strokes of same type">false</param>
+        <param name="merge_subpaths" type="bool" gui-text="Merge subpaths of stroke elements">false</param>
         <spacer />
         <separator />
         <spacer />
-        <label>These settings only apply when merging is disabled</label>
+        <label>These settings only apply for unmerged connectors</label>
         <param name="stitch-length" type="float" indent="1" gui-text="Running stitch length (mm)">2.5</param>
         <param name="tolerance" type="float" indent="1" gui-text="Running stitch tolerance (mm)">2.0</param>
       </page>
