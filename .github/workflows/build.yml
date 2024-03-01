@@ -10,15 +10,15 @@ jobs:
   linux:
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           submodules: recursive
       - uses: actions/setup-python@v4
         with:
           python-version: '3.8.x'
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
-          node-version: '16.x'
+          node-version: 20
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: 3.1
@@ -97,12 +97,12 @@ jobs:
   windows32:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           submodules: recursive
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
-          node-version: '16.x'
+          node-version: 20
       - uses: actions/setup-python@v4
         with:
           python-version: '3.8.x'
@@ -159,12 +159,12 @@ jobs:
   windows64:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           submodules: recursive
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
-          node-version: '16.x'
+          node-version: 20
       - uses: actions/setup-python@v4
         with:
           python-version: '3.8.x'
@@ -215,15 +215,15 @@ jobs:
   mac:
     runs-on: macos-12
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           submodules: recursive
       - uses: actions/setup-python@v4
         with:
           python-version: '3.9.x'
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
-          node-version: '16.x'
+          node-version: 20
       - name: install dependencies
         shell: bash
         run: |
