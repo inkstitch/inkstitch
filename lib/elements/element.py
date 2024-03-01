@@ -237,7 +237,7 @@ class EmbroideryElement(object):
     @param('force_lock_stitches',
            _('Force lock stitches'),
            tooltip=_('Sew lock stitches after sewing this element, '
-                     'even if the distance to the next object is shorter than defined by the collapse length value in the Ink/Stitch preferences.'),
+                     'even if the distance to the next object is shorter than defined by the Minimum jump stitch length value in the Ink/Stitch preferences.'),
            type='boolean',
            default=False,
            sort_index=51)
