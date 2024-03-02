@@ -107,6 +107,7 @@ class JumpToStroke(InkstitchExtension):
                 parent = node.getparent()
                 index = parent.index(node)
                 paths = node.get_path().break_apart()
+                paths.reverse()
 
                 block_ids = []
                 for path in paths:
@@ -123,12 +124,13 @@ class JumpToStroke(InkstitchExtension):
         self.elements = elements
 
     def _is_mergable(self, element1, element2):
+        if not (isinstance(element1, Stroke)):
+            return False
         if (self.options.merge_subpaths and
                 element1.node.get_id() not in self.svg.selection.ids and
                 element2.node.get_id() not in self.svg.selection.ids):
             return True
         if (self.options.merge and
-                isinstance(element1, Stroke) and
                 element1.node.TAG == "path" and
                 element1.get_param('stroke_method', None) == element2.get_param('stroke_method', None) and
                 not element1.get_param('stroke_method', '') == 'ripple_stitch'):
