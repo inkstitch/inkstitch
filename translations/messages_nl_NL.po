@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-02-24 01:01+0000\n"
-"PO-Revision-Date: 2024-02-24 01:01\n"
+"POT-Creation-Date: 2024-03-02 01:02+0000\n"
+"PO-Revision-Date: 2024-03-02 01:03\n"
 "Last-Translator: \n"
 "Language-Team: Dutch\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-24 01:00+0000\n"
+"POT-Creation-Date: 2024-03-02 01:02+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -89,8 +89,8 @@ msgstr "Amitaclo small"
 
 #. description of font in fonts/amitaclo_small
 #: inkstitch-fonts-metadata.py:24
-msgid "This font is an altered version  of Amitaclo, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory. The altered embroidery parameters of this font allow to scale down the original Amitaclo font between 25% (for a 7 mm font ) and 55 % (for a 16mm font)."
-msgstr "Dit lettertype is een gewijzigde versie van Amitaclo, om een grotere schaalverkleining mogelijk te maken. Het gebruik van zowel dun garen (60) als dunne naald (60) is verplicht. De gewijzigde borduurparameters van dit lettertype maken het mogelijk het oorspronkelijke lettertype Amitaclo te verkleinen tussen 25% (voor een lettertype van 7 mm) en 55% (voor een lettertype van 16 mm)."
+msgid "This font is an altered version  of Amitaclo, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory. The altered embroidery parameters of this font allow to scale down the original Amitaclo font between 30% (for a 8 mm font ) and 55 % (for a 16mm font).You may need to decrease the minimum stitch length in Preferences"
+msgstr ""
 
 #. name of font in fonts/apex_lake
 #: inkstitch-fonts-metadata.py:26
@@ -1189,8 +1189,8 @@ msgid "Force lock stitches"
 msgstr "Force locksteken"
 
 #: lib/elements/element.py:239
-msgid "Sew lock stitches after sewing this element, even if the distance to the next object is shorter than defined by the collapse length value in the Ink/Stitch preferences."
-msgstr "Naai locksteken na het naaien van dit element, zelfs als de afstand tot het volgende object korter is dan de waarde voor de collaps length in de Inkt/Stik voorkeuren."
+msgid "Sew lock stitches after sewing this element, even if the distance to the next object is shorter than defined by the Minimum jump stitch length value in the Ink/Stitch preferences."
+msgstr ""
 
 #: lib/elements/element.py:250
 msgid "Tack stitch"
