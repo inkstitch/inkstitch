@@ -34,7 +34,7 @@ class LetteringAlongPath(InkstitchExtension):
         text, path = self.get_selection()
         self.load_settings(text)
 
-        glyphs = [glyph for glyph in text.iterdescendants(SVG_GROUP_TAG) if len(glyph.label) == 1]
+        glyphs = [glyph for glyph in text.iterdescendants(SVG_GROUP_TAG) if glyph.label and len(glyph.label) == 1]
         if not glyphs:
             errormsg(_("The text doesn't contain any glyphs."))
             sys.exit(1)
