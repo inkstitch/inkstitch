@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-03-02 01:02+0000\n"
-"PO-Revision-Date: 2024-03-02 01:03\n"
+"POT-Creation-Date: 2024-03-03 01:07+0000\n"
+"PO-Revision-Date: 2024-03-03 01:08\n"
 "Last-Translator: \n"
 "Language-Team: Korean\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-02 01:02+0000\n"
+"POT-Creation-Date: 2024-03-03 01:07+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -129,8 +129,8 @@ msgstr "Auberge small"
 
 #. description of font in fonts/auberge_small
 #: inkstitch-fonts-metadata.py:40
-msgid "This font is an altered version  of Auberge Marif, to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) are mandatory. The altered embroidery parameters of this font allow to scale down the original Grand Hotel font between 25% (for a 9mm font ) and 55 % (for a  20 mm font)."
-msgstr "이 폰트는 Auberge Marif 를 더 많이 축소할 수 있도록 변경한 버전입니다. 반드시 얇은 실 (60) 과 얇은 바늘 (60) 을 사용해야 합니다. 이 폰트의 변경된 자수 매개변수를 사용하면 원래의 Grand Hotel 폰트를 25% (9mm 폰트) 에서 55% (20mm 폰트) 까지 축소할 수 있습니다."
+msgid "This font is an altered version  of Auberge Marif, to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) are mandatory. The altered embroidery parameters of this font allow to scale down the original Grand Hotel font between 25% (for a 9mm font ) and 55 % (for a  20 mm font).You may need to decrease the minimum stitch length in preferences to use this font at its smallest size "
+msgstr ""
 
 #. name of font in fonts/aventurina
 #: inkstitch-fonts-metadata.py:42

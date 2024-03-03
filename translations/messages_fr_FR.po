@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-03-02 01:02+0000\n"
-"PO-Revision-Date: 2024-03-02 01:03\n"
+"POT-Creation-Date: 2024-03-03 01:07+0000\n"
+"PO-Revision-Date: 2024-03-03 01:08\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-02 01:02+0000\n"
+"POT-Creation-Date: 2024-03-03 01:07+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,7 +39,7 @@ msgstr "Brock Script"
 #. description of font in fonts/Brockscript
 #: inkstitch-fonts-metadata.py:4
 msgid "Brock Script is a decorative satin column manuscript font of size approximatively 40mm. It can be enlarged up to 250%. It contains 118 glyphs, covering most western european languages needs.More decorative options are hidden in the µ glyph"
-msgstr "Brock Script est une police manuscrite décorative en colonne satin de taille approximative de 40 mm. Elle peut être agrandie jusqu'à 250%. Elle contient 118 glyphes, couvrant les besoins de la plupart des langues de l'Europe occidentale. Des options plus décoratives sont cachées dans le glyphe µ"
+msgstr "Brock Script est une police manuscrite décorative en colonne satin de taille approximative de 40 mm. Elle peut être agrandie jusqu'à 250%. Elle contient 118 glyphes, couvrant les besoins de la plupart des langues de l'Europe occidentale. Des options décoratives supplémentiaires sont cachées dans le glyphe µ"
 
 #. name of font in fonts/abecedaire
 #: inkstitch-fonts-metadata.py:6
@@ -129,8 +129,8 @@ msgstr "Auberge small"
 
 #. description of font in fonts/auberge_small
 #: inkstitch-fonts-metadata.py:40
-msgid "This font is an altered version  of Auberge Marif, to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) are mandatory. The altered embroidery parameters of this font allow to scale down the original Grand Hotel font between 25% (for a 9mm font ) and 55 % (for a  20 mm font)."
-msgstr "Cette police est une version modifiée d'Auberge Marif pour permettre une réduction plus forte de la taille. L'usage de fil fin (60) et d'une aiguille fine (60) est obligatoire. Le paramétrage modifié de cette  police permet de réduire la police Grand Hotel Marif originelle entre 25% (pour une police de 9 mm) et 55% (pour une police de 20 mm)."
+msgid "This font is an altered version  of Auberge Marif, to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) are mandatory. The altered embroidery parameters of this font allow to scale down the original Grand Hotel font between 25% (for a 9mm font ) and 55 % (for a  20 mm font).You may need to decrease the minimum stitch length in preferences to use this font at its smallest size "
+msgstr ""
 
 #. name of font in fonts/aventurina
 #: inkstitch-fonts-metadata.py:42
