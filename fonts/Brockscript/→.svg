@@ -189,7 +189,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-!"
      id="g1539"
-     style="display:inline">
+     style="display:none">
     <path
        d="m 17.25,141.5 3.25,-7 M 23.83514,123.2261 45.03874,61.1915 48.5,53.5"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -231,7 +231,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-&quot;"
-     style="display:inline"
+     style="display:none"
      id="g1543">
     <path
        d="m 11.0685,82.9675 -4.00003,-32 -0.89628,-2.6888 m 6.89631,34.6888 4,-32 0.4375,-0.5625 0.3125,-0.6875 0.2432,-1.7029 M 6.96276,56.8166 17.039,56.6398"
@@ -310,7 +310,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-&amp;"
-     style="display:inline"
+     style="display:none"
      id="g1559">
     <path
        d="m 20.7854,127.186 c -1.34367,-8.54525 3.83403,-17.2952 11.4671,-21.083 8.27584,-4.20007 18.2636,-4.39488 27.0083,-1.57597 6.87602,2.35824 11.6267,6.17317 16.8642,11.0979 l 1.125,0.75007"
@@ -526,7 +526,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-'"
-     style="display:inline"
+     style="display:none"
      id="g1563">
     <path
        d="M 13.640143,41.152431 C 16.546714,41.739454 18,44.021977 18,48 c 0,1.333333 -0.333333,2.333333 -1,3 L 13,83 M 9.8917208,41.265167 C 7.2972403,41.996664 6,44.241609 6,48 l 1,3 4,32 M 6.8942911,56.849089 16.970563,56.672313"
@@ -546,7 +546,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-’"
-     style="display:inline"
+     style="display:none"
      id="g1">
     <path
        d="M 13.640143,41.152431 C 16.546714,41.739454 18,44.021977 18,48 c 0,1.333333 -0.333333,2.333333 -1,3 L 13,83 M 9.8917208,41.265167 C 7.2972403,41.996664 6,44.241609 6,48 l 1,3 4,32 M 6.8942911,56.849089 16.970563,56.672313"
@@ -566,7 +566,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-‘"
-     style="display:inline"
+     style="display:none"
      id="g2">
     <path
        d="M 13.640143,41.152431 C 16.546714,41.739454 18,44.021977 18,48 c 0,1.333333 -0.333333,2.333333 -1,3 L 13,83 M 9.8917208,41.265167 C 7.2972403,41.996664 6,44.241609 6,48 l 1,3 4,32 M 6.8942911,56.849089 16.970563,56.672313"
@@ -586,7 +586,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-("
-     style="display:inline"
+     style="display:none"
      id="g1567">
     <path
        d="M 31.0883,116.75 C 35.169683,91.047337 44.557798,66.331383 57.7734,43.9547 62.086799,36.438307 66.782012,29.147429 71.5908,21.9404"
@@ -635,7 +635,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-)"
-     style="display:inline"
+     style="display:none"
      id="g1571">
     <path
        d="m 34.139,127.59 c -7.6615,20.884 -12.0594,30.607 -24.2477,49.123 l -7.07107,9.546"
@@ -686,7 +686,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-,"
-     style="display:inline"
+     style="display:none"
      id="g1583">
     <path
        id="autosatin159-9"
@@ -728,7 +728,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer--"
-     style="display:inline"
+     style="display:none"
      id="g1587">
     <path
        d="m 21.094208,111.09523 33.874114,-0.0519 m -36.063469,7.75748 33.88882,-0.0123 0.285158,-0.3798 m -4.595818,-8.05957 -3.416973,9.66493"
@@ -749,7 +749,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-."
-     style="display:inline"
+     style="display:none"
      id="g1591">
     <path
        id="path7026-4-62-0"
@@ -769,7 +769,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-/"
-     style="display:inline"
+     style="display:none"
      id="g1595">
     <path
        d="M 10,164 23.701,129.747 M 3,164 2,163 16.0311,129.769 M 4.9387981,147.72529 20.743838,147.536"
@@ -812,7 +812,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-0"
-     style="display:inline"
+     style="display:none"
      id="g1599">
     <path
        d="m 27,145 c -7.333333,0.66667 -13,-2.33333 -17,-9 -3.3333333,-6 -5,-12.66667 -5,-20 0,-6.66667 1,-13.33333 3,-20 4,-12 9.666667,-21.666667 17,-29 5.333333,-5.333333 11,-8 17,-8 7.333333,0 12.666667,3.333333 16,10 2.666667,5.333333 4,12 4,20 0,17.33333 -5,32.33333 -15,45 -6,7.33333 -12.666667,11 -20,11 m 1,-2 c -4.666667,0 -8,-2.33333 -10,-7 -2,-3.33333 -3,-7.66667 -3,-13 0,-8.66667 1.333333,-17.66667 4,-27 6.666667,-23.333333 14.666667,-34.666667 24,-34 4.666667,0 8,2.666667 10,8 1.333333,3.333333 2,7.666667 2,13 0,14.666667 -2.666667,28.33333 -8,41 -5.333333,12 -11.666667,18.33333 -19,19 M 3.1210575,124.78086 16.426618,124.94512 m 1.149864,-53.057975 11.827165,0.328533 m 18.06928,-15.605288 -2.463993,7.227712 m 6.406381,8.377576 10.184504,-0.164266 m -17.905014,53.057978 10.513036,0.16427"
@@ -838,7 +838,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-1"
-     style="display:inline"
+     style="display:none"
      id="g1603">
     <path
        style="fill:none;stroke:#000000"
@@ -926,7 +926,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-2"
-     style="display:inline"
+     style="display:none"
      id="g1607">
     <path
        style="fill:none;stroke:#000000"
@@ -1017,7 +1017,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-3"
-     style="display:inline"
+     style="display:none"
      id="g1611">
     <path
        style="fill:none;stroke:#000000"
@@ -1141,7 +1141,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-4"
-     style="display:inline"
+     style="display:none"
      id="g1615">
     <path
        d="m 6,114.375 3.59412,-0.206 m -3.62567,5.145 3.43928,-0.085 m -3.30632,-5.107 -0.03456,5.436"
@@ -1334,7 +1334,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-5"
-     style="display:inline"
+     style="display:none"
      id="g1619">
     <path
        style="fill:none;stroke:#000000"
@@ -1444,7 +1444,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-6"
-     style="display:inline"
+     style="display:none"
      id="g1623">
     <path
        d="m 13.4624,131.029 c -1.55621,-5.9944 -0.864648,-12.30839 0.2539,-18.317 2.138551,-10.03452 6.674165,-19.415345 12.235851,-27.980116 5.796941,-8.643259 12.88716,-16.361412 20.598147,-23.327083 0.558745,-0.521725 1.117448,-1.043494 1.676302,-1.565101"
@@ -1502,7 +1502,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-7"
-     style="display:inline"
+     style="display:none"
      id="g1627">
     <path
        style="fill:none;stroke:#000000"
@@ -1592,7 +1592,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-8"
-     style="display:inline"
+     style="display:none"
      id="g1631">
     <path
        d="M 11.2438,131.628 C 9.8897818,126.19062 10.696883,120.33107 13.267385,115.37107 16.935593,107.93028 23.10998,102.17257 29,96.5"
@@ -1647,7 +1647,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-9"
-     style="display:inline"
+     style="display:none"
      id="g1635">
     <path
        d="m 19.8011,146.779 c 1.508457,0.81504 2.425544,-1.10471 3.567307,-1.7799 4.89051,-4.03778 9.581387,-8.33276 13.937693,-12.9431 M 19,146 c 3.623539,-3.37747 7.440193,-6.56676 10.724023,-10.29669 1.25578,-1.37741 2.447178,-2.82006 3.632377,-4.25831 m -3.854138,0.42858 8.878795,1.98804"
@@ -1700,7 +1700,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-:"
-     style="display:inline"
+     style="display:none"
      id="g1639">
     <path
        id="path7026-4-62"
@@ -1734,7 +1734,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-;"
-     style="display:inline"
+     style="display:none"
      id="g1643">
     <path
        d="m 11,141 1.0592,-0.535 1.0369,-0.313 L 15,140 l 0.4278,0.061 M 13,134 13.3125,133.297 13.75,132.688 15,131.75 16.75,131.188 19,131 l 1.2996,0.101 m -5.2143,9.394 5.3581,-9.849"
@@ -1812,7 +1812,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-="
-     style="display:inline"
+     style="display:none"
      id="g1651">
     <path
        d="m 21.094208,111.09523 81.374112,0.1981 m -83.563467,7.50748 81.388817,0.2377 0.28516,-0.3798 m -52.095817,-8.30957 -3.416973,9.66493"
@@ -1848,7 +1848,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-?"
-     style="display:inline"
+     style="display:none"
      id="g1659">
     <path
        style="display:inline;fill:none;fill-opacity:0.184426;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:1, 1;stroke-dashoffset:0;stroke-opacity:1"
@@ -1886,7 +1886,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-@"
-     style="display:inline"
+     style="display:none"
      id="g1663">
     <path
        d="m 47.7423,107.57 c 1.622887,-9.033874 6.250467,-17.310291 12.2242,-24.1891 3.955259,-4.44351 9.191195,-8.249777 15.285477,-8.762501 3.830385,-0.474632 7.89283,0.785806 10.533488,3.659954 3.138245,3.150074 4.642748,7.541878 5.339535,11.846647"
@@ -1940,7 +1940,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-A"
-     style="display:inline"
+     style="display:none"
      id="g1667">
     <path
        id="path1472"
@@ -2188,7 +2188,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-B"
-     style="display:inline"
+     style="display:none"
      id="g1671">
     <path
        id="path3899-7"
@@ -2535,7 +2535,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-C"
-     style="display:inline"
+     style="display:none"
      id="g1675">
     <path
        id="autosatinrun9"
@@ -2873,7 +2873,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-D"
-     style="display:inline"
+     style="display:none"
      id="g1679">
     <path
        id="path1431"
@@ -3172,7 +3172,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-E"
-     style="display:inline"
+     style="display:none"
      id="g1683">
     <path
        id="autosatin1"
@@ -3532,7 +3532,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-É"
-     style="display:inline"
+     style="display:none"
      id="g39">
     <path
        id="path21"
@@ -3914,7 +3914,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-È"
-     style="display:inline"
+     style="display:none"
      id="g80">
     <path
        id="path52"
@@ -4295,7 +4295,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Ê"
-     style="display:inline"
+     style="display:none"
      id="g118">
     <path
        id="path83"
@@ -4676,7 +4676,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Ë"
-     style="display:inline"
+     style="display:none"
      id="g158">
     <path
        id="path123"
@@ -5089,7 +5089,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-F"
-     style="display:inline"
+     style="display:none"
      id="g1687">
     <path
        id="autosatin1-8"
@@ -5402,7 +5402,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-G"
-     style="display:inline"
+     style="display:none"
      id="g1691">
     <path
        d="m 6,151 c -0.285137,17.9977 5.83209,32.5036 17,44 11.5011,11.8393 25.6667,18 43,18 l -1.9738,-0.986"
@@ -5735,7 +5735,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-H"
-     style="display:inline"
+     style="display:none"
      id="g1695">
     <path
        id="path948"
@@ -6027,7 +6027,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-I"
-     style="display:inline"
+     style="display:none"
      id="g1699">
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:1, 1;stroke-dashoffset:0"
@@ -6397,7 +6397,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-J"
-     style="display:inline"
+     style="display:none"
      id="g1703">
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:1, 1;stroke-dashoffset:0"
@@ -6764,7 +6764,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-K"
-     style="display:inline"
+     style="display:none"
      id="g1707">
     <path
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:38.1px;line-height:1.25;font-family:'Brock Script';-inkscape-font-specification:'Brock Script';display:inline;fill:none;fill-opacity:0.459016;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.944882, 0.944882;stroke-dashoffset:0;stroke-opacity:1"
@@ -7101,7 +7101,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-L"
-     style="display:inline"
+     style="display:none"
      id="g1711">
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -7416,7 +7416,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-M"
-     style="display:inline"
+     style="display:none"
      id="g1715">
     <path
        style="fill:none;stroke:#000000"
@@ -7739,7 +7739,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-N"
-     style="display:inline"
+     style="display:none"
      id="g1719">
     <path
        id="autosatin60"
@@ -8093,7 +8093,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-O"
-     style="display:inline"
+     style="display:none"
      id="g1723">
     <path
        id="autosatinrun45"
@@ -8395,7 +8395,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-P"
-     style="display:inline"
+     style="display:none"
      id="g1727">
     <path
        id="path3899-7-9-8"
@@ -8674,7 +8674,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Q"
-     style="display:inline"
+     style="display:none"
      id="g1731">
     <path
        id="autosatinrun45-3"
@@ -9018,7 +9018,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-R"
-     style="display:inline"
+     style="display:none"
      id="g1735">
     <path
        id="path3899-7-9"
@@ -9328,7 +9328,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-S"
-     style="display:inline"
+     style="display:none"
      id="g1739">
     <path
        id="autosatinrun78-9"
@@ -9605,7 +9605,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-T"
-     style="display:inline"
+     style="display:none"
      id="g1743">
     <path
        id="autosatin1-8-7"
@@ -9897,7 +9897,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-U"
-     style="display:inline"
+     style="display:none"
      id="g1747">
     <path
        d="m 97.8353,139.426 c -2.59618,-13.641 2.26234,-27.2328 7.46176,-39.6565 4.50001,-10.9827 10.4409,-21.3614 13.9868,-32.7277 2.29102,-7.10757 3.94705,-14.4455 4.36915,-21.9174 L 126.552,44.2549 C 125.053,36.7225 121.865,29.1718 116,24"
@@ -10176,7 +10176,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-V"
-     style="display:inline"
+     style="display:none"
      id="g1751">
     <path
        d="m 111.391,124.643 c -1.24652,-13.1726 1.72277,-26.2337 5.178,-38.8588 3.14909,-12.1467 6.76592,-24.5376 5.772,-37.2232 l 2.73,-0.5919 C 122.834,40.9457 119.147,34.3103 114,29"
@@ -10479,7 +10479,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-W"
-     style="display:inline"
+     style="display:none"
      id="g1755">
     <path
        d="m 111.391,124.643 c -1.24652,-13.1726 1.72277,-26.2337 5.178,-38.8588 3.14909,-12.1467 6.76592,-24.5376 5.772,-37.2232 l 2.73,-0.5919 C 122.834,40.9457 119.147,34.3103 114,29"
@@ -10818,7 +10818,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-X"
-     style="display:inline"
+     style="display:none"
      id="g1759">
     <path
        style="display:inline;fill:none;stroke:#000000"
@@ -11129,7 +11129,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Y"
-     style="display:inline"
+     style="display:none"
      id="g1763">
     <path
        id="autosatin132"
@@ -11442,7 +11442,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Z"
-     style="display:inline"
+     style="display:none"
      id="g1767">
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:1, 1;stroke-dashoffset:0"
@@ -11815,7 +11815,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-a"
-     style="display:inline"
+     style="display:none"
      id="g1795">
     <path
        id="autosatinrun23"
@@ -11864,7 +11864,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-b"
-     style="display:inline"
+     style="display:none"
      id="g1799">
     <path
        id="autosatinrun25"
@@ -11981,7 +11981,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-c"
-     style="display:inline"
+     style="display:none"
      id="g1803">
     <path
        id="autosatinrun25-4"
@@ -12009,7 +12009,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-d"
-     style="display:inline"
+     style="display:none"
      id="g1807">
     <path
        id="autosatinrun29"
@@ -12058,7 +12058,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-e"
-     style="display:inline"
+     style="display:none"
      id="g1811">
     <path
        d="m 11,126 c 6.666667,-1.33333 12,-4 16,-8 5.333333,-4.66667 8,-9.66667 8,-15 0,-4 -1.666667,-6 -5,-6 -4.666667,0.666667 -9,4.66667 -13,12 -6.220024,10.13044 -11.6101263,30.11061 5,33 7.333333,0 15.333333,-4.66667 24,-14 3.333333,-3.33333 6.333333,-6.83333 9,-10.5 2.666667,-3.66667 5.333333,-7.83333 8,-12.5 m -52,24 c 7.333333,-2 14,-5 20,-9 8,-5.33333 12,-10.66667 12,-16 0,-3.33333 -1.166667,-5.833333 -3.5,-7.5 C 37.166667,94.833333 34.333333,94 31,94 c -7.333333,0 -14,4 -20,12 -6,7.33333 -9.3333333,14.66667 -10,22 0,5.33333 1.5,9.66667 4.5,13 3,3.33333 7.166667,5 12.5,5 18.701896,-0.14171 35.683285,-16.31753 45.571828,-37.5061 M 9.3489026,106.05979 H 20.059296 m 13.705673,-3.81217 h 10.347329 m -17.790145,15.15793 h 9.167371 m -2.359918,-23.962237 -2.087619,4.35677 m -29.3174321,38.484807 11.8903521,0.0908 m 8.078178,4.7198 -2.541449,5.17366"
@@ -12078,7 +12078,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-f"
-     style="display:inline"
+     style="display:none"
      id="g1815">
     <path
        id="autosatinrun46"
@@ -12232,7 +12232,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-g"
-     style="display:inline"
+     style="display:none"
      id="g1819">
     <path
        id="autosatinrun51"
@@ -12323,7 +12323,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-h"
-     style="display:inline"
+     style="display:none"
      id="g1823">
     <path
        id="autosatinrun54"
@@ -12410,7 +12410,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-i"
-     style="display:inline"
+     style="display:none"
      id="g1827">
     <path
        id="autosatinrun55-6"
@@ -12451,7 +12451,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-j"
-     style="display:inline"
+     style="display:none"
      id="g1831">
     <path
        id="autosatinrun55-6-1"
@@ -12538,7 +12538,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-k"
-     style="display:inline"
+     style="display:none"
      id="g1835">
     <path
        id="autosatinrun54-1"
@@ -12625,7 +12625,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-l"
-     style="display:inline"
+     style="display:none"
      id="g1839">
     <path
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:38.1px;line-height:1.25;font-family:'Brock Script';-inkscape-font-specification:'Brock Script';display:inline;fill:none;fill-opacity:0.459016;stroke:#000000;stroke-width:0.999999;stroke-miterlimit:4;stroke-dasharray:0.999999, 0.999999;stroke-dashoffset:0"
@@ -12669,7 +12669,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-m"
-     style="display:inline"
+     style="display:none"
      id="g1843">
     <path
        style="fill:none;stroke:#000000"
@@ -12772,7 +12772,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-n"
-     style="display:inline"
+     style="display:none"
      id="g1847">
     <path
        style="display:inline;fill:none;stroke:#000000"
@@ -12834,7 +12834,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-o"
-     style="display:inline"
+     style="display:none"
      id="g1851">
     <path
        id="autosatinrun60"
@@ -12880,7 +12880,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-p"
-     style="display:inline"
+     style="display:none"
      id="g1855">
     <path
        id="autosatinrun61"
@@ -12948,7 +12948,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-q"
-     style="display:inline"
+     style="display:none"
      id="g1859">
     <path
        id="autosatinrun64"
@@ -13035,7 +13035,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-r"
-     style="display:inline"
+     style="display:none"
      id="g1863">
     <path
        d="m 15,94 c -1.333333,0.666667 -2.333333,1.5 -3,2.5 -0.666667,1 -1.166667,2.166667 -1.5,3.5 -0.333333,1.33333 -0.5,2.66667 -0.5,4 0,3.33333 1.666667,5 5,5 3.333333,0 8,-1.66667 14,-5 -10,14.66667 -15,25.33333 -15,32 0,6 3.000054,9.02537 9,9 11.903086,-0.0503 32.015684,-27.77542 36,-37.5 M 19,93 v 0 c -1.333333,2.666667 -2,4.333333 -2,5 0,2 1.333333,3 4,3 2,0 7.666667,-1.666667 17,-5 -0.853309,3.712761 -13.516255,29.40605 -15,40 -0.369872,2.64089 1.333333,4 4,4 2.666667,0 6.666667,-3 12,-9 3.333333,-4 10,-13 20,-27 m -39.061491,-4.443088 -8.675535,9.588748 m 8.97994,7.61012 9.893153,-0.3044 m -17.198867,15.52463 11.415177,-0.1522 m 1.522024,5.78369 -5.174881,8.52333 m 5.327083,-38.9638 10.501963,-4.71827"
@@ -13055,7 +13055,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-s"
-     style="display:inline"
+     style="display:none"
      id="g1867">
     <path
        id="autosatinrun66"
@@ -13122,7 +13122,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-t"
-     style="display:inline"
+     style="display:none"
      id="g1871">
     <path
        d="m 15.212,108.259 c 0.748145,-2.39435 1.49637,-4.78868 2.2446,-7.183 L 15.6429,99.5 h -0.8333 -1.1455 -1.1456 -0.5899 v 0 H 11.373 10.2275 9.08203 8.21429 v 0 H 7.93652 6.79101 5.64551 4.5"
@@ -13209,7 +13209,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-u"
-     style="display:inline"
+     style="display:none"
      id="g1875">
     <path
        id="autosatinrun74"
@@ -13256,7 +13256,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-v"
-     style="display:inline"
+     style="display:none"
      id="g1879">
     <path
        id="autosatinrun74-9"
@@ -13321,7 +13321,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-w"
-     style="display:inline"
+     style="display:none"
      id="g1883">
     <path
        id="autosatinrun74-9-2-9"
@@ -13406,7 +13406,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-x"
-     style="display:inline"
+     style="display:none"
      id="g1887">
     <path
        style="fill:none;stroke:#000000"
@@ -13513,7 +13513,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-y"
-     style="display:inline"
+     style="display:none"
      id="g1891">
     <path
        id="autosatin79-4"
@@ -13600,7 +13600,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-z"
-     style="display:inline"
+     style="display:none"
      id="g1895">
     <path
        style="fill:none;stroke:#000000"
@@ -13681,7 +13681,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-{"
-     style="display:inline"
+     style="display:none"
      id="g1899">
     <path
        d="m 44.4607,127.437 c 0.396601,9.27939 -0.980966,18.884 1.98036,27.8626 2.25937,7.26586 9.98096,11.1488 17.1767,11.4536 1.8314,0.19459 0.140333,0.0726 1.97929,0.12177 L 69.1283,167"
@@ -13774,7 +13774,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-}"
-     style="display:inline"
+     style="display:none"
      id="g1907">
     <path
        d="m 41.7659,126.999 c -0.396601,9.27939 0.980966,18.884 -1.98036,27.8626 -2.25937,7.26586 -9.98096,11.1488 -17.1767,11.4536 -1.8314,0.19459 -0.140333,0.0726 -1.97929,0.12177 L 17.0983,166.561"
@@ -13867,7 +13867,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-~"
-     style="display:inline"
+     style="display:none"
      id="g1911">
     <path
        d="m 13,111 c 10.666667,-7.33333 19.666667,-11 27,-11 4,0 10.666667,1.66667 20,5 9.333333,3.33333 16,4.66667 20,4 9.333333,0 18.666667,-3.33333 28,-10 m -95,4 c 10,-6.666667 19,-10 27,-10 4,-0.666667 10.666667,0.666667 20,4 9.333333,4 16,6 20,6 8,-0.66667 17.333333,-4.666667 28,-12 M 65.5,96.25 65,109"
@@ -13887,7 +13887,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-œ"
-     style="display:inline"
+     style="display:none"
      id="g1919">
     <path
        id="path43"
@@ -13939,7 +13939,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-¡"
-     style="display:inline"
+     style="display:none"
      id="g1927">
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -13978,7 +13978,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-¨"
-     style="display:inline"
+     style="display:none"
      id="g1955">
     <path
        id="autosatin208-5-2"
@@ -14014,7 +14014,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-´"
-     style="display:inline"
+     style="display:none"
      id="g1959">
     <path
        d="m 61,73 c 0,1.333333 -1,3 -3,5 L 38,89 M 58,70 c -1.333333,0 -2.666667,0.666667 -4,2 L 34,89 m 14.525203,-12.882252 4.154253,5.303301"
@@ -14033,7 +14033,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-¿"
-     style="display:inline"
+     style="display:none"
      id="g1967">
     <path
        style="display:inline;fill:none;fill-opacity:0.184426;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:1, 1;stroke-dashoffset:0;stroke-opacity:1"
@@ -14072,7 +14072,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-À"
-     style="display:inline"
+     style="display:none"
      id="g1971">
     <path
        id="path1472-1-5"
@@ -14344,7 +14344,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Á"
-     style="display:inline"
+     style="display:none"
      id="g1975">
     <path
        id="path1472-1"
@@ -14613,7 +14613,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Ä"
-     style="display:inline"
+     style="display:none"
      id="g1987">
     <path
        id="path1472-4"
@@ -14922,7 +14922,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-È"
-     style="display:inline"
+     style="display:none"
      id="g1999">
     <path
        id="autosatin1-4"
@@ -15301,7 +15301,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Ñ"
-     style="display:inline"
+     style="display:none"
      id="g2035">
     <path
        id="autosatin60-5"
@@ -15674,7 +15674,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Ö"
-     style="display:inline"
+     style="display:none"
      id="g2055">
     <path
        id="autosatin69-75"
@@ -16035,7 +16035,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Ü"
-     style="display:inline"
+     style="display:none"
      id="g2075">
     <path
        d="m 97.8353,139.426 c -2.59618,-13.641 2.26234,-27.2328 7.46176,-39.6565 4.50001,-10.9827 10.4409,-21.3614 13.9868,-32.7277 2.29102,-7.10757 3.94705,-14.4455 4.36915,-21.9174 L 126.552,44.2549 C 125.053,36.7225 121.865,29.1718 116,24"
@@ -16375,7 +16375,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ß"
-     style="display:inline"
+     style="display:none"
      id="g2083">
     <path
        d="m 13.1014,114.711 c -6.23753,21.658 -12.06322,43.44 -18.70059,64.98 L -8.75,185.25"
@@ -16464,7 +16464,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-à"
-     style="display:inline"
+     style="display:none"
      id="g2087">
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -16529,7 +16529,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-á"
-     style="display:inline"
+     style="display:none"
      id="g2091">
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -16594,7 +16594,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-â"
-     style="display:inline"
+     style="display:none"
      id="g2095">
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -16660,7 +16660,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ã"
-     style="display:inline"
+     style="display:none"
      id="g2099">
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -16726,7 +16726,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ä"
-     style="display:inline"
+     style="display:none"
      id="g2103">
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -16831,7 +16831,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-æ"
-     style="display:inline"
+     style="display:none"
      id="g2111">
     <path
        d="M 47.651396,98.455457 C 44.984729,95.122124 40.333333,94 35,94 c -7.333333,0 -14.666667,3 -22,9 -9.3333333,8.66667 -14,17.66667 -14,27 0,4 1,7.33333 3,10 2,3.33333 5.0007282,5.07632 9,5 8.441727,-0.16111 17.975033,-15.1375 20,-19 L 47.651396,98.455457 M 40,100 C 38,98.666667 36.222723,98.45977 33.5,98.375 28.835593,98.229773 21.583333,102 16.25,110 8.916667,120 8,127.33333 8,134 c 0.6666667,4 2.333333,6 5,6 4,0 6.745096,-2.64461 13.411763,-13.97794 L 40,100 M 38.75,93.125 35.875,99.25 M 11.625,102.375 25.5,102.25 M -1.875,129 9.1250001,128.875 M 12.375,138.625 9.3750001,145.5"
@@ -16869,7 +16869,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ç"
-     style="display:inline"
+     style="display:none"
      id="g2115">
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -16912,7 +16912,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-è"
-     style="display:inline"
+     style="display:none"
      id="g2119">
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -16957,7 +16957,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-é"
-     style="display:inline"
+     style="display:none"
      id="g2123">
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -17002,7 +17002,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ê"
-     style="display:inline"
+     style="display:none"
      id="g2127">
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -17047,7 +17047,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ë"
-     style="display:inline"
+     style="display:none"
      id="g2131">
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -17131,7 +17131,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ì"
-     style="display:inline"
+     style="display:none"
      id="g2135">
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -17171,7 +17171,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-í"
-     style="display:inline"
+     style="display:none"
      id="g2139">
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -17212,7 +17212,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
      inkscape:groupmode="layer"
      id="layer5"
      inkscape:label="GlyphLayer-î"
-     style="display:inline">
+     style="display:none">
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
        d="M 11.0584,114.607 17.7298,95.7077 M 5.85921,87.8366 29.1999,72.4838 43.3129,88.8388 41.3728,89"
@@ -17251,7 +17251,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ï"
-     style="display:inline"
+     style="display:none"
      id="g2147">
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -17330,7 +17330,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ñ"
-     style="display:inline"
+     style="display:none"
      id="g2151">
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -17417,7 +17417,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ò"
-     style="display:inline"
+     style="display:none"
      id="g2155">
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -17482,7 +17482,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ó"
-     style="display:inline"
+     style="display:none"
      id="g2159">
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -17553,7 +17553,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ô"
-     style="display:inline"
+     style="display:none"
      id="g2163">
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -17619,7 +17619,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-õ"
-     style="display:inline"
+     style="display:none"
      id="g2167">
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -17684,7 +17684,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ö"
-     style="display:inline"
+     style="display:none"
      id="g2171">
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -17794,7 +17794,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ù"
-     style="display:inline"
+     style="display:none"
      id="g2175">
     <path
        id="autosatinrun74-2-5"
@@ -17855,7 +17855,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
      inkscape:groupmode="layer"
      id="layer1"
      inkscape:label="GlyphLayer-ú"
-     style="display:inline">
+     style="display:none">
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
        d="M 7.41286,119.025 C 21.4038,95.435 17.9798,98.4014 21.7624,95.3186 m 0.6218,-6.8053 21.1748,-14.1169 5.5541,-2.5198"
@@ -17916,7 +17916,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
      inkscape:groupmode="layer"
      id="layer2"
      inkscape:label="GlyphLayer-û"
-     style="display:inline">
+     style="display:none">
     <path
        id="autosatinrun74-0"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -17975,7 +17975,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      id="layer3"
      inkscape:label="GlyphLayer-ü"
-     style="display:inline"
+     style="display:none"
      inkscape:groupmode="layer">
     <path
        id="autosatinrun74-8"
@@ -18085,7 +18085,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
      inkscape:groupmode="layer"
      id="layer4"
      inkscape:label="GlyphLayer-µ"
-     style="display:inline">
+     style="display:none">
     <path
        d="m -2.3204574,-58.35536 c 0.9156737,-6.000654 4.4762344,-8.977421 5.2197053,-14.760333 0.2770771,-0.947456 0.4202116,-2.376983 0.4470463,-2.341077 m -5.8621532,19.115248 c 2.93922527,-4.50785 5.8016694,-2.82796 8.0176707,-6.512663 1.6980057,-2.374855 0.472834,-6.115627 -0.2060599,-7.253662"
        id="path6228"
