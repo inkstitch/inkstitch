@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-03-03 01:07+0000\n"
-"PO-Revision-Date: 2024-03-03 01:08\n"
+"PO-Revision-Date: 2024-03-04 01:05\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -90,7 +90,7 @@ msgstr "Amitaclo small"
 #. description of font in fonts/amitaclo_small
 #: inkstitch-fonts-metadata.py:24
 msgid "This font is an altered version  of Amitaclo, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory. The altered embroidery parameters of this font allow to scale down the original Amitaclo font between 30% (for a 8 mm font ) and 55 % (for a 16mm font).You may need to decrease the minimum stitch length in Preferences"
-msgstr ""
+msgstr "Cette police est une version modifiée de Amitaclo pour permettre une réduction plus forte de la taille. L'usage de fil fin (60) et d'une aiguille fine (60) est obligatoire. Le paramétrage modifié de cette  police permet de réduire la police Amitaclo originelle entre 30% (pour une police de 8 mm) et 55% (pour une police de 16 mm). Vous pouvez avoir besoin de diminuer la valeur de la longueur minimum de point dans les Préférences d'Ink/Stitch"
 
 #. name of font in fonts/apex_lake
 #: inkstitch-fonts-metadata.py:26
@@ -130,7 +130,7 @@ msgstr "Auberge small"
 #. description of font in fonts/auberge_small
 #: inkstitch-fonts-metadata.py:40
 msgid "This font is an altered version  of Auberge Marif, to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) are mandatory. The altered embroidery parameters of this font allow to scale down the original Grand Hotel font between 25% (for a 9mm font ) and 55 % (for a  20 mm font).You may need to decrease the minimum stitch length in preferences to use this font at its smallest size "
-msgstr ""
+msgstr "Cette police est une version modifiée de Amitaclo pour permettre une réduction plus forte de la taille. L'usage de fil fin (60) et d'une aiguille fine (60) est obligatoire. Le paramétrage modifié de cette  police permet de réduire la police Amitaclo originelle entre 30% (pour une police de 8 mm) et 55% (pour une police de 16 mm). Vous pouvez avoir besoin de diminuer la valeur de la longueur minimum de point dans les Préférences d'Ink/Stitch "
 
 #. name of font in fonts/aventurina
 #: inkstitch-fonts-metadata.py:42
@@ -1191,7 +1191,7 @@ msgstr "Forcer des points d'arrêt"
 
 #: lib/elements/element.py:239
 msgid "Sew lock stitches after sewing this element, even if the distance to the next object is shorter than defined by the Minimum jump stitch length value in the Ink/Stitch preferences."
-msgstr ""
+msgstr "Créer des points d'arrêt après avoir cousu cet élément, même si la distance jusqu'à l'objet suivant est plus courte que le paramètre 'saut de fils' défini dans les préférences Ink/Stitch."
 
 #: lib/elements/element.py:250
 msgid "Tack stitch"
