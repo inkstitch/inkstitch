@@ -4,7 +4,6 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 import json
-import sys
 from math import atan2, degrees
 
 from inkex import Boolean, Transform, errormsg
@@ -32,19 +31,25 @@ class LetteringAlongPath(InkstitchExtension):
     def effect(self):
         # we ignore everything but the first path/text
         text, path = self.get_selection()
-        self.load_settings(text)
+        if text is None or path is None:
+            errormsg(_("Please select one path and one Ink/Stitch lettering group."))
+            return
 
         glyphs = [glyph for glyph in text.iterdescendants(SVG_GROUP_TAG) if glyph.label and len(glyph.label) == 1]
         if not glyphs:
             errormsg(_("The text doesn't contain any glyphs."))
-            sys.exit(1)
+            return
 
+        self.load_settings(text)
         path = Stroke(path).as_multi_line_string().geoms[0]
-        path_length = path.length
+        hidden_commands = self.hide_commands(glyphs)
+        space_indices, stretch_space, text_baseline = self.get_position_and_stretch_values(path, text, glyphs)
+        self.transform_glyphs(glyphs, path, stretch_space, space_indices, text_baseline)
+        self.restore_commands(hidden_commands)
 
-        # overall bounding box - get from direct glyph parent
+    def get_position_and_stretch_values(self, path, text, glyphs):
         text_bbox = glyphs[0].getparent().bounding_box()
-        text_y = text_bbox.bottom
+        text_baseline = text_bbox.bottom
 
         if self.options.stretch_spaces:
             text_content = self.settings["text"]
@@ -53,6 +58,7 @@ class LetteringAlongPath(InkstitchExtension):
             text_width = convert_unit(text_bbox.width, 'px', self.svg.unit)
 
             if len(text_content) - 1 != 0:
+                path_length = path.length
                 stretch_space = (path_length - text_width) / (len(text_content) - 1)
             else:
                 stretch_space = 0
@@ -60,9 +66,23 @@ class LetteringAlongPath(InkstitchExtension):
             stretch_space = 0
             space_indices = []
 
-        self.transform_glyphs(glyphs, path, stretch_space, space_indices, text_y)
+        return space_indices, stretch_space, text_baseline
 
-    def transform_glyphs(self, glyphs, path, stretch_space, space_indices, text_y):
+    def hide_commands(self, glyphs):
+        # hide commmands for bounding box calculation
+        hidden_commands = []
+        for glyph in glyphs:
+            for group in glyph.iterdescendants(SVG_GROUP_TAG):
+                if group.get_id().startswith("command_group") and group.style('display', 'inline') != 'none':
+                    hidden_commands.append(group)
+                    group.style['display'] = 'none'
+        return hidden_commands
+
+    def restore_commands(self, hidden_commands):
+        for command in hidden_commands:
+            command.style['display'] = "inline"
+
+    def transform_glyphs(self, glyphs, path, stretch_space, space_indices, text_baseline):
         text_scale = Transform(f'scale({self.settings["scale"] / 100})')
         distance = 0
         old_bbox = None
@@ -91,7 +111,7 @@ class LetteringAlongPath(InkstitchExtension):
             last = path.interpolate(new_distance)
 
             angle = degrees(atan2(last.y - first.y, last.x - first.x)) % 360
-            translate = InkstitchPoint(first.x, first.y) - InkstitchPoint(left, text_y)
+            translate = InkstitchPoint(first.x, first.y) - InkstitchPoint(left, text_baseline)
 
             transform = Transform(f"rotate({angle}, {first.x}, {first.y}) translate({translate.x} {translate.y})")
             correction_transform = Transform(get_correction_transform(glyph))
@@ -140,7 +160,6 @@ class LetteringAlongPath(InkstitchExtension):
                 paths.append(node)
 
         if not groups or not paths:
-            errormsg(_("Please select one path and one Ink/Stitch lettering group."))
-            sys.exit(1)
+            return [None, None]
 
         return [groups[0], paths[0]]

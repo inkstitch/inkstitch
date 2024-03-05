@@ -21,7 +21,6 @@
         <label>The text needs to meet these conditions:</label>
         <label indent="1">* The text consists of only one line of text</label>
         <label indent="1">* The text should not be too large for the given path</label>
-        <label indent="1">* Text text should not contain trim symbols</label>
         <spacer />
         <label>The stretch option defines whether the spaces between glyphs should be expanded so that the text stretches over the entire path.</label>
       </page>
