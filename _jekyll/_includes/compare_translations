@@ -31,7 +31,8 @@
         {%- else -%}
           {%- assign page_url = post.permalink | replace_first: page_lang, '' -%}
           {%- assign new_url = '/' | append: lang[0] | append: page_url -%}
-          {%- assign lang_page = collection.docs | where: "permalink", new_url | where_exp: "item", "item.lang != 'en'" | where_exp: "item", "item.last_modified_at < post.last_modified_at" -%}
+          {%- assign post_modified = post.last_modified_at | date: '%Y-%m-%d' -%}
+          {%- assign lang_page = collection.docs | where: "permalink", new_url | where_exp: "item", "item.lang != 'en'" -%}
           {%- if lang_page.size == 0 -%}
               {%- assign missing_lang = collection.docs | where: "url", new_url -%}
               {% if missing_lang.size == 0 %}
@@ -41,17 +42,19 @@
         {%- endif -%}
 
         {% for please_update in lang_page %}
-          {% if label == 'posts' %}
-            {%- assign permalink = please_update.url -%}
-            {%- assign post_permalink = post.url -%}
-            {%- assign modified_at = please_update.date -%}
-            {%- assign post_modified_at = post.date -%}
-          {% else %}
-            {%- assign permalink = please_update.permalink -%}
-            {%- assign post_permalink = post.permalink -%}
-            {%- assign modified_at = please_update.last_modified_at -%}
-            {%- assign post_modified_at = post.last_modified_at -%}
-          {% endif %}
+          {% if please_update.last_modified_at | date '%Y-%m-%-d' < post_modified" | date '%Y-%m-%-d' -%}
+              {% if label == 'posts' %}
+                {%- assign permalink = please_update.url -%}
+                {%- assign post_permalink = post.url -%}
+                {%- assign modified_at = please_update.date -%}
+                {%- assign post_modified_at = post.date -%}
+              {% else %}
+                {%- assign permalink = please_update.permalink -%}
+                {%- assign post_permalink = post.permalink -%}
+                {%- assign modified_at = please_update.last_modified_at -%}
+                {%- assign post_modified_at = post.last_modified_at -%}
+              {% endif %}
+          {%- endif -%}
 
 <li> {{ post_modified_at | date: "%Y-%m-%-d" }} <a href="{{ post_permalink }}">{{ post.title }}</a><br>
      {{ modified_at | date: "%Y-%m-%-d" }} <a href="{{ permalink }}">{{ please_update.title }}</a><br>

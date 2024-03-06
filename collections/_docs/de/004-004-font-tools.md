@@ -48,7 +48,7 @@ Wenn du deine Schrift ohne Kerning erstellt hast, kannst du mit diesem Werkzeug 
     * Nein: Wähle diese Option, wenn deine Schrift sowohl Klein- als auch Großbuchstaben enthält (Standard)
     * Großbuchstaben: Wähle diese Option, wenn deine Schrift nur Großbuchstaben enthält.
     * Kleinbuchstaben: Wähle diese Option, wenn deine Schrift nur Kleinbuchstaben enthält.
-* **Umkehrbar**: definiere, ob deine Schrift vorwärts und rückwärts gestickt werden kann.  Check this only if you do have created font variants.
+* **Umkehrbar**: definiere, ob deine Schrift vorwärts und rückwärts gestickt werden kann.  Wähle diese Option nur, wenn du verschiedene Schriftvarianten (bzw. Richtungen) erstellt hast.
 * **Standard-Glyphe**: das Zeichen/der Buchstabe der ausgegeben werden soll, wenn der eingegebene Buchstabe nicht in der Schriftdatei vorhanden ist
 * **Minimale Skalierung / Maximale Skalierung**: definiert, wie weit die Schrift maximal skaliert werden darf ohne beim Sticken an Qualität zu verlieren 
 
@@ -86,8 +86,6 @@ Bei gekauften Schriften kommt es häufig vor, dass die Buchstaben in Unterordner
 
 ## Update glyph list
 
-dans le fichier json
-
 This extension insert the list of the glyphs into the json file. Must be done a first time when all the glyphs are present in the  svg file, and must be redone if glyphs are added or deleted.
 
 ## Kerning entfernen
@@ -102,7 +100,3 @@ Deine Schrift ist bereits einsatzbereit. Aber wenn du sie mit FontForge erstellt
 2. Öffne `Erweiterungen > Ink/Stitch > Font Tools > Remove Kerning`
 3. Die die zu bereinigende(n) Datei(en)
 4. Klicke auf `Anwenden`
-
-
-
-  

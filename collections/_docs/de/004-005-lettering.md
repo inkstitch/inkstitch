@@ -20,7 +20,6 @@ Das Text-Modul erzeugt mehrzeiligen Text. Die hinterlegten Schriftarten wurden v
 * Der eingegebene Text erscheint über der Seite.
 * Freie Positionierung ist nun möglich.
 
-  
 ### Font filters
 
 * **Schriftgrößenfilter**<br>

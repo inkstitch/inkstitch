@@ -1,7 +1,7 @@
 ---
 title: "New Features, Updates and Fixes for Ink/Stitch after the release of v3.0.1"
 permalink: /upcoming/
-last_modified_at: 2024-02-13
+last_modified_at: 2024-03-06
 sidebar:
   nav: pages
 toc: true
@@ -25,12 +25,23 @@ toc: true
     * add ignore layer command ([#2522](https://github.com/inkstitch/inkstitch/issues/2522))
   * Fill to Stroke
     * add one centerline group for each selected fill or replace existing fill if it results in only one path ([#2675](https://github.com/inkstitch/inkstitch/issues/2675#issuecomment-1882919122))
+  * Jump to Stroke
+    * Add options
+        * Min width
+        * Max width
+        * Connect only within groups or layers
+        * Do not connect after trim, stop or forced lock stitches
+        * Merge new strokes with previous/next stroke
   * Preferences
     * electron -> wxpython ([#2479](https://github.com/inkstitch/inkstitch/issues/2479))
   * Remove embroidery settings
     * add option to remove only specific commands ([#2494](https://github.com/inkstitch/inkstitch/issues/2494))
+  * Select embroidery elements
+    * Option to select satins with no rungs or two rails and two rungs (possible detection conflict) ([#2734](https://github.com/inkstitch/inkstitch/pull/2734))
   * Stitch Plan Preview
     * Add option to keep/overwrite previous stitch plan ([#2642](https://github.com/inkstitch/inkstitch/issues/#2642))
+  * Troubleshoot
+    * Add warning for satins with two rails and two rungs (possible detection conflict) ([#2734](https://github.com/inkstitch/inkstitch/pull/2734))
 
 ## Lettering
 
@@ -40,26 +51,31 @@ toc: true
 
 ### New fonts
 
-  * Chicken Scratch
-  * Violin Serif
+  * Chicken Scratch ([#2703](https://github.com/inkstitch/inkstitch/pull/2703))
+  * Violin Serif ([#2703](https://github.com/inkstitch/inkstitch/pull/2703))
 
 ### Updates
 
-Most fonts have now the following glyphs: éèêëÉÈÊËÜÄÖäöüß
-Only exceptions are April en Fleur, Apex Lake, Cherry fonts, Emilio fonts, Fold Inkstitch, Infinipicto, Namskout and Sortefax (they contain only non diacritic glyphs).
+* Most fonts have now the following glyphs: éèêëÉÈÊËÜÄÖäöüß
+  Only exceptions are April en Fleur, Apex Lake, Cherry fonts, Emilio fonts, Fold Inkstitch, Infinipicto, Namskout and Sortefax (they contain only non diacritic glyphs).
+* TT-Directors: add Ũ
 
-Further updates have been made to:
+All fonts have been reworked to be more stable when transformed.
 
-  * AGS Γαραμου Garamond
-  * Apex Simple AGS
-  * Dinomouse
-  * TT Masters
-  * TT Directors
-
+([#2749](https://github.com/inkstitch/inkstitch/pull/2749))
+([#2744](https://github.com/inkstitch/inkstitch/pull/2744))
+([#2742](https://github.com/inkstitch/inkstitch/pull/2742))
+([#2714](https://github.com/inkstitch/inkstitch/pull/2714))
 ([#2607](https://github.com/inkstitch/inkstitch/issues/2607))
 ([#2579](https://github.com/inkstitch/inkstitch/issues/2579))
 ([#2476](https://github.com/inkstitch/inkstitch/issues/2476))
 ([#2682](https://github.com/inkstitch/inkstitch/pull/2682))
+
+## Pallets
+
+* 2 new pallets ([#2752](https://github.com/inkstitch/inkstitch/pull/2752))
+  * Simthread glow in the dark / 15 colors
+  * Simthread 63 Brother Colours Polyester
 
 ## Params
 
@@ -135,5 +151,5 @@ Further updates have been made to:
   * [#2460](https://github.com/inkstitch/inkstitch/issues/2460) Satin Column: obey reversed rails when synthesizing rungs
   * [#2458](https://github.com/inkstitch/inkstitch/issues/2458) Density Map: add ignore layer command
   * [#2434](https://github.com/inkstitch/inkstitch/issues/2434) Ignore commands with "empty-d-connectors"
-  * [#2404](https://github.com/inkstitch/inkstitch/issues/2404) Render satins with only one subpath as running stitch ([#2553](https://github.com/inkstitch/inkstitch/issues/2553))
+  * [#2404](https://github.com/inkstitch/inkstitch/issues/2404) Render satins with only one subpath as running stitch
   * [#2403](https://github.com/inkstitch/inkstitch/issues/2403) ignore small contour fill with single or double spiral
