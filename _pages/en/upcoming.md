@@ -10,10 +10,10 @@ toc: true
 
 ### New Extensions
 
-  * Display Stacking order ([#2656](https://github.com/inkstitch/inkstitch/issues/2656))
-  * Element info ([#2544](https://github.com/inkstitch/inkstitch/issues/2544))
-  * Stroke tools: Outline([#2529](https://github.com/inkstitch/inkstitch/issues/2529))
-  * Test Swatches ([#2528](https://github.com/inkstitch/inkstitch/issues/2528))
+  * Edit > Generate Test Swatches from Selection ([#2528](https://github.com/inkstitch/inkstitch/issues/2528))
+  * Stroke tools > Outline ([#2529](https://github.com/inkstitch/inkstitch/issues/2529))
+  * Troubleshoot > Element info ([#2544](https://github.com/inkstitch/inkstitch/issues/2544))
+  * Visualize and Export > Display Stacking order ([#2656](https://github.com/inkstitch/inkstitch/issues/2656))
 
 ### Extension Updates
 
@@ -26,7 +26,7 @@ toc: true
   * Fill to Stroke
     * add one centerline group for each selected fill or replace existing fill if it results in only one path ([#2675](https://github.com/inkstitch/inkstitch/issues/2675#issuecomment-1882919122))
   * Jump to Stroke
-    * Add options
+    * Add options ([#2733](https://github.com/inkstitch/inkstitch/pull/2733))
         * Min width
         * Max width
         * Connect only within groups or layers
