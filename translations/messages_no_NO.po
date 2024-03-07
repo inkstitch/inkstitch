@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-02-24 01:01+0000\n"
-"PO-Revision-Date: 2024-02-24 01:01\n"
+"POT-Creation-Date: 2024-03-03 01:07+0000\n"
+"PO-Revision-Date: 2024-03-03 01:08\n"
 "Last-Translator: \n"
 "Language-Team: Norwegian\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-24 01:00+0000\n"
+"POT-Creation-Date: 2024-03-03 01:07+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -89,8 +89,8 @@ msgstr "Amitaclo small"
 
 #. description of font in fonts/amitaclo_small
 #: inkstitch-fonts-metadata.py:24
-msgid "This font is an altered version  of Amitaclo, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory. The altered embroidery parameters of this font allow to scale down the original Amitaclo font between 25% (for a 7 mm font ) and 55 % (for a 16mm font)."
-msgstr "Denne skrifttypen er en endret versjon av Amitaclo, for å tillate muligheten for å skalere ned. Bruken av både tynn tråd (60) og tynn nål (60) er et krav. De endret broderi-parametre til denne skrifttypen tillater nedskalering av den opprinnelige Amitaclo mellom 25% (for en 7 mm skrifttype) og 55% (for en 16 mm skrifttype)."
+msgid "This font is an altered version  of Amitaclo, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory. The altered embroidery parameters of this font allow to scale down the original Amitaclo font between 30% (for a 8 mm font ) and 55 % (for a 16mm font).You may need to decrease the minimum stitch length in Preferences"
+msgstr ""
 
 #. name of font in fonts/apex_lake
 #: inkstitch-fonts-metadata.py:26
@@ -129,7 +129,7 @@ msgstr ""
 
 #. description of font in fonts/auberge_small
 #: inkstitch-fonts-metadata.py:40
-msgid "This font is an altered version  of Auberge Marif, to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) are mandatory. The altered embroidery parameters of this font allow to scale down the original Grand Hotel font between 25% (for a 9mm font ) and 55 % (for a  20 mm font)."
+msgid "This font is an altered version  of Auberge Marif, to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) are mandatory. The altered embroidery parameters of this font allow to scale down the original Grand Hotel font between 25% (for a 9mm font ) and 55 % (for a  20 mm font).You may need to decrease the minimum stitch length in preferences to use this font at its smallest size "
 msgstr ""
 
 #. name of font in fonts/aventurina
@@ -1189,8 +1189,8 @@ msgid "Force lock stitches"
 msgstr ""
 
 #: lib/elements/element.py:239
-msgid "Sew lock stitches after sewing this element, even if the distance to the next object is shorter than defined by the collapse length value in the Ink/Stitch preferences."
-msgstr "Sy heftesting etter å ha bridert dette elementet, selvom avstanden til det neste element er kortere enn definert ved den \"collapse\" lengde-verdi i Ink/Stich sin preferanser."
+msgid "Sew lock stitches after sewing this element, even if the distance to the next object is shorter than defined by the Minimum jump stitch length value in the Ink/Stitch preferences."
+msgstr ""
 
 #: lib/elements/element.py:250
 msgid "Tack stitch"

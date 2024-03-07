@@ -11623,9 +11623,9 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Æ"
-     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
+     style="display:inline;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g6811"
-     transform="translate(0,23)">
+     transform="translate(0, 23)">
     <path
        d="M 19.7478,162.866 C 11.3786,147.631 12.0156,129.15 14.2356,112.394 18.0543,91.4387 27.5703,68.4505 48.0141,59.1186 c 9.15132,-4.25484 23.7476,-4.33664 27.6559,7.02495 4.96355,13.7394 -7.19742,26.9938 -19.601,30.8822 -7.2131,2.31628 -16.8153,5.72794 -21.8442,-2.3563 l 1.7031,-2.34185"
        inkstitch:running_stitch_length_mm="1.2"
@@ -11652,6 +11652,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        inkstitch:zigzag_underlay="False"
        inkstitch:force_lock_stitches="False" />
     <path
+
        d="m 69.1717,130.36 3.2347,-27.215"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
        inkstitch:running_stitch_length_mm="4.0"
