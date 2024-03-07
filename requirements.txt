@@ -1,7 +1,7 @@
 ./pyembroidery
 
 # get up to date inkex version (Febuary 10, 2024)
-inkex @ git+https://gitlab.com/inkscape/extensions.git@99db88135c3e557b343dd3d878eea8de2676d2ab
+inkex @ git+https://gitlab.com/inkscape/extensions.git@8d51d7449d73096382c2f39e726eddc4f9bbcfc4
 
 wxPython>=4.1.1
 
