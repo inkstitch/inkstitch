@@ -28,13 +28,13 @@
      inkscape:window-height="797"
      id="namedview3461"
      showgrid="true"
-     inkscape:zoom="7.8222933"
-     inkscape:cx="34.900251"
-     inkscape:cy="98.372686"
+     inkscape:zoom="5.8467274"
+     inkscape:cx="23.773984"
+     inkscape:cy="99.970456"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g6496"
+     inkscape:current-layer="g6244"
      inkscape:document-rotation="0"
      inkscape:document-units="px"
      inkscape:snap-global="false"
@@ -703,10 +703,10 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
      id="g6324"
      style="display:none">
     <path
-       d="M 47.897,62.5223 C 45.0705,90.5154 18.0033,128.635 18.5,95.3732 18.4609,86.8784 18.5821,78.3812 18.4341,69.8881 18.2658,66.6339 17.3248,62.9592 14.2924,61.2258 11.9778,59.6304 8.92303,60.4168 6.82189,61.9983 5.04041,63.1275 4.50018,63.7341 3.29703,65.4373 L 2.5,66.5"
+       d="M 21.321277,107.61331 C 19.493832,106.14967 18.396311,102.31681 18.5,95.3732 18.4609,86.8784 18.5821,78.3812 18.4341,69.8881 18.2658,66.6339 17.3248,62.9592 14.2924,61.2258 11.9778,59.6304 8.92303,60.4168 6.82189,61.9983 5.04041,63.1275 4.50018,63.7341 3.29703,65.4373 L 2.5,66.5"
        id="path17884-2"
        inkstitch:ties="3"
-       sodipodi:nodetypes="cccccc"
+       sodipodi:nodetypes="ccccccc"
        inkstitch:running_stitch_length_mm="1.2"
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.92004;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0;stroke-opacity:1"
        inkstitch:running_stitch_tolerance_mm="0.1" />
@@ -5135,18 +5135,18 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-j"
      id="g6244"
-     style="display:none">
+     style="display:inline">
     <path
        id="autosatinrun21"
        inkscape:label="Points droits pour auto-remplissage satin 3"
-       d="m 16.9495,107.46 c 0.592909,-6.42346 -0.05879,-8.44474 0.05044,-14.8858 L 24,57 M 20,45 17.2692,22.6772 17,20.5"
+       d="m 16.9495,107.46 c 0.592909,-6.42346 -0.05879,-8.44474 0.05044,-14.8858 L 24,57 M 20,40.553068 17.611272,24.216523"
        sodipodi:nodetypes="ccccc"
        inkstitch:ties="3"
        inkstitch:running_stitch_length_mm="1.2"
        style="fill:none;stroke:#000000;stroke-width:1.92004;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
        inkstitch:running_stitch_tolerance_mm="0.1" />
     <path
-       d="m 9,23 4,24 M 25,18 20,45"
+       d="m 10.026215,22.687418 4,20.036686 m 12,-24.210996 -5,22.541272"
        id="path6242"
        sodipodi:nodetypes="cccc"
        inkstitch:satin_column="True"
@@ -5161,7 +5161,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:contour_underlay="False"
        inkstitch:contour_underlay_inset_mm="0.2"
        inkstitch:contour_underlay_stitch_length_mm="1.2"
-       style="fill:none;fill-opacity:0.154472;stroke:#000000;stroke-width:1.92004;stroke-opacity:1"
+       style="fill:none;fill-opacity:0.154472;stroke:#000000;stroke-width:1.75436;stroke-opacity:1"
        inkstitch:reverse_rails="none" />
     <path
        id="autosatin25"
@@ -5213,10 +5213,10 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
      id="g6224"
      style="display:none">
     <path
-       d="M 18.3911,106.732 C 16.0408,102.561 16.8132,97.5847 16.6606,92.9995 L 22.1511,58.1746 M 18.4059,44.5209 C 18.23096,37.58117 15.31412,32.3402 15.56866,25.4 c 0.03066,-1.55987 0.06133,-3.11975 0.09202,-4.67962 l -8e-5,2e-5"
+       d="M 18.3911,106.732 C 16.0408,102.561 16.8132,97.5847 16.6606,92.9995 L 22.1511,58.1746 M 18.747972,40.587075 c -0.17494,-6.93973 -3.775924,-11.667592 -3.521384,-18.607792"
        inkscape:label="Points droits pour auto-remplissage satin 2"
        id="autosatinrun103"
-       sodipodi:nodetypes="ccccccc"
+       sodipodi:nodetypes="ccccc"
        inkstitch:ties="3"
        inkstitch:running_stitch_length_mm="1.2"
        style="fill:none;stroke:#000000;stroke-width:1.92004;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
@@ -5229,7 +5229,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:ties="2"
        inkstitch:force_lock_stitches="True"
        inkstitch:satin_column="True"
-       d="m 5.248943,34.142535 c 0,0 19.976377,-0.188457 19.976377,-0.188457 M 8.1606206,23.220385 c 0,0 4.0000004,24 4.0000004,24 m 11,-29 c 0,0 -4,27 -4,27"
+       d="m 8.3316565,21.521823 4.0000005,21.593702 m 11,-26.092391 -4,24.292916"
        id="autosatin127"
        inkscape:label="Auto-remplissage satin 3"
        inkstitch:center_walk_underlay="True"
@@ -5237,8 +5237,9 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:contour_underlay="False"
        inkstitch:contour_underlay_inset_mm="0.2"
        inkstitch:contour_underlay_stitch_length_mm="1.2"
-       style="fill:none;stroke:#000000;stroke-width:1.92004;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       inkstitch:reverse_rails="none" />
+       style="fill:none;stroke:#000000;stroke-width:1.82124;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       inkstitch:reverse_rails="none"
+       sodipodi:nodetypes="cccc" />
     <path
        inkstitch:zigzag_underlay_inset_mm=".25"
        inkstitch:zigzag_underlay="False"
@@ -8407,7 +8408,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-@"
      id="g6496"
-     style="display:inline">
+     style="display:none">
     <path
        d="M 41.295,116.762 C 24.4938,121.036 12.6491,114.978 9.38284,102.553 8.76919,99.897 8.3199,96.1921 8.68327,92.2147 9.24329,85.1012 12.7086,76.0682 21.4314,69.1086 c 3.5109,-2.904 8.3698,-5.0949 14.004,-5.4729 5.2243,-0.3595 10.7629,0.5327 15.9853,3.0358 6.6475,2.8689 13.4842,10.7454 13.2916,20.9477 -4e-4,1.6201 -0.1611,3.2239 -0.4816,4.8022 -1.7359,9.5456 -9.0897,12.8536 -11.1983,11.1906 -0.4581,-0.445 -0.8112,-1.029 -1.0315,-1.756 -1.6647,-5.4382 -3.813176,-5.52361 -6.924226,-7.86206 -2.34648,4.53749 -0.313232,0.57875 -0.493804,1.72811 -0.565685,2.72662 -1.4207,5.48943 -2.97204,7.82508 -1.47547,2.3612 -4.65035,2.62721 -7.13848,2.13542 -2.75179,-0.43295 -4.79742,-2.75122 -5.50496,-5.35619 -1.44103,-5.03227 -1.33968,-10.6935 0.995876,-15.448 2.28796,-4.44325 6.7048,-8.36276 11.9367,-8.33208 C 45.4839,76.1602 48.7653,78.5059 50.5,81.5 v 0"
        style="fill:none;stroke:#000000;stroke-width:1.92004;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
