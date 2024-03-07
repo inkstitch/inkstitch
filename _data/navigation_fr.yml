@@ -92,7 +92,7 @@ docs:
         url: /fr/docs/stitches/meander-fill/
       - title: "Remplissage circulaire"
         url: /fr/docs/stitches/circular-fill/
-      - title: "Points de sureté"
+      - title: "Points d'arrêt"
         url: /fr/docs/stitches/lock-stitches/
       - title: "Textures"
         url: /fr/docs/stitches/patterns/
