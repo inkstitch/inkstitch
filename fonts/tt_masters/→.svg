@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
    sodipodi:docname="→.svg"
-   inkscape:version="1.3.1 (5ab75fa9, 2023-11-03)"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25)"
    id="svg25060"
    version="1.1"
    viewBox="0 0 59.3 80.099999"
@@ -35,11 +35,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="8.1891466"
-     inkscape:cx="29.429196"
-     inkscape:cy="46.341825"
+     inkscape:zoom="12.06348"
+     inkscape:cx="28.515818"
+     inkscape:cy="58.896769"
      inkscape:document-units="mm"
-     inkscape:current-layer="g499"
+     inkscape:current-layer="g480"
      showgrid="false"
      units="px"
      inkscape:snap-global="false"
@@ -121,6 +121,47 @@
          style="opacity:0.8;fill:context-stroke"
          id="circle11" />
     </marker>
+    <symbol
+       id="inkstitch_ignore_layer">
+      <title
+         id="title9694">Ignore entire layer when generating stitch plan</title>
+      <path
+         inkscape:connector-curvature="0"
+         style="opacity:1;vector-effect:none;fill:#fafafa;fill-opacity:1;fill-rule:evenodd;stroke:#ff0000;stroke-width:1.06501234;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.19503705, 3.19503705;stroke-dashoffset:0;stroke-opacity:1"
+         d="M 9.2465269,-4.9265995e-6 C 9.246525,5.1067241 5.1067028,9.2465451 -2.615882e-5,9.2465451 -5.1067554,9.2465451 -9.2465782,5.1067241 -9.2465801,-4.9265995e-6 -9.24658,-2.4523429 -8.2723922,-4.8042399 -6.538327,-6.5383059 c 1.7340653,-1.734065 4.0859624,-2.708252 6.53830084118,-2.708252 5.10673015882,0 9.24655285882,4.139823 9.24655305882,9.2465529734005 0,0 0,0 0,0"
+         id="inkstitch_path25368-7" />
+      <path
+         sodipodi:nodetypes="ccccc"
+         inkscape:connector-curvature="0"
+         style="color:#000000;fill:#d5d5d5;fill-opacity:1;fill-rule:evenodd;stroke:#5a5a5a;stroke-width:0.63330007;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:0;stroke-opacity:1"
+         d="M 4,4.452769 1.46667,1.286102 H -5.5 l 2.53333,3.166667 z"
+         id="use5800" />
+      <path
+         sodipodi:nodetypes="ccccc"
+         inkscape:connector-curvature="0"
+         style="color:#000000;opacity:0.5;fill:#d5d5d5;fill-opacity:1;fill-rule:evenodd;stroke:#858585;stroke-width:0.63339424;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:0;stroke-opacity:1"
+         d="M 4,2.552769 1.46667,-0.613898 H -5.5 l 2.53333,3.166667 z"
+         id="use5864" />
+      <g
+         id="g5771">
+        <path
+           sodipodi:nodetypes="ccccccccc"
+           inkscape:connector-curvature="0"
+           style="fill:#aa0000;fill-rule:evenodd;stroke:#aa0000;stroke-width:1px"
+           d="m -1.0666699,-5.0472339 h 4.4333333 l 0.6333333,0.6333333 V 0.01943274 L 3.3666634,0.65276607 H -1.0666699 L -1.7000032,0.01943274 V -4.4139006 Z"
+           id="path8011" />
+        <path
+           inkscape:connector-curvature="0"
+           id="path8023"
+           d="m -0.43333658,-3.8755672 c 0,0 3.16666668,3.16666661 3.16666668,3.16666661"
+           style="fill:none;stroke:#ffffff;stroke-width:1.70000005" />
+        <path
+           inkscape:connector-curvature="0"
+           id="path8025"
+           d="m 2.7333301,-3.8755672 c 0,0 -3.16666668,3.16666661 -3.16666668,3.16666661"
+           style="fill:none;stroke:#ffffff;stroke-width:1.79999995;stroke-linejoin:round" />
+      </g>
+    </symbol>
   </defs>
   <metadata
      id="metadata25057">
@@ -223,7 +264,7 @@
        inkstitch:ties="3" />
     <path
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.027px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.04711;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 1.75164,17.3243 c 0.696407,3.620589 1.8026075,7.263691 3.78092,10.3983 1.1354688,1.714685 2.2908002,3.865179 4.72614,3.5922 2.90411,-0.519274 5.59145,-1.978814 8.585265,-2.119017 2.425111,-0.269278 4.868697,-0.131227 7.295035,0.04152 -2.033112,4.630238 -5.214294,8.891316 -9.716975,11.360267 -1.041809,1.003324 -3.931041,1.424985 -3.273625,3.353133 M 3.92565,14.301 c 6.364152,-1.106813 12.684963,-2.538187 19.136982,-3.071007 3.273469,-0.209979 6.581098,-0.778516 9.852087,-0.338913 2.815102,0.42294 4.81649,2.572569 7.118375,4.018031 2.300508,1.98013 4.47205,4.198098 6.194272,6.693204 0.353049,2.757199 -0.86924,5.472374 -2.039724,7.904406 -1.560429,2.420805 -3.285034,4.742322 -4.882596,7.148135 -2.023531,2.74643 -3.844593,5.793107 -6.592108,7.87484 L 22.4524,50.9775 c -1.501904,-0.555934 -3.028313,1.181527 -4.4597,0.5238 m 4.9304,-20.98 28.899139,-10.816608 M 13.663749,7.6451932 10.898467,33.834047"
+       d="m 1.75164,17.3243 c 0.696407,3.620589 1.8026075,7.263691 3.78092,10.3983 1.1354688,1.714685 2.2908002,3.865179 4.72614,3.5922 2.90411,-0.519274 5.59145,-1.978814 8.585265,-2.119017 2.425111,-0.269278 4.868697,-0.131227 7.295035,0.04152 -2.033112,4.630238 -5.214294,8.891316 -9.716975,11.360267 -1.041809,1.003324 -3.931041,1.424985 -3.273625,3.353133 M 3.92565,14.301 c 6.364152,-1.106813 12.684963,-2.538187 19.136982,-3.071007 3.273469,-0.209979 6.581098,-0.778516 9.852087,-0.338913 2.815102,0.42294 4.81649,2.572569 7.118375,4.018031 2.300508,1.98013 4.47205,4.198098 6.194272,6.693204 0.353049,2.757199 -0.86924,5.472374 -2.039724,7.904406 -1.560429,2.420805 -3.285034,4.742322 -4.882596,7.148135 -2.023531,2.74643 -3.844593,5.793107 -6.592108,7.87484 L 22.4524,50.9775 c -1.584799,0.521699 -3.028313,1.181527 -4.4597,0.5238 m 4.9304,-20.98 28.899139,-10.816608 M 13.663749,7.6451932 10.898467,33.834047 m 3.442337,4.380466 8.621061,15.086857"
        id="path7666"
        inkstitch:satin_column="True"
        inkstitch:contour_underlay="True"
@@ -274,12 +315,12 @@
     <path
        id="path327"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.027px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.07594;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="M 39.7547,56.3103 C 28.8789,57.0172 19.8606,57.4191 9.81623,58.8174 7.37027,59.1244 3.53288,59.345 3.04364,58.4722 1.38042,55.6744 0.367864,52.4643 0.367864,50.4406 3.86179,35.6818 17.8832,22.0998 26.5465,9.945 c 1.7611,-1.70723 4.1092,-0.26856 5.479,0.1247 0.0981,0.1246 0.1957,0.1246 0.1957,0.1246 3.8157,0.7721 9.3925,3.1824 11.4471,4.6287 1.3696,0.9639 2.3482,1.3495 2.0546,2.8927 -0.9784,5.5916 -3.1363,15.969813 -4.7017,26.382813 M 41.6136,43.2061 C 32.3877,43.9484 23.1481,44.3435 14.1521,46.6808 14.837,44.3666 24.276,30.4086 28.1895,24.9129 27.6025,28.9623 25.614829,40.869645 25.125729,45.112745 M 5.50441,32.8763 21.0777,41.4662 m 5.315837,-12.910167 18.519835,0.499037"
+       d="M 39.7547,56.3103 C 28.8789,57.0172 19.8606,57.4191 9.81623,58.8174 7.37027,59.1244 3.53288,59.345 3.04364,58.4722 1.38042,55.6744 0.367864,52.4643 0.367864,50.4406 3.86179,35.6818 17.8832,22.0998 26.5465,9.945 c 1.7611,-1.70723 4.1092,-0.26856 5.479,0.1247 0.0981,0.1246 0.1957,0.1246 0.1957,0.1246 3.8157,0.7721 9.3925,3.1824 11.4471,4.6287 1.3696,0.9639 2.3482,1.3495 2.0546,2.8927 -0.9784,5.5916 -2.550145,14.914734 -4.115545,25.327734 M 41.6136,43.2061 C 32.3877,43.9484 23.1481,44.3435 14.1521,46.6808 14.837,44.3666 24.276,30.4086 28.1895,24.9129 27.6025,28.9623 25.614829,40.869645 25.125729,45.112745 M 5.50441,32.8763 21.0777,41.4662 m 3.160571,1.845111 19.929048,-2.650966 M 38.451762,39.858533 36.341604,59.318876 M 25.531605,30.25661 37.882933,7.3776391"
        inkstitch:satin_column="True"
        inkstitch:ties="3"
        inkstitch:contour_underlay="True"
        inkstitch:swap_satin_rails="True"
-       sodipodi:nodetypes="cccccccccccccccc"
+       sodipodi:nodetypes="cccccccccccccccccccccc"
        inkstitch:max_stitch_length_mm="9" />
     <path
        d="m 41.898255,44.633061 c 2.567485,4.878311 7.19959,5.708032 11.204733,9.576547"
@@ -869,8 +910,7 @@
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:5.3303, 2.66515;paint-order:markers stroke fill"
        d="M 15.03,78.907498 5.0908063,63.392659"
        id="path224"
-       inkstitch:ties="3"
-       inkstitch:force_lock_stitches="False" />
+       inkstitch:ties="3" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:5.3303, 2.66515;paint-order:markers stroke fill"
        d="M 17.575403,49.089918 6.0604837,32.726612"
@@ -942,7 +982,8 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:ties="3"
-       inkstitch:max_stitch_length_mm="9" />
+       inkstitch:max_stitch_length_mm="9"
+       inkstitch:force_lock_stitches="True" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:5.3303, 2.66515;paint-order:markers stroke fill"
        d="M 12.848225,65.695643 C 10.06838,71.097067 7.2215935,73.553029 4.1211289,64.847175"
@@ -1063,7 +1104,6 @@
        inkstitch:zigzag_underlay="True"
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
-       inkstitch:force_lock_stitches="False"
        sodipodi:nodetypes="ccccccccccccc"
        inkstitch:max_stitch_length_mm="9" />
     <path
@@ -1210,7 +1250,7 @@
        inkstitch:force_lock_stitches="True"
        sodipodi:nodetypes="cccc" />
     <path
-       d="m 6.71434,23.4008 c 0.39859,0.5929 0.39859,0.495 0.4972,0.3956 l 0.19813,0.1973 c 1.09528,1.0884 3.28563,-0.1968 4.38093,0.0994 3.0861,0.7911 2.6884,10.4806 2.7878,12.7543 0.1996,3.6583 -1.2941,5.2401 -0.8956,8.1075 0.3985,2.8674 1.714457,4.540929 5.183143,6.085457 C 13.971129,53.573286 13.9815,57.313 12.5876,61.5646 c -0.57593,1.772315 -0.75206,5.462014 -1.029229,8.832585 M 2.63201,12.9205 c 0,-0.7911 1.49402,-1.8783 2.38966,-2.274 2.58867,-1.08736 5.77493,-1.4831 11.05183,-0.98867 0.1002,-0.09869 0.1997,-0.09869 0.1997,-0.09869 6.4718,1.38416 8.5627,5.93236 10.8528,9.19506 0.6965,0.9886 1.5932,5.6355 1.6925,7.1186 0.7964,3.2628 0.0996,8.5028 0.7964,11.7657 0.3983,1.6808 1.2943,5.2398 4.1818,5.7343 0.7965,0.0989 2.0905,0.4945 2.3895,2.4718 0.1575,1.1462 0.8399,2.5121 1.4218,4.0823 0.5221,1.4098 0.9626,2.9856 0.8683,4.7161 -0.0995,2.0766 -2.3892,2.8669 -3.3852,2.9663 -4.3809,0.3954 -5.5758,2.0762 -7.4676,8.7006 -0.338176,5.508789 -0.768458,10.287187 -1.259382,13.528811 M 31.8848,27.2532 12.0743,39.3986 m -6.7171571,9.529971 43.5714281,7.857143"
+       d="m 6.71434,23.4008 c 0.39859,0.5929 0.39859,0.495 0.4972,0.3956 l 0.19813,0.1973 c 1.09528,1.0884 3.28563,-0.1968 4.38093,0.0994 3.0861,0.7911 2.6884,10.4806 2.7878,12.7543 0.1996,3.6583 -1.2941,5.2401 -0.8956,8.1075 0.3985,2.8674 1.714457,4.540929 5.183143,6.085457 C 13.971129,53.573286 13.9815,57.313 12.5876,61.5646 c -0.57593,1.772315 -0.75206,5.462014 -1.029229,8.832585 M 2.63201,12.9205 c 0,-0.7911 1.49402,-1.8783 2.38966,-2.274 2.58867,-1.08736 5.77493,-1.4831 11.05183,-0.98867 0.1002,-0.09869 0.1997,-0.09869 0.1997,-0.09869 6.4718,1.38416 8.5627,5.93236 10.8528,9.19506 0.6965,0.9886 1.5932,5.6355 1.6925,7.1186 0.7964,3.2628 0.0996,8.5028 0.7964,11.7657 0.3983,1.6808 1.2943,5.2398 4.1818,5.7343 0.7965,0.0989 2.0905,0.4945 2.3895,2.4718 0.1575,1.1462 0.8399,2.5121 1.4218,4.0823 0.5221,1.4098 0.9626,2.9856 0.8683,4.7161 -0.0995,2.0766 -2.3892,2.8669 -3.3852,2.9663 -4.3809,0.3954 -5.5758,2.0762 -7.4676,8.7006 -0.338176,5.508789 -0.768458,10.287187 -1.259382,13.528811 M 31.8848,27.2532 12.0743,39.3986 M 5.3571429,48.928571 48.928571,56.785714 M 9.2612474,64.945963 30.714517,79.482605"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.027px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.617115;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path10377"
        inkstitch:contour_underlay="True"
@@ -1332,7 +1372,6 @@
        inkstitch:contour_underlay="True"
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
-       inkstitch:force_lock_stitches="False"
        sodipodi:nodetypes="cccccccccccsccccccccc"
        inkstitch:max_stitch_length_mm="9" />
     <path
@@ -1368,7 +1407,6 @@
        inkstitch:reverse_rails="none"
        sodipodi:nodetypes="cccccccc"
        inkstitch:ties="3"
-       inkstitch:force_lock_stitches="False"
        inkstitch:max_stitch_length_mm="9" />
     <path
        d="m 14.8991,42.5952 c 2.656255,6.031299 8.780012,13.117924 -9.552268,12.761407"
@@ -1388,7 +1426,6 @@
        inkstitch:reverse_rails="none"
        sodipodi:nodetypes="cccccccc"
        inkstitch:ties="3"
-       inkstitch:force_lock_stitches="False"
        inkstitch:max_stitch_length_mm="9" />
     <path
        d="M 15.2,57.7939 44.773655,47.686785"
@@ -1406,7 +1443,6 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:ties="3"
-       inkstitch:force_lock_stitches="False"
        inkstitch:max_stitch_length_mm="9" />
     <path
        d="M 30.44929,47.334105 C 16.420985,35.194351 31.322055,34.626346 45.063076,33.594322"
@@ -1425,7 +1461,6 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:ties="3"
-       inkstitch:force_lock_stitches="False"
        inkstitch:max_stitch_length_mm="9" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:5.3303, 2.66515;paint-order:markers stroke fill"
@@ -1558,15 +1593,13 @@
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.944882;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:5.3303, 2.66515;paint-order:markers stroke fill"
        d="M 10.892857,65.357143 52.321429,51.25"
        id="path262"
-       inkstitch:ties="3"
-       inkstitch:force_lock_stitches="False" />
+       inkstitch:ties="3" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.944882;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:5.3303, 2.66515;paint-order:markers stroke fill"
        d="M 57.232143,44.642857 C 54.491434,33.130166 13.530929,38.272031 5.8025902,34.71034"
        id="path259"
        inkstitch:ties="3"
-       sodipodi:nodetypes="cc"
-       inkstitch:force_lock_stitches="False" />
+       sodipodi:nodetypes="cc" />
     <path
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.027px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.752428;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 3.27814,37.1542 c 0,2.0796 3.85748,4.7535 5.53899,7.6255 0.49416,0.8912 1.97827,2.3766 4.45107,2.0796 5.2422,-0.5941 37.685,-2.4759 43.8176,-2.1787 M 5.35529,34.3813 c 6.92381,0.0991 40.55351,-3.0705 46.68601,-2.674 0.9891,-0.1978 1.7803,0.2967 2.4728,1.0895 0.7912,0.8911 4.4509,6.437 4.4509,9.309 M 34.5087,28.4532 30.7575,47.8383"
@@ -1584,8 +1617,7 @@
        d="M 52.321429,51.25 C 35.654762,53.043825 18.988095,64.950772 2.3214286,56.428571"
        id="path261"
        inkstitch:lock_end="simple"
-       inkstitch:ties="3"
-       inkstitch:force_lock_stitches="False" />
+       inkstitch:ties="3" />
     <path
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.027px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.752428;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 2.28893,56.2673 c 0,2.0796 3.85751,4.7538 5.53899,7.6256 0.49418,0.8913 1.97822,2.3767 4.45108,2.0797 5.2423,-0.5941 37.9819,-2.3767 44.1143,-2.0797 M 4.36611,53.4943 C 11.2899,52.9004 45.2163,50.5234 51.3488,50.9197 v 0 c 0.9891,-0.1979 1.7804,0.2973 2.4728,1.0893 0.7912,0.8914 4.451,6.4369 4.451,9.3091 M 27.8533,49.4132 23.255,68.3138"
@@ -1709,7 +1741,7 @@
     <path
        id="path240"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.027px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.701857;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 31.1039,44.8621 c 6.4786,-6.2753 16,-13.5312 16,-25.0036 0,-5.295 -17.6688,-12.64892 -21.6933,-12.25675 C 15.0057,8.6804 10.294,17.5053 8.13447,22.8981 4.89521,30.8404 8.60535,39.1135 11.0595,42.8398 l 6.6372,9.6292 4.5633,5.2182 c 1.767,1.3728 5.6401,5.8244 7.1125,7.8834 l 9.7865,9.0407 c 3.043,2.0593 9.3192,5.5497 10.8897,5.8441 1.9632,0.3923 2.9448,0 4.0246,-1.1767 M 23.614786,32.895714 c 6.186771,-2.995828 7.4185,-8.828085 3.857514,-9.899514 -3.007899,-0.905016 -4.4171,4.3144 -4.4171,6.9619 0,0.7844 -0.099,1.5685 0.4904,2.9413 l 7.5583,11.9627 c 2.1596,2.2552 6.0146,5.9655 8.6649,8.1229 l 1.7406,1.569 9.8653,6.968 c 3.7301,2.0596 7.0686,2.7887 7.9993,3.3429 1.0637,0.8133 2.159,2.2551 1.2761,4.2162 M 26.9727,24.5319 35.8593,7.61772 M 29.3745,35.928 12.9223,50.9228"
+       d="M 31.1039,44.8621 C 37.259138,38.985369 44.502285,33.133778 46.573972,24.457269 47.529039,21.31568 47.408346,17.538751 44.280267,15.654406 39.174633,11.775309 33.136668,9.0516038 26.876451,7.6876157 20.288642,7.2869001 14.296962,11.729538 11.002592,17.177988 7.8680598,22.042701 5.8654664,27.986667 7.3150348,33.782639 c 1.1635229,6.599349 5.7120062,11.658022 9.2705642,17.074384 1.617309,2.489949 3.785765,4.55125 5.674401,6.830177 3.175216,2.537075 5.327388,6.065336 8.192107,8.880733 3.125583,2.78814 6.068638,5.808847 9.313406,8.445127 3.301965,2.022627 6.621767,4.139453 10.283187,5.44234 1.461179,0.393512 3.065875,0.05969 4.0246,-1.1767 M 23.614786,32.895714 c 3.041488,-1.478282 6.542341,-4.575803 5.627083,-8.321994 -2.857096,-4.542102 -6.646016,1.609935 -6.170109,4.859957 -0.544376,3.158708 1.932535,5.437855 3.319694,7.969924 1.742317,2.608887 3.231707,5.416395 5.136531,7.897667 3.647173,3.620924 7.340347,7.262723 11.482054,10.312654 3.151648,2.122037 6.120124,4.543704 9.401765,6.453211 2.674149,1.916795 7.348701,1.435977 8.502991,5.032568 0.141582,0.667717 0.01517,1.367897 -0.264695,1.981399 M 26.9727,24.5319 C 29.9349,18.89384 32.8971,13.25578 35.8593,7.61772 M 29.3745,35.928 C 23.890433,40.926267 18.406367,45.924533 12.9223,50.9228 M 26.142509,67.525045 43.258232,50.526552"
        inkstitch:satin_column="True"
        inkstitch:ties="3"
        inkstitch:contour_underlay="True"
@@ -1726,9 +1758,8 @@
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.944882;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:5.3303, 2.66515;paint-order:markers stroke fill"
        d="M 11.875,79.821429 35.714286,33.839286"
        id="path235"
-       inkstitch:lock_end="custom"
-       inkstitch:ties="3"
-       inkstitch:force_lock_stitches="False" />
+       inkstitch:lock_end="half_stitch"
+       inkstitch:ties="3" />
     <path
        id="path969"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.027px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.739924;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -1747,7 +1778,6 @@
        d="m 35.803571,33.303571 c 10.107062,-1.718998 20.149096,-9.837459 23.660715,-20.625"
        id="path236"
        sodipodi:nodetypes="cc"
-       inkstitch:lock_end="custom"
        inkstitch:ties="3" />
     <path
        id="path232"
@@ -1758,14 +1788,12 @@
        inkstitch:ties="3"
        inkstitch:contour_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:force_lock_stitches="False"
        inkstitch:max_stitch_length_mm="9" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.944882;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:5.3303, 2.66515;paint-order:markers stroke fill"
        d="M 36.785714,52.410714 C 25.646346,59.945966 14.514747,62.65553 14.910714,79.464286"
        id="path237"
        sodipodi:nodetypes="cc"
-       inkstitch:lock_end="custom"
        inkstitch:ties="3" />
     <path
        id="path8704"
@@ -1781,12 +1809,11 @@
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.944882;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:5.3303, 2.66515;paint-order:markers stroke fill"
        d="m 41.696429,54.107143 7.589285,26.25"
        id="path238"
-       inkstitch:lock_end="custom"
        inkstitch:ties="3" />
     <path
        id="path8696"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.027px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.739924;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 50.2011,72.1352 c -0.4772,0 -1.7192,-0.1899 -1.7192,-4.9632 0,-4.5814 1.6237,-7.4448 2.5789,-8.3992 0.1915,-0.1897 0.6687,-1.0499 1.6237,-1.0499 1.4327,0 2.1013,1.0499 2.1013,3.9132 0,2.1 -2.6744,10.4991 -4.5847,10.4991 m -1.361923,8.671922 C 47.033314,80.751782 45.385591,80.476919 44.1837,79.9616 c -2.7699,-1.145 -5.4444,-5.4404 -5.4444,-12.5987 0,-4.449969 0.877233,-8.337596 2.201061,-11.35995 1.856357,-4.238138 4.590874,-6.77485 7.016139,-6.77485 1.9081,0 4.4507,0.3624 6.8092,0.8652 2.7771,0.5916 5.2989,1.3789 6.2286,1.9982 1.9103,1.1452 3.0565,2.8632 3.0565,10.0217 0,9.7354 -5.9219,17.8484 -11.4618,18.5166 -1.263297,0.153143 -2.541935,0.214338 -3.749823,0.177322 M 50.0286,69.4593 46.8888,84.817 m 5.521914,-25.799143 4.285715,-13.125"
+       d="m 50.2011,72.1352 c -0.4772,0 -1.7192,-0.1899 -1.7192,-4.9632 0,-4.5814 1.6237,-7.4448 2.5789,-8.3992 0.1915,-0.1897 0.6687,-1.0499 1.6237,-1.0499 1.4327,0 2.1013,1.0499 2.1013,3.9132 0,2.1 -2.6744,10.4991 -4.5847,10.4991 m -1.361923,8.671922 C 47.033314,80.751782 45.385591,80.476919 44.1837,79.9616 c -2.7699,-1.145 -5.4444,-5.4404 -5.4444,-12.5987 0,-4.449969 0.877233,-8.337596 2.201061,-11.35995 1.856357,-4.238138 4.590874,-6.77485 7.016139,-6.77485 1.9081,0 4.4507,0.3624 6.8092,0.8652 2.7771,0.5916 5.2989,1.3789 6.2286,1.9982 1.9103,1.1452 3.0565,2.8632 3.0565,10.0217 0,9.7354 -5.9219,17.8484 -11.4618,18.5166 -1.263297,0.153143 -2.541935,0.214338 -3.749823,0.177322 M 50.0286,69.4593 46.8888,84.817 m 5.521914,-25.799143 4.285715,-13.125 M 51.816093,64.59427 65.180425,68.580123 M 49.705936,65.180425 36.107142,60.256724"
        inkstitch:satin_column="True"
        inkstitch:contour_underlay="True"
        inkstitch:fill_underlay="False"
@@ -1825,14 +1852,12 @@
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:5.3303, 2.66515;paint-order:markers stroke fill"
        d="M 25.089286,75.803571 16.785714,59.107142"
-       id="path53"
-       inkstitch:force_lock_stitches="False" />
+       id="path53" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:5.3303, 2.66515;paint-order:markers stroke fill"
        d="m 19.017857,51.071428 20.178571,-19.375 -12.142857,-12.053571 -15.625,7.053571 -6.6071425,4.285715"
        id="path54"
-       sodipodi:nodetypes="ccccc"
-       inkstitch:force_lock_stitches="False" />
+       sodipodi:nodetypes="ccccc" />
     <path
        id="path935"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.027px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.01874;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -1886,7 +1911,6 @@
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:5.3303, 2.66515;paint-order:markers stroke fill"
        d="m 16.785714,59.107142 8.303572,16.696429"
        id="path300"
-       inkstitch:force_lock_stitches="False"
        sodipodi:nodetypes="cc" />
     <path
        id="path321"
@@ -1948,8 +1972,7 @@
        d="M 9.2807764,75.824575 31.216137,45.487557"
        id="path42"
        sodipodi:nodetypes="cc"
-       inkstitch:ties="3"
-       inkstitch:force_lock_stitches="False" />
+       inkstitch:ties="3" />
     <path
        d="m 18.874384,30.587594 c 0.532143,-1.052645 1.037882,-2.288859 1.456017,-3.480343 0.647556,-1.845225 1.084999,-3.583169 1.084999,-4.365851 0,-4.58381 -2.70485,-3.968905 -3.4527,-3.2464 -0.9591,0.9276 -3.165,4.3594 -3.165,8.8115 0,4.6373 1.2468,5.0086 1.7263,5.0086 0.707333,0 1.55812,-1.160305 2.350384,-2.727506 m 6.760541,7.400983 c 1.878785,-2.239661 3.457618,-5.25818 4.36143,-8.594797 0.521482,-1.925164 0.818245,-3.956226 0.818245,-6.00468 0,-6.9564 -3.0691,-10.3882 -4.9873,-11.5012 -1.944696,-1.253756 -5.811135,-1.94786 -8.4401,-1.94786 -6.5218,0 -12.37234,8.16226 -12.37234,18.55046 0,6.9564 2.39775,10.2027 5.17914,11.3158 2.0141,0.8347 5.5628,2.1332 8.7278,2.1332 2.270788,0 4.669418,-1.514662 6.713125,-3.950923 M 16.1765,31.9387 13.4607,42.4443 M 15.7805,25.2633 4.18173,22.4728 M 18.687822,20.708127 22.160221,7.0079332 M 18.309015,25.885159 31.88294,29.483827"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.0158px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:2.28102;stroke-opacity:1"
@@ -1967,8 +1990,7 @@
        d="M 31.756671,40.279832 62.124381,15.657364"
        id="path48"
        sodipodi:nodetypes="cc"
-       inkstitch:ties="3"
-       inkstitch:force_lock_stitches="False" />
+       inkstitch:ties="3" />
     <path
        id="path1787"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.0158px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:2.28102;stroke-opacity:1"
@@ -1978,15 +2000,13 @@
        inkstitch:contour_underlay="True"
        inkstitch:ties="1"
        inkstitch:reverse_rails="none"
-       inkstitch:force_lock_stitches="False"
        inkstitch:max_stitch_length_mm="9" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:5.3303, 2.66515;paint-order:markers stroke fill"
        d="M 31.216137,45.487557 13.763328,77.592342"
        id="path52"
        sodipodi:nodetypes="cc"
-       inkstitch:ties="3"
-       inkstitch:force_lock_stitches="False" />
+       inkstitch:ties="3" />
     <path
        id="path49"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.0158px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:2.28102;stroke-opacity:1"
@@ -2005,8 +2025,7 @@
        d="m 43.761205,53.087939 c 0,0 7.467535,0.312091 10.664683,2.648767 3.197148,2.336677 3.840172,11.000983 3.840172,11.000983"
        id="path46"
        sodipodi:nodetypes="czc"
-       inkstitch:ties="3"
-       inkstitch:force_lock_stitches="False" />
+       inkstitch:ties="3" />
     <path
        d="M 51.463885,64.103865 C 51.835471,62.898614 52.112449,61.856508 52.2448,61.262 52.735872,59.056157 50.919787,56.466596 48.792,58.0156 48.513387,58.285033 48.129561,58.765804 47.725161,59.42153 46.737448,61.023084 45.627,63.668308 45.627,66.8271 c 0,4.6373 1.2468,5.0086 1.7264,5.0086 1.401216,0 3.10335,-4.465159 4.110485,-7.731835 m 9.587134,2.910932 c 0.38074,-1.653574 0.592881,-3.373071 0.592881,-5.104997 0,-6.9565 -3.0691,-10.3883 -4.9873,-11.5013 -1.944654,-1.253728 -5.811132,-1.9479 -8.44,-1.9479 -2.473198,0 -4.849846,1.173767 -6.847516,3.197576 -3.270248,3.313038 -5.524884,8.904078 -5.524884,15.352924 0,6.9564 2.3977,10.2027 5.1791,11.3158 2.0141,0.8347 5.5628,2.1332 8.7278,2.1332 4.544433,0 9.60088,-6.066275 11.299919,-13.445303 M 47.0059,70.4593 44.2901,80.9649 m 2.3197,-17.181 -11.5987,-2.7905 m 15.2764,3.7207 12.3908,3.8301 M 49.750013,59.851538 53.601219,45.204326"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.0158px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:2.28102;stroke-opacity:1"
@@ -2024,8 +2043,7 @@
        d="m 65.529929,69.83205 c 7.260397,2.623873 7.002218,-0.05588 11.300312,8.062504"
        id="path47"
        sodipodi:nodetypes="cc"
-       inkstitch:ties="3"
-       inkstitch:force_lock_stitches="False" />
+       inkstitch:ties="3" />
     <path
        id="path1790"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.0158px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:2.28102;stroke-opacity:1"
@@ -2066,15 +2084,13 @@
        d="m 31.440998,76.013979 c 0,0 17.214115,-6.59559 21.086933,-11.364216 3.872818,-4.768626 1.595913,-12.291733 1.595913,-12.291733"
        id="path39"
        sodipodi:nodetypes="czc"
-       inkstitch:ties="1"
-       inkstitch:force_lock_stitches="False" />
+       inkstitch:ties="1" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:5.3303, 2.66515;paint-order:markers stroke fill"
        d="M 44.455248,52.906739 C 35.609555,62.213941 24.51975,50.932988 24.820564,44.58227 24.908943,42.71643 39.582736,31.536342 43.904585,43.872166"
        id="path40"
        sodipodi:nodetypes="csc"
-       inkstitch:ties="3"
-       inkstitch:force_lock_stitches="False" />
+       inkstitch:ties="3" />
     <path
        id="path1744"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.0158px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:2.20823;stroke-opacity:1"
@@ -2093,8 +2109,7 @@
        d="m 54.041209,52.275394 c 0,0 2.35954,7.605743 -1.513278,12.374369 -3.872818,4.768626 -21.086933,11.364216 -21.086933,11.364216"
        id="path41"
        sodipodi:nodetypes="czc"
-       inkstitch:ties="3"
-       inkstitch:force_lock_stitches="False" />
+       inkstitch:ties="3" />
     <path
        id="path4471"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.0158px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:2.20823;stroke-opacity:1"
@@ -2279,15 +2294,13 @@
        d="M 5.2401663,74.435615 16.099306,67.427682"
        id="path33"
        sodipodi:nodetypes="cc"
-       inkstitch:ties="1"
-       inkstitch:force_lock_stitches="False" />
+       inkstitch:ties="1" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.944882;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:2, 1;paint-order:markers stroke fill"
        d="M 17.614535,58.967655 19.571705,43.531261 5.4927045,40.090429"
        id="path34"
        sodipodi:nodetypes="ccc"
-       inkstitch:ties="1"
-       inkstitch:force_lock_stitches="False" />
+       inkstitch:ties="1" />
     <path
        id="path10696"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.0158px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:2.7664;stroke-opacity:1"
@@ -2304,8 +2317,7 @@
        d="m 17.298862,36.112953 22.665297,9.722718"
        id="path35"
        sodipodi:nodetypes="cc"
-       inkstitch:ties="3"
-       inkstitch:force_lock_stitches="False" />
+       inkstitch:ties="3" />
     <path
        d="m 39.5837,35.9498 c -0.6261,-0.7142 -1.3416,-1.1605 -2.5937,-1.1159 -1.2521,0.0446 -3.9353,0.223 -7.1551,0.4019 m 11.3587,9.641 c 0,1.5176 -0.9838,2.4104 -1.9677,2.4996 -2.2359,0.2681 -6.6184,0.5356 -11.3586,0.8927 M 33.564,33.5318 33.2655,49.1716"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.0158px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:2.7664;stroke-opacity:1"
@@ -2321,8 +2333,7 @@
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.944882;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:2, 1;paint-order:markers stroke fill"
        d="M 25.695755,48.108515 20.076782,26.327101"
        id="path36"
-       inkstitch:ties="3"
-       inkstitch:force_lock_stitches="False" />
+       inkstitch:ties="3" />
     <path
        id="path10692"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.0158px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:2.7664;stroke-opacity:1"
@@ -2339,8 +2350,7 @@
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.944882;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:2, 1;paint-order:markers stroke fill"
        d="M 16.667517,67.112009 8.523162,76.077113"
        id="path37"
-       inkstitch:ties="1"
-       inkstitch:force_lock_stitches="False" />
+       inkstitch:ties="1" />
     <path
        id="path1750"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.0158px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:2.7664;stroke-opacity:1"
@@ -2382,15 +2392,13 @@
        d="M 36.071428,79.285714 33.749999,69.821428"
        id="path29"
        sodipodi:nodetypes="cc"
-       inkstitch:ties="1"
-       inkstitch:force_lock_stitches="False" />
+       inkstitch:ties="1" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.944882;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:2, 1;paint-order:markers stroke fill"
        d="M 31.785714,59.464285 31.25,43.392857 35.357143,32.5 l 9.464285,1.25 -1.428571,10.892857 -1.25,6.785714 4.285714,6.964286"
        id="path32"
        inkstitch:ties="1"
-       sodipodi:nodetypes="ccccccc"
-       inkstitch:force_lock_stitches="False" />
+       sodipodi:nodetypes="ccccccc" />
     <path
        id="path8022"
        d="m 50.615,58.1617 c 0.4674,-0.8414 0.8413,-1.6828 0.0935,-2.4308 -1.2152,-1.0284 -3.3653,-5.2357 -4.674,-8.508 3.2718,-2.5244 5.5153,-6.6381 5.5153,-10.7519 0,-4.8617 -5.5153,-7.947 -11.8718,-7.947 -5.3283,0 -11.311,3.2723 -12.4327,4.2073 -0.3739,0.3742 -0.4674,0.9349 -0.1869,1.7763 l -10e-5,3e-4 1.7761,5.3292 c -0.7478,3.9267 -1.963,11.6868 -2.8978,18.1379 -0.0935,0.6544 0.1869,1.122 0.3739,1.4959 m 17.574,1.4957 c -1.9631,-0.0934 -3.6457,-6.1707 -5.1413,-11.2193 -1.4957,0.1874 -3.1089,0.8032 -3.7632,0.8032 l 1.3787,-6.0536 c 2.6174,-0.2802 5.0479,-1.8699 5.0479,-5.1422 0,-0.935 -0.1394,-2.6964 -1.6351,-2.6964 -0.7478,0 -1.4957,0.4676 -2.337,1.0284 v 0 c 0.3739,0.3743 0.6543,1.0285 0.595,1.5161 -0.0594,0.4876 -0.0841,0.6204 -0.1094,0.7531 -0.256,1.3483 -0.753,3.2568 -1.0934,4.619 l -1.1058,4.9616 c -0.4674,2.6178 -1.0908,6.2882 -1.1843,10.3085 -0.0935,0.561 -0.4674,0.8414 -1.1217,0.8414 M 40.47,39.5749 52.4917,36.5965 M 48.7418,50.6057 39.312,55.2938 M 35.8378,53.4738 25.6911,52.481 M 38.0988,37.9202 25.9117,32.7357 m 13.7312,4.7984 1.9852,-9.5417"
@@ -2425,7 +2433,6 @@
        d="M 7.7024131,27.337253 22.823258,14.691821"
        id="path23"
        inkstitch:ties="1"
-       inkstitch:force_lock_stitches="False"
        sodipodi:nodetypes="cc" />
     <path
        d="M 16.5186,12.4627 4.44625,28.6742 M 25.0985,12.4627 11.0429,28.6742"
@@ -2449,7 +2456,6 @@
        d="M 7.7024131,27.337253 22.823258,14.196008"
        id="path25"
        inkstitch:ties="1"
-       inkstitch:force_lock_stitches="False"
        sodipodi:nodetypes="cc" />
     <path
        d="M 16.5186,12.4627 4.44625,28.6742 M 25.0985,12.4627 11.0429,28.6742"
@@ -2473,7 +2479,6 @@
        d="M 7.7024131,27.337253 23.814886,13.20438"
        id="path27"
        inkstitch:ties="1"
-       inkstitch:force_lock_stitches="False"
        sodipodi:nodetypes="cc" />
     <path
        d="M 16.5186,12.4627 4.44625,28.6742 M 25.0985,12.4627 11.0429,28.6742"
@@ -2498,7 +2503,6 @@
        d="M 9.1923204,27.650918 15.73802,13.439629"
        id="path104"
        inkstitch:ties="1"
-       inkstitch:force_lock_stitches="False"
        sodipodi:nodetypes="cc" />
     <path
        d="M 16.5186,12.4627 4.44625,28.6742 M 25.0985,12.4627 11.0429,28.6742"
@@ -2523,7 +2527,6 @@
        d="M 7.7024131,27.337253 24.062793,13.865465"
        id="path30"
        inkstitch:ties="1"
-       inkstitch:force_lock_stitches="False"
        sodipodi:nodetypes="cc" />
     <path
        d="M 16.5186,12.4627 4.44625,28.6742 M 25.0985,12.4627 11.0429,28.6742"
@@ -2612,7 +2615,7 @@
   </g>
   <g
      id="g33131"
-     style="display:inline"
+     style="display:none"
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Y">
     <path
@@ -2640,7 +2643,7 @@
        inkstitch:ties="3" />
     <path
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.027px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.00763;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 45.8886,10.9496 c 3.0016,-0.7277 7.1858,3.6384 9.5507,5.2756 0.7277,0.4549 1.8192,1.4554 2.0011,2.8197 0.1819,1.6373 -0.6367,3.6384 -1.3644,4.9118 -7.0948,11.5517 -18.7375,37.9299 -22.3759,51.7556 -0.2753,1.1012 -1.2171,2.3023 -2.6036,2.7158 M 45.8886,10.9496 c -1.0915,0.0909 -2.0011,1.3644 -2.6378,2.0011 -2.365,2.5468 -8.6411,14.3715 -13.4619,27.7425 l -8.2773,13.5529 c -2.0921,4.7298 -3.9112,8.823 -4.9118,11.7336 -0.5457,1.5463 -0.5457,6.1851 2.0011,7.4586 l 9.2778,4.548 c 1.2206,0.646 2.3137,0.7115 3.2178,0.4422 M 35.4779,15.227872 57.120657,12.5385 m -35.959943,64.3365 16.071429,-5"
+       d="m 46.650601,10.9496 c 1.71206,-0.551854 6.423799,3.6384 8.788699,5.2756 0.7277,0.4549 1.8192,1.4554 2.0011,2.8197 0.1819,1.6373 -0.6367,3.6384 -1.3644,4.9118 -7.0948,11.5517 -18.7375,37.9299 -22.3759,51.7556 -0.2753,1.1012 -0.513714,1.833376 -1.900214,2.246876 M 45.712754,11.242677 C 44.621254,11.333577 43.8875,12.314 43.2508,12.9507 40.8858,15.4975 34.6097,27.3222 29.7889,40.6932 l -8.2773,13.5529 c -2.0921,4.7298 -3.9112,8.823 -4.9118,11.7336 -0.5457,1.5463 -0.5457,6.1851 2.0011,7.4586 l 9.2778,4.548 c 1.2206,0.646 1.024159,0.418423 1.811028,0.676662 M 35.4779,15.227872 57.120657,12.5385"
        id="path873"
        inkstitch:satin_column="True"
        inkstitch:contour_underlay="True"
@@ -2661,22 +2664,19 @@
        d="M 30.011495,77.165818 C 24.60012,62.038142 26.180763,58.505863 21.757072,48.709297 13.479889,30.378906 23.581044,23.742682 24.467704,12.78435"
        id="path227"
        sodipodi:nodetypes="csc"
-       inkstitch:ties="2"
-       inkstitch:force_lock_stitches="False" />
+       inkstitch:ties="2" />
     <path
        style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.944882;stroke-linejoin:round;paint-order:markers stroke fill"
        d="M 24.011428,6.4397224 C 21.027071,2.5253814 19.202195,-0.50507622 24.263966,-4.4194173"
        id="path233"
        sodipodi:nodetypes="cc"
-       inkstitch:ties="2"
-       inkstitch:force_lock_stitches="False" />
+       inkstitch:ties="2" />
     <path
        style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.944882;stroke-linejoin:round;paint-order:markers stroke fill"
        d="M 37.395949,-5.6821079 46.992398,8.207489"
        id="path234"
        sodipodi:nodetypes="cc"
-       inkstitch:ties="2"
-       inkstitch:force_lock_stitches="False" />
+       inkstitch:ties="2" />
     <path
        id="path241"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.027px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.659881;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -2693,8 +2693,7 @@
        d="m 24.642773,-5.8083771 c -4.380814,0.2670186 -9.450574,2.2071909 -11.616754,-2.9041885"
        id="path242"
        sodipodi:nodetypes="cc"
-       inkstitch:ties="1"
-       inkstitch:force_lock_stitches="False" />
+       inkstitch:ties="1" />
     <path
        d="m 13.2691,-8.57956 c -0.4043,0.30446 -0.5988,0.75146 -0.7024,1.16811 -0.5425,2.2628 -1.0839,5.43069 -1.0839,8.50811 0,1.08614 0.2709,1.99122 0.8134,2.71531 1.9869,2.53432 4.9673,3.25839 10.4766,3.25839 0.4975,0 0.8416,-0.0983 1.0976,-0.28351 M 13.269,-8.57949 C 13.5672,-8.8034 13.9787,-8.95 14.5536,-8.95 c 2.7998,0 6.8639,0.0903 9.754,1.9913 1.0838,0.72409 2.3484,2.71529 1.8518,5.65691 -0.4967,2.94165 -0.6767,3.84672 -1.4901,6.65255 -0.2194,0.65886 -0.4051,1.15063 -0.7989,1.43609 M 10.5392,4.02266 26.3118,-6.71827"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.027px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.659881;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -2725,14 +2724,14 @@
        inkstitch:ties="3" />
     <path
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.027px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.00763;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 45.8886,10.9496 c 3.0016,-0.7277 7.1858,3.6384 9.5507,5.2756 0.7277,0.4549 1.8192,1.4554 2.0011,2.8197 0.1819,1.6373 -0.6367,3.6384 -1.3644,4.9118 -7.0948,11.5517 -18.7375,37.9299 -22.3759,51.7556 -0.2753,1.1012 -1.2171,2.3023 -2.6036,2.7158 M 45.8886,10.9496 c -1.0915,0.0909 -2.0011,1.3644 -2.6378,2.0011 -2.365,2.5468 -8.6411,14.3715 -13.4619,27.7425 l -8.2773,13.5529 c -2.0921,4.7298 -3.9112,8.823 -4.9118,11.7336 -0.5457,1.5463 -0.5457,6.1851 2.0011,7.4586 l 9.2778,4.548 c 1.2206,0.646 2.3137,0.7115 3.2178,0.4422 M 35.4779,15.227872 57.120657,12.5385 m -35.959943,64.3365 16.071429,-5"
+       d="m 46.385969,10.700916 c 2.916986,-0.143281 10.766295,6.182888 11.054431,8.343984 0.1819,1.6373 -0.6367,3.6384 -1.3644,4.9118 -7.0948,11.5517 -16.913814,36.437793 -21.381162,49.51744 -0.2753,1.1012 -2.046048,4.043091 -3.266759,4.78817 M 45.225441,11.281179 C 44.133941,11.372079 43.8875,12.314 43.2508,12.9507 40.8858,15.4975 34.6097,27.3222 29.7889,40.6932 l -8.2773,13.5529 c -2.0921,4.7298 -3.9112,8.823 -4.9118,11.7336 -0.5457,1.5463 -0.5457,6.1851 2.0011,7.4586 3.964032,2.281101 7.256339,3.997303 11.500862,5.15599 M 35.4779,15.227872 57.120657,12.5385"
        id="path204"
        inkstitch:satin_column="True"
        inkstitch:contour_underlay="True"
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:force_lock_stitches="True"
-       sodipodi:nodetypes="cccccccccccccccc"
+       sodipodi:nodetypes="cccccccccccccc"
        inkstitch:ties="3"
        inkstitch:max_stitch_length_mm="9" />
   </g>
@@ -2782,8 +2781,8 @@
     <path
        id="path95"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.027px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.01528;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="M 2.19946,70.2066 C 1.28336,68.9235 1.37505,65.8991 2.38322,64.4327 4.03284,61.958 12.373,48.9438 18.2386,42.8033 m -5.2245,35.2852 c 0.591,0.196 1.1312,0.275 1.6132,0.206 0.6394,-0.092 1.1766,-0.4434 1.5945,-1.1227 3.0244,-4.8574 7.6069,-13.3809 11.1813,-20.4378"
-       sodipodi:nodetypes="ccccccc"
+       d="M 2.19946,70.2066 C 1.28336,68.9235 1.37505,65.8991 2.38322,64.4327 4.03284,61.958 12.373,48.9438 18.2386,42.8033 m -5.2245,35.2852 c 0.591,0.196 1.1312,0.275 1.6132,0.206 1.500154,-0.215849 5.751581,-7.692659 12.7758,-21.5605 M 11.771065,41.281621 27.023712,63.994802"
+       sodipodi:nodetypes="cccccc"
        inkstitch:satin_column="True"
        inkstitch:ties="3"
        inkstitch:contour_underlay="True"
@@ -2879,7 +2878,6 @@
        inkstitch:contour_underlay="True"
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
-       inkstitch:force_lock_stitches="False"
        inkstitch:ties="3"
        inkstitch:max_stitch_length_mm="9" />
     <path
@@ -2910,22 +2908,19 @@
        d="M 25.380083,77.908015 11.364216,48.866129 25.127546,16.036171"
        id="path3"
        sodipodi:nodetypes="ccc"
-       inkstitch:ties="2"
-       inkstitch:force_lock_stitches="False" />
+       inkstitch:ties="2" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.944882;stroke-linejoin:round;paint-order:markers stroke fill"
        d="M 26.011428,6.4397224 C 23.027071,2.5253814 21.202195,-0.50507623 26.263966,-4.4194173"
        id="path4"
        sodipodi:nodetypes="cc"
-       inkstitch:ties="2"
-       inkstitch:force_lock_stitches="False" />
+       inkstitch:ties="2" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.944882;stroke-linejoin:round;paint-order:markers stroke fill"
        d="M 39.395949,-5.6821079 48.992398,8.2074894"
        id="path5"
        sodipodi:nodetypes="cc"
-       inkstitch:ties="2"
-       inkstitch:force_lock_stitches="False" />
+       inkstitch:ties="2" />
     <path
        id="path1730-8"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.027px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.659881;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -2942,8 +2937,7 @@
        d="m 26.642773,-5.8083771 c -4.380814,0.2670186 -9.450574,2.2071909 -11.616754,-2.9041885"
        id="path6"
        sodipodi:nodetypes="cc"
-       inkstitch:ties="1"
-       inkstitch:force_lock_stitches="False" />
+       inkstitch:ties="1" />
     <path
        d="m 15.2691,-8.57956 c -0.4043,0.30446 -0.5988,0.75146 -0.7024,1.16811 -0.5425,2.2628 -1.0839,5.43069 -1.0839,8.50811 0,1.08614 0.2709,1.99122 0.8134,2.71531 1.9869,2.53432 4.9673,3.25839 10.4766,3.25839 0.4975,0 0.8416,-0.0983 1.0976,-0.28351 M 15.269,-8.57949 C 15.5672,-8.8034 15.9787,-8.95 16.5536,-8.95 c 2.7998,0 6.8639,0.0903 9.754,1.9913 1.0838,0.72409 2.3484,2.71529 1.8518,5.65691 -0.4967,2.94165 -0.6767,3.84672 -1.4901,6.65255 -0.2194,0.65886 -0.4051,1.15063 -0.7989,1.43609 M 12.5392,4.02266 28.3118,-6.71827"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.027px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.659881;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -2960,8 +2954,7 @@
        d="M 25.758889,15.278557 C 20.773485,16.450001 15.633571,18.600001 11.616754,13.637059"
        id="path7"
        sodipodi:nodetypes="cc"
-       inkstitch:ties="1"
-       inkstitch:force_lock_stitches="False" />
+       inkstitch:ties="1" />
     <path
        id="path394"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.027px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.793725;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -3000,7 +2993,6 @@
        style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:markers stroke fill"
        d="m 27.108467,78.570787 c 5.6014,-4.57575 11.202799,-9.1515 16.804199,-13.72725 1.437272,-17.327303 2.874543,-34.654605 4.311815,-51.981908 M 47.037447,3.9143411 C 43.638612,0.89676725 40.030533,-2.1527823 35.511843,-3.2654373 33.68206,-5.148503 32.215757,-3.6102322 30.642894,-2.4226834 27.96339,-0.49974547 25.283887,1.4231924 22.604383,3.3461303"
        id="path263"
-       inkstitch:force_lock_stitches="False"
        inkstitch:max_stitch_length_mm="9" />
     <path
        id="path267"
@@ -3015,8 +3007,7 @@
     <path
        style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:5.3303, 2.66515;paint-order:markers stroke fill"
        d="M 48.259528,13.068849 C 45.713963,27.454073 42.148984,41.669337 37.890921,55.642729 35.909038,61.269855 34.376442,67.34023 30.554007,72.049569 26.974587,74.69624 24.03502,69.344039 22.782459,66.584105 17.818943,55.013201 15.898137,42.430638 13.850643,30.088729 13.058556,24.7314 12.313478,19.360995 11.86646,13.962387"
-       id="path268"
-       inkstitch:force_lock_stitches="False" />
+       id="path268" />
     <path
        id="path391"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.027px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.793725;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -3111,7 +3102,6 @@
        inkstitch:contour_underlay="True"
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
-       inkstitch:force_lock_stitches="False"
        inkstitch:swap_satin_rails="True"
        inkstitch:max_stitch_length_mm="9"
        sodipodi:nodetypes="cccc" />
@@ -3159,8 +3149,7 @@
        style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:markers stroke fill"
        d="M 27.760115,78.167712 C 38.366628,59.324502 35.001691,58.184109 43.597511,40.234185 44.284269,38.800087 41.817145,14.506765 41.928188,12.914579"
        id="path423"
-       sodipodi:nodetypes="csc"
-       inkstitch:force_lock_stitches="False" />
+       sodipodi:nodetypes="csc" />
     <path
        style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.944882;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:2, 1;paint-order:markers stroke fill"
        d="M 36.320357,6.7688031 C 36.190823,-1.0744662 43.569639,-4.4127252 49.894288,-8.3834847"
@@ -3183,8 +3172,7 @@
        style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:5.3303, 2.66515;paint-order:markers stroke fill"
        d="M 42.375645,13.122821 C 56.22766,17.559231 32.779583,70.928899 27.606568,71.326812 22.433553,71.724726 12.627546,13.446885 12.627546,13.446885"
        id="path438"
-       sodipodi:nodetypes="czc"
-       inkstitch:force_lock_stitches="False" />
+       sodipodi:nodetypes="czc" />
     <path
        id="path406"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.027px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.793725;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -3223,8 +3211,7 @@
        style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:markers stroke fill"
        d="M 26.79782,78.381555 47.574726,33.464446 40.688771,12.721104"
        id="path256"
-       sodipodi:nodetypes="ccc"
-       inkstitch:force_lock_stitches="False" />
+       sodipodi:nodetypes="ccc" />
     <path
        style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.944882;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:2, 1;paint-order:markers stroke fill"
        d="M 36.904449,6.7688031 C 37.033983,-1.0744662 29.655167,-4.4127252 23.330518,-8.3834847"
@@ -3371,7 +3358,7 @@
        inkstitch:ties="3" />
     <path
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.027px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.05;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 3.7682,20.9062 c 0.07476,-0.5947 0.33483,-1.0846 0.80302,-1.4591 2.2748,-1.8009 14.59668,-9.3836 25.49668,-9.3836 4.4548,0 14.9758,4.9287 17.4401,6.2557 2.2748,1.2322 4.6444,6.0661 4.6444,10.6157 0,10.9 -2.8435,19.1462 -11.1844,23.1271 L 36.349414,50.765057 22.2338,49.0221 M 3.8574857,20.9062 c -0.07662,0.6086 -0.047916,1.3272 0.2397943,2.1426 L 8.7366157,32.405141 22.013713,29.59849 c 2.0852,-1.5165 4.073887,-4.36969 6.348687,-4.36969 5.0235,0 7.5827,3.3175 7.5827,6.8244 0,6.4453 -3.1783,13.3341 -13.6987,13.797 M 32.7281,32.8461 54.764771,34.134286 M 29.8291,27.512 39.555457,10.620356"
+       d="m 3.7682,20.9062 c 0.07476,-0.5947 0.33483,-1.0846 0.80302,-1.4591 2.2748,-1.8009 14.59668,-9.3836 25.49668,-9.3836 4.4548,0 14.9758,4.9287 17.4401,6.2557 2.2748,1.2322 4.6444,6.0661 4.6444,10.6157 0,10.9 -2.8435,19.1462 -11.1844,23.1271 L 36.349414,50.765057 22.2338,49.0221 M 3.8574857,20.9062 c -0.07662,0.6086 -0.047916,1.3272 0.2397943,2.1426 L 8.7366157,32.405141 22.013713,29.59849 c 2.0852,-1.5165 4.073887,-4.36969 6.348687,-4.36969 5.0235,0 7.5827,3.3175 7.5827,6.8244 0,6.4453 -3.1783,13.3341 -13.6987,13.797 M 32.7281,32.8461 54.764771,34.134286 M 29.8291,27.512 39.555457,10.620356 M 26.194763,41.6132 25.863184,52.886896"
        id="path3815"
        inkstitch:satin_column="True"
        inkstitch:contour_underlay="True"
@@ -3413,7 +3400,7 @@
        inkstitch:max_stitch_length_mm="9" />
     <path
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.027px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.05;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 25.159414,48.692686 11.8278,0.58 L 40.968,50.062 c 3.9809,5.213 9.8575,10.8052 12.0375,12.7957 0.7666,0.7186 1.0004,1.5098 0.9097,2.3368 -0.0889,0.8095 -0.4886,1.6534 -1.0043,2.4971 -1.8008,2.8436 -8.3409,9.7626 -12.4166,9.6679 M 31.021114,74.753343 53.859586,74.0123 M 22.678571,50.178571 21.97375,53.620671 C 25.9587,64.4698 36.0395,77.2645 40.4943,77.3595"
+       d="m 25.159414,48.692686 11.8278,0.58 L 40.968,50.062 c 3.9809,5.213 9.8575,10.8052 12.0375,12.7957 0.7666,0.7186 1.0004,1.5098 0.9097,2.3368 -0.0889,0.8095 -0.4886,1.6534 -1.0043,2.4971 -1.8008,2.8436 -8.3409,9.7626 -12.4166,9.6679 M 31.021114,74.753343 53.859586,74.0123 m -31.181015,-23.833729 -0.704821,3.4421 c 3.98495,10.849129 12.573643,23.31225 17.028443,23.40725"
        id="path3694"
        inkstitch:satin_column="True"
        inkstitch:contour_underlay="True"
@@ -3432,12 +3419,11 @@
     <path
        id="path863"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.027px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.04472;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 28.0644,65.3247 c 1.9804,0 2.9235,-0.66 3.395,-1.1315 1.8862,-1.6976 5.28115,-12.354238 5.7527,-24.4255 0.47155,-12.071262 -3.1121,-11.7883 -5.847,-11.7883 -2.7349,0 -3.791591,1.798673 -4.585927,3.230654 C 25.984837,32.642035 22.406,39.6264 22.406,52.9708 c 0,13.3444 2.7349,12.3539 5.6584,12.3539 m 0,14.7121 c 7.8737,-0.1785 12.339,-2.7162 16.2207,-5.6582 5.9414,-6.6958 10.751,-17.91825 10.751,-32.3472 0,-14.42895 -2.705926,-20.496386 -8.3933,-25.18 C 40.955426,12.167786 32.709944,10.94281 25.188,12.9848 17.666056,15.02679 4.4877556,32.128989 3.63899,48.6327 2.7902244,65.136411 8.82585,73.907 13.6355,76.4533 c 3.0178,1.6032 8.8648,3.0179 14.4289,3.5835 M 26.7432,47.6016 -0.946848,44.6348 m 34.612548,2.9668 22.5805,2.9668"
+       d="m 28.0644,65.3247 c 1.9804,0 2.9235,-0.66 3.395,-1.1315 1.8862,-1.6976 5.28115,-12.354238 5.7527,-24.4255 0.47155,-12.071262 -3.1121,-11.7883 -5.847,-11.7883 -2.7349,0 -3.791591,1.798673 -4.585927,3.230654 C 25.984837,32.642035 22.406,39.6264 22.406,52.9708 c 0,13.3444 2.7349,12.3539 5.6584,12.3539 m 0,14.7121 c 7.8737,-0.1785 12.339,-2.7162 16.2207,-5.6582 5.9414,-6.6958 10.751,-17.91825 10.751,-32.3472 0,-14.42895 -2.705926,-20.496386 -8.3933,-25.18 C 40.955426,12.167786 32.709944,10.94281 25.188,12.9848 17.666056,15.02679 4.4877556,32.128989 3.63899,48.6327 2.7902244,65.136411 8.82585,73.907 13.6355,76.4533 c 3.0178,1.6032 8.69901,3.0179 14.26311,3.5835 M 26.7432,47.6016 -0.946848,44.6348 M 33.6657,47.6016 56.2462,50.5684 M 31.334242,30.173715 36.473721,6.6315857 M 33.821087,37.634249 57.529006,29.013187"
        inkstitch:satin_column="True"
        inkstitch:contour_underlay="True"
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
-       inkstitch:force_lock_stitches="False"
        sodipodi:nodetypes="cczzzzccczzzzcccccc"
        inkstitch:ties="3"
        inkstitch:contour_underlay_inset_mm="0.6"
@@ -3480,7 +3466,6 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        sodipodi:nodetypes="cccsccczzscccc"
-       inkstitch:force_lock_stitches="False"
        inkstitch:max_stitch_length_mm="9" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:markers stroke fill"
@@ -3509,8 +3494,7 @@
        style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:markers stroke fill"
        d="M 26.389257,79.236929 C 8.905313,54.913738 12.247877,31.200869 29.928188,12.914579"
        id="path480"
-       sodipodi:nodetypes="cc"
-       inkstitch:force_lock_stitches="False" />
+       sodipodi:nodetypes="cc" />
     <path
        style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.944882;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:2, 1;paint-order:markers stroke fill"
        d="M 28.834483,6.7688031 C 28.964017,-1.0744662 21.585201,-4.4127252 15.260552,-8.3834847"
@@ -3532,8 +3516,7 @@
        style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:5.3303, 2.66515;paint-order:markers stroke fill"
        d="M 29.520272,13.594407 C 15.426525,17.308118 11.594478,69.743814 26.75145,79.607717"
        id="path483"
-       sodipodi:nodetypes="cc"
-       inkstitch:force_lock_stitches="False" />
+       sodipodi:nodetypes="cc" />
     <path
        id="path879"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.027px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.01481;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -3574,7 +3557,6 @@
        inkstitch:contour_underlay="True"
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
-       inkstitch:force_lock_stitches="False"
        inkstitch:swap_satin_rails="True"
        inkstitch:max_stitch_length_mm="9" />
     <path
@@ -3611,7 +3593,7 @@
     <path
        id="path494"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.027px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.01481;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 12.276393,74.974053 c 0.600324,0.535343 1.174826,0.971847 1.699307,1.317247 3.6643,2.4734 10.9928,3.9391 17.4053,3.9391 13.283,0 23.7261,-17.1303 23.7261,-39.2075 0,-8.780642 -2.231337,-14.540207 -4.846144,-18.467611 M 23.04067,60.697102 c 0.921269,4.270398 2.88775,5.334198 4.95093,5.334198 1.9237,0 2.8401,-0.6411 3.2978,-1.0993 1.8321,-1.6489 5.618643,-10.368558 5.4048,-22.1078 M 56.9684,45.829 33.772957,51.658012 M 26.6962,84.6598 28.4396,62.9461"
+       d="m 12.276393,74.974053 c 0.600324,0.535343 1.174826,0.971847 1.699307,1.317247 3.6643,2.4734 10.9928,3.9391 17.4053,3.9391 13.283,0 23.7261,-17.1303 23.7261,-39.2075 0,-8.780642 -2.231337,-14.540207 -4.846144,-18.467611 M 23.04067,60.697102 c 0.921269,4.270398 2.88775,5.334198 4.95093,5.334198 1.9237,0 2.8401,-0.6411 3.2978,-1.0993 1.8321,-1.6489 5.618643,-10.368558 5.4048,-22.1078 M 56.9684,45.829 33.772957,51.658012 M 26.6962,84.6598 28.4396,62.9461 m 2.231484,-6.080253 20.226336,13.92633"
        sodipodi:nodetypes="ccssccscccccc"
        inkstitch:satin_column="True"
        inkstitch:reverse_rails="none"
@@ -3673,7 +3655,6 @@
        inkstitch:contour_underlay="True"
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
-       inkstitch:force_lock_stitches="False"
        inkstitch:swap_satin_rails="True"
        inkstitch:max_stitch_length_mm="9"
        sodipodi:nodetypes="cccc" />
@@ -3727,8 +3708,7 @@
        style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:markers stroke fill"
        d="M 21.344816,79.023085 C 14.006123,57.781058 10.242153,37.729004 27.131577,20.239836 28.236133,19.096057 37.817145,14.506765 37.928188,12.914579"
        id="path400"
-       sodipodi:nodetypes="csc"
-       inkstitch:force_lock_stitches="False" />
+       sodipodi:nodetypes="csc" />
     <path
        style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.944882;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:2, 1;paint-order:markers stroke fill"
        d="M 36.320357,6.7688031 C 36.190823,-1.0744662 43.569639,-4.4127252 49.894288,-8.3834847"
@@ -3750,8 +3730,7 @@
        style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:5.3303, 2.66515;paint-order:markers stroke fill"
        d="m 38.375645,13.122821 c 13.852015,4.43641 5.822663,51.420807 -10.787946,67.019505"
        id="path404"
-       sodipodi:nodetypes="cc"
-       inkstitch:force_lock_stitches="False" />
+       sodipodi:nodetypes="cc" />
     <path
        id="path399"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.027px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.01481;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -3776,19 +3755,16 @@
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.944882;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:5.3303, 2.66515;paint-order:markers stroke fill"
        d="m 30.803571,79.464286 c -6.517857,-8.125 -13.035714,-16.25 -19.553571,-24.375 5.327381,-14.136905 10.654762,-28.27381 15.982143,-42.410715"
        id="path166"
-       inkstitch:force_lock_stitches="False"
        inkstitch:ties="3" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.944882;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:5.3303, 2.66515;paint-order:markers stroke fill"
        d="M 24.196429,6.0714286 C 22.976191,3.7202381 21.755952,1.3690476 20.535714,-0.98214286 22.023809,-3.3630952 23.511905,-5.7440476 25,-8.125"
        id="path167"
-       inkstitch:force_lock_stitches="False"
        inkstitch:ties="3" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.944882;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:5.3303, 2.66515;paint-order:markers stroke fill"
        d="m 39.107143,-7.5 c 2.648809,1.875 5.297619,3.75 7.946428,5.625 0.803572,3.3928571 1.607143,6.7857143 2.410715,10.1785714"
        id="path168"
-       inkstitch:force_lock_stitches="False"
        inkstitch:ties="3" />
     <path
        d="M 49.8373,8.62266 C 46.213893,9.2496342 41.940078,8.928394 38.800906,6.7775486 35.215112,4.1148934 36.946933,-0.82057341 37.349242,-4.5224347 37.65183,-5.6057584 37.588292,-6.9480603 38.5238,-7.73696 M 49.8373,8.62276 c 1.808875,-3.1764249 2.365427,-7.128051 2.520203,-10.7653532 -0.376221,-4.8805711 -6.099804,-5.7747551 -10.009659,-5.9420807 -1.254907,0.05922 -2.68937,-0.3525857 -3.824144,0.3478139 m 13.9189,1.9815 C 46.8319,-1.94363 41.2212,1.8681 35.6105,5.67983"
@@ -3804,8 +3780,7 @@
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.944882;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:5.3303, 2.66515;paint-order:markers stroke fill"
        d="m 23.928571,-7.8571429 c -2.503709,2.0586385 -7.300588,5.4466221 -9.259202,0.9835157 -0.363202,-0.7399845 -0.619842,-1.5273908 -0.830083,-2.3228014"
-       id="path169"
-       inkstitch:force_lock_stitches="False" />
+       id="path169" />
     <path
        id="path3455"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.027px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.782188;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -3820,8 +3795,7 @@
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.944882;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:5.3303, 2.66515;paint-order:markers stroke fill"
        d="M 26.875,12.857143 C 20.794023,24.384349 14.565379,36.80562 15.074266,50.191221 c 0.435775,11.675181 7.615905,21.705083 15.818591,29.451636"
-       id="path170"
-       inkstitch:force_lock_stitches="False" />
+       id="path170" />
     <path
        d="M 31.7015,80.2065 C 25.205535,79.976597 18.053018,79.350624 12.801656,75.121086 5.0554451,68.101481 3.6164602,56.857707 4.4329457,46.968762 5.3379943,36.070924 8.6769026,24.517203 17.150364,17.081513 21.32909,13.29536 27.204052,12.215377 32.646133,13.120367 c 6.342409,0.766232 13.424531,2.393872 17.176904,8.078097 6.499625,9.117488 6.317054,21.058754 4.533279,31.647188 -1.867087,9.74363 -6.045688,20.120473 -14.982533,25.344816 C 37.033681,79.4783 34.37885,80.215207 31.7015,80.2065 Z M 31.61,64.9249 c -3.005999,2.68865 -7.758916,0.272654 -8.084214,-3.570425 -1.388636,-7.274186 -0.571001,-14.808971 0.609902,-22.062897 0.944522,-3.958383 1.580879,-8.446229 4.447996,-11.502014 3.48685,-2.125742 7.617827,0.690978 7.851437,4.530158 1.203642,7.77855 0.427282,15.788959 -1.129896,23.469566 C 34.479208,58.940436 33.742958,62.364569 31.61,64.9249 Z M 25.754,45.2094 C 17.889107,44.945633 10.024213,44.681867 2.15932,44.4181 M 34.305,45.6846 c 7.653767,0.05283 15.307533,0.105667 22.9613,0.1585 M 28.7627,62.9418 c -0.580633,7.2299 -1.161267,14.4598 -1.7419,21.6897 M 34.017857,8.75 c -0.982143,6.934524 -1.964285,13.869047 -2.946428,20.803571"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.027px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.742771;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -3846,7 +3820,6 @@
        d="M 26.78314,79.384106 C 13.437402,62.780944 5.3664473,46.031261 22.929051,28.569535 L 47.573826,19.253549 M 47.037447,3.9143411 C 37.870628,-4.2093023 37.903985,-1.5994082 33.337254,-4.3562829 L 22.604383,3.3461303"
        id="path333"
        sodipodi:nodetypes="cccccc"
-       inkstitch:force_lock_stitches="False"
        inkstitch:max_stitch_length_mm="9" />
     <path
        id="path334"
@@ -3863,8 +3836,7 @@
        style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:5.3303, 2.66515;paint-order:markers stroke fill"
        d="M 48.096864,19.623433 C 54.764112,30.637487 41.907199,76.753097 28.295491,79.515851"
        id="path335"
-       sodipodi:nodetypes="cc"
-       inkstitch:force_lock_stitches="False" />
+       sodipodi:nodetypes="cc" />
     <path
        d="M 31.7015,80.2065 C 25.205535,79.976597 18.053018,79.350624 12.801656,75.121086 5.0554451,68.101481 3.6164602,56.857707 4.4329457,46.968762 5.3379943,36.070924 8.6769026,24.517203 17.150364,17.081513 21.32909,13.29536 27.204052,12.215377 32.646133,13.120367 c 6.342409,0.766232 13.424531,2.393872 17.176904,8.078097 6.499625,9.117488 6.317054,21.058754 4.533279,31.647188 -1.867087,9.74363 -6.045688,20.120473 -14.982533,25.344816 C 37.033681,79.4783 34.37885,80.215207 31.7015,80.2065 Z M 31.61,64.9249 c -3.005999,2.68865 -7.758916,0.272654 -8.084214,-3.570425 -1.388636,-7.274186 -0.571001,-14.808971 0.609902,-22.062897 0.944522,-3.958383 1.580879,-8.446229 4.447996,-11.502014 3.48685,-2.125742 7.617827,0.690978 7.851437,4.530158 1.203642,7.77855 0.427282,15.788959 -1.129896,23.469566 C 34.479208,58.940436 33.742958,62.364569 31.61,64.9249 Z M 25.754,45.2094 C 17.889107,44.945633 10.024213,44.681867 2.15932,44.4181 M 34.305,45.6846 c 7.653767,0.05283 15.307533,0.105667 22.9613,0.1585 M 28.7627,62.9418 c -0.580633,7.2299 -1.161267,14.4598 -1.7419,21.6897 M 34.017857,8.75 c -0.982143,6.934524 -1.964285,13.869047 -2.946428,20.803571"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.027px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.742771;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -3969,7 +3941,6 @@
        inkstitch:contour_underlay="True"
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
-       inkstitch:force_lock_stitches="False"
        inkstitch:swap_satin_rails="True"
        inkstitch:max_stitch_length_mm="9" />
     <path
@@ -4059,12 +4030,13 @@
     <path
        id="path62"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.027px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.06786;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="M 11.0227,11.7094 C 9.1882087,14.780888 9.2885484,18.479445 8.7923691,21.905744 M 11.0227,11.7115 c 4.156228,-1.44146 8.509157,0.438698 12.705854,0.790159 1.254865,0.239676 2.505226,0.521207 3.716346,0.932441"
+       d="M 11.0227,11.7094 C 9.1882087,14.780888 9.2885484,18.479445 8.7923691,21.905744 M 11.0227,11.7115 c 5.290289,-0.97628 11.254923,0.08373 16.4222,1.7226"
        inkstitch:satin_column="True"
        inkstitch:contour_underlay="True"
        inkstitch:ties="3"
        inkstitch:reverse_rails="none"
-       inkstitch:max_stitch_length_mm="9" />
+       inkstitch:max_stitch_length_mm="9"
+       sodipodi:nodetypes="cccc" />
     <path
        id="path60"
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:markers stroke fill"
@@ -4091,7 +4063,7 @@
        sodipodi:nodetypes="ccccccccccc" />
     <path
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.027px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.06786;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 59.9301,11.0241 c 5.148013,0.339279 10.345659,0.882097 15.256758,2.548397 2.641569,3.378564 0.02695,7.683812 0.01915,11.462715 -2.580217,17.768169 -4.303412,35.69209 -4.563147,53.644365 -0.03642,0.321551 -0.316435,0.544481 -0.455858,0.822023 M 59.93,11.0241 c -2.449407,15.994979 -5.300164,31.937107 -7.474966,47.968811 -0.362731,4.361605 -0.7756,8.74286 -0.494776,13.122228 1.766498,4.640433 7.146317,6.131891 11.489452,7.314061 2.179789,0.531861 4.603985,1.075358 6.73719,0.0724 M 74.8236,47.5423 C 66.922233,47.229533 59.020867,46.916767 51.1195,46.604"
+       d="m 59.9301,11.0241 c 5.148013,0.339279 10.345659,0.882097 15.256758,2.548397 2.641569,3.378564 0.02695,7.683812 0.01915,11.462715 -2.580217,17.768169 -4.303412,35.69209 -4.563147,53.644365 M 59.93,11.0241 c -2.449407,15.994979 -5.300164,31.937107 -7.474966,47.968811 -0.362731,4.361605 -0.7756,8.74286 -0.494776,13.122228 1.766498,4.640433 7.146317,6.131891 11.489452,7.314061 2.179789,0.531861 4.438195,1.241148 6.5714,0.23819 M 74.8236,47.5423 51.1195,46.604"
        id="path905"
        inkstitch:satin_column="True"
        inkstitch:contour_underlay="True"
@@ -4099,7 +4071,8 @@
        inkstitch:reverse_rails="none"
        inkstitch:force_lock_stitches="True"
        inkstitch:ties="3"
-       inkstitch:max_stitch_length_mm="9" />
+       inkstitch:max_stitch_length_mm="9"
+       sodipodi:nodetypes="ccccccccccc" />
   </g>
   <g
      id="g31663"
@@ -4151,7 +4124,7 @@
     <path
        id="path182"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.027px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.03231;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="M 30.1174,50.7614 3.81483,46.4454 M 15.2382,12.7487 c 0.3298,-0.2178 0.766,-0.3564 1.3405,-0.3564 3.1684,0 11.9279,1.3047 14.3508,2.2366 1.3977,0.5591 2.1433,1.3045 1.8637,2.7955 v 0 C 31.998053,21.841841 30.951681,29.274525 29.892177,38.055025 29.834145,38.535964 29.776072,39.020947 29.718,39.5097 L 29.066541,45.915967 28.0407,56.0038 M 15.2382,12.7488 c -0.526,0.3482 -0.7814,0.8986 -0.896,1.4141 -0.73147,2.438464 -2.145759,10.945287 -3.389061,21.193013 -0.16304,1.443716 -0.346171,3.432902 -0.524739,4.992387 -1.3978,0 -2.7024,0.093 -3.63426,0 -0.83866,0 -1.3978,0.4661 -1.3978,1.3977 0,1.6776 1.86372,6.0572 3.82064,9.5052 -0.1278821,1.32673 -0.2475364,2.639743 -0.3580227,3.930106 M 31.3389,37.4879 8.37503,34.3934"
+       d="M 30.1174,50.7614 3.81483,46.4454 M 15.2382,12.7487 c 0.3298,-0.2178 0.766,-0.3564 1.3405,-0.3564 3.1684,0 11.9279,1.3047 14.3508,2.2366 1.3977,0.5591 2.1433,1.3045 1.8637,2.7955 v 0 C 31.998053,21.841841 30.951681,29.274525 29.892177,38.055025 29.834145,38.535964 29.776072,39.020947 29.718,39.5097 L 29.066541,45.915967 28.0407,56.0038 M 15.2382,12.7488 c -0.526,0.3482 -0.7814,0.8986 -0.896,1.4141 -0.73147,2.438464 -2.145759,10.945287 -3.389061,21.193013 -0.16304,1.443716 -0.346171,3.432902 -0.524739,4.992387 -1.3978,0 -2.7024,0.093 -3.63426,0 -0.83866,0 -1.3978,0.4661 -1.3978,1.3977 0,1.6776 1.86372,6.0572 3.82064,9.5052 -0.1278821,1.32673 -0.2475364,2.639743 -0.3580227,3.930106 M 31.3389,37.4879 8.37503,34.3934 M 4.3105307,50.565841 31.168453,53.550054"
        inkstitch:satin_column="True"
        inkstitch:ties="3"
        inkstitch:contour_underlay="True"
@@ -4250,8 +4223,7 @@
        style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:markers stroke fill"
        d="M 12.294723,79.771537 C 7.9792913,59.063027 8.971187,40.328245 11.131577,20.239836 11.301598,18.658897 21.817145,18.506765 21.928188,16.914579"
        id="path320"
-       sodipodi:nodetypes="csc"
-       inkstitch:force_lock_stitches="False" />
+       sodipodi:nodetypes="csc" />
     <path
        style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.944882;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:2, 1;paint-order:markers stroke fill"
        d="M 20.320357,6.7688031 C 20.190823,-1.0744662 27.569639,-4.4127252 33.894288,-8.3834847"
@@ -4273,8 +4245,7 @@
        style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:5.3303, 2.66515;paint-order:markers stroke fill"
        d="M 22.375645,17.122821 C 19.468934,16.76852 11.827445,18.528343 10.732326,15.02704"
        id="path374"
-       sodipodi:nodetypes="cc"
-       inkstitch:force_lock_stitches="False" />
+       sodipodi:nodetypes="cc" />
     <path
        id="path319"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.027px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.02458;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -4296,8 +4267,7 @@
        style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:markers stroke fill"
        d="M 12.294723,79.771537 C 7.9792913,59.063027 8.971187,40.328245 11.131577,20.239836 11.301598,18.658897 21.817145,18.506765 21.928188,16.914579"
        id="path471"
-       sodipodi:nodetypes="csc"
-       inkstitch:force_lock_stitches="False" />
+       sodipodi:nodetypes="csc" />
     <path
        style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.944882;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:2, 1;paint-order:markers stroke fill"
        d="M 20.834483,6.7688031 C 20.964017,-1.0744662 13.585201,-4.4127252 7.260552,-8.3834847"
@@ -4319,8 +4289,7 @@
        style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:5.3303, 2.66515;paint-order:markers stroke fill"
        d="M 22.375645,17.122821 C 19.468934,16.76852 11.827445,18.528343 10.732326,15.02704"
        id="path474"
-       sodipodi:nodetypes="cc"
-       inkstitch:force_lock_stitches="False" />
+       sodipodi:nodetypes="cc" />
     <path
        id="path475"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.027px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.02458;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -4378,22 +4347,19 @@
        d="M 20.089136,79.518303 C 14.677761,64.390627 11.44767,59.61484 11.364216,48.866129 L 11.095033,14.195841"
        id="path347"
        sodipodi:nodetypes="csc"
-       inkstitch:ties="2"
-       inkstitch:force_lock_stitches="False" />
+       inkstitch:ties="2" />
     <path
        style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.944882;stroke-linejoin:round;paint-order:markers stroke fill"
        d="M 10.011428,6.4397224 C 7.027071,2.5253814 5.202195,-0.50507622 10.263966,-4.4194173"
        id="path348"
        sodipodi:nodetypes="cc"
-       inkstitch:ties="2"
-       inkstitch:force_lock_stitches="False" />
+       inkstitch:ties="2" />
     <path
        style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.944882;stroke-linejoin:round;paint-order:markers stroke fill"
        d="M 23.395949,-5.6821079 32.992398,8.207489"
        id="path349"
        sodipodi:nodetypes="cc"
-       inkstitch:ties="2"
-       inkstitch:force_lock_stitches="False" />
+       inkstitch:ties="2" />
     <path
        id="path350"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.027px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.659881;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -4410,8 +4376,7 @@
        d="M 10.642773,-5.8083771 C 6.261959,-5.5413585 1.192199,-3.6011862 -0.97398102,-8.7125656"
        id="path351"
        sodipodi:nodetypes="cc"
-       inkstitch:ties="1"
-       inkstitch:force_lock_stitches="False" />
+       inkstitch:ties="1" />
     <path
        d="M -0.73090002,-8.57956 C -1.1352,-8.2751 -1.3297,-7.8281 -1.4333,-7.41145 c -0.5425,2.2628 -1.0839,5.43069 -1.0839,8.50811 0,1.08614 0.2709,1.99122 0.8134,2.71531 1.98689998,2.53432 4.9673,3.25839 10.4766,3.25839 0.4975,0 0.8416,-0.0983 1.0976,-0.28351 M -0.73100002,-8.57949 c 0.2982,-0.22391 0.7097,-0.37051 1.2846,-0.37051 C 3.3534,-8.95 7.4175,-8.8597 10.3076,-6.9587 c 1.0838,0.72409 2.3484,2.71529 1.8518,5.65691 -0.4967,2.94165 -0.6767,3.84672 -1.4901,6.65255 -0.2194,0.65886 -0.4051,1.15063 -0.7989,1.43609 M -3.4608,4.02266 12.3118,-6.71827"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.027px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.659881;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -4449,13 +4414,13 @@
     <path
        id="path193"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.027px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.02458;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="M 30.8273,36.837 6.5807,30.8562 M 1.84025,42.8456 29.1579,48.3318 M 13.7433,12.062 c -0.5954,0.3394 -0.8939,0.9208 -1.0748,1.4634 -0.7399,2.7747 -2.4972,14.2433 -3.88451,26.6367 H 5.26941 c -0.83235,0 -1.29484,0.4625 -1.29484,1.3873 0,1.5723 1.84979,5.2719 3.79204,8.139 M 13.7433,12.0617 c 0.3185,-0.1813 0.7218,-0.2936 1.2374,-0.2936 3.1446,0 11.7461,1.2949 14.1508,2.2198 1.4798,0.5549 2.2197,1.2948 1.9422,2.7746 -0.8324,4.7169 -2.1272,12.9484 -3.2371,22.5672 l -1.3873,14.6134"
+       d="M 30.8273,36.837 6.5807,30.8562 M 1.84025,42.8456 29.1579,48.3318 M 13.7433,12.062 c -0.5954,0.3394 -0.8939,0.9208 -1.0748,1.4634 -0.7399,2.7747 -2.4972,14.2433 -3.88451,26.6367 H 5.26941 c -0.83235,0 -1.29484,0.4625 -1.29484,1.3873 0,1.5723 1.84979,5.2719 3.79204,8.139 M 13.7433,12.0617 c 0.3185,-0.1813 0.7218,-0.2936 1.2374,-0.2936 3.1446,0 11.7461,1.2949 14.1508,2.2198 1.4798,0.5549 2.2197,1.2948 1.9422,2.7746 -0.8324,4.7169 -2.1272,12.9484 -3.2371,22.5672 L 26.4493,53.9431 M 2.6526343,46.08952 29.842135,51.560578"
        inkstitch:satin_column="True"
        inkstitch:reverse_rails="none"
        inkstitch:ties="3"
        inkstitch:contour_underlay="True"
-       inkstitch:force_lock_stitches="False"
-       inkstitch:max_stitch_length_mm="9" />
+       inkstitch:max_stitch_length_mm="9"
+       sodipodi:nodetypes="cccccccssccscccccc" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.944882;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:5.3303, 2.66515;paint-order:markers stroke fill"
        d="M 25.714286,53.928572 C 6.341314,58.603051 15.081981,68.431697 23.571429,78.214286"
@@ -4472,7 +4437,6 @@
        inkstitch:contour_underlay="True"
        sodipodi:nodetypes="csccscscccc"
        inkstitch:swap_satin_rails="True"
-       inkstitch:force_lock_stitches="False"
        inkstitch:max_stitch_length_mm="9" />
     <path
        id="path2043"
@@ -4482,7 +4446,6 @@
        inkstitch:contour_underlay="True"
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
-       inkstitch:force_lock_stitches="False"
        sodipodi:nodetypes="cccccc"
        inkstitch:swap_satin_rails="True"
        inkstitch:ties="3"
@@ -4579,7 +4542,6 @@
        inkstitch:reverse_rails="none"
        sodipodi:nodetypes="cccccssc"
        inkstitch:ties="3"
-       inkstitch:force_lock_stitches="False"
        inkstitch:max_stitch_length_mm="9" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.944882;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:5.3303, 2.66515;paint-order:markers stroke fill"
@@ -4595,7 +4557,6 @@
        inkstitch:contour_underlay="True"
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
-       inkstitch:force_lock_stitches="False"
        sodipodi:nodetypes="cccccscccc"
        inkstitch:ties="3"
        inkstitch:max_stitch_length_mm="9" />
@@ -4643,7 +4604,6 @@
        inkstitch:contour_underlay="True"
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
-       inkstitch:force_lock_stitches="False"
        inkstitch:ties="3"
        inkstitch:max_stitch_length_mm="9" />
     <path
@@ -4659,14 +4619,12 @@
        inkstitch:ties="3"
        inkstitch:contour_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:force_lock_stitches="False"
        sodipodi:nodetypes="ccccccccccccccccccc"
        inkstitch:max_stitch_length_mm="9" />
     <path
        style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:5.3303, 2.66515;paint-order:markers stroke fill"
        d="m 43.057752,63.0714 c 0.872336,2.833726 2.205272,5.327423 4.930101,6.790014"
-       id="path64"
-       inkstitch:force_lock_stitches="False" />
+       id="path64" />
     <path
        id="path131"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.027px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.01705;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -4687,8 +4645,7 @@
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:markers stroke fill"
        d="M 24.821428,79.017857 12.5,44.017857 44.553571,41.071428"
        id="path43"
-       sodipodi:nodetypes="ccc"
-       inkstitch:force_lock_stitches="False" />
+       sodipodi:nodetypes="ccc" />
     <path
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.027px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.01705;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 43.7666,45.9441 c -0.2294,1.1307 -0.5098,2.1369 -0.7569,2.8041 -0.2754,0.8264 -1.8362,2.2951 -2.6624,2.2951 v 10e-5 c -5.6003,0 -13.3142,0.047 -17.8128,1.428 M 44.2058,41.1289 c -0.0937,-1.4281 -0.4861,-2.549 -1.3797,-2.847 -4.315,-1.3771 -12.5797,-0.7754 -17.9964,0.2344 m 9.5232,-2.9908 -1.4602,17.297"
@@ -4703,8 +4660,7 @@
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:markers stroke fill"
        d="m 24.017857,38.392857 -9.375,-13.482143 10.133968,-11.354605"
        id="path45"
-       sodipodi:nodetypes="ccc"
-       inkstitch:force_lock_stitches="False" />
+       sodipodi:nodetypes="ccc" />
     <path
        style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.944882;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:2, 1;paint-order:markers stroke fill"
        d="M 28.320357,6.7688031 C 28.190823,-1.0744662 35.569639,-4.4127252 41.894288,-8.3834847"
@@ -4726,8 +4682,7 @@
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:5.3303, 2.66515;paint-order:markers stroke fill"
        d="m 25.75889,12.374369 c 8.859695,3.059218 18.787677,10.177927 24.496199,1.26269"
        id="path66"
-       sodipodi:nodetypes="cc"
-       inkstitch:force_lock_stitches="False" />
+       sodipodi:nodetypes="cc" />
     <path
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.027px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.01705;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 51.1805,13.1264 c -1.1017,-0.7344 -4.0396,-1.2853 -7.0693,-1.2853 -13.8631,0 -29.0115,1.1935 -35.52994,6.8857 -0.9181,0.8262 -2.66248,3.3051 -2.0198,4.774 0.90076,3.1041 2.2523,6.4995 3.34639,9.0567 M 51.1805,13.1264 c 2.1116,1.469 0.7344,8.7219 -0.1836,11.2007 -0.2755,0.8263 -1.8362,2.2952 -2.6625,2.2952 -10.6498,0 -20.1642,-0.5995 -25.5228,2.1072 L 9.90785,32.5575 M 30.4778,29.2919 27.1083,10.9839"
@@ -4736,7 +4691,6 @@
        inkstitch:contour_underlay="True"
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
-       inkstitch:force_lock_stitches="False"
        inkstitch:ties="3"
        sodipodi:nodetypes="cscccccscccc"
        inkstitch:max_stitch_length_mm="9" />
@@ -4753,15 +4707,13 @@
        inkstitch:ties="3"
        inkstitch:contour_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:force_lock_stitches="False"
        sodipodi:nodetypes="ccccccccccccccccccc"
        inkstitch:max_stitch_length_mm="9" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:5.3303, 2.66515;paint-order:markers stroke fill"
        d="m 43.057752,63.0714 c 1.367915,3.021093 0.783788,4.001089 4.930101,6.790014"
        id="path67"
-       sodipodi:nodetypes="cc"
-       inkstitch:force_lock_stitches="False" />
+       sodipodi:nodetypes="cc" />
     <path
        id="path55"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.027px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.01705;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -4783,8 +4735,7 @@
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:markers stroke fill"
        d="M 24.821428,79.017857 12.5,44.017857 44.553571,41.071428"
        id="path68"
-       sodipodi:nodetypes="ccc"
-       inkstitch:force_lock_stitches="False" />
+       sodipodi:nodetypes="ccc" />
     <path
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.027px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.01705;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 43.7666,45.9441 c -0.2294,1.1307 -0.5098,2.1369 -0.7569,2.8041 -0.2754,0.8264 -1.8362,2.2951 -2.6624,2.2951 v 10e-5 c -5.6003,0 -13.3142,0.047 -17.8128,1.428 M 44.2058,41.1289 c -0.0937,-1.4281 -0.4861,-2.549 -1.3797,-2.847 -4.315,-1.3771 -12.5797,-0.7754 -17.9964,0.2344 m 9.5232,-2.9908 -1.4602,17.297"
@@ -4799,8 +4750,7 @@
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:markers stroke fill"
        d="m 24.017857,38.392857 -9.375,-13.482143 23.265951,-12.617296"
        id="path71"
-       sodipodi:nodetypes="ccc"
-       inkstitch:force_lock_stitches="False" />
+       sodipodi:nodetypes="ccc" />
     <path
        style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.944882;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:2, 1;paint-order:markers stroke fill"
        d="M 36.904449,6.7688031 C 37.033983,-1.0744662 29.655167,-4.4127252 23.330518,-8.3834847"
@@ -4831,7 +4781,6 @@
        inkstitch:contour_underlay="True"
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
-       inkstitch:force_lock_stitches="False"
        inkstitch:ties="3"
        sodipodi:nodetypes="cscccccscccc"
        inkstitch:max_stitch_length_mm="9" />
@@ -4848,15 +4797,13 @@
        inkstitch:ties="3"
        inkstitch:contour_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:force_lock_stitches="False"
        sodipodi:nodetypes="ccccccccccccccccccc"
        inkstitch:max_stitch_length_mm="9" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:5.3303, 2.66515;paint-order:markers stroke fill"
        d="m 43.057752,63.0714 c 1.367915,3.021093 1.909474,5.506271 4.434287,7.285828"
        id="path87"
-       sodipodi:nodetypes="cc"
-       inkstitch:force_lock_stitches="False" />
+       sodipodi:nodetypes="cc" />
     <path
        id="path88"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.027px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.01705;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -4878,8 +4825,7 @@
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:markers stroke fill"
        d="M 24.821428,79.017857 12.5,44.017857 44.553571,41.071428"
        id="path89"
-       sodipodi:nodetypes="ccc"
-       inkstitch:force_lock_stitches="False" />
+       sodipodi:nodetypes="ccc" />
     <path
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.027px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.01705;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 43.7666,45.9441 c -0.2294,1.1307 -0.5098,2.1369 -0.7569,2.8041 -0.2754,0.8264 -1.8362,2.2951 -2.6624,2.2951 v 10e-5 c -5.6003,0 -13.3142,0.047 -17.8128,1.428 M 44.2058,41.1289 c -0.0937,-1.4281 -0.4861,-2.549 -1.3797,-2.847 -4.315,-1.3771 -12.5797,-0.7754 -17.9964,0.2344 m 9.5232,-2.9908 -1.4602,17.297"
@@ -4895,7 +4841,6 @@
        d="M 24.017857,38.392857 14.95853,25.478925 44.224481,12.861629 M 41.037447,3.9143411 C 31.870628,-4.2093023 31.903985,-1.5994082 27.337254,-4.3562829 L 16.604383,3.3461303"
        id="path96"
        sodipodi:nodetypes="cccccc"
-       inkstitch:force_lock_stitches="False"
        inkstitch:max_stitch_length_mm="9" />
     <path
        id="path921-0"
@@ -4912,8 +4857,7 @@
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:5.3303, 2.66515;paint-order:markers stroke fill"
        d="m 44.259528,13.068849 c -0.421082,8.046846 0.287039,9.483447 5.995561,0.56821"
        id="path107"
-       sodipodi:nodetypes="cc"
-       inkstitch:force_lock_stitches="False" />
+       sodipodi:nodetypes="cc" />
     <path
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.027px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.01705;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 51.1805,13.1264 c -1.1017,-0.7344 -4.0396,-1.2853 -7.0693,-1.2853 -13.8631,0 -29.0115,1.1935 -35.52994,6.8857 -0.9181,0.8262 -2.66248,3.3051 -2.0198,4.774 0.90076,3.1041 2.2523,6.4995 3.34639,9.0567 M 51.1805,13.1264 c 2.1116,1.469 0.7344,8.7219 -0.1836,11.2007 -0.2755,0.8263 -1.8362,2.2952 -2.6625,2.2952 -10.6498,0 -20.1642,-0.5995 -25.5228,2.1072 L 9.90785,32.5575 M 30.4778,29.2919 27.1083,10.9839"
@@ -4922,7 +4866,6 @@
        inkstitch:contour_underlay="True"
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
-       inkstitch:force_lock_stitches="False"
        inkstitch:ties="3"
        sodipodi:nodetypes="cscccccscccc"
        inkstitch:max_stitch_length_mm="9" />
@@ -4939,15 +4882,13 @@
        inkstitch:ties="3"
        inkstitch:contour_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:force_lock_stitches="False"
        sodipodi:nodetypes="ccccccccccccccccccc"
        inkstitch:max_stitch_length_mm="9" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:5.3303, 2.66515;paint-order:markers stroke fill"
        d="m 43.057752,63.0714 c 1.367915,3.021093 2.405288,6.332627 4.682194,6.790014"
        id="path110"
-       sodipodi:nodetypes="cc"
-       inkstitch:force_lock_stitches="False" />
+       sodipodi:nodetypes="cc" />
     <path
        id="path111"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.027px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.01705;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -4969,8 +4910,7 @@
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:markers stroke fill"
        d="M 24.821428,79.017857 12.5,44.017857 44.553571,41.071428"
        id="path353"
-       sodipodi:nodetypes="ccc"
-       inkstitch:force_lock_stitches="False" />
+       sodipodi:nodetypes="ccc" />
     <path
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.027px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.01705;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 43.7666,45.9441 c -0.2294,1.1307 -0.5098,2.1369 -0.7569,2.8041 -0.2754,0.8264 -1.8362,2.2951 -2.6624,2.2951 v 10e-5 c -5.6003,0 -13.3142,0.047 -17.8128,1.428 M 44.2058,41.1289 c -0.0937,-1.4281 -0.4861,-2.549 -1.3797,-2.847 -4.315,-1.3771 -12.5797,-0.7754 -17.9964,0.2344 m 9.5232,-2.9908 -1.4602,17.297"
@@ -4985,22 +4925,19 @@
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:markers stroke fill"
        d="M 24.017857,38.392857 14.95853,25.478925 25.361103,13.781794"
        id="path355"
-       sodipodi:nodetypes="ccc"
-       inkstitch:force_lock_stitches="False" />
+       sodipodi:nodetypes="ccc" />
     <path
        style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.944882;stroke-linejoin:round;paint-order:markers stroke fill"
        d="M 24.011428,6.4397224 C 21.027071,2.5253814 19.202195,-0.50507622 24.263966,-4.4194173"
        id="path363"
        sodipodi:nodetypes="cc"
-       inkstitch:ties="2"
-       inkstitch:force_lock_stitches="False" />
+       inkstitch:ties="2" />
     <path
        style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.944882;stroke-linejoin:round;paint-order:markers stroke fill"
        d="M 37.395949,-5.6821079 46.992398,8.207489"
        id="path364"
        sodipodi:nodetypes="cc"
-       inkstitch:ties="2"
-       inkstitch:force_lock_stitches="False" />
+       inkstitch:ties="2" />
     <path
        id="path365"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.027px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.659881;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -5017,8 +4954,7 @@
        d="m 24.642773,-5.8083771 c -4.380814,0.2670186 -9.450574,2.2071909 -11.616754,-2.9041885"
        id="path366"
        sodipodi:nodetypes="cc"
-       inkstitch:ties="1"
-       inkstitch:force_lock_stitches="False" />
+       inkstitch:ties="1" />
     <path
        d="m 13.2691,-8.57956 c -0.4043,0.30446 -0.5988,0.75146 -0.7024,1.16811 -0.5425,2.2628 -1.0839,5.43069 -1.0839,8.50811 0,1.08614 0.2709,1.99122 0.8134,2.71531 1.9869,2.53432 4.9673,3.25839 10.4766,3.25839 0.4975,0 0.8416,-0.0983 1.0976,-0.28351 M 13.269,-8.57949 C 13.5672,-8.8034 13.9787,-8.95 14.5536,-8.95 c 2.7998,0 6.8639,0.0903 9.754,1.9913 1.0838,0.72409 2.3484,2.71529 1.8518,5.65691 -0.4967,2.94165 -0.6767,3.84672 -1.4901,6.65255 -0.2194,0.65886 -0.4051,1.15063 -0.7989,1.43609 M 10.5392,4.02266 26.3118,-6.71827"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.027px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.659881;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -5034,8 +4970,7 @@
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:5.3303, 2.66515;paint-order:markers stroke fill"
        d="m 25.640682,13.407018 c -5.708522,8.915237 24.868959,8.628842 25.290041,0.581996"
        id="path357"
-       sodipodi:nodetypes="cc"
-       inkstitch:force_lock_stitches="False" />
+       sodipodi:nodetypes="cc" />
     <path
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.027px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.01705;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 51.1805,13.1264 c -1.1017,-0.7344 -4.0396,-1.2853 -7.0693,-1.2853 -13.8631,0 -29.0115,1.1935 -35.52994,6.8857 -0.9181,0.8262 -2.66248,3.3051 -2.0198,4.774 0.90076,3.1041 2.2523,6.4995 3.34639,9.0567 M 51.1805,13.1264 c 2.1116,1.469 0.7344,8.7219 -0.1836,11.2007 -0.2755,0.8263 -1.8362,2.2952 -2.6625,2.2952 -10.6498,0 -20.1642,-0.5995 -25.5228,2.1072 L 9.90785,32.5575 M 30.4778,29.2919 27.1083,10.9839"
@@ -5044,7 +4979,6 @@
        inkstitch:contour_underlay="True"
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
-       inkstitch:force_lock_stitches="False"
        inkstitch:ties="3"
        sodipodi:nodetypes="cscccccscccc"
        inkstitch:max_stitch_length_mm="9" />
@@ -5061,15 +4995,13 @@
        inkstitch:ties="3"
        inkstitch:contour_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:force_lock_stitches="False"
        sodipodi:nodetypes="ccccccccccccccccccc"
        inkstitch:max_stitch_length_mm="9" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:5.3303, 2.66515;paint-order:markers stroke fill"
        d="m 43.057752,63.0714 c 1.367915,3.021093 2.405288,6.332627 4.682194,6.790014"
        id="path360"
-       sodipodi:nodetypes="cc"
-       inkstitch:force_lock_stitches="False" />
+       sodipodi:nodetypes="cc" />
     <path
        id="path361"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.027px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.01705;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -5205,7 +5137,6 @@
        inkstitch:contour_underlay="True"
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
-       inkstitch:force_lock_stitches="False"
        inkstitch:ties="3"
        sodipodi:nodetypes="ccczccccccccc"
        inkstitch:max_stitch_length_mm="9" />
@@ -5222,14 +5153,12 @@
        inkstitch:ties="3"
        inkstitch:contour_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:force_lock_stitches="False"
        sodipodi:nodetypes="ccccccccccccccccccc"
        inkstitch:max_stitch_length_mm="9" />
     <path
        style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:5.3303, 2.66515;paint-order:markers stroke fill"
        d="m 89.057752,63.0714 c 0.872336,2.833726 2.205272,5.327423 4.930098,6.790014"
-       id="path372"
-       inkstitch:force_lock_stitches="False" />
+       id="path372" />
     <path
        id="path373"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.027px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.01705;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -5254,13 +5183,12 @@
     <path
        id="path245"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.027px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.01481;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="M 54.929436,45.966035 C 53.503145,65.605259 43.654367,80.2304 31.381,80.2304 24.9685,80.2304 17.64,78.7647 13.9757,76.2913 10.2199,73.8179 3.89908,66.6727 3.89908,52.0156 c 0,-21.9857 10.541893,-38.771245 23.81762,-39.2077 10.863281,-0.357143 13.454847,1.525539 17.4052,4.0307 3.845186,3.366257 9.9852,9.6187 9.9852,24.1843 0,1.678075 -0.06033,3.32757 -0.177664,4.943135 M 36.460337,45.498145 C 35.637174,56.891982 32.839935,63.53651 31.2894,64.932 c -0.4577,0.4582 -1.3741,1.0993 -3.2978,1.0993 -2.8398,0 -5.4964,-2.0154 -5.4964,-11.6339 0,-4.693226 0.4294,-27.299165 8.7026,-27.29895 2.8398,5e-5 5.4964,1.92375 5.4964,11.72575 0,2.379266 -0.08438,4.604912 -0.233863,6.673945 M 25.4282,45.1949 1.81268,44.4024 M 28.4396,62.9461 26.6962,84.6598"
+       d="M 54.929436,45.966035 C 53.503145,65.605259 43.654367,80.2304 31.381,80.2304 24.9685,80.2304 17.64,78.7647 13.9757,76.2913 10.2199,73.8179 3.89908,66.6727 3.89908,52.0156 c 0,-21.9857 10.541893,-38.771245 23.81762,-39.2077 10.863281,-0.357143 13.454847,1.525539 17.4052,4.0307 3.845186,3.366257 9.9852,9.6187 9.9852,24.1843 0,1.678075 -0.06033,3.32757 -0.177664,4.943135 M 36.460337,45.498145 C 35.637174,56.891982 32.839935,63.53651 31.2894,64.932 c -0.4577,0.4582 -1.3741,1.0993 -3.2978,1.0993 -2.8398,0 -5.4964,-2.0154 -5.4964,-11.6339 0,-4.693226 0.4294,-27.299165 8.7026,-27.29895 2.8398,5e-5 5.4964,1.92375 5.4964,11.72575 0,2.379266 -0.08438,4.604912 -0.233863,6.673945 M 25.4282,45.1949 1.81268,44.4024 M 28.4396,62.9461 26.6962,84.6598 M 32.660559,6.3000064 29.013187,34.152666"
        inkstitch:satin_column="True"
        inkstitch:contour_underlay="True"
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
-       inkstitch:force_lock_stitches="False"
-       sodipodi:nodetypes="cccsscscccsscsccccc"
+       sodipodi:nodetypes="cccsscscccsscsccccccc"
        inkstitch:ties="3"
        inkstitch:swap_satin_rails="True"
        inkstitch:contour_underlay_inset_mm="0.6"
@@ -5292,7 +5220,6 @@
        inkstitch:contour_underlay="True"
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
-       inkstitch:force_lock_stitches="False"
        inkstitch:ties="3"
        sodipodi:nodetypes="cccccccccccc"
        inkstitch:max_stitch_length_mm="9" />
@@ -5309,14 +5236,12 @@
        inkstitch:ties="3"
        inkstitch:contour_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:force_lock_stitches="False"
        sodipodi:nodetypes="ccccccccccccccccccc"
        inkstitch:max_stitch_length_mm="9" />
     <path
        style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:5.3303, 2.66515;paint-order:markers stroke fill"
        d="m 89.057752,63.0714 c 0.872336,2.833726 2.205272,5.327423 4.930101,6.790014"
-       id="path344"
-       inkstitch:force_lock_stitches="False" />
+       id="path344" />
     <path
        id="path345"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.027px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.01705;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -5377,18 +5302,19 @@
     <path
        id="path897"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.027px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.01887;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 45.2472,44.38 c 2.3014,-0.6743 3.2462,-2.4201 3.7763,-3.1856 C 53.7141,34.4801 53.99,28.134 54.358,24.1791 54.8175,19.3045 50.771,17.9249 48.1957,16.4534 43.965,13.9701 37.1589,12.8664 29.801,13.0504 14.6254,13.5104 4.96817,29.6976 4.96817,52.6909 c 0,20.5102 10.39303,28.144 25.75263,28.144 M 45.2472,44.38 c -1.2927,0.3784 -3.0134,0.4193 -5.3291,-0.2428 -4.5986,-0.9198 -4.6905,-2.3914 -3.4949,-6.4383 1.6555,-5.7943 0.092,-10.301 -4.0468,-10.301 -1.9315,0 -3.4035,0.8278 -3.863,1.2876 -1.7475,1.8395 -4.8746,10.8529 -4.8746,26.3964 0,9.6573 4.5068,9.2893 7.3579,9.2893 M 1.37834,46.1901 26.9184,46.8263 M 32.7266,30.4362 47.0482,14.0459"
+       d="m 45.2472,44.38 c 2.3014,-0.6743 3.2462,-2.4201 3.7763,-3.1856 C 53.7141,34.4801 53.99,28.134 54.358,24.1791 54.8175,19.3045 50.771,17.9249 48.1957,16.4534 43.965,13.9701 37.1589,12.8664 29.801,13.0504 14.6254,13.5104 4.96817,29.6976 4.96817,52.6909 c 0,20.5102 10.39303,28.144 25.75263,28.144 M 45.2472,44.38 c -1.2927,0.3784 -3.0134,0.4193 -5.3291,-0.2428 -4.5986,-0.9198 -4.6905,-2.3914 -3.4949,-6.4383 1.6555,-5.7943 0.092,-10.301 -4.0468,-10.301 -1.9315,0 -3.4035,0.8278 -3.863,1.2876 -1.7475,1.8395 -4.8746,10.8529 -4.8746,26.3964 0,9.6573 4.5068,9.2893 7.3579,9.2893 M 1.37834,46.1901 26.9184,46.8263"
        inkstitch:satin_column="True"
        inkstitch:contour_underlay="True"
        inkstitch:ties="3"
-       inkstitch:max_stitch_length_mm="9" />
+       inkstitch:max_stitch_length_mm="9"
+       sodipodi:nodetypes="cccccsccccscsccc" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:markers stroke fill"
        d="M 31.428571,64.464285 49.642857,62.410714"
        id="path92" />
     <path
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.027px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.01887;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 50.691599,61.581389 c 1.220408,3.156067 1.891757,6.575204 -0.564399,9.412411 -4.1389,5.0585 -8.3696,9.8411 -19.4064,9.8411 M 50.691599,61.581389 48.7475,56.5538 c -0.8579,-1.514 -1.8889,-2.0173 -2.9715,-1.92015 -2.8631,0.25705 -6.0866,4.71485 -7.4214,5.78275 -3.0351,2.4833 -5.4264,3.9548 -7.3579,3.9548"
+       d="m 50.691599,61.581389 c 1.220408,3.156067 1.891757,6.575204 -0.564399,9.412411 -4.1389,5.0585 -8.3696,9.8411 -19.4064,9.8411 M 50.691599,61.581389 48.7475,56.5538 c -0.8579,-1.514 -1.8889,-2.0173 -2.9715,-1.92015 -2.8631,0.25705 -6.0866,4.71485 -7.4214,5.78275 -3.0351,2.4833 -5.4264,3.9548 -7.3579,3.9548 m 1.663859,-4.02377 v 23.04476"
        id="path86"
        sodipodi:nodetypes="cccccccc"
        inkstitch:satin_column="True"
@@ -5430,18 +5356,19 @@
     <path
        id="path154"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.027px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.01887;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 45.2472,44.38 c 2.3014,-0.6743 3.2462,-2.4201 3.7763,-3.1856 C 53.7141,34.4801 53.99,28.134 54.358,24.1791 54.8175,19.3045 50.771,17.9249 48.1957,16.4534 43.965,13.9701 37.1589,12.8664 29.801,13.0504 14.6254,13.5104 4.96817,29.6976 4.96817,52.6909 c 0,20.5102 10.39303,28.144 25.75263,28.144 M 45.2472,44.38 c -1.2927,0.3784 -3.0134,0.4193 -5.3291,-0.2428 -4.5986,-0.9198 -4.6905,-2.3914 -3.4949,-6.4383 1.6555,-5.7943 0.092,-10.301 -4.0468,-10.301 -1.9315,0 -3.4035,0.8278 -3.863,1.2876 -1.7475,1.8395 -4.8746,10.8529 -4.8746,26.3964 0,9.6573 4.5068,9.2893 7.3579,9.2893 M 1.37834,46.1901 26.9184,46.8263 M 32.7266,30.4362 47.0482,14.0459"
+       d="m 45.2472,44.38 c 2.3014,-0.6743 3.2462,-2.4201 3.7763,-3.1856 C 53.7141,34.4801 53.99,28.134 54.358,24.1791 54.8175,19.3045 50.771,17.9249 48.1957,16.4534 43.965,13.9701 37.1589,12.8664 29.801,13.0504 14.6254,13.5104 4.96817,29.6976 4.96817,52.6909 c 0,20.5102 10.39303,28.144 25.75263,28.144 M 45.2472,44.38 c -1.2927,0.3784 -3.0134,0.4193 -5.3291,-0.2428 -4.5986,-0.9198 -4.6905,-2.3914 -3.4949,-6.4383 1.6555,-5.7943 0.092,-10.301 -4.0468,-10.301 -1.9315,0 -3.4035,0.8278 -3.863,1.2876 -1.7475,1.8395 -4.8746,10.8529 -4.8746,26.3964 0,9.6573 4.5068,9.2893 7.3579,9.2893 M 1.37834,46.1901 26.9184,46.8263"
        inkstitch:satin_column="True"
        inkstitch:contour_underlay="True"
        inkstitch:ties="3"
-       inkstitch:max_stitch_length_mm="9" />
+       inkstitch:max_stitch_length_mm="9"
+       sodipodi:nodetypes="cccccsccccscsccc" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:markers stroke fill"
        d="M 31.428571,64.464285 49.642857,62.410714"
        id="path195" />
     <path
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.027px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.01887;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 50.691599,61.581389 c 1.220408,3.156067 1.891757,6.575204 -0.564399,9.412411 -4.1389,5.0585 -8.3696,9.8411 -19.4064,9.8411 M 50.691599,61.581389 48.7475,56.5538 c -0.8579,-1.514 -1.8889,-2.0173 -2.9715,-1.92015 -2.8631,0.25705 -6.0866,4.71485 -7.4214,5.78275 -3.0351,2.4833 -5.4264,3.9548 -7.3579,3.9548"
+       d="m 50.691599,61.581389 c 1.220408,3.156067 1.891757,6.575204 -0.564399,9.412411 -4.1389,5.0585 -8.3696,9.8411 -19.4064,9.8411 M 50.691599,61.581389 48.7475,56.5538 c -0.8579,-1.514 -1.8889,-2.0173 -2.9715,-1.92015 -2.8631,0.25705 -6.0866,4.71485 -7.4214,5.78275 -3.0351,2.4833 -5.4264,3.9548 -7.3579,3.9548 m 11.777028,-12.810621 8.786851,22.215812"
        id="path255"
        sodipodi:nodetypes="cccccccc"
        inkstitch:satin_column="True"
@@ -5494,8 +5421,8 @@
     <path
        id="path76"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.027px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.04565;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 23.7713,52.4239 c 1.0383,-0.2841 4.5083,-0.7408 6.4905,-0.7408 3.2093,0 5.1914,1.0392 5.1914,3.3039 0,4.1533 -4.2475,7.929 -8.7783,7.929 m -2.1507,-19.3353 14.0437,0.1725 c 7.268,0.9436 13.9698,3.4927 15.1023,5.7574 0.566,0.8494 1.1327,2.4546 1.1327,5.1923 0,14.064 -12.5539,24.6351 -28.3171,24.6351 m 0.3552,2.9418 0.9239,-23.3253 M 56.8651,58.7222 31.3446,57.7989"
-       sodipodi:nodetypes="cssccccsccccc"
+       d="m 23.7713,52.4239 c 1.0383,-0.2841 4.5083,-0.7408 6.4905,-0.7408 3.2093,0 5.1914,1.0392 5.1914,3.3039 0,4.1533 -4.2475,7.929 -8.7783,7.929 m -2.1507,-19.3353 14.0437,0.1725 c 7.268,0.9436 13.9698,3.4927 15.1023,5.7574 0.566,0.8494 1.1327,2.4546 1.1327,5.1923 0,14.064 -12.5539,24.6351 -28.3171,24.6351 M 56.8651,58.7222 31.3446,57.7989"
+       sodipodi:nodetypes="cssccccsccc"
        inkstitch:satin_column="True"
        inkstitch:contour_underlay="True"
        inkstitch:ties="3"
@@ -5739,7 +5666,6 @@
        d="M 13.11939,77.106814 22.929051,28.569535 48.224481,14.861629 M 47.037447,3.9143411 C 37.870628,-4.2093023 37.903985,-1.5994082 33.337254,-4.3562829 L 22.604383,3.3461303"
        id="path313"
        sodipodi:nodetypes="cccccc"
-       inkstitch:force_lock_stitches="False"
        inkstitch:max_stitch_length_mm="9" />
     <path
        id="path314"
@@ -5756,8 +5682,7 @@
        style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:5.3303, 2.66515;paint-order:markers stroke fill"
        d="M 47.283546,15.231513 C 46.862464,23.278359 40.787053,57.63191 38.525054,65.145705"
        id="path316"
-       sodipodi:nodetypes="cc"
-       inkstitch:force_lock_stitches="False" />
+       sodipodi:nodetypes="cc" />
     <path
        id="path301"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.027px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.05774;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -5938,7 +5863,6 @@
        inkstitch:contour_underlay="True"
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
-       inkstitch:force_lock_stitches="False"
        inkstitch:swap_satin_rails="True"
        inkstitch:max_stitch_length_mm="9" />
     <path
@@ -6127,8 +6051,7 @@
        style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:markers stroke fill"
        d="m 21.344816,79.023085 c -4.315432,-20.70851 3.626371,-38.69484 5.786761,-58.783249 0.170021,-1.580939 10.685568,-5.733071 10.796611,-7.325257"
        id="path432"
-       sodipodi:nodetypes="csc"
-       inkstitch:force_lock_stitches="False" />
+       sodipodi:nodetypes="csc" />
     <path
        style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.944882;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:2, 1;paint-order:markers stroke fill"
        d="M 36.320357,6.7688031 C 36.190823,-1.0744662 43.569639,-4.4127252 49.894288,-8.3834847"
@@ -6150,8 +6073,7 @@
        style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:5.3303, 2.66515;paint-order:markers stroke fill"
        d="m 38.375645,13.122821 c 8.859695,3.059218 2.16095,33.941058 -3.410352,52.585082"
        id="path435"
-       sodipodi:nodetypes="cc"
-       inkstitch:force_lock_stitches="False" />
+       sodipodi:nodetypes="cc" />
     <path
        id="path424"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.027px;line-height:1.25;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.05774;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -6230,10 +6152,9 @@
      inkscape:label="GlyphLayer-ß"
      inkscape:groupmode="layer">
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.377953;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:0.755906, 0.755906;stroke-dashoffset:0"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.377953;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:0.755906, 0.755906;stroke-dashoffset:0"
        d="M 12.333397,79.495464 9.5248021,85.112655"
-       id="path452"
-       inkstitch:satin_column="True" />
+       id="path452" />
     <path
        id="path405"
        style="font-size:96px;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';font-feature-settings:'salt', 'ss00', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09', 'ss10', 'ss11';text-align:center;text-anchor:middle;fill:none;stroke:#000000;stroke-width:0.356793;stroke-linecap:round;stroke-linejoin:round"
@@ -6264,8 +6185,7 @@
     <path
        style="fill:none;stroke:#000000;stroke-width:0.377953;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:0.755906, 0.755906;stroke-dashoffset:0"
        d="M 12.333397,79.495464 9.5248021,85.112655"
-       id="path292"
-       inkstitch:satin_column="True" />
+       id="path292" />
     <path
        id="path439"
        style="font-size:96px;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';font-feature-settings:'salt', 'ss00', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09', 'ss10', 'ss11';text-align:center;text-anchor:middle;fill:none;stroke:#000000;stroke-width:0.356793;stroke-linecap:round;stroke-linejoin:round"
@@ -6290,14 +6210,14 @@
   </g>
   <g
      id="g480"
-     style="display:none"
+     style="display:inline"
      inkscape:label="GlyphLayer-SS"
      inkscape:groupmode="layer">
     <path
        style="fill:none;stroke:#000000;stroke-width:0.377953;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:0.755906, 0.755906;stroke-dashoffset:0"
        d="M 12.333397,79.495464 9.5248021,85.112655"
        id="path450"
-       inkstitch:satin_column="True" />
+       inkstitch:satin_column="False" />
     <path
        id="path454"
        style="font-size:96px;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, ';font-feature-settings:'salt', 'ss00', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09', 'ss10', 'ss11';text-align:center;text-anchor:middle;fill:none;stroke:#000000;stroke-width:0.356793;stroke-linecap:round;stroke-linejoin:round"
