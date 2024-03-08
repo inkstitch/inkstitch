@@ -4,12 +4,10 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 import inkex
-from lxml import etree
 
 from ..elements import SatinColumn
 from ..i18n import _
 from ..svg import get_correction_transform
-from ..svg.tags import SVG_PATH_TAG
 from .base import InkstitchExtension
 
 
@@ -42,13 +40,12 @@ class ConvertToStroke(InkstitchExtension):
                 d += "%s,%s " % (x, y)
                 d += " "
 
-            stroke_element = etree.Element(SVG_PATH_TAG,
-                                           {
-                                            "id": self.uniqueId("path"),
-                                            "style": self.path_style(element),
-                                            "transform": get_correction_transform(element.node),
-                                            "d": d
-                                           })
+            stroke_element = inkex.PathElement(
+                id=self.uniqueId("path"),
+                style=self.path_style(element),
+                transform=get_correction_transform(element.node),
+                d=d
+            )
             parent.insert(parent.index(element.node), stroke_element)
             if not self.options.keep_satin:
                 parent.remove(element.node)
