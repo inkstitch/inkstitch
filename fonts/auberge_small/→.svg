@@ -20,15 +20,15 @@
      inkscape:pageopacity="0"
      inkscape:pagecheckerboard="false"
      showgrid="false"
-     inkscape:zoom="4.8182348"
-     inkscape:cx="62.263467"
-     inkscape:cy="177.7622"
+     inkscape:zoom="2.9455224"
+     inkscape:cx="62.128197"
+     inkscape:cy="141.06156"
      inkscape:window-width="1383"
      inkscape:window-height="778"
      inkscape:window-x="57"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g6811"
+     inkscape:current-layer="g6727"
      height="173px"
      inkscape:snap-global="false"
      inkscape:object-paths="true"
@@ -10092,32 +10092,9 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-s"
-     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
+     style="display:inline;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g6727"
      transform="translate(0,23)">
-    <path
-       d="m 7.97225,170.971 c -4.3759,-2.084 -7.9287112,-5.756 -9.59091,-10.339 v 0"
-       inkstitch:running_stitch_length_mm="1.2"
-       id="autosatinrun162"
-       inkscape:label="Points droits pour auto-remplissage satin 1"
-       inkstitch:ties="3"
-       style="stroke-width:1;stroke-dasharray:0.5, 0.5"
-       inkstitch:force_lock_stitches="False" />
-    <path
-       d="m -1.61866,160.632 c 5.0338799,4.61703 10.8682435,8.56372 17.546994,10.30318 3.159523,0.86776 6.420853,1.1752 9.653066,1.65582 M -2.6459548,163.71388 C 2.4752929,177.00334 20.971332,179.213 29.010644,177.23367 32.72491,176.39598 36.262223,174.67871 39,172 M 8.9858768,167.03243 C 11.145344,170.07776 20.265833,176.52267 22.4253,179.568"
-       id="autosatin180"
-       sodipodi:nodetypes="cssccccc"
-       inkstitch:satin_column="True"
-       inkstitch:zigzag_spacing_mm="0.25"
-       inkstitch:ties="0"
-       inkstitch:pull_compensation_mm="0.02"
-       inkstitch:center_walk_underlay="True"
-       inkstitch:center_walk_underlay_stitch_length_mm="1.2"
-       inkscape:label="Auto-remplissage satin 2"
-       style="stroke-width:1"
-       inkstitch:reverse_rails="none"
-       inkstitch:short_stitch_distance_mm="0.18"
-       inkstitch:zigzag_underlay="False" />
     <path
        d="m 38.7138,172.301 -5.3568,-4.654 c -9.82618,0.88749 -19.4767,-2.7295 -27.7311,-7.80946 -1.45528,-0.9899 -3.2277,-1.65115 -4.48128,-2.84459 -0.356581,-0.66396 -0.99798,-1.13422 -1.28943,-1.82995 h -4.5e-5"
        inkstitch:running_stitch_length_mm="1.2"
@@ -10127,9 +10104,9 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        style="stroke-width:1;stroke-dasharray:0.5, 0.5"
        inkstitch:force_lock_stitches="False" />
     <path
-       d="m -0.144855,155.163 c -1.1306258,1.83485 -1.4337746,4.01602 -1.495045,6.133 5.9415467,4.57412 12.410129,8.87389 19.901708,10.30762 7.476044,1.53986 15.193028,1.11777 22.713392,0.14338 M -0.144855,155.163 c 0.92559659,-1.60917 2.5693531,-1.98476 4.357286,-1.03224 8.151201,3.36527 16.141686,7.59978 25.024469,8.82524 3.304711,0.11627 6.628724,-0.35732 9.8565,-1.034 m -20.9871,-4.945 -5.3156,14.784"
+       d="m -0.144855,155.163 c -1.1306258,1.83485 -2.8178093,4.47902 -1.495045,6.133 10.6121094,13.26935 19.574028,17.11242 42.6151,10.451 M -0.144855,155.163 c 0.92559659,-1.60917 2.5693531,-1.98476 4.357286,-1.03224 8.151201,3.36527 16.141686,7.59978 25.024469,8.82524 3.304711,0.11627 6.628724,-0.35732 9.8565,-1.034 M 22.859277,150.18703 9.0562182,179.90896"
        id="autosatin181"
-       sodipodi:nodetypes="csscssccsc"
+       sodipodi:nodetypes="cscssccsc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.25"
        inkstitch:ties="0"
@@ -11675,8 +11652,9 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        inkstitch:zigzag_underlay="False"
        inkstitch:force_lock_stitches="False" />
     <path
-       d="M 69.1717 130.36 L 72.4064 103.145"
-       style="stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1;fill:none;"
+
+       d="m 69.1717,130.36 3.2347,-27.215"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
        inkstitch:running_stitch_length_mm="4.0"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path13" />
