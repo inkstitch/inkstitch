@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-03-03 01:07+0000\n"
-"PO-Revision-Date: 2024-03-04 01:05\n"
+"POT-Creation-Date: 2024-03-08 01:03+0000\n"
+"PO-Revision-Date: 2024-03-08 01:04\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-03 01:07+0000\n"
+"POT-Creation-Date: 2024-03-08 01:03+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1190,83 +1190,83 @@ msgid "Force lock stitches"
 msgstr "Forcer des points d'arrêt"
 
 #: lib/elements/element.py:239
-msgid "Sew lock stitches after sewing this element, even if the distance to the next object is shorter than defined by the Minimum jump stitch length value in the Ink/Stitch preferences."
-msgstr "Créer des points d'arrêt après avoir cousu cet élément, même si la distance jusqu'à l'objet suivant est plus courte que le paramètre 'saut de fils' défini dans les préférences Ink/Stitch."
+msgid "Sew lock stitches after sewing this element, even if the distance to the next object is shorter than defined by the minimum jump stitch length value in the Ink/Stitch preferences."
+msgstr ""
 
-#: lib/elements/element.py:250
+#: lib/elements/element.py:251
 msgid "Tack stitch"
 msgstr "Point d'arrêt initial"
 
-#: lib/elements/element.py:251
+#: lib/elements/element.py:252
 msgid "Tack down stitch type"
 msgstr "Type de point d'arrêt initial"
 
-#: lib/elements/element.py:261 lib/elements/element.py:307
+#: lib/elements/element.py:262 lib/elements/element.py:308
 msgid "Custom path"
 msgstr "Chemin personnalisé"
 
-#: lib/elements/element.py:262
+#: lib/elements/element.py:263
 msgid "Enter a custom path. For svg paths The last node will not be embroidered, but represents the first stitch of the element."
 msgstr "Entrez un chemin personnalisé. Pour les chemins svg, le dernier nœud ne sera pas brodé, mais représente le premier point de l'élément."
 
-#: lib/elements/element.py:272 lib/elements/element.py:284
+#: lib/elements/element.py:273 lib/elements/element.py:285
 msgid "Scale tack stitch"
 msgstr "Échelle du point d'arrêt initial"
 
-#: lib/elements/element.py:273
+#: lib/elements/element.py:274
 msgid "Set stitch length. A 1 in a custom path equals this values."
 msgstr "Détermine la longueur de point. Un 1 dans un chemin personnalisé représentera cette valeur."
 
-#: lib/elements/element.py:285
+#: lib/elements/element.py:286
 msgid "Scale tack stitch by this percentage."
 msgstr "Mettre le point d'arrêt initial à l'échelle selon ce pourcentage."
 
-#: lib/elements/element.py:296
+#: lib/elements/element.py:297
 msgid "Lock stitch"
 msgstr "Point d'arrêt"
 
-#: lib/elements/element.py:297
+#: lib/elements/element.py:298
 msgid "Lock stitch type"
 msgstr "Type de point d'arrêt final"
 
-#: lib/elements/element.py:308
+#: lib/elements/element.py:309
 msgid "Enter a custom path. For svg paths the first node will not be embroidered, but represents the last stitch of the element."
 msgstr "Entrez un chemin personnalisé. Pour les chemins svg, le premier nœud ne sera pas brodé, mais représente le dernier point de l'élément."
 
-#: lib/elements/element.py:318 lib/elements/element.py:330
+#: lib/elements/element.py:319 lib/elements/element.py:331
 msgid "Scale lock stitch"
 msgstr "Échelle du point d'arrêt final"
 
-#: lib/elements/element.py:319
+#: lib/elements/element.py:320
 msgid "Set length of lock stitches (mm)."
 msgstr "Détermine la longueur des points d'arrêt (mm)."
 
-#: lib/elements/element.py:331
+#: lib/elements/element.py:332
 msgid "Scale lock stitch by this percentage."
 msgstr "Mettre à l'échelle le point d'arrêt selon ce pourcentage."
 
-#: lib/elements/element.py:343
+#: lib/elements/element.py:344
 msgid "Trim After"
 msgstr "Couper après"
 
-#: lib/elements/element.py:344
+#: lib/elements/element.py:345
 msgid "Add a TRIM command after stitching this object."
 msgstr "Ajoute une commande de coupe après avoir brodé cet objet."
 
-#: lib/elements/element.py:353
+#: lib/elements/element.py:354
 msgid "Stop After"
 msgstr "Arrêter après"
 
-#: lib/elements/element.py:354
+#: lib/elements/element.py:355
 msgid "Add a STOP command after stitching this object."
 msgstr "Ajoute une commande STOP après avoir brodé cet objet."
 
-#: lib/elements/element.py:396
+#: lib/elements/element.py:397
 #, python-format
 msgid "Object %(id)s has an empty 'd' attribute.  Please delete this object from your document."
 msgstr "L'objet %(id)s a un attribut 'd' vide. S’il vous plaît supprimer cet objet dans votre document."
 
-#: lib/elements/element.py:593
+#: lib/elements/element.py:594
 msgid "Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects. This will show you the exact location of the problem."
 msgstr "Merci d'exécuter Extensions > Ink/Stitch > Résolution de problèmes > Dépistage de problèmes avec des objets. Ceci indiquera la position erronée."
 
@@ -2604,10 +2604,6 @@ msgstr "Mauvais type de fichier. Ink/Stitch n'accepte que les palettes de couleu
 msgid "Ink/Stitch cannot find your palette folder automatically. Please install your palette manually."
 msgstr "Ink/Stitch ne peut pas automatiquement trouver votre dossier de palette . Veuillez installer votre palette manuellement."
 
-#: lib/extensions/jump_to_stroke.py:37
-msgid "Please select at least two elements to convert the jump stitch to a running stitch."
-msgstr "Merci de choisir au moins deux éléments pour convertir le saut en point droit."
-
 #: lib/extensions/layer_commands.py:20
 msgid "Please choose one or more commands to add."
 msgstr "Veuillez choisir une ou plusieurs commandes à ajouter."
@@ -2620,13 +2616,13 @@ msgstr "Veuillez ne sélectionner qu’un seul bloc de texte."
 msgid "Ink/Stitch Lettering"
 msgstr "Lettrage Ink/Stitch"
 
-#: lib/extensions/lettering_along_path.py:39
-msgid "The text doesn't contain any glyphs."
-msgstr "Ce texte ne contient aucun glyphe."
-
-#: lib/extensions/lettering_along_path.py:143
+#: lib/extensions/lettering_along_path.py:35
 msgid "Please select one path and one Ink/Stitch lettering group."
 msgstr "Merci de sélectionner un chemin et un groupe de lettrage Ink/Stitch."
+
+#: lib/extensions/lettering_along_path.py:40
+msgid "The text doesn't contain any glyphs."
+msgstr "Ce texte ne contient aucun glyphe."
 
 #: lib/extensions/lettering_custom_font_dir.py:27
 msgid "Please specify the directory of your custom fonts."
@@ -2887,10 +2883,10 @@ msgid "Value"
 msgstr "Valeur"
 
 #: lib/gui/element_info.py:41 lib/gui/test_swatches.py:83
-#: inx/inkstitch_apply_threadlist.inx:87 inx/inkstitch_auto_run.inx:23
+#: inx/inkstitch_apply_threadlist.inx:89 inx/inkstitch_auto_run.inx:23
 #: inx/inkstitch_cutwork_segmentation.inx:42
 #: inx/inkstitch_fill_to_stroke.inx:23 inx/inkstitch_generate_palette.inx:24
-#: inx/inkstitch_gradient_blocks.inx:24 inx/inkstitch_jump_to_stroke.inx:39
+#: inx/inkstitch_gradient_blocks.inx:24 inx/inkstitch_jump_to_stroke.inx:40
 #: inx/inkstitch_lettering_along_path.inx:17
 #: inx/inkstitch_palette_to_text.inx:19 inx/inkstitch_select_elements.inx:78
 #: inx/inkstitch_stroke_to_lpe_satin.inx:26
@@ -3238,8 +3234,8 @@ msgstr "Cette extension génère des échantillons à partir d'une sélection.\n
 "Ces échantillons aident à trouver les meilleurs paramètres pour votre dessin.\n"
 "Brodez les avec le même fil et le même tissu que pour votre projet."
 
-#: lib/gui/test_swatches.py:100 inx/inkstitch_apply_threadlist.inx:98
-#: inx/inkstitch_fill_to_stroke.inx:32 inx/inkstitch_jump_to_stroke.inx:41
+#: lib/gui/test_swatches.py:100 inx/inkstitch_apply_threadlist.inx:100
+#: inx/inkstitch_fill_to_stroke.inx:32 inx/inkstitch_jump_to_stroke.inx:42
 #: inx/inkstitch_stroke_to_lpe_satin.inx:32
 #: inx/inkstitch_zigzag_line_to_satin.inx:28
 msgid "Get more information on our website"
@@ -4269,35 +4265,35 @@ msgstr "Appliquer une autre liste de fils*"
 msgid "*Choose color palette"
 msgstr "*Choisir une palette de couleurs"
 
-#: inx/inkstitch_apply_threadlist.inx:88
+#: inx/inkstitch_apply_threadlist.inx:90
 msgid "This extension applies colors from a color file to the objects in this document."
 msgstr "Cette extension applique les couleurs d'un fichier de couleurs aux objets de ce document."
 
-#: inx/inkstitch_apply_threadlist.inx:89
+#: inx/inkstitch_apply_threadlist.inx:91
 msgid "COL, INF, EDR"
 msgstr "COL, INF, EDR"
 
-#: inx/inkstitch_apply_threadlist.inx:90
+#: inx/inkstitch_apply_threadlist.inx:92
 msgid "Select the file and apply. The chosen method is not important for these file types."
 msgstr "Sélectionnez le fichier et appliquez. La méthode choisie n'est pas importante pour ces types de fichiers."
 
-#: inx/inkstitch_apply_threadlist.inx:92
+#: inx/inkstitch_apply_threadlist.inx:94
 msgid "TXT"
 msgstr "TXT"
 
-#: inx/inkstitch_apply_threadlist.inx:93
+#: inx/inkstitch_apply_threadlist.inx:95
 msgid "Import an Ink/Stitch threadlist file (created through the zip export option)."
 msgstr "Importez une palette de fils Ink/Stitch (créé par l'option d'exportation zip)."
 
-#: inx/inkstitch_apply_threadlist.inx:95
+#: inx/inkstitch_apply_threadlist.inx:97
 msgid "Import any other Threadlist file in txt format. Ink/Stitch will try to match the colors to the selected thread palette. The objects in this document will be colored accordingly if color matching has been successful."
 msgstr "Importez tout autre fichier de liste de fils au format txt. Ink/Stitch va essayer de faire correspondre les couleurs à la palette de fils sélectionnée. Les objets de ce document seront colorés en conséquence si la correspondance des couleurs a réussi."
 
-#: inx/inkstitch_apply_threadlist.inx:99
+#: inx/inkstitch_apply_threadlist.inx:101
 msgid "https://inkstitch.org/docs/thread-color/#apply-threadlist"
 msgstr "https://inkstitch.org/fr/docs/thread-color/#appliquer-une-liste-de-fils"
 
-#: inx/inkstitch_apply_threadlist.inx:106 inx/inkstitch_generate_palette.inx:10
+#: inx/inkstitch_apply_threadlist.inx:108 inx/inkstitch_generate_palette.inx:10
 #: inx/inkstitch_install.inx:10 inx/inkstitch_install_custom_palette.inx:13
 #: inx/inkstitch_palette_split_text.inx:10 inx/inkstitch_palette_to_text.inx:9
 msgid "Thread Color Management"
@@ -5377,26 +5373,30 @@ msgid "Output settings"
 msgstr "Options de sortie"
 
 #: inx/inkstitch_jump_to_stroke.inx:31
-msgid "Merge consecutive strokes"
-msgstr "Fusionner les traits consécutifs"
+msgid "Merge consecutive strokes of same type"
+msgstr ""
 
-#: inx/inkstitch_jump_to_stroke.inx:35
-msgid "These settings only apply when merging is disabled"
-msgstr "Ces options ne s'appliquent que si la fusion est désactivée"
+#: inx/inkstitch_jump_to_stroke.inx:32
+msgid "Merge subpaths of stroke elements"
+msgstr ""
 
 #: inx/inkstitch_jump_to_stroke.inx:36
+msgid "These settings only apply for unmerged connectors"
+msgstr ""
+
+#: inx/inkstitch_jump_to_stroke.inx:37
 msgid "Running stitch length (mm)"
 msgstr "Longueur du point droit (mm)"
 
-#: inx/inkstitch_jump_to_stroke.inx:37
+#: inx/inkstitch_jump_to_stroke.inx:38
 msgid "Running stitch tolerance (mm)"
 msgstr "Tolérance du point droit (mm)"
 
-#: inx/inkstitch_jump_to_stroke.inx:40
+#: inx/inkstitch_jump_to_stroke.inx:41
 msgid "This extension converts jump stithes to running stitches."
 msgstr "Cette extension convertit les sauts en points droits."
 
-#: inx/inkstitch_jump_to_stroke.inx:42
+#: inx/inkstitch_jump_to_stroke.inx:43
 msgid "https://inkstitch.org/docs/stroke-tools/#jump-to-stroke"
 msgstr "https://inkstitch.org/docs/fr/stroke-tools/#jump-to-stroke"
 
@@ -5444,11 +5444,7 @@ msgstr "* Le texte consiste en une unique ligne de texte"
 msgid "* The text should not be too large for the given path"
 msgstr "* Le texte ne doit pas être trop long pour le chemin"
 
-#: inx/inkstitch_lettering_along_path.inx:24
-msgid "* Text text should not contain trim symbols"
-msgstr "* Le texte ne doit pas contenir de symbole de coupe"
-
-#: inx/inkstitch_lettering_along_path.inx:26
+#: inx/inkstitch_lettering_along_path.inx:25
 msgid "The stretch option defines whether the spaces between glyphs should be expanded so that the text stretches over the entire path."
 msgstr "L'option d'étirement détermine si les espaces entre les glyphes sont ou non étendus afin que le texte s'étende sur la longueur totale du chemin."
 
