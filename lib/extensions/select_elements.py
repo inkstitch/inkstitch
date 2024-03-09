@@ -7,7 +7,7 @@ import os
 import subprocess
 import sys
 
-from inkex import Boolean, errormsg
+from inkex import Boolean
 
 from ..elements import Clone, FillStitch, Polyline, SatinColumn, Stroke
 from ..i18n import _
@@ -76,12 +76,6 @@ class SelectElements(InkstitchExtension):
         # custom python path
         if self.options.python_path:
             py_path = self.options.python_path
-
-        if not os.path.isfile(py_path):
-            errormsg(_("Could not detect python path. "
-                       "Please insert python path manually as described in the help tab "
-                       "of the select elements dialog."))
-            sys.exit(0)
 
         return py_path, file_path
 
