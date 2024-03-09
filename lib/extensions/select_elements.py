@@ -7,7 +7,7 @@ import os
 import subprocess
 import sys
 
-from inkex import Boolean
+from inkex import Boolean, errormsg
 
 from ..elements import Clone, FillStitch, Polyline, SatinColumn, Stroke
 from ..i18n import _
@@ -49,12 +49,21 @@ class SelectElements(InkstitchExtension):
         py_path, file_path = self._get_paths()
         id_list = self._get_id_list()
 
+        subprocess.Popen(
+            [py_path, 'select_elements.py', id_list],
+            cwd=file_path,
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL)
+
+        '''
         with subprocess.Popen(
-                [py_path, 'select_elements.py', id_list],
-                cwd=file_path,
-                stdout=subprocess.DEVNULL,
-                stderr=subprocess.DEVNULL) as proc:
+            [py_path, 'select_elements.py', id_list],
+            cwd=file_path,
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL
+        ) as proc:
             proc.wait()
+        '''
 
     def _get_paths(self):
         file_path = get_bundled_dir("dbus")
@@ -76,6 +85,12 @@ class SelectElements(InkstitchExtension):
         # custom python path
         if self.options.python_path:
             py_path = self.options.python_path
+
+        if not os.path.isfile(py_path):
+            errormsg(_("Could not detect python path. "
+                       "Please insert python path manually as described in the help tab "
+                       "of the select elements dialog."))
+            sys.exit(0)
 
         return py_path, file_path
 
