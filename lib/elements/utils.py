@@ -6,7 +6,7 @@
 from ..commands import is_command
 from ..marker import has_marker
 from ..svg.tags import (EMBROIDERABLE_TAGS, SVG_IMAGE_TAG, SVG_PATH_TAG,
-                        SVG_POLYGON_TAG, SVG_POLYLINE_TAG, SVG_TEXT_TAG)
+                        SVG_POLYGON_TAG, SVG_POLYLINE_TAG, SVG_TEXT_TAG, SVG_GROUP_TAG)
 from .clone import Clone, is_clone
 from .element import EmbroideryElement
 from .empty_d_object import EmptyDObject
@@ -47,6 +47,12 @@ def node_to_elements(node, clone_to_element=False):  # noqa: C901
                 elements.append(Stroke(node))
         if element.get_boolean_param("stroke_first", False):
             elements.reverse()
+        return elements
+
+    elif node.tag == SVG_GROUP_TAG:
+        elements = []
+        for child in node.getchildren():
+            elements.extend(node_to_elements(child, clone_to_element))
         return elements
 
     elif node.tag == SVG_IMAGE_TAG:

@@ -12,7 +12,7 @@ from ..commands import is_command_symbol
 from ..i18n import _
 from ..svg.path import get_node_transform
 from ..svg.tags import (EMBROIDERABLE_TAGS, INKSTITCH_ATTRIBS, SVG_USE_TAG,
-                        XLINK_HREF)
+                        XLINK_HREF, SVG_GROUP_TAG)
 from ..utils import cache
 from .element import EmbroideryElement, param
 from .validation import ObjectTypeWarning, ValidationWarning
@@ -86,7 +86,7 @@ class Clone(EmbroideryElement):
         patches = []
 
         source_node = get_clone_source(self.node)
-        if source_node.tag not in EMBROIDERABLE_TAGS:
+        if source_node.tag not in EMBROIDERABLE_TAGS and source_node.tag != SVG_GROUP_TAG:
             return []
 
         old_transform = source_node.get('transform', '')
