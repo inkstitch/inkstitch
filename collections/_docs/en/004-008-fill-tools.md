@@ -92,7 +92,7 @@ A pallet code looks for example like this: `(#000000)/5.0 (#FFFFFF)/?5.0`.
 * A slash (`/`) indicates a symmetrical/reflective order, whereas three points at the start and end of the code (`...`) represent a asymmetrical/repeating sett `...(#000000)5.0 (#FFFFFF)?5.0...`.
 * A pipe (`|`) is a separator for warp and weft and should only be used if they differ in threadcount
 
-**Info**: The [Scottish Register of Tartans](https://www.tartanregister.gov.uk/) has a huge collection of registered tartan patterns. Ink/Stitch is capable to use their code which they send out per mail and convert it into the Ink/Stitch color code. Please respect their particular license regulations.
+**Info**: The [Scottish Register of Tartans](https://www.tartanregister.gov.uk/) has a huge collection of registered tartan patterns. Ink/Stitch is capable to use their code which they send out per mail and convert it into the Ink/Stitch color code. Please respect their particular license regulations. Make sure to define the width of one tartan thread before you click on `Apply Code`.
 {: .notice--info}
 
 ### Embroidery Settings
