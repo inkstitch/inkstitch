@@ -102,6 +102,7 @@ class StrokeAndFillWarning(ValidationWarning):
         _('* Adapt the shape of the second element to compensate for push and pull fabric distortion.')
     ]
 
+
 class InvalidShapeError(ValidationError):
     name = _("This shape is invalid")
     description = _('Fill: This shape cannot be stitched out. Please try to repair it with the "Break Apart Fill Objects" extension.')
