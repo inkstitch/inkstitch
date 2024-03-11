@@ -56,6 +56,7 @@ class Zip(InkstitchExtension):
         min_stitch_len = self.metadata['min_stitch_len_mm']
         patches = self.elements_to_stitch_groups(self.elements)
         stitch_plan = stitch_groups_to_stitch_plan(patches, collapse_len=collapse_len, min_stitch_len=min_stitch_len)
+        ThreadCatalog().match_and_apply_palette(stitch_plan, self.get_inkstitch_metadata()['thread-palette'])
 
         if self.options.x_repeats != 1 or self.options.y_repeats != 1:
             stitch_plan = self._make_offsets(stitch_plan)
@@ -123,7 +124,6 @@ class Zip(InkstitchExtension):
         return stitch_plan.make_offsets(offsets)
 
     def get_threadlist(self, stitch_plan, design_name):
-        ThreadCatalog().match_and_apply_palette(stitch_plan, self.get_inkstitch_metadata()['thread-palette'])
         thread_used = []
 
         thread_output = "%s\n" % _("Design Details")

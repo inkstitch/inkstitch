@@ -9,6 +9,7 @@ import tempfile
 
 from ..output import write_embroidery_file
 from ..stitch_plan import stitch_groups_to_stitch_plan
+from ..threads import ThreadCatalog
 from .base import InkstitchExtension
 
 
@@ -56,6 +57,7 @@ class Output(InkstitchExtension):
         patches = self.elements_to_stitch_groups(self.elements)
         stitch_plan = stitch_groups_to_stitch_plan(patches, collapse_len=collapse_len, disable_ties=self.settings.get('laser_mode', False),
                                                    min_stitch_len=min_stitch_len)
+        ThreadCatalog().match_and_apply_palette(stitch_plan, self.metadata['thread-palette'])
 
         temp_file = tempfile.NamedTemporaryFile(suffix=".%s" % self.file_extension, delete=False)
 
