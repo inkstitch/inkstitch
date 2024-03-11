@@ -3,8 +3,7 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-from lib.extensions.troubleshoot import Troubleshoot
-
+from .apply_palette import ApplyPalette
 from .apply_threadlist import ApplyThreadlist
 from .auto_run import AutoRun
 from .auto_satin import AutoSatin
@@ -30,6 +29,7 @@ from .install_custom_palette import InstallCustomPalette
 from .jump_to_stroke import JumpToStroke
 from .layer_commands import LayerCommands
 from .lettering import Lettering
+from .lettering_along_path import LetteringAlongPath
 from .lettering_custom_font_dir import LetteringCustomFontDir
 from .lettering_force_lock_stitches import LetteringForceLockStitches
 from .lettering_generate_json import LetteringGenerateJson
@@ -55,13 +55,13 @@ from .stitch_plan_preview import StitchPlanPreview
 from .stitch_plan_preview_undo import StitchPlanPreviewUndo
 from .stroke_to_lpe_satin import StrokeToLpeSatin
 from .test_swatches import TestSwatches
+from .troubleshoot import Troubleshoot
 from .update_svg import UpdateSvg
 from .zigzag_line_to_satin import ZigzagLineToSatin
 from .zip import Zip
 
-from.lettering_along_path import LetteringAlongPath
-
-__all__ = extensions = [ApplyThreadlist,
+__all__ = extensions = [ApplyPalette,
+                        ApplyThreadlist,
                         AutoRun,
                         AutoSatin,
                         BreakApart,
