@@ -92,6 +92,10 @@ docs:
         url: /docs/stitches/meander-fill/
       - title: "Circular Fill"
         url: /docs/stitches/circular-fill/
+      - title: "Linear Gradient Fill"
+        url: /docs/stitches/linear-gradient-fill
+      - title: "Tartan Fill"
+        url: /docs/stitches/tartan-fill
       - title: "Lock stitches"
         url: /docs/stitches/lock-stitches/
       - title: "Stitch patterns"
