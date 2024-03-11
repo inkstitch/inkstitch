@@ -58,7 +58,7 @@ The Stripe Editor can be found in `Extensions > Ink/Stitch > Tools: Fill > Tarta
 
 #### Positioning
 
-The pattern can be rotated, scaled and translated as a whole
+The pattern can be rotated, scaled (%) and translated (mm) as a whole
 
 #### Pattern Settings
 
