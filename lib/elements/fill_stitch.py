@@ -94,6 +94,15 @@ class BorderCrossWarning(ValidationWarning):
     ]
 
 
+class StrokeAndFillWarning(ValidationWarning):
+    name = _("Fill and Stroke color")
+    description = _("Element has both a fill and a stroke color. It is recommended to use two separate elements instead.")
+    steps_to_solve = [
+        _('* Duplicate the element. Remove stroke color from the first and fill color from the second.'),
+        _('* Adapt the shape of the second element to compensate for push and pull fabric distortion.')
+    ]
+
+
 class InvalidShapeError(ValidationError):
     name = _("This shape is invalid")
     description = _('Fill: This shape cannot be stitched out. Please try to repair it with the "Break Apart Fill Objects" extension.')
@@ -649,6 +658,13 @@ class FillStitch(EmbroideryElement):
             elif guide_lines[0].disjoint(self.shape):
                 yield DisjointGuideLineWarning(self.shape.centroid)
             return None
+
+        if self.node.style('stroke', None) is not None:
+            if not self.shape.is_empty:
+                yield StrokeAndFillWarning(self.shape.representative_point())
+            else:
+                # they may used a fill on a straight line
+                yield StrokeAndFillWarning(self.paths[0][0])
 
         for warning in super(FillStitch, self).validation_warnings():
             yield warning

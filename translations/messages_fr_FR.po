@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-03-08 01:03+0000\n"
-"PO-Revision-Date: 2024-03-08 01:04\n"
+"POT-Creation-Date: 2024-03-09 01:01+0000\n"
+"PO-Revision-Date: 2024-03-09 01:02\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-08 01:03+0000\n"
+"POT-Creation-Date: 2024-03-09 01:01+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -554,7 +554,7 @@ msgstr "Sortefax Medium Initials"
 #. description of font in fonts/sortefax_medium
 #: inkstitch-fonts-metadata.py:204
 msgid "Sortefax  Medium Initials is a  satin stitch Capital font of size 90 mm.  It can be reduced down to 70% and enlarged up to 200%. It contains the 37 glyphs :ampersand, A-Z and 0-9. In addition the ten glyphs (){}[],;.: are used to store frames. Type any letter followed by any frame (e.g. A( or B; or 7, ) to obtain a framed Capital or Number. Some manual arranging of the frame around the letter may be required"
-msgstr "Sortefax Medium Initials est une  police de majuscules en colonnes satin d'environ 90 mm.  Elle peut être réduite jusqu'à 70% et agrandie jusqu'à 200%. Elle contient les 37 glyphes : A-Z, 0-9 et le ampersand. De plus les 10 glyphes  (){}[],;.: sont utilisés pour stocker des cadres. Tapper n'importe quelle lettre suivie par n'importe quel cadre (par exemple A( ou B; ) pour obtenir  la lettre encadrée.  Il est possible qu'un ajustement manuel du cadre autour de la lettre soit requis."
+msgstr "Sortefax Medium Initials est une  police de majuscules en colonnes satin d'environ 90 mm.  Elle peut être réduite jusqu'à 70% et agrandie jusqu'à 200%. Elle contient les 37 glyphes : A-Z, 0-9 et le ampersand. De plus les 10 glyphes  (){}[],;.: sont utilisés pour stocker des cadres. Tapper n'importe quelle lettre suivie par n'importe quel cadre (par exemple A( ou B; ou 7,) pour obtenir  la lettre encadrée.  Il est possible qu'un ajustement manuel du cadre autour de la lettre soit requis."
 
 #. name of font in fonts/tt_directors
 #: inkstitch-fonts-metadata.py:206
@@ -1191,7 +1191,7 @@ msgstr "Forcer des points d'arrêt"
 
 #: lib/elements/element.py:239
 msgid "Sew lock stitches after sewing this element, even if the distance to the next object is shorter than defined by the minimum jump stitch length value in the Ink/Stitch preferences."
-msgstr ""
+msgstr "Créer des points d'arrêt après avoir cousu cet élément, même si la distance jusqu'à l'objet suivant est plus courte que la valeur de 'longueur minimum de saut' défini dans les préférences Ink/Stitch."
 
 #: lib/elements/element.py:251
 msgid "Tack stitch"
@@ -2426,8 +2426,8 @@ msgstr "Inkstitch ne peut pas convertir votre trait en colonne satin. Veuillez s
 
 #. : Convert To Satin extension, user selected one or more objects that were
 #. not lines.
-#: lib/extensions/convert_to_stroke.py:25
-#: lib/extensions/convert_to_stroke.py:30
+#: lib/extensions/convert_to_stroke.py:23
+#: lib/extensions/convert_to_stroke.py:28
 msgid "Please select at least one satin column to convert to a running stitch."
 msgstr "Veuillez sélectionner au moins une colonne satin à convertir en point droit."
 
@@ -5374,15 +5374,15 @@ msgstr "Options de sortie"
 
 #: inx/inkstitch_jump_to_stroke.inx:31
 msgid "Merge consecutive strokes of same type"
-msgstr ""
+msgstr "Fusionner deux triaits consécutifs de style identique"
 
 #: inx/inkstitch_jump_to_stroke.inx:32
 msgid "Merge subpaths of stroke elements"
-msgstr ""
+msgstr "Fusionner les sous-chemins"
 
 #: inx/inkstitch_jump_to_stroke.inx:36
 msgid "These settings only apply for unmerged connectors"
-msgstr ""
+msgstr "Ces paramètres ne s'appliquent qu'aux connexions non fusionnées"
 
 #: inx/inkstitch_jump_to_stroke.inx:37
 msgid "Running stitch length (mm)"

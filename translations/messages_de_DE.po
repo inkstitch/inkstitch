@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-03-08 01:03+0000\n"
-"PO-Revision-Date: 2024-03-08 01:04\n"
+"POT-Creation-Date: 2024-03-09 01:01+0000\n"
+"PO-Revision-Date: 2024-03-09 01:02\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-08 01:03+0000\n"
+"POT-Creation-Date: 2024-03-09 01:01+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2424,8 +2424,8 @@ msgstr "Ink/Stitch kann die Linie nicht in eine Satinsäule umwandeln. Bitte die
 
 #. : Convert To Satin extension, user selected one or more objects that were
 #. not lines.
-#: lib/extensions/convert_to_stroke.py:25
-#: lib/extensions/convert_to_stroke.py:30
+#: lib/extensions/convert_to_stroke.py:23
+#: lib/extensions/convert_to_stroke.py:28
 msgid "Please select at least one satin column to convert to a running stitch."
 msgstr "Für die Umwandlung in einen Geradstich bitte mindestens eine Satinsäule auswählen."
 

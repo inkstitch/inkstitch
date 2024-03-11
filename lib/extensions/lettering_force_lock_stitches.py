@@ -20,6 +20,7 @@ class LetteringForceLockStitches(InkstitchExtension):
 
     def __init__(self, *args, **kwargs):
         InkstitchExtension.__init__(self, *args, **kwargs)
+        self.arg_parser.add_argument("-s", "--satin_only", type=inkex.Boolean, dest="satin_only")
         self.arg_parser.add_argument("-a", "--max_distance", type=float, default=3, dest="max_distance")
         self.arg_parser.add_argument("-i", "--min_distance", type=float, default=1, dest="min_distance")
         self.arg_parser.add_argument("-l", "--last_element", type=inkex.Boolean, dest="last_element")
@@ -65,7 +66,7 @@ class LetteringForceLockStitches(InkstitchExtension):
         # set force lock stitches attribute if needed
         for last_element in last_elements:
             last_element.attrib.pop('lastglyphelement')
-            if self.options.last_element:
+            if self.options.last_element and not (self.options.satin_only and not last_element.get('inkstitch:satin_column', False)):
                 last_element.set(INKSTITCH_ATTRIBS['force_lock_stitches'], True)
 
         # hide glyph layers again
@@ -74,7 +75,9 @@ class LetteringForceLockStitches(InkstitchExtension):
     def _set_force_attribute(self, first_stitch, last_stitch, previous_element):
         distance_mm = first_stitch.distance(last_stitch) / PIXELS_PER_MM
 
-        if distance_mm < self.options.max_distance and distance_mm > self.options.min_distance:
+        if (distance_mm < self.options.max_distance and
+                distance_mm > self.options.min_distance and
+                not (self.options.satin_only and not previous_element.get_boolean_param('satin_column', False))):
             previous_element.node.set(INKSTITCH_ATTRIBS['force_lock_stitches'], True)
 
     def _update_layer_visibility(self, display):

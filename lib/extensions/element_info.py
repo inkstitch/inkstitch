@@ -34,8 +34,8 @@ class ElementInfo(InkstitchExtension):
         stitch_groups = element.to_stitch_groups(previous_stitch_group)
         stitch_plan = stitch_groups_to_stitch_plan(
             stitch_groups,
-            collapse_len=self.metadata['collapse_len'],
-            min_stitch_len=self.metadata['min_stitch_len']
+            collapse_len=self.metadata['collapse_len_mm'],
+            min_stitch_len=self.metadata['min_stitch_len_mm']
         )
 
         self.list_items.append(ListItem(
@@ -137,8 +137,8 @@ class ElementInfo(InkstitchExtension):
         stitch_groups = self.elements_to_stitch_groups(self.elements)
         stitch_plan = stitch_groups_to_stitch_plan(
             stitch_groups,
-            collapse_len=self.metadata['collapse_len'],
-            min_stitch_len=self.metadata['min_stitch_len']
+            collapse_len=self.metadata['collapse_len_mm'],
+            min_stitch_len=self.metadata['min_stitch_len_mm']
         )
 
         general_info_list_items.append(ListItem(
@@ -159,7 +159,7 @@ class ElementInfo(InkstitchExtension):
         ))
         general_info_list_items.append(ListItem(
             name=_("Jumps"),
-            value=str(stitch_plan.num_jumps)
+            value=str(stitch_plan.num_jumps - 1)
         ))
         general_info_list_items.append(ListItem(
             name=_("Trims"),
