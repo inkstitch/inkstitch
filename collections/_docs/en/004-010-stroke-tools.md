@@ -1,7 +1,7 @@
 ---
 title: "Tools: Stroke"
 permalink: /docs/stroke-tools/
-last_modified_at: 2024-02-10
+last_modified_at: 2024-03-11
 toc: true
 ---
 ## Autoroute Running Stitch
@@ -23,9 +23,20 @@ Tip: By default, it will choose the left-most extreme node as the starting point
 - Enable **Trim jump stitches** to use trims instead of jump stitches. Trim commands are added to the SVG, so you can modify/delete as you see fit.
 - Enable **Preserve order of running stitches** if you prefer to keep your former order. 
 
-## Outline {#outline}
+## Outline
+
 {% include upcoming_release.html %}
-This extension helps reconstruct an original  object when one only has  the  stitch file, but  not the svg design file. Select one (or several) stitch object (usually from a fill), and this extension will try to find the outline. Best way to use it is to allow live preview and change the ratio via the scroll bar to find the best value for the given object.
+
+This extension helps reconstruct an original  object when one only has  the  stitch file, but  not the svg design file. Select one (or several) stitch object (usually from a fill), and this extension will try to find the outline.
+
+![Fill to outline](/assets/images/docs/outline.png)
+
+### Usage
+
+- Select the elements you want to convert
+- Run `Extensions > Ink/Stitch > Tools: Stroke > Outline...`
+- Enable live preview and change the ratio via the scroll bar to find the best value for the given object
+- Click apply
 
 ## Convert Satin to Stroke
 

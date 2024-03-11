@@ -1,7 +1,7 @@
 ---
 title: "Visualize"
 permalink: /docs/visualize/
-last_modified_at: 2024-02-19
+last_modified_at: 2024-03-11
 toc: true
 ---
 ## Simulator / Realistic Preview
@@ -77,6 +77,8 @@ This will display red, yellow and green dots on top of your elements so you can 
 Run `Extensions > Ink/Stitch > Visualize and Export > Display stacking order...`.
 
 Chose the font size and then apply  to create a new layer with one text label per embroidery object , numbering them in the embroidery order.
+
+![Display stacking order](/assets/images/docs/stacking_order.png)
 
 ## Print PDF
 

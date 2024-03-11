@@ -1,7 +1,7 @@
 ---
 title: "Troubleshoot"
 permalink: /docs/troubleshoot/
-last_modified_at: 2024-02-19
+last_modified_at: 2024-03-11
 toc: true
 ---
 
@@ -24,8 +24,12 @@ You will either get a message, that no error could be found or a new layer with 
 {: .notice--info }
 
 ## Element Info
+
 {% include upcoming_release.html %}
+
 This extension informs about various parameters of selected stitch elements.
+
+![Element info](/assets/images/docs/en/element_info.png)
 
 ## Remove embroidery settings
 
