@@ -91,11 +91,13 @@ Ceci montrera des marqueurs rouges, jaunes et verts au dessus de vos éléments,
 
 {% include upcoming_release.html %}
 
-![Display stacking order](/assets/images/docs/stacking_order.png)
 
 Lancez `Extensions > Ink/Stitch > Visualiser et Exporter> Montrer l'ordre de broderie...`.
 
 Choisir la taille de la fonte et cliquer sur  Appliquer pour créer un nouveau calque (non brodable) de texte qui numérote les éléments de broderie dans l'ordre de broderie, c'est à dire dans l'ordre  inverse de la  pile d'objets.
+
+
+![Display stacking order](/assets/images/docs/stacking_order.png)
 
 ## Export PDF
 
