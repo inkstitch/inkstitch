@@ -1,7 +1,7 @@
 ---
 title: "Outils: Trait"
 permalink: /fr/docs/stroke-tools/
-last_modified_at: 2024-02-11
+last_modified_at: 2024-03-1é
 toc: true
 ---
 ## Agencement automatique de points droits
@@ -27,7 +27,16 @@ Par défaut, l'extension choisira de commencer par le noeud le plus à gauche et
 
 ## Contour {#outline}
 {% include upcoming_release.html %}
-Cette extensionn aide àreconstruire l'objet original à partir du fichier de points lorsqu'on ne dispose plus du fichier svg de départ. Sélectionner un ou plusieurs chemins de points (en general un remplissage) et cette extension va essayer de trouver leur contour. La manière la plus simple de procéder est de permettre  le  "live preview"  et d'utiliser la scroll bar pour modifier le ratio et trouver la meilleure valeur pour le chemin choisi.
+
+![Fill to outline](/assets/images/docs/outline.png)
+
+Cette extensionn aide à reconstruire l'objet original à partir du fichier de points lorsqu'on ne dispose plus du fichier svg de départ. Sélectionner un ou plusieurs chemins de points (en general un remplissage) et cette extension va essayer de trouver leur contour.
+### Usage
+
+- Sélectioner  les éléments que vous souhaitez convertir
+- Exécutez `Extensions > Ink/Stitch > Outils: Trait > Contour...`
+- Cochez  "live preview"  et utilises la scroll bar pour modifier le ratio et trouver la meilleure valeur pour le chemin choisi.
+- Cliquez "Appliquer"
 
 ## Satin en Trait
 
