@@ -4,7 +4,7 @@ permalink: /fr/docs/thread-color/
 last_modified_at: 2024-03-13
 toc: true
 -------
-## Appliquer une liste de fils {#apply-palette}
+## Appliquer une liste de fils 
 
 Ink/Stitch peut appliquer des listes de fil personnalisées à une broderie. Ceci est particulièrement utile si vous souhaitez utiliser un fichier de broderie qui ne comporte pas d'information de couleur (par exemple DST).
 
@@ -20,7 +20,7 @@ Si vous souhaitez importer une autre liste de fils en provenance d'un fichier tx
 
 Les listes de fils ne peuvent être exportées qu'en enregistrant une copie du fichier au format "Ink/Stitch: ZIP exporter plusieurs formats (.zip)" , puis après avoir cliqué sur "Enregistrer" selectionnez le format ".TXT: liste de fils".
 
-## Appliquer une palette
+## Appliquer une palette {#apply-palette}
 {% include upcoming_release.html %}
 Cette extension applique aux éléments d'un document les couleurs les plus proches parmi celles de la palette choisie.
 
