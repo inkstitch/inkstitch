@@ -81,10 +81,29 @@ Die Funktion ist vergleichbar mit der Inkscape Funktion unter `Pfad > Bitmap nac
 
 Dieses Werkzeug erstellt Geradstiche von der Endposition des ersten Elements zu der Startposition des zweiten. Leite den hier generierten Geradstich versteckt unter später folgenden Stickflächen entlang und vermeide so unnötige Sprungstiche.
 
+
 ### Anwendung
 
 * Wähle zwei oder mehr Objekte aus
 * Öffne `Erweiterungen > Ink/Stitch > Werkzeuge: Linie > Sprungstich zu Geradstich`
+
+{% include upcoming_release.html %}
+### Options
+
+* Convert jumps no shorter than
+* Convert jumps no longer than
+* Connect only within groups or layers
+* Do not connect after trim, stop or forced lock stitches
+
+#### Output settings options
+* Merge new strokes with previous/next stroke if same type
+* Merge subpaths
+
+and for unmerged connections only 
+* Minimum length of running stitch
+* Tolerance
+
+
 
 ## Tutorials zu Linien-Werkzeugen
 
