@@ -30,8 +30,6 @@ This extension applies nearest colors from a specified thread palette on a desig
 
 This will also be recognized by the Ink/Stitch pdf output.
 
-
-
 Run `Extensions > Ink/Stitch  > Thread Color Management > Apply Palette 
 
 ## Generate Palette
