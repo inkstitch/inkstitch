@@ -26,6 +26,8 @@ Entweder erhälst du eine nun Nachricht, dass kein Fehler gefunden wurde oder es
 {% include upcoming_release.html %}
 Diese Erweiterung sammelt Informationen über verschiedene Parameter für eine Auswahl von Stickobjekten.
 
+![Element info](/assets/images/docs/en/element_info.png)
+
 
 ## Stickeinstellungen entfernen
 
