@@ -15,7 +15,7 @@ Linear gradient fill uses Inkscapes linear gradient color to create seamless gra
 
 ## How to Create
 
-* Create a **closed path with a fill color**. The shape may have holes
+* Create a closed path. The shape may have holes.
 * In the `Fill and Stroke` dialog, select a linear gradient as a fill and adjust colors. On canvas adjust the gradient angle. The stitch angle will have a 90 degree angle to gradient direction.
   ![linear gradient](/assets/images/docs/en/linear-gradient.png)
 * Open the params dialog (`Extensions > Ink/Stitch > Params`) and select `Linear Gradient Fill` as the fill method
