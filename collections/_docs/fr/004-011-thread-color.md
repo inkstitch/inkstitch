@@ -4,7 +4,7 @@ permalink: /fr/docs/thread-color/
 last_modified_at: 2023-05-04
 toc: true
 ---
-## Appliquer la liste de fils
+## Appliquer la liste de fils {#apply-palette}
 
 Ink/Stitch peut appliquer des listes de fil personnalisées à une broderie. Ceci est particulièrement utile si vous souhaitez utiliser un fichier de broderie qui ne comporte pas d'information de couleur (par exemple DST).
 
