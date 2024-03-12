@@ -74,11 +74,11 @@ Zeigt Punkte in frei wählbaren Farben (Standart: rot, gelb, grün) über dem De
 
 {% include upcoming_release.html %}
 
-![Display stacking order](/assets/images/docs/stacking_order.png)
-
 Run `Extensions > Ink/Stitch > Visualize and Export > Display stacking order...`.
 
 Chose the font size and then apply  to create a new layer with one text label per embroidery object, numbering them in the embroidery order.
+
+![Display stacking order](/assets/images/docs/stacking_order.png)
 
 ## PDF-Export
 
