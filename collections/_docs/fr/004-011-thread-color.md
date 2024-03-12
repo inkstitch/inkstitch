@@ -1,7 +1,7 @@
 ---
 title: "Gestion des couleurs de fil"
 permalink: /fr/docs/thread-color/
-last_modified_at: 2023-05-04
+last_modified_at: 2024-03-13
 toc: true
 -------
 ## Appliquer une liste de fils {#apply-palette}
