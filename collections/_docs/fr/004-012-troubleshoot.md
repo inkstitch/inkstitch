@@ -26,6 +26,8 @@ Vous recevrez soit un message indiquant qu'aucune erreur ne peut être trouvée,
 {% include upcoming_release.html %}
 Cette extension affiche des informations sur divers paramètres des éléments de broderie sélectionnés.
 
+![Element info](/assets/images/docs/en/element_info.png)
+
 
 ## Supprimer tous les paramètres de broderie
 
