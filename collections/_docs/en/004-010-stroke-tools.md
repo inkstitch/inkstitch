@@ -89,6 +89,23 @@ This will create a running stitch from the end position of the first element to 
 * Select two or more objects
 * Run `Extensions > Ink/Stitch > Tools: Stroke > Jump Stitch to Stroke`
 
+{% include upcoming_release.html %}
+### Options
+
+* Convert jumps no shorter than
+* Convert jumps no longer than
+* Connect only within groups or layers
+* Do not connect after trim, stop or forced lock stitches
+
+#### Output settings options
+* Merge new strokes with previous/next stroke if same type
+* Merge subpaths
+
+and for unmerged connections only 
+* Minimum length of running stitch
+* Tolerance
+
+
 
 ## Tutorials using Tools: Stroke
 {% include tutorials/tutorial_list key="tool" value="Stroke" %}
