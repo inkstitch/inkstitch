@@ -15,7 +15,7 @@ Small fonts will sometimes unravel if threads are cut after the embroidery machi
 
 Therefore it is important that also diacritics with a smaller distance to the font body than defined by the minimum jump stitch length (default: 3mm) have lock stitches.
 
-This extension helps adding forced lock stitches. One may chose to restrict lock stitches only to satin columnns.
+This extension helps adding forced lock stitches. One may chose to restrict the addition of lock stitches only to satin columnns.
 ## Custom Font Directory
 
 This extension allows you to define a directory in your file system where you want to store additional fonts to be used with the lettering tool.
