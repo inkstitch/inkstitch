@@ -88,6 +88,23 @@ Ceci crééra un point droit direct entre la fin du premier élément et le déb
 * Sélectionnez au moins deux objets
 * Exécutez  `Extensions > Ink/Stitch > Outils: Trait > Saut en Trait`
 
+* {% include upcoming_release.html %}
+### Options
+
+* Convertir les sauts de longueur au moins 
+* Convertir les sauts de longueur au plus 
+* Connecter seulement au sein des groupes ou des calques 
+* Ne pas connecger après une coupe, un stop ou des points d'arrêt forcés.
+
+#### Options de sortie
+* Fusionner les nouveaux points droits avec le précédent ou le suivant si de même type.Merge new strokes with previous/next stroke if same type
+* Connectez les sous-chemins et fusionner
+
+et pour les connexions non fusionnées:
+* Longueur minimum du point droit
+* Tolerance
+
+
 ## Tutoriaux utilisant Outils: Trait
 
 {% include tutorials/tutorial_list key="tool" value="Stroke" %}
