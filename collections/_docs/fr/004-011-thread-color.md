@@ -24,6 +24,8 @@ Les listes de fils ne peuvent être exportées qu'en enregistrant une copie du f
 {% include upcoming_release.html %}
 Cette extension applique aux éléments d'un document les couleurs les plus proches parmi celles de la palette choisie.
 
+Ces changement seront pris en compte dans l'export pdf d'Ink/Stitcht.
+
 Exécutez `Extensions > Ink/Stitch  > Gestion des couleurs de fil > Appliquer une palette` 
 
 
