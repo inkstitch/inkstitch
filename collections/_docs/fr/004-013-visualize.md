@@ -1,7 +1,7 @@
 ---
 title: "Simulation"
 permalink: /fr/docs/visualize/
-last_modified_at: 2024-02-20
+last_modified_at: 2024-03-13
 toc: true
 ---
 ## Simulateur/ Aperçu Réaliste
@@ -90,6 +90,8 @@ Ceci montrera des marqueurs rouges, jaunes et verts au dessus de vos éléments,
 ## Montrer l'ordre de broderie
 
 {% include upcoming_release.html %}
+
+![Display stacking order](/assets/images/docs/stacking_order.png)
 
 Lancez `Extensions > Ink/Stitch > Visualiser et Exporter> Montrer l'ordre de broderie...`.
 
