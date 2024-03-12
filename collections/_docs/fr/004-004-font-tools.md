@@ -15,7 +15,7 @@ Les petites fontes se défont parfois si les fils sont coupés après la broderi
 
 Il est donc important que les diacritiques qui sont plus proches du corps de la lettre que la valeur de la longueur minimum de saut définie dans les préférences (3mm par défaut) aient des points d'arrêt. 
 
-Ceci peut être obtenu en leur ajoutant un attribut forcer les points d'arrêt.
+Ceci peut être obtenu en leur ajoutant un attribut forcer les points d'arrêt. Il est possible de restreindre cet ajout aux seules colonnes satin.
 
 Pour la même raison, lorsque les lettres sont détachées, il peut être utile de forcer les points d'arrêts sur le dernier élément de chaque glyphe.
 
