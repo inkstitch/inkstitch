@@ -19,6 +19,15 @@ Willst du eine andere Garnliste aus einer Textdatei (txt) importieren, wähle di
 
 Garnlisten können nur über eine ZIP-Datei exportiert werden ([batch export](/de/docs/import-export/#batch-export))
 
+
+## Apply Palette
+{% include upcoming_release.html %}
+This extension applies nearest colors from a specified thread palette on a design. 
+
+This will also be recognized by the Ink/Stitch pdf output.
+
+Run `Extensions > Ink/Stitch  > Thread Color Management > Apply Palette 
+
 ## Farbpalette erstellen
 
 Inkscape kann `.gpl` Farbpaletten erstellen. Aber es ist nicht möglich, die Farben zu sortieren.
