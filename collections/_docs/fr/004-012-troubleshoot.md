@@ -1,7 +1,7 @@
 ---
 title: "Dépannage"
 permalink: /fr/docs/troubleshoot/
-last_modified_at: 2024-02-20
+last_modified_at: 2024-03-12
 toc: true
 ---
 ## Dépistage de problèmes avec des objets
