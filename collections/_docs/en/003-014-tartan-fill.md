@@ -14,12 +14,12 @@ Tartan is a patterned fabric with colored horizontal and vertical stripes. It is
 ## How to Create
 
 * Create a **closed path with a fill color**. The shape may have holes.
-* Open the tartan pattern editor (`Extensions > Ink/Stitch > Tools: Fill > Tartan`)
-* More stitch params are available in the params dialog (`Extensions > Ink/Stitch > Params`)
+* Open the tartan pattern editor (`Extensions > Ink/Stitch > Tools: Fill > Tartan`) and create your own tartan pattern
+* You can update and change more stitch params in the params dialog (`Extensions > Ink/Stitch > Params`)
 
 ## Edit Tartan Patterns
 
-The Stripe Editor can be found in `Extensions > Ink/Stitch > Tools: Fill > Tartan`
+The Tartan Pattern Editor can be found in `Extensions > Ink/Stitch > Tools: Fill > Tartan`
 
 [Read more about the Tartan Stripe Editor](/docs/fill-tools#tartan)
 
