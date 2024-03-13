@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-03-12 01:03+0000\n"
-"PO-Revision-Date: 2024-03-12 01:04\n"
+"PO-Revision-Date: 2024-03-13 01:05\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -1369,19 +1369,19 @@ msgstr "Remplissage : La frontière se croise elle-même, ce qui peut donner de
 
 #: lib/elements/fill_stitch.py:98
 msgid "Fill and Stroke color"
-msgstr ""
+msgstr "Couleur de fond et de contour"
 
 #: lib/elements/fill_stitch.py:99
 msgid "Element has both a fill and a stroke color. It is recommended to use two separate elements instead."
-msgstr ""
+msgstr "L'élément a à la fois une couleur de fond et une couleur de contour. Il est recommandé d'utiliser plutôt deux éléments séparés."
 
 #: lib/elements/fill_stitch.py:101
 msgid "* Duplicate the element. Remove stroke color from the first and fill color from the second."
-msgstr ""
+msgstr "* Dupliquer l'élément. Supprimer la couleur de contour pour l'un et la couleur de fond pour l'autre."
 
 #: lib/elements/fill_stitch.py:102
 msgid "* Adapt the shape of the second element to compensate for push and pull fabric distortion."
-msgstr ""
+msgstr "* Adapter la forme du second élément pour compenser les distorsions du tissu."
 
 #: lib/elements/fill_stitch.py:107
 msgid "This shape is invalid"
@@ -4258,7 +4258,7 @@ msgstr "Licence"
 
 #: inx/inkstitch_apply_palette.inx:3
 msgid "Apply Palette"
-msgstr ""
+msgstr "Appliquer une palette"
 
 #: inx/inkstitch_apply_palette.inx:8
 msgid "Select color palette"
@@ -4266,7 +4266,7 @@ msgstr ""
 
 #: inx/inkstitch_apply_palette.inx:85
 msgid "This extension applies nearest colors from chosen color palette to the elements in this document."
-msgstr ""
+msgstr "Cette extension applique aux éléments de ce document les couleurs les plus proches parmi celles de la palette choisie."
 
 #: inx/inkstitch_apply_palette.inx:88
 msgid "https://inkstitch.org/docs/thread-color/#apply-palette"
@@ -5514,7 +5514,7 @@ msgstr "Cette extension permet aux créateurs de fontes de broderie d'attribuer 
 
 #: inx/inkstitch_lettering_force_lock_stitches.inx:26
 msgid "Restrict to Satin"
-msgstr ""
+msgstr "Restreindre aux satins"
 
 #: inx/inkstitch_lettering_force_lock_stitches.inx:27
 msgid "Minimum distance (mm)"
