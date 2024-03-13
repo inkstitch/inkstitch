@@ -42,11 +42,12 @@ Die Erweiterung entfernt alle Stickparameter aus dem gesamten Dokument oder von 
 
 ### Optionen
 
-* Remove params
-* Remove commands
+* Parameter entfernen
+* Befehle entfernen
 
   {% include upcoming_release.html %}
-  (all/none/specific ommand only)
+  (Alle/Keine/bestimmte Befehle)
+* Druckeinstellungen aus den SVG Metadaten entfernen
 
 ![Stickeinstellungen entfernen - GUI](/assets/images/docs/en/remove-embroidery-settings.png)
 

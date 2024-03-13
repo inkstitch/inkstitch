@@ -1,7 +1,7 @@
 ---
 title: "Simulation"
 permalink: /fr/docs/visualize/
-last_modified_at: 2024-03-13
+last_modified_at: 2024-03-12
 toc: true
 ---
 ## Simulateur/ Aperçu Réaliste
@@ -85,7 +85,18 @@ Lancez `Extensions > Ink/Stitch > Visualisr et Exporter > Annuler le plan de bro
 
 Ceci montrera des marqueurs rouges, jaunes et verts au dessus de vos éléments, pour vous permettre d'identifier facilement les zones à forte densité. Tous les marqueurss d'une même couleur sont dans un groupe du calque Densité, ce qui vous permet de masquer facilement tous les marqueurs d'une couleur donnée.
 
-{% include upcoming_release.html %} Vous pouvez choisir la taille des marqueurs
+### Options
+
+* Red / yellow markers
+
+  Define up from many stitches in which radius should dots should be colored red or yellow
+* Design layer visibility
+
+  Define if Ink/Stitch should leave the design layer unchanged, hide id or lower opacity
+* Indicator size
+
+  Define the size of the dots in document units
+  {% include upcoming_release.html %}
 
 ## Montrer l'ordre de broderie
 

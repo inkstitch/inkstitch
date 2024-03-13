@@ -1,7 +1,7 @@
 ---
 title: "Visualize"
 permalink: /docs/visualize/
-last_modified_at: 2024-03-11
+last_modified_at: 2024-03-13
 toc: true
 ---
 ## Simulator / Realistic Preview
@@ -68,7 +68,18 @@ Run `Extensions > Ink/Stitch > Visualize and Export > Undo Stitch Plan Preview`
 
 This will display red, yellow and green dots on top of your elements so you can identify areas of high density easily.
 
-{% include upcoming_release.html %} You may choose the marker (dot) size.
+### Options
+
+* Red / yellow markers
+
+  Define up from many stitches in which radius should dots should be colored red or yellow
+* Design layer visibility
+
+  Define if Ink/Stitch should leave the design layer unchanged, hide id or lower opacity
+* Indicator size
+
+  Define the size of the dots in document units
+  {% include upcoming_release.html %}
 
 ## Display stacking order
 

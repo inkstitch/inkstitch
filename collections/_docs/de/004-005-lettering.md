@@ -1,7 +1,7 @@
 ---
 title: "Text"
 permalink: /de/docs/lettering/
-last_modified_at: 2023-02-12
+last_modified_at: 2024-03-13
 toc: true
 ---
 ## Text-Werkzeug
@@ -20,7 +20,7 @@ Das Text-Modul erzeugt mehrzeiligen Text. Die hinterlegten Schriftarten wurden v
 * Der eingegebene Text erscheint über der Seite.
 * Freie Positionierung ist nun möglich.
 
-### Font filters
+### Schriftfilter
 
 * **Schriftgrößenfilter**<br>
   Schriften sind für eine bestimmte Skalierung digitalisiert. Der Schriftgrößenfilter hilft dir eine Schrift mit der richtigen Größe zu finden, indem er die
@@ -28,12 +28,12 @@ Das Text-Modul erzeugt mehrzeiligen Text. Die hinterlegten Schriftarten wurden v
   Ein aktivierter Filter (nicht 0) setzt bei der Auswahl einer Schriftart automatisch die Skalierung passend zur Suchgröße.
   
 {% include upcoming_release.html %}
-* **Glyphs**<br>
- If checked only the fonts that contain all the glyphs of your text are listed
 
-* **Font family**<br>
-Filter the fonts by families, by example get only the applique fonts or only the script fonts
+* **Zeichen**<br>
+  Wenn aktiviert, werden nur Schriften angezeigt, die alle im Textfeld genutzten Buchstaben enthalten
 
+* **Schrifttyp**<br>
+  Schriften können nach Art der Schrift oder Anwendung gefiltert werden, z.B. Applikationsschriften oder serifenlose Schriften
 
 ### Optionen
 

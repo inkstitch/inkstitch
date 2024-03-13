@@ -68,7 +68,18 @@ Zeigt Punkte in frei wählbaren Farben (Standart: rot, gelb, grün) über dem De
 * Untersuche das Design (evtl. ist es nötig stärker in das Design hineinzuzoomen)
 * Entferne die Dichte-Punkte mit `Ctrl + Z` (rückgängig machen)
 
-{% include upcoming_release.html %} You may choose the marker (dot) size.
+### Options
+
+* Rot / gelbe Markierungen
+
+  Definiere ab vielen Stichen in welchem Radius die Markerungen rot / gelb gefärbt werden sollen
+* Design-Layer Sichtbarkeit
+
+  Definiere ob Ink/Stitch die Design-Ebene unverändert belassen soll, sie verstecken oder die Deckkraft verringern soll
+* Indikator-Größe
+
+  Lege die Größe der eingefügten Markierungen in Dokumenteinheit fest
+  {% include upcoming_release.html %}
 
 ## Stickreihenfolge anzeigen
 
