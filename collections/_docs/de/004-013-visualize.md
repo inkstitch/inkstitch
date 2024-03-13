@@ -1,7 +1,7 @@
 ---
 title: "Visualisierung"
 permalink: /de/docs/visualize/
-last_modified_at: 2023-03-13
+last_modified_at: 2024-03-13
 toc: true
 ---
 ## Simulator / Realistische Vorschau
@@ -68,7 +68,7 @@ Zeigt Punkte in frei wählbaren Farben (Standart: rot, gelb, grün) über dem De
 * Untersuche das Design (evtl. ist es nötig stärker in das Design hineinzuzoomen)
 * Entferne die Dichte-Punkte mit `Ctrl + Z` (rückgängig machen)
 
-### Options
+### Optionen
 
 * Rot / gelbe Markierungen
 
