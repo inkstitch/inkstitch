@@ -14,7 +14,7 @@ Tartan is a patterned fabric with colored horizontal and vertical stripes. It is
 ## How to Create
 
 * Create a **closed path with a fill color**. The shape may have holes.
-* Open the tartan pattern editor (`Extensions > Ink/Stitch > Tools: Fill > Tartan`) and create your own tartan pattern
+* Open the tartan extension under `Extensions > Ink/Stitch > Tools: Fill > Tartan` and create your own tartan pattern
 * You can update and change more stitch params in the params dialog (`Extensions > Ink/Stitch > Params`)
 
 ## Edit Tartan Patterns
