@@ -5,8 +5,10 @@
 
 from math import atan2, degrees, radians
 
-from inkex import CubicSuperPath, Path, Transform
+from inkex import CubicSuperPath, Path, Transform, ShapeElement
 from shapely import MultiLineString
+
+from ..stitch_plan.stitch_group import StitchGroup
 
 from ..commands import is_command_symbol
 from ..i18n import _
@@ -15,7 +17,7 @@ from ..svg.tags import (EMBROIDERABLE_TAGS, INKSTITCH_ATTRIBS, SVG_USE_TAG,
                         XLINK_HREF, SVG_GROUP_TAG)
 from ..utils import cache
 from .element import EmbroideryElement, param
-from .validation import ObjectTypeWarning, ValidationWarning
+from .validation import ValidationWarning
 
 
 class CloneWarning(ValidationWarning):
@@ -25,17 +27,6 @@ class CloneWarning(ValidationWarning):
     steps_to_solve = [
         _("If you want to convert the clone into a real element, follow these steps:"),
         _("* Select the clone"),
-        _("* Run: Edit > Clone > Unlink Clone (Alt+Shift+D)")
-    ]
-
-
-class CloneSourceWarning(ObjectTypeWarning):
-    name = _("Clone is not embroiderable")
-    description = _("There are one ore more clone objects in this document. A clone must be a direct child of an embroiderable element. "
-                    "Ink/Stitch cannot embroider clones of groups or other not embroiderable elements (text or image).")
-    steps_to_solve = [
-        _("Convert the clone into a real element:"),
-        _("* Select the clone."),
         _("* Run: Edit > Clone > Unlink Clone (Alt+Shift+D)")
     ]
 
@@ -75,49 +66,66 @@ class Clone(EmbroideryElement):
 
     def get_cache_key_data(self, previous_stitch):
         source_node = get_clone_source(self.node)
-        source_elements = self.clone_to_element(source_node)
+        source_elements = self.clone_to_elements(source_node)
         return [element.get_cache_key(previous_stitch) for element in source_elements]
 
-    def clone_to_element(self, node):
+    def clone_to_elements(self, node):
         from .utils import node_to_elements
-        return node_to_elements(node, True)
+        elements = []
+        if node.tag in EMBROIDERABLE_TAGS:
+            elements = node_to_elements(node, True)
+        elif node.tag == SVG_GROUP_TAG:
+            for child in node.iterdescendants():
+                elements.extend(node_to_elements(child, True))
+        return elements
 
-    def to_stitch_groups(self, last_patch=None):
+    def to_stitch_groups(self, last_patch=None)-> list[StitchGroup]:
         patches = []
 
         source_node = get_clone_source(self.node)
+        # Instead of copying the cloned nodes, we operate on them in-place. 
+        # The consequence of this is that any changes we make to the node tree must also be undone.
         if source_node.tag not in EMBROIDERABLE_TAGS and source_node.tag != SVG_GROUP_TAG:
             return []
 
         old_transform = source_node.get('transform', '')
         source_transform = source_node.composed_transform()
-        source_path = Path(source_node.get_path()).transform(source_transform)
         transform = Transform(source_node.get('transform', '')) @ -source_transform
         transform @= self.node.composed_transform() @ Transform(source_node.get('transform', ''))
         source_node.set('transform', transform)
 
-        old_angle = float(source_node.get(INKSTITCH_ATTRIBS['angle'], 0))
+        # Calculate the rotation angle to apply to cloned elements
         if self.clone_fill_angle is None:
-            rot = transform.add_rotate(-old_angle)
-            angle = self._get_rotation(rot, source_node, source_path)
-            if angle is not None:
-                source_node.set(INKSTITCH_ATTRIBS['angle'], angle)
+            angle = self._get_rotation(transform, source_node)
         else:
-            source_node.set(INKSTITCH_ATTRIBS['angle'], self.clone_fill_angle)
+            angle = self.clone_fill_angle
 
-        elements = self.clone_to_element(source_node)
+        elements = self.clone_to_elements(source_node)
         for element in elements:
+            old_angle = float(element.node.get(INKSTITCH_ATTRIBS['angle'], 0))
+
+            element.node.set(INKSTITCH_ATTRIBS['angle'], old_angle + angle)
+
             stitch_groups = element.to_stitch_groups(last_patch)
             patches.extend(stitch_groups)
+            # Reset the angle on the underlying node
+            element.node.set(INKSTITCH_ATTRIBS['angle'], old_angle)
 
+        # Reset source node attribs
         source_node.set('transform', old_transform)
-        source_node.set(INKSTITCH_ATTRIBS['angle'], old_angle)
         return patches
 
-    def _get_rotation(self, transform, source_node, source_path):
+    def _get_rotation(self, transform: Transform, source_node: ShapeElement) -> float:
+        """
+        Get a rotation value (used for rotating the fill angle)
+        :param transform: The transform to get a rotation from
+        :param source_node: As a fallback, extract a rotation angle from the node's shape.
+        :return: returns a rotation angle.
+        """
         try:
             rotation = transform.rotation_degrees()
         except ValueError:
+            path = Path(source_node.get_path()).transform(source_node.composed_transform())
             source_path = CubicSuperPath(source_path)[0]
             clone_path = Path(source_node.get_path()).transform(source_node.composed_transform())
             clone_path = CubicSuperPath(clone_path)[0]
@@ -133,11 +141,7 @@ class Clone(EmbroideryElement):
                 rotation = -degrees(diff - angle_clone)
 
         return -rotation
-
-    def get_clone_style(self, style_name, node, default=None):
-        style = node.style[style_name] or default
-        return style
-
+    
     def center(self, source_node):
         transform = get_node_transform(self.node.getparent())
         center = self.node.bounding_box(transform).center
@@ -153,22 +157,12 @@ class Clone(EmbroideryElement):
 
     def validation_warnings(self):
         source_node = get_clone_source(self.node)
-        if source_node.tag not in EMBROIDERABLE_TAGS:
-            point = self.center(source_node)
-            yield CloneSourceWarning(point)
-        else:
-            point = self.center(source_node)
-            yield CloneWarning(point)
+        point = self.center(source_node)
+        yield CloneWarning(point)
 
 
 def is_clone(node):
     if node.tag == SVG_USE_TAG and node.get(XLINK_HREF) and not is_command_symbol(node):
-        return True
-    return False
-
-
-def is_embroiderable_clone(node):
-    if is_clone(node) and get_clone_source(node).tag in EMBROIDERABLE_TAGS:
         return True
     return False
 

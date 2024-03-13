@@ -49,12 +49,6 @@ def node_to_elements(node, clone_to_element=False):  # noqa: C901
             elements.reverse()
         return elements
 
-    elif node.tag == SVG_GROUP_TAG:
-        elements = []
-        for child in node.getchildren():
-            elements.extend(node_to_elements(child, clone_to_element))
-        return elements
-
     elif node.tag == SVG_IMAGE_TAG:
         return [ImageObject(node)]
 
