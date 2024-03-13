@@ -25,7 +25,7 @@ Ink/Stitch erlaubt es über visuelle Befehle den [Anfangs- und Endpunkt eines F�
 Einstellung                     ||Beschreibung
 ---|---|---
 Automatisch geführte Füllstiche | ☑ |Muss aktiviert sein, damit diese Einstellungen wirksam werden.
-Füllmethode                     | Konturfüllung | Contour Fill must be selected to sew spiral lines of the contour
+Füllmethode                     | Konturfüllung | Hier bitte Konturfüllung auswählen
 Methode                         | ![Von Innen nach Außen](/assets/images/docs/contour-fill-innertoouter-bottlenecks.jpg)<br>![Konturspiralen](/assets/images/docs/contour-fill-spirals.jpg)|**Von Innen nach Außen** (Standard) kann auch Formen mit Engpässen füllen<br>**Einfach Spirale** füllt eine Fläche mit einer einfachen Spirale von außen nach innen<br>**Doppelte Spirale** füllt eine Fläche mit einer doppelten Spirale, die Außen beginnt und endet.
 Stil der Verbindungen           | rund, spitz, abgeschrägt|Method to handle the edges when the size the contour is reduced for the inner spirals
 Selbstüberschneidungen vermeiden| ![Avoid self crossing effect](/assets/images/docs/contour-fill-self-crossing.jpg)|Wheter inner to outer is allowed to cross itself or not

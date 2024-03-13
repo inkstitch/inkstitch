@@ -9,8 +9,6 @@ toc: true
 ## What it is
 
 [![Linear Gradient Fill Sample](/assets/images/docs/linear-gradient.jpg){: width="200x"}](/assets/images/docs/linear-gradient.svg){: title="Download SVG File" .align-left download="linear-gradient.svg" }
-Fill stitch is used to fill big areas with a color.
-
 Linear gradient fill uses Inkscapes linear gradient color to create seamless gradients with a consistent stitch positioning.
 
 ## How to Create

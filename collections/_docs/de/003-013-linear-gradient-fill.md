@@ -1,57 +1,59 @@
 ---
-title: "Linear Gradient Fill"
+title: "Lineare Farbverlaufsfüllung"
 permalink: /de/docs/stitches/linear-gradient-fill/
-last_modified_at: 2024-03-10
+last_modified_at: 2024-03-13
 toc: true
 ---
  {% include upcoming_release.html %}
 
-## What it is
+## Beschreibung
 
-[![Linear Gradient Fill Sample](/assets/images/docs/linear-gradient.jpg){: width="200x"}](/assets/images/docs/linear-gradient.svg){: title="Download SVG File" .align-left download="linear-gradient.svg" }
-Fill stitch is used to fill big areas with a color.
+[![Linear Gradient Fill Sample](/assets/images/docs/linear-gradient.jpg){: width="200x"}](/assets/images/docs/linear-gradient.svg){: title="SVG Datei herunterladen" .align-left download="linear-gradient.svg" }
+Die lineare Verlaufsfüllung nutzt die in Inkscape gesetzte Farbe "linearer Verlauf" um einen nahtlosen Verlauf mit guter Stichpositionierung zu schaffen.
 
-Linear gradient fill uses Inkscapes linear gradient color to create seamless gradients with a consistent stitch positioning.
+## Funktionsweise
 
-## How to Create
-
-* Create a **closed path with a fill color**. The shape may have holes
-* In the `Fill and Stroke` dialog, select a linear gradient as a fill and adjust colors. On canvas adjust the gradient angle. The stitch angle will have a 90 degree angle to gradient direction.
+* Erstelle einen geschlossenen Pfad. Der Pfad darf Löcher enthalten.
+* Im Dialog `Füllung und Kontur` wähle als Füllfarbe einen linearen Farbverlauf und passe die Farben deinen Wünschen entsprechend an.
+  Auf der Arbeitsfläche wird der Farbverlauf durch eine Linie dargestellt mit der die Farbpositionen und die Verlaufsrichtung direkt bearbeitet werden könne.
+  Die Verlaufsrichtung bestimmt auch den Stichwinkel der Füllung (90° entgegengesetzt der Verlaufslinie).
   ![linear gradient](/assets/images/docs/en/linear-gradient.png)
-* Open the params dialog (`Extensions > Ink/Stitch > Params`) and select `Linear Gradient Fill` as the fill method
-  Set the params as you wish and Apply
+* Öffne den Parameterdialog (`Erweiterungen > Ink/Stitch > Parameter`) und wähle als Füllmethode `Lineare Farbverlaufsfüllung`.
+  Setze die anderen Parameter deinen Wünschen entsprechend.
 
-## Set Start and End Point
+### Anfangs- und Endpunkt festlegen
 
-Set start and end points for autofill objects with [Visual commands](/docs/commands/).
+Ink/Stitch erlaubt es über visuelle Befehle den [Anfangs- und Endpunkt eines Füllobjekts](/de/docs/commands) zu kennzeichnen.
 
-## Params
+### Parameter
 
-Run `Extensions > Ink/Stitch  > Params` to tweak the settings to your needs.
+Öffne das Parameter-Dialogfenster (`Erweiterungen > Ink/Stitch  > Parameter`, um die Einstellungen zu verfeinern.
 
-Settings||Description
+Einstellung                     ||Beschreibung
 ---|---|---
-Automatically routed fill stitching| ☑ |Must be enabled for these settings to take effect.
-Fill method          |Linear Gradient Fill|Linear Gradient Fill must be selected.
-Expand               |![Expand example](/assets/images/docs/params-fill-expand.png)  |Expand the shape before stitching, to compensate for gaps between shapes.
-Maximum fill stitch length    ||The length of each stitch in a row. "Max" is because a shorter stitch may be used at the start or end of a row.
-Spacing between rows          ||Distance between rows of stitches.
-Stagger row this many times before repeating||Stitches are staggered so that neighboring rows of stitches don't all fall in the same column (which would create a distracting valley effect). Setting this dictates how many rows apart the stitches will be before they fall in the same column position.
-Skip last stitch in each row  ||The last stitch in each row is quite close to the first stitch in the next row.
-Stop at ending point  | ☑ |If this option is disabled, the ending point will only be used to define a general direction for stitch routing. When enabled the last section will end at the defined spot.
-Running stitch length||For circular fill this is the overall stitch length.
-Running stitch tolerance||All stitches must be within this distance from a path. A lower tolerance means stitches will be closer together. A higher tolerance means sharp corner may be rounded.
-Allow lock stitches  ||Enables lock stitches in only desired positions
-Force lock stitches  ||Sew lock stitches after sewing this element, even if the distance to the next object is smaller than defined in the collapse length value value in the Ink/Stitch prefreneces.
-Tack stitch          ||Select [tack stitch](/docs/stitches/lock-stitches) type (start).
-Lock stitch          ||Select [lock stitch](/docs/stitches/lock-stitches) type (end).
-Stop After           ||Stop the machine after sewing this object. Before stopping it will jump to the stop position (frame out) if defined.
-Trim After           ||Trim the thread after sewing this object.
+Automatisch geführte Füllstiche | ☑ |Muss aktiviert sein, damit diese Einstellungen wirksam werden.
+Füllmethode                     | Lineare Verlaufsfüllung | Hier bitte `Lineare Verlaufsfüllung` auswählen
+Erweitern                       |![Expand example](/assets/images/docs/params-fill-expand.png) | Erweitern der Form vor dem Füllstich, um Lücken zwischen den Formen auszugleichen.
+Maximale Füll-Stichlänge        |![Stitch length example](/assets/images/docs/params-fill-stitch_length.png) | Die Stichlänge in einer Reihe. Ein kürzerer Stich kann am Anfang oder am Ende einer Reihe verwendet werden.
+Reihenabstand                   |![Spacing example](/assets/images/docs/params-fill-spacing_between_rows.png) | Abstand zwischen den Stichreihen.
+Reihenanzahl bis sich das Muster wiederholt |![Stagger example](/assets/images/docs/params-fill-stagger.png) | Die Einstellung bestimmt, wie viele Reihen die Stiche voneinander entfernt sind, bevor sie in die gleiche Position münden.  Fractional values are allowed and can have less visible diagonals than integer values.
+Verbindungsstiche innerhalb des Objektes|![Skip example](/assets/images/docs/params-fill-underpathing.png)| Muss aktiviert sein, um Geradstiche zum Verbinden der Abschnitte innerhalb des Objekts verlaufen zu lassen, anstatt sie am Rand entlang zu führen.
+Letzten Stich in jeder Reihe überspringen | Der letzte Stich in jeder Reihe ist dem darauffolgenden Stich sehr nah. Ihn zu überspringen verringert die Stichanzahl und Dichte.
+Am Endpunkt enden               | ☑ |Ist diese Option deaktivert, gibt der Endpunkt nur eine generelle Stickrichtung an. Bei aktivierter Option endet der letzte Farbabschnitt genau an diesem Punnkt.
+Geradstichlänge                 |![Running stitch length example](/assets/images/docs/params-fill-running_stitch_length.png) | Stichlänge für Geradstiche beim Übergang von Abschnitt zu Abschnitt.
+Geradstich-Toleranz             ||Alle Stiche müssen innerhalb dieses Abstandes zum Pfad befinden. Ein niedrigerer Toleranzwert führt zu kürzeren Stichen. Ein höherer Wert könnte Ecken abrunden. Dezimalzahlen führen ggf. zu weniger deutlichen Diagonalen als Ganzzahlen.
+Vernähen erlauben               || Vernäht bei Bedarf an den ausgewählten Positionen
+Vernähen erzwingen              || Vernäht den Faden nach diesem Element, auch dann, wenn der Abstand zum Folgeobjekt geringer ist als in den [Ink/Stitch Einstellungen](/de/docs/preferences/) definiert.
+Anstecher                       || Wähle die [Anstecher](/de/docs/stitches/lock-stitches) Variante (Anfang).
+Verstecher                      || Wähle die [Verstecher](/de/docs/stitches/lock-stitches) Variante (Ende).
+Stopp                           || Stoppt die Maschine nachdem dieses Objekt genäht wurde und springt zur Stopp-Position (sofern vorhanden)
+Fadenschnitt                    || Schneidet den Faden nachdem dieses Objekt genäht wurde
+{: .params-table }
 
-## Underlay
+## Unterlage
 
-Underlay in Linear Gradient Fill is the same as for Auto Fill and uses the fill angle which can be defined in the underlay [params](/docs/stitches/fill-stitch#underlay).
+Die Unterlage nutzt den Stickwinkel der in den [Parametern der Unterlage](/de/docs/params/#füllung-unterlage) eingestellt werden kann.
 
-## Samples Files Including Linear Gradient Fill Stitches
+## Beispieldateien mit linearer Farbverlaufsfüllung
 
 {% include tutorials/tutorial_list key="stitch-type" value="Linear Gradient Fill" %}

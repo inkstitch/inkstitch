@@ -1,7 +1,7 @@
 ---
 title: "Satinsäule"
 permalink: /de/docs/stitches/satin-column/
-last_modified_at: 2023-04-19
+last_modified_at: 2024-03-13
 toc: true
 ---
 ## Beschreibung
@@ -33,9 +33,11 @@ Mehr Informationen über [Linie zu Satin](/de/docs/satin-tools/#linie-zu-satin)
 
 ### 2. Linie zu Pfadeffekt-Satin
 
-This can be used to create a satin which can either have a patterned outline or to create a satin which is more easily to adapt in width. Please note, that once you use auto-routing on this type of satin, the live path effect will be applied and the path can only be adapted manually afterwards.
+Diese Erweiterung dient dazu schnell und einfach eine Satinsäule mit gemusterter oder einheitlicher Kante zu erstellen.
 
-Use `Path > Object to path` to convert this to a standard satin column.
+Die Funktion "Automatisch geführter Satinstich" wendet den Pfadeffekt an, was eine nachträglihe Bearbeitung erschwert.
+
+Um einen Pfadeffekt-Satin in eine normale Satinsäule umzuwandeln, nutze die Funktion `Pfad > Objekt in Pfad umwandeln`.
 
 Mehr Informationen über [Pfadeffekt-Satins](/de/docs/satin-tools/#linie-zu-pfadeffekt-satin)
 
@@ -168,6 +170,6 @@ Zick-Zack Abstand    ||Der Spitze zu Spitze Abstand zwischen den Zick-Zack-Stich
 
 Für Satinsäulen stellt Ink/Stitch einige hilfreiche [Werkzeuge](/de/docs/satin-tools/) bereit, die dir das Arbeiten mit Satinsäulen erheblich erleichtern können.
 
-## Beispieldateien, die Satinsäulen enthalten
+## Beispieldateien mit Satinsäulen
 
 {% include tutorials/tutorial_list key="stichart" value="Satinstich" %}
