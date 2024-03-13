@@ -455,7 +455,7 @@ class FillStitch(EmbroideryElement):
            sort_index=36)
     @cache
     def zigzag_width(self):
-        return self.get_float_param("zigzag_width_mm", 0)
+        return self.get_float_param("zigzag_width_mm", 3)
 
     @property
     def color(self):
