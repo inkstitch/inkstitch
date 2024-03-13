@@ -79,7 +79,7 @@
             <label appearance="header">Select embroidery objects</label>
             <spacer />
             <label>Selects specific embroidery elements by stitch type.</label>
-            <label>If there is already an active selection, non maching elements will be deselected.</label>
+            <label>If there is already an active selection, non matching elements will be deselected.</label>
             <spacer />
             <separator />
             <spacer />
