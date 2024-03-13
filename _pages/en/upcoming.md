@@ -171,8 +171,10 @@ All fonts have been reworked to be more stable when transformed.
 * Prevent fill stitch from going outside the shape ([#2346](https://github.com/inkstitch/inkstitch/issues/2346))
 * [Linear gradient fill](/docs/stitches/linear-gradient-fill/): a new stitch type to stitch gradients ([#2587](https://github.com/inkstitch/inkstitch/issues/2587))
 
-  ![Linear gradient fill](/assets/images/docs/linear-gradient.jpg)
+  [![Linear gradient fill](/assets/images/docs/linear-gradient.jpg)](/assets/images/docs/linear-gradient.svg)
 * Meander fill: add zig-zag option ([#2699](https://github.com/inkstitch/inkstitch/pull/2699))
+
+  [![Zigzag-Meander Grumpy-Cat](/assets/images/docs/zigzagmeander_grumpycat.jpg)](/assets/images/docs/zigzagmeander_grumpycat.svg)
 
 ### Satin column - family
 
