@@ -3,8 +3,9 @@
    version="1.1"
    id="svg109"
    sodipodi:docname="→.svg"
-   width="115"
+   width="30.427084mm"
    inkscape:version="1.3.2 (091e20e, 2023-11-25)"
+   height="39.6875mm"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -20,47 +21,48 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      showgrid="true"
-     inkscape:zoom="19.795716"
-     inkscape:cx="57.663991"
-     inkscape:cy="77.516771"
+     inkscape:zoom="24.120708"
+     inkscape:cx="55.180802"
+     inkscape:cy="91.684705"
      inkscape:window-width="1632"
      inkscape:window-height="966"
      inkscape:window-x="67"
      inkscape:window-y="39"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g207"
-     showguides="false"
-     inkscape:lockguides="false">
+     inkscape:current-layer="g163"
+     showguides="true"
+     inkscape:lockguides="false"
+     inkscape:document-units="mm">
     <sodipodi:guide
-       position="25,186"
+       position="23.217537,35.228772"
        orientation="0,1"
        inkscape:label="baseline"
        id="guide109"
        inkscape:locked="false"
        inkscape:color="rgb(0,134,229)" />
     <sodipodi:guide
-       position="30,225"
+       position="30,376"
        orientation="0,1"
        inkscape:label="ascender"
        id="guide110"
        inkscape:locked="false"
        inkscape:color="rgb(0,134,229)" />
     <sodipodi:guide
-       position="72.000074,114.99976"
+       position="72.000074,265.99976"
        orientation="0,1"
        inkscape:label="caps"
        id="guide111"
        inkscape:locked="false"
        inkscape:color="rgb(0,134,229)" />
     <sodipodi:guide
-       position="54.5,93"
+       position="54.5,244"
        orientation="0,1"
        inkscape:label="xheight"
        id="guide112"
        inkscape:locked="false"
        inkscape:color="rgb(0,134,229)" />
     <sodipodi:guide
-       position="22,191"
+       position="-6.1546017,313.43887"
        orientation="0,1"
        inkscape:label="decender"
        id="guide113"
@@ -96,7 +98,12 @@ Jeremy Landes
      id="defs109">
     <font
        id="Millimetre-Bold"
-       horiz-adv-x="69">
+       horiz-adv-x="69"
+       horiz-origin-x="0"
+       horiz-origin-y="0"
+       vert-origin-x="512"
+       vert-origin-y="768"
+       vert-adv-y="1024">
       <font-face
          font-family="Millimetre"
          font-weight="800"
@@ -704,19 +711,19 @@ Jeremy Landes
          id="title9694">Ignore entire layer when generating stitch plan</title>
       <path
          inkscape:connector-curvature="0"
-         style="opacity:1;vector-effect:none;fill:#fafafa;fill-opacity:1;fill-rule:evenodd;stroke:#ff0000;stroke-width:1.06501234;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.19503705, 3.19503705;stroke-dashoffset:0;stroke-opacity:1"
+         style="opacity:1;vector-effect:none;fill:#fafafa;fill-opacity:1;fill-rule:evenodd;stroke:#ff0000;stroke-width:1.06501;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.19504, 3.19504;stroke-dashoffset:0;stroke-opacity:1"
          d="M 9.2465269,-4.9265995e-6 C 9.246525,5.1067241 5.1067028,9.2465451 -2.615882e-5,9.2465451 -5.1067554,9.2465451 -9.2465782,5.1067241 -9.2465801,-4.9265995e-6 -9.24658,-2.4523429 -8.2723922,-4.8042399 -6.538327,-6.5383059 c 1.7340653,-1.734065 4.0859624,-2.708252 6.53830084118,-2.708252 5.10673015882,0 9.24655285882,4.139823 9.24655305882,9.2465529734005 0,0 0,0 0,0"
          id="inkstitch_path25368-7" />
       <path
          sodipodi:nodetypes="ccccc"
          inkscape:connector-curvature="0"
-         style="color:#000000;fill:#d5d5d5;fill-opacity:1;fill-rule:evenodd;stroke:#5a5a5a;stroke-width:0.63330007;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:0;stroke-opacity:1"
+         style="color:#000000;fill:#d5d5d5;fill-opacity:1;fill-rule:evenodd;stroke:#5a5a5a;stroke-width:0.6333;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:0;stroke-opacity:1"
          d="M 4,4.452769 1.46667,1.286102 H -5.5 l 2.53333,3.166667 z"
          id="use5800" />
       <path
          sodipodi:nodetypes="ccccc"
          inkscape:connector-curvature="0"
-         style="color:#000000;opacity:0.5;fill:#d5d5d5;fill-opacity:1;fill-rule:evenodd;stroke:#858585;stroke-width:0.63339424;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:0;stroke-opacity:1"
+         style="color:#000000;opacity:0.5;fill:#d5d5d5;fill-opacity:1;fill-rule:evenodd;stroke:#858585;stroke-width:0.633394;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:0;stroke-opacity:1"
          d="M 4,2.552769 1.46667,-0.613898 H -5.5 l 2.53333,3.166667 z"
          id="use5864" />
       <g
@@ -731,12 +738,12 @@ Jeremy Landes
            inkscape:connector-curvature="0"
            id="path8023"
            d="m -0.43333658,-3.8755672 c 0,0 3.16666668,3.16666661 3.16666668,3.16666661"
-           style="fill:none;stroke:#ffffff;stroke-width:1.70000005" />
+           style="fill:none;stroke:#ffffff;stroke-width:1.7" />
         <path
            inkscape:connector-curvature="0"
            id="path8025"
            d="m 2.7333301,-3.8755672 c 0,0 -3.16666668,3.16666661 -3.16666668,3.16666661"
-           style="fill:none;stroke:#ffffff;stroke-width:1.79999995;stroke-linejoin:round" />
+           style="fill:none;stroke:#ffffff;stroke-width:1.8;stroke-linejoin:round" />
       </g>
     </symbol>
   </defs>
@@ -781,7 +788,7 @@ Jeremy Landes
     <path
        id="text46"
        style="font-weight:800;font-size:14.0078px;font-family:Millimetre;-inkscape-font-specification:'Millimetre Ultra-Bold';text-align:center;text-anchor:middle;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.25;paint-order:markers fill stroke"
-       d="M 6.0000291,115.0004 V 86.466895 c 0,-22.826802 4.5704989,-38.234894 22.8524929,-51.360305 m -5.713123,79.89381 c -0.201724,-13.32233 0.101555,-26.631796 0.45704,-39.946906 1.142625,-10.842731 4.227714,-17.34837 10.969198,-23.62574 M 30.5422,58.941749 5.6654347,42.314848 M 30.5422,83.38542 -1.6116417,83.602154"
+       d="M 6.0000291,115.0004 V 86.466895 c 0,-22.826802 4.5704989,-38.234894 22.8524929,-51.360305 m -5.713123,79.89381 c -0.201724,-13.32233 0.101555,-26.631796 0.45704,-39.946906 1.142625,-10.842731 4.227714,-17.34837 10.969198,-23.62574 M 30.5422,58.941749 5.6654347,42.314848 M 30.5422,83.38542 -1.6116417,83.602154 m 4.3469678,-21.815965 24.1352299,6.27516"
        inkstitch:satin_column="True"
        inkstitch:max_stitch_length_mm="8"
        inkstitch:random_split_jitter_percent="0"
@@ -806,7 +813,7 @@ Jeremy Landes
     <path
        id="path49"
        style="font-weight:800;font-size:14.0078px;font-family:Millimetre;-inkscape-font-specification:'Millimetre Ultra-Bold';text-align:center;text-anchor:middle;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.25;paint-order:markers fill stroke"
-       d="m 28.852873,35.106564 5.712389,16.321202 c 6.74181,6.277379 9.82681,12.78298 10.969614,23.625703 0.433385,10.370659 0.468787,20.745318 0.46324,31.120871 M 40.278467,35.106564 C 58.560885,48.232 63.131286,63.640068 63.131286,86.466952 V 105.63248 M 70.868258,83.602154 38.69926,83.38542 M 60.388883,44.059384 38.69926,58.94175"
+       d="m 28.852873,35.106564 5.712389,16.321202 c 6.74181,6.277379 9.82681,12.78298 10.969614,23.625703 0.433385,10.370659 0.468787,20.745318 0.46324,31.120871 M 40.278467,35.106564 C 58.560885,48.232 63.131286,63.640068 63.131286,86.466952 V 105.63248 M 70.868258,83.602154 38.69926,83.38542 M 60.388883,44.059384 38.69926,58.94175 m 1.847926,9.924106 25.10064,-7.40147"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
@@ -859,7 +866,7 @@ Jeremy Landes
     <path
        id="path33"
        style="font-weight:800;font-size:14.0669px;font-family:Millimetre;-inkscape-font-specification:'Millimetre Ultra-Bold';text-align:center;text-anchor:middle;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.25;stroke-dasharray:none;paint-order:markers fill stroke"
-       d="m 9.9803545,111.47266 13.1426265,-13.761081 8e-6,-6.825149 V 72.056842 52.103158 L 10.466481,38.960753 M 6.0198315,115.43551 V 97.720139 35 M 3.371122,92.156822 24.934403,92.065487 M 3.1967183,57.002769 H 25.573747"
+       d="m 9.9803545,111.47266 13.1426265,-13.761081 8e-6,-6.825149 V 72.056842 52.103158 L 10.466481,38.960753 M 6.0198315,115.43551 V 97.720139 35 M 3.371122,92.156822 24.934403,92.065487 M 3.1967183,57.002769 H 25.573747 M 3.8616368,72.566592 H 24.778836"
        sodipodi:nodetypes="ccccccccccccc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
@@ -1002,7 +1009,7 @@ Jeremy Landes
     <path
        id="path2"
        style="font-weight:800;font-size:18px;font-family:Millimetre;-inkscape-font-specification:'Millimetre Ultra-Bold';text-align:center;text-anchor:middle;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.25;stroke-dasharray:none;paint-order:markers fill stroke"
-       d="M 6.080205,115 V 34.867799 M 9.9554149,110.08766 23.000201,98.000002 23.180178,51.541423 9.0185234,38.833266"
+       d="M 6.080205,115 V 34.867799 M 9.9554149,110.08766 23.000201,98.000002 23.180178,51.541423 9.0185234,38.833266 M 3.5398337,54.384718 24.939738,54.062915 M 4.3443414,69.670364 24.13523,69.348561 M 4.1834399,94.610102 H 23.974328"
        sodipodi:nodetypes="cccccc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
@@ -1025,7 +1032,7 @@ Jeremy Landes
        inkstitch:ties="3" />
     <path
        id="path56"
-       style="font-weight:800;font-size:18px;font-family:Millimetre;-inkscape-font-specification:'Millimetre Ultra-Bold';text-align:center;text-anchor:middle;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.1;stroke-dasharray:none;paint-order:markers fill stroke"
+       style="font-weight:800;font-size:18px;font-family:Millimetre;-inkscape-font-specification:'Millimetre Ultra-Bold';text-align:center;text-anchor:middle;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:none;paint-order:markers fill stroke"
        d="m 6.080205,34.867799 h 31.919989 c 15.959995,0 25.079991,8.013221 25.079991,28.04627 V 86.95373 c 0,11.48788 -2.999026,19.02315 -8.567138,23.36135 m -22.072549,-80.616994 0.56212,25.3958 m 7.86978,3.813573 L 56.986705,37.00623 M 41.434526,74.933898 66.168106,74.825872 M 43.108765,95.735594 c 2.39155,-1.429951 2.871431,-5.247762 2.871431,-9.735349 V 61.545597 c 0,-7.781024 -2.280005,-10.004174 -11.400001,-10.004174 H 23.180202 L 9.0185481,38.833266"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
@@ -1102,7 +1109,7 @@ Jeremy Landes
     <path
        id="path98"
        style="font-weight:800;font-size:14.0078px;font-family:Millimetre;-inkscape-font-specification:'Millimetre Ultra-Bold';text-align:center;text-anchor:middle;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.25;paint-order:markers fill stroke"
-       d="M 63.778074,34.999999 H 6.0003118 M 63.778074,52.142856 H 23.333641 L 9.6086439,38.743266"
+       d="M 63.778074,34.999999 H 23.491624 6.0003118 M 63.778074,52.142856 H 23.333641 L 9.6086439,38.743266"
        inkstitch:satin_column="True"
        inkstitch:ties="3"
        inkstitch:zigzag_underlay="True"
@@ -1113,7 +1120,8 @@ Jeremy Landes
        inkstitch:random_split_jitter_percent="0"
        inkstitch:zigzag_underlay_inset_mm=".2"
        inkstitch:zigzag_spacing_mm="0.55"
-       inkstitch:zigzag_underlay_spacing_mm="5" />
+       inkstitch:zigzag_underlay_spacing_mm="5"
+       sodipodi:nodetypes="cccccc" />
     <path
        d="M 10.0021,39.1514 6.52492,35.5442"
        style="fill:none;stroke:#000000;stroke-width:0.1;stroke-dasharray:3, 1"
@@ -1125,8 +1133,8 @@ Jeremy Landes
     <path
        id="path99"
        style="font-weight:800;font-size:14.0078px;font-family:Millimetre;-inkscape-font-specification:'Millimetre Ultra-Bold';text-align:center;text-anchor:middle;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.25;paint-order:markers fill stroke"
-       d="M 6.0003118,34.999999 V 115 M 9.6086439,38.743266 23.333641,52.142856 C 23.459856,67.433244 23.353439,82.71512 23.000283,98 L 10.96244,110.41388"
-       sodipodi:nodetypes="cccccc"
+       d="M 6.0003118,34.999999 V 52.292998 96.380019 115 M 9.6086439,38.743266 23.333641,52.142856 C 23.459856,67.433244 23.353439,82.71512 23.000283,98 L 10.96244,110.41388"
+       sodipodi:nodetypes="cccccccc"
        inkstitch:satin_column="True"
        inkstitch:ties="3"
        inkstitch:zigzag_underlay="True"
@@ -1141,7 +1149,7 @@ Jeremy Landes
     <path
        id="path103"
        style="opacity:0.99;fill:none;stroke:#000000;stroke-width:0.25;stroke-dasharray:none;stroke-dashoffset:0;paint-order:markers fill stroke"
-       d="M 10.962466,110.41388 23.00031,98 H 55 M 6.0003132,114.36992 55,115"
+       d="M 10.962466,110.41388 23.00031,98 H 55 M 6.0003132,114.36992 22.684757,114.58446 55,115"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:ties="3"
@@ -1151,7 +1159,7 @@ Jeremy Landes
        inkstitch:zigzag_underlay_inset_mm=".2"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="False"
-       sodipodi:nodetypes="ccccc"
+       sodipodi:nodetypes="cccccc"
        inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:zigzag_underlay_spacing_mm="5" />
     <path
@@ -1215,7 +1223,7 @@ Jeremy Landes
     <path
        id="text78"
        style="font-weight:800;font-size:14.0078px;font-family:Millimetre;-inkscape-font-specification:'Millimetre Ultra-Bold';text-align:center;text-anchor:middle;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.25;paint-order:markers fill stroke"
-       d="M 63.777262,35.00002 H 5.9995037 M 63.777262,52.100029 H 23.332831 L 9.6078314,38.733931"
+       d="M 63.777262,35.00002 H 24.13523 5.9995037 M 63.777262,52.100029 H 23.332831 L 9.6078314,38.733931"
        inkstitch:satin_column="True"
        inkstitch:ties="3"
        inkstitch:zigzag_underlay="True"
@@ -1226,7 +1234,8 @@ Jeremy Landes
        inkstitch:random_split_jitter_percent="0"
        inkstitch:zigzag_underlay_inset_mm=".2"
        inkstitch:zigzag_spacing_mm="0.55"
-       inkstitch:zigzag_underlay_spacing_mm="5" />
+       inkstitch:zigzag_underlay_spacing_mm="5"
+       sodipodi:nodetypes="cccccc" />
     <path
        d="M 10.0018,39.1416 6.52479,35.5436"
        style="fill:none;stroke:#000000;stroke-width:0.1;stroke-dasharray:3, 1"
@@ -1238,8 +1247,8 @@ Jeremy Landes
     <path
        id="path85"
        style="font-weight:800;font-size:14.0078px;font-family:Millimetre;-inkscape-font-specification:'Millimetre Ultra-Bold';text-align:center;text-anchor:middle;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.25;paint-order:markers fill stroke"
-       d="M 5.9995037,35.00002 V 105 m 17.3643773,0.0704 -0.03105,-21.62034 V 52.100013 L 9.6078314,38.733931"
-       sodipodi:nodetypes="cccccc"
+       d="M 5.9995037,35.00002 V 51.327589 82.381585 105 m 17.3643773,0.0704 -0.03105,-21.62034 V 52.100013 L 9.6078314,38.733931"
+       sodipodi:nodetypes="cccccccc"
        inkstitch:satin_column="True"
        inkstitch:ties="3"
        inkstitch:zigzag_underlay="True"
@@ -1552,7 +1561,7 @@ Jeremy Landes
        id="path55"
        sodipodi:nodetypes="cc"
        inkstitch:ties="3"
-       inkstitch:satin_column="True"
+       inkstitch:satin_column="False"
        inkscape:label="saut" />
     <path
        id="path5-3"
@@ -1630,7 +1639,7 @@ Jeremy Landes
     <path
        id="path24"
        style="font-weight:800;font-size:18px;font-family:Millimetre;-inkscape-font-specification:'Millimetre Ultra-Bold';text-align:center;text-anchor:middle;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.25;stroke-dasharray:none;paint-order:markers fill stroke"
-       d="M 45.141674,35 42.92619,63.564784 c -0.51188,4.713862 -1.015763,7.506971 -2.27147,9.149708 -0.691039,0.901858 -2.18909,2.272152 -3.453596,2.608121 M 61.785796,35 59.570312,63.564784 c -0.559869,7.541123 -1.915473,15.212096 -6.506404,19.366328"
+       d="M 45.141674,35 42.92619,63.564784 c -0.51188,4.713862 -1.015763,7.506971 -2.27147,9.149708 -0.691039,0.901858 -2.18909,2.272152 -3.453596,2.608121 M 61.785796,35 59.570312,63.564784 C 59.010443,71.105907 57.654839,78.77688 53.063908,82.931112 M 39.259974,69.026758 59.533567,76.58913 M 40.547186,59.372666 63.717007,59.85537 M 41.351694,44.569725 H 62.9125"
        sodipodi:nodetypes="ccccccc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
@@ -1652,7 +1661,7 @@ Jeremy Landes
     <path
        id="path160-9"
        style="font-weight:800;font-size:18px;font-family:Millimetre;-inkscape-font-specification:'Millimetre Ultra-Bold';text-align:center;text-anchor:middle;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.25;stroke-dasharray:none;paint-order:markers fill stroke"
-       d="m 22.954844,74.990682 h 8.877931 c 8.02509,0 15.205017,2.482981 21.567455,7.522431 5.352353,4.239396 7.053139,7.803311 7.940932,16.486887 m -16.636248,0 c -0.51188,-3.736729 -1.330828,-7.589944 -6.85754,-7.727512 l -14.89253,0.285534"
+       d="m 22.954844,74.990682 h 8.877931 c 8.02509,0 15.205017,2.482981 21.567455,7.522431 5.352353,4.239396 7.053139,7.803311 7.940932,16.486887 m -16.636248,0 c -0.51188,-3.736729 -1.330828,-7.589944 -6.85754,-7.727512 l -14.89253,0.285534 m 7.294644,-18.669627 0.160902,19.790888 m 17.86007,-16.251055 -8.527781,16.73376 m 1.769917,2.252621 18.020971,-9.654092"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
@@ -1703,7 +1712,7 @@ Jeremy Landes
     <path
        id="path90"
        style="font-weight:800;font-size:13.1425px;font-family:Millimetre;-inkscape-font-specification:'Millimetre Ultra-Bold';text-align:center;text-anchor:middle;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.25;paint-order:markers fill stroke"
-       d="M 22.999999,34.9998 V 98.238175 L 8.937083,111.96226 M 5.9999992,34.9998 v 80.48521"
+       d="M 22.999999,34.9998 V 98.238175 L 8.937083,111.96226 M 5.9999992,34.9998 v 61.380219 19.104991"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:ties="3"
@@ -1714,7 +1723,8 @@ Jeremy Landes
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="False"
        inkstitch:zigzag_spacing_mm="0.55"
-       inkstitch:zigzag_underlay_spacing_mm="5" />
+       inkstitch:zigzag_underlay_spacing_mm="5"
+       sodipodi:nodetypes="cccccc" />
     <path
        d="m 5.63695,115.92 2.81607,-3.377"
        style="fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:3, 1"
@@ -1778,13 +1788,13 @@ Jeremy Landes
     <path
        id="text22"
        style="font-weight:800;font-size:18px;font-family:Millimetre;-inkscape-font-specification:'Millimetre Ultra-Bold';text-align:center;text-anchor:middle;display:inline;opacity:1;fill:none;stroke:#000000;stroke-width:0.25;paint-order:markers fill stroke"
-       d="M 22.954826,114.9991 V 87.272089 L 22.000074,69.999995 6.0000692,34.999999 m 0.00211,79.999101 -0.00211,-79.999101"
+       d="M 22.954826,114.9991 V 87.272089 L 22.000074,69.999995 7.1263799,34.839097 M 6.0021792,114.9991 5.8391677,34.839097 M 4.3443414,94.771003 25.261541,94.931905 M 4.3443414,79.646259 23.974328,79.324456 M 4.827046,54.223817 l 11.58491,0.160901"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm=".2"
        inkstitch:max_stitch_length_mm="8"
        inkstitch:random_split_jitter_percent="0"
-       sodipodi:nodetypes="cccccc"
+       sodipodi:nodetypes="cccccccccccc"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:ties="3"
        inkstitch:zigzag_spacing_mm="0.55"
@@ -1815,7 +1825,7 @@ Jeremy Landes
     <path
        id="path39"
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:markers fill stroke;stop-color:#000000"
-       d="M 35.189371,91.866254 63.812804,91.456743 M 62.4923,43.82116 76.766472,43.753146 M 55.000088,114.99999 v -5 c 0,-10.275304 -0.871109,-12.424688 4.214749,-21.558297 L 70.000089,69.999995 72.000088,34.999999 M 37.082008,114.9991 c 0.0038,-4.56058 0.08619,-8.30638 -0.310718,-12.85361 2.701891,-6.860631 5.925814,-13.270987 9.228795,-21.145498 9.084817,-21.658799 17.55337,-31.154181 26.000003,-45.999993"
+       d="M 35.189371,91.866254 63.812804,91.456743 M 62.4923,43.82116 76.766472,43.753146 M 55.000088,114.99999 v -5 c 0,-10.275304 -0.871109,-12.424688 4.214749,-21.558297 L 70.000089,69.999995 73.126399,35.160901 M 37.082008,114.9991 c 0.0038,-4.56058 0.08619,-8.30638 -0.310718,-12.85361 2.701891,-6.860631 5.925814,-13.270987 9.228795,-21.145498 9.084817,-21.658799 17.392468,-31.154181 25.839101,-45.999993 m -20.672498,29.360614 21.721707,0.321803"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
@@ -1831,7 +1841,7 @@ Jeremy Landes
     <path
        id="path34"
        style="font-weight:800;font-size:18px;font-family:Millimetre;-inkscape-font-specification:'Millimetre Ultra-Bold';text-align:center;text-anchor:middle;display:inline;opacity:1;fill:none;stroke:#000000;stroke-width:0.25;paint-order:markers fill stroke"
-       d="M 72.000078,35.000178 70.000089,68.000005 69.000093,85.413277 V 105 m 17,-70.000001 v 69.999991"
+       d="M 72.000078,35.000178 70.000089,68.000005 69.000093,85.413277 V 105 m 17,-70.000001 V 104.99999 M 69.348561,49.718574 88.817646,49.557672 M 67.417743,79.646259 87.04773,79.968062 m -20.434495,14.64204 21.399904,0.160901"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
@@ -1841,7 +1851,7 @@ Jeremy Landes
        inkstitch:random_split_jitter_percent="0"
        inkstitch:zigzag_underlay_inset_mm=".2"
        inkstitch:ties="3"
-       sodipodi:nodetypes="cccccc"
+       sodipodi:nodetypes="cccccccccccc"
        inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:zigzag_underlay_spacing_mm="5" />
     <path
@@ -1883,7 +1893,7 @@ Jeremy Landes
     <path
        id="path7"
        style="font-weight:800;font-size:13.1425px;font-family:Millimetre;-inkscape-font-specification:'Millimetre Ultra-Bold';text-align:center;text-anchor:middle;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.25;paint-order:markers fill stroke"
-       d="M 5.9999635,114.9998 V 43.00815 M 23.099953,114.9998 c 0.05916,-10.85433 0.327245,-23.150063 -0.100005,-33.999985 -0.150169,-3.81385 -0.793799,-6.188458 -1.000001,-9.999994 L 10.199434,48.864334"
+       d="M 5.9999635,114.9998 V 43.00815 M 23.099953,114.9998 c 0.05916,-10.85433 0.327245,-23.150063 -0.100005,-33.999985 -0.150169,-3.81385 -0.793799,-6.188458 -1.000001,-9.999994 L 10.199434,48.864334 M 3.3789322,99.598049 H 24.457033 M 3.7007353,74.49741 23.169821,74.819213 M 3.3789322,56.959143 16.572858,57.924553"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:ties="3"
@@ -1893,7 +1903,7 @@ Jeremy Landes
        inkstitch:zigzag_underlay_inset_mm=".2"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="False"
-       sodipodi:nodetypes="cccscc"
+       sodipodi:nodetypes="cccscccccccc"
        inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:zigzag_underlay_spacing_mm="5" />
     <path
@@ -1906,7 +1916,7 @@ Jeremy Landes
     <path
        id="path107"
        style="font-weight:800;font-size:13.1425px;font-family:Millimetre;-inkscape-font-specification:'Millimetre Ultra-Bold';text-align:center;text-anchor:middle;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.25;paint-order:markers fill stroke"
-       d="m 5.9999716,35 v 6.325502 L 21.999964,70.999821 47.039983,114.9998 M 9.02483,51.0163 32.995663,50.724243 M 41.195989,66.88702 24.386411,79.005625 M 21.959962,35 46.999957,78.999819 46.41808,100.96414"
+       d="m 5.9999716,35 v 6.325502 L 21.999964,70.999821 47.039983,114.9998 M 9.02483,51.0163 32.995663,50.724243 M 41.195989,66.88702 24.386411,79.005625 M 21.959962,35 46.999957,78.999819 46.41808,100.96414 m -1.848355,-28.55845 -8.205978,28.31867"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:ties="3"
@@ -1953,7 +1963,7 @@ Jeremy Landes
     <path
        id="path105"
        style="font-weight:800;font-size:13.1425px;font-family:Millimetre;-inkscape-font-specification:'Millimetre Ultra-Bold';text-align:center;text-anchor:middle;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.25;paint-order:markers fill stroke"
-       d="m 45.900242,35 c -0.0097,3.981404 -0.231859,19.84667 0.09968,33.999826 0.09774,4.171045 0.9638,5.912633 1.000001,9.999993 0.06726,7.613212 -0.65611,15.309765 -0.603758,20.065381 M 62.999908,35 v 64"
+       d="m 45.900242,35 c -0.0097,3.981404 -0.231859,19.84667 0.09968,33.999826 0.09774,4.171045 0.9638,5.912633 1.000001,9.999993 0.06726,7.613212 -0.65611,15.309765 -0.603758,20.065381 M 62.999908,35 V 68.22225 78.359047 99"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:ties="3"
@@ -1963,7 +1973,7 @@ Jeremy Landes
        inkstitch:zigzag_underlay_inset_mm=".2"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="False"
-       sodipodi:nodetypes="cssccc"
+       sodipodi:nodetypes="cssccccc"
        inkscape:label="path105"
        inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:zigzag_underlay_spacing_mm="5" />
@@ -2012,7 +2022,7 @@ Jeremy Landes
     <path
        id="path10"
        style="font-weight:800;font-size:13.1425px;font-family:Millimetre;-inkscape-font-specification:'Millimetre Ultra-Bold';text-align:center;text-anchor:middle;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.25;paint-order:markers fill stroke"
-       d="M 5.9999925,115 V 35 M 23.049871,115 V 83.571433 52.142849 L 11.483352,40.816774"
+       d="M 5.9999925,115 V 83.829699 51.971195 35 M 23.049871,115 V 83.571433 52.142849 L 11.483352,40.816774"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
@@ -2023,7 +2033,8 @@ Jeremy Landes
        inkstitch:random_split_jitter_percent="0"
        inkstitch:zigzag_underlay_inset_mm=".2"
        inkstitch:zigzag_spacing_mm="0.55"
-       inkstitch:zigzag_underlay_spacing_mm="5" />
+       inkstitch:zigzag_underlay_spacing_mm="5"
+       sodipodi:nodetypes="cccccccc" />
     <path
        d="M 12.0592,41.3944 6.5185,35.55"
        style="fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:3, 1"
@@ -2155,8 +2166,8 @@ Jeremy Landes
     <path
        id="path161-5"
        style="font-weight:800;font-size:18px;font-family:Millimetre;-inkscape-font-specification:'Millimetre Ultra-Bold';text-align:center;text-anchor:middle;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.25;paint-order:markers fill stroke"
-       d="M 5.9996136,114.99997 V 35.000069 M 23.191475,114.99997 V 77.85716 52.142905 L 11.051939,39.15122"
-       sodipodi:nodetypes="cccccc"
+       d="M 5.9996136,114.99997 V 77.071835 51.488491 35.000069 M 23.191475,114.99997 V 77.85716 52.142905 L 11.051939,39.15122"
+       sodipodi:nodetypes="cccccccc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
@@ -2179,7 +2190,7 @@ Jeremy Landes
     <path
        id="path164-8"
        style="font-weight:800;font-size:18px;font-family:Millimetre;-inkscape-font-specification:'Millimetre Ultra-Bold';text-align:center;text-anchor:middle;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.25;paint-order:markers fill stroke"
-       d="M 5.9996136,35.000069 H 38.091078 c 16.045737,0 25.214722,7.428562 25.214722,22.285686 v 6.857133 c 0,6.857134 -3.438367,13.142833 -10.315111,14.857119 M 11.051939,39.15122 23.191475,52.142905 h 11.461236 c 9.742048,0 11.461235,2.28571 11.461235,7.999988 v 2.285712 c 0,5.142851 -1.719187,7.999989 -11.461235,7.999989 M 33.403336,31.62043 33.705418,54.803449 m 8.457253,7.973777 25.673906,-0.442983"
+       d="M 5.9996136,35.000069 H 38.091078 c 16.045737,0 25.214722,7.428562 25.214722,22.285686 v 6.857133 c 0,6.857134 -3.438367,13.142833 -10.315111,14.857119 M 11.051939,39.15122 23.191475,52.142905 h 11.461236 c 9.742048,0 11.461235,2.28571 11.461235,7.999988 v 2.285712 c 0,5.142851 -1.719187,7.999989 -11.461235,7.999989 M 33.403336,31.62043 33.705418,54.803449 m 8.457253,7.973777 25.673906,-0.442983 M 38.616368,55.832832 55.671931,36.68555"
        sodipodi:nodetypes="cssscccsssccccc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
@@ -2203,7 +2214,7 @@ Jeremy Landes
     <path
        id="path165-1"
        style="font-weight:800;font-size:18px;font-family:Millimetre;-inkscape-font-specification:'Millimetre Ultra-Bold';text-align:center;text-anchor:middle;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.25;paint-order:markers fill stroke"
-       d="m 23.191475,85.285719 h 10.315111 c 9.160737,0 7.67095,0.44496 10.493413,12.71428 l 1.542341,8.439421 M 23.191475,70.428594 h 11.461236 c 11.938789,2.886769 11.947716,4.571401 18.346913,8.571389 7.044336,3.471996 8.12854,10.857154 9.160051,18.857144 L 63.000004,106.5 M 52.432232,70.012691 38.387097,91.276096 m 2.567388,7.723894 c 9.372064,0.10376 18.163946,0.0176 26.126979,-0.3408"
+       d="m 23.191475,85.285719 h 10.315111 c 9.160737,0 7.67095,0.44496 10.493413,12.71428 l 1.542341,8.439421 M 23.191475,70.428594 h 11.461236 c 11.938789,2.886769 11.947716,4.571401 18.346913,8.571389 7.044336,3.471996 8.12854,10.857154 9.160051,18.857144 L 63.000004,106.5 M 52.432232,70.012691 38.387097,91.276096 m 2.567388,7.723894 c 9.372064,0.10376 18.163946,0.0176 26.126979,-0.3408 M 32.663011,67.095939 32.341208,86.404123"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
@@ -2255,7 +2266,7 @@ Jeremy Landes
     <path
        id="path116"
        style="font-weight:800;font-size:13.1425px;font-family:Millimetre;-inkscape-font-specification:'Millimetre Ultra-Bold';text-align:center;text-anchor:middle;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.25;paint-order:markers fill stroke"
-       d="m 23.345609,86.418547 -0.346113,3.581672 c -0.673078,6.964679 2.726265,7.924672 11.758999,7.844632 5.13027,-0.04559 8.125466,-0.712658 9.838277,-1.782038 M 6.2263281,86.418547 v 3.427886 C 6.2263119,106.98588 15.356608,114.9843 31.334617,114.9843 h 3.423861 c 11.498116,0 19.103878,-2.37206 23.646715,-7.11617 M 27.837891,92.640006 7.2471004,108.87941 M 34.426937,95.075922 34.976044,116.72846"
+       d="m 23.345609,86.418547 -0.346113,3.581672 c -0.673078,6.964679 2.726265,7.924672 11.758999,7.844632 5.13027,-0.04559 8.125466,-0.712658 9.838277,-1.782038 M 6.2263281,86.418547 v 3.427886 C 6.2263119,106.98588 15.356608,114.9843 31.334617,114.9843 h 3.423861 c 11.498116,0 19.103878,-2.37206 23.646715,-7.11617 M 27.837891,92.640006 7.2471004,108.87941 M 34.426937,95.075922 34.976044,116.72846 M 39.90358,93.966496 52.292998,113.11378"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
@@ -2404,21 +2415,14 @@ Jeremy Landes
        inkstitch:ties="3"
        inkscape:label="saut" />
     <path
-       id="path18"
-       style="font-weight:800;font-size:13.1425px;font-family:Millimetre;-inkscape-font-specification:'Millimetre Ultra-Bold';text-align:center;text-anchor:middle;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.377953;paint-order:markers fill stroke"
-       d="M 5.9999957,35.001612 V 87.000558 C 5.9999957,107.00016 15.120043,115 31.080116,115 h 6.840036 c 9.623469,0 16.760069,-2.90853 20.90998,-9.60248 M 23.100084,35.001612 v 52.570367 c 0,7.999839 2.280011,10.285513 11.40005,10.285513 5.493259,0 8.504956,-0.82924 10.03158,-3.236927"
+       id="path488"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.377953;stroke-opacity:0.843137;-inkscape-stroke:none;paint-order:markers fill stroke"
+       d="M 24.617935,87.04773 2.413523,87.530434 M 26.387851,94.4492 8.8495843,109.57394 M 31.858504,96.058215 31.697602,117.45812 M 39.420876,95.736412 54.706521,111.50476 M 5.9999957,35.001612 V 87.000558 C 5.9999957,107.00016 15.120043,115 31.080116,115 h 6.840036 c 9.623469,0 16.760069,-2.90853 20.90998,-9.60248 M 23.100084,35.001612 v 52.570367 c 0,7.999839 2.280011,10.285513 11.40005,10.285513 5.493259,0 8.504956,-0.82924 10.03158,-3.236927"
        inkstitch:satin_column="True"
+       inkstitch:zigzag_spacing_mm=".55"
        inkstitch:zigzag_underlay="True"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False"
-       inkstitch:pull_compensation_mm="0.15"
-       inkstitch:ties="3"
-       inkstitch:max_stitch_length_mm="8"
-       inkstitch:random_split_jitter_percent="0"
-       inkstitch:zigzag_underlay_inset_mm=".2"
-       inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:zigzag_underlay_spacing_mm="5"
-       sodipodi:nodetypes="csssccssc" />
+       inkstitch:ties="3" />
     <path
        style="font-variation-settings:normal;opacity:0.99;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.377953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.80116, 0.900582;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:markers fill stroke"
        d="M 46.3596,95.9982 C 53.797513,77.466514 51.735868,40.060436 46.6561,35.0016"
@@ -2427,21 +2431,14 @@ Jeremy Landes
        inkscape:label="saut"
        sodipodi:nodetypes="cc" />
     <path
-       id="path121"
-       style="font-weight:800;font-size:13.1425px;font-family:Millimetre;-inkscape-font-specification:'Millimetre Ultra-Bold';text-align:center;text-anchor:middle;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.377953;paint-order:markers fill stroke"
-       d="m 45.900193,35.001612 v 52.570143 c 0,3.181536 -0.360636,5.45909 -1.368795,7.048658 M 62.999997,35.001612 v 51.998954 c 0,7.94064 -1.437681,13.989314 -4.169597,18.397234"
-       inkstitch:satin_column="True"
-       inkstitch:zigzag_underlay="True"
-       inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False"
-       inkstitch:pull_compensation_mm="0.15"
+       id="path489"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.377953;stroke-opacity:0.843137;-inkscape-stroke:none;paint-order:markers fill stroke"
+       d="M 44.408823,86.404123 H 64.843318 M 45.900193,35.001612 v 52.570143 c 0,3.181536 -0.360636,5.45909 -1.368795,7.048658 M 62.999997,35.001612 v 51.998954 c 0,7.94064 -1.437681,13.989314 -4.169597,18.397234"
        inkstitch:ties="2"
-       inkstitch:max_stitch_length_mm="8"
-       inkstitch:random_split_jitter_percent="0"
-       inkstitch:zigzag_underlay_inset_mm=".2"
+       inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.55"
-       inkstitch:zigzag_underlay_spacing_mm="5"
-       sodipodi:nodetypes="csccsc" />
+       inkstitch:zigzag_underlay="True"
+       inkstitch:zigzag_underlay_spacing_mm="5" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -2482,8 +2479,8 @@ Jeremy Landes
     <path
        id="path83"
        style="font-weight:800;font-size:14.1329px;font-family:Millimetre;-inkscape-font-specification:'Millimetre Ultra-Bold';font-variation-settings:normal;opacity:0.99;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:markers fill stroke;stop-color:#000000"
-       d="m 39.800199,115 c 5.786392,-4.09747 10.219794,-8.41712 13.581407,-13.11476 M 40.271896,91.193891 c -1.623405,2.668294 -3.684855,5.080175 -6.27173,7.4633 C 28.206798,105.99555 28.668186,110.27015 28.200133,115"
-       sodipodi:nodetypes="ccccc"
+       d="m 39.800199,115 c 3.430915,-2.42951 6.386167,-4.93712 8.924374,-7.55533 1.742593,-1.79751 3.288615,-3.64715 4.657033,-5.55943 M 40.271896,91.193891 c -1.623405,2.668294 -3.684855,5.080175 -6.27173,7.4633 C 28.206798,105.99555 28.668186,110.27015 28.200133,115"
+       sodipodi:nodetypes="cscccc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
@@ -2581,7 +2578,7 @@ Jeremy Landes
     <path
        id="path126"
        style="font-weight:800;font-size:13.1425px;font-family:Millimetre;-inkscape-font-specification:'Millimetre Ultra-Bold';text-align:center;text-anchor:middle;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.25;paint-order:markers fill stroke"
-       d="m 55.000086,35.000389 v 27.999992 c 0,14.370606 0.488247,26.446059 7.000004,34.999995 M 37.000082,35.000389 v 27.999992 c 2.7304,23.081397 7.487065,30.625534 9.015908,34.01259 1.713607,7.413409 5.026566,12.317659 9.710425,17.678129"
+       d="m 55.000086,35.000389 v 27.999992 c 0,10.703768 0.270871,20.134225 3.099914,27.784607 0.969157,2.620825 2.238535,5.032746 3.90009,7.215388 M 37.000082,35.000389 v 27.999992 c 2.7304,23.081397 7.487065,30.625534 9.015908,34.01259 1.713607,7.413409 5.026566,12.317659 9.710425,17.678129"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
@@ -2591,7 +2588,7 @@ Jeremy Landes
        inkstitch:max_stitch_length_mm="8"
        inkstitch:random_split_jitter_percent="0"
        inkstitch:zigzag_underlay_inset_mm=".2"
-       sodipodi:nodetypes="csccccc"
+       sodipodi:nodetypes="cssccccc"
        inkstitch:zigzag_underlay_spacing_mm="5"
        inkstitch:zigzag_spacing_mm="0.55" />
     <path
@@ -2605,8 +2602,8 @@ Jeremy Landes
     <path
        id="path20"
        style="font-weight:800;font-size:13.1425px;font-family:Millimetre;-inkscape-font-specification:'Millimetre Ultra-Bold';text-align:center;text-anchor:middle;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.25;paint-order:markers fill stroke"
-       d="M 67.150432,114.6911 C 71.703296,111.93253 77.355596,104.75832 80,100.49591 M 55.726415,114.6911 c 1.342111,-5.72163 1.619044,-10.67305 6.273675,-16.690724 1.653284,-2.134339 3.133171,-5.027341 4.117722,-7.486511"
-       sodipodi:nodetypes="ccccc"
+       d="m 67.150432,114.6911 c 2.948232,-1.78633 6.357488,-5.42426 9.112471,-8.92411 1.499453,-1.90486 2.805091,-3.76882 3.737097,-5.27108 M 55.726415,114.6911 c 1.342111,-5.72163 1.619044,-10.67305 6.273675,-16.690724 1.653284,-2.134339 3.133171,-5.027341 4.117722,-7.486511"
+       sodipodi:nodetypes="cscccc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
@@ -2778,7 +2775,7 @@ Jeremy Landes
     <path
        id="path163-3"
        style="font-weight:800;font-size:13.1425px;font-family:Millimetre;-inkscape-font-specification:'Millimetre Ultra-Bold';text-align:center;text-anchor:middle;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.25;paint-order:markers fill stroke"
-       d="m 63.000723,35.0918 v 11.476482 c 0,16.296615 -4.154015,32.07039 -20.00002,43.432105 l 0.04863,8.702702 M 45.900685,35.0918 v 11.476482 c 0,13.083199 -3.121954,20.283805 -11.899942,28.432104 -5.224709,5.250706 -5.645532,10.223491 -8.000033,15.000001 l -0.05025,8.702702"
+       d="m 63.000723,35.0918 v 11.476482 c 0,11.975994 -2.243347,23.669632 -9.721597,33.53742 -2.697954,3.560036 -6.07727,6.882424 -10.278423,9.894685 l 0.04863,8.702702 M 45.900685,35.0918 v 11.476482 c 0,13.083199 -3.121954,20.283805 -11.899942,28.432104 -5.224709,5.250706 -5.645532,10.223491 -8.000033,15.000001 l -0.05025,8.702702"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
@@ -2788,7 +2785,7 @@ Jeremy Landes
        inkstitch:max_stitch_length_mm="8"
        inkstitch:random_split_jitter_percent="0"
        inkstitch:zigzag_underlay_inset_mm=".2"
-       sodipodi:nodetypes="cscccsccc"
+       sodipodi:nodetypes="csscccsccc"
        inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:zigzag_underlay_spacing_mm="5" />
     <path
@@ -2830,7 +2827,7 @@ Jeremy Landes
     <path
        id="path23"
        style="font-weight:800;font-size:13.1425px;font-family:Millimetre;-inkscape-font-specification:'Millimetre Ultra-Bold';text-align:center;text-anchor:middle;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.25;paint-order:markers fill stroke"
-       d="M 6.0157775,52.3698 H 28.810212 L 41.34716,51.23107 49.827764,39.429458 M 6.0157775,35.288838 H 53.163502"
+       d="M 6.0157775,52.3698 H 28.810212 L 41.34716,51.23107 49.827764,39.429458 M 6.0157775,35.288838 H 53.163502 M 17.055563,32.180307 V 54.384718 M 31.536701,33.789322 32.180307,54.54562 m 10.297698,-21.078101 0.321803,17.699169"
        sodipodi:nodetypes="cccccc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
@@ -2939,7 +2936,7 @@ Jeremy Landes
     <path
        id="text46-3"
        style="font-weight:800;font-size:14.0078px;font-family:Millimetre;-inkscape-font-specification:'Millimetre Ultra-Bold';text-align:center;text-anchor:middle;display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.25;paint-order:markers fill stroke"
-       d="M 6.0000291,115.0004 V 86.466895 C 6.0000291,63.640093 8.718006,49.125411 27,36 m -3.860601,79.0004 C 22.937675,101.67807 22.644515,88.31511 23,75 24.142625,64.157269 27.781801,57.096779 34.565262,51.427766 M 30.5422,58.941749 5.6654347,42.314848 M 30.5422,83.38542 -1.6116417,83.602154"
+       d="M 6.0000291,115.0004 V 86.466895 C 6.0000291,63.640093 8.718006,49.125411 27,36 m -3.860601,79.0004 C 22.937675,101.67807 22.644515,88.31511 23,75 24.142625,64.157269 27.781801,57.096779 34.565262,51.427766 M 30.5422,58.941749 5.6654347,42.314848 M 30.5422,83.38542 -1.6116417,83.602154 M 4.6661445,61.786189 26.548753,67.900447"
        inkstitch:satin_column="True"
        inkstitch:max_stitch_length_mm="8"
        inkstitch:random_split_jitter_percent="0"
@@ -2963,7 +2960,7 @@ Jeremy Landes
     <path
        id="path49-9"
        style="font-weight:800;font-size:14.0078px;font-family:Millimetre;-inkscape-font-specification:'Millimetre Ultra-Bold';text-align:center;text-anchor:middle;display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.25;paint-order:markers fill stroke"
-       d="M 70.868258,83.602154 38.69926,83.38542 M 60.388883,44.059384 38.69926,58.94175 M 39,23 43,36 c 12,9 20.131286,24 20.131286,50.466952 V 105 M 24,23 v 9 l 3,4 7.565262,15.427766 c 6.74181,6.277379 9.82681,12.78298 10.969614,23.625703 C 45.968261,85.424128 46.004291,94.624447 45.998744,105"
+       d="M 70.868258,83.602154 38.69926,83.38542 M 60.388883,44.059384 38.69926,58.94175 M 39,23 43,36 c 12,9 20.131286,24 20.131286,50.466952 V 105 M 24,23 v 9 l 3,4 7.565262,15.427766 c 6.74181,6.277379 9.82681,12.78298 10.969614,23.625703 C 45.968261,85.424128 46.004291,94.624447 45.998744,105 M 21.560805,29.927685 h 23.00892"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
@@ -3042,7 +3039,7 @@ Jeremy Landes
     <path
        id="text46-8"
        style="font-weight:800;font-size:14.0078px;font-family:Millimetre;-inkscape-font-specification:'Millimetre Ultra-Bold';text-align:center;text-anchor:middle;display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.25;paint-order:markers fill stroke"
-       d="M 6.0000291,115.0004 V 86.466895 C 6.0000291,63.640093 7.718006,49.125411 26,36 m -2.860601,79.0004 c -0.201724,-13.32233 0.101555,-26.631796 0.45704,-39.946906 1.142625,-10.842731 4.227714,-17.34837 10.969198,-23.62574 M 30.5422,58.941749 5.6654347,42.314848 M 30.5422,83.38542 -1.6116417,83.602154"
+       d="M 6.0000291,115.0004 V 86.466895 C 6.0000291,63.640093 7.718006,49.125411 26,36 m -2.860601,79.0004 c -0.201724,-13.32233 0.101555,-26.631796 0.45704,-39.946906 1.142625,-10.842731 4.227714,-17.34837 10.969198,-23.62574 M 30.5422,58.941749 5.6654347,42.314848 M 30.5422,83.38542 -1.6116417,83.602154 m 3.8642632,-20.20695 25.4224425,6.114258"
        inkstitch:satin_column="True"
        inkstitch:max_stitch_length_mm="8"
        inkstitch:random_split_jitter_percent="0"
@@ -3064,21 +3061,17 @@ Jeremy Landes
        inkstitch:ties="3"
        inkscape:label="saut" />
     <path
-       id="path49-6"
-       style="font-weight:800;font-size:14.0078px;font-family:Millimetre;-inkscape-font-specification:'Millimetre Ultra-Bold';text-align:center;text-anchor:middle;display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.25;paint-order:markers fill stroke"
-       d="m 38.69926,83.38542 32.168998,0.216734 M 38.69926,58.94175 60.388883,44.059384 M 30,23 26,36 34,51 c 7.349103,6.123556 10.857196,13.157277 12,24 0.433385,10.370659 0.0037,20.798787 -0.0019,31.17434 M 45,23 v 9 l -3,4 c 17.7288,14.557317 20.844733,26.781359 21,50 v 20"
+       id="path406"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.377953;stroke-opacity:0.843137;-inkscape-stroke:none;paint-order:markers fill stroke"
+       d="M 20.434495,29.927685 H 53.902014 M 38.69926,83.38542 70.868258,83.602154 M 38.69926,58.94175 60.388883,44.059384 M 30,23 26,36 34,51 c 7.349103,6.123556 10.857196,13.157277 12,24 0.433385,10.370659 0.0037,20.798787 -0.0019,31.17434 M 45,23 v 9 l -3,4 c 17.7288,14.557317 20.844733,26.781359 21,50 v 20"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="False"
-       inkstitch:pull_compensation_mm="0.15"
-       inkstitch:max_stitch_length_mm="8"
-       inkstitch:random_split_jitter_percent="0"
-       inkstitch:zigzag_underlay_inset_mm=".2"
-       inkstitch:ties="3"
-       inkstitch:reverse_rails="none"
-       sodipodi:nodetypes="cccccccscccccc"
        inkstitch:zigzag_spacing_mm="0.55"
+       inkstitch:pull_compensation_mm="0.15"
+       inkstitch:ties="3"
+       inkstitch:zigzag_underlay_inset_mm=".2"
        inkstitch:zigzag_underlay_spacing_mm="5" />
     <path
        style="opacity:0.99;fill:none;stroke:#000000;stroke-width:0.25;stroke-dasharray:1.8132, 0.906598;-inkscape-stroke:none;paint-order:markers fill stroke"
@@ -3145,7 +3138,7 @@ Jeremy Landes
     <path
        id="text46-0"
        style="font-weight:800;font-size:14.0078px;font-family:Millimetre;-inkscape-font-specification:'Millimetre Ultra-Bold';text-align:center;text-anchor:middle;display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.25;paint-order:markers fill stroke"
-       d="M 6.0000291,115.0004 V 86.466895 c 0,-22.845903 3.3107244,-38.491679 22.8524929,-51.360305 M 23.139399,115.0004 C 22.937675,101.67807 22.644515,88.31511 23,75 23.95957,64.064016 26.948088,57.119229 34,51 M 30.5422,58.941749 5.6654347,42.314848 M 30.5422,83.38542 -1.6116417,83.602154"
+       d="M 6.0000291,115.0004 V 86.466895 c 0,-22.845903 3.3107244,-38.491679 22.8524929,-51.360305 M 23.139399,115.0004 C 22.937675,101.67807 22.644515,88.31511 23,75 23.95957,64.064016 26.948088,57.119229 34,51 M 30.5422,58.941749 5.6654347,42.314848 M 30.5422,83.38542 -1.6116417,83.602154 m 5.4732785,-22.29867 23.4916242,7.079668"
        inkstitch:satin_column="True"
        inkstitch:max_stitch_length_mm="8"
        inkstitch:random_split_jitter_percent="0"
@@ -3190,7 +3183,7 @@ Jeremy Landes
     <path
        id="path49-3"
        style="font-weight:800;font-size:14.0078px;font-family:Millimetre;-inkscape-font-specification:'Millimetre Ultra-Bold';text-align:center;text-anchor:middle;display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.25;paint-order:markers fill stroke"
-       d="M 28.287611,34.678798 34,51 c 7.057534,6.183746 11.092542,13.087481 12,24 0.433385,10.370659 0.0037,20.798787 -0.0019,31.17434 M 40.278467,35.106564 C 59.719599,47.91029 63.131286,63.637069 63.131286,86.466952 V 105.63248 M 70.868258,83.602154 38.69926,83.38542 M 60.388883,44.059384 38.69926,58.94175"
+       d="M 28.287611,34.678798 34,51 c 7.057534,6.183746 11.092542,13.087481 12,24 0.433385,10.370659 0.0037,20.798787 -0.0019,31.17434 M 40.278467,35.106564 C 59.719599,47.91029 63.131286,63.637069 63.131286,86.466952 V 105.63248 M 70.868258,83.602154 38.69926,83.38542 M 60.388883,44.059384 38.69926,58.94175 m 3.29604,9.119599 22.526215,-4.827046"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
@@ -3305,8 +3298,8 @@ Jeremy Landes
     <path
        id="path334"
        style="fill:none;stroke:#000000;stroke-width:0.25"
-       d="M 104,35 H 46 m 58,17 H 63 L 50.090062,38.946709"
-       sodipodi:nodetypes="cccc"
+       d="M 104,35 H 63.556106 46 m 58,17 H 63 L 50.090062,38.946709"
+       sodipodi:nodetypes="cccccc"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:ties="3"
@@ -3317,8 +3310,8 @@ Jeremy Landes
     <path
        id="path219"
        style="fill:none;stroke:#000000;stroke-width:0.25"
-       d="M 50.090062,38.946709 63.038608,52.239987 63,69 M 46,35 v 33.9091"
-       sodipodi:nodetypes="ccccc"
+       d="M 50.090062,38.946709 63.038608,52.239987 63,69 M 46,35 V 51.971195 68.9091"
+       sodipodi:nodetypes="cccccc"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:ties="3"
@@ -3355,7 +3348,7 @@ Jeremy Landes
     <path
        id="path358"
        style="opacity:0.99;fill:none;stroke:#000000;stroke-width:0.25;stroke-dasharray:none;stroke-dashoffset:0;-inkscape-stroke:none;paint-order:markers fill stroke"
-       d="M 46,68.909104 V 115 M 63,69 v 29 l -13.855646,12.97112"
+       d="M 46,68.909104 V 97.506329 115 M 63,69 v 29 l -13.855646,12.97112"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:ties="3"
@@ -3363,11 +3356,12 @@ Jeremy Landes
        inkstitch:zigzag_underlay_inset_mm=".2"
        inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:zigzag_underlay_spacing_mm="5"
-       inkscape:label="path358" />
+       inkscape:label="path358"
+       sodipodi:nodetypes="cccccc" />
     <path
        id="path354"
        style="opacity:0.99;fill:none;stroke:#000000;stroke-width:0.25;stroke-dasharray:none;stroke-dashoffset:0;-inkscape-stroke:none;paint-order:markers fill stroke"
-       d="M 49.144354,110.97112 63,98 H 94.951231 M 46,115 h 49.034668"
+       d="M 49.144354,110.97112 63,98 H 94.951231 M 46,115 h 17.556106 31.478562"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:ties="3"
@@ -3375,7 +3369,8 @@ Jeremy Landes
        inkstitch:zigzag_underlay_inset_mm=".2"
        inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:zigzag_underlay_spacing_mm="5"
-       inkscape:label="path354" />
+       inkscape:label="path354"
+       sodipodi:nodetypes="cccccc" />
     <path
        style="opacity:0.99;fill:none;stroke:#000000;stroke-width:0.25;stroke-dasharray:1, 0.25;stroke-dashoffset:0;-inkscape-stroke:none;paint-order:markers fill stroke"
        d="m 95.0375,115.567 -0.2531,-8.684 7.34245,0.0834 L 104,114.244"
@@ -3450,7 +3445,7 @@ Jeremy Landes
     <path
        id="path161"
        style="font-weight:800;font-size:18px;font-family:Millimetre;-inkscape-font-specification:'Millimetre Ultra-Bold';text-align:center;text-anchor:middle;display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.25;stroke-dasharray:none;paint-order:markers fill stroke"
-       d="m 34.523588,97.788074 c 4.57849,0 7.654652,-0.751402 9.444164,-2.901366 m -9.57879,19.992422 h 3.551796 c 9.585136,0 16.701125,-2.88155 20.853266,-8.89207"
+       d="m 34.523588,97.788074 c 0.532249,0 1.044195,-0.01015 1.536178,-0.03148 3.740131,-0.162121 6.326505,-0.969855 7.907986,-2.869886 m -9.57879,19.992422 h 3.551796 c 9.585136,0 16.701125,-2.88155 20.853266,-8.89207"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:ties="3"
@@ -3458,7 +3453,8 @@ Jeremy Landes
        inkstitch:zigzag_underlay_inset_mm=".2"
        inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:zigzag_underlay_spacing_mm="5"
-       inkscape:label="path161" />
+       inkscape:label="path161"
+       sodipodi:nodetypes="csccsc" />
     <path
        style="opacity:0.99;fill:none;stroke:#000000;stroke-width:0.25;stroke-dasharray:3.77953, 0.944882;-inkscape-stroke:none;paint-order:markers fill stroke"
        d="M 59.1592,106.437 46.6701,80.697"
@@ -3689,13 +3685,13 @@ Jeremy Landes
     <path
        id="path191-2"
        style="display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.25;stroke-dasharray:none;-inkscape-stroke:none;paint-order:markers fill stroke"
-       d="m 45,23 v 9 l -2.000313,3 M 30,23 26.999687,35"
+       d="m 45,23 v 9 l -2.000313,3 M 30,23 28.053172,30.7865 26.999687,35"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:ties="3"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm=".2"
-       sodipodi:nodetypes="ccccc"
+       sodipodi:nodetypes="cccccc"
        inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:zigzag_underlay_spacing_mm="5" />
     <path
@@ -3709,13 +3705,13 @@ Jeremy Landes
     <path
        id="path177-0"
        style="font-weight:800;font-size:14.0078px;font-family:Millimetre;-inkscape-font-specification:'Millimetre Ultra-Bold';text-align:center;text-anchor:middle;display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.25;paint-order:markers fill stroke"
-       d="M 42.999687,35 H 6 M 44,52.068423 23.333328,52.142859 9.6083325,38.743269"
+       d="M 42.999687,35 H 23.652525 6 M 44,52.068423 23.333328,52.142859 9.6083325,38.743269"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:ties="3"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm=".2"
-       sodipodi:nodetypes="ccccc"
+       sodipodi:nodetypes="cccccc"
        inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:zigzag_underlay_spacing_mm="5" />
     <path
@@ -3729,8 +3725,8 @@ Jeremy Landes
     <path
        id="path99-4-74"
        style="font-weight:800;font-size:14.0078px;font-family:Millimetre;-inkscape-font-specification:'Millimetre Ultra-Bold';text-align:center;text-anchor:middle;display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.25;paint-order:markers fill stroke"
-       d="m 6,35 v 80 M 9.6083325,38.743267 23.333328,52.142856 C 23.459543,67.433244 23.353128,82.71512 22.99997,98 l -12.037841,12.41388"
-       sodipodi:nodetypes="cccccc"
+       d="M 6,35 V 52.4539 96.380019 115 M 9.6083325,38.743267 23.333328,52.142856 C 23.459543,67.433244 23.353128,82.71512 22.99997,98 l -12.037841,12.41388"
+       sodipodi:nodetypes="cccccccc"
        inkstitch:satin_column="True"
        inkstitch:ties="3"
        inkstitch:zigzag_underlay="True"
@@ -3745,7 +3741,7 @@ Jeremy Landes
     <path
        id="path103-1-8"
        style="display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.25;stroke-dasharray:none;stroke-dashoffset:0;paint-order:markers fill stroke"
-       d="M 10.962155,110.41388 22.999998,98 H 55 M 5.9996882,115 H 55"
+       d="M 10.962155,110.41388 22.999998,98 H 55 M 5.9996882,115 H 23.169821 55"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:ties="3"
@@ -3755,7 +3751,7 @@ Jeremy Landes
        inkstitch:zigzag_underlay_inset_mm=".2"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="False"
-       sodipodi:nodetypes="ccccc"
+       sodipodi:nodetypes="cccccc"
        inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:zigzag_underlay_spacing_mm="5" />
     <path
@@ -3850,13 +3846,13 @@ Jeremy Landes
     <path
        id="path177-0-1"
        style="font-weight:800;font-size:14.0078px;font-family:Millimetre;-inkscape-font-specification:'Millimetre Ultra-Bold';text-align:center;text-anchor:middle;display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.25;paint-order:markers fill stroke"
-       d="M 49,35 H 6 M 49,52.050414 23.333328,52.142859 9.6083325,38.743269"
+       d="M 49,35 H 22.687116 6 M 49,52.050414 23.333328,52.142859 9.6083325,38.743269"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:ties="3"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm=".2"
-       sodipodi:nodetypes="ccccc"
+       sodipodi:nodetypes="cccccc"
        inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:zigzag_underlay_spacing_mm="5" />
     <path
@@ -3870,8 +3866,8 @@ Jeremy Landes
     <path
        id="path99-4-74-5"
        style="font-weight:800;font-size:14.0078px;font-family:Millimetre;-inkscape-font-specification:'Millimetre Ultra-Bold';text-align:center;text-anchor:middle;display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.25;paint-order:markers fill stroke"
-       d="m 6,35 v 80 M 9.6083325,38.743267 23.333328,52.142856 C 23.459543,67.433244 23.353128,82.71512 22.99997,98 l -12.037841,12.41388"
-       sodipodi:nodetypes="cccccc"
+       d="M 6,35 V 51.810294 96.380019 115 M 9.6083325,38.743267 23.333328,52.142856 C 23.459543,67.433244 23.353128,82.71512 22.99997,98 l -12.037841,12.41388"
+       sodipodi:nodetypes="cccccccc"
        inkstitch:satin_column="True"
        inkstitch:ties="3"
        inkstitch:zigzag_underlay="True"
@@ -3886,7 +3882,7 @@ Jeremy Landes
     <path
        id="path103-1-8-2"
        style="display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.25;stroke-dasharray:none;stroke-dashoffset:0;paint-order:markers fill stroke"
-       d="M 10.962155,110.41388 22.999998,98 H 55 M 5.9996882,115 H 55"
+       d="M 10.962155,110.41388 22.999998,98 H 55 M 5.9996882,115 H 22.848018 55"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:ties="3"
@@ -3896,7 +3892,7 @@ Jeremy Landes
        inkstitch:zigzag_underlay_inset_mm=".2"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="False"
-       sodipodi:nodetypes="ccccc"
+       sodipodi:nodetypes="cccccc"
        inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:zigzag_underlay_spacing_mm="5" />
     <path
@@ -4012,8 +4008,8 @@ Jeremy Landes
     <path
        id="path219-43"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.25"
-       d="m 52,41 4.545031,4.473354 6.493579,6.766633 L 63,69 M 50,45 46,55 v 13.9091"
-       sodipodi:nodetypes="ccccccc"
+       d="m 52,41 4.545031,4.473354 6.493579,6.766633 L 63,69 M 50,45 48.089962,49.775096 46,55 v 13.9091"
+       sodipodi:nodetypes="cccccccc"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:ties="3"
@@ -4111,7 +4107,7 @@ Jeremy Landes
     <path
        id="path18-8"
        style="font-weight:800;font-size:13.1425px;font-family:Millimetre;-inkscape-font-specification:'Millimetre Ultra-Bold';text-align:center;text-anchor:middle;display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.377953;paint-order:markers fill stroke"
-       d="M 6,35 5.899912,87.428579 C 5.8617321,107.42814 14.366171,115 31,115 h 7 c 9.623469,0 16.580137,-2.48051 20.730048,-9.17446 M 23,35 v 53 c 0,7.486612 2.446266,9.266217 11.40005,9.997978 5.130477,0.419295 7.169798,-0.857464 10.03158,-2.949392"
+       d="M 6,35 5.899912,87.428579 C 5.8617321,107.42814 14.366171,115 31,115 h 7 c 9.623469,0 16.580137,-2.48051 20.730048,-9.17446 M 23,35 v 53 c 0,7.486612 2.446266,9.266217 11.40005,9.997978 5.130477,0.419295 7.169798,-0.857464 10.03158,-2.949392 M 13.354827,112.30927 27.192359,94.931905 M 4.1834399,89.461253 H 27.353261 m 4.344341,6.114258 -0.321803,21.399899"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
@@ -4140,14 +4136,15 @@ Jeremy Landes
     <path
        id="path190"
        style="display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:none;-inkscape-stroke:none;paint-order:markers fill stroke"
-       d="m 21,17 v 9 l 8,9 m 8,-18 4,18"
+       d="m 21,17 v 9 l 8,9 M 37,17 38.920215,25.640968 41,35"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:ties="2"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm=".2"
        inkstitch:zigzag_spacing_mm="0.55"
-       inkstitch:zigzag_underlay_spacing_mm="5" />
+       inkstitch:zigzag_underlay_spacing_mm="5"
+       sodipodi:nodetypes="cccccc" />
     <path
        id="path121-8"
        style="font-weight:800;font-size:13.1425px;font-family:Millimetre;-inkscape-font-specification:'Millimetre Ultra-Bold';text-align:center;text-anchor:middle;display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.377953;paint-order:markers fill stroke"
@@ -4180,7 +4177,7 @@ Jeremy Landes
     <path
        id="path204"
        style="fill:none;stroke:#000000;stroke-width:0.377953"
-       d="M 46.384721,88.772177 C 44.384721,84.772177 38,82 26,82 12,82 5,87 5,99 c 0,12 7,17 21,17 13,0 20,-4 21,-10 M 46.691357,97.358003 C 46.691357,95.358003 43,94 30,94 c -6,0 -8,1 -8,4 0,3 2,3 8,3 13,0 16.7371,-0.36116 16.7371,-2.361201"
+       d="M 46.384721,88.772177 C 44.384721,84.772177 38,82 26,82 12,82 5,87 5,99 c 0,12 7,17 21,17 13,0 20,-4 21,-10 M 46.691357,97.358003 C 46.691357,95.358003 43,94 30,94 c -6,0 -8,1 -8,4 0,3 2,3 8,3 13,0 16.7371,-0.36116 16.7371,-2.361201 M 30.775085,80.506686 V 95.367658 M 24.456246,95.952736 10.180351,83.081027 M 23.637137,98.059015 3.2764349,97.707969 M 24.690277,99.463202 10.648413,114.44119 M 30.8921,99.580217 31.126131,116.54747"
        sodipodi:nodetypes="csssccsssc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
@@ -4347,7 +4344,7 @@ Jeremy Landes
      style="display:none"
      id="g153">
     <path
-       style="opacity:0.99;fill:none;stroke:#000000;stroke-width:0.944882;stroke-dasharray:3.77953, 0.944882;stroke-dashoffset:0;-inkscape-stroke:none;paint-order:markers fill stroke"
+       style="opacity:0.99;fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:3.77953, 0.944882;stroke-dashoffset:0;-inkscape-stroke:none;paint-order:markers fill stroke"
        d="m 14.6508,104.121 c 0,0 -6.43757,-24.9308 -0.111838,-34.5579 3.74176,-5.69455 11.9751,-7.99884 18.7888,-8.05233 C 57.072594,66.704819 48.810327,74.615896 46.7559,82"
        id="path266"
        sodipodi:nodetypes="cacc"
@@ -4355,7 +4352,7 @@ Jeremy Landes
        inkscape:label="saut" />
     <path
        id="path265"
-       style="fill:none;stroke:#000000"
+       style="fill:none;stroke:#000000;stroke-width:0.377953"
        d="m 46,82 v -4 c 0,-3 -3,-4 -12,-4 -9,0 -11,2 -11,11 v 2 c 0,9 2,12 11,12 5.6388,0 8.922336,-0.785088 10.588433,-2.109322 M 63,82 V 78 C 63,62 56,56 34,56 13,56 6,64 6,79 v 14 c 0,15 7,23 28,23 15.884141,0 23.948883,-3.12776 27.205243,-10.88879"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
@@ -4369,7 +4366,7 @@ Jeremy Landes
        inkstitch:zigzag_underlay_spacing_mm="5"
        inkstitch:zigzag_spacing_mm="0.55" />
     <path
-       style="opacity:0.99;fill:none;stroke:#000000;stroke-width:0.944882;stroke-dasharray:3.77953, 0.944882;stroke-dashoffset:0;-inkscape-stroke:none;paint-order:markers fill stroke"
+       style="opacity:0.99;fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:3.77953, 0.944882;stroke-dashoffset:0;-inkscape-stroke:none;paint-order:markers fill stroke"
        d="M 61.7134,105.363 C 51.093356,101.7123 51.791975,100.5971 46.7559,91"
        id="path269"
        inkstitch:ties="3"
@@ -4377,7 +4374,7 @@ Jeremy Landes
        inkscape:label="saut" />
     <path
        id="path267"
-       style="fill:none;stroke:#000000"
+       style="fill:none;stroke:#000000;stroke-width:0.377953"
        d="m 46,91 v 3 c 0,1.1204 -0.418432,2.101323 -1.411567,2.890678 M 63,91 v 3 c 0,4.447897 -0.540963,8.12299 -1.794757,11.11121"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
@@ -4397,7 +4394,7 @@ Jeremy Landes
      style="display:none"
      id="g154">
     <path
-       style="opacity:0.99;fill:none;stroke:#000000;stroke-width:0.944882;stroke-dasharray:1, 0.25;-inkscape-stroke:none;paint-order:markers fill stroke"
+       style="opacity:0.99;fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:1, 0.25;-inkscape-stroke:none;paint-order:markers fill stroke"
        d="m 15,100 c 0,0 -5.8471,-21.8876 0,-30 3.08169,-4.27562 9.72954,-4.999564 15,-5 5.269596,-4.36e-4 8.990267,2.483431 12,4 4.856015,3.407898 4.823903,9.137927 4,15.2441"
        id="path206"
        sodipodi:nodetypes="cascc"
@@ -4405,8 +4402,8 @@ Jeremy Landes
        inkscape:label="saut" />
     <path
        id="path117"
-       style="fill:none;stroke:#000000;stroke-width:0.944882"
-       d="M 46,85 C 45,77 43,74 34,74 27,74 23,77 23,85 v 2 c 0,8 4,12 11,12 9,0 12,-4 12,-12 M 46,67 C 44,61 39,56 28,56 14,56 6,65 6,82 v 9 c 0,17 8,25 22,25 11,0 16,-4 18,-10 M 27,52 29.366959,77.28147 m -0.171737,18.375816 -0.343473,21.982284"
+       style="fill:none;stroke:#000000;stroke-width:0.377953"
+       d="M 46,85 C 45,77 43,74 34,74 27,74 23,77 23,85 v 2 c 0,8 4,12 11,12 9,0 12,-4 12,-12 M 46,67 C 44,61 39,56 28,56 14,56 6,65 6,82 v 9 c 0,17 8,25 22,25 11,0 16,-4 18,-10 M 29.10628,52 29.366959,77.28147 M 29.195222,95.657286 28.851749,117.63957 M 24.456246,87.176571 3.6274815,87.527618"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:ties="3"
@@ -4416,7 +4413,7 @@ Jeremy Landes
        inkstitch:zigzag_underlay_spacing_mm="5"
        sodipodi:nodetypes="cssssccssssccccc" />
     <path
-       style="opacity:0.99;fill:none;stroke:#000000;stroke-width:0.944882;stroke-dasharray:1, 0.25;-inkscape-stroke:none;paint-order:markers fill stroke"
+       style="opacity:0.99;fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:1, 0.25;-inkscape-stroke:none;paint-order:markers fill stroke"
        d="M 46,106 62.2441,35"
        id="path245"
        inkstitch:ties="3"
@@ -4424,7 +4421,7 @@ Jeremy Landes
        sodipodi:nodetypes="cc" />
     <path
        id="path150"
-       style="fill:none;stroke:#000000;stroke-width:0.944882"
+       style="fill:none;stroke:#000000;stroke-width:0.377953"
        d="m 63,35 v 71.14932 M 46,35 v 71"
        sodipodi:nodetypes="cccc"
        inkstitch:satin_column="True"
@@ -4435,7 +4432,7 @@ Jeremy Landes
        inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:zigzag_underlay_spacing_mm="5" />
     <path
-       style="opacity:0.99;fill:none;stroke:#000000;stroke-width:0.944882;stroke-dasharray:1, 0.25;-inkscape-stroke:none;paint-order:markers fill stroke"
+       style="opacity:0.99;fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:1, 0.25;-inkscape-stroke:none;paint-order:markers fill stroke"
        d="m 46,106 1.7559,9"
        id="path249"
        inkstitch:ties="3"
@@ -4443,7 +4440,7 @@ Jeremy Landes
        sodipodi:nodetypes="cc" />
     <path
        id="path199"
-       style="fill:none;stroke:#000000;stroke-width:0.944882"
+       style="fill:none;stroke:#000000;stroke-width:0.377953"
        d="m 47,115 -1,-9 m 17,9 v -8.85068"
        sodipodi:nodetypes="cccc"
        inkstitch:satin_column="True"
@@ -4469,14 +4466,15 @@ Jeremy Landes
     <path
        id="path301"
        style="fill:none;stroke:#000000;stroke-width:0.25"
-       d="M 23,91 H 63 M 23,81 h 23 l 13,6"
+       d="M 23,91 H 48.093383 63 M 23,81 h 23 l 13,6"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:ties="3"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm=".2"
        inkstitch:zigzag_spacing_mm="0.55"
-       inkstitch:zigzag_underlay_spacing_mm="5" />
+       inkstitch:zigzag_underlay_spacing_mm="5"
+       sodipodi:nodetypes="cccccc" />
     <path
        d="m 58.5991,86.5991 3.8664,3.8664"
        style="fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:3, 1"
@@ -4530,7 +4528,7 @@ Jeremy Landes
     <path
        id="path356"
        style="opacity:1;fill:none;stroke:#000000;stroke-width:0.377953"
-       d="M 23,115 V 95 M 6,115 v -11 l 1,-9"
+       d="M 23,115 V 103.67576 95 M 6,115 v -11 l 1,-9"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:ties="3"
@@ -4538,7 +4536,7 @@ Jeremy Landes
        inkstitch:zigzag_underlay_inset_mm=".2"
        inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:zigzag_underlay_spacing_mm="5"
-       sodipodi:nodetypes="ccccc" />
+       sodipodi:nodetypes="cccccc" />
     <path
        style="opacity:0.99;fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:1, 0.25;-inkscape-stroke:none;paint-order:markers fill stroke"
        d="M 6.43307,95 C 16.458207,75.239314 7.3632101,24.202047 46,51.2441"
@@ -4711,7 +4709,7 @@ Jeremy Landes
     <path
        id="path339"
        style="fill:none;stroke:#000000;stroke-width:0.377953"
-       d="m 23,81 c 0.863709,-4.42549 3.952304,-7 11,-7 8,0 12,3 12,11 v 15.0719 M 23,67 c 1,-6 7,-11 18,-11 15,0 22,8 22,26 v 18.00413"
+       d="m 23,81 c 0.863709,-4.42549 3.952304,-7 11,-7 8,0 12,3 12,11 v 15.0719 M 23,67 c 1,-6 7,-11 18,-11 15,0 22,8 22,26 v 18.00413 M 34.636597,54.178191 34.753613,76.528158 m 5.265699,0.702093 10.882444,-21.062796 M 42.125591,78.751453 61.55017,65.411682 M 43.763809,80.38967 63.89048,79.921608"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:ties="3"
@@ -4946,7 +4944,7 @@ Jeremy Landes
     <path
        id="path160-9-8"
        style="font-weight:800;font-size:18px;font-family:Millimetre;-inkscape-font-specification:'Millimetre Ultra-Bold';text-align:center;text-anchor:middle;display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.25;stroke-dasharray:none;paint-order:markers fill stroke"
-       d="M 22.561035,78 H 34 c 3.495876,0 13.775097,5.387549 17,7 4,2 8.644724,7.210579 10,17 M 44.29197,101.86964 C 43.78009,98.132909 42.526712,95.137568 37,95 H 22"
+       d="M 22.561035,78 H 34 c 3.495876,0 13.775097,5.387549 17,7 4,2 8.644724,7.210579 10,17 M 44.29197,101.86964 C 43.78009,98.132909 42.526712,95.137568 37,95 H 22 m 7.370898,-19.290951 0.234031,20.594733 M 46.33815,80.38967 38.49811,96.88886 m 3.276435,1.872249 19.190547,-2.574342"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
@@ -4988,7 +4986,7 @@ Jeremy Landes
      style="display:none"
      id="g162">
     <path
-       style="opacity:0.99;fill:none;stroke:#000000;stroke-width:0.944882;stroke-dasharray:1, 0.25;-inkscape-stroke:none;paint-order:markers fill stroke"
+       style="opacity:0.99;fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:1, 0.25;-inkscape-stroke:none;paint-order:markers fill stroke"
        d="m 15,105 c 0.219577,10.32154 -4,8 -8.24409,10"
        id="path328"
        inkstitch:ties="3"
@@ -4996,7 +4994,7 @@ Jeremy Landes
        inkscape:label="saut" />
     <path
        id="path325"
-       style="fill:none;stroke:#000000;stroke-width:0.944882"
+       style="fill:none;stroke:#000000;stroke-width:0.377953"
        d="M 6,115 V 104.9877 M 23,115 v -9.9196"
        sodipodi:nodetypes="cccc"
        inkstitch:satin_column="True"
@@ -5007,7 +5005,7 @@ Jeremy Landes
        inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:zigzag_underlay_spacing_mm="5" />
     <path
-       style="opacity:0.99;fill:none;stroke:#000000;stroke-width:0.944882;stroke-dasharray:1, 0.25;-inkscape-stroke:none;paint-order:markers fill stroke"
+       style="opacity:0.99;fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:1, 0.25;-inkscape-stroke:none;paint-order:markers fill stroke"
        d="M 23.5669,105.083 C -2.3116502,63.546494 26.707771,51.474399 6.75591,35"
        id="path329"
        inkstitch:ties="3"
@@ -5015,7 +5013,7 @@ Jeremy Landes
        inkscape:label="saut" />
     <path
        id="path326"
-       style="fill:none;stroke:#000000;stroke-width:0.944882"
+       style="fill:none;stroke:#000000;stroke-width:0.377953"
        d="m 6,35 v 69.9877 M 23,35 v 70.08045"
        sodipodi:nodetypes="cccc"
        inkstitch:satin_column="True"
@@ -5033,7 +5031,7 @@ Jeremy Landes
      id="g163">
     <path
        id="path283"
-       style="fill:none;stroke:#000000;stroke-width:0.944882"
+       style="fill:none;stroke:#000000;stroke-width:0.377953"
        d="M 23,115 V 74.5 M 6,115 V 74.493767"
        sodipodi:nodetypes="cccc"
        inkstitch:satin_column="True"
@@ -5044,7 +5042,7 @@ Jeremy Landes
        inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:zigzag_underlay_spacing_mm="5" />
     <path
-       style="opacity:0.99;fill:none;stroke:#000000;stroke-width:0.944882;stroke-dasharray:1, 0.25;-inkscape-stroke:none;paint-order:markers fill stroke"
+       style="opacity:0.99;fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:1, 0.25;-inkscape-stroke:none;paint-order:markers fill stroke"
        d="M 5.43307,74.4936 C 12,76 15,58 6.75591,57"
        id="path285"
        sodipodi:nodetypes="cc"
@@ -5052,7 +5050,7 @@ Jeremy Landes
        inkscape:label="saut" />
     <path
        id="path250"
-       style="fill:none;stroke:#000000;stroke-width:0.944882"
+       style="fill:none;stroke:#000000;stroke-width:0.377953"
        d="M 6,57 V 74.4938 M 22,57 23,74.5"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
@@ -5064,7 +5062,7 @@ Jeremy Landes
        sodipodi:nodetypes="cccc" />
     <path
        d="m 23,74 v 7.2441"
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
+       style="fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:3, 1"
        inkstitch:running_stitch_length_mm="2.5"
        inkstitch:running_stitch_tolerance_mm="2.0"
        id="path45"
@@ -5073,8 +5071,8 @@ Jeremy Landes
        sodipodi:nodetypes="cc" />
     <path
        id="path268"
-       style="fill:none;stroke:#000000;stroke-width:0.944882"
-       d="m 23,82 c 0,-6 2,-8 7,-8 5,0 7,2 7,8 M 23,67 c 1,-6 6,-11 14,-11 8,0 14,3 16,11 l 2,15"
+       style="fill:none;stroke:#000000;stroke-width:0.377953"
+       d="m 23,82 c 0,-6 2,-8 7,-8 5,0 7,2 7,8 M 23,67 c 1,-6 6,-11 14,-11 8,0 14,3 16,11 l 2,15 M 32.062256,53.242067 31.594194,76.879204 m 2.34031,1.170156 13.456786,-22.701014 m -12.871708,24.339231 20.360702,-8.89318"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:ties="3"
@@ -5084,7 +5082,7 @@ Jeremy Landes
        inkstitch:zigzag_underlay_spacing_mm="5"
        sodipodi:nodetypes="csccscc" />
     <path
-       style="opacity:0.99;fill:none;stroke:#000000;stroke-width:0.944882;stroke-dasharray:1, 0.25;-inkscape-stroke:none;paint-order:markers fill stroke"
+       style="opacity:0.99;fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:1, 0.25;-inkscape-stroke:none;paint-order:markers fill stroke"
        d="m 55.5669,82 -17.811,33"
        id="path286"
        inkstitch:ties="3"
@@ -5092,7 +5090,7 @@ Jeremy Landes
        sodipodi:nodetypes="cc" />
     <path
        id="path279"
-       style="fill:none;stroke:#000000;stroke-width:0.944882"
+       style="fill:none;stroke:#000000;stroke-width:0.377953"
        d="M 37,115 V 82 m 18,33 V 82"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
@@ -5104,7 +5102,7 @@ Jeremy Landes
        sodipodi:nodetypes="cccc" />
     <path
        d="M 55,80 53.0999,67.7493"
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
+       style="fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:3, 1"
        inkstitch:running_stitch_length_mm="2.5"
        inkstitch:running_stitch_tolerance_mm="2.0"
        id="path58"
@@ -5113,8 +5111,8 @@ Jeremy Landes
        sodipodi:nodetypes="cc" />
     <path
        id="path270"
-       style="fill:none;stroke:#000000;stroke-width:0.944882"
-       d="m 53,67 c 1,-7 6,-11 15,-11 12,0 18,8 18,26 v 22.77299 M 55,82 c 0,-6 2,-8 7,-8 5,0 7,2 7,8 v 22.94503"
+       style="fill:none;stroke:#000000;stroke-width:0.377953"
+       d="m 53,67 c 1,-7 6,-11 15,-11 12,0 18,8 18,26 v 22.77299 M 55,82 c 0,-6 2,-8 7,-8 5,0 7,2 7,8 v 22.94503 M 59.794937,54.412222 60.145983,76.762189 M 65.060636,76.645173 74.304863,54.9973 m -7.723026,23.988184 18.020392,-14.15888 m -17.318298,16.49919 h 20.477718"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:ties="3"
@@ -5124,7 +5122,7 @@ Jeremy Landes
        inkstitch:zigzag_underlay_spacing_mm="5"
        sodipodi:nodetypes="cssccssc" />
     <path
-       style="opacity:0.99;fill:none;stroke:#000000;stroke-width:0.944882;stroke-dasharray:1, 0.25;-inkscape-stroke:none;paint-order:markers fill stroke"
+       style="opacity:0.99;fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:1, 0.25;-inkscape-stroke:none;paint-order:markers fill stroke"
        d="m 70,105 -0.2441,10"
        id="path287"
        inkstitch:ties="3"
@@ -5132,7 +5130,7 @@ Jeremy Landes
        sodipodi:nodetypes="cc" />
     <path
        id="path280"
-       style="fill:none;stroke:#000000;stroke-width:0.944882"
+       style="fill:none;stroke:#000000;stroke-width:0.377953"
        d="M 69,115 V 104.945 M 86,115 v -10.227"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
@@ -5149,7 +5147,7 @@ Jeremy Landes
      style="display:none"
      id="g164">
     <path
-       style="opacity:0.99;fill:none;stroke:#000000;stroke-width:0.944882;stroke-dasharray:1, 0.25;-inkscape-stroke:none;paint-order:markers fill stroke"
+       style="opacity:0.99;fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:1, 0.25;-inkscape-stroke:none;paint-order:markers fill stroke"
        d="m 15,105 7.2441,10"
        id="path305"
        inkstitch:ties="3"
@@ -5157,7 +5155,7 @@ Jeremy Landes
        sodipodi:nodetypes="cc" />
     <path
        id="path303"
-       style="fill:none;stroke:#000000;stroke-width:0.944882"
+       style="fill:none;stroke:#000000;stroke-width:0.377953"
        d="M 23,115 V 82 M 6,115 V 82"
        sodipodi:nodetypes="cccc"
        inkstitch:satin_column="True"
@@ -5168,7 +5166,7 @@ Jeremy Landes
        inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:zigzag_underlay_spacing_mm="5" />
     <path
-       style="opacity:0.99;fill:none;stroke:#000000;stroke-width:0.944882;stroke-dasharray:1, 0.25;-inkscape-stroke:none;paint-order:markers fill stroke"
+       style="opacity:0.99;fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:1, 0.25;-inkscape-stroke:none;paint-order:markers fill stroke"
        d="M 5.43307,82 21.2441,57"
        id="path309"
        inkstitch:ties="3"
@@ -5176,9 +5174,9 @@ Jeremy Landes
        sodipodi:nodetypes="cc" />
     <path
        id="path291"
-       style="fill:none;stroke:#000000;stroke-width:0.944882"
-       d="m 22,57 1,10 V 82 M 6,57 c 0,0 -0.1081542,22.187992 0,25"
-       sodipodi:nodetypes="ccccc"
+       style="fill:none;stroke:#000000;stroke-width:0.377953"
+       d="m 22,57 1,10 V 82 M 6,57 C 6,57 5.9764641,62.132389 5.9622228,67.284562 5.9445934,73.662483 5.940174,80.444526 6,82"
+       sodipodi:nodetypes="ccccsc"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:ties="3"
@@ -5188,7 +5186,7 @@ Jeremy Landes
        inkstitch:zigzag_underlay_spacing_mm="5" />
     <path
        d="M 5.43276,81.8952 23,81.2441"
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
+       style="fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:3, 1"
        inkstitch:running_stitch_length_mm="2.5"
        inkstitch:running_stitch_tolerance_mm="2.0"
        id="path64"
@@ -5196,8 +5194,8 @@ Jeremy Landes
        inkstitch:ties="3" />
     <path
        id="path293"
-       style="fill:none;stroke:#000000;stroke-width:0.944882"
-       d="m 23,82 c 0,-5 3,-8 11,-8 8,0 12,3 12,11 v 20 M 23,67 c 1,-6 7,-11 18,-11 15,0 22,8.2209 22,26.2209 V 105"
+       style="fill:none;stroke:#000000;stroke-width:0.377953"
+       d="m 23,82 c 0,-5 3,-8 11,-8 8,0 12,3 12,11 v 20 M 23,67 c 1,-6 7,-11 18,-11 15,0 22,8.2209 22,26.2209 V 105 M 34.870628,54.295207 34.519582,76.762189 m 7.371978,1.755233 7.60601,-23.169076 M 43.763809,81.325794 61.082107,66.113775 M 44.582918,84.83626 63.539434,84.602229"
        sodipodi:nodetypes="cssccssc"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
@@ -5207,7 +5205,7 @@ Jeremy Landes
        inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:zigzag_underlay_spacing_mm="5" />
     <path
-       style="opacity:0.99;fill:none;stroke:#000000;stroke-width:0.944882;stroke-dasharray:1, 0.25;-inkscape-stroke:none;paint-order:markers fill stroke"
+       style="opacity:0.99;fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:1, 0.25;-inkscape-stroke:none;paint-order:markers fill stroke"
        d="m 63.5669,105 -16.811,10"
        id="path310"
        inkstitch:ties="3"
@@ -5215,7 +5213,7 @@ Jeremy Landes
        sodipodi:nodetypes="cc" />
     <path
        id="path294"
-       style="fill:none;stroke:#000000;stroke-width:0.944882"
+       style="fill:none;stroke:#000000;stroke-width:0.377953"
        d="m 46,115 v -10 m 17,10 v -10"
        sodipodi:nodetypes="cccc"
        inkstitch:satin_column="True"
@@ -5259,7 +5257,7 @@ Jeremy Landes
      style="display:none"
      id="g166">
     <path
-       style="display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:1.0875;stroke-dasharray:4.35002, 1.0875;stroke-dashoffset:0;-inkscape-stroke:none;paint-order:markers fill stroke"
+       style="display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:4.35002, 1.0875;stroke-dashoffset:0;-inkscape-stroke:none;paint-order:markers fill stroke"
        d="m 13,105 9.2441,33"
        id="path258-9"
        inkstitch:ties="3"
@@ -5267,7 +5265,7 @@ Jeremy Landes
        inkscape:label="saut" />
     <path
        id="path254-0"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.944882"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.377953"
        d="M 23,138 V 75.058971 M 6,138 V 74.842663"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
@@ -5277,7 +5275,7 @@ Jeremy Landes
        inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:zigzag_underlay_spacing_mm="5" />
     <path
-       style="display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.944882;stroke-dasharray:3.77953, 0.944882;stroke-dashoffset:0;-inkscape-stroke:none;paint-order:markers fill stroke"
+       style="display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:3.77953, 0.944882;stroke-dashoffset:0;-inkscape-stroke:none;paint-order:markers fill stroke"
        d="M 8.15318,74.8701 6.75591,57"
        id="path263-8"
        inkstitch:ties="3"
@@ -5285,7 +5283,7 @@ Jeremy Landes
        inkscape:label="saut" />
     <path
        id="path154"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.944882"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.377953"
        d="m 6,57 v 10 7.8427 M 22,57 l 1,9.0895 v 8.9695"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
@@ -5296,14 +5294,14 @@ Jeremy Landes
        inkstitch:zigzag_underlay_spacing_mm="5" />
     <path
        d="M 23.5669,74.806 23,67.7559"
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
+       style="fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:3, 1"
        inkstitch:running_stitch_length_mm="2.5"
        inkstitch:running_stitch_tolerance_mm="2.0"
        id="path66"
        inkstitch:ties="3" />
     <path
        id="path256-8"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.944882"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.377953"
        d="m 23,67 c 2,-6 7,-11 18,-11 14,0 22,9 22,26 v 9 c 0,7.6858 -1.6352,13.532 -4.7208,17.631 M 23,85 c 0,-8 2,-11 11,-11 7,0 12,3 12,11 v 2 c 0,3.2537 -0.8271,5.8457 -2.2794,7.7761 M 42.722076,86.849484 64.083114,86.708951 M 40.473546,79.54176 58.742855,60.850852 M 35.554886,77.574296 35.976485,53.824195"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
@@ -5317,7 +5315,7 @@ Jeremy Landes
        inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:zigzag_underlay_spacing_mm="5" />
     <path
-       style="display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.944882;stroke-dasharray:3.77953, 0.944882;stroke-dashoffset:0;-inkscape-stroke:none;paint-order:markers fill stroke"
+       style="display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:3.77953, 0.944882;stroke-dashoffset:0;-inkscape-stroke:none;paint-order:markers fill stroke"
        d="M 43.3099,94.3853 C 39.3257,107.82022 28,104 23,100 V 87.7559"
        id="path264-4"
        sodipodi:nodetypes="ccc"
@@ -5325,7 +5323,7 @@ Jeremy Landes
        inkscape:label="saut" />
     <path
        id="path235-2"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.944882"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.377953"
        d="m 23,87 c 0,8 2,12 11,12 4.153036,0 7.602084,-1.40798 9.720639,-4.22393 M 23,106 c 2,6 7,10 18,10 7.670516,0 13.539905,-2.4015 17.279225,-7.36898 m -23.708071,-11.66315 -0.140533,22.0637"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
@@ -5345,7 +5343,7 @@ Jeremy Landes
      style="display:none"
      id="g167">
     <path
-       style="display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.944882;stroke-dasharray:3.77953, 0.944882;stroke-dashoffset:0;-inkscape-stroke:none;paint-order:markers fill stroke"
+       style="display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:3.77953, 0.944882;stroke-dashoffset:0;-inkscape-stroke:none;paint-order:markers fill stroke"
        d="m 13,100 c 11.5794,12.9015 32.8949,1.16773 33,0 V 87.7559"
        id="path264-4-9"
        sodipodi:nodetypes="ccc"
@@ -5353,7 +5351,7 @@ Jeremy Landes
        inkscape:label="saut" />
     <path
        id="path235-2-0"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.944882"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.377953"
        d="M 46,87 C 46,95 44,99 35,99 30.846964,99 27.397916,97.59202 25.279381,94.776085 23.8271,92.8457 23,90.2537 23,87 v -2 c 0,-8 5,-11 12,-11 9,0 11,3 11,11 m 0,21 c -2,6 -7,10 -18,10 -7.670516,0 -13.539905,-2.4015 -17.279212,-7.36899 C 7.6352,104.532 6,98.6858 6,91 V 82 C 6,65 14,56 28,56 39,56 44,61 46,67 M 9.2751876,59.86712 26.841831,78.558028 m 4.778127,-24.452767 0.702665,23.187969 m -0.702665,19.67464 v 21.07997 M 25.858099,92.751876 7.5887899,108.35106"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
@@ -5368,7 +5366,7 @@ Jeremy Landes
        inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:zigzag_underlay_spacing_mm="5" />
     <path
-       style="display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.944882;stroke-dasharray:3.77953, 0.944882;stroke-dashoffset:0;-inkscape-stroke:none;paint-order:markers fill stroke"
+       style="display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:3.77953, 0.944882;stroke-dashoffset:0;-inkscape-stroke:none;paint-order:markers fill stroke"
        d="M 46,66.4331 C 53.588415,59.369922 52.635885,56.941 62.2441,56.941"
        id="path263-8-7"
        inkstitch:ties="3"
@@ -5376,7 +5374,7 @@ Jeremy Landes
        inkscape:label="saut" />
     <path
        id="path154-3"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.944882"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.377953"
        d="m 63,56.941 v 10 33.007298 M 47,56.941 46,66.0305 V 100"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
@@ -5387,7 +5385,7 @@ Jeremy Landes
        inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:zigzag_underlay_spacing_mm="5" />
     <path
-       style="display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:1.0875;stroke-dasharray:4.35002, 1.0875;stroke-dashoffset:0;-inkscape-stroke:none;paint-order:markers fill stroke"
+       style="display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:4.35002, 1.0875;stroke-dashoffset:0;-inkscape-stroke:none;paint-order:markers fill stroke"
        d="M 45.4331,99.6872 C 50,105 59,131 46.7559,137.941"
        id="path258-9-2"
        inkstitch:ties="3"
@@ -5395,7 +5393,7 @@ Jeremy Landes
        inkscape:label="saut" />
     <path
        id="path254-0-2"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.944882"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.377953"
        d="M 46,137.941 V 100 m 17,37.941 V 99.948298"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
@@ -5468,8 +5466,8 @@ Jeremy Landes
     <path
        id="path153"
        style="opacity:1;fill:none;stroke:#000000;stroke-width:0.25"
-       d="M 6,56.677246 V 105 m 16,-48 1,10 v 18 20"
-       sodipodi:nodetypes="cccccc"
+       d="M 6,56.677246 V 66.815868 84.83626 105 m 16,-48 1,10 v 18 20"
+       sodipodi:nodetypes="cccccccc"
        inkstitch:ties="2"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
@@ -5550,7 +5548,7 @@ Jeremy Landes
      style="display:none"
      id="g170">
     <path
-       style="opacity:0.99;fill:none;stroke:#000000;stroke-width:0.944882;stroke-dasharray:1, 0.25;-inkscape-stroke:none;paint-order:markers fill stroke"
+       style="opacity:0.99;fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:1, 0.25;-inkscape-stroke:none;paint-order:markers fill stroke"
        d="M 15,110 V 76 L 41,57.7559"
        id="path302"
        inkstitch:ties="3"
@@ -5558,7 +5556,7 @@ Jeremy Landes
        inkscape:label="saut" />
     <path
        id="path274"
-       style="fill:none;stroke:#000000;stroke-width:0.944882"
+       style="fill:none;stroke:#000000;stroke-width:0.377953"
        d="M 41,57 H 23 M 41,75 H 23"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
@@ -5569,7 +5567,7 @@ Jeremy Landes
        inkstitch:zigzag_underlay_spacing_mm="5"
        sodipodi:nodetypes="cccc" />
     <path
-       style="opacity:0.99;fill:none;stroke:#000000;stroke-width:0.944882;stroke-dasharray:1, 0.25;-inkscape-stroke:none;paint-order:markers fill stroke"
+       style="opacity:0.99;fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:1, 0.25;-inkscape-stroke:none;paint-order:markers fill stroke"
        d="M 23,75.5669 15,65 9.75591,46"
        id="path312"
        inkstitch:ties="3"
@@ -5577,7 +5575,7 @@ Jeremy Landes
        sodipodi:nodetypes="ccc" />
     <path
        id="path271"
-       style="fill:none;stroke:#000000;stroke-width:0.944882"
+       style="fill:none;stroke:#000000;stroke-width:0.377953"
        d="M 9,46 6,59 V 65.0006 98 c 0,12 5,17 17,17 M 23,46 V 59.160313 65.0006 92 c 0,5 3,6 6,6"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
@@ -5588,7 +5586,7 @@ Jeremy Landes
        inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:zigzag_underlay_spacing_mm="5" />
     <path
-       style="opacity:0.99;fill:none;stroke:#000000;stroke-width:0.944882;stroke-dasharray:1, 0.25;-inkscape-stroke:none;paint-order:markers fill stroke"
+       style="opacity:0.99;fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:1, 0.25;-inkscape-stroke:none;paint-order:markers fill stroke"
        d="M 29.0628,97.4538 41,114.244"
        id="path311"
        inkstitch:ties="3"
@@ -5596,7 +5594,7 @@ Jeremy Landes
        sodipodi:nodetypes="cc" />
     <path
        id="path281"
-       style="fill:none;stroke:#000000;stroke-width:0.944882"
+       style="fill:none;stroke:#000000;stroke-width:0.377953"
        d="M 41,115 H 23 M 41,98 H 29"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
@@ -5613,7 +5611,7 @@ Jeremy Landes
      style="display:none"
      id="g171">
     <path
-       style="display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.944882;stroke-dasharray:1, 0.25;-inkscape-stroke:none;paint-order:markers fill stroke"
+       style="display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:1, 0.25;-inkscape-stroke:none;paint-order:markers fill stroke"
        d="M 14,105 13,73 22.2441,57"
        id="path310-9"
        inkstitch:ties="3"
@@ -5621,8 +5619,8 @@ Jeremy Landes
        inkscape:label="saut" />
     <path
        id="path294-8"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.944882"
-       d="m 23,57 v 10 20 c 0,9 4,12 12,12 6,0 11,-4 11,-9 m 0,15 c -1,6 -7,11 -18,11 C 13,116 6,107.7791 6,89.7791 V 67 57"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.377953"
+       d="m 23,57 v 10 20 c 0,9 4,12 12,12 6,0 11,-4 11,-9 m 0,15 c -1,6 -7,11 -18,11 C 13,116 6,107.7791 6,89.7791 V 67 57 M 32.99838,96.654829 V 117.36658 M 25.743417,93.963472 9.7122891,111.63282 M 4.3295747,87.878664 24.222215,87.644633"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:ties="3"
@@ -5632,7 +5630,7 @@ Jeremy Landes
        inkstitch:zigzag_underlay_spacing_mm="5"
        sodipodi:nodetypes="ccssccsscc" />
     <path
-       style="display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.944882;stroke-dasharray:1, 0.25;-inkscape-stroke:none;paint-order:markers fill stroke"
+       style="display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:1, 0.25;-inkscape-stroke:none;paint-order:markers fill stroke"
        d="M 45.6891,106.659 54,85 V 71 L 46.7559,57"
        id="path305-9"
        inkstitch:ties="3"
@@ -5640,7 +5638,7 @@ Jeremy Landes
        inkscape:label="saut" />
     <path
        id="path303-9"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.944882"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.377953"
        d="M 46,57 V 95 M 63,57 v 38"
        sodipodi:nodetypes="cccc"
        inkstitch:satin_column="True"
@@ -5651,7 +5649,7 @@ Jeremy Landes
        inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:zigzag_underlay_spacing_mm="5" />
     <path
-       style="display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.944882;stroke-dasharray:1, 0.25;-inkscape-stroke:none;paint-order:markers fill stroke"
+       style="display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:1, 0.25;-inkscape-stroke:none;paint-order:markers fill stroke"
        d="m 60.8469,95 -13.091,20"
        id="path309-7"
        inkstitch:ties="3"
@@ -5659,9 +5657,9 @@ Jeremy Landes
        inkscape:label="saut" />
     <path
        id="path291-0"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.944882"
-       d="M 47,115 46,105 V 95 m 17,20 c 0,0 0.108154,-17.18799 0,-20"
-       sodipodi:nodetypes="ccccc"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.377953"
+       d="M 47,115 46,105 V 95 m 17,20 c 0,0 0.03339,-5.30652 0.04451,-10.50494 C 63.053407,100.33773 63.048059,96.249548 63,95"
+       sodipodi:nodetypes="ccccsc"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:ties="2"
@@ -5676,7 +5674,7 @@ Jeremy Landes
      style="display:none"
      id="g172">
     <path
-       style="opacity:0.99;fill:none;stroke:#000000;stroke-width:0.944882;stroke-dasharray:1, 0.25;-inkscape-stroke:none;paint-order:markers fill stroke"
+       style="opacity:0.99;fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:1, 0.25;-inkscape-stroke:none;paint-order:markers fill stroke"
        d="M 20,105 18,74 22.2441,57"
        id="path176"
        inkstitch:ties="3"
@@ -5684,7 +5682,7 @@ Jeremy Landes
        sodipodi:nodetypes="ccc" />
     <path
        id="path163"
-       style="fill:none;stroke:#000000;stroke-width:0.944882"
+       style="fill:none;stroke:#000000;stroke-width:0.377953"
        d="m 23,57 v 12 c 0,13 2,21 11,29 M 6,57 v 12 c 0,17 5,34 23,46"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
@@ -5696,18 +5694,18 @@ Jeremy Landes
        sodipodi:nodetypes="csccsc" />
     <path
        id="path164"
-       style="fill:none;stroke:#000000;stroke-width:0.944882"
-       d="m 29,115 c 1.582893,-5.67923 2.218449,-11.50056 5,-17 1.350146,-1.20013 2.565263,-2.40026 3.65548,-3.617271 M 40,115 c 4.251503,-2.83434 7.777763,-5.94761 10.684195,-9.27394"
+       style="fill:none;stroke:#000000;stroke-width:0.377953"
+       d="m 29,115 c 1.582893,-5.67923 2.218449,-11.50056 5,-17 1.350146,-1.20013 2.565263,-2.40026 3.65548,-3.617271 M 40,115 c 2.544814,-1.69655 4.829785,-3.49303 6.87752,-5.37532 1.373322,-1.26236 2.63994,-2.56332 3.806675,-3.89862"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:ties="3"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm=".2"
-       sodipodi:nodetypes="ccccc"
+       sodipodi:nodetypes="ccccsc"
        inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:zigzag_underlay_spacing_mm="5" />
     <path
-       style="opacity:0.99;fill:none;stroke:#000000;stroke-width:0.944882;stroke-dasharray:1, 0.25;-inkscape-stroke:none;paint-order:markers fill stroke"
+       style="opacity:0.99;fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:1, 0.25;-inkscape-stroke:none;paint-order:markers fill stroke"
        d="M 51.0963,106.115 49,93 53,73 46.7559,57"
        id="path221"
        inkstitch:ties="3"
@@ -5715,8 +5713,8 @@ Jeremy Landes
        sodipodi:nodetypes="cccc" />
     <path
        id="path172"
-       style="fill:none;stroke:#000000;stroke-width:0.944882"
-       d="m 46,57 v 12 c 0,5.379541 -0.513718,9.902884 -1.753736,13.924334 -1.307029,4.238767 -3.420976,7.919931 -6.590784,11.458395 M 63,57 v 12 c 0,12.984692 -2.916993,25.969383 -12.315805,36.72606"
+       style="fill:none;stroke:#000000;stroke-width:0.377953"
+       d="m 46,57 v 12 c 0,5.379541 -0.513718,9.902884 -1.753736,13.924334 -1.307029,4.238767 -3.420976,7.919931 -6.590784,11.458395 M 63,57 v 12 c 0,4.799734 -0.398572,9.599468 -1.375766,14.286671 -1.666403,7.993058 -5.015456,15.65887 -10.940039,22.439389"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:ties="2"
@@ -5724,7 +5722,7 @@ Jeremy Landes
        inkstitch:zigzag_underlay_inset_mm=".2"
        inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:zigzag_underlay_spacing_mm="5"
-       sodipodi:nodetypes="cssccsc" />
+       sodipodi:nodetypes="cssccssc" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -5788,7 +5786,7 @@ Jeremy Landes
     <path
        id="path126-2"
        style="font-weight:800;font-size:13.1425px;font-family:Millimetre;-inkscape-font-specification:'Millimetre Ultra-Bold';text-align:center;text-anchor:middle;display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.250159;paint-order:markers fill stroke"
-       d="m 55.000011,57.035932 v 6.207595 c 0,14.388885 0.488247,26.479699 7.000004,35.04452 M 37.000007,56.926221 v 6.317306 c 2.7304,23.110757 7.206512,31.001149 8.735355,34.392517 C 48.234517,104.49778 51.042481,109.63272 55.72634,115"
+       d="m 55.000011,57.035932 v 6.207595 c 0,10.889079 0.27962,20.462051 3.237859,28.186729 0.950793,2.482751 2.178292,4.774571 3.762145,6.857791 M 37.000007,56.926221 v 6.317306 c 2.7304,23.110757 7.206512,31.001149 8.735355,34.392517 C 48.234517,104.49778 51.042481,109.63272 55.72634,115"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
@@ -5798,7 +5796,7 @@ Jeremy Landes
        inkstitch:max_stitch_length_mm="8"
        inkstitch:random_split_jitter_percent="0"
        inkstitch:zigzag_underlay_inset_mm=".2"
-       sodipodi:nodetypes="csccccc"
+       sodipodi:nodetypes="cssccccc"
        inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:zigzag_underlay_spacing_mm="5" />
     <path
@@ -5813,8 +5811,8 @@ Jeremy Landes
     <path
        id="path20-3"
        style="font-weight:800;font-size:13.1425px;font-family:Millimetre;-inkscape-font-specification:'Millimetre Ultra-Bold';text-align:center;text-anchor:middle;display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.250159;paint-order:markers fill stroke"
-       d="M 67.150357,115 C 71.703221,112.23792 76.355596,106.66838 79,102.40055 M 55.72634,115 c 1.342111,-5.72891 1.619044,-10.68663 6.273675,-16.711953 1.653284,-2.137055 3.133171,-5.033736 4.117722,-7.496034"
-       sodipodi:nodetypes="ccccc"
+       d="m 67.150357,115 c 2.694612,-1.63474 5.424082,-4.25289 7.751492,-7.00255 1.605023,-1.89622 3.018837,-3.85498 4.098151,-5.5969 M 55.72634,115 c 1.342111,-5.72891 1.619044,-10.68663 6.273675,-16.711953 1.653284,-2.137055 3.133171,-5.033736 4.117722,-7.496034"
+       sodipodi:nodetypes="cscccc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
@@ -5955,7 +5953,7 @@ Jeremy Landes
      style="display:none"
      id="g175">
     <path
-       style="opacity:0.99;fill:none;stroke:#000000;stroke-width:0.944882;stroke-dasharray:1, 0.25;-inkscape-stroke:none;paint-order:markers fill stroke"
+       style="opacity:0.99;fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:1, 0.25;-inkscape-stroke:none;paint-order:markers fill stroke"
        d="M 22,100 C 12.106847,87.725855 8.854656,71.797504 7,57"
        id="path319"
        inkstitch:ties="3"
@@ -5963,7 +5961,7 @@ Jeremy Landes
        inkscape:label="saut" />
     <path
        id="path318"
-       style="fill:none;stroke:#000000;stroke-width:0.944882"
+       style="fill:none;stroke:#000000;stroke-width:0.377953"
        d="m 6,57 v 12 c 0,16 4,33 20,44 M 23,57 v 12 c 0,13 2,21 11,29"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
@@ -5973,31 +5971,26 @@ Jeremy Landes
        inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:zigzag_underlay_spacing_mm="5" />
     <path
-       style="opacity:0.99;fill:none;stroke:#000000;stroke-width:0.944882;stroke-dasharray:1, 0.25;-inkscape-stroke:none;paint-order:markers fill stroke"
-       d="m 34,99 v 38"
+       style="opacity:0.99;fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:1, 0.25;-inkscape-stroke:none;paint-order:markers fill stroke"
+       d="m 34,99 v 38 l 8.2441,1"
        id="path320"
-       sodipodi:nodetypes="cc"
+       sodipodi:nodetypes="ccc"
        inkstitch:ties="3"
        inkscape:label="saut" />
     <path
-       d="m 34,137 8.2441,1"
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
-       inkstitch:running_stitch_tolerance_mm="2.0"
-       id="path476" />
-    <path
        id="path322"
-       style="fill:none;stroke:#000000;stroke-width:0.944882"
-       d="m 43,138 v -25 c 4.358217,-2.99627 7.826087,-6.43772 10.565291,-10.18287 M 26,138 v -25 c 0.414514,-4.82739 1.38506,-9.69739 8,-15 1.929447,-1.715064 3.583134,-3.430129 4.99062,-5.194459"
+       style="fill:none;stroke:#000000;stroke-width:0.377953"
+       d="m 43,138 v -25 c 2.197187,-1.51056 4.820944,-3.76992 6.586258,-5.48865 1.736264,-1.69045 2.620794,-2.83718 3.979033,-4.69422 M 26,138 v -25 c 0.414514,-4.82739 1.38506,-9.69739 8,-15 1.929447,-1.715064 3.583134,-3.430129 4.99062,-5.194459"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:ties="3"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm=".2"
        inkstitch:zigzag_spacing_mm="0.55"
-       inkstitch:zigzag_underlay_spacing_mm="5" />
+       inkstitch:zigzag_underlay_spacing_mm="5"
+       sodipodi:nodetypes="ccsccccc" />
     <path
-       style="opacity:0.99;fill:none;stroke:#000000;stroke-width:0.944882;stroke-dasharray:1, 0.25;-inkscape-stroke:none;paint-order:markers fill stroke"
+       style="opacity:0.99;fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:1, 0.25;-inkscape-stroke:none;paint-order:markers fill stroke"
        d="M 40,93 C 57.674788,88.115862 53.447922,63.864023 47,57"
        id="path324"
        inkstitch:ties="3"
@@ -6005,7 +5998,7 @@ Jeremy Landes
        inkscape:label="saut" />
     <path
        id="path321"
-       style="fill:none;stroke:#000000;stroke-width:0.944882"
+       style="fill:none;stroke:#000000;stroke-width:0.377953"
        d="m 46,57 v 12 c 0,10.21302 -1.851582,17.340071 -7.00938,23.805541 M 63,57 v 12 c 0,11.641783 -2.117674,23.812985 -9.434709,33.81713"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
@@ -6030,17 +6023,18 @@ Jeremy Landes
     <path
        id="path297"
        style="opacity:0.99;fill:none;stroke:#000000;stroke-width:0.25;stroke-dasharray:none;-inkscape-stroke:none;paint-order:markers fill stroke"
-       d="M 6,57 H 63 M 6,75 H 23 L 37,73 58,61"
+       d="M 6,57 H 27.030588 63 M 6,75 H 23 L 37,73 58,61"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:ties="3"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm=".2"
        inkstitch:zigzag_spacing_mm="0.55"
-       inkstitch:zigzag_underlay_spacing_mm="5" />
+       inkstitch:zigzag_underlay_spacing_mm="5"
+       sodipodi:nodetypes="ccccccc" />
     <path
        d="m 57.5573,61.3542 4.8524,-3.882"
-       style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-dasharray:3, 1"
+       style="fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:3, 1"
        inkstitch:running_stitch_length_mm="2.5"
        inkstitch:running_stitch_tolerance_mm="2.0"
        id="path467"
@@ -6061,14 +6055,15 @@ Jeremy Landes
     <path
        id="path292"
        style="fill:none;stroke:#000000;stroke-width:0.25"
-       d="M 6,115 H 55.010318 M 11,111 32,99 46,98 h 9.010318"
+       d="M 6,115 H 27.732681 43.880824 55.010318 M 11,111 32,99 46,98 h 9.010318"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:ties="3"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm=".2"
        inkstitch:zigzag_spacing_mm="0.55"
-       inkstitch:zigzag_underlay_spacing_mm="5" />
+       inkstitch:zigzag_underlay_spacing_mm="5"
+       sodipodi:nodetypes="cccccccc" />
     <path
        style="opacity:0.99;fill:none;stroke:#000000;stroke-width:0.25;stroke-dasharray:3.77953, 0.944882;-inkscape-stroke:none;paint-order:markers fill stroke"
        d="m 55,99 8,15"
@@ -6093,7 +6088,7 @@ Jeremy Landes
      style="display:none"
      id="g177">
     <path
-       style="display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.944882;stroke-dasharray:3.77953, 0.944882;stroke-dashoffset:0;-inkscape-stroke:none;paint-order:markers fill stroke"
+       style="display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:3.77953, 0.944882;stroke-dashoffset:0;-inkscape-stroke:none;paint-order:markers fill stroke"
        d="m 13.756057,104.79208 c 0,0 -3.226091,-11.058414 -0.223676,-15.098115 C 16.937199,85.112836 24.294036,85.146664 30,85 c 5.602596,-0.144007 16.384721,3.772176 16.384721,3.772176"
        id="path208-9"
        sodipodi:nodetypes="caac"
@@ -6101,7 +6096,7 @@ Jeremy Landes
        inkscape:label="saut" />
     <path
        id="path204-9"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.944882"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.377953"
        d="M 46.384721,88.772177 C 44.384721,84.772177 38,82 26,82 12,82 5,87 5,99 c 0,12 7,17 21,17 13,0 20,-4 21,-10 M 46.691357,97.358003 C 46.691357,95.358003 43,94 30,94 c -6,0 -8,1 -8,4 0,3 2,3 8,3 13,0 16.7371,-0.36116 16.7371,-2.361201 M 30,80 30.07409,96.124671 m -0.702663,1.686398 V 118.32891 M 23.609568,97.670536 2.3890635,98.373202"
        sodipodi:nodetypes="csssccsssc"
        inkstitch:satin_column="True"
@@ -6116,7 +6111,7 @@ Jeremy Landes
        inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:zigzag_underlay_spacing_mm="5" />
     <path
-       style="display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.944882;stroke-dasharray:3.77953, 0.944882;stroke-dashoffset:0;-inkscape-stroke:none;paint-order:markers fill stroke"
+       style="display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:3.77953, 0.944882;stroke-dashoffset:0;-inkscape-stroke:none;paint-order:markers fill stroke"
        d="m 47,106 c 0,0 12.151396,-26.045719 6.011147,-36.884201 -3.183654,-5.619638 -11.547105,-7.155203 -18.005896,-7.157623 -7.178755,-0.0027 -18.5463,0.914411 -20.018977,7.940488 C 14.207053,73.616291 23,78 23,78"
        id="path225-7"
        sodipodi:nodetypes="caaac"
@@ -6124,7 +6119,7 @@ Jeremy Landes
        inkscape:label="saut" />
     <path
        id="path205-0"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.944882"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.377953"
        d="m 23,78 v -2 c 0,-3 2,-4 11,-4 M 6,78 V 75 C 6,62 12,56 34,56 M 7.0266573,59.586054 24.733834,75.325766 M 19.67464,54.94846 27.403963,73.358302 m 1.264799,-19.112508 2.389063,18.971975"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
@@ -6134,7 +6129,7 @@ Jeremy Landes
        inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:zigzag_underlay_spacing_mm="5" />
     <path
-       style="display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.944882;stroke-dasharray:1, 0.25;-inkscape-stroke:none;paint-order:markers fill stroke"
+       style="display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:1, 0.25;-inkscape-stroke:none;paint-order:markers fill stroke"
        d="m 33.713066,44.520928 3,-17"
        id="path165"
        inkstitch:ties="3"
@@ -6142,18 +6137,19 @@ Jeremy Landes
        inkscape:label="saut" />
     <path
        id="path162"
-       style="display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.944882;stroke-dasharray:none;-inkscape-stroke:none;paint-order:markers fill stroke"
-       d="m 36.713066,27.520928 4,17 m -20,-17 v 8 l 8,9"
+       style="display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:none;-inkscape-stroke:none;paint-order:markers fill stroke"
+       d="m 36.713066,27.520928 1.764491,7.499085 2.235509,9.500915 m -20,-17 v 8 l 8,9"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:ties="2"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm=".2"
        inkstitch:zigzag_spacing_mm="0.55"
-       inkstitch:zigzag_underlay_spacing_mm="5" />
+       inkstitch:zigzag_underlay_spacing_mm="5"
+       sodipodi:nodetypes="cccccc" />
     <path
        id="path166"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.944882"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.377953"
        d="m 34,56 c 21,0 29,8 29,21 v 29.135 M 34,72 c 10,0 11.8215,1.0032 12,6 l 1,28 M 45,55 38.506082,74.482567 m 3.794395,1.686398 16.863977,-15.599179 M 42.736741,81.348091 64.645247,80.947092"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
@@ -6164,7 +6160,7 @@ Jeremy Landes
        inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:zigzag_underlay_spacing_mm="5" />
     <path
-       style="display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.944882;stroke-dasharray:3.77953, 0.944882;stroke-dashoffset:0;-inkscape-stroke:none;paint-order:markers fill stroke"
+       style="display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:3.77953, 0.944882;stroke-dashoffset:0;-inkscape-stroke:none;paint-order:markers fill stroke"
        d="m 47,106 c 7.093618,1.37337 5,8 1,9"
        id="path231-3"
        inkstitch:ties="3"
@@ -6172,7 +6168,7 @@ Jeremy Landes
        inkscape:label="saut" />
     <path
        id="path196-9"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.944882"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.377953"
        d="m 48,115 -1,-9 m 16,9 v -8.865"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
@@ -6193,7 +6189,7 @@ Jeremy Landes
      style="display:none"
      id="g178">
     <path
-       style="display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.944882;stroke-dasharray:3.77953, 0.944882;stroke-dashoffset:0;-inkscape-stroke:none;paint-order:markers fill stroke"
+       style="display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:3.77953, 0.944882;stroke-dashoffset:0;-inkscape-stroke:none;paint-order:markers fill stroke"
        d="m 13.756057,104.79208 c 0,0 -3.31274,-11.12428 -0.223676,-15.098115 C 16.785685,85.508849 23.708252,86.310769 29,86 c 5.695934,-0.334506 17,2 17,2"
        id="path208-9-7"
        sodipodi:nodetypes="caac"
@@ -6201,7 +6197,7 @@ Jeremy Landes
        inkscape:label="saut" />
     <path
        id="path204-9-0"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.944882"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.377953"
        d="M 46.384721,88.772177 C 44.384721,84.772177 38,82 26,82 12,82 5,87 5,99.000002 5,111 12,116 26,116 c 13,0 20,-4 21,-10 m -0.308643,-8.641998 c 0,-2 -3.691357,-3.358 -16.691357,-3.358 -6,0 -8,1 -8,4 C 22,101 24,101 30,101 c 13,0 16.7371,-0.36116 16.7371,-2.361198 M 29.511961,79.54176 v 15.739713 m -0.281067,4.075461 -0.140533,17.847706 M 23.328502,97.108404 2.9511961,96.827337"
        sodipodi:nodetypes="csssccsssc"
        inkstitch:satin_column="True"
@@ -6216,7 +6212,7 @@ Jeremy Landes
        inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:zigzag_underlay_spacing_mm="5" />
     <path
-       style="display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.944882;stroke-dasharray:3.77953, 0.944882;stroke-dashoffset:0;-inkscape-stroke:none;paint-order:markers fill stroke"
+       style="display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:3.77953, 0.944882;stroke-dashoffset:0;-inkscape-stroke:none;paint-order:markers fill stroke"
        d="m 47,106 c 0,0 12.151396,-26.045719 6.011147,-36.884201 -3.183654,-5.619638 -11.547105,-7.155203 -18.005896,-7.157623 -7.178755,-0.0027 -18.5463,0.914411 -20.018977,7.940488 C 14.207053,73.616291 18,75 23,78"
        id="path225-7-3"
        sodipodi:nodetypes="caaac"
@@ -6224,7 +6220,7 @@ Jeremy Landes
        inkscape:label="saut" />
     <path
        id="path205-0-9"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.944882"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.377953"
        d="m 23,78 v -2 c 0,-3 2,-4 11,-4 M 6,78 V 75 C 6,62 12,56 34,56 M 6.1834584,63.802048 25.436499,75.0447 M 13.912781,56.213258 26.701298,73.498835 m -2.529597,-18.690908 4.91866,19.112508"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
@@ -6235,7 +6231,7 @@ Jeremy Landes
        inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:zigzag_underlay_spacing_mm="5" />
     <path
-       style="display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.944882;stroke-dasharray:1, 0.25;-inkscape-stroke:none;paint-order:markers fill stroke"
+       style="display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:1, 0.25;-inkscape-stroke:none;paint-order:markers fill stroke"
        d="m 35.5,44 15,-17"
        id="path165-9"
        inkstitch:ties="3"
@@ -6243,19 +6239,19 @@ Jeremy Landes
        inkscape:label="saut" />
     <path
        id="path162-91"
-       style="display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.944882;stroke-dasharray:none;-inkscape-stroke:none;paint-order:markers fill stroke"
-       d="m 50.5,27 v 8 l -8,9 m -7,-17 -5,17"
+       style="display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:none;-inkscape-stroke:none;paint-order:markers fill stroke"
+       d="m 50.5,27 v 8 l -8,9 M 35.5,27 33.12925,35.060551 30.5,44"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:ties="2"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm=".2"
-       sodipodi:nodetypes="ccccc"
+       sodipodi:nodetypes="cccccc"
        inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:zigzag_underlay_spacing_mm="5" />
     <path
        id="path166-7"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.944882"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.377953"
        d="m 34,56 c 21,0 29,8 29,21 v 29.135 M 34,72 c 10,0 11.8215,1.0032 12,6 l 1,28 M 41.738344,75.0447 55.791659,58.040189 M 43.705808,79.401227 64.223647,79.54176 M 43.986875,98.092136 63.942581,97.951602"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
@@ -6266,7 +6262,7 @@ Jeremy Landes
        inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:zigzag_underlay_spacing_mm="5" />
     <path
-       style="display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.944882;stroke-dasharray:3.77953, 0.944882;stroke-dashoffset:0;-inkscape-stroke:none;paint-order:markers fill stroke"
+       style="display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:3.77953, 0.944882;stroke-dashoffset:0;-inkscape-stroke:none;paint-order:markers fill stroke"
        d="m 47,106 c 6.131242,2.48411 4,7 1,9"
        id="path231-3-2"
        inkstitch:ties="3"
@@ -6274,7 +6270,7 @@ Jeremy Landes
        inkscape:label="saut" />
     <path
        id="path196-9-3"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.944882"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.377953"
        d="m 48,115 -1,-9 m 16,9 v -8.865"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
@@ -6295,14 +6291,14 @@ Jeremy Landes
      style="display:none"
      id="g179">
     <path
-       style="display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.944882;stroke-dasharray:3.77953, 0.944882;stroke-dashoffset:0;-inkscape-stroke:none;paint-order:markers fill stroke"
+       style="display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:3.77953, 0.944882;stroke-dashoffset:0;-inkscape-stroke:none;paint-order:markers fill stroke"
        d="m 13.756057,104.79208 c 0,0 -3.31274,-11.12428 -0.223676,-15.098115 C 16.785685,85.508849 23.702991,86.202176 29,86 c 5.86385,-0.223812 17.384721,2.772176 17.384721,2.772176"
        id="path208-9-5"
        sodipodi:nodetypes="caac"
        inkstitch:ties="3" />
     <path
        id="path204-9-8"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.944882"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.377953"
        d="M 46.384721,88.772177 C 44.384721,84.772177 38,82 26,82 12,82 5,87 5,99 c 0,12 7,17 21,17 13,0 20,-4 21,-10 M 46.691357,97.358003 C 46.691357,95.358003 43,94 30,94 c -6,0 -8,1 -8,4 0,3 2,3 8,3 13,0 16.7371,-0.36116 16.7371,-2.361201"
        sodipodi:nodetypes="csssccsssc"
        inkstitch:satin_column="True"
@@ -6317,14 +6313,14 @@ Jeremy Landes
        inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:zigzag_underlay_spacing_mm="5" />
     <path
-       style="display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.944882;stroke-dasharray:3.77953, 0.944882;stroke-dashoffset:0;-inkscape-stroke:none;paint-order:markers fill stroke"
+       style="display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:3.77953, 0.944882;stroke-dashoffset:0;-inkscape-stroke:none;paint-order:markers fill stroke"
        d="m 47,105 c 0,0 11.965948,-25.318676 6.011147,-35.884201 -3.171224,-5.626662 -11.547105,-7.155203 -18.005896,-7.157623 -7.178755,-0.0027 -18.5463,0.914411 -20.018977,7.940488 C 14.207053,73.616291 23,78 23,78"
        id="path225-7-1"
        sodipodi:nodetypes="caaac"
        inkstitch:ties="3" />
     <path
        id="path205-0-4"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.944882"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.377953"
        d="m 23,78 v -2 c 0,-3 2,-4 11,-4 M 6,78 V 75 C 6,62 12,56 34,56"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
@@ -6335,32 +6331,33 @@ Jeremy Landes
        inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:zigzag_underlay_spacing_mm="5" />
     <path
-       style="display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.944882;stroke-dasharray:3.77953, 0.944882;stroke-dashoffset:0;-inkscape-stroke:none;paint-order:markers fill stroke"
+       style="display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:3.77953, 0.944882;stroke-dashoffset:0;-inkscape-stroke:none;paint-order:markers fill stroke"
        d="M 34,31 25,43"
        id="path193"
        inkstitch:ties="3" />
     <path
        id="path192"
-       style="display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.944882;stroke-dasharray:none;-inkscape-stroke:none;paint-order:markers fill stroke"
-       d="m 31,43 3,-8 m -14,8 v -7 l 9,-10 h 5.5"
+       style="display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:none;-inkscape-stroke:none;paint-order:markers fill stroke"
+       d="m 31,43 1.197475,-3.193266 0.54821,-1.461893 L 34,35 m -14,8 v -7 l 9,-10 h 5.5"
        inkstitch:satin_column="True"
-       sodipodi:nodetypes="cccccc"
+       sodipodi:nodetypes="cccccccc"
        inkstitch:ties="1"
        inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:zigzag_underlay_spacing_mm="5"
        inkstitch:zigzag_underlay="True" />
     <path
        id="path188"
-       style="display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.944882;stroke-dasharray:none;-inkscape-stroke:none;paint-order:markers fill stroke"
-       d="M 34.5,26 H 40 l 9,10 v 7 m -15,-8 4,8"
+       style="display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:none;-inkscape-stroke:none;paint-order:markers fill stroke"
+       d="M 34.5,26 H 40 l 9,10 v 7 m -15,-8 1.315935,2.631871 0.842512,1.685024 L 38,43"
        inkstitch:satin_column="True"
        inkstitch:ties="2"
        inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:zigzag_underlay_spacing_mm="5"
-       inkstitch:zigzag_underlay="True" />
+       inkstitch:zigzag_underlay="True"
+       sodipodi:nodetypes="cccccccc" />
     <path
        id="path166-3"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.944882"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.377953"
        d="m 34,56 c 21,0 29,8 29,21 v 29.135 M 34,72 c 10,0 11.8215,1.0032 12,6 l 1,28"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
@@ -6371,14 +6368,14 @@ Jeremy Landes
        inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:zigzag_underlay_spacing_mm="5" />
     <path
-       style="display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.944882;stroke-dasharray:3.77953, 0.944882;stroke-dashoffset:0;-inkscape-stroke:none;paint-order:markers fill stroke"
+       style="display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:3.77953, 0.944882;stroke-dashoffset:0;-inkscape-stroke:none;paint-order:markers fill stroke"
        d="m 47,106 c 8.064452,1.83965 5,7 1,9"
        id="path231-3-8"
        inkstitch:ties="3"
        sodipodi:nodetypes="cc" />
     <path
        id="path196-9-4"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.944882"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.377953"
        d="m 48,115 -1,-9 m 16,9 v -8.865"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
@@ -6391,7 +6388,8 @@ Jeremy Landes
        inkstitch:zigzag_underlay_inset_mm=".2"
        sodipodi:nodetypes="cccc"
        inkstitch:zigzag_spacing_mm="0.55"
-       inkstitch:zigzag_underlay_spacing_mm="5" />
+       inkstitch:zigzag_underlay_spacing_mm="5"
+       inkscape:label="path196-9-4" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -6479,7 +6477,7 @@ Jeremy Landes
      style="display:none"
      id="g181">
     <path
-       style="display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.944882;stroke-dasharray:3.77953, 0.944882;stroke-dashoffset:0;-inkscape-stroke:none;paint-order:markers fill stroke"
+       style="display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:3.77953, 0.944882;stroke-dashoffset:0;-inkscape-stroke:none;paint-order:markers fill stroke"
        d="m 14.65076,104.12105 c 0,0 -6.437573,-24.930816 -0.111838,-34.5579 3.741756,-5.694548 11.975117,-7.998843 18.788761,-8.052326 7.171853,-0.05629 16.649667,1.774522 19.907139,8.164164 C 54.505971,72.16839 54.469857,78.049253 46,82"
        id="path266-7"
        sodipodi:nodetypes="caasc"
@@ -6487,7 +6485,7 @@ Jeremy Landes
        inkscape:label="saut" />
     <path
        id="path265-0"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.944882"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.377953"
        d="m 46,82 v -4 c 0,-3 -3,-4 -12,-4 -9,0 -11,2 -11,11 v 2 c 0,9 2,12 11,12 M 63,82 V 78 C 63,62 56,56 34,56 13,56 6,64 6,79 v 14 c 0,15 7,23 28,23"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
@@ -6497,14 +6495,14 @@ Jeremy Landes
        inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:zigzag_underlay_spacing_mm="5" />
     <path
-       style="opacity:0.99;fill:none;stroke:#000000;stroke-width:0.944882;stroke-dasharray:1, 0.25;-inkscape-stroke:none;paint-order:markers fill stroke"
+       style="opacity:0.99;fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:1, 0.25;-inkscape-stroke:none;paint-order:markers fill stroke"
        d="M 37.187949,115.95452 C 32.88028,116.68765 34.634604,122.71075 40,125 c 2.146148,0.91569 1.850307,5.57845 0,7 -4.103499,3.15263 -15,-4 -15,-4"
        id="path183"
        sodipodi:nodetypes="csac"
        inkscape:label="saut" />
     <path
        id="path185"
-       style="display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.944882;stroke-dasharray:none;-inkscape-stroke:none;paint-order:markers fill stroke"
+       style="display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:none;-inkscape-stroke:none;paint-order:markers fill stroke"
        d="M 44.567678,118.62205 32,125 M 30.161964,140.23062 30,127 M 47.606384,125.59982 33,126 m -8,2 c 3.230227,-0.0279 5.72268,0.13326 7.180777,-0.0578 4.115774,-0.53985 4.525366,-2.75322 0.897002,-3.9382 C 32.129783,123.6942 30.743525,123.9485 29,124 l 1,-8 m -6,22 c 27.909619,4.47477 26.063535,-20.0807 14,-20 v -2"
        sodipodi:nodetypes="cssccccc"
        inkstitch:satin_column="True"
@@ -6516,14 +6514,14 @@ Jeremy Landes
        inkstitch:zigzag_underlay_spacing_mm="5" />
     <path
        d="M 37.1969,116 34,99.7559"
-       style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-dasharray:3, 1"
+       style="fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:3, 1"
        inkstitch:running_stitch_length_mm="2.5"
        inkstitch:running_stitch_tolerance_mm="2.0"
        id="path451"
        inkstitch:ties="3" />
     <path
        id="path186"
-       style="display:inline;fill:none;stroke:#000000"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.377953"
        d="m 34,99 c 5.6388,0 8.922336,-0.785088 10.588433,-2.109322 M 34,116 c 15.884141,0 23.948883,-3.12776 27.205243,-10.88879"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
@@ -6533,7 +6531,7 @@ Jeremy Landes
        inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:zigzag_underlay_spacing_mm="5" />
     <path
-       style="display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.944882;stroke-dasharray:3.77953, 0.944882;stroke-dashoffset:0;-inkscape-stroke:none;paint-order:markers fill stroke"
+       style="display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:3.77953, 0.944882;stroke-dashoffset:0;-inkscape-stroke:none;paint-order:markers fill stroke"
        d="M 61.205243,105.11121 C 56.641932,97.571406 49.696171,93.363654 46,91"
        id="path269-3"
        inkstitch:ties="3"
@@ -6541,7 +6539,7 @@ Jeremy Landes
        inkscape:label="saut" />
     <path
        id="path267-9"
-       style="display:inline;fill:none;stroke:#000000"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.377953"
        d="m 46,91 v 3 c 0,1.1204 -0.418432,2.101323 -1.411567,2.890678 M 63,91 v 3 c 0,4.447897 -0.540963,8.12299 -1.794757,11.11121"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
@@ -6571,12 +6569,13 @@ Jeremy Landes
     <path
        id="path301-7"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.25"
-       d="M 23,91 H 63 M 23,81 h 23 l 13,6"
+       d="M 23,91 H 46.455166 63 M 23,81 h 23 l 13,6"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:ties="3"
        inkstitch:zigzag_underlay="True"
-       inkstitch:zigzag_underlay_inset_mm=".2" />
+       inkstitch:zigzag_underlay_inset_mm=".2"
+       sodipodi:nodetypes="cccccc" />
     <path
        id="path306-5"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.25"
@@ -6599,7 +6598,7 @@ Jeremy Landes
     <path
        id="path216"
        style="opacity:0.99;fill:none;stroke:#000000;stroke-width:0.25;stroke-dasharray:none;-inkscape-stroke:none;paint-order:markers fill stroke"
-       d="m 37,31.5 4,17 m -20,-17 v 8 l 8,9"
+       d="M 37,31.5 38.710951,38.771543 41,48.5 m -20,-17 v 8 l 8,9"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:ties="2"
@@ -6607,7 +6606,8 @@ Jeremy Landes
        inkstitch:zigzag_underlay_inset_mm=".2"
        inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_spacing_mm="0.55"
-       inkstitch:zigzag_underlay_spacing_mm="5" />
+       inkstitch:zigzag_underlay_spacing_mm="5"
+       sodipodi:nodetypes="cccccc" />
     <path
        id="path142"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.25"
@@ -6657,13 +6657,13 @@ Jeremy Landes
     <path
        id="path301-7-1"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.25"
-       d="M 23,91 H 63 M 23,81 h 23 l 13,6"
+       d="M 23,91 H 46.923228 63 M 23,81 h 23 l 13,6"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:ties="3"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm=".2"
-       sodipodi:nodetypes="ccccc"
+       sodipodi:nodetypes="cccccc"
        inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:zigzag_underlay_spacing_mm="5" />
     <path
@@ -6744,13 +6744,13 @@ Jeremy Landes
     <path
        id="path301-7-1-5"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.25"
-       d="M 23,91 H 63 M 23,81 h 23 l 13,6"
+       d="M 23,91 H 46.923228 63 M 23,81 h 23 l 13,6"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:ties="3"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm=".2"
-       sodipodi:nodetypes="ccccc"
+       sodipodi:nodetypes="cccccc"
        inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:zigzag_underlay_spacing_mm="5" />
     <path
@@ -6824,13 +6824,13 @@ Jeremy Landes
     <path
        id="path301-7-1-5-2"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.25"
-       d="M 23,91 H 63 M 23,81 h 23 l 13,6"
+       d="M 23,91 H 47.040244 63 M 23,81 h 23 l 13,6"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:ties="3"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm=".2"
-       sodipodi:nodetypes="ccccc"
+       sodipodi:nodetypes="cccccc"
        inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:zigzag_underlay_spacing_mm="5" />
     <path
@@ -7234,8 +7234,8 @@ Jeremy Landes
     <path
        id="path291-0-2"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.25"
-       d="M 47,115 46,105 V 95 m 17,20 c 0,0 0.108154,-17.18799 0,-20"
-       sodipodi:nodetypes="ccccc"
+       d="M 47,115 46,105 V 95 m 17,20 c 0,0 0.03142,-4.99249 0.04345,-10.0363 C 63.053749,100.64887 63.049865,96.296486 63,95"
+       sodipodi:nodetypes="ccccsc"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:ties="2"
@@ -7334,8 +7334,8 @@ Jeremy Landes
     <path
        id="path291-0-2-9"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.25"
-       d="M 47,115 46,105 V 95 m 17,20 c 0,0 0.108154,-17.18799 0,-20"
-       sodipodi:nodetypes="ccccc"
+       d="M 47,115 46,105 V 95 m 17,20 c 0,0 0.0319,-5.07001 0.04373,-10.15333 C 63.053675,100.57043 63.049414,96.284765 63,95"
+       sodipodi:nodetypes="ccccsc"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:ties="2"
@@ -7437,7 +7437,7 @@ Jeremy Landes
      style="display:none"
      id="g195">
     <path
-       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.944882;stroke-dasharray:3.77953, 0.944882;stroke-dashoffset:0;paint-order:markers fill stroke"
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.377953;stroke-dasharray:3.77953, 0.944882;stroke-dashoffset:0;paint-order:markers fill stroke"
        d="M 14.809522,98.847683 22.4274,115.131"
        id="path195"
        inkstitch:ties="3"
@@ -7445,7 +7445,7 @@ Jeremy Landes
        sodipodi:nodetypes="cc" />
     <path
        id="path128-9"
-       style="display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.944882;stroke-dasharray:none"
+       style="display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.377953;stroke-dasharray:none"
        d="M 23.183326,115.13092 V 98.130922 m -17,16.999998 V 98.130922"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
@@ -7460,7 +7460,7 @@ Jeremy Landes
        inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:zigzag_underlay_spacing_mm="5" />
     <path
-       style="display:inline;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.944882;stroke-dasharray:3.77953, 0.944882;stroke-dashoffset:0;paint-order:markers fill stroke"
+       style="display:inline;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.377953;stroke-dasharray:3.77953, 0.944882;stroke-dashoffset:0;paint-order:markers fill stroke"
        d="M 14.5,86 C 14.29474,68.069431 6.31429,48.823735 6,35"
        id="path78-3"
        sodipodi:nodetypes="cc"
@@ -7468,7 +7468,7 @@ Jeremy Landes
        inkscape:label="saut" />
     <path
        id="path58-8"
-       style="display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.944882;stroke-dasharray:none"
+       style="display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.377953;stroke-dasharray:none"
        d="m 6,35 c 0,7.887386 0.2487502,13.104455 0,22 L 9,86 M 23,35 c 0,11 0,13.936507 0,22 l -3,29"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
@@ -7489,7 +7489,7 @@ Jeremy Landes
      style="display:none"
      id="g196">
     <path
-       style="opacity:0.99;fill:none;stroke:#000000;stroke-width:0.944882;stroke-dasharray:3.77953, 0.944882;stroke-dashoffset:0;-inkscape-stroke:none;paint-order:markers fill stroke"
+       style="opacity:0.99;fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:3.77953, 0.944882;stroke-dashoffset:0;-inkscape-stroke:none;paint-order:markers fill stroke"
        d="M 25.74036,98.495075 33.2441,115"
        id="path141"
        inkstitch:ties="3"
@@ -7497,7 +7497,7 @@ Jeremy Landes
        inkscape:label="saut" />
     <path
        id="path128"
-       style="display:inline;opacity:1;fill:none;stroke:#000000;stroke-width:0.944882"
+       style="display:inline;opacity:1;fill:none;stroke:#000000;stroke-width:0.377953"
        d="M 34,115 V 98 M 17,115 V 98"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
@@ -7512,7 +7512,7 @@ Jeremy Landes
        inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:zigzag_underlay_spacing_mm="5" />
     <path
-       style="opacity:0.99;fill:none;stroke:#000000;stroke-width:0.944882;stroke-dasharray:3.77953, 0.944882;stroke-dashoffset:0;-inkscape-stroke:none;paint-order:markers fill stroke"
+       style="opacity:0.99;fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:3.77953, 0.944882;stroke-dashoffset:0;-inkscape-stroke:none;paint-order:markers fill stroke"
        d="M 25.975431,91.795529 C 24.702635,75.684547 36.677235,56.149095 38.551772,51.363183 41.152306,44.723716 32.525008,40.177729 25.975431,40.902489 6.2931058,43.080486 18.816695,57 23,57"
        id="path78"
        sodipodi:nodetypes="cssc"
@@ -7520,8 +7520,8 @@ Jeremy Landes
        inkscape:label="saut" />
     <path
        id="path67"
-       style="display:inline;opacity:1;fill:none;stroke:#000000;stroke-width:0.944882"
-       d="m 23,57 v -2 c 0,-3 1,-4 3,-4 2,0 3,1 3,3 0,8 -12,14 -11,29 l 2,9 M 6,57 V 51 C 6,39 13,33 26,33 41,33 47,40 47,52 47,65 36,70 34,83 l -2,9 M 26.092967,52.773614 25.505288,30.794403 m -2.115646,29.031364 25.15268,-0.117535"
+       style="display:inline;opacity:1;fill:none;stroke:#000000;stroke-width:0.377953"
+       d="m 23,57 v -2 c 0,-3 1,-4 3,-4 2,0 3,1 3,3 0,8 -12,14 -11,29 l 2,9 M 6,57 V 51 C 6,39 13,33 26,33 41,33 47,40 47,52 47,65 36,70 34,83 l -2,9 M 26.092967,52.773614 25.505288,30.794403 m -2.115646,29.031364 25.15268,-0.117535 m -32.160148,20.09636 h 20.360703"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
@@ -7624,7 +7624,7 @@ Jeremy Landes
      style="display:none"
      id="g202">
     <path
-       style="opacity:0.99;fill:none;stroke:#000000;stroke-width:0.944882;stroke-dasharray:3.77953, 0.944882;stroke-dashoffset:0;-inkscape-stroke:none;paint-order:markers fill stroke"
+       style="opacity:0.99;fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:3.77953, 0.944882;stroke-dashoffset:0;-inkscape-stroke:none;paint-order:markers fill stroke"
        d="m 14.505526,99.742763 c 0,0 -7.2477754,-40.5396 5.802211,-52.219896 9.435969,-8.445596 28.009181,-7.793306 37.990664,0 C 65.116568,52.846331 61.967084,57.793205 58,62"
        id="path242"
        sodipodi:nodetypes="caac"
@@ -7633,8 +7633,8 @@ Jeremy Landes
        inkscape:label="saut" />
     <path
        id="path234"
-       style="opacity:1;fill:none;stroke:#000000;stroke-width:0.944882"
-       d="M 58,62 C 57,60 51,57 45,57 35,57 29,62 29,70 v 9 c 0,8 6,14 16,14 6,0 12,-3 13,-6 m 0,-12.5 c -0.458751,-2.909478 -2.130487,-4.474252 -6,-4.5 -3.999911,-0.02662 -6,2 -6,5 0,3 2.013942,5.333678 6,5 3.734804,-0.312645 5.490555,-1.501464 6,-3.900868 m -7.033424,-19.990527 0.07562,14.821141 m 0.151236,7.410571 -0.226854,14.972377"
+       style="opacity:1;fill:none;stroke:#000000;stroke-width:0.377953"
+       d="M 58,62 C 57,60 51,57 45,57 35,57 29,62 29,70 v 9 c 0,8 6,14 16,14 6,0 12,-3 13,-6 m 0,-12.5 c -0.458751,-2.909478 -2.130487,-4.474252 -6,-4.5 -3.999911,-0.02662 -6,2 -6,5 0,3 2.013942,5.333678 6,5 3.734804,-0.312645 5.490555,-1.501464 6,-3.900868 m -7.033424,-19.990527 0.07562,14.821141 m 0.151236,7.410571 -0.226854,14.972377 M 26.211479,74.772925 h 22.466982"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
@@ -7648,7 +7648,7 @@ Jeremy Landes
        inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:zigzag_underlay_spacing_mm="5" />
     <path
-       style="opacity:0.99;fill:none;stroke:#000000;stroke-width:0.884956;stroke-dasharray:3.53983, 0.884956;stroke-dashoffset:0;-inkscape-stroke:none;paint-order:markers fill stroke"
+       style="opacity:0.99;fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:3.53983, 0.884956;stroke-dashoffset:0;-inkscape-stroke:none;paint-order:markers fill stroke"
        d="M 58,76.099132 74.2441,92"
        id="path244"
        inkstitch:ties="3"
@@ -7657,7 +7657,7 @@ Jeremy Landes
        inkscape:label="saut" />
     <path
        id="path226"
-       style="opacity:1;fill:none;stroke:#000000;stroke-width:0.944882"
+       style="opacity:1;fill:none;stroke:#000000;stroke-width:0.377953"
        d="M 75,92 V 57 C 75,41 67,35 52,35 H 40 C 18,35 6,46 6,63 v 23 c 0,17 12,29 34,29 H 64.791351 M 59,92 58,87 V 62 57 c 0,-4 -3,-6 -6,-6 H 40 C 30,51 22,56 22,68 v 13 c 0,12 8,17 18,17 H 64.929499 M 53.463226,54.844705 69.764675,38.819552 M 15.026088,38.891182 29.149201,56.36433 M 29.011053,90.072412 8.0125765,109.41311 M 54.430261,74.737998 77.362808,75.014294 M 47.612165,95.699265 47.374698,117.54624"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
@@ -7672,7 +7672,7 @@ Jeremy Landes
        inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:zigzag_underlay_spacing_mm="5" />
     <path
-       style="opacity:0.99;fill:none;stroke:#000000;stroke-width:0.944882;stroke-dasharray:3.77953, 0.944882;stroke-dashoffset:0;-inkscape-stroke:none;paint-order:markers fill stroke"
+       style="opacity:0.99;fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:3.77953, 0.944882;stroke-dashoffset:0;-inkscape-stroke:none;paint-order:markers fill stroke"
        d="M 64.929499,98 75,114.244"
        id="path243"
        inkstitch:ties="3"
@@ -7681,7 +7681,7 @@ Jeremy Landes
        inkscape:label="saut" />
     <path
        id="path239"
-       style="opacity:1;fill:none;stroke:#000000;stroke-width:0.944882"
+       style="opacity:1;fill:none;stroke:#000000;stroke-width:0.377953"
        d="M 75,115 H 64.791351 M 75,98 H 64.929499"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
@@ -8090,7 +8090,7 @@ Jeremy Landes
     <path
        id="path172-6"
        style="font-weight:800;font-size:13.6054px;font-family:Millimetre;-inkscape-font-specification:'Millimetre Ultra-Bold';opacity:0.99;fill:none;stroke:#000000;stroke-width:0.25;stroke-dasharray:none;paint-order:markers fill stroke"
-       d="M -1.6778856e-4,52.000648 H 5.9998362 L 18.97679,38.15041 M 1.9998308,35.000642 H 22.999845"
+       d="M -1.6778856e-4,52.000648 H 5.9998362 L 18.97679,38.15041 M 1.9998308,35.000642 h 8.6485822 12.351432"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
@@ -8100,7 +8100,7 @@ Jeremy Landes
        inkstitch:max_stitch_length_mm="8"
        inkstitch:random_split_jitter_percent="0"
        inkstitch:zigzag_underlay_inset_mm=".2"
-       sodipodi:nodetypes="ccccc"
+       sodipodi:nodetypes="cccccc"
        inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:zigzag_underlay_spacing_mm="5" />
     <path
@@ -8114,7 +8114,7 @@ Jeremy Landes
     <path
        id="path201-5"
        style="font-weight:800;font-size:13.6054px;font-family:Millimetre;-inkscape-font-specification:'Millimetre Ultra-Bold';opacity:0.99;fill:none;stroke:#000000;stroke-width:0.249449;stroke-dasharray:none;paint-order:markers fill stroke"
-       d="M 18.97679,38.15041 5.9998362,52.000648 V 99.720925 M 22.999845,35.000642 v 64.357393"
+       d="M 18.97679,38.15041 5.9998362,52.000648 V 99.720925 M 22.999845,35.000642 v 16.135145 48.222248"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
@@ -8124,7 +8124,7 @@ Jeremy Landes
        inkstitch:max_stitch_length_mm="8"
        inkstitch:random_split_jitter_percent="0"
        inkstitch:zigzag_underlay_inset_mm=".2"
-       sodipodi:nodetypes="ccccc"
+       sodipodi:nodetypes="cccccc"
        inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:zigzag_underlay_spacing_mm="5" />
     <path
@@ -8152,7 +8152,7 @@ Jeremy Landes
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-2"
-     style="display:inline"
+     style="display:none"
      id="g207">
     <path
        style="font-variation-settings:normal;opacity:0.99;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.70698, 0.853497;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:markers fill stroke"
@@ -8189,7 +8189,7 @@ Jeremy Landes
     <path
        id="path206-7"
        style="font-weight:800;font-size:13.6054px;font-family:Millimetre;-inkscape-font-specification:'Millimetre Ultra-Bold';opacity:0.99;fill:none;stroke:#000000;stroke-width:0.25;stroke-dasharray:none;paint-order:markers fill stroke"
-       d="M 5.9999965,115 H 62.999864 M 10.498895,109.94142 23.099957,97.858487 h 22.799947 l 11.226754,11.459723"
+       d="M 5.9999965,115 H 22.466982 45.402026 62.999864 M 10.498895,109.94142 23.099957,97.858487 h 22.799947 l 11.226754,11.459723"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
@@ -8200,13 +8200,13 @@ Jeremy Landes
        inkstitch:random_split_jitter_percent="0"
        inkstitch:zigzag_underlay_inset_mm=".2"
        inkstitch:stop_after="False"
-       sodipodi:nodetypes="cccccc"
+       sodipodi:nodetypes="cccccccc"
        inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:zigzag_underlay_spacing_mm="5" />
     <path
        id="path207-5"
        style="font-weight:800;font-size:13.6054px;font-family:Millimetre;-inkscape-font-specification:'Millimetre Ultra-Bold';opacity:0.99;fill:none;stroke:#000000;stroke-width:0.25;stroke-dasharray:none;paint-order:markers fill stroke"
-       d="M 57.126315,109.3178 45.900122,97.858546 V 88.716673 M 62.999998,114.99998 V 88.716673"
+       d="M 57.126315,109.3178 45.900122,97.858546 V 88.716673 M 62.999998,114.99998 V 97.707969 88.716673"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
@@ -8217,7 +8217,7 @@ Jeremy Landes
        inkstitch:random_split_jitter_percent="0"
        inkstitch:zigzag_underlay_inset_mm=".2"
        inkstitch:stop_after="True"
-       sodipodi:nodetypes="ccccc"
+       sodipodi:nodetypes="cccccc"
        inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:zigzag_underlay_spacing_mm="5" />
   </g>
@@ -8258,7 +8258,7 @@ Jeremy Landes
     <path
        id="path211-8"
        style="font-weight:800;font-size:13.6054px;font-family:Millimetre;-inkscape-font-specification:'Millimetre Ultra-Bold';opacity:0.99;fill:none;stroke:#000000;stroke-width:0.25;stroke-dasharray:none;paint-order:markers fill stroke"
-       d="m 23.024779,57.328981 c -0.187068,-2.601765 0.04259,-5.686067 3.270199,-6.01967 2.778467,-0.421885 5.627762,-0.331651 8.448821,-0.30958 2.541291,0.02037 5.4283,0.248971 7.953207,0.261874 2.332985,0.01188 3.324932,1.648348 3.262515,3.294412 -0.118588,3.126914 -6.601195,2.40555 -9.35212,2.440294 M 5.9815072,57.328981 C 5.8712704,50.525344 6.2554288,42.474727 12.088791,37.984242 c 6.408765,-4.678084 14.712432,-4.758726 22.298726,-4.908126 8.043108,0.135818 16.887938,0.541575 23.457882,5.824049 5.8472,4.366 4.910639,10.369108 4.817848,15.777817 C 62.572807,59.949132 60.328293,64.895782 55,66 52.961914,63.791352 49.409314,62.53527 47.022846,60.972258"
+       d="m 23.024779,57.328981 c -0.187068,-2.601765 0.04259,-5.686067 3.270199,-6.01967 2.778467,-0.421885 5.627762,-0.331651 8.448821,-0.30958 2.541291,0.02037 5.4283,0.248971 7.953207,0.261874 2.332985,0.01188 3.324932,1.648348 3.262515,3.294412 -0.118588,3.126914 -6.601195,2.40555 -9.35212,2.440294 M 5.9815072,57.328981 C 5.8712704,50.525344 6.2554288,42.474727 12.088791,37.984242 c 6.408765,-4.678084 14.712432,-4.758726 22.298726,-4.908126 8.043108,0.135818 16.887938,0.541575 23.457882,5.824049 5.8472,4.366 4.910639,10.369108 4.817848,15.777817 C 62.572807,59.949132 60.328293,64.895782 55,66 52.961914,63.791352 49.409314,62.53527 47.022846,60.972258 M 25.743417,52.89102 7.3719785,39.55125 M 34.05152,51.83788 34.168535,30.424038 m 9.244227,22.583998 16.733221,-14.041864"
        sodipodi:nodetypes="cccsscccscscc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
@@ -8309,7 +8309,7 @@ Jeremy Landes
     <path
        id="path175-2"
        style="font-weight:800;font-size:13.6054px;font-family:Millimetre;-inkscape-font-specification:'Millimetre Ultra-Bold';opacity:0.99;fill:none;stroke:#000000;stroke-width:0.25;stroke-dasharray:none;paint-order:markers fill stroke"
-       d="m 28.714287,35.000027 v 5.722166 c 0,16.594281 -12.571427,29.755263 -25.7142831,43.488461 V 97.943853 M 9.5816336,92.312625 27.000001,81.000002 C 37.857143,69.326781 45.85715,55.828705 45.85715,40.722193 V 35.000027 M 0.48617335,88.31196 17.487517,88.093366 M 15.573559,66.11432 39.565507,65.906079"
+       d="m 28.714287,35.000027 v 5.722166 c 0,16.594281 -12.571427,29.755263 -25.7142831,43.488461 V 97.943853 M 9.5816336,92.312625 27.000001,81.000002 C 37.857143,69.326781 45.85715,55.828705 45.85715,40.722193 V 35.000027 M 0.48617335,88.31196 17.487517,88.093366 M 15.573559,66.11432 39.565507,65.906079 M 25.275355,44.582918 48.678461,44.933964"
        sodipodi:nodetypes="csccccsccccc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
@@ -8333,7 +8333,7 @@ Jeremy Landes
     <path
        id="path220-6"
        style="font-weight:800;font-size:13.6054px;font-family:Millimetre;-inkscape-font-specification:'Millimetre Ultra-Bold';opacity:0.99;fill:none;stroke:#000000;stroke-width:0.25;stroke-dasharray:none;paint-order:markers fill stroke"
-       d="M 3.0000039,97.943853 H 45.85715 M 9.5816336,92.312625 27.000001,81.000002 35.571429,80.777346 H 45.85715"
+       d="M 3.0000039,97.943853 H 25.860432 35.221675 45.85715 M 9.5816336,92.312625 27.000001,81.000002 35.571429,80.777346 H 45.85715"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
@@ -8343,7 +8343,7 @@ Jeremy Landes
        inkstitch:max_stitch_length_mm="8"
        inkstitch:random_split_jitter_percent="0"
        inkstitch:zigzag_underlay_inset_mm=".2"
-       sodipodi:nodetypes="cccccc"
+       sodipodi:nodetypes="cccccccc"
        inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:zigzag_underlay_spacing_mm="5" />
     <path
@@ -8355,7 +8355,7 @@ Jeremy Landes
     <path
        id="path230"
        style="font-weight:800;font-size:13.6054px;font-family:Millimetre;-inkscape-font-specification:'Millimetre Ultra-Bold';opacity:0.99;fill:none;stroke:#000000;stroke-width:0.25;stroke-dasharray:none;paint-order:markers fill stroke"
-       d="m 62.999997,49 9e-6,49.960169 M 58.999998,49 45.85715,62.466424 v 35.477429"
+       d="m 62.999997,49 2e-6,13.252263 7e-6,36.707906 M 58.999998,49 45.85715,62.466424 v 35.477429"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
@@ -8365,7 +8365,7 @@ Jeremy Landes
        inkstitch:max_stitch_length_mm="8"
        inkstitch:random_split_jitter_percent="0"
        inkstitch:zigzag_underlay_inset_mm=".2"
-       sodipodi:nodetypes="ccccc"
+       sodipodi:nodetypes="cccccc"
        inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:zigzag_underlay_spacing_mm="5" />
     <path
@@ -8406,8 +8406,8 @@ Jeremy Landes
     <path
        id="path233"
        style="font-weight:800;font-size:13.6054px;font-family:Millimetre;-inkscape-font-specification:'Millimetre Ultra-Bold';opacity:0.99;fill:none;stroke:#000000;stroke-width:0.25;stroke-dasharray:none;paint-order:markers fill stroke"
-       d="m 23.000003,85.999997 c 0.274974,2.733721 -0.09364,4.743478 0.75172,6.541523 1.090325,4.013711 5.617287,5.462816 9.298252,5.4435 3.870063,-0.03695 8.688073,-0.09473 11.278152,-3.59787 M 5.9996916,86.417802 c -0.2147532,7.70193 0.4929942,16.234878 6.1576374,22.029298 4.857945,5.04731 12.164336,6.55678 18.91241,6.53617 l -3.1e-4,3e-5 c 7.557554,-0.0134 15.703392,0.55219 22.26731,-3.89971"
-       sodipodi:nodetypes="ccccccccc"
+       d="m 23.000003,85.999997 c 0.274974,2.733721 -0.09364,4.743478 0.75172,6.541523 1.090325,4.013711 5.617287,5.462816 9.298252,5.4435 3.870063,-0.03695 8.688073,-0.09473 11.278152,-3.59787 M 5.9996916,86.417802 c -0.2147532,7.70193 0.4929942,16.234878 6.1576374,22.029298 4.857945,5.04731 12.164336,6.55678 19.316995,6.53979 7.152659,-0.017 15.298497,0.5486 21.862415,-3.9033"
+       sodipodi:nodetypes="cccccccc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
@@ -8429,7 +8429,7 @@ Jeremy Landes
     <path
        id="path238"
        style="font-weight:800;font-size:13.6054px;font-family:Millimetre;-inkscape-font-specification:'Millimetre Ultra-Bold';opacity:0.99;fill:none;stroke:#000000;stroke-width:0.25;stroke-dasharray:none;paint-order:markers fill stroke"
-       d="M 63.000004,52.000003 23.022877,51.86076 12.28067,42.263844 M 63.000004,34.860759 5.9996916,35.000002"
+       d="M 63.000004,52.000003 23.022877,51.86076 12.28067,42.263844 m 50.719334,-7.403085 -41.702381,0.101873 -15.2979314,0.03737"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
@@ -8439,7 +8439,7 @@ Jeremy Landes
        inkstitch:max_stitch_length_mm="8"
        inkstitch:random_split_jitter_percent="0"
        inkstitch:zigzag_underlay_inset_mm=".2"
-       sodipodi:nodetypes="ccccc"
+       sodipodi:nodetypes="cccccc"
        inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:zigzag_underlay_spacing_mm="5" />
     <path
@@ -8453,7 +8453,7 @@ Jeremy Landes
     <path
        id="path240"
        style="font-weight:800;font-size:13.6054px;font-family:Millimetre;-inkscape-font-specification:'Millimetre Ultra-Bold';opacity:0.99;fill:none;stroke:#000000;stroke-width:0.25;stroke-dasharray:none;paint-order:markers fill stroke"
-       d="m 12.28067,42.263811 10.719333,9.736192 c -0.06868,2.600777 0,3.688043 0,5.999995 -0.202692,1.013478 -0.740915,3.704402 -1.000001,5.000003 -5.398564,5.090983 -7.419798,7.550996 -11.699183,12.579714 M 5.9996664,35.000002 v 45.704741"
+       d="m 12.28067,42.263811 10.719333,9.736192 c -0.06868,2.600777 0,3.688043 0,5.999995 -0.202692,1.013478 -0.740915,3.704402 -1.000001,5.000003 -5.398564,5.090983 -7.419798,7.550996 -11.699183,12.579714 M 5.9996664,35.000002 v 16.837878 7.371979 5.382715 16.112169"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
@@ -8463,7 +8463,7 @@ Jeremy Landes
        inkstitch:max_stitch_length_mm="8"
        inkstitch:random_split_jitter_percent="0"
        inkstitch:zigzag_underlay_inset_mm=".2"
-       sodipodi:nodetypes="ccccccc"
+       sodipodi:nodetypes="cccccccccc"
        inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:zigzag_underlay_spacing_mm="5" />
     <path
@@ -8558,7 +8558,7 @@ Jeremy Landes
     <path
        id="path179-7"
        style="font-weight:800;font-size:13.6054px;font-family:Millimetre;-inkscape-font-specification:'Millimetre Ultra-Bold';opacity:0.99;fill:none;stroke:#000000;stroke-width:0.349809;stroke-dasharray:none;paint-order:markers fill stroke"
-       d="m 5.9999698,52.000242 21.3140072,0.1428 8.685982,-1.142848 C 43,45 45,45 54,39.651626 M 5.9999698,35.000197 c 0,0 51.1312442,0.221461 57.0000302,-3e-6"
+       d="m 5.9999698,52.000242 21.3140072,0.1428 8.685982,-1.142848 C 43,45 45,45 54,39.651626 M 5.9999698,35.000197 c 0,0 10.1739792,0.04407 21.9662412,0.07323 2.451916,0.0061 4.973797,0.01148 7.488731,0.01573 12.505111,0.02111 24.838483,0.01318 27.545058,-0.08896"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
@@ -8568,7 +8568,7 @@ Jeremy Landes
        inkstitch:max_stitch_length_mm="8"
        inkstitch:random_split_jitter_percent="0"
        inkstitch:zigzag_underlay_inset_mm=".2"
-       sodipodi:nodetypes="cccccc"
+       sodipodi:nodetypes="cccccssc"
        inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:zigzag_underlay_spacing_mm="5" />
     <path

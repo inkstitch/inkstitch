@@ -1,6 +1,6 @@
 {
     "name": "Millimarif-bold20",
-    "description": "Dans cette police la taille des majuscules varie harmonieusement de 15mm à 28mm",
+    "description": "This bold font can be reduced down to 90% and enlarged up to 140% allowing Capital M height to flow from 15mm to 28mm.",
     "keywords": [
         "sans_serif"
     ],
@@ -9,7 +9,7 @@
     "reversible": false,
     "letter_case": "",
     "default_glyph": "�",
-    "size": 15.0,
+    "size":20.0,
     "min_scale": 0.75,
     "max_scale": 1.4,
     "horiz_adv_x_default": 69,
