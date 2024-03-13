@@ -1,7 +1,7 @@
 ---
 title: "Outils de police"
 permalink: /fr/docs/font-tools/
-last_modified_at: 2024-02-29
+last_modified_at: 2024-03-12
 toc: true
 ---
 Un ensemble d'outils adaptés aux créateurs de polices ou à ceux qui souhaitent ajouter des polices supplémentaires dans [l'outil de lettrage](/docs/lettering) d'Ink/Stitch.
@@ -10,7 +10,7 @@ Lisez le [Tutoriel de création de police pour Ink/Stitch](/fr/tutorials/font-cr
 {: .notice--info }
 
 ## Forcer des points d'arrêt
-{% include upcoming_release.html %} 
+
 Les petites fontes se défont parfois si les fils sont coupés après la broderie. 
 
 Il est donc important que les diacritiques qui sont plus proches du corps de la lettre que la valeur de la longueur minimum de saut définie dans les préférences (3mm par défaut) aient des points d'arrêt. 
@@ -18,6 +18,20 @@ Il est donc important que les diacritiques qui sont plus proches du corps de la 
 Ceci peut être obtenu en leur ajoutant un attribut forcer les points d'arrêt. Il est possible de restreindre cet ajout aux seules colonnes satin.
 
 Pour la même raison, lorsque les lettres sont détachées, il peut être utile de forcer les points d'arrêts sur le dernier élément de chaque glyphe.
+
+### Usage
+
+* Run `Extensions > Ink/Stitch > Font Management > Force lock stitches...`
+* Update settings according to the font
+* Click on apply
+
+### Options
+
+* Mininum distance (mm)
+* Maximum distance (mm)
+* Restrict to satin
+  {% include upcoming_release.html %}
+* Add force lock stitches attribute to the last element of each glyph
 
 ## Répertoire personnalisé de polices 
 

@@ -38,6 +38,7 @@ Anstecher                       || Wähle die [Anstecher](/de/docs/stitches/lock
 Verstecher                      || Wähle die [Verstecher](/de/docs/stitches/lock-stitches) Variante (Ende).
 Fadenschnitt                    || Schneidet den Faden nachdem dieses Objekt genäht wurde
 Stopp                           || Stoppt die Maschine nachdem dieses Objekt genäht wurde und springt zur Stopp-Position (sofern vorhanden)
+{: .params-table }
 
 ### Unterlage
 

@@ -46,25 +46,35 @@ This extension informs about various parameters of selected stitch elements.
 
 ## Extension Updates
 
-### Cleanup document:
+### Cleanup document
+
+`Troubleshoot > Cleanup document`
 
 * add option to delete empty groups and layers ([#2552](https://github.com/inkstitch/inkstitch/issues/2552))
 * add test run option to display names of the elements that will be removed with the current settings ([#2552](https://github.com/inkstitch/inkstitch/issues/2552))
 
 ### Density map
 
+`Visualize and Export > Density Map`
+
 * add indicator size option ([#2544](https://github.com/inkstitch/inkstitch/issues/2544))
 * add ignore layer command ([#2522](https://github.com/inkstitch/inkstitch/issues/2522))
 
 ### Fill to Stroke
 
+`Tools: Stroke > Fill to Stroke`
+
 * add one centerline group for each selected fill or replace existing fill if it results in only one path ([#2675](https://github.com/inkstitch/inkstitch/issues/2675#issuecomment-1882919122))
 
-### Force lock stitches (Font Management):
+### Force lock stitches
+
+`Font Management > Force lock stitches`
 
 * Add "Restrict to Satin" option ([#2773](https://github.com/inkstitch/inkstitch/pull/2773))
 
 ### Jump to Stroke
+
+`Tools: Stroke > Jump to Stroke`
 
 * Add options ([#2733](https://github.com/inkstitch/inkstitch/pull/2733))
     * Min width
@@ -76,25 +86,37 @@ This extension informs about various parameters of selected stitch elements.
 
 ### Lettering
 
+`Lettering`
+
 * Add glyph filter ([#2400](https://github.com/inkstitch/inkstitch/issues/2400))
 
 ### Preferences
+
+`Preferences`
 
 * electron -> wxpython ([#2479](https://github.com/inkstitch/inkstitch/issues/2479))
 
 ### Remove embroidery settings
 
+`Troubleshoot > Remove embroidery settings`
+
 * add option to remove only specific commands ([#2494](https://github.com/inkstitch/inkstitch/issues/2494))
 
 ### Select embroidery elements
+
+`Edit > Select embroidery elements`
 
 * Option to select satins with no rungs or two rails and two rungs (possible detection conflict) ([#2734](https://github.com/inkstitch/inkstitch/pull/2734))
 
 ### Stitch Plan Preview
 
+`Visualize and Export > Stitch Plan Preview`
+
 * Add option to keep/overwrite previous stitch plan ([#2642](https://github.com/inkstitch/inkstitch/issues/#2642))
 
 ### Troubleshoot
+
+`Troubleshoot > Troubleshoot`
 
 * Add warning for satins with two rails and two rungs (possible detection conflict) ([#2734](https://github.com/inkstitch/inkstitch/pull/2734))
 * Add warning for elements with stroke and fill color ([#2761](https://github.com/inkstitch/inkstitch/pull/2761))

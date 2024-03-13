@@ -1,7 +1,7 @@
 ---
-title: "Schriftwerkzeuge"
+title: "Schriftverwaltung"
 permalink: /de/docs/font-tools/
-last_modified_at: 2023-04-22
+last_modified_at: 2024-03-13
 toc: true
 ---
 Eine Sammlung von Werkzeugen für Schriftarten Entwickler oder Personen, die dem [Text-Werkzeug](/de/docs/lettering/) von Ink/Stitch zusätzliche Schriften hinzufügen wollen.
@@ -9,13 +9,27 @@ Eine Sammlung von Werkzeugen für Schriftarten Entwickler oder Personen, die dem
 Ein Blick in das [Schriften für Ink/Stitch erstellen Tutorial](/de/tutorials/font-creation) lohnt sich auf jeden Fall, wenn du neue Schriften erstellen willst.
 {: .notice--info }
 
-## Force lock stitches
-{% include upcoming_release.html %} 
-Small fonts will sometimes unravel if threads are cut after the embroidery machine has finished the work.
+## Vernähstiche erzwingen
 
-Therefore it is important that also diacritics with a smaller distance to the font body than defined by the minimum jump stitch length (default: 3mm) have lock stitches.
+Bei kleinen Schriften kann es schnell passieren, dass sich der Faden löst, wenn Sprungstiche nach der Fertigstellung geschnitten werden.
 
-This extension helps adding forced lock stitches
+Um dies zu verhindern, ist es wichtig, dass auch I-Punkte u.ä. mit einem kleineren Abstand zum Schriftkörper als durch die minimale Sprungstichlänge definiert, vernäht werden.
+
+Diese Erweiterung soll dabei helfen, die Stickobjekte entsprechend zu bearbeiten.
+
+### Funktionsweise
+
+* Öffne `Erweiterungen > Ink/Stitch > Schriftverwaltung > Vernähstiche erzwingen...`
+* Setze die Einstellungen wie gewünscht passend zur geöffneten Schrift
+* Klick auf Anwenden
+
+### Optionen
+
+* Minimaler Abstand (mm)
+* Maximaler Abstand (mm)
+* Auf Satinsäulen beschränken
+  {% include upcoming_release.html %}
+* Füge das Attribut "Vernähen erzwingen" dem jeweils letzten Element eines Schriftzeichens hinzu
 
 ## Benutzerdefinierter Ordner für Schriften
 

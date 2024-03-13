@@ -1,7 +1,7 @@
 ---
 title: "Font Tools"
 permalink: /docs/font-tools/
-last_modified_at: 2024-02-28
+last_modified_at: 2024-03-13
 toc: true
 ---
 A collection of tools suitable for font creators or those who want to add additional fonts to the Ink/Stitch [lettering tool](/docs/lettering).
@@ -10,12 +10,27 @@ Read the [Ink/Stitch font creation tutorial](/tutorials/font-creation) for in-de
 {: .notice--info }
 
 ## Force lock stitches
-{% include upcoming_release.html %} 
+
 Small fonts will sometimes unravel if threads are cut after the embroidery machine has finished the work.
 
 Therefore it is important that also diacritics with a smaller distance to the font body than defined by the minimum jump stitch length (default: 3mm) have lock stitches.
 
 This extension helps adding forced lock stitches. One may chose to restrict the addition of lock stitches only to satin columnns.
+
+### Usage
+
+* Run `Extensions > Ink/Stitch > Font Management > Force lock stitches...`
+* Update settings according to the font
+* Click on apply
+
+### Options
+
+* Mininum distance (mm)
+* Maximum distance (mm)
+* Restrict to satin
+  {% include upcoming_release.html %}
+* Add force lock stitches attribute to the last element of each glyph
+
 ## Custom Font Directory
 
 This extension allows you to define a directory in your file system where you want to store additional fonts to be used with the lettering tool.
