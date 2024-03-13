@@ -103,6 +103,15 @@ class StrokeAndFillWarning(ValidationWarning):
     ]
 
 
+class NoGradientWarning(ValidationWarning):
+    name = _("No linear gradient color")
+    description = _("Linear Gradient has no linear gradient color.")
+    steps_to_solve = [
+        _('* Open the Fill and Stroke dialog.'),
+        _('* Set a linear gradient as a fill and adapt colors to your liking.')
+    ]
+
+
 class InvalidShapeError(ValidationError):
     name = _("This shape is invalid")
     description = _('Fill: This shape cannot be stitched out. Please try to repair it with the "Break Apart Fill Objects" extension.')
@@ -658,6 +667,10 @@ class FillStitch(EmbroideryElement):
             elif guide_lines[0].disjoint(self.shape):
                 yield DisjointGuideLineWarning(self.shape.centroid)
             return None
+
+        # linear gradient fill
+        if self.fill_method == 'linear_gradient_fill' and self.gradient is None:
+            yield NoGradientWarning(self.shape.representative_point())
 
         if self.node.style('stroke', None) is not None:
             if not self.shape.is_empty:
