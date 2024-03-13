@@ -40,11 +40,15 @@ Die Erweiterung entfernt alle Stickparameter aus dem gesamten Dokument oder von 
 * Öffne `Erweiterungen > Ink/Stitch > Fehlerbehebung > Entferne Stickeinstellungen...`
 * Wähle die gewünschten Optionen und klicke auf "anwenden"
 
-  {% include upcoming_release.html %} 
-* before applying you may also chose to remove none/ all/  or some of the embroidery commands
-![Remove embroidery settings - GUI](/assets/images/docs/en/remove-embroidery-settings.png)
+### Optionen
 
+* Remove params
+* Remove commands
 
+  {% include upcoming_release.html %}
+  (all/none/specific ommand only)
+
+![Stickeinstellungen entfernen - GUI](/assets/images/docs/en/remove-embroidery-settings.png)
 
 ## Dokument bereinigen
 

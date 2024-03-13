@@ -176,7 +176,7 @@ All fonts have been reworked to be more stable when transformed.
 
 ## Developer Features
 
-* [#2715](https://github.com/inkstitch/inkstitch/pull/#2715) Multiversion support
+* [#2715](https://github.com/inkstitch/inkstitch/issues/2715) Multiversion support
 * [#2653](https://github.com/inkstitch/inkstitch/issues/2653) Updated debug and profiling procedures
 
 ## Bug Fixes

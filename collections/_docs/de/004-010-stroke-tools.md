@@ -1,7 +1,7 @@
 ---
 title: "Werkzeuge: Linie"
 permalink: /de/docs/stroke-tools/
-last_modified_at: 2023-05-11
+last_modified_at: 2024-03-13
 toc: true
 ---
 ## Automatisch geführter Geradstich
@@ -81,27 +81,29 @@ Die Funktion ist vergleichbar mit der Inkscape Funktion unter `Pfad > Bitmap nac
 
 Dieses Werkzeug erstellt Geradstiche von der Endposition des ersten Elements zu der Startposition des zweiten. Leite den hier generierten Geradstich versteckt unter später folgenden Stickflächen entlang und vermeide so unnötige Sprungstiche.
 
-
 ### Anwendung
 
 * Wähle zwei oder mehr Objekte aus
 * Öffne `Erweiterungen > Ink/Stitch > Werkzeuge: Linie > Sprungstich zu Geradstich`
 
+### Optionen
+
 {% include upcoming_release.html %}
-### Options
 
-* Convert jumps no shorter than
-* Convert jumps no longer than
-* Connect only within groups or layers
-* Do not connect after trim, stop or forced lock stitches
+* Konvertiere nur Sprungstitch die länger sind als der angegebene Wert
+* Konvertiere nur Sprungstitche die kürzer sind als der angegebene Wert
+* Verbinde nur Elemente innerhalb einer Gruppe oder einer Ebene
+* Verbinde Elemente mit Fadenschnittbefehl, Stopp-Befehl oder erzwungenen Vernähstichen nicht mit nachfolgenden Elementen
 
-#### Output settings options
-* Merge new strokes with previous/next stroke if same type
-* Merge subpaths
+#### Ausgabe-Einstellungen
 
-and for unmerged connections only 
-* Minimum length of running stitch
-* Tolerance
+* Aufeinstanderfolgende Pfade vom gleichen Typ verschmelzen
+* Unterpfade verschmelzen
+
+Verschmolzene Pfade übernehmen die Stickeinstellungen des Urpsrungselements.
+Für nicht verschmolzene Pfade gelten die folgenden Einstellungen:
+* (Maximale) Stitchlänge
+* Geradstichtoleranz
 
 
 

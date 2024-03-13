@@ -29,9 +29,11 @@ If the group contains several guide lines, only one is effective. If the guide l
 ![Guided fill group](/assets/images/docs/guided-fill-complex.svg)
 
 ## Filling Strategies
+
 Two filling strategies are allowed for guided fill:
 
 ### Copy
+
 Copy (the default) will fill the shape with shifted copies of the line. Sometimes, in particular is the guide line has sharp angles, it may result in a very irregular covering.
 
 ### Parallel offset
@@ -70,5 +72,6 @@ Stop After                         ||Stop the machine after sewing this object. 
 
 Underlay in Guided Fill doesn't follow the guide line, but uses the fill angle which can be defined in the underlay [params](/docs/stitches/fill-stitch#underlay).
 
-## Samples Files Including Guided Fill Stitches
+## Sample Files Including Guided Fill Stitches
+
 {% include tutorials/tutorial_list key="stitch-type" value="Guided Fill" %}

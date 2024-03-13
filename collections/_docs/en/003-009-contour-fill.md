@@ -44,5 +44,6 @@ Stop After                         ||Stop the machine after sewing this object. 
 
 Underlay in Countour Fill doesn't follow the contour, but uses the fill angle which can be defined in the [fill underlay params](/docs/stitches/fill-stitch#underlay).
 
-## Samples Files Including Contour Fill Stitches
+## Sample Files Including Contour Fill Stitches
+
 {% include tutorials/tutorial_list key="stitch-type" value="Contour Fill" %}

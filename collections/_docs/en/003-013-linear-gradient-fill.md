@@ -52,6 +52,6 @@ Trim After           ||Trim the thread after sewing this object.
 
 Underlay in Linear Gradient Fill is the same as for Auto Fill and uses the fill angle which can be defined in the underlay [params](/docs/stitches/fill-stitch#underlay).
 
-## Samples Files Including Linear Gradient Fill Stitches
+## Sample Files Including Linear Gradient Fill Stitches
 
 {% include tutorials/tutorial_list key="stitch-type" value="Linear Gradient Fill" %}

@@ -116,7 +116,7 @@ docs:
       url: /de/docs/satin-tools/
     - title: "Werkzeuge: Laufstich"
       url: /de/docs/stroke-tools/
-    - title: "Thread Color Management"
+    - title: "Garnfarben-Verwaltung"
       url: /de/docs/thread-color/
     - title: "Fehlerbehebung"
       url: /de/docs/troubleshoot/

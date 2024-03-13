@@ -170,4 +170,5 @@ Zig-Zag spacing         |The peak-to-peak distance between zig-zags.
 Make sure to have a look at the [Satin Tools](/docs/satin-tools/). They will make your life with Satin Columns a lot easier.
 
 ## Sample Files Including Satin Column
+
 {% include tutorials/tutorial_list key="stitch-type" value="Satin Stitch" %}

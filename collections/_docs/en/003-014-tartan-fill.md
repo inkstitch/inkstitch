@@ -8,6 +8,7 @@ toc: true
 
 ## What it is
 
+[![Tartan Fill Sample](/assets/images/docs/tartan-fill.jpg){: width="200x"}](/assets/images/docs/tartan-fill.svg){: title="Download SVG File" .align-left download="tartan-fill.svg" }
 Tartan is a patterned fabric with colored horizontal and vertical stripes. It is typically known from scottish kilts. The embroidery stitch type tries to mimic the typical pattern.
 
 ## How to Create
@@ -47,6 +48,6 @@ Stop After           ||Stop the machine after sewing this object. Before stoppin
 
 Underlay in Tartan Fill is a normal Auto FillUnderlay and uses the fill angle which can be defined in the underlay [params](/docs/stitches/fill-stitch#underlay).
 
-## Samples Files Including Tartan Fill Stitches
+## Sample Files Including Tartan Fill Stitches
 
 {% include tutorials/tutorial_list key="stitch-type" value="Tartan Fill" %}

@@ -88,8 +88,9 @@ Ceci crééra un point droit direct entre la fin du premier élément et le déb
 * Sélectionnez au moins deux objets
 * Exécutez  `Extensions > Ink/Stitch > Outils: Trait > Saut en Trait`
 
-* {% include upcoming_release.html %}
 ### Options
+
+* {% include upcoming_release.html %}
 
 * Convertir les sauts de longueur au moins 
 * Convertir les sauts de longueur au plus 

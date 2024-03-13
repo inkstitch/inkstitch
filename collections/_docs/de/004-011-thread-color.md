@@ -1,7 +1,7 @@
 ---
 title: "Garnfarben-Verwaltung"
 permalink: /de/docs/thread-color/
-last_modified_at: 2023-05-04
+last_modified_at: 2024-03-13
 toc: true
 ---
 ## Garnfarben-Liste anwenden
@@ -20,13 +20,15 @@ Willst du eine andere Garnliste aus einer Textdatei (txt) importieren, wähle di
 Garnlisten können nur über eine ZIP-Datei exportiert werden ([batch export](/de/docs/import-export/#batch-export))
 
 
-## Apply Palette
+## Farbpalette anwenden
+
 {% include upcoming_release.html %}
-This extension applies nearest colors from a specified thread palette on a design. 
 
-This will also be recognized by the Ink/Stitch pdf output.
+Diese Erweiterung wendet die ähnlichsten Farben aus einer ausgewählten Farbpalette auf das Design an.
 
-Run `Extensions > Ink/Stitch  > Thread Color Management > Apply Palette 
+Beim PDF-Export wird die Farbpalette entsprechend übernommen.
+
+Die Erweiterung befindet sich unter `Erweiterungen > Ink/Stitch > Farbpalette anwenden`
 
 ## Farbpalette erstellen
 

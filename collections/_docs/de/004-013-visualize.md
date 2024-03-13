@@ -1,7 +1,7 @@
 ---
 title: "Visualisierung"
 permalink: /de/docs/visualize/
-last_modified_at: 2023-02-20
+last_modified_at: 2023-03-13
 toc: true
 ---
 ## Simulator / Realistische Vorschau
@@ -70,13 +70,14 @@ Zeigt Punkte in frei wählbaren Farben (Standart: rot, gelb, grün) über dem De
 
 {% include upcoming_release.html %} You may choose the marker (dot) size.
 
-## Display stacking order
+## Stickreihenfolge anzeigen
 
 {% include upcoming_release.html %}
 
-Run `Extensions > Ink/Stitch > Visualize and Export > Display stacking order...`.
+Fügt eine Ebene mit Nummern für die Stickreihenfolge der ausgewählten Elemente hinzu.
 
-Chose the font size and then apply  to create a new layer with one text label per embroidery object, numbering them in the embroidery order.
+* Öffne `Erweiterungen > Ink/Stitch > Visualisieren und Exportieren > Stickreihenfolge anzeigen...`
+* Wähle die Schriftgröße und klicke auf "Anwenden".
 
 ![Display stacking order](/assets/images/docs/stacking_order.png)
 

@@ -23,9 +23,10 @@ If you want to import any other threadlist from a txt-file, choose the option "I
 
 Threadlists can only be exported through a zip-file ([batch export](/docs/import-export/#batch-export)).
 
-
 ## Apply Palette
+
 {% include upcoming_release.html %}
+
 This extension applies nearest colors from a specified thread palette on a design. 
 
 This will also be recognized by the Ink/Stitch pdf output.
