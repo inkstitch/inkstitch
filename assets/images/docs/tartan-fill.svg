@@ -27,60 +27,43 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      showgrid="true"
-     inkscape:zoom="0.84537529"
-     inkscape:cx="308.14717"
-     inkscape:cy="114.15049"
+     inkscape:zoom="1.5519126"
+     inkscape:cx="153.03697"
+     inkscape:cy="144.66021"
      inkscape:window-width="1920"
      inkscape:window-height="1011"
      inkscape:window-x="0"
      inkscape:window-y="32"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g2"
+     inkscape:current-layer="layer1"
      showguides="true">
-    <inkscape:grid
-       id="grid2"
-       units="mm"
-       originx="-45.499886"
-       originy="83.419197"
-       spacingx="1"
-       spacingy="1"
-       empcolor="#0099e5"
-       empopacity="0.30196078"
-       color="#0099e5"
-       opacity="0.14901961"
-       empspacing="5"
-       dotted="false"
-       gridanglex="30"
-       gridanglez="30"
-       visible="true" />
   </sodipodi:namedview>
   <defs
      id="defs1" />
   <g
-     inkscape:label="Ebene 1"
+     inkscape:label="Layer1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-45.499886,83.419205)">
+     transform="translate(-45.4999, 83.4192)">
+    <path
+       id="path1607-1-1-1"
+       style="display:inline;fill:#40abbf;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.793749, 0.264583;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 48.253773,-3.2809826 48.721503,-63.58765 72.668964,-63.493988 80.994068,-50.023803 C 81.586998,-91.821038 114.94853,-81.362865 117.66342,-71.445501 112.26011,-69.081981 108.66522,-64.105968 107.74764,-55.262282 L 107.65451,-1.66147 85.951824,-1.5678076 80.620212,-9.8934409 C 78.876874,-6.2940538 77.350231,-2.5592002 71.733266,-1.3807475 L 48.230358,-1.1936873 Z"
+       inkstitch:fill_method="tartan_fill"
+       inkstitch:tartan="{&quot;symmetry&quot;: false, &quot;equal_warp_weft&quot;: true, &quot;rotate&quot;: 56.0, &quot;scale&quot;: 100, &quot;offset_x&quot;: 12.0, &quot;offset_y&quot;: 0, &quot;pallet&quot;: &quot;...(#21AB8A)2.5 (#CB443C)2.0 (#21AB8A)2.5 (#40ABBF)8.0 (#1A5FB4)1.0 (#40ABBF)1.1 (#1A5FB4)1.0 (#40ABBF)8.0...&quot;, &quot;output&quot;: &quot;embroidery&quot;, &quot;stitch_type&quot;: &quot;legacy_fill&quot;, &quot;row_spacing&quot;: 1, &quot;angle_warp&quot;: 0, &quot;angle_weft&quot;: 90, &quot;min_stripe_width&quot;: 1, &quot;bean_stitch_repeats&quot;: 0}"
+       inkstitch:bean_stitch_repeats="0"
+       inkstitch:rows_per_thread="4"
+       sodipodi:nodetypes="cccccccccccc"
+       inkstitch:fill_underlay_angle="90 -56"
+       inkstitch:fill_underlay_row_spacing_mm="1"
+       inkscape:label="Tartan fill" />
     <g
-       inkscape:label="Ink/Stitch Lettering"
-       transform="matrix(0.264583,0,0,0.264583,0.377215,-0.164724)"
-       inkstitch:lettering="{&quot;text&quot;: &quot;INK&quot;, &quot;back_and_forth&quot;: false, &quot;font&quot;: &quot;namskout_AGS&quot;, &quot;scale&quot;: 100, &quot;trim_option&quot;: 0, &quot;use_trim_symbols&quot;: false}"
-       id="g2">
-      <path
-         id="path1607-1-1-1"
-         style="display:inline;fill:#40abbf;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 1;stroke-dashoffset:0;stroke-opacity:1"
-         d="M 180.951,-11.778 182.7188,-239.709 273.229,-239.355 304.694,-188.444 C 306.935,-346.418 433.026,-306.891 443.287,-269.408 422.865,-260.475 409.278,-241.668 405.81,-208.243 L 405.458,-5.657 323.432,-5.303 303.281,-36.77 C 296.692,-23.166 290.922,-9.05 269.6925,-4.596 L 180.8625,-3.889 Z"
-         inkstitch:fill_method="tartan_fill"
-         inkstitch:tartan="{&quot;symmetry&quot;: false, &quot;equal_warp_weft&quot;: true, &quot;rotate&quot;: 56.0, &quot;scale&quot;: 100, &quot;offset_x&quot;: 12.0, &quot;offset_y&quot;: 0, &quot;pallet&quot;: &quot;...(#21AB8A)2.5 (#CB443C)2.0 (#21AB8A)2.5 (#40ABBF)8.0 (#1A5FB4)1.0 (#40ABBF)1.1 (#1A5FB4)1.0 (#40ABBF)8.0...&quot;, &quot;output&quot;: &quot;embroidery&quot;, &quot;stitch_type&quot;: &quot;legacy_fill&quot;, &quot;row_spacing&quot;: 1, &quot;angle_warp&quot;: 0, &quot;angle_weft&quot;: 90, &quot;min_stripe_width&quot;: 1, &quot;bean_stitch_repeats&quot;: 0}"
-         inkstitch:bean_stitch_repeats="0"
-         inkstitch:rows_per_thread="4"
-         sodipodi:nodetypes="cccccccccccc"
-         inkstitch:fill_underlay_angle="90 -56"
-         inkstitch:fill_underlay_row_spacing_mm="1" />
+       id="g1"
+       inkscape:label="Satin border">
       <path
          id="autosatin105-1-1-1-1-1"
-         style="display:inline;fill:none;stroke:#000000;stroke-width:1px"
-         d="M 300.806,-32.527 305,-27 C 299,-12 284,0 266.9995,0 H 170.9995 M 297,-40 C 297,-24 283,-10 266.9995,-10 H 186.9995 L 178.2023,-4.438 M 198.2495,-11 197.9995,1.75 M 267.2495,-11.5 V 2.25 M 291.75,-27.25 303.5,-20"
+         style="display:inline;fill:none;stroke:#000000;stroke-width:0.264583px"
+         d="M 79.965369,-8.7708152 81.07503,-7.308465 C 79.487532,-3.33972 75.518787,-0.164724 71.020744,-0.164724 H 45.620776 M 78.958366,-10.748044 C 78.958366,-6.514716 75.254204,-2.810554 71.020744,-2.810554 H 49.854104 L 47.526514,-1.3389434 M 52.830662,-3.075137 52.764517,0.29829625 M 71.086889,-3.2074285 V 0.43058775 M 77.569305,-7.3746108 80.678156,-5.456384"
          sodipodi:nodetypes="ccsccscc"
          inkstitch:satin_column="True"
          inkstitch:zigzag_spacing_mm="0.3"
@@ -93,8 +76,8 @@
          inkstitch:reverse_rails="none" />
       <path
          id="autosatin106-1-1-1-1-1"
-         style="display:inline;fill:none;stroke:#000000;stroke-width:1px"
-         d="M 170.9995,0 C 174.9995,-9 175.9995,-18 175.9995,-28 V -217 C 175.9995,-227 175.9995,-237 170.9995,-245 M 170.698,-217.789 H 189.7899 M 172.8193,-24.749 H 189.7899 M 178.2023,-4.438 186.9995,-10 V -234 L 179.5882,-238.916"
+         style="display:inline;fill:none;stroke:#000000;stroke-width:0.264583px"
+         d="M 45.620776,-0.164724 C 46.679108,-2.545971 46.943691,-4.927218 46.943691,-7.573048 V -57.579235 C 46.943691,-60.225065 46.943691,-62.870895 45.620776,-64.987559 M 45.541004,-57.787991 H 50.592396 M 46.102264,-6.7128887 H 50.592396 M 47.526514,-1.3389434 49.854104,-2.810554 V -62.077146 L 47.8932,-63.377836"
          sodipodi:nodetypes="cssccccccccc"
          inkstitch:satin_column="True"
          inkstitch:zigzag_spacing_mm="0.3"
@@ -107,8 +90,8 @@
          inkstitch:reverse_rails="none" />
       <path
          id="autosatin107-1-1-1-1-1"
-         style="display:inline;fill:none;stroke:#000000;stroke-width:1px"
-         d="M 170.9995,-245 H 276 M 196.8609,-248.194 V -231.931 M 261.2075,-247.487 V -231.931 M 179.5882,-238.916 186.9995,-234 H 269.9995 L 273.872,-240.576"
+         style="display:inline;fill:none;stroke:#000000;stroke-width:0.264583px"
+         d="M 45.620776,-64.987559 H 73.402123 M 52.463263,-65.832637 V -61.529724 M 69.488279,-65.645577 V -61.529724 M 47.8932,-63.377836 49.854104,-62.077146 H 71.814493 L 72.83909,-63.817044"
          sodipodi:nodetypes="cccccccccc"
          inkstitch:satin_column="True"
          inkstitch:zigzag_spacing_mm="0.3"
@@ -121,8 +104,8 @@
          inkstitch:reverse_rails="none" />
       <path
          id="autosatin108-1-1-1-1-1"
-         style="display:inline;fill:none;stroke:#000000;stroke-width:1px"
-         d="M 276,-245 306.769,-193.718 M 273.872,-240.576 269.9995,-234 298.103,-187.408 M 274.643,-213.546 294.442,-226.981"
+         style="display:inline;fill:none;stroke:#000000;stroke-width:0.264583px"
+         d="M 73.402123,-64.987559 81.543077,-51.419214 M 72.83909,-63.817044 71.814493,-62.077146 79.250201,-49.749695 M 73.043084,-56.665365 78.281563,-60.220038"
          sodipodi:nodetypes="ccccccc"
          inkstitch:satin_column="True"
          inkstitch:zigzag_spacing_mm="0.3"
@@ -134,9 +117,17 @@
          inkstitch:max_stitch_length_mm="5"
          inkstitch:reverse_rails="none" />
       <path
+         d="M 80.514969,-50.583536 C 84.732157,-43.574203 88.948816,-36.564606 93.16574,-29.555008"
+         style="display:inline;fill:none;stroke:#000000;stroke-width:0.132291px;stroke-dasharray:0.793749, 0.264583"
+         inkstitch:running_stitch_length_mm="2"
+         id="autosatinrun61-1"
+         inkscape:label="Points droits pour auto-remplissage satin 7"
+         inkstitch:ties="3"
+         sodipodi:nodetypes="cc" />
+      <path
          id="autosatin109-1-1-1-1-1"
-         style="display:inline;fill:none;stroke:#000000;stroke-width:1px"
-         d="M 346,-108 298.103,-187.408 M 354,-115 306.769,-193.718 M 307.253,-193.948 297.721,-187.007"
+         style="display:inline;fill:none;stroke:#000000;stroke-width:0.264583px"
+         d="M 91.922933,-28.739688 79.250201,-49.749695 M 94.039597,-30.591769 81.543077,-51.419214 M 81.671135,-51.480068 79.14913,-49.643597"
          sodipodi:nodetypes="ccccccc"
          inkstitch:satin_column="True"
          inkstitch:zigzag_spacing_mm="0.3"
@@ -149,8 +140,8 @@
          inkstitch:reverse_rails="none" />
       <path
          id="autosatin110-1-1-1-1-1"
-         style="display:inline;fill:none;stroke:#000000;stroke-width:1px"
-         d="M 301,-203 V -212 C 301,-265 337,-308 381,-308 402,-308 426.999,-300 439.999,-283 444.999,-277 448.833,-268.833 454.833,-264.833 M 295.855,-231.931 H 315.655 M 380.002,-314.663 V -292.035 M 427.377,-273.65 445.055,-287.793 M 311,-186 V -212 C 311,-260 343,-298 381,-298 403,-298 427.999,-288 435.999,-270 L 445.369,-267.368"
+         style="display:inline;fill:none;stroke:#000000;stroke-width:0.264583px"
+         d="M 80.016698,-53.875073 V -56.25632 C 80.016698,-70.279219 89.541686,-81.656288 101.18334,-81.656288 106.73958,-81.656288 113.35389,-79.539624 116.79347,-75.041713 118.11639,-73.454215 119.1308,-71.293366 120.71829,-70.235034 M 78.655418,-61.529724 H 83.894162 M 100.91928,-83.419205 V -77.43222 M 113.4539,-72.567862 118.1312,-76.309859 M 82.662528,-49.377162 V -56.25632 C 82.662528,-68.956304 91.129184,-79.010458 101.18334,-79.010458 107.00416,-79.010458 113.61847,-76.364628 115.73514,-71.602134 L 118.21428,-70.905752"
          sodipodi:nodetypes="csscccccccccsscc"
          inkstitch:satin_column="True"
          inkstitch:zigzag_spacing_mm="0.3"
@@ -163,8 +154,8 @@
          inkstitch:reverse_rails="none" />
       <path
          id="autosatin111-1-1-1-1-1"
-         style="display:inline;fill:none;stroke:#000000;stroke-width:1px"
-         d="M 454.833,-264.833 C 434.883,-265.523 422.206,-246.238 417.723,-235.62 L 415.956,-231.316 414.454,-226.878 413.218,-222.344 412.252,-217.75 411.559,-213.137 411.139,-208.541 411,-204 V -28 L 411.077,-20.531 411.264,-16.855 411.625,-13.25 411.69,-12.862 M 445.369,-267.368 435.999,-270 431.64,-267.721 427.561,-265.031 423.766,-261.967 420.25,-258.562 417.016,-254.853 414.062,-250.875 411.391,-246.662 409,-242.25 406.891,-237.674 405.062,-232.969 403.516,-228.17 402.25,-223.312 401.266,-218.432 400.562,-213.562 400.141,-208.74 400,-204 V -13.628 M 392.729,-211.425 H 418.185 M 394.144,-38.184 H 415.004"
+         style="display:inline;fill:none;stroke:#000000;stroke-width:0.264583px"
+         d="M 120.71829,-70.235034 C 115.43986,-70.417596 112.08575,-65.315113 110.89962,-62.50577 L 110.4321,-61.367005 110.0347,-60.192786 109.70767,-58.993167 109.45209,-57.777672 109.26873,-56.557151 109.15761,-55.341127 109.12083,-54.139656 V -7.573048 L 109.1412,-5.5968776 109.19068,-4.6242705 109.28619,-3.6704488 109.30339,-3.5677905 M 118.21428,-70.905752 115.73514,-71.602134 114.58182,-70.999149 113.50259,-70.287421 112.49849,-69.476739 111.56822,-68.575834 110.71256,-67.594495 109.93098,-66.541984 109.22428,-65.427296 108.59166,-64.259956 108.03366,-63.049224 107.54973,-61.804361 107.14069,-60.534627 106.80573,-59.249283 106.54538,-57.958118 106.35911,-56.669599 106.24772,-55.393779 106.21042,-54.139656 V -3.7704611 M 104.28663,-56.104185 H 111.02186 M 104.66102,-10.267561 H 110.18022"
          sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccc"
          inkstitch:satin_column="True"
          inkstitch:zigzag_spacing_mm="0.3"
@@ -176,9 +167,17 @@
          inkstitch:max_stitch_length_mm="5"
          inkstitch:reverse_rails="none" />
       <path
+         d="M 108.1388,-3.4510549 C 107.98905,-2.2310626 107.59271,-1.5343769 104.87861,-1.4991874 104.99,-1.3758917 87.342845,-1.5047436 87.342845,-1.5047436 86.928773,-1.2660898 85.660626,-2.2270939 85.031713,-3.2131948 77.940888,-15.002749 70.850196,-26.792574 63.759636,-38.582393"
+         style="display:inline;fill:none;stroke:#000000;stroke-width:0.132291px;stroke-dasharray:0.793749, 0.264583"
+         inkstitch:running_stitch_length_mm="2"
+         id="autosatinrun62-1"
+         inkscape:label="Points droits pour auto-remplissage satin 11"
+         inkstitch:ties="3"
+         sodipodi:nodetypes="ccccc" />
+      <path
          id="autosatin112-1-1-1-1-1"
-         style="display:inline;fill:none;stroke:#000000;stroke-width:1px"
-         d="M 241.9995,-151 327,-10 324.014,-4.349 M 233.9995,-145 321,0 M 310.705,-12.374 322.726,-20.86"
+         style="display:inline;fill:none;stroke:#000000;stroke-width:0.264583px"
+         d="M 64.406169,-40.116757 86.895856,-2.810554 86.105811,-1.3153955 M 62.289505,-38.529259 85.308358,-0.164724 M 82.584476,-3.438674 85.765028,-5.6839254"
          sodipodi:nodetypes="ccccccc"
          inkstitch:satin_column="True"
          inkstitch:zigzag_spacing_mm="0.3"
@@ -191,8 +190,8 @@
          inkstitch:reverse_rails="none" />
       <path
          id="autosatin113-1-1-1-1-1-1-1-1-1"
-         style="display:inline;fill:none;stroke:#000000;stroke-width:1px"
-         d="M 324.014,-4.349 327,-10 H 400 L 408.012,-4.7 M 321,0 H 416 M 340.404,-14.849 339.697,6.364 M 388.486,-13.435 387.78,5.657"
+         style="display:inline;fill:none;stroke:#000000;stroke-width:0.264583px"
+         d="M 86.105811,-1.3153955 86.895856,-2.810554 H 106.21042 L 108.33025,-1.4082641 M 85.308358,-0.164724 H 110.44374 M 90.442327,-4.093517 90.255266,1.5190822 M 103.16401,-3.7193966 102.97721,1.332022"
          sodipodi:nodetypes="cccccccccc"
          inkstitch:satin_column="True"
          inkstitch:zigzag_spacing_mm="0.3"
@@ -205,8 +204,8 @@
          inkstitch:reverse_rails="none" />
       <path
          id="autosatin114-1-1-1-1-1-1-1-1-1"
-         style="display:inline;fill:none;stroke:#000000;stroke-width:1px"
-         d="M 408.012,-4.7 400,-10 V -13.628 M 416,0 414.35,-3.09 413.108,-6.344 412.221,-9.738 411.69,-12.862 M 412.293,-12.726 399.415,-13.566"
+         style="display:inline;fill:none;stroke:#000000;stroke-width:0.264583px"
+         d="M 108.33025,-1.4082641 106.21042,-2.810554 V -3.7704611 M 110.44374,-0.164724 110.00718,-0.98228547 109.67857,-1.8432386 109.44388,-2.7412333 109.30339,-3.5677905 M 109.46293,-3.5318073 106.05563,-3.754057"
          sodipodi:nodetypes="ccsscccccccscc"
          inkstitch:satin_column="True"
          inkstitch:zigzag_spacing_mm="0.3"

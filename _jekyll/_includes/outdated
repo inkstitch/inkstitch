@@ -20,8 +20,12 @@
 
       {%- if en_page_exists == false -%}
           <p class="notice--warning"><b>⚠</b> This page is outdated. For more recent information have a look at the <a href="/">english section</a>.</p>
-      {%- else en_page.first.last_modified_at | date: "%Y-%m-%d > page.last_modified_at | date: "%Y-%m-%d -%}
+      {%- else -%}
+          {%- assign en_date = en_page.first.last_modified_at | date: "%Y-%m-%d" -%}
+          {%- assign page_date = page.last_modified_at | date: "%Y-%m-%d" -%}
+          {%- if en_date > page_date -%}
             <p class="notice--warning"><b>⚠</b> This page is outdated. For more recent information have a look at the <a href="{{en_url}}">english original</a>.</p>
+          {%- endif -%}
       {%- endif -%}
     {%- endunless -%}
 {%- endif -%}

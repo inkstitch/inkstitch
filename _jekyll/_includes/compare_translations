@@ -42,7 +42,8 @@
         {%- endif -%}
 
         {% for please_update in lang_page %}
-          {% if please_update.last_modified_at | date '%Y-%m-%-d' < post_modified" | date '%Y-%m-%-d' -%}
+          {%- assign translation_date = please_update.last_modified_at | date: "%Y-%m-%d" -%}
+          {% if translation_date < post_modified -%}
               {% if label == 'posts' %}
                 {%- assign permalink = please_update.url -%}
                 {%- assign post_permalink = post.url -%}
@@ -54,12 +55,12 @@
                 {%- assign modified_at = please_update.last_modified_at -%}
                 {%- assign post_modified_at = post.last_modified_at -%}
               {% endif %}
-          {%- endif -%}
 
 <li> {{ post_modified_at | date: "%Y-%m-%-d" }} <a href="{{ post_permalink }}">{{ post.title }}</a><br>
      {{ modified_at | date: "%Y-%m-%-d" }} <a href="{{ permalink }}">{{ please_update.title }}</a><br>
      <b><a href="https://github.com/inkstitch/inkstitch/tree/gh-pages/collections/{{ please_update.path }}">Edit translation</a></b>
 </li>
+          {%- endif -%}
         {% endfor %}
       {%- endfor -%}
   </ul>
