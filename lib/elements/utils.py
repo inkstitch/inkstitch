@@ -6,7 +6,7 @@
 from ..commands import is_command
 from ..marker import has_marker
 from ..svg.tags import (EMBROIDERABLE_TAGS, SVG_IMAGE_TAG, SVG_PATH_TAG,
-                        SVG_POLYGON_TAG, SVG_POLYLINE_TAG, SVG_TEXT_TAG, SVG_GROUP_TAG)
+                        SVG_POLYGON_TAG, SVG_POLYLINE_TAG, SVG_TEXT_TAG)
 from .clone import Clone, is_clone
 from .element import EmbroideryElement
 from .empty_d_object import EmptyDObject
