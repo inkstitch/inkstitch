@@ -1,6 +1,6 @@
 {
     "name": "Excalibur KOR",
-    "description": "Excalibur KOR is a small satin column manuscript font of size approximatively 20mm. It can be reduced down to 80% and enlarged up to 140%. It contains 144 glyphs, covering most western European languages needs.",
+    "description": "Excalibur KOR is a small satin column manuscript font of size approximatively 20mm. It can be reduced down to 50% and enlarged up to 140%. It contains 144 glyphs, covering most western European languages needs.",
     "keywords": [
         "sans_serif"
     ],
@@ -9,7 +9,7 @@
     "reversible": false,
     "letter_case": "",
     "default_glyph": "�",
-    "min_scale": 0.8,
+    "min_scale": 0.5,
     "max_scale": 1.4,
     "size": 20,
     "horiz_adv_x_default": 40,
