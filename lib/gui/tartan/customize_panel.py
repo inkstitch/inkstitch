@@ -206,7 +206,7 @@ class CustomizePanel(ScrolledPanel):
     def _update_stripes_event(self, event):
         self.panel.update_from_stripes()
 
-    def update_stripes(self, stripes, symmetry):
+    def update_stripes(self, stripes):
         self.warp_sizer.Clear(True)
         self.weft_sizer.Clear(True)
         warp = True
