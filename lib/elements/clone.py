@@ -104,7 +104,7 @@ class Clone(EmbroideryElement):
             old_angle = float(element.node.get(INKSTITCH_ATTRIBS['angle'], 0))
 
             if self.clone_fill_angle is None:  # Normally, rotate the cloned element's angle by the clone's rotation.
-                element.node.set(INKSTITCH_ATTRIBS['angle'], old_angle + angle)
+                element.node.set(INKSTITCH_ATTRIBS['angle'], old_angle - angle)
             else:  # If clone_fill_angle is specified, override the angle instead.
                 element.node.set(INKSTITCH_ATTRIBS['angle'], self.clone_fill_angle)
 
