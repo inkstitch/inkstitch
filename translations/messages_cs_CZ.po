@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-03-12 01:03+0000\n"
-"PO-Revision-Date: 2024-03-12 01:04\n"
+"POT-Creation-Date: 2024-03-14 01:47+0000\n"
+"PO-Revision-Date: 2024-03-14 01:48\n"
 "Last-Translator: \n"
 "Language-Team: Czech\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-12 01:03+0000\n"
+"POT-Creation-Date: 2024-03-14 01:47+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -115,7 +115,7 @@ msgstr ""
 #. name of font in fonts/auberge_marif
 #: inkstitch-fonts-metadata.py:34
 msgid "Auberge Marif"
-msgstr ""
+msgstr "Auberge Marif"
 
 #. description of font in fonts/auberge_marif
 #: inkstitch-fonts-metadata.py:36
@@ -125,7 +125,7 @@ msgstr ""
 #. name of font in fonts/auberge_small
 #: inkstitch-fonts-metadata.py:38
 msgid "Auberge small"
-msgstr ""
+msgstr "Auberge malý"
 
 #. description of font in fonts/auberge_small
 #: inkstitch-fonts-metadata.py:40
@@ -270,7 +270,7 @@ msgstr ""
 #. name of font in fonts/emilio_20_simple
 #: inkstitch-fonts-metadata.py:94
 msgid "Emilio 20 Simple"
-msgstr ""
+msgstr "Emilio 20 jednoduchý"
 
 #. description of font in fonts/emilio_20_simple
 #: inkstitch-fonts-metadata.py:96
@@ -590,7 +590,7 @@ msgstr ""
 #. name of tile in tiles/N3-11a
 #: inkstitch-tiles-metadata.py:2
 msgid "N3-11a"
-msgstr ""
+msgstr "N3-11a"
 
 #. name of tile in tiles/N3-12
 #: inkstitch-tiles-metadata.py:4
@@ -615,7 +615,7 @@ msgstr ""
 #. name of tile in tiles/N3-18-modified
 #: inkstitch-tiles-metadata.py:12
 msgid "N3-18-modified"
-msgstr ""
+msgstr "N3-18-upraveno"
 
 #. name of tile in tiles/N3-20
 #: inkstitch-tiles-metadata.py:14
@@ -755,17 +755,17 @@ msgstr ""
 #. name of tile in tiles/N4-29e
 #: inkstitch-tiles-metadata.py:68
 msgid "N4-29e"
-msgstr ""
+msgstr "N4-29e"
 
 #. name of tile in tiles/N4-29f
 #: inkstitch-tiles-metadata.py:70
 msgid "N4-29f"
-msgstr ""
+msgstr "N4-29f"
 
 #. name of tile in tiles/N4-31
 #: inkstitch-tiles-metadata.py:72
 msgid "N4-31"
-msgstr ""
+msgstr "N4-31"
 
 #. name of tile in tiles/N4-38
 #: inkstitch-tiles-metadata.py:74
@@ -850,7 +850,7 @@ msgstr ""
 #. name of tile in tiles/N6-6c
 #: inkstitch-tiles-metadata.py:106
 msgid "N6-6c"
-msgstr ""
+msgstr "N6-6c"
 
 #. name of tile in tiles/NC5-11a
 #: inkstitch-tiles-metadata.py:108
@@ -875,7 +875,7 @@ msgstr ""
 #. name of tile in tiles/P4-1
 #: inkstitch-tiles-metadata.py:116
 msgid "P4-1"
-msgstr ""
+msgstr "P4-1"
 
 #. name of tile in tiles/P4-10
 #: inkstitch-tiles-metadata.py:118
@@ -915,12 +915,12 @@ msgstr ""
 #. name of tile in tiles/P4-43-modified
 #: inkstitch-tiles-metadata.py:132
 msgid "P4-43-modified"
-msgstr ""
+msgstr "P4-43-upravený"
 
 #. name of tile in tiles/P4-47
 #: inkstitch-tiles-metadata.py:134
 msgid "P4-47"
-msgstr ""
+msgstr "P4-47"
 
 #. name of tile in tiles/P5-10_11
 #: inkstitch-tiles-metadata.py:136
@@ -945,37 +945,37 @@ msgstr ""
 #. name of tile in tiles/P6-6_11
 #: inkstitch-tiles-metadata.py:144
 msgid "P6-6_11"
-msgstr ""
+msgstr "P6-6_11"
 
 #. name of tile in tiles/diamond-square
 #: inkstitch-tiles-metadata.py:146
 msgid "diamonds and squares"
-msgstr ""
+msgstr "diamanty a čtverce"
 
 #. name of tile in tiles/hexagon
 #: inkstitch-tiles-metadata.py:148
 msgid "hexagonal lattice"
-msgstr ""
+msgstr "šestiúhelníková mřížka"
 
 #. name of tile in tiles/weird-one
 #: inkstitch-tiles-metadata.py:150
 msgid "weird one"
-msgstr ""
+msgstr "podivný"
 
 #: inkstitch.py:141
 msgid "Ink/Stitch cannot read your SVG file. This is often the case when you use a file which has been created with Adobe Illustrator."
-msgstr ""
+msgstr "Ink/Stitch nemůže přečíst váš soubor SVG. To se často stává, když použijete soubor vytvořený v programu Adobe Illustrator."
 
 #: inkstitch.py:144
 msgid "Try to import the file into Inkscape through 'File > Import...' (Ctrl+I)"
-msgstr ""
+msgstr "Zkuste soubor importovat do Inkscape přes 'Soubor > Importovat...' (Ctrl+I)"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
 #: lib/commands.py:24 inx/inkstitch_object_commands.inx:4
 #: inx/inkstitch_remove_embroidery_settings.inx:12
 msgid "Fill stitch starting position"
-msgstr ""
+msgstr "Výchozí pozice vyplňovacího stehu"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
@@ -989,7 +989,7 @@ msgstr ""
 #: lib/commands.py:30 inx/inkstitch_object_commands.inx:6
 #: inx/inkstitch_remove_embroidery_settings.inx:14
 msgid "Target position"
-msgstr ""
+msgstr "Cílová pozice"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
@@ -1131,7 +1131,7 @@ msgstr ""
 
 #: lib/elements/clone.py:37
 msgid "Convert the clone into a real element:"
-msgstr ""
+msgstr "Převést klon na skutečný prvek:"
 
 #: lib/elements/clone.py:38
 msgid "* Select the clone."
@@ -1144,11 +1144,11 @@ msgstr "Klonovat"
 
 #: lib/elements/clone.py:59
 msgid "Custom fill angle"
-msgstr ""
+msgstr "Vlastní úhel výplně"
 
 #: lib/elements/clone.py:60
 msgid "This setting will apply a custom fill angle for the clone."
-msgstr ""
+msgstr "Toto nastavení použije vlastní úhel výplně pro klon."
 
 #: lib/elements/clone.py:69
 msgid "Flip angle"
@@ -1271,7 +1271,7 @@ msgstr ""
 
 #: lib/elements/empty_d_object.py:13
 msgid "Empty Path"
-msgstr ""
+msgstr "Prázdná trasa"
 
 #: lib/elements/empty_d_object.py:14
 msgid "There is an invalid object in the document without geometry information."
@@ -1283,13 +1283,13 @@ msgstr ""
 
 #: lib/elements/fill_stitch.py:34
 msgid "Small Fill"
-msgstr ""
+msgstr "Malá náplň"
 
 #: lib/elements/fill_stitch.py:35
 msgid "This fill object is so small that it would probably look better as running stitch or satin column. For very small shapes, fill stitch is not possible, and Ink/Stitch will use running stitch around the outline instead."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:41 lib/elements/fill_stitch.py:231
+#: lib/elements/fill_stitch.py:41 lib/elements/fill_stitch.py:240
 msgid "Expand"
 msgstr ""
 
@@ -1297,7 +1297,7 @@ msgstr ""
 msgid "The expand parameter for this fill object cannot be applied. Ink/Stitch will ignore it and will use original size instead."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:47 lib/elements/fill_stitch.py:526
+#: lib/elements/fill_stitch.py:47 lib/elements/fill_stitch.py:535
 msgid "Inset"
 msgstr ""
 
@@ -1335,7 +1335,7 @@ msgstr ""
 
 #: lib/elements/fill_stitch.py:71 lib/elements/stroke.py:28
 msgid "Multiple Guide Lines"
-msgstr ""
+msgstr "Více vodicích linek"
 
 #: lib/elements/fill_stitch.py:72 lib/elements/stroke.py:29
 msgid "This object has multiple guide lines, but only the first one will be used."
@@ -1354,7 +1354,7 @@ msgid "Fill: This object is made up of unconnected shapes. Ink/Stitch doesn't kn
 msgstr ""
 
 #: lib/elements/fill_stitch.py:84 lib/elements/fill_stitch.py:93
-#: lib/elements/fill_stitch.py:110
+#: lib/elements/fill_stitch.py:119
 msgid "* Extensions > Ink/Stitch > Fill Tools > Break Apart Fill Objects"
 msgstr ""
 
@@ -1383,314 +1383,330 @@ msgid "* Adapt the shape of the second element to compensate for push and pull f
 msgstr ""
 
 #: lib/elements/fill_stitch.py:107
-msgid "This shape is invalid"
+msgid "No linear gradient color"
 msgstr ""
 
 #: lib/elements/fill_stitch.py:108
+msgid "Linear Gradient has no linear gradient color."
+msgstr ""
+
+#: lib/elements/fill_stitch.py:110
+msgid "* Open the Fill and Stroke dialog."
+msgstr ""
+
+#: lib/elements/fill_stitch.py:111
+msgid "* Set a linear gradient as a fill and adapt colors to your liking."
+msgstr ""
+
+#: lib/elements/fill_stitch.py:116
+msgid "This shape is invalid"
+msgstr "Tento tvar není platný"
+
+#: lib/elements/fill_stitch.py:117
 msgid "Fill: This shape cannot be stitched out. Please try to repair it with the \"Break Apart Fill Objects\" extension."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:115
+#: lib/elements/fill_stitch.py:124
 msgid "FillStitch"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:118
+#: lib/elements/fill_stitch.py:127
 msgid "Automatically routed fill stitching"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:122
+#: lib/elements/fill_stitch.py:131
 msgid "Auto Fill"
-msgstr ""
+msgstr "Automatické vyplňování"
 
-#: lib/elements/fill_stitch.py:123 inx/inkstitch_select_elements.inx:56
+#: lib/elements/fill_stitch.py:132 inx/inkstitch_select_elements.inx:56
 msgid "Contour Fill"
-msgstr ""
+msgstr "Obrysová výplň"
 
-#: lib/elements/fill_stitch.py:124 inx/inkstitch_select_elements.inx:57
+#: lib/elements/fill_stitch.py:133 inx/inkstitch_select_elements.inx:57
 msgid "Guided Fill"
-msgstr ""
+msgstr "Řízená výplň"
 
-#: lib/elements/fill_stitch.py:125 inx/inkstitch_select_elements.inx:59
+#: lib/elements/fill_stitch.py:134 inx/inkstitch_select_elements.inx:59
 msgid "Meander Fill"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:126 inx/inkstitch_select_elements.inx:55
+#: lib/elements/fill_stitch.py:135 inx/inkstitch_select_elements.inx:55
 msgid "Circular Fill"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:127 inx/inkstitch_select_elements.inx:58
+#: lib/elements/fill_stitch.py:136 inx/inkstitch_select_elements.inx:58
 msgid "Linear Gradient Fill"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:128 inx/inkstitch_select_elements.inx:60
+#: lib/elements/fill_stitch.py:137 inx/inkstitch_select_elements.inx:60
 msgid "Legacy Fill"
-msgstr ""
-
-#: lib/elements/fill_stitch.py:132
-msgid "Fill method"
-msgstr ""
+msgstr "Dědičná výplň"
 
 #: lib/elements/fill_stitch.py:141
+msgid "Fill method"
+msgstr "Způsob vyplnění"
+
+#: lib/elements/fill_stitch.py:150
 msgid "Guided Fill Strategy"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:142
+#: lib/elements/fill_stitch.py:151
 msgid "Copy"
-msgstr ""
+msgstr "Kopírovat"
 
-#: lib/elements/fill_stitch.py:142
+#: lib/elements/fill_stitch.py:151
 msgid "Parallel Offset"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:143
+#: lib/elements/fill_stitch.py:152
 msgid "Copy (the default) will fill the shape with shifted copies of the line. Parallel offset will ensure that each line is always a consistent distance from its neighbor. Sharp corners may be introduced."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:150
+#: lib/elements/fill_stitch.py:159
 msgid "Contour Fill Strategy"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:151
+#: lib/elements/fill_stitch.py:160
 msgid "Inner to Outer"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:151
+#: lib/elements/fill_stitch.py:160
 msgid "Single spiral"
-msgstr ""
+msgstr "Jednoduchá spirála"
 
-#: lib/elements/fill_stitch.py:151
+#: lib/elements/fill_stitch.py:160
 msgid "Double spiral"
-msgstr ""
+msgstr "Dvojitá spirála"
 
-#: lib/elements/fill_stitch.py:156
+#: lib/elements/fill_stitch.py:165
 msgid "Join Style"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:157
+#: lib/elements/fill_stitch.py:166
 msgid "Round"
-msgstr ""
+msgstr "Kulatý"
 
-#: lib/elements/fill_stitch.py:157
+#: lib/elements/fill_stitch.py:166
 msgid "Mitered"
-msgstr ""
+msgstr "Vroubkovaný"
 
-#: lib/elements/fill_stitch.py:157
+#: lib/elements/fill_stitch.py:166
 msgid "Beveled"
-msgstr ""
+msgstr "Zkosený"
 
-#: lib/elements/fill_stitch.py:163
+#: lib/elements/fill_stitch.py:172
 msgid "Avoid self-crossing"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:172
+#: lib/elements/fill_stitch.py:181
 msgid "Clockwise"
-msgstr ""
+msgstr "Po směru hodinových ručiček"
 
-#: lib/elements/fill_stitch.py:177
+#: lib/elements/fill_stitch.py:186
 msgid "Meander Pattern"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:184
+#: lib/elements/fill_stitch.py:193
 msgid "Meander pattern angle"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:194
+#: lib/elements/fill_stitch.py:203
 msgid "Meander pattern scale"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:195
+#: lib/elements/fill_stitch.py:204
 msgid "Percentage to stretch or compress the meander pattern.  You can scale horizontally and vertically individually by giving two percentages separated by a space. "
 msgstr ""
 
-#: lib/elements/fill_stitch.py:205
+#: lib/elements/fill_stitch.py:214
 msgid "Clip path"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:206
+#: lib/elements/fill_stitch.py:215
 msgid "Constrain stitching to the shape.  Useful when smoothing and expand are used."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:215
+#: lib/elements/fill_stitch.py:224
 msgid "Smoothness"
-msgstr ""
+msgstr "Hladkost"
 
-#: lib/elements/fill_stitch.py:216
+#: lib/elements/fill_stitch.py:225
 msgid "Smooth the stitch path.  Smoothness limits how far the smoothed stitch path is allowed to deviate from the original path.  Try low numbers like 0.2.  Hint: a lower running stitch tolerance may be needed too."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:232
+#: lib/elements/fill_stitch.py:241
 msgid "Expand the shape before fill stitching, to compensate for gaps between shapes.  Negative values contract instead."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:247
+#: lib/elements/fill_stitch.py:256
 msgid "Angle of lines of stitches"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:248
+#: lib/elements/fill_stitch.py:257
 msgid "The angle increases in a counter-clockwise direction.  0 is horizontal.  Negative angles are allowed."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:260
+#: lib/elements/fill_stitch.py:269
 msgid "Maximum fill stitch length"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:261
+#: lib/elements/fill_stitch.py:270
 msgid "The length of each stitch in a row.  Shorter stitch may be used at the start or end of a row."
 msgstr "Délka všech stehů v řádku. Kratší stehy mohou být použity na začátku nebo konce řádku."
 
-#: lib/elements/fill_stitch.py:277
+#: lib/elements/fill_stitch.py:286
 msgid "Spacing between rows"
 msgstr "Vzdálenost mezi řádky"
 
-#: lib/elements/fill_stitch.py:278
+#: lib/elements/fill_stitch.py:287
 msgid "Distance between rows of stitches."
 msgstr "Vzdálenost mezi řádkami stehů."
 
-#: lib/elements/fill_stitch.py:294 inx/inkstitch_gradient_blocks.inx:22
+#: lib/elements/fill_stitch.py:303 inx/inkstitch_gradient_blocks.inx:22
 msgid "End row spacing"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:295
+#: lib/elements/fill_stitch.py:304
 msgid "Increases or decreases the row spacing towards the end."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:309
+#: lib/elements/fill_stitch.py:318
 msgid "Stagger rows this many times before repeating"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:310 lib/elements/satin_column.py:193
+#: lib/elements/fill_stitch.py:319 lib/elements/satin_column.py:193
 msgid "Length of the cycle by which successive stitch rows are staggered. Fractional values are allowed and can have less visible diagonals than integer values."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:325 lib/elements/fill_stitch.py:538
+#: lib/elements/fill_stitch.py:334 lib/elements/fill_stitch.py:547
 msgid "Skip last stitch in each row"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:326 lib/elements/fill_stitch.py:539
+#: lib/elements/fill_stitch.py:335 lib/elements/fill_stitch.py:548
 msgid "The last stitch in each row is quite close to the first stitch in the next row.  Skipping it decreases stitch count and density."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:341
+#: lib/elements/fill_stitch.py:350
 msgid "Flip fill (start right-to-left)"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:342
+#: lib/elements/fill_stitch.py:351
 msgid "The flip option can help you with routing your stitch path.  When you enable flip, stitching goes from right-to-left instead of left-to-right."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:354
+#: lib/elements/fill_stitch.py:363
 msgid "Stop at ending point"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:355
+#: lib/elements/fill_stitch.py:364
 msgid "If this option is disabled, the ending point will only be used to define a general direction for stitch routing. When enabled the last section will end at the defined spot."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:367 lib/elements/fill_stitch.py:550
+#: lib/elements/fill_stitch.py:376 lib/elements/fill_stitch.py:559
 msgid "Underpath"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:368 lib/elements/fill_stitch.py:551
+#: lib/elements/fill_stitch.py:377 lib/elements/fill_stitch.py:560
 msgid "Travel inside the shape when moving from section to section.  Underpath stitches avoid traveling in the direction of the row angle so that they are not visible.  This gives them a jagged appearance."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:380 lib/elements/stroke.py:109
+#: lib/elements/fill_stitch.py:389 lib/elements/stroke.py:109
 msgid "Running stitch length"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:381
+#: lib/elements/fill_stitch.py:390
 msgid "Length of stitches around the outline of the fill region used when moving from section to section. Also used for meander and circular fill."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:397
+#: lib/elements/fill_stitch.py:406
 msgid "Running stitch tolerance"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:398
+#: lib/elements/fill_stitch.py:407
 msgid "Determines how hard Ink/Stitch tries to avoid stitching outside the shape.Lower numbers are less likely to stitch outside the shape but require more stitches."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:409 lib/elements/satin_column.py:393
+#: lib/elements/fill_stitch.py:418 lib/elements/satin_column.py:393
 #: lib/elements/stroke.py:83
 msgid "Repeats"
-msgstr ""
+msgstr "Opakování"
 
-#: lib/elements/fill_stitch.py:410 lib/elements/stroke.py:84
+#: lib/elements/fill_stitch.py:419 lib/elements/stroke.py:84
 msgid "Defines how many times to run down and back along the path."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:421 lib/elements/stroke.py:95
+#: lib/elements/fill_stitch.py:430 lib/elements/stroke.py:95
 msgid "Bean stitch number of repeats"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:422 lib/elements/stroke.py:96
+#: lib/elements/fill_stitch.py:431 lib/elements/stroke.py:96
 msgid "Backtrack each stitch this many times.  A value of 1 would triple each stitch (forward, back, forward).  A value of 2 would quintuple each stitch, etc.\n\n"
 "A pattern with various repeats can be created with a list of values separated by a space."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:436 lib/elements/satin_column.py:228
+#: lib/elements/fill_stitch.py:445 lib/elements/satin_column.py:228
 #: lib/elements/stroke.py:149
 msgid "Zig-zag spacing (peak-to-peak)"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:437 lib/elements/stroke.py:150
+#: lib/elements/fill_stitch.py:446 lib/elements/stroke.py:150
 msgid "Length of stitches in zig-zag mode."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:449
+#: lib/elements/fill_stitch.py:458
 msgid "Zigzag width"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:450
+#: lib/elements/fill_stitch.py:459
 msgid "Width of the zigzag line."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:472 inx/inkstitch_select_elements.inx:35
+#: lib/elements/fill_stitch.py:481 inx/inkstitch_select_elements.inx:35
 #: inx/inkstitch_select_elements.inx:62 inx/inkstitch_select_elements.inx:64
 msgid "Underlay"
-msgstr ""
+msgstr "Podklad"
 
-#: lib/elements/fill_stitch.py:472 lib/elements/fill_stitch.py:481
-#: lib/elements/fill_stitch.py:508 lib/elements/fill_stitch.py:519
-#: lib/elements/fill_stitch.py:529 lib/elements/fill_stitch.py:541
-#: lib/elements/fill_stitch.py:554
+#: lib/elements/fill_stitch.py:481 lib/elements/fill_stitch.py:490
+#: lib/elements/fill_stitch.py:517 lib/elements/fill_stitch.py:528
+#: lib/elements/fill_stitch.py:538 lib/elements/fill_stitch.py:550
+#: lib/elements/fill_stitch.py:563
 msgid "Fill Underlay"
-msgstr ""
+msgstr "﻿﻿Podkladová výplň"
 
-#: lib/elements/fill_stitch.py:478
+#: lib/elements/fill_stitch.py:487
 msgid "Fill angle"
 msgstr "Úhel výplně"
 
-#: lib/elements/fill_stitch.py:479
+#: lib/elements/fill_stitch.py:488
 msgid "Default: fill angle + 90 deg. Insert a list for multiple layers separated by a space."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:505
+#: lib/elements/fill_stitch.py:514
 msgid "Row spacing"
 msgstr "Řádkování"
 
-#: lib/elements/fill_stitch.py:506
+#: lib/elements/fill_stitch.py:515
 msgid "default: 3x fill row spacing"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:516 lib/elements/stroke.py:135
+#: lib/elements/fill_stitch.py:525 lib/elements/stroke.py:135
 #: lib/extensions/element_info.py:125 lib/extensions/element_info.py:181
 msgid "Max stitch length"
 msgstr "Maximální délka stehu"
 
-#: lib/elements/fill_stitch.py:517
+#: lib/elements/fill_stitch.py:526
 msgid "default: equal to fill max stitch length"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:527
+#: lib/elements/fill_stitch.py:536
 msgid "Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:562 lib/elements/satin_column.py:474
+#: lib/elements/fill_stitch.py:571 lib/elements/satin_column.py:474
 msgid "Random seed"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:563 lib/elements/satin_column.py:475
+#: lib/elements/fill_stitch.py:572 lib/elements/satin_column.py:475
 msgid "Use a specific seed for randomized attributes. Uses the element ID if empty."
 msgstr ""
 
@@ -1849,7 +1865,7 @@ msgstr ""
 #: lib/elements/satin_column.py:81 lib/elements/satin_column.py:91
 #: inx/inkstitch_select_elements.inx:30
 msgid "Satin Column"
-msgstr ""
+msgstr "Saténový sloupec"
 
 #: lib/elements/satin_column.py:87
 msgid "Custom satin column"
@@ -1870,7 +1886,7 @@ msgstr ""
 #: lib/elements/satin_column.py:98 lib/elements/stroke.py:73
 #: inx/inkstitch_break_apart.inx:17
 msgid "Method"
-msgstr ""
+msgstr "Metoda"
 
 #: lib/elements/satin_column.py:108
 msgid "Random percentage of satin width decrease"
@@ -1904,12 +1920,12 @@ msgstr ""
 
 #: lib/elements/satin_column.py:135
 msgid "Default"
-msgstr ""
+msgstr "Výchozí"
 
 #: lib/elements/satin_column.py:136 lib/stitch_plan/lock_stitch.py:209
 #: inx/inkstitch_break_apart.inx:18
 msgid "Simple"
-msgstr ""
+msgstr "Jednoduchý"
 
 #: lib/elements/satin_column.py:137
 msgid "Staggered"
@@ -2076,7 +2092,7 @@ msgstr ""
 
 #: lib/elements/satin_column.py:404
 msgid "Position"
-msgstr ""
+msgstr "Poloha"
 
 #: lib/elements/satin_column.py:405
 #, python-format
@@ -2143,7 +2159,7 @@ msgstr ""
 
 #: lib/elements/stroke.py:67
 msgid "Ripple Stitch"
-msgstr ""
+msgstr "Vlnitý steh"
 
 #: lib/elements/stroke.py:68 inx/inkstitch_select_elements.inx:21
 msgid "ZigZag Stitch"
@@ -2183,7 +2199,7 @@ msgstr ""
 
 #: lib/elements/stroke.py:188
 msgid "Minimum line distance"
-msgstr ""
+msgstr "Minimální vzdálenost mezi řádky"
 
 #: lib/elements/stroke.py:189
 msgid "Overrides the number of lines setting."
@@ -2284,7 +2300,7 @@ msgstr ""
 
 #: lib/elements/stroke.py:347
 msgid "Rotate"
-msgstr ""
+msgstr "Otáčení"
 
 #: lib/elements/stroke.py:348
 msgid "Rotate satin guided ripple stitches"
@@ -2300,7 +2316,7 @@ msgstr ""
 
 #: lib/elements/stroke.py:363
 msgid "flat"
-msgstr ""
+msgstr "plochý"
 
 #: lib/elements/stroke.py:363
 msgid "point"
@@ -2850,7 +2866,7 @@ msgstr ""
 
 #: lib/extensions/zip.py:85
 msgid "No embroidery file formats selected."
-msgstr ""
+msgstr "Nejsou vybrány žádné formáty vyšívacích souborů."
 
 #: lib/extensions/zip.py:129
 msgid "Design Details"
@@ -3406,7 +3422,7 @@ msgstr ""
 #: lib/utils/version.py:22
 #, python-format
 msgid "Ink/Stitch Version: %s"
-msgstr ""
+msgstr "Verze Ink/Stitch: %s"
 
 #: lib/utils/version.py:24
 msgid "Ink/Stitch Version: unknown"
@@ -3985,7 +4001,7 @@ msgstr "Formát PNG, přenosná síťová grafika"
 #. description for pyembroidery file format: txt
 #: pyembroidery-format-descriptions.py:88
 msgid "txt Format, Text File"
-msgstr ""
+msgstr "txt Formát, Textový soubor"
 
 #. description for pyembroidery file format: gcode
 #: pyembroidery-format-descriptions.py:90
@@ -4393,7 +4409,7 @@ msgstr ""
 
 #: inx/inkstitch_break_apart.inx:10 inx/inkstitch_gradient_blocks.inx:10
 msgid "Tools: Fill"
-msgstr ""
+msgstr "Nástroje: Výplň"
 
 #: inx/inkstitch_break_apart.inx:14
 msgid "This extension will try to repair fill shapes and break them apart if necessary. Holes will be retained. Use on simple or overlapping shapes."
@@ -4441,7 +4457,7 @@ msgstr ""
 
 #: inx/inkstitch_cleanup.inx:17
 msgid "Test run"
-msgstr ""
+msgstr "Zkušební běh"
 
 #: inx/inkstitch_cleanup.inx:17
 msgid "Only display labels and ids of affected elements and groups without removing them."
@@ -4499,7 +4515,7 @@ msgstr ""
 #: inx/inkstitch_cutwork_segmentation.inx:28
 #: inx/inkstitch_cutwork_segmentation.inx:34
 msgid "start"
-msgstr ""
+msgstr "začít"
 
 #: inx/inkstitch_cutwork_segmentation.inx:17
 #: inx/inkstitch_cutwork_segmentation.inx:23
@@ -4713,7 +4729,7 @@ msgstr ""
 
 #: inx/inkstitch_generate_palette.inx:20
 msgid "Folder (optional):"
-msgstr ""
+msgstr "Složka (volitelně):"
 
 #: inx/inkstitch_generate_palette.inx:22
 msgid "⚠ Restart Inkscape to use your color palette."
@@ -4817,7 +4833,7 @@ msgstr "převést COL souborů do Ink/Stitch s ručním stehem"
 
 #: inx/inkstitch_input_CSV.inx:3
 msgid "CSV file input"
-msgstr ""
+msgstr "Vstupní soubor CSV"
 
 #: inx/inkstitch_input_CSV.inx:8
 msgid "Ink/Stitch: Comma-separated values (.csv)"
@@ -5441,7 +5457,7 @@ msgstr ""
 
 #: inx/inkstitch_lettering_along_path.inx:15
 msgid "Stretch"
-msgstr ""
+msgstr "Roztáhnout"
 
 #: inx/inkstitch_lettering_along_path.inx:15
 msgid "Expand glyph and word spacing to stretch lettering over the entire path"
@@ -5483,7 +5499,7 @@ msgstr ""
 #: inx/inkstitch_lettering_update_json_glyphlist.inx:10
 #: inx/inkstitch_letters_to_font.inx:10
 msgid "Font Management"
-msgstr ""
+msgstr "Správa písem"
 
 #: inx/inkstitch_lettering_custom_font_dir.inx:14
 msgid "Set a custom directory for additional fonts to be used with the lettering tool."
@@ -5507,7 +5523,7 @@ msgstr ""
 
 #: inx/inkstitch_lettering_force_lock_stitches.inx:27
 msgid "Minimum distance (mm)"
-msgstr ""
+msgstr "Minimální vzdálenost (mm)"
 
 #: inx/inkstitch_lettering_force_lock_stitches.inx:28
 msgid "Maximum distance (mm)"
@@ -5662,7 +5678,7 @@ msgstr ""
 
 #: inx/inkstitch_letters_to_font.inx:22
 msgid "File format"
-msgstr ""
+msgstr "Formát souboru"
 
 #: inx/inkstitch_letters_to_font.inx:61
 msgid "Font directory"
@@ -5974,7 +5990,7 @@ msgstr ""
 
 #: inx/inkstitch_output_TXT.inx:9
 msgid "Save design in TXT format using Ink/Stitch"
-msgstr ""
+msgstr "Uložení návrhu ve formátu TXT pomocí aplikace Ink/Stitch"
 
 #: inx/inkstitch_output_U01.inx:3
 msgid "U01 file output"
@@ -6050,7 +6066,7 @@ msgstr ""
 
 #: inx/inkstitch_remove_embroidery_settings.inx:10
 msgid "Remove Commands"
-msgstr ""
+msgstr "Odstranění příkazů"
 
 #: inx/inkstitch_remove_embroidery_settings.inx:10
 msgid "Removes visual commands from selected objects or all objects if nothing is selected."
@@ -6058,7 +6074,7 @@ msgstr ""
 
 #: inx/inkstitch_remove_embroidery_settings.inx:12
 msgid "All"
-msgstr ""
+msgstr "Vše"
 
 #: inx/inkstitch_remove_embroidery_settings.inx:33
 msgid "Remove Print Settings from SVG metadata"
@@ -6140,7 +6156,7 @@ msgstr ""
 #: inx/inkstitch_select_elements.inx:40
 #: inx/inkstitch_zigzag_line_to_satin.inx:12
 msgid "Zigzag"
-msgstr ""
+msgstr "Klikaté"
 
 #: inx/inkstitch_select_elements.inx:43
 msgid "Rung count"
@@ -6179,7 +6195,7 @@ msgid "Selects specific embroidery elements by stitch type."
 msgstr ""
 
 #: inx/inkstitch_select_elements.inx:82
-msgid "If there is already an active selection, non maching elements will be deselected."
+msgid "If there is already an active selection, non matching elements will be deselected."
 msgstr ""
 
 #: inx/inkstitch_select_elements.inx:88
@@ -6228,7 +6244,7 @@ msgstr ""
 
 #: inx/inkstitch_stitch_plan_preview.inx:25
 msgid "Lock"
-msgstr ""
+msgstr "Zámek"
 
 #: inx/inkstitch_stitch_plan_preview.inx:25
 msgid "Make stitch plan insensitive to mouse interactions"
@@ -6296,16 +6312,16 @@ msgstr ""
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:20
 msgid "Pattern Length (mm)"
-msgstr ""
+msgstr "Délka vzoru (mm)"
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:21
 msgid "Stretched"
-msgstr ""
+msgstr "Natažený"
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:22
 #: inx/inkstitch_zigzag_line_to_satin.inx:15
 msgid "Add rungs"
-msgstr ""
+msgstr "Přidat příčky"
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:24
 msgid "Path specific"
@@ -6345,11 +6361,11 @@ msgstr ""
 
 #: inx/inkstitch_troubleshoot.inx:7
 msgid "Font size (mm)"
-msgstr ""
+msgstr "Velikost písma (mm)"
 
 #: inx/inkstitch_update_svg.inx:3
 msgid "Update inkstitch svg"
-msgstr ""
+msgstr "Aktualizace inkstitch svg"
 
 #: inx/inkstitch_update_svg.inx:14
 msgid "Usually there is no need to run this extension: Ink/Stitch automatically updates old designs once."
@@ -6378,23 +6394,23 @@ msgstr ""
 #: inx/inkstitch_zigzag_line_to_satin.inx:9
 #: inx/inkstitch_zigzag_line_to_satin.inx:21
 msgid "Line Pattern"
-msgstr ""
+msgstr "Čárový vzor"
 
 #: inx/inkstitch_zigzag_line_to_satin.inx:10
 msgid "Square"
-msgstr ""
+msgstr "Čtvercový"
 
 #: inx/inkstitch_zigzag_line_to_satin.inx:11
 msgid "Sawtooth"
-msgstr ""
+msgstr "﻿﻿﻿Pilovitý"
 
 #: inx/inkstitch_zigzag_line_to_satin.inx:14
 msgid "Smoothing"
-msgstr ""
+msgstr "Vyhlazení"
 
 #: inx/inkstitch_zigzag_line_to_satin.inx:16
 msgid "Reduce number of rungs"
-msgstr ""
+msgstr "Snížení počtu příček"
 
 #: inx/inkstitch_zigzag_line_to_satin.inx:19
 msgid "This extension converts a zigzag line into a satin column."
@@ -6434,7 +6450,7 @@ msgstr ""
 
 #: inx/inkstitch_zip.inx:13
 msgid "Custom file name"
-msgstr ""
+msgstr "Vlastní název souboru"
 
 #: inx/inkstitch_zip.inx:13
 msgid "Defines the file names inside the zip archive. Leave empty for default file name."
@@ -6442,11 +6458,11 @@ msgstr ""
 
 #: inx/inkstitch_zip.inx:16
 msgid "File Formats"
-msgstr ""
+msgstr "Formát souborů"
 
 #: inx/inkstitch_zip.inx:17
 msgid "Output formats:"
-msgstr ""
+msgstr "Výstupní formáty:"
 
 #: inx/inkstitch_zip.inx:32
 msgid ".TXT: Threadlist [COLOR]"
@@ -6466,7 +6482,7 @@ msgstr ""
 
 #: inx/inkstitch_zip.inx:39
 msgid "Horizontal repeats"
-msgstr ""
+msgstr "Vodorovné opakování"
 
 #: inx/inkstitch_zip.inx:40
 msgid "Horizontal spacing (mm)"
@@ -6474,7 +6490,7 @@ msgstr ""
 
 #: inx/inkstitch_zip.inx:41
 msgid "Vertical repeats"
-msgstr ""
+msgstr "Vertikální opakování"
 
 #: inx/inkstitch_zip.inx:42
 msgid "Vertical spacing (mm)"
