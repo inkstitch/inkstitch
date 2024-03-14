@@ -7,30 +7,33 @@ import time
 from collections import defaultdict
 from copy import copy
 from itertools import chain
+from typing import List, Optional, Tuple, Union
 
-import inkex
-from networkx import is_empty
-from shapely import (LineString, MultiLineString, Point, dwithin,
-                     minimum_bounding_radius, reverse)
+from inkex import Circle, Group, Path, PathElement, Rectangle
+from networkx import MultiGraph, is_empty
+from shapely import (LineString, MultiLineString, MultiPolygon, Point, Polygon,
+                     dwithin, minimum_bounding_radius, reverse)
 from shapely.affinity import scale
 from shapely.ops import linemerge, substring
 
 from ..commands import add_commands
 from ..elements import FillStitch
-from ..stitches.auto_fill import (build_fill_stitch_graph, build_travel_graph,
-                                  find_stitch_path, graph_make_valid,
-                                  which_outline)
+from ..stitches.auto_fill import (PathEdge, build_fill_stitch_graph,
+                                  build_travel_graph, find_stitch_path,
+                                  graph_make_valid, which_outline)
 from ..svg import PIXELS_PER_MM, get_correction_transform
-from ..utils import ensure_multi_line_string
+from ..utils import DotDict, ensure_multi_line_string
 from .pallet import Pallet
 from .utils import sort_fills_and_strokes, stripes_to_shapes
 
 
 class TartanSvgGroup:
-    """Generates the tartan pattern for svg element tartans
-    """
+    """Generates the tartan pattern for svg element tartans"""
 
-    def __init__(self, settings):
+    def __init__(self, settings: DotDict) -> None:
+        """
+        :param settings: the tartan settings
+        """
         self.rotate = settings['rotate']
         self.scale = settings['scale']
         self.offset_x = settings['offset_x'] * PIXELS_PER_MM
@@ -55,10 +58,15 @@ class TartanSvgGroup:
         if self.pallet.equal_warp_weft:
             self.weft = self.warp
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         return f'TartanPattern({self.rotate}, {self.scale}, ({self.offset_x}, {self.offset_y}), {self.symmetry}, {self.warp}, {self.weft})'
 
-    def generate(self, outline):
+    def generate(self, outline: Union[PathElement, Rectangle, Circle]) -> Group:
+        """
+        Generates a svg group which holds svg elements to represent the tartan pattern
+
+        :param outline: the outline to be filled with the tartan pattern
+        """
         parent_group = outline.getparent()
         if parent_group.get_id().startswith('inkstitch-tartan'):
             # remove everything but the tartan outline
@@ -67,7 +75,7 @@ class TartanSvgGroup:
                     parent_group.remove(child)
             group = parent_group
         else:
-            group = inkex.Group()
+            group = Group()
             group.set('id', f'inkstitch-tartan-{int(time.time())}')
             parent_group.append(group)
 
@@ -85,7 +93,7 @@ class TartanSvgGroup:
             self.scale,
             self.min_stripe_width
         )
-        warp_routing_lines = self._get_routing_lines(warp, outline_shape)
+        warp_routing_lines = self._get_routing_lines(warp)
         warp = self._route_shapes(warp_routing_lines, outline_shape, warp)
         warp = self._shapes_to_elements(warp, warp_routing_lines, transform)
 
@@ -100,7 +108,7 @@ class TartanSvgGroup:
             self.min_stripe_width,
             True
         )
-        weft_routing_lines = self._get_routing_lines(weft, outline_shape)
+        weft_routing_lines = self._get_routing_lines(weft)
         weft = self._route_shapes(weft_routing_lines, outline_shape, weft, True)
         weft = self._shapes_to_elements(weft, weft_routing_lines, transform, True)
 
@@ -125,30 +133,51 @@ class TartanSvgGroup:
         group.append(outline)
         return group
 
-    def _get_command_position(self, fill, point):
+    def _get_command_position(self, fill: FillStitch, point: Tuple[float, float]) -> Point:
+        """
+        Shift command position out of the element shape
+
+        :param fill: the fill element to which to attach the command
+        :param point: position where the command should point to
+        """
         dimensions, center = self._get_dimensions(fill.shape)
-        line = LineString([center, (point[0], point[1])])
+        line = LineString([center, point])
         fact = 20 / line.length
         line = scale(line, xfact=1+fact, yfact=1+fact, origin=center)
         pos = line.coords[-1]
         return Point(pos)
 
-    def _add_command(self, element):
+    def _add_command(self, element: Union[PathElement, Rectangle, Circle]) -> None:
+        """
+        Add a command to given svg element
+
+        :param element: svg element to which to attach the command
+        """
         if not element.style('fill'):
             return
         fill = FillStitch(element)
+        if fill.shape.is_empty:
+            return
         start = element.get('inkstitch:start')
         end = element.get('inkstitch:end')
         if start:
             start = start[1:-1].split(',')
-            add_commands(fill, ['fill_start'], self._get_command_position(fill, start))
+            add_commands(fill, ['fill_start'], self._get_command_position(fill, (float(start[0]), float(start[1]))))
             element.pop('inkstitch:start')
         if end:
             end = end[1:-1].split(',')
-            add_commands(fill, ['fill_end'], self._get_command_position(fill, end))
+            add_commands(fill, ['fill_end'], self._get_command_position(fill, (float(end[0]), float(end[1]))))
             element.pop('inkstitch:end')
 
-    def _route_shapes(self, routing_lines, outline_shape, shapes, weft=False):
+    def _route_shapes(self, routing_lines: defaultdict, outline_shape: MultiPolygon, shapes: defaultdict, weft: bool = False) -> defaultdict:
+        """
+        Route polygons and linestrings
+
+        :param routing_lines: diagonal lines representing the tartan stripes used for routing
+        :param outline_shape: the shape to be filled with the tartan pattern
+        :param shapes: the tartan shapes (stripes)
+        :param weft: wether to render warp or weft oriented stripes
+        """
         routed = defaultdict(list)
         for color, lines in routing_lines.items():
             routed_polygons = self._get_routed_shapes('polygon', shapes[color][0], lines[0], outline_shape, weft)
@@ -156,7 +185,24 @@ class TartanSvgGroup:
             routed[color] = [routed_polygons, routed_linestrings]
         return routed
 
-    def _get_routed_shapes(self, geometry_type, polygons, lines, outline_shape, weft):
+    def _get_routed_shapes(
+        self,
+        geometry_type: str,
+        polygons: Optional[List[Polygon]],
+        lines: Optional[List[LineString]],
+        outline_shape: MultiPolygon,
+        weft: bool
+    ):
+        """
+        Find path for given elements
+
+        :param geometry_type: wether to route 'polygon' or 'linestring'
+        :param polygons: list of polygons to route
+        :param lines: list of lines to route (for polygon routing these are the routing lines)
+        :param outline_shape: the shape to be filled with the tartan pattern
+        :param weft: wether to route warp or weft oriented stripes
+        :returns: a list of routed elements
+        """
         if not lines:
             return []
 
@@ -177,7 +223,24 @@ class TartanSvgGroup:
         path = find_stitch_path(fill_stitch_graph, travel_graph, starting_point, ending_point)
         return self._path_to_shapes(path, fill_stitch_graph, polygons, geometry_type, outline_shape)
 
-    def _path_to_shapes(self, path, fill_stitch_graph, polygons, geometry_type, outline_shape):
+    def _path_to_shapes(
+        self,
+        path: List[PathEdge],
+        fill_stitch_graph: MultiGraph,
+        polygons: Optional[List[Polygon]],
+        geometry_type: MultiPolygon,
+        outline_shape: MultiPolygon
+    ) -> list:
+        """
+        Return elements in given order (by path) and add strokes for travel between elements
+
+        :param path: routed PathEdges
+        :param fill_stitch_graph: the stitch graph
+        :param polygons: the polygon shapes (if not LineStrings)
+        :param geometry_type: wether to render 'polygon' or 'linestring' segments
+        :param outline_shape: the shape to be filkled with the tartan pattern
+        :returns: a list of routed shape elements
+        """
         outline = MultiLineString()
         travel_linestring = LineString()
         routed_shapes = []
@@ -193,7 +256,7 @@ class TartanSvgGroup:
                     if travel_linestring.geom_type == "LineString":
                         routed_shapes.append(travel_linestring)
                     travel_linestring = LineString()
-                routed = self._route_edge_segment(edge, outline, geometry_type, fill_stitch_graph, polygons)
+                routed = self._edge_segment_to_element(edge, geometry_type, fill_stitch_graph, polygons)
                 routed_shapes.extend(routed)
             elif routed_shapes:
                 # prepare edge run between segments
@@ -207,7 +270,23 @@ class TartanSvgGroup:
                     travel_linestring = substring(outline, start_distance, end_distance)
         return routed_shapes
 
-    def _route_edge_segment(self, edge, outline, geometry_type, fill_stitch_graph, polygons):
+    def _edge_segment_to_element(
+        self,
+        edge: PathEdge,
+        geometry_type: str,
+        fill_stitch_graph: MultiGraph,
+        polygons: Optional[List[Polygon]]
+    ) -> list:
+        """
+        Turns an edge back into an element
+
+        :param edge: edge with start and end point information
+        :param geom_type: wether to convert a 'polygon' or 'linestring'
+        :param fill_stitch_graph: the stitch graph
+        :param polygons: list of polygons if geom_type is 'poylgon'
+        :returns: a list of routed elements.
+            Polygons are wrapped in dictionaries to preserve information about start and end point.
+        """
         start, end = edge
         routed = []
         if geometry_type == 'polygon':
@@ -227,7 +306,14 @@ class TartanSvgGroup:
                     routed.append(line)
         return routed
 
-    def _get_shortest_travel(self, start, outline, travel_linestring):
+    def _get_shortest_travel(self, start: Tuple[float, float], outline: LineString, travel_linestring: LineString) -> LineString:
+        """
+        Replace travel_linestring with a shorter travel line if possible
+
+        :param start: travel starting point
+        :param outline: the part of the outline which is nearest to the starting point
+        :param travel_linestring: predefined travel which will be replaced if it is longer
+        """
         if outline.length / 2 < travel_linestring.length:
             short_travel = outline.difference(travel_linestring)
             if short_travel.geom_type == "MultiLineString":
@@ -238,12 +324,25 @@ class TartanSvgGroup:
                 return short_travel
         return travel_linestring
 
-    def _find_polygon(self, polygons, point):
+    def _find_polygon(self, polygons: List[Polygon], point: Tuple[float, float]) -> Optional[Polygon]:
+        """
+        Find the polygon for a given point
+
+        :param polygons: a list of polygons to chose from
+        :param point: the point to match a polygon to
+        :returns: a matching polygon or None if no polygon could be found
+        """
         for polygon in polygons:
             if dwithin(point, polygon, 0.01):
                 return polygon
 
-    def _get_routing_lines(self, shapes, outline):
+    def _get_routing_lines(self, shapes: defaultdict) -> defaultdict:
+        """
+        Generate routing lines for given polygon shapes
+
+        :param shapes: polygon shapes grouped by color
+        :returns: color grouped dictionary with lines which can be used for routing
+        """
         routing_lines = defaultdict(list)
         for color, elements in shapes.items():
             routed = [[], []]
@@ -256,7 +355,16 @@ class TartanSvgGroup:
             routing_lines[color] = routed
         return routing_lines
 
-    def _shapes_to_elements(self, shapes, routed_lines, transform, weft=False):
+    def _shapes_to_elements(self, shapes: defaultdict, routed_lines: defaultdict, transform: str, weft=False) -> defaultdict:
+        """
+        Generates svg elements from given shapes
+
+        :param shapes: lists of shapes grouped by color
+        :param routed_lines: lists of routed lines grouped by color
+        :param transform: correction transform to apply to the elements
+        :param weft: wether to render warp or weft oriented stripes
+        :returns: lists of svg elements grouped by color
+        """
         shapes_copy = copy(shapes)
         for color, shape in shapes_copy.items():
             elements = [[], []]
@@ -282,8 +390,15 @@ class TartanSvgGroup:
             shapes[color] = elements
         return shapes
 
-    def _adapt_legacy_fill_params(self, path_element, start):
-        # find best legacy fill param setting
+    def _adapt_legacy_fill_params(self, path_element: PathElement, start: Point) -> PathElement:
+        """
+        Find best legacy fill param setting
+        Flip and reverse so that the fill starts as near as possible to the starting point
+
+        :param path_element: a legacy fill svg path element
+        :param start: the starting point
+        :returns: the adapted path element
+        """
         if not FillStitch(path_element).to_stitch_groups(None):
             return path_element
         blank = Point(FillStitch(path_element).to_stitch_groups(None)[0].stitches[0])
@@ -310,9 +425,14 @@ class TartanSvgGroup:
             path_element.set('inkstitch:flip', True)
         return path_element
 
-    def _combine_shapes(self, warp, weft, outline):
-        # combine warp and weft elements into color groups
-        # separated into polygons and linestrings
+    def _combine_shapes(self, warp: defaultdict, weft: defaultdict, outline: MultiPolygon) -> Tuple[defaultdict, defaultdict]:
+        """
+        Combine warp and weft elements into color groups, but separated into polygons and linestrings
+
+        :param warp: dictionary with warp polygons and linestrings grouped by color
+        :param weft: dictionary with weft polygons and linestrings grouped by color
+        :returns: a dictionary with polygons and a dictionary with linestrings each grouped by color
+        """
         polygons = defaultdict(list)
         linestrings = defaultdict(list)
         for color, shapes in chain(warp.items(), weft.items()):
@@ -347,12 +467,27 @@ class TartanSvgGroup:
 
         return polygons, linestrings
 
-    def _get_travel(self, start, end, outline):
+    def _get_travel(self, start: Tuple[float, float], end: Tuple[float, float], outline: LineString) -> LineString:
+        """
+        Returns a travel line from start point to end point along the outline
+
+        :param start: starting point
+        :param end: ending point
+        :param outline: the outline
+        :returns: a travel LineString from start to end along the outline
+        """
         start_distance = outline.project(Point(start))
         end_distance = outline.project(Point(end))
         return substring(outline, start_distance, end_distance)
 
-    def _get_dimensions(self, outline):
+    def _get_dimensions(self, outline: MultiPolygon) -> Tuple[List[float], Point]:
+        """
+        Calculates the dimensions to generate the tartan pattern for in the first place.
+        Make sure it is big enough for pattern rotations.
+
+        :param outline: the shape to be filled with a tartan pattern
+        :returns: [0] a list with boundaries and [1] the center point (for rotations)
+        """
         bounds = outline.bounds
         minx, miny, maxx, maxy = bounds
         minx -= self.offset_x
@@ -368,18 +503,37 @@ class TartanSvgGroup:
             maxy = center.y + min_radius
         return [minx, miny, maxx, maxy], center
 
-    def _polygon_to_path(self, color, polygon, weft, transform, start=None, end=None):
-        path = inkex.Path(list(polygon.exterior.coords))
+    def _polygon_to_path(
+        self,
+        color: str,
+        polygon: Polygon,
+        weft: bool,
+        transform: str,
+        start: Optional[Tuple[float, float]] = None,
+        end: Optional[Tuple[float, float]] = None
+    ) -> Optional[PathElement]:
+        """
+        Convert a polygon to an svg path element
+
+        :param color: hex color
+        :param polygon: the polygon to convert
+        :param weft: wether to render as warp or weft
+        :param transform: string of the transform to apply to the element
+        :param start: start position for routing
+        :param end: end position for routing
+        :returns: an svg path element or None if the polygon is empty
+        """
+        path = Path(list(polygon.exterior.coords))
         path.close()
         if path is None:
             return
 
         for interior in polygon.interiors:
-            interior_path = inkex.Path(list(interior.coords))
+            interior_path = Path(list(interior.coords))
             interior_path.close()
             path += interior_path
 
-        path_element = inkex.PathElement(
+        path_element = PathElement(
             attrib={'d': str(path)},
             style=f'fill:{color};fill-opacity:0.6;',
             transform=transform
@@ -407,12 +561,21 @@ class TartanSvgGroup:
 
         return path_element
 
-    def _linestring_to_path(self, color, line, transform, travel=False):
-        path = str(inkex.Path(list(line.coords)))
+    def _linestring_to_path(self, color: str, line: LineString, transform: str, travel: bool = False):
+        """
+        Convert a linestring to an svg path element
+
+        :param color: hex color
+        :param line: the line to convert
+        :param transform: string of the transform to apply to the element
+        :param travel: wether to render as travel line or running stitch/bean stitch
+        :returns: an svg path element or None if the linestring path is empty
+        """
+        path = str(Path(list(line.coords)))
         if not path:
             return
 
-        path_element = inkex.PathElement(
+        path_element = PathElement(
             attrib={'d': path},
             style=f'fill:none;stroke:{color};stroke-opacity:0.6;',
             transform=transform

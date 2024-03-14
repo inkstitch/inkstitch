@@ -3,8 +3,16 @@
 # Copyright (c) 2023 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
+from typing import Union
 
-def prepare_tartan_fill_element(element):
+from inkex import Circle, PathElement, Rectangle
+
+
+def prepare_tartan_fill_element(element: Union[PathElement, Rectangle, Circle]) -> None:
+    """Prepares an svg element to be rendered as a tartan_fill embroidery element
+
+    :param element: svg element with a fill color (path, rectangle, or circle)
+    """
     parent_group = element.getparent()
     if parent_group.get_id().startswith('inkstitch-tartan'):
         # apply tartan group transform to element

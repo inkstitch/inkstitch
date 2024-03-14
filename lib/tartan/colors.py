@@ -1,7 +1,19 @@
-# tartan colors according to https://www.tartanregister.gov.uk/docs/Colour_shades.pdf (as of december 2023)
-# Problem: multiple usage of same color code
+# Authors: see git history
+#
+# Copyright (c) 2023 Authors
+# Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
+# Additional credits to https://github.com/clsn/pyTartan
 
-def string_to_color(color_string):
+# tartan colors according to https://www.tartanregister.gov.uk/docs/Colour_shades.pdf (as of december 2023)
+# Problem: ambigious due to multiple usage of same color code
+
+def string_to_color(color_string: str) -> str:
+    """
+    Converts a color code from the tartan register to a hex color code or defaults to empty
+
+    :param color_string: color code from the tartan register
+    :returns: hex color code or empty string
+    """
     standards = {
         # 'LR': '#F4CCCC',  # Light Red
         'LR': '#E87878',  # Light Red
@@ -49,8 +61,8 @@ def string_to_color(color_string):
         # 'LG': '#649848',  # Light Green
         # 'G': '#008B00',  # Green
         # 'G': '#408060',  # Green
-        # 'G': '#289C18',  # Green
-        'G': '#006400',  # Green
+        'G': '#289C18',  # Green
+        # 'G': '#006400',  # Green
         # 'G': '#007800',  # Green
         # 'G': '#3F5642',  # Green
         # 'G': '#767E52',  # Green
