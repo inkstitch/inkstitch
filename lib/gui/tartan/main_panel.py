@@ -88,7 +88,8 @@ class TartanMainPanel(wx.Panel):
         self.customize_panel.symmetry_checkbox.SetValue(self.pallet.symmetry)
         self.customize_panel.warp_weft_checkbox.SetValue(self.pallet.equal_warp_weft)
         self.code_panel.threadcount_text.SetValue(self.pallet.pallet_code)
-        self.customize_panel.update_stripes(self.pallet.pallet_stripes, self.pallet.symmetry)
+        self.customize_panel.update_stripes(self.pallet.pallet_stripes)
+        self.customize_panel.update_symmetry()
         self.customize_panel.update_warp_weft()
         self.customize_panel.FitInside()
         self.update_preview()
@@ -114,17 +115,17 @@ class TartanMainPanel(wx.Panel):
         self.settings = DotDict({
             "symmetry": True,
             "equal_warp_weft": True,
-            "rotate": 0,
+            "rotate": 0.0,
             "scale": 100,
-            "offset_x": 0,
-            "offset_y": 0,
+            "offset_x": 0.0,
+            "offset_y": 0.0,
             "pallet": "K/10 W/?10",
             "output": "embroidery",
             "stitch_type": "legacy_fill",
-            "row_spacing": 1,
-            "angle_warp": 0,
-            "angle_weft": 90,
-            "min_stripe_width": 1,
+            "row_spacing": 1.0,
+            "angle_warp": 0.0,
+            "angle_weft": 90.0,
+            "min_stripe_width": 1.0,
             "bean_stitch_repeats": 0
         })
 

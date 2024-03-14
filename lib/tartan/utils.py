@@ -6,8 +6,11 @@
 import json
 from collections import defaultdict
 from copy import copy
+from typing import List, Tuple, Union
 
-from shapely import LineString, Polygon, unary_union
+from inkex import Circle, PathElement, Rectangle
+from numpy import float64
+from shapely import LineString, MultiPolygon, Point, Polygon, unary_union
 from shapely.affinity import rotate
 
 from ..svg import PIXELS_PER_MM
@@ -16,8 +19,33 @@ from ..utils import ensure_multi_line_string, ensure_multi_polygon
 from .pallet import Pallet
 
 
-def stripes_to_shapes(stripes, dimensions, outline, rotation, rotation_center, symmetry, scale, min_stripe_width, weft=False, intersect_outline=True):
-    ''' Converts tartan stripes to polygons and linestrings (depending on stripe width) sorted by color '''
+def stripes_to_shapes(
+    stripes: List[dict],
+    dimensions: List[Union[float, float64]],
+    outline: MultiPolygon,
+    rotation: float,
+    rotation_center: Point,
+    symmetry: bool,
+    scale: int,
+    min_stripe_width: float,
+    weft: bool = False,
+    intersect_outline: bool = True
+) -> defaultdict:
+    """
+    Convert tartan stripes to polygons and linestrings (depending on stripe width) sorted by color
+
+    :param stripes: a list of dictionaries with stripe information
+    :param dimensions: the dimension to fill with the tartan pattern (minx, miny, maxx, maxy)
+    :param outline: the shape to fill with the tartan pattern
+    :param rotation: the angle to rotate the pattern
+    :param rotation_center: the center point for rotation
+    :param symmetry: reflective sett (True) / repeating sett (False)
+    :param scale: the scale value (percent) for the pattern
+    :param min_stripe_width: min stripe width before it is rendered as running stitch
+    :param weft: wether to render warp or weft oriented stripes
+    :param intersect_outline: wether or not cut the shapes to fit into the outline
+    :returns: a dictionary with shapes grouped by color
+    """
 
     minx, miny, maxx, maxy = dimensions
     shapes = defaultdict(list)
@@ -49,7 +77,7 @@ def stripes_to_shapes(stripes, dimensions, outline, rotation, rotation_center, s
                 top = bottom
                 continue
 
-            dimensions = (top, bottom, left, right, minx, miny, maxx, maxy)
+            dimensions = [top, bottom, left, right, minx, miny, maxx, maxy]
             if width <= min_stripe_width * PIXELS_PER_MM:
                 linestrings = _get_linestrings(outline, dimensions, rotation, rotation_center, weft)
                 shapes[stripe['color']].extend(linestrings)
@@ -61,7 +89,15 @@ def stripes_to_shapes(stripes, dimensions, outline, rotation, rotation_center, s
             top = bottom
 
 
-def _merge_polygons(shapes, outline, intersect_outline=True):
+def _merge_polygons(shapes: defaultdict, outline: Polygon, intersect_outline: bool = True) -> defaultdict:
+    """
+    Merge polygons which are bordering each other (they most probably used a running stitch in between)
+
+    :param shapes: shapes grouped by color
+    :param outline: the shape to be filled with a tartan pattern
+    :intersect_outline: wether to return an intersection of the shapes with the outline or not
+    :returns: the shapes with merged polygons
+    """
     shapes_copy = copy(shapes)
     for color, shape_group in shapes_copy.items():
         polygons = []
@@ -82,7 +118,16 @@ def _merge_polygons(shapes, outline, intersect_outline=True):
     return shapes
 
 
-def _get_polygon(dimensions, rotation, rotation_center, weft):
+def _get_polygon(dimensions: List[float], rotation: float, rotation_center: Point, weft: bool) -> Polygon:
+    """
+    Generates a rotated polygon with the given dimensions
+
+    :param dimensions: top, bottom, left, right, minx, miny, maxx, maxy
+    :param rotation: the angle to rotate the pattern
+    :param rotation_center: the center point for rotation
+    :param weft: wether to render warp or weft oriented stripes
+    :returns: the generated Polygon
+    """
     top, bottom, left, right, minx, miny, maxx, maxy = dimensions
     if not weft:
         polygon = Polygon([(left, miny), (right, miny), (right, maxy), (left, maxy)])
@@ -93,7 +138,17 @@ def _get_polygon(dimensions, rotation, rotation_center, weft):
     return polygon
 
 
-def _get_linestrings(outline, dimensions, rotation, rotation_center, weft):
+def _get_linestrings(outline: MultiPolygon, dimensions: List[float], rotation: float, rotation_center: Point, weft: bool) -> list:
+    """
+    Generates a rotated linestrings with the given dimension (outline intersection)
+
+    :param outline: the outline to be filled with the tartan pattern
+    :param dimensions: top, bottom, left, right, minx, miny, maxx, maxy
+    :param rotation: the angle to rotate the pattern
+    :param rotation_center: the center point for rotation
+    :param weft: wether to render warp or weft oriented stripes
+    :returns: a list of the generated linestrings
+    """
     top, bottom, left, right, minx, miny, maxx, maxy = dimensions
     linestrings = []
     if weft:
@@ -108,10 +163,16 @@ def _get_linestrings(outline, dimensions, rotation, rotation_center, weft):
     return linestrings
 
 
-def sort_fills_and_strokes(fills, strokes):
-    # Lines should be stitched out last, so they won't be covered by following fill elements.
-    # However, if we find lines of the same color as one of the polygon groups, we can make
-    # sure that they stitch next to each other to reduce color changes by at least one
+def sort_fills_and_strokes(fills: defaultdict, strokes: defaultdict) -> Tuple[defaultdict, defaultdict]:
+    """
+    Lines should be stitched out last, so they won't be covered by following fill elements.
+    However, if we find lines of the same color as one of the polygon groups, we can make
+    sure that they stitch next to each other to reduce color changes by at least one.
+
+    :param fills: fills grouped by color
+    :param strokes: strokes grouped by color
+    :returns: the sorted fills and strokes
+    """
     color_to_connect = filter(lambda color: color in fills, strokes)
     color_to_connect = next(color_to_connect, None)
     if color_to_connect is not None:
@@ -128,30 +189,50 @@ def sort_fills_and_strokes(fills, strokes):
     return fills, strokes
 
 
-def get_tartan_settings(node):
+def get_tartan_settings(node: Union[PathElement, Rectangle, Circle]) -> dict:
+    """
+    Parse tartan settings from node inkstich:tartan attribute
+
+    :param node: the tartan svg element
+    :returns: the tartan settings in a dictionary
+    """
     settings = node.get(INKSTITCH_TARTAN, None)
     if settings is None:
         settings = {
             'pallet': '(#101010)/5.0 (#FFFFFF)/?5.0',
-            'rotate': 0,
-            'offset_x': 0,
-            'offset_y': 0,
+            'rotate': 0.0,
+            'offset_x': 0.0,
+            'offset_y': 0.0,
             'symmetry': True,
             'scale': 100,
-            'min_stripe_width': 1
+            'min_stripe_width': 1.0
         }
         return settings
     return json.loads(settings)
 
 
-def get_pallet_width(settings, direction=0):
+def get_pallet_width(settings: dict, direction: int = 0) -> float:
+    """
+    Calculate the width of all stripes (with a minimum width) in given direction
+
+    :param settings: tartan settings
+    :param direction: [0] warp [1] weft
+    :returns: the calculated pallet width
+    """
     pallet_code = settings['pallet']
     pallet = Pallet()
     pallet.update_from_code(pallet_code)
     return pallet.get_pallet_width(settings['scale'], settings['min_stripe_width'], direction)
 
 
-def get_tartan_stripes(settings):
+def get_tartan_stripes(settings: dict) -> Tuple[list, list]:
+    """
+    Get tartan stripes
+
+    :param settings: tartan settings
+    :returns: a list with warp stripe dictionaries and a list with weft stripe dictionaries
+        Lists are empty if total width is 0 (for example if there are only strokes)
+    """
     # get stripes, return empty lists if total width is 0
     pallet_code = settings['pallet']
     pallet = Pallet()
