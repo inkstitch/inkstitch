@@ -43,7 +43,7 @@ class CustomizePanel(ScrolledPanel):
         self.rotate.Bind(wx.EVT_SPINCTRLDOUBLE, lambda event: self.on_change("rotate", event))
         rotate_label = wx.StaticText(self, label=_("Rotate"))
         self.scale = wx.SpinCtrl(self, min=0, max=1000, initial=100, style=wx.SP_WRAP)
-        self.scale.Bind(wx.EVT_SPINCTRL, lambda event: self.on_change("scale", event))
+        self.scale.Bind(wx.EVT_SPINCTRL, self.update_scale)
         scale_label = wx.StaticText(self, label=_("Scale (%)"))
         self.offset_x = wx.SpinCtrlDouble(self, min=0, max=500, initial=0, style=wx.SP_WRAP)
         self.offset_x.Bind(wx.EVT_SPINCTRLDOUBLE, lambda event: self.on_change("offset_x", event))
@@ -162,6 +162,7 @@ class CustomizePanel(ScrolledPanel):
             self.weft_sizer.Add(stripesizer, 0, wx.EXPAND | wx.ALL, 5)
         if update:
             self.panel.update_from_stripes()
+        self.set_stripe_width_color(stripe_width)
         self.FitInside()
 
     def _move_stripe_start(self, event):
@@ -200,11 +201,38 @@ class CustomizePanel(ScrolledPanel):
         self.FitInside()
 
     def on_change(self, attribute, event):
-        self.panel.settings[attribute] = event.GetEventObject().GetValue()
+        self.panel.settings[attribute] = event.EventObject.GetValue()
+        self.panel.update_preview()
+
+    def update_scale(self, event):
+        self.panel.settings['scale'] = event.EventObject.GetValue()
+        # self.update_stripes(self.panel.pallet.pallet_stripes)
+        self.update_stripe_width_colors()
         self.panel.update_preview()
 
     def _update_stripes_event(self, event):
+        self.set_stripe_width_color(event.EventObject)
         self.panel.update_from_stripes()
+
+    def update_stripe_width_colors(self):
+        for sizer in [self.warp_sizer, self.weft_sizer]:
+            for stripe_sizer in sizer.GetChildren():
+                inner_sizer = stripe_sizer.GetSizer()
+                for stripe_widget in inner_sizer:
+                    widget = stripe_widget.GetWindow()
+                    if isinstance(widget, wx.SpinCtrlDouble):
+                        self.set_stripe_width_color(widget)
+
+    def set_stripe_width_color(self, stripe_width_ctrl):
+        scale = self.scale.GetValue()
+        min_stripe_width = self.panel.embroidery_panel.min_stripe_width.GetValue()
+        stripe_width = stripe_width_ctrl.GetValue() * scale / 100
+        if stripe_width <= min_stripe_width:
+            stripe_width_ctrl.SetBackgroundColour(wx.Colour('#efefef'))
+            stripe_width_ctrl.SetForegroundColour('black')
+        else:
+            stripe_width_ctrl.SetBackgroundColour(wx.NullColour)
+            stripe_width_ctrl.SetForegroundColour(wx.NullColour)
 
     def update_stripes(self, stripes):
         self.warp_sizer.Clear(True)
