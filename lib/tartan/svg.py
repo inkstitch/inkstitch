@@ -228,7 +228,7 @@ class TartanSvgGroup:
         path: List[PathEdge],
         fill_stitch_graph: MultiGraph,
         polygons: Optional[List[Polygon]],
-        geometry_type: MultiPolygon,
+        geometry_type: str,
         outline_shape: MultiPolygon
     ) -> list:
         """
@@ -244,6 +244,7 @@ class TartanSvgGroup:
         outline = MultiLineString()
         travel_linestring = LineString()
         routed_shapes = []
+        start_distance = 0
         for edge in path:
             start, end = edge
             if edge.is_segment():
@@ -281,7 +282,7 @@ class TartanSvgGroup:
         Turns an edge back into an element
 
         :param edge: edge with start and end point information
-        :param geom_type: wether to convert a 'polygon' or 'linestring'
+        :param geometry_type: wether to convert a 'polygon' or 'linestring'
         :param fill_stitch_graph: the stitch graph
         :param polygons: list of polygons if geom_type is 'poylgon'
         :returns: a list of routed elements.
@@ -294,19 +295,19 @@ class TartanSvgGroup:
             if polygon:
                 routed.append({'shape': polygon, 'start': start, 'end': end})
         elif geometry_type == 'linestring':
-            line = None
             try:
                 line = fill_stitch_graph[start][end]['segment'].get('geometry')
             except KeyError:
                 line = LineString([start, end])
-            if line is not None:
+            if not line.is_empty:
                 if start != tuple(line.coords[0]):
                     line = line.reverse()
                 if line:
                     routed.append(line)
         return routed
 
-    def _get_shortest_travel(self, start: Tuple[float, float], outline: LineString, travel_linestring: LineString) -> LineString:
+    @staticmethod
+    def _get_shortest_travel(start: Tuple[float, float], outline: LineString, travel_linestring: LineString) -> LineString:
         """
         Replace travel_linestring with a shorter travel line if possible
 
@@ -324,7 +325,8 @@ class TartanSvgGroup:
                 return short_travel
         return travel_linestring
 
-    def _find_polygon(self, polygons: List[Polygon], point: Tuple[float, float]) -> Optional[Polygon]:
+    @staticmethod
+    def _find_polygon(polygons: List[Polygon], point: Tuple[float, float]) -> Optional[Polygon]:
         """
         Find the polygon for a given point
 
@@ -336,7 +338,8 @@ class TartanSvgGroup:
             if dwithin(point, polygon, 0.01):
                 return polygon
 
-    def _get_routing_lines(self, shapes: defaultdict) -> defaultdict:
+    @staticmethod
+    def _get_routing_lines(shapes: defaultdict) -> defaultdict:
         """
         Generate routing lines for given polygon shapes
 
@@ -390,7 +393,8 @@ class TartanSvgGroup:
             shapes[color] = elements
         return shapes
 
-    def _adapt_legacy_fill_params(self, path_element: PathElement, start: Point) -> PathElement:
+    @staticmethod
+    def _adapt_legacy_fill_params(path_element: PathElement, start: Point) -> PathElement:
         """
         Find best legacy fill param setting
         Flip and reverse so that the fill starts as near as possible to the starting point
@@ -467,7 +471,8 @@ class TartanSvgGroup:
 
         return polygons, linestrings
 
-    def _get_travel(self, start: Tuple[float, float], end: Tuple[float, float], outline: LineString) -> LineString:
+    @staticmethod
+    def _get_travel(start: Tuple[float, float], end: Tuple[float, float], outline: LineString) -> LineString:
         """
         Returns a travel line from start point to end point along the outline
 
@@ -480,9 +485,9 @@ class TartanSvgGroup:
         end_distance = outline.project(Point(end))
         return substring(outline, start_distance, end_distance)
 
-    def _get_dimensions(self, outline: MultiPolygon) -> Tuple[List[float], Point]:
+    def _get_dimensions(self, outline: MultiPolygon) -> Tuple[Tuple[float, float, float, float], Point]:
         """
-        Calculates the dimensions to generate the tartan pattern for in the first place.
+        Calculates the dimensions for the tartan pattern.
         Make sure it is big enough for pattern rotations.
 
         :param outline: the shape to be filled with a tartan pattern
@@ -501,7 +506,7 @@ class TartanSvgGroup:
             miny = center.y - min_radius
             maxx = center.x + min_radius
             maxy = center.y + min_radius
-        return [minx, miny, maxx, maxy], center
+        return (float(minx), float(miny), float(maxx), float(maxy)), center
 
     def _polygon_to_path(
         self,

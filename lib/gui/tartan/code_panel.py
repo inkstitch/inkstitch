@@ -22,7 +22,7 @@ class CodePanel(wx.Panel):
         code_sizer.Add(self.threadcount_text, 1, wx.EXPAND | wx.ALL, 10)
 
         self.tt_unit_label = wx.StaticText(self, label=_("1 Tartan thread equals (mm)"))
-        self.tt_unit_spin = wx.SpinCtrlDouble(self, min=0.01, max=50, initial=0.1, inc=0.1, style=wx.SP_WRAP)
+        self.tt_unit_spin = wx.SpinCtrlDouble(self, min=0.01, max=50, initial=0.2, inc=0.1, style=wx.SP_WRAP)
         self.tt_unit_spin.SetDigits(2)
         tt_unit_sizer.Add(self.tt_unit_label, 0, wx.CENTER | wx.ALL, 10)
         tt_unit_sizer.Add(self.tt_unit_spin, 0, wx.ALL, 10)
