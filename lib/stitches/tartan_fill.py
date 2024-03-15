@@ -34,7 +34,7 @@ if TYPE_CHECKING:
 
 def tartan_fill(fill: 'FillStitch', outline: Polygon, starting_point: Optional[List[float]], ending_point: Optional[List[float]]):
     """
-    Main method to the tartan element with tartan fill stitches
+    Main method to fill the tartan element with tartan fill stitches
 
     :param fill: FillStitch element
     :param outline: the outline of the fill
