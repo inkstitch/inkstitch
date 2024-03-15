@@ -108,7 +108,7 @@ class Clone(EmbroideryElement):
                 except ValueError:
                     # Something is weird about the matrix such that it apparently isn't a rotation with a uniform scale.
                     # So, next best thing is to apply it to a unit vector and pull the angle from that.
-                    return degrees(t.apply_to_point((1, 0).angle))
+                    return degrees(t.apply_to_point((1, 0)).angle)
 
             source_angle = angle_for_transform(source_transform)
             cloned_angle = angle_for_transform(cloned_transform)
