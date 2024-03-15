@@ -95,7 +95,7 @@ class EmbroideryPanel(wx.Panel):
         min_width_text = _("Stripes smaller than this will be stitched as a running stitch")
         min_stripe_width_label.SetToolTip(min_width_text)
         self.min_stripe_width.SetToolTip(min_width_text)
-        self.min_stripe_width.Bind(wx.EVT_SPINCTRLDOUBLE, lambda event: self.on_change("min_stripe_width", event))
+        self.min_stripe_width.Bind(wx.EVT_SPINCTRLDOUBLE, self.on_change_min_stripe_width)
 
         svg_bean_stitch_repeats_label = wx.StaticText(self, label=_("Bean stitch repeats"))
         self.svg_bean_stitch_repeats = wx.SpinCtrl(self, min=0, max=10, initial=0, style=wx.SP_WRAP)
@@ -170,6 +170,11 @@ class EmbroideryPanel(wx.Panel):
     def on_change_stitch_type(self, event):
         stitch_type = self.stitch_type.GetClientData(self.stitch_type.GetSelection()).id
         self.panel.settings['stitch_type'] = stitch_type
+        self.panel.update_preview()
+
+    def on_change_min_stripe_width(self, event):
+        self.panel.settings['min_stripe_width'] = event.EventObject.GetValue()
+        self.panel.customize_panel.update_stripe_width_colors()
         self.panel.update_preview()
 
     def on_param_change(self, attribute, event):
