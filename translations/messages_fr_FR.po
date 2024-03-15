@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-03-14 01:47+0000\n"
-"PO-Revision-Date: 2024-03-14 01:48\n"
+"PO-Revision-Date: 2024-03-15 01:05\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -1385,19 +1385,19 @@ msgstr "* Adapter la forme du second élément pour compenser les distorsions du
 
 #: lib/elements/fill_stitch.py:107
 msgid "No linear gradient color"
-msgstr ""
+msgstr "Pas de couleur en dégradé linéaire"
 
 #: lib/elements/fill_stitch.py:108
 msgid "Linear Gradient has no linear gradient color."
-msgstr ""
+msgstr "Le dégradé linéaire n'a pas de couleur en dégradé linéaire."
 
 #: lib/elements/fill_stitch.py:110
 msgid "* Open the Fill and Stroke dialog."
-msgstr ""
+msgstr "Ouvrez le dialogue Fond et Contour."
 
 #: lib/elements/fill_stitch.py:111
 msgid "* Set a linear gradient as a fill and adapt colors to your liking."
-msgstr ""
+msgstr "Choisissez un fond en dégradé linéaire et adaptez les couleurs selon vos souhaits."
 
 #: lib/elements/fill_stitch.py:116
 msgid "This shape is invalid"
@@ -2974,7 +2974,7 @@ msgstr "Options"
 
 #: lib/gui/lettering.py:83
 msgid "Stitch lines of text back and forth"
-msgstr "Brode les lignes de texte en aller-retour"
+msgstr "Broder les lignes de texte en aller-retour"
 
 #: lib/gui/lettering.py:86
 msgid "Never"
@@ -4278,7 +4278,7 @@ msgstr "Appliquer une palette"
 
 #: inx/inkstitch_apply_palette.inx:8
 msgid "Select color palette"
-msgstr ""
+msgstr "Sélectionner une palette de couleur"
 
 #: inx/inkstitch_apply_palette.inx:85
 msgid "This extension applies nearest colors from chosen color palette to the elements in this document."
@@ -4286,7 +4286,7 @@ msgstr "Cette extension applique aux éléments de ce document les couleurs les 
 
 #: inx/inkstitch_apply_palette.inx:88
 msgid "https://inkstitch.org/docs/thread-color/#apply-palette"
-msgstr ""
+msgstr "https://inkstitch.org/docs/fr/thread-color/#apply-palette"
 
 #: inx/inkstitch_apply_palette.inx:95 inx/inkstitch_apply_threadlist.inx:108
 #: inx/inkstitch_generate_palette.inx:10 inx/inkstitch_install.inx:10
@@ -6207,7 +6207,7 @@ msgstr "Sélectionne des éléments de broderie par type de points."
 
 #: inx/inkstitch_select_elements.inx:82
 msgid "If there is already an active selection, non matching elements will be deselected."
-msgstr ""
+msgstr "S'il y a déjà des éléments sélectionnés, les éléments qui ne correspondent pas seront désélectionnés."
 
 #: inx/inkstitch_select_elements.inx:88
 msgid "If this isn't working for you, you may need to insert your path to a python executable manualy."
