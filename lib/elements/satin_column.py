@@ -58,11 +58,21 @@ class DanglingRungWarning(ValidationWarning):
     description = _("Satin column: A rung doesn't intersect both rails.") + " " + rung_message
 
 
+class NoRungWarning(ValidationWarning):
+    name = _("Satin has no rungs")
+    description = _("Rungs control the stitch direction in satin columns. It is best pratice to use them.")
+    steps_to_solve = [
+        _('* With the selected object press "P" to activate the pencil tool.'),
+        _('* Hold "Shift" while drawing a rung.')
+    ]
+
+
 class TwoRungsWarning(ValidationWarning):
     name = _("Satin has exactly two rungs")
-    description = _("Satin column: There are exactly two rungs.  This may lead to false rail/rung detection.")
+    description = _("There are exactly two rungs. This may lead to false rail/rung detection.")
     steps_to_solve = [
-        _("Add an other rung.")
+        _('* With the selected object press "P" to activate the pencil tool.'),
+        _('* Hold "Shift" while drawing a rung.')
     ]
 
 
@@ -678,9 +688,11 @@ class SatinColumn(EmbroideryElement):
     def validation_warnings(self):
         if len(self.csp) == 4:
             yield TwoRungsWarning(self.flattened_rails[0].interpolate(0.5, normalized=True))
-        if len(self.csp) == 2 and len(self.rails[0]) != len(self.rails[1]):
-            yield UnequalPointsWarning(self.flattened_rails[0].interpolate(0.5, normalized=True))
-        if len(self.csp) > 2:
+        elif len(self.csp) == 2:
+            yield NoRungWarning(self.flattened_rails[1].representative_point())
+            if len(self.rails[0]) != len(self.rails[1]):
+                yield UnequalPointsWarning(self.flattened_rails[0].interpolate(0.5, normalized=True))
+        elif len(self.csp) > 2:
             for rung in self.flattened_rungs:
                 for rail in self.flattened_rails:
                     intersection = rung.intersection(rail)
