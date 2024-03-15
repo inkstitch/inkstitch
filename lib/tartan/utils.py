@@ -9,7 +9,6 @@ from copy import copy
 from typing import List, Tuple, Union
 
 from inkex import Circle, PathElement, Rectangle
-from numpy import float64
 from shapely import LineString, MultiPolygon, Point, Polygon, unary_union
 from shapely.affinity import rotate
 
@@ -21,8 +20,8 @@ from .pallet import Pallet
 
 def stripes_to_shapes(
     stripes: List[dict],
-    dimensions: List[Union[float, float64]],
-    outline: MultiPolygon,
+    dimensions: Tuple[float, float, float, float],
+    outline: Union[MultiPolygon, Polygon],
     rotation: float,
     rotation_center: Point,
     symmetry: bool,
@@ -52,7 +51,7 @@ def stripes_to_shapes(
 
     original_stripes = stripes
     if len(original_stripes) == 0:
-        return []
+        return shapes
 
     left = minx
     top = miny
@@ -89,7 +88,11 @@ def stripes_to_shapes(
             top = bottom
 
 
-def _merge_polygons(shapes: defaultdict, outline: Polygon, intersect_outline: bool = True) -> defaultdict:
+def _merge_polygons(
+    shapes: defaultdict,
+    outline: Union[MultiPolygon, Polygon],
+    intersect_outline: bool = True
+) -> defaultdict:
     """
     Merge polygons which are bordering each other (they most probably used a running stitch in between)
 
@@ -138,7 +141,12 @@ def _get_polygon(dimensions: List[float], rotation: float, rotation_center: Poin
     return polygon
 
 
-def _get_linestrings(outline: MultiPolygon, dimensions: List[float], rotation: float, rotation_center: Point, weft: bool) -> list:
+def _get_linestrings(
+    outline: Union[MultiPolygon, Polygon],
+    dimensions: List[float],
+    rotation: float,
+    rotation_center: Point, weft: bool
+) -> list:
     """
     Generates a rotated linestrings with the given dimension (outline intersection)
 
