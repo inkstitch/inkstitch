@@ -27,13 +27,13 @@
      inkscape:window-height="808"
      id="namedview241"
      showgrid="true"
-     inkscape:zoom="13.87784"
-     inkscape:cx="24.427433"
-     inkscape:cy="40.027843"
+     inkscape:zoom="12.343058"
+     inkscape:cx="10.370201"
+     inkscape:cy="83.285679"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g175"
+     inkscape:current-layer="g1306"
      inkscape:document-rotation="0"
      showguides="true"
      inkscape:guide-bbox="true"
@@ -56,7 +56,7 @@
        inkscape:locked="false"
        inkscape:color="rgb(0,0,255)" />
     <sodipodi:guide
-       position="7.8882804,113.96711"
+       position="33.54112,114.02836"
        orientation="0,1"
        inkscape:label="caps"
        id="guide1070"
@@ -189,7 +189,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin1"
        style="display:inline;fill:none;stroke:#000000"
-       d="M 7.5058241,100 C 5.8321681,100.0297 4.6659659,99.037127 3.6580306,97.832477 M 7.8455394,100 C 9.5985933,99.9856 10.960915,99.291053 11.71243,97.710595"
+       d="M 7.5058241,100 C 5.8321681,100.0297 4.6659659,99.037127 3.6580306,97.832477 M 7.8455394,100 C 9.5985933,99.9856 10.960915,99.291053 11.71243,97.710595 M 2.4004771,98.843173 H 13.273226"
        inkstitch:satin_column="True"
        inkstitch:ties="3"
        inkstitch:pull_compensation_mm="0.3"
@@ -250,7 +250,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin4"
        style="fill:none;stroke:#000000"
-       d="m 7.9029385,80.016177 c 1.8073028,0.07047 2.7805545,-1.000821 3.7057035,-2.342279 M 7.5794011,80.032354 C 5.7634209,80.030449 4.0460355,78.942564 3.3743534,77.7481"
+       d="m 7.9029385,80.016177 c 1.8073028,0.07047 2.7805545,-1.000821 3.7057035,-2.342279 M 7.5794011,80.032354 C 5.7634209,80.030449 4.0460355,78.942564 3.3743534,77.7481 M 1.2708408,78.650925 H 12.990817"
        inkstitch:satin_column="True"
        inkstitch:ties="0"
        inkstitch:force_lock_stitches="True"
@@ -296,7 +296,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin6"
        style="fill:none;stroke:#000000"
-       d="m 45.401454,70 c -3.661583,-0.0021 -7.342495,1.522468 -9.760099,4.306078 M 45.482339,79 c -1.382244,-0.0035 -2.855904,0.593216 -3.530155,1.864762"
+       d="m 45.401454,70 c -3.661583,-0.0021 -7.342495,1.522468 -9.760099,4.306078 M 45.482339,79 c -1.382244,-0.0035 -2.855904,0.593216 -3.530155,1.864762 m -3.435592,-11.308825 5.60145,11.622356"
        inkstitch:satin_column="True"
        inkstitch:ties="0"
        inkstitch:force_lock_stitches="True"
@@ -307,7 +307,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none"
-       sodipodi:nodetypes="cccc" />
+       sodipodi:nodetypes="cccccc" />
     <path
        d="m 28.338159,71.907307 c -5.633392,8.206937 -11.110517,16.543399 -16.83625,24.672851 -0.660223,0.651405 -1.370724,1.2414 -2.0989665,1.814698"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -718,13 +718,13 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin27"
        style="fill:none;stroke:#000000"
-       d="M 19.795496,50.889515 C 16.454979,50.824085 14.9375,52.897546 14.9375,56.6875 14.9375,60.477454 15,62.061053 15,65 m 5.13866,-14.06473 c 3.340516,0.06543 4.23634,1.990909 4.23634,5.78348 0,2.960411 0.118953,5.273806 0.118953,8.28125"
+       d="M 19.018871,51.03072 C 15.678354,50.96529 14.9375,52.897546 14.9375,56.6875 14.9375,60.477454 15,62.061053 15,65 m 5.13866,-14.06473 c 3.340516,0.06543 4.23634,1.990909 4.23634,5.78348 0,2.960411 0.118953,5.273806 0.118953,8.28125 M 12.990817,60.011927 H 27.11127"
        inkstitch:satin_column="True"
        inkstitch:ties="3"
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.2"
-       sodipodi:nodetypes="csccsc"
+       sodipodi:nodetypes="csccsccc"
        inkscape:label="Auto-remplissage satin 6"
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
@@ -738,13 +738,13 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin28"
        style="fill:none;stroke:#000000"
-       d="M 19.35,74.985682 15,75 H 11 L 4.9132422,75.01541 4.0271441,74.92705 3.4661802,74.745526 M 19.35,65 H 15 10.5 6 l -0.8465684,0.106804 -0.756436,0.246819 m 5.6902154,-2.29503 c 0.07276,3.674457 -0.1248936,10.449914 -0.1585436,13.82226"
+       d="M 19.35,74.985682 15,75 H 11 L 4.2778218,75.01541 M 19.35,65 H 15 10.5 4.3055456 m 5.7816654,-1.941407 c 0.07276,3.674457 -0.1248936,10.449914 -0.1585436,13.82226"
        inkstitch:satin_column="True"
        inkstitch:ties="3"
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.2"
-       sodipodi:nodetypes="cccccssccssccc"
+       sodipodi:nodetypes="ccccsccccc"
        inkscape:label="Auto-remplissage satin 7"
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
@@ -758,7 +758,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin29"
        style="fill:none;stroke:#000000"
-       d="M 0.86741748,69.911612 C 0.93291477,67.81378 2.5282737,66.109858 4.3969956,65.353619 m -3.52957812,4.969785 c 0.003075,1.797591 0.77331432,3.77769 2.59876272,4.422116"
+       d="m 1.008622,69.064385 c 0.065497,-2.097832 1.5196517,-4.084163 3.4589759,-4.063777 m -3.60018042,5.322796 c -0.1677988,2.310212 1.27431652,4.67516 3.30478542,4.704525 M 1.9768635,63.824449 v 13.69684"
        inkstitch:satin_column="True"
        inkstitch:ties="0"
        inkstitch:force_lock_stitches="True"
@@ -769,7 +769,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none"
-       sodipodi:nodetypes="cccc" />
+       sodipodi:nodetypes="cccccc" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -845,7 +845,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin33"
        style="fill:none;stroke:#000000"
-       d="M 3,70 C 2.99451,68.06032 4.2808828,66.258884 6.0065368,65.440813 m -3.052292,5.19976 c 0.1411366,1.809204 1.5581849,3.067905 3.052292,3.918614"
+       d="M 3,70 C 2.99451,68.06032 4.2808828,66.258884 6.0065368,65.440813 m -3.052292,5.19976 c 0.1411366,1.809204 1.5581849,3.067905 3.052292,3.918614 M 5.2245677,64.389267 5.3657723,75.897436"
        inkstitch:satin_column="True"
        inkstitch:ties="0"
        inkstitch:force_lock_stitches="True"
@@ -856,7 +856,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none"
-       sodipodi:nodetypes="cccc" />
+       sodipodi:nodetypes="cccccc" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -886,7 +886,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin35"
        style="display:inline;fill:none;stroke:#000000"
-       d="m 7.734835,90.112415 c 1.8954549,-0.08508 3.644521,1.284819 4.17745,3.07704 M 7.104323,90.089537 c -1.8858492,-0.0011 -3.0898636,1.384737 -3.9103325,2.996391"
+       d="m 7.734835,90.112415 c 1.8954549,-0.08508 3.644521,1.284819 4.17745,3.07704 M 7.104323,90.089537 c -1.8858492,-0.0011 -3.0898636,1.384737 -3.9103325,2.996391 M 2.0474657,90.865117 H 13.485033"
        inkstitch:satin_column="True"
        inkstitch:ties="0"
        inkstitch:force_lock_stitches="True"
@@ -981,7 +981,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin39"
        style="fill:none;stroke:#000000"
-       d="M 24,91 C 17.797876,90.93491 15.63023,88.803585 14.303393,85.312526 M 24,101 C 17.889776,101.087 11.409595,98.790913 7.9343738,93.500796"
+       d="M 24,91 C 17.797876,90.93491 15.63023,88.803585 14.303393,85.312526 M 24,101 C 17.889776,101.087 11.409595,98.790913 7.9343738,93.500796 M 19.274419,87.335004 13.555635,103.22051"
        inkstitch:satin_column="True"
        inkstitch:ties="0"
        inkstitch:force_lock_stitches="True"
@@ -1051,17 +1051,17 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin42"
        style="fill:none;stroke:#000000"
-       d="M 19.862661,39.038626 20,40 v 55 l -0.25,1.875 -0.455187,0.986238 M 10.998174,39.009819 11,54 v 41 l 0.09375,0.96875 0.28125,0.90625 0.46875,0.84375 0.03149,0.03749 M 9.4575532,49.133858 21.610951,49.143918"
+       d="m 19.862661,39.038626 c 0.295904,2.274003 0.06359,4.585546 0.137339,6.875337 -0.01064,16.401537 0.01871,33.935528 -0.01851,50.335301 M 10.998174,39.009819 c 0.01084,18.703251 -0.01233,38.608337 0.01522,57.310653 M 9.4575532,49.133858 c 4.0511328,0.0034 8.1022648,0.0067 12.1533978,0.01006"
        inkstitch:satin_column="True"
        inkstitch:ties="3"
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.2"
-       sodipodi:nodetypes="cssssccsccsscc"
        inkscape:label="Auto-remplissage satin 5"
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
-       inkstitch:reverse_rails="none" />
+       inkstitch:reverse_rails="none"
+       sodipodi:nodetypes="cscscsc" />
     <path
        d="m 10.7415,97.7402 4.8633,2.2648"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
@@ -1071,7 +1071,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin43"
        style="fill:none;stroke:#000000"
-       d="m 16,100 c 1.383048,0.0233 2.852034,-0.770866 3.294815,-2.138763 m -4.085171,2.148203 c -1.486382,0.0649 -2.456922,-1.259252 -3.334403,-2.253199"
+       d="m 16,100 c 2.583287,0.23511 3.628659,-2.747729 4.07144,-4.115626 m -4.861796,4.125066 c -2.596821,0.19976 -3.777695,-2.330562 -4.237859,-3.846155 M 21.8161,98.772571 H 8.6840788"
        inkstitch:satin_column="True"
        inkstitch:ties="3"
        inkstitch:pull_compensation_mm="0.3"
@@ -1081,7 +1081,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none"
-       sodipodi:nodetypes="cccc" />
+       sodipodi:nodetypes="cccccc" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1091,33 +1091,13 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin44"
        style="fill:none;stroke:#000000"
-       d="M 43.954898,96.60434 43.727449,98.17717 43,99.5 42.4375,100.15625 41.75,100.625 40.9375,100.90625 40,100.99995 H 7 L 6.03125,100.90625 5.125,100.625 4.28125,100.15625 3.5,99.5 2.4737105,98.089965 M 44,96 43.75,94.125 43,92.5 42.4375,91.84375 41.75,91.375 40.9375,91.09375 40,91 H 13 L 6.2041159,95.704843 M 19.173088,88.367338 18.874998,103.375"
+       d="m 43.954898,96.60434 c -0.128016,0.818148 -0.131634,1.677961 -0.661213,2.361608 -0.541948,1.233242 -1.819149,2.036562 -3.16233,2.020872 -11.072203,0.0249 -22.148358,0.0159 -33.2209548,0.004 C 5.2291231,100.97405 3.6538764,99.994469 2.811347,98.553849 2.6988015,98.399221 2.586256,98.244593 2.4737105,98.089965 M 44,96 C 43.851978,95.053944 43.868533,94.060121 43.33505,93.225941 42.894821,91.875322 41.532275,90.996392 40.13136,91.013136 31.088883,90.982483 22.043568,91.008759 13,91 10.734705,92.568281 8.4694106,94.136562 6.2041159,95.704843 M 19.173088,88.367338 c -0.09936,5.002554 -0.198727,10.005108 -0.29809,15.007662"
        inkstitch:satin_column="True"
        inkstitch:ties="3"
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.2"
-       sodipodi:nodetypes="ccssccsssscccccccccccccc"
        inkscape:label="Auto-remplissage satin 2"
-       inkstitch:max_stitch_length_mm="6"
-       inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
-       inkstitch:reverse_rails="none" />
-    <path
-       d="M 7.1594,95.0941 3.11057,97.6828"
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
-       inkstitch:running_stitch_tolerance_mm="0.5"
-       id="path13" />
-    <path
-       id="autosatin45"
-       style="fill:none;stroke:#000000"
-       d="M 2.4737105,98.089965 C 1.98356,97.029953 1.9528978,95.876759 2.0695039,94.735025 m 4.1346118,0.969818 c 0.6460594,-0.447272 1.2921187,-0.894544 1.9381781,-1.341816"
-       inkstitch:satin_column="True"
-       inkstitch:ties="3"
-       inkstitch:pull_compensation_mm="0.3"
-       inkstitch:zigzag_underlay="True"
-       inkstitch:zigzag_underlay_inset_mm="0.2"
-       inkscape:label="Auto-remplissage satin 3"
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
@@ -1131,18 +1111,17 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin46"
        style="fill:none;stroke:#000000"
-       d="m 4.5,57.5 c 0,0 -0.65625,-0.78125 -0.65625,-0.78125 0,0 -0.46875,-0.84375 -0.46875,-0.84375 0,0 -0.28125,-0.90625 -0.28125,-0.90625 C 3.09375,54.96875 3,54 3,54 c 0,0 0.125,-1.96875 0.125,-1.96875 0,0 0.375,-1.90625 0.375,-1.90625 0,0 0.625,-1.84375 0.625,-1.84375 C 4.125,48.28125 5,46.5 5,46.5 c 0,0 2.125,-3.25 2.125,-3.25 0,0 2.375,-2.75 2.375,-2.75 0,0 1.34375,-1.1875 1.34375,-1.1875 0,0 1.53125,-1.0625 1.53125,-1.0625 0,0 1.71875,-0.9375 1.71875,-0.9375 0,0 1.90625,-0.8125 1.90625,-0.8125 0,0 2,-0.65625 2,-0.65625 0,0 2,-0.46875 2,-0.46875 0,0 2,-0.28125 2,-0.28125 0,0 2,-0.09375 2,-0.09375 0,0 4,0.25 4,0.25 0,0 4,0.75 4,0.75 0,0 1.9375,0.625 1.9375,0.625 0,0 1.8125,0.875 1.8125,0.875 0,0 1.6875,1.125 1.6875,1.125 0,0 1.5625,1.375 1.5625,1.375 0,0 1.40625,1.53125 1.40625,1.53125 0,0 1.21875,1.59375 1.21875,1.59375 0,0 1.03125,1.65625 1.03125,1.65625 0,0 0.84375,1.71875 0.84375,1.71875 0,0 0.65625,1.78125 0.65625,1.78125 0,0 0.46875,1.84375 0.46875,1.84375 0,0 0.28125,1.90625 0.28125,1.90625 C 44.90625,52.03125 45,54 45,54 c 0,0 -0.125,2.875 -0.125,2.875 0,0 -0.375,2.625 -0.375,2.625 0,0 -0.625,2.375 -0.625,2.375 0,0 -0.875,2.125 -0.875,2.125 0,0 -2.125,3.75 -2.125,3.75 0,0 -2.375,3.25 -2.375,3.25 0,0 -1.34375,1.46875 -1.34375,1.46875 0,0 -1.53125,1.40625 -1.53125,1.40625 0,0 -1.71875,1.34375 -1.71875,1.34375 0,0 -1.90625,1.28125 -1.90625,1.28125 0,0 -7.5,4.5 -7.5,4.5 0,0 -3.375,2.125 -3.375,2.125 0,0 -3.125,2.375 -3.125,2.375 0,0 -1.347082,1.370096 -1.347082,1.370096 0,0 -1.161804,1.491825 -1.161804,1.491825 0,0 -1.157361,1.435865 -1.157361,1.435865 C 14.333753,89.797786 13,91 13,91 13,91 8.142294,94.363027 8.142294,94.363027 M 4.9902347,57.942404 c 0,0 0.7046508,0.587124 0.7046508,0.587124 0,0 0.6752319,0.316674 0.6752319,0.316674 C 6.3701174,58.846202 8,59 8,59 c 0,0 1.7499999,-0.25 1.7499999,-0.25 0,0 0.6875001,-0.3125 0.6875001,-0.3125 C 10.4375,58.4375 11,58 11,58 c 0,0 0.875,-1.125 0.875,-1.125 0,0 0.625,-1.375 0.625,-1.375 0,0 1,-3.5 1,-3.5 0,0 0.625,-2 0.625,-2 0,0 0.875,-2 0.875,-2 0,0 0.5625,-0.9375 0.5625,-0.9375 0,0 0.6875,-0.8125 0.6875,-0.8125 0,0 0.8125,-0.6875 0.8125,-0.6875 C 17.0625,45.5625 18,45 18,45 c 0,0 1.125,-0.4375 1.125,-0.4375 0,0 1.375,-0.3125 1.375,-0.3125 0,0 3.5,-0.25 3.5,-0.25 0,0 2.125,0.25 2.125,0.25 0,0 2.375,0.75 2.375,0.75 0,0 2.25,1 2.25,1 0,0 1.75,1 1.75,1 0,0 1.375,1.25 1.375,1.25 0,0 1.125,1.75 1.125,1.75 0,0 0.75,2 0.75,2 0,0 0.25,2 0.25,2 0,0 -0.15625,2.03125 -0.15625,2.03125 0,0 -0.46875,2.09375 -0.46875,2.09375 0,0 -0.78125,2.15625 -0.78125,2.15625 0,0 -1.09375,2.21875 -1.09375,2.21875 0,0 -1.291115,1.775044 -1.291115,1.775044 0,0 -1.617822,1.522142 -1.617822,1.522142 C 30.591063,65.797186 27,68.5 27,68.5 c 0,0 -1.929512,1.351868 -1.929512,1.351868 0,0 -2.007832,1.238681 -2.007832,1.238681 C 23.062656,71.090549 19,73.5 19,73.5 c 0,0 -4,2.75 -4,2.75 0,0 -4,3.25 -4,3.25 0,0 -3.625,3.5 -3.625,3.5 0,0 -2.875,3.5 -2.875,3.5 0,0 -1.09375,1.90625 -1.09375,1.90625 0,0 -0.78125,2.21875 -0.78125,2.21875 0,0 -0.46875,2.53125 -0.46875,2.53125 0,0 -0.086746,1.578775 -0.086746,1.578775 M 15.11811,73.008775 c 0,0 6.8022,11.313708 6.8022,11.313708 M 34.015748,54.025022 c 0,0 13.802348,0.157035 13.802348,0.157035 M 24.660349,32.6153 c 0,0 0,12.816311 0,12.816311"
+       inkscape:label="Auto-remplissage satin 5"
+       d="m 21.92031,84.322483 c -2.2674,-3.771236 -4.5348,-7.542472 -6.8022,-11.313708 M 47.818096,54.182057 c -4.600783,-0.05235 -9.201565,-0.10469 -13.802348,-0.157035 m -9.355399,-8.593411 c 0,-4.272104 0,-8.544207 0,-12.816311 M 4.9902347,57.942404 c 1.3234506,1.399124 3.5426722,1.170634 5.1987573,0.608054 2.397038,-1.396031 2.581978,-4.474324 3.406896,-6.857301 0.792619,-2.764895 2.019943,-5.937027 5.003347,-6.926193 1.914697,-0.696907 4.028321,-0.733263 6.039314,-0.691841 2.86207,0.269583 5.571491,1.51955 7.980388,3.033001 2.520865,1.967815 3.726192,5.356679 3.257782,8.494523 -0.480864,3.270984 -1.757267,6.553159 -4.019038,9.002831 -2.447128,2.272046 -5.205431,4.211445 -8.018392,6.005947 -4.078483,2.386412 -8.131172,4.860245 -11.708566,7.969862 -2.5229577,2.105507 -4.894024,4.415484 -6.8982872,7.027052 -2.6462617,3.057189 -3.3836026,7.32959 -3.1327628,11.25532 0.071444,0.422429 0.1937275,0.837197 0.3740375,1.226306 M 4.5,57.5 C 2.582787,55.729121 2.8873119,52.914044 3.4042339,50.611811 4.0706347,47.57457 5.8703191,44.931512 7.75537,42.520098 c 2.0160682,-2.697602 4.812179,-4.731442 7.964915,-5.900875 3.631937,-1.468532 7.61112,-1.872905 11.488218,-1.418692 3.446048,0.397948 7.046716,1.036347 9.87892,3.191084 5.107126,3.802903 8.306657,10.16426 7.870685,16.571904 -0.0383,3.962893 -1.039228,7.939452 -3.226043,11.274014 -1.92134,3.405313 -4.424086,6.538527 -7.626633,8.825493 -5.35637,3.777095 -11.479822,6.453393 -16.443509,10.780827 -2.00515,1.945451 -3.332593,4.583264 -5.851342,5.979591 -1.8688219,1.2938 -3.7376438,2.587599 -5.6064653,3.881399"
        inkstitch:satin_column="True"
-       inkstitch:ties="0"
-       inkstitch:force_lock_stitches="True"
+       inkstitch:ties="3"
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.2"
-       sodipodi:nodetypes="csssssssssssssssccsssssssssssssssssccccccc"
-       inkscape:label="Auto-remplissage satin 5"
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
-       inkstitch:reverse_rails="none" />
+       inkstitch:reverse_rails="none"
+       inkstitch:swap_satin_rails="True" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1217,7 +1196,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin50"
        style="fill:none;stroke:#000000"
-       d="m 4.1211937,84.523087 c 2.3501005,-1.164297 5.4583007,-0.50326 7.0325783,1.630691 M 3.5,85 c -2.65057195,2.152751 -1.1707437,4.976424 0.335072,7.228047"
+       d="m 4.1211937,84.523087 c 2.3501005,-1.164297 5.4583007,-0.50326 7.0325783,1.630691 M 3.5,85 c -2.65057195,2.152751 -1.1707437,4.976424 0.335072,7.228047 M -0.09984668,89.362781 9.6851282,81.87428"
        inkstitch:satin_column="True"
        inkstitch:ties="0"
        inkstitch:force_lock_stitches="True"
@@ -1238,7 +1217,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin51"
        style="fill:none;stroke:#000000"
-       d="m 27.41213,100.52544 c 1.872901,0.39753 3.954854,-1.633579 3.4784,-4.786679 m -4.951919,4.757729 c -2.284147,0.54637 -4.311066,-2.062791 -3.895168,-4.534115"
+       d="m 27.41213,100.52544 c 1.872901,0.39753 3.954854,-1.633579 3.4784,-4.786679 m -4.951919,4.757729 c -2.284147,0.54637 -4.311066,-2.062791 -3.895168,-4.534115 m -3.17242,2.586301 h 16.275009"
        inkstitch:satin_column="True"
        inkstitch:ties="3"
        inkstitch:pull_compensation_mm="0.3"
@@ -1335,7 +1314,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin56"
        style="fill:none;stroke:#000000"
-       d="m 30.982866,83.464318 c -0.02781,4.091594 0.01412,8.184008 -0.09238,12.274767 M 22.073218,83.578238 c 0.234023,4.134299 -0.544376,8.260361 -0.02984,12.384137"
+       d="m 30.982866,83.464318 c -0.02781,4.091594 0.01412,8.184008 -0.09238,12.274767 M 22.073218,83.578238 c 0.234023,4.134299 -0.544376,8.260361 -0.02984,12.384137 M 18.633955,90.739261 H 33.54112"
        inkstitch:satin_column="True"
        inkstitch:ties="0"
        inkstitch:force_lock_stitches="True"
@@ -1422,7 +1401,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin60"
        style="fill:none;stroke:#000000"
-       d="M 3.7024426,88.308763 C 4.718801,87.24321 6.3047468,86.807384 7.7359657,87.092008 m -4.582614,1.785757 c -1.2560565,1.124344 -1.2961623,3.00142 -0.9941905,4.536093"
+       d="M 3.7024426,88.308763 C 4.718801,87.24321 6.3047468,86.807384 7.7359657,87.092008 m -4.582614,1.785757 c -1.2560565,1.124344 -1.2961623,3.00142 -0.9941905,4.536093 m 6.7271936,-8.843717 -8.68666143,9.485434"
        inkstitch:satin_column="True"
        inkstitch:ties="0"
        inkstitch:force_lock_stitches="True"
@@ -1433,7 +1412,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none"
-       sodipodi:nodetypes="cccc" />
+       sodipodi:nodetypes="cccccc" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1492,7 +1471,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin63"
        style="fill:none;stroke:#000000"
-       d="m 16.286338,99.985079 c -1.766321,0.06416 -4.571393,-2.405355 -4.266574,-5.623859 M 17,100 c 2.419001,-3.4e-5 4.67436,-1.997711 4.94249,-4.405753"
+       d="m 16.286338,99.985079 c -1.766321,0.06416 -4.571393,-2.405355 -4.266574,-5.623859 M 17,100 c 2.419001,-3.4e-5 4.67436,-1.997711 4.94249,-4.405753 M 9.2857416,94.554809 25.161364,96.951129"
        inkstitch:satin_column="True"
        inkstitch:ties="3"
        inkstitch:pull_compensation_mm="0.3"
@@ -1502,7 +1481,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none"
-       sodipodi:nodetypes="cccc" />
+       sodipodi:nodetypes="cccccc" />
     <path
        d="m 23.0677,95.7341 -5.9609,-2.3662 c 0.630756,-6.62072 1.98262,-13.1462 3.56064,-19.5989 l 2.59216,-9.4027 c 2.4381,-7.66427 4.54821,-15.9858 10.5558,-21.7364 0.520862,-0.539627 0.938019,-1.1624 1.3931,-1.75573 L 33.9222,38.3282 C 30.24089,39.20662 26.68393,40.93233 22.8161,40.49996 16.87813,40.44192 10.9302,40.618649 4.9974,40.40514 L 2.03187,39.6786"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -1684,7 +1663,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin72"
        style="fill:none;stroke:#000000"
-       d="m 18.279973,99.285345 c 1.065822,1.113915 2.727541,1.702855 4.242607,1.298915 M 17.961923,98.836179 C 16.97387,97.539296 16.638035,95.672375 17.355101,94.174181"
+       d="m 18.279973,99.285345 c 1.065822,1.113915 2.727541,1.702855 4.242607,1.298915 M 17.961923,98.836179 C 16.97387,97.539296 16.638035,95.672375 17.355101,94.174181 m -1.379632,-0.218453 7.288808,8.686662"
        inkstitch:satin_column="True"
        inkstitch:ties="0"
        inkstitch:force_lock_stitches="True"
@@ -1694,7 +1673,8 @@ GPL (General Public License) with font-exception and OFL (Open Font License
        inkscape:label="Auto-remplissage satin 4"
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
-       inkstitch:reverse_rails="none" />
+       inkstitch:reverse_rails="none"
+       sodipodi:nodetypes="cccccc" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1712,7 +1692,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin73"
        style="display:inline;fill:none;stroke:#000000"
-       d="m 7.0978761,69.443515 c 1.4384477,-0.125589 3.0131669,0.557542 3.6462669,1.908247 1.352964,2.19366 1.155378,5.329009 -0.694026,7.185271 -0.7385539,0.838136 -1.9244284,0.851773 -2.9522409,0.906482 M 6.0463227,69.487338 c -1.2895467,-0.12451 -2.4186434,0.781119 -3.0724544,1.81615 -1.5847828,2.365978 -0.9850507,5.954445 1.3774778,7.586609 0.4402877,0.334897 0.9829595,0.470881 1.5305228,0.46928"
+       d="m 7.0978761,69.443515 c 1.4384477,-0.125589 3.0131669,0.557542 3.6462669,1.908247 1.352964,2.19366 1.155378,5.329009 -0.694026,7.185271 -0.7385539,0.838136 -1.9244284,0.851773 -2.9522409,0.906482 M 6.0463227,69.487338 c -1.2895467,-0.12451 -2.4186434,0.781119 -3.0724544,1.81615 -1.5847828,2.365978 -0.9850507,5.954445 1.3774778,7.586609 0.4402877,0.334897 0.9829595,0.470881 1.5305228,0.46928 M -0.39938673,74.585472 H 13.878689"
        inkstitch:satin_column="True"
        inkstitch:ties="0"
        inkstitch:force_lock_stitches="True"
@@ -1726,7 +1706,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin74"
        style="display:inline;fill:none;stroke:#000000"
-       d="m 7.2277991,90.146846 c 1.8954548,-0.08508 3.3690709,1.250389 3.9019999,3.042609 M 6.4022535,90.158399 c -1.8813439,-0.0013 -3.1708143,1.325745 -3.9907486,2.927529"
+       d="m 7.2277991,90.146846 c 1.8954548,-0.08508 3.3690709,1.250389 3.9019999,3.042609 M 6.4022535,90.158399 c -1.8813439,-0.0013 -3.1708143,1.325745 -3.9907486,2.927529 M -0.81017198,91.387399 H 14.583095"
        inkstitch:satin_column="True"
        inkstitch:ties="3"
        inkstitch:pull_compensation_mm="0.3"
@@ -1736,7 +1716,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none"
-       sodipodi:nodetypes="cccc" />
+       sodipodi:nodetypes="cccccc" />
     <path
        d="m 2.9256,93.092 3.83667,0.3075 c -0.114956,1.96465 0.010137,3.92332 0.099814,5.88583"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -1776,13 +1756,12 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin76"
        style="display:inline;fill:none;stroke:#000000"
-       d="m 11.19499,69.422991 c 1.333333,0 2.738663,0.5625 3.40533,1.5625 0.666667,1 1.125,2.10416 1.125,3.4375 0,1.33333 -0.377527,2.4558 -1.044194,3.4558 -0.666667,1 -2.152803,1.5442 -3.486136,1.5442 m -0.205899,-10 c -1.3333326,0 -2.294101,0.5 -3.294101,1.5 -1,1 -1.5,2.16666 -1.5,3.5 0,1.33333 0.5,2.5 1.5,3.5 1,1 1.9035744,1.477122 3.236907,1.477122"
+       d="m 11.19499,69.422991 c 1.424734,0.0022 2.964813,0.619354 3.645076,1.942627 1.138625,1.793632 1.17166,4.190795 0.132046,6.035116 -0.503079,1.084568 -1.629545,1.707855 -2.763663,1.921601 -0.333553,0.06579 -0.67342,0.10052 -1.013459,0.100656 m -0.205899,-10 c -1.2412962,-0.04281 -2.4034607,0.576331 -3.2472532,1.453491 -1.090763,1.022616 -1.6934279,2.545532 -1.5234103,4.038696 0.1423584,1.715412 1.3355616,3.176383 2.7777559,4.023898 0.5891416,0.326295 1.2657846,0.465791 1.9357136,0.461037 M 3.1950939,74.086239 H 18.67133"
        inkstitch:satin_column="True"
        inkstitch:ties="3"
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.2"
-       sodipodi:nodetypes="csssccsssc"
        inkscape:label="Auto-remplissage satin 3"
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
@@ -1934,7 +1913,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin85"
        style="fill:none;stroke:#000000"
-       d="M 6.0502446,75.416531 C 4.3078817,76.2344 2.9904103,78.040152 3,80 m 3.0502446,4.583469 C 4.780281,83.909181 3.3025558,82.735351 3.1032834,81.237751"
+       d="M 6.0502446,75.416531 C 4.3078817,76.2344 2.9904103,78.040152 3,80 m 3.0502446,4.583469 C 4.780281,83.909181 3.3025558,82.735351 3.1032834,81.237751 M 3.794174,74.086239 v 12.780375 l 0.4907527,0.131497"
        inkstitch:satin_column="True"
        inkstitch:ties="0"
        inkstitch:force_lock_stitches="True"
@@ -2018,7 +1997,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-?"
-     style="display:none"
+     style="display:inline"
      id="g1306">
     <path
        d="M 20.6958,83.3245 C 19.938,79.9063 19.0195,76.2609 19.9355,72.7976 23.7274,67.1143 32.3171,67.3988 35.6796,61.3076 39.2615,53.3319 35.0407,42.8113 26.8392,39.6333 22.7626,38.0436 18.111,38.3067 13.9649,39.4838 9.68187,41.4295 7.56222,46.1372 6.26581,50.3941 5.91515,51.8823 5.71159,53.3959 5.59373,54.9192 l -0.04261,3.0514"
@@ -2064,7 +2043,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin91"
        style="fill:none;stroke:#000000"
-       d="m 21,100 c 1.583008,-0.02092 3.390017,-0.772338 3.899247,-2.40183 m -4.549581,2.345455 c -1.514372,0.08044 -2.618551,-1.170818 -3.504826,-2.223579"
+       d="m 21,100 c 1.583008,-0.02092 3.390017,-0.772338 3.899247,-2.40183 m -4.549581,2.345455 c -1.514372,0.08044 -2.618551,-1.170818 -3.504826,-2.223579 m -1.330945,0.617538 10.745783,-0.162034"
        inkstitch:satin_column="True"
        inkstitch:ties="0"
        inkstitch:force_lock_stitches="True"
@@ -2075,7 +2054,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none"
-       sodipodi:nodetypes="cccc" />
+       sodipodi:nodetypes="cccccc" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -2271,7 +2250,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin101"
        style="fill:none;stroke:#000000"
-       d="m 5.2053947,99.923787 c 1.0929315,0.530183 3.5203346,0.326573 4.5313555,-1.472793 M 4.1099337,99.552666 C 2.7288332,98.82042 1.7246196,97.227886 2.0088249,95.636807"
+       d="m 5.2053947,99.923787 c 1.0929315,0.530183 3.5203346,0.326573 4.5313555,-1.472793 M 4.1099337,99.552666 C 2.7288332,98.82042 1.7246196,97.227886 2.0088249,95.636807 m -2.70775168,0.715242 11.18282878,4.193561"
        inkstitch:satin_column="True"
        inkstitch:ties="0"
        inkstitch:force_lock_stitches="True"
@@ -2282,7 +2261,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none"
-       sodipodi:nodetypes="cccc" />
+       sodipodi:nodetypes="cccccc" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -2955,7 +2934,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Ë"
-     style="display:inline"
+     style="display:none"
      id="g175">
     <path
        id="path163"
@@ -3013,7 +2992,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
        sodipodi:nodetypes="cccc" />
     <g
        id="g184"
-       transform="translate(-5.83664, -21.9054)">
+       transform="translate(-5.83664,-21.9054)">
       <g
          id="g183"
          style="display:inline">
@@ -3028,7 +3007,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
         <path
            id="path183"
            style="display:inline;fill:none;stroke:#000000"
-           d="m 16.927865,40.614078 c 3.239692,-0.133139 5.151229,2.404462 5.058301,5.599254 -0.10279,3.533835 -2.524535,4.323117 -5.058301,4.400746 m -0.522754,-10.0645 c -3.951866,-0.111105 -5.050068,2.381602 -4.945059,5.238012 0.120343,3.273545 2.162401,4.486132 4.999986,4.755538"
+           d="m 16.927865,40.614078 c 3.239692,-0.133139 5.151229,2.404462 5.058301,5.599254 -0.10279,3.533835 -2.524535,4.323117 -5.058301,4.400746 m -0.522754,-10.0645 c -3.951866,-0.111105 -5.050068,2.381602 -4.945059,5.238012 0.120343,3.273545 2.162401,4.486132 4.999986,4.755538 M 7.8135035,45.486557 H 24.616843"
            inkstitch:satin_column="True"
            inkstitch:ties="0"
            inkstitch:force_lock_stitches="True"
@@ -3045,7 +3024,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
          style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
          d="m 12.488064,39.20351 c 4.915873,0.320937 17.570593,0.411345 19.287231,0.746638"
          id="path172"
-         transform="translate(5.83664, 21.9054)"
+         transform="translate(5.83664,21.9054)"
          sodipodi:nodetypes="cc" />
       <g
          id="g181"
@@ -3061,7 +3040,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
         <path
            id="path181"
            style="display:inline;fill:none;stroke:#000000"
-           d="m 37.678089,40.617118 c 3.239692,-0.133139 5.151228,2.404462 5.0583,5.599254 -0.10279,3.533835 -2.524534,4.323117 -5.0583,4.400746 m -0.53033,-9.9613 c -3.730264,-0.09175 -5.042492,2.278402 -4.937483,5.134812 0.120343,3.273545 1.482442,4.594169 4.837099,4.723289"
+           d="m 37.678089,40.617118 c 3.239692,-0.133139 5.151228,2.404462 5.0583,5.599254 -0.10279,3.533835 -2.524534,4.323117 -5.0583,4.400746 m -0.53033,-9.9613 c -3.730264,-0.09175 -5.042492,2.278402 -4.937483,5.134812 0.120343,3.273545 1.482442,4.594169 4.837099,4.723289 m -8.335601,-5.168566 h 16.520931"
            inkstitch:satin_column="True"
            inkstitch:ties="0"
            inkstitch:force_lock_stitches="True"
@@ -3084,8 +3063,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
        id="path173"
        style="fill:none;stroke:#000000"
        inkscape:label="Auto-remplissage satin 10"
-       d="m 38.789062,41.429688 -0.132408,1.208713 -0.40287,0.902779 -0.625684,0.640895 -0.800852,0.423059 -0.928372,0.249272 -1.008244,0.119536 -2.065516,0.02606 C 32.825116,45 13,45 13,45 L 9.2807422,41.601923 7.2670331,39.762111 M 18.75,34.625 18.875,46.187501 M 38.853459,40.425107 38.821439,39.272449 38.597358,38.319374 38.19515,37.551736 37.628751,36.955389 36.912099,36.516188 36.059131,36.219986 34,36 H 9.0280234 l -1.1993,-0.01592 -0.7559861,0.09996 -0.483523,0.06393 -1.186612,0.36689 -1.040609,0.593079"
-       sodipodi:nodetypes="ccccccccccccccccccccccccccc"
+       d="m 38.789062,41.429688 c -0.05391,0.703969 -0.119767,1.4047 -0.495172,2.021619 -0.656149,1.012847 -1.909638,1.386445 -3.058003,1.481702 C 32.200875,45.082986 29.152748,44.95927 26.113236,45 21.742157,45 17.371079,45 13,45 11.089011,43.254037 9.1780225,41.508073 7.2670331,39.762111 M 18.75,34.625 c 0.04167,3.854167 0.08333,7.708334 0.125,11.562501 m 19.978459,-5.762394 c 0.03058,-1.173314 -0.142583,-2.480835 -1.066998,-3.30367 C 37.019028,36.372553 35.918018,36.144 34.878945,36.093902 33.086221,35.900924 31.275594,36.044059 29.474937,36 22.210967,36.003 14.943301,35.9944 7.6816409,36.0035 6.5322204,36.09727 5.397512,36.414881 4.4358689,37.065807 l -0.064449,0.03673 -0.00943,0.0054"
        inkstitch:satin_column="True"
        inkstitch:ties="3"
        inkstitch:pull_compensation_mm="0.3"
@@ -3191,7 +3169,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin119"
        style="fill:none;stroke:#000000"
-       d="m 8,100 c 2.486579,1e-5 4.801373,-2.115015 4.962064,-4.607988 M 7.5379464,100.0114 C 5.144652,99.958036 3.0987593,97.364619 3.029421,95.304019"
+       d="m 8,100 c 2.486579,1e-5 4.801373,-2.115015 4.962064,-4.607988 M 7.5379464,100.0114 C 5.144652,99.958036 3.0987593,97.364619 3.029421,95.304019 M 1.1981602,98.049443 H 14.577616"
        inkstitch:satin_column="True"
        inkstitch:ties="0"
        inkstitch:force_lock_stitches="True"
@@ -3320,7 +3298,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin125"
        style="fill:none;stroke:#000000"
-       d="m 35,69 c 0,0 -22,0 -22,0 M 35,59 c 0,0 -22,0 -22,0"
+       d="m 35,69 c 0,0 -22,0 -22,0 M 35,59 c 0,0 -22,0 -22,0 m 10.16443,-4.084324 v 19.070716"
        inkstitch:satin_column="True"
        inkstitch:ties="3"
        inkstitch:pull_compensation_mm="0.3"
@@ -3360,7 +3338,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin127"
        style="fill:none;stroke:#000000"
-       d="m 8,100 c 1.5195456,-0.0075 2.998598,-0.78356 3.911797,-1.990234 M 7.5941964,100.05473 C 6.08443,100.02632 5.0263748,99.025533 4.0657399,97.98302"
+       d="m 8,100 c 1.5195456,-0.0075 2.998598,-0.78356 3.911797,-1.990234 M 7.5941964,100.05473 C 6.08443,100.02632 5.0263748,99.025533 4.0657399,97.98302 m -1.1701861,1.36443 h 9.8848212"
        inkstitch:satin_column="True"
        inkstitch:ties="0"
        inkstitch:force_lock_stitches="True"
@@ -3408,7 +3386,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin129"
        style="fill:none;stroke:#000000"
-       d="M 8.828045,100.01187 C 10.711255,100.01777 13.108047,97.383838 13,94.75 M 7.517963,100 C 4.7953129,100.0167 2.844777,97.470764 3,94.75"
+       d="M 8.828045,100.01187 C 10.711255,100.01777 13.108047,97.383838 13,94.75 M 7.517963,100 C 4.7953129,100.0167 2.844777,97.470764 3,94.75 M 0.89862015,97.749903 H 15.675929"
        inkstitch:satin_column="True"
        inkstitch:ties="0"
        inkstitch:force_lock_stitches="True"
@@ -3540,7 +3518,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin135"
        style="fill:none;stroke:#000000"
-       d="m 8,100 c 1.5809264,-0.0011 3.099772,-0.85481 4.021967,-2.121388 M 7.1433906,100.04357 C 5.6809864,100.09973 4.7800448,98.760403 3.909334,97.796826"
+       d="m 8,100 c 1.5809264,-0.0011 3.099772,-0.85481 4.021967,-2.121388 M 7.1433906,100.04357 C 5.6809864,100.09973 4.7800448,98.760403 3.909334,97.796826 M 2.4961671,98.948063 H 13.678996 v 0.399387"
        inkstitch:satin_column="True"
        inkstitch:ties="0"
        inkstitch:force_lock_stitches="True"
@@ -3575,7 +3553,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin137"
        style="fill:none;stroke:#000000"
-       d="m 7.5267965,95.473204 4.4948495,-4.49485 M 4.5,98.5 C 2.7254344,96.753851 3.0092243,94.345165 3,92.077243"
+       d="m 7.5267965,95.473204 4.4948495,-4.49485 M 4.5,98.5 C 2.7254344,96.753851 3.0092243,94.345165 3,92.077243 M 1.1981602,95.353582 12.480836,92.557876"
        inkstitch:satin_column="True"
        inkstitch:ties="3"
        inkstitch:pull_compensation_mm="0.3"
@@ -3585,7 +3563,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none"
-       sodipodi:nodetypes="cccc" />
+       sodipodi:nodetypes="cccccc" />
     <path
        d="M 3.56537,92.0084 7.99702,90.0982 C 8.01401,73.0761 7.97802,56.0515 8.01509,39.0288 l 0.20335,-3.6674"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -3856,7 +3834,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin150"
        style="fill:none;stroke:#000000"
-       d="m 8.0441942,99.99785 c 2.6191158,0.0063 4.9571038,-2.379157 4.9546898,-4.986352 m -5.41936,4.959481 C 5.0679724,99.937504 2.9869494,97.357432 3,94.94498"
+       d="m 8.0441942,99.99785 c 2.6191158,0.0063 4.9571038,-2.379157 4.9546898,-4.986352 m -5.41936,4.959481 C 5.0679724,99.937504 2.9869494,97.357432 3,94.94498 M 1.1981602,97.749903 H 14.877156"
        inkstitch:satin_column="True"
        inkstitch:ties="3"
        inkstitch:pull_compensation_mm="0.3"
@@ -4176,7 +4154,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin165"
        style="fill:none;stroke:#000000"
-       d="M 18,45 V 94.6 M 28,45 v 49.5462"
+       d="M 18,45 V 94.6 M 28,45 V 94.5462 M 15.176696,73.287465 h 14.977002"
        inkstitch:satin_column="True"
        inkstitch:ties="3"
        inkstitch:pull_compensation_mm="0.3"
@@ -4286,7 +4264,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin170"
        style="fill:none;stroke:#000000"
-       d="M 24,94.465047 V 89.63076 M 24,100 c -2.209064,-0.09402 -3.377172,-1.533865 -4.066421,-3.438264"
+       d="M 24,94.465047 V 89.63076 M 24,100 c -2.209064,-0.09402 -3.377172,-1.533865 -4.066421,-3.438264 m 5.427478,-8.097575 -5.990801,11.182829"
        inkstitch:satin_column="True"
        inkstitch:ties="3"
        inkstitch:pull_compensation_mm="0.3"
@@ -4296,7 +4274,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none"
-       sodipodi:nodetypes="cccc" />
+       sodipodi:nodetypes="cccccc" />
     <path
        d="m 19.3598,97.5397 2.0633,-7.2434 C 20.6453,86.0298 19.9488,81.7373 18.2904,77.7017 14.4001,66.7064 10.9975,55.5517 7.52751,44.4202 6.95986,42.6399 6.34194,40.8787 5.65294,39.1414 L 4.80672,36.1726"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -4393,7 +4371,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin175"
        style="fill:none;stroke:#000000"
-       d="m 25,100 c -2.108614,0.0843 -4.190177,-1.249882 -4.98305,-3.207978 M 25,94.506837 c 0,-1.725575 0,-3.45115 0,-5.176725"
+       d="m 25,100 c -2.108614,0.0843 -4.190177,-1.249882 -4.98305,-3.207978 M 25,94.506837 c 0,-1.725575 0,-3.45115 0,-5.176725 m 1.559218,-0.965798 -7.188962,10.983136"
        inkstitch:satin_column="True"
        inkstitch:ties="3"
        inkstitch:pull_compensation_mm="0.3"
@@ -4496,7 +4474,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin180"
        style="fill:none;stroke:#000000"
-       d="m 4.9875,99.074662 c 1.8118869,1.517118 5.431805,1.689528 7.779792,-2.314137 M 4.5,98.5 C 2.7957879,96.914677 2.6392084,94.064009 3.9546047,92.193942"
+       d="m 4.9875,99.074662 c 1.8118869,1.517118 5.431805,1.689528 7.779792,-2.314137 M 4.5,98.5 C 2.7957879,96.914677 2.6392084,94.064009 3.9546047,92.193942 M 1.1981602,92.158492 13.479302,99.4473"
        inkstitch:satin_column="True"
        inkstitch:ties="0"
        inkstitch:force_lock_stitches="True"
@@ -4586,7 +4564,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin184"
        style="fill:none;stroke:#000000"
-       d="M 29,82 V 94.4 M 19,82 v 12.293495"
+       d="M 29,82 V 94.4 M 19,82 v 12.293495 m -2.824837,-4.930714 h 15.076849"
        inkstitch:satin_column="True"
        inkstitch:ties="0"
        inkstitch:force_lock_stitches="True"
@@ -5234,7 +5212,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin218"
        style="fill:none;stroke:#000000"
-       d="M 13.680952,100 C 10.437947,99.837394 9.9283939,96.936908 9.996443,94.311133 M 15,100 c 2.879243,0.0194 5.3378,-2.763595 4.977357,-5.620405"
+       d="M 13.680952,100 C 10.437947,99.837394 9.9283939,96.936908 9.996443,94.311133 M 15,100 c 2.879243,0.0194 5.3378,-2.763595 4.977357,-5.620405 M 7.6881946,96.651589 H 21.766577"
        inkstitch:satin_column="True"
        inkstitch:ties="3"
        inkstitch:pull_compensation_mm="0.3"
@@ -5297,7 +5275,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin221"
        style="fill:none;stroke:#000000"
-       d="m 1.0858735,59.734748 c 0.045603,-1.616175 0.9190537,-3.210455 2.4635145,-3.83383 4.0960406,-1.409286 8.590191,-0.901902 12.880592,-0.900936 M 0.94777823,60.09239 c -0.0285807,1.624514 0.41720307,3.76221 2.21400087,4.260246 4.3057903,1.027132 8.8288839,0.647258 13.2388859,0.647366"
+       d="m 1.0858735,59.734748 c 0.045603,-1.616175 0.9190537,-3.210455 2.4635145,-3.83383 4.0960406,-1.409286 8.590191,-0.901902 12.880592,-0.900936 M 0.94777823,60.09239 c -0.0285807,1.624514 0.41720307,3.76221 2.21400087,4.260246 4.3057903,1.027132 8.8288839,0.647258 13.2388859,0.647366 M 6.9892678,51.221348 v 17.672863"
        inkstitch:satin_column="True"
        inkstitch:ties="3"
        inkstitch:pull_compensation_mm="0.3"
@@ -5317,7 +5295,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin222"
        style="fill:none;stroke:#000000"
-       d="M 20,65 19.97742,94.379592 M 10,65 c -0.02,9.770305 0.02945,19.540899 -0.00356,29.311133"
+       d="M 20,65 19.97742,94.379592 M 10,65 C 9.98,74.770305 10.02945,84.540899 9.99644,94.311133 M 7.3886545,80.07704 H 22.26581"
        sodipodi:nodetypes="cccc"
        inkstitch:satin_column="True"
        inkstitch:ties="0"
@@ -5463,7 +5441,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin229"
        style="fill:none;stroke:#000000"
-       d="M 8.9071429,100 C 10.799788,100.00962 13.069071,97.270467 13,94.880044 M 7.2269021,100 C 4.5363951,100.0165 2.9030614,97.536885 3,94.848501"
+       d="M 8.9071429,100 C 10.799788,100.00962 13.069071,97.270467 13,94.880044 M 7.2269021,100 C 4.5363951,100.0165 2.9030614,97.536885 3,94.848501 M 0.39938673,96.851282 H 15.076849"
        inkstitch:satin_column="True"
        inkstitch:ties="0"
        inkstitch:force_lock_stitches="True"
@@ -5474,7 +5452,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none"
-       sodipodi:nodetypes="cccc" />
+       sodipodi:nodetypes="cccccc" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -5484,7 +5462,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin230"
        style="fill:none;stroke:#000000"
-       d="M 7.0182814,100 C 5.9045627,100.04593 3.1440385,99.42813 2.9336337,95.234622 M 8,100 c 2.598858,0.16006 3.924826,-2.558791 3.984496,-4.790497"
+       d="M 7.0182814,100 C 5.9045627,100.04593 3.1440385,99.42813 2.9336337,95.234622 M 8,100 c 2.598858,0.16006 3.924826,-2.558791 3.984496,-4.790497 m -11.08587585,2.5404 H 14.178229"
        inkstitch:satin_column="True"
        inkstitch:ties="3"
        inkstitch:pull_compensation_mm="0.3"
@@ -5506,7 +5484,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin231"
        style="fill:none;stroke:#000000"
-       d="m 8,36 c 3.239692,-0.133139 5.151228,2.404462 5.0583,5.599254 C 12.95551,45.133089 10.533766,45.922371 8,46 M 7.0063092,36 c -3.0547421,0.09375 -4.5791312,2.317102 -4.4741226,5.173512 0.1203435,3.273545 1.0386528,4.727946 4.3933104,4.857066"
+       d="m 8,36 c 3.239692,-0.133139 5.151228,2.404462 5.0583,5.599254 C 12.95551,45.133089 10.533766,45.922371 8,46 M 7.0063092,36 c -3.0547421,0.09375 -4.5791312,2.317102 -4.4741226,5.173512 0.1203435,3.273545 1.0386528,4.727946 4.3933104,4.857066 M -0.19969337,40.93714 H 16.674396"
        inkstitch:satin_column="True"
        inkstitch:ties="0"
        inkstitch:force_lock_stitches="True"
@@ -5571,18 +5549,18 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin234"
        style="fill:none;stroke:#000000"
-       d="m 27,36 c -1.333333,0 -2.5,0.5 -3.5,1.5 -1,1 -1.5,2.166667 -1.5,3.5 0,1.333333 0.5,2.5 1.5,3.5 1,1 2.166667,1.5 3.5,1.5 m 0.556706,-9.90625 C 28.890039,36.09375 29.5,36.5 30.5,37.5 c 1,1 1.5,2.166667 1.5,3.5 0,1.333333 -0.5,2.5 -1.5,3.5 -1,1 -1.681794,1.526755 -3.015127,1.526755"
+       d="m 26.600613,36.099847 c -2.773473,-0.04888 -4.866382,2.514782 -4.58736,5.284571 0.175221,2.486318 2.083956,4.459869 4.58736,4.415889 m 0.956093,-9.706557 c 1.143316,-0.08543 2.189368,0.562884 2.931995,1.381544 1.071982,1.061291 1.697932,2.602283 1.483954,4.115592 -0.163,1.374085 -0.987326,2.580261 -2.029823,3.45297 -0.671463,0.594332 -1.538992,1.042705 -2.457959,0.982857 M 18.771176,40.03852 h 15.37639"
        inkstitch:satin_column="True"
        inkstitch:ties="0"
        inkstitch:force_lock_stitches="True"
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.2"
-       sodipodi:nodetypes="csssccsssc"
        inkscape:label="Auto-remplissage satin 5"
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
-       inkstitch:reverse_rails="none" />
+       inkstitch:reverse_rails="none"
+       sodipodi:nodetypes="cccccccccc" />
     <path
        id="autosatin235"
        style="fill:none;stroke:#000000"
@@ -5670,7 +5648,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin239"
        style="fill:none;stroke:#000000"
-       d="m 9.008656,100 c 1.435683,0.0759 2.252867,-1.311836 3.103141,-2.22833 M 8,100 C 6.4973316,99.990368 5.0339821,98.959728 4.1212313,97.77167"
+       d="m 9.008656,100 c 1.435683,0.0759 2.252867,-1.311836 3.103141,-2.22833 M 8,100 C 6.4973316,99.990368 5.0339821,98.959728 4.1212313,97.77167 M 3.0952472,99.04791 H 13.279609"
        inkstitch:satin_column="True"
        inkstitch:ties="0"
        inkstitch:force_lock_stitches="True"
@@ -5718,7 +5696,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin241"
        style="fill:none;stroke:#000000"
-       d="m 8,100 c 1.5977208,6.3e-4 3.126125,-0.875086 4.051654,-2.156731 M 7.063177,100 C 5.6332386,99.968968 4.8091875,98.831841 3.9483458,97.843269"
+       d="m 8,100 c 1.5977208,6.3e-4 3.126125,-0.875086 4.051654,-2.156731 M 7.063177,100 C 5.6332386,99.968968 4.8091875,98.831841 3.9483458,97.843269 M 1.4977002,98.948063 H 14.877156"
        inkstitch:satin_column="True"
        inkstitch:ties="0"
        inkstitch:force_lock_stitches="True"
@@ -5799,7 +5777,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin246"
        style="fill:none;stroke:#000000"
-       d="m 8.646056,100 c 1.461428,0.0298 2.557923,-1.077147 3.53375,-2.015847 M 6.9333333,100 C 5.6051952,99.968714 4.7643628,98.814511 3.9909157,97.893947"
+       d="m 8.646056,100 c 1.461428,0.0298 2.557923,-1.077147 3.53375,-2.015847 M 6.9333333,100 C 5.6051952,99.968714 4.7643628,98.814511 3.9909157,97.893947 M 2.196627,98.948063 h 12.181295"
        inkstitch:satin_column="True"
        inkstitch:ties="0"
        inkstitch:force_lock_stitches="True"
@@ -5870,7 +5848,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none"
        sodipodi:nodetypes="cccc"
-       d="m 8.6962124,100.07028 c 1.6361946,0.1171 4.3169816,-1.882881 4.2970356,-4.952981 m -5.6960643,4.812419 c -2.5592679,0.008 -4.2070182,-2.165556 -4.2779882,-4.731363" />
+       d="m 8.6962124,100.07028 c 1.6361946,0.1171 4.3169816,-1.882881 4.2970356,-4.952981 m -5.6960643,4.812419 c -2.5592679,0.008 -4.2070182,-2.165556 -4.2779882,-4.731363 M 1.1981602,97.350516 H 14.677462" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -6124,7 +6102,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin261"
        style="fill:none;stroke:#000000"
-       d="M 8.6518186,100 C 11.7373,100.1326 12.128866,95.741027 12.168986,95.115151 M 7.2971837,100.07028 C 4.7336648,100.0842 3.1887289,97.779232 2.9907425,95.260859"
+       d="M 8.6518186,100 C 11.7373,100.1326 12.128866,95.741027 12.168986,95.115151 M 7.2971837,100.07028 C 4.7336648,100.0842 3.1887289,97.779232 2.9907425,95.260859 M 1.1981602,97.749903 H 14.178229"
        inkstitch:satin_column="True"
        inkstitch:ties="0"
        inkstitch:force_lock_stitches="True"
@@ -6408,7 +6386,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin274"
        style="fill:none;stroke:#000000;stroke-width:1.02157"
-       d="m 23.502553,99.995839 c -2.240392,-0.09384 -3.361884,-1.500182 -4.53363,-3.232444 M 23.6199,95.094377 c -0.01676,-1.634121 -0.03351,-3.268242 -0.05027,-4.902363"
+       d="m 23.502553,99.995839 c -2.240392,-0.09384 -3.361884,-1.500182 -4.53363,-3.232444 M 23.6199,95.094377 c -0.01676,-1.634121 -0.03351,-3.268242 -0.05027,-4.902363 m 1.192347,0.468775 -5.09218,10.184361"
        inkstitch:satin_column="True"
        inkstitch:ties="3"
        inkstitch:pull_compensation_mm="0.3"
@@ -6418,7 +6396,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none"
-       sodipodi:nodetypes="cccc" />
+       sodipodi:nodetypes="cccccc" />
     <path
        d="M 24.2199,89.2632 19.9575,89.0379 19.5391,87.5473 19.4976,87.443 v 0 L 18.9825,86.1475 18.2539,84.792 17.9034,84.1399 v 0 l -0.3781,-0.7034 -0.718,-1.3611 -0.6213,-1.1828 v 0 l -0.09336,-0.177743 -0.717674,-1.36455 -0.717675,-1.36455 -0.181127,-0.344386 v 0 l -0.536547,-1.02017 -0.717674,-1.36455 -0.452335,-0.868234 v 0 L 12.5097,73.8894 11.7993,72.5212 11.0889,71.1529 11.0763,71.1286 v 0 L 10.3786,69.7847 9.66818,68.4164 9.38366,67.8684 v 0 L 8.95781,67.0482 8.2723,65.6682 7.74031,64.5832 v 0 L 7.594,64.2848 6.90417,62.9067 6.20666,61.5322 6.08958,61.3016 v 0 L 5.5089,60.1578 4.74879,58.8169 4.28791,58.1035 v 0 L 3.925592,57.5427 1.90997,55.345"
        style="fill:none;stroke:#000000;stroke-width:1.02157;stroke-dasharray:0.5, 0.5"
@@ -6518,7 +6496,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin279"
        style="fill:none;stroke:#000000"
-       d="m 24,100 c -2.186457,-0.0076 -3.576317,-1.338985 -4.6002,-3.103131 m 4.58911,-1.600311 0.0048,-4.899624"
+       d="m 24,100 c -2.186457,-0.0076 -3.576317,-1.338985 -4.6002,-3.103131 m 4.58911,-1.600311 0.0048,-4.899624 m 1.966428,-0.634766 -6.490035,11.781912"
        inkstitch:satin_column="True"
        inkstitch:ties="3"
        inkstitch:pull_compensation_mm="0.3"
@@ -6528,7 +6506,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none"
-       sodipodi:nodetypes="cccc" />
+       sodipodi:nodetypes="cccccc" />
     <path
        d="M 24.6481,89.471 20.5514,89.1282 C 19.3734,84.7245 16.7208,80.8907 14.8747,76.7493 11.6073,70.2289 8.35718,63.6974 5.18106,57.1346"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -7324,7 +7302,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin316"
        style="display:inline;fill:none;stroke:#000000"
-       d="m 48.301365,97.833712 c -0.669102,1.655176 -2.447987,2.393548 -4.13924,2.232778 -3.0383,-0.236304 -6.415949,-0.849105 -8.560123,-3.210563 C 34.138886,94.680713 33.568851,92.032349 33.116032,89.4833 32.41111,85.133508 32.693935,80.732594 32.750575,76.35163 M 48.66053,97.22216 c 0.411491,-1.305977 1.057427,-2.800182 0.428043,-4.125411 -1.676564,-1.714412 -4.021488,-2.482662 -6.189076,-3.34781 -1.378548,-0.94551 -0.740767,-2.80071 -0.897116,-4.198081 -0.0142,-4.116842 0.0067,-8.233704 -0.0024,-12.350551 M 31.89174,82.688613 43.542483,81.405888"
+       d="m 48.301365,97.833712 c -2.046124,3.775548 -7.23622,1.975623 -10.375829,0.765655 C 34.172162,96.85918 33.653893,92.275384 32.995138,88.667132 32.445521,84.584149 32.697555,80.455026 32.750575,76.35163 M 48.66053,97.22216 c 2.070612,-3.190735 -0.675899,-5.871455 -3.702774,-6.658701 -3.870533,-0.420503 -2.873335,-4.553974 -2.96009,-7.328327 -0.0027,-3.344942 0.0097,-6.689884 0.0023,-10.034825 M 31.89174,82.688613 c 3.883581,-0.427575 7.767162,-0.85515 11.650743,-1.282725"
        inkstitch:satin_column="True"
        inkstitch:ties="3"
        inkstitch:pull_compensation_mm="0.3"
@@ -7333,20 +7311,18 @@ GPL (General Public License) with font-exception and OFL (Open Font License
        inkscape:label="Auto-remplissage satin 1"
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
-       inkstitch:reverse_rails="none"
-       sodipodi:nodetypes="cccccccccccc" />
+       inkstitch:reverse_rails="none" />
     <g
        id="g158">
       <path
-         d="m 43.0746,72.9822 -5.6739,0.2727 c 0.03973,-3.96257 0.588407,-8.87245 -3.05855,-11.5182 -5.27239,-4.10353 -12.6889,-4.38908 -18.9172,-2.62234 -0.230716,0.09003 -0.461431,0.180057 -0.692147,0.270086 M 13.1773,48.2628 c 2.95372,-1.96621 5.55283,-4.46525 8.0321,-6.99339 0.615008,-1.40984 1.35832,-2.75638 2.20647,-4.03918"
+         d="M 43.0746,72.9822 C 41.1833,73.0731 39.292,73.164 37.4007,73.2549 37.47034,69.311072 37.952344,64.374067 34.34215,61.7367 28.846745,57.514073 21.1064,57.250662 14.732803,59.384446 M 13.1773,48.2628 c 3.205966,-2.467645 6.890106,-4.904814 8.776875,-8.552732 0.442654,-0.851849 0.932257,-1.679109 1.461695,-2.479838"
          style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
          inkstitch:running_stitch_length_mm=""
          id="autosatinrun187"
          inkscape:label="Points droits pour auto-remplissage satin 3"
-         inkstitch:ties="3"
-         sodipodi:nodetypes="cccccccc" />
+         inkstitch:ties="3" />
       <path
-         d="m 24.663646,37.038619 c 1.420807,2.301358 2.101648,5.037422 4.250474,6.822933 1.302214,1.441152 2.662071,2.817652 4.219813,3.985106"
+         d="m 24.663646,37.038619 c 1.466036,2.67105 2.559782,5.636539 4.989973,7.62581 1.077856,1.145694 2.219716,2.237984 3.480314,3.182229"
          style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
          inkstitch:running_stitch_length_mm=""
          id="autosatinrun188"
@@ -7355,19 +7331,18 @@ GPL (General Public License) with font-exception and OFL (Open Font License
       <path
          id="autosatin317"
          style="fill:none;stroke:#000000"
-         d="m 33.474721,48.420442 c 0,0 -1.087617,0.72597 -1.087617,0.72597 0,0 -1.192671,0.208007 -1.192671,0.208007 0,0 -1.259016,-0.215766 -1.259016,-0.215766 0,0 -1.286651,-0.545343 -1.286651,-0.545343 0,0 -1.275576,-0.78073 -1.275576,-0.78073 0,0 -1.225793,-0.921923 -1.225793,-0.921923 C 26.147397,46.890657 24,45 24,45 c 0,0 0,-6.956139 0,-6.956139 M 34,48 c 0,0 0.296426,-0.572725 0.296426,-0.572725 0,0 0.0878,-0.731654 0.0878,-0.731654 0,0 -0.102447,-0.863378 -0.102447,-0.863378 0,0 -0.274316,-0.967897 -0.274316,-0.967897 0,0 -0.990718,-2.140526 -0.990718,-2.140526 0,0 -1.45764,-2.232132 -1.45764,-2.232132 0,0 -1.777528,-2.106093 -1.777528,-2.106093 0,0 -1.950382,-1.762409 -1.950382,-1.762409 0,0 -1.976204,-1.20108 -1.976204,-1.20108 0,0 -0.951837,-0.322028 -0.951837,-0.322028 C 24.903154,35.100078 24,35 24,35 m 1.378795,13.04657 c 0,0 8.223549,-7.842599 8.223549,-7.842599"
+         d="M 33.474721,48.420442 C 31.902487,49.937888 29.534627,49.264595 27.934256,48.155986 26.4786,47.29663 25.272115,46.098501 24,45 c 0,-2.318713 0,-4.637426 0,-6.956139 M 34,48 C 35.01069,46.147733 33.646614,44.107064 32.833529,42.443256 30.937227,39.427817 28.489802,36.425298 25.061455,35.153635 24.723871,35.03758 24.350772,35.058881 24,35 m 1.378795,13.04657 c 2.741183,-2.6142 5.482366,-5.228399 8.223549,-7.842599"
          inkstitch:satin_column="True"
          inkstitch:ties="3"
          inkstitch:pull_compensation_mm="0.3"
          inkstitch:zigzag_underlay="True"
          inkstitch:zigzag_underlay_inset_mm="0.2"
-         sodipodi:nodetypes="ccccccc"
          inkscape:label="Auto-remplissage satin 5"
          inkstitch:max_stitch_length_mm="6"
          inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
          inkstitch:reverse_rails="none" />
       <path
-         d="M 24,33.8661 V 37.288"
+         d="m 24,33.8661 c 0,1.140633 0,2.281267 0,3.4219"
          style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
          inkstitch:running_stitch_length_mm="2.5"
          inkstitch:running_stitch_tolerance_mm="0.5"
@@ -7375,21 +7350,20 @@ GPL (General Public License) with font-exception and OFL (Open Font License
       <path
          id="autosatin318"
          style="fill:none;stroke:#000000"
-         d="m 24,38.043861 c 0,0 0,6.956139 0,6.956139 0,0 -2.466707,1.893655 -2.466707,1.893655 0,0 -1.52063,0.951238 -1.52063,0.951238 0,0 -1.584883,0.816858 -1.584883,0.816858 0,0 -1.553688,0.579486 -1.553688,0.579486 0,0 -1.427046,0.239123 -1.427046,0.239123 0,0 -1.204954,-0.204231 -1.204954,-0.204231 0,0 -0.489366,-0.300559 -0.489366,-0.300559 0,0 -0.39805,-0.450018 -0.39805,-0.450018 M 24,35 c 0,0 -0.935667,0.132486 -0.935667,0.132486 0,0 -0.993358,0.339626 -0.993358,0.339626 0,0 -2.081976,1.200837 -2.081976,1.200837 0,0 -2.079305,1.729899 -2.079305,1.729899 0,0 -1.921012,2.059294 -1.921012,2.059294 0,0 -1.607097,2.189028 -1.607097,2.189028 0,0 -1.137561,2.119094 -1.137561,2.119094 0,0 -0.512402,1.849499 -0.512402,1.849499 0,0 0.02687,0.761255 0.02687,0.761255 C 12.758487,47.381018 13,48 13,48 m 1.274442,-8.074377 c 0,0 6.994085,8.100428 6.994085,8.100428"
+         d="m 24,38.043861 c 0,2.318713 0,4.637426 0,6.956139 -2.566869,1.993792 -5.359931,4.22487 -8.718142,4.452362 -0.758845,-0.07171 -1.492405,-0.230989 -1.927182,-0.92681 M 24,35 c -2.610914,0.293691 -4.724072,2.139343 -6.547453,3.892903 -2.10881,2.224813 -4.217663,4.788185 -4.715015,7.8943 C 12.768952,47.202938 12.688019,47.642361 13,48 m 1.274442,-8.074377 c 2.331362,2.700143 4.662723,5.400285 6.994085,8.100428"
          inkstitch:satin_column="True"
          inkstitch:ties="0"
          inkstitch:force_lock_stitches="True"
          inkstitch:pull_compensation_mm="0.3"
          inkstitch:zigzag_underlay="True"
          inkstitch:zigzag_underlay_inset_mm="0.2"
-         sodipodi:nodetypes="ccccccc"
          inkscape:label="Auto-remplissage satin 6"
          inkstitch:max_stitch_length_mm="6"
          inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
          inkstitch:reverse_rails="none" />
     </g>
     <path
-       d="m 14.732813,59.384511 c -2.976832,1.273536 -5.7586515,2.947781 -8.7062876,4.28881"
+       d="m 14.732813,59.384511 c -2.97736,1.273798 -5.7604543,2.948704 -8.7062876,4.28881"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
        inkstitch:running_stitch_length_mm=""
        id="autosatinrun189"
@@ -7397,7 +7371,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin319"
        style="display:inline;fill:none;stroke:#000000"
-       d="M 4.603593,64.276677 C 3.6361877,62.537202 3.9060201,60.158018 5.5566308,58.935785 9.8698745,55.456534 15.26514,53.245956 20.83435,53.077137 c 6.484042,-0.35727 13.275521,1.652189 17.966307,6.273317 2.841518,2.557637 3.296581,6.669034 3.194652,10.271056 -0.01129,1.192924 0.01275,2.385758 0.0047,3.5788 M 4.9896958,64.878673 c 0.746964,1.462435 2.3668879,2.261923 3.9850354,2.109862 2.4752438,-0.06231 4.5866008,-1.493411 6.6839918,-2.625343 3.342508,-1.354845 7.049105,-1.523691 10.604689,-1.205527 2.661326,0.44025 5.706712,1.71723 6.541855,4.52535 0.438527,2.48888 -0.01,5.016401 -0.0098,7.523309 -0.01499,0.381766 -0.02998,0.763533 -0.04498,1.1453 M 26.131762,64.748236 c 2.32386,-4.06109 5.207271,-7.735803 8.035718,-11.446566"
+       d="m 4.603593,64.276677 c -1.3820843,-2.284746 -0.09918,-5.187574 2.1939192,-6.285343 9.4342948,-7.034885 24.1440098,-6.765675 32.5084098,1.856381 3.313742,3.614862 2.617876,8.862055 2.694087,13.352595 M 4.9896958,64.878673 c 1.777669,3.254949 6.1174442,2.165666 8.6879532,0.58245 3.989441,-2.543108 9.038381,-2.832382 13.596696,-2.097786 3.175079,0.546746 6.22552,3.189041 5.722927,6.662515 -0.02605,2.110464 -0.220759,4.214777 -0.246785,6.325772 M 26.131762,64.748236 C 28.4514,60.693385 31.341963,57.00821 34.16748,53.30167"
        inkstitch:satin_column="True"
        inkstitch:ties="3"
        inkstitch:pull_compensation_mm="0.3"
@@ -7406,10 +7380,9 @@ GPL (General Public License) with font-exception and OFL (Open Font License
        inkscape:label="Auto-remplissage satin 8"
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
-       inkstitch:reverse_rails="none"
-       sodipodi:nodetypes="ccccccccccccccc" />
+       inkstitch:reverse_rails="none" />
     <path
-       d="m 31.6772,76.7173 1.2935,-5.962"
+       d="m 31.6772,76.7173 c 0.431167,-1.987333 0.862333,-3.974667 1.2935,-5.962"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
        inkstitch:running_stitch_length_mm="2.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
@@ -7417,8 +7390,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin320"
        style="display:inline;fill:none;stroke:#000000"
-       d="m 32.999996,69.999997 c 0,0 -2.136197,-0.866731 -2.136197,-0.866731 0,0 -2.210394,-0.590838 -2.210394,-0.590838 0,0 -2.207083,-0.362053 -2.207083,-0.362053 0,0 -2.126268,-0.180378 -2.126268,-0.180378 0,0 -2.505613,-0.0075 -2.505613,-0.0075 0,0 -2.508082,0.216682 -2.508082,0.216682 0,0 -2.479561,0.447077 -2.479561,0.447077 0,0 -2.420052,0.683724 -2.420052,0.683724 0,0 -2.329554,0.926622 -2.329554,0.926622 0,0 -2.2080683,1.17577 -2.2080683,1.17577 0,0 -2.0555927,1.431171 -2.0555927,1.431171 0,0 -1.872129,1.692822 -1.872129,1.692822 0,0 -1.4101714,1.60031 -1.4101714,1.60031 0,0 -1.108131,1.807969 -1.108131,1.807969 0,0 -0.7986962,1.962968 -0.7986962,1.962968 0,0 -0.481867,2.065307 -0.481867,2.065307 0,0 -0.1576436,2.114986 -0.1576436,2.114986 0,0 0.1739742,2.112004 0.1739742,2.112004 0,0 0.5129863,2.056362 0.5129863,2.056362 0,0 0.8593927,1.948061 0.8593927,1.948061 0,0 1.7341978,2.439517 1.7341978,2.439517 0,0 1.4154586,1.40841 1.4154586,1.40841 M 32.691546,77.954165 c 0,0 -2.926821,-0.86052 -2.926821,-0.86052 0,0 -3.225183,-0.680049 -3.225183,-0.680049 0,0 -3.323563,-0.386657 -3.323563,-0.386657 0,0 -3.221958,0.01966 -3.221958,0.01966 0,0 -1.510382,0.197482 -1.510382,0.197482 0,0 -1.409987,0.341406 -1.409987,0.341406 0,0 -1.284593,0.499443 -1.284593,0.499443 0,0 -1.134202,0.671597 -1.134202,0.671597 0,0 -0.958813,0.857866 -0.958813,0.857866 0,0 -0.758426,1.058249 -0.758426,1.058249 0,0 -0.533041,1.272747 -0.533041,1.272747 0,0 -0.282657,1.501361 -0.282657,1.501361 0,0 0.0108,1.82301 0.0108,1.82301 0,0 0.363226,1.599466 0.363226,1.599466 0,0 0.677111,1.382205 0.677111,1.382205 0,0 0.952454,1.171227 0.952454,1.171227 0,0 0.411246,0.334228 0.411246,0.334228 M 28.357802,67.084645 c 0,0 -2.156772,5.601823 -2.156772,5.601823 0,0 -0.92486,2.851979 -0.92486,2.851979 0,0 -0.687725,2.790111 -0.687725,2.790111 M 0.486533,84.14092 c 0,0 3.9485679,-0.171539 3.9485679,-0.171539 0,0 4.0748809,-0.04389 4.0748809,-0.04389 0,0 7.7785542,-0.08744 7.7785542,-0.08744 M 32.922919,69.564222 c 0,0 -0.342899,8.759914 -0.342899,8.759914"
-       sodipodi:nodetypes="cccccccsccccccc"
+       d="M 32.999996,69.999997 C 27.139316,67.392014 20.293509,67.421193 14.251066,69.401905 9.813457,70.9926 5.5901958,73.881451 3.3599556,78.129834 c -2.1378047,4.40992 -1.7747428,10.07271 1.4332612,13.879728 0.4933269,0.806641 1.2430231,1.394244 1.8876856,2.072697 M 32.691546,77.954165 c -4.66632,-1.451279 -9.657107,-2.478415 -14.533584,-1.631226 -2.86971,0.452606 -5.647444,2.569098 -5.939376,5.61036 -0.426428,2.466431 0.317316,5.21894 2.318171,6.823587 M 28.357802,67.084645 c -1.419313,3.694984 -2.961693,7.351895 -3.769357,11.243913 M 0.486533,84.14092 C 5.7488461,83.857424 11.02091,83.933962 16.288536,83.838051 M 32.922919,69.564222 c -0.1143,2.919971 -0.228599,5.839943 -0.342899,8.759914"
        inkstitch:satin_column="True"
        inkstitch:ties="3"
        inkstitch:pull_compensation_mm="0.3"
@@ -7429,7 +7401,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
-       d="m 15.4753,88.1207 -4.8665,3.2989 c 6.18091,5.34002 16.1202,5.621 22.835,1.10245 L 33.1925,89.0396"
+       d="m 15.4753,88.1207 c -1.622167,1.099633 -3.244333,2.199267 -4.8665,3.2989 6.252528,5.346514 16.056386,5.627245 22.835,1.10245 -0.08377,-1.160817 -0.167533,-2.321633 -0.2513,-3.48245"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
        inkstitch:running_stitch_length_mm=""
        id="autosatinrun190"
@@ -7438,7 +7410,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin321"
        style="display:inline;fill:none;stroke:#000000"
-       d="m 33.002516,88.30795 c -3.764726,2.810408 -8.774339,3.531412 -13.32732,2.755663 -1.858995,-0.350635 -3.695208,-1.054523 -5.138441,-2.306729 M 35,96 c -3.277556,2.195006 -7.032121,4.03066 -11.063563,3.986523 C 18.883183,100.11856 13.694813,99.013479 9.4227426,96.23114 8.4787857,95.557377 7.4700487,94.944888 6.6809024,94.082289 M 24.65384,90.2606 c 1.280362,3.678174 2.497706,7.378919 3.539167,11.13257"
+       d="m 33.002516,88.30795 c -4.729107,3.399706 -11.398952,4.039053 -16.695858,1.636631 -0.633025,-0.325872 -1.231891,-0.720647 -1.769903,-1.187697 M 35,96 c -3.892813,2.746887 -8.620279,4.49311 -13.438161,3.956127 C 16.152915,99.684158 10.662537,97.8512 6.6809024,94.082289 M 24.65384,90.2606 c 1.280225,3.67775 2.497833,7.379325 3.539167,11.13257"
        inkstitch:satin_column="True"
        inkstitch:ties="0"
        inkstitch:force_lock_stitches="True"
@@ -7493,7 +7465,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin324"
        style="display:inline;fill:none;stroke:#000000"
-       d="m 12.609674,41.379154 c 3.239692,-0.133139 5.151228,2.404462 5.0583,5.599254 -0.10279,3.533835 -2.524534,4.323117 -5.0583,4.400746 m -0.5,-9.87973 c -4.4878781,-0.11433 -5.0728221,2.196832 -4.9678131,5.053242 0.120343,3.273545 1.6258544,4.752773 4.9805111,4.881893"
+       d="m 12.609674,41.379154 c 3.239692,-0.133139 5.151228,2.404462 5.0583,5.599254 -0.10279,3.533835 -2.524534,4.323117 -5.0583,4.400746 m -0.5,-9.87973 c -4.4878781,-0.11433 -5.0728221,2.196832 -4.9678131,5.053242 0.120343,3.273545 1.6258544,4.752773 4.9805111,4.881893 M 4.9923341,47.227481 H 19.769643"
        inkstitch:satin_column="True"
        inkstitch:ties="0"
        inkstitch:force_lock_stitches="True"
@@ -7508,7 +7480,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin325"
        style="display:inline;fill:none;stroke:#000000"
-       d="m 13.247906,54.573598 c 5.951672,-2.141864 12.695067,-2.069174 18.576073,0.27376 m -16.72673,9.786665 c 3.520633,-1.650781 7.528536,-1.829862 11.340388,-1.438484"
+       d="m 13.247906,54.573598 c 5.951672,-2.141864 12.695067,-2.069174 18.576073,0.27376 m -16.72673,9.786665 c 3.520633,-1.650781 7.528536,-1.829862 11.340388,-1.438484 M 21.666731,49.324262 21.36719,65.499424"
        inkstitch:satin_column="True"
        inkstitch:ties="3"
        inkstitch:pull_compensation_mm="0.3"
@@ -7518,7 +7490,8 @@ GPL (General Public License) with font-exception and OFL (Open Font License
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none"
-       inkstitch:force_lock_stitches="True" />
+       inkstitch:force_lock_stitches="True"
+       sodipodi:nodetypes="cccccc" />
     <path
        d="M 33.2388,50.5871 C 33.154,48.04459 33.14852,45.5025 33.063141,42.96016"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -7530,7 +7503,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin326"
        style="display:inline;fill:none;stroke:#000000"
-       d="m 33.359897,41.382194 c 3.239692,-0.133139 5.151228,2.404462 5.0583,5.599254 -0.10279,3.533835 -2.524534,4.323117 -5.0583,4.400746 m -0.426984,-9.917568 c -4.487878,-0.11433 -5.145838,2.23467 -5.040829,5.09108 0.120343,3.273545 2.113156,4.697368 5.467813,4.826488"
+       d="m 33.359897,41.382194 c 3.239692,-0.133139 5.151228,2.404462 5.0583,5.599254 -0.10279,3.533835 -2.524534,4.323117 -5.0583,4.400746 m -0.426984,-9.917568 c -4.487878,-0.11433 -5.145838,2.23467 -5.040829,5.09108 0.120343,3.273545 2.113156,4.697368 5.467813,4.826488 m -8.29838,-4.5541 h 15.775776"
        inkstitch:satin_column="True"
        inkstitch:ties="0"
        inkstitch:force_lock_stitches="True"
@@ -7545,7 +7518,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin327"
        style="display:inline;fill:none;stroke:#000000"
-       d="m 31.823975,54.847364 c 8.091781,2.698548 10.074354,10.584409 10.176047,18.189706 M 26.437633,63.195545 c 2.01903,-0.04103 8.4108,3.377191 6.442008,12.999696"
+       d="m 31.823975,54.847364 c 8.091781,2.698548 10.074354,10.584409 10.176047,18.189706 M 26.437633,63.195545 c 2.01903,-0.04103 8.4108,3.377191 6.442008,12.999696 m -2.22671,-7.30103 12.580683,-7.688195"
        inkstitch:satin_column="True"
        inkstitch:ties="3"
        inkstitch:pull_compensation_mm="0.3"
@@ -7555,7 +7528,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none"
-       sodipodi:nodetypes="cccc" />
+       sodipodi:nodetypes="cccccc" />
     <path
        d="m 33.4977,75.9812 -0.527,-5.2259"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
@@ -7606,7 +7579,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin330"
        style="fill:none;stroke:#000000"
-       d="m 72.141466,91.154627 c 0.752394,1.269778 1.007201,2.560264 -0.180368,3.76418 -1.393684,1.382806 -3.227298,2.218845 -4.898904,3.217042 -6.19587,3.339611 -13.892569,3.007621 -20.166204,0.05555 C 42.32795,96.145612 38.225473,92.93239 35.326223,88.833388 33.620072,86.31908 32.863784,83.299309 33.007639,80.27603 m 38.404336,9.64005 c -1.309523,-1.784083 -3.531985,-2.419212 -5.678892,-1.618542 -3.377474,0.917808 -6.55745,2.91381 -10.175096,2.674937 C 49.12484,90.685123 43.227709,85.420746 42.192585,79.0694 m 14.384871,9.789257 c -0.04319,4.332201 -0.08638,8.664402 -0.129576,12.996603 m 8.036718,-14.848862 6.29586,11.207286 M 43.720289,80.232589 31.636886,82.544822"
+       d="m 72.141466,91.154627 c 0.752394,1.269778 1.007201,2.560264 -0.180368,3.76418 -1.393684,1.382806 -3.227298,2.218845 -4.898904,3.217042 -6.19587,3.339611 -13.892569,3.007621 -20.166204,0.05555 C 42.32795,96.145612 38.225473,92.93239 35.326223,88.833388 33.620072,86.31908 32.065011,83.199462 32.208866,80.176183 m 39.203109,9.739897 c -1.309523,-1.784083 -3.531985,-2.419212 -5.678892,-1.618542 -3.377474,0.917808 -6.55745,2.91381 -10.175096,2.674937 C 49.12484,90.685123 43.227709,85.420746 42.192585,79.0694 m 14.384871,9.789257 c -0.04319,4.332201 -0.08638,8.664402 -0.129576,12.996603 m 8.036718,-14.848862 6.29586,11.207286 M 43.720289,80.232589 31.636886,82.544822"
        inkstitch:satin_column="True"
        inkstitch:ties="3"
        inkstitch:pull_compensation_mm="0.3"
@@ -7627,24 +7600,25 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin331"
        style="fill:none;stroke:#000000"
-       d="m 42.068471,76.034369 c 0,0 0.31626,-1.262047 0.31626,-1.262047 C 42.384731,74.772322 43,73 43,73 c 0,0 26,0 26,0 0,0 -0.916973,-1.691817 -0.916973,-1.691817 0,0 -1.090372,-1.603577 -1.090372,-1.603577 0,0 -1.256454,-1.477786 -1.256454,-1.477786 0,0 -1.41522,-1.314443 -1.41522,-1.314443 0,0 -1.566672,-1.113548 -1.566672,-1.113548 0,0 -1.710806,-0.875103 -1.710806,-0.875103 0,0 -1.847625,-0.599106 -1.847625,-0.599106 0,0 -1.977128,-0.285558 -1.977128,-0.285558 0,0 -2.265377,0.06936 -2.265377,0.06936 0,0 -2.175936,0.445291 -2.175936,0.445291 0,0 -2.061495,0.783364 -2.061495,0.783364 0,0 -1.922057,1.083579 -1.922057,1.083579 0,0 -1.757621,1.345939 -1.757621,1.345939 0,0 -1.568187,1.57044 -1.568187,1.57044 0,0 -1.353754,1.757087 -1.353754,1.757087 C 44.114323,71.094124 43,73 43,73 c 0,0 -0.190036,0.44973 -0.190036,0.44973 m -0.764093,4.642136 c 0,0 0.06026,0.996802 0.06026,0.996802 0,0 0.216637,0.979462 0.216637,0.979462 C 42.322766,80.06813 43,82 43,82 c 0,0 30.140753,0 30.140753,0 0,0 1.839731,-0.08178 1.839731,-0.08178 0,0 1.788427,-0.360914 1.788427,-0.360914 0,0 0.814209,-0.339303 0.814209,-0.339303 0,0 0.728465,-0.474091 0.728465,-0.474091 0,0 0.618416,-0.630549 0.618416,-0.630549 0,0 0.484061,-0.808673 0.484061,-0.808673 0,0 0.423227,-1.250554 0.423227,-1.250554 0,0 0.185003,-1.285819 0.185003,-1.285819 0,0 -0.0155,-1.307734 -0.0155,-1.307734 0,0 -0.178272,-1.316294 -0.178272,-1.316294 0,0 -0.693969,-2.604863 -0.693969,-2.604863 0,0 -0.892367,-2.478876 -0.892367,-2.478876 0,0 -1.302387,-2.833583 -1.302387,-2.833583 0,0 -1.679948,-2.608835 -1.679948,-2.608835 0,0 -2.014146,-2.355581 -2.014146,-2.355581 0,0 -2.304982,-2.073817 -2.304982,-2.073817 0,0 -2.552455,-1.763546 -2.552455,-1.763546 0,0 -2.756566,-1.424768 -2.756566,-1.424768 0,0 -2.917315,-1.057481 -2.917315,-1.057481 0,0 -3.034701,-0.661686 -3.034701,-0.661686 0,0 -2.616286,-0.247768 -2.616286,-0.247768 0,0 -2.648636,0.02195 -2.648636,0.02195 0,0 -2.642479,0.294328 -2.642479,0.294328 0,0 -2.597814,0.56936 -2.597814,0.56936 0,0 -2.514642,0.847048 -2.514642,0.847048 0,0 -2.392965,1.127392 -2.392965,1.127392 0,0 -2.232779,1.410392 -2.232779,1.410392 C 42.034086,58.303953 40,60 40,60 c 0,0 -1.834839,1.949023 -1.834839,1.949023 0,0 -1.513535,2.178835 -1.513535,2.178835 0,0 -1.215763,2.372452 -1.215763,2.372452 0,0 -0.941523,2.529874 -0.941523,2.529874 0,0 -0.407605,1.564238 -0.407605,1.564238 m 12.061368,1.088507 c 0,0 -0.171764,11.126383 -0.171764,11.126383 M 67.082143,71.939474 c 0,0 13.457813,7.722023 13.457813,7.722023 M 62.489732,72.060051 c 0,0 0.01205,11.50607 0.01205,11.50607 m 1.964736,-14.805247 c 0,0 11.731138,-6.382854 11.731138,-6.382854 M 56.46596,52.272688 c 0,0 0.229018,13.060737 0.229018,13.060737"
+       d="M 43,73 H 69 C 67.337588,69.622959 64.729986,66.579933 61.241935,65.025227 59.376653,64.210904 57.318988,63.918653 55.294408,64.09798 53.12137,64.301113 50.154134,65.154347 47.28669,67.584211 M 43,82 c 10.235295,-0.01676 20.472079,0.03352 30.706443,-0.02515 1.885096,-0.05936 4.078432,-0.323899 5.281723,-1.958662 1.475689,-2.263677 1.155905,-5.167093 0.373886,-7.622826 -0.642958,-2.307632 -1.556818,-4.556089 -2.728825,-6.642479 -0.902371,-1.553777 -2.006828,-2.957166 -3.213331,-4.284614 -1.399807,-1.41652 -2.937327,-2.690321 -4.622163,-3.758175 -1.721655,-1.074371 -3.574175,-1.934751 -5.508386,-2.556744 -2.156904,-0.677721 -4.416485,-1.059698 -6.678932,-1.114115 -3.609957,-0.0786 -7.255749,0.560856 -10.565283,2.018532 -2.814624,1.204454 -3.931906,1.494036 -5.952758,3.792775 m 6.055729,11.834383 c -0.05725,3.708794 -0.114509,7.417589 -0.171764,11.126383 M 67.082143,71.939474 80.539956,79.661497 M 62.489732,72.060051 c 0.004,3.835357 0.008,7.670713 0.01205,11.50607 M 64.466518,68.760874 76.197656,62.37802 M 56.46596,52.272688 56.694978,65.333425"
        inkstitch:satin_column="True"
        inkstitch:ties="3"
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.2"
-       sodipodi:nodetypes="cccccccccccccccccccssssscccssssccsssc"
        inkscape:label="Auto-remplissage satin 3"
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
-       inkstitch:reverse_rails="none" />
+       inkstitch:reverse_rails="none"
+       sodipodi:nodetypes="cccccccccccccccccccccccccc" />
     <path
-       d="m 34.6409,70.7758 1.26,-7.1423 c -1.31245,-3.9334 -6.01964,-4.83484 -9.64557,-5.21009 -5.1923,-0.657186 -10.6945,-0.05515 -15.1127,2.95309 -1.44551,0.902386 -2.9132,1.77941 -4.55079,2.29082"
+       d="M 39.3202,59.0183 26.2553,58.4234 C 21.063,57.766214 15.5608,58.36825 11.1426,61.37649 9.69709,62.278876 8.2294,63.1559 6.59181,63.66731"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
        inkstitch:running_stitch_length_mm=""
        id="autosatinrun196"
        inkscape:label="Points droits pour auto-remplissage satin 4"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       sodipodi:nodetypes="ccc" />
     <path
        id="autosatin332"
        style="fill:none;stroke:#000000"
@@ -7660,15 +7634,16 @@ GPL (General Public License) with font-exception and OFL (Open Font License
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
-       d="m 35.8477,65.5058 -1.0426,5.3238"
+       d="M 35.8477,65.5058 39.325292,72.665459 46.7572,67.5341"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
        inkstitch:running_stitch_length_mm="2.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
-       id="path97" />
+       id="path98"
+       sodipodi:nodetypes="ccc" />
     <path
        id="autosatin333"
        style="fill:none;stroke:#000000"
-       d="m 34.086735,70.594422 c -0.819068,3.155693 -1.075235,6.430339 -1.079143,9.681612 m 9.802364,-6.826304 c -0.82827,1.783658 -0.855304,3.709272 -0.617379,5.61967"
+       d="m 40.177383,60.010674 c -2.602329,0.998013 -6.156613,4.712863 -6.965442,9.440319 -0.583193,3.408654 -1.339932,6.817307 -0.903276,10.225961 M 47.50275,67.658622 c -2.658974,0.136024 -6.273976,8.847089 -5.310173,11.410778 m -12.539625,-4.372202 15.673703,1.55325"
        inkstitch:satin_column="True"
        inkstitch:ties="3"
        inkstitch:pull_compensation_mm="0.3"
@@ -7678,17 +7653,18 @@ GPL (General Public License) with font-exception and OFL (Open Font License
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none"
-       sodipodi:nodetypes="cccc" />
+       sodipodi:nodetypes="csccccc"
+       inkstitch:swap_satin_rails="True" />
     <path
-       d="M 41.6018,79.147 33.3682,74.3124"
+       d="m 31.8834,80.4237 1.4848,-6.1113"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
        inkstitch:running_stitch_length_mm="2.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
-       id="path98" />
+       id="path99" />
     <path
        id="autosatin334"
        style="fill:none;stroke:#000000"
-       d="m 33.417051,73.558029 0.479433,-3.352793 c -1.471129,-0.603807 -2.918619,-1.278378 -4.48881,-1.585646 -1.478634,-0.451058 -3.034795,-0.548728 -4.563038,-0.704246 -1.663153,0.02622 -3.324175,0.07688 -4.96215,0.391974 -2.117049,0.24405 -4.182445,0.793119 -6.24435,1.309278 -2.601128,0.804523 -5.1358396,1.954873 -7.2647147,3.668196 -0.8111794,0.785919 -1.699773,1.507003 -2.2382317,2.521323 -0.7435997,0.963933 -1.1212478,2.140815 -1.536149,3.26742 -0.2799453,1.23572 -0.5458696,2.473151 -0.5062517,3.747845 -0.06379,1.150902 0.1377771,2.307873 0.329103,3.437739 0.3162111,1.242082 0.6756521,2.468293 1.2850567,3.602739 0.4640544,1.047684 1.1991663,1.957175 1.8601155,2.884062 0.8086962,0.812756 1.5299632,1.713845 2.4952024,2.350987 M 33,80 c -2.239479,-0.924771 -4.460322,-1.955659 -6.867297,-2.364979 -2.706046,-0.560579 -5.545995,-0.557852 -8.222406,0.163214 -1.167134,0.362772 -2.36118,0.752762 -3.351574,1.494176 -1.484079,0.795615 -2.571952,2.375343 -2.534171,4.090431 0.08844,0.950204 0.2788,1.902235 0.795655,2.723417 0.61281,1.067233 1.608616,1.907051 2.677021,2.501722 m 6.688553,-22.199278 c -0.02699,4.101465 -0.05397,8.202929 -0.08096,12.304394 M 0.66693644,83.293577 13.26417,83.380647 m 1.705816,2.854907 -10.6125252,8.996048"
+       d="m 32.898017,69.406463 c -1.471129,-0.603807 -1.920152,-0.479605 -3.490343,-0.786873 -1.478634,-0.451058 -3.034795,-0.548728 -4.563038,-0.704246 -1.663153,0.02622 -3.324175,0.07688 -4.96215,0.391974 -2.117049,0.24405 -4.182445,0.793119 -6.24435,1.309278 -2.601128,0.804523 -5.1358396,1.954873 -7.2647147,3.668196 -0.8111794,0.785919 -1.699773,1.507003 -2.2382317,2.521323 -0.7435997,0.963933 -1.1212478,2.140815 -1.536149,3.26742 -0.2799453,1.23572 -0.5458696,2.473151 -0.5062517,3.747845 -0.06379,1.150902 0.1377771,2.307873 0.329103,3.437739 0.3162111,1.242082 0.6756521,2.468293 1.2850567,3.602739 0.4640544,1.047684 1.1991663,1.957175 1.8601155,2.884062 0.8086962,0.812756 1.5299632,1.713845 2.4952024,2.350987 M 31.5023,78.901687 c -2.239479,-0.924771 -2.962622,-0.857346 -5.369597,-1.266666 -2.706046,-0.560579 -5.545995,-0.557852 -8.222406,0.163214 -1.167134,0.362772 -2.36118,0.752762 -3.351574,1.494176 -1.484079,0.795615 -2.571952,2.375343 -2.534171,4.090431 0.08844,0.950204 0.2788,1.902235 0.795655,2.723417 0.61281,1.067233 1.608616,1.907051 2.677021,2.501722 m 6.688553,-22.199278 c -0.02699,4.101465 -0.05397,8.202929 -0.08096,12.304394 M 0.66693644,83.293577 13.26417,83.380647 m 1.705816,2.854907 -10.6125252,8.996048"
        inkstitch:satin_column="True"
        inkstitch:ties="3"
        inkstitch:pull_compensation_mm="0.3"
@@ -7698,7 +7674,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none"
-       sodipodi:nodetypes="ccccccccccccccccccccccccccc" />
+       sodipodi:nodetypes="cccccccccccccccccccccccccc" />
     <path
        d="m 16.2709,87.8053 -4.4912,4.0471 c 6.8365,4.50399 16.4948,3.96584 22.8645,-1.15893 0.145582,-0.396546 0.291163,-0.793093 0.436745,-1.18964 L 34.0016,86.3374"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -7773,7 +7749,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
        inkstitch:running_stitch_length_mm="2.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
-       id="path99" />
+       id="path100" />
     <path
        id="autosatin338"
        style="fill:none;stroke:#000000"
@@ -7792,11 +7768,11 @@ GPL (General Public License) with font-exception and OFL (Open Font License
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
        inkstitch:running_stitch_length_mm="2.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
-       id="path100" />
+       id="path102" />
     <path
        id="autosatin339"
        style="fill:none;stroke:#000000"
-       d="m 24.889965,91.038982 c -2.670015,-0.13384 -5.311363,-1.030357 -7.401669,-2.720477 m 7.554008,12.810755 C 19.621986,101.7755 14.459255,98.354317 12.518466,96.878307"
+       d="m 24.889965,91.038982 c -2.670015,-0.13384 -5.311363,-1.030357 -7.401669,-2.720477 m 7.554008,12.810755 C 19.621986,101.7755 14.459255,98.354317 12.518466,96.878307 m 9.227032,-9.75511 -6.212999,14.826473"
        inkstitch:satin_column="True"
        inkstitch:ties="3"
        inkstitch:pull_compensation_mm="0.3"
@@ -8048,7 +8024,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
        inkstitch:running_stitch_length_mm="2.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
-       id="path102" />
+       id="path103" />
     <path
        id="autosatin351"
        style="display:inline;fill:none;stroke:#000000"
@@ -8133,7 +8109,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
       <path
          id="autosatin355"
          style="display:inline;fill:none;stroke:#000000"
-         d="m 37.678089,40.617118 c 3.239692,-0.133139 5.151228,2.404462 5.0583,5.599254 -0.10279,3.533835 -2.524534,4.323117 -5.0583,4.400746 m -0.53033,-9.9613 c -3.730264,-0.09175 -5.042492,2.278402 -4.937483,5.134812 0.120343,3.273545 1.482442,4.594169 4.837099,4.723289"
+         d="m 37.678089,40.617118 c 3.239692,-0.133139 5.151228,2.404462 5.0583,5.599254 -0.10279,3.533835 -2.524534,4.323117 -5.0583,4.400746 m -0.53033,-9.9613 c -3.730264,-0.09175 -5.042492,2.278402 -4.937483,5.134812 0.120343,3.273545 1.482442,4.594169 4.837099,4.723289 m -7.492757,-4.284905 h 14.977003"
          inkstitch:satin_column="True"
          inkstitch:ties="0"
          inkstitch:force_lock_stitches="True"
@@ -8174,7 +8150,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
       <path
          id="autosatin357"
          style="display:inline;fill:none;stroke:#000000"
-         d="m 16.927865,40.614078 c 3.239692,-0.133139 5.151229,2.404462 5.058301,5.599254 -0.10279,3.533835 -2.524535,4.323117 -5.058301,4.400746 m -0.522754,-10.0645 c -3.951866,-0.111105 -5.050068,2.381602 -4.945059,5.238012 0.120343,3.273545 2.162401,4.486132 4.999986,4.755538"
+         d="m 16.927865,40.614078 c 3.239692,-0.133139 5.151229,2.404462 5.058301,5.599254 -0.10279,3.533835 -2.524535,4.323117 -5.058301,4.400746 m -0.522754,-10.0645 c -3.951866,-0.111105 -5.050068,2.381602 -4.945059,5.238012 0.120343,3.273545 2.162401,4.486132 4.999986,4.755538 M 8.6866614,46.129168 H 23.763511"
          inkstitch:satin_column="True"
          inkstitch:ties="0"
          inkstitch:force_lock_stitches="True"
@@ -8219,7 +8195,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin359"
        style="display:inline;fill:none;stroke:#000000"
-       d="m 16.626344,48.301014 c -0.917688,0.778533 -1.81998,0.958401 -2.990853,0.847384 M 17.000005,48 c 0.561376,-0.814313 0.390686,-1.869406 0.115921,-2.752954"
+       d="m 16.626344,48.301014 c -0.917688,0.778533 -1.81998,0.958401 -2.990853,0.847384 M 17.000005,48 c 0.561376,-0.814313 0.390686,-1.869406 0.115921,-2.752954 m 1.705173,0.180129 -4.143637,4.243483"
        inkstitch:satin_column="True"
        inkstitch:ties="3"
        inkstitch:pull_compensation_mm="0.3"
@@ -8229,7 +8205,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none"
-       sodipodi:nodetypes="cccc" />
+       sodipodi:nodetypes="cccccc" />
     <path
        d="m 17.8707,44.4009 -3.5273,1.9066 C 12.2341,44.15 9.80199,42.1476 8.82809,39.1926 8.57027,38.6763 8.24656,38.194 7.96445,37.6906"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -8263,7 +8239,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
        inkstitch:running_stitch_length_mm="2.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
-       id="path103" />
+       id="path104" />
     <path
        id="autosatin361"
        style="display:inline;fill:none;stroke:#000000"
@@ -8298,11 +8274,11 @@ GPL (General Public License) with font-exception and OFL (Open Font License
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
        inkstitch:running_stitch_length_mm="2.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
-       id="path104" />
+       id="path105" />
     <path
        id="autosatin363"
        style="display:inline;fill:none;stroke:#000000"
-       d="m 7.976562,100.49219 c 3.584012,0.18299 3.982331,-4.378129 3.984495,-4.790494 M 7.5332564,100.45 C 3.7912683,100.29682 3.0311811,96.936607 2.9413973,95.758038"
+       d="m 7.976562,100.49219 c 3.584012,0.18299 3.982331,-4.378129 3.984495,-4.790494 M 7.5332564,100.45 C 3.7912683,100.29682 3.0311811,96.936607 2.9413973,95.758038 M 0.79877346,99.04791 H 14.228152 v -0.399387"
        inkstitch:satin_column="True"
        inkstitch:ties="0"
        inkstitch:force_lock_stitches="True"
@@ -8331,7 +8307,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin364"
        style="display:inline;fill:none;stroke:#000000"
-       d="m 20.264545,35.884756 c 3.23969,-0.133139 5.15123,2.404462 5.0583,5.599254 -0.10279,3.533835 -2.52453,4.323117 -5.0583,4.400746 M 19.862759,35.882559 c -4.044572,0 -5.171034,2.319299 -5.066025,5.175709 0.120343,3.273545 1.588156,4.628956 4.942811,4.758076"
+       d="m 20.264545,35.884756 c 3.23969,-0.133139 5.15123,2.404462 5.0583,5.599254 -0.10279,3.533835 -2.52453,4.323117 -5.0583,4.400746 M 19.862759,35.882559 c -4.044572,0 -5.171034,2.319299 -5.066025,5.175709 0.120343,3.273545 1.588156,4.628956 4.942811,4.758076 m -6.859323,-4.979051 h 14.278076"
        inkstitch:satin_column="True"
        inkstitch:ties="0"
        inkstitch:force_lock_stitches="True"
@@ -8353,7 +8329,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin365"
        style="display:inline;fill:none;stroke:#000000"
-       d="m 6.2760315,35.831997 c 3.239692,-0.133139 5.1512295,2.404462 5.0583015,5.599254 -0.10279,3.533835 -2.5245355,4.323117 -5.0583015,4.400746 M 5.7677134,35.842014 c -3.9173423,0 -5.06450389,2.307085 -4.95949489,5.163495 0.12034295,3.273545 1.76895959,4.703069 5.12361659,4.832189"
+       d="m 6.2760315,35.831997 c 3.239692,-0.133139 5.1512295,2.404462 5.0583015,5.599254 -0.10279,3.533835 -2.5245355,4.323117 -5.0583015,4.400746 M 5.7677134,35.842014 c -3.9173423,0 -5.06450389,2.307085 -4.95949489,5.163495 0.12034295,3.273545 1.76895959,4.703069 5.12361659,4.832189 M -2.2964737,41.336527 H 14.078382"
        inkstitch:satin_column="True"
        inkstitch:ties="0"
        inkstitch:force_lock_stitches="True"
@@ -8383,11 +8359,11 @@ GPL (General Public License) with font-exception and OFL (Open Font License
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
        inkstitch:running_stitch_length_mm="2.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
-       id="path105" />
+       id="path106" />
     <path
        id="autosatin367"
        style="display:inline;fill:none;stroke:#000000"
-       d="m 12.976562,100.49219 c 2.953727,-0.0402 3.784908,-2.71476 3.984496,-4.790493 m -4.236619,4.784503 c -2.322774,0.0269 -4.4518942,-1.832267 -4.7697804,-4.706789"
+       d="m 12.976562,100.49219 c 2.953727,-0.0402 3.784908,-2.71476 3.984496,-4.790493 M 12.724439,100.4862 C 10.401665,100.5131 8.2725448,98.653933 7.9546586,95.779411 M 6.0407243,98.598599 H 19.56995"
        inkstitch:satin_column="True"
        inkstitch:ties="0"
        inkstitch:force_lock_stitches="True"
@@ -8439,7 +8415,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
        inkstitch:running_stitch_length_mm="2.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
-       id="path106" />
+       id="path107" />
     <path
        id="autosatin370"
        style="display:inline;fill:none;stroke:#000000"
@@ -8506,7 +8482,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin373"
        style="display:inline;fill:none;stroke:#000000"
-       d="m 37.019161,41.69157 c 3.239688,-0.133139 5.151228,2.404462 5.058298,5.599254 -0.10279,3.533835 -2.52453,4.323117 -5.058298,4.400746 M 36.726532,41.684918 c -3.833725,-0.105864 -5.280193,2.323754 -5.175184,5.180164 0.120343,3.273545 1.787145,4.748766 5.141802,4.877886"
+       d="m 37.019161,41.69157 c 3.239688,-0.133139 5.151228,2.404462 5.058298,5.599254 -0.10279,3.533835 -2.52453,4.323117 -5.058298,4.400746 M 36.726532,41.684918 c -3.833725,-0.105864 -5.280193,2.323754 -5.175184,5.180164 0.120343,3.273545 1.787145,4.748766 5.141802,4.877886 m -6.938838,-5.414107 h 14.477769"
        inkstitch:satin_column="True"
        inkstitch:ties="0"
        inkstitch:force_lock_stitches="True"
@@ -8549,7 +8525,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin375"
        style="display:inline;fill:none;stroke:#000000"
-       d="m 16.268937,41.68853 c 3.239692,-0.133139 5.151229,2.404462 5.058301,5.599254 -0.10279,3.533835 -2.524535,4.323117 -5.058301,4.400746 M 15.963524,41.682483 c -4.095103,-0.09075 -5.267409,2.323149 -5.1624,5.179559 0.120343,3.273545 1.913572,4.647784 5.268229,4.776904"
+       d="m 16.268937,41.68853 c 3.239692,-0.133139 5.151229,2.404462 5.058301,5.599254 -0.10279,3.533835 -2.524535,4.323117 -5.058301,4.400746 M 15.963524,41.682483 c -4.095103,-0.09075 -5.267409,2.323149 -5.1624,5.179559 0.120343,3.273545 1.913572,4.647784 5.268229,4.776904 M 8.4869681,46.628401 H 22.665197"
        inkstitch:satin_column="True"
        inkstitch:ties="0"
        inkstitch:force_lock_stitches="True"
@@ -8628,12 +8604,12 @@ GPL (General Public License) with font-exception and OFL (Open Font License
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
        inkstitch:running_stitch_length_mm="2.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
-       id="path107"
+       id="path108"
        sodipodi:nodetypes="cc" />
     <path
        id="autosatin379"
        style="fill:none;stroke:#000000"
-       d="m 20,50 c -1.333333,0 -2.5,0.5 -3.5,1.5 -1,1 -1.5,2.166667 -1.5,3.5 0,1.333333 0.5,2.5 1.5,3.5 1,1 2.166667,1.5 3.5,1.5 m 0.367961,-9.970408 C 21.701294,50.029592 22.5,50.5 23.5,51.5 c 1,1 1.5,2.166667 1.5,3.5 0,1.333333 -0.193166,2.531633 -1.193166,3.531633 -1,1 -2.166667,1.5 -3.5,1.5"
+       d="m 20,50 c -1.333333,0 -2.5,0.5 -3.5,1.5 -1,1 -1.5,2.166667 -1.5,3.5 0,1.333333 0.5,2.5 1.5,3.5 1,1 2.166667,1.5 3.5,1.5 m 0.367961,-9.970408 C 21.701294,50.029592 22.5,50.5 23.5,51.5 c 1,1 1.5,2.166667 1.5,3.5 0,1.333333 -0.193166,2.531633 -1.193166,3.531633 -1,1 -2.166667,1.5 -3.5,1.5 m -8.325232,-5.016111 h 15.476236"
        inkstitch:satin_column="True"
        inkstitch:ties="0"
        inkstitch:force_lock_stitches="True"
@@ -8670,7 +8646,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin381"
        style="fill:none;stroke:#000000"
-       d="m 20.390734,81.026531 c 2.080425,-0.03682 3.596442,1.810372 4.192735,3.023709 M 20,81 c -2.809808,-0.0025 -4.213899,2.32446 -4.583469,3.050245"
+       d="m 20.390734,81.026531 c 2.080425,-0.03682 3.596442,1.810372 4.192735,3.023709 M 20,81 c -2.809808,-0.0025 -4.213899,2.32446 -4.583469,3.050245 m -3.414146,-1.586797 h 16.520931"
        inkstitch:satin_column="True"
        inkstitch:ties="0"
        inkstitch:force_lock_stitches="True"
@@ -8681,7 +8657,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none"
-       sodipodi:nodetypes="cccc" />
+       sodipodi:nodetypes="cccccc" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -8742,7 +8718,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
        inkstitch:running_stitch_length_mm="2.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
-       id="path108" />
+       id="path109" />
     <path
        id="autosatin385"
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.02081"
@@ -8824,7 +8800,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
        inkstitch:running_stitch_length_mm="2.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
-       id="path109" />
+       id="path110" />
     <path
        id="autosatin389"
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.02081"
@@ -8866,7 +8842,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
        inkstitch:running_stitch_length_mm="2.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
-       id="path110" />
+       id="path111" />
     <path
        id="autosatin391"
        style="display:inline;fill:none;stroke:#000000"
@@ -8927,7 +8903,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin394"
        style="display:inline;fill:none;stroke:#000000"
-       d="m 33.230414,41.669096 c 3.239688,-0.133139 5.151228,2.404462 5.058298,5.599254 -0.10279,3.533835 -2.52453,4.323116 -5.058298,4.400745 m -0.390625,-9.988122 c -3.89357,0.0021 -5.182197,2.305225 -5.077188,5.161635 0.120343,3.273545 1.820187,4.672029 5.174844,4.801149"
+       d="m 33.230414,41.669096 c 3.239688,-0.133139 5.151228,2.404462 5.058298,5.599254 -0.10279,3.533835 -2.52453,4.323116 -5.058298,4.400745 m -0.390625,-9.988122 c -3.89357,0.0021 -5.182197,2.305225 -5.077188,5.161635 0.120343,3.273545 1.820187,4.672029 5.174844,4.801149 m -7.476541,-5.215049 h 14.977003"
        inkstitch:satin_column="True"
        inkstitch:ties="0"
        inkstitch:force_lock_stitches="True"
@@ -8958,7 +8934,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
        inkstitch:running_stitch_length_mm="2.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
-       id="path111" />
+       id="path112" />
     <path
        id="autosatin396"
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.02081"
@@ -8983,7 +8959,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin397"
        style="display:inline;fill:none;stroke:#000000"
-       d="m 12.480187,41.666056 c 3.23969,-0.133139 5.15123,2.404462 5.0583,5.599254 -0.10279,3.533835 -2.52453,4.323116 -5.0583,4.400745 m -0.301339,-9.711781 c -3.7828953,4.82e-4 -5.2714811,2.028884 -5.1664711,4.885294 0.12034,3.273545 1.8378624,4.664903 5.1925121,4.794023"
+       d="m 12.480187,41.666056 c 3.23969,-0.133139 5.15123,2.404462 5.0583,5.599254 -0.10279,3.533835 -2.52453,4.323116 -5.0583,4.400745 m -0.301339,-9.711781 c -3.7828953,4.82e-4 -5.2714811,2.028884 -5.1664711,4.885294 0.12034,3.273545 1.8378624,4.664903 5.1925121,4.794023 M 4.9923341,46.828094 H 19.56995"
        inkstitch:satin_column="True"
        inkstitch:ties="0"
        inkstitch:force_lock_stitches="True"
@@ -9055,7 +9031,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
        inkstitch:running_stitch_length_mm="2.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
-       id="path112" />
+       id="path113" />
     <path
        id="autosatin401"
        style="fill:none;stroke:#000000"
@@ -9122,7 +9098,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
        inkstitch:running_stitch_length_mm="2.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
-       id="path113" />
+       id="path114" />
     <path
        id="autosatin404"
        style="display:inline;fill:none;stroke:#000000"
@@ -9142,11 +9118,11 @@ GPL (General Public License) with font-exception and OFL (Open Font License
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
        inkstitch:running_stitch_length_mm="2.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
-       id="path114" />
+       id="path115" />
     <path
        id="autosatin405"
        style="display:inline;fill:none;stroke:#000000"
-       d="m 8.011301,100.1219 c 4.536551,-0.354361 4.968259,-3.986795 4.995789,-7.615731 M 7.5769,100.13858 C 3.4997926,99.868626 2.9828443,95.753781 3.0343893,92.445508"
+       d="m 8.011301,100.1219 c 4.536551,-0.354361 4.968259,-3.986795 4.995789,-7.615731 M 7.5769,100.13858 C 3.4997926,99.868626 2.9828443,95.753781 3.0343893,92.445508 M 0.69892678,96.551742 H 14.777309"
        inkstitch:satin_column="True"
        inkstitch:ties="0"
        inkstitch:force_lock_stitches="True"
@@ -9175,7 +9151,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin406"
        style="display:inline;fill:none;stroke:#000000"
-       d="m 33.352639,21.19054 c 3.23969,-0.133139 5.15122,2.404462 5.0583,5.599254 -0.10279,3.533835 -2.52454,4.323117 -5.0583,4.400746 M 32.981657,21.164315 c -3.830293,-0.02539 -5.201844,2.343327 -5.096835,5.199737 0.120343,3.273545 1.736817,4.659741 5.091478,4.788861"
+       d="m 33.352639,21.19054 c 3.23969,-0.133139 5.15122,2.404462 5.0583,5.599254 -0.10279,3.533835 -2.52454,4.323117 -5.0583,4.400746 M 32.981657,21.164315 c -3.830293,-0.02539 -5.201844,2.343327 -5.096835,5.199737 0.120343,3.273545 1.736817,4.659741 5.091478,4.788861 m -7.615243,-4.793389 h 15.67593"
        inkstitch:satin_column="True"
        inkstitch:ties="0"
        inkstitch:force_lock_stitches="True"
@@ -9212,7 +9188,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin408"
        style="display:inline;fill:none;stroke:#000000"
-       d="m 12.60241,21.1875 c 3.239692,-0.133139 5.15123,2.404462 5.058302,5.599254 -0.10279,3.533835 -2.524536,4.323117 -5.058302,4.400746 M 12.157767,21.181799 c -3.8637708,0.155898 -5.1281791,2.322803 -5.0231701,5.179213 0.120343,3.273545 1.7435131,4.668863 5.0981701,4.797983"
+       d="m 12.60241,21.1875 c 3.239692,-0.133139 5.15123,2.404462 5.058302,5.599254 -0.10279,3.533835 -2.524536,4.323117 -5.058302,4.400746 M 12.157767,21.181799 c -3.8637708,0.155898 -5.1281791,2.322803 -5.0231701,5.179213 0.120343,3.273545 1.7435131,4.668863 5.0981701,4.797983 M 4.1935607,25.860291 H 19.370256"
        inkstitch:satin_column="True"
        inkstitch:ties="0"
        inkstitch:force_lock_stitches="True"
@@ -9256,7 +9232,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin410"
        style="display:inline;fill:none;stroke:#000000"
-       d="m 36.375229,21.01085 c 3.23969,-0.133139 5.15122,2.404462 5.0583,5.599254 -0.10279,3.533835 -2.52454,4.323117 -5.0583,4.400746 m -0.551164,-9.951625 c -3.590109,0.114643 -5.021662,2.268727 -4.916653,5.125137 0.120343,3.273545 1.616919,4.748968 4.97158,4.878088"
+       d="m 36.375229,21.01085 c 3.23969,-0.133139 5.15122,2.404462 5.0583,5.599254 -0.10279,3.533835 -2.52454,4.323117 -5.0583,4.400746 m -0.551164,-9.951625 c -3.590109,0.114643 -5.021662,2.268727 -4.916653,5.125137 0.120343,3.273545 1.616919,4.748968 4.97158,4.878088 m -7.722227,-5.302006 h 15.875622"
        inkstitch:satin_column="True"
        inkstitch:ties="0"
        inkstitch:force_lock_stitches="True"
@@ -9292,7 +9268,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin412"
        style="display:inline;fill:none;stroke:#000000"
-       d="m 26.618718,34.99714 c -3.191128,0.03496 -6.304086,0.72184 -9.186916,2.071347 m 9.186916,6.928649 c -1.856614,0.04559 -3.723873,0.463613 -5.355027,1.369715"
+       d="m 26.618718,34.99714 c -3.191128,0.03496 -6.304086,0.72184 -9.186916,2.071347 m 9.186916,6.928649 c -1.856614,0.04559 -3.723873,0.463613 -5.355027,1.369715 M 20.16903,32.250479 24.662131,47.127634"
        inkstitch:satin_column="True"
        inkstitch:ties="3"
        inkstitch:pull_compensation_mm="0.3"
@@ -9303,7 +9279,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none"
        inkstitch:force_lock_stitches="True"
-       sodipodi:nodetypes="cccc" />
+       sodipodi:nodetypes="cccccc" />
     <path
        d="m 15.3962,30.480783 c 0.0141,-2.961878 0.0286,-5.923188 -0.02746,-8.88489"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -9314,7 +9290,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin413"
        style="display:inline;fill:none;stroke:#000000"
-       d="m 15.625,21.00781 c 3.239692,-0.133139 5.15123,2.404462 5.058302,5.599254 -0.10279,3.533835 -2.524536,4.323117 -5.058302,4.400746 m -0.53033,-9.996775 c -3.66776,-0.02242 -5.042492,2.313877 -4.937483,5.170287 0.120343,3.273545 1.666163,4.694143 5.02082,4.823263"
+       d="m 15.625,21.00781 c 3.239692,-0.133139 5.15123,2.404462 5.058302,5.599254 -0.10279,3.533835 -2.524536,4.323117 -5.058302,4.400746 m -0.53033,-9.996775 c -3.66776,-0.02242 -5.042492,2.313877 -4.937483,5.170287 0.120343,3.273545 1.666163,4.694143 5.02082,4.823263 M 7.3886545,26.159831 H 22.665197"
        inkstitch:satin_column="True"
        inkstitch:ties="0"
        inkstitch:force_lock_stitches="True"
@@ -9385,7 +9361,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
        inkstitch:running_stitch_length_mm="2.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
-       id="path115" />
+       id="path116" />
     <path
        id="autosatin417"
        style="display:inline;fill:none;stroke:#000000"
@@ -9412,7 +9388,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin418"
        style="display:inline;fill:none;stroke:#000000"
-       d="m 38.265395,21.428589 c 3.23969,-0.133139 5.15122,2.404462 5.0583,5.599254 -0.10279,3.533835 -2.52454,4.323116 -5.0583,4.400745 m -0.462145,-9.91486 c -3.909064,0.258478 -5.110681,2.231963 -5.005672,5.088373 0.120343,3.273545 1.697983,4.650927 5.052644,4.780047"
+       d="m 38.265395,21.428589 c 3.23969,-0.133139 5.15122,2.404462 5.0583,5.599254 -0.10279,3.533835 -2.52454,4.323116 -5.0583,4.400745 m -0.462145,-9.91486 c -3.909064,0.258478 -5.110681,2.231963 -5.005672,5.088373 0.120343,3.273545 1.697983,4.650927 5.052644,4.780047 m -7.49683,-5.12247 h 15.376389"
        inkstitch:satin_column="True"
        inkstitch:ties="0"
        inkstitch:force_lock_stitches="True"
@@ -9449,7 +9425,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        id="autosatin420"
        style="display:inline;fill:none;stroke:#000000"
-       d="m 17.515165,21.425549 c 3.239692,-0.133139 5.151231,2.404462 5.058303,5.599254 -0.10279,3.533835 -2.524537,4.323116 -5.058303,4.400745 m -0.459114,-9.974199 c -3.70299,0.02499 -5.113708,2.291302 -5.008699,5.147712 0.120343,3.273545 1.741925,4.697367 5.096582,4.826487"
+       d="m 17.515165,21.425549 c 3.239692,-0.133139 5.151231,2.404462 5.058303,5.599254 -0.10279,3.533835 -2.524537,4.323116 -5.058303,4.400745 m -0.459114,-9.974199 c -3.70299,0.02499 -5.113708,2.291302 -5.008699,5.147712 0.120343,3.273545 1.741925,4.697367 5.096582,4.826487 M 9.3855882,26.659064 24.961671,26.559218"
        inkstitch:satin_column="True"
        inkstitch:ties="0"
        inkstitch:force_lock_stitches="True"
@@ -9480,7 +9456,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
        inkstitch:running_stitch_length_mm="2.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
-       id="path116" />
+       id="path124" />
     <path
        id="autosatin422"
        style="display:inline;fill:none;stroke:#000000"
