@@ -7,6 +7,7 @@ from math import degrees
 from copy import deepcopy
 
 from inkex import Transform, IBaseElement
+from shapely import MultiLineString
 
 from ..stitch_plan.stitch_group import StitchGroup
 
@@ -136,6 +137,14 @@ class Clone(EmbroideryElement):
         parent.remove(cloned_node)
 
         return patches
+
+    @property
+    def shape(self):
+        path = self.node.get_path()
+        transform = Transform(self.node.composed_transform())
+        path = path.transform(transform)
+        path = path.to_superpath()
+        return MultiLineString(path)
 
     def center(self, source_node):
         transform = get_node_transform(self.node.getparent())
