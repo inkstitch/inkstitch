@@ -3,10 +3,10 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-from math import atan2, degrees, radians
+from math import degrees
+from copy import deepcopy
 
-from inkex import CubicSuperPath, Path, Transform, ShapeElement
-from shapely import MultiLineString
+from inkex import Transform, IBaseElement
 
 from ..stitch_plan.stitch_group import StitchGroup
 
@@ -58,7 +58,7 @@ class Clone(EmbroideryElement):
     @property
     @param('flip_angle',
            _('Flip angle'),
-           tooltip=_("Flip automatically calucalted angle if it appears to be wrong."),
+           tooltip=_("Flip automatically calculated angle if it appears to be wrong."),
            type='boolean')
     @cache
     def flip_angle(self):
@@ -82,79 +82,65 @@ class Clone(EmbroideryElement):
     def to_stitch_groups(self, last_patch=None) -> list[StitchGroup]:
         patches = []
 
-        source_node = get_clone_source(self.node)
-        # Instead of copying the cloned nodes, we operate on them in-place.
-        # The consequence of this is that any changes we make to the node tree must also be undone.
+        source_node: IBaseElement = get_clone_source(self.node)
         if source_node.tag not in EMBROIDERABLE_TAGS and source_node.tag != SVG_GROUP_TAG:
             return []
 
-        old_transform = source_node.get('transform', '')
-        source_transform = source_node.composed_transform()
-        source_path = Path(source_node.get_path()).transform(source_node.composed_transform())
-        transform = Transform(source_node.get('transform', '')) @ -source_transform
-        transform @= self.node.composed_transform() @ Transform(source_node.get('transform', ''))
-        source_node.set('transform', transform)
+        # Effectively, manually clone the href'd element: Place it into the tree at the same location
+        # as the use element this Clone represents, with the same transform
+        parent: IBaseElement = self.node.getparent()
+        cloned_node = deepcopy(source_node)
+        parent.add(cloned_node)
+        cloned_node.set('transform', Transform(self.node.get('transform')) @ Transform(cloned_node.get('transform')))
 
-        # Calculate the rotation angle to apply to cloned elements
+        # Calculate the rotation angle to apply to the fill of cloned elements, if applicable
         if self.clone_fill_angle is None:
-            angle = self._get_rotation(transform, source_node, source_path)
+            source_transform = source_node.composed_transform()
+            cloned_transform = cloned_node.composed_transform()
 
-        elements = self.clone_to_elements(source_node)
+            def angle_for_transform(t: Transform) -> float:
+                # Calculate a rotational angle, in degrees, for a transformation matrix
+
+                # Strip out the translation component from the matrix
+                t = Transform((t.a, t.b, t.c, t.d, 0, 0))
+                try:
+                    return t.rotation_degrees()
+                except ValueError:
+                    # Something is weird about the matrix such that it apparently isn't a rotation with a uniform scale.
+                    # So, next best thing is to apply it to a unit vector and pull the angle from that.
+                    return degrees(t.apply_to_point((1, 0).angle))
+
+            source_angle = angle_for_transform(source_transform)
+            cloned_angle = angle_for_transform(cloned_transform)
+            angle = cloned_angle - source_angle
+
+        elements = self.clone_to_elements(cloned_node)
         for element in elements:
-            old_angle = float(element.node.get(INKSTITCH_ATTRIBS['angle'], 0))
+            # We manipulate the element's node directly here instead of using get/set param methods, because otherwise
+            # we run into issues due to those methods' use of caching not updating if the underlying param value is changed.
 
             if self.clone_fill_angle is None:  # Normally, rotate the cloned element's angle by the clone's rotation.
-                element.node.set(INKSTITCH_ATTRIBS['angle'], old_angle - angle)
+                element_angle = float(element.node.get(INKSTITCH_ATTRIBS['angle'], 0)) - angle
             else:  # If clone_fill_angle is specified, override the angle instead.
-                element.node.set(INKSTITCH_ATTRIBS['angle'], self.clone_fill_angle)
+                element_angle = self.clone_fill_angle
+
+            if self.flip_angle:
+                element_angle = -element_angle
+
+            element.node.set(INKSTITCH_ATTRIBS['angle'], element_angle)
 
             stitch_groups = element.to_stitch_groups(last_patch)
             patches.extend(stitch_groups)
-            # Reset the angle on the underlying node
-            element.node.set(INKSTITCH_ATTRIBS['angle'], old_angle)
 
-        # Reset source node attribs
-        source_node.set('transform', old_transform)
+        # Remove the "manually cloned" tree.
+        parent.remove(cloned_node)
+
         return patches
-
-    def _get_rotation(self, transform: Transform, source_node: ShapeElement, source_path: Path) -> float:
-        """
-        Get a rotation value (used for rotating the fill angle)
-        :param transform: The transform to get a rotation from
-        :param source_node: As a fallback, extract a rotation angle from the node's shape.
-        :return: returns a rotation angle.
-        """
-        try:
-            rotation = transform.rotation_degrees()
-        except ValueError:
-            source_path = CubicSuperPath(source_path)[0]
-            clone_path = Path(source_node.get_path()).transform(source_node.composed_transform())
-            clone_path = CubicSuperPath(clone_path)[0]
-
-            angle_source = atan2(source_path[1][1][1] - source_path[0][1][1], source_path[1][1][0] - source_path[0][1][0])
-            angle_clone = atan2(clone_path[1][1][1] - clone_path[0][1][1], clone_path[1][1][0] - clone_path[0][1][0])
-            angle_embroidery = radians(-float(source_node.get(INKSTITCH_ATTRIBS['angle'], 0)))
-
-            diff = angle_source - angle_embroidery
-            rotation = degrees(diff + angle_clone)
-
-            if self.flip_angle:
-                rotation = -degrees(diff - angle_clone)
-
-        return -rotation
 
     def center(self, source_node):
         transform = get_node_transform(self.node.getparent())
         center = self.node.bounding_box(transform).center
         return center
-
-    @property
-    def shape(self):
-        path = self.node.get_path()
-        transform = Transform(self.node.composed_transform())
-        path = path.transform(transform)
-        path = path.to_superpath()
-        return MultiLineString(path)
 
     def validation_warnings(self):
         source_node = get_clone_source(self.node)
