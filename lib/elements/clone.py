@@ -33,9 +33,6 @@ class CloneWarning(ValidationWarning):
 
 
 class Clone(EmbroideryElement):
-    # A clone embroidery element is linked to an embroiderable element.
-    # It will be ignored if the source element is not a direct child of the xlink attribute.
-
     element_name = "Clone"
 
     def __init__(self, *args, **kwargs):
@@ -54,7 +51,7 @@ class Clone(EmbroideryElement):
            type='float')
     @cache
     def clone_fill_angle(self):
-        return self.get_float_param('angle') or None
+        return self.get_float_param('angle')
 
     @property
     @param('flip_angle',
@@ -63,7 +60,7 @@ class Clone(EmbroideryElement):
            type='boolean')
     @cache
     def flip_angle(self):
-        return self.get_boolean_param('flip_angle')
+        return self.get_boolean_param('flip_angle') or False
 
     def get_cache_key_data(self, previous_stitch):
         source_node = get_clone_source(self.node)
@@ -92,51 +89,49 @@ class Clone(EmbroideryElement):
         parent: IBaseElement = self.node.getparent()
         cloned_node = deepcopy(source_node)
         parent.add(cloned_node)
-        cloned_node.set('transform', Transform(self.node.get('transform')) @ Transform(cloned_node.get('transform')))
+        try:
+            # In a try block so we can ensure that the cloned_node is removed from the tree in the event of an exception.
+            # Otherwise, it might be left around on the document when this method returns.
 
-        # Calculate the rotation angle to apply to the fill of cloned elements, if applicable
-        if self.clone_fill_angle is None:
-            source_transform = source_node.composed_transform()
-            cloned_transform = cloned_node.composed_transform()
+            cloned_node.set('transform', Transform(self.node.get('transform')) @ Transform(cloned_node.get('transform')))
 
-            def angle_for_transform(t: Transform) -> float:
-                # Calculate a rotational angle, in degrees, for a transformation matrix
+            flip_angle = self.flip_angle
 
-                # Strip out the translation component from the matrix
-                t = Transform((t.a, t.b, t.c, t.d, 0, 0))
-                try:
-                    return t.rotation_degrees()
-                except ValueError:
-                    # Something is weird about the matrix such that it apparently isn't a rotation with a uniform scale.
-                    # So, next best thing is to apply it to a unit vector and pull the angle from that.
-                    return degrees(t.apply_to_point((1, 0)).angle)
+            if self.clone_fill_angle is None:
+                # Calculate the rotation angle to apply to the fill of cloned elements, if not explicitly set
+                source_transform = source_node.composed_transform()
+                cloned_transform = cloned_node.composed_transform()
 
-            source_angle = angle_for_transform(source_transform)
-            cloned_angle = angle_for_transform(cloned_transform)
-            angle = cloned_angle - source_angle
+                source_angle = angle_for_transform(source_transform)
+                cloned_angle = angle_for_transform(cloned_transform)
+                angle = cloned_angle - source_angle
 
-        elements = self.clone_to_elements(cloned_node)
-        for element in elements:
-            # We manipulate the element's node directly here instead of using get/set param methods, because otherwise
-            # we run into issues due to those methods' use of caching not updating if the underlying param value is changed.
+                # Flip the angle if the clone is flipped relative to the source element
+                flip_angle = flip_angle ^ is_transform_flipped(source_transform) ^ is_transform_flipped(cloned_transform)
 
-            if self.clone_fill_angle is None:  # Normally, rotate the cloned element's angle by the clone's rotation.
-                element_angle = float(element.node.get(INKSTITCH_ATTRIBS['angle'], 0)) - angle
-            else:  # If clone_fill_angle is specified, override the angle instead.
-                element_angle = self.clone_fill_angle
+            elements = self.clone_to_elements(cloned_node)
+            for element in elements:
+                # We manipulate the element's node directly here instead of using get/set param methods, because otherwise
+                # we run into issues due to those methods' use of caching not updating if the underlying param value is changed.
 
-            if self.flip_angle:
-                element_angle = -element_angle
+                if self.clone_fill_angle is None:  # Normally, rotate the cloned element's angle by the clone's rotation.
+                    element_angle = float(element.node.get(INKSTITCH_ATTRIBS['angle'], 0)) - angle
+                else:  # If clone_fill_angle is specified, override the angle instead.
+                    element_angle = self.clone_fill_angle
 
-            element.node.set(INKSTITCH_ATTRIBS['angle'], element_angle)
+                if flip_angle:
+                    element_angle = -element_angle
 
-            stitch_groups = element.to_stitch_groups(last_patch)
-            patches.extend(stitch_groups)
+                element.node.set(INKSTITCH_ATTRIBS['angle'], element_angle)
 
-        # Remove the "manually cloned" tree.
-        parent.remove(cloned_node)
+                stitch_groups = element.to_stitch_groups(last_patch)
+                last_patch = stitch_groups[-1]
+                patches.extend(stitch_groups)
 
-        return patches
+            return patches
+        finally:
+            # Remove the "manually cloned" tree.
+            parent.remove(cloned_node)
 
     @property
     def shape(self):
@@ -165,3 +160,22 @@ def is_clone(node):
 
 def get_clone_source(node):
     return node.href
+
+
+def angle_for_transform(t: Transform) -> float:
+    # Calculate a rotational angle, in degrees, for a transformation matrix
+
+    # Strip out the translation component from the matrix
+    t = Transform((t.a, t.b, t.c, t.d, 0, 0))
+    try:
+        return t.rotation_degrees()
+    except ValueError:
+        # Something is weird about the matrix such that it apparently isn't a rotation with a uniform scale.
+        # So, next best thing is to apply it to a unit vector and pull the angle from that.
+        return degrees(t.apply_to_point((1, 0)).angle)
+
+
+def is_transform_flipped(t: Transform) -> bool:
+    # Determine if the transform represents a "flipped" scaling.
+    # This is done by calculating if the determinant of the scaling/rotation part of the matrix would be negative
+    return t.a*t.d < t.b*t.c
