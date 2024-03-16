@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-03-14 01:47+0000\n"
-"PO-Revision-Date: 2024-03-14 01:48\n"
+"POT-Creation-Date: 2024-03-16 01:02+0000\n"
+"PO-Revision-Date: 2024-03-16 01:03\n"
 "Last-Translator: \n"
 "Language-Team: Italian\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-14 01:47+0000\n"
+"POT-Creation-Date: 2024-03-16 01:02+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -443,146 +443,156 @@ msgstr "Ink/Stitch Font Medio"
 msgid "A basic font suited for medium-sized characters.  The capital em is 0.6 inches wide at 100% scale.  Can be scaled down to 75% or up to 150%.  Every satin has contour underlay."
 msgstr "Font di base adatto per caratteri di medie dimensioni.  L'em maiuscolo è largo 1,5 cm a scala 100%.  Può essere ridotto al 75% o ampliato al 150%.  Ogni satinato ha un contorno sul livello inferiore."
 
-#. name of font in fonts/monicha
+#. name of font in fonts/milli_marif_bold
 #: inkstitch-fonts-metadata.py:162
+msgid "Millimarif-bold20"
+msgstr ""
+
+#. description of font in fonts/milli_marif_bold
+#: inkstitch-fonts-metadata.py:164
+msgid "This bold font can be reduced down to 75% and enlarged up to 140% allowing Capital M height to flow from 15mm to 28mm."
+msgstr ""
+
+#. name of font in fonts/monicha
+#: inkstitch-fonts-metadata.py:166
 msgid "MONICHA"
 msgstr ""
 
 #. description of font in fonts/monicha
-#: inkstitch-fonts-metadata.py:164
+#: inkstitch-fonts-metadata.py:168
 msgid "Monicha is a script satin font of size approximatively 20mm. In addition to the glyphs covering most Western European languages it contains additional ornemental letters with swashes. These ornemental letters should be used with caution to avoid overlays. In particular do not use two ornemental letters in a row. Please consult the documentation for information on how to access the ornemental letters. The font can not be scaled down but can be scaled up to 150%. "
 msgstr ""
 
 #. name of font in fonts/namskout_AGS
-#: inkstitch-fonts-metadata.py:166
+#: inkstitch-fonts-metadata.py:170
 msgid "Namskout"
 msgstr ""
 
 #. description of font in fonts/namskout_AGS
-#: inkstitch-fonts-metadata.py:168
+#: inkstitch-fonts-metadata.py:172
 msgid "Namskout  is a large applique font of size approximatively 90mm. It contains 43 glyphs including all numbers and the 26 capitals  A-Z.  It can be reduced down to 50% and enlarged up to 150%  "
 msgstr ""
 
 #. name of font in fonts/nick_ainley
-#: inkstitch-fonts-metadata.py:170
+#: inkstitch-fonts-metadata.py:174
 msgid "NickAinley"
 msgstr ""
 
 #. description of font in fonts/nick_ainley
-#: inkstitch-fonts-metadata.py:172
+#: inkstitch-fonts-metadata.py:176
 msgid "A tiny 1mm-bean alphabet based on a 24pt Seniors Studio jawn"
 msgstr ""
 
 #. name of font in fonts/pacificlo
-#: inkstitch-fonts-metadata.py:174
+#: inkstitch-fonts-metadata.py:178
 msgid "Pacificlo"
 msgstr ""
 
 #. description of font in fonts/pacificlo
-#: inkstitch-fonts-metadata.py:176
+#: inkstitch-fonts-metadata.py:180
 msgid "Pacificlo is a small satin column manuscript font of size approximatively 20mm. It can be reduced down to 80% and enlarged up to 140%. It contains 120 glyphs, covering most Western European Languages needs. "
 msgstr ""
 
 #. name of font in fonts/pacificlo_tiny
-#: inkstitch-fonts-metadata.py:178
+#: inkstitch-fonts-metadata.py:182
 msgid "Pacificlo tiny"
 msgstr ""
 
 #. description of font in fonts/pacificlo_tiny
-#: inkstitch-fonts-metadata.py:180
+#: inkstitch-fonts-metadata.py:184
 msgid "This font is an altered version  of Pacificlo, to allow a greater scaling down. Both thin thread (60) and thin needle (60) are mandatory. The altered embroidery parameters of this font allow to scale down the original Pacificlo font between 25% (for a 5mm font ) and 55 % (for a 11mm font)."
 msgstr ""
 
 #. name of font in fonts/roman_ags
-#: inkstitch-fonts-metadata.py:182
+#: inkstitch-fonts-metadata.py:186
 msgid "Roman AGS"
 msgstr ""
 
 #. description of font in fonts/roman_ags
-#: inkstitch-fonts-metadata.py:184
+#: inkstitch-fonts-metadata.py:188
 #, python-format
 msgid "Based on Latin Modern Roman 10 Bold italic. The capital M is 42.5 millimeter wide at 100% scale.  Can be scaled down to 80% or up to 130%.  Every satin has zigzag underlay"
 msgstr ""
 
 #. name of font in fonts/roman_ags_bicolor
-#: inkstitch-fonts-metadata.py:186
+#: inkstitch-fonts-metadata.py:190
 msgid "Roman bicolor AGS"
 msgstr ""
 
 #. description of font in fonts/roman_ags_bicolor
-#: inkstitch-fonts-metadata.py:188
+#: inkstitch-fonts-metadata.py:192
 #, python-format
 msgid "Based on Latin Modern Roman 10 Bold italic. A font with capital letters with 2 colors. Very easy to use with letters from Romanaugusa. The capital M is 42.5 millimeter wide at 100% scale. Can be scaled down to 70% or up to 130%. Every satin has zigzag underlay"
 msgstr ""
 
 #. name of font in fonts/sacramarif
-#: inkstitch-fonts-metadata.py:190
+#: inkstitch-fonts-metadata.py:194
 msgid "Sacramarif"
 msgstr ""
 
 #. description of font in fonts/sacramarif
-#: inkstitch-fonts-metadata.py:192
+#: inkstitch-fonts-metadata.py:196
 msgid "Based on Sacramento. Very small font with runstitch. It can be scaled from 80% to 150%"
 msgstr ""
 
 #. name of font in fonts/small_font
-#: inkstitch-fonts-metadata.py:194
+#: inkstitch-fonts-metadata.py:198
 msgid "Ink/Stitch Small Font"
 msgstr "Ink/Stitch Font Piccolo"
 
 #. description of font in fonts/small_font
-#: inkstitch-fonts-metadata.py:196
+#: inkstitch-fonts-metadata.py:200
 #, python-format
 msgid "A font suited for small characters.  The capital em is 0.2 inches wide at 100% scale.  Can be scaled up to 300%."
 msgstr "Un font adatto per caratteri piccoli.  L'em maiuscolo è largo 0.5 cm al 100%.  Può essere ampliato fino a 300%."
 
 #. name of font in fonts/sortefaxXL
-#: inkstitch-fonts-metadata.py:198
+#: inkstitch-fonts-metadata.py:202
 msgid "Sortefax XL Initials"
 msgstr ""
 
 #. description of font in fonts/sortefaxXL
-#: inkstitch-fonts-metadata.py:200
+#: inkstitch-fonts-metadata.py:204
 msgid " Sortefax is a very large satin stitch Capital font of size 150mm.  It can be reduced down to 75% and enlarged up to 200%  It contains the 37 glyphs :ampersand, A-Z and 0-9. In addition the ten glyphs (){}[],;.: are used to store frames. Type any letter followed by any frame (e.g. A( or B; )  to obtain a framed Capital or Number. Warning: for a few large letters you will need to manually enlarge the frame"
 msgstr ""
 
 #. name of font in fonts/sortefax_medium
-#: inkstitch-fonts-metadata.py:202
+#: inkstitch-fonts-metadata.py:206
 msgid "Sortefax Medium Initials"
 msgstr ""
 
 #. description of font in fonts/sortefax_medium
-#: inkstitch-fonts-metadata.py:204
+#: inkstitch-fonts-metadata.py:208
 msgid "Sortefax  Medium Initials is a  satin stitch Capital font of size 90 mm.  It can be reduced down to 70% and enlarged up to 200%. It contains the 37 glyphs :ampersand, A-Z and 0-9. In addition the ten glyphs (){}[],;.: are used to store frames. Type any letter followed by any frame (e.g. A( or B; or 7, ) to obtain a framed Capital or Number. Some manual arranging of the frame around the letter may be required"
 msgstr ""
 
 #. name of font in fonts/tt_directors
-#: inkstitch-fonts-metadata.py:206
+#: inkstitch-fonts-metadata.py:210
 msgid "TT Directors"
 msgstr "TT Direttori"
 
 #. description of font in fonts/tt_directors
-#: inkstitch-fonts-metadata.py:208
+#: inkstitch-fonts-metadata.py:212
 msgid "A font suited for directing"
 msgstr "Un font adatto a dare direzione"
 
 #. name of font in fonts/tt_masters
-#: inkstitch-fonts-metadata.py:210
+#: inkstitch-fonts-metadata.py:214
 msgid "TT Masters"
 msgstr "TT Masters"
 
 #. description of font in fonts/tt_masters
-#: inkstitch-fonts-metadata.py:212
+#: inkstitch-fonts-metadata.py:216
 msgid "A font suited for heavy typing :)"
 msgstr "Un font adatto a chi batte forte sui tasti :)"
 
 #. name of font in fonts/violin_serif
-#: inkstitch-fonts-metadata.py:214
+#: inkstitch-fonts-metadata.py:218
 msgid "Violin Serif"
 msgstr ""
 
 #. description of font in fonts/violin_serif
-#: inkstitch-fonts-metadata.py:216
+#: inkstitch-fonts-metadata.py:220
 #, python-format
 msgid "A condensed serif font designed. Can be scaled up to 120% or scaled down to 80%. Caps height is about 28 millimeters or 1.1 inches"
 msgstr ""
