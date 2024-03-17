@@ -8,8 +8,7 @@ from copy import deepcopy
 
 import inkex
 import numpy as np
-from inkex import bezier
-from inkex.interfaces.IElement import IBaseElement
+from inkex import bezier, BaseElement
 
 from ..commands import find_commands
 from ..debug import debug
@@ -59,7 +58,7 @@ def param(*args, **kwargs):
 
 
 class EmbroideryElement(object):
-    def __init__(self, node: IBaseElement):
+    def __init__(self, node: BaseElement):
         self.node = node
 
     @property

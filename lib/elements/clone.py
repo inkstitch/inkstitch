@@ -6,7 +6,7 @@
 from math import degrees
 from copy import deepcopy
 
-from inkex import Transform, IBaseElement
+from inkex import Transform, BaseElement
 from shapely import MultiLineString
 
 from ..stitch_plan.stitch_group import StitchGroup
@@ -60,7 +60,7 @@ class Clone(EmbroideryElement):
            type='boolean')
     @cache
     def flip_angle(self):
-        return self.get_boolean_param('flip_angle') or False
+        return self.get_boolean_param('flip_angle', False)
 
     def get_cache_key_data(self, previous_stitch):
         source_node = get_clone_source(self.node)
@@ -80,18 +80,18 @@ class Clone(EmbroideryElement):
     def to_stitch_groups(self, last_patch=None) -> list[StitchGroup]:
         patches = []
 
-        source_node: IBaseElement = get_clone_source(self.node)
+        source_node: BaseElement = get_clone_source(self.node)
         if source_node.tag not in EMBROIDERABLE_TAGS and source_node.tag != SVG_GROUP_TAG:
             return []
 
         # Effectively, manually clone the href'd element: Place it into the tree at the same location
         # as the use element this Clone represents, with the same transform
-        parent: IBaseElement = self.node.getparent()
+        parent: BaseElement = self.node.getparent()
         cloned_node = deepcopy(source_node)
         parent.add(cloned_node)
         try:
             # In a try block so we can ensure that the cloned_node is removed from the tree in the event of an exception.
-            # Otherwise, it might be left around on the document when this method returns.
+            # Otherwise, it might be left around on the document if we throw for some reason.
 
             cloned_node.set('transform', Transform(self.node.get('transform')) @ Transform(cloned_node.get('transform')))
 
@@ -102,12 +102,14 @@ class Clone(EmbroideryElement):
                 source_transform = source_node.composed_transform()
                 cloned_transform = cloned_node.composed_transform()
 
+                # Flip the angle if the clone is flipped relative to the source element
+                flip_angle = flip_angle ^ is_transform_flipped(source_transform) ^ is_transform_flipped(cloned_transform)
+
                 source_angle = angle_for_transform(source_transform)
                 cloned_angle = angle_for_transform(cloned_transform)
                 angle = cloned_angle - source_angle
-
-                # Flip the angle if the clone is flipped relative to the source element
-                flip_angle = flip_angle ^ is_transform_flipped(source_transform) ^ is_transform_flipped(cloned_transform)
+                if flip_angle:
+                    angle = -angle
 
             elements = self.clone_to_elements(cloned_node)
             for element in elements:
@@ -125,8 +127,9 @@ class Clone(EmbroideryElement):
                 element.node.set(INKSTITCH_ATTRIBS['angle'], element_angle)
 
                 stitch_groups = element.to_stitch_groups(last_patch)
-                last_patch = stitch_groups[-1]
-                patches.extend(stitch_groups)
+                if len(stitch_groups):
+                    last_patch = stitch_groups[-1]
+                    patches.extend(stitch_groups)
 
             return patches
         finally:
