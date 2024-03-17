@@ -28,5 +28,5 @@ class MarkerObject(EmbroideryElement):
         repr_point = next(inkex.Path(self.parse_path()).end_points)
         yield MarkerWarning(repr_point)
 
-    def to_stitch_groups(self, last_patch):
+    def to_stitch_groups(self, last_stitch_group):
         return []

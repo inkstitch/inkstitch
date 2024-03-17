@@ -714,7 +714,7 @@ class FillStitch(EmbroideryElement):
 
     def get_starting_point(self, previous_stitch_group):
         # If there is a "fill_start" Command, then use that; otherwise pick
-        # the point closest to the end of the last patch.
+        # the point closest to the end of the last stitch_group.
 
         if self.get_command('fill_start'):
             return self.get_command('fill_start').target_point
@@ -801,6 +801,7 @@ class FillStitch(EmbroideryElement):
                                    self.staggers,
                                    self.skip_last)
         return [StitchGroup(stitches=stitch_list,
+                            min_stitch_length=self.min_stitch_length,
                             color=self.color,
                             force_lock_stitches=self.force_lock_stitches,
                             lock_stitches=self.lock_stitches) for stitch_list in stitch_lists]
@@ -827,13 +828,14 @@ class FillStitch(EmbroideryElement):
                     self.fill_underlay_skip_last,
                     starting_point,
                     underpath=self.underlay_underpath
-                )
+                ),
+                min_stitch_length=self.min_stitch_length
             )
             stitch_groups.append(underlay)
             starting_point = underlay.stitches[-1]
         return [stitch_groups, starting_point]
 
-    def do_auto_fill(self, shape, last_patch, starting_point, ending_point):
+    def do_auto_fill(self, shape, last_stitch_group, starting_point, ending_point):
         stitch_group = StitchGroup(
             color=self.color,
             tags=("auto_fill", "auto_fill_top"),
@@ -851,10 +853,12 @@ class FillStitch(EmbroideryElement):
                 self.skip_last,
                 starting_point,
                 ending_point,
-                self.underpath))
+                self.underpath
+            ),
+            min_stitch_length=self.min_stitch_length)
         return [stitch_group]
 
-    def do_contour_fill(self, polygon, last_patch, starting_point):
+    def do_contour_fill(self, polygon, last_stitch_group, starting_point):
         if not starting_point:
             starting_point = (0, 0)
         starting_point = shgeo.Point(starting_point)
@@ -893,18 +897,19 @@ class FillStitch(EmbroideryElement):
             color=self.color,
             tags=("auto_fill", "auto_fill_top"),
             stitches=stitches,
+            min_stitch_length=self.min_stitch_length,
             force_lock_stitches=self.force_lock_stitches,
-            lock_stitches=self.lock_stitches,)
+            lock_stitches=self.lock_stitches)
         stitch_groups.append(stitch_group)
 
         return stitch_groups
 
-    def do_guided_fill(self, shape, last_patch, starting_point, ending_point):
+    def do_guided_fill(self, shape, last_stitch_group, starting_point, ending_point):
         guide_line = self._get_guide_lines()
 
         # No guide line: fallback to normal autofill
         if not guide_line:
-            return self.do_auto_fill(shape, last_patch, starting_point, ending_point)
+            return self.do_auto_fill(shape, last_stitch_group, starting_point, ending_point)
 
         stitch_group = StitchGroup(
             color=self.color,
@@ -925,7 +930,8 @@ class FillStitch(EmbroideryElement):
                 ending_point,
                 self.underpath,
                 self.guided_fill_strategy
-            )
+            ),
+            min_stitch_length=self.min_stitch_length
         )
         return [stitch_group]
 
@@ -946,12 +952,13 @@ class FillStitch(EmbroideryElement):
             color=self.color,
             tags=("meander_fill", "meander_fill_top"),
             stitches=meander_fill(self, shape, original_shape, i, starting_point, ending_point),
+            min_stitch_length=self.min_stitch_length,
             force_lock_stitches=self.force_lock_stitches,
             lock_stitches=self.lock_stitches,
         )
         return [stitch_group]
 
-    def do_circular_fill(self, shape, last_patch, starting_point, ending_point):
+    def do_circular_fill(self, shape, last_stitch_group, starting_point, ending_point):
         # get target position
         command = self.get_command('ripple_target')
         if command:
@@ -976,15 +983,16 @@ class FillStitch(EmbroideryElement):
             ending_point,
             self.underpath,
             target
-        )
+        ),
 
         stitch_group = StitchGroup(
             color=self.color,
             tags=("circular_fill", "auto_fill_top"),
             stitches=stitches,
+            min_stitch_length=self.min_stitch_length,
             force_lock_stitches=self.force_lock_stitches,
             lock_stitches=self.lock_stitches,)
         return [stitch_group]
 
-    def do_linear_gradient_fill(self, shape, last_patch, start, end):
+    def do_linear_gradient_fill(self, shape, last_stitch_group, start, end):
         return linear_gradient_fill(self, shape, start, end)

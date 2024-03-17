@@ -443,11 +443,10 @@ class Stroke(EmbroideryElement):
         # `self.zigzag_spacing` is the length for a zig and a zag
         # together (a V shape).  Start with running stitch at half
         # that length:
-        patch = self.running_stitch(path, zigzag_spacing / 2.0, self.running_stitch_tolerance)
+        stitch_group = self.running_stitch(path, zigzag_spacing / 2.0, self.running_stitch_tolerance)
+        stitch_group.stitches = zigzag_stitch(stitch_group.stitches, zigzag_spacing, stroke_width, pull_compensation)
 
-        patch.stitches = zigzag_stitch(patch.stitches, zigzag_spacing, stroke_width, pull_compensation)
-
-        return patch
+        return stitch_group
 
     def running_stitch(self, path, stitch_length, tolerance):
         stitches = running_stitch(path, stitch_length, tolerance)
@@ -463,7 +462,13 @@ class Stroke(EmbroideryElement):
 
             repeated_stitches.extend(this_path)
 
-        return StitchGroup(self.color, repeated_stitches, lock_stitches=self.lock_stitches, force_lock_stitches=self.force_lock_stitches)
+        return StitchGroup(
+            self.color,
+            stitches=repeated_stitches,
+            min_stitch_length=self.min_stitch_length,
+            lock_stitches=self.lock_stitches,
+            force_lock_stitches=self.force_lock_stitches
+        )
 
     def apply_max_stitch_length(self, path):
         # apply max distances
@@ -485,22 +490,23 @@ class Stroke(EmbroideryElement):
             color=self.color,
             tags=["ripple_stitch"],
             stitches=ripple_stitch(self),
+            min_stitch_length=self.min_stitch_length,
             lock_stitches=self.lock_stitches,
             force_lock_stitches=self.force_lock_stitches)
 
     def do_bean_repeats(self, stitches):
         return bean_stitch(stitches, self.bean_stitch_repeats)
 
-    def to_stitch_groups(self, last_patch):  # noqa: C901
-        patches = []
+    def to_stitch_groups(self, last_stitch_group):  # noqa: C901
+        stitch_groups = []
 
         # ripple stitch
         if self.stroke_method == 'ripple_stitch':
-            patch = self.ripple_stitch()
-            if patch:
+            stitch_group = self.ripple_stitch()
+            if stitch_group:
                 if any(self.bean_stitch_repeats):
-                    patch.stitches = self.do_bean_repeats(patch.stitches)
-                patches.append(patch)
+                    stitch_group.stitches = self.do_bean_repeats(stitch_group.stitches)
+                stitch_groups.append(stitch_group)
         else:
             for path in self.paths:
                 path = [Point(x, y) for x, y in path]
@@ -514,24 +520,31 @@ class Stroke(EmbroideryElement):
                     else:
                         # manual stitch disables lock stitches unless they force them
                         lock_stitches = (None, None)
-                    patch = StitchGroup(color=self.color,
-                                        stitches=path,
-                                        lock_stitches=lock_stitches,
-                                        force_lock_stitches=self.force_lock_stitches)
+                    stitch_group = StitchGroup(
+                        color=self.color,
+                        stitches=path,
+                        min_stitch_length=self.min_stitch_length,
+                        lock_stitches=lock_stitches,
+                        force_lock_stitches=self.force_lock_stitches
+                    )
                 # simple satin
                 elif self.stroke_method == 'zigzag_stitch':
-                    patch = self.simple_satin(path, self.zigzag_spacing, self.stroke_width, self.pull_compensation)
+                    stitch_group = self.simple_satin(path, self.zigzag_spacing, self.stroke_width, self.pull_compensation)
                 # running stitch
                 else:
-                    patch = self.running_stitch(path, self.running_stitch_length, self.running_stitch_tolerance)
+                    stitch_group = self.running_stitch(path, self.running_stitch_length, self.running_stitch_tolerance)
                     # bean stitch
                     if any(self.bean_stitch_repeats):
-                        patch.stitches = self.do_bean_repeats(patch.stitches)
+                        stitch_group.stitches = self.do_bean_repeats(stitch_group.stitches)
 
-                if patch:
-                    patches.append(patch)
+                if stitch_group:
+                    stitch_groups.append(stitch_group)
 
-        return patches
+        if self.minimum_stitch_length is not None:
+            for stitch_group in stitch_groups:
+                stitch_group.add_tag(f'custom_min_stitch_length:{self.minimum_stitch_length}')
+
+        return stitch_groups
 
     @cache
     def get_guide_line(self):
