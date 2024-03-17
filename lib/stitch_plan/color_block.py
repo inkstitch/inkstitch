@@ -112,6 +112,7 @@ class ColorBlock(object):
 
         if min_stitch_len is None:
             min_stitch_len = 0.1
+        min_stitch_len *= PIXELS_PER_MM
 
         stitches = [self.stitches[0]]
         for stitch in self.stitches[1:]:
@@ -123,7 +124,8 @@ class ColorBlock(object):
                 pass
             else:
                 length = (stitch - stitches[-1]).length()
-                if length <= min_stitch_len * PIXELS_PER_MM:
+                min_length = stitch.min_stitch_length or min_stitch_len
+                if length <= min_length:
                     # duplicate stitch, skip this one
                     continue
 

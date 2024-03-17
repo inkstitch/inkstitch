@@ -17,8 +17,8 @@ class StitchGroup:
     between them by the stitch plan generation code.
     """
 
-    def __init__(self, color=None, stitches=None, trim_after=False, stop_after=False,
-                 lock_stitches=(None, None), force_lock_stitches=False, tags=None):
+    def __init__(self, color=None, stitches=None, min_stitch_length=False, trim_after=False,
+                 stop_after=False, lock_stitches=(None, None), force_lock_stitches=False, tags=None):
         # DANGER: if you add new attributes, you MUST also set their default
         # values in __new__() below.  Otherwise, cached stitch plans can be
         # loaded and create objects without those properties defined, because
@@ -29,6 +29,7 @@ class StitchGroup:
         self.stop_after = stop_after
         self.lock_stitches = lock_stitches
         self.force_lock_stitches = force_lock_stitches
+        self.min_stitch_length = min_stitch_length
         self.stitches = []
 
         if stitches:
@@ -55,7 +56,7 @@ class StitchGroup:
             raise TypeError("StitchGroup can only be added to another StitchGroup")
 
     def __len__(self):
-        # This method allows `len(patch)` and `if patch:
+        # This method allows `len(stitch_group)` and `if stitch_group:
         return len(self.stitches)
 
     def add_stitches(self, stitches, tags=None):
@@ -65,8 +66,9 @@ class StitchGroup:
     def add_stitch(self, stitch, tags=None):
         if not isinstance(stitch, Stitch):
             # probably a Point
-            stitch = Stitch(stitch, tags=tags)
+            stitch = Stitch(stitch, min_stitch_length=self.min_stitch_length, tags=tags)
 
+        stitch.min_stitch_length = self.min_stitch_length
         self.stitches.append(stitch)
 
     def reverse(self):

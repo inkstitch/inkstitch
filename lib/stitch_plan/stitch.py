@@ -11,7 +11,17 @@ from ..utils.geometry import Point
 class Stitch(Point):
     """A stitch is a Point with extra information telling how to sew it."""
 
-    def __init__(self, x, y=None, color=None, jump=False, stop=False, trim=False, color_change=False, tags=None):
+    def __init__(
+        self,
+        x, y=None,
+        color=None,
+        jump=False,
+        stop=False,
+        trim=False,
+        color_change=False,
+        min_stitch_length=None,
+        tags=None
+    ):
         # DANGER: if you add new attributes, you MUST also set their default
         # values in __new__() below.  Otherwise, cached stitch plans can be
         # loaded and create objects without those properties defined, because
@@ -37,6 +47,7 @@ class Stitch(Point):
         self._set('trim', trim, base_stitch)
         self._set('stop', stop, base_stitch)
         self._set('color_change', color_change, base_stitch)
+        self._set('min_stitch_length', min_stitch_length, base_stitch)
 
         self.tags = set()
         self.add_tags(tags or [])
@@ -52,13 +63,16 @@ class Stitch(Point):
         return instance
 
     def __repr__(self):
-        return "Stitch(%s, %s, %s, %s, %s, %s, %s)" % (self.x,
-                                                       self.y,
-                                                       self.color,
-                                                       "JUMP" if self.jump else " ",
-                                                       "TRIM" if self.trim else " ",
-                                                       "STOP" if self.stop else " ",
-                                                       "COLOR CHANGE" if self.color_change else " ")
+        return "Stitch(%s, %s, %s, %s, %s, %s, %s, %s)" % (
+            self.x,
+            self.y,
+            self.color,
+            self.min_stitch_length,
+            "JUMP" if self.jump else " ",
+            "TRIM" if self.trim else " ",
+            "STOP" if self.stop else " ",
+            "COLOR CHANGE" if self.color_change else " "
+        )
 
     def _set(self, attribute, value, base_stitch):
         # Set an attribute.  If the caller passed a Stitch object, use its value, unless
@@ -95,7 +109,17 @@ class Stitch(Point):
         return tag in self.tags
 
     def copy(self):
-        return Stitch(self.x, self.y, self.color, self.jump, self.stop, self.trim, self.color_change, self.tags)
+        return Stitch(
+            self.x,
+            self.y,
+            self.color,
+            self.jump,
+            self.stop,
+            self.trim,
+            self.color_change,
+            self.min_stitch_length,
+            self.tags
+        )
 
     def offset(self, offset: Point):
         out = self.copy()
