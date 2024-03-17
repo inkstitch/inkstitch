@@ -28,13 +28,13 @@
      inkscape:window-height="797"
      id="namedview3461"
      showgrid="true"
-     inkscape:zoom="16.552552"
-     inkscape:cx="37.818943"
-     inkscape:cy="80.954286"
+     inkscape:zoom="6.5469162"
+     inkscape:cx="33.145376"
+     inkscape:cy="68.887395"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g6076"
+     inkscape:current-layer="g6264"
      inkscape:document-rotation="0"
      inkscape:document-units="px"
      inkscape:snap-global="false"
@@ -108,9 +108,9 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
   </cc:Work>
 </rdf:RDF>
 <inkstitch:collapse_len_mm
-   id="collapse_len_mm7657">0.1</inkstitch:collapse_len_mm>
+   id="collapse_len_mm7657">2.0</inkstitch:collapse_len_mm>
 <inkstitch:min_stitch_len_mm
-   id="min_stitch_len_mm7620">0.0</inkstitch:min_stitch_len_mm>
+   id="min_stitch_len_mm7620">0.5</inkstitch:min_stitch_len_mm>
 <inkstitch:inkstitch_svg_version>1</inkstitch:inkstitch_svg_version>
 </metadata>
   <defs
@@ -1745,9 +1745,10 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:reverse_rails="none" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1, 1;stroke-dashoffset:0;stroke-opacity:1"
-       d="m 25.2157,114.239 -4.4418,-2.529 c 2.02656,-8.16224 1.18171,-16.6306 1.36402,-24.9496 0.07066,-9.06667 -0.149995,-18.1394 0.12678,-27.202 0.16071,-5.4287 3.21168,-10.1862 6.74929,-14.0918 1.87581,-2.17095 3.9425,-4.16847 6.0217,-6.14281 0.131507,-1.1288 -1.96551,-0.282309 -2.80541,-0.550077 -4.9855,0.132348 -10.0105,-0.312065 -14.9669,0.333797 -6.87904,1.05757 -12.3328,6.00794 -16.6254,11.1662 l 0.87096,0.58099"
+       d="M 25.2157,114.239 C 20.576152,103.56063 22.038665,97.433292 22.13792,86.7604 22.20858,77.69373 21.987925,68.621 22.2647,59.5584 c 0.16071,-5.4287 3.21168,-10.1862 6.74929,-14.0918 1.87581,-2.17095 3.9425,-4.16847 6.0217,-6.14281 0.131507,-1.1288 -1.96551,-0.282309 -2.80541,-0.550077 -4.9855,0.132348 -10.0105,-0.312065 -14.9669,0.333797 -6.87904,1.05757 -12.3328,6.00794 -16.6254,11.1662 l 0.87096,0.58099"
        id="path10915"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       sodipodi:nodetypes="ccccccccc" />
     <path
        id="autosatin31"
        style="display:inline;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -5291,7 +5292,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ñ"
-     style="display:none"
+     style="display:inline"
      id="g6264">
     <g
        id="g18">
@@ -5314,6 +5315,11 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
          sodipodi:nodetypes="csssscccccccssssscc"
          inkstitch:reverse_rails="none" />
     </g>
+    <path
+       style="display:inline;fill:none;stroke:#000000;stroke-width:1.00157;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.00157, 1.00157;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 21.599476,68.613858 11.949,113.748"
+       id="path16"
+       sodipodi:nodetypes="cc" />
     <path
        id="autosatin3-4"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
@@ -7825,8 +7831,8 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        id="autosatinrun91"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
        inkscape:label="Points droits pour auto-remplissage satin 3"
-       d="m 12.6196,108.011 9.0928,-3.272 c 0.614279,-10.7965 3.14889,-21.5243 7.62087,-31.3787 6.92396,-14.2222 16.1942,-27.2559 26.9202,-38.8565 0.894855,-0.938084 1.7897,-1.87618 2.68455,-2.81426 L 58.1141,30.6738"
-       sodipodi:nodetypes="cccc" />
+       d="M 12.6196,108.011 20.489737,97.267173 C 21.104016,86.470673 24.86129,83.2147 29.33327,73.3603 c 6.92396,-14.2222 16.1942,-27.2559 26.9202,-38.8565 0.894855,-0.938084 1.7897,-1.87618 2.68455,-2.81426 L 58.1141,30.6738"
+       sodipodi:nodetypes="cccccc" />
     <path
        id="autosatin137"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -7846,8 +7852,8 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        id="autosatinrun92"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
        inkscape:label="Points droits pour auto-remplissage satin 5"
-       d="M 53.405121,40.246523 47.4008,39.3017 c -3.76692,0.78496 -4.94932,0.02786 -8.7819,0.130305 -8.19448,0.11362 -16.4061,-0.128286 -24.5858,0.454023 -1.97258,1.06712 -3.27455,3.04727 -4.83742,4.62158 C 6.56067,47.3679 4.503,50.684 2.5,54 L 1.31448,53.2097"
-       sodipodi:nodetypes="ccccccc" />
+       d="M 53.405121,40.246523 47.4008,39.3017 c -3.76692,0.78496 -4.94932,0.02786 -8.7819,0.130305 -8.19448,0.11362 -16.4061,-0.128286 -24.5858,0.454023 -1.97258,1.06712 -3.27455,3.04727 -4.83742,4.62158 L 1.31448,53.2097"
+       sodipodi:nodetypes="cccccc" />
     <path
        id="autosatin138"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -7871,7 +7877,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        id="autosatin139"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 50.237301,38.637303 -1.310648,1.464712 -5.41374,6.353176 -5.574896,6.859892 -5.387397,7.000516 -4.85124,6.775052 -3.966426,6.183497 L 22.190502,76.02966 21,78.5 19.125,83.117187 17.5,87.71875 16.125,92.304687 15,96.875 l -0.875,4.55469 -0.625,4.53906 -0.152408,1.83842 m 40.057529,-67.560647 -0.03012,0.03473 -3.03125,3.851562 -2.84375,3.992188 -2.65625,4.132813 -2.46875,4.273437 -2.28125,4.414063 C 40.09375,60.945313 38,65.5 38,65.5 L 36.125,70.117187 34.5,74.71875 33.125,79.304687 32,83.875 31.125,88.429687 30.5,92.96875 30.125,97.492187 30,102 l 0.02651,1.13992 M 18.719008,75.371901 38.232577,75.232518"
+       d="m 50.237301,38.637303 c -8.130079,9.252746 -15.899419,18.847191 -22.886481,28.996739 -2.820253,4.321205 -5.69396,8.66721 -7.443864,13.557578 -3.434495,8.494557 -5.777194,17.474856 -6.559364,26.61555 M 53.405121,40.246523 C 44.756487,50.76004 38.197275,62.968389 34.129183,75.955507 31.370232,84.732868 29.894487,93.931809 30.02651,103.13992 M 18.719008,75.371901 c 6.504523,-0.04646 13.009046,-0.09292 19.513569,-0.139383"
        inkstitch:satin_column="True"
        inkstitch:ties="2"
        inkstitch:force_lock_stitches="True"
@@ -7882,8 +7888,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkscape:label="Auto-remplissage satin 7"
        inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
-       inkstitch:reverse_rails="none"
-       sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccc" />
+       inkstitch:reverse_rails="none" />
   </g>
   <g
      inkscape:groupmode="layer"
