@@ -28,13 +28,13 @@
      inkscape:window-height="798"
      id="namedview197"
      showgrid="true"
-     inkscape:zoom="4.9549844"
-     inkscape:cx="60.141461"
-     inkscape:cy="138.34554"
+     inkscape:zoom="3.1162207"
+     inkscape:cx="28.239335"
+     inkscape:cy="132.85324"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g95"
+     inkscape:current-layer="g1259"
      inkscape:document-units="px"
      inkscape:document-rotation="0"
      inkscape:snap-global="false"
@@ -243,9 +243,8 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        id="path7" />
     <path
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;line-height:1.25;font-family:'Cherry Ai';-inkscape-font-specification:'Cherry Ai';display:inline;opacity:1;fill:none;stroke:#000000;stroke-width:0.944882"
-       d="m 64.9691,52.6881 -1.3127,-0.1294 -1.0906,0.3419 -0.8791,0.8095 -0.6778,1.273 -9.9259,25.7006 m 15.7002,-27.4922 1.1598,0.7503 0.6719,0.98 0.1734,1.2058 -0.3356,1.4277 -10.0907,26.1272 m 6.4077,-31.0326 2.1974,0.6243"
+       d="m 64.9691,52.6881 c -0.680854,-0.05688 -1.374512,-0.237907 -2.015584,0.09095 -0.557864,0.110624 -0.910519,0.628311 -1.301435,0.996067 -0.946588,1.630943 -1.460597,3.459708 -2.182416,5.193439 L 51.083,80.6837 M 66.7832,53.1915 c 0.580966,0.395583 1.265743,0.684535 1.576334,1.357837 0.401833,0.442906 0.341216,1.097967 0.41191,1.64997 -0.322475,1.744026 -1.13415,3.336875 -1.725291,4.997875 L 58.362,83.6825 m -9.584966,-8.59154 12.836061,5.134424"
        id="path924-1"
-       sodipodi:nodetypes="cssccssccc"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
@@ -257,7 +256,8 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkscape:transform-center-y="-27.600444"
        inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
-       inkstitch:reverse_rails="none" />
+       inkstitch:reverse_rails="none"
+       sodipodi:nodetypes="cccccccccccc" />
     <path
        style="display:inline;opacity:1;fill:none;stroke:#000000;stroke-width:0.944882;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.377953, 0.377953;stroke-dashoffset:0;stroke-opacity:0.501961"
        d="M 68.6627,86.5917 58.1306,114.654 35.4243,175.972 c -9.35016,25.2497 -16.56,47.7075 -16.56,47.7075 l -3.9912,2.2575"
@@ -288,9 +288,8 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:ties="3" />
     <path
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;line-height:1.25;font-family:'Cherry Ai';-inkscape-font-specification:'Cherry Ai';display:inline;opacity:1;fill:none;stroke:#000000;stroke-width:0.944882"
-       d="m 56.957393,115.89259 -0.986446,-0.71276 -0.712525,-0.79172 -0.463014,-0.87882 -0.237369,-0.97004 -0.03603,-1.0694 0.141102,-1.17388 0.71709,-2.68471 11.706392,-31.541869 0.878349,-2.214511 c 0.43571,-1.005728 0.876443,-1.677095 1.00247,-1.783434 m -10.12784,44.449434 1.370992,0.14346 1.258662,-0.0846 1.145841,-0.30968 1.032313,-0.53772 0.91792,-0.76473 0.802829,-0.99171 0.687201,-1.21967 0.570675,-1.44761 11.706399,-31.541663 0.817311,-2.541995 c 0.09558,-0.612482 0.151674,-1.182517 0.141188,-1.680965 m -18.247951,11.253298 16.885297,5.766477"
+       d="m 56.957393,115.89259 c -1.375034,-0.80139 -2.460044,-2.22899 -2.416932,-3.87506 -0.06431,-1.68472 0.548488,-3.30361 1.021375,-4.89567 3.990491,-10.703686 7.918039,-21.431532 11.948176,-32.120002 0.405393,-1.012095 0.770707,-2.068301 1.4574,-2.930412 m -10.12784,44.449434 c 1.927582,0.34823 4.09046,0.0369 5.529732,-1.38998 1.884544,-1.7834 2.38291,-4.44676 3.346515,-6.75867 3.584851,-9.703262 7.227933,-19.386368 10.77637,-29.102235 0.379133,-1.219775 0.896762,-2.414943 0.798714,-3.725998 M 61.042952,86.797295 c 5.628432,1.922159 11.256865,3.844318 16.885297,5.766477"
        id="autosatin4"
-       sodipodi:nodetypes="cssccsscccccccccccccccccc"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
@@ -311,9 +310,9 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        id="path8" />
     <path
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;line-height:1.25;font-family:'Cherry Ai';-inkscape-font-specification:'Cherry Ai';display:inline;opacity:1;fill:none;stroke:#000000;stroke-width:0.944882"
-       d="m 73.816472,70.617915 c -1.109106,-0.327765 -3.578905,-0.592343 -4.849063,1.453531 m 7.072671,-0.58465 c 1.759995,0.586641 2.589417,0.809541 3.25082,4.057191"
+       d="m 73.816472,70.617915 c -1.109106,-0.327765 -3.578905,-0.592343 -4.849063,1.453531 m 7.072671,-0.58465 c 1.759995,0.586641 2.589417,0.809541 3.25082,4.057191 m -11.420225,-5.1061 13.317413,4.813524"
        id="path5046"
-       sodipodi:nodetypes="cccc"
+       sodipodi:nodetypes="cccccc"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
@@ -339,7 +338,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkscape:label="Auto-remplissage satin 3"
        inkscape:transform-center-x="8.1715216"
        inkscape:transform-center-y="-23.440461"
-       d="m 75.6263,52.8703 c -3.6664,1.6506 -2.4888,6.7788 -0.8391,10.0646 L 109.646,157.381 M 77.8247,52.1145 c 3.7805,-1.2007 7.3488,1.7122 8.2263,5.3052 l 34.69,96.0713"
+       d="m 75.6263,52.8703 c -3.6664,1.6506 -2.4888,6.7788 -0.8391,10.0646 L 109.646,157.381 M 77.8247,52.1145 c 3.7805,-1.2007 7.3488,1.7122 8.2263,5.3052 l 34.69,96.0713 m -16.1271,0.22084 17.32868,-7.38074"
        sodipodi:nodetypes="cccccc"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
@@ -706,9 +705,8 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:bean_stitch_repeats="1" />
     <path
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000;stop-opacity:1"
-       d="m 9.61846,104.492 -0.82615,-0.721 -0.58761,-0.979 -0.26663,-1.22 0.1368,-1.443 1.34612,-4.1789 1.50311,-3.9572 1.6654,-3.7492 1.8328,-3.5547 2.0056,-3.3737 2.1834,-3.2062 2.3667,-3.052 2.5551,-2.9114 2.7488,-2.7842 2.9476,-2.6705 3.1518,-2.5703 3.3611,-2.4835 3.5757,-2.4102 3.7956,-2.3503 5.6618,-3.1315 m -37.4568,51.3248 1.1633,-0.087 1.0743,-0.484 0.8753,-0.904 0.5665,-1.349 1.3259,-3.6527 1.4528,-3.4661 1.5869,-3.2928 1.7282,-3.1326 1.8766,-2.9854 2.0324,-2.8515 2.1953,-2.7307 2.3654,-2.6229 2.5426,-2.5284 2.7272,-2.447 2.9188,-2.3786 3.1178,-2.3235 6.8608,-4.534 6.0422,-3.4888 m -31.4982,11.0698 8.685,8.4048"
+       d="M 9.61846,104.492 C 7.9620126,103.42693 7.610501,101.20438 8.289532,99.462602 10.877541,90.886293 14.837819,82.654855 20.499037,75.674751 26.953981,67.646223 35.332556,61.375864 44.216475,56.266763 45.73615,55.426242 47.255825,54.585721 48.7755,53.7452 M 11.3187,105.07 c 1.606292,0.12455 3.142217,-0.94338 3.546622,-2.50782 1.994243,-5.709784 4.443259,-11.293696 7.791464,-16.349888 C 28.23168,77.674573 36.040511,70.797206 44.60621,65.363382 47.537966,63.308968 50.681106,61.609284 53.771,59.811 M 22.2728,70.8808 c 2.895,2.8016 5.79,5.6032 8.685,8.4048"
        id="autosatin79"
-       sodipodi:nodetypes="cccccccccccc"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
@@ -726,7 +724,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        d="m 54.0113,60.1027 -3.5358,-2.8739 c 1.2218,-0.6914 2.45297,-1.36829 3.6347,-2.12738 0.405329,-0.254194 0.78102,-0.552828 1.17028,-0.830542 0.492096,-0.400214 0.984517,-0.799094 1.49902,-1.17048" />
     <path
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000;stop-opacity:1"
-       d="m 55.9589,52.1233 c -2.4456,-1.515302 -5.026762,0.411202 -7.1834,1.621904 m 8.8246,0.3324 c 0.788193,2.956288 -1.605622,4.45418 -3.8291,5.733396"
+       d="m 55.9589,52.1233 c -2.4456,-1.515302 -5.026762,0.411202 -7.1834,1.621904 m 8.8246,0.3324 c 0.788193,2.956288 -1.605622,4.45418 -3.8291,5.733396 m -5.635769,-10.071262 8.664341,10.268849"
        id="autosatin80"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
@@ -762,9 +760,9 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:reverse_rails="none" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1, 1;stroke-dashoffset:0;stroke-opacity:1"
-       d="m 30.8387,102.984 -2.3651,-1.773 c -8.98643,16.4343 -11.2743,33.7416 -7.10162,50.3419 L 19.0166,148.612"
+       d="m 30.8387,102.984 -2.3651,-1.773 c -8.98643,16.4343 -11.955035,30.33793 -7.782355,46.93823 L 19.0166,148.612"
        id="path7057-6"
-       sodipodi:nodetypes="cc"
+       sodipodi:nodetypes="cccc"
        inkstitch:ties="3"
        inkstitch:bean_stitch_repeats="1" />
     <path
@@ -1754,7 +1752,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:ties="3" />
     <path
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.999999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
-       d="m 12.180823,223.42243 c -1.762778,-0.042 -2.8265465,-1.70699 -3.0487655,-4.41299 v -70.99991 c 0.03854,-2.16 1.5449675,-3.277 3.1399655,-3.231 m 1.002798,78.6439 c 2.127398,-0.048 3.476196,-1.94599 3.501796,-4.41299 v -70.99991 c 0.0582,-2.49 -1.359898,-3.277 -3.228296,-3.322"
+       d="m 12.180823,223.42243 c -1.762778,-0.042 -2.8265465,-1.70699 -3.0487655,-4.41299 v -70.99991 c 0.03854,-2.16 1.5449675,-3.277 3.1399655,-3.231 m 1.002798,78.6439 c 2.127398,-0.048 3.476196,-1.94599 3.501796,-4.41299 v -70.99991 c 0.0582,-2.49 -1.359898,-3.277 -3.228296,-3.322 M 5.6727913,196.05167 H 20.422049"
        id="autosatin31-2"
        sodipodi:nodetypes="cccccccc"
        inkstitch:satin_column="True"
@@ -1821,7 +1819,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
     <path
        id="autosatin34-8"
        style="fill:none;stroke:#000000;stroke-width:0.999999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 29.098901,51.00965 c 3.999995,0 5.355394,1.999997 5.355394,5.999992 v 27.999965 c 0,3.999995 -1.226499,6.128992 -5.226494,6.128992 M 27.938603,51.00965 c -3.999995,0 -5.484293,1.999997 -5.484293,5.999992 v 27.999965 c 0,3.999995 1.226498,5.999992 5.226493,5.999992"
+       d="m 29.098901,51.00965 c 3.999995,0 5.355394,1.999997 5.355394,5.999992 v 27.999965 c 0,3.999995 -1.226499,6.128992 -5.226494,6.128992 M 27.938603,51.00965 c -3.999995,0 -5.484293,1.999997 -5.484293,5.999992 v 27.999965 c 0,3.999995 1.226498,5.999992 5.226493,5.999992 M 19.287491,73.746287 h 18.152932"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
@@ -1871,7 +1869,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
     <path
        id="autosatin25-2"
        style="fill:none;stroke:#000000;stroke-width:0.999999px"
-       d="m 51.182774,133.97855 c 0.257799,-3.743 1.870997,-3.969 5.870992,-3.969 l 47.896444,-0.109 c 4.83709,-0.191 5.47009,1.735 6.14609,4.835 m -59.784626,1.17599 c 0,4 1.742097,5.098 5.742092,5.098 h 47.679444 c 4.34509,0.112 6.14109,-1.628 6.49209,-4.984"
+       d="m 51.182774,133.97855 c 0.257799,-3.743 1.870997,-3.969 5.870992,-3.969 l 47.896444,-0.109 c 4.83709,-0.191 5.47009,1.735 6.14609,4.835 m -59.784626,1.17599 c 0,4 1.742097,5.098 5.742092,5.098 h 47.679444 c 4.34509,0.112 6.14109,-1.628 6.49209,-4.984 M 94.849071,124.34759 v 21.32969"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
@@ -1994,7 +1992,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:reverse_rails="none" />
     <path
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.999999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
-       d="m 21.766094,209.44581 c -1.762798,-0.043 -2.826496,-1.708 -3.048796,-4.41399 v -57.49993 c 0.0386,-2.16 1.544998,-3.277 3.139996,-3.231 m 1.002799,65.14492 c 2.127397,-0.049 3.476195,-1.947 3.501795,-4.41399 v -57.49993 c 0.0582,-2.49 -1.359898,-3.277 -3.228296,-3.322"
+       d="m 21.766094,209.44581 c -1.762798,-0.043 -2.826496,-1.708 -3.048796,-4.41399 v -57.49993 c 0.0386,-2.16 1.544998,-3.277 3.139996,-3.231 m 1.002799,65.14492 c 2.127397,-0.049 3.476195,-1.947 3.501795,-4.41399 v -57.49993 c 0.0582,-2.49 -1.359898,-3.277 -3.228296,-3.322 m -8.838158,52.74942 h 15.429993"
        id="autosatin23-5"
        sodipodi:nodetypes="cccccccc"
        inkstitch:satin_column="True"
@@ -2017,7 +2015,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
     <path
        id="autosatin17-1"
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.999999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
-       d="m 21.888694,97.780956 c -1.894698,0.006 -2.985796,-1.652998 -3.114696,-3.901995 -0.0716,-13.972982 0.058,-8.650989 -0.0645,-24.150969 0.0919,-1.653998 1.669598,-2.918997 3.547096,-2.966997 m 0.543699,31.111961 c 2.027397,-0.099 3.326896,-1.809998 3.493295,-3.808995 0.0247,-14.822981 0.2394,-10.614987 0.194,-24.581969 0.007,-1.348998 -1.168398,-2.859997 -3.045896,-2.811997"
+       d="m 21.888694,97.780956 c -1.894698,0.006 -2.985796,-1.652998 -3.114696,-3.901995 -0.0716,-13.972982 0.058,-8.650989 -0.0645,-24.150969 0.0919,-1.653998 1.669598,-2.918997 3.547096,-2.966997 m 0.543699,31.111961 c 2.027397,-0.099 3.326896,-1.809998 3.493295,-3.808995 0.0247,-14.822981 0.2394,-10.614987 0.194,-24.581969 0.007,-1.348998 -1.168398,-2.859997 -3.045896,-2.811997 m -8.238611,22.960108 h 13.160876"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
@@ -2075,7 +2073,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
     <path
        id="autosatin20-8"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.999999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 38.684173,62.832 c 3.999995,0 5.355393,1.999998 5.355393,5.999993 v 15.69998 c 0,3.999995 -1.226398,6.128992 -5.226393,6.128992 M 37.523874,62.832 c -3.999995,0 -5.484293,1.999998 -5.484293,5.999993 v 15.69998 c 0,3.999995 1.226499,5.999992 5.226494,5.999992"
+       d="m 38.684173,62.832 c 3.999995,0 5.355393,1.999998 5.355393,5.999993 v 15.69998 c 0,3.999995 -1.226398,6.128992 -5.226393,6.128992 M 37.523874,62.832 c -3.999995,0 -5.484293,1.999998 -5.484293,5.999993 v 15.69998 c 0,3.999995 1.226499,5.999992 5.226494,5.999992 m -9.12903,-8.84377 h 19.514402"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
@@ -2095,7 +2093,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:ties="3"
        sodipodi:nodetypes="cc" />
     <path
-       d="m 38.677773,152.41388 c 2.905996,0 5.361793,1.818 5.361793,5.818 v 50.49993 c 0,4 -1.908797,5.818 -5.270693,5.99999 m -1.933498,-62.38992 c -2.650196,0.031 -4.795794,2.115 -4.795794,5.89 v 50.49993 c 0,4 1.270699,5.727 4.814894,5.818"
+       d="m 38.677773,152.41388 c 2.905996,0 5.361793,1.818 5.361793,5.818 v 50.49993 c 0,4 -1.908797,5.818 -5.270693,5.99999 m -1.933498,-62.38992 c -2.650196,0.031 -4.795794,2.115 -4.795794,5.89 v 50.49993 c 0,4 1.270699,5.727 4.814894,5.818 m -8.71743,-23.71711 h 19.514402"
        id="path1324-4"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.999999px"
        sodipodi:nodetypes="cssccssc"
@@ -2166,7 +2164,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path24" />
     <path
-       d="m 91.1311,197.581 c 0.826257,-2.48072 1.219237,-5.0448 1.6577,-7.612 m -13.6769,5.372 c 0.721747,-1.65495 1.157319,-3.40141 1.645,-5.134"
+       d="m 91.1311,197.581 c 0.826257,-2.48072 1.219237,-5.0448 1.6577,-7.612 m -13.6769,5.372 c 0.721747,-1.65495 1.157319,-3.40141 1.645,-5.134 m -4.741496,2.66791 18.606755,2.72293"
        id="path24633"
        style="display:inline;fill:none;stroke:#000000;stroke-width:1px"
        sodipodi:nodetypes="sccc"
@@ -2188,10 +2186,9 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:ties="3"
        sodipodi:nodetypes="cccc" />
     <path
-       d="m 87.485,153.122 1.0648,0.086 0.999,0.261 0.9098,0.439 0.7971,0.623 0.6609,0.81 0.5011,1.002 0.318,1.198 0.1112,1.399 v 30.689 l -0.0581,0.34 m -7.1461,-36.919 -0.967,0.107 -0.9004,0.295 -0.8147,0.48 -0.7097,0.659 -0.5854,0.835 -0.442,1.005 -0.2793,1.173 -0.0973,1.336 v 30.947 l -0.09,0.32 M 95.722992,158.94 H 78.725043"
+       d="m 87.485,153.122 c 2.323969,-0.0831 4.623185,1.50663 5.101339,3.82497 0.499251,2.41906 0.160635,4.91163 0.258627,7.36213 -0.0013,8.4672 0.01648,16.93442 -0.01203,25.40159 L 92.7888,189.969 M 85.6427,153.05 c -2.394465,-0.0295 -4.345297,2.02667 -4.63791,4.32124 -0.30731,2.41418 -0.102119,4.85863 -0.15789,7.28716 0,8.40953 0,16.81907 0,25.2286 -0.03,0.10667 -0.06,0.21333 -0.09,0.32 M 95.722992,158.94 c -5.665983,0 -11.331966,0 -16.997949,0"
        id="autosatin29-5"
        style="display:inline;fill:none;stroke:#000000;stroke-width:1px"
-       sodipodi:nodetypes="ccscsccccscscccccccccccc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
@@ -2212,7 +2209,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        sodipodi:nodetypes="cc" />
     <path
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
-       d="m 70.57343,191.454 c -1.7628,-0.043 -2.8266,-1.708 -3.0488,-4.414 v -38.8 c 0.0385,-2.16 1.545,-3.277 3.1399,-3.231 m 1.0028,46.445 c 2.1275,-0.049 3.4763,-1.947 3.5018,-4.414 v -38.8 c 0.0583,-2.49 -1.3598,-3.277 -3.2283,-3.322"
+       d="m 70.57343,191.454 c -1.7628,-0.043 -2.8266,-1.708 -3.0488,-4.414 v -38.8 c 0.0385,-2.16 1.545,-3.277 3.1399,-3.231 m 1.0028,46.445 c 2.1275,-0.049 3.4763,-1.947 3.5018,-4.414 v -38.8 c 0.0583,-2.49 -1.3598,-3.277 -3.2283,-3.322 m -7.951744,21.63515 h 13.160876"
        id="autosatin30-4"
        sodipodi:nodetypes="cccccccc"
        inkstitch:satin_column="True"
@@ -2235,7 +2232,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
     <path
        id="autosatin13-2"
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
-       d="m 70.29653,98.489 c -1.8946,0.006 -2.9858,-1.653 -3.1147,-3.902 -0.0716,-13.973 0.0581,-8.651 -0.0645,-24.151 0.0919,-1.654 1.6697,-2.919 3.5471,-2.967 m 0.5437,31.112 c 2.0274,-0.099 3.3269,-1.81 3.4933,-3.809 0.0248,-14.823 0.2395,-10.615 0.194,-24.582 0.007,-1.349 -1.1684,-2.86 -3.0459,-2.812"
+       d="m 70.29653,98.489 c -1.8946,0.006 -2.9858,-1.653 -3.1147,-3.902 -0.0716,-13.973 0.0581,-8.651 -0.0645,-24.151 0.0919,-1.654 1.6697,-2.919 3.5471,-2.967 m 0.5437,31.112 c 2.0274,-0.099 3.3269,-1.81 3.4933,-3.809 0.0248,-14.823 0.2395,-10.615 0.194,-24.582 0.007,-1.349 -1.1684,-2.86 -3.0459,-2.812 m -8.087356,20.663721 h 13.387788"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
@@ -2293,7 +2290,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
     <path
        id="autosatin16-3"
        style="display:inline;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 87.09203,63.54 c 4,0 5.3554,2 5.3554,6 v 15.7 c 0,4 -1.2264,6.129 -5.2264,6.129 M 85.93173,63.54 c -4,0 -5.4843,2 -5.4843,6 v 15.7 c 0,4 1.2265,6 5.2265,6"
+       d="m 87.09203,63.54 c 4,0 5.3554,2 5.3554,6 v 15.7 c 0,4 -1.2264,6.129 -5.2264,6.129 M 85.93173,63.54 c -4,0 -5.4843,2 -5.4843,6 v 15.7 c 0,4 1.2265,6 5.2265,6 M 76.92305,81.234372 h 18.606756"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
@@ -2908,7 +2905,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:satin_column="True"
-       d="m 71.6218,139.645 c -2.714838,0.88176 -3.55028,0.78318 -5.1193,-0.21 m 7.2027,-0.596 c 2.716105,-1.00295 3.612578,-2.89619 3.625797,-3.631"
+       d="m 71.6218,139.645 c -2.714838,0.88176 -3.55028,0.78318 -5.1193,-0.21 m 7.2027,-0.596 c 2.716105,-1.00295 3.612578,-2.89619 3.625797,-3.631 m -11.22528,5.66777 13.317413,-5.45532"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.999999px;stroke-opacity:1"
        id="path18476"
        inkscape:transform-center-x="17.130909"
@@ -2926,8 +2923,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
     <path
        id="path5728-3-1-1"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.999999px;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 81.1374,138.687 -1.3428,-0.694 -0.9993,-0.772 -0.6792,-0.859 -0.3826,-0.957 -0.1096,-1.064 0.1402,-1.182 0.3663,-1.31 0.5691,-1.449 32.3275,-74.1999 0.672,-1.4038 0.707,-1.1627 0.32,-0.3806 m -29.5588,86.313 1.4245,0.504 1.2446,0.199 1.0889,-0.093 0.9573,-0.377 0.8499,-0.648 0.7665,-0.911 0.7073,-1.163 0.6722,-1.404 32.3276,-74.1999 0.569,-1.4484 0.366,-1.3102 0.057,-0.4767 m -34.5678,39.0287 16.8908,7.6145"
-       sodipodi:nodetypes="cssccssccc"
+       d="m 81.1374,138.687 c -2.084919,-0.7663 -4.01314,-2.76057 -3.419368,-5.13961 0.835991,-3.67242 2.810485,-6.97723 4.173513,-10.47395 9.897261,-22.64563 19.691145,-45.338509 29.653055,-67.954596 0.33737,-0.648967 0.69914,-1.312505 1.1814,-1.865844 m -29.5588,86.313 c 1.983942,0.99653 4.753061,1.03175 6.079717,-1.02651 2.109893,-3.12014 3.192653,-6.81207 4.823536,-10.19305 9.822357,-22.6057 19.734687,-45.174143 29.500817,-67.803132 0.28533,-0.740596 0.53634,-1.515213 0.62673,-2.305508 M 89.6302,97.2665 c 5.630267,2.538167 11.26053,5.07633 16.8908,7.6145"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
@@ -2950,7 +2946,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
     <path
        id="path19600"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.999999px;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 118.738,52.3073 c -1.56062,-0.656581 -4.19265,-1.444836 -6.012,0.945718 m 8.042,-0.0665 c 1.55645,0.692874 3.93657,2.080563 3.42994,5.0513"
+       d="m 118.738,52.3073 c -1.56062,-0.656581 -4.19265,-1.444836 -6.012,0.945718 m 8.042,-0.0665 c 1.55645,0.692874 3.93657,2.080563 3.42994,5.0513 m -13.16601,-8.337629 15.72418,7.541186"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
@@ -3933,9 +3929,8 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
      id="g1319">
     <path
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.999999px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
-       d="m 17.9851,193.142 -0.6674,0.893 -0.4725,0.988 -0.2726,1.053 -0.0677,1.086 0.1424,1.086 0.3575,1.056 0.5777,0.992 4.1435,5.277 4.2853,4.631 4.4047,3.998 4.5015,3.379 4.5757,2.772 4.6273,2.179 4.6565,1.599 4.663,1.032 4.6272,0.481 4.5475,-0.044 4.4431,-0.535 4.3138,-0.995 4.1595,-1.423 3.9806,-1.818 3.7767,-2.181 3.5479,-2.512 3.3085,-2.821 3.0607,-3.11 1.1732,-1.416 m -74.5438,-16.988 1.0555,-0.358 1.0865,-0.142 1.0857,0.068 1.053,0.273 0.9885,0.473 0.8922,0.667 0.764,0.858 3.5905,4.587 3.6119,3.929 3.6183,3.307 3.6099,2.723 3.5866,2.175 3.5484,1.664 3.4953,1.191 3.4274,0.754 3.3642,0.352 3.3075,-0.026 3.2384,-0.388 3.1565,-0.73 3.0621,-1.055 2.9552,-1.361 2.8355,-1.651 2.7035,-1.92 2.5447,-2.164 2.3569,-2.375 0.8391,-1 m -7.712361,3.00654 11.804957,15.16163 M 55.96094,209.56046 52.767605,229.32469 M 29.980631,191.30431 13.764572,203.0651"
+       d="m 17.9851,193.142 c -2.08581,2.21722 -1.854939,5.89584 0.267821,8.00782 3.159238,4.18164 6.606067,8.16861 10.57179,11.60782 3.111372,2.85515 6.613024,5.25404 10.27098,7.35455 4.097126,2.17791 8.460445,3.91524 13.037752,4.76165 3.848975,0.77609 7.831899,0.96875 11.738681,0.57475 6.655167,-0.60944 13.098104,-2.92731 18.77318,-6.42921 4.416614,-2.75669 8.415707,-6.21443 11.733396,-10.23038 M 19.8349,191.801 c 2.644661,-1.23972 5.889112,-0.0383 7.371485,2.40889 3.779,5.05316 8.095536,9.77081 13.263494,13.43223 5.167143,3.69713 11.277641,6.21833 17.657876,6.62913 8.488766,0.58743 16.938137,-2.79093 23.25988,-8.36956 1.52293,-1.2874 2.943729,-2.72158 4.224565,-4.24969 m -7.712361,3.00654 c 3.934986,5.05388 7.869971,10.10775 11.804957,15.16163 M 55.96094,209.56046 c -1.064445,6.58808 -2.12889,13.17615 -3.193335,19.76423 M 29.980631,191.30431 c -5.405353,3.92026 -10.810706,7.84053 -16.216059,11.76079"
        id="autosatin49-3"
-       sodipodi:nodetypes="cssccccssccccccccccccccccccccccccccccccccccccccccccccccccccc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
@@ -3957,7 +3952,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
     <path
        id="path1131"
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.999999px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
-       d="m 34.817102,187.69632 c 1.711897,-1.194 3.832895,-0.305 5.027193,1.407 8.546489,12.25398 20.173575,13.05898 28.732364,8.38599 8.558689,-4.672 13.898683,-14.72398 8.21869,-27.49597 -0.848799,-1.907 -0.810999,-3.08599 0.862399,-4.52099 m -44.130745,23.16197 c -1.712398,1.194 -1.077398,3.07999 0.1161,4.79299 10.407887,14.92298 26.910666,17.05398 38.554651,10.69699 11.643986,-6.35699 18.580177,-21.29597 11.505786,-37.20295 -1.414198,-2.024 -2.709997,-2.625 -4.755594,-2.035"
+       d="m 34.817102,187.69632 c 1.711897,-1.194 3.832895,-0.305 5.027193,1.407 8.546489,12.25398 20.173575,13.05898 28.732364,8.38599 8.558689,-4.672 13.898683,-14.72398 8.21869,-27.49597 -0.848799,-1.907 -0.810999,-3.08599 0.862399,-4.52099 m -44.130745,23.16197 c -1.712398,1.194 -1.077398,3.07999 0.1161,4.79299 10.407887,14.92298 26.910666,17.05398 38.554651,10.69699 11.643986,-6.35699 18.580177,-21.29597 11.505786,-37.20295 -1.414198,-2.024 -2.709997,-2.625 -4.755594,-2.035 m -12.842229,30.22178 6.654848,11.52654"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="1"
@@ -3999,8 +3994,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
     <path
        id="autosatin51-7"
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.999999px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
-       d="m 99.41292,83.63545 0.6886,-0.875999 0.496,-0.976998 0.298,-1.045999 0.094,-1.082999 -0.116,-1.089998 -0.331,-1.063999 -0.5538,-1.005999 -2.1421,-2.978996 -2.187395,-2.790996 -2.229097,-2.602997 -2.267397,-2.417997 -2.302197,-2.235997 -2.333498,-2.053998 -2.361297,-1.875997 -2.385697,-1.697998 -2.406397,-1.524998 -2.423796,-1.350999 -2.437597,-1.180998 -2.447997,-1.011999 -2.454797,-0.845999 -2.458197,-0.680999 -2.458097,-0.518999 -2.454397,-0.359 -4.942394,0.022 -4.578894,0.467 -4.301395,0.903998 -4.109894,1.331999 -4.004395,1.750998 -3.984995,2.160997 -2.484397,1.570998 m 63.698617,26.359967 -1.064,0.331999 -1.089895,0.116 -1.083998,-0.095 -1.046399,-0.297999 -0.976999,-0.497 -0.875799,-0.688999 -0.743099,-0.875999 -3.754595,-5.024993 -3.776995,-4.255995 -3.782095,-3.533996 -3.769996,-2.858996 -3.740495,-2.230997 -3.693595,-1.648998 -3.629496,-1.113999 -3.547995,-0.626999 -3.476696,-0.18 -3.415296,0.242 -3.336395,0.641999 -3.239796,1.018999 -3.125896,1.374998 -2.994097,1.707998 -1.487198,1.055999 m 20.679541,-2.386482 2.111911,-18.541252 m 25.726869,37.912468 14.321194,-9.864491 m -58.818142,-4.317 -9.949596,-14.674581"
-       sodipodi:nodetypes="csssccccsccccccccccccccccccccccccccccccccccccccccccccccccccc"
+       d="m 99.41292,83.63545 c 2.05132,-2.093308 2.02585,-5.62472 0.106218,-7.795033 C 92.673685,66.07556 83.684834,57.329985 72.430922,52.921069 68.158044,51.320435 63.620155,50.107867 59.021418,50.378813 c -3.838124,0.02151 -7.679433,0.581105 -11.370497,1.626663 -4.925031,1.426092 -9.532859,3.77592 -13.818518,6.567006 M 97.53102,84.932449 c -2.584128,1.122156 -5.731876,-0.0092 -7.169056,-2.393606 -2.103336,-2.91599 -4.308877,-5.748693 -6.775878,-8.368329 -2.322567,-2.419027 -4.844332,-4.644027 -7.581603,-6.587389 -3.214226,-2.183898 -6.7165,-4.005235 -10.485822,-5.014085 -4.009852,-1.145108 -8.290361,-1.399145 -12.40291,-0.694178 -4.773552,0.775839 -9.328725,2.78571 -13.235556,5.617609 m 20.679541,-2.386482 c 0.70397,-6.180417 1.407941,-12.360835 2.111911,-18.541252 m 25.726869,37.912468 c 4.773731,-3.288164 9.547463,-6.576327 14.321194,-9.864491 m -58.818142,-4.317 C 40.585036,65.404187 37.268504,60.51266 33.951972,55.621133"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
@@ -4022,7 +4016,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
     <path
        id="autosatin52-9"
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.999999px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
-       d="m 79.169846,87.750445 c -1.636998,1.294998 -3.309896,0.314 -4.604894,-1.322998 C 69.606958,80.159455 64.375264,77.458458 59.57277,76.841459 54.770176,76.22446 50.227082,77.711458 46.639187,80.603454 39.463296,86.387447 36.1372,97.322433 44.492689,108.46842 c 1.252199,1.67 1.382899,2.983 0.1824,4.58699 M 80.694544,86.460447 c 1.636698,-1.294999 1.092898,-3.085996 -0.2019,-4.722994 C 74.555552,74.231462 67.47866,70.235467 60.535669,69.343468 53.916078,68.559469 46.522687,71.068466 41.894993,74.716462 31.782105,82.867451 27.97511,99.033431 38.445797,113.00141 c 1.251798,1.67 3.268796,1.775 4.939094,1.11"
+       d="m 79.169846,87.750445 c -1.636998,1.294998 -3.309896,0.314 -4.604894,-1.322998 C 69.606958,80.159455 64.375264,77.458458 59.57277,76.841459 54.770176,76.22446 50.227082,77.711458 46.639187,80.603454 39.463296,86.387447 36.1372,97.322433 44.492689,108.46842 c 1.252199,1.67 1.382899,2.983 0.1824,4.58699 M 80.694544,86.460447 c 1.636698,-1.294999 1.092898,-3.085996 -0.2019,-4.722994 C 74.555552,74.231462 67.47866,70.235467 60.535669,69.343468 53.916078,68.559469 46.522687,71.068466 41.894993,74.716462 31.782105,82.867451 27.97511,99.033431 38.445797,113.00141 c 1.251798,1.67 3.268796,1.775 4.939094,1.11 m -2.630396,-42.550367 8.022539,11.552455"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
@@ -4043,7 +4037,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:ties="3" />
     <path
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.999999px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
-       d="m 89.387833,151.94136 c -1.783731,1.91871 -1.974839,5.02794 -0.4382,7.15 1.692397,2.52604 3.235775,5.18091 4.182503,8.08363 1.031128,2.78867 1.560117,5.75377 1.731444,8.71585 0.208758,4.03456 -0.359137,8.08759 -1.551408,11.94299 -1.593548,5.06191 -4.230854,9.80089 -7.699934,13.81847 m 5.621593,-51.02993 c 2.394245,-1.08028 5.177202,-0.0196 6.881209,1.81418 1.467266,2.22258 2.9555,4.44805 4.02706,6.89926 1.04162,2.00904 1.73239,4.18443 2.43024,6.3289 0.60316,2.31786 1.14542,4.6471 1.36147,7.03737 0.28089,2.08663 0.27371,4.21147 0.24536,6.31226 -0.11012,2.52479 -0.41652,5.02596 -0.90493,7.50525 -0.59886,2.86259 -1.46056,5.66395 -2.52991,8.38684 -1.25801,3.08271 -2.801426,6.05103 -4.607802,8.84814 -1.188112,1.73005 -2.357407,3.46546 -3.757801,5.03472 m -8.902238,-47.20407 c 5.258227,-3.77534 10.516454,-7.55068 15.774681,-11.32602"
+       d="m 89.387833,151.94136 c -2.046295,2.14502 -1.859392,5.68567 0.03349,7.86394 4.925961,7.12773 6.62422,16.29033 4.745274,24.73345 -1.333505,6.30659 -4.355566,12.23402 -8.554358,17.11355 m 5.621593,-51.02993 c 3.049042,-1.34245 6.633493,0.63016 7.978752,3.48514 6.801636,10.08615 8.646336,23.12111 5.495226,34.81248 -1.8995,7.28272 -5.466749,14.12777 -10.329082,19.8693 M 85.47649,161.58522 c 5.258227,-3.77534 10.516454,-7.55068 15.77468,-11.32602"
        id="autosatin48-5"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
@@ -4093,7 +4087,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:ties="3" />
     <path
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.999999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
-       d="m 50.12981,221.41475 c -1.756098,-0.046 -2.815797,-1.816 -3.037196,-4.692 v -61.11192 c 0.0384,-2.295 1.539098,-3.483 3.128096,-3.434 m 0.998998,69.23792 c 2.119298,-0.052 3.462996,-2.07 3.488496,-4.692 v -61.11192 c 0.058,-2.646 -1.354698,-3.483 -3.216096,-3.53"
+       d="m 50.12981,221.41475 c -1.756098,-0.046 -2.815797,-1.816 -3.037196,-4.692 v -61.11192 c 0.0384,-2.295 1.539098,-3.483 3.128096,-3.434 m 0.998998,69.23792 c 2.119298,-0.052 3.462996,-2.07 3.488496,-4.692 v -61.11192 c 0.058,-2.646 -1.354698,-3.483 -3.216096,-3.53 m -6.886794,43.18776 h 11.552455"
        id="autosatin50"
        sodipodi:nodetypes="cccccccc"
        inkstitch:satin_column="True"
@@ -4117,7 +4111,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
     <path
        id="autosatin51"
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.999999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
-       d="m 50.25681,105.58089 c -1.875298,0.007 -2.955197,-1.94699 -3.082796,-4.59599 -0.0709,-16.456981 0.0574,-10.188988 -0.0639,-28.444965 0.091,-1.947998 1.652498,-3.437996 3.510795,-3.494996 m 0.5382,36.643951 c 2.006597,-0.116 3.292795,-2.13099 3.457495,-4.48599 0.0245,-17.45898 0.2369,-12.501986 0.192,-28.952965 0.0069,-1.588998 -1.156399,-3.367996 -3.014696,-3.311996"
+       d="m 50.25681,105.58089 c -1.789138,0.0246 -2.736522,-1.87228 -2.953834,-3.41 -0.27352,-2.374732 -0.07372,-4.780022 -0.148835,-7.166878 0.01438,-7.548309 0.0049,-15.097944 -0.03122,-22.64533 0.134931,-1.781752 1.704555,-3.287027 3.497991,-3.313743 m 0.5382,36.643951 c 2.120611,-0.12541 3.295187,-2.36493 3.438781,-4.26625 0.03131,-6.590065 0.09847,-13.182917 0.200375,-19.773424 -0.0087,-3.33242 0.08232,-6.672207 -0.041,-10.000106 -0.223139,-1.428906 -1.434839,-2.791342 -2.963359,-2.711171 m -7.509497,22.037647 h 12.675611"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
@@ -4125,7 +4119,6 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm=".25"
-       sodipodi:nodetypes="cccccccc"
        inkscape:label="Auto-remplissage satin 4"
        inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
@@ -4139,7 +4132,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
     <path
        id="autosatin52"
        style="fill:none;stroke:#000000;stroke-width:0.999999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 8.2226626,57.994953 0.1288098,1.623998 0.5377194,1.544998 0.4386394,0.662999 0.5605793,0.548999 0.6891095,0.402 0.824199,0.225 4.031095,0.162999 4.042634,0.028 8.08829,0.013 40.482049,0.144 M 8.2226626,56.396955 8.3514524,54.772957 8.8890818,53.227959 9.3276812,52.56496 l 0.5605893,-0.549 0.6891495,-0.401999 0.824299,-0.224 4.031095,-0.164 4.042634,-0.028 8.08829,-0.013 40.482049,0.109 m -7.39999,-3.350995 v 17.510977"
+       d="m 8.2226626,57.994953 c 0.034865,1.794168 0.5251943,3.939261 2.3168244,4.760807 1.611924,0.494138 3.350652,0.257078 5.018951,0.411056 17.49568,0.06655 34.991608,0.116546 52.487349,0.18413 M 8.2226626,56.396955 c 0.034881,-1.794127 0.5249993,-3.939315 2.3166944,-4.760791 1.612415,-0.492154 3.350712,-0.257254 5.019081,-0.411073 17.495449,-0.09508 34.991751,0.05147 52.487349,0.06887 m -7.39999,-3.350995 c 0,5.836992 0,11.673985 0,17.510977"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
@@ -4159,7 +4152,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
     <path
        id="autosatin53-3"
        style="fill:none;stroke:#000000;stroke-width:0.999999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 118.78652,56.533955 -0.356,-1.688998 -0.771,-1.559998 -0.54099,-0.664999 -0.645,-0.553 -0.748,-0.412999 -0.85,-0.249 -43.655947,-0.102 -3.173796,-0.009 m 50.740733,7.094991 -0.356,1.688998 -0.771,1.559998 -0.54099,0.664999 -0.645,0.552 -0.748,0.413999 -0.85,0.248 -46.829743,-0.166 m 2.1,4.016275 V 47.705345"
+       d="m 118.78652,56.533955 c -0.22179,-1.449812 -0.71205,-2.915623 -1.75131,-3.98543 -0.89838,-0.936933 -2.21155,-1.285028 -3.47668,-1.146641 -15.170913,-0.03644 -30.341837,-0.06887 -45.512743,-0.107923 m 50.740733,7.094991 c -0.22184,1.449762 -0.71196,2.915723 -1.75137,3.985356 -0.89885,0.936145 -2.2114,1.287426 -3.47662,1.13797 C 98.387619,63.4585 83.216703,63.404723 68.045787,63.350946 m 2.1,4.016275 c 0,-6.553959 0,-13.107917 0,-19.661876"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
@@ -4169,8 +4162,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkscape:label="Auto-remplissage satin 8"
        inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
-       inkstitch:reverse_rails="none"
-       sodipodi:nodetypes="ccccccccccccccccccc" />
+       inkstitch:reverse_rails="none" />
     <path
        d="M 68.3112,63.7298 66.4644,63.3495"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
@@ -4180,14 +4172,13 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
     <path
        id="autosatin54-7"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.999999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 67.040688,63.349505 c 3.973595,0 5.320094,2.344997 5.320094,7.034991 V 101.8915 c 0,4.689 -1.218299,7.185 -5.191894,7.185 M 65.88809,63.349505 c -3.973595,0 -5.448093,2.344997 -5.448093,7.034991 V 101.8915 c 0,4.689 1.218398,7.034 5.191993,7.034"
+       d="m 67.040688,63.349505 c 2.036832,-0.140408 4.227278,0.95721 4.790754,3.029718 0.82965,2.745174 0.4365,5.641309 0.52934,8.465479 -0.01489,9.368388 0.03008,18.737659 -0.02304,28.105478 -0.04262,2.27169 -0.706836,5.17238 -3.214172,5.86507 -0.631595,0.19454 -1.296027,0.26069 -1.954681,0.26125 M 65.88809,63.349505 c -2.056116,-0.131952 -4.270221,0.953159 -4.883777,3.029718 -0.88093,2.735874 -0.467234,5.640805 -0.564316,8.465479 0.01489,9.367513 -0.03009,18.735915 0.02304,28.102858 0.05482,2.15069 0.62391,4.86864 2.940714,5.64131 0.712274,0.25591 1.475361,0.33558 2.228237,0.33663 M 57.922727,95.147306 h 16.205528"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="0"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm=".25"
-       sodipodi:nodetypes="cssccssc"
        inkscape:label="Auto-remplissage satin 9"
        inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
@@ -4202,10 +4193,9 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        sodipodi:nodetypes="cc"
        inkstitch:bean_stitch_repeats="1" />
     <path
-       d="m 67.035588,155.80383 1.059799,0.096 0.994399,0.292 0.905599,0.492 0.793399,0.697 0.657799,0.907 0.498899,1.122 0.3164,1.34099 0.1107,1.566 v 56.52893 l -0.0882,1.565 -0.261,1.344 -0.341499,0.9 m -6.480092,-66.93192 -0.962499,0.12 -0.896299,0.331 -0.810899,0.537 -0.706399,0.737 -0.582699,0.935 -0.4399,1.12599 -0.277999,1.312 -0.0969,1.496 v 56.52893 l 0.0612,1.561 0.1915,1.331 0.247399,0.823 M 75.582528,162.31682 H 56.578261 m 19.644257,56.52893 H 57.85824 m 9.378548,-63.02892 -2.235897,-0.085 m 9.451197,30.29172 H 56.745717"
+       d="m 67.035588,155.80383 c 2.428972,-0.0762 4.606044,1.791 5.03923,4.15416 0.562725,2.7125 0.188729,5.51926 0.297764,8.27257 -0.01585,17.01209 0.03169,34.02596 -0.02377,51.03693 -0.02695,1.15698 -0.198003,2.32172 -0.666931,3.38726 m -6.480092,-66.93192 c -2.544519,0.0114 -4.312119,2.4002 -4.603002,4.75021 -0.354032,3.1757 -0.0878,6.39459 -0.170592,9.58796 0.01837,16.4959 -0.03674,32.99323 0.02758,49.48823 0.02231,1.0166 0.139215,2.0471 0.472519,3.01152 m 14.654232,-60.24393 c -6.334756,0 -12.669511,0 -19.004267,0 m 19.644257,56.52893 c -6.121426,0 -12.242852,0 -18.364278,0 m 9.378548,-63.02892 c -0.745299,-0.0283 -1.490598,-0.0567 -2.235897,-0.085 m 9.451197,30.29172 c -5.902124,0 -11.804247,0 -17.706371,0"
        id="autosatin55"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.999999px"
-       sodipodi:nodetypes="cssccssccccccccccccccccccccccccc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="0"
@@ -4225,7 +4215,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkscape:label="Points droits pour auto-remplissage satin 12"
        inkstitch:ties="3" />
     <path
-       d="m 65.220791,225.35774 c -1.105648,-0.0706 -3.456836,-0.23942 -4.292495,-2.79699 m 6.197992,3.00099 c 2.176733,-0.19362 3.647844,-0.99544 4.536517,-2.85219"
+       d="m 65.220791,225.35774 c -1.105648,-0.0706 -3.456836,-0.23942 -4.292495,-2.79699 m 6.197992,3.00099 c 2.176733,-0.19362 3.647844,-0.99544 4.536517,-2.85219 m -12.296021,1.60062 h 12.836062"
        id="autosatin56"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.999999px"
        inkstitch:satin_column="True"
@@ -4428,7 +4418,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
     <path
        id="autosatin38-3"
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.999999px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
-       d="m 58.589031,220.30915 1.152598,-0.854 0.6188,-1.078 0.1289,-1.264 -0.3168,-1.413 -24.665969,-69.40791 -0.943199,-1.343 -0.953199,-0.886 -1.088898,-0.386 -1.350299,0.156 m 26.268867,76.74991 -1.440898,0.089 -1.250698,-0.367 -1.002499,-0.816 -0.696299,-1.258 -24.665969,-69.40791 -0.277,-1.475 0.1851,-1.362 0.599599,-1.082 0.4403,-0.383 0.526099,-0.251 m 34.187384,70.05412 -15.671533,5.56916 m -8.631379,-75.10709 -15.939399,5.66435 m 24.770069,25.13504 -14.782998,5.12879"
+       d="m 58.589031,220.30915 c 1.48538,-0.72677 2.283754,-2.48064 1.707252,-4.05703 -2.214589,-6.70733 -4.71398,-13.33245 -7.038042,-20.00818 -5.917227,-16.65057 -11.834454,-33.30113 -17.751681,-49.9517 -0.841353,-1.40226 -2.19889,-3.05239 -4.037186,-2.49348 l -0.175315,0.0203 -0.123094,0.0142 m 26.268867,76.74991 c -1.741965,0.39418 -3.682375,-0.42749 -4.292341,-2.17485 -8.315186,-23.16774 -16.499257,-46.39459 -24.764022,-69.58506 -0.486486,-1.58786 -0.306786,-3.87657 1.474098,-4.553 m 34.187384,70.05412 c -5.223844,1.85639 -10.447689,3.71277 -15.671533,5.56916 m -8.631379,-75.10709 c -5.313133,1.88812 -10.626266,3.77623 -15.939399,5.66435 m 24.770069,25.13504 c -4.927666,1.7096 -9.855332,3.41919 -14.782998,5.12879"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm=".25"
        inkstitch:center_walk_underlay="False"
@@ -4438,7 +4428,6 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
        inkscape:label="Auto-remplissage satin 2"
-       sodipodi:nodetypes="ccccccccccccccccccccccccc"
        inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
@@ -4495,7 +4484,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
     <path
        id="autosatin37-9"
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.999999px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
-       d="m 17.056883,51.423361 c -2.875896,1.170999 -3.878495,3.958995 -2.944896,6.946991 l 7.67969,24.563969 c 0.933699,2.989997 3.572696,4.887994 6.561792,3.952995 M 18.217782,51.114361 c 2.932796,-0.758999 5.068293,0.665 6.714591,3.872996 l 7.681591,24.563969 c 0.934898,2.988996 -0.0336,5.936992 -3.022197,6.871991"
+       d="m 17.056883,51.423361 c -2.875896,1.170999 -3.878495,3.958995 -2.944896,6.946991 l 7.67969,24.563969 c 0.933699,2.989997 3.572696,4.887994 6.561792,3.952995 M 18.217782,51.114361 c 2.932796,-0.758999 5.068293,0.665 6.714591,3.872996 l 7.681591,24.563969 c 0.934898,2.988996 -0.0336,5.936992 -3.022197,6.871991 M 15.403274,74.449157 31.769252,69.314732 v 0"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
@@ -4515,7 +4504,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
     <path
        id="autosatin39-4"
        style="fill:none;stroke:#000000;stroke-width:0.999999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 49.660242,145.10624 1.069599,-0.233 0.989699,0.056 0.906598,0.31 0.819899,0.531 0.729899,0.718 0.6365,0.872 0.978698,2.068 18.587023,53.02128 m -26.065513,-56.87028 -1.009499,0.501 -0.810999,0.712 -0.616299,0.882 -0.4258,1.013 -0.239099,1.104 -0.0566,1.156 0.122,1.16599 0.296599,1.138 18.309723,53.11828 m -2.39309,-59.07373 -20.623102,7.71578"
+       d="m 49.660242,145.10624 c 1.932226,-0.73726 4.017323,0.37835 5.017512,2.06949 1.643394,2.97142 2.430294,6.32387 3.647577,9.48155 5.350942,15.26408 10.701884,30.52816 16.052826,45.79224 M 48.312644,145.57924 c -2.793113,1.00246 -3.656174,4.45988 -2.893185,7.08308 2.504167,7.59968 5.202391,15.14073 7.781266,22.71783 3.560648,10.32979 7.121297,20.65957 10.681945,30.98936 m -2.39309,-59.07373 c -6.874367,2.57193 -13.748735,5.14385 -20.623102,7.71578"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="False"
@@ -4524,7 +4513,6 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
-       sodipodi:nodetypes="ccccccccccccccccccccc"
        inkscape:label="Auto-remplissage satin 1"
        inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
@@ -4539,7 +4527,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
     <path
        id="autosatin42-1"
        style="fill:none;stroke:#000000;stroke-width:0.999999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 75.595809,225.61214 -0.928798,0.092 -0.952999,-0.083 -0.947199,-0.252 -0.911599,-0.417 -0.846099,-0.578 -0.750699,-0.735 -0.625399,-0.88799 -0.470299,-1.037 -5.280048,-15.34464 m 13.626837,18.25163 0.766999,-0.495 0.648299,-0.633 0.5185,-0.75199 0.378099,-0.856 0.2268,-0.941 0.0647,-1.01 -0.1083,-1.062 -0.2921,-1.097 -5.334347,-15.32563 m 9.280333,13.85318 -17.714376,6.61242"
+       d="m 75.595809,225.61214 c -1.503674,0.25749 -3.092704,-0.13762 -4.311979,-1.05033 -0.930161,-0.65619 -1.630686,-1.61105 -2.040551,-2.67003 -1.357411,-3.81294 -2.640654,-7.65539 -3.969563,-11.47967 -0.463682,-1.34754 -0.927364,-2.69507 -1.391046,-4.0426 m 13.626837,18.25163 c 1.02448,-0.55644 1.839393,-1.47197 2.238807,-2.57052 0.504595,-1.3272 0.430082,-2.81348 -0.0027,-4.1511 -1.770745,-5.1556 -3.581407,-10.29913 -5.367463,-15.45 m 9.280333,13.85318 c -5.904792,2.20414 -11.809584,4.40828 -17.714376,6.61242"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="False"
@@ -4548,7 +4536,6 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
-       sodipodi:nodetypes="cccccccccccccccccccccc"
        inkscape:label="Auto-remplissage satin 3"
        inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
@@ -4563,8 +4550,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        id="autosatin40-4"
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.999999px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
        inkscape:label="Auto-remplissage satin 1"
-       d="m 78.514484,206.05428 1.137808,0.004 1.015007,-0.14724 0.901295,-0.28523 0.796695,-0.41314 1.316403,-1.16468 1.007942,-1.54135 2.641468,-7.57247 m -10.702983,10.36554 c -2.539746,-1.69941 -2.967873,-4.74804 -2.282716,-6.89852 l 2.613541,-7.53472 m -8.294931,5.27905 20.461658,8.1224"
-       sodipodi:nodetypes="ccccccccccccc"
+       d="m 78.514484,206.05428 c 1.666737,0.11058 3.476125,-0.27077 4.649113,-1.53998 0.73262,-0.62371 1.229357,-1.48409 1.654112,-2.33592 0.813817,-2.422 1.679282,-4.8284 2.513393,-7.24421 m -10.702983,10.36554 c -2.426456,-1.54419 -3.192518,-4.93603 -2.071257,-7.50815 0.800694,-2.30836 1.601388,-4.61673 2.402082,-6.92509 m -8.294931,5.27905 c 6.820552,2.70747 13.641106,5.41493 20.461658,8.1224"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
@@ -4586,8 +4572,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        id="autosatin41-9"
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.999999px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
        inkscape:label="Auto-remplissage satin 3"
-       d="m 130.40481,51.014662 -0.98701,-0.234529 -0.9485,0.05281 -0.89757,0.294262 -0.83327,0.491824 -1.42409,1.394756 -1.01424,1.645304 -25.019042,71.856601 -22.322143,64.3506 m 54.989795,-139.374285 0.91545,0.415917 0.77388,0.596703 0.62759,0.744445 0.4756,0.858137 0.31793,0.935779 0.15455,0.980368 -0.0126,0.989928 -0.18534,0.965435 -25.12387,72.277713 -22.560878,64.67756 m 30.941758,-142.141691 21.83865,6.763963"
-       sodipodi:nodetypes="cccccccccccccccccccccc"
+       d="m 130.40481,51.014662 c -3.69074,-1.126041 -6.21148,2.971681 -6.93962,6.042451 C 107.92586,101.64726 92.417742,146.24815 76.958945,190.86629 M 131.94874,51.492005 c 3.51036,1.189288 3.95612,5.704926 2.33757,8.58536 C 118.66965,105.04181 103.02399,149.99611 87.331052,194.93399 M 118.27281,52.792299 c 7.27955,2.254654 14.5591,4.509309 21.83865,6.763963"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
@@ -4696,7 +4681,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
     <path
        id="path1272"
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.999999px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
-       d="m 17.596091,51.939611 c -2.677197,0.797999 -4.010895,3.207996 -3.669896,5.679993 l 5.732393,33.907958 c 0.5222,3.086996 3.798095,5.049993 6.885292,4.527994 M 18.996489,51.589612 c 3.019796,-0.492999 5.645193,1.392998 6.109392,4.140995 l 5.732393,33.907957 c 0.520899,3.086996 -0.391199,4.493994 -2.893996,6.066992"
+       d="m 17.596091,51.939611 c -2.677197,0.797999 -4.010895,3.207996 -3.669896,5.679993 l 5.732393,33.907958 c 0.5222,3.086996 3.798095,5.049993 6.885292,4.527994 M 18.996489,51.589612 c 3.019796,-0.492999 5.645193,1.392998 6.109392,4.140995 l 5.732393,33.907957 c 0.520899,3.086996 -0.391199,4.493994 -2.893996,6.066992 M 15.724175,82.471695 31.638524,79.663035"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="1"
@@ -4705,7 +4690,8 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:zigzag_underlay_inset_mm=".25"
        inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
-       inkstitch:reverse_rails="none" />
+       inkstitch:reverse_rails="none"
+       sodipodi:nodetypes="cccccccccc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.499999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 0.999999;stroke-dashoffset:0;stroke-opacity:1"
        d="m 28.7821,95.2471 -1.756,0.8625 7.76539,48.5339"
@@ -4757,7 +4743,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
     <path
        id="path1274"
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.999999px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
-       d="m 55.2607,207.878 2.2437,-0.086 0.9646,-0.252 0.8586,-0.397 0.7518,-0.549 0.6443,-0.704 0.5358,-0.864 0.4264,-1.03 21.8183,-65.418 0.2659,-1.071 0.022,-0.345 m -30.6221,69.671 -1.1123,-1.361 -0.821,-1.389 -0.4143,-1.62 0.1076,-2.055 21.8184,-65.417 0.6646,-1.243 m -8.979824,73.73028 -17.100895,-6.30937"
+       d="m 55.2607,207.878 c 2.036941,0.0924 4.358599,-0.27691 5.551488,-2.13069 1.373257,-2.35588 1.862917,-5.11231 2.839232,-7.64455 6.636121,-19.95267 13.33979,-39.88573 19.933694,-59.85067 0.07921,-0.36257 0.21575,-0.71388 0.206986,-1.09009 M 53.17,206.833 c -1.480048,-1.5772 -2.685044,-3.64184 -2.268586,-5.87905 0.380154,-2.20027 1.374334,-4.28428 1.994141,-6.43917 6.652689,-19.88688 13.235916,-39.80365 19.932012,-59.67185 0.195144,-0.36497 0.390289,-0.72995 0.585433,-1.09493 m -8.979824,73.73028 c -5.700298,-2.10312 -11.400597,-4.20625 -17.100895,-6.30937"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
@@ -4766,8 +4752,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:zigzag_underlay_inset_mm=".25"
        inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
-       inkstitch:reverse_rails="none"
-       sodipodi:nodetypes="cccccccccccccccccccc" />
+       inkstitch:reverse_rails="none" />
     <path
        d="m 73.054,133.63 6.7896,-2.149"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
@@ -4777,7 +4762,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
     <path
        id="path15240"
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.999999px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
-       d="m 79.0223,131.257 c -2.299206,0.0247 -4.189255,0.73037 -5.6093,2.491 m 7.252,-2.043 c 1.510471,1.21703 3.431286,2.91948 3.127105,5.457"
+       d="m 79.0223,131.257 c -2.299206,0.0247 -4.189255,0.73037 -5.6093,2.491 m 7.252,-2.043 c 1.510471,1.21703 3.431286,2.91948 3.127105,5.457 m -11.107907,-6.55507 14.440569,5.13442"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
@@ -4797,7 +4782,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
     <path
        id="path1276"
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.999999px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
-       d="m 86.695204,132.19451 c -2.241297,1.533 -2.560597,3.37 -2.669497,6.65699 l 20.221973,64.42692 c 0.935,2.988 6.07325,4.92274 8.53724,2.74825 M 88.487201,131.29851 c 2.968997,-0.606 4.710899,0.956 6.358789,4.164 l 20.22168,64.42691 c 0.11353,1.69633 0.0982,2.9821 -0.47464,4.16468"
+       d="m 86.695204,132.19451 c -2.241297,1.533 -2.560597,3.37 -2.669497,6.65699 l 20.221973,64.42692 c 0.935,2.988 6.07325,4.92274 8.53724,2.74825 M 88.487201,131.29851 c 2.968997,-0.606 4.710899,0.956 6.358789,4.164 l 20.22168,64.42691 c 0.11353,1.69633 0.0982,2.9821 -0.47464,4.16468 m -24.419698,-26.59555 21.500398,-7.38074"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
@@ -5246,7 +5231,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
     <path
        id="path1288"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.999999px;stroke-opacity:1"
-       d="m 66.541,226.955 c -6.538558,-0.40428 -5.57248,-7.29096 -5.517,-12.13 m 6.5273,12.188 c 5.996761,-0.42863 4.644169,-7.91884 4.678,-12.266"
+       d="m 66.541,226.955 c -6.538558,-0.40428 -5.57248,-7.29096 -5.517,-12.13 m 6.5273,12.188 c 5.996761,-0.42863 4.644169,-7.91884 4.678,-12.266 m -14.467023,2.50334 h 17.970486"
        sodipodi:nodetypes="cccc"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
@@ -6273,7 +6258,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
     <path
        id="path1458"
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.999997px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
-       d="m 18.988908,226.57482 c -3.131566,0.0119 -4.802064,-2.01768 -4.813764,-5.11844 l -0.0371,-9.88641 c 2.779367,0.10593 5.225764,-1.79987 5.775363,-4.49968 1.621298,-7.98457 3.462796,-15.43948 5.466793,-22.32017 m -4.715794,41.9039 c 3.130796,-0.0119 4.861594,-2.13846 4.850594,-5.23823 l -0.052,-14.13661 -0.0828,-22.52906 m -14.933151,29.32957 h 17.920147"
+       d="m 18.988908,226.57482 c -3.131566,0.0119 -4.802064,-2.01768 -4.813764,-5.11844 l -0.0371,-9.88641 c 2.779367,0.10593 5.225764,-1.79987 5.775363,-4.49968 1.621298,-7.98457 2.820993,-12.71182 4.82499,-19.59251 m -4.073991,39.17624 c 3.130796,-0.0119 4.861594,-2.13846 4.850594,-5.23823 l -0.052,-14.13661 -0.0828,-22.52906 m -14.933151,29.32957 h 17.920147"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
@@ -6292,7 +6277,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
     <path
        id="path555"
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.999997px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
-       d="m 18.779608,51.978553 c -3.131566,0.0297 -4.847063,2.489919 -4.815364,5.589695 l 0.25,22.581532 c 0.0309,3.099774 1.637498,5.03528 4.769064,5.320408 m 1.870798,-33.491635 c 3.131596,-0.03168 4.419094,2.377056 4.449894,5.477822 l 0.25,22.580542 c 0.0317,3.100764 -1.763598,5.481782 -4.895094,5.511483"
+       d="m 18.779608,51.978553 c -3.131566,0.0297 -4.847063,2.489919 -4.815364,5.589695 l 0.25,22.581532 c 0.0309,3.099774 1.637498,5.03528 4.769064,5.320408 m 1.870798,-33.491635 c 3.131596,-0.03168 4.419094,2.377056 4.449894,5.477822 l 0.25,22.580542 c 0.0317,3.100764 -1.763598,5.481782 -4.895094,5.511483 M 10.4293,71.881944 h 17.328683"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
@@ -6351,7 +6336,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
     <path
        id="autosatin54"
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.999997px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
-       d="m 103.4664,227.25398 -1.104,-0.15048 -1.035,-0.35542 -0.94099,-0.54155 -0.819703,-0.70787 -0.6726,-0.85638 -0.499299,-0.98606 -0.2998,-1.09696 -2.163197,-12.06644 -0.569499,-2.75822 m 10.358088,19.15109 0.9959,-0.49402 0.865,-0.66629 0.715,-0.81084 0.54699,-0.93161 0.359,-1.02468 0.152,-1.092 -0.072,-1.13457 -2.20599,-12.33376 -0.658,-3.20274 m -8.333192,17.36507 11.207182,-1.83055"
+       d="m 103.4664,227.25398 c -2.40017,-0.0995 -4.676559,-1.828 -5.234091,-4.19315 -0.526902,-2.33296 -0.859545,-4.70556 -1.313743,-7.0536 -0.488439,-2.76306 -0.965562,-5.52908 -1.556254,-8.27263 m 10.358088,19.15109 c 2.16619,-0.83235 3.73197,-3.0638 3.61435,-5.40317 -0.18673,-2.06093 -0.69951,-4.07583 -1.01585,-6.11876 -0.59848,-3.39606 -1.1848,-6.79476 -1.9006,-10.16858 m -8.333192,17.36507 c 3.735732,-0.61018 7.471452,-1.22037 11.207182,-1.83055"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
@@ -6360,7 +6345,6 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm=".25"
        inkscape:label="Auto-remplissage satin 3"
-       sodipodi:nodetypes="cccccccccccccccccccccc"
        inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
@@ -6407,7 +6391,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
     <path
        id="path7042"
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.999999px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
-       d="m 24.181772,227.26542 c 3.130796,-0.02 5.070093,-2.549 5.050293,-5.67999 -0.0264,-4.222 -0.0293,-7.96099 -0.022,-11.48999 m -6.573191,17.11898 c -3.131596,0.02 -4.723694,-2.427 -4.742694,-5.55899 -0.0261,-4.168 -0.0296,-7.86399 -0.0229,-11.34399"
+       d="m 24.181772,227.26542 c 3.130796,-0.02 5.070093,-2.549 5.050293,-5.67999 -0.0264,-4.222 -0.0293,-7.96099 -0.022,-11.48999 m -6.573191,17.11898 c -3.131596,0.02 -4.723694,-2.427 -4.742694,-5.55899 -0.0261,-4.168 -0.0296,-7.86399 -0.0229,-11.34399 m -3.27026,2.28583 h 17.328683"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
@@ -6426,7 +6410,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
     <path
        id="path7026"
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.999999px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
-       d="m 24.526971,89.755593 c 3.264096,-0.007 5.184894,2.577997 5.296894,5.839993 l 0.0273,0.784999 c 0.113899,3.336996 -1.840198,6.134995 -5.177494,6.249995 M 23.269973,89.734593 c -3.337296,0.114 -5.645993,2.937997 -5.532093,6.274992 l 0.0254,0.784999 c 0.1148,3.337996 2.128797,5.925996 5.466893,5.810996"
+       d="m 24.526971,89.755593 c 3.264096,-0.007 5.184894,2.577997 5.296894,5.839993 l 0.0273,0.784999 c 0.113899,3.336996 -1.840198,6.134995 -5.177494,6.249995 M 23.269973,89.734593 c -3.337296,0.114 -5.645993,2.937997 -5.532093,6.274992 l 0.0254,0.784999 c 0.1148,3.337996 2.128797,5.925996 5.466893,5.810996 M 14.60102,97.072715 h 17.649584"
        inkstitch:satin_column="True"
        sodipodi:nodetypes="cccccccc"
        inkstitch:zigzag_spacing_mm="0.3"
@@ -6438,15 +6422,16 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
-       d="m 22.8523,102.599 0.1172,19.531"
+       d="M 23.579963,102.599 22.9695,122.13"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
        inkstitch:running_stitch_length_mm="4.0"
        inkstitch:running_stitch_tolerance_mm="0.5"
-       id="path171" />
+       id="path171"
+       sodipodi:nodetypes="cc" />
     <path
        id="path7018"
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.999999px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
-       d="m 23.691072,122.14255 c 3.180696,0.285 4.923194,2.477 4.943294,5.607 l 0.0703,7.45499 c 0.0198,3.13099 -1.591398,5.10299 -4.646994,5.55299 m -1.809698,-18.64098 c -2.403697,0.056 -4.971294,2.574 -4.951494,5.705 l 0.0703,7.45299 c 0.019,3.13099 1.407299,5.24799 4.614094,5.50799"
+       d="m 23.691072,122.14255 c 3.180696,0.285 4.923194,2.477 4.943294,5.607 l 0.0703,7.45499 c 0.0198,3.13099 -1.591398,5.10299 -4.646994,5.55299 m -1.809698,-18.64098 c -2.403697,0.056 -4.971294,2.574 -4.951494,5.705 l 0.0703,7.45299 c 0.019,3.13099 1.407299,5.24799 4.614094,5.50799 m -7.700756,-7.60839 h 17.328683"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
@@ -6467,7 +6452,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
     <path
        id="path7024"
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.999999px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
-       d="m 22.250974,181.69448 c -2.522997,0.071 -4.360994,2.65099 -4.341194,5.78199 0.0683,10.93499 -0.0208,13.62798 -0.0385,22.83497 m 5.949892,-28.56596 c 3.131596,-0.02 5.407493,2.52899 5.426493,5.65999 0.0684,10.93999 -0.0186,13.62298 -0.0376,22.68997"
+       d="m 22.250974,181.69448 c -2.522997,0.071 -4.360994,2.65099 -4.341194,5.78199 0.0683,10.93499 -0.0208,13.62798 -0.0385,22.83497 m 5.949892,-28.56596 c 3.131596,-0.02 5.407493,2.52899 5.426493,5.65999 0.0684,10.93999 -0.0186,13.62298 -0.0376,22.68997 m -14.448594,-4.07665 h 16.84733"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
@@ -6543,7 +6528,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
     <path
        id="path7026-1"
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.999999px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
-       d="m 24.443903,89.058453 c 3.264096,-0.007 5.210193,2.552997 5.322193,5.814997 l 0.0273,0.78499 c 0.1139,3.337 -1.992198,6.161 -5.329393,6.275 M 23.186804,89.087453 c -3.337196,0.115 -5.620593,2.862997 -5.506693,6.199997 l 0.0254,0.78499 c 0.1148,3.338 2.204797,5.951 5.542793,5.836"
+       d="m 24.443903,89.058453 c 3.264096,-0.007 5.210193,2.552997 5.322193,5.814997 l 0.0273,0.78499 c 0.1139,3.337 -1.992198,6.161 -5.329393,6.275 M 23.186804,89.087453 c -3.337196,0.115 -5.620593,2.862997 -5.506693,6.199997 l 0.0254,0.78499 c 0.1148,3.338 2.204797,5.951 5.542793,5.836 m -8.807735,-6.279782 h 18.77274"
        inkstitch:satin_column="True"
        sodipodi:nodetypes="cccccccc"
        inkstitch:zigzag_spacing_mm="0.3"
@@ -6555,15 +6540,16 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
-       d="m 22.8704,101.901 -0.0726,19.506"
+       d="M 23.672654,101.901 22.7978,121.407"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
        inkstitch:running_stitch_length_mm="4.0"
        inkstitch:running_stitch_tolerance_mm="0.5"
-       id="path172" />
+       id="path172"
+       sodipodi:nodetypes="cc" />
     <path
        id="path7018-7"
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.999999px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
-       d="m 23.481304,121.36941 c 3.130096,-0.019 5.075194,2.528 5.095293,5.658 l 0.0703,19.15393 c 0.0198,3.13199 -2.503196,5.68699 -5.634693,5.70599 m -0.897898,-30.44192 c -2.834297,0.005 -4.895394,2.523 -4.875594,5.654 l 0.0703,19.15293 c 0.019,3.13099 2.572296,5.65299 5.703192,5.63499"
+       d="m 23.481304,121.36941 c 3.130096,-0.019 5.075194,2.528 5.095293,5.658 l 0.0703,19.15393 c 0.0198,3.13199 -2.503196,5.68699 -5.634693,5.70599 m -0.897898,-30.44192 c -2.834297,0.005 -4.895394,2.523 -4.875594,5.654 l 0.0703,19.15293 c 0.019,3.13099 2.572296,5.65299 5.703192,5.63499 m -8.250733,-7.00029 h 16.365978"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="1"
@@ -6584,7 +6570,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
     <path
        id="path7024-8"
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.999999px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
-       d="m 22.218505,186.449 c -2.193697,0.021 -4.386294,2.57499 -4.366494,5.70599 0.0683,10.93499 -0.0208,8.22732 -0.0385,17.43431 m 5.949893,-23.1403 c 3.131596,-0.019 5.407493,2.50399 5.426493,5.63499 0.0684,10.93999 -0.0186,8.22232 -0.0376,17.28931"
+       d="m 22.218505,186.449 c -2.193697,0.021 -4.386294,2.57499 -4.366494,5.70599 0.0683,10.93499 -0.0208,8.22732 -0.0385,17.43431 m 5.949893,-23.1403 c 3.131596,-0.019 5.407493,2.50399 5.426493,5.63499 0.0684,10.93999 -0.0186,8.22232 -0.0376,17.28931 m -14.069925,-2.23136 h 17.007782"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
@@ -6642,7 +6628,6 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:ties="3"
        inkstitch:bean_stitch_repeats="0" />
     <path
-       sodipodi:nodetypes="cssccssccccccc"
        inkstitch:contour_underlay="False"
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay_inset_mm="0.1"
@@ -6651,7 +6636,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:satin_column="True"
-       d="m 18.218719,227.3005 -1.389099,-0.094 -1.173358,-0.281 -0.967199,-0.469 -0.770299,-0.656 -0.582799,-0.844 -0.4047,-1.031 -0.235899,-1.21899 -0.0766,-1.406 v -51.65694 m 6.399952,57.65693 1.389098,-0.094 1.173398,-0.281 0.967199,-0.469 0.770299,-0.656 0.582799,-0.844 0.4047,-1.031 0.2359,-1.21899 0.0766,-1.406 v -51.48594 m -14.9999419,0.736 17.4999379,0.25 m -16.749938,50.49994 15.49994,0.25 m -7.79979,5.74299 h 1.099598"
+       d="m 18.218719,227.3005 c -1.899214,0.0201 -4.07124,-0.59662 -4.927139,-2.45707 -1.056336,-2.41339 -0.549263,-5.11872 -0.672814,-7.67296 0,-15.8423 0,-31.6846 0,-47.5269 m 6.399952,57.65693 c 1.899225,0.0201 4.071274,-0.5966 4.927178,-2.45707 1.056337,-2.41339 0.549264,-5.11872 0.672815,-7.67296 0,-15.7853 0,-31.5706 0,-47.3559 m -14.9999419,0.736 c 5.8333129,0.0833 11.6666249,0.16667 17.4999379,0.25 m -16.749938,50.49994 c 5.166647,0.0833 10.333293,0.16667 15.49994,0.25 m -7.79979,5.74299 c 0.366533,0 0.733065,0 1.099598,0"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.999999px;stroke-opacity:1"
        id="path5687"
        inkstitch:max_stitch_length_mm="7"
@@ -6690,7 +6675,6 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:ties="3"
        inkstitch:bean_stitch_repeats="1" />
     <path
-       sodipodi:nodetypes="ccssccsscccccccccccc"
        inkstitch:contour_underlay="False"
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay_inset_mm="0.1"
@@ -6699,7 +6683,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:satin_column="True"
-       d="m 18.218719,121.05063 -2.562457,0.219 -0.967199,0.308 -0.770299,0.473 -0.582799,0.66 -0.4047,0.871 -0.235899,1.106 -0.0766,1.363 v 43.59294 m 6.399952,-48.59294 2.562496,0.219 0.967199,0.308 0.770299,0.473 0.582799,0.66 0.4047,0.871 0.2359,1.106 0.0766,1.363 v 43.76394 m 4.249994,-35.26395 -18.749936,-0.25"
+       d="m 18.218719,121.05063 c -1.59804,0.17859 -3.535239,-0.002 -4.648876,1.39514 -1.196056,1.5123 -0.893363,3.58917 -0.951077,5.39715 0,13.93355 0,27.8671 0,41.80065 m 6.399952,-48.59294 c 1.598052,0.1786 3.535268,-0.002 4.648915,1.39514 1.196056,1.5123 0.893365,3.58917 0.951078,5.39715 0,13.99055 0,27.9811 0,41.97165 m 4.249994,-35.26395 c -6.249979,-0.0833 -12.499957,-0.16667 -18.749936,-0.25"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.999999px;stroke-opacity:1"
        id="path1926"
        inkstitch:max_stitch_length_mm="7"
@@ -6722,10 +6706,9 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:satin_column="True"
-       sodipodi:nodetypes="cccccccccc"
        id="path5685-5-6"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.999999px;stroke-opacity:1"
-       d="m 84.8191,130.499 0.4807,1.046 0.2713,0.936 0.0648,0.849 -0.139,0.783 -0.3399,0.74 -0.5381,0.719 -1.6593,1.461 -48.7781,33.361 -0.9568,0.575 -1.0264,0.43 -1.0696,0.264 -0.4405,0.03 m 53.5734,-42.157 -0.8863,-0.908 -0.9761,-0.628 -1.0394,-0.372 -1.0761,-0.137 -1.0861,0.074 -1.0696,0.264 -1.0265,0.431 -0.9568,0.574 -48.7781,33.36 -1.6593,1.462 -0.1685,0.225 m 22.2335,-19.557 8.8864,12.808"
+       d="m 84.8191,130.499 c 0.88984,1.50884 1.229235,3.60093 -0.117019,4.96186 -2.445789,2.39019 -5.512621,4.01466 -8.259993,6.02969 -14.221838,9.70518 -28.405126,19.47045 -42.651046,29.1381 -0.926952,0.58495 -2.005839,0.98954 -3.102842,1.06435 m 53.5734,-42.157 c -1.559115,-2.08645 -4.567221,-2.57205 -6.833634,-1.41307 -2.855796,1.58641 -5.435003,3.64572 -8.176854,5.42569 -13.995675,9.58681 -28.021781,19.13451 -41.998444,28.74576 -0.558839,0.53857 -1.225415,0.984 -1.713868,1.58662 m 22.2335,-19.557 c 2.962133,4.26933 5.924267,8.53867 8.8864,12.808"
        inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
@@ -6746,11 +6729,11 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        id="path2691"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.999999px;stroke-opacity:1"
-       d="m 25.5072,168.728 c -0.779146,-1.54274 -1.330659,-3.2217 0.0316,-4.847 m 0.5259,5.81 c 1.212239,1.47473 2.777815,2.0431 4.6235,2.00205"
+       d="m 25.5072,168.728 c -0.779146,-1.54274 -1.330659,-3.2217 0.0316,-4.847 m 0.5259,5.81 c 1.212239,1.47473 2.777815,2.0431 4.6235,2.00205 m -6.408653,-8.20321 6.807349,9.98411"
        inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none"
-       sodipodi:nodetypes="cccc" />
+       sodipodi:nodetypes="cccccc" />
     <path
        d="m 30.8962,172.009 -4.1204,1.841"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
@@ -6766,12 +6749,13 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:satin_column="True"
-       d="m 27.007602,173.55157 1.085499,-0.847 1.141198,-0.533 1.171499,-0.247 1.176698,0.01 1.156499,0.239 1.110998,0.44 1.040399,0.613 0.944299,0.757 17.056778,15.42298 m -26.623966,-14.90198 -0.669699,1.054 -0.4286,0.96599 -0.193799,0.903 0.0347,0.862 0.257099,0.845 0.4732,0.852 1.569598,1.813 17.847477,16.13898 m -18.027377,-24.50397 -0.959899,1.209"
+       d="m 27.007602,173.55157 c 0.859026,-0.74329 1.850657,-1.38533 2.997056,-1.54242 1.783742,-0.33753 3.633761,0.31188 5.070018,1.36515 2.13337,1.7581 4.118593,3.69016 6.190905,5.51996 3.875296,3.5041 7.750592,7.00819 11.625888,10.51229 M 26.267503,174.50457 c -0.826317,1.19315 -1.625664,2.68145 -1.142813,4.16159 0.334111,1.30222 1.422813,2.18509 2.243707,3.1862 l 17.789082,16.08618 m 6.507668,-13.58061 -11.552455,13.79877"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.999999px;stroke-opacity:1"
        id="path5685-5"
        inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
-       inkstitch:reverse_rails="none" />
+       inkstitch:reverse_rails="none"
+       sodipodi:nodetypes="ccccccccccc" />
     <path
        inkstitch:bean_stitch_repeats="0"
        inkstitch:ties="3"
@@ -6790,10 +6774,9 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:satin_column="True"
-       d="m 83.684431,225.2265 -1.085599,0.846 -1.141099,0.533 -1.171598,0.248 -1.176699,-0.01 -1.156498,-0.239 -1.110999,-0.44 -1.040298,-0.613 -0.944399,-0.758 -29.699763,-26.85496 m 39.267051,26.33396 0.669599,-1.05299 0.428599,-0.967 0.1938,-0.903 -0.0347,-0.862 -0.2571,-0.845 -0.473099,-0.851 -1.569698,-1.814 -30.490462,-27.57096 m -6.263492,14.58698 11.425486,-12.46698"
+       d="m 83.684431,225.2265 c -1.401038,1.33891 -3.456193,1.98268 -5.348377,1.45717 -2.700542,-0.60534 -4.456184,-2.92805 -6.491335,-4.61414 -8.895747,-8.04366 -17.791493,-16.08733 -26.68724,-24.13099 M 84.42453,224.2725 c 1.002816,-1.35419 1.788154,-3.21991 0.890563,-4.8272 -1.251395,-2.15778 -3.325652,-3.65239 -5.112993,-5.34315 -9.103544,-8.23187 -18.207087,-16.46373 -27.310631,-24.6956 m -6.263492,14.58698 c 3.808495,-4.15566 7.616991,-8.31132 11.425486,-12.46698"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.999999px;stroke-opacity:1"
        id="path3465"
-       sodipodi:nodetypes="ccccccccccccccccccccc"
        inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
@@ -7114,7 +7097,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
     <path
        id="autosatin41"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.999999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 90.506416,161.97941 c 3.233748,0.0781 4.651442,2.35378 5.198693,5.266 2.854024,17.96184 4.880381,36.05101 4.685391,54.48193 l -0.0679,1.20899 -0.2041,1.074 -0.3399,0.937 -0.3124,0.525 m -11.396581,-63.24592 -0.992599,0.289 -0.817699,0.43 -0.646299,0.578 -0.4778,0.73 -0.312599,0.888 -0.0688,1.904 c 4.096319,18.23815 4.586872,36.61771 4.636494,55.21293 l 0.235,2.07499 0.310899,1.015 0.2182,0.405 m -7.91269,-35.69695 H 102.9356"
+       d="m 90.506416,161.97941 c 2.907756,-0.12574 4.901151,2.60478 5.198693,5.266 2.893194,18.36631 5.026691,36.9449 4.624611,55.5642 -0.11527,0.9295 -0.334947,1.87412 -0.86352,2.66272 M 88.069619,162.22641 c -1.80135,0.26945 -3.42427,1.82564 -3.276354,3.72746 -0.154125,2.11644 0.794376,4.13433 1.020182,6.22481 3.176437,16.62619 3.483241,33.61454 3.622614,50.48357 0.119072,1.05348 0.162242,2.15628 0.718355,3.09108 m -7.91269,-35.69695 c 6.897958,0 13.795916,0 20.693874,0"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
@@ -7122,7 +7105,6 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 6"
-       sodipodi:nodetypes="cccccccccccccccccccc"
        inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
@@ -7135,7 +7117,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
     <path
        id="autosatin42"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.999999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 93.594412,227.72733 c -1.529133,-0.062 -2.645559,-0.72263 -3.439992,-1.97396 m 5.885793,1.842 c 2.393111,-0.48779 3.222648,-1.73768 3.425996,-2.123"
+       d="m 93.594412,227.72733 c -1.529133,-0.062 -2.645559,-0.72263 -3.439992,-1.97396 m 5.885793,1.842 c 2.393111,-0.48779 3.222648,-1.73768 3.425996,-2.123 m -10.496258,0.76321 c 0.481353,0 11.873359,0 11.873359,0"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
@@ -7420,7 +7402,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
     <path
        id="autosatin26"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.999999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 9.6258983,181.80726 H 28.595574 M 26.074677,151.4673 c 2.999996,1.99999 3.999995,3.99999 1.999998,6.99999 -2.999996,5.99999 -3.999995,12.99998 -3.999995,19.99997 0.999999,20.99998 18.375177,36.87396 39.375154,36.87396 4.48769,0.113 8.96738,0.42799 13.47368,0.68199 l 4.71209,0.215 1.9731,0.031 1.0827,0.191 1.0544,0.341 0.9574,0.515 0.7908,0.713 0.5562,0.935 0.25139,1.182 M 23.074681,150.4673 c -1.999997,0 -3.999995,1 -4.999994,2.99999 -3.999995,7.99999 -4.999993,15.99998 -4.999993,24.99997 0.999998,26.99997 23.999969,48.99994 50.99994,48.99994 h 3.99999 l 8.71509,0.001 4.07559,-0.395 2.1841,-0.302 2.4864,-0.75 1.1197,-0.57 0.9094,-0.718 0.6043,-0.877 0.20439,-1.04699 m -25.29186,-10.76399 -0.2966,18.10598 m -49.661452,-76.28734 17.498243,7.08981"
+       d="m 9.6258983,181.80726 c 6.3232257,0 12.6464507,0 18.9696757,0 M 26.074677,151.4673 c 4.164007,1.81697 3.062569,6.33546 0.966796,9.29491 -4.050952,10.72489 -4.208556,23.28942 1.265866,33.56208 6.527881,12.90403 20.745237,21.19423 35.142495,21.01693 6.94152,0.26626 13.897483,0.69612 20.825003,1.0455 1.97466,0.30072 3.905125,1.60329 4.026757,3.75949 M 23.074681,150.4673 c -5.71032,0.17295 -6.59037,7.05801 -8.142751,11.2906 -3.161172,12.36115 -2.471653,25.96864 3.529763,37.3887 8.625914,17.30551 27.559077,28.98201 46.965778,28.3206 6.233309,-0.14129 12.59828,0.5117 18.701263,-1.02157 1.835105,-0.4646 4.135645,-1.44658 4.24486,-3.63642 m -25.29186,-10.76399 c -0.09887,6.03533 -0.197733,12.07065 -0.2966,18.10598 M 13.123682,153.86386 c 5.832748,2.36327 11.665495,4.72654 17.498243,7.08981"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
@@ -7461,7 +7443,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
     <path
        id="autosatin28"
        style="fill:none;stroke:#000000;stroke-width:0.999999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 102.12024,132.73532 c -0.12147,4.42174 -4.508778,3.62541 -7.204541,3.65996 m 7.096891,-5.79398 c 0.18508,-6.10164 -3.329005,-4.9415 -7.447869,-5.21063"
+       d="m 102.12024,132.73532 c -0.12147,4.42174 -4.508778,3.62541 -7.204541,3.65996 m 7.096891,-5.79398 c 0.18508,-6.10164 -3.329005,-4.9415 -7.447869,-5.21063 m 1.418908,-3.3122 v 17.4722"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
@@ -7503,7 +7485,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
     <path
        id="autosatin30"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.999999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 93.124607,291.33512 -1.0196,-0.258 -0.8836,-0.394 -0.7477,-0.529 -0.6117,-0.666 -0.4758,-0.801 -0.3398,-0.937 -0.2039,-1.07399 -0.068,-1.209 v -57.99993 -3.328 m 6.79589,67.32792 1.0253,-0.132 0.8743,-0.299 0.7276,-0.471 0.584896,-0.648 0.446,-0.829 0.311,-1.015 0.235,-2.60599 0.319997,-48.31594 0.001,-12.89199 m 4.19261,5.43924 -19.919529,0.29466"
+       d="m 93.124607,291.33512 c -2.128459,-0.27469 -3.936078,-1.98701 -4.183685,-4.14062 -0.350556,-2.95823 -0.0821,-5.96152 -0.166415,-8.93802 0,-18.03909 0,-36.07819 0,-54.11728 m 6.79589,67.32792 c 1.816575,0.0167 3.526708,-1.23502 3.865197,-3.05491 0.599576,-3.48267 0.266878,-7.05629 0.389463,-10.57972 0.09322,-17.8577 0.303553,-35.71522 0.270433,-53.57329 m 4.19261,5.43924 c -6.639843,0.0982 -13.279686,0.19644 -19.919529,0.29466"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
@@ -7512,7 +7494,6 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 10"
-       sodipodi:nodetypes="ccccccccccccccccccccccc"
        inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
@@ -7548,7 +7529,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
     <path
        id="autosatin43"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.999999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 20.545274,226.45622 c 3.653187,-0.63081 4.264475,-3.74227 4.348196,-6.94699 m -6.793991,7.07899 c -3.211045,-0.25834 -4.306646,-2.18498 -4.193334,-6.88099"
+       d="m 20.545274,226.45622 c 3.653187,-0.63081 4.264475,-3.74227 4.348196,-6.94699 m -6.793991,7.07899 c -3.211045,-0.25834 -4.306646,-2.18498 -4.193334,-6.88099 m -3.468209,2.43928 h 16.110727"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
@@ -8009,7 +7990,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
     <path
        id="autosatin69"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.999999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 94.238389,227.43251 c -2.410773,-0.11972 -4.05498,-1.41325 -4.904194,-3.56 m 5.686293,3.587 c 3.281376,-0.0663 4.298937,-1.3385 4.783199,-3.404"
+       d="m 94.238389,227.43251 c -2.410773,-0.11972 -4.05498,-1.41325 -4.904194,-3.56 m 5.686293,3.587 c 3.281376,-0.0663 4.298937,-1.3385 4.783199,-3.404 m -11.308143,1.26776 H 101.2026"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
@@ -8020,7 +8001,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none"
-       sodipodi:nodetypes="cccc" />
+       sodipodi:nodetypes="cccccc" />
     <path
        style="display:inline;fill:none;stroke:#008000;stroke-width:0.499999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 0.999999;stroke-dashoffset:0;stroke-opacity:1"
        d="m 25.977575,158.5266 c 5.202394,-20.58698 24.482469,-20.96698 27.018866,-21.96198 1.449198,-0.568 2.596797,-0.401 3.768795,-0.174 0.2613,0.051 -2.279197,-0.216 -2.585996,0.31 1.556098,0.266 2.541896,0.582 2.541896,0.582 l -3.772895,-0.156 c -2.437697,0.844 -21.321973,2.458 -26.480967,21.51898"
@@ -8058,7 +8039,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:ties="3" />
     <path
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.999999px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
-       d="m 14.252265,125.66124 c -2.923997,1.121 -3.444396,3.83599 -2.322798,6.75999 2.138199,5.57199 3.381397,9.04299 5.525794,14.61098 1.124899,2.923 3.276896,4.75599 6.199013,3.631 m -7.520211,-25.75397 c 2.966596,-0.773 4.586094,0.311 6.381412,3.44999 2.136297,5.567 3.376796,9.03399 5.519793,14.59899 1.125499,2.92199 0.798699,5.63799 -2.122797,6.76399"
+       d="m 14.252265,125.66124 c -2.923997,1.121 -3.444396,3.83599 -2.322798,6.75999 2.138199,5.57199 3.381397,9.04299 5.525794,14.61098 1.124899,2.923 3.276896,4.75599 6.199013,3.631 m -7.520211,-25.75397 c 2.966596,-0.773 4.586094,0.311 6.381412,3.44999 2.136297,5.567 3.376796,9.03399 5.519793,14.59899 1.125499,2.92199 0.798699,5.63799 -2.122797,6.76399 m -14.680917,-6.60012 18.612289,-7.70164"
        id="path5548"
        sodipodi:nodetypes="cccccccc"
        inkstitch:satin_column="True"
@@ -8079,7 +8060,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:ties="3" />
     <path
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.999999px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
-       d="m 39.692353,191.28916 c -2.921296,1.12799 -3.245696,3.84599 -2.116997,6.76699 1.922498,4.97499 1.644598,5.34899 3.565396,10.32398 1.127298,2.921 3.982334,4.26834 6.90343,3.14134 M 42.13875,190.15916 c 2.964997,-0.781 4.210295,0.674 6.012793,3.80899 1.922597,4.976 1.645898,5.35099 3.567295,10.32799 1.128499,2.92199 0.52742,5.565 -2.394677,6.692"
+       d="m 39.692353,191.28916 c -2.921296,1.12799 -3.245696,3.84599 -2.116997,6.76699 1.922498,4.97499 1.644598,5.34899 3.565396,10.32398 1.127298,2.921 3.982334,4.26834 6.90343,3.14134 M 42.13875,190.15916 c 2.964997,-0.781 4.210295,0.674 6.012793,3.80899 1.922597,4.976 1.645898,5.35099 3.567295,10.32799 1.128499,2.92199 0.52742,5.565 -2.394677,6.692 m -12.564473,-3.93126 16.224183,-6.69389"
        id="path5556"
        sodipodi:nodetypes="cccccccc"
        inkstitch:satin_column="True"
@@ -8178,7 +8159,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:ties="3" />
     <path
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.999999px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
-       d="m 20.540776,124.31047 c 3.094096,-0.023 4.749894,2.347 4.824094,5.43999 0.1323,5.51 -0.257599,4.356 -0.279299,9.14099 -0.0136,3.132 -1.771998,5.65899 -4.950194,5.64499 m -0.851999,-20.31897 c -3.609125,0.038 -5.233423,2.175 -5.254423,5.80399 0.116399,4.85 -0.259,3.482 -0.2832,8.81899 -0.0144,3.132 1.581598,5.30899 4.759724,5.69599"
+       d="m 20.540776,124.31047 c 3.094096,-0.023 4.749894,2.347 4.824094,5.43999 0.1323,5.51 -0.257599,4.356 -0.279299,9.14099 -0.0136,3.132 -1.771998,5.65899 -4.950194,5.64499 m -0.851999,-20.31897 c -3.609125,0.038 -5.233423,2.175 -5.254423,5.80399 0.116399,4.85 -0.259,3.482 -0.2832,8.81899 -0.0144,3.132 1.581598,5.30899 4.759724,5.69599 M 9.9479476,135.09955 H 28.239335"
        id="path10268"
        sodipodi:nodetypes="cccccccc"
        inkstitch:satin_column="True"
@@ -9187,7 +9168,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
     <path
        id="path4875"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.999999px;stroke-opacity:1"
-       d="m 82.130877,157.87127 v 31.16596 m 10.999986,-30.95096 v 31.04996"
+       d="m 82.130877,157.87127 v 31.16596 m 10.999986,-30.95096 v 31.04996 m -16.114494,-7.18506 h 20.8586"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
@@ -9277,10 +9258,10 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path79" />
     <path
-       sodipodi:nodetypes="cccccc"
+       sodipodi:nodetypes="cccccccc"
        id="path8307"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.999999px;stroke-opacity:1"
-       d="m 18.497565,139.12407 c -3.370696,0.014 -5.083394,-1.289 -5.032094,-5.01399 v -9.16857 m 6.653492,14.14556 c 3.626695,0.062 5.387793,-1.239 5.346493,-4.97699 v -8.95657"
+       d="m 18.497565,139.12407 c -3.370696,0.014 -5.083394,-1.289 -5.032094,-5.01399 v -9.16857 m 6.653492,14.14556 c 3.626695,0.062 5.387793,-1.239 5.346493,-4.97699 v -8.95657 m -14.233902,1.9235 h 16.68688"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
@@ -10085,7 +10066,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:ties="3" />
     <path
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.999999px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
-       d="m 17.686992,106.21909 c 3.012196,0.854 5.867932,-1.03499 6.721831,-4.04699 3.043296,-10.731988 7.083991,-17.397979 11.626985,-21.345974 4.542995,-3.947995 9.765588,-5.596993 16.767479,-5.612993 10.312487,-0.023 19.392176,7.32499 24.17777,16.964978 4.785594,9.639989 4.776294,20.413979 -1.246099,27.067969 -21.764272,24.04597 -41.489447,43.04894 -46.595641,67.97891 -0.628199,3.067 1.140199,5.78399 3.581396,6.48199 m -16.07702,-87.90489 c -2.804398,-1.13199 -3.997897,-3.71099 -3.143098,-6.723987 3.423398,-12.071985 8.326991,-20.926974 15.097723,-26.809967 6.770591,-5.883992 15.230881,-8.374989 24.179669,-8.394989 15.564081,-0.035 28.046565,10.544987 34.359257,23.261971 6.312792,12.715984 6.956491,28.724962 -2.996096,39.719952 -21.988272,24.29397 -39.75165,42.41894 -43.894445,62.64492 -0.976199,2.99799 -3.902395,5.11399 -6.204492,4.48599"
+       d="m 17.686992,106.21909 c 3.012196,0.854 5.867932,-1.03499 6.721831,-4.04699 3.043296,-10.731988 7.083991,-17.397979 11.626985,-21.345974 4.542995,-3.947995 9.765588,-5.596993 16.767479,-5.612993 10.312487,-0.023 19.392176,7.32499 24.17777,16.964978 4.785594,9.639989 4.776294,20.413979 -1.246099,27.067969 -21.764272,24.04597 -41.489447,43.04894 -46.595641,67.97891 -0.628199,3.067 1.140199,5.78399 3.581396,6.48199 m -16.07702,-87.90489 c -2.804398,-1.13199 -3.997897,-3.71099 -3.143098,-6.723987 3.423398,-12.071985 8.326991,-20.926974 15.097723,-26.809967 6.770591,-5.883992 15.230881,-8.374989 24.179669,-8.394989 15.564081,-0.035 28.046565,10.544987 34.359257,23.261971 6.312792,12.715984 6.956491,28.724962 -2.996096,39.719952 -21.988272,24.29397 -39.75165,42.41894 -43.894445,62.64492 -0.976199,2.99799 -3.902395,5.11399 -6.204492,4.48599 m 17.622936,-58.24463 17.007782,16.04508"
        id="path6859"
        sodipodi:nodetypes="ccssssccccsssscc"
        inkstitch:satin_column="True"
@@ -10101,7 +10082,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
     <path
        id="path6865"
        style="fill:none;stroke:#000000;stroke-width:0.999999px;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stop-color:#000000"
-       d="m 28.988117,224.12694 c -4.107094,0 -6.846431,-3.41699 -6.846431,-7.63299 0,-4.21599 2.542637,-7.63299 6.649732,-7.63299 m 1.376998,15.16799 c 4.107095,0 6.846391,-3.319 6.846391,-7.535 0,-4.21599 -2.739296,-7.63299 -6.846391,-7.63299"
+       d="m 28.988117,224.12694 c -4.107094,0 -6.846431,-3.41699 -6.846431,-7.63299 0,-4.21599 2.542637,-7.63299 6.649732,-7.63299 m 1.376998,15.16799 c 4.107095,0 6.846391,-3.319 6.846391,-7.535 0,-4.21599 -2.739296,-7.63299 -6.846391,-7.63299 m -12.839733,6.78487 H 41.7172"
        sodipodi:nodetypes="csccsc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
@@ -10126,7 +10107,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:ties="3" />
     <path
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.999999px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
-       d="m 23.080333,65.492925 c -2.638997,-0.02 -4.896394,2.402997 -4.916494,5.533993 L 17.37674,192.20677 c -0.0209,3.13099 1.712698,5.48999 4.844294,5.50999 M 24.752531,65.492925 c 2.442997,-0.079 4.670094,2.476997 4.649194,5.607993 L 28.614626,192.28077 c -0.0201,3.13099 -1.688998,5.55399 -4.819894,5.53399"
+       d="m 23.080333,65.492925 c -2.638997,-0.02 -4.896394,2.402997 -4.916494,5.533993 L 17.37674,192.20677 c -0.0209,3.13099 1.712698,5.48999 4.844294,5.50999 M 24.752531,65.492925 c 2.442997,-0.079 4.670094,2.476997 4.649194,5.607993 L 28.614626,192.28077 c -0.0201,3.13099 -1.688998,5.55399 -4.819894,5.53399 M 12.51516,187.4065 h 20.537698"
        id="path8092"
        sodipodi:nodetypes="cccccccc"
        inkstitch:satin_column="True"
@@ -10142,7 +10123,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
     <path
        id="path6865-8"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.999999px;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stop-color:#000000"
-       d="m 23.451532,224.17272 c -4.107194,0 -6.846491,-3.51599 -6.846491,-7.73199 0,-4.21599 2.739397,-7.63299 6.846491,-7.63299 m 1.475399,15.36498 c 4.107094,0 6.551291,-3.51599 6.551291,-7.73199 0,-4.21599 -2.444197,-7.63299 -6.551291,-7.63299"
+       d="m 23.451532,224.17272 c -4.107194,0 -6.846491,-3.51599 -6.846491,-7.73199 0,-4.21599 2.739397,-7.63299 6.846491,-7.63299 m 1.475399,15.36498 c 4.107094,0 6.551291,-3.51599 6.551291,-7.73199 0,-4.21599 -2.444197,-7.63299 -6.551291,-7.63299 m -13.053574,7.4799 h 24.388517"
        sodipodi:nodetypes="csccsc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
@@ -10365,7 +10346,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-é"
-     style="display:inline"
+     style="display:none"
      id="g95">
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1, 1;stroke-dashoffset:0;stroke-opacity:1"
@@ -10981,7 +10962,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
     <path
        id="path153"
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.999999px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
-       d="m 24.181772,227.26542 c 3.130796,-0.02 5.070093,-2.549 5.050293,-5.67999 -0.0264,-4.222 -0.0293,-7.96099 -0.022,-11.48999 m -6.573191,17.11898 c -3.131596,0.02 -4.723694,-2.427 -4.742694,-5.55899 -0.0261,-4.168 -0.0296,-7.86399 -0.0229,-11.34399"
+       d="m 24.181772,227.26542 c 3.130796,-0.02 5.070093,-2.549 5.050293,-5.67999 -0.0264,-4.222 -0.0293,-7.96099 -0.022,-11.48999 m -6.573191,17.11898 c -3.131596,0.02 -4.723694,-2.427 -4.742694,-5.55899 -0.0261,-4.168 -0.0296,-7.86399 -0.0229,-11.34399 m -5.35612,8.86431 h 21.500403"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
@@ -11108,14 +11089,14 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
     <path
        id="path157"
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.999999px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
-       d="m 23.691072,122.14255 c 3.180696,0.285 4.923194,2.477 4.943294,5.607 l 0.0703,7.45499 c 0.0198,3.13099 -1.591398,5.10299 -4.646994,5.55299 m -1.809698,-18.64098 c -2.403697,0.056 -4.971294,2.574 -4.951494,5.705 l 0.0703,7.45299 c 0.019,3.13099 1.407299,5.24799 4.614094,5.50799"
+       d="m 23.691072,122.14255 c 3.180696,0.285 4.923194,2.477 4.943294,5.607 l 0.0703,7.45499 c 0.0198,3.13099 -1.591398,5.10299 -4.646994,5.55299 m -1.809698,-18.64098 c -2.403697,0.056 -4.971294,2.574 -4.951494,5.705 l 0.0703,7.45299 c 0.019,3.13099 1.407299,5.24799 4.614094,5.50799 m -6.898502,-7.28749 h 17.649585"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm=".25"
-       sodipodi:nodetypes="cccccccc"
+       sodipodi:nodetypes="cccccccccc"
        inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
@@ -11129,7 +11110,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
     <path
        id="path159"
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.999999px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
-       d="m 22.250974,181.69448 c -2.522997,0.071 -4.360994,2.65099 -4.341194,5.78199 0.0683,10.93499 -0.0208,13.62798 -0.0385,22.83497 m 5.949892,-28.56596 c 3.131596,-0.02 5.407493,2.52899 5.426493,5.65999 0.0684,10.93999 -0.0186,13.62298 -0.0376,22.68997"
+       d="m 22.250974,181.69448 c -2.522997,0.071 -4.360994,2.65099 -4.341194,5.78199 0.0683,10.93499 -0.0208,13.62798 -0.0385,22.83497 m 5.949892,-28.56596 c 3.131596,-0.02 5.407493,2.52899 5.426493,5.65999 0.0684,10.93999 -0.0186,13.62298 -0.0376,22.68997 m -16.374004,-4.39755 h 21.821305"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
@@ -11184,7 +11165,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
     <path
        id="path175"
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.999999px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
-       d="m 24.181772,227.26542 c 3.130796,-0.02 5.070093,-2.549 5.050293,-5.67999 -0.0264,-4.222 -0.0293,-7.96099 -0.022,-11.48999 m -6.573191,17.11898 c -3.131596,0.02 -4.723694,-2.427 -4.742694,-5.55899 -0.0261,-4.168 -0.0296,-7.86399 -0.0229,-11.34399"
+       d="m 24.181772,227.26542 c 3.130796,-0.02 5.070093,-2.549 5.050293,-5.67999 -0.0264,-4.222 -0.0293,-7.96099 -0.022,-11.48999 m -6.573191,17.11898 c -3.131596,0.02 -4.723694,-2.427 -4.742694,-5.55899 -0.0261,-4.168 -0.0296,-7.86399 -0.0229,-11.34399 m -4.393415,5.9762 h 18.612289"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
@@ -11244,7 +11225,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
     <path
        id="path186"
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.999999px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
-       d="m 23.691072,122.14255 c 3.180696,0.285 4.923194,2.477 4.943294,5.607 l 0.0703,7.45499 c 0.0198,3.13099 -1.591398,5.10299 -4.646994,5.55299 m -1.809698,-18.64098 c -2.403697,0.056 -4.971294,2.574 -4.951494,5.705 l 0.0703,7.45299 c 0.019,3.13099 1.407299,5.24799 4.614094,5.50799"
+       d="m 23.691072,122.14255 c 3.180696,0.285 4.923194,2.477 4.943294,5.607 l 0.0703,7.45499 c 0.0198,3.13099 -1.591398,5.10299 -4.646994,5.55299 m -1.809698,-18.64098 c -2.403697,0.056 -4.971294,2.574 -4.951494,5.705 l 0.0703,7.45299 c 0.019,3.13099 1.407299,5.24799 4.614094,5.50799 m -9.465714,-8.2502 h 19.895895"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
@@ -11265,7 +11246,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
     <path
        id="path188"
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.999999px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
-       d="m 22.250974,181.69448 c -2.522997,0.071 -4.360994,2.65099 -4.341194,5.78199 0.0683,10.93499 -0.0208,13.62798 -0.0385,22.83497 m 5.949892,-28.56596 c 3.131596,-0.02 5.407493,2.52899 5.426493,5.65999 0.0684,10.93999 -0.0186,13.62298 -0.0376,22.68997"
+       d="m 22.250974,181.69448 c -2.522997,0.071 -4.360994,2.65099 -4.341194,5.78199 0.0683,10.93499 -0.0208,13.62798 -0.0385,22.83497 m 5.949892,-28.56596 c 3.131596,-0.02 5.407493,2.52899 5.426493,5.65999 0.0684,10.93999 -0.0186,13.62298 -0.0376,22.68997 M 12.51516,205.05608 h 20.537698"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
@@ -11798,7 +11779,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
     <path
        id="path205"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.999999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 94.238389,227.43251 c -2.410773,-0.11972 -4.05498,-1.41325 -4.904194,-3.56 m 5.686293,3.587 c 3.281376,-0.0663 4.298937,-1.3385 4.783199,-3.404"
+       d="m 94.238389,227.43251 c -2.410773,-0.11972 -4.05498,-1.41325 -4.904194,-3.56 m 5.686293,3.587 c 3.281376,-0.0663 4.298937,-1.3385 4.783199,-3.404 m -10.994187,2.01962 12.03381,-0.0802"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
@@ -11965,7 +11946,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
     <path
        id="path566"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.999999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 94.238389,227.43251 c -2.410773,-0.11972 -4.05498,-1.41325 -4.904194,-3.56 m 5.686293,3.587 c 3.281376,-0.0663 4.298937,-1.3385 4.783199,-3.404"
+       d="m 94.238389,227.43251 c -2.410773,-0.11972 -4.05498,-1.41325 -4.904194,-3.56 m 5.686293,3.587 c 3.281376,-0.0663 4.298937,-1.3385 4.783199,-3.404 m -10.913961,1.9394 h 11.632684"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
@@ -12122,7 +12103,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
     <path
        id="path232"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.999999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 94.238389,227.43251 c -2.410773,-0.11972 -4.05498,-1.41325 -4.904194,-3.56 m 5.686293,3.587 c 3.281376,-0.0663 4.298937,-1.3385 4.783199,-3.404"
+       d="m 94.238389,227.43251 c -2.410773,-0.11972 -4.05498,-1.41325 -4.904194,-3.56 m 5.686293,3.587 c 3.281376,-0.0663 4.298937,-1.3385 4.783199,-3.404 m -11.234863,2.09985 h 12.675616"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
@@ -12731,9 +12712,8 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
     </g>
     <path
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;line-height:1.25;font-family:'Cherry Ai';-inkscape-font-specification:'Cherry Ai';display:inline;opacity:1;fill:none;stroke:#000000;stroke-width:0.944882"
-       d="m 64.9691,52.6881 -1.3127,-0.1294 -1.0906,0.3419 -0.8791,0.8095 -0.6778,1.273 -9.9259,25.7006 m 15.7002,-27.4922 1.1598,0.7503 0.6719,0.98 0.1734,1.2058 -0.3356,1.4277 -10.0907,26.1272 m 6.4077,-31.0326 2.1974,0.6243"
+       d="m 64.9691,52.6881 c -1.38974,-0.385081 -2.977059,0.194323 -3.572369,1.550694 -1.078127,2.243247 -1.840184,4.621734 -2.775502,6.926573 L 51.083,80.6837 M 66.7832,53.1915 c 1.338001,0.578593 2.322887,2.024708 1.885234,3.494509 -0.614161,2.228861 -1.603096,4.331416 -2.391179,6.502032 L 58.362,83.6825 m -9.575995,-8.12092 13.160876,4.992057"
        id="path301"
-       sodipodi:nodetypes="cssccssccc"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
@@ -12745,7 +12725,8 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkscape:transform-center-y="-27.600444"
        inkstitch:max_stitch_length_mm="7"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
-       inkstitch:reverse_rails="none" />
+       inkstitch:reverse_rails="none"
+       sodipodi:nodetypes="cccccccccc" />
     <path
        style="display:inline;opacity:1;fill:none;stroke:#000000;stroke-width:0.944882;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.377953, 0.377953;stroke-dashoffset:0;stroke-opacity:0.501961"
        d="M 68.6627,86.5917 58.1306,114.654 35.4243,175.972 c -9.35016,25.2497 -16.56,47.7075 -16.56,47.7075 l -3.9912,2.2575"
@@ -12799,9 +12780,9 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        id="path306" />
     <path
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;line-height:1.25;font-family:'Cherry Ai';-inkscape-font-specification:'Cherry Ai';display:inline;opacity:1;fill:none;stroke:#000000;stroke-width:0.944882"
-       d="m 73.816472,70.617915 c -1.109106,-0.327765 -3.578905,-0.592343 -4.849063,1.453531 m 7.072671,-0.58465 c 1.759995,0.586641 2.589417,0.809541 3.25082,4.057191"
+       d="m 73.816472,70.617915 c -1.109106,-0.327765 -3.578905,-0.592343 -4.849063,1.453531 m 7.072671,-0.58465 c 1.759995,0.586641 2.589417,0.809541 3.25082,4.057191 M 67.846584,70.68298 80.440182,75.107757"
        id="path307"
-       sodipodi:nodetypes="cccc"
+       sodipodi:nodetypes="cccccc"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
@@ -12827,7 +12808,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkscape:label="Auto-remplissage satin 3"
        inkscape:transform-center-x="8.1715216"
        inkscape:transform-center-y="-23.440461"
-       d="m 75.6263,52.8703 c -3.6664,1.6506 -2.4888,6.7788 -0.8391,10.0646 L 109.646,157.381 M 77.8247,52.1145 c 3.7805,-1.2007 7.3488,1.7122 8.2263,5.3052 l 34.69,96.0713"
+       d="m 75.6263,52.8703 c -3.6664,1.6506 -2.4888,6.7788 -0.8391,10.0646 L 109.646,157.381 M 77.8247,52.1145 c 3.7805,-1.2007 7.3488,1.7122 8.2263,5.3052 l 34.69,96.0713 m -17.72311,0.3551 18.37984,-7.26117"
        sodipodi:nodetypes="cccccc"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
@@ -12849,8 +12830,8 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        id="path311"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;line-height:1.25;font-family:'Cherry Ai';-inkscape-font-specification:'Cherry Ai';display:inline;opacity:1;fill:none;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:1, 1;stroke-dashoffset:0"
        inkscape:label="Points droits pour auto-remplissage satin 2"
-       d="m 42.1229,158.102 c 1.23106,0.0956 22.1016,-0.0523 23.3355,0 l -3.757,1.558"
-       sodipodi:nodetypes="cc"
+       d="m 43.48437,158.32891 c 1.23106,0.0956 20.74013,-0.27921 21.97403,-0.22691 l -3.757,1.558"
+       sodipodi:nodetypes="ccc"
        inkstitch:ties="3"
        inkstitch:bean_stitch_repeats="1" />
     <path
@@ -14622,7 +14603,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:reverse_rails="none" />
     <path
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.999999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
-       d="m 21.766094,209.44581 c -1.762798,-0.043 -2.826496,-1.708 -3.048796,-4.41399 v -57.49993 c 0.0386,-2.16 1.544998,-3.277 3.139996,-3.231 m 1.002799,65.14492 c 2.127397,-0.049 3.476195,-1.947 3.501795,-4.41399 v -57.49993 c 0.0582,-2.49 -1.359898,-3.277 -3.228296,-3.322"
+       d="m 21.766094,209.44581 c -1.762798,-0.043 -2.826496,-1.708 -3.048796,-4.41399 v -57.49993 c 0.0386,-2.16 1.544998,-3.277 3.139996,-3.231 m 1.002799,65.14492 c 2.127397,-0.049 3.476195,-1.947 3.501795,-4.41399 v -57.49993 c 0.0582,-2.49 -1.359898,-3.277 -3.228296,-3.322 m -9.013924,48.97284 h 15.403273"
        id="path348"
        sodipodi:nodetypes="cccccccc"
        inkstitch:satin_column="True"
@@ -14645,7 +14626,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
     <path
        id="path350"
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.999999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
-       d="m 21.888694,97.780956 c -1.894698,0.006 -2.985796,-1.652998 -3.114696,-3.901995 -0.0716,-13.972982 0.058,-8.650989 -0.0645,-24.150969 0.0919,-1.653998 1.669598,-2.918997 3.547096,-2.966997 m 0.543699,31.111961 c 2.027397,-0.099 3.326896,-1.809998 3.493295,-3.808995 0.0247,-14.822981 0.2394,-10.614987 0.194,-24.581969 0.007,-1.348998 -1.168398,-2.859997 -3.045896,-2.811997"
+       d="m 21.888694,97.780956 c -1.894698,0.006 -2.985796,-1.652998 -3.114696,-3.901995 -0.0716,-13.972982 0.058,-8.650989 -0.0645,-24.150969 0.0919,-1.653998 1.669598,-2.918997 3.547096,-2.966997 m 0.543699,31.111961 c 2.027397,-0.099 3.326896,-1.809998 3.493295,-3.808995 0.0247,-14.822981 0.2394,-10.614987 0.194,-24.581969 0.007,-1.348998 -1.168398,-2.859997 -3.045896,-2.811997 m -7.217509,21.712094 h 12.139774"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
@@ -14806,7 +14787,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
     <path
        id="path355"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.999999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 38.684173,62.832 c 3.999995,0 5.355393,1.999998 5.355393,5.999993 v 15.69998 c 0,3.999995 -1.226398,6.128992 -5.226393,6.128992 M 37.523874,62.832 c -3.999995,0 -5.484293,1.999998 -5.484293,5.999993 v 15.69998 c 0,3.999995 1.226499,5.999992 5.226494,5.999992"
+       d="m 38.684173,62.832 c 3.999995,0 5.355393,1.999998 5.355393,5.999993 v 15.69998 c 0,3.999995 -1.226398,6.128992 -5.226393,6.128992 M 37.523874,62.832 c -3.999995,0 -5.484293,1.999998 -5.484293,5.999993 v 15.69998 c 0,3.999995 1.226499,5.999992 5.226494,5.999992 m -7.881016,-11.56671 h 17.358742"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
@@ -14826,7 +14807,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:ties="3"
        sodipodi:nodetypes="cc" />
     <path
-       d="m 38.677773,152.41388 c 2.905996,0 5.361793,1.818 5.361793,5.818 v 50.49993 c 0,4 -1.908797,5.818 -5.270693,5.99999 m -1.933498,-62.38992 c -2.650196,0.031 -4.795794,2.115 -4.795794,5.89 v 50.49993 c 0,4 1.270699,5.727 4.814894,5.818"
+       d="m 38.677773,152.41388 c 2.905996,0 5.361793,1.818 5.361793,5.818 v 50.49993 c 0,4 -1.908797,5.818 -5.270693,5.99999 m -1.933498,-62.38992 c -2.650196,0.031 -4.795794,2.115 -4.795794,5.89 v 50.49993 c 0,4 1.270699,5.727 4.814894,5.818 m -8.936041,-10.13553 h 19.254092"
        id="path357"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.999999px"
        sodipodi:nodetypes="cssccssc"
@@ -15138,7 +15119,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
     <path
        id="path391"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.999999px;stroke-opacity:1"
-       d="m 19.954713,166.33095 c 3.425496,0.183 4.469694,1.86799 3.999995,5.99999 -0.756899,4.99999 0,8.82099 0.999999,13.82098 3.683819,13.26175 14.967146,22.72376 27.850997,26.78627 M 17.954715,166.33095 c -2.999996,0 -4.425494,0.868 -4.999993,3.99999 -0.999999,6.99999 0,11.82099 1.999997,18.82098 4.44307,17.03176 17.659868,29.12831 33.559405,34.2593 m -23.103618,-48.54628 -14.318882,0.70799 m 29.168163,28.93297 -7.95499,13.25798"
+       d="m 19.954713,166.33095 c 3.425496,0.183 4.469694,1.86799 3.999995,5.99999 -0.756899,4.99999 0,8.82099 0.999999,13.82098 3.683819,13.26175 14.967146,22.72376 27.850997,26.78627 M 17.954715,166.33095 c -2.999996,0 -4.425494,0.868 -4.999993,3.99999 -0.999999,6.99999 0,11.82099 1.999997,18.82098 4.44307,17.03176 17.659868,29.12831 33.559405,34.2593 m -23.103618,-48.54628 -14.318882,0.70799 m 29.168163,28.93297 -7.95499,13.25798 m 18.076744,-11.10329 -6.738932,17.97049"
        inkstitch:contour_underlay="False"
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay_inset_mm="0.1"
@@ -15221,7 +15202,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ß"
-     style="display:none"
+     style="display:inline"
      id="g406">
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.499999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 0.999999;stroke-dashoffset:0;stroke-opacity:1"
