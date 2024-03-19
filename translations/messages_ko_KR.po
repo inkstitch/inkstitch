@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-03-16 01:02+0000\n"
-"PO-Revision-Date: 2024-03-16 01:03\n"
+"POT-Creation-Date: 2024-03-19 01:04+0000\n"
+"PO-Revision-Date: 2024-03-19 01:05\n"
 "Last-Translator: \n"
 "Language-Team: Korean\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-16 01:02+0000\n"
+"POT-Creation-Date: 2024-03-19 01:04+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -305,8 +305,8 @@ msgstr "Espresso tiny"
 
 #. description of font in fonts/espresso_tiny
 #: inkstitch-fonts-metadata.py:108
-msgid "This font is an altered version  of Espresso KOR, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory. The altered embroidery parameters of this font allow to scale down the original Espresso font between 25% (for a 5mm font ) and 55 % (for a 11mm font)."
-msgstr "이 폰트는 Espresso KOR를 더 큰 축소를 위해 변경한 버전입니다. 얇은 실 (60) 과 얇은 바늘 (60) 을 모두 사용해야 합니다. 이 폰트의 변경된 자수 매개변수를 사용하면 원래의 Espresso 폰트를 25% (5mm 폰트) 에서 55% (11mm 폰트) 까지 축소할 수 있습니다."
+msgid "This font is an altered version  of Espresso KOR, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory. The altered embroidery parameters of this font allow to scale down the original Espresso font between 25% (for a 5mm font ) and 55 % (for a 11mm font). You may need to decrease the minimum stitch length in preferences to use this font at its smallest size"
+msgstr ""
 
 #. name of font in fonts/excalibur_KOR
 #: inkstitch-fonts-metadata.py:110
@@ -315,8 +315,8 @@ msgstr "Excalibur KOR"
 
 #. description of font in fonts/excalibur_KOR
 #: inkstitch-fonts-metadata.py:112
-msgid "Excalibur KOR is a small satin column manuscript font of size approximatively 20mm. It can be reduced down to 80% and enlarged up to 140%. It contains 144 glyphs, covering most western European languages needs."
-msgstr "Excalibur KOR는 약 20mm 크기의 작은 새틴 컬럼 필기체 폰트입니다. 이 폰트는 최대 80%로 축소되거나 최대 140%까지 확대될 수 있습니다. 144개의 글리프를 포함하고 있으며, 대부분의 서구 유럽 언어에 필요한 글자를 포함합니다."
+msgid "Excalibur KOR is a small satin column manuscript font of size approximatively 20mm. It can be reduced down to 50% and enlarged up to 140%. It contains 144 glyphs, covering most western European languages needs."
+msgstr ""
 
 #. name of font in fonts/fold_inkstitch
 #: inkstitch-fonts-metadata.py:114
@@ -355,8 +355,8 @@ msgstr "Glacial Tiny 60 AGS"
 
 #. description of font in fonts/glacial_tiny
 #: inkstitch-fonts-metadata.py:128
-msgid "Glacial is a very tiny font: at 100%,  M stands at 5.6mm. Thin thread (60 wt ) and thin needle (8/60) are mandatory. The glyphs cover many European languages. It can be reduced down to 40% and enlarged up to 150% "
-msgstr "Glacial는 매우 작은 폰트입니다. 100%에서 M은 5.6mm에 위치합니다. 얇은 실 (60wt) 과 얇은 바늘 (8/60) 을 사용하는 것이 필수입니다. 글리프는 다양한 유럽 언어를 포함하고 있습니다. 이 폰트는 최대 40%로 축소되거나 최대 150%까지 확대될 수 있습니다. "
+msgid "Glacial is a very tiny font: at 100%,  M stands at 5.6mm. Thin thread (60 wt ) and thin needle (8/60) are mandatory. The glyphs cover many European languages. It can be reduced down to 40% and enlarged up to 150%. You may need to decrease the minimum stitch length in preferences to use this font at its smallest size"
+msgstr ""
 
 #. name of font in fonts/infinipicto
 #: inkstitch-fonts-metadata.py:130
