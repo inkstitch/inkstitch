@@ -66,6 +66,7 @@
 
 import logging
 import warnings
+from pathlib import Path
 
 from .debug_utils import safe_get # mimic get method of dict with default value
 
@@ -74,7 +75,8 @@ logger = logging.getLogger('inkstitch')
 # example of logger configuration for release mode:
 # ------------------------------------------------
 # - logger suitable for release mode, where we assume that the directory of the input SVG file allows writing the log file.
-# - this config redirect all loggers to file svg_file.inkstitch.log to directory of svg file
+# - in inkstitch.py we check release mode and environment variable INKSTITCH_LOGLEVEL
+#   - this config redirect all loggers to file svg_file.inkstitch.log to directory of svg file
 # - set loglevel and logfilename in inkstitch.py before calling logging.config.dictConfig(frozen_config)
 frozen_config = {
     "version": 1,    # mandatory key and value (int) is 1
@@ -145,7 +147,7 @@ development_config = {
 # configure logging from dictionary:
 #  - capture all warnings to log file with level WARNING - depends on warnings_capture
 #  - set action for warnings: 'error', 'ignore', 'always', 'default', 'module', 'once' - depends on warnings_action
-def configure_logging(config, ini, SCRIPTDIR):
+def configure_logging(config:dict, ini:dict, SCRIPTDIR:Path):
     # replace %(SCRIPTDIR)s ->  script path in filenames
     config = evaluate_filenames(config, {'SCRIPTDIR': SCRIPTDIR})
     logging.config.dictConfig(config)  # configure loggers from dict - using loglevel, logfilename
@@ -160,9 +162,10 @@ def configure_logging(config, ini, SCRIPTDIR):
         logging.disable()  # globally disable all logging of all loggers
 
 
-# Evaluate filenames in logging configuration using myvars dictionary argument.
+# Evaluate filenames in logging configuration using dictionary argument: myvars.
 # - for external configuration file (eg. LOGGING.toml) we cannot pass parameters such as the current directory.
-# - we do that by replacing %(SCRIPTDIR)s ->  script path in filenames
+#   - we do: filename = "%(SCRIPTDIR)s/inkstitch.log" -> filename = "path/inkstitch.log"
+#
 # - example of usage:
 # "handlers": {
 #    "file": {
@@ -170,17 +173,22 @@ def configure_logging(config, ini, SCRIPTDIR):
 #         "filename": "%(SCRIPTDIR)s/xxx.log",  # <--- replace %(SCRIPTDIR)s ->  script path
 #    }
 # }
-#    config - logging configuration
-#    myvars - dictionary with variables
+#
 # returns: logging configuration with evaluated filenames
-def evaluate_filenames(cfg, myvars):
+def evaluate_filenames(cfg: dict, myvars: dict):
     for k, v in cfg.get('handlers', {}).items():
-        if 'filename' in v:
+        if 'filename' in v:                      # replace filename in handler
             cfg['handlers'][k]['filename'] = v['filename'] % myvars
+
+            # create logging directory if not exists
+            dirname = Path(cfg['handlers'][k]['filename']).parent
+            if not dirname.exists():
+                dirname.mkdir(parents=True, exist_ok=True)
     return cfg
 
 
-def startup_info(logger, SCRIPTDIR, running_as_frozen, running_from_inkscape, debug_active, debug_type, profiler_type):
+def startup_info(logger:logging.Logger, SCRIPTDIR:Path, running_as_frozen:bool, running_from_inkscape:bool,
+                 debug_active:bool, debug_type:str, profiler_type:str):
     logger.info(f"Running as frozen: {running_as_frozen}")
     logger.info(f"Running from inkscape: {running_from_inkscape}")
     logger.info(f"Debugger active: {debug_active}")

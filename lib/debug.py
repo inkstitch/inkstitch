@@ -79,7 +79,7 @@ class Debug(object):
         self.current_layer = None
         self.group_stack = []
 
-    def enable(self, debug_type, debug_dir: Path, ini: dict):
+    def enable(self, debug_type:str, debug_dir: Path, ini: dict):
         # initilize file names and other parameters from DEBUG.toml file
         self.debug_dir = debug_dir  # directory where debug files are stored
         self.debug_log_file = safe_get(ini, "DEBUG", "debug_log_file", default="debug.log")

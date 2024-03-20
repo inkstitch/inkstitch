@@ -1,20 +1,20 @@
-# logging/warning template for inkstitch
-# format: toml
-# enable config file in DEBUG.toml: log_config_file
-
-# warnings.simplefilter(action), default: "default"
-# - possible values: "error", "ignore", "always", "default", "module", "once"
+### logging/warning template for inkstitch
+### format: toml
+### enable config file in DEBUG.toml: log_config_file
+###
+### warnings.simplefilter(action), default: "default"
+### - possible values: "error", "ignore", "always", "default", "module", "once"
 warnings_action = "default"
 
-# logging.captureWarnings()  default: true
-# - possible values: true, false
+### logging.captureWarnings()  default: true
+### - possible values: true, false
 warnings_capture = true
 
-# mandatory, must be an integer and 1
+### mandatory, must be an integer and 1
 version = 1
 
-# false - to keep existing loggers, not specified here
-# true  - to disable all loggers not specified here
+### false - to keep existing loggers, not specified here
+### true  - to disable all loggers not specified here
 disable_existing_loggers = false
 
 [filters]
@@ -22,17 +22,25 @@ disable_existing_loggers = false
 [formatters.simple]
     format = "%(asctime)s [%(levelname)s]: %(filename)s.%(funcName)s: %(message)s"
 
-[handlers.file]
+[handlers.file_inkstitch]
     class = "logging.FileHandler"
     formatter = "simple"
-    filename = "%(SCRIPTDIR)s/inkstitch.log"
+    filename = "%(SCRIPTDIR)s/logs/inkstitch.log"
     mode = "w"
 
+[handlers.file_root]
+    class = "logging.FileHandler"
+    formatter = "simple"
+    filename = "%(SCRIPTDIR)s/logs/inkstitch_root.log"
+    mode = "w"
+
+### inkstitch logger
 [loggers.inkstitch]
     level = "DEBUG"
-    handlers = [ "file",]
+    handlers = [ "file_inkstitch",]
     propagate = false
 
+### loggers not specified here will be managed by the root logger
 [loggers.root]
     level = "DEBUG"
-    handlers = [ "file",]
+    handlers = [ "file_root",]

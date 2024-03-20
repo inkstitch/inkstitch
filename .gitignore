@@ -23,6 +23,7 @@ flaskserverport.json
 electron/yarn.lock
 
 # debug and profile files
+logs/
 /DEBUG.toml
 /LOGGING.toml
 /LOGGING[0-9]*.toml
