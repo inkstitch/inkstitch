@@ -3,7 +3,7 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-from math import degrees, radians, sin, cos
+from math import degrees
 from copy import deepcopy
 from contextlib import contextmanager
 from typing import Generator
@@ -130,9 +130,9 @@ class Clone(EmbroideryElement):
                 # we run into issues due to those methods' use of caching not updating if the underlying param value is changed.
 
                 if self.clone_fill_angle is None:  # Normally, rotate the cloned element's angle by the clone's rotation.
-                    element_angle = float(element.node.get(INKSTITCH_ATTRIBS['angle'], 0)) 
+                    element_angle = float(element.node.get(INKSTITCH_ATTRIBS['angle'], 0))
                     # We have to negate the angle because SVG/Inkscape's definition of rotation is clockwise, while Inkstitch uses counter-clockwise
-                    fill_vector = (angle_transform @ Transform(f"rotate(${-element_angle})")).apply_to_point((1,0))
+                    fill_vector = (angle_transform @ Transform(f"rotate(${-element_angle})")).apply_to_point((1, 0))
                     # Same reason for negation here.
                     element_angle = -degrees(fill_vector.angle)
                 else:  # If clone_fill_angle is specified, override the angle instead.
@@ -147,7 +147,6 @@ class Clone(EmbroideryElement):
         finally:
             # Remove the "manually cloned" tree.
             parent.remove(cloned_node)
-
 
     @property
     def shape(self):

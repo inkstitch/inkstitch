@@ -1,5 +1,4 @@
 from lib.elements import Clone, EmbroideryElement
-from lib.stitch_plan import StitchGroup
 from lib.svg.tags import INKSTITCH_ATTRIBS
 from inkex import SvgDocumentElement, Rectangle, Circle, Group, Use, Transform, TextElement
 from inkex.tester import TestCase
@@ -7,15 +6,17 @@ from inkex.tester.svg import svg
 
 from math import sqrt
 
+
 def element_fill_angle(element: EmbroideryElement) -> float | None:
     angle = element.node.get(INKSTITCH_ATTRIBS['angle'])
     if angle is not None:
         angle = float(angle) % 180
     return angle
 
+
 class CloneElementTest(TestCase):
     def assertAngleAlmostEqual(self, a, b):
-        self.assertAlmostEqual(a%180, b%180, 4)
+        self.assertAlmostEqual(a % 180, b % 180, 4)
 
     def test_not_embroiderable(self):
         root: SvgDocumentElement = svg()
@@ -23,11 +24,10 @@ class CloneElementTest(TestCase):
         text.text = "Can't embroider this!"
         use = root.add(Use())
         use.href = text
-        
+
         clone = Clone(use)
         stitch_groups = clone.to_stitch_groups(None)
         self.assertEqual(len(stitch_groups), 0)
-
 
     # These tests make sure the element cloning works as expected, using the `clone_elements` method.
 
@@ -36,7 +36,7 @@ class CloneElementTest(TestCase):
         rect = root.add(Rectangle(attrib={
             "width": "10",
             "height": "10",
-            INKSTITCH_ATTRIBS["angle"]: "30" 
+            INKSTITCH_ATTRIBS["angle"]: "30"
         }))
         use = root.add(Use())
         use.href = rect
@@ -51,7 +51,7 @@ class CloneElementTest(TestCase):
         rect = root.add(Rectangle(attrib={
             "width": "10",
             "height": "10",
-            INKSTITCH_ATTRIBS["angle"]: "30" 
+            INKSTITCH_ATTRIBS["angle"]: "30"
         }))
         use = root.add(Use())
         use.href = rect
@@ -67,7 +67,7 @@ class CloneElementTest(TestCase):
         rect = root.add(Rectangle(attrib={
             "width": "10",
             "height": "10",
-            INKSTITCH_ATTRIBS["angle"]: "30" 
+            INKSTITCH_ATTRIBS["angle"]: "30"
         }))
         use = root.add(Use())
         use.href = rect
@@ -83,7 +83,7 @@ class CloneElementTest(TestCase):
         rect = root.add(Rectangle(attrib={
             "width": "10",
             "height": "10",
-            INKSTITCH_ATTRIBS["angle"]: "30" 
+            INKSTITCH_ATTRIBS["angle"]: "30"
         }))
         use = root.add(Use())
         use.href = rect
@@ -103,7 +103,7 @@ class CloneElementTest(TestCase):
         rect = root.add(Rectangle(attrib={
             "width": "10",
             "height": "10",
-            INKSTITCH_ATTRIBS["angle"]: "30" 
+            INKSTITCH_ATTRIBS["angle"]: "30"
         }))
         use = root.add(Use())
         use.href = rect
@@ -126,7 +126,7 @@ class CloneElementTest(TestCase):
             "height": "10",
             INKSTITCH_ATTRIBS["angle"]: "30",
         }))
-        rect.set('transform', Transform().add_scale(2,2))
+        rect.set('transform', Transform().add_scale(2, 2))
         use = root.add(Use())
         use.href = rect
         use.set('transform', Transform().add_translate((5, 10)))
@@ -136,7 +136,7 @@ class CloneElementTest(TestCase):
             self.assertEqual(len(elements), 1)
             self.assertTransformEqual(
                 elements[0].node.composed_transform(),
-                Transform().add_translate((5, 10)).add_scale(2,2))
+                Transform().add_translate((5, 10)).add_scale(2, 2))
 
     def test_transform_inherits_from_tree(self):
         root: SvgDocumentElement = svg()
@@ -147,7 +147,7 @@ class CloneElementTest(TestCase):
             "height": "10",
             INKSTITCH_ATTRIBS["angle"]: "30",
         }))
-        rect.set('transform', Transform().add_scale(2,2))
+        rect.set('transform', Transform().add_scale(2, 2))
         use = root.add(Use())
         use.href = g1
         use.set('transform', Transform().add_translate((5, 10)))
@@ -158,8 +158,8 @@ class CloneElementTest(TestCase):
             self.assertTransformEqual(
                 elements[0].node.composed_transform(),
                 Transform().add_translate((5, 10))  # use
-                    .add_translate((0, 5)).add_rotate(5)  # g1
-                    .add_scale(2,2),  # rect
+                .add_translate((0, 5)).add_rotate(5)  # g1
+                .add_scale(2, 2),  # rect
                 5)
 
     def test_transform_inherits_from_tree_up_tree(self):
@@ -171,11 +171,11 @@ class CloneElementTest(TestCase):
             "height": "10",
             INKSTITCH_ATTRIBS["angle"]: "30",
         }))
-        rect.set('transform', Transform().add_scale(2,2))
+        rect.set('transform', Transform().add_scale(2, 2))
         circ = g1.add(Circle())
         circ.radius = 5
         g2 = root.add(Group())
-        g2.set('transform', Transform().add_translate((1,2)).add_scale(0.5, 1))
+        g2.set('transform', Transform().add_translate((1, 2)).add_scale(0.5, 1))
         use = g2.add(Use())
         use.href = g1
         use.set('transform', Transform().add_translate((5, 10)))
@@ -185,16 +185,16 @@ class CloneElementTest(TestCase):
             self.assertEqual(len(elements), 2)
             self.assertTransformEqual(
                 elements[0].node.composed_transform(),
-                Transform().add_translate((1,2)).add_scale(0.5, 1)  # g2 
-                    .add_translate((5, 10))  # use
-                    .add_translate((0, 5)).add_rotate(5)  # g1
-                    .add_scale(2,2),  # rect
+                Transform().add_translate((1, 2)).add_scale(0.5, 1)  # g2
+                .add_translate((5, 10))  # use
+                .add_translate((0, 5)).add_rotate(5)  # g1
+                .add_scale(2, 2),  # rect
                 5)
             self.assertTransformEqual(
                 elements[1].node.composed_transform(),
-                Transform().add_translate((1,2)).add_scale(0.5, 1)  # g2 
-                    .add_translate((5, 10))  # use
-                    .add_translate((0, 5)).add_rotate(5),  # g1
+                Transform().add_translate((1, 2)).add_scale(0.5, 1)  # g2
+                .add_translate((5, 10))  # use
+                .add_translate((0, 5)).add_rotate(5),  # g1
                 5)
 
     def test_clone_fill_angle_not_specified(self):
@@ -202,7 +202,7 @@ class CloneElementTest(TestCase):
         rect = root.add(Rectangle(attrib={
             "width": "10",
             "height": "10",
-            INKSTITCH_ATTRIBS["angle"]: "30" 
+            INKSTITCH_ATTRIBS["angle"]: "30"
         }))
         use = root.add(Use())
         use.href = rect
@@ -211,13 +211,12 @@ class CloneElementTest(TestCase):
         clone = Clone(use)
         self.assertEqual(clone.clone_fill_angle, None)
 
-
     def test_clone_fill_angle(self):
         root: SvgDocumentElement = svg()
         rect = root.add(Rectangle(attrib={
             "width": "10",
             "height": "10",
-            INKSTITCH_ATTRIBS["angle"]: "30" 
+            INKSTITCH_ATTRIBS["angle"]: "30"
         }))
         use = root.add(Use())
         use.href = rect
