@@ -1,5 +1,5 @@
 [LIBRARY]
-### use the pip installed version of inkex.py, default: True
+### use the pip installed version of inkex.py, default: true
 # prefer_pip_inkex = false
 
 [LOGGING]
@@ -7,51 +7,51 @@
 ### we may have multiple configurations: LOGGING.toml, LOGGING1.toml, LOGGING2.toml, etc.
 # log_config_file = "LOGGING.toml"
 
-### disable globally logging: default: False - using logging.disable()
+### disable globally logging: default: false - using logging.disable()
 ### reenable logging.disable(0)
 # disable_logging = true
 
 [DEBUG]
-### simulate frozen mode, overwrite running_as_frozen in inkstitch.py, default: False
+### simulate frozen mode, overwrite running_as_frozen in inkstitch.py, default: false
 # force_frozen = true
 
-### select one active debug_type, default: none
+### select one active debug_type, default: "none"
 # debug_type = "vscode"
 # debug_type = "pycharm"
 # debug_type = "pydev"
 
-### enable debugger, see cmd line arg -d, default: False
+### enable debugger, see cmd line arg -d, default: false
 # debug_enable = true
 
-### debug log output to file even if debugger is not enabled, default: False
+### debug log output to file even if debugger is not enabled, default: false
 # debug_to_file = true
 
-### disable debugger when calling from inkscape, default: False
+### disable debugger when calling from inkscape, default: false
 # disable_from_inkscape = true
 
-### wait for debugger to attach (vscode), default: True
+### wait for debugger to attach (vscode), default: true
 # wait_attach = false
 
-### debug log file, default: debug.log
+### debug log file, default: "debug.log"
 # debug_log_file = "debug.log"
 
-### debug file for graph related things, default: debug.svg
+### debug file for graph related things, default: "debug.svg"
 # debug_svg_file = "debug.svg"
 
-### creation of bash script, default: False
+### creation of bash script, default: false
 # create_bash_script = true
 
-### base name for bash script, default: debug_inkstitch
+### base name for bash script, default: "debug_inkstitch"
 # bash_file_base = "debug_inkstitch"
 
 [PROFILE]
-### select one active profiler_type, default: none
+### select one active profiler_type, default: "none"
 # profiler_type = "cprofile"
 # profiler_type = "profile"
 # profiler_type = "pyinstrument"
 
-### enable profiler, see cmd line arg -p, default: False
+### enable profiler, see cmd line arg -p, default: false
 # profile_enable = true
 
-### base name for profile output files, default: debug_profile
-# profile_file_base = "debug_profile"
+### base name for profile output files, default: "debug_profile"
+# profile_file_base = "logs/debug_profile"

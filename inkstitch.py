@@ -21,18 +21,18 @@ SCRIPTDIR = Path(__file__).parent.absolute()
 
 logger = logging.getLogger("inkstitch")   # create module logger with name 'inkstitch'
 
-# temporary - catch old DEBUG.ini file and inform user to reformat it to DEBUG.toml
+# TODO --- temporary --- catch old DEBUG.ini file and inform user to reformat it to DEBUG.toml
 old_debug_ini = SCRIPTDIR / "DEBUG.ini"
 if old_debug_ini.exists():
     print("ERROR: old DEBUG.ini exists, please reformat it to DEBUG.toml and remove DEBUG.ini file")
     exit(1)
+# --- end of temporary ---
 
 debug_toml = SCRIPTDIR / "DEBUG.toml"
 if debug_toml.exists():
     ini = toml.load(SCRIPTDIR / "DEBUG.toml")  # read DEBUG.toml file if exists, otherwise use default values in ini object
 else:
     ini = {}
-print(ini)  # TODO remove this line after DEBUG.ini is not used anymore
 # --------------------------------------------------------------------------------------------
 
 running_as_frozen = getattr(sys, 'frozen', None) is not None  # check if running from pyinstaller bundle
@@ -72,7 +72,12 @@ if running_as_frozen:  # in release mode
         logfilename = Path(docpath).with_suffix('.inkstitch.log')  # log file is created in document path
         loglevel = loglevel.upper()
 
-        logging.config.dictConfig(debug_logging.frozen_config)  # configure root logger from dict - using loglevel, logfilename
+        # dictConfig has access to top level variables
+        # in dict config string we use:
+        # - ext://__main__.logfilename -> access to logfilename: user.svg.inkstitch.log
+        # - ext://__main__.loglevel -> access to loglevel: user defined log level
+        # restriction: variable must be last token in string
+        logging.config.dictConfig(debug_logging.frozen_config)  # configure root logger from dict
         logging.captureWarnings(True)                           # capture all warnings to log file with level WARNING
     else:
         logging.disable()                # globally disable all logging of all loggers
@@ -85,14 +90,16 @@ else:
         logging_config_file = Path(logging_config_file)
         if logging_config_file.exists():
             with open(logging_config_file, "r") as f:
-                development_config = toml.load(f)
+                development_config = toml.load(f) # -> dict
         else:
             raise FileNotFoundError(f"{logging_config_file} file not found")
     else:                         # if LOGGING.toml file does not exist, use default logging configuration
         loglevel = 'DEBUG'        # set log level to DEBUG
         logfilename = SCRIPTDIR / "inkstitch.log"  # log file is created in current directory
-        development_config = debug_logging.development_config
+        development_config = debug_logging.development_config # get TOML configuration from module
 
+    # we cannot use dictConfig() as above due to restrictions in logging current implementation
+    #   - we need replace: filename = "%(SCRIPTDIR)s/inkstitch.log" -> filename = "path/inkstitch.log"
     debug_logging.configure_logging(development_config, ini, SCRIPTDIR)  # initialize logging configuration
     logger.info("Running in development mode")
     logger.info(f"Using logging configuration from file: {logging_config_file}")
@@ -114,7 +121,7 @@ if not running_as_frozen:  # debugging/profiling only in development mode
     if not debug_active:
         debug_type = debug_utils.resolve_debug_type(ini)  # read debug type from ini file or cmd line
 
-    profile_type = debug_utils.resolve_profile_type(ini)  # read profile type from ini file or cmd line
+    profiler_type = debug_utils.resolve_profiler_type(ini)  # read profile type from ini file or cmd line
 
     if running_from_inkscape:
         # process creation of the Bash script - should be done before sys.path is modified, see below in prefere_pip_inkex

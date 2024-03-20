@@ -177,7 +177,7 @@ def resolve_debug_type(ini: dict):
 
 
 # try to resolve profiler type from ini file or cmd line of bash
-def resolve_profile_type(ini: dict):
+def resolve_profiler_type(ini: dict):
     # enable/disable profiling from bash: -p
     if os.environ.get('INKSTITCH_PROFILE_ENABLE', '').lower() in ['true', '1', 'yes', 'y']:
         profile_enable = True
@@ -207,6 +207,10 @@ def profile(profiler_type, profile_dir: Path, ini: dict, extension, remaining_ar
     profile_file_base = safe_get(ini, "PROFILE", "profile_file_base", default="debug_profile")
     profile_file_path = profile_dir / profile_file_base  # Path object
 
+    # create directory if not exists
+    dirname = profile_file_path.parent
+    dirname.mkdir(parents=True, exist_ok=True)
+
     if profiler_type == 'cprofile':
         with_cprofile(extension, remaining_args, profile_file_path)
     elif profiler_type == 'profile':
@@ -217,7 +221,7 @@ def profile(profiler_type, profile_dir: Path, ini: dict, extension, remaining_ar
         raise ValueError(f"unknown profiler type: '{profiler_type}'")
 
 
-def with_cprofile(extension, remaining_args, profile_file_path):
+def with_cprofile(extension, remaining_args, profile_file_path:Path):
     '''
     profile with cProfile
     '''
@@ -238,7 +242,7 @@ def with_cprofile(extension, remaining_args, profile_file_path):
           file=sys.stderr)
 
 
-def with_profile(extension, remaining_args, profile_file_path):
+def with_profile(extension, remaining_args, profile_file_path:Path):
     '''
     profile with profile
     '''
@@ -257,7 +261,7 @@ def with_profile(extension, remaining_args, profile_file_path):
           file=sys.stderr)
 
 
-def with_pyinstrument(extension, remaining_args, profile_file_path):
+def with_pyinstrument(extension, remaining_args, profile_file_path:Path):
     '''
     profile with pyinstrument
     '''

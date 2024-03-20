@@ -21,6 +21,7 @@ locales/
 .DS_Store
 
 # debug and profile files
+logs/
 /DEBUG.toml
 /LOGGING.toml
 /LOGGING[0-9]*.toml
