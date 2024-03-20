@@ -6,23 +6,34 @@
 import os
 import sys
 from pathlib import Path  # to work with paths as objects
-import configparser       # to read DEBUG.ini
 
 # this file is without: import inkex
 # - we need dump argv and sys.path as is on startup from inkscape
 #   - later sys.path may be modified that influences importing inkex (see prefere_pip_inkex)
 
 
-def write_offline_debug_script(debug_script_dir: Path, ini: configparser.ConfigParser):
+# safe_get - get value from nested dictionary, return default if key does not exist
+# - to read nested values from dict - mimic get method of dict with default value
+#   example: safe_get({'a': {'b': 1}},   'a', 'b') -> 1
+#            safe_get({'a': {'b': 1}},   'a', 'c', default=2) -> 2
+def safe_get(dictionary:dict, *keys, default=None):
+    for key in keys:
+        if key not in dictionary:
+            return default
+        dictionary = dictionary[key]
+    return dictionary
+
+
+def write_offline_debug_script(debug_script_dir: Path, ini: dict):
     '''
     prepare Bash script for offline debugging from console
         arguments:
         - debug_script_dir - Path object, absolute path to directory of inkstitch.py
-        - ini       - see DEBUG.ini
+        - ini       - see DEBUG.toml
     '''
 
     # define names of files used by offline Bash script
-    bash_file_base = ini.get("DEBUG", "bash_file_base", fallback="debug_inkstitch")
+    bash_file_base = safe_get(ini, "DEBUG", "bash_file_base", default="debug_inkstitch")
     bash_name = Path(bash_file_base).with_suffix(".sh")  # Path object
     bash_svg = Path(bash_file_base).with_suffix(".svg")  # Path object
 
@@ -147,18 +158,18 @@ def reorder_sys_path():
 
 # -----------------------------------------------------------------------------
 # try to resolve debugger type from ini file or cmd line of bash
-def resolve_debug_type(ini: configparser.ConfigParser):
+def resolve_debug_type(ini: dict):
     # enable/disable debugger from bash: -d
     if os.environ.get('INKSTITCH_DEBUG_ENABLE', '').lower() in ['true', '1', 'yes', 'y']:
         debug_enable = True
     else:
-        debug_enable = ini.getboolean("DEBUG", "debug_enable", fallback=False)  # enable debugger on startup from ini
+        debug_enable = safe_get(ini, "DEBUG", "debug_enable", default=False)  # enable debugger on startup from ini
 
-    debug_type = ini.get("DEBUG", "debug_type", fallback="none")  # debugger type vscode, pycharm, pydevd
+    debug_type = safe_get(ini, "DEBUG", "debug_type", default="none")  # debugger type vscode, pycharm, pydevd
     if not debug_enable:
         debug_type = 'none'
 
-    debug_to_file = ini.getboolean("DEBUG", "debug_to_file", fallback=False)  # write debug output to file
+    debug_to_file = safe_get(ini, "DEBUG", "debug_to_file", default=False)  # write debug output to file
     if debug_to_file and debug_type == 'none':
         debug_type = 'file'
 
@@ -166,15 +177,15 @@ def resolve_debug_type(ini: configparser.ConfigParser):
 
 
 # try to resolve profiler type from ini file or cmd line of bash
-def resolve_profile_type(ini: configparser.ConfigParser):
+def resolve_profile_type(ini: dict):
     # enable/disable profiling from bash: -p
     if os.environ.get('INKSTITCH_PROFILE_ENABLE', '').lower() in ['true', '1', 'yes', 'y']:
         profile_enable = True
     else:
-        profile_enable = ini.getboolean("PROFILE", "profile_enable", fallback=False)  # read from ini
+        profile_enable = safe_get(ini, "PROFILE", "profile_enable", default=False)  # read from ini
 
     # specify profiler type
-    profiler_type = ini.get("PROFILE", "profiler_type", fallback="none")  # profiler type cprofile, profile, pyinstrument
+    profiler_type = safe_get(ini, "PROFILE", "profiler_type", default="none")  # profiler type cprofile, profile, pyinstrument
     if not profile_enable:
         profiler_type = 'none'
 
@@ -189,11 +200,11 @@ def resolve_profile_type(ini: configparser.ConfigParser):
 # - pyinstrument - profiler with nice html output
 
 
-def profile(profiler_type, profile_dir: Path, ini: configparser.ConfigParser, extension, remaining_args):
+def profile(profiler_type, profile_dir: Path, ini: dict, extension, remaining_args):
     '''
     profile with cProfile, profile or pyinstrument
     '''
-    profile_file_base = ini.get("PROFILE", "profile_file_base", fallback="debug_profile")
+    profile_file_base = safe_get(ini, "PROFILE", "profile_file_base", default="debug_profile")
     profile_file_path = profile_dir / profile_file_base  # Path object
 
     if profiler_type == 'cprofile':

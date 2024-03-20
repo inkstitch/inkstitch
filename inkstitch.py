@@ -8,27 +8,38 @@ import sys
 from pathlib import Path  # to work with paths as objects
 from argparse import ArgumentParser  # to parse arguments and remove --extension
 
-import configparser   # to read DEBUG.ini
-import toml           # to read logging configuration from toml file
-import warnings
-import logging
-import logging.config
+import toml              # to read logging configuration from toml file
+import warnings          # to control python warnings
+import logging           # to configure logging
+import logging.config    # to configure logging from dict
 
 import lib.debug_utils as debug_utils
 import lib.debug_logging as debug_logging
+from lib.debug_utils import safe_get    # mimic get method of dict with default value
 
 SCRIPTDIR = Path(__file__).parent.absolute()
 
 logger = logging.getLogger("inkstitch")   # create module logger with name 'inkstitch'
 
-ini = configparser.ConfigParser()
-ini.read(SCRIPTDIR / "DEBUG.ini")  # read DEBUG.ini file if exists, otherwise use default values in ini object
+# temporary - catch old DEBUG.ini file and inform user to reformat it to DEBUG.toml
+old_debug_ini = SCRIPTDIR / "DEBUG.ini"
+if old_debug_ini.exists():
+    print("ERROR: old DEBUG.ini exists, please reformat it to DEBUG.toml and remove DEBUG.ini file")
+    exit(1)
+
+debug_toml = SCRIPTDIR / "DEBUG.toml"
+if debug_toml.exists():
+    ini = toml.load(SCRIPTDIR / "DEBUG.toml")  # read DEBUG.toml file if exists, otherwise use default values in ini object
+else:
+    ini = {}
+print(ini)  # TODO remove this line after DEBUG.ini is not used anymore
+# --------------------------------------------------------------------------------------------
+
 running_as_frozen = getattr(sys, 'frozen', None) is not None  # check if running from pyinstaller bundle
 
-if not running_as_frozen:  # override running_as_frozen from DEBUG.ini - for testing
-    if ini.getboolean("DEBUG", "force_frozen", fallback=False):
+if not running_as_frozen:  # override running_as_frozen from DEBUG.toml - for testing
+    if safe_get(ini, "DEBUG", "force_frozen", default=False):
         running_as_frozen = True
-
 
 if len(sys.argv) < 2:
     # no arguments - prevent accidentally running this script
@@ -57,7 +68,7 @@ if running_as_frozen:  # in release mode
     docpath = os.environ.get('DOCUMENT_PATH')  # read document path from environment variable (set by inkscape) or None
 
     if docpath is not None and loglevel is not None and loglevel.upper() in ['DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL']:
-        # enable logging-warning and redirect output to input_svg.inkstitch.log
+        # end user enabled logging&warnings and redirect output to input_svg.inkstitch.log
         logfilename = Path(docpath).with_suffix('.inkstitch.log')  # log file is created in document path
         loglevel = loglevel.upper()
 
@@ -69,7 +80,7 @@ if running_as_frozen:  # in release mode
 
 else:
     # in development mode we want to use configuration from some LOGGING.toml file
-    logging_config_file = ini.get("LOGGING", "log_config_file", fallback=None)
+    logging_config_file = safe_get(ini, "LOGGING", "log_config_file", default=None)
     if logging_config_file is not None:
         logging_config_file = Path(logging_config_file)
         if logging_config_file.exists():
@@ -107,21 +118,21 @@ if not running_as_frozen:  # debugging/profiling only in development mode
 
     if running_from_inkscape:
         # process creation of the Bash script - should be done before sys.path is modified, see below in prefere_pip_inkex
-        if ini.getboolean("DEBUG", "create_bash_script", fallback=False):  # create script only if enabled in DEBUG.ini
+        if safe_get(ini, "DEBUG", "create_bash_script", default=False):  # create script only if enabled in DEBUG.toml
             debug_utils.write_offline_debug_script(SCRIPTDIR, ini)
 
         # disable debugger when running from inkscape
-        disable_from_inkscape = ini.getboolean("DEBUG", "disable_from_inkscape", fallback=False)
+        disable_from_inkscape = safe_get(ini, "DEBUG", "disable_from_inkscape", default=False)
         if disable_from_inkscape:
             debug_type = 'none'  # do not start debugger when running from inkscape
 
     # prefer pip installed inkex over inkscape bundled inkex, pip version is bundled with Inkstitch
     # - must be be done before importing inkex
-    prefere_pip_inkex = ini.getboolean("LIBRARY", "prefer_pip_inkex", fallback=True)
+    prefere_pip_inkex = safe_get(ini, "LIBRARY", "prefer_pip_inkex", default=True)
     if prefere_pip_inkex and 'PYTHONPATH' in os.environ:
         debug_utils.reorder_sys_path()
 
-# enabling of debug depends on value of debug_type in DEBUG.ini file
+# enabling of debug depends on value of debug_type in DEBUG.toml file
 if debug_type != 'none':
     from lib.debug import debug  # import global variable debug - don't import whole module
     debug.enable(debug_type, SCRIPTDIR, ini)

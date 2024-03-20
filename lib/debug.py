@@ -11,8 +11,8 @@ import time    # to measure time of code block, use time.monotonic() instead of 
 from datetime import datetime
 
 from contextlib import contextmanager  # to measure time of with block
-import configparser  # to read DEBUG.ini
 from pathlib import Path  # to work with paths as objects
+from .debug_utils import safe_get  # mimic get method of dict with default value
 
 import inkex
 from lxml import etree   # to create svg file
@@ -79,12 +79,12 @@ class Debug(object):
         self.current_layer = None
         self.group_stack = []
 
-    def enable(self, debug_type, debug_dir: Path, ini: configparser.ConfigParser):
-        # initilize file names and other parameters from DEBUG.ini file
+    def enable(self, debug_type, debug_dir: Path, ini: dict):
+        # initilize file names and other parameters from DEBUG.toml file
         self.debug_dir = debug_dir  # directory where debug files are stored
-        self.debug_log_file = ini.get("DEBUG", "debug_log_file", fallback="debug.log")
-        self.debug_svg_file = ini.get("DEBUG", "debug_svg_file", fallback="debug.svg")
-        self.wait_attach = ini.getboolean("DEBUG", "wait_attach", fallback=True)  # currently only for vscode
+        self.debug_log_file = safe_get(ini, "DEBUG", "debug_log_file", default="debug.log")
+        self.debug_svg_file = safe_get(ini, "DEBUG", "debug_svg_file", default="debug.svg")
+        self.wait_attach = safe_get(ini, "DEBUG", "wait_attach", default=True)  # currently only for vscode
 
         if debug_type == 'none':
             return
@@ -107,11 +107,11 @@ class Debug(object):
     # flake8: noqa: C901
     def init_debugger(self):
         # ### General debugging notes:
-        # 1. to enable debugging or profiling copy DEBUG_template.ini to DEBUG.ini and edit it
+        # 1. to enable debugging or profiling copy DEBUG_template.toml to DEBUG.toml and edit it
 
         # ### How create bash script for offline debugging from console
-        # 1. in DEBUG.ini set create_bash_script = True
-        # 2. call inkstitch.py extension from inkscape to create bash script named by bash_file_base in DEBUG.ini
+        # 1. in DEBUG.toml set create_bash_script = true
+        # 2. call inkstitch.py extension from inkscape to create bash script named by bash_file_base in DEBUG.toml
         # 3. run bash script from console
 
         # ### Enable debugging
@@ -119,7 +119,7 @@ class Debug(object):
         #      debug_type = vscode    - 'debugpy' for vscode editor
         #      debug_type = pycharm   - 'pydevd-pycharm' for pycharm editor
         #      debug_type = pydev     - 'pydevd' for eclipse editor
-        # 2. set debug_enable = True in DEBUG.ini
+        # 2. set debug_enable = true in DEBUG.toml
         #    or use command line argument -d in bash script
         #    or set environment variable INKSTITCH_DEBUG_ENABLE = True or 1 or yes or y
 
@@ -128,16 +128,16 @@ class Debug(object):
         #      profiler_type = cprofile    - 'cProfile' profiler
         #      profiler_type = profile     - 'profile' profiler
         #      profiler_type = pyinstrument- 'pyinstrument' profiler
-        # 2. set profile_enable = True in DEBUG.ini
+        # 2. set profile_enable = true in DEBUG.toml
         #    or use command line argument -p in bash script
         #    or set environment variable INKSTITCH_PROFILE_ENABLE = True or 1 or yes or y
 
         # ### Miscelaneous notes:
-        # - to disable debugger when running from inkscape set disable_from_inkscape = True in DEBUG.ini
-        # - to write debug output to file set debug_to_file = True in DEBUG.ini
-        # - to change various output file names see DEBUG.ini
-        # - to disable waiting for debugger to attach (vscode editor) set wait_attach = False in DEBUG.ini
-        # - to prefer inkscape version of inkex module over pip version set prefer_pip_inkex = False in DEBUG.ini
+        # - to disable debugger when running from inkscape set disable_from_inkscape = true in DEBUG.toml
+        # - to write debug output to file set debug_to_file = true in DEBUG.toml
+        # - to change various output file names see DEBUG.toml
+        # - to disable waiting for debugger to attach (vscode editor) set wait_attach = false in DEBUG.toml
+        # - to prefer inkscape version of inkex module over pip version set prefer_pip_inkex = false in DEBUG.toml
 
         # ###
 
@@ -146,7 +146,7 @@ class Debug(object):
         # 1. Install LiClipse (liclipse.com) -- no need to install Eclipse first
         # 2. Start debug server as described here: http://www.pydev.org/manual_adv_remote_debugger.html
         #    * follow the "Note:" to enable the debug server menu item
-        # 3. Copy and edit a file named "DEBUG.ini" from "DEBUG_template.ini" next to inkstitch.py in your git clone
+        # 3. Copy and edit a file named "DEBUG.toml" from "DEBUG_template.toml" next to inkstitch.py in your git clone
         #    and set debug_type = pydev
         # 4. Run any extension and PyDev will start debugging.
 
@@ -173,7 +173,7 @@ class Debug(object):
         #    configuration. Set "IDE host name:" to  "localhost" and "Port:" to 5678.
         #    You can leave the default settings for all other choices.
         #
-        # 3. Touch a file named "DEBUG.ini" at the top of your git repo, as above
+        # 3. Touch a file named "DEBUG.toml" at the top of your git repo, as above
         #    set debug_type = pycharm
         #
         # 4. Create a symbolic link in the Inkscape extensions directory to the
@@ -217,7 +217,7 @@ class Debug(object):
         #               }
         #           }
         #       ]
-        # 3. Touch a file named "DEBUG.ini" at the top of your git repo, as above
+        # 3. Touch a file named "DEBUG.toml" at the top of your git repo, as above
         #    set debug_type = vscode
         # 4. Start the debug server in VS Code by clicking on the debug icon in the left pane
         #    select "Python: Attach" from the dropdown menu and click on the green arrow.

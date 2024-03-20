@@ -1,6 +1,6 @@
 # logging/warning template for inkstitch
 # format: toml
-# enable config file in DEBUG.ini: log_config_file
+# enable config file in DEBUG.toml: log_config_file
 
 # warnings.simplefilter(action), default: "default"
 # - possible values: "error", "ignore", "always", "default", "module", "once"
