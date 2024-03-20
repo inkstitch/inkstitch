@@ -67,6 +67,8 @@
 import logging
 import warnings
 
+from .debug_utils import safe_get # mimic get method of dict with default value
+
 logger = logging.getLogger('inkstitch')
 
 # example of logger configuration for release mode:
@@ -152,17 +154,20 @@ def configure_logging(config, ini, SCRIPTDIR):
     logging.captureWarnings(warnings_capture)  # capture warnings to log file with level WARNING
     warnings_action = config.get('warnings_action', 'default').lower()
     warnings.simplefilter(warnings_action)      # set action for warnings: 'error', 'ignore', 'always', ...
-    disable_logging = ini.getboolean("LOGGING", "disable_logging", fallback=False)
+    disable_logging = safe_get(ini, "LOGGING", "disable_logging", default=False)
     if disable_logging:
         logger.warning("Logging is disabled by configuration in ini file.")
         logging.disable()  # globally disable all logging of all loggers
 
 
-# Evaluate filenames in logging configuration using myvars dictionary:
+# Evaluate filenames in logging configuration using myvars dictionary argument.
+# - for external configuration file (eg. LOGGING.toml) we cannot pass parameters such as the current directory.
+# - we do that by replacing %(SCRIPTDIR)s ->  script path in filenames
+# - example of usage:
 # "handlers": {
 #    "file": {
 #         "class": "logging.FileHandler",
-#         "filename": "%(SCRIPTDIR)s/xxx.log",  # replace %(SCRIPTDIR)s ->  script path
+#         "filename": "%(SCRIPTDIR)s/xxx.log",  # <--- replace %(SCRIPTDIR)s ->  script path
 #    }
 # }
 #    config - logging configuration

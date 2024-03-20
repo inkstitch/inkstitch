@@ -23,12 +23,14 @@ flaskserverport.json
 electron/yarn.lock
 
 # debug and profile files
-/DEBUG.ini
+/DEBUG.toml
 /LOGGING.toml
 /LOGGING[0-9]*.toml
 /debug*
 /.debug*
-# old debug files
+
+# old debug files - to be removed
+/DEBUG*.ini
 /DEBUG
 /PROFILE
 /profile*
