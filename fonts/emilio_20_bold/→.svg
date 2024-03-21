@@ -21,15 +21,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      showgrid="true"
-     inkscape:zoom="8.753659"
-     inkscape:cx="93.103924"
-     inkscape:cy="26.788798"
+     inkscape:zoom="5.5052309"
+     inkscape:cx="99.723338"
+     inkscape:cy="197.26693"
      inkscape:window-width="1920"
      inkscape:window-height="991"
      inkscape:window-x="-9"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g1216"
+     inkscape:current-layer="g1248"
      inkscape:document-units="mm"
      inkscape:snap-smooth-nodes="true"
      inkscape:snap-global="false"
@@ -470,7 +470,7 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-0"
-     style="display:inline"
+     style="display:none"
      id="g1216">
     <path
        d="m 20.5893,167.349 14.05895,20.365 77.34025,-0.1765 14.5835,-21.39"
@@ -586,7 +586,7 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
     <path
        id="autosatin17"
        style="display:inline;fill:none;stroke:#000000"
-       d="m 121,143 v 19.133 M 133,143 v 24.151"
+       d="m 121,143 v 19.133 M 133,143 v 24.151 m -15.8387,-22.3796 h 18.70948"
        sodipodi:nodetypes="cccc"
        inkscape:label="Colonne-0-9"
        inkstitch:satin_column="True"
@@ -1454,7 +1454,7 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
     <path
        id="autosatin57"
        style="display:inline;fill:none;stroke:#000000"
-       d="m 78,137 v 26 m 24,-26 v 26"
+       d="m 78,137 v 26 m 24,-26 v 26 m -27.34373,-4.06025 h 29.78985"
        inkstitch:satin_column="True"
        inkstitch:max_stitch_length_mm="7"
        inkstitch:pull_compensation_mm="0.3"
@@ -1600,8 +1600,8 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
     <path
        id="autosatin64"
        style="display:inline;fill:none;stroke:#000000"
-       d="M 127.5,112.5 134,106 h 12 m -25,13 h 12 l 6.5,-6.5"
-       sodipodi:nodetypes="cccccc"
+       d="M 127.5,112.5 134,106 h 12 m -25,13 h 12 l 6.5,-6.5 m -5.26403,-9.87033 -1.45317,20.52593"
+       sodipodi:nodetypes="cccccccc"
        inkstitch:satin_column="True"
        inkstitch:max_stitch_length_mm="7"
        inkstitch:pull_compensation_mm="0.3"
@@ -1638,7 +1638,7 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
     <path
        id="autosatin66"
        style="display:inline;fill:none;stroke:#000000"
-       d="m 121,137 v 26 m 25,-25.632 v 25.699"
+       d="m 121,137 v 26 m 25,-25.632 v 25.699 m -27.93047,-4.3089 h 29.97149"
        inkstitch:satin_column="True"
        inkstitch:max_stitch_length_mm="7.3"
        inkstitch:pull_compensation_mm="0.3"
@@ -2754,7 +2754,7 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
     <path
        id="autosatin112"
        style="display:inline;fill:none;stroke:#000000"
-       d="m 26,164 12,17 h 71 l 12,-17 m -107,5 18,25 h 83 l 18,-25"
+       d="m 26,164 12,17 h 71 l 12,-17 m -107,5 18,25 h 83 l 18,-25 m -56.890567,8.10429 v 19.43606"
        sodipodi:nodetypes="cccccccc"
        inkstitch:satin_column="True"
        inkstitch:max_stitch_length_mm="6"
@@ -2984,14 +2984,14 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
     <path
        id="autosatin125"
        style="display:inline;fill:none;stroke:#000000"
-       d="M 63,48.5 54,55 H 48 M 72,42 H 61 l -6.5,6.5"
+       d="M 63,48.5 54,55 H 48 M 72,42 H 61 l -6.5,6.5 M 63.030963,38.872121 53.222109,57.5816"
        inkstitch:satin_column="True"
        inkstitch:max_stitch_length_mm="6"
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
        inkstitch:zigzag_underlay="True"
-       sodipodi:nodetypes="cccccc"
+       sodipodi:nodetypes="cccccccc"
        inkscape:label="Colonne-A-13"
        inkstitch:reverse_rails="none" />
     <path
@@ -3060,14 +3060,14 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
     <path
        id="autosatin129"
        style="display:inline;fill:none;stroke:#000000"
-       d="M 122.5,48.5 116,42 h -10 m 23,13 h -6 l -8.5,-6.5"
+       d="M 122.5,48.5 116,42 h -10 m 23,13 h -6 l -8.5,-6.5 m -0.78996,-10.354461 10.53543,19.254416"
        inkstitch:satin_column="True"
        inkstitch:max_stitch_length_mm="6"
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
        inkstitch:zigzag_underlay="True"
-       sodipodi:nodetypes="cccccc"
+       sodipodi:nodetypes="cccccccc"
        inkscape:label="Colonne-A-17"
        inkstitch:reverse_rails="none" />
     <path
@@ -3534,7 +3534,7 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
     <path
        id="autosatin152"
        style="display:inline;fill:none;stroke:#000000"
-       d="m 90,126 v 24 l 6,6.5 m 0,-24 6,6.5 v 24 m -14.468401,-13.00328 18.162191,0.16589 m -18.60657,-5.14684 h 18.08617"
+       d="m 90,126 v 24 l 6,6.5 m 0,-24 6,6.5 v 24 m -14.468401,-13.00328 18.162191,0.16589 m -18.60657,-5.14684 h 18.08617 m -18.528522,1.93538 h 19.980992"
        sodipodi:nodetypes="cccccccccc"
        inkstitch:satin_column="True"
        inkstitch:max_stitch_length_mm="6"
@@ -5125,8 +5125,8 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
     <path
        id="autosatin227"
        style="display:inline;fill:none;stroke:#000000"
-       d="M 119,112 H 58 m 55,6.5 -6,6.5 -36.279347,0.27935 L 64.5,118.5 m 42.46669,10.29709 0.19089,-21.76138 m -20.197259,21.72495 v -25.75912"
-       sodipodi:nodetypes="cccccccccc"
+       d="M 119,112 H 58 m 55,6.5 -6,6.5 -36.279347,0.27935 L 64.5,118.5 m 42.46669,10.29709 0.19089,-21.76138 m -19.833968,20.45343 -0.363291,-18.85659 m 9.130109,0.17306 v 18.52783"
+       sodipodi:nodetypes="cccccccccccc"
        inkstitch:satin_column="True"
        inkstitch:max_stitch_length_mm="6"
        inkstitch:pull_compensation_mm="0.3"
@@ -5614,7 +5614,7 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
     <path
        id="autosatin252"
        style="display:inline;fill:none;stroke:#000000"
-       d="m 100.5,156.5 6.5,6.5 v 18 l -6.5,6.5 M 94,150 v 44 m 18.48433,-13.04097 -24.152037,0.18042 m -1.073927,-9.32949 h 25.712984"
+       d="m 100.5,156.5 6.5,6.5 v 18 l -6.5,6.5 M 94,150 v 44 m 18.48433,-13.04097 -24.152037,0.18042 m -1.073927,-9.32949 h 25.712984 m -24.510028,3.65952 h 20.889228"
        sodipodi:nodetypes="cccccccccc"
        inkstitch:satin_column="True"
        inkstitch:max_stitch_length_mm="6"
@@ -6475,8 +6475,8 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
     <path
        id="autosatin293"
        style="display:inline;fill:none;stroke:#000000"
-       d="M 107.5,48.5 97,55 h -3 m 24,-13 h -11 l -6.5,6.5"
-       sodipodi:nodetypes="cccccc"
+       d="M 107.5,48.5 97,55 h -3 m 24,-13 h -11 l -6.5,6.5 m 9.57713,-9.627879 -16.893027,20.525933"
+       sodipodi:nodetypes="cccccccc"
        inkstitch:satin_column="True"
        inkstitch:max_stitch_length_mm="6"
        inkstitch:pull_compensation_mm="0.3"
@@ -6551,8 +6551,8 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
     <path
        id="autosatin297"
        style="display:inline;fill:none;stroke:#000000"
-       d="M 157.5,48.5 151,42 h -11 m 24,13 h -17 l -3.5,-6.5"
-       sodipodi:nodetypes="cccccc"
+       d="M 157.5,48.5 151,42 h -11 m 24,13 h -17 l -3.5,-6.5 m 8.17393,-9.446233 -5.81265,18.527832"
+       sodipodi:nodetypes="cccccccc"
        inkstitch:satin_column="True"
        inkstitch:max_stitch_length_mm="6"
        inkstitch:pull_compensation_mm="0.3"
@@ -8729,7 +8729,7 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Q"
-     style="display:none"
+     style="display:inline"
      id="g1248">
     <path
        d="M 20.9516,167.41 C 19.152474,164.71059 20.350532,161.19889 20,158.12658 20.004432,117.93099 19.991103,77.735356 20.0067,37.5398 21.931854,33.576647 25.037258,30.217763 27.42129,26.486679 29.885183,23.180281 32.009534,19.5812 34.7411,16.5 c 25.5423,0.03925 51.097169,-0.07862 76.63158,0.05921 1.83595,0.535703 2.42802,3.050595 3.74204,4.416282 3.86502,5.719988 8.12728,11.269339 11.74548,17.094433 0.32404,12.700029 0.048,25.455435 0.1398,38.176898 -0.0447,29.585647 0.0897,59.179397 -0.0671,88.759977 0.0754,0.4063 -0.20596,0.69807 -0.36985,1.0302"
@@ -8866,7 +8866,7 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
     <path
        id="autosatin394"
        style="display:inline;fill:none;stroke:#000000"
-       d="m 87,180 h 22 l 10.834,-15.349 M 97.5,187 108,194 h 7 l 16.486,-23.813 m -14.686,-4.166 12.657,9.4 m -19.023,-0.148 12.361,9.993"
+       d="m 87,180 h 22 l 10.834,-15.349 M 97.5,187 108,194 h 7 l 16.486,-23.813 m -14.686,-4.166 12.657,9.4 m -19.023,-0.148 12.361,9.993 m -9.99319,-16.33575 13.44176,11.6253"
        sodipodi:nodetypes="ccccccccccc"
        inkstitch:satin_column="True"
        inkstitch:max_stitch_length_mm="6"
