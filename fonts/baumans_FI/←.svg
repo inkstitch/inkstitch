@@ -20,13 +20,13 @@
      units="mm"
      scale-x="1"
      inkscape:document-rotation="0"
-     inkscape:current-layer="g1198"
+     inkscape:current-layer="g1270"
      inkscape:window-maximized="1"
      inkscape:window-y="-8"
      inkscape:window-x="-8"
-     inkscape:cy="87.565473"
-     inkscape:cx="57.160795"
-     inkscape:zoom="6.5779351"
+     inkscape:cy="65.024465"
+     inkscape:cx="36.017268"
+     inkscape:zoom="8.273809"
      showgrid="true"
      id="namedview217"
      inkscape:window-height="1017"
@@ -971,7 +971,7 @@ http://scripts.sil.org/OFL
      transform="translate(0,-24.5)"
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-2"
-     style="display:inline"
+     style="display:none"
      id="g1202">
     <path
        id="autosatin16-6"
@@ -1846,7 +1846,7 @@ http://scripts.sil.org/OFL
      transform="translate(0,-24.5)"
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-E"
-     style="display:none"
+     style="display:inline"
      id="g1270">
     <g
        id="g1"
@@ -1904,9 +1904,10 @@ http://scripts.sil.org/OFL
          id="autosatinrun5"
          style="opacity:0.998;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
          inkscape:label="Points droits pour auto-remplissage satin 5"
-         d="m 26.378,105.315 c -1.306696,-3.50836 4.646057,-1.11339 6.790887,-1.815 9.943704,0 19.887409,0 29.831113,0 0,-1.8517 0,-3.7034 0,-5.5551"
+         d="m 26.378,105.315 c -1.306696,-3.50836 4.646057,-1.11339 6.790887,-1.815 L 54.539568,103.74173 63,97.9449"
          inkstitch:ties="3"
-         inkstitch:running_stitch_length_mm="1.5" />
+         inkstitch:running_stitch_length_mm="1.5"
+         sodipodi:nodetypes="cccc" />
       <path
          inkstitch:zigzag_underlay_inset_mm="0.25"
          inkstitch:zigzag_underlay="True"
@@ -2223,7 +2224,8 @@ http://scripts.sil.org/OFL
        inkstitch:pull_compensation_mm="0.1"
        inkscape:label="Auto-remplissage satin 2"
        inkstitch:ties="3"
-       inkstitch:reverse_rails="none" />
+       inkstitch:reverse_rails="none"
+       inkstitch:short_stitch_distance_mm="0.18" />
     <path
        d="m 24.0146,154.4 c 0.346833,2.53333 0.693667,5.06667 1.0405,7.6"
        style="fill:none;stroke:#000000;stroke-width:1;stroke-dasharray:3, 1"
@@ -7296,8 +7298,9 @@ http://scripts.sil.org/OFL
        id="autosatinrun38"
        style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
        inkscape:label="Points droits pour auto-remplissage satin 4"
-       d="m 17.616029,190.4694 c 4.092721,-9.31687 -0.01547,-19.65577 0.988614,-29.43166 0.424334,-25.69463 2.100859,-51.3569 2.267493,-77.056958 M 18.16421,53.9506 c -0.08191,5.430505 0.08111,10.861401 -1.1e-4,16.2919"
-       inkstitch:running_stitch_length_mm="1.5" />
+       d="m 17.616029,190.4694 c 4.092721,-9.31687 -0.01547,-19.65577 0.988614,-29.43166 0.424334,-25.69463 2.100859,-51.3569 2.267493,-77.056958 M 18.1641,70.2425 c 0.08122,-5.430499 -0.0818,-10.861395 1.1e-4,-16.2919"
+       inkstitch:running_stitch_length_mm="1.5"
+       sodipodi:nodetypes="ccccc" />
     <path
        id="autosatin44-5"
        style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -8093,9 +8096,10 @@ http://scripts.sil.org/OFL
        id="autosatinrun13-7"
        style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-dasharray:0.5, 0.5"
        inkscape:label="Points droits pour auto-remplissage satin 3"
-       d="m 11.1445,102.415 c -0.02053,-3.51083 0.0062,-7.021756 0.01347,-10.5326 m 0.17122,-41.6887 c 0.02098,-6.138246 0.05904,-12.276506 0.05553,-18.4148"
+       d="m 11.1445,102.415 c -0.02053,-3.51083 0.0062,-7.021756 0.01347,-10.5326"
        inkstitch:ties="3"
-       inkstitch:running_stitch_length_mm="1.5" />
+       inkstitch:running_stitch_length_mm="1.5"
+       sodipodi:nodetypes="cc" />
     <path
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="False"
@@ -8319,9 +8323,10 @@ http://scripts.sil.org/OFL
        id="path22"
        style="opacity:0.998;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
        inkscape:label="Points droits pour auto-remplissage satin 5"
-       d="m 3.14121,43.421913 c 12.333333,0 24.666667,0 37,0"
+       d="m 3.14121,43.421913 h 27.661466 c 3.112845,0 0.688383,-2.633643 9.096807,-6.164029"
        inkstitch:ties="3"
-       inkstitch:running_stitch_length_mm="1.5" />
+       inkstitch:running_stitch_length_mm="1.5"
+       sodipodi:nodetypes="ccc" />
     <path
        inkstitch:zigzag_underlay_inset_mm="0.25"
        inkstitch:zigzag_underlay="True"
@@ -8423,9 +8428,10 @@ http://scripts.sil.org/OFL
        id="path128"
        style="opacity:0.998;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
        inkscape:label="Points droits pour auto-remplissage satin 5"
-       d="m 3.141191,43.176466 c 12.333333,0 24.666667,0 37,0"
+       d="M 3.141191,43.176466 H 31.044403 L 39.657738,37.1333"
        inkstitch:ties="3"
-       inkstitch:running_stitch_length_mm="1.5" />
+       inkstitch:running_stitch_length_mm="1.5"
+       sodipodi:nodetypes="ccc" />
     <path
        inkstitch:zigzag_underlay_inset_mm="0.25"
        inkstitch:zigzag_underlay="True"
@@ -8549,9 +8555,10 @@ http://scripts.sil.org/OFL
        id="path140"
        style="display:inline;opacity:0.998;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
        inkscape:label="Points droits pour auto-remplissage satin 5"
-       d="m 2.89571,45.427923 c 12.333333,0 24.666667,0 37,0"
+       d="m 2.89571,45.427923 h 29.357326 l 7.159221,-5.801439"
        inkstitch:ties="3"
-       inkstitch:running_stitch_length_mm="1.5" />
+       inkstitch:running_stitch_length_mm="1.5"
+       sodipodi:nodetypes="ccc" />
     <path
        inkstitch:zigzag_underlay_inset_mm="0.25"
        inkstitch:zigzag_underlay="True"
@@ -8586,7 +8593,7 @@ http://scripts.sil.org/OFL
   </g>
   <g
      id="g42"
-     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
+     style="display:inline;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      inkscape:label="GlyphLayer-Ë"
      inkscape:groupmode="layer"
      transform="translate(22.9815,27.4276)">
@@ -8599,7 +8606,7 @@ http://scripts.sil.org/OFL
        inkstitch:satin_column="True"
        style="display:inline;opacity:0.998;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 51.89569,96.195125 c -16.333333,0 -32.666667,0 -49,0 -3.58762233,3.425772 -7.1752447,6.851545 -10.762867,10.277315 m 59.762867,3.72268 c -21.333333,0 -42.6666667,0 -64,0 M 7.13191,93.640005 C 7.12454,99.979187 7.11717,106.31837 7.1098,112.65755"
-       id="path4"
+       id="path8"
        inkscape:label="Auto-remplissage satin 1"
        inkstitch:reverse_rails="none" />
     <path
@@ -8685,9 +8692,10 @@ http://scripts.sil.org/OFL
        id="path14"
        style="display:inline;opacity:0.998;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
        inkscape:label="Points droits pour auto-remplissage satin 5"
-       d="m 2.89569,51.695126 c 12.333333,0 24.666667,0 37,0"
+       d="m 2.89569,51.695126 h 27.665259 l 9.093014,-6.164029"
        inkstitch:ties="3"
-       inkstitch:running_stitch_length_mm="1.5" />
+       inkstitch:running_stitch_length_mm="1.5"
+       sodipodi:nodetypes="ccc" />
     <path
        inkstitch:zigzag_underlay_inset_mm="0.25"
        inkstitch:zigzag_underlay="True"
