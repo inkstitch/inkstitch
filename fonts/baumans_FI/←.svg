@@ -40,7 +40,7 @@
      bordercolor="#666666"
      pagecolor="#ffffff"
      inkscape:snap-global="false"
-     showguides="false"
+     showguides="true"
      inkscape:guide-bbox="true"
      inkscape:snap-midpoints="true"
      inkscape:showpageshadow="2"
@@ -1904,10 +1904,10 @@ http://scripts.sil.org/OFL
          id="autosatinrun5"
          style="opacity:0.998;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
          inkscape:label="Points droits pour auto-remplissage satin 5"
-         d="m 26.378,105.315 c -1.306696,-3.50836 4.646057,-1.11339 6.790887,-1.815 L 54.539568,103.74173 63,97.9449"
+         d="m 26.378,105.315 c -1.306696,-3.50836 4.646057,-1.11339 6.790887,-1.815 0,0 14.553778,2.31089 21.370681,0.24173 C 57.810804,102.74879 63,97.9449 63,97.9449"
          inkstitch:ties="3"
          inkstitch:running_stitch_length_mm="1.5"
-         sodipodi:nodetypes="cccc" />
+         sodipodi:nodetypes="ccac" />
       <path
          inkstitch:zigzag_underlay_inset_mm="0.25"
          inkstitch:zigzag_underlay="True"
