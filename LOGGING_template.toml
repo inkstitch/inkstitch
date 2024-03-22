@@ -13,19 +13,29 @@ warnings_capture = true
 ### mandatory, must be an integer and 1
 version = 1
 
-### false - to keep existing loggers, not specified here
-### true  - to disable all loggers not specified here
+### disable loggers not specified here true/false - may be overrided by root logger
 disable_existing_loggers = false
 
+### define the loggers, handlers, formatters, filters
 [filters]
 
 [formatters.simple]
     format = "%(asctime)s [%(levelname)s]: %(filename)s.%(funcName)s: %(message)s"
 
+[formatters.debug]
+    format = "%(asctime)s %(message)s"
+
+
 [handlers.file_inkstitch]
     class = "logging.FileHandler"
     formatter = "simple"
     filename = "%(SCRIPTDIR)s/logs/inkstitch.log"
+    mode = "w"
+
+[handlers.file_inkstitch_debug]
+    class = "logging.FileHandler"
+    formatter = "debug"
+    filename = "%(SCRIPTDIR)s/logs/inkstitch_debug.log"
     mode = "w"
 
 [handlers.file_root]
@@ -34,13 +44,25 @@ disable_existing_loggers = false
     filename = "%(SCRIPTDIR)s/logs/inkstitch_root.log"
     mode = "w"
 
-### inkstitch logger
+
+### used for:  logger = logging.getLogger("inkstitch")
+###            logger = logging.getLogger("inkstitch.xxx") where xxx is not specified in this config file
+### - highest level logger for all 'inkstitch.*' loggers
 [loggers.inkstitch]
     level = "DEBUG"
     handlers = [ "file_inkstitch",]
     propagate = false
 
-### loggers not specified here will be managed by the root logger
+### used for:  logger = logging.getLogger("inkstitch.debug")
+### - use quotes for the logger name with dots, otherwise it will be treated as a table subsection
+###     - [loggers.inkstitch.debug] is not the same as [loggers.'inkstitch.debug']
+### - to disable the logger, comment out handlers
+[loggers.'inkstitch.debug']
+    level = "DEBUG"
+    handlers = [ "file_inkstitch_debug",]
+    propagate = false
+
+### root - loggers not specified in this config file will be managed by this logger
 [loggers.root]
     level = "DEBUG"
     handlers = [ "file_root",]

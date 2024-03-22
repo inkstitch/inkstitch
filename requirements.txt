@@ -13,7 +13,10 @@ appdirs
 numpy
 jinja2>2.9
 requests
-toml
+
+# toml release 0.10.2 still buggy for heterogenous arrays
+# tomli is built as tomllib in python 3.11 and higher
+tomli
 
 # colormath - last official release: 3.0.0
 # we need already submitted fixes - so let's grab them from the github repository
