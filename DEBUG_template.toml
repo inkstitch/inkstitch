@@ -23,20 +23,11 @@
 ### enable debugger, see cmd line arg -d, default: false
 # debug_enable = true
 
-### debug log output to file even if debugger is not enabled, default: false
-# debug_to_file = true
-
 ### disable debugger when calling from inkscape, default: false
 # disable_from_inkscape = true
 
 ### wait for debugger to attach (vscode), default: true
 # wait_attach = false
-
-### debug log file, default: "debug.log"
-# debug_log_file = "debug.log"
-
-### debug file for graph related things, default: "debug.svg"
-# debug_svg_file = "debug.svg"
 
 ### creation of bash script, default: false
 # create_bash_script = true
@@ -55,3 +46,4 @@
 
 ### base name for profile output files, default: "debug_profile"
 # profile_file_base = "logs/debug_profile"
+

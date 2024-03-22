@@ -3,20 +3,23 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-import os
-import sys
-from pathlib import Path  # to work with paths as objects
-
 # this file is without: import inkex
 # - we need dump argv and sys.path as is on startup from inkscape
 #   - later sys.path may be modified that influences importing inkex (see prefere_pip_inkex)
+
+import os
+import sys
+from pathlib import Path  # to work with paths as objects
+import logging
+
+logger = logging.getLogger("inkstitch")
 
 
 # safe_get - get value from nested dictionary, return default if key does not exist
 # - to read nested values from dict - mimic get method of dict with default value
 #   example: safe_get({'a': {'b': 1}},   'a', 'b') -> 1
 #            safe_get({'a': {'b': 1}},   'a', 'c', default=2) -> 2
-def safe_get(dictionary:dict, *keys, default=None):
+def safe_get(dictionary: dict, *keys, default=None):
     for key in keys:
         if key not in dictionary:
             return default
@@ -136,7 +139,6 @@ def reorder_sys_path():
     '''
     change sys.path to prefer pip installed inkex over inkscape bundled inkex
     '''
-
     # see static void set_extensions_env() in inkscape/src/inkscape-main.cpp
     # what we do:
     # - move inkscape extensions path to the end of sys.path
@@ -168,10 +170,6 @@ def resolve_debug_type(ini: dict):
     debug_type = safe_get(ini, "DEBUG", "debug_type", default="none")  # debugger type vscode, pycharm, pydevd
     if not debug_enable:
         debug_type = 'none'
-
-    debug_to_file = safe_get(ini, "DEBUG", "debug_to_file", default=False)  # write debug output to file
-    if debug_to_file and debug_type == 'none':
-        debug_type = 'file'
 
     return debug_type
 
@@ -209,7 +207,9 @@ def profile(profiler_type, profile_dir: Path, ini: dict, extension, remaining_ar
 
     # create directory if not exists
     dirname = profile_file_path.parent
-    dirname.mkdir(parents=True, exist_ok=True)
+    if not dirname.exists():
+        logger.debug(f"Creating directory for profile output: {dirname}")
+        dirname.mkdir(parents=True, exist_ok=True)
 
     if profiler_type == 'cprofile':
         with_cprofile(extension, remaining_args, profile_file_path)
@@ -221,7 +221,7 @@ def profile(profiler_type, profile_dir: Path, ini: dict, extension, remaining_ar
         raise ValueError(f"unknown profiler type: '{profiler_type}'")
 
 
-def with_cprofile(extension, remaining_args, profile_file_path:Path):
+def with_cprofile(extension, remaining_args, profile_file_path: Path):
     '''
     profile with cProfile
     '''
@@ -242,7 +242,7 @@ def with_cprofile(extension, remaining_args, profile_file_path:Path):
           file=sys.stderr)
 
 
-def with_profile(extension, remaining_args, profile_file_path:Path):
+def with_profile(extension, remaining_args, profile_file_path: Path):
     '''
     profile with profile
     '''
@@ -261,7 +261,7 @@ def with_profile(extension, remaining_args, profile_file_path:Path):
           file=sys.stderr)
 
 
-def with_pyinstrument(extension, remaining_args, profile_file_path:Path):
+def with_pyinstrument(extension, remaining_args, profile_file_path: Path):
     '''
     profile with pyinstrument
     '''
