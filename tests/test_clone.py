@@ -229,3 +229,21 @@ class CloneElementTest(TestCase):
         with clone.clone_elements() as elements:
             self.assertEqual(len(elements), 1)
             self.assertAngleAlmostEqual(element_fill_angle(elements[0]), 42)
+
+    def test_angle_manually_flipped(self):
+        root: SvgDocumentElement = svg()
+        rect = root.add(Rectangle(attrib={
+            "width": "10",
+            "height": "10",
+            INKSTITCH_ATTRIBS["angle"]: "30"
+        }))
+        use = root.add(Use())
+        use.href = rect
+        use.set('transform', Transform().add_rotate(20))
+        use.set(INKSTITCH_ATTRIBS["flip_angle"], True)
+
+        clone = Clone(use)
+        self.assertTrue(clone.flip_angle)
+        with clone.clone_elements() as elements:
+            self.assertEqual(len(elements), 1)
+            self.assertAngleAlmostEqual(element_fill_angle(elements[0]), -10)

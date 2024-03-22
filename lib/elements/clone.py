@@ -58,7 +58,8 @@ class Clone(EmbroideryElement):
     @property
     @param('flip_angle',
            _('Flip angle'),
-           tooltip=_("Flip automatically calculated angle if it appears to be wrong."),
+           tooltip=_(
+               "Flip automatically calculated angle if it appears to be wrong."),
            type='boolean')
     @cache
     def flip_angle(self):
@@ -115,24 +116,29 @@ class Clone(EmbroideryElement):
             # In a try block so we can ensure that the cloned_node is removed from the tree in the event of an exception.
             # Otherwise, it might be left around on the document if we throw for some reason.
 
-            cloned_node.set('transform', Transform(self.node.get('transform')) @ Transform(cloned_node.get('transform')))
+            cloned_node.set('transform', Transform(self.node.get(
+                'transform')) @ Transform(cloned_node.get('transform')))
 
             if self.clone_fill_angle is None:
                 # Calculate the rotation angle to apply to the fill of cloned elements, if not explicitly set
                 source_transform = source_node.composed_transform()
                 cloned_transform = cloned_node.composed_transform()
                 angle_transform = cloned_transform @ -source_transform
-                angle_transform = Transform((angle_transform.a, angle_transform.b, angle_transform.c, angle_transform.d, 0.0, 0.0))
+                angle_transform = Transform(
+                    (angle_transform.a, angle_transform.b, angle_transform.c, angle_transform.d, 0.0, 0.0))
 
             elements = self.clone_to_elements(cloned_node)
             for element in elements:
                 # We manipulate the element's node directly here instead of using get/set param methods, because otherwise
                 # we run into issues due to those methods' use of caching not updating if the underlying param value is changed.
 
-                if self.clone_fill_angle is None:  # Normally, rotate the cloned element's angle by the clone's rotation.
-                    element_angle = float(element.node.get(INKSTITCH_ATTRIBS['angle'], 0))
+                # Normally, rotate the cloned element's angle by the clone's rotation.
+                if self.clone_fill_angle is None:
+                    element_angle = float(element.node.get(
+                        INKSTITCH_ATTRIBS['angle'], 0))
                     # We have to negate the angle because SVG/Inkscape's definition of rotation is clockwise, while Inkstitch uses counter-clockwise
-                    fill_vector = (angle_transform @ Transform(f"rotate(${-element_angle})")).apply_to_point((1, 0))
+                    fill_vector = (
+                        angle_transform @ Transform(f"rotate(${-element_angle})")).apply_to_point((1, 0))
                     # Same reason for negation here.
                     element_angle = -degrees(fill_vector.angle)
                 else:  # If clone_fill_angle is specified, override the angle instead.
@@ -175,19 +181,3 @@ def is_clone(node):
 
 def get_clone_source(node):
     return node.href
-
-
-def angle_for_transform(t: Transform) -> float:
-    # Calculate a rotational angle, in degrees, for a transformation matrix
-
-    # Strip out the translation component from the matrix
-    t = Transform((t.a, t.b, t.c, t.d, 0, 0))
-    if is_transform_flipped(t):
-        t = t.add_scale(-1, 1)
-    return degrees(t.apply_to_point((1, 0)).angle)
-
-
-def is_transform_flipped(t: Transform) -> bool:
-    # Determine if the transform represents a "flipped" scaling.
-    # This is done by calculating if the determinant of the scaling/rotation part of the matrix would be negative
-    return t.a*t.d < t.b*t.c
