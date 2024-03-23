@@ -1,7 +1,7 @@
 ---
 title: "New Features, Updates and Fixes for Ink/Stitch after the release of v3.0.1"
 permalink: /upcoming/
-last_modified_at: 2024-03-11
+last_modified_at: 2024-03-23
 sidebar:
   nav: pages
 toc: true
@@ -119,6 +119,7 @@ This extension informs about various parameters of selected stitch elements.
 `Troubleshoot > Troubleshoot`
 
 * Add warning for satins with two rails and two rungs (possible detection conflict) ([#2734](https://github.com/inkstitch/inkstitch/pull/2734))
+* Add no rung warning ([#2791](https://github.com/inkstitch/inkstitch/pull/2791))
 * Add warning for elements with stroke and fill color ([#2761](https://github.com/inkstitch/inkstitch/pull/2761))
 
 ## Fonts
@@ -126,6 +127,7 @@ This extension informs about various parameters of selected stitch elements.
 ### New fonts
 
 * Chicken Scratch ([#2703](https://github.com/inkstitch/inkstitch/pull/2703))
+* Millimarif-bold20 ([#2780](https://github.com/inkstitch/inkstitch/pull/2780))
 * Violin Serif ([#2703](https://github.com/inkstitch/inkstitch/pull/2703))
 
 ### Font Updates
@@ -136,6 +138,8 @@ This extension informs about various parameters of selected stitch elements.
 
 All fonts have been reworked to be more stable when transformed.
 
+([#2784](https://github.com/inkstitch/inkstitch/pull/2784))
+([#2769](https://github.com/inkstitch/inkstitch/pull/2769))
 ([#2762](https://github.com/inkstitch/inkstitch/pull/2762))
 ([#2749](https://github.com/inkstitch/inkstitch/pull/2749))
 ([#2744](https://github.com/inkstitch/inkstitch/pull/2744))
