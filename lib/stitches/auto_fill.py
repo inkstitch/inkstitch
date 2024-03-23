@@ -105,6 +105,7 @@ def auto_fill(shape,
         return fallback(shape, running_stitch_length, running_stitch_tolerance)
 
     path = find_stitch_path(fill_stitch_graph, travel_graph, starting_point, ending_point)
+    path = fill_gaps(path, 2)
     result = path_to_stitches(shape, path, travel_graph, fill_stitch_graph, angle, row_spacing,
                               max_stitch_length, running_stitch_length, running_stitch_tolerance,
                               staggers, skip_last, underpath, enable_random, random_sigma, random_seed)
@@ -639,6 +640,49 @@ def pick_edge(edges):
             return source, node, key
 
     return list(edges)[0]
+
+
+def fill_gaps(path, num_rows):
+    path = remove_simple_loops(path)
+
+    if len(path) < 3:
+        return path
+
+    new_path = []
+    last_edge = None
+    rows_in_section = 0
+
+    for edge in path:
+        if last_edge:
+            if edge.is_segment() and last_edge.is_outline():
+                rows_in_section += 1
+            if edge.is_outline() and last_edge.is_outline():
+                # we hit the end of a section of alternating segment-outline-segment-outline
+                if rows_in_section > 3:
+                    # do the gap fill thing
+                    new_path.extend(new_path[-4:-1])
+                rows_in_section = 0
+        last_edge = edge
+        new_path.append(edge)
+
+    # need to not do it right at the end, too
+
+    return new_path
+
+
+def remove_simple_loops(path):
+    if len(path) < 2:
+        return path
+
+    new_path = []
+
+    for edge in path:
+        if new_path and edge[1] == new_path[-1][0]:
+            new_path.pop()
+        else:
+            new_path.append(edge)
+
+    return new_path
 
 
 def collapse_sequential_outline_edges(path, graph):
