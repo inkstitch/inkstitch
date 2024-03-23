@@ -22,11 +22,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="10.715962"
-     inkscape:cx="12.038117"
-     inkscape:cy="74.794966"
+     inkscape:zoom="4.7654298"
+     inkscape:cx="28.329029"
+     inkscape:cy="75.544078"
      inkscape:document-units="px"
-     inkscape:current-layer="g213"
+     inkscape:current-layer="g5355"
      showgrid="false"
      units="px"
      inkscape:snap-global="false"
@@ -234,9 +234,8 @@
        id="path299"
        inkstitch:ties="3" />
     <path
-       sodipodi:nodetypes="csssscccccssccccccc"
        inkscape:connector-curvature="0"
-       d="m 14.528892,42.78307 1.937499,-0.04464 c 0.999734,-0.02305 1.5,0.500002 1.5,1.5 v 12.500002 c 0,0.999999 -0.500001,1.5 -1.5,1.5 H 14.487809 M 14.23424,29.649147 c 2.000001,0 6.065477,0.455939 7.732143,1.189288 1.733332,0.666668 3.233332,1.666666 4.5,3 1.266667,1.266668 2.233334,2.799999 2.900001,4.599999 0.733349,1.733334 1.100001,3.666668 1.100001,5.799999 v 11.500003 c 0,1.666666 -0.333316,3 -1.000002,3.999999 -0.6,0.933335 -1.266667,1.666666 -1.999998,2.199999 -0.866668,0.6 -1.866667,1.033319 -3,1.300002 l -1.006787,1.376342 H 14.273532 M 16.26227,46.368889 32.045903,45.990082"
+       d="m 14.528892,42.78307 c 1.181856,0.02778 3.240089,-0.503075 3.401286,1.235721 0.0905,1.930233 -0.0085,3.870708 0.03336,5.806754 0.01118,2.492959 0.03494,4.986907 -0.05349,7.478856 -0.486674,1.384821 -2.312631,0.829243 -3.422236,0.934031 M 14.23424,29.649147 c 3.954057,0.117893 8.267042,0.582084 11.344772,3.33441 3.609425,3.069731 5.188436,7.993895 4.88005,12.633567 -0.01367,3.868987 0.08635,7.744311 -0.07612,11.609088 -0.432771,2.920165 -2.86585,5.367194 -5.733399,5.967533 -0.645296,1.028331 -1.793885,1.805568 -3.037047,1.421033 -2.446311,0 -4.892622,0 -7.338933,0 M 16.26227,46.368889 c 5.261211,-0.126269 10.522422,-0.252538 15.783633,-0.378807"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
        id="path300"
        inkstitch:contour_underlay="True"
@@ -256,7 +255,7 @@
     <path
        id="path306"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
-       d="m 15.456188,29.738427 c 0.01535,13.833328 0.0102,27.666665 0.01019,41.499999 M 2.466341,29.738427 v 41.499999"
+       d="m 15.456188,29.738427 c 0.01535,13.833328 0.0102,27.666665 0.01019,41.499999 M 2.466341,29.738427 V 71.238426 M -0.44514775,67.21731 H 18.547823"
        inkstitch:satin_column="True"
        inkstitch:ties="3"
        inkstitch:contour_underlay="True"
@@ -264,13 +263,14 @@
        inkstitch:max_stitch_length_mm="7" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.944882;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:5.3303, 2.66515;paint-order:markers stroke fill"
-       d="m 15.4664,71.2384 -1.618,-0.5387 -4.37318,14.9417 5.46648,13.1195 -0.8761,0.9775"
+       d="M 15.4664,71.2384 12.883913,76.041473 9.47522,85.6414 12.715961,96.757735 14.0656,99.7384"
        id="path308"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       sodipodi:nodetypes="ccccc" />
     <path
        id="path307"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
-       d="m 15.577382,99.73843 c -0.08111,-9.499957 -0.15874,-18.999516 -0.111,-28.500004 M 2.466341,99.73843 V 71.238426"
+       d="m 15.577382,99.73843 c -0.08111,-9.499957 -0.15874,-18.999516 -0.111,-28.500004 M 2.466341,99.73843 V 71.238426 M -1.4838258,94.964852 H 18.39944"
        inkstitch:satin_column="True"
        inkstitch:ties="3"
        inkstitch:contour_underlay="True"
@@ -332,7 +332,7 @@
     <path
        id="path157"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
-       d="m 15.456188,29.738427 c 0.01535,13.833328 0.0102,27.666665 0.01019,41.499999 M 2.466341,29.738427 v 41.499999"
+       d="m 15.456188,29.738427 c 0.01535,13.833328 0.0102,27.666665 0.01019,41.499999 M 2.466341,29.738427 V 71.238426 M -1.4838258,32.347403 H 18.102675"
        inkstitch:satin_column="True"
        inkstitch:ties="3"
        inkstitch:contour_underlay="True"
@@ -346,7 +346,7 @@
     <path
        id="path159"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
-       d="m 15.577382,99.73843 c -0.08111,-9.499957 -0.15874,-18.999516 -0.111,-28.500004 M 2.466341,99.73843 V 71.238426"
+       d="m 15.577382,99.73843 c -0.08111,-9.499957 -0.15874,-18.999516 -0.111,-28.500004 M 2.466341,99.73843 V 71.238426 m -3.05987133,25.06187 H 17.657527"
        inkstitch:satin_column="True"
        inkstitch:ties="3"
        inkstitch:contour_underlay="True"
@@ -408,7 +408,7 @@
        sodipodi:nodetypes="cccccc"
        inkscape:connector-curvature="0"
        id="path3321"
-       d="M 16.734652,100.3431 16.609663,64.360956 19.109665,30.360957 m 2.499991,70.000003 2.499999,-27.000004 1.829152,-2.464286 -0.03477,-40.375197 M 14.475382,64.53933 27.064671,63.200044"
+       d="M 16.734652,100.3431 16.609663,64.360956 19.109665,30.360957 m 2.499991,70.000003 2.499999,-27.000004 1.829152,-2.464286 -0.03477,-40.375197 M 14.475382,64.53933 27.064671,63.200044 M 12.800524,96.318699 h 11.751301"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
        inkstitch:contour_underlay="True"
        inkstitch:satin_column="True"
@@ -470,7 +470,7 @@
     <path
        sodipodi:nodetypes="cccc"
        inkscape:connector-curvature="0"
-       d="M 23.134496,58.738428 H 14.051059 M 23.134496,71.73843 H 14.051059"
+       d="M 23.134496,58.738428 H 14.051059 M 23.134496,71.73843 H 14.051059 M 18.992971,55.791851 V 73.968717"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
        id="path3325"
        inkstitch:contour_underlay="True"
@@ -524,7 +524,7 @@
        sodipodi:nodetypes="cccc"
        inkscape:connector-curvature="0"
        id="path3327"
-       d="M 27.350233,69.202723 33.207378,99.73843 M 16.350235,73.702723 18.707375,99.73843"
+       d="M 27.350233,69.202723 33.207378,99.73843 M 16.350235,73.702723 18.707375,99.73843 m -2.682056,-1.954308 h 19.141353"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
        inkstitch:contour_underlay="True"
        inkstitch:satin_column="True"
@@ -548,7 +548,7 @@
     <path
        sodipodi:nodetypes="cccc"
        inkscape:connector-curvature="0"
-       d="M 0.938507,42.7384 H 22.1039 m -21.165393,-13 H 22.1039"
+       d="M 0.938507,42.7384 H 22.1039 m -21.165393,-13 H 22.1039 M 2.0773561,26.560482 v 19.289736"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
        id="path3333"
        inkstitch:contour_underlay="True"
@@ -566,7 +566,7 @@
     <path
        sodipodi:nodetypes="cccc"
        inkscape:connector-curvature="0"
-       d="m 27.9385,42.7384 h -5.8346 m 5.8346,-13 h -5.8346"
+       d="m 27.9385,42.7384 h -5.8346 m 5.8346,-13 h -5.8346 m 1.340548,-2.881153 V 44.81154"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
        id="path174"
        inkstitch:contour_underlay="True"
@@ -585,7 +585,7 @@
     <path
        sodipodi:nodetypes="cccc"
        inkscape:connector-curvature="0"
-       d="M 8.0647842,41.096932 7.9385102,99.73843 M 21.064786,41.096932 20.938512,99.73843"
+       d="M 8.0647842,41.096932 7.9385102,99.73843 M 21.064786,41.096932 20.938512,99.73843 M 4.59986,96.893826 h 19.586501"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
        id="path3331"
        inkstitch:contour_underlay="True"
@@ -645,7 +645,7 @@
     <path
        sodipodi:nodetypes="cccc"
        inkscape:connector-curvature="0"
-       d="m 10.555003,78.506287 0.08927,21.232143 M 23.555,78.506287 23.64427,99.73843"
+       d="m 10.555003,78.506287 0.08927,21.232143 M 23.555,78.506287 23.64427,99.73843 M 7.7158943,96.893826 H 25.818569"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
        id="path3337"
        inkstitch:contour_underlay="True"
@@ -706,7 +706,7 @@
        id="path171"
        inkstitch:ties="3" />
     <path
-       d="M 16.300052,29.738433 V 99.73843 M 3.3000517,29.738433 V 99.73843"
+       d="M 16.300052,29.738433 V 99.73843 M 3.3000517,29.738433 V 99.73843 M 0.59353033,33.089316 H 19.141353"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
        id="path3343"
        inkscape:connector-curvature="0"
@@ -767,7 +767,7 @@
     <path
        sodipodi:nodetypes="cccc"
        inkscape:connector-curvature="0"
-       d="m 52.632471,58.422991 h -9.083437 m 9.083437,13.000002 h -9.083437"
+       d="m 52.632471,58.422991 h -9.083437 m 9.083437,13.000002 h -9.083437 m 6.010748,-16.521438 v 20.625179"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
        id="path3325-6"
        inkstitch:contour_underlay="True"
@@ -868,7 +868,7 @@
     <path
        sodipodi:nodetypes="cccc"
        inkscape:connector-curvature="0"
-       d="m 14.126505,73.612158 5.656728,0.126274 m -6.15673,12.873732 6.656731,0.126274"
+       d="m 14.126505,73.612158 5.656728,0.126274 m -6.15673,12.873732 6.656731,0.126274 M 16.69304,71.891361 v 17.509145"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
        id="path3353"
        inkstitch:contour_underlay="True"
@@ -934,7 +934,7 @@
     <path
        sodipodi:nodetypes="cccc"
        inkscape:connector-curvature="0"
-       d="M 0.55181946,99.410514 3.9644278,83.376269 M 14.807456,99.825851 16.944359,85.539207"
+       d="M 0.55181946,99.410514 3.9644278,83.376269 M 14.807456,99.825851 16.944359,85.539207 M -1.1128694,97.338974 H 17.286571"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
        id="path286"
        inkstitch:contour_underlay="True"
@@ -952,7 +952,7 @@
     <path
        sodipodi:nodetypes="cccc"
        inkscape:connector-curvature="0"
-       d="m 17.153215,72.169243 5.608651,0.74669 m -7.533191,12.11979 6.602606,0.856502"
+       d="m 17.153215,72.169243 5.608651,0.74669 m -7.533191,12.11979 6.602606,0.856502 M 20.031649,70.630109 18.251058,87.619915"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
        id="path287"
        inkstitch:contour_underlay="True"
@@ -991,7 +991,7 @@
     <path
        sodipodi:nodetypes="cccc"
        inkscape:connector-curvature="0"
-       d="m 53.564525,58.556212 h -9.083437 m 9.083437,13.000002 h -9.083437"
+       d="m 53.564525,58.556212 h -9.083437 m 9.083437,13.000002 H 44.481088 M 50.00493,56.014425 v 17.954292"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
        id="path3325-8"
        inkstitch:contour_underlay="True"
@@ -1090,7 +1090,7 @@
     <path
        sodipodi:nodetypes="cccc"
        inkscape:connector-curvature="0"
-       d="M 24.192171,73.738429 14.045599,73.612155 M 24.192171,60.738434 14.045599,60.61216"
+       d="M 24.192171,73.738429 14.045599,73.612155 M 24.192171,60.738434 14.045599,60.61216 m 7.692449,-2.223614 v 17.657527"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
        id="path3359"
        inkstitch:contour_underlay="True"
@@ -1226,7 +1226,7 @@
     <path
        sodipodi:nodetypes="cccc"
        inkscape:connector-curvature="0"
-       d="m 14.066612,71.864698 h 6.035532 M 14.066612,58.864699 h 6.035532"
+       d="m 14.066612,71.864698 h 6.035532 M 14.066612,58.864699 h 6.035532 m -3.334912,-2.405127 v 17.731719"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
        id="path3371"
        inkstitch:contour_underlay="True"
@@ -1269,7 +1269,7 @@
        inkstitch:ties="3" />
     <path
        sodipodi:nodetypes="sccs"
-       d="M 2.47858,29.7384 V 95.1683 M 15.4786,29.7384 v 69.2991"
+       d="M 2.47858,29.7384 V 95.1683 M 15.4786,29.7384 V 99.0375 M -0.44514775,31.308725 17.954292,31.160342"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
        id="path101"
        inkscape:connector-curvature="0"
@@ -1287,7 +1287,7 @@
        id="path102"
        inkstitch:ties="3" />
     <path
-       d="m -2.52142,104.738 c 1.0942135,-0.001 2.25293165,-0.0419 3.26677772,-0.47821 1.06814068,-0.52338 1.59688278,-1.69321 1.63707588,-2.83604 0.1856457,-1.35973 0.059075,-2.739505 0.096146,-4.108871 0,-0.715526 0,-1.431053 0,-2.146579 m -5,21.5697 c 1.79916835,-0.0147 3.6022306,-0.14736 5.3869964,-0.35423 3.2805093,-0.53708 6.4862404,-1.98217 8.728649,-4.48833 2.431849,-2.55734 3.658127,-6.09129 3.766736,-9.5829 0.08754,-1.08905 0.153155,-2.18208 0.117639,-3.27504 m -17.7000204,5.1005 c 0,4.4 0,8.8 0,13.2"
+       d="m -2.52142,104.738 c 1.5268034,-0.0231 3.45888573,-0.008 4.3632377,-1.47996 0.740799,-1.28571 0.6104295,-2.83884 0.6406985,-4.271134 -0.019338,-1.272776 0.00357,-2.545675 -0.00394,-3.818606 m -5,21.5697 c 3.08395881,-0.0807 6.2652516,-0.17006 9.1441511,-1.4084 4.0512887,-1.58965 7.1941257,-5.21924 8.2264527,-9.44272 0.558688,-2.165 0.596859,-4.42209 0.63491,-6.64445 L 15.4786,99.0375 m -16.8097249,3.61667 c -0.049461,5.43868 -0.098922,10.87736 -0.1483826,16.31604"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
        id="path3373"
        inkscape:connector-curvature="0"
@@ -1617,7 +1617,7 @@
   </g>
   <g
      id="g5355"
-     style="display:none"
+     style="display:inline"
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-B">
     <path
@@ -1825,7 +1825,7 @@
        id="path112" />
     <path
        sodipodi:nodetypes="cccc"
-       d="M 16.428898,19.971128 V 109.97113 M 3.4288977,19.971128 v 90.000002"
+       d="M 16.428898,19.971128 V 109.97113 M 3.4288977,19.971128 V 109.97113 M 0.59353033,74.042908 H 18.547823"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
        id="path3408"
        inkscape:connector-curvature="0"
@@ -2187,7 +2187,7 @@
     <path
        sodipodi:nodetypes="cccc"
        inkscape:connector-curvature="0"
-       d="M 34.35921,58.680798 H 30.959184 M 34.35921,71.680785 H 30.959184"
+       d="M 34.35921,58.680798 H 30.959184 M 34.35921,71.680785 H 30.959184 M 32.19902,55.495086 v 18.102675"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
        id="path3488"
        inkstitch:contour_underlay="True"
@@ -2250,7 +2250,7 @@
        inkstitch:ties="3" />
     <path
        sodipodi:nodetypes="cccc"
-       d="M 35.144273,29.738403 12.14426,99.73843 M 22.144286,29.738403 -0.85572701,99.73843"
+       d="M 35.144273,29.738403 12.14426,99.73843 M 22.144286,29.738403 -0.85572701,99.73843 M -3.561182,96.745443 h 19.438118"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
        id="path3492"
        inkscape:connector-curvature="0"
@@ -2343,7 +2343,7 @@
     <path
        inkscape:connector-curvature="0"
        id="path3510"
-       d="m 8.7133953,22.646126 c 0,2.500006 0,5.000013 0,7.500019 M 20.713395,22.646126 c 0,2.500006 0,5.000013 0,7.500019"
+       d="m 8.7133953,22.646126 c 0,2.500006 0,5.000013 0,7.500019 M 20.713395,22.646126 c 0,2.500006 0,5.000013 0,7.500019 M 5.4901555,25.966952 H 22.850918"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
        inkstitch:contour_underlay="True"
        inkstitch:satin_column="True"
@@ -2401,7 +2401,7 @@
     <path
        inkscape:connector-curvature="0"
        id="path3506"
-       d="m 20.713395,108.64614 c 0,-2.49999 0,-4.99999 0,-7.49998 m -11.9999997,7.49998 c 0,-2.49999 0,-4.99999 0,-7.49998"
+       d="m 20.713395,108.64614 c 0,-2.49999 0,-4.99999 0,-7.49998 m -11.9999997,7.49998 c 0,-2.49999 0,-4.99999 0,-7.49998 m -3.5200049,2.57326 H 22.9993"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
        inkstitch:contour_underlay="True"
        inkstitch:satin_column="True"
@@ -2446,7 +2446,7 @@
     <path
        id="path68"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
-       d="M 0.844283,63.0404 H 17.9443 m -17.100017,-8 H 17.9443"
+       d="M 0.844283,63.0404 H 17.9443 m -17.100017,-8 H 17.9443 M 8.0126594,52.230669 V 67.21731"
        inkstitch:satin_column="True"
        inkstitch:ties="3"
        inkstitch:contour_underlay="True"
@@ -2460,7 +2460,7 @@
     <path
        id="path80"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
-       d="m 27.3443,63.0404 h -9.4 M 26.828916,55.169246 17.9443,55.0404"
+       d="m 27.3443,63.0404 h -9.4 M 26.828916,55.169246 17.9443,55.0404 m 4.164705,-2.809731 v 12.612519"
        sodipodi:nodetypes="cccc"
        inkstitch:satin_column="True"
        inkstitch:ties="3"
@@ -2479,7 +2479,7 @@
     <path
        id="path67"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
-       d="M 0.844283,72.5404 H 18.2734 m -17.429117,-8 H 18.2734"
+       d="M 0.844283,72.5404 H 18.2734 m -17.429117,-8 H 18.2734 M 9.1997201,61.133624 v 14.244728 h 0.4451477"
        inkstitch:satin_column="True"
        inkstitch:ties="3"
        inkstitch:contour_underlay="True"
@@ -2493,7 +2493,7 @@
     <path
        id="path77"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
-       d="m 27.3443,72.5404 h -9.0709 m 9.0709,-8 h -9.0709"
+       d="m 27.3443,72.5404 h -9.0709 m 9.0709,-8 h -9.0709 m 4.7259,-2.961628 v 12.909284"
        sodipodi:nodetypes="cccc"
        inkstitch:satin_column="True"
        inkstitch:ties="3"
@@ -2719,7 +2719,7 @@
        sodipodi:nodetypes="cc" />
     <path
        sodipodi:nodetypes="cccc"
-       d="M -0.85572701,29.73843 22.144248,99.738418 M 12.14426,29.73843 35.144273,99.738418"
+       d="M -0.85572701,29.73843 22.144248,99.738418 M 12.14426,29.73843 35.144273,99.738418 M 17.657527,96.893826 h 20.921944"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
        id="path3526"
        inkscape:connector-curvature="0"
@@ -2784,7 +2784,7 @@
        inkstitch:ties="3" />
     <path
        inkscape:connector-curvature="0"
-       d="m 8.1250728,88.356467 c 1.733329,0 3.2333102,0.666667 4.4999812,1.999998 1.333341,1.266667 2.000012,2.766667 2.000012,4.5 0,1.733333 -0.666671,3.266668 -2.000012,4.600002 -1.26667,1.266663 -2.7666522,1.900003 -4.4999812,1.900003 m 0,-13.000003 c -1.733328,0 -3.266683,0.666667 -4.600026,1.999998 -1.266669,1.266667 -1.900005,2.766667 -1.900005,4.5 0,1.733333 0.633336,3.266668 1.900005,4.600002 1.333343,1.266663 2.866698,1.900003 4.600026,1.900003"
+       d="m 8.5447621,88.461389 c 1.7333289,0 2.8136209,0.561745 4.0802919,1.895076 1.333341,1.266667 2.000012,2.766667 2.000012,4.5 0,1.733333 -0.666671,3.266668 -2.000012,4.600002 -1.26667,1.266663 -2.242041,1.795083 -3.9753696,1.795083 M 7.4955388,88.461389 c -1.733328,0 -2.637149,0.561745 -3.970492,1.895076 -1.266669,1.266667 -1.900005,2.766667 -1.900005,4.5 0,1.733333 0.633336,3.266668 1.900005,4.600002 1.333343,1.266663 2.0273194,1.795083 3.7606474,1.795083 M -0.73445631,95.164553 H 16.472806"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
        id="path3450"
        inkstitch:contour_underlay="True"
@@ -2802,8 +2802,8 @@
      inkscape:label="GlyphLayer--">
     <path
        sodipodi:nodetypes="cccc"
-       d="M 2.2269671,61.573042 H 29.226967 m -26.9999999,12 H 29.226967"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;display:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
+       d="M 2.2269671,61.573042 H 29.226967 m -26.9999999,12 H 29.226967 m -5.304676,-16.28545 v 20.774621"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
        id="path3456"
        inkscape:connector-curvature="0"
        inkstitch:contour_underlay="True"
@@ -2819,7 +2819,7 @@
      inkscape:label="GlyphLayer-_">
     <path
        sodipodi:nodetypes="cccc"
-       d="M 0.90772634,104.71946 H 25.907751 M 0.90772634,116.71944 H 25.907751"
+       d="M 0.90772634,104.71946 H 25.907751 M 0.90772634,116.71944 H 25.907751 m -6.602042,-16.20385 v 19.93524"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
        id="path3458"
        inkscape:connector-curvature="0"
@@ -2884,7 +2884,7 @@
        sodipodi:nodetypes="cccc"
        inkscape:connector-curvature="0"
        id="path3558"
-       d="M 1.7624014,86.738443 H 24.762414 M 1.7624014,99.73843 H 24.762414"
+       d="M 1.7624014,86.738443 H 24.762414 M 1.7624014,99.73843 H 24.762414 M 20.774621,82.678796 v 21.404154"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
        inkstitch:contour_underlay="True"
        inkstitch:satin_column="True"
@@ -2991,7 +2991,7 @@
     <path
        sodipodi:nodetypes="cccc"
        inkscape:connector-curvature="0"
-       d="m 33.882505,73.738455 h -5.921764 m 5.921764,12.999988 h -5.921764"
+       d="m 33.882505,73.738455 h -5.921764 m 5.921764,12.999988 h -5.921764 m 3.306113,-17.279861 v 21.194311"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
        id="path3570"
        inkstitch:contour_underlay="True"
@@ -3012,7 +3012,7 @@
        sodipodi:nodetypes="cccc"
        inkscape:connector-curvature="0"
        id="path3566"
-       d="M 18.210456,86.839999 0.88250399,86.73833 M 18.210456,73.840011 C 12.434703,73.730742 6.659656,73.700552 0.88250399,73.738342"
+       d="M 18.210456,86.839999 0.88250399,86.73833 M 18.210456,73.840011 C 12.434703,73.730742 6.659656,73.700552 0.88250399,73.738342 m 6.67190381,-4.27976 v 20.564777"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
        inkstitch:contour_underlay="True"
        inkstitch:satin_column="True"
@@ -3295,7 +3295,7 @@
     <path
        sodipodi:nodetypes="cccc"
        inkscape:connector-curvature="0"
-       d="m 2.644267,62.088445 h 9 m -9,12 h 9"
+       d="m 2.644267,62.088445 h 9 m -9,12 h 9 M 5.0450078,58.61112 v 18.696205"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
        id="path3588"
        inkstitch:contour_underlay="True"
@@ -3313,7 +3313,7 @@
     <path
        sodipodi:nodetypes="cccc"
        inkscape:connector-curvature="0"
-       d="m 31.644279,74.088445 h -9 m 9,-12 h -9"
+       d="m 31.644279,74.088445 h -9 m 9,-12 h -9 m 4.658116,-3.625708 v 18.844588"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
        id="path3591"
        inkstitch:contour_underlay="True"
@@ -3333,7 +3333,7 @@
        sodipodi:nodetypes="cccccccc"
        inkscape:connector-curvature="0"
        id="path3593"
-       d="m 22.644279,52.088419 v 10.000025 12 9.999988 M 11.644267,52.088419 v 10.000025 12 9.999988"
+       d="m 22.644279,52.088419 v 10.000025 12 9.999988 M 11.644267,52.088419 v 10.000025 12 9.999988 M 8.3094246,80.720125 H 25.076656"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
        inkstitch:contour_underlay="True"
        inkstitch:satin_column="True"
@@ -3448,7 +3448,7 @@
        inkstitch:ties="3" />
     <path
        sodipodi:nodetypes="cccc"
-       d="M 0.73920376,30.356292 9.7392038,44.356294 m 3.0000002,-14.000002 3.999988,14.000002"
+       d="M 0.73920376,30.356292 9.7392038,44.356294 M 12.739204,30.356292 16.739192,44.356294 M 5.9353033,41.992271 H 18.102675"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
        id="path3400"
        inkscape:connector-curvature="0"
@@ -3472,7 +3472,7 @@
        inkstitch:ties="3" />
     <path
        sodipodi:nodetypes="cccc"
-       d="M 19.133439,31.344456 5.461564,49.703832 M 28.850226,31.344456 12.932254,49.703832"
+       d="M 19.133439,31.344456 5.461564,49.703832 M 28.850226,31.344456 12.932254,49.703832 M 4.1547123,46.888896 H 18.39944"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
        id="path3402"
        inkscape:connector-curvature="0"
@@ -3497,7 +3497,7 @@
        inkstitch:ties="3" />
     <path
        sodipodi:nodetypes="cccc"
-       d="M 12.836594,29.988428 10.336588,48.988431 M 0.83659393,29.988428 3.3365999,48.988431"
+       d="M 12.836594,29.988428 10.336588,48.988431 M 0.83659393,29.988428 3.3365999,48.988431 m -3.18821732,-2.3963 H 12.760902"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
        id="path3390"
        inkscape:connector-curvature="0"
@@ -3624,7 +3624,7 @@
        sodipodi:nodetypes="cccccc" />
     <path
        sodipodi:nodetypes="cccc"
-       d="M 21.251641,7.5702896 7.5797656,25.85299 M 30.968425,7.5702896 15.050456,25.85299"
+       d="M 21.251641,7.5702896 7.5797656,25.85299 M 30.968425,7.5702896 15.050456,25.85299 M 5.9353033,21.515474 H 21.81224"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
        id="path3402-3"
        inkscape:connector-curvature="0"
@@ -3644,7 +3644,7 @@
     <path
        sodipodi:nodetypes="cccc"
        inkscape:connector-curvature="0"
-       d="m 23.134496,58.909655 h -9.083437 m 9.083437,12.945711 h -9.083437"
+       d="m 23.134496,58.909655 h -9.083437 m 9.083437,12.945711 h -9.083437 m 4.793529,-16.36028 v 20.031648"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
        id="path216"
        inkstitch:contour_underlay="True"
@@ -3685,21 +3685,20 @@
        inkstitch:ties="3" />
     <path
        inkscape:connector-curvature="0"
-       d="m 8.1250538,44.428812 c 1.733329,0 3.2333102,0.666667 4.4999812,1.999997 1.333342,1.266667 2.000013,2.766667 2.000013,4.5 0,1.733333 -0.666671,3.266669 -2.000013,4.600003 -1.266671,1.266667 -2.7666522,1.899999 -4.4999812,1.899999 m 0,-12.999999 c -1.733329,0 -3.266684,0.666667 -4.600026,1.999997 -1.266633,1.266667 -1.899968,2.766667 -1.899968,4.5 0,1.733333 0.633335,3.266669 1.899968,4.600003 1.333342,1.266667 2.866697,1.899999 4.600026,1.899999"
+       d="m 8.5702015,44.87396 c 1.4767175,-0.085 3.0331595,0.357149 4.0248845,1.508277 1.569725,1.438498 2.38896,3.675116 1.907413,5.776368 -0.422712,2.086316 -1.959404,3.818504 -3.77473,4.848775 -0.618402,0.324544 -1.3169103,0.433426 -2.0091849,0.421432 M 7.2347583,44.725577 c -1.3450251,-0.11466 -2.625164,0.513825 -3.5141361,1.49679 -1.6138135,1.471023 -2.4484159,3.758914 -1.9835294,5.915021 0.3380378,2.001285 1.7642884,3.576529 3.3092262,4.7842 0.5440096,0.414363 1.2260157,0.51694 1.8916741,0.507226 M -1.3354432,50.895226 H 17.360762"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
        id="path3454"
        inkstitch:contour_underlay="True"
        inkstitch:satin_column="True"
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
-       sodipodi:nodetypes="ccsscccscc"
        inkstitch:lock_start="cross"
        inkstitch:force_lock_stitches="True"
        inkstitch:ties="2"
        inkstitch:max_stitch_length_mm="7" />
     <path
        inkscape:connector-curvature="0"
-       d="m 8.1250538,88.428814 c 1.733329,0 3.2333102,0.666667 4.4999812,1.999997 1.333342,1.266667 2.000013,2.766667 2.000013,4.5 0,1.733333 -0.666671,3.266669 -2.000013,4.600003 -1.266671,1.266666 -2.7666522,1.899996 -4.4999812,1.899996 m 0,-12.999996 c -1.733329,0 -3.266684,0.666667 -4.600026,1.999997 -1.266633,1.266667 -1.899968,2.766667 -1.899968,4.5 0,1.733333 0.633335,3.266669 1.899968,4.600003 1.333342,1.266666 2.866697,1.899996 4.600026,1.899996"
+       d="m 9.3121145,89.022344 c 1.7333285,0 2.0462495,0.07314 3.3129205,1.406467 1.333342,1.266667 2.000013,2.766667 2.000013,4.5 0,1.733333 -0.666671,3.266669 -2.000013,4.600003 -1.266671,1.266666 -2.321504,1.603226 -4.0548335,1.603226 M 7.3831409,88.873962 c -1.733329,0 -2.5247711,0.221519 -3.8581131,1.554849 -1.266633,1.266667 -1.899968,2.766667 -1.899968,4.5 0,1.733333 0.633335,3.266669 1.899968,4.600003 1.333342,1.266666 1.8280189,1.751616 3.5613479,1.751616 M -1.6322084,93.926174 H 18.251058"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
        id="path3452"
        inkstitch:contour_underlay="True"
@@ -3723,7 +3722,7 @@
        sodipodi:nodetypes="cccccc" />
     <path
        sodipodi:nodetypes="cccc"
-       d="M 11.29655,7.3125989 24.968425,25.646417 M 1.5797656,7.3125989 17.497735,25.646417"
+       d="M 11.29655,7.3125989 24.968425,25.646417 M 1.5797656,7.3125989 17.497735,25.646417 m -6.369041,-2.795499 h 16.322084"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
        id="path222"
        inkscape:connector-curvature="0"
@@ -3743,7 +3742,7 @@
     <path
        sodipodi:nodetypes="cccc"
        inkscape:connector-curvature="0"
-       d="m 23.134496,58.795507 h -9.083437 m 9.083437,12.981906 h -9.083437"
+       d="m 23.134496,58.795507 h -9.083437 m 9.083437,12.981906 h -9.083437 m 4.941911,-16.43071 v 18.844588"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
        id="path224"
        inkstitch:contour_underlay="True"
@@ -3820,7 +3819,7 @@
     <path
        sodipodi:nodetypes="cccc"
        inkscape:connector-curvature="0"
-       d="m 23.134496,58.660169 h -9.083437 m 9.083437,13.024815 h -9.083437"
+       d="m 23.134496,58.660169 h -9.083437 m 9.083437,13.024815 h -9.083437 m 5.535442,-16.486663 v 18.99297"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
        id="path231"
        inkstitch:contour_underlay="True"
@@ -3863,7 +3862,7 @@
        sodipodi:nodetypes="cccc"
        inkscape:connector-curvature="0"
        id="path3381-8-5-9"
-       d="M 29.079215,14.778359 V 26.037968 M 19.167105,14.778359 V 26.037968"
+       d="M 29.079215,14.778359 V 26.037968 M 19.167105,14.778359 V 26.037968 M 15.580171,20.328414 H 31.457107"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.994838;stroke-opacity:1"
        inkstitch:contour_underlay="True"
        inkstitch:satin_column="True"
@@ -3881,7 +3880,7 @@
        sodipodi:nodetypes="cccc"
        inkscape:connector-curvature="0"
        id="path3384-8-5-3"
-       d="M 9.9874147,14.778359 V 26.037968 M 0.07530367,14.778359 v 11.259609"
+       d="M 9.9874147,14.778359 V 26.037968 M 0.07530367,14.778359 V 26.037968 M -3.2644168,19.883266 H 12.612519"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.994838;stroke-opacity:1"
        inkstitch:contour_underlay="True"
        inkstitch:satin_column="True"
@@ -3899,7 +3898,7 @@
     <path
        sodipodi:nodetypes="cccc"
        inkscape:connector-curvature="0"
-       d="m 23.134496,58.660169 h -9.083437 m 9.083437,13.024815 h -9.083437"
+       d="m 23.134496,58.660169 h -9.083437 m 9.083437,13.024815 h -9.083437 m 4.793529,-16.931811 v 20.031648"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
        id="path244"
        inkstitch:contour_underlay="True"
@@ -3942,7 +3941,7 @@
        sodipodi:nodetypes="cccc"
        inkscape:connector-curvature="0"
        id="path3381-8-9"
-       d="M 31.539128,14.231712 V 25.491321 M 21.627018,14.231712 V 25.491321"
+       d="M 31.539128,14.231712 V 25.491321 M 21.627018,14.231712 V 25.491321 M 17.954292,20.031649 H 33.237698"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.994838;stroke-opacity:1"
        inkstitch:contour_underlay="True"
        inkstitch:satin_column="True"
@@ -3960,7 +3959,7 @@
        sodipodi:nodetypes="cccc"
        inkscape:connector-curvature="0"
        id="path3384-8-8"
-       d="M 12.447328,14.231712 V 25.491321 M 2.5352166,14.231712 v 11.259609"
+       d="M 12.447328,14.231712 V 25.491321 M 2.5352166,14.231712 V 25.491321 M -1.1870607,19.883266 H 14.39311"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.994838;stroke-opacity:1"
        inkstitch:contour_underlay="True"
        inkstitch:satin_column="True"
@@ -4008,7 +4007,7 @@
     <path
        sodipodi:nodetypes="cccc"
        inkscape:connector-curvature="0"
-       d="m 10.555003,78.506287 0.08927,21.232143 M 23.555,78.506287 23.64427,99.73843"
+       d="m 10.555003,78.506287 0.08927,21.232143 M 23.555,78.506287 23.64427,99.73843 M 7.1223639,96.448678 H 27.00563"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
        id="path295"
        inkstitch:contour_underlay="True"
@@ -4033,7 +4032,7 @@
     <path
        sodipodi:nodetypes="cccc"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.915671;stroke-opacity:1"
-       d="m 31.888673,24.73843 v 9.756114 M 21.97656,24.73843 v 9.756114"
+       d="m 31.888673,24.73843 v 9.756114 M 21.97656,24.73843 v 9.756114 m -2.98359,-4.59159 h 16.173702"
        id="path3536"
        inkscape:connector-curvature="0"
        inkstitch:contour_underlay="True"
@@ -4052,7 +4051,7 @@
     <path
        sodipodi:nodetypes="cccc"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.915671;stroke-opacity:1"
-       d="m 12.796881,24.73843 v 9.756114 M 2.884767,24.73843 v 9.756114"
+       d="m 12.796881,24.73843 v 9.756114 M 2.884767,24.73843 v 9.756114 M -0.29676516,29.777176 H 14.096345"
        id="path3538"
        inkscape:connector-curvature="0"
        inkstitch:contour_underlay="True"
@@ -4296,7 +4295,7 @@
        inkstitch:force_lock_stitches="True"
        inkstitch:max_stitch_length_mm="7" />
     <path
-       d="M 16.300052,29.738433 V 99.73843 M 3.3000517,29.738433 V 99.73843"
+       d="M 16.300052,29.738433 V 99.73843 M 3.3000517,29.738433 V 99.73843 M 0,64.101275 h 18.844588"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
        id="path235"
        inkscape:connector-curvature="0"
@@ -4324,7 +4323,7 @@
        sodipodi:nodetypes="cccc"
        inkscape:connector-curvature="0"
        id="path3381-8-5"
-       d="M 25.617115,13.320633 V 24.580242 M 15.705005,13.320633 V 24.580242"
+       d="M 25.617115,13.320633 V 24.580242 M 15.705005,13.320633 V 24.580242 M 11.870607,19.141353 H 28.489456"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.994838;stroke-opacity:1"
        inkstitch:contour_underlay="True"
        inkstitch:satin_column="True"
@@ -4342,7 +4341,7 @@
        sodipodi:nodetypes="cccc"
        inkscape:connector-curvature="0"
        id="path3384-8-5"
-       d="M 6.5253155,13.320633 V 24.580242 M -3.3867955,13.320633 V 24.580242"
+       d="M 6.5253155,13.320633 V 24.580242 M -3.3867955,13.320633 V 24.580242 M -6.380451,19.289736 H 8.0126594"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.994838;stroke-opacity:1"
        inkstitch:contour_underlay="True"
        inkstitch:satin_column="True"
@@ -4352,7 +4351,7 @@
        inkstitch:force_lock_stitches="True"
        inkstitch:max_stitch_length_mm="7" />
     <path
-       d="M 16.300052,29.738433 V 99.73843 M 3.3000517,29.738433 V 99.73843"
+       d="M 16.300052,29.738433 V 99.73843 M 3.3000517,29.738433 V 99.73843 M -0.29676516,69.294666 H 19.141353"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
        id="path239"
        inkscape:connector-curvature="0"
@@ -4381,7 +4380,7 @@
        sodipodi:nodetypes="cccc"
        inkscape:connector-curvature="0"
        id="path3381-8"
-       d="m 31.651307,24.46299 v 9.761719 m -9.91211,-9.761719 v 9.761719"
+       d="m 31.651307,24.46299 v 9.761719 m -9.91211,-9.761719 v 9.761719 m -3.191374,-4.70795 h 15.283406"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.926305;stroke-opacity:1"
        inkstitch:contour_underlay="True"
        inkstitch:satin_column="True"
@@ -4399,7 +4398,7 @@
        sodipodi:nodetypes="cccc"
        inkscape:connector-curvature="0"
        id="path3384-8"
-       d="m 12.559507,24.46299 v 9.761719 M 2.6473965,24.46299 v 9.761719"
+       d="m 12.559507,24.46299 v 9.761719 M 2.6473965,24.46299 v 9.761719 m -2.79577908,-4.70795 H 14.096345"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.926305;stroke-opacity:1"
        inkstitch:contour_underlay="True"
        inkstitch:satin_column="True"
@@ -4501,7 +4500,7 @@
        sodipodi:nodetypes="ccccc" />
     <path
        sodipodi:nodetypes="cccc"
-       d="M 23.764137,10.533748 10.092262,28.893125 M 33.480924,10.533748 17.562952,28.893125"
+       d="M 23.764137,10.533748 10.092262,28.893125 M 33.480924,10.533748 17.562952,28.893125 M 8.2352333,25.713651 H 23.221874"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.983099;stroke-opacity:1"
        id="path3402-6"
        inkscape:connector-curvature="0"
@@ -4533,7 +4532,7 @@
     <path
        sodipodi:nodetypes="cccc"
        inkscape:connector-curvature="0"
-       d="M 0.894273,99.738402 2.24815,86.719801 M 14.8943,99.738402 15.3871,87.416468"
+       d="M 0.894273,99.738402 2.24815,86.719801 M 14.8943,99.738402 15.3871,87.416468 M -1.4838258,98.207678 H 16.69304"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.983099;stroke-opacity:1"
        id="path201"
        inkstitch:contour_underlay="True"
@@ -4551,7 +4550,7 @@
     <path
        sodipodi:nodetypes="cccc"
        inkscape:connector-curvature="0"
-       d="m 14.126505,74.615819 5.656728,0.121422 m -6.15673,12.379178 6.656731,0.121424"
+       d="m 14.126505,74.615819 5.656728,0.121422 m -6.15673,12.379178 6.656731,0.121424 M 16.544658,73.110834 V 89.38793 h 0.667722"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.983099;stroke-opacity:1"
        id="path202"
        inkstitch:contour_underlay="True"
@@ -4585,7 +4584,7 @@
   </g>
   <g
      id="g213"
-     style="display:inline;stroke-width:0.9815"
+     style="display:none;stroke-width:0.9815"
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Â"
      transform="matrix(1,0,0,1.03806,0,-3.79619)">
@@ -4645,7 +4644,7 @@
     <path
        sodipodi:nodetypes="cccc"
        inkscape:connector-curvature="0"
-       d="M 0.894273,99.738402 2.24815,86.719801 M 14.8943,99.738402 15.3871,87.416468"
+       d="M 0.894273,99.738402 2.24815,86.719801 M 14.8943,99.738402 15.3871,87.416468 M -1.1870607,97.855915 H 16.470467"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.9815;stroke-opacity:1"
        id="path210"
        inkstitch:contour_underlay="True"
@@ -4662,7 +4661,7 @@
     <path
        sodipodi:nodetypes="cccc"
        inkscape:connector-curvature="0"
-       d="m 14.126505,74.615819 5.656728,0.121422 m -6.15673,12.379178 6.656731,0.121424"
+       d="m 14.126505,74.615819 5.656728,0.121422 m -6.15673,12.379178 6.656731,0.121424 m -3.516002,-14.396813 0.07419,16.22394"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.9815;stroke-opacity:1"
        id="path211"
        inkstitch:contour_underlay="True"
@@ -4710,7 +4709,7 @@
          sodipodi:nodetypes="cccc"
          inkscape:connector-curvature="0"
          id="path3381"
-         d="m 31.340496,17.465036 v 9.761719 m -9.91211,-9.761719 v 9.761719"
+         d="m 31.340496,17.465036 v 9.761719 m -9.91211,-9.761719 v 9.761719 m -2.13865,-5.191942 H 33.31189"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.994838;stroke-opacity:1"
          inkstitch:contour_underlay="True"
          inkstitch:satin_column="True"
@@ -4728,7 +4727,7 @@
          sodipodi:nodetypes="cccc"
          inkscape:connector-curvature="0"
          id="path3384"
-         d="m 12.248696,17.465036 v 9.761719 M 2.3365863,17.465036 v 9.761719"
+         d="m 12.248696,17.465036 v 9.761719 M 2.3365863,17.465036 v 9.761719 M 0.22257387,22.109005 H 14.022154"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.994838;stroke-opacity:1"
          inkstitch:contour_underlay="True"
          inkstitch:satin_column="True"
@@ -4760,7 +4759,7 @@
     <path
        sodipodi:nodetypes="cccc"
        inkscape:connector-curvature="0"
-       d="M 0.894273,99.738404 2.24815,86.224139 M 14.8943,99.738404 15.3871,86.947331"
+       d="M 0.894273,99.738404 2.24815,86.224139 M 14.8943,99.738404 15.3871,86.947331 M -0.96448678,98.377652 H 16.396275"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.07675;stroke-opacity:1"
        id="path3351-4"
        inkstitch:contour_underlay="True"
@@ -4778,7 +4777,7 @@
     <path
        sodipodi:nodetypes="cccc"
        inkscape:connector-curvature="0"
-       d="m 14.126505,77.244451 5.656728,0.108718 m -6.15673,11.083918 6.656731,0.108718"
+       d="m 14.126505,77.244451 5.656728,0.108718 m -6.15673,11.083918 6.656731,0.108718 m -3.664385,-13.093262 0.370957,14.838258"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
        id="path3353-6"
        inkstitch:contour_underlay="True"
@@ -4831,7 +4830,7 @@
        sodipodi:nodetypes="cccccc"
        inkscape:connector-curvature="0"
        id="path3464"
-       d="m 15.649475,29.511493 v 33 L 13.649474,81.511481 M 2.6494718,29.511493 v 33 l 2.000001,18.999988"
+       d="m 15.649475,29.511493 v 33 L 13.649474,81.511481 M 2.6494718,29.511493 v 33 l 2.000001,18.999988 M 0.14838258,30.715194 H 17.509145"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
        inkstitch:contour_underlay="True"
        inkstitch:satin_column="True"
@@ -4841,10 +4840,10 @@
        inkstitch:force_lock_stitches="True"
        inkstitch:max_stitch_length_mm="7" />
     <path
-       sodipodi:nodetypes="ccsccccscc"
+       sodipodi:nodetypes="ccsccccscccc"
        inkscape:connector-curvature="0"
        id="path3466"
-       d="m 9.1494728,87.511519 c 1.7333342,0 3.2333342,0.666671 4.5000012,1.999975 1.333334,1.266671 2.000001,2.766689 2.000001,4.500019 0,1.733329 -0.666667,3.266645 -2.000001,4.599987 -1.266667,1.266671 -2.766667,1.90001 -4.5000012,1.90001 m 0,-12.999991 c -1.733332,0 -3.266668,0.666671 -4.599998,1.999975 -1.266667,1.266671 -1.900003,2.766689 -1.900003,4.500019 0,1.733329 0.633336,3.266645 1.900003,4.599987 1.33333,1.266671 2.673397,1.83559 4.406729,1.83559"
+       d="m 10.188151,87.659902 c 1.733334,0 2.194656,0.518288 3.461323,1.851592 1.333334,1.266671 2.000001,2.766689 2.000001,4.500019 0,1.733329 -0.666667,3.266645 -2.000001,4.599987 -1.266667,1.266671 -3.063432,1.90001 -4.7967664,1.90001 M 8.2591773,87.511519 c -1.733332,0 -2.3763725,0.666671 -3.7097025,1.999975 -1.266667,1.266671 -1.900003,2.766689 -1.900003,4.500019 0,1.733329 0.633336,3.266645 1.900003,4.599987 1.33333,1.266671 1.4863363,1.98397 3.2196683,1.98397 M 0.44514772,93.332644 H 17.509144"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
        inkstitch:contour_underlay="True"
        inkstitch:satin_column="True"
@@ -4867,7 +4866,7 @@
        sodipodi:nodetypes="ccc" />
     <path
        inkscape:connector-curvature="0"
-       d="M 3.1577383,48.738424 0.65773934,29.738436 M 10.157737,48.738424 12.657739,29.738436"
+       d="M 3.1577383,48.738424 0.65773934,29.738436 M 10.157737,48.738424 12.657739,29.738436 M -0.59353033,46.740513 H 12.612519"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
        id="path3468"
        inkstitch:contour_underlay="True"
@@ -4885,7 +4884,7 @@
        inkstitch:ties="3" />
     <path
        inkscape:connector-curvature="0"
-       d="m 14.157739,29.738436 2.499999,18.999988 m 9.500001,-18.999988 -2.500002,18.999988"
+       d="m 14.157739,29.738436 2.499999,18.999988 M 26.157739,29.738436 23.657737,48.738424 M 13.651198,46.295366 h 11.573841"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
        id="path3470"
        inkstitch:contour_underlay="True"
@@ -4933,7 +4932,7 @@
        sodipodi:nodetypes="cccc"
        inkscape:connector-curvature="0"
        id="path229"
-       d="M 42.7296,29.9961 30.7046,68.2577 M 31.7297,29.9961 19.7046,68.2577"
+       d="M 42.7296,29.9961 30.7046,68.2577 M 31.7297,29.9961 19.7046,68.2577 m 8.191325,-36.800593 h 16.470467"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
        inkstitch:contour_underlay="True"
        inkstitch:satin_column="True"
@@ -4950,10 +4949,10 @@
        sodipodi:nodetypes="cccc"
        inkstitch:ties="3" />
     <path
-       sodipodi:nodetypes="cccc"
+       sodipodi:nodetypes="cccccc"
        inkscape:connector-curvature="0"
        id="path3480"
-       d="M 20.7297,99.9961 30.7046,68.2577 M 9.72965,99.9961 19.7046,68.2577"
+       d="M 20.7297,99.9961 30.7046,68.2577 M 9.72965,99.9961 19.7046,68.2577 M 6.6772162,97.487356 H 24.483126"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
        inkstitch:contour_underlay="True"
        inkstitch:satin_column="True"
@@ -5013,7 +5012,7 @@
     <path
        sodipodi:nodetypes="csccsc"
        inkscape:connector-curvature="0"
-       d="m 14.615946,87.864662 c 2.990603,0 6.163266,3.183664 6.163266,6.567378 0,3.17577 -2.751599,6.49999 -6.09592,6.49999 M 13.538406,87.797316 c -2.542094,0 -5.7591918,3.152683 -5.7591918,6.634724 0,3.585404 2.5102808,6.49999 6.0959238,6.49999"
+       d="m 14.615946,87.864662 c 2.990603,0 6.163266,3.183664 6.163266,6.567378 0,3.17577 -2.751599,6.49999 -6.09592,6.49999 M 12.796493,87.945699 c -2.542094,0 -5.0172788,3.0043 -5.0172788,6.486341 0,3.585404 1.9167505,6.35161 5.5023938,6.35161 M 4.4514775,94.964852 H 22.9993"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
        id="path3504"
        inkstitch:contour_underlay="True"
@@ -5037,7 +5036,7 @@
        inkstitch:ties="3" />
     <path
        inkscape:connector-curvature="0"
-       d="m 8.2577388,44.36047 c 1.733329,0 3.2333482,0.666668 4.4999812,1.999998 1.333342,1.266667 2.000013,2.766667 2.000013,4.5 0,1.733333 -0.666671,3.266668 -2.000013,4.600002 -1.266633,1.266667 -2.7666522,1.899999 -4.4999812,1.899999 m 0,-12.999999 c -1.733329,0 -3.266683,0.666668 -4.599987,1.999998 -1.266671,1.266667 -1.900007,2.766667 -1.900007,4.5 0,1.733333 0.633336,3.266668 1.900007,4.600002 1.333304,1.266667 2.866658,1.899999 4.599987,1.899999"
+       d="m 9.4447995,44.508853 c 1.7333285,0 2.0462875,0.518285 3.3129205,1.851615 1.333342,1.266667 2.000013,2.766667 2.000013,4.5 0,1.733333 -0.666671,3.266668 -2.000013,4.600002 -1.266633,1.266667 -2.7666522,1.899999 -4.4999812,1.899999 M 7.2190607,44.508853 c -1.733329,0 -2.2280049,0.518285 -3.5613089,1.851615 -1.266671,1.266667 -1.900007,2.766667 -1.900007,4.5 0,1.733333 0.633336,3.266668 1.900007,4.600002 1.333304,1.266667 1.8279799,1.751616 3.5613089,1.751616 M -1.3354432,51.637139 H 16.618849"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
        id="path3444"
        inkstitch:contour_underlay="True"
@@ -5097,7 +5096,7 @@
     <path
        sodipodi:nodetypes="cccc"
        inkscape:connector-curvature="0"
-       d="M 1.5673542,65.76343 H 27.567352 M 1.5673542,54.763418 H 27.567352"
+       d="M 1.5673542,65.76343 H 27.567352 M 1.5673542,54.763418 H 27.567352 M 22.9993,50.746843 v 16.915614"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
        id="path3498"
        inkstitch:contour_underlay="True"
@@ -5116,7 +5115,7 @@
     <path
        sodipodi:nodetypes="cccc"
        inkscape:connector-curvature="0"
-       d="M 1.5673542,80.76343 H 27.567352 M 1.5673542,69.763418 H 27.567352"
+       d="M 1.5673542,80.76343 H 27.567352 M 1.5673542,69.763418 H 27.567352 M 14.986641,67.21731 v 16.173701"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
        id="path3500"
        inkstitch:contour_underlay="True"

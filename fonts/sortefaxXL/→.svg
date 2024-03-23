@@ -20,15 +20,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      showgrid="false"
-     inkscape:zoom="1.1488465"
-     inkscape:cx="-60.930679"
-     inkscape:cy="112.72176"
+     inkscape:zoom="0.642612"
+     inkscape:cx="298.7806"
+     inkscape:cy="-104.26198"
      inkscape:window-width="1310"
      inkscape:window-height="789"
      inkscape:window-x="106"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g56255"
+     inkscape:current-layer="g119739"
      inkscape:showpageshadow="false"
      inkscape:snap-global="true"
      showguides="true"
@@ -2640,13 +2640,13 @@ Created by gluk ( www.glukfonts.pl | gluksza@wp.pl ) with FontForge. Font Sortef
     <path
        id="path3"
        style="fill:none;stroke:#000000;stroke-width:1px"
-       d="M 11.338583,-509.17824 H 415.69411 V -8.4172 M 11.338583,-524.29635 H 430.81222 V -8.4172 m -51.37977,-496.98152 v -22.67716 m 32.48213,59.54134 h 22.67717"
+       d="M 11.338583,-509.17824 H 415.69411 V -8.4172 M 11.338583,-524.29635 H 430.81222 V -8.4172 m -51.37977,-496.98152 v -22.67716 m 32.48213,59.54134 h 22.67717 m -31.37896,440.153057 h 43.06156"
        inkstitch:satin_column="true"
        inkstitch:reverse_rails="none" />
     <path
        id="path4"
        style="fill:none;stroke:#000000;stroke-width:1px"
-       d="M 423.25317,-15.97626 H 18.897638 V -516.7373 M 423.25317,-0.85815 H 3.779528 V -516.7373 M 55.159294,-19.75579 V 2.92138 M 22.677166,-56.61996 H 0"
+       d="M 423.25317,-15.97626 H 18.897638 V -516.7373 M 423.25317,-0.85815 H 3.779528 V -516.7373 M 55.159294,-19.75579 V 2.92138 M 22.677166,-56.61996 H 0 m 285.77217,27.259805 V 10.76539"
        inkstitch:satin_column="true"
        inkstitch:reverse_rails="none" />
     <path
@@ -2989,7 +2989,7 @@ Created by gluk ( www.glukfonts.pl | gluksza@wp.pl ) with FontForge. Font Sortef
             <path
                id="path51594"
                style="display:inline;fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-               d="m 117.62444,31.402238 c 0.74896,-2.293773 1.59853,-4.544429 2.21915,-6.8932 0.4615,-1.746513 0.79641,-3.547275 0.86924,-5.460355 m -3.08839,12.353555 c 1.83675,-1.952559 4.32186,-4.217417 4.97505,-6.492828 0.23777,-0.872472 0.32231,-1.898128 0.17227,-3.158387"
+               d="m 117.62444,31.402238 c 0.74896,-2.293773 1.59853,-4.544429 2.21915,-6.8932 0.4615,-1.746513 0.79641,-3.547275 0.86924,-5.460355 l 8.62175,1.930243 0.83643,8.557392 C 127.719,28.4998 124.721,29.1004 121.599,30.0725 c -1.314,0.4089 -2.649,0.8836 -3.975,1.3297 m 4.4e-4,3.8e-5 c 1.83675,-1.952559 4.32186,-4.217417 4.97505,-6.492828 0.23777,-0.872472 0.32231,-1.898128 0.17227,-3.158387 l 4.05351,0.965121 0.19288,4.053533 C 124.909,26.0454 122.67,27.0155 120.391,28.5069 l -2.767,2.8953 m 8.57324,-8.033469 4.05214,-2.998583 m -4.29526,5.267781 5.18673,4.862568 m -7.53698,-7.699065 -3.80901,-4.619439"
                inkstitch:satin_column="True"
                inkstitch:zigzag_underlay="True"
                inkstitch:center_walk_underlay="False"
@@ -2999,51 +2999,7 @@ Created by gluk ( www.glukfonts.pl | gluksza@wp.pl ) with FontForge. Font Sortef
                inkstitch:ties="3"
                inkstitch:zigzag_underlay_inset_mm="0.1"
                inkstitch:zigzag_underlay_max_stitch_length_mm="7"
-               sodipodi:nodetypes="cscccc"
-               inkstitch:reverse_rails="none" />
-            <path
-               id="path52025"
-               style="display:inline;fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-               d="m 122.77176,21.751023 4.05351,0.965121 m -6.11244,-3.667461 8.62175,1.930243"
-               sodipodi:nodetypes="cccc"
-               inkstitch:satin_column="True"
-               inkstitch:zigzag_underlay="True"
-               inkstitch:max_stitch_length_mm="7"
-               inkstitch:center_walk_underlay="False"
-               inkstitch:contour_underlay="False"
-               inkstitch:pull_compensation_mm="0.2"
-               inkstitch:ties="3"
-               inkstitch:zigzag_underlay_inset_mm="0.1"
-               inkstitch:zigzag_underlay_max_stitch_length_mm="7"
-               inkstitch:reverse_rails="none" />
-            <path
-               id="path50365"
-               style="display:inline;fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-               d="m 129.33458,20.978926 0.83644,8.557409 m -3.34575,-6.820191 0.19302,4.05351"
-               inkstitch:satin_column="True"
-               inkstitch:max_stitch_length_mm="7"
-               inkstitch:zigzag_underlay="True"
-               inkstitch:center_walk_underlay="False"
-               inkstitch:contour_underlay="False"
-               inkstitch:pull_compensation_mm="0.2"
-               inkstitch:ties="3"
-               inkstitch:zigzag_underlay_inset_mm="0.1"
-               inkstitch:zigzag_underlay_max_stitch_length_mm="7"
-               inkstitch:reverse_rails="none" />
-            <path
-               id="path55097"
-               style="display:inline;fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-               d="m 127.018,26.7697 c -2.109,-0.7243 -4.348,0.2458 -6.627,1.7372 l -2.767,2.8953 m 12.547,-1.8659 c -2.452,-1.0365 -5.45,-0.4359 -8.572,0.5362 -1.314,0.4089 -2.649,0.8836 -3.975,1.3297"
-               sodipodi:nodetypes="cscccc"
-               inkstitch:satin_column="True"
-               inkstitch:max_stitch_length_mm="7"
-               inkstitch:zigzag_underlay="True"
-               inkstitch:center_walk_underlay="False"
-               inkstitch:contour_underlay="False"
-               inkstitch:pull_compensation_mm="0.2"
-               inkstitch:ties="3"
-               inkstitch:zigzag_underlay_inset_mm="0.1"
-               inkstitch:zigzag_underlay_max_stitch_length_mm="7"
+               sodipodi:nodetypes="csccccccccccsccccccc"
                inkstitch:reverse_rails="none" />
           </g>
           <path
@@ -3274,7 +3230,7 @@ Created by gluk ( www.glukfonts.pl | gluksza@wp.pl ) with FontForge. Font Sortef
             <path
                id="path60854"
                style="display:inline;fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-               d="m 117.62444,31.402238 c 0.74896,-2.293773 1.59853,-4.544429 2.21915,-6.8932 0.4615,-1.746513 0.79641,-3.547275 0.86924,-5.460355 m -3.08839,12.353555 c 1.83675,-1.952559 4.32186,-4.217417 4.97505,-6.492828 0.23777,-0.872472 0.32231,-1.898128 0.17227,-3.158387"
+               d="m 117.62444,31.402238 c 0.74896,-2.293773 1.59853,-4.544429 2.21915,-6.8932 0.4615,-1.746513 0.79641,-3.547275 0.86924,-5.460355 l 8.62175,1.930243 0.83643,8.557392 C 127.719,28.4998 124.721,29.1004 121.599,30.0725 c -1.314,0.4089 -2.649,0.8836 -3.975,1.3297 m 4.4e-4,3.8e-5 c 1.83675,-1.952559 4.32186,-4.217417 4.97505,-6.492828 0.23777,-0.872472 0.32231,-1.898128 0.17227,-3.158387 l 4.05351,0.965121 0.19288,4.053533 C 124.909,26.0454 122.67,27.0155 120.391,28.5069 l -2.767,2.8953 m 8.32996,-8.114441 4.61944,-3.241712 m -4.45735,5.835081 4.94361,4.457353 m -7.53698,-7.618022 -3.24172,-4.538395"
                inkstitch:satin_column="True"
                inkstitch:zigzag_underlay="True"
                inkstitch:center_walk_underlay="False"
@@ -3284,51 +3240,7 @@ Created by gluk ( www.glukfonts.pl | gluksza@wp.pl ) with FontForge. Font Sortef
                inkstitch:ties="3"
                inkstitch:zigzag_underlay_inset_mm="0.1"
                inkstitch:zigzag_underlay_max_stitch_length_mm="7"
-               sodipodi:nodetypes="cscccc"
-               inkstitch:reverse_rails="none" />
-            <path
-               id="path60856"
-               style="display:inline;fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-               d="m 122.77176,21.751023 4.05351,0.965121 m -6.11244,-3.667461 8.62175,1.930243"
-               sodipodi:nodetypes="cccc"
-               inkstitch:satin_column="True"
-               inkstitch:zigzag_underlay="True"
-               inkstitch:max_stitch_length_mm="7"
-               inkstitch:center_walk_underlay="False"
-               inkstitch:contour_underlay="False"
-               inkstitch:pull_compensation_mm="0.2"
-               inkstitch:ties="3"
-               inkstitch:zigzag_underlay_inset_mm="0.1"
-               inkstitch:zigzag_underlay_max_stitch_length_mm="7"
-               inkstitch:reverse_rails="none" />
-            <path
-               id="path60858"
-               style="display:inline;fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-               d="m 129.33458,20.978926 0.83644,8.557409 m -3.34575,-6.820191 0.19302,4.05351"
-               inkstitch:satin_column="True"
-               inkstitch:max_stitch_length_mm="7"
-               inkstitch:zigzag_underlay="True"
-               inkstitch:center_walk_underlay="False"
-               inkstitch:contour_underlay="False"
-               inkstitch:pull_compensation_mm="0.2"
-               inkstitch:ties="3"
-               inkstitch:zigzag_underlay_inset_mm="0.1"
-               inkstitch:zigzag_underlay_max_stitch_length_mm="7"
-               inkstitch:reverse_rails="none" />
-            <path
-               id="path60860"
-               style="display:inline;fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-               d="m 127.018,26.7697 c -2.109,-0.7243 -4.348,0.2458 -6.627,1.7372 l -2.767,2.8953 m 12.547,-1.8659 c -2.452,-1.0365 -5.45,-0.4359 -8.572,0.5362 -1.314,0.4089 -2.649,0.8836 -3.975,1.3297"
-               sodipodi:nodetypes="cscccc"
-               inkstitch:satin_column="True"
-               inkstitch:max_stitch_length_mm="7"
-               inkstitch:zigzag_underlay="True"
-               inkstitch:center_walk_underlay="False"
-               inkstitch:contour_underlay="False"
-               inkstitch:pull_compensation_mm="0.2"
-               inkstitch:ties="3"
-               inkstitch:zigzag_underlay_inset_mm="0.1"
-               inkstitch:zigzag_underlay_max_stitch_length_mm="7"
+               sodipodi:nodetypes="csccccccccccsccccccc"
                inkstitch:reverse_rails="none" />
           </g>
           <path
@@ -3559,7 +3471,7 @@ Created by gluk ( www.glukfonts.pl | gluksza@wp.pl ) with FontForge. Font Sortef
             <path
                id="path60929"
                style="display:inline;fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-               d="m 117.62444,31.402238 c 0.74896,-2.293773 1.59853,-4.544429 2.21915,-6.8932 0.4615,-1.746513 0.79641,-3.547275 0.86924,-5.460355 m -3.08839,12.353555 c 1.83675,-1.952559 4.32186,-4.217417 4.97505,-6.492828 0.23777,-0.872472 0.32231,-1.898128 0.17227,-3.158387"
+               d="m 117.62444,31.402238 c 0.74896,-2.293773 1.59853,-4.544429 2.21915,-6.8932 0.4615,-1.746513 0.79641,-3.547275 0.86924,-5.460355 l 8.62175,1.930243 0.83643,8.557392 C 127.719,28.4998 124.721,29.1004 121.599,30.0725 c -1.314,0.4089 -2.649,0.8836 -3.975,1.3297 m 4.4e-4,3.8e-5 c 1.83675,-1.952559 4.32186,-4.217417 4.97505,-6.492828 0.23777,-0.872472 0.32231,-1.898128 0.17227,-3.158387 l 4.05351,0.965121 0.19288,4.053533 C 124.909,26.0454 122.27006,26.53529 120.391,28.5069 l -2.60491,2.733214 m 12.30113,-11.031911 -4.78153,3.565883 m -1.21564,-0.729385 -4.29527,-4.781524 m 11.83225,12.561631 -5.91613,-5.186738"
                inkstitch:satin_column="True"
                inkstitch:zigzag_underlay="True"
                inkstitch:center_walk_underlay="False"
@@ -3569,51 +3481,7 @@ Created by gluk ( www.glukfonts.pl | gluksza@wp.pl ) with FontForge. Font Sortef
                inkstitch:ties="3"
                inkstitch:zigzag_underlay_inset_mm="0.1"
                inkstitch:zigzag_underlay_max_stitch_length_mm="7"
-               sodipodi:nodetypes="cscccc"
-               inkstitch:reverse_rails="none" />
-            <path
-               id="path60931"
-               style="display:inline;fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-               d="m 122.77176,21.751023 4.05351,0.965121 m -6.11244,-3.667461 8.62175,1.930243"
-               sodipodi:nodetypes="cccc"
-               inkstitch:satin_column="True"
-               inkstitch:zigzag_underlay="True"
-               inkstitch:max_stitch_length_mm="7"
-               inkstitch:center_walk_underlay="False"
-               inkstitch:contour_underlay="False"
-               inkstitch:pull_compensation_mm="0.2"
-               inkstitch:ties="3"
-               inkstitch:zigzag_underlay_inset_mm="0.1"
-               inkstitch:zigzag_underlay_max_stitch_length_mm="7"
-               inkstitch:reverse_rails="none" />
-            <path
-               id="path60933"
-               style="display:inline;fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-               d="m 129.33458,20.978926 0.83644,8.557409 m -3.34575,-6.820191 0.19302,4.05351"
-               inkstitch:satin_column="True"
-               inkstitch:max_stitch_length_mm="7"
-               inkstitch:zigzag_underlay="True"
-               inkstitch:center_walk_underlay="False"
-               inkstitch:contour_underlay="False"
-               inkstitch:pull_compensation_mm="0.2"
-               inkstitch:ties="3"
-               inkstitch:zigzag_underlay_inset_mm="0.1"
-               inkstitch:zigzag_underlay_max_stitch_length_mm="7"
-               inkstitch:reverse_rails="none" />
-            <path
-               id="path60935"
-               style="display:inline;fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-               d="m 127.018,26.7697 c -2.109,-0.7243 -4.348,0.2458 -6.627,1.7372 l -2.767,2.8953 m 12.547,-1.8659 c -2.452,-1.0365 -5.45,-0.4359 -8.572,0.5362 -1.314,0.4089 -2.649,0.8836 -3.975,1.3297"
-               sodipodi:nodetypes="cscccc"
-               inkstitch:satin_column="True"
-               inkstitch:max_stitch_length_mm="7"
-               inkstitch:zigzag_underlay="True"
-               inkstitch:center_walk_underlay="False"
-               inkstitch:contour_underlay="False"
-               inkstitch:pull_compensation_mm="0.2"
-               inkstitch:ties="3"
-               inkstitch:zigzag_underlay_inset_mm="0.1"
-               inkstitch:zigzag_underlay_max_stitch_length_mm="7"
+               sodipodi:nodetypes="csccccccccccsccc"
                inkstitch:reverse_rails="none" />
           </g>
           <path
@@ -3842,7 +3710,7 @@ Created by gluk ( www.glukfonts.pl | gluksza@wp.pl ) with FontForge. Font Sortef
             <path
                id="path60981"
                style="display:inline;fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-               d="m 117.62444,31.402238 c 0.74896,-2.293773 1.59853,-4.544429 2.21915,-6.8932 0.4615,-1.746513 0.79641,-3.547275 0.86924,-5.460355 m -3.08839,12.353555 c 1.83675,-1.952559 4.32186,-4.217417 4.97505,-6.492828 0.23777,-0.872472 0.32231,-1.898128 0.17227,-3.158387"
+               d="m 117.62444,31.402238 c 0.74896,-2.293773 1.59853,-4.544429 2.21915,-6.8932 0.4615,-1.746513 0.79641,-3.547275 0.86924,-5.460355 l 8.62175,1.930243 0.83643,8.557392 C 127.719,28.4998 124.721,29.1004 121.599,30.0725 c -1.314,0.4089 -2.649,0.8836 -3.975,1.3297 m 4.4e-4,3.8e-5 c 1.83675,-1.952559 4.32186,-4.217417 4.97505,-6.492828 0.23777,-0.872472 0.32231,-1.898128 0.17227,-3.158387 l 4.05351,0.965121 0.19288,4.053533 C 124.909,26.0454 122.67,27.0155 120.391,28.5069 l -2.767,2.8953 m 5.97987,-8.681603 -3.56589,-4.619439 m 5.99716,7.780107 5.51092,4.94361 m -5.673,-7.536979 4.78152,-3.322755"
                inkstitch:satin_column="True"
                inkstitch:zigzag_underlay="True"
                inkstitch:center_walk_underlay="False"
@@ -3852,51 +3720,7 @@ Created by gluk ( www.glukfonts.pl | gluksza@wp.pl ) with FontForge. Font Sortef
                inkstitch:ties="3"
                inkstitch:zigzag_underlay_inset_mm="0.1"
                inkstitch:zigzag_underlay_max_stitch_length_mm="7"
-               sodipodi:nodetypes="cscccc"
-               inkstitch:reverse_rails="none" />
-            <path
-               id="path60983-5"
-               style="display:inline;fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-               d="m 122.77176,21.751023 4.05351,0.965121 m -6.11244,-3.667461 8.62175,1.930243"
-               sodipodi:nodetypes="cccc"
-               inkstitch:satin_column="True"
-               inkstitch:zigzag_underlay="True"
-               inkstitch:max_stitch_length_mm="7"
-               inkstitch:center_walk_underlay="False"
-               inkstitch:contour_underlay="False"
-               inkstitch:pull_compensation_mm="0.2"
-               inkstitch:ties="3"
-               inkstitch:zigzag_underlay_inset_mm="0.1"
-               inkstitch:zigzag_underlay_max_stitch_length_mm="7"
-               inkstitch:reverse_rails="none" />
-            <path
-               id="path60985-5"
-               style="display:inline;fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-               d="m 129.33458,20.978926 0.83644,8.557409 m -3.34575,-6.820191 0.19302,4.05351"
-               inkstitch:satin_column="True"
-               inkstitch:max_stitch_length_mm="7"
-               inkstitch:zigzag_underlay="True"
-               inkstitch:center_walk_underlay="False"
-               inkstitch:contour_underlay="False"
-               inkstitch:pull_compensation_mm="0.2"
-               inkstitch:ties="3"
-               inkstitch:zigzag_underlay_inset_mm="0.1"
-               inkstitch:zigzag_underlay_max_stitch_length_mm="7"
-               inkstitch:reverse_rails="none" />
-            <path
-               id="path60987-7"
-               style="display:inline;fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-               d="m 127.018,26.7697 c -2.109,-0.7243 -4.348,0.2458 -6.627,1.7372 l -2.767,2.8953 m 12.547,-1.8659 c -2.452,-1.0365 -5.45,-0.4359 -8.572,0.5362 -1.314,0.4089 -2.649,0.8836 -3.975,1.3297"
-               sodipodi:nodetypes="cscccc"
-               inkstitch:satin_column="True"
-               inkstitch:max_stitch_length_mm="7"
-               inkstitch:zigzag_underlay="True"
-               inkstitch:center_walk_underlay="False"
-               inkstitch:contour_underlay="False"
-               inkstitch:pull_compensation_mm="0.2"
-               inkstitch:ties="3"
-               inkstitch:zigzag_underlay_inset_mm="0.1"
-               inkstitch:zigzag_underlay_max_stitch_length_mm="7"
+               sodipodi:nodetypes="csccccccccccsccccccc"
                inkstitch:reverse_rails="none" />
           </g>
           <path
@@ -4173,24 +3997,8 @@ Created by gluk ( www.glukfonts.pl | gluksza@wp.pl ) with FontForge. Font Sortef
              id="path3874"
              style="color:#000000;display:inline;fill:none;stroke:#0a55a3;-inkscape-stroke:none"
              transform="matrix(0,0.264583,-0.264583,0,148.804,22.8513)"
-             d="m 601.78906,-125.75 81.16016,81.160156 c 9.89895,-36.955812 19.80289,-73.910286 29.70508,-110.865236 l 29.70703,-110.86523 m -127.20899,127.20898 58.01368,58.013674 21.23437,-79.250004 21.23438,-79.24804"
-             sodipodi:nodetypes="cccccccc"
-             inkstitch:satin_column="True"
-             inkstitch:zigzag_underlay="True"
-             inkstitch:center_walk_underlay="False"
-             inkstitch:max_stitch_length_mm="7"
-             inkstitch:contour_underlay="False"
-             inkstitch:pull_compensation_mm="0.2"
-             inkstitch:ties="3"
-             inkstitch:zigzag_underlay_inset_mm="0.1"
-             inkstitch:zigzag_underlay_max_stitch_length_mm="7"
-             inkstitch:reverse_rails="none" />
-          <path
-             id="path3876"
-             style="color:#000000;display:inline;fill:none;stroke:#0a55a3;-inkscape-stroke:none"
-             transform="matrix(0,0.264583,-0.264583,0,148.804,22.8513)"
-             d="m 715.635,-239.596 -79.248,21.235 -79.25,21.234 58.015,58.016 m 127.209,-127.209 -110.865,29.705 -110.865,29.707 81.158,81.158"
-             sodipodi:nodetypes="cccccccc"
+             d="m 615.152,-139.111 58.014,58.0133 21.234,-79.2503 21.235,-79.248 -79.248,21.235 -79.25,21.234 z m -13.363,13.361 81.16,81.1602 c 9.899,-36.9559 19.803,-73.9102 29.705,-110.8652 l 29.707,-110.865 -110.865,29.705 -110.865,29.707 z m -32.679,-67.947 -59.832,-16.318 m 198.535,-22.438 42.835,-41.475 m -80.91,181.5381 15.638,56.4331"
+             sodipodi:nodetypes="cccccccccccccccccccc"
              inkstitch:satin_column="True"
              inkstitch:zigzag_underlay="True"
              inkstitch:center_walk_underlay="False"
@@ -4217,24 +4025,8 @@ Created by gluk ( www.glukfonts.pl | gluksza@wp.pl ) with FontForge. Font Sortef
              id="path3814"
              style="color:#000000;display:inline;fill:none;stroke:#0a55a3;-inkscape-stroke:none"
              transform="matrix(-0.264583,0,0,-0.264583,217.149,148.804)"
-             d="m 601.78906,-125.75 81.16016,81.160156 c 9.89895,-36.955812 19.80289,-73.910286 29.70508,-110.865236 l 29.70703,-110.86523 m -127.20899,127.20898 58.01368,58.013674 21.23437,-79.250004 21.23438,-79.24804"
-             sodipodi:nodetypes="cccccccc"
-             inkstitch:satin_column="True"
-             inkstitch:zigzag_underlay="True"
-             inkstitch:center_walk_underlay="False"
-             inkstitch:max_stitch_length_mm="7"
-             inkstitch:contour_underlay="False"
-             inkstitch:pull_compensation_mm="0.2"
-             inkstitch:ties="3"
-             inkstitch:zigzag_underlay_inset_mm="0.1"
-             inkstitch:zigzag_underlay_max_stitch_length_mm="7"
-             inkstitch:reverse_rails="none" />
-          <path
-             id="path3816"
-             style="color:#000000;display:inline;fill:none;stroke:#0a55a3;-inkscape-stroke:none"
-             transform="matrix(-0.264583,0,0,-0.264583,217.149,148.804)"
-             d="m 715.635,-239.596 -79.248,21.235 -79.25,21.234 58.015,58.016 m 127.209,-127.209 -110.865,29.705 -110.865,29.707 81.158,81.158"
-             sodipodi:nodetypes="cccccccc"
+             d="m 601.78906,-125.75 81.16016,81.160156 c 9.89895,-36.955812 19.80289,-73.910286 29.70508,-110.865236 l 29.70686,-110.86507 -110.86516,29.70515 -110.865,29.707 81.158,81.158 m 13.36334,-13.36133 58.01368,58.013674 21.23437,-79.250004 21.23449,-79.24819 -79.24788,21.23485 -79.25,21.234 58.015,58.016 m 55.51618,49.218739 17.58258,58.098955 -4.58676,-0.764461 m 22.16934,-197.995123 50.45435,-50.45435 m -184.9993,87.91289 -62.68571,-18.34704"
+             sodipodi:nodetypes="ccccccccccccccccccccc"
              inkstitch:satin_column="True"
              inkstitch:zigzag_underlay="True"
              inkstitch:center_walk_underlay="False"
@@ -4253,9 +4045,9 @@ Created by gluk ( www.glukfonts.pl | gluksza@wp.pl ) with FontForge. Font Sortef
         </g>
         <path
            style="display:inline;fill:none;stroke:#0a55a3;stroke-width:0.259954;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.519908, 0.519908;stroke-dashoffset:0;stroke-opacity:1"
-           d="m 182.07444,57.925088 -2.23415,2.234618 59.97712,59.840154 -59.97712,59.84043 2.23462,2.23415"
+           d="m 182.07444,57.925088 -2.23415,2.234618 59.97712,59.840154 -59.97712,59.84043 5.60554,5.66867"
            id="path3818"
-           sodipodi:nodetypes="cccc"
+           sodipodi:nodetypes="ccccc"
            inkscape:label="Rjonction"
            inkstitch:running_stitch_length_mm="2"
            inkstitch:ties="3"
@@ -4266,24 +4058,8 @@ Created by gluk ( www.glukfonts.pl | gluksza@wp.pl ) with FontForge. Font Sortef
              id="path3834"
              style="color:#000000;display:inline;fill:none;stroke:#0a55a3;-inkscape-stroke:none"
              transform="matrix(0,-0.264583,0.264583,0,91.1964,217.149)"
-             d="m 601.78906,-125.75 81.16016,81.160156 c 9.89895,-36.955812 19.80289,-73.910286 29.70508,-110.865236 l 29.70703,-110.86523 m -127.20899,127.20898 58.01368,58.013674 21.23437,-79.250004 21.23438,-79.24804"
-             sodipodi:nodetypes="cccccccc"
-             inkstitch:satin_column="True"
-             inkstitch:zigzag_underlay="True"
-             inkstitch:center_walk_underlay="False"
-             inkstitch:max_stitch_length_mm="7"
-             inkstitch:contour_underlay="False"
-             inkstitch:pull_compensation_mm="0.2"
-             inkstitch:ties="3"
-             inkstitch:zigzag_underlay_inset_mm="0.1"
-             inkstitch:zigzag_underlay_max_stitch_length_mm="7"
-             inkstitch:reverse_rails="none" />
-          <path
-             id="path3836"
-             style="color:#000000;display:inline;fill:none;stroke:#0a55a3;-inkscape-stroke:none"
-             transform="matrix(0,-0.264583,0.264583,0,91.1964,217.149)"
-             d="m 715.635,-239.596 -79.248,21.235 -79.25,21.234 58.015,58.016 m 127.209,-127.209 -110.865,29.705 -110.865,29.707 81.158,81.158"
-             sodipodi:nodetypes="cccccccc"
+             d="m 615.152,-139.111 58.014,58.0133 21.234,-79.2503 21.235,-79.248 -79.248,21.235 -79.25,21.234 z m -13.363,13.361 81.16,81.1602 c 9.899,-36.9559 19.803,-73.9102 29.705,-110.8652 l 29.707,-110.865 -110.865,29.705 -110.865,29.707 z m 67.953,31.9992 16.998,60.5126 m 20.398,-197.8558 41.475,-43.515 m -176.779,79.551 -62.552,-14.959"
+             sodipodi:nodetypes="cccccccccccccccccccc"
              inkstitch:satin_column="True"
              inkstitch:zigzag_underlay="True"
              inkstitch:center_walk_underlay="False"
@@ -4301,9 +4077,9 @@ Created by gluk ( www.glukfonts.pl | gluksza@wp.pl ) with FontForge. Font Sortef
         </g>
         <path
            style="display:inline;fill:none;stroke:#0a55a3;stroke-width:0.259954;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.519908, 0.519908;stroke-dashoffset:0;stroke-opacity:1"
-           d="m 182.07444,57.925088 -2.23415,2.234618 59.97712,59.840154 -59.97712,59.84043 2.23462,2.23415"
+           d="m 182.07444,57.925088 -2.23415,2.234618 59.97712,59.840154 -59.97712,59.84043 6.10235,5.47225"
            id="path3838"
-           sodipodi:nodetypes="cccc"
+           sodipodi:nodetypes="ccccc"
            inkscape:label="Rjonction"
            inkstitch:running_stitch_length_mm="2"
            inkstitch:ties="3"
@@ -4314,24 +4090,8 @@ Created by gluk ( www.glukfonts.pl | gluksza@wp.pl ) with FontForge. Font Sortef
              id="path3854"
              style="color:#000000;display:inline;fill:none;stroke:#0a55a3;-inkscape-stroke:none"
              transform="matrix(0.264583,0,0,0.264583,22.8513,91.1964)"
-             d="m 601.78906,-125.75 81.16016,81.160156 c 9.89895,-36.955812 19.80289,-73.910286 29.70508,-110.865236 l 29.70703,-110.86523 m -127.20899,127.20898 58.01368,58.013674 21.23437,-79.250004 21.23438,-79.24804"
-             sodipodi:nodetypes="cccccccc"
-             inkstitch:satin_column="True"
-             inkstitch:zigzag_underlay="True"
-             inkstitch:center_walk_underlay="False"
-             inkstitch:max_stitch_length_mm="7"
-             inkstitch:contour_underlay="False"
-             inkstitch:pull_compensation_mm="0.2"
-             inkstitch:ties="3"
-             inkstitch:zigzag_underlay_inset_mm="0.1"
-             inkstitch:zigzag_underlay_max_stitch_length_mm="7"
-             inkstitch:reverse_rails="none" />
-          <path
-             id="path3856"
-             style="color:#000000;display:inline;fill:none;stroke:#0a55a3;-inkscape-stroke:none"
-             transform="matrix(0.264583,0,0,0.264583,22.8513,91.1964)"
-             d="m 715.635,-239.596 -79.248,21.235 -79.25,21.234 58.015,58.016 m 127.209,-127.209 -110.865,29.705 -110.865,29.707 81.158,81.158"
-             sodipodi:nodetypes="cccccccc"
+             d="m 615.152,-139.111 58.014,58.0133 21.234,-79.2503 21.235,-79.248 -79.248,21.235 -79.25,21.234 z m -13.363,13.361 81.16,81.1602 c 9.899,-36.9559 19.803,-73.9102 29.705,-110.8652 l 29.707,-110.865 -110.865,29.705 -110.865,29.707 z m -29.277,-67.95 -61.193,-14.959 m 158.421,115.5862 14.958,57.7929 m 23.117,-195.8161 40.795,-42.835"
+             sodipodi:nodetypes="cccccccccccccccccccc"
              inkstitch:satin_column="True"
              inkstitch:zigzag_underlay="True"
              inkstitch:center_walk_underlay="False"
@@ -4350,11 +4110,12 @@ Created by gluk ( www.glukfonts.pl | gluksza@wp.pl ) with FontForge. Font Sortef
       </g>
       <path
          style="display:inline;fill:none;stroke:#0a55a3;stroke-width:0.982503;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.96501, 1.96501;stroke-dashoffset:0;stroke-opacity:1"
-         d="m 229.61958,291.31734 8.44581,8.44409 226.1675,-226.685179 5.3e-4,13.104459"
+         d="m 229.61958,291.31734 8.44581,8.44409 226.1675,-226.685179 0.34049,54.239389"
          id="path8756"
          inkstitch:running_stitch_length_mm="2"
          inkstitch:ties="3"
-         inkscape:label="jonction" />
+         inkscape:label="jonction"
+         sodipodi:nodetypes="cccc" />
       <g
          id="g5176"
          inkscape:label="triangles angles"
@@ -4363,7 +4124,7 @@ Created by gluk ( www.glukfonts.pl | gluksza@wp.pl ) with FontForge. Font Sortef
         <path
            id="path3882"
            style="display:inline;opacity:1;vector-effect:non-scaling-stroke;fill:none;stroke:#0a55a3;stroke-width:0.0004;-inkscape-stroke:hairline"
-           d="m 120,3.64981 10,17.32049 10,17.3205 h -20 m 0,-24.0577 5.525,9.5702 5.526,9.5701 H 120"
+           d="m 120,14.2331 5.525,9.5702 5.526,9.5701 H 120 108.949 l 5.526,-9.5701 z m 0,-10.58329 10,17.32049 10,17.3205 h -20 -20 l 10,-17.3205 z m -8.276,28.02189 -14.3911,8.2751 m 30.2221,-8.455 15.291,8.455 M 120,30.0527 l 0.179,9.8941"
            inkstitch:satin_column="True"
            inkstitch:max_stitch_length_mm="7"
            inkstitch:zigzag_underlay="True"
@@ -4373,32 +4134,20 @@ Created by gluk ( www.glukfonts.pl | gluksza@wp.pl ) with FontForge. Font Sortef
            inkstitch:ties="3"
            inkstitch:zigzag_underlay_inset_mm="0.1"
            inkstitch:zigzag_underlay_max_stitch_length_mm="7"
-           inkstitch:reverse_rails="none" />
-        <path
-           id="path3884"
-           style="display:inline;opacity:1;vector-effect:non-scaling-stroke;fill:none;stroke:#0a55a3;stroke-width:0.0004;-inkscape-stroke:hairline"
-           d="M 120,33.373435 H 108.94935 L 114.47468,23.803291 120,14.233146 m 0,24.057678 H 100 L 110,20.970318 120,3.6498094"
-           inkstitch:satin_column="True"
-           inkstitch:max_stitch_length_mm="7"
-           inkstitch:pull_compensation_mm="0.2"
-           inkstitch:ties="3"
-           inkstitch:zigzag_underlay="True"
-           inkstitch:zigzag_underlay_inset_mm="0.1"
-           inkstitch:zigzag_underlay_max_stitch_length_mm="7"
-           inkstitch:center_walk_underlay="False"
-           inkstitch:contour_underlay="False"
-           inkstitch:reverse_rails="none" />
+           inkstitch:reverse_rails="none"
+           sodipodi:nodetypes="cccccccccccccccccccc" />
         <path
            style="display:inline;fill:none;stroke:#0a55a3;stroke-width:0.259954;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.519908, 0.519908;stroke-dashoffset:0;stroke-opacity:1"
-           d="M 120,2.8287 V 0.18259 l 119.818,119.817 h -2.64611 L 236.252,120"
+           d="M 120,2.8287 V 0.18259 l 119.818,119.817 h -2.64611 l -11.26382,-0.0895"
            id="path3886"
            inkscape:label="Rjonction"
            inkstitch:running_stitch_length_mm="2"
-           inkstitch:ties="3" />
+           inkstitch:ties="3"
+           sodipodi:nodetypes="ccccc" />
         <path
            id="path3822"
            style="display:inline;opacity:1;vector-effect:non-scaling-stroke;fill:none;stroke:#0a55a3;stroke-width:0.0004;-inkscape-stroke:hairline"
-           d="m 120,3.64981 10,17.32049 10,17.3205 h -20 m 0,-24.0577 5.525,9.5702 5.526,9.5701 H 120"
+           d="m 120,14.2331 5.525,9.5702 5.526,9.5701 H 120 108.949 l 5.526,-9.5701 z m 0,-10.58329 10,17.32049 10,17.3205 H 120 100 L 110,20.9703 Z M 111.185,32.212 c -15.4709,8.455 -13.3122,7.1958 -13.3122,7.1958 m 30.4022,-7.5556 13.852,7.3757 M 120.18,31.3125 v 9.3545"
            inkstitch:satin_column="True"
            inkstitch:max_stitch_length_mm="7"
            inkstitch:zigzag_underlay="True"
@@ -4409,25 +4158,11 @@ Created by gluk ( www.glukfonts.pl | gluksza@wp.pl ) with FontForge. Font Sortef
            inkstitch:zigzag_underlay_inset_mm="0.1"
            inkstitch:zigzag_underlay_max_stitch_length_mm="7"
            transform="rotate(90,120,120)"
-           inkstitch:reverse_rails="none" />
-        <path
-           id="path3824"
-           style="display:inline;opacity:1;vector-effect:non-scaling-stroke;fill:none;stroke:#0a55a3;stroke-width:0.0004;-inkscape-stroke:hairline"
-           d="M 120,33.373435 H 108.94935 L 114.47468,23.803291 120,14.233146 m 0,24.057678 H 100 L 110,20.970318 120,3.6498094"
-           inkstitch:satin_column="True"
-           inkstitch:max_stitch_length_mm="7"
-           inkstitch:pull_compensation_mm="0.2"
-           inkstitch:ties="3"
-           inkstitch:zigzag_underlay="True"
-           inkstitch:zigzag_underlay_inset_mm="0.1"
-           inkstitch:zigzag_underlay_max_stitch_length_mm="7"
-           inkstitch:center_walk_underlay="False"
-           inkstitch:contour_underlay="False"
-           transform="rotate(90,120,120)"
-           inkstitch:reverse_rails="none" />
+           inkstitch:reverse_rails="none"
+           sodipodi:nodetypes="cccccccccccccccccccc" />
         <path
            style="display:inline;fill:none;stroke:#0a55a3;stroke-width:0.259954;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.519908, 0.519908;stroke-dashoffset:0;stroke-opacity:1"
-           d="M 120,2.8287 V 0.18259 l 119.818,119.817 c -1.18867,-3.2e-4 -2.37733,-5e-4 -3.566,4.1e-4"
+           d="M 120,2.8287 V 0.18259 l 119.818,119.817 c -1.18867,-3.2e-4 -12.45141,0.0894 -13.64008,0.0904"
            id="path3826"
            inkscape:label="Rjonction"
            inkstitch:running_stitch_length_mm="2"
@@ -4437,7 +4172,7 @@ Created by gluk ( www.glukfonts.pl | gluksza@wp.pl ) with FontForge. Font Sortef
         <path
            id="path3842"
            style="display:inline;opacity:1;vector-effect:non-scaling-stroke;fill:none;stroke:#0a55a3;stroke-width:0.0004;-inkscape-stroke:hairline"
-           d="m 120,3.64981 10,17.32049 10,17.3205 h -20 m 0,-24.0577 5.525,9.5702 5.526,9.5701 H 120"
+           d="m 120,14.2331 5.525,9.5702 5.526,9.5701 H 120 108.949 l 5.526,-9.5701 z m 0,-10.58329 10,17.32049 10,17.3205 h -20 -20 l 10,-17.3205 z m -8.634,28.38199 -13.4926,7.1958 m 30.9416,-7.1958 13.852,7.9154 M 120.9,43.9048 120.72,30.5927"
            inkstitch:satin_column="True"
            inkstitch:max_stitch_length_mm="7"
            inkstitch:zigzag_underlay="True"
@@ -4448,22 +4183,8 @@ Created by gluk ( www.glukfonts.pl | gluksza@wp.pl ) with FontForge. Font Sortef
            inkstitch:zigzag_underlay_inset_mm="0.1"
            inkstitch:zigzag_underlay_max_stitch_length_mm="7"
            transform="rotate(180,120,120)"
-           inkstitch:reverse_rails="none" />
-        <path
-           id="path3844"
-           style="display:inline;opacity:1;vector-effect:non-scaling-stroke;fill:none;stroke:#0a55a3;stroke-width:0.0004;-inkscape-stroke:hairline"
-           d="M 120,33.373435 H 108.94935 L 114.47468,23.803291 120,14.233146 m 0,24.057678 H 100 L 110,20.970318 120,3.6498094"
-           inkstitch:satin_column="True"
-           inkstitch:max_stitch_length_mm="7"
-           inkstitch:pull_compensation_mm="0.2"
-           inkstitch:ties="3"
-           inkstitch:zigzag_underlay="True"
-           inkstitch:zigzag_underlay_inset_mm="0.1"
-           inkstitch:zigzag_underlay_max_stitch_length_mm="7"
-           inkstitch:center_walk_underlay="False"
-           inkstitch:contour_underlay="False"
-           transform="rotate(180,120,120)"
-           inkstitch:reverse_rails="none" />
+           inkstitch:reverse_rails="none"
+           sodipodi:nodetypes="cccccccccccccccccc" />
         <path
            style="display:inline;fill:none;stroke:#0a55a3;stroke-width:0.259954;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.519908, 0.519908;stroke-dashoffset:0;stroke-opacity:1"
            d="M 119.99986,3.8870315 V 0.18259 l 119.81755,119.81727 h -3.70444"
@@ -4476,7 +4197,7 @@ Created by gluk ( www.glukfonts.pl | gluksza@wp.pl ) with FontForge. Font Sortef
         <path
            id="path3862"
            style="display:inline;opacity:1;vector-effect:non-scaling-stroke;fill:none;stroke:#0a55a3;stroke-width:0.0004;-inkscape-stroke:hairline"
-           d="m 120,3.64981 10,17.32049 10,17.3205 h -20 m 0,-24.0577 5.525,9.5702 5.526,9.5701 H 120"
+           d="m 120,3.64981 10,17.32049 10,17.3205 -20,1.2e-5 -20,1.2e-5 10,-17.320506 10,-17.3205086 m 0,10.5832906 5.525,9.5702 5.526,9.5701 -11.051,1.8e-5 -11.05065,1.7e-5 5.52533,-9.570144 L 120,14.233146 m -6.11625,16.358908 -16.910071,9.354508 m 30.941831,-7.915353 15.29102,8.275142 m -24.28574,-9.894191 0.3598,12.952395"
            inkstitch:satin_column="True"
            inkstitch:max_stitch_length_mm="7"
            inkstitch:zigzag_underlay="True"
@@ -4487,22 +4208,8 @@ Created by gluk ( www.glukfonts.pl | gluksza@wp.pl ) with FontForge. Font Sortef
            inkstitch:zigzag_underlay_inset_mm="0.1"
            inkstitch:zigzag_underlay_max_stitch_length_mm="7"
            transform="rotate(-90,120,120)"
-           inkstitch:reverse_rails="none" />
-        <path
-           id="path3864"
-           style="display:inline;opacity:1;vector-effect:non-scaling-stroke;fill:none;stroke:#0a55a3;stroke-width:0.0004;-inkscape-stroke:hairline"
-           d="M 120,33.373435 H 108.94935 L 114.47468,23.803291 120,14.233146 m 0,24.057678 H 100 L 110,20.970318 120,3.6498094"
-           inkstitch:satin_column="True"
-           inkstitch:max_stitch_length_mm="7"
-           inkstitch:pull_compensation_mm="0.2"
-           inkstitch:ties="2"
-           inkstitch:zigzag_underlay="True"
-           inkstitch:zigzag_underlay_inset_mm="0.1"
-           inkstitch:zigzag_underlay_max_stitch_length_mm="7"
-           inkstitch:center_walk_underlay="False"
-           inkstitch:contour_underlay="False"
-           transform="rotate(-90,120,120)"
-           inkstitch:reverse_rails="none" />
+           inkstitch:reverse_rails="none"
+           sodipodi:nodetypes="cccccccccccccccccccc" />
       </g>
       <path
          id="path3870"
@@ -4532,7 +4239,8 @@ Created by gluk ( www.glukfonts.pl | gluksza@wp.pl ) with FontForge. Font Sortef
        inkstitch:max_stitch_length_mm="2.5"
        inkstitch:zigzag_spacing_mm="4"
        inkstitch:ties="2"
-       inkstitch:reverse_rails="none" />
+       inkstitch:reverse_rails="none"
+       sodipodi:nodetypes="csssssssccsssssssc" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -4576,7 +4284,7 @@ Created by gluk ( www.glukfonts.pl | gluksza@wp.pl ) with FontForge. Font Sortef
       <path
          id="path69833"
          style="color:#000000;display:inline;fill:none;stroke:#000000;stroke-width:1.34952;stroke-miterlimit:4;stroke-dasharray:none"
-         d="m 373.60495,181.31314 v 21.52325 24.25575 m 21.66175,-45.80005 v 21.53354 24.27672"
+         d="m 373.60495,181.31314 v 21.52325 24.25575 m 21.66175,-45.80005 v 21.53354 24.27672 m -31.99757,-11.5344 h 40.71274"
          inkscape:label="C3"
          sodipodi:nodetypes="cccccc"
          inkstitch:satin_column="True"
@@ -4641,7 +4349,7 @@ Created by gluk ( www.glukfonts.pl | gluksza@wp.pl ) with FontForge. Font Sortef
       <path
          id="path70253"
          style="color:#000000;display:inline;fill:none;stroke:#000000;stroke-width:1.34952;stroke-miterlimit:4;stroke-dasharray:none"
-         d="m 421.63708,202.80513 v 24.3105 21.52328 m 21.66181,-45.85692 v 24.33904 21.52862"
+         d="m 421.63708,202.80513 v 24.3105 21.52328 m 21.66181,-45.85692 v 24.33904 21.52862 m -33.05352,-40.91107 h 43.8445"
          inkscape:label="C6"
          inkstitch:satin_column="True"
          inkstitch:max_stitch_length_mm="5"
@@ -4696,7 +4404,7 @@ Created by gluk ( www.glukfonts.pl | gluksza@wp.pl ) with FontForge. Font Sortef
       <path
          id="path76685"
          style="color:#000000;display:inline;fill:none;stroke:#000000;stroke-width:1.34952;stroke-miterlimit:4;stroke-dasharray:none"
-         d="m 444.4093,702.37693 h -21.58619 -24.32666 m 45.93392,21.59861 h -21.59648 -24.34768"
+         d="m 444.4093,702.37693 h -21.58619 -24.32666 m 45.93392,21.59861 h -21.59648 -24.34768 m 9.41035,-36.2963 v 42.27862"
          inkscape:label="C3"
          sodipodi:nodetypes="cccccc"
          inkstitch:satin_column="True"
@@ -4761,7 +4469,7 @@ Created by gluk ( www.glukfonts.pl | gluksza@wp.pl ) with FontForge. Font Sortef
       <path
          id="path76697"
          style="color:#000000;display:inline;fill:none;stroke:#000000;stroke-width:1.34952;stroke-miterlimit:4;stroke-dasharray:none"
-         d="m 422.85447,750.26905 h -24.38158 -21.5862 m 45.99096,21.59866 h -24.41018 -21.59155"
+         d="m 422.85447,750.26905 h -24.38158 -21.5862 m 45.99096,21.59866 h -24.41018 -21.59155 m 29.45477,-30.94872 v 39.14687"
          inkscape:label="C6"
          inkstitch:satin_column="True"
          inkstitch:max_stitch_length_mm="5"
@@ -4816,7 +4524,7 @@ Created by gluk ( www.glukfonts.pl | gluksza@wp.pl ) with FontForge. Font Sortef
       <path
          id="path77851"
          style="color:#000000;display:inline;fill:none;stroke:#000000;stroke-width:1.34952;stroke-miterlimit:4;stroke-dasharray:none"
-         d="m -74.644822,774.29906 v -21.52327 -24.25575 m -21.661773,45.80003 v -21.53354 -24.27669"
+         d="m -74.644822,774.29906 v -21.52327 -24.25575 m -21.661773,45.80003 v -21.53354 -24.27669 m -11.752625,4.57977 h 41.495681"
          inkscape:label="C3"
          sodipodi:nodetypes="cccccc"
          inkstitch:satin_column="True"
@@ -4882,7 +4590,7 @@ Created by gluk ( www.glukfonts.pl | gluksza@wp.pl ) with FontForge. Font Sortef
       <path
          id="path77863"
          style="color:#000000;display:inline;fill:none;stroke:#000000;stroke-width:1.34952;stroke-miterlimit:4;stroke-dasharray:none"
-         d="m -122.67699,752.80705 v -24.3105 -21.52327 m -21.66177,45.85689 v -24.33902 -21.52862"
+         d="m -122.67699,752.80705 v -24.3105 -21.52327 m -21.66177,45.85689 v -24.33902 -21.52862 m -12.26259,35.52233 h 40.71275"
          inkscape:label="C6"
          inkstitch:satin_column="True"
          inkstitch:max_stitch_length_mm="5"
@@ -4937,7 +4645,7 @@ Created by gluk ( www.glukfonts.pl | gluksza@wp.pl ) with FontForge. Font Sortef
       <path
          id="path78039"
          style="color:#000000;display:inline;fill:none;stroke:#000000;stroke-width:1.34952;stroke-miterlimit:4;stroke-dasharray:none"
-         d="m -146.77532,253.23153 h 21.58618 24.32666 m -45.93395,-21.59861 h 21.59649 24.34771"
+         d="m -146.77532,253.23153 h 21.58618 24.32666 m -45.93395,-21.59861 h 21.59649 24.34771 m -11.12168,-12.93322 v 43.06156"
          inkscape:label="C3"
          sodipodi:nodetypes="cccccc"
          inkstitch:satin_column="True"
@@ -5002,7 +4710,7 @@ Created by gluk ( www.glukfonts.pl | gluksza@wp.pl ) with FontForge. Font Sortef
       <path
          id="path78051"
          style="color:#000000;display:inline;fill:none;stroke:#000000;stroke-width:1.34952;stroke-miterlimit:4;stroke-dasharray:none"
-         d="m -125.2205,205.33939 h 24.3816 21.586187 M -125.2437,183.74076 h 24.4102 21.591582"
+         d="m -125.2205,205.33939 h 24.3816 21.586187 M -125.2437,183.74076 h 24.4102 21.591582 m -42.127242,-12.01731 v 43.06156"
          inkscape:label="C6"
          inkstitch:satin_column="True"
          inkstitch:max_stitch_length_mm="5"
@@ -7103,7 +6811,7 @@ Created by gluk ( www.glukfonts.pl | gluksza@wp.pl ) with FontForge. Font Sortef
         <g
            id="g3445"
            inkscape:label="volute"
-           transform="matrix(3.0045885,0.40784897,-0.37106173,2.733592,-27.832214,-35.289)"
+           transform="matrix(3.00459,0.407849,-0.371062,2.73359,-27.8322,-35.289)"
            inkscape:transform-center-x="-22.352336"
            inkscape:transform-center-y="-12.988665">
           <path
@@ -7144,7 +6852,7 @@ Created by gluk ( www.glukfonts.pl | gluksza@wp.pl ) with FontForge. Font Sortef
         <g
            id="g3714"
            inkscape:label="volute"
-           transform="matrix(0.0695386,-3.0313565,2.7579356,0.06326662,-89.26683,772.1004)"
+           transform="matrix(0.0695386,-3.03136,2.75794,0.0632666,-89.2668,772.1)"
            inkscape:transform-center-x="15.741783"
            inkscape:transform-center-y="-21.187388">
           <path
@@ -7181,7 +6889,7 @@ Created by gluk ( www.glukfonts.pl | gluksza@wp.pl ) with FontForge. Font Sortef
         <g
            id="g3730"
            inkscape:label="volute"
-           transform="matrix(-3.0045885,-0.40784897,0.37106173,-2.733592,632.41815,942.60506)"
+           transform="matrix(-3.00459,-0.407849,0.371062,-2.73359,632.418,942.605)"
            inkscape:transform-center-x="22.352332"
            inkscape:transform-center-y="12.988665">
           <path
@@ -7218,7 +6926,7 @@ Created by gluk ( www.glukfonts.pl | gluksza@wp.pl ) with FontForge. Font Sortef
         <g
            id="g3738"
            inkscape:label="volute"
-           transform="matrix(-1.3226548,1.4359253,-1.3064147,-1.203359,466.99041,561.30271)"
+           transform="matrix(-1.32265,1.43593,-1.30641,-1.20336,466.99,561.303)"
            inkscape:transform-center-x="1.3653911"
            inkscape:transform-center-y="15.782573">
           <path
@@ -7255,7 +6963,7 @@ Created by gluk ( www.glukfonts.pl | gluksza@wp.pl ) with FontForge. Font Sortef
         <g
            id="g3722"
            inkscape:label="volute"
-           transform="matrix(3.0045885,-0.40784897,-0.37106173,-2.733592,-27.832214,944.04233)"
+           transform="matrix(3.00459,-0.407849,-0.371062,-2.73359,-27.8322,944.042)"
            inkscape:transform-center-x="-22.352336"
            inkscape:transform-center-y="12.988665">
           <path
@@ -7296,7 +7004,7 @@ Created by gluk ( www.glukfonts.pl | gluksza@wp.pl ) with FontForge. Font Sortef
          style="display:inline">
         <path
            style="color:#000000;display:inline;fill:none;stroke:#000000;stroke-width:0.233892;-inkscape-stroke:none"
-           d="m 69.113223,236.69224 h 92.482037 l 9.3e-4,-1.76652 c 0.0111,-16.64484 13.46484,-30.09528 30.15878,-30.10327 l 1.89717,0.0838 V 74.445917 l -1.98671,0.231838 C 175.18518,74.619589 161.8394,61.399687 161.63776,44.925782 l -0.0215,-1.74642 -111.394129,-7e-6 -0.02147,1.74642 C 49.998785,61.420524 36.620279,74.653664 20.087369,74.679121 L 18.166214,74.556464 V 205.05612 l 1.987165,-0.23138 c 16.632937,0.0368 30.059061,13.47368 30.07015,30.10098 l 9.35e-4,1.76652 h 18.888759 m 0,-3.53577 h 89.037597 c 0.9097,-17.2014 14.74221,-30.97394 31.96549,-31.79145 V 78.136105 C 173.04989,77.305844 159.30052,63.751807 158.21112,46.71514 H 53.627295 C 52.537386,63.759464 38.776502,77.317136 21.702,78.137476 V 201.36502 c 17.223828,0.81682 31.057113,14.58954 31.966865,31.79145 h 15.444358 m 36.102627,-5.39099 v 12.01805 m 78.11727,-97.53103 h 15.25367 M 103.13581,51.654957 V 38.943566 m 51.5389,10.631343 12.48028,-11.324691 M 185.8754,82.16229 196.27563,71.762062 M 57.14369,50.730491 44.894532,36.863521 M 24.902983,81.353383 15.773894,71.99318 m 10.053554,125.26497 -10.169112,10.16911 m 32.00959,31.89403 10.053554,-10.05355 m 96.95323,-0.23112 11.67137,12.82695 m 20.45378,-43.44984 10.97802,10.51578 M 11.613801,141.09708 h 16.178152"
+           d="m 69.1132,233.156 h 89.0378 c 0.91,-17.201 14.742,-30.973 31.965,-31.791 V 78.1361 C 173.05,77.3058 159.301,63.7518 158.211,46.7151 H 53.6273 C 52.5374,63.7595 38.7765,77.3171 21.702,78.1375 V 201.365 c 17.2238,0.817 31.0571,14.59 31.9669,31.791 z m 0,3.536 h 92.4818 l 0.001,-1.766 c 0.011,-16.645 13.465,-30.096 30.159,-30.104 l 1.897,0.084 V 74.4459 l -1.987,0.2319 c -16.48,-0.0582 -29.826,-13.2781 -30.027,-29.752 l -0.022,-1.7464 H 50.2221 l -0.0214,1.7464 C 49.9988,61.4205 36.6203,74.6537 20.0874,74.6791 L 18.1662,74.5565 V 205.056 l 1.9872,-0.231 c 16.6329,0.037 30.059,13.473 30.0701,30.101 l 10e-4,1.766 z m 36.1028,-8.927 v 12.019 m 78.117,-97.532 h 15.254 M 103.136,51.655 V 38.9436 m 51.539,10.6313 12.48,-11.3247 m 18.72,43.9121 10.401,-10.4002 M 57.1437,50.7305 44.8945,36.8635 M 24.903,81.3534 15.7739,71.9932 M 25.8274,197.258 15.6583,207.427 m 32.0096,31.894 10.0536,-10.053 m 96.9535,-0.231 11.671,12.827 m 20.454,-43.45 10.978,10.516 M 11.6138,141.097 H 27.792"
            id="path3400"
            sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccccccc"
            inkstitch:satin_column="True"
@@ -8472,7 +8180,7 @@ Created by gluk ( www.glukfonts.pl | gluksza@wp.pl ) with FontForge. Font Sortef
              inkstitch:running_stitch_length_mm="2"
              sodipodi:nodetypes="ccc" />
           <path
-             d="M 112.69119,347.83039 176.95458,348 M 112,338 h 64.95458"
+             d="M 112.69119,347.83039 176.95458,348 M 112,338 h 64.95458 m -16.43397,-7.12491 v 19.57344"
              id="path51716"
              style="display:inline;fill:none;stroke:#0a55a3"
              sodipodi:nodetypes="cccc"
@@ -8493,7 +8201,7 @@ Created by gluk ( www.glukfonts.pl | gluksza@wp.pl ) with FontForge. Font Sortef
              inkstitch:running_stitch_length_mm="2"
              sodipodi:nodetypes="ccc" />
           <path
-             d="M 108.64256,327.79505 176.95458,328 M 106,318 h 70.95458"
+             d="M 108.64256,327.79505 176.95458,328 M 106,318 h 70.95458 m -43.83679,-5.71967 v 18.10543"
              id="path51714"
              style="display:inline;fill:none;stroke:#0a55a3"
              sodipodi:nodetypes="cccc"
@@ -14710,7 +14418,7 @@ Created by gluk ( www.glukfonts.pl | gluksza@wp.pl ) with FontForge. Font Sortef
         <path
            id="path43045"
            style="display:inline;fill:none;stroke:#000000"
-           d="m 510.20126,659.58448 -175.46866,0.97801 m 175.46866,-0.97801 c -7.0902,-0.82205 -12.32007,-4.74464 -17.45001,-8.83379 l -146.5025,-0.24986 -11.51615,10.06166 m 84.00203,9.68976 v -31.11269"
+           d="m 510.20126,659.58448 -175.46866,0.97801 m 170.5753,-3.42469 c -7.0902,-0.82205 -7.42671,-2.29796 -12.55665,-6.38711 l -146.5025,-0.24986 -9.06947,7.12564 m 81.55535,12.62578 v -31.11269"
            inkscape:label="C5"
            inkstitch:satin_column="True"
            inkstitch:max_stitch_length_mm="7"
@@ -14820,9 +14528,9 @@ Created by gluk ( www.glukfonts.pl | gluksza@wp.pl ) with FontForge. Font Sortef
           <path
              id="path42366"
              style="display:inline;fill:none;stroke:#000000"
-             d="m 255,659 c -23.333,-2.667 -42.167,-13.167 -56.5,-33.5 M 255,659 c -16.667,-4 -30.333,-16.667 -41,-36"
+             d="M 252.2319,658.48098 C 228.8989,655.81398 212.833,645.833 198.5,625.5 m 56.67301,33.15399 C 238.50601,654.65399 224.667,642.333 214,623 m -16.88737,4.14688 20.93377,-2.94111"
              inkscape:label="Clargebas"
-             sodipodi:nodetypes="ccsc"
+             sodipodi:nodetypes="ccsccc"
              inkstitch:satin_column="True"
              inkstitch:pull_compensation_mm="0.4"
              inkstitch:max_stitch_length_mm="7"
@@ -18993,11 +18701,11 @@ Created by gluk ( www.glukfonts.pl | gluksza@wp.pl ) with FontForge. Font Sortef
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-N"
-     style="display:inline"
+     style="display:none"
      id="g56255">
     <g
        id="g560357"
-       transform="translate(-256.415, -493.685)">
+       transform="translate(-256.415,-493.685)">
       <g
          id="g242529"
          style="display:inline">
@@ -24571,8 +24279,8 @@ Created by gluk ( www.glukfonts.pl | gluksza@wp.pl ) with FontForge. Font Sortef
         <path
            id="path190153"
            style="display:inline;fill:none;stroke:#000000"
-           d="M 121.30095,262.99145 C 90.522652,261.97738 61.422336,257.98023 34,251 m 34.899596,16.71084 6.353242,-15.01675 M 121,271 C 94.333333,269.66667 67.333333,266 40,260 l -6,-9"
-           sodipodi:nodetypes="cccccc"
+           d="M 121.30095,262.99145 C 90.522652,261.97738 61.422336,257.98023 34,251 m 34.899596,16.71084 6.353242,-15.01675 M 121,271 C 94.333333,269.66667 67.333333,266 40,260 l -4.615949,-6.2319"
+           sodipodi:nodetypes="ccccccc"
            inkscape:label="C2"
            inkstitch:satin_column="True"
            inkstitch:max_stitch_length_mm="7"
@@ -24585,7 +24293,7 @@ Created by gluk ( www.glukfonts.pl | gluksza@wp.pl ) with FontForge. Font Sortef
         <path
            id="path189353"
            style="display:inline;fill:none;stroke:#000000"
-           d="M 34,251 21,371 m 13,-120 6,9 -7,87 -12,24 m 22.10708,-66.67354 -19.93863,-1.5741"
+           d="M 34,251 21,371 M 33.653987,254.11411 40,260 33,347 21,371 m 22.10708,-66.67354 -19.93863,-1.5741"
            inkscape:label="C3"
            sodipodi:nodetypes="cccccccc"
            inkstitch:satin_column="True"
@@ -24599,7 +24307,7 @@ Created by gluk ( www.glukfonts.pl | gluksza@wp.pl ) with FontForge. Font Sortef
         <path
            id="path190752"
            style="display:inline;fill:none;stroke:#000000"
-           d="m 21,371 12,-24 c 18.564011,-37.12802 50,-61.333 88,-76 M 21,371 c 25.586854,-28.10295 34.6667,-42.5 60,-65.5 12.5804,-11.422 25.983,-20.007 40.207,-25.757 m -47.1426,41.899 -15.741,-19.939"
+           d="m 21,371 12,-24 c 18.564011,-37.12802 50,-61.333 88,-76 M 23.768102,367.88589 C 49.354956,339.78294 55.6667,328.5 81,305.5 c 12.5804,-11.422 25.983,-20.007 40.207,-25.757 m -47.1426,41.899 -15.741,-19.939"
            inkscape:label="C4"
            sodipodi:nodetypes="cscccccc"
            inkstitch:satin_column="True"
@@ -24622,7 +24330,7 @@ Created by gluk ( www.glukfonts.pl | gluksza@wp.pl ) with FontForge. Font Sortef
           <path
              id="path189445"
              style="display:inline;fill:none;stroke:#000000"
-             d="M 121.2072,279.74291 C 140.63747,273.25912 156.52917,273 175,273 M 121.30095,262.99145 C 140.50178,263.36322 155.69643,263 175,263"
+             d="M 121.2072,279.74291 C 140.63747,273.25912 156.52917,273 175,273 M 121.30095,262.99145 C 140.50178,263.36322 155.69643,263 175,263 m -5.67799,-7.22817 0.69203,22.49082"
              inkscape:label="C5"
              inkstitch:satin_column="True"
              inkstitch:max_stitch_length_mm="7"

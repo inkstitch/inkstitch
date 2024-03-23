@@ -28,13 +28,13 @@
      inkscape:window-height="796"
      id="namedview1432"
      showgrid="true"
-     inkscape:zoom="9.6222604"
-     inkscape:cx="25.150016"
-     inkscape:cy="70.2018"
+     inkscape:zoom="10.764502"
+     inkscape:cx="44.498113"
+     inkscape:cy="63.635088"
      inkscape:window-x="0"
      inkscape:window-y="153"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g2677"
+     inkscape:current-layer="g10481"
      inkscape:document-units="px"
      inkscape:document-rotation="0"
      inkscape:snap-global="false"
@@ -2936,7 +2936,7 @@ SushiHueDesign(c)2019
        style="stroke-dasharray:0.5, 0.5" />
     <path
        id="path25787"
-       d="M 5,66 H 34.8925 M 5,77 h 30.059"
+       d="M 5,66 H 34.8925 M 5,77 H 35.059 M 11.918515,62.280085 v 19.046254"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_spacing_mm="0.3"
@@ -2958,7 +2958,7 @@ SushiHueDesign(c)2019
        style="stroke-dasharray:0.5, 0.5" />
     <path
        id="path32016"
-       d="M 52,66 H 34.8925 M 52,77 H 35.059"
+       d="M 52,66 H 34.8925 M 52,77 H 35.059 M 47.790909,61.812692 v 18.929407"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_spacing_mm="0.3"
@@ -3007,7 +3007,7 @@ SushiHueDesign(c)2019
        style="stroke-dasharray:0.5, 0.5" />
     <path
        id="path9714-5-7"
-       d="M 9.01313,88.219 C 7.9212418,88.418303 6.834463,88.842652 6.0502548,89.653968 4.8826971,90.799833 4.4430914,92.512815 4.5740998,94.1089 M 11.7963,88.3655 c 1.095722,0.122106 2.193565,0.497051 3.006578,1.266208 1.237728,1.120394 1.766862,2.836166 1.732328,4.469992"
+       d="M 9.01313,88.219 C 7.9212418,88.418303 6.834463,88.842652 6.0502548,89.653968 4.8826971,90.799833 4.4430914,92.512815 4.5740998,94.1089 M 11.7963,88.3655 c 1.095722,0.122106 2.193565,0.497051 3.006578,1.266208 1.237728,1.120394 1.766862,2.836166 1.732328,4.469992 M 2.5706602,92.076373 H 17.994621"
        sodipodi:nodetypes="cccccc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
@@ -4724,7 +4724,7 @@ SushiHueDesign(c)2019
        style="stroke-dasharray:0.5, 0.5" />
     <path
        id="autosatin22"
-       d="m 33,100 0.99998,-9.999956 M 45,100 46.00002,89.999954"
+       d="m 33,100 0.99998,-9.999956 M 45,100 46.00002,89.999954 M 30.263681,98.03563 h 17.41038"
        sodipodi:nodetypes="cccc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
@@ -4862,7 +4862,7 @@ SushiHueDesign(c)2019
        id="path22" />
     <path
        id="autosatin30"
-       d="M 36.323167,71.038876 34.8136,84.1243 34,90 M 47.480598,72.907519 46.7396,79.0535 46,90 m 1,-9 H 35"
+       d="M 36.323167,71.038876 34.8136,84.1243 34,90 M 47.480598,72.907519 46.7396,79.0535 46,90 m 2.051634,-9 H 33.597822"
        sodipodi:nodetypes="cccccccc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
@@ -8737,7 +8737,7 @@ SushiHueDesign(c)2019
        style="stroke-dasharray:0.5, 0.5" />
     <path
        id="path17264"
-       d="M 14,68 10.1274,89.9449 M 20,69 19.5314,90.0756"
+       d="M 14,68 10.1274,89.9449 M 20,69 19.5314,90.0756 M 8.2962214,86.350812 H 21.733763"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
@@ -10738,7 +10738,8 @@ SushiHueDesign(c)2019
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay_max_stitch_length_mm="6"
        inkstitch:reverse_rails="none"
-       inkstitch:ties="0" />
+       inkstitch:ties="0"
+       inkstitch:zigzag_underlay="True" />
     <path
        id="autosatinrun23-5"
        inkscape:label="Points droits pour auto-remplissage satin 4"
@@ -10830,7 +10831,8 @@ SushiHueDesign(c)2019
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay_max_stitch_length_mm="6"
        inkstitch:reverse_rails="none"
-       inkstitch:ties="0" />
+       inkstitch:ties="0"
+       inkstitch:zigzag_underlay="True" />
     <path
        id="autosatinrun23-3"
        inkscape:label="Points droits pour auto-remplissage satin 4"
@@ -10943,7 +10945,8 @@ SushiHueDesign(c)2019
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay_max_stitch_length_mm="6"
        inkstitch:reverse_rails="none"
-       inkstitch:ties="0" />
+       inkstitch:ties="0"
+       inkstitch:zigzag_underlay="True" />
     <path
        id="autosatinrun23-51"
        inkscape:label="Points droits pour auto-remplissage satin 4"
@@ -11035,7 +11038,8 @@ SushiHueDesign(c)2019
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay_max_stitch_length_mm="6"
        inkstitch:reverse_rails="none"
-       inkstitch:ties="0" />
+       inkstitch:ties="0"
+       inkstitch:zigzag_underlay="True" />
     <path
        id="autosatinrun23-6"
        inkscape:label="Points droits pour auto-remplissage satin 4"
@@ -11105,7 +11109,8 @@ SushiHueDesign(c)2019
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay_max_stitch_length_mm="6"
        inkstitch:reverse_rails="none"
-       inkstitch:ties="0" />
+       inkstitch:ties="0"
+       inkstitch:zigzag_underlay="True" />
     <g
        id="g120954"
        transform="translate(-55.4102,7.95784)"
@@ -11423,7 +11428,8 @@ SushiHueDesign(c)2019
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay_max_stitch_length_mm="6"
        inkstitch:reverse_rails="none"
-       inkstitch:ties="0" />
+       inkstitch:ties="0"
+       inkstitch:zigzag_underlay="True" />
     <path
        d="m 60.8887,33.0915 -0.7543,0.6409"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
@@ -11512,7 +11518,8 @@ SushiHueDesign(c)2019
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay_max_stitch_length_mm="6"
        inkstitch:reverse_rails="none"
-       inkstitch:ties="0" />
+       inkstitch:ties="0"
+       inkstitch:zigzag_underlay="True" />
     <path
        d="m 60.8887,33.0915 -0.7543,0.6409"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
@@ -11577,7 +11584,8 @@ SushiHueDesign(c)2019
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay_max_stitch_length_mm="6"
        inkstitch:reverse_rails="none"
-       inkstitch:ties="0" />
+       inkstitch:ties="0"
+       inkstitch:zigzag_underlay="True" />
     <path
        d="m 60.8887,33.0915 -0.7543,0.6409"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
@@ -11686,7 +11694,8 @@ SushiHueDesign(c)2019
        inkstitch:max_stitch_length_mm="6"
        inkstitch:zigzag_underlay_max_stitch_length_mm="6"
        inkstitch:reverse_rails="none"
-       inkstitch:ties="0" />
+       inkstitch:ties="0"
+       inkstitch:zigzag_underlay="True" />
     <path
        d="m 60.8887,33.0915 -0.7543,0.6409"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
@@ -14618,7 +14627,7 @@ SushiHueDesign(c)2019
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Œ"
-     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
+     style="display:inline;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g10481">
     <path
        id="autosatinrun15-9"
@@ -14714,7 +14723,7 @@ SushiHueDesign(c)2019
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-œ"
-     style="display:inline;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g8868">
     <path
        d="m 7.17773,90 5.41992,6.67969 2.58875,2.20191"
