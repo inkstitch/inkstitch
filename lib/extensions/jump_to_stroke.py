@@ -47,8 +47,10 @@ class JumpToStroke(InkstitchExtension):
         for element in self.elements:
             layer, group = self._get_element_layer_and_group(element)
             stitch_groups = element.to_stitch_groups(last_stitch_group)
+            multiple = not self.options.merge_subpaths and stitch_groups
 
-            if not self.options.merge_subpaths and stitch_groups:
+            if multiple:
+                ending_point = stitch_groups[0].stitches[0]
                 stitch_groups = [stitch_groups[-1]]
 
             if (not stitch_groups or
@@ -71,9 +73,11 @@ class JumpToStroke(InkstitchExtension):
                     last_group = group
                     last_stitch_group = stitch_group
                     continue
-
                 start = last_stitch_group.stitches[-1]
-                end = stitch_group.stitches[0]
+                if multiple:
+                    end = ending_point
+                else:
+                    end = stitch_group.stitches[0]
                 self.generate_stroke(last_element, element, start, end)
                 last_stitch_group = stitch_group
 
@@ -107,7 +111,6 @@ class JumpToStroke(InkstitchExtension):
                 parent = node.getparent()
                 index = parent.index(node)
                 paths = node.get_path().break_apart()
-                paths.reverse()
 
                 block_ids = []
                 for path in paths:
