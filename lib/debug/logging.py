@@ -102,7 +102,7 @@ def activate_for_frozen():
 
     if docpath is not None and loglevel is not None and loglevel.upper() in ['DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL']:
 
-        # end user enabled logging & warnings are redirect output to input_svg.inkstitch.log
+        # The end user enabled logging and warnings are redirected to the input_svg.inkstitch.log file.
 
         vars = {
             'loglevel': loglevel.upper(),
@@ -113,7 +113,7 @@ def activate_for_frozen():
         # dictConfig has access to top level variables, dict contains: ext://__main__.var
         #   - restriction: variable must be last token in string - very limited functionality, avoid using it
 
-        # here is logging activated, so we can use logger
+        # After this operation, logging will be activated, so we can use the logger.
         logging.config.dictConfig(config)  # configure root logger from dict
 
         logging.captureWarnings(True)                           # capture all warnings to log file with level WARNING
@@ -153,7 +153,7 @@ def activate_for_development(ini: dict, SCRIPTDIR: Path):
 def configure_logging(config: dict, ini: dict, vars: dict):
     config = expand_variables(config, vars)
 
-    # here is logging activated, so now we can use logger
+    # After this operation, logging will be activated, so we can use the logger.
     logging.config.dictConfig(config)  # configure loggers from dict - using loglevel, logfilename
 
     warnings_capture = config.get('warnings_capture', True)
@@ -163,7 +163,7 @@ def configure_logging(config: dict, ini: dict, vars: dict):
 
     disable_logging = safe_get(ini, "LOGGING", "disable_logging", default=False)
     if disable_logging:
-        logger.warning("Logging is disabled by configuration in ini file.")
+        logger.warning(f"Logging is disabled by configuration in ini file. {disable_logging = }")
         logging.disable()  # globally disable all logging of all loggers
 
 

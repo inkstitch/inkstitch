@@ -56,9 +56,9 @@ disable_existing_loggers = false
 ### used for:  logger = logging.getLogger("inkstitch.debug")
 ### - use quotes for the logger name with dots, otherwise it will be treated as a table subsection
 ###     - [loggers.inkstitch.debug] is not the same as [loggers.'inkstitch.debug']
-### - to disable the logger, comment out handlers
 [loggers.'inkstitch.debug']
-    level = "DEBUG"
+    level = "DEBUG"                # to enable the logger, seems to be the default
+    # level = "CRITICAL"             # to disable the logger
     handlers = [ "file_inkstitch_debug",]
     propagate = false
 
