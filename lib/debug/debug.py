@@ -79,15 +79,24 @@ class Debug(object):
         self.last_log_time = None
         self.current_layer = None
         self.group_stack = []
+        self.svg_filename = None
 
     def enable(self):
+        # determine svg filename from logger
+        if len(logger.handlers) > 0 and isinstance(logger.handlers[0], logging.FileHandler):
+            # determine filename of svg file from logger
+            filename = Path(logger.handlers[0].baseFilename)
+            self.svg_filename = filename.with_suffix(".svg")
+            self.svg_filename.unlink(missing_ok=True)      # remove existing svg file
+
         # self.log is activated by active logger
-        # - enabled only if logger has any handler,
-        #   for "inkstitch.debug" simply comment out  handlers in .toml file to disable for  logger
-        if len(logger.handlers) > 0:    # count of handlers
+        # - enabled only if logger first handler is FileHandler
+        #   to disable "inkstitch.debug" simply set logging level to CRITICAL
+        if logger.isEnabledFor(logging.INFO) and self.svg_filename is not None:
             self.enabled = True
-            self.log("Logging enabled")
+            self.log(f"Logging enabled with svg file: {self.svg_filename}")
             self.init_svg()
+
         else:
             # use alternative logger to log message if logger has no handlers
             logger_inkstich.info("No handlers in logger, cannot enable logging and svg file creation")
@@ -97,16 +106,13 @@ class Debug(object):
         atexit.register(self.save_svg)
 
     def save_svg(self):
-        # check if there is a file handler and is type of logging.FileHandler
-        if len(logger.handlers) > 0 and isinstance(logger.handlers[0], logging.FileHandler):
-            filename = Path(logger.handlers[0].baseFilename)
-            svg_file = filename.with_suffix(".svg")
-            self.log(f"Writing svg file: {svg_file}")
+        if self.enabled and self.svg_filename is not None:
+            self.log(f"Writing svg file: {self.svg_filename}")
             tree = etree.ElementTree(self.svg)
-            tree.write(str(svg_file))    # lxml <5.0.0 does not support Path objects
+            tree.write(str(self.svg_filename))    # lxml <5.0.0 does not support Path objects, requires string
         else:
             # use alternative logger to log message if logger has no handlers
-            logger_inkstich.info("No file handler in logger cannot save svg file")
+            logger_inkstich.info(f"Saving to svg file is not activated {self.svg_filename=}")
 
     @check_enabled
     @unwrap_arguments
