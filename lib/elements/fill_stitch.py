@@ -802,6 +802,7 @@ class FillStitch(EmbroideryElement):
                                    self.skip_last)
         return [StitchGroup(stitches=stitch_list,
                             min_stitch_length=self.min_stitch_length,
+                            min_jump_stitch_length=self.min_jump_stitch_length,
                             color=self.color,
                             force_lock_stitches=self.force_lock_stitches,
                             lock_stitches=self.lock_stitches) for stitch_list in stitch_lists]
@@ -855,7 +856,9 @@ class FillStitch(EmbroideryElement):
                 ending_point,
                 self.underpath
             ),
-            min_stitch_length=self.min_stitch_length)
+            min_stitch_length=self.min_stitch_length,
+            min_jump_stitch_length=self.min_jump_stitch_length
+        )
         return [stitch_group]
 
     def do_contour_fill(self, polygon, last_stitch_group, starting_point):
@@ -898,6 +901,7 @@ class FillStitch(EmbroideryElement):
             tags=("auto_fill", "auto_fill_top"),
             stitches=stitches,
             min_stitch_length=self.min_stitch_length,
+            min_jump_stitch_length=self.min_jump_stitch_length,
             force_lock_stitches=self.force_lock_stitches,
             lock_stitches=self.lock_stitches)
         stitch_groups.append(stitch_group)
@@ -931,7 +935,8 @@ class FillStitch(EmbroideryElement):
                 self.underpath,
                 self.guided_fill_strategy
             ),
-            min_stitch_length=self.min_stitch_length
+            min_stitch_length=self.min_stitch_length,
+            min_jump_stitch_length=self.min_jump_stitch_length
         )
         return [stitch_group]
 
@@ -953,6 +958,7 @@ class FillStitch(EmbroideryElement):
             tags=("meander_fill", "meander_fill_top"),
             stitches=meander_fill(self, shape, original_shape, i, starting_point, ending_point),
             min_stitch_length=self.min_stitch_length,
+            min_jump_stitch_length=self.min_jump_stitch_length,
             force_lock_stitches=self.force_lock_stitches,
             lock_stitches=self.lock_stitches,
         )
@@ -990,6 +996,7 @@ class FillStitch(EmbroideryElement):
             tags=("circular_fill", "auto_fill_top"),
             stitches=stitches,
             min_stitch_length=self.min_stitch_length,
+            min_jump_stitch_length=self.min_jump_stitch_length,
             force_lock_stitches=self.force_lock_stitches,
             lock_stitches=self.lock_stitches,)
         return [stitch_group]

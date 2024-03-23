@@ -224,10 +224,21 @@ class EmbroideryElement(object):
            tooltip=_('Overwrite global minimum stitch length setting. Shorter stitches than that will be removed.'),
            type='float',
            default=None,
-           sort_index=49)
+           sort_index=48)
     @cache
     def min_stitch_length(self):
         return self.get_float_param("min_stitch_length_mm")
+
+    @property
+    @param('min_jump_stitch_length_mm',
+           _('Minimum jump stitch length'),
+           tooltip=_('Overwrite global minimum jump stitch length setting. Shorter distances to the next object will have no lock stitches.'),
+           type='float',
+           default=None,
+           sort_index=49)
+    @cache
+    def min_jump_stitch_length(self):
+        return self.get_float_param("min_jump_stitch_length_mm")
 
     @property
     @param('ties',
