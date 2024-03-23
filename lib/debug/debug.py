@@ -17,7 +17,10 @@ from ..svg import line_strings_to_path
 from ..svg.tags import INKSCAPE_GROUPMODE, INKSCAPE_LABEL
 
 import logging
-logger = logging.getLogger("inkstitch.debug")
+logger = logging.getLogger("inkstitch.debug")   # create module logger with name 'inkstitch.debug'
+
+# to log messages if previous debug logger is not enabled
+logger_inkstich = logging.getLogger("inkstitch")   # create module logger with name 'inkstitch'
 
 
 # --------------------------------------------------------------------------------------------
@@ -86,7 +89,8 @@ class Debug(object):
             self.log("Logging enabled")
             self.init_svg()
         else:
-            logger.info("No handlers in logger, cannot enable logging and svg file creation")
+            # use alternative logger to log message if logger has no handlers
+            logger_inkstich.info("No handlers in logger, cannot enable logging and svg file creation")
 
     def init_svg(self):
         self.svg = etree.Element("svg", nsmap=inkex.NSS)
@@ -101,7 +105,8 @@ class Debug(object):
             tree = etree.ElementTree(self.svg)
             tree.write(str(svg_file))    # lxml <5.0.0 does not support Path objects
         else:
-            self.log("No file handler in logger cannot save svg file")
+            # use alternative logger to log message if logger has no handlers
+            logger_inkstich.info("No file handler in logger cannot save svg file")
 
     @check_enabled
     @unwrap_arguments
