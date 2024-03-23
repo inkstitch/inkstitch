@@ -93,6 +93,8 @@ A pallet code looks for example like this: `(#000000)/5.0 (#FFFFFF)/?5.0`.
 * A pipe (`|`) is a separator for warp and weft and should only be used if they differ in threadcount
 
 **Info**: The [Scottish Register of Tartans](https://www.tartanregister.gov.uk/) has a huge collection of registered tartan patterns. Ink/Stitch is capable to use their code which they send out per mail and convert it into the Ink/Stitch color code. Please respect their particular license regulations. Make sure to define the width of one tartan thread before you click on `Apply Code`.
+
+Here's an example code you can try out: `...B24 W4 B24 R2 K24 G24 W2...` ([source](https://www.tartanregister.gov.uk/threadcount))
 {: .notice--info}
 
 ### Embroidery Settings
