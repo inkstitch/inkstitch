@@ -319,13 +319,13 @@ jobs:
           path: 'artifacts/'
         if: always()
       - name: create/update release
-        uses: "marvinpinto/action-automatic-releases@latest"
+        uses: softprops/action-gh-release@v2
         if: always()
         with:
-          repo_token: "${{secrets.GITHUB_TOKEN}}"
-          automatic_release_tag: "${{env.release_tag}}"
+          token: "${{secrets.GITHUB_TOKEN}}"
+          tag_name: "${{env.release_tag}}"
           prerelease: "${{env.prerelease}}"
-          title: "${{env.title}}"
+          name: "${{env.title}}"
           files: |
             artifacts/*.exe
             artifacts/*.pkg
