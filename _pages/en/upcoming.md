@@ -179,9 +179,13 @@ All fonts have been reworked to be more stable when transformed.
 ### Satin column - family
 
 * Add stagger option for split stitches ([#2431](https://github.com/inkstitch/inkstitch/issues/2431))
+  ![Staggered split stitch example](/assets/images/docs/split-satin-detail.png)
 * Convert line to satin: do not split into several parts ([#2418](https://github.com/inkstitch/inkstitch/issues/2418))
-* S-Stitch: a new stitch type for the satin stitch type family `|_|▔|_|▔|_|▔|` ([#2431](https://github.com/inkstitch/inkstitch/issues/2431))
-* Zig-Zag: a new stitch type for the satin stitch type family `/\/\/\/\/` ([#2431](https://github.com/inkstitch/inkstitch/issues/2431))
+  ![Converted square](/assets/images/docs/convert-to-satin-update.png)
+* S-Stitch: a new stitch type for the satin stitch type family ([#2431](https://github.com/inkstitch/inkstitch/issues/2431))
+  ![S-Stitch](/assets/images/docs/s-stitch-detail.png)
+* Zig-Zag: a new stitch type for the satin stitch type family ([#2431](https://github.com/inkstitch/inkstitch/issues/2431))
+  ![Zigzag Stitch](/assets/images/docs/en/compare-satin-zigzag.png)
 
 ## Export
 
