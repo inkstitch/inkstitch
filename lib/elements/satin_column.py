@@ -1146,7 +1146,8 @@ class SatinColumn(EmbroideryElement):
             color=self.color,
             tags=("satin_column", "satin_column_underlay", "satin_contour_underlay"),
             stitches=first_side,
-            min_stitch_length=self.min_stitch_length)
+            min_stitch_length=self.min_stitch_length
+        )
 
         self.add_running_stitches(first_side[-1], second_side[0], stitch_group)
         stitch_group.stitches += second_side
@@ -1174,7 +1175,8 @@ class SatinColumn(EmbroideryElement):
             color=self.color,
             tags=("satin_column", "satin_column_underlay", "satin_center_walk"),
             stitches=stitches,
-            min_stitch_length=self.min_stitch_length)
+            min_stitch_length=self.min_stitch_length
+        )
 
     def do_zigzag_underlay(self):
         # zigzag underlay, usually done at a much lower density than the
@@ -1187,7 +1189,10 @@ class SatinColumn(EmbroideryElement):
         # "German underlay" described here:
         #   http://www.mrxstitch.com/underlay-what-lies-beneath-machine-embroidery/
 
-        stitch_group = StitchGroup(color=self.color, min_stitch_length=self.min_stitch_length)
+        stitch_group = StitchGroup(
+            color=self.color,
+            min_stitch_length=self.min_stitch_length
+        )
 
         pairs = self.plot_points_on_rails(self.zigzag_underlay_spacing / 2.0,
                                           -self.zigzag_underlay_inset_px,
@@ -1224,7 +1229,11 @@ class SatinColumn(EmbroideryElement):
 
         # print >> dbg, "satin", self.zigzag_spacing, self.pull_compensation
 
-        stitch_group = StitchGroup(color=self.color, min_stitch_length=self.min_stitch_length)
+        stitch_group = StitchGroup(
+            color=self.color,
+            min_stitch_length=self.min_stitch_length,
+            min_jump_stitch_length=self.min_jump_stitch_length
+        )
 
         # pull compensation is automatically converted from mm to pixels by get_float_param
         pairs = self.plot_points_on_rails(
@@ -1276,7 +1285,11 @@ class SatinColumn(EmbroideryElement):
         #
         # _|_|_|_|_|_|_|_|_|_|_|_|
 
-        stitch_group = StitchGroup(color=self.color, min_stitch_length=self.min_stitch_length)
+        stitch_group = StitchGroup(
+            color=self.color,
+            min_stitch_length=self.min_stitch_length,
+            min_jump_stitch_length=self.min_jump_stitch_length
+        )
 
         pairs = self.plot_points_on_rails(
             self.zigzag_spacing,
@@ -1326,7 +1339,11 @@ class SatinColumn(EmbroideryElement):
         #   _   _   _   _   _   _
         # _| |_| |_| |_| |_| |_| |
 
-        stitch_group = StitchGroup(color=self.color, min_stitch_length=self.min_stitch_length)
+        stitch_group = StitchGroup(
+            color=self.color,
+            min_stitch_length=self.min_stitch_length,
+            min_jump_stitch_length=self.min_jump_stitch_length
+        )
 
         pairs = self.plot_points_on_rails(
             self.zigzag_spacing,
@@ -1369,7 +1386,11 @@ class SatinColumn(EmbroideryElement):
         return stitch_group
 
     def do_zigzag(self):
-        stitch_group = StitchGroup(color=self.color, min_stitch_length=self.min_stitch_length)
+        stitch_group = StitchGroup(
+            color=self.color,
+            min_stitch_length=self.min_stitch_length,
+            min_jump_stitch_length=self.min_jump_stitch_length
+        )
 
         # calculate pairs at double the requested density
         pairs = self.plot_points_on_rails(
@@ -1534,10 +1555,13 @@ class SatinColumn(EmbroideryElement):
         # beziers.  The boundary points between beziers serve as "checkpoints",
         # allowing the user to control how the zigzags flow around corners.
 
-        stitch_group = StitchGroup(color=self.color,
-                                   min_stitch_length=self.min_stitch_length,
-                                   force_lock_stitches=self.force_lock_stitches,
-                                   lock_stitches=self.lock_stitches)
+        stitch_group = StitchGroup(
+            color=self.color,
+            min_stitch_length=self.min_stitch_length,
+            min_jump_stitch_length=self.min_jump_stitch_length,
+            force_lock_stitches=self.force_lock_stitches,
+            lock_stitches=self.lock_stitches
+        )
 
         if self.center_walk_underlay:
             stitch_group += self.do_center_walk()
@@ -1565,9 +1589,6 @@ class SatinColumn(EmbroideryElement):
 
         if not stitch_group.stitches:
             return []
-
-        if self.minimum_stitch_length is not None:
-            stitch_group.add_tag(f'custom_min_stitch_length:{self.minimum_stitch_length}')
 
         return [stitch_group]
 

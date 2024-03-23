@@ -55,6 +55,7 @@ SVG_OBJECT_TAGS = (SVG_ELLIPSE_TAG, SVG_CIRCLE_TAG, SVG_RECT_TAG)
 INKSTITCH_ATTRIBS = {}
 inkstitch_attribs = [
     'min_stitch_length_mm',
+    'min_jump_stitch_length_mm',
     'ties',
     'force_lock_stitches',
     'lock_start',

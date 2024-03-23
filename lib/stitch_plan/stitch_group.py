@@ -17,8 +17,18 @@ class StitchGroup:
     between them by the stitch plan generation code.
     """
 
-    def __init__(self, color=None, stitches=None, min_stitch_length=False, trim_after=False,
-                 stop_after=False, lock_stitches=(None, None), force_lock_stitches=False, tags=None):
+    def __init__(
+        self,
+        color=None,
+        stitches=None,
+        min_stitch_length=False,
+        min_jump_stitch_length=False,
+        trim_after=False,
+        stop_after=False,
+        lock_stitches=(None, None),
+        force_lock_stitches=False,
+        tags=None
+    ):
         # DANGER: if you add new attributes, you MUST also set their default
         # values in __new__() below.  Otherwise, cached stitch plans can be
         # loaded and create objects without those properties defined, because
@@ -30,6 +40,7 @@ class StitchGroup:
         self.lock_stitches = lock_stitches
         self.force_lock_stitches = force_lock_stitches
         self.min_stitch_length = min_stitch_length
+        self.min_jump_stitch_length = min_jump_stitch_length
         self.stitches = []
 
         if stitches:

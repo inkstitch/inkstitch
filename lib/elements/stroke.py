@@ -466,6 +466,7 @@ class Stroke(EmbroideryElement):
             self.color,
             stitches=repeated_stitches,
             min_stitch_length=self.min_stitch_length,
+            min_jump_stitch_length=self.min_jump_stitch_length,
             lock_stitches=self.lock_stitches,
             force_lock_stitches=self.force_lock_stitches
         )
@@ -491,6 +492,7 @@ class Stroke(EmbroideryElement):
             tags=["ripple_stitch"],
             stitches=ripple_stitch(self),
             min_stitch_length=self.min_stitch_length,
+            min_jump_stitch_length=self.min_jump_stitch_length,
             lock_stitches=self.lock_stitches,
             force_lock_stitches=self.force_lock_stitches)
 
@@ -524,6 +526,7 @@ class Stroke(EmbroideryElement):
                         color=self.color,
                         stitches=path,
                         min_stitch_length=self.min_stitch_length,
+                        min_jump_stitch_length=self.min_jump_stitch_length,
                         lock_stitches=lock_stitches,
                         force_lock_stitches=self.force_lock_stitches
                     )
@@ -539,10 +542,6 @@ class Stroke(EmbroideryElement):
 
                 if stitch_group:
                     stitch_groups.append(stitch_group)
-
-        if self.minimum_stitch_length is not None:
-            for stitch_group in stitch_groups:
-                stitch_group.add_tag(f'custom_min_stitch_length:{self.minimum_stitch_length}')
 
         return stitch_groups
 
