@@ -941,7 +941,19 @@ class SatinColumn(EmbroideryElement):
         # add on the other satin's rungs
         rungs.extend(other_rungs)
 
+        rungs = self._get_filtered_rungs(rails, rungs)
+
         return self._csp_to_satin(point_lists_to_csp(rails + rungs))
+
+    def _get_filtered_rungs(self, rails, rungs):
+        # returns a filtered list of rungs which do intersect the rails exactly twice
+        rails = shgeo.MultiLineString(rails)
+        filtered_rungs = []
+        for rung in shgeo.MultiLineString(rungs).geoms:
+            intersection = rung.intersection(rails)
+            if intersection.geom_type == "MultiPoint" and len(intersection.geoms) == 2:
+                filtered_rungs.append(list(rung.coords))
+        return filtered_rungs
 
     @property
     @cache
