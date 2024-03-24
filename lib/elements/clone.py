@@ -20,18 +20,6 @@ from ..svg.tags import (EMBROIDERABLE_TAGS, INKSTITCH_ATTRIBS, SVG_USE_TAG,
                         XLINK_HREF, SVG_GROUP_TAG)
 from ..utils import cache
 from .element import EmbroideryElement, param
-from .validation import ValidationWarning
-
-
-class CloneWarning(ValidationWarning):
-    name = _("Clone Object")
-    description = _("There are one or more clone objects in this document.  "
-                    "Ink/Stitch can work with single clones, but you are limited to set a very few parameters. ")
-    steps_to_solve = [
-        _("If you want to convert the clone into a real element, follow these steps:"),
-        _("* Select the clone"),
-        _("* Run: Edit > Clone > Unlink Clone (Alt+Shift+D)")
-    ]
 
 
 class Clone(EmbroideryElement):
@@ -175,11 +163,6 @@ class Clone(EmbroideryElement):
         transform = get_node_transform(self.node.getparent())
         center = self.node.bounding_box(transform).center
         return center
-
-    def validation_warnings(self):
-        source_node = get_clone_source(self.node)
-        point = self.center(source_node)
-        yield CloneWarning(point)
 
 
 def is_clone(node):
