@@ -1,5 +1,5 @@
 from lib.elements import Clone, EmbroideryElement
-from lib.svg.tags import INKSTITCH_ATTRIBS
+from lib.svg.tags import INKSTITCH_ATTRIBS, SVG_RECT_TAG
 from inkex import SvgDocumentElement, Rectangle, Circle, Group, Use, Transform, TextElement
 from inkex.tester import TestCase
 from inkex.tester.svg import svg
@@ -249,3 +249,43 @@ class CloneElementTest(TestCase):
         with clone.clone_elements() as elements:
             self.assertEqual(len(elements), 1)
             self.assertAngleAlmostEqual(element_fill_angle(elements[0]), -10)
+
+    def test_recursive_uses(self):
+        root: SvgDocumentElement = svg()
+        rect = root.add(Rectangle(attrib={
+            "width": "10",
+            "height": "10",
+            INKSTITCH_ATTRIBS["angle"]: "30"
+        }))
+        g1 = root.add(Group())
+        rect = g1.add(Rectangle(attrib={
+            "width": "10",
+            "height": "10",
+        }))
+        u1 = g1.add(Use())
+        u1.set('transform', Transform().add_translate((20, 0)))
+        u1.href = rect
+        u2 = root.add(Use())
+        u2.set('transform', Transform().add_translate((0, 20)).add_scale(0.5, 0.5))
+        u2.href = g1
+        u3 = root.add(Use())
+        u3.set('transform', Transform().add_translate((0, 30)))
+        u3.href = u2
+
+        clone = Clone(u3)
+        with clone.clone_elements() as elements:
+            # There should be two elements cloned from u3, two rects, one corresponding to rect and one corresponding to u1.
+            # Their transforms should derive from the elements they href.
+            self.assertEqual(len(elements), 2)
+            self.assertEqual(elements[0].node.tag, SVG_RECT_TAG)
+            self.assertTransformEqual(elements[0].node.composed_transform(),
+                                      Transform().add_translate((0, 30))  # u3
+                                      .add_translate(0, 20).add_scale(0.5, 0.5)  # u2
+                                      )
+
+            self.assertEqual(elements[1].node.tag, SVG_RECT_TAG)
+            self.assertTransformEqual(elements[1].node.composed_transform(),
+                                      Transform().add_translate((0, 30))  # u3
+                                      .add_translate((0, 20)).add_scale(0.5, 0.5)  # u2
+                                      .add_translate((20, 0))  # u1
+                                      )
