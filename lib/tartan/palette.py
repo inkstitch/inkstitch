@@ -13,31 +13,31 @@ from inkex import Color
 from .colors import string_to_color
 
 
-class Pallet:
-    """Holds information about the tartan pallet"""
+class Palette:
+    """Holds information about the tartan palette"""
     def __init__(
         self,
-        pallet_code: str = '',
-        pallet_stripes: List[list] = [[], []],
+        palette_code: str = '',
+        palette_stripes: List[list] = [[], []],
         symmetry: bool = True,
         equal_warp_weft: bool = True,
         tt_unit: float = 0.5
     ) -> None:
         """
-        :param pallet_code: the pallet code
-        :param pallet_stripes: the pallet stripes, lists of warp and weft stripe dictionaries
+        :param palette_code: the palette code
+        :param palette_stripes: the palette stripes, lists of warp and weft stripe dictionaries
         :param symmetry: reflective sett (True) / repeating sett (False)
         :param equal_warp_weft:wether warp and weft are equal or not
         :param tt_unit: mm per thread (used for the scottish register threadcount)
         """
-        self.pallet_code = pallet_code
-        self.pallet_stripes = pallet_stripes
+        self.palette_code = palette_code
+        self.palette_stripes = palette_stripes
         self.symmetry = symmetry
         self.equal_warp_weft = equal_warp_weft
         self.tt_unit = tt_unit
 
     def __repr__(self) -> str:
-        return self.pallet_code
+        return self.palette_code
 
     def update_symmetry(self, symmetry: bool) -> None:
         self.symmetry = symmetry
@@ -45,7 +45,7 @@ class Pallet:
 
     def update_from_stripe_sizer(self, sizers: List[wx.BoxSizer], symmetry: bool = True, equal_warp_weft: bool = True) -> None:
         """
-        Update pallet code from stripes (customize panel)
+        Update palette code from stripes (customize panel)
 
         :param sizers: a list of the stripe sizers
         :param symmetry: reflective sett (True) / repeating sett (False)
@@ -54,7 +54,7 @@ class Pallet:
         self.symmetry = symmetry
         self.equal_warp_weft = equal_warp_weft
 
-        self.pallet_stripes = [[], []]
+        self.palette_stripes = [[], []]
         for i, outer_sizer in enumerate(sizers):
             stripes = []
             for stripe_sizer in outer_sizer.Children:
@@ -73,9 +73,9 @@ class Pallet:
                     elif isinstance(widget, wx.Button) or isinstance(widget, wx.StaticText):
                         continue
                 stripes.append(stripe)
-            self.pallet_stripes[i] = stripes
+            self.palette_stripes[i] = stripes
             if self.equal_warp_weft:
-                self.pallet_stripes[1] = stripes
+                self.palette_stripes[1] = stripes
                 break
         self.update_code()
 
@@ -94,7 +94,7 @@ class Pallet:
             self.equal_warp_weft = False
         code = code.replace('/', '')
         code = code.replace('...', '')
-        self.pallet_stripes = [[], []]
+        self.palette_stripes = [[], []]
 
         if "Threadcount" in code:
             self.parse_threadcount_code(code)
@@ -104,14 +104,14 @@ class Pallet:
             self.parse_simple_code(code)
 
         if self.equal_warp_weft:
-            self.pallet_stripes[1] = self.pallet_stripes[0]
+            self.palette_stripes[1] = self.palette_stripes[0]
 
         self.update_code()
 
     def update_code(self) -> None:
-        """Updates the pallet code, reading from stripe settings (customize panel)"""
+        """Updates the palette code, reading from stripe settings (customize panel)"""
         code = []
-        for i, direction in enumerate(self.pallet_stripes):
+        for i, direction in enumerate(self.palette_stripes):
             for stripe in direction:
                 render = '' if stripe['render'] else '?'
                 code.append(f"({stripe['color']}){render}{stripe['width']}")
@@ -125,7 +125,7 @@ class Pallet:
         code = ' '.join(code)
         if not self.symmetry:
             code = f'...{code}...'
-        self.pallet_code = code
+        self.palette_code = code
 
     def parse_simple_code(self, code: str) -> None:
         """Example code:
@@ -148,7 +148,7 @@ class Pallet:
                 color = '#000000'
                 render = '?'
             stripes.append({'render': not bool(render), 'color': color, 'width': float(width)})
-        self.pallet_stripes[0] = stripes
+        self.palette_stripes[0] = stripes
 
     def parse_inkstitch_code(self, code: str) -> None:
         """Example code:
@@ -176,7 +176,7 @@ class Pallet:
                     color = '#000000'
                     render = False
                 stripes.append({'render': not bool(render), 'color': color, 'width': float(width)})
-            self.pallet_stripes[i] = stripes
+            self.palette_stripes[i] = stripes
 
     def parse_threadcount_code(self, code: str) -> None:
         """Read in and work directly from a tartanregister.gov.uk threadcount response
@@ -184,12 +184,12 @@ class Pallet:
             Threadcount:
             B24W4B24R2K24G24W2
 
-            Pallet:
+            Palette:
             B=0000FFBLUE;W=FFFFFFWHITE;R=FF0000RED;K=000000BLACK;G=289C18GREEN;
 
             Threadcount given over a half sett with full count at the pivots.
 
-        Colors in the threadcount are defined by Letters. The Pallet section declares the rgb value
+        Colors in the threadcount are defined by Letters. The Palette section declares the rgb value
 
         :param code: the tartan pattern code to apply
         """
@@ -207,9 +207,9 @@ class Pallet:
             line = lines[i].strip()
             if 'Threadcount:' in line and len(lines) > i:
                 thread_code = lines[i+1]
-            elif line.startswith('Pallet:'):
-                pallet = lines[i+1]
-                colors = re.findall(r'([A-Za-z]+)=#?([0-9afA-F]{6})', pallet)
+            elif line.startswith('Palette:'):
+                palette = lines[i+1]
+                colors = re.findall(r'([A-Za-z]+)=#?([0-9afA-F]{6})', palette)
                 colors = dict(colors)
             i += 1
 
@@ -224,11 +224,11 @@ class Pallet:
             width = float(width) * self.tt_unit
             stripes.append({'render': render, 'color': color, 'width': width})
 
-        self.pallet_stripes[0] = stripes
+        self.palette_stripes[0] = stripes
 
-    def get_pallet_width(self, scale: int, min_width: float, direction: int = 0) -> float:
+    def get_palette_width(self, scale: int, min_width: float, direction: int = 0) -> float:
         """
-        Get the rendered width of the tartan pallet
+        Get the rendered width of the tartan palette
         :param scale: the scale value (percent) for the pattern
         :param min_width: min stripe width (before it is rendered as running stitch).
             Smaller stripes have 0 width.
@@ -236,7 +236,7 @@ class Pallet:
         :returns: the width of all tartan stripes in given direction
         """
         width = 0
-        for stripe in self.pallet_stripes[direction]:
+        for stripe in self.palette_stripes[direction]:
             stripe_width = stripe['width'] * (scale / 100)
             if stripe_width >= min_width or not stripe['render']:
                 width += stripe_width

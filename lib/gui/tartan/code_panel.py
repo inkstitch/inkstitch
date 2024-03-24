@@ -14,7 +14,7 @@ class CodePanel(wx.Panel):
         self.panel = panel
         wx.Panel.__init__(self, parent)
         code_sizer = wx.BoxSizer(wx.VERTICAL)
-        load_pallet_sizer = wx.BoxSizer(wx.HORIZONTAL)
+        load_palette_sizer = wx.BoxSizer(wx.HORIZONTAL)
         tt_unit_sizer = wx.BoxSizer(wx.HORIZONTAL)
 
         self.threadcount_text = wx.TextCtrl(self, style=wx.TE_MULTILINE)
@@ -32,17 +32,17 @@ class CodePanel(wx.Panel):
         code_sizer.Add(tt_unit_sizer, 0, wx.ALL, 10)
 
         load_button = wx.Button(self, label="Apply Code")
-        load_button.Bind(wx.EVT_BUTTON, self._load_pallet_code)
-        load_pallet_sizer.Add(load_button, 0, wx.ALL, 10)
+        load_button.Bind(wx.EVT_BUTTON, self._load_palette_code)
+        load_palette_sizer.Add(load_button, 0, wx.ALL, 10)
 
-        code_sizer.Add(load_pallet_sizer, 0, wx.ALL, 10)
+        code_sizer.Add(load_palette_sizer, 0, wx.ALL, 10)
 
         self.SetSizer(code_sizer)
 
-    def _load_pallet_code(self, event):
-        self.panel.pallet.tt_unit = self.tt_unit_spin.GetValue()
+    def _load_palette_code(self, event):
+        self.panel.palette.tt_unit = self.tt_unit_spin.GetValue()
         self.panel.update_from_code()
-        self.panel.settings['pallet'] = self.threadcount_text.GetValue()
+        self.panel.settings['palette'] = self.threadcount_text.GetValue()
 
     def set_tt_unit_status(self, event):
         # we always want to convert the width into mm

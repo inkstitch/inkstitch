@@ -15,7 +15,7 @@ from shapely.affinity import rotate
 from ..svg import PIXELS_PER_MM
 from ..svg.tags import INKSTITCH_TARTAN
 from ..utils import ensure_multi_line_string, ensure_multi_polygon
-from .pallet import Pallet
+from .palette import Palette
 
 
 def stripes_to_shapes(
@@ -207,7 +207,7 @@ def get_tartan_settings(node: Union[PathElement, Rectangle, Circle]) -> dict:
     settings = node.get(INKSTITCH_TARTAN, None)
     if settings is None:
         settings = {
-            'pallet': '(#101010)/5.0 (#FFFFFF)/?5.0',
+            'palette': '(#101010)/5.0 (#FFFFFF)/?5.0',
             'rotate': 0.0,
             'offset_x': 0.0,
             'offset_y': 0.0,
@@ -219,18 +219,18 @@ def get_tartan_settings(node: Union[PathElement, Rectangle, Circle]) -> dict:
     return json.loads(settings)
 
 
-def get_pallet_width(settings: dict, direction: int = 0) -> float:
+def get_palette_width(settings: dict, direction: int = 0) -> float:
     """
     Calculate the width of all stripes (with a minimum width) in given direction
 
     :param settings: tartan settings
     :param direction: [0] warp [1] weft
-    :returns: the calculated pallet width
+    :returns: the calculated palette width
     """
-    pallet_code = settings['pallet']
-    pallet = Pallet()
-    pallet.update_from_code(pallet_code)
-    return pallet.get_pallet_width(settings['scale'], settings['min_stripe_width'], direction)
+    palette_code = settings['palette']
+    palette = Palette()
+    palette.update_from_code(palette_code)
+    return palette.get_palette_width(settings['scale'], settings['min_stripe_width'], direction)
 
 
 def get_tartan_stripes(settings: dict) -> Tuple[list, list]:
@@ -242,20 +242,20 @@ def get_tartan_stripes(settings: dict) -> Tuple[list, list]:
         Lists are empty if total width is 0 (for example if there are only strokes)
     """
     # get stripes, return empty lists if total width is 0
-    pallet_code = settings['pallet']
-    pallet = Pallet()
-    pallet.update_from_code(pallet_code)
-    warp, weft = pallet.pallet_stripes
+    palette_code = settings['palette']
+    palette = Palette()
+    palette.update_from_code(palette_code)
+    warp, weft = palette.palette_stripes
 
-    if pallet.get_pallet_width(settings['scale'], settings['min_stripe_width']) == 0:
+    if palette.get_palette_width(settings['scale'], settings['min_stripe_width']) == 0:
         warp = []
-    if pallet.get_pallet_width(settings['scale'], settings['min_stripe_width'], 1) == 0:
+    if palette.get_palette_width(settings['scale'], settings['min_stripe_width'], 1) == 0:
         weft = []
     if len([stripe for stripe in warp if stripe['render'] is True]) == 0:
         warp = []
     if len([stripe for stripe in weft if stripe['render'] is True]) == 0:
         weft = []
 
-    if pallet.equal_warp_weft:
+    if palette.equal_warp_weft:
         weft = warp
     return warp, weft

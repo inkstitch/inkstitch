@@ -206,7 +206,7 @@ class CustomizePanel(ScrolledPanel):
 
     def update_scale(self, event):
         self.panel.settings['scale'] = event.EventObject.GetValue()
-        # self.update_stripes(self.panel.pallet.pallet_stripes)
+        # self.update_stripes(self.panel.palette.palette_stripes)
         self.update_stripe_width_colors()
         self.panel.update_preview()
 
@@ -270,7 +270,7 @@ class CustomizePanel(ScrolledPanel):
     def update_symmetry(self, event=None):
         symmetry = self.symmetry_checkbox.GetValue()
         self.panel.settings['symmetry'] = symmetry
-        self.panel.pallet.update_symmetry(symmetry)
+        self.panel.palette.update_symmetry(symmetry)
         self.panel.update_from_stripes()
         self.FitInside()
 
