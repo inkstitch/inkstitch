@@ -13,14 +13,15 @@ from .base import InkstitchExtension
 class RemoveEmbroiderySettings(InkstitchExtension):
     def __init__(self, *args, **kwargs):
         InkstitchExtension.__init__(self, *args, **kwargs)
-        self.arg_parser.add_argument("-p", "--del_params", dest="del_params", type=Boolean, default=True)
+        self.arg_parser.add_argument("--tabs")
+        self.arg_parser.add_argument("-p", "--del_params", dest="del_params", type=str, default=True)
         self.arg_parser.add_argument("-c", "--del_commands", dest="del_commands", type=str, default="none")
         self.arg_parser.add_argument("-d", "--del_print", dest="del_print", type=Boolean, default=False)
 
     def effect(self):
         self.svg = self.document.getroot()
 
-        if self.options.del_params:
+        if self.options.del_params != 'none':
             self.remove_params()
         if self.options.del_commands != 'none':
             self.remove_commands()
@@ -103,7 +104,9 @@ class RemoveEmbroiderySettings(InkstitchExtension):
         element.getparent().remove(element)
 
     def remove_inkstitch_attributes(self, elements):
+        param_to_remove = self.options.del_params
         for element in elements:
             for attrib in element.attrib:
                 if attrib.startswith(NSS['inkstitch'], 1):
-                    del element.attrib[attrib]
+                    if param_to_remove == 'all' or attrib.endswith(param_to_remove):
+                        del element.attrib[attrib]
