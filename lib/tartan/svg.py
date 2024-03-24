@@ -23,7 +23,7 @@ from ..stitches.auto_fill import (PathEdge, build_fill_stitch_graph,
                                   graph_make_valid, which_outline)
 from ..svg import PIXELS_PER_MM, get_correction_transform
 from ..utils import DotDict, ensure_multi_line_string
-from .pallet import Pallet
+from .palette import Palette
 from .utils import sort_fills_and_strokes, stripes_to_shapes
 
 
@@ -46,16 +46,16 @@ class TartanSvgGroup:
         self.min_stripe_width = settings['min_stripe_width']
         self.bean_stitch_repeats = settings['bean_stitch_repeats']
 
-        self.pallet = Pallet()
-        self.pallet.update_from_code(settings['pallet'])
-        self.symmetry = self.pallet.symmetry
-        self.stripes = self.pallet.pallet_stripes
+        self.palette = Palette()
+        self.palette.update_from_code(settings['palette'])
+        self.symmetry = self.palette.symmetry
+        self.stripes = self.palette.palette_stripes
         self.warp, self.weft = self.stripes
-        if self.pallet.get_pallet_width(self.scale, self.min_stripe_width) == 0:
+        if self.palette.get_palette_width(self.scale, self.min_stripe_width) == 0:
             self.warp = []
-        if self.pallet.get_pallet_width(self.scale, self.min_stripe_width, 1) == 0:
+        if self.palette.get_palette_width(self.scale, self.min_stripe_width, 1) == 0:
             self.weft = []
-        if self.pallet.equal_warp_weft:
+        if self.palette.equal_warp_weft:
             self.weft = self.warp
 
     def __repr__(self) -> str:

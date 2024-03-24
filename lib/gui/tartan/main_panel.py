@@ -16,7 +16,7 @@ from ...i18n import _
 from ...stitch_plan import stitch_groups_to_stitch_plan
 from ...svg.tags import INKSTITCH_TARTAN
 from ...tartan.fill_element import prepare_tartan_fill_element
-from ...tartan.pallet import Pallet
+from ...tartan.palette import Palette
 from ...tartan.svg import TartanSvgGroup
 from ...utils import DotDict
 from ...utils.threading import ExitThread, check_stop_flag
@@ -31,7 +31,7 @@ class TartanMainPanel(wx.Panel):
         self.simulator = simulator
         self.elements = elements
         self.cancel_hook = on_cancel
-        self.pallet = Pallet()
+        self.palette = Palette()
         self.metadata = metadata or dict()
         self.output_groups = output_groups
 
@@ -56,7 +56,7 @@ class TartanMainPanel(wx.Panel):
         self.customize_panel.SetupScrolling()  # scroll_x=False)
         # code
         self.code_panel = CodePanel(self.notebook, self)
-        self.notebook.AddPage(self.code_panel, _("Pallet Code"))
+        self.notebook.AddPage(self.code_panel, _("Palette Code"))
         # embroidery settings
         self.embroidery_panel = EmbroideryPanel(self.notebook, self)
         self.notebook.AddPage(self.embroidery_panel, _("Embroidery Settings"))
@@ -84,11 +84,11 @@ class TartanMainPanel(wx.Panel):
         self.SetMinSize(self.notebook_sizer.CalcMin())
 
     def update_from_code(self):
-        self.pallet.update_from_code(self.code_panel.threadcount_text.GetValue())
-        self.customize_panel.symmetry_checkbox.SetValue(self.pallet.symmetry)
-        self.customize_panel.warp_weft_checkbox.SetValue(self.pallet.equal_warp_weft)
-        self.code_panel.threadcount_text.SetValue(self.pallet.pallet_code)
-        self.customize_panel.update_stripes(self.pallet.pallet_stripes)
+        self.palette.update_from_code(self.code_panel.threadcount_text.GetValue())
+        self.customize_panel.symmetry_checkbox.SetValue(self.palette.symmetry)
+        self.customize_panel.warp_weft_checkbox.SetValue(self.palette.equal_warp_weft)
+        self.code_panel.threadcount_text.SetValue(self.palette.palette_code)
+        self.customize_panel.update_stripes(self.palette.palette_stripes)
         self.customize_panel.update_symmetry()
         self.customize_panel.update_warp_weft()
         self.customize_panel.FitInside()
@@ -98,7 +98,7 @@ class TartanMainPanel(wx.Panel):
         sizers = [self.customize_panel.warp_sizer]
         if not self.customize_panel.warp_weft_checkbox.GetValue():
             sizers.append(self.customize_panel.weft_sizer)
-        self.pallet.update_from_stripe_sizer(
+        self.palette.update_from_stripe_sizer(
             sizers,
             self.customize_panel.symmetry_checkbox.GetValue(),
             self.customize_panel.warp_weft_checkbox.GetValue()
@@ -107,8 +107,8 @@ class TartanMainPanel(wx.Panel):
         self.update_preview()
 
     def update_code_text(self):
-        self.code_panel.threadcount_text.SetValue(self.pallet.pallet_code)
-        self.settings['pallet'] = self.pallet.pallet_code
+        self.code_panel.threadcount_text.SetValue(self.palette.palette_code)
+        self.settings['palette'] = self.palette.palette_code
 
     def load_settings(self):
         """Load the settings saved into the SVG element"""
@@ -119,7 +119,7 @@ class TartanMainPanel(wx.Panel):
             "scale": 100,
             "offset_x": 0.0,
             "offset_y": 0.0,
-            "pallet": "K/10 W/?10",
+            "palette": "K/10 W/?10",
             "output": "embroidery",
             "stitch_type": "legacy_fill",
             "row_spacing": 1.0,
@@ -140,7 +140,7 @@ class TartanMainPanel(wx.Panel):
         self.customize_panel.scale.SetValue(int(self.settings.scale))
         self.customize_panel.offset_x.SetValue(self.settings.offset_x)
         self.customize_panel.offset_y.SetValue(self.settings.offset_y)
-        self.code_panel.threadcount_text.SetValue(self.settings.pallet)
+        self.code_panel.threadcount_text.SetValue(self.settings.palette)
         self.embroidery_panel.set_output(self.settings.output)
         self.embroidery_panel.set_stitch_type(self.settings.stitch_type)
         self.embroidery_panel.svg_row_spacing.SetValue(self.settings.row_spacing)
@@ -159,7 +159,7 @@ class TartanMainPanel(wx.Panel):
         self.update_from_code()
 
         self.customize_panel.symmetry_checkbox.SetValue(bool(self.settings.symmetry))
-        self.pallet.update_symmetry(self.settings.symmetry)
+        self.palette.update_symmetry(self.settings.symmetry)
         self.customize_panel.warp_weft_checkbox.SetValue(bool(self.settings.equal_warp_weft))
         self.customize_panel.update_warp_weft()
 
