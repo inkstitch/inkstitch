@@ -6,7 +6,7 @@
 from math import degrees
 from copy import deepcopy
 from contextlib import contextmanager
-from typing import Generator
+from typing import Generator, List
 
 from inkex import Transform, BaseElement
 from shapely import MultiLineString
@@ -80,7 +80,7 @@ class Clone(EmbroideryElement):
                 elements.extend(node_to_elements(child, True))
         return elements
 
-    def to_stitch_groups(self, last_patch=None) -> list[StitchGroup]:
+    def to_stitch_groups(self, last_patch=None) -> List[StitchGroup]:
         with self.clone_elements() as elements:
             patches = []
 

@@ -4,10 +4,12 @@ from inkex import SvgDocumentElement, Rectangle, Circle, Group, Use, Transform, 
 from inkex.tester import TestCase
 from inkex.tester.svg import svg
 
+from typing import Optional
+
 from math import sqrt
 
 
-def element_fill_angle(element: EmbroideryElement) -> float | None:
+def element_fill_angle(element: EmbroideryElement) -> Optional[float]:
     angle = element.node.get(INKSTITCH_ATTRIBS['angle'])
     if angle is not None:
         angle = float(angle) % 180

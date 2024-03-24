@@ -252,7 +252,7 @@ class Debug(object):
                 if self.debugger == 'vscode':
                     debugpy.listen(('localhost', 5678))
                     if self.wait_attach:
-                        self.log("Waiting for debugger attach")
+                        print("Waiting for debugger attach")
                         debugpy.wait_for_client()        # wait for debugger to attach
                         debugpy.breakpoint()             # stop here to start normal debugging
                 elif self.debugger == 'pycharm':
