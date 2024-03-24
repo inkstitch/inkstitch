@@ -1,6 +1,6 @@
 # Authors: see git history
 #
-# Copyright (c) 2010 Authors
+# Copyright (c) 2024 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 
@@ -170,7 +170,7 @@ def init_debugger(debug_type:str,  ini: dict):
             if debugger == 'vscode':
                 debugpy.listen(('localhost', 5678))
                 if wait_attach:
-                    print("Waiting for debugger attach")
+                    print("Waiting for debugger attach", file=sys.stderr)
                     debugpy.wait_for_client()        # wait for debugger to attach
                     debugpy.breakpoint()             # stop here to start normal debugging
             elif debugger == 'pycharm':

@@ -28,7 +28,7 @@ logger = logging.getLogger("inkstitch")   # create module logger with name 'inks
 # TODO --- temporary --- catch old DEBUG.ini file and inform user to reformat it to DEBUG.toml
 old_debug_ini = SCRIPTDIR / "DEBUG.ini"
 if old_debug_ini.exists():
-    print("ERROR: old DEBUG.ini exists, please reformat it to DEBUG.toml and remove DEBUG.ini file")
+    print("ERROR: old DEBUG.ini exists, please reformat it to DEBUG.toml and remove DEBUG.ini file", file=sys.stderr)
     exit(1)
 # --- end of temporary ---
 
@@ -57,9 +57,9 @@ if len(sys.argv) < 2:
             dlg.ShowModal()
             dlg.Destroy()
         except ImportError:
-            print(msg)
+            print(msg, file=sys.stderr)
     else:
-        print(msg)
+        print(msg, file=sys.stderr)
     exit(1)
 
 # activate logging - must be done before any logging is done
@@ -109,8 +109,9 @@ if debug_type != 'none':
     debug_active = bool((gettrace := getattr(sys, 'gettrace')) and gettrace())
 
 # activate logging for svg
+# we need to import only after possible modification of sys.path, we disable here flake8 E402
 from lib.debug import debug  # noqa: E402  # import global variable debug - don't import whole module
-debug.enable()  # see source how enable/disable logging
+debug.enable()  #  perhaps it would be better to find a more relevant name; in fact, it's about logging and svg creation.
 
 # log startup info
 debug_logging.startup_info(logger, SCRIPTDIR, running_as_frozen, running_from_inkscape, debug_active, debug_type, profiler_type)
