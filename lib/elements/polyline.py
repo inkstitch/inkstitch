@@ -95,12 +95,9 @@ class Polyline(EmbroideryElement):
         yield PolylineWarning(self.path[0][0][0])
 
     def to_stitch_groups(self, last_stitch_group):
-        stitch_group = StitchGroup(color=self.color, min_stitch_length=self.min_stitch_length, lock_stitches=(None, None))
+        stitch_group = StitchGroup(color=self.color, lock_stitches=(None, None))
 
         for stitch in self.stitches:
             stitch_group.add_stitch(Point(*stitch))
-
-        if self.minimum_stitch_length is not None:
-            stitch_group.add_tag(f'custom_min_stitch_length:{self.minimum_stitch_length}')
 
         return [stitch_group]

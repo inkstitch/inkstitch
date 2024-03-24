@@ -21,7 +21,6 @@ class StitchGroup:
         self,
         color=None,
         stitches=None,
-        min_stitch_length=False,
         min_jump_stitch_length=False,
         trim_after=False,
         stop_after=False,
@@ -39,7 +38,6 @@ class StitchGroup:
         self.stop_after = stop_after
         self.lock_stitches = lock_stitches
         self.force_lock_stitches = force_lock_stitches
-        self.min_stitch_length = min_stitch_length
         self.min_jump_stitch_length = min_jump_stitch_length
         self.stitches = []
 
@@ -70,6 +68,10 @@ class StitchGroup:
         # This method allows `len(stitch_group)` and `if stitch_group:
         return len(self.stitches)
 
+    def set_minimum_stitch_length(self, min_stitch_length):
+        for stitch in self.stitches:
+            stitch.min_stitch_length = min_stitch_length
+
     def add_stitches(self, stitches, tags=None):
         for stitch in stitches:
             self.add_stitch(stitch, tags=tags)
@@ -77,9 +79,7 @@ class StitchGroup:
     def add_stitch(self, stitch, tags=None):
         if not isinstance(stitch, Stitch):
             # probably a Point
-            stitch = Stitch(stitch, min_stitch_length=self.min_stitch_length, tags=tags)
-
-        stitch.min_stitch_length = self.min_stitch_length
+            stitch = Stitch(stitch, tags=tags)
         self.stitches.append(stitch)
 
     def reverse(self):
