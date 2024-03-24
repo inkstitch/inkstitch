@@ -81,11 +81,11 @@ The pattern can be rotated, scaled (%) and translated (mm) as a whole
 * Click on the colored field to select an other color
 * When you want to change a color in multiple stripes at once, enable `Link colors` and equal colors will update simultanously
 
-### Pallet Code
+### Palette Code
 
 The Ink/Stitch code is what will be saved into the svg, but can also be edited directly.
 
-A pallet code looks for example like this: `(#000000)/5.0 (#FFFFFF)/?5.0`.
+A palette code looks for example like this: `(#000000)/5.0 (#FFFFFF)/?5.0`.
 
 * Stripes are separated by spaces
 * Each color is encapsulated in round brackets `(#000000)`

@@ -150,9 +150,9 @@ All fonts have been reworked to be more stable when transformed.
 ([#2476](https://github.com/inkstitch/inkstitch/issues/2476))
 ([#2682](https://github.com/inkstitch/inkstitch/pull/2682))
 
-## Pallets
+## Palettes
 
-### New Pallets
+### New Palettes
 * Simthread glow in the dark / 15 colors ([#2752](https://github.com/inkstitch/inkstitch/pull/2752))
 * Simthread 63 Brother Colours Polyester ([#2752](https://github.com/inkstitch/inkstitch/pull/2752))
 
