@@ -16,7 +16,7 @@ from shapely.ops import nearest_points
 
 from ..stitch_plan import Stitch, StitchGroup
 from ..svg import PIXELS_PER_MM
-from ..tartan.utils import (get_pallet_width, get_tartan_settings,
+from ..tartan.utils import (get_palette_width, get_tartan_settings,
                             get_tartan_stripes, sort_fills_and_strokes,
                             stripes_to_shapes)
 from ..utils import cache, ensure_multi_line_string
@@ -44,8 +44,8 @@ def tartan_fill(fill: 'FillStitch', outline: Polygon, starting_point: Optional[L
     """
     tartan_settings = get_tartan_settings(fill.node)
     warp, weft = get_tartan_stripes(tartan_settings)
-    warp_width = get_pallet_width(tartan_settings)
-    weft_width = get_pallet_width(tartan_settings, 1)
+    warp_width = get_palette_width(tartan_settings)
+    weft_width = get_palette_width(tartan_settings, 1)
 
     offset = (abs(tartan_settings['offset_x']), abs(tartan_settings['offset_y']))
     rotation = tartan_settings['rotate']
