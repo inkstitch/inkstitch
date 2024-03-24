@@ -6,7 +6,7 @@
 from math import degrees
 from copy import deepcopy
 from contextlib import contextmanager
-from typing import Generator, List
+from typing import Generator, List, Tuple
 
 from inkex import Transform, BaseElement
 from shapely import MultiLineString
@@ -20,6 +20,18 @@ from ..svg.tags import (EMBROIDERABLE_TAGS, INKSTITCH_ATTRIBS, SVG_USE_TAG,
                         XLINK_HREF, SVG_GROUP_TAG)
 from ..utils import cache
 from .element import EmbroideryElement, param
+from .validation import ValidationWarning
+
+
+class CloneWarning(ValidationWarning):
+    name = _("Clone Object")
+    description = _("There are one or more clone objects in this document.  "
+                    "Ink/Stitch can work with single clones, but you are limited to set a very few parameters. ")
+    steps_to_solve = [
+        _("If you want to convert the clone into a real element, follow these steps:"),
+        _("* Select the clone"),
+        _("* Run: Edit > Clone > Unlink Clone (Alt+Shift+D)")
+    ]
 
 
 class Clone(EmbroideryElement):
@@ -54,7 +66,7 @@ class Clone(EmbroideryElement):
         return self.get_boolean_param('flip_angle', False)
 
     def get_cache_key_data(self, previous_stitch):
-        source_node = get_clone_source(self.node)
+        source_node = self.node.href
         source_elements = self.clone_to_elements(source_node)
         return [element.get_cache_key(previous_stitch) for element in source_elements]
 
@@ -89,17 +101,7 @@ class Clone(EmbroideryElement):
         Could possibly be refactored into just a generator - being a context manager is mainly to control the lifecycle of the elements
         that are cloned (again, for testing convenience primarily)
         """
-        source_node: BaseElement = get_clone_source(self.node)
-        # Compute the transform that will be applied to the cloned element, which is based off of the cloned element.
-        # This makes intuitive sense: The clone of a scaled element will also be scaled, the clone of a rotated element will also
-        # be rotated, etc. Ant transforms from the use element will be applied on top of that
-        local_transform = Transform(self.node.get('transform'))
-        while source_node.tag == SVG_USE_TAG:
-            # In case the source_node href's a use (and that href's a use...), iterate up the chain until we get a source node,
-            # applying the transforms as we go.
-            local_transform @= Transform(source_node.get('transform'))
-            source_node = get_clone_source(source_node)
-        local_transform @= Transform(source_node.get('transform'))
+        source_node, local_transform = get_concrete_source(self.node)
 
         if source_node.tag not in EMBROIDERABLE_TAGS and source_node.tag != SVG_GROUP_TAG:
             yield []
@@ -164,6 +166,11 @@ class Clone(EmbroideryElement):
         center = self.node.bounding_box(transform).center
         return center
 
+    def validation_warnings(self):
+        source_node = self.node.href
+        point = self.center(source_node)
+        yield CloneWarning(point)
+
 
 def is_clone(node):
     if node.tag == SVG_USE_TAG and node.get(XLINK_HREF) and not is_command_symbol(node):
@@ -171,8 +178,24 @@ def is_clone(node):
     return False
 
 
-def get_clone_source(node):
-    return node.href
+def get_concrete_source(node: BaseElement) -> Tuple[BaseElement, Transform]:
+    """
+    Given a use element, follow hrefs until finding an element that is not a use.
+    Returns that non-use element, and a transform to apply to a copy of that element
+    which will place that copy in the same position as the use if added as a sibling of the use.
+    """
+    # Compute the transform that will be applied to the cloned element, which is based off of the cloned element.
+    # This makes intuitive sense: The clone of a scaled element will also be scaled, the clone of a rotated element will also
+    # be rotated, etc. Any transforms from the use element will be applied on top of that.
+    transform = Transform(node.get('transform'))
+    source_node: BaseElement = node.href
+    while source_node.tag == SVG_USE_TAG:
+        # In case the source_node href's a use (and that href's a use...), iterate up the chain until we get a source node,
+        # applying the transforms as we go.
+        transform @= Transform(source_node.get('transform'))
+        source_node = source_node.href
+    transform @= Transform(source_node.get('transform'))
+    return (source_node, transform)
 
 
 def resolve_all_clones(node: BaseElement) -> None:
@@ -182,10 +205,9 @@ def resolve_all_clones(node: BaseElement) -> None:
     clones: List[BaseElement] = [n for n in node.iterdescendants() if n.tag == SVG_USE_TAG]
     for clone in clones:
         parent: BaseElement = clone.getparent()
-        source_node = get_clone_source(clone)
+        source_node, local_transform = get_concrete_source(clone)
         cloned_node = deepcopy(source_node)
         parent.add(cloned_node)
-        cloned_node.set('transform', Transform(clone.get(
-            'transform')) @ Transform(cloned_node.get('transform')))
+        cloned_node.set('transform', local_transform)
         parent.remove(clone)
         resolve_all_clones(cloned_node)
