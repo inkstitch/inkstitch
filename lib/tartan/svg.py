@@ -451,7 +451,7 @@ class TartanSvgGroup:
                         end = end[1:-1].split(',')
                         first_outline = ensure_multi_line_string(outline.boundary).geoms[0]
                         travel = self._get_travel(start, end, first_outline)
-                        travel_path_element = self._linestring_to_path(color, travel, shapes[0][0].get('transform'), True)
+                        travel_path_element = self._linestring_to_path(color, travel, shapes[0][0].get('transform', ''), True)
                         polygons[color].append(travel_path_element)
                 polygons[color].extend(shapes[0])
             if shapes[1]:
@@ -465,7 +465,7 @@ class TartanSvgGroup:
                 if start and end:
                     first_outline = ensure_multi_line_string(outline.boundary).geoms[0]
                     travel = self._get_travel(start, end, first_outline)
-                    travel_path_element = self._linestring_to_path(color, travel, shapes[1][0].get('transform'), True)
+                    travel_path_element = self._linestring_to_path(color, travel, shapes[1][0].get('transform', ''), True)
                     linestrings[color].append(travel_path_element)
                 linestrings[color].extend(shapes[1])
 
