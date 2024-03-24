@@ -10,19 +10,19 @@ jobs:
   linux:
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           submodules: recursive
-      - uses: actions/setup-python@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.8.x'
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
-          node-version: '16.x'
+          node-version: 20
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: 3.1
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         id: pip-cache
         with:
           path: ~/.cache/pip
@@ -34,7 +34,7 @@ jobs:
         id: yarn-cache-dir-path
         run: echo "dir=$(yarn cache dir)" >> $GITHUB_OUTPUT
 
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
         with:
           path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
@@ -90,24 +90,24 @@ jobs:
         env:
           BUILD: linux
           INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY }}
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: inkstitch-linux
           path: artifacts
   windows32:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           submodules: recursive
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
-          node-version: '16.x'
-      - uses: actions/setup-python@v4
+          node-version: 20
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.8.x'
           architecture: 'x86'
-      - uses: microsoft/setup-msbuild@v1.3.1
+      - uses: microsoft/setup-msbuild@v2
       - name: install dependencies
         shell: bash
         run: |
@@ -152,24 +152,24 @@ jobs:
         with:
           certificate: '${{ secrets.INKSTITCH_CODE_SIGNING_CERTIFICATE }}'
           folder: 'artifacts'
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: inkstitch-windows32
           path: artifacts
   windows64:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           submodules: recursive
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
-          node-version: '16.x'
-      - uses: actions/setup-python@v4
+          node-version: 20
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.8.x'
           architecture: 'x64'
-      - uses: microsoft/setup-msbuild@v1.3.1
+      - uses: microsoft/setup-msbuild@v2
       - name: install dependencies
         shell: bash
         run: |
@@ -208,22 +208,22 @@ jobs:
         with:
           certificate: '${{ secrets.INKSTITCH_CODE_SIGNING_CERTIFICATE }}'
           folder: 'artifacts'
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: inkstitch-windows64
           path: artifacts
   mac:
     runs-on: macos-12
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           submodules: recursive
-      - uses: actions/setup-python@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.9.x'
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
-          node-version: '16.x'
+          node-version: 20
       - name: install dependencies
         shell: bash
         run: |
@@ -270,7 +270,7 @@ jobs:
           NOTARY_PASSWORD: ${{ secrets.INKSTITCH_NOTARIZE_PASS }}
 
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: inkstitch-mac
           path: artifacts
@@ -296,36 +296,36 @@ jobs:
             echo "title=development build of $branch" >> $GITHUB_ENV
           fi
       - name: download linux
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: 'inkstitch-linux'
           path: 'artifacts/'
       - name: download windows32
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: 'inkstitch-windows32'
           path: 'artifacts/'
         if: always()
       - name: download windows64
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: 'inkstitch-windows64'
           path: 'artifacts/'
         if: always()
       - name: download mac
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: 'inkstitch-mac'
           path: 'artifacts/'
         if: always()
       - name: create/update release
-        uses: "marvinpinto/action-automatic-releases@latest"
+        uses: softprops/action-gh-release@v2
         if: always()
         with:
-          repo_token: "${{secrets.GITHUB_TOKEN}}"
-          automatic_release_tag: "${{env.release_tag}}"
+          token: "${{secrets.GITHUB_TOKEN}}"
+          tag_name: "${{env.release_tag}}"
           prerelease: "${{env.prerelease}}"
-          title: "${{env.title}}"
+          name: "${{env.title}}"
           files: |
             artifacts/*.exe
             artifacts/*.pkg
