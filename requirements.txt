@@ -1,8 +1,14 @@
+# Assuming pyembroidery is installed in parent directory of inkstitch.
+# Maybe it would be better to install PyEmbroidery as a submodule and automatically update it,
+# but the .gitignore file should be updated to ignore the build directory.
 ./pyembroidery
 
 # get up to date inkex version (Febuary 10, 2024)
 inkex @ git+https://gitlab.com/inkscape/extensions.git@8d51d7449d73096382c2f39e726eddc4f9bbcfc4
 
+# for linux user it may be tricky to install wxPython from sources
+# prebuilt packages: https://wxpython.org/pages/downloads/index.html
+#                    https://extras.wxpython.org/wxPython4/extras/linux/gtk3/
 wxPython>=4.1.1
 
 backports.functools_lru_cache
