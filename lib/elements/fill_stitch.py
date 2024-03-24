@@ -792,20 +792,23 @@ class FillStitch(EmbroideryElement):
             return stitch_groups
 
     def do_legacy_fill(self):
-        stitch_lists = legacy_fill(self.shape,
-                                   self.angle,
-                                   self.row_spacing,
-                                   self.end_row_spacing,
-                                   self.max_stitch_length,
-                                   self.flip,
-                                   self.staggers,
-                                   self.skip_last)
-        return [StitchGroup(stitches=stitch_list,
-                            min_stitch_length=self.min_stitch_length,
-                            min_jump_stitch_length=self.min_jump_stitch_length,
-                            color=self.color,
-                            force_lock_stitches=self.force_lock_stitches,
-                            lock_stitches=self.lock_stitches) for stitch_list in stitch_lists]
+        stitch_lists = legacy_fill(
+            self.shape,
+            self.angle,
+            self.row_spacing,
+            self.end_row_spacing,
+            self.max_stitch_length,
+            self.flip,
+            self.staggers,
+            self.skip_last
+        )
+
+        return [StitchGroup(
+            stitches=stitch_list,
+            color=self.color,
+            force_lock_stitches=self.force_lock_stitches,
+            lock_stitches=self.lock_stitches
+        ) for stitch_list in stitch_lists]
 
     def do_underlay(self, shape, starting_point):
         color = self.color
@@ -829,8 +832,7 @@ class FillStitch(EmbroideryElement):
                     self.fill_underlay_skip_last,
                     starting_point,
                     underpath=self.underlay_underpath
-                ),
-                min_stitch_length=self.min_stitch_length
+                )
             )
             stitch_groups.append(underlay)
             starting_point = underlay.stitches[-1]
@@ -855,9 +857,7 @@ class FillStitch(EmbroideryElement):
                 starting_point,
                 ending_point,
                 self.underpath
-            ),
-            min_stitch_length=self.min_stitch_length,
-            min_jump_stitch_length=self.min_jump_stitch_length
+            )
         )
         return [stitch_group]
 
@@ -900,8 +900,6 @@ class FillStitch(EmbroideryElement):
             color=self.color,
             tags=("auto_fill", "auto_fill_top"),
             stitches=stitches,
-            min_stitch_length=self.min_stitch_length,
-            min_jump_stitch_length=self.min_jump_stitch_length,
             force_lock_stitches=self.force_lock_stitches,
             lock_stitches=self.lock_stitches)
         stitch_groups.append(stitch_group)
@@ -934,9 +932,7 @@ class FillStitch(EmbroideryElement):
                 ending_point,
                 self.underpath,
                 self.guided_fill_strategy
-            ),
-            min_stitch_length=self.min_stitch_length,
-            min_jump_stitch_length=self.min_jump_stitch_length
+            )
         )
         return [stitch_group]
 
@@ -957,8 +953,6 @@ class FillStitch(EmbroideryElement):
             color=self.color,
             tags=("meander_fill", "meander_fill_top"),
             stitches=meander_fill(self, shape, original_shape, i, starting_point, ending_point),
-            min_stitch_length=self.min_stitch_length,
-            min_jump_stitch_length=self.min_jump_stitch_length,
             force_lock_stitches=self.force_lock_stitches,
             lock_stitches=self.lock_stitches,
         )
@@ -995,8 +989,6 @@ class FillStitch(EmbroideryElement):
             color=self.color,
             tags=("circular_fill", "auto_fill_top"),
             stitches=stitches,
-            min_stitch_length=self.min_stitch_length,
-            min_jump_stitch_length=self.min_jump_stitch_length,
             force_lock_stitches=self.force_lock_stitches,
             lock_stitches=self.lock_stitches,)
         return [stitch_group]

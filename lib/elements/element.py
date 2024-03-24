@@ -598,6 +598,10 @@ class EmbroideryElement(object):
                     stitch_groups[-1].trim_after = self.has_command("trim") or self.trim_after
                     stitch_groups[-1].stop_after = self.has_command("stop") or self.stop_after
 
+                for stitch_group in stitch_groups:
+                    stitch_group.min_jump_stitch_length = self.min_jump_stitch_length
+                    stitch_group.set_minimum_stitch_length(self.min_stitch_length)
+
                 self._save_cached_stitch_groups(stitch_groups, previous_stitch)
 
         debug.log(f"ending {self.node.get('id')} {self.node.get(INKSCAPE_LABEL)}")
