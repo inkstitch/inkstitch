@@ -1,3 +1,5 @@
+### customize this file and save as DEBUG.toml
+
 [LIBRARY]
 ### use the pip installed version of inkex.py, default: true
 # prefer_pip_inkex = false

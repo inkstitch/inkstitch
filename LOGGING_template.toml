@@ -1,7 +1,8 @@
+### customize this file and save as LOGGING.toml
 ### logging/warning template for inkstitch
 ### format: toml
 ### enable config file in DEBUG.toml: log_config_file
-###
+
 ### warnings.simplefilter(action), default: "default"
 ### - possible values: "error", "ignore", "always", "default", "module", "once"
 warnings_action = "default"
@@ -13,7 +14,7 @@ warnings_capture = true
 ### mandatory, must be an integer and 1
 version = 1
 
-### disable loggers not specified here true/false - may be overrided by root logger
+### disable loggers activated before the configuration is loaded
 disable_existing_loggers = false
 
 ### define the loggers, handlers, formatters, filters
