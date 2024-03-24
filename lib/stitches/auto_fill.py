@@ -54,7 +54,7 @@ class PathEdge(object):
         return self._sorted_nodes == other._sorted_nodes and self.key == other.key
 
     def is_outline(self):
-        return self.key in self.OUTLINE_KEYS
+        return self.key.startswith(self.OUTLINE_KEYS)
 
     def is_segment(self):
         return self.key.startswith(self.SEGMENT_KEY)
