@@ -27,13 +27,13 @@
      inkscape:window-height="2097"
      id="namedview1755"
      showgrid="true"
-     inkscape:zoom="5.2542212"
-     inkscape:cx="75.74862"
-     inkscape:cy="81.838961"
+     inkscape:zoom="13.21765"
+     inkscape:cx="51.219391"
+     inkscape:cy="108.79392"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g3601"
+     inkscape:current-layer="g3637"
      inkscape:document-rotation="0"
      inkscape:snap-global="true"
      inkscape:snap-grids="false"
@@ -1474,7 +1474,7 @@ Copyright 2003, 2008 B. Jackowski and J. M. Nowacki (on behalf of TeX users grou
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-H"
-     style="display:inline"
+     style="display:none"
      id="g3601">
     <path
        id="path3587-75"
@@ -1683,7 +1683,7 @@ Copyright 2003, 2008 B. Jackowski and J. M. Nowacki (on behalf of TeX users grou
     <path
        id="autosatin54"
        style="display:inline;fill:none;stroke:#ff0000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="M 93.6069 47.7563 C 93.9444 47.0129 94.161 46.1841 94.7999 45.6261 C 95.9374 44.1394 97.9701 43.9813 99.6977 44.0221 C 105.695 44.0299 111.693 44.0233 117.69 44.0255 M 93.1004 50.1554 C 92.851 51.156 93.0274 52.4002 94.0242 52.9322 C 95.1759 53.5782 96.5589 53.4723 97.836 53.5325 C 103.781 53.5166 109.726 53.5296 115.67 53.5254 M 116.276 41.7194 L 113.854 54.7736"
+       d="m 93.6069,47.7563 c 0.3375,-0.7434 0.5541,-1.5722 1.193,-2.1302 1.1375,-1.4867 3.1702,-1.6448 4.8978,-1.604 5.9973,0.0078 11.9953,0.0012 17.9923,0.0034 m -24.5896,6.1299 c -0.2494,1.0006 -0.073,2.2448 0.9238,2.7768 1.1517,0.646 2.5347,0.5401 3.8118,0.6003 5.945,-0.0159 11.89,-0.0029 17.834,-0.0071 m 0.606,-11.806 -2.422,13.0542"
        inkstitch:satin_column="True"
        inkstitch:ties="3"
        inkstitch:zigzag_spacing_mm="0.3"
@@ -1694,8 +1694,8 @@ Copyright 2003, 2008 B. Jackowski and J. M. Nowacki (on behalf of TeX users grou
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
        inkstitch:reverse_rails="none" />
     <path
-       d="M 115.513 54.2648 L 106.19 53.3592"
-       style="stroke:#ff0000;stroke-width:1px;stroke-dasharray:3, 1;fill:none;"
+       d="M 115.513,54.2648 106.19,53.3592"
+       style="fill:none;stroke:#ff0000;stroke-width:1px;stroke-dasharray:3, 1"
        inkstitch:running_stitch_length_mm="4.0"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path232" />
@@ -3215,12 +3215,12 @@ Copyright 2003, 2008 B. Jackowski and J. M. Nowacki (on behalf of TeX users grou
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Q"
-     style="display:none"
+     style="display:inline"
      id="g3637">
     <path
        id="path865-8-2-2-7-6"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.99999px;line-height:1.25;font-family:'Latin Modern Roman';-inkscape-font-specification:'Latin Modern Roman, ';display:inline;fill:none;fill-opacity:0.356557;stroke:#00ff00;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 41.382301,133.63187 c -7.905082,-5.67489 -12.683489,-18.21097 -12.683489,-31.72482 0,-20.399547 10.20313,-40.048657 30.997818,-51.938106 M 54.415487,132.40589 C 50.964977,118.10737 50.499329,107.90056 52.710774,95.084108 56.300633,74.072732 65.934595,59.06629 73.087187,48.894753 M 55.031437,93.273779 23.707477,92.920393 M 64.239521,66.826347 36.431138,67.041916 M 54.97006,118.34731 H 31.257485"
+       d="m 41.382301,133.63187 c -7.905082,-5.67489 -12.683489,-18.21097 -12.683489,-31.72482 0,-20.399547 10.20313,-40.048657 30.997818,-51.938106 M 54.415487,132.40589 C 50.964977,118.10737 50.499329,107.90056 52.710774,95.084108 56.300633,74.072732 65.934595,59.06629 73.087187,48.894753 M 55.031437,93.273779 23.707477,92.920393 M 64.239521,66.826347 36.431138,67.041916 m 18.538922,51.305394 -26.057924,0.22697"
        inkstitch:satin_column="True"
        inkstitch:ties="0"
        inkstitch:force_lock_stitches="True"
