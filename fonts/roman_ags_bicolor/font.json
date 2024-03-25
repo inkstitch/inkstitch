@@ -4,8 +4,8 @@
     "keywords": [
         "serif",
         "italic",
-        "multicolor"   
-     ], 
+        "multicolor"
+    ],
     "leading": 150,
     "auto_satin": false,
     "reversible": true,
@@ -11262,6 +11262,10 @@
         "Æ",
         "Ö",
         "Ü",
-        "Œ"
+        "Œ",
+        "Ë",
+        "Ê",
+        "È",
+        "É"
     ]
 }
