@@ -111,47 +111,64 @@ class Clone(EmbroideryElement):
         # as the use element this Clone represents, with the same transform
         parent: BaseElement = self.node.getparent()
         cloned_node = deepcopy(source_node)
+        cloned_node.set('transform', local_transform)
         parent.add(cloned_node)
-        resolve_all_clones(cloned_node)
         try:
             # In a try block so we can ensure that the cloned_node is removed from the tree in the event of an exception.
             # Otherwise, it might be left around on the document if we throw for some reason.
-            cloned_node.set('transform', local_transform)
+            self.resolve_all_clones(cloned_node)
 
-            if self.clone_fill_angle is None:
-                # Calculate the rotation angle to apply to the fill of cloned elements, if not explicitly set
-                source_transform = source_node.composed_transform()
-                cloned_transform = cloned_node.composed_transform()
-                # Construct a transformation matrix that can be applied to the fill angle:
-                # The transformation from the source node to the clone node, with the translation component removed.
-                angle_transform = cloned_transform @ -source_transform
-                angle_transform = Transform(
-                    (angle_transform.a, angle_transform.b, angle_transform.c, angle_transform.d, 0.0, 0.0))
+            self.apply_angles(cloned_node, local_transform)
 
-            elements = self.clone_to_elements(cloned_node)
-            for element in elements:
-                # We manipulate the element's node directly here instead of using get/set param methods, because otherwise
-                # we run into issues due to those methods' use of caching not updating if the underlying param value is changed.
-
-                # Normally, rotate the cloned element's angle by the clone's rotation.
-                if self.clone_fill_angle is None:
-                    element_angle = float(element.node.get(INKSTITCH_ATTRIBS['angle'], 0))
-                    # We have to negate the angle because SVG/Inkscape's definition of rotation is clockwise, while Inkstitch uses counter-clockwise
-                    fill_vector = (angle_transform @ Transform(f"rotate(${-element_angle})")).apply_to_point((1, 0))
-                    # Same reason for negation here.
-                    element_angle = -degrees(fill_vector.angle)
-                else:  # If clone_fill_angle is specified, override the angle instead.
-                    element_angle = self.clone_fill_angle
-
-                if self.flip_angle:
-                    element_angle = -element_angle
-
-                element.node.set(INKSTITCH_ATTRIBS['angle'], element_angle)
-
-            yield elements
+            yield self.clone_to_elements(cloned_node)
         finally:
             # Remove the "manually cloned" tree.
             parent.remove(cloned_node)
+
+    def resolve_all_clones(self, node: BaseElement) -> None:
+        """
+        For a subtree, recursively replace all `use` tags with the elements they href.
+        """
+        clones: List[BaseElement] = [n for n in node.iterdescendants() if n.tag == SVG_USE_TAG]
+        for clone in clones:
+            parent: BaseElement = clone.getparent()
+            source_node, local_transform = get_concrete_source(clone)
+            cloned_node = deepcopy(source_node)
+            parent.add(cloned_node)
+            cloned_node.set('transform', local_transform)
+            parent.remove(clone)
+            self.resolve_all_clones(cloned_node)
+            self.apply_angles(cloned_node, local_transform)
+
+    def apply_angles(self, cloned_node: BaseElement, transform: Transform) -> None:
+        """
+        Adjust angles on a cloned tree based on their transform.
+        """
+        if self.clone_fill_angle is None:
+            # Strip out the translation component to simplify the fill vector rotation angle calculation.
+            angle_transform = Transform((transform.a, transform.b, transform.c, transform.d, 0.0, 0.0))
+
+        elements = self.clone_to_elements(cloned_node)
+        for element in elements:
+            # We manipulate the element's node directly here instead of using get/set param methods, because otherwise
+            # we may run into issues due to those methods' use of caching not updating if the underlying param value is changed.
+
+            # Normally, rotate the cloned element's angle by the clone's rotation.
+            if self.clone_fill_angle is None:
+                element_angle = float(element.node.get(INKSTITCH_ATTRIBS['angle'], 0))
+                # We have to negate the angle because SVG/Inkscape's definition of rotation is clockwise, while Inkstitch uses counter-clockwise
+                fill_vector = (angle_transform @ Transform(f"rotate(${-element_angle})")).apply_to_point((1, 0))
+                # Same reason for negation here.
+                element_angle = -degrees(fill_vector.angle)
+            else:  # If clone_fill_angle is specified, override the angle instead.
+                element_angle = self.clone_fill_angle
+
+            if self.flip_angle:
+                element_angle = -element_angle
+
+            element.node.set(INKSTITCH_ATTRIBS['angle'], element_angle)
+
+        return elements
 
     @property
     def shape(self):
@@ -196,18 +213,3 @@ def get_concrete_source(node: BaseElement) -> Tuple[BaseElement, Transform]:
         source_node = source_node.href
     transform @= Transform(source_node.get('transform'))
     return (source_node, transform)
-
-
-def resolve_all_clones(node: BaseElement) -> None:
-    """
-    For a subtree, recursively replace all `use` tags with the elements they href.
-    """
-    clones: List[BaseElement] = [n for n in node.iterdescendants() if n.tag == SVG_USE_TAG]
-    for clone in clones:
-        parent: BaseElement = clone.getparent()
-        source_node, local_transform = get_concrete_source(clone)
-        cloned_node = deepcopy(source_node)
-        parent.add(cloned_node)
-        cloned_node.set('transform', local_transform)
-        parent.remove(clone)
-        resolve_all_clones(cloned_node)
