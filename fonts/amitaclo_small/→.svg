@@ -28,13 +28,13 @@
      inkscape:window-height="797"
      id="namedview3461"
      showgrid="true"
-     inkscape:zoom="9.2587377"
-     inkscape:cx="41.258324"
-     inkscape:cy="84.244745"
+     inkscape:zoom="23.291512"
+     inkscape:cx="49.352743"
+     inkscape:cy="104.67332"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g6264"
+     inkscape:current-layer="g6032"
      inkscape:document-rotation="0"
      inkscape:document-units="px"
      inkscape:snap-global="false"
@@ -267,7 +267,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
       <path
          d="m 48.4334,14.2885 10.3559,5.9889"
          style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-         inkstitch:running_stitch_length_mm="2.5"
+         inkstitch:running_stitch_length_mm="1.5"
          inkstitch:running_stitch_tolerance_mm="0.5"
          id="path1" />
       <path
@@ -456,7 +456,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="M 72.9303,68.7976 79.32,67.2927"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path2" />
     <path
@@ -552,7 +552,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="m 26.5043,68.963 2.3236,2.6862"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path3" />
     <path
@@ -680,7 +680,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="m 10,114 0.0208,1.535"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path4"
        sodipodi:nodetypes="cc" />
@@ -705,7 +705,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="M 23.827349,111.57185 23.8815,112.773"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path5"
        sodipodi:nodetypes="cc" />
@@ -810,7 +810,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="m 31.3142,67.3001 4.8332,0.2368"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path6" />
     <path
@@ -921,7 +921,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="m 27.2492,36.3309 c 4.12886,-1.80649 8.76624,-2.45747 13.2077,-1.67758 4.53519,0.92853 8.50957,3.78454 11.0861,7.5997 v -2e-5 l -4.6759,2.8055 v 0"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="2.0"
        id="path59" />
     <path
@@ -945,7 +945,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="m 31.3142,67.3001 v 0 l 4.83319,0.236823 10e-6,-2.3e-5"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="2.0"
        id="path60"
        inkstitch:ties="3" />
@@ -970,7 +970,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="m 39.6451,112.802 -0.3235,-2.21 -0.423287,-2.52572 c 5.66855,-2.36363 10.3724,-6.56643 14.4413,-11.0822 1.75606,-1.93762 3.22535,-4.08074 4.70341,-6.23106 L 56.8103,89.5202"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="2.0"
        id="path61"
        sodipodi:nodetypes="cccc"
@@ -1059,7 +1059,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="m 42.8101,35.323 c 3.54649,1.30101 6.61289,3.79081 8.73291,6.92999 l -1e-5,1e-5 -4.6759,2.8055 v 0"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="2.0"
        id="path69"
        inkstitch:ties="3" />
@@ -1084,7 +1084,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="m 31.3142,67.3001 v 0 l 4.83319,0.236823 10e-6,-2.3e-5"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="2.0"
        id="path71"
        inkstitch:ties="3" />
@@ -1109,7 +1109,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="m 39.6451,112.802 -0.3235,-2.21 -0.423287,-2.52572 c 5.66855,-2.36363 10.3724,-6.56643 14.4413,-11.0822 1.75606,-1.93762 3.22535,-4.08074 4.70341,-6.23106 L 56.8103,89.5202"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="2.0"
        id="path73"
        sodipodi:nodetypes="cccc"
@@ -1198,7 +1198,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="m 42.8101,35.323 c 3.54649,1.30101 6.61289,3.79081 8.73291,6.92999 l -1e-5,1e-5 -4.6759,2.8055 v 0"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="2.0"
        id="path87"
        inkstitch:ties="3" />
@@ -1223,7 +1223,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="m 31.3142,67.3001 v 0 l 4.83319,0.236823 10e-6,-2.3e-5"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="2.0"
        id="path89"
        inkstitch:ties="3" />
@@ -1248,7 +1248,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="m 39.6451,112.802 -0.3235,-2.21 -0.423287,-2.52572 c 5.66855,-2.36363 10.3724,-6.56643 14.4413,-11.0822 1.75606,-1.93762 3.22535,-4.08074 4.70341,-6.23106 L 56.8103,89.5202"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="2.0"
        id="path91"
        sodipodi:nodetypes="cccc"
@@ -1332,7 +1332,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
       <path
          d="m 38.2431,14.8644 1.0785,-0.1188 9.27746,6.10764 4e-5,-4e-5"
          style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-         inkstitch:running_stitch_length_mm="2.5"
+         inkstitch:running_stitch_length_mm="1.5"
          inkstitch:running_stitch_tolerance_mm="2.0"
          id="path117"
          sodipodi:nodetypes="cc" />
@@ -1378,7 +1378,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="m 27.8528,34.4064 c 7.24125,0.834035 17.1578,-1.16934 19.9511,4.38216 l -0.936796,6.26996 -4e-6,-2e-5"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="2.0"
        id="path118"
        sodipodi:nodetypes="ccc" />
@@ -1403,7 +1403,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="m 31.3142,67.3001 v 0 l 4.83319,0.236823 10e-6,-2.3e-5"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="2.0"
        id="path105"
        inkstitch:ties="3" />
@@ -1428,7 +1428,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="m 39.6451,112.802 -0.3235,-2.21 -0.423287,-2.52572 c 5.66855,-2.36363 10.3724,-6.56643 14.4413,-11.0822 1.75606,-1.93762 3.22535,-4.08074 4.70341,-6.23106 L 56.8103,89.5202"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="2.0"
        id="path107"
        sodipodi:nodetypes="cccc"
@@ -1512,7 +1512,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="M 32.748164,45.303272 37,46"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path7"
        sodipodi:nodetypes="cc" />
@@ -1587,7 +1587,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="M 24.380606,80.383696 C 23.565245,85.709794 22.575758,90.493851 21.517404,90.66848 20.535136,90.830555 19.505282,86.834368 18.2073,80.3033"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path8"
        sodipodi:nodetypes="csc" />
@@ -1645,7 +1645,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="m 21.9171,104.235 c 0,0 -0.217777,-0.14172 -0.217777,-0.14172 0,0 -0.938906,-0.65333 -0.938906,-0.65333 0,0 -0.869925,-0.75033 -0.869925,-0.75033 0,0 -0.869925,-0.75032 -0.869925,-0.75032 0,0 -0.02778,-0.031 -0.02778,-0.031 0,0 0,0 0,0 0,0 -0.740682,-0.82544 -0.740682,-0.82544 0,0 -0.757041,-0.87003 -0.757041,-0.87003 0,0 -0.691939,-0.921494 -0.691939,-0.921494 0,0 -0.179426,-0.27484 -0.179426,-0.27484 0,0 0,0 0,0 0,0 -0.452855,-0.693663 -0.452855,-0.693663 0,0 -0.619747,-0.976214 -0.619747,-0.976214 0,0 -0.506687,-1.0417 -0.506687,-1.0417 0,0 -0.260508,-0.540255 -0.260508,-0.540255 0,0 0,0 0,0 0,0 -0.242621,-0.503157 -0.242621,-0.503157 0,0 -0.444754,-1.06858 -0.444754,-1.06858 0,0 -0.385115,-1.09311 -0.385115,-1.09311 0,0 -0.288393,-0.818577 -0.288393,-0.818577 0,0 0,0 0,0 0,0 -0.09672,-0.274534 -0.09672,-0.274534 0,0 -0.299276,-1.1189 -0.299276,-1.1189 0,0 -0.277827,-1.12523 -0.277827,-1.12523 0,0 -0.252296,-1.10617 -0.252296,-1.10617 0,0 0,0 0,0 0,0 -0.0052,-0.02289 -0.0052,-0.02289 0,0 -0.196184,-1.14089 -0.196184,-1.14089 0,0 -0.176831,-1.14516 -0.176831,-1.14516 0,0 -0.146969,-1.14783 -0.146969,-1.14783 0,0 -0.0225,-0.244817 -0.0225,-0.244817 0,0 0,0 0,0 0,0 -0.08335,-0.906899 -0.08335,-0.906899 0,0 -0.084,-1.15511 -0.084,-1.15511 0,0 -0.06054,-1.15529 -0.06054,-1.15529 0,0 -0.01974,-0.516765 -0.01974,-0.516765 0,0 0,0 0,0 0,0 -0.02567,-0.672133 -0.02567,-0.672133 0,0 -0.0068,-1.16386 -0.0068,-1.16386 0,0 0.02367,-1.16222 0.02367,-1.16222 0,0 0.01812,-0.743714 0.01812,-0.743714 0,0 0,0 0,0 0,0 0.01019,-0.41825 0.01019,-0.41825 0,0 0.03462,-1.16127 0.03462,-1.16127 0,0 0.06384,-1.15805 0.06384,-1.15805 0,0 0.05986,-1.00114 0.05986,-1.00114 0,0 0,0 0,0 0,0 0.0094,-0.156938 0.0094,-0.156938 0,0 0.124215,-1.15524 0.124215,-1.15524 0,0 0.14177,-1.1523 0.14177,-1.1523 0,0 0.141769,-1.1523 0.141769,-1.1523 0,0 0.01511,-0.100668 0.01511,-0.100668 0,0 0,0 0,0 0,0 0.156825,-1.0448 0.156825,-1.0448 0,0 0.177474,-1.14425 0.177474,-1.14425 0,0 0.223072,-1.13949 0.223072,-1.13949 0,0 0.07961,-0.358607 0.07961,-0.358607 0,0 0,0 0,0 0,0 0.171556,-0.772818 0.171556,-0.772818 0,0 0.251161,-1.13142 0.251161,-1.13142 0,0 0.269445,-1.12504 0.269445,-1.12504 0,0 0.159032,-0.615224 0.159032,-0.615224 0,0 0,0 0,0 0,0 0.130202,-0.503692 0.130202,-0.503692 0,0 0.3271,-1.11321 0.3271,-1.11321 0,0 0.355511,-1.10146 0.355511,-1.10146 0,0 0.281581,-0.860051 0.281581,-0.860051 0,0 0,0 0,0 0,0 0.07843,-0.239543 0.07843,-0.239543 0,0 0.365512,-1.09695 0.365512,-1.09695 0,0 0.409019,-1.07997 0.409019,-1.07997 0,0 0.436958,-1.07333 0.436958,-1.07333 0,0 0.0082,-0.01924 0.0082,-0.01924 0,0 0,0 0,0 0,0 0.445622,-1.04472 0.445622,-1.04472 0,0 0.471103,-1.05434 0.471103,-1.05434 0,0 0.471103,-1.05434 0.471103,-1.05434 0,0 0.138718,-0.263177 0.138718,-0.263177 0,0 0,0 0,0 0,0 0.400127,-0.759132 0.400127,-0.759132 0,0 0.552818,-1.0164 0.552818,-1.0164 0,0 0.564025,-1.00814 0.564025,-1.00814 0,0 0.291747,-0.49266 0.291747,-0.49266 0,0 0,0 0,0 0,0 0.295241,-0.498559 0.295241,-0.498559 0,0 0.610743,-0.980394 0.610743,-0.980394 0,0 0.667587,-0.943865 0.667587,-0.943865 0,0 0.497014,-0.6924 0.497014,-0.6924 0,0 0,0 0,0 0,0 0.176751,-0.246235 0.176751,-0.246235 0,0 0.684428,-0.928263 0.684428,-0.928263 0,0 0.729433,-0.893074 0.729433,-0.893074 0,0 0.746337,-0.852954 0.746337,-0.852954 0,0 0,0 0,0 0,0 0.01701,-0.01944 0.01701,-0.01944 0,0 0.78954,-0.843061 0.78954,-0.843061 0,0 0.793407,-0.838733 0.793407,-0.838733 0,0 0.841822,-0.793752 0.841822,-0.793752 0,0 0.190033,-0.163151 0.190033,-0.163151 0,0 0,0 0,0 0,0 0.689619,-0.592062 0.689619,-0.592062 0,0 0.879652,-0.755213 0.879652,-0.755213 0,0 0.904502,-0.718628 0.904502,-0.718628 0,0 0.427195,-0.295423 0.427195,-0.295423 0,0 0,0 0,0 0,0 0.529231,-0.365986 0.529231,-0.365986 0,0 0.967915,-0.641346 0.967915,-0.641346 0,0 0.97841,-0.623016 0.97841,-0.623016 0,0 0.678337,-0.381795 0.678337,-0.381795 0,0 0,0 0,0 0,0 0.334179,-0.188089 0.334179,-0.188089 0,0 1.04587,-0.50981 1.04587,-0.50981 0,0 1.04587,-0.50981 1.04587,-0.50981 0,0 0.956891,-0.387577 0.956891,-0.387577 0,0 0,0 0,0 0,0 0.120513,-0.04881 0.120513,-0.04881 0,0 1.09578,-0.393795 1.09578,-0.393795 0,0 1.11737,-0.325974 1.11737,-0.325974 0,0 1.13217,-0.2673 1.13217,-0.2673 0,0 0.118897,-0.0237 0.118897,-0.0237 0,0 0,0 0,0 0,0 1.02059,-0.203421 1.02059,-0.203421 0,0 1.16808,-0.151812 1.16808,-0.151812 0,0 1.19356,-0.123359 1.19356,-0.123359 0,0 0.32401,-0.01597 0.32401,-0.01597 0,0 0,0 0,0 0,0 0.877069,-0.04324 0.877069,-0.04324 0,0 1.19793,-0.01426 1.19793,-0.01426 0,0 1.19655,0.06189 1.19655,0.06189 0,0 0.466375,0.04554 0.466375,0.04554 0,0 0,0 0,0 0,0 0.721014,0.0704 0.721014,0.0704 0,0 1.17411,0.204379 1.17411,0.204379 0,0 1.1543,0.258044 1.1543,0.258044 0,0 0.610925,0.203426 0.610925,0.203426 0,0 0,0 0,0 0,0 0.513949,0.171135 0.513949,0.171135 0,0 1.08327,0.44315 1.08327,0.44315 0,0 1.0354,0.559598 1.0354,0.559598 0,0 0.70344,0.483972 0.70344,0.483972 0,0 0,0 0,0 0,0 0.247836,0.170512 0.247836,0.170512 0,0 0.896335,0.743909 0.896335,0.743909 0,0 0.768371,0.849679 0.768371,0.849679 0,0 0.711231,0.880238 0.711231,0.880238 0,0 0,0 0,0 0,0 0.01485,0.01838 0.01485,0.01838 0,0 0.54558,1.02237 0.54558,1.02237 0,0 0.428007,1.09254 0.428007,1.09254 0,0 0.235751,1.1548 0.235751,1.1548 0,0 0.0086,0.208252 0.0086,0.208252 0,0 0,0 0,0 0,0 0.04102,0.988699 0.04102,0.988699 0,0 -0.114032,1.13012 -0.114032,1.13012 0,0 -0.248951,1.17461 -0.248951,1.17461 0,0 -0.122874,0.398259 -0.122874,0.398259 0,0 0,0 0,0 0,0 -0.211975,0.687053 -0.211975,0.687053 0,0 -0.444264,1.11805 -0.444264,1.11805 0,0 -0.51221,1.01225 -0.51221,1.01225 0,0 -0.367176,0.579865 -0.367176,0.579865 0,0 0,0 0,0 0,0 -0.239609,0.378405 -0.239609,0.378405 0,0 -0.620442,0.950135 -0.620442,0.950135 0,0 -0.710195,0.88283 -0.710195,0.88283 0,0 -0.674568,0.774667 -0.674568,0.774667 0,0 0,0 0,0 0,0 -0.07132,0.0819 -0.07132,0.0819 0,0 -0.776167,0.827124 -0.776167,0.827124 0,0 -0.807425,0.796638 -0.807425,0.796638 0,0 -0.854899,0.746719 -0.854899,0.746719 0,0 -0.179174,0.145261 -0.179174,0.145261 0,0 0,0 0,0 0,0 -0.702729,0.56972 -0.702729,0.56972 0,0 -0.886941,0.707841 -0.886941,0.707841 0,0 -0.941182,0.633859 -0.941182,0.633859 0,0 -0.475502,0.312035 -0.475502,0.312035 0,0 0,0 0,0 0,0 -0.474045,0.311078 -0.474045,0.311078 0,0 -1.04285,0.602336 -1.04285,0.602336 0,0 -0.992851,0.547379 -0.992851,0.547379 0,0 -0.764034,0.343874 -0.764034,0.343874 0,0 0,0 0,0 0,0 -0.269278,0.121196 -0.269278,0.121196 0,0 -1.116,0.450961 -1.116,0.450961 0,0 -1.12594,0.414071 -1.12594,0.414071 0,0 -1.00586,0.280608 -1.00586,0.280608 0,0 0,0 0,0 0,0 -0.149758,0.04178 -0.149758,0.04178 0,0 -1.16542,0.286071 -1.16542,0.286071 0,0 -1.17605,0.204524 -1.17605,0.204524 0,0 -1.17605,0.204523 -1.17605,0.204523 L 37.1273,58.8419"
        style="display:inline;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun16-9"
        inkscape:label="Points droits pour auto-remplissage satin 1" />
     <path
@@ -1670,7 +1670,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="m 54.2043,92.0348 7.2098,-5.5155 c 0,0 0.0067,-0.347817 0.0067,-0.347817 0,0 0.02211,-1.14568 0.02211,-1.14568 0,0 0.02211,-1.14568 0.02211,-1.14568 0,0 0.0175,-0.906801 0.0175,-0.906801 0,0 0,0 0,0 0,0 0.0046,-0.238882 0.0046,-0.238882 0,0 0.02211,-1.14568 0.02211,-1.14568 0,0 0.02211,-1.14568 0.02211,-1.14568 0,0 0.0196,-1.01574 0.0196,-1.01574 0,0 0,0 0,0 0,0 0.0025,-0.129947 0.0025,-0.129947 0,0 0.02211,-1.14568 0.02211,-1.14568 0,0 0.02211,-1.14568 0.02211,-1.14568 0,0 0.0217,-1.12467 0.0217,-1.12467 L 55.1763,78.3482"
        style="display:inline;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun17-2"
        inkscape:label="Points droits pour auto-remplissage satin 3" />
     <path
@@ -1695,7 +1695,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="M 68.8379,110.163 54.3637,124.356"
        style="display:inline;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun18-1"
        inkscape:label="Points droits pour auto-remplissage satin 5"
        sodipodi:nodetypes="cc" />
@@ -1767,7 +1767,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="M 26.0274,75.029 2.86675,75.7828"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path9" />
     <path
@@ -1813,7 +1813,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="m 66.9999,109.714 -14.365,5.384"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path10" />
     <path
@@ -1864,7 +1864,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="M 23.2412,107.004 9.23628,114.286"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path11" />
     <path
@@ -2017,7 +2017,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="m 25.9309,73.4079 -0.5936,8.5808"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path12" />
     <path
@@ -2087,7 +2087,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="M 3.57402,113.68 4.9948,112.985"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path13" />
     <path
@@ -2173,7 +2173,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="M 23.306,57.0896 24.903657,52.65982 22.5502,53.139"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path14"
        sodipodi:nodetypes="ccc" />
@@ -2216,7 +2216,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="M 56.558516,57.605813 C 57.952767,55.647994 60.082954,54.036538 56.7601,54.1389"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path15"
        sodipodi:nodetypes="cc" />
@@ -2305,7 +2305,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="m 22.950313,56.575268 0.438341,-5.865805"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path147"
        sodipodi:nodetypes="cc" />
@@ -2379,7 +2379,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="m 36.4347,31.0158 0.0429,5.7954"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path17" />
     <path
@@ -2428,7 +2428,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
       <path
          d="m 44.5985,15.1258 10.3559,5.9889"
          style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-         inkstitch:running_stitch_length_mm="2.5"
+         inkstitch:running_stitch_length_mm="1.5"
          inkstitch:running_stitch_tolerance_mm="0.5"
          id="path18" />
       <path
@@ -2495,7 +2495,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="M 36.563,38.3244 36.4776,36.8112"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path139" />
     <path
@@ -2566,7 +2566,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="m 9.79503,111.954 1.45697,2.184"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path20" />
     <path
@@ -2702,7 +2702,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="M 31.5352,88.571 24.685,84.6107"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path21" />
     <path
@@ -2724,7 +2724,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="m 31.5727,87.515 6.5267,-1.2859"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path22" />
     <path
@@ -2883,7 +2883,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="M 32.16533,43.495819 30.3782,43.6543"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path23"
        sodipodi:nodetypes="cc" />
@@ -3003,7 +3003,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
       <path
          d="m 39.4779,17.4985 10.356,5.9888"
          style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-         inkstitch:running_stitch_length_mm="2.5"
+         inkstitch:running_stitch_length_mm="1.5"
          inkstitch:running_stitch_tolerance_mm="0.5"
          id="path24" />
       <path
@@ -3186,7 +3186,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="m 25.8896,109.466 2.9182,6.45"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path25" />
     <path
@@ -3205,7 +3205,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="m 31.2828,94.2167 2.9548,7.7743"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path26" />
     <path
@@ -3323,7 +3323,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="M 38.143,70.6448 22.9948,70.7334"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path27" />
     <path
@@ -3476,7 +3476,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="m 48.0892,46.0825 6.242132,-7.624901"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path28"
        sodipodi:nodetypes="cc" />
@@ -3499,7 +3499,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="m 10.0747,107.851 -3.39265,4.725"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path29" />
     <path
@@ -3568,7 +3568,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="M 42.5393,84.9914 53.6805,71.5584"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path30" />
     <path
@@ -3587,7 +3587,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="m 55.2343,113.261 8.6647,-11.49"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path31" />
     <path
@@ -3663,7 +3663,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="M 42.5393,84.9914 53.6805,71.5584"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path32" />
     <path
@@ -3682,7 +3682,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="m 55.2343,113.261 8.6647,-11.49"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path33" />
     <path
@@ -3755,7 +3755,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="M 42.5393,84.9914 53.6805,71.5584"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path34" />
     <path
@@ -3774,7 +3774,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="m 55.2343,113.261 8.6647,-11.49"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path35" />
     <path
@@ -3822,7 +3822,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
       <path
          d="m 40.4507,37.786 10.356,5.9888"
          style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-         inkstitch:running_stitch_length_mm="2.5"
+         inkstitch:running_stitch_length_mm="1.5"
          inkstitch:running_stitch_tolerance_mm="0.5"
          id="path36" />
       <path
@@ -3887,7 +3887,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="M 42.5393,84.9914 53.6805,71.5584"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path37" />
     <path
@@ -3906,7 +3906,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="m 55.2343,113.261 8.6647,-11.49"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path38" />
     <path
@@ -3983,7 +3983,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="M 42.3023,85.9326 53.6805,71.5584"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path39" />
     <path
@@ -4002,7 +4002,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="m 55.2343,113.261 8.6647,-11.49"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path40" />
     <path
@@ -4217,7 +4217,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="m 27.3059,115.033 c -3.121196,2.32438 -4.499367,4.78587 -4.7252,7.338"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path154"
        sodipodi:nodetypes="cc" />
@@ -4262,7 +4262,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="m 26.7499,117.24 -3.5747,0.856"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path152" />
     <path
@@ -4284,7 +4284,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="m 29.11,114.56 2.9031,-7.501"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path153" />
     <path
@@ -4627,7 +4627,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
       <path
          d="m 35.8717,38.2364 10.356,5.9889"
          style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-         inkstitch:running_stitch_length_mm="2.5"
+         inkstitch:running_stitch_length_mm="1.5"
          inkstitch:running_stitch_tolerance_mm="0.5"
          id="path41" />
       <path
@@ -4861,7 +4861,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="M 17.173851,63.862814 20.774798,68.891498 23.4179,63.8628"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path42"
        sodipodi:nodetypes="ccc" />
@@ -4932,7 +4932,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="M 41.222,93.3357 42.2693,76.0122"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path48" />
     <path
@@ -5020,7 +5020,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="m 23.367593,94.045395 1e-6,-5.05395"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path50"
        sodipodi:nodetypes="cc" />
@@ -5375,7 +5375,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
       <path
          d="m 21.6045,37.9672 10.356,5.9889"
          style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-         inkstitch:running_stitch_length_mm="2.5"
+         inkstitch:running_stitch_length_mm="1.5"
          inkstitch:running_stitch_tolerance_mm="0.5"
          id="path51" />
       <path
@@ -5610,7 +5610,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="M 30.2245,91.7175 21.479,98.8124"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path52" />
     <path
@@ -5634,7 +5634,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="m 35.5021,93.9986 3.8025,-4.3298"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path53" />
     <path
@@ -5658,7 +5658,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="m 59.6085,110.071 2.6588,-6.804"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path55" />
     <path
@@ -5791,7 +5791,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="m 27.4557,81.3784 -0.5022,7.4912"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path56" />
     <path
@@ -5839,7 +5839,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="M 52.992,81.3517 53,80.746629"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path134"
        sodipodi:nodetypes="cc" />
@@ -5864,7 +5864,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="m 85.3029,111.389 v 0 l 3.0352,-8.22"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path62" />
     <path
@@ -5933,7 +5933,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="m 25.02853,95.401719 0.307282,-6.534557"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path148"
        sodipodi:nodetypes="cc" />
@@ -5984,7 +5984,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ñ"
-     style="display:inline"
+     style="display:none"
      id="g6264">
     <g
        id="g18">
@@ -6053,9 +6053,9 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
        inkstitch:center_walk_underlay_stitch_length_mm="1.2"
        inkstitch:short_stitch_distance_mm="0.17" />
     <path
-       d="m 25.774 95.086 v 0 l -0.4379 -5.8409 v 0 L 25.3395 93.2463"
+       d="m 25.774,95.086 v 0 l -0.4379,-5.8409 v 0 l 0.0034,4.0012"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path68" />
     <path
@@ -6328,7 +6328,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
       <path
          d="m 37.756,37.8326 10.356,5.9889"
          style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-         inkstitch:running_stitch_length_mm="2.5"
+         inkstitch:running_stitch_length_mm="1.5"
          inkstitch:running_stitch_tolerance_mm="0.5"
          id="path75" />
       <path
@@ -6439,7 +6439,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="M 48.8198,91.2559 40.7096,57.242"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path76" />
     <path
@@ -6563,7 +6563,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="M 25.1295,68.0603 24.8114,82.964"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path77" />
     <path
@@ -6642,7 +6642,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="M 41.0484,102.748 54.647,72.1349"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path79" />
     <path
@@ -6763,7 +6763,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="m 37.1046,69.0274 -6.775,2.7877"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path80" />
     <path
@@ -6888,7 +6888,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="m 18.2137,78.4221 c 1.581139,-1.158014 3.373863,-1.680237 2.845321,-2.663385 C 20.543626,74.800021 17.110366,73.673695 15.0944,72.4527"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path85"
        sodipodi:nodetypes="csc" />
@@ -6986,7 +6986,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="m 18.1654,57.7072 6.4567,0.7052"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path86" />
     <path
@@ -7108,7 +7108,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="m 17.811,64.7351 -7.4331,-0.73"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path93" />
     <path
@@ -7444,7 +7444,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
       <path
          d="m 37.756,37.8326 10.356,5.9889"
          style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-         inkstitch:running_stitch_length_mm="2.5"
+         inkstitch:running_stitch_length_mm="1.5"
          inkstitch:running_stitch_tolerance_mm="0.5"
          id="path94" />
       <path
@@ -7771,7 +7771,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="m 33.506741,94.986518 c 2.704431,4.792252 0.114282,7.169432 -3.548148,9.057502"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path100"
        sodipodi:nodetypes="cc" />
@@ -7946,7 +7946,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="M 36.2554,79.0727 32.07091,81.345513 34.2161,75.9408"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path135"
        sodipodi:nodetypes="ccc" />
@@ -7971,7 +7971,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="m 54.7872,111.938 5.3818,-8.6"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path136"
        sodipodi:nodetypes="cc" />
@@ -8125,7 +8125,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="M 48.7578,56.2413 50.1291,55.258"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path137" />
     <path
@@ -8149,7 +8149,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="m 10.7582,107.477 9.697182,0.56842 L 14.2816,103.278"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path102"
        sodipodi:nodetypes="ccc" />
@@ -8174,7 +8174,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="M 36.9917,112.211 53.8055,98.3241"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path151" />
     <path
@@ -8306,7 +8306,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="m 19.8306,43.925 8.329,-5.0748"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path103" />
     <path
@@ -8405,7 +8405,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="m 14.5755,108.004 -9.27039,5.773"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path109" />
     <path
@@ -8527,7 +8527,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="M 21.4613,70.6106 14.4177,73.85"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path110" />
     <path
@@ -8623,7 +8623,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="M 15.039116,83.305196 C 23.344411,86.163607 27.837228,89.506942 8,93"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path111"
        sodipodi:nodetypes="cc" />
@@ -8696,7 +8696,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="M 46.297819,92.369566 C 46.262929,103.61193 42.223841,94.570705 39.2026,92.5259"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path119"
        sodipodi:nodetypes="cc" />
@@ -8922,7 +8922,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="m 43.3617,46.3136 7.2126,-7.5051"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path121" />
     <path
@@ -9073,7 +9073,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="M 19.239,58.7171 26.2441,70"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path143" />
     <path
@@ -9094,7 +9094,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="M 18.2544,58.1243 C 23.575888,48.817103 31.614671,46.82777 39.5022,44.4311"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path144"
        sodipodi:nodetypes="cc" />
@@ -9115,7 +9115,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="M 24.7696,46.1509 C 18.98166,41.767267 19.842963,37.383633 26.2441,33"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path145"
        sodipodi:nodetypes="cc" />
@@ -9137,7 +9137,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="m 19.3781,46.063 c -4.571764,0.483728 -9.4625819,1.605564 -8.7787,-8.422"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path146"
        sodipodi:nodetypes="cc" />
@@ -9188,7 +9188,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="m 53.5061,114.046 1.8084,0.744"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path122" />
     <path
@@ -9332,7 +9332,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
       <path
          d="m 14.9847,89.375 -1.1368,1.6451 4.7854,1.0716 v 0 0 0 0 0 0"
          style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
-         inkstitch:running_stitch_length_mm=""
+         inkstitch:running_stitch_length_mm="1.5"
          id="autosatinrun105"
          inkscape:label="Points droits pour auto-remplissage satin 1"
          sodipodi:nodetypes="ccc" />
@@ -9358,7 +9358,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
       <path
          d="M 9.96267,90.7638 C 21.820928,71.439517 13.022636,51.767326 6.36895,36.918"
          style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-         inkstitch:running_stitch_length_mm="2.5"
+         inkstitch:running_stitch_length_mm="1.5"
          inkstitch:running_stitch_tolerance_mm="0.5"
          id="path140"
          sodipodi:nodetypes="cc" />
@@ -9754,7 +9754,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="m 4.28541,109.15 0.0979,1.953"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path125" />
     <path
@@ -9966,7 +9966,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="m 21,65.2441 22.239,9.0388"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path141" />
     <path
@@ -9986,7 +9986,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="M 30.1176,65.2441 21.7171,52.761"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path142" />
     <path
@@ -10037,7 +10037,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="m 6.01454,127.027 1.91024,1.382"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path128" />
     <path
@@ -10090,7 +10090,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="m 46.2783,98.2671 v 0 l -2.029,-11.3736"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path129" />
     <path
@@ -10213,7 +10213,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        d="m 56.0873,101.891 v 0 l -13.4561,5.529 v 0"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path157"
        inkstitch:ties="3" />
