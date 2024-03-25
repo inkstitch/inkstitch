@@ -28,12 +28,12 @@
      id="namedview1755"
      showgrid="true"
      inkscape:zoom="4.9716868"
-     inkscape:cx="80.65673"
-     inkscape:cy="130.13692"
+     inkscape:cx="87.093177"
+     inkscape:cy="86.690899"
      inkscape:window-x="4"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g3677"
+     inkscape:current-layer="g19254"
      inkscape:document-rotation="0"
      inkscape:snap-global="true"
      inkscape:snap-grids="false"
@@ -4854,7 +4854,7 @@ Copyright 2003, 2008 B. Jackowski and J. M. Nowacki (on behalf of TeX users grou
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-'"
-     style="display:inline"
+     style="display:none"
      id="g3481">
     <path
        d="M 45.097453,41.418519 C 37.686472,43.46935 39.040139,52.300741 38.102854,58.270504 37.401903,65.513669 36.700951,72.756835 36,80 M 51.417682,41.393737 c 5.776386,3.22996 1.476954,9.905696 0.123399,14.535944 C 48.694054,63.953121 45.847027,71.97656 43,80 M 36.677757,57.590513 c 5.576735,0 11.15347,0 16.730205,0"
@@ -4871,7 +4871,7 @@ Copyright 2003, 2008 B. Jackowski and J. M. Nowacki (on behalf of TeX users grou
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-‘"
-     style="display:inline"
+     style="display:none"
      id="g1">
     <path
        d="M 45.097453,41.418519 C 37.686472,43.46935 39.040139,52.300741 38.102854,58.270504 37.401903,65.513669 36.700951,72.756835 36,80 M 51.417682,41.393737 c 5.776386,3.22996 1.476954,9.905696 0.123399,14.535944 C 48.694054,63.953121 45.847027,71.97656 43,80 M 36.677757,57.590513 c 5.576735,0 11.15347,0 16.730205,0"
@@ -4888,7 +4888,7 @@ Copyright 2003, 2008 B. Jackowski and J. M. Nowacki (on behalf of TeX users grou
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-’"
-     style="display:inline"
+     style="display:none"
      id="g19254">
     <path
        d="M 45.097453,41.418519 C 37.686472,43.46935 39.040139,52.300741 38.102854,58.270504 37.401903,65.513669 36.700951,72.756835 36,80 M 51.417682,41.393737 c 5.776386,3.22996 1.476954,9.905696 0.123399,14.535944 C 48.694054,63.953121 45.847027,71.97656 43,80 M 36.677757,57.590513 c 5.576735,0 11.15347,0 16.730205,0"
