@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-03-24 01:10+0000\n"
-"PO-Revision-Date: 2024-03-24 01:11\n"
+"POT-Creation-Date: 2024-03-25 01:06+0000\n"
+"PO-Revision-Date: 2024-03-25 01:07\n"
 "Last-Translator: \n"
 "Language-Team: Swedish\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-24 01:10+0000\n"
+"POT-Creation-Date: 2024-03-25 01:06+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2879,11 +2879,11 @@ msgstr ""
 msgid "Please select at least one element to update. This extension is designed to help you update copy and pasted elements from old designs."
 msgstr ""
 
-#: lib/extensions/zip.py:76
+#: lib/extensions/zip.py:77
 msgid "threadlist"
 msgstr ""
 
-#: lib/extensions/zip.py:85
+#: lib/extensions/zip.py:86
 msgid "No embroidery file formats selected."
 msgstr ""
 

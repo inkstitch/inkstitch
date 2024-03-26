@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-03-24 01:10+0000\n"
-"PO-Revision-Date: 2024-03-24 01:11\n"
+"POT-Creation-Date: 2024-03-25 01:06+0000\n"
+"PO-Revision-Date: 2024-03-26 01:04\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-24 01:10+0000\n"
+"POT-Creation-Date: 2024-03-25 01:06+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -523,7 +523,7 @@ msgstr "Roman bicolore AGS"
 #: inkstitch-fonts-metadata.py:192
 #, python-format
 msgid "Based on Latin Modern Roman 10 Bold italic. A font with capital letters with 2 colors. Very easy to use with letters from Romanaugusa. The capital M is 42.5 millimeter wide at 100% scale. Can be scaled down to 70% or up to 130%. Every satin has zigzag underlay"
-msgstr "Basée sur Latin Modern Roman 10 Bold italic. Une police de majuscules à deux couleurs. Très facile à utiliser avec les lettres de Romanaugusa. La majuscule M a une largeur de 42.5 millimètres à l'échelle 100 %. Peut être réduit à 80 % ou augmenté à 150 %. Chaque satin a une sous-couche zigzag"
+msgstr "Basée sur Latin Modern Roman 10 Bold italic. Une police de majuscules à deux couleurs. Très facile à utiliser avec les lettres de Romanaugusa. La majuscule M a une largeur de 42.5 millimètres à l'échelle 100 %. Peut être réduit à 80 % ou augmenté à 130 %. Chaque satin a une sous-couche zigzag"
 
 #. name of font in fonts/sacramarif
 #: inkstitch-fonts-metadata.py:194
@@ -1841,11 +1841,11 @@ msgstr "Colonne satin : Une traverse de direction ne coupe pas les deux rails."
 
 #: lib/elements/satin_column.py:62
 msgid "Satin has no rungs"
-msgstr ""
+msgstr "La colonne satin n'a pas de traverses"
 
 #: lib/elements/satin_column.py:63
 msgid "Rungs control the stitch direction in satin columns. It is best pratice to use them."
-msgstr ""
+msgstr "Les traverses contrôlent la direction des points des colonnes satin. Il est préférable de les utiliser."
 
 #: lib/elements/satin_column.py:65 lib/elements/satin_column.py:74
 #: lib/elements/satin_column.py:85
@@ -1854,7 +1854,7 @@ msgstr "*L'objet étant sélectionné appuyez sur \"P\" pour activer l'outil cra
 
 #: lib/elements/satin_column.py:66 lib/elements/satin_column.py:75
 msgid "* Hold \"Shift\" while drawing a rung."
-msgstr ""
+msgstr "Maintenir la touche majuscule enfoncée tout en dessinant une traverse."
 
 #: lib/elements/satin_column.py:71
 msgid "Satin has exactly two rungs"
@@ -1862,7 +1862,7 @@ msgstr "La colonne satin a exactement deux traverses"
 
 #: lib/elements/satin_column.py:72
 msgid "There are exactly two rungs. This may lead to false rail/rung detection."
-msgstr ""
+msgstr "Il y a exactement deux traverses. Ceci peut conduire à une mauvaise détection des rails/traverses."
 
 #: lib/elements/satin_column.py:80
 msgid "Unequal number of points"
@@ -2887,11 +2887,11 @@ msgstr "Il est possible qu'un objet contienne plus d'une erreur, même s'il n'y 
 msgid "Please select at least one element to update. This extension is designed to help you update copy and pasted elements from old designs."
 msgstr "Merci de sélectionner au moins un élément à mettre à jour. Cette extension est prévue pour vous aider à copier/coller des éléments d'anciens dessins."
 
-#: lib/extensions/zip.py:76
+#: lib/extensions/zip.py:77
 msgid "threadlist"
 msgstr "liste de fils"
 
-#: lib/extensions/zip.py:85
+#: lib/extensions/zip.py:86
 msgid "No embroidery file formats selected."
 msgstr "Aucun format de fichier broderie sélectionné."
 

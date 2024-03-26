@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-03-24 01:10+0000\n"
-"PO-Revision-Date: 2024-03-24 01:11\n"
+"POT-Creation-Date: 2024-03-25 01:06+0000\n"
+"PO-Revision-Date: 2024-03-25 01:07\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-24 01:10+0000\n"
+"POT-Creation-Date: 2024-03-25 01:06+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2885,11 +2885,11 @@ msgstr "Es ist möglich, dass ein Objekt mehr als einen Fehler enthält. Trotzde
 msgid "Please select at least one element to update. This extension is designed to help you update copy and pasted elements from old designs."
 msgstr "Bitte mindestens ein Element zum aktualisieren auswählen. Diese Erweiterung wurde entwickelt, um einzelne Elemente zu aktualisieren, die aus alten Dateien herauskopiert wurden."
 
-#: lib/extensions/zip.py:76
+#: lib/extensions/zip.py:77
 msgid "threadlist"
 msgstr "Garnliste"
 
-#: lib/extensions/zip.py:85
+#: lib/extensions/zip.py:86
 msgid "No embroidery file formats selected."
 msgstr "Keine Stick-Dateiformate ausgewählt."
 
