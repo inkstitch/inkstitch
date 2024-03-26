@@ -94,10 +94,10 @@ class Polyline(EmbroideryElement):
     def validation_warnings(self):
         yield PolylineWarning(self.path[0][0][0])
 
-    def to_stitch_groups(self, last_patch):
-        patch = StitchGroup(color=self.color, lock_stitches=(None, None))
+    def to_stitch_groups(self, last_stitch_group):
+        stitch_group = StitchGroup(color=self.color, lock_stitches=(None, None))
 
         for stitch in self.stitches:
-            patch.add_stitch(Point(*stitch))
+            stitch_group.add_stitch(Point(*stitch))
 
-        return [patch]
+        return [stitch_group]

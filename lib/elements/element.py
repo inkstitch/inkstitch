@@ -219,6 +219,28 @@ class EmbroideryElement(object):
         return width * self.stroke_scale
 
     @property
+    @param('min_stitch_length_mm',
+           _('Minimum stitch length'),
+           tooltip=_('Overwrite global minimum stitch length setting. Shorter stitches than that will be removed.'),
+           type='float',
+           default=None,
+           sort_index=48)
+    @cache
+    def min_stitch_length(self):
+        return self.get_float_param("min_stitch_length_mm")
+
+    @property
+    @param('min_jump_stitch_length_mm',
+           _('Minimum jump stitch length'),
+           tooltip=_('Overwrite global minimum jump stitch length setting. Shorter distances to the next object will have no lock stitches.'),
+           type='float',
+           default=None,
+           sort_index=49)
+    @cache
+    def min_jump_stitch_length(self):
+        return self.get_float_param("min_jump_stitch_length_mm")
+
+    @property
     @param('ties',
            _('Allow lock stitches'),
            tooltip=_('Tie thread at the beginning and/or end of this object. '
@@ -472,7 +494,7 @@ class EmbroideryElement(object):
 
         return lock_start, lock_end
 
-    def to_stitch_groups(self, last_patch):
+    def to_stitch_groups(self, last_stitch_group):
         raise NotImplementedError("%s must implement to_stitch_groups()" % self.__class__.__name__)
 
     @debug.time
@@ -575,6 +597,10 @@ class EmbroideryElement(object):
                 if stitch_groups:
                     stitch_groups[-1].trim_after = self.has_command("trim") or self.trim_after
                     stitch_groups[-1].stop_after = self.has_command("stop") or self.stop_after
+
+                for stitch_group in stitch_groups:
+                    stitch_group.min_jump_stitch_length = self.min_jump_stitch_length
+                    stitch_group.set_minimum_stitch_length(self.min_stitch_length)
 
                 self._save_cached_stitch_groups(stitch_groups, previous_stitch)
 
