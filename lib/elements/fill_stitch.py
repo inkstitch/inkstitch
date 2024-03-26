@@ -954,7 +954,7 @@ class FillStitch(EmbroideryElement):
             tags=("meander_fill", "meander_fill_top"),
             stitches=meander_fill(self, shape, original_shape, i, starting_point, ending_point),
             force_lock_stitches=self.force_lock_stitches,
-            lock_stitches=self.lock_stitches,
+            lock_stitches=self.lock_stitches
         )
         return [stitch_group]
 
@@ -983,14 +983,15 @@ class FillStitch(EmbroideryElement):
             ending_point,
             self.underpath,
             target
-        ),
+        )
 
         stitch_group = StitchGroup(
             color=self.color,
             tags=("circular_fill", "auto_fill_top"),
             stitches=stitches,
             force_lock_stitches=self.force_lock_stitches,
-            lock_stitches=self.lock_stitches,)
+            lock_stitches=self.lock_stitches
+        )
         return [stitch_group]
 
     def do_linear_gradient_fill(self, shape, last_stitch_group, start, end):
