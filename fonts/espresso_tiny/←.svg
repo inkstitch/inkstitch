@@ -27,9 +27,9 @@
      inkscape:window-height="808"
      id="namedview241"
      showgrid="true"
-     inkscape:zoom="13.87784"
-     inkscape:cx="7.0616177"
-     inkscape:cy="96.592842"
+     inkscape:zoom="34.911441"
+     inkscape:cx="15.653894"
+     inkscape:cy="88.366446"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
@@ -206,7 +206,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 12.8462,97.6934 7.69082,90.1732"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path1" />
     <path
@@ -230,7 +230,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 7.4974202,76.368122 C 7.5592833,63.927794 7.3857016,51.480155 7.5855849,39.044484 7.7234593,38.031938 7.7742026,37.021669 7.7499736,36.000004"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun1"
        inkscape:label="Points droits pour auto-remplissage satin 1" />
     <path
@@ -253,7 +253,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 12.8465,77.3622 7.74117,80.0243"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path2" />
     <path
@@ -278,12 +278,12 @@ GPL (General Public License) with font-exception and OFL (Open Font License
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-%"
-     style="display:none"
+     style="display:inline"
      id="g1202">
     <path
        d="m 53.4108,90.7565 c 2.3157,-3.8456 1.955,-9.0367 -0.3103,-12.8217 -1.6471,-2.2964 -4.4079,-3.364 -7.1652,-3.4267 l -0.0539,3.7522"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun2"
        inkscape:label="Points droits pour auto-remplissage satin 1" />
     <path
@@ -305,7 +305,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 34.8251,73.5288 45.4082,70.7559"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path3" />
     <path
@@ -329,7 +329,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 28.338159,71.907307 c -5.633392,8.206937 -11.110517,16.543399 -16.83625,24.672851 -0.660223,0.651405 -1.370724,1.2414 -2.0989665,1.814698"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun4"
        inkscape:label="Points droits pour auto-remplissage satin 5" />
     <path
@@ -352,7 +352,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 39.3649,66.3652 -4.913,-3.4632 c 5.4029,-7.85036 10.6105,-15.8471 16.1383,-23.604 0.843182,-1.07115 2.05885,-1.74749 2.76113,-2.94675"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun5"
        inkscape:label="Points droits pour auto-remplissage satin 7" />
     <path
@@ -376,7 +376,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 24.4139,56.6106 c 2.12838,-3.77728 2.10548,-8.8592 -0.110006,-12.589 -1.63003,-2.52705 -4.64366,-3.48057 -7.52038,-3.51586 L 16.5884,36.7549"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun6"
        inkscape:label="Points droits pour auto-remplissage satin 9" />
     <path
@@ -399,7 +399,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 13.2408,52.7808 -4.18408,4.483 C 6.49114,52.9114 6.76897,46.7118 10.1904,42.8866 11.6809,41.2834 13.8505,40.5593 16,40.5 l 0.8962,3.6473"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun7"
        inkscape:label="Points droits pour auto-remplissage satin 11" />
     <path
@@ -429,7 +429,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 44.198899,92.169113 c 1.667565,-2.644347 1.529068,-5.813768 1.559077,-8.805037 0.305033,-0.376736 0.610067,-0.753472 0.9151,-1.130208"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun3"
        inkscape:label="Points droits pour auto-remplissage satin 1" />
     <path
@@ -452,7 +452,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 34.2455,93.0642 -1.4771,-7.3498 c 2.81535,-5.00416 4.09059,-10.6396 5.43114,-16.161 0.141763,-0.418245 0.267096,-0.84227 0.425501,-1.2547"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun8"
        inkscape:label="Points droits pour auto-remplissage satin 3" />
     <path
@@ -475,7 +475,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 14.1539,87.9975 -2.4765,3.3106 C 7.51253,87.1602 5.95078,80.5908 8.29877,75.1205 9.64083,71.3006 12.5542,68.3726 15.513,65.737 l 2.7154,4.3115 c 1.23452,0.03747 3.39611,-1.14885 3.68785,0.697791 1.73415,3.38863 2.93722,7.129 5.10007,10.2492 0.984185,1.28116 2.07021,-1.05498 2.92098,-1.57432 L 25.6765,86.4202"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun10"
        inkscape:label="Points droits pour auto-remplissage satin 6" />
     <path
@@ -498,7 +498,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 25.0623,64.6204 15.513,65.737 c 4.30719,-4.12867 10.0338,-6.58268 13.9276,-11.1493 2.36225,-3.17705 3.62025,-8.31271 0.651105,-11.4856 -4.01433,-3.69993 -10.8111,-1.63136 -13.4585,2.75385 -2.27822,3.29866 -1.62648,7.72712 -0.509153,11.3395 0.149272,0.40074 0.298545,0.80148 0.447817,1.20222 L 13.611,60.5549"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun11"
        inkscape:label="Points droits pour auto-remplissage satin 8" />
     <path
@@ -544,7 +544,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 3.95872,97.8802 5.2843,-4.2993 C 7.36466,85.0194 5.95637,76.2805 5.88152,67.5 6.05169,57.374 7.80407,47.3142 10.3208,37.5256 c 1.05852,-3.12544 1.89356,-6.58803 4.06895,-9.11785 0.247589,-0.196676 0.495178,-0.393352 0.742767,-0.590028"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun13"
        inkscape:label="Points droits pour auto-remplissage satin 3" />
     <path
@@ -588,7 +588,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 15.0167,100.743 9.72003,97.1677 C 12.2703,88.7282 13.3526,79.9029 14.0565,71.1376 14.4445,59.9826 12.4942,48.8717 9.8363,38.0782 8.72757,34.7811 8.01256,31.0205 5.51187,28.4774 5.15872,28.2677 4.80558,28.0579 4.45244,27.8481"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun14"
        inkscape:label="Points droits pour auto-remplissage satin 3" />
     <path
@@ -635,7 +635,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 17.529943,41.687044 c -0.425994,-4.232395 -0.557357,-8.464188 -0.316061,-12.712011 0.03342,-1.0332 -0.09913,-2.007773 -0.424251,-2.99121"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun15"
        inkscape:label="Points droits pour auto-remplissage satin 3" />
     <path
@@ -658,7 +658,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 17.529943,41.687044 C 14.300834,40.819786 10.955349,40.461742 7.7397793,39.625355 5.893609,38.820373 3.6220595,38.796179 2.303427,37.075786"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun16"
        inkscape:label="Points droits pour auto-remplissage satin 5" />
     <path
@@ -681,7 +681,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 17.543386,41.684809 c 4.13834,-0.83467 8.310461,-1.5767 12.166207,-3.377597 1.002828,-0.346424 1.960221,-0.772368 2.862343,-1.333439"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun17"
        inkscape:label="Points droits pour auto-remplissage satin 7" />
     <path
@@ -721,7 +721,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 13.9036,57.1854 7.61363,56.1523"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path4" />
     <path
@@ -767,7 +767,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 25.6278,74.965 -6.1973,-4.9723 c 6.18709,0.01449 12.3808,-0.09312 18.5581,0.213166"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun18"
        inkscape:label="Points droits pour auto-remplissage satin 3" />
     <path
@@ -790,7 +790,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 19.746976,65 c 0.01393,-4.696869 -0.320168,-9.408266 0.220123,-14.087607"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun19"
        inkscape:label="Points droits pour auto-remplissage satin 5" />
     <path
@@ -813,7 +813,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 25.625,64.8052 19.35,74.2298"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path5" />
     <path
@@ -836,7 +836,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 4.33565,65.9726 0.867417,70.1175"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path6" />
     <path
@@ -866,7 +866,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 9.9032695,99.582907 C 8.5681922,102.69387 4.7358474,103.05857 2.6962288,105.54978"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun12"
        inkscape:label="Points droits pour auto-remplissage satin 1" />
     <path
@@ -889,7 +889,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 14.5606,97.733 11.1162,90.2328"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path7" />
     <path
@@ -935,7 +935,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 6.28025,64.2155 2.97712,70.3203"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path8" />
     <path
@@ -982,7 +982,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 13.0461,93.2029 7.41958,90.101"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path9" />
     <path
@@ -1012,7 +1012,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 10.884,90.5205 c 7.43251,-17.4379 13.7278,-35.3368 21.3804,-52.6829 1.08891,-2.59161 2.19371,-5.18001 3.69085,-7.56908 L 37.3923,26.946"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun20"
        inkscape:label="Points droits pour auto-remplissage satin 1"
        inkstitch:ties="3" />
@@ -1035,7 +1035,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 1.38365,97.3267 1.85266,9.6023"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path10" />
     <path
@@ -1064,7 +1064,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 34.6187,91.3236 c -2.39645,2.86033 -5.79657,4.85129 -9.61061,4.79092 L 24.323,91.7103"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun21"
        inkscape:label="Points droits pour auto-remplissage satin 1"
        inkstitch:ties="3" />
@@ -1088,7 +1088,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 8.40242,92.8991 11.3679,89.8056 C 13.8506,94.4205 19.0549,96.0444 24,96 v -4.2441"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun22"
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3" />
@@ -1119,7 +1119,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 15.5062,96.2457 C 15.49152,77.6872 15.5048,59.1287 15.4992,40.5702 L 15.5438,36"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun23"
        inkscape:label="Points droits pour auto-remplissage satin 1"
        inkstitch:ties="3" />
@@ -1143,7 +1143,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 11.5342,39.0116 -0.9406,2.6791 C 9.79191,44.5609 9.45182,47.8533 7.3741,50.1136 6.0582,50.8858 4.59047,51.2938 3.25387,52.023 l -2.03396,2.1783"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun24"
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3" />
@@ -1168,7 +1168,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 10.9979,37.2726 8.1089,1.7636"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path11" />
     <path
@@ -1191,7 +1191,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 10.7415,97.7402 4.8633,2.2648"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path23" />
     <path
@@ -1237,7 +1237,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 7.1594,95.0941 3.11057,97.6828"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path13" />
     <path
@@ -1259,7 +1259,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 5.62781,93.434 c 1.93198,-3.9355 5.23029,-6.9554 8.12129,-10.1769 6.7295,-6.6612 16.5695,-9.3124 22.4926,-16.8929 4.5187,-5.7774 6.0754,-14.756 1.318,-20.8584 -4.347,-5.6283 -12.4008,-6.906 -18.9871,-5.2996 -5.2322,1.3164 -7.867,6.4444 -9.90593,10.9715 -0.57918,1.1763 -1.10862,2.3909 -1.86261,3.4688 l -2.05894,3.0747"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun26"
        inkscape:label="Points droits pour auto-remplissage satin 4"
        inkstitch:ties="3" />
@@ -1290,7 +1290,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 36.273,94.3961 c 0.0309,-1.5144 -0.9742,-3.3073 -0.2788,-4.6431 4.8222,-5.3667 5.169,-13.8059 1.5905,-19.9087 -2.3142,-3.9973 -6.7264,-6.4549 -11.1687,-7.1791 -1.43355,0.106082 -2.79479,0.58754 -4.23189,0.683086 L 20.5291,60.7848 c 2.35804,-2.80525 5.43684,-4.93576 7.26266,-8.18285 2.24592,-3.14173 4.20215,-6.53625 7.26455,-8.97692 0.834352,-0.801787 1.61186,-1.66089 2.38636,-2.51999 L 35.5831,38.4941 c -4.08186,0.890199 -8.09664,2.42792 -12.3443,2.00594 -4.83076,-0.0216 -9.66424,0.04264 -14.4935,-0.03093 L 5.01525,40.3353"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun28"
        inkscape:label="Points droits pour auto-remplissage satin 3" />
     <path
@@ -1313,7 +1313,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 35.287,40.0892 4.5627,-2.7038"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path14" />
     <path
@@ -1335,7 +1335,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 16.2202,64.3495 4.1439,-1.9094"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path15" />
     <path
@@ -1358,7 +1358,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 12.0263,85.4296 3.8106,84.7615"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path16" />
     <path
@@ -1405,7 +1405,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 20.9099,95.991 5.5005,-2.5813 C 26.53934,85.1246 26.660059,76.8196 26.242128,68.5442 L 26.214248,68.282839 26.189758,68.053223 25.9647,65.0985"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun30"
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3" />
@@ -1429,7 +1429,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 30.4401,83.4713 19.5537,82.4959 C 15.4531,82.6031 11.3013,82.064 7.35165,83.4756 L 4.24858,83.0445 c 0.86369,-2.8077 3.57941,-4.8809 3.37458,-7.994 1.55918,-9.9927 3.25744,-19.9672 4.68034,-29.9831 0.295836,-2.01607 0.589624,-4.03344 0.781333,-6.0626 L 13.5007,35.991"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun32"
        inkscape:label="Points droits pour auto-remplissage satin 6"
        inkstitch:ties="3" />
@@ -1470,7 +1470,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 22.1321,88.0629 11.9487,-5.1627 c 2.46324,-0.142332 4.91083,0.146017 7.37214,0.16449 l 3.32936,0.0078"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun33"
        inkscape:label="Points droits pour auto-remplissage satin 9"
        inkstitch:ties="3" />
@@ -1494,7 +1494,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 31,87.2363 30.227,83.474"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path17" />
     <path
@@ -1524,7 +1524,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 33.2598,91.7861 c 6.75854,-7.24722 7.16644,-19.9986 -0.263274,-26.9413 -4.62906,-4.46414 -12.1673,-5.49591 -17.9613,-2.84682 -2.03479,1.04694 -3.51868,2.93485 -5.52051,4.06423 L 7.07763,63.3667 C 8.21261,59.9981 9.49842,56.6328 9.40424,53.017 9.46632,49.318 10.8496,45.4553 9.19264,41.9222 9.11479,41.6822 9.03694,41.4423 8.95908,41.2023 l 2.76952,-1.9922 c 2.4156,1.37435 5.15495,1.40923 7.84975,1.28989 4.79402,0.007 9.58821,-0.01481 14.3821,0.0124 L 37,40.3459"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun35"
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3" />
@@ -1548,7 +1548,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 6.19824,36.1982 2.736,2.736"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path18" />
     <path
@@ -1570,7 +1570,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 4.82604,69.4118 7.28415,66.0861"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path19" />
     <path
@@ -1593,7 +1593,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 8.62189,86.2868 3.4279,88.5933"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path20" />
     <path
@@ -1623,7 +1623,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 33.794612,91.977608 c 5.678604,-4.899188 7.776264,-13.344207 5.019663,-20.32364 -2.13079,-7.078872 -9.349036,-12.235881 -16.773756,-11.551461 -2.682721,0.3481 -6.051643,1.027921 -6.998401,3.970415"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun36"
        inkscape:label="Points droits pour auto-remplissage satin 1"
        inkstitch:ties="3" />
@@ -1647,7 +1647,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 16.1495,87.1376 -3.139,5.2208 C 7.46174,87.2077 6.12173,78.8976 7.55542,71.7218 8.74709,63.1967 10.2113,54.1568 15.8897,47.3232 c 2.20431,-3.28663 5.70575,-5.22144 8.64995,-7.71097 L 24.720924,39.425611 27.0345,36.6322"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun37"
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3" />
@@ -1695,7 +1695,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 23.0677,95.7341 -5.9609,-2.3662 c 0.630756,-6.62072 1.98262,-13.1462 3.56064,-19.5989 l 2.59216,-9.4027 c 2.4381,-7.66427 4.54821,-15.9858 10.5558,-21.7364 0.520862,-0.539627 0.938019,-1.1624 1.3931,-1.75573 L 33.9222,38.3282 C 30.24089,39.20662 26.68393,40.93233 22.8161,40.49996 16.87813,40.44192 10.9302,40.618649 4.9974,40.40514 L 2.03187,39.6786"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun42"
        inkscape:label="Points droits pour auto-remplissage satin 6"
        inkstitch:ties="3" />
@@ -1735,7 +1735,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 17.2897,64.3774 6.9786,4.6271 c 3.54516,-0.01549 7.09139,0.0704 10.6359,-0.0037 l 2.8941,-0.4132"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun43"
        inkscape:label="Points droits pour auto-remplissage satin 9"
        inkstitch:ties="3" />
@@ -1759,7 +1759,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 21.1198,73.0622 20.8779,69.0133 C 17.37898,68.973 13.86993,69.139729 10.3763,68.94175 L 7.39403,68.2841"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun44"
        inkscape:label="Points droits pour auto-remplissage satin 11"
        inkstitch:ties="3" />
@@ -1783,7 +1783,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 21.0436,74.7978 3.7185,-1.0875"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path22" />
     <path
@@ -1813,7 +1813,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 37.5294,91.8049 c 4.48797,-4.26636 5.49948,-11.4204 3.4492,-17.0967 -2.02101,-5.23557 -7.66413,-7.63221 -12.8394,-8.49605 -4.20176,-0.856353 -7.37108,-4.00499 -11.2522,-5.59474 -3.86537,-2.47778 -6.60404,-6.84417 -6.2496,-11.54 0.185986,-6.7328 7.12536,-11.365 13.4352,-11.2221 6.09052,-0.03294 12.6543,4.42542 12.8614,10.9137 0.13768,4.16263 -1.51012,8.43399 -5.04763,10.8213 -0.313157,0.238016 -0.626315,0.476031 -0.939472,0.714047 L 23.8811,58.5879"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun38"
        inkscape:label="Points droits pour auto-remplissage satin 1"
        inkstitch:ties="3" />
@@ -1837,7 +1837,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 12.9897,86.9208 -2.4976,3.775 C 6.24461,85.8577 6.49637,78.5105 8.99223,72.9192 10.0464,70.6919 11.8149,68.8254 14.035,67.7381 l 8.5138,0.9922"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun40"
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3" />
@@ -1867,7 +1867,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 27.01411,92.129636 c 4.379921,-4.16725 7.44823,-9.499505 9.301081,-15.22624 C 38.783933,69.79919 39.973615,62.10824 39.088595,54.610721 38.183087,47.794583 32.701829,41.852027 25.842265,40.805047 19.9326,39.723451 12.906421,41.707326 9.9811318,47.343315 6.3183355,52.744334 5.4696327,59.915573 8.1339485,65.919872 c 2.6370225,6.728999 9.9587115,11.697133 17.2829485,10.39164 1.848371,-0.279986 3.93912,-0.486845 4.83944,-2.375573 0.199882,-0.268247 0.399765,-0.536493 0.599648,-0.80474"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun45"
        inkscape:label="Points droits pour auto-remplissage satin 1"
        inkstitch:ties="3" />
@@ -1891,7 +1891,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 16.6717,93.2603 1.4492,5.8005"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path24" />
     <path
@@ -1920,7 +1920,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 6.76227,93.3995 C 6.798349,92.490397 6.823914,91.58109 6.842639,90.67146 M 6.90655,78.6881 C 6.8399,75.807 6.87753,72.9404 7.01992,70.0653"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun47"
        inkscape:label="Points droits pour auto-remplissage satin 2"
        inkstitch:ties="3"
@@ -1962,7 +1962,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 2.9256,93.092 3.83667,0.3075 c -0.114956,1.96465 0.010137,3.92332 0.099814,5.88583"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun48"
        inkscape:label="Points droits pour auto-remplissage satin 5"
        inkstitch:ties="3" />
@@ -1993,7 +1993,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 10.3788,96.3125 c 0.235111,-1.59301 0.531461,-3.19066 0.398295,-4.80686 M 11.1781,78.5868 c -0.24593,-2.54804 -0.318859,-5.10411 -0.02982,-7.65302"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun50"
        inkscape:label="Points droits pour auto-remplissage satin 2"
        inkstitch:ties="3"
@@ -2035,7 +2035,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 6.67469,94.4478 3.70411,1.8647 c -0.196204,2.99026 -2.14464,5.57573 -4.9508,6.60931 -0.518964,0.27899 -0.988187,0.64807 -1.48658,0.96228"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun51"
        inkscape:label="Points droits pour auto-remplissage satin 5"
        inkstitch:ties="3" />
@@ -2083,7 +2083,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 30.0878,96.7792 1.2238,-5.8571 C 25.1039,88.199 19.162,84.8964 12.9798,82.1403 9.93907,81.3567 6.87506,80.6259 3.9196,79.543 l 0.12403,-3.3137 c 3.12675,-1.41938 6.60792,-1.86679 9.74167,-3.17511 7.65315,-3.95408 15.3033,-7.91592 23.1117,-11.5553 1.59198,-0.806695 3.12531,-1.71248 4.65395,-2.6322 L 43.6774,56.7329"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun54"
        inkscape:label="Points droits pour auto-remplissage satin 4"
        inkstitch:ties="3" />
@@ -2107,7 +2107,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 3.73082,78 33.767,87.7261"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path25" />
     <path
@@ -2153,7 +2153,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 6.05025,75.9979 6.05024,60 C 16.3656,60 26.681,60 36.9964,60"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun56"
        inkscape:label="Points droits pour auto-remplissage satin 4"
        inkstitch:ties="3" />
@@ -2177,7 +2177,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 3.09694,62.4888 2.9533,13.6836"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path26" />
     <path
@@ -2207,7 +2207,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 16.6839,90.933 c 6.20776,-2.7298 12.1506,-6.03704 18.3363,-8.79275 3.04069,-0.783613 6.10471,-1.51439 9.06016,-2.59726 L 43.6191,76.0983 C 39.9904,74.4545 35.859,74.2425 32.4381,72.1475 25.3212,68.4118 18.1337,64.8154 10.8708,61.3758 9.3555,60.6134 7.90716,59.7353 6.45046,58.8685 L 4.34056,56.749"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun55"
        inkscape:label="Points droits pour auto-remplissage satin 2"
        inkstitch:ties="3" />
@@ -2231,7 +2231,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 44.2692,78 h 3.0535"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path27" />
     <path
@@ -2254,7 +2254,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 7.2487,91.0196 3.36822,96.8833"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path28" />
     <path
@@ -2284,7 +2284,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 20.6958,83.3245 C 19.938,79.9063 19.0195,76.2609 19.9355,72.7976 23.7274,67.1143 32.3171,67.3988 35.6796,61.3076 39.2615,53.3319 35.0407,42.8113 26.8392,39.6333 22.7626,38.0436 18.111,38.3067 13.9649,39.4838 9.68187,41.4295 7.56222,46.1372 6.26581,50.3941 5.91515,51.8823 5.71159,53.3959 5.59373,54.9192 l -0.04261,3.0514"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun58"
        inkscape:label="Points droits pour auto-remplissage satin 2"
        inkstitch:ties="3" />
@@ -2325,7 +2325,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 15.7111,97.7372 4.9637,2.2346"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path29" />
     <path
@@ -2355,7 +2355,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 55.9938,92.2561 c -1.43792,2.93612 -4.82149,4.63324 -8.00998,3.67341 -2.09428,-0.205984 -4.45091,-1.56092 -4.07945,-3.97492 -0.189212,-7.34815 0.366897,-14.7511 -0.40698,-22.0688 L 43.4345,66.8602"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun57"
        inkscape:label="Points droits pour auto-remplissage satin 1"
        inkstitch:ties="3" />
@@ -2378,7 +2378,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 38.648,77.5028 -0.749,-4.3916 c -3.3709,-2.2122 -7.9065,-2.7611 -11.3979,-0.4925 -4.7503,2.28262 -7.07798,7.82457 -6.33748,12.8973 0.64883,6.26875 7.16438,11.3816 13.4278,10.0279 1.42629,-0.218201 2.79497,-0.680583 3.95767,-1.55218 L 39.8095,89.9316"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun59"
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3" />
@@ -2401,7 +2401,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 39.8068,82.9516 0.7304,-5.2497"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path30" />
     <path
@@ -2424,7 +2424,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 14.0088,93.2821 -5.58437,0.4462 c 3.41425,6.9805 9.51002,13.0809 17.3422,14.6352 6.98663,1.45882 14.5139,0.25359 20.5707,-3.57507 L 49.8906,103.585"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun60"
        inkscape:label="Points droits pour auto-remplissage satin 6"
        inkstitch:ties="3" />
@@ -2472,7 +2472,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 46.6409,79.5884 35.418,81.0107 c -5.61214,-0.003 -11.2243,-0.006 -16.8364,-0.009 l -4.3644,4.2743"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun62"
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3" />
@@ -2495,7 +2495,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 36.1908,76.7353 2.1741,5.3701"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path31" />
     <path
@@ -2517,7 +2517,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 35.2254,35.9292 -2.4848,2.6082"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path32" />
     <path
@@ -2539,7 +2539,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 17.2095,36.1945 2.2801,2.6914"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path33" />
     <path
@@ -2562,7 +2562,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 0.972546,94.9985 4.65766,99.7382"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path34" />
     <path
@@ -2592,7 +2592,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 34.1138,92.1045 c 4.08807,-4.5588 4.88814,-11.132 3.78309,-16.973 -0.505549,-3.27275 -1.41526,-6.91212 -4.39078,-8.81205 L 30.402,67.2112"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun61"
        inkscape:label="Points droits pour auto-remplissage satin 1"
        inkstitch:ties="3" />
@@ -2615,7 +2615,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 6.43481,94.3872 C 7.37343,92.1044 8.36898,89.802 8.00141,87.2745 7.97519,73.2748 8.06623,59.2629 7.96677,45.2708 7.77208,43.8154 7.05403,42.5272 6.53963,41.1702 L 8.99285,38.968 c 2.31739,1.10432 4.77926,1.84678 7.37011,1.52933 4.00199,0.267153 8.28668,-0.708348 12.0345,1.07058 6.04413,3.5158 7.16595,12.2765 3.84027,18.0145 -2.29571,3.29886 -6.51091,4.8479 -10.433,4.40724 -1.97291,0.0013 -3.94582,0.0043 -5.91873,0.0067 L 13,59.7559"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun64"
        inkscape:label="Points droits pour auto-remplissage satin 4"
        inkstitch:ties="3" />
@@ -2638,7 +2638,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 3.85884,36.1026 2.99405,2.9143"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path35" />
     <path
@@ -2684,7 +2684,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 19.2693,86.3122 -4.9802,3.7206 C 7.51551,82.284 6.22507,71.2442 7.48651,61.3731 8.3146,53.3028 12.3405,45.219 19.5207,41.0459 c 3.4996,-2.1382 7.83759,-2.54494 11.6807,-1.12088 3.83958,1.08709 6.95812,3.80654 9.56142,6.715 0.179512,0.154905 0.359025,0.309809 0.538537,0.464714 L 44.0007,48.4753"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun66"
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3" />
@@ -2714,7 +2714,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 29.9775,89.8014 C 37.0485,82.8006 38.752,72.1928 37.6771,62.6635 36.9149,54.3786 32.3353,46.2649 24.949,42.1944 21.3432,40.0927 17.0566,40.8393 13.1317,40.2286 11.7717,39.7697 10.4109,39.3132 9.05338,38.8468 l -2.47054,2.4109 c 1.19566,2.28743 1.67389,4.79963 1.42695,7.36868 -0.00246,11.1092 -0.0048,22.2183 -0.00721,33.3275 L 3.76004,84.2769"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun67"
        inkscape:label="Points droits pour auto-remplissage satin 2"
        inkstitch:ties="3" />
@@ -2755,7 +2755,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 3.08876,98.576 7.09151,95.1125"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path36" />
     <path
@@ -2819,7 +2819,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 14.1334,87.3576 8.00181,85.4862 C 8.00346,78.05978 8.00501,70.6334 8.00662,63.2069 L 13,64 c 3.97189,-0.05571 7.94796,0.09109 11.9171,-0.02857 l 3.065,0.25827"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun69"
        inkscape:label="Points droits pour auto-remplissage satin 4"
        inkstitch:ties="3" />
@@ -2843,7 +2843,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 13,70.1339 8.00662,63.207 C 8.00791,56.81198 8.00936,50.417 8.0114,44.0219 l 30.8099,-3.0945"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun70"
        inkscape:label="Points droits pour auto-remplissage satin 6"
        inkstitch:ties="3" />
@@ -2867,7 +2867,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 3.54493,36.3299 8.89697,8.1602"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path37" />
     <path
@@ -2931,7 +2931,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 14.1334,87.3576 8.00181,85.4862 C 8.00346,78.05978 8.00501,70.6334 8.00662,63.2069 L 13,64 c 3.97189,-0.05571 7.94796,0.09109 11.9171,-0.02857 l 3.065,0.25827"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="path101"
        inkscape:label="Points droits pour auto-remplissage satin 4"
        inkstitch:ties="3" />
@@ -2963,7 +2963,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
       <path
          d="m 17.423,48.549 c 3.86868,-2.3645 6.83291,-5.89401 9.86975,-9.19715 0.90917,-1.03987 1.7312,-2.14554 2.54819,-3.25813"
          style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-         inkstitch:running_stitch_length_mm=""
+         inkstitch:running_stitch_length_mm="1.5"
          id="path122"
          inkscape:label="Points droits pour auto-remplissage satin 4"
          inkstitch:ties="3"
@@ -3011,7 +3011,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 3.54493,36.3299 8.89697,8.1602"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path120" />
     <path
@@ -3075,7 +3075,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 14.1334,87.3576 8.00181,85.4862 C 8.00346,78.05978 8.00501,70.6334 8.00662,63.2069 L 13,64 c 3.97189,-0.05571 7.94796,0.09109 11.9171,-0.02857 l 3.065,0.25827"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="path138"
        inkscape:label="Points droits pour auto-remplissage satin 4"
        inkstitch:ties="3" />
@@ -3108,7 +3108,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
       <path
          d="m 17.423,48.549 c 3.86868,-2.3645 6.83291,-5.89401 9.86975,-9.19715 0.90917,-1.03987 1.7312,-2.14554 2.54819,-3.25813"
          style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-         inkstitch:running_stitch_length_mm=""
+         inkstitch:running_stitch_length_mm="1.5"
          id="path141"
          inkscape:label="Points droits pour auto-remplissage satin 4"
          inkstitch:ties="3"
@@ -3157,7 +3157,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 3.54493,36.3299 8.89697,8.1602"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path145" />
     <path
@@ -3221,7 +3221,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 14.1334,87.3576 8.00181,85.4862 C 8.00346,78.05978 8.00501,70.6334 8.00662,63.2069 L 13,64 c 3.97189,-0.05571 7.94796,0.09109 11.9171,-0.02857 l 3.065,0.25827"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="path149"
        inkscape:label="Points droits pour auto-remplissage satin 4"
        inkstitch:ties="3" />
@@ -3254,7 +3254,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
       <path
          d="m 13.1773,48.2628 c 2.95372,-1.96621 5.55283,-4.46525 8.0321,-6.99339 0.615008,-1.40984 1.35832,-2.75638 2.830358,-4.134986 2.044695,2.205553 2.725536,4.941617 4.874362,6.727128 1.302214,1.441152 2.662071,2.817652 4.219813,3.985106"
          style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-         inkstitch:running_stitch_length_mm=""
+         inkstitch:running_stitch_length_mm="1.5"
          id="path158"
          inkscape:label="Points droits pour auto-remplissage satin 3"
          inkstitch:ties="3"
@@ -3279,7 +3279,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
       <path
          d="M 24,33.8661 V 37.288"
          style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-         inkstitch:running_stitch_length_mm="2.5"
+         inkstitch:running_stitch_length_mm="1.5"
          inkstitch:running_stitch_tolerance_mm="0.5"
          id="path161" />
       <path
@@ -3326,7 +3326,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 3.54493,36.3299 8.89697,8.1602"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path156" />
     <path
@@ -3390,7 +3390,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 14.1334,87.3576 8.00181,85.4862 C 8.00346,78.05978 8.00501,70.6334 8.00662,63.2069 L 13,64 c 3.97189,-0.05571 7.94796,0.09109 11.9171,-0.02857 l 3.065,0.25827"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="path165"
        inkscape:label="Points droits pour auto-remplissage satin 4"
        inkstitch:ties="3" />
@@ -3425,7 +3425,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
         <path
            d="m 16.701,49.8022 c 0.06294,-2.56878 0.01737,-5.13653 -0.04063,-7.70456"
            style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-           inkstitch:running_stitch_length_mm=""
+           inkstitch:running_stitch_length_mm="1.5"
            id="path182"
            inkscape:label="Points droits pour auto-remplissage satin 7"
            inkstitch:ties="3"
@@ -3461,7 +3461,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
         <path
            d="m 37.3484,49.8116 c 0.16828,-2.55266 0.106157,-5.10942 0.08786,-7.66523"
            style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-           inkstitch:running_stitch_length_mm=""
+           inkstitch:running_stitch_length_mm="1.5"
            id="path180"
            inkscape:label="Points droits pour auto-remplissage satin 4"
            inkstitch:ties="3"
@@ -3511,7 +3511,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 3.54493,36.3299 8.89697,8.1602"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path174" />
     <path
@@ -3541,7 +3541,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 8,92.7384 C 8,83.0366 8,73.3347 8,63.6329 L 13,64 c 4.12338,0 8.24676,0 12.3701,0"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun74"
        inkscape:label="Points droits pour auto-remplissage satin 2"
        inkstitch:ties="3" />
@@ -3564,7 +3564,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 13,59.7063 8,63.6329 C 7.89718,57.2249 8.21103,50.7921 7.83284,44.4005 7.50345,43.4121 7.02361,42.4573 6.63655,41.4839 l 2.38034,-2.3475 c 2.45573,1.14409 5.10074,1.60087 7.79851,1.36357 6.59284,-0.05738 13.1951,0.117341 19.7824,-0.09168"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun76"
        inkscape:label="Points droits pour auto-remplissage satin 5"
        inkstitch:ties="3" />
@@ -3588,7 +3588,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 3.69446,36.202 3.31003,3.2789"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path38" />
     <path
@@ -3611,7 +3611,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 1.89561,95.294 5.87336,4.712"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path39" />
     <path
@@ -3641,14 +3641,14 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 38.294637,91.325701 c 2.545507,-1.695391 1.456963,-5.014866 1.693099,-7.574978 0.2315,-3.464122 -0.712613,-7.192088 1.149994,-10.345837 0.25559,-0.978577 0.445778,-1.97768 0.676475,-2.963727"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun77"
        inkscape:label="Points droits pour auto-remplissage satin 1"
        inkstitch:ties="3" />
     <path
        d="m 40.584381,69.529944 c -2.898966,1.255202 -5.910705,2.342106 -9.12061,2.125696 -3.114756,0.218934 -6.220794,-0.08282 -9.335672,-0.04736"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun78"
        inkscape:label="Points droits pour auto-remplissage satin 2"
        inkstitch:ties="3" />
@@ -3687,7 +3687,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 17.4478,87.111 -2.8264,3.2937 C 7.89255,83.0912 6.39731,72.4762 7.30309,62.9168 8.12186,54.6912 11.6572,46.219 18.7718,41.5429 c 4.41206,-3.12185 10.5917,-3.30778 15.1025,-0.277358 2.84175,1.42335 5.21628,3.48583 6.95156,6.15834 L 42.5694,49.9337"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun79"
        inkscape:label="Points droits pour auto-remplissage satin 5"
        inkstitch:ties="3" />
@@ -3734,7 +3734,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 45.1339,62.2664 39.5,62.3238 C 39.4855,54.5666 39.5295,46.8089 39.477,39.052 L 39.8252,36"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun81"
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3" />
@@ -3758,7 +3758,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 33.8661,62.3023 35,68.2441"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path40" />
     <path
@@ -3780,7 +3780,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 13,59.7063 8,62.3647 C 7.99359,54.6049 8.01306,46.845 7.9898,39.0853 l -0.32147,-3.061"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun82"
        inkscape:label="Points droits pour auto-remplissage satin 6"
        inkstitch:ties="3" />
@@ -3804,7 +3804,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 2.93189,97.9792 7.7971,100.027"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path41" />
     <path
@@ -3834,7 +3834,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 8,92.5202 C 8,74.6675 8,56.8148 8,38.9621 l 0.18451,-2.9793"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun80"
        inkscape:label="Points droits pour auto-remplissage satin 1"
        inkstitch:ties="3" />
@@ -3858,7 +3858,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 14.1339,94.75 8.173,100.006"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path42" />
     <path
@@ -3888,7 +3888,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 27.337066,90.733517 c 3.098062,-5.029283 1.92385,-11.147987 2.25867,-16.742705 0.193117,-12.201713 0.192529,-24.409697 0.51058,-36.607578"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun83"
        inkscape:label="Points droits pour auto-remplissage satin 1"
        inkstitch:ties="3" />
@@ -3912,7 +3912,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 1.83408,92.7005 6.92225,89.8358 C 5.00238,86.6791 5.43949,82.6072 3.0186,79.7041"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun84"
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3" />
@@ -3960,7 +3960,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 27.4727,63.6027 21.6036,62.9254 C 28.0107,55.1852 33.9714,47.0767 40.1284,39.1371 l 1.9807,-2.3378"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun86"
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3" />
@@ -3984,7 +3984,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 12.9449,74.2584 8,77.4435 C 7.98501,64.6299 8.03012,51.8157 7.97702,39.0024 L 7.58516,36"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun87"
        inkscape:label="Points droits pour auto-remplissage satin 5"
        inkstitch:ties="3" />
@@ -4008,7 +4008,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 2.77553,97.7854 7.5717,100.022"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path43" />
     <path
@@ -4072,7 +4072,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 3.56537,92.0084 7.99702,90.0982 C 8.01401,73.0761 7.97802,56.0515 8.01509,39.0288 l 0.20335,-3.6674"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun85"
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3" />
@@ -4120,7 +4120,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 60.2011,35.164 -1.6387,5.7704"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path44" />
     <path
@@ -4143,7 +4143,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 33.0409,81.1787 -0.0345,4.0654"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path45" />
     <path
@@ -4165,7 +4165,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 5.78326,35.1689 1.80577,5.7128"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path46" />
     <path
@@ -4188,7 +4188,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 1.86618,92.3943 6.38573,7.6287"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path47" />
     <path
@@ -4217,7 +4217,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 43.554273,89.962124 c -0.675029,-5.464808 -1.877325,-10.893905 -1.554314,-16.428029 -0.0057,-11.695913 0.01171,-23.39188 -0.0093,-35.087766"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun88"
        inkscape:label="Points droits pour auto-remplissage satin 1"
        inkstitch:ties="3" />
@@ -4241,7 +4241,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 41.8761,93.2877 1.8009,5.6034"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path48" />
     <path
@@ -4263,7 +4263,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 5.15842,35.3828 1.97461,5.4435"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path49" />
     <path
@@ -4286,7 +4286,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 3.70644,92.4512 4.63575,7.5477"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path50" />
     <path
@@ -4316,7 +4316,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 41.1548,88.4909 c 3.9359,-6.4 5.7951,-14.0339 5.807,-21.5176 C 46.6412,58.3599 44.4045,48.958 37.3886,43.3016 31.4106,38.0521 21.6513,38.3718 15.9309,43.8597 8.9213,50.146 6.91704,60.087 7.0522,69.1213 c 0.549663,7.41866 2.49517,15.0654 7.0758,21.0564 0.377965,0.398971 0.736561,0.817412 1.12566,1.20534 L 17.2134,87.6567"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun89"
        inkscape:label="Points droits pour auto-remplissage satin 1"
        inkstitch:ties="3" />
@@ -4339,7 +4339,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 27,35.5563 v 7.6878"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path51" />
     <path
@@ -4368,7 +4368,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 8,92.683369 C 8.00364,94.98456 8.00658,97.28746 7.8574998,99.58492"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun90"
        inkscape:label="Points droits pour auto-remplissage satin 1"
        inkstitch:ties="3" />
@@ -4392,7 +4392,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 1.86617,94.9374 8,90.3623 C 7.95367,75.3113 8.09255,60.236 7.93069,45.2001 7.63861,43.7937 6.95185,42.5247 6.42894,41.1972 l 1.52363,-2.5125 c 2.64476,0.92601 5.23795,2.22813 8.13134,1.81528 4.8798,0.208902 9.86646,-0.500704 14.6666,0.559144 4.79422,1.49548 6.37844,6.94123 7.33952,11.3351 1.05549,4.98429 -0.47674,10.189 -2.78887,14.5948 -2.23271,4.01506 -7.32556,4.12564 -11.3709,4.01089 -2.61871,0 -5.23742,0 -7.85613,0 L 13,75.2441"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun92"
        inkscape:label="Points droits pour auto-remplissage satin 4"
        inkstitch:ties="3" />
@@ -4439,7 +4439,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 40.7921,98.9274 c 1.29683,2.19972 2.78117,4.27355 4.27203,6.3435 l 2.04407,2.4851"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun93"
        inkscape:label="Points droits pour auto-remplissage satin 1"
        inkstitch:ties="3" />
@@ -4463,7 +4463,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 32.4479,96.917 4.6347,-4.2153 C 33.1591,86.3723 29.5657,79.8629 25.8221,73.429 L 24.81,70.5916"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun94"
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3" />
@@ -4487,7 +4487,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 32.2543,96.615 30.4081,91.6363"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path52" />
     <path
@@ -4509,7 +4509,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 13.4642,97.6123 1.8817,-6.0809 C 9.18025,85.3828 6.75387,76.3617 6.56244,67.8597 6.83259,58.6272 9.75365,48.6502 17.2961,42.7516 c 5.47975,-4.14932 13.9391,-4.54979 19.1092,0.333653 5.65142,4.94334 8.47831,12.3313 10.0157,19.5071 1.51243,7.96778 -0.348977,16.313 -4.32839,23.2996 L 38.3671,84.6608"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun95"
        inkscape:label="Points droits pour auto-remplissage satin 6"
        inkstitch:ties="3" />
@@ -4556,7 +4556,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 25.9151,75.9594 24.2941,71 C 20.5294,71 16.7647,71 13,71 v -4.2441"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun97"
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3" />
@@ -4579,7 +4579,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 3.67432,36.2229 6.2695,38.6654"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path53" />
     <path
@@ -4602,7 +4602,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 1.86625,92.2114 6.40339,7.7764"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path54" />
     <path
@@ -4632,7 +4632,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 44.8317,89.7235 c 3.70906,-3.64281 5.05014,-9.38294 3.68813,-14.3377 -1.99376,-5.09528 -6.86557,-8.67278 -12.1915,-9.62077 -7.08327,-2.11506 -15.2938,-1.11235 -21.471,-5.77794 -4.0371,-2.71543 -5.66479,-8.51965 -3.03628,-12.7438 2.98444,-4.94484 8.84924,-7.34629 14.3487,-8.14359 6.04533,-0.352026 12.6727,1.5029 16.7426,6.19461 2.15915,2.31517 2.88072,5.36557 3.91256,8.25515 l 2.46839,1.61894"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun96"
        inkscape:label="Points droits pour auto-remplissage satin 1"
        inkstitch:ties="3" />
@@ -4656,7 +4656,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 4.90399,91.5761 10.69,89.1263 C 7.77634,86.3698 7.38045,82.2724 6.48535,78.6041 c -0.133,-0.3529 -0.266,-0.7059 -0.399,-1.0588"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun98"
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3" />
@@ -4686,7 +4686,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 23,89.9256 C 23,75.9832 23,62.0408 23,48.0983 L 21.0936,40.5 C 15.4206,40.451 9.74005,40.6015 4.0711,40.4183 L 1.00893,40.2584"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun100"
        inkscape:label="Points droits pour auto-remplissage satin 2"
        inkstitch:ties="3" />
@@ -4710,7 +4710,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 24.245,34.8662 25.7468,40.5 c 5.67464,0.008 11.3498,-0.02448 17.0238,0.03445"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun101"
        inkscape:label="Points droits pour auto-remplissage satin 4"
        inkstitch:ties="3" />
@@ -4734,7 +4734,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 24.1613,44.4437 18.7559,45"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path55" />
     <path
@@ -4757,7 +4757,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 29.1338,94.5401 23.2768,100"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path56" />
     <path
@@ -4787,7 +4787,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 35.497266,89.278945 c 3.370236,-5.389502 2.346528,-11.918968 2.502733,-17.939416 0.03794,-10.852996 -0.07678,-21.709666 0.05894,-32.560671"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun102"
        inkscape:label="Points droits pour auto-remplissage satin 1"
        inkstitch:ties="3" />
@@ -4811,7 +4811,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 13.9491,87.7226 9.64387,88.4187 C 6.47738,82.7379 7.77251,76.057 7.5,69.8589 7.54359,59.1557 7.41091,48.4493 7.56989,37.7478"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun103"
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3" />
@@ -4841,7 +4841,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 26.773292,90.753095 c 0.848387,-4.300561 1.464412,-8.655915 3.153457,-12.731745 3.725448,-11.371909 7.436787,-22.749263 11.315113,-34.069494 0.592731,-1.887118 1.045744,-3.819749 1.767572,-5.663815"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun104"
        inkscape:label="Points droits pour auto-remplissage satin 1"
        inkstitch:ties="3" />
@@ -4882,7 +4882,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 19.3598,97.5397 2.0633,-7.2434 C 20.6453,86.0298 19.9488,81.7373 18.2904,77.7017 14.4001,66.7064 10.9975,55.5517 7.52751,44.4202 6.95986,42.6399 6.34194,40.8787 5.65294,39.1414 L 4.80672,36.1726"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun105"
        inkscape:label="Points droits pour auto-remplissage satin 4"
        inkstitch:ties="3" />
@@ -4913,7 +4913,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 50.929154,90.834922 c 1.153615,-4.298908 1.553576,-8.772908 3.274792,-12.914354 4.260827,-13.109297 8.361087,-26.290001 13.31388,-39.154994 l 0.02387,-0.05402"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun106"
        inkscape:label="Points droits pour auto-remplissage satin 1"
        inkstitch:ties="3" />
@@ -4937,7 +4937,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 48,93.3486 v 5.8955"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path57" />
     <path
@@ -4959,7 +4959,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 36,55.0299 v 4.705"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path58" />
     <path
@@ -4981,7 +4981,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 25,93.373 v 5.8711"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path59" />
     <path
@@ -5003,7 +5003,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 25.6297,88.3872 -3.5171,2.4954 C 21.6627,86.5037 20.9257,82.1366 19.1143,78.0932 15.263,67.6978 12.1504,57.0494 8.47264,46.5931 7.63047,44.1113 7.01064,41.5671 6.23086,39.0674 l -1.26177,-2.746"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun107"
        inkscape:label="Points droits pour auto-remplissage satin 6"
        inkstitch:ties="3" />
@@ -5051,7 +5051,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 30.5403,68.6896 21.3406,62.6194 C 20.6054,59.5857 18.1552,57.2344 16.5784,54.5672 13.2206,49.9686 10.564,44.9223 7.6216,40.0689 7.35713,39.7344 7.09266,39.3998 6.82818,39.0653 L 5.14037,36.6647"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun109"
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3" />
@@ -5075,7 +5075,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 25.9244,58.2405 -0.5202,9.599 c 5.9693,-9.127 11.7207,-18.3999 17.7697,-27.4723 0.356006,-0.376772 0.712012,-0.753545 1.06802,-1.13032 L 46.4335,37.082"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun110"
        inkscape:label="Points droits pour auto-remplissage satin 5"
        inkstitch:ties="3" />
@@ -5099,7 +5099,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 13.774,97.2822 4.74375,98.7873"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path60" />
     <path
@@ -5146,14 +5146,14 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 28.2937,94.3925 24,92.8055 C 24,89.2037 24,85.6018 24,82"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun111"
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3" />
     <path
        d="m 26.5,82.053336 c 0.973248,-4.143479 0.998384,-8.516103 2.393893,-12.54041 3.799383,-8.6149 7.190473,-17.421943 11.338128,-25.87518 1.296671,-2.487003 2.987733,-4.714317 4.806652,-6.838986"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun112"
        inkscape:label="Points droits pour auto-remplissage satin 4"
        inkstitch:ties="3" />
@@ -5177,7 +5177,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 29.0435,81.9991 21.5,82.0533 C 20.4879,78.3994 20.6569,74.4859 19.6356,70.8649 15.6357,61.5494 11.0957,52.4747 7.21042,43.1082 6.37709,40.7318 4.79127,38.8109 3.73403,36.5601"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun113"
        inkscape:label="Points droits pour auto-remplissage satin 6"
        inkstitch:ties="3" />
@@ -5201,7 +5201,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 17.8664,81.9758 28.2441,82"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path61" />
     <path
@@ -5248,14 +5248,14 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 2.48241,97.5916 11.8838,89.1587 C 22.9916,74.6642 34.0161,60.0952 45.1656,45.6394 c 1.43522,-1.33787 2.98415,-2.54245 4.12264,-4.1691"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun108"
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3" />
     <path
        d="M 48.9823,38.668 C 44.33389,39.060012 39.867,40.96904 35.1367,40.50002 25.4296,40.43827 15.7131,40.624908 6.0115,40.40404 L 3,40"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun114"
        inkscape:label="Points droits pour auto-remplissage satin 4"
        inkstitch:ties="3" />
@@ -5318,7 +5318,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 7.47793,102.974 -2.48718,2.951"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path62" />
     <path
@@ -5340,7 +5340,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 10.8705,99.6143 8,95.5576 C 7.9682,75.9183 8.0634,56.2674 7.95261,36.6352 7.83131,35.1611 6.99677,33.9155 6.47359,32.5643 l 2.09674,-2.6098 c 2.26322,0.836835 4.49026,1.8648 6.96023,1.54965 0.155912,0.0059 0.311823,0.01176 0.467735,0.01764 L 19.0161,31.7332"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun116"
        inkscape:label="Points droits pour auto-remplissage satin 4"
        inkstitch:ties="3" />
@@ -5364,7 +5364,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 4.28199,28.3196 2.25869,1.8692"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path63" />
     <path
@@ -5410,7 +5410,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 25.9804,98.5349 4.7649,-4.1223 C 25.2663,81.5259 20.2156,68.4658 15.0948,55.4351 11.6244,46.9563 8.21355,38.4292 4.22663,30.1781 L 3.32416,27.2722"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun118"
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3" />
@@ -5441,7 +5441,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 13,92.5165 c 0.03182,-18.6256 -0.06343,-37.2628 0.04738,-55.8813 0.121301,-1.47417 0.955838,-2.71978 1.47902,-4.07097 L 12.4748,29.9403 C 10.28155,30.683792 8.1674,31.83472 5.78361,31.49174 5.023026,31.48098 4.2798,31.636915 3.52879,31.733942"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun119"
        inkscape:label="Points droits pour auto-remplissage satin 2"
        inkstitch:ties="3" />
@@ -5465,7 +5465,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 16.718,28.3196 -2.2587,1.8692"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path64" />
     <path
@@ -5487,7 +5487,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 16.6881,106.72 -1.8784,-2.2"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path65" />
     <path
@@ -5534,7 +5534,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 20.0792,25.8008 0.0636,4.9538"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path66" />
     <path
@@ -5604,7 +5604,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 43.072,72.8411 -5.683,1.1126 c -0.03159,-3.87331 0.721471,-8.45048 -2.23669,-11.5163 -5.28744,-4.77729 -13.1847,-5.19205 -19.7655,-3.31047 -3.37482,1.46552 -6.72592,3.09164 -9.81617,5.0742 -0.208976,0.186202 -0.417951,0.372403 -0.626927,0.558605"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun121"
        inkscape:label="Points droits pour auto-remplissage satin 2"
        inkstitch:ties="3" />
@@ -5628,7 +5628,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 31.6792,76.6818 1.2915,-5.9265"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path67" />
     <path
@@ -5651,7 +5651,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 14.0154,89.1103 -3.8152,1.9011 c 6.30825,5.94372 16.8789,6.1082 23.801,1.14256 L 33.1925,89.0396"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun122"
        inkscape:label="Points droits pour auto-remplissage satin 5"
        inkstitch:ties="3" />
@@ -5682,7 +5682,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 34.743445,90.885327 c -4.001122,3.558595 -9.346883,5.6159 -14.730496,5.026359 -1.99664,-0.256761 -4.633927,-0.160794 -5.760681,-2.151416"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun123"
        inkscape:label="Points droits pour auto-remplissage satin 1"
        inkstitch:ties="3" />
@@ -5706,7 +5706,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 13,68.1339 8,64.3571 C 8.08035,56.0142 7.83671,47.6559 8.12702,39.3228 L 8.155018,39.061451 8.182353,38.806298 8.69189,35.9139"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun124"
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3" />
@@ -5730,7 +5730,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 14.1339,94.5159 9.22981,100"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path68" />
     <path
@@ -5776,7 +5776,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 18.2284,87.6128 -4.7492,3.8383 C 6.74451,85.7042 4.90585,74.9909 9.81324,67.5185 13.1965,61.6138 20.1791,57.8329 26.9953,59.0673 c 5.15047,0.885241 10.2858,3.17524 14.0125,6.90279 l 2.4425,1.87921"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun125"
        inkscape:label="Points droits pour auto-remplissage satin 2"
        inkstitch:ties="3" />
@@ -5824,7 +5824,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 44.1126,90.3523 -5.3422,-1.539 C 38.6665,72.2707 38.2383,55.7246 38.5999,39.1836 l 0.0513,-3.0898"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun127"
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3" />
@@ -5847,7 +5847,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 33.4596,90.3861 1.28,7.2591"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path69" />
     <path
@@ -5870,7 +5870,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 15.6423,89.0624 -3.0141,2.8227 C 5.1404,86.2633 3.32951,74.8469 8.32871,67.0187 11.7993,61.8344 18.0778,58.285 24.4158,58.9709 c 2.61448,0.306635 5.37994,0.352981 7.77616,1.54835 0.224273,0.470433 0.448546,0.940867 0.672818,1.4113 L 34.0021,66.2441"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun128"
        inkscape:label="Points droits pour auto-remplissage satin 6"
        inkstitch:ties="3" />
@@ -5917,7 +5917,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 17.3968,88.8584 -5.6307,0.5387 C 6.04864,83.1535 5.55183,72.6059 11.2991,66.2092 c 5.20891,-6.64994 15.4932,-9.5252 22.9215,-4.92167 4.80148,2.94652 8.56007,7.95878 9.15612,13.6565 -0.382558,2.87463 -3.91311,2.6257 -6.08434,2.55597 -7.34954,0 -14.6991,0 -22.0486,0 L 12.2702,76.4287"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun126"
        inkscape:label="Points droits pour auto-remplissage satin 2"
        inkstitch:ties="3" />
@@ -5965,7 +5965,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 19.2739,94.3748 -4.284,-3.1206 c 0.003,-7.72799 0.006,-15.456 0.0089,-23.184 l 0.9071,-8.3355 c 3.73688,0.450577 7.53558,0.254297 11.2818,0.0021"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun131"
        inkscape:label="Points droits pour auto-remplissage satin 4"
        inkstitch:ties="3" />
@@ -5989,7 +5989,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 16.3973,66.1338 15.2588,52.0437 c 0.389025,-4.42109 3.24374,-8.50776 7.49702,-9.98051 5.56486,-2.3641 11.6244,-0.204285 16.0331,3.49372"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun132"
        inkscape:label="Points droits pour auto-remplissage satin 6"
        inkstitch:ties="3" />
@@ -6013,7 +6013,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 8.86614,55 5.31096,4.7347 c -3.8725,0.5169 -7.79623,0.1062 -11.68645,0.4658"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun133"
        inkscape:label="Points droits pour auto-remplissage satin 8"
        inkstitch:ties="3" />
@@ -6037,7 +6037,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 16.2676,66.135 19.2441,65"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path70" />
     <path
@@ -6067,7 +6067,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 39.473093,99.523296 c -0.0074,5.113874 -3.526006,9.851304 -8.393527,11.399864 -5.107924,2.02991 -11.049004,2.07204 -16.181889,0.1417 -3.19995,-1.21667 -5.3510749,-3.99595 -7.2053386,-6.7402"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun129"
        inkscape:label="Points droits pour auto-remplissage satin 1"
        inkstitch:ties="3" />
@@ -6091,7 +6091,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 45.1339,65.802 -5.6087,0.3159 c -0.0805,-3.20008 0.192074,-6.43026 -0.17687,-9.6132"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun134"
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3" />
@@ -6132,7 +6132,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 10.2432,96.5873 3.7269,-4.829 1.22002,0.929868 0.590811,0.354941 v 0 l 0.722909,0.434302 1.36484,0.701286 1.29202,0.538321 v 0 l 0.119942,0.04997 1.46618,0.444537 1.48835,0.37326 0.574035,0.08975 v 0 l 0.941281,0.147175 1.52861,0.127152 1.29085,-0.0073 v 0 l 0.275883,-0.0016 1.51651,-0.147983 1.50495,-0.230771 0.439816,-0.117836 v 0 l 1.03267,-0.276673 1.41342,-0.569168 0.710205,-0.948182 v 0 L 33.62826,93.42925 34.23315,92.01234 35.0012,88.7559"
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun135"
        inkscape:label="Points droits pour auto-remplissage satin 6"
        sodipodi:nodetypes="cccccccccccccccccccccccccccc"
@@ -6180,7 +6180,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 12.9991,64.203 8,68.5031 C 8.03544,58.6736 7.92794,48.8411 8.05598,39.0132 L 7.7862,36.0558"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun137"
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3" />
@@ -6204,7 +6204,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 14.1339,94.8836 8.15124,100"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path71" />
     <path
@@ -6251,7 +6251,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 13.1183,95.2064 7.4936,92.1214 C 7.48746,80.264 7.53557,68.4048 7.48667,56.5486 M 7.4964369,44.370413 7.50315,36"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun138"
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3"
@@ -6301,7 +6301,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 27,96.660263 c 0.11389,4.278767 0.173776,9.002797 -2.82448,12.429177 -3.562402,4.91624 -10.626034,6.08717 -15.9570571,3.55467 -2.3671907,-0.79735 -4.1643658,-2.56999 -6.3872277,-3.64455"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun136"
        inkscape:label="Points droits pour auto-remplissage satin 1"
        inkstitch:ties="3" />
@@ -6325,7 +6325,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 33.1338,96.7274 27,95.1149 C 26.9701,82.7572 27.0608,70.3978 26.953,58.0411 M 27.172142,43.229007 27.2784,36.0469"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun139"
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3"
@@ -6392,7 +6392,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 23.3468,72.9538 -6.5885,-0.9257 1.12806,-1.00739 0.501535,-0.447887 v 0 l 0.626529,-0.559508 1.14819,-1.0048 0.812515,-0.707744 v 0 l 0.331873,-0.289079 1.14439,-0.996824 1.12015,-0.975713 v 0 l 0.02424,-0.02111 1.14439,-0.996823 1.14439,-0.996824 0.283402,-0.246858 v 0 l 0.860986,-0.749965 1.14439,-0.996824 0.591039,-0.514826 v 0 l 0.553349,-0.481997 1.15545,-1.03035 0.746334,-0.88976 v 0 l 0.239702,-0.285768 1.13523,-1.04524"
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun140"
        inkscape:label="Points droits pour auto-remplissage satin 2"
        sodipodi:nodetypes="ccccccccccccccccccccccccccc"
@@ -6417,7 +6417,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 13.0098,83.1338 8,76.2405 C 8.06494,63.6852 7.86814,51.1235 8.10184,38.5723 8.126294,38.230585 8.150749,37.888871 8.175203,37.54716"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun141"
        inkscape:label="Points droits pour auto-remplissage satin 4"
        inkstitch:ties="3" />
@@ -6441,7 +6441,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 13.2457,97.7717 8.50433,100"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path72" />
     <path
@@ -6471,7 +6471,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 8,93.25 C 8,75.1688 8,57.0877 8,39.0065 l 0.23803,-2.9093"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun142"
        inkscape:label="Points droits pour auto-remplissage satin 1"
        inkstitch:ties="3" />
@@ -6495,7 +6495,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 2.81449,97.8433 7.53159,100"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path73" />
     <path
@@ -6541,7 +6541,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 36.7098,64.2691 -4.1224,3.7807 c 0.817842,5.48568 0.237077,11.0756 0.41258,16.6048 0.147237,4.8008 -0.334468,9.67132 0.329991,14.435"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun145"
        inkscape:label="Points droits pour auto-remplissage satin 5"
        inkstitch:ties="3" />
@@ -6564,7 +6564,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 12.9862,73.1338 8.00335,68.7346 C 7.9618,64.8712 8.05647,60.976 8.07399,57.1384 8.03751,56.8911 8.00103,56.6438 7.96455,56.3965"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun146"
        inkscape:label="Points droits pour auto-remplissage satin 7"
        inkstitch:ties="3" />
@@ -6588,7 +6588,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 2.65225,97.5277 7.89015,100"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path74" />
     <path
@@ -6633,7 +6633,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 13.0128,61.8973 -5.02063,8.106 C 8.04142,65.5123 7.74771,61.0042 8.25404,56.535"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun147"
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3" />
@@ -6657,7 +6657,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 14.1271,95.1081 7.9967,100"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path75" />
     <path
@@ -6687,7 +6687,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 37.103,91.6994 C 44.1367,86.0978 46.3242,74.9222 40.9012,67.4906 37.2638,61.986 30.6699,58.1202 23.9457,59.1569 14.209,59.9134 5.78635,69.3896 7.17391,79.2527 7.67044,83.7673 9.84594,88.066 13.2134,91.1159 l -1.7411,4.0303"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun143"
        inkscape:label="Points droits pour auto-remplissage satin 1"
        inkstitch:ties="3" />
@@ -6735,7 +6735,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 34.7903,90.86 c -4.3047,3.8579 -10.2406,5.946 -15.9996,4.8438 -1.6889,-0.4223 -4.1695,-0.296 -4.6404,-2.3698 L 13,98.2441"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun148"
        inkscape:label="Points droits pour auto-remplissage satin 1"
        inkstitch:ties="3" />
@@ -6758,7 +6758,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 13.0459,68.1329 8.24443,54.0349"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path76" />
     <path
@@ -6781,7 +6781,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 14.1165,97.3338 7.99132,97.2993 c 0.039577,6.20352 -0.03717,12.4084 0.03908,18.6113"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun150"
        inkscape:label="Points droits pour auto-remplissage satin 5"
        inkstitch:ties="3" />
@@ -6811,7 +6811,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 38.5,97.298147 c -0.114916,6.175203 0.240147,12.386213 -0.199186,18.543703"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun149"
        inkscape:label="Points droits pour auto-remplissage satin 1"
        inkstitch:ties="3" />
@@ -6835,7 +6835,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 44.1338,64.7447 38.4423,54.0582"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path77" />
     <path
@@ -6858,7 +6858,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 32.8662,64.8135 34,56.7559"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path78" />
     <path
@@ -6881,7 +6881,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 16.5731,87.5406 -4.2415,4.1029 c 5.33959,4.78874 13.4201,5.46541 19.8551,2.64828 0.210205,-0.459886 0.420411,-0.919773 0.630617,-1.37966 L 34,88.7559"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun152"
        inkscape:label="Points droits pour auto-remplissage satin 6"
        inkstitch:ties="3" />
@@ -6911,7 +6911,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 7.60261,92.0849 C 7.584,85.3622 7.73194,78.6393 7.76025,71.9166 L 13.4354,62.712 c 1.79943,-3.35116 6.34567,-4.11269 9.80812,-3.37939 3.37998,0.63745 6.35705,2.35329 9.19735,4.21231"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun153"
        inkscape:label="Points droits pour auto-remplissage satin 2"
        inkstitch:ties="3" />
@@ -6934,7 +6934,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 12.5337,63.4907 -4.765,5.3228 C 7.98064,64.7299 7.302,60.5118 8.3528,56.5198"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun154"
        inkscape:label="Points droits pour auto-remplissage satin 4"
        inkstitch:ties="3" />
@@ -6958,7 +6958,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 13.3027,95.0972 7.9745,100.035"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path79" />
     <path
@@ -6988,7 +6988,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 36.0443,91.3935 c 3.18317,-3.42985 3.38342,-9.82527 -0.579529,-12.7187 -5.08886,-2.59003 -10.9318,-3.00138 -16.4697,-4.02977 -3.6549,-0.878505 -7.81152,-2.4415 -9.53415,-6.05445 -1.44679,-3.9174 1.38581,-7.94239 4.95942,-9.4453 6.40486,-3.13171 14.1664,-1.14953 19.727,2.85446 1.60071,1.00011 3.08823,2.14827 4.54828,3.34164 L 41.2728,67.0114"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun155"
        inkscape:label="Points droits pour auto-remplissage satin 1"
        inkstitch:ties="3" />
@@ -7012,7 +7012,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 2.91419,92.9168 3.68624,84.3717"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path80" />
     <path
@@ -7059,7 +7059,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 20.1088,87.9801 -5.1053,1.5868 -0.249284,-1.50513 -0.08823,-0.882859 1.4e-5,-1.1e-5 -0.06445,-0.644905 -0.06012,-1.5387 -0.04671,-1.50863 -2e-5,3.5e-5 -9.69e-4,-0.03132 -0.0026,-1.54097 -1.35e-4,-1.54103 -0.0013,-0.584005 4e-6,2.5e-5 -0.0022,-0.957033 -0.0018,-1.54104 0.0013,-1.19927 V 76.092 l 3.81e-4,-0.341779 0.0017,-1.54105 0.0017,-1.54104 3.04e-4,-0.273472 1.5e-5,4.1e-5 0.0014,-1.26757 0.0017,-1.54105 9.9e-4,-0.888722 1e-5,-5.8e-5 7.44e-4,-0.667583 0.002,-1.51488 L 14.6269,53.7887 c 0.1473,-4.0815 -0.1852,-8.2122 0.3809,-12.2633"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun159"
        inkscape:label="Points droits pour auto-remplissage satin 7"
        inkstitch:ties="3" />
@@ -7083,7 +7083,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 20.3531,54.8055 -4.4942,5.0995 c 3.58511,-0.08372 7.17441,0.186347 10.7543,-0.06002"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun157"
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3" />
@@ -7107,7 +7107,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 16.0139,66.1339 12.7655,59.9064 C 9.17504,59.809 5.55398,60.1613 1.98371,59.7505"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun158"
        inkscape:label="Points droits pour auto-remplissage satin 5"
        inkstitch:ties="3" />
@@ -7131,7 +7131,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 15.8332,53.6762 18.2441,65"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path81" />
     <path
@@ -7178,7 +7178,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 43.1339,86.4825 36.8965,84.9281 C 36.87452,75.44821 36.9389,65.9676 36.86219,56.4882 36.85429,56.183168 36.84641,55.878136 36.83852,55.573104"
        style="fill:none;stroke:#000000;stroke-width:1.02081;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun161"
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3" />
@@ -7202,7 +7202,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 30.6598,86.4693 1.1303,-3.088"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path82" />
     <path
@@ -7225,7 +7225,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 6.7122,97.2311 8.52623,90.6922 C 7.10803,88.08 6.98892,85.0309 6.82332,82.1274 6.72999,75.3042 6.80727,68.4785 6.78204,61.6543 6.806171,60.11179 6.695904,58.57117 6.837233,57.03182 L 7.2972,54.0602"
        style="fill:none;stroke:#000000;stroke-width:1.02081;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun162"
        inkscape:label="Points droits pour auto-remplissage satin 6"
        inkstitch:ties="3" />
@@ -7256,7 +7256,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 26.842052,88.974478 0.397617,-1.497332 0.04031,-0.09539 v 0 l 0.551207,-1.304244 0.716027,-1.370919 0.314275,-0.601718 v 0 l 0.401751,-0.769201 0.704041,-1.377163 0.548705,-1.09741 v 0 l 0.134003,-0.268006 0.695118,-1.390236 0.695118,-1.390236 0.104258,-0.208516 v 0 l 0.59086,-1.181721 0.695118,-1.390236 0.342519,-0.685038 v 0 l 0.352599,-0.705198 0.695118,-1.390236 0.580781,-1.16156 v 0 l 0.114338,-0.228676 0.695118,-1.390236 0.695118,-1.390236 0.123412,-0.248102 v 0 l 0.568818,-1.143522 0.672472,-1.401121 0.35053,-0.730342 v 0 l 0.321941,-0.670778 0.672472,-1.401121 0.581221,-1.210995 v 0 l 0.09125,-0.190125 0.623099,-1.420591 0.618456,-1.403982 0.182156,-0.293161 v 0 l 0.617813,-0.994305"
        style="fill:none;stroke:#000000;stroke-width:1.02157;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun160"
        inkscape:label="Points droits pour auto-remplissage satin 1"
        sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccc"
@@ -7281,7 +7281,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 23.58,93.7069 -0.0594,5.5333"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path83" />
     <path
@@ -7304,7 +7304,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 24.2199,89.2632 19.9575,89.0379 19.5391,87.5473 19.4976,87.443 v 0 L 18.9825,86.1475 18.2539,84.792 17.9034,84.1399 v 0 l -0.3781,-0.7034 -0.718,-1.3611 -0.6213,-1.1828 v 0 l -0.09336,-0.177743 -0.717674,-1.36455 -0.717675,-1.36455 -0.181127,-0.344386 v 0 l -0.536547,-1.02017 -0.717674,-1.36455 -0.452335,-0.868234 v 0 L 12.5097,73.8894 11.7993,72.5212 11.0889,71.1529 11.0763,71.1286 v 0 L 10.3786,69.7847 9.66818,68.4164 9.38366,67.8684 v 0 L 8.95781,67.0482 8.2723,65.6682 7.74031,64.5832 v 0 L 7.594,64.2848 6.90417,62.9067 6.20666,61.5322 6.08958,61.3016 v 0 L 5.5089,60.1578 4.74879,58.8169 4.28791,58.1035 v 0 L 3.925592,57.5427 1.90997,55.345"
        style="fill:none;stroke:#000000;stroke-width:1.02157;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun163"
        inkscape:label="Points droits pour auto-remplissage satin 4"
        sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccc"
@@ -7336,7 +7336,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 54.357455,89.396992 c 1.008691,-4.201448 3.60348,-7.801322 5.350254,-11.717207 3.46587,-6.677551 6.681549,-13.485995 10.047686,-20.207237 l 0.102924,-0.181858"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun164"
        inkscape:label="Points droits pour auto-remplissage satin 1"
        inkstitch:ties="3" />
@@ -7360,7 +7360,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 51.0961,94.7119 -0.0824,4.5323"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path84" />
     <path
@@ -7383,7 +7383,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 38.1505,61.8837 -0.276,4.3003"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path85" />
     <path
@@ -7406,7 +7406,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 23.9887,95.2084 0.0095,4.0357"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path86" />
     <path
@@ -7429,7 +7429,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 24.6481,89.471 20.5514,89.1282 C 19.3734,84.7245 16.7208,80.8907 14.8747,76.7493 11.6073,70.2289 8.35718,63.6974 5.18106,57.1346"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun165"
        inkscape:label="Points droits pour auto-remplissage satin 6"
        inkstitch:ties="3" />
@@ -7477,7 +7477,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 30.1975,76.2694 -3.1655,-3.661 0.885338,-0.999731 v 0 l 0.136914,-0.154605 1.02225,-1.15434 1.02225,-1.15434 0.215679,-0.243547 v 0 l 0.806573,-0.910789 1.02225,-1.15434 0.568271,-0.641698 v 0 l 0.453981,-0.512638 1.02225,-1.15434 0.920865,-1.03985 v 0 l 0.101388,-0.114488 1.02225,-1.15434 1.02225,-1.15434 0.251205,-0.283663 v 0 l 0.771048,-0.870673 0.966447,-1.16982 0.634545,-0.687051 v 0 l 0.395336,-0.42805 1.02035,-1.11426"
        style="fill:none;stroke:#000000;stroke-width:1.01964;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun166"
        inkscape:label="Points droits pour auto-remplissage satin 2"
        sodipodi:nodetypes="ccccccccccccccccccccccccccc"
@@ -7502,7 +7502,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 15.7195,76.7026 2.5524,-2.5365 0.31288,-0.946733 v 0 l 0.164728,-0.498445 -0.913823,-1.16518 -0.892235,-0.985456 v 0 L 16.80623,70.41873 15.78732,69.28004 14.76841,68.14136 14.71863,68.08573 v 0 L 13.7495,67.0026 12.7306,65.864 12.4947,65.6003 v 0 l -0.783,-0.875 -1.0189,-1.1387 -0.422,-0.4716 v 0 L 9.67389,62.4479 8.65497,61.3092 8.04686,60.6296 v 0 L 7.63606,60.1705 6.64492,59.0102 5.95891,58.0341 v 0 L 5.76886,57.7637 4.72736,56.6726"
        style="fill:none;stroke:#000000;stroke-width:1.01964;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun167"
        inkscape:label="Points droits pour auto-remplissage satin 4"
        sodipodi:nodetypes="cccccccccccccccccccccccccccccc"
@@ -7527,7 +7527,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 15.7333,78.4301 6.9981,4.9917"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path87" />
     <path
@@ -7557,7 +7557,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 24.17975,85.87762 c -0.925845,0.754445 -2.118863,3.834935 -2.901159,1.524735 C 16.278002,78.317387 11.737383,68.979982 7.4127454,59.561204 6.9186361,58.742877 6.3405444,57.993659 5.7261615,57.262365"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun169"
        inkscape:label="Points droits pour auto-remplissage satin 2"
        inkstitch:ties="3" />
@@ -7581,7 +7581,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 25.3725,82.8307 3.2953,5.2217 c 4.66434,-9.45089 9.22234,-18.9604 13.6556,-28.5192 0.311114,-0.790339 0.606699,-1.58652 0.903358,-2.38237"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun170"
        inkscape:label="Points droits pour auto-remplissage satin 4"
        inkstitch:ties="3" />
@@ -7604,7 +7604,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 29.2704,100.055 -5.3873,-2.2306 c -2.55713,4.55166 -4.26356,9.98613 -8.60783,13.201 -3.10036,2.17401 -7.07097,1.96591 -10.6786,2.03659"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun171"
        inkscape:label="Points droits pour auto-remplissage satin 6"
        inkstitch:ties="3" />
@@ -7651,14 +7651,14 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 8.5765147,92.386927 c 3.5460513,-2.883051 6.8056043,-6.06901 9.7178773,-9.593112 4.989263,-5.500029 9.766536,-11.214707 14.890846,-16.578128 2.038244,-1.935283 4.453964,-3.462135 6.348918,-5.51681 0.203565,-0.471288 0.407129,-0.942577 0.610694,-1.413865"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun168"
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3" />
     <path
        d="m 38.033707,57.69057 c -4.559414,0.8654 -8.987059,2.761465 -13.709713,2.309428 -6.604318,0.06342 -13.216946,-0.133787 -19.8165046,0.10923"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun172"
        inkscape:label="Points droits pour auto-remplissage satin 4"
        inkstitch:ties="3" />
@@ -7682,7 +7682,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 37.1986,59.6077 4.6493,-2.7254"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path88" />
     <path
@@ -7771,7 +7771,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 21.3586,76.6633 27.019,74.288 c 2.01502,-0.774241 3.77109,-1.96563 4.91754,-3.83887 3.81968,-4.65339 7.34803,-9.54968 11.394,-14.0111"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun173"
        inkscape:label="Points droits pour auto-remplissage satin 2"
        inkstitch:ties="3" />
@@ -7796,7 +7796,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 14.193802,65.809027 c 2.408283,-3.289683 5.18781,-6.329723 7.376535,-9.766712"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun174"
        inkscape:label="Points droits pour auto-remplissage satin 4"
        inkstitch:ties="3" />
@@ -7837,7 +7837,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 22.4943,91.2952 0.2388,6.6596"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path89" />
     <path
@@ -7867,7 +7867,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 8.9383156,42.551648 C 10.87899,40.720684 12.508845,38.605421 14.187725,36.54095"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun175"
        inkscape:label="Points droits pour auto-remplissage satin 1"
        inkstitch:ties="3" />
@@ -7898,7 +7898,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 8.9383156,42.551648 C 10.87899,40.720684 12.508845,38.605421 14.187725,36.54095"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="path90"
        inkscape:label="Points droits pour auto-remplissage satin 1"
        inkstitch:ties="3" />
@@ -7929,7 +7929,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 8.9383156,42.551648 C 10.87899,40.720684 12.508845,38.605421 14.187725,36.54095"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="path3080"
        inkscape:label="Points droits pour auto-remplissage satin 1"
        inkstitch:ties="3" />
@@ -7959,7 +7959,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 34.0377,63.8227 C 38.6106,58.3837 38.806,49.546 33.6639,44.4028 31.1602,41.7657 28.1045,39.2989 24.3271,39.0297 l -1.8001,4.1774"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun176"
        inkscape:label="Points droits pour auto-remplissage satin 1"
        inkstitch:ties="3" />
@@ -7982,7 +7982,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 19.5498,74.9097 18.9478,69.087 C 13.2141,67.6727 7.79848,63.1097 7.27527,56.9309 6.31086,51.5208 8.15048,45.4768 12.8654,42.3463 c 2.22937,-1.6681 4.82747,-2.94601 7.6268,-3.22505 L 22,43.2441"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun177"
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3" />
@@ -8046,7 +8046,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 31.2424,70.6991 34.806,65.8088 C 32.3979,62.5186 29.6187,59.479 27.4241,56.0456"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun179"
        inkscape:label="Points droits pour auto-remplissage satin 4"
        inkstitch:ties="3" />
@@ -8071,7 +8071,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 23.354643,74.961076 c -2.266048,-1.128759 -4.8083,-1.96554 -6.127815,-4.305963 C 13.346081,65.933834 9.7742118,60.952779 5.6533986,56.435599"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun180"
        inkscape:label="Points droits pour auto-remplissage satin 6"
        inkstitch:ties="3" />
@@ -8136,7 +8136,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 25.2895,69.9302 -7.2453,-0.1318 c 3.79278,-3.9786 7.5721,-7.98973 11.0775,-12.2257"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun178"
        inkscape:label="Points droits pour auto-remplissage satin 2"
        inkstitch:ties="3" />
@@ -8159,7 +8159,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 13.621413,65.795479 C 10.826513,62.946158 8.0179029,60.083904 5.0893472,57.375647"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun181"
        inkscape:label="Points droits pour auto-remplissage satin 4"
        inkstitch:ties="3" />
@@ -8183,7 +8183,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 11.4888,69.5112 8.4014,4.3098"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path92" />
     <path
@@ -8229,7 +8229,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 43.0728,72.7832 -5.6714,0.4282 C 37.44878,69.24827 37.970257,64.3365 34.30901,61.7087 32.9095,60.52753 31.1991,59.70526 29.4669,59.13599 M 31.2981,47.4749 C 27.387,44.9137 24.2721,41.3403 21.1844,37.877 20.582,37.1656 19.9929,36.4433 19.409,35.7165"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun183"
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3"
@@ -8255,7 +8255,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 29.466885,59.135987 C 23.253267,57.222495 16.220491,57.891796 10.664721,61.358326 9.0530208,62.274876 7.3410642,62.981966 5.675148,63.78993"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun184"
        inkscape:label="Points droits pour auto-remplissage satin 5"
        inkstitch:ties="3" />
@@ -8279,7 +8279,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 31.6847,76.5613 1.286,-5.806"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path93" />
     <path
@@ -8302,7 +8302,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 13.8762,88.9803 -3.2674,2.4393 c 5.74985,5.00883 14.9421,5.5474 21.5236,1.90805 l 1.0601,-4.28805"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun185"
        inkscape:label="Points droits pour auto-remplissage satin 8"
        inkstitch:ties="3" />
@@ -8351,7 +8351,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
       <path
          d="m 43.0746,72.9822 -5.6739,0.2727 c 0.03973,-3.96257 0.588407,-8.87245 -3.05855,-11.5182 -5.27239,-4.10353 -12.6889,-4.38908 -18.9172,-2.62234 -0.230716,0.09003 -0.461431,0.180057 -0.692147,0.270086 M 13.1773,48.2628 c 2.95372,-1.96621 5.55283,-4.46525 8.0321,-6.99339 0.615008,-1.40984 1.35832,-2.75638 2.20647,-4.03918"
          style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-         inkstitch:running_stitch_length_mm=""
+         inkstitch:running_stitch_length_mm="1.5"
          id="autosatinrun187"
          inkscape:label="Points droits pour auto-remplissage satin 3"
          inkstitch:ties="3"
@@ -8359,7 +8359,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
       <path
          d="m 24.663646,37.038619 c 1.420807,2.301358 2.101648,5.037422 4.250474,6.822933 1.302214,1.441152 2.662071,2.817652 4.219813,3.985106"
          style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-         inkstitch:running_stitch_length_mm=""
+         inkstitch:running_stitch_length_mm="1.5"
          id="autosatinrun188"
          inkscape:label="Points droits pour auto-remplissage satin 4"
          inkstitch:ties="3" />
@@ -8383,7 +8383,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
       <path
          d="M 24,33.8661 V 37.288"
          style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-         inkstitch:running_stitch_length_mm="2.5"
+         inkstitch:running_stitch_length_mm="1.5"
          inkstitch:running_stitch_tolerance_mm="0.5"
          id="path94" />
       <path
@@ -8408,7 +8408,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 14.732813,59.384511 c -2.976832,1.273536 -5.7586515,2.947781 -8.7062876,4.28881"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun189"
        inkscape:label="Points droits pour auto-remplissage satin 7" />
     <path
@@ -8431,7 +8431,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 31.6772,76.7173 1.2935,-5.962"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path95" />
     <path
@@ -8454,7 +8454,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 15.4753,88.1207 -4.8665,3.2989 c 6.18091,5.34002 16.1202,5.621 22.835,1.10245 L 33.1925,89.0396"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun190"
        inkscape:label="Points droits pour auto-remplissage satin 10"
        inkstitch:ties="3" />
@@ -8501,7 +8501,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 43.0705,73.0028 -5.6684,0.1652 c 0.0508,-3.9665 0.5561,-8.8733 -3.1262,-11.4874 -5.3708,-4.0968 -12.9037,-4.3728 -19.1717,-2.4442 -3.1437,1.2588 -6.01059,3.0998 -9.13587,4.407"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun191"
        inkscape:label="Points droits pour auto-remplissage satin 2"
        inkstitch:ties="3" />
@@ -8560,7 +8560,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 33.2388,50.5871 C 33.154,48.04459 33.14852,45.5025 33.063141,42.96016"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun193"
        inkscape:label="Points droits pour auto-remplissage satin 7"
        inkstitch:ties="3"
@@ -8603,7 +8603,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 33.4977,75.9812 -0.527,-5.2259"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path96" />
     <path
@@ -8626,7 +8626,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 14.0154,89.1103 -3.4066,2.3093 c 5.74985,5.00883 14.9421,5.5474 21.5236,1.90805 l 1.0601,-4.28805"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun194"
        inkscape:label="Points droits pour auto-remplissage satin 11"
        inkstitch:ties="3" />
@@ -8673,7 +8673,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 43.3168,78.9217 -5.8577,-2.3598 c 0.69851,-6.32994 4.17827,-12.5419 10.0303,-15.4127 7.15536,-3.83044 16.7255,-2.31509 22.1315,3.8173 2.44996,2.75364 4.36234,6.28109 4.67436,9.98038 0.09785,2.3384 -2.95468,2.52573 -4.71545,2.54943 -8.68871,0.0086 -17.3775,0.0013 -26.0662,0.0037"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun195"
        inkscape:label="Points droits pour auto-remplissage satin 2"
        inkstitch:ties="3" />
@@ -8697,7 +8697,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 34.6409,70.7758 1.26,-7.1423 c -1.31245,-3.9334 -6.01964,-4.83484 -9.64557,-5.21009 -5.1923,-0.657186 -10.6945,-0.05515 -15.1127,2.95309 -1.44551,0.902386 -2.9132,1.77941 -4.55079,2.29082"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun196"
        inkscape:label="Points droits pour auto-remplissage satin 4"
        inkstitch:ties="3" />
@@ -8721,7 +8721,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 35.8477,65.5058 -1.0426,5.3238"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path97" />
     <path
@@ -8744,7 +8744,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 41.6018,79.147 33.3682,74.3124"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path98" />
     <path
@@ -8767,7 +8767,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 16.2709,87.8053 -4.4912,4.0471 c 6.8365,4.50399 16.4948,3.96584 22.8645,-1.15893 0.145582,-0.396546 0.291163,-0.793093 0.436745,-1.18964 L 34.0016,86.3374"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun197"
        inkscape:label="Points droits pour auto-remplissage satin 8"
        inkstitch:ties="3" />
@@ -8814,14 +8814,14 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 23.906825,102.12937 c -0.522494,2.25904 -2.617176,3.46536 -4.068538,5.09534"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun198"
        inkscape:label="Points droits pour auto-remplissage satin 2"
        inkstitch:ties="3" />
     <path
        d="m 19.940323,108.353 c 2.769005,0.4345 5.481321,-0.78175 8.216502,0.0572 3.678641,0.61863 6.283443,4.65197 4.954794,8.22271 -1.034153,3.93201 -5.624331,6.2848 -9.393768,4.6516 -2.867527,-0.79052 -4.574637,-3.29159 -6.668068,-5.18651"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun199"
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3" />
@@ -8845,7 +8845,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 16.1604,109.405 4.5485,-2.059"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path99" />
     <path
@@ -8867,7 +8867,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 18.7244,100.918 6.177,-9.1232"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path100" />
     <path
@@ -8889,7 +8889,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 11.9491,97.8589 0.7632,-7.3091 C 6.86442,84.6742 4.8859,74.5981 9.86437,67.5813 13.6393,61.5382 21.0281,57.6431 28.1687,59.1773 c 4.84626,0.821197 9.47082,3.19077 12.7421,6.89389 l 2.2632,2.00841"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun200"
        inkscape:label="Points droits pour auto-remplissage satin 7"
        inkstitch:ties="3" />
@@ -8936,7 +8936,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 17.5668,86.5568 12.8186,90.551 C 7.4926,85.4427 5.55548,76.9142 8.75085,70.1831 12.2702,62.8326 20.5639,57.8781 28.7496,59.243 m 2.7298,-11.6 C 27.5471,45.0636 24.392,41.489 21.3065,37.9857 20.5322,37.0675 19.869,36.0683 19.1771,35.0883"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun202"
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3"
@@ -8962,7 +8962,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 29.341435,59.413995 c 7.065088,1.509463 12.841973,7.838631 13.959899,14.93504 0.484896,2.425596 -2.321249,3.388912 -4.286893,3.146965 -8.440233,0.0094 -16.880555,0.0013 -25.320816,0.004"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun203"
        inkscape:label="Points droits pour auto-remplissage satin 5"
        inkstitch:ties="3" />
@@ -9010,7 +9010,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 17.5668,86.5568 12.8186,90.551 C 7.4924,85.4428 5.55537,76.9141 8.75085,70.1831 12.5845,61.9724 22.7261,56.7799 31.4838,59.9698 c 6.17838,2.42864 11.1549,8.29558 11.8929,14.9742 -0.257445,2.65121 -3.39827,2.64814 -5.43921,2.55598 -8.08128,0 -16.1626,0 -24.2438,0"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun204"
        inkscape:label="Points droits pour auto-remplissage satin 2"
        inkstitch:ties="3" />
@@ -9036,7 +9036,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
       <path
          d="m 17.423,48.549 c 3.86868,-2.3645 6.83291,-5.89401 9.86975,-9.19715 0.90917,-1.03987 1.7312,-2.14554 2.54819,-3.25813"
          style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-         inkstitch:running_stitch_length_mm=""
+         inkstitch:running_stitch_length_mm="1.5"
          id="autosatinrun205"
          inkscape:label="Points droits pour auto-remplissage satin 4"
          inkstitch:ties="3"
@@ -9103,7 +9103,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 17.5668,86.5568 12.8186,90.551 C 7.49264,85.4427 5.5555,76.9142 8.75085,70.1831 12.5834,61.9718 22.7274,56.7803 31.4838,59.9698 c 6.17829,2.42895 11.155,8.29486 11.8929,14.9742 -0.292563,2.75523 -3.59081,2.62074 -5.69523,2.55596 -7.99594,0 -15.9919,0 -23.9878,0"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun206"
        inkscape:label="Points droits pour auto-remplissage satin 2"
        inkstitch:ties="3" />
@@ -9127,7 +9127,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 33.3819,47.7593 C 30.882,46.0964 28.7974,43.8114 26.912,41.5172 26.2842,40.0027 25.5184,38.5575 24.6598,37.1621"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun207"
        inkscape:label="Points droits pour auto-remplissage satin 4"
        inkstitch:ties="3"
@@ -9135,7 +9135,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 23.415911,37.230682 c -1.454799,2.092746 -2.139939,4.704081 -4.37855,6.166428 -1.696557,1.507695 -3.39976,3.019904 -5.280918,4.296047"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun208"
        inkscape:label="Points droits pour auto-remplissage satin 5"
        inkstitch:ties="3" />
@@ -9159,7 +9159,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 24.0024,39.1842 24,35.7559"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path102" />
     <path
@@ -9223,7 +9223,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 17.5668,86.5568 12.8186,90.551 C 7.49216,85.443 5.55622,76.9139 8.75085,70.1831 12.584,61.9719 22.7272,56.7804 31.4838,59.9698 c 6.17825,2.42909 11.1549,8.29482 11.8929,14.9742 -0.2913,2.75071 -3.58319,2.62161 -5.68529,2.55596 -7.99925,0 -15.9985,0 -23.9978,0"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun209"
        inkscape:label="Points droits pour auto-remplissage satin 2"
        inkstitch:ties="3" />
@@ -9250,7 +9250,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
       <path
          d="m 37.3484,49.8116 c 0.16828,-2.55266 0.106157,-5.10942 0.08786,-7.66523"
          style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-         inkstitch:running_stitch_length_mm=""
+         inkstitch:running_stitch_length_mm="1.5"
          id="autosatinrun210"
          inkscape:label="Points droits pour auto-remplissage satin 4"
          inkstitch:ties="3"
@@ -9297,7 +9297,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
       <path
          d="m 16.701,49.8022 c 0.06294,-2.56878 0.01737,-5.13653 -0.04063,-7.70456"
          style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-         inkstitch:running_stitch_length_mm=""
+         inkstitch:running_stitch_length_mm="1.5"
          id="autosatinrun211"
          inkscape:label="Points droits pour auto-remplissage satin 7"
          inkstitch:ties="3"
@@ -9348,7 +9348,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 7.47101,91.1137 C 7.54202,80.0022 7.35439,68.8817 7.5856,57.7762 l 0.041151,-0.732005"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun212"
        inkscape:label="Points droits pour auto-remplissage satin 1"
        inkstitch:ties="3"
@@ -9373,14 +9373,14 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 17.8707,44.4009 -3.5273,1.9066 C 12.2341,44.15 9.80199,42.1476 8.82809,39.1926 8.57027,38.6763 8.24656,38.194 7.96445,37.6906"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun214"
        inkscape:label="Points droits pour auto-remplissage satin 4"
        inkstitch:ties="3" />
     <path
        d="m 6.4159105,37.230494 c -1.4551863,2.09254 -2.1416397,4.701766 -4.3720368,6.172818 -1.51030891,1.366974 -3.0539529,2.700883 -4.6423969,3.976333"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun215"
        inkscape:label="Points droits pour auto-remplissage satin 5"
        inkstitch:ties="3" />
@@ -9404,7 +9404,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 7,39.1777 V 35.7559"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path103" />
     <path
@@ -9445,7 +9445,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 1.80756,95.7651 5.94735,4.7059"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path104" />
     <path
@@ -9475,7 +9475,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 12.471,91.1137 C 12.52387,79.7675 12.39114,68.4163 12.55844,57.0733 M 19.9676,45.1458 c 0.150819,-2.90178 0.05874,-5.80211 0.06523,-8.70515"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun216"
        inkscape:label="Points droits pour auto-remplissage satin 2"
        inkstitch:ties="3"
@@ -9501,7 +9501,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 6.0396973,45.034506 c 0.056377,-2.562864 0.029187,-5.123723 -0.011404,-7.68603"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun217"
        inkscape:label="Points droits pour auto-remplissage satin 4"
        inkstitch:ties="3" />
@@ -9542,7 +9542,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 6.82301,95.5251 6.02749,4.9639"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path105" />
     <path
@@ -9572,14 +9572,14 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 40.0545,88.6652 C 44.72,82.6367 45.4401,73.5654 40.7838,67.3158 38.0305,63.3461 33.7502,60.1179 28.9872,59.1071 l -1.6581,-4.317"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun218"
        inkscape:label="Points droits pour auto-remplissage satin 1"
        inkstitch:ties="3" />
     <path
        d="M 33.5146,47.9073 C 30.91441,46.26794 28.85221,43.84674 26.91198,41.51575 26.1919,39.821 25.3655,38.1654 24.033763,36.753149 c -2.051582,2.12204 -2.561755,5.098815 -4.987484,6.652516 -1.777051,1.54668 -3.475618,3.224737 -5.451009,4.517581"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun219"
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3"
@@ -9604,7 +9604,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 24,39.1777 V 35.7559"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path106" />
     <path
@@ -9644,7 +9644,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 16.9772,86.3376 11.841,89.7401 C 6.21253,83.5896 5.26822,73.3946 10.6128,66.7671 13.81041,62.33902 19.02925,59.49132 24.468,59.09744 l 2.3184,4.11636"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun221"
        inkscape:label="Points droits pour auto-remplissage satin 8"
        inkstitch:ties="3" />
@@ -9674,7 +9674,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 43.6447,87.3982 c 3.84324,-5.93318 4.17172,-14.1753 -0.09588,-19.99 -2.41371,-3.55231 -5.98524,-6.38847 -10.0696,-7.76049 M 36.7862,50.9068 c 0.04716,-2.87337 0.0018,-5.74719 0.05246,-8.62062"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun223"
        inkscape:label="Points droits pour auto-remplissage satin 2"
        inkstitch:ties="3"
@@ -9700,7 +9700,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 31.9728,59.2829 C 31.0131,59.1567 30.0531,59.0532 29.0859,59.006 l 0.0307,-4.2458"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun224"
        inkscape:label="Points droits pour auto-remplissage satin 4" />
     <path
@@ -9723,7 +9723,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 19.6774,86.3376 -5.1362,3.4025 C 8.91478,83.5889 7.96649,73.3944 13.313,66.7671 c 1.69251,-2.34973 3.96787,-4.25232 6.53325,-5.58536 M 16.1336,51.1321 c -0.06937,-2.94118 -0.138694,-5.88662 -0.04554,-8.8277"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun226"
        inkscape:label="Points droits pour auto-remplissage satin 7"
        inkstitch:ties="3"
@@ -9749,7 +9749,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 21.6658,60.3459 C 23.9125,59.4647 26.2962,59.0849 28.7002,59 v 4.2441"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun227"
        inkscape:label="Points droits pour auto-remplissage satin 9"
        inkstitch:ties="3" />
@@ -9795,7 +9795,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 14.2827,84.0503 6.243798,-0.24606 M 19.718845,70.066109 c -5.16828,2e-4 -12.055445,-0.06652 -17.223645,-0.06577"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun230"
        inkscape:label="Points droits pour auto-remplissage satin 4"
        inkstitch:ties="3"
@@ -9820,7 +9820,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 19.910287,58.245629 20.184,50.0148"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path107"
        sodipodi:nodetypes="cc" />
@@ -9845,7 +9845,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 19.55,70 c 6.608974,0.04599 13.224209,-0.09448 19.829557,0.0732"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun232"
        inkscape:label="Points droits pour auto-remplissage satin 8"
        inkstitch:ties="3" />
@@ -9910,7 +9910,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 43.342,86.9071 37.1046,85.3527 C 37.0802,75.41981 37.154,65.4861 37.0613,55.5538 37.0552,55.369226 37.04915,55.184653 37.04307,55.00008 M 28.0889,48.7012 C 23.5102,45.3254 19.6475,41.0577 16.0676,36.6678 15.9342,36.4452 15.8008,36.2226 15.6675,36"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun233"
        inkscape:label="Points droits pour auto-remplissage satin 4"
        inkstitch:ties="3"
@@ -9952,7 +9952,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 30.8679,86.8937 1.1303,-3.1378"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path108" />
     <path
@@ -9975,7 +9975,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 4.32844,95.0672 8.08191,89.6845 C 6.80747,85.6146 7.01973,81.2868 6.99014,77.074 6.99602,70.8314 6.98097,64.5858 6.99272,58.3453 7.05535,57.2194 7.13811,56.0663 7.52858,55"
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.02081;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun234"
        inkscape:label="Points droits pour auto-remplissage satin 8"
        inkstitch:ties="3" />
@@ -10022,7 +10022,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 43.342,86.8571 -6.288,-0.8716 c 0.107454,-8.5815 0.02397,-17.1645 0.04938,-25.7466 3.58e-4,-1.43301 -0.0133,-2.86595 -0.05071,-4.2985"
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.02081;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun235"
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3" />
@@ -10046,7 +10046,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 30.8679,86.8242 1.1303,-3.0683"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path109" />
     <path
@@ -10069,7 +10069,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 6.92031,97.6057 9.64664,92.2976 C 8.31597,90.7799 7.67508,88.8115 7.41195,86.8385 6.73954,82.1362 7.07119,77.3725 6.99014,72.6404 6.99848,67.8757 6.9775,63.1079 6.99272,58.3452 7.03862,57.2202 7.18633,56.0933 7.45738,55 m 3.28102,-7.6968 c 2.89507,-1.45849 5.27188,-3.80295 7.50946,-6.11264 0.74099,-1.55531 1.47402,-3.21275 2.9375,-4.37778 1.90729,2.2525 2.39714,5.09787 4.58365,6.82846 1.42681,1.51976 2.91423,2.94792 4.72441,4.00752"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun237"
        inkscape:label="Points droits pour auto-remplissage satin 7"
        inkstitch:ties="3"
@@ -10094,7 +10094,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 21,33.8661 V 37.288"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path110" />
     <path
@@ -10158,7 +10158,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 44.3354,86.5033 38.098,84.9485 C 38.07701,75.5333 38.13841,66.1173 38.0655,56.7026 38.04057,55.977938 38.01565,55.25328 37.99072,54.52861 M 33.0142,50.8096 c 0.0763,-2.8266 -0.1212,-5.6654 0.0875,-8.4851"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun240"
        inkscape:label="Points droits pour auto-remplissage satin 4"
        inkstitch:ties="3"
@@ -10201,7 +10201,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 31.8613,86.3515 1.1303,-2.9994"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path111" />
     <path
@@ -10223,7 +10223,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 8.2343,97.4333 2.4058,-5.5396 C 8.19629,89.0269 8.19638,85.0573 8.01554,81.4993 7.95015,73.6119 7.99596,65.7226 7.98495,57.835 8.02308,57.0507 8.13553,56.2726 8.25852,55.498 m 4.00918,-4.5068 c 0.01912,-2.8524 -0.03897,-5.70593 0.07592,-8.55693"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun242"
        inkscape:label="Points droits pour auto-remplissage satin 9"
        inkstitch:ties="3"
@@ -10290,7 +10290,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 40.6263,85.4074 4.3494,-5.1731 c -1.60138,-8.47937 4.0906,-17.1829 12.0323,-20.0758 8.11154,-3.19238 18.216,0.56767 22.1218,8.40703 1.15907,2.32564 2.51713,4.93541 1.97693,7.60306 -2.61489,2.2217 -6.27173,1.02225 -9.39356,1.33144 -7.02089,0 -14.0418,0 -21.0627,0"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun228"
        inkscape:label="Points droits pour auto-remplissage satin 2"
        inkstitch:ties="3" />
@@ -10313,7 +10313,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 50.9712,81.278 -8.9078,4.5803"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path112" />
     <path
@@ -10335,7 +10335,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 17.2191,88.8059 -4.6947,1.4534 C 7.03201,84.8092 6.17236,75.7012 9.43327,68.8709 12.1408,63.8942 17.3621,60.3885 22.8745,59.3032 c 6.8971,-1.2887 13.8875,1.985 18.3872,7.1407 l -0.8084,7.2325"
        style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun243"
        inkscape:label="Points droits pour auto-remplissage satin 5"
        inkstitch:ties="3" />
@@ -10366,7 +10366,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 30.474597,91.581625 c -3.9674,3.912143 -10.0366,3.59837 -15.189862,4.003105"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun244"
        inkscape:label="Points droits pour auto-remplissage satin 1"
        inkstitch:ties="3" />
@@ -10389,7 +10389,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 15.903,61.9018 4.0911,-0.3695"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path113" />
     <path
@@ -10412,7 +10412,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 12.3049,92.5019 7.7941,100.13"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path114" />
     <path
@@ -10442,7 +10442,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 35.0744,89.1618 C 38.44877,83.76451 37.41906,77.2257 37.57714,71.1972 37.60631,59.8003 37.51704,48.402 37.62497,37.0058 M 33.1096,30.3264 c 0.06588,-2.54181 0.0042,-5.08428 0.04097,-7.62632"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun246"
        inkscape:label="Points droits pour auto-remplissage satin 2"
        inkstitch:ties="3"
@@ -10485,7 +10485,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 13.5262,87.6053 9.99866,89.6567 C 7.08086,85.4124 6.90544,80.1383 7.07713,75.1774 7.13008,62.9106 6.97096,50.6331 7.15723,38.3731 L 7.277877,37.394941 M 12.3756,30.7315 c 0.04457,-2.97526 -0.04126,-5.95114 0.05639,-8.92541"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun248"
        inkscape:label="Points droits pour auto-remplissage satin 6"
        inkstitch:ties="3"
@@ -10535,7 +10535,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 39.195,90.6015 c 4.68157,-5.79675 6.62477,-13.3506 7.3137,-20.645 0.252436,-7.44966 -0.92251,-15.3013 -5.02113,-21.6702 -1.67492,-2.57807 -3.91155,-4.80575 -6.514,-6.44588 M 36.0935,30.637 c 0.132673,-3.00918 0.01318,-6.02205 0.105538,-9.03251"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun250"
        inkscape:label="Points droits pour auto-remplissage satin 2"
        inkstitch:ties="3"
@@ -10578,7 +10578,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="M 13.7468,90.1748 C 9.11734,84.1097 7.17105,76.3644 6.65248,68.8562 6.597,59.8265 8.63187,49.8711 15.7535,43.691 c 2.59972,-2.29899 5.87266,-3.82499 9.35237,-4.08776 L 26.6187,35.753"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun252"
        inkscape:label="Points droits pour auto-remplissage satin 6"
        inkstitch:ties="3" />
@@ -10603,7 +10603,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 15.3962,30.480783 c 0.0141,-2.961878 0.0286,-5.923188 -0.02746,-8.88489"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun253"
        inkscape:label="Points droits pour auto-remplissage satin 8"
        inkstitch:ties="3" />
@@ -10668,7 +10668,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 47.2185,80.2449 -10.0884,1.3107 c -6.66655,0.215781 -13.3638,0.107223 -20.0345,0.04652 L 16.834201,81.5746 16.814031,81.5725 14.7948,85.9323"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun254"
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3" />
@@ -10691,7 +10691,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 36.7684,77.3916 2.1745,5.3717"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path115" />
     <path
@@ -10715,7 +10715,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 38.0055,30.6973 c 0.101857,-2.8901 -0.01659,-5.78157 0.07569,-8.67145"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun255"
        inkscape:label="Points droits pour auto-remplissage satin 6"
        inkstitch:ties="3"
@@ -10758,7 +10758,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 17.27,30.6261 c 0.111831,-2.84422 -0.08282,-5.69912 0.11426,-8.53747"
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
-       inkstitch:running_stitch_length_mm=""
+       inkstitch:running_stitch_length_mm="1.5"
        id="autosatinrun256"
        inkscape:label="Points droits pour auto-remplissage satin 9"
        inkstitch:ties="3"
@@ -10801,7 +10801,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
     <path
        d="m 2.1689,91.6498 2.58532,8.6072"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.5"
        id="path116" />
     <path
