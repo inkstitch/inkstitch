@@ -121,6 +121,30 @@ class CloneElementTest(TestCase):
             # then rotated another -10 degrees to -55
             self.assertAngleAlmostEqual(element_fill_angle(elements[0]), -55)
 
+    def test_angle_inherits_down_tree(self):
+        """
+        The stitching angle of a clone is based in part on the relative transforms of the source and clone.
+        """
+        root: SvgDocumentElement = svg()
+        g1 = root.add(Group())
+        g1.set('transform', Transform().add_rotate(3))
+        rect = g1.add(Rectangle(attrib={
+            "width": "10",
+            "height": "10",
+            INKSTITCH_ATTRIBS["angle"]: "30"
+        }))
+        g2 = root.add(Group())
+        g2.set('transform', Transform().add_translate((20, 0)).add_rotate(-7))
+        use = g2.add(Use())
+        use.href = rect
+        use.set('transform', Transform().add_rotate(11))
+
+        clone = Clone(use)
+        with clone.clone_elements() as elements:
+            self.assertEqual(len(elements), 1)
+            # Angle goes from 30 -> 40 (g1 -> g2) -> 29 (use)
+            self.assertAngleAlmostEqual(element_fill_angle(elements[0]), 29)
+
     def test_transform_inherits_from_cloned_element(self):
         """
         Elements cloned by cloned_elements need to inherit their transform from their href'd element and their use to match what's shown.

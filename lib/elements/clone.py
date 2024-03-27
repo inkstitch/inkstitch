@@ -118,7 +118,10 @@ class Clone(EmbroideryElement):
             # Otherwise, it might be left around on the document if we throw for some reason.
             self.resolve_all_clones(cloned_node)
 
-            self.apply_angles(cloned_node, local_transform)
+            source_parent_transform = source_node.getparent().composed_transform()
+            clone_transform = cloned_node.composed_transform()
+            global_transform = clone_transform @ -source_parent_transform
+            self.apply_angles(cloned_node, global_transform)
 
             yield self.clone_to_elements(cloned_node)
         finally:
