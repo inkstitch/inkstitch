@@ -22,7 +22,7 @@ from ..svg import (PIXELS_PER_MM, apply_transforms, convert_length,
                    get_node_transform)
 from ..svg.tags import INKSCAPE_LABEL, INKSTITCH_ATTRIBS
 from ..utils import Point, cache
-from ..utils.cache import get_stitch_plan_cache, CacheKeyGenerator
+from ..utils.cache import CacheKeyGenerator, get_stitch_plan_cache
 
 
 class Param(object):
@@ -557,6 +557,9 @@ class EmbroideryElement(object):
             gradient['styles'] = [(style['stop-color'], style['stop-opacity']) for style in self.gradient.stop_styles]
         return gradient
 
+    def _get_tartan_key_data(self):
+        return (self.node.get('inkstitch:tartan', None))
+
     def get_cache_key_data(self, previous_stitch):
         return []
 
@@ -572,6 +575,7 @@ class EmbroideryElement(object):
         cache_key_generator.update(self._get_patterns_cache_key_data())
         cache_key_generator.update(self._get_guides_cache_key_data())
         cache_key_generator.update(self.get_cache_key_data(previous_stitch))
+        cache_key_generator.update(self._get_tartan_key_data())
 
         cache_key = cache_key_generator.get_cache_key()
         debug.log(f"cache key for {self.node.get('id')} {self.node.get(INKSCAPE_LABEL)} {previous_stitch}: {cache_key}")

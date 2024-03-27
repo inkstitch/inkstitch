@@ -8,7 +8,7 @@ import typing
 
 import numpy
 from shapely.geometry import (GeometryCollection, LinearRing, LineString,
-                              MultiLineString, MultiPolygon)
+                              MultiLineString, MultiPoint, MultiPolygon)
 from shapely.geometry import Point as ShapelyPoint
 
 
@@ -157,6 +157,26 @@ def ensure_multi_polygon(thing, min_size=0):
     if min_size > 0:
         multi_polygon = MultiPolygon([polygon for polygon in multi_polygon.geoms if polygon.area > min_size])
     return multi_polygon
+
+
+def ensure_multi_point(thing):
+    """Given a shapely geometry, return a MultiPoint"""
+    multi_point = MultiPoint()
+    if thing.is_empty:
+        return multi_point
+    if thing.geom_type == "MultiPoint":
+        return thing
+    elif thing.geom_type == "Point":
+        return MultiPoint([thing])
+    elif thing.geom_type == "GeometryCollection":
+        points = []
+        for shape in thing.geoms:
+            if shape.geom_type == "Point":
+                points.append(shape)
+            elif shape.geom_type == "MultiPoint":
+                points.extend(shape.geoms)
+        return MultiPoint(points)
+    return multi_point
 
 
 def cut_path(points, length):
