@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-03-25 01:06+0000\n"
-"PO-Revision-Date: 2024-03-25 01:07\n"
+"POT-Creation-Date: 2024-03-27 01:04+0000\n"
+"PO-Revision-Date: 2024-03-27 01:05\n"
 "Last-Translator: \n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-25 01:06+0000\n"
+"POT-Creation-Date: 2024-03-27 01:04+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1168,114 +1168,131 @@ msgstr "角度反転"
 msgid "Flip automatically calucalted angle if it appears to be wrong."
 msgstr "修正が必要と思われる場合に、自動的に角度を計算し反転させます。"
 
-#: lib/elements/element.py:223
+#: lib/elements/element.py:223 lib/gui/preferences.py:59
+#: lib/gui/preferences.py:106
+msgid "Minimum stitch length"
+msgstr ""
+
+#: lib/elements/element.py:224
+msgid "Overwrite global minimum stitch length setting. Shorter stitches than that will be removed."
+msgstr ""
+
+#: lib/elements/element.py:234 lib/gui/preferences.py:41
+msgid "Minimum jump stitch length"
+msgstr ""
+
+#: lib/elements/element.py:235
+msgid "Overwrite global minimum jump stitch length setting. Shorter distances to the next object will have no lock stitches."
+msgstr ""
+
+#: lib/elements/element.py:245
 msgid "Allow lock stitches"
 msgstr "ロックステッチを許可する"
 
-#: lib/elements/element.py:224
+#: lib/elements/element.py:246
 msgid "Tie thread at the beginning and/or end of this object. Manual stitch will only add lock stitches if force lock stitched is checked."
 msgstr "このオブジェクトの先頭および/または末尾の糸を結びます。手動ステッチの場合「強制ロックステッチ」がチェックされている場合のみ、ロックステッチを追加します。"
 
 #. options to allow lock stitch before and after objects
-#: lib/elements/element.py:229
+#: lib/elements/element.py:251
 msgid "Both"
 msgstr "両方"
 
-#: lib/elements/element.py:229
+#: lib/elements/element.py:251
 msgid "Before"
 msgstr "前"
 
-#: lib/elements/element.py:229
+#: lib/elements/element.py:251
 msgid "After"
 msgstr "後"
 
-#: lib/elements/element.py:229
+#: lib/elements/element.py:251
 msgid "Neither"
 msgstr "どちらでもない"
 
-#: lib/elements/element.py:238
+#: lib/elements/element.py:260
 #: inx/inkstitch_lettering_force_lock_stitches.inx:3
 msgid "Force lock stitches"
 msgstr "強制ロックステッチ"
 
-#: lib/elements/element.py:239
+#: lib/elements/element.py:261
 msgid "Sew lock stitches after sewing this element, even if the distance to the next object is shorter than defined by the minimum jump stitch length value in the Ink/Stitch preferences."
 msgstr ""
 
-#: lib/elements/element.py:251
+#: lib/elements/element.py:273
 msgid "Tack stitch"
 msgstr "仮縫い"
 
-#: lib/elements/element.py:252
+#: lib/elements/element.py:274
 msgid "Tack down stitch type"
 msgstr "仮縫いのタイプ"
 
-#: lib/elements/element.py:262 lib/elements/element.py:308
+#: lib/elements/element.py:284 lib/elements/element.py:330
 msgid "Custom path"
 msgstr "カスタムパス"
 
-#: lib/elements/element.py:263
+#: lib/elements/element.py:285
 msgid "Enter a custom path. For svg paths The last node will not be embroidered, but represents the first stitch of the element."
 msgstr "カスタムパスを入力します。「仮縫い補正」の値が、カスタムパスの 1 に相当します。svg パスの場合、最後のノードは刺しゅうされませんが、その要素の最初のステッチを表します。"
 
-#: lib/elements/element.py:273 lib/elements/element.py:285
+#: lib/elements/element.py:295 lib/elements/element.py:307
 msgid "Scale tack stitch"
 msgstr "仮縫い補正"
 
-#: lib/elements/element.py:274
+#: lib/elements/element.py:296
 msgid "Set stitch length. A 1 in a custom path equals this values."
 msgstr "仮縫いのステッチの長さを設定します。カスタムパスの 1 がこの値に対応します。"
 
-#: lib/elements/element.py:286
+#: lib/elements/element.py:308
 msgid "Scale tack stitch by this percentage."
 msgstr "仮縫い補正を、このパーセンテージで行います。"
 
-#: lib/elements/element.py:297
+#: lib/elements/element.py:319
 msgid "Lock stitch"
 msgstr "ロックステッチ（本縫い）"
 
-#: lib/elements/element.py:298
+#: lib/elements/element.py:320
 msgid "Lock stitch type"
 msgstr "ロックステッチ（本縫い）のタイプ"
 
-#: lib/elements/element.py:309
+#: lib/elements/element.py:331
 msgid "Enter a custom path. For svg paths the first node will not be embroidered, but represents the last stitch of the element."
 msgstr "カスタムパスを入力します。「ロックステッチ補正」の値が、カスタムパスの 1 に相当します。svg パスの場合、最後のノードは刺しゅうされませんが、その要素の最初のステッチを表します。"
 
-#: lib/elements/element.py:319 lib/elements/element.py:331
+#: lib/elements/element.py:341 lib/elements/element.py:353
 msgid "Scale lock stitch"
 msgstr "ロックステッチ（本縫い）補正"
 
-#: lib/elements/element.py:320
+#: lib/elements/element.py:342
 msgid "Set length of lock stitches (mm)."
 msgstr "ロックステッチ（本縫い）の長さを設定します (mm) 。"
 
-#: lib/elements/element.py:332
+#: lib/elements/element.py:354
 msgid "Scale lock stitch by this percentage."
 msgstr "ロックステッチ（本縫い）補正を、このパーセンテージで行います。"
 
-#: lib/elements/element.py:344
+#: lib/elements/element.py:366
 msgid "Trim After"
 msgstr "糸切り"
 
-#: lib/elements/element.py:345
+#: lib/elements/element.py:367
 msgid "Add a TRIM command after stitching this object."
 msgstr "このオブジェクトをステッチした後、TRIM コマンド（糸切り指示）を追加します。"
 
-#: lib/elements/element.py:354
+#: lib/elements/element.py:376
 msgid "Stop After"
 msgstr "停止"
 
-#: lib/elements/element.py:355
+#: lib/elements/element.py:377
 msgid "Add a STOP command after stitching this object."
 msgstr "このオブジェクトをステッチした後、STOP コマンド（停止指示）を追加します。"
 
-#: lib/elements/element.py:397
+#: lib/elements/element.py:419
 #, python-format
 msgid "Object %(id)s has an empty 'd' attribute.  Please delete this object from your document."
 msgstr "オブジェクト %(id)sには空の 'd' 属性があります。このオブジェクトをドキュメントから削除してください。"
 
-#: lib/elements/element.py:594
+#: lib/elements/element.py:620
 msgid "Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects. This will show you the exact location of the problem."
 msgstr ""
 
@@ -3053,10 +3070,6 @@ msgstr "環境設定"
 msgid "This SVG"
 msgstr ""
 
-#: lib/gui/preferences.py:41
-msgid "Minimum jump stitch length"
-msgstr ""
-
 #: lib/gui/preferences.py:42 lib/gui/preferences.py:90
 #: lib/gui/preferences.py:123
 msgid "Jump stitches smaller than this will be treated as normal stitches."
@@ -3069,10 +3082,6 @@ msgstr ""
 
 #: lib/gui/preferences.py:56 lib/gui/preferences.py:73
 msgid "Set As Default"
-msgstr ""
-
-#: lib/gui/preferences.py:59 lib/gui/preferences.py:106
-msgid "Minimum stitch length"
 msgstr ""
 
 #: lib/gui/preferences.py:79

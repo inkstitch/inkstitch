@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-03-25 01:06+0000\n"
-"PO-Revision-Date: 2024-03-26 01:04\n"
+"POT-Creation-Date: 2024-03-27 01:04+0000\n"
+"PO-Revision-Date: 2024-03-27 01:05\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-25 01:06+0000\n"
+"POT-Creation-Date: 2024-03-27 01:04+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1169,114 +1169,131 @@ msgstr "Inverser l'angle"
 msgid "Flip automatically calucalted angle if it appears to be wrong."
 msgstr "Inverse l'angle calculé automatiquement s'il semble faux."
 
-#: lib/elements/element.py:223
+#: lib/elements/element.py:223 lib/gui/preferences.py:59
+#: lib/gui/preferences.py:106
+msgid "Minimum stitch length"
+msgstr "Longueur minimum du point"
+
+#: lib/elements/element.py:224
+msgid "Overwrite global minimum stitch length setting. Shorter stitches than that will be removed."
+msgstr ""
+
+#: lib/elements/element.py:234 lib/gui/preferences.py:41
+msgid "Minimum jump stitch length"
+msgstr "Longueur minimum de saut"
+
+#: lib/elements/element.py:235
+msgid "Overwrite global minimum jump stitch length setting. Shorter distances to the next object will have no lock stitches."
+msgstr ""
+
+#: lib/elements/element.py:245
 msgid "Allow lock stitches"
 msgstr "Autoriser les points d'arrêts"
 
-#: lib/elements/element.py:224
+#: lib/elements/element.py:246
 msgid "Tie thread at the beginning and/or end of this object. Manual stitch will only add lock stitches if force lock stitched is checked."
 msgstr "Faire un nœud au début et/ou à la fin de cet objet. Le point manuel n'ajoutera de point d'arrêt que si \"Forcer les points d'arrêt\" est coché."
 
 #. options to allow lock stitch before and after objects
-#: lib/elements/element.py:229
+#: lib/elements/element.py:251
 msgid "Both"
 msgstr "Au début et à la fin"
 
-#: lib/elements/element.py:229
+#: lib/elements/element.py:251
 msgid "Before"
 msgstr "Au début"
 
-#: lib/elements/element.py:229
+#: lib/elements/element.py:251
 msgid "After"
 msgstr "A la fin"
 
-#: lib/elements/element.py:229
+#: lib/elements/element.py:251
 msgid "Neither"
 msgstr "Aucun"
 
-#: lib/elements/element.py:238
+#: lib/elements/element.py:260
 #: inx/inkstitch_lettering_force_lock_stitches.inx:3
 msgid "Force lock stitches"
 msgstr "Forcer des points d'arrêt"
 
-#: lib/elements/element.py:239
+#: lib/elements/element.py:261
 msgid "Sew lock stitches after sewing this element, even if the distance to the next object is shorter than defined by the minimum jump stitch length value in the Ink/Stitch preferences."
 msgstr "Créer des points d'arrêt après avoir cousu cet élément, même si la distance jusqu'à l'objet suivant est plus courte que la valeur de 'longueur minimum de saut' défini dans les préférences Ink/Stitch."
 
-#: lib/elements/element.py:251
+#: lib/elements/element.py:273
 msgid "Tack stitch"
 msgstr "Point d'arrêt initial"
 
-#: lib/elements/element.py:252
+#: lib/elements/element.py:274
 msgid "Tack down stitch type"
 msgstr "Type de point d'arrêt initial"
 
-#: lib/elements/element.py:262 lib/elements/element.py:308
+#: lib/elements/element.py:284 lib/elements/element.py:330
 msgid "Custom path"
 msgstr "Chemin personnalisé"
 
-#: lib/elements/element.py:263
+#: lib/elements/element.py:285
 msgid "Enter a custom path. For svg paths The last node will not be embroidered, but represents the first stitch of the element."
 msgstr "Entrez un chemin personnalisé. Pour les chemins svg, le dernier nœud ne sera pas brodé, mais représente le premier point de l'élément."
 
-#: lib/elements/element.py:273 lib/elements/element.py:285
+#: lib/elements/element.py:295 lib/elements/element.py:307
 msgid "Scale tack stitch"
 msgstr "Échelle du point d'arrêt initial"
 
-#: lib/elements/element.py:274
+#: lib/elements/element.py:296
 msgid "Set stitch length. A 1 in a custom path equals this values."
 msgstr "Détermine la longueur de point. Un 1 dans un chemin personnalisé représentera cette valeur."
 
-#: lib/elements/element.py:286
+#: lib/elements/element.py:308
 msgid "Scale tack stitch by this percentage."
 msgstr "Mettre le point d'arrêt initial à l'échelle selon ce pourcentage."
 
-#: lib/elements/element.py:297
+#: lib/elements/element.py:319
 msgid "Lock stitch"
 msgstr "Point d'arrêt"
 
-#: lib/elements/element.py:298
+#: lib/elements/element.py:320
 msgid "Lock stitch type"
 msgstr "Type de point d'arrêt final"
 
-#: lib/elements/element.py:309
+#: lib/elements/element.py:331
 msgid "Enter a custom path. For svg paths the first node will not be embroidered, but represents the last stitch of the element."
 msgstr "Entrez un chemin personnalisé. Pour les chemins svg, le premier nœud ne sera pas brodé, mais représente le dernier point de l'élément."
 
-#: lib/elements/element.py:319 lib/elements/element.py:331
+#: lib/elements/element.py:341 lib/elements/element.py:353
 msgid "Scale lock stitch"
 msgstr "Échelle du point d'arrêt final"
 
-#: lib/elements/element.py:320
+#: lib/elements/element.py:342
 msgid "Set length of lock stitches (mm)."
 msgstr "Détermine la longueur des points d'arrêt (mm)."
 
-#: lib/elements/element.py:332
+#: lib/elements/element.py:354
 msgid "Scale lock stitch by this percentage."
 msgstr "Mettre à l'échelle le point d'arrêt selon ce pourcentage."
 
-#: lib/elements/element.py:344
+#: lib/elements/element.py:366
 msgid "Trim After"
 msgstr "Couper après"
 
-#: lib/elements/element.py:345
+#: lib/elements/element.py:367
 msgid "Add a TRIM command after stitching this object."
 msgstr "Ajoute une commande de coupe après avoir brodé cet objet."
 
-#: lib/elements/element.py:354
+#: lib/elements/element.py:376
 msgid "Stop After"
 msgstr "Arrêter après"
 
-#: lib/elements/element.py:355
+#: lib/elements/element.py:377
 msgid "Add a STOP command after stitching this object."
 msgstr "Ajoute une commande STOP après avoir brodé cet objet."
 
-#: lib/elements/element.py:397
+#: lib/elements/element.py:419
 #, python-format
 msgid "Object %(id)s has an empty 'd' attribute.  Please delete this object from your document."
 msgstr "L'objet %(id)s a un attribut 'd' vide. S’il vous plaît supprimer cet objet dans votre document."
 
-#: lib/elements/element.py:594
+#: lib/elements/element.py:620
 msgid "Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects. This will show you the exact location of the problem."
 msgstr "Merci d'exécuter Extensions > Ink/Stitch > Résolution de problèmes > Dépistage de problèmes avec des objets. Ceci indiquera la position erronée."
 
@@ -3059,10 +3076,6 @@ msgstr "Préférences"
 msgid "This SVG"
 msgstr "Ce fichier svg"
 
-#: lib/gui/preferences.py:41
-msgid "Minimum jump stitch length"
-msgstr "Longueur minimum de saut"
-
 #: lib/gui/preferences.py:42 lib/gui/preferences.py:90
 #: lib/gui/preferences.py:123
 msgid "Jump stitches smaller than this will be treated as normal stitches."
@@ -3076,10 +3089,6 @@ msgstr "mm"
 #: lib/gui/preferences.py:56 lib/gui/preferences.py:73
 msgid "Set As Default"
 msgstr "Utiliser comme valeur par défaut"
-
-#: lib/gui/preferences.py:59 lib/gui/preferences.py:106
-msgid "Minimum stitch length"
-msgstr "Longueur minimum du point"
 
 #: lib/gui/preferences.py:79
 msgid "Global"
