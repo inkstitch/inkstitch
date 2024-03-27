@@ -20,13 +20,13 @@
      units="mm"
      scale-x="1"
      inkscape:document-rotation="0"
-     inkscape:current-layer="g1270"
+     inkscape:current-layer="g221"
      inkscape:window-maximized="1"
      inkscape:window-y="-8"
      inkscape:window-x="-8"
-     inkscape:cy="65.024465"
-     inkscape:cx="36.017268"
-     inkscape:zoom="8.273809"
+     inkscape:cy="85.62527"
+     inkscape:cx="46.17782"
+     inkscape:zoom="5.3488882"
      showgrid="true"
      id="namedview217"
      inkscape:window-height="1017"
@@ -1846,7 +1846,7 @@ http://scripts.sil.org/OFL
      transform="translate(0,-24.5)"
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-E"
-     style="display:inline"
+     style="display:none"
      id="g1270">
     <g
        id="g1"
@@ -1939,6 +1939,53 @@ http://scripts.sil.org/OFL
          inkscape:label="Auto-remplissage satin 7"
          inkstitch:reverse_rails="none"
          inkstitch:force_lock_stitches="True" />
+    </g>
+  </g>
+  <g
+     id="g221"
+     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
+     inkscape:label="GlyphLayer-!"
+     inkscape:groupmode="layer"
+     transform="translate(-6.423504,-14.558054)">
+    <g
+       id="g2"
+       transform="translate(6.5434159,14.769424)">
+      <g
+         id="g225">
+        <path
+           id="path109-4"
+           d="m 42.4129,136.3 c 0.0022,-4.64131 -0.164943,-9.2878 -0.3876,-13.922 M 42.6905,98.9579 41.3172,21.6238"
+           inkstitch:running_stitch_length_mm="2"
+           style="stroke-width:1;stroke-dasharray:0.5, 0.5"
+           sodipodi:nodetypes="cccc" />
+        <path
+           id="path223"
+           style="fill:none;stroke:#000000;stroke-width:1"
+           d="m 40.813772,21.258234 c -4.044127,0.0057 -5.463542,1.280308 -6.705442,3.845731 -1.06291,2.195681 -1.148109,4.890302 -0.443808,14.036692 0.897064,11.649691 1.686784,31.995875 1.93515,49.856826 l 0.257171,18.494007 M 43.21569,21.058074 c 3.568532,-0.0051 4.538481,0.846785 6.206819,2.423916 2.03711,1.925751 2.361646,4.224568 1.847726,13.08814 C 50.3824,51.882611 49.999562,64.228893 49.752301,85.52347 L 49.49722,107.49149 M 29.423504,72.057561 H 55.84461"
+           sodipodi:nodetypes="csssccsssccc"
+           inkstitch:satin_column="True"
+           inkstitch:zigzag_underlay="True"
+           inkstitch:force_lock_stitches="True" />
+      </g>
+      <path
+         style="fill:none;fill-opacity:0.851613;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-dasharray:3, 3;stroke-dashoffset:0"
+         d="M 44.235336,130.70441 42.233737,119.49545"
+         id="path225" />
+      <path
+         id="path221"
+         d="m 30.4786,129.024 c 7.627733,-0.0593 15.255467,-0.11867 22.8832,-0.178 m -10.2304,-9.2448 c 11.388991,-0.30391 11.069765,19.20146 0,19.1238 m -1.976867,-19.58 C 30.305042,118.94703 29.97081,138.71426 40.8504,138.725"
+         inkstitch:satin_column="True"
+         inkstitch:zigzag_spacing_mm="0.30"
+         inkstitch:pull_compensation_mm="0.3"
+         inkstitch:zigzag_underlay="True"
+         inkstitch:zigzag_underlay_inset_mm=".25"
+         inkstitch:ties="2"
+         inkstitch:max_stitch_length_mm="6"
+         inkstitch:zigzag_underlay_max_stitch_length_mm="6"
+         inkstitch:reverse_rails="none"
+         inkstitch:short_stitch_distance_mm="0.18"
+         inkstitch:force_lock_stitches="True"
+         style="stroke-width:1" />
     </g>
   </g>
   <g
@@ -6222,7 +6269,7 @@ http://scripts.sil.org/OFL
      transform="translate(0,-24.5)"
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-?"
-     style="display:none"
+     style="display:inline"
      id="g1246">
     <path
        inkstitch:center_walk_underlay="False"
@@ -8593,7 +8640,7 @@ http://scripts.sil.org/OFL
   </g>
   <g
      id="g42"
-     style="display:inline;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      inkscape:label="GlyphLayer-Ë"
      inkscape:groupmode="layer"
      transform="translate(22.9815,27.4276)">
