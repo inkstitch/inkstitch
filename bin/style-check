@@ -5,4 +5,4 @@
 # Instead of files, "--diff" may be passed to check only the lines changed
 # by a diff piped to standard input.
 
-flake8 --count --max-complexity=10 --max-line-length=150 --statistics --exclude=pyembroidery,__init__.py,electron,build,src,dist "${@:-.}"
+flake8 --count --max-complexity=10 --max-line-length=150 --statistics --exclude=pyembroidery,__init__.py,electron,build,src,dist,./*-metadata.py,./pyembroidery-format-descriptions.py "${@:-.}"
