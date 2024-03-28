@@ -93,7 +93,7 @@ class Clone(EmbroideryElement):
             return patches
 
     @contextmanager
-    def clone_elements(self) -> Generator[list[EmbroideryElement], None, None]:
+    def clone_elements(self) -> Generator[List[EmbroideryElement], None, None]:
         """
         A context manager method which yields a set of elements representing the cloned element(s) href'd by this clone's element.
         Cleans up after itself afterwards.
