@@ -4,7 +4,6 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 import errno
-import logging
 import socket
 import sys
 import time
@@ -66,9 +65,6 @@ class APIServer(Thread):
         self.flask_server.shutdown()
         self.server_thread.join()
 
-    def disable_logging(self):
-        logging.getLogger('werkzeug').setLevel(logging.ERROR)
-
     # https://github.com/aluo-x/Learning_Neural_Acoustic_Fields/blob/master/train.py
     # https://github.com/pytorch/pytorch/issues/71029
     def find_free_port(self):
@@ -77,8 +73,6 @@ class APIServer(Thread):
             return s.getsockname()[1]
 
     def run(self):
-        self.disable_logging()
-
         self.host = "127.0.0.1"
         self.port = self.find_free_port()
         self.flask_server = make_server(self.host, self.port, self.app)

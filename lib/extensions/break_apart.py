@@ -3,7 +3,6 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-import logging
 from copy import copy
 
 import inkex
@@ -92,12 +91,7 @@ class BreakApart(InkstitchExtension):
         return polygons
 
     def geom_is_valid(self, geom):
-        # Don't complain about invalid shapes, we just want to know
-        logger = logging.getLogger('shapely.geos')
-        level = logger.level
-        logger.setLevel(logging.CRITICAL)
         valid = geom.is_valid
-        logger.setLevel(level)
         return valid
 
     def ensure_minimum_size(self, polygons, size):

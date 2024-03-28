@@ -4,7 +4,6 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 import json
-import logging
 import os
 import socket
 import sys
@@ -159,9 +158,6 @@ class PrintPreviewServer(Thread):
         self.flask_server.shutdown()
         self.server_thread.join()
 
-    def disable_logging(self):
-        logging.getLogger('werkzeug').setLevel(logging.ERROR)
-
     # https://github.com/aluo-x/Learning_Neural_Acoustic_Fields/blob/master/train.py
     # https://github.com/pytorch/pytorch/issues/71029
     def find_free_port(self):
@@ -170,8 +166,6 @@ class PrintPreviewServer(Thread):
             return s.getsockname()[1]
 
     def run(self):
-        self.disable_logging()
-
         self.host = "127.0.0.1"
         self.port = self.find_free_port()
         # exporting the port number for languages to work in electron vuejs part of inkstitch
