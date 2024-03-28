@@ -3,12 +3,10 @@
 # Copyright (c) 2023 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-from typing import Union
-
-from inkex import Circle, PathElement, Rectangle
+from inkex import BaseElement
 
 
-def prepare_tartan_fill_element(element: Union[PathElement, Rectangle, Circle]) -> None:
+def prepare_tartan_fill_element(element: BaseElement) -> None:
     """Prepares an svg element to be rendered as a tartan_fill embroidery element
 
     :param element: svg element with a fill color (path, rectangle, or circle)

@@ -7,9 +7,9 @@ import time
 from collections import defaultdict
 from copy import copy
 from itertools import chain
-from typing import List, Optional, Tuple, Union
+from typing import List, Optional, Tuple
 
-from inkex import Circle, Group, Path, PathElement, Rectangle
+from inkex import BaseElement, Group, Path, PathElement
 from networkx import MultiGraph, is_empty
 from shapely import (LineString, MultiLineString, MultiPolygon, Point, Polygon,
                      dwithin, minimum_bounding_radius, reverse)
@@ -61,7 +61,7 @@ class TartanSvgGroup:
     def __repr__(self) -> str:
         return f'TartanPattern({self.rotate}, {self.scale}, ({self.offset_x}, {self.offset_y}), {self.symmetry}, {self.warp}, {self.weft})'
 
-    def generate(self, outline: Union[PathElement, Rectangle, Circle]) -> Group:
+    def generate(self, outline: BaseElement) -> Group:
         """
         Generates a svg group which holds svg elements to represent the tartan pattern
 
@@ -147,7 +147,7 @@ class TartanSvgGroup:
         pos = line.coords[-1]
         return Point(pos)
 
-    def _add_command(self, element: Union[PathElement, Rectangle, Circle]) -> None:
+    def _add_command(self, element: BaseElement) -> None:
         """
         Add a command to given svg element
 

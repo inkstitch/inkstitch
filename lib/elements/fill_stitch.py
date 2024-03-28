@@ -1104,5 +1104,5 @@ class FillStitch(EmbroideryElement):
     def do_linear_gradient_fill(self, shape, last_stitch_group, start, end):
         return linear_gradient_fill(self, shape, start, end)
 
-    def do_tartan_fill(self, shape, last_patch, start, end):
+    def do_tartan_fill(self, shape, last_stitch_group, start, end):
         return tartan_fill(self, shape, start, end)

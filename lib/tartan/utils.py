@@ -8,7 +8,7 @@ from collections import defaultdict
 from copy import copy
 from typing import List, Tuple, Union
 
-from inkex import Circle, PathElement, Rectangle
+from inkex import BaseElement
 from shapely import LineString, MultiPolygon, Point, Polygon, unary_union
 from shapely.affinity import rotate
 
@@ -197,7 +197,7 @@ def sort_fills_and_strokes(fills: defaultdict, strokes: defaultdict) -> Tuple[de
     return fills, strokes
 
 
-def get_tartan_settings(node: Union[PathElement, Rectangle, Circle]) -> dict:
+def get_tartan_settings(node: BaseElement) -> dict:
     """
     Parse tartan settings from node inkstich:tartan attribute
 
