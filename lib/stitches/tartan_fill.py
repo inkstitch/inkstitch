@@ -32,7 +32,7 @@ if TYPE_CHECKING:
     from ..elements import FillStitch
 
 
-def tartan_fill(fill: 'FillStitch', outline: Polygon, starting_point: Optional[List[float]], ending_point: Optional[List[float]]):
+def tartan_fill(fill: 'FillStitch', outline: Polygon, starting_point: Union[tuple, Stitch, None], ending_point: Union[tuple, Stitch, None]):
     """
     Main method to fill the tartan element with tartan fill stitches
 
@@ -52,7 +52,7 @@ def tartan_fill(fill: 'FillStitch', outline: Polygon, starting_point: Optional[L
     dimensions = _get_dimensions(fill, outline, offset, warp_width, weft_width)
     rotation_center = _get_rotation_center(outline)
 
-    warp = stripes_to_shapes(
+    warp_shapes = stripes_to_shapes(
         warp,
         dimensions,
         outline,
@@ -65,7 +65,7 @@ def tartan_fill(fill: 'FillStitch', outline: Polygon, starting_point: Optional[L
         False  # do not cut polygons just yet
     )
 
-    weft = stripes_to_shapes(
+    weft_shapes = stripes_to_shapes(
         weft,
         dimensions,
         outline,
@@ -81,18 +81,18 @@ def tartan_fill(fill: 'FillStitch', outline: Polygon, starting_point: Optional[L
     if fill.herringbone_width > 0:
         lines = _generate_herringbone_lines(outline, fill, dimensions, rotation)
         warp_lines, weft_lines = _split_herringbone_warp_weft(lines, fill.rows_per_thread, fill.running_stitch_length)
-        warp_color_lines = _get_herringbone_color_segments(warp_lines, warp, outline, rotation, fill.running_stitch_length)
-        weft_color_lines = _get_herringbone_color_segments(weft_lines, weft, outline, rotation, fill.running_stitch_length, True)
+        warp_color_lines = _get_herringbone_color_segments(warp_lines, warp_shapes, outline, rotation, fill.running_stitch_length)
+        weft_color_lines = _get_herringbone_color_segments(weft_lines, weft_shapes, outline, rotation, fill.running_stitch_length, True)
     else:
         lines = _generate_tartan_lines(outline, fill, dimensions, rotation)
         warp_lines, weft_lines = _split_warp_weft(lines, fill.rows_per_thread)
-        warp_color_lines = _get_tartan_color_segments(warp_lines, warp, outline, rotation, fill.running_stitch_length)
-        weft_color_lines = _get_tartan_color_segments(weft_lines, weft, outline, rotation, fill.running_stitch_length, True)
+        warp_color_lines = _get_tartan_color_segments(warp_lines, warp_shapes, outline, rotation, fill.running_stitch_length)
+        weft_color_lines = _get_tartan_color_segments(weft_lines, weft_shapes, outline, rotation, fill.running_stitch_length, True)
     if not lines:
         return []
 
-    warp_color_runs = _get_color_runs(warp, fill.running_stitch_length)
-    weft_color_runs = _get_color_runs(weft, fill.max_stitch_length)
+    warp_color_runs = _get_color_runs(warp_shapes, fill.running_stitch_length)
+    weft_color_runs = _get_color_runs(weft_shapes, fill.max_stitch_length)
 
     color_lines = defaultdict(list)
     for color, lines in chain(warp_color_lines.items(), weft_color_lines.items()):
@@ -129,7 +129,7 @@ def _generate_herringbone_lines(
     rotation_center = _get_rotation_center(outline)
     minx, miny, maxx, maxy = dimensions
 
-    herringbone_lines = [[], []]
+    herringbone_lines: list = [[], []]
     odd = True
     while minx < maxx:
         odd = not odd
@@ -151,10 +151,10 @@ def _generate_herringbone_lines(
 
         staggered_lines = []
         for i, line in enumerate(lines):
-            line = LineString(line)
-            staggered_line = apply_stitches(line, fill.max_stitch_length, fill.staggers, fill.row_spacing, i)
+            linestring = LineString(line)
+            staggered_line = apply_stitches(linestring, fill.max_stitch_length, fill.staggers, fill.row_spacing, i)
             # make sure we do not ommit the very first or very last point (it would confuse our sorting algorithm)
-            staggered_line = LineString([line.coords[0]] + list(staggered_line.coords) + [line.coords[-1]])
+            staggered_line = LineString([linestring.coords[0]] + list(staggered_line.coords) + [linestring.coords[-1]])
             staggered_lines.append(staggered_line)
 
         if odd:
@@ -201,10 +201,10 @@ def _generate_tartan_lines(
 
     staggered_lines = []
     for i, line in enumerate(lines):
-        line = LineString(line)
-        staggered_line = apply_stitches(line, fill.max_stitch_length, fill.staggers, fill.row_spacing, i)
+        linestring = LineString(line)
+        staggered_line = apply_stitches(linestring, fill.max_stitch_length, fill.staggers, fill.row_spacing, i)
         # make sure we do not ommit the very first or very last point (it would confuse our sorting algorithm)
-        staggered_line = LineString([line.coords[0]] + list(staggered_line.coords) + [line.coords[-1]])
+        staggered_line = LineString([linestring.coords[0]] + list(staggered_line.coords) + [linestring.coords[-1]])
         staggered_lines.append(staggered_line)
     return staggered_lines
 
@@ -223,8 +223,8 @@ def _split_herringbone_warp_weft(
     :param stitch_length: maximum stitch length for weft connector lines
     :returns: [0] warp and [1] weft list of MultiLineString objects
     """
-    warp_lines = []
-    weft_lines = []
+    warp_lines: List[LineString] = []
+    weft_lines: List[LineString] = []
     for i, line_blocks in enumerate(lines):
         for line_block in line_blocks:
             if i == 0:
@@ -357,7 +357,7 @@ def _get_herringbone_color_segments(
     :param weft: wether to render as warp or weft
     :returns: defaultdict with color grouped herringbone segments
     """
-    line_segments = defaultdict(list)
+    line_segments: defaultdict = defaultdict(list)
 
     if not polygons:
         return line_segments
@@ -397,7 +397,7 @@ def _get_weft_herringbone_color_segments(
     """
     weft_lines = defaultdict(list)
     for color, lines in line_segments.items():
-        color_lines = []
+        color_lines: List[LineString] = []
         for polygon in polygons[color][0]:
             polygon = polygon.normalize()
             polygon_coords = list(polygon.exterior.coords)
@@ -426,10 +426,10 @@ def _get_weft_herringbone_color_segments(
 
         # Users are likely to type in a herringbone width which is a multiple (or fraction) of the stripe width.
         # They may end up unconnected after line_merge, so we need to shift the weft for a random small number
-        color_lines = translate(ensure_multi_line_string(line_merge(MultiLineString(color_lines))), 0.00123, 0.00123)
-        color_lines = ensure_multi_line_string(color_lines.intersection(outline))
+        multi_lines = translate(ensure_multi_line_string(line_merge(MultiLineString(color_lines))), 0.00123, 0.00123)
+        multi_lines = ensure_multi_line_string(multi_lines.intersection(outline))
 
-        weft_lines[color].extend(list(color_lines.geoms))
+        weft_lines[color].extend(list(multi_lines.geoms))
 
     return weft_lines
 
@@ -449,7 +449,7 @@ def _get_weft_herringbone_connectors(
     :param stitch_length: stitch length
     :returns: a list of LineString connectors
     """
-    connectors = []
+    connectors: List[LineString] = []
     previous_end = None
     for line in reversed(polygon_lines):
         start = get_point(line, 0)
@@ -505,7 +505,7 @@ def _get_tartan_color_segments(
     :param herringbone: wether herringbone or normal tartan patterns are rendered
     :returns: a dictionary with color grouped line segments
     """
-    line_segments = defaultdict(list)
+    line_segments: defaultdict = defaultdict(list)
     if not polygons:
         return line_segments
     for color, shapes in polygons.items():
@@ -526,7 +526,7 @@ def _get_color_runs(lines: defaultdict, stitch_length: float) -> defaultdict:
     :param stitch_length: stitch length used to segmentize the lines
     :returns: defaultdict with segmentized running stitches grouped by color
     """
-    runs = defaultdict(list)
+    runs: defaultdict = defaultdict(list)
     if not lines:
         return runs
     for color, shapes in lines.items():
@@ -537,7 +537,7 @@ def _get_color_runs(lines: defaultdict, stitch_length: float) -> defaultdict:
 
 def _get_segment_lines(
     polygon: Polygon,
-    lines: List[LineString],
+    lines: MultiLineString,
     outline: Polygon,
     stitch_length: float,
     rotation: float,
@@ -703,7 +703,7 @@ def _get_fill_stitch_groups(
     :param color_lines: lines grouped by color
     :returns: a list with StitchGroup objects
     """
-    stitch_groups = []
+    stitch_groups: List[StitchGroup] = []
     i = 0
     for color, lines in color_lines.items():
         i += 1
@@ -713,7 +713,9 @@ def _get_fill_stitch_groups(
             starting_point = ensure_multi_line_string(shape.boundary).geoms[0].coords[0]
         ending_point = ensure_multi_line_string(shape.boundary).geoms[0].coords[0]
         segments = [list(line.coords) for line in lines if len(line.coords) > 1]
-        stitch_groups.append(_segments_to_stitch_group(fill, shape, segments, i, color, starting_point, ending_point))
+        stitch_group = _segments_to_stitch_group(fill, shape, segments, i, color, starting_point, ending_point)
+        if stitch_group is not None:
+            stitch_groups.append(stitch_group)
         check_stop_flag()
     return stitch_groups
 
@@ -735,10 +737,12 @@ def _get_run_stitch_groups(
     :param ending_point: the ending point
     :returns: a list with StitchGroup objects
     """
-    stitch_groups = []
+    stitch_groups: List[StitchGroup] = []
     for color, lines in color_lines.items():
         segments = [list(line.coords) for line in lines if len(line.coords) > 1]
-        stitch_groups.append(_segments_to_stitch_group(fill, shape, segments, None, color, starting_point, ending_point, True))
+        stitch_group = _segments_to_stitch_group(fill, shape, segments, None, color, starting_point, ending_point, True)
+        if stitch_group is not None:
+            stitch_groups.append(stitch_group)
         check_stop_flag()
     return stitch_groups
 
@@ -752,7 +756,7 @@ def _segments_to_stitch_group(
     starting_point: Optional[Union[tuple, Stitch]],
     ending_point: Optional[Union[tuple, Stitch]],
     runs: bool = False
-) -> Union[StitchGroup, list]:
+) -> Optional[StitchGroup]:
     """
     Route segments and turn them into a stitch group
 
@@ -768,7 +772,7 @@ def _segments_to_stitch_group(
     """
     fill_stitch_graph = build_fill_stitch_graph(shape, segments, starting_point, ending_point)
     if is_empty(fill_stitch_graph):
-        return []
+        return None
     graph_make_valid(fill_stitch_graph)
     travel_graph = build_travel_graph(fill_stitch_graph, shape, fill.angle, False)
     path = find_stitch_path(fill_stitch_graph, travel_graph, starting_point, ending_point)

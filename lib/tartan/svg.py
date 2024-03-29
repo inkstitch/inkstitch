@@ -290,7 +290,7 @@ class TartanSvgGroup:
         """
         start, end = edge
         routed = []
-        if geometry_type == 'polygon':
+        if geometry_type == 'polygon' and polygons is not None:
             polygon = self._find_polygon(polygons, Point(start))
             if polygon:
                 routed.append({'shape': polygon, 'start': start, 'end': end})
@@ -338,6 +338,8 @@ class TartanSvgGroup:
             if dwithin(point, polygon, 0.01):
                 return polygon
 
+        return None
+
     @staticmethod
     def _get_routing_lines(shapes: defaultdict) -> defaultdict:
         """
@@ -348,7 +350,7 @@ class TartanSvgGroup:
         """
         routing_lines = defaultdict(list)
         for color, elements in shapes.items():
-            routed = [[], []]
+            routed: list = [[], []]
             for polygon in elements[0]:
                 bounding_coords = polygon.minimum_rotated_rectangle.exterior.coords
                 routing_line = LineString([bounding_coords[0], bounding_coords[2]])
@@ -370,7 +372,7 @@ class TartanSvgGroup:
         """
         shapes_copy = copy(shapes)
         for color, shape in shapes_copy.items():
-            elements = [[], []]
+            elements: list = [[], []]
             polygons, linestrings = shape
             for polygon in polygons:
                 if isinstance(polygon, dict):
@@ -437,8 +439,8 @@ class TartanSvgGroup:
         :param weft: dictionary with weft polygons and linestrings grouped by color
         :returns: a dictionary with polygons and a dictionary with linestrings each grouped by color
         """
-        polygons = defaultdict(list)
-        linestrings = defaultdict(list)
+        polygons: defaultdict = defaultdict(list)
+        linestrings: defaultdict = defaultdict(list)
         for color, shapes in chain(warp.items(), weft.items()):
             start = None
             end = None
@@ -531,7 +533,7 @@ class TartanSvgGroup:
         path = Path(list(polygon.exterior.coords))
         path.close()
         if path is None:
-            return
+            return None
 
         for interior in polygon.interiors:
             interior_path = Path(list(interior.coords))

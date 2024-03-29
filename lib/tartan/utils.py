@@ -47,7 +47,7 @@ def stripes_to_shapes(
     """
 
     minx, miny, maxx, maxy = dimensions
-    shapes = defaultdict(list)
+    shapes: defaultdict = defaultdict(list)
 
     original_stripes = stripes
     if len(original_stripes) == 0:
@@ -62,7 +62,7 @@ def stripes_to_shapes(
 
         segments = stripes
         if symmetry and i % 2 != 0 and len(stripes) > 1:
-            segments = reversed(stripes[1:-1])
+            segments = list(reversed(stripes[1:-1]))
         for stripe in segments:
             width = stripe['width'] * PIXELS_PER_MM * (scale / 100)
             right = left + width
@@ -76,13 +76,13 @@ def stripes_to_shapes(
                 top = bottom
                 continue
 
-            dimensions = [top, bottom, left, right, minx, miny, maxx, maxy]
+            shape_dimensions = [top, bottom, left, right, minx, miny, maxx, maxy]
             if width <= min_stripe_width * PIXELS_PER_MM:
-                linestrings = _get_linestrings(outline, dimensions, rotation, rotation_center, weft)
+                linestrings = _get_linestrings(outline, shape_dimensions, rotation, rotation_center, weft)
                 shapes[stripe['color']].extend(linestrings)
                 continue
 
-            polygon = _get_polygon(dimensions, rotation, rotation_center, weft)
+            polygon = _get_polygon(shape_dimensions, rotation, rotation_center, weft)
             shapes[stripe['color']].append(polygon)
             left = right
             top = bottom
@@ -103,8 +103,8 @@ def _merge_polygons(
     """
     shapes_copy = copy(shapes)
     for color, shape_group in shapes_copy.items():
-        polygons = []
-        lines = []
+        polygons: List[Polygon] = []
+        lines: List[LineString] = []
         for shape in shape_group:
             if not shape.intersects(outline):
                 continue
@@ -112,12 +112,12 @@ def _merge_polygons(
                 polygons.append(shape)
             else:
                 lines.append(shape)
-        polygons = unary_union(polygons)
-        polygons = polygons.simplify(0.01)
+        merged_polygons = unary_union(polygons)
+        merged_polygons = merged_polygons.simplify(0.01)
         if intersect_outline:
-            polygons = polygons.intersection(outline)
-        polygons = ensure_multi_polygon(polygons)
-        shapes[color] = [list(polygons.geoms), lines]
+            merged_polygons = merged_polygons.intersection(outline)
+        merged_polygons = ensure_multi_polygon(merged_polygons)
+        shapes[color] = [list(merged_polygons.geoms), lines]
     return shapes
 
 
@@ -181,9 +181,10 @@ def sort_fills_and_strokes(fills: defaultdict, strokes: defaultdict) -> Tuple[de
     :param strokes: strokes grouped by color
     :returns: the sorted fills and strokes
     """
-    color_to_connect = filter(lambda color: color in fills, strokes)
-    color_to_connect = next(color_to_connect, None)
-    if color_to_connect is not None:
+    colors_to_connect = [color for color in fills.keys() if color in strokes]
+    if colors_to_connect:
+        color_to_connect = colors_to_connect[-1]
+
         last = fills[color_to_connect]
         fills.pop(color_to_connect)
         fills[color_to_connect] = last

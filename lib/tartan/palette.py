@@ -122,10 +122,10 @@ class Palette:
         if self.symmetry and len(code) > 0:
             code[0] = code[0].replace(')', ')/')
             code[-1] = code[-1].replace(')', ')/')
-        code = ' '.join(code)
+        code_str = ' '.join(code)
         if not self.symmetry:
-            code = f'...{code}...'
-        self.palette_code = code
+            code_str = f'...{code}...'
+        self.palette_code = code_str
 
     def parse_simple_code(self, code: str) -> None:
         """Example code:
@@ -150,7 +150,7 @@ class Palette:
             stripes.append({'render': not bool(render), 'color': color, 'width': float(width)})
         self.palette_stripes[0] = stripes
 
-    def parse_inkstitch_code(self, code: str) -> None:
+    def parse_inkstitch_code(self, code_str: str) -> None:
         """Example code:
         (#0000FF)/2.4 (#FFFFFF)0.4 (#0000FF)2.4 (#FF0000)0.2 (#000000)2.4 (#006400)2.4 (#FFFFFF)/0.2
 
@@ -158,9 +158,9 @@ class Palette:
         /   = indicates a symmetric sett
         ... = indicates an asymmetric sett
 
-        :param code: the tartan pattern code to apply
+        :param code_str: the tartan pattern code to apply
         """
-        code = code.split('|')
+        code = code_str.split('|')
         for i, direction in enumerate(code):
             stripes = []
             stripe_info = re.findall(r'\(([0-9A-Za-z#]+)\)(\?)?([0-9.]+)', direction)
@@ -210,14 +210,14 @@ class Palette:
             elif line.startswith('Palette:'):
                 palette = lines[i+1]
                 colors = re.findall(r'([A-Za-z]+)=#?([0-9afA-F]{6})', palette)
-                colors = dict(colors)
+                color_dict = dict(colors)
             i += 1
 
         stripe_info = re.findall(r'([a-zA-Z]+)([0-9.]*)', thread_code)
         for color, width in stripe_info:
             render = True
             try:
-                color = f'#{colors[color]}'
+                color = f'#{color_dict[color]}'
             except KeyError:
                 color = '#000000'
                 render = False

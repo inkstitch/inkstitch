@@ -156,7 +156,7 @@ def take_only_line_strings(thing):
     return shgeo.MultiLineString(line_strings)
 
 
-def apply_stitches(line, max_stitch_length, num_staggers, row_spacing, row_num, threshold=None):
+def apply_stitches(line, max_stitch_length, num_staggers, row_spacing, row_num, threshold=None) -> shgeo.LineString:
     if num_staggers == 0:
         num_staggers = 1  # sanity check to avoid division by zero.
     start = ((row_num / num_staggers) % 1) * max_stitch_length

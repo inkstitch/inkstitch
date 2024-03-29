@@ -7,6 +7,7 @@
 
 import math
 from itertools import chain, groupby
+from typing import Iterator
 
 import networkx
 from shapely import geometry as shgeo
@@ -52,6 +53,10 @@ class PathEdge(object):
 
     def __eq__(self, other):
         return self._sorted_nodes == other._sorted_nodes and self.key == other.key
+
+    def __iter__(self) -> Iterator:
+        for i in range(2):
+            yield self[i]
 
     def is_outline(self):
         return self.key.startswith(self.OUTLINE_KEYS)
