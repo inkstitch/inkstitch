@@ -1,12 +1,32 @@
 ---
 title: "New Features, Updates and Fixes for Ink/Stitch after the release of v3.0.1"
 permalink: /upcoming/
-last_modified_at: 2024-03-23
+last_modified_at: 2024-03-29
 sidebar:
   nav: pages
 toc: true
 ---
 ## New Extensions
+
+### Apply Palette
+
+`Thread Color Management > Apply Palette` ([#2738](https://github.com/inkstitch/inkstitch/pull/2738))
+
+This extension applies nearest colors from a specified thread palette on a design. This will also be recognized by the Ink/Stitch pdf output.
+
+### [Display Stacking order](/docs/visualize/#display-stacking-order)
+
+`Visualize and Export > Display Stacking order` ([#2656](https://github.com/inkstitch/inkstitch/issues/2656))
+
+![Display stacking order](/assets/images/docs/stacking_order.png)
+
+### [Element info](/docs/troubleshoot/#element-info)
+
+`Troubleshoot > Element info` ([#2544](https://github.com/inkstitch/inkstitch/issues/2544))
+
+This extension informs about various parameters of selected stitch elements.
+
+![Element info](/assets/images/docs/en/element_info.png)
 
 ### [Generate Test Swatches from Selection](/docs/edit/#generate-test-swatches-from-selection)
 
@@ -24,25 +44,12 @@ This extension helps reconstruct an original object from a stitch file.
 
 ![Fill to outline](/assets/images/docs/outline.png)
 
-### Apply Palette
+### [Tartan](/docs/fill-tools/#tartan)
 
-`Thread Color Management > Apply Palette` ([#2738](https://github.com/inkstitch/inkstitch/pull/2738))
+`Fill tools > Tartan` ([#2782](https://github.com/inkstitch/inkstitch/issues/2782))
 
-This extension applies nearest colors from a specified thread palette on a design. This will also be recognized by the Ink/Stitch pdf output.
+This extension generates the tartan stripes and applies them to the document either as svg elements or as tartan fill params
 
-### [Element info](/docs/troubleshoot/#element-info)
-
-`Troubleshoot > Element info` ([#2544](https://github.com/inkstitch/inkstitch/issues/2544))
-
-This extension informs about various parameters of selected stitch elements.
-
-![Element info](/assets/images/docs/en/element_info.png)
-
-### [Display Stacking order](/docs/visualize/#display-stacking-order)
-
-`Visualize and Export > Display Stacking order` ([#2656](https://github.com/inkstitch/inkstitch/issues/2656))
-
-![Display stacking order](/assets/images/docs/stacking_order.png)
 
 ## Extension Updates
 
@@ -122,6 +129,7 @@ This extension informs about various parameters of selected stitch elements.
 * Add no rung warning ([#2791](https://github.com/inkstitch/inkstitch/pull/2791))
 * Add warning for elements with stroke and fill color ([#2761](https://github.com/inkstitch/inkstitch/pull/2761))
 
+
 ## Fonts
 
 ### New fonts
@@ -138,6 +146,9 @@ This extension informs about various parameters of selected stitch elements.
 
 All fonts have been reworked to be more stable when transformed.
 
+([#2803](https://github.com/inkstitch/inkstitch/pull/2803))
+([#2802](https://github.com/inkstitch/inkstitch/pull/2802))
+([#2793](https://github.com/inkstitch/inkstitch/pull/2793))
 ([#2784](https://github.com/inkstitch/inkstitch/pull/2784))
 ([#2769](https://github.com/inkstitch/inkstitch/pull/2769))
 ([#2762](https://github.com/inkstitch/inkstitch/pull/2762))
@@ -150,6 +161,7 @@ All fonts have been reworked to be more stable when transformed.
 ([#2476](https://github.com/inkstitch/inkstitch/issues/2476))
 ([#2682](https://github.com/inkstitch/inkstitch/pull/2682))
 
+
 ## Palettes
 
 ### New Palettes
@@ -159,6 +171,7 @@ All fonts have been reworked to be more stable when transformed.
 ## Params
 
 * Improved error reporting ([#2437](https://github.com/inkstitch/inkstitch/issues/2437))
+* Add object based min stitch length und min jump stitch length ([#2792](https://github.com/inkstitch/inkstitch/issues/2792))
 
 ## Simulator
 
@@ -166,6 +179,7 @@ All fonts have been reworked to be more stable when transformed.
 * Simulator is now attached to the main window (params or lettering) ([#2557](https://github.com/inkstitch/inkstitch/issues/2557))
 
   It is detachable and the last state will be remembered.
+
 
 ## Stitch types
 
@@ -180,6 +194,10 @@ All fonts have been reworked to be more stable when transformed.
 
   [![Zigzag-Meander Grumpy-Cat](/assets/images/docs/zigzagmeander_grumpycat.jpg)](/assets/images/docs/zigzagmeander_grumpycat.svg)
 
+* [Tartan Fill](/docs/stitches/tartan-fill): a new stitch type to mimic tartan patterns ([#2782](https://github.com/inkstitch/inkstitch/issues/2782))
+
+  [![Tartan pattern](/assets/images/docs/tartan-fill.jpg)](/assets/images/docs/tartan-fill.svg)
+
 ### Satin column - family
 
 * Add stagger option for split stitches ([#2431](https://github.com/inkstitch/inkstitch/issues/2431))
@@ -190,6 +208,12 @@ All fonts have been reworked to be more stable when transformed.
   ![S-Stitch](/assets/images/docs/s-stitch-detail.png)
 * Zig-Zag: a new stitch type for the satin stitch type family ([#2431](https://github.com/inkstitch/inkstitch/issues/2431))
   ![Zigzag Stitch](/assets/images/docs/en/compare-satin-zigzag.png)
+
+### Clones
+
+* Improved angle detection for fill clones ([#2766](https://github.com/inkstitch/inkstitch/issues/2766))
+* Add ability to render clones of groups ([#2766](https://github.com/inkstitch/inkstitch/issues/2766))
+
 
 ## Export
 
@@ -202,6 +226,10 @@ All fonts have been reworked to be more stable when transformed.
 
 * Ink/Stitch file formats are also available from the Inkscape export dialog ([#2489](https://github.com/inkstitch/inkstitch/issues/2489))
 
+### Thread color
+
+* Save thread names into embroidery files ([#2777](https://github.com/inkstitch/inkstitch/issues/2777))
+
 ## Install
 
 * Windows is now available as 32 bit and 64 bit version ([#2413](https://github.com/inkstitch/inkstitch/issues/2413))
@@ -211,9 +239,9 @@ All fonts have been reworked to be more stable when transformed.
 * [#2715](https://github.com/inkstitch/inkstitch/issues/2715) Multiversion support
 * [#2653](https://github.com/inkstitch/inkstitch/issues/2653) Updated debug and profiling procedures
 
+
 ## Bug Fixes
 
-    
 * [#2754](https://github.com/inkstitch/inkstitch/issues/2754)  Fix lettering along path when glyphs have subgroups or trims
 * [#2683](https://github.com/inkstitch/inkstitch/issues/2683) Select embroidery elements: output error message when python path cannot be found
 * [#2675](https://github.com/inkstitch/inkstitch/issues/2675) Fix error message on fill to stroke if small fill artifacts are present

@@ -92,6 +92,8 @@ docs:
         url: /fr/docs/stitches/meander-fill/
       - title: "Remplissage circulaire"
         url: /fr/docs/stitches/circular-fill/
+      - title: "Tartan Fill"
+        url: /fr/docs/stitches/tartan-fill
       - title: "Points d'arrêt"
         url: /fr/docs/stitches/lock-stitches/
       - title: "Textures"

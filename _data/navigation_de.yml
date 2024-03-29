@@ -90,6 +90,8 @@ docs:
         url: /de/docs/stitches/meander-fill/
       - title: "Spiralfüllung"
         url: /de/docs/stitches/circular-fill/
+      - title: "Tartanfüllung"
+        url: /de/docs/stitches/tartan-fill
       - title: "Vernähstiche"
         url: /de/docs/stitches/lock-stitches/
       - title: Stichmuster
