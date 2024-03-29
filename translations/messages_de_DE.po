@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-03-27 01:04+0000\n"
-"PO-Revision-Date: 2024-03-27 01:05\n"
+"POT-Creation-Date: 2024-03-29 01:04+0000\n"
+"PO-Revision-Date: 2024-03-29 01:05\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-27 01:04+0000\n"
+"POT-Creation-Date: 2024-03-29 01:04+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1111,62 +1111,46 @@ msgstr "Befehlszeichen"
 msgid "Please select a layer to include layer commands."
 msgstr "Für Befehle, die sich auf eine Ebene beziehen, bitte eine Ebene auswählen."
 
-#: lib/elements/clone.py:22
+#: lib/elements/clone.py:27
 msgid "Clone Object"
 msgstr "Objekt klonen"
 
-#: lib/elements/clone.py:23
+#: lib/elements/clone.py:28
 msgid "There are one or more clone objects in this document.  Ink/Stitch can work with single clones, but you are limited to set a very few parameters. "
 msgstr "Dieses Dokument enthält ein oder mehrere Klonobjekte. Ink/Stitch kann mit einzelnen Klonen arbeiten, es können jedoch nur wenige Parameter festlegt werden. "
 
-#: lib/elements/clone.py:26
+#: lib/elements/clone.py:31
 msgid "If you want to convert the clone into a real element, follow these steps:"
 msgstr "Um einen Klon in ein echtes Element zu konvertieren, bitte folgendermaßen vorgehen:"
 
-#: lib/elements/clone.py:27
+#: lib/elements/clone.py:32
 msgid "* Select the clone"
 msgstr "* Klon auswählen"
 
-#: lib/elements/clone.py:28 lib/elements/clone.py:39
+#: lib/elements/clone.py:33
 msgid "* Run: Edit > Clone > Unlink Clone (Alt+Shift+D)"
 msgstr "* Ausführen: Bearbeiten> Klonen> Klon aufheben (Alt + Umschalt + D)"
 
-#: lib/elements/clone.py:33
-msgid "Clone is not embroiderable"
-msgstr "Klon ist nicht stickbar"
-
-#: lib/elements/clone.py:34
-msgid "There are one ore more clone objects in this document. A clone must be a direct child of an embroiderable element. Ink/Stitch cannot embroider clones of groups or other not embroiderable elements (text or image)."
-msgstr "In diesem Dokument befinden sich ein oder mehrere Klonobjekte. Ein Klon muss ein direktes Kind eines stickbaren Elements sein. Ink/Stitch kann keine Klone von Gruppen oder anderen nicht stickbaren Elementen (Text oder Bild) sticken."
-
-#: lib/elements/clone.py:37
-msgid "Convert the clone into a real element:"
-msgstr "Klon in ein echtes Element konvertieren:"
-
-#: lib/elements/clone.py:38
-msgid "* Select the clone."
-msgstr "* Klon auswählen."
-
-#: lib/elements/clone.py:53 inx/inkstitch_select_elements.inx:72
+#: lib/elements/clone.py:44 inx/inkstitch_select_elements.inx:72
 #: inx/inkstitch_select_elements.inx:73
 msgid "Clone"
 msgstr "Klon"
 
-#: lib/elements/clone.py:59
+#: lib/elements/clone.py:50
 msgid "Custom fill angle"
 msgstr "Benutzerdefinierter Füllwinkel"
 
-#: lib/elements/clone.py:60
+#: lib/elements/clone.py:51
 msgid "This setting will apply a custom fill angle for the clone."
 msgstr "Diese Einstellung wendet einen benutzerdefinierten Füllwinkel für den Klon an."
 
-#: lib/elements/clone.py:69
+#: lib/elements/clone.py:60
 msgid "Flip angle"
 msgstr "Stichwinkel umkehren"
 
-#: lib/elements/clone.py:70
-msgid "Flip automatically calucalted angle if it appears to be wrong."
-msgstr "In manchen Fällen, schlägt die automatische Winkelberechnung fehl. Der Fehler kann durch diese Option in der Regel behoben werden."
+#: lib/elements/clone.py:61
+msgid "Flip automatically calculated angle if it appears to be wrong."
+msgstr ""
 
 #: lib/elements/element.py:223 lib/gui/preferences.py:59
 #: lib/gui/preferences.py:106

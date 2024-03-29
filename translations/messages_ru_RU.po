@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-03-27 01:04+0000\n"
-"PO-Revision-Date: 2024-03-27 01:05\n"
+"POT-Creation-Date: 2024-03-29 01:04+0000\n"
+"PO-Revision-Date: 2024-03-29 01:05\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-27 01:04+0000\n"
+"POT-Creation-Date: 2024-03-29 01:04+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1111,61 +1111,45 @@ msgstr "маркер команды"
 msgid "Please select a layer to include layer commands."
 msgstr ""
 
-#: lib/elements/clone.py:22
+#: lib/elements/clone.py:27
 msgid "Clone Object"
 msgstr "Объект-клон"
 
-#: lib/elements/clone.py:23
+#: lib/elements/clone.py:28
 msgid "There are one or more clone objects in this document.  Ink/Stitch can work with single clones, but you are limited to set a very few parameters. "
 msgstr "В дизайне присутствуют один или более объектов-клонов. Ink/Stitch может работать с простыми клонами, но вы ограничены очень небольшим списком парметров. "
 
-#: lib/elements/clone.py:26
+#: lib/elements/clone.py:31
 msgid "If you want to convert the clone into a real element, follow these steps:"
 msgstr "Если вы хотите превратить клон в реальный объект, выполните следующие шаги:"
 
-#: lib/elements/clone.py:27
+#: lib/elements/clone.py:32
 msgid "* Select the clone"
 msgstr "* Выберите клон"
 
-#: lib/elements/clone.py:28 lib/elements/clone.py:39
+#: lib/elements/clone.py:33
 msgid "* Run: Edit > Clone > Unlink Clone (Alt+Shift+D)"
 msgstr "* Выберите: Правка > Клоны > Отсоединить клон (Alt+Shift+D)"
 
-#: lib/elements/clone.py:33
-msgid "Clone is not embroiderable"
-msgstr "Клон не может быть вышит"
-
-#: lib/elements/clone.py:34
-msgid "There are one ore more clone objects in this document. A clone must be a direct child of an embroiderable element. Ink/Stitch cannot embroider clones of groups or other not embroiderable elements (text or image)."
-msgstr "В дизайне присутствуют один или более объектов-клонов. Клон должен быть прямым потомком элемента, который можно вышить. Ink/Stitch не может вышить клонеы групп или иных невышиваемых элементов (текст или картинка)."
-
-#: lib/elements/clone.py:37
-msgid "Convert the clone into a real element:"
-msgstr "Превратите клон в реальный объект:"
-
-#: lib/elements/clone.py:38
-msgid "* Select the clone."
-msgstr "* Выберите клон."
-
-#: lib/elements/clone.py:53 inx/inkstitch_select_elements.inx:72
+#: lib/elements/clone.py:44 inx/inkstitch_select_elements.inx:72
 #: inx/inkstitch_select_elements.inx:73
 msgid "Clone"
 msgstr "Клон"
 
-#: lib/elements/clone.py:59
+#: lib/elements/clone.py:50
 msgid "Custom fill angle"
 msgstr "Свой угол заполнения"
 
-#: lib/elements/clone.py:60
+#: lib/elements/clone.py:51
 msgid "This setting will apply a custom fill angle for the clone."
 msgstr "Эта настройка указывает свой угол заполнения для клона."
 
-#: lib/elements/clone.py:69
+#: lib/elements/clone.py:60
 msgid "Flip angle"
 msgstr ""
 
-#: lib/elements/clone.py:70
-msgid "Flip automatically calucalted angle if it appears to be wrong."
+#: lib/elements/clone.py:61
+msgid "Flip automatically calculated angle if it appears to be wrong."
 msgstr ""
 
 #: lib/elements/element.py:223 lib/gui/preferences.py:59
