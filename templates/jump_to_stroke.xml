@@ -38,7 +38,7 @@
         <param name="tolerance" type="float" indent="1" gui-text="Running stitch tolerance (mm)">2.0</param>
       </page>
       <page name="info" gui-text="Help">
-        <label appearance="header">This extension converts jump stithes to running stitches.</label>
+        <label appearance="header">This extension converts jump stitches to running stitches.</label>
         <label>Get more information on our website</label>
         <label appearance="url">https://inkstitch.org/docs/stroke-tools/#jump-to-stroke</label>
       </page>
