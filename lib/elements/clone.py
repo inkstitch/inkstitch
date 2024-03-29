@@ -80,17 +80,17 @@ class Clone(EmbroideryElement):
                 elements.extend(node_to_elements(child, True))
         return elements
 
-    def to_stitch_groups(self, last_patch=None) -> List[StitchGroup]:
+    def to_stitch_groups(self, last_stitch_group=None) -> List[StitchGroup]:
         with self.clone_elements() as elements:
-            patches = []
+            stitch_groups = []
 
             for element in elements:
-                stitch_groups = element.to_stitch_groups(last_patch)
-                if len(stitch_groups):
-                    last_patch = stitch_groups[-1]
-                    patches.extend(stitch_groups)
+                element_stitch_groups = element.to_stitch_groups(last_stitch_group)
+                if len(element_stitch_groups):
+                    last_stitch_group = element_stitch_groups[-1]
+                    stitch_groups.extend(element_stitch_groups)
 
-            return patches
+            return stitch_groups
 
     @contextmanager
     def clone_elements(self) -> Generator[List[EmbroideryElement], None, None]:
