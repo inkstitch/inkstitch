@@ -54,6 +54,7 @@ from .simulator import Simulator
 from .stitch_plan_preview import StitchPlanPreview
 from .stitch_plan_preview_undo import StitchPlanPreviewUndo
 from .stroke_to_lpe_satin import StrokeToLpeSatin
+from .tartan import Tartan
 from .test_swatches import TestSwatches
 from .troubleshoot import Troubleshoot
 from .update_svg import UpdateSvg
@@ -111,6 +112,7 @@ __all__ = extensions = [ApplyPalette,
                         StitchPlanPreview,
                         StitchPlanPreviewUndo,
                         StrokeToLpeSatin,
+                        Tartan,
                         TestSwatches,
                         Troubleshoot,
                         UpdateSvg,

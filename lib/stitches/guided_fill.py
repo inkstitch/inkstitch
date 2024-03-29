@@ -43,7 +43,7 @@ def guided_fill(shape,
     if is_empty(fill_stitch_graph):
         return fallback(shape, guideline, row_spacing, max_stitch_length, running_stitch_length, running_stitch_tolerance,
                         num_staggers, skip_last, starting_point, ending_point, underpath)
-    fill_stitch_graph = graph_make_valid(fill_stitch_graph)
+    graph_make_valid(fill_stitch_graph)
 
     travel_graph = build_travel_graph(fill_stitch_graph, shape, angle, underpath)
     path = find_stitch_path(fill_stitch_graph, travel_graph, starting_point, ending_point)
@@ -156,14 +156,14 @@ def take_only_line_strings(thing):
     return shgeo.MultiLineString(line_strings)
 
 
-def apply_stitches(line, max_stitch_length, num_staggers, row_spacing, row_num, threshold=None):
+def apply_stitches(line, max_stitch_length, num_staggers, row_spacing, row_num, threshold=None) -> shgeo.LineString:
     if num_staggers == 0:
         num_staggers = 1  # sanity check to avoid division by zero.
     start = ((row_num / num_staggers) % 1) * max_stitch_length
     projections = np.arange(start, line.length, max_stitch_length)
     points = np.array([line.interpolate(projection).coords[0] for projection in projections])
 
-    if len(points) <= 2:
+    if len(points) < 2:
         return line
 
     stitched_line = shgeo.LineString(points)
