@@ -81,12 +81,14 @@ class EmbroideryPanel(wx.Panel):
         self.svg_row_spacing.Bind(wx.EVT_SPINCTRLDOUBLE, lambda event: self.on_change("row_spacing", event))
 
         angle_warp_label = wx.StaticText(self, label=_("Stitch angle (warp)"))
-        self.angle_warp = wx.SpinCtrl(self, min=-90, max=90, initial=0, style=wx.SP_WRAP)
-        self.angle_warp.Bind(wx.EVT_SPINCTRL, lambda event: self.on_change("angle_warp", event))
+        self.angle_warp = wx.SpinCtrlDouble(self, min=-90, max=90, initial=0, style=wx.SP_WRAP)
+        self.angle_warp.SetDigits(2)
+        self.angle_warp.Bind(wx.EVT_SPINCTRLDOUBLE, lambda event: self.on_change("angle_warp", event))
 
         angle_weft_label = wx.StaticText(self, label=_("Stitch angle (weft)"))
-        self.angle_weft = wx.SpinCtrl(self, min=-90, max=90, initial=90, style=wx.SP_WRAP)
-        self.angle_weft.Bind(wx.EVT_SPINCTRL, lambda event: self.on_change("angle_weft", event))
+        self.angle_weft = wx.SpinCtrlDouble(self, min=-90, max=90, initial=90, style=wx.SP_WRAP)
+        self.angle_weft.SetDigits(2)
+        self.angle_weft.Bind(wx.EVT_SPINCTRLDOUBLE, lambda event: self.on_change("angle_weft", event))
 
         min_stripe_width_label = wx.StaticText(self, label=_("Minimum stripe width for fills"))
         self.min_stripe_width = wx.SpinCtrlDouble(self, min=0, max=100, initial=1, style=wx.SP_WRAP)
