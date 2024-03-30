@@ -27,13 +27,13 @@
      inkscape:window-height="800"
      id="namedview1755"
      showgrid="true"
-     inkscape:zoom="4.9716868"
-     inkscape:cx="87.093177"
-     inkscape:cy="86.690899"
+     inkscape:zoom="12.856471"
+     inkscape:cx="63.781109"
+     inkscape:cy="71.637075"
      inkscape:window-x="4"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g19254"
+     inkscape:current-layer="g3481"
      inkscape:document-rotation="0"
      inkscape:snap-global="true"
      inkscape:snap-grids="false"
@@ -4854,7 +4854,7 @@ Copyright 2003, 2008 B. Jackowski and J. M. Nowacki (on behalf of TeX users grou
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-'"
-     style="display:none"
+     style="display:inline"
      id="g3481">
     <path
        d="M 45.097453,41.418519 C 37.686472,43.46935 39.040139,52.300741 38.102854,58.270504 37.401903,65.513669 36.700951,72.756835 36,80 M 51.417682,41.393737 c 5.776386,3.22996 1.476954,9.905696 0.123399,14.535944 C 48.694054,63.953121 45.847027,71.97656 43,80 M 36.677757,57.590513 c 5.576735,0 11.15347,0 16.730205,0"
@@ -4871,7 +4871,7 @@ Copyright 2003, 2008 B. Jackowski and J. M. Nowacki (on behalf of TeX users grou
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-‘"
-     style="display:none"
+     style="display:inline"
      id="g1">
     <path
        d="M 45.097453,41.418519 C 37.686472,43.46935 39.040139,52.300741 38.102854,58.270504 37.401903,65.513669 36.700951,72.756835 36,80 M 51.417682,41.393737 c 5.776386,3.22996 1.476954,9.905696 0.123399,14.535944 C 48.694054,63.953121 45.847027,71.97656 43,80 M 36.677757,57.590513 c 5.576735,0 11.15347,0 16.730205,0"
@@ -4888,7 +4888,7 @@ Copyright 2003, 2008 B. Jackowski and J. M. Nowacki (on behalf of TeX users grou
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-’"
-     style="display:none"
+     style="display:inline"
      id="g19254">
     <path
        d="M 45.097453,41.418519 C 37.686472,43.46935 39.040139,52.300741 38.102854,58.270504 37.401903,65.513669 36.700951,72.756835 36,80 M 51.417682,41.393737 c 5.776386,3.22996 1.476954,9.905696 0.123399,14.535944 C 48.694054,63.953121 45.847027,71.97656 43,80 M 36.677757,57.590513 c 5.576735,0 11.15347,0 16.730205,0"
@@ -5131,7 +5131,7 @@ Copyright 2003, 2008 B. Jackowski and J. M. Nowacki (on behalf of TeX users grou
      style="display:none"
      id="g3501">
     <path
-       style="display:none;fill:none;stroke:#ff0000;stroke-width:0.377953"
+       style="display:inline;fill:none;stroke:#ff0000;stroke-width:0.377953"
        d="m 24.090389,117 c -9.609843,0.95019 -12.916817,16.2279 -3.796941,20.40311 l 0.940157,0.28015 1.03566,0.15983 M 31.115665,117 c 9.136902,0.80022 10.117702,14.97017 2.471813,18.71658 C 31.57067,136.92155 29.498676,138.37478 27,138 M 14.357256,124.52527 c 8.359114,0 16.718228,0 25.077342,0"
        id="path7213"
        inkstitch:satin_column="True"
@@ -9696,7 +9696,7 @@ Copyright 2003, 2008 B. Jackowski and J. M. Nowacki (on behalf of TeX users grou
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-a"
-     style="display:inline"
+     style="display:none"
      id="g3677">
     <path
        id="autosatinrun9-1"
@@ -9741,7 +9741,7 @@ Copyright 2003, 2008 B. Jackowski and J. M. Nowacki (on behalf of TeX users grou
        id="autosatinrun11-4"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:36.1597px;line-height:1.25;font-family:'Latin Modern Roman';-inkscape-font-specification:'Latin Modern Roman, ';fill:none;fill-opacity:0.290323;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:0.196536, 0.0982677;stroke-dashoffset:0;stroke-opacity:1"
        inkscape:label="Points droits pour auto-remplissage satin 5"
-       d="M 80.0698 133.337 L 77.4701 130.789 c 2.9048 -3.1687 3.46622 -7.48536 4.51619 -11.4658 L 82.509 115.647" />
+       d="m 80.0698,133.337 -2.5997,-2.548 c 2.9048,-3.1687 3.46622,-7.48536 4.51619,-11.4658 L 82.509,115.647" />
     <path
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:36.1597px;line-height:1.25;font-family:'Latin Modern Roman';-inkscape-font-specification:'Latin Modern Roman, ';fill:none;fill-opacity:0.290323;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 81.753099,115.64673 c -4.016791,-0.45442 -3.564065,4.79998 -4.638912,7.34587 -0.841471,2.85227 -1.721018,5.79339 -3.416878,8.26811 m 9.642188,-15.61388 c 3.829109,-0.51926 2.970319,3.6423 1.936597,5.86216 -1.313514,4.01438 -2.806573,8.08783 -5.387193,11.48172 m -7.245791,-2.7349 c 3.355462,0 6.710925,0 10.066387,0"
@@ -12988,7 +12988,7 @@ Copyright 2003, 2008 B. Jackowski and J. M. Nowacki (on behalf of TeX users grou
        d="m 25.515268,129.61815 c -5.717646,-8.52574 -3.108079,-19.74547 -0.270873,-28.87771 4.617874,-12.014766 16.131611,-21.688371 29.445731,-21.302148 2.142932,-0.0076 4.333288,0.01469 6.388588,0.71109"
        id="autosatinrun12-0-6" />
     <path
-       style="display:none;fill:none;stroke:#ff0000;stroke-width:0.377953"
+       style="display:inline;fill:none;stroke:#ff0000;stroke-width:0.377953"
        d="m 48.281589,62.44916 c 4.101139,-3.572962 8.202278,-7.145924 12.303417,-10.718886"
        id="path28359" />
     <g
@@ -13669,7 +13669,7 @@ Copyright 2003, 2008 B. Jackowski and J. M. Nowacki (on behalf of TeX users grou
        d="m 40.7959,82.8031 c 9.56523,-5.32282 24.6797,-6.0551 31.0019,4.48568 4.21279,9.39038 0.705544,20.1053 -2.55318,29.2571 -1.25029,3.0467 -2.82543,5.96589 -4.73663,8.64981 L 57.475,125.732"
        id="path6468" />
     <path
-       style="display:none;fill:none;stroke:#000000;stroke-width:1;stroke-dasharray:0.5, 0.5"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-dasharray:0.5, 0.5"
        d="m 25.555431,129.27076 c -6.508183,-9.37055 -1.871026,-21.43099 1.922918,-30.948038 2.775489,-6.384904 6.970576,-12.292159 13.317579,-15.519606"
        id="autosatinrun122-4" />
     <path
@@ -14019,7 +14019,7 @@ Copyright 2003, 2008 B. Jackowski and J. M. Nowacki (on behalf of TeX users grou
        sodipodi:nodetypes="cccccccccc" />
     <path
        id="autosatinrun66"
-       style="display:none;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
+       style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
        inkscape:label="Points droits pour auto-remplissage satin 3"
        d="M 45,64 C 43.37342,58.435332 47.125198,51.393633 49,46"
        inkstitch:ties="3" />
@@ -14035,7 +14035,7 @@ Copyright 2003, 2008 B. Jackowski and J. M. Nowacki (on behalf of TeX users grou
        inkstitch:force_lock_stitches="True"
        inkstitch:satin_column="True"
        d="M 49,46 C 41.199797,43.196764 33.240023,53.313936 38.525324,60.061717 39.985367,62.251837 42.448514,63.577269 45,64 m 4,-18 c 10.17723,2.865443 6.263901,19.309818 -4,18 M 35.868079,48.485703 c 7.466609,1.843024 14.933219,3.686048 22.399828,5.529072 m -22.68337,4.961987 c 5.3873,1.464968 10.774601,2.929935 16.161901,4.394903"
-       style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
+       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
        id="autosatin89"
        inkstitch:reverse_rails="none" />
     <path
@@ -14062,7 +14062,7 @@ Copyright 2003, 2008 B. Jackowski and J. M. Nowacki (on behalf of TeX users grou
        inkstitch:ties="3" />
     <path
        id="autosatinrun68"
-       style="display:none;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
+       style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
        inkscape:label="Points droits pour auto-remplissage satin 7"
        d="m 78.015205,64.708855 c 0.91851,-6.25135 4.007127,-12.115717 4.559454,-18.425279"
        inkstitch:ties="3" />
@@ -14078,7 +14078,7 @@ Copyright 2003, 2008 B. Jackowski and J. M. Nowacki (on behalf of TeX users grou
        inkstitch:force_lock_stitches="True"
        inkstitch:satin_column="True"
        d="M 82.574687,46.283542 C 72.357852,44.136665 66.679044,60.176311 76.694416,64.251682 l 1.320789,0.457173 m 4.559482,-18.425313 c 9.599522,1.129771 8.727037,15.925022 0.225985,18.16787 -1.523141,0.536907 -3.211871,0.693479 -4.785467,0.257443 M 72.586784,48.202161 c 6.19067,1.464968 12.381339,2.929935 18.572009,4.394903 m -20.556804,7.088553 c 5.434557,1.464968 10.869115,2.929935 16.303672,4.394903"
-       style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
+       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
        id="autosatin91"
        inkstitch:reverse_rails="none" />
     <path
