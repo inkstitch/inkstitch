@@ -9,8 +9,8 @@
             <param name="del_params" type="optiongroup" gui-text="Remove Params"
                    gui-description="Removes params from selected objects or all objects if nothing is selected."
                    appearance="combo">
-                <option translatable="no" value="none">None</option>
-                <option translatable="no"  value="all">All</option>
+                <option value="none">None</option>
+                <option value="all">All</option>
                 <option translatable="no"  value="angle">angle</option>
                 <option translatable="no"  value="auto_fill">auto_fill</option>
                 <option translatable="no"  value="avoid_self_crossing">avoid_self_crossing</option>
