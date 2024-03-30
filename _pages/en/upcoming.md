@@ -146,20 +146,21 @@ This extension generates the tartan stripes and applies them to the document eit
 
 All fonts have been reworked to be more stable when transformed.
 
-([#2803](https://github.com/inkstitch/inkstitch/pull/2803))
-([#2802](https://github.com/inkstitch/inkstitch/pull/2802))
-([#2793](https://github.com/inkstitch/inkstitch/pull/2793))
-([#2784](https://github.com/inkstitch/inkstitch/pull/2784))
-([#2769](https://github.com/inkstitch/inkstitch/pull/2769))
-([#2762](https://github.com/inkstitch/inkstitch/pull/2762))
-([#2749](https://github.com/inkstitch/inkstitch/pull/2749))
-([#2744](https://github.com/inkstitch/inkstitch/pull/2744))
-([#2742](https://github.com/inkstitch/inkstitch/pull/2742))
-([#2714](https://github.com/inkstitch/inkstitch/pull/2714))
-([#2607](https://github.com/inkstitch/inkstitch/issues/2607))
-([#2579](https://github.com/inkstitch/inkstitch/issues/2579))
-([#2476](https://github.com/inkstitch/inkstitch/issues/2476))
-([#2682](https://github.com/inkstitch/inkstitch/pull/2682))
+ [#2807](https://github.com/inkstitch/inkstitch/pull/2807)
+ [#2803](https://github.com/inkstitch/inkstitch/pull/2803)
+ [#2802](https://github.com/inkstitch/inkstitch/pull/2802)
+ [#2793](https://github.com/inkstitch/inkstitch/pull/2793)
+ [#2784](https://github.com/inkstitch/inkstitch/pull/2784)
+ [#2769](https://github.com/inkstitch/inkstitch/pull/2769)
+ [#2762](https://github.com/inkstitch/inkstitch/pull/2762)
+ [#2749](https://github.com/inkstitch/inkstitch/pull/2749)
+ [#2744](https://github.com/inkstitch/inkstitch/pull/2744)
+ [#2742](https://github.com/inkstitch/inkstitch/pull/2742)
+ [#2714](https://github.com/inkstitch/inkstitch/pull/2714)
+ [#2607](https://github.com/inkstitch/inkstitch/pull/2607)
+ [#2579](https://github.com/inkstitch/inkstitch/pull/2579)
+ [#2476](https://github.com/inkstitch/inkstitch/pull/2476)
+ [#2682](https://github.com/inkstitch/inkstitch/pull/2682)
 
 
 ## Palettes
