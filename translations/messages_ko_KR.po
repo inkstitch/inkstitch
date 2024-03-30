@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-03-29 01:04+0000\n"
-"PO-Revision-Date: 2024-03-29 01:05\n"
+"POT-Creation-Date: 2024-03-30 01:02+0000\n"
+"PO-Revision-Date: 2024-03-30 01:03\n"
 "Last-Translator: \n"
 "Language-Team: Korean\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-29 01:04+0000\n"
+"POT-Creation-Date: 2024-03-30 01:02+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -983,98 +983,98 @@ msgstr ""
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
 #: lib/commands.py:24 inx/inkstitch_object_commands.inx:4
-#: inx/inkstitch_remove_embroidery_settings.inx:12
+#: inx/inkstitch_remove_embroidery_settings.inx:118
 msgid "Fill stitch starting position"
 msgstr ""
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
 #: lib/commands.py:27 inx/inkstitch_object_commands.inx:5
-#: inx/inkstitch_remove_embroidery_settings.inx:13
+#: inx/inkstitch_remove_embroidery_settings.inx:119
 msgid "Fill stitch ending position"
 msgstr ""
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
 #: lib/commands.py:30 inx/inkstitch_object_commands.inx:6
-#: inx/inkstitch_remove_embroidery_settings.inx:14
+#: inx/inkstitch_remove_embroidery_settings.inx:120
 msgid "Target position"
 msgstr ""
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
 #: lib/commands.py:33 inx/inkstitch_object_commands.inx:7
-#: inx/inkstitch_remove_embroidery_settings.inx:15
+#: inx/inkstitch_remove_embroidery_settings.inx:121
 msgid "Auto-route running stitch starting position"
 msgstr ""
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
 #: lib/commands.py:36 inx/inkstitch_object_commands.inx:8
-#: inx/inkstitch_remove_embroidery_settings.inx:16
+#: inx/inkstitch_remove_embroidery_settings.inx:122
 msgid "Auto-route running stitch ending position"
 msgstr ""
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
 #: lib/commands.py:39 inx/inkstitch_object_commands.inx:9
-#: inx/inkstitch_remove_embroidery_settings.inx:17
+#: inx/inkstitch_remove_embroidery_settings.inx:123
 msgid "Auto-route satin stitch starting position"
 msgstr ""
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
 #: lib/commands.py:42 inx/inkstitch_object_commands.inx:10
-#: inx/inkstitch_remove_embroidery_settings.inx:18
+#: inx/inkstitch_remove_embroidery_settings.inx:124
 msgid "Auto-route satin stitch ending position"
 msgstr ""
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
 #: lib/commands.py:45 inx/inkstitch_object_commands.inx:11
-#: inx/inkstitch_remove_embroidery_settings.inx:19
+#: inx/inkstitch_remove_embroidery_settings.inx:125
 msgid "Stop (pause machine) after sewing this object"
 msgstr ""
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
 #: lib/commands.py:48 inx/inkstitch_object_commands.inx:12
-#: inx/inkstitch_remove_embroidery_settings.inx:20
+#: inx/inkstitch_remove_embroidery_settings.inx:126
 msgid "Trim thread after sewing this object"
 msgstr ""
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
 #: lib/commands.py:51 inx/inkstitch_object_commands.inx:13
-#: inx/inkstitch_remove_embroidery_settings.inx:21
+#: inx/inkstitch_remove_embroidery_settings.inx:127
 msgid "Ignore this object (do not stitch)"
 msgstr ""
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
 #: lib/commands.py:54 inx/inkstitch_object_commands.inx:14
-#: inx/inkstitch_remove_embroidery_settings.inx:22
+#: inx/inkstitch_remove_embroidery_settings.inx:128
 msgid "Satin cut point (use with Cut Satin Column)"
 msgstr ""
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command that affects a layer
 #: lib/commands.py:57 inx/inkstitch_layer_commands.inx:7
-#: inx/inkstitch_remove_embroidery_settings.inx:25
+#: inx/inkstitch_remove_embroidery_settings.inx:131
 msgid "Ignore layer (do not stitch any objects in this layer)"
 msgstr ""
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command that affects entire document
 #: lib/commands.py:60 inx/inkstitch_global_commands.inx:7
-#: inx/inkstitch_remove_embroidery_settings.inx:28
+#: inx/inkstitch_remove_embroidery_settings.inx:134
 msgid "Origin for exported embroidery files"
 msgstr ""
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command that affects entire document
 #: lib/commands.py:63 inx/inkstitch_global_commands.inx:9
-#: inx/inkstitch_remove_embroidery_settings.inx:30
+#: inx/inkstitch_remove_embroidery_settings.inx:136
 msgid "Jump destination for Stop commands (a.k.a. \"Frame Out position\")."
 msgstr ""
 
@@ -1276,7 +1276,7 @@ msgstr ""
 msgid "Object %(id)s has an empty 'd' attribute.  Please delete this object from your document."
 msgstr ""
 
-#: lib/elements/element.py:620
+#: lib/elements/element.py:624
 msgid "Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects. This will show you the exact location of the problem."
 msgstr ""
 
@@ -1292,432 +1292,499 @@ msgstr ""
 msgid "* Run Extensions > Ink/Stitch > Troubleshoot > Cleanup Document..."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:34
+#: lib/elements/fill_stitch.py:36
 msgid "Small Fill"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:35
+#: lib/elements/fill_stitch.py:37
 msgid "This fill object is so small that it would probably look better as running stitch or satin column. For very small shapes, fill stitch is not possible, and Ink/Stitch will use running stitch around the outline instead."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:41 lib/elements/fill_stitch.py:240
+#: lib/elements/fill_stitch.py:43 lib/elements/fill_stitch.py:262
 msgid "Expand"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:42
+#: lib/elements/fill_stitch.py:44
 msgid "The expand parameter for this fill object cannot be applied. Ink/Stitch will ignore it and will use original size instead."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:47 lib/elements/fill_stitch.py:535
+#: lib/elements/fill_stitch.py:49 lib/elements/fill_stitch.py:613
 msgid "Inset"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:48
+#: lib/elements/fill_stitch.py:50
 msgid "The underlay inset parameter for this fill object cannot be applied. Ink/Stitch will ignore it and will use the original size instead."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:53
+#: lib/elements/fill_stitch.py:55
 msgid "Missing Guideline"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:54
+#: lib/elements/fill_stitch.py:56
 msgid "This object is set to \"Guided Fill\", but has no guide line."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:56
+#: lib/elements/fill_stitch.py:58
 msgid "* Create a stroke object"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:57
+#: lib/elements/fill_stitch.py:59
 msgid "* Select this object and run Extensions > Ink/Stitch > Edit > Selection to guide line"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:62
+#: lib/elements/fill_stitch.py:64
 msgid "Disjointed Guide Line"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:63
+#: lib/elements/fill_stitch.py:65
 msgid "The guide line of this object isn't within the object borders. The guide line works best, if it is within the target element."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:66
+#: lib/elements/fill_stitch.py:68
 msgid "* Move the guide line into the element"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:71 lib/elements/stroke.py:28
+#: lib/elements/fill_stitch.py:73 lib/elements/stroke.py:28
 msgid "Multiple Guide Lines"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:72 lib/elements/stroke.py:29
+#: lib/elements/fill_stitch.py:74 lib/elements/stroke.py:29
 msgid "This object has multiple guide lines, but only the first one will be used."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:74 lib/elements/stroke.py:31
+#: lib/elements/fill_stitch.py:76 lib/elements/stroke.py:31
 msgid "* Remove all guide lines, except for one."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:79
+#: lib/elements/fill_stitch.py:81
 msgid "Unconnected"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:80
+#: lib/elements/fill_stitch.py:82
 msgid "Fill: This object is made up of unconnected shapes. Ink/Stitch doesn't know what order to stitch them in.  Please break this object up into separate shapes."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:84 lib/elements/fill_stitch.py:93
-#: lib/elements/fill_stitch.py:119
+#: lib/elements/fill_stitch.py:86 lib/elements/fill_stitch.py:95
+#: lib/elements/fill_stitch.py:140
 msgid "* Extensions > Ink/Stitch > Fill Tools > Break Apart Fill Objects"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:89
+#: lib/elements/fill_stitch.py:91
 msgid "Border crosses itself"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:90
+#: lib/elements/fill_stitch.py:92
 msgid "Fill: The border crosses over itself. This may lead into unconnected shapes. Please break this object into separate shapes to indicate in which order it should be stitched in."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:98
+#: lib/elements/fill_stitch.py:100
 msgid "Fill and Stroke color"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:99
+#: lib/elements/fill_stitch.py:101
 msgid "Element has both a fill and a stroke color. It is recommended to use two separate elements instead."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:101
+#: lib/elements/fill_stitch.py:103
 msgid "* Duplicate the element. Remove stroke color from the first and fill color from the second."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:102
+#: lib/elements/fill_stitch.py:104
 msgid "* Adapt the shape of the second element to compensate for push and pull fabric distortion."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:107
+#: lib/elements/fill_stitch.py:109
 msgid "No linear gradient color"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:108
+#: lib/elements/fill_stitch.py:110
 msgid "Linear Gradient has no linear gradient color."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:110
+#: lib/elements/fill_stitch.py:112
 msgid "* Open the Fill and Stroke dialog."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:111
+#: lib/elements/fill_stitch.py:113
 msgid "* Set a linear gradient as a fill and adapt colors to your liking."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:116
+#: lib/elements/fill_stitch.py:118
+msgid "No stripes to render"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:119
+msgid "Tartan fill: There is no active fill stripe to render"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:121 lib/elements/fill_stitch.py:131
+msgid "Go to Extensions > Ink/Stitch > Fill Tools > Tartan and adjust stripe settings:"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:122
+msgid "* Check if stripes are active"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:123
+msgid "* Check the minimum stripe width setting and the scale factor"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:128
+msgid "No customized pattern"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:129
+msgid "Tartan fill: Using default pattern"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:132
+msgid "* Customize your pattern"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:137
 msgid "This shape is invalid"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:117
+#: lib/elements/fill_stitch.py:138
 msgid "Fill: This shape cannot be stitched out. Please try to repair it with the \"Break Apart Fill Objects\" extension."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:124
+#: lib/elements/fill_stitch.py:145
 msgid "FillStitch"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:127
+#: lib/elements/fill_stitch.py:148
 msgid "Automatically routed fill stitching"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:131
+#: lib/elements/fill_stitch.py:152
 msgid "Auto Fill"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:132 inx/inkstitch_select_elements.inx:56
-msgid "Contour Fill"
-msgstr ""
-
-#: lib/elements/fill_stitch.py:133 inx/inkstitch_select_elements.inx:57
-msgid "Guided Fill"
-msgstr ""
-
-#: lib/elements/fill_stitch.py:134 inx/inkstitch_select_elements.inx:59
-msgid "Meander Fill"
-msgstr ""
-
-#: lib/elements/fill_stitch.py:135 inx/inkstitch_select_elements.inx:55
+#: lib/elements/fill_stitch.py:153 inx/inkstitch_select_elements.inx:55
 msgid "Circular Fill"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:136 inx/inkstitch_select_elements.inx:58
+#: lib/elements/fill_stitch.py:154 inx/inkstitch_select_elements.inx:56
+msgid "Contour Fill"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:155 inx/inkstitch_select_elements.inx:57
+msgid "Guided Fill"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:156 inx/inkstitch_select_elements.inx:58
 msgid "Linear Gradient Fill"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:137 inx/inkstitch_select_elements.inx:60
+#: lib/elements/fill_stitch.py:157 inx/inkstitch_select_elements.inx:59
+msgid "Meander Fill"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:158
+msgid "Tartan Fill"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:159 lib/gui/tartan/embroidery_panel.py:200
+#: inx/inkstitch_select_elements.inx:60
 msgid "Legacy Fill"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:141
+#: lib/elements/fill_stitch.py:163
 msgid "Fill method"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:150
+#: lib/elements/fill_stitch.py:172
 msgid "Guided Fill Strategy"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:151
+#: lib/elements/fill_stitch.py:173
 msgid "Copy"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:151
+#: lib/elements/fill_stitch.py:173
 msgid "Parallel Offset"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:152
+#: lib/elements/fill_stitch.py:174
 msgid "Copy (the default) will fill the shape with shifted copies of the line. Parallel offset will ensure that each line is always a consistent distance from its neighbor. Sharp corners may be introduced."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:159
+#: lib/elements/fill_stitch.py:181
 msgid "Contour Fill Strategy"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:160
+#: lib/elements/fill_stitch.py:182
 msgid "Inner to Outer"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:160
+#: lib/elements/fill_stitch.py:182
 msgid "Single spiral"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:160
+#: lib/elements/fill_stitch.py:182
 msgid "Double spiral"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:165
+#: lib/elements/fill_stitch.py:187
 msgid "Join Style"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:166
+#: lib/elements/fill_stitch.py:188
 msgid "Round"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:166
+#: lib/elements/fill_stitch.py:188
 msgid "Mitered"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:166
+#: lib/elements/fill_stitch.py:188
 msgid "Beveled"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:172
+#: lib/elements/fill_stitch.py:194
 msgid "Avoid self-crossing"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:181
+#: lib/elements/fill_stitch.py:203
 msgid "Clockwise"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:186
+#: lib/elements/fill_stitch.py:208
 msgid "Meander Pattern"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:193
+#: lib/elements/fill_stitch.py:215
 msgid "Meander pattern angle"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:203
+#: lib/elements/fill_stitch.py:225
 msgid "Meander pattern scale"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:204
+#: lib/elements/fill_stitch.py:226
 msgid "Percentage to stretch or compress the meander pattern.  You can scale horizontally and vertically individually by giving two percentages separated by a space. "
 msgstr ""
 
-#: lib/elements/fill_stitch.py:214
+#: lib/elements/fill_stitch.py:236
 msgid "Clip path"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:215
+#: lib/elements/fill_stitch.py:237
 msgid "Constrain stitching to the shape.  Useful when smoothing and expand are used."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:224
+#: lib/elements/fill_stitch.py:246
 msgid "Smoothness"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:225
+#: lib/elements/fill_stitch.py:247
 msgid "Smooth the stitch path.  Smoothness limits how far the smoothed stitch path is allowed to deviate from the original path.  Try low numbers like 0.2.  Hint: a lower running stitch tolerance may be needed too."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:241
+#: lib/elements/fill_stitch.py:263
 msgid "Expand the shape before fill stitching, to compensate for gaps between shapes.  Negative values contract instead."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:256
+#: lib/elements/fill_stitch.py:279 lib/elements/fill_stitch.py:292
+#: lib/gui/tartan/embroidery_panel.py:35
 msgid "Angle of lines of stitches"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:257
+#: lib/elements/fill_stitch.py:280
 msgid "The angle increases in a counter-clockwise direction.  0 is horizontal.  Negative angles are allowed."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:269
+#: lib/elements/fill_stitch.py:293 lib/gui/tartan/embroidery_panel.py:36
+msgid "Relative to the tartan stripe direction."
+msgstr ""
+
+#: lib/elements/fill_stitch.py:305
 msgid "Maximum fill stitch length"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:270
+#: lib/elements/fill_stitch.py:306
 msgid "The length of each stitch in a row.  Shorter stitch may be used at the start or end of a row."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:286
+#: lib/elements/fill_stitch.py:323
 msgid "Spacing between rows"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:287
+#: lib/elements/fill_stitch.py:324
 msgid "Distance between rows of stitches."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:303 inx/inkstitch_gradient_blocks.inx:22
+#: lib/elements/fill_stitch.py:341 inx/inkstitch_gradient_blocks.inx:22
 msgid "End row spacing"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:304
+#: lib/elements/fill_stitch.py:342
 msgid "Increases or decreases the row spacing towards the end."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:318
+#: lib/elements/fill_stitch.py:356
 msgid "Stagger rows this many times before repeating"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:319 lib/elements/satin_column.py:203
+#: lib/elements/fill_stitch.py:357 lib/elements/satin_column.py:203
 msgid "Length of the cycle by which successive stitch rows are staggered. Fractional values are allowed and can have less visible diagonals than integer values."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:334 lib/elements/fill_stitch.py:547
+#: lib/elements/fill_stitch.py:373 lib/elements/fill_stitch.py:625
 msgid "Skip last stitch in each row"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:335 lib/elements/fill_stitch.py:548
+#: lib/elements/fill_stitch.py:374 lib/elements/fill_stitch.py:626
 msgid "The last stitch in each row is quite close to the first stitch in the next row.  Skipping it decreases stitch count and density."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:350
+#: lib/elements/fill_stitch.py:389
 msgid "Flip fill (start right-to-left)"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:351
+#: lib/elements/fill_stitch.py:390
 msgid "The flip option can help you with routing your stitch path.  When you enable flip, stitching goes from right-to-left instead of left-to-right."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:363
+#: lib/elements/fill_stitch.py:402
+msgid "Reverse fill"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:403
+msgid "Reverses fill path."
+msgstr ""
+
+#: lib/elements/fill_stitch.py:414
 msgid "Stop at ending point"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:364
+#: lib/elements/fill_stitch.py:415
 msgid "If this option is disabled, the ending point will only be used to define a general direction for stitch routing. When enabled the last section will end at the defined spot."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:376 lib/elements/fill_stitch.py:559
+#: lib/elements/fill_stitch.py:427 lib/elements/fill_stitch.py:637
 msgid "Underpath"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:377 lib/elements/fill_stitch.py:560
+#: lib/elements/fill_stitch.py:428 lib/elements/fill_stitch.py:638
 msgid "Travel inside the shape when moving from section to section.  Underpath stitches avoid traveling in the direction of the row angle so that they are not visible.  This gives them a jagged appearance."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:389 lib/elements/stroke.py:109
+#: lib/elements/fill_stitch.py:440 lib/elements/stroke.py:109
 msgid "Running stitch length"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:390
+#: lib/elements/fill_stitch.py:441
 msgid "Length of stitches around the outline of the fill region used when moving from section to section. Also used for meander and circular fill."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:406
+#: lib/elements/fill_stitch.py:458
 msgid "Running stitch tolerance"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:407
+#: lib/elements/fill_stitch.py:459
 msgid "Determines how hard Ink/Stitch tries to avoid stitching outside the shape.Lower numbers are less likely to stitch outside the shape but require more stitches."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:418 lib/elements/satin_column.py:403
+#: lib/elements/fill_stitch.py:470 lib/elements/satin_column.py:403
 #: lib/elements/stroke.py:83
 msgid "Repeats"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:419 lib/elements/stroke.py:84
+#: lib/elements/fill_stitch.py:471 lib/elements/stroke.py:84
 msgid "Defines how many times to run down and back along the path."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:430 lib/elements/stroke.py:95
+#: lib/elements/fill_stitch.py:482 lib/elements/stroke.py:95
 msgid "Bean stitch number of repeats"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:431 lib/elements/stroke.py:96
+#: lib/elements/fill_stitch.py:483 lib/elements/stroke.py:96
 msgid "Backtrack each stitch this many times.  A value of 1 would triple each stitch (forward, back, forward).  A value of 2 would quintuple each stitch, etc.\n\n"
 "A pattern with various repeats can be created with a list of values separated by a space."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:445 lib/elements/satin_column.py:238
+#: lib/elements/fill_stitch.py:498 lib/elements/satin_column.py:238
 #: lib/elements/stroke.py:149
 msgid "Zig-zag spacing (peak-to-peak)"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:446 lib/elements/stroke.py:150
+#: lib/elements/fill_stitch.py:499 lib/elements/stroke.py:150
 msgid "Length of stitches in zig-zag mode."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:458
+#: lib/elements/fill_stitch.py:511
 msgid "Zigzag width"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:459
+#: lib/elements/fill_stitch.py:512
 msgid "Width of the zigzag line."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:481 inx/inkstitch_select_elements.inx:35
-#: inx/inkstitch_select_elements.inx:62 inx/inkstitch_select_elements.inx:64
-msgid "Underlay"
+#: lib/elements/fill_stitch.py:525 lib/gui/tartan/embroidery_panel.py:42
+msgid "Rows per tartan thread"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:481 lib/elements/fill_stitch.py:490
-#: lib/elements/fill_stitch.py:517 lib/elements/fill_stitch.py:528
-#: lib/elements/fill_stitch.py:538 lib/elements/fill_stitch.py:550
-#: lib/elements/fill_stitch.py:563
+#: lib/elements/fill_stitch.py:526 lib/gui/tartan/embroidery_panel.py:44
+msgid "Consecutive rows of the same color"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:537
+msgid "Herringbone width"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:538
+msgid "Defines width of a herringbone pattern. Use 0 for regular rows."
+msgstr ""
+
+#: lib/elements/fill_stitch.py:559 lib/elements/fill_stitch.py:568
+#: lib/elements/fill_stitch.py:595 lib/elements/fill_stitch.py:606
+#: lib/elements/fill_stitch.py:616 lib/elements/fill_stitch.py:628
+#: lib/elements/fill_stitch.py:641
 msgid "Fill Underlay"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:487
+#: lib/elements/fill_stitch.py:559 lib/gui/tartan/embroidery_panel.py:55
+#: inx/inkstitch_select_elements.inx:35 inx/inkstitch_select_elements.inx:62
+#: inx/inkstitch_select_elements.inx:64
+msgid "Underlay"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:565
 msgid "Fill angle"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:488
+#: lib/elements/fill_stitch.py:566
 msgid "Default: fill angle + 90 deg. Insert a list for multiple layers separated by a space."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:514
+#: lib/elements/fill_stitch.py:592 lib/gui/tartan/embroidery_panel.py:77
 msgid "Row spacing"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:515
+#: lib/elements/fill_stitch.py:593
 msgid "default: 3x fill row spacing"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:525 lib/elements/stroke.py:135
+#: lib/elements/fill_stitch.py:603 lib/elements/stroke.py:135
 #: lib/extensions/element_info.py:125 lib/extensions/element_info.py:181
 msgid "Max stitch length"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:526
+#: lib/elements/fill_stitch.py:604
 msgid "default: equal to fill max stitch length"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:536
+#: lib/elements/fill_stitch.py:614
 msgid "Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:571 lib/elements/satin_column.py:484
+#: lib/elements/fill_stitch.py:649 lib/elements/satin_column.py:484
 msgid "Random seed"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:572 lib/elements/satin_column.py:485
+#: lib/elements/fill_stitch.py:650 lib/elements/satin_column.py:485
 msgid "Use a specific seed for randomized attributes. Uses the element ID if empty."
 msgstr ""
 
@@ -2110,7 +2177,7 @@ msgstr ""
 msgid "For an odd number of repeats, this will reverse the direction the satin column is stitched, causing stitching to both begin and end at the start point."
 msgstr ""
 
-#: lib/elements/satin_column.py:414
+#: lib/elements/satin_column.py:414 lib/gui/tartan/customize_panel.py:39
 msgid "Position"
 msgstr ""
 
@@ -2294,7 +2361,8 @@ msgid "Scale axis for satin guided ripple stitches."
 msgstr ""
 
 #: lib/elements/stroke.py:315 print/templates/ui.html:181
-#: inx/inkstitch_remove_embroidery_settings.inx:11
+#: inx/inkstitch_remove_embroidery_settings.inx:12
+#: inx/inkstitch_remove_embroidery_settings.inx:117
 msgid "None"
 msgstr ""
 
@@ -2318,7 +2386,7 @@ msgstr ""
 msgid "How big the last copy of the line should be, in percent."
 msgstr ""
 
-#: lib/elements/stroke.py:347
+#: lib/elements/stroke.py:347 lib/gui/tartan/customize_panel.py:44
 msgid "Rotate"
 msgstr ""
 
@@ -2756,9 +2824,10 @@ msgid "This parameter will be saved when you click \"Apply and Quit\""
 msgstr ""
 
 #: lib/extensions/params.py:497 lib/gui/lettering.py:100
-#: print/templates/custom-page.html:23 print/templates/custom-page.html:27
-#: print/templates/custom-page.html:33 print/templates/ui.html:102
-#: print/templates/ui.html:106 print/templates/ui.html:112
+#: lib/gui/tartan/main_panel.py:68 print/templates/custom-page.html:23
+#: print/templates/custom-page.html:27 print/templates/custom-page.html:33
+#: print/templates/ui.html:102 print/templates/ui.html:106
+#: print/templates/ui.html:112
 msgid "Cancel"
 msgstr ""
 
@@ -2811,6 +2880,14 @@ msgstr ""
 msgid "Cannot convert a satin column into a live path effect satin. Please select a stroke."
 msgstr ""
 
+#: lib/extensions/tartan.py:58
+msgid "To create a tartan pattern please select at least one element with a fill color."
+msgstr ""
+
+#: lib/extensions/tartan.py:64
+msgid "Ink/Stitch Tartan"
+msgstr ""
+
 #: lib/extensions/test_swatches.py:22
 msgid "Please select one or more elements."
 msgstr ""
@@ -2834,7 +2911,7 @@ msgstr ""
 
 #: lib/extensions/troubleshoot.py:111 lib/extensions/troubleshoot.py:157
 #: inx/inkstitch_cleanup.inx:23 inx/inkstitch_element_info.inx:10
-#: inx/inkstitch_remove_embroidery_settings.inx:39
+#: inx/inkstitch_remove_embroidery_settings.inx:155
 #: inx/inkstitch_select_elements.inx:86 inx/inkstitch_troubleshoot.inx:12
 #: inx/inkstitch_update_svg.inx:10
 msgid "Troubleshoot"
@@ -2926,13 +3003,16 @@ msgstr ""
 msgid "Value"
 msgstr ""
 
-#: lib/gui/element_info.py:41 lib/gui/test_swatches.py:83
-#: inx/inkstitch_apply_palette.inx:84 inx/inkstitch_apply_threadlist.inx:89
-#: inx/inkstitch_auto_run.inx:23 inx/inkstitch_cutwork_segmentation.inx:42
+#: lib/gui/element_info.py:41 lib/gui/tartan/main_panel.py:65
+#: lib/gui/test_swatches.py:83 inx/inkstitch_apply_palette.inx:84
+#: inx/inkstitch_apply_threadlist.inx:89 inx/inkstitch_auto_run.inx:23
+#: inx/inkstitch_cutwork_segmentation.inx:42
 #: inx/inkstitch_fill_to_stroke.inx:23 inx/inkstitch_generate_palette.inx:24
 #: inx/inkstitch_gradient_blocks.inx:24 inx/inkstitch_jump_to_stroke.inx:40
 #: inx/inkstitch_lettering_along_path.inx:17
-#: inx/inkstitch_palette_to_text.inx:19 inx/inkstitch_select_elements.inx:78
+#: inx/inkstitch_palette_to_text.inx:19
+#: inx/inkstitch_remove_embroidery_settings.inx:142
+#: inx/inkstitch_select_elements.inx:78
 #: inx/inkstitch_stroke_to_lpe_satin.inx:26
 #: inx/inkstitch_zigzag_line_to_satin.inx:18
 msgid "Help"
@@ -2942,7 +3022,7 @@ msgstr ""
 msgid "This extension informs about various parameters of selected stitch elements."
 msgstr ""
 
-#: lib/gui/element_info.py:56
+#: lib/gui/element_info.py:56 lib/gui/tartan/help_panel.py:27
 msgid "More information on our website:"
 msgstr ""
 
@@ -2979,7 +3059,9 @@ msgstr ""
 #: inx/inkstitch_fill_to_stroke.inx:15 inx/inkstitch_gradient_blocks.inx:15
 #: inx/inkstitch_jump_to_stroke.inx:15
 #: inx/inkstitch_lettering_along_path.inx:13
-#: inx/inkstitch_palette_to_text.inx:15 inx/inkstitch_stroke_to_lpe_satin.inx:7
+#: inx/inkstitch_palette_to_text.inx:15
+#: inx/inkstitch_remove_embroidery_settings.inx:8
+#: inx/inkstitch_stroke_to_lpe_satin.inx:7
 #: inx/inkstitch_zigzag_line_to_satin.inx:7
 msgid "Options"
 msgstr ""
@@ -3093,7 +3175,8 @@ msgstr ""
 msgid "Load"
 msgstr ""
 
-#: lib/gui/presets.py:61
+#: lib/gui/presets.py:61 lib/gui/tartan/customize_panel.py:65
+#: lib/gui/tartan/customize_panel.py:67
 msgid "Add"
 msgstr ""
 
@@ -3234,6 +3317,150 @@ msgstr ""
 msgid "Embroidery Simulation"
 msgstr ""
 
+#: lib/gui/tartan/code_panel.py:24
+msgid "1 Tartan thread equals (mm)"
+msgstr ""
+
+#: lib/gui/tartan/code_panel.py:29 lib/gui/tartan/code_panel.py:30
+msgid "Used only for Threadcount code (The Scottish Register of Tartans)"
+msgstr ""
+
+#: lib/gui/tartan/customize_panel.py:31
+msgid "Pattern Settings"
+msgstr ""
+
+#: lib/gui/tartan/customize_panel.py:33
+msgid "Symmetrical / reflective sett"
+msgstr ""
+
+#: lib/gui/tartan/customize_panel.py:34
+msgid "Disabled: asymmetrical / repeating sett"
+msgstr ""
+
+#: lib/gui/tartan/customize_panel.py:36
+msgid "Equal threadcount for warp and weft"
+msgstr ""
+
+#: lib/gui/tartan/customize_panel.py:47
+msgid "Scale (%)"
+msgstr ""
+
+#: lib/gui/tartan/customize_panel.py:51
+msgid "Offset X (mm)"
+msgstr ""
+
+#: lib/gui/tartan/customize_panel.py:55
+msgid "Offset Y (mm)"
+msgstr ""
+
+#: lib/gui/tartan/customize_panel.py:57
+msgid "Stripes"
+msgstr ""
+
+#: lib/gui/tartan/customize_panel.py:59
+msgid "Link colors"
+msgstr ""
+
+#: lib/gui/tartan/customize_panel.py:60
+msgid "When enabled update all equal colors simultaneously."
+msgstr ""
+
+#: lib/gui/tartan/customize_panel.py:61
+msgid "Warp"
+msgstr ""
+
+#: lib/gui/tartan/customize_panel.py:63
+msgid "Weft"
+msgstr ""
+
+#: lib/gui/tartan/customize_panel.py:120
+msgid "Drag and drop to adjust position."
+msgstr ""
+
+#: lib/gui/tartan/customize_panel.py:125
+msgid "Stitch this stripe"
+msgstr ""
+
+#: lib/gui/tartan/customize_panel.py:135
+msgid "Select stripe color"
+msgstr ""
+
+#: lib/gui/tartan/customize_panel.py:140
+msgid "Set stripe width (mm)"
+msgstr ""
+
+#: lib/gui/tartan/customize_panel.py:144
+msgid "Remove stripe"
+msgstr ""
+
+#: lib/gui/tartan/embroidery_panel.py:25
+msgid "Embroidery settings can be refined in the params dialog."
+msgstr ""
+
+#: lib/gui/tartan/embroidery_panel.py:49
+msgid "Row spacing (mm)"
+msgstr ""
+
+#: lib/gui/tartan/embroidery_panel.py:59
+msgid "Herringbone width (mm)"
+msgstr ""
+
+#: lib/gui/tartan/embroidery_panel.py:65 lib/gui/tartan/embroidery_panel.py:100
+msgid "Bean stitch repeats"
+msgstr ""
+
+#: lib/gui/tartan/embroidery_panel.py:70
+msgid "Stitch type"
+msgstr ""
+
+#: lib/gui/tartan/embroidery_panel.py:83
+msgid "Stitch angle (warp)"
+msgstr ""
+
+#: lib/gui/tartan/embroidery_panel.py:87
+msgid "Stitch angle (weft)"
+msgstr ""
+
+#: lib/gui/tartan/embroidery_panel.py:91
+msgid "Minimum stripe width for fills"
+msgstr ""
+
+#: lib/gui/tartan/embroidery_panel.py:95
+msgid "Stripes smaller than this will be stitched as a running stitch"
+msgstr ""
+
+#: lib/gui/tartan/embroidery_panel.py:193
+msgid "Embroidery Element"
+msgstr ""
+
+#: lib/gui/tartan/embroidery_panel.py:194
+msgid "SVG Elements"
+msgstr ""
+
+#: lib/gui/tartan/embroidery_panel.py:199
+msgid "AutoFill"
+msgstr ""
+
+#: lib/gui/tartan/help_panel.py:19
+msgid "This extension fills shapes with a tartan (or tartan like) pattern."
+msgstr ""
+
+#: lib/gui/tartan/help_panel.py:33 lib/gui/tartan/help_panel.py:34
+msgid "https://inkstitch.org/docs/stitches/tartan-fill"
+msgstr ""
+
+#: lib/gui/tartan/main_panel.py:55
+msgid "Customize"
+msgstr ""
+
+#: lib/gui/tartan/main_panel.py:59
+msgid "Palette Code"
+msgstr ""
+
+#: lib/gui/tartan/main_panel.py:62
+msgid "Embroidery Settings"
+msgstr ""
+
 #: lib/gui/test_swatches.py:21
 msgid "Generate Swatches"
 msgstr ""
@@ -3270,7 +3497,9 @@ msgstr ""
 
 #: lib/gui/test_swatches.py:100 inx/inkstitch_apply_palette.inx:87
 #: inx/inkstitch_apply_threadlist.inx:100 inx/inkstitch_fill_to_stroke.inx:32
-#: inx/inkstitch_jump_to_stroke.inx:42 inx/inkstitch_stroke_to_lpe_satin.inx:32
+#: inx/inkstitch_jump_to_stroke.inx:42
+#: inx/inkstitch_remove_embroidery_settings.inx:145
+#: inx/inkstitch_stroke_to_lpe_satin.inx:32
 #: inx/inkstitch_zigzag_line_to_satin.inx:28
 msgid "Get more information on our website"
 msgstr ""
@@ -3279,7 +3508,7 @@ msgstr ""
 msgid "https://inkstitch.org/docs/edit/#generate-test-swatches-from-selection"
 msgstr ""
 
-#: lib/gui/test_swatches.py:117
+#: lib/gui/tartan/main_panel.py:70 lib/gui/test_swatches.py:117
 msgid "Apply"
 msgstr ""
 
@@ -4417,6 +4646,7 @@ msgid "Break Apart Fill Objects"
 msgstr ""
 
 #: inx/inkstitch_break_apart.inx:10 inx/inkstitch_gradient_blocks.inx:10
+#: inx/inkstitch_tartan.inx:10
 msgid "Tools: Fill"
 msgstr ""
 
@@ -5441,7 +5671,7 @@ msgid "Running stitch tolerance (mm)"
 msgstr ""
 
 #: inx/inkstitch_jump_to_stroke.inx:41
-msgid "This extension converts jump stithes to running stitches."
+msgid "This extension converts jump stitches to running stitches."
 msgstr ""
 
 #: inx/inkstitch_jump_to_stroke.inx:43
@@ -6061,32 +6291,433 @@ msgstr ""
 msgid "Remove embroidery settings"
 msgstr ""
 
-#: inx/inkstitch_remove_embroidery_settings.inx:5
-msgid "Use this extension to remove the information Ink/Stitch has stored in your document. This can be especially useful if you copy and paste objects from an embroidery design into another document."
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:7
+#: inx/inkstitch_remove_embroidery_settings.inx:11
 msgid "Remove Params"
 msgstr ""
 
-#: inx/inkstitch_remove_embroidery_settings.inx:7
+#: inx/inkstitch_remove_embroidery_settings.inx:11
 msgid "Removes params from selected objects or all objects if nothing is selected."
 msgstr ""
 
-#: inx/inkstitch_remove_embroidery_settings.inx:10
-msgid "Remove Commands"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:10
-msgid "Removes visual commands from selected objects or all objects if nothing is selected."
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:12
+#: inx/inkstitch_remove_embroidery_settings.inx:13
+#: inx/inkstitch_remove_embroidery_settings.inx:118
 msgid "All"
 msgstr ""
 
+#: inx/inkstitch_remove_embroidery_settings.inx:14
+msgid "angle"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:15
+msgid "auto_fill"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:16
+msgid "avoid_self_crossing"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:17
+msgid "bean_stitch_repeats"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:18
+msgid "center_walk_underlay"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:19
+msgid "center_walk_underlay_position"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:20
+msgid "center_walk_underlay_repeats"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:21
+msgid "center_walk_underlay_stitch_length_mm"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:22
+msgid "clip"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:23
+msgid "clockwise"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:24
+msgid "clone"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:25
+msgid "contour_strategy"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:26
+msgid "contour_underlay"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:27
+msgid "contour_underlay_inset_mm"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:28
+msgid "contour_underlay_inset_percent"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:29
+msgid "contour_underlay_stitch_length_mm"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:30
+msgid "cutwork_needle"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:31
+msgid "end_row_spacing_mm"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:32
+msgid "e_stitch"
+msgstr ""
+
 #: inx/inkstitch_remove_embroidery_settings.inx:33
+msgid "expand_mm"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:34
+msgid "exponent"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:35
+msgid "fill_method"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:36
+msgid "fill_underlay_angle"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:37
+msgid "fill_underlay"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:38
+msgid "fill_underlay_inset_mm"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:39
+msgid "fill_underlay_max_stitch_length_mm"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:40
+msgid "fill_underlay_row_spacing_mm"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:41
+msgid "fill_underlay_skip_last"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:42
+msgid "flip_angle"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:43
+msgid "flip_exponent"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:44
+msgid "flip"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:45
+msgid "force_lock_stitches"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:46
+msgid "grid_size_mm"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:47
+msgid "guided_fill_strategy"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:48
+msgid "invisible_layers"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:49
+msgid "join_style"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:50
+msgid "layer_visibility"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:51
+msgid "line_count"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:52
+msgid "lock_custom_end"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:53
+msgid "lock_custom_start"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:54
+msgid "lock_end"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:55
+msgid "lock_end_scale_mm"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:56
+msgid "lock_end_scale_percent"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:57
+msgid "lock_start"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:58
+msgid "lock_start_scale_mm"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:59
+msgid "lock_start_scale_percent"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:60
+msgid "manual_stitch"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:61
+msgid "max_stitch_length_mm"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:62
+msgid "meander_angle"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:63
+msgid "meander_pattern"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:64
+msgid "meander_scale_percent"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:65
+msgid "min_line_dist_mm"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:66
+msgid "min_random_split_length_mm"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:67
+msgid "polyline"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:68
+msgid "pull_compensation_mm"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:69
+msgid "pull_compensation_percent"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:70
+msgid "random_seed"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:71
+msgid "random_split_jitter_percent"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:72
+msgid "random_split_phase"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:73
+msgid "random_width_decrease_percent"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:74
+msgid "random_width_increase_percent"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:75
+msgid "random_zigzag_spacing_percent"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:76
+msgid "repeats"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:77
+msgid "reverse_rails"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:78
+msgid "reverse"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:79
+msgid "rotate_ripples"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:80
+msgid "row_spacing_mm"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:81
+msgid "running_stitch_length_mm"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:82
+msgid "running_stitch_tolerance_mm"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:83
+msgid "satin_column"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:84
+msgid "satin_method"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:85
+msgid "scale_axis"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:86
+msgid "scale_end"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:87
+msgid "scale_start"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:88
+msgid "short_stitch_distance_mm"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:89
+msgid "short_stitch_inset"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:90
+msgid "skip_end"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:91
+msgid "skip_last"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:92
+msgid "skip_start"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:93
+msgid "smoothness_mm"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:94
+msgid "split_method"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:95
+msgid "split_staggers"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:96
+msgid "staggers"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:97
+msgid "stop_after"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:98
+msgid "stop_at_ending_point"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:99
+msgid "stroke_first"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:100
+msgid "stroke_method"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:101
+msgid "swap_satin_rails"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:102
+msgid "ties"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:103
+msgid "trim_after"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:104
+msgid "underlay_underpath"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:105
+msgid "underpath"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:106
+msgid "zigzag_spacing_mm"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:107
+msgid "zigzag_underlay_inset_mm"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:108
+msgid "zigzag_underlay_inset_percent"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:109
+msgid "zigzag_underlay_max_stitch_length_mm"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:110
+msgid "zigzag_underlay_spacing_mm"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:111
+msgid "zigzag_underlay"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:112
+msgid "zigzag_width_mm"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:116
+msgid "Remove Commands"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:116
+msgid "Removes visual commands from selected objects or all objects if nothing is selected."
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:139
 msgid "Remove Print Settings from SVG metadata"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:143
+msgid "Use this extension to remove the information Ink/Stitch has stored in your document. This can be especially useful if you copy and paste objects from an embroidery design into another document."
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:146
+msgid "https://inkstitch.org/docs/troubleshoot/#remove-embroidery-settings"
 msgstr ""
 
 #: inx/inkstitch_reorder.inx:3
@@ -6354,6 +6985,10 @@ msgstr ""
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:33
 msgid "https://inkstitch.org/docs/satin-tools/#stroke-to-live-path-effect-satin"
+msgstr ""
+
+#: inx/inkstitch_tartan.inx:3
+msgid "Tartan"
 msgstr ""
 
 #: inx/inkstitch_test_swatches.inx:3
