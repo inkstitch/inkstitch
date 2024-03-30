@@ -9,107 +9,107 @@
             <param name="del_params" type="optiongroup" gui-text="Remove Params"
                    gui-description="Removes params from selected objects or all objects if nothing is selected."
                    appearance="combo">
-                <option value="none">None</option>
-                <option value="all">All</option>
-                <option value="angle">angle</option>
-                <option value="auto_fill">auto_fill</option>
-                <option value="avoid_self_crossing">avoid_self_crossing</option>
-                <option value="bean_stitch_repeats">bean_stitch_repeats</option>
-                <option value="center_walk_underlay">center_walk_underlay</option>
-                <option value="center_walk_underlay_position">center_walk_underlay_position</option>
-                <option value="center_walk_underlay_repeats">center_walk_underlay_repeats</option>
-                <option value="center_walk_underlay_stitch_length_mm">center_walk_underlay_stitch_length_mm</option>
-                <option value="clip">clip</option>
-                <option value="clockwise">clockwise</option>
-                <option value="clone">clone</option>
-                <option value="contour_strategy">contour_strategy</option>
-                <option value="contour_underlay">contour_underlay</option>
-                <option value="contour_underlay_inset_mm">contour_underlay_inset_mm</option>
-                <option value="contour_underlay_inset_percent">contour_underlay_inset_percent</option>
-                <option value="contour_underlay_stitch_length_mm">contour_underlay_stitch_length_mm</option>
-                <option value="cutwork_needle">cutwork_needle</option>
-                <option value="end_row_spacing_mm">end_row_spacing_mm</option>
-                <option value="e_stitch">e_stitch</option>
-                <option value="expand_mm">expand_mm</option>
-                <option value="exponent">exponent</option>
-                <option value="fill_method">fill_method</option>
-                <option value="fill_underlay_angle">fill_underlay_angle</option>
-                <option value="fill_underlay">fill_underlay</option>
-                <option value="fill_underlay_inset_mm">fill_underlay_inset_mm</option>
-                <option value="fill_underlay_max_stitch_length_mm">fill_underlay_max_stitch_length_mm</option>
-                <option value="fill_underlay_row_spacing_mm">fill_underlay_row_spacing_mm</option>
-                <option value="fill_underlay_skip_last">fill_underlay_skip_last</option>
-                <option value="flip_angle">flip_angle</option>
-                <option value="flip_exponent">flip_exponent</option>
-                <option value="flip">flip</option>
-                <option value="force_lock_stitches">force_lock_stitches</option>
-                <option value="grid_size_mm">grid_size_mm</option>
-                <option value="guided_fill_strategy">guided_fill_strategy</option>
-                <option value="invisible_layers">invisible_layers</option>
-                <option value="join_style">join_style</option>
-                <option value="layer_visibility">layer_visibility</option>
-                <option value="line_count">line_count</option>
-                <option value="lock_custom_end">lock_custom_end</option>
-                <option value="lock_custom_start">lock_custom_start</option>
-                <option value="lock_end">lock_end</option>
-                <option value="lock_end_scale_mm">lock_end_scale_mm</option>
-                <option value="lock_end_scale_percent">lock_end_scale_percent</option>
-                <option value="lock_start">lock_start</option>
-                <option value="lock_start_scale_mm">lock_start_scale_mm</option>
-                <option value="lock_start_scale_percent">lock_start_scale_percent</option>
-                <option value="manual_stitch">manual_stitch</option>
-                <option value="max_stitch_length_mm">max_stitch_length_mm</option>
-                <option value="meander_angle">meander_angle</option>
-                <option value="meander_pattern">meander_pattern</option>
-                <option value="meander_scale_percent">meander_scale_percent</option>
-                <option value="min_line_dist_mm">min_line_dist_mm</option>
-                <option value="min_random_split_length_mm">min_random_split_length_mm</option>
-                <option value="polyline">polyline</option>
-                <option value="pull_compensation_mm">pull_compensation_mm</option>
-                <option value="pull_compensation_percent">pull_compensation_percent</option>
-                <option value="random_seed">random_seed</option>
-                <option value="random_split_jitter_percent">random_split_jitter_percent</option>
-                <option value="random_split_phase">random_split_phase</option>
-                <option value="random_width_decrease_percent">random_width_decrease_percent</option>
-                <option value="random_width_increase_percent">random_width_increase_percent</option>
-                <option value="random_zigzag_spacing_percent">random_zigzag_spacing_percent</option>
-                <option value="repeats">repeats</option>
-                <option value="reverse_rails">reverse_rails</option>
-                <option value="reverse">reverse</option>
-                <option value="rotate_ripples">rotate_ripples</option>
-                <option value="row_spacing_mm">row_spacing_mm</option>
-                <option value="running_stitch_length_mm">running_stitch_length_mm</option>
-                <option value="running_stitch_tolerance_mm">running_stitch_tolerance_mm</option>
-                <option value="satin_column">satin_column</option>
-                <option value="satin_method">satin_method</option>
-                <option value="scale_axis">scale_axis</option>
-                <option value="scale_end">scale_end</option>
-                <option value="scale_start">scale_start</option>
-                <option value="short_stitch_distance_mm">short_stitch_distance_mm</option>
-                <option value="short_stitch_inset">short_stitch_inset</option>
-                <option value="skip_end">skip_end</option>
-                <option value="skip_last">skip_last</option>
-                <option value="skip_start">skip_start</option>
-                <option value="smoothness_mm">smoothness_mm</option>
-                <option value="split_method">split_method</option>
-                <option value="split_staggers">split_staggers</option>
-                <option value="staggers">staggers</option>
-                <option value="stop_after">stop_after</option>
-                <option value="stop_at_ending_point">stop_at_ending_point</option>
-                <option value="stroke_first">stroke_first</option>
-                <option value="stroke_method">stroke_method</option>
-                <option value="swap_satin_rails">swap_satin_rails</option>
-                <option value="ties">ties</option>
-                <option value="trim_after">trim_after</option>
-                <option value="underlay_underpath">underlay_underpath</option>
-                <option value="underpath">underpath</option>
-                <option value="zigzag_spacing_mm">zigzag_spacing_mm</option>
-                <option value="zigzag_underlay_inset_mm">zigzag_underlay_inset_mm</option>
-                <option value="zigzag_underlay_inset_percent">zigzag_underlay_inset_percent</option>
-                <option value="zigzag_underlay_max_stitch_length_mm">zigzag_underlay_max_stitch_length_mm</option>
-                <option value="zigzag_underlay_spacing_mm">zigzag_underlay_spacing_mm</option>
-                <option value="zigzag_underlay">zigzag_underlay</option>
-                <option value="zigzag_width_mm">zigzag_width_mm</option>
+                <option translatable="no" value="none">None</option>
+                <option translatable="no"  value="all">All</option>
+                <option translatable="no"  value="angle">angle</option>
+                <option translatable="no"  value="auto_fill">auto_fill</option>
+                <option translatable="no"  value="avoid_self_crossing">avoid_self_crossing</option>
+                <option translatable="no" value="bean_stitch_repeats">bean_stitch_repeats</option>
+                <option translatable="no" value="center_walk_underlay">center_walk_underlay</option>
+                <option translatable="no" value="center_walk_underlay_position">center_walk_underlay_position</option>
+                <option translatable="no" value="center_walk_underlay_repeats">center_walk_underlay_repeats</option>
+                <option translatable="no" value="center_walk_underlay_stitch_length_mm">center_walk_underlay_stitch_length_mm</option>
+                <option translatable="no" value="clip">clip</option>
+                <option translatable="no" value="clockwise">clockwise</option>
+                <option translatable="no" value="clone">clone</option>
+                <option translatable="no" value="contour_strategy">contour_strategy</option>
+                <option translatable="no" value="contour_underlay">contour_underlay</option>
+                <option translatable="no" value="contour_underlay_inset_mm">contour_underlay_inset_mm</option>
+                <option translatable="no" value="contour_underlay_inset_percent">contour_underlay_inset_percent</option>
+                <option translatable="no" value="contour_underlay_stitch_length_mm">contour_underlay_stitch_length_mm</option>
+                <option translatable="no" value="cutwork_needle">cutwork_needle</option>
+                <option translatable="no" value="end_row_spacing_mm">end_row_spacing_mm</option>
+                <option translatable="no" value="e_stitch">e_stitch</option>
+                <option translatable="no" value="expand_mm">expand_mm</option>
+                <option translatable="no" value="exponent">exponent</option>
+                <option translatable="no" value="fill_method">fill_method</option>
+                <option translatable="no" value="fill_underlay_angle">fill_underlay_angle</option>
+                <option translatable="no" value="fill_underlay">fill_underlay</option>
+                <option translatable="no" value="fill_underlay_inset_mm">fill_underlay_inset_mm</option>
+                <option translatable="no" value="fill_underlay_max_stitch_length_mm">fill_underlay_max_stitch_length_mm</option>
+                <option translatable="no" value="fill_underlay_row_spacing_mm">fill_underlay_row_spacing_mm</option>
+                <option translatable="no" value="fill_underlay_skip_last">fill_underlay_skip_last</option>
+                <option translatable="no" value="flip_angle">flip_angle</option>
+                <option translatable="no" value="flip_exponent">flip_exponent</option>
+                <option translatable="no" value="flip">flip</option>
+                <option translatable="no" value="force_lock_stitches">force_lock_stitches</option>
+                <option translatable="no" value="grid_size_mm">grid_size_mm</option>
+                <option translatable="no" value="guided_fill_strategy">guided_fill_strategy</option>
+                <option translatable="no" value="invisible_layers">invisible_layers</option>
+                <option translatable="no" value="join_style">join_style</option>
+                <option translatable="no" value="layer_visibility">layer_visibility</option>
+                <option translatable="no" value="line_count">line_count</option>
+                <option translatable="no" value="lock_custom_end">lock_custom_end</option>
+                <option translatable="no" value="lock_custom_start">lock_custom_start</option>
+                <option translatable="no" value="lock_end">lock_end</option>
+                <option translatable="no" value="lock_end_scale_mm">lock_end_scale_mm</option>
+                <option translatable="no" value="lock_end_scale_percent">lock_end_scale_percent</option>
+                <option translatable="no" value="lock_start">lock_start</option>
+                <option translatable="no" value="lock_start_scale_mm">lock_start_scale_mm</option>
+                <option translatable="no" value="lock_start_scale_percent">lock_start_scale_percent</option>
+                <option translatable="no" value="manual_stitch">manual_stitch</option>
+                <option translatable="no" value="max_stitch_length_mm">max_stitch_length_mm</option>
+                <option translatable="no" value="meander_angle">meander_angle</option>
+                <option translatable="no" value="meander_pattern">meander_pattern</option>
+                <option translatable="no" value="meander_scale_percent">meander_scale_percent</option>
+                <option translatable="no" value="min_line_dist_mm">min_line_dist_mm</option>
+                <option translatable="no" value="min_random_split_length_mm">min_random_split_length_mm</option>
+                <option translatable="no" value="polyline">polyline</option>
+                <option translatable="no" value="pull_compensation_mm">pull_compensation_mm</option>
+                <option translatable="no" value="pull_compensation_percent">pull_compensation_percent</option>
+                <option translatable="no" value="random_seed">random_seed</option>
+                <option translatable="no" value="random_split_jitter_percent">random_split_jitter_percent</option>
+                <option translatable="no" value="random_split_phase">random_split_phase</option>
+                <option translatable="no" value="random_width_decrease_percent">random_width_decrease_percent</option>
+                <option translatable="no" value="random_width_increase_percent">random_width_increase_percent</option>
+                <option translatable="no" value="random_zigzag_spacing_percent">random_zigzag_spacing_percent</option>
+                <option translatable="no" value="repeats">repeats</option>
+                <option translatable="no" value="reverse_rails">reverse_rails</option>
+                <option translatable="no" value="reverse">reverse</option>
+                <option translatable="no" value="rotate_ripples">rotate_ripples</option>
+                <option translatable="no" value="row_spacing_mm">row_spacing_mm</option>
+                <option translatable="no" value="running_stitch_length_mm">running_stitch_length_mm</option>
+                <option translatable="no" value="running_stitch_tolerance_mm">running_stitch_tolerance_mm</option>
+                <option translatable="no" value="satin_column">satin_column</option>
+                <option translatable="no" value="satin_method">satin_method</option>
+                <option translatable="no" value="scale_axis">scale_axis</option>
+                <option translatable="no" value="scale_end">scale_end</option>
+                <option translatable="no" value="scale_start">scale_start</option>
+                <option translatable="no" value="short_stitch_distance_mm">short_stitch_distance_mm</option>
+                <option translatable="no" value="short_stitch_inset">short_stitch_inset</option>
+                <option translatable="no" value="skip_end">skip_end</option>
+                <option translatable="no" value="skip_last">skip_last</option>
+                <option translatable="no" value="skip_start">skip_start</option>
+                <option translatable="no" value="smoothness_mm">smoothness_mm</option>
+                <option translatable="no" value="split_method">split_method</option>
+                <option translatable="no" value="split_staggers">split_staggers</option>
+                <option translatable="no" value="staggers">staggers</option>
+                <option translatable="no" value="stop_after">stop_after</option>
+                <option translatable="no" value="stop_at_ending_point">stop_at_ending_point</option>
+                <option translatable="no" value="stroke_first">stroke_first</option>
+                <option translatable="no" value="stroke_method">stroke_method</option>
+                <option translatable="no" value="swap_satin_rails">swap_satin_rails</option>
+                <option translatable="no" value="ties">ties</option>
+                <option translatable="no" value="trim_after">trim_after</option>
+                <option translatable="no" value="underlay_underpath">underlay_underpath</option>
+                <option translatable="no" value="underpath">underpath</option>
+                <option translatable="no" value="zigzag_spacing_mm">zigzag_spacing_mm</option>
+                <option translatable="no" value="zigzag_underlay_inset_mm">zigzag_underlay_inset_mm</option>
+                <option translatable="no" value="zigzag_underlay_inset_percent">zigzag_underlay_inset_percent</option>
+                <option translatable="no" value="zigzag_underlay_max_stitch_length_mm">zigzag_underlay_max_stitch_length_mm</option>
+                <option translatable="no" value="zigzag_underlay_spacing_mm">zigzag_underlay_spacing_mm</option>
+                <option translatable="no" value="zigzag_underlay">zigzag_underlay</option>
+                <option translatable="no" value="zigzag_width_mm">zigzag_width_mm</option>
             </param>
             <param name="del_commands" type="optiongroup" gui-text="Remove Commands"
                    gui-description="Removes visual commands from selected objects or all objects if nothing is selected."
