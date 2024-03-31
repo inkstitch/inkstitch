@@ -21,15 +21,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      showgrid="true"
-     inkscape:zoom="17.904784"
-     inkscape:cx="8.7127554"
-     inkscape:cy="20.999974"
+     inkscape:zoom="11.260431"
+     inkscape:cx="8.703042"
+     inkscape:cy="20.958346"
      inkscape:window-width="1440"
      inkscape:window-height="800"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g2408"
+     inkscape:current-layer="g2296"
      inkscape:document-units="px"
      inkscape:snap-global="false"
      inkscape:snap-grids="false"
@@ -3049,10 +3049,10 @@ Glacial Indifference is a trademark of Alfredo Marco Pradil
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-1"
-     style="display:none"
+     style="display:inline"
      id="g2296">
     <path
-       d="m 8.61375,33.8119 v -1.9833 m -4.8,1.9833 v -1.9664 m -0.24,0.1008 5.28,-0.0185"
+       d="m 7.4592648,32.035769 v -1.9833 m -4.8,1.9833 v -1.9664 m -0.24,0.1008 5.28,-0.0185"
        style="font-size:8.46667px;line-height:1.25;font-family:'Glacial Indifference';-inkscape-font-specification:'Glacial Indifference';display:inline;fill:none;stroke:#000000;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="autosatin287"
        sodipodi:nodetypes="cccccc"
@@ -3070,7 +3070,7 @@ Glacial Indifference is a trademark of Alfredo Marco Pradil
        inkstitch:min_stitch_length_mm=".1"
        inkstitch:min_jump_stitch_length_mm="3" />
     <path
-       d="M 6.21375,30.4283 V 15.1633 C 5.7761915,15.18054 5.3283489,15.12191 4.9101172,15.281744 3.712334,15.599377 3.2978165,15.684896 2.06699,15.8499"
+       d="m 5.0592648,28.652169 v -15.265 c -0.4375585,0.01724 -0.8854011,-0.04139 -1.3036328,0.118444 -1.1977832,0.317633 -1.6123007,0.403152 -2.84312716,0.568156"
        style="font-size:8.46667px;line-height:1.25;font-family:'Glacial Indifference';-inkscape-font-specification:'Glacial Indifference';fill:none;stroke:#000000;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
        inkstitch:running_stitch_length_mm="1.2"
        id="autosatinrun164"
@@ -3080,7 +3080,7 @@ Glacial Indifference is a trademark of Alfredo Marco Pradil
        inkstitch:min_stitch_length_mm="0.1"
        inkstitch:min_jump_stitch_length_mm="3" />
     <path
-       d="m 1.28574,14.4519 7.32801,-2.4 V 31.8286 M 1.28574,17.7479 H 3.81375 V 31.8455 M 2.60746,13.571 2.65165,18.0788 m 0.88388,1.7236 5.3033,-0.1326 M 1.38599,17.9142 1.38052,14.2544"
+       d="m 0.13125484,12.675769 7.32800996,-2.4 v 19.7767 M 0.13125484,15.971769 H 2.6592648 v 14.0976 m -1.20629,-18.2745 0.04419,4.5078 m 0.88388,1.7236 5.3033,-0.1326 m -7.45283996,-1.7556 -0.00547,-3.6598"
        style="font-size:8.46667px;line-height:1.25;font-family:'Glacial Indifference';-inkscape-font-specification:'Glacial Indifference';display:inline;fill:none;stroke:#000000;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="autosatin288"
        sodipodi:nodetypes="cccccc"
@@ -5303,7 +5303,7 @@ Glacial Indifference is a trademark of Alfredo Marco Pradil
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-M"
-     style="display:inline"
+     style="display:none"
      id="g2408">
     <path
        style="font-size:5.5px;line-height:1.25;font-family:'Glacial Indifference';-inkscape-font-specification:'Glacial Indifference';display:inline;fill:none;fill-opacity:0.283401;stroke:#000000;stroke-width:0.0999997;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
