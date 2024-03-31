@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-03-30 01:02+0000\n"
-"PO-Revision-Date: 2024-03-30 01:03\n"
+"POT-Creation-Date: 2024-03-31 01:10+0000\n"
+"PO-Revision-Date: 2024-03-31 01:11\n"
 "Last-Translator: \n"
 "Language-Team: Hungarian\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-30 01:02+0000\n"
+"POT-Creation-Date: 2024-03-31 01:10+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -89,7 +89,7 @@ msgstr ""
 
 #. description of font in fonts/amitaclo_small
 #: inkstitch-fonts-metadata.py:24
-msgid "This font is an altered version  of Amitaclo, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory. The altered embroidery parameters of this font allow to scale down the original Amitaclo font between 30% (for a 8 mm font ) and 55 % (for a 16mm font).You may need to decrease the minimum stitch length in Preferences"
+msgid "This font is an altered version  of Amitaclo, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory.  parameters of this font allow to scale down the original Amitaclo font between 30% (for a 8 mm font ) and 55 % (for a 16mm font)."
 msgstr ""
 
 #. name of font in fonts/apex_lake
@@ -1485,7 +1485,7 @@ msgstr ""
 msgid "Tartan Fill"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:159 lib/gui/tartan/embroidery_panel.py:200
+#: lib/elements/fill_stitch.py:159 lib/gui/tartan/embroidery_panel.py:202
 #: inx/inkstitch_select_elements.inx:60
 msgid "Legacy Fill"
 msgstr ""
@@ -3405,7 +3405,7 @@ msgstr ""
 msgid "Herringbone width (mm)"
 msgstr ""
 
-#: lib/gui/tartan/embroidery_panel.py:65 lib/gui/tartan/embroidery_panel.py:100
+#: lib/gui/tartan/embroidery_panel.py:65 lib/gui/tartan/embroidery_panel.py:102
 msgid "Bean stitch repeats"
 msgstr ""
 
@@ -3417,27 +3417,27 @@ msgstr ""
 msgid "Stitch angle (warp)"
 msgstr ""
 
-#: lib/gui/tartan/embroidery_panel.py:87
+#: lib/gui/tartan/embroidery_panel.py:88
 msgid "Stitch angle (weft)"
 msgstr ""
 
-#: lib/gui/tartan/embroidery_panel.py:91
+#: lib/gui/tartan/embroidery_panel.py:93
 msgid "Minimum stripe width for fills"
 msgstr ""
 
-#: lib/gui/tartan/embroidery_panel.py:95
+#: lib/gui/tartan/embroidery_panel.py:97
 msgid "Stripes smaller than this will be stitched as a running stitch"
 msgstr ""
 
-#: lib/gui/tartan/embroidery_panel.py:193
+#: lib/gui/tartan/embroidery_panel.py:195
 msgid "Embroidery Element"
 msgstr ""
 
-#: lib/gui/tartan/embroidery_panel.py:194
+#: lib/gui/tartan/embroidery_panel.py:196
 msgid "SVG Elements"
 msgstr ""
 
-#: lib/gui/tartan/embroidery_panel.py:199
+#: lib/gui/tartan/embroidery_panel.py:201
 msgid "AutoFill"
 msgstr ""
 
@@ -6303,402 +6303,6 @@ msgstr ""
 #: inx/inkstitch_remove_embroidery_settings.inx:13
 #: inx/inkstitch_remove_embroidery_settings.inx:118
 msgid "All"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:14
-msgid "angle"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:15
-msgid "auto_fill"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:16
-msgid "avoid_self_crossing"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:17
-msgid "bean_stitch_repeats"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:18
-msgid "center_walk_underlay"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:19
-msgid "center_walk_underlay_position"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:20
-msgid "center_walk_underlay_repeats"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:21
-msgid "center_walk_underlay_stitch_length_mm"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:22
-msgid "clip"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:23
-msgid "clockwise"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:24
-msgid "clone"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:25
-msgid "contour_strategy"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:26
-msgid "contour_underlay"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:27
-msgid "contour_underlay_inset_mm"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:28
-msgid "contour_underlay_inset_percent"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:29
-msgid "contour_underlay_stitch_length_mm"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:30
-msgid "cutwork_needle"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:31
-msgid "end_row_spacing_mm"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:32
-msgid "e_stitch"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:33
-msgid "expand_mm"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:34
-msgid "exponent"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:35
-msgid "fill_method"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:36
-msgid "fill_underlay_angle"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:37
-msgid "fill_underlay"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:38
-msgid "fill_underlay_inset_mm"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:39
-msgid "fill_underlay_max_stitch_length_mm"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:40
-msgid "fill_underlay_row_spacing_mm"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:41
-msgid "fill_underlay_skip_last"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:42
-msgid "flip_angle"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:43
-msgid "flip_exponent"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:44
-msgid "flip"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:45
-msgid "force_lock_stitches"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:46
-msgid "grid_size_mm"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:47
-msgid "guided_fill_strategy"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:48
-msgid "invisible_layers"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:49
-msgid "join_style"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:50
-msgid "layer_visibility"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:51
-msgid "line_count"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:52
-msgid "lock_custom_end"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:53
-msgid "lock_custom_start"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:54
-msgid "lock_end"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:55
-msgid "lock_end_scale_mm"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:56
-msgid "lock_end_scale_percent"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:57
-msgid "lock_start"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:58
-msgid "lock_start_scale_mm"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:59
-msgid "lock_start_scale_percent"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:60
-msgid "manual_stitch"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:61
-msgid "max_stitch_length_mm"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:62
-msgid "meander_angle"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:63
-msgid "meander_pattern"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:64
-msgid "meander_scale_percent"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:65
-msgid "min_line_dist_mm"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:66
-msgid "min_random_split_length_mm"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:67
-msgid "polyline"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:68
-msgid "pull_compensation_mm"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:69
-msgid "pull_compensation_percent"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:70
-msgid "random_seed"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:71
-msgid "random_split_jitter_percent"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:72
-msgid "random_split_phase"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:73
-msgid "random_width_decrease_percent"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:74
-msgid "random_width_increase_percent"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:75
-msgid "random_zigzag_spacing_percent"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:76
-msgid "repeats"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:77
-msgid "reverse_rails"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:78
-msgid "reverse"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:79
-msgid "rotate_ripples"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:80
-msgid "row_spacing_mm"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:81
-msgid "running_stitch_length_mm"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:82
-msgid "running_stitch_tolerance_mm"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:83
-msgid "satin_column"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:84
-msgid "satin_method"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:85
-msgid "scale_axis"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:86
-msgid "scale_end"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:87
-msgid "scale_start"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:88
-msgid "short_stitch_distance_mm"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:89
-msgid "short_stitch_inset"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:90
-msgid "skip_end"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:91
-msgid "skip_last"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:92
-msgid "skip_start"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:93
-msgid "smoothness_mm"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:94
-msgid "split_method"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:95
-msgid "split_staggers"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:96
-msgid "staggers"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:97
-msgid "stop_after"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:98
-msgid "stop_at_ending_point"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:99
-msgid "stroke_first"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:100
-msgid "stroke_method"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:101
-msgid "swap_satin_rails"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:102
-msgid "ties"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:103
-msgid "trim_after"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:104
-msgid "underlay_underpath"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:105
-msgid "underpath"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:106
-msgid "zigzag_spacing_mm"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:107
-msgid "zigzag_underlay_inset_mm"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:108
-msgid "zigzag_underlay_inset_percent"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:109
-msgid "zigzag_underlay_max_stitch_length_mm"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:110
-msgid "zigzag_underlay_spacing_mm"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:111
-msgid "zigzag_underlay"
-msgstr ""
-
-#: inx/inkstitch_remove_embroidery_settings.inx:112
-msgid "zigzag_width_mm"
 msgstr ""
 
 #: inx/inkstitch_remove_embroidery_settings.inx:116
