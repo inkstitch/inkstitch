@@ -24,12 +24,12 @@
      inkscape:window-height="800"
      id="namedview5275"
      inkscape:zoom="3.8247196"
-     inkscape:cx="14.118682"
-     inkscape:cy="56.474728"
+     inkscape:cx="10.458283"
+     inkscape:cy="63.795526"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
-     inkscape:current-layer="svg5273"
+     inkscape:current-layer="layer3"
      inkscape:document-rotation="0"
      showguides="true"
      inkscape:guide-bbox="true"
@@ -187,9 +187,11 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkstitch:reverse_rails="none"
        inkstitch:min_stitch_length_mm="0.5"
        inkstitch:min_jump_stitch_length_mm="3"
-       inkstitch:pull_compensation_mm="0.3" />
+       inkstitch:pull_compensation_mm="0.3"
+       inkstitch:force_lock_stitches="True" />
     <g
-       id="g2">
+       id="g2"
+       style="fill:none;stroke:#4e2990">
       <path
          d="M 8.71093,89.5149 C 8.4823093,93.074148 8.500261,96.64424 8.26206,100.203"
          style="display:inline;fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
@@ -220,7 +222,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
      inkscape:label="GlyphLayer-&quot;"
      style="display:none">
     <g
-       id="g4">
+       id="g4"
+       style="fill:none;stroke:#4e2990">
       <path
          d="m 11.2847,47.1551 c 0.0038,1.222183 1.019062,2.038862 1.7795,2.8449"
          style="display:inline;fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
@@ -270,7 +273,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkstitch:zigzag_underlay_max_stitch_length_mm="5"
          inkstitch:reverse_rails="none"
          inkstitch:min_stitch_length_mm="0.5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:force_lock_stitches="True" />
     </g>
     <path
        id="autosatin5"
@@ -297,7 +301,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
      style="display:none"
      id="g8833">
     <g
-       id="g5">
+       id="g5"
+       style="fill:none;stroke:#4e2990">
       <path
          id="autosatin8"
          style="display:inline;fill:none;stroke:#4e2990"
@@ -336,10 +341,12 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkstitch:zigzag_underlay_max_stitch_length_mm="5"
          inkstitch:reverse_rails="none"
          inkstitch:min_stitch_length_mm="0.5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:force_lock_stitches="True" />
     </g>
     <g
-       id="g6">
+       id="g6"
+       style="fill:none;stroke:#4e2990">
       <path
          d="m 32.508397,52.557306 c -3.670346,7.466401 -15.863642,11.304418 -21.38151,3.779646 -3.9943862,-7.902456 -1.5079419,-18.344495 4.556225,-24.522554 2.191442,-2.021358 4.997862,-3.433917 7.98656,-3.716313"
          style="fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5"
@@ -387,7 +394,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkstitch:zigzag_underlay_max_stitch_length_mm="5"
          inkstitch:reverse_rails="none"
          inkstitch:min_stitch_length_mm="0.5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:force_lock_stitches="True" />
     </g>
     <path
        id="autosatin12"
@@ -403,9 +411,11 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
        inkstitch:reverse_rails="none"
        inkstitch:min_stitch_length_mm="0.5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:force_lock_stitches="True" />
     <g
-       id="g8">
+       id="g8"
+       style="fill:none;stroke:#4e2990">
       <path
          d="m 61.241755,72.37425 c 2.241675,-3.74138 6.022235,-6.816724 10.47465,-7.26023"
          style="fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5"
@@ -1796,7 +1806,7 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
     <path
        id="autosatin63"
        style="display:inline;fill:none;stroke:#4e2990"
-       d="m 21.185826,60.544067 c 0,0 13.101069,-4.3229 13.101069,-4.3229 C 34.286895,56.221167 31,53 31,53 c 0,0 -2.798206,-2.842247 -2.798206,-2.842247 0,0 -1.192113,-1.376239 -1.192113,-1.376239 0,0 -1.024753,-1.391289 -1.024753,-1.391289 0,0 -0.835369,-1.440067 -0.835369,-1.440067 0,0 -0.623961,-1.522574 -0.623961,-1.522574 0,0 -0.390528,-1.638809 -0.390528,-1.638809 C 24.13507,42.788775 24,41 24,41 c 0,0 0.226562,-2.195313 0.226562,-2.195313 0,0 0.648438,-2.054687 0.648438,-2.054687 0,0 1.023437,-1.867188 1.023437,-1.867188 0,0 1.351563,-1.632812 1.351563,-1.632812 0,0 1.632812,-1.351563 1.632812,-1.351563 0,0 1.867188,-1.023437 1.867188,-1.023437 0,0 2.054687,-0.648438 2.054687,-0.648438 C 32.804687,30.226562 35,30 35,30 c 0,0 2.152344,0.185547 2.152344,0.185547 0,0 1.941406,0.548828 1.941406,0.548828 0,0 1.707031,0.900391 1.707031,0.900391 0,0 1.449219,1.240234 1.449219,1.240234 0,0 1.167969,1.568359 1.167969,1.568359 0,0 0.863281,1.884766 0.863281,1.884766 0,0 0.535156,2.189453 0.535156,2.189453 C 44.816406,38.517578 45,41 45,41 c 0,0 -0.120313,1.81889 -0.120313,1.81889 0,0 -0.340016,1.706238 -0.340016,1.706238 0,0 -0.528332,1.592939 -0.528332,1.592939 0,0 -0.685262,1.47899 -0.685262,1.47899 0,0 -0.810806,1.364395 -0.810806,1.364395 0,0 -0.904964,1.249152 -0.904964,1.249152 0,0 -1.96686,2.149979 -1.96686,2.149979 0,0 -1.966859,1.68123 -1.966859,1.68123 0,0 -1.71577,1.207297 -1.71577,1.207297 0,0 -1.673923,0.972057 -1.673923,0.972057 0,0 -3.702524,1.307589 -3.702524,1.307589 0,0 -3.026654,0.899743 -3.026654,0.899743 0,0 -3.233788,0.990785 -3.233788,0.990785 C 24.323929,59.419284 20,61 20,61 c 0,0 -2.8125,1.171875 -2.8125,1.171875 0,0 -2.882812,1.517578 -2.882812,1.517578 0,0 -3.304688,2.185547 -3.304688,2.185547 0,0 -1.6787109,1.354248 -1.6787109,1.354248 0,0 -1.6259766,1.534424 -1.6259766,1.534424 0,0 -1.5205078,1.718994 -1.5205078,1.718994 0,0 -1.3623047,1.907959 -1.3623047,1.907959 0,0 -1.1513672,2.101318 -1.1513672,2.101318 0,0 -0.8876953,2.299073 -0.8876953,2.299073 0,0 -0.5712891,2.50122 -0.5712891,2.50122 C 2.2021484,79.292236 2,82 2,82 c 0,0 0.1152344,1.850098 0.1152344,1.850098 0,0 0.3378906,1.794433 0.3378906,1.794433 0,0 0.5488281,1.729981 0.5488281,1.729981 0,0 0.7480469,1.656738 0.7480469,1.656738 0,0 0.9355469,1.574707 0.9355469,1.574707 0,0 1.1113281,1.483887 1.1113281,1.483887 0,0 1.2753906,1.384277 1.2753906,1.384277 0,0 1.4277344,1.275879 1.4277344,1.275879 0,0 1.568359,1.158691 1.568359,1.158691 0,0 1.697266,1.032715 1.697266,1.032715 0,0 1.814453,0.897949 1.814453,0.897949 0,0 1.919922,0.754395 1.919922,0.754395 0,0 2.013672,0.602051 2.013672,0.602051 0,0 2.095703,0.440918 2.095703,0.440918 0,0 2.166016,0.270996 2.166016,0.270996 0,0 2.224609,0.0923 2.224609,0.0923 0,0 3.093506,-0.125782 3.093506,-0.125782 0,0 2.904541,-0.366211 2.904541,-0.366211 0,0 2.714111,-0.588867 2.714111,-0.588867 0,0 2.522217,-0.793945 2.522217,-0.793945 0,0 2.328857,-0.981445 2.328857,-0.981445 0,0 2.134034,-1.151368 2.134034,-1.151368 0,0 1.937744,-1.30371 1.937744,-1.30371 0,0 1.73999,-1.438477 1.73999,-1.438477 0,0 1.540771,-1.555664 1.540771,-1.555664 0,0 1.340088,-1.655274 1.340088,-1.655274 0,0 1.13794,-1.737304 1.13794,-1.737304 0,0 0.934326,-1.801758 0.934326,-1.801758 0,0 0.621397,-1.575232 0.621397,-1.575232 M 20,61 c 0,0 -2.109375,-2.207031 -2.109375,-2.207031 0,0 -1.828125,-2.136719 -1.828125,-2.136719 0,0 -1.546875,-2.089844 -1.546875,-2.089844 0,0 -1.265625,-2.066406 -1.265625,-2.066406 0,0 -0.984375,-2.066406 -0.984375,-2.066406 0,0 -0.703125,-2.089844 -0.703125,-2.089844 0,0 -0.421875,-2.136719 -0.421875,-2.136719 C 11.140625,46.207031 11,44 11,44 c 0,0 0.126709,-2.026123 0.126709,-2.026123 0,0 0.371338,-1.948486 0.371338,-1.948486 0,0 0.602783,-1.863526 0.602783,-1.863526 0,0 0.821045,-1.77124 0.821045,-1.77124 0,0 1.026123,-1.671631 1.026123,-1.671631 0,0 1.218018,-1.564697 1.218018,-1.564697 0,0 1.396728,-1.45044 1.396728,-1.45044 0,0 1.562256,-1.328857 1.562256,-1.328857 0,0 1.7146,-1.199951 1.7146,-1.199951 0,0 1.853759,-1.063721 1.853759,-1.063721 0,0 1.979737,-0.920166 1.979737,-0.920166 0,0 2.092529,-0.769287 2.092529,-0.769287 0,0 2.192139,-0.611084 2.192139,-0.611084 0,0 2.278564,-0.445557 2.278564,-0.445557 0,0 2.351807,-0.272705 2.351807,-0.272705 C 32.588135,25.092529 35,25 35,25 c 0,0 4.591797,0.277344 4.591797,0.277344 0,0 2.081299,0.342285 2.081299,0.342285 0,0 1.936279,0.474121 1.936279,0.474121 0,0 1.789795,0.603027 1.789795,0.603027 0,0 1.641846,0.729004 1.641846,0.729004 0,0 1.492431,0.852051 1.492431,0.852051 0,0 1.341553,0.972168 1.341553,0.972168 0,0 1.189209,1.089355 1.189209,1.089355 0,0 1.0354,1.203614 1.0354,1.203614 0,0 0.880127,1.314941 0.880127,1.314941 0,0 0.723389,1.42334 0.723389,1.42334 0,0 0.565186,1.528809 0.565186,1.528809 0,0 0.405517,1.631347 0.405517,1.631347 0,0 0.244385,1.730957 0.244385,1.730957 C 54.918213,39.172363 55,41 55,41 c 0,0 -0.125047,2.331689 -0.125047,2.331689 0,0 -0.358463,2.127449 -0.358463,2.127449 0,0 -0.566858,1.934284 -0.566858,1.934284 0,0 -0.750236,1.752194 -0.750236,1.752194 0,0 -0.908595,1.581178 -0.908595,1.581178 0,0 -1.041934,1.421236 -1.041934,1.421236 0,0 -1.150255,1.27237 -1.150255,1.27237 0,0 -1.233557,1.134577 -1.233557,1.134577 0,0 -2.616944,1.900074 -2.616944,1.900074 0,0 -2.649924,1.481798 -2.649924,1.481798 C 43.598187,57.936849 39,60 39,60 c 0,0 -1.801622,0.691568 -1.801622,0.691568 0,0 -1.778253,0.523384 -1.778253,0.523384 0,0 -3.575066,0.840548 -3.575066,0.840548 0,0 -3.747596,1.062798 -3.747596,1.062798 0,0 -1.993914,0.801197 -1.993914,0.801197 C 26.103549,63.919495 24,65 24,65 c 0,0 -1.875,0.96875 -1.875,0.96875 0,0 -1.921875,1.246094 -1.921875,1.246094 C 20.203125,67.214844 18,69 18,69 c 0,0 -2.203125,2.347656 -2.203125,2.347656 0,0 -1.013672,1.39209 -1.013672,1.39209 0,0 -0.908203,1.541504 -0.908203,1.541504 0,0 -0.767578,1.693848 -0.767578,1.693848 0,0 -0.591797,1.849121 -0.591797,1.849121 0,0 -0.380859,2.007324 -0.380859,2.007324 C 12.134766,79.831543 12,82 12,82 c 0,0 0.230469,2.8125 0.230469,2.8125 0,0 0.675781,2.4375 0.675781,2.4375 0,0 1.097656,2.0625 1.097656,2.0625 0,0 1.496094,1.6875 1.496094,1.6875 0,0 1.871094,1.3125 1.871094,1.3125 0,0 2.222656,0.9375 2.222656,0.9375 0,0 2.550781,0.5625 2.550781,0.5625 C 22.144531,93.8125 25,94 25,94 c 0,0 2.8125,-0.183594 2.8125,-0.183594 0,0 2.4375,-0.535156 2.4375,-0.535156 0,0 2.0625,-0.863281 2.0625,-0.863281 0,0 1.6875,-1.167969 1.6875,-1.167969 0,0 1.3125,-1.449219 1.3125,-1.449219 0,0 0.9375,-1.707031 0.9375,-1.707031 0,0 0.5625,-1.941406 0.5625,-1.941406 0,0 0.152459,-1.750108 0.152459,-1.750108 M 9.3830545,41.876189 c 0,0 16.0633195,-0.0048 16.0633195,-0.0048 M 38.072018,22.782694 c 0,0 -2.028513,8.325286 -2.028513,8.325286 m 7.795852,10.606154 c 0,0 12.227897,-0.0073 12.227897,-0.0073 M 1.0928588,83.306257 c 0,0 11.9579962,-0.125775 11.9579962,-0.125775 m 11.99493,9.725735 c 0,0 -1.880777,8.126953 -1.880777,8.126953"
+       d="m 21.185826,60.544067 c 0,0 13.101069,-4.3229 13.101069,-4.3229 C 34.286895,56.221167 31,53 31,53 c 0,0 -2.798206,-2.842247 -2.798206,-2.842247 0,0 -1.192113,-1.376239 -1.192113,-1.376239 0,0 -1.024753,-1.391289 -1.024753,-1.391289 0,0 -0.835369,-1.440067 -0.835369,-1.440067 0,0 -0.623961,-1.522574 -0.623961,-1.522574 0,0 -0.390528,-1.638809 -0.390528,-1.638809 C 24.13507,42.788775 24,41 24,41 c 0,0 0.226562,-2.195313 0.226562,-2.195313 0,0 0.648438,-2.054687 0.648438,-2.054687 0,0 1.023437,-1.867188 1.023437,-1.867188 0,0 1.351563,-1.632812 1.351563,-1.632812 0,0 1.632812,-1.351563 1.632812,-1.351563 0,0 1.867188,-1.023437 1.867188,-1.023437 0,0 2.054687,-0.648438 2.054687,-0.648438 C 32.804687,30.226562 35,30 35,30 c 0,0 2.152344,0.185547 2.152344,0.185547 0,0 1.941406,0.548828 1.941406,0.548828 0,0 1.707031,0.900391 1.707031,0.900391 0,0 1.449219,1.240234 1.449219,1.240234 0,0 1.167969,1.568359 1.167969,1.568359 0,0 0.863281,1.884766 0.863281,1.884766 0,0 0.535156,2.189453 0.535156,2.189453 C 44.816406,38.517578 45,41 45,41 c 0,0 -0.120313,1.81889 -0.120313,1.81889 0,0 -0.340016,1.706238 -0.340016,1.706238 0,0 -0.528332,1.592939 -0.528332,1.592939 0,0 -0.685262,1.47899 -0.685262,1.47899 0,0 -0.810806,1.364395 -0.810806,1.364395 0,0 -0.904964,1.249152 -0.904964,1.249152 0,0 -1.96686,2.149979 -1.96686,2.149979 0,0 -1.966859,1.68123 -1.966859,1.68123 0,0 -1.71577,1.207297 -1.71577,1.207297 0,0 -1.673923,0.972057 -1.673923,0.972057 0,0 -3.702524,1.307589 -3.702524,1.307589 0,0 -3.026654,0.899743 -3.026654,0.899743 0,0 -3.233788,0.990785 -3.233788,0.990785 C 24.323929,59.419284 20,61 20,61 c 0,0 -2.8125,1.171875 -2.8125,1.171875 0,0 -2.882812,1.517578 -2.882812,1.517578 0,0 -3.304688,2.185547 -3.304688,2.185547 0,0 -1.6787109,1.354248 -1.6787109,1.354248 0,0 -1.6259766,1.534424 -1.6259766,1.534424 0,0 -1.5205078,1.718994 -1.5205078,1.718994 0,0 -1.3623047,1.907959 -1.3623047,1.907959 0,0 -1.1513672,2.101318 -1.1513672,2.101318 0,0 -0.8876953,2.299073 -0.8876953,2.299073 0,0 -0.5712891,2.50122 -0.5712891,2.50122 C 2.2021484,79.292236 2,82 2,82 c 0,0 0.1152344,1.850098 0.1152344,1.850098 0,0 0.3378906,1.794433 0.3378906,1.794433 0,0 0.5488281,1.729981 0.5488281,1.729981 0,0 0.7480469,1.656738 0.7480469,1.656738 0,0 0.9355469,1.574707 0.9355469,1.574707 0,0 1.1113281,1.483887 1.1113281,1.483887 0,0 1.2753906,1.384277 1.2753906,1.384277 0,0 1.4277344,1.275879 1.4277344,1.275879 0,0 1.568359,1.158691 1.568359,1.158691 0,0 1.697266,1.032715 1.697266,1.032715 0,0 1.814453,0.897949 1.814453,0.897949 0,0 1.919922,0.754395 1.919922,0.754395 0,0 2.013672,0.602051 2.013672,0.602051 0,0 2.095703,0.440918 2.095703,0.440918 0,0 2.166016,0.270996 2.166016,0.270996 0,0 2.224609,0.0923 2.224609,0.0923 0,0 3.093506,-0.125772 3.093506,-0.125772 0,0 2.904541,-0.366211 2.904541,-0.366211 0,0 2.714111,-0.588867 2.714111,-0.588867 0,0 2.522217,-0.793945 2.522217,-0.793945 0,0 2.328857,-0.981445 2.328857,-0.981445 0,0 2.134034,-1.151368 2.134034,-1.151368 0,0 1.937744,-1.30371 1.937744,-1.30371 0,0 1.73999,-1.438477 1.73999,-1.438477 0,0 1.540771,-1.555664 1.540771,-1.555664 0,0 1.340088,-1.655274 1.340088,-1.655274 0,0 1.13794,-1.737304 1.13794,-1.737304 0,0 0.934326,-1.801758 0.934326,-1.801758 0,0 0.621397,-1.575232 0.621397,-1.575232 M 20,61 c 0,0 -2.109375,-2.207031 -2.109375,-2.207031 0,0 -1.828125,-2.136719 -1.828125,-2.136719 0,0 -1.546875,-2.089844 -1.546875,-2.089844 0,0 -1.265625,-2.066406 -1.265625,-2.066406 0,0 -0.984375,-2.066406 -0.984375,-2.066406 0,0 -0.703125,-2.089844 -0.703125,-2.089844 0,0 -0.421875,-2.136719 -0.421875,-2.136719 C 11.140625,46.207031 11,44 11,44 c 0,0 0.126709,-2.026123 0.126709,-2.026123 0,0 0.371338,-1.948486 0.371338,-1.948486 0,0 0.602783,-1.863526 0.602783,-1.863526 0,0 0.821045,-1.77124 0.821045,-1.77124 0,0 1.026123,-1.671631 1.026123,-1.671631 0,0 1.218018,-1.564697 1.218018,-1.564697 0,0 1.396728,-1.45044 1.396728,-1.45044 0,0 1.562256,-1.328857 1.562256,-1.328857 0,0 1.7146,-1.199951 1.7146,-1.199951 0,0 1.853759,-1.063721 1.853759,-1.063721 0,0 1.979737,-0.920166 1.979737,-0.920166 0,0 2.092529,-0.769287 2.092529,-0.769287 0,0 2.192139,-0.611084 2.192139,-0.611084 0,0 2.278564,-0.445557 2.278564,-0.445557 0,0 2.351807,-0.272705 2.351807,-0.272705 C 32.588135,25.092529 35,25 35,25 c 0,0 4.591797,0.277344 4.591797,0.277344 0,0 2.081299,0.342285 2.081299,0.342285 0,0 1.936279,0.474121 1.936279,0.474121 0,0 1.789795,0.603027 1.789795,0.603027 0,0 1.641846,0.729004 1.641846,0.729004 0,0 1.492431,0.852051 1.492431,0.852051 0,0 1.341553,0.972168 1.341553,0.972168 0,0 1.189209,1.089355 1.189209,1.089355 0,0 1.0354,1.203614 1.0354,1.203614 0,0 0.880127,1.314941 0.880127,1.314941 0,0 0.723389,1.42334 0.723389,1.42334 0,0 0.565186,1.528809 0.565186,1.528809 0,0 0.405517,1.631347 0.405517,1.631347 0,0 0.244385,1.730957 0.244385,1.730957 C 54.918213,39.172363 55,41 55,41 c 0,0 -0.125047,2.331689 -0.125047,2.331689 0,0 -0.358463,2.127449 -0.358463,2.127449 0,0 -0.566858,1.934284 -0.566858,1.934284 0,0 -0.750236,1.752194 -0.750236,1.752194 0,0 -0.908595,1.581178 -0.908595,1.581178 0,0 -1.041934,1.421236 -1.041934,1.421236 0,0 -1.150255,1.27237 -1.150255,1.27237 0,0 -1.233557,1.134577 -1.233557,1.134577 0,0 -2.616944,1.900074 -2.616944,1.900074 0,0 -2.649924,1.481798 -2.649924,1.481798 C 43.598187,57.936849 39,60 39,60 c 0,0 -1.801622,0.691568 -1.801622,0.691568 0,0 -1.778253,0.523384 -1.778253,0.523384 0,0 -3.575066,0.840548 -3.575066,0.840548 0,0 -3.747596,1.062798 -3.747596,1.062798 0,0 -1.993914,0.801197 -1.993914,0.801197 C 26.103549,63.919495 24,65 24,65 c 0,0 -1.875,0.96875 -1.875,0.96875 0,0 -1.921875,1.246094 -1.921875,1.246094 C 20.203125,67.214844 18,69 18,69 c 0,0 -2.203125,2.347656 -2.203125,2.347656 0,0 -1.013672,1.39209 -1.013672,1.39209 0,0 -0.908203,1.541504 -0.908203,1.541504 0,0 -0.767578,1.693848 -0.767578,1.693848 0,0 -0.591797,1.849121 -0.591797,1.849121 0,0 -0.380859,2.007324 -0.380859,2.007324 C 12.134766,79.831543 12,82 12,82 c 0,0 0.230469,2.8125 0.230469,2.8125 0,0 0.675781,2.4375 0.675781,2.4375 0,0 1.097656,2.0625 1.097656,2.0625 0,0 1.496094,1.6875 1.496094,1.6875 0,0 1.871094,1.3125 1.871094,1.3125 0,0 2.222656,0.9375 2.222656,0.9375 0,0 2.550781,0.5625 2.550781,0.5625 C 22.144531,93.8125 25,94 25,94 c 0,0 2.8125,-0.183594 2.8125,-0.183594 0,0 2.4375,-0.535156 2.4375,-0.535156 0,0 2.0625,-0.863281 2.0625,-0.863281 0,0 1.6875,-1.167969 1.6875,-1.167969 0,0 1.3125,-1.449219 1.3125,-1.449219 0,0 0.9375,-1.707031 0.9375,-1.707031 0,0 0.5625,-1.941406 0.5625,-1.941406 0,0 0.152459,-1.750108 0.152459,-1.750108 M 9.3830545,41.876189 c 0,0 16.0633195,-0.0048 16.0633195,-0.0048 M 38.072018,22.782694 c 0,0 -2.028513,8.325286 -2.028513,8.325286 m 7.795852,10.606154 c 0,0 12.227897,-0.0073 12.227897,-0.0073 M 1.0928588,83.306257 c 0,0 11.9579962,-0.125775 11.9579962,-0.125775 m 11.99493,9.725735 c 0,0 -1.880777,8.126953 -1.880777,8.126953"
        inkstitch:satin_column="True"
        inkstitch:ties="0"
        inkstitch:pull_compensation_mm="0.3"
@@ -1904,7 +1914,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" />
     <g
-       id="g9">
+       id="g9"
+       style="fill:none;stroke:#4e2990">
       <path
          d="m 14.372751,62.14716 c 0.19781,-3.790407 -0.158902,-7.660575 0.858586,-11.365251"
          style="fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5"
@@ -1928,7 +1939,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkstitch:zigzag_underlay_max_stitch_length_mm="5"
          inkstitch:reverse_rails="none"
          inkstitch:min_stitch_length_mm="0.5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:force_lock_stitches="True" />
     </g>
     <path
        id="autosatin68"
@@ -1985,7 +1997,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" />
     <g
-       id="g10">
+       id="g10"
+       style="fill:none;stroke:#4e2990">
       <path
          d="m 13.91883,62.007259 c 0.540862,-3.541258 0.397884,-7.142466 0.861242,-10.69148"
          style="display:inline;fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5"
@@ -2009,7 +2022,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkstitch:zigzag_underlay_max_stitch_length_mm="5"
          inkstitch:reverse_rails="none"
          inkstitch:min_stitch_length_mm="0.5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:force_lock_stitches="True" />
     </g>
     <path
        id="autosatin71"
@@ -2129,7 +2143,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkstitch:min_jump_stitch_length_mm="3"
        sodipodi:nodetypes="cccccccccc" />
     <g
-       id="g1">
+       id="g1"
+       style="fill:none;stroke:#4e2990">
       <path
          d="M 7.4371478,65.569454 C 12.744725,58.896864 22.219314,63.383709 29.414282,61.878011 35.028516,61.75197 42.704133,63.744012 46.620549,58.54971"
          style="fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5"
@@ -2270,7 +2285,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
      style="display:none"
      id="g8925">
     <g
-       id="g11">
+       id="g11"
+       style="fill:none;stroke:#4e2990">
       <path
          d="m 16.466476,95.64835 c -0.09446,1.521594 -0.340364,3.027362 -0.516748,4.54021"
          style="fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5"
@@ -2306,7 +2322,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkstitch:min_jump_stitch_length_mm="3" />
     </g>
     <g
-       id="g12">
+       id="g12"
+       style="fill:none;stroke:#4e2990">
       <path
          d="M 19.525964,82.858079 C 15.439083,76.147566 21.549475,67.221323 26.162615,61.942605 32.655578,55.829246 40.038512,47.913563 38.151244,38.152319 36.073385,28.202092 23.18221,25.131737 14.968581,29.314784 8.3015901,32.181703 2.3794758,41.779134 7.6017993,48.24171 c 1.0939306,0.920235 2.5435147,1.401652 3.9702617,1.329471"
          style="fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5"
@@ -2331,7 +2348,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkstitch:zigzag_underlay_max_stitch_length_mm="5"
          inkstitch:reverse_rails="none"
          inkstitch:min_stitch_length_mm="0.5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:force_lock_stitches="True" />
     </g>
     <path
        id="autosatin84"
@@ -2828,7 +2846,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkstitch:min_stitch_length_mm="0.5"
        inkstitch:min_jump_stitch_length_mm="3" />
     <g
-       id="g13">
+       id="g13"
+       style="fill:none;stroke:#4e2990">
       <path
          d="M 30.437087,40.57354 C 23.600667,38.151051 24.332393,28.014406 17.02999,26.279969 16.175188,25.980873 15.304371,25.731563 14.437164,25.471918"
          style="fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5"
@@ -2853,7 +2872,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkstitch:zigzag_underlay_max_stitch_length_mm="5"
          inkstitch:reverse_rails="none"
          inkstitch:min_stitch_length_mm="0.5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:force_lock_stitches="True" />
     </g>
     <path
        id="autosatin111"
@@ -2937,7 +2957,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" />
     <g
-       id="g14">
+       id="g14"
+       style="fill:none;stroke:#4e2990">
       <path
          d="M 41.263475,40.626573 C 34.243113,38.717682 33.275883,30.350588 29.060666,25.571596"
          style="fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5"
@@ -2987,7 +3008,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkstitch:zigzag_underlay_max_stitch_length_mm="5"
          inkstitch:reverse_rails="none"
          inkstitch:min_stitch_length_mm="0.5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:force_lock_stitches="True" />
     </g>
     <path
        id="autosatin116"
@@ -3009,7 +3031,7 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ä"
-     style="display:inline"
+     style="display:none"
      id="g9065">
     <path
        d="M 3.5852177,83.38413 C 3.170189,89.971862 8.8635823,96.761246 15.832412,95.228679 20.716069,94.129143 23.517789,89.482086 26.161388,85.65685"
@@ -3036,7 +3058,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkstitch:min_stitch_length_mm="0.5"
        inkstitch:min_jump_stitch_length_mm="3" />
     <g
-       id="g90">
+       id="g90"
+       style="fill:none;stroke:#4e2990">
       <path
          d="m 16.802836,39.099356 c 0.957975,-2.761316 0.631311,-5.721472 0.690487,-8.584675"
          style="fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5"
@@ -3061,7 +3084,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkstitch:zigzag_underlay_max_stitch_length_mm="5"
          inkstitch:reverse_rails="none"
          inkstitch:min_stitch_length_mm="0.5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:force_lock_stitches="True" />
     </g>
     <path
        id="autosatin119"
@@ -3089,7 +3113,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" />
     <g
-       id="g91">
+       id="g91"
+       style="fill:none;stroke:#4e2990">
       <path
          d="m 34.127767,39.276266 c 1.332948,-2.985292 0.117844,-6.632068 2.149834,-9.369611"
          style="fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5"
@@ -3114,7 +3139,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkstitch:zigzag_underlay_max_stitch_length_mm="5"
          inkstitch:reverse_rails="none"
          inkstitch:min_stitch_length_mm="0.5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:force_lock_stitches="True" />
     </g>
     <path
        d="m 42.618674,52.391529 c 0.313706,-0.179657 1.586697,-0.865871 1.909486,-1.029321"
@@ -3315,7 +3341,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkstitch:min_stitch_length_mm="0.5"
        inkstitch:min_jump_stitch_length_mm="3" />
     <g
-       id="g17">
+       id="g17"
+       style="fill:none;stroke:#4e2990">
       <path
          d="M 26.437087,40.57354 C 19.600667,38.151051 20.332393,28.014406 13.02999,26.279969 12.175188,25.980873 11.304371,25.731563 10.437164,25.471918"
          style="display:inline;fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5"
@@ -3339,7 +3366,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkstitch:zigzag_underlay_max_stitch_length_mm="5"
          inkstitch:reverse_rails="none"
          inkstitch:min_stitch_length_mm="0.5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:force_lock_stitches="True" />
     </g>
     <path
        id="autosatin130"
@@ -3373,7 +3401,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" />
     <g
-       id="g18">
+       id="g18"
+       style="fill:none;stroke:#4e2990">
       <path
          d="m 21.141879,40.589987 c 8.062498,-2.175302 9.727506,-12.998205 18.25875,-14.585859 l 1.313791,-0.354188 1.320355,-0.280941"
          style="fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5"
@@ -3397,7 +3426,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkstitch:zigzag_underlay_max_stitch_length_mm="5"
          inkstitch:reverse_rails="none"
          inkstitch:min_stitch_length_mm="0.5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:force_lock_stitches="True" />
     </g>
     <path
        d="m 22.363132,52.656748 c 8.753043,-2.201893 12.62521,9.998966 6.494027,15.151673 -4.021235,4.675486 -10.248567,5.962805 -15.636288,8.356555 l -1.009456,0.902172 -1.010992,0.900451"
@@ -3456,7 +3486,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkstitch:min_stitch_length_mm="0.5"
        inkstitch:min_jump_stitch_length_mm="3" />
     <g
-       id="g19">
+       id="g19"
+       style="fill:none;stroke:#4e2990">
       <path
          d="M 35.838234,40.036715 C 29.851213,37.474188 29.136096,29.963195 25.060666,25.571594"
          style="display:inline;fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5"
@@ -3505,7 +3536,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkstitch:zigzag_underlay_max_stitch_length_mm="5"
          inkstitch:reverse_rails="none"
          inkstitch:min_stitch_length_mm="0.5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:force_lock_stitches="True" />
     </g>
     <path
        id="autosatin136"
@@ -3561,7 +3593,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" />
     <g
-       id="g20">
+       id="g20"
+       style="fill:none;stroke:#4e2990">
       <path
          d="m 16.042676,39.621235 c 1.20615,-2.931431 0.685942,-6.174758 1.319194,-9.218328"
          style="fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5"
@@ -3585,7 +3618,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkstitch:zigzag_underlay_max_stitch_length_mm="5"
          inkstitch:reverse_rails="none"
          inkstitch:min_stitch_length_mm="0.5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:force_lock_stitches="True" />
     </g>
     <path
        d="m 19.574521,53.247007 c 2.899494,-0.773414 6.222136,-1.218203 8.941693,0.376198"
@@ -3597,7 +3631,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" />
     <g
-       id="g21">
+       id="g21"
+       style="fill:none;stroke:#4e2990">
       <path
          d="m 33.968254,39.585001 c 0.7197,-3.002884 0.376098,-6.116605 0.736205,-9.159974"
          style="fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5"
@@ -3621,7 +3656,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkstitch:zigzag_underlay_max_stitch_length_mm="5"
          inkstitch:reverse_rails="none"
          inkstitch:min_stitch_length_mm="0.5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:force_lock_stitches="True" />
     </g>
     <path
        d="m 29.650162,54.671676 c 4.795895,5.211428 1.101364,13.365842 -4.528278,16.248435 -4.700786,3.447894 -11.238518,3.375009 -15.045923,8.067175"
@@ -3664,7 +3700,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" />
     <g
-       id="g23">
+       id="g23"
+       style="fill:none;stroke:#4e2990">
       <path
          d="M -0.70458565,39.627318 C 3.599566,35.947226 8.0517085,31.796487 10.364031,26.59422 l 0.630182,-0.943826"
          style="display:inline;fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5"
@@ -3713,7 +3750,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkstitch:zigzag_underlay_max_stitch_length_mm="5"
          inkstitch:reverse_rails="none"
          inkstitch:min_stitch_length_mm="0.5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:force_lock_stitches="True" />
     </g>
     <path
        id="autosatin143"
@@ -3769,7 +3807,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" />
     <g
-       id="g24">
+       id="g24"
+       style="fill:none;stroke:#4e2990">
       <path
          d="m 19.591802,30.594915 c 0.44916,2.810188 0.540076,5.66779 0.419442,8.507754"
          style="fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5"
@@ -3794,10 +3833,12 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkstitch:zigzag_underlay_max_stitch_length_mm="5"
          inkstitch:reverse_rails="none"
          inkstitch:min_stitch_length_mm="0.5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:force_lock_stitches="True" />
     </g>
     <g
-       id="g25">
+       id="g25"
+       style="fill:none;stroke:#4e2990">
       <path
          id="autosatin146"
          style="display:inline;fill:none;stroke:#4e2990"
@@ -3813,7 +3854,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkstitch:zigzag_underlay_max_stitch_length_mm="5"
          inkstitch:reverse_rails="none"
          inkstitch:min_stitch_length_mm="0.5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:force_lock_stitches="True" />
     </g>
     <path
        id="autosatin147"
@@ -3864,7 +3906,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkstitch:min_stitch_length_mm="0.5"
        inkstitch:min_jump_stitch_length_mm="3" />
     <g
-       id="g26">
+       id="g26"
+       style="fill:none;stroke:#4e2990">
       <path
          d="m 13.3757,40.0734 c 3.423232,-1.493994 5.355818,-4.889355 7.944462,-7.40139 1.351573,-1.496479 2.931764,-2.901704 3.486267,-4.911199 C 25.12274,27.015738 25.4852,26.279588 25.9986,25.6483"
          style="display:inline;fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
@@ -3911,7 +3954,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkstitch:zigzag_underlay_max_stitch_length_mm="5"
          inkstitch:reverse_rails="none"
          inkstitch:min_stitch_length_mm="0.5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:force_lock_stitches="True" />
     </g>
     <path
        id="autosatin98"
@@ -4012,7 +4056,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkstitch:min_stitch_length_mm="0.5"
        inkstitch:min_jump_stitch_length_mm="3" />
     <g
-       id="g28">
+       id="g28"
+       style="fill:none;stroke:#4e2990">
       <path
          d="m 17.859981,39.686694 c 0.254389,-3.045385 0.192678,-6.11537 -0.154155,-9.150957"
          style="display:inline;fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5"
@@ -4036,7 +4081,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkstitch:zigzag_underlay_max_stitch_length_mm="5"
          inkstitch:reverse_rails="none"
          inkstitch:min_stitch_length_mm="0.5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:force_lock_stitches="True" />
     </g>
     <path
        id="autosatin156"
@@ -4055,7 +4101,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkstitch:min_stitch_length_mm="0.5"
        inkstitch:min_jump_stitch_length_mm="3" />
     <g
-       id="g27">
+       id="g27"
+       style="fill:none;stroke:#4e2990">
       <path
          d="m 34.982218,39.583185 c 0.72782,-3.015471 0.299817,-6.149281 0.770684,-9.195785"
          style="display:inline;fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5"
@@ -4079,7 +4126,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkstitch:zigzag_underlay_max_stitch_length_mm="5"
          inkstitch:reverse_rails="none"
          inkstitch:min_stitch_length_mm="0.5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:force_lock_stitches="True" />
     </g>
     <path
        id="autosatin158"
@@ -4163,7 +4211,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" />
     <g
-       id="g29">
+       id="g29"
+       style="fill:none;stroke:#4e2990">
       <path
          d="M 27.437077,40.57354 C 20.600659,38.15105 21.332384,28.014408 14.029983,26.27997 13.175181,25.980875 12.304364,25.731564 11.437157,25.471919"
          style="display:inline;fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5"
@@ -4188,7 +4237,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkstitch:zigzag_underlay_max_stitch_length_mm="5"
          inkstitch:reverse_rails="none"
          inkstitch:min_stitch_length_mm="0.5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:force_lock_stitches="True" />
     </g>
     <path
        id="autosatin162"
@@ -4222,7 +4272,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" />
     <g
-       id="g31">
+       id="g31"
+       style="fill:none;stroke:#4e2990">
       <path
          d="m 11.467741,40.742472 c 6.215203,-2.348005 10.63909,-8.406852 13.777584,-13.944229 l 0.748888,-1.147849"
          style="display:inline;fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5"
@@ -4272,7 +4323,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkstitch:zigzag_underlay_max_stitch_length_mm="5"
          inkstitch:reverse_rails="none"
          inkstitch:min_stitch_length_mm="0.5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:force_lock_stitches="True" />
     </g>
     <path
        d="M 5.3410687,52.489154 C 5.0343675,52.301026 3.7854661,51.585398 3.4677166,51.415713"
@@ -4364,7 +4416,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" />
     <g
-       id="g32">
+       id="g32"
+       style="fill:none;stroke:#4e2990">
       <path
          d="m 34.982218,39.583185 c 0.72782,-3.015471 0.299817,-6.149281 0.770684,-9.195785"
          style="display:inline;fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5"
@@ -4388,10 +4441,12 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkstitch:zigzag_underlay_max_stitch_length_mm="5"
          inkstitch:reverse_rails="none"
          inkstitch:min_stitch_length_mm="0.5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:force_lock_stitches="True" />
     </g>
     <g
-       id="g33">
+       id="g33"
+       style="fill:none;stroke:#4e2990">
       <path
          d="m 17.987756,38.173093 c 0.03679,-2.547504 0.04635,-5.105835 -0.28193,-7.637356"
          style="display:inline;fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5"
@@ -4415,7 +4470,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkstitch:zigzag_underlay_max_stitch_length_mm="5"
          inkstitch:reverse_rails="none"
          inkstitch:min_stitch_length_mm="0.5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:force_lock_stitches="True" />
     </g>
     <path
        id="autosatin170"
@@ -4528,7 +4584,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkstitch:min_stitch_length_mm="0.5"
        inkstitch:min_jump_stitch_length_mm="3" />
     <g
-       id="g35">
+       id="g35"
+       style="fill:none;stroke:#4e2990">
       <path
          d="M 39.859615,14.502518 C 40.234612,11.475946 39.681504,8.3619684 40.529591,5.390811"
          style="fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5"
@@ -4553,7 +4610,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkstitch:zigzag_underlay_max_stitch_length_mm="5"
          inkstitch:reverse_rails="none"
          inkstitch:min_stitch_length_mm="0.5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:force_lock_stitches="True" />
     </g>
     <path
        id="autosatin176"
@@ -4571,7 +4629,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkstitch:min_stitch_length_mm="0.5"
        inkstitch:min_jump_stitch_length_mm="3" />
     <g
-       id="g34">
+       id="g34"
+       style="fill:none;stroke:#4e2990">
       <path
          d="m 56.839264,14.560745 c 0.785728,-2.983471 0.380865,-6.1064232 0.885321,-9.1279259"
          style="fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5"
@@ -4595,7 +4654,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkstitch:zigzag_underlay_max_stitch_length_mm="5"
          inkstitch:reverse_rails="none"
          inkstitch:min_stitch_length_mm="0.5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:force_lock_stitches="True" />
     </g>
     <path
        id="autosatin178"
@@ -4629,7 +4689,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" />
     <g
-       id="g37">
+       id="g37"
+       style="fill:none;stroke:#4e2990">
       <path
          d="M 33.566757,14.438667 C 34.020796,11.235379 33.144615,7.8021813 34.661944,4.7908069"
          style="display:inline;fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5"
@@ -4654,7 +4715,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkstitch:zigzag_underlay_max_stitch_length_mm="5"
          inkstitch:reverse_rails="none"
          inkstitch:min_stitch_length_mm="0.5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:force_lock_stitches="True" />
     </g>
     <path
        id="autosatin180"
@@ -4682,7 +4744,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" />
     <g
-       id="g36">
+       id="g36"
+       style="fill:none;stroke:#4e2990">
       <path
          d="M 50.546406,14.496893 C 51.599048,11.279422 50.443995,7.7073206 51.910402,4.5854727"
          style="display:inline;fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5"
@@ -4706,7 +4769,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkstitch:zigzag_underlay_max_stitch_length_mm="5"
          inkstitch:reverse_rails="none"
          inkstitch:min_stitch_length_mm="0.5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:force_lock_stitches="True" />
     </g>
     <path
        id="autosatin182"
@@ -4765,7 +4829,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" />
     <g
-       id="g39">
+       id="g39"
+       style="fill:none;stroke:#4e2990">
       <path
          d="m 42.532612,4.8024667 c -1.28946,3.0614444 -0.549276,6.4385823 -0.965958,9.6362003"
          style="display:inline;fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5"
@@ -4790,10 +4855,12 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkstitch:reverse_rails="none"
          inkstitch:min_stitch_length_mm="0.5"
          inkstitch:min_jump_stitch_length_mm="3"
-         sodipodi:nodetypes="ccccccccccc" />
+         sodipodi:nodetypes="ccccccccccc"
+         inkstitch:force_lock_stitches="True" />
     </g>
     <g
-       id="g38">
+       id="g38"
+       style="fill:none;stroke:#4e2990">
       <path
          d="m 58.546406,14.496893 c 0.537832,-2.264534 0.582197,-4.6045455 0.636502,-6.9195619"
          style="display:inline;fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5"
@@ -4818,7 +4885,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkstitch:zigzag_underlay_max_stitch_length_mm="5"
          inkstitch:reverse_rails="none"
          inkstitch:min_stitch_length_mm="0.5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:force_lock_stitches="True" />
     </g>
     <path
        id="autosatin186"
@@ -5578,7 +5646,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" />
     <g
-       id="g40">
+       id="g40"
+       style="fill:none;stroke:#4e2990">
       <path
          d="M 11.980469,40.215482 C 12.562426,36.669731 12.41004,33.054039 12.923,29.500774"
          style="fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5"
@@ -5603,7 +5672,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkstitch:zigzag_underlay_max_stitch_length_mm="5"
          inkstitch:reverse_rails="none"
          inkstitch:min_stitch_length_mm="0.5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:force_lock_stitches="True" />
     </g>
     <path
        id="autosatin219"
@@ -5637,7 +5707,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" />
     <g
-       id="g41">
+       id="g41"
+       style="fill:none;stroke:#4e2990">
       <path
          d="m 12.2906,40.1722 c 0.214226,-3.560941 0.135138,-7.140659 0.5711,-10.6869"
          style="fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
@@ -5662,7 +5733,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkstitch:zigzag_underlay_max_stitch_length_mm="5"
          inkstitch:reverse_rails="none"
          inkstitch:min_stitch_length_mm="0.5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:force_lock_stitches="True" />
     </g>
     <path
        d="M 6.23642,52.5072 C 5.9514745,52.318268 4.7938879,51.589468 4.50004,51.414"
@@ -7411,7 +7483,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" />
     <g
-       id="g42">
+       id="g42"
+       style="fill:none;stroke:#4e2990">
       <path
          d="M 29.859615,14.502518 C 30.234612,11.475946 29.681504,8.3619684 30.529591,5.390811"
          style="display:inline;fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5"
@@ -7436,14 +7509,16 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkstitch:zigzag_underlay_max_stitch_length_mm="5"
          inkstitch:reverse_rails="none"
          inkstitch:min_stitch_length_mm="0.5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:force_lock_stitches="True" />
     </g>
     <path
        style="fill:none;stroke:#4e2990;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round"
        d="m 30.9359,27.7539 c 4.65512,0.235702 9.31024,0.471404 13.9654,0.707106"
        id="path90" />
     <g
-       id="g43">
+       id="g43"
+       style="fill:none;stroke:#4e2990">
       <path
          d="m 46.839264,14.560745 c 0.785728,-2.983471 0.380865,-6.1064232 0.885321,-9.1279259"
          style="display:inline;fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5"
@@ -7467,7 +7542,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkstitch:zigzag_underlay_max_stitch_length_mm="5"
          inkstitch:reverse_rails="none"
          inkstitch:min_stitch_length_mm="0.5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:force_lock_stitches="True" />
     </g>
     <path
        style="fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5"
@@ -7524,7 +7600,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" />
     <g
-       id="g44">
+       id="g44"
+       style="fill:none;stroke:#4e2990">
       <path
          style="fill:none;stroke:#4e2990;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round"
          d="M 28.107495,16.61701 C 32.350136,12.727923 36.592776,8.838835 40.835417,4.9497475 45.136983,9.1923883 49.43855,13.435029 53.740116,17.67767"
@@ -7544,7 +7621,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkstitch:pull_compensation_mm="0.3"
          inkstitch:max_stitch_length_mm="8"
          inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-         inkstitch:ties="0" />
+         inkstitch:ties="0"
+         inkstitch:force_lock_stitches="True" />
     </g>
     <path
        style="fill:none;stroke:#4e2990;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round"
@@ -7601,7 +7679,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" />
     <g
-       id="g46">
+       id="g46"
+       style="fill:none;stroke:#4e2990">
       <path
          style="fill:none;stroke:#4e2990;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round"
          d="M 41.896077,17.67767 C 36.592776,12.786848 31.289476,7.8960259 25.986175,3.0052038"
@@ -7623,7 +7702,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkstitch:pull_compensation_mm="0.3"
          inkstitch:max_stitch_length_mm="8"
          inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-         inkstitch:ties="0" />
+         inkstitch:ties="0"
+         inkstitch:force_lock_stitches="True" />
     </g>
     <path
        style="display:inline;fill:none;stroke:#4e2990;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round"
@@ -7680,7 +7760,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" />
     <g
-       id="g47">
+       id="g47"
+       style="fill:none;stroke:#4e2990">
       <path
          style="display:inline;fill:none;stroke:#4e2990;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round"
          d="M 27.939418,17.67767 C 33.242719,12.786848 38.546019,7.8960259 43.84932,3.0052038"
@@ -7702,7 +7783,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkstitch:pull_compensation_mm="0.3"
          inkstitch:max_stitch_length_mm="8"
          inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-         inkstitch:ties="0" />
+         inkstitch:ties="0"
+         inkstitch:force_lock_stitches="True" />
     </g>
     <path
        style="display:inline;fill:none;stroke:#4e2990;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round"
