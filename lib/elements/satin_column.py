@@ -360,6 +360,24 @@ class SatinColumn(EmbroideryElement):
         return max(self.get_float_param("contour_underlay_stitch_length_mm", 1.5), 0.01)
 
     @property
+    @param(
+        'contour_underlay_stitch_tolerance_mm',
+        _('Stitch tolerance'),
+        tooltip=_(
+            'All stitches must be within this distance from the path. '
+            'A lower tolerance means stitches will be closer together. '
+            'A higher tolerance means sharp corners may be rounded. '
+            'Defaults to stitch length.'
+        ),
+        unit='mm',
+        group=_('Contour Underlay'),
+        type='float',
+    )
+    def contour_underlay_stitch_tolerance(self):
+        tolerance = self.get_float_param("contour_underlay_stitch_tolerance_mm", self.contour_underlay_stitch_length)
+        return max(tolerance, 0.01)
+
+    @property
     @param('contour_underlay_inset_mm',
            _('Inset distance (fixed)'),
            tooltip=_('Shrink the outline by a fixed length, to prevent the underlay from showing around the outside of the satin column.'),
@@ -397,6 +415,24 @@ class SatinColumn(EmbroideryElement):
     @param('center_walk_underlay_stitch_length_mm', _('Stitch length'), unit='mm', group=_('Center-Walk Underlay'), type='float', default=1.5)
     def center_walk_underlay_stitch_length(self):
         return max(self.get_float_param("center_walk_underlay_stitch_length_mm", 1.5), 0.01)
+
+    @property
+    @param(
+        'center_walk_underlay_stitch_tolerance_mm',
+        _('Stitch tolerance'),
+        tooltip=_(
+            'All stitches must be within this distance from the path. '
+            'A lower tolerance means stitches will be closer together. '
+            'A higher tolerance means sharp corners may be rounded. '
+            'Defaults to stitch length.'
+        ),
+        unit='mm',
+        group=_('Center-Walk Underlay'),
+        type='float'
+    )
+    def center_walk_underlay_stitch_tolerance(self):
+        tolerance = self.get_float_param("center_walk_underlay_stitch_tolerance_mm", self.contour_underlay_stitch_length)
+        return max(tolerance, 0.01)
 
     @property
     @param('center_walk_underlay_repeats',
@@ -1132,15 +1168,24 @@ class SatinColumn(EmbroideryElement):
         # in between avoids a long jump or a trim.
 
         pairs = self.plot_points_on_rails(
-            self.contour_underlay_stitch_length,
+            self.contour_underlay_stitch_tolerance,
             -self.contour_underlay_inset_px, -self.contour_underlay_inset_percent/100)
 
+        first_side = running_stitch.running_stitch(
+            [points[0] for points in pairs],
+            self.contour_underlay_stitch_length,
+            self.contour_underlay_stitch_tolerance
+        )
+        second_side = running_stitch.running_stitch(
+            [points[1] for points in pairs],
+            self.contour_underlay_stitch_length,
+            self.contour_underlay_stitch_tolerance
+        )
+
         if self._center_walk_is_odd():
-            first_side = [p[0] for p in reversed(pairs)]
-            second_side = [p[1] for p in pairs]
+            first_side.reverse()
         else:
-            first_side = [p[1] for p in pairs]
-            second_side = [p[0] for p in reversed(pairs)]
+            second_side.reverse()
 
         stitch_group = StitchGroup(
             color=self.color,
@@ -1160,15 +1205,17 @@ class SatinColumn(EmbroideryElement):
 
         # Do it like contour underlay, but inset all the way to the center.
         pairs = self.plot_points_on_rails(
-            self.center_walk_underlay_stitch_length,
+            self.center_walk_underlay_stitch_tolerance,
             (0, 0), inset_prop)
 
-        stitches = []
-        for i in range(self.center_walk_underlay_repeats):
+        points = [points[0] for points in pairs]
+        stitches = running_stitch.running_stitch(points, self.center_walk_underlay_stitch_length, self.center_walk_underlay_stitch_tolerance)
+
+        for i in range(self.center_walk_underlay_repeats - 1):
             if i % 2 == 0:
-                stitches += [p[0] for p in pairs]
+                stitches.extend(reversed(stitches))
             else:
-                stitches += [p[1] for p in reversed(pairs)]
+                stitches.extend(stitches)
 
         return StitchGroup(
             color=self.color,
