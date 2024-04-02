@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-04-01 01:10+0000\n"
-"PO-Revision-Date: 2024-04-01 01:11\n"
+"POT-Creation-Date: 2024-04-02 01:08+0000\n"
+"PO-Revision-Date: 2024-04-02 01:09\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-01 01:10+0000\n"
+"POT-Creation-Date: 2024-04-02 01:08+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -90,7 +90,7 @@ msgstr "Amitaclo small"
 #. description of font in fonts/amitaclo_small
 #: inkstitch-fonts-metadata.py:24
 msgid "This font is an altered version  of Amitaclo, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory.  parameters of this font allow to scale down the original Amitaclo font between 30% (for a 8 mm font ) and 55 % (for a 16mm font)."
-msgstr ""
+msgstr "Diese Schrift ist eine abgewandelte Version von Amitaclo, die eine kleinere Skalierung erlaubt. Die Verwendung von dünnem Faden (60) und einer schmalen Nadel (60) wird vorausgesetzt. Die veränderten Stickparameter erlauben es, die Originalschrift zwischen 30% (8 mm Schrift) und 55 % (16 mm Schrift) herunterzuskalieren."
 
 #. name of font in fonts/apex_lake
 #: inkstitch-fonts-metadata.py:26
@@ -130,7 +130,7 @@ msgstr "Auberge small"
 #. description of font in fonts/auberge_small
 #: inkstitch-fonts-metadata.py:40
 msgid "This font is an altered version  of Auberge Marif, to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) are mandatory. The altered embroidery parameters of this font allow to scale down the original Grand Hotel font between 25% (for a 9mm font ) and 55 % (for a 20 mm font). "
-msgstr ""
+msgstr "Diese Schrift ist eine abgewandelte Version von Auberge Marif, die eine kleinere Skalierung erlaubt. Die Verwendung von dünnem Faden (60) und einer schmalen Nadel (60) wird vorausgesetzt. Die veränderten Stickparameter erlauben es, die Originalschrift zwischen 25% (9 mm Schrift) und 55 % (20 mm Schrift) herunterzuskalieren."
 
 #. name of font in fonts/aventurina
 #: inkstitch-fonts-metadata.py:42
@@ -306,7 +306,7 @@ msgstr "Espresso tiny"
 #. description of font in fonts/espresso_tiny
 #: inkstitch-fonts-metadata.py:108
 msgid "This font is an altered version  of Espresso KOR, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory. The altered embroidery parameters of this font allow to scale down the original Espresso font between 25% (for a 5mm font ) and 55 % (for a 11mm font)."
-msgstr ""
+msgstr "Diese Schrift ist eine abgewandelte Version von Espresso KOR, die eine kleinere Skalierung erlaubt. Die Verwendung von dünnem Faden (60) und einer schmalen Nadel (60) wird vorausgesetzt. Die veränderten Stickparameter erlauben es, die Originalschrift zwischen 25% (5 mm Schrift) und 55 % (11 mm Schrift) herunterzuskalieren."
 
 #. name of font in fonts/excalibur_KOR
 #: inkstitch-fonts-metadata.py:110
@@ -326,7 +326,7 @@ msgstr "Fold Ink/Stitch"
 #. description of font in fonts/fold_inkstitch
 #: inkstitch-fonts-metadata.py:116
 msgid "Fold Ink/Stitch is a large triple and quintuple running stitches capital font of size 100 mm. It contains 40 glyphs including all numbers and the 26 capitals  A-Z. It can be reduced down to 80% and enlarged as much as you like"
-msgstr ""
+msgstr "Fold Ink/Stitch ist eine Großbuchstaben-Schrift aus Dreifach und Fünffach Geradstichen, mit einer Größe von 100 mm. Sie umfasst 40 Zeichen, einschließlich aller Zahlen und den Großbuchstaben A-Z. Eine Skalierung ist von 80 % bis zu 200 % möglich."
 
 #. name of font in fonts/geneva_rounded
 #: inkstitch-fonts-metadata.py:118
@@ -356,7 +356,7 @@ msgstr "Glacial Tiny 60 AGS"
 #. description of font in fonts/glacial_tiny
 #: inkstitch-fonts-metadata.py:128
 msgid "Glacial is a very tiny font: at 100%,  M stands at 5.6mm. Thin thread (60 wt ) and thin needle (8/60) are mandatory. The glyphs cover many European languages. It can be reduced down to 40% and enlarged up to 150%."
-msgstr ""
+msgstr "Glacial ist eine sehr kleine Schrift: mit 100% misst das M 5.6 mm. Dünnes Garn (60 wt) und eine schmale Nadel (8/60) werden vorausgesetzt. Die Buchstaben decken die meisten Westeuropäischer Sprachen ab. Die Schrift kann von 40% bis zu 150% skaliert werden."
 
 #. name of font in fonts/infinipicto
 #: inkstitch-fonts-metadata.py:130
@@ -1687,7 +1687,7 @@ msgstr "Geradstich-Toleranz"
 msgid "Determines how hard Ink/Stitch tries to avoid stitching outside the shape.Lower numbers are less likely to stitch outside the shape but require more stitches."
 msgstr "Kleinere Werte benötigen mehr Stiche, aber vermeiden mit höherer Wahrscheinlichkeit Stiche außerhalb der Form."
 
-#: lib/elements/fill_stitch.py:470 lib/elements/satin_column.py:403
+#: lib/elements/fill_stitch.py:470 lib/elements/satin_column.py:439
 #: lib/elements/stroke.py:83
 msgid "Repeats"
 msgstr "Wiederholungen"
@@ -1781,11 +1781,11 @@ msgstr "Standard: entspricht der maximalen Stichlänge"
 msgid "Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill."
 msgstr "Verkleinern Sie die Unterlage, um zu verhindern, dass die Unterlage an der Außenseite der Füllstiche sichtbar wird."
 
-#: lib/elements/fill_stitch.py:649 lib/elements/satin_column.py:484
+#: lib/elements/fill_stitch.py:649 lib/elements/satin_column.py:520
 msgid "Random seed"
 msgstr "Zufallszahl"
 
-#: lib/elements/fill_stitch.py:650 lib/elements/satin_column.py:485
+#: lib/elements/fill_stitch.py:650 lib/elements/satin_column.py:521
 msgid "Use a specific seed for randomized attributes. Uses the element ID if empty."
 msgstr "Zufallswert für randomisierte Attribute. Verwendet die Element-ID, falls leer."
 
@@ -1985,8 +1985,8 @@ msgid "shorten stitch across rails at most this percent. Two values separated by
 msgstr "Kürzt Stiche um höchstens diesen Wert. Zwei durch ein Leerzeichen getrennte Werte können für einen asymmetrischen Effekt verwendet werden."
 
 #: lib/elements/satin_column.py:121 lib/elements/satin_column.py:131
-#: lib/elements/satin_column.py:254 lib/elements/satin_column.py:382
-#: lib/elements/satin_column.py:462
+#: lib/elements/satin_column.py:254 lib/elements/satin_column.py:400
+#: lib/elements/satin_column.py:498
 msgid "% (each side)"
 msgstr "% (pro Seite)"
 
@@ -2023,7 +2023,7 @@ msgstr "Gemustert"
 msgid "Split Method"
 msgstr "Zwischenstich-Methode"
 
-#: lib/elements/satin_column.py:161 lib/elements/satin_column.py:473
+#: lib/elements/satin_column.py:161 lib/elements/satin_column.py:509
 msgid "Maximum stitch length"
 msgstr "Maximale Stichlänge"
 
@@ -2095,8 +2095,8 @@ msgstr "Zugausgleich"
 msgid "Satin stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape. This setting expands each pair of needle penetrations outward from the center of the satin column by a fixed length. Two values separated by a space may be used for an aysmmetric effect."
 msgstr "Satinstiche ziehen den Stoff zusammen. Dadurch wird das Stickbild schmaler, als die in Inkscape gezeichnete Form. Diese Einstellung erweitert die Satinsäule um einen festen Wert, um diesen Effekt auszugleichen. Zwei durch ein Leerzeichen getrennte Werte können für einen asymmetrischen Effekt genutzt werden."
 
-#: lib/elements/satin_column.py:270 lib/elements/satin_column.py:367
-#: lib/elements/satin_column.py:442
+#: lib/elements/satin_column.py:270 lib/elements/satin_column.py:385
+#: lib/elements/satin_column.py:478
 msgid "mm (each side)"
 msgstr "mm (pro Seite)"
 
@@ -2141,83 +2141,94 @@ msgid "Contour underlay"
 msgstr "Konturunterlage"
 
 #: lib/elements/satin_column.py:351 lib/elements/satin_column.py:358
-#: lib/elements/satin_column.py:366 lib/elements/satin_column.py:381
+#: lib/elements/satin_column.py:373 lib/elements/satin_column.py:384
+#: lib/elements/satin_column.py:399
 msgid "Contour Underlay"
 msgstr "Konturunterlage"
 
-#: lib/elements/satin_column.py:358 lib/elements/satin_column.py:397
+#: lib/elements/satin_column.py:358 lib/elements/satin_column.py:415
 msgid "Stitch length"
 msgstr "Stichlänge"
 
-#: lib/elements/satin_column.py:364
+#: lib/elements/satin_column.py:365 lib/elements/satin_column.py:422
+#: lib/elements/stroke.py:121
+msgid "Stitch tolerance"
+msgstr "Stichtoleranz"
+
+#: lib/elements/satin_column.py:366 lib/elements/satin_column.py:423
+msgid "All stitches must be within this distance from the path. A lower tolerance means stitches will be closer together. A higher tolerance means sharp corners may be rounded. Defaults to stitch length."
+msgstr ""
+
+#: lib/elements/satin_column.py:382
 msgid "Inset distance (fixed)"
 msgstr "Einzug (fest)"
 
-#: lib/elements/satin_column.py:365
+#: lib/elements/satin_column.py:383
 msgid "Shrink the outline by a fixed length, to prevent the underlay from showing around the outside of the satin column."
 msgstr "Verkleinert die Umrandung um eine feste Breite, um zu verhindern, dass die Unterlage an der Außenseite der Satinsäule sichtbar wird."
 
-#: lib/elements/satin_column.py:378
+#: lib/elements/satin_column.py:396
 msgid "Inset distance (proportional)"
 msgstr "Einzug (proportional)"
 
-#: lib/elements/satin_column.py:379
+#: lib/elements/satin_column.py:397
 msgid "Shrink the outline by a proportion of the column width, to prevent the underlay from showing around the outside of the satin column."
 msgstr "Verkleinert die Breite der Satinsäule proportional im Verhältnis zur Ursprungsbreite. Dies verhindert, dass die Unterlage an der Außenseite der Satinsäule sichtbar wird."
 
-#: lib/elements/satin_column.py:390
+#: lib/elements/satin_column.py:408
 msgid "Center-walk underlay"
 msgstr "Mittellinien Unterlage"
 
-#: lib/elements/satin_column.py:390 lib/elements/satin_column.py:397
-#: lib/elements/satin_column.py:406 lib/elements/satin_column.py:416
+#: lib/elements/satin_column.py:408 lib/elements/satin_column.py:415
+#: lib/elements/satin_column.py:430 lib/elements/satin_column.py:442
+#: lib/elements/satin_column.py:452
 msgid "Center-Walk Underlay"
 msgstr "Mittellinien Unterlage"
 
-#: lib/elements/satin_column.py:404
+#: lib/elements/satin_column.py:440
 msgid "For an odd number of repeats, this will reverse the direction the satin column is stitched, causing stitching to both begin and end at the start point."
 msgstr "Bei einer ungeraden Anzahl an Wiederholungen wird die Richtung, in die die Satinsäule verläuft, umgekehrt. Sie endet dementsprechend wieder am Startpunkt."
 
-#: lib/elements/satin_column.py:414 lib/gui/tartan/customize_panel.py:39
+#: lib/elements/satin_column.py:450 lib/gui/tartan/customize_panel.py:39
 msgid "Position"
 msgstr "Position"
 
-#: lib/elements/satin_column.py:415
+#: lib/elements/satin_column.py:451
 #, python-format
 msgid "Position of underlay from between the rails. 0% is along the first rail, 50% is centered, 100% is along the second rail."
 msgstr "Position der Unterlage zwischen den Außenseiten. 0% liegt genau auf der ersten Seite, 50% in der Mitte, 100% auf der zweiten Seite."
 
-#: lib/elements/satin_column.py:423
+#: lib/elements/satin_column.py:459
 msgid "Zig-zag underlay"
 msgstr "Zick-Zack Unterlage"
 
-#: lib/elements/satin_column.py:423 lib/elements/satin_column.py:432
-#: lib/elements/satin_column.py:443 lib/elements/satin_column.py:463
-#: lib/elements/satin_column.py:476
+#: lib/elements/satin_column.py:459 lib/elements/satin_column.py:468
+#: lib/elements/satin_column.py:479 lib/elements/satin_column.py:499
+#: lib/elements/satin_column.py:512
 msgid "Zig-zag Underlay"
 msgstr "Zick-Zack Unterlage"
 
-#: lib/elements/satin_column.py:429
+#: lib/elements/satin_column.py:465
 msgid "Zig-Zag spacing (peak-to-peak)"
 msgstr "Zick-Zack Abstand (Spitze zu Spitze)"
 
-#: lib/elements/satin_column.py:430
+#: lib/elements/satin_column.py:466
 msgid "Distance between peaks of the zig-zags."
 msgstr "Abstand zwischen den Spitzen der Zick-Zacks."
 
-#: lib/elements/satin_column.py:440
+#: lib/elements/satin_column.py:476
 msgid "Inset amount (fixed)"
 msgstr "Einzug (fest)"
 
-#: lib/elements/satin_column.py:441 lib/elements/satin_column.py:461
+#: lib/elements/satin_column.py:477 lib/elements/satin_column.py:497
 msgid "default: half of contour underlay inset"
 msgstr "Voreinstellung: Hälfte des Einzuges der Konturunterlage"
 
-#: lib/elements/satin_column.py:460
+#: lib/elements/satin_column.py:496
 msgid "Inset amount (proportional)"
 msgstr "Einzug (proportional)"
 
-#: lib/elements/satin_column.py:474
+#: lib/elements/satin_column.py:510
 msgid "Split stitch if distance of maximum stitch length is exceeded"
 msgstr "Stich unterteilen, wenn maximale Stichlänge überschritten ist"
 
@@ -2260,10 +2271,6 @@ msgstr "Manuelle Stichpositionierung"
 #: lib/elements/stroke.py:110
 msgid "Length of stitches. Stitches can be shorter according to the stitch tolerance setting."
 msgstr "Länge der Stiche. Stiche können abhängig von der Stichtoleranz-Einstellung kürzer ausfallen."
-
-#: lib/elements/stroke.py:121
-msgid "Stitch tolerance"
-msgstr "Stichtoleranz"
 
 #: lib/elements/stroke.py:122
 msgid "All stitches must be within this distance from the path.  A lower tolerance means stitches will be closer together.  A higher tolerance means sharp corners may be rounded."

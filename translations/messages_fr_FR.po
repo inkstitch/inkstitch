@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-04-01 01:10+0000\n"
-"PO-Revision-Date: 2024-04-01 01:11\n"
+"POT-Creation-Date: 2024-04-02 01:08+0000\n"
+"PO-Revision-Date: 2024-04-02 01:09\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-01 01:10+0000\n"
+"POT-Creation-Date: 2024-04-02 01:08+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1688,7 +1688,7 @@ msgstr "Tolérance du point droit"
 msgid "Determines how hard Ink/Stitch tries to avoid stitching outside the shape.Lower numbers are less likely to stitch outside the shape but require more stitches."
 msgstr "Détermine la force avec laquelle Ink/Stitch essaie d'éviter de broder en dehors de la forme. Une valeur basse rend moins susceptible de broder en dehors de la forme, mais nécessite plus de points."
 
-#: lib/elements/fill_stitch.py:470 lib/elements/satin_column.py:403
+#: lib/elements/fill_stitch.py:470 lib/elements/satin_column.py:439
 #: lib/elements/stroke.py:83
 msgid "Repeats"
 msgstr "Répétitions"
@@ -1783,11 +1783,11 @@ msgstr "défaut : égal à longueur max des points de remplissage"
 msgid "Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill."
 msgstr "Rétrécit la forme avant de faire la sous-couche, pour empêcher que la sous-couche se montre en dehors du remplissage."
 
-#: lib/elements/fill_stitch.py:649 lib/elements/satin_column.py:484
+#: lib/elements/fill_stitch.py:649 lib/elements/satin_column.py:520
 msgid "Random seed"
 msgstr "Graine aléatoire"
 
-#: lib/elements/fill_stitch.py:650 lib/elements/satin_column.py:485
+#: lib/elements/fill_stitch.py:650 lib/elements/satin_column.py:521
 msgid "Use a specific seed for randomized attributes. Uses the element ID if empty."
 msgstr "Utiliser cette graine aléatoire pour le calcul des attributs. Si vide, utilise l'identificateur de l'élément."
 
@@ -1987,8 +1987,8 @@ msgid "shorten stitch across rails at most this percent. Two values separated by
 msgstr "réduire la largeur du satin au plus de ce pourcentage. Deux valeurs séparées par un espace peuvent être utilisées pour un effet asymétrique."
 
 #: lib/elements/satin_column.py:121 lib/elements/satin_column.py:131
-#: lib/elements/satin_column.py:254 lib/elements/satin_column.py:382
-#: lib/elements/satin_column.py:462
+#: lib/elements/satin_column.py:254 lib/elements/satin_column.py:400
+#: lib/elements/satin_column.py:498
 msgid "% (each side)"
 msgstr "% (de chaque côté)"
 
@@ -2025,7 +2025,7 @@ msgstr "Décalés"
 msgid "Split Method"
 msgstr "Méthode de découpage"
 
-#: lib/elements/satin_column.py:161 lib/elements/satin_column.py:473
+#: lib/elements/satin_column.py:161 lib/elements/satin_column.py:509
 msgid "Maximum stitch length"
 msgstr "Longueur maximale du point"
 
@@ -2097,8 +2097,8 @@ msgstr "Compensation d'étirement"
 msgid "Satin stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape. This setting expands each pair of needle penetrations outward from the center of the satin column by a fixed length. Two values separated by a space may be used for an aysmmetric effect."
 msgstr "Les points satin resserrent le tissu, ce qui entraîne une colonne plus étroite que celle que vous dessinez dans Inkscape. Ce paramètre étend le point depuis le centre vers l’extérieur de la colonne satinée. Deux valeurs séparées par un espace peuvent être utilisées pour un effet asymétrique."
 
-#: lib/elements/satin_column.py:270 lib/elements/satin_column.py:367
-#: lib/elements/satin_column.py:442
+#: lib/elements/satin_column.py:270 lib/elements/satin_column.py:385
+#: lib/elements/satin_column.py:478
 msgid "mm (each side)"
 msgstr "mm (de chaque côté)"
 
@@ -2143,83 +2143,94 @@ msgid "Contour underlay"
 msgstr "Sous-couche de contour"
 
 #: lib/elements/satin_column.py:351 lib/elements/satin_column.py:358
-#: lib/elements/satin_column.py:366 lib/elements/satin_column.py:381
+#: lib/elements/satin_column.py:373 lib/elements/satin_column.py:384
+#: lib/elements/satin_column.py:399
 msgid "Contour Underlay"
 msgstr "Sous-couche de Contour"
 
-#: lib/elements/satin_column.py:358 lib/elements/satin_column.py:397
+#: lib/elements/satin_column.py:358 lib/elements/satin_column.py:415
 msgid "Stitch length"
 msgstr "Longueur de point"
 
-#: lib/elements/satin_column.py:364
+#: lib/elements/satin_column.py:365 lib/elements/satin_column.py:422
+#: lib/elements/stroke.py:121
+msgid "Stitch tolerance"
+msgstr "Tolérance"
+
+#: lib/elements/satin_column.py:366 lib/elements/satin_column.py:423
+msgid "All stitches must be within this distance from the path. A lower tolerance means stitches will be closer together. A higher tolerance means sharp corners may be rounded. Defaults to stitch length."
+msgstr ""
+
+#: lib/elements/satin_column.py:382
 msgid "Inset distance (fixed)"
 msgstr "Décalage (fixe)"
 
-#: lib/elements/satin_column.py:365
+#: lib/elements/satin_column.py:383
 msgid "Shrink the outline by a fixed length, to prevent the underlay from showing around the outside of the satin column."
 msgstr "Rétrécir le contour, pour empêcher que la sous-couche ne se voit autour de la colonne satin."
 
-#: lib/elements/satin_column.py:378
+#: lib/elements/satin_column.py:396
 msgid "Inset distance (proportional)"
 msgstr "Décalage (proportionnel)"
 
-#: lib/elements/satin_column.py:379
+#: lib/elements/satin_column.py:397
 msgid "Shrink the outline by a proportion of the column width, to prevent the underlay from showing around the outside of the satin column."
 msgstr "Rétrécir le contour proportionnellement à la largeur de la colonne pour empêcher que la sous-couche ne se voit autour de la colonne satin."
 
-#: lib/elements/satin_column.py:390
+#: lib/elements/satin_column.py:408
 msgid "Center-walk underlay"
 msgstr "Sous-couche centrale"
 
-#: lib/elements/satin_column.py:390 lib/elements/satin_column.py:397
-#: lib/elements/satin_column.py:406 lib/elements/satin_column.py:416
+#: lib/elements/satin_column.py:408 lib/elements/satin_column.py:415
+#: lib/elements/satin_column.py:430 lib/elements/satin_column.py:442
+#: lib/elements/satin_column.py:452
 msgid "Center-Walk Underlay"
 msgstr "Sous-couche centrale"
 
-#: lib/elements/satin_column.py:404
+#: lib/elements/satin_column.py:440
 msgid "For an odd number of repeats, this will reverse the direction the satin column is stitched, causing stitching to both begin and end at the start point."
 msgstr "Pour un nombre impair de répétitions, ceci renversa la direction de broderie de la colonne satin, la broderie commençant et terminant au point de départ."
 
-#: lib/elements/satin_column.py:414 lib/gui/tartan/customize_panel.py:39
+#: lib/elements/satin_column.py:450 lib/gui/tartan/customize_panel.py:39
 msgid "Position"
 msgstr "Position"
 
-#: lib/elements/satin_column.py:415
+#: lib/elements/satin_column.py:451
 #, python-format
 msgid "Position of underlay from between the rails. 0% is along the first rail, 50% is centered, 100% is along the second rail."
 msgstr "Position de la sous-couche entre les rails. A 0% la sous couche est le long du premier rail, à 50% centrée, à 100% le long du second rail."
 
-#: lib/elements/satin_column.py:423
+#: lib/elements/satin_column.py:459
 msgid "Zig-zag underlay"
 msgstr "Sous-couche Zig-Zag"
 
-#: lib/elements/satin_column.py:423 lib/elements/satin_column.py:432
-#: lib/elements/satin_column.py:443 lib/elements/satin_column.py:463
-#: lib/elements/satin_column.py:476
+#: lib/elements/satin_column.py:459 lib/elements/satin_column.py:468
+#: lib/elements/satin_column.py:479 lib/elements/satin_column.py:499
+#: lib/elements/satin_column.py:512
 msgid "Zig-zag Underlay"
 msgstr "Sous-couche Zig-Zag"
 
-#: lib/elements/satin_column.py:429
+#: lib/elements/satin_column.py:465
 msgid "Zig-Zag spacing (peak-to-peak)"
 msgstr "Espacement Zig-Zag (crête à crête)"
 
-#: lib/elements/satin_column.py:430
+#: lib/elements/satin_column.py:466
 msgid "Distance between peaks of the zig-zags."
 msgstr "Distance entre les crêtes des zig-zags."
 
-#: lib/elements/satin_column.py:440
+#: lib/elements/satin_column.py:476
 msgid "Inset amount (fixed)"
 msgstr "Décalage (fixe)"
 
-#: lib/elements/satin_column.py:441 lib/elements/satin_column.py:461
+#: lib/elements/satin_column.py:477 lib/elements/satin_column.py:497
 msgid "default: half of contour underlay inset"
 msgstr "par défaut: la moitié du décalage du contour de la sous-couche"
 
-#: lib/elements/satin_column.py:460
+#: lib/elements/satin_column.py:496
 msgid "Inset amount (proportional)"
 msgstr "Décalage (proportionnel)"
 
-#: lib/elements/satin_column.py:474
+#: lib/elements/satin_column.py:510
 msgid "Split stitch if distance of maximum stitch length is exceeded"
 msgstr "Découper le point en plusieurs si sa longueur dépasse la longueur maximale définie"
 
@@ -2262,10 +2273,6 @@ msgstr "Point manuel"
 #: lib/elements/stroke.py:110
 msgid "Length of stitches. Stitches can be shorter according to the stitch tolerance setting."
 msgstr "Longueur des points. Selon la valeur de la tolérance, il se peut que les points soient plus court."
-
-#: lib/elements/stroke.py:121
-msgid "Stitch tolerance"
-msgstr "Tolérance"
 
 #: lib/elements/stroke.py:122
 msgid "All stitches must be within this distance from the path.  A lower tolerance means stitches will be closer together.  A higher tolerance means sharp corners may be rounded."

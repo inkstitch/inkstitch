@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-04-01 01:10+0000\n"
-"PO-Revision-Date: 2024-04-01 01:11\n"
+"POT-Creation-Date: 2024-04-02 01:08+0000\n"
+"PO-Revision-Date: 2024-04-02 01:09\n"
 "Last-Translator: \n"
 "Language-Team: Catalan\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-01 01:10+0000\n"
+"POT-Creation-Date: 2024-04-02 01:08+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1687,7 +1687,7 @@ msgstr ""
 msgid "Determines how hard Ink/Stitch tries to avoid stitching outside the shape.Lower numbers are less likely to stitch outside the shape but require more stitches."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:470 lib/elements/satin_column.py:403
+#: lib/elements/fill_stitch.py:470 lib/elements/satin_column.py:439
 #: lib/elements/stroke.py:83
 msgid "Repeats"
 msgstr ""
@@ -1780,11 +1780,11 @@ msgstr ""
 msgid "Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:649 lib/elements/satin_column.py:484
+#: lib/elements/fill_stitch.py:649 lib/elements/satin_column.py:520
 msgid "Random seed"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:650 lib/elements/satin_column.py:485
+#: lib/elements/fill_stitch.py:650 lib/elements/satin_column.py:521
 msgid "Use a specific seed for randomized attributes. Uses the element ID if empty."
 msgstr ""
 
@@ -1984,8 +1984,8 @@ msgid "shorten stitch across rails at most this percent. Two values separated by
 msgstr ""
 
 #: lib/elements/satin_column.py:121 lib/elements/satin_column.py:131
-#: lib/elements/satin_column.py:254 lib/elements/satin_column.py:382
-#: lib/elements/satin_column.py:462
+#: lib/elements/satin_column.py:254 lib/elements/satin_column.py:400
+#: lib/elements/satin_column.py:498
 msgid "% (each side)"
 msgstr ""
 
@@ -2022,7 +2022,7 @@ msgstr ""
 msgid "Split Method"
 msgstr ""
 
-#: lib/elements/satin_column.py:161 lib/elements/satin_column.py:473
+#: lib/elements/satin_column.py:161 lib/elements/satin_column.py:509
 msgid "Maximum stitch length"
 msgstr ""
 
@@ -2094,8 +2094,8 @@ msgstr ""
 msgid "Satin stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape. This setting expands each pair of needle penetrations outward from the center of the satin column by a fixed length. Two values separated by a space may be used for an aysmmetric effect."
 msgstr ""
 
-#: lib/elements/satin_column.py:270 lib/elements/satin_column.py:367
-#: lib/elements/satin_column.py:442
+#: lib/elements/satin_column.py:270 lib/elements/satin_column.py:385
+#: lib/elements/satin_column.py:478
 msgid "mm (each side)"
 msgstr ""
 
@@ -2140,83 +2140,94 @@ msgid "Contour underlay"
 msgstr ""
 
 #: lib/elements/satin_column.py:351 lib/elements/satin_column.py:358
-#: lib/elements/satin_column.py:366 lib/elements/satin_column.py:381
+#: lib/elements/satin_column.py:373 lib/elements/satin_column.py:384
+#: lib/elements/satin_column.py:399
 msgid "Contour Underlay"
 msgstr ""
 
-#: lib/elements/satin_column.py:358 lib/elements/satin_column.py:397
+#: lib/elements/satin_column.py:358 lib/elements/satin_column.py:415
 msgid "Stitch length"
 msgstr ""
 
-#: lib/elements/satin_column.py:364
+#: lib/elements/satin_column.py:365 lib/elements/satin_column.py:422
+#: lib/elements/stroke.py:121
+msgid "Stitch tolerance"
+msgstr ""
+
+#: lib/elements/satin_column.py:366 lib/elements/satin_column.py:423
+msgid "All stitches must be within this distance from the path. A lower tolerance means stitches will be closer together. A higher tolerance means sharp corners may be rounded. Defaults to stitch length."
+msgstr ""
+
+#: lib/elements/satin_column.py:382
 msgid "Inset distance (fixed)"
 msgstr ""
 
-#: lib/elements/satin_column.py:365
+#: lib/elements/satin_column.py:383
 msgid "Shrink the outline by a fixed length, to prevent the underlay from showing around the outside of the satin column."
 msgstr ""
 
-#: lib/elements/satin_column.py:378
+#: lib/elements/satin_column.py:396
 msgid "Inset distance (proportional)"
 msgstr ""
 
-#: lib/elements/satin_column.py:379
+#: lib/elements/satin_column.py:397
 msgid "Shrink the outline by a proportion of the column width, to prevent the underlay from showing around the outside of the satin column."
 msgstr ""
 
-#: lib/elements/satin_column.py:390
+#: lib/elements/satin_column.py:408
 msgid "Center-walk underlay"
 msgstr ""
 
-#: lib/elements/satin_column.py:390 lib/elements/satin_column.py:397
-#: lib/elements/satin_column.py:406 lib/elements/satin_column.py:416
+#: lib/elements/satin_column.py:408 lib/elements/satin_column.py:415
+#: lib/elements/satin_column.py:430 lib/elements/satin_column.py:442
+#: lib/elements/satin_column.py:452
 msgid "Center-Walk Underlay"
 msgstr ""
 
-#: lib/elements/satin_column.py:404
+#: lib/elements/satin_column.py:440
 msgid "For an odd number of repeats, this will reverse the direction the satin column is stitched, causing stitching to both begin and end at the start point."
 msgstr ""
 
-#: lib/elements/satin_column.py:414 lib/gui/tartan/customize_panel.py:39
+#: lib/elements/satin_column.py:450 lib/gui/tartan/customize_panel.py:39
 msgid "Position"
 msgstr ""
 
-#: lib/elements/satin_column.py:415
+#: lib/elements/satin_column.py:451
 #, python-format
 msgid "Position of underlay from between the rails. 0% is along the first rail, 50% is centered, 100% is along the second rail."
 msgstr ""
 
-#: lib/elements/satin_column.py:423
+#: lib/elements/satin_column.py:459
 msgid "Zig-zag underlay"
 msgstr ""
 
-#: lib/elements/satin_column.py:423 lib/elements/satin_column.py:432
-#: lib/elements/satin_column.py:443 lib/elements/satin_column.py:463
-#: lib/elements/satin_column.py:476
+#: lib/elements/satin_column.py:459 lib/elements/satin_column.py:468
+#: lib/elements/satin_column.py:479 lib/elements/satin_column.py:499
+#: lib/elements/satin_column.py:512
 msgid "Zig-zag Underlay"
 msgstr ""
 
-#: lib/elements/satin_column.py:429
+#: lib/elements/satin_column.py:465
 msgid "Zig-Zag spacing (peak-to-peak)"
 msgstr ""
 
-#: lib/elements/satin_column.py:430
+#: lib/elements/satin_column.py:466
 msgid "Distance between peaks of the zig-zags."
 msgstr ""
 
-#: lib/elements/satin_column.py:440
+#: lib/elements/satin_column.py:476
 msgid "Inset amount (fixed)"
 msgstr ""
 
-#: lib/elements/satin_column.py:441 lib/elements/satin_column.py:461
+#: lib/elements/satin_column.py:477 lib/elements/satin_column.py:497
 msgid "default: half of contour underlay inset"
 msgstr ""
 
-#: lib/elements/satin_column.py:460
+#: lib/elements/satin_column.py:496
 msgid "Inset amount (proportional)"
 msgstr ""
 
-#: lib/elements/satin_column.py:474
+#: lib/elements/satin_column.py:510
 msgid "Split stitch if distance of maximum stitch length is exceeded"
 msgstr ""
 
@@ -2258,10 +2269,6 @@ msgstr ""
 
 #: lib/elements/stroke.py:110
 msgid "Length of stitches. Stitches can be shorter according to the stitch tolerance setting."
-msgstr ""
-
-#: lib/elements/stroke.py:121
-msgid "Stitch tolerance"
 msgstr ""
 
 #: lib/elements/stroke.py:122
