@@ -32,24 +32,24 @@ class Cleanup(InkstitchExtension):
         self.svg.selection.clear()
         self.get_elements()
 
-        self.elements_to_remove = []
+        self.elements_to_remove = set()
         svg = self.document.getroot()
         empty_d_objects = svg.xpath(".//svg:path[@d='' or not(@d)]", namespaces=NSS)
         for empty in empty_d_objects:
-            self.elements_to_remove.append(empty)
+            self.elements_to_remove.add(empty)
 
         for element in self.elements:
             if self.rm_fill and (isinstance(element, FillStitch) and element.shape.area < self.fill_threshold):
-                self.elements_to_remove.append(element.node)
+                self.elements_to_remove.add(element.node)
             if self.rm_stroke and (isinstance(element, Stroke) and
                element.shape.length < self.stroke_threshold and element.node.getparent() is not None):
-                self.elements_to_remove.append(element.node)
+                self.elements_to_remove.add(element.node)
 
-        self.groups_to_remove = []
+        self.groups_to_remove = set()
         if self.rm_groups:
             for group in self.svg.iterdescendants(SVG_GROUP_TAG):
                 if len(group.getchildren()) == 0:
-                    self.groups_to_remove.append(group)
+                    self.groups_to_remove.add(group)
 
         if self.dry_run:
             self._dry_run()
