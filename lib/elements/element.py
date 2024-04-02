@@ -415,9 +415,6 @@ class EmbroideryElement(object):
         else:
             d = self.node.get("d", "")
 
-        if not d:
-            self.fatal(_("Object %(id)s has an empty 'd' attribute.  Please delete this object from your document.") % dict(id=self.node.get("id")))
-
         return inkex.Path(d).to_superpath()
 
     @cache
