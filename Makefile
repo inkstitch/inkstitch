@@ -17,8 +17,7 @@ manual:
 
 .PHONY: inx
 inx: version locales
-	mkdir -p inx
-	python bin/generate-inx-files; \
+	python bin/generate-inx-files;
 
 .PHONY: messages.po
 messages.po: inx

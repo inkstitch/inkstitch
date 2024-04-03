@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
     <name>Select embroidery elements</name>
-    <id>org.inkstitch.select_elements</id>
+    <id>org.{{ id_inkstitch }}.select_elements</id>
     <param name="extension" type="string" gui-hidden="true">select_elements</param>
 
     <param name="options" type="notebook">
@@ -29,6 +29,8 @@
                 <label>Satin</label>
                   <param indent="1" name="select-satin" type="boolean" gui-text="Satin Column">false</param>
                   <param indent="1" name="select-e" type="boolean" gui-text="E-Stitch">false</param>
+                  <param indent="1" name="select-s" type="boolean" gui-text="S-Stitch">false</param>
+                  <param indent="1" name="select-satin-zigzag" type="boolean" gui-text="Zig-Zag">false</param>
                   <param indent="1" name="satin-underlay" type="optiongroup" appearance="combo" gui-text="Underlay"
                          gui-description="Only select satins with this underlay type">
                       <option value="all">No restriction</option>
@@ -37,6 +39,12 @@
                       <option value="contour">Contour</option>
                       <option value="zigzag">Zigzag</option>
                   </param>
+                  <param indent="1" name="rung-count" type="optiongroup" appearance="combo" gui-text="Rung count"
+                         gui-description="Only select satins with this rung count">
+                      <option value="all">No restriction</option>
+                      <option value="zero">No Rungs</option>
+                      <option value="two">Two Rungs</option>
+                  </param>
           </vbox>
             <spacer />
             <separator />
@@ -44,10 +52,11 @@
           <vbox>
                 <label>Fill</label>
                     <param indent="1" name="select-auto-fill" type="boolean" gui-text="Fill">false</param>
+                    <param indent="1" name="select-circular-fill" type="boolean" gui-text="Circular Fill">false</param>
                     <param indent="1" name="select-contour-fill" type="boolean" gui-text="Contour Fill">false</param>
                     <param indent="1" name="select-guided-fill" type="boolean" gui-text="Guided Fill">false</param>
+                    <param indent="1" name="select-linear-gradient-fill" type="boolean" gui-text="Linear Gradient Fill">false</param>
                     <param indent="1" name="select-meander-fill" type="boolean" gui-text="Meander Fill">false</param>
-                    <param indent="1" name="select-circular-fill" type="boolean" gui-text="Circular Fill">false</param>
                     <param indent="1" name="select-legacy-fill" type="boolean" gui-text="Legacy Fill">false</param>
                     <param indent="1" name="fill-underlay" type="optiongroup" appearance="combo" gui-text="Underlay"
                            gui-description="Only select fills with this underlay">
@@ -70,7 +79,7 @@
             <label appearance="header">Select embroidery objects</label>
             <spacer />
             <label>Selects specific embroidery elements by stitch type.</label>
-            <label>If there is already an active selection, non maching elements will be deselected.</label>
+            <label>If there is already an active selection, non matching elements will be deselected.</label>
             <spacer />
             <separator />
             <spacer />
@@ -88,7 +97,7 @@
     <effect>
         <object-type>all</object-type>
         <effects-menu>
-            <submenu name="Ink/Stitch" translatable="no">
+            <submenu name="{{ menu_inkstitch }}" translatable="no">
                 <submenu name="Edit" />
             </submenu>
         </effects-menu>

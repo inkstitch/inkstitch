@@ -119,6 +119,20 @@ begin
 end;
 
 { ///////////////////////////////////////////////////////////////////// }
+function InitializeSetup(): Boolean;
+begin
+  Result := True;
+
+  if DirExists(ExpandConstant('{userappdata}\inkscape\extensions\')) then
+  Log('Found Inks')
+  else
+  begin
+    MsgBox('Error: Inkscape Extensions folder not found! Install and then run Inkscape to create the extension folder.', mbInformation, MB_OK);
+    Result := False;
+  end;
+end;
+
+{ ///////////////////////////////////////////////////////////////////// }
 procedure CurStepChanged(CurStep: TSetupStep);
 begin
   if (CurStep=ssInstall) then

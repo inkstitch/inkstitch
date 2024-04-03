@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <inkscape-extension translationdomain="inkstitch" xmlns="http://www.inkscape.org/namespace/inkscape/extension">
     <name>Add Commands</name>
-    <id>org.inkstitch.global_commands</id>
+    <id>org.{{ id_inkstitch }}.global_commands</id>
     <label>These commands affect the entire embroidery design.</label>
     {% for command, description in global_commands %}
     <param name="{{ command }}" type="boolean" gui-text="{{ description }}">false</param>
@@ -10,7 +10,7 @@
     <effect>
         <object-type>all</object-type>
         <effects-menu>
-            <submenu name="Ink/Stitch" translatable="no">
+            <submenu name="{{ menu_inkstitch }}" translatable="no">
                 {# L10N Inkscape submenu under Extensions -> Ink/Stitch #}
                 <submenu name="Commands" />
             </submenu>

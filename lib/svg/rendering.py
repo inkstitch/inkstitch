@@ -222,7 +222,7 @@ def color_block_to_paths(color_block, svg, destination, visual_commands):
 
 
 def render_stitch_plan(svg, stitch_plan, realistic=False, visual_commands=True):
-    layer = svg.find(".//*[@id='__inkstitch_stitch_plan__']")
+    layer = svg.findone(".//*[@id='__inkstitch_stitch_plan__']")
     if layer is None:
         layer = inkex.Group(attrib={
             'id': '__inkstitch_stitch_plan__',

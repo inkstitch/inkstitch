@@ -1,31 +1,147 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <inkscape-extension translationdomain="inkstitch" xmlns="http://www.inkscape.org/namespace/inkscape/extension">
     <name>Remove embroidery settings</name>
-    <id>org.inkstitch.remove_embroidery_settings</id>
-    <label>Use this extension to remove the information Ink/Stitch has stored in your document.  This can be especially useful if you copy and paste objects from an embroidery design into another document.</label>
-    <param name="del_params" type="boolean" gui-text="Remove Params"
-           gui-description="Removes params from selected objects or all objects if nothing is selected.">true</param>
-    <param name="del_commands" type="optiongroup" gui-text="Remove Commands"
-           gui-description="Removes visual commands from selected objects or all objects if nothing is selected."
-           appearance="combo">
-        <option value="none">None</option>
-        <option value="all">All</option>
-        {%- for command, description in object_commands -%}
-        <option value="{{ command }}">{{ description }}</option>
-        {% endfor %}
-        {% for command, description in layer_commands %}
-        <option value="{{ command }}">{{ description }}</option>
-        {% endfor %}
-        {% for command, description in global_commands %}
-        <option value="{{ command }}">{{ description }}</option>
-        {% endfor %}
-    </param>
-    <param name="del_print" type="boolean" gui-text="Remove Print Settings from SVG metadata">false</param>
+    <id>org.{{ id_inkstitch }}.remove_embroidery_settings</id>
     <param name="extension" type="string" gui-hidden="true">remove_embroidery_settings</param>
+
+    <param name="tabs" type="notebook">
+        <page name="options" gui-text="Options">
+            <param name="del_params" type="optiongroup" gui-text="Remove Params"
+                   gui-description="Removes params from selected objects or all objects if nothing is selected."
+                   appearance="combo">
+                <option value="none">None</option>
+                <option value="all">All</option>
+                <option translatable="no"  value="angle">angle</option>
+                <option translatable="no"  value="auto_fill">auto_fill</option>
+                <option translatable="no"  value="avoid_self_crossing">avoid_self_crossing</option>
+                <option translatable="no" value="bean_stitch_repeats">bean_stitch_repeats</option>
+                <option translatable="no" value="center_walk_underlay">center_walk_underlay</option>
+                <option translatable="no" value="center_walk_underlay_position">center_walk_underlay_position</option>
+                <option translatable="no" value="center_walk_underlay_repeats">center_walk_underlay_repeats</option>
+                <option translatable="no" value="center_walk_underlay_stitch_length_mm">center_walk_underlay_stitch_length_mm</option>
+                <option translatable="no" value="clip">clip</option>
+                <option translatable="no" value="clockwise">clockwise</option>
+                <option translatable="no" value="clone">clone</option>
+                <option translatable="no" value="contour_strategy">contour_strategy</option>
+                <option translatable="no" value="contour_underlay">contour_underlay</option>
+                <option translatable="no" value="contour_underlay_inset_mm">contour_underlay_inset_mm</option>
+                <option translatable="no" value="contour_underlay_inset_percent">contour_underlay_inset_percent</option>
+                <option translatable="no" value="contour_underlay_stitch_length_mm">contour_underlay_stitch_length_mm</option>
+                <option translatable="no" value="cutwork_needle">cutwork_needle</option>
+                <option translatable="no" value="end_row_spacing_mm">end_row_spacing_mm</option>
+                <option translatable="no" value="e_stitch">e_stitch</option>
+                <option translatable="no" value="expand_mm">expand_mm</option>
+                <option translatable="no" value="exponent">exponent</option>
+                <option translatable="no" value="fill_method">fill_method</option>
+                <option translatable="no" value="fill_underlay_angle">fill_underlay_angle</option>
+                <option translatable="no" value="fill_underlay">fill_underlay</option>
+                <option translatable="no" value="fill_underlay_inset_mm">fill_underlay_inset_mm</option>
+                <option translatable="no" value="fill_underlay_max_stitch_length_mm">fill_underlay_max_stitch_length_mm</option>
+                <option translatable="no" value="fill_underlay_row_spacing_mm">fill_underlay_row_spacing_mm</option>
+                <option translatable="no" value="fill_underlay_skip_last">fill_underlay_skip_last</option>
+                <option translatable="no" value="flip_angle">flip_angle</option>
+                <option translatable="no" value="flip_exponent">flip_exponent</option>
+                <option translatable="no" value="flip">flip</option>
+                <option translatable="no" value="force_lock_stitches">force_lock_stitches</option>
+                <option translatable="no" value="grid_size_mm">grid_size_mm</option>
+                <option translatable="no" value="guided_fill_strategy">guided_fill_strategy</option>
+                <option translatable="no" value="invisible_layers">invisible_layers</option>
+                <option translatable="no" value="join_style">join_style</option>
+                <option translatable="no" value="layer_visibility">layer_visibility</option>
+                <option translatable="no" value="line_count">line_count</option>
+                <option translatable="no" value="lock_custom_end">lock_custom_end</option>
+                <option translatable="no" value="lock_custom_start">lock_custom_start</option>
+                <option translatable="no" value="lock_end">lock_end</option>
+                <option translatable="no" value="lock_end_scale_mm">lock_end_scale_mm</option>
+                <option translatable="no" value="lock_end_scale_percent">lock_end_scale_percent</option>
+                <option translatable="no" value="lock_start">lock_start</option>
+                <option translatable="no" value="lock_start_scale_mm">lock_start_scale_mm</option>
+                <option translatable="no" value="lock_start_scale_percent">lock_start_scale_percent</option>
+                <option translatable="no" value="manual_stitch">manual_stitch</option>
+                <option translatable="no" value="max_stitch_length_mm">max_stitch_length_mm</option>
+                <option translatable="no" value="meander_angle">meander_angle</option>
+                <option translatable="no" value="meander_pattern">meander_pattern</option>
+                <option translatable="no" value="meander_scale_percent">meander_scale_percent</option>
+                <option translatable="no" value="min_line_dist_mm">min_line_dist_mm</option>
+                <option translatable="no" value="min_random_split_length_mm">min_random_split_length_mm</option>
+                <option translatable="no" value="polyline">polyline</option>
+                <option translatable="no" value="pull_compensation_mm">pull_compensation_mm</option>
+                <option translatable="no" value="pull_compensation_percent">pull_compensation_percent</option>
+                <option translatable="no" value="random_seed">random_seed</option>
+                <option translatable="no" value="random_split_jitter_percent">random_split_jitter_percent</option>
+                <option translatable="no" value="random_split_phase">random_split_phase</option>
+                <option translatable="no" value="random_width_decrease_percent">random_width_decrease_percent</option>
+                <option translatable="no" value="random_width_increase_percent">random_width_increase_percent</option>
+                <option translatable="no" value="random_zigzag_spacing_percent">random_zigzag_spacing_percent</option>
+                <option translatable="no" value="repeats">repeats</option>
+                <option translatable="no" value="reverse_rails">reverse_rails</option>
+                <option translatable="no" value="reverse">reverse</option>
+                <option translatable="no" value="rotate_ripples">rotate_ripples</option>
+                <option translatable="no" value="row_spacing_mm">row_spacing_mm</option>
+                <option translatable="no" value="running_stitch_length_mm">running_stitch_length_mm</option>
+                <option translatable="no" value="running_stitch_tolerance_mm">running_stitch_tolerance_mm</option>
+                <option translatable="no" value="satin_column">satin_column</option>
+                <option translatable="no" value="satin_method">satin_method</option>
+                <option translatable="no" value="scale_axis">scale_axis</option>
+                <option translatable="no" value="scale_end">scale_end</option>
+                <option translatable="no" value="scale_start">scale_start</option>
+                <option translatable="no" value="short_stitch_distance_mm">short_stitch_distance_mm</option>
+                <option translatable="no" value="short_stitch_inset">short_stitch_inset</option>
+                <option translatable="no" value="skip_end">skip_end</option>
+                <option translatable="no" value="skip_last">skip_last</option>
+                <option translatable="no" value="skip_start">skip_start</option>
+                <option translatable="no" value="smoothness_mm">smoothness_mm</option>
+                <option translatable="no" value="split_method">split_method</option>
+                <option translatable="no" value="split_staggers">split_staggers</option>
+                <option translatable="no" value="staggers">staggers</option>
+                <option translatable="no" value="stop_after">stop_after</option>
+                <option translatable="no" value="stop_at_ending_point">stop_at_ending_point</option>
+                <option translatable="no" value="stroke_first">stroke_first</option>
+                <option translatable="no" value="stroke_method">stroke_method</option>
+                <option translatable="no" value="swap_satin_rails">swap_satin_rails</option>
+                <option translatable="no" value="ties">ties</option>
+                <option translatable="no" value="trim_after">trim_after</option>
+                <option translatable="no" value="underlay_underpath">underlay_underpath</option>
+                <option translatable="no" value="underpath">underpath</option>
+                <option translatable="no" value="zigzag_spacing_mm">zigzag_spacing_mm</option>
+                <option translatable="no" value="zigzag_underlay_inset_mm">zigzag_underlay_inset_mm</option>
+                <option translatable="no" value="zigzag_underlay_inset_percent">zigzag_underlay_inset_percent</option>
+                <option translatable="no" value="zigzag_underlay_max_stitch_length_mm">zigzag_underlay_max_stitch_length_mm</option>
+                <option translatable="no" value="zigzag_underlay_spacing_mm">zigzag_underlay_spacing_mm</option>
+                <option translatable="no" value="zigzag_underlay">zigzag_underlay</option>
+                <option translatable="no" value="zigzag_width_mm">zigzag_width_mm</option>
+            </param>
+            <param name="del_commands" type="optiongroup" gui-text="Remove Commands"
+                   gui-description="Removes visual commands from selected objects or all objects if nothing is selected."
+                   appearance="combo">
+                <option value="none">None</option>
+                <option value="all">All</option>
+                {%- for command, description in object_commands -%}
+                <option value="{{ command }}">{{ description }}</option>
+                {% endfor %}
+                {% for command, description in layer_commands %}
+                <option value="{{ command }}">{{ description }}</option>
+                {% endfor %}
+                {% for command, description in global_commands %}
+                <option value="{{ command }}">{{ description }}</option>
+                {% endfor %}
+            </param>
+            <param name="del_print" type="boolean" gui-text="Remove Print Settings from SVG metadata">false</param>
+        </page>
+
+        <page name="info" gui-text="Help">
+          <label>Use this extension to remove the information Ink/Stitch has stored in your document.  This can be especially useful if you copy and paste objects from an embroidery design into another document.</label>
+        <spacer />
+        <label>Get more information on our website</label>
+        <label appearance="url">https://inkstitch.org/docs/troubleshoot/#remove-embroidery-settings</label>
+        </page>
+
+    </param>
+
     <effect>
         <object-type>all</object-type>
         <effects-menu>
-            <submenu name="Ink/Stitch" translatable="no">
+            <submenu name="{{ menu_inkstitch }}" translatable="no">
                 <submenu name="Troubleshoot" />
             </submenu>
         </effects-menu>

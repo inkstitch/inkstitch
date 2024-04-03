@@ -98,6 +98,11 @@ class _ThreadCatalog(Sequence):
 
     def apply_palette(self, stitch_plan, palette):
         for color_block in stitch_plan:
+            if color_block.color.chart:
+                # do not overwrite cutwork settings
+                continue
+
+        for color_block in stitch_plan:
             nearest = palette.nearest_color(color_block.color)
 
             color_block.color.name = nearest.name

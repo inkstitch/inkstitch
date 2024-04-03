@@ -81,6 +81,9 @@ class ElementInfoFrame(wx.Frame):
                 self.index += 1
                 self.info_list.InsertItem(self.index, "")
                 self.info_list.SetItemBackgroundColour(self.index, item.value)
+            elif item.warning:
+                self.info_list.SetItem(self.index, 1, item.value)
+                self.info_list.SetItemBackgroundColour(self.index, "#ffdddd")
             else:
                 self.info_list.SetItem(self.index, 1, item.value)
             self.index += 1

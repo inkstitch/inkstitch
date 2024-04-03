@@ -12,12 +12,12 @@ import numpy
 from numpy import diff, setdiff1d, sign
 from shapely import geometry as shgeo
 
-from .base import InkstitchExtension
 from ..elements import SatinColumn, Stroke
 from ..i18n import _
 from ..svg import PIXELS_PER_MM, get_correction_transform
 from ..svg.tags import INKSTITCH_ATTRIBS
 from ..utils import Point
+from .base import InkstitchExtension
 
 
 class SelfIntersectionError(Exception):
@@ -119,7 +119,7 @@ class ConvertToSatin(InkstitchExtension):
         return [point for point, repeats in groupby(path)]
 
     def join_style_args(self, element):
-        """Convert svg line join style to shapely parallel offset arguments."""
+        """Convert svg line join style to shapely offset_curve arguments."""
 
         args = {
             # mitre is the default per SVG spec
@@ -146,16 +146,12 @@ class ConvertToSatin(InkstitchExtension):
         if Point(*path[0]).distance(Point(*path[-1])) < 1:
             raise SelfIntersectionError()
 
-        # Shapely is supposed to return right sided offsets in reversed direction, which it does, except for macOS.
-        # To avoid direction checking, we are going to rely on left side offsets only.
-        # Therefore we need to reverse the original path.
-        reversed_path = shgeo.LineString(reversed(path))
         path = shgeo.LineString(path)
         distance = stroke_width / 2.0
 
         try:
-            left_rail = path.parallel_offset(distance, 'left', **style_args)
-            right_rail = reversed_path.parallel_offset(distance, 'left', **style_args)
+            left_rail = path.offset_curve(-distance, **style_args)
+            right_rail = path.offset_curve(distance, **style_args)
         except ValueError:
             # TODO: fix this error automatically
             # Error reference: https://github.com/inkstitch/inkstitch/issues/964
@@ -163,16 +159,13 @@ class ConvertToSatin(InkstitchExtension):
                              "Please break up your path and try again.") + '\n')
             sys.exit(1)
 
-        if not isinstance(left_rail, shgeo.LineString) or \
-                not isinstance(right_rail, shgeo.LineString):
-            # If the parallel offsets come out as anything but a LineString, that means the
-            # path intersects itself, when taking its stroke width into consideration.  See
-            # the last example for parallel_offset() in the Shapely documentation:
-            #   https://shapely.readthedocs.io/en/latest/manual.html#object.parallel_offset
+        if left_rail.geom_type != 'LineString' or right_rail.geom_type != 'LineString':
+            # If the offset curve come out as anything but a LineString, that means the
+            # path intersects itself, when taking its stroke width into consideration.
             raise SelfIntersectionError()
 
         left_rail = list(left_rail.coords)
-        right_rail = list(reversed(right_rail.coords))
+        right_rail = list(right_rail.coords)
 
         rungs = self.generate_rungs(path, stroke_width)
 

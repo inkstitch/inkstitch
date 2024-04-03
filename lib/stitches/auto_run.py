@@ -5,23 +5,22 @@
 
 from collections import defaultdict
 
+import inkex
 import networkx as nx
 from shapely.geometry import LineString, MultiLineString, MultiPoint, Point
 from shapely.ops import nearest_points, substring, unary_union
-
-import inkex
 
 from ..commands import add_commands
 from ..elements import Stroke
 from ..i18n import _
 from ..svg import PIXELS_PER_MM, generate_unique_id
 from ..svg.tags import INKSCAPE_LABEL, INKSTITCH_ATTRIBS
+from ..utils.threading import check_stop_flag
 from .utils.autoroute import (add_elements_to_group, add_jumps,
                               create_new_group, find_path,
                               get_starting_and_ending_nodes,
                               preserve_original_groups,
                               remove_original_elements)
-from ..utils.threading import check_stop_flag
 
 
 class LineSegments:

@@ -4,9 +4,9 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 import math
-from math import tau
 import typing
 from copy import copy
+from math import tau
 
 import numpy as np
 from shapely import geometry as shgeo
@@ -310,3 +310,29 @@ def bean_stitch(stitches, repeats, tags_to_ignore=None):
             new_stitches.extend(copy(new_stitches[-2:]))
 
     return new_stitches
+
+
+def zigzag_stitch(stitches, zigzag_spacing, stroke_width, pull_compensation):
+    # Move the points left and right.  Consider each pair
+    # of points in turn, and move perpendicular to them,
+    # alternating left and right.
+
+    stroke_width = stroke_width + pull_compensation
+    offset = stroke_width / 2.0
+
+    for i in range(len(stitches) - 1):
+        start = stitches[i]
+        end = stitches[i + 1]
+        # sometimes the stitch results into zero length which cause a division by zero error
+        # ignoring this leads to a slightly bad result, but that is better than no output
+        if (end - start).length() == 0:
+            continue
+        segment_direction = (end - start).unit()
+        zigzag_direction = segment_direction.rotate_left()
+
+        if i % 2 == 1:
+            zigzag_direction *= -1
+
+        stitches[i] += zigzag_direction * offset
+
+    return stitches

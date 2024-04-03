@@ -216,7 +216,7 @@ class Print(InkstitchExtension):
     def strip_namespaces(self, svg):
         # namespace prefixes seem to trip up HTML, so get rid of them
         for element in svg.iter():
-            if type(element.tag) == str and element.tag[0] == '{':
+            if isinstance(element.tag, str) and element.tag[0] == '{':
                 element.tag = element.tag[element.tag.index('}', 1) + 1:]
 
     def render_svgs(self, stitch_plan, realistic=False):
@@ -231,7 +231,7 @@ class Print(InkstitchExtension):
         # for all color blocks together.
 
         layers = svg.findall("./g[@%s='layer']" % INKSCAPE_GROUPMODE)
-        stitch_plan_layer = svg.find(".//*[@id='__inkstitch_stitch_plan__']")
+        stitch_plan_layer = svg.findone(".//*[@id='__inkstitch_stitch_plan__']")
 
         # Make sure there is no leftover translation from stitch plan preview
         stitch_plan_layer.pop('transform')
@@ -310,8 +310,8 @@ class Print(InkstitchExtension):
         self.metadata = self.get_inkstitch_metadata()
         collapse_len = self.metadata['collapse_len_mm']
         min_stitch_len = self.metadata['min_stitch_len_mm']
-        patches = self.elements_to_stitch_groups(self.elements)
-        stitch_plan = stitch_groups_to_stitch_plan(patches, collapse_len=collapse_len, min_stitch_len=min_stitch_len)
+        stitch_groups = self.elements_to_stitch_groups(self.elements)
+        stitch_plan = stitch_groups_to_stitch_plan(stitch_groups, collapse_len=collapse_len, min_stitch_len=min_stitch_len)
         palette = ThreadCatalog().match_and_apply_palette(stitch_plan, self.get_inkstitch_metadata()['thread-palette'])
 
         overview_svg, color_block_svgs = self.render_svgs(stitch_plan, realistic=False)

@@ -19,12 +19,13 @@ class ElementInfo(InkstitchExtension):
 
         self.metadata = self.get_inkstitch_metadata()
         self.list_items = []
-
-        self._general_info()
+        self.max_stitch_lengths = []
+        self.min_stitch_lengths = []
 
         previous_stitch_group = None
         for element in self.elements:
             previous_stitch_group = self._element_info(element, previous_stitch_group)
+        self._general_info()
 
         app = ElementInfoApp(self.list_items)
         app.MainLoop()
@@ -33,8 +34,8 @@ class ElementInfo(InkstitchExtension):
         stitch_groups = element.to_stitch_groups(previous_stitch_group)
         stitch_plan = stitch_groups_to_stitch_plan(
             stitch_groups,
-            collapse_len=self.metadata['collapse_len'],
-            min_stitch_len=self.metadata['min_stitch_len']
+            collapse_len=self.metadata['collapse_len_mm'],
+            min_stitch_len=self.metadata['min_stitch_len_mm']
         )
 
         self.list_items.append(ListItem(
@@ -87,6 +88,23 @@ class ElementInfo(InkstitchExtension):
                 stitch_lengths.append(length)
                 previous_stitch = stitch
 
+        if stitch_lengths:
+            self.max_stitch_lengths.append(max(stitch_lengths))
+            self.min_stitch_lengths.append(min(stitch_lengths))
+        else:
+            self.max_stitch_lengths.append(0)
+            self.min_stitch_lengths.append(0)
+            self.list_items.append(ListItem(
+                name=_("Stitches"),
+                value="0",
+                warning=True
+            ))
+            self.list_items.append(ListItem(
+                name=_("Small stitches (removed)"),
+                value=str(removed_stitches)
+            ))
+            return stitch_groups[0]
+
         stitches_per_group = ""
         if len(stitch_groups) > 1:
             stitches_per_group = f" ({', '.join([str(len(group.stitches)) for group in stitch_groups]) })"
@@ -115,57 +133,69 @@ class ElementInfo(InkstitchExtension):
         return stitch_groups[0]
 
     def _general_info(self):
+        general_info_list_items = []
         stitch_groups = self.elements_to_stitch_groups(self.elements)
         stitch_plan = stitch_groups_to_stitch_plan(
             stitch_groups,
-            collapse_len=self.metadata['collapse_len'],
-            min_stitch_len=self.metadata['min_stitch_len']
+            collapse_len=self.metadata['collapse_len_mm'],
+            min_stitch_len=self.metadata['min_stitch_len_mm']
         )
 
-        self.list_items.append(ListItem(
+        general_info_list_items.append(ListItem(
             name=_("All Selected Elements"),
             headline=True
         ))
-        self.list_items.append(ListItem(
+        general_info_list_items.append(ListItem(
             name=_("Dimensions (mm)"),
             value="{:.2f} x {:.2f}".format(stitch_plan.dimensions_mm[0], stitch_plan.dimensions_mm[1])
         ))
-        self.list_items.append(ListItem(
+        general_info_list_items.append(ListItem(
             name=_("Colors"),
             value=str(stitch_plan.num_colors)
         ))
-        self.list_items.append(ListItem(
+        general_info_list_items.append(ListItem(
             name=_("Color Changes"),
             value=str(stitch_plan.num_color_blocks - 1)
         ))
-        self.list_items.append(ListItem(
+        general_info_list_items.append(ListItem(
             name=_("Jumps"),
-            value=str(stitch_plan.num_jumps)
+            value=str(stitch_plan.num_jumps - 1)
         ))
-        self.list_items.append(ListItem(
+        general_info_list_items.append(ListItem(
             name=_("Trims"),
             value=str(stitch_plan.num_trims)
         ))
-        self.list_items.append(ListItem(
+        general_info_list_items.append(ListItem(
             name=_("Stops"),
             value=str(stitch_plan.num_stops)
         ))
-        self.list_items.append(ListItem(
+        general_info_list_items.append(ListItem(
             name=_("Stitches"),
             value=str(stitch_plan.num_stitches - stitch_plan.num_jumps)
         ))
-        self.list_items.append(ListItem(
+        general_info_list_items.append(ListItem(
+            name=_("Min stitch length"),
+            value="{:.2f}".format(min(self.min_stitch_lengths))
+        ))
+        general_info_list_items.append(ListItem(
+            name=_("Max stitch length"),
+            value="{:.2f}".format(max(self.max_stitch_lengths))
+        ))
+        general_info_list_items.append(ListItem(
             name=_("Filter stitches smaller than (mm)"),
             value=str(self.metadata['min_stitch_len_mm'])
         ))
-        self.list_items.append(ListItem())
+        general_info_list_items.append(ListItem())
+
+        self.list_items = general_info_list_items + self.list_items
 
 
 class ListItem:
-    def __init__(self, name="", value="", headline=False):
+    def __init__(self, name="", value="", headline=False, warning=False):
         self.name: str = name
         self.value: str = value
         self.headline: bool = headline
+        self.warning: bool = warning
 
     def __repr__(self):
-        return "ListItem(%s, %s, %s)" % (self.name, self.value, self.headline)
+        return f"ListItem({self.name}, {self.value}, {self.headline}, {self.warning})"

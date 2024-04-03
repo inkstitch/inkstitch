@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+# creating folder to install geos
+mkdir $HOME/geos-build
+GEOS_PATH=$HOME/geos-build
+# Downloading geos
+curl -O  https://download.osgeo.org/geos/geos-3.12.1.tar.bz2
+
+# uzipping geos 
+tar -xf geos-3.12.1.tar.bz2 
+cd geos-3.12.1
+# Building geos
+mkdir build && cd build && cmake -DCMAKE_INSTALL_PREFIX:PATH=$GEOS_PATH -DCMAKE_BUILD_TYPE=Release ..
+make && make install
+
+export PATH=$GEOS_PATH/bin:$PATH
+export GEOS_INCLUDE_PATH=$GEOS_PATH/include
+export GEOS_LIBRARY_PATH=$GEOS_PATH/lib
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$GEOS_PATH/lib
+cd ../..
+python -m pip uninstall -y shapely
+python -m pip cache remove shapely
+python -m pip install -v shapely --no-binary shapely
+make dist
+

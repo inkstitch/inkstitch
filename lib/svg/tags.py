@@ -46,6 +46,7 @@ SODIPODI_INSENSITIVE = inkex.addNS('insensitive', 'sodipodi')
 SODIPODI_NODETYPES = inkex.addNS('nodetypes', 'sodipodi')
 
 INKSTITCH_LETTERING = inkex.addNS('lettering', 'inkstitch')
+INKSTITCH_TARTAN = inkex.addNS('tartan', 'inkstitch')
 
 EMBROIDERABLE_TAGS = (SVG_PATH_TAG, SVG_LINE_TAG, SVG_POLYLINE_TAG, SVG_POLYGON_TAG,
                       SVG_RECT_TAG, SVG_ELLIPSE_TAG, SVG_CIRCLE_TAG)
@@ -54,6 +55,8 @@ SVG_OBJECT_TAGS = (SVG_ELLIPSE_TAG, SVG_CIRCLE_TAG, SVG_RECT_TAG)
 
 INKSTITCH_ATTRIBS = {}
 inkstitch_attribs = [
+    'min_stitch_length_mm',
+    'min_jump_stitch_length_mm',
     'ties',
     'force_lock_stitches',
     'lock_start',
@@ -100,6 +103,9 @@ inkstitch_attribs = [
     'stop_at_ending_point',
     'flip',
     'clip',
+    'rows_per_thread',
+    'herringbone_width_mm',
+    'tartan_angle',
     # stroke
     'stroke_method',
     'bean_stitch_repeats',
@@ -107,6 +113,7 @@ inkstitch_attribs = [
     'running_stitch_length_mm',
     'running_stitch_tolerance_mm',
     'cutwork_needle',
+    'zigzag_width_mm',
     # ripples
     'line_count',
     'min_line_dist_mm',
@@ -128,10 +135,12 @@ inkstitch_attribs = [
     'swap_satin_rails',
     'center_walk_underlay',
     'center_walk_underlay_stitch_length_mm',
+    'center_walk_underlay_stitch_tolerance_mm',
     'center_walk_underlay_repeats',
     'center_walk_underlay_position',
     'contour_underlay',
     'contour_underlay_stitch_length_mm',
+    'contour_underlay_stitch_tolerance_mm',
     'contour_underlay_inset_mm',
     'contour_underlay_inset_percent',
     'zigzag_underlay',

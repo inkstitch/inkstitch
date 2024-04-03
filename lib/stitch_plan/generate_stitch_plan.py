@@ -5,6 +5,7 @@
 
 import os
 import sys
+from html import escape
 
 import inkex
 
@@ -59,7 +60,7 @@ def generate_stitch_plan(embroidery_file, import_commands="symbols"):  # noqa: C
 
     # rename the Stitch Plan layer so that it doesn't get overwritten by Embroider
     layer = svg.find(".//*[@id='__inkstitch_stitch_plan__']")
-    layer.set(INKSCAPE_LABEL, os.path.basename(embroidery_file))
+    layer.set(INKSCAPE_LABEL, escape(os.path.basename(embroidery_file)))
     layer.attrib.pop('id')
 
     # Shift the design so that its origin is at the center of the canvas

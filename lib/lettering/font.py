@@ -365,7 +365,7 @@ class Font(object):
         line_break_indices = [i for i, t in enumerate(text) if t == "\n"]
         for group in destination_group.iterdescendants(SVG_GROUP_TAG):
             # make sure we are only looking at glyph groups
-            if group.get("id") != "glyph":
+            if not group.get("id", "").startswith("glyph"):
                 continue
 
             i += 1

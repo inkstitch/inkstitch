@@ -2,6 +2,8 @@
 
 set -e
 info_year=$( date "+%Y" )
+# PyInstaller v6.x rearranges folder configuration causing broken builds, This re-enables old onedir layout.
+pyinstaller_args+="--contents-directory . "
 
 # We need to use the precompiled bootloader linked with graphical Mac OS X
 # libraries if we develop a GUI application for Mac:

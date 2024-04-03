@@ -14,10 +14,10 @@ def pyembroidery_input_formats():
             yield format['extension'], format['description']
 
 
-def generate_input_inx_files():
+def generate_input_inx_files(alter_data):
     env = build_environment()
     template = env.get_template('input.xml')
 
     for format, description in pyembroidery_input_formats():
-        name = "input_%s" % format.upper()
-        write_inx_file(name, template.render(format=format, description=description))
+        name = f"input_{format.upper()}"
+        write_inx_file(name, template.render(alter_data, format=format, description=description))

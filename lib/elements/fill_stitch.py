@@ -3,7 +3,6 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-import logging
 import math
 import re
 
@@ -19,12 +18,15 @@ from ..i18n import _
 from ..marker import get_marker_elements
 from ..stitch_plan import StitchGroup
 from ..stitches import (auto_fill, circular_fill, contour_fill, guided_fill,
-                        legacy_fill, linear_gradient_fill, meander_fill)
+                        legacy_fill, linear_gradient_fill, meander_fill,
+                        tartan_fill)
 from ..stitches.linear_gradient_fill import gradient_angle
 from ..svg import PIXELS_PER_MM, get_node_transform
 from ..svg.clip import get_clip_path
 from ..svg.tags import INKSCAPE_LABEL
+from ..tartan.utils import get_tartan_settings, get_tartan_stripes
 from ..utils import cache
+from ..utils.geometry import ensure_multi_polygon
 from ..utils.param import ParamOption
 from .element import EmbroideryElement, param
 from .validation import ValidationError, ValidationWarning
@@ -94,6 +96,43 @@ class BorderCrossWarning(ValidationWarning):
     ]
 
 
+class StrokeAndFillWarning(ValidationWarning):
+    name = _("Fill and Stroke color")
+    description = _("Element has both a fill and a stroke color. It is recommended to use two separate elements instead.")
+    steps_to_solve = [
+        _('* Duplicate the element. Remove stroke color from the first and fill color from the second.'),
+        _('* Adapt the shape of the second element to compensate for push and pull fabric distortion.')
+    ]
+
+
+class NoGradientWarning(ValidationWarning):
+    name = _("No linear gradient color")
+    description = _("Linear Gradient has no linear gradient color.")
+    steps_to_solve = [
+        _('* Open the Fill and Stroke dialog.'),
+        _('* Set a linear gradient as a fill and adapt colors to your liking.')
+    ]
+
+
+class NoTartanStripeWarning(ValidationWarning):
+    name = _("No stripes to render")
+    description = _("Tartan fill: There is no active fill stripe to render")
+    steps_to_solve = [
+        _('Go to Extensions > Ink/Stitch > Fill Tools > Tartan and adjust stripe settings:'),
+        _('* Check if stripes are active'),
+        _('* Check the minimum stripe width setting and the scale factor')
+    ]
+
+
+class DefaultTartanStripeWarning(ValidationWarning):
+    name = _("No customized pattern")
+    description = _("Tartan fill: Using default pattern")
+    steps_to_solve = [
+        _('Go to Extensions > Ink/Stitch > Fill Tools > Tartan and adjust stripe settings:'),
+        _('* Customize your pattern')
+    ]
+
+
 class InvalidShapeError(ValidationError):
     name = _("This shape is invalid")
     description = _('Fill: This shape cannot be stitched out. Please try to repair it with the "Break Apart Fill Objects" extension.')
@@ -111,11 +150,12 @@ class FillStitch(EmbroideryElement):
         return self.get_boolean_param('auto_fill', True)
 
     _fill_methods = [ParamOption('auto_fill', _("Auto Fill")),
+                     ParamOption('circular_fill', _("Circular Fill")),
                      ParamOption('contour_fill', _("Contour Fill")),
                      ParamOption('guided_fill', _("Guided Fill")),
-                     ParamOption('meander_fill', _("Meander Fill")),
-                     ParamOption('circular_fill', _("Circular Fill")),
                      ParamOption('linear_gradient_fill', _("Linear Gradient Fill")),
+                     ParamOption('meander_fill', _("Meander Fill")),
+                     ParamOption('tartan_fill', _("Tartan Fill")),
                      ParamOption('legacy_fill', _("Legacy Fill"))]
 
     @property
@@ -229,6 +269,7 @@ class FillStitch(EmbroideryElement):
                          ('fill_method', 'guided_fill'),
                          ('fill_method', 'meander_fill'),
                          ('fill_method', 'circular_fill'),
+                         ('fill_method', 'tartan_fill'),
                          ('fill_method', 'linear_gradient_fill')])
     def expand(self):
         return self.get_float_param('expand_mm', 0)
@@ -247,6 +288,19 @@ class FillStitch(EmbroideryElement):
         return math.radians(self.get_float_param('angle', 0))
 
     @property
+    @param('tartan_angle',
+           _('Angle of lines of stitches'),
+           tooltip=_('Relative to the tartan stripe direction.'),
+           unit='deg',
+           type='float',
+           sort_index=21,
+           select_items=[('fill_method', 'tartan_fill')],
+           default=45)
+    @cache
+    def tartan_angle(self):
+        return self.get_float_param('tartan_angle', -45)
+
+    @property
     @param('max_stitch_length_mm',
            _('Maximum fill stitch length'),
            tooltip=_(
@@ -258,6 +312,7 @@ class FillStitch(EmbroideryElement):
                          ('fill_method', 'contour_fill'),
                          ('fill_method', 'guided_fill'),
                          ('fill_method', 'linear_gradient_fill'),
+                         ('fill_method', 'tartan_fill'),
                          ('fill_method', 'legacy_fill')],
            default=3.0)
     def max_stitch_length(self):
@@ -275,6 +330,7 @@ class FillStitch(EmbroideryElement):
                          ('fill_method', 'guided_fill'),
                          ('fill_method', 'circular_fill'),
                          ('fill_method', 'linear_gradient_fill'),
+                         ('fill_method', 'tartan_fill'),
                          ('fill_method', 'legacy_fill')],
            default=0.25)
     def row_spacing(self):
@@ -305,6 +361,7 @@ class FillStitch(EmbroideryElement):
            select_items=[('fill_method', 'auto_fill'),
                          ('fill_method', 'guided_fill'),
                          ('fill_method', 'linear_gradient_fill'),
+                         ('fill_method', 'tartan_fill'),
                          ('fill_method', 'legacy_fill')],
            default=4)
     def staggers(self):
@@ -338,6 +395,18 @@ class FillStitch(EmbroideryElement):
         default=False)
     def flip(self):
         return self.get_boolean_param("flip", False)
+
+    @property
+    @param(
+        'reverse',
+        _('Reverse fill'),
+        tooltip=_('Reverses fill path.'),
+        type='boolean',
+        sort_index=28,
+        select_items=[('fill_method', 'legacy_fill')],
+        default=False)
+    def reverse(self):
+        return self.get_boolean_param("reverse", False)
 
     @property
     @param(
@@ -378,7 +447,8 @@ class FillStitch(EmbroideryElement):
                          ('fill_method', 'guided_fill'),
                          ('fill_method', 'meander_fill'),
                          ('fill_method', 'circular_fill'),
-                         ('fill_method', 'linear_gradient_fill')],
+                         ('fill_method', 'linear_gradient_fill'),
+                         ('fill_method', 'tartan_fill')],
            sort_index=31)
     def running_stitch_length(self):
         return max(self.get_float_param("running_stitch_length_mm", 2.5), 0.01)
@@ -416,11 +486,63 @@ class FillStitch(EmbroideryElement):
                      'A pattern with various repeats can be created with a list of values separated by a space.'),
            type='str',
            select_items=[('fill_method', 'meander_fill'),
-                         ('fill_method', 'circular_fill')],
+                         ('fill_method', 'circular_fill'),
+                         ('fill_method', 'tartan_fill')],
            default=0,
            sort_index=34)
     def bean_stitch_repeats(self):
         return self.get_multiple_int_param("bean_stitch_repeats", "0")
+
+    @property
+    @param('zigzag_spacing_mm',
+           _('Zig-zag spacing (peak-to-peak)'),
+           tooltip=_('Length of stitches in zig-zag mode.'),
+           unit='mm',
+           type='float',
+           select_items=[('fill_method', 'meander_fill')],
+           default=0,
+           sort_index=35)
+    @cache
+    def zigzag_spacing(self):
+        return self.get_float_param("zigzag_spacing_mm", 0)
+
+    @property
+    @param('zigzag_width_mm',
+           _('Zigzag width'),
+           tooltip=_('Width of the zigzag line.'),
+           unit='mm',
+           type='float',
+           select_items=[('fill_method', 'meander_fill')],
+           default=3,
+           sort_index=36)
+    @cache
+    def zigzag_width(self):
+        return self.get_float_param("zigzag_width_mm", 3)
+
+    @property
+    @param(
+        'rows_per_thread',
+        _("Rows per tartan thread"),
+        tooltip=_("Consecutive rows of the same color"),
+        type='int',
+        default="2",
+        select_items=[('fill_method', 'tartan_fill')],
+        sort_index=35
+    )
+    def rows_per_thread(self):
+        return max(1, self.get_int_param("rows_per_thread", 2))
+
+    @property
+    @param('herringbone_width_mm',
+           _('Herringbone width'),
+           tooltip=_('Defines width of a herringbone pattern. Use 0 for regular rows.'),
+           unit='mm',
+           type='int',
+           default=0,
+           select_items=[('fill_method', 'tartan_fill')],
+           sort_index=36)
+    def herringbone_width(self):
+        return self.get_float_param('herringbone_width_mm', 0)
 
     @property
     def color(self):
@@ -557,12 +679,6 @@ class FillStitch(EmbroideryElement):
         # biggest path.
         paths = self.paths
         paths.sort(key=lambda point_list: shgeo.Polygon(point_list).area, reverse=True)
-        # Very small holes will cause a shape to be rendered as an outline only
-        # they are too small to be rendered and only confuse the auto_fill algorithm.
-        # So let's ignore them
-        if shgeo.Polygon(paths[0]).area > 5 and shgeo.Polygon(paths[-1]).area < 5:
-            paths = [path for path in paths if shgeo.Polygon(path).area > 3]
-
         return shgeo.MultiPolygon([(paths[0], paths[1:])])
 
     @property
@@ -570,32 +686,11 @@ class FillStitch(EmbroideryElement):
     def shape(self):
         shape = self._get_clipped_path()
 
-        if self.shape_is_valid(shape):
-            return shape
+        if shape.is_valid:
+            return ensure_multi_polygon(shape, 3)
 
-        # Repair not valid shapes
-        logger = logging.getLogger('shapely.geos')
-        level = logger.level
-        logger.setLevel(logging.CRITICAL)
-
-        valid_shape = make_valid(shape)
-
-        logger.setLevel(level)
-
-        if isinstance(valid_shape, shgeo.Polygon):
-            return shgeo.MultiPolygon([valid_shape])
-        if isinstance(valid_shape, shgeo.LineString):
-            return shgeo.MultiPolygon([])
-        if shape.area == 0:
-            return shgeo.MultiPolygon([])
-
-        polygons = []
-        for polygon in valid_shape.geoms:
-            if isinstance(polygon, shgeo.Polygon) and polygon.area > 5:
-                polygons.append(polygon)
-            if isinstance(polygon, shgeo.MultiPolygon):
-                polygons.extend(polygon.geoms)
-        return shgeo.MultiPolygon(polygons)
+        shape = make_valid(shape)
+        return ensure_multi_polygon(shape, 3)
 
     def _get_clipped_path(self):
         if self.node.clip is None:
@@ -612,40 +707,16 @@ class FillStitch(EmbroideryElement):
         except GEOSException:
             return self.original_shape
 
-        if isinstance(intersection, shgeo.Polygon):
-            return shgeo.MultiPolygon([intersection])
-
-        if isinstance(intersection, shgeo.MultiPolygon):
-            return intersection
-
-        polygons = []
-        if isinstance(intersection, shgeo.GeometryCollection):
-            for geom in intersection.geoms:
-                if isinstance(geom, shgeo.Polygon):
-                    polygons.append(geom)
-        return shgeo.MultiPolygon([polygons])
-
-    def shape_is_valid(self, shape):
-        # Shapely will log to stdout to complain about the shape unless we make
-        # it shut up.
-        logger = logging.getLogger('shapely.geos')
-        level = logger.level
-        logger.setLevel(logging.CRITICAL)
-
-        valid = shape.is_valid
-
-        logger.setLevel(level)
-
-        return valid
+        return intersection
 
     def validation_errors(self):
-        if not self.shape_is_valid(self.shape):
+        if not self.shape.is_valid:
             why = explain_validity(self.shape)
             message, x, y = re.match(r"(?P<message>.+)\[(?P<x>.+)\s(?P<y>.+)\]", why).groups()
             yield InvalidShapeError((x, y))
 
     def validation_warnings(self):  # noqa: C901
-        if not self.shape_is_valid(self.original_shape):
+        if not self.original_shape.is_valid:
             why = explain_validity(self.original_shape)
             message, x, y = re.match(r"(?P<message>.+)\[(?P<x>.+)\s(?P<y>.+)\]", why).groups()
             if "Hole lies outside shell" in message:
@@ -674,6 +745,26 @@ class FillStitch(EmbroideryElement):
             elif guide_lines[0].disjoint(self.shape):
                 yield DisjointGuideLineWarning(self.shape.centroid)
             return None
+
+        # linear gradient fill
+        if self.fill_method == 'linear_gradient_fill' and self.gradient is None:
+            yield NoGradientWarning(self.shape.representative_point())
+
+        if self.node.style('stroke', None) is not None:
+            if not self.shape.is_empty:
+                yield StrokeAndFillWarning(self.shape.representative_point())
+            else:
+                # they may used a fill on a straight line
+                yield StrokeAndFillWarning(self.paths[0][0])
+
+        # tartan fill
+        if self.fill_method == 'tartan_fill':
+            settings = get_tartan_settings(self.node)
+            warp, weft = get_tartan_stripes(settings)
+            if not (warp or weft):
+                yield NoTartanStripeWarning(self.shape.representative_point())
+            if not self.node.get('inkstitch:tartan', ''):
+                yield DefaultTartanStripeWarning(self.shape.representative_point())
 
         for warning in super(FillStitch, self).validation_warnings():
             yield warning
@@ -710,7 +801,7 @@ class FillStitch(EmbroideryElement):
 
     def get_starting_point(self, previous_stitch_group):
         # If there is a "fill_start" Command, then use that; otherwise pick
-        # the point closest to the end of the last patch.
+        # the point closest to the end of the last stitch_group.
 
         if self.get_command('fill_start'):
             return self.get_command('fill_start').target_point
@@ -774,32 +865,57 @@ class FillStitch(EmbroideryElement):
                         stitch_groups.extend(self.do_circular_fill(fill_shape, previous_stitch_group, start, end))
                     elif self.fill_method == 'linear_gradient_fill':
                         stitch_groups.extend(self.do_linear_gradient_fill(fill_shape, previous_stitch_group, start, end))
+                    elif self.fill_method == 'tartan_fill':
+                        stitch_groups.extend(self.do_tartan_fill(fill_shape, previous_stitch_group, start, end))
                     else:
                         # auto_fill
                         stitch_groups.extend(self.do_auto_fill(fill_shape, previous_stitch_group, start, end))
                     if stitch_groups:
                         previous_stitch_group = stitch_groups[-1]
 
-            # sort colors of linear gradient (if multiple shapes)
-            if self.fill_method == 'linear_gradient_fill':
-                colors = [stitch_group.color for stitch_group in stitch_groups]
-                stitch_groups.sort(key=lambda group: colors.index(group.color))
+            # sort colors of linear gradient
+            if len(shapes) > 1 and self.fill_method == 'linear_gradient_fill':
+                self.color_sort(stitch_groups)
+
+            # sort colors of tartan fill
+            if len(shapes) > 1 and self.fill_method == 'tartan_fill':
+                # while color sorting make sure stroke lines go still on top of the fills
+                fill_groups = []
+                stroke_groups = []
+                for stitch_group in stitch_groups:
+                    if "tartan_run" in stitch_group.stitches[0].tags:
+                        stroke_groups.append(stitch_group)
+                    else:
+                        fill_groups.append(stitch_group)
+                self.color_sort(fill_groups)
+                self.color_sort(stroke_groups)
+                stitch_groups = fill_groups + stroke_groups
 
             return stitch_groups
 
+    def color_sort(self, stitch_groups):
+        colors = [stitch_group.color for stitch_group in stitch_groups]
+        stitch_groups.sort(key=lambda group: colors.index(group.color))
+
     def do_legacy_fill(self):
-        stitch_lists = legacy_fill(self.shape,
-                                   self.angle,
-                                   self.row_spacing,
-                                   self.end_row_spacing,
-                                   self.max_stitch_length,
-                                   self.flip,
-                                   self.staggers,
-                                   self.skip_last)
-        return [StitchGroup(stitches=stitch_list,
-                            color=self.color,
-                            force_lock_stitches=self.force_lock_stitches,
-                            lock_stitches=self.lock_stitches) for stitch_list in stitch_lists]
+        stitch_lists = legacy_fill(
+            self.shape,
+            self.angle,
+            self.row_spacing,
+            self.end_row_spacing,
+            self.max_stitch_length,
+            self.flip,
+            self.reverse,
+            self.staggers,
+            self.skip_last
+        )
+
+        return [StitchGroup(
+            stitches=stitch_list,
+            color=self.color,
+            force_lock_stitches=self.force_lock_stitches,
+            lock_stitches=self.lock_stitches
+        ) for stitch_list in stitch_lists]
 
     def do_underlay(self, shape, starting_point):
         color = self.color
@@ -829,7 +945,7 @@ class FillStitch(EmbroideryElement):
             starting_point = underlay.stitches[-1]
         return [stitch_groups, starting_point]
 
-    def do_auto_fill(self, shape, last_patch, starting_point, ending_point):
+    def do_auto_fill(self, shape, last_stitch_group, starting_point, ending_point):
         stitch_group = StitchGroup(
             color=self.color,
             tags=("auto_fill", "auto_fill_top"),
@@ -847,10 +963,12 @@ class FillStitch(EmbroideryElement):
                 self.skip_last,
                 starting_point,
                 ending_point,
-                self.underpath))
+                self.underpath
+            )
+        )
         return [stitch_group]
 
-    def do_contour_fill(self, polygon, last_patch, starting_point):
+    def do_contour_fill(self, polygon, last_stitch_group, starting_point):
         if not starting_point:
             starting_point = (0, 0)
         starting_point = shgeo.Point(starting_point)
@@ -890,17 +1008,17 @@ class FillStitch(EmbroideryElement):
             tags=("auto_fill", "auto_fill_top"),
             stitches=stitches,
             force_lock_stitches=self.force_lock_stitches,
-            lock_stitches=self.lock_stitches,)
+            lock_stitches=self.lock_stitches)
         stitch_groups.append(stitch_group)
 
         return stitch_groups
 
-    def do_guided_fill(self, shape, last_patch, starting_point, ending_point):
+    def do_guided_fill(self, shape, last_stitch_group, starting_point, ending_point):
         guide_line = self._get_guide_lines()
 
         # No guide line: fallback to normal autofill
         if not guide_line:
-            return self.do_auto_fill(shape, last_patch, starting_point, ending_point)
+            return self.do_auto_fill(shape, last_stitch_group, starting_point, ending_point)
 
         stitch_group = StitchGroup(
             color=self.color,
@@ -943,11 +1061,11 @@ class FillStitch(EmbroideryElement):
             tags=("meander_fill", "meander_fill_top"),
             stitches=meander_fill(self, shape, original_shape, i, starting_point, ending_point),
             force_lock_stitches=self.force_lock_stitches,
-            lock_stitches=self.lock_stitches,
+            lock_stitches=self.lock_stitches
         )
         return [stitch_group]
 
-    def do_circular_fill(self, shape, last_patch, starting_point, ending_point):
+    def do_circular_fill(self, shape, last_stitch_group, starting_point, ending_point):
         # get target position
         command = self.get_command('ripple_target')
         if command:
@@ -979,8 +1097,12 @@ class FillStitch(EmbroideryElement):
             tags=("circular_fill", "auto_fill_top"),
             stitches=stitches,
             force_lock_stitches=self.force_lock_stitches,
-            lock_stitches=self.lock_stitches,)
+            lock_stitches=self.lock_stitches
+        )
         return [stitch_group]
 
-    def do_linear_gradient_fill(self, shape, last_patch, start, end):
+    def do_linear_gradient_fill(self, shape, last_stitch_group, start, end):
         return linear_gradient_fill(self, shape, start, end)
+
+    def do_tartan_fill(self, shape, last_stitch_group, start, end):
+        return tartan_fill(self, shape, start, end)

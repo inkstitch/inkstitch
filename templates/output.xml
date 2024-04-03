@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <inkscape-extension translationdomain="inkstitch" xmlns="http://www.inkscape.org/namespace/inkscape/extension">
     <name>{{ format | upper }} file output</name>
-    <id>org.inkstitch.output.{{ format }}</id>
+    <id>org.{{ id_inkstitch }}.output.{{ format }}</id>
     <output is_exported="true">
         <extension>.{{ format }}</extension>
         <mimetype>{{ mimetype }}</mimetype>
-        <filetypename>Ink/Stitch: {{ description }} (.{{ format }})</filetypename>
+        <filetypename>{{ menu_inkstitch }}: {{ description }} (.{{ format }})</filetypename>
         <filetypetooltip>{{ "Save design in %(file_extension)s format using Ink/Stitch" % dict(file_extension=format.upper()) }}</filetypetooltip>
         <dataloss>true</dataloss>
     </output>

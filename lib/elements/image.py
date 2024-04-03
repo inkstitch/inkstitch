@@ -29,5 +29,5 @@ class ImageObject(EmbroideryElement):
     def validation_warnings(self):
         yield ImageTypeWarning(self.center())
 
-    def to_stitch_groups(self, last_patch):
+    def to_stitch_groups(self, last_stitch_group):
         return []

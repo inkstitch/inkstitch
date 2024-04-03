@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <inkscape-extension translationdomain="inkstitch" xmlns="http://www.inkscape.org/namespace/inkscape/extension">
     <name>About</name>
-    <id>org.inkstitch.about</id>
+    <id>org.{{ id_inkstitch }}.about</id>
     <param type="notebook" name="about-tabs" indent="1">
       <page name="about" gui-text="About">
           <image>{{ image_path }}inkstitch_colour_logo.svg</image>
@@ -21,7 +21,7 @@
     <effect needs-live-preview="false" needs-document="false">
         <object-type>all</object-type>
         <effects-menu>
-            <submenu name="Ink/Stitch" translatable="no">
+            <submenu name="{{ menu_inkstitch }}" translatable="no">
             </submenu>
         </effects-menu>
     </effect>

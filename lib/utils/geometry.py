@@ -7,7 +7,8 @@ import math
 import typing
 
 import numpy
-from shapely.geometry import LineString, LinearRing, MultiLineString, Polygon, MultiPolygon, MultiPoint, GeometryCollection
+from shapely.geometry import (GeometryCollection, LinearRing, LineString,
+                              MultiLineString, MultiPoint, MultiPolygon)
 from shapely.geometry import Point as ShapelyPoint
 
 
@@ -102,33 +103,80 @@ def reverse_line_string(line_string):
     return LineString(line_string.coords[::-1])
 
 
-def ensure_multi_line_string(thing):
-    """Given either a MultiLineString or a single LineString, return a MultiLineString"""
-
-    if isinstance(thing, LineString):
-        return MultiLineString([thing])
-    else:
-        return thing
+def ensure_multi_line_string(thing, min_size=0):
+    """Given a shapely geometry, return a MultiLineString"""
+    multi_line_string = MultiLineString()
+    if thing.is_empty:
+        return multi_line_string
+    if thing.geom_type == "MultiLineString":
+        multi_line_string = thing
+    elif thing.geom_type == "LineString":
+        multi_line_string = MultiLineString([thing])
+    elif thing.geom_type == "GeometryCollection":
+        multilinestring = []
+        for shape in thing.geoms:
+            if shape.geom_type == "MultiLineString":
+                multilinestring.extend(shape.geoms)
+            elif shape.geom_type == "LineString":
+                multilinestring.append(shape)
+        multi_line_string = MultiLineString(multilinestring)
+    if min_size > 0:
+        multi_line_string = MultiLineString([line for line in multi_line_string.geoms if line.length > min_size])
+    return multi_line_string
 
 
 def ensure_geometry_collection(thing):
-    """Given either some kind of geometry or a GeometryCollection, return a GeometryCollection"""
-
-    if isinstance(thing, (MultiLineString, MultiPolygon, MultiPoint)):
+    """Given a shapely geometry, return a GeometryCollection"""
+    if thing.is_empty:
+        return GeometryCollection()
+    if thing.geom_type == "GeometryCollection":
+        return thing
+    if thing.geom_type in ["MultiLineString", "MultiPolygon", "MultiPoint"]:
         return GeometryCollection(thing.geoms)
-    elif isinstance(thing, GeometryCollection):
+    # LineString, Polygon, Point
+    return GeometryCollection([thing])
+
+
+def ensure_multi_polygon(thing, min_size=0):
+    """Given a shapely geometry, return a MultiPolygon"""
+    multi_polygon = MultiPolygon()
+    if thing.is_empty:
+        return multi_polygon
+    if thing.geom_type == "MultiPolygon":
+        multi_polygon = thing
+    elif thing.geom_type == "Polygon":
+        multi_polygon = MultiPolygon([thing])
+    elif thing.geom_type == "GeometryCollection":
+        multipolygon = []
+        for shape in thing.geoms:
+            if shape.geom_type == "MultiPolygon":
+                multipolygon.extend(shape.geoms)
+            elif shape.geom_type == "Polygon":
+                multipolygon.append(shape)
+        multi_polygon = MultiPolygon(multipolygon)
+    if min_size > 0:
+        multi_polygon = MultiPolygon([polygon for polygon in multi_polygon.geoms if polygon.area > min_size])
+    return multi_polygon
+
+
+def ensure_multi_point(thing):
+    """Given a shapely geometry, return a MultiPoint"""
+    multi_point = MultiPoint()
+    if thing.is_empty:
+        return multi_point
+    if thing.geom_type == "MultiPoint":
         return thing
-    else:
-        return GeometryCollection([thing])
-
-
-def ensure_multi_polygon(thing):
-    """Given either a MultiPolygon or a single Polygon, return a MultiPolygon"""
-
-    if isinstance(thing, Polygon):
-        return MultiPolygon([thing])
-    else:
-        return thing
+    elif thing.geom_type == "Point":
+        return MultiPoint([thing])
+    elif thing.geom_type == "GeometryCollection":
+        points = []
+        for shape in thing.geoms:
+            if shape.geom_type == "Point":
+                points.append(shape)
+            elif shape.geom_type == "MultiPoint":
+                points.extend(shape.geoms)
+        return MultiPoint(points)
+    return multi_point
 
 
 def cut_path(points, length):

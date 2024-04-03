@@ -12,14 +12,15 @@ class StitchPlanPreviewUndo(InkstitchExtension):
         reset_stitch_plan(self.document.getroot())
 
 
-def reset_stitch_plan(svg):
+def reset_stitch_plan(svg, delete_stitch_plan=True):
     # delete old stitch plan
     layer = svg.find(".//*[@id='__inkstitch_stitch_plan__']")
     # get previously invisible layers (they still should be hidden afterwards)
     if layer is not None:
         display_method = layer.get(INKSTITCH_ATTRIBS['layer_visibility'], 'unchanged')
         invisible_layers = layer.get(INKSTITCH_ATTRIBS['invisible_layers'], '').split(",")
-        layer.getparent().remove(layer)
+        if delete_stitch_plan:
+            layer.getparent().remove(layer)
 
         if display_method == "unchanged":
             return

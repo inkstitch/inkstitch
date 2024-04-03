@@ -4,6 +4,7 @@ from itertools import chain
 import networkx as nx
 import numpy as np
 import trimesh
+from shapely import offset_curve
 from shapely.geometry import (GeometryCollection, LineString, MultiPolygon,
                               Point, Polygon)
 from shapely.geometry.polygon import orient
@@ -14,7 +15,7 @@ from ..stitch_plan import Stitch
 from ..utils import DotDict
 from ..utils.clamp_path import clamp_path_to_polygon
 from ..utils.geometry import (cut, ensure_geometry_collection,
-                              ensure_multi_polygon, reverse_line_string,
+                              ensure_multi_line_string, reverse_line_string,
                               roll_linear_ring)
 from ..utils.smoothing import smooth_path
 from ..utils.threading import check_stop_flag
@@ -49,10 +50,10 @@ nearest_neighbor_tuple = namedtuple(
 
 
 def _offset_linear_ring(ring, offset, resolution, join_style, mitre_limit):
-    result = Polygon(ring).buffer(-offset, resolution, cap_style=2, join_style=join_style, mitre_limit=mitre_limit, single_sided=True)
-    result = ensure_multi_polygon(result)
-    rings = GeometryCollection([poly.exterior for poly in result.geoms])
-    rings = rings.simplify(0.01, False)
+    ring = Polygon(ring)
+    result = offset_curve(ring, -offset, resolution, join_style=join_style, mitre_limit=mitre_limit)
+    result = ensure_multi_line_string(result)
+    rings = result.simplify(0.01, False)
 
     return _take_only_valid_linear_rings(rings)
 
@@ -200,10 +201,10 @@ def _match_polygons_and_holes(outer, inners):
 
 
 def _convert_polygon_to_nodes(tree, polygon, parent_polygon, child_holes):
-    polygon = orient(polygon, -1)
-
     if polygon.area < 0.1:
         return None, None
+
+    polygon = orient(polygon, -1)
 
     valid_rings = _take_only_valid_linear_rings(polygon.exterior)
 

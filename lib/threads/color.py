@@ -20,9 +20,9 @@ class ThreadColor(object):
           * currentColor/context-fill/context-stroke: should not just be black, but we want to avoid
             error messages until inkex will be able to handle these css properties
         '''
-        if type(color) == str and color.startswith(('url', 'currentColor', 'context')):
+        if isinstance(color, str) and color.startswith(('url', 'currentColor', 'context')):
             color = None
-        elif type(color) == str and color.startswith('rgb'):
+        elif isinstance(color, str) and color.startswith('rgb'):
             color = tuple(int(value) for value in color[4:-1].split(','))
 
         if color is None:

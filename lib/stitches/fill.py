@@ -14,12 +14,15 @@ from ..utils import cache
 from ..utils.threading import check_stop_flag
 
 
-def legacy_fill(shape, angle, row_spacing, end_row_spacing, max_stitch_length, flip, staggers, skip_last):
+def legacy_fill(shape, angle, row_spacing, end_row_spacing, max_stitch_length, flip, reverse, staggers, skip_last):
     rows_of_segments = intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing, flip)
     groups_of_segments = pull_runs(rows_of_segments, shape, row_spacing)
 
-    return [section_to_stitches(group, angle, row_spacing, max_stitch_length, staggers, skip_last)
-            for group in groups_of_segments]
+    stitches = [section_to_stitches(group, angle, row_spacing, max_stitch_length, staggers, skip_last)
+                for group in groups_of_segments]
+    if reverse:
+        stitches = [segment[::-1] for segment in stitches[::-1]]
+    return stitches
 
 
 @cache
@@ -149,14 +152,13 @@ def intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing=Non
 
         res = grating_line.intersection(shape)
 
-        if (isinstance(res, shapely.geometry.MultiLineString) or isinstance(res, shapely.geometry.GeometryCollection)):
-            runs = [line_string.coords for line_string in res.geoms if isinstance(line_string, shapely.geometry.LineString)]
+        if res.geom_type in ["MultiLineString", "GeometryCollection"]:
+            runs = [line_string.coords for line_string in res.geoms if line_string.geom_type == "LineString"]
+        elif res.geom_type in ["Point", "MultiPoint"] or res.is_empty:
+            # ignore if we intersected at a single point or no points
+            runs = []
         else:
-            if res.is_empty or len(res.coords) == 1:
-                # ignore if we intersected at a single point or no points
-                runs = []
-            else:
-                runs = [res.coords]
+            runs = [res.coords]
 
         if runs:
             runs.sort(key=lambda seg: (InkstitchPoint(*seg[0]) - upper_left).length())
@@ -224,14 +226,8 @@ def pull_runs(rows, shape, row_spacing):
     # over to midway up the lower right leg.  We want to stop there and
     # start a new patch.
 
-    # for row in rows:
-    #    print >> sys.stderr, len(row)
-
-    # print >>sys.stderr, "\n".join(str(len(row)) for row in rows)
-
     rows = list(rows)
     runs = []
-    count = 0
     while (len(rows) > 0):
         run = []
         prev = None
@@ -249,10 +245,7 @@ def pull_runs(rows, shape, row_spacing):
 
             rows[row_num] = rest
 
-        # print >> sys.stderr, len(run)
         runs.append(run)
         rows = [r for r in rows if len(r) > 0]
-
-        count += 1
 
     return runs

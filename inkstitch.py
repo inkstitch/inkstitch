@@ -2,60 +2,110 @@
 #
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
-import cProfile
-import pstats
-import logging
+
 import os
 import sys
-from argparse import ArgumentParser
-from io import StringIO
+from pathlib import Path  # to work with paths as objects
+import configparser   # to read DEBUG.ini
+from argparse import ArgumentParser  # to parse arguments and remove --extension
 
-from lib.exceptions import InkstitchException, format_uncaught_exception
+import lib.debug_utils as debug_utils
 
-if getattr(sys, 'frozen', None) is None:
-    # When running in development mode, we want to use the inkex installed by
-    # pip install, not the one bundled with Inkscape which is not new enough.
-    if sys.platform == "darwin":
-        extensions_path = "/Applications/Inkscape.app/Contents/Resources/share/inkscape/extensions"
+SCRIPTDIR = Path(__file__).parent.absolute()
+
+running_as_frozen = getattr(sys, 'frozen', None) is not None  # check if running from pyinstaller bundle
+
+if len(sys.argv) < 2:
+    # no arguments - prevent accidentally running this script
+    msg = "No arguments given, exiting!"  # without gettext localization see _()
+    if running_as_frozen:  # we show dialog only when running from pyinstaller bundle - using wx
+        try:
+            import wx
+            app = wx.App()
+            dlg = wx.MessageDialog(None, msg, "Inkstitch", wx.OK | wx.ICON_ERROR)
+            dlg.ShowModal()
+            dlg.Destroy()
+        except ImportError:
+            print(msg)
     else:
-        extensions_path = "/usr/share/inkscape/extensions"
+        print(msg)
+    exit(1)
 
-    sys.path.remove(extensions_path)
-    sys.path.append(extensions_path)
+ini = configparser.ConfigParser()
+ini.read(SCRIPTDIR / "DEBUG.ini")  # read DEBUG.ini file if exists
 
-from inkex import errormsg
-from lxml.etree import XMLSyntaxError
+# check if running from inkscape, given by environment variable
+if os.environ.get('INKSTITCH_OFFLINE_SCRIPT', '').lower() in ['true', '1', 'yes', 'y']:
+    running_from_inkscape = False
+else:
+    running_from_inkscape = True
 
-import lib.debug as debug
-from lib import extensions
-from lib.i18n import _
-from lib.utils import restore_stderr, save_stderr
+debug_active = bool((gettrace := getattr(sys, 'gettrace')) and gettrace())  # check if debugger is active on startup
+debug_type = 'none'
+profiler_type = 'none'
 
-# ignore warnings in releases
-if getattr(sys, 'frozen', None):
+if not running_as_frozen:  # debugging/profiling only in development mode
+    # specify debugger type
+    #   but if script was already started from debugger then don't read debug type from ini file or cmd line
+    if not debug_active:
+        debug_type = debug_utils.resole_debug_type(ini)  # read debug type from ini file or cmd line
+
+    profile_type = debug_utils.resole_profile_type(ini)  # read profile type from ini file or cmd line
+
+    if running_from_inkscape:
+        # process creation of the Bash script - should be done before sys.path is modified, see below in prefere_pip_inkex
+        if ini.getboolean("DEBUG", "create_bash_script", fallback=False):  # create script only if enabled in DEBUG.ini
+            debug_utils.write_offline_debug_script(SCRIPTDIR, ini)
+
+        # disable debugger when running from inkscape
+        disable_from_inkscape = ini.getboolean("DEBUG", "disable_from_inkscape", fallback=False)
+        if disable_from_inkscape:
+            debug_type = 'none'  # do not start debugger when running from inkscape
+
+    # prefer pip installed inkex over inkscape bundled inkex, pip version is bundled with Inkstitch
+    # - must be be done before importing inkex
+    prefere_pip_inkex = ini.getboolean("LIBRARY", "prefer_pip_inkex", fallback=True)
+    if prefere_pip_inkex and 'PYTHONPATH' in os.environ:
+        debug_utils.reorder_sys_path()
+
+# enabling of debug depends on value of debug_type in DEBUG.ini file
+if debug_type != 'none':
+    from lib.debug import debug  # import global variable debug - don't import whole module
+    debug.enable(debug_type, SCRIPTDIR, ini)
+    # check if debugger is really activated
+    debug_active = bool((gettrace := getattr(sys, 'gettrace')) and gettrace())
+
+# warnings are used by some modules, we want to ignore them all in release
+#   - see warnings.warn()
+if running_as_frozen or not debug_active:
     import warnings
     warnings.filterwarnings('ignore')
 
-logger = logging.getLogger('shapely.geos')
-logger.setLevel(logging.DEBUG)
-shapely_errors = StringIO()
-ch = logging.StreamHandler(shapely_errors)
-ch.setLevel(logging.DEBUG)
-formatter = logging.Formatter('%(name)s - %(levelname)s - %(message)s')
-ch.setFormatter(formatter)
-logger.addHandler(ch)
+# TODO - check if this is still needed for shapely, apparently shapely now uses only exceptions instead of io.
+#        all logs were removed from version 2.0.0 and above
+#  ---- plan to remove this in future ----
+# import logging # to set logger for shapely
+# from io import StringIO  # to store shapely errors
+# set logger for shapely - for old versions of shapely
+# logger = logging.getLogger('shapely.geos')  # attach logger of shapely
+# logger.setLevel(logging.DEBUG)
+# shapely_errors = StringIO()                # in memory file to store shapely errors
+# ch = logging.StreamHandler(shapely_errors)
+# ch.setLevel(logging.DEBUG)
+# formatter = logging.Formatter('%(name)s - %(levelname)s - %(message)s')
+# ch.setFormatter(formatter)
+# logger.addHandler(ch)
+#  ---- plan to remove this in future ----
+
+# pop '--extension' from arguments and generate extension class name from extension name
+#   example:  --extension=params will instantiate Params() class from lib.extensions.
+
+# we need to import only after possible modification of sys.path, we disable here flake8 E402
+from lib import extensions  # noqa: E402  # import all supported extensions of institch
 
 parser = ArgumentParser()
 parser.add_argument("--extension")
 my_args, remaining_args = parser.parse_known_args()
-
-if os.path.exists(os.path.join(os.path.dirname(os.path.realpath(__file__)), "DEBUG")):
-    debug.enable()
-
-profiler = None
-if os.path.exists(os.path.join(os.path.dirname(os.path.realpath(__file__)), "PROFILE")):
-    profiler = cProfile.Profile()
-    profiler.enable()
 
 extension_name = my_args.extension
 
@@ -63,23 +113,25 @@ extension_name = my_args.extension
 extension_class_name = extension_name.title().replace("_", "")
 
 extension_class = getattr(extensions, extension_class_name)
-extension = extension_class()
+extension = extension_class()  # create instance of extension class - call __init__ method
 
-if (hasattr(sys, 'gettrace') and sys.gettrace()) or profiler is not None:
-    extension.run(args=remaining_args)
-    if profiler:
-        path = os.path.join(os.path.dirname(os.path.realpath(__file__)), "profile_stats")
-        profiler.disable()
-        profiler.dump_stats(path + ".prof")
+# extension run(), we differentiate between debug and normal mode
+# - in debug or profile mode we debug or profile extension.run() method
+# - in normal mode we run extension.run() in try/except block to catch all exceptions and hide GTK spam
+if debug_active or profiler_type != "none":  # if debug or profile mode
+    if profiler_type == 'none':             # only debugging
+        extension.run(args=remaining_args)
+    else:                                  # do profiling
+        debug_utils.profile(profiler_type, SCRIPTDIR, ini, extension, remaining_args)
 
-        with open(path, 'w') as stats_file:
-            stats = pstats.Stats(profiler, stream=stats_file)
-            stats.sort_stats(pstats.SortKey.CUMULATIVE)
-            stats.print_stats()
+else:   # if not debug nor profile mode
+    from lib.exceptions import InkstitchException, format_uncaught_exception
+    from inkex import errormsg  # to show error message in inkscape
+    from lxml.etree import XMLSyntaxError  # to catch XMLSyntaxError from inkex
+    from lib.i18n import _      # see gettext translation function _()
+    from lib.utils import restore_stderr, save_stderr  # to hide GTK spam
 
-        print(f"profiling stats written to {path} and {path}.prof", file=sys.stderr)
-else:
-    save_stderr()
+    save_stderr()  # hide GTK spam
     exception = None
     try:
         extension.run(args=remaining_args)
@@ -99,7 +151,7 @@ else:
     finally:
         restore_stderr()
 
-        if shapely_errors.tell():
-            errormsg(shapely_errors.getvalue())
+        # if shapely_errors.tell():                   # see above plan to remove this in future for shapely
+        #     errormsg(shapely_errors.getvalue())
 
     sys.exit(0)

@@ -1,6 +1,9 @@
-from shapely.geometry import LineString, Point as ShapelyPoint, MultiPolygon
+from shapely.geometry import LineString, MultiPolygon
+from shapely.geometry import Point as ShapelyPoint
 from shapely.prepared import prep
-from .geometry import Point, ensure_geometry_collection
+
+from .geometry import (Point, ensure_geometry_collection,
+                       ensure_multi_line_string)
 
 
 def path_to_segments(path):
@@ -56,8 +59,10 @@ def adjust_line_end(line, end):
 
 
 def find_border(polygon, point):
+    """Finds subpath of polygon which intersects with the point.
+       Ignores small border fragments"""
     for border in polygon.interiors:
-        if border.intersects(point):
+        if border.length > 0.1 and border.intersects(point):
             return border
     else:
         return polygon.exterior
@@ -76,7 +81,10 @@ def clamp_path_to_polygon(path, polygon):
 
     # This splits the path at the points where it intersects with the polygon
     # border and returns the pieces in the same order as the original path.
-    split_path = ensure_geometry_collection(LineString(path).difference(polygon.boundary))
+    try:
+        split_path = ensure_geometry_collection(LineString(path).difference(polygon.boundary))
+    except FloatingPointError:
+        return path
 
     if len(split_path.geoms) == 1:
         # The path never intersects with the polygon, so it's entirely inside.
@@ -117,7 +125,7 @@ def clamp_path_to_polygon(path, polygon):
                     if not exit_point.intersects(entry_point):
                         # Now break the border into pieces using those points.
                         border = find_border(polygon, exit_point)
-                        border_pieces = border.difference(MultiPolygon((entry_point, exit_point))).geoms
+                        border_pieces = ensure_multi_line_string(border.difference(MultiPolygon((entry_point, exit_point)))).geoms
                         border_pieces = fix_starting_point(border_pieces)
 
                         # Pick the shortest way to get from the exiting to the

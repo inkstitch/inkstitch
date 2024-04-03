@@ -4,6 +4,7 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 import os
+from html import escape, unescape
 from pathlib import Path
 
 import inkex
@@ -42,7 +43,8 @@ class LettersToFont(InkstitchExtension):
         group = None
         for glyph in glyphs:
             letter = self.get_glyph_element(glyph)
-            label = "GlyphLayer-%s" % letter.get(INKSCAPE_LABEL, ' ').split('.')[0][-1]
+            label = unescape(letter.get(INKSCAPE_LABEL, ' ')).split('.')[0][-1]
+            label = f"GlyphLayer-{ label }"
             group = inkex.Group(attrib={
                 INKSCAPE_LABEL: label,
                 INKSCAPE_GROUPMODE: "layer",
@@ -79,8 +81,11 @@ class LettersToFont(InkstitchExtension):
         stitch_plan = generate_stitch_plan(str(glyph), self.options.import_commands)
         # we received a stitch plan wrapped in an svg document, we only need the stitch_plan group
         # this group carries the name of the file, so we can search for it.
-        stitch_plan = stitch_plan.xpath('.//*[@inkscape:label="%s"]' % os.path.basename(glyph), namespaces=inkex.NSS)[0]
+        label = os.path.basename(glyph)
+        search_string = f'.//*[@inkscape:label="{ escape(label) }"]'
+        stitch_plan = stitch_plan.xpath(search_string, namespaces=inkex.NSS)[0]
         stitch_plan.attrib.pop(INKSCAPE_GROUPMODE)
+        stitch_plan.label = label
         return stitch_plan
 
     def insert_baseline(self):

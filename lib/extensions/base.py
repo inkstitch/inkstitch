@@ -124,16 +124,16 @@ class InkstitchExtension(inkex.EffectExtension):
         return False
 
     def elements_to_stitch_groups(self, elements):
-        patches = []
+        stitch_groups = []
         for element in elements:
-            if patches:
-                last_patch = patches[-1]
+            if stitch_groups:
+                last_stitch_group = stitch_groups[-1]
             else:
-                last_patch = None
+                last_stitch_group = None
 
-            patches.extend(element.embroider(last_patch))
+            stitch_groups.extend(element.embroider(last_stitch_group))
 
-        return patches
+        return stitch_groups
 
     def get_inkstitch_metadata(self):
         return InkStitchMetadata(self.svg)

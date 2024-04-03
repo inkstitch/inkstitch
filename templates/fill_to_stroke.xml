@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <inkscape-extension translationdomain="inkstitch" xmlns="http://www.inkscape.org/namespace/inkscape/extension">
     <name>Fill to Stroke</name>
-    <id>org.inkstitch.fill_to_stroke</id>
+    <id>org.{{ id_inkstitch }}.fill_to_stroke</id>
     <param name="extension" type="string" gui-hidden="true">fill_to_stroke</param>
     <effect>
         <object-type>all</object-type>
         <effects-menu>
-            <submenu name="Ink/Stitch" translatable="no">
+            <submenu name="{{ menu_inkstitch }}" translatable="no">
                 <submenu name="Tools: Stroke" />
             </submenu>
         </effects-menu>
