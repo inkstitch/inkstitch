@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-04-02 01:08+0000\n"
-"PO-Revision-Date: 2024-04-02 01:09\n"
+"PO-Revision-Date: 2024-04-04 01:06\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -2157,7 +2157,7 @@ msgstr "Stichtoleranz"
 
 #: lib/elements/satin_column.py:366 lib/elements/satin_column.py:423
 msgid "All stitches must be within this distance from the path. A lower tolerance means stitches will be closer together. A higher tolerance means sharp corners may be rounded. Defaults to stitch length."
-msgstr ""
+msgstr "Alle Stiche müssen innerhalb dieser Toleranzgrenze zum Pfad liegen. Eine niedrigere Toleranz bedeutet, dass sich die Stichlänge mehr reduziert. Eine größere Toleranz kann zur Abrundung scharfer Ecken führen. Der Standardwert ist die Stichlänge."
 
 #: lib/elements/satin_column.py:382
 msgid "Inset distance (fixed)"
