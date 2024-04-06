@@ -372,10 +372,11 @@ class SatinColumn(EmbroideryElement):
         unit='mm',
         group=_('Contour Underlay'),
         type='float',
+        default=0.2,
     )
     def contour_underlay_stitch_tolerance(self):
-        tolerance = self.get_float_param("contour_underlay_stitch_tolerance_mm", self.contour_underlay_stitch_length)
-        return max(tolerance, 0.01)
+        tolerance = self.get_float_param("contour_underlay_stitch_tolerance_mm", 0.2)
+        return max(tolerance, 0.01 * PIXELS_PER_MM)  # sanity check to prevent crash from excessively-small values
 
     @property
     @param('contour_underlay_inset_mm',
@@ -428,11 +429,12 @@ class SatinColumn(EmbroideryElement):
         ),
         unit='mm',
         group=_('Center-Walk Underlay'),
-        type='float'
+        type='float',
+        default=0.2
     )
     def center_walk_underlay_stitch_tolerance(self):
-        tolerance = self.get_float_param("center_walk_underlay_stitch_tolerance_mm", self.contour_underlay_stitch_length)
-        return max(tolerance, 0.01)
+        tolerance = self.get_float_param("center_walk_underlay_stitch_tolerance_mm", 0.2)
+        return max(tolerance, 0.01 * PIXELS_PER_MM)
 
     @property
     @param('center_walk_underlay_repeats',
