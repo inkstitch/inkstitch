@@ -3,8 +3,10 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
+from fontTools.agl import toUnicode
 from inkex import NSS
 from lxml import etree
+
 from ..svg.tags import INKSCAPE_LABEL
 
 
@@ -16,14 +18,14 @@ class FontFileInfo(object):
         with open(path, 'r', encoding="utf-8") as svg:
             self.svg = etree.parse(svg)
 
-    # horiz_adv_x defines the wdith of specific letters (distance to next letter)
+    # horiz_adv_x defines the width of specific letters (distance to next letter)
     def horiz_adv_x(self):
         # In XPath 2.0 we could use ".//svg:glyph/(@unicode|@horiz-adv-x)"
         xpath = ".//svg:glyph[@unicode and @horiz-adv-x]/@*[name()='unicode' or name()='horiz-adv-x']"
         hax = self.svg.xpath(xpath, namespaces=NSS)
         if len(hax) == 0:
             return {}
-        return dict(zip(hax[0::2], [int(x) for x in hax[1::2]]))
+        return dict(zip(hax[0::2], [float(x) for x in hax[1::2]]))
 
     # kerning (specific distances of two specified letters)
     def hkern(self):
@@ -34,7 +36,7 @@ class FontFileInfo(object):
         # every second value contains the second letter(s) and every third value contains the kerning
         u_first = [k for k in hkern[0::3]]
         u_second = [k for k in hkern[1::3]]
-        k = [int(x) for x in hkern[2::3]]
+        k = [float(x) for x in hkern[2::3]]
 
         # sometimes a font file contains conflicting kerning value for a letter pair
         # in this case the value which is specified as a single pair overrules the one specified in a list of letters
@@ -44,14 +46,6 @@ class FontFileInfo(object):
 
         for index, kerning in enumerate(kern_list):
             first, second, key = kerning
-            # fontTools.agl will import fontTools.misc.py23 which will output a deprecation warning
-            # ignore the warning for now - until the library fixed it
-            if index == 0:
-                import warnings
-                with warnings.catch_warnings():
-                    warnings.simplefilter("ignore")
-                    global toUnicode
-                    from fontTools.agl import toUnicode
             first = self.split_glyph_list(first)
             second = self.split_glyph_list(second)
             kern_list[index] = (first, second, key)
@@ -96,7 +90,7 @@ class FontFileInfo(object):
         xpath = "string(.//svg:glyph[@glyph-name='space'][1]/@*[name()='horiz-adv-x'])"
         word_spacing = self.svg.xpath(xpath, namespaces=NSS)
         try:
-            return int(word_spacing)
+            return float(word_spacing)
         except ValueError:
             return None
 
@@ -105,7 +99,7 @@ class FontFileInfo(object):
         xpath = "string(.//svg:font[@horiz-adv-x][1]/@*[name()='horiz-adv-x'])"
         letter_spacing = self.svg.xpath(xpath, namespaces=NSS)
         try:
-            return int(letter_spacing)
+            return float(letter_spacing)
         except ValueError:
             return None
 
@@ -115,7 +109,7 @@ class FontFileInfo(object):
         xpath = "string(.//svg:font-face[@units-per-em][1]/@*[name()='units-per-em'])"
         units_per_em = self.svg.xpath(xpath, namespaces=NSS)
         try:
-            return int(units_per_em)
+            return float(units_per_em)
         except ValueError:
             return None
 
