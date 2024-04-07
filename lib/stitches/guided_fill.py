@@ -8,12 +8,15 @@ from shapely import geometry as shgeo
 from shapely.affinity import translate
 from shapely.ops import linemerge, nearest_points, unary_union
 
+from lib.utils import prng
+
 from ..debug import debug
 from ..stitch_plan import Stitch
 from ..utils.geometry import Point as InkstitchPoint
 from ..utils.geometry import (ensure_geometry_collection,
                               ensure_multi_line_string, reverse_line_string)
 from ..utils.threading import check_stop_flag
+from .running_stitch import random_running_stitch
 from .auto_fill import (auto_fill, build_fill_stitch_graph, build_travel_graph,
                         collapse_sequential_outline_edges, find_stitch_path,
                         graph_make_valid, travel)
@@ -31,9 +34,13 @@ def guided_fill(shape,
                 starting_point,
                 ending_point,
                 underpath,
-                strategy
+                strategy,
+                enable_random,
+                random_delta,
+                random_seed,
                 ):
-    segments = intersect_region_with_grating_guideline(shape, guideline, row_spacing, num_staggers, max_stitch_length, strategy)
+    segments = intersect_region_with_grating_guideline(shape, guideline, row_spacing, num_staggers, max_stitch_length, strategy,
+                                                       enable_random, running_stitch_tolerance, random_delta, random_seed,)
     if not segments:
         return fallback(shape, guideline, row_spacing, max_stitch_length, running_stitch_length, running_stitch_tolerance,
                         num_staggers, skip_last, starting_point, ending_point, underpath)
@@ -231,7 +238,8 @@ def _get_start_row(line, shape, row_spacing, line_direction):
     return copysign(row, shape_direction * line_direction)
 
 
-def intersect_region_with_grating_guideline(shape, line, row_spacing, num_staggers, max_stitch_length, strategy):
+def intersect_region_with_grating_guideline(shape, line, row_spacing, num_staggers, max_stitch_length, strategy,
+                                            enable_random, tolerance, random_delta, random_seed):
     line = prepare_guide_line(line, shape)
 
     debug.log_line_string(shape.exterior, "guided fill shape")
@@ -261,13 +269,15 @@ def intersect_region_with_grating_guideline(shape, line, row_spacing, num_stagge
 
         offset_line = clean_offset_line(offset_line)
 
-        if strategy == 1 and direction == -1:
-            # negative parallel offsets are reversed, so we need to compensate
-            offset_line = reverse_line_string(offset_line)
-
         debug.log_line_string(offset_line, f"offset {row}")
 
-        stitched_line = apply_stitches(offset_line, max_stitch_length, num_staggers, row_spacing, row)
+        if enable_random:
+            points = [InkstitchPoint(*x) for x in offset_line.coords]
+            min_length = max(max_stitch_length - random_delta, 0)
+            max_length = max_stitch_length + random_delta
+            stitched_line = shgeo.LineString(random_running_stitch(points, min_length, max_length, tolerance, prng.join_args(random_seed, row)))
+        else:
+            stitched_line = apply_stitches(offset_line, max_stitch_length, num_staggers, row_spacing, row)
         intersection = shape.intersection(stitched_line)
 
         if not intersection.is_empty and shape_envelope.intersects(stitched_line):
