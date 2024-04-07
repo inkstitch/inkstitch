@@ -374,7 +374,7 @@ class FillStitch(EmbroideryElement):
         tooltip=_('The last stitch in each row is quite close to the first stitch in the next row.  '
                   'Skipping it decreases stitch count and density.'),
         type='boolean',
-        sort_index=26,
+        sort_index=30,
         select_items=[('fill_method', 'auto_fill'),
                       ('fill_method', 'guided_fill'),
                       ('fill_method', 'linear_gradient_fill'),
@@ -390,7 +390,7 @@ class FillStitch(EmbroideryElement):
         tooltip=_('The flip option can help you with routing your stitch path.  '
                   'When you enable flip, stitching goes from right-to-left instead of left-to-right.'),
         type='boolean',
-        sort_index=27,
+        sort_index=31,
         select_items=[('fill_method', 'legacy_fill')],
         default=False)
     def flip(self):
@@ -402,7 +402,7 @@ class FillStitch(EmbroideryElement):
         _('Reverse fill'),
         tooltip=_('Reverses fill path.'),
         type='boolean',
-        sort_index=28,
+        sort_index=32,
         select_items=[('fill_method', 'legacy_fill')],
         default=False)
     def reverse(self):
@@ -415,7 +415,7 @@ class FillStitch(EmbroideryElement):
         tooltip=_('If this option is disabled, the ending point will only be used to define a general direction for '
                   'stitch routing. When enabled the last section will end at the defined spot.'),
         type='boolean',
-        sort_index=30,
+        sort_index=33,
         select_items=[('fill_method', 'linear_gradient_fill')],
         default=False
      )
@@ -431,7 +431,7 @@ class FillStitch(EmbroideryElement):
            type='boolean',
            default=True,
            select_items=[('fill_method', 'auto_fill'), ('fill_method', 'guided_fill'), ('fill_method', 'circular_fill')],
-           sort_index=30)
+           sort_index=40)
     def underpath(self):
         return self.get_boolean_param('underpath', True)
 
@@ -449,7 +449,7 @@ class FillStitch(EmbroideryElement):
                          ('fill_method', 'circular_fill'),
                          ('fill_method', 'linear_gradient_fill'),
                          ('fill_method', 'tartan_fill')],
-           sort_index=31)
+           sort_index=41)
     def running_stitch_length(self):
         return max(self.get_float_param("running_stitch_length_mm", 2.5), 0.01)
 
@@ -461,9 +461,40 @@ class FillStitch(EmbroideryElement):
            unit='mm',
            type='float',
            default=0.1,
-           sort_index=32)
+           sort_index=43)
     def running_stitch_tolerance(self):
         return max(self.get_float_param("running_stitch_tolerance_mm", 0.2), 0.01)
+
+    @property
+    @param('enable_random_stitches',
+           _('Randomize stitches'),
+           tooltip=_('Randomize stitch length and phase instead of dividing evenly or staggering. '
+                     'This is recommended for closely-spaced curved fills to avoid Moiré artefacts.'),
+           type='boolean',
+           select_items=[('fill_method', 'auto_fill'),
+                         ('fill_method', 'contour_fill'),
+                         ('fill_method', 'guided_fill'),
+                         ('fill_method', 'circular_fill')],
+           default=False,
+           sort_index=44)
+    def enable_random_stitches(self):
+        return self.get_boolean_param('enable_random_stitches', False)
+
+    @property
+    @param('random_stitch_length_delta_mm',
+           _('Random stitch length delta'),
+           tooltip=_('Randomize stitch length and phase instead of dividing evenly or staggering. '
+                     'This is recommended for closely-spaced curved fills to avoid Moiré artefacts.'),
+           unit='± mm',
+           type='float',
+           select_items=[('fill_method', 'auto_fill'),
+                         ('fill_method', 'contour_fill'),
+                         ('fill_method', 'guided_fill'),
+                         ('fill_method', 'circular_fill')],
+           default=0.2,
+           sort_index=45)
+    def random_stitch_length_delta(self):
+        return max(self.get_float_param("random_stitch_length_delta_mm", 0.25), 0.0)
 
     @property
     @param('repeats',
@@ -473,7 +504,7 @@ class FillStitch(EmbroideryElement):
            default="1",
            select_items=[('fill_method', 'meander_fill'),
                          ('fill_method', 'circular_fill')],
-           sort_index=33)
+           sort_index=50)
     def repeats(self):
         return max(1, self.get_int_param("repeats", 1))
 
@@ -489,7 +520,7 @@ class FillStitch(EmbroideryElement):
                          ('fill_method', 'circular_fill'),
                          ('fill_method', 'tartan_fill')],
            default=0,
-           sort_index=34)
+           sort_index=51)
     def bean_stitch_repeats(self):
         return self.get_multiple_int_param("bean_stitch_repeats", "0")
 
@@ -501,7 +532,7 @@ class FillStitch(EmbroideryElement):
            type='float',
            select_items=[('fill_method', 'meander_fill')],
            default=0,
-           sort_index=35)
+           sort_index=60)
     @cache
     def zigzag_spacing(self):
         return self.get_float_param("zigzag_spacing_mm", 0)
@@ -514,7 +545,7 @@ class FillStitch(EmbroideryElement):
            type='float',
            select_items=[('fill_method', 'meander_fill')],
            default=3,
-           sort_index=36)
+           sort_index=61)
     @cache
     def zigzag_width(self):
         return self.get_float_param("zigzag_width_mm", 3)
@@ -527,7 +558,7 @@ class FillStitch(EmbroideryElement):
         type='int',
         default="2",
         select_items=[('fill_method', 'tartan_fill')],
-        sort_index=35
+        sort_index=62
     )
     def rows_per_thread(self):
         return max(1, self.get_int_param("rows_per_thread", 2))
@@ -540,7 +571,7 @@ class FillStitch(EmbroideryElement):
            type='int',
            default=0,
            select_items=[('fill_method', 'tartan_fill')],
-           sort_index=36)
+           sort_index=63)
     def herringbone_width(self):
         return self.get_float_param('herringbone_width_mm', 0)
 
@@ -648,7 +679,11 @@ class FillStitch(EmbroideryElement):
     @param('random_seed',
            _('Random seed'),
            tooltip=_('Use a specific seed for randomized attributes. Uses the element ID if empty.'),
-           select_items=[('fill_method', 'meander_fill')],
+           select_items=[('fill_method', 'auto_fill'),
+                         ('fill_method', 'contour_fill'),
+                         ('fill_method', 'guided_fill'),
+                         ('fill_method', 'circular_fill'),
+                         ('fill_method', 'meander_fill')],
            type='random_seed',
            default='',
            sort_index=100)
@@ -986,21 +1021,30 @@ class FillStitch(EmbroideryElement):
                 self.running_stitch_tolerance,
                 self.smoothness,
                 starting_point,
-                self.avoid_self_crossing
+                self.avoid_self_crossing,
+                self.enable_random_stitches,
+                self.random_stitch_length_delta,
+                self.random_seed
             )
         elif self.contour_strategy == 1:
             stitches = contour_fill.single_spiral(
                 tree,
                 self.max_stitch_length,
                 self.running_stitch_tolerance,
-                starting_point
+                starting_point,
+                self.enable_random_stitches,
+                self.random_stitch_length_delta,
+                self.random_seed
             )
         elif self.contour_strategy == 2:
             stitches = contour_fill.double_spiral(
                 tree,
                 self.max_stitch_length,
                 self.running_stitch_tolerance,
-                starting_point
+                starting_point,
+                self.enable_random_stitches,
+                self.random_stitch_length_delta,
+                self.random_seed
             )
 
         stitch_group = StitchGroup(
@@ -1089,7 +1133,10 @@ class FillStitch(EmbroideryElement):
             starting_point,
             ending_point,
             self.underpath,
-            target
+            target,
+            self.enable_random_stitches,
+            self.random_stitch_length_delta,
+            self.random_seed,
         )
 
         stitch_group = StitchGroup(

@@ -14,7 +14,7 @@ from ..utils.list import poprandom
 from ..utils.prng import iter_uniform_floats
 from ..utils.smoothing import smooth_path
 from ..utils.threading import check_stop_flag
-from .running_stitch import bean_stitch, running_stitch, zigzag_stitch
+from .running_stitch import bean_stitch, even_running_stitch, zigzag_stitch
 
 
 def meander_fill(fill, shape, original_shape, shape_index, starting_point, ending_point):
@@ -179,10 +179,10 @@ def post_process(points, shape, original_shape, fill):
     smoothed_points = [InkStitchPoint.from_tuple(point) for point in smoothed_points]
 
     if fill.zigzag_spacing > 0:
-        stitches = running_stitch(smoothed_points, fill.zigzag_spacing / 2, fill.running_stitch_tolerance)
+        stitches = even_running_stitch(smoothed_points, fill.zigzag_spacing / 2, fill.running_stitch_tolerance)
         stitches = zigzag_stitch(stitches, fill.zigzag_spacing, fill.zigzag_width, 0)
     else:
-        stitches = running_stitch(smoothed_points, fill.running_stitch_length, fill.running_stitch_tolerance)
+        stitches = even_running_stitch(smoothed_points, fill.running_stitch_length, fill.running_stitch_tolerance)
 
     if fill.clip:
         stitches = clamp_path_to_polygon(stitches, original_shape)

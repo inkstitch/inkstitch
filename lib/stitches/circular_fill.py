@@ -2,13 +2,15 @@ from networkx import is_empty
 from shapely import geometry as shgeo
 from shapely.ops import substring
 
+from lib.utils import prng
+
 from ..stitch_plan import Stitch
-from ..utils.geometry import reverse_line_string
+from ..utils.geometry import Point, reverse_line_string
 from .auto_fill import (build_fill_stitch_graph, build_travel_graph,
                         collapse_sequential_outline_edges, fallback,
                         find_stitch_path, graph_make_valid, travel)
 from .contour_fill import _make_fermat_spiral
-from .running_stitch import bean_stitch, running_stitch
+from .running_stitch import bean_stitch, even_running_stitch, running_stitch
 
 
 def circular_fill(shape,
@@ -24,7 +26,10 @@ def circular_fill(shape,
                   starting_point,
                   ending_point,
                   underpath,
-                  target
+                  target,
+                  use_random,
+                  running_stitch_length_delta,
+                  random_seed,
                   ):
 
     # get furthest distance of the target point to a shape border
@@ -35,8 +40,8 @@ def circular_fill(shape,
 
     if radius > distance:
         # if the shape is smaller than row_spacing, return a simple circle in the size of row_spacing
-        stitches = running_stitch([Stitch(*point) for point in center.buffer(radius).exterior.coords],
-                                  running_stitch_length, running_stitch_tolerance)
+        stitches = even_running_stitch([Stitch(*point) for point in center.buffer(radius).exterior.coords],
+                                       running_stitch_length, running_stitch_tolerance)
         return _apply_bean_stitch_and_repeats(stitches, repeats, bean_stitch_repeats)
 
     circles = []
@@ -61,16 +66,24 @@ def circular_fill(shape,
         # if we get a single linestrig (original shape is a circle), apply start and end commands and return path
         path = list(intersection.coords)
         path = _apply_start_end_commands(shape, path, starting_point, ending_point)
-        stitches = running_stitch([Stitch(*point) for point in path], running_stitch_length, running_stitch_tolerance)
+        stitches = running_stitch([Stitch(*point) for point in path],
+                                  running_stitch_length,
+                                  running_stitch_tolerance,
+                                  use_random,
+                                  running_stitch_length_delta,
+                                  random_seed)
         return _apply_bean_stitch_and_repeats(stitches, repeats, bean_stitch_repeats)
 
     segments = []
-    for line in intersection.geoms:
+    for n, line in enumerate(intersection.geoms):
         if isinstance(line, shgeo.LineString):
             # use running stitch here to adjust the stitch length
-            coords = running_stitch([Stitch(point[0], point[1]) for point in line.coords],
+            coords = running_stitch([Point(*point) for point in line.coords],
                                     running_stitch_length,
-                                    running_stitch_tolerance)
+                                    running_stitch_tolerance,
+                                    use_random,
+                                    running_stitch_length_delta,
+                                    prng.join_args(random_seed, n))
             segments.append([(point.x, point.y) for point in coords])
 
     fill_stitch_graph = build_fill_stitch_graph(shape, segments, starting_point, ending_point)

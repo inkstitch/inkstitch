@@ -26,7 +26,7 @@ from ..utils.geometry import (ensure_multi_line_string,
 from ..utils.smoothing import smooth_path
 from ..utils.threading import check_stop_flag
 from .fill import intersect_region_with_grating, stitch_row
-from .running_stitch import running_stitch
+from .running_stitch import even_running_stitch
 
 
 class NoGratingsError(Exception):
@@ -335,7 +335,7 @@ def fallback(shape, running_stitch_length, running_stitch_tolerance):
     boundary = ensure_multi_line_string(shape.boundary)
     outline = boundary.geoms[0]
 
-    return running_stitch(line_string_to_point_list(outline), running_stitch_length, running_stitch_tolerance)
+    return even_running_stitch(line_string_to_point_list(outline), running_stitch_length, running_stitch_tolerance)
 
 
 @debug.time
@@ -694,7 +694,7 @@ def travel(shape, travel_graph, edge, running_stitch_length, running_stitch_tole
     if len(path) > 1:
         path = clamp_path_to_polygon(path, shape)
 
-    points = running_stitch(path, running_stitch_length, running_stitch_tolerance)
+    points = even_running_stitch(path, running_stitch_length, running_stitch_tolerance)
     stitches = [Stitch(point) for point in points]
 
     for stitch in stitches:
