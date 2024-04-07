@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-04-02 01:08+0000\n"
-"PO-Revision-Date: 2024-04-04 01:06\n"
+"POT-Creation-Date: 2024-04-07 01:10+0000\n"
+"PO-Revision-Date: 2024-04-07 01:11\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-02 01:08+0000\n"
+"POT-Creation-Date: 2024-04-07 01:10+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1271,12 +1271,7 @@ msgstr "Stopp"
 msgid "Add a STOP command after stitching this object."
 msgstr "Füge einen Stopp-Befehl nach diesem Objekt hinzu."
 
-#: lib/elements/element.py:419
-#, python-format
-msgid "Object %(id)s has an empty 'd' attribute.  Please delete this object from your document."
-msgstr "Objekt %(id)s hat ein leeres Attribut 'd'. Bitte lösche dieses Objekt aus dem Dokument."
-
-#: lib/elements/element.py:624
+#: lib/elements/element.py:621
 msgid "Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects. This will show you the exact location of the problem."
 msgstr "Bitte rufe die Funktion Erweiterungen > Ink/Stitch > Fehlerbehebung > Fehlerbehebung an Objekten auf. Diese Erweiterung zeigt fehlerhafte Stellen an und gibt am rechten Seitenrand Vorschläge zum Lösen des Problems."
 
