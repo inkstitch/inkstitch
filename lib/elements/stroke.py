@@ -227,10 +227,11 @@ class Stroke(EmbroideryElement):
            _('Stagger lines this many times before repeating'),
            tooltip=_('Length of the cycle by which successive stitch lines are staggered. '
                      'Fractional values are allowed and can have less visible diagonals than integer values. '
+                     'A value of 0 (default) disables staggering and instead stitches evenly.'
                      'For linear ripples only.'),
            type='int',
            select_items=[('stroke_method', 'ripple_stitch')],
-           default=1,
+           default=0,
            sort_index=9)
     def staggers(self):
         return self.get_float_param("staggers", 1)

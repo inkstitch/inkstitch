@@ -11,7 +11,7 @@ from ..utils import prng
 from ..utils.geometry import line_string_to_point_list
 from ..utils.threading import check_stop_flag
 from .guided_fill import apply_stitches
-from .running_stitch import even_running_stitch, random_running_stitch, running_stitch
+from .running_stitch import even_running_stitch, running_stitch
 
 
 def ripple_stitch(stroke):
@@ -77,14 +77,13 @@ def _get_staggered_stitches(stroke, lines, skip_start):
         elif stroke.join_style == 1:
             should_reverse = (i + skip_start) % 2 == 1
 
-        if enable_random:
-            min_length = max(stitch_length - length_delta, 0)
-            max_length = stitch_length + length_delta
+        if enable_random or stroke.staggers == 0:
             if should_reverse:
                 line.reverse()
-            points = random_running_stitch(line, min_length, max_length, tolerance, prng.join_args(random_seed, i))
+            points = running_stitch(line, stitch_length, tolerance, enable_random, length_delta, prng.join_args(random_seed, i))
             stitched_line = connector + points
         else:
+            # uses the guided fill alforithm to stagger rows of stitches
             points = list(apply_stitches(LineString(line), stitch_length, stroke.staggers, 0.5, i, tolerance).coords)
             stitched_line = [InkstitchPoint(*point) for point in points]
             if should_reverse:
