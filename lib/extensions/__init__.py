@@ -57,6 +57,7 @@ from .stroke_to_lpe_satin import StrokeToLpeSatin
 from .tartan import Tartan
 from .test_swatches import TestSwatches
 from .troubleshoot import Troubleshoot
+from .unlink_clone import UnlinkClone
 from .update_svg import UpdateSvg
 from .zigzag_line_to_satin import ZigzagLineToSatin
 from .zip import Zip
@@ -115,6 +116,7 @@ __all__ = extensions = [ApplyPalette,
                         Tartan,
                         TestSwatches,
                         Troubleshoot,
+                        UnlinkClone,
                         UpdateSvg,
                         ZigzagLineToSatin,
                         Zip]
