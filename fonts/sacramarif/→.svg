@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   inkscape:version="1.3.1 (5ab75fa9, 2023-11-03)"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25)"
    height="150"
    width="150"
    sodipodi:docname="→.svg"
@@ -27,13 +27,13 @@
      inkscape:window-height="775"
      id="namedview6639"
      showgrid="true"
-     inkscape:zoom="6.1672176"
-     inkscape:cx="40.699067"
-     inkscape:cy="50.184706"
+     inkscape:zoom="1.9393008"
+     inkscape:cx="40.73633"
+     inkscape:cy="50.018026"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g2"
+     inkscape:current-layer="g7053"
      inkscape:document-rotation="0"
      showguides="true"
      inkscape:guide-bbox="true"
@@ -129,7 +129,9 @@ Font Name &quot;Sacramento&quot;
        d="M 41.321974,72.84721 C 21.232916,88.113839 8.1394942,85.339092 -3.1516759,77.916433 13.680515,89.091763 27.904299,83.126139 41.497066,73.013826 61.787622,55.099645 66.231346,40.066707 77.391153,23.812663 74.516993,34.390206 72.044492,62.804641 78.091526,83.344319 76.281332,76.048773 74.356892,68.753227 74.764757,61.457681 12.435849,74.99099 0.48374081,54.4637 14.007449,46.22458 0.45985476,54.495874 12.380313,74.862139 74.803971,61.554894 l 14.143327,-2.548517 c -4.687883,0.703818 -8.505573,1.573714 -14.162661,2.606516 -0.01046,2.646999 0.121301,5.524795 0.52528,8.793869"
        id="path4995"
        sodipodi:nodetypes="ccccccccccc"
-       inkstitch:running_stitch_length_mm="1.4" />
+       inkstitch:running_stitch_length_mm="1.4"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -142,7 +144,9 @@ Font Name &quot;Sacramento&quot;
        id="path6426"
        sodipodi:nodetypes="cscssssccsscc"
        inkstitch:ties="3"
-       inkstitch:running_stitch_length_mm="1.4" />
+       inkstitch:running_stitch_length_mm="1.4"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -155,7 +159,9 @@ Font Name &quot;Sacramento&quot;
        id="path618"
        sodipodi:nodetypes="ccscssscssscscsc"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -168,7 +174,9 @@ Font Name &quot;Sacramento&quot;
        id="path7715"
        sodipodi:nodetypes="cccssssscccssc"
        inkstitch:ties="3"
-       inkstitch:running_stitch_length_mm="1.4" />
+       inkstitch:running_stitch_length_mm="1.4"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -180,7 +188,9 @@ Font Name &quot;Sacramento&quot;
        d="m 4.2042527,70.470999 c -6.61026,-15.387985 21.2202983,-25.46994 30.5302393,-22.964183 3.818422,1.027723 7.437352,3.134766 3.115201,5.295842 C 22.402116,60.526447 2.5232929,36.186193 17.600886,27.569529 28.973863,21.070009 48.307546,23.31466 54.048738,36.915132 48.307546,23.31466 28.973863,21.070009 17.600886,27.569529 2.5232929,36.186193 22.402116,60.526447 37.849693,52.802658 42.171844,50.641582 38.552914,48.534539 34.734492,47.506816 24.086548,44.640937 -10.788035,58.240921 9.3456035,77.412746 19.123,86.723062 54.92402,89.474092 65.107702,64.173141"
        id="path2055"
        sodipodi:nodetypes="cssscssssc"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -193,7 +203,9 @@ Font Name &quot;Sacramento&quot;
        id="path2061"
        sodipodi:nodetypes="csssscsssccccc"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="1" />
+       inkstitch:ties="1"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -205,7 +217,9 @@ Font Name &quot;Sacramento&quot;
        d="M 5.3757892,70.903944 C 0.39163158,53.529576 13.29522,24.877704 50.003101,24.671134 60.635406,24.611302 68,35 69,46 68,35 60.635406,24.611302 50.003101,24.671134 -16.532178,25.045554 -4.8613586,118.87354 49.782823,69.607841 55.637049,64.329831 65.870954,56.389783 62.002716,46.529809 55.176239,29.129413 73.722167,127.15375 44.275874,112.78232 25.617108,103.6758 60.392159,77.429 67,73"
        id="path2679"
        sodipodi:nodetypes="cscssssc"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -218,7 +232,9 @@ Font Name &quot;Sacramento&quot;
        id="path2702"
        sodipodi:nodetypes="cccsssscssssccsccccccc"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="1" />
+       inkstitch:ties="1"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -231,7 +247,9 @@ Font Name &quot;Sacramento&quot;
        id="path3338"
        sodipodi:nodetypes="ccccscscc"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -244,12 +262,14 @@ Font Name &quot;Sacramento&quot;
        id="path3956"
        sodipodi:nodetypes="cccssssssscssscc"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-K"
-     style="display:none"
+     style="display:inline"
      id="g7053">
     <path
        style="fill:none;stroke:#000000;stroke-width:1.37953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.37953, 1.37953;stroke-dashoffset:0;stroke-opacity:1"
@@ -257,7 +277,9 @@ Font Name &quot;Sacramento&quot;
        id="path619"
        sodipodi:nodetypes="ccsscsccscsscc"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -270,7 +292,9 @@ Font Name &quot;Sacramento&quot;
        id="path2057"
        sodipodi:nodetypes="cscscsc"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -283,7 +307,9 @@ Font Name &quot;Sacramento&quot;
        id="path2674"
        sodipodi:nodetypes="ccccccccscc"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -297,7 +323,9 @@ Font Name &quot;Sacramento&quot;
        sodipodi:nodetypes="ccsccccc"
        inkstitch:running_stitch_length_mm="1.4"
        inkstitch:ties="3"
-       inkstitch:repeats="1" />
+       inkstitch:repeats="1"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -310,7 +338,9 @@ Font Name &quot;Sacramento&quot;
        id="path3904"
        sodipodi:nodetypes="csssscccc"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -323,14 +353,18 @@ Font Name &quot;Sacramento&quot;
        id="path4532"
        sodipodi:nodetypes="ccsscc"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1.37953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.37953, 1.37953;stroke-dashoffset:0;stroke-opacity:1"
        d="M 49.101495,61.877904 C 59.427052,69.526833 86.094645,51.346207 69.643957,29.936881 59.18184,16.321227 20.24085,23.002406 9.0186419,37.201898 -8.3989123,59.240378 25.830008,72.695469 32.943095,57.243324 25.830008,72.695469 -8.3989123,59.240378 9.0186419,37.201898 20.24085,23.002406 59.18184,16.321227 69.643957,29.936881 86.094645,51.346207 59.427052,69.526833 49.101495,61.877904"
        id="path4524"
        sodipodi:nodetypes="csscssc"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -343,7 +377,9 @@ Font Name &quot;Sacramento&quot;
        id="path5144"
        sodipodi:nodetypes="cssssccccc"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="1" />
+       inkstitch:ties="1"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -356,14 +392,18 @@ Font Name &quot;Sacramento&quot;
        id="path6370"
        sodipodi:nodetypes="ccscc"
        inkstitch:ties="3"
-       inkstitch:running_stitch_length_mm="1.4" />
+       inkstitch:running_stitch_length_mm="1.4"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1.37953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.37953, 1.37953;stroke-dashoffset:0;stroke-opacity:1"
        d="M 33.5,57 C 29.609712,63.540365 -9.2961367,54.496978 15.281588,31.565247 32.571779,16.761651 70.08892,22.651919 72.274394,32.692577 76.885179,53.875763 61.467135,56.974826 51.105637,58.746431 c -15.284037,2.613259 -9.605497,-7.153422 0,-5.511392 13.793746,2.357998 15.395086,9.496018 16.534177,17.335961 3.831503,26.370825 18.734748,5.671282 19.732856,0"
        id="path6364"
        sodipodi:nodetypes="ccsscsc"
        inkstitch:ties="0"
-       inkstitch:running_stitch_length_mm="1.4" />
+       inkstitch:running_stitch_length_mm="1.4"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -376,7 +416,9 @@ Font Name &quot;Sacramento&quot;
        id="path7596"
        sodipodi:nodetypes="ccssscssc"
        inkstitch:ties="3"
-       inkstitch:running_stitch_length_mm="1.4" />
+       inkstitch:running_stitch_length_mm="1.4"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -389,7 +431,9 @@ Font Name &quot;Sacramento&quot;
        id="path8206"
        sodipodi:nodetypes="ccsccccsccc"
        inkstitch:ties="1"
-       inkstitch:running_stitch_length_mm="1.4" />
+       inkstitch:running_stitch_length_mm="1.4"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -401,7 +445,9 @@ Font Name &quot;Sacramento&quot;
        d="M 30.437916,70.571 C 32.924823,56.219963 32.757652,57.364966 34.070425,50.604602 37.405097,33.432098 30.160486,15.173585 9.8954543,29.435845 -3.8084274,39.080455 9.1019446,58.892872 13,56 9.1019446,58.892872 -3.8084274,39.080455 9.8954543,29.435845 30.160486,15.173585 37.405097,33.432098 34.070425,50.604602 32.757652,57.364966 32.924823,56.219963 30.437916,70.571 c -2.486907,14.351037 18.606595,18.458149 27.682221,0 C 67.195763,52.112851 67.61581,47.260894 70.144993,27.181185 67.594515,46.681637 67.222304,46.834785 65.259895,70.571 63.297486,94.307215 87.100289,81.797726 85,70"
        id="path9425-79"
        sodipodi:nodetypes="csscsszzczc"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -414,7 +460,9 @@ Font Name &quot;Sacramento&quot;
        id="path9441"
        sodipodi:nodetypes="cssscssscscsc"
        inkstitch:ties="3"
-       inkstitch:running_stitch_length_mm="1.4" />
+       inkstitch:running_stitch_length_mm="1.4"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -427,7 +475,9 @@ Font Name &quot;Sacramento&quot;
        id="path10054"
        sodipodi:nodetypes="csscsssccsscc"
        inkstitch:ties="3"
-       inkstitch:running_stitch_length_mm="1.4" />
+       inkstitch:running_stitch_length_mm="1.4"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -440,7 +490,9 @@ Font Name &quot;Sacramento&quot;
        id="path10676"
        sodipodi:nodetypes="ccccsscsscc"
        inkstitch:ties="3"
-       inkstitch:running_stitch_length_mm="1.4" />
+       inkstitch:running_stitch_length_mm="1.4"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -453,7 +505,9 @@ Font Name &quot;Sacramento&quot;
        id="path11302"
        sodipodi:nodetypes="csscssscsssc"
        inkstitch:ties="2"
-       inkstitch:running_stitch_length_mm="1.4" />
+       inkstitch:running_stitch_length_mm="1.4"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -466,7 +520,9 @@ Font Name &quot;Sacramento&quot;
        id="path11925"
        sodipodi:nodetypes="ccsscssccccc"
        inkstitch:ties="3"
-       inkstitch:running_stitch_length_mm="1.4" />
+       inkstitch:running_stitch_length_mm="1.4"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -479,7 +535,9 @@ Font Name &quot;Sacramento&quot;
        id="path718"
        sodipodi:nodetypes="ccsccc"
        inkstitch:ties="2"
-       inkstitch:running_stitch_length_mm="1.4" />
+       inkstitch:running_stitch_length_mm="1.4"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -492,7 +550,9 @@ Font Name &quot;Sacramento&quot;
        id="path2151"
        sodipodi:nodetypes="cccssscscc"
        inkstitch:ties="0"
-       inkstitch:running_stitch_length_mm="1.4" />
+       inkstitch:running_stitch_length_mm="1.4"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -505,7 +565,9 @@ Font Name &quot;Sacramento&quot;
        id="path2768"
        sodipodi:nodetypes="cccccsc"
        inkstitch:ties="2"
-       inkstitch:running_stitch_length_mm="1.4" />
+       inkstitch:running_stitch_length_mm="1.4"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -518,7 +580,9 @@ Font Name &quot;Sacramento&quot;
        id="path3378"
        sodipodi:nodetypes="ccsscc"
        inkstitch:ties="2"
-       inkstitch:running_stitch_length_mm="1.4" />
+       inkstitch:running_stitch_length_mm="1.4"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -531,7 +595,9 @@ Font Name &quot;Sacramento&quot;
        id="path3989"
        sodipodi:nodetypes="ccsccc"
        inkstitch:ties="2"
-       inkstitch:running_stitch_length_mm="1.4" />
+       inkstitch:running_stitch_length_mm="1.4"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -544,7 +610,9 @@ Font Name &quot;Sacramento&quot;
        id="path4599"
        sodipodi:nodetypes="ccsscccc"
        inkstitch:ties="0"
-       inkstitch:running_stitch_length_mm="1.4" />
+       inkstitch:running_stitch_length_mm="1.4"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -557,7 +625,9 @@ Font Name &quot;Sacramento&quot;
        d="M 2.4890159,70.571 C 5.2902257,63.477676 13.015619,61.358202 17.649385,67.882251 15.940519,63.885714 6.1736641,60.632972 2.4694706,70.397425 c -1.258497,3.317466 -0.4484602,6.968603 0.5160408,9.824343 0.8069495,2.389253 6.0716685,5.519048 10.1415496,0.921048 1.362379,-1.539165 1.50481,-9.486028 1.142164,-8.905828 0.09422,5.017177 0.564355,17.840856 0.416217,23.438762 -0.11804,6.00524 0.482473,8.89415 -0.342044,17.49724 -0.436129,4.55061 -1.032863,11.59571 -6.8999811,12.61733 C 2.4833158,126.65401 2.9578827,119.00897 2.8404395,115.5654 2.6605887,110.29196 7.5224779,102.32436 11.850565,95.800447 16.904987,87.663008 23.847831,79.900647 28.583919,70.571"
        sodipodi:nodetypes="ccssccsssccc"
        inkstitch:ties="2"
-       inkstitch:running_stitch_length_mm="1.4" />
+       inkstitch:running_stitch_length_mm="1.4"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -569,7 +639,9 @@ Font Name &quot;Sacramento&quot;
        d="M 3.0547013,70.571 C 5.5777263,65.886741 14.270543,52.979505 13.463313,30.773287 13.32208,27.676986 3.5406657,16.292998 3.5072496,31.565247 L 3.3941125,83.272653 C 6.4895794,78.028017 5.7005867,74.354873 7.9195958,70.571 c 6.6566282,-11.942788 12.6040052,-5.662499 12.1056682,0 -2.277724,25.881301 9.958295,6.305057 14.820958,0"
        id="path609"
        sodipodi:nodetypes="ccsscsc"
-       inkstitch:ties="0" />
+       inkstitch:ties="0"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -583,14 +655,18 @@ Font Name &quot;Sacramento&quot;
        sodipodi:nodetypes="cc"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1.36063;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.36063, 1.36063;stroke-dashoffset:0;stroke-opacity:1"
        d="M 3.72,56.4 3.6,48.48 v 4.2 L 0.48,52.44 7.68,52.2 3.6,52.68 Z"
        id="path6791"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1.37953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.37953, 1.37953;stroke-dashoffset:0;stroke-opacity:1"
        d="m 3.6203867,63.583042 c -0.1842155,6.12987 -0.053931,13.704291 0.737345,17.017426 1.538931,6.443628 12.6135783,1.020109 16.3463543,-10.229201"
@@ -598,7 +674,9 @@ Font Name &quot;Sacramento&quot;
        sodipodi:nodetypes="csc"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="0" />
+       inkstitch:ties="0"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -611,14 +689,18 @@ Font Name &quot;Sacramento&quot;
        id="path5170"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.36063;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.36063, 1.36063;stroke-dashoffset:0;stroke-opacity:1"
        d="M 3.72,56.4 3.6,48.48 v 4.2 L 0.48,52.44 7.68,52.2 3.6,52.68 Z"
        id="path6791-1"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1.37953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.37953, 1.37953;stroke-dashoffset:0;stroke-opacity:1"
        d="M 3.9880823,63.922453 C 3.6617555,71.366842 3.6025353,78.469014 3.6203867,86.436732 3.6504887,99.87238 4.3681798,104.0332 1.8101934,115.06041 -1.2292839,128.16329 -13.509576,121.06806 -9.8429263,109.29042 -5.8560029,96.484027 3.6142745,86.923039 6.3356768,84.400265 9.1597575,81.782307 13.64128,77.96215 17.196837,70.371267"
@@ -626,7 +708,9 @@ Font Name &quot;Sacramento&quot;
        sodipodi:nodetypes="cssssc"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="0" />
+       inkstitch:ties="0"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -643,7 +727,9 @@ Font Name &quot;Sacramento&quot;
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="False"
-       sodipodi:nodetypes="ccccscc" />
+       sodipodi:nodetypes="ccccscc"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -657,7 +743,9 @@ Font Name &quot;Sacramento&quot;
        sodipodi:nodetypes="ccsc"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="0" />
+       inkstitch:ties="0"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -671,7 +759,9 @@ Font Name &quot;Sacramento&quot;
        sodipodi:nodetypes="cccsscsscc"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="0" />
+       inkstitch:ties="0"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -685,7 +775,9 @@ Font Name &quot;Sacramento&quot;
        sodipodi:nodetypes="ccsscc"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="0" />
+       inkstitch:ties="0"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -699,7 +791,9 @@ Font Name &quot;Sacramento&quot;
        sodipodi:nodetypes="cczscsc"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -713,7 +807,9 @@ Font Name &quot;Sacramento&quot;
        sodipodi:nodetypes="ccsszsccc"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="0" />
+       inkstitch:ties="0"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -727,7 +823,9 @@ Font Name &quot;Sacramento&quot;
        sodipodi:nodetypes="ccscsscc"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -741,7 +839,9 @@ Font Name &quot;Sacramento&quot;
        sodipodi:nodetypes="ccscsc"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="0" />
+       inkstitch:ties="0"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -755,7 +855,9 @@ Font Name &quot;Sacramento&quot;
        sodipodi:nodetypes="csccc"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="0" />
+       inkstitch:ties="0"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -769,7 +871,9 @@ Font Name &quot;Sacramento&quot;
        sodipodi:nodetypes="cccscccc"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="0" />
+       inkstitch:ties="0"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -783,7 +887,9 @@ Font Name &quot;Sacramento&quot;
        sodipodi:nodetypes="ccscccc"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -797,7 +903,9 @@ Font Name &quot;Sacramento&quot;
        sodipodi:nodetypes="ccsscc"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -811,7 +919,9 @@ Font Name &quot;Sacramento&quot;
        sodipodi:nodetypes="cccccsccc"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -825,7 +935,9 @@ Font Name &quot;Sacramento&quot;
        sodipodi:nodetypes="ccccccc"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="0" />
+       inkstitch:ties="0"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -839,7 +951,9 @@ Font Name &quot;Sacramento&quot;
        sodipodi:nodetypes="ccccccssc"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -853,7 +967,9 @@ Font Name &quot;Sacramento&quot;
        sodipodi:nodetypes="csssssssc"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="0" />
+       inkstitch:ties="0"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -867,7 +983,9 @@ Font Name &quot;Sacramento&quot;
        sodipodi:nodetypes="cccssssc"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -881,13 +999,17 @@ Font Name &quot;Sacramento&quot;
        sodipodi:nodetypes="cccccc"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1.37953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.37953, 1.37953;stroke-dashoffset:0;stroke-opacity:1"
        d="m 79.857143,18.695238 -8.790476,-7.8 z"
        id="path2750"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.37953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.37953, 1.37953;stroke-dashoffset:0;stroke-opacity:1"
        d="m 77.391153,23.812663 -2.238772,11.72067 2.238772,-11.72067 C 74.516993,34.390206 72.044492,62.804641 78.091526,83.344319 76.281332,76.048773 74.356892,68.753227 74.764757,61.457681 12.435849,74.99099 0.48374081,54.4637 14.007449,46.22458 0.45985476,54.495874 12.380313,74.862139 74.803971,61.554894 l 14.143327,-2.548517 c -4.687883,0.703818 -8.505573,1.573714 -14.162661,2.606516 -0.01046,2.646999 0.121301,5.524795 0.52528,8.793869"
@@ -895,7 +1017,9 @@ Font Name &quot;Sacramento&quot;
        sodipodi:nodetypes="cccccccccc"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -908,14 +1032,18 @@ Font Name &quot;Sacramento&quot;
        id="path718-1"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1.37953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.37953, 1.37953;stroke-dashoffset:0;stroke-opacity:1"
        d="M 14.805253,58.89916 6.27614,50.611437 Z"
        id="path4670"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.37953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.37953, 1.37953;stroke-dashoffset:0;stroke-opacity:1"
        d="M 18,67 C 14.908247,64.180922 10.551927,61.169347 6,66.28 1.029893,71.860162 1.5098043,74.80608 2.4,78.36 c 4.6964257,11.679445 13.786339,-1.245246 13,-7.789 0.503576,26.98008 16.177664,3.253972 16.36,0"
@@ -923,7 +1051,9 @@ Font Name &quot;Sacramento&quot;
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
        inkstitch:ties="2"
-       sodipodi:nodetypes="csccc" />
+       sodipodi:nodetypes="csccc"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -936,14 +1066,18 @@ Font Name &quot;Sacramento&quot;
        id="path718-4"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1.37953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.37953, 1.37953;stroke-dashoffset:0;stroke-opacity:1"
        d="m 8.93143,58.738234 8.20726,-7.885407 z"
        id="path6542"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.37953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.37953, 1.37953;stroke-dashoffset:0;stroke-opacity:1"
        d="M 18,67 C 14.908247,64.180922 10.551927,61.169347 6,66.28 1.029893,71.860162 1.5098043,74.80608 2.4,78.36 c 4.6964257,11.679445 13.786339,-1.245246 13,-7.789 0.503576,26.98008 16.177664,3.253972 16.36,0"
@@ -951,7 +1085,9 @@ Font Name &quot;Sacramento&quot;
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
        inkstitch:ties="2"
-       sodipodi:nodetypes="csccc" />
+       sodipodi:nodetypes="csccc"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -964,14 +1100,18 @@ Font Name &quot;Sacramento&quot;
        id="path718-7"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1.37953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.37953, 1.37953;stroke-dashoffset:0;stroke-opacity:1"
        d="M 16.736373,58.979624 11.184403,50.852827 5.9542867,58.65777 11.264867,50.93329 Z"
        id="path7176"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.37953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.37953, 1.37953;stroke-dashoffset:0;stroke-opacity:1"
        d="M 18,67 C 14.908247,64.180922 10.551927,61.169347 6,66.28 1.029893,71.860162 1.5098043,74.80608 2.4,78.36 c 4.6964257,11.679445 13.786339,-1.245246 13,-7.789 0.503576,26.98008 16.177664,3.253972 16.36,0"
@@ -979,7 +1119,9 @@ Font Name &quot;Sacramento&quot;
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
        inkstitch:ties="2"
-       sodipodi:nodetypes="csccc" />
+       sodipodi:nodetypes="csccc"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -992,7 +1134,9 @@ Font Name &quot;Sacramento&quot;
        id="path718-13"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1.24794;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.24794, 1.24794;stroke-dashoffset:0;stroke-opacity:1"
        d="m 15.69058,58.370505 v -5.723538 2.811563 l 2.811562,0.100408 -14.1582263,0.200825 2.510324,-0.100408 -0.100413,-3.112802 -0.1004131,6.225603 0.200826,-3.012389 8.8769044,-0.08046 z"
@@ -1000,7 +1144,9 @@ Font Name &quot;Sacramento&quot;
        sodipodi:nodetypes="ccccccccccc"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.37953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.37953, 1.37953;stroke-dashoffset:0;stroke-opacity:1"
        d="M 18,67 C 14.908247,64.180922 10.551927,61.169347 6,66.28 1.029893,71.860162 1.5098043,74.80608 2.4,78.36 c 4.6964257,11.679445 13.786339,-1.245246 13,-7.789 0.503576,26.98008 16.177664,3.253972 16.36,0"
@@ -1008,7 +1154,9 @@ Font Name &quot;Sacramento&quot;
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
        inkstitch:ties="2"
-       sodipodi:nodetypes="csccc" />
+       sodipodi:nodetypes="csccc"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1021,7 +1169,9 @@ Font Name &quot;Sacramento&quot;
        id="path718-8"
        sodipodi:nodetypes="ccscccssc"
        inkstitch:ties="2"
-       inkstitch:running_stitch_length_mm="1.4" />
+       inkstitch:running_stitch_length_mm="1.4"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1034,7 +1184,9 @@ Font Name &quot;Sacramento&quot;
        id="path618-5"
        sodipodi:nodetypes="ccscssscssscsccccccccc"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1047,7 +1199,9 @@ Font Name &quot;Sacramento&quot;
        id="path2768-1"
        sodipodi:nodetypes="cccccccccccc"
        inkstitch:ties="2"
-       inkstitch:running_stitch_length_mm="1.4" />
+       inkstitch:running_stitch_length_mm="1.4"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1061,7 +1215,9 @@ Font Name &quot;Sacramento&quot;
        sodipodi:nodetypes="cssscccccccssssc"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1075,7 +1231,9 @@ Font Name &quot;Sacramento&quot;
        sodipodi:nodetypes="csssccccccsssscc"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1092,7 +1250,9 @@ Font Name &quot;Sacramento&quot;
        inkstitch:ties="3"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False" />
+       inkstitch:contour_underlay="False"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.36063;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.36063, 1.36063;stroke-dashoffset:0;stroke-opacity:1"
        d="m 35.266639,16.696666 7.2,-0.24 -4.08,0.48 0.12,3.72 -0.48,-7.68 0.36,3.96 -3.12,-0.24"
@@ -1100,7 +1260,9 @@ Font Name &quot;Sacramento&quot;
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
        inkstitch:ties="3"
-       sodipodi:nodetypes="ccccccc" />
+       sodipodi:nodetypes="ccccccc"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.36063;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.36063, 1.36063;stroke-dashoffset:0;stroke-opacity:1"
        d="m 30.567619,16.634286 -4.2,0.24 0.12,3.72 -0.12,-7.92 v 4.2 l -3.12,-0.24 h 7.32"
@@ -1108,7 +1270,9 @@ Font Name &quot;Sacramento&quot;
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
        inkstitch:ties="3"
-       sodipodi:nodetypes="ccccccc" />
+       sodipodi:nodetypes="ccccccc"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1.13386;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.13386, 1.13386;stroke-dashoffset:0;stroke-opacity:1"
        d="m 28.954219,24.267 c -2.112891,0 -6.697929,0.647619 -11.353333,3.302529 -15.0854012,8.602987 4.80123,32.956918 20.248807,25.233129 4.322151,-2.161076 0.703221,-4.268119 -3.115201,-5.295842 C 24.086548,44.640937 -10.788035,58.240921 9.3456035,77.412746 19.123,86.723062 54.92402,89.474092 65.107702,64.173141 l -3.426721,6.230402"
@@ -1119,7 +1283,9 @@ Font Name &quot;Sacramento&quot;
        inkstitch:ties="3"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="False" />
+       inkstitch:contour_underlay="False"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1133,7 +1299,9 @@ Font Name &quot;Sacramento&quot;
        sodipodi:nodetypes="csssccccccccsssscc"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1146,7 +1314,9 @@ Font Name &quot;Sacramento&quot;
        id="path3989-7"
        sodipodi:nodetypes="cccccccccc"
        inkstitch:ties="2"
-       inkstitch:running_stitch_length_mm="1.4" />
+       inkstitch:running_stitch_length_mm="1.4"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1159,7 +1329,9 @@ Font Name &quot;Sacramento&quot;
        id="path3989-1"
        sodipodi:nodetypes="ccccccccccc"
        inkstitch:ties="2"
-       inkstitch:running_stitch_length_mm="1.4" />
+       inkstitch:running_stitch_length_mm="1.4"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1172,7 +1344,9 @@ Font Name &quot;Sacramento&quot;
        id="path3989-3"
        sodipodi:nodetypes="cccccccccccc"
        inkstitch:ties="2"
-       inkstitch:running_stitch_length_mm="1.4" />
+       inkstitch:running_stitch_length_mm="1.4"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1185,7 +1359,9 @@ Font Name &quot;Sacramento&quot;
        id="path3989-8"
        sodipodi:nodetypes="cccccccccccccccccccccccc"
        inkstitch:ties="2"
-       inkstitch:running_stitch_length_mm="1.4" />
+       inkstitch:running_stitch_length_mm="1.4"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1199,7 +1375,9 @@ Font Name &quot;Sacramento&quot;
        sodipodi:nodetypes="scsccccccccccc"
        inkstitch:running_stitch_length_mm="1.4"
        inkstitch:repeats="1"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1211,7 +1389,9 @@ Font Name &quot;Sacramento&quot;
        d="M 1.1020106,70.521482 C 1.0110019,64.648513 6.6562692,58.781809 19.755374,57.64068 -8.0345981,60.061605 -2.2760856,83.751557 20.630612,83.647758 41.664499,83.179032 46.23236,63.18476 46.137551,44.887214 c 0,-32.763086 12.293225,-21.237402 3.250884,-16.629524 C 30.88382,37.687438 11.592342,49.014054 36.13483,56.640408 11.592342,49.014054 30.883821,37.687439 49.388435,28.25769 c 3.556008,-1.812103 3.812366,-4.694079 2.814373,-5.531549 L 57,17 51.518049,8.9476643 46,17 51.399798,9.0264983 57,17 52.202808,22.726141 c -1.539739,-1.292078 -6.065257,2.282461 -6.065257,22.161073 0.04554,8.788196 -0.984522,17.967795 -4.397928,25.187475"
        id="path3338-2"
        sodipodi:nodetypes="cscscccccccccccc"
-       inkstitch:running_stitch_length_mm="1.4" />
+       inkstitch:running_stitch_length_mm="1.4"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1221,7 +1401,9 @@ Font Name &quot;Sacramento&quot;
     <path
        style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.37953;stroke-miterlimit:4;stroke-dasharray:1.37953, 1.37953;stroke-dashoffset:0"
        d="M 1.1020106,70.521482 C 1.0110019,64.648513 6.6562692,58.781809 19.755374,57.64068 -8.0345981,60.061605 -2.2760856,83.751557 20.630612,83.647758 41.664499,83.179032 46.23236,63.18476 46.137551,44.887214 c 0.0583,-19.030637 3.905583,-24.239301 5.868096,-22.291298"
-       id="path632" />
+       id="path632"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.36063;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.36063, 1.36063;stroke-dashoffset:0;stroke-opacity:1"
        d="m 47.506639,13.336666 7.2,-0.24 -4.08,0.48 0.12,3.72 -0.48,-7.68 0.36,3.96 -3.12,-0.24"
@@ -1229,7 +1411,9 @@ Font Name &quot;Sacramento&quot;
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
        inkstitch:ties="3"
-       sodipodi:nodetypes="ccccccc" />
+       sodipodi:nodetypes="ccccccc"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.36063;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.36063, 1.36063;stroke-dashoffset:0;stroke-opacity:1"
        d="m 42.807619,13.274286 -4.2,0.24 0.12,3.72 -0.12,-7.92 v 4.2 l -3.12,-0.24 h 7.32"
@@ -1237,11 +1421,15 @@ Font Name &quot;Sacramento&quot;
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
        inkstitch:ties="3"
-       sodipodi:nodetypes="ccccccc" />
+       sodipodi:nodetypes="ccccccc"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
     <path
        style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.37953;stroke-miterlimit:4;stroke-dasharray:1.37953, 1.37953;stroke-dashoffset:0"
        d="m 52.005647,22.595916 c 1.214183,0.610413 1.156739,3.73861 -2.617212,5.661774 C 30.883821,37.687439 11.592342,49.014054 36.13483,56.640408 11.681827,49.139333 31.081419,37.472976 49.388435,28.25769 c 8.307444,-4.181756 -2.764553,-17.560355 -3.250884,16.629524 0.04554,8.788196 -0.984522,17.967795 -4.397928,25.187475"
-       id="path7499" />
+       id="path7499"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1255,7 +1443,9 @@ Font Name &quot;Sacramento&quot;
        sodipodi:nodetypes="cc"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.36063;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.36063, 1.36063;stroke-dashoffset:0;stroke-opacity:1"
        d="m 7.287619,53.474286 -4.2,0.24 0.12,3.72 -0.12,-7.92 v 4.2 l -3.12,-0.24 h 7.32"
@@ -1263,7 +1453,9 @@ Font Name &quot;Sacramento&quot;
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
        inkstitch:ties="3"
-       sodipodi:nodetypes="ccccccc" />
+       sodipodi:nodetypes="ccccccc"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.36063;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.36063, 1.36063;stroke-dashoffset:0;stroke-opacity:1"
        d="m 11.986639,53.536666 7.2,-0.24 -4.08,0.48 0.12,3.72 -0.48,-7.68 0.36,3.96 -3.12,-0.24"
@@ -1271,7 +1463,9 @@ Font Name &quot;Sacramento&quot;
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
        inkstitch:ties="3"
-       sodipodi:nodetypes="ccccccc" />
+       sodipodi:nodetypes="ccccccc"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.37953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.37953, 1.37953;stroke-dashoffset:0;stroke-opacity:1"
        d="m 3.6203867,63.583042 c -0.1842155,6.12987 -0.053931,13.704291 0.737345,17.017426 1.538931,6.443628 12.6135783,1.020109 16.3463543,-10.229201"
@@ -1279,7 +1473,9 @@ Font Name &quot;Sacramento&quot;
        sodipodi:nodetypes="csc"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1293,7 +1489,9 @@ Font Name &quot;Sacramento&quot;
        sodipodi:nodetypes="ccccccccsc"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1306,14 +1504,18 @@ Font Name &quot;Sacramento&quot;
        id="path9425-7"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1.37953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.37953, 1.37953;stroke-dashoffset:0;stroke-opacity:1"
        d="M 56,22 45.790888,12.348105 56,22"
        id="path1621"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.37953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.37953, 1.37953;stroke-dashoffset:0;stroke-opacity:1"
        d="M 70.144993,27.181185 C 67.594515,46.681637 67.222304,46.834785 65.259895,70.571 63.297486,94.307215 86.744239,79.797726 85,70"
@@ -1321,7 +1523,9 @@ Font Name &quot;Sacramento&quot;
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
        inkstitch:ties="2"
-       sodipodi:nodetypes="csc" />
+       sodipodi:nodetypes="csc"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1334,14 +1538,18 @@ Font Name &quot;Sacramento&quot;
        id="path9425-7-9"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1.37953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.37953, 1.37953;stroke-dashoffset:0;stroke-opacity:1"
        d="M 58,23 52.222193,13.977369 47,23 52.050691,13.891618 Z"
        id="path2842"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.37953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.37953, 1.37953;stroke-dashoffset:0;stroke-opacity:1"
        d="M 70.144993,27.181185 C 67.594515,46.681637 67.222304,46.834785 65.259895,70.571 63.297486,94.307215 86.744239,79.797726 85,70"
@@ -1349,7 +1557,9 @@ Font Name &quot;Sacramento&quot;
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
        inkstitch:ties="2"
-       sodipodi:nodetypes="csc" />
+       sodipodi:nodetypes="csc"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1362,14 +1572,18 @@ Font Name &quot;Sacramento&quot;
        id="path14697-2"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1.37953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.37953, 1.37953;stroke-dashoffset:0;stroke-opacity:1"
        d="m 15,57 -9,-8 9,8"
        id="path3522"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.37953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.37953, 1.37953;stroke-dashoffset:0;stroke-opacity:1"
        d="M 16.380952,63.752747 15.047619,76 c 4.994865,16.935252 14.096646,0.444577 16.857143,-5.429"
@@ -1377,7 +1591,9 @@ Font Name &quot;Sacramento&quot;
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
        inkstitch:ties="2"
-       sodipodi:nodetypes="ccc" />
+       sodipodi:nodetypes="ccc"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1391,7 +1607,9 @@ Font Name &quot;Sacramento&quot;
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
        inkstitch:ties="3"
-       sodipodi:nodetypes="ccscc" />
+       sodipodi:nodetypes="ccscc"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1.37953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.37953, 1.37953;stroke-dashoffset:0;stroke-opacity:1"
        d="m 16.070084,58.797782 0.21236,-6.278986 -0.12,3.11185 c 0.64663,0 3.633768,0 1.939493,0 h -3.971343 l -4.1563274,-0.06849 -5.1805016,0.280849 3.1489201,-0.12 -0.092357,-3.444207 0.092357,6.583699 -0.092357,-3.324206 2.1239385,0.02387 6.0958174,0.06849 z"
@@ -1399,7 +1617,9 @@ Font Name &quot;Sacramento&quot;
        sodipodi:nodetypes="cccccccccccccc"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.37953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.37953, 1.37953;stroke-dashoffset:0;stroke-opacity:1"
        d="M 16.380952,63.752747 15.047619,76 c 4.994865,16.935252 14.096646,0.444577 16.857143,-5.429"
@@ -1407,7 +1627,9 @@ Font Name &quot;Sacramento&quot;
        sodipodi:nodetypes="ccc"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1421,7 +1643,9 @@ Font Name &quot;Sacramento&quot;
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
        inkstitch:ties="3"
-       sodipodi:nodetypes="ccscc" />
+       sodipodi:nodetypes="ccscc"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.37953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.37953, 1.37953;stroke-dashoffset:0;stroke-opacity:1"
        d="M 15.977727,56.554214 12.283455,50.089238 6.7420467,56.461857 12.283455,50.089238 Z"
@@ -1429,7 +1653,9 @@ Font Name &quot;Sacramento&quot;
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
        inkstitch:ties="3"
-       sodipodi:nodetypes="ccccc" />
+       sodipodi:nodetypes="ccccc"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.37953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.37953, 1.37953;stroke-dashoffset:0;stroke-opacity:1"
        d="M 16.47619,63.752747 15.142857,76 C 20.137722,92.935252 29.239503,76.444577 32,70.571"
@@ -1437,7 +1663,9 @@ Font Name &quot;Sacramento&quot;
        sodipodi:nodetypes="ccc"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1451,7 +1679,9 @@ Font Name &quot;Sacramento&quot;
        sodipodi:nodetypes="cssssc"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1464,7 +1694,9 @@ Font Name &quot;Sacramento&quot;
        id="path24458"
        sodipodi:nodetypes="ccsscssc"
        inkstitch:ties="3"
-       inkstitch:running_stitch_length_mm="1.4" />
+       inkstitch:running_stitch_length_mm="1.4"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1477,7 +1709,9 @@ Font Name &quot;Sacramento&quot;
        id="path25111"
        sodipodi:nodetypes="csscsssssc"
        inkstitch:ties="2"
-       inkstitch:running_stitch_length_mm="1.4" />
+       inkstitch:running_stitch_length_mm="1.4"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1491,7 +1725,9 @@ Font Name &quot;Sacramento&quot;
        sodipodi:nodetypes="ccssssscssssc"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1505,7 +1741,9 @@ Font Name &quot;Sacramento&quot;
        sodipodi:nodetypes="cccccccssc"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="1" />
+       inkstitch:ties="1"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1519,7 +1757,9 @@ Font Name &quot;Sacramento&quot;
        sodipodi:nodetypes="cscccssscccccsc"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1533,7 +1773,9 @@ Font Name &quot;Sacramento&quot;
        sodipodi:nodetypes="cscsssscsc"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1547,7 +1789,9 @@ Font Name &quot;Sacramento&quot;
        sodipodi:nodetypes="ccccccccccc"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1561,7 +1805,9 @@ Font Name &quot;Sacramento&quot;
        sodipodi:nodetypes="ccscccc"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1575,7 +1821,9 @@ Font Name &quot;Sacramento&quot;
        sodipodi:nodetypes="cssscsssscc"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1589,7 +1837,9 @@ Font Name &quot;Sacramento&quot;
        sodipodi:nodetypes="cccccccccccccc"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1602,7 +1852,9 @@ Font Name &quot;Sacramento&quot;
        id="path2127"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1616,7 +1868,9 @@ Font Name &quot;Sacramento&quot;
        sodipodi:nodetypes="ccccccccc"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1629,7 +1883,9 @@ Font Name &quot;Sacramento&quot;
        id="path3436"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1642,7 +1898,9 @@ Font Name &quot;Sacramento&quot;
        id="path3436-9"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1656,7 +1914,9 @@ Font Name &quot;Sacramento&quot;
        sodipodi:nodetypes="cscsscccssscsssccc"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1670,7 +1930,9 @@ Font Name &quot;Sacramento&quot;
        sodipodi:nodetypes="cccc"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1684,7 +1946,9 @@ Font Name &quot;Sacramento&quot;
        sodipodi:nodetypes="ccc"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="0" />
+       inkstitch:ties="0"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1698,7 +1962,9 @@ Font Name &quot;Sacramento&quot;
        sodipodi:nodetypes="ccc"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="0" />
+       inkstitch:ties="0"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1712,7 +1978,9 @@ Font Name &quot;Sacramento&quot;
        sodipodi:nodetypes="ccc"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="0" />
+       inkstitch:ties="0"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1723,7 +1991,9 @@ Font Name &quot;Sacramento&quot;
        style="fill:none;stroke:#000000;stroke-width:1.75748;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.75748, 1.75748;stroke-dashoffset:0;stroke-opacity:1"
        d="M 4.1494751,69.945764 C 4.6914314,67.106085 6.3284209,64.42379 8.5992828,62.600478 12.575286,59.408081 23,60 23,60 20.99647,60.464665 10.911969,57.704246 12,49 13,41 29.18804,38.134967 31.799044,44.599283 36,55 26,54 24,50 26,54 36,55 31.799044,44.599283 29.18804,38.134967 13,41 12,49 10.911969,57.704246 20.99647,60.464665 23,60 23,60 12.575286,59.408081 8.5992828,62.600478 6.3284209,64.42379 4.6914314,67.106085 4.1494751,69.945764 3.5803176,72.927968 4.2188731,76.08375 6.5992828,78.600478 10.377521,82.595082 20.612199,82.829982 26.994023,79.701554 34.580966,75.982366 35,70.571 35,65 l 17,-1 -27,1 h 10 c -0.128657,2.142647 0.711164,3.383009 -1,7"
        id="path6089"
-       sodipodi:nodetypes="cscsscccsscscssccc" />
+       sodipodi:nodetypes="cscsscccsscscssccc"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1737,7 +2007,9 @@ Font Name &quot;Sacramento&quot;
        sodipodi:nodetypes="cccc"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1751,7 +2023,9 @@ Font Name &quot;Sacramento&quot;
        sodipodi:nodetypes="cccc"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1764,7 +2038,9 @@ Font Name &quot;Sacramento&quot;
        id="path7433"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1778,7 +2054,9 @@ Font Name &quot;Sacramento&quot;
        sodipodi:nodetypes="cscssscsc"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1.37953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.37953, 1.37953;stroke-dashoffset:0;stroke-opacity:1"
        d="M 42,68 C 53,63.564665 53,54 43,52 32.736381,49.947276 22.110273,52.897659 12,47 0,40 9.2727878,30.4103 11.09749,28.901315 c 6.630569,-5.483321 16.844178,-7.041253 26,-7 C 59,22 59,34 58,37 59,34 59,22 37.09749,21.901315 c -9.155822,-0.04125 -19.369431,1.516679 -26,7 C 9.2727878,30.4103 0,40 12,47 c 10.110273,5.897659 20.736381,2.947276 31,5 10,2 10,11.564665 -1,16"
@@ -1786,7 +2064,9 @@ Font Name &quot;Sacramento&quot;
        sodipodi:nodetypes="csssscssssc"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1800,7 +2080,9 @@ Font Name &quot;Sacramento&quot;
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
        inkstitch:ties="3"
-       sodipodi:nodetypes="cccccccc" />
+       sodipodi:nodetypes="cccccccc"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1814,7 +2096,9 @@ Font Name &quot;Sacramento&quot;
        sodipodi:nodetypes="ccc"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1828,7 +2112,9 @@ Font Name &quot;Sacramento&quot;
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
        inkstitch:ties="3"
-       sodipodi:nodetypes="cccccccc" />
+       sodipodi:nodetypes="cccccccc"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.37953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.37953, 1.37953;stroke-dashoffset:0;stroke-opacity:1"
        d="M 9.2129577,73.101135 9,82 V 78 H 4 9 14 9 Z"
@@ -1836,7 +2122,9 @@ Font Name &quot;Sacramento&quot;
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
        inkstitch:ties="3"
-       sodipodi:nodetypes="cccccccc" />
+       sodipodi:nodetypes="cccccccc"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1850,7 +2138,9 @@ Font Name &quot;Sacramento&quot;
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
        inkstitch:ties="3"
-       sodipodi:nodetypes="cccccccc" />
+       sodipodi:nodetypes="cccccccc"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1.37953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.37953, 1.37953;stroke-dashoffset:0;stroke-opacity:1"
        d="M 9,80 C 9.4058825,84.665439 8.6991247,89.052718 4.1828571,92.487619 8.6991247,89.052718 9.4058825,84.665439 9,80"
@@ -1858,7 +2148,9 @@ Font Name &quot;Sacramento&quot;
        sodipodi:nodetypes="ccc"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1872,7 +2164,9 @@ Font Name &quot;Sacramento&quot;
        sodipodi:nodetypes="ccc"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.37953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.37953, 1.37953;stroke-dashoffset:0;stroke-opacity:1"
        d="M 10,76 10.224762,84.945811 10,80 h -4 4 5 -5 z"
@@ -1880,7 +2174,9 @@ Font Name &quot;Sacramento&quot;
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
        inkstitch:ties="3"
-       sodipodi:nodetypes="cccccccc" />
+       sodipodi:nodetypes="cccccccc"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1895,7 +2191,9 @@ Font Name &quot;Sacramento&quot;
        inkscape:label="path8843"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1.37953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.37953, 1.37953;stroke-dashoffset:0;stroke-opacity:1"
        d="M 27,75 26.84,84.71343 27,80 h -4 4 4 -4 z"
@@ -1903,7 +2201,9 @@ Font Name &quot;Sacramento&quot;
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
        inkstitch:ties="3"
-       sodipodi:nodetypes="cccccccc" />
+       sodipodi:nodetypes="cccccccc"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1917,7 +2217,9 @@ Font Name &quot;Sacramento&quot;
        sodipodi:nodetypes="ccccc"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.75748;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.75748, 1.75748;stroke-dashoffset:0;stroke-opacity:1"
        d="M 7.7159822,74.246212 20.274199,61.433437 7.7159822,74.246212 20.816982,84 Z"
@@ -1925,7 +2227,9 @@ Font Name &quot;Sacramento&quot;
        sodipodi:nodetypes="ccccc"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1939,7 +2243,9 @@ Font Name &quot;Sacramento&quot;
        sodipodi:nodetypes="ccccc"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1.75748;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.75748, 1.75748;stroke-dashoffset:0;stroke-opacity:1"
        d="M 31.601,74.246212 19.042783,61.433437 31.601,74.246212 18.5,84 Z"
@@ -1947,7 +2253,9 @@ Font Name &quot;Sacramento&quot;
        sodipodi:nodetypes="ccccc"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1961,25 +2269,33 @@ Font Name &quot;Sacramento&quot;
        sodipodi:nodetypes="cccc"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="3" />
+       inkstitch:ties="3"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Ä"
-     style="display:inline"
+     style="display:none"
      id="g2">
     <path
        style="fill:none;stroke:#000000;stroke-width:1.37953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.37953, 1.37953;stroke-dashoffset:0;stroke-opacity:1"
        d="M 41.321974,72.84721 C 21.232916,88.113839 8.1394942,85.339092 -3.1516759,77.916433 13.680515,89.091763 27.904299,83.126139 41.497066,73.013826 61.787622,55.099645 66.231346,40.066707 77.391153,23.812663"
-       id="path2" />
+       id="path2"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.37953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.37953, 1.37953;stroke-dashoffset:0;stroke-opacity:1"
        d="m 75.190373,23.610237 -7.393843,-7.925042 8.514076,-0.315336 -0.03767,3.283855 0.03767,-3.283855 3.006191,0.07883 H 76.31061 l -0.24,-3.599192 0.31883,3.441524 -2.680358,0.236502 h -3.074527 -2.680357 l -0.236502,3.482693 0.07883,-3.325021 -0.04538,-3.695671 0.203047,3.695671 -3.674528,-0.07883 3.753362,-0.07883 7.002748,8.211612"
-       id="path13" />
+       id="path13"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1.37953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.37953, 1.37953;stroke-dashoffset:0;stroke-opacity:1"
        d="M 77.391153,23.812663 C 74.516993,34.390206 72.044492,62.804641 78.091526,83.344319 76.281332,76.048773 74.356892,68.753227 74.764757,61.457681 12.435849,74.99099 0.48374081,54.4637 14.007449,46.22458 0.45985476,54.495874 12.380313,74.862139 74.803971,61.554894 l 14.143327,-2.548517 c -4.687883,0.703818 -8.505573,1.573714 -14.162661,2.606516 -0.01046,2.646999 0.121301,5.524795 0.52528,8.793869"
-       id="path17" />
+       id="path17"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1989,15 +2305,21 @@ Font Name &quot;Sacramento&quot;
     <path
        style="fill:none;stroke:#000000;stroke-width:1.37953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.37953, 1.37953;stroke-dashoffset:0;stroke-opacity:1"
        d="M 6.6387225,70.571 C -3.9538979,46.396637 13.245564,32.984046 21.669792,28.684292 1.6166439,39.327087 -1.5285847,59.551928 9.2691597,74.278537 13.75504,80.396649 22.208799,83.188459 29.181197,83.898948 37.13651,84.709596 48.488865,77.632695 52.107708,72.199366 69.740078,45.726139 52.011319,20.708679 36.564197,24.490712"
-       id="path3" />
+       id="path3"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.37953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.37953, 1.37953;stroke-dashoffset:0;stroke-opacity:1"
        d="m 36.923522,24.096681 -7.393844,-7.925042 8.514077,-0.315336 -0.03767,3.283855 0.03767,-3.283855 3.006191,0.07883 h -3.006187 l -0.24,-3.599192 0.31883,3.441524 -2.680358,0.236502 h -3.074528 -2.680357 l -0.236502,3.482693 0.07883,-3.325021 -0.04538,-3.695671 0.203047,3.695671 -3.674528,-0.07883 3.753362,-0.07883 7.002749,8.211612"
-       id="path12" />
+       id="path12"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1.37953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.37953, 1.37953;stroke-dashoffset:0;stroke-opacity:1"
        d="M 36.564197,24.490712 C 32.564763,25.469922 28.71828,28.379707 25.678078,33.694648 15.966707,50.672257 54.360059,69.454409 67,44 c -1.93726,3.120099 -3.23533,6.052311 -7.752533,9.17241 -1.238365,7.777847 -2.756291,11.760065 -6.012428,17.39859"
-       id="path16" />
+       id="path16"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -2007,16 +2329,22 @@ Font Name &quot;Sacramento&quot;
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.37953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.37953, 1.37953;stroke-dashoffset:0;stroke-opacity:1"
        d="M 30.437916,70.571 C 32.924823,56.219963 32.757652,57.364966 34.070425,50.604602 37.405097,33.432098 30.160486,15.173585 9.8954543,29.435845 -3.8084274,39.080455 9.1019446,58.892872 13,56 9.1019446,58.892872 -3.8084274,39.080455 9.8954543,29.435845 30.160486,15.173585 37.405097,33.432098 34.070425,50.604602 32.757652,57.364966 32.924823,56.219963 30.437916,70.571 c -2.486907,14.351037 18.606595,18.458149 27.682221,0 9.075626,-18.458149 9.495673,-23.310106 12.024856,-43.389815"
-       id="path4" />
+       id="path4"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.37953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.37953, 1.37953;stroke-dashoffset:0;stroke-opacity:1"
        d="m 69.677352,27.826077 -19.392771,-12.789472 8.514076,-0.315336 -0.03767,3.283855 0.03767,-3.283855 3.006191,0.07883 h -3.006187 l -0.24,-3.599192 0.31883,3.441524 -2.680358,0.236502 h -3.074527 -2.680357 l -0.236502,3.482693 0.07883,-3.325021 -0.04538,-3.695671 0.203047,3.695671 -3.674528,-0.07883 3.753362,-0.07883 19.001676,13.076042"
        id="path10"
-       sodipodi:nodetypes="ccccccccccccccccccc" />
+       sodipodi:nodetypes="ccccccccccccccccccc"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.37953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.37953, 1.37953;stroke-dashoffset:0;stroke-opacity:1"
        d="M 70.144993,27.181185 C 67.594515,46.681637 67.222304,46.834785 65.259895,70.571 63.297486,94.307215 87.100289,81.797726 85,70"
-       id="path14" />
+       id="path14"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -2030,6 +2358,8 @@ Font Name &quot;Sacramento&quot;
        sodipodi:nodetypes="csccccccccccccccccccccszcc"
        inkstitch:repeats="1"
        inkstitch:running_stitch_length_mm="1.4"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
   </g>
 </svg>
