@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-04-07 01:10+0000\n"
-"PO-Revision-Date: 2024-04-07 01:11\n"
+"PO-Revision-Date: 2024-04-10 01:07\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -130,7 +130,7 @@ msgstr "Auberge small"
 #. description of font in fonts/auberge_small
 #: inkstitch-fonts-metadata.py:40
 msgid "This font is an altered version  of Auberge Marif, to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) are mandatory. The altered embroidery parameters of this font allow to scale down the original Grand Hotel font between 25% (for a 9mm font ) and 55 % (for a 20 mm font). "
-msgstr ""
+msgstr "Cette police est une version modifiée d'Auberge Marif pour permettre une réduction plus forte de la taille. L'usage de fil fin (60) et d'une aiguille fine (60) est obligatoire. Le paramétrage modifié de cette  police permet de réduire la police Grand Hotel Marif originelle entre 25% (pour une police de 9 mm) et 55% (pour une police de 20 mm). "
 
 #. name of font in fonts/aventurina
 #: inkstitch-fonts-metadata.py:42
@@ -306,7 +306,7 @@ msgstr "Espresso tiny"
 #. description of font in fonts/espresso_tiny
 #: inkstitch-fonts-metadata.py:108
 msgid "This font is an altered version  of Espresso KOR, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory. The altered embroidery parameters of this font allow to scale down the original Espresso font between 25% (for a 5mm font ) and 55 % (for a 11mm font)."
-msgstr ""
+msgstr "Cette police est une version modifiée de Espresso KOR pour permettre une réduction plus forte de la taille. L'usage de fil fin (60) et d'une aiguille fine (60) est obligatoire. Le paramétrage modifié de cette  police permet de réduire la police Espresso KOR originelle entre 25% (pour une police de 5 mm) et 55% (pour une police de 11 mm)."
 
 #. name of font in fonts/excalibur_KOR
 #: inkstitch-fonts-metadata.py:110
@@ -326,7 +326,7 @@ msgstr "Fold Ink/Stitch"
 #. description of font in fonts/fold_inkstitch
 #: inkstitch-fonts-metadata.py:116
 msgid "Fold Ink/Stitch is a large triple and quintuple running stitches capital font of size 100 mm. It contains 40 glyphs including all numbers and the 26 capitals  A-Z. It can be reduced down to 80% and enlarged as much as you like"
-msgstr ""
+msgstr "Fold Ink/Stitch est une grande police de majuscules au point droit triple ou quintuple de 100 mm. Il y a 40 glyphes dont les chiffres et les 26 majuscules A-Z. Peut être réduite jusqu'à 80% et agrandie autant que vous le souhaitez."
 
 #. name of font in fonts/geneva_rounded
 #: inkstitch-fonts-metadata.py:118
@@ -356,7 +356,7 @@ msgstr "Glacial Tiny 60 AGS"
 #. description of font in fonts/glacial_tiny
 #: inkstitch-fonts-metadata.py:128
 msgid "Glacial is a very tiny font: at 100%,  M stands at 5.6mm. Thin thread (60 wt ) and thin needle (8/60) are mandatory. The glyphs cover many European languages. It can be reduced down to 40% and enlarged up to 150%."
-msgstr ""
+msgstr "Glacial est une toute toute petite police, le M majuscule mesure 5.6 mm de haut. Du fil fin (60 wt) et une aiguille fine (8/60) sont obligatoires. Les glyphes couvrent de nombreux langages européens. Elle peut être réduite jusqu'à 40% et élargie jusqu'à 150%."
 
 #. name of font in fonts/infinipicto
 #: inkstitch-fonts-metadata.py:130
