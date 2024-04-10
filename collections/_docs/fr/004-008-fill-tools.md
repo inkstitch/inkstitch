@@ -59,67 +59,67 @@ Convertir en blocs de dégradé va découper un remplissage dont la couleur de f
 ## Tartan
 
 {% include upcoming_release.html %}
+L'éditeur de bandes du tartan se trouve dans   `Extensions > Ink/Stitch > Outils: remplissage > Tartan`
+### Personnaliser
 
-The Stripe Editor can be found in `Extensions > Ink/Stitch > Tools: Fill > Tartan`
+#### Positionnement
 
-### Customize
+Le motif dans son ensemble peut être tourné, mis à l'échelle (%) et translaté (mm).
 
-#### Positioning
+#### Paramètrage du motif
 
-The pattern can be rotated, scaled (%) and translated (mm) as a whole
+* Symmetrie:  Les motifs peuvent être soit réfléchis soit répétés.
+  * Un motif réfléchi verra l'ordre de ses bandes inversé d'une fois sur l'autre (sans répétion des bandes pivots). Ceci signifie qu'un motif à trois couleurs (vert, noir, jaune) sera rendu de la manière suivante :
+    vert, noir, jaune, noir, vert, noir, jaune,....
+  * Un motif répété repète simplement toujours le même motif : vert, noir, jaune, vert, noir, jaune, vert, noir, jaune,...
 
-#### Pattern Settings
+* Même nombre de fils pour la chaine et la trame
+  *  si désactivé, vous pouvez définir deux motifs différents, l'un pour la chaîne, l'autre pour la trame
+  *  si activé, chaîne et trame suivent le même motif
+ 
+    
+#### Bandes
 
-* Symmetry: Patterns can be reflected or repeated.
-  * A reflected pattern will reverse the stripes every second time (without repeated the pivot point). This means a pattern with three colors (green, black, yellow) will be rendered as follows:
-  green, black, yellow, black, green, black, yellow, ...
-  * A repeating sett will simply repeat the whole pattern over and over again: green black yellow, green, black, yellow, green, ...
+* Ajouter des couleurs avec le bouton "Ajouter"
+* Supprimer des couleurs en cliquant sur le  X à droite de la couleur
+* Modifier l'ordre des bandes en glissant deposant  `⁝` (à utiliser avec beaucoup de précautions)
+* Autoriser ou non le rendu d'une bande avec la case à cocher (☑)
+* Lorsque "Même nombre de fils pour la chaîne et la trame" est désactivé : la chaîne définit les lignes verticales, la trame définit les lignes horizontales
+* Cliquez sur le champ coloré pour sélectionner une autre couleur
+* Lorsque vous souhaitez modifier une couleur dans plusieurs bandes à la fois, activez « Lier les couleurs » et les couleurs identiques seront mises à jour simultanément.
+  
+### Code de Palette 
+Ce code de palette est ce que Ink/Stitch sauvegarde dans le svg, mais peut aussi être édité directement.
 
-* Equal threadcount for warp and weft
-  * if disabled you can define different color setts for warp and weft
-  * if enabled warp and weft are the same
+Un code de palette peut ressembler à ceci : `(#000000)/5.0 (#FFFFFF)/5.0`.
 
-#### Stripes
+* Les bandes sont séparées par des espaces
+* Chaque couleur est entourée par des parenthèses `(#000000)`
+* Une barre oblique (`/`) indique un motif symétrique/réfléchi, alors que trois points au début et à la fin du code (`...`) représentent un motif asymétrique/répété `...(#000000)5.0 (# FFFFFF)5.0...`.
+* Un pipe (`|`) est un séparateur pour la chaîne et la trame et ne doit être utilisé que s'ils ne suivent pas le même motif.
+* Une bande desactivé se traduit par un '?'
 
-* Add colors with the `Add` button
-* Remove colors by clicking on `X` behind a stripe
-* Alter stripe positions by click and drag `⁝` (use with care)
-* Enable, disable stripe rendering with the checkbox (☑)
-* When equal threadcount is disabled: warp defines the vertical lines, weft defines the horizontal lines
-* Click on the colored field to select an other color
-* When you want to change a color in multiple stripes at once, enable `Link colors` and equal colors will update simultanously
-
-### Palette Code
-
-The Ink/Stitch code is what will be saved into the svg, but can also be edited directly.
-
-A palette code looks for example like this: `(#000000)/5.0 (#FFFFFF)/?5.0`.
-
-* Stripes are separated by spaces
-* Each color is encapsulated in round brackets `(#000000)`
-* A slash (`/`) indicates a symmetrical/reflective order, whereas three points at the start and end of the code (`...`) represent a asymmetrical/repeating sett `...(#000000)5.0 (#FFFFFF)?5.0...`.
-* A pipe (`|`) is a separator for warp and weft and should only be used if they differ in threadcount
-
-**Info**: The [Scottish Register of Tartans](https://www.tartanregister.gov.uk/) has a huge collection of registered tartan patterns. Ink/Stitch is capable to use their code which they send out per mail and convert it into the Ink/Stitch color code. Please respect their particular license regulations. Make sure to define the width of one tartan thread before you click on `Apply Code`.<br><br>Here's an example code you can try out: `...B24 W4 B24 R2 K24 G24 W2...` ([source](https://www.tartanregister.gov.uk/threadcount))
+**Info**:Le [Scottish Register of Tartans](https://www.tartanregister.gov.uk/) possède une vaste collection de motifs de tartan enregistrés. Ink/Stitch est capable d'utiliser leur code qu'ils envoient par courrier et de le convertir en code couleur Ink/Stitch. Veuillez respecter leurs réglementations particulières en matière de licence. Assurez-vous de définir la largeur d'un fil tartan avant de cliquer sur `Appliquer le code`.<br><br>Voici un exemple de code que vous pouvez essayer : `...B24 W4 B24 R2 K24 G24 W2...` ( [source](https://www.tartanregister.gov.uk/threadcount)) 
 {: .notice--info}
 
-### Embroidery Settings
+### Paramètres de broderie
 
-In the embroidery settings you can decide if you want to render the tartan as a single embroidery element or if you want to receive multiple svg elements which you can edit and transform afterwards to your liking.
+Dans les paramètres de broderie, vous pouvez décider si vous souhaitez rendre le tartan comme un seul élément de broderie ou si vous souhaitez recevoir plusieurs éléments svg que vous pourrez ensuite modifier et transformer à votre guise.
 
-#### Embroidery Element
+####  Elément de broderie
 
-Rendering a tartan as a embroidery element will result in a uniform look with optimal stitch placement. You can set various parameters which can also be refined in the params dialog.
+Le rendu d'un tartan comme élément de broderie se traduira par un aspect uniforme avec un placement de point optimal. Vous pouvez définir divers paramètres qui peuvent également être affinés dans la boîte de dialogue des paramètres.
 
-Please refer to the params listed on the [tartan fill page](/docs/stitches/tartan-fill/).
+Veuillez vous référer aux paramètres répertoriés sur la [page de remplissage tartan](/fr/docs/stitches/tartan-fill/).
 
-The only param that will only show up here is the `Minimum stripe width for fills`. Stripes smaller than this value will be rendered a running stitch/bean stitch on top of the fill stripes.
+Le seul paramètre qui n'apparaîtra qu'ici est la « Largeur minimale de bande pour les remplissages ». Les bandes plus étroites que cette valeur seront rendues en point droit/point multiple au-dessus des rayures de remplissage.
 
-#### SVG Elements
+#### Éléments SVG
 
-* Define a stitch type (Legacy Fill or AutoFill) and choose your prefered stitch settings. Stripes smaller than the `Minimum stripe width for fills` value will turn into strokes (running stitches). Elements can be edited on canvas after clicking on `Apply`.
+* Définissez un type de point (Legacy Fill ou Remplissage automatique) et choisissez vos paramètres de point préférés. Les bandes plus étroites que la valeur « Largeur de bande minimale pour les remplissages » se transformeront en traits (points droits ou multiples). Les éléments peuvent être modifiés sur le canevas après avoir cliqué sur « Appliquer ».
 
-**Info**: For AutoFill the final routing will be better than shown in the simulator. Hit `Apply` can run the stitch plan to see the final result.
+**Info** : Pour Remplissage automatique, le routage final sera meilleur que celui affiché dans le simulateur. Appuyez sur « Appliquer » pour exécuter le plan de points pour voir le résultat final.
+
 {: .notice--info}
 
 
