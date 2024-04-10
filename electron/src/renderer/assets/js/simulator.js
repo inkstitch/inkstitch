@@ -95,32 +95,21 @@ export default {
         }
 
         setImmediate(()=> {
-          for (let i = 1; i < this.stitches.length; i++) {
-            if (i < this.currentStitch) {
-              this.realisticPaths[i].show()
-            } else {
-              this.realisticPaths[i].hide()
-            }
-          }
+          this.renderedStitch = 0
+          this.renderFrame()
 
           this.simulation.hide()
           this.realisticPreview.show()
         })
 
       } else {
-
-        for (let i = 1; i < this.stitches.length; i++) {
-          if (i < this.currentStitch) {
-            this.stitchPaths[i].show()
-          } else {
-            this.stitchPaths[i].hide()
-          }
-        }
+        this.renderedStitch = 0
+        this.renderFrame()
 
         this.simulation.show()
         this.realisticPreview.hide()
-
       }
+
       if (animating) {
         this.start()
       }
