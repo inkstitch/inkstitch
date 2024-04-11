@@ -7,7 +7,7 @@
         <object-type>all</object-type>
         <effects-menu>
             <submenu name="{{ menu_inkstitch }}" translatable="no">
-                <submenu name="Tools: Clone" />
+                <submenu name="Edit" />
             </submenu>
         </effects-menu>
     </effect>

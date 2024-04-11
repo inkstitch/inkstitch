@@ -360,10 +360,24 @@ class CloneElementTest(TestCase):
         u1 = root.add(Use())
         u1.set('transform', Transform().add_rotate(60))
         u1.href = rect
+
+        clone = Clone(u1)
+        with clone.clone_elements() as elements:
+            self.assertEqual(len(elements), 1)
+            # Angle goes from 30 -> -30
+            self.assertAngleAlmostEqual(element_fill_angle(elements[0]), -30)
+
         g = root.add(Group())
         g.set('transform', Transform().add_rotate(-10))
         u2 = g.add(Use())
         u2.href = u1
+
+        clone = Clone(u2)
+        with clone.clone_elements() as elements:
+            self.assertEqual(len(elements), 1)
+            # Angle goes from -30 -> -20 (u1 -> g)
+            self.assertAngleAlmostEqual(element_fill_angle(elements[0]), -20)
+
         u3 = root.add(Use())
         u3.set('transform', Transform().add_rotate(7))
         u3.href = g
@@ -371,8 +385,18 @@ class CloneElementTest(TestCase):
         clone = Clone(u3)
         with clone.clone_elements() as elements:
             self.assertEqual(len(elements), 1)
-            # Angle goes from 30 -> -30 (u1) -> -37 (u3)
-            # (The relative angle change for g -> u2 doesn't actually matter)
+            # Angle goes from -20 -> -27
+            self.assertAngleAlmostEqual(element_fill_angle(elements[0]), -27)
+
+        # Cloning u2 directly, the relative transform of g does not apply
+        u4 = root.add(Use())
+        u4.set('transform', Transform().add_rotate(7))
+        u4.href = u2
+
+        clone = Clone(u4)
+        with clone.clone_elements() as elements:
+            self.assertEqual(len(elements), 1)
+            # Angle goes from -30 -> -37
             self.assertAngleAlmostEqual(element_fill_angle(elements[0]), -37)
 
     def test_recursive_uses_angle_with_specified_angle(self):

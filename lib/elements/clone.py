@@ -6,7 +6,7 @@
 from math import degrees
 from copy import deepcopy
 from contextlib import contextmanager
-from typing import Generator, List, Optional
+from typing import Generator, List
 
 from inkex import Transform, BaseElement, Style
 from shapely import MultiLineString
@@ -30,7 +30,7 @@ class CloneWarning(ValidationWarning):
     steps_to_solve = [
         _("If you want to convert the clone into a real element, follow these steps:"),
         _("* Select the clone"),
-        _("* Run: Extensions > Ink/Stitch > Tools: Clone > Unlink Clone")
+        _("* Run: Extensions > Ink/Stitch > Edit > Unlink Clone")
     ]
 
 
@@ -118,23 +118,6 @@ class Clone(EmbroideryElement):
         Recursively "resolve" all clone element children of that element in the same manner.
         The fill angles for resolved elements will be rotated per the transform and clone_fill_angle properties of the clone.
 
-        :returns: The "resolved" node
-        """
-        # Compute the transform from the href'd element's parent to our node's parent as the global transform
-        parent: BaseElement = self.node.getparent()
-        source_parent_transform = self.node.href.getparent().composed_transform()
-        clone_transform = parent.composed_transform()
-        global_transform = clone_transform @ -source_parent_transform
-
-        return self._resolve_clone_internal(global_transform=global_transform)
-
-    def _resolve_clone_internal(self, global_transform: Optional[Transform] = None) -> BaseElement:
-        """
-        "Resolve" this clone element by copying the node it hrefs as if unlinking the clone in Inkscape.
-        The node will be added as a sibling of this element's node, with its transform and style applied.
-        Recursively "resolve" all clone element children of that element in the same manner.
-        The fill angles for resolved elements will be rotated per the transform and clone_fill_angle properties of the clone.
-
         :param global_transform: A global transform for the element, applied to the fill angle
         :returns: The "resolved" node
         """
@@ -142,22 +125,11 @@ class Clone(EmbroideryElement):
         # as the use element this Clone represents, with the same transform
         parent: BaseElement = self.node.getparent()
         source_node: BaseElement = self.node.href
+        source_parent: BaseElement = source_node.getparent()
         cloned_node = deepcopy(source_node)
-        clone_transform = Transform(self.node.get('transform'))
-        # The transform of a resolved clone is based on the clone's transform as well as the clone's transform.
-        # This makes intuitive sense: The clone of a scaled item is also scaled, the clone of a rotated item is also rotated, etc.
-        cloned_node.set('transform', clone_transform @ Transform(cloned_node.get('transform')))
 
-        # Merge the style, if any: Note that the source node's style applies on top of the use's, not the other way around.
-        clone_style = self.node.get('style')
-        if clone_style:
-            merged_style = Style(clone_style)
-            merged_style.update(cloned_node.get('style'))
-            cloned_node.set('style', merged_style)
-
-        # Add as sibling of this use node
-        parent.add(cloned_node)
-
+        # Recursively resolve all clones as if the clone was in the same place as its source
+        source_parent.add(cloned_node)
         if is_clone(cloned_node):
             resolved_cloned_node = Clone(cloned_node).resolve_clone()
             cloned_node.getparent().remove(cloned_node)
@@ -169,9 +141,27 @@ class Clone(EmbroideryElement):
                 Clone(clone).resolve_clone()
                 clone.getparent().remove(clone)
 
-        if global_transform is not None:
-            clone_transform = global_transform @ clone_transform
-        self.apply_angles(cloned_node, clone_transform)
+        # Re-parent the cloned node to be a sibling of this node
+        source_parent.remove(cloned_node)
+        parent.add(cloned_node)
+        # The transform of a resolved clone is based on the clone's transform as well as the source element's transform.
+        # This makes intuitive sense: The clone of a scaled item is also scaled, the clone of a rotated item is also rotated, etc.
+        cloned_node.set('transform', Transform(self.node.get('transform')) @ Transform(cloned_node.get('transform')))
+
+        # Merge the style, if any: Note that the source node's style applies on top of the use's, not the other way around.
+        clone_style = self.node.get('style')
+        if clone_style:
+            merged_style = Style(clone_style)
+            merged_style.update(cloned_node.get('style'))
+            cloned_node.set('style', merged_style)
+
+        # Compute angle transform:
+        # Effectively, this is (local clone transform) * (to parent space) * (from clone's parent space)
+        # There is a translation component here that will be ignored.
+        source_transform = source_parent.composed_transform()
+        clone_transform = self.node.composed_transform()
+        angle_transform = clone_transform @ -source_transform
+        self.apply_angles(cloned_node, angle_transform)
 
         return cloned_node
 
@@ -203,7 +193,7 @@ class Clone(EmbroideryElement):
             if self.flip_angle:
                 element_angle = -element_angle
 
-            node.set(INKSTITCH_ATTRIBS['angle'], element_angle)
+            node.set(INKSTITCH_ATTRIBS['angle'], round(element_angle, 6))
 
         return elements
 
