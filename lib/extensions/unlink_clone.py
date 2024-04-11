@@ -9,6 +9,8 @@ from ..elements import Clone
 from ..i18n import _
 from .base import InkstitchExtension
 
+from typing import List, Tuple
+
 
 class UnlinkClone(InkstitchExtension):
     def effect(self):
@@ -19,11 +21,14 @@ class UnlinkClone(InkstitchExtension):
             inkex.errormsg(_("Please select one or more clones to unlink."))
             return
 
-        clones_to_remove = []
+        # Two passes here: One to resolve all clones, and then another to replace those clones with their resolved versions.
+        # This way we don't accidentally remove a node that another clone refers to.
+        clones_resolved: List[Tuple[inkex.BaseElement, inkex.BaseElement]] = []
         for element in self.elements:
             if isinstance(element, Clone):
-                element.resolve_clone()
-                clones_to_remove.append(element.node)
+                resolved = element.resolve_clone(recursive=False)
+                clones_resolved.append((element.node, resolved))
 
-        for clone in clones_to_remove:
+        for (clone, resolved) in clones_resolved:
             clone.getparent().remove(clone)
+            resolved.set_id(clone.get_id())

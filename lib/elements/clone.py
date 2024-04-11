@@ -111,38 +111,38 @@ class Clone(EmbroideryElement):
             # Remove the "manually cloned" tree.
             parent.remove(cloned_node)
 
-    def resolve_clone(self) -> BaseElement:
+    def resolve_clone(self, recursive=True) -> BaseElement:
         """
         "Resolve" this clone element by copying the node it hrefs as if unlinking the clone in Inkscape.
         The node will be added as a sibling of this element's node, with its transform and style applied.
-        Recursively "resolve" all clone element children of that element in the same manner.
         The fill angles for resolved elements will be rotated per the transform and clone_fill_angle properties of the clone.
 
-        :param global_transform: A global transform for the element, applied to the fill angle
+        :param recursive: Recursively "resolve" all child clones in the same manner
         :returns: The "resolved" node
         """
-        # Effectively, manually clone the href'd element: Place it into the tree at the same location
-        # as the use element this Clone represents, with the same transform
         parent: BaseElement = self.node.getparent()
         source_node: BaseElement = self.node.href
         source_parent: BaseElement = source_node.getparent()
         cloned_node = deepcopy(source_node)
 
-        # Recursively resolve all clones as if the clone was in the same place as its source
-        source_parent.add(cloned_node)
-        if is_clone(cloned_node):
-            resolved_cloned_node = Clone(cloned_node).resolve_clone()
-            cloned_node.getparent().remove(cloned_node)
-            # Replace the cloned_node with its resolved version
-            cloned_node = resolved_cloned_node
-        else:
-            clones: List[BaseElement] = [n for n in cloned_node.iterdescendants() if is_clone(n)]
-            for clone in clones:
-                Clone(clone).resolve_clone()
-                clone.getparent().remove(clone)
+        if recursive:
+            # Recursively resolve all clones as if the clone was in the same place as its source
+            source_parent.add(cloned_node)
 
-        # Re-parent the cloned node to be a sibling of this node
-        source_parent.remove(cloned_node)
+            if is_clone(cloned_node):
+                resolved_cloned_node = Clone(cloned_node).resolve_clone()
+                cloned_node.getparent().remove(cloned_node)
+                # Replace the cloned_node with its resolved version
+                cloned_node = resolved_cloned_node
+            else:
+                clones: List[BaseElement] = [n for n in cloned_node.iterdescendants() if is_clone(n)]
+                for clone in clones:
+                    Clone(clone).resolve_clone()
+                    clone.getparent().remove(clone)
+
+            source_parent.remove(cloned_node)
+
+        # Add the cloned node to be a sibling of this node
         parent.add(cloned_node)
         # The transform of a resolved clone is based on the clone's transform as well as the source element's transform.
         # This makes intuitive sense: The clone of a scaled item is also scaled, the clone of a rotated item is also rotated, etc.
@@ -176,8 +176,8 @@ class Clone(EmbroideryElement):
 
         elements = self.clone_to_elements(cloned_node)
         for node in cloned_node.iter():
-            # Only need to adjust angles on embroiderable nodes and clones
-            if node.tag not in EMBROIDERABLE_TAGS and not is_clone(node):
+            # Only need to adjust angles on embroiderable nodes
+            if node.tag not in EMBROIDERABLE_TAGS:
                 continue
 
             # Normally, rotate the cloned element's angle by the clone's rotation.
