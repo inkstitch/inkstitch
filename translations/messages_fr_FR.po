@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-04-07 01:10+0000\n"
-"PO-Revision-Date: 2024-04-10 01:07\n"
+"PO-Revision-Date: 2024-04-11 01:06\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -90,7 +90,7 @@ msgstr "Amitaclo small"
 #. description of font in fonts/amitaclo_small
 #: inkstitch-fonts-metadata.py:24
 msgid "This font is an altered version  of Amitaclo, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory.  parameters of this font allow to scale down the original Amitaclo font between 30% (for a 8 mm font ) and 55 % (for a 16mm font)."
-msgstr ""
+msgstr "Cette police est une version modifiée de Amitaclo pour permettre une réduction plus forte de la taille. L'usage de fil fin (60) et d'une aiguille fine (60) est obligatoire. Le paramétrage modifié de cette  police permet de réduire la police Amitaclo originelle entre 30% (pour une police de 8 mm) et 55% (pour une police de 16 mm)."
 
 #. name of font in fonts/apex_lake
 #: inkstitch-fonts-metadata.py:26
@@ -1411,31 +1411,31 @@ msgstr "Aucune bande pour le rendu"
 
 #: lib/elements/fill_stitch.py:119
 msgid "Tartan fill: There is no active fill stripe to render"
-msgstr ""
+msgstr "Remplissage tartan : il n'y a pas de bande active pour le rendu"
 
 #: lib/elements/fill_stitch.py:121 lib/elements/fill_stitch.py:131
 msgid "Go to Extensions > Ink/Stitch > Fill Tools > Tartan and adjust stripe settings:"
-msgstr ""
+msgstr "Aller à Extensions > Ink/Stitch >Outils : Remplissage> Tartan et ajuster le paramétrage des bandes de couleurs:"
 
 #: lib/elements/fill_stitch.py:122
 msgid "* Check if stripes are active"
-msgstr ""
+msgstr "Vérifier si les bandes sont actives"
 
 #: lib/elements/fill_stitch.py:123
 msgid "* Check the minimum stripe width setting and the scale factor"
-msgstr ""
+msgstr "Vérifier la largeur minimum de bande et le facteur d'échelle"
 
 #: lib/elements/fill_stitch.py:128
 msgid "No customized pattern"
-msgstr ""
+msgstr "Pas de motif personnalisé"
 
 #: lib/elements/fill_stitch.py:129
 msgid "Tartan fill: Using default pattern"
-msgstr ""
+msgstr "Remplissage tartan : utilisation du motif par défaut"
 
 #: lib/elements/fill_stitch.py:132
 msgid "* Customize your pattern"
-msgstr ""
+msgstr "Personnaliser votre motif"
 
 #: lib/elements/fill_stitch.py:137
 msgid "This shape is invalid"
@@ -1593,7 +1593,7 @@ msgstr "L’angle augmente dans un sens anti-horaire.  0 est horizontal.  Les an
 
 #: lib/elements/fill_stitch.py:293 lib/gui/tartan/embroidery_panel.py:36
 msgid "Relative to the tartan stripe direction."
-msgstr ""
+msgstr "Relativement à la direction des bandes du tartan."
 
 #: lib/elements/fill_stitch.py:305
 msgid "Maximum fill stitch length"
@@ -1645,11 +1645,11 @@ msgstr "L’option intervertir peut vous aider avec le routage de votre chemin d
 
 #: lib/elements/fill_stitch.py:402
 msgid "Reverse fill"
-msgstr ""
+msgstr "Inverser le remplissage"
 
 #: lib/elements/fill_stitch.py:403
 msgid "Reverses fill path."
-msgstr ""
+msgstr "Inverse le chemin de remplissage."
 
 #: lib/elements/fill_stitch.py:414
 msgid "Stop at ending point"
@@ -1726,15 +1726,15 @@ msgstr "Nombre de rangées par fil du tartan"
 
 #: lib/elements/fill_stitch.py:526 lib/gui/tartan/embroidery_panel.py:44
 msgid "Consecutive rows of the same color"
-msgstr ""
+msgstr "Nombre de rangées consécutives de la même couleur"
 
 #: lib/elements/fill_stitch.py:537
 msgid "Herringbone width"
-msgstr ""
+msgstr "Largeur de chevron"
 
 #: lib/elements/fill_stitch.py:538
 msgid "Defines width of a herringbone pattern. Use 0 for regular rows."
-msgstr ""
+msgstr "Défini la largeur d'un motif de chevrons. Utiliser 0 pour des bandes normales."
 
 #: lib/elements/fill_stitch.py:559 lib/elements/fill_stitch.py:568
 #: lib/elements/fill_stitch.py:595 lib/elements/fill_stitch.py:606
@@ -2154,7 +2154,7 @@ msgstr "Tolérance"
 
 #: lib/elements/satin_column.py:366 lib/elements/satin_column.py:423
 msgid "All stitches must be within this distance from the path. A lower tolerance means stitches will be closer together. A higher tolerance means sharp corners may be rounded. Defaults to stitch length."
-msgstr ""
+msgstr "Tous les points doivent rester au plus à cette distance du chemin. Une tolérance plus faible signifie que les points seront plus rapprochés. Une tolérance plus élevée signifie que les angles vifs peuvent être arrondis. Prend par défaut la valeur de la longueur du point."
 
 #: lib/elements/satin_column.py:382
 msgid "Inset distance (fixed)"
@@ -2892,11 +2892,11 @@ msgstr "Impossible d'appliquer l'effet de chemin satin à une colonne satin. Mer
 
 #: lib/extensions/tartan.py:58
 msgid "To create a tartan pattern please select at least one element with a fill color."
-msgstr ""
+msgstr "Pour créer un motif de tartan, sélectionner au moins un élément avec une couleur de remplissage."
 
 #: lib/extensions/tartan.py:64
 msgid "Ink/Stitch Tartan"
-msgstr ""
+msgstr "Tartan Ink/Stitch"
 
 #: lib/extensions/test_swatches.py:22
 msgid "Please select one or more elements."
@@ -3330,107 +3330,107 @@ msgstr "Simulation de broderie"
 
 #: lib/gui/tartan/code_panel.py:24
 msgid "1 Tartan thread equals (mm)"
-msgstr ""
+msgstr "1 fil de Tartan vaut (mm)"
 
 #: lib/gui/tartan/code_panel.py:29 lib/gui/tartan/code_panel.py:30
 msgid "Used only for Threadcount code (The Scottish Register of Tartans)"
-msgstr ""
+msgstr "Utilisé uniquement pour le code Threadcount (Registre Écossais des Tartans)"
 
 #: lib/gui/tartan/customize_panel.py:31
 msgid "Pattern Settings"
-msgstr ""
+msgstr "Paramétrage du motif"
 
 #: lib/gui/tartan/customize_panel.py:33
 msgid "Symmetrical / reflective sett"
-msgstr ""
+msgstr "Motif symétrique /reflexion"
 
 #: lib/gui/tartan/customize_panel.py:34
 msgid "Disabled: asymmetrical / repeating sett"
-msgstr ""
+msgstr "Décoché : motif asymétrique/répétition"
 
 #: lib/gui/tartan/customize_panel.py:36
 msgid "Equal threadcount for warp and weft"
-msgstr ""
+msgstr "Même nombre de fils pour la chaîne et la trame"
 
 #: lib/gui/tartan/customize_panel.py:47
 msgid "Scale (%)"
-msgstr ""
+msgstr "Echelle (%)"
 
 #: lib/gui/tartan/customize_panel.py:51
 msgid "Offset X (mm)"
-msgstr ""
+msgstr "Décalage X (mm)"
 
 #: lib/gui/tartan/customize_panel.py:55
 msgid "Offset Y (mm)"
-msgstr ""
+msgstr "Décalage Y (mm)"
 
 #: lib/gui/tartan/customize_panel.py:57
 msgid "Stripes"
-msgstr ""
+msgstr "Bandes"
 
 #: lib/gui/tartan/customize_panel.py:59
 msgid "Link colors"
-msgstr ""
+msgstr "Lier les couleurs"
 
 #: lib/gui/tartan/customize_panel.py:60
 msgid "When enabled update all equal colors simultaneously."
-msgstr ""
+msgstr "Si coché toutes les couleurs identiques sont mises à jour simultanément."
 
 #: lib/gui/tartan/customize_panel.py:61
 msgid "Warp"
-msgstr ""
+msgstr "Chaîne"
 
 #: lib/gui/tartan/customize_panel.py:63
 msgid "Weft"
-msgstr ""
+msgstr "Trame"
 
 #: lib/gui/tartan/customize_panel.py:120
 msgid "Drag and drop to adjust position."
-msgstr ""
+msgstr "Glissez Déposez pour ajuster la position."
 
 #: lib/gui/tartan/customize_panel.py:125
 msgid "Stitch this stripe"
-msgstr ""
+msgstr "Broder cette bande"
 
 #: lib/gui/tartan/customize_panel.py:135
 msgid "Select stripe color"
-msgstr ""
+msgstr "Selectionne la couleur de la bande"
 
 #: lib/gui/tartan/customize_panel.py:140
 msgid "Set stripe width (mm)"
-msgstr ""
+msgstr "Choisir la largeur de la bande (mm)"
 
 #: lib/gui/tartan/customize_panel.py:144
 msgid "Remove stripe"
-msgstr ""
+msgstr "Supprimer la bande"
 
 #: lib/gui/tartan/embroidery_panel.py:25
 msgid "Embroidery settings can be refined in the params dialog."
-msgstr ""
+msgstr "Les paramètres de broderie peuvent être précisés dans le dialogue de paramétrage."
 
 #: lib/gui/tartan/embroidery_panel.py:49
 msgid "Row spacing (mm)"
-msgstr ""
+msgstr "Espacement entre rangées de points (mm)"
 
 #: lib/gui/tartan/embroidery_panel.py:59
 msgid "Herringbone width (mm)"
-msgstr ""
+msgstr "Largeur des chevrons (mm)"
 
 #: lib/gui/tartan/embroidery_panel.py:65 lib/gui/tartan/embroidery_panel.py:102
 msgid "Bean stitch repeats"
-msgstr ""
+msgstr "Nombre de répétitions du point multiple"
 
 #: lib/gui/tartan/embroidery_panel.py:70
 msgid "Stitch type"
-msgstr ""
+msgstr "Type de point"
 
 #: lib/gui/tartan/embroidery_panel.py:83
 msgid "Stitch angle (warp)"
-msgstr ""
+msgstr "Angle des points (chaîne)"
 
 #: lib/gui/tartan/embroidery_panel.py:88
 msgid "Stitch angle (weft)"
-msgstr ""
+msgstr "Angle des points (trame)"
 
 #: lib/gui/tartan/embroidery_panel.py:93
 msgid "Minimum stripe width for fills"
@@ -3438,35 +3438,35 @@ msgstr "Largeur minimum de bande pour le remplissage"
 
 #: lib/gui/tartan/embroidery_panel.py:97
 msgid "Stripes smaller than this will be stitched as a running stitch"
-msgstr ""
+msgstr "Les bandes plus étroites que cela seront brodées comme des points droits"
 
 #: lib/gui/tartan/embroidery_panel.py:195
 msgid "Embroidery Element"
-msgstr ""
+msgstr "Element de broderie"
 
 #: lib/gui/tartan/embroidery_panel.py:196
 msgid "SVG Elements"
-msgstr ""
+msgstr "Elements SVG"
 
 #: lib/gui/tartan/embroidery_panel.py:201
 msgid "AutoFill"
-msgstr ""
+msgstr "Remplissage automatique"
 
 #: lib/gui/tartan/help_panel.py:19
 msgid "This extension fills shapes with a tartan (or tartan like) pattern."
-msgstr ""
+msgstr "Cette extension remplit les formes avec un motif semblable à du tartan."
 
 #: lib/gui/tartan/help_panel.py:33 lib/gui/tartan/help_panel.py:34
 msgid "https://inkstitch.org/docs/stitches/tartan-fill"
-msgstr ""
+msgstr "https://inkstitch.org/fr/docs/stitches/tartan-fill"
 
 #: lib/gui/tartan/main_panel.py:55
 msgid "Customize"
-msgstr ""
+msgstr "Personnaliser"
 
 #: lib/gui/tartan/main_panel.py:59
 msgid "Palette Code"
-msgstr ""
+msgstr "Code de la palette"
 
 #: lib/gui/tartan/main_panel.py:62
 msgid "Embroidery Settings"
