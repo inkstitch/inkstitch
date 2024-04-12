@@ -145,6 +145,44 @@ class CloneElementTest(TestCase):
             # Angle goes from 30 -> 40 (g1 -> g2) -> 29 (use)
             self.assertAngleAlmostEqual(element_fill_angle(elements[0]), 29)
 
+    def test_angle_not_applied_twice(self):
+        """Make sure that angle changes are not applied twice to an element with both stroke and fill."""
+        root: SvgDocumentElement = svg()
+        rect = root.add(Rectangle(attrib={
+            "width": "10",
+            "height": "10",
+            "style": "stroke: skyblue; fill: red;"
+        }))
+        use = root.add(Use())
+        use.href = rect
+        use.set('transform', Transform().add_rotate(30))
+
+        clone = Clone(use)
+        with clone.clone_elements() as elements:
+            self.assertEqual(len(elements), 2)  # One for the stroke, one for the fill
+            self.assertEqual(elements[0].node, elements[1].node)
+            # Angle goes from 0 -> -30
+            self.assertAngleAlmostEqual(element_fill_angle(elements[0]), -30)
+
+    def test_style_inherits(self):
+        root: SvgDocumentElement = svg()
+        rect = root.add(Rectangle(attrib={
+            "width": "10",
+            "height": "10"
+        }))
+        rect.set('style', 'stroke: skyblue; fill-opacity: 0;')
+        use = root.add(Use())
+        use.href = rect
+        use.set('style', 'stroke: red; stroke-width: 2;')
+
+        clone = Clone(use)
+        with clone.clone_elements() as elements:
+            self.assertEqual(len(elements), 1)
+            style = elements[0].node.cascaded_style()
+            # Source style takes precedence over any attributes specified in the clone
+            self.assertEqual(style["stroke"], "skyblue")
+            self.assertEqual(style["stroke-width"], "2")
+
     def test_transform_inherits_from_cloned_element(self):
         """
         Elements cloned by cloned_elements need to inherit their transform from their href'd element and their use to match what's shown.
@@ -322,10 +360,24 @@ class CloneElementTest(TestCase):
         u1 = root.add(Use())
         u1.set('transform', Transform().add_rotate(60))
         u1.href = rect
+
+        clone = Clone(u1)
+        with clone.clone_elements() as elements:
+            self.assertEqual(len(elements), 1)
+            # Angle goes from 30 -> -30
+            self.assertAngleAlmostEqual(element_fill_angle(elements[0]), -30)
+
         g = root.add(Group())
         g.set('transform', Transform().add_rotate(-10))
         u2 = g.add(Use())
         u2.href = u1
+
+        clone = Clone(u2)
+        with clone.clone_elements() as elements:
+            self.assertEqual(len(elements), 1)
+            # Angle goes from -30 -> -20 (u1 -> g)
+            self.assertAngleAlmostEqual(element_fill_angle(elements[0]), -20)
+
         u3 = root.add(Use())
         u3.set('transform', Transform().add_rotate(7))
         u3.href = g
@@ -333,5 +385,42 @@ class CloneElementTest(TestCase):
         clone = Clone(u3)
         with clone.clone_elements() as elements:
             self.assertEqual(len(elements), 1)
-            # Angle goes from 30 -> -30 (u1) -> -20 (g -> u2) -> -27 (u3)
+            # Angle goes from -20 -> -27
             self.assertAngleAlmostEqual(element_fill_angle(elements[0]), -27)
+
+        # Cloning u2 directly, the relative transform of g does not apply
+        u4 = root.add(Use())
+        u4.set('transform', Transform().add_rotate(7))
+        u4.href = u2
+
+        clone = Clone(u4)
+        with clone.clone_elements() as elements:
+            self.assertEqual(len(elements), 1)
+            # Angle goes from -30 -> -37
+            self.assertAngleAlmostEqual(element_fill_angle(elements[0]), -37)
+
+    def test_recursive_uses_angle_with_specified_angle(self):
+        root: SvgDocumentElement = svg()
+        rect = root.add(Rectangle(attrib={
+            "width": "10",
+            "height": "10",
+            INKSTITCH_ATTRIBS["angle"]: "30"
+        }))
+        u1 = root.add(Use())
+        u1.set('transform', Transform().add_rotate(60))
+        u1.href = rect
+        g = root.add(Group())
+        g.set('transform', Transform().add_rotate(-10))
+        u2 = g.add(Use())
+        u2.href = u1
+        u2.set(INKSTITCH_ATTRIBS["angle"], "0")
+        u3 = root.add(Use())
+        u3.set_id('U3')
+        u3.set('transform', Transform().add_rotate(7))
+        u3.href = g
+
+        clone = Clone(u3)
+        with clone.clone_elements() as elements:
+            self.assertEqual(len(elements), 1)
+            # Angle goes from 0 (g -> u2) -> -7 (u3)
+            self.assertAngleAlmostEqual(element_fill_angle(elements[0]), -7)

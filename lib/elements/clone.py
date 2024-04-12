@@ -6,9 +6,9 @@
 from math import degrees
 from copy import deepcopy
 from contextlib import contextmanager
-from typing import Generator, List, Tuple
+from typing import Generator, List
 
-from inkex import Transform, BaseElement
+from inkex import Transform, BaseElement, Style
 from shapely import MultiLineString
 
 from ..stitch_plan.stitch_group import StitchGroup
@@ -26,11 +26,11 @@ from .validation import ValidationWarning
 class CloneWarning(ValidationWarning):
     name = _("Clone Object")
     description = _("There are one or more clone objects in this document.  "
-                    "Ink/Stitch can work with single clones, but you are limited to set a very few parameters. ")
+                    "Ink/Stitch can work with clones, but you are limited to set a very few parameters. ")
     steps_to_solve = [
         _("If you want to convert the clone into a real element, follow these steps:"),
         _("* Select the clone"),
-        _("* Run: Edit > Clone > Unlink Clone (Alt+Shift+D)")
+        _("* Run: Extensions > Ink/Stitch > Edit > Unlink Clone")
     ]
 
 
@@ -101,64 +101,88 @@ class Clone(EmbroideryElement):
         Could possibly be refactored into just a generator - being a context manager is mainly to control the lifecycle of the elements
         that are cloned (again, for testing convenience primarily)
         """
-        source_node, local_transform = get_concrete_source(self.node)
-
-        if source_node.tag not in EMBROIDERABLE_TAGS and source_node.tag != SVG_GROUP_TAG:
-            yield []
-            return
-
-        # Effectively, manually clone the href'd element: Place it into the tree at the same location
-        # as the use element this Clone represents, with the same transform
         parent: BaseElement = self.node.getparent()
-        cloned_node = deepcopy(source_node)
-        cloned_node.set('transform', local_transform)
-        parent.add(cloned_node)
+        cloned_node = self.resolve_clone()
         try:
             # In a try block so we can ensure that the cloned_node is removed from the tree in the event of an exception.
             # Otherwise, it might be left around on the document if we throw for some reason.
-            self.resolve_all_clones(cloned_node)
-
-            source_parent_transform = source_node.getparent().composed_transform()
-            clone_transform = cloned_node.composed_transform()
-            global_transform = clone_transform @ -source_parent_transform
-            self.apply_angles(cloned_node, global_transform)
-
             yield self.clone_to_elements(cloned_node)
         finally:
             # Remove the "manually cloned" tree.
             parent.remove(cloned_node)
 
-    def resolve_all_clones(self, node: BaseElement) -> None:
+    def resolve_clone(self, recursive=True) -> BaseElement:
         """
-        For a subtree, recursively replace all `use` tags with the elements they href.
+        "Resolve" this clone element by copying the node it hrefs as if unlinking the clone in Inkscape.
+        The node will be added as a sibling of this element's node, with its transform and style applied.
+        The fill angles for resolved elements will be rotated per the transform and clone_fill_angle properties of the clone.
+
+        :param recursive: Recursively "resolve" all child clones in the same manner
+        :returns: The "resolved" node
         """
-        clones: List[BaseElement] = [n for n in node.iterdescendants() if n.tag == SVG_USE_TAG]
-        for clone in clones:
-            parent: BaseElement = clone.getparent()
-            source_node, local_transform = get_concrete_source(clone)
-            cloned_node = deepcopy(source_node)
-            parent.add(cloned_node)
-            cloned_node.set('transform', local_transform)
-            parent.remove(clone)
-            self.resolve_all_clones(cloned_node)
-            self.apply_angles(cloned_node, local_transform)
+        parent: BaseElement = self.node.getparent()
+        source_node: BaseElement = self.node.href
+        source_parent: BaseElement = source_node.getparent()
+        cloned_node = deepcopy(source_node)
+
+        if recursive:
+            # Recursively resolve all clones as if the clone was in the same place as its source
+            source_parent.add(cloned_node)
+
+            if is_clone(cloned_node):
+                resolved_cloned_node = Clone(cloned_node).resolve_clone()
+                cloned_node.getparent().remove(cloned_node)
+                # Replace the cloned_node with its resolved version
+                cloned_node = resolved_cloned_node
+            else:
+                clones: List[BaseElement] = [n for n in cloned_node.iterdescendants() if is_clone(n)]
+                for clone in clones:
+                    Clone(clone).resolve_clone()
+                    clone.getparent().remove(clone)
+
+            source_parent.remove(cloned_node)
+
+        # Add the cloned node to be a sibling of this node
+        parent.add(cloned_node)
+        # The transform of a resolved clone is based on the clone's transform as well as the source element's transform.
+        # This makes intuitive sense: The clone of a scaled item is also scaled, the clone of a rotated item is also rotated, etc.
+        cloned_node.set('transform', Transform(self.node.get('transform')) @ Transform(cloned_node.get('transform')))
+
+        # Merge the style, if any: Note that the source node's style applies on top of the use's, not the other way around.
+        clone_style = self.node.get('style')
+        if clone_style:
+            merged_style = Style(clone_style)
+            merged_style.update(cloned_node.get('style'))
+            cloned_node.set('style', merged_style)
+
+        # Compute angle transform:
+        # Effectively, this is (local clone transform) * (to parent space) * (from clone's parent space)
+        # There is a translation component here that will be ignored.
+        source_transform = source_parent.composed_transform()
+        clone_transform = self.node.composed_transform()
+        angle_transform = clone_transform @ -source_transform
+        self.apply_angles(cloned_node, angle_transform)
+
+        return cloned_node
 
     def apply_angles(self, cloned_node: BaseElement, transform: Transform) -> None:
         """
         Adjust angles on a cloned tree based on their transform.
         """
         if self.clone_fill_angle is None:
-            # Strip out the translation component to simplify the fill vector rotation angle calculation.
+            # Strip out the translation component to simplify the fill vector rotation angle calculation:
+            # Otherwise we'd have to calculate the transform of (0,0) and subtract it from the transform of (1,0)
             angle_transform = Transform((transform.a, transform.b, transform.c, transform.d, 0.0, 0.0))
 
         elements = self.clone_to_elements(cloned_node)
-        for element in elements:
-            # We manipulate the element's node directly here instead of using get/set param methods, because otherwise
-            # we may run into issues due to those methods' use of caching not updating if the underlying param value is changed.
+        for node in cloned_node.iter():
+            # Only need to adjust angles on embroiderable nodes
+            if node.tag not in EMBROIDERABLE_TAGS:
+                continue
 
             # Normally, rotate the cloned element's angle by the clone's rotation.
             if self.clone_fill_angle is None:
-                element_angle = float(element.node.get(INKSTITCH_ATTRIBS['angle'], 0))
+                element_angle = float(node.get(INKSTITCH_ATTRIBS['angle'], 0))
                 # We have to negate the angle because SVG/Inkscape's definition of rotation is clockwise, while Inkstitch uses counter-clockwise
                 fill_vector = (angle_transform @ Transform(f"rotate(${-element_angle})")).apply_to_point((1, 0))
                 # Same reason for negation here.
@@ -169,7 +193,7 @@ class Clone(EmbroideryElement):
             if self.flip_angle:
                 element_angle = -element_angle
 
-            element.node.set(INKSTITCH_ATTRIBS['angle'], element_angle)
+            node.set(INKSTITCH_ATTRIBS['angle'], round(element_angle, 6))
 
         return elements
 
@@ -196,23 +220,3 @@ def is_clone(node):
     if node.tag == SVG_USE_TAG and node.get(XLINK_HREF) and not is_command_symbol(node):
         return True
     return False
-
-
-def get_concrete_source(node: BaseElement) -> Tuple[BaseElement, Transform]:
-    """
-    Given a use element, follow hrefs until finding an element that is not a use.
-    Returns that non-use element, and a transform to apply to a copy of that element
-    which will place that copy in the same position as the use if added as a sibling of the use.
-    """
-    # Compute the transform that will be applied to the cloned element, which is based off of the cloned element.
-    # This makes intuitive sense: The clone of a scaled element will also be scaled, the clone of a rotated element will also
-    # be rotated, etc. Any transforms from the use element will be applied on top of that.
-    transform = Transform(node.get('transform'))
-    source_node: BaseElement = node.href
-    while source_node.tag == SVG_USE_TAG:
-        # In case the source_node href's a use (and that href's a use...), iterate up the chain until we get a source node,
-        # applying the transforms as we go.
-        transform @= Transform(source_node.get('transform'))
-        source_node = source_node.href
-    transform @= Transform(source_node.get('transform'))
-    return (source_node, transform)
