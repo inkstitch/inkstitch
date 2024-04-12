@@ -693,8 +693,8 @@ class Params(InkstitchExtension):
         else:
             getter = 'get_param'
 
-        values = [item for item in (getattr(node, getter)(
-            param.name, param.default) for node in nodes) if item is not None]
+        values = [item if item is not None else "" for item in (getattr(node, getter)(
+            param.name, param.default) for node in nodes)]
 
         return values
 
