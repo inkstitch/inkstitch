@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-04-07 01:10+0000\n"
-"PO-Revision-Date: 2024-04-07 01:11\n"
+"POT-Creation-Date: 2024-04-13 00:55+0000\n"
+"PO-Revision-Date: 2024-04-13 00:56\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-07 01:10+0000\n"
+"POT-Creation-Date: 2024-04-13 00:55+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1116,7 +1116,7 @@ msgid "Clone Object"
 msgstr ""
 
 #: lib/elements/clone.py:28
-msgid "There are one or more clone objects in this document.  Ink/Stitch can work with single clones, but you are limited to set a very few parameters. "
+msgid "There are one or more clone objects in this document.  Ink/Stitch can work with clones, but you are limited to set a very few parameters. "
 msgstr ""
 
 #: lib/elements/clone.py:31
@@ -1128,7 +1128,7 @@ msgid "* Select the clone"
 msgstr ""
 
 #: lib/elements/clone.py:33
-msgid "* Run: Edit > Clone > Unlink Clone (Alt+Shift+D)"
+msgid "* Run: Extensions > Ink/Stitch > Edit > Unlink Clone"
 msgstr ""
 
 #: lib/elements/clone.py:44 inx/inkstitch_select_elements.inx:72
@@ -1184,11 +1184,11 @@ msgstr "全部启用"
 
 #: lib/elements/element.py:251
 msgid "Before"
-msgstr "开始处"
+msgstr "起绣锁针"
 
 #: lib/elements/element.py:251
 msgid "After"
-msgstr "结束处"
+msgstr "结束打结"
 
 #: lib/elements/element.py:251
 msgid "Neither"
@@ -1205,11 +1205,11 @@ msgstr ""
 
 #: lib/elements/element.py:273
 msgid "Tack stitch"
-msgstr ""
+msgstr "起绣锁缝样式"
 
 #: lib/elements/element.py:274
 msgid "Tack down stitch type"
-msgstr ""
+msgstr "选择起绣锁缝样式"
 
 #: lib/elements/element.py:284 lib/elements/element.py:330
 msgid "Custom path"
@@ -1221,7 +1221,7 @@ msgstr ""
 
 #: lib/elements/element.py:295 lib/elements/element.py:307
 msgid "Scale tack stitch"
-msgstr ""
+msgstr "起绣锁缝缩放"
 
 #: lib/elements/element.py:296
 msgid "Set stitch length. A 1 in a custom path equals this values."
@@ -1245,7 +1245,7 @@ msgstr ""
 
 #: lib/elements/element.py:341 lib/elements/element.py:353
 msgid "Scale lock stitch"
-msgstr ""
+msgstr "结束打结缩放"
 
 #: lib/elements/element.py:342
 msgid "Set length of lock stitches (mm)."
@@ -1257,7 +1257,7 @@ msgstr ""
 
 #: lib/elements/element.py:366
 msgid "Trim After"
-msgstr ""
+msgstr "完成后剪线"
 
 #: lib/elements/element.py:367
 msgid "Add a TRIM command after stitching this object."
@@ -1269,7 +1269,7 @@ msgstr "完成后停止"
 
 #: lib/elements/element.py:377
 msgid "Add a STOP command after stitching this object."
-msgstr ""
+msgstr "在对象刺绣后加入停止命令。"
 
 #: lib/elements/element.py:621
 msgid "Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects. This will show you the exact location of the problem."
@@ -1297,7 +1297,7 @@ msgstr ""
 
 #: lib/elements/fill_stitch.py:43 lib/elements/fill_stitch.py:262
 msgid "Expand"
-msgstr ""
+msgstr "缩放"
 
 #: lib/elements/fill_stitch.py:44
 msgid "The expand parameter for this fill object cannot be applied. Ink/Stitch will ignore it and will use original size instead."
@@ -1305,7 +1305,7 @@ msgstr ""
 
 #: lib/elements/fill_stitch.py:49 lib/elements/fill_stitch.py:613
 msgid "Inset"
-msgstr ""
+msgstr "边缘收缩"
 
 #: lib/elements/fill_stitch.py:50
 msgid "The underlay inset parameter for this fill object cannot be applied. Ink/Stitch will ignore it and will use the original size instead."
@@ -1446,15 +1446,15 @@ msgstr ""
 
 #: lib/elements/fill_stitch.py:145
 msgid "FillStitch"
-msgstr ""
+msgstr "填针"
 
 #: lib/elements/fill_stitch.py:148
 msgid "Automatically routed fill stitching"
-msgstr ""
+msgstr "自动布线填针"
 
 #: lib/elements/fill_stitch.py:152
 msgid "Auto Fill"
-msgstr ""
+msgstr "自动填充"
 
 #: lib/elements/fill_stitch.py:153 inx/inkstitch_select_elements.inx:55
 msgid "Circular Fill"
@@ -1462,19 +1462,19 @@ msgstr ""
 
 #: lib/elements/fill_stitch.py:154 inx/inkstitch_select_elements.inx:56
 msgid "Contour Fill"
-msgstr ""
+msgstr "轮廓填充"
 
 #: lib/elements/fill_stitch.py:155 inx/inkstitch_select_elements.inx:57
 msgid "Guided Fill"
-msgstr ""
+msgstr "引导填充"
 
 #: lib/elements/fill_stitch.py:156 inx/inkstitch_select_elements.inx:58
 msgid "Linear Gradient Fill"
-msgstr ""
+msgstr "线性渐变填充"
 
 #: lib/elements/fill_stitch.py:157 inx/inkstitch_select_elements.inx:59
 msgid "Meander Fill"
-msgstr ""
+msgstr "蜿蜒填充"
 
 #: lib/elements/fill_stitch.py:158
 msgid "Tartan Fill"
@@ -1483,11 +1483,11 @@ msgstr ""
 #: lib/elements/fill_stitch.py:159 lib/gui/tartan/embroidery_panel.py:202
 #: inx/inkstitch_select_elements.inx:60
 msgid "Legacy Fill"
-msgstr ""
+msgstr "他他米"
 
 #: lib/elements/fill_stitch.py:163
 msgid "Fill method"
-msgstr ""
+msgstr "填充方式"
 
 #: lib/elements/fill_stitch.py:172
 msgid "Guided Fill Strategy"
@@ -1507,19 +1507,19 @@ msgstr ""
 
 #: lib/elements/fill_stitch.py:181
 msgid "Contour Fill Strategy"
-msgstr ""
+msgstr "轮廓填充策略"
 
 #: lib/elements/fill_stitch.py:182
 msgid "Inner to Outer"
-msgstr ""
+msgstr "从里到外"
 
 #: lib/elements/fill_stitch.py:182
 msgid "Single spiral"
-msgstr ""
+msgstr "单螺旋"
 
 #: lib/elements/fill_stitch.py:182
 msgid "Double spiral"
-msgstr ""
+msgstr "双螺旋"
 
 #: lib/elements/fill_stitch.py:187
 msgid "Join Style"
@@ -1596,7 +1596,7 @@ msgstr ""
 
 #: lib/elements/fill_stitch.py:305
 msgid "Maximum fill stitch length"
-msgstr ""
+msgstr "最大针迹长度"
 
 #: lib/elements/fill_stitch.py:306
 msgid "The length of each stitch in a row.  Shorter stitch may be used at the start or end of a row."
@@ -1608,19 +1608,19 @@ msgstr "行间距"
 
 #: lib/elements/fill_stitch.py:324
 msgid "Distance between rows of stitches."
-msgstr ""
+msgstr "每行针迹间距。"
 
 #: lib/elements/fill_stitch.py:341 inx/inkstitch_gradient_blocks.inx:22
 msgid "End row spacing"
-msgstr ""
+msgstr "底部行距"
 
 #: lib/elements/fill_stitch.py:342
 msgid "Increases or decreases the row spacing towards the end."
-msgstr ""
+msgstr "增减底部针迹行距。"
 
 #: lib/elements/fill_stitch.py:356
 msgid "Stagger rows this many times before repeating"
-msgstr ""
+msgstr "针迹偏移"
 
 #: lib/elements/fill_stitch.py:357 lib/elements/satin_column.py:203
 msgid "Length of the cycle by which successive stitch rows are staggered. Fractional values are allowed and can have less visible diagonals than integer values."
@@ -1628,15 +1628,15 @@ msgstr ""
 
 #: lib/elements/fill_stitch.py:373 lib/elements/fill_stitch.py:625
 msgid "Skip last stitch in each row"
-msgstr ""
+msgstr "跳过每行尾针"
 
 #: lib/elements/fill_stitch.py:374 lib/elements/fill_stitch.py:626
 msgid "The last stitch in each row is quite close to the first stitch in the next row.  Skipping it decreases stitch count and density."
-msgstr ""
+msgstr "每行尾针与下一行首针非常接近，跳过尾针以减少针数与密度。"
 
 #: lib/elements/fill_stitch.py:389
 msgid "Flip fill (start right-to-left)"
-msgstr ""
+msgstr "翻转填充(从右至左)"
 
 #: lib/elements/fill_stitch.py:390
 msgid "The flip option can help you with routing your stitch path.  When you enable flip, stitching goes from right-to-left instead of left-to-right."
@@ -1668,32 +1668,32 @@ msgstr ""
 
 #: lib/elements/fill_stitch.py:440 lib/elements/stroke.py:109
 msgid "Running stitch length"
-msgstr ""
+msgstr "描边针迹长度"
 
 #: lib/elements/fill_stitch.py:441
 msgid "Length of stitches around the outline of the fill region used when moving from section to section. Also used for meander and circular fill."
-msgstr ""
+msgstr "沿轮廓运行时的针迹长度。此设定也用于蜿蜒填充和圆形填充。"
 
 #: lib/elements/fill_stitch.py:458
 msgid "Running stitch tolerance"
-msgstr ""
+msgstr "描边容差"
 
 #: lib/elements/fill_stitch.py:459
 msgid "Determines how hard Ink/Stitch tries to avoid stitching outside the shape.Lower numbers are less likely to stitch outside the shape but require more stitches."
-msgstr ""
+msgstr "容许沿轮廓运行时偏离多远距离。"
 
 #: lib/elements/fill_stitch.py:470 lib/elements/satin_column.py:439
 #: lib/elements/stroke.py:83
 msgid "Repeats"
-msgstr ""
+msgstr "描边次数"
 
 #: lib/elements/fill_stitch.py:471 lib/elements/stroke.py:84
 msgid "Defines how many times to run down and back along the path."
-msgstr ""
+msgstr "描边运行次数。"
 
 #: lib/elements/fill_stitch.py:482 lib/elements/stroke.py:95
 msgid "Bean stitch number of repeats"
-msgstr ""
+msgstr "平针次数"
 
 #: lib/elements/fill_stitch.py:483 lib/elements/stroke.py:96
 msgid "Backtrack each stitch this many times.  A value of 1 would triple each stitch (forward, back, forward).  A value of 2 would quintuple each stitch, etc.\n\n"
@@ -1738,25 +1738,25 @@ msgstr ""
 #: lib/elements/fill_stitch.py:616 lib/elements/fill_stitch.py:628
 #: lib/elements/fill_stitch.py:641
 msgid "Fill Underlay"
-msgstr ""
+msgstr "打底填针"
 
 #: lib/elements/fill_stitch.py:559 lib/gui/tartan/embroidery_panel.py:55
 #: inx/inkstitch_select_elements.inx:35 inx/inkstitch_select_elements.inx:62
 #: inx/inkstitch_select_elements.inx:64
 msgid "Underlay"
-msgstr ""
+msgstr "启用打底填针"
 
 #: lib/elements/fill_stitch.py:565
 msgid "Fill angle"
-msgstr ""
+msgstr "角度"
 
 #: lib/elements/fill_stitch.py:566
 msgid "Default: fill angle + 90 deg. Insert a list for multiple layers separated by a space."
-msgstr ""
+msgstr "默认垂直于填针线。可输入多组数字用空格分割来定义多层打底线。"
 
 #: lib/elements/fill_stitch.py:592 lib/gui/tartan/embroidery_panel.py:77
 msgid "Row spacing"
-msgstr ""
+msgstr "间距"
 
 #: lib/elements/fill_stitch.py:593
 msgid "default: 3x fill row spacing"
@@ -1765,15 +1765,15 @@ msgstr "默认值：3x 填充行间距"
 #: lib/elements/fill_stitch.py:603 lib/elements/stroke.py:135
 #: lib/extensions/element_info.py:125 lib/extensions/element_info.py:181
 msgid "Max stitch length"
-msgstr ""
+msgstr "针迹最大长度"
 
 #: lib/elements/fill_stitch.py:604
 msgid "default: equal to fill max stitch length"
-msgstr ""
+msgstr "默认与填充针迹相同"
 
 #: lib/elements/fill_stitch.py:614
 msgid "Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill."
-msgstr ""
+msgstr "收缩打底范围避免线迹外露。"
 
 #: lib/elements/fill_stitch.py:649 lib/elements/satin_column.py:520
 msgid "Random seed"
@@ -1968,7 +1968,7 @@ msgstr ""
 #: lib/elements/satin_column.py:108 lib/elements/stroke.py:73
 #: inx/inkstitch_break_apart.inx:17
 msgid "Method"
-msgstr ""
+msgstr "方式"
 
 #: lib/elements/satin_column.py:118
 msgid "Random percentage of satin width decrease"
@@ -2147,7 +2147,7 @@ msgstr ""
 #: lib/elements/satin_column.py:365 lib/elements/satin_column.py:422
 #: lib/elements/stroke.py:121
 msgid "Stitch tolerance"
-msgstr ""
+msgstr "描边容差"
 
 #: lib/elements/satin_column.py:366 lib/elements/satin_column.py:423
 msgid "All stitches must be within this distance from the path. A lower tolerance means stitches will be closer together. A higher tolerance means sharp corners may be rounded. Defaults to stitch length."
@@ -2240,27 +2240,27 @@ msgstr ""
 
 #: lib/elements/stroke.py:45 inx/inkstitch_select_elements.inx:12
 msgid "Stroke"
-msgstr ""
+msgstr "轮廓线"
 
 #: lib/elements/stroke.py:48
 msgid "Running stitch along paths"
-msgstr ""
+msgstr "沿路径描边"
 
 #: lib/elements/stroke.py:66
 msgid "Running Stitch / Bean Stitch"
-msgstr ""
+msgstr "平针/三刺绣平针"
 
 #: lib/elements/stroke.py:67
 msgid "Ripple Stitch"
-msgstr ""
+msgstr "螺旋针"
 
 #: lib/elements/stroke.py:68 inx/inkstitch_select_elements.inx:21
 msgid "ZigZag Stitch"
-msgstr ""
+msgstr "锯齿形针"
 
 #: lib/elements/stroke.py:69 inx/inkstitch_select_elements.inx:22
 msgid "Manual Stitch"
-msgstr ""
+msgstr "手动"
 
 #: lib/elements/stroke.py:110
 msgid "Length of stitches. Stitches can be shorter according to the stitch tolerance setting."
@@ -2268,7 +2268,7 @@ msgstr ""
 
 #: lib/elements/stroke.py:122
 msgid "All stitches must be within this distance from the path.  A lower tolerance means stitches will be closer together.  A higher tolerance means sharp corners may be rounded."
-msgstr ""
+msgstr "容许描边轨迹偏离路径多远距离。低容差则针迹更密，高容差可能导致尖角变圆。"
 
 #: lib/elements/stroke.py:136
 msgid "Split stitches longer than this."
@@ -2601,11 +2601,11 @@ msgstr "此功能将 Ink/Stitch 参数从第一个选定元素复制到选择的
 
 #: lib/extensions/element_info.py:47 inx/inkstitch_select_elements.inx:15
 msgid "Type"
-msgstr ""
+msgstr "类型"
 
 #: lib/extensions/element_info.py:53
 msgid "Fill Method"
-msgstr ""
+msgstr "填针针迹类型"
 
 #: lib/extensions/element_info.py:60
 msgid "Satin Method"
@@ -2630,7 +2630,7 @@ msgstr ""
 
 #: lib/extensions/element_info.py:121 lib/extensions/element_info.py:161
 msgid "Jumps"
-msgstr ""
+msgstr "跳针"
 
 #: lib/extensions/element_info.py:129 lib/extensions/element_info.py:177
 msgid "Min stitch length"
@@ -2646,15 +2646,15 @@ msgstr "颜色"
 
 #: lib/extensions/element_info.py:157
 msgid "Color Changes"
-msgstr ""
+msgstr "换色"
 
 #: lib/extensions/element_info.py:165
 msgid "Trims"
-msgstr ""
+msgstr "剪线"
 
 #: lib/extensions/element_info.py:169
 msgid "Stops"
-msgstr ""
+msgstr "停止"
 
 #: lib/extensions/element_info.py:185
 msgid "Filter stitches smaller than (mm)"
@@ -2782,25 +2782,25 @@ msgstr ""
 
 #: lib/extensions/params.py:275
 msgid "These settings will be applied to 1 object."
-msgstr ""
+msgstr "该设定将作用于1个对象。"
 
 #: lib/extensions/params.py:277
 #, python-format
 msgid "These settings will be applied to %d objects."
-msgstr ""
+msgstr "该设定将作用于%d个对象。"
 
 #: lib/extensions/params.py:282
 msgid "Some settings had different values across objects.  Select a value from the dropdown or enter a new one."
-msgstr ""
+msgstr "对象中存在不同的参数设定，请填写或从下拉选项中设定一个值。"
 
 #: lib/extensions/params.py:287
 #, python-format
 msgid "Disabling this tab will disable the following %d tabs."
-msgstr ""
+msgstr "禁用该页设定将同时禁用后续%d页设定。"
 
 #: lib/extensions/params.py:291
 msgid "Disabling this tab will disable the following tab."
-msgstr ""
+msgstr "禁用该页设定将同时禁用后续页设定。"
 
 #: lib/extensions/params.py:295
 #, python-format
@@ -2809,11 +2809,11 @@ msgstr ""
 
 #: lib/extensions/params.py:353
 msgid "Inkscape objects"
-msgstr ""
+msgstr "Inkscape对象"
 
 #: lib/extensions/params.py:412
 msgid "No options available"
-msgstr ""
+msgstr "没用可用选项"
 
 #: lib/extensions/params.py:432
 msgid "Re-roll"
@@ -2825,7 +2825,7 @@ msgstr ""
 
 #: lib/extensions/params.py:470
 msgid "This parameter will be saved when you click \"Apply and Quit\""
-msgstr ""
+msgstr "点击“应用并关闭”保存所有参数"
 
 #: lib/extensions/params.py:497 lib/gui/lettering.py:100
 #: lib/gui/tartan/main_panel.py:68 print/templates/custom-page.html:23
@@ -2833,19 +2833,19 @@ msgstr ""
 #: print/templates/ui.html:102 print/templates/ui.html:106
 #: print/templates/ui.html:112
 msgid "Cancel"
-msgstr ""
+msgstr "取消"
 
 #: lib/extensions/params.py:502
 msgid "Use Last Settings"
-msgstr ""
+msgstr "沿用上次设定"
 
 #: lib/extensions/params.py:505 lib/gui/lettering.py:104
 msgid "Apply and Quit"
-msgstr ""
+msgstr "应用并关闭"
 
 #: lib/extensions/params.py:786
 msgid "Embroidery Params"
-msgstr ""
+msgstr "刺绣参数"
 
 #: lib/extensions/reorder.py:20
 msgid "Please select at least two elements to reorder."
@@ -2923,11 +2923,11 @@ msgstr ""
 
 #: lib/extensions/troubleshoot.py:120 lib/extensions/troubleshoot.py:164
 msgid "Errors"
-msgstr ""
+msgstr "错误"
 
 #: lib/extensions/troubleshoot.py:126 lib/extensions/troubleshoot.py:168
 msgid "Warnings"
-msgstr ""
+msgstr "警告"
 
 #: lib/extensions/troubleshoot.py:132
 msgid "Type Warnings"
@@ -2955,6 +2955,10 @@ msgstr ""
 
 #: lib/extensions/troubleshoot.py:193
 msgid "It is possible, that one object contains more than one error, yet there will be only one pointer per object.  Run this function again, when further errors occur.  Remove pointers by deleting the layer named \"Troubleshoot\" through the objects panel (Object -> Objects...)."
+msgstr ""
+
+#: lib/extensions/unlink_clone.py:27
+msgid "Please select one or more clones to unlink."
 msgstr ""
 
 #: lib/extensions/update_svg.py:23
@@ -3212,25 +3216,25 @@ msgstr "预设“%s”已存在。 请使用其他名称或按“覆盖”"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command label at bottom of simulator window
-#: lib/gui/simulator.py:22 electron/src/renderer/assets/js/simulator.js:147
+#: lib/gui/simulator.py:22 electron/src/renderer/assets/js/simulator.js:136
 #: inx/inkstitch_output_GCODE.inx:29
 msgid "STITCH"
 msgstr "针迹"
 
-#: lib/gui/simulator.py:22 electron/src/renderer/assets/js/simulator.js:150
+#: lib/gui/simulator.py:22 electron/src/renderer/assets/js/simulator.js:139
 msgid "JUMP"
 msgstr "跳跃"
 
-#: lib/gui/simulator.py:22 electron/src/renderer/assets/js/simulator.js:153
+#: lib/gui/simulator.py:22 electron/src/renderer/assets/js/simulator.js:142
 msgid "TRIM"
 msgstr "剪线"
 
-#: lib/gui/simulator.py:22 electron/src/renderer/assets/js/simulator.js:156
+#: lib/gui/simulator.py:22 electron/src/renderer/assets/js/simulator.js:145
 #: inx/inkstitch_output_GCODE.inx:33
 msgid "STOP"
 msgstr "停止"
 
-#: lib/gui/simulator.py:22 electron/src/renderer/assets/js/simulator.js:159
+#: lib/gui/simulator.py:22 electron/src/renderer/assets/js/simulator.js:148
 #: inx/inkstitch_output_GCODE.inx:31
 msgid "COLOR CHANGE"
 msgstr "颜色变化"
@@ -3245,11 +3249,11 @@ msgstr "加速（向上箭头）"
 
 #: lib/gui/simulator.py:68
 msgid "Go backward one stitch (-)"
-msgstr ""
+msgstr "后退一针 (-)"
 
 #: lib/gui/simulator.py:72
 msgid "Go forward one stitch (+)"
-msgstr ""
+msgstr "前进一针 (+)"
 
 #: lib/gui/simulator.py:76
 msgid "Go backward one command (page-down)"
@@ -3265,7 +3269,7 @@ msgstr ""
 
 #: lib/gui/simulator.py:88
 msgid "Play (P)"
-msgstr ""
+msgstr "运行 (P)"
 
 #: lib/gui/simulator.py:92
 msgid "Restart (R)"
@@ -3277,19 +3281,19 @@ msgstr "显示进针点（O）"
 
 #: lib/gui/simulator.py:108
 msgid "Show jump stitches"
-msgstr ""
+msgstr "显示跳针"
 
 #: lib/gui/simulator.py:112
 msgid "Show trims"
-msgstr ""
+msgstr "显示剪线"
 
 #: lib/gui/simulator.py:116
 msgid "Show stops"
-msgstr ""
+msgstr "显示停止"
 
 #: lib/gui/simulator.py:120
 msgid "Show color changes"
-msgstr ""
+msgstr "显示换色"
 
 #: lib/gui/simulator.py:125
 msgid "Detach/attach simulator window"
@@ -3305,17 +3309,17 @@ msgstr "显示"
 
 #: lib/gui/simulator.py:161
 msgid "Speed"
-msgstr ""
+msgstr "速度"
 
 #: lib/gui/simulator.py:314
 #, python-format
 msgid "%d stitches/sec"
-msgstr ""
+msgstr "%d 针/每秒"
 
 #: lib/gui/simulator.py:723
 #, python-format
 msgid "Command: %s"
-msgstr ""
+msgstr "命令: %s"
 
 #: lib/gui/simulator.py:1047
 msgid "Embroidery Simulation"
@@ -3514,7 +3518,7 @@ msgstr ""
 
 #: lib/gui/tartan/main_panel.py:70 lib/gui/test_swatches.py:117
 msgid "Apply"
-msgstr ""
+msgstr "应用"
 
 #: lib/gui/warnings.py:21
 msgid "An error occurred while rendering the stitch plan:"
@@ -3588,31 +3592,31 @@ msgstr ""
 
 #: lib/stitch_plan/lock_stitch.py:203
 msgid "Half Stitch"
-msgstr ""
+msgstr "半针"
 
 #: lib/stitch_plan/lock_stitch.py:204
 msgid "Arrow"
-msgstr ""
+msgstr "箭头"
 
 #: lib/stitch_plan/lock_stitch.py:205
 msgid "Back and forth"
-msgstr ""
+msgstr "来回"
 
 #: lib/stitch_plan/lock_stitch.py:206
 msgid "Bowtie"
-msgstr ""
+msgstr "领结"
 
 #: lib/stitch_plan/lock_stitch.py:207
 msgid "Cross"
-msgstr ""
+msgstr "交叉"
 
 #: lib/stitch_plan/lock_stitch.py:208
 msgid "Star"
-msgstr ""
+msgstr "星形"
 
 #: lib/stitch_plan/lock_stitch.py:210
 msgid "Triangle"
-msgstr ""
+msgstr "三角形"
 
 #: lib/stitch_plan/stitch_plan.py:28
 msgid "There is no selected stitchable element. Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects in case you have expected a stitchout."
@@ -3703,12 +3707,12 @@ msgstr ""
 #: print/templates/color_swatch.html:24 print/templates/color_swatch.html:45
 #: print/templates/operator_detailedview.html:68
 msgid "yes"
-msgstr ""
+msgstr "是"
 
 #: print/templates/color_swatch.html:24 print/templates/color_swatch.html:45
 #: print/templates/operator_detailedview.html:68
 msgid "no"
-msgstr ""
+msgstr "否"
 
 #: print/templates/color_swatch.html:40
 #: print/templates/operator_detailedview.html:57
@@ -3728,7 +3732,7 @@ msgstr ""
 
 #: print/templates/custom-page.html:26 print/templates/ui.html:105
 msgid "Enter E-Mail"
-msgstr ""
+msgstr "输入邮箱"
 
 #: print/templates/custom-page.html:29 print/templates/custom-page.html:36
 msgid "Custom Information Sheet"
@@ -3740,7 +3744,7 @@ msgstr ""
 
 #: print/templates/custom-page.html:32 print/templates/ui.html:111
 msgid "All changes will be lost."
-msgstr ""
+msgstr "所有修改将会丢失。"
 
 #: print/templates/footer.html:2
 msgid "Page"
@@ -4892,6 +4896,7 @@ msgstr "重复参数"
 #: inx/inkstitch_select_elements.inx:101
 #: inx/inkstitch_selection_to_guide_line.inx:10
 #: inx/inkstitch_selection_to_pattern.inx:10 inx/inkstitch_test_swatches.inx:10
+#: inx/inkstitch_unlink_clone.inx:11
 msgid "Edit"
 msgstr "编辑"
 
@@ -6615,6 +6620,14 @@ msgstr ""
 
 #: inx/inkstitch_troubleshoot.inx:7
 msgid "Font size (mm)"
+msgstr ""
+
+#: inx/inkstitch_unlink_clone.inx:3
+msgid "Unlink Clone"
+msgstr ""
+
+#: inx/inkstitch_unlink_clone.inx:6
+msgid "Recursive"
 msgstr ""
 
 #: inx/inkstitch_update_svg.inx:3

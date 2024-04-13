@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-04-07 01:10+0000\n"
-"PO-Revision-Date: 2024-04-11 01:06\n"
+"POT-Creation-Date: 2024-04-13 00:55+0000\n"
+"PO-Revision-Date: 2024-04-13 00:56\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-07 01:10+0000\n"
+"POT-Creation-Date: 2024-04-13 00:55+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1117,8 +1117,8 @@ msgid "Clone Object"
 msgstr "Cloner l'objet"
 
 #: lib/elements/clone.py:28
-msgid "There are one or more clone objects in this document.  Ink/Stitch can work with single clones, but you are limited to set a very few parameters. "
-msgstr "Ce document contient un ou plusieurs objets clonés.  Ink/Stitch peut fonctionner avec des clones uniques, mais vous êtes limité à la définition de quelques paramètres. "
+msgid "There are one or more clone objects in this document.  Ink/Stitch can work with clones, but you are limited to set a very few parameters. "
+msgstr ""
 
 #: lib/elements/clone.py:31
 msgid "If you want to convert the clone into a real element, follow these steps:"
@@ -1129,8 +1129,8 @@ msgid "* Select the clone"
 msgstr "* Sélectionner le clone"
 
 #: lib/elements/clone.py:33
-msgid "* Run: Edit > Clone > Unlink Clone (Alt+Shift+D)"
-msgstr "* Exécutez : Édition > Cloner > Délier le clone (Alt+Shift+D)"
+msgid "* Run: Extensions > Ink/Stitch > Edit > Unlink Clone"
+msgstr ""
 
 #: lib/elements/clone.py:44 inx/inkstitch_select_elements.inx:72
 #: inx/inkstitch_select_elements.inx:73
@@ -2963,6 +2963,10 @@ msgstr "Solutions possibles"
 msgid "It is possible, that one object contains more than one error, yet there will be only one pointer per object.  Run this function again, when further errors occur.  Remove pointers by deleting the layer named \"Troubleshoot\" through the objects panel (Object -> Objects...)."
 msgstr "Il est possible qu'un objet contienne plus d'une erreur, même s'il n'y a qu'un conseil par objet. Relancer cette fonction quand il y a plus d'erreurs. Enlever les conseils en supprimant le calque \"Résolution de problèmes\" dans le dialogue objets (Objet -> Objets...)."
 
+#: lib/extensions/unlink_clone.py:27
+msgid "Please select one or more clones to unlink."
+msgstr ""
+
 #: lib/extensions/update_svg.py:23
 msgid "Please select at least one element to update. This extension is designed to help you update copy and pasted elements from old designs."
 msgstr "Merci de sélectionner au moins un élément à mettre à jour. Cette extension est prévue pour vous aider à copier/coller des éléments d'anciens dessins."
@@ -3219,25 +3223,25 @@ msgstr "Le préréglage \"%s\" existe déjà. Veuillez utiliser un autre nom ou 
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command label at bottom of simulator window
-#: lib/gui/simulator.py:22 electron/src/renderer/assets/js/simulator.js:147
+#: lib/gui/simulator.py:22 electron/src/renderer/assets/js/simulator.js:136
 #: inx/inkstitch_output_GCODE.inx:29
 msgid "STITCH"
 msgstr "BRODER"
 
-#: lib/gui/simulator.py:22 electron/src/renderer/assets/js/simulator.js:150
+#: lib/gui/simulator.py:22 electron/src/renderer/assets/js/simulator.js:139
 msgid "JUMP"
 msgstr "SAUT"
 
-#: lib/gui/simulator.py:22 electron/src/renderer/assets/js/simulator.js:153
+#: lib/gui/simulator.py:22 electron/src/renderer/assets/js/simulator.js:142
 msgid "TRIM"
 msgstr "COUPURE"
 
-#: lib/gui/simulator.py:22 electron/src/renderer/assets/js/simulator.js:156
+#: lib/gui/simulator.py:22 electron/src/renderer/assets/js/simulator.js:145
 #: inx/inkstitch_output_GCODE.inx:33
 msgid "STOP"
 msgstr "STOP"
 
-#: lib/gui/simulator.py:22 electron/src/renderer/assets/js/simulator.js:159
+#: lib/gui/simulator.py:22 electron/src/renderer/assets/js/simulator.js:148
 #: inx/inkstitch_output_GCODE.inx:31
 msgid "COLOR CHANGE"
 msgstr "CHANGEMENT COULEUR"
@@ -4902,6 +4906,7 @@ msgstr "Dupliquer les paramètres"
 #: inx/inkstitch_select_elements.inx:101
 #: inx/inkstitch_selection_to_guide_line.inx:10
 #: inx/inkstitch_selection_to_pattern.inx:10 inx/inkstitch_test_swatches.inx:10
+#: inx/inkstitch_unlink_clone.inx:11
 msgid "Edit"
 msgstr "Édition"
 
@@ -6626,6 +6631,14 @@ msgstr "Taille du pointeur (mm)"
 #: inx/inkstitch_troubleshoot.inx:7
 msgid "Font size (mm)"
 msgstr "Taille de la fonte (mm)"
+
+#: inx/inkstitch_unlink_clone.inx:3
+msgid "Unlink Clone"
+msgstr ""
+
+#: inx/inkstitch_unlink_clone.inx:6
+msgid "Recursive"
+msgstr ""
 
 #: inx/inkstitch_update_svg.inx:3
 msgid "Update inkstitch svg"

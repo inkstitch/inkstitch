@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-04-07 01:10+0000\n"
-"PO-Revision-Date: 2024-04-07 01:11\n"
+"POT-Creation-Date: 2024-04-13 00:55+0000\n"
+"PO-Revision-Date: 2024-04-13 00:56\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-07 01:10+0000\n"
+"POT-Creation-Date: 2024-04-13 00:55+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1116,8 +1116,8 @@ msgid "Clone Object"
 msgstr "Объект-клон"
 
 #: lib/elements/clone.py:28
-msgid "There are one or more clone objects in this document.  Ink/Stitch can work with single clones, but you are limited to set a very few parameters. "
-msgstr "В дизайне присутствуют один или более объектов-клонов. Ink/Stitch может работать с простыми клонами, но вы ограничены очень небольшим списком парметров. "
+msgid "There are one or more clone objects in this document.  Ink/Stitch can work with clones, but you are limited to set a very few parameters. "
+msgstr ""
 
 #: lib/elements/clone.py:31
 msgid "If you want to convert the clone into a real element, follow these steps:"
@@ -1128,8 +1128,8 @@ msgid "* Select the clone"
 msgstr "* Выберите клон"
 
 #: lib/elements/clone.py:33
-msgid "* Run: Edit > Clone > Unlink Clone (Alt+Shift+D)"
-msgstr "* Выберите: Правка > Клоны > Отсоединить клон (Alt+Shift+D)"
+msgid "* Run: Extensions > Ink/Stitch > Edit > Unlink Clone"
+msgstr ""
 
 #: lib/elements/clone.py:44 inx/inkstitch_select_elements.inx:72
 #: inx/inkstitch_select_elements.inx:73
@@ -2955,6 +2955,10 @@ msgstr ""
 msgid "It is possible, that one object contains more than one error, yet there will be only one pointer per object.  Run this function again, when further errors occur.  Remove pointers by deleting the layer named \"Troubleshoot\" through the objects panel (Object -> Objects...)."
 msgstr "Возможно, что один объект содержит более одной ошибки, но на каждый объект устанавливается только один указатель. Запустите эту функцию снова, когда будут возникать новые ошибки. Удалите указатели путём удаления слоя с именем \"Решение проблем\" через панель объектов  (Объект -> Объекты...)."
 
+#: lib/extensions/unlink_clone.py:27
+msgid "Please select one or more clones to unlink."
+msgstr ""
+
 #: lib/extensions/update_svg.py:23
 msgid "Please select at least one element to update. This extension is designed to help you update copy and pasted elements from old designs."
 msgstr ""
@@ -3210,25 +3214,25 @@ msgstr "Предустановка с именем \"%s\" уже существ�
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command label at bottom of simulator window
-#: lib/gui/simulator.py:22 electron/src/renderer/assets/js/simulator.js:147
+#: lib/gui/simulator.py:22 electron/src/renderer/assets/js/simulator.js:136
 #: inx/inkstitch_output_GCODE.inx:29
 msgid "STITCH"
 msgstr "СТЕЖОК"
 
-#: lib/gui/simulator.py:22 electron/src/renderer/assets/js/simulator.js:150
+#: lib/gui/simulator.py:22 electron/src/renderer/assets/js/simulator.js:139
 msgid "JUMP"
 msgstr "ПРЫЖОК"
 
-#: lib/gui/simulator.py:22 electron/src/renderer/assets/js/simulator.js:153
+#: lib/gui/simulator.py:22 electron/src/renderer/assets/js/simulator.js:142
 msgid "TRIM"
 msgstr "ОБРЕЗКА"
 
-#: lib/gui/simulator.py:22 electron/src/renderer/assets/js/simulator.js:156
+#: lib/gui/simulator.py:22 electron/src/renderer/assets/js/simulator.js:145
 #: inx/inkstitch_output_GCODE.inx:33
 msgid "STOP"
 msgstr "СТОП"
 
-#: lib/gui/simulator.py:22 electron/src/renderer/assets/js/simulator.js:159
+#: lib/gui/simulator.py:22 electron/src/renderer/assets/js/simulator.js:148
 #: inx/inkstitch_output_GCODE.inx:31
 msgid "COLOR CHANGE"
 msgstr "СМЕНА ЦВЕТА"
@@ -4891,6 +4895,7 @@ msgstr "Дублировать параметры"
 #: inx/inkstitch_select_elements.inx:101
 #: inx/inkstitch_selection_to_guide_line.inx:10
 #: inx/inkstitch_selection_to_pattern.inx:10 inx/inkstitch_test_swatches.inx:10
+#: inx/inkstitch_unlink_clone.inx:11
 msgid "Edit"
 msgstr "Правка"
 
@@ -6614,6 +6619,14 @@ msgstr ""
 
 #: inx/inkstitch_troubleshoot.inx:7
 msgid "Font size (mm)"
+msgstr ""
+
+#: inx/inkstitch_unlink_clone.inx:3
+msgid "Unlink Clone"
+msgstr ""
+
+#: inx/inkstitch_unlink_clone.inx:6
+msgid "Recursive"
 msgstr ""
 
 #: inx/inkstitch_update_svg.inx:3
