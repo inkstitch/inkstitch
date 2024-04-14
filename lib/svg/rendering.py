@@ -60,7 +60,7 @@ realistic_filter = """
          result="result2"
          specularConstant="0.78"
          surfaceScale="3"
-         specularExponent="1">
+         specularExponent="2.5">
         <fePointLight
            id="fePointLight1975"
            z="10"
