@@ -23,6 +23,7 @@ class StitchPlanPreview(InkstitchExtension):
         self.arg_parser.add_argument("-i", "--insensitive", type=Boolean, default=False, dest="insensitive")
         self.arg_parser.add_argument("-c", "--visual-commands", type=Boolean, default="symbols", dest="visual_commands")
         self.arg_parser.add_argument("-o", "--overwrite", type=Boolean, default=True, dest="overwrite")
+        self.arg_parser.add_argument("-r", "--realistic", type=Boolean, default=True, dest="realistic")
 
     def effect(self):
         # delete old stitch plan
@@ -33,7 +34,7 @@ class StitchPlanPreview(InkstitchExtension):
             return
 
         svg = self.document.getroot()
-        realistic = False
+        realistic = self.options.realistic
         visual_commands = self.options.visual_commands
         self.metadata = self.get_inkstitch_metadata()
         collapse_len = self.metadata['collapse_len_mm']

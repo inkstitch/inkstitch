@@ -35,78 +35,42 @@ stitch_height = 1.216
 # the axes of the stitch itself.  That means that having a big enough value
 # to add enough padding on the long sides of the stitch would waste a ton
 # of space on the short sides and significantly slow down rendering.
+# The whiskers can probably be removed with the explicit filter size declaration below.
 stitch_path = "M0,0c0.4,0,0.4,0.3,0.4,0.6c0,0.3,-0.1,0.6,-0.4,0.6v0.2,-0.2h-%sc-0.4,0,-0.4,-0.3,-0.4,-0.6c0,-0.3,0.1,-0.6,0.4,-0.6v-0.2,0.2z"
 
-# This filter makes the above stitch path look like a real stitch with lighting.
+# The filter size is 2% larger, because otherwise the edges get artifacting from boundary conditions.
+# Inkscape may or may not respect the edgeMode attribute for feGaussianBlur.
+# It seems like values less than 0.01 for x and y may be ignored, so 1% on each side is the effective minimum.
 realistic_filter = """
     <filter
        style="color-interpolation-filters:sRGB"
        id="realistic-stitch-filter"
-       x="-0.1"
-       width="1.2"
-       y="-0.1"
-       height="1.2">
+       x="-0.01"
+       width="1.02"
+       y="-0.01"
+       height="1.02"
+       inkscape:auto-region="false">
       <feGaussianBlur
-         stdDeviation="1.5"
+         edgeMode="none"
+         stdDeviation="0.9"
          id="feGaussianBlur1542-6"
          in="SourceAlpha" />
-      <feComponentTransfer
-         id="feComponentTransfer1544-7"
-         result="result1">
-        <feFuncR
-           id="feFuncR1546-5"
-           type="identity" />
-        <feFuncG
-           id="feFuncG1548-3"
-           type="identity" />
-        <feFuncB
-           id="feFuncB1550-5"
-           type="identity"
-           slope="4.5300000000000002" />
-        <feFuncA
-           id="feFuncA1552-6"
-           type="gamma"
-           slope="0.14999999999999999"
-           intercept="0"
-           amplitude="3.1299999999999999"
-           offset="-0.33000000000000002" />
-      </feComponentTransfer>
-      <feComposite
-         in2="SourceAlpha"
-         id="feComposite1558-2"
-         operator="in" />
-      <feGaussianBlur
-         stdDeviation="0.089999999999999997"
-         id="feGaussianBlur1969" />
-      <feMorphology
-         id="feMorphology1971"
-         operator="dilate"
-         radius="0.10000000000000001" />
       <feSpecularLighting
          id="feSpecularLighting1973"
          result="result2"
-         specularConstant="0.70899999"
-         surfaceScale="30">
+         specularConstant="0.78"
+         surfaceScale="3"
+         specularExponent="1">
         <fePointLight
            id="fePointLight1975"
-           z="10" />
+           z="10"
+           y="0"
+           x="12" />
       </feSpecularLighting>
-      <feGaussianBlur
-         stdDeviation="0.040000000000000001"
-         id="feGaussianBlur1979" />
-      <feComposite
-         in2="SourceGraphic"
-         id="feComposite1977"
-         operator="arithmetic"
-         k2="1"
-         k3="1"
-         result="result3"
-         k1="0"
-         k4="0" />
       <feComposite
          in2="SourceAlpha"
          id="feComposite1981"
-         operator="in" />
+         operator="atop" />
     </filter>
 """
 
@@ -250,5 +214,10 @@ def render_stitch_plan(svg, stitch_plan, realistic=False, visual_commands=True):
             color_block_to_paths(color_block, svg, group, visual_commands)
 
     if realistic:
+        # Remove filter from defs, if any
+        filter: inkex.BaseElement = svg.defs.findone("//*[@id='realistic-stitch-filter']")
+        if filter is not None:
+            svg.defs.remove(filter)
+
         filter_document = inkex.load_svg(realistic_filter)
         svg.defs.append(filter_document.getroot())
