@@ -27,13 +27,13 @@
      inkscape:window-height="808"
      id="namedview201"
      showgrid="true"
-     inkscape:zoom="5.8245206"
-     inkscape:cx="25.238129"
-     inkscape:cy="58.717279"
+     inkscape:zoom="14.242773"
+     inkscape:cx="18.465505"
+     inkscape:cy="81.234181"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g315"
+     inkscape:current-layer="g343"
      inkscape:document-rotation="0"
      inkscape:lockguides="true"
      inkscape:snap-global="false"
@@ -253,7 +253,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <g
        id="g37">
       <path
@@ -284,7 +285,8 @@ SIL Open Font License (OFL)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:short_stitch_distance_mm="0.21"
          inkstitch:contour_underlay_stitch_length_mm="1.5"
-         inkstitch:short_stitch_inset="15" />
+         inkstitch:short_stitch_inset="15"
+         inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     </g>
   </g>
   <g
@@ -313,7 +315,8 @@ SIL Open Font License (OFL)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:short_stitch_distance_mm="0.21"
          inkstitch:contour_underlay_stitch_length_mm="1.5"
-         inkstitch:short_stitch_inset="15" />
+         inkstitch:short_stitch_inset="15"
+         inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     </g>
     <path
        id="autosatin4"
@@ -334,7 +337,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -379,7 +383,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        id="path3320"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.378;stroke-miterlimit:4;stroke-dasharray:0.378, 0.378;stroke-dashoffset:0"
@@ -417,7 +422,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -442,12 +448,13 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-("
-     style="display:none"
+     style="display:inline"
      id="g343">
     <path
        d="M 16.1053,99.824 15.18,99.1006 14.2293,98.424 14.144,98.36 v 0 l -0.8431,-0.633 -0.879,-0.7836 -0.7763,-0.8845 -0.1907,-0.2496 v 0 L 10.9284,95.1202 10.2639,94.1444 9.61292,93.159 9.36942,92.7292 v 0 L 9.03182,92.1332 8.50945,91.0731 8.0337,89.9967 7.83427,89.3474 v 0 L 7.68791,88.871 7.36828,87.7345 7.05144,86.5976 6.92145,85.7438 v 0 L 6.87378,85.4308 6.70625,84.2615 6.54247,83.0917 6.46775,82.0507 v 0 L 6.45791,81.9136 6.38756,80.7345 6.34426,79.5538 6.32208,78.3725 6.32244,78.3313 v 0 l 0.00996,-1.14 0.03644,-1.1812 0.03645,-1.1813 0.0232,-0.2179 v 0 l 0.10184,-0.9566 0.13069,-1.174 0.15101,-1.1718 0.05625,-0.3941 v 0 l 0.11073,-0.7758 0.2027,-1.1637 0.23487,-1.1582 0.11449,-0.5647 v 0 l 0.12038,-0.5935 0.26257,-1.152 0.29881,-1.1287 0.20718,-0.7396 v 0 l 0.10574,-0.3774 0.33398,-1.1111 0.33398,-1.1111 0.33848,-0.9521 v 0 l 0.05007,-0.1408 0.39204,-1.0918 0.392,-1.0918 0.3946,-1.0908 0.0343,-0.0868 v 0 l 0.3913,-0.9925 0.4365,-1.0745 0.4558,-1.0642 0.1312,-0.312 v 0 l 0.317,-0.7542 0.4547,-1.062 0.4396,-1.0667 0.2413,-0.5446 v 0 l 0.224,-0.5057 0.5168,-1.0176 0.5167,-1.0175 0.4255,-0.7786 v 0 l 0.1217,-0.2226 0.6341,-0.9579 0.6342,-0.9578 0.6341,-0.9579 0.013,-0.0188 v 0 l 0.6442,-0.9266 0.702,-0.9172 0.7088,-0.9112 0.1749,-0.2249 v 0 l 0.5338,-0.6863 0.74,-0.889 0.773,-0.8819 0.3685,-0.3724 v 0 l 0.4333,-0.4379 0.8064,-0.8054 0.8461,-0.7688 0.641,-0.5175 v 0 l 0.2474,-0.1997 0.9029,-0.6956"
@@ -479,7 +486,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -516,7 +524,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -541,7 +550,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -566,7 +576,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -591,7 +602,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -626,7 +638,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -662,7 +675,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        id="autosatinrun4"
        style="fill:none;stroke:#000000;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -691,7 +705,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -737,7 +752,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin8"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none"
@@ -757,7 +773,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        id="autosatinrun8"
        style="fill:none;stroke:#000000;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -786,7 +803,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -822,7 +840,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        id="path9521"
        style="fill:none;stroke:#000000;stroke-width:0.378;stroke-miterlimit:4;stroke-dasharray:0.378, 0.378;stroke-dashoffset:0;stroke-opacity:1"
@@ -868,7 +887,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        d="m 34.969556,74.68369 c 1.221457,-0.0777 4.154833,-3.587639 4.228894,-4.978621 0.129684,-1.468898 0.07546,-2.961855 -0.21279,-4.408691 -0.424504,-1.809104 -1.117997,-3.550529 -2.015173,-5.175791 -0.557079,-1.050748 -1.224012,-2.033754 -1.929002,-2.98988 -0.757213,-0.929415 -1.54025,-1.866405 -2.520679,-2.568981 -0.784697,-0.562908 -1.648624,-1.009228 -2.569776,-1.301345 -0.07935,-0.02913 -3.148226,-3.109484 -3.228235,-3.136754"
        style="fill:none;stroke:#000000;stroke-width:0.344606;stroke-miterlimit:4;stroke-dasharray:0.455885, 0.455885"
@@ -909,7 +929,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        d="M 28.437,52.2556 25.4896,50.7672"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
@@ -947,7 +968,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        d="m 28.437,52.2559 1.7209,-1.0345"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
@@ -975,7 +997,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1011,7 +1034,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        d="m 26.392252,58.109156 6.810424,-3.299956 1.1722,0.0177 0.5269,-0.0167 v 0 l 0.6545,-0.0208 1.1367,-0.0536 0.387417,-0.0101"
        style="fill:none;stroke:#000000;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -1042,7 +1066,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.377953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
        d="M 31.791192,54.00188 29.108224,53.21992 31.20538,25.734538"
@@ -1071,7 +1096,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.377953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
        d="m 27.330102,81.32148 -1.260864,9.61733"
@@ -1100,7 +1126,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1136,7 +1163,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        d="m 35.148758,75.564795 c 2.197505,0.281259 5.088861,-1.355046 5.902851,-3.470931 0.827897,-2.008389 1.476599,-4.112116 1.705181,-6.279698 0.112692,-3.167484 -0.32922,-6.389932 -1.45251,-9.363486 -1.16448,-2.752708 -3.176461,-5.256257 -5.933567,-6.523712 -2.38466,-1.198661 -5.103583,-1.378161 -7.728039,-1.330812 -4.196921,0.08404 -8.361643,0.701726 -12.480004,1.48194 -0.921391,0.158319 -1.848471,0.281025 -2.772594,0.422104"
        style="fill:none;stroke:#000000;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -1188,7 +1216,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        d="m 14.0357,25.1367 -3.8553,4.618"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
@@ -1216,7 +1245,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin36"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none"
@@ -1236,7 +1266,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        d="M 5.9256982,49.306494 8.95337,51.152909 C 8.8374701,51.917583 8.7980012,51.435758 8.696676,52.2025 l -0.2991,0.7221"
        style="fill:none;stroke:#000000;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -1267,7 +1298,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin38"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none"
@@ -1287,7 +1319,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1322,7 +1355,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        id="autosatinrun33"
        style="fill:none;stroke:#000000;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -1352,7 +1386,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1386,7 +1421,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        d="m 32.327903,49.443237 c 2.437891,0.04031 5.735559,1.997432 8.046435,2.862258 1.039113,0.224541 2.090849,0.544401 3.128938,0.681505"
        style="fill:none;stroke:#000000;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -1416,7 +1452,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
        d="m 36.872167,54.520077 c 0.303466,-0.648823 -0.423199,-6.768054 -0.103602,-7.408721 1.426717,-2.860015 2.986358,-5.652536 4.430683,-8.50052 0.746931,-1.620751 1.458598,-3.313118 1.805987,-5.058737 0.226887,-1.08711 -0.589465,-1.946844 -0.955159,-2.904799 -4.663198,0.345079 -9.331623,0.639514 -13.9981,0.9382 C 21.394674,31.915379 14.742111,31.395398 8.1132303,30.828528 6.6666833,30.719837 5.2132507,30.786621 3.771377,30.6269"
@@ -1445,7 +1482,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin48"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none"
@@ -1464,7 +1502,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        d="m 23.15646,79.417264 c -0.25979,0.583228 -3.797795,1.569394 -4.096344,2.128807 -0.846573,1.586288 -1.837294,3.084798 -2.90594,4.540729"
        style="fill:none;stroke:#000000;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -1494,7 +1533,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1529,7 +1569,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        id="autosatinrun38"
        style="fill:none;stroke:#000000;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -1558,7 +1599,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1584,7 +1626,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        d="m 21.92634,75.621401 c 3.416066,0.37495 7.381026,-3.846811 8.97465,-7.342951 1.193798,-2.999682 2.008534,-6.13469 2.961761,-9.215778 1.46596,-5.169094 2.569909,-10.581228 2.002003,-15.973182 -0.466713,-4.274183 -2.390456,-8.553753 -5.802444,-11.259689 -3.235215,-2.091291 -7.235993,-2.798907 -11.033537,-2.4679 -3.128488,0.515611 -6.257999,1.340951 -8.94963,3.076367 -2.5645507,1.599415 -5.184618,3.783876 -5.7794429,6.910138 -0.838939,3.732093 0.6279803,7.671924 3.1202187,10.463928 2.8008912,3.06784 7.0604872,4.598938 11.1755362,4.266775 2.571445,-0.108031 5.00963,-1.002759 7.481504,-1.608646 0.264606,-0.03729 0.529211,-0.07459 0.793817,-0.111883"
        style="fill:none;stroke:#000000;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -1615,7 +1658,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1640,7 +1684,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <g
        id="g35">
       <path
@@ -1669,7 +1714,8 @@ SIL Open Font License (OFL)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:short_stitch_distance_mm="0.21"
          inkstitch:contour_underlay_stitch_length_mm="1.5"
-         inkstitch:short_stitch_inset="15" />
+         inkstitch:short_stitch_inset="15"
+         inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     </g>
   </g>
   <g
@@ -1695,7 +1741,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <g
        id="g34">
       <path
@@ -1724,7 +1771,8 @@ SIL Open Font License (OFL)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:short_stitch_distance_mm="0.21"
          inkstitch:contour_underlay_stitch_length_mm="1.5"
-         inkstitch:short_stitch_inset="15" />
+         inkstitch:short_stitch_inset="15"
+         inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     </g>
   </g>
   <g
@@ -1750,7 +1798,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <g
        id="g33">
       <path
@@ -1771,7 +1820,8 @@ SIL Open Font License (OFL)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:short_stitch_distance_mm="0.21"
          inkstitch:contour_underlay_stitch_length_mm="1.5"
-         inkstitch:short_stitch_inset="15" />
+         inkstitch:short_stitch_inset="15"
+         inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     </g>
   </g>
   <g
@@ -1797,7 +1847,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <g
        id="g32">
       <path
@@ -1828,7 +1879,8 @@ SIL Open Font License (OFL)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:short_stitch_distance_mm="0.21"
          inkstitch:contour_underlay_stitch_length_mm="1.5"
-         inkstitch:short_stitch_inset="15" />
+         inkstitch:short_stitch_inset="15"
+         inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     </g>
   </g>
   <g
@@ -1865,7 +1917,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        d="M 33.2373,51.5614 35.129524,59.206175 36.0095,48.6399"
        style="fill:none;stroke:#000000;stroke-width:0.5;stroke-dasharray:3, 1"
@@ -1893,7 +1946,8 @@ SIL Open Font License (OFL)
        inkstitch:zigzag_spacing_mm="0.30"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        id="autosatinrun45"
        style="fill:none;stroke:#000000;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -1924,7 +1978,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1959,7 +2014,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        id="autosatinrun46"
        style="fill:none;stroke:#000000;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -1999,7 +2055,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin58"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none"
@@ -2018,7 +2075,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        id="autosatinrun47"
        style="fill:none;stroke:#000000;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -2065,7 +2123,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        d="M 49.465304,89.735734 C 60.550306,88.194731 63.94192,77.587526 65.584831,71.020492"
        style="font-variation-settings:normal;display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
@@ -2129,7 +2188,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        id="autosatinrun48"
        style="fill:none;stroke:#000000;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -2159,7 +2219,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin62"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none"
@@ -2178,7 +2239,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
        d="m 36.356598,53.752884 c 1.492121,-3.216813 3.149213,-7.512435 4.563834,-9.989325 1.099665,-1.904452 2.262874,-3.803393 2.876764,-5.933346 0.506982,-1.609554 1.350843,-4.561452 1.117246,-6.261712 -0.149288,-0.681551 -0.392058,-1.324733 -0.774683,-1.910493 -0.434491,-0.599391 -1.004541,-1.091869 -1.653412,-1.453131 -0.858391,-0.521762 -1.819126,-0.736673 -2.804985,-0.872351 -1.726183,-0.263686 -3.742679,0.727103 -5.625823,1.378455 -4.981006,1.975459 -6.430853,3.347493 -8.290474,4.672682 -1.376964,1.192241 -2.52971,2.608568 -3.674589,4.017567"
@@ -2214,7 +2276,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.51181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.02362, 1.51181;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 36.07539,54.657862 c 8.002148,0.814382 14.02108,4.892209 15.760211,9.537655"
@@ -2244,7 +2307,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        d="M 26.492277,95.507692 C 0.409918,99.558884 3.5977652,80.077312 23.233923,80.310396 c 5.38723,0.06395 11.11966,2.849953 17.315227,3.147777 4.057454,0.195044 8.636815,-0.914319 12.365767,-1.683846 10.453317,-2.157204 14.627838,-8.775378 15.652222,-10.72383"
        style="font-variation-settings:normal;display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
@@ -2307,7 +2371,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        d="M 46.53425,85.144784 C 53.158832,80.021708 57.515668,73.09288 58.998187,71.109301"
        style="font-variation-settings:normal;display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
@@ -2370,7 +2435,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        id="autosatinrun51"
        style="fill:none;stroke:#000000;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -2399,7 +2465,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        d="m 22.043154,32.86649 c 1.072192,-0.990405 6.841841,-3.000205 8.919681,-3.636344 2.474544,-0.757591 8.151725,-2.112274 10.184725,-2.437121"
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.51181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.02362, 1.51181;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -2432,7 +2499,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        d="M 42.138576,90.6614 C 39.126,92.114952 31.932579,95.76198 25.997982,93.901782 19.722626,91.934774 23.296829,84.91218 23.922131,84.361981 c 3.215732,-2.829498 6.691571,-4.193058 13.967713,-4.053301 5.311067,0.102013 11.123267,5.389021 16.747303,4.472458 1.318357,-0.214856 6.743449,-1.531815 10.629988,-5.146345 3.643342,-3.388354 5.167723,-5.539458 6.614527,-8.281873"
        style="font-variation-settings:normal;display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
@@ -2495,7 +2563,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        d="m 7.70388,51.7247 5.75322,2.9601"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
@@ -2535,7 +2604,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        d="m 32.400619,88.264883 c 2.343735,-1.370885 5.684052,-4.094027 8.71319,-7.400366 3.263991,-3.562685 5.043749,-6.206502 6.541846,-9.892166"
        style="font-variation-settings:normal;display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
@@ -2617,7 +2687,8 @@ SIL Open Font License (OFL)
            inkstitch:min_jump_stitch_length_mm="3"
            inkstitch:short_stitch_distance_mm="0.21"
            inkstitch:contour_underlay_stitch_length_mm="1.5"
-           inkstitch:short_stitch_inset="15" />
+           inkstitch:short_stitch_inset="15"
+           inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
       </g>
       <g
          id="g31">
@@ -2645,7 +2716,8 @@ SIL Open Font License (OFL)
            inkstitch:min_jump_stitch_length_mm="3"
            inkstitch:short_stitch_distance_mm="0.21"
            inkstitch:contour_underlay_stitch_length_mm="1.5"
-           inkstitch:short_stitch_inset="15" />
+           inkstitch:short_stitch_inset="15"
+           inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
       </g>
     </g>
     <path
@@ -2666,7 +2738,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        d="m 7.70388,51.7247 5.75322,2.9601"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
@@ -2706,7 +2779,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        d="m 32.400619,88.264883 c 2.343735,-1.370885 5.684052,-4.094027 8.71319,-7.400366 3.263991,-3.562685 5.043749,-6.206502 6.541846,-9.892166"
        style="font-variation-settings:normal;display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
@@ -2773,7 +2847,8 @@ SIL Open Font License (OFL)
          inkstitch:short_stitch_distance_mm="0.21"
          inkstitch:pull_compensation_mm="0.2"
          inkstitch:contour_underlay_stitch_length_mm="1.5"
-         inkstitch:short_stitch_inset="15" />
+         inkstitch:short_stitch_inset="15"
+         inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     </g>
     <path
        id="path52"
@@ -2793,7 +2868,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        d="m 7.70388,51.7247 5.75322,2.9601"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
@@ -2833,7 +2909,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        d="m 32.400619,88.264883 c 2.343735,-1.370885 5.684052,-4.094027 8.71319,-7.400366 3.263991,-3.562685 5.043749,-6.206502 6.541846,-9.892166"
        style="font-variation-settings:normal;display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
@@ -2899,7 +2976,8 @@ SIL Open Font License (OFL)
          inkstitch:short_stitch_distance_mm="0.21"
          inkstitch:pull_compensation_mm="0.2"
          inkstitch:contour_underlay_stitch_length_mm="1.5"
-         inkstitch:short_stitch_inset="15" />
+         inkstitch:short_stitch_inset="15"
+         inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     </g>
     <path
        id="path62"
@@ -2919,7 +2997,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        d="m 7.70388,51.7247 5.75322,2.9601"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
@@ -2959,7 +3038,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        d="m 32.400619,88.264883 c 2.343735,-1.370885 5.684052,-4.094027 8.71319,-7.400366 3.263991,-3.562685 5.043749,-6.206502 6.541846,-9.892166"
        style="font-variation-settings:normal;display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
@@ -2976,7 +3056,7 @@ SIL Open Font License (OFL)
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-É"
-     style="display:inline"
+     style="display:none"
      id="g75">
     <path
        d="M 1.5909903,68.589358 C 3.6640432,64.585068 5.7370962,60.580779 7.8101491,56.576489 9.1548054,55.023823 10.90389,52.546263 9.0732123,50.676298 7.6590542,49.1625 6.8242403,47.171846 6.3088096,45.176483 5.4696172,40.939349 7.637636,36.996807 8.8888734,33.081499 12.560527,28.721974 17.797768,25.712437 23.403347,24.757891 c 3.463917,0.129113 6.927834,0.258225 10.391751,0.387338 2.990444,2.045561 4.764706,6.042828 3.958785,9.618814 -0.603406,2.739851 -4.353548,3.74602 -6.241603,1.674762 -1.852035,-1.839182 -1.842464,-5.55214 0.542137,-6.961858 3.124673,-1.967401 7.012906,-2.849344 10.681036,-2.623996"
@@ -3026,7 +3106,8 @@ SIL Open Font License (OFL)
          inkstitch:short_stitch_distance_mm="0.21"
          inkstitch:pull_compensation_mm="0.2"
          inkstitch:contour_underlay_stitch_length_mm="1.5"
-         inkstitch:short_stitch_inset="15" />
+         inkstitch:short_stitch_inset="15"
+         inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     </g>
     <path
        id="path72"
@@ -3046,7 +3127,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        d="m 7.70388,51.7247 5.75322,2.9601"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
@@ -3086,7 +3168,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        d="m 32.400619,88.264883 c 2.343735,-1.370885 5.684052,-4.094027 8.71319,-7.400366 3.263991,-3.562685 5.043749,-6.206502 6.541846,-9.892166"
        style="font-variation-settings:normal;display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
@@ -3157,7 +3240,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        d="M 38.8515,36.3243 40.0673,32.614"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
@@ -3195,7 +3279,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        d="m 37.151126,37.051795 -5.563175,15.263556 c -4.930229,2.150196 -13.288762,0.900241 -15.718854,0.218523"
        style="fill:none;stroke:#000000;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -3272,7 +3357,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="M 18.192676,92.9795 C 13.816293,95 3.5661147,93.987406 3.457792,90.473637 c -0.1766175,-5.729115 5.8656419,-6.166315 9.96686,-5.602391 11.821727,1.625507 6.896489,1.034242 10.340652,1.350754 3.275308,0.300995 6.848732,-0.971976 10.89507,-2.87183 2.97227,-1.282799 5.658039,-2.855763 8.235734,-4.538184 3.930209,-2.33738 6.837082,-5.030384 9.586568,-7.778083"
@@ -3351,7 +3437,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.51181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.02362, 1.51181;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="M 15.789622,87.214443 C 22.60333,86.607407 29.849003,81.305748 34.512341,77.113939"
@@ -3390,7 +3477,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
        d="m 24.594924,109.18226 c -11.347727,-5.17958 -0.872323,-16.358749 5.098997,-18.658727 2.927325,-1.12752 4.350545,-1.664735 6.385729,-2.991212 7.469752,-4.245385 13.699573,-7.707664 18.427499,-12.560414 1.161835,-1.010941 2.052074,-2.4083 3.499907,-3.830157"
@@ -3450,7 +3538,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        id="autosatinrun55"
        style="fill:none;stroke:#000000;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -3480,7 +3569,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.51181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.02362, 1.51181;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 21.760581,52.807711 c 5.029057,-1.381615 16.364606,1.410943 18.193137,2.158591"
@@ -3522,7 +3612,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
        d="m 51.90762,89.076064 c 5.176494,-4.967639 9.354624,-15.874605 9.710906,-18.393005"
@@ -3569,7 +3660,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
        d="M 13.017002,92.237415 C 22.366865,93.151048 32.008639,78.507133 33.296741,70.86446"
@@ -3629,7 +3721,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
        d="M 11.600708,106.40261 C -7.0146224,107.84731 1.4014795,84.598739 28.423551,83.596543 36.026106,83.314579 49.943007,80.069066 52.322534,71.150057"
@@ -3689,7 +3782,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.377953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
        d="M 23.782228,64.787727 17.83388,69.623989 11.7964,86.5674 11.1966,88.3737"
@@ -3718,7 +3812,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.377953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
        d="m 23.813942,63.19866 13.334807,-9.865708 2.149045,-1.571292 2.052461,-2.209487 1.36856,-1.526082 1.823565,-2.348883 0.995452,-1.490734 2.046343,-3.907155 1.15665,-3.224379"
@@ -3769,7 +3864,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
        d="M 56.955999,85.776959 C 59.474381,84.123388 64.731296,77.09871 66.364364,70.79231"
@@ -3829,7 +3925,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        d="M 11.7824,78.2347 C 9.841857,82.004796 5.577977,82.606705 1.74404,83.7949"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
@@ -3878,7 +3975,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 43.485974,87.574341 c 3.216621,-3.161625 7.525051,-7.59828 11.166281,-15.899459"
@@ -3938,7 +4036,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        d="m 24.007116,40.814768 c -0.223428,2.48394 -3.992296,8.431331 -4.51126,10.87458 -0.914949,5.082277 -2.310529,10.062956 -3.77828,15.009354 -0.966156,3.745133 -1.885581,7.503161 -2.937741,11.225147 -0.830326,2.66506 -1.569592,5.359181 -2.405311,8.021023 -0.394102,1.053824 -0.9407948,2.157502 -1.783048,2.91983"
        style="fill:none;stroke:#000000;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -3968,7 +4067,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.51181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.02362, 1.51181;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="M 24.588426,40.685736 C 27.028336,37.18888 32.076189,32.467274 35.10358,30.235447"
@@ -3999,7 +4099,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        d="m 40.094924,42.581263 c 2.864022,1.671747 4.656352,7.02454 4.138039,10.296121 -0.73776,5.368986 -2.027127,10.643437 -2.769387,16.011918 -0.49122,2.945592 -1.275479,5.832944 -1.7885,8.775434 -0.514622,2.548271 -1.078814,5.09443 -1.417685,7.67237 -0.02163,0.512524 -0.118193,1.00865 -0.239515,1.505796"
        style="fill:none;stroke:#000000;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -4029,7 +4130,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.51181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.02362, 1.51181;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 49.028039,38.523951 c 1.84555,-3.047132 6.497672,-7.63221 10.654055,-8.841699"
@@ -4069,7 +4171,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 72.782086,87.411363 c 8.049343,0.813091 17.875578,-8.483494 20.0902,-16.695875"
@@ -4129,7 +4232,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        d="m 21.682829,39.598208 c -2.033655,3.676747 -4.008684,10.420388 -4.590316,14.062577 -0.730292,4.837859 -1.731883,9.643182 -3.132728,14.33314 -0.98367,3.238034 -2.479179,6.28654 -3.742281,9.419272 -0.6228155,1.396051 -1.2234628,2.826943 -2.2416159,3.98861 -0.4637037,0.69309 -0.772462,1.4765 -1.2338121,2.165895"
        style="fill:none;stroke:#000000;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -4159,7 +4263,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.51181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.02362, 1.51181;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 21.662157,39.729062 c 2.696729,-4.335649 8.254849,-9.474557 12.36687,-10.159954"
@@ -4199,7 +4304,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="M 51.393491,86.556553 C 60.342014,84.186651 65.386812,79.039522 67.601432,70.827141"
@@ -4246,7 +4352,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        d="m 39.4454,85.5769 1.8228,-2.8703"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
@@ -4285,7 +4392,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 50.081186,86.375313 c 9.065445,-0.363816 13.506632,-7.43674 15.13562,-15.585394"
@@ -4345,7 +4453,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.51181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.02362, 1.51181;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 26.287635,39.210828 c 3.105626,-3.557317 7.406311,-8.521569 14.96984,-9.357041"
@@ -4376,7 +4485,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        d="M 22.992914,59.917665 C 16.383942,57.256862 23.10151,42.162296 22.119197,39.456898 L 20.3701,38.3923"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -4406,7 +4516,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        d="m 15.5493,57.3579 6.3018,0.3329"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
@@ -4433,7 +4544,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="M 7.2940355,92.831813 C 6.9001465,92.981085 2.5303552,93.382263 1.5056054,90.512693 0.83135358,88.62461 1.2240926,84.631872 2.3718746,82.976013 5.3717545,78.648208 11.118644,78.2245 18.344782,81.191619 c 5.746625,2.359617 10.617443,4.403089 14.935416,3.935951 5.036575,-0.544879 8.883189,-1.901108 12.264213,-5.506171 2.575564,-2.74623 3.685687,-5.669164 5.007993,-8.596442"
@@ -4493,7 +4605,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.51181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.02362, 1.51181;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 38.47048,28.452051 c 1.928572,0.762085 3.076293,2.12683 6.458898,6.101538 2.934558,3.448233 4.912051,10.420033 5.791879,15.873131 1.608636,9.97018 -3.080109,20.943788 -6.723317,26.895457 -1.594468,2.604777 -7.694356,7.032639 -8.272744,7.208491"
@@ -4534,7 +4647,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.377953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
        d="m 33.433046,84.13336 -0.356061,-4.365405 c -2.898875,-4.31681 -3.002317,-4.629632 -7.03108,-6.344574 -3.437845,-0.18101 -5.313165,1.10002 -7.343545,2.688295 l -2.349085,2.318784"
@@ -4563,7 +4677,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        d="m 43.3141,84.7527 0.8568,4.0119"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
@@ -4631,7 +4746,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.51181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.02362, 1.51181;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="M 4.6716605,88.38313 C 3.5107454,86.007061 2.8115947,81.011112 5.8382859,72.632167 11.544619,56.835032 27.739949,31.903949 43.08136,30.75212"
@@ -4662,7 +4778,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        d="m 41.8293,55.6764 -1.6645,4.7119"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
@@ -4701,7 +4818,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 51.199174,85.10627 c 5.738121,-3.794407 8.015278,-8.099231 9.658442,-14.017815"
@@ -4750,7 +4868,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        d="M 7.36652,92.5277 2.18568,94.4356"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
@@ -4827,7 +4946,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        d="m 25.428083,35.92867 c 3.226461,-1.720973 8.008268,-0.991356 10.79405,0.07046 1.914799,0.752705 3.851162,1.470369 5.859159,1.932821 2.280511,0.340284 4.596761,0.346451 6.897952,0.318165 0.948027,-0.0018 1.882812,-0.185072 2.774328,-0.503989 0.840126,-0.289173 1.715019,-0.493515 2.474872,-0.97206 0.130965,-0.05361 0.226526,-0.122148 0.293232,-0.249767"
        style="fill:none;stroke:#000000;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -4858,7 +4978,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        d="m 25.646,36.3779 -2.8421,-1.854"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
@@ -4886,7 +5007,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="M 28.360447,95.398322 C 41.453595,95.315515 49.819352,88.558128 56.360273,71.255419"
@@ -4946,7 +5068,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.377953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
        d="M 45.764298,88.11865 47.960478,86.55504 46.596273,69.95836 49.498937,48.69457 50.46634,36.26836"
@@ -4975,7 +5098,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 60.517802,94.257049 c 6.125842,-1.444546 12.911735,-13.5095 14.24533,-22.720864"
@@ -5035,7 +5159,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.51181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.02362, 1.51181;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 31.338546,91.637025 c 1.05433,-2.013292 2.682884,-9.266375 4.740329,-14.333034 2.431658,-5.988196 7.05888,-13.122201 10.052082,-18.408586 2.968128,-5.242101 7.182349,-8.571404 9.440693,-12.292963 4.518495,-7.446091 3.694183,-13.887293 -2.273652,-11.438897"
@@ -5066,7 +5191,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 45.88692,79.340109 c 4.716049,3.760104 19.797903,1.962472 23.816936,-7.838969"
@@ -5127,7 +5253,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        d="m 18.0825,88.8278 1.2494,3.2534"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
@@ -5178,7 +5305,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.51181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.02362, 1.51181;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 47.721455,88.653405 c 7.866722,0.183295 12.14904,-7.63509 15.07544,-13.409385 3.449424,-6.632543 12.923566,-38.722239 6.267266,-40.083993 -1.154288,-0.14529 -2.843985,0.550498 -4.769734,2.932638"
@@ -5210,7 +5338,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 72.031676,84.82482 c 3.373672,-2.520549 7.789141,-7.150459 10.227952,-13.246603"
@@ -5270,7 +5399,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.377953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
        d="m 36.669907,59.038961 4.395626,-4.026609 c 3.310645,-2.294886 6.28366,-4.919875 8.642309,-8.145531 2.012922,-2.979025 4.445858,-5.385615 5.385893,-9.826873 -0.548307,-2.374159 0.145524,-4.442042 -1.759533,-7.587641 -1.22193,-0.685415 -2.756734,-1.560503 -4.533458,-1.201557 -1.889609,0.569438 -3.382931,1.910767 -3.699254,4.027884"
@@ -5299,7 +5429,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.377953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 37.777564,61.089841 -7.73041,1.910326 -4.69061,3.233498 -8.75178,6.183888 -6.29429,7.231061 -0.3630344,7.472575"
@@ -5328,7 +5459,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        d="M 31.4521,65.2218 31.8648,62.566"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
@@ -5355,7 +5487,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 57.946395,85.93085 c 3.65835,-1.573652 9.731303,-8.435716 11.567516,-14.799911"
@@ -5415,7 +5548,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        d="m 40.9062,57.4013 0.1186,-0.8002 0.1661,-1.1315 0.1662,-1.1314 0.0718,-0.5861 v 0 l 0.0674,-0.5489 0.1115,-1.1382 0.1106,-1.1384 0.0818,-0.8422 v 0 l 0.0288,-0.2961 0.1106,-1.1384 0.0872,-1.1402 0.0796,-1.0989 v 0 l 0.003,-0.0417 0.0825,-1.1406 0.0826,-1.1406 0.0605,-1.1414 0.0109,-0.2144 v 0 l 0.047,-0.9272 0.0362,-1.143 0.0362,-1.143 0.0255,-0.4704 v 0 l 0.0363,-0.6711 0.048,-1.1417 0.0515,-1.1415 0.0196,-0.7289 v 0 l 0.0119,-0.4432 0.0237,-1.1742 0.0742,-1.1658 0.0708,-0.8978 v 0 l 0.0198,-0.2515 0.158,-1.1243"
        style="fill:none;stroke:#000000;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -5446,7 +5580,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="M 5.1868436,100.4006 C 1.6462101,98.251574 0.13701246,89.920647 7.277599,84.655213 14.963037,78.988008 26.622755,83.820084 33.345115,83.3685 41.534568,82.818362 48.679334,79.310275 52.543791,71.629827"
@@ -5506,7 +5641,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        d="m 56.3318,32.4612 -1.6351,3.2569"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
@@ -5533,7 +5669,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.51181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.02362, 1.51181;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="M 2.91355,84.9038 C 6.1772561,82.369514 14.223104,78.178309 18.09742,77.856406"
@@ -5564,7 +5701,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        d="m 39.5636,79.6729 4.6682,2.6837"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
@@ -5618,7 +5756,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -5643,7 +5782,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none"
        d="m 20.478657,28.05702 c 0.914401,0 1.371602,0.4572 1.371602,1.3716 0,0.6096 0.1524,1.219203 0.457201,1.82881 0.304801,0.9144 0.609601,1.6764 0.914402,2.286 l 1.371603,1.3716 c 0.304801,0.6096 0.609601,1.066803 0.914402,1.37161 0.609601,1.2192 1.371602,2.286 2.286004,3.2004 0.609601,1.219207 1.371603,2.28601 2.286005,3.20041 0.914401,0.9144 1.828803,1.9812 2.743205,3.2004 0.914402,0.914407 1.981204,1.82881 3.200406,2.74321 0.609601,0.3048 1.219203,0.762 1.828804,1.3716 0.793978,1.023421 1.612125,1.575299 1.689064,2.713981 l -0.137821,0.998222 m -18.924882,-25.657849 -0.05795,-0.0064 c -0.677428,-0.07488 -1.066802,-0.09227 -1.33566,0.885027 l -0.435189,4.150589 v 4.11481 c 0,1.8288 0.609601,3.505203 1.828804,5.02921 1.219202,1.524 2.286004,2.895603 3.200406,4.11481 0.914402,1.2192 1.981204,2.4384 3.200406,3.6576 1.524003,1.524007 2.895606,2.74321 4.114808,3.65761 0.914402,0.9144 2.133605,1.524 3.657608,1.8288 1.325121,0.264752 3.604617,0.324438 4.62097,-1.411115 m -0.181156,-5.146814 -5.309641,8.115928 m -4.616732,-19.42076 -9.959679,8.071678 m -3.706084,-15.181278 9.576593,-0.893785"
@@ -5662,7 +5802,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -5687,7 +5828,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -5721,7 +5863,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -5755,7 +5898,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -5802,7 +5946,8 @@ SIL Open Font License (OFL)
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        d="m 21.8389,80.344961 -0.0414,-0.3261 -0.1452,-1.1446 -0.1188,-1.1475 -0.024,-1.079 v 0 l -0.002,-0.0876 -0.0157,-1.1584 0.0428,-1.1573 0.0783,-1.1548 0.0131,-0.1532 v 0 l 0.0853,-0.9991 0.2107,-1.1395 0.2218,-1.1363 0.1161,-0.3787 v 0 l 0.2218,-0.724 0.3632,-1.0991 0.3728,-1.0946 0.2254,-0.6036 v 0 l 0.1727,-0.4628 0.5218,-1.0382 0.5701,-0.9957 0.4575,-0.7891 v 0 l 0.1289,-0.2222 0.6619,-0.9318 0.6564,-0.9709 0.6279,-0.9559"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
@@ -5832,7 +5977,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="M 36.806083,91.426435 C 41.568786,85.204891 43.742667,79.10396 45.311499,71.023528"
@@ -5877,7 +6023,8 @@ SIL Open Font License (OFL)
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        d="m -1.4802135,85.510949 3.2351131,3.370312 0.08729,0.3617 v 0 l 0.18297,0.7583 0.20157,1.1155 -0.04377,1.1418 -0.06867,0.6407"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -5907,7 +6054,8 @@ SIL Open Font License (OFL)
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.51181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.02362, 1.51181;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="M 4.4904011,81.671316 C 7.021787,76.608954 12.50986,66.189448 21.131198,66.05118"
@@ -5943,7 +6091,8 @@ SIL Open Font License (OFL)
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        d="M 7.57037,91.7792 5.67227,90.3596"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
@@ -5993,7 +6142,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 23.821715,86.937752 c 0,0 3.579903,-2.701616 10.274131,-16.180462"
@@ -6035,7 +6185,8 @@ SIL Open Font License (OFL)
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.377953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="M 19.829677,84.731431 22.153912,82.168975 21.261624,69.498438"
@@ -6073,7 +6224,8 @@ SIL Open Font License (OFL)
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 32.446575,91.897876 c 5.343543,-2.370397 11.083776,-9.301497 13.448569,-16.697625 l 1.249088,-3.938198"
@@ -6118,7 +6270,8 @@ SIL Open Font License (OFL)
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 12.82593,92.674734 c 6.209747,-1.503773 7.290436,-3.710084 12.089587,-8.026544 4.957796,-4.418816 6.14697,-9.100681 8.160183,-13.788884"
@@ -6169,7 +6322,8 @@ SIL Open Font License (OFL)
          inkstitch:short_stitch_distance_mm="0.21"
          inkstitch:pull_compensation_mm="0.2"
          inkstitch:contour_underlay_stitch_length_mm="1.5"
-         inkstitch:short_stitch_inset="15" />
+         inkstitch:short_stitch_inset="15"
+         inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     </g>
     <path
        id="path11"
@@ -6187,7 +6341,8 @@ SIL Open Font License (OFL)
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 12.82593,92.674734 c 6.209747,-1.503773 7.290436,-3.710084 12.089587,-8.026544 4.957796,-4.418816 6.14697,-9.100681 8.160183,-13.788884"
@@ -6238,7 +6393,8 @@ SIL Open Font License (OFL)
          inkstitch:short_stitch_distance_mm="0.21"
          inkstitch:pull_compensation_mm="0.2"
          inkstitch:contour_underlay_stitch_length_mm="1.5"
-         inkstitch:short_stitch_inset="15" />
+         inkstitch:short_stitch_inset="15"
+         inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     </g>
     <path
        id="path16"
@@ -6256,7 +6412,8 @@ SIL Open Font License (OFL)
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 12.82593,92.674734 c 6.209747,-1.503773 7.290436,-3.710084 12.089587,-8.026544 4.957796,-4.418816 6.14697,-9.100681 8.160183,-13.788884"
@@ -6308,7 +6465,8 @@ SIL Open Font License (OFL)
          inkstitch:short_stitch_distance_mm="0.21"
          inkstitch:pull_compensation_mm="0.2"
          inkstitch:contour_underlay_stitch_length_mm="1.5"
-         inkstitch:short_stitch_inset="15" />
+         inkstitch:short_stitch_inset="15"
+         inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     </g>
     <path
        id="path19"
@@ -6326,7 +6484,8 @@ SIL Open Font License (OFL)
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 12.82593,92.674734 c 6.209747,-1.503773 7.290436,-3.710084 12.089587,-8.026544 4.957796,-4.418816 6.14697,-9.100681 8.160183,-13.788884"
@@ -6391,7 +6550,8 @@ SIL Open Font License (OFL)
            inkstitch:min_jump_stitch_length_mm="3"
            inkstitch:short_stitch_distance_mm="0.21"
            inkstitch:contour_underlay_stitch_length_mm="1.5"
-           inkstitch:short_stitch_inset="15" />
+           inkstitch:short_stitch_inset="15"
+           inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
       </g>
       <g
          id="g21">
@@ -6421,7 +6581,8 @@ SIL Open Font License (OFL)
            inkstitch:min_jump_stitch_length_mm="3"
            inkstitch:short_stitch_distance_mm="0.21"
            inkstitch:contour_underlay_stitch_length_mm="1.5"
-           inkstitch:short_stitch_inset="15" />
+           inkstitch:short_stitch_inset="15"
+           inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
       </g>
     </g>
     <path
@@ -6440,7 +6601,8 @@ SIL Open Font License (OFL)
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 12.82593,92.674734 c 6.209747,-1.503773 7.290436,-3.710084 12.089587,-8.026544 4.957796,-4.418816 6.14697,-9.100681 8.160183,-13.788884"
@@ -6486,7 +6648,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 4.4285319,111.73085 c 5.168899,0.0475 6.7393371,-2.79388 7.8449491,-8.29274 C 12.647882,97.398851 8.346901,91.086358 6.286013,87.573103 5.429002,86.112131 3.648221,82.097131 1.93121,82.446604 -4.554376,83.76665 0.73480399,88.369817 3.419476,87.17507 8.198558,85.048257 19.915387,82.280343 24.022364,70.884688"
@@ -6530,7 +6693,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.51181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.02362, 1.51181;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="M 8.072969,85.313202 C 10.317228,84.515021 17.371725,81.07632 20.697623,76.23116"
@@ -6569,7 +6733,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="M 15.504973,125.42796 C 12.36544,124.90959 7.664342,123.68962 6.999867,115.66154 6.547172,110.19215 9.490941,104.44427 15.696762,96.319605 24.774551,84.434954 28.061975,81.585715 38.907161,71.012439"
@@ -6614,7 +6779,8 @@ SIL Open Font License (OFL)
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        id="autosatinrun71-12"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -6639,7 +6805,8 @@ SIL Open Font License (OFL)
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.51181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.02362, 1.51181;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 5.379171,84.370833 c 1.303281,-3.149345 2.821672,-8.153395 6.64175,-10.468792 3.8314,-2.165589 6.592699,-2.321275 9.063278,-1.93092"
@@ -6669,7 +6836,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="M 28.590425,94.869538 C 33.282995,91.493636 39.469883,85.29038 44.106673,70.799803"
@@ -6725,7 +6893,8 @@ SIL Open Font License (OFL)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:short_stitch_distance_mm="0.21"
          inkstitch:contour_underlay_stitch_length_mm="1.5"
-         inkstitch:short_stitch_inset="15" />
+         inkstitch:short_stitch_inset="15"
+         inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     </g>
     <path
        id="autosatin111-4"
@@ -6744,7 +6913,8 @@ SIL Open Font License (OFL)
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 11.370447,88.982063 c 3.559137,0.297711 6.775533,-3.465693 9.720018,-7.618319 2.277327,-3.438711 4.484387,-6.902601 5.720412,-10.714442"
@@ -6801,7 +6971,8 @@ SIL Open Font License (OFL)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:short_stitch_distance_mm="0.21"
          inkstitch:contour_underlay_stitch_length_mm="1.5"
-         inkstitch:short_stitch_inset="15" />
+         inkstitch:short_stitch_inset="15"
+         inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     </g>
     <path
        id="path605-7"
@@ -6818,7 +6989,8 @@ SIL Open Font License (OFL)
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m -8.989051,118.48196 c -1.815821,-0.13103 -3.853931,-1.26865 -5.141242,-2.35847 -2.504836,-2.12058 -1.268372,-8.56492 0.275366,-12.20181 3.300391,-7.775374 17.6093,-18.141905 20.483206,-21.32857 2.873906,-3.186665 10.283537,-8.022582 13.446457,-11.552987"
@@ -6873,7 +7045,8 @@ SIL Open Font License (OFL)
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        id="autosatinrun75-0"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -6900,7 +7073,8 @@ SIL Open Font License (OFL)
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.51181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.02362, 1.51181;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="M 4.78991,75.540325 C 5.686509,69.447153 9.197975,66.124159 12.338936,62.528598"
@@ -6928,7 +7102,8 @@ SIL Open Font License (OFL)
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        d="M 11.2839,76.8796 3.95116,80.686"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
@@ -6952,7 +7127,8 @@ SIL Open Font License (OFL)
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="M 28.018775,96.848175 C 36.781298,95.042185 40.77375,82.375327 42.550198,70.96131"
@@ -7002,7 +7178,8 @@ SIL Open Font License (OFL)
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        d="M 8.97907,92.1339 11.1327,95.879"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
@@ -7051,7 +7228,8 @@ SIL Open Font License (OFL)
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        id="autosatinrun76-8"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
@@ -7078,7 +7256,8 @@ SIL Open Font License (OFL)
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        d="M -0.776659,79.4063 3.9327,78.4469"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
@@ -7115,7 +7294,8 @@ SIL Open Font License (OFL)
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        id="autosatinrun77-7"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
@@ -7142,7 +7322,8 @@ SIL Open Font License (OFL)
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.51181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.02362, 1.51181;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="M 21.369589,75.945337 C 23.452717,71.650553 25.46489,58.33753 30.722804,58.357562"
@@ -7170,7 +7351,8 @@ SIL Open Font License (OFL)
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        id="path3790-7-26"
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -7209,7 +7391,8 @@ SIL Open Font License (OFL)
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        id="autosatinrun78-2"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -7236,7 +7419,8 @@ SIL Open Font License (OFL)
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.51181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.02362, 1.51181;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 6.1005777,77.669034 c 0.318893,-0.768642 1.588117,-5.631135 5.1886743,-9.83162 2.911248,-3.396322 6.340825,-4.314241 8.217545,-4.222392"
@@ -7272,7 +7456,8 @@ SIL Open Font License (OFL)
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        id="path3790-7-2-8"
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -7313,7 +7498,8 @@ SIL Open Font License (OFL)
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        id="path6116-4"
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -7354,7 +7540,8 @@ SIL Open Font License (OFL)
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        d="m 2.037413,70.367822 v 0 l -0.13957,0.6857 -0.22193,1.1227 -0.22193,1.1228 -0.12284,0.7152 v 0 l -0.0708,0.4122 -0.12897,1.1382 -0.12896,1.1382 -0.113174,0.9988 v 0 l -0.0158,0.1394 -0.128788,1.1382 -0.05288,1.1441 -0.05074,1.1442 -0.0061,0.1378 v 0 l -0.04463,1.0065 -0.05074,1.1442 -0.01702,1.1458 -0.0029,0.4157 v 0 l -0.005,0.7302 -0.0053,1.146 -0.0053,1.146 -0.0032,0.6921 v 0 l -0.0021,0.4539 -0.0053,1.146 -0.02027,1.1452 -0.05311,0.9676 v 0 l -0.0096,0.1751 -0.06142,1.1427 -0.03468,1.1448 -0.0303,1.1453 -0.0033,0.1036 v 0 l -0.03314,1.0418 -0.01886,1.1457 -0.01887,1.1458 -0.01824,0.3798 v 0 l -0.03665,0.763698 -0.06985,1.142 -0.06954,1.142 -0.03983,0.66 v 0 l -0.02901,0.482 -0.06884,1.142 -0.06884,1.142 -0.01275,0.944 v 0 l -0.0027,0.201 0.0011,1.146 -0.02222,1.144 -0.08489,1.136 -0.0095,0.083 v 0 l -0.119658,1.046 -0.116603,1.132 -0.09579,1.132 -0.0038,0.388 v 0 l -0.0073,0.754 -0.01111,1.141 0.0075,1.143 -0.01257,0.676 v 0 l -0.0085,0.457 -0.03439,1.174 -0.03439,1.173 -0.09102,0.904 v 0 l -0.02576,0.256 -0.124511,1.159 -0.0635,1.138 -0.07213,1.15"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -7381,7 +7568,8 @@ SIL Open Font License (OFL)
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.51181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.02362, 1.51181;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 6.064762,69.448155 c 0.327651,-0.810239 3.425766,-3.075505 6.31866,-3.914812 4.296137,-1.246426 5.702151,-0.692814 8.273206,-0.264833"
@@ -7410,7 +7598,8 @@ SIL Open Font License (OFL)
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        id="path6116-3-6"
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -7461,7 +7650,8 @@ SIL Open Font License (OFL)
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.377953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 19.272778,80.327732 c 5.321348,-2.973435 3.895491,-7.726966 4.793778,-12.020823 0.290054,-3.047005 0.362035,-4.604293 -0.01531,-6.353785"
@@ -7487,7 +7677,8 @@ SIL Open Font License (OFL)
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        id="path12711-5-7"
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -7537,7 +7728,8 @@ SIL Open Font License (OFL)
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 14.930836,93.856475 c 4.159449,-2.34147 6.470556,-5.693928 8.078767,-9.072869 2.163713,-4.546082 3.859948,-10.234375 4.834784,-14.844611"
@@ -7581,7 +7773,8 @@ SIL Open Font License (OFL)
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        id="path12711-5-1-9-4"
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -7646,7 +7839,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
        d="m 3.3518968,94.739933 c 3.526066,0.744592 6.2970729,-0.422069 9.8136472,-2.884383 2.167457,-1.517658 5.081421,-3.397006 8.722451,-8.600222 3.208689,-4.585379 3.766728,-9.125341 6.318489,-12.590283"
@@ -7691,7 +7885,8 @@ SIL Open Font License (OFL)
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.024, 1.512;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 11.19074,90.331664 c 6.458984,0.556116 7.308913,-1.936667 10.176262,-4.819488"
@@ -7732,7 +7927,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.024, 1.512;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 33.149374,94.478459 c 5.541253,0.581218 7.840018,-15.781755 11.562823,-23.970277"
@@ -7776,7 +7972,8 @@ SIL Open Font License (OFL)
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.51181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.02362, 1.51181;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="M 8.6031638,97.334443 C 15.108157,95.734341 23.747421,73.729393 28.406933,64.798308 c 2.812801,-5.391415 -2.293797,-5.52295 -4.035665,-5.200942"
@@ -7805,7 +8002,8 @@ SIL Open Font License (OFL)
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="M 24.179232,81.612807 C 29.869469,79.464923 34.393422,75.37761 37.458961,70.980533"
@@ -7848,7 +8046,8 @@ SIL Open Font License (OFL)
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.51181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.02362, 1.51181;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="M 9.2288378,94.330184 C 12.041812,91.812122 12.61907,89.157983 15.252812,83.949813"
@@ -7886,7 +8085,8 @@ SIL Open Font License (OFL)
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.51181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.02362, 1.51181;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 27.893226,93.361304 c 2.608613,-0.800111 7.03866,-5.710052 9.755368,-11.615663 1.394613,-3.031627 1.640248,-6.920181 1.364045,-10.682041 -0.176355,-2.40194 -1.160653,-3.816206 -2.274497,-4.601101"
@@ -7914,7 +8114,8 @@ SIL Open Font License (OFL)
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 38.193173,80.350021 c 6.673205,-1.577753 7.602959,-4.462584 9.943305,-8.800174"
@@ -7960,7 +8161,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 2;stroke-dashoffset:0;stroke-opacity:1"
        d="M 8.699907,78.190252 11.609774,74.413561 13.93359,70.341011 15.7679,66.7568"
@@ -8006,7 +8208,8 @@ SIL Open Font License (OFL)
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="M 22.767576,93.362665 C 29.266818,89.717149 31.754574,76.975499 33.04164,71.091527"
@@ -8050,7 +8253,8 @@ SIL Open Font License (OFL)
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.377953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="M 22.371813,84.653453 29.981441,61.340765"
@@ -8079,7 +8283,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 10.876577,133.48388 c -11.01067724,-1.03996 -6.445604,-12.11264 -2.728358,-17.78847 1.641628,-2.50658 5.617175,-8.44983 9.440149,-13.44317 2.377246,-3.105023 4.623683,-6.819524 7.573082,-10.084398 8.48246,-9.389768 15.021559,-17.515886 19.534309,-20.590592"
@@ -8122,7 +8327,8 @@ SIL Open Font License (OFL)
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        d="m 26.0266,68.2787 -2.9408,3.1958"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
@@ -8147,7 +8353,8 @@ SIL Open Font License (OFL)
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        id="autosatinrun80-6"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -8173,7 +8380,8 @@ SIL Open Font License (OFL)
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        d="m 15.3988,81.9941 2.3556,-2.2483"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
@@ -8197,7 +8405,8 @@ SIL Open Font License (OFL)
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        id="path12711-5-1-9-2-1-3"
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -8243,7 +8452,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -8280,7 +8490,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -8305,7 +8516,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -8372,7 +8584,8 @@ SIL Open Font License (OFL)
            inkstitch:min_jump_stitch_length_mm="3"
            inkstitch:short_stitch_distance_mm="0.21"
            inkstitch:contour_underlay_stitch_length_mm="1.5"
-           inkstitch:short_stitch_inset="15" />
+           inkstitch:short_stitch_inset="15"
+           inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
       </g>
       <g
          id="g14">
@@ -8403,7 +8616,8 @@ SIL Open Font License (OFL)
            inkstitch:min_jump_stitch_length_mm="3"
            inkstitch:short_stitch_distance_mm="0.21"
            inkstitch:contour_underlay_stitch_length_mm="1.5"
-           inkstitch:short_stitch_inset="15" />
+           inkstitch:short_stitch_inset="15"
+           inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
       </g>
     </g>
     <path
@@ -8423,7 +8637,8 @@ SIL Open Font License (OFL)
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:pull_compensation_mm="0.2"
-       inkstitch:contour_underlay_stitch_length_mm="1.5" />
+       inkstitch:contour_underlay_stitch_length_mm="1.5"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        d="m 21.8389,80.344961 -0.0414,-0.3261 -0.1452,-1.1446 -0.1188,-1.1475 -0.024,-1.079 v 0 l -0.002,-0.0876 -0.0157,-1.1584 0.0428,-1.1573 0.0783,-1.1548 0.0131,-0.1532 v 0 l 0.0853,-0.9991 0.2107,-1.1395 0.2218,-1.1363 0.1161,-0.3787 v 0 l 0.2218,-0.724 0.3632,-1.0991 0.3728,-1.0946 0.2254,-0.6036 v 0 l 0.1727,-0.4628 0.5218,-1.0382 0.5701,-0.9957 0.4575,-0.7891 v 0 l 0.1289,-0.2222 0.6619,-0.9318 0.6564,-0.9709 0.6279,-0.9559"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
@@ -8453,7 +8668,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="M 36.806083,91.426435 C 41.568786,85.204891 43.742667,79.10396 45.311499,71.023528"
@@ -8518,7 +8734,8 @@ SIL Open Font License (OFL)
            inkstitch:min_jump_stitch_length_mm="3"
            inkstitch:short_stitch_distance_mm="0.21"
            inkstitch:contour_underlay_stitch_length_mm="1.5"
-           inkstitch:short_stitch_inset="15" />
+           inkstitch:short_stitch_inset="15"
+           inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
       </g>
       <g
          id="g12">
@@ -8549,7 +8766,8 @@ SIL Open Font License (OFL)
            inkstitch:min_jump_stitch_length_mm="3"
            inkstitch:short_stitch_distance_mm="0.21"
            inkstitch:contour_underlay_stitch_length_mm="1.5"
-           inkstitch:short_stitch_inset="15" />
+           inkstitch:short_stitch_inset="15"
+           inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
       </g>
     </g>
     <path
@@ -8567,7 +8785,8 @@ SIL Open Font License (OFL)
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        id="path51"
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -8632,7 +8851,8 @@ SIL Open Font License (OFL)
            inkstitch:min_jump_stitch_length_mm="3"
            inkstitch:short_stitch_distance_mm="0.21"
            inkstitch:contour_underlay_stitch_length_mm="1.5"
-           inkstitch:short_stitch_inset="15" />
+           inkstitch:short_stitch_inset="15"
+           inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
       </g>
       <g
          id="g10">
@@ -8663,7 +8883,8 @@ SIL Open Font License (OFL)
            inkstitch:min_jump_stitch_length_mm="3"
            inkstitch:short_stitch_distance_mm="0.21"
            inkstitch:contour_underlay_stitch_length_mm="1.5"
-           inkstitch:short_stitch_inset="15" />
+           inkstitch:short_stitch_inset="15"
+           inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
       </g>
     </g>
     <path
@@ -8684,7 +8905,8 @@ SIL Open Font License (OFL)
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.024, 1.512;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 11.19074,90.331664 c 6.458984,0.556116 7.308913,-1.936667 10.176262,-4.819488"
@@ -8725,7 +8947,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        d="m 30.5544,92.78 2.595,1.6985"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
@@ -8793,7 +9016,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.377953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
        d="M 44.378177,86.455305 47.960478,86.55504 46.596273,69.95836 49.498937,48.69457 50.46634,36.26836"
@@ -8844,7 +9068,8 @@ SIL Open Font License (OFL)
            inkstitch:min_jump_stitch_length_mm="3"
            inkstitch:short_stitch_distance_mm="0.21"
            inkstitch:contour_underlay_stitch_length_mm="1.5"
-           inkstitch:short_stitch_inset="15" />
+           inkstitch:short_stitch_inset="15"
+           inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
       </g>
       <g
          id="g8">
@@ -8873,7 +9098,8 @@ SIL Open Font License (OFL)
            inkstitch:min_jump_stitch_length_mm="3"
            inkstitch:short_stitch_distance_mm="0.21"
            inkstitch:contour_underlay_stitch_length_mm="1.5"
-           inkstitch:short_stitch_inset="15" />
+           inkstitch:short_stitch_inset="15"
+           inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
       </g>
     </g>
     <path
@@ -8894,7 +9120,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="m 60.517802,94.257049 c 6.125842,-1.444546 12.911735,-13.5095 14.24533,-22.720864"
@@ -8959,7 +9186,8 @@ SIL Open Font License (OFL)
            inkstitch:min_jump_stitch_length_mm="3"
            inkstitch:short_stitch_distance_mm="0.21"
            inkstitch:contour_underlay_stitch_length_mm="1.5"
-           inkstitch:short_stitch_inset="15" />
+           inkstitch:short_stitch_inset="15"
+           inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
       </g>
       <g
          id="g5">
@@ -8988,7 +9216,8 @@ SIL Open Font License (OFL)
            inkstitch:min_jump_stitch_length_mm="3"
            inkstitch:short_stitch_distance_mm="0.21"
            inkstitch:contour_underlay_stitch_length_mm="1.5"
-           inkstitch:short_stitch_inset="15" />
+           inkstitch:short_stitch_inset="15"
+           inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
       </g>
     </g>
     <path
@@ -9017,7 +9246,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        d="m 39.4454,85.5769 1.8228,-2.8703"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
@@ -9064,7 +9294,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        d="m 46.5337,83.6033 3.5475,2.772"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
@@ -9118,7 +9349,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        id="path100"
        style="fill:none;stroke:#000000;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -9158,7 +9390,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        d="m 20.991,52.6185 -1.2429,3.1988"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
@@ -9185,7 +9418,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        id="path116"
        style="fill:none;stroke:#000000;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -9242,7 +9476,8 @@ SIL Open Font License (OFL)
            inkstitch:min_jump_stitch_length_mm="3"
            inkstitch:short_stitch_distance_mm="0.21"
            inkstitch:contour_underlay_stitch_length_mm="1.5"
-           inkstitch:short_stitch_inset="15" />
+           inkstitch:short_stitch_inset="15"
+           inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
       </g>
       <g
          id="g3">
@@ -9271,7 +9506,8 @@ SIL Open Font License (OFL)
            inkstitch:min_jump_stitch_length_mm="3"
            inkstitch:short_stitch_distance_mm="0.21"
            inkstitch:contour_underlay_stitch_length_mm="1.5"
-           inkstitch:short_stitch_inset="15" />
+           inkstitch:short_stitch_inset="15"
+           inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
       </g>
     </g>
     <path
@@ -9301,7 +9537,8 @@ SIL Open Font License (OFL)
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        d="M 49.465304,89.735734 C 60.550306,88.194731 63.94192,77.587526 65.584831,71.020492"
        style="font-variation-settings:normal;display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.756, 0.756;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
@@ -9348,7 +9585,8 @@ SIL Open Font License (OFL)
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        d="m -2.8258,85.6474 4.335,2.1179"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
@@ -9386,7 +9624,8 @@ SIL Open Font License (OFL)
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.51181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.02362, 1.51181;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="M 4.4904011,81.671316 C 7.021787,76.608954 12.50986,66.189448 21.131198,66.05118"
@@ -9422,7 +9661,8 @@ SIL Open Font License (OFL)
        inkstitch:short_stitch_distance_mm="0.21"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:contour_underlay_stitch_length_mm="1.5"
-       inkstitch:short_stitch_inset="15" />
+       inkstitch:short_stitch_inset="15"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
     <path
        d="M 7.57037,91.7792 5.67227,90.3596"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
