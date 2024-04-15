@@ -72,6 +72,15 @@ realistic_filter = """
          in2="SourceAlpha"
          id="feComposite1981"
          operator="atop" />
+      <feComposite
+         in2="SourceGraphic"
+         id="feComposite1981"
+         operator="arithmetic"
+         k2="1"
+         k3="1"
+         result="result3"
+         k1="0"
+         k4="0" />
     </filter>
 """
 
