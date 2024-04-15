@@ -49,7 +49,8 @@ realistic_filter = """
        width="1.02"
        y="-0.01"
        height="1.02"
-       inkscape:auto-region="false">
+       inkscape:auto-region="false"
+       xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape">
       <feGaussianBlur
          edgeMode="none"
          stdDeviation="0.9"
