@@ -60,13 +60,12 @@ realistic_filter = """
          id="feSpecularLighting1973"
          result="result2"
          specularConstant="0.78"
-         surfaceScale="3"
+         surfaceScale="1.5"
          specularExponent="2.5">
-        <fePointLight
-           id="fePointLight1975"
-           z="10"
-           y="0"
-           x="12" />
+        <feDistantLight
+           id="feDistantLight1975"
+           azimuth="125"
+           elevation="20" />
       </feSpecularLighting>
       <feComposite
          in2="SourceAlpha"
@@ -74,10 +73,10 @@ realistic_filter = """
          operator="atop" />
       <feComposite
          in2="SourceGraphic"
-         id="feComposite1981"
+         id="feComposite1982"
          operator="arithmetic"
-         k2="1"
-         k3="1"
+         k2="0.8"
+         k3="1.2"
          result="result3"
          k1="0"
          k4="0" />
