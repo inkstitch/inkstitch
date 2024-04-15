@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-04-13 00:55+0000\n"
-"PO-Revision-Date: 2024-04-13 00:56\n"
+"PO-Revision-Date: 2024-04-15 03:26\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -1118,7 +1118,7 @@ msgstr "Cloner l'objet"
 
 #: lib/elements/clone.py:28
 msgid "There are one or more clone objects in this document.  Ink/Stitch can work with clones, but you are limited to set a very few parameters. "
-msgstr ""
+msgstr "Il y a un ou plusieurs clones dans ce document. Ink/Stitch peut travailler avec des clones, mais seuls quelques paramètres pourront être définis. "
 
 #: lib/elements/clone.py:31
 msgid "If you want to convert the clone into a real element, follow these steps:"
@@ -1130,7 +1130,7 @@ msgstr "* Sélectionner le clone"
 
 #: lib/elements/clone.py:33
 msgid "* Run: Extensions > Ink/Stitch > Edit > Unlink Clone"
-msgstr ""
+msgstr "* Exécutez : Extensions > Ink/Stitch > Édition > Délier le clone"
 
 #: lib/elements/clone.py:44 inx/inkstitch_select_elements.inx:72
 #: inx/inkstitch_select_elements.inx:73
@@ -2965,7 +2965,7 @@ msgstr "Il est possible qu'un objet contienne plus d'une erreur, même s'il n'y 
 
 #: lib/extensions/unlink_clone.py:27
 msgid "Please select one or more clones to unlink."
-msgstr ""
+msgstr "Merci de sélectionner un ou plusieurs clones à délier."
 
 #: lib/extensions/update_svg.py:23
 msgid "Please select at least one element to update. This extension is designed to help you update copy and pasted elements from old designs."
@@ -6634,11 +6634,11 @@ msgstr "Taille de la fonte (mm)"
 
 #: inx/inkstitch_unlink_clone.inx:3
 msgid "Unlink Clone"
-msgstr ""
+msgstr "Délier le clone"
 
 #: inx/inkstitch_unlink_clone.inx:6
 msgid "Recursive"
-msgstr ""
+msgstr "Récursivement"
 
 #: inx/inkstitch_update_svg.inx:3
 msgid "Update inkstitch svg"
