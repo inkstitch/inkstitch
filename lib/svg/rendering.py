@@ -23,32 +23,50 @@ from .units import PIXELS_PER_MM, get_viewbox_transform
 stitch_height = 1.216
 
 # This vector path starts at the upper right corner of the stitch shape and
-# proceeds counter-clockwise.and contains a placeholder (%s) for the stitch
+# proceeds counter-clockwise and contains a placeholder (%s) for the stitch
 # length.
 #
-# It contains two invisible "whiskers" of zero width that go above and below
+# It contains four invisible "whiskers" of zero width that go outwards
 # to ensure that the SVG renderer allocates a large enough canvas area when
-# computing the gaussian blur steps.  Otherwise, we'd have to expand the
-# width and height attributes of the <filter> tag to add more buffer space.
-# The width and height are specified in multiples of the bounding box
-# size, It's the bounding box aligned with the global SVG canvas's axes, not
-# the axes of the stitch itself.  That means that having a big enough value
+# computing the gaussian blur steps:
+# \_____/
+# (_____)  (whiskers not to scale)
+# /     \
+# This is necessary to avoid artifacting near the edges and corners that seems to be due to
+# edge conditions for the feGaussianBlur, which is used to build the heightmap for
+# the feDiffuseLighting node. So we need some extra buffer room around the shape.
+# The whiskers let us specify a "fixed" amount of spacing around the stitch.
+# Otherwise, we'd have to expand the width and height attributes of the <filter>
+# tag to add more buffer space. The filter's width and height are specified in multiples of
+# the bounding box size, It's the bounding box aligned with the global SVG canvas's axes,
+# not the axes of the stitch itself.  That means that having a big enough value
 # to add enough padding on the long sides of the stitch would waste a ton
 # of space on the short sides and significantly slow down rendering.
-# The whiskers can probably be removed with the explicit filter size declaration below.
-stitch_path = "M0,0c0.4,0,0.4,0.3,0.4,0.6c0,0.3,-0.1,0.6,-0.4,0.6v0.2,-0.2h-%sc-0.4,0,-0.4,-0.3,-0.4,-0.6c0,-0.3,0.1,-0.6,0.4,-0.6v-0.2,0.2z"
 
-# The filter size is 2% larger, because otherwise the edges get artifacting from boundary conditions.
-# Inkscape may or may not respect the edgeMode attribute for feGaussianBlur.
-# It seems like values less than 0.01 for x and y may be ignored, so 1% on each side is the effective minimum.
+# The specific extent of the whiskers (0.45 parallel to the stitch, 0.1 perpendicular)
+# was found by experimentation. It seems to work without artifacting.
+stitch_path = (
+    "M0,0"  # Start point
+    "l0.45,-0.1,-0.45,0.1"  # Bottom-right whisker
+    "c0.4,0,0.4,0.3,0.4,0.6c0,0.3,-0.1,0.6,-0.4,0.6"  # Right endcap
+    "l0.45,0.1,-0.45,-0.1"  # Top-right whisker
+    "h-%s"  # Stitch length
+    "l-0.45,0.1,0.45,-0.1"  # Top-left whisker
+    "c-0.4,0,-0.4,-0.3,-0.4,-0.6c0,-0.3,0.1,-0.6,0.4,-0.6"  # Left endcap
+    "l-0.45,-0.1,0.45,0.1"  # Bottom-left whisker
+    "z")  # return to start
+
+# The filter needs the xmlns:inkscape declaration, or Inkscape will display a parse error
+# "Namespace prefix inkscape for auto-region on filter is not defined"
+# Even when the document itself has the namespace, go figure.
 realistic_filter = """
     <filter
        style="color-interpolation-filters:sRGB"
        id="realistic-stitch-filter"
-       x="-0.01"
-       width="1.02"
-       y="-0.01"
-       height="1.02"
+       x="0"
+       width="1"
+       y="0"
+       height="1"
        inkscape:auto-region="false"
        xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape">
       <feGaussianBlur
@@ -56,17 +74,16 @@ realistic_filter = """
          stdDeviation="0.9"
          id="feGaussianBlur1542-6"
          in="SourceAlpha" />
-      <feSpecularLighting
+      <feDiffuseLighting
          id="feSpecularLighting1973"
          result="result2"
-         specularConstant="0.78"
-         surfaceScale="1.5"
-         specularExponent="2.5">
+         diffuseConstant="0.78"
+         surfaceScale="1.5">
         <feDistantLight
            id="feDistantLight1975"
-           azimuth="125"
+           azimuth="-125"
            elevation="20" />
-      </feSpecularLighting>
+      </feDiffuseLighting>
       <feComposite
          in2="SourceAlpha"
          id="feComposite1981"
