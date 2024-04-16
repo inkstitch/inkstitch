@@ -74,16 +74,17 @@ realistic_filter = """
          stdDeviation="0.9"
          id="feGaussianBlur1542-6"
          in="SourceAlpha" />
-      <feDiffuseLighting
+      <feSpecularLighting
          id="feSpecularLighting1973"
          result="result2"
-         diffuseConstant="0.78"
-         surfaceScale="1.5">
+         surfaceScale="1.5"
+         specularConstant="0.78"
+         specularExponent="2.5">
         <feDistantLight
            id="feDistantLight1975"
            azimuth="-125"
            elevation="20" />
-      </feDiffuseLighting>
+      </feSpecularLighting>
       <feComposite
          in2="SourceAlpha"
          id="feComposite1981"
@@ -114,17 +115,18 @@ def realistic_stitch(start, end):
 
     stitch_length = max(0, stitch_length - 0.2 * PIXELS_PER_MM)
 
-    # create the path by filling in the length in the template
-    path = inkex.Path(stitch_path % stitch_length).to_arrays()
-
     # rotate the path to match the stitch
     rotation_center_x = -stitch_length / 2.0
     rotation_center_y = stitch_height / 2.0
 
-    path = inkex.Path(path).rotate(stitch_angle, (rotation_center_x, rotation_center_y))
+    transform = (
+        inkex.Transform()
+             .add_translate(stitch_center.x - rotation_center_x, stitch_center.y - rotation_center_y)
+             .add_rotate(stitch_angle, (rotation_center_x, rotation_center_y))
+    )
 
-    # move the path to the location of the stitch
-    path = inkex.Path(path).translate(stitch_center.x - rotation_center_x, stitch_center.y - rotation_center_y)
+    # create the path by filling in the length in the template, and transforming it as above
+    path = inkex.Path(stitch_path % stitch_length).transform(transform, True)
 
     return str(path)
 
