@@ -1,17 +1,17 @@
 {
-    "name": "Emilio 20 Simple",
-    "description": "Emilio is a font with capital only and numbers. M is 42.5 millimeter wide at 100% scale. Can be scaled down to 50% or up to 140%. Every satin has zigzag underlay",
-    "keywords": [
-        "display",
-        "serif"
-    ],
+    "name": "Emilio 20 Simple Small",
+    "description": "This font is an altered version  of Emilio 20 simple, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory. The altered embroidery parameters of this font allow to scale down the original Emilio 20 Simple font between 15% (for a 8mm font ) and 40 % (for a 20mm font).", 
+    "keywords": [ 
+            "serif",
+            "tiny"
+        ],
     "leading": 194,
     "auto_satin": false,
     "reversible": false,
     "letter_case": "upper",
     "default_glyph": " ",
-    "min_scale": 0.5,
-    "max_scale": 1.4,
+    "min_scale": 0.15,
+    "max_scale": 0.40,
     "size": 42,
     "horiz_adv_x_default": 153,
     "horiz_adv_x_space": 78,
