@@ -21,7 +21,7 @@
    xmlns:inkstitch="http://inkstitch.org/namespace">
   <sodipodi:namedview
      showguides="true"
-     inkscape:lockguides="true"
+     inkscape:lockguides="false"
      pagecolor="#ffffff"
      bordercolor="#666666"
      borderopacity="1"
@@ -34,9 +34,9 @@
      inkscape:window-height="806"
      id="namedview85"
      showgrid="true"
-     inkscape:zoom="6.388005"
-     inkscape:cx="147.77697"
-     inkscape:cy="205.07185"
+     inkscape:zoom="0.4510385"
+     inkscape:cx="74.273039"
+     inkscape:cy="299.30926"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="1"
@@ -52,11 +52,11 @@
        id="guide968"
        inkscape:label="baseline"
        orientation="0,1"
-       position="0,0"
-       inkscape:locked="true"
+       position="-10.531252,10.897957"
+       inkscape:locked="false"
        inkscape:color="rgb(0,0,255)" />
     <sodipodi:guide
-       inkscape:locked="true"
+       inkscape:locked="false"
        id="guide970"
        inkscape:label="ascender"
        orientation="0,1"
@@ -66,16 +66,16 @@
        inkscape:label="caps"
        orientation="0,1"
        position="0,379"
-       inkscape:locked="true"
+       inkscape:locked="false"
        inkscape:color="rgb(0,0,255)" />
     <sodipodi:guide
-       inkscape:locked="true"
+       inkscape:locked="false"
        id="guide974"
        inkscape:label="xheight"
        orientation="0,1"
        position="0,-20" />
     <sodipodi:guide
-       inkscape:locked="true"
+       inkscape:locked="false"
        id="guide976"
        inkscape:label="decender"
        orientation="0,1"
@@ -3668,7 +3668,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
   </g>
   <g
      id="g1059"
-     style="display:none"
+     style="display:inline"
      inkscape:label="GlyphLayer-Z"
      inkscape:groupmode="layer">
     <path

@@ -21,9 +21,9 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      showgrid="true"
-     inkscape:zoom="1.731137"
-     inkscape:cx="124.77348"
-     inkscape:cy="133.43831"
+     inkscape:zoom="1.5622593"
+     inkscape:cx="63.049711"
+     inkscape:cy="154.90386"
      inkscape:window-width="1920"
      inkscape:window-height="991"
      inkscape:window-x="-9"
@@ -41,69 +41,62 @@
      inkscape:snap-intersection-paths="false"
      inkscape:showpageshadow="2"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:lockguides="true">
+     inkscape:lockguides="false">
     <sodipodi:guide
-       position="0,250"
+       position="66.570253,5.4100342"
        orientation="0,1"
        inkscape:label="baseline"
        id="guide945"
-       inkscape:locked="true" />
+       inkscape:locked="false" />
     <sodipodi:guide
        position="0,1000"
        orientation="0,1"
        inkscape:label="ascender"
        id="guide947"
-       inkscape:locked="true" />
+       inkscape:locked="false" />
     <sodipodi:guide
        position="0,950"
        orientation="0,1"
        inkscape:label="caps"
        id="guide949"
-       inkscape:locked="true" />
+       inkscape:locked="false" />
     <sodipodi:guide
        position="0,750"
        orientation="0,1"
        inkscape:label="xheight"
        id="guide951"
-       inkscape:locked="true" />
+       inkscape:locked="false" />
     <sodipodi:guide
        position="0,0"
        orientation="0,1"
        inkscape:label="descender"
        id="guide953"
-       inkscape:locked="true" />
-    <sodipodi:guide
-       position="0,0"
-       orientation="0,1"
-       inkscape:label="baseline"
-       id="guide1074"
-       inkscape:locked="true"
-       inkscape:color="rgb(0,0,255)" />
+       inkscape:locked="false" />
     <sodipodi:guide
        position="0,160"
        orientation="0,1"
        inkscape:label="ascender"
        id="guide1076"
-       inkscape:locked="true" />
+       inkscape:locked="false" />
     <sodipodi:guide
        position="0,189"
        orientation="0,1"
        inkscape:label="caps"
        id="guide1078"
-       inkscape:locked="true" />
+       inkscape:locked="false" />
     <sodipodi:guide
        position="0,20"
        orientation="0,1"
        inkscape:label="xheight"
        id="guide1080"
-       inkscape:locked="true"
+       inkscape:locked="false"
        inkscape:color="rgb(0,0,255)" />
     <sodipodi:guide
        position="0,40"
        orientation="0,1"
        inkscape:label="decender"
        id="guide1082"
-       inkscape:locked="true" />
+       inkscape:locked="false" />
     <inkscape:grid
        type="xygrid"
        id="grid1461"
