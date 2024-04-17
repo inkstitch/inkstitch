@@ -19,8 +19,8 @@ from .units import PIXELS_PER_MM, get_viewbox_transform
 #
 # It's 0.32mm high, which is the approximate thickness of common machine
 # embroidery threads.
-# 1.216 pixels = 0.32mm
-stitch_height = 1.216
+# 1.398 pixels = 0.37mm
+stitch_height = 1.398
 
 # This vector path starts at the upper right corner of the stitch shape and
 # proceeds counter-clockwise and contains a placeholder (%s) for the stitch
@@ -48,11 +48,11 @@ stitch_height = 1.216
 stitch_path = (
     "M0,0"  # Start point
     "l0.45,-0.1,-0.45,0.1"  # Bottom-right whisker
-    "c0.4,0,0.4,0.3,0.4,0.6c0,0.3,-0.1,0.6,-0.4,0.6"  # Right endcap
+    "c0.4,0,0.46,0.4,0.46,0.7c0,0.3,-0.16,0.70,-0.46,0.70"  # Right endcap
     "l0.45,0.1,-0.45,-0.1"  # Top-right whisker
     "h-%s"  # Stitch length
     "l-0.45,0.1,0.45,-0.1"  # Top-left whisker
-    "c-0.4,0,-0.4,-0.3,-0.4,-0.6c0,-0.3,0.1,-0.6,0.4,-0.6"  # Left endcap
+    "c-0.4,0,-0.46,-0.4,-0.46,-0.7c0,-0.3,0.16,-0.7,0.46,-0.7"  # Left endcap
     "l-0.45,-0.1,0.45,0.1"  # Bottom-left whisker
     "z")  # return to start
 
@@ -85,6 +85,10 @@ realistic_filter = """
            azimuth="-125"
            elevation="20" />
       </feSpecularLighting>
+      <feGaussianBlur
+         edgeMode="none"
+         stdDeviation="0.2"
+         id="feGaussianBlur1542-7" />
       <feComposite
          in2="SourceAlpha"
          id="feComposite1981"
