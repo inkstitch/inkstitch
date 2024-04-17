@@ -131,8 +131,10 @@ class ControlPanel(wx.Panel):
         # Layout
         self.hbSizer1 = wx.BoxSizer(wx.HORIZONTAL)
         self.hbSizer1.Add(self.slider, 1, wx.EXPAND | wx.RIGHT, 10)
-        self.hbSizer1.Add(self.stitchBox, 0, wx.ALIGN_CENTER | wx.Right, 10)
-        self.hbSizer1.Add(self.totalstitchText, 0, wx.ALIGN_CENTER | wx.LEFT, 10)
+        self.hbSizer1.Add(self.stitchBox, 0, wx.ALIGN_TOP | wx.TOP, 25)
+        self.hbSizer1.Add((1, 1), 0, wx.RIGHT, 10)
+        self.hbSizer1.Add(self.totalstitchText, 0, wx.ALIGN_TOP | wx.TOP, 25)
+        self.hbSizer1.Add((1, 1), 0, wx.RIGHT, 10)
 
         self.controls_sizer = wx.StaticBoxSizer(wx.StaticBox(self, wx.ID_ANY, _("Controls")), wx.HORIZONTAL)
         self.controls_inner_sizer = wx.BoxSizer(wx.HORIZONTAL)
