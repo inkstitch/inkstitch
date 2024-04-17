@@ -15,7 +15,6 @@ from lib.utils import get_resource_dir
 from lib.utils.settings import global_settings
 from lib.utils.threading import ExitThread
 from ..i18n import _
-from ..stitch_plan import stitch_plan_from_file
 from ..svg import PIXELS_PER_MM
 
 # L10N command label at bottom of simulator window
@@ -1087,8 +1086,8 @@ class SimulatorWindow(wx.Frame):
             self.panel.Show()
         else:
             self.is_child = False
-            self.simulator_panel = SimulatorPanel(self)
-            self.sizer.Add(self.simulator_panel, 1, wx.EXPAND)
+            self.panel = SimulatorPanel(self)
+            self.sizer.Add(self.panel, 1, wx.EXPAND)
 
         self.SetSizer(self.sizer)
         self.Layout()
@@ -1103,6 +1102,12 @@ class SimulatorWindow(wx.Frame):
 
     def on_close(self, event):
         self.parent.attach_simulator()
+
+    def load(self, stitch_plan):
+        self.panel.load(stitch_plan)
+
+    def go(self):
+        self.panel.go()
 
 
 class SplitSimulatorWindow(wx.Frame):
@@ -1253,26 +1258,3 @@ class PreviewRenderer(Thread):
         except:  # noqa: E722
             import traceback
             debug.log("unhandled exception in PreviewRenderer.render_stitch_plan(): " + traceback.format_exc())
-
-
-def show_simulator(stitch_plan):
-    app = wx.App()
-    current_screen = wx.Display.GetFromPoint(wx.GetMousePosition())
-    display = wx.Display(current_screen)
-    screen_rect = display.GetClientArea()
-
-    simulator_pos = (screen_rect[0], screen_rect[1])
-
-    # subtract 1 because otherwise the window becomes maximized on Linux
-    width = screen_rect[2] - 1
-    height = screen_rect[3] - 1
-
-    frame = SimulatorWindow(pos=simulator_pos, size=(width, height), stitch_plan=stitch_plan)
-    app.SetTopWindow(frame)
-    frame.Show()
-    app.MainLoop()
-
-
-if __name__ == "__main__":
-    stitch_plan = stitch_plan_from_file(sys.argv[1])
-    show_simulator(stitch_plan)
