@@ -230,7 +230,6 @@ class ControlPanel(wx.Panel):
 
         self.accel_table = wx.AcceleratorTable(self.accel_entries)
         self.SetAcceleratorTable(self.accel_table)
-        self.SetFocus()
 
         # wait for layouts so that panel size is set
         if self.stitch_plan:
@@ -1135,6 +1134,7 @@ class SplitSimulatorWindow(wx.Frame):
 
         self.SetMinSize(self.sizer.CalcMin())
 
+        self.simulator_panel.SetFocus()
         self.Maximize()
         self.Show()
         wx.CallLater(100, self.set_sash_position)
@@ -1176,7 +1176,7 @@ class SplitSimulatorWindow(wx.Frame):
         self.detached_simulator_frame = None
         self.Maximize()
         self.splitter.UpdateSize()
-        self.SetFocus()
+        self.simulator_panel.SetFocus()
         self.Raise()
         wx.CallLater(100, self.set_sash_position)
         global_settings['pop_out_simulator'] = False
