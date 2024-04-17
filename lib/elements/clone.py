@@ -4,11 +4,10 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 from math import degrees
-from copy import deepcopy
 from contextlib import contextmanager
 from typing import Generator, List
 
-from inkex import Transform, BaseElement, Style
+from inkex import Transform, BaseElement
 from shapely import MultiLineString
 
 from ..stitch_plan.stitch_group import StitchGroup
@@ -43,7 +42,7 @@ class Clone(EmbroideryElement):
     @property
     @param('clone', _("Clone"), type='toggle', inverse=False, default=True)
     def clone(self):
-        return self.get_boolean_param("clone")
+        return self.get_boolean_param("clone", True)
 
     @property
     @param('angle',
@@ -81,6 +80,9 @@ class Clone(EmbroideryElement):
         return elements
 
     def to_stitch_groups(self, last_stitch_group=None) -> List[StitchGroup]:
+        if self.clone:
+            return []
+
         with self.clone_elements() as elements:
             stitch_groups = []
 
@@ -123,22 +125,18 @@ class Clone(EmbroideryElement):
         parent: BaseElement = self.node.getparent()
         source_node: BaseElement = self.node.href
         source_parent: BaseElement = source_node.getparent()
-        cloned_node = deepcopy(source_node)
+        cloned_node = source_node.copy()
 
         if recursive:
             # Recursively resolve all clones as if the clone was in the same place as its source
             source_parent.add(cloned_node)
 
             if is_clone(cloned_node):
-                resolved_cloned_node = Clone(cloned_node).resolve_clone()
-                cloned_node.getparent().remove(cloned_node)
-                # Replace the cloned_node with its resolved version
-                cloned_node = resolved_cloned_node
+                cloned_node = cloned_node.replace_with(Clone(cloned_node).resolve_clone())
             else:
                 clones: List[BaseElement] = [n for n in cloned_node.iterdescendants() if is_clone(n)]
                 for clone in clones:
-                    Clone(clone).resolve_clone()
-                    clone.getparent().remove(clone)
+                    clone.replace_with(Clone(clone).resolve_clone())
 
             source_parent.remove(cloned_node)
 
@@ -146,14 +144,10 @@ class Clone(EmbroideryElement):
         parent.add(cloned_node)
         # The transform of a resolved clone is based on the clone's transform as well as the source element's transform.
         # This makes intuitive sense: The clone of a scaled item is also scaled, the clone of a rotated item is also rotated, etc.
-        cloned_node.set('transform', Transform(self.node.get('transform')) @ Transform(cloned_node.get('transform')))
+        cloned_node.transform = self.node.transform @ cloned_node.transform
 
         # Merge the style, if any: Note that the source node's style applies on top of the use's, not the other way around.
-        clone_style = self.node.get('style')
-        if clone_style:
-            merged_style = Style(clone_style)
-            merged_style.update(cloned_node.get('style'))
-            cloned_node.set('style', merged_style)
+        cloned_node.style = self.node.style + cloned_node.style
 
         # Compute angle transform:
         # Effectively, this is (local clone transform) * (to parent space) * (from clone's parent space)
@@ -174,7 +168,6 @@ class Clone(EmbroideryElement):
             # Otherwise we'd have to calculate the transform of (0,0) and subtract it from the transform of (1,0)
             angle_transform = Transform((transform.a, transform.b, transform.c, transform.d, 0.0, 0.0))
 
-        elements = self.clone_to_elements(cloned_node)
         for node in cloned_node.iter():
             # Only need to adjust angles on embroiderable nodes
             if node.tag not in EMBROIDERABLE_TAGS:
@@ -194,8 +187,6 @@ class Clone(EmbroideryElement):
                 element_angle = -element_angle
 
             node.set(INKSTITCH_ATTRIBS['angle'], round(element_angle, 6))
-
-        return elements
 
     @property
     def shape(self):

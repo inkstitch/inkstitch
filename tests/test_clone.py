@@ -34,6 +34,22 @@ class CloneElementTest(TestCase):
         stitch_groups = clone.to_stitch_groups(None)
         self.assertEqual(len(stitch_groups), 0)
 
+    def test_not_clone(self):
+        root: SvgDocumentElement = svg()
+        rect = root.add(Rectangle(attrib={
+            "width": "10",
+            "height": "10",
+            INKSTITCH_ATTRIBS["angle"]: "30"
+        }))
+        use = root.add(Use(attrib={
+            INKSTITCH_ATTRIBS["clone"]: "false"
+        }))
+        use.href = rect
+
+        clone = Clone(use)
+        stitch_groups = clone.to_stitch_groups(None)
+        self.assertEqual(len(stitch_groups), 0)
+
     # These tests make sure the element cloning works as expected, using the `clone_elements` method.
 
     def test_basic(self):
