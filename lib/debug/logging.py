@@ -7,16 +7,19 @@
 # ---------------------------------
 # some idea can be found in: Modern Python logging - https://www.youtube.com/watch?v=9L77QExPmI0
 #
-# logging vs warnings (ChatGPT)
-# -----------------------------
-# warnings - a built-in mechanism for alerting developers to potential issues or deprecated features within their code.
-# logging  - to track events, errors, and other information relevant to the program's operation.
-#            Developers typically use logging to understand how their program behaves during execution, diagnose issues,
-#            and monitor performance.
+# logging vs warnings
+# -------------------
+# warnings - see https://docs.python.org/3/library/warnings.html
+# logging  - see https://docs.python.org/3/library/logging.html
 #
-# Inkstitch is application for Inkscape, so it is not a library, so we use logging for all messages.
+# In simplified terms, use "warning" to alert that a specific function is deprecated, and in all other cases, use "logging".
+# Warnings are primarily intended for libraries where there's a newer solution available, but for backward compatibility
+# reasons, the old functionality is retained.
 #
-
+# In complex applications like Inkstitch, it might be sensible to exclusively use one method, namely "logging",
+# to unify and simplify the messaging system of such a system.
+#
+#
 # root logger:
 # ------------
 # - The primary logger orchestrates all other loggers through logging.xxx() calls.
@@ -24,7 +27,7 @@
 # - It can easily disable all loggers by invoking logging.disable() and channel all warnings to logging
 #   by setting logging.captureWarnings(True) with the level WARNING.
 # - The configuration of all loggers can be achieved via a file, and logging.config.dictConfig(logging_dict).
-
+#
 
 # module logger:
 # --------------
