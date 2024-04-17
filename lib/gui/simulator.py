@@ -901,7 +901,7 @@ class SimulatorSlider(wx.Panel):
         self._value = 0
         self._tab_rect = None
 
-        for marker_list in self.marker_lists:
+        for marker_list in self.marker_lists.values():
             marker_list.clear()
 
     def add_color_section(self, color, start, end):
