@@ -28,14 +28,9 @@ class Simulator(InkstitchExtension):
         current_screen = wx.Display.GetFromPoint(wx.GetMousePosition())
         display = wx.Display(current_screen)
         screen_rect = display.GetClientArea()
-
-        simulator_pos = (screen_rect[0], screen_rect[1])
-
-        # subtract 1 because otherwise the window becomes maximized on Linux
-        width = screen_rect[2] - 1
-        height = screen_rect[3] - 1
-
-        simulator = SimulatorWindow(pos=simulator_pos, size=(width, height))
+        height = int(screen_rect[3] * 0.8)
+        simulator = SimulatorWindow(size=(0, height))
+        wx.CallLater(100, simulator.Centre)
         app.SetTopWindow(simulator)
         simulator.Show()
         simulator.load(stitch_plan)
