@@ -43,8 +43,8 @@ class ControlPanel(wx.Panel):
         wx.Panel.__init__(self, parent, *args, **kwargs)
 
         self.drawing_panel = None
-        self.num_stitches = 1
-        self.current_stitch = 1
+        self.num_stitches = 0
+        self.current_stitch = 0
         self.speed = 1
         self.direction = 1
         self._last_color_block_end = 0
@@ -98,12 +98,15 @@ class ControlPanel(wx.Panel):
         self.slider.Bind(wx.EVT_SLIDER, self.on_slider)
         self.stitchBox = IntCtrl(self, -1, value=1, min=1, max=2, limited=True, allow_none=True,
                                  size=((100, -1)), style=wx.TE_PROCESS_ENTER)
+        self.stitchBox.Clear()
         self.stitchBox.Bind(wx.EVT_LEFT_DOWN, self.on_stitch_box_focus)
         self.stitchBox.Bind(wx.EVT_SET_FOCUS, self.on_stitch_box_focus)
         self.stitchBox.Bind(wx.EVT_TEXT_ENTER, self.on_stitch_box_focusout)
         self.stitchBox.Bind(wx.EVT_KILL_FOCUS, self.on_stitch_box_focusout)
         self.Bind(wx.EVT_LEFT_DOWN, self.on_stitch_box_focusout)
-        self.totalstitchText = wx.StaticText(self, -1, label="/ ________")
+        self.totalstitchText = wx.StaticText(self, -1, label="")
+        extent = self.totalstitchText.GetTextExtent("0000000")
+        self.totalstitchText.SetMinSize(extent)
         self.btnJump = wx.BitmapToggleButton(self, -1, style=self.button_style)
         self.btnJump.SetToolTip(_('Show jump stitches'))
         self.btnJump.SetBitmap(self.load_icon('jump'))
@@ -241,6 +244,7 @@ class ControlPanel(wx.Panel):
             # otherwise the slider and intctrl get mad
             num_stitches = 2
         self.num_stitches = num_stitches
+        self.stitchBox.SetValue(1)
         self.stitchBox.SetMax(num_stitches)
         self.slider.SetMax(num_stitches)
         self.totalstitchText.SetLabel(f"/ { num_stitches }")
@@ -250,6 +254,13 @@ class ControlPanel(wx.Panel):
         start = self._last_color_block_end + 1
         self.slider.add_color_section(ColorSection(color.rgb, start, start + num_stitches - 1))
         self._last_color_block_end = self._last_color_block_end + num_stitches
+
+    def clear(self):
+        self.stitches = []
+        self._set_num_stitches(0)
+        self.slider.clear()
+        self.stitchBox.Clear()
+        self.totalstitchText.SetLabel("")
 
     def load(self, stitch_plan):
         self.stitches = []
@@ -828,7 +839,7 @@ class ColorSection:
 class SimulatorSlider(wx.Panel):
     PROXY_EVENTS = (wx.EVT_SLIDER,)
 
-    def __init__(self, parent, id=wx.ID_ANY, minValue=0, maxValue=1, **kwargs):
+    def __init__(self, parent, id=wx.ID_ANY, minValue=1, maxValue=2, **kwargs):
         super().__init__(parent, id)
 
         kwargs['style'] = wx.SL_HORIZONTAL | wx.SL_VALUE_LABEL | wx.SL_TOP | wx.ALIGN_TOP
@@ -884,6 +895,13 @@ class SimulatorSlider(wx.Panel):
     def GetValue(self):
         return self._value
 
+    def clear(self):
+        self.color_sections = []
+        self._min = 1
+        self._max = 2
+        self._value = 0
+        self._tab_rect = None
+
     def add_color_section(self, color, start, end):
         self.color_sections.append(ColorSection(color, start, end))
 
@@ -911,6 +929,9 @@ class SimulatorSlider(wx.Panel):
             dc.SetBackground(background_brush)
         dc.Clear()
         gc = wx.GraphicsContext.Create(dc)
+
+        if self._value < self._min:
+            return
 
         width, height = self.GetSize()
         min_value = self._min
@@ -1040,6 +1061,7 @@ class SimulatorPanel(wx.Panel):
 
     def clear(self):
         self.dp.clear()
+        self.cp.clear()
 
 
 class SimulatorWindow(wx.Frame):
