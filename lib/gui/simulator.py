@@ -249,11 +249,6 @@ class ControlPanel(wx.Panel):
         self.totalstitchText.SetLabel(f"/ { num_stitches }")
         self.choose_speed()
 
-    def add_color(self, color, num_stitches):
-        start = self._last_color_block_end + 1
-        self.slider.add_color_section(ColorSection(color.rgb, start, start + num_stitches - 1))
-        self._last_color_block_end = self._last_color_block_end + num_stitches
-
     def clear(self):
         self.stitches = []
         self._set_num_stitches(0)
