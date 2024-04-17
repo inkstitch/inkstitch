@@ -261,12 +261,14 @@ class ControlPanel(wx.Panel):
         self._set_num_stitches(stitch_plan.num_stitches)
 
         stitch_num = 0
+        last_block_end = 1
         for color_block in stitch_plan.color_blocks:
             self.stitches.extend(color_block.stitches)
 
             start = stitch_num + 1
-            end = start + color_block.num_stitches
-            self.slider.add_color_section(color_block.color.rgb, start, end)
+            end = start + color_block.num_stitches - 1
+            self.slider.add_color_section(color_block.color.rgb, last_block_end, end)
+            last_block_end = end
 
             for stitch_num, stitch in enumerate(color_block.stitches, start):
                 if stitch.trim:
