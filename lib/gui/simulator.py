@@ -812,11 +812,12 @@ class DrawingPanel(wx.Panel):
 
 
 class MarkerList(list):
-    def __init__(self, icon_name, stitch_numbers=()):
+    def __init__(self, icon_name, offset=0, stitch_numbers=()):
         super().__init__(self)
         icons_dir = get_resource_dir("icons")
         self.icon_name = icon_name
         self.icon = wx.Image(os.path.join(icons_dir, f"{icon_name}.png")).ConvertToBitmap()
+        self.offset = offset
         self.enabled = False
         self.extend(stitch_numbers)
 
@@ -840,27 +841,27 @@ class SimulatorSlider(wx.Panel):
 
         kwargs['style'] = wx.SL_HORIZONTAL | wx.SL_VALUE_LABEL | wx.SL_TOP | wx.ALIGN_TOP
 
-        self._height = self.GetTextExtent("M").y * 4
+        self._height = self.GetTextExtent("M").y * 6
         self.SetMinSize((self._height, self._height))
 
         self.marker_lists = {
             "trim": MarkerList("trim"),
-            "stop": MarkerList("stop"),
-            "jump": MarkerList("jump"),
-            "color_change": MarkerList("color_change"),
+            "jump": MarkerList("jump", 0.17),
+            "stop": MarkerList("stop", 0.34),
+            "color_change": MarkerList("color_change", 0.34),
         }
         self.marker_pen = wx.Pen(wx.Colour(0, 0, 0))
         self.color_sections = []
         self.margin = 15
         self.tab_start = 0
-        self.tab_width = 0.2
-        self.tab_height = 0.2
-        self.color_bar_start = 0.3
-        self.color_bar_thickness = 0.25
+        self.tab_width = 0.15
+        self.tab_height = 0.15
+        self.color_bar_start = 0.22
+        self.color_bar_thickness = 0.17
         self.marker_start = self.color_bar_start
-        self.marker_end = 0.75
-        self.marker_icon_start = 0.75
-        self.marker_icon_size = self._height // 4
+        self.marker_end = 0.5
+        self.marker_icon_start = 0.5
+        self.marker_icon_size = self._height // 6
 
         self._min = minValue
         self._max = maxValue
@@ -972,11 +973,11 @@ class SimulatorSlider(wx.Panel):
                     x = _value_to_x(value)
                     gc.StrokeLine(
                         x, height * self.marker_start,
-                        x, height * self.marker_end
+                        x, height * (self.marker_end + marker_list.offset)
                     )
                     gc.DrawBitmap(
                         marker_list.icon,
-                        x - self.marker_icon_size / 2, height * self.marker_icon_start,
+                        x - self.marker_icon_size / 2, height * (self.marker_icon_start + marker_list.offset),
                         self.marker_icon_size, self.marker_icon_size
                     )
 
