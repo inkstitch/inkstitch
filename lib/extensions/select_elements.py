@@ -23,6 +23,7 @@ class SelectElements(InkstitchExtension):
 
         pars.add_argument("--select-running-stitch", type=Boolean, dest="running", default=False)
         pars.add_argument("--running-stitch-condition", type=str, dest="running_stitch_condition", default="all")
+        pars.add_argument("--bean-stitch-repeats", type=str, dest="bean_stitch_repeats", default='0')
         pars.add_argument("--select-ripples", type=Boolean, dest="ripples", default=False)
         pars.add_argument("--select-zigzag", type=Boolean, dest="zigzag", default=False)
         pars.add_argument("--select-manual", type=Boolean, dest="manual", default=False)
@@ -107,7 +108,7 @@ class SelectElements(InkstitchExtension):
     def _select_stroke(self, element):
         select = False
         method = element.stroke_method
-        if self.options.running and method == 'running_stitch' and self._running_condition(element):
+        if self.options.running and method == 'running_stitch' and self._running_condition(element) and self._bean_stitch_repeats(element):
             select = True
         if self.options.ripples and method == 'ripple_stitch':
             select = True
@@ -142,6 +143,10 @@ class SelectElements(InkstitchExtension):
         element_id = element.node.get_id() or ''
         conditions = {'all': True, 'autorun-top': element_id.startswith('autorun'), 'autorun-underpath': element_id.startswith('underpath')}
         return conditions[self.options.running_stitch_condition]
+
+    def _bean_stitch_repeats(self, element):
+        repeats = element.node.get('inkstitch:bean_stitch_repeats', '0')
+        return repeats == self.options.bean_stitch_repeats
 
     def _select_fill_underlay(self, element):
         underlay = {'all': True, 'no': not element.fill_underlay, 'yes': element.fill_underlay}
