@@ -29,7 +29,7 @@ Voici trois exemples de valeurs pour le paramètre pourcentage de compensation d
 
 Ici le premier rail est le bord gauche du satin.
 
-Quand le paramètre vaut "0 -75" (en vert) on ne touche pas au bord gauche, mais tout se passe comme si le bord droit avait été rapproché régulièrement pour réduire la distance entre les deux rails au quart de la valeur initiale.
+Quand le paramètre vaut "0 -75" (en vert) on ne touche pas au bord gauche, mais tout se passe comme si le bord droit avait été rapproché régulièrement pour réduire la distance entre les deux rails au quart de la valeur initiale. On est en effet passé d'une largeur de 100% à une largeur de 100-75=25%
 
 Quand le paramètre vaut "-25  -25" (en rouge) les deux bords se rapprochent du centre et la largeur de la colonne est uniformément réduite de moitié.
 
@@ -50,13 +50,13 @@ Ces deux paramètres sont eux aussi asymétriques et supportent eux aussi des va
 
 Plutôt qu'un serpent tricolore, on souhaite maintenant un serpent bicolore, tout vert à gauche, tout bleu à droite, et un mélange de bleu et de vert dans la  partie centrale. 
 
-Première question à se poser, quelle part relative donner à ces trois zones ? Disons qu'on veut donner au vert  ,gauche l'exclusivité sur 30% de la largeur, et au bleu l'exclusivité à droite de 25% de la largeur, et qu'ils se partagent les 45 pourcent qui restent au centre.
+Première question à se poser, quelle part relative donner à ces trois zones ? Disons qu'on veut donner au vert à gauche l'exclusivité sur 30% de la largeur, et au bleu l'exclusivité à droite de 25% de la largeur, et qu'ils se partagent les 45 pourcent qui restent au centre.
 
 ### Première solution, en utilisant uniquement l'augmentation de la largeur aléatoire
 
-Pour la partie verte  on va donner  au paramètre  "pourcentage de compensation d'étirement" la valeur "0 -70", enlevant du vert à droite, mais déjà sur les 30% les plus à gauche, c'est tout vert. En donnant au paramètre "augmentation de la largeur aléatoire de satin" la valeur "0 45", pour autoriser le vert à aller jusqu'à 100-70+45= 75 % de la largeur.
+Pour la partie verte  on va donner  au paramètre  "pourcentage de compensation d'étirement" la valeur "0 -70", enlevant du vert à droite, mais déjà sur les 30% les plus à gauche, c'est tout vert. En donnant au paramètre "augmentation de la largeur aléatoire de satin" la valeur "0 45", on autorise  le vert à aller jusqu'à 100-70+45= 75 % de la largeur. Donc le vert utilisera entre 30 et 75% de l'espace. Il n'empiète pas sur la zone exclusivement bleu.
 
-Pour la partie bleue  on va donner  au paramètre  "pourcentage de compensation d'étirement" la valeur "-75 -0", enlevant du bleu à gauche, mais déjà sur les 25% les plus à droite, c'est tout bleu . En donnant au paramètre "augmentation de la largeur aléatoire de satin" la valeur "45 0", pour autoriser le bleu à aller jusqu'à 100-75+45= 70 % de la largeur.
+Pour la partie bleue  on va donner  au paramètre  "pourcentage de compensation d'étirement" la valeur "-75 -0", enlevant du bleu à gauche, mais déjà sur les 25% les plus à droite, c'est tout bleu . En donnant au paramètre "augmentation de la largeur aléatoire de satin" la valeur "45 0", on  autorise le bleu à aller jusqu'à 100-75+45= 70 % de la largeur.  Le bleu oscillera donc entre 25 et 70% de la largeur. Il n'empiète pas sur la zone  exclusivement verte.
 
 Voici le résultat obtenu: 
 
@@ -70,17 +70,16 @@ On obtient alors ceci:
 ![withoverlay](/assets/images/tutorials/multicolor_satin/withoverlay.png)
 
 
-mais cette solution comporte des superpositions
+mais cette solution comporte des superpositions. 
 
 ### Solution sans superposition
 
-Pour obtenir une solution ou il n'y a ni manque ni superposition dans la partie centrale, malgré l'aléatoire, il existe une solution, un peu étrange, mais qui fonctionne. On va faire en sorte que lorsque les deux colonnes sont calculées, elles utilisent des nombres aléatoires "synchronisés".
+Il existe une solution où il n'y a ni manque ni superposition dans la partie centrale, malgré l'aléatoire. C'est un peu étrange, mais ça fonctionne. On va faire en sorte que lorsque les deux colonnes sont calculées, elles utilisent des nombres aléatoires "synchronisés".
 
 
+*Tentative d'explication certainement indigeste que vous pouvez tout à fait sauter :*
 
-
-Tentative d'explication  que vous pouvez tout à fait sauter :
-il n'y a pas de vrai aléatoire en informatique, seulement du pseudo-aléatoire. Un générateur de nombre pseudoaléatoire  utilise une fonction pour calculer une suite de nombre, le premier nombre de la suite est appelé graine aléatoire, le second nombre est calculé en fonction du premier, le troisième à partir du second etc... La fonction est telle que la suite  ressemble fortement à de  l'aléatoire, mais en fait  tout est  déterministe.
+Il n'y a pas de vrai aléatoire en informatique, seulement du pseudo-aléatoire. Un générateur de nombre pseudoaléatoire  utilise une fonction pour calculer une suite de nombre, le premier nombre de la suite est appelé graine aléatoire, le second nombre est calculé en fonction du premier, le troisième à partir du second etc... La fonction est telle que la suite  ressemble fortement à de  l'aléatoire, mais en fait  tout est  déterministe.
 
 Pour dessiner une colonne satin, Ink/Stitch calcule des couples de points, qui sans aléatoire ni compensation sont le premier sur le premier rail, le second sur le second rail.
 S'il y  a des valeurs aléatoires, les valeurs des  points  de gauche sont calculées avec des indices pairs, les valeurs des points de droite sont calculées avec des indices impairs  des nombres de la suite pseudoaléatoire, ces valeurs sont calculées en tenant compte de tous les paramètres, compensation , augmentation, diminution de la largeur.
@@ -89,7 +88,7 @@ Donc même si l'on donne aux  deux  colonnes la  même valeur de graine aléatoi
 
 Mais on peut y arriver en jonglant  pour que les positions aléatoires correspondent dans les deux cas au même rail.
 
-Fin de la tentative d'explication
+*Fin de la tentative d'explication*
 
 On va modifier le paramétrage des  colonnes comme suit:
 
