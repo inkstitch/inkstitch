@@ -111,8 +111,11 @@ Colonne bleu:
 
 [Télécharger serpent.svg](/assets/images/tutorials/multicolor-satin/serpent.svg){: download="serpent.svg" }
 
-On peut jouer avec beaucoup  plus que deux couleurs 
+On peut jouer avec beaucoup  plus que deux couleurs:
 
+![ArcEnCiel](/assets/images/tutorials/multicolor_satin/arcenciel.svg)
+
+[Télécharger arcenciel.svg](/assets/images/tutorials/multicolor-satin/arcenciel.svg){: download="arcenciel.svg" }
 
 
 
