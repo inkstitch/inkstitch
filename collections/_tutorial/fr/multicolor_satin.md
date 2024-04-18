@@ -12,7 +12,7 @@ techniques:
 field-of-use:
 user-level: 
 ---
-
+![compensation](/assets/images/tutorials/multicolor_satin/snake.jpg)
 # Simuler une colonne satin multicolore.
 On parle ici de simulation, car il ne s'agit pas d'une seule colonne satin  multicolore, mais d'un effet simiaire obtenu en 
 utilisant plusieurs  copies superposées d'une même colonne satin, simplement en modifiant les paramètrages.
@@ -45,6 +45,74 @@ Si l'on superpose ces trois colonnes, on obtient un serpent tricolore
 
 
 ## Augmentation (et Diminution) de la largeur aléatoire de satin (en pourcentage)
+
+Ces deux paramètres sont eux aussi asymétriques et supportent eux aussi des valeurs négatives. De ce fait,  on peut acroitre aléatoirement la largeur d'une colonne satin soit en utilisant une valeur positive d'augmentation de largeur, soit une valeur négative de diminution de largeur.
+
+Plutôt qu'un serpent tricolore, on souhaite maintenant un serpent bicolore, tout vert à gauche, tout bleu à droite, et un mélange de bleu et de vert dans la  partie centrale. 
+
+Première question à se poser, quelle part relative donner à ces trois zones ? Disons qu'on veut donner au vert  ,gauche l'exclusivité sur 30% de la largeur, et au bleu l'exclusivité à droite de 25% de la largeur, et qu'ils se partagent les 45 pourcent qui restent au centre.
+
+### Premiere solution, en utilisant unquement l'augmentation de la largeur aléatoire
+
+Pour la partie verte  on va donner  au paramètre  "pourcentage de compensation d'étirement" la valeur "0 -70", enlevant du vert à droite, mais déjà sur les 30% les plus à gauche, c'est tout vert .En donnant au paramètre "augemntation de la largeur aléatoire de satin" la valeur "0 45", pour autoriser le vert à aller jusqu'à 100-70+45= 75 % de la largeur.
+
+Pour la partie bleue  on va donner  au paramètre  "pourcentage de compensation d'étirement" la valeur "-75 -0", enlevant du bleu à auchhe, mais déjà sur les 25% les plus à droite, c'est tout bleu . En donnant au paramètre "augmentation de la largeur aléatoire de satin" la valeur "45 0", pour autoriser le bleu à aller jusqu'à 100-75+45= 70 % de la largeur.
+
+Voici le résultat obtenu: 
+
+![wrong-bicolor](/assets/images/tutorials/multicolor_satin/wrongbicolor.png)
+
+On constate des zones blanches blanches au milieu, et parfois le vert et le bleu se superposent. C'est simplement parce que chaque colonne utilise ses valeurs aléatoires et que ce ne sont pas les même.
+
+Il n'est pas difficile d'éliminer la zone blanche si l'on accepte les superpositions, on pourrait par exemple ne pas mettre d'aléatoire sur le vert et lui donner "0 -25" comme pourcentage de compensation d'étirement.
+On obtient alors ceci: 
+
+![withoverlay](/assets/images/tutorials/multicolor_satin/withoverlay.png)
+
+
+mais cette solution comporte des superpositions
+
+### Solution sans superposition
+
+Pour obtenir une solution ou il n'y a ni manque ni superposition dans la partie centrale, malgré l'aléatoire, il existe une solution, un peu étrange, mais qui fonctionne. On va faire en sorte que lorsque les deux colonnes sont calculées, elles utilisent des nombres aléatoires "synchronisés".
+
+
+
+
+Tentative d'explication  que vous pouvez tout à fait sauter :
+il n'y a pas de vrai aléatoire en informatique, seulement du pseudo-aléatoire. Un générateur de nombre pseudoaléatoire  utilise une fonction pour calculer une suite de nombre, le premier nombre de la suite est appelé graine aléatoire, le second nombre est calculé en fonction du premier, le troisième à partir du second etc... La fonction est telle que la suite  ressemble fortement à de  l'aléatoire, mais en fait  tout est  déterministe.
+
+Pour dessiner une colonne satin, inkstitch calcule des couples de points, qui sans aléatoire ni compensation sont le premier sur le premier rail, le second sur le second rail.
+S'il y  a des valeurs aléatoires, les valeurs des  points  de gauche sont calculées avec des indices pairs, les valeurs des points de droite sont calculées avec des indices impairs  des nombres de la suite pseudoaléatoire, ces valeurs sont calculées en tenant compte de tous les paramètres, compensation , augmentation, diminution de la largeu.
+
+Donc même si l'on donne aux  deux  colonnes la  même valeur de graine aléatoire, si  l'on regarde le n-ième zig de la colonne verte la position aléatoire correspond au second rail et  c'est le 2*n-ième calcul aléatoire, tandis que sur le zig correspondant de la colonne  bleu, la position aléatoire correspond au premier rail et c'est le (2*n-1)-ième calcul aléatoire. Du coup les deux colonnes ne vont pas bien s'emboiter.
+
+Mais on peut y arriver en jonglant  pour que les positions aléatoires correspondent dans les deux cas au même rail.
+
+Fin de la tentative d'explication
+
+On va modifier le paramètrage des  colonnes comme suit:
+
+Colonne verte :
+* Pourcentage de compensatiion d'étirement : 0 -70
+* Augmentation aléatoire de la largeur du satin 0 45
+* Diminution aléatoire de la largeur du satin 0 0
+* Graine aléatoire  7 (ou n'importe quoi d'autre mais saisir une valeur)
+
+Colonne bleu:
+* Pourcentage de compensation d'étirement : 0 -75
+* Cocher echanger les rails 
+* Augmentation aléatoire de la largeur du satin 0 0
+* Dimunution aléatoire de la largeur du satin 0 -45   (ce sera donc une augmentation)
+* Graine aléatoire 7 (où ce que vous avez saisi pour l'autre colonne)
+
+
+![solution](/assets/images/tutorials/multicolor_satin/solution.png)
+
+[Télécharger serpent.svg](/assets/images/tutorials/multicolor-satin/serpent.svg){: download="serpent.svg" }
+
+On peut jouer avec beaucoup  plus que deux couleurs 
+
 
 
 
