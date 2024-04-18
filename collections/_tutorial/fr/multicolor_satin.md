@@ -14,15 +14,15 @@ user-level:
 ---
 ![compensation](/assets/images/tutorials/multicolor_satin/snake.jpg)
 # Simuler une colonne satin multicolore.
-On parle ici de simulation, car il ne s'agit pas d'une seule colonne satin  multicolore, mais d'un effet simiaire obtenu en 
-utilisant plusieurs  copies superposées d'une même colonne satin, simplement en modifiant les paramètrages.
+On parle ici de simulation, car il ne s'agit pas d'une seule colonne satin  multicolore, mais d'un effet similaire obtenu en 
+utilisant plusieurs  copies superposées d'une même colonne satin, simplement en modifiant les paramétrages.
 
-## Pourcentage de compensation d'étirement négatif asymètrique
+## Pourcentage de compensation d'étirement négatif asymétrique
 Pour obtenir des colonnes satin multicolores, on va utiliser le paramètre "pourcentage de compensation d'étirement".
 
-C'est un paramètre asymétrique, c'est à dire qu'il est possible de lui donner deux valeurs différentes (séparées par un espace), la premère valeur s'appliquant au  premier rail, la seconde valeur s'appliquant au second rail.
+C'est un paramètre asymétrique, c'est à dire qu'il est possible de lui donner deux valeurs différentes (séparées par un espace), la première valeur s'appliquant au  premier rail, la seconde valeur s'appliquant au second rail.
 
-Il  est courant de donner des valeurs positives aux compensations, mais il est aussi possible de leur donner des valeurs négatives, au lieu d'augmener la largeur de la colonne satin, on la réduit.
+Il  est courant de donner des valeurs positives aux compensations, mais il est aussi possible de leur donner des valeurs négatives, au lieu d'augmenter la largeur de la colonne satin, on la réduit.
 
 Voici trois exemples de valeurs pour le paramètre pourcentage de compensation d'étirement, et le résultat
 ![compensation](/assets/images/tutorials/multicolor_satin/compensation.png)
@@ -31,11 +31,11 @@ Ici le premier rail est le bord gauche du satin.
 
 Quand le paramètre vaut "0 -75" (en vert) on ne touche pas au bord gauche, mais tout se passe comme si le bord droit avait été rapproché régulièrement pour réduire la distance entre les deux rails au quart de la valeur initiale.
 
-Quand le paramétre vaut "-25  -25" (en rouge) les deux bords se rapporchent du centre et la largeur de la colonne est uniformément réduite de moitié.
+Quand le paramètre vaut "-25  -25" (en rouge) les deux bords se rapprochent du centre et la largeur de la colonne est uniformément réduite de moitié.
 
-Quand le paramétre vaut "-75  0" (en bleu) on ne touche pas au bord gdroit, mais tout se passe comme si le bord gauche avait été rapproché régulièrement pour réduire la distance entre les deux rails au quart de la valeur initiale.
+Quand le paramètre vaut "-75  0" (en bleu) on ne touche pas au bord droit, mais tout se passe comme si le bord gauche avait été rapproché régulièrement pour réduire la distance entre les deux rails au quart de la valeur initiale.
 
-Si l'on superpose ces trois colonnes, on obtient un serpent tricolore
+Si l'on superpose ces trois colonnes, on obtient un serpent tricolore.
 
 ![tricolor](/assets/images/tutorials/multicolor_satin/tricolor_snake.png)
 
@@ -46,17 +46,17 @@ Si l'on superpose ces trois colonnes, on obtient un serpent tricolore
 
 ## Augmentation (et Diminution) de la largeur aléatoire de satin (en pourcentage)
 
-Ces deux paramètres sont eux aussi asymétriques et supportent eux aussi des valeurs négatives. De ce fait,  on peut acroitre aléatoirement la largeur d'une colonne satin soit en utilisant une valeur positive d'augmentation de largeur, soit une valeur négative de diminution de largeur.
+Ces deux paramètres sont eux aussi asymétriques et supportent eux aussi des valeurs négatives. De ce fait,  on peut accroitre aléatoirement la largeur d'une colonne satin soit en utilisant une valeur positive d'augmentation de largeur, soit une valeur négative de diminution de largeur.
 
 Plutôt qu'un serpent tricolore, on souhaite maintenant un serpent bicolore, tout vert à gauche, tout bleu à droite, et un mélange de bleu et de vert dans la  partie centrale. 
 
 Première question à se poser, quelle part relative donner à ces trois zones ? Disons qu'on veut donner au vert  ,gauche l'exclusivité sur 30% de la largeur, et au bleu l'exclusivité à droite de 25% de la largeur, et qu'ils se partagent les 45 pourcent qui restent au centre.
 
-### Premiere solution, en utilisant unquement l'augmentation de la largeur aléatoire
+### Première solution, en utilisant uniquement l'augmentation de la largeur aléatoire
 
-Pour la partie verte  on va donner  au paramètre  "pourcentage de compensation d'étirement" la valeur "0 -70", enlevant du vert à droite, mais déjà sur les 30% les plus à gauche, c'est tout vert .En donnant au paramètre "augemntation de la largeur aléatoire de satin" la valeur "0 45", pour autoriser le vert à aller jusqu'à 100-70+45= 75 % de la largeur.
+Pour la partie verte  on va donner  au paramètre  "pourcentage de compensation d'étirement" la valeur "0 -70", enlevant du vert à droite, mais déjà sur les 30% les plus à gauche, c'est tout vert. En donnant au paramètre "augmentation de la largeur aléatoire de satin" la valeur "0 45", pour autoriser le vert à aller jusqu'à 100-70+45= 75 % de la largeur.
 
-Pour la partie bleue  on va donner  au paramètre  "pourcentage de compensation d'étirement" la valeur "-75 -0", enlevant du bleu à auchhe, mais déjà sur les 25% les plus à droite, c'est tout bleu . En donnant au paramètre "augmentation de la largeur aléatoire de satin" la valeur "45 0", pour autoriser le bleu à aller jusqu'à 100-75+45= 70 % de la largeur.
+Pour la partie bleue  on va donner  au paramètre  "pourcentage de compensation d'étirement" la valeur "-75 -0", enlevant du bleu à gauche, mais déjà sur les 25% les plus à droite, c'est tout bleu . En donnant au paramètre "augmentation de la largeur aléatoire de satin" la valeur "45 0", pour autoriser le bleu à aller jusqu'à 100-75+45= 70 % de la largeur.
 
 Voici le résultat obtenu: 
 
@@ -82,8 +82,8 @@ Pour obtenir une solution ou il n'y a ni manque ni superposition dans la partie 
 Tentative d'explication  que vous pouvez tout à fait sauter :
 il n'y a pas de vrai aléatoire en informatique, seulement du pseudo-aléatoire. Un générateur de nombre pseudoaléatoire  utilise une fonction pour calculer une suite de nombre, le premier nombre de la suite est appelé graine aléatoire, le second nombre est calculé en fonction du premier, le troisième à partir du second etc... La fonction est telle que la suite  ressemble fortement à de  l'aléatoire, mais en fait  tout est  déterministe.
 
-Pour dessiner une colonne satin, inkstitch calcule des couples de points, qui sans aléatoire ni compensation sont le premier sur le premier rail, le second sur le second rail.
-S'il y  a des valeurs aléatoires, les valeurs des  points  de gauche sont calculées avec des indices pairs, les valeurs des points de droite sont calculées avec des indices impairs  des nombres de la suite pseudoaléatoire, ces valeurs sont calculées en tenant compte de tous les paramètres, compensation , augmentation, diminution de la largeu.
+Pour dessiner une colonne satin, Ink/Stitch calcule des couples de points, qui sans aléatoire ni compensation sont le premier sur le premier rail, le second sur le second rail.
+S'il y  a des valeurs aléatoires, les valeurs des  points  de gauche sont calculées avec des indices pairs, les valeurs des points de droite sont calculées avec des indices impairs  des nombres de la suite pseudoaléatoire, ces valeurs sont calculées en tenant compte de tous les paramètres, compensation , augmentation, diminution de la largeur.
 
 Donc même si l'on donne aux  deux  colonnes la  même valeur de graine aléatoire, si  l'on regarde le n-ième zig de la colonne verte la position aléatoire correspond au second rail et  c'est le 2*n-ième calcul aléatoire, tandis que sur le zig correspondant de la colonne  bleu, la position aléatoire correspond au premier rail et c'est le (2*n-1)-ième calcul aléatoire. Du coup les deux colonnes ne vont pas bien s'emboiter.
 
@@ -91,19 +91,19 @@ Mais on peut y arriver en jonglant  pour que les positions aléatoires correspon
 
 Fin de la tentative d'explication
 
-On va modifier le paramètrage des  colonnes comme suit:
+On va modifier le paramétrage des  colonnes comme suit:
 
 Colonne verte :
-* Pourcentage de compensatiion d'étirement : 0 -70
+* Pourcentage de compensation d'étirement : 0 -70
 * Augmentation aléatoire de la largeur du satin 0 45
 * Diminution aléatoire de la largeur du satin 0 0
 * Graine aléatoire  7 (ou n'importe quoi d'autre mais saisir une valeur)
 
 Colonne bleu:
 * Pourcentage de compensation d'étirement : 0 -75
-* Cocher echanger les rails 
+* Cocher échanger les rails 
 * Augmentation aléatoire de la largeur du satin 0 0
-* Dimunution aléatoire de la largeur du satin 0 -45   (ce sera donc une augmentation)
+* Diminution aléatoire de la largeur du satin 0 -45   (ce sera donc une augmentation)
 * Graine aléatoire 7 (où ce que vous avez saisi pour l'autre colonne)
 
 
