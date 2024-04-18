@@ -108,6 +108,10 @@ jobs:
           python-version: '3.8.x'
           architecture: 'x86'
       - uses: microsoft/setup-msbuild@v2
+      - name: Setup Git for Windows SDK
+        uses: git-for-windows/setup-git-for-windows-sdk@v1.10.0
+        with:
+          flavor: build-installers
       - name: install dependencies
         shell: bash
         run: |
@@ -170,6 +174,10 @@ jobs:
           python-version: '3.8.x'
           architecture: 'x64'
       - uses: microsoft/setup-msbuild@v2
+      - name: Setup Git for Windows SDK
+        uses: git-for-windows/setup-git-for-windows-sdk@v1.10.0
+        with:
+          flavor: build-installers
       - name: install dependencies
         shell: bash
         run: |
