@@ -28,13 +28,13 @@
      inkscape:window-height="966"
      id="namedview562"
      showgrid="false"
-     inkscape:zoom="2.3856425"
-     inkscape:cx="58.474813"
-     inkscape:cy="326.95594"
+     inkscape:zoom="1.9057183"
+     inkscape:cx="58.508122"
+     inkscape:cy="326.91085"
      inkscape:window-x="22"
      inkscape:window-y="39"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g5284"
+     inkscape:current-layer="g5213"
      inkscape:document-units="mm"
      inkscape:document-rotation="0"
      showguides="true"
@@ -220,7 +220,7 @@ distributable and modifiable under the SIL
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-‘"
-     style="display:inline"
+     style="display:none"
      id="g10">
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.944882;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 1;stroke-dashoffset:0;stroke-opacity:1"
@@ -326,7 +326,7 @@ distributable and modifiable under the SIL
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-0"
-     style="display:inline"
+     style="display:none"
      id="g871">
     <path
        style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.944882;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 1;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
@@ -635,7 +635,7 @@ distributable and modifiable under the SIL
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-1"
-     style="display:inline"
+     style="display:none"
      id="g875">
     <path
        style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.377953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 1;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
@@ -782,7 +782,7 @@ distributable and modifiable under the SIL
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-2"
-     style="display:inline"
+     style="display:none"
      id="g879">
     <path
        style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.944882;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 1;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
@@ -1202,7 +1202,7 @@ distributable and modifiable under the SIL
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-3"
-     style="display:inline"
+     style="display:none"
      id="g883">
     <path
        style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.377953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 1;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
@@ -1639,7 +1639,7 @@ distributable and modifiable under the SIL
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-4"
-     style="display:inline"
+     style="display:none"
      id="g887">
     <path
        style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.944882;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 1;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
@@ -1963,7 +1963,7 @@ distributable and modifiable under the SIL
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-5"
-     style="display:inline"
+     style="display:none"
      id="g891">
     <path
        style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.944882;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 1;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
@@ -2406,7 +2406,7 @@ distributable and modifiable under the SIL
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-6"
-     style="display:inline"
+     style="display:none"
      id="g895">
     <path
        style="font-variation-settings:normal;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.944882;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 1;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -2843,7 +2843,7 @@ distributable and modifiable under the SIL
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-7"
-     style="display:inline"
+     style="display:none"
      id="g899">
     <path
        style="font-variation-settings:normal;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.944882;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 1;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -3119,7 +3119,7 @@ distributable and modifiable under the SIL
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-8"
-     style="display:inline"
+     style="display:none"
      id="g903">
     <path
        style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.944882;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 1;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
@@ -3689,7 +3689,7 @@ distributable and modifiable under the SIL
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-9"
-     style="display:inline"
+     style="display:none"
      id="g907">
     <path
        style="font-variation-settings:normal;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.944882;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 1;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -4123,7 +4123,7 @@ distributable and modifiable under the SIL
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-?"
-     style="display:inline"
+     style="display:none"
      id="g911">
     <path
        style="font-variation-settings:normal;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.944882;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 1;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -4551,7 +4551,7 @@ distributable and modifiable under the SIL
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-A"
-     style="display:inline"
+     style="display:none"
      id="g915">
     <path
        style="display:inline;opacity:0.48172;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.944882;stroke-opacity:0.843137;paint-order:markers fill stroke"
@@ -4722,7 +4722,7 @@ distributable and modifiable under the SIL
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-B"
-     style="display:inline"
+     style="display:none"
      id="g919">
     <path
        style="font-variation-settings:normal;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.944882;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 1;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -5091,7 +5091,7 @@ distributable and modifiable under the SIL
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-C"
-     style="display:inline"
+     style="display:none"
      id="g5284">
     <path
        style="font-variation-settings:normal;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.944882;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 1;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -5465,7 +5465,7 @@ distributable and modifiable under the SIL
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-D"
-     style="display:inline"
+     style="display:none"
      id="g927">
     <path
        style="font-variation-settings:normal;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.944882;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 1;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -5766,7 +5766,7 @@ distributable and modifiable under the SIL
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-E"
-     style="display:inline"
+     style="display:none"
      id="g931">
     <path
        style="font-variation-settings:normal;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.944882;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 1;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -6150,7 +6150,7 @@ distributable and modifiable under the SIL
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-F"
-     style="display:inline"
+     style="display:none"
      id="g935">
     <path
        style="font-variation-settings:normal;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.944882;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 1;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -6426,7 +6426,7 @@ distributable and modifiable under the SIL
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-G"
-     style="display:inline"
+     style="display:none"
      id="g939">
     <path
        style="font-variation-settings:normal;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.944882;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 1;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -6803,7 +6803,7 @@ distributable and modifiable under the SIL
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-H"
-     style="display:inline"
+     style="display:none"
      id="g5399">
     <path
        style="font-variation-settings:normal;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.944882;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 1;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -7071,7 +7071,7 @@ distributable and modifiable under the SIL
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-I"
-     style="display:inline"
+     style="display:none"
      id="g5411">
     <path
        style="font-variation-settings:normal;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.944882;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 1;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -7177,7 +7177,7 @@ distributable and modifiable under the SIL
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-J"
-     style="display:inline"
+     style="display:none"
      id="g951">
     <path
        style="font-variation-settings:normal;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.944882;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 1;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -7407,7 +7407,7 @@ distributable and modifiable under the SIL
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-K"
-     style="display:inline"
+     style="display:none"
      id="g5452">
     <path
        style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.944882;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 1;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
@@ -7637,7 +7637,7 @@ distributable and modifiable under the SIL
   </g>
   <g
      inkscape:label="GlyphLayer-L"
-     style="display:inline"
+     style="display:none"
      id="g959"
      inkscape:groupmode="layer">
     <path
@@ -7855,7 +7855,7 @@ distributable and modifiable under the SIL
   </g>
   <g
      inkscape:label="GlyphLayer-M"
-     style="display:inline"
+     style="display:none"
      id="g963"
      inkscape:groupmode="layer">
     <path
@@ -8119,7 +8119,7 @@ distributable and modifiable under the SIL
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-N"
-     style="display:inline"
+     style="display:none"
      id="g5501">
     <path
        style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.377953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 1;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
@@ -8282,7 +8282,7 @@ distributable and modifiable under the SIL
   </g>
   <g
      inkscape:label="GlyphLayer-O"
-     style="display:inline;opacity:1"
+     style="display:none;opacity:1"
      id="g971"
      inkscape:groupmode="layer">
     <path
@@ -8587,7 +8587,7 @@ distributable and modifiable under the SIL
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-P"
-     style="display:inline"
+     style="display:none"
      id="g975">
     <path
        style="font-variation-settings:normal;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.944882;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 1;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -8900,7 +8900,7 @@ distributable and modifiable under the SIL
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Q"
-     style="display:inline"
+     style="display:none"
      id="g979">
     <path
        style="font-variation-settings:normal;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.944882;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 1;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -9313,7 +9313,7 @@ distributable and modifiable under the SIL
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-R"
-     style="display:inline"
+     style="display:none"
      id="g983">
     <path
        style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.944882;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 1;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
@@ -9651,7 +9651,7 @@ distributable and modifiable under the SIL
   </g>
   <g
      inkscape:label="GlyphLayer-S"
-     style="display:inline"
+     style="display:none"
      id="g5656"
      inkscape:groupmode="layer">
     <path
@@ -10171,9 +10171,9 @@ distributable and modifiable under the SIL
   </g>
   <g
      inkscape:label="GlyphLayer-T"
-     style="display:inline"
+     style="display:none"
      id="g5700"
-     transform="translate(9.6, 0)"
+     transform="translate(9.6)"
      inkscape:groupmode="layer">
     <path
        style="font-variation-settings:normal;display:inline;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.944882;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 1;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
@@ -10541,7 +10541,7 @@ distributable and modifiable under the SIL
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-U"
-     style="display:inline"
+     style="display:none"
      id="g995">
     <path
        style="font-variation-settings:normal;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.944882;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 1;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -10766,7 +10766,7 @@ distributable and modifiable under the SIL
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-V"
-     style="display:inline"
+     style="display:none"
      id="g999">
     <path
        style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.944882;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 1;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
@@ -10883,7 +10883,7 @@ distributable and modifiable under the SIL
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-W"
-     style="display:inline"
+     style="display:none"
      id="g1003">
     <path
        style="font-variation-settings:normal;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.944882;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 1;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -11134,7 +11134,7 @@ distributable and modifiable under the SIL
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-X"
-     style="display:inline"
+     style="display:none"
      id="g1007">
     <path
        style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.377953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 1;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
@@ -11317,7 +11317,7 @@ distributable and modifiable under the SIL
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Y"
-     style="display:inline"
+     style="display:none"
      id="g1011">
     <path
        style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.944882;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 1;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
@@ -11803,7 +11803,7 @@ distributable and modifiable under the SIL
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-!"
      id="g863"
-     style="display:inline">
+     style="display:none">
     <path
        style="font-variation-settings:normal;display:inline;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.944882;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 1;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
        d="M 12.294026,385 H 64.622443"
@@ -12000,7 +12000,7 @@ distributable and modifiable under the SIL
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer--"
-     style="display:inline"
+     style="display:none"
      id="g5213">
     <path
        style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.944882;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 1;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
