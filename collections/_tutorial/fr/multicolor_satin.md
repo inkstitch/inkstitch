@@ -17,6 +17,13 @@ user-level:
 On parle ici de simulation, car il ne s'agit pas d'une seule colonne satin  multicolore, mais d'un effet similaire obtenu en 
 utilisant plusieurs  copies superposées d'une même colonne satin, simplement en modifiant les paramétrages.
 
+## Commençons par le bicolore
+
+Le paramètre des colonnes satin qui va nous être indispensable est "augmentation aléatoire de la largeur des colonnes satins". C'est un paramètre dans le quel il est possible de n'entrer qu'une valeur, auquel cas elle est appliquée à chacun des deux cotés de la colonne; mais aussi d'entrer deux valeurs séparées par un espace, auquel cas le premier est appliqué au premier rail, le second au second rail.
+
+![random increase](/assets/images/tutorials/multicolor_satin/increase_different_seed.png)
+
+
 ## Pourcentage de compensation d'étirement négatif asymétrique
 Pour obtenir des colonnes satin multicolores, on va utiliser le paramètre "pourcentage de compensation d'étirement".
 
