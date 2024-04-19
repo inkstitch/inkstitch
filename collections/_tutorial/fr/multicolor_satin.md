@@ -18,7 +18,7 @@ On parle ici de simulation, car il ne s'agit pas d'une seule colonne satin  mult
 utilisant plusieurs  copies superposées d'une même colonne satin, simplement en utilisant des paramètres aléatoires différents.
 
 ## Commençons par le bicolore
-Revenons sur les paramètres "aléaoires" des colonnes satin.
+Revenons sur les paramètres "aléatoires" des colonnes satin.
 ### Augmentation aléatoire de la largeur du satin
 Le paramètre "augmentation aléatoire de la largeur du satin" est un paramètre dit asymètrique car il est possible de l'appliquer différement sur les deux rails. C'est un paramètre dans lequel il est possible de n'entrer qu'une valeur, auquel cas elle est appliquée à chacun des deux rails; mais aussi d'entrer deux valeurs séparées par un espace, auquel cas le premier est appliqué au premier rail, le second au second rail. 
 
@@ -37,19 +37,19 @@ Quelles sont les valeurs que l'on peut saisir dans ce paramètre ? Ink/Stitch ac
 
 
 ### Diminution aléatoire de la largeur du satin
-Les colonnes satins disposent aussi du paramètree symmétrique, la diminution  aléatoire de la largeur du satin. Plutot que d'augmenter de -50%, on peut décider de diminuer de 50%, c'est la même chose à un détail près que nous verrons plus loin.
+Les colonnes satins disposent aussi du paramètre inverse, la diminution  aléatoire de la largeur du satin. Plutot que d'augmenter de -50%, on peut décider de diminuer de 50%, c'est la même chose.
 
 ### Méthode simple, mais imparfaite
-Grace à ces deux paramètres, on a déjà une première méthode imparfaite mais très simple pour simuler des colonnes bicolore: 
+Grace à l'un ou l'autre de ces deux paramètres, on a déjà une première méthode imparfaite mais très simple pour simuler des colonnes satin bicolores: 
 
 ![first_bicolore_satin](/assets/images/tutorials/multicolor_satin/first_bicolor_satin.png)
 
-* A gauche utilisation de la diminution aléatoire de largeur : la colonne rouge est réduite à gauche, la colonne verte est réduite à droite.  Mais attention la seconde couleur vient en superposition de la premiere et le vert cache une partie du rouge .
+* A gauche utilisation de la diminution aléatoire de largeur : la colonne rouge est réduite à gauche, la colonne verte est réduite à droite.  Mais attention la seconde couleur vient en superposition de la première et ici le vert cache une partie du rouge .
 * A droite, on a laissé le rouge intact, le vert vient en superposition,réduit jusqu'au deux tiers plutot que de la moitié
 
-Mais cette méthode est imparfaite : elle assure que toute la colonne est colorée, mais il y a superposition. 
+Mais cette méthode est imparfaite : elle assure que toute la colonne est colorée, il n'y a pas de manque, mais il y a superposition. 
 
-Il est possible d'obtenir deux colonnes parfaitement emboitées, mais il faut pour cela utiliser plus de paramètres aléatoires
+Il est possible d'obtenir deux colonnes parfaitement emboitées, mais il faut pour cela utiliser aussi d'autres paramètres aléatoires
 
 
 ### La graine aléatoire
@@ -107,6 +107,7 @@ Si l'on superpose ces trois colonnes, on obtient un serpent tricolore.
 
 ### Méthode générale pour l'emboitement de deux couleurs dans une colonne satin
 
+On va utiliser conjointement tous ces paramètres. 
 
 
 <!---  
@@ -156,32 +157,42 @@ Mais on peut y arriver en jonglant  pour que les positions aléatoires correspon
 
 *Fin de la tentative d'explication*
 --->
+
+Si l'on souhaite répartir les  100%  de largeur de la colonne en 
+* G% à gauche exclusivement pour le bleu
+* D% à droite exclusivement pour le vert
+* et donc 100-(G+D) pourcents  au milieu pour un mélange vert bleu,
+
+on utilisera ce paramètrage
+
 |Paramètre | Satin bleu |Satin vert |
 | --- | --- |--- |
-| git status | List all new or modified files | List all new or modified files |
-| git diff | Show file differences that haven't been staged | List all new or modified files |
-| git diff | Show file differences that haven't been staged | List all new or modified files |
+| Pourcentage de compensation d'étirement  | 0 100-G| 0 100-D|
+| Echanger les rails| non| oui |
+| Augmentation aléatoire de la largeur du satin| 0  100-(G+D)| 0 |
+| Diminution aléatoire de la largeur du satin| 0 | G+D-100|
+| Graine aléatoire| identique | identique |
 
-On va modifier le paramétrage des  colonnes comme suit:
+Donc par exemple si l'on veut garder 25% unicolore de chaque coté, on utilisera ce paramètrage
 
-Colonne verte :
-* Pourcentage de compensation d'étirement : 0 -70
-* Augmentation aléatoire de la largeur du satin 0 45
-* Diminution aléatoire de la largeur du satin 0 0
-* Graine aléatoire  7 (ou n'importe quoi d'autre mais saisir une valeur)
+Satin bleu :
+* Pourcentage de compensation d'étirement : 0 -75
+* Augmentation aléatoire de la largeur du satin 0 50
+* Diminution aléatoire de la largeur du satin 0 
+* Graine aléatoire  7 (ou "bonjour" ou n'importe quoi d'autre mais saisir une valeur)
 
-Colonne bleu:
+Satin vert:
 * Pourcentage de compensation d'étirement : 0 -75
 * Cocher échanger les rails 
-* Augmentation aléatoire de la largeur du satin 0 0
-* Diminution aléatoire de la largeur du satin 0 -45   (ce sera donc une augmentation)
+* Augmentation aléatoire de la largeur du satin 0 
+* Diminution aléatoire de la largeur du satin 0 -50   (ce sera donc une augmentation)
 * Graine aléatoire 7 (où ce que vous avez saisi pour l'autre colonne)
-
+--->
 
 ![solution](/assets/images/tutorials/multicolor_satin/solution.png)
 
 Téléchager [le fichier du serpent](/assets/images/tutorials/multicolor_satin/serpent.svg){: download="serpent.svg" }
-On peut jouer avec beaucoup  plus que deux couleurs:
+# On peut jouer avec beaucoup  plus que deux couleurs:
 
 ![ArcEnCiel](/assets/images/tutorials/multicolor_satin/arcenciel.svg)
 
