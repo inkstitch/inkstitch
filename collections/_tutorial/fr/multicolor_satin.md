@@ -37,8 +37,9 @@ Quelles sont les valeurs que l'on peut saisir dans ce paramètre ? Ink/Stitch ac
 
 ### La graine aléatoire
 Chaque fois que l'on utilise  un ou des paramètres aléatoire, on peut si l'on n'est pas content du résultat  cliquer sur "relançer les dés" pour obtenir un résultat différent. Techniquement, relancer les dés, c'est donner une nouvelle valeur au paramètre "graine aléatoire". 
-Il est aussi possible de donner manuellement une valeur à ce paramètre.
-Si l'on reprend le même exemple que précedement mais en donnant cette fois à toutes les colonnes la même valeur pour la graine aléatoire, voici ce que l'on obtient:
+Il est aussi possible de donner manuellement une valeur à ce paramètre. C'est surtout utile lorsque l'on désire que plusieurs objets qui utilisent des paramètres aléatoires soient en fait parfaitement identique. Il suffira alors de leur donner la même valeur de graine aléatoire.
+
+Si l'on reprend le premier exemple  mais en donnant cette fois à toutes les colonnes la même valeur pour la graine aléatoire, voici ce que l'on obtient:
 ![random increase_same_seeds](/assets/images/tutorials/multicolor_satin/random_increase_same_seed.png)
 
 Maintenant lorsque l'on superpose les trois colonnes, on constate qu'il y a une parfaite superposition des frontieres. La colonne rouge à élargie à gauche comme la colonne bleu et à droite comme la colonne vert. En revanche, pour un même zig, l'élargissement à gauche est différent de l'élargissement à droite.
