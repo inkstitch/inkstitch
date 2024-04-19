@@ -170,7 +170,7 @@ on utilisera ce paramètrage
 | Pourcentage de compensation d'étirement  | 0 100-G| 0 100-D|
 | Echanger les rails| non| oui |
 | Augmentation aléatoire de la largeur du satin| 0  100-(G+D)| 0 |
-| Diminution aléatoire de la largeur du satin| 0 | G+D-100|
+| Diminution aléatoire de la largeur du satin| 0 | 0 G+D-100|
 | Graine aléatoire| identique | identique |
 
 Donc par exemple si l'on veut garder 25% unicolore de chaque coté, on utilisera ce paramètrage
