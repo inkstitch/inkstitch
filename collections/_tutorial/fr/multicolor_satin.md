@@ -108,15 +108,13 @@ Colonne bleu:
 
 ![solution](/assets/images/tutorials/multicolor_satin/solution.png)
 
-[Télécharger serpent.svg](/assets/images/tutorials/multicolor-satin/serpent.svg){: download="serpent.svg" }
-
+Téléchager [le fichier du serpent](/assets/images/tutorials/multicolor-satin/serpent.svg){: download="serpent.svg" }
 On peut jouer avec beaucoup  plus que deux couleurs:
 
 ![ArcEnCiel](/assets/images/tutorials/multicolor_satin/arcenciel.svg)
 
-[Télécharger arcenciel.svg](/assets/images/tutorials/multicolor-satin/arcenciel.svg){: download="arcenciel.svg" }
+Télécharger [le fichier arc en ciel](/assets/images/tutorials/multicolor-satin/arcenciel.svg){: download="arcenciel.svg" }
 
+Test :
 
-
-
-
+Download [sample file](/assets/images/tutorials/samples/contour-fill.svg){: download="Inkstitch-Contour-Fill.svg" }. 
