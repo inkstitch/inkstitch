@@ -187,12 +187,58 @@ Satin vert:
 * Augmentation aléatoire de la largeur du satin 0 
 * Diminution aléatoire de la largeur du satin 0 -50   (ce sera donc une augmentation)
 * Graine aléatoire 7 (où ce que vous avez saisi pour l'autre colonne)
---->
+
 
 ![solution](/assets/images/tutorials/multicolor_satin/solution.png)
 
 Téléchager [le fichier du serpent](/assets/images/tutorials/multicolor_satin/serpent.svg){: download="serpent.svg" }
 # On peut jouer avec beaucoup  plus que deux couleurs:
+### Pour trois couleurs
+En supposant que l'on veut repartir les 100% de la largeur de la gauche vers la droite en 
+* C1 couleur 1 exclusivement
+* C12 partagé entre Couleur 1 et Couleur 2
+* C2 couleur 2 exclusivement
+* C23 partagé entre Couleur 2 et couleur 3
+* C3,le reste pour la couleur 3
+
+  On a donc C1+C12+C2+C23+C3 =100 et tout le monde est positif
+  
+|Paramètre |Couleur 1 |Couleur 2 |Couleur 3 |
+| --- | --- |--- |--- |
+| Pourcentage de compensation d'étirement  | 0 -(C12+C2+C23+C3)| -(C23+C3)   -(C1+C12)|-(C1+C12+C2+C23) 0|
+| Echanger les rails| non| oui |non|
+| Augmentation aléatoire de la largeur du satin| 0  C12| C23 0|0|
+| Diminution aléatoire de la largeur du satin| 0 | 0 -C12|-C23 0|
+| Graine aléatoire| identique | identique |identique|
+ Notez que -(C12+C2+C23+C3) = 100-C1
+
+Si ça n'a pas l'air de marcher , vérifiez que 
+* les rails de la colonne satin sont bien tous les deux dans la même direction
+* les points courts ne sont pas déclenchés
+
+  ### Pour quatre couleurs 
+Avec les mêmes notations on aura cette fois 
+
+ C1+C12+C2+C23+C3+C34+C4 =100 et tout le monde est positif
+  
+|Paramètre |Couleur 1 |Couleur 2 |Couleur 3 |Couleur 4 |
+| --- | --- |--- |--- |--- |
+| Pourcentage de compensation d'étirement  | 0 </br>C1-100| -(C23+C3+C34+C4)  </br> -(C1+C12)|-(C1+C12+C2+C23) </br>-(C34+C4)| 0</br>C4-100|
+| Echanger les rails| non| oui |non|oui|
+| Augmentation aléatoire de la largeur du satin| 0  C12| C23 0|0 C34|0|
+| Diminution aléatoire de la largeur du satin| 0 | 0 -C12|-C23 0| 0 -C34|
+| Graine aléatoire| identique | identique |identique|identique |
+
+Toutes  les valeurs de  compensaton sont négative,toutes les augmentations sont positives toutes  les  diminution sont négatives.
+
+Si ça n'a pas l'air de marcher , vérifiez que 
+* les rails de la colonne satin sont bien tous les deux dans la même direction
+* les points courts ne sont pas déclenchés
+
+
+
+
+
 
 ![ArcEnCiel](/assets/images/tutorials/multicolor_satin/arcenciel.svg)
 
