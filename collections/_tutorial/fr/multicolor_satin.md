@@ -18,11 +18,30 @@ On parle ici de simulation, car il ne s'agit pas d'une seule colonne satin  mult
 utilisant plusieurs  copies superposées d'une même colonne satin, simplement en modifiant les paramétrages.
 
 ## Commençons par le bicolore
+### Augmentation aléatoire de la largeur des colonnes satins
+Le paramètre des colonnes satin qui va nous être indispensable est "augmentation aléatoire de la largeur des colonnes satins". C'est un paramètre dans lequel il est possible de n'entrer qu'une valeur, auquel cas elle est appliquée à chacun des deux cotés de la colonne; mais aussi d'entrer deux valeurs séparées par un espace, auquel cas le premier est appliqué au premier rail, le second au second rail. Dans le jargon Ink/Stitch, ce paramètre est dit asymètrique
 
-Le paramètre des colonnes satin qui va nous être indispensable est "augmentation aléatoire de la largeur des colonnes satins". C'est un paramètre dans le quel il est possible de n'entrer qu'une valeur, auquel cas elle est appliquée à chacun des deux cotés de la colonne; mais aussi d'entrer deux valeurs séparées par un espace, auquel cas le premier est appliqué au premier rail, le second au second rail.
+![random increase_different_seeds](/assets/images/tutorials/multicolor_satin/random_increase_different_seeds.png)
 
-![random increase](/assets/images/tutorials/multicolor_satin/increase_different_seed.png)
+* Quand le paramètre vaut 0, la colonne (en noire) est composée de zig-zags qui restent entre les deux rails
+* Quand le paramètre vaut 50, la colonne  (en rouge), chaque zig  (ou zag) est allongé vers la gauche et la droite d'une valeur comprise entre 0 et 50% de la longueur  du zig. La nouvelle colonne est donc élargie différement selon les endroits, au maximum elle peut être deux fois plus large que la noire (50% a gauche et 50% à droite), elle n'est jamais plus étroite.
+* Quand le paramètre vaut 0 50, la colonne (en vert) est inchangée à gauche, mais à droite, elle est allongée jusqu'à 50% de longueur supplémentaire.
+* Quand le paramètre vaut 50,0, la colonne (en bleu) c'est la même chose, mais en échangeant la gauche et la droite
+* Si l'on superpose les trois colonnes ayant une valeur non nulle pour le paramètre, l'élargissement semble bien aléatoire, les frontières des colonnes sont bien différentes, même si elles sont similaires.
 
+Quelles sont les valeurs que l'on peut saisir dans ce paramètre ? Ink/Stitch accepte ici tout couple de valeurs numériques. Elles peuvent être positives ou nulles, et elles peuvent dépasser la valeur 100. Toutefois, si l'on peut augmenter ainsi les zigs sans limite, la diminuation est de facto limité, au pire le zig serait un simple  point sur la ligne médiane.
+
+
+![negative augmentation](/assets/images/tutorials/multicolor_satin/negative_augmentation.png)
+
+
+### La graine aléatoire
+Chaque fois que l'on utilise  un ou des paramètres aléatoire, on peut si l'on n'est pas content du résultat  cliquer sur "relançer les dés" pour obtenir un résultat différent. Techniquement, relancer les dés, c'est donner une nouvelle valeur au paramètre "graine aléatoire". 
+Il est aussi possible de donner manuellement une valeur à ce paramètre.
+Si l'on reprend le même exemple que précedement mais en donnant cette fois à toutes les colonnes la même valeur pour la graine aléatoire, voici ce que l'on obtient:
+![random increase_same_seeds](/assets/images/tutorials/multicolor_satin/random_increase_same_seed.png)
+
+Maintenant lorsque l'on superpose les trois colonnes, on constate qu'il y a une parfaite superposition des frontieres. La colonne rouge à élargie à gauche comme la colonne bleu et à droite comme la colonne vert. En revanche, pour un même zig, l'élargissement à gauche est différent de l'élargissement à droite.
 
 ## Pourcentage de compensation d'étirement négatif asymétrique
 Pour obtenir des colonnes satin multicolores, on va utiliser le paramètre "pourcentage de compensation d'étirement".
