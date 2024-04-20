@@ -1,54 +1,62 @@
 ---
-title: "Linear Gradient Fill"
+title: "Remplissage dégradé linéaire"
 permalink: /fr/docs/stitches/linear-gradient-fill/
 last_modified_at: 2024-03-10
 toc: true
 ---
  {% include upcoming_release.html %}
 
-## What it is
+## Qu'est ce que c'est 
 
 [![Linear Gradient Fill Sample](/assets/images/docs/linear-gradient.jpg){: width="200x"}](/assets/images/docs/linear-gradient.svg){: title="Download SVG File" .align-left download="linear-gradient.svg" }
-Linear gradient fill uses Inkscapes linear gradient color to create seamless gradients with a consistent stitch positioning.
 
-## How to Create
+Le remplissage en dégradé linéaire utilise la couleur du dégradé linéaire d'Inkscapes pour créer des dégradés homogènes avec un positionnement de point cohérent.
 
-* Create a **closed path with a fill color**. The shape may have holes
-* In the `Fill and Stroke` dialog, select a linear gradient as a fill and adjust colors. On canvas adjust the gradient angle. The stitch angle will have a 90 degree angle to gradient direction.
-  ![linear gradient](/assets/images/docs/en/linear-gradient.png)
-* Open the params dialog (`Extensions > Ink/Stitch > Params`) and select `Linear Gradient Fill` as the fill method
-  Set the params as you wish and Apply
+## Comment le créer
 
-## Set Start and End Point
+* Créez un **chemin fermé avec une couleur de remplissage**. La forme peut avoir des trous.
+* Dans la boîte de dialogue « Remplissage et contour », sélectionnez un dégradé linéaire comme remplissage et ajustez les couleurs. Sur le canevas, ajustez l'angle du dégradé. L'angle du point aura un angle de 90 degrés par rapport à la direction du dégradé.
+  ![dégradé linéaire](/assets/images/docs/en/linear-gradient.png)
+* Ouvrez la boîte de dialogue des paramètres (`Extensions > Ink/Stitch > Paramètress`) et sélectionnez `Remplissage dégradé linéaire` comme méthode de remplissage
+* Définissez les paramètres comme vous le souhaitez et appliquez
 
-Set start and end points for autofill objects with [Visual commands](/docs/commands/).
+## Définir le point de début et de fin
 
-## Params
+Définissez les points de début et de fin du  remplissage avec les [Commandes visuelles](/fr/docs/commands/).
 
-Run `Extensions > Ink/Stitch  > Params` to tweak the settings to your needs.
+## Paramètres
 
-Settings||Description
----|---|---
-Automatically routed fill stitching| ☑ |Must be enabled for these settings to take effect.
-Fill method          |Linear Gradient Fill|Linear Gradient Fill must be selected.
-Expand               |![Expand example](/assets/images/docs/params-fill-expand.png)  |Expand the shape before stitching, to compensate for gaps between shapes.
-Maximum fill stitch length    ||The length of each stitch in a row. "Max" is because a shorter stitch may be used at the start or end of a row.
-Spacing between rows          ||Distance between rows of stitches.
-Stagger row this many times before repeating||Stitches are staggered so that neighboring rows of stitches don't all fall in the same column (which would create a distracting valley effect). Setting this dictates how many rows apart the stitches will be before they fall in the same column position.
-Skip last stitch in each row  ||The last stitch in each row is quite close to the first stitch in the next row.
-Stop at ending point  | ☑ |If this option is disabled, the ending point will only be used to define a general direction for stitch routing. When enabled the last section will end at the defined spot.
-Running stitch length||For circular fill this is the overall stitch length.
-Running stitch tolerance||All stitches must be within this distance from a path. A lower tolerance means stitches will be closer together. A higher tolerance means sharp corner may be rounded.
-Allow lock stitches  ||Enables lock stitches in only desired positions
-Force lock stitches  ||Sew lock stitches after sewing this element, even if the distance to the next object is smaller than defined in the collapse length value value in the Ink/Stitch prefreneces.
-Tack stitch          ||Select [tack stitch](/docs/stitches/lock-stitches) type (start).
-Lock stitch          ||Select [lock stitch](/docs/stitches/lock-stitches) type (end).
-Stop After           ||Stop the machine after sewing this object. Before stopping it will jump to the stop position (frame out) if defined.
-Trim After           ||Trim the thread after sewing this object.
+Exécutez « Extensions > Ink/Stitch > Paramètres » pour ajuster les paramètres selon vos besoins.
 
-## Underlay
 
-Underlay in Linear Gradient Fill is the same as for Auto Fill and uses the fill angle which can be defined in the underlay [params](/docs/stitches/fill-stitch#underlay).
+|Paramètres||Description|
+|---|---|---|
+|Auto-remplissage avec des points de broderie| ☑ |Doit être activé pour que ces paramètres prennent effet.|
+|Méthode de remplissage|Remplissage dégradé linéaire| Doit être sur Remplissage dégradé linéaire.|
+|Etirer|![Expand example](/assets/images/docs/params-fill-expand.png) |Etend la forme avant le point de remplissage pour compenser les écarts entre les formes en raison de l'étirement du tissu.|
+|Longueur maximale du point de remplissage|![Exemple de longueur de point](/assets/images/docs/params-fill-stitch_length.png) |La longueur de chaque point dans une rangée. "Max", c'est parce qu'un point plus court peut être utilisé au début ou à la fin d'une ligne.|
+|Espacement entre les rangées|![Exemple d'espacement](/assets/images/docs/params-fill-spacing_between_rows.png) |Espacement entre les rangées de points.|
+|Décaler autant de fois avant de répéter|![Décalage exemple](/assets/images/docs/params-fill-stagger.png) |Les points sont décalés de manière à ce que les rangées de points voisines ne tombent pas toutes dans la même colonne (ce qui créerait un effet de vallée). Ce paramètre détermine la longueur du cycle de décalage des rangées. Les fractions sont autorisées et peuvent produire des diagonales moins visibles que les valeurs entières.|
+|Sauter le dernier point de chaque rangée|![Exemple sans dernier point](/assets/images/docs/params-fill-skip_stitches.png) |Le dernier point de chaque rangée est assez proche du premier point de la rangée suivante. Le sauter diminue le nombre de points et la densité.|
+|Terminer à la position de fin | ☑ |Si cette option est déselectionnée, la position de fin ne sera utiisée que pour déterminer la direction générale de la broderie. Si sélectionné, la dernière section terminera au point désigné.|
+|Longueur du point droit||Pour les chemins de dessous|
+|Tolérance du point droit|| Les points ne peuvent pas être éloignés du chemin de plus que cette distance. Une tolerance basse peut impliquer des points plus courts. Une tolerance haute entraine un arrondissement des angles aigus.|
+|Longueur minimum de point||Est prioritaire par rapport à la valeur de la longueur minimum de point définie dans les préférences. Les points plus courts seront supprimés.|
+|Longueur minimum de saut||Est prioritaire par rapport à la valeur de la longueur minimum de saut définie dans les préférences. Si la distance à l'objet suivant est inférieure, il n'y aura pas de points d'arrêt, sauf si les points d'arrêts sont forcés.|
+|Forcer les points d'arrêts |☑|Force un point d'arrêt après l'objet indépendament de la valeur de "Saut de fil" dans les Préférences d'Ink/Stitch.|
+|Autoriser les points d'arrêts | ☑|Ajoute un point d'arrêt à la ou les positions choisies.|
+|Point d'arrêt initial       ||Sélectionnez le type du  [point d'arrêt initial](/fr/docs/stitches/lock-stitches).|
+|Point d'arrêt final       ||Sélectionnez le type du [point d'arrêt terminal](/fr/docs/stitches/lock-stitches).|
+|Couper après                        |☑ |Couper le fil après avoir brodé cet objet.|
+|Arrêter après                       |☑ |Faire faire une pause à la machine après avoir brodé cet objet. Si une position d'arrêt a été définie, elle est rejointe par un saut avant la pause. |
+{: .params-table}
+
+
+
+## Sous-Couche
+
+La sous-couche du Remplissage dégradé linéaire est la même que celle du remplissage automatique et utilise l'angle défini les 
+ [paramètres de la sous-couche](/fr/docs/stitches/fill-stitch#underlay).
 
 ## Samples Files Including Linear Gradient Fill Stitches
 
