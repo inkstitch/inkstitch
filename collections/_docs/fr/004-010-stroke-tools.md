@@ -4,7 +4,7 @@ permalink: /fr/docs/stroke-tools/
 last_modified_at: 2024-03-13
 toc: true
 ---
-## Agencement automatique de points droits
+## Agencement automatique de points droits {#autoroute-running-stitch}
 
 Cet  outil **remplace** un ensemble de chemins paramétrés en points droits par un nouvel ensemble de chemins paramétrés en points droits  empilés dans un ordre logique de broderie qui évite autant que faire se peut les sauts de fil. Lorsque nécessaire des chemins (chemins de dessous) sont ajoutés, sous les chemins existants pour assurer les connexions . Les points droits résultants conservent tous les  paramètres des points droits originaux tels que la longueur de point droit, la tolérance, le  nombre de répétitions, le nombre de répétitions pour le point triple.  Les chemins de dessous ne conservent que la longueur du point, le nombre de répétitions est remis à un et et le nombre de répétitions de point triple à zéro.
 
@@ -52,7 +52,7 @@ Ceci fonctionne d'autant mieux que la largeur de la colonne satin initiale est c
 3. Choisissez si vous vous souhaitez ou non conserver les colonnes satins sélectionnées.
 4. Cliquez sur Appliquer
 
-## Remplissage en Trait
+## Remplissage en Trait {#fill-to-stroke}
 
 Des contours paramétrés en remplissage ne donnent jamais rien de bon en broderie, mais convertir un tel contour en colonne satin ou en point droit nécessite beaucoup de travail. Cet outil aide à accomplir cette opération.
 
@@ -79,7 +79,7 @@ Merci de noter que chaque trait doit découper le remplissage en deux.
 * *Lignes de découpage : fermer les écarts* :  Les lignes de découpage créent des écarts entre les chemins générés. Ces écarts peuvent être supprimés en activant cette option. Cette option est utile si vous ne pensez pas convertir vos chemins en colonnes satin.
 
 
-## Saut en Trait
+## Saut en Trait {#jump-to-stroke}
 
 Ceci crééra un point droit direct entre la fin du premier élément et le début du second. Il ne vous reste plus qu'à le positionner là où il sera recouvert par des broderies ultérieures pour éviter un saut de fil. 
 
