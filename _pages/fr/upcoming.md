@@ -223,7 +223,7 @@ Toutes les fontes ont été retravaillées pour être plus stable si déformées
 
 *  Les formats de fichiers Ink/Stitch file formats sont maintenant aussi utilisable dans le dialogue d'export d' Inkscape ([#2489](https://github.com/inkstitch/inkstitch/issues/2489))
 
-### Couleur des files
+### Couleur des fils
 
 * Enregistrement des noms des fils dans les fichiers de broderie ([#2777](https://github.com/inkstitch/inkstitch/issues/2777))
 
@@ -237,7 +237,7 @@ Toutes les fontes ont été retravaillées pour être plus stable si déformées
 * [#2653](https://github.com/inkstitch/inkstitch/issues/2653) Mis  à jour des procédures de  debug et profiling 
 
 
-## Corrections d e bug
+## Corrections de bug
 
 * [#2754](https://github.com/inkstitch/inkstitch/issues/2754)  Corrige Lettrage le long d'un chemin lorsque les glyphes comportent des sous groupes ou  des commandes  de coupe
 * [#2683](https://github.com/inkstitch/inkstitch/issues/2683) Sélectionner des éléments de broderie : message d'erreur  lorsque le chemin python nen peut pas être trouvé.
