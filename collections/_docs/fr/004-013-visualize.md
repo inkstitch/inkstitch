@@ -98,7 +98,7 @@ Ceci montrera des marqueurs rouges, jaunes et verts au dessus de vos éléments,
   Define the size of the dots in document units
   {% include upcoming_release.html %}
 
-## Afficher l'ordre de broderie
+## Afficher l'ordre de broderie {#display-stacking-order}
 
 {% include upcoming_release.html %}
 
