@@ -4,7 +4,7 @@ permalink: /fr/docs/troubleshoot/
 last_modified_at: 2024-03-12
 toc: true
 ---
-## Dépistage de problèmes avec des objets
+## Dépistage de problèmes avec des objets {#troubleshoot}
 
 Ink/Stitch peut parfois être déroutant. Surtout pour les débutants. Mais si vous utilisez Ink/Stitch pendant un certain temps, vous recevrez également des messages d'erreur, indiquant que quelque chose s'est mal passé et que votre forme ne peut pas être affichée pour une raison quelconque.
 
@@ -21,6 +21,14 @@ Vous recevrez soit un message indiquant qu'aucune erreur ne peut être trouvée,
 
 **Astuce:** Il est possible qu'un objet contienne plus d'une erreur. Les formes de remplissage affichent uniquement la première erreur qui apparaîtra. Exécutez l'extension à nouveau si vous recevez encore des messages d'erreur.
 {: .notice--info }
+
+
+{% include upcoming_release.html %}
+Cette extension vous signale aussi
+* la présence de colonnes satin avec deux rails et exactement deux traverses (car cela peut conduite a une mauvaise interprétation de la colonne par Ink/Stitch).
+* la présence de colonnes satins sans aucune traverse
+* la présence d'éléments de broderie comportant à la fois une couleur de trait et une couleur de fon.
+
 
 ## Informations sur l'élément {#element-info}
 {% include upcoming_release.html %}
@@ -39,7 +47,8 @@ Cette extension supprimera les paramètres de broderie de votre broderie toute e
 * Sélectionnez une ou plusieurs des options proposées et cliquez sur "Appliquer"
   
 {% include upcoming_release.html %} 
-* Avant d'appliquer vous pouvez choisir de supprimer aucune/toutes ou certaines commandes 
+* Avant d'appliquer vous pouvez choisir de supprimer aucune/toutes ou certaines commandes
+* Avant d'appliquer vous pouvez choisir de supprimer un paramètre particulier
 ![Remove embroidery settings - GUI](/assets/images/docs/fr/supprimer_parametres_broderie.png)
 
 ## Nettoyer le document {#cleanup-document}
