@@ -37,7 +37,7 @@ Info: Pour les chemins qui se chevauchent, l'étape 1 n'est effectuée que par c
 [Download SVG](/assets/images/docs/en/break_apart.svg)
 
 
-## Convertir en blocs de dégradés 
+## Convertir en blocs de dégradés {#convert-to-gradient-blocks}
 
 Convertir en blocs de dégradé va découper un remplissage dont la couleur de fond est un dégradé linéaire en plusieurs blocs monochromes avec un espacement de ligne adequat pour rendre l'effet de dégradé.
 
