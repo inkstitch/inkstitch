@@ -29,7 +29,7 @@ Cette extension affiche des informations sur divers paramètres des éléments d
 ![Element info](/assets/images/docs/en/element_info.png)
 
 
-## Supprimer tous les paramètres de broderie
+## Supprimer tous les paramètres de broderie {#remove-embroidery-settings}
 
 Utilisez cette fonction si vous souhaitez supprimer les informations qu'Ink/Stitch a enregistré dans votre document.
 Ceci peut être particulierement utie lorsque vous copier/coller des broderies en provenance d'un autre document.
@@ -42,7 +42,7 @@ Cette extension supprimera les paramètres de broderie de votre broderie toute e
 * Avant d'appliquer vous pouvez choisir de supprimer aucune/toutes ou certaines commandes 
 ![Remove embroidery settings - GUI](/assets/images/docs/fr/supprimer_parametres_broderie.png)
 
-## Nettoyer le document
+## Nettoyer le document {#cleanup-document}
 
 Parfois vous trouverez de très petites formes et des objets laissés par les différentes opération effectuées pendant la conception de votre fichier svg.
 Ink/Stitch  offre une fonction de nettoyage de votre document qui empêche ces objets de causer des problèmes.
