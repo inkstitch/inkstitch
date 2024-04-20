@@ -84,21 +84,24 @@ Lancez `Extensions > Ink/Stitch > Visualisr et Exporter > Annuler le plan de bro
 * Vous pouvez annuler avec `Ctrl + Z`
 
 Ceci montrera des marqueurs rouges, jaunes et verts au dessus de vos éléments, pour vous permettre d'identifier facilement les zones à forte densité. Tous les marqueurss d'une même couleur sont dans un groupe du calque Densité, ce qui vous permet de masquer facilement tous les marqueurs d'une couleur donnée.
-
+{% include upcoming_release.html %}
 ### Options
 
-* Red / yellow markers
+* Marqueurs jaunes et rouges
+ Définir à partir de quel nombre de points de l'aiguille dans quel rayon autour  d'un point la coloration est rouge ou jaune
 
-  Define up from many stitches in which radius should dots should be colored red or yellow
-* Design layer visibility
-
+ 
+* Visibilité du calque de conception
+Définir si Ink/Stitch doit laisser le calque de conception tel quel,le cacher  ou baisser son opacité
   Define if Ink/Stitch should leave the design layer unchanged, hide id or lower opacity
-* Indicator size
-
+  
+* Indicateur de taill
+Définirl a taille des marqueurs (l'unité est celle du document)
   Define the size of the dots in document units
-  {% include upcoming_release.html %}
+
 
 ## Afficher l'ordre de broderie {#display-stacking-order}
+
 
 {% include upcoming_release.html %}
 
