@@ -9,25 +9,27 @@ import os
 import socket
 import sys
 import time
+import webbrowser
+from contextlib import closing
 from copy import deepcopy
 from datetime import date
 from threading import Thread
-from contextlib import closing
 
 import appdirs
+import wx
 from flask import Flask, Response, jsonify, request, send_from_directory
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 from lxml import etree
 from werkzeug.serving import make_server
 
-from ..gui import open_url
-from ..i18n import get_languages
+from .base import InkstitchExtension
+from ..debug import debug
+from ..i18n import _, get_languages
 from ..i18n import translation as inkstitch_translation
 from ..stitch_plan import stitch_groups_to_stitch_plan
 from ..svg import render_stitch_plan
 from ..svg.tags import INKSCAPE_GROUPMODE
 from ..threads import ThreadCatalog
-from .base import InkstitchExtension
 
 
 def datetimeformat(value, format='%Y/%m/%d'):
@@ -57,6 +59,42 @@ def save_defaults(defaults):
         json.dump(defaults, defaults_file)
 
 
+def open_url(url):
+    # Avoid spurious output from xdg-open.  Any output on stdout will crash
+    # inkscape.
+    null = open(os.devnull, 'w')
+    old_stdout = os.dup(sys.stdout.fileno())
+    os.dup2(null.fileno(), sys.stdout.fileno())
+
+    if getattr(sys, 'frozen', False):
+
+        # PyInstaller sets LD_LIBRARY_PATH.  We need to temporarily clear it
+        # to avoid confusing xdg-open, which webbrowser will run.
+
+        # The following code is adapted from PyInstaller's documentation
+        # http://pyinstaller.readthedocs.io/en/stable/runtime-information.html
+
+        old_environ = dict(os.environ)  # make a copy of the environment
+        lp_key = 'LD_LIBRARY_PATH'  # for Linux and *BSD.
+        lp_orig = os.environ.get(lp_key + '_ORIG')  # pyinstaller >= 20160820 has this
+        if lp_orig is not None:
+            os.environ[lp_key] = lp_orig  # restore the original, unmodified value
+        else:
+            os.environ.pop(lp_key, None)  # last resort: remove the env var
+
+        webbrowser.open(url)
+
+        # restore the old environ
+        os.environ.clear()
+        os.environ.update(old_environ)
+    else:
+        webbrowser.open(url)
+
+    # restore file descriptors
+    os.dup2(old_stdout, sys.stdout.fileno())
+    os.close(old_stdout)
+
+
 class PrintPreviewServer(Thread):
     def __init__(self, *args, **kwargs):
         self.html = kwargs.pop('html')
@@ -66,8 +104,11 @@ class PrintPreviewServer(Thread):
         self.realistic_color_block_svgs = kwargs.pop('realistic_color_block_svgs')
         Thread.__init__(self, *args, **kwargs)
         self.daemon = True
+        self.last_request_time = None
+        self.shutting_down = False
         self.flask_server = None
         self.server_thread = None
+        self.started = False
 
         self.__setup_app()
 
@@ -89,13 +130,32 @@ class PrintPreviewServer(Thread):
 
         self.app = Flask(__name__)
 
+        self.watcher_thread = Thread(target=self.watch)
+        self.watcher_thread.daemon = True
+        self.watcher_thread.start()
+
+        @self.app.before_request
+        def request_started():
+            self.last_request_time = time.time()
+
         @self.app.route('/')
         def index():
             return self.html
 
+        @self.app.route('/shutdown', methods=['POST'])
+        def shutdown():
+            self.shutting_down = True
+            return _('Closing...') + '<br/><br/>' + _('It is safe to close this window now.')
+
         @self.app.route('/resources/<path:resource>', methods=['GET'])
         def resources(resource):
             return send_from_directory(self.resources_path, resource, max_age=1)
+
+        @self.app.route('/ping')
+        def ping():
+            debug.log("got a ping")
+            # Javascript is letting us know it's still there.  This resets self.last_request_time.
+            return "pong"
 
         @self.app.route('/settings/<field_name>', methods=['POST'])
         def set_field(field_name):
@@ -155,9 +215,39 @@ class PrintPreviewServer(Thread):
         def get_realistic_overview():
             return Response(self.realistic_overview_svg, mimetype='image/svg+xml')
 
+        @self.app.route('/printing/start')
+        def printing_start():
+            # temporarily turn off the watcher while the print dialog is up,
+            # because javascript will be frozen
+            self.last_request_time = None
+            return "OK"
+
+        @self.app.route('/printing/end')
+        def printing_end():
+            # nothing to do here -- request_started() will restart the watcher
+            return "OK"
+
     def stop(self):
         self.flask_server.shutdown()
         self.server_thread.join()
+
+    def watch(self):
+        try:
+            while True:
+                time.sleep(1)
+                if self.shutting_down:
+                    debug.log("watcher thread: shutting down")
+                    self.stop()
+                    break
+
+                if self.last_request_time is not None and (time.time() - self.last_request_time) > 3:
+                    debug.log("watcher thread: timed out, stopping")
+                    self.stop()
+                    break
+        except BaseException:
+            # seems like sometimes this thread blows up during shutdown
+            debug.log(f"exception in watcher {sys.exc_info()}")
+            pass
 
     def disable_logging(self):
         logging.getLogger('werkzeug').setLevel(logging.ERROR)
@@ -180,6 +270,44 @@ class PrintPreviewServer(Thread):
         self.flask_server = make_server(self.host, self.port, self.app)
         self.server_thread = Thread(target=self.flask_server.serve_forever)
         self.server_thread.start()
+        self.started = True
+        self.server_thread.join()
+
+
+class PrintInfoFrame(wx.Frame):
+    def __init__(self, *args, **kwargs):
+        self.print_server = kwargs.pop("print_server")
+        wx.Frame.__init__(self, *args, **kwargs)
+
+        panel = wx.Panel(self)
+        sizer = wx.BoxSizer(wx.VERTICAL)
+
+        message = _("A print preview has been opened in your web browser.  "
+                    "This window will stay open in order to communicate with the JavaScript code running in your browser.\n\n"
+                    "This window will close after you close the print preview in your browser, or you can close it manually if necessary.")
+        text = wx.StaticText(panel, label=message)
+        font = wx.Font(14, wx.DEFAULT, wx.NORMAL, wx.NORMAL)
+        text.SetFont(font)
+        sizer.Add(text, proportion=1, flag=wx.ALL | wx.EXPAND, border=20)
+
+        stop_button = wx.Button(panel, id=wx.ID_CLOSE)
+        stop_button.Bind(wx.EVT_BUTTON, self.close_button_clicked)
+        sizer.Add(stop_button, proportion=0, flag=wx.ALIGN_CENTER | wx.ALL, border=10)
+
+        panel.SetSizer(sizer)
+        panel.Layout()
+
+        self.timer = wx.PyTimer(self.__watcher)
+        self.timer.Start(250)
+
+    def close_button_clicked(self, event):
+        self.print_server.stop()
+
+    def __watcher(self):
+        if self.print_server.started and not self.print_server.is_alive():
+            self.timer.Stop()
+            self.timer = None
+            self.Destroy()
 
 
 class Print(InkstitchExtension):
@@ -330,12 +458,11 @@ class Print(InkstitchExtension):
             realistic_color_block_svgs=realistic_color_block_svgs
         )
         print_server.start()
-        # Wait for print_server.host and print_server.port to be populated.
-        # Hacky, but Flask doesn't have an option for a callback to be run
-        # after startup.
-        time.sleep(0.5)
 
-        browser_window = open_url(print_server.host, print_server.port, True)
-        browser_window.wait()
-        print_server.stop()
-        print_server.join()
+        time.sleep(1)
+        open_url("http://%s:%s/" % (print_server.host, print_server.port))
+
+        app = wx.App()
+        info_frame = PrintInfoFrame(None, title=_("Ink/Stitch Print"), size=(450, 350), print_server=print_server)
+        info_frame.Show()
+        app.MainLoop()

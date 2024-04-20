@@ -125,7 +125,7 @@ body {
     color: white;
   }
 
-  .ui button.print, .ui button.save-pdf {
+  .ui button.print {
     border: 1px solid rgb(50,132,50);
   }
 
