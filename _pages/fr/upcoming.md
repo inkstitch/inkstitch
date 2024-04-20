@@ -9,7 +9,7 @@ toc: true
 
 ## Nouvelles extensions
 
-### [Appliquer une palette] (/fr/docs/visualize/#apply-palette)
+### [Appliquer une palette](/fr/docs/visualize/#apply-palette)
 
 `Gestion des couleurs de fil > Appliquer une palette` ([#2738](https://github.com/inkstitch/inkstitch/pull/2738))
 
