@@ -6,7 +6,7 @@ toc: true
 ---
 
 
-## Appliquer une liste de fils 
+## Appliquer une liste de fils {#apply-threadlist}
 
 Ink/Stitch peut appliquer des listes de fil personnalisées à une broderie. Ceci est particulièrement utile si vous souhaitez utiliser un fichier de broderie qui ne comporte pas d'information de couleur (par exemple DST).
 
@@ -32,7 +32,7 @@ Exécutez `Extensions > Ink/Stitch  > Gestion des couleurs de fil > Appliquer un
 
 
 
-## Générer une palette
+## Générer une palette {#generate-color-palette}
 
 Inkscape permet de générer des fichiers `.gpl`  de palette de couleurs. Mais il ne permet pas d'ordonner correctement les échantillons de couleur.
 
