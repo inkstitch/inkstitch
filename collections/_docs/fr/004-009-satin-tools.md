@@ -114,7 +114,7 @@ Vous pouvez changer le motif de plusieurs manières :
 * Changer de motif en relançant à nouveau `Convertir Ligne en Effet de Chemin Satin`.
 * Convertir en chemin normal  (`Shift + Ctrl + C`)  et raffiner manuellement le chemin (ceci perdra la fonctionnalité Effet de Chemin)
 
-## "Ligne  Zigzag" en Satin
+## "Ligne  Zigzag" en Satin {#zigzag-line-to-satin}
 
 Quand vous tracez manuellement une colonne satin, cet outil vous aidera à le faire en une seule étape : au lieu de dessiner d'abord deux rails puis des traverses, cet outil vous permet de dessiner une ligne en zigzag ( ou en dents de scie, ou en carrés) qui pourra ensuite être convertie en colonne satin normale.
 
