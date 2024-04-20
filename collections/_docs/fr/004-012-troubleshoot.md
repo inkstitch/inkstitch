@@ -27,7 +27,7 @@ Vous recevrez soit un message indiquant qu'aucune erreur ne peut être trouvée,
 Cette extension vous signale aussi
 * la présence de colonnes satin avec deux rails et exactement deux traverses (car cela peut conduite a une mauvaise interprétation de la colonne par Ink/Stitch).
 * la présence de colonnes satins sans aucune traverse
-* la présence d'éléments de broderie comportant à la fois une couleur de trait et une couleur de fon.
+* la présence d'éléments de broderie comportant à la fois une couleur de trait et une couleur de fond.
 
 
 ## Informations sur l'élément {#element-info}
