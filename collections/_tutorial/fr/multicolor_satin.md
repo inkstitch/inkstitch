@@ -46,7 +46,7 @@ Grace à l'un ou l'autre de ces deux paramètres, on a déjà une première mét
 ![first_bicolore_satin](/assets/images/tutorials/multicolor_satin/first_bicolor_satin.png)
 
 * A gauche utilisation de la diminution aléatoire de largeur : la colonne rouge est réduite à gauche, la colonne verte est réduite à droite.  Mais attention la seconde couleur vient en superposition de la première et ici le vert cache une partie du rouge .
-* A droite, on a laissé le rouge intact, le vert vient en superposition,réduit jusqu'au deux tiers plutÔt que de la moitié
+* A droite, on a laissé le rouge intact, le vert vient en superposition,réduit jusqu'au deux tiers plutôt que de la moitié
 
 Mais cette méthode est imparfaite : elle assure que toute la colonne est colorée, il n'y a pas de manque, mais il y a superposition. 
 
@@ -190,6 +190,11 @@ Satin vert:
 * Graine aléatoire 7 (où ce que vous avez saisi pour l'autre colonne)
 
 
+**Important** Si ça n'a pas l'air de marcher , vérifiez que  
+* les rails de la colonne satin sont bien tous les deux dans la même direction, et non pas corrigés automatiquement. 
+* les points courts ne sont pas déclenchés 
+{: .notice--info }
+
 ![solution](/assets/images/tutorials/multicolor_satin/solution.png)
 
 Télécharger [le fichier du serpent](/assets/images/tutorials/multicolor_satin/serpent.svg){: download="serpent.svg" }
@@ -215,7 +220,7 @@ En supposant que l'on veut repartir les 100% de la largeur de la gauche vers la 
 | Graine aléatoire| identique | identique |identique|
 
 
-Donc si  l'on souhaite   un partage en bleu, blanc rouge avec aucune zone  monochrome, C1,C2 et C3 seront égaux à et C1!2=C2!3=50 et le tableau devient :
+Donc si  l'on souhaite   un partage en bleu, blanc rouge avec aucune zone  monochrome, C1,C2 et C3 seront égaux à 0 et C1!2=C2!3=50 et le tableau devient :
 |Paramètre |Bleu |Blanc |Rouge |
 | --- | --- |--- |--- |
 | Pourcentage de compensation d'étirement  | 0 -100| -50 -50|-100 0|
@@ -252,19 +257,58 @@ Avec les mêmes notations on aura cette fois
 
 Toutes  les valeurs de  compensation sont négatives,toutes les augmentations sont positives toutes  les  diminutions sont négatives.
 
+Cette fois ci, si l'on ne veut pas de zone monochome et un partage égal du reste, C1=C2=C3=C4=0 et C1!2=C2!3=C3!4=33.3.
 
+Si  l'on souhaite   plutôt réserver 15% à chacune des parties monochromes et partager le reste équitablement, on choisit C1=C2=C3=C4=5 , il reste 40% donc  C1!2=C2!3=C3!4=13.3 
 
+![tricolore](/assets/images/tutorials/multicolor_satin/quadricolor.png)
 
-**Important** Si ça n'a pas l'air de marcher , vérifiez que  
-* les rails de la colonne satin sont bien tous les deux dans la même direction, et non pas corrigés automatiquement. 
-* les points courts ne sont pas déclenchés 
-{: .notice--info }
 
 **Remarque** Pour une broderie de qualité, il faut aussi ajouter de la  compensation d'étirement pour..... compenser..... l'étirement ! Brodé tel quel les couleurs n'auront pas tout à fait l'air jointives, car les points déforment la broderie. Le plus simple  est d'ajouter un peu  de compensation en mm. 
 {: .notice--info }
 
+  ### Pour un nombre quelconque de couleurs
+
+  Pour un partage en N couleurs, choisir des valeurs positives ou nulles pour les N parties monochromes C1,C2,.....CN et les N-1 parties bicolores C1!2, C2!3, ....CN-1!N. La somme des 2N-1 valeurs doit être 100.
+
+Préparer un tableau à N colonnes
+  
+Dans  la i-ième colonne indiquer 
+
+**Si i est impair**
+
+|Paramètre |Couleur I|
+| --- | --- |
+| Pourcentage de compensation d'étirement  | C1+C1!C2+C2+C2!C3+.....C(I-1)!I   CI!C(I+1)+C(I+1)+C(I+1)!(I+2)+.....CN| 
+| Échanger les rails| non|
+| Augmentation aléatoire de la largeur du satin| 0  CI!(I+1)| 
+| Diminution aléatoire de la largeur du satin|  -C(I-1)!I 0|
+| Graine aléatoire| toujours_le_meme_truc | 
+
+Dans le pourcentage de compensation d'étirement vient en première position la somme des largeurs réservées a tout ce qui est avant la couleur I, et en deuxième position la zome des largeurs réservées à tout ce qui est après la couleur I.
+
+**Si i est pair**
+
+on coche Échanger les rails, et on interverti  les deux valeurs du couple dans chaque paramètre.
+
+|Paramètre |Couleur I|
+| --- | --- |
+| Pourcentage de compensation d'étirement  |   CI!C(I+1)+C(I+1)+C(I+1)!(I+2)+.....CN C1+C1!C2+C2+C2!C3+.....C(I-1)!I | 
+| Échanger les rails| oui|
+| Augmentation aléatoire de la largeur du satin| CI!(I+1) 0| 
+| Diminution aléatoire de la largeur du satin| 0 -C(I-1)!I |
+| Graine aléatoire| toujours_le_meme_truc | 
 
 
+
+
+
+* Pour la première  colonne  C(-1) sera pris égal à 0 si l'on ne veut pas de débordement, on peut lui donner une valeur  positive,si l'on veut que la première couleur déborde à gauche.
+* De même pour  la dernière colonne C(N+1) sera pris égal à 0 si l'on ne veut pas que la dernière couleur déborde de la forme.
+
+Et voilà à vous les arc-en-ciel.....
+
+Pour cet exemple, on a fait déborder la première et la dernière couleur
 ![ArcEnCiel](/assets/images/tutorials/multicolor_satin/arcenciel.svg)
 
 Télécharger [le fichier arc en ciel](/assets/images/tutorials/multicolor_satin/arcenciel.svg){: download="arcenciel.svg" }
