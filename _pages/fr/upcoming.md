@@ -9,13 +9,13 @@ toc: true
 
 ## Nouvelles extensions
 
-### Appliquer une palette
+### Appliquer une palette (/fr/docs/visualize/#apply-palette)
 
 `Gestion des couleurs de fil > Appliquer une palette` ([#2738](https://github.com/inkstitch/inkstitch/pull/2738))
 
 Cette extension applique les couleurs les plus proches d'une palette de fils spécifiée sur un dessin. Ceci sera également reconnu par la sortie PDF Ink/Stitch.
 
-### [Afficher l'ordre de broderie](/docs/visualize/#display-stacking-order)
+### [Afficher l'ordre de broderie](/fr/docs/visualize/#display-stacking-order)
 
 `Visualiser et exporter > Afficher l'ordre de broderie` ([#2656](https://github.com/inkstitch/inkstitch/issues/2656))
 
