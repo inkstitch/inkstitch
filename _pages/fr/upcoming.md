@@ -50,17 +50,16 @@ Cette extension permet de reconstruire un objet original à partir d'un fichier 
 
 `Outils : Remplissage > Tartan` ([#2782](https://github.com/inkstitch/inkstitch/issues/2782))
 
-Cette extension génère les rayures du tartan et les applique au document soit en tant qu'éléments svg, soit en tant que paramètres de remplissage tartan.
+Cette extension génère les bandes du tartan et les applique au document soit en tant qu'éléments svg, soit en tant que paramètres de remplissage tartan.
 
 
 ## Mises à jour d'extensions
 
-### Nettoyer le document
+### [Nettoyer le document](/fr/docs/troubleshoot/#cleanup-document)
+Résolution de problèmes > Nettoyer le document`
 
-`Troubleshoot > Cleanup document`
-
-* add option to delete empty groups and layers ([#2552](https://github.com/inkstitch/inkstitch/issues/2552))
-* add test run option to display names of the elements that will be removed with the current settings ([#2552](https://github.com/inkstitch/inkstitch/issues/2552))
+* ajout  d'une option pour supprimer les groupes et les calques vides  ([#2552](https://github.com/inkstitch/inkstitch/issues/2552))
+* ajout d'une option "Essayer" qui affiche la liste des éléments qui seraient supprimés avec le paramètrage choisi, sans rien réellement supprimer ([#2552](https://github.com/inkstitch/inkstitch/issues/2552))
 
 ### Density map
 
