@@ -46,22 +46,6 @@ Cette extension convertira un trait en une (ou plusieurs) colonne satin avec une
 2. Définir une largeur de trait
 2. Lancer `Extensions > Ink/Stitch  > Outils: Satin > Trait en Satin`
 
-<!--
-##  Satin en Trait
-
-Satin en trait converti une colonne satin en sa ligne centrale. Cette fonction peut être utile si vous décidez, tardivement dans le processus, de remplacer une colonne satin par un point droit. Vous pouvez aussi l'utiliser pour modifier l'épaisseur de votre colonne satin lorsqu'un étirement n'est pas satisfaisant.  
-
-Dans ce cas, convertissez votre colonne satin en point droit, modifiez la largeur du trait dans le panneau `Fond et Contour` puis exécutez  ["Convertir des lignes en Satin"](#convertir-des-Lignes-en-atin) function. Ce processus fonctionne bien si les colonnes satin ont une épaisseur constante.
-
-![Satin to Stroke example](/assets/images/docs/en/satin_to_stroke.png)
-
-### Usage
-
-1. Sélectionner la ou les colonne(s) satin que vous souhaitez convertir en point droit.
-2. Exécutez  `Extensions > Ink/Stitch > Outils de satin > Satin en Trait...`
-3. Choisissez si vous souhaitez conserver les colonnes satin selectionnées ou les remplacer.
-4. Cliquez sur `Appliquer`
--->
 
 ## Scinder une colonne Satin
 
