@@ -134,6 +134,7 @@ This extension generates the tartan stripes and applies them to the document eit
 
 ### New fonts
 
+* Chicken Little ([#2839](https://github.com/inkstitch/inkstitch/pull/2839))
 * Chicken Scratch ([#2703](https://github.com/inkstitch/inkstitch/pull/2703))
 * Millimarif-bold20 ([#2780](https://github.com/inkstitch/inkstitch/pull/2780))
 * Violin Serif ([#2703](https://github.com/inkstitch/inkstitch/pull/2703))
