@@ -30,7 +30,7 @@ Raccourci | Effet
 
 C'est aussi possible de **zoomer** et de **déplacer** la simulation avec la souris.
 
-## Simulation du plan de broderie
+## Simulation du plan de broderie {#stitch-plan-preview}
 
 Lancez `Extensions > Ink/Stitch > Visualiser et Exporter  > Simulation du plan de broderie...`.
 
@@ -74,7 +74,7 @@ Cette extension le fait pour vous et vous aidera si vous utilisez cette méthode
 
 Lancez `Extensions > Ink/Stitch > Visualisr et Exporter > Annuler le plan de broderie`
 
-## Carte de densité
+## Carte de densité {#density-map}
 
 * Sélectionnez des objets si vous ne souhaitez la carte de densité que pour ces objets là, sinon lancez l'extension sans rien sélectionner
 * Lancez `Extensions > Ink/Stitch > Visualiser et Exporter > Carte de densité`
@@ -93,12 +93,10 @@ Ceci montrera des marqueurs rouges, jaunes et verts au dessus de vos éléments,
  
 * Visibilité du calque de conception
 Définir si Ink/Stitch doit laisser le calque de conception tel quel,le cacher  ou baisser son opacité
-  Define if Ink/Stitch should leave the design layer unchanged, hide id or lower opacity
+   
+* Indicateur de taille
+Définir la taille des marqueurs (l'unité est celle du document)
   
-* Indicateur de taill
-Définirl a taille des marqueurs (l'unité est celle du document)
-  Define the size of the dots in document units
-
 
 ## Afficher l'ordre de broderie {#display-stacking-order}
 
