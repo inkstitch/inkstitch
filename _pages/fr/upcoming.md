@@ -9,7 +9,7 @@ toc: true
 
 ## Nouvelles extensions
 
-### Appliquer une palette (/fr/docs/visualize/#apply-palette)
+### [Appliquer une palette] (/fr/docs/visualize/#apply-palette)
 
 `Gestion des couleurs de fil > Appliquer une palette` ([#2738](https://github.com/inkstitch/inkstitch/pull/2738))
 
@@ -21,33 +21,30 @@ Cette extension applique les couleurs les plus proches d'une palette de fils sp�
 
 ![Afficher l'ordre de broderie](/assets/images/docs/stacking_order.png)
 
-### [Informations sur l'élément](/docs/troubleshoot/#element-info)
+### [Informations sur l'élément](/fr/docs/troubleshoot/#element-info)
 
-`Dépannage > Informations sur l'élément` ([#2544](https://github.com/inkstitch/inkstitch/issues/2544))
+`Résolution de problèmes > Informations sur l'élément` ([#2544](https://github.com/inkstitch/inkstitch/issues/2544))
 
 Cette extension informe sur divers paramètres des éléments de point sélectionnés.
 
 ![Informations sur l'élément](/assets/images/docs/en/element_info.png)
 
-### Apply Palette
+### [Générer des échantillons de test à partir de la sélection](/fr/docs/edit/#generate-test-swatches-from-selection)
 
-`Thread Color Management > Apply Palette` ([#2738](https://github.com/inkstitch/inkstitch/pull/2738))
+`Modifier > Générer des échantillons de test à partir de la sélection` ([#2528](https://github.com/inkstitch/inkstitch/issues/2528))
 
-This extension applies nearest colors from a specified thread palette on a design. This will also be recognized by the Ink/Stitch pdf output.
+Cette extension permet de tester facilement différentes valeurs des paramètres de broderie en créant des échantillons de test.
 
-### [Display Stacking order](/docs/visualize/#display-stacking-order)
+![Exemples d'échantillons de test](/assets/images/docs/test_swatches.png)
 
-`Visualize and Export > Display Stacking order` ([#2656](https://github.com/inkstitch/inkstitch/issues/2656))
+### [Contour](/docs/stroke-tools/#outline)
 
-![Display stacking order](/assets/images/docs/stacking_order.png)
+`Outils de contour > Contour` ([#2529](https://github.com/inkstitch/inkstitch/issues/2529))
 
-### [Element info](/docs/troubleshoot/#element-info)
+Cette extension permet de reconstruire un objet original à partir d'un fichier de points.
 
-`Troubleshoot > Element info` ([#2544](https://github.com/inkstitch/inkstitch/issues/2544))
+![Remplir jusqu'au contour](/assets/images/docs/outline.png)
 
-This extension informs about various parameters of selected stitch elements.
-
-![Element info](/assets/images/docs/en/element_info.png)
 
 ### [Generate Test Swatches from Selection](/docs/edit/#generate-test-swatches-from-selection)
 
