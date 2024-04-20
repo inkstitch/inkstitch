@@ -37,41 +37,26 @@ Cette extension permet de tester facilement différentes valeurs des paramètres
 
 ![Exemples d'échantillons de test](/assets/images/docs/test_swatches.png)
 
-### [Contour](/docs/stroke-tools/#outline)
+### [Contour](/fr/docs/stroke-tools/#outline)
 
-`Outils de contour > Contour` ([#2529](https://github.com/inkstitch/inkstitch/issues/2529))
+`Outils : Trait> Contour` ([#2529](https://github.com/inkstitch/inkstitch/issues/2529))
 
 Cette extension permet de reconstruire un objet original à partir d'un fichier de points.
 
-![Remplir jusqu'au contour](/assets/images/docs/outline.png)
+![Remplissage en contour](/assets/images/docs/outline.png)
 
 
-### [Generate Test Swatches from Selection](/docs/edit/#generate-test-swatches-from-selection)
-
-`Edit > Generate Test Swatches from Selection` ([#2528](https://github.com/inkstitch/inkstitch/issues/2528))
-
-This extension allows to easily test different values for embroidery parameters by creating test swatches.
-
-![Example test swatches](/assets/images/docs/test_swatches.png)
-
-### [Outline](/docs/stroke-tools/#outline)
-
-`Stroke tools > Outline` ([#2529](https://github.com/inkstitch/inkstitch/issues/2529))
-
-This extension helps reconstruct an original object from a stitch file.
-
-![Fill to outline](/assets/images/docs/outline.png)
-
-### [Tartan](/docs/fill-tools/#tartan)
-
-`Fill tools > Tartan` ([#2782](https://github.com/inkstitch/inkstitch/issues/2782))
-
-This extension generates the tartan stripes and applies them to the document either as svg elements or as tartan fill params
+### [Tartan](/fr/docs/fill-tools/#tartan)
 
 
-## Extension Updates
+`Outils : Remplissage > Tartan` ([#2782](https://github.com/inkstitch/inkstitch/issues/2782))
 
-### Cleanup document
+Cette extension génère les rayures du tartan et les applique au document soit en tant qu'éléments svg, soit en tant que paramètres de remplissage tartan.
+
+
+## Mises à jour d'extensions
+
+### Nettoyer le document
 
 `Troubleshoot > Cleanup document`
 
