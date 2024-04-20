@@ -1,7 +1,7 @@
 ---
 title: "Remplissage en méandres"
 permalink: /fr/docs/stitches/meander-fill/
-last_modified_at: 2023-05-01
+last_modified_at: 2024-04-20
 toc: true
 ---
 ## De quoi s'agit-il?
@@ -13,7 +13,7 @@ Le remplissage en méandres est originaire des techniques de quilting. Il produi
 
 ## Comment le créer
 
-* Créez un **chemin fermé avec une couleur de remplssager**.  Cette forme peut contenir des trous.
+* Créez un **chemin fermé avec une couleur de remplissage**.  Cette forme peut contenir des trous.
 * Ouvrez le dialogue des paramètres (`Extensions > Ink/Stitch > Paramètres`)  et sélectionnez "Remplissage en méandres" comme méthode de remplissage.
 
   Vous pouvez maintenant choisir parmi un grand nombre de motif de méandres. Vous pouvez jouer sur les valeurs de  taille, régularité, longueur de point et tolérance pour modifier l'aspect.
@@ -39,7 +39,10 @@ Lancez `Extensions > Ink/Stitch > Paramètres`. Choisir “Remplissage en méand
 |Tolérance du point droit                   |![Exemple de tolerance](/assets/images/docs/contourfilltolerance.svg) |Tous les points doivent rester au plus à cette distance du chemin. Une tolérance plus faible (en haut sur le dessin) signifie que les points seront plus rapprochés. Une tolérance plus élevée (en bas) signifie que les angles vifs peuvent être arrondis.|
 |Répétitions           ||Combien de fois aller et revenir le long du chemin<br />◦ par défaut: 1 (aller une fois du début à la fin du chemin)<br />◦ Nombre impair: les points se termineront à la fin du chemin<br />◦ Nombre pair: la broderie va revenir au début du chemin|
 |Nombre de répétitions pour le point triple (bean stitch)              |Active le [Mode point triple](/fr/docs/stitches/bean-stitch/)<br />|Une valeur de 1 triplera chaque point (avant, arrière, avant).<br />◦ Une valeur de 2 permettra de quintupler chaque point, etc..<br />◦ Il est possible de définir un motif de répétitions en entrant plusieurs valeurs séparées par un espace|
-|Forcer les points d'arrêts                 |☑|Force un point d'arrêt après l'objet indépendament de la valeur de "Saut de fil" dans les Préférences d'Ink/Stitch.|
+|Espacement zigzag (crête à crête)                         |![Zigzag example](/assets/images/docs/meander-zigzag.png) | Une valeur non nulle déclanche la transformation du point droit des méandres en zigzag et en défini l'espacement.|
+|Largeur du zigzag                        ||   la largeur du zigzag est définie ici|
+|Longueur minimum de point||Est prioritaire par rapport à la valeur de la longueur minimum de point définie dans les préférences. Les points plus courts seront supprimés.|
+|Longueur minimum de saut||Est prioritaire par rapport à la valeur de la longueur minimum de saut définie dans les préférences. Si la distance à l'objet suivant est inférieure, il n'y aura pas de points d'arrêt, sauf si les points d'arrêts sont forcés.|
 |Autoriser les points d'arrêts              | ☑|Ajoute un point d'arrêt à la ou les positions choisies.|
 |Point d'arrêt initial                           ||Selectionnez le type du  [point d'ancrage](/fr/docs/stitches/lock-stitches).|
 |Point d'arrêt final                             ||Selectionnez le type du [point d'arrêt](/fr/docs/stitches/lock-stitches).|
