@@ -72,15 +72,15 @@ Cette extension génère les bandes du tartan et les applique au document soit e
 `Outils : Trait > Remplissage en Trait`
 * ajoute un  groupe centerline pour chaque remplissage selectionné si le résultat consiste en plusiers chemins  ou  remplace le remplissage si le résultat est un chemin unique ([#2675](https://github.com/inkstitch/inkstitch/issues/2675#issuecomment-1882919122))
 
-### [Force lock stitches](/fr/docs/font-tools/#custom-font-directory)
+### [Forcer les points d'arrêts](/fr/docs/font-tools/#custom-font-directory)
 
 `Gestion des polices> Forcer les points d'arrêt`
 
 * Ajout de l'option,  "Restreindre aux colonnes  Satins"  ([#2773](https://github.com/inkstitch/inkstitch/pull/2773))
 
-### [Jump to Stroke](/fr/docs/stroke-tools/#jump-to-stroke)
+### [Saut en Trait](/fr/docs/stroke-tools/#jump-to-stroke)
 
-`Outils : Trait > Jump to Stroke`
+`Outils : Trait > Saut en Trait`
 
 * Ajout d'options ([#2733](https://github.com/inkstitch/inkstitch/pull/2733))
     * Longueur minimum
@@ -93,7 +93,7 @@ Cette extension génère les bandes du tartan et les applique au document soit e
 ### [Lettrage](/fr/docs/lettering)
 
 `Lettrage`
-* Ajouter un filtre sur la présence des  glyphes ([#2400](https://github.com/inkstitch/inkstitch/issues/2400))
+* Ajouter un filtre sur la présence des glyphes ([#2400](https://github.com/inkstitch/inkstitch/issues/2400))
 
 ### [Préferences](/fr/docs/preferences)
 
@@ -124,7 +124,7 @@ Cette extension génère les bandes du tartan et les applique au document soit e
 `Résolution de problème > Dépistage de problèmes avec des objets `
 
 * ajout d'un signal de présence de colonnes satin avec deux rails et exactement deux traverses (car cela peut conduite a une mauvaise interprétation de la colonne par Ink/Stitch) ([#2734](https://github.com/inkstitch/inkstitch/pull/2734))
-* ajout d'un signal de présence de colonnes satins sans aucune traverse[#2791](https://github.com/inkstitch/inkstitch/pull/2791))
+* ajout d'un signal de présence de colonnes satin sans aucune traverse[#2791](https://github.com/inkstitch/inkstitch/pull/2791))
 * ajout d'un signal de présence d'éléments de broderie comportant à la fois une couleur de trait et une couleur de fond ([#2761](https://github.com/inkstitch/inkstitch/pull/2761))
 
 
@@ -140,7 +140,7 @@ Cette extension génère les bandes du tartan et les applique au document soit e
 ### Mises à jour de fontes
 
 * La plupart des fontes comportent maintenant les glyphes: éèêëÉÈÊËÜÄÖäöüß
-  Les seules exceptons sont April en Fleur, Apex Lake, les Cherry's, les Emilio , Fold Inkstitch, Infinipicto, Namskout and Sortefax qui ne contiennent  que des glyphes sans diacritiques
+  Les exceptions sont April en Fleur, Apex Lake, les Cherry's, les Emilio , Fold Inkstitch, Infinipicto, Namskout and Sortefax qui ne contiennent  que des glyphes sans diacritiques
 * Ũ à  été ajouté  dans TT directors
 
 Toutes les fontes ont été retravaillées pour être plus stable si déformées.
@@ -170,12 +170,12 @@ Toutes les fontes ont été retravaillées pour être plus stable si déformées
 ## Paramètres
 
 * Meilleure information en cas d'erreur[#2437](https://github.com/inkstitch/inkstitch/issues/2437))
-* Ajout des paramètres "longueur minimup de point" et "longeur minimum de saut" sur les  objets de broderie  ([#2792](https://github.com/inkstitch/inkstitch/issues/2792))
+* Ajout des paramètres "longueur minimum de point" et "longeur minimum de saut" sur les  objets de broderie  ([#2792](https://github.com/inkstitch/inkstitch/issues/2792))
 
 ## Simulateur
 
-* Meilleur simulateur pour Paramères et Lettrage ([#2481](https://github.com/inkstitch/inkstitch/issues/2481))
-* Le simulateur est maintenant attaché à la fennêtre principale (Paramètre et Lettrage)([#2557](https://github.com/inkstitch/inkstitch/issues/2557)), il est détachable, et son dernier état est conservé.
+* Meilleur simulateur pour Paramètres et Lettrage ([#2481](https://github.com/inkstitch/inkstitch/issues/2481))
+* Le simulateur est maintenant attaché à la fenêtre principale (Paramètre et Lettrage)([#2557](https://github.com/inkstitch/inkstitch/issues/2557)), il est détachable, et son dernier état est conservé.
 
 
 ## Types de points 
@@ -183,8 +183,8 @@ Toutes les fontes ont été retravaillées pour être plus stable si déformées
 ### Famille des Remplissages
 
 * Lissage des chemins de dessous([#2346](https://github.com/inkstitch/inkstitch/issues/2346))
-* Prévention de la sortie de la forme par le remplissage([#2346](https://github.com/inkstitch/inkstitch/issues/2346))
-* [Remplissage dégradé linéaire](/fr/docs/stitches/linear-gradient-fill/): un nouveau type de points pour les dégradés([#2587](https://github.com/inkstitch/inkstitch/issues/2587))
+* Prévention de la sortie de la forme pour le remplissage([#2346](https://github.com/inkstitch/inkstitch/issues/2346))
+* [Remplissage dégradé linéaire](/fr/docs/stitches/linear-gradient-fill/): un nouveau type de points pour les dégradés linéaures([#2587](https://github.com/inkstitch/inkstitch/issues/2587))
 
   [![Linear gradient fill](/assets/images/docs/linear-gradient.jpg)](/assets/images/docs/linear-gradient.svg)
 * Remplissage en méandres: ajout d'une option zigzag ([#2699](https://github.com/inkstitch/inkstitch/pull/2699))
@@ -199,7 +199,7 @@ Toutes les fontes ont été retravaillées pour être plus stable si déformées
 
 * Ajout de l'option "Décalés" pour le découpage des points ([#2431](https://github.com/inkstitch/inkstitch/issues/2431))
   ![Staggered split stitch example](/assets/images/docs/split-satin-detail.png)
-* Convertion Trait en Satin  : évite le découpage en plusieurs partie ([#2418](https://github.com/inkstitch/inkstitch/issues/2418))
+* Convertion Trait en Satin  : évite le découpage en plusieurs parties ([#2418](https://github.com/inkstitch/inkstitch/issues/2418))
   ![Converted square](/assets/images/docs/convert-to-satin-update.png)
 *  S-Stitch: un nouveau style de points pour cette famille ([#2431](https://github.com/inkstitch/inkstitch/issues/2431))
   ![S-Stitch](/assets/images/docs/s-stitch-detail.png)
@@ -209,7 +209,7 @@ Toutes les fontes ont été retravaillées pour être plus stable si déformées
 ### Clones
 
 * Meilleur détection de l'angle pour les clones de remplissage([#2766](https://github.com/inkstitch/inkstitch/issues/2766))
-* Ajout de la capacité de rendu de  clones de groupes([#2766](https://github.com/inkstitch/inkstitch/issues/2766))
+* Ajout de la capacité de rendu de clones de groupes([#2766](https://github.com/inkstitch/inkstitch/issues/2766))
 
 
 ## Export
@@ -217,11 +217,11 @@ Toutes les fontes ont été retravaillées pour être plus stable si déformées
 ### Export
 
 * Ajout d'un champs  "nom de fichier personnalisé " au sein du fichier zip ([#2426](https://github.com/inkstitch/inkstitch/issues/2426))
-* Ajout d'une option de panélisat;on ([#2349](https://github.com/inkstitch/inkstitch/issues/2349))
+* Ajout d'une option de panélisation ([#2349](https://github.com/inkstitch/inkstitch/issues/2349))
 
 ### Dialogue d'export d'Inkscape 
 
-*  Les formats de fichiers Ink/Stitch file formats sont maintenant aussi utilisable dans le dialogue d'export d' Inkscape ([#2489](https://github.com/inkstitch/inkstitch/issues/2489))
+*  Les formats de fichiers Ink/Stitch sont maintenant aussi utilisables dans le dialogue d'export d'Inkscape ([#2489](https://github.com/inkstitch/inkstitch/issues/2489))
 
 ### Couleur des fils
 
@@ -234,36 +234,36 @@ Toutes les fontes ont été retravaillées pour être plus stable si déformées
 ## Pour les developpeurs
 
 * [#2715](https://github.com/inkstitch/inkstitch/issues/2715) support multiversion
-* [#2653](https://github.com/inkstitch/inkstitch/issues/2653) Mis  à jour des procédures de  debug et profiling 
+* [#2653](https://github.com/inkstitch/inkstitch/issues/2653) Mise à jour des procédures de debug et de profiling 
 
 
 ## Corrections de bug
 
-* [#2754](https://github.com/inkstitch/inkstitch/issues/2754)  Corrige Lettrage le long d'un chemin lorsque les glyphes comportent des sous groupes ou  des commandes  de coupe
-* [#2683](https://github.com/inkstitch/inkstitch/issues/2683) Sélectionner des éléments de broderie : message d'erreur  lorsque le chemin python nen peut pas être trouvé.
+* [#2754](https://github.com/inkstitch/inkstitch/issues/2754)  Corrige Lettrage le long d'un chemin lorsque les glyphes comportent des sous groupes ou  des commandes de coupe.
+* [#2683](https://github.com/inkstitch/inkstitch/issues/2683) Sélectionner des éléments de broderie : message d'erreur  lorsque le chemin python ne peut pas être trouvé.
 * [#2675](https://github.com/inkstitch/inkstitch/issues/2675) Corrige le message d'erreur de "Remplissage en Trait"  en présence  de très  petis  remplissages
-* [#2674](https://github.com/inkstitch/inkstitch/issues/2674) Zip: Corrige le message  d'erreur lorsqu'aucun format de  fichier n'est détecté 
-* [#2644](https://github.com/inkstitch/inkstitch/issues/2644) Lettres  vers police: eéchappement des  étiquette pour  accepter l'import de fichiers dont le nom comporte  des guillemets
+* [#2674](https://github.com/inkstitch/inkstitch/issues/2674) Zip: Corrige le message  d'erreur lorsqu'aucun format de  fichier n'est spécifié 
+* [#2644](https://github.com/inkstitch/inkstitch/issues/2644) Lettres  vers police: eéchappement des  étiquettes pour  accepter l'import de fichiers dont le nom comporte des guillemets
 * [#2657](https://github.com/inkstitch/inkstitch/issues/2657) Détection d'erreur sur le satin : montre le rail et non pas  le centre de  l'élément
 * [#2643](https://github.com/inkstitch/inkstitch/issues/2643) Correction de quelques erreurs networkx pour le remplissage
-* [#2603](https://github.com/inkstitch/inkstitch/issues/2603) Correction d'une erreur  sur  les polyline 
+* [#2603](https://github.com/inkstitch/inkstitch/issues/2603) Correction d'une erreur sur  les "polyline "
 * [#2637](https://github.com/inkstitch/inkstitch/issues/2637) Ajout de la propriété shape au clone
 * [#2638](https://github.com/inkstitch/inkstitch/issues/2638) Détection d'erreur: suppression du calque précédent avant la création du suivant pour éviter des problèmes de transformation
-* [#2647](https://github.com/inkstitch/inkstitch/issues/2647) Ignorer les multipoints dans intersect regions with gratings
+* [#2647](https://github.com/inkstitch/inkstitch/issues/2647) Ignorer les multipoints dans "intersect regions with gratings"
 * [#2635](https://github.com/inkstitch/inkstitch/issues/2635) [#2645](https://github.com/inkstitch/inkstitch/issues/2645) Corrige quelques erreurs "pas de chemin"  de  networkx 
 * [#2624](https://github.com/inkstitch/inkstitch/issues/2624) Remplace les sauts par des points droits dans les colonnes larges
 * [#2578](https://github.com/inkstitch/inkstitch/issues/2578) Arrangement automatique des satins: traitement correct des propriétés asymétriques
-* [#2566](https://github.com/inkstitch/inkstitch/issues/2566) Mise à jour de descripions périmée dans les fichiers inx, afin qu'elles soient traduites
-* [#2550](https://github.com/inkstitch/inkstitch/issues/2550) Lettrage: erreur en cas de calque vide dans le fichier de la fonte
+* [#2566](https://github.com/inkstitch/inkstitch/issues/2566) Mise à jour de descripions périmées dans les fichiers inx, afin qu'elles soient traduites
+* [#2550](https://github.com/inkstitch/inkstitch/issues/2550) Lettrage: correction de l'erreur en cas de calque vide dans le fichier de la fonte
 * [#2527](https://github.com/inkstitch/inkstitch/issues/2527) Plan de broderie: erreur de sequence multiple
-* [#2502](https://github.com/inkstitch/inkstitch/issues/2502) Blocs d graduit: correction de l'unité
-* [#2499](https://github.com/inkstitch/inkstitch/issues/2499) LPE Satin: correction de lala largeur du satin "normal" 
-* [#2491](https://github.com/inkstitch/inkstitch/issues/2491) Bascule des comandes: correction si la premiere commande est dans un groupe ou calque caché
-* [#2468](https://github.com/inkstitch/inkstitch/issues/2468) Zigzageno satin: ne pas ignorer les éléments qui sont dansun groupe 
-* [#2467](https://github.com/inkstitch/inkstitch/issues/2467) Rendu de couleurs de trait et remplissage indéfini  en  noir 
-* [#2461](https://github.com/inkstitch/inkstitch/issues/2461) Lettres vers jpjolice: correction de l'insertion de guide
-* [#2460](https://github.com/inkstitch/inkstitch/issues/2460) Colonne satin: respecter les rails inversés en cas de synthèse de traverseso
+* [#2502](https://github.com/inkstitch/inkstitch/issues/2502) Blocs de gradient: correction de l'unité
+* [#2499](https://github.com/inkstitch/inkstitch/issues/2499) Effet de chemin Satin: correction de la largeur du satin "normal" 
+* [#2491](https://github.com/inkstitch/inkstitch/issues/2491) Bascule de l'affichage des commandes: correction si la premiere commande est dans un groupe ou calque caché
+* [#2468](https://github.com/inkstitch/inkstitch/issues/2468) Zigzag en satin: ne pas ignorer les éléments qui sont dans un groupe 
+* [#2467](https://github.com/inkstitch/inkstitch/issues/2467) Rendu de couleurs de trait et remplissage indéfinies  en  noir 
+* [#2461](https://github.com/inkstitch/inkstitch/issues/2461) Lettres vers police: correction de l'insertion de guide
+* [#2460](https://github.com/inkstitch/inkstitch/issues/2460) Colonne satin: respect des rails inversés lors de la synthèse des traverses
 * [#2458](https://github.com/inkstitch/inkstitch/issues/2458) Carte de densité: ajout d'une commande "ignorer ce  calque"
 * [#2434](https://github.com/inkstitch/inkstitch/issues/2434) Ignorer  les commandes  avec "empty-d-connectors"
-* [#2404](https://github.com/inkstitch/inkstitch/issues/2404) Rendu des  satins avec un seul chemin en point  droits
+* [#2404](https://github.com/inkstitch/inkstitch/issues/2404) Rendu des  satins avec un seul chemin en points  droits
 * [#2403](https://github.com/inkstitch/inkstitch/issues/2403) Ignorer les  petits remplissages selon contour avec les stragégies  spirale simple ou double
