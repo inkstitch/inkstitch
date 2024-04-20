@@ -1,7 +1,7 @@
 ---
 title: "Simulation"
 permalink: /fr/docs/visualize/
-last_modified_at: 2024-03-12
+last_modified_at: 2024-04-20
 toc: true
 ---
 ## Simulateur/ Aperçu Réaliste
@@ -98,12 +98,12 @@ Ceci montrera des marqueurs rouges, jaunes et verts au dessus de vos éléments,
   Define the size of the dots in document units
   {% include upcoming_release.html %}
 
-## Montrer l'ordre de broderie
+## Afficher l'ordre de broderie
 
 {% include upcoming_release.html %}
 
 
-Lancez `Extensions > Ink/Stitch > Visualiser et Exporter> Montrer l'ordre de broderie...`.
+Lancez `Extensions > Ink/Stitch > Visualiser et Exporter> Afficher l'ordre de broderie...`.
 
 Choisir la taille de la fonte et cliquer sur  Appliquer pour créer un nouveau calque (non brodable) de texte qui numérote les éléments de broderie dans l'ordre de broderie, c'est à dire dans l'ordre  inverse de la  pile d'objets.
 
