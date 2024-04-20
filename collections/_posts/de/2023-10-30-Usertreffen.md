@@ -66,7 +66,7 @@ wie Ink/Stitch entwickelt wird und wie jeder einen Beitrag leisten kann (auch oh
 Denn Ink/Stitch ist ein Gemeinschaftsprojekt.
 
 Mich interessiert, welche Erfahrungen ihr mit Ink/Stitch bereits gesammelt habt.
-Was hat euch genervt hat, was gut war.
+Was euch genervt hat, was gut war.
 Welche Ideen habt ihr, wie der Einstieg für Anfänger erleichtert werden könnte.
 Welche Funktionen würdet ihr euch vielleicht für die Zukunft wünschen.
 
@@ -103,7 +103,6 @@ Wann setzen wir welchen Unterleger ein und welchen Einfluss hat denn das eigentl
 ![Start and stop symbol](/assets/images/posts/de/routing.png)
 
 Jeder der beginnt Stickdateien zu erstellen wird schnell auf das Thema der Pfadoptimisierung stoßen.
-
 Wie vermeide ich Sprungstiche, in welcher Reihenfolge ordne ich die einzelnen Elemente an, etc.
 
 Welche Optionen bietet Ink/Stitch für die Pfadoptimisierung? Lasst es uns gemeinsam ausprobieren!
