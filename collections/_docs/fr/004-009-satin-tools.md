@@ -75,7 +75,7 @@ Il est aussi possible de faire la même opération à partir du paramètrage.
 * Sélectionnez une ou plusieurs colonnes satin
 * Lancez `Extensions > Ink/Stitch  > Outils Satin > Intervertir les rails satin`
 
-## Trait en Effet de Chemin Satin 
+## Trait en Effet de Chemin Satin {#stroke-to-live-path-effect-satin}
 
 Converti une ligne en colonne satin, en utilisant un Effet de Chemin. Cela rend le satin plus adaptable en forme et en largeur qu'une conversion en colonne satin normale. La ligne reste une ligne, mais un effet de chemin lui est appliqué. Si vous utilisez l'éditeur de noeud, vous pourrez agir sur les noeuds de la ligne, même après application de l'effet.
 
