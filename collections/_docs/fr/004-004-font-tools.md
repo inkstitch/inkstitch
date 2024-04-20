@@ -9,7 +9,7 @@ Un ensemble d'outils adaptés aux créateurs de polices ou à ceux qui souhaiten
 Lisez le [Tutoriel de création de police pour Ink/Stitch](/fr/tutorials/font-creation) pour des instructions approfondies.
 {: .notice--info }
 
-## Forcer des points d'arrêt
+## Forcer des points d'arrêt {#force-lock-stitches}
 
 Les petites fontes se défont parfois si les fils sont coupés après la broderie. 
 
@@ -21,19 +21,18 @@ Pour la même raison, lorsque les lettres sont détachées, il peut être utile 
 
 ### Usage
 
-* Run `Extensions > Ink/Stitch > Font Management > Force lock stitches...`
-* Update settings according to the font
-* Click on apply
+* Lancer  `Extensions > Ink/Stitch > Gestion des polices  > Forcer des points d'arrêt...`
+* Choisir les paramètres en fonction de la fonte
+* Cliquer sur appliquer
 
 ### Options
-
+ {% include upcoming_release.html %}
 * Mininum distance (mm)
 * Maximum distance (mm)
-* Restrict to satin
-  {% include upcoming_release.html %}
-* Add force lock stitches attribute to the last element of each glyph
+* Restreindre au satin
+* Ajouter l'attribut "forcer les points d'arrêts" au dernier élément de chaque glyphe
 
-## Répertoire personnalisé de polices 
+## Répertoire personnalisé de polices {#custom-font-directory}
 
 Cette extension vous permet de définir un répertoire dans votre système de fichiers dans lequel vous souhaitez stocker les polices supplémentaires pour l'outil de lettrage.
 
