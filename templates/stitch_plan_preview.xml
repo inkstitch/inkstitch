@@ -16,6 +16,15 @@
         <option value="hidden">Hidden</option>
         <option value="lower_opacity">Lower opacity</option>
     </param>
+    <param name="render-mode" type="optiongroup" appearance="combo" gui-text="Render Mode"
+        gui-description="The numbers by the realistic modes indicate the resolution which the realistic mode will be rendered to.">
+        <option value="simple">Simple</option>
+        <option value="realistic-2">Realistic x2</option>
+        <option value="realistic-4">Realistic x4</option>
+        <option value="realistic-8">Realistic x8</option>
+        <option value="realistic-16">Realistic x16</option>
+        <option value="realistic-vector">Realistic Vector (slow)</option>
+    </param>
     <spacer />
     <separator />
     <spacer />
@@ -24,7 +33,6 @@
     <param name="insensitive" type="boolean" gui-text="Lock"
            gui-description="Make stitch plan insensitive to mouse interactions">false</param>
     <param name="visual-commands" type="boolean" gui-text="Display command symbols">false</param>
-    <param name="realistic" type="boolean" gui-text="Realistic rendering">false</param>
     <spacer />
     <separator />
     <spacer />

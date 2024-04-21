@@ -5,8 +5,10 @@
 
 from tempfile import TemporaryDirectory
 from base64 import b64encode
+from typing import Optional, Tuple
+import sys
 
-from inkex import Boolean, BoundingBox, Image
+from inkex import errormsg, Boolean, BoundingBox, Image, BaseElement
 from inkex.command import take_snapshot
 
 from ..marker import set_marker
@@ -27,9 +29,11 @@ class StitchPlanPreview(InkstitchExtension):
         self.arg_parser.add_argument("-i", "--insensitive", type=Boolean, default=False, dest="insensitive")
         self.arg_parser.add_argument("-c", "--visual-commands", type=Boolean, default="symbols", dest="visual_commands")
         self.arg_parser.add_argument("-o", "--overwrite", type=Boolean, default=True, dest="overwrite")
-        self.arg_parser.add_argument("-r", "--realistic", type=Boolean, default=True, dest="realistic")
+        self.arg_parser.add_argument("-m", "--render-mode", type=str, default="simple", dest="mode")
 
     def effect(self):
+        realistic, raster_mult = self.parse_mode()
+
         # delete old stitch plan
         self.remove_old()
 
@@ -38,29 +42,15 @@ class StitchPlanPreview(InkstitchExtension):
             return
 
         svg = self.document.getroot()
-        realistic = self.options.realistic
         visual_commands = self.options.visual_commands
         self.metadata = self.get_inkstitch_metadata()
         collapse_len = self.metadata['collapse_len_mm']
         min_stitch_len = self.metadata['min_stitch_len_mm']
         stitch_groups = self.elements_to_stitch_groups(self.elements)
         stitch_plan = stitch_groups_to_stitch_plan(stitch_groups, collapse_len=collapse_len, min_stitch_len=min_stitch_len)
-        layer = render_stitch_plan(svg, stitch_plan, realistic, visual_commands)
 
-        if (realistic):
-            with TemporaryDirectory() as tempdir:
-                bbox: BoundingBox = layer.bounding_box()
-                rasterized_file = take_snapshot(svg, tempdir, dpi=96*8,
-                                                export_id=layer.get_id(), export_id_only=True)
-                with open(rasterized_file, "rb") as f:
-                    image = Image(attrib={
-                        XLINK_HREF: f"data:image/png;base64,{b64encode(f.read()).decode()}",
-                        "x": str(bbox.left),
-                        "y": str(bbox.top),
-                        "height": str(bbox.height),
-                        "width":  str(bbox.width),
-                    })
-                    layer.replace_with(image)
+        layer = render_stitch_plan(svg, stitch_plan, realistic, visual_commands)
+        layer = self.rasterize(svg, layer, raster_mult)
 
         # update layer visibility (unchanged, hidden, lower opacity)
         groups = self.document.getroot().findall(SVG_GROUP_TAG)
@@ -71,6 +61,31 @@ class StitchPlanPreview(InkstitchExtension):
         self.translate(svg, layer)
         self.set_needle_points(layer)
 
+    def parse_mode(self) -> Tuple[bool, Optional[int]]:
+        """
+        Parse the "mode" option and return a tuple of a bool indicating if realistic rendering should be used,
+        and an optional int indicating the resolution multiplier to use for rasterization, or None if rasterization should not be used.
+        """
+        realistic = False
+        raster_mult: Optional[int] = None
+        render_mode = self.options.mode
+        if render_mode == "simple":
+            pass
+        elif render_mode.startswith("realistic-"):
+            realistic = True
+            raster_option = render_mode.split('-')[1]
+            if raster_option != "vector":
+                try:
+                    raster_mult = int(raster_option)
+                except ValueError:
+                    errormsg(f"Invalid raster mode {raster_option}")
+                    sys.exit(1)
+        else:
+            errormsg(f"Invalid render mode {render_mode}")
+            sys.exit(1)
+
+        return (realistic, raster_mult)
+
     def remove_old(self):
         svg = self.document.getroot()
         if self.options.overwrite:
@@ -80,6 +95,26 @@ class StitchPlanPreview(InkstitchExtension):
             layer = svg.find(".//*[@id='__inkstitch_stitch_plan__']")
             if layer is not None:
                 layer.set('id', svg.get_unique_id('inkstitch_stitch_plan_'))
+
+    def rasterize(self, svg, layer: BaseElement, raster_mult: Optional[int]) -> BaseElement:
+        if raster_mult is None:
+            # Don't rasterize if there's no reason to.
+            return layer
+        else:
+            with TemporaryDirectory() as tempdir:
+                bbox: BoundingBox = layer.bounding_box()
+                rasterized_file = take_snapshot(svg, tempdir, dpi=96*raster_mult,
+                                                export_id=layer.get_id(), export_id_only=True)
+                with open(rasterized_file, "rb") as f:
+                    image = Image(attrib={
+                        XLINK_HREF: f"data:image/png;base64,{b64encode(f.read()).decode()}",
+                        "x": str(bbox.left),
+                        "y": str(bbox.top),
+                        "height": str(bbox.height),
+                        "width":  str(bbox.width),
+                    })
+                    layer.replace_with(image)
+                    return image
 
     def set_invisible_layers_attribute(self, groups, layer):
         invisible_layers = []
