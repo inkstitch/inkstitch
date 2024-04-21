@@ -122,6 +122,9 @@ class ControlPanel(wx.Panel):
         self.btnColorChange.SetToolTip(_('Show color changes'))
         self.btnColorChange.SetBitmap(self.load_icon('color_change'))
         self.btnColorChange.Bind(wx.EVT_TOGGLEBUTTON, lambda event: self.on_marker_button('color_change', event))
+        self.btnBackgroundColor = wx.ColourPickerCtrl(self, colour=wx.Colour('white'), size=self.btnJump.GetSize())
+        self.btnBackgroundColor.SetToolTip(_("Change background color"))
+        self.btnBackgroundColor.Bind(wx.EVT_COLOURPICKER_CHANGED, self.on_update_background_color)
         if self.detach_callback:
             self.btnDetachSimulator = wx.BitmapButton(self, -1, style=self.button_style)
             self.btnDetachSimulator.SetToolTip(_('Detach/attach simulator window'))
@@ -156,6 +159,7 @@ class ControlPanel(wx.Panel):
         self.show_inner_sizer.Add(self.btnTrim, 0, wx.ALL, 2)
         self.show_inner_sizer.Add(self.btnStop, 0, wx.ALL, 2)
         self.show_inner_sizer.Add(self.btnColorChange, 0, wx.ALL, 2)
+        self.show_inner_sizer.Add(self.btnBackgroundColor, 0, wx.ALL, 2)
         if self.detach_callback:
             self.show_inner_sizer.Add(self.btnDetachSimulator, 0, wx.ALL, 2)
         self.show_sizer.Add((1, 1), 1)
@@ -288,6 +292,9 @@ class ControlPanel(wx.Panel):
 
     def on_marker_button(self, marker_type, event):
         self.slider.enable_marker_list(marker_type, event.GetEventObject().GetValue())
+
+    def on_update_background_color(self, event):
+        self.drawing_panel.SetBackgroundColour(event.Colour)
 
     def choose_speed(self):
         if self.target_duration:
