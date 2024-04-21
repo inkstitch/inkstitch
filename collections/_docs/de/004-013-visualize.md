@@ -85,10 +85,11 @@ Zeigt Punkte in frei wählbaren Farben (Standart: rot, gelb, grün) über dem De
 
 {% include upcoming_release.html %}
 
-Fügt eine Ebene mit Nummern für die Stickreihenfolge der ausgewählten Elemente hinzu.
+Diese Erweiterung fügt nummerierte Beschriftungen für ausgewählte Elemente in das Dokument ein, um die Stichreihenfolge zu visualisieren.
 
 * Öffne `Erweiterungen > Ink/Stitch > Visualisieren und Exportieren > Stickreihenfolge anzeigen...`
-* Wähle die Schriftgröße und klicke auf "Anwenden".
+* Wähle die Schriftgröße
+* Klicke auf "Anwenden".
 
 ![Display stacking order](/assets/images/docs/stacking_order.png)
 

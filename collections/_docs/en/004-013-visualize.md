@@ -85,9 +85,11 @@ This will display red, yellow and green dots on top of your elements so you can 
 
 {% include upcoming_release.html %}
 
-Run `Extensions > Ink/Stitch > Visualize and Export > Display stacking order...`.
+This extension inserts numbered labels for selected elements into the document to visualize the stitch order.
 
-Chose the font size and then apply  to create a new layer with one text label per embroidery object , numbering them in the embroidery order.
+* Run `Extensions > Ink/Stitch > Visualize and Export > Display stacking order...`.
+* Choose font size
+* Click on apply
 
 ![Display stacking order](/assets/images/docs/stacking_order.png)
 

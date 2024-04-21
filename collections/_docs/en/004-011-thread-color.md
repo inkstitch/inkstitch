@@ -1,14 +1,30 @@
 ---
 title: "Thread Color Management"
 permalink: /docs/thread-color/
-last_modified_at: 2024-03-11
+last_modified_at: 2024-04-21
 toc: true
 ---
+### Apply Palette
+
+{% include upcoming_release.html %}
+
+This extension applies nearest colors from a specified thread palette on a design. This will also be recognized by the Ink/Stitch embroidery file and pdf output.
+
+* Run `Extensions > Ink/Stitch > Thread Color Management > Apply Palette`
+* Select the color palette you wish to apply
+* Click on Apply
+
 ## Apply Threadlist
 
 Ink/Stitch can apply a threadlist to an embroidery design. This is especially useful, if you want to work on existing embroidery files which do not support color information (e.g. DST).
 
 It could also be helpful, if you are wanting to test different color settings. You can export and import them as you like. But be careful not to change the amount and order of colors. In case you are planing to change these, you'd prefer to save the entire SVG instead.
+
+* Run `Extensions > Ink/Stitch > Thread Color Management > Apply Threadlist`
+* Choose a file with the thread color information to match the elements in the current document
+* Define wether the color infomration file has been generated with Ink/Stitch or otherwise.
+  If otherwise: Select the Ink/Stitch color palette to match colors to.
+* Click on Apply
 
 ### Import
 

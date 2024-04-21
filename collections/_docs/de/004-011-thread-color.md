@@ -4,13 +4,30 @@ permalink: /de/docs/thread-color/
 last_modified_at: 2024-03-13
 toc: true
 ---
+### Apply Palette
+
+{% include upcoming_release.html %}
+
+This extension applies nearest colors from a specified thread palette on a design. This will also be recognized by the Ink/Stitch embroidery file and pdf output.
+
+* Run `Extensions > Ink/Stitch > Thread Color Management > Apply Palette`
+* Select the color palette you wish to apply
+* Click on Apply
+
 ## Garnfarben-Liste anwenden
 
 Ink/Stitch kann Garnlisten auf ein Design anwenden. Das ist besonders dann nützlich, wenn du mit bestehenden Stickdateien arbeitest, die keine Farbinformationen speichern (z.B. DST).
 
 Außerdem könnte diese Funktion dazu dienen, verschiedene Farbvariationen auszuprobieren. Du kannst Garnlisten importieren und exportieren wie es dir gefällt. Wichtig ist nur, dass sich die Stickreihenfolge- und anzahl der Objekte nicht ändert. In einem solchen Fall solltest du auf das Speichern der kompletten SVG-Datei zurückgreifen (das ist auch sonst nie eine schlechte Idee).
 
+* Run `Extensions > Ink/Stitch > Thread Color Management > Apply Threadlist`
+* Choose a file with the thread color information to match the elements in the current document
+* Define wether the color infomration file has been generated with Ink/Stitch or otherwise.
+  If otherwise: Select the Ink/Stitch color palette to match colors to.
+* Click on Apply
+
 ### Importieren
+
 Öffne `Erweiterungen > Ink/Stitch > Garnliste importieren ...` um eine von Ink/Stitch erstellte Garnliste zu importieren.
 
 Willst du eine andere Garnliste aus einer Textdatei (txt) importieren, wähle die Option "Andere Garnliste importieren" und wähle aus der Auswahlliste eine Garnpalette aus bevor du auf "Anweden" klickst.

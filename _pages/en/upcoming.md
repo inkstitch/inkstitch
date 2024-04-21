@@ -1,22 +1,24 @@
 ---
 title: "New Features, Updates and Fixes for the upcoming Ink/Stitch version (3.1.0)"
 permalink: /upcoming/
-last_modified_at: 2024-03-30
+last_modified_at: 2024-04-21
 sidebar:
   nav: pages
 toc: true
 ---
 ## New Extensions
 
-### Apply Palette
+### [Apply Palette](/docs/thread-color/#apply-palette)
 
 `Thread Color Management > Apply Palette` ([#2738](https://github.com/inkstitch/inkstitch/pull/2738))
 
-This extension applies nearest colors from a specified thread palette on a design. This will also be recognized by the Ink/Stitch pdf output.
+This extension applies nearest colors from a specified thread palette on a design. This will also be recognized by the Ink/Stitch embroidery file and pdf output.
 
 ### [Display Stacking order](/docs/visualize/#display-stacking-order)
 
 `Visualize and Export > Display Stacking order` ([#2656](https://github.com/inkstitch/inkstitch/issues/2656))
+
+This extension inserts numbered labels for selected elements into the document to visualize the stitch order.
 
 ![Display stacking order](/assets/images/docs/stacking_order.png)
 
@@ -49,6 +51,12 @@ This extension helps reconstruct an original object from a stitch file.
 `Fill tools > Tartan` ([#2782](https://github.com/inkstitch/inkstitch/issues/2782))
 
 This extension generates the tartan stripes and applies them to the document either as svg elements or as tartan fill params
+
+### [Unlink Clone](/docs/edit/#unlink-clone)
+
+`Edit > Unlink Clone ...`
+
+This extension unlinks clones (optionally recursive) and applies fill angle transformations
 
 
 ## Extension Updates
@@ -134,7 +142,7 @@ This extension generates the tartan stripes and applies them to the document eit
 
 ### New fonts
 
-* Chicken Little ([#2839](https://github.com/inkstitch/inkstitch/pull/2839))
+* Chicken Little (KOR) ([#2839](https://github.com/inkstitch/inkstitch/pull/2839))
 * Chicken Scratch ([#2703](https://github.com/inkstitch/inkstitch/pull/2703))
 * Millimarif-bold20 ([#2780](https://github.com/inkstitch/inkstitch/pull/2780))
 * Violin Serif ([#2703](https://github.com/inkstitch/inkstitch/pull/2703))
@@ -147,6 +155,8 @@ This extension generates the tartan stripes and applies them to the document eit
 
 All fonts have been reworked to be more stable when transformed.
 
+ [#2833](https://github.com/inkstitch/inkstitch/pull/2833)
+ [#2812](https://github.com/inkstitch/inkstitch/pull/2812)
  [#2807](https://github.com/inkstitch/inkstitch/pull/2807)
  [#2803](https://github.com/inkstitch/inkstitch/pull/2803)
  [#2802](https://github.com/inkstitch/inkstitch/pull/2802)
@@ -204,6 +214,7 @@ All fonts have been reworked to be more stable when transformed.
 
 * Add stagger option for split stitches ([#2431](https://github.com/inkstitch/inkstitch/issues/2431))
   ![Staggered split stitch example](/assets/images/docs/split-satin-detail.png)
+* Add stitch tolerance to satin underlays ([#2814](https://github.com/inkstitch/inkstitch/issues/2431))
 * Convert line to satin: do not split into several parts ([#2418](https://github.com/inkstitch/inkstitch/issues/2418))
   ![Converted square](/assets/images/docs/convert-to-satin-update.png)
 * S-Stitch: a new stitch type for the satin stitch type family ([#2431](https://github.com/inkstitch/inkstitch/issues/2431))
@@ -213,8 +224,9 @@ All fonts have been reworked to be more stable when transformed.
 
 ### Clones
 
-* Improved angle detection for fill clones ([#2766](https://github.com/inkstitch/inkstitch/issues/2766))
-* Add ability to render clones of groups ([#2766](https://github.com/inkstitch/inkstitch/issues/2766))
+* Improved angle detection for fill clones ([#2766](https://github.com/inkstitch/inkstitch/issues/2766), ([#2834](https://github.com/inkstitch/inkstitch/issues/2834))
+* Add ability to render clones of groups ([#2766](https://github.com/inkstitch/inkstitch/issues/2766), ([#2834](https://github.com/inkstitch/inkstitch/issues/2834))
+* Improved style detection (([#2834](https://github.com/inkstitch/inkstitch/issues/2834))
 
 
 ## Export
@@ -244,7 +256,9 @@ All fonts have been reworked to be more stable when transformed.
 
 ## Bug Fixes
 
-* [#2754](https://github.com/inkstitch/inkstitch/issues/2754)  Fix lettering along path when glyphs have subgroups or trims
+* [#2819](https://github.com/inkstitch/inkstitch/issues/2819) Fix cleanup extension
+* [#2818](https://github.com/inkstitch/inkstitch/issues/2818) Remove empty d error
+* [#2754](https://github.com/inkstitch/inkstitch/issues/2754) Fix lettering along path when glyphs have subgroups or trims
 * [#2683](https://github.com/inkstitch/inkstitch/issues/2683) Select embroidery elements: output error message when python path cannot be found
 * [#2675](https://github.com/inkstitch/inkstitch/issues/2675) Fix error message on fill to stroke if small fill artifacts are present
 * [#2674](https://github.com/inkstitch/inkstitch/issues/2674) Zip: fix error message when no file format is selected
