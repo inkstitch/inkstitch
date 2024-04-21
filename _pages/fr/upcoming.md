@@ -86,7 +86,7 @@ Cette extension génère les bandes du tartan et les applique au document soit e
     * Longueur minimum
     * Longueur maximum
     * Connecter seulement dans le même groupe ou le même calque
-    * Ne pas connecter après ue commande de coupe ou d'arrêt ou des points d'arrêts forcés. 
+    * Ne pas connecter après une commande de coupe ou d'arrêt ou des points d'arrêts forcés. 
     * Combiner les nouveaux chemins avec le chemin précédent ou suivant
     * Combiner les sous-chemins ([#2750](https://github.com/inkstitch/inkstitch/pull/2750))
 
@@ -105,7 +105,7 @@ Cette extension génère les bandes du tartan et les applique au document soit e
 
 `Résolution de problèmes  > Supprimer tous les paramètres de broderie`
 
-* ajout d'une optio pour supprimer seulement certaines commandes ([#2494](https://github.com/inkstitch/inkstitch/issues/2494))
+* ajout d'une option pour supprimer seulement certaines commandes ([#2494](https://github.com/inkstitch/inkstitch/issues/2494))
 
 ### [Sélectionner des éléments de broderie](/fr/docs/edit/#select-embroidery-elements)
 
@@ -124,7 +124,7 @@ Cette extension génère les bandes du tartan et les applique au document soit e
 `Résolution de problème > Dépistage de problèmes avec des objets `
 
 * ajout d'un signal de présence de colonnes satin avec deux rails et exactement deux traverses (car cela peut conduite a une mauvaise interprétation de la colonne par Ink/Stitch) ([#2734](https://github.com/inkstitch/inkstitch/pull/2734))
-* ajout d'un signal de présence de colonnes satin sans aucune traverse[#2791](https://github.com/inkstitch/inkstitch/pull/2791))
+* ajout d'un signal de présence de colonnes satin sans aucune traverse ([#2791](https://github.com/inkstitch/inkstitch/pull/2791))
 * ajout d'un signal de présence d'éléments de broderie comportant à la fois une couleur de trait et une couleur de fond ([#2761](https://github.com/inkstitch/inkstitch/pull/2761))
 
 
@@ -140,6 +140,7 @@ Cette extension génère les bandes du tartan et les applique au document soit e
 ### Mises à jour de fontes
 
 * La plupart des fontes comportent maintenant les glyphes: éèêëÉÈÊËÜÄÖäöüß
+  
   Les exceptions sont April en Fleur, Apex Lake, les Cherry's, les Emilio , Fold Inkstitch, Infinipicto, Namskout and Sortefax qui ne contiennent  que des glyphes sans diacritiques
 * Ũ à  été ajouté  dans TT directors
 
