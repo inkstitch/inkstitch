@@ -44,6 +44,14 @@ Cette extension permet de reconstruire un objet original à partir d'un fichier 
 
 ![Remplissage en contour](/assets/images/docs/outline.png)
 
+### [Unlink Clone](/fr/docs/edit#unlink-clone)
+
+Edition > Délier le clone ...
+
+Cette extension délie les clones (récursivement en option) et applique les transformations sur l'angle de remplissage
+
+
+
 
 ### [Tartan](/fr/docs/fill-tools/#tartan)
 
@@ -200,6 +208,7 @@ Toutes les fontes ont été retravaillées pour être plus stable si déformées
 
 * Ajout de l'option "Décalés" pour le découpage des points ([#2431](https://github.com/inkstitch/inkstitch/issues/2431))
   ![Staggered split stitch example](/assets/images/docs/split-satin-detail.png)
+* Ajout du paramètre tolerance aux sous couches satin ([#2814](https://github.com/inkstitch/inkstitch/issues/2431))
 * Convertion Trait en Satin  : évite le découpage en plusieurs parties ([#2418](https://github.com/inkstitch/inkstitch/issues/2418))
   ![Converted square](/assets/images/docs/convert-to-satin-update.png)
 *  S-Stitch: un nouveau style de points pour cette famille ([#2431](https://github.com/inkstitch/inkstitch/issues/2431))
@@ -211,8 +220,8 @@ Toutes les fontes ont été retravaillées pour être plus stable si déformées
 
 * Meilleur détection de l'angle pour les clones de remplissage([#2766](https://github.com/inkstitch/inkstitch/issues/2766))
 * Ajout de la capacité de rendu de clones de groupes([#2766](https://github.com/inkstitch/inkstitch/issues/2766))
-
-
+* Meilleure détection du style (([#2834](https://github.com/inkstitch/inkstitch/issues/2834))
+  
 ## Export
 
 ### Export
@@ -239,7 +248,8 @@ Toutes les fontes ont été retravaillées pour être plus stable si déformées
 
 
 ## Corrections de bug
-
+* [#2819](https://github.com/inkstitch/inkstitch/issues/2819) Corrige l'extension nettoyage
+* [#2818](https://github.com/inkstitch/inkstitch/issues/2818) Supprime l'erreur empty d 
 * [#2754](https://github.com/inkstitch/inkstitch/issues/2754)  Corrige Lettrage le long d'un chemin lorsque les glyphes comportent des sous groupes ou  des commandes de coupe.
 * [#2683](https://github.com/inkstitch/inkstitch/issues/2683) Sélectionner des éléments de broderie : message d'erreur  lorsque le chemin python ne peut pas être trouvé.
 * [#2675](https://github.com/inkstitch/inkstitch/issues/2675) Corrige le message d'erreur de "Remplissage en Trait"  en présence  de très  petis  remplissages
