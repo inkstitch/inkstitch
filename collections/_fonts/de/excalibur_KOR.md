@@ -30,9 +30,9 @@ Sie kann bis auf 140% (~28mm, 1 Zoll) hochskaliert werden, und bis zu 80% (~16mm
 
 {% include upcoming_release.html %} 
 
-Excalibur Small ist eine Variante dieser Schriftart mit unterschiedlichen Stickeinstellungen. Zugausgleich, Dichte und Unterlage sind unterschiedlich, um eine Skalierung zwischen 55% (12 mm, 0.4 Zoll) und 25% (5mm, 1/5 Zoll) zu ermöglichen.
+Excalibur Small ist eine Variante dieser Schriftart mit unterschiedlichen Stickeinstellungen. Zugausgleich, Dichte und Unterlage sind unterschiedlich, um eine Skalierung zwischen 50% (10 mm, 0.4 Zoll) und 25% (5mm, 1/5 Zoll) zu ermöglichen.
 
-Deshalb müssen Sie im Dialogfenster des Text-Moduls für die Nutzung von Excalibur Small  eine Skalierung zwischen 25 und 55% wählen.
+Deshalb müssen Sie im Dialogfenster des Text-Moduls für die Nutzung von Excalibur Small  eine Skalierung zwischen 25 und 50% wählen.
 
 Im Gegensatz zu Excalibur KOR **MUSS** diese verkleinerte Schrift mit einem dünneren Faden und einer dünneren Nadel als üblich gestickt werden. Es **MUSS** eine Nadel der Größe 8 (USA), 60(EUR) und ein Garn 60WT verwendet werden.
 
