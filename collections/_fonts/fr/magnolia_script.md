@@ -14,11 +14,11 @@ preview_image:
 
 <img 
      src="/assets/images/fonts/magnolia_small.jpg"
-     alt="Emilio20" height="50">
+     alt="Magnolia_small" height="50">
 
 <img 
      src="/assets/images/fonts/magnolia_KOR.jpg"
-     alt="Emilio20" height="100">     
+     alt="Magnolia" height="100">     
      
 
 ## Glyphes
