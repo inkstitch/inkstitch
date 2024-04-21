@@ -282,13 +282,16 @@ class PrintInfoFrame(wx.Frame):
         panel = wx.Panel(self)
         sizer = wx.BoxSizer(wx.VERTICAL)
 
-        message = _("A print preview has been opened in your web browser.  "
-                    "This window will stay open in order to communicate with the JavaScript code running in your browser.\n\n"
-                    "This window will close after you close the print preview in your browser, or you can close it manually if necessary.")
-        text = wx.StaticText(panel, label=message)
+        self.message = _(
+            "A print preview has been opened in your web browser.  "
+            "This window will stay open in order to communicate with the JavaScript code running in your browser.\n\n"
+            "This window will close after you close the print preview in your browser, or you can close it manually if necessary."
+        )
+        self.text = wx.StaticText(panel, label=self.message)
         font = wx.Font(14, wx.DEFAULT, wx.NORMAL, wx.NORMAL)
-        text.SetFont(font)
-        sizer.Add(text, proportion=1, flag=wx.ALL | wx.EXPAND, border=20)
+        self.text.SetFont(font)
+        self.Bind(wx.EVT_SIZE, self.resize)
+        sizer.Add(self.text, proportion=1, flag=wx.ALL | wx.EXPAND, border=20)
 
         stop_button = wx.Button(panel, id=wx.ID_CLOSE)
         stop_button.Bind(wx.EVT_BUTTON, self.close_button_clicked)
@@ -299,6 +302,11 @@ class PrintInfoFrame(wx.Frame):
 
         self.timer = wx.PyTimer(self.__watcher)
         self.timer.Start(250)
+
+    def resize(self, event=None):
+        self.text.SetLabel(self.message)
+        self.text.Wrap(self.GetSize().width - 35)
+        self.Layout()
 
     def close_button_clicked(self, event):
         self.print_server.stop()
