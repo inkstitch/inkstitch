@@ -8,7 +8,7 @@ preview_image:
     height: 20
 
 ---
-{%- assign font = site.data.fonts.milli-marif_bold.font -%}
+{%- assign font = site.data.fonts.milli_marif_bold.font -%}
 
 ![Milli_Marif](/assets/images/fonts/milli_marif.jpg)
 
