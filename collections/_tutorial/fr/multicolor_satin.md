@@ -242,8 +242,7 @@ si  l'on souhaite   plutôt réserver 20% à chacune des parties monochromes et 
 ![tricolore](/assets/images/tutorials/multicolor_satin/tricolore.png)
 
 
-
-  ### Pour quatre couleurs 
+### Pour quatre couleurs 
 Avec les mêmes notations on aura cette fois 
 
  C1+C1!2+C2+C2!3+C3+C3!4+C4 =100 
