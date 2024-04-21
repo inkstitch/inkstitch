@@ -14,17 +14,17 @@ user-level:
 toc : true
 ---
 
-# Simulate a multi-colored satin column.
+# Multi-colored satin column Simulation
 
-We are talking about simulation here, because it is not a single multicolored satin column, but a similar effect obtained by
-using several overlapping copies of the same satin column, simply using different random parameters.
+We are talking simulation here, because it is not a single multicolored satin column, but a similar effect obtained by
+using several superimposed copies of the same satin column, simply using different random parameters.
 
-## Let's start with the bicolor satin
+## Let's start with a bicolor satin
 Let's come back to the "random" parameters of the satin columns.
 
 ### Random percentage of satin width  increase
 The "Random percentage of satin width  increase" parameter is a so-called asymmetric parameter because it is possible to apply it differently on the two rails. 
-This  parameter accepts either a sigle value, in which case it is applied to each of the two rails; but also  two space separeted values, in which case the first is applied to the first rail, the second to the second rail.
+This  parameter accepts either a single value, in which case it is applied to each of the two rails; but also  two space separeted values, in which case the first is applied to the first rail, the second to the second rail.
 
 ![random increase_different_seeds](/assets/images/tutorials/multicolor_satin/random_increase_different_seeds.png)
 
@@ -163,4 +163,117 @@ Green satin:
 
 Download [the snake file](/assets/images/tutorials/multicolor_satin/serpent.svg){: download="serpent.svg" }
 
+## We can play with many more than just two colors:
+## For three colors
+Assuming that we want to distribute 100% of the width from left to right in
+* The first C1 percent in color 1 exclusively
+* The following C1!2 percent shared between Color 1 and Color 2
+* The following C2 percent in color 2 exclusively
+* The following C2!3 percent shared between Color 2 and Color 3
+* The last C3 percent exclusively for Color 3
 
+**For a result that perfectly fills the column without any overflow, you must ensure that C1+C1!2+C2+C2!3+C3 = 100**
+
+
+  
+|Parameter |Color 1 |Color 2 |Color 3 |
+| --- | --- |--- |--- |
+| Pull Compensation Percentage | 0 -(C1!2+C2+C2!3+C3)| -(C2!3+C3) -(C1+C1!2)|-(C1+C1!2+C2+C2!3) 0|
+| Swap Rails| no | yes |no|
+| Random satin width increase| 0 C1!2| C2!3 0|0|
+| Random satin width decrease|  0 | 0 -C1!2|-C2!3 0|
+| Random Seed| identical | identical |identical|
+
+
+So if we want a division into blue, white, red with no monochrome zone, C1,C2 and C3 will be equal to 0 and C1!2=C2!3=50 and the table becomes:
+
+|Parameter |Blue |White |Red |
+| --- | --- |--- |--- |
+| Pull Compensation Percentage | 0 -100| -50 -50|-100 0|
+| Swap Rails| no | yes |no|
+| Random satin width increase| 0 50| 50 0|0|
+| Random satin width decrease| 0 | 0 -50|-50 0|
+| Random Seed| identical | identical |identical|
+
+if we rather wish to reserve 20% for each of the monochrome parts and share the rest equitably, we choose C1=C2=C3=20, there is 40% remaining so C1!2=C2!3=20 and the table becomes:
+
+|Parameter |Blue |White |Red |
+| --- | --- |--- |--- |
+| Pull Compensation Percentage | 0 -80| -40 -40|-80 0|
+| Swap Rails| no | yes |no|
+| Random satin width increase| 0 20| 20 0|0|
+| Random satin width decrease| 0 | 0 -20|-20 0|
+| Random Seed| identical | identical |identical|
+
+![tricolore](/assets/images/tutorials/multicolor_satin/tricolore.png)
+
+## For four colors
+With the same notations we will have this time
+
+ C1+C1!2+C2+C2!3+C3+C3!4+C4 =100
+  
+|Parameter |Color 1 |Color 2 |Color 3 |Color 4 |
+| --- | --- |--- |--- |--- |
+|Pull Compensation Percentage | 0 </br>C1-100| -(C2!3+C3+C3!4+C4) </br> -(C1+C1!2)|-(C1+C1!2+C2+C2!3) </br>-(C3!4 +C4)| 0</br>C4-100|
+| Swap Rails| no | yes |no|yes|
+| Random satin width increase| 0 C1!2| C2!3 0|0 C3!4|0|
+| Random satin width drecrease| 0 | 0 -C1!2|-C2!3 0| 0 -C3!4|
+| Random Seed| identical | identical |identical|identical |
+
+All compensation values ​​are negative, all increases are positive, all decreases are negative.
+
+This time, if we do not want a monochromous zone and wish an equal sharing of the rest, C1=C2=C3=C4=0 and C1!2=C2!3=C3!4=33.3.
+
+If we rather wish to reserve 15% for each of the monochrome parts and share the rest equitably, we choose C1=C2=C3=C4=5, there is 40% remaining so C1!2=C2!3=C3!4=13.3
+
+![tricolor](/assets/images/tutorials/multicolor_satin/quadricolor.png)
+
+
+**Note** For quality embroidery, you must also add pull compensation to... compensate for... the pull! Embroidered as is the colors will not look quite joined together, as the stitches distort the embroidery. The easiest way is to add a little bit of pull compensation in mm.
+{: .notice--info }
+
+## For any number of colors
+
+To se N colors, choose positive or zero values ​​for the N monochrome parts C1,C2,.....CN and the N-1 two-color parts C1!2, C2!3, ....CN-1!N. The sum of the 2N-1 values ​​must be 100.
+
+Prepare a table with N columns
+  
+In the i-th column 
+
+**If i is odd**
+
+|Parameter |Color I|
+| --- | --- |
+| Pull Compensation Percentage | C1+C1!C2+C2+C2!C3+.....C(I-1)!I CI!C(I+1)+C(I+1)+C(I+1)!(I+ 2)+.....CN|
+| Swap Rails| no |
+| Random satin width increase| 0 CI!(I+1)|
+| Random satin width decrease| -C(I-1)!I 0|
+| Random Seed| always_the_same_thing |
+
+The pull compensation percentage  first value is the sum of the widths  for everything before color I, and the second value is the sum of the widths for everything after color I.
+
+**If i is even**
+
+we check Swap rails, and we invert the two  values ​​in each asymetrical parameter.
+
+|Parameter |Color I|
+| --- | --- |
+| Pull Compensation Percentage | CI!C(I+1)+C(I+1)+C(I+1)!(I+2)+.....CN C1+C1!C2+C2+C2!C3+.... .C(I-1)!I |
+| Swap Rails| yes|
+| Random satin width increase| CI!(I+1) 0|
+| Random satin width decrease| 0 -C(I-1)!I |
+| Random Seed| always_the_same_thing |
+
+
+
+
+
+* For the first column C(-1) is equal to 0 if we do not want overflow, we can give it a positive value, if we want the first color to overflow to the left.
+* Likewise for the last column C(N+1) will be taken equal to 0 if we do not want the last color to overflow the shape.
+
+And here you havea rainbow.....
+
+For this example, the first and last color overflow
+![ArcEnCiel](/assets/images/tutorials/multicolor_satin/arcenciel.svg)
+
+Download [the rainbow file](/assets/images/tutorials/multicolor_satin/arcenciel.svg){: download="arcenciel.svg" }
