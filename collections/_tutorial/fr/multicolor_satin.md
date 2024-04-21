@@ -190,9 +190,8 @@ Satin vert:
 * Graine aléatoire 7 (où ce que vous avez saisi pour l'autre colonne)
 
 
-**Important** Si ça n'a pas l'air de marcher , vérifiez que  
-* les rails de la colonne satin sont bien tous les deux dans la même direction, et non pas corrigés automatiquement. 
-* les points courts ne sont pas déclenchés 
+
+**Important** Si ça n'a pas l'air de marcher , vérifiez que  les rails de la colonne satin sont bien tous les deux dans la même direction, et non pas corrigés automatiquement. Vérifiez  aussi que les points courts ne sont pas déclenchés .
 {: .notice--info }
 
 ![solution](/assets/images/tutorials/multicolor_satin/solution.png)
