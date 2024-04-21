@@ -4,6 +4,8 @@ permalink: /fr/fonts/emilio-20/
 last_modified_at: 2023-04-25
 toc: false
 preview_image:
+ - url: /assets/images/fonts/emilio_20_simple_small.jpg
+   height: 42
  - url: /assets/images/fonts/emilio_simple.png
    height: 42
  - url: /assets/images/fonts/emilio_20_bold.png
@@ -17,6 +19,10 @@ preview_image:
 ---
 {%- assign font = site.data.fonts.emilio_20.font -%}
 
+<img 
+     src="/assets/images/fonts/emilio_20_simple_small.jpg"
+     alt="Emilio20" height="8">
+     
 <img 
      src="/assets/images/fonts/emilio_simple.png"
      alt="Emilio20" height="21">
@@ -74,6 +80,17 @@ Elle peut être agrandie jusqu'a 140% (env 70 mm) ou diminuée jusqu'à 70% (env
 ### Emilio 20 Tricolore
 Utilisée à 100%, cette fonte fait environ  100 mm de haut.
 Elle peut être agrandie jusqu'à 120% (env 120 mm) ou diminuée jusqu'à 90% (env 90 mm).
+
+### Emilio 20 Simple Small
+
+{% include upcoming_release.html %}
+
+La fonte Emilio 20 Simple Small est une déclinaison de Emilio 20 Simple avec des paramètres de broderie différents. La densité, la compensation et les sous-couches ont été modifiées pour permettre de broder cette fonte en plus petite taille.
+
+Dans la fenêtre de dialogue du lettrage, il vous sera demandé si vous choisissez Emilio 20 Simple Small d'indiquer un redimensionnement entre 25 et 40% de la taille de la fonte Emilio 20 Simple initiale, passant ainsi de lettres d'environ 32 mm de haut à des lettres mesurant entre 8 et 20 mm.
+
+Contrairement à Emilio 20 Simple, cette fonte diminuée DOIT être brodée avec un fil et une aiguille plus fins que d'ordinaire. Une aiguille de taille 8 (USA), 60 (EUR) et un fil 60 WT DOIVENT être utilisés.
+
 
 ## Tri des couleurs pour la version tricolore ou pour la version appliquée
 Si vous brodez plusieurs lettes, vous pouvez souhaiter trier les couleurs. C'est possible à condition de respecter leur ordre relatif à l'intérieur de chaque lettre. [Voici comment faire](https://inkstitch.org/fr/docs/lettering/#tri-des-couleurs)
