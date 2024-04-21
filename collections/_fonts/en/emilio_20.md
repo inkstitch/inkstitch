@@ -14,8 +14,15 @@ preview_image:
    height: 48
  - url: /assets/images/fonts/emilio_tricolore.jpg
    height: 100
+ - url: /assets/images/fonts/emilio_tricolore.jpg
+   height: 100
 ---
 {%- assign font = site.data.fonts.emilio_20.font -%}
+
+<img 
+     src="/assets/images/fonts/emilio_20_simple_small.jpg"
+     alt="Emilio20" height="8">
+     
 <img 
      src="/assets/images/fonts/emilio_simple.png"
      alt="Emilio20" height="21">
@@ -54,7 +61,7 @@ Each of the five fonts  contains  {{ font.glyphs.size }} glyphs:
 ###  Emilio Simple
 
 At 100%, this font is approximatively  42 mm (1.75 inches) high.
-It can be scaled up to  140% (approx. 60 mm, 2.5 inches)  or scaled down to 70% (approx. 30 mm , 1.25 inches).
+It can be scaled up to  140% (approx. 60 mm, 2.5 inches)  or scaled down to 50% (approx. 25 mm , 1 inch).
 
 ### Emilio 20 Bold
 
@@ -77,6 +84,17 @@ It can be scaled up to  140% (approx. 70mm, 2.8 inches)  or scaled  down to 70% 
 
 At 100%, this font is approximatively 100mm (4 inches)
 It may be scaled  up to 120% (approx. 120 mm, 5 inches) or scaled down to 90% (approx.en 90 mm, 3.5 inches).
+
+### Emilio 20 Simple Small
+
+{% include upcoming_release.html %} 
+
+Emilio 20 Simple Small is a variation of this font with different embroidery settings. Pull compensation, density and underlays are different to allow to scale down between 40% (20mm, 0.75 inch) and 25% (8mm ,1/4 inch). That's why in the lettering dialog window, if using Emilio 20 Simple Small, you will have to pick up a scale between 25 and 40%. 
+
+Contrarly to Emilio 20 Simple, Emilio 20 Simple  Small  **MUST** be embroidered with thread and needle smaller than usual.
+A USA 8 (EUR 60) size needle, and 60WT thread **MUST** be used.
+
+
 
 ## Color sorting
 
