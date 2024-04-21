@@ -1,7 +1,7 @@
 ---
 title: "Emilio 20"
 permalink: /de/fonts/emilio-20/
-last_modified_at: 2023-04-24
+last_modified_at: 2024-04-21
 toc: false
 preview_image:
  - url: /assets/images/fonts/emilio_simple.png
@@ -14,8 +14,16 @@ preview_image:
    height: 48
  - url: /assets/images/fonts/emilio_tricolore.jpg
    height: 100
+ - url: /assets/images/fonts/emilio_20_simple_small.jpg
+   height: 17
 ---
+
 {%- assign font = site.data.fonts.emilio_20.font -%}
+
+<img 
+     src="/assets/images/fonts/emilio_20_simple_small.jpg"
+     alt="Emilio20" height="8">
+     
 <img 
      src="/assets/images/fonts/emilio_simple.png"
      alt="Emilio20" height="21">
@@ -55,7 +63,7 @@ Jeweils fünf  Schriften enthalten  {{ font.glyphs.size }} Schriftzeichen:
 ###  Emilio Simple
 
 Bei einer Skalierung von 100 % ist diese Schrift ungefähr 42 mm hoch (1.75 Zoll).
-Sie kann bis auf 140% (~60mm, 2.5 Zoll) hochskaliert und bis zu 70% (~30mm, 1.25 Zoll) herunterskaliert werden.
+Sie kann bis auf 140% (~60mm, 2.5 Zoll) hochskaliert und bis zu 50% (~21mm, ~1 Zoll) herunterskaliert werden.
 
 ### Emilio 20 Bold
 
@@ -78,6 +86,18 @@ Sie kann bis auf 140% (~70mm, 2.8 Zoll) hochskaliert und bis zu 70% (~35mm, 1.5 
 
 Bei einer Skalierung auf 100 % ist diese Schrift ungefähr 100 mm hoch (4 Zoll).
 Sie kann bis auf 120% (~120mm, 5 Zoll) hochskaliert und bis zu 90% (~90mm, 3.5 Zoll) herunterskaliert werden.
+
+### Emilio 20 Simple Small
+
+{% include upcoming_release.html %} 
+
+Emilio 20 Simple Small ist eine Variante dieser Schriftart mit unterschiedlichen Stickeinstellungen. Zugausgleich, Dichte und Unterlage sind unterschiedlich, um eine Skalierung zwischen 40% (20 mm, 0.75 Zoll) und 25% (8mm, 1/3 Zoll) zu ermöglichen.
+
+Deshalb müssen Sie im Dialogfenster des Text-Moduls für die Nutzung von Emilio 20 Simple Small  eine Skalierung zwischen 15 und 30% wählen.
+
+Im Gegensatz zu Emilio 20 Simple **MUSS** diese verkleinerte Schrift mit einem dünneren Faden und einer dünneren Nadel als üblich gestickt werden. Es **MUSS** eine Nadel der Größe 8 (USA), 60(EUR) und ein Garn 60WT verwendet werden.
+
+
 
 
 ## Sortieren der Farben 
