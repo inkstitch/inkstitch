@@ -4,11 +4,17 @@ permalink: /fr/fonts/magnolia-script/
 last_modified_at: 2022-05-27
 toc: false
 preview_image:
-  - url: /assets/images/fonts/magnolia_KOR.jpg
+  - url: /assets/images/fonts/magnolia_small.jpg
     height: 31
+  - url: /assets/images/fonts/magnolia_KOR.jpg
+    height: 15
+
 ---
 {%- assign font = site.data.fonts.magnolia_KOR.font -%}
+
+![Magnolia](/assets/images/fonts/magnolia_small.jpg)
 ![Magnolia](/assets/images/fonts/magnolia_KOR.jpg)
+
 
 ## Glyphes
 
