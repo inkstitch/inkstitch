@@ -89,7 +89,7 @@ It may be scaled  up to 120% (approx. 120 mm, 5 inches) or scaled down to 90% (a
 
 {% include upcoming_release.html %} 
 
-Emilio 20 Simple Small is a variation of this font with different embroidery settings. Pull compensation, density and underlays are different to allow to scale down between 40% (20mm, 0.75 inch) and 25% (8mm ,1/4 inch). That's why in the lettering dialog window, if using Emilio 20 Simple Small, you will have to pick up a scale between 25 and 40%. 
+Emilio 20 Simple Small is a variation of this font with different embroidery settings. Pull compensation, density and underlays are different to allow to scale down between 40% (20mm, 0.75 inch) and 25% (8mm ,1/3 inch). That's why in the lettering dialog window, if using Emilio 20 Simple Small, you will have to pick up a scale between 25 and 40%. 
 
 Contrarly to Emilio 20 Simple, Emilio 20 Simple  Small  **MUST** be embroidered with thread and needle smaller than usual.
 A USA 8 (EUR 60) size needle, and 60WT thread **MUST** be used.
