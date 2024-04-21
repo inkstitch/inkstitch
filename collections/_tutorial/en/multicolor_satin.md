@@ -29,9 +29,9 @@ This  parameter accepts either a single value, in which case it is applied to ea
 ![random increase_different_seeds](/assets/images/tutorials/multicolor_satin/random_increase_different_seeds.png)
 
 * When this parameter is set to 0, the column (in black) is made up of zig-zags traveling  between the two rails
-* When this parameter is set to 50,  each zig (or zag) of the column (in red)is extended to the left and right by a value between 0 and 50% of the length of the zig. The new column is therefore widened irregularly, at most it can be twice as wide as the black one (50% on the left and 50% on the right), it is never narrower.
-* When this parameter is set to 0 50, the left side of the column (in green) is unchanged, but on the right it is extended up to 50% additional length.
-* When this parameter is set to 50.0, the column (in blue) is similar by swapping the roles of left and right.
+* When this parameter is set to 50,  each zig (or zag) of the column (in red) extends to the left and right by a value between 0 and 50% of the length of the zig. The new column is therefore irregularly widened , at most it can be twice as wide as the black one (50% on the left and 50% on the right), it is never narrower.
+* When this parameter is set to 0 50, the left side of the column (in green) is unchanged, but on the right it is extended up to a 50% additional length.
+* When this parameter is set to 50 0, the column (in blue) is similar by swapping the roles of left and right.
 * If we superimpose the three columns having a non-zero value for the parameter, the enlargement seems very random, the borders of the columns are very different, even if they are similar.
 
 What values ​​can be entered in this parameter? Ink/Stitch accepts any pair of numeric values ​​here. 
@@ -49,18 +49,18 @@ Rather than increasing by -50%, we can decide to decrease by 50%, it's the same 
 
 ### Simple, but imperfect method
 
-Thanks to any of these two parameters, we already have a first imperfect but very simple method for simulating two-tone satin columns:
+Thanks to any of these two parameters, we already have a first imperfect but very simple method for simulating bicolor satin columns:
 
 ![first_bicolore_satin](/assets/images/tutorials/multicolor_satin/first_bicolor_satin.png)
 
-both examples use a random percentage of width decrease
+both examples use "random percentage of width decrease"
 
 * On the left example  the left side of the red column is reduced while  the right side of the green column is reduced. But be careful, the second color superimposes the first and here the green hides part of the red.
 * On the right, we left the red intact, the green is superimposed, its right side reduced by up to  two thirds rather than one half.
 
 But this method is imperfect: it ensures that the entire column is colored, there is no lack, but there is some overlay.
 
-It is possible to obtain two perfectly joining  columns, but this also requires using other random parameters
+It is possible to obtain two perfectly joining  columns, but requires using additional random parameters
 
 ### The random seed
 Each time we use one or more random parameters, if we are not happy with the result, we can click on “reroll the dice” and obtain a different result. 
@@ -73,7 +73,7 @@ If we repeat the first example but this time give all three columns random seeds
 ![random increase_same_seeds](/assets/images/tutorials/multicolor_satin/random_increase_same_seed.png)
 
 Now when we superimpose the three columns, we see that there is a perfect superposition of the borders. 
-The red column has expanded to the left like the blue column and to the right like the green column. 
+The red column has expanded to the left exactly like the blue column and to the right exactly like the green column. 
 On the other hand, for the same zig, the widening to the left is different from the widening to the right.
 
 ### Method almost as simple, with perfect fit but unfortunately not general
@@ -93,7 +93,7 @@ Unfortunately, this simple solution does not generalize to columns of any shape.
 
 For a general solution, we'll use yet another additional parameter:
 
-## Pull compensation percentage
+### Pull compensation percentage
 To obtain multi-colored satin columns, we will use the “pull compensation percentage” parameter.
 
 It is also an asymmetric parameter.
@@ -106,11 +106,11 @@ Here are three example values ​​for the pull compensation percentage paramet
 
 Here the first rail is the left side of the satin.
 
-When the parameter is set to  "0 -75" (in green)  the left side is unchanged, but everything happens as if the right side had been brought together regularly to reduce the distance between the two rails to a quarter of the initial value. We have in fact gone from a width of 100% to a width of 100-75=25%
+When the parameter is set to  "0 -75" (in green)  the left side is unchanged, but everything looks as if the right side had been moved to the left  regularly to reduce the distance between the two rails to a quarter of the initial value. We have in fact gone from a width of 100% to a width of 100-75=25%
 
 When the parameter is set to "-25 -25" (in red) the two edges move closer to the center and the width of the column is uniformly reduced by half.
 
-When the parameter is set to "-75 0" (in blue) we do not touch the right side, but everything happens as if the left side had been brought together regularly to reduce the distance between the two rails to a quarter of the initial value.
+When the parameter is set to "-75 0" (in blue) we do not touch the right side, but everything lookss as if the left side had been moved to the right to reduce the distance between the two rails to a quarter of the initial value.
 
 If we superimpose these three columns, we obtain a tricolor snake.
 
@@ -124,7 +124,7 @@ If we superimpose these three columns, we obtain a tricolor snake.
 
 We will use all these parameters together.
 
-If you want to distribute the 100% width of the column into
+If we want to distribute the 100% width of the column into
 * G% on the left exclusively for blue
 * D% on the right exclusively for green
 * and therefore 100-(G+D) percent in the middle for a green-blue mixture,
@@ -229,12 +229,9 @@ If we rather wish to reserve 15% for each of the monochrome parts and share the 
 ![tricolor](/assets/images/tutorials/multicolor_satin/quadricolor.png)
 
 
-**Note** For quality embroidery, you must also add pull compensation to... compensate for... the pull! Embroidered as is the colors will not look quite joined together, as the stitches distort the embroidery. The easiest way is to add a little bit of pull compensation in mm.
-{: .notice--info }
-
 ## For any number of colors
 
-To se N colors, choose positive or zero values ​​for the N monochrome parts C1,C2,.....CN and the N-1 two-color parts C1!2, C2!3, ....CN-1!N. The sum of the 2N-1 values ​​must be 100.
+To use N colors, choose positive or zero values ​​for the N monochrome parts C1,C2,.....CN and the N-1 two-color parts C1!2, C2!3, ....CN-1!N. The sum of the 2N-1 values ​​must be 100.
 
 Prepare a table with N columns
   
@@ -254,7 +251,7 @@ The pull compensation percentage  first value is the sum of the widths  for ever
 
 **If i is even**
 
-we check Swap rails, and we invert the two  values ​​in each asymetrical parameter.
+Check Swap rails, and invert the two  values ​​in each asymetrical parameter.
 
 |Parameter |Color I|
 | --- | --- |
@@ -277,3 +274,7 @@ For this example, the first and last color overflow
 ![ArcEnCiel](/assets/images/tutorials/multicolor_satin/arcenciel.svg)
 
 Download [the rainbow file](/assets/images/tutorials/multicolor_satin/arcenciel.svg){: download="arcenciel.svg" }
+
+**Note** For a good quality embroidery, you must also add some pull compensation to... compensate for... the pull! Embroidered as is the colors will not look quite joined together, as the stitches distort the embroidery. The easiest way is to add a little bit of pull compensation in mm. It is also a good idea to add yet another copy of the column with no negative pull compensation , no random parameters, but a 4mm maximum stitch length and a wide zigzag spacing to act as an underlay. Chose a color close to your fabric's color.
+{: .notice--info }
+ 
