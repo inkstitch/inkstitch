@@ -12,6 +12,7 @@ preview_image:
 {%- assign font = site.data.fonts.baumans_FI.font -%}
 ![Baumans](/assets/images/fonts/baumans_fi.jpg)
 ![Baumans](/assets/images/fonts/baumans_FI_small.jpg)
+
 ## Glyphes
 
 Cette fonte comporte  {{ font.glyphs.size }} glyphes:
@@ -31,6 +32,8 @@ Si la broderie fait plusieurs lignes, elle peut  être brodée  alternativement 
 Utilisée à 100%, cette fonte fait environ 32 mm.
 
 Elle peut être agrandie jusqu'à 150% (env 48 mm) ou diminuée jusqu'à 80% (env 25 mm).
+
+{% include upcoming_release.html %}
 
 La fonte Baumans FI Small  est une déclinaison de Baumans FI avec des paramètres de broderie différents. La densité, la compensation et les sous-couches ont été modifiées pour permettre de broder cette fonte en plus petite taille. 
 
