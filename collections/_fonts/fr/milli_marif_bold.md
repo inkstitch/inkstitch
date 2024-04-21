@@ -30,4 +30,4 @@ Elle peut être agrandie jusqu'à 140% (env 28 mm) ou diminuée jusqu'à 75% (en
 
 {% include folder-galleries path="fonts/milli_marif_bold/" %}
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/milli_marif_bold/LICENSE)
+[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/milli_marif_bold/LICENSE.txt)
