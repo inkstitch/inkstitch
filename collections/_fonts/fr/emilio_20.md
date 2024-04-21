@@ -60,7 +60,7 @@ Chacune des cinq fontes comporte  {{ font.glyphs.size }} glyphes:
 ###  Emilio 20 Simple
 
 Utilisée à 100%, cette fonte fait environ 42 mm de haut.
-Elle peut être agrandie jusqu'a 140% (env 60 mm) ou diminuée jusqu'à 70% (env 30 mm).
+Elle peut être agrandie jusqu'a 140% (env 60 mm) ou diminuée jusqu'à 50% (env 21 mm).
 
 ### Emilio 20 Bold
 Utilisée à 100%, cette fonte fait environ 50 mm de haut.
