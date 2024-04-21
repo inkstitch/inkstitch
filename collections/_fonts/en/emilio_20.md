@@ -14,8 +14,8 @@ preview_image:
    height: 48
  - url: /assets/images/fonts/emilio_tricolore.jpg
    height: 100
- - url: /assets/images/fonts/emilio_tricolore.jpg
-   height: 100
+ - url: /assets/images/fonts/emilio_20_simple_small.jpg
+   height: 17
 ---
 {%- assign font = site.data.fonts.emilio_20.font -%}
 
