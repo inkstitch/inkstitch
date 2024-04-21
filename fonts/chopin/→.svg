@@ -29,13 +29,13 @@
      inkscape:window-height="800"
      id="namedview245"
      showgrid="true"
-     inkscape:zoom="1.870871"
-     inkscape:cx="42.760831"
-     inkscape:cy="146.99036"
+     inkscape:zoom="0.52838709"
+     inkscape:cx="76.648353"
+     inkscape:cy="147.61905"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g381"
+     inkscape:current-layer="g94"
      inkscape:document-rotation="0"
      scale-x="1"
      inkscape:snap-global="false"
@@ -187,7 +187,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
      id="g381"
      inkscape:label="GlyphLayer-!"
      inkscape:groupmode="layer"
-     style="display:inline">
+     style="display:none">
     <path
        inkscape:label="Auto-remplissage satin 2"
        inkstitch:center_walk_underlay="False"
@@ -17925,7 +17925,7 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
   </g>
   <g
      id="g94"
-     style="display:none"
+     style="display:inline"
      inkscape:label="GlyphLayer-ß"
      inkscape:groupmode="layer">
     <path
@@ -17948,7 +17948,8 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-       inkstitch:zigzag_underlay_inset_mm="0" />
+       inkstitch:zigzag_underlay_inset_mm="0"
+       inkstitch:reverse_rails="none" />
     <path
        d="M 32.952001,75.496057 C 17.708983,123.54356 1.4001953,171.2577 -11.564598,219.99227 c -6.012381,17.25679 -9.803701,37.32901 -24.258836,49.69947 -13.955291,10.09434 -36.241906,-0.80323 -29.568804,-19.17801 0.26498,-14.69082 27.800365,-10.76719 17.490787,1.3104 -3.059871,0.71206 -6.123345,-0.15319 -9.024465,-1.02124"
        style="fill:none;stroke:#000000;stroke-width:1;stroke-dasharray:1, 1;stroke-dashoffset:0"
@@ -17970,7 +17971,8 @@ claudeserieux@gmail.com  Based on Polonaise from Phil Martin (1923-2005)
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-       inkstitch:zigzag_underlay_inset_mm="0" />
+       inkstitch:zigzag_underlay_inset_mm="0"
+       inkstitch:reverse_rails="none" />
     <path
        d="m 44.9112,78.8717 c -1.014467,0.8181 -2.028933,1.6362 -3.0434,2.4543"
        style="fill:none;stroke:#000000;stroke-width:1;stroke-dasharray:1, 1;stroke-dashoffset:0"

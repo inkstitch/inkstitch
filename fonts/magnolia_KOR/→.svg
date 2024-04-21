@@ -23,13 +23,13 @@
      inkscape:window-width="1347"
      inkscape:window-height="800"
      id="namedview5275"
-     inkscape:zoom="3.8247196"
-     inkscape:cx="10.458283"
-     inkscape:cy="63.795526"
+     inkscape:zoom="1.9701874"
+     inkscape:cx="26.139645"
+     inkscape:cy="93.899695"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
-     inkscape:current-layer="layer3"
+     inkscape:current-layer="g9329"
      inkscape:document-rotation="0"
      showguides="true"
      inkscape:guide-bbox="true"
@@ -173,7 +173,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        id="autosatinrun1"
        inkscape:label="Points droits pour auto-remplissage satin 1"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin1"
        style="display:inline;fill:none;stroke:#4e2990;stroke-opacity:1"
@@ -188,7 +189,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkstitch:min_stitch_length_mm="0.5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:pull_compensation_mm="0.3"
-       inkstitch:force_lock_stitches="True" />
+       inkstitch:force_lock_stitches="True"
+       inkstitch:zigzag_underlay_inset_mm="0.2" />
     <g
        id="g2"
        style="fill:none;stroke:#4e2990">
@@ -199,7 +201,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          id="autosatinrun2"
          inkscape:label="Points droits pour auto-remplissage satin 3"
          inkstitch:min_stitch_length_mm=".5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:running_stitch_tolerance_mm="0.2" />
       <path
          id="autosatin2"
          style="display:inline;fill:none;stroke:#4e2990;stroke-opacity:1"
@@ -213,7 +216,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkstitch:reverse_rails="none"
          inkstitch:min_stitch_length_mm="0.5"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:pull_compensation_mm="0.3" />
+         inkstitch:pull_compensation_mm="0.3"
+         inkstitch:zigzag_underlay_inset_mm="0.2" />
     </g>
   </g>
   <g
@@ -231,7 +235,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          id="autosatinrun75"
          inkscape:label="Points droits pour auto-remplissage satin 1"
          inkstitch:min_stitch_length_mm=".5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:running_stitch_tolerance_mm="0.2" />
       <path
          id="autosatin3"
          style="display:inline;fill:none;stroke:#4e2990;stroke-opacity:1"
@@ -248,7 +253,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkstitch:zigzag_underlay_max_stitch_length_mm="5"
          inkstitch:reverse_rails="none"
          inkstitch:min_stitch_length_mm="0.5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:zigzag_underlay_inset_mm="0.2" />
       <path
          d="M 9.73085,33.077 14.1982,30.08 C 13.6611,27.647 10.9871,26.8125 8.99171,25.9358"
          style="display:inline;fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
@@ -256,7 +262,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          id="autosatinrun295"
          inkscape:label="Points droits pour auto-remplissage satin 3"
          inkstitch:min_stitch_length_mm=".5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:running_stitch_tolerance_mm="0.2" />
       <path
          id="autosatin4"
          style="display:inline;fill:none;stroke:#4e2990;stroke-opacity:1"
@@ -274,7 +281,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkstitch:reverse_rails="none"
          inkstitch:min_stitch_length_mm="0.5"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:force_lock_stitches="True" />
+         inkstitch:force_lock_stitches="True"
+         inkstitch:zigzag_underlay_inset_mm="0.2" />
     </g>
     <path
        id="autosatin5"
@@ -293,12 +301,13 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkstitch:reverse_rails="none"
        inkstitch:min_stitch_length_mm="0.5"
        inkstitch:min_jump_stitch_length_mm="3"
-       inkstitch:ties="0" />
+       inkstitch:ties="0"
+       inkstitch:zigzag_underlay_inset_mm="0.2" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-%"
-     style="display:inline"
+     style="display:none"
      id="g8833">
     <g
        id="g5"
@@ -306,7 +315,7 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
       <path
          id="autosatin8"
          style="display:inline;fill:none;stroke:#4e2990"
-         d="m 30,102 c 1.880159,-7.41101 6.969946,-13.402819 10.350819,-20.162046 3.21612,-5.652575 6.43224,-11.305149 9.64836,-16.957724 M 29.86647,102.2582 C 21.703104,103.44488 20.719884,95.414378 25.536659,90.827379 30.752162,81.658015 35.962576,72.47921 41.185097,63.311038 m -0.490157,0.0085 c 3.231829,0.57537 6.463659,1.150741 9.695488,1.726111"
+         d="M 30,100.31519 C 32.645983,95.507979 36.969946,88.597181 40.350819,81.837954 L 49.999179,64.88023 M 28.794317,101.95187 C 20.630951,103.13855 20.719884,95.414378 25.536659,90.827379 30.752162,81.658015 35.962576,72.47921 41.185097,63.311038 m -0.490157,0.0085 9.695488,1.726111"
          inkstitch:satin_column="True"
          inkstitch:ties="0"
          inkstitch:pull_compensation_mm="0.3"
@@ -317,7 +326,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkstitch:zigzag_underlay_max_stitch_length_mm="5"
          inkstitch:reverse_rails="none"
          inkstitch:min_stitch_length_mm="0.5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         sodipodi:nodetypes="cccccccc" />
       <path
          d="M 40.0688,63.1123 46.3487,62.766 C 52.69073,51.4367 59.3602,40.2092 65.565,28.8551 65.843645,27.10077 65.065123,25.39561 64.16768,23.93975"
          style="display:inline;fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5"
@@ -326,7 +336,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkscape:label="Points droits pour auto-remplissage satin 3"
          inkstitch:ties="3"
          inkstitch:min_stitch_length_mm=".5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:running_stitch_tolerance_mm="0.2" />
       <path
          id="autosatin9"
          style="display:inline;fill:none;stroke:#4e2990"
@@ -355,7 +366,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkscape:label="Points droits pour auto-remplissage satin 5"
          inkstitch:ties="3"
          inkstitch:min_stitch_length_mm=".5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:running_stitch_tolerance_mm="0.2" />
       <path
          id="autosatin10"
          style="display:inline;fill:none;stroke:#4e2990"
@@ -379,7 +391,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkscape:label="Points droits pour auto-remplissage satin 7"
          inkstitch:ties="3"
          inkstitch:min_stitch_length_mm=".5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:running_stitch_tolerance_mm="0.2" />
       <path
          id="autosatin11"
          style="display:inline;fill:none;stroke:#4e2990"
@@ -424,7 +437,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkscape:label="Points droits pour auto-remplissage satin 10"
          inkstitch:ties="3"
          inkstitch:min_stitch_length_mm=".5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:running_stitch_tolerance_mm="0.2" />
       <path
          id="autosatin13"
          style="display:inline;fill:none;stroke:#4e2990"
@@ -448,7 +462,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkscape:label="Points droits pour auto-remplissage satin 12"
          inkstitch:ties="3"
          inkstitch:min_stitch_length_mm=".5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:running_stitch_tolerance_mm="0.2" />
       <path
          id="autosatin14"
          style="display:inline;fill:none;stroke:#4e2990"
@@ -479,7 +494,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        d="M 34.865655,59.568214 C 28.687072,60.592352 21.337721,58.416476 19.099497,51.987565 14.952111,41.350522 24.05688,29.687216 34.632767,27.919292 c 7.282303,-1.822646 16.937776,1.844197 17.68884,10.224565 0.903844,5.378941 -2.888016,11.880747 -8.896213,11.328741"
        style="fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5"
@@ -488,7 +504,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 2"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin15"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -528,7 +545,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 6"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin17"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -552,7 +570,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 8"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin18"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -571,7 +590,7 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
     <path
        d="M 54.7889,61.5481 55.6064,72.986"
        style="fill:none;stroke:#4e2990;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.0"
+       inkstitch:running_stitch_length_mm="2"
        inkstitch:running_stitch_tolerance_mm="0.2"
        id="path61" />
     <path
@@ -619,7 +638,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 3"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin21"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -666,7 +686,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 3"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="path3"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -713,7 +734,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 3"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="path5645"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -744,7 +766,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin22"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -769,7 +792,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 3"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin23"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -800,7 +824,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin24"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -825,7 +850,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 3"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin25"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -855,7 +881,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        id="autosatinrun18"
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin26"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -865,7 +892,7 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkstitch:ties="0"
        inkstitch:zigzag_underlay="True"
        sodipodi:nodetypes="cscccscccccsccccccccc"
-       inkstitch:zigzag_underlay_inset_mm="0.3"
+       inkstitch:zigzag_underlay_inset_mm="0.2"
        inkscape:label="AutoSatin 2"
        inkstitch:max_stitch_length_mm="8"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
@@ -879,7 +906,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        id="autosatinrun19"
        inkscape:label="AutoSatin Running Stitch 3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin27"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -904,7 +932,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 5"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin28"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -924,7 +953,7 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
     <path
        d="m 18.1198,75.1438 9.2205,-4.9382"
        style="fill:none;stroke:#4e2990;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.0"
+       inkstitch:running_stitch_length_mm="2"
        inkstitch:running_stitch_tolerance_mm="0.2"
        id="path62" />
     <path
@@ -936,7 +965,7 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkstitch:ties="0"
        inkstitch:zigzag_underlay="True"
        sodipodi:nodetypes="cscccscccccsccc"
-       inkstitch:zigzag_underlay_inset_mm="0.3"
+       inkstitch:zigzag_underlay_inset_mm="0.2"
        inkscape:label="AutoSatin 7"
        inkstitch:max_stitch_length_mm="8"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
@@ -946,7 +975,7 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
     <path
        d="m 19.5423,90.3377 5.4411,-0.2769"
        style="fill:none;stroke:#4e2990;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.0"
+       inkstitch:running_stitch_length_mm="2"
        inkstitch:running_stitch_tolerance_mm="0.2"
        id="path63" />
     <path
@@ -958,7 +987,7 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkstitch:ties="0"
        inkstitch:zigzag_underlay="True"
        sodipodi:nodetypes="cscccscc"
-       inkstitch:zigzag_underlay_inset_mm="0.3"
+       inkstitch:zigzag_underlay_inset_mm="0.2"
        inkscape:label="AutoSatin 9"
        inkstitch:max_stitch_length_mm="8"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
@@ -979,7 +1008,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin31"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -1004,7 +1034,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 3"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin32"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -1057,7 +1088,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin34"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -1076,7 +1108,7 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
     <path
        d="M 14.9066,98.0007 7.77953,100.973"
        style="fill:none;stroke:#4e2990;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.0"
+       inkstitch:running_stitch_length_mm="2"
        inkstitch:running_stitch_tolerance_mm="0.2"
        id="path64" />
     <path
@@ -1108,7 +1140,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin36"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -1128,7 +1161,7 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
     <path
        d="M 11.8949,98.1846 9.93323,102.129"
        style="fill:none;stroke:#4e2990;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.0"
+       inkstitch:running_stitch_length_mm="2"
        inkstitch:running_stitch_tolerance_mm="0.2"
        id="path65" />
     <path
@@ -1161,7 +1194,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin38"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -1186,7 +1220,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 3"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin39"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -1217,7 +1252,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        d="M 22.51686,26.593106 C 18.923558,31.881344 12.438745,40.692963 5.3153405,38.421036"
        style="display:inline;fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5"
@@ -1226,7 +1262,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 2"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin40"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -1262,7 +1299,7 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
     <path
        d="m 16.9114,100.679 3.9701,-1.561"
        style="fill:none;stroke:#4e2990;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.0"
+       inkstitch:running_stitch_length_mm="2"
        inkstitch:running_stitch_tolerance_mm="0.2"
        id="path66" />
     <path
@@ -1294,7 +1331,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin43"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -1341,7 +1379,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin45"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -1365,7 +1404,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 3"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        d="M 21.755599,59.718719 C 34.057163,63.337145 49.037885,52.201838 46.633161,38.99373 44.795748,29.420155 33.229589,25.500449 24.761737,28.404817 16.737038,30.031993 9.3318807,40.210804 14.398849,47.82362 c 1.041169,1.10752 2.542341,1.765846 4.063347,1.77301"
        style="fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5"
@@ -1374,7 +1414,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 4"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin46"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -1421,7 +1462,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin48"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -1445,7 +1487,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 4"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin49"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -1470,7 +1513,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 6"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin50"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -1494,7 +1538,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 8"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        d="m 3.28275,70.652492 c 7.704011,-2.294409 11.637295,-10.172394 15.484595,-16.605425 3.52473,-6.646815 6.495228,-14.227691 5.340821,-21.871873 -0.957752,-3.127701 -4.470288,-4.552968 -7.494732,-4.508608"
        style="display:inline;fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5"
@@ -1503,7 +1548,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 9"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin51"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -1564,7 +1610,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin54"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -1588,7 +1635,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 3"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        d="m 10.705362,63.947196 c 0.885501,-8.346903 3.060654,-16.741806 4.09394,-25.204708 0.649986,-3.671251 1.186135,-7.255551 -0.0067,-10.87016"
        style="fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5"
@@ -1597,7 +1645,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 4"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        d="m 16.298143,26.965089 c 5.358775,3.57089 12.14087,3.469066 18.209201,5.102992 6.034291,0.880862 13.219289,2.096072 18.43246,-1.828789 0.804805,-0.745982 1.465705,-1.644558 1.948639,-2.629357"
        style="fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5"
@@ -1606,7 +1655,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 5"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin55"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -1668,7 +1718,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin58"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -1693,7 +1744,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 3"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin59"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -1724,7 +1776,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        d="M 47.353611,30.544127 C 38.24984,33.064951 28.939416,30.461631 19.693202,30.539311 14.37064,30.500603 7.4873143,30.300743 5.2909641,36.40317"
        style="fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5"
@@ -1733,7 +1786,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 2"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin60"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -1769,7 +1823,7 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
     <path
        d="m 23.8735,92.4338 0.2442,6.4868"
        style="fill:none;stroke:#4e2990;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.0"
+       inkstitch:running_stitch_length_mm="2"
        inkstitch:running_stitch_tolerance_mm="0.2"
        id="path67" />
     <path
@@ -1802,11 +1856,12 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin63"
        style="display:inline;fill:none;stroke:#4e2990"
-       d="m 21.185826,60.544067 c 0,0 13.101069,-4.3229 13.101069,-4.3229 C 34.286895,56.221167 31,53 31,53 c 0,0 -2.798206,-2.842247 -2.798206,-2.842247 0,0 -1.192113,-1.376239 -1.192113,-1.376239 0,0 -1.024753,-1.391289 -1.024753,-1.391289 0,0 -0.835369,-1.440067 -0.835369,-1.440067 0,0 -0.623961,-1.522574 -0.623961,-1.522574 0,0 -0.390528,-1.638809 -0.390528,-1.638809 C 24.13507,42.788775 24,41 24,41 c 0,0 0.226562,-2.195313 0.226562,-2.195313 0,0 0.648438,-2.054687 0.648438,-2.054687 0,0 1.023437,-1.867188 1.023437,-1.867188 0,0 1.351563,-1.632812 1.351563,-1.632812 0,0 1.632812,-1.351563 1.632812,-1.351563 0,0 1.867188,-1.023437 1.867188,-1.023437 0,0 2.054687,-0.648438 2.054687,-0.648438 C 32.804687,30.226562 35,30 35,30 c 0,0 2.152344,0.185547 2.152344,0.185547 0,0 1.941406,0.548828 1.941406,0.548828 0,0 1.707031,0.900391 1.707031,0.900391 0,0 1.449219,1.240234 1.449219,1.240234 0,0 1.167969,1.568359 1.167969,1.568359 0,0 0.863281,1.884766 0.863281,1.884766 0,0 0.535156,2.189453 0.535156,2.189453 C 44.816406,38.517578 45,41 45,41 c 0,0 -0.120313,1.81889 -0.120313,1.81889 0,0 -0.340016,1.706238 -0.340016,1.706238 0,0 -0.528332,1.592939 -0.528332,1.592939 0,0 -0.685262,1.47899 -0.685262,1.47899 0,0 -0.810806,1.364395 -0.810806,1.364395 0,0 -0.904964,1.249152 -0.904964,1.249152 0,0 -1.96686,2.149979 -1.96686,2.149979 0,0 -1.966859,1.68123 -1.966859,1.68123 0,0 -1.71577,1.207297 -1.71577,1.207297 0,0 -1.673923,0.972057 -1.673923,0.972057 0,0 -3.702524,1.307589 -3.702524,1.307589 0,0 -3.026654,0.899743 -3.026654,0.899743 0,0 -3.233788,0.990785 -3.233788,0.990785 C 24.323929,59.419284 20,61 20,61 c 0,0 -2.8125,1.171875 -2.8125,1.171875 0,0 -2.882812,1.517578 -2.882812,1.517578 0,0 -3.304688,2.185547 -3.304688,2.185547 0,0 -1.6787109,1.354248 -1.6787109,1.354248 0,0 -1.6259766,1.534424 -1.6259766,1.534424 0,0 -1.5205078,1.718994 -1.5205078,1.718994 0,0 -1.3623047,1.907959 -1.3623047,1.907959 0,0 -1.1513672,2.101318 -1.1513672,2.101318 0,0 -0.8876953,2.299073 -0.8876953,2.299073 0,0 -0.5712891,2.50122 -0.5712891,2.50122 C 2.2021484,79.292236 2,82 2,82 c 0,0 0.1152344,1.850098 0.1152344,1.850098 0,0 0.3378906,1.794433 0.3378906,1.794433 0,0 0.5488281,1.729981 0.5488281,1.729981 0,0 0.7480469,1.656738 0.7480469,1.656738 0,0 0.9355469,1.574707 0.9355469,1.574707 0,0 1.1113281,1.483887 1.1113281,1.483887 0,0 1.2753906,1.384277 1.2753906,1.384277 0,0 1.4277344,1.275879 1.4277344,1.275879 0,0 1.568359,1.158691 1.568359,1.158691 0,0 1.697266,1.032715 1.697266,1.032715 0,0 1.814453,0.897949 1.814453,0.897949 0,0 1.919922,0.754395 1.919922,0.754395 0,0 2.013672,0.602051 2.013672,0.602051 0,0 2.095703,0.440918 2.095703,0.440918 0,0 2.166016,0.270996 2.166016,0.270996 0,0 2.224609,0.0923 2.224609,0.0923 0,0 3.093506,-0.125772 3.093506,-0.125772 0,0 2.904541,-0.366211 2.904541,-0.366211 0,0 2.714111,-0.588867 2.714111,-0.588867 0,0 2.522217,-0.793945 2.522217,-0.793945 0,0 2.328857,-0.981445 2.328857,-0.981445 0,0 2.134034,-1.151368 2.134034,-1.151368 0,0 1.937744,-1.30371 1.937744,-1.30371 0,0 1.73999,-1.438477 1.73999,-1.438477 0,0 1.540771,-1.555664 1.540771,-1.555664 0,0 1.340088,-1.655274 1.340088,-1.655274 0,0 1.13794,-1.737304 1.13794,-1.737304 0,0 0.934326,-1.801758 0.934326,-1.801758 0,0 0.621397,-1.575232 0.621397,-1.575232 M 20,61 c 0,0 -2.109375,-2.207031 -2.109375,-2.207031 0,0 -1.828125,-2.136719 -1.828125,-2.136719 0,0 -1.546875,-2.089844 -1.546875,-2.089844 0,0 -1.265625,-2.066406 -1.265625,-2.066406 0,0 -0.984375,-2.066406 -0.984375,-2.066406 0,0 -0.703125,-2.089844 -0.703125,-2.089844 0,0 -0.421875,-2.136719 -0.421875,-2.136719 C 11.140625,46.207031 11,44 11,44 c 0,0 0.126709,-2.026123 0.126709,-2.026123 0,0 0.371338,-1.948486 0.371338,-1.948486 0,0 0.602783,-1.863526 0.602783,-1.863526 0,0 0.821045,-1.77124 0.821045,-1.77124 0,0 1.026123,-1.671631 1.026123,-1.671631 0,0 1.218018,-1.564697 1.218018,-1.564697 0,0 1.396728,-1.45044 1.396728,-1.45044 0,0 1.562256,-1.328857 1.562256,-1.328857 0,0 1.7146,-1.199951 1.7146,-1.199951 0,0 1.853759,-1.063721 1.853759,-1.063721 0,0 1.979737,-0.920166 1.979737,-0.920166 0,0 2.092529,-0.769287 2.092529,-0.769287 0,0 2.192139,-0.611084 2.192139,-0.611084 0,0 2.278564,-0.445557 2.278564,-0.445557 0,0 2.351807,-0.272705 2.351807,-0.272705 C 32.588135,25.092529 35,25 35,25 c 0,0 4.591797,0.277344 4.591797,0.277344 0,0 2.081299,0.342285 2.081299,0.342285 0,0 1.936279,0.474121 1.936279,0.474121 0,0 1.789795,0.603027 1.789795,0.603027 0,0 1.641846,0.729004 1.641846,0.729004 0,0 1.492431,0.852051 1.492431,0.852051 0,0 1.341553,0.972168 1.341553,0.972168 0,0 1.189209,1.089355 1.189209,1.089355 0,0 1.0354,1.203614 1.0354,1.203614 0,0 0.880127,1.314941 0.880127,1.314941 0,0 0.723389,1.42334 0.723389,1.42334 0,0 0.565186,1.528809 0.565186,1.528809 0,0 0.405517,1.631347 0.405517,1.631347 0,0 0.244385,1.730957 0.244385,1.730957 C 54.918213,39.172363 55,41 55,41 c 0,0 -0.125047,2.331689 -0.125047,2.331689 0,0 -0.358463,2.127449 -0.358463,2.127449 0,0 -0.566858,1.934284 -0.566858,1.934284 0,0 -0.750236,1.752194 -0.750236,1.752194 0,0 -0.908595,1.581178 -0.908595,1.581178 0,0 -1.041934,1.421236 -1.041934,1.421236 0,0 -1.150255,1.27237 -1.150255,1.27237 0,0 -1.233557,1.134577 -1.233557,1.134577 0,0 -2.616944,1.900074 -2.616944,1.900074 0,0 -2.649924,1.481798 -2.649924,1.481798 C 43.598187,57.936849 39,60 39,60 c 0,0 -1.801622,0.691568 -1.801622,0.691568 0,0 -1.778253,0.523384 -1.778253,0.523384 0,0 -3.575066,0.840548 -3.575066,0.840548 0,0 -3.747596,1.062798 -3.747596,1.062798 0,0 -1.993914,0.801197 -1.993914,0.801197 C 26.103549,63.919495 24,65 24,65 c 0,0 -1.875,0.96875 -1.875,0.96875 0,0 -1.921875,1.246094 -1.921875,1.246094 C 20.203125,67.214844 18,69 18,69 c 0,0 -2.203125,2.347656 -2.203125,2.347656 0,0 -1.013672,1.39209 -1.013672,1.39209 0,0 -0.908203,1.541504 -0.908203,1.541504 0,0 -0.767578,1.693848 -0.767578,1.693848 0,0 -0.591797,1.849121 -0.591797,1.849121 0,0 -0.380859,2.007324 -0.380859,2.007324 C 12.134766,79.831543 12,82 12,82 c 0,0 0.230469,2.8125 0.230469,2.8125 0,0 0.675781,2.4375 0.675781,2.4375 0,0 1.097656,2.0625 1.097656,2.0625 0,0 1.496094,1.6875 1.496094,1.6875 0,0 1.871094,1.3125 1.871094,1.3125 0,0 2.222656,0.9375 2.222656,0.9375 0,0 2.550781,0.5625 2.550781,0.5625 C 22.144531,93.8125 25,94 25,94 c 0,0 2.8125,-0.183594 2.8125,-0.183594 0,0 2.4375,-0.535156 2.4375,-0.535156 0,0 2.0625,-0.863281 2.0625,-0.863281 0,0 1.6875,-1.167969 1.6875,-1.167969 0,0 1.3125,-1.449219 1.3125,-1.449219 0,0 0.9375,-1.707031 0.9375,-1.707031 0,0 0.5625,-1.941406 0.5625,-1.941406 0,0 0.152459,-1.750108 0.152459,-1.750108 M 9.3830545,41.876189 c 0,0 16.0633195,-0.0048 16.0633195,-0.0048 M 38.072018,22.782694 c 0,0 -2.028513,8.325286 -2.028513,8.325286 m 7.795852,10.606154 c 0,0 12.227897,-0.0073 12.227897,-0.0073 M 1.0928588,83.306257 c 0,0 11.9579962,-0.125775 11.9579962,-0.125775 m 11.99493,9.725735 c 0,0 -1.880777,8.126953 -1.880777,8.126953"
+       d="m 21.185826,60.544067 c 0,0 13.101069,-4.3229 13.101069,-4.3229 C 34.286895,56.221167 31,53 31,53 c 0,0 -2.798206,-2.842247 -2.798206,-2.842247 0,0 -1.192113,-1.376239 -1.192113,-1.376239 0,0 -1.024753,-1.391289 -1.024753,-1.391289 0,0 -0.835369,-1.440067 -0.835369,-1.440067 0,0 -0.623961,-1.522574 -0.623961,-1.522574 0,0 -0.390528,-1.638809 -0.390528,-1.638809 C 24.13507,42.788775 24,41 24,41 c 0,0 0.226562,-2.195313 0.226562,-2.195313 0,0 0.648438,-2.054687 0.648438,-2.054687 0,0 1.023437,-1.867188 1.023437,-1.867188 0,0 1.351563,-1.632812 1.351563,-1.632812 0,0 1.632812,-1.351563 1.632812,-1.351563 0,0 1.867188,-1.023437 1.867188,-1.023437 0,0 2.054687,-0.648438 2.054687,-0.648438 C 32.804687,30.226562 35,30 35,30 c 0,0 2.152344,0.185547 2.152344,0.185547 0,0 1.941406,0.548828 1.941406,0.548828 0,0 1.707031,0.900391 1.707031,0.900391 0,0 1.449219,1.240234 1.449219,1.240234 0,0 1.167969,1.568359 1.167969,1.568359 0,0 0.863281,1.884766 0.863281,1.884766 0,0 0.535156,2.189453 0.535156,2.189453 C 44.816406,38.517578 45,41 45,41 c 0,0 -0.120313,1.81889 -0.120313,1.81889 0,0 -0.340016,1.706238 -0.340016,1.706238 0,0 -0.528332,1.592939 -0.528332,1.592939 0,0 -0.685262,1.47899 -0.685262,1.47899 0,0 -0.810806,1.364395 -0.810806,1.364395 0,0 -0.904964,1.249152 -0.904964,1.249152 0,0 -1.96686,2.149979 -1.96686,2.149979 0,0 -1.966859,1.68123 -1.966859,1.68123 0,0 -1.71577,1.207297 -1.71577,1.207297 0,0 -1.673923,0.972057 -1.673923,0.972057 0,0 -3.702524,1.307589 -3.702524,1.307589 0,0 -3.026654,0.899743 -3.026654,0.899743 0,0 -3.233788,0.990785 -3.233788,0.990785 C 24.323929,59.419284 20,61 20,61 c 0,0 -2.8125,1.171875 -2.8125,1.171875 0,0 -2.882812,1.517578 -2.882812,1.517578 0,0 -3.304688,2.185547 -3.304688,2.185547 0,0 -1.6787109,1.354248 -1.6787109,1.354248 0,0 -1.6259766,1.534424 -1.6259766,1.534424 0,0 -1.5205078,1.718994 -1.5205078,1.718994 0,0 -1.3623047,1.907959 -1.3623047,1.907959 0,0 -1.1513672,2.101318 -1.1513672,2.101318 0,0 -0.8876953,2.299073 -0.8876953,2.299073 0,0 -0.5712891,2.50122 -0.5712891,2.50122 C 2.2021484,79.292236 2,82 2,82 c 0,0 0.1152344,1.850098 0.1152344,1.850098 0,0 0.3378906,1.794433 0.3378906,1.794433 0,0 0.5488281,1.729981 0.5488281,1.729981 0,0 0.7480469,1.656738 0.7480469,1.656738 0,0 0.9355469,1.574707 0.9355469,1.574707 0,0 1.1113281,1.483887 1.1113281,1.483887 0,0 1.2753906,1.384277 1.2753906,1.384277 0,0 1.4277344,1.275879 1.4277344,1.275879 0,0 1.568359,1.158691 1.568359,1.158691 0,0 1.697266,1.032715 1.697266,1.032715 0,0 1.814453,0.897949 1.814453,0.897949 0,0 1.919922,0.754395 1.919922,0.754395 0,0 2.013672,0.602051 2.013672,0.602051 0,0 2.095703,0.440918 2.095703,0.440918 0,0 2.166016,0.270996 2.166016,0.270996 0,0 2.224609,0.0923 2.224609,0.0923 0,0 3.093506,-0.125732 3.093506,-0.125732 0,0 2.904541,-0.366211 2.904541,-0.366211 0,0 2.714111,-0.588867 2.714111,-0.588867 0,0 2.522217,-0.793945 2.522217,-0.793945 0,0 2.328857,-0.981445 2.328857,-0.981445 0,0 2.134034,-1.151368 2.134034,-1.151368 0,0 1.937744,-1.30371 1.937744,-1.30371 0,0 1.73999,-1.438477 1.73999,-1.438477 0,0 1.540771,-1.555664 1.540771,-1.555664 0,0 1.340088,-1.655274 1.340088,-1.655274 0,0 1.13794,-1.737304 1.13794,-1.737304 0,0 0.934326,-1.801758 0.934326,-1.801758 0,0 0.621397,-1.575232 0.621397,-1.575232 M 20,61 c 0,0 -2.109375,-2.207031 -2.109375,-2.207031 0,0 -1.828125,-2.136719 -1.828125,-2.136719 0,0 -1.546875,-2.089844 -1.546875,-2.089844 0,0 -1.265625,-2.066406 -1.265625,-2.066406 0,0 -0.984375,-2.066406 -0.984375,-2.066406 0,0 -0.703125,-2.089844 -0.703125,-2.089844 0,0 -0.421875,-2.136719 -0.421875,-2.136719 C 11.140625,46.207031 11,44 11,44 c 0,0 0.126709,-2.026123 0.126709,-2.026123 0,0 0.371338,-1.948486 0.371338,-1.948486 0,0 0.602783,-1.863526 0.602783,-1.863526 0,0 0.821045,-1.77124 0.821045,-1.77124 0,0 1.026123,-1.671631 1.026123,-1.671631 0,0 1.218018,-1.564697 1.218018,-1.564697 0,0 1.396728,-1.45044 1.396728,-1.45044 0,0 1.562256,-1.328857 1.562256,-1.328857 0,0 1.7146,-1.199951 1.7146,-1.199951 0,0 1.853759,-1.063721 1.853759,-1.063721 0,0 1.979737,-0.920166 1.979737,-0.920166 0,0 2.092529,-0.769287 2.092529,-0.769287 0,0 2.192139,-0.611084 2.192139,-0.611084 0,0 2.278564,-0.445557 2.278564,-0.445557 0,0 2.351807,-0.272705 2.351807,-0.272705 C 32.588135,25.092529 35,25 35,25 c 0,0 4.591797,0.277344 4.591797,0.277344 0,0 2.081299,0.342285 2.081299,0.342285 0,0 1.936279,0.474121 1.936279,0.474121 0,0 1.789795,0.603027 1.789795,0.603027 0,0 1.641846,0.729004 1.641846,0.729004 0,0 1.492431,0.852051 1.492431,0.852051 0,0 1.341553,0.972168 1.341553,0.972168 0,0 1.189209,1.089355 1.189209,1.089355 0,0 1.0354,1.203614 1.0354,1.203614 0,0 0.880127,1.314941 0.880127,1.314941 0,0 0.723389,1.42334 0.723389,1.42334 0,0 0.565186,1.528809 0.565186,1.528809 0,0 0.405517,1.631347 0.405517,1.631347 0,0 0.244385,1.730957 0.244385,1.730957 C 54.918213,39.172363 55,41 55,41 c 0,0 -0.125047,2.331689 -0.125047,2.331689 0,0 -0.358463,2.127449 -0.358463,2.127449 0,0 -0.566858,1.934284 -0.566858,1.934284 0,0 -0.750236,1.752194 -0.750236,1.752194 0,0 -0.908595,1.581178 -0.908595,1.581178 0,0 -1.041934,1.421236 -1.041934,1.421236 0,0 -1.150255,1.27237 -1.150255,1.27237 0,0 -1.233557,1.134577 -1.233557,1.134577 0,0 -2.616944,1.900074 -2.616944,1.900074 0,0 -2.649924,1.481798 -2.649924,1.481798 C 43.598187,57.936849 39,60 39,60 c 0,0 -1.801622,0.691568 -1.801622,0.691568 0,0 -1.778253,0.523384 -1.778253,0.523384 0,0 -3.575066,0.840548 -3.575066,0.840548 0,0 -3.747596,1.062798 -3.747596,1.062798 0,0 -1.993914,0.801197 -1.993914,0.801197 C 26.103549,63.919495 24,65 24,65 c 0,0 -1.875,0.96875 -1.875,0.96875 0,0 -1.921875,1.246094 -1.921875,1.246094 C 20.203125,67.214844 18,69 18,69 c 0,0 -2.203125,2.347656 -2.203125,2.347656 0,0 -1.013672,1.39209 -1.013672,1.39209 0,0 -0.908203,1.541504 -0.908203,1.541504 0,0 -0.767578,1.693848 -0.767578,1.693848 0,0 -0.591797,1.849121 -0.591797,1.849121 0,0 -0.380859,2.007324 -0.380859,2.007324 C 12.134766,79.831543 12,82 12,82 c 0,0 0.230469,2.8125 0.230469,2.8125 0,0 0.675781,2.4375 0.675781,2.4375 0,0 1.097656,2.0625 1.097656,2.0625 0,0 1.496094,1.6875 1.496094,1.6875 0,0 1.871094,1.3125 1.871094,1.3125 0,0 2.222656,0.9375 2.222656,0.9375 0,0 2.550781,0.5625 2.550781,0.5625 C 22.144531,93.8125 25,94 25,94 c 0,0 2.8125,-0.183594 2.8125,-0.183594 0,0 2.4375,-0.535156 2.4375,-0.535156 0,0 2.0625,-0.863281 2.0625,-0.863281 0,0 1.6875,-1.167969 1.6875,-1.167969 0,0 1.3125,-1.449219 1.3125,-1.449219 0,0 0.9375,-1.707031 0.9375,-1.707031 0,0 0.5625,-1.941406 0.5625,-1.941406 0,0 0.152459,-1.750108 0.152459,-1.750108 M 9.3830545,41.876189 c 0,0 16.0633195,-0.0048 16.0633195,-0.0048 M 38.072018,22.782694 c 0,0 -2.028513,8.325286 -2.028513,8.325286 m 7.795852,10.606154 c 0,0 12.227897,-0.0073 12.227897,-0.0073 M 1.0928588,83.306257 c 0,0 11.9579962,-0.125775 11.9579962,-0.125775 m 11.99493,9.725735 c 0,0 -1.880777,8.126953 -1.880777,8.126953"
        inkstitch:satin_column="True"
        inkstitch:ties="0"
        inkstitch:pull_compensation_mm="0.3"
@@ -1826,7 +1881,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 3"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin64"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -1856,7 +1912,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin65"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -1881,7 +1938,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 3"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin66"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -1912,7 +1970,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <g
        id="g9"
        style="fill:none;stroke:#4e2990">
@@ -1924,7 +1983,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkscape:label="AutoSatin Running Stitch 2"
          inkstitch:ties="3"
          inkstitch:min_stitch_length_mm=".5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:running_stitch_tolerance_mm="0.2" />
       <path
          id="autosatin67"
          style="display:inline;fill:none;stroke:#4e2990"
@@ -1965,7 +2025,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 5"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin69"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -1995,7 +2056,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <g
        id="g10"
        style="fill:none;stroke:#4e2990">
@@ -2007,7 +2069,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkscape:label="AutoSatin Running Stitch 2"
          inkstitch:ties="3"
          inkstitch:min_stitch_length_mm=".5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:running_stitch_tolerance_mm="0.2" />
       <path
          id="autosatin70"
          style="display:inline;fill:none;stroke:#4e2990"
@@ -2048,7 +2111,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 5"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin72"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -2078,7 +2142,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        d="M 4.6347621,74.543685 C 10.864791,73.134592 16.873186,70.935787 22.004705,67.039988 28.217182,62.393674 37.208764,60.187884 41.139157,53.149012 l 0.167763,-0.805079 0.03403,-0.85102"
        style="display:inline;fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5"
@@ -2087,7 +2152,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 2"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin73"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -2152,7 +2218,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          id="autosatinrun59"
          inkscape:label="AutoSatin Running Stitch 2"
          inkstitch:min_stitch_length_mm=".5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:running_stitch_tolerance_mm="0.2" />
       <path
          id="autosatin76"
          style="display:inline;fill:none;stroke:#4e2990"
@@ -2187,7 +2254,7 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
     <path
        d="m 43.3511,81.025 0.7664,-6.0462"
        style="fill:none;stroke:#4e2990;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.0"
+       inkstitch:running_stitch_length_mm="2"
        inkstitch:running_stitch_tolerance_mm="0.2"
        id="path68" />
     <path
@@ -2236,7 +2303,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 3"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        d="M 41.939574,74.495871 C 36.619482,72.773197 31.176886,70.971316 27.595943,66.349136 22.107185,62.145275 17.944209,54.699235 10.623451,53.774787 l -0.7572133,0.07623 -0.7514515,0.200309"
        style="fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5"
@@ -2245,7 +2313,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 4"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin80"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -2295,7 +2364,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkscape:label="AutoSatin Running Stitch 1"
          inkstitch:ties="3"
          inkstitch:min_stitch_length_mm=".5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:running_stitch_tolerance_mm="0.2" />
       <path
          id="autosatin82"
          style="display:inline;fill:none;stroke:#4e2990"
@@ -2319,7 +2389,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkscape:label="AutoSatin Running Stitch 3"
          inkstitch:ties="3"
          inkstitch:min_stitch_length_mm=".5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:running_stitch_tolerance_mm="0.2" />
     </g>
     <g
        id="g12"
@@ -2332,7 +2403,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkscape:label="AutoSatin Running Stitch 4"
          inkstitch:ties="3"
          inkstitch:min_stitch_length_mm=".5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:running_stitch_tolerance_mm="0.2" />
       <path
          id="autosatin83"
          style="display:inline;fill:none;stroke:#4e2990"
@@ -2380,7 +2452,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin85"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -2404,7 +2477,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 3"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin86"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -2448,7 +2522,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        id="autosatinrun67"
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin88"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -2468,7 +2543,7 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
     <path
        d="m 36.3388,87.5094 4.6796,10.7144"
        style="fill:none;stroke:#4e2990;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.0"
+       inkstitch:running_stitch_length_mm="2"
        inkstitch:running_stitch_tolerance_mm="0.2"
        id="path69" />
     <path
@@ -2501,7 +2576,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin90"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -2532,7 +2608,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin91"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -2556,7 +2633,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 3"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        d="m 8.6985191,70.887384 c 6.8090529,0.956751 12.4725589,-3.399505 12.6757479,-10.37753 1.815156,-9.770208 -2.760429,-21.003198 3.855909,-29.565476 3.38286,-3.696134 10.152359,-3.822584 13.871766,-0.608789"
        style="fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5"
@@ -2565,7 +2643,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 4"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin92"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -2610,7 +2689,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin94"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -2634,7 +2714,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 3"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        d="M 29.982049,70.245406 C 22.385698,68.733643 20.675684,60.534152 22.948887,54.202779 24.540708,47.274377 28.951098,39.750184 25.624267,32.710173 22.122698,27.349066 12.983458,27.186881 8.7216198,31.543918"
        style="fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5"
@@ -2643,7 +2724,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 4"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin95"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -2689,7 +2771,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin103"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -2713,7 +2796,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 3"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin104"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -2758,7 +2842,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 3"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin106"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -2782,7 +2867,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 5"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin107"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -2828,7 +2914,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin109"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -2856,7 +2943,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkscape:label="AutoSatin Running Stitch 3"
          inkstitch:ties="3"
          inkstitch:min_stitch_length_mm=".5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:running_stitch_tolerance_mm="0.2" />
       <path
          id="autosatin110"
          style="display:inline;fill:none;stroke:#4e2990"
@@ -2899,7 +2987,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 6"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin112"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -2930,7 +3019,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin113"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -2955,7 +3045,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 3"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <g
        id="g14"
        style="fill:none;stroke:#4e2990">
@@ -2967,7 +3058,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkscape:label="AutoSatin Running Stitch 4"
          inkstitch:ties="3"
          inkstitch:min_stitch_length_mm=".5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:running_stitch_tolerance_mm="0.2" />
       <path
          d="m 26.994213,25.650394 c -2.300153,5.278017 -6.572796,9.28361 -10.648934,13.224215 -1.148462,0.874836 -2.463832,1.549157 -3.877538,1.867863"
          style="fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5"
@@ -2976,7 +3068,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkscape:label="AutoSatin Running Stitch 5"
          inkstitch:ties="3"
          inkstitch:min_stitch_length_mm=".5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:running_stitch_tolerance_mm="0.2" />
       <path
          id="autosatin114"
          style="display:inline;fill:none;stroke:#4e2990"
@@ -3041,7 +3134,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin117"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -3068,7 +3162,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkscape:label="AutoSatin Running Stitch 3"
          inkstitch:ties="3"
          inkstitch:min_stitch_length_mm=".5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:running_stitch_tolerance_mm="0.2" />
       <path
          id="autosatin118"
          style="display:inline;fill:none;stroke:#4e2990"
@@ -3111,7 +3206,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 6"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <g
        id="g91"
        style="fill:none;stroke:#4e2990">
@@ -3123,7 +3219,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkscape:label="AutoSatin Running Stitch 7"
          inkstitch:ties="3"
          inkstitch:min_stitch_length_mm=".5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:running_stitch_tolerance_mm="0.2" />
       <path
          id="autosatin120"
          style="display:inline;fill:none;stroke:#4e2990"
@@ -3149,7 +3246,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        id="autosatinrun91"
        inkscape:label="AutoSatin Running Stitch 9"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin121"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -3180,7 +3278,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin122"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -3204,7 +3303,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 3"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin123"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -3235,7 +3335,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin124"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -3260,7 +3361,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 4"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin125"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -3323,7 +3425,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin128"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -3351,7 +3454,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkscape:label="AutoSatin Running Stitch 3"
          inkstitch:ties="3"
          inkstitch:min_stitch_length_mm=".5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:running_stitch_tolerance_mm="0.2" />
       <path
          id="autosatin129"
          style="display:inline;fill:none;stroke:#4e2990"
@@ -3399,7 +3503,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <g
        id="g18"
        style="fill:none;stroke:#4e2990">
@@ -3411,7 +3516,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkscape:label="AutoSatin Running Stitch 2"
          inkstitch:ties="3"
          inkstitch:min_stitch_length_mm=".5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:running_stitch_tolerance_mm="0.2" />
       <path
          id="autosatin131"
          style="display:inline;fill:none;stroke:#4e2990"
@@ -3437,7 +3543,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 4"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin132"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -3468,7 +3575,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin133"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -3496,7 +3604,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkscape:label="AutoSatin Running Stitch 3"
          inkstitch:ties="3"
          inkstitch:min_stitch_length_mm=".5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:running_stitch_tolerance_mm="0.2" />
       <path
          d="m 22.994213,25.650394 c -2.300153,5.278017 -6.572796,9.28361 -10.648934,13.224215 -1.148462,0.874836 -2.4638314,1.549157 -3.8775376,1.867863"
          style="display:inline;fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5"
@@ -3505,7 +3614,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkscape:label="AutoSatin Running Stitch 4"
          inkstitch:ties="3"
          inkstitch:min_stitch_length_mm=".5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:running_stitch_tolerance_mm="0.2" />
       <path
          id="autosatin134"
          style="display:inline;fill:none;stroke:#4e2990"
@@ -3558,7 +3668,7 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
     <path
        d="M 39.9204,39.7509 29.9738,51.4827"
        style="fill:none;stroke:#4e2990;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.0"
+       inkstitch:running_stitch_length_mm="2"
        inkstitch:running_stitch_tolerance_mm="0.2"
        id="path70" />
     <path
@@ -3591,7 +3701,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <g
        id="g20"
        style="fill:none;stroke:#4e2990">
@@ -3603,7 +3714,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkscape:label="AutoSatin Running Stitch 2"
          inkstitch:ties="3"
          inkstitch:min_stitch_length_mm=".5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:running_stitch_tolerance_mm="0.2" />
       <path
          id="autosatin138"
          style="display:inline;fill:none;stroke:#4e2990"
@@ -3629,7 +3741,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 4"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <g
        id="g21"
        style="fill:none;stroke:#4e2990">
@@ -3641,7 +3754,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkscape:label="AutoSatin Running Stitch 5"
          inkstitch:ties="3"
          inkstitch:min_stitch_length_mm=".5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:running_stitch_tolerance_mm="0.2" />
       <path
          id="autosatin139"
          style="display:inline;fill:none;stroke:#4e2990"
@@ -3667,7 +3781,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 7"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin140"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -3698,7 +3813,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <g
        id="g23"
        style="fill:none;stroke:#4e2990">
@@ -3710,7 +3826,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkscape:label="AutoSatin Running Stitch 2"
          inkstitch:ties="3"
          inkstitch:min_stitch_length_mm=".5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:running_stitch_tolerance_mm="0.2" />
       <path
          d="m 13.060667,25.571638 c 4.419962,4.908202 5.211682,13.846451 12.917988,15.048136"
          style="display:inline;fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5"
@@ -3719,7 +3836,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkscape:label="AutoSatin Running Stitch 3"
          inkstitch:ties="3"
          inkstitch:min_stitch_length_mm=".5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:running_stitch_tolerance_mm="0.2" />
       <path
          id="autosatin141"
          style="display:inline;fill:none;stroke:#4e2990"
@@ -3772,7 +3890,7 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
     <path
        d="M -6.23328,40.333 1.95268,51.157"
        style="fill:none;stroke:#4e2990;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.0"
+       inkstitch:running_stitch_length_mm="2"
        inkstitch:running_stitch_tolerance_mm="0.2"
        id="path71" />
     <path
@@ -3805,7 +3923,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 2"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <g
        id="g24"
        style="fill:none;stroke:#4e2990">
@@ -3817,7 +3936,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkscape:label="AutoSatin Running Stitch 3"
          inkstitch:ties="3"
          inkstitch:min_stitch_length_mm=".5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:running_stitch_tolerance_mm="0.2" />
       <path
          id="autosatin145"
          style="display:inline;fill:none;stroke:#4e2990"
@@ -3904,7 +4024,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
        inkstitch:reverse_rails="none"
        inkstitch:min_stitch_length_mm="0.5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:zigzag_underlay_inset_mm="0.2" />
     <g
        id="g26"
        style="fill:none;stroke:#4e2990">
@@ -3937,7 +4058,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkstitch:reverse_rails="none"
          inkstitch:min_stitch_length_mm="0.5"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:pull_compensation_mm="0.3" />
+         inkstitch:pull_compensation_mm="0.3"
+         inkstitch:zigzag_underlay_inset_mm="0.2" />
       <path
          id="autosatin97"
          style="display:inline;fill:none;stroke:#4e2990;stroke-opacity:1"
@@ -3955,7 +4077,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkstitch:reverse_rails="none"
          inkstitch:min_stitch_length_mm="0.5"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:force_lock_stitches="True" />
+         inkstitch:force_lock_stitches="True"
+         inkstitch:zigzag_underlay_inset_mm="0.2" />
     </g>
     <path
        id="autosatin98"
@@ -3973,11 +4096,12 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
        inkstitch:reverse_rails="none"
        inkstitch:min_stitch_length_mm="0.5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:zigzag_underlay_inset_mm="0.2" />
     <path
        d="m 12.4252,42.8664 6.6243,13.0967"
        style="fill:none;stroke:#4e2990;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.0"
+       inkstitch:running_stitch_length_mm="2"
        inkstitch:running_stitch_tolerance_mm="0.2"
        id="path72" />
     <path
@@ -3996,7 +4120,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
        inkstitch:reverse_rails="none"
        inkstitch:min_stitch_length_mm="0.5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:zigzag_underlay_inset_mm="0.2" />
     <path
        d="m 40.579,76.8731 -1.1556,-1.0235 -1.1836,-0.9588 -0.2304,-0.2022 v 0 l -0.9113,-0.7998 -1.1449,-1.0384 -0.747,-0.656 v 0 l -0.3916,-0.344 -1.1444,-1.0352 -1.1463,-1.0416 -0.1093,-0.0861 v 0 l -1.1069,-0.8716 -1.2396,-0.8775 -0.6866,-0.4568 v 0 l -0.5883,-0.3914 -1.242,-0.8756"
        style="display:inline;fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
@@ -4023,7 +4148,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkstitch:reverse_rails="none"
        inkstitch:min_stitch_length_mm="0.5"
        inkstitch:min_jump_stitch_length_mm="3"
-       sodipodi:nodetypes="csccsccccccc" />
+       sodipodi:nodetypes="csccsccccccc"
+       inkstitch:zigzag_underlay_inset_mm="0.2" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -4038,7 +4164,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin154"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -4066,7 +4193,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkscape:label="AutoSatin Running Stitch 3"
          inkstitch:ties="3"
          inkstitch:min_stitch_length_mm=".5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:running_stitch_tolerance_mm="0.2" />
       <path
          id="autosatin155"
          style="display:inline;fill:none;stroke:#4e2990"
@@ -4111,7 +4239,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkscape:label="AutoSatin Running Stitch 6"
          inkstitch:ties="3"
          inkstitch:min_stitch_length_mm=".5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:running_stitch_tolerance_mm="0.2" />
       <path
          id="autosatin157"
          style="display:inline;fill:none;stroke:#4e2990"
@@ -4153,7 +4282,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 9"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin159"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -4184,7 +4314,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin160"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -4209,7 +4340,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 3"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <g
        id="g29"
        style="fill:none;stroke:#4e2990">
@@ -4221,7 +4353,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkscape:label="AutoSatin Running Stitch 4"
          inkstitch:ties="3"
          inkstitch:min_stitch_length_mm=".5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:running_stitch_tolerance_mm="0.2" />
       <path
          id="autosatin161"
          style="display:inline;fill:none;stroke:#4e2990"
@@ -4270,7 +4403,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <g
        id="g31"
        style="fill:none;stroke:#4e2990">
@@ -4282,7 +4416,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkscape:label="AutoSatin Running Stitch 2"
          inkstitch:ties="3"
          inkstitch:min_stitch_length_mm=".5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:running_stitch_tolerance_mm="0.2" />
       <path
          d="m 28.060667,25.571638 c 4.292835,4.857382 5.123738,13.052606 12.202808,15.054977"
          style="display:inline;fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5"
@@ -4291,7 +4426,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkscape:label="AutoSatin Running Stitch 3"
          inkstitch:ties="3"
          inkstitch:min_stitch_length_mm=".5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:running_stitch_tolerance_mm="0.2" />
       <path
          id="autosatin163"
          style="display:inline;fill:none;stroke:#4e2990"
@@ -4333,7 +4469,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        id="autosatinrun129"
        inkscape:label="AutoSatin Running Stitch 6"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin165"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -4358,7 +4495,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 8"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin166"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -4389,7 +4527,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin167"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -4414,7 +4553,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 3"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <g
        id="g32"
        style="fill:none;stroke:#4e2990">
@@ -4426,7 +4566,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkscape:label="AutoSatin Running Stitch 4"
          inkstitch:ties="3"
          inkstitch:min_stitch_length_mm=".5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:running_stitch_tolerance_mm="0.2" />
       <path
          id="autosatin168"
          style="display:inline;fill:none;stroke:#4e2990"
@@ -4455,7 +4596,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkscape:label="AutoSatin Running Stitch 6"
          inkstitch:ties="3"
          inkstitch:min_stitch_length_mm=".5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:running_stitch_tolerance_mm="0.2" />
       <path
          id="autosatin169"
          style="display:inline;fill:none;stroke:#4e2990"
@@ -4503,7 +4645,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin171"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -4527,7 +4670,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        id="autosatinrun136"
        inkscape:label="AutoSatin Running Stitch 3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin172"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -4552,7 +4696,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 5"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin173"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -4594,7 +4739,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkscape:label="AutoSatin Running Stitch 8"
          inkstitch:ties="3"
          inkstitch:min_stitch_length_mm=".5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:running_stitch_tolerance_mm="0.2" />
       <path
          id="autosatin175"
          style="display:inline;fill:none;stroke:#4e2990"
@@ -4639,7 +4785,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkscape:label="AutoSatin Running Stitch 11"
          inkstitch:ties="3"
          inkstitch:min_stitch_length_mm=".5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:running_stitch_tolerance_mm="0.2" />
       <path
          id="autosatin177"
          style="display:inline;fill:none;stroke:#4e2990"
@@ -4687,7 +4834,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <g
        id="g37"
        style="fill:none;stroke:#4e2990">
@@ -4699,7 +4847,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkscape:label="AutoSatin Running Stitch 2"
          inkstitch:ties="3"
          inkstitch:min_stitch_length_mm=".5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:running_stitch_tolerance_mm="0.2" />
       <path
          id="autosatin179"
          style="display:inline;fill:none;stroke:#4e2990"
@@ -4742,7 +4891,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 6"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <g
        id="g36"
        style="fill:none;stroke:#4e2990">
@@ -4754,7 +4904,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkscape:label="AutoSatin Running Stitch 7"
          inkstitch:ties="3"
          inkstitch:min_stitch_length_mm=".5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:running_stitch_tolerance_mm="0.2" />
       <path
          id="autosatin181"
          style="display:inline;fill:none;stroke:#4e2990"
@@ -4802,7 +4953,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin183"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -4827,7 +4979,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 3"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <g
        id="g39"
        style="fill:none;stroke:#4e2990">
@@ -4839,7 +4992,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkscape:label="AutoSatin Running Stitch 5"
          inkstitch:ties="3"
          inkstitch:min_stitch_length_mm=".5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:running_stitch_tolerance_mm="0.2" />
       <path
          id="autosatin184"
          style="display:inline;fill:none;stroke:#4e2990"
@@ -4869,7 +5023,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkscape:label="AutoSatin Running Stitch 4"
          inkstitch:ties="3"
          inkstitch:min_stitch_length_mm=".5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:running_stitch_tolerance_mm="0.2" />
       <path
          id="autosatin185"
          style="display:inline;fill:none;stroke:#4e2990"
@@ -4918,7 +5073,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin187"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -4958,7 +5114,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 4"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin189"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -4989,7 +5146,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin190"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -5009,7 +5167,7 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
     <path
        d="M 33.3496,62.5822 31.0113,67.746"
        style="fill:none;stroke:#4e2990;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.0"
+       inkstitch:running_stitch_length_mm="2"
        inkstitch:running_stitch_tolerance_mm="0.2"
        id="path73" />
     <path
@@ -5036,7 +5194,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 5"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin192"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -5067,7 +5226,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin193"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -5092,7 +5252,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 3"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin194"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -5123,7 +5284,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="Points droits pour auto-remplissage satin 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin101"
        style="display:inline;fill:none;stroke:#4e2990;stroke-opacity:1"
@@ -5140,7 +5302,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
        inkstitch:reverse_rails="none"
        inkstitch:min_stitch_length_mm="0.5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:zigzag_underlay_inset_mm="0.2" />
     <path
        d="m 39.6218,80.2378 1.2327,-4.3646 c -3.9959,-3.1902 -7.6596,-6.831 -12.0579,-9.488"
        style="display:inline;fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
@@ -5149,7 +5312,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin102"
        style="display:inline;fill:none;stroke:#4e2990;stroke-opacity:1"
@@ -5163,7 +5327,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
        inkstitch:reverse_rails="none"
        inkstitch:min_stitch_length_mm="0.5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:zigzag_underlay_inset_mm="0.2" />
     <path
        d="M 44.5177,73.8828 43.2124,70.069 C 43.0512,63.735 38.3571,59.4837 33.6782,56.0707 26.7687,50.4221 18.0603,58.2518 15.1337,64.6874 14.1108,66.4915 13.5571,68.4821 12.9541,70.45"
        style="display:inline;fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
@@ -5172,7 +5337,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="Points droits pour auto-remplissage satin 5"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin148"
        style="display:inline;fill:none;stroke:#4e2990;stroke-opacity:1"
@@ -5189,11 +5355,12 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkstitch:reverse_rails="none"
        inkstitch:min_stitch_length_mm="0.5"
        inkstitch:min_jump_stitch_length_mm="3"
-       inkstitch:ties="0" />
+       inkstitch:ties="0"
+       inkstitch:zigzag_underlay_inset_mm="0.2" />
     <path
        d="m 43.0842,69.993 0.8615,5.6909"
        style="fill:none;stroke:#4e2990;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.0"
+       inkstitch:running_stitch_length_mm="2"
        inkstitch:running_stitch_tolerance_mm="0.2"
        id="path74" />
     <path
@@ -5209,7 +5376,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
        inkstitch:reverse_rails="none"
        inkstitch:min_stitch_length_mm="0.5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:zigzag_underlay_inset_mm="0.2" />
   </g>
   <g
      inkscape:label="GlyphLayer-c"
@@ -5224,7 +5392,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin202"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -5255,7 +5424,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin203"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -5280,7 +5450,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 3"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin204"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -5311,7 +5482,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin205"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -5342,7 +5514,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin206"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -5367,7 +5540,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 3"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        d="m 14.428257,52.5 c 3.813191,-0.607563 8.839812,1.35799 11.997734,-1.329921"
        style="fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5"
@@ -5376,7 +5550,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 4"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin207"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -5401,7 +5576,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 6"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin208"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -5426,7 +5602,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 8"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin209"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -5488,7 +5665,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        id="autosatinrun167"
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin212"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -5511,7 +5689,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        id="autosatinrun168"
        inkscape:label="AutoSatin Running Stitch 3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin213"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -5535,7 +5714,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        id="autosatinrun169"
        inkscape:label="AutoSatin Running Stitch 5"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin214"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -5566,7 +5746,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin215"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -5591,7 +5772,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 3"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin216"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -5611,7 +5793,7 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
     <path
        d="M -1.56012,81.684 12.8005,75.7181"
        style="fill:none;stroke:#4e2990;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.0"
+       inkstitch:running_stitch_length_mm="2"
        inkstitch:running_stitch_tolerance_mm="0.2"
        id="path75" />
     <path
@@ -5644,7 +5826,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <g
        id="g40"
        style="fill:none;stroke:#4e2990">
@@ -5656,7 +5839,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkscape:label="AutoSatin Running Stitch 2"
          inkstitch:ties="3"
          inkstitch:min_stitch_length_mm=".5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:running_stitch_tolerance_mm="0.2" />
       <path
          id="autosatin218"
          style="display:inline;fill:none;stroke:#4e2990"
@@ -5705,7 +5889,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="Points droits pour auto-remplissage satin 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <g
        id="g41"
        style="fill:none;stroke:#4e2990">
@@ -5717,7 +5902,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkscape:label="Points droits pour auto-remplissage satin 2"
          inkstitch:ties="3"
          inkstitch:min_stitch_length_mm=".5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:running_stitch_tolerance_mm="0.2" />
       <path
          id="autosatin364"
          style="display:inline;fill:none;stroke:#4e2990;stroke-opacity:1"
@@ -5734,7 +5920,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkstitch:reverse_rails="none"
          inkstitch:min_stitch_length_mm="0.5"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:force_lock_stitches="True" />
+         inkstitch:force_lock_stitches="True"
+         inkstitch:zigzag_underlay_inset_mm="0.2" />
     </g>
     <path
        d="M 6.23642,52.5072 C 5.9514745,52.318268 4.7938879,51.589468 4.50004,51.414"
@@ -5744,7 +5931,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="Points droits pour auto-remplissage satin 4"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin365"
        style="display:inline;fill:none;stroke:#4e2990;stroke-opacity:1"
@@ -5760,7 +5948,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
        inkstitch:reverse_rails="none"
        inkstitch:min_stitch_length_mm="0.5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:zigzag_underlay_inset_mm="0.2" />
     <path
        d="m -3.05298,100.53 c -9.616653,4.64525 -21.231519,10.02545 -24.022847,21.38828 -2.397432,7.5178 6.899,11.80275 12.720677,8.10012 8.3304334,-3.86073 11.7268383,-12.93249 14.59421015,-20.9925 C 2.8383817,106.0052 5.2452731,102.82366 7.54161,99.5682"
        style="fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
@@ -5769,7 +5958,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="Points droits pour auto-remplissage satin 6"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin366"
        style="display:inline;fill:none;stroke:#4e2990;stroke-opacity:1"
@@ -5785,7 +5975,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
        inkstitch:reverse_rails="none"
        inkstitch:min_stitch_length_mm="0.5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:zigzag_underlay_inset_mm="0.2" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -5800,7 +5991,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin220"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -5824,7 +6016,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 3"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin221"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -5864,7 +6057,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 6"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin223"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -5884,7 +6078,7 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
     <path
        d="m 20.6717,74.0542 -2.869,5.4152"
        style="fill:none;stroke:#4e2990;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.0"
+       inkstitch:running_stitch_length_mm="2"
        inkstitch:running_stitch_tolerance_mm="0.2"
        id="path76" />
     <path
@@ -5916,7 +6110,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin225"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -5947,7 +6142,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin226"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -5972,7 +6168,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 3"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin227"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -5992,7 +6189,7 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
     <path
        d="M -0.308338,73.0194 13.586,73.2528"
        style="fill:none;stroke:#4e2990;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.0"
+       inkstitch:running_stitch_length_mm="2"
        inkstitch:running_stitch_tolerance_mm="0.2"
        id="path77" />
     <path
@@ -6019,7 +6216,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 6"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin229"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -6065,7 +6263,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        id="autosatinrun181"
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin231"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -6089,7 +6288,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        id="autosatinrun182"
        inkscape:label="AutoSatin Running Stitch 3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin232"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -6135,7 +6335,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="Points droits pour auto-remplissage satin 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin150"
        style="display:inline;fill:none;stroke:#4e2990;stroke-opacity:1"
@@ -6152,7 +6353,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkstitch:reverse_rails="none"
        inkstitch:min_stitch_length_mm="0.5"
        inkstitch:min_jump_stitch_length_mm="3"
-       sodipodi:nodetypes="ccccccccccccccccccccccccc" />
+       sodipodi:nodetypes="ccccccccccccccccccccccccc"
+       inkstitch:zigzag_underlay_inset_mm="0.2" />
     <path
        d="M 39.5868,75.6752 C 35.677379,72.379434 31.867016,68.900997 27.4206,66.3256"
        style="display:inline;fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
@@ -6161,7 +6363,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin151"
        style="display:inline;fill:none;stroke:#4e2990;stroke-opacity:1"
@@ -6176,7 +6379,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkstitch:reverse_rails="none"
        inkstitch:min_stitch_length_mm="0.5"
        inkstitch:min_jump_stitch_length_mm="3"
-       sodipodi:nodetypes="cscccccccccc" />
+       sodipodi:nodetypes="cscccccccccc"
+       inkstitch:zigzag_underlay_inset_mm="0.2" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -6191,7 +6395,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="Points droits pour auto-remplissage satin 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin152"
        style="display:inline;fill:none;stroke:#4e2990;stroke-opacity:1"
@@ -6205,7 +6410,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
        inkstitch:reverse_rails="none"
        inkstitch:min_stitch_length_mm="0.5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:zigzag_underlay_inset_mm="0.2" />
     <path
        d="M 11.7423,86.5878 3.93485,90.579 c -1.91942,12.117 -4.42999,24.1487 -5.88237,36.3344 0.080615,3.09352 2.59863,5.39994 5.08724,6.84762"
        style="display:inline;fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
@@ -6214,7 +6420,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin153"
        style="display:inline;fill:none;stroke:#4e2990;stroke-opacity:1"
@@ -6228,7 +6435,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
        inkstitch:reverse_rails="none"
        inkstitch:min_stitch_length_mm="0.5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:zigzag_underlay_inset_mm="0.2" />
     <path
        id="autosatin195"
        style="display:inline;fill:none;stroke:#4e2990;stroke-opacity:1"
@@ -6244,7 +6452,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
        inkstitch:reverse_rails="none"
        inkstitch:min_stitch_length_mm="0.5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:zigzag_underlay_inset_mm="0.2" />
     <path
        d="m 41.8817,80.3286 3.0673,-9.0283 c 1.0397,-7.7325 -5.5776,-12.2742 -11.1298,-15.7956 -6.9143,-4.582 -13.8558,3.1029 -16.7587,8.8876 -0.9053,1.4774 -1.4458,3.1116 -2.0648,4.7179"
        style="display:inline;fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
@@ -6253,7 +6462,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="Points droits pour auto-remplissage satin 6"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin196"
        style="display:inline;fill:none;stroke:#4e2990;stroke-opacity:1"
@@ -6270,7 +6480,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
        inkstitch:reverse_rails="none"
        inkstitch:min_stitch_length_mm="0.5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:zigzag_underlay_inset_mm="0.2" />
     <path
        d="m 44.6697,71.6294 -1.9467,4.619 C 38.9035,72.6021 35.0075,68.9669 30.4838,66.1974"
        style="display:inline;fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
@@ -6279,7 +6490,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="Points droits pour auto-remplissage satin 8"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin197"
        style="display:inline;fill:none;stroke:#4e2990;stroke-opacity:1"
@@ -6294,7 +6506,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
        inkstitch:reverse_rails="none"
        inkstitch:min_stitch_length_mm="0.5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:zigzag_underlay_inset_mm="0.2" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -6309,7 +6522,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin246"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -6333,7 +6547,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 3"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin247"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -6358,7 +6573,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 5"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin248"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -6389,7 +6605,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="Points droits pour auto-remplissage satin 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin198"
        style="display:inline;fill:none;stroke:#4e2990;stroke-opacity:1"
@@ -6404,7 +6621,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
        inkstitch:reverse_rails="none"
        inkstitch:min_stitch_length_mm="0.5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:zigzag_underlay_inset_mm="0.2" />
     <path
        d="M 13.938,75.62 6.70311,75.212 C 7.09287,68.6023 10.9287,61.7474 8.65697,55.2807 7.64716,53.6489 6.06473,52.4752 4.43224,51.5227"
        style="display:inline;fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
@@ -6413,7 +6631,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="Points droits pour auto-remplissage satin 3"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin199"
        style="display:inline;fill:none;stroke:#4e2990;stroke-opacity:1"
@@ -6428,11 +6647,12 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
        inkstitch:reverse_rails="none"
        inkstitch:min_stitch_length_mm="0.5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:zigzag_underlay_inset_mm="0.2" />
     <path
        d="M -1.07391,77.8857 12.5992,76.9338"
        style="fill:none;stroke:#4e2990;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.0"
+       inkstitch:running_stitch_length_mm="2"
        inkstitch:running_stitch_tolerance_mm="0.2"
        id="path78" />
     <path
@@ -6449,7 +6669,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
        inkstitch:reverse_rails="none"
        inkstitch:min_stitch_length_mm="0.5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:zigzag_underlay_inset_mm="0.2" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -6479,7 +6700,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 2"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin253"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -6510,7 +6732,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 2"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin254"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -6535,7 +6758,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 4"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin255"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -6560,7 +6784,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 6"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin256"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -6580,7 +6805,7 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
     <path
        d="m 14.1946,50 4.0225,0.7156"
        style="fill:none;stroke:#4e2990;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.0"
+       inkstitch:running_stitch_length_mm="2"
        inkstitch:running_stitch_tolerance_mm="0.2"
        id="path79" />
     <path
@@ -6602,7 +6827,7 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
     <path
        d="M 10.8061,56.1276 15.2441,55"
        style="fill:none;stroke:#4e2990;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.0"
+       inkstitch:running_stitch_length_mm="2"
        inkstitch:running_stitch_tolerance_mm="0.2"
        id="path80" />
     <path
@@ -6635,7 +6860,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin259"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -6659,7 +6885,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 3"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin260"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -6689,7 +6916,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin359"
        style="display:inline;fill:none;stroke:#4e2990;stroke-opacity:1"
@@ -6714,7 +6942,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 3"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin360"
        style="display:inline;fill:none;stroke:#4e2990;stroke-opacity:1"
@@ -6745,7 +6974,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin361"
        style="display:inline;fill:none;stroke:#4e2990;stroke-opacity:1"
@@ -6770,7 +7000,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 3"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin362"
        style="display:inline;fill:none;stroke:#4e2990;stroke-opacity:1"
@@ -6794,7 +7025,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 5"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin363"
        style="display:inline;fill:none;stroke:#4e2990;stroke-opacity:1"
@@ -6824,7 +7056,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin261"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -6849,7 +7082,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 3"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin262"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -6873,7 +7107,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 5"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin263"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -6893,7 +7128,7 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
     <path
        d="M 21.4769,75.0287 9.83607,80.0202"
        style="fill:none;stroke:#4e2990;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.0"
+       inkstitch:running_stitch_length_mm="2"
        inkstitch:running_stitch_tolerance_mm="0.2"
        id="path81" />
     <path
@@ -6925,7 +7160,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin265"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -6950,7 +7186,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 3"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin266"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -6975,7 +7212,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 5"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin267"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -7006,7 +7244,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin268"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -7031,7 +7270,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 3"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin269"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -7072,7 +7312,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 6"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin271"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -7103,7 +7344,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin272"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -7128,7 +7370,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 3"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin273"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -7153,7 +7396,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 5"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin274"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -7199,7 +7443,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 2"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin276"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -7224,7 +7469,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 4"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin277"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -7244,7 +7490,7 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
     <path
        d="m 23.2802,24.993 2.2435,4.9886"
        style="fill:none;stroke:#4e2990;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.0"
+       inkstitch:running_stitch_length_mm="2"
        inkstitch:running_stitch_tolerance_mm="0.2"
        id="path82" />
     <path
@@ -7286,7 +7532,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 8"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin280"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -7317,7 +7564,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin281"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -7347,7 +7595,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin282"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -7371,7 +7620,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 3"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin283"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -7395,7 +7645,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 5"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin284"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -7425,7 +7676,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        d="M 33.903873,59.703038 C 28.478566,60.179826 22.25274,58.718234 19.720379,53.36143 14.709067,43.865032 21.817624,32.128327 31.309545,28.918713 c 7.241133,-3.035032 18.04698,-1.290596 20.574395,7.181384 2.041731,5.76159 -1.523561,13.97335 -8.445078,13.367153"
        style="fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5"
@@ -7434,7 +7686,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 2"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin285"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -7481,7 +7734,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <g
        id="g42"
        style="fill:none;stroke:#4e2990">
@@ -7493,7 +7747,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkscape:label="AutoSatin Running Stitch 8"
          inkstitch:ties="3"
          inkstitch:min_stitch_length_mm=".5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:running_stitch_tolerance_mm="0.2" />
       <path
          id="path9"
          style="display:inline;fill:none;stroke:#4e2990"
@@ -7515,7 +7770,9 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
     <path
        style="fill:none;stroke:#4e2990;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round"
        d="m 30.9359,27.7539 c 4.65512,0.235702 9.31024,0.471404 13.9654,0.707106"
-       id="path90" />
+       id="path90"
+       inkstitch:running_stitch_length_mm="2"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <g
        id="g43"
        style="fill:none;stroke:#4e2990">
@@ -7527,7 +7784,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkscape:label="AutoSatin Running Stitch 11"
          inkstitch:ties="3"
          inkstitch:min_stitch_length_mm=".5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:running_stitch_tolerance_mm="0.2" />
       <path
          id="path11"
          style="display:inline;fill:none;stroke:#4e2990"
@@ -7551,7 +7809,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        id="path12"
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
-       inkstitch:running_stitch_length_mm="2" />
+       inkstitch:running_stitch_length_mm="2"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="path6"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -7598,7 +7857,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <g
        id="g44"
        style="fill:none;stroke:#4e2990">
@@ -7608,7 +7868,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          id="path33"
          inkstitch:min_stitch_length_mm=".5"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:running_stitch_length_mm="2" />
+         inkstitch:running_stitch_length_mm="2"
+         inkstitch:running_stitch_tolerance_mm="0.2" />
       <path
          d="m 55.053052,18.466169 -7.104,-12.5760004 c -1.536,-2.688 -3.36,-3.84 -7.296,-3.84 -2.496,0 -4.032,0.768 -4.032,0.768 l -12.288,15.6480004 m 30.72,0 c 0,0 -2.016,0.672 -3.552,0.672 -4.32,0 -6.048,-1.056 -7.68,-3.84 l -3.552,-6.0480004 -7.104,7.4880004 c -1.728,1.728 -2.976,2.4 -5.28,2.4 -2.496,0 -3.552,-0.672 -3.552,-0.672 M 53.563339,8.4852814 42.249631,18.915107 M 39.59798,12.551145 41.542523,-2.8284272 M 27.223611,7.601398 36.94633,17.854446"
          id="path32"
@@ -7622,7 +7883,9 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkstitch:max_stitch_length_mm="8"
          inkstitch:zigzag_underlay_max_stitch_length_mm="5"
          inkstitch:ties="0"
-         inkstitch:force_lock_stitches="True" />
+         inkstitch:force_lock_stitches="True"
+         inkstitch:reverse_rails="none"
+         inkstitch:zigzag_underlay_inset_mm="0.2" />
     </g>
     <path
        style="fill:none;stroke:#4e2990;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round"
@@ -7630,7 +7893,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        id="path17"
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
-       inkstitch:running_stitch_length_mm="2" />
+       inkstitch:running_stitch_length_mm="2"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="path21"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -7677,7 +7941,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <g
        id="g46"
        style="fill:none;stroke:#4e2990">
@@ -7688,7 +7953,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkscape:label="path52"
          inkstitch:min_stitch_length_mm=".5"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:running_stitch_length_mm="2" />
+         inkstitch:running_stitch_length_mm="2"
+         inkstitch:running_stitch_tolerance_mm="0.2" />
       <path
          d="m 24.757437,2.6566149 9.696,13.7280001 c 0.96,1.344 2.208,2.4 4.704,2.4 2.4,0 3.648,-0.672 3.648,-0.672 m -18.048,-15.4560001 c 0,0 2.4,-0.96 5.952,-0.96 4.608,0 6.336,1.44 7.488,4.416 l 4.608,12.0000001 M 24.925514,10.429825 31.643029,-1.2374369 M 29.344932,12.551145 40.835417,4.9497475 M 34.825009,19.445437 45.078058,11.313709"
          id="path51"
@@ -7703,7 +7969,9 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkstitch:max_stitch_length_mm="8"
          inkstitch:zigzag_underlay_max_stitch_length_mm="5"
          inkstitch:ties="0"
-         inkstitch:force_lock_stitches="True" />
+         inkstitch:force_lock_stitches="True"
+         inkstitch:reverse_rails="none"
+         inkstitch:zigzag_underlay_inset_mm="0.2" />
     </g>
     <path
        style="display:inline;fill:none;stroke:#4e2990;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round"
@@ -7711,7 +7979,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        id="path37"
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
-       inkstitch:running_stitch_length_mm="2" />
+       inkstitch:running_stitch_length_mm="2"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="path38"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -7758,7 +8027,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <g
        id="g47"
        style="fill:none;stroke:#4e2990">
@@ -7769,7 +8039,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkscape:label="path52"
          inkstitch:min_stitch_length_mm=".5"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:running_stitch_length_mm="2" />
+         inkstitch:running_stitch_length_mm="2"
+         inkstitch:running_stitch_tolerance_mm="0.2" />
       <path
          d="m 45.078058,2.6566149 -9.696,13.7280001 c -0.96,1.344 -2.208,2.4 -4.704,2.4 -2.4,0 -3.648,-0.672 -3.648,-0.672 m 18.048,-15.4560001 c 0,0 -2.4,-0.96 -5.952,-0.96 -4.608,0 -6.336,1.44 -7.488,4.416 l -4.608,12.0000001 M 44.909981,10.429825 38.192466,-1.2374369 M 40.490563,12.551145 29.000078,4.9497475 M 35.010486,19.445437 24.757437,11.313709"
          id="path55"
@@ -7784,7 +8055,9 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
          inkstitch:max_stitch_length_mm="8"
          inkstitch:zigzag_underlay_max_stitch_length_mm="5"
          inkstitch:ties="0"
-         inkstitch:force_lock_stitches="True" />
+         inkstitch:force_lock_stitches="True"
+         inkstitch:reverse_rails="none"
+         inkstitch:zigzag_underlay_inset_mm="0.2" />
     </g>
     <path
        style="display:inline;fill:none;stroke:#4e2990;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round"
@@ -7792,7 +8065,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        id="path56"
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
-       inkstitch:running_stitch_length_mm="2" />
+       inkstitch:running_stitch_length_mm="2"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="path57"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -7839,7 +8113,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin287"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -7863,7 +8138,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 4"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin288"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -7887,7 +8163,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 6"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin289"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -7927,7 +8204,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 9"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin291"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -7946,7 +8224,7 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
     <path
        d="m 33.1838,61.5163 -12.962,0.5754"
        style="fill:none;stroke:#4e2990;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.0"
+       inkstitch:running_stitch_length_mm="2"
        inkstitch:running_stitch_tolerance_mm="0.2"
        id="path83" />
     <path
@@ -7979,7 +8257,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin293"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -8004,7 +8283,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 4"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin294"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -8029,7 +8309,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 6"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin295"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -8076,7 +8357,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin297"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -8101,7 +8383,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 3"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin298"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -8142,7 +8425,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 6"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin300"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -8173,7 +8457,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin301"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -8198,7 +8483,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 3"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin302"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -8229,7 +8515,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin303"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -8253,7 +8540,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 3"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin304"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -8283,7 +8571,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin305"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -8308,7 +8597,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 3"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin306"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -8333,7 +8623,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 5"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin307"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -8380,7 +8671,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin309"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -8405,7 +8697,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 3"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin310"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -8436,7 +8729,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin311"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -8471,7 +8765,7 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
     <path
        d="m 44.6053,98.9588 -0.608,-4.3751"
        style="fill:none;stroke:#4e2990;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.0"
+       inkstitch:running_stitch_length_mm="2"
        inkstitch:running_stitch_tolerance_mm="0.2"
        id="path84" />
     <path
@@ -8534,7 +8828,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin316"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -8558,7 +8853,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 3"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin317"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -8598,7 +8894,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 6"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin319"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -8628,7 +8925,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin320"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -8653,7 +8951,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 3"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin321"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -8684,7 +8983,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin322"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -8709,7 +9009,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 3"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin323"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -8728,7 +9029,7 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
     <path
        d="M 31.4528,75.9473 17.9757,80.9602"
        style="fill:none;stroke:#4e2990;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.0"
+       inkstitch:running_stitch_length_mm="2"
        inkstitch:running_stitch_tolerance_mm="0.2"
        id="path85" />
     <path
@@ -8755,7 +9056,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 6"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin325"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -8786,7 +9088,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin326"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -8811,7 +9114,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 3"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin327"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -8851,7 +9155,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 6"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin329"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -8882,7 +9187,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin330"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -8906,7 +9212,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 3"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin331"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -8930,7 +9237,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 5"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin332"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -8976,7 +9284,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin334"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -9001,7 +9310,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 3"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin335"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -9032,7 +9342,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin336"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -9056,7 +9367,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 4"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin337"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -9080,7 +9392,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 6"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin338"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -9099,7 +9412,7 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
     <path
        d="m 36.4004,24.4929 -3.0061,7.6359"
        style="fill:none;stroke:#4e2990;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.0"
+       inkstitch:running_stitch_length_mm="2"
        inkstitch:running_stitch_tolerance_mm="0.2"
        id="path86" />
     <path
@@ -9131,7 +9444,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin340"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -9156,7 +9470,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 3"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin341"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -9187,7 +9502,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin342"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -9212,7 +9528,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 3"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin343"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -9243,7 +9560,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin344"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -9266,7 +9584,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 3"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin345"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -9291,7 +9610,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 5"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin346"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -9321,7 +9641,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin347"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -9346,7 +9667,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 3"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin348"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -9387,7 +9709,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 6"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin350"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -9407,7 +9730,7 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
     <path
        d="m 38.9475,57.1332 6.7778,4.111"
        style="fill:none;stroke:#4e2990;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.0"
+       inkstitch:running_stitch_length_mm="2"
        inkstitch:running_stitch_tolerance_mm="0.2"
        id="path87" />
     <path
@@ -9440,7 +9763,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 1"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin352"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -9465,7 +9789,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 4"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin353"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -9490,7 +9815,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 6"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin354"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -9521,7 +9847,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 2"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin355"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -9546,7 +9873,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 4"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin356"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -9566,7 +9894,7 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
     <path
        d="m 54.3381,24.0343 0.5014,13.714"
        style="fill:none;stroke:#4e2990;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.0"
+       inkstitch:running_stitch_length_mm="2"
        inkstitch:running_stitch_tolerance_mm="0.2"
        id="path88" />
     <path
@@ -9592,7 +9920,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkscape:label="AutoSatin Running Stitch 7"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:running_stitch_tolerance_mm="0.2" />
     <path
        id="autosatin358"
        style="display:inline;fill:none;stroke:#4e2990"

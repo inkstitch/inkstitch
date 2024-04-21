@@ -21,15 +21,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      showgrid="true"
-     inkscape:zoom="3.4622741"
-     inkscape:cx="113.50921"
-     inkscape:cy="159.72161"
+     inkscape:zoom="2.7657619"
+     inkscape:cx="58.392589"
+     inkscape:cy="179.33575"
      inkscape:window-width="1920"
      inkscape:window-height="991"
      inkscape:window-x="-9"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g1168"
+     inkscape:current-layer="g1160"
      inkscape:document-units="mm"
      inkscape:snap-smooth-nodes="true"
      inkscape:snap-global="false"
@@ -41,69 +41,63 @@
      inkscape:snap-intersection-paths="false"
      inkscape:showpageshadow="2"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:lockguides="true">
-    <sodipodi:guide
-       position="0,250"
-       orientation="0,1"
-       inkscape:label="baseline"
-       id="guide945"
-       inkscape:locked="true" />
+     inkscape:lockguides="false">
     <sodipodi:guide
        position="0,1000"
        orientation="0,1"
        inkscape:label="ascender"
        id="guide947"
-       inkscape:locked="true" />
+       inkscape:locked="false" />
     <sodipodi:guide
        position="0,950"
        orientation="0,1"
        inkscape:label="caps"
        id="guide949"
-       inkscape:locked="true" />
+       inkscape:locked="false" />
     <sodipodi:guide
        position="0,750"
        orientation="0,1"
        inkscape:label="xheight"
        id="guide951"
-       inkscape:locked="true" />
+       inkscape:locked="false" />
     <sodipodi:guide
        position="0,0"
        orientation="0,1"
        inkscape:label="descender"
        id="guide953"
-       inkscape:locked="true" />
+       inkscape:locked="false" />
     <sodipodi:guide
-       position="0,0"
+       position="-5.4234603,5.8401263"
        orientation="0,1"
        inkscape:label="baseline"
        id="guide1074"
-       inkscape:locked="true"
+       inkscape:locked="false"
        inkscape:color="rgb(0,0,255)" />
     <sodipodi:guide
        position="0,160"
        orientation="0,1"
        inkscape:label="ascender"
        id="guide1076"
-       inkscape:locked="true" />
+       inkscape:locked="false" />
     <sodipodi:guide
        position="0,189"
        orientation="0,1"
        inkscape:label="caps"
        id="guide1078"
-       inkscape:locked="true" />
+       inkscape:locked="false" />
     <sodipodi:guide
        position="0,20"
        orientation="0,1"
        inkscape:label="xheight"
        id="guide1080"
-       inkscape:locked="true"
+       inkscape:locked="false"
        inkscape:color="rgb(0,0,255)" />
     <sodipodi:guide
        position="0,40"
        orientation="0,1"
        inkscape:label="decender"
        id="guide1082"
-       inkscape:locked="true" />
+       inkscape:locked="false" />
     <inkscape:grid
        type="xygrid"
        id="grid1461"
@@ -14554,7 +14548,7 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Y"
-     style="display:inline"
+     style="display:none"
      id="g1164">
     <path
        d="m 53,170.254 c -0.0473,-3.91663 0.445532,-7.94412 -1.270411,-11.6068 C 51.152914,156.84818 50.576675,155.04902 50,153.25"
@@ -15238,7 +15232,7 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Z"
-     style="display:none"
+     style="display:inline"
      id="g1160">
     <path
        d="M 20,176.278 V 187.5 h 108 v -29.334"
