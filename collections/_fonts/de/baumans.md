@@ -1,13 +1,13 @@
 ---
 title: "Baumans FI"
 permalink: /de/fonts/baumans/
-last_modified_at: 2022-05-27
+last_modified_at: 2024-04-21
 toc: false
 preview_image:
   - url: /assets/images/fonts/baumans_fi.jpg
     height: 32
   - url: /assets/images/fonts/baumans_FI_small.jpg
-    height: 32
+    height: 10
 ---
 
 {%- assign font = site.data.fonts.baumans_FI.font -%}
