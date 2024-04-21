@@ -40,7 +40,6 @@ Contrairement à Chicken Little KOR, cette fonte diminuée **DOIT** être brodé
 
 
 ## Dans la vraie vie
-De 25% sur le T shirt  à 100% sur le tablier.
 
 {% include folder-galleries path="fonts/chicken_little/" %}
 
