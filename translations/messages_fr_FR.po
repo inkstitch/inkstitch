@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-04-18 01:05+0000\n"
-"PO-Revision-Date: 2024-04-19 01:07\n"
+"PO-Revision-Date: 2024-04-21 01:11\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -2620,7 +2620,7 @@ msgstr "%s densité"
 
 #: lib/extensions/display_stacking_order.py:58
 msgid "Stacking Order"
-msgstr "Ordre d'empilement"
+msgstr "Ordre de broderie"
 
 #: lib/extensions/duplicate_params.py:18
 msgid "This function copies Ink/Stitch parameters from the first selected element to the rest of the selection. Please select at least two elements."
@@ -4615,7 +4615,7 @@ msgstr "Importez tout autre fichier de liste de fils au format txt. Ink/Stitch v
 
 #: inx/inkstitch_apply_threadlist.inx:101
 msgid "https://inkstitch.org/docs/thread-color/#apply-threadlist"
-msgstr "https://inkstitch.org/fr/docs/thread-color/#appliquer-une-liste-de-fils"
+msgstr "https://inkstitch.org/fr/docs/thread-color/#apply-threadlist"
 
 #: inx/inkstitch_auto_run.inx:3 inx/inkstitch_auto_run.inx:24
 msgid "Auto-Route Running Stitch"
@@ -4913,7 +4913,7 @@ msgstr "Taille des marqueurs"
 
 #: inx/inkstitch_display_stacking_order.inx:3
 msgid "Display stacking order"
-msgstr "Montrer l'ordre de broderie"
+msgstr "Afficher l'ordre de broderie"
 
 #: inx/inkstitch_display_stacking_order.inx:14
 msgid "Font size"
@@ -5718,7 +5718,7 @@ msgstr "Cette extension convertit les sauts en points droits."
 
 #: inx/inkstitch_jump_to_stroke.inx:43
 msgid "https://inkstitch.org/docs/stroke-tools/#jump-to-stroke"
-msgstr "https://inkstitch.org/docs/fr/stroke-tools/#jump-to-stroke"
+msgstr "https://inkstitch.org/fr/docs/stroke-tools/#jump-to-stroke"
 
 #: inx/inkstitch_layer_commands.inx:3
 msgid "Add Layer Commands"
@@ -6372,7 +6372,7 @@ msgstr "Réempiler les objets dans l'ordre de leur sélection"
 
 #: inx/inkstitch_select_elements.inx:3
 msgid "Select embroidery elements"
-msgstr "Choisir des éléments de broderie"
+msgstr "Sélectionner des éléments de broderie"
 
 #: inx/inkstitch_select_elements.inx:8
 msgid "Select options"
@@ -6639,7 +6639,7 @@ msgstr "Tartan"
 
 #: inx/inkstitch_test_swatches.inx:3
 msgid "Generate Test Swatches from Selection"
-msgstr "Générer des échantillons à partir de la sélection"
+msgstr "Générer des échantillons de test à partir de la sélection"
 
 #: inx/inkstitch_troubleshoot.inx:3
 msgid "Troubleshoot Objects"
