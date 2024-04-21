@@ -85,10 +85,6 @@ realistic_filter = """
            azimuth="-125"
            elevation="20" />
       </feSpecularLighting>
-      <feGaussianBlur
-         edgeMode="none"
-         stdDeviation="0.2"
-         id="feGaussianBlur1542-7" />
       <feComposite
          in2="SourceAlpha"
          id="feComposite1981"
@@ -217,7 +213,7 @@ def color_block_to_paths(color_block, svg, destination, visual_commands):
             path.set(INKSTITCH_ATTRIBS['stop_after'], 'true')
 
 
-def render_stitch_plan(svg, stitch_plan, realistic=False, visual_commands=True):
+def render_stitch_plan(svg, stitch_plan, realistic=False, visual_commands=True) -> inkex.Group:
     layer = svg.findone(".//*[@id='__inkstitch_stitch_plan__']")
     if layer is None:
         layer = inkex.Group(attrib={
@@ -253,3 +249,5 @@ def render_stitch_plan(svg, stitch_plan, realistic=False, visual_commands=True):
 
         filter_document = inkex.load_svg(realistic_filter)
         svg.defs.append(filter_document.getroot())
+
+    return layer
