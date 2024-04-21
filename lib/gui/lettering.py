@@ -28,12 +28,13 @@ from . import PresetsPanel, PreviewRenderer, info_dialog
 class LetteringPanel(wx.Panel):
     DEFAULT_FONT = "small_font"
 
-    def __init__(self, parent, simulator, group, on_cancel=None, metadata=None):
+    def __init__(self, parent, simulator, group, on_cancel=None, metadata=None, background_color='white'):
         self.parent = parent
         self.simulator = simulator
         self.group = group
         self.cancel_hook = on_cancel
         self.metadata = metadata or dict()
+        self.background_color = background_color
 
         super().__init__(parent, wx.ID_ANY)
 

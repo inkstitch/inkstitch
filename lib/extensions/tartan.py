@@ -13,6 +13,7 @@ from ..gui.simulator import SplitSimulatorWindow
 from ..gui.tartan import TartanMainPanel
 from ..i18n import _
 from ..svg.tags import EMBROIDERABLE_TAGS, INKSTITCH_TARTAN, SVG_GROUP_TAG
+from ..utils.svg_data import get_pagecolor
 from .base import InkstitchExtension
 
 
@@ -58,6 +59,7 @@ class Tartan(InkstitchExtension):
             errormsg(_("To create a tartan pattern please select at least one element with a fill color."))
             return
         metadata = self.get_inkstitch_metadata()
+        background_color = get_pagecolor(self.svg.namedview)
 
         app = wx.App()
         frame = SplitSimulatorWindow(
@@ -66,6 +68,7 @@ class Tartan(InkstitchExtension):
             elements=list(self.elements),
             on_cancel=self.cancel,
             metadata=metadata,
+            background_color=background_color,
             target_duration=1
         )
 

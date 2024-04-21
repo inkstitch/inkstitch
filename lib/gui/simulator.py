@@ -122,7 +122,7 @@ class ControlPanel(wx.Panel):
         self.btnColorChange.SetToolTip(_('Show color changes'))
         self.btnColorChange.SetBitmap(self.load_icon('color_change'))
         self.btnColorChange.Bind(wx.EVT_TOGGLEBUTTON, lambda event: self.on_marker_button('color_change', event))
-        self.btnBackgroundColor = wx.ColourPickerCtrl(self, colour=wx.Colour('white'), size=self.btnJump.GetSize())
+        self.btnBackgroundColor = wx.ColourPickerCtrl(self, -1, colour='white', size=self.btnJump.GetSize())
         self.btnBackgroundColor.SetToolTip(_("Change background color"))
         self.btnBackgroundColor.Bind(wx.EVT_COLOURPICKER_CHANGED, self.on_update_background_color)
         if self.detach_callback:
@@ -154,12 +154,12 @@ class ControlPanel(wx.Panel):
 
         self.show_sizer = wx.StaticBoxSizer(wx.StaticBox(self, wx.ID_ANY, _("Show")), wx.HORIZONTAL)
         self.show_inner_sizer = wx.BoxSizer(wx.HORIZONTAL)
-        self.show_inner_sizer.Add(self.btnNpp, 0, wx.EXPAND | wx.ALL, 2)
+        self.show_inner_sizer.Add(self.btnNpp, 0, wx.ALL, 2)
         self.show_inner_sizer.Add(self.btnJump, 0, wx.ALL, 2)
         self.show_inner_sizer.Add(self.btnTrim, 0, wx.ALL, 2)
         self.show_inner_sizer.Add(self.btnStop, 0, wx.ALL, 2)
         self.show_inner_sizer.Add(self.btnColorChange, 0, wx.ALL, 2)
-        self.show_inner_sizer.Add(self.btnBackgroundColor, 0, wx.ALL, 2)
+        self.show_inner_sizer.Add(self.btnBackgroundColor, 0, wx.EXPAND | wx.ALL, 2)
         if self.detach_callback:
             self.show_inner_sizer.Add(self.btnDetachSimulator, 0, wx.ALL, 2)
         self.show_sizer.Add((1, 1), 1)
@@ -294,7 +294,11 @@ class ControlPanel(wx.Panel):
         self.slider.enable_marker_list(marker_type, event.GetEventObject().GetValue())
 
     def on_update_background_color(self, event):
-        self.drawing_panel.SetBackgroundColour(event.Colour)
+        self.set_background_color(event.Colour)
+
+    def set_background_color(self, color):
+        self.btnBackgroundColor.SetColour(color)
+        self.drawing_panel.SetBackgroundColour(color)
 
     def choose_speed(self):
         if self.target_duration:
@@ -1040,7 +1044,7 @@ class SimulatorSlider(wx.Panel):
 class SimulatorPanel(wx.Panel):
     """"""
 
-    def __init__(self, parent, stitch_plan=None, target_duration=5, stitches_per_second=16, detach_callback=None):
+    def __init__(self, parent, stitch_plan=None, background_color='white', target_duration=5, stitches_per_second=16, detach_callback=None):
         """"""
         super().__init__(parent, style=wx.BORDER_SUNKEN)
 
@@ -1051,6 +1055,7 @@ class SimulatorPanel(wx.Panel):
                                detach_callback=detach_callback)
         self.dp = DrawingPanel(self, stitch_plan=stitch_plan, control_panel=self.cp)
         self.cp.set_drawing_panel(self.dp)
+        self.cp.set_background_color(wx.Colour(background_color))
 
         vbSizer = wx.BoxSizer(wx.VERTICAL)
         vbSizer.Add(self.dp, 1, wx.EXPAND | wx.ALL, 2)
@@ -1074,6 +1079,7 @@ class SimulatorPanel(wx.Panel):
 
 class SimulatorWindow(wx.Frame):
     def __init__(self, panel=None, parent=None, **kwargs):
+        background_color = kwargs.pop('background_color', 'white')
         super().__init__(None, title=_("Embroidery Simulation"), **kwargs)
 
         self.SetWindowStyle(wx.FRAME_FLOAT_ON_PARENT | wx.DEFAULT_FRAME_STYLE)
@@ -1092,7 +1098,7 @@ class SimulatorWindow(wx.Frame):
             self.panel.Show()
         else:
             self.is_child = False
-            self.panel = SimulatorPanel(self)
+            self.panel = SimulatorPanel(self, background_color=background_color)
             self.sizer.Add(self.panel, 1, wx.EXPAND)
 
         self.SetSizer(self.sizer)
@@ -1102,6 +1108,7 @@ class SimulatorWindow(wx.Frame):
 
         if self.is_child:
             self.Bind(wx.EVT_CLOSE, self.on_close)
+            self.Maximize()
 
     def detach_simulator_panel(self):
         self.sizer.Detach(self.panel)
@@ -1124,7 +1131,13 @@ class SplitSimulatorWindow(wx.Frame):
 
         self.detached_simulator_frame = None
         self.splitter = wx.SplitterWindow(self, style=wx.SP_LIVE_UPDATE)
-        self.simulator_panel = SimulatorPanel(self.splitter, target_duration=target_duration, detach_callback=self.toggle_detach_simulator)
+        background_color = kwargs.pop('background_color', 'white')
+        self.simulator_panel = SimulatorPanel(
+            self.splitter,
+            background_color=background_color,
+            target_duration=target_duration,
+            detach_callback=self.toggle_detach_simulator
+        )
         self.settings_panel = panel_class(self.splitter, simulator=self.simulator_panel, **kwargs)
 
         self.splitter.SplitVertically(self.settings_panel, self.simulator_panel)
