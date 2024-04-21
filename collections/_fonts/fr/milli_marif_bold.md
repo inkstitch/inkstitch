@@ -10,7 +10,7 @@ preview_image:
 ---
 {%- assign font = site.data.fonts.milli-marif_bold.font -%}
 
-![Milli_Marif](/assets/images/fonts/milli_marif_bold.jpg)
+![Milli_Marif](/assets/images/fonts/milli_marif.jpg)
 
 ## Glyphes
 
