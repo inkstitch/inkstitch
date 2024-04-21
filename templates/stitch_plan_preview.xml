@@ -24,7 +24,7 @@
     <param name="insensitive" type="boolean" gui-text="Lock"
            gui-description="Make stitch plan insensitive to mouse interactions">false</param>
     <param name="visual-commands" type="boolean" gui-text="Display command symbols">false</param>
-    <param name="realistic" type="boolean" gui-text="Realistic output">false</param>
+    <param name="realistic" type="boolean" gui-text="Realistic rendering">false</param>
     <spacer />
     <separator />
     <spacer />
