@@ -1,11 +1,11 @@
 ---
 title: "Emilio 20"
 permalink: /fr/fonts/emilio-20/
-last_modified_at: 2023-04-25
+last_modified_at: 2024-04-25
 toc: false
 preview_image:
  - url: /assets/images/fonts/emilio_20_simple_small.jpg
-   height: 42
+   height: 17
  - url: /assets/images/fonts/emilio_simple.png
    height: 42
  - url: /assets/images/fonts/emilio_20_bold.png
