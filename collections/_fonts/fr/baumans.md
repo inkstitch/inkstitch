@@ -11,7 +11,7 @@ preview_image:
 ---
 {%- assign font = site.data.fonts.baumans_FI.font -%}
 ![Baumans](/assets/images/fonts/baumans_fi.jpg)
-![Baumans](/assets/images/fonts/baumans_FI_small.jpg)assets/images/fonts/baumans_FI_small
+![Baumans](/assets/images/fonts/baumans_FI_small.jpg)
 ## Glyphes
 
 Cette fonte comporte  {{ font.glyphs.size }} glyphes:
