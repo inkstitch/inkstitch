@@ -267,7 +267,7 @@ Si  l'on souhaite   plutôt réserver 15% à chacune des parties monochromes et 
 **Remarque** Pour une broderie de qualité, il faut aussi ajouter de la  compensation d'étirement pour..... compenser..... l'étirement ! Brodé tel quel les couleurs n'auront pas tout à fait l'air jointives, car les points déforment la broderie. Le plus simple  est d'ajouter un peu  de compensation en mm. 
 {: .notice--info }
 
-  ### Pour un nombre quelconque de couleurs
+### Pour un nombre quelconque de couleurs
 
   Pour un partage en N couleurs, choisir des valeurs positives ou nulles pour les N parties monochromes C1,C2,.....CN et les N-1 parties bicolores C1!2, C2!3, ....CN-1!N. La somme des 2N-1 valeurs doit être 100.
 
