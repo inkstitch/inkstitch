@@ -220,6 +220,7 @@ En supposant que l'on veut repartir les 100% de la largeur de la gauche vers la 
 
 
 Donc si  l'on souhaite   un partage en bleu, blanc rouge avec aucune zone  monochrome, C1,C2 et C3 seront égaux à 0 et C1!2=C2!3=50 et le tableau devient :
+
 |Paramètre |Bleu |Blanc |Rouge |
 | --- | --- |--- |--- |
 | Pourcentage de compensation d'étirement  | 0 -100| -50 -50|-100 0|
@@ -229,6 +230,7 @@ Donc si  l'on souhaite   un partage en bleu, blanc rouge avec aucune zone  monoc
 | Graine aléatoire| identique | identique |identique|
 
 si  l'on souhaite   plutôt réserver 20% à chacune des parties monochromes et partager le reste équitablement, on choisit C1=C2=C3=20 , il reste 40% donc  C1!2=C2!3=20 et le tableau devient :
+
 |Paramètre |Bleu |Blanc |Rouge |
 | --- | --- |--- |--- |
 | Pourcentage de compensation d'étirement  | 0 -80| -40 -40|-80 0|
