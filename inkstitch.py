@@ -111,7 +111,7 @@ if debug_type != 'none':
 # activate logging for svg
 # we need to import only after possible modification of sys.path, we disable here flake8 E402
 from lib.debug import debug  # noqa: E402  # import global variable debug - don't import whole module
-debug.enable()  #  perhaps it would be better to find a more relevant name; in fact, it's about logging and svg creation.
+debug.enable()  # perhaps it would be better to find a more relevant name; in fact, it's about logging and svg creation.
 
 # log startup info
 debug_logging.startup_info(logger, SCRIPTDIR, running_as_frozen, running_from_inkscape, debug_active, debug_type, profiler_type)
