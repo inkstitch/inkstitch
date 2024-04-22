@@ -1108,6 +1108,7 @@ class SimulatorWindow(wx.Frame):
 
         if self.is_child:
             self.Bind(wx.EVT_CLOSE, self.on_close)
+        else:
             self.Maximize()
 
     def detach_simulator_panel(self):
