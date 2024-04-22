@@ -80,7 +80,7 @@ class Clone(EmbroideryElement):
         return elements
 
     def to_stitch_groups(self, last_stitch_group=None) -> List[StitchGroup]:
-        if self.clone:
+        if not self.clone:
             return []
 
         with self.clone_elements() as elements:
