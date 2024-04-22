@@ -3,7 +3,7 @@ title: Multicolor Satin
 permalink: /tutorials/multicolor_satin/
 last_modified_at: 2024-04-17
 language: en
-excerpt: "Simuler des colonnes satin multicolore"
+excerpt: "Simulating multicolor satin collumns"
 image: "assets/images/tutorials/multicolor_satin/snake.jpg"
 tutorial-type:
 stitch-type: 
