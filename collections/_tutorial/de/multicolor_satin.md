@@ -162,7 +162,7 @@ Green satin:
 
 Download [the snake file](/assets/images/tutorials/multicolor_satin/serpent.svg){: download="serpent.svg" }
 
-## We can play with many more than just two colors:
+## We can play with much more than just two colors:
 ## For three colors
 Assuming that we want to distribute 100% of the width from left to right in
 * The first C1 percent in color 1 exclusively
