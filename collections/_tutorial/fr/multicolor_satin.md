@@ -31,7 +31,7 @@ Le paramètre "augmentation aléatoire de la largeur du satin" est un paramètre
 * Quand ce paramètre vaut 50,0, la colonne (en bleu) c'est similaire en échangeant les rôles de la gauche et de la droite.
 * Si l'on superpose les trois colonnes ayant une valeur non nulle pour le paramètre, l'élargissement semble bien aléatoire, les frontières des colonnes sont bien différentes, même si elles sont similaires.
 
-Quelles sont les valeurs que l'on peut saisir dans ce paramètre ? Ink/Stitch accepte ici tout couple de valeurs numériques. Elles peuvent être positives ou nulles, et elles peuvent dépasser la valeur 100. Toutefois, si l'on peut augmenter ainsi les zigs sans limite, la diminution est de facto limitée, au pire le zig serait un simple  point sur la ligne médiane.
+Quelles sont les valeurs que l'on peut saisir dans ce paramètre ? Ink/Stitch accepte ici tout couple de valeurs numériques. Elles peuvent être positives ou nulles, ou négatives et elles peuvent dépasser la valeur 100. Toutefois, si l'on peut augmenter ainsi les zigs sans limite, la diminution est de facto limitée, au pire le zig serait un simple  point sur la ligne médiane.
 
 ![negative augmentation](/assets/images/tutorials/multicolor_satin/negative_augmentation.png)
 
@@ -73,7 +73,7 @@ Cette fois, au lieu de superposer deux colonnes, elles sont posées l'une à cot
 * La colonne orange a pour valeur de la diminution aléatoire 50 0
 * La colonne bleu a pour valeur de la diminution aléatoire -50 0 (c'est donc une augmentation). De plus on a  cocher la case Échanger les rails.
 
-Comme les deux ont la même graine aléatoire et que les modifications dans les deux cas portent sur le même rail, à chaque zig  le calcul donne des valeurs qui assurent l'emboitement parfait.
+Comme les deux ont la même graine aléatoire et que les modifications dans les deux cas portent sur le premier rail, à chaque zig  le calcul donne des valeurs qui assurent l'emboitement parfait.
 
 Malheureusement, cette solution simple ne se généralise pas à de colonnes de forme quelconque. 
 
