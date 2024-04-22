@@ -2,7 +2,7 @@
 title: Multicolor Satin
 permalink: /tutorials/multicolor_satin/
 last_modified_at: 2024-04-17
-language: fr
+language: en
 excerpt: "Simuler des colonnes satin multicolore"
 image: "assets/images/tutorials/multicolor_satin/snake.jpg"
 tutorial-type:
@@ -17,25 +17,25 @@ toc : true
 # Multi-colored satin column Simulation
 
 We are talking simulation here, because it is not a single multicolored satin column, but a similar effect obtained by
-using several superimposed copies of the same satin column, simply using different random parameters.
+using several superimposed copies of the same satin column, simply using different parameters settings.
 
 ## Let's start with a bicolor satin
 Let's come back to the "random" parameters of the satin columns.
 
 ### Random percentage of satin width  increase
 The "Random percentage of satin width  increase" parameter is a so-called asymmetric parameter because it is possible to apply it differently on the two rails. 
-This  parameter accepts either a single value, in which case it is applied to each of the two rails; but also  two space separeted values, in which case the first is applied to the first rail, the second to the second rail.
+This  parameter accepts either a single value,  applied to each of the two rails or  two space separeted values, in which case the first is applied to the first rail, the second to the second rail.
 
 ![random increase_different_seeds](/assets/images/tutorials/multicolor_satin/random_increase_different_seeds.png)
 
 * When this parameter is set to 0, the column (in black) is made up of zig-zags traveling  between the two rails
 * When this parameter is set to 50,  each zig (or zag) of the column (in red) extends to the left and right by a value between 0 and 50% of the length of the zig. The new column is therefore irregularly widened , at most it can be twice as wide as the black one (50% on the left and 50% on the right), it is never narrower.
-* When this parameter is set to 0 50, the left side of the column (in green) is unchanged, but on the right it is extended up to a 50% additional length.
-* When this parameter is set to 50 0, the column (in blue) is similar by swapping the roles of left and right.
+* When this parameter is set to 0 50, the left side of the column (in green) is unchanged, but on the right it extends up to a 50% additional length.
+* When this parameter is set to 50 0, the column (in blue) is similar , just swapping left and right.
 * If we superimpose the three columns having a non-zero value for the parameter, the enlargement seems very random, the borders of the columns are very different, even if they are similar.
 
 What values ​​can be entered in this parameter? Ink/Stitch accepts any pair of numeric values ​​here. 
-They can be positive or null, and they can exceed the value 100. 
+They can be positive, null or  negative and they can exceed the value 100. 
 However, if we can increase the zigs without limit, 
 the reduction is de facto limited, at worst the zig would be a simple point on the center line.
 
@@ -53,7 +53,7 @@ Thanks to any of these two parameters, we already have a first imperfect but ver
 
 ![first_bicolore_satin](/assets/images/tutorials/multicolor_satin/first_bicolor_satin.png)
 
-both examples use "random percentage of width decrease"
+Both examples use "random percentage of width decrease"
 
 * On the left example  the left side of the red column is reduced while  the right side of the green column is reduced. But be careful, the second color superimposes the first and here the green hides part of the red.
 * On the right, we left the red intact, the green is superimposed, its right side reduced by up to  two thirds rather than one half.
@@ -69,7 +69,7 @@ It is also possible to manually give a value to this parameter.
 This is particularly useful when one want several copies of an object that uses random parameters to be in fact perfectly identical. 
 Give them the same random seed value and they will be identical.
 
-If we repeat the first example but this time give all three columns random seeds the same value, here is what we obtain:
+If we repeat the first example but this time give all three columns the same random seed value, we get:
 ![random increase_same_seeds](/assets/images/tutorials/multicolor_satin/random_increase_same_seed.png)
 
 Now when we superimpose the three columns, we see that there is a perfect superposition of the borders. 
@@ -87,7 +87,7 @@ This time, instead of superimposing two columns, they are placed next to each ot
 * The blue column "Random percentage of satin width decrease " is set  -50 0 (so it is an increase).
 * In addition, we have checked the Swap rails box for the blue column
 
-As both have the same random seed and the modifications in both cases concern the same rail, at each zig the calculation gives values ​​which ensure a perfect fit.
+As both have the same random seed and the modifications in both cases concern the first rail, at each zig the calculation gives values ​​which ensure a perfect fit.
 
 Unfortunately, this simple solution does not generalize to columns of any shape.
 
@@ -101,7 +101,7 @@ It is also an asymmetric parameter.
 It is common to give positive values ​​to the compensations, but it is also possible to give them negative values, 
 instead of increasing the width of the satin column, we reduce it.
 
-Here are three example values ​​for the pull compensation percentage parameter, and the result
+Here is the result for  three different values for  the pull compensation percentage parameter:
 ![compensation](/assets/images/tutorials/multicolor_satin/compensation.png)
 
 Here the first rail is the left side of the satin.
@@ -110,14 +110,14 @@ When the parameter is set to  "0 -75" (in green)  the left side is unchanged, bu
 
 When the parameter is set to "-25 -25" (in red) the two edges move closer to the center and the width of the column is uniformly reduced by half.
 
-When the parameter is set to "-75 0" (in blue) we do not touch the right side, but everything lookss as if the left side had been moved to the right to reduce the distance between the two rails to a quarter of the initial value.
+When the parameter is set to "-75 0" (in blue) we do not touch the right side, but everything looks as if the left side had been moved to the right to reduce the distance between the two rails to a quarter of the initial value.
 
 If we superimpose these three columns, we obtain a tricolor snake.
 
 ![tricolor](/assets/images/tutorials/multicolor_satin/tricolor_snake.png)
 
 
-**Note** It is possible to use pull compensation in mm and compensation in percentage on the same satin column. Both parameters are asymmetrical. Both parameters accept negative values.
+**Notice:** It is possible to use pull compensation in mm and compensation in percentage on the same satin column. Both parameters are asymmetrical. Both parameters accept negative values.
 {: .notice--info }
 
 ### General method for bicolor satin column
@@ -125,15 +125,15 @@ If we superimpose these three columns, we obtain a tricolor snake.
 We will use all these parameters together.
 
 If we want to distribute the 100% width of the column into
-* G% on the left exclusively for blue
-* D% on the right exclusively for green
-* and therefore 100-(G+D) percent in the middle for a green-blue mixture,
+* L% on the left exclusively for blue
+* R% on the right exclusively for green
+* and therefore 100-(L+R) percent in the middle for a green-blue mix,
 
 we will use this setting
 
 |Parameter | Blue satin | Green satin |
 | --- | --- |--- |
-| Pull Compensation Percentage | 0 100-G| 0 100-D|
+| Pull Compensation Percentage | 0 100-L| 0 100-R|
 | Swap Rails| no | yes |
 | Random  satin width increase| 0 100-(L+R)| 0 |
 | Random satin width drecrease| 0 | 0 L+R-100|
@@ -149,9 +149,9 @@ Blue satin:
 
 Green satin:
 * Pull compensation percentage: 0 -75
-* Check swap rails
+* Check Swap Rails
 * Random satin width increase: 0
-* Random satin width decreas: 0 -50 (so it will be an increase)
+* Random satin width decrease: 0 -50 (so it will be an increase)
 * Random seed: 7 (or whatever you entered for the other column)
 
 
@@ -268,7 +268,7 @@ Check Swap rails, and invert the two  values ​​in each asymetrical parameter
 * For the first column C(-1) is equal to 0 if we do not want overflow, we can give it a positive value, if we want the first color to overflow to the left.
 * Likewise for the last column C(N+1) will be taken equal to 0 if we do not want the last color to overflow the shape.
 
-And here you havea rainbow.....
+And here you havea r ainbow.....
 
 For this example, the first and last color overflow
 ![ArcEnCiel](/assets/images/tutorials/multicolor_satin/arcenciel.svg)
