@@ -8,12 +8,14 @@ import time
 from threading import Event, Thread
 
 import wx
+from numpy import split
 from wx.lib.intctrl import IntCtrl
 
 from lib.debug import debug
 from lib.utils import get_resource_dir
 from lib.utils.settings import global_settings
 from lib.utils.threading import ExitThread
+
 from ..i18n import _
 from ..svg import PIXELS_PER_MM
 
@@ -122,7 +124,7 @@ class ControlPanel(wx.Panel):
         self.btnColorChange.SetToolTip(_('Show color changes'))
         self.btnColorChange.SetBitmap(self.load_icon('color_change'))
         self.btnColorChange.Bind(wx.EVT_TOGGLEBUTTON, lambda event: self.on_marker_button('color_change', event))
-        self.btnBackgroundColor = wx.ColourPickerCtrl(self, -1, colour='white', size=self.btnJump.GetSize())
+        self.btnBackgroundColor = wx.ColourPickerCtrl(self, -1, colour='white', size=((40, -1)))
         self.btnBackgroundColor.SetToolTip(_("Change background color"))
         self.btnBackgroundColor.Bind(wx.EVT_COLOURPICKER_CHANGED, self.on_update_background_color)
         if self.detach_callback:
@@ -292,6 +294,8 @@ class ControlPanel(wx.Panel):
 
     def on_marker_button(self, marker_type, event):
         self.slider.enable_marker_list(marker_type, event.GetEventObject().GetValue())
+        if marker_type == 'jump':
+            self.drawing_panel.Refresh()
 
     def on_update_background_color(self, event):
         self.set_background_color(event.Colour)
@@ -299,6 +303,7 @@ class ControlPanel(wx.Panel):
     def set_background_color(self, color):
         self.btnBackgroundColor.SetColour(color)
         self.drawing_panel.SetBackgroundColour(color)
+        self.drawing_panel.Refresh()
 
     def choose_speed(self):
         if self.target_duration:
@@ -558,18 +563,18 @@ class DrawingPanel(wx.Panel):
         last_stitch = None
 
         start = time.time()
-        for pen, stitches in zip(self.pens, self.stitch_blocks):
+        for pen, stitches, jumps in zip(self.pens, self.stitch_blocks, self.jumps):
             canvas.SetPen(pen)
             if stitch + len(stitches) < self.current_stitch:
                 stitch += len(stitches)
                 if len(stitches) > 1:
-                    canvas.StrokeLines(stitches)
+                    self.draw_stitch_lines(canvas, pen, stitches, jumps)
                     self.draw_needle_penetration_points(canvas, pen, stitches)
                 last_stitch = stitches[-1]
             else:
                 stitches = stitches[:self.current_stitch - stitch]
                 if len(stitches) > 1:
-                    canvas.StrokeLines(stitches)
+                    self.draw_stitch_lines(canvas, pen, stitches, jumps)
                     self.draw_needle_penetration_points(canvas, pen, stitches)
                 last_stitch = stitches[-1]
                 break
@@ -625,6 +630,16 @@ class DrawingPanel(wx.Panel):
         canvas.DrawText("%s mm" % scale_width_mm, scale_lower_left_x, scale_lower_left_y + 5)
 
         canvas.EndLayer()
+
+    def draw_stitch_lines(self, canvas, pen, stitches, jumps):
+        render_jumps = self.control_panel.btnJump.GetValue()
+        if render_jumps:
+            canvas.StrokeLines(stitches)
+        else:
+            stitch_blocks = split(stitches, jumps)
+            for i, block in enumerate(stitch_blocks):
+                if len(block) > 1:
+                    canvas.StrokeLines(block)
 
     def draw_needle_penetration_points(self, canvas, pen, stitches):
         if self.control_panel.btnNpp.GetValue():
@@ -688,6 +703,7 @@ class DrawingPanel(wx.Panel):
     def parse_stitch_plan(self, stitch_plan):
         self.pens = []
         self.stitch_blocks = []
+        self.jumps = []
 
         # There is no 0th stitch, so add a place-holder.
         self.commands = [None]
@@ -695,12 +711,17 @@ class DrawingPanel(wx.Panel):
         for color_block in stitch_plan:
             pen = self.color_to_pen(color_block.color)
             stitch_block = []
+            jumps = []
+            stitch_index = 0
 
             for stitch in color_block:
                 # trim any whitespace on the left and top and scale to the
                 # pixel density
                 stitch_block.append((self.PIXEL_DENSITY * (stitch.x - self.minx),
                                      self.PIXEL_DENSITY * (stitch.y - self.miny)))
+
+                if stitch.jump:
+                    jumps.append(stitch_index)
 
                 if stitch.trim:
                     self.commands.append(TRIM)
@@ -717,10 +738,16 @@ class DrawingPanel(wx.Panel):
                     self.pens.append(pen)
                     self.stitch_blocks.append(stitch_block)
                     stitch_block = []
+                    self.jumps.append(jumps)
+                    jumps = []
+                    stitch_index = 0
+                else:
+                    stitch_index += 1
 
             if stitch_block:
                 self.pens.append(pen)
                 self.stitch_blocks.append(stitch_block)
+                self.jumps.append(jumps)
 
     def set_speed(self, speed):
         self.speed = speed
