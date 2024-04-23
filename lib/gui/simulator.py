@@ -264,6 +264,7 @@ class ControlPanel(wx.Panel):
         self.totalstitchText.SetLabel("")
 
     def load(self, stitch_plan):
+        self.clear()
         self.stitches = []
         self._set_num_stitches(stitch_plan.num_stitches)
 
@@ -720,13 +721,11 @@ class DrawingPanel(wx.Panel):
                 stitch_block.append((self.PIXEL_DENSITY * (stitch.x - self.minx),
                                      self.PIXEL_DENSITY * (stitch.y - self.miny)))
 
-                if stitch.jump:
-                    jumps.append(stitch_index)
-
                 if stitch.trim:
                     self.commands.append(TRIM)
                 elif stitch.jump:
                     self.commands.append(JUMP)
+                    jumps.append(stitch_index)
                 elif stitch.stop:
                     self.commands.append(STOP)
                 elif stitch.color_change:
