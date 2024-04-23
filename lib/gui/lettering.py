@@ -4,23 +4,20 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 import json
-import os
 from base64 import b64decode
 
-import appdirs
 import inkex
 import wx
 import wx.adv
 import wx.lib.agw.floatspin as fs
 
 from ..elements import nodes_to_elements
-from ..extensions.lettering_custom_font_dir import get_custom_font_dir
 from ..i18n import _
-from ..lettering import Font, FontError
+from ..lettering import FontError, get_font_list
 from ..lettering.categories import FONT_CATEGORIES, FontCategory
 from ..stitch_plan import stitch_groups_to_stitch_plan
 from ..svg.tags import INKSCAPE_LABEL, INKSTITCH_LETTERING, SVG_PATH_TAG
-from ..utils import DotDict, cache, get_bundled_dir
+from ..utils import DotDict, cache
 from ..utils.threading import ExitThread, check_stop_flag
 from . import PresetsPanel, PreviewRenderer, info_dialog
 
@@ -153,26 +150,7 @@ class LetteringPanel(wx.Panel):
     @property
     @cache
     def font_list(self):
-        fonts = []
-        font_paths = {
-            get_bundled_dir("fonts"),
-            os.path.expanduser("~/.inkstitch/fonts"),
-            os.path.join(appdirs.user_config_dir('inkstitch'), 'fonts'),
-            get_custom_font_dir()
-        }
-
-        for font_path in font_paths:
-            try:
-                font_dirs = os.listdir(font_path)
-            except OSError:
-                continue
-
-            for font_dir in font_dirs:
-                font = Font(os.path.join(font_path, font_dir))
-                if font.marked_custom_font_name == "" or font.marked_custom_font_id == "":
-                    continue
-                fonts.append(font)
-        return fonts
+        return get_font_list()
 
     def update_font_list(self):
         self.fonts = {}
