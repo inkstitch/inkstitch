@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-04-22 01:10+0000\n"
-"PO-Revision-Date: 2024-04-22 01:10\n"
+"PO-Revision-Date: 2024-04-23 01:07\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -90,7 +90,7 @@ msgstr "Amitaclo small"
 #. description of font in fonts/amitaclo_small
 #: inkstitch-fonts-metadata.py:24
 msgid "This font is an altered version  of Amitaclo, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory.  parameters of this font allow to scale down the original Amitaclo font between 20% (for a 6 mm font ) and 55 % (for a 16mm font)."
-msgstr ""
+msgstr "Cette police est une version modifiée de Amitaclo pour permettre une réduction plus forte de la taille. L'usage de fil fin (60) et d'une aiguille fine (60) est obligatoire. Le paramétrage modifié de cette  police permet de réduire la police Amitaclo originelle entre 20% (pour une police de 6 mm) et 55% (pour une police de 16 mm)."
 
 #. name of font in fonts/apex_lake
 #: inkstitch-fonts-metadata.py:26
@@ -130,7 +130,7 @@ msgstr "Auberge small"
 #. description of font in fonts/auberge_small
 #: inkstitch-fonts-metadata.py:40
 msgid "This font is an altered version  of Auberge Marif, to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) are mandatory. The altered embroidery parameters of this font allow to scale down the original Auberge Marif font between 20% (for a 7mm font ) and 55 % (for a 20 mm font). "
-msgstr ""
+msgstr "Cette police est une version modifiée d'Auberge Marif pour permettre une réduction plus forte de la taille. L'usage de fil fin (60) et d'une aiguille fine (60) est obligatoire. Le paramétrage modifié de cette  police permet de réduire la police Grand Hotel Marif originelle entre 20% (pour une police de 9 mm) et 55% (pour une police de 20 mm). "
 
 #. name of font in fonts/aventurina
 #: inkstitch-fonts-metadata.py:42
@@ -156,12 +156,12 @@ msgstr "La majuscule M a une largeur de 22.3 millimètres à l'échelle 100 %. P
 #. name of font in fonts/baumans_FI_Small
 #: inkstitch-fonts-metadata.py:50
 msgid "Baumans FI small"
-msgstr ""
+msgstr "Baumans FI small"
 
 #. description of font in fonts/baumans_FI_Small
 #: inkstitch-fonts-metadata.py:52
 msgid "This font is an altered version  of Baumans FI, to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) are mandatory. The altered embroidery parameters of this font allow to scale down the original Baumanns FI font between 15% (for a 7mm font ) and 30 % (for a 14 mm font). "
-msgstr ""
+msgstr "Cette police est une version modifiée de Baumans FI pour permettre une réduction plus forte de la taille. L'usage de fil fin (60) et d'une aiguille fine (60) est obligatoire. Le paramétrage modifié de cette  police permet de réduire la police Baumans FI originelle entre 15% (pour une police de 7 mm) et 30% (pour une police de 14 mm). "
 
 #. name of font in fonts/cherryforinkstitch
 #: inkstitch-fonts-metadata.py:54
@@ -307,17 +307,17 @@ msgstr "Emilio 20 Simple"
 #: inkstitch-fonts-metadata.py:108
 #, python-format
 msgid "Emilio is a font with capital only and numbers. M is 42.5 millimeter wide at 100% scale. Can be scaled down to 50% or up to 140%. Every satin has zigzag underlay"
-msgstr ""
+msgstr "Emilio 20 est une police de majuscules uniquement et de chiffres. Le M a 42,5 millimètres de large à l'échelle 100%. Peut être diminuée jusqu'à 50% et agrandie jusqu'à 140%. Les points satin ont une sous-couche zigzag."
 
 #. name of font in fonts/emilio_20_simple_small
 #: inkstitch-fonts-metadata.py:110
 msgid "Emilio 20 Simple Small"
-msgstr ""
+msgstr "Emilio 20 Simple small"
 
 #. description of font in fonts/emilio_20_simple_small
 #: inkstitch-fonts-metadata.py:112
 msgid "This font is an altered version  of Emilio 20 simple, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory. The altered embroidery parameters of this font allow to scale down the original Emilio 20 Simple font between 15% (for a 8mm font ) and 40 % (for a 20mm font)."
-msgstr ""
+msgstr "Cette police est une version modifiée de Emilio 20 simple pour permettre une réduction plus forte de la taille. L'usage de fil fin (60) et d'une aiguille fine (60) est obligatoire. Le paramétrage modifié de cette  police permet de réduire la police Emilio 20 simple originelle entre 15% (pour une police de 8 mm) et 40% (pour une police de 20 mm)."
 
 #. name of font in fonts/emilio_20_tricolore
 #: inkstitch-fonts-metadata.py:114
@@ -362,12 +362,12 @@ msgstr "Excalibur KOR est une petite police en colonnes satin d'environ 20 mm.
 #. name of font in fonts/excalibur_small
 #: inkstitch-fonts-metadata.py:130
 msgid "Excalibur small"
-msgstr ""
+msgstr "Excalibur small"
 
 #. description of font in fonts/excalibur_small
 #: inkstitch-fonts-metadata.py:132
 msgid "This font is an altered version  of Excalibur KOR, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory. The altered embroidery parameters of this font allow to scale down the original Excalibur KOR font between 25% (for a 5mm font ) and 50 % (for a 10mm font)."
-msgstr ""
+msgstr "Cette police est une version modifiée de Excalibur KOR pour permettre une réduction plus forte de la taille. L'usage de fil fin (60) et d'une aiguille fine (60) est obligatoire. Le paramétrage modifié de cette  police permet de réduire la police Excalibur KOR originelle entre 25% (pour une police de 5 mm) et 55% (pour une police de 11 mm)."
 
 #. name of font in fonts/fold_inkstitch
 #: inkstitch-fonts-metadata.py:134
@@ -407,7 +407,7 @@ msgstr "Glacial Tiny 60 AGS"
 #. description of font in fonts/glacial_tiny
 #: inkstitch-fonts-metadata.py:148
 msgid "Glacial is a very tiny font: at 100%,  M stands at 5.6mm. Thin thread (60 wt ) and thin needle (8/60) are mandatory. The glyphs cover many European languages. It can be reduced down to 50% and enlarged up to 150%."
-msgstr ""
+msgstr "Glacial est une toute toute petite police, le M majuscule mesure 5.6 mm de haut. Du fil fin (60 wt) et une aiguille fine (8/60) sont obligatoires. Les glyphes couvrent de nombreux langages européens. Elle peut être réduite jusqu'à 50% et élargie jusqu'à 150%."
 
 #. name of font in fonts/infinipicto
 #: inkstitch-fonts-metadata.py:150
@@ -464,12 +464,12 @@ msgstr "Magnolia KOR est une police scripte d'environ 20mm. Peut être diminuée
 #. name of font in fonts/magnolia_small
 #: inkstitch-fonts-metadata.py:170
 msgid "Magnolia small"
-msgstr ""
+msgstr "Magnolia small"
 
 #. description of font in fonts/magnolia_small
 #: inkstitch-fonts-metadata.py:172
 msgid "This font is an altered version  of Magnolia KOR, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory. The altered embroidery parameters of this font allow to scale down the original Magnolia KOR font between 25% (for a 5mm font ) and 50 % (for a 10mm font)."
-msgstr ""
+msgstr "Cette police est une version modifiée de Magnolia KOR pour permettre une réduction plus forte de la taille. L'usage de fil fin (60) et d'une aiguille fine (60) est obligatoire. Le paramétrage modifié de cette  police permet de réduire la police Magnolia KOR originelle entre 25% (pour une police de 5 mm) et 50% (pour une police de 10 mm)."
 
 #. name of font in fonts/manuskript_gotisch
 #: inkstitch-fonts-metadata.py:174
