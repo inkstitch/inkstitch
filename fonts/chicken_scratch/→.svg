@@ -23,15 +23,15 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
-     inkscape:zoom="7.1840255"
-     inkscape:cx="22.828427"
-     inkscape:cy="75.166771"
+     inkscape:zoom="2.5399366"
+     inkscape:cx="17.716978"
+     inkscape:cy="56.300618"
      inkscape:window-width="1128"
      inkscape:window-height="742"
      inkscape:window-x="224"
      inkscape:window-y="35"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g732"
+     inkscape:current-layer="g73"
      inkscape:document-units="px"
      showguides="false">
     <sodipodi:guide
@@ -961,7 +961,7 @@ Copyright (c) 2010 Typeco. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-&amp;"
-     style="display:inline"
+     style="display:none"
      id="g732">
     <g
        inkscape:label="Auto-Route"
@@ -7540,40 +7540,748 @@ Copyright (c) 2010 Typeco. All rights reserved.
      inkscape:label="GlyphLayer-‚"
      style="display:none"
      id="g1028">
+    <g
+       id="g11">
+      <path
+         id="path158489"
+         style="display:inline;opacity:1;fill:none;stroke:#000000;stroke-opacity:1"
+         d="m 4.4955168,132.16819 c 4.5954172,-2.69731 8.7912332,-6.69332 8.1918302,-11.68834 -0.599402,-4.99502 -3.7962138,-9.79024 -5.5944205,-11.38864 m -4.9950187,20.67937 c 3.2967124,-2.69731 5.7942217,-5.19481 4.8951183,-9.99003 -0.8991033,-4.79522 -1.2987048,-7.89213 -3.0969115,-9.69034 m -2.4519963,17.23289 5.5357868,5.2951"
+         inkstitch:satin_column="True"
+         inkstitch:pull_compensation_mm="0.4"
+         inkstitch:ties="0"
+         inkstitch:center_walk_underlay="True"
+         inkstitch:min_stitch_length_mm="0.5"
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:lock_start="half_stitch"
+         inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
+         inkstitch:center_walk_underlay_stitch_length_mm="2.5" />
+      <g
+         id="command_group8077"
+         inkscape:label="Commande Ink/Stitch: Trim thread after sewing this object"
+         style="display:inline">
+        <path
+           id="command_connector9830"
+           d="M -3.6431197,81.052151 4.4106857,110.68947"
+           style="fill:none;stroke:#000000;stroke-width:1px;stroke-opacity:0.5"
+           inkscape:connection-start="#command_use9875"
+           inkscape:connection-end="#path158489"
+           inkscape:label="connecteur"
+           inkscape:connector-type="polyline"
+           inkscape:connector-curvature="0" />
+        <use
+           id="command_use9875"
+           xlink:href="#inkstitch_trim"
+           height="100%"
+           width="100%"
+           x="-3.6456997"
+           y="81.016304"
+           inkscape:label="marqueur de commande" />
+      </g>
+    </g>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="GlyphLayer-é"
+     style="display:none"
+     id="g10">
     <path
-       id="path158489"
+       d="m 7.97266,97.8401 c 0.6134825,-7.755444 3.596419,-16.017154 10.03932,-20.748829 3.965683,-1.450517 9.623914,2.089574 9.108246,6.494547 -2.505097,4.553974 -8.023411,6.386496 -12.471326,8.504382"
+       style="opacity:1;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
+       inkstitch:running_stitch_length_mm=""
+       id="path2"
+       inkscape:label="AutoSatin Running Stitch 1"
+       inkstitch:ties="1"
+       inkstitch:min_stitch_length_mm="0.5"
+       inkstitch:min_jump_stitch_length_mm="3" />
+    <path
+       id="path6"
        style="display:inline;opacity:1;fill:none;stroke:#000000;stroke-opacity:1"
-       d="m 4.4955168,132.16819 c 4.5954172,-2.69731 8.7912332,-6.69332 8.1918302,-11.68834 -0.599402,-4.99502 -3.7962138,-9.79024 -5.5944205,-11.38864 m -4.9950187,20.67937 c 3.2967124,-2.69731 5.7942217,-5.19481 4.8951183,-9.99003 -0.8991033,-4.79522 -1.2987048,-7.89213 -3.0969115,-9.69034 m -2.4519963,17.23289 5.5357868,5.2951"
+       d="m 31.3566,105.947 4.9094,9.661 m -17.262,-7.444 -7.9183,12.67 m 2.2171,-17.896 -12.03587,5.226 M 19.9542,81.5588 16.3118,70.6315 m 5.3844,10.9273 5.2261,-9.1852 m -4.1175,9.9771 10.4522,1.4253 m -15.6783,2.6922 3.6424,8.0767 M 15.5199,94.0698 C 23.1215,91.3776 31.9901,86.1515 29.7729,81.0837 27.5558,76.016 20.4293,72.6903 17.5787,73.4821 14.7281,74.274 0.791833,88.3686 6.33467,108.64 c 5.54283,20.27 29.61453,2.85 30.88153,0.95 M 13.7779,90.1106 c 5.3845,-2.5338 11.7191,-5.7012 10.6106,-8.235 -1.1086,-2.5339 -4.751,-3.6425 -8.5518,1.4253 -3.8008,5.0677 -8.2351,19.6371 -2.0588,23.9131 6.1763,4.276 13.3028,6.652 21.8546,-0.633"
        inkstitch:satin_column="True"
+       inkscape:label="AutoSatin 2"
        inkstitch:pull_compensation_mm="0.4"
-       inkstitch:ties="0"
+       inkstitch:ties="2"
        inkstitch:center_walk_underlay="True"
        inkstitch:min_stitch_length_mm="0.5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:lock_start="half_stitch"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:center_walk_underlay_stitch_length_mm="2.5" />
+       inkstitch:center_walk_underlay_stitch_length_mm="2.5"
+       inkstitch:trim_after="True" />
     <g
-       id="command_group8077"
-       inkscape:label="Commande Ink/Stitch: Trim thread after sewing this object"
+       id="g13"
+       style="display:inline"
+       transform="rotate(51.707657,76.17775,105.17764)">
+      <path
+         id="path11"
+         style="display:inline;opacity:1;fill:none;stroke:#000000;stroke-opacity:1"
+         d="m 4.4955168,132.16819 c 4.5954172,-2.69731 8.7912332,-6.69332 8.1918302,-11.68834 -0.599402,-4.99502 -3.7962138,-9.79024 -5.5944205,-11.38864 m -4.9950187,20.67937 c 3.2967124,-2.69731 5.7942217,-5.19481 4.8951183,-9.99003 -0.8991033,-4.79522 -1.2987048,-7.89213 -3.0969115,-9.69034 m -2.4519963,17.23289 5.5357868,5.2951"
+         inkstitch:satin_column="True"
+         inkstitch:pull_compensation_mm="0.4"
+         inkstitch:ties="0"
+         inkstitch:center_walk_underlay="True"
+         inkstitch:min_stitch_length_mm="0.5"
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:lock_start="half_stitch"
+         inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
+         inkstitch:center_walk_underlay_stitch_length_mm="2.5"
+         inkstitch:trim_after="True" />
+    </g>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="GlyphLayer-è"
+     style="display:none"
+     id="g16">
+    <path
+       d="m 7.97266,97.8401 c 0.6134825,-7.755444 3.596419,-16.017154 10.03932,-20.748829 3.965683,-1.450517 9.623914,2.089574 9.108246,6.494547 -2.505097,4.553974 -8.023411,6.386496 -12.471326,8.504382"
+       style="opacity:1;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
+       inkstitch:running_stitch_length_mm=""
+       id="path13"
+       inkscape:label="AutoSatin Running Stitch 1"
+       inkstitch:ties="1"
+       inkstitch:min_stitch_length_mm="0.5"
+       inkstitch:min_jump_stitch_length_mm="3" />
+    <path
+       id="path14"
+       style="display:inline;opacity:1;fill:none;stroke:#000000;stroke-opacity:1"
+       d="m 31.3566,105.947 4.9094,9.661 m -17.262,-7.444 -7.9183,12.67 m 2.2171,-17.896 -12.03587,5.226 M 19.9542,81.5588 16.3118,70.6315 m 5.3844,10.9273 5.2261,-9.1852 m -4.1175,9.9771 10.4522,1.4253 m -15.6783,2.6922 3.6424,8.0767 M 15.5199,94.0698 C 23.1215,91.3776 31.9901,86.1515 29.7729,81.0837 27.5558,76.016 20.4293,72.6903 17.5787,73.4821 14.7281,74.274 0.791833,88.3686 6.33467,108.64 c 5.54283,20.27 29.61453,2.85 30.88153,0.95 M 13.7779,90.1106 c 5.3845,-2.5338 11.7191,-5.7012 10.6106,-8.235 -1.1086,-2.5339 -4.751,-3.6425 -8.5518,1.4253 -3.8008,5.0677 -8.2351,19.6371 -2.0588,23.9131 6.1763,4.276 13.3028,6.652 21.8546,-0.633"
+       inkstitch:satin_column="True"
+       inkscape:label="AutoSatin 2"
+       inkstitch:pull_compensation_mm="0.4"
+       inkstitch:ties="2"
+       inkstitch:center_walk_underlay="True"
+       inkstitch:min_stitch_length_mm="0.5"
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:lock_start="half_stitch"
+       inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
+       inkstitch:center_walk_underlay_stitch_length_mm="2.5"
+       inkstitch:trim_after="True" />
+    <g
+       id="g15"
+       style="display:inline"
+       transform="matrix(-0.619674,0.784859,0.784859,0.619674,-70.651554,-19.787)">
+      <path
+         id="path15"
+         style="display:inline;opacity:1;fill:none;stroke:#000000;stroke-opacity:1"
+         d="m 4.4955168,132.16819 c 4.5954172,-2.69731 8.7912332,-6.69332 8.1918302,-11.68834 -0.599402,-4.99502 -3.7962138,-9.79024 -5.5944205,-11.38864 m -4.9950187,20.67937 c 3.2967124,-2.69731 5.7942217,-5.19481 4.8951183,-9.99003 -0.8991033,-4.79522 -1.2987048,-7.89213 -3.0969115,-9.69034 m -2.4519963,17.23289 5.5357868,5.2951"
+         inkstitch:satin_column="True"
+         inkstitch:pull_compensation_mm="0.4"
+         inkstitch:ties="0"
+         inkstitch:center_walk_underlay="True"
+         inkstitch:min_stitch_length_mm="0.5"
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:lock_start="half_stitch"
+         inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
+         inkstitch:center_walk_underlay_stitch_length_mm="2.5"
+         inkstitch:trim_after="True" />
+    </g>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="GlyphLayer-ê"
+     style="display:none"
+     id="g20">
+    <path
+       d="m 7.97266,97.8401 c 0.6134825,-7.755444 3.596419,-16.017154 10.03932,-20.748829 3.965683,-1.450517 9.623914,2.089574 9.108246,6.494547 -2.505097,4.553974 -8.023411,6.386496 -12.471326,8.504382"
+       style="opacity:1;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
+       inkstitch:running_stitch_length_mm=""
+       id="path16"
+       inkscape:label="AutoSatin Running Stitch 1"
+       inkstitch:ties="1"
+       inkstitch:min_stitch_length_mm="0.5"
+       inkstitch:min_jump_stitch_length_mm="3" />
+    <path
+       id="path18"
+       style="display:inline;opacity:1;fill:none;stroke:#000000;stroke-opacity:1"
+       d="m 31.3566,105.947 4.9094,9.661 m -17.262,-7.444 -7.9183,12.67 m 2.2171,-17.896 -12.03587,5.226 M 19.9542,81.5588 16.3118,70.6315 m 5.3844,10.9273 5.2261,-9.1852 m -4.1175,9.9771 10.4522,1.4253 m -15.6783,2.6922 3.6424,8.0767 M 15.5199,94.0698 C 23.1215,91.3776 31.9901,86.1515 29.7729,81.0837 27.5558,76.016 20.4293,72.6903 17.5787,73.4821 14.7281,74.274 0.791833,88.3686 6.33467,108.64 c 5.54283,20.27 29.61453,2.85 30.88153,0.95 M 13.7779,90.1106 c 5.3845,-2.5338 11.7191,-5.7012 10.6106,-8.235 -1.1086,-2.5339 -4.751,-3.6425 -8.5518,1.4253 -3.8008,5.0677 -8.2351,19.6371 -2.0588,23.9131 6.1763,4.276 13.3028,6.652 21.8546,-0.633"
+       inkstitch:satin_column="True"
+       inkscape:label="AutoSatin 2"
+       inkstitch:pull_compensation_mm="0.4"
+       inkstitch:ties="2"
+       inkstitch:center_walk_underlay="True"
+       inkstitch:min_stitch_length_mm="0.5"
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:lock_start="half_stitch"
+       inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
+       inkstitch:center_walk_underlay_stitch_length_mm="2.5"
+       inkstitch:trim_after="True" />
+    <g
+       id="g19"
+       style="display:inline"
+       transform="matrix(-0.529968,0.784859,0.67124,0.619674,-55.3033,-20.2046)">
+      <path
+         id="path19"
+         style="display:inline;opacity:1;fill:none;stroke:#000000;stroke-opacity:1"
+         d="m 19.384821,112.41136 c -1.557538,5.09582 -4.47105,10.10426 -9.4688425,10.6801 -4.9977914,0.57583 -10.40385418,-1.42122 -12.3758382,-2.79952 m 18.9562277,-9.6565 c -1.858848,3.83255 -3.708759,6.84135 -8.5817358,7.07931 -4.8729762,0.23796 -7.97809428,0.56777 -10.1444363,-0.76417 m 16.1937901,-6.38326 6.434963,4.15623"
+         inkstitch:satin_column="True"
+         inkstitch:pull_compensation_mm="0.4"
+         inkstitch:ties="0"
+         inkstitch:center_walk_underlay="True"
+         inkstitch:min_stitch_length_mm="0.5"
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:lock_start="half_stitch"
+         inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
+         inkstitch:center_walk_underlay_stitch_length_mm="2.5"
+         inkstitch:trim_after="False" />
+      <path
+         id="path23"
+         style="display:inline;opacity:1;fill:none;stroke:#000000;stroke-opacity:1"
+         d="m 0.87619641,117.18975 c 1.79820669,1.5984 4.99501849,6.39362 5.59442049,11.38864 0.599403,4.99502 -3.596413,8.99103 -8.1918302,11.68834 m -0.5994022,-22.07798 c 1.79820671,1.79821 2.19780821,4.89512 3.09691151,9.69034 0.89910339,4.79522 -1.5984059,7.29272 -4.89511831,9.99003 m 4.88199731,2.84762 -5.53578681,-5.2951"
+         inkstitch:satin_column="True"
+         inkstitch:pull_compensation_mm="0.4"
+         inkstitch:ties="0"
+         inkstitch:center_walk_underlay="True"
+         inkstitch:min_stitch_length_mm="0.5"
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:lock_start="half_stitch"
+         inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
+         inkstitch:center_walk_underlay_stitch_length_mm="2.5"
+         inkstitch:trim_after="True"
+         sodipodi:nodetypes="csccsccc" />
+    </g>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="GlyphLayer-ë"
+     style="display:none"
+     id="g31">
+    <path
+       d="m 7.97266,97.8401 c 0.6134825,-7.755444 3.596419,-16.017154 10.03932,-20.748829 3.965683,-1.450517 9.623914,2.089574 9.108246,6.494547 -2.505097,4.553974 -8.023411,6.386496 -12.471326,8.504382"
+       style="opacity:1;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
+       inkstitch:running_stitch_length_mm=""
+       id="path24"
+       inkscape:label="AutoSatin Running Stitch 1"
+       inkstitch:ties="1"
+       inkstitch:min_stitch_length_mm="0.5"
+       inkstitch:min_jump_stitch_length_mm="3" />
+    <path
+       id="path28"
+       style="display:inline;opacity:1;fill:none;stroke:#000000;stroke-opacity:1"
+       d="m 31.3566,105.947 4.9094,9.661 m -17.262,-7.444 -7.9183,12.67 m 2.2171,-17.896 -12.03587,5.226 M 19.9542,81.5588 16.3118,70.6315 m 5.3844,10.9273 5.2261,-9.1852 m -4.1175,9.9771 10.4522,1.4253 m -15.6783,2.6922 3.6424,8.0767 M 15.5199,94.0698 C 23.1215,91.3776 31.9901,86.1515 29.7729,81.0837 27.5558,76.016 20.4293,72.6903 17.5787,73.4821 14.7281,74.274 0.791833,88.3686 6.33467,108.64 c 5.54283,20.27 29.61453,2.85 30.88153,0.95 M 13.7779,90.1106 c 5.3845,-2.5338 11.7191,-5.7012 10.6106,-8.235 -1.1086,-2.5339 -4.751,-3.6425 -8.5518,1.4253 -3.8008,5.0677 -8.2351,19.6371 -2.0588,23.9131 6.1763,4.276 13.3028,6.652 21.8546,-0.633"
+       inkstitch:satin_column="True"
+       inkscape:label="AutoSatin 2"
+       inkstitch:pull_compensation_mm="0.4"
+       inkstitch:ties="2"
+       inkstitch:center_walk_underlay="True"
+       inkstitch:min_stitch_length_mm="0.5"
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:lock_start="half_stitch"
+       inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
+       inkstitch:center_walk_underlay_stitch_length_mm="2.5"
+       inkstitch:trim_after="True" />
+    <g
+       id="g32"
+       transform="translate(0.78742124,4.3308168)">
+      <path
+         id="path31"
+         style="display:inline;opacity:1;fill:none;stroke:#000000;stroke-opacity:1"
+         d="m 8.2590536,58.961488 12.9167694,6.966 m -10.91677,-8.966 12.91677,6.966 m -10.91677,-8.966 12.91677,6.966 m -10.30439,1.815 c 3.12034,0.362 7.11149,-3.338 4.28139,-7.184 m -5.00705,6.676 c -3.33804,-1.96 0.43539,-9.724 4.06369,-7.257"
+         inkstitch:satin_column="True"
+         inkscape:label="AutoSatin 1"
+         inkstitch:ties="0"
+         inkstitch:center_walk_underlay="True"
+         inkstitch:pull_compensation_mm="0.4"
+         inkstitch:min_stitch_length_mm="0.5"
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:lock_start="half_stitch"
+         inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
+         inkstitch:center_walk_underlay_stitch_length_mm="2.5"
+         inkstitch:trim_after="True" />
+      <path
+         id="path32"
+         style="display:inline;opacity:1;fill:none;stroke:#000000;stroke-opacity:1"
+         d="m 21.645215,60.14262 12.916769,6.966 m -10.91677,-8.966 12.91677,6.966 m -10.91677,-8.966 12.91677,6.966 m -10.30439,1.815 c 3.12034,0.362 7.11149,-3.338 4.28139,-7.184 m -5.00705,6.676 c -3.33804,-1.96 0.43539,-9.724 4.06369,-7.257"
+         inkstitch:satin_column="True"
+         inkscape:label="AutoSatin 1"
+         inkstitch:ties="0"
+         inkstitch:center_walk_underlay="True"
+         inkstitch:pull_compensation_mm="0.4"
+         inkstitch:min_stitch_length_mm="0.5"
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:lock_start="half_stitch"
+         inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
+         inkstitch:center_walk_underlay_stitch_length_mm="2.5"
+         inkstitch:trim_after="True" />
+    </g>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="GlyphLayer-É"
+     style="display:none"
+     id="g42">
+    <g
+       id="g44">
+      <path
+         id="path33"
+         style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
+         d="M 5.35762,94.9639 C 5.8311196,93.651169 6.3046193,92.338437 6.7781189,91.025706 M 2.41093,90.6778 C 3.9906539,90.213849 5.5703779,89.749897 7.1501018,89.285946 M 5.68595,95.093 C 4.6071367,93.525233 3.5283233,91.957467 2.44951,90.3897"
+         inkstitch:satin_column="True"
+         inkscape:label="AutoSatin 1"
+         inkstitch:pull_compensation_mm="0.4"
+         inkstitch:ties="1"
+         inkstitch:center_walk_underlay="True"
+         inkstitch:min_stitch_length_mm="0.5"
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:lock_start="half_stitch"
+         inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
+         inkstitch:center_walk_underlay_stitch_length_mm="2.5" />
+      <path
+         d="M 11.0751,90.6509 C 20.447244,87.13466 29.746514,83.254421 38.2737,77.9606"
+         style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
+         inkstitch:running_stitch_length_mm=""
+         id="path34"
+         inkscape:label="AutoSatin Running Stitch 2"
+         inkstitch:ties="3"
+         inkstitch:min_stitch_length_mm="0.5"
+         inkstitch:min_jump_stitch_length_mm="3" />
+      <path
+         id="path35"
+         style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
+         d="M 37.2355,76.7479 C 29.166747,80.644993 20.877613,84.086524 12.418216,87.041648 M 39.7803,78.891 C 31.133935,85.469001 21.04385,90.226829 10.71359,93.492624 m 0.44144,0.1413 c 0.465199,-2.302892 0.930397,-4.605784 1.395596,-6.908676"
+         inkstitch:satin_column="True"
+         inkscape:label="AutoSatin 3"
+         inkstitch:pull_compensation_mm="0.4"
+         inkstitch:ties="3"
+         inkstitch:center_walk_underlay="True"
+         inkstitch:min_stitch_length_mm="0.5"
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:lock_start="half_stitch"
+         inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
+         inkstitch:center_walk_underlay_stitch_length_mm="2.5" />
+      <path
+         d="m 8.90935,92.0297 c -1.0120782,7.038888 -1.3683548,15.47734 4.028239,20.92029 7.055519,6.98344 19.152703,5.00001 25.383811,-2.05799"
+         style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
+         inkstitch:running_stitch_length_mm=""
+         id="path36"
+         inkscape:label="AutoSatin Running Stitch 4"
+         inkstitch:ties="3"
+         inkstitch:min_stitch_length_mm="0.5"
+         inkstitch:min_jump_stitch_length_mm="3" />
+      <path
+         id="path37"
+         style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
+         d="m 39.5125,112.778 c -6.04115,6.32107 -16.327006,10.3496 -24.419826,5.47306 C 8.1327168,114.30273 5.063749,105.8663 5.9280599,98.170353 6.5226929,88.520391 9.9675088,79.255654 14.0638,70.5867 m 23.1717,38.3073 c -5.041645,6.25876 -15.134302,6.93195 -21.605953,2.622 C 10.536986,107.83672 10.608018,100.86208 10.791801,95.212935 11.567223,84.792595 16.962788,75.557642 21.5644,66.4345 m 12.0547,42.1915 c 2.276965,3.21467 4.553935,6.42933 6.8309,9.644 m -15.0013,-8.707 c 0.133933,4.86667 0.267867,9.73333 0.4018,14.6 m -9.2419,-15.135 c -3.125272,3.75033 -6.250538,7.50067 -9.37581,11.251 m 7.09881,-19.02 C 10.759863,100.5893 7.1881267,99.9196 3.61639,99.2499"
+         inkstitch:satin_column="True"
+         inkscape:label="AutoSatin 5"
+         inkstitch:pull_compensation_mm="0.4"
+         inkstitch:ties="3"
+         inkstitch:center_walk_underlay="True"
+         inkstitch:min_stitch_length_mm="0.5"
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:lock_start="half_stitch"
+         inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
+         inkstitch:center_walk_underlay_stitch_length_mm="2.5" />
+      <path
+         d="m 16.4746,65.6814 c -1.908117,1.29874 -3.660601,2.809346 -5.3575,4.3695"
+         style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
+         inkstitch:running_stitch_length_mm=""
+         id="path38"
+         inkscape:label="AutoSatin Running Stitch 6"
+         inkstitch:ties="3"
+         inkstitch:min_stitch_length_mm="0.5"
+         inkstitch:min_jump_stitch_length_mm="3" />
+      <path
+         id="path39"
+         style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
+         d="m 10.0455,68.1757 c 6.514326,-8.202503 17.009023,-12.477257 27.363058,-12.307919 0.611919,-0.01273 1.224,-0.01714 1.836042,-0.01458 M 12.1886,71.9261 C 20.211858,66.20228 29.230415,61.760305 38.8428,59.4696 m -0.2012,0.2658 c 0.146233,-1.328533 0.292467,-2.657067 0.4387,-3.9856"
+         inkstitch:satin_column="True"
+         inkscape:label="AutoSatin 7"
+         inkstitch:pull_compensation_mm="0.4"
+         inkstitch:ties="2"
+         inkstitch:center_walk_underlay="True"
+         inkstitch:min_stitch_length_mm="0.5"
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:lock_start="half_stitch"
+         inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
+         inkstitch:center_walk_underlay_stitch_length_mm="2.5"
+         inkstitch:trim_after="True" />
+    </g>
+    <g
+       id="g45"
+       style="display:inline"
+       transform="rotate(51.707657,97.792575,104.23457)">
+      <path
+         id="path44"
+         style="display:inline;opacity:1;fill:none;stroke:#000000;stroke-opacity:1"
+         d="m 4.4955168,132.16819 c 4.5954172,-2.69731 8.7912332,-6.69332 8.1918302,-11.68834 -0.599402,-4.99502 -3.7962138,-9.79024 -5.5944205,-11.38864 m -4.9950187,20.67937 c 3.2967124,-2.69731 5.7942217,-5.19481 4.8951183,-9.99003 -0.8991033,-4.79522 -1.2987048,-7.89213 -3.0969115,-9.69034 m -2.4519963,17.23289 5.5357868,5.2951"
+         inkstitch:satin_column="True"
+         inkstitch:pull_compensation_mm="0.4"
+         inkstitch:ties="0"
+         inkstitch:center_walk_underlay="True"
+         inkstitch:min_stitch_length_mm="0.5"
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:lock_start="half_stitch"
+         inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
+         inkstitch:center_walk_underlay_stitch_length_mm="2.5"
+         inkstitch:trim_after="True" />
+    </g>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="GlyphLayer-È"
+     style="display:none"
+     id="g53">
+    <g
+       id="g51">
+      <path
+         id="path45"
+         style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
+         d="M 5.35762,94.9639 C 5.8311196,93.651169 6.3046193,92.338437 6.7781189,91.025706 M 2.41093,90.6778 C 3.9906539,90.213849 5.5703779,89.749897 7.1501018,89.285946 M 5.68595,95.093 C 4.6071367,93.525233 3.5283233,91.957467 2.44951,90.3897"
+         inkstitch:satin_column="True"
+         inkscape:label="AutoSatin 1"
+         inkstitch:pull_compensation_mm="0.4"
+         inkstitch:ties="1"
+         inkstitch:center_walk_underlay="True"
+         inkstitch:min_stitch_length_mm="0.5"
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:lock_start="half_stitch"
+         inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
+         inkstitch:center_walk_underlay_stitch_length_mm="2.5" />
+      <path
+         d="M 11.0751,90.6509 C 20.447244,87.13466 29.746514,83.254421 38.2737,77.9606"
+         style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
+         inkstitch:running_stitch_length_mm=""
+         id="path46"
+         inkscape:label="AutoSatin Running Stitch 2"
+         inkstitch:ties="3"
+         inkstitch:min_stitch_length_mm="0.5"
+         inkstitch:min_jump_stitch_length_mm="3" />
+      <path
+         id="path47"
+         style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
+         d="M 37.2355,76.7479 C 29.166747,80.644993 20.877613,84.086524 12.418216,87.041648 M 39.7803,78.891 C 31.133935,85.469001 21.04385,90.226829 10.71359,93.492624 m 0.44144,0.1413 c 0.465199,-2.302892 0.930397,-4.605784 1.395596,-6.908676"
+         inkstitch:satin_column="True"
+         inkscape:label="AutoSatin 3"
+         inkstitch:pull_compensation_mm="0.4"
+         inkstitch:ties="3"
+         inkstitch:center_walk_underlay="True"
+         inkstitch:min_stitch_length_mm="0.5"
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:lock_start="half_stitch"
+         inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
+         inkstitch:center_walk_underlay_stitch_length_mm="2.5" />
+      <path
+         d="m 8.90935,92.0297 c -1.0120782,7.038888 -1.3683548,15.47734 4.028239,20.92029 7.055519,6.98344 19.152703,5.00001 25.383811,-2.05799"
+         style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
+         inkstitch:running_stitch_length_mm=""
+         id="path48"
+         inkscape:label="AutoSatin Running Stitch 4"
+         inkstitch:ties="3"
+         inkstitch:min_stitch_length_mm="0.5"
+         inkstitch:min_jump_stitch_length_mm="3" />
+      <path
+         id="path49"
+         style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
+         d="m 39.5125,112.778 c -6.04115,6.32107 -16.327006,10.3496 -24.419826,5.47306 C 8.1327168,114.30273 5.063749,105.8663 5.9280599,98.170353 6.5226929,88.520391 9.9675088,79.255654 14.0638,70.5867 m 23.1717,38.3073 c -5.041645,6.25876 -15.134302,6.93195 -21.605953,2.622 C 10.536986,107.83672 10.608018,100.86208 10.791801,95.212935 11.567223,84.792595 16.962788,75.557642 21.5644,66.4345 m 12.0547,42.1915 c 2.276965,3.21467 4.553935,6.42933 6.8309,9.644 m -15.0013,-8.707 c 0.133933,4.86667 0.267867,9.73333 0.4018,14.6 m -9.2419,-15.135 c -3.125272,3.75033 -6.250538,7.50067 -9.37581,11.251 m 7.09881,-19.02 C 10.759863,100.5893 7.1881267,99.9196 3.61639,99.2499"
+         inkstitch:satin_column="True"
+         inkscape:label="AutoSatin 5"
+         inkstitch:pull_compensation_mm="0.4"
+         inkstitch:ties="3"
+         inkstitch:center_walk_underlay="True"
+         inkstitch:min_stitch_length_mm="0.5"
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:lock_start="half_stitch"
+         inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
+         inkstitch:center_walk_underlay_stitch_length_mm="2.5" />
+      <path
+         d="m 16.4746,65.6814 c -1.908117,1.29874 -3.660601,2.809346 -5.3575,4.3695"
+         style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
+         inkstitch:running_stitch_length_mm=""
+         id="path50"
+         inkscape:label="AutoSatin Running Stitch 6"
+         inkstitch:ties="3"
+         inkstitch:min_stitch_length_mm="0.5"
+         inkstitch:min_jump_stitch_length_mm="3" />
+      <path
+         id="path51"
+         style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
+         d="m 10.0455,68.1757 c 6.514326,-8.202503 17.009023,-12.477257 27.363058,-12.307919 0.611919,-0.01273 1.224,-0.01714 1.836042,-0.01458 M 12.1886,71.9261 C 20.211858,66.20228 29.230415,61.760305 38.8428,59.4696 m -0.2012,0.2658 c 0.146233,-1.328533 0.292467,-2.657067 0.4387,-3.9856"
+         inkstitch:satin_column="True"
+         inkscape:label="AutoSatin 7"
+         inkstitch:pull_compensation_mm="0.4"
+         inkstitch:ties="2"
+         inkstitch:center_walk_underlay="True"
+         inkstitch:min_stitch_length_mm="0.5"
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:lock_start="half_stitch"
+         inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
+         inkstitch:center_walk_underlay_stitch_length_mm="2.5"
+         inkstitch:trim_after="True" />
+    </g>
+    <g
+       id="g52"
+       style="display:inline"
+       transform="matrix(-0.61967415,0.78485919,0.78485919,0.61967415,-63.171094,-37.1103)">
+      <path
+         id="path52"
+         style="display:inline;opacity:1;fill:none;stroke:#000000;stroke-opacity:1"
+         d="m 4.4955168,132.16819 c 4.5954172,-2.69731 8.7912332,-6.69332 8.1918302,-11.68834 -0.599402,-4.99502 -3.7962138,-9.79024 -5.5944205,-11.38864 m -4.9950187,20.67937 c 3.2967124,-2.69731 5.7942217,-5.19481 4.8951183,-9.99003 -0.8991033,-4.79522 -1.2987048,-7.89213 -3.0969115,-9.69034 m -2.4519963,17.23289 5.5357868,5.2951"
+         inkstitch:satin_column="True"
+         inkstitch:pull_compensation_mm="0.4"
+         inkstitch:ties="0"
+         inkstitch:center_walk_underlay="True"
+         inkstitch:min_stitch_length_mm="0.5"
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:lock_start="half_stitch"
+         inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
+         inkstitch:center_walk_underlay_stitch_length_mm="2.5"
+         inkstitch:trim_after="True" />
+    </g>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="GlyphLayer-Ê"
+     style="display:none"
+     id="g62">
+    <g
+       id="g60">
+      <path
+         id="path53"
+         style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
+         d="M 5.35762,94.9639 C 5.8311196,93.651169 6.3046193,92.338437 6.7781189,91.025706 M 2.41093,90.6778 C 3.9906539,90.213849 5.5703779,89.749897 7.1501018,89.285946 M 5.68595,95.093 C 4.6071367,93.525233 3.5283233,91.957467 2.44951,90.3897"
+         inkstitch:satin_column="True"
+         inkscape:label="AutoSatin 1"
+         inkstitch:pull_compensation_mm="0.4"
+         inkstitch:ties="1"
+         inkstitch:center_walk_underlay="True"
+         inkstitch:min_stitch_length_mm="0.5"
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:lock_start="half_stitch"
+         inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
+         inkstitch:center_walk_underlay_stitch_length_mm="2.5" />
+      <path
+         d="M 11.0751,90.6509 C 20.447244,87.13466 29.746514,83.254421 38.2737,77.9606"
+         style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
+         inkstitch:running_stitch_length_mm=""
+         id="path54"
+         inkscape:label="AutoSatin Running Stitch 2"
+         inkstitch:ties="3"
+         inkstitch:min_stitch_length_mm="0.5"
+         inkstitch:min_jump_stitch_length_mm="3" />
+      <path
+         id="path55"
+         style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
+         d="M 37.2355,76.7479 C 29.166747,80.644993 20.877613,84.086524 12.418216,87.041648 M 39.7803,78.891 C 31.133935,85.469001 21.04385,90.226829 10.71359,93.492624 m 0.44144,0.1413 c 0.465199,-2.302892 0.930397,-4.605784 1.395596,-6.908676"
+         inkstitch:satin_column="True"
+         inkscape:label="AutoSatin 3"
+         inkstitch:pull_compensation_mm="0.4"
+         inkstitch:ties="3"
+         inkstitch:center_walk_underlay="True"
+         inkstitch:min_stitch_length_mm="0.5"
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:lock_start="half_stitch"
+         inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
+         inkstitch:center_walk_underlay_stitch_length_mm="2.5" />
+      <path
+         d="m 8.90935,92.0297 c -1.0120782,7.038888 -1.3683548,15.47734 4.028239,20.92029 7.055519,6.98344 19.152703,5.00001 25.383811,-2.05799"
+         style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
+         inkstitch:running_stitch_length_mm=""
+         id="path57"
+         inkscape:label="AutoSatin Running Stitch 4"
+         inkstitch:ties="3"
+         inkstitch:min_stitch_length_mm="0.5"
+         inkstitch:min_jump_stitch_length_mm="3" />
+      <path
+         id="path58"
+         style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
+         d="m 39.5125,112.778 c -6.04115,6.32107 -16.327006,10.3496 -24.419826,5.47306 C 8.1327168,114.30273 5.063749,105.8663 5.9280599,98.170353 6.5226929,88.520391 9.9675088,79.255654 14.0638,70.5867 m 23.1717,38.3073 c -5.041645,6.25876 -15.134302,6.93195 -21.605953,2.622 C 10.536986,107.83672 10.608018,100.86208 10.791801,95.212935 11.567223,84.792595 16.962788,75.557642 21.5644,66.4345 m 12.0547,42.1915 c 2.276965,3.21467 4.553935,6.42933 6.8309,9.644 m -15.0013,-8.707 c 0.133933,4.86667 0.267867,9.73333 0.4018,14.6 m -9.2419,-15.135 c -3.125272,3.75033 -6.250538,7.50067 -9.37581,11.251 m 7.09881,-19.02 C 10.759863,100.5893 7.1881267,99.9196 3.61639,99.2499"
+         inkstitch:satin_column="True"
+         inkscape:label="AutoSatin 5"
+         inkstitch:pull_compensation_mm="0.4"
+         inkstitch:ties="3"
+         inkstitch:center_walk_underlay="True"
+         inkstitch:min_stitch_length_mm="0.5"
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:lock_start="half_stitch"
+         inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
+         inkstitch:center_walk_underlay_stitch_length_mm="2.5" />
+      <path
+         d="m 16.4746,65.6814 c -1.908117,1.29874 -3.660601,2.809346 -5.3575,4.3695"
+         style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
+         inkstitch:running_stitch_length_mm=""
+         id="path59"
+         inkscape:label="AutoSatin Running Stitch 6"
+         inkstitch:ties="3"
+         inkstitch:min_stitch_length_mm="0.5"
+         inkstitch:min_jump_stitch_length_mm="3" />
+      <path
+         id="path60"
+         style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
+         d="m 10.0455,68.1757 c 6.514326,-8.202503 17.009023,-12.477257 27.363058,-12.307919 0.611919,-0.01273 1.224,-0.01714 1.836042,-0.01458 M 12.1886,71.9261 C 20.211858,66.20228 29.230415,61.760305 38.8428,59.4696 m -0.2012,0.2658 c 0.146233,-1.328533 0.292467,-2.657067 0.4387,-3.9856"
+         inkstitch:satin_column="True"
+         inkscape:label="AutoSatin 7"
+         inkstitch:pull_compensation_mm="0.4"
+         inkstitch:ties="2"
+         inkstitch:center_walk_underlay="True"
+         inkstitch:min_stitch_length_mm="0.5"
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:lock_start="half_stitch"
+         inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
+         inkstitch:center_walk_underlay_stitch_length_mm="2.5"
+         inkstitch:trim_after="True" />
+    </g>
+    <g
+       id="g63"
+       style="display:inline"
+       transform="matrix(-0.529968,0.784859,0.67124,0.619674,-50.578773,-35.559314)">
+      <path
+         id="path62"
+         style="display:inline;opacity:1;fill:none;stroke:#000000;stroke-opacity:1"
+         d="m 19.384821,112.41136 c -1.557538,5.09582 -4.47105,10.10426 -9.4688425,10.6801 -4.9977914,0.57583 -10.40385418,-1.42122 -12.3758382,-2.79952 m 18.9562277,-9.6565 c -1.858848,3.83255 -3.708759,6.84135 -8.5817358,7.07931 -4.8729762,0.23796 -7.97809428,0.56777 -10.1444363,-0.76417 m 16.1937901,-6.38326 6.434963,4.15623"
+         inkstitch:satin_column="True"
+         inkstitch:pull_compensation_mm="0.4"
+         inkstitch:ties="0"
+         inkstitch:center_walk_underlay="True"
+         inkstitch:min_stitch_length_mm="0.5"
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:lock_start="half_stitch"
+         inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
+         inkstitch:center_walk_underlay_stitch_length_mm="2.5"
+         inkstitch:trim_after="False" />
+      <path
+         id="path63"
+         style="display:inline;opacity:1;fill:none;stroke:#000000;stroke-opacity:1"
+         d="m 0.87619641,117.18975 c 1.79820669,1.5984 4.99501849,6.39362 5.59442049,11.38864 0.599403,4.99502 -3.596413,8.99103 -8.1918302,11.68834 m -0.5994022,-22.07798 c 1.79820671,1.79821 2.19780821,4.89512 3.09691151,9.69034 0.89910339,4.79522 -1.5984059,7.29272 -4.89511831,9.99003 m 4.88199731,2.84762 -5.53578681,-5.2951"
+         inkstitch:satin_column="True"
+         inkstitch:pull_compensation_mm="0.4"
+         inkstitch:ties="0"
+         inkstitch:center_walk_underlay="True"
+         inkstitch:min_stitch_length_mm="0.5"
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:lock_start="half_stitch"
+         inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
+         inkstitch:center_walk_underlay_stitch_length_mm="2.5"
+         inkstitch:trim_after="True"
+         sodipodi:nodetypes="csccsccc" />
+    </g>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="GlyphLayer-Ë"
+     style="display:inline"
+     id="g73">
+    <g
+       id="g70">
+      <path
+         id="path64"
+         style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
+         d="M 5.35762,94.9639 C 5.8311196,93.651169 6.3046193,92.338437 6.7781189,91.025706 M 2.41093,90.6778 C 3.9906539,90.213849 5.5703779,89.749897 7.1501018,89.285946 M 5.68595,95.093 C 4.6071367,93.525233 3.5283233,91.957467 2.44951,90.3897"
+         inkstitch:satin_column="True"
+         inkscape:label="AutoSatin 1"
+         inkstitch:pull_compensation_mm="0.4"
+         inkstitch:ties="1"
+         inkstitch:center_walk_underlay="True"
+         inkstitch:min_stitch_length_mm="0.5"
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:lock_start="half_stitch"
+         inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
+         inkstitch:center_walk_underlay_stitch_length_mm="2.5" />
+      <path
+         d="M 11.0751,90.6509 C 20.447244,87.13466 29.746514,83.254421 38.2737,77.9606"
+         style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
+         inkstitch:running_stitch_length_mm=""
+         id="path65"
+         inkscape:label="AutoSatin Running Stitch 2"
+         inkstitch:ties="3"
+         inkstitch:min_stitch_length_mm="0.5"
+         inkstitch:min_jump_stitch_length_mm="3" />
+      <path
+         id="path66"
+         style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
+         d="M 37.2355,76.7479 C 29.166747,80.644993 20.877613,84.086524 12.418216,87.041648 M 39.7803,78.891 C 31.133935,85.469001 21.04385,90.226829 10.71359,93.492624 m 0.44144,0.1413 c 0.465199,-2.302892 0.930397,-4.605784 1.395596,-6.908676"
+         inkstitch:satin_column="True"
+         inkscape:label="AutoSatin 3"
+         inkstitch:pull_compensation_mm="0.4"
+         inkstitch:ties="3"
+         inkstitch:center_walk_underlay="True"
+         inkstitch:min_stitch_length_mm="0.5"
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:lock_start="half_stitch"
+         inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
+         inkstitch:center_walk_underlay_stitch_length_mm="2.5" />
+      <path
+         d="m 8.90935,92.0297 c -1.0120782,7.038888 -1.3683548,15.47734 4.028239,20.92029 7.055519,6.98344 19.152703,5.00001 25.383811,-2.05799"
+         style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
+         inkstitch:running_stitch_length_mm=""
+         id="path67"
+         inkscape:label="AutoSatin Running Stitch 4"
+         inkstitch:ties="3"
+         inkstitch:min_stitch_length_mm="0.5"
+         inkstitch:min_jump_stitch_length_mm="3" />
+      <path
+         id="path68"
+         style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
+         d="m 39.5125,112.778 c -6.04115,6.32107 -16.327006,10.3496 -24.419826,5.47306 C 8.1327168,114.30273 5.063749,105.8663 5.9280599,98.170353 6.5226929,88.520391 9.9675088,79.255654 14.0638,70.5867 m 23.1717,38.3073 c -5.041645,6.25876 -15.134302,6.93195 -21.605953,2.622 C 10.536986,107.83672 10.608018,100.86208 10.791801,95.212935 11.567223,84.792595 16.962788,75.557642 21.5644,66.4345 m 12.0547,42.1915 c 2.276965,3.21467 4.553935,6.42933 6.8309,9.644 m -15.0013,-8.707 c 0.133933,4.86667 0.267867,9.73333 0.4018,14.6 m -9.2419,-15.135 c -3.125272,3.75033 -6.250538,7.50067 -9.37581,11.251 m 7.09881,-19.02 C 10.759863,100.5893 7.1881267,99.9196 3.61639,99.2499"
+         inkstitch:satin_column="True"
+         inkscape:label="AutoSatin 5"
+         inkstitch:pull_compensation_mm="0.4"
+         inkstitch:ties="3"
+         inkstitch:center_walk_underlay="True"
+         inkstitch:min_stitch_length_mm="0.5"
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:lock_start="half_stitch"
+         inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
+         inkstitch:center_walk_underlay_stitch_length_mm="2.5" />
+      <path
+         d="m 16.4746,65.6814 c -1.908117,1.29874 -3.660601,2.809346 -5.3575,4.3695"
+         style="fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
+         inkstitch:running_stitch_length_mm=""
+         id="path69"
+         inkscape:label="AutoSatin Running Stitch 6"
+         inkstitch:ties="3"
+         inkstitch:min_stitch_length_mm="0.5"
+         inkstitch:min_jump_stitch_length_mm="3" />
+      <path
+         id="path70"
+         style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
+         d="m 10.0455,68.1757 c 6.514326,-8.202503 17.009023,-12.477257 27.363058,-12.307919 0.611919,-0.01273 1.224,-0.01714 1.836042,-0.01458 M 12.1886,71.9261 C 20.211858,66.20228 29.230415,61.760305 38.8428,59.4696 m -0.2012,0.2658 c 0.146233,-1.328533 0.292467,-2.657067 0.4387,-3.9856"
+         inkstitch:satin_column="True"
+         inkscape:label="AutoSatin 7"
+         inkstitch:pull_compensation_mm="0.4"
+         inkstitch:ties="2"
+         inkstitch:center_walk_underlay="True"
+         inkstitch:min_stitch_length_mm="0.5"
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:lock_start="half_stitch"
+         inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
+         inkstitch:center_walk_underlay_stitch_length_mm="2.5"
+         inkstitch:trim_after="True" />
+    </g>
+    <g
+       id="g74"
+       transform="translate(7.8742124,-14.173582)"
        style="display:inline">
       <path
-         id="command_connector9830"
-         d="M -3.6431197,81.052151 4.4106857,110.68947"
-         style="fill:none;stroke:#000000;stroke-width:1px;stroke-opacity:0.5"
-         inkscape:connection-start="#command_use9875"
-         inkscape:connection-end="#path158489"
-         inkscape:label="connecteur"
-         inkscape:connector-type="polyline"
-         inkscape:connector-curvature="0" />
-      <use
-         id="command_use9875"
-         xlink:href="#inkstitch_trim"
-         height="100%"
-         width="100%"
-         x="-3.6456997"
-         y="81.016304"
-         inkscape:label="marqueur de commande" />
+         id="path73"
+         style="display:inline;opacity:1;fill:none;stroke:#000000;stroke-opacity:1"
+         d="m 8.2590536,58.961488 12.9167694,6.966 m -10.91677,-8.966 12.91677,6.966 m -10.91677,-8.966 12.91677,6.966 m -10.30439,1.815 c 3.12034,0.362 7.11149,-3.338 4.28139,-7.184 m -5.00705,6.676 c -3.33804,-1.96 0.43539,-9.724 4.06369,-7.257"
+         inkstitch:satin_column="True"
+         inkscape:label="AutoSatin 1"
+         inkstitch:ties="0"
+         inkstitch:center_walk_underlay="True"
+         inkstitch:pull_compensation_mm="0.4"
+         inkstitch:min_stitch_length_mm="0.5"
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:lock_start="half_stitch"
+         inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
+         inkstitch:center_walk_underlay_stitch_length_mm="2.5"
+         inkstitch:trim_after="True" />
+      <path
+         id="path74"
+         style="display:inline;opacity:1;fill:none;stroke:#000000;stroke-opacity:1"
+         d="m 21.645215,60.14262 12.916769,6.966 m -10.91677,-8.966 12.91677,6.966 m -10.91677,-8.966 12.91677,6.966 m -10.30439,1.815 c 3.12034,0.362 7.11149,-3.338 4.28139,-7.184 m -5.00705,6.676 c -3.33804,-1.96 0.43539,-9.724 4.06369,-7.257"
+         inkstitch:satin_column="True"
+         inkscape:label="AutoSatin 1"
+         inkstitch:ties="0"
+         inkstitch:center_walk_underlay="True"
+         inkstitch:pull_compensation_mm="0.4"
+         inkstitch:min_stitch_length_mm="0.5"
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:lock_start="half_stitch"
+         inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
+         inkstitch:center_walk_underlay_stitch_length_mm="2.5"
+         inkstitch:trim_after="True" />
     </g>
   </g>
 </svg>
