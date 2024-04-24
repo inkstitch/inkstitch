@@ -259,7 +259,7 @@ Toutes  les valeurs de  compensation sont négatives,toutes les augmentations so
 
 Cette fois ci, si l'on ne veut pas de zone monochome et un partage égal du reste, C1=C2=C3=C4=0 et C1!2=C2!3=C3!4=33.3.
 
-Si  l'on souhaite   plutôt réserver 15% à chacune des parties monochromes et partager le reste équitablement, on choisit C1=C2=C3=C4=5 , il reste 40% donc  C1!2=C2!3=C3!4=13.3 
+Si  l'on souhaite   plutôt réserver 15% à chacune des parties monochromes et partager le reste équitablement, on choisit C1=C2=C3=C4=15 , il reste 40% donc  C1!2=C2!3=C3!4=13.3
 
 ![tricolore](/assets/images/tutorials/multicolor_satin/quadricolor.png)
 

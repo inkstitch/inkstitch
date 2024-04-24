@@ -224,7 +224,7 @@ All compensation values ​​are negative, all increases are positive, all decr
 
 This time, if we do not want a monochromous zone and wish an equal sharing of the rest, C1=C2=C3=C4=0 and C1!2=C2!3=C3!4=33.3.
 
-If we rather wish to reserve 15% for each of the monochrome parts and share the rest equitably, we choose C1=C2=C3=C4=5, there is 40% remaining so C1!2=C2!3=C3!4=13.3
+If we rather wish to reserve 15% for each of the monochrome parts and share the rest equitably, we choose C1=C2=C3=C4=15, there is 40% remaining so C1!2=C2!3=C3!4=13.3
 
 ![tricolor](/assets/images/tutorials/multicolor_satin/quadricolor.png)
 

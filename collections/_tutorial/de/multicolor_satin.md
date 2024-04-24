@@ -227,7 +227,7 @@ Alle Kompensationswerte sind negativ, alle Erhöhungen sind positiv, alle Verrin
 
 Wenn wir dieses Mal keine monochrome Zone wünschen und eine gleichmäßige Aufteilung des Rests wünschen, gilt `C1 = C2 = C3 = C4 = 0` und `C1!2 = C2!3 = C3!4 = 33,3`.
 
-Wenn wir lieber 15 % für jeden der monochromen Teile reservieren und den Rest gerecht aufteilen möchten, wählen wir `C1 = C2 = C3 = C4 = 5`, es bleiben 40 % übrig, also `C1!2 = C2!3 = C3“. !4 = 13,3`.
+Wenn wir lieber 15 % für jeden der monochromen Teile reservieren und den Rest gerecht aufteilen möchten, wählen wir `C1 = C2 = C3 = C4 = 15`, es bleiben 40 % übrig, also `C1!2 = C2!3 = C3!4 = 13.3`.
 
 ![tricolor](/assets/images/tutorials/multicolor_satin/quadricolor.png)
 
