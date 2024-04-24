@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-04-22 01:10+0000\n"
-"PO-Revision-Date: 2024-04-23 01:07\n"
+"POT-Creation-Date: 2024-04-24 01:07+0000\n"
+"PO-Revision-Date: 2024-04-24 01:08\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-22 01:10+0000\n"
+"POT-Creation-Date: 2024-04-24 01:07+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1173,44 +1173,44 @@ msgstr "marqueur de commande"
 msgid "Please select a layer to include layer commands."
 msgstr "Merci de sélectionner un calque pour ajouter des commandes de calque."
 
-#: lib/elements/clone.py:27
+#: lib/elements/clone.py:26
 msgid "Clone Object"
 msgstr "Cloner l'objet"
 
-#: lib/elements/clone.py:28
+#: lib/elements/clone.py:27
 msgid "There are one or more clone objects in this document.  Ink/Stitch can work with clones, but you are limited to set a very few parameters. "
 msgstr "Il y a un ou plusieurs clones dans ce document. Ink/Stitch peut travailler avec des clones, mais seuls quelques paramètres pourront être définis. "
 
-#: lib/elements/clone.py:31
+#: lib/elements/clone.py:30
 msgid "If you want to convert the clone into a real element, follow these steps:"
 msgstr "Si vous voulez convertir le clone en un élément réel, suivez ces étapes :"
 
-#: lib/elements/clone.py:32
+#: lib/elements/clone.py:31
 msgid "* Select the clone"
 msgstr "* Sélectionner le clone"
 
-#: lib/elements/clone.py:33
+#: lib/elements/clone.py:32
 msgid "* Run: Extensions > Ink/Stitch > Edit > Unlink Clone"
 msgstr "* Exécutez : Extensions > Ink/Stitch > Édition > Délier le clone"
 
-#: lib/elements/clone.py:44 inx/inkstitch_select_elements.inx:72
+#: lib/elements/clone.py:43 inx/inkstitch_select_elements.inx:72
 #: inx/inkstitch_select_elements.inx:73
 msgid "Clone"
 msgstr "Cloner"
 
-#: lib/elements/clone.py:50
+#: lib/elements/clone.py:49
 msgid "Custom fill angle"
 msgstr "Angle de remplissage personnalisé"
 
-#: lib/elements/clone.py:51
+#: lib/elements/clone.py:50
 msgid "This setting will apply a custom fill angle for the clone."
 msgstr "Ce paramètre appliquera un angle de remplissage personnalisé pour le clone."
 
-#: lib/elements/clone.py:60
+#: lib/elements/clone.py:59
 msgid "Flip angle"
 msgstr "Inverser l'angle"
 
-#: lib/elements/clone.py:61
+#: lib/elements/clone.py:60
 msgid "Flip automatically calculated angle if it appears to be wrong."
 msgstr "Inverse l'angle calculé automatiquement s'il semble faux."
 
