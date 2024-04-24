@@ -249,7 +249,7 @@ Avec les mêmes notations on aura cette fois
   
 |Paramètre |Couleur 1 |Couleur 2 |Couleur 3 |Couleur 4 |
 | --- | --- |--- |--- |--- |
-| Pourcentage de compensation d'étirement  | 0 </br>C1-100| -(C2!3+C3+C3!4+C4)  </br> -(C1+C1!2)|-(C1+C1!2+C2+C2!3) </br>-(C3!4+C4)| 0</br>C4-100|
+| Pourcentage de compensation d'étirement  | 0 <br>C1-100| -(C2!3+C3+C3!4+C4)  <br> -(C1+C1!2)|-(C1+C1!2+C2+C2!3) <br>-(C3!4+C4)| 0<br>C4-100|
 | Échanger les rails| non| oui |non|oui|
 | Augmentation aléatoire de la largeur du satin| 0  C1!2| C2!3 0|0 C3!4|0|
 | Diminution aléatoire de la largeur du satin| 0 | 0 -C1!2|-C2!3 0| 0 -C3!4|

@@ -214,7 +214,7 @@ With the same notations we will have this time
   
 |Parameter |Color 1 |Color 2 |Color 3 |Color 4 |
 | --- | --- |--- |--- |--- |
-|Pull Compensation Percentage | 0 </br>C1-100| -(C2!3+C3+C3!4+C4) </br> -(C1+C1!2)|-(C1+C1!2+C2+C2!3) </br>-(C3!4 +C4)| 0</br>C4-100|
+|Pull Compensation Percentage | 0 <br>C1-100| -(C2!3+C3+C3!4+C4) <br> -(C1+C1!2)|-(C1+C1!2+C2+C2!3) <br>-(C3!4 +C4)| 0<br>C4-100|
 | Swap Rails| no | yes |no|yes|
 | Random satin width increase| 0 C1!2| C2!3 0|0 C3!4|0|
 | Random satin width drecrease| 0 | 0 -C1!2|-C2!3 0| 0 -C3!4|
