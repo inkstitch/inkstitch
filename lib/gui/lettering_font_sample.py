@@ -128,38 +128,47 @@ class FontSampleFrame(wx.Frame):
         self.direction.SetSelection(0)
 
     def apply(self, event):
+        # apply scale to layer and extract for later use
+        self.layer.transform.add_scale(self.scale_spinner.GetValue() / 100)
+        scale = self.layer.transform.a
+
+        # set font
         font = self.fonts.get(self.font_chooser.GetValue())
-        font = None
         if font is None:
             self.GetTopLevelParent().Close()
             return
-        scale = self.scale_spinner.GetValue() / 100
+
+        # parameters
         line_width = self.max_line_width.GetValue()
         font._load_variants()
         font_variant = font.variants[self.direction.GetValue()]
+
+        # setup lines of text
         text = ''
         width = 0
         last_glyph = None
         for glyph in font.available_glyphs:
             glyph_obj = font_variant[glyph]
             if last_glyph is not None:
-                width += ((glyph_obj.min_x - font.kerning_pairs.get(last_glyph + glyph, 0)) * scale)
-            glyph_width = glyph_obj.width
-            if width + glyph_width > line_width:
+                width_to_add = (glyph_obj.min_x - font.kerning_pairs.get(last_glyph + glyph, 0)) * scale
+                width += width_to_add
+
+            try:
+                width_to_add = (font.horiz_adv_x.get(glyph, font.horiz_adv_x_default) - glyph_obj.min_x) * scale
+            except TypeError:
+                width += glyph_obj.width
+
+            if width + width_to_add > line_width:
                 text += '\n'
                 width = 0
                 last_glyph = None
             else:
                 last_glyph = glyph
             text += glyph
-            try:
-                width += ((font.horiz_adv_x.get(glyph, font.horiz_adv_x_default) - glyph_obj.min_x) * scale)
-            except TypeError:
-                width += glyph_obj.width
+            width += width_to_add
 
+        # render text and close
         font.render_text(text, self.layer)
-        self.layer.transform.add_scale(scale)
-
         self.GetTopLevelParent().Close()
 
     def cancel(self, event):

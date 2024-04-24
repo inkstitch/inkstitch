@@ -6,7 +6,9 @@
 from inkex import Layer
 
 from ..gui.lettering_font_sample import LetteringFontSampleApp
+from ..i18n import _
 from .base import InkstitchExtension
+from ..svg import get_correction_transform
 
 
 class LetteringFontSample(InkstitchExtension):
@@ -14,7 +16,11 @@ class LetteringFontSample(InkstitchExtension):
     This extension helps font creators to generate an output of every glyph from a selected font
     '''
     def effect(self):
-        layer = self.svg.add(Layer())
+        layer = Layer()
+        self.svg.add(layer)
+        layer.label = _("Font Sample")
+        transform = get_correction_transform(layer, child=True)
+        layer.transform = transform
         app = LetteringFontSampleApp(layer=layer)
         app.MainLoop()
         if len(layer) == 0:
