@@ -43,17 +43,17 @@ stitch_height = 1.398
 # to add enough padding on the long sides of the stitch would waste a ton
 # of space on the short sides and significantly slow down rendering.
 
-# The specific extent of the whiskers (0.45 parallel to the stitch, 0.1 perpendicular)
-# was found by experimentation. It seems to work without artifacting.
+# The specific extent of the whiskers (0.55 parallel to the stitch, 0.1 perpendicular)
+# was found by experimentation. It seems to work with almost no artifacting.
 stitch_path = (
     "M0,0"  # Start point
-    "l0.45,-0.1,-0.45,0.1"  # Bottom-right whisker
-    "c0.4,0,0.46,0.4,0.46,0.7c0,0.3,-0.16,0.70,-0.46,0.70"  # Right endcap
-    "l0.45,0.1,-0.45,-0.1"  # Top-right whisker
+    "l0.55,-0.1,-0.55,0.1"  # Bottom-right whisker
+    "c0.613,0,0.613,1.4,0,1.4" # Right endcap
+    "l0.55,0.1,-0.55,-0.1"  # Top-right whisker
     "h-%s"  # Stitch length
-    "l-0.45,0.1,0.45,-0.1"  # Top-left whisker
-    "c-0.4,0,-0.46,-0.4,-0.46,-0.7c0,-0.3,0.16,-0.7,0.46,-0.7"  # Left endcap
-    "l-0.45,-0.1,0.45,0.1"  # Bottom-left whisker
+    "l-0.55,0.1,0.55,-0.1"  # Top-left whisker
+    "c-0.613,0,-0.613,-1.4,0,-1.4" # Left endcap
+    "l-0.55,-0.1,0.55,0.1"  # Bottom-left whisker
     "z")  # return to start
 
 # The filter needs the xmlns:inkscape declaration, or Inkscape will display a parse error
