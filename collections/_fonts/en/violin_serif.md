@@ -1,7 +1,7 @@
 ---
 title: "Violin Serif"
 permalink: /fonts/violin_serif/
-last_modified_at: 2024-04-24
+last_modified_at: 2024-04-23
 toc: false
 preview_image:
   - url: /assets/images/fonts/violin_serif.jpg
