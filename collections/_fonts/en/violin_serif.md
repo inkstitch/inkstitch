@@ -9,6 +9,8 @@ preview_image:
 ---
 {%- assign font = site.data.fonts.violin_serif.font -%}
 
+{% include upcoming_release.html %} 
+
 ![violin serif](/assets/images/fonts/violin_serif.jpg)
 
 ## Glyphs
