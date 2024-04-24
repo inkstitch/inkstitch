@@ -34,4 +34,4 @@ up to {{ font.max_scale | times: 100 | floor }}% ({{ font.size | times: font.max
 
 
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/abecedaire/LICENSE)
+[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/violin_serif/LICENSE)
