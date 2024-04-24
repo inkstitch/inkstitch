@@ -1,6 +1,6 @@
 ---
 title: "Violin Serif"
-permalink: /de/fonts/violin_dserif/
+permalink: /de/fonts/violin_serif/
 last_modified_at: 2024-04-24
 toc: false
 preview_image:
