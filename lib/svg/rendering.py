@@ -48,11 +48,11 @@ stitch_height = 1.398
 stitch_path = (
     "M0,0"  # Start point
     "l0.55,-0.1,-0.55,0.1"  # Bottom-right whisker
-    "c0.613,0,0.613,1.4,0,1.4" # Right endcap
+    "c0.613,0,0.613,1.4,0,1.4"  # Right endcap
     "l0.55,0.1,-0.55,-0.1"  # Top-right whisker
     "h-%s"  # Stitch length
     "l-0.55,0.1,0.55,-0.1"  # Top-left whisker
-    "c-0.613,0,-0.613,-1.4,0,-1.4" # Left endcap
+    "c-0.613,0,-0.613,-1.4,0,-1.4"  # Left endcap
     "l-0.55,-0.1,0.55,0.1"  # Bottom-left whisker
     "z")  # return to start
 
