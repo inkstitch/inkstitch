@@ -8,6 +8,7 @@ preview_image:
     height: 14
 ---
 {%- assign font = site.data.fonts.abecedaire.font -%}
+
 ![Abecedaire](/assets/images/fonts/abecedaire.jpg)
 
 ## Glyphes
