@@ -8,6 +8,9 @@ preview_image:
     height: 28
 ---
 {%- assign font = site.data.fonts.chicken_scratch.font -%}
+
+{% include upcoming_release.html %} 
+
 ![chicken_scratch](/assets/images/fonts/chicken_scratch.jpg)
 
 ## Glyphs
