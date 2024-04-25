@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-04-24 01:07+0000\n"
-"PO-Revision-Date: 2024-04-24 01:08\n"
+"POT-Creation-Date: 2024-04-25 01:08+0000\n"
+"PO-Revision-Date: 2024-04-25 01:11\n"
 "Last-Translator: \n"
 "Language-Team: Finnish\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-24 01:07+0000\n"
+"POT-Creation-Date: 2024-04-25 01:08+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2066,7 +2066,7 @@ msgid "Default"
 msgstr ""
 
 #: lib/elements/satin_column.py:146 lib/stitch_plan/lock_stitch.py:209
-#: inx/inkstitch_break_apart.inx:18
+#: inx/inkstitch_break_apart.inx:18 inx/inkstitch_stitch_plan_preview.inx:21
 msgid "Simple"
 msgstr ""
 
@@ -3713,7 +3713,7 @@ msgstr "Automaattinen satiini juoksevatikki %d"
 msgid "Could not build graph for meander stitching. Try to enlarge your shape or scale your meander pattern down."
 msgstr ""
 
-#: lib/svg/rendering.py:229
+#: lib/svg/rendering.py:221
 msgid "Stitch Plan"
 msgstr "Tikkaus suunnitelma"
 
@@ -4132,6 +4132,7 @@ msgstr "Lisää kaikkiin"
 
 #: print/templates/ui_svg_action_buttons.html:9
 #: print/templates/ui_svg_action_buttons.html:12
+#: inx/inkstitch_stitch_plan_preview.inx:22
 msgid "Realistic"
 msgstr "Realistinen"
 
@@ -6547,27 +6548,43 @@ msgstr ""
 msgid "Stitch Plan Preview"
 msgstr ""
 
-#: inx/inkstitch_stitch_plan_preview.inx:22
-msgid "Move stitch plan beside the canvas"
+#: inx/inkstitch_stitch_plan_preview.inx:20
+msgid "Render Mode"
+msgstr ""
+
+#: inx/inkstitch_stitch_plan_preview.inx:20
+msgid "Realistic modes will render to a raster image for performance reasons. Realistic Vector may cause Inkscape to slow down for complex designs."
 msgstr ""
 
 #: inx/inkstitch_stitch_plan_preview.inx:23
-msgid "Needle points"
+msgid "Realistic High Quality"
 msgstr ""
 
-#: inx/inkstitch_stitch_plan_preview.inx:25
-msgid "Lock"
+#: inx/inkstitch_stitch_plan_preview.inx:24
+msgid "Realistic Vector (slow)"
 msgstr ""
 
-#: inx/inkstitch_stitch_plan_preview.inx:25
-msgid "Make stitch plan insensitive to mouse interactions"
-msgstr ""
-
-#: inx/inkstitch_stitch_plan_preview.inx:26
-msgid "Display command symbols"
+#: inx/inkstitch_stitch_plan_preview.inx:29
+msgid "Move stitch plan beside the canvas"
 msgstr ""
 
 #: inx/inkstitch_stitch_plan_preview.inx:30
+msgid "Needle points"
+msgstr ""
+
+#: inx/inkstitch_stitch_plan_preview.inx:32
+msgid "Lock"
+msgstr ""
+
+#: inx/inkstitch_stitch_plan_preview.inx:32
+msgid "Make stitch plan insensitive to mouse interactions"
+msgstr ""
+
+#: inx/inkstitch_stitch_plan_preview.inx:33
+msgid "Display command symbols"
+msgstr ""
+
+#: inx/inkstitch_stitch_plan_preview.inx:37
 msgid "Override last stitch plan"
 msgstr ""
 
