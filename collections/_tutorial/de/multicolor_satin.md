@@ -241,13 +241,13 @@ In der I-ten Spalte
 
 **I ist ungerade**
 
-| Parameter                           | Farbe I                                                               |
-| ---                                 | ---                                                                   |
-| Zugkompensation (%)                 | C1+C1!C2+C2+C2!C3+.....C(I-1)!I CI!C(I+1)+C(I+1)+C(I+1)!(I+2)+.....CN |
-| Seiten umkehren                     | no                                                                    |
-| Zufälliger Prozentwert (Erweitern)  | 0 CI!(I+1)                                                            |
-| Zufälliger Prozentwert (Schrumpfen) | -C(I-1)!I 0                                                           |
-| Zufallszahl                         | immer der gleiche Wert                                                |
+| Parameter                           | Farbe I                                                                  |
+| ---                                 | ---                                                                      |
+| Zugkompensation (%)                 | C1+C1!C2+C2+C2!C3+.....C(I-1)!I<br>CI!C(I+1)+C(I+1)+C(I+1)!(I+2)+.....CN |
+| Seiten umkehren                     | no                                                                       |
+| Zufälliger Prozentwert (Erweitern)  | 0 CI!(I+1)                                                               |
+| Zufälliger Prozentwert (Schrumpfen) | -C(I-1)!I 0                                                              |
+| Zufallszahl                         | immer der gleiche Wert                                                   |
 
 Zugkompensation (%): Der erste Wert ist die Summe der Breiten für alles vor Farbe I und der zweite Wert ist die Summe der Breiten für alles nach Farbe I.
 
@@ -255,13 +255,13 @@ Zugkompensation (%): Der erste Wert ist die Summe der Breiten für alles vor Far
 
 Aktiviere Seiten umkehren, und invertiere die beiden Werte in den asymmetrischen Parametern.
 
-| Parameter                          |Farbe I                                                                 |
-| ---                                | ---                                                                    |
-| Zugkompensation (%)                | CI!C(I+1)+C(I+1)+C(I+1)!(I+2)+.....CN C1+C1!C2+C2+C2!C3+.... .C(I-1)!I |
-| Seiten umkehren                    | yes                                                                    |
-| Zufälliger Prozentwert (Erweitern) | CI!(I+1) 0                                                             |
-| Zufälliger Prozentwert (Schrumpfen)| 0 -C(I-1)!I                                                            |
-| Zufallszahl                        | immer der gleiche Wert                                                 |
+| Parameter                          | Farbe I                                                                  |
+| ---                                | ---                                                                      |
+| Zugkompensation (%)                | CI!C(I+1)+C(I+1)+C(I+1)!(I+2)+.....CN<br>C1+C1!C2+C2+C2!C3+.....C(I-1)!I |
+| Seiten umkehren                    | yes                                                                      |
+| Zufälliger Prozentwert (Erweitern) | CI!(I+1) 0                                                               |
+| Zufälliger Prozentwert (Schrumpfen)| 0 -C(I-1)!I                                                              |
+| Zufallszahl                        | immer der gleiche Wert                                                   |
 
 * Für die erste Spalte ist `C(-1) = 0`, wenn wir kein Überlaufen wünschen. Wir können hier einen positiven Wert setzen, wenn wir wollen, dass die erste Farbe nach links überläuft.
 * Ebenso wird für die letzte Spalte `C(N+1) = 0` angenommen, wenn wir nicht möchten, dass die letzte Farbe aus der Form heraustritt.
