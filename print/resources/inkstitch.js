@@ -11,6 +11,12 @@ var realistic_rendering = {};
 var realistic_cache = {};
 var normal_rendering = {};
 
+function ping() {
+  $.get("/ping")
+   .done(function() { setTimeout(ping, 1000) })
+   .fail(function() { $('#errors').attr('class', 'show') });
+}
+
 //function to chunk opd view into pieces 
   // source: https://stackoverflow.com/questions/3366529/wrap-every-3-divs-in-a-div
 $.fn.chunk = function(size) {
@@ -203,6 +209,7 @@ function setSVGTransform(figure, transform) {
 }
 
 $(function() {
+  setTimeout(ping, 1000);
   /* SCALING AND MOVING SVG  */
 
   /* Mousewheel scaling */
@@ -372,20 +379,35 @@ $(function() {
   /* Settings Bar */
 
   $('button.close').click(function() {
-     window.close();
+    $.post('/shutdown', {})
+     .always(function(data) {
+       window.close();
+
+       /* Chrome and Firefox both have a rule: scripts can only close windows
+        * that they opened.  Chrome seems to have an exception for windows that
+        * were opened by an outside program, so the above works fine.  Firefox
+        * steadfastly refuses to allow us to close the window, so we'll tell
+        * the user (in their language) that they can close it.
+        */
+       setTimeout(function() {
+           document.open();
+           document.write("<html><body>" + data + "</body></html>");
+           document.close();
+       }, 1000);
+    });
   });
 
   $('button.print').click(function() {
-    var pageSize = $('select#printing-size').find(':selected').text();
-    window.inkstitchAPI.openpdf(pageSize)
+    // printing halts all javascript activity, so we need to tell the backend
+    // not to shut down until we're done.
+    $.get("/printing/start")
+     .done(function() {
+        window.print();
+        $.get("/printing/end");
+     });
   });
 
-  $('button.save-pdf').click(function() {
-    var pageSize = $('select#printing-size').find(':selected').text();
-    window.inkstitchAPI.savepdf(pageSize)
-    });
-  
-  $('button.settings').click(function(){
+$('button.settings').click(function(){
     $('#settings-ui').show();
   });
 
