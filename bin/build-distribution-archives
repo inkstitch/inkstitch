@@ -10,15 +10,7 @@ if [ "$BUILD" = "osx" ]; then
     rm -rf dist/inkstitch/
     # Install location for pkgbuild
     PKG_INSTALL_PATH="/tmp/inkstitch/"
-    # Checking arch of macos and setting path of electron for arm64 or intel
-    echo "Checking for macOS arch."
-    if [ "${ARCH}" = "arm64" ]; then
-        ELECTRON_BUILD_PATH="electron/build/mac-arm64"
-        echo "found arm64"
-    else
-        ELECTRON_BUILD_PATH="electron/build/mac"
-        echo "found intel"
-    fi
+
     # inside the scripts folder are:
     # - preinstaller (checks for previously installed inkstitch and deletes it, Inkscape check with error message) and
     # - postinstaller (moves inkstitch folder from /tmp to user Inkscape extensions folder in $HOME)
@@ -33,8 +25,6 @@ if [ "$BUILD" = "osx" ]; then
         # This code signs and notarize the inkstitch.app
         DEV_IDENT="Developer ID Application: Lex Neva (929A568N58)"
         echo "Signing of inkstitch.app"
-        # Coyping inkstitch-gui.app into inkstitch
-        ditto "${ELECTRON_BUILD_PATH}" dist/inkstitch.app/Contents/Frameworks/electron
         # signing the binary may fix notary issue
         /usr/bin/codesign -s "${DEV_IDENT}" \
                         --deep \
@@ -90,7 +80,6 @@ if [ "$BUILD" = "osx" ]; then
         fi
     else
         # local builds will not be signed or notarized
-        cp -a "${ELECTRON_BUILD_PATH}" dist/inkstitch.app/Contents/Frameworks/electron
         pkgbuild --root dist/inkstitch.app \
                 --component-plist installer_scripts/inkstitch.plist \
                 --ownership recommended \
@@ -107,7 +96,6 @@ if [ "$BUILD" = "osx" ]; then
 else
     cp -a images/examples palettes symbols fonts tiles dbus inx LICENSE VERSION dist/inkstitch
     cp -a icons locales print dist/inkstitch/bin
-    cp -a electron/build/*-unpacked dist/inkstitch/electron
 fi
 
 if [ "$BUILD" = "windows" ]; then

@@ -57,8 +57,7 @@ jobs:
           # files when a new translation string is added but we don't need to
           # commit those until folks actually translate the new strings.
           if git diff translations | grep -qE '^[-+]msgstr ".+"$'; then
-            make electron/src/renderer/assets/translations.json
-            git add translations electron/src/renderer/assets/translations.json
+            git add translations
             git commit -m "new translations from Crowdin"
             git push https://github.com/inkstitch/inkstitch main
           fi

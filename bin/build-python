@@ -17,7 +17,6 @@ pyinstaller_args+="--log-level DEBUG "
 # This adds bundle identifier in reverse DSN format for macos
 if [ "$BUILD" = "osx" ]; then
     pyinstaller_args+="--osx-bundle-identifier org.inkstitch.app "
-    pyinstaller_args+="-i electron/build/icons/mac/inkstitch.icns "
     if [[ -z ${GITHUB_REF} ]]; then
         echo "Dev or Local Build"
     else
@@ -47,7 +46,6 @@ if [ "$BUILD" = "windows" ]; then
 	sed -i'' 's/1.1.1/'"${VERSION#v}"'/' installer_scripts/file_version_info.txt
 	sed -i'' 's/1234/'"${info_year}"'/' installer_scripts/file_version_info.txt
     # sets icon to inkstitch.exe
-	pyinstaller_args+="--i electron/build/icons/win/inkstitch.ico "
 	pyinstaller_args+="--version-file  installer_scripts/file_version_info.txt "
     python -m PyInstaller $pyinstaller_args inkstitch.py
 elif [ "$BUILD" = "osx" ]; then

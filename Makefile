@@ -2,18 +2,16 @@
 OS=$(shell uname)
 
 dist: version locales inx
-	python bin/generate-flaskserverport-file
 	bash bin/build-python
-	bash bin/build-electron
 	bash bin/build-distribution-archives
 
 distclean:
-	rm -rf build dist inx locales artifacts win mac *.spec *.tar.gz *.zip electron/node_modules electron/dist electron/build/mac electron/build/mac-arm64 electron/build/win-ia32-unpacked electron/build/linux-unpacked electron/build/linux-arm64-unpacked electron/src/lib/flaskserverport.json
+	rm -rf build dist inx locales artifacts win mac *.spec *.tar.gz *.zip
 
 distlocal:
 	@case ${OS} in "Darwin") export BUILD=osx ;; "Linux")export BUILD=linux ;; *) export BUILD=windows ;; esac; export VERSION=local-build; make distclean && make dist;
 manual:
-	make inx && cd electron && yarn install && cd ..
+	make inx
 
 .PHONY: inx
 inx: version locales
@@ -33,13 +31,7 @@ messages.po: inx
 	rm -rf src/
 	pybabel extract -o messages-babel.po -F babel.conf --add-location=full --add-comments=l10n,L10n,L10N --sort-by-file --strip-comments -k N_ -k '$$gettext' .
 	rm pyembroidery-format-descriptions.py inkstitch-fonts-metadata.py inkstitch-tiles-metadata.py
-	cd electron && yarn --link-duplicates --pure-lockfile
-	find electron/src -name '*.html' -o -name '*.js' -o -name '*.vue' | xargs electron/node_modules/.bin/gettext-extract --quiet --attribute v-translate --output messages-vue.po
-	msgcat -o messages.po messages-babel.po messages-vue.po messages-inx.po
-
-electron/src/renderer/assets/translations.json: $(wildcard translations/messages_*.po)
-	find translations -name '*.po' -a ! -empty | \
-		xargs electron/node_modules/.bin/gettext-compile --output electron/src/renderer/assets/translations.json
+	msgcat -o messages.po messages-babel.po messages-inx.po
 
 %.po: %.mo
 	msgunfmt -o $@ $<
