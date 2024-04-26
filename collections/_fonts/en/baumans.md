@@ -7,7 +7,7 @@ preview_image:
   - url: /assets/images/fonts/baumans_fi.jpg
     height: 32
   - url: /assets/images/fonts/baumans_FI_small.jpg
-    height: 10
+    height: 8
 ---
 {%- assign font = site.data.fonts.baumans_FI.font -%}
 ![Baumans](/assets/images/fonts/baumans_fi.jpg)
@@ -27,10 +27,10 @@ This font contains  {{ font.glyphs.size }} glyphs:
 Baumans FI is reversible : a multi line embroidery  may be  embroidered in alternate directions
 
 ## Dimensions
+At a scale of 100% this font has an approximate height of {{ font.size }} mm. 
 
-At 100%, this font is roughly 32 mm high (1.25 in).
-
-It may be scaled up to 150% (approx. 48 mm, 2 inches) or down to 80% (approx. 25mm , 1 inch)
+It can be scaled from {{ font.min_scale | times: 100 | floor }}% ({{ font.size | times: font.min_scale }} mm)
+up to {{ font.max_scale | times: 100 | floor }}% ({{ font.size | times: font.max_scale }} mm).
 
 {% include upcoming_release.html %} 
 
