@@ -52,8 +52,11 @@ Vous pouvez aussi utiliser les deux fontes conjointement, généralement en util
 
 ## Dimensions
 ### Apex Lake
-Apex Lake est une grande fonte, elle est faite pour être utilisée une lettre ou quelques lettres à la fois. 
-Utilisée à 100% elle mesure environ 60 mm de haut. Elle peut être réduite jusqu'à 80% (50 mm) et agrandie jusqu'à 130% (110 mm).
+Apex Lake est une grande fonte, elle est faite pour être utilisée une lettre ou quelques lettres à la fois.
+A une échelle de  100% cette fonte a une hauteur approximative de  {{ font.size }} mm. 
+
+Elle peut être redimensionnée  de {{ font.min_scale | times: 100 | floor }}% ({{ font.size | times: font.min_scale }} mm)
+à {{ font.max_scale | times: 100 | floor }}% ({{ font.size | times: font.max_scale }} mm).
 
 ### Apex Simple AGS
 Utilisée à 100%, elle mesure environ 35 mm de haut. Elle peut être réduite jusqu'à 75% (25mm) et agrandie jusqu'à 300% (100mm).
