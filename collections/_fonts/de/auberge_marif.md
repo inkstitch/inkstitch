@@ -36,7 +36,7 @@ It may be scaled up to 140% (48 mm)  hochskaliert und bis zu  60%  herunterskali
 
 Bitte nicht versuchen die Schrift kleiner zu Sticken, dass kann zu Nadelbrüchen, Fadennestern, hässlichem Stickbild und anderen Unannehmlichkeiten führen. 
 
-Auberge Small  ist eine Variante dieser Schriftart mit unterschiedlichen Stickeinstellungen. Zugausgleich, Dichte und Unterlage sind unterschiedlich, um eine Skalierung zwischen 55% (18 mm, 2/3 Zoll) und 25% (9mm, 1/3 Zoll) zu ermöglichen.
+Auberge Small  ist eine Variante dieser Schriftart mit unterschiedlichen Stickeinstellungen. Zugausgleich, Dichte und Unterlage sind unterschiedlich, um eine Skalierung zwischen 55% (28 mm, 1 Zoll) und 25% (12 mm, 1/2 Zoll) zu ermöglichen.
 
 Deshalb muss man im Dialogfenster des Text-Moduls für die Nutzung von Grand Hotel small eine Skalierung zwischen 25 und 55% wählen.
 
