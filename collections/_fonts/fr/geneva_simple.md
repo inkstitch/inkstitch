@@ -45,9 +45,11 @@ Cette fonte comporte  {{ font2.glyphs.size }} glyphes:
 
 ## Dimensions
 
-Utilisées à 100%, ces deux fontes mesurent environ 8 mm de haut.
+A une échelle de  100% cesfontes ont une hauteur approximative de  {{ font.size }} mm. 
 
-Elles peuvent être agrandies jusqu'à 200% (env 16 mm) ou diminuées jusqu'à 70% (env 6 mm).
+Elles peuvet être redimensionnées  de {{ font.min_scale | times: 100 | floor }}% ({{ font.size | times: font.min_scale }} mm)
+à {{ font.max_scale | times: 100 | floor }}% ({{ font.size | times: font.max_scale }} mm).
+
 
 ## Dans la vraie vie
 
