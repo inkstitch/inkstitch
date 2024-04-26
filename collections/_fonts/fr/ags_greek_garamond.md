@@ -22,9 +22,10 @@ Cette fonte comporte  {{ font.glyphs.size }} glyphes:
 
 ## Dimensions
 
-Utilisée à 100%, cette fonte fait approximativement 20mm de haut (3/4 pouce).
+A une échelle de  100% cette fonte a une hauteur approximative de  {{ font.size }} mm. 
 
-Elle peut être agrandie jusqu'à  150%  (30mm, 1.25 pouces) and diminuée jusqu'à 80% (16mm  5/8 pouce)
+Elle peut être redimensionnée  de {{ font.min_scale | times: 100 | floor }}% ({{ font.size | times: font.min_scale }} mm)
+à {{ font.max_scale | times: 100 | floor }}% ({{ font.size | times: font.max_scale }} mm).
 
 
 ## Dans la vraie vie
