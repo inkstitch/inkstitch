@@ -21,10 +21,12 @@ Cette fonte comporte  {{ font.glyphs.size }} glyphes:
 
 
 ## Dimensions
+A une échelle de  100% cette fonte a une hauteur approximative de  {{ font.size }} mm. 
 
-Utilisée à 100%, cette fonte mesure environ 40 mm de haut.
+Elle peut être redimensionnée  de {{ font.min_scale | times: 100 | floor }}% ({{ font.size | times: font.min_scale }} mm)
+à {{ font.max_scale | times: 100 | floor }}% ({{ font.size | times: font.max_scale }} mm).
 
-Elle peut être agrandie jusqu'à 250% (env 100 mm)  mais ne peut pas être diminuée.
+
 
 ## Ce n'est pas Noël ?
 Le glyphe µ est détourné pour stocker cette broderie 
