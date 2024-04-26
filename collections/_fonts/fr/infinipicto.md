@@ -32,6 +32,7 @@ Elle peut être redimensionnée  de {{ font.min_scale | times: 100 | floor }}% (
 à {{ font.max_scale | times: 100 | floor }}% ({{ font.size | times: font.max_scale }} mm).
 
 
+
 ## Tri des couleurs
 
 À cause de la variété de lettres, rien ne garantit que les couleurs puissent être facilement triées. Faire attention, donc.
