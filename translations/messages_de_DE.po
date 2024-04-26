@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-04-25 01:08+0000\n"
-"PO-Revision-Date: 2024-04-25 01:11\n"
+"POT-Creation-Date: 2024-04-26 01:11+0000\n"
+"PO-Revision-Date: 2024-04-26 01:12\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-25 01:08+0000\n"
+"POT-Creation-Date: 2024-04-26 01:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2424,7 +2424,7 @@ msgstr "Skalieren"
 msgid "Scale axis for satin guided ripple stitches."
 msgstr "Achse für Satin-geführte Ripplestiche."
 
-#: lib/elements/stroke.py:315 print/templates/ui.html:181
+#: lib/elements/stroke.py:315 print/templates/ui.html:180
 #: inx/inkstitch_remove_embroidery_settings.inx:12
 #: inx/inkstitch_remove_embroidery_settings.inx:117
 msgid "None"
@@ -2895,8 +2895,8 @@ msgstr "Dieser Parameter wird gespeichert, wenn man auf \"Übernehmen und beende
 #: lib/extensions/params.py:497 lib/gui/lettering.py:100
 #: lib/gui/tartan/main_panel.py:68 print/templates/custom-page.html:23
 #: print/templates/custom-page.html:27 print/templates/custom-page.html:33
-#: print/templates/ui.html:102 print/templates/ui.html:106
-#: print/templates/ui.html:112
+#: print/templates/ui.html:101 print/templates/ui.html:105
+#: print/templates/ui.html:111
 msgid "Cancel"
 msgstr "Abbrechen"
 
@@ -2911,6 +2911,23 @@ msgstr "Anwenden und schließen"
 #: lib/extensions/params.py:786
 msgid "Embroidery Params"
 msgstr "Stickparameter"
+
+#: lib/extensions/print_pdf.py:148
+msgid "Closing..."
+msgstr ""
+
+#: lib/extensions/print_pdf.py:148
+msgid "It is safe to close this window now."
+msgstr ""
+
+#: lib/extensions/print_pdf.py:285
+msgid "A print preview has been opened in your web browser.  This window will stay open in order to communicate with the JavaScript code running in your browser.\n\n"
+"This window will close after you close the print preview in your browser, or you can close it manually if necessary."
+msgstr ""
+
+#: lib/extensions/print_pdf.py:474
+msgid "Ink/Stitch Print"
+msgstr ""
 
 #: lib/extensions/reorder.py:20
 msgid "Please select at least two elements to reorder."
@@ -3790,17 +3807,17 @@ msgstr "nein"
 msgid "Enter thread name..."
 msgstr "Garnbezeichnung eingeben..."
 
-#: print/templates/custom-page.html:22 print/templates/ui.html:101
+#: print/templates/custom-page.html:22 print/templates/ui.html:100
 msgid "Enter URL"
 msgstr "URL eingeben"
 
 #: print/templates/custom-page.html:23 print/templates/custom-page.html:27
-#: print/templates/custom-page.html:33 print/templates/ui.html:102
-#: print/templates/ui.html:106 print/templates/ui.html:112
+#: print/templates/custom-page.html:33 print/templates/ui.html:101
+#: print/templates/ui.html:105 print/templates/ui.html:111
 msgid "OK"
 msgstr "OK"
 
-#: print/templates/custom-page.html:26 print/templates/ui.html:105
+#: print/templates/custom-page.html:26 print/templates/ui.html:104
 msgid "Enter E-Mail"
 msgstr "E-Mail eingeben"
 
@@ -3808,11 +3825,11 @@ msgstr "E-Mail eingeben"
 msgid "Custom Information Sheet"
 msgstr "Benutzerdefinierte Informationsseite"
 
-#: print/templates/custom-page.html:31 print/templates/ui.html:110
+#: print/templates/custom-page.html:31 print/templates/ui.html:109
 msgid "This will reset your custom text to the default."
 msgstr "Dadurch wird Ihr benutzerdefinierter Text auf den Standard zurückgesetzt."
 
-#: print/templates/custom-page.html:32 print/templates/ui.html:111
+#: print/templates/custom-page.html:32 print/templates/ui.html:110
 msgid "All changes will be lost."
 msgstr "Alle Änderungen gehen verloren."
 
@@ -3820,8 +3837,8 @@ msgstr "Alle Änderungen gehen verloren."
 msgid "Page"
 msgstr "Seite"
 
-#: print/templates/footer.html:3 print/templates/ui.html:108
-#: print/templates/ui.html:115
+#: print/templates/footer.html:3 print/templates/ui.html:107
+#: print/templates/ui.html:114
 msgid "Proudly generated with"
 msgstr "Erstellt mit"
 
@@ -3957,178 +3974,174 @@ msgstr "Ink/Stitch Druckvorschau"
 msgid "Print"
 msgstr "Drucken"
 
-#: print/templates/ui.html:5
-msgid "Save PDF"
-msgstr "PDF speichern"
-
-#: print/templates/ui.html:6 print/templates/ui.html:16
+#: print/templates/ui.html:5 print/templates/ui.html:15
 #: inx/inkstitch_lettering_generate_json.inx:63
 msgid "Settings"
 msgstr "Einstellungen"
 
-#: print/templates/ui.html:7
+#: print/templates/ui.html:6
 msgid "Close"
 msgstr "Schließen"
 
-#: print/templates/ui.html:10
+#: print/templates/ui.html:9
 msgid "⚠ lost connection to Ink/Stitch"
 msgstr "⚠ Verbindung zu Ink/Stich verloren"
 
-#: print/templates/ui.html:19 print/templates/ui.html:30
+#: print/templates/ui.html:18 print/templates/ui.html:29
 msgid "Page Setup"
 msgstr "Dokumenteinstellungen"
 
-#: print/templates/ui.html:20
+#: print/templates/ui.html:19
 msgid "Branding"
 msgstr "Branding"
 
-#: print/templates/ui.html:21 print/templates/ui.html:122
+#: print/templates/ui.html:20 print/templates/ui.html:121
 msgid "Estimated Time"
 msgstr "Voraussichtliche Dauer"
 
-#: print/templates/ui.html:22 print/templates/ui.html:156
+#: print/templates/ui.html:21 print/templates/ui.html:155
 msgid "Estimated Thread"
 msgstr "Garnverbrauch"
 
-#: print/templates/ui.html:23 print/templates/ui.html:177
+#: print/templates/ui.html:22 print/templates/ui.html:176
 msgid "Design"
 msgstr "Design"
 
-#: print/templates/ui.html:32
+#: print/templates/ui.html:31
 msgid "Printing Size"
 msgstr "Papierformat"
 
-#: print/templates/ui.html:40
+#: print/templates/ui.html:39
 msgid "Print Layouts"
 msgstr "Druck-Layouts"
 
-#: print/templates/ui.html:43 print/templates/ui.html:146
+#: print/templates/ui.html:42 print/templates/ui.html:145
 msgid "Client Overview"
 msgstr "Kundenlayout: Übersicht"
 
-#: print/templates/ui.html:47 print/templates/ui.html:147
+#: print/templates/ui.html:46 print/templates/ui.html:146
 msgid "Client Detailed View"
 msgstr "Kundenlayout: Detailansicht"
 
-#: print/templates/ui.html:51 print/templates/ui.html:148
+#: print/templates/ui.html:50 print/templates/ui.html:147
 msgid "Operator Overview"
 msgstr "Ausführungslayout: Übersicht"
 
-#: print/templates/ui.html:55 print/templates/ui.html:149
+#: print/templates/ui.html:54 print/templates/ui.html:148
 msgid "Operator Detailed View"
 msgstr "Ausführungslayout: Detailansicht"
 
-#: print/templates/ui.html:58
+#: print/templates/ui.html:57
 msgid "Thumbnail size"
 msgstr "Vorschaugröße"
 
-#: print/templates/ui.html:64
+#: print/templates/ui.html:63
 msgid "Full Page Pattern View"
 msgstr "Ganzseitiges Design"
 
-#: print/templates/ui.html:68
+#: print/templates/ui.html:67
 msgid "Show Footer"
 msgstr "Fußzeile anzeigen"
 
-#: print/templates/ui.html:72
+#: print/templates/ui.html:71
 msgid "Custom information sheet"
 msgstr "Benutzerdefinierte Informationsseite"
 
-#: print/templates/ui.html:75 print/templates/ui.html:118
+#: print/templates/ui.html:74 print/templates/ui.html:117
 msgid "Includes these Page Setup, estimated time settings and also the icon."
 msgstr "Dies umfasst die Einstellungen zum Dokument, zur Berechnung der voraussichtlichen Dauer und das Logo."
 
-#: print/templates/ui.html:75 print/templates/ui.html:118
-#: print/templates/ui.html:152 print/templates/ui.html:173
+#: print/templates/ui.html:74 print/templates/ui.html:117
+#: print/templates/ui.html:151 print/templates/ui.html:172
 msgid "Save as defaults"
 msgstr "Als Standardeinstellung speichern"
 
-#: print/templates/ui.html:80
+#: print/templates/ui.html:79
 msgid "Logo"
 msgstr "Logo"
 
-#: print/templates/ui.html:90
+#: print/templates/ui.html:89
 msgid "Footer: Operator contact information"
 msgstr "Fußzeile: Kontaktinformationen des Bedieners"
 
-#: print/templates/ui.html:124
+#: print/templates/ui.html:123
 msgid "Machine Settings"
 msgstr "Angaben zur Stickmaschine"
 
-#: print/templates/ui.html:126
+#: print/templates/ui.html:125
 msgid "Average Machine Speed"
 msgstr "Durchschnittliche Geschwindigkeit"
 
-#: print/templates/ui.html:127
+#: print/templates/ui.html:126
 msgid "stitches per minute "
 msgstr "Stiche pro Minute "
 
-#: print/templates/ui.html:131
+#: print/templates/ui.html:130
 msgid "Time Factors"
 msgstr "Zeitfaktoren"
 
-#: print/templates/ui.html:134
+#: print/templates/ui.html:133
 msgid "Includes average time for preparing the machine, thread breaks and/or bobbin changes, etc."
 msgstr "Umfasst die durchschnittliche Zeit für die Vorbereitung der Maschine, Fadenbruch und/oder das Wechseln der Spule, etc."
 
-#: print/templates/ui.html:134
+#: print/templates/ui.html:133
 msgid "seconds to add to total time*"
 msgstr "Sekunden die der berechneten Gesamtdauer hinzugefügt werden*"
 
-#: print/templates/ui.html:138
+#: print/templates/ui.html:137
 msgid "This will be added to the total time."
 msgstr "Dies wird auf die Gesamtdauer angerechnet."
 
-#: print/templates/ui.html:138
+#: print/templates/ui.html:137
 msgid "seconds needed for a color change*"
 msgstr "Sekunden für den Farbwechsel*"
 
-#: print/templates/ui.html:141
+#: print/templates/ui.html:140
 msgid "seconds needed for trim"
 msgstr "Sekunden die beim Trim-Befehl benötigt werden"
 
-#: print/templates/ui.html:144
+#: print/templates/ui.html:143
 msgid "Display Time On"
 msgstr "Zeige Dauer in"
 
-#: print/templates/ui.html:152 print/templates/ui.html:173
+#: print/templates/ui.html:151 print/templates/ui.html:172
 msgid "Includes page setup, estimated time and also the branding."
 msgstr "Enthält Seiteneinrichtung, geschätzte Zeit und auch das Branding."
 
-#: print/templates/ui.html:158
+#: print/templates/ui.html:157
 msgid "Factors"
 msgstr "Faktoren"
 
-#: print/templates/ui.html:159
+#: print/templates/ui.html:158
 msgid "The thread length calculation depends on a lot of factors in embroidery designs. We will only get a very inacurate approximation.\n"
 "             Ink/Stitch simply calculates the path length, so the factor of 1 will always be much, much less than the real thread consumption."
 msgstr "Die Berechnung der Garnlänge hängt von vielen verschiedenen Faktoren im Stickdesign ab. Wir werden nur eine sehr ungefähre Annäherung erreichen.             Ink/Stitch berechnet die Länge des Pfades und multipliziert den Wert mit dem unten angegeben Faktor. Faktor 1 wird immer ein deutlich geringeres Ergebnis liefern, als den realen Garnverbrauch."
 
-#: print/templates/ui.html:161
+#: print/templates/ui.html:160
 msgid "Set a factor to multiply the path length with, depending on your standard setup or adapt it to your current design (tension, thread, fabric, stitch count, etc.)."
 msgstr "Setze einen Faktor mit dem die Pfadlänge multipliziert werden soll. Suche einen Wert, der zu deinen Standardeinstellungen passt oder passe ihn an das aktuelle Design an (Fadenspannung, Garn, Stoff, Anzahl der Stiche, etc.)."
 
-#: print/templates/ui.html:165 print/templates/ui.html:170
+#: print/templates/ui.html:164 print/templates/ui.html:169
 msgid "Factor to multiply with thread length"
 msgstr "Faktor"
 
-#: print/templates/ui.html:165 print/templates/ui.html:170
+#: print/templates/ui.html:164 print/templates/ui.html:169
 msgid "* path length"
 msgstr "* Pfadlänge"
 
-#: print/templates/ui.html:178
+#: print/templates/ui.html:177
 msgid "Thread Palette"
 msgstr "Garnpalette"
 
-#: print/templates/ui.html:197
+#: print/templates/ui.html:196
 msgid "Changing the thread palette will cause thread names and catalog numbers to be recalculated based on the new palette.  Any changes you have made to color or thread names will be lost.  Are you sure?"
 msgstr "Bei einer Änderung der Garnpalette  werden die Garnnamen und Bestellnummern neu berechnet. Vorherige Änderungen gehen dabei verloren. Soll die Aktion ausgeführt werden?"
 
-#: print/templates/ui.html:200
+#: print/templates/ui.html:199
 msgid "Yes"
 msgstr "Ja"
 
-#: print/templates/ui.html:201 inx/inkstitch_lettering_generate_json.inx:76
+#: print/templates/ui.html:200 inx/inkstitch_lettering_generate_json.inx:76
 #: inx/inkstitch_letters_to_font.inx:66
 msgid "No"
 msgstr "Nein"
