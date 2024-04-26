@@ -5,9 +5,9 @@ last_modified_at: 2024-04-20
 toc: false
 preview_image:
   - url: /assets/images/fonts/magnolia_small.jpg
-    height: 31
-  - url: /assets/images/fonts/magnolia_KOR.jpg
     height: 15
+  - url: /assets/images/fonts/magnolia_KOR.jpg
+    height: 31
 
 ---
 {%- assign font = site.data.fonts.magnolia_KOR.font -%}
