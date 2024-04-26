@@ -21,15 +21,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      showgrid="true"
-     inkscape:zoom="1.8285339"
-     inkscape:cx="84.767363"
-     inkscape:cy="148.20616"
+     inkscape:zoom="1.0328598"
+     inkscape:cx="84.716243"
+     inkscape:cy="148.1324"
      inkscape:window-width="1440"
      inkscape:window-height="796"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g1114"
+     inkscape:current-layer="g1206"
      inkscape:document-units="px"
      inkscape:snap-grids="false"
      inkscape:snap-global="false"
@@ -346,7 +346,7 @@ Sandrine Nugue
      style="display:none"
      id="g1106">
     <path
-       style="fill:#ff0000;stroke-width:0.25"
+       style="display:inline;fill:#ff0000;stroke-width:0.25"
        d="m 93.601367,109.25 49.500003,-30 5.5,-36.5 3,-2 46,57.75 -3,2 -37,-4.25 -48.5,50.25 z"
        id="path6746"
        sodipodi:nodetypes="ccccccccc"
@@ -358,7 +358,7 @@ Sandrine Nugue
        inkstitch:min_jump_stitch_length_mm="3" />
     <path
        id="path7131"
-       style="fill:#000000;stroke-width:0.25"
+       style="display:inline;fill:#000000;stroke-width:0.25"
        d="m 109.10137,146.5 41.75,101 v 2.5 h -46.5 L 90.351367,206.25 h -65.25 l -13.75,43.75 h -42 v -2.5 l 19.5,-44.5 62.5,-143 h 21.75 l 20.5,49.25 z m -26.250003,36 -25.5,-79.5 -24.75,79.5 z"
        inkstitch:angle="45"
        inkstitch:expand_mm="0.3"
@@ -378,7 +378,8 @@ Sandrine Nugue
        inkstitch:max_stitch_length_mm="4"
        inkstitch:reverse_rails="none"
        inkstitch:min_stitch_length_mm="0.5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="4" />
     <path
        d="m -8.35107,196.595 0.52038,-1.191"
        style="fill:none;stroke:#008000;stroke-width:1px;stroke-dasharray:3, 1"
@@ -400,7 +401,8 @@ Sandrine Nugue
        inkstitch:max_stitch_length_mm="4"
        inkstitch:reverse_rails="none"
        inkstitch:min_stitch_length_mm="0.5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="4" />
     <path
        id="path1104"
        style="display:inline;fill:none;stroke:#008000;stroke-width:0.25"
@@ -415,7 +417,8 @@ Sandrine Nugue
        inkstitch:reverse_rails="none"
        sodipodi:nodetypes="cssccssccc"
        inkstitch:min_stitch_length_mm="0.5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="4" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -464,7 +467,7 @@ Sandrine Nugue
        inkstitch:min_jump_stitch_length_mm="3" />
     <path
        id="path1108"
-       style="fill:#559bff;fill-opacity:1;stroke-width:0.25"
+       style="display:inline;fill:#559bff;fill-opacity:1;stroke-width:0.25"
        d="m 47.851367,5 h 59.750003 c 39,0 58.75,17.25 58.75,41.75 0,19.75 -12.25,37.5 -38,45 v 2.5 c 26.75,4.75 36,20.5 36,38.75 0,22.75 -19.25,59.5 -80.250003,59.5 h -52.75 l 14.5,-98.5 z m 31.75,89 -2,68.5 h 13.25 c 25.250003,0 36.250003,-16.5 36.250003,-34.25 0,-16.5 -14,-24 -27.750003,-26.25 l 1.250003,-16.5 c 18,-3.25 28,-11.5 28,-27.25 0,-12.75 -8,-22 -29.500003,-22 h -10.75 z"
        inkstitch:angle="135"
        inkstitch:expand_mm="0.2"
@@ -482,7 +485,7 @@ Sandrine Nugue
     <path
        d="m 85.601367,238.25 c -8.75,5.75 -32.25,14.25 -55,14.25 -54,0 -96,-37 -96,-97 0,-59.25 38.75,-95.5 99.25,-95.5 15.75,0 37.5,3.25 52.75,6 v 0.25 c 6.5,-6 14.750003,-8.75 24.750003,-8.75 17.25,0 35.25,12 35.25,32.5 0,6 -2,12.25 -4,15 -11.75,-16 -25.25,-21.75 -38.75,-21.75 -5.000003,0 -10.000003,0.75 -14.750003,2 4.5,16.75 17.750003,24.5 38.500003,25.5 -7.25,8.75 -15.75,11 -23.25,11 -10.250003,0 -18.500003,-5.5 -22.000003,-13.5 -13.75,-8.75 -30.75,-14.5 -53.5,-14.5 -26.5000003,0 -57.25,16 -57.25,59.5 0,37.5 18.25,68.25 61,68.25 17.25,0 33.5,-4 48.25,-12.25 -0.25,-1 -0.25,-2.25 -0.25,-3.5 0,-12.5 10.25,-22 23.750003,-22 7.5,0 16,2.25 23.25,11 -20.75,1 -34.250003,8.75 -38.500003,25.5 4.75,1.25 9.75,2 14.750003,2 13.5,0 27,-5.75 38.75,-21.75 2,2.75 4,9 4,15 0,20.5 -18,32.5 -35.25,32.5 -10.5,0 -19.000003,-3 -25.750003,-9.75 z"
        id="path1112"
-       style="fill:#ff0000;stroke-width:0.25"
+       style="display:inline;fill:#ff0000;stroke-width:0.25"
        inkstitch:angle="45"
        inkstitch:expand_mm="0.2"
        inkstitch:running_stitch_length_mm="2"
@@ -498,7 +501,7 @@ Sandrine Nugue
      id="g1118">
     <path
        id="path1116"
-       style="fill:#000000;stroke-width:0.25"
+       style="display:inline;fill:#000000;stroke-width:0.25"
        d="m -58.898633,250 5.75,-98.5 -5.75,-89 h 76.5 c 54.5,0 94.250003,30.5 94.250003,90 0,55.5 -37.750003,97.5 -96.500003,97.5 z m 39.5,-98.5 3.75,68.5 h 31 c 33.5,0 59.5,-23 59.5,-68.75 -0.25,-37.25 -23.25,-57.5 -62,-57.5 h -28.75 z"
        inkstitch:angle="45"
        inkstitch:expand_mm="0.2"
@@ -508,7 +511,7 @@ Sandrine Nugue
        inkstitch:min_stitch_length_mm="0.3"
        inkstitch:min_jump_stitch_length_mm="3" />
     <path
-       style="fill:#ff0000;stroke-width:0.25"
+       style="display:inline;fill:#ff0000;stroke-width:0.25"
        d="m 4.3513667,206.25 c -6.5,0 -11.75,-5.25 -11.75,-11.75 0,-6.25 5.25,-11.5 11.75,-11.5 6.5000003,0 11.5000003,5.25 11.5000003,11.5 0,6.5 -5,11.75 -11.5000003,11.75 z"
        id="path22765"
        inkstitch:angle="45"
@@ -518,7 +521,7 @@ Sandrine Nugue
        inkstitch:min_stitch_length_mm="0.3"
        inkstitch:min_jump_stitch_length_mm="3" />
     <path
-       style="fill:#00ff00;fill-rule:evenodd;stroke-width:0.25"
+       style="display:inline;fill:#00ff00;fill-rule:evenodd;stroke-width:0.25"
        d="m 20.851367,170.25 2.360352,-0.23828 2.17871,-0.6836 1.956055,-1.08203 1.692383,-1.43359 1.387695,-1.73828 1.041992,-1.9961 0.655274,-2.20703 0.227539,-2.37109 -0.227539,-2.28857 -0.655274,-2.14502 -1.041992,-1.95166 -1.387695,-1.7085 -1.692383,-1.41553 -1.956055,-1.07275 -2.17871,-0.68018 L 20.851367,147 l -2.288574,0.23779 -2.14502,0.68018 -1.95166,1.07275 -1.708496,1.41553 -1.415528,1.7085 -1.072754,1.95166 -0.6801755,2.14502 -0.237793,2.28857 0.237793,2.37109 0.6801755,2.20703 1.072754,1.9961 1.415528,1.73828 1.708496,1.43359 1.95166,1.08203 2.14502,0.6836 z"
        id="path22763"
        inkstitch:angle="135"
@@ -528,7 +531,7 @@ Sandrine Nugue
        inkstitch:min_stitch_length_mm="0.3"
        inkstitch:min_jump_stitch_length_mm="3" />
     <path
-       style="fill:#0000ff;stroke-width:0.25"
+       style="display:inline;fill:#0000ff;stroke-width:0.25"
        d="m 37.601367,134.25 c -6.5,0 -11.75,-5.25 -11.75,-11.75 0,-6.25 5,-11.5 11.75,-11.5 6.5,0 11.5,5.25 11.5,11.5 0,6.5 -5,11.75 -11.5,11.75 z"
        id="path22761"
        inkstitch:angle="45"
@@ -545,7 +548,7 @@ Sandrine Nugue
      style="display:none"
      id="g1122">
     <path
-       style="fill:#c87137;stroke-width:0.25"
+       style="display:inline;fill:#c87137;stroke-width:0.25"
        d="M 44.746583,250 H 11.351367 c -52.5,0 -81.75,-20.25 -81.75,-58.5 0,-29 15.25,-40.75 28.75,-51.5 11.25,-8.75 21.25,-16.75 21.25,-32.5 0,-13.5 -8,-20.25 -18.75,-20.25 -8.25,0 -13.75,5 -16.25,10 h -2.5 v -17 c 9.25,-13 22.25,-22.75 43.5,-22.75 26.75,0 46.25,17.75 46.25,46 0,40.75 -28.7500003,50.25 -28.7500003,85.25 0,18 16.0000003,35 41.2500003,43.5 z"
        id="path2516"
        sodipodi:nodetypes="csscsscccssscc"
@@ -557,7 +560,7 @@ Sandrine Nugue
        inkstitch:min_stitch_length_mm="0.3"
        inkstitch:min_jump_stitch_length_mm="3" />
     <path
-       style="fill:#800000;stroke-width:0.25"
+       style="display:inline;fill:#800000;stroke-width:0.25"
        d="m 44.351367,232.25 4.75,-80.75 -5.75,-89 H 150.60137 l 5.25,37.75 h -2.5 l -66.250003,-16 -3.75,57.25 63.250003,-2 -2.5,32.5 -60.750003,-11 3.75,67 66.750003,-20 h 2.5 l -5,42 H 44.746583 Z"
        id="path1120"
        sodipodi:nodetypes="ccccccccccccccccc"
@@ -575,7 +578,7 @@ Sandrine Nugue
      style="display:none"
      id="g1126">
     <path
-       style="fill:#000000;stroke-width:0.25"
+       style="display:inline;fill:#000000;stroke-width:0.25"
        d="m 28.851367,148.5 -5.5,-86 H 133.35137 l 5,37.75 h -2.5 L 67.101367,84 l -4,64 z"
        id="path26032"
        sodipodi:nodetypes="cccccccc"
@@ -587,7 +590,7 @@ Sandrine Nugue
        inkstitch:min_stitch_length_mm="0.3"
        inkstitch:min_jump_stitch_length_mm="3" />
     <path
-       style="fill:#000000;stroke-width:0.25"
+       style="display:inline;fill:#000000;stroke-width:0.25"
        d="m 63.851367,171.5 4.5,78.5 h -45 l 4.75,-80.75 z"
        id="path1124"
        sodipodi:nodetypes="ccccc"
@@ -598,7 +601,7 @@ Sandrine Nugue
        inkstitch:min_stitch_length_mm="0.3"
        inkstitch:min_jump_stitch_length_mm="3" />
     <path
-       style="fill:#ff0000;stroke-width:0.25"
+       style="display:inline;fill:#ff0000;stroke-width:0.25"
        d="m 28.101367,169.25 -47.5,-3 19.49999974,17.25 V 201 H -2.3986333 L -69.148633,161 v -7 l 66.7499997,-39.75 h 2.50000004 v 17.5 l -20.74999974,17.5 49.5,-0.75 34.25,-0.5 68.500003,-1.25 -2.5,28.75 -65.250003,-4 z"
        id="path26030"
        sodipodi:nodetypes="ccccccccccccccccc"
@@ -616,7 +619,7 @@ Sandrine Nugue
      style="display:none"
      id="g1130">
     <path
-       style="fill:#c87137;stroke:none;stroke-width:0.25"
+       style="display:inline;fill:#c87137;stroke:none;stroke-width:0.25"
        d="m 244.35137,221.5 c -5.75,0 -10.25,-4.5 -10.25,-10.25 0,-5.5 4.5,-10.25 10.25,-10.25 5.5,0 10.25,4.75 10.25,10.25 0,5.75 -4.75,10.25 -10.25,10.25 z"
        id="path27055"
        inkstitch:angle="135"
@@ -627,7 +630,7 @@ Sandrine Nugue
        inkstitch:min_stitch_length_mm="0.3"
        inkstitch:min_jump_stitch_length_mm="3" />
     <path
-       style="fill:#c87137;stroke:none;stroke-width:0.25"
+       style="display:inline;fill:#c87137;stroke:none;stroke-width:0.25"
        d="m 209.35137,219.75 c -5.75,0 -10.25,-4.5 -10.25,-10.25 0,-5.5 4.5,-10.25 10.25,-10.25 5.5,0 10.25,4.75 10.25,10.25 0,5.75 -4.75,10.25 -10.25,10.25 z"
        id="path27053"
        inkstitch:angle="135"
@@ -637,7 +640,7 @@ Sandrine Nugue
        inkstitch:min_stitch_length_mm="0.3"
        inkstitch:min_jump_stitch_length_mm="3" />
     <path
-       style="fill:#c87137;stroke:none;stroke-width:0.25"
+       style="display:inline;fill:#c87137;stroke:none;stroke-width:0.25"
        d="m 209.35137,146.25 c -5.5,0 -10.25,-4.5 -10.25,-10.25 0,-5.5 4.75,-10.25 10.25,-10.25 5.75,0 10.25,4.75 10.25,10.25 0,5.75 -4.5,10.25 -10.25,10.25 z"
        id="path27051"
        inkstitch:angle="135"
@@ -647,7 +650,7 @@ Sandrine Nugue
        inkstitch:min_stitch_length_mm="0.3"
        inkstitch:min_jump_stitch_length_mm="3" />
     <path
-       style="fill:#c87137;stroke:none;stroke-width:0.25"
+       style="display:inline;fill:#c87137;stroke:none;stroke-width:0.25"
        d="m 244.35137,144.5 c -5.5,0 -10.25,-4.5 -10.25,-10.25 0,-5.5 4.75,-10.25 10.25,-10.25 5.75,0 10.25,4.75 10.25,10.25 0,5.75 -4.5,10.25 -10.25,10.25 z"
        id="path27049"
        inkstitch:angle="135"
@@ -657,7 +660,7 @@ Sandrine Nugue
        inkstitch:min_stitch_length_mm="0.3"
        inkstitch:min_jump_stitch_length_mm="3" />
     <path
-       style="fill:#000000;stroke-width:0.25"
+       style="display:inline;fill:#000000;stroke-width:0.25"
        d="m 98.851367,232.5 c -19,13.25 -42.25,20 -67,20 -54.75,0 -97.25,-36 -97.25,-97 0,-59.25 37,-95.5 102.5,-95.5 18,0 46,3.75 55.5,6.25 l 5.25,47 h -2.5 c -12.25,-9.25 -33.25,-19.5 -61.75,-19.5 -33.75000026,0 -62,16 -62,59.5 0,38.75 21.7499997,68.25 62,68.25 15.25,0 31.5,-3 41,-9.5 l -26.25,-52.75 v -2.5 h 50 L 271.85137,150.5 V 195 l -170.25,-6.75 z"
        id="path1128"
        inkstitch:angle="45"
@@ -674,7 +677,7 @@ Sandrine Nugue
      style="display:none"
      id="g1134">
     <path
-       style="fill:#000000;stroke-width:0.25"
+       style="display:inline;fill:#000000;stroke-width:0.25"
        d="m 107.35137,107.75 -2.75,43.75 5.5,98.5 H 65.101367 l 4.75,-83.5 h -88.5 l 4.75,83.5 h -45 l 5.75,-98.5 -5.75,-89 h 45 l -5,80.25 h 89.25 l -5.25,-80.25 h 43.250003 z"
        id="path28322"
        sodipodi:nodetypes="cccccccccccccccc"
@@ -686,7 +689,7 @@ Sandrine Nugue
        inkstitch:min_stitch_length_mm="0.3"
        inkstitch:min_jump_stitch_length_mm="3" />
     <path
-       style="fill:#b3b3b3;stroke-width:0.25"
+       style="display:inline;fill:#b3b3b3;stroke-width:0.25"
        d="m 108.35137,62.5 c 18,-0.75 43.75,-6.5 54,-28.25 14,0 34,18.5 34,49 0,28.75 -13,49.75 -34.5,52.5 -10.25,-22.25 -35.75,-27.75 -54.5,-28 z"
        id="path1132"
        sodipodi:nodetypes="ccsccc"
@@ -732,7 +735,7 @@ Sandrine Nugue
      style="display:none"
      id="g1142">
     <path
-       style="fill:#ff0000;stroke-width:0.25"
+       style="display:inline;fill:#ff0000;stroke-width:0.25"
        d="m -60.648633,212.75 c 10.25,3.75 22.5,7 30.5,7 13.5,0 19.5,-8.5 20.2499997,-27.75 l 0.25,-8 c 0,-4.75 -0.25,-9.75 -0.7499997,-15.25 l -8,-106.25 h 45 l -2.75,134.25 c -0.25,14.5 -3,26.5 -8.75,35.5 -5.1920241,6.2319 -10.8483157,10.60674 -16.5000003,15 -7,3.5 -15.9999997,5.25 -26.4999997,5.25 -10,0 -24,-2.5 -33.75,-5 l -10,-38 z"
        id="path36167"
        sodipodi:nodetypes="csccccccccsccc"
@@ -744,7 +747,7 @@ Sandrine Nugue
        inkstitch:min_jump_stitch_length_mm="3" />
     <path
        id="path30411"
-       style="fill:none;stroke:#ff0000;stroke-width:0.755906;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="display:inline;fill:none;stroke:#ff0000;stroke-width:0.755906;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="M -9.6486333,184 -71.648633,209.5 M -9.8986333,192 -60.648633,212.75 M -40.25,194 l 4,11.5"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.3"
@@ -753,9 +756,10 @@ Sandrine Nugue
        inkstitch:max_stitch_length_mm="4"
        inkstitch:reverse_rails="none"
        inkstitch:min_stitch_length_mm="0.5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="4" />
     <path
-       style="fill:#000000;stroke-width:0.25"
+       style="display:inline;fill:#000000;stroke-width:0.25"
        d="m 38.601367,187.5 45.25,-19.75 v 4.75 l -45.25,20 z"
        id="path30142"
        inkstitch:angle="25"
@@ -763,7 +767,7 @@ Sandrine Nugue
        inkstitch:min_stitch_length_mm="0.3"
        inkstitch:min_jump_stitch_length_mm="3" />
     <path
-       style="fill:#000000;stroke-width:0.25"
+       style="display:inline;fill:#000000;stroke-width:0.25"
        d="m 39.101367,175 45.25,-19.75 V 160 l -45.25,20 z"
        id="path30140"
        inkstitch:angle="25"
@@ -771,7 +775,7 @@ Sandrine Nugue
        inkstitch:min_stitch_length_mm="0.3"
        inkstitch:min_jump_stitch_length_mm="3" />
     <path
-       style="fill:#000000;stroke-width:0.25"
+       style="display:inline;fill:#000000;stroke-width:0.25"
        d="m 39.351367,162.5 45.25,-19.75 v 4.75 l -45.25,20 z"
        id="path30138"
        inkstitch:angle="25"
@@ -779,7 +783,7 @@ Sandrine Nugue
        inkstitch:min_stitch_length_mm="0.3"
        inkstitch:min_jump_stitch_length_mm="3" />
     <path
-       style="fill:#000000;stroke-width:0.25"
+       style="display:inline;fill:#000000;stroke-width:0.25"
        d="M 39.351367,141.75 V 79 l 55.5,-24.25 v 62.5 z"
        id="path30130"
        inkstitch:angle="25"
@@ -787,7 +791,7 @@ Sandrine Nugue
        inkstitch:min_stitch_length_mm="0.3"
        inkstitch:min_jump_stitch_length_mm="3" />
     <path
-       style="fill:#000000;stroke-width:0.25"
+       style="display:inline;fill:#000000;stroke-width:0.25"
        d="m 155.85137,3.75 h -32 L -18.398633,62.5 h 45 z"
        id="path30885"
        sodipodi:nodetypes="ccccc"
@@ -798,7 +802,7 @@ Sandrine Nugue
        inkstitch:min_stitch_length_mm="0.3"
        inkstitch:min_jump_stitch_length_mm="3" />
     <path
-       style="fill:#000000;stroke-width:0.25"
+       style="display:inline;fill:#000000;stroke-width:0.25"
        d="m 103.60137,50.75 33.75,-15 v 4.5 l -33.75,15.5 z"
        id="path30126"
        inkstitch:angle="25"
@@ -806,7 +810,7 @@ Sandrine Nugue
        inkstitch:min_stitch_length_mm="0.3"
        inkstitch:min_jump_stitch_length_mm="3" />
     <path
-       style="fill:#000000;stroke-width:0.25"
+       style="display:inline;fill:#000000;stroke-width:0.25"
        d="m 103.60137,63.25 33.75,-15 v 4.5 l -33.75,15.5 z"
        id="path30128"
        inkstitch:angle="25"
@@ -814,7 +818,7 @@ Sandrine Nugue
        inkstitch:min_stitch_length_mm="0.3"
        inkstitch:min_jump_stitch_length_mm="3" />
     <path
-       style="fill:#000000;stroke-width:0.25"
+       style="display:inline;fill:#000000;stroke-width:0.25"
        d="m 103.60137,75.75 33.75,-15 v 4.5 l -33.75,15.5 z"
        id="path30132"
        inkstitch:angle="25"
@@ -822,7 +826,7 @@ Sandrine Nugue
        inkstitch:min_stitch_length_mm="0.3"
        inkstitch:min_jump_stitch_length_mm="3" />
     <path
-       style="fill:#000000;stroke-width:0.25"
+       style="display:inline;fill:#000000;stroke-width:0.25"
        d="m 103.60137,88.25 33.75,-15 v 4.5 l -33.75,15.5 z"
        id="path30134"
        inkstitch:angle="25"
@@ -830,7 +834,7 @@ Sandrine Nugue
        inkstitch:min_stitch_length_mm="0.3"
        inkstitch:min_jump_stitch_length_mm="3" />
     <path
-       style="fill:#000000;stroke-width:0.25"
+       style="display:inline;fill:#000000;stroke-width:0.25"
        d="m 91.60156,199 c 5.5,-6.25 7.75,-10.75 7.75,-25 v -37.5 l 38,-16.75 v 37.75 c 0,6.75 0.25,12.75 -1,17.5 -11.46923,10.16453 -28.32986,17.25289 -44.75,24 z"
        id="path32261"
        sodipodi:nodetypes="csccscc"
@@ -840,7 +844,7 @@ Sandrine Nugue
        inkstitch:min_stitch_length_mm="0.3"
        inkstitch:min_jump_stitch_length_mm="3" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.755906;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.755906;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 155.85137,3.75 0.25,136.5 c 0,26 -11.75,42.25 -39.75,54.75 L -1.3986333,247.25 M 148.81905,6.9465142 149.85156,137.75 c 0,17.75 -5.75,29.25 -13.5,37.25 -8.51263,7.85544 -23.20833,14.125 -44.75,24 l -76.5,33.25 m 30.648439,-16.75 -1,14 M 129.25,177 l 0.5,15.5 m 16.5,-58.5 14,-1 m -15,-115.499999 16,-0.5"
        id="path30908"
        sodipodi:nodetypes="ccccccccc"
@@ -852,7 +856,8 @@ Sandrine Nugue
        inkstitch:force_lock_stitches="True"
        inkstitch:reverse_rails="none"
        inkstitch:min_stitch_length_mm="0.5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="4" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -860,7 +865,7 @@ Sandrine Nugue
      style="display:none"
      id="g1146">
     <path
-       style="fill:#000000;stroke-width:0.25"
+       style="display:inline;fill:#000000;stroke-width:0.25"
        d="m -58.898633,250 5.75,-98.5 -5.75,-89 h 45 l -5.5,89 5.5,98.5 z"
        id="path1438"
        inkstitch:angle="45"
@@ -879,7 +884,7 @@ Sandrine Nugue
        inkstitch:min_stitch_length_mm="0.3"
        inkstitch:min_jump_stitch_length_mm="3" />
     <path
-       style="fill:#ff0000;stroke-width:0.25"
+       style="display:inline;fill:#ff0000;stroke-width:0.25"
        d="m -6.6486333,153 c -3.7169697,-4.1227 -4.9999997,-10 -4.9999997,-16 0,-15.75 12.7499997,-28.5 28.25,-28.5 5.5,0 10.5,1.5 14.75,4 l 32.25,-55 38.500003,38.5 -60.000003,28.5 c 2,3.75 3,8 3,12.5 0,11 -6.00737,20.99133 -15.25,25.25 -12.249936,5.64433 -27.5817005,0.64178 -36.5000003,-9.25 z"
        id="path1442"
        sodipodi:nodetypes="sssccccsss"
@@ -888,7 +893,7 @@ Sandrine Nugue
        inkstitch:min_stitch_length_mm="0.3"
        inkstitch:min_jump_stitch_length_mm="3" />
     <path
-       style="fill:none;stroke:#ff0000;stroke-width:0.25"
+       style="display:inline;fill:none;stroke:#ff0000;stroke-width:0.25"
        d="m 138.85137,74 -38,10 m 38,-21 -42.500003,16.5 m -0.05841,-2.93593 7.519693,8.066572"
        id="path1440"
        sodipodi:nodetypes="cccc"
@@ -902,9 +907,10 @@ Sandrine Nugue
        inkstitch:max_stitch_length_mm="4"
        inkstitch:reverse_rails="none"
        inkstitch:min_stitch_length_mm="0.5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="4" />
     <path
-       style="fill:none;stroke:#ffcc00;stroke-width:0.25"
+       style="display:inline;fill:none;stroke:#ffcc00;stroke-width:0.25"
        d="M 130.85137,41.75 91.351367,74.25 M 122.10137,33 87.351367,70.25 m -0.218751,-4.213489 7.246242,7.656407"
        id="path1436"
        sodipodi:nodetypes="cccc"
@@ -918,9 +924,10 @@ Sandrine Nugue
        inkstitch:max_stitch_length_mm="4"
        inkstitch:reverse_rails="none"
        inkstitch:min_stitch_length_mm="0.5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="4" />
     <path
-       style="fill:none;stroke:#00ff00;stroke-width:0.25"
+       style="display:inline;fill:none;stroke:#00ff00;stroke-width:0.25"
        d="M 101.35137,23.75 82.351367,65.5 m 7.5,-41.75 -12,37.25 m -0.972868,-4.533998 7.793129,7.793128"
        id="path1144"
        sodipodi:nodetypes="cccc"
@@ -936,7 +943,8 @@ Sandrine Nugue
        inkstitch:force_lock_stitches="True"
        inkstitch:reverse_rails="none"
        inkstitch:min_stitch_length_mm="0.5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="4" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -944,7 +952,7 @@ Sandrine Nugue
      style="display:none"
      id="g1150">
     <path
-       style="fill:#000000;stroke-width:0.25"
+       style="display:inline;fill:#000000;stroke-width:0.25"
        d="M 21.851367,250 H 3.8513667 -55.398633 h -3 v -0.25 l 5.75,-98.25 -5.75,-89 h 44 l -6,164.75 74,-21.25 h 2.5 l -3.75,33.25 z"
        id="path5652"
        sodipodi:nodetypes="ccccccccccccc"
@@ -956,7 +964,7 @@ Sandrine Nugue
        inkstitch:min_stitch_length_mm="0.3"
        inkstitch:min_jump_stitch_length_mm="3" />
     <path
-       style="fill:#ff0000;stroke-width:0.25"
+       style="display:inline;fill:#ff0000;stroke-width:0.25"
        d="m 33.351367,290.25 c 0,12 -2.75,24.5 -10.25,31.5 V 322 c 1,0.5 2.75,1 5,1 12.75,0 18.25,-17 18.25,-33.75 0,-16.25 -8.75,-32.25 -24.5,-39.25 l 30.5,-10.75 c 18.5,15 26,33 26,54.75 0,30.75 -17.25,66.25 -58.25,66.25 -18.7500003,0 -37,-12 -37,-34 0,-18.75 9.2499997,-26 9.2499997,-41.5 0,-11 -4.9999997,-31.25 -47.7499997,-34.75 H 3.8513667 c 16.7500003,6.75 29.5000003,22.25 29.5000003,40.25"
        id="path5656"
        sodipodi:nodetypes="cccssccssssccc"
@@ -974,7 +982,7 @@ Sandrine Nugue
      style="display:none"
      id="g1154">
     <path
-       style="fill:#000000;stroke-width:0.25"
+       style="display:inline;fill:#000000;stroke-width:0.25"
        d="M 53.65157,212.20472 4.3513667,62.5 H -13.398633 l -55.75,187.5 58.75,-68.5 13.2499997,-53 h 0.75 l 24.0000003,58.25 26.050203,25.45472"
        id="path4423"
        inkstitch:angle="45"
@@ -985,7 +993,7 @@ Sandrine Nugue
        inkstitch:min_stitch_length_mm="0.3"
        inkstitch:min_jump_stitch_length_mm="3" />
     <path
-       style="fill:#000000;stroke-width:0.25"
+       style="display:inline;fill:#000000;stroke-width:0.25"
        d="M 53.65157,212.20472 87.259343,184.87401 112.10137,127.25 h 0.75 l 14.75,59.75 46.52996,26.28754 L 130.10137,62.5 h -18.25 l -58.1998,149.70472"
        id="path5721"
        inkstitch:angle="45"
@@ -995,7 +1003,7 @@ Sandrine Nugue
        inkstitch:min_stitch_length_mm="0.3"
        inkstitch:min_jump_stitch_length_mm="3" />
     <path
-       style="fill:#00ff00;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:#00ff00;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m -69.148633,250 58.75,-68.5 6.2499997,26.75 h 0.5 L 8.8513665,180.5 h 0.75 L 23.601367,203 h 0.75 l 3.046756,-16.75099 26.253447,25.95571 33.607773,-27.33071 5.592024,27.37599 h 0.75 l 16.250003,-34.5 h 0.75 l 11,31.25 h 0.75 l 5.25,-22 46.99509,25.20472 L 184.85137,250 Z"
        id="path5028"
        sodipodi:nodetypes="ccccccccccccccccccccc"
@@ -1014,7 +1022,7 @@ Sandrine Nugue
      id="g1158">
     <path
        id="path3635"
-       style="fill:#000000;stroke-width:0.25"
+       style="display:inline;fill:#000000;stroke-width:0.25"
        d="m 68.601562,109.5 -3.75,140.5 H 106.85156 L 98.101562,131.25 209.10156,250 h 7.75 l 5.75,-133 c -12.021,2.26583 -23.75091,8.06043 -36.5,1.5 l 3.75,64.75 -49.5,-53.25 C 110.88124,125.65618 85.327894,119.55651 68.601562,109.5 Z"
        transform="translate(-93.75)"
        inkstitch:angle="45"
@@ -1027,7 +1035,7 @@ Sandrine Nugue
        inkstitch:min_stitch_length_mm="0.3"
        inkstitch:min_jump_stitch_length_mm="3" />
     <path
-       style="fill:#ffd5d5;stroke-width:0.25"
+       style="display:inline;fill:#ffd5d5;stroke-width:0.25"
        d="m -25.148633,109.5 c -33.75,-0.75 -44,-16 -44,-31.5 0,-21 14,-30.75 33.25,-30.75 7.25,0 15.5,1.5 20.25,3 3,-14 17.4999997,-33 54.5,-33 27.75,0 46.75,10 53.25,27 9.250003,-4 18.500003,-6.25 29.500003,-6.25 26,0 45.25,15.5 45.25,37.5 0,18.75 -11.5,40.25 -38,41.5 -12.021,2.26583 -23.75092,8.06043 -36.500003,1.5 -10.75,8 -26.5,15 -45.75,11.5 -29.470327,-4.34382 -55.023669,-10.44349 -71.75,-20.5 z"
        id="path3639"
        sodipodi:nodetypes="csscscsscccc"
@@ -1043,7 +1051,7 @@ Sandrine Nugue
      style="display:none"
      id="g1162">
     <path
-       style="fill:#ff0000;stroke-width:0.25"
+       style="display:inline;fill:#ff0000;stroke-width:0.25"
        d="m 53.351367,189.5 h -5 c -13.5,-11 -22,-20.5 -28.5,-30.75 v -1.5 c 7.5,-7 19,-11.25 31,-11.25 12,0 23.5,4.25 31,11.25 v 1.5 c -6.5,10.25 -15,19.75 -28.5,30.75 z"
        id="path1091"
        inkstitch:angle="135"
@@ -1055,7 +1063,7 @@ Sandrine Nugue
        inkstitch:min_jump_stitch_length_mm="3" />
     <path
        id="path1160"
-       style="fill:#000000;stroke-width:0.25"
+       style="display:inline;fill:#000000;stroke-width:0.25"
        d="M 52.031253,252.49998 C -4.6791069,252.46066 -41.648633,204.72971 -41.648633,155.5 c 0,-11.25 1.5,-22 4.25,-31.5 -16,-3 -28,-16 -28,-35.25 0,-22 16,-35.75 35.75,-35.75 14.25,0 26.7499997,7.25 32.4999997,19.25 C 17.101367,64.25 33.851367,60 52.101367,60 c 18.25,0 35,4.25 49.250003,12.25 5.75,-12 18,-19.25 32.25,-19.25 19.75,0 36,13.75 36,35.75 0,19.25 -12,32 -28,35.25 2.75,9.5 4.25,20 4.25,31.5 0,47.98452 -36.97615,96.9684 -93.69512,96.99998 -0.04248,4e-5 -0.08561,0 -0.124997,0 z M 52.101367,222.5 c 32.5,-0.25 56.750003,-29.25 56.750003,-66.25 -0.25,-38 -22.500003,-62.75 -56.750003,-62.5 -34.25,-0.5 -56.7500003,25 -56.7500003,62.25 0,37.25 24.0000003,66 56.7500003,66.5 z"
        sodipodi:nodetypes="cscsscscsscscccccsc"
        inkstitch:angle="45"
@@ -1073,7 +1081,7 @@ Sandrine Nugue
      id="g1166">
     <path
        id="path2946"
-       style="fill:#000000;stroke-width:0.25"
+       style="display:inline;fill:#000000;stroke-width:0.25"
        d="m 34.851562,62.5 5.75,89 -5.75,98.5 h 45 l -5.5,-98.5 3.5,-57.75 h 8.5 c 10.205334,0 18.532898,1.308926 25.087888,3.753906 9.51024,-20.113162 26.5683,-13.808265 40.91211,-17.003906 -11.5,-11 -29.75,-18 -53.499998,-18 z"
        transform="translate(-93.75)"
        inkstitch:angle="45"
@@ -1084,7 +1092,7 @@ Sandrine Nugue
        inkstitch:min_stitch_length_mm="0.3"
        inkstitch:min_jump_stitch_length_mm="3" />
     <path
-       style="fill:#ff0000;stroke-width:0.25"
+       style="display:inline;fill:#ff0000;stroke-width:0.25"
        d="m 7.6013667,140.25 c -7.74999996,0 -14.25,-6.5 -14.25,-14.25 0,-8 6.50000004,-14.25 14.25,-14.25 8.0000003,0 14.2500003,6.25 14.2500003,14.25 0,7.75 -6.25,14.25 -14.2500003,14.25 z"
        id="path2948"
        inkstitch:angle="45"
@@ -1094,7 +1102,7 @@ Sandrine Nugue
        inkstitch:min_stitch_length_mm="0.3"
        inkstitch:min_jump_stitch_length_mm="3" />
     <path
-       style="fill:#b3b3b3;stroke-width:0.25"
+       style="display:inline;fill:#b3b3b3;stroke-width:0.25"
        d="M 58.601367,80.5 185.85137,87 v 16 L 71.601367,102.5 c 0.75,3.5 1.5,7 1.75,10.5 l 112.500003,4 v 16.75 c -40,3 -49.25,16.75 -70.5,39.75 -18.250003,20 -35.000003,29 -59.500003,29 -25,0 -45.25,-10.25 -58.0000003,-22.5 h 0.25 v -22 c 24.7500003,0 38.5000003,-11.5 38.5000003,-34.25 0,-12.25872 -6.037395,-21.44386 -18.912301,-26.246135 C 27.199298,77.390703 44.257558,83.695641 58.601367,80.5 Z"
        id="path1164"
        sodipodi:nodetypes="ccccccccscccscc"
@@ -1114,7 +1122,7 @@ Sandrine Nugue
      id="g1170">
     <path
        id="path1168"
-       style="fill:#000000;stroke-width:0.25"
+       style="display:inline;fill:#000000;stroke-width:0.25"
        d="m 45.351367,251 c -5.5,1 -11,1.5 -17,1.5 -56.75,0 -93.75,-47.75 -93.75,-97 0,-59 40.5,-95.5 93.75,-95.5 53.25,0 93.750003,36.5 93.750003,95.5 0,33.25 -17.75,66.75 -47.250003,84.5 z m -17,-28.5 c 32.5,-0.25 56.75,-29.25 56.75,-66.25 -0.25,-38 -22.5,-62.75 -56.75,-62.5 -34.2500003,-0.5 -56.75,25 -56.75,62.25 0,37.25 23.9999997,66 56.75,66.5 z"
        sodipodi:nodetypes="csssscccccsc"
        inkstitch:angle="45"
@@ -1125,7 +1133,7 @@ Sandrine Nugue
        inkstitch:min_stitch_length_mm="0.3"
        inkstitch:min_jump_stitch_length_mm="3" />
     <path
-       style="fill:#ff0000;stroke-width:0.25"
+       style="display:inline;fill:#ff0000;stroke-width:0.25"
        d="m 74.851367,240 c 32.000003,19.5 113.000003,-3.5 109.500003,84.25 l -25.25,32.75 h -2.5 c -5.75,-64.25 -93.250003,-17.75 -111.250003,-106 z"
        id="path4660"
        sodipodi:nodetypes="cccccc"
@@ -1143,7 +1151,7 @@ Sandrine Nugue
      style="display:none"
      id="g1174">
     <path
-       style="fill:#ff0000;stroke-width:0.25"
+       style="display:inline;fill:#ff0000;stroke-width:0.25"
        d="m -2.6486333,163.75 v -11.5 c 20.7500003,-3.5 31.7500003,-12.75 31.7500003,-32 0,-16.5 -15.25,-26.5 -34.0000003,-26.5 H -15.898633 l -3.5,57.75 5.5,98.5 h -45 l 5.75,-98.5 -5.75,-89 H 3.3513667 c 41.5000003,0 62.5000003,20 62.5000003,48.25 0,21 -11,39 -39.25,47.75"
        id="path7081"
        inkstitch:angle="135"
@@ -1155,7 +1163,7 @@ Sandrine Nugue
        inkstitch:min_jump_stitch_length_mm="3" />
     <path
        id="path1172"
-       style="fill:#4d4d4d;stroke-width:0.25"
+       style="display:inline;fill:#4d4d4d;stroke-width:0.25"
        d="m 23.101367,186.5 h 11.75 l -13,-18.5 h -8.75 z m 19.75,36 h 17.25 l -14.75,-21 h -14 z m 25.25,46 h 24.25 l -18.25,-26 h -20.25 z m -41.5,-110 L 165.35137,310 v 2.5 h -42.25 l -16.5,-23.75 H 79.101367 l 13,23.75 h -43.5 L -2.6486333,163.75"
        inkstitch:angle="45"
        inkstitch:expand_mm="0.2"
@@ -1165,7 +1173,7 @@ Sandrine Nugue
        inkstitch:min_jump_stitch_length_mm="3" />
     <path
        id="path3"
-       style="fill:none;stroke:#00ff00;stroke-width:1px"
+       style="display:inline;fill:none;stroke:#00ff00;stroke-width:1px"
        d="M 53.998101,313.68871 2.3461417,162.50897 M 44.089808,313.9021 -2.4890993,164.02459 m 34.5683503,71.4335 -13.534676,4.20631"
        inkstitch:satin_column="true"
        sodipodi:nodetypes="cccccc"
@@ -1175,10 +1183,11 @@ Sandrine Nugue
        inkstitch:max_stitch_length_mm="4"
        inkstitch:reverse_rails="none"
        inkstitch:min_stitch_length_mm="0.5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="4" />
     <path
        id="path8"
-       style="fill:none;stroke:#00ff00;stroke-width:1px"
+       style="display:inline;fill:none;stroke:#00ff00;stroke-width:1px"
        d="M 24.728039,159.11369 161.86732,313.19084 M 30.085417,157.24203 174.60582,313.02943 m -83.855526,-73.99317 10.452146,-9.57252"
        inkstitch:satin_column="true"
        sodipodi:nodetypes="cccccc"
@@ -1190,7 +1199,8 @@ Sandrine Nugue
        inkstitch:force_lock_stitches="True"
        inkstitch:reverse_rails="none"
        inkstitch:min_stitch_length_mm="0.5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="4" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1198,7 +1208,7 @@ Sandrine Nugue
      style="display:none"
      id="g1178">
     <path
-       style="fill:#ff0000;stroke-width:0.25"
+       style="display:inline;fill:#ff0000;stroke-width:0.25"
        d="m 87.101367,96.25 18.000003,7.75 21.25,-5.75 2.5,12.5 -21.25,2.25 11.75,18.75 -11.75,6.25 -8.250003,-20.25 -18,-7.5 z"
        id="path1027"
        sodipodi:nodetypes="cccccccccc"
@@ -1212,7 +1222,7 @@ Sandrine Nugue
        inkstitch:min_jump_stitch_length_mm="3" />
     <path
        id="path1176"
-       style="fill:#000000;stroke-width:0.25"
+       style="display:inline;fill:#000000;stroke-width:0.25"
        d="m 47.601367,75.75 c -1,5.5 3.5,10.5 9,11 5.5,0.75 10.25,-3.25 11,-8.75 0.75,-5.75 -3.5,-10.5 -9,-11 -5.25,-0.5 -10.5,3 -11,8.75 z m -11.5,25.75 c -0.5,5.25 3.25,10.75 8.75,11 5.5,0.5 10.75,-3.25 11.25,-8.75 0.75,-5.75 -3.5,-10.5 -9,-11.25 -5.25,-0.75 -10.5,3.25 -11,9 z m 45.25,8.75 c -8.5,9.5 -27.75,15.25 -49.25,7 C 17.351367,111.5 9.8513665,101 8.3513665,89.5 3.8513667,88.25 -0.39863326,87.75 -4.8986333,87.75 -17.648633,87.75 -26.898633,95.5 -26.898633,106 c 0,9.25 3.75,16.25 19.9999997,27.25 L 11.101367,145.5 c 23.5,16 36.75,29.25 36.75,54 0,25.5 -16.75,53 -59.5,53 -11,0 -37.25,-2.25 -49.75,-5.75 l -5,-45.25 h 2.5 c 23.5,19 37.75,25.25 50.5,25.25 14.24999974,0 22.4999995,-8.75 22.4999995,-21 0,-12.25 -4.4999998,-20 -26.7499995,-34.25 l -17.25,-11 c -24,-15.25 -31.25,-33.75 -31.25,-51 0,-26.5 20,-49.5 57.7499997,-49.5 8.75000004,0 17.9999998,0.5 26.5000003,1.5 8.25,-7.5 22,-10.75 37.75,-4.75 24.25,9.5 33,25.25 31.25,39.5 z"
        inkstitch:angle="135"
        inkstitch:expand_mm="0.2"
@@ -1230,7 +1240,7 @@ Sandrine Nugue
      style="display:none"
      id="g1182">
     <path
-       style="fill:#ff0000;stroke-width:0.25"
+       style="display:inline;fill:#ff0000;stroke-width:0.25"
        d="m 68.851367,62.5 4,-70.25 h 9 L 107.10137,20.5 v 5 l -17.750003,-5 5.25,42 z"
        id="path1568"
        sodipodi:nodetypes="cccccccc"
@@ -1241,7 +1251,7 @@ Sandrine Nugue
        inkstitch:min_stitch_length_mm="0.3"
        inkstitch:min_jump_stitch_length_mm="3" />
     <path
-       style="fill:#ff0000;stroke-width:0.25"
+       style="display:inline;fill:#ff0000;stroke-width:0.25"
        d="m 2.3513667,62.5 5.9999998,-43.25 -14.2499998,10 h -7.4999997 l 24.25,-36.75 h 7 l 24,36.75 h -7.5 l -14.25,-10 h -0.25 l 7.25,43.25 z"
        id="path1564"
        sodipodi:nodetypes="cccccccccccc"
@@ -1252,7 +1262,7 @@ Sandrine Nugue
        inkstitch:min_stitch_length_mm="0.3"
        inkstitch:min_jump_stitch_length_mm="3" />
     <path
-       style="fill:#ff0000;stroke-width:0.25"
+       style="display:inline;fill:#ff0000;stroke-width:0.25"
        d="m -64.523633,62.5 5.375,-41.75 -17.75,5 v -5 l 25.25,-28.25 h 9 l 3.75,70 z"
        id="path1993"
        sodipodi:nodetypes="cccccccc"
@@ -1263,7 +1273,7 @@ Sandrine Nugue
        inkstitch:min_stitch_length_mm="0.3"
        inkstitch:min_jump_stitch_length_mm="3" />
     <path
-       style="fill:#000000;fill-opacity:1;stroke-width:0.25"
+       style="display:inline;fill:#000000;fill-opacity:1;stroke-width:0.25"
        d="m -69.898633,104.75 5.375,-42.25 h 25.625 41.2499997 24.7500003 41.75 25.75 l 5,42.25 h -2.5 l -67.75,-17.5 7.25,162.75 H -8.1486333 L -0.14863326,87.5 -67.398633,104.75 h -2.5"
        id="path1180"
        sodipodi:nodetypes="ccccccccccccccc"
@@ -1312,7 +1322,7 @@ Sandrine Nugue
      style="display:none"
      id="g1190">
     <path
-       style="fill:#000000;stroke-width:0.25"
+       style="display:inline;fill:#000000;stroke-width:0.25"
        d="M 133.60137,131 79.851367,252.5 h -21.75 L 8.1013667,131.75 l -15.5,-37 L -19.648633,65 v -2.5 h 46.5 l 47,147 47.000003,-147 h 42 V 65 l -13,29.25 z"
        id="path8438"
        sodipodi:nodetypes="cccccccccccccc"
@@ -1324,7 +1334,7 @@ Sandrine Nugue
        inkstitch:min_stitch_length_mm="0.3"
        inkstitch:min_jump_stitch_length_mm="3" />
     <path
-       style="fill:#c87137;stroke-width:0.25"
+       style="display:inline;fill:#c87137;stroke-width:0.25"
        d="m 149.85137,94.25 c 3.25,0.5 6.75,1 10.25,1 16.75,0 26.75,-3 28.5,-21.5 l 2.5,-27.25 h 14.75 c 1.25,10.5 4,32.25 4,45.75 0,28.5 -23.75,41.25 -50,41.25 -11.5,0 -18,-0.75 -26.25,-2.5 z"
        id="path8436"
        sodipodi:nodetypes="cscccsscc"
@@ -1335,7 +1345,7 @@ Sandrine Nugue
        inkstitch:min_stitch_length_mm="0.3"
        inkstitch:min_jump_stitch_length_mm="3" />
     <path
-       style="fill:#c87137;stroke-width:0.25"
+       style="display:inline;fill:#c87137;stroke-width:0.25"
        d="m 8.1013667,131.75 c -7.49999996,1.5 -14,2.25 -24.7499997,2.25 -26.25,0 -50,-12.75 -50,-41.25 0,-13.5 2.75,-35.25 4,-45.75 h 14.75 l 2.5,27.25 c 1.75,18.5 11.75,21.5 28.5,21.5 3.25,0 6.5,-0.25 9.4999997,-1 z"
        id="path1188"
        sodipodi:nodetypes="csscccscc"
@@ -1429,7 +1439,7 @@ Sandrine Nugue
        inkstitch:min_stitch_length_mm="0.3"
        inkstitch:min_jump_stitch_length_mm="3" />
     <path
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="M 0.601367,50.75 H 59.35137 l -36.25,101.75 z"
        id="path14243"
        inkstitch:angle="45"
@@ -1439,7 +1449,7 @@ Sandrine Nugue
        inkstitch:min_stitch_length_mm="0.3"
        inkstitch:min_jump_stitch_length_mm="3" />
     <path
-       style="fill:#000000;stroke-width:0.25"
+       style="display:inline;fill:#000000;stroke-width:0.25"
        d="m -47.898633,50.75 h -15 v -20 H 198.35137 v 20 h -15 z"
        id="path1192"
        sodipodi:nodetypes="ccccccc"
@@ -1526,16 +1536,20 @@ Sandrine Nugue
        id="path15821"
        sodipodi:nodetypes="sssss"
        inkstitch:expand_mm="0.3"
-       inkstitch:ties="1" />
+       inkstitch:ties="1"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
     <path
        style="fill:#0000ff;stroke:none;stroke-width:0.25"
        d="m 129.35137,168 c -3.25,0 -5.75,-2.5 -5.75,-5.5 0,-3.25 2.5,-5.75 5.75,-5.75 3,0 5.5,2.5 5.5,5.75 0,3 -2.5,5.5 -5.5,5.5 z"
        id="path15819"
        sodipodi:nodetypes="sssss"
-       inkstitch:expand_mm="0.3" />
+       inkstitch:expand_mm="0.3"
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:min_jump_stitch_length_mm="3" />
     <path
        id="path15813"
-       style="fill:#800000;stroke-width:0.25"
+       style="display:inline;fill:#800000;stroke-width:0.25"
        d="m 88.351367,162.25 c 9.25,-16 18.500003,-30 40.500003,-30 22,0 31.25,14.25 40.5,30 -9.25,15.25 -18.5,30 -40.5,30 -22,0 -31.250003,-14.5 -40.500003,-30 z m 41.000003,16 c 8.75,0 16,-7.25 16,-16 0,-8.75 -7.25,-16 -16,-16 -8.75,0 -16,7.25 -16,16 0,8.75 7.25,16 16,16 z"
        inkstitch:angle="45"
        inkstitch:expand_mm="0.2"
@@ -1545,7 +1559,7 @@ Sandrine Nugue
        inkstitch:min_jump_stitch_length_mm="3" />
     <path
        id="path15811"
-       style="fill:#800000;stroke-width:0.25"
+       style="display:inline;fill:#800000;stroke-width:0.25"
        d="m -71.648633,162.25 c 9.25,-16 18.5,-30 40.5,-30 21.9999997,0 31.24999974,14.25 40.4999995,30 -9.24999976,15.25 -18.4999998,30 -40.4999995,30 -22,0 -31.25,-14.5 -40.5,-30 z m 41,16 c 8.75,0 16,-7.25 16,-16 0,-8.75 -7.25,-16 -16,-16 -8.75,0 -16,7.25 -16,16 0,8.75 7.25,16 16,16 z"
        inkstitch:angle="135"
        inkstitch:expand_mm="0.2"
@@ -1554,7 +1568,7 @@ Sandrine Nugue
        inkstitch:min_stitch_length_mm="0.3"
        inkstitch:min_jump_stitch_length_mm="3" />
     <path
-       style="fill:#000000;stroke-width:0.25"
+       style="display:inline;fill:#000000;stroke-width:0.25"
        d="m 70.601367,250 h -45 l 5.75,-88.25 -65.5,-96.75 v -2.5 h 49.25 l 37,82 33.75,-82 H 132.85137 V 65 l -67.250003,95.5 z"
        id="path1200"
        inkstitch:angle="90"
@@ -1569,7 +1583,7 @@ Sandrine Nugue
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Z"
-     style="display:none"
+     style="display:inline"
      id="g1206">
     <path
        style="stroke-width:0.25"
@@ -1577,7 +1591,7 @@ Sandrine Nugue
        id="path20072"
        inkstitch:ties="1" />
     <path
-       style="fill:#000000;stroke-width:0.25"
+       style="display:inline;fill:#000000;stroke-width:0.25"
        d="m -53.648633,207 h -15.5 l 4.25,-11.75 50,-11.25 -16.25,23 z"
        id="path20070"
        sodipodi:nodetypes="cccccc"
@@ -1588,7 +1602,7 @@ Sandrine Nugue
        inkstitch:min_stitch_length_mm="0.3"
        inkstitch:min_jump_stitch_length_mm="3" />
     <path
-       style="fill:#000000;stroke-width:0.25"
+       style="display:inline;fill:#000000;stroke-width:0.25"
        d="m 33.101367,173.25 -15.75,33.75 h -30.75 L 3.8513667,179.75 Z"
        id="path20068"
        inkstitch:angle="45"
@@ -1598,7 +1612,7 @@ Sandrine Nugue
        inkstitch:min_stitch_length_mm="0.3"
        inkstitch:min_jump_stitch_length_mm="3" />
     <path
-       style="fill:#000000;stroke-width:0.25"
+       style="display:inline;fill:#000000;stroke-width:0.25"
        d="m 35.101367,207 17.5,-38.25 21.75,-4.5 h 2.5 l -7.5,42.75 h -11.5 z"
        id="path20064"
        sodipodi:nodetypes="ccccccc"
@@ -1609,7 +1623,7 @@ Sandrine Nugue
        inkstitch:min_stitch_length_mm="0.3"
        inkstitch:min_jump_stitch_length_mm="3" />
     <path
-       style="fill:#000000;stroke-width:0.25"
+       style="display:inline;fill:#000000;stroke-width:0.25"
        d="m -9.3986333,171.5 -45.9999997,9.75 18,-27.75 48,-12.75 z"
        id="path20062"
        inkstitch:angle="45"
@@ -1619,7 +1633,7 @@ Sandrine Nugue
        inkstitch:min_stitch_length_mm="0.3"
        inkstitch:min_jump_stitch_length_mm="3" />
     <path
-       style="fill:#000000;stroke-width:0.25"
+       style="display:inline;fill:#000000;stroke-width:0.25"
        d="m 20.351367,127 -47.25,12 15.75,-24.5 45.25,-8.75 z"
        id="path20060"
        inkstitch:angle="45"
@@ -1629,7 +1643,7 @@ Sandrine Nugue
        inkstitch:min_stitch_length_mm="0.3"
        inkstitch:min_jump_stitch_length_mm="3" />
     <path
-       style="fill:#000000;stroke-width:0.25"
+       style="display:inline;fill:#000000;stroke-width:0.25"
        d="M 43.351367,92.75 -1.8986333,101 18.351367,70 l 46,-9.75 z"
        id="path20058"
        inkstitch:angle="45"
@@ -1639,7 +1653,7 @@ Sandrine Nugue
        inkstitch:min_stitch_length_mm="0.3"
        inkstitch:min_jump_stitch_length_mm="3" />
     <path
-       style="fill:#000000;stroke-width:0.25"
+       style="display:inline;fill:#000000;stroke-width:0.25"
        d="m 16.851367,32.75 -12.7500003,29 -30.2499997,6.5 14.75,-35.5 z"
        id="path20056"
        inkstitch:angle="45"
@@ -1649,7 +1663,7 @@ Sandrine Nugue
        inkstitch:min_stitch_length_mm="0.3"
        inkstitch:min_jump_stitch_length_mm="3" />
     <path
-       style="fill:#000000;stroke-width:0.25"
+       style="display:inline;fill:#000000;stroke-width:0.25"
        d="m 72.851367,47 -52.25,11.25 11.75,-25.5 h 49.75 z"
        id="path20054"
        inkstitch:angle="45"
@@ -1659,7 +1673,7 @@ Sandrine Nugue
        inkstitch:min_stitch_length_mm="0.3"
        inkstitch:min_jump_stitch_length_mm="3" />
     <path
-       style="fill:#000000;stroke-width:0.25"
+       style="display:inline;fill:#000000;stroke-width:0.25"
        d="m -27.148633,32.75 -15.75,39.25 -17.25,3.75 h -2.5 l 5,-43 z"
        id="path20052"
        inkstitch:angle="45"
@@ -1669,7 +1683,7 @@ Sandrine Nugue
        inkstitch:min_stitch_length_mm="0.3"
        inkstitch:min_jump_stitch_length_mm="3" />
     <path
-       style="fill:#ff0000;fill-rule:evenodd;stroke-width:0.25"
+       style="display:inline;fill:#ff0000;fill-rule:evenodd;stroke-width:0.25"
        d="m 25.851367,22.25 2.919922,-0.265137 2.720703,-0.777832 2.462891,-1.26416 2.146484,-1.724121 1.771484,-2.157715 1.337891,-2.564941 0.488037,-1.426941 0.357666,-1.51886 L 40.276416,8.9428101 40.351367,7.25 40.276416,5.5599976 40.056445,3.9604492 39.698779,2.4539185 39.210742,1.0429687 38.599658,-0.26983643 37.872851,-1.4819336 36.101367,-3.59375 33.954883,-5.2719727 31.491992,-6.4960937 28.771289,-7.2456055 25.851367,-7.5 l -3.095703,0.2543945 -2.873047,0.7495118 -2.591797,1.224121 -2.251953,1.6782227 -0.980225,1.0029907 -0.873291,1.1088257 -0.759033,1.21209717 -0.637451,1.31280513 -0.508545,1.4109498 -0.372314,1.5065307 -0.22876,1.5995484 -0.07788,1.6900024 0.07788,1.6928101 0.22876,1.6074829 0.372314,1.51886 0.508545,1.426941 0.637451,1.331726 0.759033,1.233215 0.873291,1.131409 0.980225,1.026306 2.251953,1.724121 2.591797,1.26416 2.873047,0.777832 z"
        id="path20050"
        inkstitch:angle="135"
@@ -1679,7 +1693,7 @@ Sandrine Nugue
        inkstitch:min_stitch_length_mm="0.3"
        inkstitch:min_jump_stitch_length_mm="3" />
     <path
-       style="fill:#ff0000;stroke-width:0.25"
+       style="display:inline;fill:#ff0000;stroke-width:0.25"
        d="m 65.601367,22.25 c -8.5,0 -15.25,-5.75 -15.25,-15 0,-9.25 6.75,-14.75 15.25,-14.75 8,0 14.5,5.5 14.5,14.75 0,9.25 -6.5,15 -14.5,15 z"
        id="path1204"
        inkstitch:angle="135"
@@ -1689,7 +1703,7 @@ Sandrine Nugue
        inkstitch:min_stitch_length_mm="0.3"
        inkstitch:min_jump_stitch_length_mm="3" />
     <path
-       style="fill:#b3b3b3;stroke-width:0.25"
+       style="display:inline;fill:#b3b3b3;stroke-width:0.25"
        d="m -30.898633,207 v 43 h -32.75 v -2.5 l 10,-25.5 v -15 z"
        id="path20074"
        sodipodi:nodetypes="ccccccc"
@@ -1700,7 +1714,7 @@ Sandrine Nugue
        inkstitch:min_stitch_length_mm="0.3"
        inkstitch:min_jump_stitch_length_mm="3" />
     <path
-       style="fill:#b3b3b3;stroke-width:0.25"
+       style="display:inline;fill:#b3b3b3;stroke-width:0.25"
        d="m 57.851367,207 v 43 h -32.75 v -2.5 l 10,-25.5 v -15 z"
        id="path20066"
        sodipodi:nodetypes="ccccccc"

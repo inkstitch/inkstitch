@@ -16,6 +16,13 @@
         <option value="hidden">Hidden</option>
         <option value="lower_opacity">Lower opacity</option>
     </param>
+    <param name="render-mode" type="optiongroup" appearance="combo" gui-text="Render Mode"
+        gui-description="Realistic modes will render to a raster image for performance reasons. Realistic Vector may cause Inkscape to slow down for complex designs.">
+        <option value="simple">Simple</option>
+        <option value="realistic-8">Realistic</option>
+        <option value="realistic-16">Realistic High Quality</option>
+        <option value="realistic-vector">Realistic Vector (slow)</option>
+    </param>
     <spacer />
     <separator />
     <spacer />

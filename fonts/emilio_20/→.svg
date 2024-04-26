@@ -16,7 +16,7 @@
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:inkstitch="http://inkstitch.org/namespace">
   <sodipodi:namedview
-     showguides="false"
+     showguides="true"
      pagecolor="#ffffff"
      bordercolor="#666666"
      borderopacity="1"
@@ -29,9 +29,9 @@
      inkscape:window-height="2097"
      id="namedview85"
      showgrid="true"
-     inkscape:zoom="2.23932"
-     inkscape:cx="147.81273"
-     inkscape:cy="106.72883"
+     inkscape:zoom="1.7888318"
+     inkscape:cx="41.647292"
+     inkscape:cy="175.53355"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
@@ -93,7 +93,6 @@ Created by FontForge 20190801 at Sat Mar 27 14:01:19 2021
     <dc:format>image/svg+xml</dc:format>
     <dc:type
        rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-    <dc:title />
   </cc:Work>
 </rdf:RDF>
 <inkstitch:collapse_len_mm

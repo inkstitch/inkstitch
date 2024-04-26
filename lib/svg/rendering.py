@@ -19,94 +19,85 @@ from .units import PIXELS_PER_MM, get_viewbox_transform
 #
 # It's 0.32mm high, which is the approximate thickness of common machine
 # embroidery threads.
-# 1.216 pixels = 0.32mm
-stitch_height = 1.216
+# 1.398 pixels = 0.37mm
+stitch_height = 1.398
 
 # This vector path starts at the upper right corner of the stitch shape and
-# proceeds counter-clockwise.and contains a placeholder (%s) for the stitch
+# proceeds counter-clockwise and contains a placeholder (%s) for the stitch
 # length.
 #
-# It contains two invisible "whiskers" of zero width that go above and below
+# It contains four invisible "whiskers" of zero width that go outwards
 # to ensure that the SVG renderer allocates a large enough canvas area when
-# computing the gaussian blur steps.  Otherwise, we'd have to expand the
-# width and height attributes of the <filter> tag to add more buffer space.
-# The width and height are specified in multiples of the bounding box
-# size, It's the bounding box aligned with the global SVG canvas's axes, not
-# the axes of the stitch itself.  That means that having a big enough value
+# computing the gaussian blur steps:
+# \_____/
+# (_____)  (whiskers not to scale)
+# /     \
+# This is necessary to avoid artifacting near the edges and corners that seems to be due to
+# edge conditions for the feGaussianBlur, which is used to build the heightmap for
+# the feDiffuseLighting node. So we need some extra buffer room around the shape.
+# The whiskers let us specify a "fixed" amount of spacing around the stitch.
+# Otherwise, we'd have to expand the width and height attributes of the <filter>
+# tag to add more buffer space. The filter's width and height are specified in multiples of
+# the bounding box size, It's the bounding box aligned with the global SVG canvas's axes,
+# not the axes of the stitch itself.  That means that having a big enough value
 # to add enough padding on the long sides of the stitch would waste a ton
 # of space on the short sides and significantly slow down rendering.
-stitch_path = "M0,0c0.4,0,0.4,0.3,0.4,0.6c0,0.3,-0.1,0.6,-0.4,0.6v0.2,-0.2h-%sc-0.4,0,-0.4,-0.3,-0.4,-0.6c0,-0.3,0.1,-0.6,0.4,-0.6v-0.2,0.2z"
 
-# This filter makes the above stitch path look like a real stitch with lighting.
+# The specific extent of the whiskers (0.55 parallel to the stitch, 0.1 perpendicular)
+# was found by experimentation. It seems to work with almost no artifacting.
+stitch_path = (
+    "M0,0"  # Start point
+    "l0.55,-0.1,-0.55,0.1"  # Bottom-right whisker
+    "c0.613,0,0.613,1.4,0,1.4"  # Right endcap
+    "l0.55,0.1,-0.55,-0.1"  # Top-right whisker
+    "h-%s"  # Stitch length
+    "l-0.55,0.1,0.55,-0.1"  # Top-left whisker
+    "c-0.613,0,-0.613,-1.4,0,-1.4"  # Left endcap
+    "l-0.55,-0.1,0.55,0.1"  # Bottom-left whisker
+    "z")  # return to start
+
+# The filter needs the xmlns:inkscape declaration, or Inkscape will display a parse error
+# "Namespace prefix inkscape for auto-region on filter is not defined"
+# Even when the document itself has the namespace, go figure.
 realistic_filter = """
     <filter
        style="color-interpolation-filters:sRGB"
        id="realistic-stitch-filter"
-       x="-0.1"
-       width="1.2"
-       y="-0.1"
-       height="1.2">
+       x="0"
+       width="1"
+       y="0"
+       height="1"
+       inkscape:auto-region="false"
+       xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape">
       <feGaussianBlur
-         stdDeviation="1.5"
+         edgeMode="none"
+         stdDeviation="0.9"
          id="feGaussianBlur1542-6"
          in="SourceAlpha" />
-      <feComponentTransfer
-         id="feComponentTransfer1544-7"
-         result="result1">
-        <feFuncR
-           id="feFuncR1546-5"
-           type="identity" />
-        <feFuncG
-           id="feFuncG1548-3"
-           type="identity" />
-        <feFuncB
-           id="feFuncB1550-5"
-           type="identity"
-           slope="4.5300000000000002" />
-        <feFuncA
-           id="feFuncA1552-6"
-           type="gamma"
-           slope="0.14999999999999999"
-           intercept="0"
-           amplitude="3.1299999999999999"
-           offset="-0.33000000000000002" />
-      </feComponentTransfer>
-      <feComposite
-         in2="SourceAlpha"
-         id="feComposite1558-2"
-         operator="in" />
-      <feGaussianBlur
-         stdDeviation="0.089999999999999997"
-         id="feGaussianBlur1969" />
-      <feMorphology
-         id="feMorphology1971"
-         operator="dilate"
-         radius="0.10000000000000001" />
       <feSpecularLighting
          id="feSpecularLighting1973"
          result="result2"
-         specularConstant="0.70899999"
-         surfaceScale="30">
-        <fePointLight
-           id="fePointLight1975"
-           z="10" />
+         surfaceScale="1.5"
+         specularConstant="0.78"
+         specularExponent="2.5">
+        <feDistantLight
+           id="feDistantLight1975"
+           azimuth="-125"
+           elevation="20" />
       </feSpecularLighting>
-      <feGaussianBlur
-         stdDeviation="0.040000000000000001"
-         id="feGaussianBlur1979" />
-      <feComposite
-         in2="SourceGraphic"
-         id="feComposite1977"
-         operator="arithmetic"
-         k2="1"
-         k3="1"
-         result="result3"
-         k1="0"
-         k4="0" />
       <feComposite
          in2="SourceAlpha"
          id="feComposite1981"
-         operator="in" />
+         operator="atop" />
+      <feComposite
+         in2="SourceGraphic"
+         id="feComposite1982"
+         operator="arithmetic"
+         k2="0.8"
+         k3="1.2"
+         result="result3"
+         k1="0"
+         k4="0" />
     </filter>
 """
 
@@ -124,17 +115,18 @@ def realistic_stitch(start, end):
 
     stitch_length = max(0, stitch_length - 0.2 * PIXELS_PER_MM)
 
-    # create the path by filling in the length in the template
-    path = inkex.Path(stitch_path % stitch_length).to_arrays()
-
     # rotate the path to match the stitch
     rotation_center_x = -stitch_length / 2.0
     rotation_center_y = stitch_height / 2.0
 
-    path = inkex.Path(path).rotate(stitch_angle, (rotation_center_x, rotation_center_y))
+    transform = (
+        inkex.Transform()
+             .add_translate(stitch_center.x - rotation_center_x, stitch_center.y - rotation_center_y)
+             .add_rotate(stitch_angle, (rotation_center_x, rotation_center_y))
+    )
 
-    # move the path to the location of the stitch
-    path = inkex.Path(path).translate(stitch_center.x - rotation_center_x, stitch_center.y - rotation_center_y)
+    # create the path by filling in the length in the template, and transforming it as above
+    path = inkex.Path(stitch_path % stitch_length).transform(transform, True)
 
     return str(path)
 
@@ -221,7 +213,7 @@ def color_block_to_paths(color_block, svg, destination, visual_commands):
             path.set(INKSTITCH_ATTRIBS['stop_after'], 'true')
 
 
-def render_stitch_plan(svg, stitch_plan, realistic=False, visual_commands=True):
+def render_stitch_plan(svg, stitch_plan, realistic=False, visual_commands=True) -> inkex.Group:
     layer = svg.findone(".//*[@id='__inkstitch_stitch_plan__']")
     if layer is None:
         layer = inkex.Group(attrib={
@@ -250,5 +242,12 @@ def render_stitch_plan(svg, stitch_plan, realistic=False, visual_commands=True):
             color_block_to_paths(color_block, svg, group, visual_commands)
 
     if realistic:
+        # Remove filter from defs, if any
+        filter: inkex.BaseElement = svg.defs.findone("//*[@id='realistic-stitch-filter']")
+        if filter is not None:
+            svg.defs.remove(filter)
+
         filter_document = inkex.load_svg(realistic_filter)
         svg.defs.append(filter_document.getroot())
+
+    return layer
