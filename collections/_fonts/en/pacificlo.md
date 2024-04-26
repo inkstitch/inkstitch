@@ -5,9 +5,9 @@ last_modified_at: 2022-05-26
 toc: false
 preview_image:
   - url: /assets/images/fonts/pacificlo_tiny.jpg
-    height: 11
+    height: 8
   - url: /assets/images/fonts/pacificlo.jpg
-    height: 26
+    height: 20
 ---
 {%- assign font = site.data.fonts.pacificlo.font -%}
 ![Pacificlo](/assets/images/fonts/pacificlo.jpg)
