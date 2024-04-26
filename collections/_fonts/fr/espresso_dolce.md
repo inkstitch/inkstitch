@@ -31,9 +31,11 @@ Cette fonte permet de broder des textes multilignes alternativement de la gauche
 
 ## Dimensions
 
-Utilisée à 100%, cette fonte fait environ 20 mm.
+A une échelle de  100% cette fonte a une hauteur approximative de  {{ font.size }} mm. 
 
-Elle peut être agrandie jusqu'à 200% (env 40 mm) ou diminuée jusqu'à 80% (env 16 mm).
+Elle peut être redimensionnée  de {{ font.min_scale | times: 100 | floor }}% ({{ font.size | times: font.min_scale }} mm)
+à {{ font.max_scale | times: 100 | floor }}% ({{ font.size | times: font.max_scale }} mm).
+
 
 N'essayez pas de broder cette fonte à une dimension inférieure, vous auriez beaucoup de problèmes.
 
