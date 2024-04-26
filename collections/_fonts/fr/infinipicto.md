@@ -26,10 +26,11 @@ Infinipicto est une collection de pictogrammes. Chaque lettre représente un obj
 
 ## Dimensions
 
+A une échelle de  100% cette fonte a une hauteur approximative de  {{ font.size }} mm. 
 
-Utilisée à 100%, cette fonte fait environ 70 mm.
+Elle peut être redimensionnée  de {{ font.min_scale | times: 100 | floor }}% ({{ font.size | times: font.min_scale }} mm)
+à {{ font.max_scale | times: 100 | floor }}% ({{ font.size | times: font.max_scale }} mm).
 
-Elle peut être agrandie jusqu'à 200% (env 140 mm) ou diminuée jusqu'à 70% (env 50 mm).
 
 ## Tri des couleurs
 
