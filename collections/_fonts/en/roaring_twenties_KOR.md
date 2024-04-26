@@ -50,8 +50,6 @@ Contrarily to Roaring Twenties KOR, ARoaring Twenties KOR Small font **MUST** be
 A USA 8 (EUR 60) size needle, and 60WT thread **MUST** be used.
 
 
-
-
 ## In real life
 
 {% include folder-galleries path="fonts/roaring_twenties_KOR/" %}
