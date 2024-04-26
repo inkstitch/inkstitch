@@ -4,10 +4,10 @@ permalink: /fonts/baumans/
 last_modified_at: 2024-04-20
 toc: false
 preview_image:
+ - url: /assets/images/fonts/baumans_FI_small.jpg
+    height: 8
   - url: /assets/images/fonts/baumans_fi.jpg
     height: 32
-  - url: /assets/images/fonts/baumans_FI_small.jpg
-    height: 8
 ---
 {%- assign font = site.data.fonts.baumans_FI.font -%}
 ![Baumans](/assets/images/fonts/baumans_fi.jpg)
