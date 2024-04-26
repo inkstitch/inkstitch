@@ -14,7 +14,6 @@ DEFAULT_METADATA = {
 DEFAULT_SETTINGS = {
     "cache_size": 100,
     "pop_out_simulator": False,
-    "disable_cache": False,
 }
 
 

@@ -40,7 +40,7 @@ def get_stitch_plan_cache():
 
 
 def is_cache_disabled():
-    return global_settings['disable_cache']
+    return not global_settings['cache_size']
 
 
 class CacheKeyGenerator(object):
