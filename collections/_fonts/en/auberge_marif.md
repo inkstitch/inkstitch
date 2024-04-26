@@ -7,7 +7,7 @@ preview_image:
   - url: /assets/images/fonts/auberge_small.jpg
     height: 20
   - url: /assets/images/fonts/auberge_marif.jpg
-    height: 53
+    height: 50
 ---
 {%- assign font = site.data.fonts.auberge_marif.font -%}
 
@@ -26,15 +26,16 @@ This font contains  {{ font.glyphs.size }} glyphs:
 
 ## Dimensions:
 
-At 100%, this font is roughtly 35 mm high.
+At a scale of 100% this font has an approximate height of {{ font.size }} mm. 
 
-It may be scaled up to 140% (48 mm)  or scaled down to  60% .
+It can be scaled from {{ font.min_scale | times: 100 | floor }}% ({{ font.size | times: font.min_scale }} mm)
+up to {{ font.max_scale | times: 100 | floor }}% ({{ font.size | times: font.max_scale }} mm).
 
 ![Dimensions Auberge](/assets/images/fonts/Sizing/aubergesizing.jpg)
 
 Don't try to scale it further down. 
 
-Auberge Small  is a variation of this font with different embroidery settings. Pull compensation, density and underlays are different to allow to scale down between 55% (18mm, 2/3 inch) and 25% (9mm ,1/3 inch). 
+Auberge Small  is a variation of this font with different embroidery settings. Pull compensation, density and underlays are different to allow to scale down between 55% (28mm,  1 inch) and 25% (12mm ,1/2 inch). 
 
 That's why in the lettering dialog window, if using Auberge Small, you will have to pick up a scale between 25 and 55%. 
 
