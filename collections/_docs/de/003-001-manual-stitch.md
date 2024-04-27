@@ -28,7 +28,10 @@ Einstellung|Beschreibung
 ---|---
 Geradstich                            | Muss aktiviert sein, damit diese Einstellungen wirksam werden.
 Methode                               | `Manuelle Stichpositionierung` auswählen
-Max stitch length                     | Unterteilt Stiche die länger sind als dieser Wert. Leer lassen für keine Unterteilungen. Kurze Stiche werden gemäß den [Einstellungen](/docs/preferences/) herausgefiltert.
+Max stitch length                     | Unterteilt Stiche die länger sind als dieser Wert. Leer lassen für keine Unterteilungen. 
+Kurze Stiche werden gemäß den [Einstellungen](/docs/preferences/) herausgefiltert.
+Minimale Stichlänge     |Überschreibt die globale Einstellung für die minimale Stitchlänge. Stitche kleiner sind als dieser Wert werden entfernt.
+Minimale Länge für Sprungstiche           |Überschreibt die globale Einstellung für die minimale Länge für Sprungstiche. Kleinere Entfernungen zum nächsten Objekt haben keine Vernähstiche.
 Vernähen erlauben                     | Bei manueller Stichpositionierung wird normalerweise wird kein Vernähstich automatisch hinzugefügt. Vernähstiche können jedoch über die Einstellung `Vernähstiche erzwingen` aktiviert werden.
 Vernähen erzwingen                    | Aktiviert Vernähstiche für Pfade mit manueller Stichpositionierung.
 Fadenschnitt                          | Schneidet den Faden nachdem dieses Objekt genäht wurde
