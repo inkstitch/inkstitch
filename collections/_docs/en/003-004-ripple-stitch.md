@@ -86,18 +86,21 @@ Bean stitch number of repeats ||◦ Enable [Bean Stitch Mode](/docs/stitches/bea
 Running stitch length         ||Length of stitches in [Running Stitch Mode](/docs/stitches/running-stitch/)
 Running stitch tolerance      ||All stitches must be within this distance of the path. A lower tolerance means stitches will be closer together. A higher tolerance means sharp corners may be rounded.
 Number of lines|<img src="/assets/images/docs/ripple_only_lines.svg" alt="Nombre de lignes"/>|Chose how many times the ripple replicates. Default value is 10.
-◦Skip first lines <br /> ◦Skip last lines  |<img src="/assets/images/docs/ripple_only_skip.svg" alt="Skip"/>| Skip (do not embroider)  that number of replications at start and/or end of the embroidery.
 Minimum line distance         || Overrides the number of lines setting.
 Stagger lines this many times before repeating      ||  Setting this dictates the length of the cycle by which successive stitch lines are staggered. Has no effect on *circular*  ripple stitches. 
+◦Skip first lines <br /> ◦Skip last lines  |<img src="/assets/images/docs/ripple_only_skip.svg" alt="Skip"/>| Skip (do not embroider)  that number of replications at start and/or end of the embroidery.
 Line distance exponent        |<img src="/assets/images/docs/ripple_only_exponent.svg" alt="Exposant"/>| ◦ With default value of 1 space between replications is constant<br />◦ With a value greater than 1, the space between two consecutive replications increases as one moves away from the original ripple   <br />◦ With a value smaller than 1, the space between two consecutive replications decreases as one moves away from the original ripple.
 Flip exponent                 |☑  or ▢| exchange role of first and last line in the computation of  line distance
 Reverse                       |☑  or ▢|  Reverse the final embroidery path.  Has no effect on the other  parameters.
+Reverse rails|| Reverse satin ripple rails.  Default: automatically detect and fix a reversed rail.
 Grid  size                    |<img src="/assets/images/docs/ripple_only_grid.svg" alt="Distance"/>| If the size is strictly positive a grid effect is added. The grid size controls how far apart the new  lines are. 
 Scale axes                    |XY or X or Y or None | for guided ripple only
 Starting scale                | for guided ripple only|How big the first copy of the line should be, in percent. 
 Ending scale                  | for guided ripple only| How big the last copy of the line should be, in percent.
 Rotate                        | ☑  or ▢| for guided ripple only
 Join Style                    |<img src="/assets/images/docs/flat_or_point.svg" alt="Join Stile"/> |for non circular ripple, how the ripples are joined : Flat(top) or Point(bottom)
+Minimum stitch length         ||Overwrite global minimum stitch length setting. Shorter stitches than that will be removed.
+Minimum  jump stitch  length             ||Overwrite global minimum jump stitch length setting. Shorter distances to the next object will have no lock stitches.
 Allow lock stitches           | ☑  or ▢| Enables lock stitches in only desired positions
 Force lock stitches           | ☑  or ▢| Sew lock stitches after sewing this element, even if the distance to the next object is shorter than defined by the collapse length value in the Ink/Stitch preferences.
 Tack stitch                   ||Chose your [favorite style](/docs/stitches/lock-stitches/)
