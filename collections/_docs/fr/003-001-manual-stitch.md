@@ -33,7 +33,9 @@ Paramètre||Description
 ---|--|---
 Points droits le long des chemins   ||Doit être activé pour que ces paramètres prennent effet.
 Méthode                             ||Choisir le type "Point manuel"
-Longueur maximum de point           ||Les points plus longs  seront subdivisés. Laissez vide si vous ne souhaitez pas de subdivision. Les points  courts seront  supprimés selon  les [preferences](/fr/docs/preferences/).
+Longueur maximum de point           ||Les points plus longs  seront subdivisés. Laissez vide si vous ne souhaitez pas de subdivision.
+Longueur minimum de point||Est prioritaire par rapport à la valeur de la longueur minimum de point définie dans les préférences. Les points plus courts seront supprimés.
+Longueur minimum de saut||Est prioritaire par rapport à la valeur de la longueur minimum de saut définie dans les préférences. Si la distance à l'objet suivant est inférieure, il n'y aura pas de points d'arrêt, sauf si les points d'arrêts sont forcés.
 Autoriser les points d'arrêts       ||Les points manuels ne permette pas l'ajout automatique de points d'arrêt. Vous devez les inclure manuellement dans votre chemin. Mais vous pouvez les activer via "Forcer les points d'arrêts". 
 Forcer les points d'arrêts          ||Sur un point manuel, ajoute un point d'arrêt.
 Couper après                        ||Couper le fil après avoir brodé cet objet
