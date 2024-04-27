@@ -1,7 +1,7 @@
 ---
 title: "Ripple Stich"
 permalink: /de/docs/stitches/ripple-stitch/
-last_modified_at: 2023-05-01
+last_modified_at: 2024-04-28
 toc: true
 ---
 ## Beschreibung
@@ -86,18 +86,21 @@ Mehrfach Geradstich Anzahl der Wiederholungen || ◦ Aktiviert den [Mehrfachgera
 Stichlänge                     || Länge der Stiche
 Geradstich Toleranz            || Alle Stiche müssen innerhalb dieser Distanz zum Pfad liegen. Eine niedrigere Toleranz verkürzt die Stiche. Eine höhere Toleranz kann scharfe Ecken abrunden.
 Anzahl der Linien|<img src="/assets/images/docs/ripple_only_lines.svg" alt="Nombre de lignes"/>| Anzahl der Wiederholungen der Ripple-Form. Voreinstellung: 10.
+Minimaler Linienabstand        || Diese Einstellung überschreibt den Wert "Anzahl der Linien"
+Reihenanzahl bis sich das Muster wiederholt   ||  Dieser Wert beschreibt, nach wie vielen Reihen die Einstichstellen übereinander liegen. Dezimalwerte sind zulässig und zeigen weniger deutliche Diagonalen im Stickbild. Nur für lineare Ripples.
 ◦ Erste Linien überspringen <br /> ◦ Letzte Linien überspringen |<img src="/assets/images/docs/ripple_only_skip.svg" alt="Sauter"/>| Die ersten / letzten Ripple-Wiederholungen werden übersprungen und die Gesamtanzahl der Wiederholungen verringert sich.
 Linienabstand Exponent|<img src="/assets/images/docs/ripple_only_exponent.svg" alt="Exponant"/>| ◦ Mit der Voreinstellung von 1 ist der Abstand zwischen den Linien konstant<br />◦ Mit einem Wert größer als 1 erhöht sich der Abstand zwischen den Linien sukzessiv<br />◦ Mit einem Wert kleiner als 1 verringert sich der Abstand zwischen den Linien.
-Minimum line distance         || Overrides the number of lines setting.
-Stagger lines this many times before repeating      ||  Setting this dictates the length of the cycle by which successive stitch lines are staggered. Has no effect on *circular*  ripple stitches.
 Exponent umkehren              |☑  oder ▢| Kehrt den Effekt des Exponent-Wertes um.
 Umkehren                       |☑  oder ▢| Kehrt den gesamten Pfad um (Start = Ende). Andere Parameter bleiben von dieser Einstellung unberührt.
+Konturlinien umkehren|| Außenkonturen der Satin-Führungslinie umkehren. In der Standardeinstellung werden gegenläufig verlaufende Linien automatisch korrigiert.
 Größe des Gitters              |<img src="/assets/images/docs/ripple_only_grid.svg" alt="Distance"/>| Fügt quer verlaufende Linien hinzu, die zu einem Gittereffekt führen. Die Größe des Gitters kann auch Auswirkungen auf die Genauigkeit des Linienverlaufs haben.
 Skalieren                      | XY, X, Y oder Keine | Nur für geführte Ripples
 Start-Skalierung               | Prozentwert | Definiert die Skalierung der ersten Linie. Nur für geführte Ripples.
 End-Skalierung                 | Prozentwert | Definiert die Skalierung der letzten Linie. Nur für geführte Ripples.
 Rotieren                       | ☑  oder ▢| Nur für geführte Ripples
 Kantenstil                     |<img src="/assets/images/docs/flat_or_point.svg" alt="Join Stile"/> | Verbindungen zwischen den Linien: flach (oben) oder spitz (unten). Nur für offene Ripples.
+Minimale Stichlänge                   || Überschreibt die globale Einstellung für die minimale Stichlänge. Stiche, die kleiner sind als dieser Wert werden entfernt.
+Minimale Länge für Sprungstiche       || Überschreibt die globale Einstellung für die minimale Länge für Sprungstiche. Kleinere Entfernungen zum nächsten Objekt haben keine Vernähstiche.
 Vernähen erlauben              || Vernäht bei Bedarf an den ausgewählten Positionen
 Vernähen erzwingen             | ☑  oder ▢| Vernäht den Faden nach diesem Element, auch dann, wenn der Abstand zum Folgeobjekt geringer ist als in den [Ink/Stitch Einstellungen](/de/docs/preferences/) definiert.
 Anstecher                      ||Wähle die [Anstecher](/de/docs/stitches/lock-stitches) Variante (Anfang).
