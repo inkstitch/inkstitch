@@ -1,7 +1,7 @@
 ---
 title: "Mehrfach Geradstich"
 permalink: /de/docs/stitches/bean-stitch/
-last_modified_at: 2023-04-22
+last_modified_at: 2024-04-28
 toc: true
 ---
 ## Beschreibung
@@ -34,6 +34,8 @@ Wiederholungen                        | ◦ Legt fest, wie oft der Pfad durchlau
 **Mehrfach Geradstitch Anzahl der Wiederholungen** | ◦ Jeden Stich vervielfachen.<br/>◦ Ein Wert von 1 würde jeden Stich verdreifachen (vorwärts, rückwärts, vorwärts).<br/>◦ Ein Wert von 2 würde jeden Stich fünffach ausführen, usw.<br/>◦ Durch die Eingabe mehrerer durch ein Leerzeichen getrennte Werte, kann ein Wiederholungsmuster erstellt werden.
 Stichlänge                            | Länge der Stiche
 Geradstich Toleranz                   | Alle Stiche müssen innerhalb dieser Distanz zum Pfad liegen. Eine niedrigere Toleranz verkürzt die Stiche. Eine höhere Toleranz kann scharfe Ecken abrunden.
+Minimale Stichlänge                   | Überschreibt die globale Einstellung für die minimale Stichlänge. Stiche, die kleiner sind als dieser Wert werden entfernt.
+Minimale Länge für Sprungstiche       | Überschreibt die globale Einstellung für die minimale Länge für Sprungstiche. Kleinere Entfernungen zum nächsten Objekt haben keine Vernähstiche.
 Vernähen erlauben                     | Vernäht bei Bedarf an den ausgewählten Positionen
 Vernähen erzwingen                    | Vernäht den Faden nach diesem Element, auch dann, wenn der Abstand zum Folgeobjekt geringer ist als in den [Ink/Stitch Einstellungen](/de/docs/preferences/) definiert.
 Anstecher                             |Wähle die [Anstecher](/de/docs/stitches/lock-stitches) Variante (Anfang).
