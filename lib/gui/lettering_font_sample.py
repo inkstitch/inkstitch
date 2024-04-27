@@ -5,6 +5,7 @@
 
 import wx
 import wx.adv
+from inkex import errormsg
 
 from ..i18n import _
 from ..lettering import get_font_list
@@ -147,8 +148,23 @@ class FontSampleFrame(wx.Frame):
         text = ''
         width = 0
         last_glyph = None
+        printed_warning = False
+        update_glyphlist_warning = _(
+            "The glyphlist for this font seems to be outdated.\n\n"
+            "Please update the glyph list for %s:\n"
+            "Extensions > Ink/Stitch > Font Management > Update Glyphlist"
+            % font.marked_custom_font_name
+        )
+        if len(font.available_glyphs) != len(font_variant.glyphs):
+            errormsg(update_glyphlist_warning)
+            printed_warning = True
         for glyph in font.available_glyphs:
             glyph_obj = font_variant[glyph]
+            if glyph_obj is None:
+                if not printed_warning:
+                    errormsg(update_glyphlist_warning)
+                printed_warning = True
+                continue
             if last_glyph is not None:
                 width_to_add = (glyph_obj.min_x - font.kerning_pairs.get(last_glyph + glyph, 0)) * scale
                 width += width_to_add
