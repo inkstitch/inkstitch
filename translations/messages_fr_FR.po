@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-04-26 01:11+0000\n"
-"PO-Revision-Date: 2024-04-26 01:12\n"
+"POT-Creation-Date: 2024-04-27 01:05+0000\n"
+"PO-Revision-Date: 2024-04-27 01:06\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-26 01:11+0000\n"
+"POT-Creation-Date: 2024-04-27 01:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -564,96 +564,116 @@ msgstr "Pacificlo tiny"
 msgid "This font is an altered version  of Pacificlo, to allow a greater scaling down. Both thin thread (60) and thin needle (60) are mandatory. The altered embroidery parameters of this font allow to scale down the original Pacificlo font between 25% (for a 5mm font ) and 55 % (for a 11mm font)."
 msgstr "Cette police est une version modifiée de Pacificlo pour permettre une réduction plus forte de la taille. L'usage de fil fin (60) et d'une aiguille fine (60) est obligatoire. Le paramétrage modifié de cette  police permet de réduire la police Pacificlo originelle entre 25% (pour une police de 7mm) et 55% (pour une police de 16mm)."
 
-#. name of font in fonts/roman_ags
+#. name of font in fonts/roaring_twenties_KOR
 #: inkstitch-fonts-metadata.py:210
+msgid "Roaring Twenties KOR"
+msgstr ""
+
+#. description of font in fonts/roaring_twenties_KOR
+#: inkstitch-fonts-metadata.py:212
+msgid "Roaring Twenies KOR is a script font of size approximatively 16 mm. It can be scaled down to 70% and up to 150%"
+msgstr ""
+
+#. name of font in fonts/roaring_twenties_KOR_small
+#: inkstitch-fonts-metadata.py:214
+msgid "Roaring Twenties KOR Small"
+msgstr ""
+
+#. description of font in fonts/roaring_twenties_KOR_small
+#: inkstitch-fonts-metadata.py:216
+msgid "This font is an altered version  of Roaring Twenties KOR, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory. The altered embroidery parameters of this font allow to scale down the original Roaring  Twenties font between 35% (for a 6 mm font ) and 70 % (for a 12 mm font)."
+msgstr ""
+
+#. name of font in fonts/roman_ags
+#: inkstitch-fonts-metadata.py:218
 msgid "Roman AGS"
 msgstr "Roman AGS"
 
 #. description of font in fonts/roman_ags
-#: inkstitch-fonts-metadata.py:212
+#: inkstitch-fonts-metadata.py:220
 #, python-format
 msgid "Based on Latin Modern Roman 10 Bold italic. The capital M is 42.5 millimeter wide at 100% scale.  Can be scaled down to 80% or up to 130%.  Every satin has zigzag underlay"
 msgstr "Basée sur Latin Modern Roman 10 Bold italic. Le  M majuscule a une largeur de 42.5 millimètres à l'échelle 100 %. Peut être réduit à 80 % ou augmenté à 130 %. Chaque satin a une sous-couche zigzag."
 
 #. name of font in fonts/roman_ags_bicolor
-#: inkstitch-fonts-metadata.py:214
+#: inkstitch-fonts-metadata.py:222
 msgid "Roman bicolor AGS"
 msgstr "Roman bicolore AGS"
 
 #. description of font in fonts/roman_ags_bicolor
-#: inkstitch-fonts-metadata.py:216
+#: inkstitch-fonts-metadata.py:224
 #, python-format
 msgid "Based on Latin Modern Roman 10 Bold italic. A font with capital letters with 2 colors. Very easy to use with letters from Romanaugusa. The capital M is 42.5 millimeter wide at 100% scale. Can be scaled down to 70% or up to 130%. Every satin has zigzag underlay"
 msgstr "Basée sur Latin Modern Roman 10 Bold italic. Une police de majuscules à deux couleurs. Très facile à utiliser avec les lettres de Romanaugusa. La majuscule M a une largeur de 42.5 millimètres à l'échelle 100 %. Peut être réduit à 80 % ou augmenté à 130 %. Chaque satin a une sous-couche zigzag"
 
 #. name of font in fonts/sacramarif
-#: inkstitch-fonts-metadata.py:218
+#: inkstitch-fonts-metadata.py:226
 msgid "Sacramarif"
 msgstr "Sacramarif"
 
 #. description of font in fonts/sacramarif
-#: inkstitch-fonts-metadata.py:220
+#: inkstitch-fonts-metadata.py:228
 msgid "Based on Sacramento. Very small font with runstitch. It can be scaled from 80% to 150%"
 msgstr "Basée sur Sacramento. Très petite police en point droit. Peut être utilisée entre 80% et 150% de la taille de base"
 
 #. name of font in fonts/small_font
-#: inkstitch-fonts-metadata.py:222
+#: inkstitch-fonts-metadata.py:230
 msgid "Ink/Stitch Small Font"
 msgstr "Ink/Stitch Petite police"
 
 #. description of font in fonts/small_font
-#: inkstitch-fonts-metadata.py:224
+#: inkstitch-fonts-metadata.py:232
 #, python-format
 msgid "A font suited for small characters.  The capital em is 0.2 inches wide at 100% scale.  Can be scaled up to 300%."
 msgstr "Une fonte adaptée pour les petits caractères. Le \"M\" a une largeur de 5,08mm à une échelle de 100%. Il est possible de l’agrandir de 300%."
 
 #. name of font in fonts/sortefaxXL
-#: inkstitch-fonts-metadata.py:226
+#: inkstitch-fonts-metadata.py:234
 msgid "Sortefax XL Initials"
 msgstr "Sortefax XL Initials"
 
 #. description of font in fonts/sortefaxXL
-#: inkstitch-fonts-metadata.py:228
+#: inkstitch-fonts-metadata.py:236
 msgid " Sortefax is a very large satin stitch Capital font of size 150mm.  It can be reduced down to 75% and enlarged up to 200%  It contains the 37 glyphs :ampersand, A-Z and 0-9. In addition the ten glyphs (){}[],;.: are used to store frames. Type any letter followed by any frame (e.g. A( or B; )  to obtain a framed Capital or Number. Warning: for a few large letters you will need to manually enlarge the frame"
 msgstr "Sortefax XL est une très grande police de majuscules en colonnes satin d'environ 150 mm.  Elle peut être réduite jusqu'à 75% et agrandie jusqu'à 200%. Elle contient les 37 glyphes : A-Z, 0-9 et le ampersand. De plus les 10 glyphes  (){}[],;.: sont utilisés pour stocker des cadres. Tapper n'importe quelle lettre suivie par n'importe quel cadre (par exemple A( ou B; ) pour obtenir  la lettre encadrée. Attention: pour quelques très grandes lettres vous devrez élargir manuellement le cadre."
 
 #. name of font in fonts/sortefax_medium
-#: inkstitch-fonts-metadata.py:230
+#: inkstitch-fonts-metadata.py:238
 msgid "Sortefax Medium Initials"
 msgstr "Sortefax Medium Initials"
 
 #. description of font in fonts/sortefax_medium
-#: inkstitch-fonts-metadata.py:232
+#: inkstitch-fonts-metadata.py:240
 msgid "Sortefax  Medium Initials is a  satin stitch Capital font of size 90 mm.  It can be reduced down to 70% and enlarged up to 200%. It contains the 37 glyphs :ampersand, A-Z and 0-9. In addition the ten glyphs (){}[],;.: are used to store frames. Type any letter followed by any frame (e.g. A( or B; or 7, ) to obtain a framed Capital or Number. Some manual arranging of the frame around the letter may be required"
 msgstr "Sortefax Medium Initials est une  police de majuscules en colonnes satin d'environ 90 mm.  Elle peut être réduite jusqu'à 70% et agrandie jusqu'à 200%. Elle contient les 37 glyphes : A-Z, 0-9 et le ampersand. De plus les 10 glyphes  (){}[],;.: sont utilisés pour stocker des cadres. Tapper n'importe quelle lettre suivie par n'importe quel cadre (par exemple A( ou B; ou 7,) pour obtenir  la lettre encadrée.  Il est possible qu'un ajustement manuel du cadre autour de la lettre soit requis."
 
 #. name of font in fonts/tt_directors
-#: inkstitch-fonts-metadata.py:234
+#: inkstitch-fonts-metadata.py:242
 msgid "TT Directors"
 msgstr "TT directors"
 
 #. description of font in fonts/tt_directors
-#: inkstitch-fonts-metadata.py:236
+#: inkstitch-fonts-metadata.py:244
 msgid "A font suited for directing"
 msgstr "Une fonte faite pour des metteurs en scène"
 
 #. name of font in fonts/tt_masters
-#: inkstitch-fonts-metadata.py:238
+#: inkstitch-fonts-metadata.py:246
 msgid "TT Masters"
 msgstr "TT masters"
 
 #. description of font in fonts/tt_masters
-#: inkstitch-fonts-metadata.py:240
+#: inkstitch-fonts-metadata.py:248
 msgid "A font suited for heavy typing :)"
 msgstr "Une fonte \"lourde\""
 
 #. name of font in fonts/violin_serif
-#: inkstitch-fonts-metadata.py:242
+#: inkstitch-fonts-metadata.py:250
 msgid "Violin Serif"
 msgstr "Violin Serif"
 
 #. description of font in fonts/violin_serif
-#: inkstitch-fonts-metadata.py:244
+#: inkstitch-fonts-metadata.py:252
 #, python-format
 msgid "A condensed serif font designed. Can be scaled up to 120% or scaled down to 80%. Caps height is about 28 millimeters or 1.1 inches"
 msgstr "Une police serif condensée. Peut être agrandie jusqu'à 120 % ou réduite à 80 %. La hauteur des majuscules est d'environ 28 millimètres (1,1 pouces)\n\n"
@@ -2916,20 +2936,21 @@ msgstr "Paramètres de broderie"
 
 #: lib/extensions/print_pdf.py:148
 msgid "Closing..."
-msgstr ""
+msgstr "En cours de fermeture..."
 
 #: lib/extensions/print_pdf.py:148
 msgid "It is safe to close this window now."
-msgstr ""
+msgstr "Vous pouvez maintenant fermer cette fenêtre."
 
 #: lib/extensions/print_pdf.py:285
 msgid "A print preview has been opened in your web browser.  This window will stay open in order to communicate with the JavaScript code running in your browser.\n\n"
 "This window will close after you close the print preview in your browser, or you can close it manually if necessary."
-msgstr ""
+msgstr "Un  aperçu de l'impression a été ouvert dans votre navigateur. Cette fenêtre reste ouverte afin  de communiuer avec le code javascript qui s'excécute dans votre navigateur.\n\n"
+"Cette fenêtre se  fermera lorsque vous fermerez l'aperçu dans votre navigateur, ou vous pouvez la fermer manuellement si nécessaire."
 
 #: lib/extensions/print_pdf.py:474
 msgid "Ink/Stitch Print"
-msgstr ""
+msgstr "Impression Ink/Stitch"
 
 #: lib/extensions/reorder.py:20
 msgid "Please select at least two elements to reorder."
