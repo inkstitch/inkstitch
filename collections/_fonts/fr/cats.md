@@ -38,4 +38,4 @@ Elle peut être redimensionnée  de {{ font.min_scale | times: 100 | floor }}% (
 
 
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/cats/LICENSE)
+[Télécharger la licence](https://github.com/inkstitch/inkstitch/tree/main/fonts/cats/LICENSE)
