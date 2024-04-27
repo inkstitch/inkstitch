@@ -109,6 +109,14 @@ Cette extension génère les bandes du tartan et les applique au document soit e
 
 * electron -> wxpython ([#2479](https://github.com/inkstitch/inkstitch/issues/2479))
 
+### Export  PDF
+  
+Visualiseand Export > Export pdf
+
+* Le pdf s'ouvre à nouveau dans un navigateur ([#2849](https://github.com/inkstitch/inkstitch/issues/2849))
+
+
+
 ### [Supprimer tous les paramètres de broderie](/fr/docs/troubleshoot/#remove-embroidery-settings)
 
 `Résolution de problèmes  > Supprimer tous les paramètres de broderie`
