@@ -24,7 +24,7 @@ Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 
 ## Maße
 
-Bei einer Skalierung von 100 % ist diese Schrift ungefähr ~ 19mm (0.75 in) hoch. Sie kann bis auf 120% (~ 23mm, 1 Zoll) hochskaliert und bis zu 80% (~ 15 mm, 2/3 Zoll) herunterskaliert werden.
+Bei einer Skalierung von 100 % ist diese Schrift ungefähr ~ 40 mm (1.5 in) hoch. Sie kann bis auf 150% (~ 60mm, 2.4 Zoll) hochskaliert und bis zu 70% (~ 28 mm, 1 Zoll) herunterskaliert werden.
 
 
 
