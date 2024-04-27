@@ -48,6 +48,7 @@ from .preferences import Preferences
 from .print_pdf import Print
 from .remove_embroidery_settings import RemoveEmbroiderySettings
 from .reorder import Reorder
+from .satin_multicolor import SatinMulticolor
 from .select_elements import SelectElements
 from .selection_to_guide_line import SelectionToGuideLine
 from .selection_to_pattern import SelectionToPattern
@@ -108,6 +109,7 @@ __all__ = extensions = [ApplyPalette,
                         Print,
                         RemoveEmbroiderySettings,
                         Reorder,
+                        SatinMulticolor,
                         SelectElements,
                         SelectionToGuideLine,
                         SelectionToPattern,
