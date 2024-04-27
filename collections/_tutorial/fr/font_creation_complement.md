@@ -24,17 +24,18 @@ Voici quelques informations complémentaires aux instructions d'@Augusa.
 
 ## Création du fichier json et du fichier de glyphes
 * Décidez de la **hauteur** que vous souhaitez pour votre fonte: Par exemple, disons que vous souhaitez une fonte dont les lettres font environ 25mm de haut. Convertir cette valeur en pixel, ici 95.
-* A l'aide des instructions d'@Augusa (mais suivre les étapes ici, c'est plus simple), choisissezs  vos glyphes dans fontforge
+* A l'aide des instructions d'@Augusa (mais suivre les autres étapes ici, c'est  simplifié), choisissez  vos glyphes dans fontforge
 * Créer un premier fichier de fonte svg sans changer les paramètres dans font info, fonte_sans_reduction.svg (notez les valeurs du cadratin, de ascent et descent, par exemple 2048, 1638, 410- le premier est toujours la somme des deux derniers)
 * Créer un second fichier fonte_reduite.svg de fonte svg en  entrant 95 comme valeur de cadratin (em-size). Notez les nouvelles valeurs de ascent et descent (19 et 76 dans mon cas)
 
-* Depuis inkscape, ouvrir fonte_reduite.svg puisextensions > typographie  > parametrer le canevas typographique. Entrer les valeurs du cadratin (95) du jambage inférieur(19) et du  jambage superieur (76). Mettre hauteur de X et hauteur de capitale à 0
+* Depuis inkscape, ouvrir fonte_reduite.svg puis extensions > typographie  > parametrer le canevas typographique. Entrer les valeurs du cadratin (95) du jambage inférieur(19) et du  jambage superieur (76). Mettre hauteur de X et hauteur de capitale à 0
  
-* Extension/Typographie/Convertir la police en calques de glyphe , renommer le fichier en →.svg
+* Extension/Typographie/Convertir la police en calques de glyphes , renommer le fichier en →.svg
 
-* Creer un dossier pour la fonte dans votre dossier de fontes personnalisées, y mettre le fichier →.svg
+* Créer un dossier pour la fonte dans votre dossier de fontes personnalisées, y mettre le fichier →.svg
 
-* Créer tout  de suite le fichier json: extensions > ink/stitch > gestion des polices > generer json en indiquat la taille du cadratin (95 ici) dans le  paramètre taille; pour les autres paramètres du json,  [voir_ici](/fr/docs/font-toolsr/#generate-json).Ce json contient les bonnes informations  pour la taille visée.
+* Créer tout  de suite le fichier json: extensions > ink/stitch > gestion des polices > generer json en indiquat la taille du cadratin (95 ici) dans le  paramètre taille; pour les autres paramètres du json,  [voir ici](/fr/docs/font-toolsr/#generate-json).Ce json contient les bonnes informations  pour la taille visée.
+* Si vous supprimez des glyphes ultérieurement, pensez à mettre à jour la liste de glyphes
 
 * Je suppose ici que la fonte ne comportera pas de remplissage. Si c'est le cas, il vous faudra adapter.
 ## Premier test
@@ -47,9 +48,9 @@ Ouvrir un nouveau fichier puis
 * Inkstitch > Gestion des polices > Sampling font
 
 Tous les contours de vos lettres s'affichent.
-Si ces lettres ont des contours corrects, tant mieux. Mais parfois la reduction opérée dans font fonte donne des résultats pas terribles. Dans ce cas, on va conserver le json, mais refaire le ficher svg en procedant soi même à la reduction.
+Si ces lettres ont des contours corrects, tant mieux. Mais parfois la reduction opérée dans font forge donne des résultats pas terribles. Dans ce cas, on va conserver le json, mais refaire le ficher svg en procedant soi même à la reduction.
 
-Vous pouvez aussi des maintenant utiliser votre fonte via le lettrage, les lettres sont en  point droit. Ce n'est pas encore utilisable pour la broderie enn vrai toutefois!!
+Vous pouvez aussi des maintenant utiliser votre fonte via le lettrage, les lettres sont en  point droit. Ce n'est pas encore utilisable pour la broderie en vrai toutefois!!
 
 ## Faire un "meilleur" fichier →.svg
 
@@ -84,6 +85,7 @@ A nouveau,
 * Mettre dans X la valeur X0 et dans Y la valeur YO.
 
 Il n'y a plus qu'a enregistrer ce fichier comme  →.svg à la place du précédent
+
 **Ne  pas refaire le fichier json il serait faux, il faut garder le premier**
 
 Refaire le test avec font sampling, cette fois ci les courbes devraient être bien meilleures.
@@ -100,10 +102,10 @@ Pour des colonnes satin facile à interpréter par ink/stitch et qui supportent 
 * Evitez les colonnes satin sans traverses ou avec une seule traverse
 * Simplifiez au maximum vos chemins.
 
-Pour un joli résultat final, il faut éviter  d'avoir des noeuds à des endroits où ils déforment les lettres, l'idéal etant d'avoir les noeuds soit sur les chemins de dessous soit au milieu d'une  colonne satin, mais pas sur une extrémité de lettre
+Avoir aussi à l'esprit que pour un joli résultat final, il faut éviter  d'avoir des points d'arrêts à des endroits où ils déforment les lettres, l'idéal etant d'avoir les noeuds soit sur les chemins de dessous soit au milieu d'une  colonne satin, mais pas sur une extrémité de lettre
 
 ### Paramètrage
-Pour tous les paramètres que vous souhaitez uniformes, ne vous en souciez qu'à la fin. Pour les points d'arrêt laissez tout sur les valeurs par défaut.  Tout ça se fera globalement à la fin. 
+Pour tous les paramètres que vous souhaitez uniformes, ne vous en souciez qu'à la fin. Pour les points d'arrêt laissez tout sur les valeurs par défaut.  Tout ça se fera globalement à la fin.  Bien sur si vous vouoez tester quelques lettres en vrai vous les parametrez pour le test.
 
 
 ### tests avant de se lancer dans les diacritiques
@@ -179,7 +181,7 @@ On fera de même mais pour la broderie ondulée on cherche non pas  satin_column
 On fera de même mais pour les points triples on cherche non pas  satin_column mais bean_stitch_repeats
 
 #### les points droits
-Maintenant, on a masqué tout sauf les points de dessous. On les selectionne tous et on lance Paramètres. Cette fois ci je vais donner a distance minimum de saut une très grande valeur 20mm par exemple pour eviter les points d'arret entre deux chemins de dessous.  Pendant qu'ils sont tous sélectionnés on peut aussi uniformiser leur aspect (pointilles ou epaisseur)
+Maintenant, on a masqué tout sauf les points de dessous. On les selectionne tous et on lance Paramètres.  On uniformise et  cette fois ci je vais donner a distance minimum de saut une très grande valeur 20mm par exemple pour eviter les points d'arret entre deux chemins de dessous.  Pendant qu'ils sont tous sélectionnés on peut aussi uniformiser leur aspect (pointilles ou epaisseur)
 
 
 
