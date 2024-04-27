@@ -104,7 +104,6 @@ Settings||Description
 ---|---|--
 Custom satin column   | ☑ |Must be enabled for these settings to take effect.
 Method                | |Chose `Satin Column`
-Maximum stitch length | ![Maximum stitch length](/assets/images/docs/params-satin-maximum_stitch_length.png) | Stitches wider than this will be split up (split stitches).
 Short stitch inset    | ![Short Stitch example](/assets/images/docs/params-satin-short_stitch_inset.png) | Stitches in areas with high density will be inset by this amount (%)
 Short stitch distance | ![Short Stitch example](/assets/images/docs/params-satin-short_stitch_distance.png) | Inset stitches if the distance between stitches is smaller than this (mm).
 Zig-Zag spacing       |![Zig-zag spacing example](/assets/images/docs/params-satin-zig-zag-spacing.png)|the peak-to-peak distance between zig-zags
@@ -122,6 +121,8 @@ Random percentage of satin width increase |![Random width increase](/assets/imag
 Random percentage of satin width decrease |![Random width decrease](/assets/images/docs/params-satin-random-width-decrease.png)| Shorten stitch across rails at most this percent. Two values separated by a space may be used for an aysmmetric effect.
 Random zig-zag spacing percentage         |![Random zigzag spacing](/assets/images/docs/params-satin-random-zigzag-spacing.png)|Amount of random jitter added to zigzag spacing
 Random Jitter for split stitches          |![Random split stitch jitter](/assets/images/docs/params-satin-random-split-stitch-jitter.png)| Randomizes split stitch length if random phase is enabled, stitch position if disabled.
+|Split Method | Options:<br /> ◦ default  <br />◦ Simple <br />◦ Staggered |![default](/assets/images/docs/param_split_satin_default.png) ![simple](/assets/images/docs/param_split_satin_simple.png) ![stager](/assets/images/docs/param_split_satin_stagered.png)
+Maximum stitch length | ![Maximum stitch length](/assets/images/docs/params-satin-maximum_stitch_length.png) | Stitches wider than this will be split up (split stitches).
 Random Phase for split stitches           |☑ | Controls whether split stitches are centered or with a random phase (which may increase stitch count).
 Minimum length for random-phase split     |  | Defaults to maximum stitch length. Smaller values allow for a transition between single-stitch and split-stitch.
 Random seed           | | Use a specific seed to compute stitch plan. If empty, the seed is the element ID . Re-roll if you are not happy with the result.
@@ -136,6 +137,7 @@ This is a row of running stitch down the center of the column and back. This may
 Settings      |Description
 ---|---
 Stitch length |Length of stitches (in mm)
+Tolérance         |Decreasing tolerance helps the underlay to stay behind the top level. However too small a tolerance may create very short stitches.  
 Repeats       |Odd numbers of repeats will reverse the stitch direction of the satin column, causing it to start and end at the same position.
 Position      |Position of underlay from between the rails. 0% is along the first rail, 50% is centered, 100% is along the second rail.
 {: .table-full-width }
@@ -149,6 +151,7 @@ This is a row of running stitch up one side of the column and back down the othe
 Settings      |Description
 ---|---
 Stitch length           |Length of stitches (in mm)
+Tolérance         |Decreasing tolerance helps the underlay to stay behind the top level. However too small a tolerance may create very short stitches.  
 Inset distance (fixed)  |Shrink the outline by a fixed length, to prevent the underlay from showing around the outside of the satin column. Negative values are possible.
 Inset distance (proportional |Shrink the outline by a proportion of the column width, to prevent the underlay from showing around the outside of the satin column. Negative values are possible.
 
