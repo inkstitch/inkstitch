@@ -1,12 +1,13 @@
 # Authors: see git history
 #
-# Copyright (c) 2023 Authors
+# Copyright (c) 2024 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-from inkex import Boolean
+from inkex import Boolean, DirectedLineSegment
 
-from .base import InkstitchExtension
 from ..commands import add_commands
+from ..svg import PIXELS_PER_MM
+from .base import InkstitchExtension
 
 
 class JumpToTrim(InkstitchExtension):
@@ -33,15 +34,26 @@ class JumpToTrim(InkstitchExtension):
                 if last_stitch_group is None or stitch_group.color != last_stitch_group.color:
                     last_stitch_group = stitch_group
                     continue
-                self._add_trim(last_element)
+                start = last_stitch_group.stitches[-1]
+                end = stitch_group.stitches[0]
+
                 last_stitch_group = stitch_group
+
+                line = DirectedLineSegment((start.x, start.y), (end.x, end.y))
+                # do not add a running stitch if the distance is smaller than min_jump setting
+                if line.length < self.options.min_jump * PIXELS_PER_MM:
+                    continue
+                # do not add a running stitch if the distance is longer than max_jump setting
+                if self.options.max_jump > 0 and line.length > self.options.max_jump * PIXELS_PER_MM:
+                    continue
+                self._add_trim(last_element)
             last_element = element
 
     def _add_trim(self, element):
         if self.options.use_command_symbols:
             add_commands(element, ["trim"])
         else:
-            element.set('inkstitch:trim_after', True)
+            element.node.set('inkstitch:trim_after', True)
 
     def _set_selection(self):
         if not self.svg.selection:
