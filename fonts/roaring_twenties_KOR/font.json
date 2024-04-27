@@ -1,6 +1,6 @@
 {
     "name": "Roaring Twenties KOR",
-    "description": "Roaring Twenies KOR is a script font of size approximatively 16 mm. It can be scaled down to 70% and up to 150%",
+    "description": "Roaring Twenties KOR is a font of size approximatively 16 mm. It can be scaled down to 70% and up to 150%",
      "keywords": [
         "display"
     ],
@@ -248,7 +248,8 @@
         "ﬃ": 94,
         "ﬄ": 94
     },
-    "kerning_pairs": {},
+    "kerning_pairs": {
+    },
     "glyphs": [
         "\"",
         "!",
