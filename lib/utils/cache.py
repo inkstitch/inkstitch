@@ -39,6 +39,10 @@ def get_stitch_plan_cache():
     return __stitch_plan_cache
 
 
+def is_cache_disabled():
+    return not global_settings['cache_size']
+
+
 class CacheKeyGenerator(object):
     """Generate cache keys given arbitrary data.
 
