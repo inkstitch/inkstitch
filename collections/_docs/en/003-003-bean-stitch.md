@@ -1,7 +1,7 @@
 ---
 title: "Bean Stitch"
 permalink: /docs/stitches/bean-stitch/
-last_modified_at: 2023-04-18
+last_modified_at: 2024-04-27
 toc: true
 ---
 ## What it is
@@ -36,6 +36,8 @@ Repeats                       ||◦ Defines how many times to run down and back 
 Bean stitch number of repeats ||◦ **Enable Bean Stitch Mode**<br>◦ Backtrack each stitch this many times.<br>◦ A value of 1 would triple each stitch (forward, back, forward).<br>◦ A value of 2 would quintuple each stitch, etc.<br>◦ It is possible to define a repeat pattern by entering multiple values separated by a space.
 Running stitch length         ||Length of stitches
 Running stitch tolerance      ||All stitches must be within this distance from a path. A lower tolerance means stitches will be closer together. A higher tolerance means sharp corner may be rounded.
+Minimum stitch length         ||Overwrite global minimum stitch length setting. Shorter stitches than that will be removed.
+Minimum  jump stitch  length             ||Overwrite global minimum jump stitch length setting. Shorter distances to the next object will have no lock stitches.
 Allow lock stitches           ||Enables lock stitches in only desired positions
 Force lock stitches           ||Sew lock stitches after sewing this element, even if the distance to the next object is smaller than defined in the collapse length value value in the Ink/Stitch preferences.
 Tack stitch                 ||Chose your [favorite style](/docs/stitches/lock-stitches/)
