@@ -1,7 +1,7 @@
 ---
 title: "La création de nouvelles polices pour Ink/Stitch"
-permalink: /fr/tutorials/font-creation
-last_modified_at: 2020-01-02
+permalink: /fr/tutorials/font-creation/
+last_modified_at: 2020-01-03
 language: fr
 toc: false
 
