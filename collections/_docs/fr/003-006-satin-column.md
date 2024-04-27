@@ -154,7 +154,7 @@ C'est une rangée aller-retour de points droits au centre de la colonne. C'est p
 |Paramètre      |Description|
 |---|---|
 |Longueur de point |Longueur de point (en mm)|
-|Tolérance         |Choisir une valeur suffisement faible  pour que la sous-couche reste bien sous le satin, mais une très petite tolérance   peut conduire localement à une forte diminution de la longueur de point.   
+|Tolérance         |Choisir une valeur suffisement faible  pour que la sous-couche reste bien sous le satin, mais une très petite tolérance   peut conduire localement à une forte diminution de la longueur de point.   |
 |Répéter | Un nombre impair renverse la direction de broderie de la colonne satin, la broderie commencera et terminera au même endroit.|
 |Position      |Position de la sous-couche entre les rails. 0% est le long du premier rail, 50% est centré, 100% est le long du second  rail.|
 {: .table-full-width }
