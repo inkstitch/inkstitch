@@ -1,7 +1,7 @@
 ---
 title: "Changements, Mises à jour et Corrections pour la prochaine  version Ink/Stitch v3.1.0"
 permalink: /fr/upcoming/
-last_modified_at: 2024-04-22
+last_modified_at: 2024-04-28
 sidebar:
   nav: pages
 toc: true
@@ -139,11 +139,21 @@ Cette extension génère les bandes du tartan et les applique au document soit e
 ## [Fontes](/fr/fonts/font-library)
 
 ### Nouvelles polices
+* [Chicken Little KOR](/fonts/chicken_little/) ([#2839](https://github.com/inkstitch/inkstitch/pull/2839))
 
-* Chicken Little ([#2839](https://github.com/inkstitch/inkstitch/pull/2839))
-* Chicken Scratch ([#2703](https://github.com/inkstitch/inkstitch/pull/2703))
-* Millimarif-bold20 ([#2780](https://github.com/inkstitch/inkstitch/pull/2780))
-* Violin Serif ([#2703](https://github.com/inkstitch/inkstitch/pull/2703))
+  ![Chicken little preview](/assets/images/fonts/chicken_little_KOR.jpg)
+* [Chicken Scratch](/font/chicken_scratch/) ([#2703](https://github.com/inkstitch/inkstitch/pull/2703))
+
+  ![Chicken Scratch preview](/assets/images/fonts/chicken_scratch.jpg)
+* [Millimarif-bold20](/fonts/milli-marif-bold/) ([#2780](https://github.com/inkstitch/inkstitch/pull/2780))
+
+  ![Millimarif-bold20 preview](/assets/images/fonts/milli_marif.jpg)
+* [Roaring twenties KOR](/fonts/roaring_twenties_KOR/)([#2856](https://github.com/inkstitch/inkstitch/issues/2856))
+
+  ![Roaring twenties preview](/assets/images/fonts/roaring_twenties_KOR.jpg)
+* [Violin Serif](/fonts/violin_serif/) ([#2703](https://github.com/inkstitch/inkstitch/pull/2703))
+
+  ![Violin Serif preview](/assets/images/fonts/violin_serif.jpg)
 
 ### Mises à jour de fontes
 
