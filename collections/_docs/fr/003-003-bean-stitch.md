@@ -1,7 +1,7 @@
 ---
 title: "Point triple"
 permalink: /fr/docs/stitches/bean-stitch/
-last_modified_at: 2023-04-19
+last_modified_at: 2024-04-28
 toc: true
 ---
 ## Qu’est-ce que c’est
