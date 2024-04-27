@@ -1,7 +1,7 @@
 ---
 title: "New Features, Updates and Fixes for the upcoming Ink/Stitch version (3.1.0)"
 permalink: /upcoming/
-last_modified_at: 2024-04-21
+last_modified_at: 2024-04-27
 sidebar:
   nav: pages
 toc: true
@@ -111,6 +111,10 @@ This extension unlinks clones (optionally recursive) and applies fill angle tran
 
 * electron -> wxpython ([#2479](https://github.com/inkstitch/inkstitch/issues/2479))
 
+### Print PDF
+
+* Move print pdf back to webbrowser ([#2849](https://github.com/inkstitch/inkstitch/issues/2849))
+
 ### Remove embroidery settings
 
 `Troubleshoot > Remove embroidery settings`
@@ -128,6 +132,7 @@ This extension unlinks clones (optionally recursive) and applies fill angle tran
 `Visualize and Export > Stitch Plan Preview`
 
 * Add option to keep/overwrite previous stitch plan ([#2642](https://github.com/inkstitch/inkstitch/issues/#2642))
+* Add realistic render methods (png, vector) [#2838](https://github.com/inkstitch/inkstitch/issues/2838)
 
 ### Troubleshoot
 
@@ -142,10 +147,21 @@ This extension unlinks clones (optionally recursive) and applies fill angle tran
 
 ### New fonts
 
-* Chicken Little (KOR) ([#2839](https://github.com/inkstitch/inkstitch/pull/2839))
-* Chicken Scratch ([#2703](https://github.com/inkstitch/inkstitch/pull/2703))
-* Millimarif-bold20 ([#2780](https://github.com/inkstitch/inkstitch/pull/2780))
-* Violin Serif ([#2703](https://github.com/inkstitch/inkstitch/pull/2703))
+* [Chicken Little KOR](/fonts/chicken_little/) ([#2839](https://github.com/inkstitch/inkstitch/pull/2839))
+
+  ![Chicken little preview](/assets/images/fonts/chicken_little_KOR.jpg)
+* [Chicken Scratch](/font/chicken_scratch/) ([#2703](https://github.com/inkstitch/inkstitch/pull/2703))
+
+  ![Chicken Scratch preview](/assets/images/fonts/chicken_scratch.jpg)
+* [Millimarif-bold20](/fonts/milli-marif-bold/) ([#2780](https://github.com/inkstitch/inkstitch/pull/2780))
+
+  ![Millimarif-bold20 preview](/assets/images/fonts/milli_marif.jpg)
+* [Roaring twenties KOR](/fonts/roaring_twenties_KOR/)([#2856](https://github.com/inkstitch/inkstitch/issues/2856)
+
+  ![Roaring twenties preview](/assets/images/fonts/roaring_twenties_KOR.jpg)
+* [Violin Serif](/fonts/violin_serif/) ([#2703](https://github.com/inkstitch/inkstitch/pull/2703))
+
+  ![Violin Serif preview](/assets/images/fonts/violin_serif.jpg)
 
 ### Font Updates
 
@@ -155,6 +171,8 @@ This extension unlinks clones (optionally recursive) and applies fill angle tran
 
 All fonts have been reworked to be more stable when transformed.
 
+ [#2857](https://github.com/inkstitch/inkstitch/pull/2857)
+ [#2850](https://github.com/inkstitch/inkstitch/pull/2850)
  [#2833](https://github.com/inkstitch/inkstitch/pull/2833)
  [#2812](https://github.com/inkstitch/inkstitch/pull/2812)
  [#2807](https://github.com/inkstitch/inkstitch/pull/2807)
