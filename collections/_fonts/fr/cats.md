@@ -11,7 +11,7 @@ preview_image:
 
 {% include upcoming_release.html %} 
 
-!vCats](/assets/images/fonts/cats.jpg)
+![Cats](/assets/images/fonts/cats.jpg)
 
 ## Glyphes
 
