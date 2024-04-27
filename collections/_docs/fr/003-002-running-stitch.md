@@ -36,7 +36,7 @@ Tolerance du point droit          |Les points ne peuvent pas être éloignés du
 Longueur minimum de point|Est prioritaire par rapport à la valeur de la longueur minimum de point définie dans les préférences. Les points plus courts seront supprimés.
 Longueur minimum de saut|Est prioritaire par rapport à la valeur de la longueur minimum de saut définie dans les préférences. Si la distance à l'objet suivant est inférieure, il n'y aura pas de points d'arrêt, sauf si les points d'arrêts sont forcés.
 Autoriser les points d'arrêts     |Ajoute un point d'arrêt à la ou les positions choisies
-Forcer les points d'arrêts        |Force un point d'arrêt après l'objet indépendament de la valeur de "Saut de fil" dans les Préférences d'Ink/Stitch.
+Forcer des points d'arrêts        |Force un point d'arrêt après l'objet indépendament de la valeur de "Saut de fil" dans les Préférences d'Ink/Stitch.
 Point d'arrêt initial                   |Choisir le  [style désiré](/fr/docs/stitches/lock-stitches/)
 Point d'arrêt final                 |Choisir le  [style désiré](/fr/docs/stitches/lock-stitches/)
 Couper après                      |Couper le fil après avoir brodé cet objet
