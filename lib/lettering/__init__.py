@@ -4,3 +4,4 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 from .font import Font, FontError
+from .utils import get_font_list
