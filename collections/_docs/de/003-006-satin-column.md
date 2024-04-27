@@ -104,7 +104,6 @@ Einstellung||Beschreibung
 ---|---|---
 Benutzerdefinierte Satinsäule       | ☑ |Muss aktiviert sein, damit diese Einstellungen wirksam werden.
 Methode                             | |`Satinsäule` auswählen
-Maximale Stichlänge                 | ![Maximum stitch length](/assets/images/docs/params-satin-maximum_stitch_length.png) | Stiche die diesen Wert übersteigen, werden geteilt.
 Kurzstich-Einzug                    | ![Short Stitch example](/assets/images/docs/params-satin-short_stitch_inset.png) | Stiche in Bereichen mit hoher Dichte werden um diesen Wert verkürzt (%)
 Kurzstich-Dichte                    |![Short Stitch example](/assets/images/docs/params-satin-short_stitch_distance.png)  | Verkürzt Stiche falls der Abstand zwischen den Stichen schmaler als dieser Wert ist (mm).
 Zick-Zack Abstand (Spitze zu Spitze)|![Zig-zag spacing example](/assets/images/docs/params-satin-zig-zag-spacing.png)|Spitze-zu-Spitze Abstand zwischen Zick-Zacks
@@ -122,6 +121,8 @@ Zufälliger Prozentwert (Erweitern)  |![Random width increase](/assets/images/do
 Zufälliger Prozentwert (Verkleinern)|![Random width decrease](/assets/images/docs/params-satin-random-width-decrease.png)| Shorten stitch across rails at most this percent. Two values separated by a space may be used for an aysmmetric effect.
 Zufallswert Zick-Zack-Abstand (Prozent)|![Random zigzag spacing](/assets/images/docs/params-satin-random-zigzag-spacing.png)| Maximale randomisierte Abweichung der Stichabstände in Prozent
 Zufälliges Zittern für Zwischenstiche|![Random split stitch jitter](/assets/images/docs/params-satin-random-split-stitch-jitter.png)| Wenn die Option für randomisierte Zwischenstiche aktiviert ist, wird die Stichlänge für Zwischenstiche randomisiert. Ist die Option deaktiviert, bezieht sich der Wert auf die Zwischenstich-Positionen
+Maximale Stichlänge                 | ![Maximum stitch length](/assets/images/docs/params-satin-maximum_stitch_length.png) | Stiche die diesen Wert übersteigen, werden geteilt.
+Zwischenstich-Methode | Optionen:<br /> ◦ Standard  <br />◦ Einfach <br />◦ Gemustert |![default](/assets/images/docs/param_split_satin_default.png) ![simple](/assets/images/docs/param_split_satin_simple.png) ![stager](/assets/images/docs/param_split_satin_stagered.png)
 Randomisierte Zwischenstiche         |☑ | Kontrolliert ob die Zwischenstiche mittig liegen oder sich zufällig über die Stichkänge verteilen (dies kann ggf. die Stichanzahl erhöhen).
 Minimale Stichlänge für randomisierte Zwischenstiche|  | Wenn leer, wird der Wert für die maximale Stichlänge verwendet. Kleinere Werte erlauben einen Übergang von Einzelstich zu Teilstich.
 Zufallszahl                          | | Zufallswert für randomisierte Attribute. Falls leer wird die Element-ID verwendet.
