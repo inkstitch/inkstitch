@@ -137,7 +137,7 @@ Inverser la direction des rails    |![Reverse Rung](/assets/images/docs/satin-re
 |Diminution aléatoire de la largeur du satin (%) |![Random width decrease](/assets/images/docs/params-satin-random-width-decrease.png)| Réduire la largeur du satin d'au plus ce pourcentage. Deux valeurs séparées par un espace peuvent être utilisées pour un effet asymétrique.|
 |Pourcentage aléatoire pour l'espacement zigzag               |![Random zigzag spacing](/assets/images/docs/params-satin-random-zigzag-spacing.png)|Pourcentage maximum d'augmentation à appliquer à  l'espacement zigzag.|
 |Déplacement aléatoire pour le découpage des points           |![Random split stitch jitter](/assets/images/docs/params-satin-random-split-stitch-jitter.png)| Si le découpage totalement aléatoire des points est activé, ce paramètre rend la longueur du point aléatoire, sinon, le déplacement aléatoire du découpage se fait autour de sa position normale|
-|Méthode de découpage  | Options:<br /> ◦ Par défaut  <br />◦ Simple <br />◦ Décalé |![default](/assets/images/docs/param_split_satin_default.png) ![simple](/assets/images/docs/param_split_satin_simple.png)
+|Méthode de découpage  | Options:<br /> ◦ Par défaut  <br />◦ Simple <br />◦ Décalé |![default](/assets/images/docs/param_split_satin_default.png) ![simple](/assets/images/docs/param_split_satin_simple.png) ![stager](/assets/images/docs/param_split_satin_stagered.png)
 |Longueur maximale du point    | ![Maximum stitch length](/assets/images/docs/params-satin-maximum_stitch_length.png) | Les points plus longs seront découpés en plusieurs points.
 |Découpage totalement aléatoire des points                     | ☑ |Si activé, le découpage des points est totalement  aléatoire (ce qui risque de modifier le nombre de points par zig (ou par zag)), sinon, le nombre de points par zig est conservé, mais leur position sur le zig peut varier du déplacement aléatoire paramétré.|
 |Longueur minimum du point si découpage totalement aléatoire   |  | Par défaut, prend la valeur de la longueur maximum du point. Une valeur inférieure permet une meilleure transition entre les points découpés et les points non découpés.|
@@ -154,6 +154,7 @@ C'est une rangée aller-retour de points droits au centre de la colonne. C'est p
 |Paramètre      |Description|
 |---|---|
 |Longueur de point |Longueur de point (en mm)|
+|Tolérance         |Choisir une valeur suffisement faible  pour que la sous-couche reste bien sous le satin, mais une très petite tolérance   peut conduire localement à une forte diminution de la longueur de point.   
 |Répéter | Un nombre impair renverse la direction de broderie de la colonne satin, la broderie commencera et terminera au même endroit.|
 |Position      |Position de la sous-couche entre les rails. 0% est le long du premier rail, 50% est centré, 100% est le long du second  rail.|
 {: .table-full-width }
@@ -169,6 +170,7 @@ Il s’agit d’une rangée de points droits d’un bout de la colonne à l’au
 |Paramètres      |Description|
 |---|---|
 |Longueur de point           |Longueur de point (en mm)|
+|Tolérance         |Choisir une valeur suffisement faible  pour que la sous-couche reste bien sous le satin, mais une très petite tolérance   peut conduire localement à une forte diminution de la longueur de point.   |
 |Décalage de sous-couche contour (fixe) |décale d'une valeur fixe pour couvrir la sous-couche entièrement par la couche supérieure. Les valeurs négatives sont possibles.|
 |Décalage de sous-couche contour (proportionel) |décale proportionellement à la largeur du satin pour couvrir la sous-couche entièrement par la couche supérieure. Les valeurs négatives sont possibles.|
 {: .table-full-width }
