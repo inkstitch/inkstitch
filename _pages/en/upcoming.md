@@ -1,7 +1,7 @@
 ---
 title: "New Features, Updates and Fixes for the upcoming Ink/Stitch version (3.1.0)"
 permalink: /upcoming/
-last_modified_at: 2024-04-27
+last_modified_at: 2024-04-28
 sidebar:
   nav: pages
 toc: true
@@ -29,6 +29,12 @@ This extension inserts numbered labels for selected elements into the document t
 This extension informs about various parameters of selected stitch elements.
 
 ![Element info](/assets/images/docs/en/element_info.png)
+
+### Font Sampling
+
+`Font Management > Font Sampling` ([#2858](https://github.com/inkstitch/inkstitch/issues/2858))
+
+This extension creates a list of all letters in a font. It helps font creators to test the outcome of a new font.
 
 ### [Generate Test Swatches from Selection](/docs/edit/#generate-test-swatches-from-selection)
 
@@ -147,6 +153,9 @@ This extension unlinks clones (optionally recursive) and applies fill angle tran
 
 ### New fonts
 
+* [Cats](/fonts/cats) ([#2860](https://github.com/inkstitch/inkstitch/pull/2860))
+
+  ![Cats preview](/assets/images/fonts/cats.jpg)
 * [Chicken Little KOR](/fonts/chicken_little/) ([#2839](https://github.com/inkstitch/inkstitch/pull/2839))
 
   ![Chicken little preview](/assets/images/fonts/chicken_little_KOR.jpg)
@@ -269,6 +278,7 @@ All fonts have been reworked to be more stable when transformed.
 ## Developer Features
 
 * [#2715](https://github.com/inkstitch/inkstitch/issues/2715) Multiversion support
+* [#2655](https://github.com/inkstitch/inkstitch/issues/2655) In Ink/Stitch preferences set cache size to 0 to disable caching
 * [#2653](https://github.com/inkstitch/inkstitch/issues/2653) Updated debug and profiling procedures
 
 

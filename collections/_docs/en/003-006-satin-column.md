@@ -137,7 +137,7 @@ This is a row of running stitch down the center of the column and back. This may
 Settings      |Description
 ---|---
 Stitch length |Length of stitches (in mm)
-Tolérance         |Decreasing tolerance helps the underlay to stay behind the top level. However too small a tolerance may create very short stitches.  
+Tolerance         |Decreasing tolerance helps the underlay to stay behind the top level. However too small a tolerance may create very short stitches.
 Repeats       |Odd numbers of repeats will reverse the stitch direction of the satin column, causing it to start and end at the same position.
 Position      |Position of underlay from between the rails. 0% is along the first rail, 50% is centered, 100% is along the second rail.
 {: .table-full-width }
@@ -151,7 +151,7 @@ This is a row of running stitch up one side of the column and back down the othe
 Settings      |Description
 ---|---
 Stitch length           |Length of stitches (in mm)
-Tolérance         |Decreasing tolerance helps the underlay to stay behind the top level. However too small a tolerance may create very short stitches.  
+Tolerance         |Decreasing tolerance helps the underlay to stay behind the top level. However too small a tolerance may create very short stitches.
 Inset distance (fixed)  |Shrink the outline by a fixed length, to prevent the underlay from showing around the outside of the satin column. Negative values are possible.
 Inset distance (proportional |Shrink the outline by a proportion of the column width, to prevent the underlay from showing around the outside of the satin column. Negative values are possible.
 
