@@ -50,12 +50,32 @@ class SelectElements(InkstitchExtension):
         py_path, file_path = self._get_paths()
         id_list = self._get_id_list()
 
-        with open(os.devnull, 'w') as null:
-            subprocess.Popen(
+        if sys.platform == "linux":
+            # Pyinstaller fix for gnome document view not opening.
+            lenv = dict(os.environ)
+            lp_key = 'LD_LIBRARY_PATH'
+            lp_orig = lenv.get(lp_key + '_ORIG')
+            if lp_orig is not None:
+                lenv[lp_key] = lp_orig  # restore the original, unmodified value
+            else:
+                lenv.pop(lp_key, None)
+
+            with subprocess.Popen(
                 [py_path, 'select_elements.py', id_list],
                 cwd=file_path,
-                stdout=null
-            ).wait()
+                stdout=subprocess.DEVNULL,
+                stderr=subprocess.DEVNULL,
+                env=lenv
+            ) as proc:
+                proc.wait()
+        else:
+            with subprocess.Popen(
+                [py_path, 'select_elements.py', id_list],
+                cwd=file_path,
+                stdout=subprocess.DEVNULL,
+                stderr=subprocess.DEVNULL
+            ) as proc:
+                proc.wait()
 
     def _get_paths(self):
         file_path = get_bundled_dir("dbus")
