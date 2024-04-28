@@ -21,15 +21,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      showgrid="true"
-     inkscape:zoom="5.2416578"
-     inkscape:cx="44.356196"
-     inkscape:cy="147.66321"
+     inkscape:zoom="10.749494"
+     inkscape:cx="44.420697"
+     inkscape:cy="147.63486"
      inkscape:window-width="1920"
      inkscape:window-height="991"
      inkscape:window-x="-9"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g1224"
+     inkscape:current-layer="g1164"
      inkscape:document-units="mm"
      inkscape:snap-smooth-nodes="true"
      inkscape:snap-global="false"
@@ -3159,7 +3159,7 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
        sodipodi:nodetypes="cccccccccccccccccccccccc"
        inkstitch:fill_method="tartan_fill"
        inkstitch:fill_underlay="False"
-       inkstitch:tartan="{&quot;symmetry&quot;: true, &quot;equal_warp_weft&quot;: false, &quot;rotate&quot;: 45.0, &quot;scale&quot;: 100, &quot;offset_x&quot;: 0.0, &quot;offset_y&quot;: 0.0, &quot;palette&quot;: &quot;(#11FF02)/5.0 (#FECC66)5.0 (#F50000)0.5 | (#FB0280)5.0 (#800080)5.0 (#FF0000)/0.5&quot;, &quot;output&quot;: &quot;embroidery&quot;, &quot;stitch_type&quot;: &quot;legacy_fill&quot;, &quot;row_spacing&quot;: 1.0, &quot;angle_warp&quot;: 0.0, &quot;angle_weft&quot;: 90.0, &quot;min_stripe_width&quot;: 1.0, &quot;bean_stitch_repeats&quot;: 0}"
+       inkstitch:tartan="{&quot;symmetry&quot;: true, &quot;equal_warp_weft&quot;: false, &quot;rotate&quot;: 45.0, &quot;scale&quot;: 100, &quot;offset_x&quot;: 0.0, &quot;offset_y&quot;: 0.0, &quot;palette&quot;: &quot;(#11FF02)/5.0 (#FECC66)5.0 (#F50000)0.5 | (#FB0280)5.0 (#800080)5.0 (#F50000)/0.5&quot;, &quot;output&quot;: &quot;embroidery&quot;, &quot;stitch_type&quot;: &quot;legacy_fill&quot;, &quot;row_spacing&quot;: 1.0, &quot;angle_warp&quot;: 0.0, &quot;angle_weft&quot;: 90.0, &quot;min_stripe_width&quot;: 1.0, &quot;bean_stitch_repeats&quot;: 0}"
        inkstitch:bean_stitch_repeats="1" />
     <g
        id="g419"
@@ -4454,7 +4454,7 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-E"
-     style="display:inline"
+     style="display:none"
      id="g1224">
     <path
        id="path1700"
@@ -5502,7 +5502,7 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-G"
-     style="display:none"
+     style="display:inline"
      id="g1232"
      inkstitch:fill_method="tartan_fill"
      inkstitch:tartan="{&quot;symmetry&quot;: true, &quot;equal_warp_weft&quot;: true, &quot;rotate&quot;: 0.0, &quot;scale&quot;: 100, &quot;offset_x&quot;: 0.0, &quot;offset_y&quot;: 0.0, &quot;palette&quot;: &quot;(#000000)/5.0 (#FFFFFF)/?5.0&quot;, &quot;output&quot;: &quot;embroidery&quot;, &quot;stitch_type&quot;: &quot;legacy_fill&quot;, &quot;row_spacing&quot;: 1.0, &quot;angle_warp&quot;: 0.0, &quot;angle_weft&quot;: 90.0, &quot;min_stripe_width&quot;: 1.0, &quot;bean_stitch_repeats&quot;: 0}"
