@@ -111,7 +111,7 @@ Cette extension génère les bandes du tartan et les applique au document soit e
 
 ### Export  PDF
   
-Visualiseand Export > Export pdf
+Visualise et Exporter > Export pdf
 
 * Le pdf s'ouvre à nouveau dans un navigateur ([#2849](https://github.com/inkstitch/inkstitch/issues/2849))
 
