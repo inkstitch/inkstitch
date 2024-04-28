@@ -24,13 +24,13 @@ class ColorizePanel(ScrolledPanel):
 
         # general settings
         equististance_label = wx.StaticText(self, label=_("Equidistant colors"))
-        equististance_label.SetToolTip(_("Wether colors should be equidistant or have varying widths."))
+        equististance_label.SetToolTip(_("Whether colors should be equidistant or have varying widths."))
         self.equististance = wx.CheckBox(self)
         self.equististance.SetValue(True)
         self.equististance.Bind(wx.EVT_CHECKBOX, self._on_update_equidistance)
 
         self.monochrome_width_label = wx.StaticText(self, label=_("     Monochrome color width"))
-        self.monochrome_width_label.SetToolTip(_("Adapt color width here when equidistane is enabled."))
+        self.monochrome_width_label.SetToolTip(_("Adapt color width here when equidistance is enabled."))
         self.monochrome_width = wx.SpinCtrlDouble(self, min=0, max=100, initial=100, inc=1, style=wx.SP_WRAP)
         self.monochrome_width.SetDigits(2)
         self.monochrome_width.Bind(wx.EVT_SPINCTRLDOUBLE, self._on_update_monochrome_width)
@@ -122,12 +122,12 @@ class ColorizePanel(ScrolledPanel):
 
         color_width = wx.SpinCtrlDouble(self, min=0, max=100, initial=0, style=wx.SP_WRAP)
         color_width.SetDigits(2)
-        color_width.SetToolTip(_("Monochrome width. Can be changed individually when equidstance is disabled."))
+        color_width.SetToolTip(_("Monochrome width. Can be changed individually when equidistance is disabled."))
         color_width.Bind(wx.EVT_SPINCTRLDOUBLE, self._update)
 
         color_margin_right = wx.SpinCtrlDouble(self, min=0, max=100, initial=0, style=wx.SP_WRAP)
         color_margin_right.SetDigits(2)
-        color_margin_right.SetToolTip(_("Margin right (bicolor section). Can be changed individually when equidstance is disabled."))
+        color_margin_right.SetToolTip(_("Margin right (bicolor section). Can be changed individually when equidistance is disabled."))
         color_margin_right.Bind(wx.EVT_SPINCTRLDOUBLE, self._update)
 
         remove_button = wx.Button(self, label='X')
@@ -242,7 +242,7 @@ class ColorizePanel(ScrolledPanel):
 
     def _update(self, event=None):
         width = self.get_total_width()
-        self.total_width.SetLabel(_(f"Total width: { width } %"))
+        self.total_width.SetLabel(_("Total width: {width}%").format(width=width))
         if width > 100:
             self.total_width.SetForegroundColour("red")
         else:

@@ -36,7 +36,7 @@ class SatinMulticolor(InkstitchExtension):
 
         app = wx.App()
         frame = SplitSimulatorWindow(
-            title=_("Ink/Stitch Tartan"),
+            title=_("Ink/Stitch Multicolor Satin"),
             panel_class=MultiColorSatinPanel,
             elements=satins,
             on_cancel=self.cancel,
