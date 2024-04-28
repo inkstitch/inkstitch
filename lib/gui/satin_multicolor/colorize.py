@@ -18,9 +18,8 @@ class ColorizePanel(ScrolledPanel):
         ScrolledPanel.__init__(self, parent)
 
         self.colorize_sizer = wx.BoxSizer(wx.VERTICAL)
-        general_settings_sizer = wx.FlexGridSizer(5, 2, 5, 5)
+        general_settings_sizer = wx.FlexGridSizer(6, 2, 5, 5)
         color_header_sizer = wx.BoxSizer(wx.HORIZONTAL)
-        self.color_outer_sizer = wx.BoxSizer(wx.VERTICAL)
         self.color_sizer = wx.BoxSizer(wx.VERTICAL)
 
         # general settings
@@ -45,6 +44,11 @@ class ColorizePanel(ScrolledPanel):
         self.overflow_right = wx.SpinCtrlDouble(self, min=0, max=100, initial=0, inc=0.1, style=wx.SP_WRAP)
         self.overflow_right.SetDigits(2)
         self.overflow_right.Bind(wx.EVT_SPINCTRLDOUBLE, self._update)
+
+        pull_compensation_label = wx.StaticText(self, label=_("Pull compensation (mm)"))
+        self.pull_compensation = wx.SpinCtrlDouble(self, min=0, max=100, initial=0, inc=0.1, style=wx.SP_WRAP)
+        self.pull_compensation.SetDigits(2)
+        self.pull_compensation.Bind(wx.EVT_SPINCTRLDOUBLE, self._update)
 
         seed_label = wx.StaticText(self, label=_("Random seed"))
         self.seed = wx.TextCtrl(self)
@@ -72,6 +76,8 @@ class ColorizePanel(ScrolledPanel):
         general_settings_sizer.Add(self.overflow_left, 0, wx.ALL | wx.EXPAND, 10)
         general_settings_sizer.Add(overflow_right_label, 0, wx.ALL, 10)
         general_settings_sizer.Add(self.overflow_right, 0, wx.ALL | wx.EXPAND, 10)
+        general_settings_sizer.Add(pull_compensation_label, 0, wx.ALL, 10)
+        general_settings_sizer.Add(self.pull_compensation, 0, wx.ALL | wx.EXPAND, 10)
         general_settings_sizer.Add(seed_label, 0, wx.ALL, 10)
         general_settings_sizer.Add(self.seed, 0, wx.ALL | wx.EXPAND, 10)
         general_settings_sizer.AddGrowableCol(1)
@@ -85,7 +91,6 @@ class ColorizePanel(ScrolledPanel):
         self.colorize_sizer.Add(general_settings_sizer, 0, wx.ALL | wx.EXPAND, 10)
         self.colorize_sizer.Add(wx.StaticLine(self), 0, wx.ALL | wx.EXPAND, 10)
         self.colorize_sizer.Add(color_header_sizer, 0, wx.EXPAND | wx.ALL, 10)
-        self.colorize_sizer.Add(self.color_outer_sizer, 0, wx.EXPAND | wx.ALL, 10)
         self.colorize_sizer.Add(self.color_sizer, 0, wx.EXPAND | wx.ALL, 10)
         self.colorize_sizer.Add(self.add_color_button, 0, wx.ALIGN_RIGHT | wx.ALL, 10)
 
@@ -115,15 +120,15 @@ class ColorizePanel(ScrolledPanel):
         colorpicker.SetToolTip(_("Select color"))
         colorpicker.Bind(wx.EVT_COLOURPICKER_CHANGED, self._update)
 
-        color_margin_right = wx.SpinCtrlDouble(self, min=0, max=100, initial=0, style=wx.SP_WRAP)
-        color_margin_right.SetDigits(2)
-        color_margin_right.SetToolTip(_("Margin right (bicolor section). Can be changed individually when equidstance is disabled."))
-        color_margin_right.Bind(wx.EVT_SPINCTRLDOUBLE, self._update)
-
         color_width = wx.SpinCtrlDouble(self, min=0, max=100, initial=0, style=wx.SP_WRAP)
         color_width.SetDigits(2)
         color_width.SetToolTip(_("Monochrome width. Can be changed individually when equidstance is disabled."))
         color_width.Bind(wx.EVT_SPINCTRLDOUBLE, self._update)
+
+        color_margin_right = wx.SpinCtrlDouble(self, min=0, max=100, initial=0, style=wx.SP_WRAP)
+        color_margin_right.SetDigits(2)
+        color_margin_right.SetToolTip(_("Margin right (bicolor section). Can be changed individually when equidstance is disabled."))
+        color_margin_right.Bind(wx.EVT_SPINCTRLDOUBLE, self._update)
 
         remove_button = wx.Button(self, label='X')
         remove_button.SetToolTip(_("Remove color"))
@@ -131,8 +136,8 @@ class ColorizePanel(ScrolledPanel):
 
         colorsizer.Add(position, 0, wx.CENTER | wx.RIGHT | wx.TOP | wx.RESERVE_SPACE_EVEN_IF_HIDDEN, 5)
         colorsizer.Add(colorpicker, 0, wx.RIGHT | wx.TOP, 5)
-        colorsizer.Add(color_margin_right, 1, wx.RIGHT | wx.TOP | wx.RESERVE_SPACE_EVEN_IF_HIDDEN, 5)
         colorsizer.Add(color_width, 1, wx.RIGHT | wx.TOP, 5)
+        colorsizer.Add(color_margin_right, 1, wx.RIGHT | wx.TOP | wx.RESERVE_SPACE_EVEN_IF_HIDDEN, 5)
         colorsizer.Add(remove_button, 0, wx.CENTER | wx.TOP, 5)
 
         self.color_sizer.Add(colorsizer, 0, wx.EXPAND | wx.ALL, 10)
@@ -148,7 +153,7 @@ class ColorizePanel(ScrolledPanel):
 
         color_margin_right.Show(False)
         if len(self.color_sizer.GetChildren()) > 1:
-            self.color_sizer.GetChildren()[-2].GetSizer().GetChildren()[2].GetWindow().Show()
+            self.color_sizer.GetChildren()[-2].GetSizer().GetChildren()[3].GetWindow().Show()
 
         self._update()
 
@@ -218,8 +223,8 @@ class ColorizePanel(ScrolledPanel):
                     inner_sizer.Hide(widget)
                     first = False
                 if isinstance(widget, wx.SpinCtrlDouble):
-                    widget.SetValue(margin)
-                    widget.GetNextSibling().SetValue(value)
+                    widget.SetValue(value)
+                    widget.GetNextSibling().SetValue(margin)
                     break
 
     def get_total_width(self):
@@ -231,7 +236,7 @@ class ColorizePanel(ScrolledPanel):
                 widget = color_widget.GetWindow()
                 if isinstance(widget, wx.SpinCtrlDouble):
                     width += widget.GetValue()
-        last_margin = inner_sizer.GetChildren()[2].GetWindow().GetValue()
+        last_margin = inner_sizer.GetChildren()[3].GetWindow().GetValue()
         width -= last_margin
         return round(width, 2)
 

@@ -128,6 +128,7 @@ class MultiColorSatinPanel(wx.Panel):
 
         overflow_left = self.colorize_panel.overflow_left.GetValue()
         overflow_right = self.colorize_panel.overflow_right.GetValue()
+        pull_compensation = self.colorize_panel.pull_compensation.GetValue()
         seed = self.colorize_panel.seed.GetValue()
 
         self.satin_elements = []
@@ -146,11 +147,12 @@ class MultiColorSatinPanel(wx.Panel):
                 if i == num_colors - 1:
                     margin = overflow_right
                 else:
-                    margin = segment[2].GetWindow().GetValue()
-                width = segment[3].GetWindow().GetValue()
+                    margin = segment[3].GetWindow().GetValue()
+                width = segment[2].GetWindow().GetValue()
 
                 new_satin = copy(element.node)
                 new_satin.style['stroke'] = color
+                new_satin.set('inkstitch:pull_compensation_mm', pull_compensation)
                 new_satin.set('inkstitch:random_seed', seed)
 
                 if i % 2 == 0:
