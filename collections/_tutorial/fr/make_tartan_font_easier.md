@@ -4,13 +4,15 @@ title: "Uniformiser les tartans d'une fonte et limiter les changements de fils"
 language: fr
 last_modified_at: 2022-06-05
 excerpt: "Diminuer le nombre de changements de fil avec un remplissage global pourtoutes les lettres"
-image: "/assets/images/tutorials/tutorial-preview-images/make_tartan_font_easier"
+image: "/assets/images/tutorials/tutorial-preview-images/make_tartan_font_easier.jpg"
 tutorial-type:
   - Sample File
 stitch-type:
   - "Tartan Fill"
   - "Linear Gradient Fill"
 techniques:
+tool:
+  - "Fill"
 field-of-use:
 user-level:
 ---
