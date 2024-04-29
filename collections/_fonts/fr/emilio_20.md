@@ -98,7 +98,9 @@ Dans la fenêtre de dialogue du lettrage, il vous sera demandé si vous choisiss
 Contrairement à Emilio 20 Simple, cette fonte diminuée DOIT être brodée avec un fil et une aiguille plus fins que d'ordinaire. Une aiguille de taille 8 (USA), 60 (EUR) et un fil 60 WT DOIVENT être utilisés.
 
 ### Emilio 20 Tartan
+
 {% include upcoming_release.html %}
+
 Utilisée à 100%, cette fonte fait environ  45 mm de haut.
 Elle peut être agrandie jusqu'à 150% (env 67 mm) ou diminuée jusqu'à 65% (env 30 mm).
 
