@@ -1,14 +1,14 @@
 ---
 title: "Chicken Scratch"
-permalink: /fr/fonts/chicken_scratch/ 
+permalink: /fr/font/chicken_scratch/
 last_modified_at: 2024-04-24
 toc: false
 preview_image:
   - url: /assets/images/fonts/chicken_scratch.jpg
-    height: 19
+    height: 28
 ---
-
 {%- assign font = site.data.fonts.chicken_scratch.font -%}
+
 
 {% include upcoming_release.html %} 
 
