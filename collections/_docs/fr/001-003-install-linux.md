@@ -2,16 +2,9 @@
 title: "Installer Ink/Stitch pour linux"
 permalink: /fr/docs/install-linux/
 excerpt: "Comment installer rapidement Ink/Stitch."
-last_modified_at: 2022-01-12
+last_modified_at: 2024-04-29
 toc: true
 ---
-{% comment %}
-## Guide vidéo
-
-Nous fournissons aussi aux débutants des tutoriels vidéo sur notre <i class="fab fa-youtube"></i> [chaine YouTube](https://www.youtube.com/c/InkStitch). Les vidéos sont en anglais. Mais il y a des sous-titres en français.
-
-* <i class="fab fa-linux"></i> [Linux](https://www.youtube.com/watch?v=Dkb5UvsZUNg&list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&index=2)
-{% endcomment %}
 
 ## Prérequis
 
@@ -94,7 +87,7 @@ Il existe une version pour  NixOS qui est maintenue en externe et disponible sur
 
 ### Arch Linux
 
-Arch Linux users can use an AUR package: [https://aur.archlinux.org/packages/inkstitchhttps://aur.archlinux.org/packages/inkstitch](https://aur.archlinux.org/packages/inkstitchhttps://aur.archlinux.org/packages/inkstitch)
+Les utilisateurs d'Arch Linux peuvent utiliser un paquet AUR: [https://aur.archlinux.org/packages/inkstitchhttps://aur.archlinux.org/packages/inkstitch](https://aur.archlinux.org/packages/inkstitchhttps://aur.archlinux.org/packages/inkstitch)
 
 ## Exécuter Ink/Stitch
 
