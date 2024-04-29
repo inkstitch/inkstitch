@@ -1,6 +1,6 @@
 ---
 permalink: /fr/tutorials/make_tartan_font_easier/
-title: "Unniformiser les tartans d'une fonte et limiter les changements de fils"
+title: "Uniformiser les tartans d'une fonte et limiter les changements de fils"
 language: fr
 last_modified_at: 2022-06-05
 excerpt: "Diminuer le nombre de changements de fil avec un remplissage global pourtoutes les lettres"
@@ -36,8 +36,8 @@ La technique est très simple:
 * Sélectioner tous les tartans (si vous n'avez pas d'autres remplissage rouge visible , selectionner un des remplissages  et faire Inkscape > Edition> Selectionner même couleur de fond)
 * Les combiner (Inkscape > Chemin > Combiner)
 * Placer  la forme résultante sous le reste du lettrage
-* Ink/Stitch > Outils : Remplissage  > [Tartan](/fr/docs/stitches/tartan-fill)
-
+* Ink/Stitch > Outils : Remplissage  > [Tartan](/fr/docs/fill-tools/#tartan) et choisissez les paramètres à votre convenance.
+  
 Vous pouvez aussi choisir d'utiliser un autre type de remplissage, en particulier  un 
 [remplissage en dégradé linaire](/fr/docs/stitches/linear-gradient-fill)
 
