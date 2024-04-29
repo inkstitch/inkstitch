@@ -27,6 +27,10 @@ Ink/Stitch: digitaliser des broderies machines en utilisant Inkscape (SVG)
 * [Remplissage guidé](/fr/docs/stitches/guided-fill/)
 * [Remplissage en méandres](/fr/docs/stitches/meander-fill/)
 * [Remlissage circulaire](/fr/docs/stitches/circular-fill/)
+* [Remplissage en degradé linéaire](/fr/docs/stitches/linear-gradient-fill)
+* [Remplissage Tartan](/fr/docs/stitches/tartan-fill)
+
+
 
 ### Colonne Satin
 * Concevez votre [colonne de satin](/fr/docs/stitches/satin-column/) avec une largeur variable
