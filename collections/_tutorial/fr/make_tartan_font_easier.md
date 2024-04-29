@@ -31,7 +31,12 @@ alors la situation est très différente
 
 ![Brodée](/assets/images/tutorials/make_tartan_font_easier/only_a_few_color_changes.jpg)
 
-Beaucoup moins de sauts de fils, mais en revanche des grands sauts entre les lettres. Cette méthode est donc à utiliser de préférence avec une machine capable de couper des fils autrement qu'aux changements de couleurs.
+Beaucoup moins de sauts de fils, mais en revanche des grands sauts entre les lettres. Cette méthode est donc à utiliser de préférence avec une machine capable de couper des fils.
+
+Vous pourrez alors ajouter une commande "couper après" avec Ink/Stitch > Parameters.
+
+![Brodée](/assets/images/tutorials/make_tartan_font_easier/add_trims.jpg)
+
 
 La technique est très simple: 
 * Utiliser la fonte Emilio 2O Tartan 
