@@ -16,7 +16,7 @@ Ink/Stitch: digitaliser des broderies machines en utilisant Inkscape (SVG)
 ## Types de points
 
 * Divers [types de points](/fr/docs/stitch-library/) : point de remplissage, colonne satin, points de type trait
-* Les [motifs](/fr/docs/stitches/patterns/) personnalisés peuvent être appliqués à tous les types de points disponibles.
+* Les [textures](/fr/docs/stitches/patterns/) personnalisées peuvent être appliqués à tous les types de points disponibles.
 
 ### Point de remplissage
 
