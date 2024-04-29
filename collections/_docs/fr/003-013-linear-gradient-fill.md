@@ -17,7 +17,7 @@ Le remplissage en dégradé linéaire utilise la couleur du dégradé linéaire 
 * Créez un **chemin fermé avec une couleur de remplissage**. La forme peut avoir des trous.
 * Dans la boîte de dialogue « Remplissage et contour », sélectionnez un dégradé linéaire comme remplissage et ajustez les couleurs. Sur le canevas, ajustez l'angle du dégradé. L'angle du point aura un angle de 90 degrés par rapport à la direction du dégradé.
   ![dégradé linéaire](/assets/images/docs/en/linear-gradient.png)
-* Ouvrez la boîte de dialogue des paramètres (`Extensions > Ink/Stitch > Paramètress`) et sélectionnez `Remplissage dégradé linéaire` comme méthode de remplissage
+* Ouvrez la boîte de dialogue des paramètres (`Extensions > Ink/Stitch > Paramètres`) et sélectionnez `Remplissage dégradé linéaire` comme méthode de remplissage
 * Définissez les paramètres comme vous le souhaitez et appliquez
 
 ## Définir le point de début et de fin
