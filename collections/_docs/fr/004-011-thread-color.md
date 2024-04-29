@@ -1,20 +1,12 @@
 ---
 title: "Gestion des couleurs de fil"
 permalink: /fr/docs/thread-color/
-last_modified_at: 2024-03-13
+last_modified_at: 2024-04-29
 toc: true
 ---
-### Apply Palette
 
-{% include upcoming_release.html %}
 
-This extension applies nearest colors from a specified thread palette on a design. This will also be recognized by the Ink/Stitch embroidery file and pdf output.
-
-* Run `Extensions > Ink/Stitch > Thread Color Management > Apply Palette`
-* Select the color palette you wish to apply
-* Click on Apply
-
-## Appliquer une liste de fils  {#apply-threadlist}
+## Appliquer une liste de fil {#apply-threadlist}
 
 Ink/Stitch peut appliquer des listes de fil personnalisées à une broderie. Ceci est particulièrement utile si vous souhaitez utiliser un fichier de broderie qui ne comporte pas d'information de couleur (par exemple DST).
 
