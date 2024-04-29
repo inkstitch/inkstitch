@@ -3,7 +3,7 @@ permalink: /fr/tutorials/make_tartan_font_easier/
 title: "Uniformiser les tartans d'une fonte et limiter les changements de fils"
 language: fr
 last_modified_at: 2022-06-05
-excerpt: "Diminuer le nombre de changements de fil avec un remplissage global pourtoutes les lettres"
+excerpt: "Diminuer le nombre de changements de fil avec un remplissage global pour toutes les lettres"
 image: "/assets/images/tutorials/tutorial-preview-images/make_tartan_font_easier.jpg"
 tutorial-type:
   - Sample File
@@ -18,7 +18,7 @@ user-level:
 ---
 ![Brodée](/assets/images/tutorials/tutorial-preview-images/make_tartan_font_easier.jpg)
 
-Les fontes en tartan donnent des résultats très colorés, mais aussi necessitant beaucoup de changements de fil.
+Les fontes en tartan donnent des résultats très colorés, mais aussi nécessitant beaucoup de changements de fil.
 Il est possible de combiner les surfaces correspondant aux tartans des lettres en un unique tartan, et de limiter ainsi très fortement le nombre de changements de fils.
 
 Ainsi, si l'on souhaite utiliser Emilio 20 Tartan, on se trouve dans cette situation
@@ -33,14 +33,14 @@ alors la situation est très différente
 
 Beaucoup moins de sauts de fils, mais en revanche des grands sauts entre les lettres. Cette méthode est donc à utiliser de préférence avec une machine capable de couper des fils.
 
-Vous pourrez alors ajouter  au artan une commande "couper après" avec Ink/Stitch > Paramètres pour convertir les sauts internes du tartan en découpe de fil.
+Vous pourrez alors ajouter  au remplissage tartan une commande "couper après" avec Ink/Stitch > Paramètres pour convertir les sauts internes du tartan en découpe de fil.
 
 ![Brodée](/assets/images/tutorials/make_tartan_font_easier/add_trims.jpg)
 
 
 La technique est très simple: 
 * Utiliser la fonte Emilio 2O Tartan 
-* Sélectioner tous les tartans (si vous n'avez pas d'autres remplissage rouge visible , selectionner un des remplissages  et faire Inkscape > Edition> Selectionner même couleur de fond)
+* Sélectionner tous les tartans (si vous n'avez pas d'autres remplissage rouge visible , sélectionner un des remplissages  et faire Inkscape > Édition> Sélectionner même couleur de fond)
 * Les combiner (Inkscape > Chemin > Combiner)
 * Placer  la forme résultante sous le reste du lettrage
 * Ink/Stitch > Outils : Remplissage  > [Tartan](/fr/docs/fill-tools/#tartan) et choisissez les paramètres à votre convenance.
