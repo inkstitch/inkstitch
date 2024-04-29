@@ -1,7 +1,7 @@
 ---
 title: "Emilio 20"
 permalink: /de/fonts/emilio-20/
-last_modified_at: 2024-04-21
+last_modified_at: 2024-04-20
 toc: false
 preview_image:
  - url: /assets/images/fonts/emilio_simple.png
@@ -43,6 +43,11 @@ preview_image:
 <img 
      src="/assets/images/fonts/emilio_tricolore.jpg"
      alt="Emilio 20 Tricolore" height="50">
+
+ <img 
+     src="/assets/images/fonts/emilio_tartan.png"
+     alt="Emilio 20 Tartan" height="45">
+
      
  <img 
      src="/assets/images/fonts/emilio_20_all_versions_english.png"
@@ -97,8 +102,15 @@ Deshalb müssen Sie im Dialogfenster des Text-Moduls für die Nutzung von Emilio
 
 Im Gegensatz zu Emilio 20 Simple **MUSS** diese verkleinerte Schrift mit einem dünneren Faden und einer dünneren Nadel als üblich gestickt werden. Es **MUSS** eine Nadel der Größe 8 (USA), 60(EUR) und ein Garn 60WT verwendet werden.
 
+### Emilio 20 Tartan
+
+{% include upcoming_release.html %}
+At 100%, this font is approximatively 45mm (1.75 inches)
+It may be scaled  up to 150% (approx. 66 mm, 2.5 inches) or scaled down to 65% (approx.en 30 mm, 1.25 inches).
 
 
+
+This is yet another Emilio variation. It aims at looking liking  like a Tartan Appliqué. The satin border is much lighter as in the other Emilio Variation. Each letter has its own tartan, therefore embroidering it as is is not for the faint of heart ! Quite a few threads changes are required. However for a less work intense (but also less colorful) variation with only one tartan shared by all leters, see  [this](https://inkstitch.org//fr/tutorials/make_tartan_font_easier/) 
 
 ## Sortieren der Farben 
 
