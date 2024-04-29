@@ -6,7 +6,7 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/cherry_for_inkstitch.jpg
     height: 65
-  - url: /assets/images/fonts/cherryforkaalleen.jpg
+  - url: /assets/images/fonts/cherry_for_kaalleen.jpg
     height: 75
 ---
 {%- assign font1 = site.data.fonts.cherryforinkstitch.font -%}
@@ -16,7 +16,7 @@ preview_image:
      alt="Cherry for Inkstitch" height="48">
      
 <img 
-     src="/assets/images/fonts/cherryforkaalleen.jpg"
+     src="/assets/images/fonts/cherry_for_kaalleen.png"
      alt="Cherry for Kaalleen" height="72">
 
 ## Glyphes
@@ -46,6 +46,7 @@ Elle peut être agrandie jusqu'à 180% (env 90 mm) ou diminuée jusqu'à 80% (en
 ### Cherry for Kaalleen
 Utilisée à  100%, cette fonte fait environ 75 mm  de haut.
 Elle peut être agrandie jusqu'à 130% (env 100 mm) ou réduite jusqu'à 80% (env 60  mm).
+
 
 ## Tri des couleurs 
 Si vous brodez plusieurs lettrines, vous pouvez souhaiter trier les couleurs. C'est possible à condition de respecter leur ordre relatif à l'intérieur de chaque lettre. [Voici comment faire](https://inkstitch.org/fr/docs/lettering/#tri-des-couleurs)
