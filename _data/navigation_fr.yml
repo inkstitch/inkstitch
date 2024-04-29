@@ -92,7 +92,9 @@ docs:
         url: /fr/docs/stitches/meander-fill/
       - title: "Remplissage circulaire"
         url: /fr/docs/stitches/circular-fill/
-      - title: "Tartan Fill"
+      - title: "Remplissage  en dégradé linéaire"
+        url: /fr/docs/stitches/tartan-fill
+      - title: "Remplissage tartan"
         url: /fr/docs/stitches/tartan-fill
       - title: "Points d'arrêt"
         url: /fr/docs/stitches/lock-stitches/
