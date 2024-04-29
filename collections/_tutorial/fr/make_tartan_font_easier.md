@@ -2,7 +2,7 @@
 permalink: /fr/tutorials/make_tartan_font_easier/
 title: "Uniformiser les tartans d'une fonte et limiter les changements de fils"
 language: fr
-last_modified_at: 2022-06-05
+last_modified_at: 2024-04-29
 excerpt: "Diminuer le nombre de changements de fil avec un remplissage global pour toutes les lettres"
 image: "/assets/images/tutorials/tutorial-preview-images/make_tartan_font_easier.jpg"
 tutorial-type:
