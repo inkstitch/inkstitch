@@ -1,7 +1,7 @@
 ---
 title: "## Caractéristiques notables"
 permalink: /fr/features/
-last_modified_at: 2022-06-12
+last_modified_at: 2024-04-29
 sidebar:
   nav: pages
 toc: true
