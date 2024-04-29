@@ -1,24 +1,27 @@
 ---
 title: "Running Ink/Stitch from Command Line"
 permalink: /fr/docs/command-line/
-last_modified_at: 2023-12-30
+last_modified_at: 2024-04-29
 ---
-Ink/Stitch extensions can be run from command line.
 
-## Example command line code
+Les extensions Ink/Stitch peuvent être lancées en ligne de commande
+
+## Example  de code de ligne de commandes
 
 
-### Zip-Export
+### Export en zip
 
-For example if you want to do export your file into a zip-archive (with a dst, pes and threadlist file) you can run the following command:
+Par exemple si vous souhaitez exporter votre fichier dans une archive zip (avec  un .dst, un .pes  et un fichier de liste de fils vous pouvez lancer la commande suivante
 
 ```
 ./inkstitch --extension=zip --format-dst=True --format-pes=True --format-threadlist=True input-file.svg > output-file.zip
 ```
 
-### Stitch Plan
+### Plan de broderie
 
-Here an example of outputting a stitch svg for two specific elements, which will hide the original design layers, display the needle points and is positioned right on top of the original design.
+Voici un exemple dont la sortie est un fichier de points de broderie svg, pour deux éléments spécifiés, qui cachera les calques de dessin, montrera les points d'aiguilles et sera positionné exactement au dessus du dessin originel.
+
+
 
 ```
 ./inkstitch --extension=stitch_plan_preview --id=path1 id=path2 --move-to-side=False --layer-visibility=hidden --needle-points=True input.svg > output.svg
