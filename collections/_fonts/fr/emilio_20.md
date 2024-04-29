@@ -16,7 +16,7 @@ preview_image:
    height: 48
  - url: /assets/images/fonts/emilio_tricolore.jpg
    height: 100
- - url: /assets/images/fonts/emilio_20_tartan.jpg
+ - url: /assets/images/fonts/emilio_tartan.png
    height: 45
 ---
 {%- assign font = site.data.fonts.emilio_20.font -%}
@@ -46,7 +46,7 @@ preview_image:
      alt="Emilio 20 Tricolore" height="50">
      
 <img 
-     src="/assets/images/fonts/emilio_20_tartan.jpg"
+     src="/assets/images/fonts/emilio_tartan.png"
      alt="Emilio 20 Tartan" height="45">
      
  <img 
