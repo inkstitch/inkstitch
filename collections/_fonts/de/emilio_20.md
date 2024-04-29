@@ -131,3 +131,8 @@ Wenn man mehrere Buchstaben sticken möchte, kann man die Farben sortieren. Das 
 [Download Emilio 20 Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/emilio_20/LICENSE)
 
 [Download Emilio 20 Tricolore Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/emilio_20_tricolore/LICENSE)
+
+[Download Emilio 20 Small Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/emilio_20_tricolore/LICENSE)
+
+
+[Download Emilio 20 Tartan Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/emilio_20_tricolore/LICENSE)
