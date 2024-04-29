@@ -44,7 +44,7 @@ Il est aussi possible pour une direction donnée de créer un repertoire dont le
 
 Le fichier json doit inclure au minimum le nom des polices.
 
-## Générer  le fichier JSON {#sgenerate-json}
+## Générer  le fichier JSON {#generate-json}
 Cette extension est destinée à vous aider à créer le fichier json.
 Selon la façon dont vous avez généré votre fichier de police, il peut permettre d'inclure des informations de crénage supplémentaires dans le fichier json.
 Lire [**comment générer une police svg avec des informations de crénage**](/tutorials/font-creation).
