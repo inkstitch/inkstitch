@@ -33,7 +33,7 @@ alors la situation est très différente
 
 Beaucoup moins de sauts de fils, mais en revanche des grands sauts entre les lettres. Cette méthode est donc à utiliser de préférence avec une machine capable de couper des fils.
 
-Vous pourrez alors ajouter une commande "couper après" avec Ink/Stitch > Parameters.
+Vous pourrez alors ajouter  au artan une commande "couper après" avec Ink/Stitch > Paramètres pour convertir les sauts internes du tartan en découpe de fil.
 
 ![Brodée](/assets/images/tutorials/make_tartan_font_easier/add_trims.jpg)
 
