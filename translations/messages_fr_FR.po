@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-04-28 01:11+0000\n"
-"PO-Revision-Date: 2024-04-28 01:12\n"
+"PO-Revision-Date: 2024-04-29 01:08\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -166,12 +166,12 @@ msgstr "Cette police est une version modifiée de Baumans FI pour permettre une 
 #. name of font in fonts/cats
 #: inkstitch-fonts-metadata.py:54
 msgid "Cats"
-msgstr ""
+msgstr "Cats"
 
 #. description of font in fonts/cats
 #: inkstitch-fonts-metadata.py:56
 msgid "Cats is a silly font that makes use of satin random parameters. Font height is approximatively 40mm. It can be scaled down to 70% (28mm) and up to 150% (60mm)"
-msgstr ""
+msgstr "Cats est une police un peu déjantée qui utilise des paramètres aléatoires des colonnes satin. La hauteur de la police est d’environ 40 mm. Elle peut être réduite jusqu'à 70 % (28 mm) et augmentée jusqu'à 150 % (60 mm)"
 
 #. name of font in fonts/cherryforinkstitch
 #: inkstitch-fonts-metadata.py:58
@@ -582,7 +582,7 @@ msgstr "Roaring Twenties KOR"
 #. description of font in fonts/roaring_twenties_KOR
 #: inkstitch-fonts-metadata.py:216
 msgid "Roaring Twenties KOR is a font of size approximatively 16 mm. It can be scaled down to 70% and up to 150%"
-msgstr ""
+msgstr "Roaring Twenties KOR est une fonte d'approximativement 16 mm de haut. Elle peut être réduite jusqu'à 70 % et augmentée jusqu'à 150 %."
 
 #. name of font in fonts/roaring_twenties_KOR_small
 #: inkstitch-fonts-metadata.py:218
@@ -2843,7 +2843,7 @@ msgstr "Spécifiez le répertoire de vos polices personnalisées."
 
 #: lib/extensions/lettering_font_sample.py:21
 msgid "Font Sample"
-msgstr ""
+msgstr "Test de police"
 
 #: lib/extensions/lettering_force_lock_stitches.py:30
 msgid "The maximum value is smaller than the minimum value."
@@ -3256,7 +3256,7 @@ msgstr "Échelle"
 #: lib/gui/lettering_font_sample.py:17
 #: inx/inkstitch_lettering_font_sample.inx:3
 msgid "Font Sampling"
-msgstr ""
+msgstr "Test de police"
 
 #: lib/gui/lettering_font_sample.py:30 print/templates/ui.html:5
 #: print/templates/ui.html:15 inx/inkstitch_lettering_generate_json.inx:63
@@ -3265,7 +3265,7 @@ msgstr "Paramètres"
 
 #: lib/gui/lettering_font_sample.py:41
 msgid "Stitch direction"
-msgstr ""
+msgstr "Direction du texte"
 
 #: lib/gui/lettering_font_sample.py:43 lib/gui/tartan/customize_panel.py:47
 msgid "Scale (%)"
@@ -3273,7 +3273,7 @@ msgstr "Echelle (%)"
 
 #: lib/gui/lettering_font_sample.py:45
 msgid "Max. line width"
-msgstr ""
+msgstr "Largeur du texte"
 
 #: lib/gui/lettering_font_sample.py:58 lib/gui/tartan/main_panel.py:70
 #: lib/gui/test_swatches.py:117
@@ -3282,11 +3282,11 @@ msgstr "Appliquer"
 
 #: lib/gui/lettering_font_sample.py:76
 msgid "    This extension helps font creators to generate an output of every glyph from a selected font."
-msgstr ""
+msgstr "    Cette extension aide les créateurs de fontes en générant une sortie avec tous les glyphes de la fonte sélectionnée."
 
 #: lib/gui/lettering_font_sample.py:90 lib/gui/lettering_font_sample.py:91
 msgid "https://inkstitch.org/docs/font-tools/#font-sampling"
-msgstr ""
+msgstr "https://inkstitch.org/fr/docs/font-tools/#font-sampling"
 
 #: lib/gui/preferences.py:16 lib/gui/preferences.py:17
 #: inx/inkstitch_preferences.inx:3
@@ -3320,7 +3320,7 @@ msgstr "Valeur par défaut de la longueur minimum de saut"
 
 #: lib/gui/preferences.py:122
 msgid "Stitch plan cache size (0 to disable cache)"
-msgstr ""
+msgstr "Taille du cache du plan de broderie (0 désactive le cache)"
 
 #: lib/gui/preferences.py:133
 msgid "MB"
