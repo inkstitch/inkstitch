@@ -16,6 +16,8 @@ preview_image:
    height: 48
  - url: /assets/images/fonts/emilio_tricolore.jpg
    height: 100
+ - url: /assets/images/fonts/emilio_20_tartan.jpg
+   height: 45
 ---
 {%- assign font = site.data.fonts.emilio_20.font -%}
 
@@ -43,12 +45,16 @@ preview_image:
      src="/assets/images/fonts/emilio_tricolore.jpg"
      alt="Emilio 20 Tricolore" height="50">
      
+<img 
+     src="/assets/images/fonts/emilio_20_tartan.jpg"
+     alt="Emilio 20 Tartan" height="45">
+     
  <img 
      src="/assets/images/fonts/emilio_20_all_versions_french.png"
      alt="Comparaison des Emilio 20" >
 
 ## Glyphes
-Chacune des cinq fontes comporte  {{ font.glyphs.size }} glyphes:
+Chacune des sept fontes comporte  {{ font.glyphs.size }} glyphes:
 
 ```
 {{ font.glyphs | sort | join: ' ' }}
@@ -91,6 +97,11 @@ Dans la fenêtre de dialogue du lettrage, il vous sera demandé si vous choisiss
 
 Contrairement à Emilio 20 Simple, cette fonte diminuée DOIT être brodée avec un fil et une aiguille plus fins que d'ordinaire. Une aiguille de taille 8 (USA), 60 (EUR) et un fil 60 WT DOIVENT être utilisés.
 
+### Emilio 20 Tartan
+{% include upcoming_release.html %}
+Utilisée à 100%, cette fonte fait environ  45 mm de haut.
+Elle peut être agrandie jusqu'à 150% (env 67 mm) ou diminuée jusqu'à 65% (env 30 mm).
+
 
 ## Tri des couleurs pour la version tricolore ou pour la version appliquée
 Si vous brodez plusieurs lettes, vous pouvez souhaiter trier les couleurs. C'est possible à condition de respecter leur ordre relatif à l'intérieur de chaque lettre. [Voici comment faire](https://inkstitch.org/fr/docs/lettering/#tri-des-couleurs)
@@ -108,6 +119,10 @@ Si vous brodez plusieurs lettes, vous pouvez souhaiter trier les couleurs. C'est
 [Télécharger la license d'Emilio 20](https://github.com/inkstitch/inkstitch/tree/main/fonts/emilio_20/LICENSE)
 
 [Télécharger la license d'Emilio 20 Tricolore](https://github.com/inkstitch/inkstitch/tree/main/fonts/emilio_20_tricolore/LICENSE)
+
+[Télécharger la license d'Emilio 20 Simple small](https://github.com/inkstitch/inkstitch/tree/main/fonts/emilio_20_tricolore/LICENSE)
+
+[Télécharger la license d'Emilio 20 Tartan](https://github.com/inkstitch/inkstitch/tree/main/fonts/emilio_20_tricolore/LICENSE)
 
 
 
