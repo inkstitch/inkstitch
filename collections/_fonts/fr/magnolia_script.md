@@ -1,7 +1,7 @@
 ---
 title: "Magnolia KOR"
 permalink: /fr/fonts/magnolia-script/
-last_modified_at: 2022-05-27
+last_modified_at: 2024-04-29
 toc: false
 preview_image:
   - url: /assets/images/fonts/magnolia_small.jpg
