@@ -1,7 +1,7 @@
 ---
 title: "Remplissage dégradé linéaire"
 permalink: /fr/docs/stitches/linear-gradient-fill/
-last_modified_at: 2024-03-10
+last_modified_at: 2024-04-29
 toc: true
 ---
  {% include upcoming_release.html %}
