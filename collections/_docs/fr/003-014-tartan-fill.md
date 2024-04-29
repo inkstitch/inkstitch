@@ -21,7 +21,7 @@ Un Tartan et un tissu à motif de rayures horizontales et verticales. Il est en 
 
 L'éditeur de Tartan se trouve dans  `Extensions > Ink/Stitch > Outils: Remplissage > Tartan`
 
-[En savoir plus sur l'éditeur de Tartan](/docs/fill-tools#tartan)
+[En savoir plus sur l'éditeur de Tartan](/fr/docs/fill-tools#tartan)
 
 ## Paramètres
 
