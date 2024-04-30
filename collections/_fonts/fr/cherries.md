@@ -48,6 +48,10 @@ Utilisée à  100%, cette fonte fait environ 75 mm  de haut.
 Elle peut être agrandie jusqu'à 130% (env 100 mm) ou réduite jusqu'à 80% (env 60  mm).
 
 
+{% include upcoming_release.html %}
+
+Cette fonte a été modifée en  2024 pour inclure un léger fond bleu.  Si vous sautez les deux premières étapes de la broderie, vous retrouverez la version initiale.
+
 ## Tri des couleurs 
 Si vous brodez plusieurs lettrines, vous pouvez souhaiter trier les couleurs. C'est possible à condition de respecter leur ordre relatif à l'intérieur de chaque lettre. [Voici comment faire](https://inkstitch.org/fr/docs/lettering/#tri-des-couleurs)
 
