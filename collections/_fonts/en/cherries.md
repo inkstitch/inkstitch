@@ -6,20 +6,19 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/cherry_for_inkstitch.jpg
     height: 65
-  - url: /assets/images/fonts/cherryforkaalleen.jpg
+  - url: /assets/images/fonts/cherry_for_kaalleen.png
     height: 75
 ---
 {%- assign font1 = site.data.fonts.cherryforinkstitch.font -%}
 {%- assign font2 = site.data.fonts.cherryforkaalleen.font -%}
 
-
 <img 
      src="/assets/images/fonts/cherry_for_inkstitch.jpg"
-     alt="Roman AGS" height="48">
+     alt="Cherry for Inkstitch" height="48">
      
 <img 
-     src="/assets/images/fonts/cherryforkaalleen.jpg"
-     alt="Roman AGS_bicolor" height="72">
+     src="/assets/images/fonts/cherry_for_kaalleen.png"
+     alt="Cherry for Kaalleen" height="72">
 
 ## Glyphes
 ### Cherry for Ink/Stitch
