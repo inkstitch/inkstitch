@@ -50,7 +50,7 @@ if not running_as_frozen:  # debugging/profiling only in development mode
     if not debug_active:
         debug_type = debug_utils.resole_debug_type(ini)  # read debug type from ini file or cmd line
 
-    profile_type = debug_utils.resole_profile_type(ini)  # read profile type from ini file or cmd line
+    profiler_type = debug_utils.resole_profile_type(ini)  # read profile type from ini file or cmd line
 
     if running_from_inkscape:
         # process creation of the Bash script - should be done before sys.path is modified, see below in prefere_pip_inkex
