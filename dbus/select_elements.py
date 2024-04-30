@@ -22,20 +22,7 @@ class DBusActions:
         except BaseException:
             exit()
 
-        proxy = Gio.DBusProxy.new_sync(bus, Gio.DBusProxyFlags.NONE, None,
-                                       'org.freedesktop.DBus',
-                                       '/org/freedesktop/DBus',
-                                       'org.freedesktop.DBus', None)
-        names_list = proxy.call_sync('ListNames', None, Gio.DBusCallFlags.NO_AUTO_START, 500, None)
-
-        # names_list is a GVariant, must unpack
-        names = names_list.unpack()[0]
-
-        # Look for Inkscape; names is a tuple.
-        for name in names:
-            if ('org.inkscape.Inkscape' in name):
-                break
-
+        name =  'org.inkscape.Inkscape'
         appGroupName = "/org/inkscape/Inkscape"
         self.applicationGroup = Gio.DBusActionGroup.get(
             bus,
