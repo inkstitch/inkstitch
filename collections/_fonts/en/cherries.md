@@ -1,7 +1,7 @@
 ---
 title: "Cherries"
 permalink: /fonts/cherries/
-last_modified_at: 2022-05-26
+last_modified_at: 2024-04-29
 toc: false
 preview_image:
   - url: /assets/images/fonts/cherry_for_inkstitch.jpg
