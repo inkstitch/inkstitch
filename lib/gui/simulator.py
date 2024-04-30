@@ -8,14 +8,15 @@ import time
 from threading import Event, Thread
 
 import wx
+from numpy import split
 from wx.lib.intctrl import IntCtrl
 
 from lib.debug import debug
 from lib.utils import get_resource_dir
 from lib.utils.settings import global_settings
 from lib.utils.threading import ExitThread
+
 from ..i18n import _
-from ..stitch_plan import stitch_plan_from_file
 from ..svg import PIXELS_PER_MM
 
 # L10N command label at bottom of simulator window
@@ -43,8 +44,8 @@ class ControlPanel(wx.Panel):
         wx.Panel.__init__(self, parent, *args, **kwargs)
 
         self.drawing_panel = None
-        self.num_stitches = 1
-        self.current_stitch = 1
+        self.num_stitches = 0
+        self.current_stitch = 0
         self.speed = 1
         self.direction = 1
         self._last_color_block_end = 0
@@ -98,12 +99,15 @@ class ControlPanel(wx.Panel):
         self.slider.Bind(wx.EVT_SLIDER, self.on_slider)
         self.stitchBox = IntCtrl(self, -1, value=1, min=1, max=2, limited=True, allow_none=True,
                                  size=((100, -1)), style=wx.TE_PROCESS_ENTER)
+        self.stitchBox.Clear()
         self.stitchBox.Bind(wx.EVT_LEFT_DOWN, self.on_stitch_box_focus)
         self.stitchBox.Bind(wx.EVT_SET_FOCUS, self.on_stitch_box_focus)
         self.stitchBox.Bind(wx.EVT_TEXT_ENTER, self.on_stitch_box_focusout)
         self.stitchBox.Bind(wx.EVT_KILL_FOCUS, self.on_stitch_box_focusout)
         self.Bind(wx.EVT_LEFT_DOWN, self.on_stitch_box_focusout)
-        self.totalstitchText = wx.StaticText(self, -1, label="/ ________")
+        self.totalstitchText = wx.StaticText(self, -1, label="")
+        extent = self.totalstitchText.GetTextExtent("0000000")
+        self.totalstitchText.SetMinSize(extent)
         self.btnJump = wx.BitmapToggleButton(self, -1, style=self.button_style)
         self.btnJump.SetToolTip(_('Show jump stitches'))
         self.btnJump.SetBitmap(self.load_icon('jump'))
@@ -120,6 +124,9 @@ class ControlPanel(wx.Panel):
         self.btnColorChange.SetToolTip(_('Show color changes'))
         self.btnColorChange.SetBitmap(self.load_icon('color_change'))
         self.btnColorChange.Bind(wx.EVT_TOGGLEBUTTON, lambda event: self.on_marker_button('color_change', event))
+        self.btnBackgroundColor = wx.ColourPickerCtrl(self, -1, colour='white', size=((40, -1)))
+        self.btnBackgroundColor.SetToolTip(_("Change background color"))
+        self.btnBackgroundColor.Bind(wx.EVT_COLOURPICKER_CHANGED, self.on_update_background_color)
         if self.detach_callback:
             self.btnDetachSimulator = wx.BitmapButton(self, -1, style=self.button_style)
             self.btnDetachSimulator.SetToolTip(_('Detach/attach simulator window'))
@@ -129,8 +136,10 @@ class ControlPanel(wx.Panel):
         # Layout
         self.hbSizer1 = wx.BoxSizer(wx.HORIZONTAL)
         self.hbSizer1.Add(self.slider, 1, wx.EXPAND | wx.RIGHT, 10)
-        self.hbSizer1.Add(self.stitchBox, 0, wx.ALIGN_CENTER | wx.Right, 10)
-        self.hbSizer1.Add(self.totalstitchText, 0, wx.ALIGN_CENTER | wx.LEFT, 10)
+        self.hbSizer1.Add(self.stitchBox, 0, wx.ALIGN_TOP | wx.TOP, 25)
+        self.hbSizer1.Add((1, 1), 0, wx.RIGHT, 10)
+        self.hbSizer1.Add(self.totalstitchText, 0, wx.ALIGN_TOP | wx.TOP, 25)
+        self.hbSizer1.Add((1, 1), 0, wx.RIGHT, 10)
 
         self.controls_sizer = wx.StaticBoxSizer(wx.StaticBox(self, wx.ID_ANY, _("Controls")), wx.HORIZONTAL)
         self.controls_inner_sizer = wx.BoxSizer(wx.HORIZONTAL)
@@ -147,11 +156,12 @@ class ControlPanel(wx.Panel):
 
         self.show_sizer = wx.StaticBoxSizer(wx.StaticBox(self, wx.ID_ANY, _("Show")), wx.HORIZONTAL)
         self.show_inner_sizer = wx.BoxSizer(wx.HORIZONTAL)
-        self.show_inner_sizer.Add(self.btnNpp, 0, wx.EXPAND | wx.ALL, 2)
+        self.show_inner_sizer.Add(self.btnNpp, 0, wx.ALL, 2)
         self.show_inner_sizer.Add(self.btnJump, 0, wx.ALL, 2)
         self.show_inner_sizer.Add(self.btnTrim, 0, wx.ALL, 2)
         self.show_inner_sizer.Add(self.btnStop, 0, wx.ALL, 2)
         self.show_inner_sizer.Add(self.btnColorChange, 0, wx.ALL, 2)
+        self.show_inner_sizer.Add(self.btnBackgroundColor, 0, wx.EXPAND | wx.ALL, 2)
         if self.detach_callback:
             self.show_inner_sizer.Add(self.btnDetachSimulator, 0, wx.ALL, 2)
         self.show_sizer.Add((1, 1), 1)
@@ -226,7 +236,6 @@ class ControlPanel(wx.Panel):
 
         self.accel_table = wx.AcceleratorTable(self.accel_entries)
         self.SetAcceleratorTable(self.accel_table)
-        self.SetFocus()
 
         # wait for layouts so that panel size is set
         if self.stitch_plan:
@@ -241,27 +250,33 @@ class ControlPanel(wx.Panel):
             # otherwise the slider and intctrl get mad
             num_stitches = 2
         self.num_stitches = num_stitches
+        self.stitchBox.SetValue(1)
         self.stitchBox.SetMax(num_stitches)
         self.slider.SetMax(num_stitches)
         self.totalstitchText.SetLabel(f"/ { num_stitches }")
         self.choose_speed()
 
-    def add_color(self, color, num_stitches):
-        start = self._last_color_block_end + 1
-        self.slider.add_color_section(ColorSection(color.rgb, start, start + num_stitches - 1))
-        self._last_color_block_end = self._last_color_block_end + num_stitches
+    def clear(self):
+        self.stitches = []
+        self._set_num_stitches(0)
+        self.slider.clear()
+        self.stitchBox.Clear()
+        self.totalstitchText.SetLabel("")
 
     def load(self, stitch_plan):
+        self.clear()
         self.stitches = []
         self._set_num_stitches(stitch_plan.num_stitches)
 
         stitch_num = 0
+        last_block_end = 1
         for color_block in stitch_plan.color_blocks:
             self.stitches.extend(color_block.stitches)
 
             start = stitch_num + 1
-            end = start + color_block.num_stitches
-            self.slider.add_color_section(color_block.color.rgb, start, end)
+            end = start + color_block.num_stitches - 1
+            self.slider.add_color_section(color_block.color.rgb, last_block_end, end)
+            last_block_end = end
 
             for stitch_num, stitch in enumerate(color_block.stitches, start):
                 if stitch.trim:
@@ -280,6 +295,16 @@ class ControlPanel(wx.Panel):
 
     def on_marker_button(self, marker_type, event):
         self.slider.enable_marker_list(marker_type, event.GetEventObject().GetValue())
+        if marker_type == 'jump':
+            self.drawing_panel.Refresh()
+
+    def on_update_background_color(self, event):
+        self.set_background_color(event.Colour)
+
+    def set_background_color(self, color):
+        self.btnBackgroundColor.SetColour(color)
+        self.drawing_panel.SetBackgroundColour(color)
+        self.drawing_panel.Refresh()
 
     def choose_speed(self):
         if self.target_duration:
@@ -539,18 +564,18 @@ class DrawingPanel(wx.Panel):
         last_stitch = None
 
         start = time.time()
-        for pen, stitches in zip(self.pens, self.stitch_blocks):
+        for pen, stitches, jumps in zip(self.pens, self.stitch_blocks, self.jumps):
             canvas.SetPen(pen)
             if stitch + len(stitches) < self.current_stitch:
                 stitch += len(stitches)
                 if len(stitches) > 1:
-                    canvas.StrokeLines(stitches)
+                    self.draw_stitch_lines(canvas, pen, stitches, jumps)
                     self.draw_needle_penetration_points(canvas, pen, stitches)
                 last_stitch = stitches[-1]
             else:
                 stitches = stitches[:self.current_stitch - stitch]
                 if len(stitches) > 1:
-                    canvas.StrokeLines(stitches)
+                    self.draw_stitch_lines(canvas, pen, stitches, jumps)
                     self.draw_needle_penetration_points(canvas, pen, stitches)
                 last_stitch = stitches[-1]
                 break
@@ -606,6 +631,16 @@ class DrawingPanel(wx.Panel):
         canvas.DrawText("%s mm" % scale_width_mm, scale_lower_left_x, scale_lower_left_y + 5)
 
         canvas.EndLayer()
+
+    def draw_stitch_lines(self, canvas, pen, stitches, jumps):
+        render_jumps = self.control_panel.btnJump.GetValue()
+        if render_jumps:
+            canvas.StrokeLines(stitches)
+        else:
+            stitch_blocks = split(stitches, jumps)
+            for i, block in enumerate(stitch_blocks):
+                if len(block) > 1:
+                    canvas.StrokeLines(block)
 
     def draw_needle_penetration_points(self, canvas, pen, stitches):
         if self.control_panel.btnNpp.GetValue():
@@ -669,6 +704,7 @@ class DrawingPanel(wx.Panel):
     def parse_stitch_plan(self, stitch_plan):
         self.pens = []
         self.stitch_blocks = []
+        self.jumps = []
 
         # There is no 0th stitch, so add a place-holder.
         self.commands = [None]
@@ -676,6 +712,8 @@ class DrawingPanel(wx.Panel):
         for color_block in stitch_plan:
             pen = self.color_to_pen(color_block.color)
             stitch_block = []
+            jumps = []
+            stitch_index = 0
 
             for stitch in color_block:
                 # trim any whitespace on the left and top and scale to the
@@ -687,6 +725,7 @@ class DrawingPanel(wx.Panel):
                     self.commands.append(TRIM)
                 elif stitch.jump:
                     self.commands.append(JUMP)
+                    jumps.append(stitch_index)
                 elif stitch.stop:
                     self.commands.append(STOP)
                 elif stitch.color_change:
@@ -698,10 +737,16 @@ class DrawingPanel(wx.Panel):
                     self.pens.append(pen)
                     self.stitch_blocks.append(stitch_block)
                     stitch_block = []
+                    self.jumps.append(jumps)
+                    jumps = []
+                    stitch_index = 0
+                else:
+                    stitch_index += 1
 
             if stitch_block:
                 self.pens.append(pen)
                 self.stitch_blocks.append(stitch_block)
+                self.jumps.append(jumps)
 
     def set_speed(self, speed):
         self.speed = speed
@@ -805,11 +850,12 @@ class DrawingPanel(wx.Panel):
 
 
 class MarkerList(list):
-    def __init__(self, icon_name, stitch_numbers=()):
+    def __init__(self, icon_name, offset=0, stitch_numbers=()):
         super().__init__(self)
         icons_dir = get_resource_dir("icons")
         self.icon_name = icon_name
         self.icon = wx.Image(os.path.join(icons_dir, f"{icon_name}.png")).ConvertToBitmap()
+        self.offset = offset
         self.enabled = False
         self.extend(stitch_numbers)
 
@@ -828,32 +874,32 @@ class ColorSection:
 class SimulatorSlider(wx.Panel):
     PROXY_EVENTS = (wx.EVT_SLIDER,)
 
-    def __init__(self, parent, id=wx.ID_ANY, minValue=0, maxValue=1, **kwargs):
+    def __init__(self, parent, id=wx.ID_ANY, minValue=1, maxValue=2, **kwargs):
         super().__init__(parent, id)
 
         kwargs['style'] = wx.SL_HORIZONTAL | wx.SL_VALUE_LABEL | wx.SL_TOP | wx.ALIGN_TOP
 
-        self._height = self.GetTextExtent("M").y * 4
+        self._height = self.GetTextExtent("M").y * 6
         self.SetMinSize((self._height, self._height))
 
         self.marker_lists = {
             "trim": MarkerList("trim"),
-            "stop": MarkerList("stop"),
-            "jump": MarkerList("jump"),
-            "color_change": MarkerList("color_change"),
+            "jump": MarkerList("jump", 0.17),
+            "stop": MarkerList("stop", 0.34),
+            "color_change": MarkerList("color_change", 0.34),
         }
         self.marker_pen = wx.Pen(wx.Colour(0, 0, 0))
         self.color_sections = []
         self.margin = 15
         self.tab_start = 0
-        self.tab_width = 0.2
-        self.tab_height = 0.2
-        self.color_bar_start = 0.3
-        self.color_bar_thickness = 0.25
+        self.tab_width = 0.15
+        self.tab_height = 0.15
+        self.color_bar_start = 0.22
+        self.color_bar_thickness = 0.17
         self.marker_start = self.color_bar_start
-        self.marker_end = 0.75
-        self.marker_icon_start = 0.75
-        self.marker_icon_size = self._height // 4
+        self.marker_end = 0.5
+        self.marker_icon_start = 0.5
+        self.marker_icon_size = self._height // 6
 
         self._min = minValue
         self._max = maxValue
@@ -884,6 +930,16 @@ class SimulatorSlider(wx.Panel):
     def GetValue(self):
         return self._value
 
+    def clear(self):
+        self.color_sections = []
+        self._min = 1
+        self._max = 2
+        self._value = 0
+        self._tab_rect = None
+
+        for marker_list in self.marker_lists.values():
+            marker_list.clear()
+
     def add_color_section(self, color, start, end):
         self.color_sections.append(ColorSection(color, start, end))
 
@@ -911,6 +967,9 @@ class SimulatorSlider(wx.Panel):
             dc.SetBackground(background_brush)
         dc.Clear()
         gc = wx.GraphicsContext.Create(dc)
+
+        if self._value < self._min:
+            return
 
         width, height = self.GetSize()
         min_value = self._min
@@ -952,11 +1011,11 @@ class SimulatorSlider(wx.Panel):
                     x = _value_to_x(value)
                     gc.StrokeLine(
                         x, height * self.marker_start,
-                        x, height * self.marker_end
+                        x, height * (self.marker_end + marker_list.offset)
                     )
                     gc.DrawBitmap(
                         marker_list.icon,
-                        x - self.marker_icon_size / 2, height * self.marker_icon_start,
+                        x - self.marker_icon_size / 2, height * (self.marker_icon_start + marker_list.offset),
                         self.marker_icon_size, self.marker_icon_size
                     )
 
@@ -1011,7 +1070,7 @@ class SimulatorSlider(wx.Panel):
 class SimulatorPanel(wx.Panel):
     """"""
 
-    def __init__(self, parent, stitch_plan=None, target_duration=5, stitches_per_second=16, detach_callback=None):
+    def __init__(self, parent, stitch_plan=None, background_color='white', target_duration=5, stitches_per_second=16, detach_callback=None):
         """"""
         super().__init__(parent, style=wx.BORDER_SUNKEN)
 
@@ -1022,6 +1081,7 @@ class SimulatorPanel(wx.Panel):
                                detach_callback=detach_callback)
         self.dp = DrawingPanel(self, stitch_plan=stitch_plan, control_panel=self.cp)
         self.cp.set_drawing_panel(self.dp)
+        self.cp.set_background_color(wx.Colour(background_color))
 
         vbSizer = wx.BoxSizer(wx.VERTICAL)
         vbSizer.Add(self.dp, 1, wx.EXPAND | wx.ALL, 2)
@@ -1040,10 +1100,12 @@ class SimulatorPanel(wx.Panel):
 
     def clear(self):
         self.dp.clear()
+        self.cp.clear()
 
 
 class SimulatorWindow(wx.Frame):
     def __init__(self, panel=None, parent=None, **kwargs):
+        background_color = kwargs.pop('background_color', 'white')
         super().__init__(None, title=_("Embroidery Simulation"), **kwargs)
 
         self.SetWindowStyle(wx.FRAME_FLOAT_ON_PARENT | wx.DEFAULT_FRAME_STYLE)
@@ -1062,8 +1124,8 @@ class SimulatorWindow(wx.Frame):
             self.panel.Show()
         else:
             self.is_child = False
-            self.simulator_panel = SimulatorPanel(self)
-            self.sizer.Add(self.simulator_panel, 1, wx.EXPAND)
+            self.panel = SimulatorPanel(self, background_color=background_color)
+            self.sizer.Add(self.panel, 1, wx.EXPAND)
 
         self.SetSizer(self.sizer)
         self.Layout()
@@ -1072,12 +1134,20 @@ class SimulatorWindow(wx.Frame):
 
         if self.is_child:
             self.Bind(wx.EVT_CLOSE, self.on_close)
+        else:
+            self.Maximize()
 
     def detach_simulator_panel(self):
         self.sizer.Detach(self.panel)
 
     def on_close(self, event):
         self.parent.attach_simulator()
+
+    def load(self, stitch_plan):
+        self.panel.load(stitch_plan)
+
+    def go(self):
+        self.panel.go()
 
 
 class SplitSimulatorWindow(wx.Frame):
@@ -1088,7 +1158,13 @@ class SplitSimulatorWindow(wx.Frame):
 
         self.detached_simulator_frame = None
         self.splitter = wx.SplitterWindow(self, style=wx.SP_LIVE_UPDATE)
-        self.simulator_panel = SimulatorPanel(self.splitter, target_duration=target_duration, detach_callback=self.toggle_detach_simulator)
+        background_color = kwargs.pop('background_color', 'white')
+        self.simulator_panel = SimulatorPanel(
+            self.splitter,
+            background_color=background_color,
+            target_duration=target_duration,
+            detach_callback=self.toggle_detach_simulator
+        )
         self.settings_panel = panel_class(self.splitter, simulator=self.simulator_panel, **kwargs)
 
         self.splitter.SplitVertically(self.settings_panel, self.simulator_panel)
@@ -1105,6 +1181,7 @@ class SplitSimulatorWindow(wx.Frame):
 
         self.SetMinSize(self.sizer.CalcMin())
 
+        self.simulator_panel.SetFocus()
         self.Maximize()
         self.Show()
         wx.CallLater(100, self.set_sash_position)
@@ -1146,7 +1223,7 @@ class SplitSimulatorWindow(wx.Frame):
         self.detached_simulator_frame = None
         self.Maximize()
         self.splitter.UpdateSize()
-        self.SetFocus()
+        self.simulator_panel.SetFocus()
         self.Raise()
         wx.CallLater(100, self.set_sash_position)
         global_settings['pop_out_simulator'] = False
@@ -1228,26 +1305,3 @@ class PreviewRenderer(Thread):
         except:  # noqa: E722
             import traceback
             debug.log("unhandled exception in PreviewRenderer.render_stitch_plan(): " + traceback.format_exc())
-
-
-def show_simulator(stitch_plan):
-    app = wx.App()
-    current_screen = wx.Display.GetFromPoint(wx.GetMousePosition())
-    display = wx.Display(current_screen)
-    screen_rect = display.GetClientArea()
-
-    simulator_pos = (screen_rect[0], screen_rect[1])
-
-    # subtract 1 because otherwise the window becomes maximized on Linux
-    width = screen_rect[2] - 1
-    height = screen_rect[3] - 1
-
-    frame = SimulatorWindow(pos=simulator_pos, size=(width, height), stitch_plan=stitch_plan)
-    app.SetTopWindow(frame)
-    frame.Show()
-    app.MainLoop()
-
-
-if __name__ == "__main__":
-    stitch_plan = stitch_plan_from_file(sys.argv[1])
-    show_simulator(stitch_plan)

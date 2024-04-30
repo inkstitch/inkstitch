@@ -14,6 +14,7 @@ from ..gui.simulator import SplitSimulatorWindow
 from ..i18n import _
 from ..svg import get_correction_transform
 from ..svg.tags import INKSCAPE_LABEL, INKSTITCH_LETTERING, SVG_GROUP_TAG
+from ..utils.svg_data import get_pagecolor
 from .commands import CommandsExtension
 
 
@@ -59,6 +60,7 @@ class Lettering(CommandsExtension):
 
     def effect(self):
         metadata = self.get_inkstitch_metadata()
+        background_color = get_pagecolor(self.svg.namedview)
         app = wx.App()
         frame = SplitSimulatorWindow(
             title=_("Ink/Stitch Lettering"),
@@ -66,6 +68,7 @@ class Lettering(CommandsExtension):
             group=self.get_or_create_group(),
             on_cancel=self.cancel,
             metadata=metadata,
+            background_color=background_color,
             target_duration=1
         )
 

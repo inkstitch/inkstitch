@@ -15,7 +15,6 @@ from secrets import randbelow
 import wx
 from wx.lib.scrolledpanel import ScrolledPanel
 
-from .base import InkstitchExtension
 from ..commands import is_command, is_command_symbol
 from ..elements import (Clone, EmbroideryElement, FillStitch, Polyline,
                         SatinColumn, Stroke)
@@ -28,7 +27,9 @@ from ..stitch_plan import stitch_groups_to_stitch_plan
 from ..svg.tags import SVG_POLYLINE_TAG
 from ..utils import get_resource_dir
 from ..utils.param import ParamOption
+from ..utils.svg_data import get_pagecolor
 from ..utils.threading import ExitThread, check_stop_flag
+from .base import InkstitchExtension
 
 
 def grouper(iterable_obj, count, fillvalue=None):
@@ -473,10 +474,11 @@ class ParamsTab(ScrolledPanel):
 
 
 class SettingsPanel(wx.Panel):
-    def __init__(self, parent, tabs_factory=None, on_cancel=None, metadata=None, simulator=None):
+    def __init__(self, parent, tabs_factory=None, on_cancel=None, metadata=None, background_color='white', simulator=None):
         self.tabs_factory = tabs_factory
         self.cancel_hook = on_cancel
         self.metadata = metadata
+        self.background_color = background_color
         self.simulator = simulator
         self.parent = parent
 
@@ -782,12 +784,14 @@ class Params(InkstitchExtension):
         try:
             app = wx.App()
             metadata = self.get_inkstitch_metadata()
+            background_color = get_pagecolor(self.svg.namedview)
             frame = SplitSimulatorWindow(
                 title=_("Embroidery Params"),
                 panel_class=SettingsPanel,
                 tabs_factory=self.create_tabs,
                 on_cancel=self.cancel,
                 metadata=metadata,
+                background_color=background_color,
                 target_duration=5
             )
 
