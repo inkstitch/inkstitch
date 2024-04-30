@@ -18,18 +18,21 @@ class ColorizePanel(ScrolledPanel):
         ScrolledPanel.__init__(self, parent)
 
         self.colorize_sizer = wx.BoxSizer(wx.VERTICAL)
-        general_settings_sizer = wx.FlexGridSizer(6, 2, 5, 5)
+        general_settings_sizer = wx.FlexGridSizer(8, 2, 10, 20)
         color_header_sizer = wx.BoxSizer(wx.HORIZONTAL)
         self.color_sizer = wx.BoxSizer(wx.VERTICAL)
 
         # general settings
+        general_settings_headline = wx.StaticText(self, label=_("General Settings"))
+        general_settings_headline.SetFont(wx.Font().Bold())
+
         equististance_label = wx.StaticText(self, label=_("Equidistant colors"))
         equististance_label.SetToolTip(_("Whether colors should be equidistant or have varying widths."))
         self.equististance = wx.CheckBox(self)
         self.equististance.SetValue(True)
         self.equististance.Bind(wx.EVT_CHECKBOX, self._on_update_equidistance)
 
-        self.monochrome_width_label = wx.StaticText(self, label=_("     Monochrome color width"))
+        self.monochrome_width_label = wx.StaticText(self, label=_("Monochrome color width"))
         self.monochrome_width_label.SetToolTip(_("Adapt color width here when equidistance is enabled."))
         self.monochrome_width = wx.SpinCtrlDouble(self, min=0, max=100, initial=100, inc=1, style=wx.SP_WRAP)
         self.monochrome_width.SetDigits(2)
@@ -55,9 +58,12 @@ class ColorizePanel(ScrolledPanel):
         self.seed.SetValue(str(time()))
         self.seed.Bind(wx.EVT_TEXT, self._update)
 
-        general_settings_headline = wx.StaticText(self, label=_("General Settings"))
-        general_settings_headline.SetFont(wx.Font().Bold())
+        # embroidery settings
+        keep_original_label = wx.StaticText(self, label=_("Keep original satin"))
+        self.keep_original = wx.CheckBox(self)
+        self.keep_original.SetValue(True)
 
+        # Colors
         color_settings_headline = wx.StaticText(self, label=_("Colors"))
         color_settings_headline.SetFont(wx.Font().Bold())
 
@@ -68,18 +74,20 @@ class ColorizePanel(ScrolledPanel):
         self.add_color_button.Bind(wx.EVT_BUTTON, self._add_color_event)
 
         # Add to sizers
-        general_settings_sizer.Add(equististance_label, 0, wx.ALL, 10)
-        general_settings_sizer.Add(self.equististance, 0, wx.ALL | wx.EXPAND, 10)
-        general_settings_sizer.Add(self.monochrome_width_label, 0, wx.ALL, 10)
-        general_settings_sizer.Add(self.monochrome_width, 0, wx.ALL | wx.EXPAND, 10)
-        general_settings_sizer.Add(overflow_left_label, 0, wx.ALL, 10)
-        general_settings_sizer.Add(self.overflow_left, 0, wx.ALL | wx.EXPAND, 10)
-        general_settings_sizer.Add(overflow_right_label, 0, wx.ALL, 10)
-        general_settings_sizer.Add(self.overflow_right, 0, wx.ALL | wx.EXPAND, 10)
-        general_settings_sizer.Add(pull_compensation_label, 0, wx.ALL, 10)
-        general_settings_sizer.Add(self.pull_compensation, 0, wx.ALL | wx.EXPAND, 10)
-        general_settings_sizer.Add(seed_label, 0, wx.ALL, 10)
-        general_settings_sizer.Add(self.seed, 0, wx.ALL | wx.EXPAND, 10)
+        general_settings_sizer.Add(equististance_label, 0, wx.ALL, 0)
+        general_settings_sizer.Add(self.equististance, 0, wx.ALL | wx.EXPAND, 0)
+        general_settings_sizer.Add(self.monochrome_width_label, 0, wx.LEFT, 30)
+        general_settings_sizer.Add(self.monochrome_width, 0, wx.ALL | wx.EXPAND, 0)
+        general_settings_sizer.Add(overflow_left_label, 0, wx.ALL, 0)
+        general_settings_sizer.Add(self.overflow_left, 0, wx.ALL | wx.EXPAND, 0)
+        general_settings_sizer.Add(overflow_right_label, 0, wx.ALL, 0)
+        general_settings_sizer.Add(self.overflow_right, 0, wx.ALL | wx.EXPAND, 0)
+        general_settings_sizer.Add(pull_compensation_label, 0, wx.ALL, 0)
+        general_settings_sizer.Add(self.pull_compensation, 0, wx.ALL | wx.EXPAND, 0)
+        general_settings_sizer.Add(seed_label, 0, wx.ALL, 0)
+        general_settings_sizer.Add(self.seed, 0, wx.ALL | wx.EXPAND, 0)
+        general_settings_sizer.Add(keep_original_label, 0, wx.TOP, 30)
+        general_settings_sizer.Add(self.keep_original, 0, wx.TOP | wx.EXPAND, 30)
         general_settings_sizer.AddGrowableCol(1)
 
         color_header_sizer.Add(color_settings_headline, 0, wx.ALL, 10)
@@ -88,7 +96,7 @@ class ColorizePanel(ScrolledPanel):
 
         self.colorize_sizer.Add(wx.StaticLine(self), 0, wx.ALL | wx.EXPAND, 10)
         self.colorize_sizer.Add(general_settings_headline, 0, wx.ALL, 10)
-        self.colorize_sizer.Add(general_settings_sizer, 0, wx.ALL | wx.EXPAND, 10)
+        self.colorize_sizer.Add(general_settings_sizer, 0, wx.ALL | wx.EXPAND, 20)
         self.colorize_sizer.Add(wx.StaticLine(self), 0, wx.ALL | wx.EXPAND, 10)
         self.colorize_sizer.Add(color_header_sizer, 0, wx.EXPAND | wx.ALL, 10)
         self.colorize_sizer.Add(self.color_sizer, 0, wx.EXPAND | wx.ALL, 10)

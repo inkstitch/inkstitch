@@ -91,6 +91,9 @@ class MultiColorSatinPanel(wx.Panel):
 
     def apply(self, event):
         self.update_satin_elements()
+        if not self.colorize_panel.keep_original.GetValue():
+            for element in self.elements:
+                element.node.getparent().remove(element.node)
         self.close()
 
     def render_stitch_plan(self):
@@ -139,6 +142,7 @@ class MultiColorSatinPanel(wx.Panel):
             layer = element.node.getparent()
             index = layer.index(element.node)
             group = inkex.Group()
+            group.label = _("Multicolor Satin Group")
             current_position = 0
             previous_margin = overflow_left
             for i, segment_sizer in enumerate(color_sizer):
