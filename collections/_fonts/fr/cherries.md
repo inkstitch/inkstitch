@@ -6,7 +6,7 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/cherry_for_inkstitch.jpg
     height: 65
-  - url: /assets/images/fonts/cherry_for_kaalleen.jpg
+  - url: /assets/images/fonts/cherry_for_kaalleen.png
     height: 75
 ---
 {%- assign font1 = site.data.fonts.cherryforinkstitch.font -%}
