@@ -41,7 +41,9 @@ Cette fonte comporte  {{ font2.glyphs.size }} glyphes:
 ### Cherry for Ink/Stitch
 
 Utilisée à 100%, cette fonte fait environ 50 mm.
-Elle peut être agrandie jusqu'à 180% (env 90 mm) ou diminuée jusqu'à 80% (env 40 mm).
+Elle peut être agrandie jusqu'à 180% (env 90 mm) ou diminuée jusqu'à 80% (env 40 mm)
+
+Il n'est pas obligatoire de broder la cerise, la fonte est aussi très jolie sans.
 
 ### Cherry for Kaalleen
 Utilisée à  100%, cette fonte fait environ 75 mm  de haut.
