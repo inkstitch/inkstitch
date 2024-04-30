@@ -155,6 +155,10 @@ class MultiColorSatinPanel(wx.Panel):
                 new_satin.set('inkstitch:pull_compensation_mm', pull_compensation)
                 new_satin.set('inkstitch:random_seed', seed)
 
+                reverse_rails = self._get_new_reverse_rails_param(element, i)
+                if reverse_rails is not None:
+                    new_satin.set('inkstitch:reverse_rails', reverse_rails)
+
                 if i % 2 == 0:
                     new_satin.set('inkstitch:swap_satin_rails', False)
                     new_satin.set('inkstitch:random_width_increase_percent', f'{ margin } 0')
@@ -174,6 +178,15 @@ class MultiColorSatinPanel(wx.Panel):
 
             layer.insert(index + 1, group)
             self.output_groups.append(group)
+
+    def _get_new_reverse_rails_param(self, element, i):
+        reverse_rails = element._get_rails_to_reverse()
+        if any(reverse_rails) and element.reverse_rails == 'automatic':
+            if (reverse_rails[0] and i % 2 == 0) or (reverse_rails[1] and i % 2 != 0):
+                return 'first'
+            else:
+                return 'second'
+        return None
 
     def on_stitch_plan_rendered(self, stitch_plan):
         self.simulator.stop()
