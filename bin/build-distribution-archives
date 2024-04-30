@@ -4,7 +4,7 @@ ARCH="$(uname -m)"
 mkdir artifacts
 
 if [ "$BUILD" = "osx" ]; then
-    cp -a icons locales print LICENSE VERSION images/examples palettes symbols fonts tiles dbus inx dist/inkstitch.app/Contents/Resources
+    cp -a icons locales print LICENSE VERSION palettes symbols fonts tiles dbus inx dist/inkstitch.app/Contents/Resources
     # adding version to Info.plist
     plutil -replace CFBundleShortVersionString -string ${VERSION} dist/inkstitch.app/Contents/Info.plist
     rm -rf dist/inkstitch/
@@ -81,7 +81,6 @@ if [ "$BUILD" = "osx" ]; then
     else
         # local builds will not be signed or notarized
         pkgbuild --root dist/inkstitch.app \
-                --component-plist installer_scripts/inkstitch.plist \
                 --ownership recommended \
                 --identifier org.inkstitch.installer \
                 --version ${VERSION} \
