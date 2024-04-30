@@ -1,23 +1,23 @@
 ---
 title: "Cherries"
 permalink: /de/fonts/cherries/
-last_modified_at: 2022-05-27
+last_modified_at: 2024-04-27
 toc: false
 preview_image:
   - url: /assets/images/fonts/cherry_for_inkstitch.jpg
     height: 65
-  - url: /assets/images/fonts/cherryforkaalleen.jpg
+  - url: /assets/images/fonts/cherry_for_kaalleen.png
     height: 75
 ---
-
 {%- assign font1 = site.data.fonts.cherryforinkstitch.font -%}
 {%- assign font2 = site.data.fonts.cherryforkaalleen.font -%}
+
 <img 
      src="/assets/images/fonts/cherry_for_inkstitch.jpg"
      alt="Cherry for Inkstitch" height="48">
      
 <img 
-     src="/assets/images/fonts/cherryforkaalleen.jpg"
+     src="/assets/images/fonts/cherry_for_kaalleen.png"
      alt="Cherry for Kaalleen" height="72">
 
 
@@ -37,6 +37,11 @@ Diese Schrift enthält  {{ font2.glyphs.size }} Schriftzeichen:
 {{ font2.glyphs | sort | join: ' ' }}
 ```
 {: .font-glyphs }
+
+{% include upcoming_release.html %}
+
+This font was modified in 2024 to add the light blue underlay. If you wish to find back the original version, just skip the first  two steps of the embroidery.
+
 ## Maße
 ### Cherry for Ink/Stitch
 Bei einer Skalierung auf 100 % ist diese Schrift ungefähr 50 mm hoch (2 Zoll)
