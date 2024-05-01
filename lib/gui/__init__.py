@@ -8,3 +8,4 @@ from .electron import open_url
 from .presets import PresetsPanel
 from .simulator import PreviewRenderer
 from .warnings import WarningPanel
+from .satin_multicolor.main_panel import MultiColorSatinPanel

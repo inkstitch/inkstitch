@@ -6,7 +6,6 @@
 import json
 from copy import copy
 
-import inkex
 import wx
 import wx.adv
 
@@ -26,7 +25,7 @@ from . import CodePanel, CustomizePanel, EmbroideryPanel, HelpPanel
 
 class TartanMainPanel(wx.Panel):
 
-    def __init__(self, parent, simulator, elements, on_cancel=None, metadata=None, background_color='white', output_groups=inkex.Group()):
+    def __init__(self, parent, simulator, elements, on_cancel=None, metadata=None, background_color='white'):
         self.parent = parent
         self.simulator = simulator
         self.elements = elements
@@ -34,7 +33,6 @@ class TartanMainPanel(wx.Panel):
         self.palette = Palette()
         self.metadata = metadata or dict()
         self.background_color = background_color
-        self.output_groups = output_groups
 
         super().__init__(parent, wx.ID_ANY)
 
