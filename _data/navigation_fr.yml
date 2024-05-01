@@ -82,11 +82,7 @@ docs:
         url: /fr/docs/stitches/satin-column/
       - title: "Point en E"
         url: /fr/docs/stitches/e-stitch/
-        - title: "Point en S"
-        url: /fr/docs/stitches/s-stitch/
-        - title: "Satin en Zigzag"
-        url: /fr/docs/stitches/zigzag-satin-stitch/
-      - title: "Point de remplissage"
+        - title: "Point de remplissage"
         url: /fr/docs/stitches/fill-stitch/
       - title: "Remplissage selon contour"
         url: /fr/docs/stitches/contour-fill/
