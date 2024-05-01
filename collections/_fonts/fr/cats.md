@@ -30,6 +30,8 @@ A une échelle de  100% cette fonte a une hauteur approximative de  {{ font.size
 Elle peut être redimensionnée  de {{ font.min_scale | times: 100 | floor }}% ({{ font.size | times: font.min_scale }} mm)
 à {{ font.max_scale | times: 100 | floor }}% ({{ font.size | times: font.max_scale }} mm).
 
+Les poils ébouriffés des chats sont dus à l'ajout d'aléatoire sur les colonnes satin. Pour des chats plus relaxés, recopier le paramétrage d'un satin sans aléatoire sur tous les satins aléatoires.
+
 
 
 ## Dans la vraie vie
