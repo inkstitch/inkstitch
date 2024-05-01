@@ -23,6 +23,7 @@ class SelectElements(InkstitchExtension):
 
         pars.add_argument("--select-running-stitch", type=Boolean, dest="running", default=False)
         pars.add_argument("--running-stitch-condition", type=str, dest="running_stitch_condition", default="all")
+        pars.add_argument("--bean-stitch-repeats", type=str, dest="bean_stitch_repeats", default='0')
         pars.add_argument("--select-ripples", type=Boolean, dest="ripples", default=False)
         pars.add_argument("--select-zigzag", type=Boolean, dest="zigzag", default=False)
         pars.add_argument("--select-manual", type=Boolean, dest="manual", default=False)
@@ -39,6 +40,7 @@ class SelectElements(InkstitchExtension):
         pars.add_argument("--select-meander-fill", type=Boolean, dest="meander", default=False)
         pars.add_argument("--select-circular-fill", type=Boolean, dest="circular", default=False)
         pars.add_argument("--select-linear-gradient-fill", type=Boolean, dest="linear_gradient", default=False)
+        pars.add_argument("--select-tartan-fill", type=Boolean, dest="tartan_fill", default=False)
         pars.add_argument("--select-legacy-fill", type=Boolean, dest="legacy", default=False)
         pars.add_argument("--fill-underlay", type=str, dest="fill_underlay", default="all")
         pars.add_argument("--select-clone", type=Boolean, dest="clone", default=False)
@@ -49,12 +51,32 @@ class SelectElements(InkstitchExtension):
         py_path, file_path = self._get_paths()
         id_list = self._get_id_list()
 
-        with subprocess.Popen(
+        if sys.platform == "linux":
+            # Pyinstaller fix for gnome document view not opening.
+            lenv = dict(os.environ)
+            lp_key = 'LD_LIBRARY_PATH'
+            lp_orig = lenv.get(lp_key + '_ORIG')
+            if lp_orig is not None:
+                lenv[lp_key] = lp_orig  # restore the original, unmodified value
+            else:
+                lenv.pop(lp_key, None)
+
+            with subprocess.Popen(
                 [py_path, 'select_elements.py', id_list],
                 cwd=file_path,
                 stdout=subprocess.DEVNULL,
-                stderr=subprocess.DEVNULL) as proc:
-            proc.wait()
+                stderr=subprocess.DEVNULL,
+                env=lenv
+            ) as proc:
+                proc.wait()
+        else:
+            with subprocess.Popen(
+                [py_path, 'select_elements.py', id_list],
+                cwd=file_path,
+                stdout=subprocess.DEVNULL,
+                stderr=subprocess.DEVNULL
+            ) as proc:
+                proc.wait()
 
     def _get_paths(self):
         file_path = get_bundled_dir("dbus")
@@ -107,7 +129,7 @@ class SelectElements(InkstitchExtension):
     def _select_stroke(self, element):
         select = False
         method = element.stroke_method
-        if self.options.running and method == 'running_stitch' and self._running_condition(element):
+        if self.options.running and method == 'running_stitch' and self._running_condition(element) and self._bean_stitch_repeats(element):
             select = True
         if self.options.ripples and method == 'ripple_stitch':
             select = True
@@ -134,14 +156,24 @@ class SelectElements(InkstitchExtension):
             select = True
         elif self.options.linear_gradient and method == 'linear_gradient_fill':
             select = True
+        elif self.options.tartan_fill and method == 'tartan_fill':
+            select = True
         elif self.options.legacy and method == 'legacy_fill':
             select = True
         return select
 
     def _running_condition(self, element):
         element_id = element.node.get_id() or ''
-        conditions = {'all': True, 'autorun-top': element_id.startswith('autorun'), 'autorun-underpath': element_id.startswith('underpath')}
+        conditions = {
+            'all': True,
+            'autorun-top': element_id.startswith('autorun'),
+            'autorun-underpath': element_id.startswith('underpath'),
+            'autosatin-underpath': element_id.startswith('autosatinrun')}
         return conditions[self.options.running_stitch_condition]
+
+    def _bean_stitch_repeats(self, element):
+        repeats = element.node.get('inkstitch:bean_stitch_repeats', '0')
+        return repeats == self.options.bean_stitch_repeats
 
     def _select_fill_underlay(self, element):
         underlay = {'all': True, 'no': not element.fill_underlay, 'yes': element.fill_underlay}
