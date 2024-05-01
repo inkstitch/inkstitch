@@ -20,6 +20,7 @@ But in Params chose `"Zigzag` as Method.
 
 
 ## Params
+
 Settings||Description
 ---|---|--
 Custom satin column   | ☑ |Must be enabled for these settings to take effect.
