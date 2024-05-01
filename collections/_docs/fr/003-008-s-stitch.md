@@ -21,11 +21,6 @@ Si vous choisissez la méhode décalage,  vous  pourrez, comme pour un remplissa
 
 ## Paramétres
 
-|Paramètres||Description|
-
-
-
-
 ### Couche supérieure du satin
 
 |Paramètres||Description|
