@@ -107,7 +107,7 @@ inkstitch_attribs = [
     'herringbone_width_mm',
     'tartan_angle',
     'enable_random_stitches',
-    'random_stitch_length_delta_mm',
+    'random_stitch_length_jitter_percent',
     # stroke
     'stroke_method',
     'bean_stitch_repeats',

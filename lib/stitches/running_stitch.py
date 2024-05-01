@@ -233,7 +233,9 @@ def stitch_curve_evenly(points: typing.Sequence[Point], stitch_length: float, to
     return stitches
 
 
-def stitch_curve_randomly(points: typing.Sequence[Point], min_stitch_length: float, max_stitch_length: float, tolerance: float, random_seed: str):
+def stitch_curve_randomly(points: typing.Sequence[Point], stitch_length: float, tolerance: float, stitch_length_sigma: float, random_seed: str):
+    min_stitch_length = max(0, stitch_length * (1 - stitch_length_sigma))
+    max_stitch_length = stitch_length * (1 + stitch_length_sigma)
     # Will split a straight line into stitches of random length within the range.
     # Attempts to randomize phase so that the distribution of outputs does not depend on direction.
     # Includes end point but not start point.
@@ -310,7 +312,7 @@ def even_running_stitch(points, stitch_length, tolerance):
     return stitches
 
 
-def random_running_stitch(points, min_stitch_length, max_stitch_length, tolerance, random_seed):
+def random_running_stitch(points, stitch_length, tolerance, stitch_length_sigma, random_seed):
     # Turn a continuous path into a running stitch with as close to even stitch length as possible
     # within the tolerance (including the first and last segments).
     # This should not be used for stitching tightly-spaced parallel curves
@@ -322,14 +324,14 @@ def random_running_stitch(points, min_stitch_length, max_stitch_length, toleranc
     for i, curve in enumerate(path_to_curves(points, 2 * tolerance)):
         # segments longer than twice the tolerance will usually be forced by it, so set that as the minimum for corner detection
         check_stop_flag()
-        stitches.extend(stitch_curve_randomly(curve, min_stitch_length, max_stitch_length, tolerance, prng.join_args(random_seed, i)))
+        stitches.extend(stitch_curve_randomly(curve, stitch_length, tolerance, stitch_length_sigma, prng.join_args(random_seed, i)))
     return stitches
 
 
-def running_stitch(points, stitch_length, tolerance, is_random, stitch_length_delta, random_seed):
+def running_stitch(points, stitch_length, tolerance, is_random, stitch_length_sigma, random_seed):
     # running stitch with a choice of algorithm
     if is_random:
-        return random_running_stitch(points, max(stitch_length - stitch_length_delta, 0), stitch_length + stitch_length_delta, tolerance, random_seed)
+        return random_running_stitch(points, stitch_length, tolerance, stitch_length_sigma, random_seed)
     else:
         return even_running_stitch(points, stitch_length, tolerance)
 

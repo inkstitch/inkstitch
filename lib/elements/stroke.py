@@ -142,17 +142,16 @@ class Stroke(EmbroideryElement):
         return self.get_boolean_param('enable_random_stitches', False)
 
     @property
-    @param('random_stitch_length_delta_mm',
-           _('Random stitch length delta'),
-           tooltip=_('Randomize stitch length and phase instead of dividing evenly or staggering. '
-                     'This is recommended for closely-spaced curved fills to avoid Moiré artefacts.'),
-           unit='± mm',
+    @param('random_stitch_length_jitter_percent',
+           _('Random stitch length jitter'),
+           tooltip=_('Amount to vary the length of each stitch by when randomizing.'),
+           unit='± %',
            type='float',
            select_items=[('stroke_method', 'running_stitch'), ('stroke_method', 'ripple_stitch')],
-           default=0.2,
+           default=10,
            sort_index=6)
-    def random_stitch_length_delta(self):
-        return max(self.get_float_param("random_stitch_length_delta_mm", 0.25), 0.0)
+    def random_stitch_length_jitter(self):
+        return max(self.get_float_param("random_stitch_length_jitter_percent", 10), 0.0) / 100
 
     @property
     @param('max_stitch_length_mm',
@@ -491,9 +490,9 @@ class Stroke(EmbroideryElement):
 
         return stitch_group
 
-    def running_stitch(self, path, stitch_length, tolerance, enable_random, random_delta, random_seed):
+    def running_stitch(self, path, stitch_length, tolerance, enable_random, random_sigma, random_seed):
         # running stitch with repeats
-        stitches = running_stitch(path, stitch_length, tolerance, enable_random, random_delta, random_seed)
+        stitches = running_stitch(path, stitch_length, tolerance, enable_random, random_sigma, random_seed)
 
         repeated_stitches = []
         # go back and forth along the path as specified by self.repeats
@@ -574,7 +573,7 @@ class Stroke(EmbroideryElement):
                 # running stitch
                 else:
                     stitch_group = self.running_stitch(path, self.running_stitch_length, self.running_stitch_tolerance,
-                                                       self.enable_random_stitches, self.random_stitch_length_delta, self.random_seed)
+                                                       self.enable_random_stitches, self.random_stitch_length_jitter, self.random_seed)
                     # bean stitch
                     if any(self.bean_stitch_repeats):
                         stitch_group.stitches = self.do_bean_repeats(stitch_group.stitches)

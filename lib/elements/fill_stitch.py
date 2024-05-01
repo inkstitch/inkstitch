@@ -479,22 +479,21 @@ class FillStitch(EmbroideryElement):
            sort_index=44)
     def enable_random_stitches(self):
         return self.get_boolean_param('enable_random_stitches', False)
-
+    
     @property
-    @param('random_stitch_length_delta_mm',
-           _('Random stitch length delta'),
-           tooltip=_('Randomize stitch length and phase instead of dividing evenly or staggering. '
-                     'This is recommended for closely-spaced curved fills to avoid Moiré artefacts.'),
-           unit='± mm',
+    @param('random_stitch_length_jitter_percent',
+           _('Random stitch length jitter'),
+           tooltip=_('Amount to vary the length of each stitch by when randomizing.'),
+           unit='± %',
            type='float',
            select_items=[('fill_method', 'auto_fill'),
                          ('fill_method', 'contour_fill'),
                          ('fill_method', 'guided_fill'),
                          ('fill_method', 'circular_fill')],
-           default=0.2,
-           sort_index=45)
-    def random_stitch_length_delta(self):
-        return max(self.get_float_param("random_stitch_length_delta_mm", 0.25), 0.0)
+           default=10,
+           sort_index=46)
+    def random_stitch_length_jitter(self):
+        return max(self.get_float_param("random_stitch_length_jitter_percent", 10), 0.0) / 100.0
 
     @property
     @param('repeats',
@@ -998,7 +997,10 @@ class FillStitch(EmbroideryElement):
                 self.skip_last,
                 starting_point,
                 ending_point,
-                self.underpath
+                self.underpath,
+                self.enable_random_stitches,
+                self.random_stitch_length_jitter,
+                self.random_seed,
             )
         )
         return [stitch_group]
@@ -1023,7 +1025,7 @@ class FillStitch(EmbroideryElement):
                 starting_point,
                 self.avoid_self_crossing,
                 self.enable_random_stitches,
-                self.random_stitch_length_delta,
+                self.random_stitch_length_jitter,
                 self.random_seed
             )
         elif self.contour_strategy == 1:
@@ -1033,7 +1035,7 @@ class FillStitch(EmbroideryElement):
                 self.running_stitch_tolerance,
                 starting_point,
                 self.enable_random_stitches,
-                self.random_stitch_length_delta,
+                self.random_stitch_length_jitter,
                 self.random_seed
             )
         elif self.contour_strategy == 2:
@@ -1043,7 +1045,7 @@ class FillStitch(EmbroideryElement):
                 self.running_stitch_tolerance,
                 starting_point,
                 self.enable_random_stitches,
-                self.random_stitch_length_delta,
+                self.random_stitch_length_jitter,
                 self.random_seed
             )
 
@@ -1084,7 +1086,7 @@ class FillStitch(EmbroideryElement):
                 self.underpath,
                 self.guided_fill_strategy,
                 self.enable_random_stitches,
-                self.random_stitch_length_delta,
+                self.random_stitch_length_jitter,
                 self.random_seed,
             )
         )
@@ -1138,7 +1140,7 @@ class FillStitch(EmbroideryElement):
             self.underpath,
             target,
             self.enable_random_stitches,
-            self.random_stitch_length_delta,
+            self.random_stitch_length_jitter,
             self.random_seed,
         )
 
