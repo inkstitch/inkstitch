@@ -27,6 +27,7 @@ from .input import Input
 from .install import Install
 from .install_custom_palette import InstallCustomPalette
 from .jump_to_stroke import JumpToStroke
+from .jump_to_trim import JumpToTrim
 from .layer_commands import LayerCommands
 from .lettering import Lettering
 from .lettering_along_path import LetteringAlongPath
@@ -88,6 +89,7 @@ __all__ = extensions = [ApplyPalette,
                         Install,
                         InstallCustomPalette,
                         JumpToStroke,
+                        JumpToTrim,
                         LayerCommands,
                         Lettering,
                         LetteringAlongPath,
