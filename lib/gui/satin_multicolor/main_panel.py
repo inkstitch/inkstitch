@@ -21,12 +21,13 @@ from .help_panel import HelpPanel
 
 class MultiColorSatinPanel(wx.Panel):
 
-    def __init__(self, parent, simulator, elements, on_cancel=None, metadata=None, output_groups=[]):
+    def __init__(self, parent, simulator, elements, on_cancel=None, metadata=None, background_color='white'):
         self.parent = parent
         self.simulator = simulator
         self.elements = elements
         self.cancel_hook = on_cancel
         self.metadata = metadata or dict()
+        self.background_color = background_color
         self.output_groups = []
 
         super().__init__(parent, wx.ID_ANY)

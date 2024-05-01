@@ -13,6 +13,7 @@ from ..elements import SatinColumn
 from ..gui import MultiColorSatinPanel
 from ..gui.simulator import SplitSimulatorWindow
 from ..i18n import _
+from ..utils.svg_data import get_pagecolor
 from .base import InkstitchExtension
 
 
@@ -33,6 +34,7 @@ class SatinMulticolor(InkstitchExtension):
             return
 
         metadata = self.get_inkstitch_metadata()
+        background_color = get_pagecolor(self.svg.namedview)
 
         app = wx.App()
         frame = SplitSimulatorWindow(
@@ -41,6 +43,7 @@ class SatinMulticolor(InkstitchExtension):
             elements=satins,
             on_cancel=self.cancel,
             metadata=metadata,
+            background_color=background_color,
             target_duration=1
         )
 

@@ -25,11 +25,11 @@ from . import CodePanel, CustomizePanel, EmbroideryPanel, HelpPanel
 
 class TartanMainPanel(wx.Panel):
 
-    def __init__(self, parent, simulator, elements, on_cancel=None, metadata=None, , background_color='white'):
+    def __init__(self, parent, simulator, elements, on_cancel=None, metadata=None, background_color='white'):
         self.parent = parent
         self.simulator = simulator
         self.elements = elements
-        self.cancel_hook = on_cancelut
+        self.cancel_hook = on_cancel
         self.palette = Palette()
         self.metadata = metadata or dict()
         self.background_color = background_color
