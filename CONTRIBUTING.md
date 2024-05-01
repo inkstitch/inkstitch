@@ -8,7 +8,6 @@ Feel free to find something that interests you.  If you're looking for ideas, co
   * **please read our [coding style guide](CODING_STYLE.md)**
 * build / CI system (GitHub actions)
   * we need someone to figure out how we can start code-signing our application
-* web design (electron UI)
 * translations ([how to translate](https://github.com/inkstitch/inkstitch/blob/main/LOCALIZATION.md))
 * issue wrangling
   * combining duplicate issues

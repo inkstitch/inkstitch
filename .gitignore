@@ -18,8 +18,6 @@ locales/
 /src/
 .DS_STORE
 .DS_Store
-flaskserverport.json
-electron/yarn.lock
 
 # debug and profile files
 /DEBUG.ini

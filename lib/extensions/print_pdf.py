@@ -264,7 +264,7 @@ class PrintPreviewServer(Thread):
 
         self.host = "127.0.0.1"
         self.port = self.find_free_port()
-        # exporting the port number for languages to work in electron vuejs part of inkstitch
+        # exporting the port number for languages to work
         os.environ['FLASKPORT'] = str(self.port)
 
         self.flask_server = make_server(self.host, self.port, self.app)
