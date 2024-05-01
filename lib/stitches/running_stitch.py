@@ -298,7 +298,7 @@ def path_to_curves(points: typing.List[Point], min_len: float):
 
 def even_running_stitch(points, stitch_length, tolerance):
     # Turn a continuous path into a running stitch with as close to even stitch length as possible
-    # within the tolerance (including the first and last segments).
+    # (including the first and last segments), keeping it within the tolerance of the path.
     # This should not be used for stitching tightly-spaced parallel curves
     # as it tends to produce ugly moiré effects in those situations.
     # In these situations, random_running_stitch sould be used even if the maximum stitch length range is a single value.
@@ -313,11 +313,9 @@ def even_running_stitch(points, stitch_length, tolerance):
 
 
 def random_running_stitch(points, stitch_length, tolerance, stitch_length_sigma, random_seed):
-    # Turn a continuous path into a running stitch with as close to even stitch length as possible
-    # within the tolerance (including the first and last segments).
-    # This should not be used for stitching tightly-spaced parallel curves
-    # as it tends to produce ugly moiré effects in those situations.
-    # In these situations, random_running_stitch sould be used even if the maximum stitch length range is a single value.
+    # Turn a continuous path into a running stitch with randomized phase and stitch length,
+    # keeping it within the tolerance of the path.
+    # This is suitable for tightly-spaced parallel curves.
     if not points:
         return
     stitches = [points[0]]
