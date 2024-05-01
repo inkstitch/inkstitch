@@ -1,7 +1,7 @@
 ---
 title: "Cats"
 permalink: /de/fonts/cats/
-last_modified_at: 2024-04-28
+last_modified_at: 2024-04-18
 toc: false
 preview_image:
   - url: /assets/images/fonts/cats.jpg
@@ -27,6 +27,8 @@ Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 Bei einer Skalierung von 100 % ist diese Schrift ungefähr ~ 40 mm (1.5 in) hoch. Sie kann bis auf 150% (~ 60mm, 2.4 Zoll) hochskaliert und bis zu 70% (~ 28 mm, 1 Zoll) herunterskaliert werden.
 
 
+
+The cats' ruffled hairs are due to the addition of randomness parameters on the satin columns. For more relaxed cats, copy the setting of a non  ranndom satin  to all the random satins.
 
 ## Gestickte Beispiele
 
