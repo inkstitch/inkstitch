@@ -28,6 +28,7 @@ At a scale of 100% this font has an approximate height of {{ font.size }} mm.
 It can be scaled from {{ font.min_scale | times: 100 | floor }}% ({{ font.size | times: font.min_scale }} mm)
 up to {{ font.max_scale | times: 100 | floor }}% ({{ font.size | times: font.max_scale }} mm).
 
+The cats' ruffled hairs are due to the addition of randomness parameters on the satin columns. For more relaxed cats, copy the setting of a non  ranndom satin  to all the random satins.
 
 ## In real life
 {% include folder-galleries path="fonts/cats/" %}
