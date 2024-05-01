@@ -22,6 +22,7 @@ If you chose the staggered method, then as for a fill you will be able to set "S
 
 
 ## Params
+
 Settings||Description
 ---|---|--
 Custom satin column   | ☑ |Must be enabled for these settings to take effect.
