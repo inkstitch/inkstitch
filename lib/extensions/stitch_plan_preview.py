@@ -8,8 +8,8 @@ from base64 import b64encode
 from typing import Optional, Tuple
 import sys
 
-from inkex import errormsg, Boolean, BoundingBox, Image, BaseElement
-from inkex.command import take_snapshot
+from inkex import errormsg, Boolean, Image, BaseElement
+from inkex.command import inkscape
 
 from ..marker import set_marker
 from ..stitch_plan import stitch_groups_to_stitch_plan
@@ -96,22 +96,49 @@ class StitchPlanPreview(InkstitchExtension):
             if layer is not None:
                 layer.set('id', svg.get_unique_id('inkstitch_stitch_plan_'))
 
-    def rasterize(self, svg, layer: BaseElement, raster_mult: Optional[int]) -> BaseElement:
+    def rasterize(self, svg: BaseElement, layer: BaseElement, raster_mult: Optional[int]) -> BaseElement:
         if raster_mult is None:
             # Don't rasterize if there's no reason to.
             return layer
         else:
             with TemporaryDirectory() as tempdir:
-                bbox: BoundingBox = layer.bounding_box()
-                rasterized_file = take_snapshot(svg, tempdir, dpi=96*raster_mult,
-                                                export_id=layer.get_id(), export_id_only=True)
-                with open(rasterized_file, "rb") as f:
+                # Inkex's command functionality also writes files to temp directories like this.
+                temp_svg_path = f"{tempdir}/temp.svg"
+                temp_png_path = f"{tempdir}/temp.png"
+                with open(temp_svg_path, "wb") as f:
+                    f.write(svg.tostring())
+
+                # We need the bounding box of the stitch layer so we can place the rasterized version in the same place.
+                # however, layer.bounding_box() is pure python, so it can be very slow for more complex stitch previews.
+                # Instead, especially because we need to invoke Inkscape anyway to perform the rasterization, we get
+                # the bounding box with query commands before we perform the export. This is quite cheap.
+                out = inkscape(temp_svg_path, actions="; ".join([
+                    f"select-by-id:{layer.get_id()}",
+                    "query-x",
+                    "query-y",
+                    "query-width",
+                    "query-height",
+                    f"export-id:{layer.get_id()}",
+                    "export-id-only",
+                    "export-type:png",
+                    f"export-dpi:{96*raster_mult}",
+                    f"export-filename:{temp_png_path}",
+                    "export-do"  # Inkscape docs say this should be implicit at the end, but it doesn't seem to be.
+                ]))
+
+                # The query commands return positions in px, so we need to convert to uu.
+                px_to_uu = svg.unittouu("1px")
+                # Parse the returned coordinates out.
+                x, y, width, height = map(lambda x: px_to_uu*float(x), out.split())
+
+                # Embed the rasterized stitch plan into the SVG, and replace the original stitch plan
+                with open(temp_png_path, "rb") as f:
                     image = Image(attrib={
                         XLINK_HREF: f"data:image/png;base64,{b64encode(f.read()).decode()}",
-                        "x": str(bbox.left),
-                        "y": str(bbox.top),
-                        "height": str(bbox.height),
-                        "width":  str(bbox.width),
+                        "x": str(x),
+                        "y": str(y),
+                        "height": str(height),
+                        "width":  str(width),
                     })
                     layer.replace_with(image)
                     return image
