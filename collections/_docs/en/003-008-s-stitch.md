@@ -1,6 +1,6 @@
 ---
-title: "E-Stitch"
-permalink: /docs/stitches/e-stitch/
+title: "S-Stitch"
+permalink: /docs/stitches/s-stitch/
 last_modified_at: 2024-04-30
 toc: true
 ---
