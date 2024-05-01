@@ -4,6 +4,8 @@ permalink: /de/docs/stitches/s-stitch/
 last_modified_at: 2024-04-22
 toc: true
 ---
+{% include upcoming_release.html %}
+
 ## Beschreibung
 
 
