@@ -57,7 +57,7 @@ Random seed           | | Use a specific seed to compute stitch plan. If empty, 
 
 For the underlay params have a look at the [satin stitch params](/docs/stitches/satin-column/#params).
 
-## Sample Files Including E-Stitch
+## Sample Files Including S-Stitch
 
 {% include tutorials/tutorial_list key="stitch-type" value="S-Stitch" %}
 
