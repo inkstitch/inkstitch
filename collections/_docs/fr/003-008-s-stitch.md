@@ -19,10 +19,6 @@ Si vous activez  la longeur maximum de points, vous pourrez chosir entre trois m
 Si vous choisissez la méhode décalage,  vous  pourrez, comme pour un remplissage, choisir la valeur de "Décaler les découpages autant de fois avant de répéter".
 
 
-![Paramètres Satin Colonne.jpg](/assets/images/docs/en/params-e-stitch.jpg)
-
-
-
 ## Paramétres
 
 |Paramètres||Description|
