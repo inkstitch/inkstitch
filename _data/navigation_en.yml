@@ -82,6 +82,10 @@ docs:
         url: /docs/stitches/satin-column/
       - title: "E-Stitch"
         url: /docs/stitches/e-stitch/
+      - title: "S-stitch"
+        url: /docs/stitches/s-stitch/
+      - title: "Zigzag Satin"
+        url: /docs/stitches/zigzag-satin-stitch/
       - title: "Fill Stitch"
         url: /docs/stitches/fill-stitch/
       - title: "Contour Fill"
