@@ -28,7 +28,7 @@ Bei einer Skalierung von 100 % ist diese Schrift ungefähr ~ 40 mm (1.5 in) hoch
 
 
 
-The cats' ruffled hairs are due to the addition of randomness parameters on the satin columns. For more relaxed cats, copy the setting of a non  ranndom satin  to all the random satins.
+The cats' ruffled hairs are due to the addition of randomness parameters on the satin columns. For more relaxed cats, copy the setting of a non  random satin  to all the random satins.
 
 ## Gestickte Beispiele
 
