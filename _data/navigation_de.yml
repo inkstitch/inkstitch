@@ -80,6 +80,10 @@ docs:
         url: /de/docs/stitches/satin-column/
       - title: "E-Stich"
         url: /de/docs/stitches/e-stitch/
+      - title: "S-stitch"
+        url: /de/docs/stitches/s-stitch/
+      - title: "Zigzag Satin"
+        url: /de/docs/stitches/zigzag-satin-stitch/
       - title: "Füllstich"
         url: /de/docs/stitches/fill-stitch/
       - title: "Konturfüllung"
