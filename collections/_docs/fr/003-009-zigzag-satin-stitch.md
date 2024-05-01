@@ -1,7 +1,7 @@
 ---
 title: "Point Satin en Zigzag"
 permalink: /fr/docs/stitches/zigzag-satin-stitch/
-last_modified_at: 2024-05-1
+last_modified_at: 2024-05-02
 toc: true
 ---
 
