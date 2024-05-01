@@ -13,7 +13,7 @@ Le point en  "S" est une colonne satin qui se donne des airs de remplissage capa
 ## Comment le créer
 
 Préparez votre chemin exactement comme vous le feriez pour une [Colonne Satin](/fr/docs/stitches/satin-column). 
-Mais dans les paramètres activez `"S" stitch`.
+Mais dans les paramètres choisissez la méthode `"S" stitch`.
 
 Si vous activez  la longeur maximum de points, vous pourrez chosir entre trois méthodes de découpage. 
 Si vous choisissez la méhode décalage,  vous  pourrez, comme pour un remplissage, choisir la valeur de "Décaler les découpages autant de fois avant de répéter".
