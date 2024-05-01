@@ -1159,6 +1159,7 @@ class SplitSimulatorWindow(wx.Frame):
         self.detached_simulator_frame = None
         self.splitter = wx.SplitterWindow(self, style=wx.SP_LIVE_UPDATE)
         background_color = kwargs.pop('background_color', 'white')
+        self.cancel_hook = kwargs.pop('on_cancel', None)
         self.simulator_panel = SimulatorPanel(
             self.splitter,
             background_color=background_color,
@@ -1187,7 +1188,7 @@ class SplitSimulatorWindow(wx.Frame):
         wx.CallLater(100, self.set_sash_position)
 
         self.Bind(wx.EVT_SPLITTER_SASH_POS_CHANGING, self.splitter_resize)
-        self.Bind(wx.EVT_CLOSE, self.on_close)
+        self.Bind(wx.EVT_CLOSE, self.cancel)
 
         if global_settings['pop_out_simulator']:
             self.detach_simulator()
@@ -1201,7 +1202,13 @@ class SplitSimulatorWindow(wx.Frame):
         self.splitter.SetSashPosition(settings_panel_min_size.width)
         self.statusbar.SetStatusWidths((settings_panel_min_size.width, -1))
 
-    def on_close(self, event):
+    def cancel(self, event=None):
+        if self.cancel_hook:
+            self.cancel_hook()
+        self.close(None)
+
+    def close(self, event=None):
+        self.simulator_panel.stop()
         if self.detached_simulator_frame:
             self.detached_simulator_frame.Destroy()
         self.Destroy()
