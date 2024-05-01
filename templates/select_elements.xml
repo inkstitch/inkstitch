@@ -16,6 +16,7 @@
                         <option value="all">No restriction</option>
                         <option value="autorun-top">Auto-Run Top Stitching</option>
                         <option value="autorun-underpath">Auto-Run Underpath</option>
+                        <option value="autosatin-underpath">Auto-Satin Underpath</option>
                     </param>
                     <param indent="3" name="bean-stitch-repeats" type="string" gui-text="Bean stitch repeats">0</param>
                     <param indent="1" name="select-ripples" type="boolean" gui-text="Ripples">false</param>
@@ -58,6 +59,7 @@
                     <param indent="1" name="select-guided-fill" type="boolean" gui-text="Guided Fill">false</param>
                     <param indent="1" name="select-linear-gradient-fill" type="boolean" gui-text="Linear Gradient Fill">false</param>
                     <param indent="1" name="select-meander-fill" type="boolean" gui-text="Meander Fill">false</param>
+                    <param indent="1" name="select-tartan-fill" type="boolean" gui-text="Tartan Fill">false</param>
                     <param indent="1" name="select-legacy-fill" type="boolean" gui-text="Legacy Fill">false</param>
                     <param indent="1" name="fill-underlay" type="optiongroup" appearance="combo" gui-text="Underlay"
                            gui-description="Only select fills with this underlay">

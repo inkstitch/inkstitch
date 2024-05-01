@@ -40,6 +40,7 @@ class SelectElements(InkstitchExtension):
         pars.add_argument("--select-meander-fill", type=Boolean, dest="meander", default=False)
         pars.add_argument("--select-circular-fill", type=Boolean, dest="circular", default=False)
         pars.add_argument("--select-linear-gradient-fill", type=Boolean, dest="linear_gradient", default=False)
+        pars.add_argument("--select-tartan-fill", type=Boolean, dest="tartan_fill", default=False)
         pars.add_argument("--select-legacy-fill", type=Boolean, dest="legacy", default=False)
         pars.add_argument("--fill-underlay", type=str, dest="fill_underlay", default="all")
         pars.add_argument("--select-clone", type=Boolean, dest="clone", default=False)
@@ -155,13 +156,19 @@ class SelectElements(InkstitchExtension):
             select = True
         elif self.options.linear_gradient and method == 'linear_gradient_fill':
             select = True
+        elif self.options.tartan_fill and method == 'tartan_fill':
+            select = True
         elif self.options.legacy and method == 'legacy_fill':
             select = True
         return select
 
     def _running_condition(self, element):
         element_id = element.node.get_id() or ''
-        conditions = {'all': True, 'autorun-top': element_id.startswith('autorun'), 'autorun-underpath': element_id.startswith('underpath')}
+        conditions = {
+            'all': True,
+            'autorun-top': element_id.startswith('autorun'),
+            'autorun-underpath': element_id.startswith('underpath'),
+            'autosatin-underpath': element_id.startswith('autosatinrun')}
         return conditions[self.options.running_stitch_condition]
 
     def _bean_stitch_repeats(self, element):

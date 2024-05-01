@@ -22,7 +22,7 @@ class DBusActions:
         except BaseException:
             exit()
 
-        name =  'org.inkscape.Inkscape'
+        name = 'org.inkscape.Inkscape'
         appGroupName = "/org/inkscape/Inkscape"
         self.applicationGroup = Gio.DBusActionGroup.get(
             bus,
