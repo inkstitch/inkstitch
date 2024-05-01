@@ -45,7 +45,6 @@ if [ "$BUILD" = "osx" ]; then
         INSTALLER_IDENT="Developer ID Installer: Lex Neva (929A568N58)"
         /usr/bin/pkgbuild --root dist/inkstitch.app \
                         -s "${INSTALLER_IDENT}" \
-                        --component-plist installer_scripts/inkstitch.plist \
                         --ownership recommended \
                         --identifier org.inkstitch.installer \
                         --version ${VERSION} \
