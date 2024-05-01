@@ -1,7 +1,7 @@
 ---
 title: "Point en S"
 permalink: /fr/docs/stitches/s-stitch/
-last_modified_at: 2023-04-23
+last_modified_at: 2024-05-1
 toc: true
 ---
 ## Qu'est-ce que c'est
