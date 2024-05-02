@@ -172,7 +172,7 @@ class FontSampleFrame(wx.Frame):
             try:
                 width_to_add = (font.horiz_adv_x.get(glyph, font.horiz_adv_x_default) - glyph_obj.min_x) * scale
             except TypeError:
-                width += glyph_obj.width
+                width_to_add = glyph_obj.width
 
             if width + width_to_add > line_width:
                 text += '\n'
