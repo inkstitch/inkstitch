@@ -461,6 +461,13 @@ class FillStitch(EmbroideryElement):
            unit='mm',
            type='float',
            default=0.1,
+           select_items=[('fill_method', 'auto_fill'),
+                         ('fill_method', 'contour_fill'),
+                         ('fill_method', 'guided_fill'),
+                         ('fill_method', 'meander_fill'),
+                         ('fill_method', 'circular_fill'),
+                         ('fill_method', 'linear_gradient_fill'),
+                         ('fill_method', 'tartan_fill')],
            sort_index=43)
     def running_stitch_tolerance(self):
         return max(self.get_float_param("running_stitch_tolerance_mm", 0.2), 0.01)
