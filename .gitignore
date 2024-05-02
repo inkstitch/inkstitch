@@ -6,6 +6,7 @@ __pycache__
 *.zip
 *.tar.gz
 *.po
+*.log
 dist/
 build/
 locales/
@@ -20,10 +21,15 @@ locales/
 .DS_Store
 
 # debug and profile files
-/DEBUG.ini
+logs/
+/DEBUG.toml
+/LOGGING.toml
+/LOGGING[0-9]*.toml
 /debug*
 /.debug*
-# old debug files
+
+# old debug files - to be removed
+/DEBUG*.ini
 /DEBUG
 /PROFILE
 /profile*
