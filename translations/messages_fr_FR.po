@@ -2,21 +2,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-05-01 01:11+0000\n"
-"PO-Revision-Date: 2024-05-01 01:12\n"
+"POT-Creation-Date: 2024-05-02 01:06+0000\n"
+"PO-Revision-Date: 2024-05-02 01:07\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.14.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: easygettext\n"
-"Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-01 01:11+0000\n"
+"POT-Creation-Date: 2024-05-02 01:06+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -332,12 +328,12 @@ msgstr "Cette police est une version modifiée de Emilio 20 simple pour permettr
 #. name of font in fonts/emilio_20_tartan
 #: inkstitch-fonts-metadata.py:118
 msgid "EMILIO_20_Tartan"
-msgstr ""
+msgstr "Emilio_20_Tartan"
 
 #. description of font in fonts/emilio_20_tartan
 #: inkstitch-fonts-metadata.py:120
 msgid "Emilio 20 Tartan uses tartan fill for a colorful font approximatively 40 mm high. The font can be scaled down to 65% and up to 150%."
-msgstr ""
+msgstr "Emilio 20 Tartan utilise les remplissages tartan pour devenir une fonte très colorée d'environ 40 mm de haut. La fonte peut être réduite jusqu'à 65% et augmentée jusqu'à 150%."
 
 #. name of font in fonts/emilio_20_tricolore
 #: inkstitch-fonts-metadata.py:122
@@ -1233,8 +1229,8 @@ msgstr "* Sélectionner le clone"
 msgid "* Run: Extensions > Ink/Stitch > Edit > Unlink Clone"
 msgstr "* Exécutez : Extensions > Ink/Stitch > Édition > Délier le clone"
 
-#: lib/elements/clone.py:43 inx/inkstitch_select_elements.inx:72
-#: inx/inkstitch_select_elements.inx:73
+#: lib/elements/clone.py:43 inx/inkstitch_select_elements.inx:75
+#: inx/inkstitch_select_elements.inx:76
 msgid "Clone"
 msgstr "Cloner"
 
@@ -1558,32 +1554,32 @@ msgstr "Auto-remplissage avec des points de broderie"
 msgid "Auto Fill"
 msgstr "Remplissage automatique"
 
-#: lib/elements/fill_stitch.py:153 inx/inkstitch_select_elements.inx:55
+#: lib/elements/fill_stitch.py:153 inx/inkstitch_select_elements.inx:57
 msgid "Circular Fill"
 msgstr "Remplissage circulaire"
 
-#: lib/elements/fill_stitch.py:154 inx/inkstitch_select_elements.inx:56
+#: lib/elements/fill_stitch.py:154 inx/inkstitch_select_elements.inx:58
 msgid "Contour Fill"
 msgstr "Remplissage selon contour"
 
-#: lib/elements/fill_stitch.py:155 inx/inkstitch_select_elements.inx:57
+#: lib/elements/fill_stitch.py:155 inx/inkstitch_select_elements.inx:59
 msgid "Guided Fill"
 msgstr "Remplissage guidé"
 
-#: lib/elements/fill_stitch.py:156 inx/inkstitch_select_elements.inx:58
+#: lib/elements/fill_stitch.py:156 inx/inkstitch_select_elements.inx:60
 msgid "Linear Gradient Fill"
 msgstr "Remplissage dégradé linéaire"
 
-#: lib/elements/fill_stitch.py:157 inx/inkstitch_select_elements.inx:59
+#: lib/elements/fill_stitch.py:157 inx/inkstitch_select_elements.inx:61
 msgid "Meander Fill"
 msgstr "Remplissage en méandres"
 
-#: lib/elements/fill_stitch.py:158
+#: lib/elements/fill_stitch.py:158 inx/inkstitch_select_elements.inx:62
 msgid "Tartan Fill"
 msgstr "Remplissage tartan"
 
 #: lib/elements/fill_stitch.py:159 lib/gui/tartan/embroidery_panel.py:202
-#: inx/inkstitch_select_elements.inx:60
+#: inx/inkstitch_select_elements.inx:63
 msgid "Legacy Fill"
 msgstr "Remplissage legacy (ancien)"
 
@@ -1845,8 +1841,8 @@ msgid "Fill Underlay"
 msgstr "Sous-couche de remplissage"
 
 #: lib/elements/fill_stitch.py:559 lib/gui/tartan/embroidery_panel.py:55
-#: inx/inkstitch_select_elements.inx:35 inx/inkstitch_select_elements.inx:62
-#: inx/inkstitch_select_elements.inx:64
+#: inx/inkstitch_select_elements.inx:37 inx/inkstitch_select_elements.inx:65
+#: inx/inkstitch_select_elements.inx:67
 msgid "Underlay"
 msgstr "Sous-couche"
 
@@ -1880,6 +1876,7 @@ msgid "Shrink the shape before doing underlay, to prevent underlay from showing 
 msgstr "Rétrécit la forme avant de faire la sous-couche, pour empêcher que la sous-couche se montre en dehors du remplissage."
 
 #: lib/elements/fill_stitch.py:649 lib/elements/satin_column.py:520
+#: lib/gui/satin_multicolor/colorize.py:56
 msgid "Random seed"
 msgstr "Graine aléatoire"
 
@@ -2049,7 +2046,7 @@ msgid "* Hold \"Shift\" while drawing the rung."
 msgstr "*Maintenir la touche \"Majuscule\" enfoncée en traçant la traverse de direction."
 
 #: lib/elements/satin_column.py:91 lib/elements/satin_column.py:101
-#: inx/inkstitch_select_elements.inx:30
+#: inx/inkstitch_select_elements.inx:32
 msgid "Satin Column"
 msgstr "Colonne Satin"
 
@@ -2358,11 +2355,11 @@ msgstr "Point droit /Point multiple"
 msgid "Ripple Stitch"
 msgstr "Broderie ondulée"
 
-#: lib/elements/stroke.py:68 inx/inkstitch_select_elements.inx:21
+#: lib/elements/stroke.py:68 inx/inkstitch_select_elements.inx:23
 msgid "ZigZag Stitch"
 msgstr "Point zigzag"
 
-#: lib/elements/stroke.py:69 inx/inkstitch_select_elements.inx:22
+#: lib/elements/stroke.py:69 inx/inkstitch_select_elements.inx:24
 msgid "Manual Stitch"
 msgstr "Point manuel"
 
@@ -2592,7 +2589,7 @@ msgstr "Veuillez vous assurer qu’au plus une seule commande début et fin est 
 msgid "Please select one or more satin columns."
 msgstr "Veuillez sélectionner une ou plusieurs colonnes satin."
 
-#: lib/extensions/auto_satin.py:54
+#: lib/extensions/auto_satin.py:54 lib/extensions/satin_multicolor.py:33
 msgid "Please select at least one satin column."
 msgstr "Veuillez sélectionner une ou plusieurs colonnes satin."
 
@@ -2748,6 +2745,7 @@ msgid "All Selected Elements"
 msgstr "Tous les éléments sélectionnés"
 
 #: lib/extensions/element_info.py:153 lib/extensions/zip.py:135
+#: lib/gui/satin_multicolor/colorize.py:67
 msgid "Colors"
 msgstr "Couleurs"
 
@@ -2939,7 +2937,8 @@ msgid "This parameter will be saved when you click \"Apply and Quit\""
 msgstr "Ce paramètre sera enregistré lorsque vous cliquez sur « Appliquer et quitter »"
 
 #: lib/extensions/params.py:499 lib/gui/lettering.py:98
-#: lib/gui/lettering_font_sample.py:57 lib/gui/tartan/main_panel.py:69
+#: lib/gui/lettering_font_sample.py:57
+#: lib/gui/satin_multicolor/main_panel.py:56 lib/gui/tartan/main_panel.py:67
 #: print/templates/custom-page.html:23 print/templates/custom-page.html:27
 #: print/templates/custom-page.html:33 print/templates/ui.html:101
 #: print/templates/ui.html:105 print/templates/ui.html:111
@@ -2980,7 +2979,11 @@ msgstr "Impression Ink/Stitch"
 msgid "Please select at least two elements to reorder."
 msgstr "Veuillez sélectionner au moins deux éléments à ré-ordonner."
 
-#: lib/extensions/select_elements.py:81
+#: lib/extensions/satin_multicolor.py:41
+msgid "Ink/Stitch Multicolor Satin"
+msgstr ""
+
+#: lib/extensions/select_elements.py:103
 msgid "Could not detect python path. Please insert python path manually as described in the help tab of the select elements dialog."
 msgstr "Impossible de detecter le chemin vers python. Merci d'ajouter le chemin manuellement comme décrit dans l'onglet aide du dialogue de selection des éléments."
 
@@ -3045,7 +3048,7 @@ msgstr "Description"
 #: lib/extensions/troubleshoot.py:111 lib/extensions/troubleshoot.py:157
 #: inx/inkstitch_cleanup.inx:23 inx/inkstitch_element_info.inx:10
 #: inx/inkstitch_remove_embroidery_settings.inx:155
-#: inx/inkstitch_select_elements.inx:86 inx/inkstitch_troubleshoot.inx:12
+#: inx/inkstitch_select_elements.inx:89 inx/inkstitch_troubleshoot.inx:12
 #: inx/inkstitch_update_svg.inx:10
 msgid "Troubleshoot"
 msgstr "Résolution de problèmes"
@@ -3141,15 +3144,16 @@ msgid "Value"
 msgstr "Valeur"
 
 #: lib/gui/element_info.py:41 lib/gui/lettering_font_sample.py:70
-#: lib/gui/tartan/main_panel.py:66 lib/gui/test_swatches.py:83
-#: inx/inkstitch_apply_palette.inx:84 inx/inkstitch_apply_threadlist.inx:89
-#: inx/inkstitch_auto_run.inx:23 inx/inkstitch_cutwork_segmentation.inx:42
+#: lib/gui/satin_multicolor/main_panel.py:53 lib/gui/tartan/main_panel.py:64
+#: lib/gui/test_swatches.py:83 inx/inkstitch_apply_palette.inx:84
+#: inx/inkstitch_apply_threadlist.inx:89 inx/inkstitch_auto_run.inx:23
+#: inx/inkstitch_cutwork_segmentation.inx:42
 #: inx/inkstitch_fill_to_stroke.inx:23 inx/inkstitch_generate_palette.inx:24
 #: inx/inkstitch_gradient_blocks.inx:24 inx/inkstitch_jump_to_stroke.inx:40
-#: inx/inkstitch_lettering_along_path.inx:17
+#: inx/inkstitch_jump_to_trim.inx:25 inx/inkstitch_lettering_along_path.inx:17
 #: inx/inkstitch_palette_to_text.inx:19
 #: inx/inkstitch_remove_embroidery_settings.inx:142
-#: inx/inkstitch_select_elements.inx:78
+#: inx/inkstitch_select_elements.inx:81
 #: inx/inkstitch_stroke_to_lpe_satin.inx:26
 #: inx/inkstitch_zigzag_line_to_satin.inx:18
 msgid "Help"
@@ -3160,7 +3164,7 @@ msgid "This extension informs about various parameters of selected stitch elemen
 msgstr "Cette extension affiche des informations sur divers paramètres des éléments de broderie sélectionnés."
 
 #: lib/gui/element_info.py:56 lib/gui/lettering_font_sample.py:85
-#: lib/gui/tartan/help_panel.py:27
+#: lib/gui/satin_multicolor/help_panel.py:27 lib/gui/tartan/help_panel.py:27
 msgid "More information on our website:"
 msgstr "Plus d'information sur notre site web :"
 
@@ -3195,7 +3199,7 @@ msgstr "Filtre de fontes"
 #: lib/gui/lettering.py:76 lib/gui/test_swatches.py:33
 #: inx/inkstitch_apply_palette.inx:7 inx/inkstitch_apply_threadlist.inx:7
 #: inx/inkstitch_fill_to_stroke.inx:15 inx/inkstitch_gradient_blocks.inx:15
-#: inx/inkstitch_jump_to_stroke.inx:15
+#: inx/inkstitch_jump_to_stroke.inx:15 inx/inkstitch_jump_to_trim.inx:15
 #: inx/inkstitch_lettering_along_path.inx:13
 #: inx/inkstitch_palette_to_text.inx:15
 #: inx/inkstitch_remove_embroidery_settings.inx:8
@@ -3285,7 +3289,8 @@ msgstr "Echelle (%)"
 msgid "Max. line width"
 msgstr "Largeur du texte"
 
-#: lib/gui/lettering_font_sample.py:59 lib/gui/tartan/main_panel.py:71
+#: lib/gui/lettering_font_sample.py:59
+#: lib/gui/satin_multicolor/main_panel.py:58 lib/gui/tartan/main_panel.py:69
 #: lib/gui/test_swatches.py:117
 msgid "Apply"
 msgstr "Appliquer"
@@ -3303,7 +3308,9 @@ msgstr "https://inkstitch.org/fr/docs/font-tools/#font-sampling"
 msgid "The glyphlist for this font seems to be outdated.\n\n"
 "Please update the glyph list for %s:\n"
 "Extensions > Ink/Stitch > Font Management > Update Glyphlist"
-msgstr ""
+msgstr "La liste des glyphes de cette fonte ne semble pas à jour.\n\n"
+"Merci de mettre a jour la liste des glyphes de %s:\n"
+"Extensions > Ink/Stitch >Gestion des polices > Mettre à jour la liste des glyphes"
 
 #: lib/gui/preferences.py:16 lib/gui/preferences.py:17
 #: inx/inkstitch_preferences.inx:3
@@ -3355,8 +3362,8 @@ msgstr "Préréglage"
 msgid "Load"
 msgstr "Charger"
 
-#: lib/gui/presets.py:61 lib/gui/tartan/customize_panel.py:65
-#: lib/gui/tartan/customize_panel.py:67
+#: lib/gui/presets.py:61 lib/gui/satin_multicolor/colorize.py:73
+#: lib/gui/tartan/customize_panel.py:65 lib/gui/tartan/customize_panel.py:67
 msgid "Add"
 msgstr "Ajouter"
 
@@ -3386,36 +3393,114 @@ msgstr "Le préréglage \"%s\" n'a pas été trouvé."
 msgid "Preset \"%s\" already exists.  Please use another name or press \"Overwrite\""
 msgstr "Le préréglage \"%s\" existe déjà. Veuillez utiliser un autre nom ou appuyez sur \"Écraser\""
 
+#: lib/gui/satin_multicolor/colorize.py:26
+msgid "General Settings"
+msgstr ""
+
+#: lib/gui/satin_multicolor/colorize.py:29
+msgid "Equidistant colors"
+msgstr ""
+
+#: lib/gui/satin_multicolor/colorize.py:30
+msgid "Whether colors should be equidistant or have varying widths."
+msgstr ""
+
+#: lib/gui/satin_multicolor/colorize.py:35
+msgid "Monochrome color width"
+msgstr ""
+
+#: lib/gui/satin_multicolor/colorize.py:36
+msgid "Adapt color width here when equidistance is enabled."
+msgstr ""
+
+#: lib/gui/satin_multicolor/colorize.py:41
+msgid "Overflow left"
+msgstr ""
+
+#: lib/gui/satin_multicolor/colorize.py:46
+msgid "Overflow right"
+msgstr ""
+
+#: lib/gui/satin_multicolor/colorize.py:51
+msgid "Pull compensation (mm)"
+msgstr ""
+
+#: lib/gui/satin_multicolor/colorize.py:62
+msgid "Keep original satin"
+msgstr ""
+
+#: lib/gui/satin_multicolor/colorize.py:71
+msgid "Overflow excluded"
+msgstr ""
+
+#: lib/gui/satin_multicolor/colorize.py:124
+msgid "Click to move color up."
+msgstr ""
+
+#: lib/gui/satin_multicolor/colorize.py:128
+msgid "Select color"
+msgstr ""
+
+#: lib/gui/satin_multicolor/colorize.py:133
+msgid "Monochrome width. Can be changed individually when equidistance is disabled."
+msgstr ""
+
+#: lib/gui/satin_multicolor/colorize.py:138
+msgid "Margin right (bicolor section). Can be changed individually when equidistance is disabled."
+msgstr ""
+
+#: lib/gui/satin_multicolor/colorize.py:142
+msgid "Remove color"
+msgstr ""
+
+#: lib/gui/satin_multicolor/colorize.py:253
+msgid "Total width: {width}%"
+msgstr ""
+
+#: lib/gui/satin_multicolor/help_panel.py:19
+msgid "This extension simulates a multicolor satin by creating colored copies of the selected satin(s)."
+msgstr ""
+
+#: lib/gui/satin_multicolor/help_panel.py:33
+#: lib/gui/satin_multicolor/help_panel.py:34
+msgid "https://inkstitch.org/docs/satin-tools/#multicolor-satin"
+msgstr ""
+
+#: lib/gui/satin_multicolor/main_panel.py:49
+msgid "Colorize"
+msgstr ""
+
+#: lib/gui/satin_multicolor/main_panel.py:146
+msgid "Multicolor Satin Group"
+msgstr ""
+
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command label at bottom of simulator window
-#: lib/gui/simulator.py:23 electron/src/renderer/assets/js/simulator.js:136
-#: inx/inkstitch_output_GCODE.inx:29
+#: lib/gui/simulator.py:23 inx/inkstitch_output_GCODE.inx:29
 msgid "STITCH"
 msgstr "BRODER"
 
-#: lib/gui/simulator.py:23 electron/src/renderer/assets/js/simulator.js:139
+#: lib/gui/simulator.py:23
 msgid "JUMP"
 msgstr "SAUT"
 
-#: lib/gui/simulator.py:23 electron/src/renderer/assets/js/simulator.js:142
+#: lib/gui/simulator.py:23
 msgid "TRIM"
 msgstr "COUPURE"
 
-#: lib/gui/simulator.py:23 electron/src/renderer/assets/js/simulator.js:145
-#: inx/inkstitch_output_GCODE.inx:33
+#: lib/gui/simulator.py:23 inx/inkstitch_output_GCODE.inx:33
 msgid "STOP"
 msgstr "STOP"
 
-#: lib/gui/simulator.py:23 electron/src/renderer/assets/js/simulator.js:148
-#: inx/inkstitch_output_GCODE.inx:31
+#: lib/gui/simulator.py:23 inx/inkstitch_output_GCODE.inx:31
 msgid "COLOR CHANGE"
 msgstr "CHANGEMENT COULEUR"
 
-#: lib/gui/simulator.py:61 electron/src/renderer/components/Simulator.vue:543
+#: lib/gui/simulator.py:61
 msgid "Slow down (arrow down)"
 msgstr "Ralentir (flèche vers le bas)"
 
-#: lib/gui/simulator.py:65 electron/src/renderer/components/Simulator.vue:553
+#: lib/gui/simulator.py:65
 msgid "Speed up (arrow up)"
 msgstr "Accélérer (flèche vers le haut)"
 
@@ -3469,17 +3554,17 @@ msgstr "Montrer les changements de couleur"
 
 #: lib/gui/simulator.py:128
 msgid "Change background color"
-msgstr ""
+msgstr "Changer la couleur d'arrière fond"
 
 #: lib/gui/simulator.py:132
 msgid "Detach/attach simulator window"
 msgstr "Détacher/Attacher le simulateur"
 
-#: lib/gui/simulator.py:144 electron/src/renderer/components/Simulator.vue:167
+#: lib/gui/simulator.py:144
 msgid "Controls"
 msgstr "Contrôles"
 
-#: lib/gui/simulator.py:157 electron/src/renderer/components/Simulator.vue:225
+#: lib/gui/simulator.py:157
 msgid "Show"
 msgstr "Montrer"
 
@@ -3586,6 +3671,7 @@ msgid "Herringbone width (mm)"
 msgstr "Largeur des chevrons (mm)"
 
 #: lib/gui/tartan/embroidery_panel.py:65 lib/gui/tartan/embroidery_panel.py:102
+#: inx/inkstitch_select_elements.inx:21
 msgid "Bean stitch repeats"
 msgstr "Nombre de répétitions du point multiple"
 
@@ -3629,15 +3715,15 @@ msgstr "Cette extension remplit les formes avec un motif semblable à du tartan.
 msgid "https://inkstitch.org/docs/stitches/tartan-fill"
 msgstr "https://inkstitch.org/fr/docs/stitches/tartan-fill"
 
-#: lib/gui/tartan/main_panel.py:56
+#: lib/gui/tartan/main_panel.py:54
 msgid "Customize"
 msgstr "Personnaliser"
 
-#: lib/gui/tartan/main_panel.py:60
+#: lib/gui/tartan/main_panel.py:58
 msgid "Palette Code"
 msgstr "Code de la palette"
 
-#: lib/gui/tartan/main_panel.py:63
+#: lib/gui/tartan/main_panel.py:61
 msgid "Embroidery Settings"
 msgstr "Paramètres de broderie"
 
@@ -3679,7 +3765,7 @@ msgstr "Cette extension génère des échantillons à partir d'une sélection.\n
 
 #: lib/gui/test_swatches.py:100 inx/inkstitch_apply_palette.inx:87
 #: inx/inkstitch_apply_threadlist.inx:100 inx/inkstitch_fill_to_stroke.inx:32
-#: inx/inkstitch_jump_to_stroke.inx:42
+#: inx/inkstitch_jump_to_stroke.inx:42 inx/inkstitch_jump_to_trim.inx:27
 #: inx/inkstitch_remove_embroidery_settings.inx:145
 #: inx/inkstitch_stroke_to_lpe_satin.inx:32
 #: inx/inkstitch_zigzag_line_to_satin.inx:28
@@ -4029,7 +4115,6 @@ msgid "estimated time"
 msgstr "durée estimée"
 
 #: print/templates/operator_detailedview.html:67
-#: electron/src/renderer/components/Simulator.vue:229
 msgid "trims"
 msgstr "coupures"
 
@@ -4446,212 +4531,6 @@ msgstr "Format de couleur Inf"
 msgid "Json Export"
 msgstr "Export Json"
 
-#: electron/src/renderer/components/Simulator.vue:141
-msgid "[ Left square bracket"
-msgstr "[ Parenthèse carrée gauche"
-
-#: electron/src/renderer/components/Simulator.vue:152
-msgid "] Right square bracket"
-msgstr "] Parenthèse carrée droite"
-
-#. name for left arrow keyboard key
-#: electron/src/renderer/components/Simulator.vue:52
-msgid "← Arrow left"
-msgstr "← Flèche à gauche"
-
-#. name for right arrow keyboard key
-#: electron/src/renderer/components/Simulator.vue:63
-msgid "→ Arrow right"
-msgstr "→ Flèche à droite"
-
-#. name for up arrow keyboard key
-#: electron/src/renderer/components/Simulator.vue:129
-msgid "↑ Arrow up"
-msgstr "↑ Flèche vers le haut"
-
-#. name for down arrow keyboard key
-#: electron/src/renderer/components/Simulator.vue:118
-msgid "↓ Arrow down"
-msgstr "↓ Flèche vers le bas"
-
-#. name for this keyboard key: +
-#: electron/src/renderer/components/Simulator.vue:89
-msgid "+ Plus"
-msgstr "+ Plus"
-
-#: electron/src/renderer/components/Simulator.vue:15
-msgid "Button"
-msgstr "Bouton"
-
-#: electron/src/renderer/components/Simulator.vue:236
-msgid "color changes"
-msgstr "changements de couleur"
-
-#: electron/src/renderer/components/Simulator.vue:219
-msgid "Command"
-msgstr "Commande"
-
-#: electron/src/renderer/components/Simulator.vue:259
-msgid "cursor"
-msgstr "curseur"
-
-#: electron/src/renderer/components/Simulator.vue:18
-msgid "Function"
-msgstr "Fonction"
-
-#: electron/src/renderer/components/Simulator.vue:106
-msgid "Jump to next command"
-msgstr "Sauter à la commande suivante"
-
-#: electron/src/renderer/components/Simulator.vue:519
-msgid "Jump to next command (Page up)"
-msgstr "Aller à la prochaine commande (haut page)"
-
-#: electron/src/renderer/components/Simulator.vue:97
-msgid "Jump to previous command"
-msgstr "Sauter à la commande précédente"
-
-#: electron/src/renderer/components/Simulator.vue:509
-msgid "Jump to previous command (Page down)"
-msgstr "Aller à la commande précédente (Page suivante)"
-
-#: electron/src/renderer/components/Simulator.vue:232
-msgid "jumps"
-msgstr "sauts"
-
-#. name for this keyboard key: -
-#: electron/src/renderer/components/Simulator.vue:76
-msgid "Minus"
-msgstr "- Moins"
-
-#: electron/src/renderer/components/Simulator.vue:248
-msgid "needle points"
-msgstr "points de l'aiguille"
-
-#. description of keyboard shortcut that moves one stitch backward in simulator
-#: electron/src/renderer/components/Simulator.vue:71
-msgid "One step backward"
-msgstr "Un pas en arrière"
-
-#: electron/src/renderer/components/Simulator.vue:489
-msgid "One step backward (-)"
-msgstr "Un pas en arrière (-)"
-
-#. description of keyboard shortcut that moves one stitch forward in simulator
-#: electron/src/renderer/components/Simulator.vue:84
-msgid "One step forward"
-msgstr "Un pas en avant"
-
-#: electron/src/renderer/components/Simulator.vue:499
-msgid "One step forward (+)"
-msgstr "Un pas en avant (+)"
-
-#. name for page down keyboard key
-#: electron/src/renderer/components/Simulator.vue:99
-msgid "Page down (PgDn)"
-msgstr "Page précédente (PgDn)"
-
-#. name for page up keyboard key
-#: electron/src/renderer/components/Simulator.vue:108
-msgid "Page up (PgUp)"
-msgstr "Page précédente (PgUp)"
-
-#: electron/src/renderer/components/Simulator.vue:29
-msgid "Pause"
-msgstr "Pause"
-
-#: electron/src/renderer/components/Simulator.vue:444
-msgid "Pause (space)"
-msgstr "Pause (espace)"
-
-#: electron/src/renderer/components/Simulator.vue:40
-msgid "Play"
-msgstr "Lecture"
-
-#: electron/src/renderer/components/Simulator.vue:455
-msgid "Play (arrow left | arrow right)"
-msgstr "Jouer (flèche gauche | flèche droite)"
-
-#: electron/src/renderer/components/Simulator.vue:49
-msgid "Play backward"
-msgstr "Lire à l'envers"
-
-#: electron/src/renderer/components/Simulator.vue:466
-msgid "Play backward (arrow left)"
-msgstr "Rembobiner (flèche gauche)"
-
-#: electron/src/renderer/components/Simulator.vue:60
-msgid "Play forward"
-msgstr "Lire en avant"
-
-#: electron/src/renderer/components/Simulator.vue:478
-msgid "Play forward (arrow right)"
-msgstr "En avant (flèche droite)"
-
-#: electron/src/renderer/components/Simulator.vue:256
-msgid "realistic"
-msgstr "réaliste"
-
-#: electron/src/renderer/components/Simulator.vue:252
-msgid "render jumps"
-msgstr "visualiser les sauts"
-
-#: electron/src/renderer/components/Simulator.vue:285
-msgid "Rendering stitch-plan..."
-msgstr "Calcul du rendu du plan de broderie ..."
-
-#: electron/src/renderer/components/Simulator.vue:21
-msgid "Shortcut Key"
-msgstr "Raccourci clavier"
-
-#: electron/src/renderer/components/Simulator.vue:10
-msgid "Simulator Shortcut Keys"
-msgstr "Raccourci clavier du simulateur"
-
-#: electron/src/renderer/components/Simulator.vue:115
-msgid "Slow down"
-msgstr "Ralentir"
-
-#: electron/src/renderer/components/Simulator.vue:32
-msgid "Space"
-msgstr "Espace"
-
-#: electron/src/renderer/components/Simulator.vue:126
-msgid "Speed up"
-msgstr "Accélérer"
-
-#: electron/src/renderer/components/Simulator.vue:196
-msgid "Speed: %{speed} stitch/sec"
-msgid_plural "Speed: %{speed} stitches/sec"
-msgstr[0] "Vitesse : %{speed} point/sec"
-msgstr[1] "Vitesse : %{speed} point/sec"
-
-#: electron/src/renderer/components/Simulator.vue:239
-msgid "stops"
-msgstr "arrêts"
-
-#: electron/src/renderer/components/Simulator.vue:208
-#: inx/inkstitch_commands_scale_symbols.inx:12
-#: inx/inkstitch_object_commands_toggle_visibility.inx:11
-msgid "View"
-msgstr "Affichage"
-
-#: electron/src/renderer/components/Simulator.vue:149
-msgid "Zoom design"
-msgstr "Zoomer sur le dessin"
-
-#: electron/src/renderer/components/Simulator.vue:587
-msgid "Zoom design (])"
-msgstr "Zoomer sur le dessin (])"
-
-#: electron/src/renderer/components/Simulator.vue:138
-msgid "Zoom page"
-msgstr "Zoomer sur la page"
-
-#: electron/src/renderer/components/Simulator.vue:577
-msgid "Zoom page ([)"
-msgstr "Zoomer sur la page ([)"
-
 #: inx/inkstitch_about.inx:3 inx/inkstitch_about.inx:6
 msgid "About"
 msgstr "A propos"
@@ -4809,6 +4688,7 @@ msgstr "Préserver l’ordre des colonnes satin"
 
 #: inx/inkstitch_auto_satin.inx:12 inx/inkstitch_convert_to_satin.inx:10
 #: inx/inkstitch_cut_satin.inx:10 inx/inkstitch_flip.inx:10
+#: inx/inkstitch_satin_multicolor.inx:10
 #: inx/inkstitch_stroke_to_lpe_satin.inx:40
 #: inx/inkstitch_zigzag_line_to_satin.inx:36
 msgid "Tools: Satin"
@@ -4880,11 +4760,16 @@ msgid "Scale Command Symbols"
 msgstr "Mise à l'échelle des symboles de commande"
 
 #: inx/inkstitch_commands_scale_symbols.inx:11
-#: inx/inkstitch_global_commands.inx:17 inx/inkstitch_layer_commands.inx:14
-#: inx/inkstitch_object_commands.inx:21
+#: inx/inkstitch_global_commands.inx:17 inx/inkstitch_jump_to_trim.inx:10
+#: inx/inkstitch_layer_commands.inx:14 inx/inkstitch_object_commands.inx:21
 #: inx/inkstitch_object_commands_toggle_visibility.inx:10
 msgid "Commands"
 msgstr "Commandes"
+
+#: inx/inkstitch_commands_scale_symbols.inx:12
+#: inx/inkstitch_object_commands_toggle_visibility.inx:11
+msgid "View"
+msgstr "Affichage"
 
 #: inx/inkstitch_convert_to_satin.inx:3
 msgid "Convert Line to Satin"
@@ -5056,7 +4941,7 @@ msgid "Duplicate Params"
 msgstr "Dupliquer les paramètres"
 
 #: inx/inkstitch_duplicate_params.inx:10 inx/inkstitch_reorder.inx:10
-#: inx/inkstitch_select_elements.inx:101
+#: inx/inkstitch_select_elements.inx:104
 #: inx/inkstitch_selection_to_guide_line.inx:10
 #: inx/inkstitch_selection_to_pattern.inx:10 inx/inkstitch_test_swatches.inx:10
 #: inx/inkstitch_unlink_clone.inx:11
@@ -5780,11 +5665,11 @@ msgstr "Redémarrez Inkscape pour l'utiliser."
 msgid "Jump Stitch to Stroke"
 msgstr "Saut en Trait"
 
-#: inx/inkstitch_jump_to_stroke.inx:17
+#: inx/inkstitch_jump_to_stroke.inx:17 inx/inkstitch_jump_to_trim.inx:17
 msgid "Convert jumps not shorter than (mm)"
 msgstr "Convertir seulement les sauts de longueur au moins (mm)"
 
-#: inx/inkstitch_jump_to_stroke.inx:19
+#: inx/inkstitch_jump_to_stroke.inx:19 inx/inkstitch_jump_to_trim.inx:19
 msgid "Convert jumps not longer than (mm)"
 msgstr "Convertir seulement les sauts de longueur au maximum (mm)"
 
@@ -5851,6 +5736,22 @@ msgstr "Cette extension convertit les sauts en points droits."
 #: inx/inkstitch_jump_to_stroke.inx:43
 msgid "https://inkstitch.org/docs/stroke-tools/#jump-to-stroke"
 msgstr "https://inkstitch.org/fr/docs/stroke-tools/#jump-to-stroke"
+
+#: inx/inkstitch_jump_to_trim.inx:3
+msgid "Jump Stitch to Trim Command"
+msgstr ""
+
+#: inx/inkstitch_jump_to_trim.inx:23
+msgid "Use command symbol"
+msgstr ""
+
+#: inx/inkstitch_jump_to_trim.inx:26
+msgid "This extension inserts trim commands to avoid jump stitches."
+msgstr ""
+
+#: inx/inkstitch_jump_to_trim.inx:28
+msgid "https://inkstitch.org/docs/commands/#jump-to-trim"
+msgstr ""
 
 #: inx/inkstitch_layer_commands.inx:3
 msgid "Add Layer Commands"
@@ -6503,6 +6404,10 @@ msgstr "https://inkstitch.org/fr/docs/troubleshoot/#remove-embroidery-settings"
 msgid "Re-stack objects in order of selection"
 msgstr "Réempiler les objets dans l'ordre de leur sélection"
 
+#: inx/inkstitch_satin_multicolor.inx:3
+msgid "Multicolor Satin"
+msgstr ""
+
 #: inx/inkstitch_select_elements.inx:3
 msgid "Select embroidery elements"
 msgstr "Sélectionner des éléments de broderie"
@@ -6519,8 +6424,8 @@ msgstr "Sélectionner le type de point"
 msgid "Select only specific running stitches"
 msgstr "Sélectionner seulement des points droits spécifiques"
 
-#: inx/inkstitch_select_elements.inx:16 inx/inkstitch_select_elements.inx:36
-#: inx/inkstitch_select_elements.inx:44 inx/inkstitch_select_elements.inx:63
+#: inx/inkstitch_select_elements.inx:16 inx/inkstitch_select_elements.inx:38
+#: inx/inkstitch_select_elements.inx:46 inx/inkstitch_select_elements.inx:66
 msgid "No restriction"
 msgstr "Sans restriction"
 
@@ -6532,108 +6437,112 @@ msgstr "Points de dessus de l'agencement automatique"
 msgid "Auto-Run Underpath"
 msgstr "Points de dessous de l'agencement automatique"
 
-#: inx/inkstitch_select_elements.inx:20
+#: inx/inkstitch_select_elements.inx:19
+msgid "Auto-Satin Underpath"
+msgstr ""
+
+#: inx/inkstitch_select_elements.inx:22
 msgid "Ripples"
 msgstr "Ondulations"
 
-#: inx/inkstitch_select_elements.inx:23
+#: inx/inkstitch_select_elements.inx:25
 msgid "Polyline"
 msgstr "Polyline"
 
-#: inx/inkstitch_select_elements.inx:29
+#: inx/inkstitch_select_elements.inx:31
 msgid "Satin"
 msgstr "Colonne satin"
 
-#: inx/inkstitch_select_elements.inx:31
+#: inx/inkstitch_select_elements.inx:33
 msgid "E-Stitch"
 msgstr "Point en E"
 
-#: inx/inkstitch_select_elements.inx:32
+#: inx/inkstitch_select_elements.inx:34
 msgid "S-Stitch"
 msgstr "Point en S"
 
-#: inx/inkstitch_select_elements.inx:33
+#: inx/inkstitch_select_elements.inx:35
 msgid "Zig-Zag"
 msgstr "Zig-Zag"
 
-#: inx/inkstitch_select_elements.inx:35
+#: inx/inkstitch_select_elements.inx:37
 msgid "Only select satins with this underlay type"
 msgstr "Ne sélectionner que les satins avec ce type de sous-couche"
 
-#: inx/inkstitch_select_elements.inx:37
+#: inx/inkstitch_select_elements.inx:39
 msgid "No underlay"
 msgstr "Aucune"
 
-#: inx/inkstitch_select_elements.inx:38
+#: inx/inkstitch_select_elements.inx:40
 msgid "Centerwalk"
 msgstr "Centrale"
 
-#: inx/inkstitch_select_elements.inx:39
+#: inx/inkstitch_select_elements.inx:41
 msgid "Contour"
 msgstr "Contour"
 
-#: inx/inkstitch_select_elements.inx:40
+#: inx/inkstitch_select_elements.inx:42
 #: inx/inkstitch_zigzag_line_to_satin.inx:12
 msgid "Zigzag"
 msgstr "Sous-couche Zigzag"
 
-#: inx/inkstitch_select_elements.inx:43
+#: inx/inkstitch_select_elements.inx:45
 msgid "Rung count"
 msgstr "Nombre de traverses"
 
-#: inx/inkstitch_select_elements.inx:43
+#: inx/inkstitch_select_elements.inx:45
 msgid "Only select satins with this rung count"
 msgstr "Ne sélectionner que les satins avec ce nombre de traverses"
 
-#: inx/inkstitch_select_elements.inx:45
+#: inx/inkstitch_select_elements.inx:47
 msgid "No Rungs"
 msgstr "Aucune traverse"
 
-#: inx/inkstitch_select_elements.inx:46
+#: inx/inkstitch_select_elements.inx:48
 msgid "Two Rungs"
 msgstr "Deux traverses"
 
-#: inx/inkstitch_select_elements.inx:53 inx/inkstitch_select_elements.inx:54
+#: inx/inkstitch_select_elements.inx:55 inx/inkstitch_select_elements.inx:56
 msgid "Fill"
 msgstr "Remplissage"
 
-#: inx/inkstitch_select_elements.inx:62
+#: inx/inkstitch_select_elements.inx:65
 msgid "Only select fills with this underlay"
 msgstr "Ne sélectionner que les remplissages avec ce type de sous-couche"
 
-#: inx/inkstitch_select_elements.inx:65
+#: inx/inkstitch_select_elements.inx:68
 msgid "No Underlay"
 msgstr "Aucune"
 
-#: inx/inkstitch_select_elements.inx:79
+#: inx/inkstitch_select_elements.inx:82
 msgid "Select embroidery objects"
 msgstr "Sélectionner des objets de broderie"
 
-#: inx/inkstitch_select_elements.inx:81
+#: inx/inkstitch_select_elements.inx:84
 msgid "Selects specific embroidery elements by stitch type."
 msgstr "Sélectionne des éléments de broderie par type de points."
 
-#: inx/inkstitch_select_elements.inx:82
+#: inx/inkstitch_select_elements.inx:85
 msgid "If there is already an active selection, non matching elements will be deselected."
 msgstr "S'il y a déjà des éléments sélectionnés, les éléments qui ne correspondent pas seront désélectionnés."
 
-#: inx/inkstitch_select_elements.inx:88
+#: inx/inkstitch_select_elements.inx:91
 msgid "If this isn't working for you, you may need to insert your path to a python executable manualy."
 msgstr "Si cela ne fonctionne pas, il est possible que vous deviez insérer manuellement votre chemin vers python."
 
-#: inx/inkstitch_select_elements.inx:90
+#: inx/inkstitch_select_elements.inx:93
 msgid "* Windows: Open the \"Command Prompt\" and type \"where python\". Copy the path and paste it here."
 msgstr "*Windows : Ouvrir \"Invite de commande\" et taper \"where python\". Copier le chemin et le coller ici."
 
-#: inx/inkstitch_select_elements.inx:91
+#: inx/inkstitch_select_elements.inx:94
 msgid "* Linux: Open the command line and type \"which python3\". Copy the path and paste it here."
 msgstr "*Linux : ouvrir la ligne de commande et taper \"which python3\". Copier le chemin et le coller ici."
 
-#: inx/inkstitch_select_elements.inx:92
+#: inx/inkstitch_select_elements.inx:95
 msgid "* macOS: doesn't work, sorry"
 msgstr "*macOS : désolé ne fonctionne pas"
 
-#: inx/inkstitch_select_elements.inx:93
+#: inx/inkstitch_select_elements.inx:96
 msgid "Python Path"
 msgstr "Chemin vers python"
 
@@ -6647,7 +6556,7 @@ msgstr "Sélection vers texture"
 
 #: inx/inkstitch_simulator.inx:3
 msgid "Simulator"
-msgstr ""
+msgstr "Simulateur"
 
 #: inx/inkstitch_stitch_plan_preview.inx:3
 msgid "Stitch Plan Preview"

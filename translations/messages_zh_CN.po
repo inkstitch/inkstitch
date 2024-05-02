@@ -2,21 +2,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-05-01 01:11+0000\n"
-"PO-Revision-Date: 2024-05-01 01:12\n"
+"POT-Creation-Date: 2024-05-02 01:06+0000\n"
+"PO-Revision-Date: 2024-05-02 01:07\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.14.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: easygettext\n"
-"Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-01 01:11+0000\n"
+"POT-Creation-Date: 2024-05-02 01:06+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -44,7 +40,7 @@ msgstr ""
 #. name of font in fonts/abecedaire
 #: inkstitch-fonts-metadata.py:6
 msgid "Abécédaire AGS"
-msgstr ""
+msgstr "Abécédaire AGS"
 
 #. description of font in fonts/abecedaire
 #: inkstitch-fonts-metadata.py:8
@@ -54,12 +50,12 @@ msgstr ""
 #. name of font in fonts/abril
 #: inkstitch-fonts-metadata.py:10
 msgid "Abril En Fleur AGS"
-msgstr ""
+msgstr "Abril En Fleur AGS"
 
 #. description of font in fonts/abril
 #: inkstitch-fonts-metadata.py:12
 msgid "Abril En Fleur AGS is a monogram font. M is 103.5mm high. It can be increased up to 150 % and decreased down to 80 %"
-msgstr ""
+msgstr "Abril En Fleur AGS是一种字母组合字体。M高103.5mm。它可以增加到150%，减少到80%"
 
 #. name of font in fonts/ags_garamond_latin_grec
 #: inkstitch-fonts-metadata.py:14
@@ -115,7 +111,7 @@ msgstr ""
 #. name of font in fonts/auberge_marif
 #: inkstitch-fonts-metadata.py:34
 msgid "Auberge Marif"
-msgstr ""
+msgstr "Auberge Marif"
 
 #. description of font in fonts/auberge_marif
 #: inkstitch-fonts-metadata.py:36
@@ -161,7 +157,7 @@ msgstr ""
 #. description of font in fonts/baumans_FI_Small
 #: inkstitch-fonts-metadata.py:52
 msgid "This font is an altered version  of Baumans FI, to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) are mandatory. The altered embroidery parameters of this font allow to scale down the original Baumanns FI font between 15% (for a 7mm font ) and 30 % (for a 14 mm font). "
-msgstr ""
+msgstr "此字体是Baumans FI的更改版本，以允许更大的缩小。必须使用细线（60）和细针（60）。此字体的更改刺绣参数允许将原始Baumanns FI字体缩小15%（对于7毫米字体）和30%（对于14毫米字体）。"
 
 #. name of font in fonts/cats
 #: inkstitch-fonts-metadata.py:54
@@ -176,7 +172,7 @@ msgstr ""
 #. name of font in fonts/cherryforinkstitch
 #: inkstitch-fonts-metadata.py:58
 msgid "Cherry for inkstitch"
-msgstr ""
+msgstr "Cherry for inkstitch"
 
 #. description of font in fonts/cherryforinkstitch
 #: inkstitch-fonts-metadata.py:60
@@ -223,7 +219,7 @@ msgstr ""
 #: inkstitch-fonts-metadata.py:76
 #, python-format
 msgid "A handwritten font. Can be scaled up to 120% or down to 80%. Caps height is around 19mm or .75 inches."
-msgstr ""
+msgstr "一种手写字体。可以缩放到120%或80%。上限高度约为19毫米或0.75英寸。"
 
 #. name of font in fonts/chopin
 #: inkstitch-fonts-metadata.py:78
@@ -265,7 +261,7 @@ msgstr ""
 #. description of font in fonts/digory_doodles_bean
 #: inkstitch-fonts-metadata.py:92
 msgid "All letters have mixed satin and bean stitch. The capital M is 16mm tall. The small x is 7 mm."
-msgstr ""
+msgstr "所有字母都有混合缎子和豆子针脚。大写字母M高16毫米。小x为7毫米。"
 
 #. name of font in fonts/dinomouse72
 #: inkstitch-fonts-metadata.py:94
@@ -296,7 +292,7 @@ msgstr ""
 #. description of font in fonts/emilio_20_applique
 #: inkstitch-fonts-metadata.py:104
 msgid "Emilio 20 Applique is an Applique font approximatively 50mm high. It should not be scaled down but may be scaled up to 150%. This font is an altered version (larger satin columns) of Emilio_20 while Emilio_20_Bold is  Emilio_20_applique without the applique"
-msgstr ""
+msgstr "埃米利奥20贴花是一种贴花字体，大约50毫米高。它不应该缩小，但可以缩小到150%。这种字体是Emilio_20的变体(更大的缎面柱)，而Emilio_20_Bold 是Emilio_20_applique没有贴花"
 
 #. name of font in fonts/emilio_20_bold
 #: inkstitch-fonts-metadata.py:106
@@ -306,7 +302,7 @@ msgstr ""
 #. description of font in fonts/emilio_20_bold
 #: inkstitch-fonts-metadata.py:108
 msgid "Emilio_20_Bold is an altered version of Emilio_20  and is approximatively 50mm high."
-msgstr ""
+msgstr "Emilio_20_Bold是Emilio_20的改变版本，大约50毫米高。"
 
 #. name of font in fonts/emilio_20_simple
 #: inkstitch-fonts-metadata.py:110
@@ -357,12 +353,12 @@ msgstr ""
 #. description of font in fonts/espresso_KOR
 #: inkstitch-fonts-metadata.py:128
 msgid "The capital M is 16.2 mm high at 100 scale. Every satin has zigzag underlay. x is 11.5 mm high, q is 17.5 mm high, l is 17.2 mm high. The font may be scaled up to 200% and down to 80%"
-msgstr ""
+msgstr "大写M在100刻度下高16.2毫米。每个缎子都有锯齿形底部。x高11.5毫米，q高17.5毫米，l高17.2毫米。字体可以缩放到200%和80%"
 
 #. name of font in fonts/espresso_tiny
 #: inkstitch-fonts-metadata.py:130
 msgid "Espresso tiny"
-msgstr ""
+msgstr "Espresso tiny"
 
 #. description of font in fonts/espresso_tiny
 #: inkstitch-fonts-metadata.py:132
@@ -537,12 +533,12 @@ msgstr ""
 #. name of font in fonts/monicha
 #: inkstitch-fonts-metadata.py:198
 msgid "MONICHA"
-msgstr ""
+msgstr "MONICHA"
 
 #. description of font in fonts/monicha
 #: inkstitch-fonts-metadata.py:200
 msgid "Monicha is a script satin font of size approximatively 20mm. In addition to the glyphs covering most Western European languages it contains additional ornemental letters with swashes. These ornemental letters should be used with caution to avoid overlays. In particular do not use two ornemental letters in a row. Please consult the documentation for information on how to access the ornemental letters. The font can not be scaled down but can be scaled up to 150%. "
-msgstr ""
+msgstr "Monicha是一种大小约为20毫米的脚本缎面字体。除了涵盖大多数西欧语言的字形外，它还包含额外的带有斜线的装饰字母。这些装饰字母应谨慎使用，以避免重叠。特别是不要连续使用两个装饰字母。有关如何访问装饰字母的信息，请查阅留档。字体不能缩小，但可以缩小到150%。 "
 
 #. name of font in fonts/namskout_AGS
 #: inkstitch-fonts-metadata.py:202
@@ -639,7 +635,7 @@ msgstr ""
 #. name of font in fonts/small_font
 #: inkstitch-fonts-metadata.py:238
 msgid "Ink/Stitch Small Font"
-msgstr ""
+msgstr "Ink/Stitch Small Font"
 
 #. description of font in fonts/small_font
 #: inkstitch-fonts-metadata.py:240
@@ -721,7 +717,7 @@ msgstr ""
 #. name of tile in tiles/N3-18
 #: inkstitch-tiles-metadata.py:10
 msgid "N3-18"
-msgstr ""
+msgstr "N3-18"
 
 #. name of tile in tiles/N3-18-modified
 #: inkstitch-tiles-metadata.py:12
@@ -1107,7 +1103,7 @@ msgstr ""
 #: lib/commands.py:33 inx/inkstitch_object_commands.inx:7
 #: inx/inkstitch_remove_embroidery_settings.inx:121
 msgid "Auto-route running stitch starting position"
-msgstr ""
+msgstr "自动走线针迹起始位置"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
@@ -1232,8 +1228,8 @@ msgstr ""
 msgid "* Run: Extensions > Ink/Stitch > Edit > Unlink Clone"
 msgstr ""
 
-#: lib/elements/clone.py:43 inx/inkstitch_select_elements.inx:72
-#: inx/inkstitch_select_elements.inx:73
+#: lib/elements/clone.py:43 inx/inkstitch_select_elements.inx:75
+#: inx/inkstitch_select_elements.inx:76
 msgid "Clone"
 msgstr ""
 
@@ -1557,32 +1553,32 @@ msgstr "自动布线填针"
 msgid "Auto Fill"
 msgstr "自动填充"
 
-#: lib/elements/fill_stitch.py:153 inx/inkstitch_select_elements.inx:55
+#: lib/elements/fill_stitch.py:153 inx/inkstitch_select_elements.inx:57
 msgid "Circular Fill"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:154 inx/inkstitch_select_elements.inx:56
+#: lib/elements/fill_stitch.py:154 inx/inkstitch_select_elements.inx:58
 msgid "Contour Fill"
 msgstr "轮廓填充"
 
-#: lib/elements/fill_stitch.py:155 inx/inkstitch_select_elements.inx:57
+#: lib/elements/fill_stitch.py:155 inx/inkstitch_select_elements.inx:59
 msgid "Guided Fill"
 msgstr "引导填充"
 
-#: lib/elements/fill_stitch.py:156 inx/inkstitch_select_elements.inx:58
+#: lib/elements/fill_stitch.py:156 inx/inkstitch_select_elements.inx:60
 msgid "Linear Gradient Fill"
 msgstr "线性渐变填充"
 
-#: lib/elements/fill_stitch.py:157 inx/inkstitch_select_elements.inx:59
+#: lib/elements/fill_stitch.py:157 inx/inkstitch_select_elements.inx:61
 msgid "Meander Fill"
 msgstr "蜿蜒填充"
 
-#: lib/elements/fill_stitch.py:158
+#: lib/elements/fill_stitch.py:158 inx/inkstitch_select_elements.inx:62
 msgid "Tartan Fill"
 msgstr ""
 
 #: lib/elements/fill_stitch.py:159 lib/gui/tartan/embroidery_panel.py:202
-#: inx/inkstitch_select_elements.inx:60
+#: inx/inkstitch_select_elements.inx:63
 msgid "Legacy Fill"
 msgstr "他他米"
 
@@ -1842,8 +1838,8 @@ msgid "Fill Underlay"
 msgstr "打底填针"
 
 #: lib/elements/fill_stitch.py:559 lib/gui/tartan/embroidery_panel.py:55
-#: inx/inkstitch_select_elements.inx:35 inx/inkstitch_select_elements.inx:62
-#: inx/inkstitch_select_elements.inx:64
+#: inx/inkstitch_select_elements.inx:37 inx/inkstitch_select_elements.inx:65
+#: inx/inkstitch_select_elements.inx:67
 msgid "Underlay"
 msgstr "启用打底填针"
 
@@ -1877,6 +1873,7 @@ msgid "Shrink the shape before doing underlay, to prevent underlay from showing 
 msgstr "收缩打底范围避免线迹外露。"
 
 #: lib/elements/fill_stitch.py:649 lib/elements/satin_column.py:520
+#: lib/gui/satin_multicolor/colorize.py:56
 msgid "Random seed"
 msgstr ""
 
@@ -2046,7 +2043,7 @@ msgid "* Hold \"Shift\" while drawing the rung."
 msgstr ""
 
 #: lib/elements/satin_column.py:91 lib/elements/satin_column.py:101
-#: inx/inkstitch_select_elements.inx:30
+#: inx/inkstitch_select_elements.inx:32
 msgid "Satin Column"
 msgstr ""
 
@@ -2355,11 +2352,11 @@ msgstr "平针/三刺绣平针"
 msgid "Ripple Stitch"
 msgstr "螺旋针"
 
-#: lib/elements/stroke.py:68 inx/inkstitch_select_elements.inx:21
+#: lib/elements/stroke.py:68 inx/inkstitch_select_elements.inx:23
 msgid "ZigZag Stitch"
 msgstr "锯齿形针"
 
-#: lib/elements/stroke.py:69 inx/inkstitch_select_elements.inx:22
+#: lib/elements/stroke.py:69 inx/inkstitch_select_elements.inx:24
 msgid "Manual Stitch"
 msgstr "手动"
 
@@ -2586,7 +2583,7 @@ msgstr "请确保最多有一个开始和结束命令附加到选定的缎面柱
 msgid "Please select one or more satin columns."
 msgstr "请选择一段或多段缎面柱。"
 
-#: lib/extensions/auto_satin.py:54
+#: lib/extensions/auto_satin.py:54 lib/extensions/satin_multicolor.py:33
 msgid "Please select at least one satin column."
 msgstr "请至少选择一段缎面柱。"
 
@@ -2742,6 +2739,7 @@ msgid "All Selected Elements"
 msgstr ""
 
 #: lib/extensions/element_info.py:153 lib/extensions/zip.py:135
+#: lib/gui/satin_multicolor/colorize.py:67
 msgid "Colors"
 msgstr "颜色"
 
@@ -2933,7 +2931,8 @@ msgid "This parameter will be saved when you click \"Apply and Quit\""
 msgstr "点击“应用并关闭”保存所有参数"
 
 #: lib/extensions/params.py:499 lib/gui/lettering.py:98
-#: lib/gui/lettering_font_sample.py:57 lib/gui/tartan/main_panel.py:69
+#: lib/gui/lettering_font_sample.py:57
+#: lib/gui/satin_multicolor/main_panel.py:56 lib/gui/tartan/main_panel.py:67
 #: print/templates/custom-page.html:23 print/templates/custom-page.html:27
 #: print/templates/custom-page.html:33 print/templates/ui.html:101
 #: print/templates/ui.html:105 print/templates/ui.html:111
@@ -2973,7 +2972,11 @@ msgstr ""
 msgid "Please select at least two elements to reorder."
 msgstr ""
 
-#: lib/extensions/select_elements.py:81
+#: lib/extensions/satin_multicolor.py:41
+msgid "Ink/Stitch Multicolor Satin"
+msgstr ""
+
+#: lib/extensions/select_elements.py:103
 msgid "Could not detect python path. Please insert python path manually as described in the help tab of the select elements dialog."
 msgstr ""
 
@@ -3038,7 +3041,7 @@ msgstr ""
 #: lib/extensions/troubleshoot.py:111 lib/extensions/troubleshoot.py:157
 #: inx/inkstitch_cleanup.inx:23 inx/inkstitch_element_info.inx:10
 #: inx/inkstitch_remove_embroidery_settings.inx:155
-#: inx/inkstitch_select_elements.inx:86 inx/inkstitch_troubleshoot.inx:12
+#: inx/inkstitch_select_elements.inx:89 inx/inkstitch_troubleshoot.inx:12
 #: inx/inkstitch_update_svg.inx:10
 msgid "Troubleshoot"
 msgstr ""
@@ -3134,15 +3137,16 @@ msgid "Value"
 msgstr ""
 
 #: lib/gui/element_info.py:41 lib/gui/lettering_font_sample.py:70
-#: lib/gui/tartan/main_panel.py:66 lib/gui/test_swatches.py:83
-#: inx/inkstitch_apply_palette.inx:84 inx/inkstitch_apply_threadlist.inx:89
-#: inx/inkstitch_auto_run.inx:23 inx/inkstitch_cutwork_segmentation.inx:42
+#: lib/gui/satin_multicolor/main_panel.py:53 lib/gui/tartan/main_panel.py:64
+#: lib/gui/test_swatches.py:83 inx/inkstitch_apply_palette.inx:84
+#: inx/inkstitch_apply_threadlist.inx:89 inx/inkstitch_auto_run.inx:23
+#: inx/inkstitch_cutwork_segmentation.inx:42
 #: inx/inkstitch_fill_to_stroke.inx:23 inx/inkstitch_generate_palette.inx:24
 #: inx/inkstitch_gradient_blocks.inx:24 inx/inkstitch_jump_to_stroke.inx:40
-#: inx/inkstitch_lettering_along_path.inx:17
+#: inx/inkstitch_jump_to_trim.inx:25 inx/inkstitch_lettering_along_path.inx:17
 #: inx/inkstitch_palette_to_text.inx:19
 #: inx/inkstitch_remove_embroidery_settings.inx:142
-#: inx/inkstitch_select_elements.inx:78
+#: inx/inkstitch_select_elements.inx:81
 #: inx/inkstitch_stroke_to_lpe_satin.inx:26
 #: inx/inkstitch_zigzag_line_to_satin.inx:18
 msgid "Help"
@@ -3153,7 +3157,7 @@ msgid "This extension informs about various parameters of selected stitch elemen
 msgstr ""
 
 #: lib/gui/element_info.py:56 lib/gui/lettering_font_sample.py:85
-#: lib/gui/tartan/help_panel.py:27
+#: lib/gui/satin_multicolor/help_panel.py:27 lib/gui/tartan/help_panel.py:27
 msgid "More information on our website:"
 msgstr ""
 
@@ -3188,7 +3192,7 @@ msgstr ""
 #: lib/gui/lettering.py:76 lib/gui/test_swatches.py:33
 #: inx/inkstitch_apply_palette.inx:7 inx/inkstitch_apply_threadlist.inx:7
 #: inx/inkstitch_fill_to_stroke.inx:15 inx/inkstitch_gradient_blocks.inx:15
-#: inx/inkstitch_jump_to_stroke.inx:15
+#: inx/inkstitch_jump_to_stroke.inx:15 inx/inkstitch_jump_to_trim.inx:15
 #: inx/inkstitch_lettering_along_path.inx:13
 #: inx/inkstitch_palette_to_text.inx:15
 #: inx/inkstitch_remove_embroidery_settings.inx:8
@@ -3277,7 +3281,8 @@ msgstr ""
 msgid "Max. line width"
 msgstr ""
 
-#: lib/gui/lettering_font_sample.py:59 lib/gui/tartan/main_panel.py:71
+#: lib/gui/lettering_font_sample.py:59
+#: lib/gui/satin_multicolor/main_panel.py:58 lib/gui/tartan/main_panel.py:69
 #: lib/gui/test_swatches.py:117
 msgid "Apply"
 msgstr "应用"
@@ -3347,8 +3352,8 @@ msgstr "预设"
 msgid "Load"
 msgstr "加载"
 
-#: lib/gui/presets.py:61 lib/gui/tartan/customize_panel.py:65
-#: lib/gui/tartan/customize_panel.py:67
+#: lib/gui/presets.py:61 lib/gui/satin_multicolor/colorize.py:73
+#: lib/gui/tartan/customize_panel.py:65 lib/gui/tartan/customize_panel.py:67
 msgid "Add"
 msgstr "添加"
 
@@ -3378,36 +3383,114 @@ msgstr "未找到预设“%s”。"
 msgid "Preset \"%s\" already exists.  Please use another name or press \"Overwrite\""
 msgstr "预设“%s”已存在。 请使用其他名称或按“覆盖”"
 
+#: lib/gui/satin_multicolor/colorize.py:26
+msgid "General Settings"
+msgstr ""
+
+#: lib/gui/satin_multicolor/colorize.py:29
+msgid "Equidistant colors"
+msgstr ""
+
+#: lib/gui/satin_multicolor/colorize.py:30
+msgid "Whether colors should be equidistant or have varying widths."
+msgstr ""
+
+#: lib/gui/satin_multicolor/colorize.py:35
+msgid "Monochrome color width"
+msgstr ""
+
+#: lib/gui/satin_multicolor/colorize.py:36
+msgid "Adapt color width here when equidistance is enabled."
+msgstr ""
+
+#: lib/gui/satin_multicolor/colorize.py:41
+msgid "Overflow left"
+msgstr ""
+
+#: lib/gui/satin_multicolor/colorize.py:46
+msgid "Overflow right"
+msgstr ""
+
+#: lib/gui/satin_multicolor/colorize.py:51
+msgid "Pull compensation (mm)"
+msgstr ""
+
+#: lib/gui/satin_multicolor/colorize.py:62
+msgid "Keep original satin"
+msgstr ""
+
+#: lib/gui/satin_multicolor/colorize.py:71
+msgid "Overflow excluded"
+msgstr ""
+
+#: lib/gui/satin_multicolor/colorize.py:124
+msgid "Click to move color up."
+msgstr ""
+
+#: lib/gui/satin_multicolor/colorize.py:128
+msgid "Select color"
+msgstr ""
+
+#: lib/gui/satin_multicolor/colorize.py:133
+msgid "Monochrome width. Can be changed individually when equidistance is disabled."
+msgstr ""
+
+#: lib/gui/satin_multicolor/colorize.py:138
+msgid "Margin right (bicolor section). Can be changed individually when equidistance is disabled."
+msgstr ""
+
+#: lib/gui/satin_multicolor/colorize.py:142
+msgid "Remove color"
+msgstr ""
+
+#: lib/gui/satin_multicolor/colorize.py:253
+msgid "Total width: {width}%"
+msgstr ""
+
+#: lib/gui/satin_multicolor/help_panel.py:19
+msgid "This extension simulates a multicolor satin by creating colored copies of the selected satin(s)."
+msgstr ""
+
+#: lib/gui/satin_multicolor/help_panel.py:33
+#: lib/gui/satin_multicolor/help_panel.py:34
+msgid "https://inkstitch.org/docs/satin-tools/#multicolor-satin"
+msgstr ""
+
+#: lib/gui/satin_multicolor/main_panel.py:49
+msgid "Colorize"
+msgstr ""
+
+#: lib/gui/satin_multicolor/main_panel.py:146
+msgid "Multicolor Satin Group"
+msgstr ""
+
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command label at bottom of simulator window
-#: lib/gui/simulator.py:23 electron/src/renderer/assets/js/simulator.js:136
-#: inx/inkstitch_output_GCODE.inx:29
+#: lib/gui/simulator.py:23 inx/inkstitch_output_GCODE.inx:29
 msgid "STITCH"
 msgstr "针迹"
 
-#: lib/gui/simulator.py:23 electron/src/renderer/assets/js/simulator.js:139
+#: lib/gui/simulator.py:23
 msgid "JUMP"
 msgstr "跳跃"
 
-#: lib/gui/simulator.py:23 electron/src/renderer/assets/js/simulator.js:142
+#: lib/gui/simulator.py:23
 msgid "TRIM"
 msgstr "剪线"
 
-#: lib/gui/simulator.py:23 electron/src/renderer/assets/js/simulator.js:145
-#: inx/inkstitch_output_GCODE.inx:33
+#: lib/gui/simulator.py:23 inx/inkstitch_output_GCODE.inx:33
 msgid "STOP"
 msgstr "停止"
 
-#: lib/gui/simulator.py:23 electron/src/renderer/assets/js/simulator.js:148
-#: inx/inkstitch_output_GCODE.inx:31
+#: lib/gui/simulator.py:23 inx/inkstitch_output_GCODE.inx:31
 msgid "COLOR CHANGE"
 msgstr "颜色变化"
 
-#: lib/gui/simulator.py:61 electron/src/renderer/components/Simulator.vue:543
+#: lib/gui/simulator.py:61
 msgid "Slow down (arrow down)"
 msgstr "减速（向下箭头）"
 
-#: lib/gui/simulator.py:65 electron/src/renderer/components/Simulator.vue:553
+#: lib/gui/simulator.py:65
 msgid "Speed up (arrow up)"
 msgstr "加速（向上箭头）"
 
@@ -3467,11 +3550,11 @@ msgstr ""
 msgid "Detach/attach simulator window"
 msgstr ""
 
-#: lib/gui/simulator.py:144 electron/src/renderer/components/Simulator.vue:167
+#: lib/gui/simulator.py:144
 msgid "Controls"
 msgstr "控件"
 
-#: lib/gui/simulator.py:157 electron/src/renderer/components/Simulator.vue:225
+#: lib/gui/simulator.py:157
 msgid "Show"
 msgstr "显示"
 
@@ -3578,6 +3661,7 @@ msgid "Herringbone width (mm)"
 msgstr ""
 
 #: lib/gui/tartan/embroidery_panel.py:65 lib/gui/tartan/embroidery_panel.py:102
+#: inx/inkstitch_select_elements.inx:21
 msgid "Bean stitch repeats"
 msgstr ""
 
@@ -3615,21 +3699,21 @@ msgstr ""
 
 #: lib/gui/tartan/help_panel.py:19
 msgid "This extension fills shapes with a tartan (or tartan like) pattern."
-msgstr ""
+msgstr "此扩展使用格子呢（或类似格子呢）图案填充形状。"
 
 #: lib/gui/tartan/help_panel.py:33 lib/gui/tartan/help_panel.py:34
 msgid "https://inkstitch.org/docs/stitches/tartan-fill"
 msgstr ""
 
-#: lib/gui/tartan/main_panel.py:56
+#: lib/gui/tartan/main_panel.py:54
 msgid "Customize"
 msgstr ""
 
-#: lib/gui/tartan/main_panel.py:60
+#: lib/gui/tartan/main_panel.py:58
 msgid "Palette Code"
 msgstr ""
 
-#: lib/gui/tartan/main_panel.py:63
+#: lib/gui/tartan/main_panel.py:61
 msgid "Embroidery Settings"
 msgstr ""
 
@@ -3669,7 +3753,7 @@ msgstr ""
 
 #: lib/gui/test_swatches.py:100 inx/inkstitch_apply_palette.inx:87
 #: inx/inkstitch_apply_threadlist.inx:100 inx/inkstitch_fill_to_stroke.inx:32
-#: inx/inkstitch_jump_to_stroke.inx:42
+#: inx/inkstitch_jump_to_stroke.inx:42 inx/inkstitch_jump_to_trim.inx:27
 #: inx/inkstitch_remove_embroidery_settings.inx:145
 #: inx/inkstitch_stroke_to_lpe_satin.inx:32
 #: inx/inkstitch_zigzag_line_to_satin.inx:28
@@ -4018,7 +4102,6 @@ msgid "estimated time"
 msgstr ""
 
 #: print/templates/operator_detailedview.html:67
-#: electron/src/renderer/components/Simulator.vue:229
 msgid "trims"
 msgstr ""
 
@@ -4435,212 +4518,6 @@ msgstr "Inf 颜色格式"
 msgid "Json Export"
 msgstr "Json 导出"
 
-#: electron/src/renderer/components/Simulator.vue:141
-msgid "[ Left square bracket"
-msgstr ""
-
-#: electron/src/renderer/components/Simulator.vue:152
-msgid "] Right square bracket"
-msgstr ""
-
-#. name for left arrow keyboard key
-#: electron/src/renderer/components/Simulator.vue:52
-msgid "← Arrow left"
-msgstr "← 左箭头"
-
-#. name for right arrow keyboard key
-#: electron/src/renderer/components/Simulator.vue:63
-msgid "→ Arrow right"
-msgstr "→ 右箭头"
-
-#. name for up arrow keyboard key
-#: electron/src/renderer/components/Simulator.vue:129
-msgid "↑ Arrow up"
-msgstr "↑ 上箭头"
-
-#. name for down arrow keyboard key
-#: electron/src/renderer/components/Simulator.vue:118
-msgid "↓ Arrow down"
-msgstr "↓ 下箭头"
-
-#. name for this keyboard key: +
-#: electron/src/renderer/components/Simulator.vue:89
-msgid "+ Plus"
-msgstr "+ 加"
-
-#: electron/src/renderer/components/Simulator.vue:15
-msgid "Button"
-msgstr "按钮"
-
-#: electron/src/renderer/components/Simulator.vue:236
-msgid "color changes"
-msgstr "颜色变化"
-
-#: electron/src/renderer/components/Simulator.vue:219
-msgid "Command"
-msgstr "命令"
-
-#: electron/src/renderer/components/Simulator.vue:259
-msgid "cursor"
-msgstr "光标"
-
-#: electron/src/renderer/components/Simulator.vue:18
-msgid "Function"
-msgstr "功能"
-
-#: electron/src/renderer/components/Simulator.vue:106
-msgid "Jump to next command"
-msgstr "跳转到下一个命令"
-
-#: electron/src/renderer/components/Simulator.vue:519
-msgid "Jump to next command (Page up)"
-msgstr ""
-
-#: electron/src/renderer/components/Simulator.vue:97
-msgid "Jump to previous command"
-msgstr "跳转到上一个命令"
-
-#: electron/src/renderer/components/Simulator.vue:509
-msgid "Jump to previous command (Page down)"
-msgstr ""
-
-#: electron/src/renderer/components/Simulator.vue:232
-msgid "jumps"
-msgstr "跳跃"
-
-#. name for this keyboard key: -
-#: electron/src/renderer/components/Simulator.vue:76
-msgid "Minus"
-msgstr "减去"
-
-#: electron/src/renderer/components/Simulator.vue:248
-msgid "needle points"
-msgstr "针点"
-
-#. description of keyboard shortcut that moves one stitch backward in simulator
-#: electron/src/renderer/components/Simulator.vue:71
-msgid "One step backward"
-msgstr "后退一步"
-
-#: electron/src/renderer/components/Simulator.vue:489
-msgid "One step backward (-)"
-msgstr ""
-
-#. description of keyboard shortcut that moves one stitch forward in simulator
-#: electron/src/renderer/components/Simulator.vue:84
-msgid "One step forward"
-msgstr "向前一步"
-
-#: electron/src/renderer/components/Simulator.vue:499
-msgid "One step forward (+)"
-msgstr ""
-
-#. name for page down keyboard key
-#: electron/src/renderer/components/Simulator.vue:99
-msgid "Page down (PgDn)"
-msgstr "向下翻页 (PgDn)"
-
-#. name for page up keyboard key
-#: electron/src/renderer/components/Simulator.vue:108
-msgid "Page up (PgUp)"
-msgstr "向上翻页 (PgUp)"
-
-#: electron/src/renderer/components/Simulator.vue:29
-msgid "Pause"
-msgstr "暂停"
-
-#: electron/src/renderer/components/Simulator.vue:444
-msgid "Pause (space)"
-msgstr ""
-
-#: electron/src/renderer/components/Simulator.vue:40
-msgid "Play"
-msgstr "播放"
-
-#: electron/src/renderer/components/Simulator.vue:455
-msgid "Play (arrow left | arrow right)"
-msgstr ""
-
-#: electron/src/renderer/components/Simulator.vue:49
-msgid "Play backward"
-msgstr "向后"
-
-#: electron/src/renderer/components/Simulator.vue:466
-msgid "Play backward (arrow left)"
-msgstr ""
-
-#: electron/src/renderer/components/Simulator.vue:60
-msgid "Play forward"
-msgstr "向前"
-
-#: electron/src/renderer/components/Simulator.vue:478
-msgid "Play forward (arrow right)"
-msgstr ""
-
-#: electron/src/renderer/components/Simulator.vue:256
-msgid "realistic"
-msgstr "实际的"
-
-#: electron/src/renderer/components/Simulator.vue:252
-msgid "render jumps"
-msgstr "显示跳跃"
-
-#: electron/src/renderer/components/Simulator.vue:285
-msgid "Rendering stitch-plan..."
-msgstr "渲染缝合计划..."
-
-#: electron/src/renderer/components/Simulator.vue:21
-msgid "Shortcut Key"
-msgstr "快捷键"
-
-#: electron/src/renderer/components/Simulator.vue:10
-msgid "Simulator Shortcut Keys"
-msgstr "模拟器快捷键"
-
-#: electron/src/renderer/components/Simulator.vue:115
-msgid "Slow down"
-msgstr "减速"
-
-#: electron/src/renderer/components/Simulator.vue:32
-msgid "Space"
-msgstr "空间"
-
-#: electron/src/renderer/components/Simulator.vue:126
-msgid "Speed up"
-msgstr "加速"
-
-#: electron/src/renderer/components/Simulator.vue:196
-msgid "Speed: %{speed} stitch/sec"
-msgid_plural "Speed: %{speed} stitches/sec"
-msgstr[0] "速度：%{speed} 针/秒\n"
-"速度：%{speed} 针/秒"
-
-#: electron/src/renderer/components/Simulator.vue:239
-msgid "stops"
-msgstr "停止"
-
-#: electron/src/renderer/components/Simulator.vue:208
-#: inx/inkstitch_commands_scale_symbols.inx:12
-#: inx/inkstitch_object_commands_toggle_visibility.inx:11
-msgid "View"
-msgstr ""
-
-#: electron/src/renderer/components/Simulator.vue:149
-msgid "Zoom design"
-msgstr ""
-
-#: electron/src/renderer/components/Simulator.vue:587
-msgid "Zoom design (])"
-msgstr ""
-
-#: electron/src/renderer/components/Simulator.vue:138
-msgid "Zoom page"
-msgstr ""
-
-#: electron/src/renderer/components/Simulator.vue:577
-msgid "Zoom page ([)"
-msgstr ""
-
 #: inx/inkstitch_about.inx:3 inx/inkstitch_about.inx:6
 msgid "About"
 msgstr "关于"
@@ -4732,7 +4609,7 @@ msgstr ""
 
 #: inx/inkstitch_apply_threadlist.inx:97
 msgid "Import any other Threadlist file in txt format. Ink/Stitch will try to match the colors to the selected thread palette. The objects in this document will be colored accordingly if color matching has been successful."
-msgstr ""
+msgstr "以txt格式导入任何其他Threadlist文件。Ink/Stitch将尝试将颜色与所选线程调色板匹配。如果颜色匹配成功，本文档中的对象将相应着色。"
 
 #: inx/inkstitch_apply_threadlist.inx:101
 msgid "https://inkstitch.org/docs/thread-color/#apply-threadlist"
@@ -4798,6 +4675,7 @@ msgstr ""
 
 #: inx/inkstitch_auto_satin.inx:12 inx/inkstitch_convert_to_satin.inx:10
 #: inx/inkstitch_cut_satin.inx:10 inx/inkstitch_flip.inx:10
+#: inx/inkstitch_satin_multicolor.inx:10
 #: inx/inkstitch_stroke_to_lpe_satin.inx:40
 #: inx/inkstitch_zigzag_line_to_satin.inx:36
 msgid "Tools: Satin"
@@ -4869,10 +4747,15 @@ msgid "Scale Command Symbols"
 msgstr ""
 
 #: inx/inkstitch_commands_scale_symbols.inx:11
-#: inx/inkstitch_global_commands.inx:17 inx/inkstitch_layer_commands.inx:14
-#: inx/inkstitch_object_commands.inx:21
+#: inx/inkstitch_global_commands.inx:17 inx/inkstitch_jump_to_trim.inx:10
+#: inx/inkstitch_layer_commands.inx:14 inx/inkstitch_object_commands.inx:21
 #: inx/inkstitch_object_commands_toggle_visibility.inx:10
 msgid "Commands"
+msgstr ""
+
+#: inx/inkstitch_commands_scale_symbols.inx:12
+#: inx/inkstitch_object_commands_toggle_visibility.inx:11
+msgid "View"
 msgstr ""
 
 #: inx/inkstitch_convert_to_satin.inx:3
@@ -5045,7 +4928,7 @@ msgid "Duplicate Params"
 msgstr "重复参数"
 
 #: inx/inkstitch_duplicate_params.inx:10 inx/inkstitch_reorder.inx:10
-#: inx/inkstitch_select_elements.inx:101
+#: inx/inkstitch_select_elements.inx:104
 #: inx/inkstitch_selection_to_guide_line.inx:10
 #: inx/inkstitch_selection_to_pattern.inx:10 inx/inkstitch_test_swatches.inx:10
 #: inx/inkstitch_unlink_clone.inx:11
@@ -5507,7 +5390,7 @@ msgstr ""
 
 #: inx/inkstitch_input_PCD.inx:9
 msgid "convert PCD file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "将PCD文件转换为Ink/Stitch手动拼接路径"
 
 #: inx/inkstitch_input_PCM.inx:3
 msgid "PCM file input"
@@ -5769,11 +5652,11 @@ msgstr ""
 msgid "Jump Stitch to Stroke"
 msgstr ""
 
-#: inx/inkstitch_jump_to_stroke.inx:17
+#: inx/inkstitch_jump_to_stroke.inx:17 inx/inkstitch_jump_to_trim.inx:17
 msgid "Convert jumps not shorter than (mm)"
 msgstr ""
 
-#: inx/inkstitch_jump_to_stroke.inx:19
+#: inx/inkstitch_jump_to_stroke.inx:19 inx/inkstitch_jump_to_trim.inx:19
 msgid "Convert jumps not longer than (mm)"
 msgstr ""
 
@@ -5839,6 +5722,22 @@ msgstr ""
 
 #: inx/inkstitch_jump_to_stroke.inx:43
 msgid "https://inkstitch.org/docs/stroke-tools/#jump-to-stroke"
+msgstr ""
+
+#: inx/inkstitch_jump_to_trim.inx:3
+msgid "Jump Stitch to Trim Command"
+msgstr ""
+
+#: inx/inkstitch_jump_to_trim.inx:23
+msgid "Use command symbol"
+msgstr ""
+
+#: inx/inkstitch_jump_to_trim.inx:26
+msgid "This extension inserts trim commands to avoid jump stitches."
+msgstr ""
+
+#: inx/inkstitch_jump_to_trim.inx:28
+msgid "https://inkstitch.org/docs/commands/#jump-to-trim"
 msgstr ""
 
 #: inx/inkstitch_layer_commands.inx:3
@@ -6492,6 +6391,10 @@ msgstr ""
 msgid "Re-stack objects in order of selection"
 msgstr ""
 
+#: inx/inkstitch_satin_multicolor.inx:3
+msgid "Multicolor Satin"
+msgstr ""
+
 #: inx/inkstitch_select_elements.inx:3
 msgid "Select embroidery elements"
 msgstr ""
@@ -6508,8 +6411,8 @@ msgstr ""
 msgid "Select only specific running stitches"
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:16 inx/inkstitch_select_elements.inx:36
-#: inx/inkstitch_select_elements.inx:44 inx/inkstitch_select_elements.inx:63
+#: inx/inkstitch_select_elements.inx:16 inx/inkstitch_select_elements.inx:38
+#: inx/inkstitch_select_elements.inx:46 inx/inkstitch_select_elements.inx:66
 msgid "No restriction"
 msgstr ""
 
@@ -6521,108 +6424,112 @@ msgstr ""
 msgid "Auto-Run Underpath"
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:20
+#: inx/inkstitch_select_elements.inx:19
+msgid "Auto-Satin Underpath"
+msgstr ""
+
+#: inx/inkstitch_select_elements.inx:22
 msgid "Ripples"
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:23
+#: inx/inkstitch_select_elements.inx:25
 msgid "Polyline"
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:29
+#: inx/inkstitch_select_elements.inx:31
 msgid "Satin"
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:31
+#: inx/inkstitch_select_elements.inx:33
 msgid "E-Stitch"
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:32
+#: inx/inkstitch_select_elements.inx:34
 msgid "S-Stitch"
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:33
+#: inx/inkstitch_select_elements.inx:35
 msgid "Zig-Zag"
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:35
+#: inx/inkstitch_select_elements.inx:37
 msgid "Only select satins with this underlay type"
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:37
+#: inx/inkstitch_select_elements.inx:39
 msgid "No underlay"
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:38
+#: inx/inkstitch_select_elements.inx:40
 msgid "Centerwalk"
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:39
+#: inx/inkstitch_select_elements.inx:41
 msgid "Contour"
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:40
+#: inx/inkstitch_select_elements.inx:42
 #: inx/inkstitch_zigzag_line_to_satin.inx:12
 msgid "Zigzag"
 msgstr "之字形"
 
-#: inx/inkstitch_select_elements.inx:43
+#: inx/inkstitch_select_elements.inx:45
 msgid "Rung count"
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:43
+#: inx/inkstitch_select_elements.inx:45
 msgid "Only select satins with this rung count"
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:45
+#: inx/inkstitch_select_elements.inx:47
 msgid "No Rungs"
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:46
+#: inx/inkstitch_select_elements.inx:48
 msgid "Two Rungs"
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:53 inx/inkstitch_select_elements.inx:54
+#: inx/inkstitch_select_elements.inx:55 inx/inkstitch_select_elements.inx:56
 msgid "Fill"
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:62
+#: inx/inkstitch_select_elements.inx:65
 msgid "Only select fills with this underlay"
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:65
+#: inx/inkstitch_select_elements.inx:68
 msgid "No Underlay"
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:79
+#: inx/inkstitch_select_elements.inx:82
 msgid "Select embroidery objects"
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:81
+#: inx/inkstitch_select_elements.inx:84
 msgid "Selects specific embroidery elements by stitch type."
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:82
+#: inx/inkstitch_select_elements.inx:85
 msgid "If there is already an active selection, non matching elements will be deselected."
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:88
+#: inx/inkstitch_select_elements.inx:91
 msgid "If this isn't working for you, you may need to insert your path to a python executable manualy."
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:90
+#: inx/inkstitch_select_elements.inx:93
 msgid "* Windows: Open the \"Command Prompt\" and type \"where python\". Copy the path and paste it here."
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:91
+#: inx/inkstitch_select_elements.inx:94
 msgid "* Linux: Open the command line and type \"which python3\". Copy the path and paste it here."
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:92
+#: inx/inkstitch_select_elements.inx:95
 msgid "* macOS: doesn't work, sorry"
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:93
+#: inx/inkstitch_select_elements.inx:96
 msgid "Python Path"
 msgstr ""
 
@@ -6769,7 +6676,7 @@ msgstr ""
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:33
 msgid "https://inkstitch.org/docs/satin-tools/#stroke-to-live-path-effect-satin"
-msgstr ""
+msgstr "https://inkstitch.org/docs/satin-tools/#stroke-to-live-path-effect-satin"
 
 #: inx/inkstitch_tartan.inx:3
 msgid "Tartan"
@@ -6813,11 +6720,11 @@ msgstr ""
 
 #: inx/inkstitch_update_svg.inx:18
 msgid "Tip: You can prevent inserting legacy designs into new files by running any Ink/Stitch extension before you copy the design parts (for example open and re-apply parameters on a single element in the document)."
-msgstr ""
+msgstr "提示：您可以通过在复制设计部分之前运行任何Ink/Stitch扩展来防止将旧设计插入新文件（例如，在文档中的单个元素上打开和重新应用参数）。"
 
 #: inx/inkstitch_update_svg.inx:20
 msgid "This extension only updates selected elements."
-msgstr ""
+msgstr "此扩展仅更新选定的元素。"
 
 #: inx/inkstitch_zigzag_line_to_satin.inx:3
 msgid "Zig-Zag Line to Satin"
