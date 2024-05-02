@@ -474,9 +474,8 @@ class ParamsTab(ScrolledPanel):
 
 
 class SettingsPanel(wx.Panel):
-    def __init__(self, parent, tabs_factory=None, on_cancel=None, metadata=None, background_color='white', simulator=None):
+    def __init__(self, parent, tabs_factory=None, metadata=None, background_color='white', simulator=None):
         self.tabs_factory = tabs_factory
-        self.cancel_hook = on_cancel
         self.metadata = metadata
         self.background_color = background_color
         self.simulator = simulator
@@ -610,13 +609,12 @@ class SettingsPanel(wx.Panel):
         self.apply(event)
 
     def close(self):
-        wx.CallAfter(self.GetTopLevelParent().Close)
+        self.simulator.stop()
+        wx.CallAfter(self.GetTopLevelParent().close)
 
     def cancel(self, event):
-        if self.cancel_hook:
-            self.cancel_hook()
-
-        self.close()
+        self.simulator.stop()
+        wx.CallAfter(self.GetTopLevelParent().cancel)
 
     def __do_layout(self):
         # begin wxGlade: MyFrame.__do_layout

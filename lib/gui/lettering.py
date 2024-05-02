@@ -25,11 +25,10 @@ from . import PresetsPanel, PreviewRenderer, info_dialog
 class LetteringPanel(wx.Panel):
     DEFAULT_FONT = "small_font"
 
-    def __init__(self, parent, simulator, group, on_cancel=None, metadata=None, background_color='white'):
+    def __init__(self, parent, simulator, group, metadata=None, background_color='white'):
         self.parent = parent
         self.simulator = simulator
         self.group = group
-        self.cancel_hook = on_cancel
         self.metadata = metadata or dict()
         self.background_color = background_color
 
@@ -397,13 +396,12 @@ class LetteringPanel(wx.Panel):
         self.close()
 
     def close(self):
-        self.GetTopLevelParent().Close()
+        self.simulator.stop()
+        wx.CallAfter(self.GetTopLevelParent().close)
 
     def cancel(self, event):
-        if self.cancel_hook:
-            self.cancel_hook()
-
-        self.close()
+        self.simulator.stop()
+        wx.CallAfter(self.GetTopLevelParent().cancel)
 
     def __do_layout(self):
         outer_sizer = wx.BoxSizer(wx.VERTICAL)
