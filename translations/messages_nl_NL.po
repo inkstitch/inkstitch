@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-05-02 01:06+0000\n"
-"PO-Revision-Date: 2024-05-02 01:07\n"
+"POT-Creation-Date: 2024-05-03 01:09+0000\n"
+"PO-Revision-Date: 2024-05-03 01:10\n"
 "Last-Translator: \n"
 "Language-Team: Dutch\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.14.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-02 01:06+0000\n"
+"POT-Creation-Date: 2024-05-03 01:09+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1069,11 +1069,11 @@ msgstr ""
 msgid "weird one"
 msgstr ""
 
-#: inkstitch.py:141
+#: inkstitch.py:162
 msgid "Ink/Stitch cannot read your SVG file. This is often the case when you use a file which has been created with Adobe Illustrator."
 msgstr "Ink/Stitch kan uw SVG-bestand niet lezen. Dit is vaak het geval wanneer u een bestand gebruikt dat met Adobe Illustrator is gemaakt."
 
-#: inkstitch.py:144
+#: inkstitch.py:165
 msgid "Try to import the file into Inkscape through 'File > Import...' (Ctrl+I)"
 msgstr "Probeer het bestand te importeren in Inkscape via 'Bestand > Importeren...' (Ctrl+I)"
 
@@ -2510,7 +2510,7 @@ msgstr "plat"
 msgid "point"
 msgstr "punt"
 
-#: lib/elements/text.py:13 lib/gui/lettering.py:93
+#: lib/elements/text.py:13 lib/gui/lettering.py:92
 msgid "Text"
 msgstr "Tekst"
 
@@ -2600,7 +2600,7 @@ msgstr "In het gehele document zit geen enkel object waar Ink/Stitch mee kan omg
 msgid "Tip: Run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot Objects"
 msgstr "Tip: Start Extensies > Inkt/Stitch > Problemen oplossen > Objecten oplossen"
 
-#: lib/extensions/break_apart.py:31
+#: lib/extensions/break_apart.py:30
 msgid "Please select one or more fill areas to break apart."
 msgstr "Selecteer een of meer vulgebieden om op te breken."
 
@@ -2930,41 +2930,41 @@ msgstr "Klik om deze parameter op te slaan als je \"Toepassen en Afsluiten\" kie
 msgid "This parameter will be saved when you click \"Apply and Quit\""
 msgstr "Deze parameter wordt opgeslagen als je \"Toepassen en Afsluiten\" klikt"
 
-#: lib/extensions/params.py:499 lib/gui/lettering.py:98
+#: lib/extensions/params.py:498 lib/gui/lettering.py:97
 #: lib/gui/lettering_font_sample.py:57
-#: lib/gui/satin_multicolor/main_panel.py:56 lib/gui/tartan/main_panel.py:67
+#: lib/gui/satin_multicolor/main_panel.py:55 lib/gui/tartan/main_panel.py:66
 #: print/templates/custom-page.html:23 print/templates/custom-page.html:27
 #: print/templates/custom-page.html:33 print/templates/ui.html:101
 #: print/templates/ui.html:105 print/templates/ui.html:111
 msgid "Cancel"
 msgstr "Annuleren"
 
-#: lib/extensions/params.py:504
+#: lib/extensions/params.py:503
 msgid "Use Last Settings"
 msgstr "Gebruik Vorige Instellingen"
 
-#: lib/extensions/params.py:507 lib/gui/lettering.py:102
+#: lib/extensions/params.py:506 lib/gui/lettering.py:101
 msgid "Apply and Quit"
 msgstr "Toepassen en Sluiten"
 
-#: lib/extensions/params.py:789
+#: lib/extensions/params.py:787
 msgid "Embroidery Params"
 msgstr "Borduur Parameters"
 
-#: lib/extensions/print_pdf.py:148
+#: lib/extensions/print_pdf.py:147
 msgid "Closing..."
 msgstr ""
 
-#: lib/extensions/print_pdf.py:148
+#: lib/extensions/print_pdf.py:147
 msgid "It is safe to close this window now."
 msgstr ""
 
-#: lib/extensions/print_pdf.py:285
+#: lib/extensions/print_pdf.py:279
 msgid "A print preview has been opened in your web browser.  This window will stay open in order to communicate with the JavaScript code running in your browser.\n\n"
 "This window will close after you close the print preview in your browser, or you can close it manually if necessary."
 msgstr ""
 
-#: lib/extensions/print_pdf.py:474
+#: lib/extensions/print_pdf.py:468
 msgid "Ink/Stitch Print"
 msgstr ""
 
@@ -3106,7 +3106,7 @@ msgstr "Ontwerp Details"
 msgid "Title"
 msgstr "Titel"
 
-#: lib/extensions/zip.py:133 lib/gui/lettering.py:421
+#: lib/extensions/zip.py:133 lib/gui/lettering.py:419
 #: inx/inkstitch_commands_scale_symbols.inx:6
 #: inx/inkstitch_lettering_generate_json.inx:82
 msgid "Size"
@@ -3137,7 +3137,7 @@ msgid "Value"
 msgstr ""
 
 #: lib/gui/element_info.py:41 lib/gui/lettering_font_sample.py:70
-#: lib/gui/satin_multicolor/main_panel.py:53 lib/gui/tartan/main_panel.py:64
+#: lib/gui/satin_multicolor/main_panel.py:52 lib/gui/tartan/main_panel.py:63
 #: lib/gui/test_swatches.py:83 inx/inkstitch_apply_palette.inx:84
 #: inx/inkstitch_apply_threadlist.inx:89 inx/inkstitch_auto_run.inx:23
 #: inx/inkstitch_cutwork_segmentation.inx:42
@@ -3165,31 +3165,31 @@ msgstr ""
 msgid "https://inkstitch.org/docs/troubleshoot#element-info"
 msgstr ""
 
-#: lib/gui/lettering.py:44
+#: lib/gui/lettering.py:43
 msgid "Font"
 msgstr "Lettertype"
 
-#: lib/gui/lettering.py:53
+#: lib/gui/lettering.py:52
 msgid "Font size filter (mm). 0 for all sizes."
 msgstr ""
 
-#: lib/gui/lettering.py:55
+#: lib/gui/lettering.py:54
 msgid "Glyphs"
 msgstr ""
 
-#: lib/gui/lettering.py:57
+#: lib/gui/lettering.py:56
 msgid "Filter fonts by available glyphs."
 msgstr ""
 
-#: lib/gui/lettering.py:64
+#: lib/gui/lettering.py:63
 msgid "Filter fonts by category."
 msgstr ""
 
-#: lib/gui/lettering.py:73
+#: lib/gui/lettering.py:72
 msgid "Font Filter"
 msgstr ""
 
-#: lib/gui/lettering.py:76 lib/gui/test_swatches.py:33
+#: lib/gui/lettering.py:75 lib/gui/test_swatches.py:33
 #: inx/inkstitch_apply_palette.inx:7 inx/inkstitch_apply_threadlist.inx:7
 #: inx/inkstitch_fill_to_stroke.inx:15 inx/inkstitch_gradient_blocks.inx:15
 #: inx/inkstitch_jump_to_stroke.inx:15 inx/inkstitch_jump_to_trim.inx:15
@@ -3201,62 +3201,62 @@ msgstr ""
 msgid "Options"
 msgstr "Opties"
 
-#: lib/gui/lettering.py:81
+#: lib/gui/lettering.py:80
 msgid "Stitch lines of text back and forth"
 msgstr "Borduur regels tekst heen en terug"
 
-#: lib/gui/lettering.py:84
+#: lib/gui/lettering.py:83
 msgid "Never"
 msgstr ""
 
-#: lib/gui/lettering.py:84
+#: lib/gui/lettering.py:83
 msgid "after each line"
 msgstr ""
 
-#: lib/gui/lettering.py:84
+#: lib/gui/lettering.py:83
 msgid "after each word"
 msgstr ""
 
-#: lib/gui/lettering.py:84
+#: lib/gui/lettering.py:83
 msgid "after each letter"
 msgstr ""
 
-#: lib/gui/lettering.py:85
+#: lib/gui/lettering.py:84
 msgid "Add trim command"
 msgstr ""
 
-#: lib/gui/lettering.py:88
+#: lib/gui/lettering.py:87
 msgid "Use command symbols"
 msgstr ""
 
-#: lib/gui/lettering.py:90
+#: lib/gui/lettering.py:89
 msgid "Uses command symbols if enabled. When disabled inserts trim commands as params."
 msgstr ""
 
-#: lib/gui/lettering.py:262
+#: lib/gui/lettering.py:261
 msgid "This font has no available font variant. Please update or remove the font."
 msgstr "Dit lettertype heeft geen beschikbare lettertypevariant. Gelieve het lettertype bij te werken of te verwijderen."
 
 #. The user has chosen to scale the text by some percentage
 #. (50%, 200%, etc).  If you need to use the percentage symbol,
 #. make sure to double it (%%).
-#: lib/gui/lettering.py:323
+#: lib/gui/lettering.py:322
 #, python-format
 msgid "Text scale %s%%"
 msgstr "Tekst schaling %s%%"
 
-#: lib/gui/lettering.py:334
+#: lib/gui/lettering.py:333
 #, python-format
 msgid "Error: Text cannot be applied to the document.\n"
 "%s"
 msgstr "Fout: Tekst kan niet op het document worden toegepast.\n"
 "%s"
 
-#: lib/gui/lettering.py:435
+#: lib/gui/lettering.py:433
 msgid "Add trims"
 msgstr ""
 
-#: lib/gui/lettering.py:441 print/templates/ui_svg_action_buttons.html:1
+#: lib/gui/lettering.py:439 print/templates/ui_svg_action_buttons.html:1
 msgid "Scale"
 msgstr "Schaal"
 
@@ -3283,7 +3283,7 @@ msgid "Max. line width"
 msgstr ""
 
 #: lib/gui/lettering_font_sample.py:59
-#: lib/gui/satin_multicolor/main_panel.py:58 lib/gui/tartan/main_panel.py:69
+#: lib/gui/satin_multicolor/main_panel.py:57 lib/gui/tartan/main_panel.py:68
 #: lib/gui/test_swatches.py:117
 msgid "Apply"
 msgstr ""
@@ -3457,11 +3457,11 @@ msgstr ""
 msgid "https://inkstitch.org/docs/satin-tools/#multicolor-satin"
 msgstr ""
 
-#: lib/gui/satin_multicolor/main_panel.py:49
+#: lib/gui/satin_multicolor/main_panel.py:48
 msgid "Colorize"
 msgstr ""
 
-#: lib/gui/satin_multicolor/main_panel.py:146
+#: lib/gui/satin_multicolor/main_panel.py:145
 msgid "Multicolor Satin Group"
 msgstr ""
 
@@ -3706,15 +3706,15 @@ msgstr ""
 msgid "https://inkstitch.org/docs/stitches/tartan-fill"
 msgstr ""
 
-#: lib/gui/tartan/main_panel.py:54
+#: lib/gui/tartan/main_panel.py:53
 msgid "Customize"
 msgstr ""
 
-#: lib/gui/tartan/main_panel.py:58
+#: lib/gui/tartan/main_panel.py:57
 msgid "Palette Code"
 msgstr ""
 
-#: lib/gui/tartan/main_panel.py:61
+#: lib/gui/tartan/main_panel.py:60
 msgid "Embroidery Settings"
 msgstr ""
 

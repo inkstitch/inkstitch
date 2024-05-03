@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-05-02 01:06+0000\n"
-"PO-Revision-Date: 2024-05-02 01:07\n"
+"POT-Creation-Date: 2024-05-03 01:09+0000\n"
+"PO-Revision-Date: 2024-05-03 01:10\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.14.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-02 01:06+0000\n"
+"POT-Creation-Date: 2024-05-03 01:09+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1070,11 +1070,11 @@ msgstr "treillis hexagonal"
 msgid "weird one"
 msgstr "bizarre"
 
-#: inkstitch.py:141
+#: inkstitch.py:162
 msgid "Ink/Stitch cannot read your SVG file. This is often the case when you use a file which has been created with Adobe Illustrator."
 msgstr "Ink/Stitch ne peut pas lire votre fichier SVG. C'est souvent le cas si vous utilisez un fichier créé avec Adobe Illustrator."
 
-#: inkstitch.py:144
+#: inkstitch.py:165
 msgid "Try to import the file into Inkscape through 'File > Import...' (Ctrl+I)"
 msgstr "Essayez d'importer le fichier dans Inkscape avec 'Ficher > Import...' (Ctrl+I)"
 
@@ -2513,7 +2513,7 @@ msgstr "segment"
 msgid "point"
 msgstr "point"
 
-#: lib/elements/text.py:13 lib/gui/lettering.py:93
+#: lib/elements/text.py:13 lib/gui/lettering.py:92
 msgid "Text"
 msgstr "Texte"
 
@@ -2606,7 +2606,7 @@ msgstr "Il n'y a aucun objet dans tout le document sur lequel Ink/Stitch sait qu
 msgid "Tip: Run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot Objects"
 msgstr "Conseil : Exécutez Extensions > Ink/Stitch > Résolution de problèmes > Dépistage de problèmes avec des objets"
 
-#: lib/extensions/break_apart.py:31
+#: lib/extensions/break_apart.py:30
 msgid "Please select one or more fill areas to break apart."
 msgstr "Veuillez sélectionner une ou plusieurs zones de remplissage à séparer."
 
@@ -2936,42 +2936,42 @@ msgstr "Cliquez pour forcer l’enregistrement de ce paramètre lorsque vous cli
 msgid "This parameter will be saved when you click \"Apply and Quit\""
 msgstr "Ce paramètre sera enregistré lorsque vous cliquez sur « Appliquer et quitter »"
 
-#: lib/extensions/params.py:499 lib/gui/lettering.py:98
+#: lib/extensions/params.py:498 lib/gui/lettering.py:97
 #: lib/gui/lettering_font_sample.py:57
-#: lib/gui/satin_multicolor/main_panel.py:56 lib/gui/tartan/main_panel.py:67
+#: lib/gui/satin_multicolor/main_panel.py:55 lib/gui/tartan/main_panel.py:66
 #: print/templates/custom-page.html:23 print/templates/custom-page.html:27
 #: print/templates/custom-page.html:33 print/templates/ui.html:101
 #: print/templates/ui.html:105 print/templates/ui.html:111
 msgid "Cancel"
 msgstr "Annuler"
 
-#: lib/extensions/params.py:504
+#: lib/extensions/params.py:503
 msgid "Use Last Settings"
 msgstr "Utiliser les derniers paramètres"
 
-#: lib/extensions/params.py:507 lib/gui/lettering.py:102
+#: lib/extensions/params.py:506 lib/gui/lettering.py:101
 msgid "Apply and Quit"
 msgstr "Appliquer et Quitter"
 
-#: lib/extensions/params.py:789
+#: lib/extensions/params.py:787
 msgid "Embroidery Params"
 msgstr "Paramètres de broderie"
 
-#: lib/extensions/print_pdf.py:148
+#: lib/extensions/print_pdf.py:147
 msgid "Closing..."
 msgstr "En cours de fermeture..."
 
-#: lib/extensions/print_pdf.py:148
+#: lib/extensions/print_pdf.py:147
 msgid "It is safe to close this window now."
 msgstr "Vous pouvez maintenant fermer cette fenêtre."
 
-#: lib/extensions/print_pdf.py:285
+#: lib/extensions/print_pdf.py:279
 msgid "A print preview has been opened in your web browser.  This window will stay open in order to communicate with the JavaScript code running in your browser.\n\n"
 "This window will close after you close the print preview in your browser, or you can close it manually if necessary."
 msgstr "Un  aperçu de l'impression a été ouvert dans votre navigateur. Cette fenêtre reste ouverte afin  de communiuer avec le code javascript qui s'excécute dans votre navigateur.\n\n"
 "Cette fenêtre se  fermera lorsque vous fermerez l'aperçu dans votre navigateur, ou vous pouvez la fermer manuellement si nécessaire."
 
-#: lib/extensions/print_pdf.py:474
+#: lib/extensions/print_pdf.py:468
 msgid "Ink/Stitch Print"
 msgstr "Impression Ink/Stitch"
 
@@ -2981,7 +2981,7 @@ msgstr "Veuillez sélectionner au moins deux éléments à ré-ordonner."
 
 #: lib/extensions/satin_multicolor.py:41
 msgid "Ink/Stitch Multicolor Satin"
-msgstr ""
+msgstr "Satin Multicolore Ink/Stitch"
 
 #: lib/extensions/select_elements.py:103
 msgid "Could not detect python path. Please insert python path manually as described in the help tab of the select elements dialog."
@@ -3113,7 +3113,7 @@ msgstr "Détails du dessin"
 msgid "Title"
 msgstr "Titre"
 
-#: lib/extensions/zip.py:133 lib/gui/lettering.py:421
+#: lib/extensions/zip.py:133 lib/gui/lettering.py:419
 #: inx/inkstitch_commands_scale_symbols.inx:6
 #: inx/inkstitch_lettering_generate_json.inx:82
 msgid "Size"
@@ -3144,7 +3144,7 @@ msgid "Value"
 msgstr "Valeur"
 
 #: lib/gui/element_info.py:41 lib/gui/lettering_font_sample.py:70
-#: lib/gui/satin_multicolor/main_panel.py:53 lib/gui/tartan/main_panel.py:64
+#: lib/gui/satin_multicolor/main_panel.py:52 lib/gui/tartan/main_panel.py:63
 #: lib/gui/test_swatches.py:83 inx/inkstitch_apply_palette.inx:84
 #: inx/inkstitch_apply_threadlist.inx:89 inx/inkstitch_auto_run.inx:23
 #: inx/inkstitch_cutwork_segmentation.inx:42
@@ -3172,31 +3172,31 @@ msgstr "Plus d'information sur notre site web :"
 msgid "https://inkstitch.org/docs/troubleshoot#element-info"
 msgstr "https://inkstitch.org/fr/docs/troubleshoot#element-info"
 
-#: lib/gui/lettering.py:44
+#: lib/gui/lettering.py:43
 msgid "Font"
 msgstr "Police"
 
-#: lib/gui/lettering.py:53
+#: lib/gui/lettering.py:52
 msgid "Font size filter (mm). 0 for all sizes."
 msgstr "Filtre des fontes selon leur taille (mm). 0 pour obtenir toutes les fontes."
 
-#: lib/gui/lettering.py:55
+#: lib/gui/lettering.py:54
 msgid "Glyphs"
 msgstr "Glyphes"
 
-#: lib/gui/lettering.py:57
+#: lib/gui/lettering.py:56
 msgid "Filter fonts by available glyphs."
 msgstr "Filtre les fontes selon la disponibilité des glyphes."
 
-#: lib/gui/lettering.py:64
+#: lib/gui/lettering.py:63
 msgid "Filter fonts by category."
 msgstr "Filtre les fontes par catégories."
 
-#: lib/gui/lettering.py:73
+#: lib/gui/lettering.py:72
 msgid "Font Filter"
 msgstr "Filtre de fontes"
 
-#: lib/gui/lettering.py:76 lib/gui/test_swatches.py:33
+#: lib/gui/lettering.py:75 lib/gui/test_swatches.py:33
 #: inx/inkstitch_apply_palette.inx:7 inx/inkstitch_apply_threadlist.inx:7
 #: inx/inkstitch_fill_to_stroke.inx:15 inx/inkstitch_gradient_blocks.inx:15
 #: inx/inkstitch_jump_to_stroke.inx:15 inx/inkstitch_jump_to_trim.inx:15
@@ -3208,62 +3208,62 @@ msgstr "Filtre de fontes"
 msgid "Options"
 msgstr "Options"
 
-#: lib/gui/lettering.py:81
+#: lib/gui/lettering.py:80
 msgid "Stitch lines of text back and forth"
 msgstr "Broder les lignes de texte en aller-retour"
 
-#: lib/gui/lettering.py:84
+#: lib/gui/lettering.py:83
 msgid "Never"
 msgstr "Jamais"
 
-#: lib/gui/lettering.py:84
+#: lib/gui/lettering.py:83
 msgid "after each line"
 msgstr "après chaque ligne"
 
-#: lib/gui/lettering.py:84
+#: lib/gui/lettering.py:83
 msgid "after each word"
 msgstr "après chaque mot"
 
-#: lib/gui/lettering.py:84
+#: lib/gui/lettering.py:83
 msgid "after each letter"
 msgstr "après chaque lettre"
 
-#: lib/gui/lettering.py:85
+#: lib/gui/lettering.py:84
 msgid "Add trim command"
 msgstr "Ajouter une commande de coupe"
 
-#: lib/gui/lettering.py:88
+#: lib/gui/lettering.py:87
 msgid "Use command symbols"
 msgstr "Utiliser des symboles de commandes"
 
-#: lib/gui/lettering.py:90
+#: lib/gui/lettering.py:89
 msgid "Uses command symbols if enabled. When disabled inserts trim commands as params."
 msgstr "Utilises les symboles de commande si coché. Sinon insère les commandes de coupe en tant que paramètres."
 
-#: lib/gui/lettering.py:262
+#: lib/gui/lettering.py:261
 msgid "This font has no available font variant. Please update or remove the font."
 msgstr "Cette police n'a pas de variante de police disponible. Veuillez mettre à jour ou supprimer la police."
 
 #. The user has chosen to scale the text by some percentage
 #. (50%, 200%, etc).  If you need to use the percentage symbol,
 #. make sure to double it (%%).
-#: lib/gui/lettering.py:323
+#: lib/gui/lettering.py:322
 #, python-format
 msgid "Text scale %s%%"
 msgstr "Échelle du texte %s%%"
 
-#: lib/gui/lettering.py:334
+#: lib/gui/lettering.py:333
 #, python-format
 msgid "Error: Text cannot be applied to the document.\n"
 "%s"
 msgstr "Erreur : Le texte ne peut pas être appliqué au document.\n"
 "%s"
 
-#: lib/gui/lettering.py:435
+#: lib/gui/lettering.py:433
 msgid "Add trims"
 msgstr "Ajouter coupes"
 
-#: lib/gui/lettering.py:441 print/templates/ui_svg_action_buttons.html:1
+#: lib/gui/lettering.py:439 print/templates/ui_svg_action_buttons.html:1
 msgid "Scale"
 msgstr "Échelle"
 
@@ -3290,7 +3290,7 @@ msgid "Max. line width"
 msgstr "Largeur du texte"
 
 #: lib/gui/lettering_font_sample.py:59
-#: lib/gui/satin_multicolor/main_panel.py:58 lib/gui/tartan/main_panel.py:69
+#: lib/gui/satin_multicolor/main_panel.py:57 lib/gui/tartan/main_panel.py:68
 #: lib/gui/test_swatches.py:117
 msgid "Apply"
 msgstr "Appliquer"
@@ -3395,84 +3395,84 @@ msgstr "Le préréglage \"%s\" existe déjà. Veuillez utiliser un autre nom ou 
 
 #: lib/gui/satin_multicolor/colorize.py:26
 msgid "General Settings"
-msgstr ""
+msgstr "Réglages généraux"
 
 #: lib/gui/satin_multicolor/colorize.py:29
 msgid "Equidistant colors"
-msgstr ""
+msgstr "Couleurs équidistantes"
 
 #: lib/gui/satin_multicolor/colorize.py:30
 msgid "Whether colors should be equidistant or have varying widths."
-msgstr ""
+msgstr "Choisir si les couleurs sont équidistantes ou si elles ont des largeurs différentes."
 
 #: lib/gui/satin_multicolor/colorize.py:35
 msgid "Monochrome color width"
-msgstr ""
+msgstr "Largeur de la zone monochrome"
 
 #: lib/gui/satin_multicolor/colorize.py:36
 msgid "Adapt color width here when equidistance is enabled."
-msgstr ""
+msgstr "Adapter la largeur des colonnes ici lorsque équidistant est coché."
 
 #: lib/gui/satin_multicolor/colorize.py:41
 msgid "Overflow left"
-msgstr ""
+msgstr "Débordement à gauche"
 
 #: lib/gui/satin_multicolor/colorize.py:46
 msgid "Overflow right"
-msgstr ""
+msgstr "Débordement à droite\n"
 
 #: lib/gui/satin_multicolor/colorize.py:51
 msgid "Pull compensation (mm)"
-msgstr ""
+msgstr "Compensation d'étirement (mm)"
 
 #: lib/gui/satin_multicolor/colorize.py:62
 msgid "Keep original satin"
-msgstr ""
+msgstr "Garder le satin originel"
 
 #: lib/gui/satin_multicolor/colorize.py:71
 msgid "Overflow excluded"
-msgstr ""
+msgstr "Sans débordement"
 
 #: lib/gui/satin_multicolor/colorize.py:124
 msgid "Click to move color up."
-msgstr ""
+msgstr "Cliquer ici pour remonter la couleur dans la liste."
 
 #: lib/gui/satin_multicolor/colorize.py:128
 msgid "Select color"
-msgstr ""
+msgstr "Sélectionner la couleur"
 
 #: lib/gui/satin_multicolor/colorize.py:133
 msgid "Monochrome width. Can be changed individually when equidistance is disabled."
-msgstr ""
+msgstr "Largeur de la zone monochrome. Peuvent être modifiées individuellement lorsque équidistance est décochée."
 
 #: lib/gui/satin_multicolor/colorize.py:138
 msgid "Margin right (bicolor section). Can be changed individually when equidistance is disabled."
-msgstr ""
+msgstr "Marge de droite (section bicolore). Peuvent être modifiées individuellement lorsque équidistance est décochée."
 
 #: lib/gui/satin_multicolor/colorize.py:142
 msgid "Remove color"
-msgstr ""
+msgstr "Supprimer la couleur"
 
 #: lib/gui/satin_multicolor/colorize.py:253
 msgid "Total width: {width}%"
-msgstr ""
+msgstr "Largeur totale : {width}%"
 
 #: lib/gui/satin_multicolor/help_panel.py:19
 msgid "This extension simulates a multicolor satin by creating colored copies of the selected satin(s)."
-msgstr ""
+msgstr "Cette extension simule une couleur satin multicolore en créant plusieurs copies unicolores de(s) colonnes satins sélectionnées."
 
 #: lib/gui/satin_multicolor/help_panel.py:33
 #: lib/gui/satin_multicolor/help_panel.py:34
 msgid "https://inkstitch.org/docs/satin-tools/#multicolor-satin"
-msgstr ""
+msgstr "https://inkstitch.org/fr/docs/satin-tools/#multicolor-satin"
 
-#: lib/gui/satin_multicolor/main_panel.py:49
+#: lib/gui/satin_multicolor/main_panel.py:48
 msgid "Colorize"
-msgstr ""
+msgstr "Colorer"
 
-#: lib/gui/satin_multicolor/main_panel.py:146
+#: lib/gui/satin_multicolor/main_panel.py:145
 msgid "Multicolor Satin Group"
-msgstr ""
+msgstr "Groupe de satins multicolores"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command label at bottom of simulator window
@@ -3715,15 +3715,15 @@ msgstr "Cette extension remplit les formes avec un motif semblable à du tartan.
 msgid "https://inkstitch.org/docs/stitches/tartan-fill"
 msgstr "https://inkstitch.org/fr/docs/stitches/tartan-fill"
 
-#: lib/gui/tartan/main_panel.py:54
+#: lib/gui/tartan/main_panel.py:53
 msgid "Customize"
 msgstr "Personnaliser"
 
-#: lib/gui/tartan/main_panel.py:58
+#: lib/gui/tartan/main_panel.py:57
 msgid "Palette Code"
 msgstr "Code de la palette"
 
-#: lib/gui/tartan/main_panel.py:61
+#: lib/gui/tartan/main_panel.py:60
 msgid "Embroidery Settings"
 msgstr "Paramètres de broderie"
 
@@ -5739,19 +5739,19 @@ msgstr "https://inkstitch.org/fr/docs/stroke-tools/#jump-to-stroke"
 
 #: inx/inkstitch_jump_to_trim.inx:3
 msgid "Jump Stitch to Trim Command"
-msgstr ""
+msgstr "Commande Saut en Coupe"
 
 #: inx/inkstitch_jump_to_trim.inx:23
 msgid "Use command symbol"
-msgstr ""
+msgstr "Utiliser les symboles de commande"
 
 #: inx/inkstitch_jump_to_trim.inx:26
 msgid "This extension inserts trim commands to avoid jump stitches."
-msgstr ""
+msgstr "Cette extension insère des commandes de coupe à la place des sauts."
 
 #: inx/inkstitch_jump_to_trim.inx:28
 msgid "https://inkstitch.org/docs/commands/#jump-to-trim"
-msgstr ""
+msgstr "https://inkstitch.org/fr/docs/commands/#jump-to-trim"
 
 #: inx/inkstitch_layer_commands.inx:3
 msgid "Add Layer Commands"
@@ -6406,7 +6406,7 @@ msgstr "Réempiler les objets dans l'ordre de leur sélection"
 
 #: inx/inkstitch_satin_multicolor.inx:3
 msgid "Multicolor Satin"
-msgstr ""
+msgstr "Colonne Satin Multicollore"
 
 #: inx/inkstitch_select_elements.inx:3
 msgid "Select embroidery elements"
@@ -6439,7 +6439,7 @@ msgstr "Points de dessous de l'agencement automatique"
 
 #: inx/inkstitch_select_elements.inx:19
 msgid "Auto-Satin Underpath"
-msgstr ""
+msgstr "Chemin de dessous de l'arrangement automatique de satin"
 
 #: inx/inkstitch_select_elements.inx:22
 msgid "Ripples"
