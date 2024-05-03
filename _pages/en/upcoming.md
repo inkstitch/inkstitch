@@ -1,7 +1,7 @@
 ---
 title: "New Features, Updates and Fixes for the upcoming Ink/Stitch version (3.1.0)"
 permalink: /upcoming/
-last_modified_at: 2024-04-28
+last_modified_at: 2024-05-03
 sidebar:
   nav: pages
 toc: true
@@ -44,6 +44,20 @@ This extension allows to easily test different values for embroidery parameters 
 
 ![Example test swatches](/assets/images/docs/test_swatches.png)
 
+### Jump Stitch to Trim Command
+
+`Commands > Jump Stitch to Trim Command` ([#2864](https://github.com/inkstitch/inkstitch/issues/2864))
+
+Inserts trim commands to avoid jump stitches
+
+### Multicolor Satin
+
+`Tools: Satin: Multicolor Satin` ([#2863](https://github.com/inkstitch/inkstitch/issues/2863))
+
+This extension creates copies of selected satins to mimic a multicolor satin
+
+![Multicolor Satin](/assets/images/tutorials/multicolor_satin/solution.png)
+
 ### [Outline](/docs/stroke-tools/#outline)
 
 `Stroke tools > Outline` ([#2529](https://github.com/inkstitch/inkstitch/issues/2529))
@@ -54,7 +68,7 @@ This extension helps reconstruct an original object from a stitch file.
 
 ### [Tartan](/docs/fill-tools/#tartan)
 
-`Fill tools > Tartan` ([#2782](https://github.com/inkstitch/inkstitch/issues/2782))
+`Tools: Fill > Tartan` ([#2782](https://github.com/inkstitch/inkstitch/issues/2782))
 
 This extension generates the tartan stripes and applies them to the document either as svg elements or as tartan fill params
 
@@ -132,6 +146,9 @@ This extension unlinks clones (optionally recursive) and applies fill angle tran
 `Edit > Select embroidery elements`
 
 * Option to select satins with no rungs or two rails and two rungs (possible detection conflict) ([#2734](https://github.com/inkstitch/inkstitch/pull/2734))
+* Option to select by bean stitch repeats ([#2875](https://github.com/inkstitch/inkstitch/pull/2875))
+* Option to select auto-satin underpathing ([#2875](https://github.com/inkstitch/inkstitch/pull/2875))
+* Options to select new stitch types
 
 ### Stitch Plan Preview
 
@@ -180,6 +197,9 @@ This extension unlinks clones (optionally recursive) and applies fill angle tran
 
 All fonts have been reworked to be more stable when transformed.
 
+ [#2869](https://github.com/inkstitch/inkstitch/pull/2869)
+ [#2871](https://github.com/inkstitch/inkstitch/pull/2871)
+ [#2868](https://github.com/inkstitch/inkstitch/pull/2868)
  [#2857](https://github.com/inkstitch/inkstitch/pull/2857)
  [#2850](https://github.com/inkstitch/inkstitch/pull/2850)
  [#2833](https://github.com/inkstitch/inkstitch/pull/2833)
@@ -214,11 +234,11 @@ All fonts have been reworked to be more stable when transformed.
 
 ## Simulator
 
-* Improved simulator for params and lettering ([#2481](https://github.com/inkstitch/inkstitch/issues/2481))
-* Simulator is now attached to the main window (params or lettering) ([#2557](https://github.com/inkstitch/inkstitch/issues/2557))
+The "standalone simulator" has been replaced with the reworked simulator from param and lettering extensions.
 
-  It is detachable and the last state will be remembered.
-
+* Improved params simulator([#2481](https://github.com/inkstitch/inkstitch/issues/2481))
+* Simulator is now attachable/detachable ([#2557](https://github.com/inkstitch/inkstitch/issues/2557))
+* Simulator has a changable background color and can show/hide jumps ([#2844](https://github.com/inkstitch/inkstitch/issues/2844))
 
 ## Stitch types
 
@@ -279,7 +299,7 @@ All fonts have been reworked to be more stable when transformed.
 
 * [#2715](https://github.com/inkstitch/inkstitch/issues/2715) Multiversion support
 * [#2655](https://github.com/inkstitch/inkstitch/issues/2655) In Ink/Stitch preferences set cache size to 0 to disable caching
-* [#2653](https://github.com/inkstitch/inkstitch/issues/2653) Updated debug and profiling procedures
+* [#2653](https://github.com/inkstitch/inkstitch/issues/2653) [#2720](https://github.com/inkstitch/inkstitch/issues/2720) Updated debug and profiling procedures
 
 
 ## Bug Fixes

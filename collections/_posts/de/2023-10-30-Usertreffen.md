@@ -33,9 +33,15 @@ Alkoholische Getränke und Speisen kosten extra.
 Ein Computerprogramm nur in der Theorie ist langweilig.
 Wir wollen gemeinsam Ausprobieren und Testen.
 
-**Stickmotive**
+**Eure Ink/Stitch Kreationen**
 Wenn ihr bereits Erfahrung mit Ink/Stitch habt, bringt gerne mit, was ihr bereits Schönes mit Ink/Stitch gemacht habt.
 Das wird uns alle inspirieren.
+
+**Fehlerhafte Dateien**
+Für das Thema Fehlerbehebung wäre es so schön, wenn ihr mit Beispieldateien aufwarten könnt.
+Dann wird es ein bisschen weniger theoretisch ;)
+
+Die Dateien könnt ihr entweder per E-Mail an mich senden oder einfach direkt zum Treffen mitbringen.
 
 ## Kontakt
 

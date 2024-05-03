@@ -49,7 +49,6 @@ Minimale Stichlänge für randomisierte Zwischenstiche|  | Wenn leer, wird der W
 Zufallszahl                          | | Zufallswert für randomisierte Attribute. Falls leer wird die Element-ID verwendet.
 {: .params-table }
 
-
 Die Parametereinstellungen der Unterlagen unterscheiden sich nicht zu den [Parametern der Satinsäule](/de/docs/stitches/satin-column).
 
 ## Beispieldateien die E-Stich enthalten
