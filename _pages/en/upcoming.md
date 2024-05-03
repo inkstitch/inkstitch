@@ -179,9 +179,9 @@ This extension unlinks clones (optionally recursive) and applies fill angle tran
 * [Chicken Scratch](/font/chicken_scratch/) ([#2703](https://github.com/inkstitch/inkstitch/pull/2703))
 
   ![Chicken Scratch preview](/assets/images/fonts/chicken_scratch.jpg)
-* [Emilio 20 Tartan](fonts/emilio-20/#emilio-20-tartan)
+* [Emilio 20 Tartan](fonts/emilio-20/#emilio-20-tartan) ([#2869](https://github.com/inkstitch/inkstitch/pull/2869))
 
-  ![Emilio 20 Tartan preview](/assets/images/fonts/emilio_tartan.png) ([#2869](https://github.com/inkstitch/inkstitch/pull/2869))
+  ![Emilio 20 Tartan preview](/assets/images/fonts/emilio_tartan.png)
 * [Millimarif-bold20](/fonts/milli-marif-bold/) ([#2780](https://github.com/inkstitch/inkstitch/pull/2780))
 
   ![Millimarif-bold20 preview](/assets/images/fonts/milli_marif.jpg)
