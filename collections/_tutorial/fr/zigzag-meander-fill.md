@@ -12,7 +12,8 @@ stitch-type:
 techniques:
 field-of-use:
 user-level:
---
+---
+
 ## Simulation de fourrure
 
 ![Preview](/assets/images/tutorials/tutorial-preview-images/grumpycat.png)
