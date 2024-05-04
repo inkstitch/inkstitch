@@ -96,6 +96,8 @@ docs:
         url: /de/docs/stitches/circular-fill/
       - title: "Tartanfüllung"
         url: /de/docs/stitches/tartan-fill
+      - title: "Lineare Farbverlaufsfüllung"
+        url: /de/docs/stitches/linear-gradient-fill
       - title: "Vernähstiche"
         url: /de/docs/stitches/lock-stitches/
       - title: Stichmuster
