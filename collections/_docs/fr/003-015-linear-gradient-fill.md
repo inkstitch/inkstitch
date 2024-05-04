@@ -33,22 +33,23 @@ Exécutez « Extensions > Ink/Stitch > Paramètres » pour ajuster les paramètr
 |---|---|---|
 |Auto-remplissage avec des points de broderie| ☑ |Doit être activé pour que ces paramètres prennent effet.|
 |Méthode de remplissage|Remplissage dégradé linéaire| Doit être sur Remplissage dégradé linéaire.|
-|Etirer|![Expand example](/assets/images/docs/params-fill-expand.png) |Etend la forme avant le point de remplissage pour compenser les écarts entre les formes en raison de l'étirement du tissu.|
+|Compensation d'étirement - Élargir|![Expand example](/assets/images/docs/params-fill-expand.png) |Etend la forme avant le point de remplissage pour compenser les écarts entre les formes en raison de l'étirement du tissu.|
 |Longueur maximale du point de remplissage|![Exemple de longueur de point](/assets/images/docs/params-fill-stitch_length.png) |La longueur de chaque point dans une rangée. "Max", c'est parce qu'un point plus court peut être utilisé au début ou à la fin d'une ligne.|
 |Espacement entre les rangées|![Exemple d'espacement](/assets/images/docs/params-fill-spacing_between_rows.png) |Espacement entre les rangées de points.|
-|Décaler autant de fois avant de répéter|![Décalage exemple](/assets/images/docs/params-fill-stagger.png) |Les points sont décalés de manière à ce que les rangées de points voisines ne tombent pas toutes dans la même colonne (ce qui créerait un effet de vallée). Ce paramètre détermine la longueur du cycle de décalage des rangées. Les fractions sont autorisées et peuvent produire des diagonales moins visibles que les valeurs entières.|
+|Décaler les rangées autant de fois avant de répéter|![Décalage exemple](/assets/images/docs/params-fill-stagger.png) |Les points sont décalés de manière à ce que les rangées de points voisines ne tombent pas toutes dans la même colonne (ce qui créerait un effet de vallée). Ce paramètre détermine la longueur du cycle de décalage des rangées. Les fractions sont autorisées et peuvent produire des diagonales moins visibles que les valeurs entières.|
 |Sauter le dernier point de chaque rangée|![Exemple sans dernier point](/assets/images/docs/params-fill-skip_stitches.png) |Le dernier point de chaque rangée est assez proche du premier point de la rangée suivante. Le sauter diminue le nombre de points et la densité.|
 |Terminer à la position de fin | ☑ |Si cette option est déselectionnée, la position de fin ne sera utiisée que pour déterminer la direction générale de la broderie. Si sélectionné, la dernière section terminera au point désigné.|
 |Longueur du point droit||Pour les chemins de dessous|
 |Tolérance du point droit|| Les points ne peuvent pas être éloignés du chemin de plus que cette distance. Une tolerance basse peut impliquer des points plus courts. Une tolerance haute entraine un arrondissement des angles aigus.|
 |Longueur minimum de point||Est prioritaire par rapport à la valeur de la longueur minimum de point définie dans les préférences. Les points plus courts seront supprimés.|
 |Longueur minimum de saut||Est prioritaire par rapport à la valeur de la longueur minimum de saut définie dans les préférences. Si la distance à l'objet suivant est inférieure, il n'y aura pas de points d'arrêt, sauf si les points d'arrêts sont forcés.|
-|Forcer les points d'arrêts |☑|Force un point d'arrêt après l'objet indépendament de la valeur de "Saut de fil" dans les Préférences d'Ink/Stitch.|
 |Autoriser les points d'arrêts | ☑|Ajoute un point d'arrêt à la ou les positions choisies.|
+|Forcer les points d'arrêts |☑|Force un point d'arrêt après l'objet indépendament de la valeur de "Saut de fil" dans les Préférences d'Ink/Stitch.|
 |Point d'arrêt initial       ||Sélectionnez le type du  [point d'arrêt initial](/fr/docs/stitches/lock-stitches).|
 |Point d'arrêt final       ||Sélectionnez le type du [point d'arrêt terminal](/fr/docs/stitches/lock-stitches).|
-|Couper après                        |☑ |Couper le fil après avoir brodé cet objet.|
 |Arrêter après                       |☑ |Faire faire une pause à la machine après avoir brodé cet objet. Si une position d'arrêt a été définie, elle est rejointe par un saut avant la pause. |
+|Couper après                        |☑ |Couper le fil après avoir brodé cet objet.|
+
 {: .params-table}
 
 
