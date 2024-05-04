@@ -1,7 +1,7 @@
 ---
 title: "Remplissage selon le contour"
 permalink: /fr/docs/stitches/contour-fill/
-last_modified_at: 2023-04-20
+last_modified_at: 2024-05-4
 toc: true
 ---
 ## De quoi s'agit-il ?
@@ -32,15 +32,18 @@ Lancez `Extensions > Ink/Stitch  > Paramètres`. Choisir "Remplissage selon le c
 |Style de jointure |Rond, à onglet, biseauté|Méthode pour gérer les arêtes lorsque la taille du contour est réduite pour les spirales intérieures|
 |Eviter l'auto croisement|![Avoid self crossing effect](/assets/images/docs/contour-fill-self-crossing.jpg)|Choisir si intérieur vers extérieur est autorisé à se croiser, ne s'applique pas aux autres stratégies de remplissage.|
 |Sens des aiguilles d'une montre||Direction de déplacement autour du contour.|
+|Lissage||Lisse la broderie. Le lissage détermine la mesure dans laquelle le chemin lissé peut s'éloigner du chemin originel. Essayez de petites valeurs comme 0.2. Attention, il est possible qu'il faille aussi modifier la tolérance du point droit.|
 |Longueur maximale du point de remplissage|![Exemple de longueur de point](/assets/images/docs/params-fill-stitch_length.png) |La longueur de chaque point dans une rangée. "Max", c'est parce qu'un point plus court peut être utilisé au début ou à la fin d'une ligne.|
 |Espacement entre les rangées|![Exemple d'espacement](/assets/images/docs/params-fill-spacing_between_rows.png) |Distance entre les rangées de points.|
 |Tolérance du point droit|![Exemple de tolerance](/assets/images/docs/contourfilltolerance.svg) |Tous les points doivent rester au plus à cette distance du chemin. Une tolérance plus faible (en haut sur le dessin) signifie que les points seront plus rapprochés. Une tolérance plus élevée (en bas) signifie que les angles vifs peuvent être arrondis.|
-|Forcer les points d'arrêts |☑|Force un point d'arrêt après l'objet indépendament de la valeur de "Saut de fil" dans les Préférences d'Ink/Stitch.|
+|Longueur minimum de point|Est prioritaire par rapport à la valeur de la longueur minimum de point définie dans les préférences. Les points plus courts seront supprimés.|
+|Longueur minimum de saut|Est prioritaire par rapport à la valeur de la longueur minimum de saut définie dans les préférences. Si la distance à l'objet suivant est inférieure, il n'y aura pas de points d'arrêt, sauf si les points d'arrêts sont forcés.|
 |Autoriser les points d'arrêts | ☑|Ajoute un point d'arrêt à la ou les positions choisies.|
+|Forcer les points d'arrêts |☑|Force un point d'arrêt après l'objet indépendament de la valeur de "Saut de fil" dans les Préférences d'Ink/Stitch.|
 |Point d'arrêt initial        ||Sélectionnez le type du  [point d'ancrage](/fr/docs/stitches/lock-stitches).|
 |Point d'arrêt final       ||Sélectionnez le type du [point d'arrêt](/fr/docs/stitches/lock-stitches).|
-|Couper après                 |☑|Couper le fil après avoir brodé cet objet.|
 |Arrêter après                |☑|Faire faire une pause à la machine après avoir brodé  cet objet. Si une position d'arrêt est définie, elle est rejointe  par un saut avant la pause de la machine.|
+|Couper après                 |☑|Couper le fil après avoir brodé cet objet.|
 
 ## Sous-couche
 
